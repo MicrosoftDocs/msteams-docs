@@ -1,5 +1,5 @@
 ---
-title: Incoming call notifications
+title: Configure Incoming Call Notifications
 description: Learn about incoming notification protocol to convert the call from legacy to Graph format, redirects for region affinity and authenticate the callback.
 ms.topic: conceptual
 ms.localizationpriority: medium
@@ -12,7 +12,7 @@ In [registering a calls and meetings bot for Microsoft Teams](./registering-call
 
 ## Protocol determination
 
-The incoming notification is provided in a legacy format for compatibility with the previous [Skype protocol](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true). In order to convert the call to the Microsoft Graph protocol, your bot must determine whether the notification is in a legacy format and provides the following response:
+The incoming notification is provided in a legacy format for compatibility with the previous [Skype protocol](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true). To convert the call to the Microsoft Graph protocol, your bot must determine whether the notification is in a legacy format and provides the following response:
 
 ```http
 HTTP/1.1 204 No Content
@@ -26,14 +26,14 @@ The next section provides details on incoming call notifications redirected for 
 
 ## Redirects for region affinity
 
-You call your webhook from the data-center hosting the call. The call starts in any data center and doesn't take into account region affinities. The notification is sent to your deployment depending on the GeoDNS resolution. If your application determines, by inspecting the initial notification payload or otherwise, that it needs to run in a different deployment, the application provides the following response:
+You call your webhook from the data-center hosting the call. The call starts in any data center and doesn't consider region affinities. The notification is sent to your deployment depending on the GeoDNS resolution. If your application determines, by inspecting the initial notification payload or otherwise, that it needs to run in a different deployment, the application provides the following response:
 
 ```http
 HTTP/1.1 302 Found
 Location: your-new-location
 ```
 
-Enable your bot to answer an incoming call using the [answer](/graph/api/call-answer?view=graph-rest-1.0&tabs=http&preserve-view=true) API. You can specify the `callbackUri` to handle this particular call. This is useful for stateful instances where your call is handled by a particular partition, and you want to embed this information in the `callbackUri` for routing to the right instance.
+Enable your bot to answer an incoming call using the [answer](/graph/api/call-answer?view=graph-rest-1.0&preserve-view=true&tabs=http) API. You can specify the `callbackUri` to handle this particular call. This is useful for stateful instances where your call is handled by a particular partition, and you want to embed this information in the `callbackUri` for routing to the right instance.
 
 The next section provides details on authenticating the callback by inspecting the token posted to your webhook.
 

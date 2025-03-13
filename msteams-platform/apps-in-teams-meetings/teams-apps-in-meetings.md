@@ -4,7 +4,8 @@ author: surbhigupta
 description: In this article, learn how apps works in Microsoft Teams meeting based on participant and user role and app extensibility.
 ms.topic: overview
 ms.localizationpriority: medium
-ms.date: 04/07/2022
+ms.owner: kanchankaur
+ms.date: 01/23/2025
 ---
 
 # Build apps for Teams meetings and calls
@@ -70,9 +71,11 @@ Meetings enable collaboration, partnership, informed communication, and shared f
 <br>
 You can create scenes for meetings, provide notifications to users, populate in-meeting dialogs, and more with meeting app extensibility.
 
-Custom apps built for your org (LOB apps) built for meetings and calls are available in Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD) environments.
+Custom apps built for your org (LOB apps) for meetings and calls are available in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](~/concepts/cloud-overview.md), and [Teams operated by 21Vianet](~/concepts/sovereign-cloud.md) environments.
 
-Third-party apps built for meetings and calls are available in Government Community Cloud (GCC) but aren't available for GCC-High and Department of Defense (DOD) tenants.
+Third-party apps built for meetings and calls are available in GCC but aren't available for GCC High, DoD, and Teams operated by 21Vianet environments.
+
+
 
 You must be familiar with the concepts in this article to create custom meeting experiences with apps in Microsoft Teams.
 
@@ -86,13 +89,13 @@ Teams supports access to apps during meeting for the following meeting types:
 * [**Group calls**](https://support.microsoft.com/office/start-a-call-from-a-chat-in-teams-f5138c9d-df4c-43d8-9cf6-53400c1a7798): Calls initiated in a group chat.
 * [**Instant meetings**](https://support.microsoft.com/office/start-an-instant-meeting-in-teams-ff95e53f-8231-4739-87fa-00b9723f4ef5): Meetings initiated through **Meet now** button in Teams calendar.
 * [**Webinar**](https://support.microsoft.com/office/get-started-with-teams-webinars-42f3f874-22dc-4289-b53f-bbc1a69013e3): Webinar initiated through **Webinar** button under **New Meeting** dropdown.
+* [**Calling**](/microsoftteams/cloud-voice-landing-page#public-switched-telephone-network-connectivity-options): Extend Teams Phone to initiate calls outside the organization through PSTN connectivity.
 
 Learn more about [Teams meetings, expiration, and policies](/microsoftteams/meeting-expiration) and [meetings, webinars, and live events](/microsoftteams/quick-start-meetings-live-events).
 > [!NOTE]
 >
 > Apps aren't supported in the following:
 >
-> * [Public Switched Telephone Network (PSTN) Teams calls](/microsoftteams/cloud-voice-landing-page#public-switched-telephone-network-connectivity-options)
 > * [End-to-end encrypted Teams calls](https://support.microsoft.com/office/use-end-to-end-encryption-for-teams-calls-1274b4d2-b5c5-4b24-a376-606fa6728a90)
 > * [Instant channel meetings](https://support.microsoft.com/office/start-an-instant-meeting-in-teams-ff95e53f-8231-4739-87fa-00b9723f4ef5)
 > * Meetings in [shared channel](https://support.microsoft.com/office/what-is-a-shared-channel-in-teams-e70a8c22-fee4-4d6e-986f-9e0781d7d11d)
@@ -115,7 +118,7 @@ Teams supports user types, such as in-tenant, guest, federated or external, and 
 
 > [!NOTE]
 >
-> When a third person is added to a one-on-one call, the call is elevated to a group call , which starts a new session. Apps added to the one-on-one call aren't available in the group call. However, they can be added again.
+> When a third person is added to a one-on-one call, the call is elevated to a group call, which starts a new session. Apps added to the one-on-one call aren't available in the group call. However, they can be added again.
 
 The following list details the various user types along with their accessibility:
 
@@ -124,7 +127,7 @@ The following list details the various user types along with their accessibility
 * **Federated or external**: A federated or an external user is a Teams user from another organization who has been invited to join a meeting. Federated users have valid credentials with federated partners and are authorized by Teams. They don't have access to your Teams or other shared resources from your organization. Guest access is a better option for external users to have access to Teams and channels. For more information, see [manage external access in Teams](/microsoftteams/manage-external-access).
 
     > [!NOTE]
-    > Teams users can add apps when they host meetings or chats with other organizations. When an external user shares an app to the meeting, all the users can access the app. The host organization's data policies and data sharing practices of the third-party apps shared by that user's organization will be in effect.
+    > Teams users can add apps when they host meetings or chats with other organizations. When an external user shares an app to the meeting, all the users can access the app. The host organization's data policies and data sharing practices of the third-party apps shared by that user's organization are in effect.
 
 * **Anonymous**: Anonymous users don't have a Microsoft Entra identity and aren't federated with a tenant. The anonymous participants are external users but their identity isn't shown in the meeting. Anonymous users can access apps in a meeting window. An anonymous user can be a presenter or an attendee but can't be an organizer.
 

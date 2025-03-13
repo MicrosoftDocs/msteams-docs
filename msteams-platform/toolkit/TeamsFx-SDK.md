@@ -1,11 +1,11 @@
 ---
-title: TeamsFx SDK
+title: Explore TeamsFx SDK and its Functions
 author: surbhigupta
-description: In this module, learn about TeamsFx SDK, core concepts and code structure, advanced Customization and scenarios
-ms.author: v-npaladugu
+description: Learn about core functionalities of TeamsFx SDK and its prerequisites, code structure, advanced customizing, Graph scenarios, Bot SSO, and latest SDK version.
+ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 04/16/2023
+ms.date: 01/24/2025
 ---
 
 # TeamsFx SDK
@@ -26,7 +26,7 @@ You need to install the following tools and set up your development environment:
    | &nbsp; | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)| A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use 4.0.0 version. |
    | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type). |
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
-   | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+   | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge/) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 
 For more information on Node.js version compatibility, see [Prerequisites for creating your Teams app](/microsoftteams/platform/toolkit/tools-prerequisites?branch=pr-en-us-8020) using Visual Studio Code.
 
@@ -37,7 +37,7 @@ You must have working knowledge of:
 
 * [Source code](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk)
 * [Package (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx)
-* [API reference documentation](https://aka.ms/teamsfx-sdk-help)
+* [API reference documentation](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true)
 * [Samples](https://github.com/OfficeDev/TeamsFx-Samples)
 
 ## Get started
@@ -360,7 +360,7 @@ This section provides several code snippets for common scenarios that are relate
     <details>
     <summary><b>Integration with Microsoft Graph Toolkit</b></summary>
 
-    The [Microsoft Graph Toolkit](https://aka.ms/mgt) library is a collection of various authentication providers and UI components powered by Microsoft Graph.
+    The [Microsoft Graph Toolkit](https://github.com/microsoftgraph/microsoft-graph-toolkit) library is a collection of various authentication providers and UI components powered by Microsoft Graph.
 
     The `@microsoft/mgt-teamsfx-provider` package exposes the `TeamsFxProvider` class that uses `TeamsFx` class to sign in users and acquire tokens to use with Microsoft Graph.
 
@@ -496,7 +496,7 @@ This section provides several code snippets for common scenarios that are relate
      }    
     ```
 
-    For more information on sample to use graph API in message extension, see [message-extension-sso-sample](https://aka.ms/teamsfx-me-sso-sample).
+    For more information on sample to use graph API in message extension, see [message-extension-sso-sample](https://github.com/OfficeDev/teams-toolkit-samples/tree/dev/query-org-user-with-message-extension-sso).
     </details>
 
     <details>

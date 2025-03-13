@@ -1,9 +1,9 @@
 ---
-title: Prerequisites
-description: In this article, learn about the prerequisites and tools needed to build a Microsoft Teams personal, channel, or group tab.
+title: Requirements for Building Tabs
+description: Learn about the permissions, compatibility, and other prerequisites, and tools required to build a Microsoft Teams personal, channel, or group tab.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.date: 03/28/2023
+ms.date: 02/06/2025
 ---
 
 # Prerequisites
@@ -17,6 +17,8 @@ Ensure that you adhere to the following prerequisites while building your Teams 
 * Set Content Security Policy headers to allow Teams and any other [host applications](../../m365-apps/overview.md) of your app:
 
   [!INCLUDE [CSP headers for multi-hub apps](~/includes/tabs/content-security-policy-headers.md)]
+
+  [!INCLUDE [ocdi-warning](../../includes/tabs/ocdi-warning.md)]
 
   > [!NOTE]
   > To host the other Teams or Microsoft 365 apps within your app, upgrade your app to a [Microsoft 365 environment](~/m365-apps/overview.md). If you manage the app running in the nested frame, you can update its code to initialize the SDK by specifying your domain. This allows your nested frame to act as a proxy to Teams.
@@ -48,13 +50,13 @@ Ensure that you adhere to the following prerequisites while building your Teams 
 | --- | --- | --- |
 | **Required** | &nbsp; | &nbsp; |
 | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest v16 LTS release.|
-| &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+| &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge/) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. |
 | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com), **ASP.NET and web development** workload| .NET. You can install the free community edition of Visual Studio 2022. |
 | &nbsp; | [Git](https://git-scm.com/downloads) | Git to use the sample apps repo from GitHub. |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
-| &nbsp; | [ngrok](https://ngrok.com/download) | Ngrok is a reverse proxy software tool. Ngrok creates a tunnel to your locally running web server's publicly available HTTPS endpoints. Your server's web endpoints are available during the current session on your computer. When you shut down or put your device to sleep, the service is no longer available. |
-| &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Microsoft Teams Store. |
+| &nbsp; | [ngrok](https://ngrok.com/downloads) | Ngrok is a reverse proxy software tool. Ngrok creates a tunnel to your locally running web server's publicly available HTTPS endpoints. Your server's web endpoints are available during the current session on your computer. When you shut down or put your device to sleep, the service is no longer available. |
+| &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and publish your Teams app including to your organization or the Microsoft Teams Store. |
 
 ### Build your Teams tab
 

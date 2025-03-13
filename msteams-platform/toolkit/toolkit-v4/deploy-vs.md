@@ -1,7 +1,7 @@
 ---
 title: Deploy to the cloud using Visual Studio
 author: MuyangAmigo
-description: Learn how to deploy app to the cloud, Azure, or SharePoint using Teams Toolkit in Visual Studio.
+description: Learn how to deploy Teams app to cloud resources such as Azure or SharePoint using Teams Toolkit in Visual Studio, and to customize and edit deploy section.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
@@ -34,7 +34,8 @@ To deploy Teams app using Microsoft Teams Toolkit, follow these steps:
 1. In the pop-up window that appears, select **Deploy**.
 
       :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/deploy_warning.png" alt-text="Screenshot shows deploy warning window.":::
-The app is deployed to Azure cloud.
+
+      The app is deployed to Azure cloud.
 
 ## Customize deploy lifecycle in Teams using Visual Studio
 
@@ -111,7 +112,7 @@ This action executes `npx` commands under specified directory with parameters. Y
 
 ### azureAppService/zipDeploy
 
-This action uploads and deploys the project to Azure App Service using [the zip deploy feature](https://aka.ms/zip-deploy-to-azure-functions).
+This action uploads and deploys the project to Azure App Service using [the zip deploy feature](/azure/azure-functions/deployment-zip-push).
 
 #### Sample
 

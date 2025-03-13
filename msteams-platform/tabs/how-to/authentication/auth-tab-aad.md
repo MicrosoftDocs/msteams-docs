@@ -1,6 +1,6 @@
 ---
 title: Configure OAuth Authentication for Tab
-description: Learn Teams authentication tabs Microsoft Entra ID, authentication in Teams and how to use it in tabs.
+description: Learn about third-party OAuth IdP authentication, navigation and authorization page, and how to configure and initiate authentication flow.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 12/13/2022
@@ -229,7 +229,7 @@ Your app can set its own session cookie so that the user doesn't need to sign in
 
 > [!NOTE]
 >
-> * Chrome 80, scheduled for release in early 2020, introduces new cookie values and imposes cookie policies by default. It's recommended that you set the intended use for your cookies rather than rely on default browser behavior. *See* [SameSite cookie attribute (2020 update)](../../../resources/samesite-cookie-update.md).
+> * Chrome 80 introduces new cookie values and imposes cookie policies by default. We recommend that you set the intended use for your cookies rather than rely on default browser behavior. For more information, see [SameSite cookie attribute](../../../resources/samesite-cookie-update.md).
 > * To obtain the appropriate token for Microsoft Teams Free and guest users, ensure your apps utilize the tenant-specific endpoint `https://login.microsoftonline.com/**{tenantId}**`. You can acquire the tenantId from the bot message or tab context. If your apps use `https://login.microsoftonline.com/common`, users might receive incorrect tokens, causing them to log into the "home" tenant rather than the tenant they are signed into.
 
 For more information on single sign-on (SSO), see the article [Silent authentication](~/tabs/how-to/authentication/auth-silent-AAD.md).

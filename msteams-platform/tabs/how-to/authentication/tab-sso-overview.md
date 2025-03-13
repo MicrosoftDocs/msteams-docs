@@ -1,6 +1,6 @@
 ---
 title: SSO in Tab with Microsoft Entra ID
-description: Learn about Single sign-on (SSO) authentication in Teams and how to enable it in tabs.
+description: Learn about single sign-on (SSO) authentication and user experience in Teams, how to enable SSO in tab app, and understand SSO at runtime.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.date: 01/17/2023
@@ -37,7 +37,7 @@ Here's what your app users get with SSO experience:
 - Teams gets the access token for the current app user from Microsoft Entra ID. This interaction with Microsoft Entra ID is invisible to the app user. It translates to get the app access without having to leave the Teams environment.
 - An app user needs to consent only in a multitenant environment. If the app user and the app reside in the same tenant, the app user doesn't need to give consent for using the app.
 - After consenting to Teams the first time, the app user can use your app with no further need of consent, even on any other device. For this reason, it offers a better user experience.
-  - Alternatively, the tenant administrator can grant consent on behalf of the app users. In this scenario, when the tenant administrator consents for the app users in the tenant, the app users don't need to be prompted for consent at all. It means that the app users don't see the consent dialogs and can access the app seamlessly.
+  - Alternatively, the admin can grant consent on behalf of the app users. In this scenario, when the admin consents for the app users in the tenant, the app users don't need to be prompted for consent at all. It means that the app users don't see the consent dialogs and can access the app seamlessly.
 - The access token is prefetched by Teams to improve performance and load time of the app in the Teams environment.
 - The app users don't need to memorize or record several passwords to access and use apps in Teams environment.
 

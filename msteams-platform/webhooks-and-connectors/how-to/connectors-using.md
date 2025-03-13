@@ -1,5 +1,5 @@
 ---
-title: Create and send messages
+title: Create & Send Actionable Messages
 author: laujan
 description: Create actionable messages, send message through Incoming Webhook, connectors for M365 Groups, cURL, or PowerShell. Send Adaptive Cards. Time based transaction.
 ms.topic: how-to
@@ -8,6 +8,8 @@ ms.date: 12/09/2022
 ---
 
 # Create and send messages
+
+[!INCLUDE [deprecation-note](~/includes/deprecation-note.md)]
 
 To create and send actionable messages, use either an Incoming Webhook or a Microsoft 365 connector. However, the actionable messages are accessible only to users with an Exchange Online license.
 
@@ -315,7 +317,6 @@ These limits are in place to reduce spamming a channel by a connector and ensure
 * [Create Incoming Webhooks](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Create Outgoing Webhooks](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [Rate limiting for Teams bots messages](~/bots/how-to/rate-limit.md)
-* [Build tabs with Adaptive Cards](../../tabs/how-to/build-adaptive-card-tabs.md)
 * [Format cards in Microsoft Teams](../../task-modules-and-cards/cards/cards-format.md)
 * [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
 * [App manifest schema for Teams](../../resources/schema/manifest-schema.md)

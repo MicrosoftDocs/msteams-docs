@@ -1,24 +1,516 @@
 ---
-title: Create API-based message extension
+title: Build API-based Message Extension
 author: v-ypalikila
-description: Learn how to create or build an API-based message extension using Teams Toolkit for Visual Studio, Visual Studio Code, and CLI.
+description: Learn how to create or build an API-based message extension using Developer Portal for Teams, Teams Toolkit for Visual Studio, Visual Studio Code, and CLI.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.date: 04/08/2024
+ms.date: 02/26/2025
 ---
 # Create an API-based message extension
 
-You can create an API-based message extension using Developer Portal for Teams and Teams Toolkit for Visual Studio Code, command line interface (CLI), or Visual Studio.
+> [!NOTE]
+> API-based message extensions only support search commands.
+
+API-based message extensions are a Microsoft Teams app capability that integrates external APIs directly into Teams, enhancing your app's usability and offering a seamless user experience. API-based message extensions support search commands and can be used to fetch and display data from external services within Teams, streamlining workflows by reducing the need to switch between applications.
+
+Before you get started, ensure that you meet the following requirements:
+
+</br>
+<details><summary id="oad">1. OpenAPI Description (OAD) </summary>
+
+Ensure that you adhere to following guidelines for OpenAPI Description (OAD) document:
+
+* OpenAPI versions 2.0 and 3.0.x are supported.
+* JSON and YAML are the supported formats.
+* The request body, if present, must be application/Json.
+* Define an HTTPS protocol server URL for the `servers.url` property.
+* Only POST and GET HTTP methods are supported.
+* The OpenAPI Description document must have an `operationId`.
+* Only one required parameter without a default value is allowed.
+* A required parameter with a default value is considered optional.
+* Users must not enter a parameter for a header or cookie.
+* The operation must not have a required header or cookie parameters without default values.
+* Ensure that there are no remote references in the OpenAPI Description document.
+* Constructing arrays for the request isn’t supported; however, nested objects within a JSON request body are supported.
+* Teams doesn't support the `oneOf`, `anyOf`, `allOf`, and `not` (swagger.io) constructs.
+
+The following code is an example of an OpenAPI Description document:
+
+```yml
+openapi: 3.0.1
+info:
+title: OpenTools Plugin
+description: A plugin that allows the user to find the most appropriate AI tools for their use cases, with their pricing information.
+version: 'v1'
+servers:
+- url: https://gptplugin.opentools.ai
+paths:
+/tools:
+ get:
+   operationId: searchTools
+   summary: Search for AI Tools
+   parameters:
+     - in: query
+       name: search
+       required: true
+       schema:
+         type: string
+       description: Used to search for AI tools by their category based on the keywords. For example, ?search="tool to create music" will give tools that can create music.
+   responses:
+     "200":
+       description: OK
+       content:
+         application/json:
+           schema:
+             $ref: '#/components/schemas/searchToolsResponse'
+     "400":
+       description: Search Error
+       content:
+         application/json:
+           schema:
+             $ref: '#/components/schemas/searchToolsError'
+components:
+schemas:
+ searchToolsResponse:
+   required:
+     - search
+   type: object
+   properties:
+     tools:
+       type: array
+       items:
+         type: object
+         properties:
+           name:
+             type: string
+             description: The name of the tool.
+           opentools_url:
+             type: string
+             description: The URL to access the tool.
+           main_summary:
+             type: string
+             description: A summary of what the tool is.
+           pricing_summary:
+             type: string
+             description: A summary of the pricing of the tool.
+           categories:
+             type: array
+             items:
+               type: string
+             description: The categories assigned to the tool.
+           platforms:
+             type: array
+             items:
+               type: string
+             description: The platforms that this tool is available on.
+       description: The list of AI tools.
+ searchToolsError:
+   type: object
+   properties:
+     message:
+       type: string
+       description: Message of the error.
+```
+
+For more information, see [OpenAPI structure.](https://swagger.io/docs/specification/basic-structure/)
+
+</details>
+
+</br>
+
+<details><summary id="app-manifest">2. App manifest</summary>
+
+Ensure that you adhere to following guidelines for app manifest:
+
+* Set the app manifest version to `1.17`.
+* Set `composeExtensions.composeExtensionType` to `apiBased`.
+* Define `composeExtensions.apiSpecificationFile` as the relative path to the OpenAPI Description file within the folder. This links the app manifest to the API specification.
+* Define `apiResponseRenderingTemplateFile` as the relative path to the response rendering template. This specifies the location of the template used for rendering API responses.
+* Each command must have a link to the response rendering template. This connects each command to its corresponding response format.
+* The `Commands.id` property in the app manifest must match the `operationId` in the OpenAPI Description.
+* If a required parameter is without a default value, the command `parameters.name` in the app manifest must match the `parameters.name` in the OpenAPI Description document.
+* If there’s no required parameter, the command `parameters.name` in the app manifest must match the optional `parameters.name` in the OpenAPI Description.
+* Make sure that the parameters for each command match exactly with the names of the parameters defined for the operation in the OpenAPI spec.
+* A [response rendering template](#response-template) must be defined per command, which is used to convert responses from an API.
+* Full description must not exceed 128 characters.
+
+  ```json
+   {
+   "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.17/MicrosoftTeams.schema.json",
+   +  "manifestVersion": "1.17",
+   "version": "1.0.0",
+   "id": "04805b4b-xxxx-xxxx-xxxx-4dbc1cac8f89",
+   "packageName": "com.microsoft.teams.extension",
+   "developer": {
+      "name": "Teams App, Inc.",
+      "websiteUrl": "https://www.example.com",
+      "privacyUrl": "https://www.example.com/termofuse",
+      "termsOfUseUrl": "https://www.example.com/privacy"
+   },
+   "icons": {
+      "color": "color.png",
+      "outline": "outline.png"
+   },
+   "name": {
+      "short": "AI tools",
+      "full": "AI tools"
+   },
+   "description": {
+      "short": "AI tools",
+      "full": "AI tools"
+   },
+   "accentColor": "#FFFFFF",
+   "composeExtensions": [
+      {
+   +      "composeExtensionType": "apiBased",
+   +      "authorization": {
+   +        "authType": "apiSecretServiceAuth ",
+   +        "apiSecretServiceAuthConfiguration": {
+   +            "apiSecretRegistrationId": "9xxxxxxx-7xxx-4xxx-bxxx-1xxxxxxxxxxx"
+   +        }
+   +      },
+   +      "apiSpecificationFile": "aitools-openapi.yml",
+         "commands": [
+         {
+            "id": "searchTools",
+            "type": "query",
+            "context": [
+               "compose",
+               "commandBox"
+            ],
+            "title": "search for AI tools",
+            "description": "search for AI tools",
+            "parameters": [
+               {
+               "name": "search",
+               "title": "search query",
+               "description": "e.g. search='tool to create music'"
+               }
+            ],
+   +          "apiResponseRenderingTemplateFile": "response-template.json"
+         }
+         ]
+      }
+   ],
+   "validDomains": []
+   }
+   ```
+
+### Parameters
+
+|Name  |Description                                    |
+|:---------|               ---------------------------------------------------------|
+|`composeExtensions.composeExtensionType`     |  Compose extension type. Update the value to `apiBased`. |
+|`composeExtensions.authorization`|Authorization related information for the API-based message extension|
+|`composeExtensions.authorization.authType`|Enum of possible authorization types. Supported values are `none`, `apiSecretServiceAuth`, and `microsoftEntra`.|
+|`composeExtensions.authorization.apiSecretServiceAuthConfiguration`|Object capturing details needed to do service auth. Applicable only when auth type is `apiSecretServiceAuth`.|
+|`composeExtensions.authorization.apiSecretServiceAuthConfiguration.apiSecretRegistrationId`| Registration ID returned when developer submits the API key through Developer Portal.|
+|`composeExtensions.apiSpecificationFile`     |  References an OpenAPI Description file in the app package. Include when type is `apiBased`.      |
+|`composeExtensions.commands.id`      | Unique ID that you assign to search command. The user request includes this ID. The ID must match the `OperationId` available in the OpenAPI Description.       |
+|`composeExtensions.commands.context`      | Array where the entry points for message extension is defined. The default values are `compose` and `commandBox`. |
+|`composeExtensions.commands.parameters`    | Defines a static list of parameters for the command. The name must map to the `parameters.name` in the OpenAPI Description. If you're referencing a property in the request body schema, then the name must map to `properties.name` or query parameters.     |
+|`composeExtensions.commands.apiResponseRenderingTemplateFile`| Template used to format the JSON response from developer’s API to Adaptive Card response. *[Mandatory]* |
+
+For more information, see [composeExtensions](../resources/schema/manifest-schema-dev-preview.md#composeextensions).
+
+</details>
+
+</br>
+
+<details><summary id="response-template">3. Response rendering template</summary>
+
+* **Define the schema reference URL** in the `$schema` property to establish the structure of your template.
+* **The supported values for `responseLayout`** are `list` and `grid`, which determine how the response is visually presented.
+* **A `jsonPath` is recommended** for arrays or when the data for the Adaptive Card isn't the root object. For example, if your data is nested under `productDetails`, your JSON path would be `productDetails`.
+* **Define `jsonPath` as the path** to the relevant data or array in the API response. If the path points to an array, then each entry in the array binds with the Adaptive Card template and returns as a separate result. *[Optional]*
+* **Get a sample response** for validating the response rendering template. This serves as a test to ensure your template works as expected.
+* **Use tools such as Fiddler or Postman** to call the API and ensure that the request and the response are valid. This step is crucial for troubleshooting and confirming that your API is functioning correctly.
+* **You can use the Adaptive Card Designer** to bind the API response to the response rendering template and preview the Adaptive Card. Insert the template in the **CARD PAYLOAD EDITOR** and insert the sample response entry in the **SAMPLE DATA EDITOR**.
+
+The following code is an example of a Response rendering template: <br/>
+<br/>
+  <details><summary>Response rendering template example</summary>
+
+  ```json
+  {
+  "version": "1.0",
+  "jsonPath": "repairs",
+  "responseLayout": "grid",
+  "responseCardTemplate": {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.4",
+    "body": [
+      {
+        "type": "Container",
+        "items": [
+          {
+            "type": "ColumnSet",
+            "columns": [
+              {
+                "type": "Column",
+                "width": "stretch",
+                "items": [
+                  {
+                    "type": "TextBlock",
+                    "text": "Title: ${if(title, title, 'N/A')}",
+                    "wrap": true
+                  },
+                  {
+                    "type": "TextBlock",
+                    "text": "Description: ${if(description, description, 'N/A')}",
+                    "wrap": true
+                  },
+                  {
+                    "type": "TextBlock",
+                    "text": "Assigned To: ${if(assignedTo, assignedTo, 'N/A')}",
+                    "wrap": true
+                  },
+                  {
+                    "type": "Image",
+                    "url": "${image}",
+                    "size": "Medium",
+                    "$when": "${image != null}"
+                  }
+                ]
+              },
+              {
+                "type": "Column",
+                "width": "auto",
+                "items": [
+                  {
+                    "type": "Image",
+                    "url": "${if(image, image, '')}",
+                    "size": "Medium"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "FactSet",
+            "facts": [
+              {
+                "title": "Repair ID:",
+                "value": "${if(id, id, 'N/A')}"
+              },
+              {
+                "title": "Date:",
+                "value": "${if(date, date, 'N/A')}"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+    },
+    "previewCardTemplate": {
+    "title": "Title: ${if(title, title, 'N/A')}",
+    "subtitle": "Description: ${if(description, description, 'N/A')}",
+    "text": "Assigned To: ${if(assignedTo, assignedTo, 'N/A')}",
+    "image": {
+      "url": "${image}",
+      "$when": "${image != null}"
+      }
+    }
+   }
+   ```
+
+  </details>
+
+  **Preview Card**
+
+  :::image type="content" source="../assets/images/Copilot/api-based-message-extension-preview-card.png" alt-text="Screenshot shows an example of compose extension displaying an array of preview cards when searching for a specific word. In this case, searching for 'a' in the 'SME test app' returns five cards showing 'Title', 'Description' (truncated) and 'AssignedTo' properties and values in each one.":::
+
+ **Expanded Adaptive Card**
+
+  :::image type="content" source="../assets/images/Copilot/api-based-message-extension-expanded-adaptive-card.png" alt-text="Example of how the Adaptive Card looks like expanded once a user selects a preview card. The Adaptive Card shows the Title, the full Description, AssignedTo, RepairId, and Date values.":::
+
+#### Parameters
+
+|Property  |Type  |Description  |Required  |
+|--------- |---------|---------|---------|
+|`version` |  `string` | The schema version of the current response rendering template.        |  Yes       |
+|`jsonPath`     | `string`        | The path to the relevant section in the results to which the responseCardTemplate and previewCardTemplate should be applied. If not set, the root object is treated as the relevant section. If the relevant section is an array, each entry is mapped to the responseCardTemplate and the previewCardTemplate.        |   No      |
+|`responseLayout`    | `responseLayoutType`        |  Specifies the layout of the results in the message extension flyout. The supported types are `list` and `grid`.       |    Yes     |
+|`responseCardTemplate`    |  `adaptiveCardTemplate`  | A template for creating an Adaptive Card from a result entry.      |   Yes      |
+|`previewCardTemplate`     |  `previewCardTemplate`       | A template for creating a preview card from a result entry. The resulting preview card is displayed in the message extension flyout menu.        |  Yes       |
+
+#### Json path
+
+The JSON path is optional but should be used for arrays or where the object to be used as the data for the adaptive card isn't the root object. The JSON path should follow the format defined by Newtonsoft. If the JSON path points to an array, then each entry in that array is bound with the adaptive card template and returns as separate results.
+
+**Example**
+Let's say you have the below JSON for a list of products and you want to create a card result for each entry.
+
+```json
+{
+   "version": "1.0",
+   "title": "All Products",
+   "warehouse": {
+      "products": [
+        ...
+      ]
+   }
+}
+```
+
+As you can see, the array of results is under "products", which is nested under "warehouse", so the JSON path would be "warehouse.products".
+
+Use <https://adaptivecards.io/designer/> to preview an Adaptive Card by inserting the template into Card Payload Editor. Take a sample response entry from your array or for your object and insert it into Sample Data Editor. Ensure that the card renders properly and is to your liking.
+
+#### Schema mapping
+
+The properties in OpenAPI Description document are mapped to the Adaptive Card template as follows:
+
+* `string`, `number`, `integer`, `boolean` types are converted to a TextBlock.
+
+  <details><summary>Example</summary>
+  
+  * **Source Schema**: `string`, `number`, `integer`, and `boolean`
+
+       ```yml
+        name:
+          type: string
+          example: doggie
+       ```
+
+  * **Target Schema**: `Textblock`
+
+      ```json
+      {
+      "type": "TextBlock",
+      "text": "name: ${if(name, name, 'N/A')}",
+      "wrap": true
+    }
+      ```
+
+  </details>
+
+* `array`: An array is converted to a container inside Adaptive Card.
+
+  <details><summary>Example</summary>
+
+  * **Source schema**: `array`
+
+    ```yml
+        type: array
+                  items:
+                  required:
+                    - name
+                  type: object
+                    properties:
+                    id:
+                      type: integer
+                    category:
+                      type: object
+                      properties:
+                      name:
+                        type: string
+    ```
+
+  * **Target Schema**: `Container`
+
+    ```json
+        {
+                  "type": "Container",
+                  "$data": "${$root}",
+                  "items": [
+                    {
+                      "type": "TextBlock",
+                      "text": "id: ${if(id, id, 'N/A')}",
+                      "wrap": true
+                    },
+                    {
+                      "type": "TextBlock",
+                      "text": "category.name: ${if(category.name, category.name, 'N/A')}",
+                      "wrap": true
+                    }
+                  ]
+                }
+                
+    ```
+
+  </details>
+
+* `object`: An object is converted to a nested property in Adaptive Card.
+
+  <details><summary>Example</summary>
+
+  * **Source Schema**: `object`
+
+    ```yml
+    components:
+      schemas:
+        Pet:
+            category:
+              type: object
+            properties:
+              id:
+                type: integer
+              name:
+                type: string
+
+    ```
+
+  * **Target Schema**: Nested property in an Adaptive Card
+
+    ```json
+    {
+      "type": "TextBlock",
+      "text": "category.id: ${if(category.id, category.id, 'N/A')}",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "text": "category.name: ${if(category.name, category.name, 'N/A')}",
+      "wrap": true
+    }
+
+    ```
+
+  </details>
+
+* `image`: If a property is an image URL, then it converts to an Image element in the Adaptive Card.
+
+  <details><summary>Example</summary>
+
+  * **Source schema**: `image`
+
+    ```yml
+        image:
+          type: string
+          format: uri
+          description: The URL of the image of the item to be repaired
+
+    ```
+
+  * **Target Schema**: `"Image"`
+
+    ```json
+    {
+          "type": "Image",
+          "url": "${image}",
+          "$when": "${image != null}"
+        }
+
+    ```
+
+  </details>
+
+</details>
+
+You can create an API-based message extension using Developer Portal for Teams, Teams Toolkit for Visual Studio Code, command line interface (CLI), or Visual Studio.
 
 # [Developer Portal for Teams](#tab/developer-portal-for-teams)
 
-To create an API-based message extension using Developer Portal for Teams, follow these steps:
+To create an API-based message extension using Developer Portal, follow these steps:
 
-1. Go to **[Teams Developer Portal](https://dev.teams.microsoft.com/home)**.
+1. Go to **[Developer Portal](https://dev.teams.microsoft.com/home)**.
 1. Go to **Apps**.
-1. Select **+ New apps**.
-1. Enter a name of the app and select the **Manifest version** as **Latest prerelease (devPreview)**.
+1. Select **+ New app**.
+1. Enter a name of the app and select the **Manifest version** as **Public developer preview (devPreview)**.
 1. Select **Add**.
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-manifest-version.png" alt-text="Screenshot shows the app name and the manifest version selected as Latest prerelease (devPreview) in Developer Portal.":::
@@ -36,17 +528,17 @@ To create an API-based message extension using Developer Portal for Teams, follo
 1. Select **Save**.
 
 1. Select **App features**.
-1. Select **Messaging extension**.
+1. Select **Message extension**.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-app-feature.png" alt-text="Screenshot shows the message extension option in Teams Developer Portal.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-app-feature.png" alt-text="Screenshot shows the message extension option in Developer Portal." lightbox="../assets/images/Copilot/api-based-me-tdp-app-feature.png":::
 
 1. Under **Message extension type**, select **API**.
 
-   1. If you get a disclaimer, which reads **Bot message extension is already in use by users. Would you like to change message extension type to API?**. Select **Yes, change**.
+   1. If you get a disclaimer that reads **Bot message extension is already in use by users. Would you like to change message extension type to API?**, select **Yes, change**.
 
 1. Under **OpenAPI spec**, select **Upload now**.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-upload.png" alt-text="Screenshot shows the Upload now option in Teams Developer Portal.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-upload.png" alt-text="Screenshot shows the Upload now option in Developer Portal." lightbox="../assets/images/Copilot/api-based-me-tdp-upload.png":::
 
 1. Select the OpenAPI Description document in the JSON or YAML format and select **Open**.
 
@@ -64,24 +556,22 @@ You can add commands and parameters to your message extension, to add commands:
 
 1. Under **Message extension type**, select **Add**.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-add-commands.png" alt-text="Screenshot shows the add option to add commands in Teams Developer Portal.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-add-commands.png" alt-text="Screenshot shows the add option to add commands in Developer Portal." lightbox="../assets/images/Copilot/api-based-me-tdp-add-commands.png":::
 
-   An **Add command** pop-up appears with a list of all the available APIs from the OpenAPI Description document.
+   An **Add a command** pop-up appears with a list of all the available APIs from the OpenAPI Description document.
 
 1. Select an API from the list and select **Next**.
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-commands-api-list.png" alt-text="Screenshot shows the list of APIs from the OpenAPI Description Document in the Add a command pop-up window.":::
 
-   A **Command details** appears.
-
-1. Under **Command details**, go to **Adaptive card template** and select **Upload now**.
+1. Under **Response template**, select **Upload now**.
 
     :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-adaptive-card-template.png" alt-text="Screenshot shows the Upload now option to add the Adaptive Card template in for the command.":::
 
    > [!NOTE]
-   > If you have more than one API, ensure that you upload the **Adaptive card template** for each API.
+   > If you have more than one API, ensure that you upload the Adaptive Card response template for each API.
 
-1. Select the Adaptive Card template file in JSON format and select **Open**.
+1. Select the Adaptive Card response template file in JSON format and select **Open**.
 
    The following attributes are updated automatically from the Adaptive Card template:
    * Command Type
@@ -90,23 +580,29 @@ You can add commands and parameters to your message extension, to add commands:
    * Parameter name
    * Parameter description
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-command-details.png" alt-text="Screenshot shows the fields available in the command details page.":::
-
 1. Under **Details**, update the **Command description**.
 
-   1. If you want to launch a command using a trigger in Microsoft 365 chat, turn on the **Automatically run the command when a user opens the extension** toggle.
+1. If you want to launch a command using a trigger in Microsoft 365 Copilot, turn on the **Automatically run this command when a user opens the extension** toggle.
 
 1. Select **Add**. The command is added successfully.
 
+   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-command-details.png" alt-text="Screenshot shows the fields available in the command details page.":::
+
 1. Select **Save**.
+
+1. Under **Authentication and authorization**, select any of the following options:
+
+   * **No Authentication (not recommended)**
+   * **API key**
+   * **OAuth**
 
 An API-based message extension is created.
 
-:::image type="content" source="../assets/images/Copilot/api-based-me-tdp-plugin-copilot.png" alt-text="Screenshot shows the plugin for Copilot app created in the app features page in Teams Developer Portal.":::
+:::image type="content" source="../assets/images/Copilot/api-based-me-tdp-plugin-copilot.png" alt-text="Screenshot shows the plugin for Microsoft 365 Copilot created in the app features page in Developer Portal." lightbox="../assets/images/Copilot/api-based-me-tdp-plugin-copilot.png":::
 
-To test your API-based message extension created in the Developer Portal for Teams, you can use the following methods:
+To test your API-based message extension created in Developer Portal, you can use the following methods:
 
-* **Preview in Teams**: In Developer Portal, open your message extension and select **Preview in Teams** in the upper-right corner. You're redirected to Teams, where you can add the app to Teams to preview the app.
+* **Preview in Teams**: Open your message extension and select **Preview in Teams** in the upper-right corner. You're redirected to Teams, where you can add the app to Teams to preview the app.
 
 * **Download app package**: On the message extension page, select **App package** from the left pane and then, in the upper-left corner of the window, select **Download app package**. The app package is downloaded to your local machine in a .zip file. You can upload the app package to teams and test the message extension.
 
@@ -118,11 +614,11 @@ To test your API-based message extension created in the Developer Portal for Tea
 To build an API-based message extension using Teams Toolkit for Visual Studio Code, follow these steps:
 
 1. Open **Visual Studio Code**.
-1. From the left pane, Select **Teams Toolkit**.
+1. From the left pane, select **Teams Toolkit**.
 1. Select **Create a New App**.
 1. Select **Message Extension**.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-plugin-copilot.png" alt-text="Screenshot shows the message extension option in Team Toolkit.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/create-me.png" alt-text="Screenshot shows the message extension option in Teams Toolkit.":::
 
 1. Select **Custom Search Results**.
 
@@ -187,7 +683,7 @@ To build an API-based message extension using Teams Toolkit for Visual Studio Co
            npm run keygen
            ```
 
-           The API key is generated as **Generated a new API Key: xxx...**. The generated API key is registered and recorded in the [API key registration tool](https://dev.teams.microsoft.com/api-key-registration) in Developer portal for Teams. For more information on API key registration, see [Register an API key](build-api-based-message-extension.md#register-an-api-key).
+           The API key is generated as **Generated a new API Key: xxx...**. The generated API key is registered and recorded in the [API key registration tool](https://dev.teams.microsoft.com/api-key-registration) in Developer Portal. For more information on API key registration, see [register an API key](api-based-secret-service-auth.md#register-an-api-key).
 
         4. Enter the generated API key into your `env/.env.*.user` file. Replace `<your-api-key>` with the actual key:
 
@@ -216,7 +712,7 @@ To build an API-based message extension using Teams Toolkit for Visual Studio Co
         :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-api-key.png" alt-text="Screenshot shows the Enter API key command that appears in Teams Toolkit for Visual Studio Code.":::
 
       > [!NOTE]
-      > The API key must be a string with 10 to 128 characters.
+      > The API key must be a string with 10 to 2048 characters.
 
     ---
 
@@ -228,17 +724,18 @@ To build an API-based message extension using Teams Toolkit for Visual Studio Co
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-accounts.png" alt-text="Screenshot shows the Microsoft 365 and Azure sign in option in Teams Toolkit.":::
 
-1. From the left pane, Select **Run and Debug (Ctrl+Shift+D)**.
+1. From the left pane, select **Run and Debug (Ctrl+Shift+D)**.
 1. From the launch configuration dropdown, select `Preview in Teams (Edge)` or `Preview in Teams (Chrome)`. Teams Toolkit launches Teams web client in a browser window.
 1. Go to a chat message and select the **Actions and apps** icon. In the flyout menu, search for your app.
 1. Select your message extension from the list and enter a search command in the search box.
-1. Select an item from the list. The item unfurls into an Adaptive Card in the message compose area.
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-invoke-teams.png" alt-text="Screenshot shows that a message extension app is invoked from the plus icon in the chat and the app is displayed in the message extension flyout menu.":::
 
-1. Select **Send**. Teams sends the search result as an Adaptive Card in the chat message.
+1. Select an item from the list. The item unfurls into an Adaptive Card in the message compose area.
 
-:::image type="content" source="../assets/images/Copilot/api-based-me-ttk-sbs-result.png" alt-text="Screenshot shows the Adaptive Card with the search results in the chat message in Teams.":::
+1. Select the **Enter** key and Teams sends the search result as an Adaptive Card in the chat message.
+
+   :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-sbs-result.png" alt-text="Screenshot shows the Adaptive Card with the search results in the chat message in Teams.":::
 
 # [Teams Toolkit CLI](#tab/teams-toolkit-cli)
 
@@ -249,10 +746,10 @@ To create an API-based message extension using Teams Toolkit CLI, follow these s
 1. Enter the following command:
 
    ```
-   npm install -g @microsoft/teamsfx-cli@beta
+   npm install -g @microsoft/teamsapp-cli
    ```
 
-1. Type `teamsfx new` in the terminal
+1. Type `teamsapp new` in the terminal
 
 1. Select **Message Extension**.
 
@@ -276,7 +773,8 @@ To create an API-based message extension using Teams Toolkit CLI, follow these s
 
 1. Go to the folder path where your project is created and enter the following command to provision your app in Azure:
 
-   ```teamsfx provision --env dev```
+   ```teamsapp provision --env dev```
+
    Teams Toolkit CLI opens a browser window and requests you to sign in to your Microsoft Account.
 
 1. Sign in to your Microsoft account. Teams Toolkit CLI executes validation and provisions your app on Azure.
@@ -285,9 +783,9 @@ To create an API-based message extension using Teams Toolkit CLI, follow these s
 
 1. In the command prompt window, enter the following command to preview your app in Teams:
 
-   ```Preview the app: teamsfx preview --env dev```
+   ```teamsapp preview --env dev```
 
- A new browser window with Teams web client opens. You can add your app to Teams.
+   A new browser window with Teams web client opens. You can add your app to Teams.
 
 # [Visual Studio](#tab/visual-studio)
 
@@ -313,7 +811,7 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
    * If you want to start without an API, select **Start with a new API**.
    * If you have an existing OpenAPI Description document, select **Start with an OpenAPI Description**.
 
-1. Select **Next**.
+1. Select **Create**.
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-vs-create-project.png" alt-text="Screenshot shows the Search results from API, New API, OpenAPI Description Document, and Create options in Visual Studio to create a new Project.":::
 
@@ -373,15 +871,286 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
 1. Go to a chat and select **Actions and apps**.
 
 1. From the message extension fly-out menu, enter the name of your message extension in the search box.
-1. Select the message extension and enter your search query.
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-vs-invoke-app.png" alt-text="Screenshot shows an example of message extension flyout menu invoked from the Plus icon and MyTeamsApp entered in the search filed. The app is displayed in the search results.":::
 
+1. Select the message extension and enter your search query.
+
 1. Select an item from the list. The item unfurls into an Adaptive Card in the message compose area.
 
-1. Select **Send**. Teams sends the search result as an Adaptive Card in the chat message.
+1. Select the **Enter** key and Teams sends the search result as an Adaptive Card in the chat message.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-vs-adaptive-card-chat.png" alt-text="Screenshot shows an example of Adaptive Card sent to the user's chat in Microsoft Teams.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-vs-adaptive-card-chat.png" alt-text="Screenshot shows an example of Adaptive Card sent to the user's chat in Teams." lightbox="../assets/images/Copilot/api-based-me-vs-adaptive-card-chat.png":::
+
+---
+
+## Multi parameters
+
+Multi parameters allow API-based message extensions to have more than one input type for query commands. For example, you can search for anime by genre, rating, status, and date.
+
+# [App manifest](#tab/app-manifest)
+
+You can specify the input types, titles, descriptions, and required fields for the parameters in the manifest.
+
+* The `isRequired` property in the parameter field indicates if a parameter is mandatory for the query command.
+* The `name` property of the `parameters` field in the app manifest must match the `id` field in the OpenAPI Description document for the corresponding parameter.
+
+**Example**
+
+```json
+"composeExtensions": [
+        {
+            "composeExtensionType": "apiBased",
+            "apiSpecificationFile": "apiSpecificationFiles/openapi.json",
+            "commands": [
+                {
+                    "context": [
+                        "compose"
+                    ],
+                    "type": "query",
+                    "title": "Search Animes",
+                    "id": "getAnimeSearch",
+                    "parameters": [
+                        {
+                            "name": "q",
+                            "title": "Search Query",
+                            "description": "The search query",
+                            "isRequired": true
+                        },
+                        {
+                            "name": "type",
+                            "inputType": "choiceset",
+                            "title": "Type",
+                            "description": "Available anime types",
+                            "choices": [
+                                {
+                                    "title": "TV",
+                                    "value": "tv"
+                                },
+                                {
+                                    "title": "OVA",
+                                    "value": "ova"
+                                },
+                                {
+                                    "title": "Movie",
+                                    "value": "movie"
+                                },
+                                {
+                                    "title": "Special",
+                                    "value": "special"
+                                },
+                                {
+                                    "title": "ONA",
+                                    "value": "ona"
+                                },
+                                {
+                                    "title": "Music",
+                                    "value": "music"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "status",
+                            "inputType": "choiceset",
+                            "title": "Status",
+                            "description": "Available airing statuses",
+                            "choices": [
+                                {
+                                    "title": "Airing",
+                                    "value": "airing"
+                                },
+                                {
+                                    "title": "Completed",
+                                    "value": "complete"
+                                },
+                                {
+                                    "title": "Upcoming",
+                                    "value": "upcoming"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "rating",
+                            "inputType": "choiceset",
+                            "title": "Rating",
+                            "description": "Available ratings",
+                            "choices": [
+                                {
+                                    "title": "G",
+                                    "value": "g"
+                                },
+                                {
+                                    "title": "PG",
+                                    "value": "pg"
+                                },
+                                {
+                                    "title": "PG-13",
+                                    "value": "pg13"
+                                },
+                                {
+                                    "title": "R",
+                                    "value": "r17"
+                                },
+                                {
+                                    "title": "R+",
+                                    "value": "r"
+                                },
+                                {
+                                    "title": "Rx",
+                                    "value": "rx"
+                                }
+                            ]
+                        }
+                    ],
+                    "description": "Search animes",
+                    "apiResponseRenderingTemplateFile": "response_json/getAnimeSearch.json"
+                },
+                {
+                    "context": [
+                        "compose"
+                    ],
+                    "type": "query",
+                    "title": "Search mangas",
+                    "id": "getMangaSearch",
+                    "parameters": [
+                        {
+                            "name": "q",
+                            "title": "Search Query",
+                            "description": "The search query",
+                            "isRequired": true
+                        },
+                        {
+                            "name": "type",
+                            "inputType": "choiceset",
+                            "title": "Type",
+                            "description": "Available manga types",
+                            "choices": [
+                                {
+                                    "title": "Manga",
+                                    "value": "manga"
+                                },
+                                {
+                                    "title": "Novel",
+                                    "value": "novel"
+                                },
+                                {
+                                    "title": "Light Novel",
+                                    "value": "lightnovel"
+                                },
+                                {
+                                    "title": "One Shot",
+                                    "value": "oneshot"
+                                },
+                                {
+                                    "title": "Doujin",
+                                    "value": "doujin"
+                                },
+                                {
+                                    "title": "Manhwa",
+                                    "value": "manhwa"
+                                },
+                                {
+                                    "title": "Manhua",
+                                    "value": "manhua"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "status",
+                            "inputType": "choiceset",
+                            "title": "Status",
+                            "description": "Available manga statuses",
+                            "choices": [
+                                {
+                                    "title": "Publishing",
+                                    "value": "publishing"
+                                },
+                                {
+                                    "title": "Complete",
+                                    "value": "complete"
+                                },
+                                {
+                                    "title": "Hiatus",
+                                    "value": "hiatus"
+                                },
+                                {
+                                    "title": "Discontinued",
+                                    "value": "discontinued"
+                                },
+                                {
+                                    "title": "Upcoming",
+                                    "value": "upcoming"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "start_date",
+                            "title": "Start Date",
+                            "description": "Start date of the manga",
+                            "inputType": "date"
+                        },
+                        {
+                            "name": "end_date",
+                            "title": "End Date",
+                            "description": "End date of the manga",
+                            "inputType": "date"
+                        }
+                    ],
+```
+
+# [Teams Toolkit](#tab/teams-toolkit)
+
+To build an API-based message extension with multiple parameters using Teams Toolkit for Visual Studio Code, follow these steps:
+
+1. Open **Visual Studio Code**.
+1. From the left pane, select **Teams Toolkit**.
+1. Select **Create a New App**.
+1. Select **Message Extension**.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/create-new-app1.png" alt-text="Screenshot shows the message extension option in Teams Toolkit.":::
+
+1. Select **Custom Search Results**.
+
+1. Select one of the following options:
+    1. To build from the beginning, select **Start with a new API**.
+    1. If you already have an OpenAPI description document, select **Start with an OpenAPI Description Document**.
+
+     :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-plugin-copilot-options.png" alt-text="Screenshot shows the options to create a search based message extension.":::
+
+1. Enter or browse the OpenAPI Description document location.
+
+      :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-plugin-copilot-openapi-spec-location.png" alt-text="Screenshot shows the option to select OpenAPI Description document location.":::
+
+1. From the API list, select the required APIs and select **OK**.
+
+      > [!NOTE]
+      > GET and POST APIs are supported for API-based message extensions.
+
+1. Select **Default folder**.
+1. Enter the name of your app and select **Enter**. Teams Toolkit scaffolds the OpenAPI Description document and created an API-based message extension.
+1. Under **LIFECYCLE**, select **Provision**.
+1. From the left pane, select **Teams Toolkit**.
+1. Under **ACCOUNTS**, sign in with your [Microsoft 365 account](/microsoftteams/platform/toolkit/accounts) and Azure account if you haven't already.
+
+   :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-accounts.png" alt-text="Screenshot shows the Microsoft 365 and Azure sign in option in Teams Toolkit.":::
+
+1. From the left pane, select **Run and Debug (Ctrl+Shift+D)**.
+1. From the launch configuration dropdown, select `Preview in Teams (Edge)` or `Preview in Teams (Chrome)`. Teams Toolkit launches Teams web client in a browser window.
+1. Go to a chat message and select the **Actions and apps** icon. In the flyout menu, search for your app.
+1. Select your message extension from the list and enter a search command in the search box.
+1. Select the required parameter from the **PetId** dropdown and enter required details as the secondary parameter in the **Text** box.
+
+    :::image type="content" source="../assets/images/messaging-extension/me-petid.png" alt-text="Screenshot shows you the message extension card in Teams to add petId and text.":::
+
+1. Select **Search** and then select the output from the flyout menu.
+
+    :::image type="content" source="../assets/images/messaging-extension/me-plugin-petid.png" alt-text="Screenshot shows you the message extension in Teams plugins.":::
+
+1. The Adaptive Card with required detail appears in the message compose area. Select **Enter**.
+
+    :::image type="content" source="../assets/images/messaging-extension/me-multi-parameter.png" alt-text="Screenshot shows you the multi-parameter result in the message compose area." lightbox="../assets/images/messaging-extension/me-multi-output.png":::
+
+Now you've succesfully created multi paramter in message extension.
 
 ---
 
@@ -391,3 +1160,7 @@ To build an API-based message extension, follow these step-by-step guides:
 
 * [For beginners](../sbs-api-msg-ext-ttk.yml): Build an API-based message extension using Teams Toolkit.
 * [For advanced users](../sbs-api-based-message-extensions.yml): Build an API-based message extension from the ground up.
+
+## See also
+
+[Authentication for API-based message extensions](build-api-based-message-extension.md)

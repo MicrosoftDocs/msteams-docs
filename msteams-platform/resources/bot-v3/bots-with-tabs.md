@@ -1,5 +1,5 @@
 ---
-title: Combine bots with tabs
+title: Integrate and Use Bots with Tabs
 description: In this article, you learn how to use tabs and bots together, constructing deep links to tabs in messages from your bot, and teams bots tabs development.
 ms.topic: conceptual
 ms.localizationpriority: medium
@@ -44,4 +44,4 @@ In both cases, use event notifications wisely and never spam the user with unnec
 
 ## See also
 
-[Add How-to guides to Microsoft Teams app](../../toolkit/add-How-to-guides-v5.md)
+[Add How-to guides to Microsoft Teams app](../../toolkit/add-how-to-guides-vsc.md)

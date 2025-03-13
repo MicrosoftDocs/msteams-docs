@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot SSO Authentication
-description: Troubleshoot Single sign-on (SSO) authentication issues in Teams and how to use it in tab app.
+description: Learn how to troubleshoot single sign-on (SSO) authentication issues in Teams, use in tab app, handle error messages, and extend support for Microsoft Graph.
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) SSO errors questions
@@ -38,7 +38,7 @@ For more information, see [Graph explorer](https://developer.microsoft.com/graph
 <details>
 <summary>1. Error: consent missing.</summary>
 <br>
-When Microsoft Entra ID receives a request for accessing a Microsoft Graph resource, it checks if the app user or tenant administrator has given consent for this resource. If there's no record of consent from the user or administrator, Microsoft Entra ID sends an error message to your web service.
+When Microsoft Entra ID receives a request for accessing a Microsoft Graph resource, it checks if the app user or admin has given consent for this resource. If there's no record of consent from the user or administrator, Microsoft Entra ID sends an error message to your web service.
 
 Your code must tell the client (for example, in the body of a 403 Forbidden response) how to handle the error:
 
@@ -181,7 +181,7 @@ To understand the bot behavior when the token exchange fails to trigger a consen
     }
     ```
 
-6. If the `TokenExchangeInvokeResponse` has a `status` of `200`, then the client doesn't show the OAuth card. See the [normal flow image](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true). For any other `status` or if the `TokenExchangeInvokeResponse` isn't received, then the client shows the OAuth card to the user. See the [fallback flow image](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true). If there are any errors or unmet dependencies like user consent, this activity ensures that the SSO flow falls back to normal OAuthCard flow.
+6. If the `TokenExchangeInvokeResponse` has a `status` of `200`, then the client doesn't show the OAuth card. See the [normal flow image](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0&preserve-view=true#sso-components-interaction). For any other `status` or if the `TokenExchangeInvokeResponse` isn't received, then the client shows the OAuth card to the user. See the [fallback flow image](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0&preserve-view=true#sso-components-interaction). If there are any errors or unmet dependencies like user consent, this activity ensures that the SSO flow falls back to normal OAuthCard flow.
 
    > [!NOTE]
    >

@@ -1,10 +1,10 @@
 ---
-title: Plan your app overview
+title: Plan your App - Overview
 author: heath-hamilton
 description: Learn how to plan your app with Microsoft Teams features, identify and map use cases, planning checklist, app deployment, and availability for government clouds.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.date: 03/20/2023
+ms.date: 02/06/2025
 ---
 
 # Plan your app with Teams features
@@ -46,7 +46,7 @@ Understanding the user and their concern are the first indicators of how a Teams
 
 * **Create and build app project**: With Teams, you can choose the build environment that best suits your app requirement. Use Teams Toolkit or other SDKs, such as C#, Blazor, Node.js, and more to get started.
 
-* **Design your app UI**: Use Teams UI Toolkit and UI Library to design your app's layout.
+* **Design your app UI**: Use Teams UI Toolkit and Fluent UI React components to design your app's layout.
 
 * **Use Teams as a platform**: Teams platform helps you build a single- or multi-capability app. Your Teams app is supported by the integrated products and services that strengthen the app experience.
 
@@ -65,35 +65,9 @@ Understanding the user and their concern are the first indicators of how a Teams
 * Integrate your app with Teams and other apps, such as Microsoft 365, Microsoft Graph, and more.
 * Use Developer Portal to configure, manage, and deploy your app.
 
-### Government Community Cloud
+### Plan for government and sovereign clouds
 
-Government Community Cloud (GCC) is a government focused copy of the commercial environment. Department of Defense (DOD) and Federal contractors must meet the stringent cybersecurity and compliance requirements. For this purpose, GCC-High was created to meet the needs of DOD and Federal contractors. GCC-High is a copy of the DOD cloud but exists in its own sovereign environment. The DOD cloud is built for the Department of Defense only.
-
-The following table includes Teams features and availability for GCC, GCC-High, and DOD:
-
-| &nbsp; | GCC | GCC-High | DOD |
-|-------------|---------|---|---|
-| **Apps** | &nbsp; | &nbsp; | &nbsp; |
-| Microsoft apps | ✔️ Microsoft apps compliant with GCC. | ✔️ Microsoft apps compliant with GCC-High. | ✔️ Microsoft apps compliant with DOD. |
-| 3P or third-party apps | ✔️ Third-party apps are available. Disabled by default and tenant admin use their own discretion to enable it. | ❌ | ❌ |
-| Custom apps built for your org (LOB apps)| ✔️ | ✔️ | ✔️ |
-| Upload custom apps | ✔️ | ❌ | ❌ |
-| **Capabilities** | &nbsp; | &nbsp; | &nbsp; |
-| Tabs | ✔️ | ✔️ | ✔️ |
-| Bots | ✔️ | ✔️ | ✔️ |
-| Message extensions | ✔️ | ✔️ | ✔️ |
-| Webhooks and connectors | ✔️ | ❌ | ❌ |
-
-**Compliance UI**: By enabling third-party communications, customers accept that such communication is being processed through the third party and not Microsoft. The customer is solely responsible for mitigating risks associated with connecting with third party bots in their services. Microsoft doesn't endorse and makes no warranties, express, or implied concerning the security of third parties the customer allows to connect with their service. Enabling bots extend your system boundary beyond this tenant based on the bot you choose to use. It is your responsibility to ensure that meets your compliance requirements including FedRAMP, DFARS, ITAR, and so on. It is your responsibility to evaluate the risk and compliance of any endpoint and URL that you connect to.
-
-The following list helps to identify the availability of GCC, GCC-High, and DOD for the features:
-
-* For third-party apps, see [web apps](../samples/integrating-web-apps.md) and [meeting app extensibility](../apps-in-teams-meetings/teams-apps-in-meetings.md).
-* For bots, see [build your first conversational bot for Teams](../sbs-teams-conversation-bot.yml), [designing your Teams bot](../bots/design/bots.md), [add bots to Microsoft Teams apps](../resources/bot-v3/bots-overview.md), and [bots in Teams](../bots/what-are-bots.md).
-* For custom app upload, see [enable your Teams app to be customized](../concepts/design/enable-app-customization.md), [distribute your Microsoft Teams app](../concepts/deploy-and-publish/apps-publish-overview.md), and [Upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md).
-* For custom connectors, see [create connectors for Microsoft 365 Groups for Teams](../webhooks-and-connectors/how-to/connectors-creating.md).
-
-</details>
+If you're planning to extend Teams app in a government cloud platform, it's essential to understand the capabilities of each government tenant and plan for purchase and deployment. To extend your Teams app in government cloud platforms, see plan for [government clouds](cloud-overview.md) and [sovereign cloud](sovereign-cloud.md).
 
 ## Next step
 
@@ -103,8 +77,6 @@ The following list helps to identify the availability of GCC, GCC-High, and DOD 
 ## See also
 
 * [Get started](../get-started/get-started-overview.md)
-* [Planning checklist](../concepts/design/planning-checklist.md)
 * [Considerations for Teams integration](../samples/integrating-web-apps.md)
-* [Plan responsive tabs for Teams mobile](design/plan-responsive-tabs-for-teams-mobile.md)
 * [Device capabilities](device-capabilities/device-capabilities-overview.md)
 * [Authenticate users in Microsoft Teams](authentication/authentication.md)

@@ -1,6 +1,6 @@
 ---
-title: Install Moodle LMS
-description: In this article, you'll learn how to install and configure the Moodle integration app for Microsoft Teams.
+title: Install & Configure Moodle LMS
+description: Learn how to install and configure Moodle LMS with Microsoft 365 plugins, integrate with Microsoft Teams, and deploy Moodle assistant bot to Azure.
 ms.topic: how-to
 ms.localizationpriority: medium
 author: surbhigupta
@@ -256,7 +256,7 @@ To deploy your app:
 1. Select **Upload an app** and select **Upload an app to your org's app catalog**.
 
    > [!NOTE]
-   > If you are logged in as a global administrator, you must have the option of uploading the app to your organization's app catalog, otherwise you can only load the app for a team in which you are a member.
+   > If you are logged in as a Global Administrator, you must have the option of uploading the app to your organization's app catalog, otherwise you can only load the app for a team in which you are a member.
 
 1. Select the `manifest.zip` package you downloaded previously and select **Save**. If you haven't downloaded the app manifest package, you can download from the **Team Settings** tab of the plugins configuration page in Moodle.
 

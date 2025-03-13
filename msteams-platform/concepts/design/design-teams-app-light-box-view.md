@@ -1,7 +1,7 @@
 ---
 title: Design App with Lightbox UI Components
 author: v-npaladugu
-description: Learn how to use lightbox UI component from Teams UI kit to build Microsoft Teams apps.
+description: Learn how to use lightbox UI component from Teams UI kit to build Microsoft Teams apps such as anatomy, sizing of the components, and its best practices.
 ms.localizationpriority: medium
 ms.topic: reference
 ms.author: surbhigupta
@@ -10,9 +10,9 @@ ms.date: 01/29/2023
 
 # Designing lightbox for your Microsoft Teams app
 
-The lightbox is a display component that emphasizes important information by deactivating the page layout behind it. Information in the lightbox is noneditable and non-interactive. The lightbox view enables users to preview media content, including images, videos, audio files on a large surface over the main Teams window. 
+The lightbox is a display component that emphasizes important information by deactivating the page layout behind it. Information in the lightbox is noneditable and non-interactive. The lightbox view enables users to preview media content, including images, videos, audio files on a large surface over the main Teams window.
 
-The lightbox component is designed for quick reviews, understanding, or verification. It doesn't support actions for editing or collaboration. Users can initiate the lightbox in a new Teams window or open it directly in a native app or browser. 
+The lightbox component is designed for quick reviews, understanding, or verification. It doesn't support actions for editing or collaboration. Users can initiate the lightbox in a new Teams window or open it directly in a native app or browser.
 
 # [Desktop](#tab/desktop)
 
@@ -63,7 +63,7 @@ Following is the default sizing for the container with the main content:
 
 # [Carousel](#tab/carousel)
 
-Contains all media files from the current chat, channel post, or file folder. 
+Contains all media files from the current chat, channel post, or file folder.
 
 :::image type="content" source="../../assets/images/light-box/carousel-sizing.png" alt-text="Example shows carousel sizing with lightbox view in the Teams." lightbox="../../assets/images/light-box/carousel-sizing.png":::
 
@@ -81,7 +81,7 @@ Help to save time during file opening. Opening on top of the main content. With 
 
 #### Don't: Use a lightbox for content editing or interaction
 
-Information in the lightbox is noneditable and non-interactive. Provide clear options in **Open in** menu, where users can start to interact with content. 
+Information in the lightbox is noneditable and non-interactive. Provide clear options in **Open in** menu, where users can start to interact with content.
 
 :::image type="content" source="../../assets/images/light-box/interactions-lightbox-dont.png" alt-text="Example shows the use of a lightbox component for content editing.":::
 
@@ -101,7 +101,7 @@ Users won’t be able to see who else is in the file and making changes from the
 
 :::image type="content" source="../../assets/images/light-box/lightbox-back-do.png" alt-text="Example shows the use of a lightbox component with back button in the header.":::
 
-#### Don't use more button to close the lightbox 
+#### Don't use more button to close the lightbox
 
 You can exit the lightbox by either going back to the previous screen or tapping outside of it.
 
@@ -113,14 +113,14 @@ You can exit the lightbox by either going back to the previous screen or tapping
 
 #### Don't: Refer to commenting in a lightbox experience
 
-Users can’t comment in lightbox files. 
+Users can’t comment in lightbox files.
 
 :::image type="content" source="../../assets/images/light-box/lightbox-highlight-dont.png" alt-text="Example shows the use of a lightbox component with commenting in the chat panel.":::
 
-#### Do: Open the file in a new window if the file requires more time to focus and is editable.
+#### Do: Open the file in a new window if the file requires more time to focus and is editable
 
 :::image type="content" source="../../assets/images/light-box/lightbox-file-window-do.png" alt-text="Example shows the use of a lightbox component to open the file in a new window.":::
 
-#### Don't: Use lightbox for files as Word, Excel, PowerPoint, and PDF. Lightbox is a good component for content preview.
+#### Don't: Use lightbox for files as Word, Excel, PowerPoint, and PDF. Lightbox is a good component for content preview
 
 :::image type="content" source="../../assets/images/light-box/lightbox-file-dont.png" alt-text="Example shows the use of a lightbox component for files as Word, Excel, PowerPoint, and PDF.":::

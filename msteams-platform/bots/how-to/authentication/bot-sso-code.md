@@ -4,6 +4,7 @@ description: Learn how to add code configuration, handle an access token, receiv
 ms.topic: how-to
 ms.localizationpriority: high
 zone_pivot_groups: enable-sso
+ms.date: 11/13/2024
 ---
 # Add code to enable SSO in your bot app
 
@@ -77,7 +78,7 @@ To update your app's code:
     ---
 
     > [!NOTE]
-    > You might receive multiple responses for a given request if the user has multiple active endpoints. You must eliminate all duplicate or redundant responses with the token. For more information about signin/tokenExchange, see [TeamsSSOTokenExchangeMiddleware Class](/python/api/botbuilder-core/botbuilder.core.teams.teams_sso_token_exchange_middleware.teamsssotokenexchangemiddleware?view=botbuilder-py-latest#remarks&preserve-view=true).
+    > You might receive multiple responses for a given request if the user has multiple active endpoints. You must eliminate all duplicate or redundant responses with the token. For more information about signin/tokenExchange, see [TeamsSSOTokenExchangeMiddleware Class](/python/api/botbuilder-core/botbuilder.core.teams.teams_sso_token_exchange_middleware.teamsssotokenexchangemiddleware?view=botbuilder-py-latest&preserve-view=true#remarks).
 
 1. Use the following code snippet for requesting a token.
 
@@ -150,7 +151,7 @@ To update your app's code:
         const ENV_FILE = path.join(__dirname, '.env');
         require('dotenv').config({ path: ENV_FILE });
         
-        const restify = require('restify');
+        const express = require("express");
         
         // Import required bot services.
         // See https://learn.microsoft.com/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0 to learn more about the different parts of a bot.
@@ -216,18 +217,18 @@ To update your app's code:
         // Create the bot that will handle incoming messages.
         const bot = new TeamsBot(conversationState, userState, dialog);
         
-        // Create HTTP server.
-        const server = restify.createServer();
-        server.use(restify.plugins.bodyParser());
-        
-        server.listen(process.env.port || process.env.PORT || 3978, function() {
-            console.log(`\n${ server.name } listening to ${ server.url }`);
+        // Create express application.
+        const expressApp = express();
+        expressApp.use(express.json());
+
+        const server = expressApp.listen(process.env.port || process.env.PORT || 3978, () => {
+            console.log(`\n${ expressApp.name } listening to`, server.address());
             console.log('\nGet Bot Framework Emulator: https://aka.ms/botframework-emulator');
             console.log('\nTo talk to your bot, open the emulator select "Open Bot"');
         });
         
         // Listen for incoming requests.
-        server.post('/api/messages', async (req, res) => {
+        expressApp.post('/api/messages', async (req, res) => {
             // Route received a request to adapter for processing.
             await adapter.process(req, res, (context) => bot.run(context));
         });
@@ -255,7 +256,7 @@ The consent dialog that appears is for open-id scopes defined in Microsoft Entra
 > [!IMPORTANT]
 > Scenarios where consent dialogs are not needed:
 >
-> - If the tenant administrator has granted consent on behalf of the tenant, app users don't need to be prompted for consent at all. This means that the app users don't see the consent dialogs and can access the app seamlessly.
+> - If the admin has granted consent on behalf of the tenant, app users don't need to be prompted for consent at all. This means that the app users don't see the consent dialogs and can access the app seamlessly.
 > - If your Microsoft Entra app is registered in the same tenant from which you're requesting an authentication in Teams, the app user can't be asked to consent, and is granted an access token right away. App users consent to these permissions only if the Microsoft Entra app is registered in a different tenant.
 
 If you encounter any errors, see [Troubleshoot SSO authentication in Teams](../../../tabs/how-to/authentication/tab-sso-troubleshooting.md).

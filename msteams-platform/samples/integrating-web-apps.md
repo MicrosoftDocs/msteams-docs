@@ -1,26 +1,28 @@
 ---
 author: heath-hamilton
-description: Learn best practices or considerations for integrating existing web apps with Teams, API requirements, authentication, and deep-linking of your app with Teams.
+description: Learn best practices or considerations for integrating existing web apps with Teams, API requirements, authentication, and deep linking of your app with Teams.
 ms.author: surbhigupta
-ms.date: 04/02/2023
+ms.date: 01/23/2025
 ms.localizationpriority: medium
 ms.topic: conceptual
-title: Considerations for Teams integration
+title: Factors to Consider for App Integration
 ---
 # Considerations for Teams integration
 
-You can make web apps suitable with Teams' social and collaborative features, by properly integrating them with Teams.
+You can make web apps suitable with Microsoft Teams' social and collaborative features, by properly integrating them with Teams.
   
 The different types of apps, which you can integrate with Teams are as follows:
 
 * **Standalone apps**: A standalone app is a single-page or large, and complex app. The user can use some aspects of it in Teams.
 * **Collaboration apps**: An app already built for the social and collaborative features inherent to Teams.
-* **SharePoint**: A SharePoint page you want to surface in Teams.
+* **Microsoft SharePoint**: A SharePoint page you want to surface in Teams.
 
 You can map and follow the appropriate guideline applicable to your integration scenario.
-This document gives an overview of Teams capabilities, share-point requirements for file and data storage, API requirements, authentication, and deep-linking of your app with Teams.
+This document gives an overview of Teams capabilities, SharePoint requirements for file and data storage, API requirements, authentication, and deep linking of your app with Teams.
 
 ## Get to know Teams platform capabilities
+
+[!INCLUDE [deprecation-note](~/includes/deprecation-note.md)]
 
 ***Integration scenarios**: Standalone apps, collaboration apps, SharePoint*
 
@@ -29,13 +31,13 @@ Your Teams app must include required and expected collaborative features. To wor
 |Common app features   |Teams platform capabilities   |
 |----------|-----------|
 |Embedded webpage, homepage, or webview  |[Tabs](../tabs/what-are-tabs.md)<br/> [Tabs extended across Microsoft 365](../m365-apps/overview.md)  |
-|Share shortcuts and extensions  |[Message extensions](../messaging-extensions/what-are-messaging-extensions.md)<br/>[Message extensions for Outlook](../m365-apps/overview.md)  |
+|Share shortcuts and extensions  |[Message extensions](../messaging-extensions/what-are-messaging-extensions.md)<br/>[Message extensions for Outlook](../m365-apps/overview.md) |
 |Action shortcuts and extensions  |[Message extensions](../messaging-extensions/what-are-messaging-extensions.md)  |
 |Chatbots |[Bots](../bots/what-are-bots.md) |
 |Channel notifications  |[Bots](../bots/what-are-bots.md)<br/>[Incoming Webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)<br/>[Connectors for Microsoft 365 Groups](../webhooks-and-connectors/what-are-webhooks-and-connectors.md#connectors-for-microsoft-365-groups) |
-|Message external services  |[Bots](../bots/what-are-bots.md)<br/>[Outgoing Webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
+|Message external services  |[Bots](../bots/what-are-bots.md)<br/>[Outgoing Webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks)  |
 |Modals  |[Dialogs (referred as task modules in TeamsJS v1.x)](../task-modules-and-cards/what-are-task-modules.md)  |
-|Content-rich cards  |[Adaptive Cards](../task-modules-and-cards/what-are-cards.md)  |
+|Content-rich cards  |[Adaptive Cards](../task-modules-and-cards/what-are-cards.md#adaptive-cards)  |
 
 ## Determine a subset of functionality
 
@@ -82,7 +84,7 @@ Microsoft Entra ID is the identity provider for Teams. If your app uses a differ
 Teams has single sign-on (SSO) mechanisms with Microsoft Entra ID for third-party apps. It also provides the guidance for authentication flows to other identity providers using standards such as OAuth and OpenID Connect, known as OIDC.
 
 > [!IMPORTANT]
-> The third-party apps are available in Government Community Cloud (GCC) but are not available for GCC-High and Department of Defense (DOD). Third-party apps are turned off by default for GCC. To turn on third-party apps for GCC, see [manage app permission policies](/microsoftteams/teams-app-permission-policies) and [manage apps](/microsoftteams/manage-apps).
+> Third-party apps are available in Government Community Cloud (GCC) but aren't available for GCC High, Department of Defense (DoD), and Teams operated by 21Vianet. Third-party apps are turned off by default for GCC. To turn on third-party apps for GCC, see [manage app permission policies](/microsoftteams/teams-app-permission-policies) and [manage apps](/microsoftteams/manage-apps).
 
 For SharePoint pages, you can only use SSO and can't add another Microsoft Entra ID if you want SSO to work for another app as the ID is the SharePoint app.
 
@@ -92,7 +94,7 @@ Learn more about [authentication in Teams](../concepts/authentication/authentica
 
 ***Integration scenarios**: Standalone apps, collaboration apps*
 
-Ensure to follow [Teams design guidelines](../concepts/design/understand-use-cases.md) to make your app native to Teams. You can't migrate an existing app content to a Teams tab. For more information on app design, see [Fluent Design System](https://react.fluentui.dev/?path=/docs/).
+Ensure to follow [Teams design guidelines](../concepts/design/design-teams-app-overview.md) to make your app native to Teams. You can't migrate an existing app content to a Teams tab. For more information on app design, see [Fluent Design System](https://react.fluentui.dev/?path=/docs/).
 
 ## Maximize deep linking
 

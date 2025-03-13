@@ -1,11 +1,11 @@
 ---
-title: Typeahead search in Adaptive Cards 
+title: Search Types & Usage in Adaptive Cards
 author: Rajeshwari-v
-description: In this module, learn what is typeahead search in adaptive cards with Input.ChoiceSet control and implement typeahead search.
+description: In this module, learn how to use Input.ChoiceSet to implement static and dynamic typeahead search and dependent inputs in Adaptive Cards.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.date: 05/25/2023
+ms.date: 01/23/2025
 ---
 
 # Typeahead search in Adaptive Cards
@@ -83,7 +83,7 @@ The following properties are the new additions to the [`Input.ChoiceSet`](https:
 | choices.data | Data.Query | No | Enables dynamic typeahead as the user types, by fetching a remote set of choices from a backend. |
 | value | String | No | The initial choice (or set of choices) that must be selected. For multi-select, specify a comma-separated string of values. |
 
-### Data.Query definition
+### Data.Query
 
 | Property| Type | Required | Description |
 |-----------|------|----------|-------------|
@@ -92,6 +92,9 @@ The following properties are the new additions to the [`Input.ChoiceSet`](https:
 | value | String | No | Populates for the invoke request to the bot with the input that the user provided to the `ChoiceSet`. |
 | count | Number | No | Populates for the invoke request to the bot to specify the number of elements that must be returned. The bot ignores it if the users want to send a different amount. |
 | skip | Number | No | Populates for the invoke request to the bot to indicate that users want to paginate and move ahead in the list. |
+| associatedInputs | String | No | Specifies the input values associated with the `Data.Query` object. Allowed values: `auto`, `none` |
+
+When you define the `associatedInputs` property under the `Data.Query` object and set it to `auto`, Teams includes all input values of the card in the data query request sent to the bot. If you set the value to `none`, Teams doesn't include any input values in the data query request. This property allows the bot to use input values as search filters to refine dynamic typeahead search. For more information, see [dependent inputs](#dependent-inputs).
 
 ### Example
 
@@ -409,6 +412,137 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 ```
 
 ---
+
+## Dependent inputs
+
+> [!NOTE]
+> Dependent inputs aren't available in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](~/concepts/cloud-overview.md), and [Teams operated by 21Vianet](../../concepts/sovereign-cloud.md) environments.
+
+You can design Adaptive Cards in Teams where the value of an input depends on the value of another. For example, consider an Adaptive Card with two `Input.ChoiceSet` dropdowns: one for selecting a country and another for selecting a specific city within that country. The first dropdown must filter the cities displayed in the second dropdown. This can be achieved by creating an `Input.ChoiceSet` dropdown with dynamic typeahead search that depends on one or more other inputs in the card.
+
+### How it works
+
+To create dependent inputs in an Adaptive Card, use the following properties:
+
+1. **valueChangedAction**: Define this property on any input element, such as `Input.Text` or `Input.ChoiceSet`. This property allows you to define the `Action.ResetInputs` action, which triggers a data query request to the bot when a user changes the value of an input in the card.
+
+1. **Action.ResetInputs**: This action resets the values of the inputs you specify under `targetInputIds` to their default values.
+
+1. **associatedInputs**: Define this property under the [Data.Query](#dataquery) object. This property ensures that when Teams makes a data query request to your bot, it includes the values of all the inputs in the card.
+
+### Action.ResetInputs
+
+The `Action.ResetInputs` property resets the values of the inputs in an Adaptive Card. By default, the `Action.ResetInputs` property resets the values of all the inputs in an Adaptive Card. If you must reset particular input values, define the IDs of the elements containing those values in the `targetInputIds` property.
+
+| Property| Type | Required | Description |
+|---|---|---|---|
+| `valueChangedAction` | Action.ResetInputs | ✔️ | Contains the `Action.ResetInputs` property. |
+| `Action.ResetInputs` | String | ✔️ | Resets the input values. |
+| `targetInputIds` | Array of strings | | Defines the IDs of the input values to be reset. |
+| `id` | String | | A unique identifier for the action. |
+| `requires` | Object | | A list of capabilities the action requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the action isn't rendered, and its fallback is rendered if provided. |
+| `fallback` | Object or String | | Defines an alternate action to render. Set the value to `drop` to ignore the action if `Action.ResetInputs` is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property. |
+| `iconUrl` | String | | A URL to an image to be displayed on the left of the action's title. Data URIs are supported. |
+| `isEnabled` | Boolean | | Defines the `enabled` or `disabled` state of the action. A user can't select a disabled action. If the action is represented as a button, the button's style reflects this state. |
+| `mode` | String | | Defines if the action is primary or secondary. Allowed values: `primary`, `secondary` |
+| `style` | String | | Defines the style of the action, affecting its visual and spoken representations. Allowed values: `default`, `positive`, or `destructive` |
+| `title` | String | | The title of the action, as it appears on a button. |
+| `tooltip` | String | | The tooltip text to display when a user hovers over the action. |
+
+### Example
+
+Consider the earlier example: a card with two `Input.ChoiceSet` dropdowns that allow users to select a country and a city within that country. The following card payload demonstrates how to use the `valueChangedAction` and `associatedInputs` properties to implement the card.
+
+* The `valueChangedAction` property is defined alongside the `country` input to ensure that whenever its value changes, the value of the `city` input is reset.
+* Since the `city` input is required, resetting its value forces the user to select a new city whenever the value of `country` changes.
+* With the `associatedInputs` property defined, when Teams sends a data query request to the bot, it includes the value of the `country` input. Thus, when the user starts typing in the `city` input, the card returns a list of cities for the selected country.
+
+:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-dependent-input.png" alt-text="Screenshot shows an Adaptive Card with dependent inputs.":::
+
+```json
+{
+    "type": "AdaptiveCard",
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5",
+    "body": [
+        {
+            "size": "ExtraLarge",
+            "text": "Country Picker",
+            "weight": "Bolder",
+            "wrap": true,
+            "type": "TextBlock"
+        },
+        {
+            "id": "country",
+            "type": "Input.ChoiceSet",
+            "label": "Select a country or region:",
+            "choices": [
+                {
+                    "title": "USA",
+                    "value": "usa"
+                },
+                {
+                    "title": "France",
+                    "value": "france"
+                },
+                {
+                    "title": "India",
+                    "value": "india"
+                }
+            ],
+            "valueChangedAction": {
+                "type": "Action.ResetInputs",
+                "targetInputIds": [
+                    "city"
+                ]
+            },
+            "isRequired": true,
+            "errorMessage": "Please select a country or region"
+        },
+        {
+            "style": "filtered",
+            "choices.data": {
+                "type": "Data.Query",
+                "dataset": "cities",
+                "associatedInputs": "auto"
+            },
+            "id": "city",
+            "type": "Input.ChoiceSet",
+            "label": "Select a city:",
+            "placeholder": "Type to search for a city in the selected country",
+            "isRequired": true,
+            "errorMessage": "Please select a city"
+        }
+    ],
+    "actions": [
+        {
+            "title": "Submit",
+            "type": "Action.Submit"
+        }
+    ]
+}
+```
+
+The following code snippet shows an example of a bot invoke request for the card payload:
+
+```json
+{
+    "name": "application/search",
+    "type": "invoke",
+    "value": {
+        "queryText": "india",
+        "queryOptions": {
+            "skip": 0,
+            "top": 15
+        },
+        "dataset": "cities",
+        "data": {
+            "country": "<value of the country input>"
+        }
+    },
+    // …. other fields
+}
+```
 
 ## Code sample
 

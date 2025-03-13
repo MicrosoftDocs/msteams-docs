@@ -2,10 +2,10 @@
 title: Build in-meeting document signing
 metadata:
   title: Build in-meeting document signing app
-  description: With this learning module, learn how to build in-meeting document signing app in Teams.
+  description: Learn how to build an in-meeting document signing app in Microsoft Teams to sign document in real-time during meetings using electronic signatures.
   audience: Developer
   level: Beginner
-  ms.date: 27/07/2022
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
   nextTutorialTitle: Read more to build apps for Teams meeting stage
@@ -45,6 +45,7 @@ items:
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
       > [!TIP]
       > Ensure the Microsoft Teams account isn't a guest account.
+    
 
     ## Set up your Teams development tenant
 
@@ -69,13 +70,18 @@ items:
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text=" Screenshot shows the option to upload a custom app in Teams.":::
 
         > [!NOTE]
-        > Contact your Teams administrator, if you don't find the option to upload a custom app.  
+        > Contact your Teams administrator, if you don't find the option to upload a custom app.
+        
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Check+for+custom+app+upload+option&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-inmeeting-document-signing%3Ftabs%3Ddev%26tutorial-step%3D1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-inmeeting-document-signing.yml&documentVersionIndependentId=3a692774-83a3-eccd-a5c2-7a5f43207399&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 - title: Set up local environment
   durationInMinutes: 1
   content: |  
 
    [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Set+up+local+environment&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-inmeeting-document-signing%3Ftabs%3Ddev%26tutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-inmeeting-document-signing.yml&documentVersionIndependentId=3a692774-83a3-eccd-a5c2-7a5f43207399&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 - title: Update the Microsoft Entra app registration
   durationInMinutes: 5
@@ -89,22 +95,32 @@ items:
     * Add messaging endpoint to the dev tunnel that you created.
 
     [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+App+registration&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-inmeeting-document-signing%3Ftabs%3Ddev%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-inmeeting-document-signing.yml&documentVersionIndependentId=3a692774-83a3-eccd-a5c2-7a5f43207399&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
     **Create a tunnel**
 
     # [dev tunnel](#tab/dev)
 
     [!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+tunnel+using+dev+tunnel&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-inmeeting-document-signing%3Ftabs%3Ddev%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-inmeeting-document-signing.yml&documentVersionIndependentId=3a692774-83a3-eccd-a5c2-7a5f43207399&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
     # [ngrok](#tab/ngrok)
 
     [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+tunnel+using+ngrok&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-inmeeting-document-signing%3Ftabs%3Dngrok%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-inmeeting-document-signing.yml&documentVersionIndependentId=3a692774-83a3-eccd-a5c2-7a5f43207399&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
     ---
       
     [!INCLUDE [Azure web authentication](includes/get-started/azure-web-authentication.md)]
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+a+web+authentication&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-inmeeting-document-signing%3Ftabs%3Ddev%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-inmeeting-document-signing.yml&documentVersionIndependentId=3a692774-83a3-eccd-a5c2-7a5f43207399&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
     
     [!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+client+secret&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-inmeeting-document-signing%3Ftabs%3Ddev%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-inmeeting-document-signing.yml&documentVersionIndependentId=3a692774-83a3-eccd-a5c2-7a5f43207399&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
     **Add API permissions**
 
@@ -114,7 +130,7 @@ items:
         
        > [!NOTE]
        > Users need to consent to these permissions only if the Microsoft Entra app is registered in a different tenant.
-
+    
     1. Select **+ Add a permission**.
 
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-api-permission.png" alt-text="Screenshot shows the option to select Add permission.":::
@@ -131,21 +147,39 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/select-api-permission.png" alt-text="Screenshot show the option to select permissions.":::
 
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+API+permissions&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-inmeeting-document-signing%3Ftabs%3Ddev%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-inmeeting-document-signing.yml&documentVersionIndependentId=3a692774-83a3-eccd-a5c2-7a5f43207399&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
     [!INCLUDE [Application ID URI](includes/get-started/application-id-uri.md)]
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+application+ID+URI&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-inmeeting-document-signing%3Ftabs%3Ddev%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-inmeeting-document-signing.yml&documentVersionIndependentId=3a692774-83a3-eccd-a5c2-7a5f43207399&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
     [!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+a+scope&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-inmeeting-document-signing%3Ftabs%3Ddev%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-inmeeting-document-signing.yml&documentVersionIndependentId=3a692774-83a3-eccd-a5c2-7a5f43207399&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+    
 
     [!INCLUDE [Azure client application](includes/get-started/azure-client-application.md)]
+
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+client+application&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-inmeeting-document-signing%3Ftabs%3Ddev%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-inmeeting-document-signing.yml&documentVersionIndependentId=3a692774-83a3-eccd-a5c2-7a5f43207399&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+    
 
 - title: Create your bot
   durationInMinutes: 1
   content: |
 
-    [!INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource.md)]    
+    [!INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource.md)]
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+an+Azure+bot+resource&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-inmeeting-document-signing%3Ftabs%3Ddev%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-inmeeting-document-signing.yml&documentVersionIndependentId=3a692774-83a3-eccd-a5c2-7a5f43207399&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
     [!INCLUDE [Teams channel](includes/get-started/add-teams-channel.md)]
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+a+Teams+channel&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-inmeeting-document-signing%3Ftabs%3Ddev%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-inmeeting-document-signing.yml&documentVersionIndependentId=3a692774-83a3-eccd-a5c2-7a5f43207399&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
     [!INCLUDE [Messaging endpoint](includes/get-started/messaging-endpoint.md)]
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+add+a+messaging+endpoint&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-inmeeting-document-signing%3Ftabs%3Ddev%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-inmeeting-document-signing.yml&documentVersionIndependentId=3a692774-83a3-eccd-a5c2-7a5f43207399&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 - title: Set up app settings, manifest and env files
   durationInMinutes: 1
@@ -165,6 +199,7 @@ items:
          * Set `"Audience"` to your app's **Application ID URI**.
 
           :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-settings.png" alt-text="App settings"::: 
+    
 
     **To configure app manifest file**
 
@@ -179,6 +214,7 @@ items:
          * Replace all occurrences of `"aad-id"` with your app's **Microsoft App ID**.
 
          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/manifest-update-file.png" alt-text="Screenshot shows the changes in the manifest file." lightbox="~/assets\images\sbs-inmeeting-doc-signing\manifest.png":::
+     
 
     **To configure env file**
 
@@ -193,7 +229,7 @@ items:
           * Set `REACT_APP_MSA_ONLY_SCOPE` to your app's client secret **Value**..
   
           :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/env-file.png" alt-text="Screenshot shows the env file.":::
-
+    
 
 - title: Build and run the service
   durationInMinutes: 1
@@ -219,6 +255,9 @@ items:
           The following webpage opens.
 
            :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-ready.png" alt-text="Screenshot shows a webpage with a message to install the app in Teams.":::
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Build+and+run+the+service&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-inmeeting-document-signing%3Ftabs%3Ddev%26tutorial-step%3D6&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-inmeeting-document-signing.yml&documentVersionIndependentId=3a692774-83a3-eccd-a5c2-7a5f43207399&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 
 - title: Add Meeting Signing app to Teams
   durationInMinutes: 1
@@ -253,6 +292,10 @@ items:
     1. Select **Add**.
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-add.png" alt-text="Screenshot shows how to add the app.":::
+
+    1. Search or select the required meeting from the list, and move through the dialog to select **Go**.
+
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/add-app-scope.png" alt-text="Screenshot shows how to add the app.":::
 
        Now the meeting signing app is added to the meeting.
 
@@ -304,6 +347,9 @@ items:
         The following image shows the document shared in the meeting.
 
          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/final-output.png" alt-text="Screenshot shows the final output for the meeting signing app."::: 
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+Meeting+Signing+app+to+Teams&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-inmeeting-document-signing%3Ftabs%3Ddev%26tutorial-step%3D7&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-inmeeting-document-signing.yml&documentVersionIndependentId=3a692774-83a3-eccd-a5c2-7a5f43207399&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 
 - title: Complete challenge
   durationInMinutes: 1

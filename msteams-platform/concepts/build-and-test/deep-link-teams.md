@@ -12,16 +12,6 @@ ms.date: 01/31/2023
 
 You can create a deep link to a Teams chat, such as to start a new chat, go to a channel conversation, and access a file within a channel.
 
-In this article, you’ll learn to create:
-
-- [Deep link to start a new chat](#deep-link-to-start-a-new-chat)<br>
-- [Deep link to navigate to a chat](#deep-link-to-navigate-to-a-chat)<br>
-- [Deep link to navigate to channel conversation](#deep-link-to-navigate-to-channel-conversation)<br>
-- [Deep link to navigate to chat messages](#deep-link-to-navigate-to-chat-messages)<br>
-- [Deep link to navigate to a team](#deep-link-to-navigate-to-a-team)<br>
-- [Deep link to navigate to channel](#deep-link-to-navigate-to-channel)<br>
-- [Generate deep link to a file in a channel](#generate-deep-link-to-a-file-in-a-channel)
-
 ## Deep link to start a new chat
 
 You can navigate to or create private chats between users with the Microsoft Teams JavaScript client library (TeamsJS) by specifying the set of participants. If a chat doesn’t exist with the specified participants, the user is navigated to an empty new chat.
@@ -101,8 +91,6 @@ Use the following deep link format to navigate a user to a message in a personal
 
 `https://teams.microsoft.com/l/message/{chatId}/{messageId}?tenantId=<tenantId>?context={"contextType":"chat"}`
 
-Example: `https://teams.microsoft.com/l/message/19:253f5895-9a62-4362-8d38-43f0205c702c_f1b94dcf-0aa3-4989-bcdf-ef4a5ed00f86@unq.gbl.spaces/1563480968434?context=%7B%22contextType%22:%22chat%22%7D`
-
 The query parameters are:
 
 * `chatId`: Chat ID of the conversation. The supported format for `chatId` is 19: xxx. For example, `19:253f5895-9a62-4362-8d38-43f0205c702c_f1b94dcf-0aa3-4989-bcdf-ef4a5ed00f86@unq.gbl.spaces`.</br>
@@ -112,7 +100,17 @@ The query parameters are:
 * `messageId`: Unique message ID of each message in a chat. When a bot posts a message in chat, the `messageId` is returned. You can also get the `messageId` through [Microsoft Graph APIs](/graph/api/message-get?view=graph-rest-1.0&tabs=http&preserve-view=true). For example, `1563480968434`.
 * `context`: Specify the contextType as chat.
 
-Example: `http://teams.microsoft.com/l/message/19:253f5895-9a62-4362-8d38-43f0205c702c_f1b94dcf-0aa3-4989-bcdf-ef4a5ed00f86@unq.gbl.spaces/1563480968434?context=%7B%22contextType%22:%22chat%22%7D`
+Example: `https://teams.microsoft.com/l/message/19:253f5895-9a62-4362-8d38-43f0205c702c_f1b94dcf-0aa3-4989-bcdf-ef4a5ed00f86@unq.gbl.spaces/1563480968434?context=%7B%22contextType%22:%22chat%22%7D`
+
+You can start a conversation with a bot using a prepopulated message through a deep link. Use the bot ID prefixed with `28:` in place of an email address. The format of the deep link is:
+
+`https://teams.microsoft.com/l/chat/0/0?users=28:[bot guid]&message=This%20message%20was%20triggered%20by%20a%20link!`
+
+The query parameter is `bot guid`, which is the bot ID attribute in the app manifest.
+
+Example: `https://teams.microsoft.com/l/chat/0/0?users=28:47345678-2134-6534-9143-65146789012&message=This%20message%20was%20triggered%20by%20a%20link!`
+
+The deep link provided only loads the message into the chat text box of the bot, and doesn't send the message automatically. To send the message, you must either select the **Send** button or select **Enter**.
 
 ## Deep link to navigate to a team
 
@@ -124,12 +122,12 @@ The query parameters are:
 
 * `channelId`: Channel ID of the conversation (URL encoded). For example, 19%3ATWLPKo8lD4v8zDxyw4FnDYY-ovnBJG5CSjmrHUAoOz41%40thread.tacv2.
 * `groupId`: Group ID of the file. For example, 72602e12-78ac-474c-99d6-f619710353a9.
-* `tenantId`: Tenant ID, such as 72f988bf-86f1-41af-91ab-2d7cd011db47.
- 
+* `tenantId`: Tenant ID, such as aaaabbbb-0000-cccc-1111-dddd2222eeee.
+
 > [!Note]
 > You can get `channelId` and `groupId` in the URL from the team.
 
-Example: `https://teams.microsoft.com/l/team/19%3ATWLPKo8lD4v8zDxyw4FnDYY-ovnBJG5CSjmrHUAoOz41%40thread.tacv2/conversations?groupId=72602e12-78ac-474c-99d6-f619710353a9&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47`
+Example: `https://teams.microsoft.com/l/team/19%3ATWLPKo8lD4v8zDxyw4FnDYY-ovnBJG5CSjmrHUAoOz41%40thread.tacv2/conversations?groupId=72602e12-78ac-474c-99d6-f619710353a9&tenantId=aaaabbbb-0000-cccc-1111-dddd2222eeee`
 
 ## Deep link to navigate to channel
 
@@ -137,22 +135,22 @@ You can use the following deep link formats to navigate to particular channels:
 
 * **Standard channel**: `https://teams.microsoft.com/l/channel/<channelId>/<channelName>?groupId=<groupId>&tenantId=<tenantId>`
 
-  Example: `https://teams.microsoft.com/l/channel/19%3A9be3de4e70874c71a608dee9ba803ed3%40thread.tacv2/My%20example%20channel?groupId=72602e12-78ac-474c-99d6-f619710353a9&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47`
+  Example: `https://teams.microsoft.com/l/channel/19%3A9be3de4e70874c71a608dee9ba803ed3%40thread.tacv2/My%20example%20channel?groupId=72602e12-78ac-474c-99d6-f619710353a9&tenantId=aaaabbbb-0000-cccc-1111-dddd2222eeee`
 
 * **Private channel**: `https://teams.microsoft.com/l/channel/<channelId>/<channelName>?groupId=<groupId>&tenantId=<tenantId>&ngc=true`
 
-  Example: `https://teams.microsoft.com/l/channel/19%3A9be3de4e70874c71a608dee9ba803ed3%40thread.tacv2/My%20example%20channel?groupId=72602e12-78ac-474c-99d6-f619710353a9&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47&ngc=true`
+  Example: `https://teams.microsoft.com/l/channel/19%3A9be3de4e70874c71a608dee9ba803ed3%40thread.tacv2/My%20example%20channel?groupId=72602e12-78ac-474c-99d6-f619710353a9&tenantId=aaaabbbb-0000-cccc-1111-dddd2222eeee&ngc=true`
 
 * **Shared channel**: `https://teams.microsoft.com/l/channel/<channelId>/<channelName>?groupId=<groupId>&tenantId=<tenantId>&ngc=true&allowXTenantAccess=true`
 
-  Example: `https://teams.microsoft.com/l/channel/19%3A9be3de4e70874c71a608dee9ba803ed3%40thread.tacv2/My%20example%20channel?groupId=72602e12-78ac-474c-99d6-f619710353a9&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47&ngc=true&allowXTenantAccess=true`
+  Example: `https://teams.microsoft.com/l/channel/19%3A9be3de4e70874c71a608dee9ba803ed3%40thread.tacv2/My%20example%20channel?groupId=72602e12-78ac-474c-99d6-f619710353a9&tenantId=aaaabbbb-0000-cccc-1111-dddd2222eeee&ngc=true&allowXTenantAccess=true`
 
 The query parameters are:
 
 * `channelId`: Channel ID of the conversation (URL encoded). For example, `19%3A9be3de4e70874c71a608dee9ba803ed3%40thread.tacv2`.
 * `channelName`: Name of the team's channel (URL encoded). For example, `My%20example%20channel`.
 * `groupId`: Group ID of the team. For example, `72602e12-78ac-474c-99d6-f619710353a9`.
-* `tenantId`: Tenant ID, such as `72f988bf-86f1-41af-91ab-2d7cd011db47`.
+* `tenantId`: Tenant ID, such as `aaaabbbb-0000-cccc-1111-dddd2222eeee`.
 * `ngc`: Indicates a next-generation channel. For private channels needs to be set to `true`.
 * `allowXTenantAccess`: Indicates a channel that can be accessed across tenant boundaries. For shared channels needs to be set to `true`.
 
@@ -164,7 +162,7 @@ Use the following deep link format can be used in a bot, connector, or message e
 
 The query parameters are:
 
-* `fileId`: Unique file ID from Sharepoint Online, also known as `sourcedoc`. For example, `1FA202A5-3762-4F10-B550-C04F81F6ACBD`.
+* `fileId`: Unique file ID from Sharepoint Online, also known as `sourcedoc` or `sharepointIds.listItemUniqueId` from Sharepoint Online `driveItem` API response. For example, `1FA202A5-3762-4F10-B550-C04F81F6ACBD`.
 * `tenantId`: Tenant ID, such as `0d9b645f-597b-41f0-a2a3-ef103fbd91bb`.
 * `fileType`: Supported file type, such as .docx, .pptx, .xlsx, and .pdf.
 * `objectUrl`: Object URL of the file. The format is `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext`. For example, `https://microsoft.sharepoint.com/teams/(filepath)`.

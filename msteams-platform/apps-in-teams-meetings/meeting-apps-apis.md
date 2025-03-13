@@ -1,9 +1,10 @@
 ---
-title: Meeting apps APIs
+title: Enhance Meeting Experience with APIs
 author: v-sdhakshina
 description: Learn meeting apps API references that are available for Teams client and Bot Framework SDKs with examples, code samples, and response codes.
 ms.topic: conceptual
 ms.localizationpriority: medium
+ms.owner: kanchankaur
 ms.date: 04/07/2022
 ---
 
@@ -20,9 +21,9 @@ The meeting extensibility provides APIs to enhance meeting experience. You can p
 
 The following table provides a list of APIs available across the Microsoft Teams JavaScript library and Microsoft Bot Framework SDKs:
 
-|Method| Description| Source|
-|---|---|----|
-|[**Get user context**](#get-user-context-api)| Get contextual information to display relevant content in a Microsoft Teams tab.| [TeamsJS library](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) |
+| Method | Description | Source |
+| --- | --- | --- |
+| [**Get user context**](#get-user-context-api) | Get contextual information to display relevant content in a Microsoft Teams tab. | [TeamsJS library](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) |
 |[**Get participant**](#get-participant-api)| Fetch participant information by meeting ID and participant ID. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)
 |[**Send in-meeting notification**](#send-an-in-meeting-notification)| Provides meeting signals using the existing conversation notification API for user-bot chat and allows the bot to notify user action that shows an in-meeting notification. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true) |
 |[**Get meeting details**](#get-meeting-details-api)| Get a meeting's static metadata. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true) |
@@ -91,8 +92,8 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
           "isCallingAllowed": undefined,
           "isPSTNCallingAllowed": undefined,
           "licenseType": "Unknown",
-          "loginHint": "v-prkamble@microsoft.com",
-          "userPrincipalName": "v-prkamble@microsoft.com",
+          "loginHint": "user@microsoft.com",
+          "userPrincipalName": "user@microsoft.com",
           "tenant": {
            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47",
            "teamsSku": "enterprise"
@@ -171,8 +172,8 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
            "isCallingAllowed": null,
            "isPSTNCallingAllowed": null,
            "licenseType": "Unknown",
-           "loginHint": "admin@M365x94626565.onmicrosoft.com",
-           "userPrincipalName": "admin@M365x94626565.onmicrosoft.com",
+           "loginHint": "user@contoso.com",
+           "userPrincipalName": "user@contoso.com",
            "tenant": {
             "id": "aa923623-ae61-49ee-b401-81f414b6ad5a",
             "teamsSku": "enterprise"
@@ -189,11 +190,11 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
           "team": null,
           "sharePointSite": {
            "teamSiteUrl": "",
-           "teamSiteDomain": "m365x94626565.sharepoint.com",
+           "teamSiteDomain": "contoso.sharepoint.com",
            "teamSitePath": "",
            "teamSiteId": null,
-           "mySitePath": "/personal/admin_m365x94626565_onmicrosoft_com",
-           "mySiteDomain": "m365x94626565-my.sharepoint.com"
+           "mySitePath": "/personal/contoso_microsoft_com",
+           "mySiteDomain": "contoso-my.sharepoint.com"
           }
   }
 
@@ -232,8 +233,8 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
           "user": {
             "id": "4ebcc4d0-291b-4154-a85f-a89cd77aefa8",
             "licenseType": "Unknown",
-            "loginHint": "admin@M365x654992.onmicrosoft.com",
-            "userPrincipalName": "admin@M365x654992.onmicrosoft.com",
+            "loginHint": "user@contoso.com",
+            "userPrincipalName": "user@contoso.com",
             "tenant": {
               "id": "36a708ef-700d-4d60-9de0-0a5f7b7693df",
               "teamsSku": "unknown"
@@ -247,10 +248,10 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
           },
           "sharePointSite": {
             "teamSiteUrl": "",
-            "teamSiteDomain": "m365x654992.sharepoint.com",
+            "teamSiteDomain": "contoso.sharepoint.com",
             "teamSitePath": "",
-            "mySitePath": "/personal/admin_m365x654992_onmicrosoft_com",
-            "mySiteDomain": "m365x654992-my.sharepoint.com"
+            "mySitePath": "/personal/contoso_microsoft_com",
+            "mySiteDomain": "contoso-my.sharepoint.com"
           }
   }
   ```
@@ -301,8 +302,8 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
            "isCallingAllowed": undefined,
            "isPSTNCallingAllowed": undefined,
            "licenseType": "Unknown",
-           "loginHint": "v-prkamble@microsoft.com",
-           "userPrincipalName": "v-prkamble@microsoft.com",
+           "loginHint": "user@microsoft.com",
+           "userPrincipalName": "user@microsoft.com",
            "tenant": {
             "id": "72f988bf-86f1-41af-91ab-2d7cd011db47",
             "teamsSku": "enterprise"
@@ -322,7 +323,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
            "teamSiteDomain": "microsoft.sharepoint.com",
            "teamSitePath": "",
            "teamSiteId": undefined,
-           "mySitePath": "/personal/v-prkamble_microsoft_com",
+           "mySitePath": "/personal/user_microsoft_com",
            "mySiteDomain": "microsoft-my.sharepoint.com"
           }
     }
@@ -412,8 +413,8 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
           "id": "aeee11b1-7838-4b4a-8064-12ce5b01258f",
           "displayName": "",
           "licenseType": "Unknown",
-          "loginHint": "v-hrajandira@microsoft.com",
-          "userPrincipalName": "v-hrajandira@microsoft.com",
+          "loginHint": "user@microsoft.com",
+          "userPrincipalName": "user@microsoft.com",
           "tenant": {
            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47",
            "teamsSku": "enterprise"
@@ -481,8 +482,8 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
           "isCallingAllowed": undefined,
           "isPSTNCallingAllowed": undefined,
           "licenseType": "Unknown",
-          "loginHint": "admin@M365x94626565.onmicrosoft.com",
-          "userPrincipalName": "admin@M365x94626565.onmicrosoft.com",
+          "loginHint": "user@microsoft.com",
+          "userPrincipalName": "user@microsoft.com",
           "tenant": {
            "id": "aa923623-ae61-49ee-b401-81f414b6ad5a",
            "teamsSku": "unknown"
@@ -499,7 +500,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
          "team": undefined,
          "sharePointSite": {
           "teamSiteUrl": undefined,
-          "teamSiteDomain": "m365x94626565.sharepoint.com",
+          "teamSiteDomain": "microsoft.sharepoint.com",
           "teamSitePath": undefined,
           "teamSiteId": undefined,
           "mySitePath": undefined,
@@ -553,8 +554,8 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
           "isCallingAllowed": undefined,
           "isPSTNCallingAllowed": undefined,
           "licenseType": "Unknown",
-          "loginHint": "admin@M365x94626565.onmicrosoft.com",
-          "userPrincipalName": "admin@M365x94626565.onmicrosoft.com",
+          "loginHint": "user@microsoft.com",
+          "userPrincipalName": "user@microsoft.com",
           "tenant": {
            "id": "aa923623-ae61-49ee-b401-81f414b6ad5a",
            "teamsSku": "unknown"
@@ -571,7 +572,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
          "team": undefined,
          "sharePointSite": {
           "teamSiteUrl": undefined,
-          "teamSiteDomain": "m365x94626565.sharepoint.com",
+          "teamSiteDomain": "microsoft.sharepoint.com",
           "teamSitePath": undefined,
           "teamSiteId": undefined,
           "mySitePath": undefined,
@@ -629,7 +630,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
 # [JavaScript](#tab/javascript3)
 
-* [SDK reference](/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest#botbuilder-teamsinfo-getmeetingparticipant&preserve-view=true)
+* [SDK reference](/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest&preserve-view=true#botbuilder-teamsinfo-getmeetingparticipant)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-token-app/nodejs/server/bot/botActivityHandler.js#L30)
 
 ```typescript
@@ -710,7 +711,7 @@ The following table provides the response codes:
 
 |Response code|Description|
 |---|---|
-| **403** | Get participant information isn't shared with the app. If the app isn't installed in the meeting, it triggers the error response 403. If the tenant admin disables or blocks the app during live site migration, it triggers the error response 403. |
+| **403** | Get participant information isn't shared with the app. If the app isn't installed in the meeting, it triggers the error response 403. If the admin disables or blocks the app during live site migration, it triggers the error response 403. |
 | **200** | The participant information is successfully retrieved.|
 | **401** | The app responds with an invalid token.|
 | **404** | The meeting has either expired or participants aren't available.|
@@ -724,7 +725,7 @@ You can also send targeted in-meeting notification to a specific participant in 
 > [!NOTE]
 >
 > * When an in-meeting notification is invoked, the content is presented as a chat message.
-> * You must invoke the [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-dialog) function to dismiss automatically after a user takes an action in the web view. This is a requirement for app submission. For more information, see [Teams SDK task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
+> * You must invoke the [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-dialog) function to dismiss automatically after a user takes an action in the web view. This is a requirement for app submission. For more information, see [Teams SDK task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest&preserve-view=true#@microsoft-teams-js-microsoftteams-tasks-submittask).
 > * If you want your app to support anonymous users, initial invoke request payload must rely on `from.id` request metadata in `from` object, not `from.aadObjectId` request metadata. `from.id` is the user ID and `from.aadObjectId` is the Microsoft Entra ID of the user. For more information, see [using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) and [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 ### Query parameter
@@ -747,7 +748,7 @@ The following table includes the query parameter:
 
 # [C#](#tab/dotnet2)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityextensions-teamsnotifyuser(microsoft-bot-schema-iactivity)&preserve-view=true)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true#microsoft-bot-builder-teams-teamsactivityextensions-teamsnotifyuser(microsoft-bot-schema-iactivity))
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-proactive-messaging/csharp/proactive-cmd/Program.cs#L178)
 
 ```csharp
@@ -763,7 +764,7 @@ await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 
 # [JavaScript](#tab/javascript2)
 
-* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-sendactivity&preserve-view=true)
+* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest&preserve-view=true#botbuilder-core-turncontext-sendactivity)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L74)
 
 ```javascript
@@ -823,7 +824,7 @@ The following table includes the response codes:
 |---|---|
 | **201** | The activity with signal is successfully sent. |
 | **401** | The app responds with an invalid token. |
-| **403** | The app is unable to send the signal. 403 response code can occur because of various reasons, such as the tenant admin disables and blocks the app during live site migration. In this case, the payload contains a detailed error message. |
+| **403** | The app is unable to send the signal. 403 response code can occur because of various reasons, such as the admin disables and blocks the app during live site migration. In this case, the payload contains a detailed error message. |
 | **404** | The meeting chat doesn't exist. |
 
 ## Targeted meeting notification and app icon badging API
@@ -963,12 +964,22 @@ The meeting details API enables your app to get a meeting's static metadata. The
 
 The meeting details API must have a bot registration and bot ID. It requires Bot SDK to get `TurnContext`. To use the meeting details API, you must obtain different RSC permission based on the scope of any meeting, such as private meeting or channel meeting.
 
+**Use `getMeetingDetailsVerbose` for one-to-one calling extensibility**
+
+The `getMeetingDetailsVerbose` function extends the functionality of the `getMeetingDetails` API to enable Public Switched Telephone Network (PSTN) and Teams-to-Teams calls for personal tab apps. It returns the `IMeetingDetailsResponse` interface with additional call details.
+
+For more information, see [build tabs for calling](build-tabs-for-calling.md).
+
 > [!NOTE]
 > The meeting details API is supported for scheduled private meetings, scheduled channel meeting, instant meetings (Meet now), one-on-one calls, and group calls in Teams desktop and mobile clients.
 
-### Prerequisite
+### Prerequisites
 
-To use the meeting details API, you must obtain different RSC permission based on the scope of any meeting, such as private meeting or channel meeting.
+* To use the meeting details API, you must obtain different RSC permission based on the scope of any meeting, such as private meeting or channel meeting.
+
+* To enable calling, ensure that you've obtained the `OnlineMeetingParticipant.Read.Chat` RSC permission.
+
+* Teams JS SDK required: [TeamsJS SDK release latest release](https://github.com/OfficeDev/microsoft-teams-library-js/releases/tag/v2.29.0).
 
 <br>
 
@@ -976,7 +987,7 @@ To use the meeting details API, you must obtain different RSC permission based o
 
 <summary><b>For app manifest version 1.12 and later</b></summary>
 
-Use the following example to configure your app manifest's `webApplicationInfo`  and `authorization` properties for any private meeting:
+Use the following example to configure your app manifest's `webApplicationInfo` and `authorization` properties for any private meeting:
 
 ```json
 "webApplicationInfo": {
@@ -1061,15 +1072,15 @@ Use the following example to configure your app manifest's `webApplicationInfo` 
 
 The following table lists the query parameter:
 
-|Value|Type|Required|Description|
-|---|---|----|---|
-|**meetingId**| String | Yes | The meeting identifier is available through Bot Invoke and the TeamsJS library.|
+| Value | Type | Required | Description |
+| --- | --- | --- | --- |
+| **meetingId** | String | Yes | The meeting identifier is available through Bot Invoke and the TeamsJS library. |
 
 ### Example
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsinfo-getmeetinginfoasync(microsoft-bot-builder-iturncontext-system-string-system-threading-cancellationtoken)&preserve-view=true)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-meeting-notification/csharp/MeetingNotification/Bots/MeetingNotificationBot.cs#L56)
 
 ```csharp
@@ -1092,6 +1103,100 @@ this.onMessage(async(context, next) =>{
 });
 
 ```
+
+**Calling extensibility**:
+
+* **Example for enabling personal tab for calling extensibility**:
+
+    ```JavaScript
+    const GetMeetingDetailsVerbose = (): React.ReactElement =>
+        ApiWithoutInput ({
+            name: 'getMeetingDetailsVerbose'
+            title: 'Get Meeting Details Verbose'
+            onClick: async () => {
+                const result = await meeting.getMeetingDetailsVerbose();
+                return JSON.stringify (result);
+            };
+    });
+    ```
+
+* **`getMeetingDetailsVerbose()` to enable PSTN and Teams-to-Teams calls**:
+
+    ```JavaScript
+    interface IMeetingOrCallDetailsBase <T> {
+      /**
+       * Scheduled start time of the meeting or start time of the call
+       */
+      scheduledStartTime: string;
+    
+      /**
+       * url to join the current call or meeting
+       */
+      joinUrl?: string;
+    
+      /**
+       * type of the meeting or call
+       */
+      type?: T;
+    }
+    
+    interface ICallDetails
+      extends IMeetingOrCallDetailsBase<MeetingDetailsCallType> {
+      originalCallerInfo?: ICallParticipantIdentifiers;
+      dialedEntityInfo?: ICallParticipantIdentifiers;
+      trackingID?: string;
+      callID?: string;
+    }
+    
+    interface iConversation {
+      id: string;
+    }
+    
+    interface IOrganizer {
+      id?: string;
+      tenantId?: string;
+    }
+    
+    export interface IMeetingDetailsResponse {
+      details: IMeetingDetails | ICallDetails;
+      conversation: IConversation;
+      organizer: IOrganizer;
+    }
+    ```
+
+* **Identify the phone number and email of the caller**:
+
+    ```JavaScript
+    interface ICallParticipantIdentifiers {
+    /**
+     * Phone number of a caller
+     */
+    phoneNumber?: string;
+
+    /**
+     * Email of a caller
+     */
+    email?: EmailAddress;
+    }
+     ```
+
+* **Validate email and retrieve it as a string**:
+
+  ```JavaScript
+    class EmailAddress {
+    /**Represents the input email address string*/
+    private readonly val: string;
+    
+    public constructor(val: string) {
+      this.val = val;
+      validateEmailAddress(val);
+      }
+
+    public toString(): string {
+      return this.val;
+      }
+    }
+    ```
 
 # [JSON](#tab/json)
 
@@ -1248,6 +1353,9 @@ The JSON response body for meeting details API is as follows:
 | **organizer.id** | The Organizer's user ID. |
 | **organizer.aadObjectId** | The Organizer's Microsoft Entra object ID. |
 | **organizer.tenantId** | The Organizer's Microsoft Entra tenant ID. |
+| **originalCaller** | MRI for the original caller of a call. |
+| **dialedEntity** | MRI that the original called dialed |
+| **trackingId** | A persistent ID that references a call and all of its related calls. |
 
 In case of recurring meeting type:
 
@@ -1394,7 +1502,7 @@ The following examples show how to capture the meeting start and end events:
 
 **Meeting Start Event**
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityhandler-onteamsmeetingstartasync(microsoft-bot-schema-teams-meetingstarteventdetails-microsoft-bot-builder-iturncontext((microsoft-bot-schema-ieventactivity))-system-threading-cancellationtoken)&preserve-view=true)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L34)
 
 ```csharp
@@ -1408,7 +1516,7 @@ protected override async Task OnTeamsMeetingStartAsync(MeetingStartEventDetails 
 
 **Meeting End Event**
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingendasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityhandler-onteamsmeetingendasync(microsoft-bot-schema-teams-meetingendeventdetails-microsoft-bot-builder-iturncontext((microsoft-bot-schema-ieventactivity))-system-threading-cancellationtoken)&preserve-view=true)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingendasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L51)
 
 ```csharp
@@ -1551,7 +1659,9 @@ The following examples show how to capture the participant join and leave events
 
 # [Participant join event](#tab/participant-join-event)
 
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L35)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingparticipantsjoinasync?view=botbuilder-dotnet-stable&preserve-view=true)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L35)
 
 ```csharp
 //Invoked on participant join a meeting
@@ -1564,7 +1674,9 @@ protected override async Task OnTeamsMeetingParticipantsJoinAsync(MeetingPartici
 
 # [Participant leave event](#tab/participant-leave-event)
 
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L48)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingparticipantsleaveasync?view=botbuilder-dotnet-stable&preserve-view=true)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L48)
 
 ```csharp
 //Invoked on participant leave a meeting
@@ -1794,6 +1906,10 @@ The following table provides the response codes:
 | **500** | Internal error. |
 | **501** | API isn't supported in the current context.|
 | **1000** | App doesn't have proper permissions to allow share to stage.|
+
+## Toggle Incoming Audio
+
+The toggleIncomingClientAudio API allows an app to toggle the incoming audio state setting for the meeting user from mute to unmute or vice-versa. The API is available through the TeamsJS library.
 
 ## Code sample
 

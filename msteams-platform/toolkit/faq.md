@@ -1,14 +1,14 @@
 ---
-title: FAQ
+title: FAQ Teams Toolkit in Visual Studio Code
 author: MuyangAmigo
-description:  In this module, see FAQ for Teams Toolkit using Visual Studio Code.
+description: In this article, check the FAQs on provision using Teams Toolkit in Visual Studio Code, troubleshoot errors, switch Azure subscription, and change resource group.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# FAQ for Teams Toolkit
+# FAQ for Teams Toolkit in Visual Studio Code
 
 Following are the FAQs for [Provision cloud resources using Teams Toolkit](provision.md):
 
@@ -19,10 +19,7 @@ Following are the FAQs for [Provision cloud resources using Teams Toolkit](provi
 <summary>How to troubleshoot?</summary>
 
 If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document. If you're using TeamsFx CLI, there'll be a hyperlink at the end of error message that points to the help doc.
-
-</br>
-
-</details>
+</details >
 
 <details>
 

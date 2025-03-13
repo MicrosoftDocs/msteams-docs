@@ -1,5 +1,5 @@
 ---
-title: Tabs on mobile
+title: Tab Functions on Mobile Devices
 description: Learn how tab functions on Android and iOS Microsoft Teams clients (mobile), their authentication, low bandwidth connection, testing, or distribution.
 ms.topic: conceptual
 ms.localizationpriority: high
@@ -10,7 +10,7 @@ ms.date: 11/02/2022
 
 When you're building a Microsoft Teams app that includes a tab, you must test how your tab functions on both the Android and iOS Microsoft Teams clients. This article outlines some of the key scenarios you must consider to ensure optimal user experience.
 
-Apps [distributed through the Microsoft Teams Store](~/concepts/deploy-and-publish/appsource/publish.md) have a separate approval process for mobile clients. The default behavior of such apps is as follows:
+Apps [published through the Microsoft Teams Store](~/concepts/deploy-and-publish/appsource/publish.md) have a separate approval process for mobile clients. The default behavior of such apps is as follows:
 
 | **App capability** | **Behavior if app is approved** | **Behavior if app is not approved** |
 | --- | --- | --- |
@@ -20,8 +20,8 @@ Apps [distributed through the Microsoft Teams Store](~/concepts/deploy-and-publi
 > [!NOTE]
 >
 > * Apps submitted to the [AppSource](https://appsource.microsoft.com) for publishing on Teams are evaluated automatically for mobile responsiveness. For any queries, reach out to <teamsubm@microsoft.com>.
-> * For all apps that are not distributed through the AppSource, the tabs open in an in-app webview within the Teams clients by default and there is no separate approval process required.
-> * The default behavior of apps is only applicable if distributed through the Teams Store. By default, all tabs open in the Teams client.
+> * For all apps that are not published through the AppSource, the tabs open in an in-app webview within the Teams clients by default and there is no separate approval process required.
+> * The default behavior of apps is only applicable if published through the Teams Store. By default, all tabs open in the Teams client.
 > * To initiate an evaluation of your app for mobile-friendliness, reach out to <teamsubm@microsoft.com> with your app details.
 > * If a mobile app has multiple tabs, whenever the user switches a tab, the tab doesn't reload.
 
@@ -37,7 +37,7 @@ Mobile clients function with low bandwidth and intermittent connections. Your ap
 
 You must validate that your tab functions properly on mobile devices of various sizes and qualities. For Android devices, you can use [DevTools](~/tabs/how-to/developer-tools.md) to debug your tab while it's running. It's recommended that you test on both high and low-performance devices, including a tablet.
 
-## Distribution
+## Publish to Teams Store
 
 Apps listed on the Teams Store must be approved for mobile use to function properly in the Teams mobile client. Tab availability and behavior depends on whether your app is approved.
 
@@ -76,7 +76,6 @@ If you're uploading your custom app or publishing to an organization's app catal
 ## See also
 
 * [Build tabs for Teams](../what-are-tabs.md)
-* [Build tabs with Adaptive Cards](../how-to/build-adaptive-card-tabs.md)
 * [Create a personal tab](../how-to/create-personal-tab.md)
 * [Plan responsive tabs for Teams mobile](../../concepts/design/plan-responsive-tabs-for-teams-mobile.md)
 * [Design your tab for Microsoft Teams](tabs.md)

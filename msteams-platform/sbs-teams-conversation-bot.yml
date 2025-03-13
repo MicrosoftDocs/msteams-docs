@@ -1,11 +1,11 @@
 ### YamlMime:Tutorial
 title: Create Teams conversation bot
 metadata:
-  title: Create Teams conversation bot
-  description: In this module, you can learn to create basic conversation bot in Microsoft Teams application.
+  title: Steps to Create Teams Conversation Bot
+  description: In this module, learn how to create basic conversation bot, set up bot connection, and interact with bot in Microsoft Teams app.
   audience: Developer
   level: Beginner
-  ms.date: 04/01/2022
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: bots/how-to/conversations/channel-and-group-conversations.md
   nextTutorialTitle: Channel and group chat conversations with a bot
@@ -50,12 +50,15 @@ items:
 
    [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
 
+   > [!div class="nextstepaction"]
+   > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Set+up+local+environment&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-conversation-bot%3Ftabs%3Ddev%26tutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-teams-conversation-bot.yml&documentVersionIndependentId=1c9cc6be-8ff3-de89-fa46-6bc355249626&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 - title: Register Microsoft Entra app
   durationInMinutes: 5
   content: |
     Register your bot with Azure Bot service when you develop and host it in Azure. Following are the steps:
 
-    * Create and register your Azure app.
+    * Register your bot with Azure Bot service.
     * Create client secret that enables single sign-on (SSO) authentication of the bot.
     * Add Teams channel to deploy the bot.
     * Create a tunnel to your web server's endpoints using dev tunnel (recommended) or ngrok.
@@ -63,20 +66,97 @@ items:
 
       [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
 
+      > [!div class="nextstepaction"]
+      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+App+registration&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-conversation-bot%3Ftabs%3Ddev%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-teams-conversation-bot.yml&documentVersionIndependentId=1c9cc6be-8ff3-de89-fa46-6bc355249626&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
+
       **Create a tunnel**
 
       # [dev tunnel](#tab/dev)
 
-      [!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
+      1. Open Visual Studio.
+
+      1. Select **Open a project or solution**.
+
+         :::image type="content" source="~/assets/images/include-files/open-project.png" alt-text="Screenshot shows the selection to open a new project or solution.":::
+      
+      1. Go to **Microsoft-Teams-Samples > samples > bot-conversation > csharp**.
+
+      1. Select **TeamsConversationBot.sln** file.
+
+      1. An overview window appears.
+
+         :::image type="content" source="~/assets/images/include-files/asp-net-output.png" alt-text="Screenshot shows the overview window.":::
+      
+      1. In the debug dropdown list, select **Dev Tunnels (no active tunnel)** > **Create a Tunnel...**.
+
+         :::image type="content" source="~/assets/images/include-files/create-tunnel.png" alt-text="Screenshot shows the dropdown to select the dev tunnels.":::
+
+         A pop-up window appears.
+
+      1. Update the following details in the pop-up window:
+         1. **Account**: Enter a Microsoft or GitHub account.
+         1. **Name**: Enter a name for your tunnel.
+         1. **Tunnel Type**: From the dropdown list, select **Temporary**.
+         1. **Access**: From the dropdown list, select **Public**.
+
+      1. Select **OK**.
+
+         :::image type="content" source="~/assets/images/include-files/create-tunnel-details.png" alt-text="Screenshot shows the details to update for creation of tunnel.":::
+
+         A pop-up window appears showing that dev tunnel is successfully created.
+
+      1. Select **OK**.
+
+         :::image type="content" source="~/assets/images/include-files/tunnel-created.png" alt-text="Screenshot shows the pop-up message that the tunnel is created.":::
+
+         You can find the tunnel you've created in the debug dropdown list as follows:
+
+         :::image type="content" source="~/assets/images/include-files/tunnel-active.png" alt-text="Screenshot shows the tunnel is active and selected.":::
+
+      1. Select **F5** to run the application in the debug mode.
+
+      1. If a **Security Warning** dialog appears, select **Yes**.
+ 
+         :::image type="content" source="~/assets/images/include-files/security-warning.png" alt-text="Screenshot shows the dialog box to accept the security warning.":::
+
+         A pop-up window appears.
+
+      1. Select **Continue**.
+
+         :::image type="content" source="~/assets/images/include-files/developer-tunnel.png" alt-text="Screenshot shows the url for the tunnel.":::
+
+         The dev tunnel home page opens in a new browser window and the dev tunnel is now active.
+
+         :::image type="content" source="~/assets/images/include-files/developer-tunnel-web.png" alt-text="Screenshot shows the dev tunnel welcome page in browser.":::
+
+      1. Go to Visual Studio, select **View > Output**.
+
+      1. From the **Output** console dropdown menu, select **Dev Tunnels**.
+
+         The **Output** console shows the dev tunnel URL.
+
+         :::image type="content" source="~/assets/images/include-files/output-console-url.png" alt-text="Screenshot shows the url in the Visual Studio output console.":::
+
+      > [!div class="nextstepaction"]
+      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+tunnel+using+dev+tunnel&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-conversation-bot%3Ftabs%3Ddev%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-teams-conversation-bot.yml&documentVersionIndependentId=1c9cc6be-8ff3-de89-fa46-6bc355249626&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
       # [ngrok](#tab/ngrok)
       
       [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
 
+      > [!div class="nextstepaction"]
+      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+tunnel+using+ngrok&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-conversation-bot%3Ftabs%3Dngrok%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-teams-conversation-bot.yml&documentVersionIndependentId=1c9cc6be-8ff3-de89-fa46-6bc355249626&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
+
       ---     
       [!INCLUDE [Azure web authentication](includes/get-started/azure-web-authentication.md)]
 
+      > [!div class="nextstepaction"]
+      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+a+web+authentication&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-conversation-bot%3Ftabs%3Ddev%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-teams-conversation-bot.yml&documentVersionIndependentId=1c9cc6be-8ff3-de89-fa46-6bc355249626&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
+
       [!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
+
+      > [!div class="nextstepaction"]
+      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+client+secret&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-conversation-bot%3Ftabs%3Ddev%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-teams-conversation-bot.yml&documentVersionIndependentId=1c9cc6be-8ff3-de89-fa46-6bc355249626&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
     **Add API permissions**
 
@@ -101,21 +181,42 @@ items:
       > * If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
       > * Users need to consent to the API permissions only if the Microsoft Entra app is registered in a different tenant.
 
+      > [!div class="nextstepaction"]
+      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+API+permissions&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-conversation-bot%3Ftabs%3Ddev%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-teams-conversation-bot.yml&documentVersionIndependentId=1c9cc6be-8ff3-de89-fa46-6bc355249626&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
+
     [!INCLUDE [Application ID URI](includes/get-started/application-id-uri.md)]
+
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+application+ID+URI&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-conversation-bot%3Ftabs%3Ddev%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-teams-conversation-bot.yml&documentVersionIndependentId=1c9cc6be-8ff3-de89-fa46-6bc355249626&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
     [!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
 
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+a+scope&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-conversation-bot%3Ftabs%3Ddev%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-teams-conversation-bot.yml&documentVersionIndependentId=1c9cc6be-8ff3-de89-fa46-6bc355249626&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
+
     [!INCLUDE [Azure client application](includes/get-started/azure-client-application.md)]
+
+      > [!div class="nextstepaction"]
+      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+client+application&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-conversation-bot%3Ftabs%3Ddev%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-teams-conversation-bot.yml&documentVersionIndependentId=1c9cc6be-8ff3-de89-fa46-6bc355249626&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
       
 - title: Create your bot 
   durationInMinutes: 5
   content: |
 
-    [!INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource.md)]    
+    [!INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource.md)]
+
+     > [!div class="nextstepaction"]
+     > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+an+Azure+bot+resource&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-conversation-bot%3Ftabs%3Ddev%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-teams-conversation-bot.yml&documentVersionIndependentId=1c9cc6be-8ff3-de89-fa46-6bc355249626&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)    
 
     [!INCLUDE [Teams channel](includes/get-started/add-teams-channel.md)]
 
+     > [!div class="nextstepaction"]
+     > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+a+Teams+channel&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-conversation-bot%3Ftabs%3Ddev%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-teams-conversation-bot.yml&documentVersionIndependentId=1c9cc6be-8ff3-de89-fa46-6bc355249626&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)  
+
     [!INCLUDE [Messaging endpoint](includes/get-started/messaging-endpoint.md)]
+
+     > [!div class="nextstepaction"]
+     > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+add+a+messaging+endpoint&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-conversation-bot%3Ftabs%3Ddev%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-teams-conversation-bot.yml&documentVersionIndependentId=1c9cc6be-8ff3-de89-fa46-6bc355249626&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)  
 
 - title: Set up bot service connection
   durationInMinutes: 1
@@ -143,7 +244,7 @@ items:
 
     **To update manifest**
 
-    1. In the **File Explorer**, go to **Microsoft-Teams-Samples** > **samples** > **bot-conversation** > **csharp** > **TeamsAppManifest**.
+    1. In the **File Explorer**, go to **Microsoft-Teams-Samples** > **samples** > **bot-conversation** > **csharp** > **TeamsApp** > **appPackage**.
     
        :::image type="content" source="./assets/images/conversation-bot/manifest-file-location.png" alt-text="Screenshot shows the Manifest.":::
 
@@ -153,7 +254,7 @@ items:
 
         :::image type="content" source="./assets/images/conversation-bot/manifest1.png" alt-text="Screenshot shows the Manifest.":::
 
-    1. Zip the contents of the **TeamsAppManifest** folder to create manifest.zip.
+    1. Zip the contents of the **appPackage** folder to create manifest.zip.
     
         > [!NOTE]
         > The `manifest.zip` must not contain any other folders in it. It must have `manifest json` source file, `color` icon, and `outline` icon inside the zip folder.
@@ -183,6 +284,9 @@ items:
 
        :::image type="content" source="./assets/images/conversation-bot/bot.png" alt-text="Screenshot shows the Bot ready screen.":::
 
+      > [!div class="nextstepaction"]
+      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+run+solution+in+Visual+Studio&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-conversation-bot%3Ftabs%3Ddev%26tutorial-step%3D5&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-teams-conversation-bot.yml&documentVersionIndependentId=1c9cc6be-8ff3-de89-fa46-6bc355249626&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
+
     **To upload the app to Teams**
 
     1. In the Teams client, select the **Apps** icon.
@@ -198,19 +302,29 @@ items:
         > [!NOTE]
         > Contact your Teams administrator, if you don't find the option to upload a custom app.
   
-    1. Select **Open** to upload the .zip file that you created in the **TeamAppManifest** folder.
+    1. Select **Open** to upload the .zip file that you created in the **appPackage** folder.
     
         :::image type="content" source="./assets/images/conversation-bot/upload-manifest-zip.png" alt-text="Screenshot shows the Manifest upload in Teams.":::
 
     1. Select **Add**.
 
-       :::image type="content" source="./assets/images/conversation-bot/add-app-teams.png" alt-text="Screenshot shows the app added into Teams.":::
+       :::image type="content" source="./assets/images/conversation-bot/add-app-teams.png" alt-text="Screenshot of TeamsConversationBot installation with Add option highlighted.":::
 
-        You can interact with the bot.
+    1. Select **Open** to use the app in personal scope.
+    
+       Alternatively, you can either search and select the required scope or select a channel or chat from the list, and move through the dialog to select **Go**.
+       
+       :::image type="content" source="./assets/images/conversation-bot/open-app-teams.png" alt-text="Screenshot of TeamsConversationBot with personal and shared scope options.":::
+
+       You can interact with the bot.
+
+      > [!div class="nextstepaction"]
+      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+upload+the+app+to+Teams&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-conversation-bot%3Ftabs%3Ddev%26tutorial-step%3D5&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-teams-conversation-bot.yml&documentVersionIndependentId=1c9cc6be-8ff3-de89-fa46-6bc355249626&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
+
 
 - title: Interact with the conversation bot
   durationInMinutes: 2
-  content: |
+  content: | 
     You can interact with the bot in Teams by sending it a message, or selecting a command from the command list. The bot responds to the strings.
 
     In the left pane of the Teams, select More added apps (●●●), and then select your app from the list. The bot shows **Suggestions** as follows:
@@ -230,6 +344,9 @@ items:
     You can select an option from the command list by typing **@TeamsConversationBot** or **What can I do?** text in the compose area and send it.
 
     :::image type="content" source="./assets/images/conversation-bot/final-output-1.png" alt-text="Screenshot shows the response from conversation bot.":::
+
+      > [!div class="nextstepaction"]
+      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Interact+with+the+conversation+bot&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-conversation-bot%3Ftabs%3Ddev%26tutorial-step%3D6&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-teams-conversation-bot.yml&documentVersionIndependentId=1c9cc6be-8ff3-de89-fa46-6bc355249626&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 - title: Complete challenge
   durationInMinutes: 1

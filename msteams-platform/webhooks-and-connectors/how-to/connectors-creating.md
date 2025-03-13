@@ -8,26 +8,28 @@ ms.date: 04/16/2023
 ---
 # Create connectors for Microsoft 365 Groups
 
+[!INCLUDE [deprecation-note](~/includes/deprecation-note.md)]
+
 With Microsoft Teams apps, you can add your existing connector for Microsoft 365 Groups or build a new one within Teams. For more information, see [build your own connector](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector).
 
 See the following video to learn how to create an connectors for Microsoft 365 Groups:
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv]
+> [!VIDEO 7e9a36c0-fbb7-4848-9591-b98925696cfd]
 <br>
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## Add a connector to Teams app
 
-You can create a [package](~/concepts/build-and-test/apps-package.md) and [publish](~/concepts/deploy-and-publish/apps-publish.md) your connector as part of your AppSource submission. You can distribute your registered connector as part of your Teams app package. For information on entry points for Teams app, see [capabilities](~/concepts/extensibility-points.md). You can also provide the package directly to the users for uploading within Teams.
+You can create a [package](~/concepts/build-and-test/apps-package.md) and [publish](~/concepts/deploy-and-publish/apps-publish.md) your connector as part of your AppSource submission. You can publish your registered connector as part of your Teams app package. For information on entry points for Teams app, see [capabilities](~/concepts/extensibility-points.md). You can also provide the package directly to the users for uploading within Teams.
 
-To distribute your connector, register it in the [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard).
+To publish your connector, register it in the [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard).
 
 For a connector to work only in Teams, follow the instructions to submit connector in [publish your app to the Microsoft Teams Store](~/concepts/deploy-and-publish/appsource/publish.md) article. Otherwise, a registered connector works in all Microsoft 365 products that support applications, including Outlook and Teams.
 
 > [!IMPORTANT]
-> Your connector is registered after you select **Save** in the Connectors Developer Dashboard. If you want to publish your connector in AppSource, follow the instructions in [publish your Microsoft Teams app to AppSource](~/concepts/deploy-and-publish/apps-publish.md). If you do not want to publish your app in AppSource, distribute it directly to the organization. After publishing connectors for your organization, no further action is required on the Connector Dashboard.
+> Your connector is registered after you select **Save** in the Connectors Developer Dashboard. If you want to publish your connector in AppSource, follow the instructions in [publish your Microsoft Teams app to AppSource](~/concepts/deploy-and-publish/apps-publish.md). If you do not want to publish your app in AppSource, publish it directly to the organization. After publishing connectors for your organization, no further action is required on the Connector Dashboard.
 
 ### Integrate the configuration experience
 
@@ -223,7 +225,7 @@ To verify that `HttpPOST` action is working correctly, [send messages to your co
 
 Follow the [step-by-step guide](../../sbs-teams-connectors.yml) to create and test the connectors in your Teams.
 
-## Distribute webhook and connector
+## Publish webhook and connector
 
 1. [Create Incoming Webhooks](add-incoming-webhook.md#create-incoming-webhooks) directly for your team.
 

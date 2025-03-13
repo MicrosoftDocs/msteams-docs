@@ -1,11 +1,12 @@
 ---
-title: Build apps for Teams meeting stage
+title: Apps for Teams Meeting Stage
 author: v-sdhakshina
 description: Learn how to build apps for Teams meeting stage, share to stage APIs, and generate a deep link to share content to stage in meetings.
 ms.topic: conceptual
 ms.author: v-sdhakshina
 ms.localizationpriority: medium
-ms.date: 04/07/2022
+ms.owner: kanchankaur
+ms.date: 10/29/2024
 ---
 
 # Build apps for Teams meeting stage
@@ -18,7 +19,7 @@ In addition to screen sharing, Microsoft Teams offers various tools designed to 
 
 The following table lists the scenarios to use Screen share and Share to stage features:
 
-| Feature |  Share to stage | Screen share content to stage  |
+| Feature | Share to stage | Screen share content to stage |
 | --- | --- | --- |
 | **Interaction Level** | Allows attendees to interact with the content. | View-only mode of the app or content.  |
 | **Scenarios** | Collaborative experiences, such as whiteboarding. |  Coconsumption scenarios, such as reviewing dashboards in a scrum meeting.  |
@@ -85,13 +86,18 @@ The following image shows the share to stage option in the Teams mobile client:
 
 ---
 
+If you use an advanced share to stage API, you can customize the text on the button. Here are the guidelines for customization:
+  
+* Use **Share** and not **Present** or **Screenshare**, if your experience offers simple sharing of app content to the stage. This sets the right expectation for users as **Share** consistently means **Share to stage** in Teams meetings.
+* Use more specific text to provide meaningful context of the scenario. For example, you can use text such as **Watch together** or **Play together** if your app offers videos or casual games.
+
 Use the following APIs to share specific part of the app:
 
-* **Share app content to stage**: Share specific parts of the app to meeting stage from the meeting side panel in a meeting. [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting)
-
-* **Get app content stage sharing state**: Fetch information about app's sharing state on the meeting stage. [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingstate)
-
-* **Get app content stage sharing capabilities**: Fetch the app's capabilities for sharing to the meeting stage. [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingcapabilities)
+| Method| Description | Source |
+|---|---|----|
+| **Share app content to stage** | Share specific parts of the app to meeting stage from the meeting side panel in a meeting. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting) |
+| **Get app content stage sharing state** | Fetch information about app's sharing state on the meeting stage. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingstate) |
+| **Get app content stage sharing capabilities** | Fetch the app's capabilities for sharing to the meeting stage. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingcapabilities) |
 
 # [Share app content to stage](#tab/app-content)
 
@@ -199,6 +205,7 @@ The following table includes the query parameter:
 >
 > * Only In-tenant or guest and external users with presenter or organizer role can initiate a sharing session.
 > * Share to stage using screen share isn't supported on Mac, classic Teams, mobile, web and VDI.
+> * In Teams, you can't share your screen and share to the stage at the same time.
 
 Users can screen share content to the meeting Stage in Teams using the screen sharing architecture. When a user shares an app to the meeting stage, the app is rendered only on the presenter’s device and then the screen is shared or mirrored to all other attendees in a new window. After the app content is shared in a meeting, all the participants can view the content, but only the presenter has the ability to interact with the content, which provides a multi-player viewing experience.
 
@@ -303,6 +310,51 @@ The following code is an example of sharing app content to meeting stage view an
 * Content is displayed inline within the meeting window.
 * A sharing button is available on all meeting side panels for users with organizer or presenter roles.
 * Users can initiate sharing through a deep link or the Share in Meeting button.
+
+## Get app content in meeting side panel
+
+The `sharing.history.getContent` API enables you to fetch the content shared in a meeting and display in the meeting side panel.
+
+When a meeting begins, the app, in which the content is shared, automatically opens the meeting side panel for the user who shared the content. You can call the `sharing.history.getContent` API to fetch a list of shared content and display it in the side panel, making it readily accessible. For an upcoming recurring meeting, where the app is already added, developers can call the API to get the latest content to be displayed in the app's side panel.
+
+The following code is an example to fetch shared content in the meeting side panel:
+
+```javascript
+// Define an async function
+async function fetchContentDetails() {
+    // Fetches a list of content details that was shared in the meeting
+    const contentDetails = await microsoftTeams.sharing.history.getContent();
+
+    // Above content details can be used to hydrate the meeting side panel 
+    // to share to meeting stage
+
+}
+```
+
+**Response payload parameters**
+
+The following table includes the response payload parameters:
+
+| Value | Type | Required | Description |
+|---|---|----|---|
+| `appId` | String | Yes | The ID of the app to be shared. |
+| `title` | String | Yes | The title of the shared content. |
+| `contentReference` | String | Yes | The content reference link of the shared content. |
+| `threadId` | String | Yes | The conversation ID where the content was shared. |
+| `author` | String | Yes | The ID of the user who shared the content. |
+| `contentType` | String | Yes | The type of content shared. For sharing to Teams stage scenarios, this value must be `ShareToStage`. |
+
+**Response codes**
+
+The following table provides the response codes:
+
+| Response code | Description |
+|---|---|
+| **200** | Meeting content details successfully retrieved. |
+| **500** | Internal error. |
+| **501** | API isn't supported in the current context.|
+
+For more information, see [sharing.history.getContent](/javascript/api/@microsoft/teams-js/sharing.history).
 
 ## Build an in-meeting document signing app
 
