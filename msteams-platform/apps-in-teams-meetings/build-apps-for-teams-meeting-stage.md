@@ -311,6 +311,62 @@ The following code is an example of sharing app content to meeting stage view an
 * A sharing button is available on all meeting side panels for users with organizer or presenter roles.
 * Users can initiate sharing through a deep link or the Share in Meeting button.
 
+## Control stop sharing action 
+The `enableStopSharingAppContentToStageAPI` API enables you to control the stop sharing functionality of specific parts of your app to the meeting stage. The API is available through the TeamsJS library. 
+
+You can control the stop presenting action programmatically, which can simplify the overall present flow and reduce user confusion by converting the 'Share' button into a 'Stop Sharing' button once sharing has begun. Using this capability can allow users to start and stop sharing from the same button in the app's side panel.  
+
+The following code is an example of `enableStopSharingAppContentToStageAPI` API:
+
+```javascript
+"enableStopSharingAppContentToStageAPI": {
+    "config": [
+        {
+            // enable stop sharing capability 
+            "value": true 
+        }
+    ]
+}, 
+```
+
+**Supported Values**
+
+The following table includes the supported values for the "enableStopSharingAppContentToStageAPI":
+
+|Value|Type|Required|Description|
+|---|---|----|---|
+|`value` | Bool | No | The stop sharing app content control. The supported values are `false` and `true`. Default is `false`. You can set the value to 'true' to enable the stop sharing capability|
+
+Benefits:
+* Simplified Present Flow: By enabling this feature, the 'Share' button can be converted into a 'Stop Sharing' button once sharing has begun, reducing user confusion.
+* Programmatic Control: Developers can control the stop presenting action programmatically, providing more flexibility in managing app content sharing during meetings.
+* Enhanced User Experience: This feature can enhance the overall user experience by providing a more intuitive and seamless sharing process.
+
+## Hide native share button  
+The `supportsCustomShareToStage` property name in the app manifest indicates whether the app has enabled support for sharing app content to the stage. 
+
+With this field, you can indicate whether the app has implemented its own share to stage experience. In this case, you may opt to hide the native share button to reduce user confusion from having multiple buttons serving the same purpose. This ensures users experience either the app's custom share to stage implementation or the default native experience, but not both.  
+
+The following code is an example of `supportsCustomShareToStage` property in the app manifest:
+
+```javascript
+{
+  "supportsCustomShareToStage": true // hides the native share button
+} 
+```
+
+**Supported Values**
+
+The following table includes the supported values for the "supportsCustomShareToStage":
+
+|Value|Type|Required|Description|
+|---|---|----|---|
+|`supportsCustomShareToStage` | Bool | No | Represents if the app has added support for sharing to the stage. The supported values are `false` and `true`. Default is `false`. You can set the value to 'true' to hide the native share button.|
+
+Benefits:
+* Unified Experience: By using this field, developers can ensure a consistent sharing experience for end users, reducing confusion by disabling the default share to stage button when the app's custom implementation is used.
+* Explicit Control: Developers have explicit control over the sharing experience, allowing them to enable or disable specific sharing protocols as needed.
+
 ## Get app content in meeting side panel
 
 The `sharing.history.getContent` API enables you to fetch the content shared in a meeting and display in the meeting side panel.
