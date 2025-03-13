@@ -112,9 +112,9 @@ In this code example:
 - **authorization.permissions.resourceSpecific**: RSC permissions for your app with either or both `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` specified. For more information, see [resource-specific permissions](../../../graph-api/rsc/resource-specific-consent.md#supported-rsc-permissions).
 
 <details>
-<summary>Select to view an app manifest version 1.12 or later example</summary>
+<summary>Select to view an app manifest version 1.12 or later code snippet</summary>
 
-The following code snippet provides an example for declaring RSC permissions in the app manifest:
+The following code snippet provides an example of how you can declare RSC permissions in the app manifest:
 
 ```json
 {
