@@ -410,7 +410,7 @@ For Microsoft 365 Copilot, a search-based message extension must support more th
 * Update your web service to support search based on multiple parameters. For more information on how to respond to user requests, see [respond to search command](how-to/search-commands/respond-to-search.md).
 * Microsoft 365 Copilot might pass an empty string or null value for parameters, which aren't part of user utterance. Update your web service to handle the parameters.
 
-* A message extension supports upto 10 commands (9 usable) and each command has a corresponding `parameters` property, which supports up to five parameters.
+* A message extension supports up to 10 commands (9 usable) and each command has a corresponding `parameters` property, which supports up to five parameters.
 
 <br>
 <details><summary>The following code is an example of multiple parameters defined in app manifest:</summary>

@@ -370,7 +370,7 @@ The following code shows an example of a hero card:
        },
       {
         "type": "openUrl",
-        "title": "Wikipeda page",
+        "title": "Wikipedia page",
         "value": "https://en.wikipedia.org/wiki/Seattle_Center_Monorail"
        }
      ]

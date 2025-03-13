@@ -1150,7 +1150,7 @@ To build an API-based message extension with multiple parameters using Teams Too
 
     :::image type="content" source="../assets/images/messaging-extension/me-multi-parameter.png" alt-text="Screenshot shows you the multi-parameter result in the message compose area." lightbox="../assets/images/messaging-extension/me-multi-output.png":::
 
-Now you've succesfully created multi paramter in message extension.
+Now you've successfully created multi parameter in message extension.
 
 ---
 
