@@ -198,9 +198,11 @@ The following code snippet provides an example of how you can declare RSC permis
 
 ## Upload a custom app in a conversation
 
+After you've updated the app manifest with the required RSC permissions, follow these steps to upload your custom app to Teams.
+
 # [Channel messages](#tab/channel)
 
-The following steps guide you to upload and validate bot that receives all channel messages in a Team without being @mentioned:
+The following steps guide you to upload and validate a bot or an agent that receives all channel messages in a Team without being @mentioned:
 
 1. Select or create a team.
 1. Select &#x25CF;&#x25CF;&#x25CF; from the left pane. The dropdown menu appears.
@@ -218,13 +220,13 @@ The following steps guide you to upload and validate bot that receives all chann
 
       :::image type="content" source="Media/select-apppackage.png" alt-text="Screenshot shows the open dialog box to select the app package." lightbox="Media/select-apppackage.png":::
 
-1. Select **Add** from the app details pop-up, to add the bot to your selected team.
+1. Select **Add** from the app details pop-up, to add the app to your selected team.
 
-      :::image type="content" source="Media/adding-bot.png" alt-text="Screenshot shows the add button to add a bot to a team." lightbox="Media/adding-bot.png":::
+      :::image type="content" source="Media/adding-bot.png" alt-text="Screenshot shows the add button to add the app to a team." lightbox="Media/adding-bot.png":::
 
-1. Select a channel and enter a message in the channel for your bot.
+1. Select a channel and enter a message in the channel for your app.
 
-    The bot receives the message without being @mentioned.
+    The bot or agent receives the message without being @mentioned.
 
       :::image type="content" source="Media/bot-receiving-message.png" alt-text="Screenshot shows a bot receiving message in a channel." lightbox="Media/bot-receiving-message.png":::
 
