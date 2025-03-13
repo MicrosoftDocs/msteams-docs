@@ -85,7 +85,7 @@ You must determine what resources your AI agent needs access to within Microsoft
 
 | Use case | How RSC permission in the AI agent can help |
 | --- | --- |
-| **Context**: A team lead who needs their team to collaborate on an upcoming project wants to utilize an AI agent on a Teams channel. The catch is that they want to ensure only relevant and approved content is included in the channel conversation. <br> **Goal**: Use an AI-powered agent to manage conversation content. | **Solution**: The agent can use the following permissions: <br> • `ChannelMessage.Read.All` <br> • `ChannelMessage.Delete.All` <br> • `ChannelMessage.Send` <br> **Expected outcome**: <br> • Removing irrelevant or sensitive content <br> • Members receive timely updates <br> • Conversation is organized and focused on relevant topics |
+| **Context**: A team lead needs their team to collaborate on an upcoming project on a Teams channel. The catch is that they want to ensure only relevant and approved content is included in the channel conversation. <br><br> **Goal**: Use an AI-powered agent to manage conversation content. | **Solution**: The agent can use the following permissions: <br> • `ChannelMessage.Read.All` <br> • `ChannelMessage.Delete.All` <br> • `ChannelMessage.Send` <br><br> **Expected outcome**: <br> • Removing irrelevant or sensitive content <br> • Members receive timely updates <br> • Conversation is organized and focused on relevant topics |
 
 ## Update app manifest
 
