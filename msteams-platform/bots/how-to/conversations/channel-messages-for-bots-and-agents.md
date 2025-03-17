@@ -9,11 +9,9 @@ ms.date: 01/23/2025
 
 # Receive all channel or chat messages for bots and agents
 
-Getting all messages, even without @mentions, is helpful for both bot and agent apps. With better context, it allows the app to address user concerns proactively, provide personalized responses, and solve issues faster. Bots and agents can use the RSC permissions model of Microsoft Teams Graph APIs.
+Receiving all messages, even without @mentions, enhances bot and agent apps by providing better context, allowing proactive responses, personalized interactions, and faster issue resolution. The RSC permissions model of Microsoft Teams Graph APIs improves performance by reducing the number of messages to process and ensuring timely responses.
 
-Using RSC permissions improves performance by reducing the number of messages to process, ensuring timely and relevant responses. Developers can customize the bot's behavior to fit specific needs. Conversation owners can consent for a bot to receive all user messages in channels and chats without @mentions by specifying permissions in the app manifest. Filter messages to handle only those that @mention the bot.
-
-Consent can be granted during the app installation or upgrade process after the app updates are published. For more information about enabling RSC for your app and inside of a tenant, see [resource-specific consent](../../../graph-api/rsc/resource-specific-consent.md).
+Developers can customize bot behavior to fit specific needs, and conversation owners can consent for a bot to receive all user messages in channels and chats without @mentions by specifying permissions in the app manifest. Consent can be granted during the app installation or upgrade process. For more information, see [resource-specific consent](../../../graph-api/rsc/resource-specific-consent.md).
 
 > [!NOTE]
 > Bots that receive all conversation messages with RSC are supported in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](../../../concepts/cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](../../../concepts/sovereign-cloud.md) environments.
