@@ -1,90 +1,84 @@
 ---
 title: Build Apps for Teams Platform
-author: heath-hamilton
-description: Learn about Microsoft Teams and associated organizational goals, why should you build apps on Teams platform, and how does Teams app help meet business needs.
+author: Heath Hamilton
+description: Learn about Microsoft Teams and associated organizational goals, why you should build apps on the Teams platform, and how Teams apps help meet business needs.
 ms.topic: overview
 ms.localizationpriority: high
 ms.date: 02/06/2025
 ---
-# Teams app that fits
 
-Microsoft Teams offers a collection of apps that are provided by Microsoft or external services. Teams apps can be tabs, bots, or message extensions or any combination of the capabilities. You can extend Teams apps to work on Outlook and Microsoft 365 App, too. These apps expand the value of the Teams collaborative experience for users.
+# Teams Apps That Fit
 
-Apps can be personal or shared. A personal app enables a one-on-one communication and a shared app lets multiple users share app space to collaborate.
+Microsoft Teams offers a variety of apps provided by Microsoft or external services. These apps can be tabs, bots, message extensions, or any combination of these capabilities. Furthermore, you can extend Teams apps to work on Outlook and Microsoft 365 Apps, enhancing the collaborative experience for users. Apps can be personal or shared:  
+- **Personal apps** enable one-on-one communication.  
+- **Shared apps** allow multiple users to communicate and collaborate.
 
-## Driving organizational goals
+## Driving Organizational Goals
 
-Collaboration and communication are key for an organization. Concise communication, integration with necessary services, and on-the-go accessibility is why organizations are increasingly choosing to rely on apps.
+Collaboration and communication are essential for any organization. Here’s why organizations increasingly choose to rely on apps:
 
-Organizations use it to connect with their customers, provide services, and share information. But that's not all! Apps are the meeting place for people to work together. A well-placed app helps build a cohesive environment for external and internal business needs.
+- **Concise Communication:** Integrate necessary services seamlessly.
+- **On-the-Go Accessibility:** Access important information anytime, anywhere.
+  
+Organizations utilize apps to connect with customers, provide services, and share information. A well-placed app helps build a cohesive environment for addressing both external and internal business needs. 
 
-Let's look at some areas where an app helps to meet a business need.
+### Areas Where Apps Meet Business Needs
 
-:::image type="content" border="false" source="../msteams-platform/assets/images/overview/why-teams-apps.png" alt-text="Screenshot shows you why should you build Teams app.":::
+:::image type="content" border="false" source="../msteams-platform/assets/images/overview/why-teams-apps.png" alt-text="Screenshot shows why you should build a Teams app.":::
 
-| **Development options** | **Business opportunities** |
-| --- | --- |
-| - Desktop app <br> - Web app <br> - Mobile app | - Increase user engagements <br> - Make your app discoverable on Microsoft Teams Store |
-| **Customer benefits** | **Internal workflows** |
-| - On-the-go accessibility <br> - Secure customer data <br> - Ease of communication | - Automate repetitive tasks <br> - Simplify tasks with bots, such as Q&A and helpdesk |
+- **Development Options**
+  - Desktop app
+  - Web app
+  - Mobile app
 
-You can build apps with Teams platform by extending app capabilities to fit your needs. Create something brand new for Teams or integrate an existing app.
+- **Business Opportunities**
+  - Increase user engagements
+  - Make your app discoverable on the Microsoft Teams Store
 
-Take a look at these example developer personas and app scenarios:
+- **Customer Benefits**
+  - On-the-go accessibility
+  - Secure customer data
+  - Ease of communication
 
-:::image type="content" border="false" source="assets/images/overview/dev-persona.png" alt-text="Screenshot shows you the developer persona and user stories."lightbox="assets/images/overview/dev-persona.png":::
+- **Internal Workflows**
+  - Automate repetitive tasks
+  - Simplify tasks with bots, such as Q&A and helpdesk
 
-You can meet all of these scenarios with Teams apps and enhance collaboration within your Teams across Microsoft 365.
+By building apps on the Teams platform, you can extend app capabilities to fit your needs, whether creating something brand new for Teams or integrating an existing app.
 
-## Build apps with Microsoft Teams platform
+### Example Developer Personas and App Scenarios
 
-Teams apps help your collaborative workspace to be more productive by bringing key information, common tools, and trusted processes to where people increasingly gather, learn, and work. Apps are how you extend the capabilities of Team platform to fit your requirements. Create something brand new or integrate an existing app, and you utilize benefits of Teams platform for your particular business needs.
+:::image type="content" border="false" source="assets/images/overview/dev-persona.png" alt-text="Screenshot shows developer persona and user stories." lightbox="assets/images/overview/dev-persona.png":::
 
-The benefits of building apps span from meeting organizational goals to increasing internal productivity.
+Meet various scenarios with Teams apps and enhance collaboration within your team across Microsoft 365.
 
-Here's why Teams is best suited for your app needs:
+## Building Apps with Microsoft Teams Platform
 
-* **Communication and collaboration**
+Teams apps help make your collaborative workspace more productive by bringing key information and tools where people gather and work. Create a new app or integrate an existing one to leverage the Teams platform for specific business needs.
 
-    Most successful Teams apps involve pulling information from another system, having a conversation about it, and letting users take action. Teams lets you do all these tasks directly within the Teams client. You can even push information to a targeted audience based on an event or action in an external system.
+### Benefits of Building Apps
 
-* **Social interactions**
+- **Communication and Collaboration**: Enable rich interactions directly within Teams by pulling data from other systems and facilitating conversations and actions around it.
 
-    Teams is a social platform; custom social-focused apps encourage your team to extend your company culture into your collaboration space. Use apps for sending polls, letting people share feedback with each other, enabling connection, and communication.
+- **Social Interactions**: Use social-focused apps to extend company culture in your collaboration space, including sending polls, encouraging feedback, and facilitating connection and communication.
+  
+  :::image type="content" border="false" source="../msteams-platform/assets/images/overview/scenario-social.png" alt-text="Screenshot shows Teams app for team culture building.":::
 
-    :::image type="content" border="false" source="../msteams-platform/assets/images/overview/scenario-social.png" alt-text="Screenshot shows you the Teams app for building team culture.":::
+- **Common Business Processes**: Automate and simplify processes such as sales reports, project tracking, resource reservation, and expense reporting.
+  
+  :::image type="content" border="false" source="../msteams-platform/assets/images/overview/scenario-approval-flow.png" alt-text="Screenshot shows Teams app for internal use.":::
 
-* **Common business processes**
+- **Personal Apps with Tabs and Bots**: Utilize one-to-one conversations with bots for private communication and complex information sharing.
 
-    Tasks like creating and sharing a sales call report, tracking your project timeline, reserving common resources, submitting help desk requests, expense reports are repetitive tasks. They make for effective Teams apps.
+- **Surface Existing Apps**: Enable existing web apps or SharePoint sites within Teams to grow user engagement.
 
-    :::image type="content" border="false" source="../msteams-platform/assets/images/overview/scenario-approval-flow.png" alt-text="Screenshot shows you the Teams app for internal use.":::
+  :::image type="content" border="false" source="../msteams-platform/assets/images/overview/scenario-dashboard.png" alt-text="Screenshot shows SharePoint site as a Teams tab.":::
 
-* **Personal apps with tabs and bots**
+- **Teams Store Advantage**: Increasing app visibility on the Teams Store provides marketing opportunities and audience reach.
 
-    One-to-one conversational bots are one of the more open-ended features in Teams. The conversation is just between the bot and your user. You have the flexibility of including dialogs (referred as task modules in TeamsJS v1.x) to simplify complex sets of information.
+- **Build Once, Run Everywhere**: Extend Teams apps across Microsoft 365 for cross-platform support from a single codebase.
 
-    For example, if your app is a design tool with multiple collaborators, a shared bot that notifies all users helps to build user engagement.
-
-    Additionally, a chat bot can be an easy replacement for emails and phone calls to IT or HR departments.
-
-* **Surface existing app**
-
-    If you've got an existing web app, SharePoint site (or SPFx extension), PowerApp, or other web-based application, it may make sense to enable some or all of it in Teams. Extending existing apps and porting interactive functionalities to Teams helps to grow user base and user engagement for your app.
-
-    :::image type="content" border="false" source="../msteams-platform/assets/images/overview/scenario-dashboard.png" alt-text="Screenshot shows you the SharePoint site ported as a Teams tab.":::
-
-* **Teams Store advantage**
-
-    Push your app on Teams Store to improve app's availability and you can use it as a marketing opportunity. If you're running a startup, Teams platform helps to increase awareness of your products. Teams Store marketplace can be a great platform for large audiences to discover your app.
-
-* **Build once, run everywhere**
-
-    Extend your Teams app across Microsoft 365, which provides a streamlined way to deliver cross-platform apps to an expanded user audience: from a single codebase, you can create app experiences tailored for Teams, Outlook, and Microsoft 365 app environments. End users don't have to leave the context of their work to use your app, and administrators benefit from a consolidated management and deployment workflow.
-
-    Use the latest app manifest and Teams JavaScript client library versions to enable your personal tab and message extension apps to run in other Microsoft 365 experiences in addition to Teams. You can reach users on platforms such as Outlook and Microsoft 365 app all with the same codebase, broadening the reach of your app and streamlining your development and distribution processes.
-
-## Next step
+## Next Steps
 
 > [!div class="nextstepaction"]
-> [From ideas to Teams app](overview-story.md)
+> [From Ideas to Teams App](overview-story.md)
