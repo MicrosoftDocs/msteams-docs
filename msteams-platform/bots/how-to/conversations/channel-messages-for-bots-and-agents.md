@@ -1,5 +1,5 @@
 ---
-title: Get All Conversation Messages for Bot and Agents
+title: Get All Channel and Chat Messages for Bot and Agents
 author: surbhigupta12
 description: Enable bots to receive all conversation messages without being @mentioned using RSC permissions. Read on webApplicationInfo or authorization section in manifest.
 ms.topic: conceptual
@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 ms.date: 01/23/2025
 ---
 
-# Receive all channel or chat messages for bots and agents
+# Receive all messages for bots and agents
 
 Receiving all messages, even without @mentions, enhances bot and agent apps by providing better context, allowing proactive responses, personalized interactions, and faster issue resolution. The RSC permissions model of Microsoft Teams Graph APIs improves performance by reducing the number of messages to process and ensuring timely responses.
 
@@ -74,15 +74,13 @@ For more information, see [app descriptions](../../../concepts/deploy-and-publis
 
 ## Use RSC permissions to enhance AI agents in Teams
 
-You can use RSC permissions in AI agents to request access to specific resources like mail, calendar, or files in a granular manner. Instead of broad permissions, RSC allows permissions specific to the context of a resource, such as a document. This improves security and user trust by enabling AI agents to interact only with the necessary resources.
+You can use RSC permissions in AI agents to request access to specific resources like mail, calendar, or files . Instead of broad permissions, RSC allows permissions specific to the context of a resource at a granular level, such as a document. You must determine the resources that your AI agent needs access to within Microsoft Teams or Microsoft 365. These permissions can be for:
 
-You must determine what resources your AI agent needs access to within Microsoft Teams or Microsoft 365. These permissions can be for:
+- Reading messages in Teams channels.
+- Accessing user's details or data.
+- Accessing shared documents.
 
-- Reading messages in Teams channels
-- Accessing user's details or data
-- Accessing shared documents
-
-**For example**: Use RSC permissions for an AI agent to manage channel content
+**For example**: Use RSC permissions for an AI agent to manage channel content.
 
 | Use case | How RSC permission in the AI agent can help |
 | --- | --- |
@@ -90,7 +88,7 @@ You must determine what resources your AI agent needs access to within Microsoft
 
 ## Update app manifest
 
-For your bot or agent to receive all conversation messages, you must specify the relevant RSC permission strings in the `authorization.permissions.resourceSpecific` property of your app manifest. For more information, see [app manifest schema](../../../resources/schema/manifest-schema.md).
+For your bot or agent app to receive all conversation messages, specify the relevant RSC permission strings in the `authorization.permissions.resourceSpecific` property of your app manifest. For more information, see [app manifest schema](../../../resources/schema/manifest-schema.md).
 
 The following code provides an example of the app manifest:
 
