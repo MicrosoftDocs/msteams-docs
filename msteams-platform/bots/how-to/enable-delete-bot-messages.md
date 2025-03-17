@@ -31,3 +31,20 @@ To enable the users to delete bot messages, you need to:
 - Opt in for user’s deleting bot messages in app manifest
 
 - Ensure that the admin must enable users to delete messages in the tenant where the bot app is installed
+
+### Update app manifest
+
+To update the app manifest for your bot app:
+
+1. Open the app manifest file.
+1. Update the following properties in the `manifest.json`.
+
+```json
+
+    [code snippet]
+
+```
+
+  where,
+    - `property-name` is for [reason]
+    - `property-name` is for [reason]
