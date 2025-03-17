@@ -222,7 +222,7 @@ Screen share content to the meeting Stage simplifies app content sharing during 
 
 Users can screen share content to the meeting stage in the following scenarios:
 
-* **Share entire app**: When you share a tab to the Meeting Stage in a Teams meeting, the `contentUrl` associated with the tab is poped-out a new window for the app and screen shares that window with all other meeting participants. The `page.frameContext` property in the `getContext` object is set to `meetingStage` to signal the app that it's being presented on a large surface, allowing the app to update its content appropriately.
+* **Share entire app**: When you share a tab to the meeting stage in a Teams meeting, the `contentUrl` associated with the tab is popped out into a new window for the app, and that window is screen shared with all other meeting participants. The `page.frameContext` property in the `getContext` object is set to `meetingStage` to signal the app that it's being presented on a large surface, allowing the app to update its content appropriately.
 
   > [!NOTE]
   > Apps that specify `MeetingStage` in the `page.frameContext` property of the `getContext` object in the manifest and declare `MeetingStage.Write.Chat` permissions support collaborative Share to Stage infrastructure. The share button initiates the existing collaborative protocol instead of the screen sharing protocol.
