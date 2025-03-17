@@ -64,25 +64,33 @@ In Visual Studio, press **F5** or choose **Start Debugging** from the **Debug** 
 ## Upload your tab
 
 >[!Note]
-> App Studio can be used to edit your `manifest.json` file and upload the completed package to Teams. You can also manually edit the `manifest.json` file if you prefer. If you do, be sure to build the solution again to create the `tab.zip` file to upload.
+> You can use the Developer Portal for Teams to edit your `manifest.json` file and upload the completed package to Teams. You can also manually edit the `manifest.json` file if you prefer. If you do, be sure to build the solution again to create the `tab.zip` file to upload.
 
 **To upload your tab**
 
 1. Go to Microsoft Teams. If you use the [web-based version](https://teams.microsoft.com), you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
 
-1. Go to **App Studio** and select the **Manifest editor** tab.
+1. Open Developer Portal for Teams.
 
-1. Select **Import an existing app** in the Manifest editor to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is `tab.zip`. It's available here:
+1. In the Developer Portal, go to **Apps** > **Import an app** to upload your app package. The source code comes with its own partially complete manifest. The name of your app package is `tab.zip`. It's available here:
 
     ```bash
     /bin/Debug/netcoreapp2.2/tab.zip
     ```
 
-1. Upload `tab.zip` to App Studio.
+1. Upload `tab.zip` to the Developer Portal.
 
 ### Update your app package with Manifest editor
 
-After uploading your app package into App Studio, you must finish configuring it.
+After uploading your app package into the Developer Portal, you must finish configuring it.
+
+1. Select your newly imported tab from the **Apps** list.
+1. Edit the manifest details as needed, including app name, icons, permissions, and domains.
+1. Save and publish your app to Teams.
+
+For more information, see [update manifest file and app package](../../toolkit/publish-your-teams-apps-using-developer-portal.md) in Developer Portal.
+
+<!--- After uploading your app package into App Studio, you must finish configuring it.
 
 Select the tile for your newly imported tab in the right panel of the Manifest editor welcome page.
 
@@ -132,3 +140,4 @@ In the **Domains and permissions** section, **Domains from your tabs** must cont
 1. To view your tab, go to the team where you installed the tab, and select it from the tab bar. The page that you chose during configuration is displayed.
 
     ![Channel tab ASPNETMVC uploaded](../../assets/images/tab-images/channeltabaspnetmvcuploaded.png)
+--->
