@@ -6,51 +6,56 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.date: 02/06/2025
 ---
-# The Teams solution
 
-Microsoft Teams Platform is a powerful, flexible platform for creating apps for Teams. It provides a vast suite of development environments and tools to support app development.
+# The Teams Solution
 
-## The user story
+Microsoft Teams Platform is a powerful, flexible platform for creating apps. It provides a vast suite of development environments and tools to support app development.
 
-You've had a view of Teams offerings. You can now map them to user needs. Let’s revisit the scenario.
+## Overview
 
-The developer from Tours and Travel agency wants to build an app for their users, the travelers. The app must:
+The Teams platform allows developers to map Teams offerings to user needs through a user-centered approach.
+
+## The User Story
+
+Consider a developer from a Tours and Travel agency aiming to build an app for travelers. The app must:
 
 - Check and send the forecast to travelers registered with the travel agency.
-- Notify the users a day before the departure date so they can plan.
+- Notify users a day before the departure date for better planning.
 
-Collate and map requirements to Teams functionalities:
+### Requirements Mapping
 
-| User app needs | Check forecast | Notification before travel | Registered user |
-| --- |:---:|:---:|:---:|
-| **Capability** | Notification bot | &nbsp; | &nbsp; |
-| **Integration** | &nbsp; | &nbsp; | :::image type="icon" source="assets/icons/graph-small-icon.png"::: Microsoft Graph, Weather API |
-| **Scope** | &nbsp; | Personal app | &nbsp; |
-| **Integration point** | &nbsp; | Notification | &nbsp; |
+| User App Needs             | Check Forecast  | Notification Before Travel | Registered User                          |
+|----------------------------|:---------------:|:--------------------------:|------------------------------------------|
+| **Capability**             | Notification bot|                            |                                          |
+| **Integration**            |                 |                            | :::image type="icon" source="assets/icons/graph-small-icon.png"::: Microsoft Graph, Weather API |
+| **Scope**                  |                 | Personal app               |                                          |
+| **Integration Point**      |                 | Notification               |                                          |
 
-**Teams app solution**: A Teams *notification bot* app that checks and *sends forecast notification* to *registered users* before their travel date.
+### Teams App Solution
 
-:::image type="content" border="false" source="../msteams-platform/assets/images/overview/developer-scenario-solution.png" alt-text="Screenshot shows you to builds a bot for Teams that sends weather forecast to customers so that they can plan ahead their traveling dates."lightbox="../msteams-platform/assets/images/overview/developer-scenario-solution.png":::
+A Teams **notification bot** app can check and send forecast notifications to **registered users** prior to their travel date.
 
-Teams offers these and many more capabilities to bring your users a feature-rich app solution. To develop this app:
+:::image type="content" border="false" source="../msteams-platform/assets/images/overview/developer-scenario-solution.png" alt-text="Screenshot of building a bot for Teams that sends weather forecasts to customers, enabling better travel planning." lightbox="../msteams-platform/assets/images/overview/developer-scenario-solution.png":::
+
+## Development Steps
+
+To develop this app:
 
 1. Create a notification bot app.
-1. Integrate with an external weather forecast API to connect and request forecast for specific date and location.
-1. Integrate with :::image type="icon" source="assets/icons/graph-small-icon.png"::: Microsoft Graph for registered users.
-1. Check and send forecast details based on user's travel date and travel location.
+2. Integrate with an external weather forecast API to request forecasts for specific dates and locations.
+3. Integrate with :::image type="icon" source="assets/icons/graph-small-icon.png"::: Microsoft Graph for registered users.
+4. Check and send forecast details based on the user's travel date and location.
 
-## Dive deeper
+## Dive Deeper
 
-Choose to customize your app with functionalities, such as user authentication and tools, such as Microsoft Graph and Developer Portal.
+Customize your app with functionalities like user authentication and tools such as Microsoft Graph and the Developer Portal. Here are some resources to assist in building a Teams app:
 
-Let's go through Teams Developer Documentation based on your requirements for building a Teams app:
+| What Do You Want?   | Where to Go |
+|---------------------|-------------|
+| New to Teams app development and want to create a new Teams app | [Get started](get-started/get-started-overview.md) |
+| Created an app with Teams before and want to learn more about app functionalities | Explore modules for [tabs](tabs/what-are-tabs.md), [bots](bots/what-are-bots.md), [message extensions](messaging-extensions/what-are-messaging-extensions.md), [meeting app](apps-in-teams-meetings/teams-apps-in-meetings.md), and more. |
+| Want more information about tools and SDKs available with Teams | [Explore SDKs](get-started/tool-options-and-code-samples.md#explore-sdks) and [Explore Tools](get-started/tool-options-and-code-samples.md#explore-tools) |
 
-| What do you want? | Where to go |
-| --------| --------|
-| If you're new to Teams app development and want to create a new Teams app | [Get started](get-started/get-started-overview.md) |
-|If you've created app with Teams before and want to learn more about app functionalities | Build modules for [tabs](tabs/what-are-tabs.md), [bots](bots/what-are-bots.md), [message extensions](messaging-extensions/what-are-messaging-extensions.md), [meeting app](apps-in-teams-meetings/teams-apps-in-meetings.md), and more. |
-| If you want to find more information about the tools and SDKs options that are available with Teams | [Explore SDKs](get-started/tool-options-and-code-samples.md#explore-sdks) and [Explore Tools](get-started/tool-options-and-code-samples.md#explore-tools) |
-
-## See also
+## See Also
 
 [Extend a Teams personal tab across Microsoft 365 app](m365-apps/extend-m365-teams-personal-tab.md)
