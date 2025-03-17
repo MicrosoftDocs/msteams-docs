@@ -26,9 +26,8 @@ The users of the group chat have the ability to undo the deletion, however, the 
 
 ## Enable users to delete bot messages
 
-| - Opt in for user’s deleting bot messages in app manifest
- [Dev Preview/GA; Code snippet]
- 
-| - Admin to enable users to delete messages in the tenant
+To enable the users to delete bot messages, you need to:
 
-| - Links to Admin docs and End-user docs relevant to this feature
+- Opt in for user’s deleting bot messages in app manifest
+
+- Ensure that the admin must enable users to delete messages in the tenant where the bot app is installed
