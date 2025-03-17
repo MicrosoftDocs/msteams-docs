@@ -28,14 +28,14 @@ The RSC permissions are extended to bots, and with user consent and app installa
 
 ### Filtering at mention messages
 
-You can enable the developer to filter bot messages and process those that @mention the bots or the agent. This can be useful for several reasons:
+You can enable the developer to filter bot messages and process only the messages that @mention the bots or the agent. This can be useful for several reasons:
 
-- **Ensure contextual relevance**: Messages that are directed at the bot likely have higher relevance for the users of bots or the agents. It can help the bot respond accurately and engage in meaningful responses.
-- **Better bot performance**: Filtering messages can the reduce the need for unnecessary processing for the bot or the agent. Processing contextually irrelevant messages can be avoided to improve the bot performance. It can also keep the bot, the agent, or the user from responding to irrelevant messages or triggering unnecessary actions.
-- **Enhance user experience**: The developer can create a more seamless and intuitive user experience. Users are more likely to engage with the bot if it responds only when it's addressed.
-- **Efficient message handling**: It enables the bot to handle larger volume of conversations well, and make it more useful and relatable.
+- **Ensure contextual relevance**: Messages that are directed at the bot are likely to have higher relevance for the users of the bot or the agent app. It helps the app respond accurately and engage in meaningful responses.
+- **Better bot performance**: Filtering messages can the reduce the need for unnecessary processing for the bot or the agent app. Processing contextually irrelevant messages can be avoided to improve the bot performance. It can also keep the bot, the agent, or the user from responding to irrelevant messages or triggering unnecessary actions.
+- **Enhance user experience**: Users are more likely to engage with the bot if it responds only when it's addressed. The developer can create a seamless and intuitive user experience.
+- **Efficient message handling**: Filtering relevant message enables the bot or the agent app to handle larger volume of conversations well, and make it more useful and relatable.
 
-The developers can create more efficient and user-friendly conversational interfaces in the bots and agents.
+Developers can create more efficient and user-friendly conversational interfaces in the bots and agents.
 
 ```csharp
 // When ChannelMessage.Read.Group or ChatMessage.Read.Chat RSC is in the app manifest, this method is called even when bot is not @mentioned.
@@ -55,16 +55,19 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
 ### RSC permission
 
-Services that need access to all Teams message data must use the Graph APIs that provide access to archived data in channels and chats. Bots must use the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` permissions appropriately to build and enhance engaging experience for users.
+Services that need access to all Teams message data must use the Graph REST APIs to access archived data in channels and chats. The bot or the agent app must use the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` permissions appropriately to build and enhance engaging experience for users.
 
 To pass the Microsoft Teams Store approval, the app description must include how the bot or the agent app uses the data it reads:
 
-- The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permission may not be used by bots to extract large amounts of customer data.
-- The ability for bots to receive all messages in chats using `ChatMessage.Read.Chat` is only enabled after a re-installation or new installation into a chat.
+- The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permission need not be used by bots to extract large amounts of customer data.
+- The ability for bots to receive all messages in chats using `ChatMessage.Read.Chat` is only enabled after a re-installation or new installation into a chat:
 
-  - If you have an app that's using the `ChatMessage.Read.Chat` RSC permission for Graph scenarios, then test the app following the steps in [upload a custom app in a conversation](channel-messages-for-bots-and-agents.md#upload-a-custom-app-in-a-conversation) and modify the app before the feature is [generally available](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=receive%2Call%2Cgroup%2Cchat%2Cmessages). If you don't want your bot to receive all chat messages, use the [code snippet](#filtering-at-mention-messages). If no action is taken, your bot receives all messages after new installation.
-  - Note that `ChatMessage.Read.Chat` allows the app to read a chat's messages, without a signed-in user. For more information, see [RSC permissions](/graph/permissions-reference).
-- The app reads the necessary information for its core functions.
+  - If you have an app that's using the `ChatMessage.Read.Chat` RSC permission for Graph scenarios, then test the app following the steps in [upload a custom app in a conversation](channel-messages-for-bots-and-agents.md#upload-a-custom-app-in-a-conversation) and modify the app before the feature is [generally available](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=receive%2Call%2Cgroup%2Cchat%2Cmessages).
+  - If you don't want your app to receive all chat messages, use the [code snippet](#filtering-at-mention-messages) for filtering the @mention messages only.
+  - If no action is taken, your bot receives all messages after new installation.
+
+- Note that `ChatMessage.Read.Chat` allows the app to read a chat's messages, without a signed-in user. For more information, see [RSC permissions](/graph/permissions-reference).
+- The app reads only the information that's necessary for its core functions.
 - The app uses the data relevant to the specific business that it addresses to increase productivity and collaboration.
 
 For more information, see [app descriptions](../../../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-descriptions).
