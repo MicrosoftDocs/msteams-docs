@@ -4,7 +4,7 @@ description: Learn how to configure API permissions and authentication for diffe
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API Delegated permission access token scope
-ms.date: 07/14/2023
+ms.date: 03/13/2025
 ---
 # Extend tab app with Microsoft Graph permissions and scopes
 
