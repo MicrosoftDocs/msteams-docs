@@ -122,6 +122,15 @@ In addition, inspect the access token that was sent to the tab app to verify if 
 You can use [JWT](https://jwt.ms) for inspecting the token.
 
 </details>
+<br>
+
+<details>
+<summary>8. Error: User selects **Continue** in the consent dialog and nothing happens.</summary>
+<br>
+You receive this error if `*.token.botframework.com` is missing in the `validDomains` property of the app manifest. For more information about OAuth URLs, see [OAuth URL support in Azure AI Bot Service](/azure/bot-service/ref-oauth-redirect-urls?view=azure-bot-service-4.0&preserve-view=true).
+
+</details>
+<br>
 
 ## Bot SSO token error
 
