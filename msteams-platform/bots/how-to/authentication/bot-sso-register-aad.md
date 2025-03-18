@@ -78,7 +78,7 @@ To enable SSO for your app in Microsoft Entra ID:
 > [!IMPORTANT]
 > Ensure that when you create your bot resource, select the option to create a new app ID. You can also use an existing app ID, if you've already registered an app in Microsoft Entra admin center.
 
-## Configure messaging endpoint
+# Configure messaging endpoint
 
 Messaging endpoint is where messages are sent to your bot. It enables communication with your bot.
 
@@ -106,6 +106,9 @@ Messaging endpoint is where messages are sent to your bot. It enables communicat
 You've configured the messaging endpoint for your bot resource. Next, you must enable SSO for the Microsoft Entra app.
 
 <a name='configure-sso-for-azure-ad-app'></a>
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+configure+messaging+endpoint+for+your+bot+resource&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad%3Ftabs%3Dbotid%23to-configure-messaging-endpoint-for-your-bot-resource&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad.md&documentVersionIndependentId=ac68d7e8-2a35-5208-8724-68bd2fdd79b6&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Configure SSO for Microsoft Entra app
 
@@ -192,6 +195,9 @@ You need:
 1. Note and save the application ID URI. You'll need it for updating the app manifest later.
 
 The application ID URI is configured. You can now define scope and permissions for your app.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+configure+application+ID+URI&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad%3Ftabs%3Dbotid%23to-configure-application-id-uri&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad.md&documentVersionIndependentId=ac68d7e8-2a35-5208-8724-68bd2fdd79b6&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 #### To configure API scope
 
