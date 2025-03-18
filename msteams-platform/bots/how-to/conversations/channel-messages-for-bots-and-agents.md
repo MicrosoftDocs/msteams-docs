@@ -83,11 +83,11 @@ You can use RSC permissions in AI agents to request access to specific resources
 - Access user's details or data.
 - Access shared documents.
 
-**For example**: Use RSC permissions for an AI agent to manage channel content.
+For example, use RSC permissions for an AI agent to manage channel content.
 
 | Use case | How RSC permission in the AI agent can help |
 | --- | --- |
-| **Context**: A team leader needs their team to collaborate on an upcoming project. <br><br> **Goal**: To ensure only relevant and approved content is included in the channel conversation. | **Solution**: Use an agent to manage conversation content. The agent can use the following permissions: <br> • `ChannelMessage.Read.All` <br> • `ChannelMessage.Delete.All` <br> • `ChannelMessage.Send` <br><br> **Expected outcome**: <br> • Remove irrelevant or sensitive content <br> • Members receive timely updates <br> • Conversation is organized and focused on relevant topics |
+| **Context**: A team leader needs their team to collaborate on an upcoming project. <br><br> **Goal**: To ensure only relevant and approved content is included in the channel conversation. | **Solution**: Use an agent to manage conversation content. The agent can use the following RSC permissions: <br> • `ChannelMessage.Read.All` <br> • `ChannelMessage.Delete.All` <br> • `ChannelMessage.Send` <br><br> **Expected outcome**: <br> • Filter irrelevant content <br> • Receive timely updates <br> • Conversation is organized |
 
 ## Update app manifest
 
@@ -296,8 +296,7 @@ this.onMessage(async (context, next) => {
 
 # [Python](#tab/python)
 
-- [SDK reference]
-- [Sample code reference]
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-receive-channel-messages-withRSC/python/bots/botActivityHandler.py#L34)
 
 ```python
 
