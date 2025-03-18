@@ -30,10 +30,10 @@ The RSC permissions are extended to bots, and with user consent and app installa
 
 You can enable the developer to filter bot messages and process only the messages that @mention the bots or the agent. This can be useful for several reasons:
 
-- **Ensure contextual relevance**: Messages that are directed at the bot are likely to have higher relevance for the users of the bot or the agent app. It helps the app respond accurately and engage in meaningful responses.
-- **Better bot performance**: Filtering messages can the reduce the need for unnecessary processing for the bot or the agent app. Processing contextually irrelevant messages can be avoided to improve the bot performance. It can also keep the bot, the agent, or the user from responding to irrelevant messages or triggering unnecessary actions.
+- **Ensure contextual relevance**: Messages that are directed at the bot are likely to have higher relevance for the users of the bot or the agent app. It helps the app to respond accurately and to engage in meaningful responses.
+- **Better bot performance**: Filtering messages can reduce the need for unnecessary processing for the bot or the agent app. Processing contextually irrelevant messages can be avoided to improve the bot performance. It can also keep the bot, the agent, or the user from responding to irrelevant messages or triggering unnecessary actions.
 - **Enhance user experience**: Users are more likely to engage with the bot if it responds only when it's addressed. The developer can create a seamless and intuitive user experience.
-- **Efficient message handling**: Filtering relevant message enables the bot or the agent app to handle larger volume of conversations well, and make it more useful and relatable.
+- **Efficient message handling**: Filtering relevant message enables the bot or the agent app to handle larger volume of conversations well and make it more useful and relatable.
 
 Developers can create more efficient and user-friendly conversational interfaces in the bots and agents.
 
@@ -64,11 +64,11 @@ To pass the Microsoft Teams Store approval, the app description must include how
 
   - If you have an app that's using the `ChatMessage.Read.Chat` RSC permission for Graph scenarios, then test the app following the steps in [upload a custom app in a conversation](channel-messages-for-bots-and-agents.md#upload-a-custom-app-in-a-conversation) and modify the app before the feature is [generally available](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=receive%2Call%2Cgroup%2Cchat%2Cmessages).
   - If you don't want your app to receive all chat messages, use the [code snippet](#filtering-at-mention-messages) for filtering the @mention messages only.
-  - If no action is taken, your bot receives all messages after new installation.
+  - If no action is taken, your bot receives all the messages after the new installation.
 
-- Note that `ChatMessage.Read.Chat` allows the app to read a chat's messages, without a signed-in user. For more information, see [RSC permissions](/graph/permissions-reference).
+- Note that `ChatMessage.Read.Chat` allows the app to read chat messages, without a signed-in user. For more information, see [RSC permissions](/graph/permissions-reference).
 - The app reads only the information that's necessary for its core functions.
-- The app uses the data relevant to the specific business that it addresses to increase productivity and collaboration.
+- The app uses data relevant to the specific business that it addresses to increase productivity and collaboration.
 
 For more information, see [app descriptions](../../../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-descriptions).
 
@@ -84,7 +84,7 @@ You can use RSC permissions in AI agents to request access to specific resources
 
 | Use case | How RSC permission in the AI agent can help |
 | --- | --- |
-| **Context**: A team lead needs their team to collaborate on an upcoming project on a Teams channel. <br><br> **Goal**: To ensure only relevant and approved content is included in the channel conversation.  | **Solution**: Use an AI-powered agent to manage conversation content. The agent can use the following permissions: <br> • `ChannelMessage.Read.All` <br> • `ChannelMessage.Delete.All` <br> • `ChannelMessage.Send` <br><br> **Expected outcome**: <br> • Removing irrelevant or sensitive content <br> • Members receive timely updates <br> • Conversation is organized and focused on relevant topics |
+| **Context**: A team leader needs their team to collaborate on an upcoming project on a Teams channel. <br><br> **Goal**: To ensure only relevant and approved content is included in the channel conversation.  | **Solution**: Use an AI-powered agent to manage conversation content. The agent can use the following permissions: <br> • `ChannelMessage.Read.All` <br> • `ChannelMessage.Delete.All` <br> • `ChannelMessage.Send` <br><br> **Expected outcome**: <br> • Removing irrelevant or sensitive content <br> • Members receive timely updates <br> • Conversation is organized and focused on relevant topics |
 
 ## Update app manifest
 
@@ -97,7 +97,7 @@ The following code provides an example of the app manifest:
 In this code example:
 
 - **webApplicationInfo.id**: Your Microsoft Entra app ID. The app ID can be the same as your bot ID.
-- **webApplicationInfo.resource**: Any string. The resource field has no operation in RSC, but must be added with a value to avoid error response.
+- **webApplicationInfo.resource**: Any string. The resource field has no operation in RSC. However, it must be added with a value to avoid error response.
 - **authorization.permissions.resourceSpecific**: RSC permissions for your app with either or both `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` specified. For more information, see [resource-specific permissions](../../../graph-api/rsc/resource-specific-consent.md#supported-rsc-permissions).
 
 <details>
@@ -191,7 +191,7 @@ After you've updated the app manifest with the required RSC permissions, follow 
 
 # [Channel messages](#tab/channel)
 
-The following steps guide you to upload and validate a bot or an agent that receives all channel messages in a Team without being @mentioned:
+The following steps guide you to upload and validate a bot or an agent app that receives all channel messages in a Team without being @mentioned:
 
 1. Select or create a team.
 1. Select &#x25CF;&#x25CF;&#x25CF; from the left pane. The dropdown menu appears.
