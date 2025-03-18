@@ -18,11 +18,11 @@ body:
       label: Type of issue
       options:
         - "Select an option"  # Placeholder
-        - Typo
-        - Code doesn't work
+        - Code doesn't work        
         - Feature doesn't work (bug)
         - Missing information
         - Outdated article
+        - Typo
         - Other (describe below)
     validations:
       required: true
