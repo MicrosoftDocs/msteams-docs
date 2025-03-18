@@ -375,6 +375,9 @@ async loginStep(stepContext) {
 > [!NOTE]
 > The code snippets use the Waterfall Dialog. For more information, see [About component and waterfall dialogs](/azure/bot-service/bot-builder-concept-waterfall-dialogs?view=azure-bot-service-4.0&preserve-view=true).
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+code+to+receive+the+token&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code%3Ftabs%3Dcs1%252Ccs2%252Ccs3%252Ccs4%252Ccs5%26pivots%3Dbot-app%23add-code-to-receive-the-token&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code.md&documentVersionIndependentId=039ff5cc-7243-ce4b-527e-c152755eeb72&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ### Validate the access token
 
 Web APIs on your server must decode the access token and verify if it's sent from the client.
@@ -389,7 +392,6 @@ There are a number of libraries available that can handle JWT validation. Basic 
 - Checking that the token is well-formed.
 - Checking that the token was issued by the intended authority.
 - Checking that the token is targeted to the web API.
-
 Keep in mind the following guidelines when validating the token:
 
 - Valid SSO tokens are issued by Microsoft Entra ID. The `iss` claim in the token must start with this value.
