@@ -5,12 +5,12 @@ ms.author: surbhigupta
 description: Learn about the best practices to optimize your tab app on Teams mobile such as using service workers and minimizing web page size with performance audits.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.date: 03/18/2025
+ms.date: 03/20/2025
 ---
 
 # Best practices for Teams mobile apps
 
-If you want to increase the adoption of your Teams tab app on mobile devices, you must ensure a fast and responsive web experience on the Teams Android and iOS clients. Mobile devices have limited processing power, network connectivity, and battery power compared to desktops and laptops. This article outlines the best practices to optimize your Teams tab's web pages for the Teams mobile client.
+If you want to increase the adoption of your Teams tab app on mobile devices, you must ensure a fast and responsive web experience on the Teams Android and iOS clients. Mobile devices contain limited processing power, network connectivity, and battery compared to desktops and laptops. This article outlines the best practices to optimize your Teams tab's web pages for the Teams mobile client.
 
 ## Use service workers to cache static assets
 
@@ -18,35 +18,43 @@ If you want to increase the adoption of your Teams tab app on mobile devices, yo
 * Use the stale-while-revalidate strategy to serve cached content quickly while fetching updated data in the background. You can also use this strategy to cache API responses that don't change frequently, such as configuration data.
 * Avoid caching large assets to prevent unnecessary storage consumption on mobile devices.
 
-### Sample Code
+### Sample app
 
-Check this [sample app](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-support-offline/nodejs) that makes use of a service worker to cache data and provide offline functionality.
+Check out this [sample app](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-support-offline/nodejs) that makes use of a service worker to cache data and provide offline functionality.
 
 ## Minimize web page size
 
-Mobile devices rely on mobile data networks that can be slow and unstable resulting in high latency, particularly in areas with weak signal strength. Hence, reducing the overall app package size and optimizing data transfers is critical. To reduce the page size, gather key performance metrics by running a performance audit using the **Performance** tab or Lighthouse. This helps identify bottlenecks and areas for improvement.
+In areas with weak signal strength, mobile data networks can be slow and unstable, resulting in high latency. Hence, reducing the overall app package size and optimizing data transfers is critical. To reduce the page size, gather key performance metrics by running a performance audit using the **Performance** tab in dev tools. This helps identify bottlenecks and areas for improvement in your app.
 
 ### Run a performance audit
 
-You can gather key performance metrics of the web page by running a set of performance and instrumentation tests using Developer Tools. This helps identify bottlenecks and areas for improvement in your app. We recommended the following tests to gather performance insights on the page:
+To run a performance audit, follow these steps:
 
-1. Enable dev tools as described here: <https://learn.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/developer-tools>
+1. [Enable dev tools](../tabs/how-to/developer-tools.md).
 
-1. Select **Inspect** on the web page. This opens the Developer tools from where the Lighthouse or Performance Tab can be used from here.
+1. Select **inspect** under your app. This opens a new window.
 
-1. The performance tab one can See the performance marker indicating the amount of time the app took from Teams JS SDK initialization to call to `notifySuccess`. This marker can be used to examine the network or local operation done between `init()` and `notifySuccss`. In the following example, the **Timings** section shows that it took 2.20 seconds from JS SDK initialization to `notifySuccess`, and the app made two calls to get the authorization token and an API call that took 1.5 seconds.
+1. Select the **Performance** tab. You can see a performance marker indicating the time it takes for your app from Teams JavaScript SDK initialization to the `notifySuccess` call. This marker can be used to examine the network or local operations performed between `init()` and `notifySuccess`. In the following example, the **Timings** section shows that the app takes 2.20 seconds from Teams JavaScript SDK initialization to `notifySuccess`, makes two calls to get the authorization token, and makes an API call that takes 1.5 seconds.
 
-1. Lighthouse also provides meaningful insights into the app size and performance metrics.
+:::image type="content" source="../assets/images/tabs/dev-tools-performance.png" alt-text="Screenshot shows the performance tab in dev tools." lightbox="../assets/images/tabs/dev-tools-performance.png":::
+
+1. Select the **Lighthouse** tab. This tab provides meaningful insights into the app size and performance metrics.
 
 1. Analyze page load time for mobile devices in LightHouse.
-  
-    1. Various diagnostics gets shown for the page along with a set of actionable insights. Aim to reduce the latencies flagged in this report.
 
-1. Unused resources in the page size without providing any value. The Coverage tool allows one to see actual size and usage percentage of the resources on page.
+    :::image type="content" source="../assets/images/tabs/dev-tools-lighthouse.png" alt-text="Screenshot shows the lighthouse tab under dev tools." lightbox="../assets/images/tabs/dev-tools-lighthouse.png":::
 
-    1. Enable Code Coverage from Tools:
+    Various diagnostics gets shown for the page along with a set of actionable insights. Aim to reduce the latencies flagged in this report.
+
+1. Unused resources in the page size without providing any value. The **Coverage** tool allows one to see actual size and usage percentage of the resources on page.
+
+    1. Enable Code Coverage from Tools.
+
+    :::image type="content" source="../assets/images/tabs/enable-coverage-tools.png" alt-text="Screenshot shows how to enable coverage tools in dev tools." lightbox="../assets/images/tabs/enable-coverage-tools.png":::
 
     1. Start instrumentation of the code.
+
+    :::image type="content" source="../assets/images/tabs/coverage-tool-report.png" alt-text="Screenshot shows the report generated by the coverage tool." lightbox="../assets/images/tabs/coverage-tool-report.png":::
 
 ## See also
 
