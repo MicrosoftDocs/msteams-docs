@@ -74,7 +74,7 @@ For more information, see [app descriptions](../../../concepts/deploy-and-publis
 
 ## Use RSC permissions to enhance AI agents in Teams
 
-You can use RSC permissions in AI agents to request access to specific resources like mail, calendar, or files . Instead of broad permissions, RSC allows permissions specific to the context of a resource at a granular level, such as a document. You must determine the resources that your AI agent needs access to within Microsoft Teams or Microsoft 365. These permissions can be for:
+You can use RSC permissions in AI agents to request access to specific resources like mail, calendar, or files. Instead of broad permissions, RSC allows permissions specific to the context of a resource at a granular level, such as a document. You must determine the resources that your AI agent needs access to within Microsoft Teams or Microsoft 365. These permissions can be for:
 
 - Reading messages in Teams channels.
 - Accessing user's details or data.
@@ -84,7 +84,7 @@ You can use RSC permissions in AI agents to request access to specific resources
 
 | Use case | How RSC permission in the AI agent can help |
 | --- | --- |
-| **Context**: A team leader needs their team to collaborate on an upcoming project on a Teams channel. <br><br> **Goal**: To ensure only relevant and approved content is included in the channel conversation.  | **Solution**: Use an AI-powered agent to manage conversation content. The agent can use the following permissions: <br> • `ChannelMessage.Read.All` <br> • `ChannelMessage.Delete.All` <br> • `ChannelMessage.Send` <br><br> **Expected outcome**: <br> • Removing irrelevant or sensitive content <br> • Members receive timely updates <br> • Conversation is organized and focused on relevant topics |
+| **Context**: A team leader needs their team to collaborate on an upcoming project on a Teams channel. <br><br> **Goal**: To ensure only relevant and approved content is included in the channel conversation. | **Solution**: Use an AI-powered agent to manage conversation content. The agent can use the following permissions: <br> • `ChannelMessage.Read.All` <br> • `ChannelMessage.Delete.All` <br> • `ChannelMessage.Send` <br><br> **Expected outcome**: <br> • Remove irrelevant or sensitive content <br> • Members receive timely updates <br> • Conversation is organized and focused on relevant topics |
 
 ## Update app manifest
 
@@ -268,7 +268,7 @@ The following code provides an example of the RSC permissions:
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
         // Sends an activity to the sender of the incoming activity.
-         await turnContext.SendActivityAsync(MessageFactory.Text("Using RSC the bot can receive messages across channels or chats in team without being @mentioned."));
+         await turnContext.SendActivityAsync(MessageFactory.Text("Using RSC the bot can receive messages across channels or chats in a team without being @mentioned."));
 }
 
 ```
