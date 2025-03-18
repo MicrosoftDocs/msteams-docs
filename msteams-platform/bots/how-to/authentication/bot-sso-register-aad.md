@@ -78,7 +78,7 @@ To enable SSO for your app in Microsoft Entra ID:
 > [!IMPORTANT]
 > Ensure that when you create your bot resource, select the option to create a new app ID. You can also use an existing app ID, if you've already registered an app in Microsoft Entra admin center.
 
-# Configure messaging endpoint
+## Configure messaging endpoint
 
 Messaging endpoint is where messages are sent to your bot. It enables communication with your bot.
 
