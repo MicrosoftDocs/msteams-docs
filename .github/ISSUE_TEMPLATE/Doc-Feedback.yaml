@@ -17,6 +17,7 @@ body:
     attributes:
       label: Type of issue
       options:
+        - "Select an option"  # Placeholder
         - Typo
         - Code doesn't work
         - Feature doesn't work (bug)
