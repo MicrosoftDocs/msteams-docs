@@ -197,7 +197,7 @@ To understand the bot behavior when the token exchange fails to trigger a consen
 <details>
 <summary>Error: User selects <b>Continue</b> in the consent dialog and nothing happens.</summary>
 
-This error occurs if `*.token.botframework.com` is missing in the `validDomains` property of the app manifest. For more information about OAuth URLs, see [OAuth URL support in Azure AI Bot Service](/azure/bot-service/ref-oauth-redirect-urls?view=azure-bot-service-4.0&preserve-view=true).
+This error occurs if `https://token.botframework.com` is missing in the `validDomains` property of the app manifest. For more information about OAuth URLs, see [OAuth URL support in Azure AI Bot Service](/azure/bot-service/ref-oauth-redirect-urls?view=azure-bot-service-4.0&preserve-view=true).
 
 </details>
 <br>
