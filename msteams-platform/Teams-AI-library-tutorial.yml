@@ -24,6 +24,11 @@ items:
     * How to interact with your LLMs and data.
     * The directory structure of your custom engine agent.
 
+    > [!NOTE]
+    >
+    > * Custom engine agent support for Microsoft 365 Copilot Chat is available only in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
+    > * Custom engine agent isn't supported in Python.
+
 - title: Prerequisites
   durationInMinutes: 1
   content: |
