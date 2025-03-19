@@ -102,18 +102,25 @@ Apps must function cross-tenants in installation and usage. The following table 
 |Regular | Team Microsoft Entra group ID | Team Microsoft Entra group ID |
 |Shared | Empty | Host Team Microsoft Entra group ID |
 
-## Apps in group chats with external users
-
-Teams supports the use of apps in group chats that include external users. External users can't add, update, or remove apps from the group chat. Only the host of the group chat can add, update, or remove apps. However, all members of the chat, including external users, can use these apps. Support for apps doesn't extend to one-on-one chats or channel chats with external users.
+## Apps in federated group chats with external users
 
 > [!NOTE]
-> If you're developing an app for use in group chats that include external users, register your app as a multitenant app in Microsoft Entra ID. This action allows users across multiple organizations to access your app.
+>
+> * Apps in federated group chats with external users aren't available in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](concepts/cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](~/concepts/sovereign-cloud.md) environments.
+> * Apps aren't supported in one-on-one chats, channels, or meetings with external users.
+
+Teams supports the use of apps in federated group chats with external users. External users can't add, update, or remove apps from the federated group chat. Only the host of the group chat can add, update, or remove apps. However, all members of the chat, including external users, can use these apps under the following conditions:
+
+* The tenant admin of the chat host's organization and the tenant admin of the external user's organization must allow the use of the app in federated group chats. For more information, see [Teams apps for external attendees or guests from outside an organization](/microsoftteams/apps-external-users).
+* The app allows access to externals users in federated group chats.
+
+If you're developing an app for use in federated group chats with external users, register your app as a multitenant app in Microsoft Entra ID. This action allows users across multiple organizations to access your app.
 
 ## Code sample
 
 | Sample name | Description | Node.js |
 |-------------|-------------|------|----|
-| Teams Conversation Bot | This sample displays the names of the members in a group chat. It proactively sends a welcome message when a new user is added to the group chat. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-feed-members/nodejs/)|
+| Teams Conversation Bot | This sample app displays the names of the members in a federated group chat with external users and proactively sends a welcome message when a new user is added to the group chat. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-feed-members/nodejs/)|
 
 ## See also
 
