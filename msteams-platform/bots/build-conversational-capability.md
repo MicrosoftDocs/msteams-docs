@@ -61,7 +61,7 @@ The following code shows an example of sending a simple Adaptive Card:
         "items": [
         {
             "size": "large",
-            "text": " Simple Adaptivecard Example with a Textbox",
+            "text": "Simple Adaptive Card example with a Textbox",
             "type": "TextBlock",
             "weight": "bolder",
             "wrap": true
@@ -239,8 +239,8 @@ To receive read receipts events for your bot, ensure the following:
 
 - Add the [RSC](~/graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-a-chat-or-meeting) `ChatMessageReadReceipt.Read.Chat` permission in the [app manifest](~/resources/schema/manifest-schema.md), as follows:
 
-    # [App manifest v1.12 or later](#tab/app-manifest-v112-or-later)
-    
+  # [App manifest v1.12 or later](#tab/app-manifest-v112-or-later)
+
     ```json
         
     "webApplicationInfo": {
@@ -259,11 +259,11 @@ To receive read receipts events for your bot, ensure the following:
             ]
          }
      }
-        
+            
     ```
-    
-    # [App manifest v1.11 or earlier](#tab/app-manifest-v111-or-earlier)
-    
+
+  # [App manifest v1.11 or earlier](#tab/app-manifest-v111-or-earlier)
+
     ```json
         
      “webApplicationInfo”: {
@@ -274,11 +274,11 @@ To receive read receipts events for your bot, ensure the following:
          "ChatMessageReadReceipt.Read.Chat"
          ]
      }
-        
+            
     ```
-    
+
     ---
-    
+
     You can also add RSC permissions through Graph API. For more information, see [`consentedPermissionSet`](/graph/api/userteamwork-teamsappinstallation-upgrade#http-request).
 
 - Override the method `OnTeamsReadReceiptAsync` with `IsMessageRead` handler.
@@ -1154,7 +1154,7 @@ If the tenant or conversation ID isn't present in the activity or wasn't validat
 
 ### Receive only at-mentioned messages
 
-To enable you bots to get only those channel or chat messages where your bot is @mentioned, you must filter the messages. Use the following code snippet to enable your bot to receive only those message where it's @mentioned:
+To enable your bots to get only those channel or chat messages where your bot is @mentioned, you must filter the messages. Use the following code snippet to enable your bot to receive only those messages where it's @mentioned:
 
 ```csharp
     // When ChannelMessage.Read.Group or ChatMessage.Read.Chat RSC is in the app manifest, this method is called even when bot is not @mentioned.

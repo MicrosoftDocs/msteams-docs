@@ -4,7 +4,7 @@ description: Learn how to specify your Teams app's default install options, defa
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.date: 12/11/2024
+ms.date: 03/05/2025
 ---
 # Configure default options for Teams app
 
@@ -86,6 +86,7 @@ If an app is configured with personal and shared scopes along with a default ins
     >
     > * The **Recommended** button indicates the scope in which the app provides best usage experience.
     > * The **View more** option lists the respective channel, chat, or meeting options available for the user.
+    > * When adding an app to a meeting, upcoming scheduled meetings might not appear. To add an app to an upcoming meeting, see [tabs in Teams meetings](../../apps-in-teams-meetings/build-tabs-for-meeting.md#tabs-in-teams-meetings).
 
 </details>
 </br>

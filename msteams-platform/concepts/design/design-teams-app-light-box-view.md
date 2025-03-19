@@ -1,6 +1,6 @@
 ---
 title: Design App with Lightbox UI Components
-author: v-npaladugu
+author: surbhigupta
 description: Learn how to use lightbox UI component from Teams UI kit to build Microsoft Teams apps such as anatomy, sizing of the components, and its best practices.
 ms.localizationpriority: medium
 ms.topic: reference
@@ -34,7 +34,7 @@ The lightbox view includes a header, center stage, and carousel.
 
 |Counter|Description|
 |----------|-----------|
-|1|**Back**: Button to navigate to the previoius screen|
+|1|**Back**: Button to navigate to the previous screen|
 |2|**Open in**: Button (basic or split) to navigate to the external window|
 |3|Buttons with content actions: Zoom in or out, Share, Download, or open chat panel|
 |4|Chevrons for slide show|

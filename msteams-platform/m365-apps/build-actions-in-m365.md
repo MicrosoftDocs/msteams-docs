@@ -86,7 +86,7 @@ app.getContext().then((context) => {
     if (actionInfo) {
         if (actionInfo.actionObject.type == app.ActionObjectType.M365Content) {
             const itemId = actionInfo.actionObjects[0].itemId;
-            // Get the requested content from Mirosoft Graph by item id:
+            // Get the requested content from Microsoft Graph by item id:
         } 
     }
 })

@@ -5,6 +5,8 @@ description: Learn to create and send dialogs (task modules). Handle the initial
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
+ms.owner: ginobuzz
+ms.date: 03/11/2025
 ---
 # Create and send dialogs
 

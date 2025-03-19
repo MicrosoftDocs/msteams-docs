@@ -1,11 +1,11 @@
 ---
 title: Build API-based Message Extension
-author: v-ypalikila
+author: surbhigupta
 description: Learn how to create or build an API-based message extension using Developer Portal for Teams, Teams Toolkit for Visual Studio, Visual Studio Code, and CLI.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
-ms.date: 12/30/2024
+ms.date: 02/26/2025
 ---
 # Create an API-based message extension
 
@@ -220,10 +220,6 @@ For more information, see [composeExtensions](../resources/schema/manifest-schem
 
 <details><summary id="response-template">3. Response rendering template</summary>
 
-> [!NOTE]
->
-> Teams supports Adaptive Cards up to version 1.5 and the Adaptive Cards Designer supports up to version 1.6.
-
 * **Define the schema reference URL** in the `$schema` property to establish the structure of your template.
 * **The supported values for `responseLayout`** are `list` and `grid`, which determine how the response is visually presented.
 * **A `jsonPath` is recommended** for arrays or when the data for the Adaptive Card isn't the root object. For example, if your data is nested under `productDetails`, your JSON path would be `productDetails`.
@@ -362,8 +358,7 @@ Let's say you have the below JSON for a list of products and you want to create 
 
 As you can see, the array of results is under "products", which is nested under "warehouse", so the JSON path would be "warehouse.products".
 
-Use <https://adaptivecards.io/designer/> to preview the adaptive card by inserting the template into Card Payload Editor, and take a sample response entry from your array or for your object and insert it into the Same Data editor on the right. Make sure that the card renders properly and is to your liking.
-Note that Teams supports cards up to version 1.5 while the designer supports 1.6.
+Use [Adaptive Card Designer](https://adaptivecards.microsoft.com/designer.html) to preview an Adaptive Card by inserting the template into Card Payload Editor. Take a sample response entry from your array or for your object and insert it into Sample Data Editor. Ensure that the card renders properly and is to your liking.
 
 #### Schema mapping
 
@@ -722,7 +717,7 @@ To build an API-based message extension using Teams Toolkit for Visual Studio Co
     ---
 
      > [!NOTE]
-     > Teams toolkit source file includes a security check to ensure that an incoming request is authorized. It uses a function `isApiKeyValid(req)` to verify if the request contains a valid API key. If the API key isn't valid, the code returns an 401 HTTP status code, indicating an Unauthorized response.
+     > Teams toolkit source file includes a security check to ensure that an incoming request is authorized. It uses a function `isApiKeyValid(req)` to verify if the request contains a valid API key. If the API key isn't valid, the code returns a 401 HTTP status code, indicating an unauthorized response.
 
 1. From the left pane, select **Teams Toolkit**.
 1. Under **ACCOUNTS**, sign in with your [Microsoft 365 account](/microsoftteams/platform/toolkit/accounts) and Azure account if you haven't already.
@@ -1155,7 +1150,7 @@ To build an API-based message extension with multiple parameters using Teams Too
 
     :::image type="content" source="../assets/images/messaging-extension/me-multi-parameter.png" alt-text="Screenshot shows you the multi-parameter result in the message compose area." lightbox="../assets/images/messaging-extension/me-multi-output.png":::
 
-Now you've succesfully created multi paramter in message extension.
+Now you've successfully created a message extension with multiple parameters.
 
 ---
 

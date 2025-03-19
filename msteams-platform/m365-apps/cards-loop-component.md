@@ -32,7 +32,7 @@ To build an Adaptive Card-based Loop component, follow these steps:
    1. Add the Microsoft 365 channel for your bot.
    1. Update the Microsoft Entra app registration for single sign-on (SSO).
 
-1. Add the URL that uniquely identifies the card in the [metadata.webUrl](https://adaptivecards.io/explorer/Metadata.html) property. The `metadata.webUrl` property supports portability through the **Copy component** button :::image type="icon" source="../assets/icons/copy-component-button.png" border="false"::: present in the Loop component header.
+1. Add the URL that uniquely identifies the card in the [metadata.webUrl](https://adaptivecards.microsoft.com/?topic=CardMetadata) property. The `metadata.webUrl` property supports portability through the **Copy component** button :::image type="icon" source="../assets/icons/copy-component-button.png" border="false"::: present in the Loop component header.
 
 1. [Add your message extension to Teams](extend-m365-teams-message-extension.md#upload-your-custom-app-in-teams) and [preview your message extension in Outlook](extend-m365-teams-message-extension.md#preview-your-message-extension-in-outlook). Alternatively, you can also debug your app in [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md) using the **Preview in Teams** button on the **Overview** page.
 
@@ -90,4 +90,4 @@ The following JSON payload is an example of an Adaptive Card-based Loop componen
 
 * [Build message extensions](../messaging-extensions/what-are-messaging-extensions.md)
 * [Design your Loop component](design-loop-components.md)
-* [Adaptive Cards Schema Explorer](https://adaptivecards.io/explorer/)
+* [Adaptive Cards Schema Explorer](https://adaptivecards.microsoft.com/?topic=AdaptiveCard)
