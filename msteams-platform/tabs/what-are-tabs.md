@@ -9,23 +9,6 @@ ms.date: 02/06/2025
 
 # Build tabs for Teams
 
-| - Introduce tab apps in Team
-
-  | - Key features/benefits and scopes
-  | - Usage of tab apps
-  | - Examples/scenarios of tab apps
-
-| - How APIs and SDKs work together
-
-  | - Introduce the SDKs
-  | - Add example
-
-| - Types of tab apps
-
-| - Examples of tab apps
-
-----
-
 The Teams tab app capability enables developers to embed web content directly within Microsoft Teams providing a rich and interactive users experience. Tabs are client-aware webpages that can be embedded in Microsoft Teams, Outlook, and Microsoft 365. They are simple HTML elements that point to external domains declared in the app manifest. You can integrate tabs into various areas within Teams, such as channels, group chats, or personal apps. With tabs, organizations can seamlessly display their custom web-based applications or content within the Teams environment to enhance productivity and collaboration.
 
 Tabs are great to improve existing workflows by embedding tools, services, or dashboards, so users don't have to leave Teams to access external content. Here’s a breakdown of how the various applications of Microsoft Teams tab apps can be used:
@@ -107,7 +90,7 @@ The following table helps you determine the best fit for your app:
 |[Static tabs](~/tabs/how-to/create-personal-tab.md)|✔️|✔️|✔️|✔️| ✔️ |
 |[Configurable tabs](~/tabs/how-to/create-channel-group-tab.md)|❌|✔️|✔️|✔️| ❌ |
 
-## Enhance Your Teams Tab with These Tools
+## Enhance your Teams tab with these tools
 
 To make your Teams tab even better, Microsoft offers some handy development tools:
 
@@ -169,7 +152,7 @@ To make your Teams tab even better, Microsoft offers some handy development tool
 
 Teams tab app solution: You create a channel or group tab to enable management of team leaves, streamline approval process, and maintain communication in real time.
 
-### How These APIs and SDKs Work Together
+### How these APIs and SDKs work together
 
 To build a comprehensive Teams tab app, you will likely combine all three tools:
 
