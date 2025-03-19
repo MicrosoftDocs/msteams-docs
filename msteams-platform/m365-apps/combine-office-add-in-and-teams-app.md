@@ -11,6 +11,9 @@ ms.subservice: m365apps
 
 # Add an Outlook Add-in to a Teams app
 
+> [!TIP]
+> This article helps you understand how to create a combined Teams app and Office add-in by having you begin with a newly created Teams app and Outlook add-in. For an overview of the general process of merging Teams apps and Office add-ins, including existing Teams apps and add-ins that are already in use, see [General guidance for combining an Outlook add-in and a Teams app](overview-combining-add-in-and-teams-app.md).
+
 ## Introduction
 
 [Outlook Add-ins](/office/dev/add-ins/outlook/outlook-add-ins-overview) are web apps that extend the functionality of Outlook. With an Outlook Add-in, you can:
@@ -151,6 +154,9 @@ To separate the source code for the tab or bot, perform the following steps:
     1. Select **Add**.
     1. To stop debugging and uninstall the app, select **Run** > **Stop Debugging** in Visual Studio Code.
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Prepare%20the%20Teams%20app%20project&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fcombine-office-add-in-and-teams-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fcombine-office-add-in-and-teams-app.md&documentVersionIndependentId=1aa92d67-f5f9-6ec5-87b2-8492cecd202e&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
+
 ### Create an Outlook Add-in project
 
 1. Open a second instance of Visual Studio Code.
@@ -182,6 +188,9 @@ To separate the source code for the tab or bot, perform the following steps:
     1. Select the **Show Taskpane** button. A task pane opens. 
     1. Select the **Perform an action** button. A small notification appears near the top of the message.
     1. To stop debugging and to uninstall the add-in, select **Run** > **Stop Debugging** in Visual Studio Code. If the Webpack dev-server window doesn't close, open the Visual Studio Code **TERMINAL** in the root of the project and run `npm stop`.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20an%20Outlook%20Add-in%20project&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fcombine-office-add-in-and-teams-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fcombine-office-add-in-and-teams-app.md&documentVersionIndependentId=1aa92d67-f5f9-6ec5-87b2-8492cecd202e&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ### Merge the manifest
 
@@ -476,6 +485,9 @@ Unless specified otherwise, the file you change is `\appPackage\manifest.json`.
       1. Select the **Perform an action** button. A small notification appears near the top of the message.
       1. To stop debugging and to uninstall the add-in, select **Run** > **Stop Debugging** in Visual Studio Code. If the Webpack dev-server window doesn't close, open the Visual Studio Code **TERMINAL** in the root of the project and run `npm stop`.
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Edit%20the%20tooling%20configuration%20files&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fcombine-office-add-in-and-teams-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fcombine-office-add-in-and-teams-app.md&documentVersionIndependentId=1aa92d67-f5f9-6ec5-87b2-8492cecd202e&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ### Run the app and add-in locally at the same time
 
 You can sideload and run the app and the add-in simultaneously, but the debugger can't reliably attach when both are running. So to debug, run only one at a time. 
@@ -508,6 +520,9 @@ To see both the app and the add-in running at the same time, take the following 
 1. Select the **Perform an action** button. A small notification appears near the top of the message.
 1. To stop debugging and to uninstall the add-in, select **Run** > **Stop Debugging** in Visual Studio Code. If the Webpack dev-server window doesn't close, open the Visual Studio Code **TERMINAL** in the root of the project and run `npm stop`.
 1. If you had to manually sideload the Teams tab app, remove it from Teams as instructed in [Remove your app](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload#remove-your-app). 
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Run%20the%20app%20and%20add-in%20locally%20at%20the%20same%20time&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fcombine-office-add-in-and-teams-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fcombine-office-add-in-and-teams-app.md&documentVersionIndependentId=1aa92d67-f5f9-6ec5-87b2-8492cecd202e&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ### Move the application to Azure
 
@@ -635,6 +650,9 @@ To see both the app and the add-in running at the same time, take the following 
     It can take several minutes. You might be prompted to select one of your Azure resource groups.
 1. When provisioning completes, select **Deploy** to deploy your app code to Azure.
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Move%20the%20application%20to%20Azure&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fcombine-office-add-in-and-teams-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fcombine-office-add-in-and-teams-app.md&documentVersionIndependentId=1aa92d67-f5f9-6ec5-87b2-8492cecd202e&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ### Run the tab capability from the remote deployment
 
 1. In Visual Studio Code, select **View** > **Run**. 
@@ -658,6 +676,9 @@ To see both the app and the add-in running at the same time, take the following 
 1. Select the **Show Taskpane** button. A task pane opens. 
 1. Select the **Perform an action** button. A small notification appears near the top of the message.
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Run%20the%20add-in%20capability%20from%20the%20remote%20deployment&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fcombine-office-add-in-and-teams-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fcombine-office-add-in-and-teams-app.md&documentVersionIndependentId=1aa92d67-f5f9-6ec5-87b2-8492cecd202e&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ## What’s next
 
 There are other commonly suggested next steps, for example:
@@ -669,5 +690,5 @@ There are other commonly suggested next steps, for example:
 ## See also
 
 - [Outlook Add-ins Overview](/office/dev/add-ins/outlook/outlook-add-ins-overview)
-- [Office Add-ins with the unified app manifest for Microsoft 365 (preview)](/office/dev/add-ins/develop/unified-manifest-overview)
-- [Build an Outlook add-in with the unified manifest for Microsoft 365 (preview)](/office/dev/add-ins/quickstarts/outlook-quickstart-json-manifest)
+- [Office Add-ins with the unified app manifest for Microsoft 365](/office/dev/add-ins/develop/unified-manifest-overview)
+- [Build an Outlook add-in with the unified manifest for Microsoft 365](/office/dev/add-ins/quickstarts/outlook-quickstart-json-manifest)

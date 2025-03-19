@@ -1,5 +1,5 @@
 ### YamlMime:Tutorial
-title: Build a custom engine agent to chat with your data using Teams AI library and Teams Toolkit
+title: Build a custom engine agent
 metadata:
   title: Tutorial - Build Custom Engine Agent
   description: Learn how to create a custom engine agent using Teams AI library and Teams Toolkit, set up data in Azure OpenAI, and configure custom engine agent.
@@ -36,14 +36,14 @@ items:
    | &nbsp; | [Node.js and NPM](https://nodejs.org/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
    | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
-   | &nbsp; | [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
+   | &nbsp; | [Azure OpenAI](https://oai.azure.com/portal)| OpenAI's GPT. Ensure that you first create your OpenAI API key. To host your app or access resources in Azure, you must create an Azure OpenAI service. |
 
 - title: Set up your data on Azure OpenAI
   durationInMinutes: 1
   content: | 
      1. Go to [**Azure portal**](https://ms.portal.azure.com/).
 
-     1. Select the Azure OpenAI service that you created in the prerequisite.
+     1. Select the Azure OpenAI service that you created.
 
      1. Select **Go to Azure OpenAI Studio**.
         
@@ -89,8 +89,11 @@ items:
      
      1. Select **Save and close**.
 
-     After the data ingestion process is complete, you can start creating your custom engine agent using the Teams AI library and Teams Toolkit.
+     After the data ingestion process is complete, you can start creating your custom engine agent using Teams AI library and Teams Toolkit.
  
+     > [!div class="nextstepaction"]
+     > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Set%20up%20your%20data%20on%20Azure%20OpenAI&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fteams-ai-library-tutorial%3Ftutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2FTeams-AI-library-tutorial.yml&documentVersionIndependentId=fe0b5835-9bcb-a24b-8bad-78793026a79e&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams%2A%2A)
+
 
 - title: Create your custom engine agent
   durationInMinutes: 1
@@ -134,6 +137,9 @@ items:
      
      1. Select **Enter**. Custom engine agent is created in a few seconds.
 
+     > [!div class="nextstepaction"]
+     > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20your%20custom%20engine%20agent&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fteams-ai-library-tutorial%3Ftutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2FTeams-AI-library-tutorial.yml&documentVersionIndependentId=fe0b5835-9bcb-a24b-8bad-78793026a79e&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams%2A%2A)
+     
      ## Take a tour of the source code
 
      Have a look at what's inside this custom engine agent > Basic AI Chatbot template.
@@ -169,7 +175,7 @@ items:
         ```
         :::image type="content" source="../msteams-platform/assets/images/bots/prompts-chat.png" alt-text="Screenshot shows skprompt in explorer in Visual Studio Code.":::
 
-     1. Go to the `config.json` file under `prompts/chat`. Add the following code inside the `completion` brackets and replace the `endpoint`, `index_name` and `key` values with your Azure AI Search resource details:
+     1. Go to the `config.json` file under `prompts/chat`. Add the following code inside the `completion` brackets and replace the `endpoint`, `index_name`, and `key` values with your Azure AI Search resource details:
 
         ```json
            "data_sources": [
@@ -202,6 +208,9 @@ items:
         :::image type="content" source="../msteams-platform/assets/images/bots/debug-in-test-tool.png" alt-text="Screenshot shows the debug in test tool.":::
 
      1. Custom engine agent runs within the Teams App Test Tool, which opens in your browser.
+
+     > [!div class="nextstepaction"]
+     > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Configure%20your%20custom%20engine%20agent&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fteams-ai-library-tutorial%3Ftutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2FTeams-AI-library-tutorial.yml&documentVersionIndependentId=fe0b5835-9bcb-a24b-8bad-78793026a79e&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams%2A%2A)
 
 - title: Complete challenge
   durationInMinutes: 1

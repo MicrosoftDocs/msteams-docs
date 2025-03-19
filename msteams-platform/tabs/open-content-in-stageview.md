@@ -1,6 +1,6 @@
 ---
 title: Multi-window Experience for App Content
-author: Rajeshwari-v
+author: surbhigupta
 description: Learn the types of Stageview, full screen UI component invoked to surface your app content. Open content in multi-window using deep links, Adaptive Cards or TeamsJS.
 ms.topic: conceptual
 ms.author: surbhigupta
@@ -131,7 +131,7 @@ The following JSON code is an example to create an action button in an Adaptive 
 * The `invoke` workflow must be similar to the `appLinking` workflow.
 * The `Action.Submit` must be configured as `Open` to maintain consistency.
 
-If your app isn't optimized to work in Teams mobile client, Stageview for apps distributed through the [Microsoft Teams Store](../concepts/deploy-and-publish/apps-publish-overview.md) opens in a default web browser.
+If your app isn't optimized to work in Teams mobile client, Stageview for apps published through the [Microsoft Teams Store](../concepts/deploy-and-publish/apps-publish-overview.md) opens in a default web browser.
 
 ### Invoke from stageView API
 

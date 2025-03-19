@@ -76,6 +76,9 @@ To create a basic Teams app:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/tab-app-created.png" alt-text="Screenshot shows the app created." lightbox="../assets/images/teams-toolkit-v2/first-tab/tab-app-created.png":::
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20a%20new%20Teams%20app&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fcreate-new-project&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fcreate-new-project.md&documentVersionIndependentId=13410ab8-6255-e478-9a1d-4b3b348f1d16&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
+
 ### Directory structure for different app types
 
 Teams Toolkit provides all components for building an app. After creating the project, you can view the project folders and files under **EXPLORER** section.
@@ -93,7 +96,7 @@ The following example shows a basic Teams tab app directory structure:
 | `env` | Stores different environment parameters. |
 | `infra` | Azure `bicep` template files. Used for deploy your Teams app to Azure. |
 | `src` | Source code for the Tab capability, including your front-end app, UI components and the privacy notice, terms of use, |
-| `src/app.js` | Application entry point and `restify` handlers for website. |
+| `src/app.js` | Application entry point and `express` handlers for website. |
 | `src/views/hello.html`| An HTML template that is bind to the tab endpoint. |
 | `src/static` | The web server can serve static assets such as CSS and JavaScript files. |
 | `teamsapp.yml` | This configuration file defines the Teams Toolkit behavior for provision, deploy, and publish lifecycle. You can customize this file to change the behavior of Teams Toolkit in each lifecycle. |

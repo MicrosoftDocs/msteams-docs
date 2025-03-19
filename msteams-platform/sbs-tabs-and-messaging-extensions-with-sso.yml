@@ -5,7 +5,7 @@ metadata:
   description: In this module, learn how to set up Microsoft Entra single sign-on (SSO) authentication for tabs and message extensions.
   audience: Developer
   level: Beginner
-  ms.date: 12/07/2021
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: tabs/how-to/authentication/tab-sso-overview.md
   nextTutorialTitle: Read more on SSO authentication for tabs.
@@ -38,16 +38,19 @@ items:
      | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
      | &nbsp; | [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the latest version, install the portable version. |
      | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com) | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
-     | &nbsp; | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/download) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
+     | &nbsp; | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/downloads) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
 
       > [!NOTE]
-      > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
+      > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/downloads).
     
 - title: Set up local environment
   durationInMinutes: 1
   content: |
 
    [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
+
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Set+up+local+environment&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-tabs-and-messaging-extensions-with-sso%3Ftabs%3Ddev%252Cvs2019%26tutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-tabs-and-messaging-extensions-with-sso.yml&documentVersionIndependentId=7a0eb8f0-586e-b698-b21b-10cfb522de93&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 - title: Register Microsoft Entra app 
   durationInMinutes: 5
@@ -62,21 +65,36 @@ items:
 
     [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
 
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+App+registration&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-tabs-and-messaging-extensions-with-sso%3Ftabs%3Ddev%252Cvs2019%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-tabs-and-messaging-extensions-with-sso.yml&documentVersionIndependentId=7a0eb8f0-586e-b698-b21b-10cfb522de93&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
     **Create a tunnel**
 
       # [dev tunnel](#tab/dev)
 
       [!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
+      
+      > [!div class="nextstepaction"]
+      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+tunnel+using+dev+tunnel&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-tabs-and-messaging-extensions-with-sso%3Ftabs%3Ddev%252Cvs2019%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-tabs-and-messaging-extensions-with-sso.yml&documentVersionIndependentId=7a0eb8f0-586e-b698-b21b-10cfb522de93&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
       # [ngrok](#tab/ngrok)
       
       [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
 
+      > [!div class="nextstepaction"]
+      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+tunnel+using+ngrok&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-tabs-and-messaging-extensions-with-sso%3Ftabs%3Dngrok%252Cvs2019%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-tabs-and-messaging-extensions-with-sso.yml&documentVersionIndependentId=7a0eb8f0-586e-b698-b21b-10cfb522de93&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
       ---     
 
     [!INCLUDE [Azure web authentication](includes/get-started/azure-web-authentication.md)]
+
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+a+web+authentication&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-tabs-and-messaging-extensions-with-sso%3Ftabs%3Ddev%252Cvs2019%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-tabs-and-messaging-extensions-with-sso.yml&documentVersionIndependentId=7a0eb8f0-586e-b698-b21b-10cfb522de93&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
     
     [!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
+
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+client+secret&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-tabs-and-messaging-extensions-with-sso%3Ftabs%3Ddev%252Cvs2019%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-tabs-and-messaging-extensions-with-sso.yml&documentVersionIndependentId=7a0eb8f0-586e-b698-b21b-10cfb522de93&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
     **Add API permissions**
 
@@ -100,27 +118,53 @@ items:
       >
       > * If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
       > * Users need to consent to the API permissions only if the Microsoft Entra app is registered in a different tenant.
-
+   
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+API+permissions&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-tabs-and-messaging-extensions-with-sso%3Ftabs%3Ddev%252Cvs2019%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-tabs-and-messaging-extensions-with-sso.yml&documentVersionIndependentId=7a0eb8f0-586e-b698-b21b-10cfb522de93&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
     [!INCLUDE [Application ID URI](includes/get-started/application-id-uri.md)]
 
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+Application+ID+URI&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-tabs-and-messaging-extensions-with-sso%3Ftabs%3Ddev%252Cvs2019%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-tabs-and-messaging-extensions-with-sso.yml&documentVersionIndependentId=7a0eb8f0-586e-b698-b21b-10cfb522de93&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
     [!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
+
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+a+scope&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-tabs-and-messaging-extensions-with-sso%3Ftabs%3Ddev%252Cvs2019%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-tabs-and-messaging-extensions-with-sso.yml&documentVersionIndependentId=7a0eb8f0-586e-b698-b21b-10cfb522de93&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
     [!INCLUDE [Azure client application](includes/get-started/azure-client-application.md)]
 
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+client+application&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-tabs-and-messaging-extensions-with-sso%3Ftabs%3Ddev%252Cvs2019%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-tabs-and-messaging-extensions-with-sso.yml&documentVersionIndependentId=7a0eb8f0-586e-b698-b21b-10cfb522de93&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
     [!INCLUDE [Manifest](includes/get-started/azure-manifest.md)]
+
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Update+the+manifest&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-tabs-and-messaging-extensions-with-sso%3Ftabs%3Ddev%252Cvs2019%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-tabs-and-messaging-extensions-with-sso.yml&documentVersionIndependentId=7a0eb8f0-586e-b698-b21b-10cfb522de93&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 - title: Create your bot 
   durationInMinutes: 5
   content: |
 
-    [!INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource.md)]    
+    [!INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource.md)]  
+
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+an+Azure+bot+resource&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-tabs-and-messaging-extensions-with-sso%3Ftabs%3Ddev%252Cvs2019%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-tabs-and-messaging-extensions-with-sso.yml&documentVersionIndependentId=7a0eb8f0-586e-b698-b21b-10cfb522de93&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)  
 
     [!INCLUDE [Teams channel](includes/get-started/add-teams-channel.md)]
 
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+a+Teams+channel&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-tabs-and-messaging-extensions-with-sso%3Ftabs%3Ddev%252Cvs2019%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-tabs-and-messaging-extensions-with-sso.yml&documentVersionIndependentId=7a0eb8f0-586e-b698-b21b-10cfb522de93&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
     [!INCLUDE [Messaging endpoint](includes/get-started/messaging-endpoint.md)]
 
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+add+a+messaging+endpoint&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-tabs-and-messaging-extensions-with-sso%3Ftabs%3Ddev%252Cvs2019%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-tabs-and-messaging-extensions-with-sso.yml&documentVersionIndependentId=7a0eb8f0-586e-b698-b21b-10cfb522de93&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
     [!INCLUDE [Service connection](includes/get-started/oauth-connection-settings.md)]
+
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+an+OAuth+connection+settings&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-tabs-and-messaging-extensions-with-sso%3Ftabs%3Ddev%252Cvs2019%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-tabs-and-messaging-extensions-with-sso.yml&documentVersionIndependentId=7a0eb8f0-586e-b698-b21b-10cfb522de93&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 - title: Set up app settings
   durationInMinutes: 1
@@ -187,6 +231,9 @@ items:
           A webpage appears with a message **Your bot is ready!**
 
           :::image type="content" source="./assets/images/Tab-ME-SSO/bot-completion-explorer.png" alt-text="Screenshot of the webpage that displays Your bot is ready.":::
+      
+       > [!div class="nextstepaction"]
+       > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Build+and+run+service+using+Visual+Studio&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-tabs-and-messaging-extensions-with-sso%3Ftabs%3Ddev%252Cvs2019%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-tabs-and-messaging-extensions-with-sso.yml&documentVersionIndependentId=7a0eb8f0-586e-b698-b21b-10cfb522de93&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
         
     # [Command line](#tab/cli)
@@ -198,6 +245,9 @@ items:
     ```
    
     ![Dotnet](~/assets/images/Tab-ME-SSO/dotnet-run1.png)
+
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Build+and+run+service+using+Command+line&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-tabs-and-messaging-extensions-with-sso%3Ftabs%3Ddev%252Ccli2019%26tutorial-step%3D7&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-tabs-and-messaging-extensions-with-sso.yml&documentVersionIndependentId=7a0eb8f0-586e-b698-b21b-10cfb522de93&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
       
 - title: Upload SSO App to Teams
   durationInMinutes: 1
@@ -230,9 +280,12 @@ items:
 
     1. Select **Add**.
 
-       :::image type="content" source="./assets/images/Tab-ME-SSO/add-sso-app-1.png" alt-text="Screenshot of Conversation Bot with Add option highlighted in red.":::
+       :::image type="content" source="./assets/images/Tab-ME-SSO/add-sso-app-1.png" alt-text="Screenshot of app details dialog to add tab SSO app.":::
     
-    1. Send a message to the bot. 
+    1. Select **Open** and send a message to the bot.
+
+       :::image type="content" source="./assets/images/Tab-ME-SSO/open-sso-app.png" alt-text="Screenshot of scope selection dialog with Open option highlighted."::: 
+    
     1. The bot performs SSO and displays profile card along with option prompt to view token.
 
        :::image type="content" source="./assets/images/Tab-ME-SSO/Congratulation-image-1.png" alt-text="Screenshot of the profile card received in Teams.":::
@@ -271,6 +324,9 @@ items:
       1. Send `https://profile.botframework.com` to the application to get a profile card.
        
           :::image type="content" source="./assets/images/Tab-ME-SSO/profile-card-1.png" alt-text= "Screenshot of the selected profile after entering the URL.":::
+
+      > [!div class="nextstepaction"]
+      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Upload+SSO+app+to+Teams&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-tabs-and-messaging-extensions-with-sso%3Ftabs%3Ddev%252Cvs2019%26tutorial-step%3D8&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-tabs-and-messaging-extensions-with-sso.yml&documentVersionIndependentId=7a0eb8f0-586e-b698-b21b-10cfb522de93&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 - title: Complete challenge
   durationInMinutes: 1

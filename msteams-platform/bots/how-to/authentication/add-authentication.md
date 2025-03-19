@@ -4,6 +4,7 @@ author: surbhigupta
 description: Learn how to enable authentication using third-party provider to a bot app in Teams using Entra ID. Learn to create and register bot resource group and service plan.
 ms.topic: how-to
 ms.localizationpriority: high
+ms.date: 12/11/2024
 ---
 
 # Add authentication to your Teams bot
@@ -14,12 +15,12 @@ OAuth 2.0 is an open standard for authentication and authorization used by Micro
 
 See [OAuth 2 Simplified](https://aka.ms/oauth2-simplified) for a basic understanding, and [OAuth 2.0](https://oauth.net/2/) for the complete specification.
 
-For more information about how the Azure Bot Service handles authentication, see [User authentication within a conversation](/azure/bot-service/bot-builder-concept-authentication?view=azure-bot-service-4.0&preserve-view=true).
+For more information about how the Azure Bot Service handles authentication, see [user authentication within a conversation](/azure/bot-service/bot-builder-concept-authentication?view=azure-bot-service-4.0&preserve-view=true).
 
 In this article you'll learn:
 
 - **How to create an authentication-enabled bot**. Use [cs-auth-sample][teams-auth-bot-cs] to handle user sign-in credentials and the generating the authentication token.
-- **How to deploy the bot to Azure and associate it with an identity provider**. The provider issues a token based on user sign-in credentials. The bot can use the token to access resources, such as a mail service, which require authentication. For more information, see  [Microsoft Teams authentication flow for bots](auth-flow-bot.md).
+- **How to deploy the bot to Azure and associate it with an identity provider**. The provider issues a token based on user sign-in credentials. The bot can use the token to access resources, such as a mail service, which require authentication. For more information, see [Microsoft Teams authentication flow for bots](auth-flow-bot.md).
 - **How to integrate the bot within Microsoft Teams**. Once the bot is integrated, you can sign in and exchange messages with it in a chat.
 
 ## Prerequisites
@@ -435,13 +436,17 @@ and when for these, and just reference that from here, along with the set of ste
 1. In the left panel, at the bottom, select the **Apps icon**.
 1. In the right panel, at the bottom, select **Upload a custom app**.
 1. Go to the `TeamsAppManifest` folder and upload the zipped manifest.
-The following window appears:
+1. Select **Add** to install the app to Teams.
 
-   :::image type="content" source="../../../assets/images/authentication/auth-bot-teams-upload.png" alt-text="Screenshot shows an example of the bot after it's uploaded into Teams.":::
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-add.png" alt-text="Screenshot of TeamsBotAuth app installation with the Add option highlighted.":::
 
-1. Select the **Add to a team** button.
-1. In the next window, select the team where you want to use the bot.
-1. Select the **Set up a bot** button.
+1. Search and select the required scope or select a channel or chat from the list, and move through the dialog to select **Go**.
+
+   :::image type="content" source="../../../assets/images/authentication/auth-bot-add-scope.png" alt-text="Screenshot of TeamsBotAuth app scope selection dialog to select the required scope.":::
+
+   > [!NOTE]
+   > OAuth isn't supported in the group chat or channel scopes directly. If you enable authentication and users install your bot in group chats or channels, they must authenticate in their personal scopes before they can use the bot in the group chat or channel.
+
 1. Select the three dots (&#x25cf;&#x25cf;&#x25cf;) in the left panel. Then select the **Developer Portal** icon.
 1. Select the **Manifest editor** tab. You should see the icon for the bot you uploaded.
 1. Also, you should be able to see the bot listed as a contact in the chat list
@@ -509,6 +514,7 @@ This manifest contains information needed by Teams to connect with the bot:
     {
       "botId": "",
       "scopes": [
+        "personal",
         "groupchat",
         "team"
       ],

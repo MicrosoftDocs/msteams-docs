@@ -4,14 +4,15 @@ author: surbhigupta12
 description: Enable bots to receive all conversation messages without being @mentioned using RSC permissions. Read on webApplicationInfo or authorization section in manifest.
 ms.topic: conceptual
 ms.localizationpriority: medium
+ms.date: 01/23/2025
 ---
 
-# Receive all conversation messages
+# Receive conversation messages with RSC
 
 The resource-specific consent (RSC) permissions model, originally developed for Microsoft Teams Graph APIs, is being extended to bot scenarios. With RSC, conversation owners can consent for a bot to receive all user messages in standard channels and chats without being @mentioned. This can be enabled by specifying the `ChannelMessage.Read.Group` or `ChatMessage.Read.Chat` permission strings in your app manifest (previously called Teams app manifest). Conversation owners can grant consent during the app installation or upgrade process after the app updates are published. For more information about enabling RSC for your app and inside of a tenant, see [resource-specific consent](../../../graph-api/rsc/resource-specific-consent.md).
 
 > [!NOTE]
-> Bots that receive all conversation messages with RSC are supported in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
+> Bots that receive all conversation messages with RSC are supported in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](../../../concepts/cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](../../../concepts/sovereign-cloud.md) environments.
 
 ## Enable bots to receive all channel or chat messages
 
@@ -44,7 +45,7 @@ Services that need access to all Teams message data must use the Graph APIs that
 
 * The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permission may not be used by bots to extract large amounts of customer data.
 * The ability for bots to receive all messages in chats using `ChatMessage.Read.Chat` is only enabled after a re-installation or new installation into a chat.
-* If you have an app that's using the `ChatMessage.Read.Chat` RSC permission for Graph scenarios, then test the app following the steps in [upload a custom app in a conversation](channel-messages-with-rsc.md?tabs=chat%2Cdotnet#upload-a-custom-app-in-a-conversation) and modify the app before the feature is [generally available](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=receive%2Call%2Cgroup%2Cchat%2Cmessages). If you don't want your bot to receive all chat messages, implement the following [code snippet](#filtering-at-mention-messages). If no action is taken, your bot receives all messages after new installations.
+* If you have an app that's using the `ChatMessage.Read.Chat` RSC permission for Graph scenarios, then test the app following the steps in [upload a custom app in a conversation](channel-messages-with-rsc.md#upload-a-custom-app-in-a-conversation) and modify the app before the feature is [generally available](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=receive%2Call%2Cgroup%2Cchat%2Cmessages). If you don't want your bot to receive all chat messages, implement the following [code snippet](#filtering-at-mention-messages). If no action is taken, your bot receives all messages after new installations.
 
 ## Update app manifest
 
@@ -56,7 +57,7 @@ The following code provides an example of the app manifest:
 
 * **webApplicationInfo.id**: Your Microsoft Entra app ID. The app ID can be the same as your bot ID.
 * **webApplicationInfo.resource**: Any string. The resource field has no operation in RSC, but must be added with a value to avoid error response.
-* **authorization.permissions.resourceSpecific**: RSC permissions for your app with either or both `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` specified. For more information, see [resource-specific permissions](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#resource-specific-permissions).
+* **authorization.permissions.resourceSpecific**: RSC permissions for your app with either or both `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` specified. For more information, see [resource-specific permissions](../../../graph-api/rsc/resource-specific-consent.md#supported-rsc-permissions).
 
 The following code provides an example of the app manifest version 1.12 or later:
 
@@ -155,7 +156,7 @@ The following steps guide you to upload and validate bot that receives all chann
 1. Select **Upload a custom app** from the lower right corner.
 
       :::image type="content" source="Media/uploading-custom-app.png" alt-text="Screenshot shows the upload a custom app option.":::
-  
+
 1. Select **Open**.
 
       :::image type="content" source="Media/select-apppackage.png" alt-text="Screenshot shows the open dialog box to select the app package." lightbox="Media/select-apppackage.png":::
@@ -252,8 +253,8 @@ this.onMessage(async (context, next) => {
 
 ## See also
 
-* [Bot conversations](/microsoftteams/platform/bots/how-to/conversations/conversation-basics)
-* [Resource-specific consent](/microsoftteams/resource-specific-consent)
-* [Test resource-specific consent](/microsoftteams/platform/graph-api/rsc/test-resource-specific-consent)
-* [Upload custom app in Teams](~/concepts/deploy-and-publish/apps-upload.md)
+* [Send and receive messages](../../build-conversational-capability.md)
+* [Resource-specific consent for your Teams app](../../../graph-api/rsc/resource-specific-consent.md)
+* [Test resource-specific consent permissions in Teams](../../../graph-api/rsc/test-resource-specific-consent.md)
+* [Upload your app in Teams](../../../concepts/deploy-and-publish/apps-upload.md)
 * [List replies to messages in a channel](/graph/api/chatmessage-list-replies?view=graph-rest-1.0&tabs=http&preserve-view=true)

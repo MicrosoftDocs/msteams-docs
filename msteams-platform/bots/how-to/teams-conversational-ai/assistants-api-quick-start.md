@@ -22,7 +22,7 @@ To get started, ensure that you have the following tools:
 | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or C Sharp build environments. Use the latest version. |
 | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
 |[Git](https://git-scm.com/downloads)|Git is a version control system that helps you manage different versions of code within a repository. |
-| [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
+| [Node.js](https://nodejs.org/en) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
 | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | To collaborate with everyone, you work with through apps for chat, meetings, and call-all in one place.|
 | [OpenAI](https://openai.com/api/) or [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
 | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
@@ -98,6 +98,7 @@ Get started with Teams AI library using the **Math tutor assistant** sample. It 
       SECRET_OPENAI_KEY=<your OpenAI key>
       ASSISTANT_ID=<your Assistant ID>
       ```
+
    1. Go to the `infra` folder and ensure that the following lines in the `azure.bicep` file are commented out:
 
       ```bicep
@@ -153,6 +154,7 @@ Get started with Teams AI library using the **Math tutor assistant** sample. It 
             "value": "${{SECRET_AZURE_OPENAI_ENDPOINT}}"
             }
       ```
+
     ---
 
 1. Copy the sample to a new directory that isn't a subdirectory of `teams-ai`.
@@ -178,7 +180,6 @@ Get started with Teams AI library using the **Math tutor assistant** sample. It 
 
    :::image type="content" source="../../../assets/images/bots/mathbot-output.png" alt-text="Screenshot shows an example of the mathbot output." lightbox="../../../assets/images/bots/mathbot-output.png":::
 
-
 > [!NOTE]
 > If you're building a bot for the first time, it's recommended to use Teams Toolkit extension for Visual Studio Code to build a bot, see [build your first bot app using JavaScript](../../../sbs-gs-bot.yml).
 
@@ -195,4 +196,4 @@ You can also use the following tools to run and set up a sample:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Assistants API](teams-conversation-ai-overview.md#assistants-api)
+> [Assistants API](teams-conversation-ai-overview.md#how-do-teams-ai-library-features-benefit-me)

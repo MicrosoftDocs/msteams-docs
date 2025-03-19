@@ -25,14 +25,7 @@ To build Actions for your app, follow these steps:
 
 ## Prerequisites
 
-Before you get started, ensure that you install the following:
-
-| &nbsp; | Install | Description |
-| --- | --- | --- |
-| &nbsp; | [Node.js](https://nodejs.org/en/download/) | A JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
-| &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge/) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
-| &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | Visual Studio Code is a lightweight but powerful source code editor, which comes with built-in support for JavaScript, TypeScript, Node.js, and SharePoint Framework (SPFx) build environments. Use the latest version. |
-| &nbsp; | [Teams Toolkit](../toolkit/install-Teams-Toolkit.md) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
+[!INCLUDE [prerequisites-actions-m365](../includes/get-started/prerequisites-actions-m365.md)]
 
 ## Configure app manifest
 
@@ -93,7 +86,7 @@ app.getContext().then((context) => {
     if (actionInfo) {
         if (actionInfo.actionObject.type == app.ActionObjectType.M365Content) {
             const itemId = actionInfo.actionObjects[0].itemId;
-            // Get the requested content from Mirosoft Graph by item id:
+            // Get the requested content from Microsoft Graph by item id:
         } 
     }
 })
@@ -126,6 +119,8 @@ A browser window opens with Microsoft 365 home page and your app is available un
 You can now preview your Actions in the Microsoft 365 home page, right-click a file that is supported by your Actions. Actions appear in the context menu, for example **Add todo task**.
 
 :::image type="content" source="images/actions-context-menu.png" alt-text="The screenshot shows the actions in context menu.":::
+
+[!INCLUDE [m365-app-rename](~/includes/m365-app-rename.md)]
 
 ## Preinstall Actions for users in Microsoft 365 Admin Center
 

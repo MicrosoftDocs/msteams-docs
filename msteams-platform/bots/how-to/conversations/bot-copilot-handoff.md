@@ -4,6 +4,7 @@ description: Learn how to allow users to continue their conversation with custom
 ms.date: 09/16/2024
 ms.topic: conceptual
 author: v-ypalikila
+ms.owner: ginobuzz
 ms.author: surbhigupta
 ---
 
@@ -14,9 +15,9 @@ ms.author: surbhigupta
 > * Copilot handoff is only available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
 > * Copilot handoff is only supported in one-on-one chat with bot.
 
-Copilot handoffs are plugin-provided deep links that carry over chat context, enabling users to seamlessly transition their chat with Microsoft 365 Copilot to your bot service. You can enhance your Copilot message extension plugin to hand off a conversation to your custom engine agent to handle scenarios where specialized knowledge or actions are required, such as complex IT support queries, detailed product inquiries, or interactive order management.
+Copilot handoffs are plugin-provided deep links that carry over chat context, enabling users to seamlessly transition their chat with Microsoft 365 Copilot to your bot service. You can enhance your Copilot message extension agent to hand off a conversation to your custom engine agent to handle scenarios where specialized knowledge or actions are required, such as complex IT support queries, detailed product inquiries, or interactive order management.
 
-In the following graphic, a user looks for help on tech issues using Microsoft 365 Copilot and receives results from the enterprise dataset. The user finds the available information insufficient and wants to continue the interaction with a Contoso bot plugin.​ When the user selects the Contoso bot, a new chat starts and the conversation continues in the Contoso bot. This seamless switch from Microsoft 365 Copilot to the Contoso bot without losing the conversation context is called a copilot handoff.
+In the following graphic, a user looks for help on tech issues using Microsoft 365 Copilot and receives results from the enterprise dataset. The user finds the available information insufficient and wants to continue the interaction with a Contoso bot agent.​ When the user selects the Contoso bot, a new chat starts and the conversation continues in the Contoso bot. This seamless switch from Microsoft 365 Copilot to the Contoso bot without losing the conversation context is called a copilot handoff.
 
 :::image type="content" source="../../../assets/images/Copilot/Copilot-handoff.gif" alt-text="Graphical representation shows the conversation handoff between Microsoft 365 Copilot and the Contoso chat bot.":::
 
@@ -24,9 +25,9 @@ In the following graphic, a user looks for help on tech issues using Microsoft 3
 
 A [custom engine agent](/microsoft-365-copilot/extensibility/overview-custom-engine-agent) sends a deep link with a continuation token to Microsoft 365 Copilot. The deep link query parameter with a continuation token ensures that any information from your plugin invocation parameters is referenced. When the user selects the deep link, Microsoft 365 Copilot sends an invoke call to the bot with the continuation token, and the bot then resumes the conversation based on the context. This process enables a seamless transition from Microsoft 365 Copilot to your custom engine agent, maintaining the conversation’s continuity and context, which optimizes the user experience.
 
-:::image type="content" source="../../../assets/images/Copilot/copilot-handoff-flow.png" alt-text="Screenshot shows the handoff flow between the user, Microsoft 365 Copilot, plugin, Teams, and bot." lightbox="../../../assets/images/Copilot/copilot-handoff-flow.png":::
+:::image type="content" source="../../../assets/images/Copilot/copilot-handoff-flow.png" alt-text="Screenshot shows the handoff flow between the user, Microsoft 365 Copilot, agent, Teams, and bot." lightbox="../../../assets/images/Copilot/copilot-handoff-flow.png":::
 
-You must create a deep link URL with a `continuation` query parameter for the action button and assign a continuation token to the parameter to facilitate the handoff process. When the user selects the action button, Microsoft Teams reads the continuation token from the URL and initiates an invoke call to the bot. The bot or plugin uses the continuation token to create a response, which is then displayed to the user in the plugin chat window.
+You must create a deep link URL with a `continuation` query parameter for the action button and assign a continuation token to the parameter to facilitate the handoff process. When the user selects the action button, Microsoft Teams reads the continuation token from the URL and initiates an invoke call to the bot. The bot or agent uses the continuation token to create a response, which is then displayed to the user in the agent chat window.
 
 ## Enable copilot handoff
 
@@ -152,4 +153,4 @@ To enable copilot handoff in Teams, follow these steps:
 
 |Sample name | Description | Node.js|
 | ----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| Northwind inventory message extension                               | This sample is a Teams message extension that works as a plugin for Microsoft 365 Copilot. It features copilot handoff and enables users to transition their chat from Microsoft 365 Copilot to Northwind Database.             | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-copilot-handoff/ts)              |
+| Northwind inventory message extension                               | This sample is a Teams message extension that works as an agent for Microsoft 365 Copilot. It features copilot handoff and enables users to transition their chat from Microsoft 365 Copilot to Northwind Database.             | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-copilot-handoff/ts)              |
