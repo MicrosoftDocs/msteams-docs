@@ -615,6 +615,7 @@ This item is an array (maximum of 16 elements) with all elements of the type `ob
 
 > [!NOTE]
 >
+> * The `contentBotId` property isn't supported in apps that are verified and published on AppSource.
 > * The `groupChat` and `team` scopes are supported only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 > * The `teamLevelApp` context is dedicated only for Education tenants.
 > * The `searchUrl` feature is not available for the third-party developers.
