@@ -5,6 +5,7 @@ description: Learn how Incoming and Outgoing webhooks and connectors for Microso
 ms.localizationpriority: high
 ms.topic: overview
 ms.author: anclear
+ms.owner: hantony
 ms.date: 01/23/2025
 ---
 
