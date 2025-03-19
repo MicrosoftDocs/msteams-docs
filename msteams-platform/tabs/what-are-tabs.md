@@ -113,22 +113,6 @@ To make your Teams tab even better, Microsoft offers some handy development tool
 
     </details>
 
-1. **Teams SDK**:
-    The Teams SDK is a set of libraries that helps you build awesome experiences in Microsoft Teams. It lets your web app talk to Teams, provides context about the environment, and allows interactions with Teams features. Build apps that integrate deeply with Teams using this SDK. It provides APIs to interact with Teams services, creating richer and more dynamic tab experiences tailored to your needs.
-
-    <details>
-    <summary><b>Example:</b></summary>
-
-    ```JavaScript
-
-      microsoftTeams.initialize();
-      microsoftTeams.getContext(function(context) {
-      console.log("Team Name: " + context.teamName);
-      });
-    ```
-
-    </details>
-
 1. **Microsoft Graph REST APIs**:
     Microsoft Graph enables you to interact with various Microsoft 365 services like Teams, SharePoint, Outlook, OneDrive, and more. For Teams tab apps, it helps you access, manipulate, and interact with Teams data, users, and resources.
 
@@ -158,15 +142,13 @@ To build a comprehensive Teams tab app, you will likely combine all three tools:
 
 * **Teams JS SDK**: For accessing Teams-specific features and interacting with the Teams client, such as initializing the app and getting user context.
 * **Microsoft Graph REST API**: For accessing broader Microsoft 365 data (for example, user profiles, teams, channels, messages, calendar data) to display or manipulate this data in your app.
-* **Teams SDK**: For advanced functionality like handling authentication, working with Teams’ UI elements, and implementing task modules or dialogs.
 
 *Example Workflow*:
 
 1. Use Teams JS SDK to initialize the app and get the user's context when they open the tab.
 2. Use Microsoft Graph API to pull relevant data, such as team details, files, or messages, and display this information in your tab.
-3. Handle authentication and user-specific data with the Teams SDK, ensuring that your app complies with security and permission requirements.
 
-The Teams JS SDK, Microsoft Graph REST API, and Teams SDK are essential for creating powerful and interactive Teams tab apps. They help your app access data, provide a smooth user experience, and integrate seamlessly with the Microsoft ecosystem, all while staying tightly connected within the Teams client.
+The Teams JS SDK and Microsoft Graph REST API are essential for creating powerful and interactive Teams tab apps. They help your app access data, provide a smooth user experience, and integrate seamlessly with the Microsoft ecosystem, all while staying tightly connected within the Teams client.
 
 **Some more scenarios**:
 
