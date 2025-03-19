@@ -157,7 +157,7 @@ Teams tab app solution: You create a channel or group tab to enable management o
 To build a comprehensive Teams tab app, you will likely combine all three tools:
 
 * **Teams JS SDK**: For accessing Teams-specific features and interacting with the Teams client, such as initializing the app and getting user context.
-* **Microsoft Graph REST API**: For accessing broader Microsoft 365 data (e.g., user profiles, teams, channels, messages, calendar data) to display or manipulate this data in your app.
+* **Microsoft Graph REST API**: For accessing broader Microsoft 365 data (for example, user profiles, teams, channels, messages, calendar data) to display or manipulate this data in your app.
 * **Teams SDK**: For advanced functionality like handling authentication, working with Teams’ UI elements, and implementing task modules or dialogs.
 
 *Example Workflow*:
