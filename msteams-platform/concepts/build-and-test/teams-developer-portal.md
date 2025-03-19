@@ -18,6 +18,7 @@ ms.date: 01/23/2025
 > * Developer Portal for Government Community Cloud (GCC) is supported only as an app in Teams and not as a standalone website.
 > * Developer Portal isn't available for GCC High, Department of Defense (DoD), and Teams operated by 21Vianet tenants. However, you can use a regular tenant to build an app in Developer Portal, download the app, and upload the app using [Microsoft Graph](/graph/api/teamsapp-publish?view=graph-rest-1.0&tabs=http&preserve-view=true) to a national cloud. For more information, see [national cloud deployments](/graph/deployments).
 
+
 ## Register an app
 
 Developer Portal provides the following ways to register a Teams app:
@@ -44,6 +45,9 @@ Developer Portal allows you to create a brand new app:
 Now you've successfully created a brand new app and you can see all the basic information of the new app.
 
 :::image type="content" source="../../assets/images/tdp/basic-information-app-tdp.png" alt-text="Screenshot shows the basic information of the app you created in Developer Portal." lightbox="../../assets/images/tdp/basic-information-app-tdp.png":::
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+and+register+a+brand+new+app&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fbuild-and-test%2Fteams-developer-portal%23create-and-register-a-brand-new-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fconcepts%2Fbuild-and-test%2Fteams-developer-portal.md&documentVersionIndependentId=82d1ca83-28dd-220e-ab0c-a4833f8f8143&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ### Import an existing app
 
@@ -72,6 +76,9 @@ Follow the steps to import and manage your existing app in Developer Portal:
      :::image type="content" source="../../assets/images/tdp/change-ownership-app-teams-global-admin.png" alt-text="Screenshot shows an example of a tenant admin taking ownership of an app in Teams Developer Portal.":::
 
 For more information about how admins can import and take ownership of apps in Developer Portal, see [manage Microsoft Teams app ownership in Developer Portal](/microsoftteams/app-ownership-developer-portal).
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Import+an+existing+app&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fbuild-and-test%2Fteams-developer-portal%23import-an-existing-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fconcepts%2Fbuild-and-test%2Fteams-developer-portal.md&documentVersionIndependentId=82d1ca83-28dd-220e-ab0c-a4833f8f8143&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 #### Steps to import a published app that's not registered in Developer Portal
 
