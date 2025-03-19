@@ -41,7 +41,42 @@ To update the app manifest for your bot app:
 
 ```json
 
-    [code snippet]
+{ 
+ 
+ 
+  id: "mockId", 
+ 
+  name: "mockName", 
+ 
+  largeImageUrl: "mockIcon", 
+ 
+  validDomains: null, 
+ 
+  externalId: null, 
+ 
+  bots: [{   
+ 
+        id: "testId", 
+ 
+        scopes: [], 
+ 
+        capabilities: { 
+ 
+          __typename: "BotCapabilities", 
+ 
+          isNotificationOnly: true, 
+ 
+          supportsFiles: false, 
+ 
+        }, 
+ 
+    allowBotMessageDeleteByUser: true
+ 
+    }],
+ 
+  manifestVersion: null, 
+ 
+}   
 
 ```
 
