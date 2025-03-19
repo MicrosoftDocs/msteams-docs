@@ -1175,7 +1175,7 @@
     href: resources/samesite-cookie-update.md
     displayName: Cookies, third-party cookies, SameSite, Lax, Strict, None, Secure, SameSite=None, SameSite=Lax, SameSite=Strict
   - name: Best practices for Teams mobile app
-    href: resources/mobile-app-best-practices.md
+    href: resources/teams-mobile-best-practices.md
     displayName: Teams mobile app, best practices, service worker, lighthouse, peroformance audit
   - name: Contribute to Teams documentation
     href: resources/teams-contributor-reference.md
