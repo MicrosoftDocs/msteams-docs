@@ -16,7 +16,7 @@
 
 1. Select **Register**. 
 
-1. For tenants, create [Client secret](https://learn.microsoft.com/en-us/graph/auth-register-app-v2#add-credentials).
+1. Create a [client secret](https://learn.microsoft.com/en-us/graph/auth-register-app-v2#add-credentials) for tenants.
 
     :::image type="content" source="../../assets/images/include-files/app-register.png" alt-text="Screenshot shows the option to register the bot in Microsoft Entra admin center.":::
 
