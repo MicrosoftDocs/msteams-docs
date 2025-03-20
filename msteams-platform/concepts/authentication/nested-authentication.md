@@ -147,54 +147,52 @@ To acquire a token, follow these steps:
 
 1. If no account is available, MSAL.js returns an `InteractionRequiredAuthError`. Call `publicClientApplication.acquireTokenPopup(accessTokenRequest)` to display an interactive dialog for the user. `acquireTokenSilent` can fail if the token expired or if the user didn't consent to all the requested scopes.
 
-The following code snippet shows an example to access a token:
+    The following code snippet shows an example to access a token:
 
-```JavaScript
-
-  // MSAL.js exposes several account APIs, logic to determine which account to use is the responsibility of the developer
-  const account = publicClientApplication.getActiveAccount();
-
-  const accessTokenRequest = {
-  scopes: ["user.read"],
-  account: account,
-  };
-
-  publicClientApplication
-    .acquireTokenSilent(accessTokenRequest)
-    .then(function (accessTokenResponse) {
-      // Acquire token silent success
-      let accessToken = accessTokenResponse.accessToken;
-      // Call your API with token
-      callApi(accessToken);
-    })
-    .catch(function (error) {
-      //Acquire token silent failure, and send an interactive request
-      if (error instanceof InteractionRequiredAuthError) {
-        publicClientApplication
-          .acquireTokenPopup(accessTokenRequest)
-          .then(function (accessTokenResponse) {
-            // Acquire token interactive success
-            let accessToken = accessTokenResponse.accessToken;
-            // Call your API with token
-            callApi(accessToken);
-          })
-          .catch(function (error) {
-            // Acquire token interactive failure
-            console.log(error);
-          });
-      }
-      console.log(error);
-    });
-
-```
+    ```JavaScript
+    
+      // MSAL.js exposes several account APIs, logic to determine which account to use is the responsibility of the developer
+      const account = publicClientApplication.getActiveAccount();
+    
+      const accessTokenRequest = {
+      scopes: ["user.read"],
+      account: account,
+      };
+    
+      publicClientApplication
+        .acquireTokenSilent(accessTokenRequest)
+        .then(function (accessTokenResponse) {
+          // Acquire token silent success
+          let accessToken = accessTokenResponse.accessToken;
+          // Call your API with token
+          callApi(accessToken);
+        })
+        .catch(function (error) {
+          //Acquire token silent failure, and send an interactive request
+          if (error instanceof InteractionRequiredAuthError) {
+            publicClientApplication
+              .acquireTokenPopup(accessTokenRequest)
+              .then(function (accessTokenResponse) {
+                // Acquire token interactive success
+                let accessToken = accessTokenResponse.accessToken;
+                // Call your API with token
+                callApi(accessToken);
+              })
+              .catch(function (error) {
+                // Acquire token interactive failure
+                console.log(error);
+              });
+          }
+          console.log(error);
+        });
+    
+    ```
 
 ### Call an API
 
 After you receive the token, use it to call the API. This ensures that the API is called with a valid token to make authenticated requests to the server.
 
 The following example shows how to make an authenticated request to Microsoft Graph API to access Microsoft 365 data:
-
-# [JavaScript](#tab/js3)
 
 ```javascript
 
@@ -214,8 +212,6 @@ fetch(graphEndpoint, options)
     });
 
 ```
-
----
 
 ### Best practices
 
