@@ -145,7 +145,7 @@ To build a comprehensive Teams tab app, you will likely combine all three tools:
 
 *Example Workflow*:
 
-1. Use Teams JS SDK to initialize the app and get the user's context when they open the tab.
+1. Use Teams JS SDK to initialize the app and get the user's context when they open the tab, and implement authentication.
 2. Use Microsoft Graph API to pull relevant data, such as team details, files, or messages, and display this information in your tab.
 
 The Teams JS SDK and Microsoft Graph REST API are essential for creating powerful and interactive Teams tab apps. They help your app access data, provide a smooth user experience, and integrate seamlessly with the Microsoft ecosystem, all while staying tightly connected within the Teams client.
