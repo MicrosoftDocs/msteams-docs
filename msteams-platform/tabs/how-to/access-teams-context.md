@@ -254,7 +254,7 @@ microsoftTeams.getContext((context) => {
 The following table lists commonly used context properties of the *context* object:
 
 | TeamsJS v2 name | TeamsJS v1 name |
-|---|---|
+| --- | --- |
 | team.internalId | teamId |
 | team.displayName | teamName |
 | channel.id | channelId |
