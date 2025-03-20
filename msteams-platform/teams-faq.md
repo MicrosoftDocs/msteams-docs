@@ -104,6 +104,11 @@ App registration is disabled for the user or the user doesn't have enough permis
 
 </details>
 
+<details>
+<summary>After I registered my bot in the Azure portal when I try to open my bot app in Teams, I get the following error - You do not have permission to use this app here. Learn how to install this app for yourself. What can I do to resolve this error?
+
+To use your app within Teams, you must sideload it into Teams. For more information, see [Upload your app to Teams](toolkit/test-app-behavior.md#upload-your-app-to-teams).
+
 ## Live share
 
 <details>
