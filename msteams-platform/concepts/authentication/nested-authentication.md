@@ -3,7 +3,7 @@ title: SSO authentication for nested apps
 description: Learn how to implement, configure nested app authentication in Microsoft Teams app. Learn about the use case scenarios for nested app authentication.
 ms.date: 03/11/2025
 ms.topic: conceptual
-author: v-ypalikila
+author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ---
