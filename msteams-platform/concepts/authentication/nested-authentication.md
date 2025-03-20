@@ -24,18 +24,18 @@ The NAA model provides several advantages over the On-Behalf-Of (OBO) flow:
 * You can use incremental and dynamic consent for scopes (permissions).
 * You don't need to preauthorize your hosts, such as Teams or Microsoft 365, to call your endpoints.
 
-The following table outlines the difference between Teams Microsoft Entra SSO and NAA:
+    The following table outlines the difference between Teams Microsoft Entra SSO and NAA:
 
-| Steps required for development | Traditional Teams Entra SSO | NAA |
-| --- |:---:|:---:|
-| Expose redirect URI | Required | Required |
-| Register API in Microsoft Entra ID | Required |  |
-| Define a custom scope in Microsoft Entra ID | Required |  |
-| Authorize Teams client apps | Required |  |
-| Revise app manifest (previously called Teams app manifest) | Required | Recommended* |
-| Acquire access token through TeamsJS SDK | Required |  |
-| Solicit user consent for more permissions | Required |  |
-| Conduct an OBO exchange on the server | Required |  |
+    | Steps required for development | Traditional Teams Entra SSO | NAA |
+    | --- |:---:|:---:|
+    | Expose redirect URI | Required | Required |
+    | Register API in Microsoft Entra ID | Required |  |
+    | Define a custom scope in Microsoft Entra ID | Required |  |
+    | Authorize Teams client apps | Required |  |
+    | Revise app manifest (previously called Teams app manifest) | Required | Recommended* |
+    | Acquire access token through TeamsJS SDK | Required |  |
+    | Solicit user consent for more permissions | Required |  |
+    | Conduct an OBO exchange on the server | Required |  |
 
 * The IT admin might block the app or consent to only certain permissions for the app in Microsoft Entra ID. To avoid it, you must include the app ID and the default resource in the app manifest for the admin to approve the permissions in Teams admin center.
 
@@ -101,9 +101,7 @@ For more information on upgrading your Teams app to run in Outlook and Microsoft
 
 Initialize MSAL and get an instance of the public client app to get access tokens, when needed.
 
-# [JavaScript](#tab/js1)
-
-```javascript
+```JavaScript
 import {
   AccountInfo,
   IPublicClientApplication,
@@ -132,8 +130,6 @@ export function initializePublicClient() {
 }
 ```
 
----
-
 ### Acquire your first token
 
 The tokens acquired by MSAL.js through nested app authentication are issued for your Microsoft Entra app registration ID. MSAL.js handles token acquisition for user authentication. It tries to get an access token silently. If that's unsuccessful, it prompts the user for consent. The token is then used to call the Microsoft Graph API or other Microsoft Entra ID protected resources. Unlike the OBO flow, you don't need to preauthorize your hosts to call the endpoints.
@@ -153,9 +149,7 @@ To acquire a token, follow these steps:
 
 The following code snippet shows an example to access a token:
 
-# [JavaScript](#tab/js2)
-
-```javascript
+```JavaScript
 
   // MSAL.js exposes several account APIs, logic to determine which account to use is the responsibility of the developer
   const account = publicClientApplication.getActiveAccount();
@@ -193,8 +187,6 @@ The following code snippet shows an example to access a token:
     });
 
 ```
-
----
 
 ### Call an API
 
