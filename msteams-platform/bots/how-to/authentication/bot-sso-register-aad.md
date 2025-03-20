@@ -69,8 +69,8 @@ To enable SSO for your app in Microsoft Entra ID:
 
 - **[Configure messaging endpoint](#configure-messaging-endpoint)**
 - **[Configure SSO for Microsoft Entra app](#configure-sso-for-azure-ad-app)**:
-  - [Configure scope for the access token](#configure-scope-for-the-access-token)
   - [Configure access token version](#configure-access-token-version)
+  - [Configure scope for the access token](#configure-scope-for-the-access-token)
   - [Create client secret](#create-client-secret)
   - [Configure redirect URL](#configure-redirect-url)
 - **[Configure OAuth connection](#configure-oauth-connection)**
@@ -460,8 +460,8 @@ Congratulations! You've completed the following app configurations in Microsoft 
 To create and configure your app for enabling SSO in Microsoft Entra ID:
 
 - [**Configure your Microsoft Entra app for SSO**](#configure-your-azure-ad-app-for-sso)
-  - [Configure scope for access token](#configure-scope-for-access-token)
   - [Configure the access token version](#configure-the-access-token-version)
+  - [Configure scope for access token](#configure-scope-for-access-token)
   - [Create client secret for your app](#create-client-secret-for-your-app)
   - [Configure redirect URL for your app](#configure-redirect-url-for-your-app)
 - [**Configure bot resource in Microsoft Entra ID**](#configure-bot-resource-in-azure-ad)
@@ -476,6 +476,30 @@ You must configure permissions and scopes, authorize client applications, update
 
 > [!IMPORTANT]
 > Ensure that you've [registered your app](../../../tabs/how-to/authentication/tab-sso-register-aad.md#to-register-a-new-app-in-azure-ad) in Microsoft Entra ID. At registration, Microsoft Entra ID generates a new app ID that you must note. You'll need to update it later in the app manifest file.
+
+### Configure the access token version
+
+You must define the access token version for your app in the Microsoft Entra app manifest.
+
+#### To define access token version
+
+1. Select **Manage** > **Manifest** from the left pane.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/azure-portal-manifest.png" alt-text="Screenshot shows the Microsoft Entra admin center Manifest." :::
+
+    The Microsoft Entra app manifest appears.
+
+1. Enter **2** as the value for the `accessTokenAcceptedVersion` property.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/azure-manifest-value.png" alt-text="Screenshot shows the Value for accepted access token version." :::
+
+1. Select **Save**.
+
+    A message appears on the browser stating that the app manifest was updated successfully.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-aad-manifest-msg.png" alt-text="Screenshot shows the Manifest updated message.":::
+
+You've updated the access token version. Next, you'll configure the scope for access token.
 
 ### Configure scope for access token
 
@@ -634,31 +658,7 @@ The scope and permissions are now configured. Next, you must configure the autho
     > [!NOTE]
     > You can authorize more than one client application. Repeat the steps of this procedure for configuring another authorized client application.
 
-You've successfully configured app scope, permissions, and client applications. Ensure that you note and save the application ID URI. Next, you configure the access token version.
-
-### Configure the access token version
-
-You must define the access token version for your app in the Microsoft Entra app manifest.
-
-#### To define access token version
-
-1. Select **Manage** > **Manifest** from the left pane.
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/azure-portal-manifest.png" alt-text="Screenshot shows the Microsoft Entra admin center Manifest." :::
-
-    The Microsoft Entra app manifest appears.
-
-1. Enter **2** as the value for the `accessTokenAcceptedVersion` property.
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/azure-manifest-value.png" alt-text="Screenshot shows the Value for accepted access token version." :::
-
-1. Select **Save**.
-
-    A message appears on the browser stating that the app manifest was updated successfully.
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-aad-manifest-msg.png" alt-text="Screenshot shows the Manifest updated message.":::
-
-You've updated the access token version. Next step is to create a client secret for your app next.
+You've successfully configured app scope, permissions, and client applications. Ensure that you note and save the application ID URI. Next, step is to create a client secret for your app next.
 
 ### Create client secret for your app
 
