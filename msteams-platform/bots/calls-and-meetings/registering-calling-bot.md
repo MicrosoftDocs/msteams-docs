@@ -34,7 +34,7 @@ To create a new bot for Teams:
 
 1. Use this link to create a new bot, `https://dev.botframework.com/bots/new`. Alternately, if you select the **Create a bot** button in the Bot Framework portal, you create your bot in Microsoft Azure, for which you must have an Azure account.
     > [!NOTE]
-    > Special characters aren't supported on Bot display name.
+    > Bot display names can't include special characters.
 1. Add the Teams channel.
 1. Select the **Calling** tab on the Teams channel page. Select **Enable calling**, and then update **Webhook (for calling)** with your HTTPS URL where you receive incoming notifications, for example `https://contoso.com/teamsapp/api/calling`. For more information, see [configuring channels](/bot-framework/portal-configure-channels).
 
