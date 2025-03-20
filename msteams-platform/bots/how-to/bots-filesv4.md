@@ -1,7 +1,7 @@
 ---
 title: Bots to Send and Receive Files
 description: Learn how to send and receive files through the bot using Microsoft Graph APIs for personal, channel and groupchat scopes. Code samples (.NET, Node.js, Python).
-ms.date: 04/17/2023
+ms.date: 01/23/2025
 ms.localizationpriority: medium
 ms.topic: how-to
 ---
@@ -10,7 +10,7 @@ ms.topic: how-to
 > [!IMPORTANT]
 >
 > * This article is based on the v4 Bot Framework SDK.
-> * Bots don't support sending and receiving files in Governmernt Community Cloud High (GCC-High) and Department of Defense (DOD) environments.
+> * Bots don't support sending and receiving files in Government Community Cloud High (GCC High), Department of Defense (DoD), and Teams operated by 21Vianet environments.
 
 There are two ways to send files to and receive files from a bot:
 
@@ -20,6 +20,12 @@ There are two ways to send files to and receive files from a bot:
   * `groupchat`
 
 * [**Use the Teams bot APIs:**](#use-the-teams-bot-apis) These only support files in `personal` context.
+
+The following video demonstrates how a bot simplifies the process of sending and receiving files with ease and efficiency:
+
+<br>
+
+> [!VIDEO https://www.youtube.com/embed/-UeDi5X3qWk]
 
 ## Use the Graph APIs
 
@@ -127,7 +133,7 @@ The following table describes the content properties of the attachment:
 
 #### Invoke activity when the user accepts the file
 
-An invoke activity is sent to the bot if and when the user accepts the file. It contains the OneDrive for Business placeholder URL that the bot can then issue a `PUT` to transfer the file contents. For information on uploading to the OneDrive URL, see [upload bytes to the upload session](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session).
+An invoke activity is sent to the bot when a user accepts the file. It contains the OneDrive for Business placeholder URL that the bot can then issue a `PUT` to transfer the file contents. For information on uploading to the OneDrive URL, see [upload bytes to the upload session](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session).
 
 The following code shows an example of a concise version of the invoke activity that the bot receives:
 
@@ -198,6 +204,8 @@ Fetch inline images that are part of the message using the Bot's access token.
 
 The following code shows an example of fetching inline images from message:
 
+# [.NET](#tab/csharp1)
+
 ```csharp
 private async Task ProcessInlineImage(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {​​​​​
@@ -233,9 +241,54 @@ private static Attachment GetInlineAttachment()
 }​​​​​
 ```
 
-### Basic example in C# #
+# [Python](#tab/Python2)
+
+```python
+
+async def process_inline_image(self, turn_context: TurnContext):
+    file = turn_context.activity.attachments[0]
+    file_download = FileDownloadInfo.deserialize(file.content)
+    file_path = "files/" + file.name
+
+    response = requests.get(file_download.download_url, allow_redirects=True)
+    open(file_path, "wb").write(response.content)
+
+    reply = self._create_reply(
+        turn_context.activity, f"Complete downloading <b>{file.name}</b>", "xml"
+    )
+    await turn_context.send_activity(reply)
+
+def _create_reply(self, activity, text=None, text_format=None):
+    return Activity(
+        type=ActivityTypes.message,
+        timestamp=datetime.utcnow(),
+        from_property=ChannelAccount(
+            id=activity.recipient.id, name=activity.recipient.name
+        ),
+        recipient=ChannelAccount(
+            id=activity.from_property.id, name=activity.from_property.name
+        ),
+        reply_to_id=activity.id,
+        service_url=activity.service_url,
+        channel_id=activity.channel_id,
+        conversation=ConversationAccount(
+            is_group=activity.conversation.is_group,
+            id=activity.conversation.id,
+            name=activity.conversation.name,
+        ),
+        text=text or "",
+        text_format=text_format or None,
+        locale=activity.locale,
+    )
+```
+
+---
+
+### Basic example
 
 The following code shows an example of how to handle file uploads and send file consent requests in the bot's dialog:
+
+# [.NET](#tab/csharp)
 
 ```csharp
 
@@ -310,6 +363,88 @@ private async Task SendFileCardAsync(ITurnContext turnContext, string filename, 
     await turnContext.SendActivityAsync(replyActivity, cancellationToken);
 }
 ```
+
+# [Python](#tab/Python)
+
+```python
+
+async def on_message_activity(self, turn_context: TurnContext):
+    message_with_file_download = (
+        False
+        if not turn_context.activity.attachments
+        else turn_context.activity.attachments[0].content_type == ContentType.FILE_DOWNLOAD_INFO
+    )
+
+    if message_with_file_download:
+        # Save an uploaded file locally
+        file = turn_context.activity.attachments[0]
+        file_download = FileDownloadInfo.deserialize(file.content)
+        file_path = "files/" + file.name
+
+        response = requests.get(file_download.download_url, allow_redirects=True)
+        open(file_path, "wb").write(response.content)
+
+        reply = self._create_reply(
+            turn_context.activity, f"Complete downloading <b>{file.name}</b>", "xml"
+        )
+        await turn_context.send_activity(reply)
+    else:
+        # Attempt to upload a file to Teams. This will display a confirmation to
+        # the user (Accept/Decline card). If they accept, on_teams_file_consent_accept
+        # will be called, otherwise on_teams_file_consent_decline.
+        filename = "teams-logo.png"
+        file_path = "files/" + filename
+        file_size = os.path.getsize(file_path)
+        await self._send_file_card(turn_context, filename, file_size)
+
+async def _send_file_card(self, turn_context: TurnContext, filename: str, file_size: int):
+    """
+    Send a FileConsentCard to get permission from the user to upload a file.
+    """
+
+    consent_context = {"filename": filename}
+
+    file_card = FileConsentCard(
+        description="This is the file I want to send you",
+        size_in_bytes=file_size,
+        accept_context=consent_context,
+        decline_context=consent_context
+    )
+
+    as_attachment = Attachment(
+        content=file_card.serialize(), content_type=ContentType.FILE_CONSENT_CARD, name=filename
+    )
+
+    reply_activity = self._create_reply(turn_context.activity)
+    reply_activity.attachments = [as_attachment]
+    await turn_context.send_activity(reply_activity)
+
+def _create_reply(self, activity, text=None, text_format=None):
+    return Activity(
+        type=ActivityTypes.message,
+        timestamp=datetime.utcnow(),
+        from_property=ChannelAccount(
+            id=activity.recipient.id, name=activity.recipient.name
+        ),
+        recipient=ChannelAccount(
+            id=activity.from_property.id, name=activity.from_property.name
+        ),
+        reply_to_id=activity.id,
+        service_url=activity.service_url,
+        channel_id=activity.channel_id,
+        conversation=ConversationAccount(
+            is_group=activity.conversation.is_group,
+            id=activity.conversation.id,
+            name=activity.conversation.name,
+        ),
+        text=text or "",
+        text_format=text_format or None,
+        locale=activity.locale,
+    )
+
+```
+
+---
 
 ## Code sample
 

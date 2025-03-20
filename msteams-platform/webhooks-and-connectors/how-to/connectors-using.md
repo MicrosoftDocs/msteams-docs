@@ -4,14 +4,13 @@ author: laujan
 description: Create actionable messages, send message through Incoming Webhook, connectors for M365 Groups, cURL, or PowerShell. Send Adaptive Cards. Time based transaction.
 ms.topic: how-to
 ms.localizationpriority: high
+ms.owner: hantony
 ms.date: 12/09/2022
 ---
 
 # Create and send messages
 
-> [!IMPORTANT]
->
-> The existing Microsoft 365 (previously called Office 365) connectors across all cloud platforms are nearing deprecation, and the creation of new Microsoft 365 connectors will soon be blocked. For more information on the schedule and how the Workflows app provides a more flexible and secure experience, see [retirement of Microsoft 365 connectors within Microsoft Teams](https://devblogs.microsoft.com/microsoft365dev/retirement-of-office-365-connectors-within-microsoft-teams/).
+[!INCLUDE [deprecation-note](~/includes/deprecation-note.md)]
 
 To create and send actionable messages, use either an Incoming Webhook or a Microsoft 365 connector. However, the actionable messages are accessible only to users with an Exchange Online license.
 
@@ -194,7 +193,7 @@ To post a message to the webhook with PowerShell, follow these steps:
 > [!NOTE]
 >
 > * All native Adaptive Card schema elements, except `Action.Submit`, are fully supported.
-> * The supported actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), and [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).
+> * The supported actions are [**Action.OpenURL**](https://adaptivecards.microsoft.com/?topic=Action.OpenUrl), [**Action.ShowCard**](https://adaptivecards.microsoft.com/?topic=Action.ShowCard), and [**Action.ToggleVisibility**](https://adaptivecards.microsoft.com/?topic=Action.ToggleVisibility).
 
 To send Adaptive Cards with text or a Base64 encoded image through an Incoming Webhook, follow these steps:
 
@@ -319,7 +318,6 @@ These limits are in place to reduce spamming a channel by a connector and ensure
 * [Create Incoming Webhooks](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Create Outgoing Webhooks](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [Rate limiting for Teams bots messages](~/bots/how-to/rate-limit.md)
-* [Build tabs with Adaptive Cards](../../tabs/how-to/build-adaptive-card-tabs.md)
 * [Format cards in Microsoft Teams](../../task-modules-and-cards/cards/cards-format.md)
 * [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
 * [App manifest schema for Teams](../../resources/schema/manifest-schema.md)

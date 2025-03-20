@@ -3,6 +3,7 @@ title: Create an Outgoing Webhook
 description: Learn how to create Outgoing Webhook in Microsoft Teams, its key features and code sample (.NET, Node.js) to create custom bots to be used in Teams.
 ms.topic: conceptual
 ms.localizationpriority: high
+ms.owner: hantony
 ms.date: 02/27/2023
 ---
 
@@ -19,12 +20,6 @@ The Outgoing Webhook acts as a bot and searches for messages in channels using *
 * Try using &nbsp; to add spaces in codeblocks for indentation and remove the hard tabs.
 * Table with just a row is not really needed. Provide the content without tabulating it.
 --->
-
-See the following video to learn how to create Outgoing Webhooks:
-<br>
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzu]
-<br>
 
 ## Key features of Outgoing Webhooks
 
@@ -54,7 +49,7 @@ Create Outgoing Webhooks and add custom bots to Teams. To create an Outgoing Web
 
     :::image type="content" source="../../assets/images/outgoing-webhook.png" alt-text="Screenshot shows the apps tab on a Teams channel.":::
 
-1. Select **Create an Outgoing Webhook**.
+1. Under **Upload an app**, select **Create an outgoing webhook**.
 
     :::image type="content" source="../../assets/images/create-an-outgoing-webhook.png" alt-text="Screenshot shows the select create outgoing webhook option."lightbox="../../assets/images/create-an-outgoing-webhook.png":::
 

@@ -1,14 +1,14 @@
 ### YamlMime:Tutorial
-title: Build a bot-based message extension plugin for Copilot for Microsoft 365
+title: Build a bot-based message extension agent for Microsoft 365 Copilot
 metadata:
-  title: Build Message Extension Copilot Plugin
-  description: In this tutorial, learn to build a bot-based message extension and extend it as a plugin in Microsoft Copilot for Microsoft 365.
+  title: Build Message Extension Agent for Microsoft 365 Copilot
+  description: In this tutorial, learn to build a bot-based message extension and extend it as an agent in Microsoft 365 Copilot.
   audience: Developer
   level: Beginner
-  ms.date: 11/14/2023
+  ms.date: 06/19/2024
   ms.topic: interactive-tutorial
-  nextTutorialHref: messaging-extensions/high-quality-message-extension.md
-  nextTutorialTitle: Bot-based message extension plugin guidelines
+  nextTutorialHref: messaging-extensions/build-bot-based-agent.md
+  nextTutorialTitle: Extend bot-based message extension as an agent for Microsoft 365 Copilot
   ms.custom: mvc
   ms.localizationpriority: high
 items:
@@ -16,23 +16,23 @@ items:
   content: |
     > [!NOTE]
     >
-    > * Bot-based search message extension plugin is available in [**public developer preview**](resources/dev-preview/developer-preview-intro.md).
-    > * Only bot-based search message extension can be extended as a plugin in Microsoft Copilot for Microsoft 365.
-    > * Plugins for Microsoft Copilot for Microsoft 365 are in preview and only work in M365 Chat in Microsoft Teams.
-    
+    > * The bot-based search message extension agent is available in [**public developer preview**](resources/dev-preview/developer-preview-intro.md).
+    > * Only a bot-based search message extension can be extended as an agent in Microsoft 365 Copilot.
+    > * Agents for Microsoft 365 Copilot are in preview and work only in Microsoft 365 Copilot in Microsoft Teams.
+  
     Start Microsoft Teams app development with your first Teams app. 
-    You can create a bot-based message extension plugin with Teams using JavaScript.  
+    You can create a bot-based message extension agent using JavaScript.  
     
     In this tutorial, you'll learn:
 
     - How to set up a new project with Teams Toolkit.
-    - How to build a bot-based message extension plugin.
+    - How to build a bot-based message extension agent.
     - How to deploy your app.
-    - Trigger your bot-based message extension plugin in M365 Chat.
+    - Trigger your bot-based message extension agent in Microsoft 365 Copilot.
 
-    This step-by-step guide helps you to build  bot-based message extension plugin with Teams Toolkit. You'll see the following output after you've completed this guide:
+    This step-by-step guide helps you to build bot-based message extension agent with Teams Toolkit. You'll see the following output after you've completed this guide:
 
-     :::image type="content" source="assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from M365 Chat.":::
+     :::image type="content" source="assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the agent prompt and the response from Microsoft 365 Copilot.":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -49,7 +49,7 @@ items:
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call all in one place.|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
    | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
-   | &nbsp; | Microsoft Copilot for Microsoft 365 | Copilot for Microsoft 365 is in public preview. Ensure that Copilot for Microsoft 365 is available for your organization. You have two ways to get a developer environment for Copilot: <br>- A sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)). <br>- An enterprise customer production environment with Microsoft Copilot for Microsoft 365 licenses. |
+   | &nbsp; | Microsoft 365 Copilot | Microsoft 365 Copilot is in public preview. Ensure that Microsoft 365 Copilot is available for your organization. You have two ways to get a developer environment for Microsoft 365 Copilot: <br>- A sandbox Microsoft 365 tenant with Microsoft 365 Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)). <br>- An enterprise customer production environment with Microsoft 365 Copilot licenses. |
    | **Optional** | &nbsp; | &nbsp; |
    | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
    | &nbsp; | [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) OR [React Developer Tools for Microsoft&nbsp;Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil) | A browser DevTools extension for the open-source React JavaScript library. |
@@ -75,7 +75,8 @@ items:
    1. Select **Install Pre-Release Version**.
 
       The Teams Toolkit :::image type="icon" source="assets/images/include-files/teams-toolkit-sidebar-icon.PNG"::: icon appears in the Visual Studio Code **Activity Bar** after it's installed.
-
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Install%20Teams%20Toolkit&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-messagingextension-searchcommand-plugin%3Ftutorial-step%3D1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-messagingextension-searchcommand-plugin.yml&documentVersionIndependentId=66a6601b-c22e-2304-9ee2-97514084c255&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
 
    ## Set up your Teams development tenant
 
@@ -102,7 +103,9 @@ items:
 
         > [!NOTE]
         > Contact your Teams administrator, if you don't find the option to upload a custom app.
-
+      > [!div class="nextstepaction"]
+      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Check%20for%20upload%20an%20app%20option&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-messagingextension-searchcommand-plugin%3Ftutorial-step%3D1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-messagingextension-searchcommand-plugin.yml&documentVersionIndependentId=66a6601b-c22e-2304-9ee2-97514084c255&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
+   
    ### Create a free Teams developer tenant (optional)
 
    If you don't have a Teams developer account, you can get it for free. Join the Microsoft 365 developer program!
@@ -115,7 +118,9 @@ items:
       :::image type="content" source="assets/images/include-files/microsoft-365.png" alt-text="Screenshot shows the Microsoft 365 Developer Program.":::
 
    1. Sign in to Teams using the administrator account you just set up. Verify that you've the **Upload a custom app** option in Teams.
-
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20a%20free%20Teams%20developer%20tenant%20(optional)&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-messagingextension-searchcommand-plugin%3Ftutorial-step%3D1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-messagingextension-searchcommand-plugin.yml&documentVersionIndependentId=66a6601b-c22e-2304-9ee2-97514084c255&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
+   
    ## Get a free Azure account
 
    If you want to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
@@ -130,8 +135,6 @@ items:
 
     Message extension capability lets you interact with a web service. Use the compose area, command box, or a messaging in Teams client to search and initiate actions in an external system.
 
-      :::image type="content" source="~/assets/images/teams-toolkit-v2/first-msgext/your-helloworld-app-msgext.png" alt-text="Diagram showing this app has three features. Message extension is highlighted.":::
-
     There are two types of Teams **message extensions**:
 
     - [Search commands](../msteams-platform/messaging-extensions/how-to/search-commands/define-search-command.md): You can search external systems. Then, you can insert its results into a message in the form of a card.
@@ -144,7 +147,7 @@ items:
     > [!NOTE]
     >
     > * Message extensions rely on bots to provide a dialog between the user and your code.
-    > * Only bot-based search message extension can be extended as a plugin for Copilot for Microsoft 365.
+    > * Only a bot-based search message extension can be extended as an agent for Microsoft 365 Copilot.
 
 
     In this tutorial, you'll learn:
@@ -156,7 +159,7 @@ items:
 
     If the prerequisites are in place, let's begin!
 
-     To create a bot-based message extension plugin, follow these steps:
+     To create a bot-based message extension agent, follow these steps:
 
     1. Open **Visual Studio Code**.
     1. Select the Teams Toolkit :::image type="icon" source="assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
@@ -217,7 +220,10 @@ items:
 
       ![Create a Teams app](~/assets/videos/create-bot-based-message-extension.gif)
       </details>
-
+    
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20your%20message%20extension%20project%20workspace&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-messagingextension-searchcommand-plugin%3Ftutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-messagingextension-searchcommand-plugin.yml&documentVersionIndependentId=66a6601b-c22e-2304-9ee2-97514084c255&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
+    
     ## Take a tour of the message extension app source code
 
     A message extension uses the Bot Framework. You use it to interact with your service via a conversation. After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
@@ -237,8 +243,8 @@ items:
 
     > [!Tip]
     > Familiarize yourself with bots and message extension outside of Teams before you integrate your app within Teams.
-
-- title: Build and run your first bot-based message extension plugin
+    
+- title: Build and run your first bot-based message extension agent
   durationInMinutes: 1
   content: |
 
@@ -262,7 +268,8 @@ items:
         :::image type="content" source="assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled-msg.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure.":::
 
         Now you're ready to build the app and run it locally!
-
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Sign%20in%20to%20your%20Microsoft%20365%20account&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-messagingextension-searchcommand-plugin%3Ftutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-messagingextension-searchcommand-plugin.yml&documentVersionIndependentId=66a6601b-c22e-2304-9ee2-97514084c255&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
     
 
     ## Build and run your app in the local environment
@@ -318,6 +325,8 @@ items:
 
         > [!NOTE]
         > If you want to extend your app to Outlook and Microsoft 365, you can choose to debug your app with Outlook and Microsoft 365 from RUN AND DEBUG dropdown in Visual Studio Code.
+      > [!div class="nextstepaction"]
+      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Build%20and%20run%20your%20app%20locally&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-messagingextension-searchcommand-plugin%3Ftutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-messagingextension-searchcommand-plugin.yml&documentVersionIndependentId=66a6601b-c22e-2304-9ee2-97514084c255&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
 
     ### Test your app
 
@@ -336,8 +345,9 @@ items:
     1. Select Send. The Adaptive Card is sent.
 
        :::image type="content" source="assets/images/Copilot/bot-based-VSC-plugin-send-adaptive-card.png" alt-text="Screenshot shows an example of a product sent in the chat as an Adaptive Card.":::
-    
-
+      
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20To%20run%20a%20search%20query&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-messagingextension-searchcommand-plugin%3Ftutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-messagingextension-searchcommand-plugin.yml&documentVersionIndependentId=66a6601b-c22e-2304-9ee2-97514084c255&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
     <br>
     <!-- markdownlint-disable MD033 -->
     <details>
@@ -346,29 +356,30 @@ items:
     To run your app in Teams, you must have a Microsoft 365 development account that allows custom app upload. You can learn more about custom app upload in the prerequisites section.
     </details>
 
-- title: Trigger your bot-based message extension plugin in M365 Chat
+- title: Trigger your bot-based message extension agent in Microsoft 365 Copilot
   durationInMinutes: 1
   content: |
-    To trigger the message extension in M365 Chat, follow these steps:
+    To trigger the message extension in Microsoft 365 Copilot, follow these steps:
 
     1. From the left pane, select **Teams Toolkit**.
     1. From the left pane, select **Run and Debug (Ctrl+Shift+D)**.
     1. Select Debug in **Copilot (Edge)** or **Debug in Copilot (Chrome)**.
-    1. Select **F5** to build and run your app in M365 Chat.
+    1. Select **F5** to build and run your app in Microsoft 365 Copilot.
     1. Go to **Microsoft Teams** > **Apps**.
-    1. Search for **M365 Chat** and open the app.
-    1. Select **Plugins**.
-    1. From the list of plugins, turn on the toggle for your app.
+    1. Search for **Copilot** and open the app.
+    1. Select **Panel** from the top-right corner.
+    1. From the list of agents, select the required agent from the right pane.
 
-       :::image type="content" source="assets/images/Copilot/bot-based-VSC-plugin-toggle.png" alt-text="Screenshot shows the Plugin option, list of plugins, and the toggle enabled for bot-based-ME-test-local plugin.":::
+       :::image type="content" source="assets/images/messaging-extension/message-extension-agents.png" alt-text="Screenshot shows the list of agents in Microsoft 365." lightbox="assets/images/messaging-extension/message-extension-agent.png":::
 
-    1. From the message compose area, send a message to M365 Chat to search for npm package information in Teams and Copilot. For example, find the npm package info on teamsfx-react in npm-searchlocal.
+    1. From the message compose area, send a message to Microsoft 365 Copilot to search for the latest update from Teams and Microsoft 365 Copilot.
 
-       :::image type="content" source="assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from M365 Chat.":::
+       :::image type="content" source="assets/images/Copilot/bot-based-message-extension-agent.png" alt-text="Screenshot shows the agent prompt and the response from Microsoft 365 Copilot." lightbox="assets/images/Copilot/bot-based-message-extension-agent.png":::
 
     > [!NOTE]
-    > This prompt might not always make M365 Chat include a response from your message extension. If it happens, try some other prompts or leave feedback to us by thumbing down the M365 Chat response and leave a message.
-
+    > This prompt might not always ensure a response from your message extension in Microsoft 365 Copilot. If this occurs, try different prompts or provide feedback by downvoting the Microsoft 365 Copilot response and leaving a message.
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Trigger%20your%20bot-based%20message%20extension%20agent%20in%20Microsoft%20365%20Copilot&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-messagingextension-searchcommand-plugin%3Ftutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-messagingextension-searchcommand-plugin.yml&documentVersionIndependentId=66a6601b-c22e-2304-9ee2-97514084c255&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
 
 - title: Deploy your first Teams app
   durationInMinutes: 1
@@ -397,7 +408,8 @@ items:
 
         Congratulations, you have signed in your Azure account! 
         Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.
-
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Sign%20in%20to%20your%20Azure%20account&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-messagingextension-searchcommand-plugin%3Ftutorial-step%3D5&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-messagingextension-searchcommand-plugin.yml&documentVersionIndependentId=66a6601b-c22e-2304-9ee2-97514084c255&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
     
     ## Deploy your app to Azure
 
@@ -444,6 +456,8 @@ items:
       As with provisioning, deployment takes some time. You can monitor the process by watching the dialogs in the bottom-right corner. After a few minutes, you see a completion notice.
 
     Now, you can use the same process to deploy your Bot and Message Extension apps to Azure.
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Deploy%20your%20app%20to%20Azure&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-messagingextension-searchcommand-plugin%3Ftutorial-step%3D5&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-messagingextension-searchcommand-plugin.yml&documentVersionIndependentId=66a6601b-c22e-2304-9ee2-97514084c255&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
 
     ## Run the deployed app
 
@@ -474,12 +488,15 @@ items:
       * The frontend application is deployed to an Azure Storage account configured for static web hosting.
 
       </details>
+    
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Run%20the%20deployed%20app&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-messagingextension-searchcommand-plugin%3Ftutorial-step%3D5&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-messagingextension-searchcommand-plugin.yml&documentVersionIndependentId=66a6601b-c22e-2304-9ee2-97514084c255&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
 
 - title: Congratulations!
   durationInMinutes: 1
   content: |
 
-    You've created a bot-based message extension and extended the message extension as a plugin in M365 Chat.
+    You've created a bot-based message extension and extended the message extension as an agent in Microsoft 365 Copilot.
 
     
 

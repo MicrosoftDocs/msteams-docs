@@ -1,6 +1,6 @@
 ---
 title: Build Dashboard with Widget & Graph API
-author: v-silakshmi
+author: surbhigupta
 description: Learn how to build dashboard tab app in Teams, customize layout, use a widget, make Graph API calls using Teams Toolkit, and embed a Power BI dashboard.
 ms.author: surbhigupta
 ms.localizationpriority: medium
@@ -38,12 +38,25 @@ To add a new dashboard, follow these steps:
 Create a file with the `.tsx` extension for your dashboard in the `src/dashboards` directory, for example, `YourDashboard.tsx`. Then, create a class that extends the `BaseDashboard class from`  
 [@microsoft/teamsfx-react](/javascript/api/%40microsoft/teamsfx-react).
 
+# [JavaScript](#tab/javascript1)
+
+```javascript
+// Create a dashboard class - https://learn.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/build-a-dashboard-tab-app#create-a-dashboard-class
+import { BaseDashboard } from "@microsoft/teamsfx-react";
+
+export default class SampleDashboard extends BaseDashboard { }
+```
+
+# [TypeScript](#tab/typescript1)
+
 ```typescript
 //YourDashboard.tsx
 import { BaseDashboard } from "@microsoft/teamsfx-react";
 
 export default class YourDashboard extends BaseDashboard<any, any> {}
 ```
+
+---
 
 > [!NOTE]
 > All methods are optional. If you don't override any method, the default dashboard layout is used.
@@ -64,6 +77,31 @@ The following code is an example to customize the dashboard layout:
   grid-template-columns: 6fr 4fr;
 }
 ```
+
+# [JavaScript](#tab/javascript5)
+
+```javascript
+import { BaseDashboard } from "@microsoft/teamsfx-react";
+import ListWidget from "../widgets/ListWidget";
+import ChartWidget from "../widgets/ChartWidget";
+
+export default class YourDashboard extends BaseDashboard {
+  styling() {
+    return "your-dashboard-layout";
+  }
+
+  layout() {
+    return (
+      <>
+        <ListWidget />
+        <ChartWidget />
+      </>
+    );
+  }
+}
+```
+
+# [TypeScript](#tab/typescript5)
 
 ```typescript
 import { BaseDashboard } from "@microsoft/teamsfx-react";
@@ -86,11 +124,27 @@ export default class YourDashboard extends BaseDashboard<any, any> {
 }
 ```
 
+---
+
 ### Add a route for the new dashboard tab app
 
 You must link your widget to a data source file. The widget picks up the data that's presented in the dashboard from the source file.
 
 Open the `src/App.tsx` file and add a route for the new dashboard. Here's an example:
+
+# [JavaScript](#tab/javascript6)
+
+```javascript
+import YourDashboard from "./dashboards/YourDashboard";
+
+export default function App() {
+  ...
+  <Route path="/yourdashboard" element={<yourdashboard />} />
+  ...
+}
+```
+
+# [TypeScript](#tab/typescript6)
 
 ```typescript
 import YourDashboard from "./dashboards/YourDashboard";
@@ -101,6 +155,8 @@ export default function App() {
   ...
 }
 ```
+
+---
 
 ### Modify manifest to add a new dashboard tab app
 
@@ -129,6 +185,28 @@ TeamsFx provides convenient methods to define and modify the layout of the dashb
     }
     ```
 
+    # [JavaScript](#tab/javascript2)
+
+    ```javascript
+    export default class SampleDashboard extends BaseDashboard {
+        styling() {
+          return "customize-class-name";
+        }
+      
+        layout() {
+          return (
+            <>
+              <ListWidget />
+              <ChartWidget />
+              <NewsWidget />
+            </>
+          );
+        }
+      }
+    ```
+
+    # [TypeScript](#tab/typescript2)
+
     ```typescript
     export default class SampleDashboard extends BaseDashboard<any, any> {
 
@@ -148,6 +226,8 @@ TeamsFx provides convenient methods to define and modify the layout of the dashb
     }
     ```
 
+    ---
+
    :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/customize-dashboard-layout.png" alt-text="Screenshot shows the customized dashboard layout.":::
 
 * Two widgets in a row with a width of 600 px and 1100 px. The height of the first line is the maximum height of its content, and the height of the second line is 400 px.
@@ -158,6 +238,28 @@ TeamsFx provides convenient methods to define and modify the layout of the dashb
       grid-template-columns: 600px 1100px;
     }
     ```
+
+    # [JavaScript](#tab/javascript3)
+
+    ```javascript
+    export default class SampleDashboard extends Dashboard {
+      styling() {
+        return "customize-class-name";
+      }
+      
+      layout() {
+        return (
+          <>
+            <ListWidget />
+            <ChartWidget />
+            <NewsWidget />
+          </>
+        );
+      }
+    }
+    ```
+
+    # [TypeScript](#tab/typescript3)
 
     ```typescript
         export default class SampleDashboard extends Dashboard {
@@ -177,35 +279,57 @@ TeamsFx provides convenient methods to define and modify the layout of the dashb
         }
     ```
 
+    ---
+
     :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/customize-dashboard-layout2.png" alt-text="Screenshot shows the customization of height and width of the dashboard layout.":::
 
 * Arrange two widgets in a column.
 
-  ```css
-  .one-column {
-      display: grid;
-      gap: 20px;
-      grid-template-rows: 1fr 1fr;
-    }
-  ```
+    ```css
+    .one-column {
+        display: grid;
+        gap: 20px;
+        grid-template-rows: 1fr 1fr;
+      }
+    ```
 
-  ```typescript
-    export default class SampleDashboard extends BaseDashboard<any, any> {
-      override layout(): JSX.Element | undefined {
+
+    # [JavaScript](#tab/javascript4)
+
+    ```javascript
+    export default class SampleDashboard extends BaseDashboard {
+      layout() {
         return (
           <>
-            <NewsWidget />
-            <div className="one-column">
-              <ListWidget />
-              <ChartWidget />          
-            </div>
+            <ListWidget />
+            <ChartWidget />
           </>
         );
       }
     }
-  ```
+    ```
 
-  :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/widget-customize.png" alt-text="Screenshot shows the two-widget customization.":::
+    # [TypeScript](#tab/typescript4)
+
+    ```typescript
+      export default class SampleDashboard extends BaseDashboard<any, any> {
+        override layout(): JSX.Element | undefined {
+          return (
+            <>
+              <NewsWidget />
+              <div className="one-column">
+                <ListWidget />
+                <ChartWidget />          
+              </div>
+            </>
+          );
+        }
+      }
+    ```
+
+    ---
+
+    :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/widget-customize.png" alt-text="Screenshot shows the two-widget customization.":::
 
 ### Dashboard tab app abstraction
 

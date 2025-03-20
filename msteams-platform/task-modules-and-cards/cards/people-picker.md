@@ -1,11 +1,11 @@
 ---
 title: Search Users with People Picker Control
 description: In this module, learn how to use the People Picker control in Adaptive Cards, its scenarios and implement people picker.
-localization_priority: Medium
+ms.localizationpriority: medium
 ms.topic: reference
-author: Rajeshwari-v
+author: surbhigupta
 ms.author: surbhigupta
-ms.date: 01/19/2023
+ms.date: 02/26/2025
 ---
 
 # People Picker in Adaptive Cards
@@ -73,7 +73,7 @@ The following image shows the reassignment scenario:
 
 ## Implement People Picker
 
-People Picker is implemented as an extension of the [Input.ChoiceSet](https://adaptivecards.io/explorer/Input.ChoiceSet.html) control. The input control includes the following selections:
+People Picker is implemented as an extension of the [Input.ChoiceSet](https://adaptivecards.microsoft.com/?topic=Input.ChoiceSet) control. The input control includes the following selections:
 
 * Dropdown, such as an expanded selection.
 * Radio button, such as a single selection.

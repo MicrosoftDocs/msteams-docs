@@ -79,11 +79,14 @@ conceptualContent:
           text: Extend Teams apps across Microsoft 365
         - url: /microsoft-365-copilot/extensibility/
           itemType: concept
-          text: Extend Microsoft Copilot for Microsoft 365
+          text: Extend Microsoft 365 Copilot
 
     # Card
     - title: Capabilities
       links:
+        - url: messaging-extensions/build-bot-based-agent.md
+          itemType: concept
+          text: Build bot-based search message extension agent      
         - url: /microsoftteams/platform/tabs/what-are-tabs
           itemType: overview
           text: Tabs
@@ -107,10 +110,10 @@ conceptualContent:
    # Card
     - title: Explore
       links:
-        - url: messaging-extensions/build-bot-based-plugin.md
-          itemType: concept
-          text: Build bot-based search message extension plugin
-        - url: bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
+        - url: whats-new.md
+          itemType: whats-new
+          text: What's new in Teams development
+        - url: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md
           itemType: concept
           text: Teams AI library
         - url: concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md
@@ -170,7 +173,7 @@ conceptualContent:
     # Card
     - title: Community
       links:
-        - url: https://aka.ms/M365PlatformAnnouncement
+        - url: https://github.com/MicrosoftDocs/msteams-docs/discussions/categories/announcements
           itemType: whats-new
           text: Microsoft Teams announcements
         - url: https://developer.microsoft.com/microsoft-teams/blogs/
@@ -222,6 +225,11 @@ tools:
       imageSrc: ./assets/icons/devp-logo.png
       url: /microsoftteams/platform/concepts/build-and-test/teams-developer-portal
     # Card
+    - title: Microsoft Copilot Studio
+    # imageSrc should be square in ratio with no whitespace
+      imageSrc: ./assets/icons/copilot-studio-icon.png
+      url: https://copilotstudio.preview.microsoft.com/
+    # Card
     - title: Microsoft Graph SDKs
     # imageSrc should be square in ratio with no whitespace
       imageSrc: ./assets/icons/graph-icon-1.png
@@ -241,9 +249,4 @@ tools:
     # imageSrc should be square in ratio with no whitespace
       imageSrc: ./assets/icons/logo_net.png
       url: https://github.com/Microsoft/botbuilder-dotnet/
-    # Card
-    - title: Yeoman generator for Microsoft Teams
-    # imageSrc should be square in ratio with no whitespace
-      imageSrc: ./assets/icons/Yeoman.png
-      url: https://github.com/OfficeDev/generator-teams 
 # additionalContent (optional)

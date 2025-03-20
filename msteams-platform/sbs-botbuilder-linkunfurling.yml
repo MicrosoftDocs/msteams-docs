@@ -5,7 +5,7 @@ metadata:
   description: In this module, learn how to create and set up bot for Teams link unfurling to get card response and receive an invoke activity.
   audience: Developer
   level: Beginner
-  ms.date: 01/20/2022
+  ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: messaging-extensions/how-to/link-unfurling.md
   nextTutorialTitle: Read more on link unfurling
@@ -46,7 +46,10 @@ items:
   durationInMinutes: 1
   content: | 
 
-   [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)] 
+   [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
+    
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Set+up+local+environment&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-botbuilder-linkunfurling%3Ftabs%3Ddev%252Cvs%26tutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-botbuilder-linkunfurling.yml&documentVersionIndependentId=a4b1edce-aad9-e8ba-4fcf-ed7937a870fb&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 - title: Register Microsoft Entra app 
   durationInMinutes: 5
@@ -61,41 +64,79 @@ items:
 
     [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
 
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+App+registration&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-botbuilder-linkunfurling%3Ftabs%3Ddev%252Cvs%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-botbuilder-linkunfurling.yml&documentVersionIndependentId=a4b1edce-aad9-e8ba-4fcf-ed7937a870fb&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
     **Create a tunnel**
 
       # [dev tunnel](#tab/dev)
 
       [!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
 
+      > [!div class="nextstepaction"]
+      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+tunnel+using+dev+tunnel&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-botbuilder-linkunfurling%3Ftabs%3Ddev%252Cvs%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-botbuilder-linkunfurling.yml&documentVersionIndependentId=a4b1edce-aad9-e8ba-4fcf-ed7937a870fb&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
       # [ngrok](#tab/ngrok)
       
       [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
 
+      > [!div class="nextstepaction"]
+      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+tunnel+using+ngrok&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-botbuilder-linkunfurling%3Ftabs%3Dngrok%252Cvs%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-botbuilder-linkunfurling.yml&documentVersionIndependentId=a4b1edce-aad9-e8ba-4fcf-ed7937a870fb&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
       ---     
 
     [!INCLUDE [Azure web authentication](includes/get-started/azure-web-authentication.md)]
+
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+a+web+authentication&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-botbuilder-linkunfurling%3Ftabs%3Ddev%252Cvs%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-botbuilder-linkunfurling.yml&documentVersionIndependentId=a4b1edce-aad9-e8ba-4fcf-ed7937a870fb&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
     
     [!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
 
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+client+secret&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-botbuilder-linkunfurling%3Ftabs%3Ddev%252Cvs%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-botbuilder-linkunfurling.yml&documentVersionIndependentId=a4b1edce-aad9-e8ba-4fcf-ed7937a870fb&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
     [!INCLUDE [Client secret](includes/get-started/azure-api-permissions.md)]
+
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+API+permission&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-botbuilder-linkunfurling%3Ftabs%3Ddev%252Cvs%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-botbuilder-linkunfurling.yml&documentVersionIndependentId=a4b1edce-aad9-e8ba-4fcf-ed7937a870fb&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
     [!INCLUDE [Application ID URI](includes/get-started/application-id-uri.md)]
 
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+Application+ID+URI&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-botbuilder-linkunfurling%3Ftabs%3Ddev%252Cvs%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-botbuilder-linkunfurling.yml&documentVersionIndependentId=a4b1edce-aad9-e8ba-4fcf-ed7937a870fb&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
     [!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
 
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+a+scope&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-botbuilder-linkunfurling%3Ftabs%3Ddev%252Cvs%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-botbuilder-linkunfurling.yml&documentVersionIndependentId=a4b1edce-aad9-e8ba-4fcf-ed7937a870fb&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
     [!INCLUDE [Azure client application](includes/get-started/azure-client-application.md)]
+
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+client+application&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-botbuilder-linkunfurling%3Ftabs%3Ddev%252Cvs%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-botbuilder-linkunfurling.yml&documentVersionIndependentId=a4b1edce-aad9-e8ba-4fcf-ed7937a870fb&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 - title: Create your bot 
   durationInMinutes: 1
   content: | 
-    [!INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource.md)]    
+    [!INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource.md)] 
+
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+an+Azure+bot+resource&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-botbuilder-linkunfurling%3Ftabs%3Ddev%252Cvs%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-botbuilder-linkunfurling.yml&documentVersionIndependentId=a4b1edce-aad9-e8ba-4fcf-ed7937a870fb&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)   
 
     [!INCLUDE [Teams channel](includes/get-started/add-teams-channel.md)]
 
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+a+Teams+channel&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-botbuilder-linkunfurling%3Ftabs%3Ddev%252Cvs%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-botbuilder-linkunfurling.yml&documentVersionIndependentId=a4b1edce-aad9-e8ba-4fcf-ed7937a870fb&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
     [!INCLUDE [Messaging endpoint](includes/get-started/messaging-endpoint.md)]
 
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+add+a+messaging+endpoint&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-botbuilder-linkunfurling%3Ftabs%3Ddev%252Cvs%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-botbuilder-linkunfurling.yml&documentVersionIndependentId=a4b1edce-aad9-e8ba-4fcf-ed7937a870fb&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
     [!INCLUDE [Service connection](includes/get-started/oauth-connection-settings.md)]
-            
+
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+an+OAuth+connection+settings&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-botbuilder-linkunfurling%3Ftabs%3Ddev%252Cvs%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-botbuilder-linkunfurling.yml&documentVersionIndependentId=a4b1edce-aad9-e8ba-4fcf-ed7937a870fb&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 - title: Set up app settings and manifest files
   durationInMinutes: 1
@@ -168,6 +209,9 @@ items:
           A webpage opens with a message **Your bot is ready!**
 
           :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/appisready.png" alt-text="Screenshot showing the webpage saying bot is ready.":::
+      
+      > [!div class="nextstepaction"]
+      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Build+and+run+the+service+using+Visual+Studio&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-botbuilder-linkunfurling%3Ftabs%3Ddev%252Cvs%26tutorial-step%3D6&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-botbuilder-linkunfurling.yml&documentVersionIndependentId=a4b1edce-aad9-e8ba-4fcf-ed7937a870fb&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
                   
     # [Command line](#tab/cli)
 
@@ -177,6 +221,9 @@ items:
     dotnet run
     ```
     :::image type="content" source="~/assets/images/Teams-link-unfurling/dotnet-run-command.png" alt-text="Screenshot showing the dotnet run in bash.":::
+
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Build+and+run+the+service+using+Command+line&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-botbuilder-linkunfurling%3Ftabs%3Dcli%252Cvs%26tutorial-step%3D6&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-botbuilder-linkunfurling.yml&documentVersionIndependentId=a4b1edce-aad9-e8ba-4fcf-ed7937a870fb&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
       ---
 
@@ -205,8 +252,12 @@ items:
       
     1. Select **Add**.
 
-       :::image type="content" source="~/assets/images/Teams-link-unfurling/addapp.png" alt-text="Screenshot shows the adding of app.":::
-         
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/addapp.png" alt-text="Screenshot of app details dialog with Add option highlighted.":::
+
+    1. Select **Open**.
+
+       :::image type="content" source="~/assets/images/Teams-link-unfurling/openapp.png" alt-text="Screenshot of scope option dialogue with Open option highlighted.":::
+
     1. In the compose message area, enter `https://www.BotFramework.com`.
 
        The link unfurls as shown in the following image:
@@ -216,6 +267,9 @@ items:
     1. Select **Send**.
 
        :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/result-1.png" alt-text="Screenshot showing the output.":::
+   
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Upload+Link+Unfurling+app&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-botbuilder-linkunfurling%3Ftabs%3Dcli%252Cvs%26tutorial-step%3D7&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-botbuilder-linkunfurling.yml&documentVersionIndependentId=a4b1edce-aad9-e8ba-4fcf-ed7937a870fb&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
  
 - title: Complete challenge
   durationInMinutes: 1

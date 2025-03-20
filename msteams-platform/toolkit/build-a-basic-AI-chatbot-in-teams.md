@@ -5,12 +5,12 @@ description: Learn how to build and customize a basic AI chatbot using Teams AI 
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
-ms.date: 05/21/2024
+ms.date: 09/16/2024
 ---
 
 # Build a basic AI chatbot
 
-The AI chatbot template showcases a bot app, similar to ChatGPT, that responds to user questions and allows users to interact with the AI bot in  Microsoft Teams. [Teams AI library](../bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md) is used to build the app template, providing the capabilities to create AI-based Teams applications.
+The AI chatbot template showcases a bot app, similar to ChatGPT, that responds to user questions and allows users to interact with the AI bot in  Microsoft Teams. [Teams AI library](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md) is used to build the app template, providing the capabilities to create AI-based Teams applications.
 
 ## Prerequisites
 
@@ -32,9 +32,9 @@ The AI chatbot template showcases a bot app, similar to ChatGPT, that responds t
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/create-new-app.png" alt-text="Screenshot shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
 
-1. Select **Custom Copilot**.
+1. Select **Custom Engine Agent**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/custom-copilot.png" alt-text="Screenshot shows the option to select custom Copilot as the new project to create.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/custom-copilot.png" alt-text="Screenshot shows the option to select custom engine agent as the new project to create.":::
 
 1. Select **Basic AI Chatbot**.
 
@@ -330,7 +330,7 @@ You can add customizations on top of the basic app to build complex scenarios as
         ```
         ---
     
-    * Maximum number of history tokens. Configure `max_conversation_history_tok`ens when initializing `PromptManager`.
+    * Maximum number of history tokens. Configure `max_conversation_history_tokens` when initializing `PromptManager`.
     
         # [JavaScript](#tab/javaScript4)
         
@@ -385,5 +385,5 @@ You can add customizations on top of the basic app to build complex scenarios as
 
 ## See also
 
-[Teams AI library](../bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md)
+[Teams AI library](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md)
 
