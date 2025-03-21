@@ -106,7 +106,7 @@ Apps must function cross-tenants in installation and usage. The following table 
 
 > [!NOTE]
 >
-> * Apps in federated group chats with external users aren't available in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](concepts/cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](~/concepts/sovereign-cloud.md) environments.
+> * Apps in federated group chats with external users aren't available in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](../cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](~/concepts/sovereign-cloud.md) environments.
 > * Apps aren't supported in one-on-one chats, channels, or meetings with external users.
 
 Teams supports the use of apps in federated group chats with external users. External users can't add, update, or remove apps from the group chat. Only the host of the group chat can add, update, or remove apps. However, all members of the chat, including external users, can use apps under the following conditions:
