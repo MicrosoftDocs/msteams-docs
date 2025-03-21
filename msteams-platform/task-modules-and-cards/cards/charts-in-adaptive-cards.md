@@ -8,6 +8,8 @@ ms.date: 11/07/2024
 
 # Charts in Adaptive Cards
 
+[!INCLUDE [adaptive-card-redirect](../../includes/adaptive-card-redirect.md)]
+
 You can visually represent data through charts in Adaptive Cards. You can use charts for performance dashboards, budget allocations, project management, customer insights, and more.
 
 ## Donut chart

@@ -8,6 +8,8 @@ ms.date: 01/08/2023
 
 # Cards
 
+[!INCLUDE [adaptive-card-redirect](../includes/adaptive-card-redirect.md)]
+
 A card is a user interface (UI) container for short or related pieces of information. Cards can have multiple properties and attachments and can include buttons, which trigger [card actions](~/task-modules-and-cards/cards/cards-actions.md). Using cards, you can organize information into groups and give users the opportunity to interact with specific parts of the information.
 
 The bots for Microsoft Teams support the following types of cards:
