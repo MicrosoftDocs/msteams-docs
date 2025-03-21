@@ -313,7 +313,7 @@ The following code is an example of sharing app content to meeting stage view an
 
 ## Stop share action
 
-When a user is presenting the screen, you can programmatically control the stop-sharing behavior by converting the **Share** button into a **Stop Sharing** button once the sharing has started. This capability can allow users to start and stop sharing from the same button in the app's side panel.
+When a user is presenting the screen, you can programmatically control the stop-sharing behavior by converting the **Share** button into a **Stop Sharing** button once the sharing has started. This capability allows users to start and stop sharing from the same button in the app's side panel.
 
 The `stopSharingAppContentToStage` API allows you to manage the stop-sharing behavior for specific parts of your app on the meeting stage. The API is available through the TeamsJS library.
 
