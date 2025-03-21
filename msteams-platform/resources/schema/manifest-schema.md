@@ -3,7 +3,7 @@ title: App Manifest Reference
 description: In this article, you'll have the latest version of the public manifest schema for Microsoft Teams reference, schema, and sample full manifest.
 ms.topic: reference
 ms.localizationpriority: high
-ms.date: 1/30/2025
+ms.date: 03/20/2025
 --- 
 
 # App manifest
