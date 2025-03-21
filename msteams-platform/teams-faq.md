@@ -1213,7 +1213,6 @@ Before provision, the toolkit asks you if you want to create a new resource grou
 <summary>How can I provision a SharePoint-based app?</summary>
 
 You can do so by following [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4).
-
 <br>
 &nbsp;
 </details>
