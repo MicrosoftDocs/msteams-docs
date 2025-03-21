@@ -2,10 +2,10 @@
 title: Best Practices for Teams Mobile Apps
 author: surbhigupta
 ms.author: surbhigupta
-description: Learn about the best practices to optimize your tab app on Teams mobile such as using service workers and minimizing web page size with performance audits.
+description: Learn how to optimize your tab app performance on Teams mobile with best practices such as using service workers and performance audits.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.date: 03/20/2025
+ms.date: 03/21/2025
 ---
 
 # Best practices for Teams mobile apps
