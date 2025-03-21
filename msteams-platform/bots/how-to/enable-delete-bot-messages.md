@@ -20,66 +20,79 @@ Here are some use cases for enabling the users of a bot app to delete bot messag
 
 ## Delete bot message user experience
 
-All users in any chat containing Group Copilot should have the ability to delete messages from Chat Copilot using the overflow **Delete** option. After a user deletes a bot message, it's removed for all users. The deleted message is replaced with an indication that the message is deleted along with the name of the user who deleted it.
+All users in any chat containing Group Copilot can delete messages in the following scopes:
+
+- personal
+- group chat
+- channel
+- meeting chat
+
+If a bot's response is inaccurate or compromises sensitive information, any user can delete the bot using the overflow **Delete** option.
+
+[Add gif file]
+
+After a user deletes a bot message, it's removed for all users. The deleted message is replaced with an indication that the message is deleted along with the name of the user who deleted it.
+
+[Add image of deleted message]
 
 The users of the group chat have the ability to undo the deletion, however, the undoing a delete message is available for a limited time.
+
+[Add image of Undo button]
 
 ## Enable users to delete bot messages
 
 To enable the users to delete bot messages, you need to:
 
-- Opt in for user’s deleting bot messages in app manifest
-
-- Ensure that the admin must enable users to delete messages in the tenant where the bot app is installed
+- Opt in for user’s deleting bot messages in app manifest.
+- Ensure that the Admin enables bot users to delete messages in the tenant where the bot app is installed.
 
 ### Update app manifest
 
+Enabling bot app users to delete bot messages is an optional feature for a bot.
 To update the app manifest for your bot app:
 
 1. Open the app manifest file.
-1. Update the following properties in the `manifest.json`.
+1. Update the `allowBotMessageDeleteByUser` property in the `manifest.json` to `true`.
 
-```json
+    The following code snippet shows an example of app manifest update:
 
-{ 
- 
- 
-  id: "mockId", 
- 
-  name: "mockName", 
- 
-  largeImageUrl: "mockIcon", 
- 
-  validDomains: null, 
- 
-  externalId: null, 
- 
-  bots: [{   
- 
-        id: "testId", 
- 
-        scopes: [], 
- 
-        capabilities: { 
- 
-          __typename: "BotCapabilities", 
- 
-          isNotificationOnly: true, 
- 
-          supportsFiles: false, 
- 
-        }, 
- 
-    allowBotMessageDeleteByUser: true
- 
-    }],
- 
-  manifestVersion: null, 
- 
-}   
-
-```
-
-  where,
-    - `property-name` is for [reason]
-    - `property-name` is for [reason]
+    ```json
+    
+    { 
+     
+     
+      id: "Id", 
+     
+      name: "Contoso", 
+     
+      largeImageUrl: "Contoso", 
+     
+      validDomains: null, 
+     
+      externalId: null, 
+     
+      bots: [{   
+     
+            id: "bot-id", 
+     
+            scopes: [], 
+     
+            capabilities: { 
+     
+              __typename: "BotCapabilities", 
+     
+              isNotificationOnly: true, 
+     
+              supportsFiles: false, 
+     
+            }, 
+     
+        allowBotMessageDeleteByUser: true
+     
+        }],
+     
+      manifestVersion: null, 
+     
+    }   
+    
+    ```
