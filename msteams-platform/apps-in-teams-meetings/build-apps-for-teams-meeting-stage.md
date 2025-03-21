@@ -317,7 +317,7 @@ When a user is presenting the screen, you can programmatically control the stop-
 
 The `stopSharingAppContentToStage` API allows you to manage the stop-sharing behavior for specific parts of your app on the meeting stage. The API is available through the TeamsJS library.
 
-The response body for `stopSharingAppContentToStage` API is:
+The following code is an example of `stopSharingAppContentToStage` API:
 
 ```javascript
 microsoftTeams.meeting.stopSharingAppContentToStage((err, result) => {
