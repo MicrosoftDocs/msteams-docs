@@ -74,6 +74,7 @@ To enable SSO authentication for API-based message extension, follow these steps
     > [!NOTE]
     > You don't need to enter **Redirect URI** for enabling SSO for an API-based message extension app.
 
+
 1. Select **Register**.
     A message pops up on the browser stating that the app was created.
 
@@ -86,6 +87,9 @@ To enable SSO authentication for API-based message extension, follow these steps
 1. Note and save the app ID from **Application (client) ID** to update the app manifest later.
 
     Your app is registered in Microsoft Entra ID. You now have the app ID for your API-based message extension app.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Register+a+new+app+in+Microsoft+Entra+ID&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fmessaging-extensions%2Fapi-based-microsoft-entra%3Ftabs%3Dtoken-v2%23register-a-new-app-in-microsoft-entra-id&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fmessaging-extensions%2Fapi-based-microsoft-entra.md&documentVersionIndependentId=86a1363d-83c7-8353-c2e4-18cd8f648d71&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Configure scope for access token
 
@@ -137,6 +141,9 @@ To configure scope and authorize trusted client applications, you must:
 
 1. Note and save the app ID URI to update the app manifest later.
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+App+ID+URI&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fmessaging-extensions%2Fapi-based-microsoft-entra%3Ftabs%3Dtoken-v2%23app-id-uri&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fmessaging-extensions%2Fapi-based-microsoft-entra.md&documentVersionIndependentId=86a1363d-83c7-8353-c2e4-18cd8f648d71&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ### Configure API scope
 
 > [!NOTE]
@@ -171,6 +178,8 @@ To configure scope and authorize trusted client applications, you must:
 
     :::image type="content" source="../assets/images/Copilot/api-based-me-entra-sso-scopes.png" alt-text="Screenshot shows an example of the scope added to the app in Azure portal.":::
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Configure+API+scope&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fmessaging-extensions%2Fapi-based-microsoft-entra%3Ftabs%3Dtoken-v2%23configure-api-scope&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fmessaging-extensions%2Fapi-based-microsoft-entra.md&documentVersionIndependentId=86a1363d-83c7-8353-c2e4-18cd8f648d71&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 ### Configure authorized client application
 
 1. Move through the **Expose an API** page to the **Authorized client application** section and select **+ Add a client application**.
@@ -210,6 +219,9 @@ To configure scope and authorize trusted client applications, you must:
 > You can authorize more than one client application. Repeat the steps of this procedure for configuring another authorized client application.
 
 You've successfully configured app scope, permissions, and client applications. Ensure that you note and save the app ID URI. Next, you configure the access token version.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Configure+authorized+client+application&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fmessaging-extensions%2Fapi-based-microsoft-entra%3Ftabs%3Dtoken-v2%23configure-authorized-client-application&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fmessaging-extensions%2Fapi-based-microsoft-entra.md&documentVersionIndependentId=86a1363d-83c7-8353-c2e4-18cd8f648d71&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Authenticate token
 
@@ -336,6 +348,9 @@ To configure app manifest:
 1. Save the app manifest file.
 
 Congratulations! You've enabled SSO for your API-based message extensions.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Update+app+manifest&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fmessaging-extensions%2Fapi-based-microsoft-entra%3Ftabs%3Dtoken-v2%23update-app-manifest&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fmessaging-extensions%2Fapi-based-microsoft-entra.md&documentVersionIndependentId=86a1363d-83c7-8353-c2e4-18cd8f648d71&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## See also
 
