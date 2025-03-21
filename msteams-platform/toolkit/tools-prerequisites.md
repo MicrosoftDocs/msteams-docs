@@ -44,6 +44,13 @@ Ensure that you have the following accounts before you start building your Teams
 |[Azure account](#azure-account)|Back-end resources on Azure.| JavaScript, TypeScript, SPFx, and C# or Blazor. |
 |[SharePoint collection site administrator account](#sharepoint-collection-site-administrator-account) |Deployment for hosting.| SPFx. |
 
+> [!NOTE]
+> If your Microsoft 365 account has multiple tenants, you can switch to any tenant in Teams Toolkit to deploy your Teams app. Following are the limitations:
+>
+> * You can use Teams Toolkit to deploy a Teams app to a guest tenant of your Microsoft 365 account. However, you might not be able to see your Teams app deployed to non-home tenants in the Teams Developer Portal. This is a limitation of the Teams Developer Portal.
+> * Publishing a Teams app for non-home tenants is not supported in Teams.
+> * Deploy an app to a non-home tenant is only supported for apps running in Teams. Apps running on other platforms, such as Outlook or Office.com, can't be deployed to non-home tenants.
+
 ### Microsoft 365 developer program
 
 > [!NOTE]
