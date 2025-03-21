@@ -1172,7 +1172,7 @@ Congratulations! You've successfully created a Teams tab with offline functional
 
 ## Best practices for tabs in Teams mobile
 
-To learn how to optimize your tabs in the Teams Android and iOS clients, see [best practices for Teams mobile](../../resources/teams-mobile-best-practices.md).
+To learn how to optimize your tab's performance in the Teams Android and iOS clients, see [best practices for Teams mobile](../../resources/teams-mobile-best-practices.md).
 
 ## Code sample
 
