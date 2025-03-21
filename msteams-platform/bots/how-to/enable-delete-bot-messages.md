@@ -31,22 +31,27 @@ If a bot's response is inaccurate or compromises sensitive information, any user
 
 [Add gif file]
 
-After a user deletes a bot message, it's removed for all users. The deleted message is replaced with an indication that the message is deleted along with the name of the user who deleted it.
+After a message is deleted:
 
-[Add image of deleted message]
+- When the user deletes the message, the bot app prompts the user to submit feedback about the reason of deleting the bot message. In case the reason of deleting the bot message is bot performance, the feedback is used to improve bot performance.
+- The deleted message is removed for all users.
+- An indication appears in stead of the deleted message along with the name of the user who deleted it.
 
-When the user deletes the message, the bot app prompts the user to submit feedback about the reason of deleting the bot message. In case the reason of deleting the bot message is bot performance, the feedback is used to improve bot performance.
+  :::image type="content" source="../../assets/images/bots/message-delete-undo.png" alt-text="Image shows the indication of deleted message and the Undo button.":::
 
 The users of the group chat have the ability to undo the deletion, however, the undoing a delete message is available for a limited time.
 
 [Add image of Undo button]
 
+> [!NOTE]
+> The users aren't able to undo a deleted bot message on the mobile client.
+
 ## Enable users to delete bot messages in your bot app
 
 To enable the users to delete bot messages, you need to:
 
-- Opt in for user’s deleting bot messages in app manifest.
-- Ensure that the Admin enables bot users to delete messages in the tenant where the bot app is installed.
+- [Update app manifest](#update-app-manifest)
+- [Enable users to delete message in Admin Center](#enable-users-to-delete-bot-messages-in-admin-center)
 
 ### Update app manifest
 
@@ -80,3 +85,8 @@ To update the app manifest for your bot app:
     ```
 
 ### Enable users to delete bot messages in Admin Center
+
+The Admin must enable the bot users to delete messages in the tenant where the bot app is installed.
+
+[Add image from Admin center]
+[Add link to Admin center docs]
