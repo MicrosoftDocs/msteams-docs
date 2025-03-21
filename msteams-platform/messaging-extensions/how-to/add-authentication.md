@@ -5,8 +5,8 @@ description: Enable authentication in Teams message extension app using third-pa
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
-ms.date: 03/02/2025
----
+ms.date: 03/11/2025
+
 # Add third party authentication to your message extension
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
