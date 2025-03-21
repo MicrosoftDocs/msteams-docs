@@ -698,7 +698,7 @@ Agents customize and extend the Microsoft 365 Copilot experience by bringing mor
 
 | Sample name | Description | TypeScript |
 |----------------|-----------------|--------------|
-| Northwind inventory message extension | This sample demonstrates how to use a Teams message extension as an agent in Microsoft 365 Copilot. | [View](https://github.com/OfficeDev/Copilot-for-M365-Plugins-Samples/tree/main/samples/msgext-northwind-inventory-ts) |
+| Northwind inventory message extension | This sample implements a Teams message extension that can be used as a plugin for Microsoft 365 Copilot. The message extension allows users to query the Northwind Database. | [View](https://github.com/OfficeDev/Copilot-for-M365-Plugins-Samples/tree/main/samples/msgext-northwind-inventory-ts) |
 
 ## See also
 

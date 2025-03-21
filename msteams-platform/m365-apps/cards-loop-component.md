@@ -84,7 +84,7 @@ The following JSON payload is an example of an Adaptive Card-based Loop componen
 
 |**Sample name** | **Description** | **Node.js** | **.NET** | **Manifest** |
 |----------------|-----------------|--------------|--------------|--------------|
-| Message extension with Adaptive Card-based Loop component | This sample demonstrates how to create a message extension with an Adaptive Card-based Loop component.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-unfurling-ac-loop-components/nodejs)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-unfurling-ac-loop-components/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-unfurling-ac-loop-components/nodejs/demo-manifest/msgext-unfurling-ac-loop-components.zip) |
+| Message extension with Adaptive Card-based Loop component | This sample demonstrates a Node.js Messaging Extension for Microsoft Teams that utilizes adaptive card-based loop components, enabling link unfurling and dynamic interactions within the compose area. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-unfurling-ac-loop-components/nodejs)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-unfurling-ac-loop-components/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-unfurling-ac-loop-components/nodejs/demo-manifest/msgext-unfurling-ac-loop-components.zip) |
 
 ## See also
 

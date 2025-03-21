@@ -209,8 +209,8 @@ modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
 ## Code sample
 
 | **Sample name** | **Description** |**.NET** |**Node.js** |
-|-----------------|-----------------|----------------|
-| Prompt starters bot | This sample code describes the implementation of prompt starters for bot through `commands` property in your bot's app manifest. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-commands-menu/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-commands-menu/nodejs) |
+|-----------------|-----------------|----------------|----------------|
+| Prompt starters bot | Microsoft Teams Create Commands Menu | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-commands-menu/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-commands-menu/nodejs) |
 
 ## See also
 

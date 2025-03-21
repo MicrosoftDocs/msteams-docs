@@ -260,7 +260,7 @@ Unless you created your app specifically for Teams, you probably have features t
 
 |Sample name | Description | TypeScript|
 |----------------|--------------------------------------------------------|--------------|
-| Meeting app | Sample to show navbar-menu in personal tab app. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-navbar-menu/ts) |
+| Nav-bar menu in personal tab | 	This sample application illustrates the use of a navbar menu in personal tabs within Microsoft Teams, enabling users to access multiple actions seamlessly. Designed for mobile clients, it includes features like an overflow menu for additional actions, enhancing user navigation and experience. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-navbar-menu/ts) |
 
 ## See also
 
