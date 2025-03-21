@@ -29,7 +29,17 @@ All users in any chat containing Group Copilot can delete messages in the follow
 
 If a bot's response is inaccurate or compromises sensitive information, any user can delete the bot using the overflow **Delete** option.
 
+# [Deleting messages in personal chat](#tab/personal)
+
 [Add gif file]
+
+# [Deleting messages in group chat](#tab/group)
+
+[Add gif file]
+
+# [Deleting messages in mobile device](#tab/mobile)
+
+:::image type="content" source="../../assets/images/bots/delete-message-mobile.png" alt-text="Image shows the user experience of deleting a bot message in a mobile client":::
 
 After a message is deleted:
 
