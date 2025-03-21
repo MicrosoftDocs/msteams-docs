@@ -389,6 +389,8 @@
   - name: Create a tab
     href: tabs/how-to/create-personal-tab.md
     displayName: App generator, Reorder static personal tabs, channel, or group custom tab, offline tab
+  - name: Initialization process for tab apps
+    href: tabs/how-to/app-initialization-process.md
   - name: Get context for your tab
     href: tabs/how-to/access-teams-context.md
     displayName: getContext, entityId, groupId, User context, authentication flow from Microsoft Entra ID, retrieve context, theme changes
