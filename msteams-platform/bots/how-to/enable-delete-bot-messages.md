@@ -35,11 +35,13 @@ After a user deletes a bot message, it's removed for all users. The deleted mess
 
 [Add image of deleted message]
 
+When the user deletes the message, the bot app prompts the user to submit feedback about the reason of deleting the bot message. In case the reason of deleting the bot message is bot performance, the feedback is used to improve bot performance.
+
 The users of the group chat have the ability to undo the deletion, however, the undoing a delete message is available for a limited time.
 
 [Add image of Undo button]
 
-## Enable users to delete bot messages
+## Enable users to delete bot messages in your bot app
 
 To enable the users to delete bot messages, you need to:
 
@@ -57,42 +59,24 @@ To update the app manifest for your bot app:
     The following code snippet shows an example of app manifest update:
 
     ```json
-    
     { 
-     
-     
       id: "Id", 
-     
       name: "Contoso", 
-     
       largeImageUrl: "Contoso", 
-     
       validDomains: null, 
-     
       externalId: null, 
-     
-      bots: [{   
-     
+      bots: [{ 
             id: "bot-id", 
-     
             scopes: [], 
-     
             capabilities: { 
-     
               __typename: "BotCapabilities", 
-     
               isNotificationOnly: true, 
-     
               supportsFiles: false, 
-     
             }, 
-     
         allowBotMessageDeleteByUser: true
-     
         }],
-     
       manifestVersion: null, 
-     
     }   
-    
     ```
+
+### Enable users to delete bot messages in Admin Center
