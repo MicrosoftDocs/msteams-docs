@@ -333,6 +333,9 @@ items:
     1. [Deploy your first app](#deploy-your-app-to-sharepoint)
     1. [Distribute the app package on SharePoint](#distribute-the-app-package-on-sharepoint)
 
+    > [!Note]
+    > Building a Teams app using SharePoint Framework with Teams Toolkit does not have direct integration with the Microsoft Entra admin center.
+
     ## Deploy your app to SharePoint
 
     Ensure a SharePoint App Catalog exists in your deployment. If it doesn't exist, [create one](/sharepoint/use-app-catalog). It may take up to 15 minutes for the app catalog to be created.
