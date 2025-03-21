@@ -1,6 +1,6 @@
 ---
 title: Use Share in Meeting for Documents/Apps
-description: Know about the prerequisites & learn how to add the share in meeting button, which allows users to share any document or third-party app to the meeting stage.
+description: Learn about the prerequisites and how to add the share in meeting button, which allows users to share any document or third-party app to the meeting stage.
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: Share in Meeting
