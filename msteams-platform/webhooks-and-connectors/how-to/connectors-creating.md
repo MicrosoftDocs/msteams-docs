@@ -4,6 +4,7 @@ author: laujan
 description: Learn to create and test connectors for Microsoft 365 Groups with .NET and Node.js samples, generate notifications to Teams channel, and add connector to Teams app.
 ms.localizationpriority: medium
 ms.topic: conceptual
+ms.owner: hantony
 ms.date: 04/16/2023
 ---
 # Create connectors for Microsoft 365 Groups
@@ -12,10 +13,10 @@ ms.date: 04/16/2023
 
 With Microsoft Teams apps, you can add your existing connector for Microsoft 365 Groups or build a new one within Teams. For more information, see [build your own connector](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector).
 
-See the following video to learn how to create an connectors for Microsoft 365 Groups:
+See the following video to learn how to create connectors for Microsoft 365 Groups:
 <br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzv]
+> [!VIDEO 7e9a36c0-fbb7-4848-9591-b98925696cfd]
 <br>
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]

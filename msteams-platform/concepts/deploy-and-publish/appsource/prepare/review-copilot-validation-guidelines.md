@@ -5,7 +5,8 @@ ms.topic: conceptual
 author: v-preethah
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.date: 09/16/2024
+ms.owner: ginobuzz
+ms.date: 02/25/2025
 ms.collection: ce-skilling-ai-copilot
 ---
 
@@ -19,7 +20,7 @@ ms.collection: ce-skilling-ai-copilot
 > * Ensure that Microsoft 365 Copilot is available for your organization. You have two ways to get a developer environment for Microsoft 365 Copilot:
 >   * A sandbox Microsoft 365 tenant with Microsoft 365 Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 >   * An enterprise customer production environment with Microsoft 365 Copilot licenses.
-> * If you want to configure a custom Graph connector for Microsoft 365 Copilot, ensure that you adhere to the [guidelines to create or upgrade Graph connectors](/graph/connecting-external-content-deploy-teams?branch=main#make-your-microsoft-graph-connector-available-for-other-organizations-in-the-teams-admin-center).
+> * If you want to configure a custom Microsoft Graph connector for Microsoft 365 Copilot, ensure that you adhere to the [guidelines to create or upgrade Graph connectors](/graph/connecting-external-content-deploy-teams?branch=main#make-your-microsoft-graph-connector-available-for-other-organizations-in-the-teams-admin-center).
 
 This section is in line with [Microsoft commercial marketplace policy number 1140.9](/legal/marketplace/certification-policies#11409-copilot-extensions-for-copilot-for-microsoft-365).
 
@@ -97,7 +98,7 @@ You must ensure to meet the following guidelines for agents:
 
   > [!NOTE]
   > * In case of declarative agents, the short description guidelines apply to the `instructions` and `conversation_starters` fields also.
-  > * For API based plugins, these guidelines apply to `description_for_human`, `description_for_model`, `capabilities`, `conversation_starters` (both the title and and text), `states\reasoning\description` in `functions` fields, if provided. [*Must fix*]
+  > * For API based plugins, these guidelines apply to `description_for_human`, `description_for_model`, `capabilities`, `conversation_starters` (both the title and text), `states\reasoning\description` in `functions` fields, if provided. [*Must fix*]
   > * When utilizing Swagger or OpenAPI file formats, adhere to these guidelines for the `path` content associated with keys and the `description` field for GET, POST, PUT, or DELETE APIs. [*Must fix*]
 
 * App long description must clearly call out that the agent works in Microsoft 365 Copilot. For example, use Contoso in Microsoft 365 Copilot to search and summarize your tasks. ​[*Must fix*]
@@ -115,7 +116,7 @@ You must ensure to meet the following guidelines for agents:
 You must ensure to meet the following guidelines for agents:
 
 * The Teams Store validation guidelines related to screenshots for Microsoft 365 apps are applicable. For more information, see [screenshots](teams-store-validation-guidelines.md#screenshots).
-* Apps with agent functionality must have atleast one screenshot related to Microsoft 365 Copilot functionality. [*Must fix*]
+* Apps with agent functionality must have at least one screenshot related to Microsoft 365 Copilot functionality. [*Must fix*]
 
 [Back to top](#validation-guidelines-for-agents)
 
@@ -133,7 +134,7 @@ You must ensure to meet the following guidelines for agents:
 
 ## Compound utterances
 
-Agents must support atleast three unique compound utterances by handling three or more parameters.
+Agents must support at least three unique compound utterances by handling three or more parameters.
 
 :::image type="content" source="../../../../assets/images/Copilot/high-quaity-me-pass-multi-parameters.png" alt-text="Screenshot shows an example of a pass scenario where the Northwind app returns a response for a seafood and in stock parameters.":::
 
@@ -179,7 +180,7 @@ Agent responses provided as an Adaptive Card must meet the following requirement
   :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-functional-action.png" alt-text="Screenshot shows an example of information title, additional user fields, and action button in an Adaptive Card response.":::
 
 * Adaptive Card must be well-formatted to suit the desktop, web, and mobile (iOS and Android) clients. [*Must fix*]
-* Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.io/explorer/Metadata.html), which allows cards to be easily copied from one hub to another. [*Must fix*]
+* Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.microsoft.com/?topic=CardMetadata), which allows cards to be easily copied from one hub to another. [*Must fix*]
 
 [Back to top](#validation-guidelines-for-agents)
 
@@ -338,6 +339,16 @@ A custom engine agent is a conversational Teams bot that must meet the following
 * Your agent must have nodes defined as actions in the app manifest. All agents must have a core use case that's served through API actions. [*Must fix*]
 
 * For capabilities such as Websearch, Graphic Art, or Code Interpreter, the `Instruction` field must include details on how to use the capabilities within the context of the agent. [*Must fix*]
+
+* Nodes for Graph connector in the declarative agent manifest must be left blank to ground the agent in all available Graph connectors of a tenant. [*Must fix*]
+
+   **Pass example**: The Graph connector node is empty. <br>
+
+    :::image type="content" source="../../../../assets/images/Copilot/da-pass-scenario-graph-connector.png" alt-text="Screenshot of the pass scenario.":::
+
+    **Fail example**: The Graph connector node isn't empty and has connections hardcoded. <br>
+
+    :::image type="content" source="../../../../assets/images/Copilot/da-fail-scenario-graph-connector.png" alt-text="Screenshot of the fail scenario.":::
 
 [Back to top](#validation-guidelines-for-agents)
 

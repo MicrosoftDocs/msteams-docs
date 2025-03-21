@@ -49,7 +49,7 @@ The People Picker input control allows the user to search and add people using t
 1. Type the name of the required person. The list appears with name suggestions.
 1. Select the name of the required person from the list.
 
-   :::image type="content" source="../../assets/images/tabs/people-picker-control-capability-mobile-updated.png" alt-text="Screenshot shows the Picker Picker on mobile.":::
+   :::image type="content" source="../../assets/images/tabs/people-picker-control-capability-mobile-updated.png" alt-text="Screenshot shows the Picker on mobile.":::
 
 # [Desktop](#tab/Sampledesktop)
 

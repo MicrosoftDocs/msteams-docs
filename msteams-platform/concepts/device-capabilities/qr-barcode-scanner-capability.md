@@ -1,7 +1,7 @@
 ---
 title: Enable QR/Barcode Scanner Capability
-author: Rajeshwari-v
-description: Learn how to use Teams JavaScript client library to leverage QR or barcode scanner capability, know its benefits, and about error handling.
+author: surbhigupta
+description: Learn how to use Teams JavaScript client library to leverage QR or barcode scanner capability and know the benefits of integrating QR or barcode scanner capability.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta

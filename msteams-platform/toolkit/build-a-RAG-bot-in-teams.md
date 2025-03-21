@@ -156,7 +156,7 @@ The following diagram shows how Teams AI library provides functionalities to eas
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/teams-ai-rag-scenario.png" alt-text="Screenshot shows the RAG scenario.":::
 
-1. **Handle input**: The most straight forward way is to pass the user’s input to the retrieval without any change. However, if you'd like to customize the input before retrieval, you can add an [activity handler](https://github.com/OfficeDev/TeamsFx/wiki/) to certain incoming activities.
+1. **Handle input**: The most straight forward way is to pass the user’s input to the retrieval without any change. However, if you'd like to customize the input before retrieval, you can add an [activity handler](https://github.com/OfficeDev/TeamsFx/wiki/How-to-configure-Bot-capability-within-your-Teams-app#bring-bot-code-to-your-project) to certain incoming activities.
 
 1. **Retrieve DataSource**: Teams AI library provides `DataSource` interface to let you add your own retrieval logic. You need to create your own `DataSource` instance, and Teams AI library calls it on demand.
 
@@ -323,7 +323,7 @@ In the **Chat With Your Data** or RAG scenarios, Teams Toolkit provides the foll
 
 To build your data ingestion, follow these steps:
 
-1. **Load your source documents**: Ensure that your document has a meaningful text as the embedding model takes only text as a input.
+1. **Load your source documents**: Ensure that your document has meaningful text as the embedding model takes only text as input.
 
 1. **Split into chunks**: Ensure you split the document to avoid API call failures as the embedding model has an input token limitation.
 
@@ -881,7 +881,7 @@ class MyDataSource(DataSource):
 
 ---
 
-## Add more API for Custom API as data source
+## Add more APIs for Custom API as data source
 
 Follow these steps to extend the custom engine agent from Custom API template with more APIs.
 
