@@ -77,9 +77,9 @@ For `serviceUrl`, use the value from an incoming activity triggering the flow or
 
 > [!WARNING]
 >
-> * Avoid hardcoding URLs. Use the `serviceUrl` from the incoming activity or conversation reference from the bot. If it's unavailable, use global URLs based on region and cloud.
+> * Avoid hardcoding URLs. Use `serviceUrl` from the incoming activity or conversation reference from the bot. If it's unavailable, use global URLs based on region and cloud.
 >
-> * These URLs are for proactive messages only. For any reply to messages, use the `serviceURL` from the incoming request.
+> * These URLs are for proactive messages only. For any reply to messages, use the `serviceURL` from the incoming request. For more information about getting `serviceURL`, see [Activity.ServiceUrl Property](/dotnet/api/microsoft.bot.schema.activity.serviceurl?view=botbuilder-dotnet-stable).
 
 For a code sample, see the call `CreateConversationAsync` in the [**sample**](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs).
 
@@ -425,6 +425,7 @@ The following table provides a simple code sample that incorporates basic conver
 | Start new thread in a channel | This sample shows how to start a thread in a specific Team's channel using Bot Framework v4. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-initiate-thread-in-channel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-initiate-thread-in-channel/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-initiate-thread-in-channel/python) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-initiate-thread-in-channel/csharp/demo-manifest/bot-initiate-thread-in-channel.zip) |
 | Proactive installation of app and sending proactive notifications | This sample shows how you can use proactive installation of app for users and send proactive notifications by calling Microsoft Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-proactive-installation/csharp/demo-manifest/graph-proactive-installation.zip)
 | Proactive Messaging | This is a sample that shows how to save user's conversation reference information to send proactive reminder message using Bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging-teamsfx) | NA |
+|
 
 > [!div class="nextstepaction"]
 > [More code sample of proactive messaging](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
