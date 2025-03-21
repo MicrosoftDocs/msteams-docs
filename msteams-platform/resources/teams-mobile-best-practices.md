@@ -36,7 +36,7 @@ To run a performance audit, follow these steps:
 
 1. Select the **Performance** tab. You can see a performance marker indicating the time it takes for your app from Teams JavaScript SDK initialization to the `notifySuccess` call. You can use this marker to examine the network or local operations performed between `init()` and `notifySuccess`.
 
-    In the following example, the **Timings** section shows that the app takes 2.20 seconds from Teams JavaScript SDK initialization to `notifySuccess`, makes two calls to get an authorization token, and makes an API call that takes 1.5 seconds.
+    In the following example, the **Timings** section shows that the app takes 2.20 seconds from Teams JavaScript SDK initialization to `notifySuccess`, makes two calls to get an authorization token, and makes a third API call that takes 1.5 seconds.
 
     :::image type="content" source="../assets/images/tabs/dev-tools-performance.png" alt-text="Screenshot shows the performance tab in dev tools." lightbox="../assets/images/tabs/dev-tools-performance.png":::
 
