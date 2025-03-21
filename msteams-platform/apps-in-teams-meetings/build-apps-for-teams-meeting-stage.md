@@ -313,14 +313,14 @@ The following code is an example of sharing app content to meeting stage view an
 
 ## Stop share action
 
-When a user is presenting the screen, you can programmatically control the stop presenting action by converting the **Share** button into a **Stop Sharing** button once the sharing has started. This capability can allow users to start and stop sharing from the same button in the app's side panel.
+When a user is presenting the screen, you can programmatically control the stop-sharing behavior by converting the **Share** button into a **Stop Sharing** button once the sharing has started. This capability can allow users to start and stop sharing from the same button in the app's side panel.
 
-The `enableStopSharingAppContentToStageAPI` API enables you to control the stop sharing functionality of specific parts of your app to the meeting stage. The API is available through the TeamsJS library.
+The `stopSharingAppContentToStage` API allows you to manage the stop-sharing behavior for specific parts of your app on the meeting stage. The API is available through the TeamsJS library.
 
-The following code is an example of `enableStopSharingAppContentToStageAPI` API where the stop sharing capability is enabled:
+The following code is an example of `stopSharingAppContentToStage` API where the stop sharing capability is enabled:
 
 ```javascript
-"enableStopSharingAppContentToStageAPI": {
+"stopSharingAppContentToStage": {
     "config": [
         {
             // enable stop sharing capability 
@@ -333,6 +333,27 @@ The following code is an example of `enableStopSharingAppContentToStageAPI` API 
 | Value | Type | Required | Description |
 |---|---|----|---|
 | `value` | Boolean | No | The stop sharing app content control. The supported values are `false` and `true`. Default is `false`. You can set the value to `true` to enable the stop sharing capability. |
+
+The response body for `stopSharingAppContentToStage` API is:
+
+```javascript
+microsoftTeams.meeting.stopSharingAppContentToStage((err, result) => {
+    if (result) {
+        // handle success
+    }
+    if (err) {
+        // handle error
+    }
+});
+```
+
+**Query parameter**
+
+The following table includes the query parameter:
+
+|Value|Type|Required|Description|
+|---|---|----|---|
+|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can contain either an error of type *SdkError* or null if sharing stops successfully. The result contains `true` if sharing stops successfully or `null` if the operation fails. |
 
 ### Advantages
 
