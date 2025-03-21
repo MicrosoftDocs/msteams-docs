@@ -2,15 +2,15 @@
 title: Teams calling and meeting bot
 metadata:
   title: Teams bot with calling and meeting
-  description: In this learning module, learn how to create and set up a calling and meeting bot with basic features using Microsoft Graph API.
+  description: In this learn module, learn how to create and set up a calling and meeting bot with basic features using Microsoft Graph API.
   audience: Developer
   level: Beginner
-  ms.date: 12/11/2024
+  ms.date: 03/03/2025
   ms.topic: interactive-tutorial
   nextTutorialHref: bots/calls-and-meetings/registering-calling-bot.md
   nextTutorialTitle: Register a calling bot
   ms.custom: mvc
-  ms.localizationpriority: null
+  ms.localizationpriority: medium
 items:
 - durationInMinutes: 1
   content: |
