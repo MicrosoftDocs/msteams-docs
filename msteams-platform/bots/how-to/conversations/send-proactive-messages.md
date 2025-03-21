@@ -77,7 +77,7 @@ For `serviceUrl`, use the value from an incoming activity triggering the flow or
 
 > [!WARNING]
 >
-> * Avoid hardcoding URLs. Use the `serviceUrl` from the incoming activity or conversation reference. If it's unavailable, use global URLs based on region and cloud.
+> * Avoid hardcoding URLs. Use the `serviceUrl` from the incoming activity or conversation reference from the bot. If it's unavailable, use global URLs based on region and cloud.
 >
 > * These URLs are for proactive messages only. For any reply to messages, use the `serviceURL` from the incoming request.
 
