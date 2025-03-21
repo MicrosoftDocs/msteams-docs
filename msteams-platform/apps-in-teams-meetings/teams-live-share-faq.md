@@ -71,7 +71,7 @@ Yes! Live Share supports chat and channel content contexts, including configurab
 
 <summary><b>Will Live Share's media package work with DRM content?</b></summary>
 
-Yes, DRM is supported in the new Teams desktop, web, iOS, and Android clients. The classic Teams client doesn't support DRM. To enable DRM encryption for Teams desktop, enable the `media` device permission in your app manifest.
+Yes, DRM is supported in Teams desktop, web, iOS, and Android clients. To enable DRM encryption for Teams desktop, enable the `media` device permission in your app manifest.
 
 <br>
 
