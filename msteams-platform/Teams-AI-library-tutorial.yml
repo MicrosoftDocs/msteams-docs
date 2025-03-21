@@ -24,6 +24,10 @@ items:
     * How to interact with your LLMs and data.
     * The directory structure of your custom engine agent.
 
+    > [!NOTE]
+    >
+    > * Custom engine agent support for Microsoft 365 Copilot Chat is available only in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
+    > * Custom engine agent isn't supported in Python.
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -38,9 +42,18 @@ items:
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
    | &nbsp; | [Azure OpenAI](https://oai.azure.com/portal)| OpenAI's GPT. Ensure that you first create your OpenAI API key. To host your app or access resources in Azure, you must create an Azure OpenAI service. |
 
+    [!INCLUDE [Set up prerequisites](includes/custom-engine-agent.md)]
+
 - title: Set up your data on Azure OpenAI
   durationInMinutes: 1
   content: | 
+    After you set up your project workspace with Teams Toolkit, you need to create an Azure AI Search endpoint and OpenAI key in Azure Portal.
+    
+      > [!NOTE]
+      > To create an Azure AI Search endpoint and OpenAI key, you need to have an Azure OpenAI Service resource. If you don't have an Azure OpenAI service resource, see [create a resource](/azure/ai-services/openai/how-to/create-resource?pivots=web-portal#create-a-resource). If you already have an Azure OpenAI Service resource, follow the steps below to create an Azure AI Search endpoint and OpenAI key.
+
+    ## Create an Azure AI Search endpoint and OpenAI key
+
      1. Go to [**Azure portal**](https://ms.portal.azure.com/).
 
      1. Select the Azure OpenAI service that you created.
