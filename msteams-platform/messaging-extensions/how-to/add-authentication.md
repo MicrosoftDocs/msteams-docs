@@ -6,6 +6,7 @@ ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
 ms.date: 03/11/2025
+---
 
 # Add third party authentication to your message extension
 
