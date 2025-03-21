@@ -5,7 +5,7 @@ description: Learn about Teams Connect shared channels to securely collaborate w
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.date: 02/06/2025
+ms.date: 03/21/2025
 ---
 
 # Microsoft Teams Connect shared channels
@@ -115,6 +115,9 @@ Teams supports the use of apps in federated group chats with external users. Ext
 * The app allows access to externals users in federated group chats.
 
 If you're developing an app for use in federated group chats with external users, register your app as a multitenant app in Microsoft Entra ID. This action allows users across multiple organizations to access your app.
+
+> [!NOTE]
+> If you want to test the code sample app with external users in a federated group chat, you must first add a guest user to your tenant. For more information, see [Quickstart: Add a guest user and send an invitation](/entra/external-id/b2b-quickstart-add-guest-users-portal). After adding the user, go to the federated group chat and add the external user to test the app.
 
 ## Code sample
 
