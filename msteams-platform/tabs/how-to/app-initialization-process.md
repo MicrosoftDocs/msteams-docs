@@ -1,7 +1,7 @@
 ---
 title: App Initialization Process for Tab Apps
 description: Learn about the app initialization process, including the APIs involved and recommendations for their use in code.
-author: mosdevdocs
+author: JoshuaPartlow
 ms.author: joshuapa
 ms.service: msteams
 ms.topic: concept-article #Required; leave this attribute/value as-is.
@@ -27,7 +27,7 @@ There are specific APIs within the [Teams JavaScript client library](using-teams
 - [app.notifyApploaded()](/javascript/api/@microsoft/teams-js/app#@microsoft-teams-js-app-notifyapploaded) - Notifies the frame that the app is partially loaded and that the loading indicator can be hidden if one was shown.
 - [app.notifySuccess()](/javascript/api/@microsoft/teams-js/app#@microsoft-teams-js-app-notifysuccess) - Notifies the frame that the app is fully loaded and was successfully initialized. It's now ready for user interaction.
 - [app.notifyFailure()](/javascript/api/@microsoft/teams-js/app#@microsoft-teams-js-app-notifyfailure) - Notifies the frame that app initialization failed during loading and to show an error page in its place.
-- [app.notifyExpectedFailure()](https://learn.microsoft.com/en-us/javascript/api/@microsoft/teams-js/app#@microsoft-teams-js-app-notifyexpectedfailure) - Notifies the frame that the app initialized with some expected errors, but can be considered loaded successfully.
+- [app.notifyExpectedFailure()](/javascript/api/@microsoft/teams-js/app#@microsoft-teams-js-app-notifyexpectedfailure) - Notifies the frame that the app initialized with some expected errors, but can be considered loaded successfully.
 
 > [!IMPORTANT]
 > All of the initialization functions listed are idempotent. That means that no matter how many times they're called with the same input, the result is always the same and the system's state is unchanged after the first call. For example, when the `app.initialize()` function is called and completes successfully, it always resets the app to the loading state even if it was called before.
