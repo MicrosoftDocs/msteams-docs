@@ -40,6 +40,10 @@ The following variants show the kinds of activity feed notification cards you ca
 
 :::image type="content" source="../../assets/images/activity-feed/activity-feed-card-types.png" alt-text="Variants of Teams activity feed cards." lightbox="../../assets/images/activity-feed/activity-feed-card-types.png":::
 
+## Custom icons in activity feed notifications
+
+To learn how to add custom icons in activity feed notifications, see ***placeholder link***. Ensure that you follow ***Teams Store validation guidelines*** to design the custom icons.
+
 ## Manage activity feed notifications
 
 Users can manage notifications sent from your app in the Teams settings page.

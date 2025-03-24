@@ -13,6 +13,7 @@ An app package is a file format that has the required resources to install and r
 
 * **[App manifest](#app-manifest)**: Describes how your app is configured, including its capabilities, required resources, and other important attributes.
 * **[App icons](#app-icons)**: Each package requires a color and outline icon for your app.
+* **[Custom icons](../design/activity-feed-notifications.md#custom-icons-in-activity-feed-notifications)**: Tailor-made icons that you can use in notifications in the activity feed. For more information, see [Custom icons in activity feed notifications](../design/activity-feed-notifications.md#custom-icons-in-activity-feed-notifications).
 
 To publish your Microsoft Teams app, you need to zip the files in the app package folder and provide a suitable name.
 
@@ -77,9 +78,9 @@ An outline icon displays in two scenarios:
 
   Follow these specifications for the outline icon design:
 
-   * Ensure that the outline icon size is 32x32 pixels.
-   * The icon must be either white with a transparent background or transparent with a white background. No other colors are allowed.
-   * The outline icon mustn't contain any additional padding around the symbol.
+  * Ensure that the outline icon size is 32x32 pixels.
+  * The icon must be either white with a transparent background or transparent with a white background. No other colors are allowed.
+  * The outline icon mustn't contain any additional padding around the symbol.
 
 ### Best practices
 
