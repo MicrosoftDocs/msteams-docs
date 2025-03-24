@@ -3,7 +3,7 @@ title: Enable OAuth Authentication for Tab
 description: Learn about Teams authentication flow in tabs using third-party OAuth provider with Microsoft Entra configuration and code samples.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.date: 01/05/2023
+ms.date: 03/02/2025
 ---
 # Enable authentication using third-party OAuth provider
 
@@ -41,8 +41,13 @@ Similar to other application auth flows in Teams, the start page must be on a do
 5. On the provider's site, the user sign in and grants access to the tab.
 6. The provider takes the user to the tab's OAuth 2.0 redirect page with an access token.
 7. The tab checks that the returned `state` value matches what was saved earlier, and calls `authentication.notifySuccess()`, which in turn calls the success handler (`.then()`) for the promise-based `authenticate()` method from step 3.
-8. Teams closes the pop-up window.
-9. The tab either displays configuration UI, refreshes, or reloads the tabs content, depending on where the user started from.
+
+    > [!IMPORTANT]
+    >
+    > Be aware that there are security considerations for the `notifySuccess()` **result** parameter. For additional information, refer to the remarks section of the TeamsJS reference documentation for the [notifySuccess()](/javascript/api/%40microsoft/teams-js/authentication#@microsoft-teams-js-authentication-notifysuccess) function.
+
+1. Teams closes the pop-up window.
+1. The tab either displays configuration UI, refreshes, or reloads the tabs content, depending on where the user started from.
 
 > [!NOTE]
 >
