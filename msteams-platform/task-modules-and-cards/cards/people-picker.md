@@ -1,7 +1,7 @@
 ---
 title: Search Users with People Picker Control
-description: In this module, learn how to use the People Picker control in Adaptive Cards, its scenarios and implement people picker.
-ms.localizationpriority: medium
+description: Learn how to use People Picker control in Adaptive Cards, its scenarios, user preselection, choices and how to implement the People Picker.
+localization_priority: medium
 ms.topic: reference
 author: surbhigupta
 ms.author: surbhigupta
