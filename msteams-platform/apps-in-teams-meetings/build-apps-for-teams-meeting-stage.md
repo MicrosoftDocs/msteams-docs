@@ -348,7 +348,7 @@ The following table includes the query parameter:
 
 Use this field to specify if the app has its own share to stage experience. To avoid user confusion due to multiple buttons serving the same purpose, you can opt to hide the native share button. This ensures that users experience either the app's custom share to stage feature or the default native experience, but not both.
 
-The `supportsCustomShareToStage` property name in the app manifest indicates whether the app has enabled support for sharing app content to the stage. 
+The `supportsCustomShareToStage` property name in the app manifest indicates whether the app has enabled support for sharing app content to the stage.
 
 The following code is an example of `supportsCustomShareToStage` property in the app manifest:
 
@@ -436,10 +436,10 @@ The following participant roles might be involved during the meeting:
 
 |Sample name | Description | .NET| Node.js | Manifest |
 |----------------|-----------------|--------------|----------------|----------------|
-|Meeting stage sample | This sample app demonstrates how to enable and configure applications for Microsoft Teams meetings, allowing users to interact with a shared meeting stage using the Live Share SDK. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp/demo-manifest) |
-| In-meeting notification | This sample application demonstrates how to implement in-meeting and targeted notifications within Microsoft Teams meetings using adaptive cards and bot interactions. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp/demo-manifest) |
-| In-meeting document signing | This Microsoft Teams sample app enables users to review and sign documents in real time during meetings, facilitating seamless collaboration. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA | NA |
-|Screen share content to stage| This sample app demonstrates how to enable and configure applications for Microsoft Teams meetings, allowing users to interact with a shared meeting stage using the Live Share SDK.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp)|NA|NA|
+|Meeting stage sample | This sample app shows a tab in meeting stage in collaborative Stageview. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp/demo-manifest) |
+| In-meeting notification |This sample app demonstrates how to implement targeted notifications in meetings using Adaptive Cards and bot interactions. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp/demo-manifest) |
+| In-meeting document signing | This sample app enables users to review and sign documents in real time during meetings. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA | NA |
+|Screen share content to stage| This sample app demonstrates how to enable and configure apps for Teams meetings, allowing users to interact with a shared meeting stage. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp)|NA|NA|
 
 ## Step-by-step guide
 

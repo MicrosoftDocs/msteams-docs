@@ -1350,7 +1350,6 @@ The following code shows an example of reactions removed from bot message:
 * [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onreactionsremovedasync?view=botbuilder-dotnet-stable&preserve-view=true#definition)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-message-reaction/csharp/Bots/MessageReactionBot.cs#L44)
 
-
 ```csharp
 protected override async Task OnReactionsRemovedAsync(IList<MessageReaction> messageReactions, ITurnContext<IMessageReactionActivity> turnContext, CancellationToken cancellationToken)
 {
@@ -1640,7 +1639,7 @@ In the development phase, it's always helpful to send meaningful messages in con
 
 | **Sample Name** | **Description** | **.NET** | **Node.js** | **Python** | **Manifest**
 |---------------|--------------|--------|-------------|--------|--------|
-| Conversation bot |  This app demonstrates using bot conversation events in Microsoft Teams, supporting adaptive cards, read receipts, and message update events. It includes immersive reader support for enhanced accessibility. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp)  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/demo-manifest/bot-conversation.zip)
+| Conversation bot |  This app demonstrates bot conversation events, supporting Adaptive Cards, read receipts, and message update events. It includes immersive reader support for accessibility. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp)  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/demo-manifest/bot-conversation.zip)
 
 ## Next step
 

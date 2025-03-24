@@ -114,7 +114,7 @@ TeamsInfo.sendMeetingNotification(context, notificationPayload, meetingId);
 
 |Sample name | Description | Node.js | .NET |
 |----------------|-----------------|--------------|
-| App icon badging for your Teams app | This sample app showcases how to implement app icon badging notifications in Teams meetings. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-app-icon-badging/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-app-icon-badging/csharp) |
+| App icon badging for your Teams app | This sample app showcases how to implement app icon badging for notifications in Teams meetings. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-app-icon-badging/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-app-icon-badging/csharp) |
 
 ## See also
 

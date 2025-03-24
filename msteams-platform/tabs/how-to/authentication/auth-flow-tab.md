@@ -63,7 +63,7 @@ Sample code showing the tab authentication process:
 
 | **Sample name** | **Description** | **.NET** | **Node.js** | **Manifest**|
 |-----------------|-----------------|-------------|------------|------------|
-| App complete authentication | This sample showcases Azure AD and Facebook authentication across bots, tabs, and messaging extensions in Microsoft Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp/demo-manifest/App-Complete-Auth.zip) |
+| App complete authentication | This sample showcases Microsoft Entra ID and Facebook authentication across bots, tabs, and messaging extensions. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp/demo-manifest/App-Complete-Auth.zip) |
 
 ## See also
 
