@@ -47,14 +47,14 @@ After a message is deleted:
 
 - When the user deletes the message, the bot app prompts the user to submit feedback about the reason of deleting the bot message. In case the reason of deleting the bot message is bot performance, the feedback is used to improve bot performance.
 - The deleted message is removed for all users.
-- An indication appears in stead of the deleted message along with the name of the user who deleted it.
+- An indication of the deleted message appears instead of the message.
 
   :::image type="content" source="../../assets/images/bots/message-delete-undo.png" alt-text="Image shows the indication of deleted message and the Undo button.":::
 
-The users of the group chat have the ability to undo the deletion, however, the undoing a delete message is available for a limited time.
+- The users of the group chat have the ability to undo the deletion, however, the undoing a delete message is available for a limited time.
 
 > [!NOTE]
-> The users aren't able to undo a deleted bot message on the mobile client.
+> Deleting bot messages by users isn't supported on the mobile client.
 
 ## Enable users to delete bot messages in your bot app
 
