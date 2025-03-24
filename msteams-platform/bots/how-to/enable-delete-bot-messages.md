@@ -41,6 +41,8 @@ If a bot's response is inaccurate or compromises sensitive information, any user
 
 :::image type="content" source="../../assets/images/bots/delete-message-mobile.png" alt-text="Image shows the user experience of deleting a bot message in a mobile client":::
 
+---
+
 After a message is deleted:
 
 - When the user deletes the message, the bot app prompts the user to submit feedback about the reason of deleting the bot message. In case the reason of deleting the bot message is bot performance, the feedback is used to improve bot performance.
