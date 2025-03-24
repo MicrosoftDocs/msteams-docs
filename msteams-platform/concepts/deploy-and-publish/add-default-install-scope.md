@@ -12,7 +12,7 @@ It’s common for an app to support multiple scenarios in Microsoft Teams, but y
 
 When a user installs an app from Microsoft Teams Store or uploads a custom app, the user has the option to open the app in either personal or shared scope:
 
-* Personal scope: If an app supports personal scope, the **Open** option in the scope selection dialog allows to open the app in personal scope. 
+* Personal scope: If an app supports personal scope, the **Open** option in the scope selection dialog allows to open the app in personal scope.
 
 * Shared scope: If an app supports shared scopes, all the supported scopes such as channel, chat, and meeting are listed to select the required scope. If your app is configured with a default install scope, a **Recommended** label appears adjacent to the respective scope.
 
@@ -316,7 +316,7 @@ The following example demonstrates opening an app with tab as default landing ca
 
 ---
 
-The `staticTabs` property is also used to pin personal tabs and [reorder tabs](../../tabs/how-to/create-personal-tab.md#reorder-tabs). For more information, see [app manifest](../../resources/schema/manifest-schema.md#statictabs).
+The `staticTabs` property is also used to pin personal tabs and [reorder tabs](../../tabs/how-to/tab-features.md#reorder-tabs). For more information, see [app manifest](../../resources/schema/manifest-schema.md#statictabs).
 
 ## Block apps by default for users until an admin approves
 
@@ -340,7 +340,6 @@ If you don't want your app to be blocked by default, update the `defaultBlockUnt
 |**Sample name** | **Description** | **.NET** | **Node.js** | **Manifest**|
 |----------------|-----------------|--------------|----------------|-----------|-----------|
 | Hello world | This sample demonstrates how to configure default landing capability for an app that supports both bot and tab capabilities in personal scope. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/csharp/demo-manifest/app-hello-world.zip)|
-
 
 ## Next step
 
