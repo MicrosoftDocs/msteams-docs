@@ -98,9 +98,10 @@ To update the app manifest for your bot app:
 
 The Admin must enable the bot users to delete messages in the tenant where the bot app is installed.
 
-[Add image from Admin center]
-[Add link to Admin center docs]
+- [Add image from Admin center]
+- [Add link to Admin center docs]
 
 ## See also
 
 - [Link to end user document]
+- [Custom engine agent user experience](teams-conversational-ai/ai-ux.md)
