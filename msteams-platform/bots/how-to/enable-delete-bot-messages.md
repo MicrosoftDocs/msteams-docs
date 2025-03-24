@@ -9,7 +9,7 @@ ms.date: 03/12/2025
 
 # Enable users to delete bot messages
 
-You can now enable bot users to delete bot messages in a group chat. As a developer, when you enable deleting bot messages for users, they're able to delete Group Copilot bot messages in chat threads to remove unintended or sensitive content. All users in any chat can delete messages using the **Delete** option in the overflow menu.
+You can now enable bot users to delete bot messages in a group chat. As a developer, when you enable deleting bot messages for users, they're able to delete Group Copilot bot messages in chat threads to remove unintended or sensitive content.
 
 Here are some use cases for enabling the users of a bot app to delete bot messages:
 
@@ -20,7 +20,7 @@ Here are some use cases for enabling the users of a bot app to delete bot messag
 
 ## Delete bot message user experience
 
-All users in any chat containing Group Copilot can delete messages in the following scopes:
+All users in any chat can delete messages in the following scopes:
 
 - personal
 - group chat
@@ -50,8 +50,6 @@ After a message is deleted:
   :::image type="content" source="../../assets/images/bots/message-delete-undo.png" alt-text="Image shows the indication of deleted message and the Undo button.":::
 
 The users of the group chat have the ability to undo the deletion, however, the undoing a delete message is available for a limited time.
-
-[Add image of Undo button]
 
 > [!NOTE]
 > The users aren't able to undo a deleted bot message on the mobile client.
@@ -100,3 +98,7 @@ The Admin must enable the bot users to delete messages in the tenant where the b
 
 [Add image from Admin center]
 [Add link to Admin center docs]
+
+## See also
+
+- [Link to end user document]
