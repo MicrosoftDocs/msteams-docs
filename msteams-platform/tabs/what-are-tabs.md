@@ -145,7 +145,7 @@ To build a comprehensive Teams tab app, you will likely combine all three tools:
 
 *Example Workflow*:
 
-:::image type="content" source="../assets/images/tabs/tab-tools-user-story.png" alt-text="The image shows a user story for an example workflow about how a developer can use tools and SDKs for building tab app.":::
+:::image type="content" source="../assets/images/tabs/tab-tools-user-story.png" alt-text="The image shows a user story for an example workflow about how a developer can use tools and SDKs for building tab app." lightbox="../assets/images/tabs/tab-tools-user-story.png":::
 
 1. Use Teams JS SDK to initialize the app and get the user's context when they open the tab, and implement authentication.
 2. Use Microsoft Graph API to pull relevant data, such as team details, files, or messages, and display this information in your tab.
