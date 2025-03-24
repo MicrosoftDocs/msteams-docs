@@ -81,7 +81,10 @@ For `serviceUrl`, use the value from an incoming activity triggering the flow or
 >
 > * These URLs are for proactive messages only. For any reply to messages, use the `serviceURL` from the incoming request. For more information, see [Activity.ServiceUrl property](/dotnet/api/microsoft.bot.schema.activity.serviceurl?view=botbuilder-dotnet-stable&preserve-view=true).
 
-For a code sample, see the call `CreateConversationAsync` in the [**sample**](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L260&preserve-view=true).
+For a code sample, see the following:
+
+* [`HandleUserConversationUpdateAsync`](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L58&preserve-view=true)
+* [`MessageAllMembersAsync`]((https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L260&preserve-view=true)).
 
 You can get the conversation when the app is installed for the first time. After the conversation is created, [get the conversation ID](#get-the-conversation-id). The `conversationId` is available in the conversation update events.
 
