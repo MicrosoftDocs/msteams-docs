@@ -22,10 +22,10 @@ Here are some use cases for enabling the users of a bot app to delete bot messag
 
 All users in any chat can delete messages in the following scopes:
 
-- personal
-- group chat
-- channel
-- meeting chat
+- Personal
+- Group chat
+- Channel
+- Meeting chat
 
 If a bot's response is inaccurate or compromises sensitive information, any user can delete the bot using the overflow **Delete** option.
 
