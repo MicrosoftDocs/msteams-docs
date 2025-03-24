@@ -463,7 +463,7 @@
       href: bots/how-to/bot-messages-ai-generated-content.md
       displayName: AI label, citations, feedback buttons, sensitivity label, Powered by AI UX Kit
     - name: Enable users to delete bot messages
-      href: bots/how-to/enable-users-to-delete-bot-messages.md
+      href: bots/how-to/enable-delete-bot-messages.md
       displayName: delete bot messages, delete message button, delete message notification, allow user to delete bot message 
   - name: Understand bot concepts
     href: bots/bot-concepts.md
