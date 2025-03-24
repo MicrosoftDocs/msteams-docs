@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 
 > [!NOTE]
 >
-> NAA is supported only in single-page application (SPA), such as tabs.
+> Nested app authentication (NAA) is supported only in single-page application (SPA), such as tabs.
 
 NAA is a new authentication protocol for SPAs that are embedded in host environments, such as Teams, Outlook, and Microsoft 365. It simplifies the authentication process to facilitate single sign-on (SSO) across apps nested within supported host apps. The NAA model supports a primary identity for the host app that includes multiple app identities for nested apps. Microsoft utilizes this model in Teams tabs, personal apps, and Office Add-ins.
 
