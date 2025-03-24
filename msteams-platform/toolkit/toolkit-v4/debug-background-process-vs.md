@@ -20,7 +20,7 @@ For bot and message extension, you can use Dev Tunnel. It starts a local tunnel 
 
 In the debug dropdown, select **Dev Tunnels (no active tunnel)** > **Create a Tunnel** or select an existing public dev tunnel.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-create-devtunnel.png" alt-text="Screenshoot shows the steps to create a tunnel.":::
+   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-create-devtunnel.png" alt-text="Screenshot shows the steps to create a tunnel.":::
 
 The tunnel creation dialog opens.
 
