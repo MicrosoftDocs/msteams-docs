@@ -69,6 +69,9 @@ Use the Teams Toolkit extension for Visual Studio Code to start with a personal 
 
 From here, you can skip ahead to [upload your custom app in Teams](#upload-your-custom-app-in-teams) and preview your app in Outlook and the Microsoft 365 app. The app manifest and TeamsJS API calls are already updated for Microsoft 365 app.
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Quickstart&&author=%40erikadoyle&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-teams-toolkit%23quickstart&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ### SharePoint Framework (SPFx) apps
 
 Starting with version 1.16 of [SharePoint Framework](/sharepoint/dev/spfx/integrate-with-teams-introduction) (SPFx), Teams personal tabs built and hosted with SPFx are also supported in Outlook and Microsoft 365 app. To update a SPFx Teams personal tab app, follow these steps:
@@ -84,6 +87,9 @@ Starting with version 1.16 of [SharePoint Framework](/sharepoint/dev/spfx/integr
 
 After you update TeamsJS references, [upload your app in Teams](#upload-your-custom-app-in-teams) to preview your SPFx personal tab app running in Outlook and Microsoft 365 app. For more information, see [Extend Outlook and Microsoft 365 app with the SharePoint Framework](/sharepoint/dev/spfx/office/overview).
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+SharePoint+Framework+%28SPFx%29+apps&&author=%40erikadoyle&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-teams-toolkit%23sharepoint-framework-spfx-apps&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ## Update the app manifest
 
 You need to use the app manifest schema version `1.13` (or later) to enable your Teams personal tab to run in Outlook and Microsoft 365 app. For more information on schema version, see [app manifest](../resources/schema/manifest-schema.md).
@@ -95,6 +101,9 @@ You have two options for updating your app manifest:
 1. Open the command palette: `Ctrl+Shift+P`.
 1. Run the `Teams: Upgrade Teams manifest` command and select your app manifest file. Changes are made in place.
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Update+the+app+manifest+using+Teams+Toolkit&&author=%40erikadoyle&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-teams-toolkit%23update-the-app-manifest&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 # [Manual steps](#tab/manifest-manual)
 
 Open your app manifest and update the `$schema` and `manifestVersion` manually with the appropriate version. Refer to [Teams developer manifest](../resources/schema/manifest-schema.md) for version information:
@@ -105,6 +114,8 @@ Open your app manifest and update the `$schema` and `manifestVersion` manually w
     "manifestVersion" : "1.16"
 }
 ```
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Update+the+app+manifest+using+Manual+steps&&author=%40erikadoyle&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-manual%23update-the-app-manifest&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ---
 
