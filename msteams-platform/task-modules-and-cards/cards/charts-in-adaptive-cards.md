@@ -10,7 +10,16 @@ ms.date: 11/07/2024
 
 [!INCLUDE [adaptive-card-redirect](../../includes/adaptive-card-redirect.md)]
 
-You can visually represent data through charts in Adaptive Cards. You can use charts for performance dashboards, budget allocations, project management, customer insights, and more.
+You can visually represent data through charts in Adaptive Cards. You can use charts for performance dashboards, budget allocations, project management, customer insights, and more. Teams supports the following types of charts:
+
+* [Donut chart](https://adaptivecards.microsoft.com/?topic=Chart.Donut)
+* [Gauge chart](https://adaptivecards.microsoft.com/?topic=Chart.Gauge)
+* [Grouped vertical bar chart](https://adaptivecards.microsoft.com/?topic=Chart.VerticalBar.Grouped)
+* [Horizontal bar chart](https://adaptivecards.microsoft.com/?topic=Chart.HorizontalBar)
+* [Line chart](https://adaptivecards.microsoft.com/?topic=Chart.Line)
+* [Pie chart](https://adaptivecards.microsoft.com/?topic=Chart.Pie)
+* [Stacked horizontal bar chart](https://adaptivecards.microsoft.com/?topic=Chart.HorizontalBar.Stacked)
+* [Vertical bar chart](https://adaptivecards.microsoft.com/?topic=Chart.VerticalBar)
 
 ## Donut chart
 

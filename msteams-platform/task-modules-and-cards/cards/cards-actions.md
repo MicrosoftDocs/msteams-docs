@@ -419,6 +419,9 @@ CardFactory.actions([
 
 ## Adaptive Cards actions
 
+> [!IMPORTANT]
+> This documentation is considered legacy. For comprehensive information and resources related to Adaptive Cards, visit the [Adaptive Cards documentation hub](https://adaptivecards.microsoft.com/).
+
 Adaptive Cards support the following six action types:
 
 * [Action.OpenUrl](https://adaptivecards.microsoft.com/?topic=Action.OpenUrl): Opens the specified url.
