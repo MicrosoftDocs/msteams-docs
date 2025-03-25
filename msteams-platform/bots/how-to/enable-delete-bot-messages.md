@@ -23,7 +23,7 @@ Here are some use cases for enabling the users of a bot app to delete bot messag
 | **Incorrect or erroneous bot response in 1:1 chat** <br><br> **Context**: A user requests a conversation summary, but the bot encounters an error and generates excessive error logs that dominate the chat. <br><br> **Problem**: The error logs dominate the chat, creating a poor user experience and cluttering the conversation with irrelevant information. | **Solution**: The user deletes the message with error logs and submits feedback about the poor bot experience for improvement. <br> **Steps**: <br> 1. A user requests the bot to create a summary of the conversation. <br> 2. The bot encounters an error while completing the action. <br> 3. The bot generates unnecessary error logs that take over the chat. <br> 4. The user deletes the message containing the error logs. <br> 5. The user submits feedback about the error and the poor bot experience. 6. The feedback is used to improve the bot's performance and prevent similar issues in the future. |
 -->
 
-# [Deleting messages in personal chat](#tab/personal)
+# [Deleting messages in personal chat](#tab/personal1)
 
 **Incorrect or erroneous bot response in 1:1 chat**
 
@@ -31,7 +31,7 @@ Here are some use cases for enabling the users of a bot app to delete bot messag
 | --- | --- |
 | **Context**: A user requests a conversation summary, but the bot encounters an error and generates excessive error logs that dominate the chat. <br><br> **Problem**: The error logs dominate the chat, creating a poor user experience and cluttering the conversation with irrelevant information. | **Solution**: The user deletes the message with error logs and submits feedback about the poor bot experience for improvement. <br> **Steps**: <br> 1. A user requests the bot to create a summary of the conversation. <br> 2. The bot encounters an error while completing the action. <br> 3. The bot generates unnecessary error logs that take over the chat. <br> 4. The user deletes the message containing the error logs. <br> 5. The user submits feedback about the error and the poor bot experience. 6. The feedback is used to improve the bot's performance and prevent similar issues in the future. |
 
-# [Deleting messages in group chat](#tab/group)
+# [Deleting messages in group chat](#tab/group1)
 
 **Sensitive or confidential information shared in group chat**
 
@@ -54,7 +54,7 @@ All users in any chat can delete messages in the following scopes:
 
 If a bot's response is inaccurate or compromises sensitive information, any user can delete the bot using the overflow **Delete** option. Here are some examples of user experience in personal and group chat for desktop and mobile client:
 
-# [Deleting messages in personal chat](#tab/personal)
+# [Deleting messages in personal chat](#tab/personal2)
 
 [Add gif file]
 
@@ -62,7 +62,7 @@ If a bot's response is inaccurate or compromises sensitive information, any user
 
 [Add gif file]
 
-# [Deleting messages in mobile device](#tab/mobile)
+# [Deleting messages in mobile device](#tab/mobile2)
 
 :::image type="content" source="../../assets/images/bots/delete-message-mobile.png" alt-text="Image shows the user experience of deleting a bot message in a mobile client":::
 
