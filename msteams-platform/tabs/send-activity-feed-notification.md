@@ -5,7 +5,7 @@ author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.owner: vishachadha
-ms.date: 12/17/2024
+ms.date: 04/01/2025
 ---
 
 # Send activity feed notifications to users in Microsoft Teams
@@ -55,7 +55,7 @@ The following variants show the kinds of activity feed notification cards you ca
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="../assets/images/activity-feed/activity-feed-notifications-desktop.png" alt-text="Screenshot shows the activity feed notifications in a desktop."  lightbox="../assets/images/activity-feed/activity-feed-notifications-desktop.png" border="false":::
+:::image type="content" source="../assets/images/activity-feed/activity-feed-notifications-desktop.png" alt-text="Screenshot shows the activity feed notifications in a desktop." lightbox="../assets/images/activity-feed/activity-feed-notifications-desktop.png" border="false":::
 
   |Counter  |Description  |
   |---------|---------|
@@ -112,7 +112,7 @@ This section describes the updates that need to be added to the app manifest. En
 |Parameter|Type|Description|
 |:---|:---|:---|
 |`id`|string|Microsoft Entra app ID (client ID).|
-|`resource`|string|Resource associated with the Microsoft Entra app. Also known as reply or redirect URL in the Microsoft Azure Portal.|
+|`resource`|string|Resource associated with the Microsoft Entra app. Also known as reply or redirect URL in the Microsoft Azure portal.|
 
 > [!NOTE]
 > You might get an error if multiple Teams apps in the same scope (team, chat, or user) are using the same Microsoft Entra app. Make sure that you're using unique Microsoft Entra apps.
@@ -208,6 +208,68 @@ You can use Activity feed notification in the following scenarios:
 
 > [!NOTE]
 > The activity icon is based on the context the request is made in. If the request is made with delegated permissions, the user's photo appears as the avatar, while the Teams app icon appears as the activity icon. In an application-only context, the Teams app icon is used as the avatar and the activity icon is omitted.
+
+## Custom icons in activity feed notifications
+
+> [!NOTE]
+> Custom icons in activity feed notifications are available only in [**public developer preview**](resources/dev-preview/developer-preview-intro.md).
+
+You can use custom icons in activity feed notifications to help users easily identify the source and intent of the notification. A notification with custom icon adds a unique and polished feel, enhancing user engagement with your app. The following screenshot shows an activity feed notification with a custom icon:
+
+To add custom icons in activity feed notifications sent to a user, follow these steps:
+
+1. Add the custom icons in the Teams app package.
+
+1. In the Teams app manifest, set `manifestVersion` to `devPreview`.
+
+1. Under `activityTypes`, declare a list of `allowedIconIds` for the activity type you want to use custom icons for.
+
+1. Declare a list of icons under `activityIcons`. Each icon must be defined with an `id` and `iconFile`. Here's an example code snippet:
+
+    ```json
+        "activities": {
+          "activityTypes": [
+            {
+              "type": "announcementPosted",
+              "description": "Announcement Created Activity",
+              "templateText": "{actor} posted an announcement",
+              "allowedIconIds": [
+                "announcementCreated”,
+                "announcementCreatedBlue",
+                “announcementCreatedRed”
+              ]
+            }
+          ],
+          "activityIcons": [
+            {
+              "id": "announcementCreated",
+              "iconFile": "announcement.png"
+            }
+          ]
+        },
+    ```
+
+    For more information about `allowedIconIds` and `activityIcons`, see [activities.activityTypes](../resources/schema/manifest-schema-dev-preview.md#activitiesactivitytypes).
+
+1. Call the notifications API beta endpoint and include the `iconId` attribute in the payload. The value of the `iconId` must match one of the icon IDs in the `allowedIconIds` declared in the app manifest for the specified activity type.
+
+    ```http
+    POST https://graph.microsoft.com/beta/users/345c1db-541a-4b2b-b8d1-8dc8abcdf9df/teamwork/sendactivitynotification
+    {
+      "topic": {
+        "source": "text",
+        "value": "Loop thread",
+        "webUrl": "https://teams.microsoft.com/l/loopthread/19:0f75e4b3d6f84ff458bc9f8head.v2"
+      },
+      "activityType": "announcementPosted",
+      "previewText": {
+        "content": "new announcement posted"
+      },
+      "@iconUrl" : “announcementCreated”
+    }
+    ```
+
+For custom icon design guidelines, see [custom icons](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#custom-icons).
 
 ## Customize the notifications
 

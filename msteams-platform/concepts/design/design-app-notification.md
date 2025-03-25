@@ -16,7 +16,7 @@ Teams offers the following notification frameworks for your app:
 :::row:::
    :::column span="":::
 
-### Activity feed notification
+## Activity feed notification
 
 Teams activity feed enables users to efficiently manage items that require attention by notifying them of any updates. It allows your apps to provide rich and better user experiences with the latest updates on the tools and workflows.
 <br><br>
@@ -26,7 +26,7 @@ Users can read the activity feed notifications in the preview within Teams activ
 
    :::column span="":::
 
-### Interactive notification bot
+## Interactive notification bot
 
 Microsoft Teams Toolkit allows you to build apps that capture events and send them as bot notifications to a personal chat, a group chat, or a channel. An interactive notification bot template creates an app that sends a message to Teams with Adaptive Cards or with plain text triggered by an HTTP post request.
 <br><br>
