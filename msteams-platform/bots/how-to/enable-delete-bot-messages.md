@@ -10,7 +10,7 @@ ms.date: 03/12/2025
 # Enable users to delete bot messages
 
 > [!NOTE]
-> Deleting bot message is available only in [public developer preview for Teams.](../../resources/dev-preview/developer-preview-intro.md).
+> Enabling deleting bot message for bot app user is available only in [public developer preview for Teams.](../../resources/dev-preview/developer-preview-intro.md).
 
 Bot users can now delete bot messages in group chats. Developers can enable this feature, allowing users to remove Group Copilot bot messages to eliminate unintended or sensitive content.
 
