@@ -56,7 +56,7 @@ All users in any chat can delete messages in the following scopes:
 - Channel
 - Meeting chat
 
-A user can delete the bot using the overflow **Delete** option. The desktop client and the mobile client offer a consistent user experience. Here are some examples of user experience in personal and group chat for desktop and mobile client:
+A user can delete the bot using the overflow **Delete** option. The desktop and mobile clients offer a consistent user experience. Here are some examples of user experience in personal and group chat for desktop and mobile client:
 
 # [Deleting messages in personal chat](#tab/personal2)
 
@@ -78,7 +78,7 @@ After a message is deleted:
 1. The deleted message is removed for all users and doesn't appear in searches.
 1. An indication replaces the deleted message as shown in the following example:
 
-  :::image type="content" source="../../assets/images/bots/message-delete-undo.png" alt-text="Image shows the indication of deleted message and the Undo option.":::
+    :::image type="content" source="../../assets/images/bots/message-delete-undo.png" alt-text="Image shows the indication of deleted message and the Undo option.":::
 
 1. Bot app users can undo deletions in case a message was deleted by mistake. However, the **Undo** option is available for a limited time.
 
