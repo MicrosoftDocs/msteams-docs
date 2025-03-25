@@ -403,6 +403,13 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 
 ```python
 async def on_teams_messaging_extension_query(self, context, query):
+   """
+   Handles a Messaging Extension query for searching NPM packages.
+ 
+    This method takes a search query from Teams, fetches matching NPM packages using 
+    the NPM registry API, and returns a list of thumbnail cards displaying package 
+    details with action buttons.
+    """
     search_query = query.parameters[0].value
 
     response = requests.get(
@@ -420,8 +427,8 @@ async def on_teams_messaging_extension_query(self, context, query):
         homepage = package.get("links", {}).get("homepage", "https://www.npmjs.com")  # Default link
 
         thumbnail_card = ThumbnailCard(
-            title=package_name,  # Package name as card title
-            text=description,  # Package description
+            title = package_name,  # Package name as card title
+            text = description,  # Package description
             buttons=[
                 # Button to view the package on NPM
                 CardAction(
@@ -440,7 +447,7 @@ async def on_teams_messaging_extension_query(self, context, query):
 
         preview_card = ThumbnailCard(
             title=package_name,
-            text=description,
+            text = description,
         )
         preview_attachment = CardFactory.thumbnail_card(preview_card)
 
@@ -545,8 +552,8 @@ async def on_teams_messaging_extension_select_item(
 ) -> MessagingExtensionResponse:
     
     thumbnail_card = ThumbnailCard(
-        title=query.get("title"),  # Extract title from the query
-        text=query.get("description"),  # Extract description from the query
+        title = query.get("title") # Extract title from the query
+        text = query.get("description"),  # Extract description from the query
     )
 
     attachment = MessagingExtensionAttachment(

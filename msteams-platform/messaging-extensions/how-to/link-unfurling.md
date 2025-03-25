@@ -237,6 +237,11 @@ contentType: "application/vnd.microsoft.card.thumbnail",
 
 ```python
 async def on_teams_app_based_link_query(self, turn_context: TurnContext, query):
+   """
+   Handles link unfurling when a user pastes a URL in a Teams conversation.
+ 
+    This method creates a ThumbnailCard displaying the pasted URL and an image, 
+    then returns it as a Messaging Extension response.
     """
     Handles unfurling links when a user pastes them in a conversation.
     """

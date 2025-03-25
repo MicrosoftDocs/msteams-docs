@@ -200,6 +200,11 @@ async handleTeamsMessagingExtensionQuery(context, query) {
 
 ```python
 async def on_teams_messaging_extension_query(self, context, query):
+    """
+    Handles Messaging Extension queries in Teams.
+ 
+    This method generates a list of thumbnail cards containing random text and images when the "getRandomText" command is triggered. It creates preview cards with tap actions and returns them as a Messaging Extension response.
+    """
     faker = Faker()
     title = query.command_id
     random_image_url = "https://loremflickr.com/200/200"
@@ -225,7 +230,7 @@ async def on_teams_messaging_extension_query(self, context, query):
 
             # Combine the thumbnail card and the preview
             attachment = MessagingExtensionAttachment(
-                content=thumbnail_card,
+                content = thumbnail_card,
                 content_type=CardFactory.content_types.thumbnail_card,
                 preview=preview_attachment,
             )
