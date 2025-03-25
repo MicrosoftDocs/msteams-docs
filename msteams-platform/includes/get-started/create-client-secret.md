@@ -17,3 +17,6 @@
 1. Under **Value**, select **Copy to clipboard** to save the client secret value for further use.
 
     :::image type="content" source="../../assets/images/include-files/client-secret-value.png" alt-text="Screenshot show the option to copy the client secret ID value to copy value to clipboard.":::
+
+> [!NOTE]
+> If you encounter the error "Client secrets are blocked by Tenant-wide policy," you can create a certificate instead. For step-by-step instructions, visit [create a certificate for app registration.](https://learn.microsoft.com/en-us/graph/auth-register-app-v2#option-1-add-a-certificate).
