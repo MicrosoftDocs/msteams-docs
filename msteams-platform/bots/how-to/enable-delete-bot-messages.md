@@ -84,7 +84,10 @@ Allowing bot users to delete messages is optional. To enable this feature for yo
       externalId: null, 
       bots: [{ 
             id: "bot-id", 
-            scopes: [], 
+            "scopes": [
+                "personal",
+                "groupChat"
+            ], 
             capabilities: { 
               __typename: "BotCapabilities", 
               isNotificationOnly: true, 
@@ -100,7 +103,7 @@ Allowing bot users to delete messages is optional. To enable this feature for yo
 
 The Admin must enable bot users to delete messages in the tenant where the bot app is installed.
 
-- [Add image from Admin center]
+[Add image from Admin center]
 
 For more information, see [Add link to Admin docs].
 
