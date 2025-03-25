@@ -91,23 +91,25 @@ When `openMode` isn't defined, the content opens by default in Collaborative Sta
 
 <br>
 <details>
-<summary id="closestage" ><b>closeStageView API</b></summary>
+<summary id="closestage" ><b>close() function</b></summary>
 
-When you have a Stageview opened, `closeStageView` API allows you to programmatically close a Stageview after user action. This is an optional function and you can integrate into your Microsoft built apps. If the function is called from outside a Stageview, the close action isn't performed.
+When you have a Stageview opened, `close()` function allows you to programmatically close the Stageview after user action. This is an optional function and you can integrate into your Microsoft built apps. If the function is called from outside a Stageview, the close action isn't performed.
 
-Initialize your app using `microsoftTeams.app.initialize()` and implement `closeStageView` API:
+Initialize your app using `microsoftTeams.app.initialize()` and implement `close()` function from the [`self` module](/javascript/api/@microsoft/teams-js/stageview.self?view=msteams-client-js-latest):
 
 ```typescript
 // App Initialize
 microsoftTeams.app.initialize();
 
+// Function to close the Stageview in Teams
 function closeStageView() {
+    // Attempt to close the Stage View
     microsoftTeams.stageView.self.close()
         .then(() => {
-            console.log("Stage view closed successfully.");
+            console.log("Stage view closed successfully."); // Log success message
         })
         .catch((error) => {
-            console.error("Error closing stage view:", error);
+            console.error("Error closing stage view:", error); // Log error if closing fails
         });
 }
 ```
