@@ -76,7 +76,7 @@ After a message is deleted:
 
   :::image type="content" source="../../assets/images/bots/message-delete-undo.png" alt-text="Image shows the indication of deleted message and the Undo option.":::
 
-- Bot app users can undo deletions, but the **Undo** option is available for a limited time.
+- Bot app users can undo deletions in case a message was deleted by mistake. However, the **Undo** option is available for a limited time.
 - The mobile client offers a consistent user experience with the desktop client.
 
 ## Enable users to delete bot messages in your bot app
