@@ -56,7 +56,7 @@ After a message is deleted:
 
   :::image type="content" source="../../assets/images/bots/message-delete-undo.png" alt-text="Image shows the indication of deleted message and the Undo option.":::
 
-- Group chat users can undo deletions, but the **Undo** option is available for a limited time.
+- Bot app users can undo deletions, but the **Undo** option is available for a limited time.
 - The mobile client offers a consistent user experience with the desktop client.
 
 ## Enable users to delete bot messages in your bot app
@@ -68,8 +68,7 @@ To enable the users to delete bot messages, you need to:
 
 ### Update app manifest
 
-Enabling bot app users to delete bot messages is an optional feature for a bot.
-To update the app manifest for your bot app:
+Allowing bot users to delete messages is optional. To enable this feature for your bot app, update the app manifest as follows:
 
 1. Open the app manifest file.
 1. Update the `allowBotMessageDeleteByUser` property in the `manifest.json` to `true`.
@@ -99,12 +98,14 @@ To update the app manifest for your bot app:
 
 ### Enable users to delete bot messages in Admin Center
 
-The Admin must enable the bot users to delete messages in the tenant where the bot app is installed.
+The Admin must enable bot users to delete messages in the tenant where the bot app is installed.
 
 - [Add image from Admin center]
-- [Add link to Admin center docs]
+
+For more information, see [Add link to Admin docs].
 
 ## See also
 
 - [Link to end user document]
 - [Custom engine agent user experience](teams-conversational-ai/ai-ux.md)
+- [Enhance AI-generated bot messages](bot-messages-ai-generated-content.md)
