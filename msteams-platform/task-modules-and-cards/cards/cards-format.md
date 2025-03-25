@@ -8,8 +8,6 @@ ms.date: 11/07/2024
 
 # Format cards in Teams
 
-[!INCLUDE [adaptive-card-redirect](../../includes/adaptive-card-redirect.md)]
-
 Following are the two ways to add rich text formatting to your cards:
 
 * [Markdown](#format-cards-with-markdown)
@@ -36,6 +34,8 @@ The following card types support Markdown formatting in Teams:
 You can use newlines for Adaptive Cards using `\r` or `\n` escape sequences for newlines in lists. Formatting is different between the desktop and the mobile versions of Teams for Adaptive Cards. Card-based mentions are supported in web, desktop, and mobile clients. You can use the information masking property to mask specific information, such as password or sensitive information from users within the Adaptive Card `Input.Text` input element. You can expand the width of an Adaptive Card using the `width` object. You can enable typeahead support within Adaptive Cards and filter the set of input choices as the user types the input. You can use the `msteams` property to add the ability to display images in Stageview selectively.
 
 Formatting is different between the desktop and the mobile versions of Teams for Adaptive Cards and connector cards. In this section, you can go through the Markdown format example for Adaptive Cards and connector cards.
+
+[!INCLUDE [adaptive-card-redirect](../../includes/adaptive-card-redirect.md)]
 
 # [Markdown format for Adaptive Cards](#tab/adaptive-md)
 

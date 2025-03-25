@@ -9,8 +9,6 @@ ms.date: 01/02/2023
 
 # Add third party authentication to Adaptive Cards Universal Actions
 
-[!INCLUDE [adaptive-card-redirect](../../../includes/adaptive-card-redirect.md)]
-
 Adaptive Cards Universal Actions use the bot as the common backend for handling actions and introduce a new action type `Action.Execute`, which works across apps, such as Teams and Outlook.
 
 > [!NOTE]

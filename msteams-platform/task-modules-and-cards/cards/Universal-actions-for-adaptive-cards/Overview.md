@@ -8,8 +8,6 @@ ms.date: 02/28/2023
 
 # Universal Actions for Adaptive Cards
 
-[!INCLUDE [adaptive-card-redirect](../../../includes/adaptive-card-redirect.md)]
-
 Universal Actions for Adaptive Cards evolved from developer feedback that even though layout and rendering for Adaptive Cards was universal, action handling wasn't. Even if a developer wanted to send the same card to different places, they have to handle actions differently.
 
 Universal Actions for Adaptive Cards bring the bot as the common backend for handling actions and introduces a new action type, `Action.Execute`, which works across apps, such as Teams and Outlook.
