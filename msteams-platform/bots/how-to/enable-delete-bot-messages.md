@@ -56,7 +56,7 @@ All users in any chat can delete messages in the following scopes:
 - Channel
 - Meeting chat
 
-If a bot's response is inaccurate or compromises sensitive information, any user can delete the bot using the overflow **Delete** option. Here are some examples of user experience in personal and group chat for desktop and mobile client:
+A user can delete the bot using the overflow **Delete** option. Here are some examples of user experience in personal and group chat for desktop and mobile client:
 
 # [Deleting messages in personal chat](#tab/personal2)
 
