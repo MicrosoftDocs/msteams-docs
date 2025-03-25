@@ -191,7 +191,7 @@ items:
     | `teamsapp.local.yml` | This overrides `teamsapp.yml` with actions that enable local execution and debugging. |
     | `.vscode/` | VSCode files for local debug. |
     | `appPackage/` | Templates for the Teams application manifest. |
-    | `adaptiveCards/` | The adaptive cards sent back by bot. |
+    | `adaptiveCards/` | The Adaptive Cards sent back by bot. |
     | `infra/` | Templates for provisioning Azure resources. |
     | `index.js` | Application entry point and `express` handler. |
     | `teamsBot.js` | Teams activity handler. |
@@ -313,7 +313,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/app-added-bot-local-debug.png" alt-text="Screenshot shows the bot is running on Teams client.":::
 
-        You can type `welcome` to show an introduction card, and type `learn` to go to adaptive card and bot command documentation.
+        You can type `welcome` to show an introduction card, and type `learn` to go to Adaptive Card and bot command documentation.
 
          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/bot-app-learn-local-debug.png" alt-text="Screenshot shows the learn card in the bot on Teams client.":::       
 
