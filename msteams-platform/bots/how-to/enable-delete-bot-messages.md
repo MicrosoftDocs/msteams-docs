@@ -99,6 +99,8 @@ Allowing bot users to delete messages is optional. To enable this feature for yo
     }   
     ```
 
+1. Save the updates and upload the app package to test the functionality in Teams.
+
 ### Enable users to delete bot messages in Admin Center
 
 The Admin must enable bot users to delete messages in the tenant where the bot app is installed.
