@@ -191,7 +191,7 @@ items:
     | `teamsapp.local.yml` | This overrides `teamsapp.yml` with actions that enable local execution and debugging. |
     | `.vscode/` | VSCode files for local debug. |
     | `appPackage/` | Templates for the Teams application manifest. |
-    | `adaptiveCards/` | The Adaptive Cards sent back by bot. |
+    | `adaptiveCards/` | Adaptive Cards sent back by the bot. |
     | `infra/` | Templates for provisioning Azure resources. |
     | `index.js` | Application entry point and `express` handler. |
     | `teamsBot.js` | Teams activity handler. |
