@@ -3,7 +3,7 @@ title: Developer Preview App Manifest
 description: Learn about public developer preview manifest schema for Microsoft Teams, sample app manifest, schema properties, and how to enable developer preview.
 ms.topic: reference
 ms.localizationpriority: medium
-ms.date: 11/26/2024
+ms.date: 03/26/2025
 ---
 # Public developer preview app manifest
 
@@ -117,6 +117,11 @@ App manifest describes how the app integrates into the Microsoft Teams platform.
             }
         }
     ],
+    "backgroundLoadConfiguration": {
+        "tabConfiguration": {
+            "contentUrl": "https://www.contoso.com/content?host=msteams&isBackgroundLoad=true"
+        }
+    },
     "bots": [
         {
             "botId": "%MICROSOFT-APP-ID-REGISTERED-WITH-BOT-FRAMEWORK%",
@@ -550,9 +555,6 @@ Represents a customization of Microsoft 365 Copilot, as defined by its manifest 
 
 ### customEngineAgents
 
-> [!NOTE]
-> Custom engine agents support in Microsoft 365 Copilot is currently in limited private preview and not all developers have access during the staged rollout.
-
 Represents a conversational Teams bot that uses custom AI language models and orchestration, surfaced as an agent in the Microsoft 365 Copilot UI.
 
 |Name| Type| Maximum size | Required | Description|
@@ -612,6 +614,17 @@ The object is an array (maximum of 16 elements) with all elements of the type `o
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 | `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| Specifies one or more runtime capabilities the tab requires to function properly. Supported values: `dialogUrl`, `dialogUrlBot`, `dialogAdaptiveCard`, `dialogAdaptiveCardBot`. For more information, see [how to specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md). |
+
+## backgroundLoadConfiguration
+
+**Optional** &ndash; Object
+
+Specifies if the app is eligible to be preloaded in the background in any Microsoft 365 host that supports precaching.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| `tabConfiguration` | Object | | | Contains the settings to specify if the app supports background preloading of tabs. |
+| `tabConfiguration.contentUrl` | String | | ✔️ | Specifies the URL for preloading the app in the background. The URL can have the same value as `staticTabs.contentUrl` or contain an alternative endpoint specifically for background loading. |
 
 ## bots
 
@@ -1128,6 +1141,7 @@ The `extensions` property specifies Office Add-ins within an app manifest and si
 |`alternates`| Array | 10 | | Specifies the relationship to alternate existing Microsoft 365 solutions. It's used to hide or prioritize add-ins from the same publisher with overlapping functionality. |
 |`audienceClaimUrl`| String | 2048 characters | | Specifies the URL for your extension and is used to validate Exchange user identity tokens. For more information, see [inside the Exchange identity token](/office/dev/add-ins/outlook/inside-the-identity-token)|
 |`appDeeplinks`| Array | | | Do not use. For Microsoft internal use only. |
+|`getStartedMessages`| Array | 3 | | Provides information about an Office Add-in that appears in the callout that opens in the Office application (such as Excel, Outlook, PowerPoint, or Word) when an Office Add-in is installed. |
 |`contextMenus`| Array | | | Specifies the context menus for your extension. A context menu is a shortcut menu that appears when you right-click (or select and hold) within an open Office document. |
 |`keyboardShortcuts`| Array | 10 | | Defines custom keyboard shortcuts or key combinations to run specific actions. For more information, see [Add custom keyboard shortcuts to your Office Add-ins](/office/dev/add-ins/design/keyboard-shortcuts). |
 
@@ -1135,7 +1149,7 @@ For more information, see [Office Add-ins manifest for Microsoft 365](/office/de
 
 ### extensions.requirements
 
-The `extensions.requirements` object specifies the scopes, form factors, and Office JavaScript Library requirement sets that must be supported on the Office client in order for the add-in to be installed. Requirements are also supported on the `ribbon`, `runtime`, `alternates`, `autoRunEvents`, and `contextMenus` child properties to selectively filter out some features of the add-in. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).
+The `extensions.requirements` object specifies the scopes, form factors, and Office JavaScript library requirement sets that must be supported on the Office client in order for the add-in to be installed. Requirements are also supported on the `ribbon`, `runtime`, `alternates`, `autoRunEvents`, `contextMenus`, `contentRuntimes`, and `getStartedMessages` child properties to selectively filter out some features of the add-in. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).
 
 | Name | Type | Maximum size | Required | Description |
 |---|---|---|---|---|
@@ -1211,7 +1225,7 @@ The `extensions.contentRuntimes` array configures pages of content that are embe
 |---|---|---|---|---|
 |`id`| String | 64 characters | ✔️ | Specifies the ID for runtime. Must be unique across all `runtimes` and `contentRuntimes` objects. |
 |`code`| Object | | ✔️ | Specifies the location of content for the runtime. |
-|`code.page`| String | 2048 charaters| ✔️ | The full URL of the page that contains the content that is embedded in the document. |
+|`code.page`| String | 2048 characters| ✔️ | The full URL of the page that contains the content that is embedded in the document. |
 |`code.script`| String | | | Not applicable under `extensions.contentRuntimes`.|
 |`requestedWidth`| Number | | | The desired initial width in pixels of the embedded content page. This must be between 32 and 1000. If this property isn't specified, the Office application determines the width.|
 |`requestedHeight`| Number | | | The desired initial height in pixels of the embedded content page. This must be between 32 and 1000. If this property isn't specified, the Office application determines the height.|
@@ -1244,9 +1258,10 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups`| Array | 10 | | Defines groups of controls on a ribbon tab on a non-mobile device. For mobile devices, see `tabs.customMobileRibbonGroups` below.|
 |`tabs.groups.id`| String |64 characters | | Specifies the ID for the tab group within the app. It must be different from any built-in group ID in the Microsoft 365 application and any other custom group.|
 |`tabs.groups.label`| String | 64 characters | | Specifies the text displayed for the group. Despite the maximum length of 64 characters, to correctly align the tab in the ribbon, we recommend you limit the label to 16 characters.|
+|`tabs.groups.overriddenByRibbonApi`| Boolean | | | Specifies whether the group is hidden on application and platform combinations which support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))). This API installs custom contextual tabs on the ribbon. <br>Default value: `false`|
 |`tabs.groups.icons`| Array | 3 | | Specifies the icons displayed for the group. |
 |`tabs.groups.icons.size`| Number | |✔️| Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image sizes: `16`, `32`, `80`. |
-|`tabs.groups.icons.url`| String | 2048 characters | ✔️ | Specifies the absolute URL of the icon.|
+|`tabs.groups.icons.url`| String | 2048 characters | ✔️ | Specifies the absolute URL of the icon. <br>Default value: The string must start with `https://`|
 |`tabs.groups.controls`| Array | | | Configures the buttons and menus in the group. |
 |`tabs.groups.controls.id`| String | 64 characters| ✔️ | Specifies the ID for the control within the app. It must be different from any built-in control ID in the Microsoft 365 application and any other custom control. |
 |`tabs.groups.controls.items`| Array | | | Configures the items for a menu control. |
@@ -1255,7 +1270,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups.controls.items.label`| String | 64 characters| ✔️ | Specifies the text displayed for the menu item. |
 |`tabs.groups.controls.items.icons`| Array | | | Configures the icons for the menu item.|
 |`tabs.groups.controls.items.icons.size`| Number | |✔️| Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image sizes: `16`, `32`, `80`. |
-|`tabs.groups.controls.items.icons.url`| URL| | ✔️ | Specifies the absolute URL of the icon.|
+|`tabs.groups.controls.items.icons.url`| URL| | ✔️ | Specifies the absolute URL of the icon. <br>Default value: The string must start with `https://`|
 |`tabs.groups.controls.items.supertip`| | |✔️| Configures a supertip for the menu item. A supertip is a UI feature that displays a brief box of help information about a control when the cursor hovers over it. The box may contain multiple lines of text. |
 |`tabs.groups.controls.items.supertip.title`| String | 64 characters | ✔️ | Specifies the title text of the supertip.|
 |`tabs.groups.controls.items.supertip.description`| String | 128 characters | ✔️ | Specifies the description of the supertip.|
@@ -1267,7 +1282,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups.controls.label`| String | 64 characters | ✔️ | Specifies the text displayed for the control. Despite the maximum length of 64 characters, to correctly align the tab in the ribbon, we recommend you limit the label to 16 characters.|
 |`tabs.groups.controls.icons`| Array | | ✔️ | Defines the icons for the control. There must be at least three child objects; one each with `size` properties of `16`, `32`, and `80` pixels. |
 |`tabs.groups.controls.icons.size`| Number | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br> Required image sizes: `16`, `32`, `80`|
-|`tabs.groups.controls.icons.url`| URL | | | Specifies the absolute URL to the icon file.|
+|`tabs.groups.controls.icons.url`| URL | | | Specifies the absolute URL to the icon file. <br>Default value: The string must start with `https://`|
 |`tabs.groups.controls.supertip`| Object | | ✔️ | Configures a supertip for the control. A supertip is a UI feature that displays a brief box of help information about a control when the cursor hovers over it. The box may contain multiple lines of text. |
 |`tabs.groups.controls.supertip.title`| String | 64 characters | ✔️ |Specifies the title text of the supertip.|
 |`tabs.groups.controls.supertip.description`| String | 128 characters | ✔️ | Specifies the description of the supertip.|
@@ -1285,16 +1300,16 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.customMobileRibbonGroups.controls.actionId` | String | 64 characters | ✔️ | Specifies the ID of the action that is taken when a user selects the control. The `actionId` must match the `runtime.actions.id` property of an action in the `runtimes` object.|
 |`tabs.customMobileRibbonGroups.controls.icons` | Array | 9 | ✔️ | Specifies the icons that will appear on the control depending on the dimensions and DPI of the mobile device screen. There must be exactly 9 icons.|
 |`tabs.customMobileRibbonGroups.controls.icons.size` | Number enum | | ✔️ | Size in pixels of the icon. The possible sizes are 25, 32, and 48. There must be exactly one of each size for each possible value of the `icons.scale` property. |
-|`tabs.customMobileRibbonGroups.controls.icons.url` | String | 2048 characters | ✔️ | The full, absolute URL of the icon's image file. |
+|`tabs.customMobileRibbonGroups.controls.icons.url` | String | 2048 characters | ✔️ | The full, absolute URL of the icon's image file. <br>Default value: The string must start with `https://` |
 |`tabs.customMobileRibbonGroups.controls.icons.scale` | Number enum | | ✔️ | Specifies the UIScreen.scale property for iOS devices. The possible values are 1, 2, and 3. There must be exactly one of each value for each possible value of the icons's `size` property. |
 |`fixedControls`| Array | 1 | | Configures the button of an [integrated spam-reporting](/office/dev/add-ins/outlook/spam-reporting) add-in in Outlook. Must configure if `spamReportingOverride` is specified in the `extensions.ribbons.contexts` array. |
 |`fixedControls.id`| String | 64 characters | ✔️ | Specifies the unique ID of the button of a spam-reporting add-in. |
 |`fixedControls.type`| String | | ✔️ | Defines the control type of a spam-reporting add-in. <br>Supported value: `button` |
 |`fixedControls.label`| String | 64 characters | ✔️ | Specifies the text that appears on  button of a spam-reporting add-in. |
-|`fixedControls.enabled`| Boolean | | ✔️ | This property must be specified in the `fixedControls` object. However, it doesn't affect the functionality of a spam-reporting add-in.<br>Default value: `True` |
+|`fixedControls.enabled`| Boolean | | ✔️ | This property must be specified in the `fixedControls` object, but it doesn't affect the functionality of the spam-reporting add-in. <br>Default value: `True` |
 |`fixedControls.icons`| Array | 3 | ✔️ | Defines the icons for the button of a spam-reporting add-in. There must be at least three child objects, each with icon sizes of `16`, `32`, and `80` pixels respectively.|
 |`fixedControls.icons.size`| Number | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`, `20`, `24`, `32`, `40`, `48`, `64`, and `80`.<br>Required image sizes: `16`, `32`, `80` |
-|`fixedControls.icons.url`| String | 2048 characters | ✔️ | Specifies the absolute URL to the icon. |
+|`fixedControls.icons.url`| String | 2048 characters | ✔️ | Specifies the absolute URL to the icon. <br>Default value: The string must start with `https://` |
 |`fixedControls.supertip`| Object | | ✔️ | Configures a supertip for the button of a spam-reporting add-in. |
 |`fixedControls.supertip.title`| String | 64 characters | ✔️ | Specifies the title text of the supertip. |
 |`fixedControls.supertip.description`| String | 250 characters | ✔️ | Specifies the description of the supertip. |
@@ -1362,6 +1377,23 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 |`alternateIcons.highResolutionIcon`| Object | | ✔️ | Specifies properties of the image file used to represent the add-in on high DPI screens. |
 |`alternateIcons.highResolutionIcon.size`| Number enum | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image sizes: `16`, `32`, `80`. |
 |`alternateIcons.highResolutionIcon.url`| String | 2048 characters | ✔️ | Specifies the full, absolute URL of the image file that is used to represent the add-in on high DPI screens. Icon image must be 128 x 128 pixels and use one of the following file formats: GIF, JPG, PNG, EXIF, BMP, TIFF.|
+
+### extensions.getStartedMessages
+
+The `extensions.getStartedMessages` array provides information about an Office Add-in that appears in the callout that opens in Office when an Office Add-in is installed. There can be a maximum of three objects in the array. If there is more than one, use the `extensions.getStartedMessages.requirements` property to ensure that only one of these objects is used in any given Office client. If `extensions.getStartedMessages` is not specified, Office uses the values from the `name.short` and `description.short` properties instead.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`title`|String| 125 characters | ✔️ | The title used for the heading of the callout. |
+|`description`|String| 250 characters | ✔️ | A description of the add-in that provides the body content for the callout.|
+|`learnMoreUrl`|String| 2048 characters | ✔️ | A URL to a page that explains the add-in in detail.|
+|`requirements`| Object | | | Specifies the scopes, form factors, and Office JavaScript library requirement sets that must be supported on the Office client in order for the get started message to be available. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).|
+|`requirements.capabilities`| Array | | | Identifies the requirement sets. |
+|`requirements.capabilities.name`| String | 128 characters | ✔️ | Identifies the name of the requirement set. |
+|`requirements.capabilities.minVersion`| String | | | Identifies the minimum version for the requirement set. |
+|`requirements.capabilities.maxVersion`| String | | | Identifies the maximum version for the requirement set. |
+|`requirements.scopes`| Array of enums | 4 | | Identifies the scopes in which the add-in can run and defines the Microsoft 365 applications in which the extension can run. <br>Supported values: `workbook` (Excel), `presentation` (PowerPoint), `document` (Word) |
+|`requirements.formFactors`| Array of enums | 2 | | Identifies the form factors that support the add-in. <br>Supported values: `mobile`, `desktop`|
 
 ### extensions.contextMenus
 
@@ -1521,6 +1553,16 @@ Defines the content source of a given dashboard card.
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`botId`| String | | | The unique Microsoft app ID for the bot as registered with the Bot Framework. The ID must be a GUID. |
+
+## intuneInfo
+
+**Optional** &ndash; Object
+
+Properties related to app support for Microsoft Intune.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`supportedMobileAppManagementVersion`| String | 64 characters |  | Supported [Microsoft Intune Mobile App Management](/mem/intune/apps/app-management) (MAM) version. The value is a single version number in the format `integer.integer`, such as `1.2`, indicating the highest level of support the app confirms. If no value is provided, the app doesn't attest to being Intune MAM compliant. |
 
 ## See also
 

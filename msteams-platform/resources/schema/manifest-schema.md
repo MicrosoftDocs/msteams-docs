@@ -3,12 +3,12 @@ title: App Manifest Reference
 description: In this article, you'll have the latest version of the public manifest schema for Microsoft Teams reference, schema, and sample full manifest.
 ms.topic: reference
 ms.localizationpriority: high
-ms.date: 12/11/2024
----
+ms.date: 1/30/2025
+--- 
 
 # App manifest
 
-The app manifest (previously called Teams app manifest) describes how your app integrates into the Microsoft Teams product. Your app manifest must conform to the schema hosted at [https://developer.microsoft.com/json-schemas/teams/v1.19/MicrosoftTeams.schema.json](https://developer.microsoft.com/json-schemas/teams/v1.19/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,...,1.17, and the current version is 1.19 are each supported (using "v1.x" in the URL). Version 1.18 is not available.
+The app manifest (previously called Teams app manifest) describes how your app integrates into the Microsoft Teams product. Your app manifest must conform to the schema hosted at [https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.schema.json](https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,...,1.19, and the current version is 1.20 are each supported (using "v1.x" in the URL). Version 1.18 is not available.
 For more information on the changes made in each version, see [app manifest change log](https://github.com/OfficeDev/microsoft-teams-app-schema/releases) and for previous versions, see [app manifest versions](https://github.com/microsoft/json-schemas/tree/main/teams).
 
 The following table lists TeamsJS version and app manifest versions as per different app scenarios:
@@ -24,8 +24,8 @@ The following is the sample app manifest schema:
 
 ```json
 {
-    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.19/MicrosoftTeams.schema.json",
-    "manifestVersion": "1.19",
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.20",
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
     "localizationInfo": {
@@ -546,11 +546,12 @@ Describes a set of mutual dependencies between two or more app capabilities. A M
 
 **Optional** &ndash; Object
 
-Defines one or more agents to Microsoft 365 Copilot. [Declarative agents](/microsoft-365-copilot/extensibility/overview-declarative-agent) are customizations of Microsoft 365 Copilot that run on its same orchestrator and foundation models.
+Defines one or more agents to Microsoft 365 Copilot. [Declarative agents](/microsoft-365-copilot/extensibility/overview-declarative-agent) are customizations of Microsoft 365 Copilot that run on the same orchestrator and foundation models (formerly known as `declarativeCopilots`). [Custom engine agents](/microsoft-365-copilot/extensibility/overview-custom-engine-agent) are conversational Teams bots that use custom AI language models and orchestration, yet are selectable (along with installed declarative agents) as **Agents** from the Microsoft 365 Copilot side panel.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`declarativeAgents`|Array of objects| 1 |✔️| Array of objects that each define a declarative agent. |
+|`declarativeAgents`|Array of objects| 1 || Array of objects that each define a declarative agent. |
+|`customEngineAgents`|Array of objects| 1 || Array of objects that each define a custom engine agent.|
 
 ### declarativeAgents
 
@@ -560,6 +561,18 @@ Represents a customization of Microsoft 365 Copilot, as defined by its manifest 
 |---|---|---|---|---|
 |`id`|String| |✔️| Unique identifier for the agent. When using Microsoft Copilot Studio to build agents, this is auto-generated. Otherwise, manually assign the value according to your own conventions or preference. |
 |`file`| String | 2048 characters |✔️| Relative file path within the app package to the [declarative agent manifest](/microsoft-365-copilot/extensibility/declarative-agent-manifest) file. |
+
+### customEngineAgents
+
+Represents a conversational Teams bot that uses custom AI language models and orchestration, surfaced as an agent in the Microsoft 365 Copilot UI.
+
+> [!NOTE]
+> Custom engine agents support in Microsoft 365 Copilot is currently in public preview.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`id`|String| |✔️| Unique (bot) identifier for the custom engine agent. Must match the `id` specified in the `bots` section of the manifest and be of `personal` scope. |
+|`type`|String| |✔️| Type of the custom engine agent. Supported value: `bot` |
 
 ## configurableTabs
 
@@ -602,6 +615,7 @@ This item is an array (maximum of 16 elements) with all elements of the type `ob
 
 > [!NOTE]
 >
+> * The `contentBotId` property isn't supported in apps that are verified and published on AppSource.
 > * The `groupChat` and `team` scopes are supported only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 > * The `teamLevelApp` context is dedicated only for Education tenants.
 > * The `searchUrl` feature is not available for the third-party developers.
@@ -1173,7 +1187,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`contexts`| Array | 7 | | Specifies the Microsoft 365 application window in which the ribbon customization is available to the user. Each item in the array is a member of a string array. <br>Supported values: `mailRead`, `mailCompose`, `meetingDetailsOrganizer`, `meetingDetailsAttendee`, `onlineMeetingDetailsOrganizer`, `logEventMeetingDetailsAttendee`, `default`|
+|`contexts`| Array | 8 | | Specifies the Microsoft 365 application window in which the ribbon customization is available to the user. Each item in the array is a member of a string array. <br>Supported values: `mailRead`, `mailCompose`, `meetingDetailsOrganizer`, `meetingDetailsAttendee`, `onlineMeetingDetailsOrganizer`, `logEventMeetingDetailsAttendee`, `spamReportingOverride`, `default`|
 |`requirements`| Object | | | Specifies the scopes, formFactors, and Office JavaScript library requirement sets that must be supported on the Office client in order for the ribbon customization to appear. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).|
 |`requirements.capabilities`| Array | | | Identifies the requirement sets. <br>Options: `name` (required), `minVersion`, `maxVersion`|
 |`requirements.capabilities.name`| String | | ✔️ | Identifies the name of the requirement set. |
@@ -1193,7 +1207,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups.label`| String | 64 characters | | Specifies the text displayed for the group. Despite the maximum length of 64 characters, to correctly align the tab in the ribbon, we recommend you limit the label to 16 characters.|
 |`tabs.groups.icons`| Array | 3 | | Specifies the icons displayed for the group. |
 |`tabs.groups.icons.size`| Number | |✔️| Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image sizes: `16`, `32`, `80`. |
-|`tabs.groups.icons.url`| String | 2048 characters | ✔️| Specifies the absolute URL of the icon.|
+|`tabs.groups.icons.url`| String | 2048 characters | ✔️| Specifies the absolute URL of the icon. <br>Default value: The string must start with `https://` |
 |`tabs.groups.controls`| Array | | | Configures the buttons and menus in the group. |
 |`tabs.groups.controls.id`| String | 64 characters| ✔️ | Specifies the ID for the control within the app. It must be different from any built-in control ID in the Microsoft 365 application and any other custom control. |
 |`tabs.groups.controls.items`| Array | | | Configures the items for a menu control. |
@@ -1202,7 +1216,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups.controls.items.label`| String | 64 characters| ✔️ | Specifies the text displayed for the menu item. |
 |`tabs.groups.controls.items.icons`| Array | | | Configures the icons for the menu item.|
 |`tabs.groups.controls.items.icons.size`| Number | |✔️| Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image sizes: `16`, `32`, `80`. |
-|`tabs.groups.controls.items.icons.url`| URL| | ✔️ | Specifies the absolute URL of the icon.|
+|`tabs.groups.controls.items.icons.url`| URL| | ✔️ | Specifies the absolute URL of the icon. <br>Default value: The string must start with `https://` |
 |`tabs.groups.controls.items.supertip`| | |✔️| Configures a supertip for the menu item. A supertip is a UI feature that displays a brief box of help information about a control when the cursor hovers over it. The box may contain multiple lines of text. |
 |`tabs.groups.controls.items.supertip.title`| String | 64 characters | ✔️ | Specifies the title text of the supertip.|
 |`tabs.groups.controls.items.supertip.description`| String | 128 characters | ✔️ | Specifies the description of the supertip.|
@@ -1214,7 +1228,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups.controls.label`| String | 64 characters | ✔️ | Specifies the text displayed for the control. Despite the maximum length of 64 characters, to correctly align the tab in the ribbon, we recommend you limit the label to 16 characters.|
 |`tabs.groups.controls.icons`| Array | | ✔️ | Defines the icons for the control. There must be at least three child objects; one each with `size` properties of `16`, `32`, and `80` pixels. |
 |`tabs.groups.controls.icons.size`| Number | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br> Required image sizes: `16`, `32`, `80`|
-|`tabs.groups.controls.icons.url`| URL | | | Specifies the absolute URL to the icon file.|
+|`tabs.groups.controls.icons.url`| URL | | | Specifies the absolute URL to the icon file. <br>Default value: The string must start with `https://` |
 |`tabs.groups.controls.supertip`| Object | | ✔️ | Configures a supertip for the control. A supertip is a UI feature that displays a brief box of help information about a control when the cursor hovers over it. The box may contain multiple lines of text. |
 |`tabs.groups.controls.supertip.title`| String | 64 characters | ✔️ |Specifies the title text of the supertip.|
 |`tabs.groups.controls.supertip.description`| String | 128 characters | ✔️ | Specifies the description of the supertip.|
@@ -1232,8 +1246,31 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.customMobileRibbonGroups.controls.actionId` | String | 64 characters |✔️ | Specifies the ID of the action that is taken when a user selects the control. The `actionId` must match the `runtime.actions.id` property of an action in the `runtimes` object.|
 |`tabs.customMobileRibbonGroups.controls.icons` | Array | 9 | ✔️ | Specifies the icons that appear on the control depending on the dimensions and DPI of the mobile device screen. There must be exactly 9 icons.|
 |`tabs.customMobileRibbonGroups.controls.icons.size` | Number enum | | ✔️ | Size in pixels of the icon. The required sizes are 25, 32, and 48. There must be exactly one of each size for each possible value of the icons' `scale` property. |
-|`tabs.customMobileRibbonGroups.controls.icons.url` | String | 2048 characters | ✔️ | The full, absolute URL of the icon's image file. |
+|`tabs.customMobileRibbonGroups.controls.icons.url` | String | 2048 characters | ✔️ | The full, absolute URL of the icon's image file. <br>Default value: The string must start with `https://` |
 |`tabs.customMobileRibbonGroups.controls.icons.scale` | Number enum | | ✔️ | Specifies the UIScreen.scale property for iOS devices. The possible values are 1, 2, and 3. There must be exactly one of each value for each possible value of the icons's `size` property. |
+|`fixedControls`| Array | 1 | | Configures the button of an [integrated spam-reporting](/office/dev/add-ins/outlook/spam-reporting) add-in in Outlook. Must configure if `spamReportingOverride` is specified in the `extensions.ribbons.contexts` array. |
+|`fixedControls.id`| String | 64 characters | ✔️ | Specifies the unique ID of the button of a spam-reporting add-in. |
+|`fixedControls.type`| String | | ✔️ | Defines the control type of a spam-reporting add-in. <br>Supported value: `button` |
+|`fixedControls.label`| String | 64 characters | ✔️ | Specifies the text that appears on button of a spam-reporting add-in. |
+|`fixedControls.enabled`| Boolean | | ✔️ | This property must be specified in the `fixedControls` object, but it doesn't affect the functionality of the spam-reporting add-in. <br>Default value: `True` |
+|`fixedControls.icons`| Array | 3 | ✔️ | Defines the icons for the button of a spam-reporting add-in. There must be at least three child objects, each with icon sizes of `16`, `32`, and `80` pixels respectively.|
+|`fixedControls.icons.size`| Number | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`, `20`, `24`, `32`, `40`, `48`, `64`, and `80`.<br>Required image sizes: `16`, `32`, `80` |
+|`fixedControls.icons.url`| String | 2048 characters | ✔️ | Specifies the absolute URL to the icon. <br>Default value: The string must start with `https://` |
+|`fixedControls.supertip`| Object | | ✔️ | Configures a supertip for the button of a spam-reporting add-in. |
+|`fixedControls.supertip.title`| String | 64 characters | ✔️ | Specifies the title text of the supertip. |
+|`fixedControls.supertip.description`| String | 250 characters | ✔️ | Specifies the description of the supertip. |
+|`fixedControls.actionId`| String | 64 characters | ✔️ | Specifies the ID of the action taken when a user selects the button of a spam-reporting add-in. The `actionId` must match the `runtime.actions.id` property of an action in the `runtimes` object. |
+|`fixedControls.enabled`| Boolean | | ✔️ | This property must be specified in the `fixedControls` object. However, it doesn't affect the functionality of a spam-reporting add-in. <br>Supported value: `True`|
+|`spamPreProcessingDialog`| Object | | | Configures the preprocessing dialog of an [integrated spam-reporting](/office/dev/add-ins/outlook/spam-reporting) add-in in Outlook. |
+|`spamPreProcessingDialog.title`| String | 128 characters | ✔️ | Specifies the custom title of the preprocessing dialog of a spam-reporting add-in. |
+|`spamPreProcessingDialog.description`| String | 250 characters | ✔️ | Specifies the custom text that appears in the preprocessing dialog of a spam-reporting add-in. |
+|`spamPreProcessingDialog.spamReportingOptions`| Object | | | Specifies up to five options that a user can select from the preprocessing dialog to provide a reason for reporting a message. |
+|`spamPreProcessingDialog.spamReportingOptions.title`| String | 128 characters | ✔️ | Specifies the custom text or title to describe the reporting options provided in the preprocessing dialog. |
+|`spamPreProcessingDialog.spamReportingOptions.options`| Array of strings | 5 options<br><br>128 characters per option | ✔️ | Specifies a custom option with a checkbox that a user can select from the preprocessing dialog to provide a reason for reporting a message. At least one option must be specified. A maximum of five options can be included.|
+|`spamPreProcessingDialog.spamFreeTextSectionTitle`| String | 128 characters | | Adds a text box to the preprocessing dialog for users to provide additional information on the message they're reporting. The string provided in this property appears above the text box. |
+|`spamPreProcessingDialog.spamMoreInfo`| Object | | | Configures a link to provide informational resources to a user. In the preprocessing dialog, the link appears below the text provided in `spamPreProcessingDialog.description`.|
+|`spamPreProcessingDialog.spamMoreInfo.text`| String | 128 characters | ✔️ | Specifies the link text for a URL that directs users to informational resources from the preprocessing dialog. |
+|`spamPreProcessingDialog.spamMoreInfo.url`| String | 2048 characters | ✔️ | Specifies the HTTPS URL of a site that contains informational resources. |
 
 To use `extensions.ribbons`, see [create add-in commands](/office/dev/add-ins/develop/create-addin-commands-unified-manifest), [configure the UI for the task pane command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-ui-for-the-task-pane-command), and [configure the UI for the function command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-ui-for-the-function-command).
 
@@ -1335,6 +1372,16 @@ Defines the content source of a given dashboard card.
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`botId`| String | | | The unique Microsoft app ID for the bot as registered with the Bot Framework. ID must be a GUID.|
+
+## intuneInfo
+
+**Optional** &ndash; Object
+
+Properties related to app support for Microsoft Intune.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`supportedMobileAppManagementVersion`| String | 64 characters |  | Supported [Microsoft Intune Mobile App Management](/mem/intune/apps/app-management) (MAM) version. The value is a single version number in the format `integer.integer`, such as `1.2`, indicating the highest level of support the app confirms. If no value is provided, the app doesn't attest to being Intune MAM compliant. |
 
 ## Create an app manifest file
 

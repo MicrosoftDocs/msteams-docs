@@ -286,7 +286,7 @@ If you've not added [schema.org](<https://schema.org/>) to your website, you can
 
 1. Add the [schema.org](https://schema.org/) metadata with the [JSON-LD format](https://json-ld.org/) to your website.
 1. In your website, check for the supported `@type` attribute and copy the metadata under the script tag `application/ld+json`.
-1. Open [Adaptive Card designer](https://www.adaptivecards.io/designer/) and create a new file.
+1. Open [Adaptive Card Designer](https://adaptivecards.microsoft.com/designer.html) and create a new file.
 1. In the **SAMPLE DATA EDITOR**, paste the json metadata from your website.
 
    :::image type="content" source="../../assets/images/messaging-extension/link-unfurling-app-less-adaptive-card-sample-data-editor.png" alt-text="Screenshot shows an example of website metadata in the sample data editor section of the Adaptive Card Designer.":::
