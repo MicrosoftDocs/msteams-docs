@@ -13,7 +13,7 @@ An app package is a file format that has the required resources to install and r
 
 * **[App manifest](#app-manifest)**: Describes how your app is configured, including its capabilities, required resources, and other important attributes.
 * **[App icons](#app-icons)**: Each package requires a color and outline icon for your app.
-* **[Custom icons](../design/activity-feed-notifications.md#custom-icons-in-activity-feed-notifications)**: Tailor-made icons that you can use in activity feed notifications. For more information, see [custom icons in activity feed notifications](../../tabs/send-activity-feed-notification.md#custom-icons-in-activity-feed-notifications).
+* **Custom icons**: Tailor-made icons that you can use in activity feed notifications. For more information, see ***placeholder link***.
 
 To publish your Microsoft Teams app, you need to zip the files in the app package folder and provide a suitable name.
 

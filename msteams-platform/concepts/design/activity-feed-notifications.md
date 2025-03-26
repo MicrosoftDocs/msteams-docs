@@ -42,7 +42,7 @@ The following variants show the kinds of activity feed notification cards you ca
 
 ## Custom icons in activity feed notifications
 
-You can add custom icons in activity feed notifications to increase user engagement for your app. For more information, see [custom icons in activity feed notifications](../../tabs/send-activity-feed-notification.md#custom-icons-in-activity-feed-notifications).
+You can add custom icons in activity feed notifications to increase user engagement for your app. For more information, see ***placeholder link***.
 
 ## Manage activity feed notifications
 
