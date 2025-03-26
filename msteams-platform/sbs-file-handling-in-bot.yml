@@ -280,9 +280,9 @@ items:
 - title: Interacting with the bot in Teams
   durationInMinutes: 2
   content: |
-    1. In the message compose area, enter **hi** and select **Send**. The bot sends an Adaptive card with the permission to upload the file.
+    1. In the message compose area, enter **hi** and select **Send**. The bot sends an Adaptive Card with the permission to upload the file.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/respond-bot.png" alt-text="Screenshot show the responsive message with an adaptive card sent by bot.":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/respond-bot.png" alt-text="Screenshot show the response message with an Adaptive Card sent by bot.":::
 
     1. Select **Allow**. The **teams-logo.png** file is uploaded to the file directory and is ready for download.
          
