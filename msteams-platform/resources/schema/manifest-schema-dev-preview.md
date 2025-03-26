@@ -903,45 +903,57 @@ Defines the icons of activity types that your app can post to a user's activity 
 
 ```json
 {
-   "activities":{
-      "activityTypes":[
-         {
-            "type":"taskCreated",
-            "description":"Task Created Activity",
-            "templateText":"{actor} created task {taskId} for you"
-         },
-         {
-            "type":"teamMention",
-            "description":"Team Mention Activity",
-            "templateText":"{actor} mentioned team"
-         },
-         {
-            "type":"channelMention",
-            "description":"Channel Mention Activity",
-            "templateText":"{actor} mentioned channel"
-         },
-         {
-            "type":"userMention",
-            "description":"Personal Mention Activity",
-            "templateText":"{actor} mentioned user"
-         },
-         {
-            "type":"calendarForward",
-            "description":"Forwarding a Calendar Event",
-            "templateText":"{actor} sent user an invite on behalf of {eventOwner}"
-         },
-         {
-            "type":"calendarForward",
-            "description":"Forwarding a Calendar Event",
-            "templateText":"{actor} sent user an invite on behalf of {eventOwner}"
-         },
-         {
-            "type":"creatorTaskCreated",
-            "description":"Created Task Created",
-            "templateText":"The Creator created task {taskId} for you"
-         }
-      ]
-   }
+    //...
+    "activities": {  
+        "activityTypes": [
+           {
+                "type": "leadershipAnnouncements",
+                "description": "leadership Announcements",
+                "templateText": "{actor} shared an announcement",
+                "allowedIconIds" : [
+                    "announcementCreated"
+                ]
+              },
+           {
+                "type": "announcementCreated",
+                "description": "Annnouncements",
+                "templateText": "{actor} posted an announcement",
+                "allowedIconIds" : [
+                    "announcementCreated"
+                ]
+              },
+              {
+                "type": "reaction",
+                "description": "reaction Activity",
+                "templateText": "{actor} reacted to your post in channel",
+                "allowedIconIds" : [
+                    "likeReaction",
+                    "smileReaction"
+                ]
+              },
+              {
+                "type": "taskCreated",
+                "description": "task created activity",
+                "templateText": "{actor} created {taskId} for you.",  
+                // No icons are associated with this activity type. When you send a notification using this activity type, Teams shows the default brand logo.
+              }
+            ],
+        "activityIcons" :[
+            {
+            "id": "likeReaction",
+            "iconFile": "likeReaction.png"
+            },
+            {
+            "id": "smileReaction",
+            "iconFile": "smileReaction.png"
+            },
+            {
+            "id": "announcementCreated",
+            "iconFile": "announcementCreated.png"
+            }
+           ]
+        }
+    //...
 }
 ```
 
