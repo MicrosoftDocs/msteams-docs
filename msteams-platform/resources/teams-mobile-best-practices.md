@@ -26,11 +26,11 @@ Check out this [sample app](https://github.com/OfficeDev/Microsoft-Teams-Samples
 
 In areas with weak signal strength, mobile data network can be slow and unstable, resulting in high latency. Hence, reducing the overall app package size and optimizing data transfers is critical. To reduce the page size, gather key performance metrics by running a performance audit using the **Performance** tab in dev tools. The performance audit helps identify bottlenecks and areas for improvement in your app.
 
-### Run a performance audit
+### Performance audit
 
 To run a performance audit, follow these steps:
 
-1. [Enable dev tools](../tabs/how-to/developer-tools.md).
+1. [Enable dev tools](../tabs/how-to/developer-tools.md#access-devtools-from-teams-android-client).
 
 1. Open dev tools and select **inspect** under your app. A new window opens.
 
@@ -38,7 +38,7 @@ To run a performance audit, follow these steps:
 
     In the following example, the **Timings** section shows that the app takes 2.20 seconds from Teams JavaScript SDK initialization to `notifySuccess`, makes two calls to get an authorization token, and makes a third API call that takes 1.5 seconds.
 
-    :::image type="content" source="../assets/images/tabs/dev-tools-performance.png" alt-text="Screenshot shows the performance tab in dev tools." lightbox="../assets/images/tabs/dev-tools-performance.png":::
+    :::image type="content" source="../assets/images/tabs/dev-tools-performance.png" alt-text="Screenshot shows the performance tab in dev tools." lightbox="../assets/images/tabs/dev-tools-performance-full.png":::
 
 1. Select the **Lighthouse** tab. This tab provides insights into the app size and performance metrics.
 
