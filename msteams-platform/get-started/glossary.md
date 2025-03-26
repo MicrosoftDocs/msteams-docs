@@ -15,7 +15,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | --- | --- |
 | [Action command](../messaging-extensions/how-to/action-commands/define-action-command.md) | A type of message extension app that uses a pop-up to collect or display information. <br>**See also**: [Message extension](#m); [Search commands](#s) |
 | [Access token](../tabs/how-to/authentication/tab-sso-code.md) | An access token enables a client app to securely call protected web APIs. Access tokens are used by web APIs to perform authentication and authorization. <br> **See also**: [Identity token](#i) <br> For more information, see [Access token](/azure/active-directory/develop/access-tokens), [Authentication](../concepts/authentication/authentication.md) |
-| [Adaptive Cards](../task-modules-and-cards/what-are-cards.md) | An actionable content snippet added to a conversation by a bot or message extension. Use text, graphics, and buttons with these cards for rich communication. <br> **See also**: [Dialog](#d); [Adaptive Card Schema Explorer](https://adaptivecards.io/explorer/AdaptiveCard.html) |
+| [Adaptive Cards](../task-modules-and-cards/what-are-cards.md) | An actionable content snippet added to a conversation by a bot or message extension. Use text, graphics, and buttons with these cards for rich communication. <br> **See also**: [Dialog](#d); [Adaptive Card Schema Explorer](https://adaptivecards.microsoft.com/?topic=AdaptiveCard) |
 | [Administrator consent](../tabs/how-to/authentication/tab-sso-register-aad.md) | An administrator can grant consent for the application on behalf of all users in the organization. It helps avoid the need for user consent. <br> [SSO](#s); [Consent dialog](#c); [User consent](#u) |
 | [AI label](~/bots/how-to/format-ai-bot-messages.md) | An AI label in an AI bot message indicates that the content was generated using AI and reminds the user that the content they are interacting with was not created by a human, but by an AI system. <br> **See also**: [Citation](#c); [Sensitivity label](#s) |
 | [Anonymous](../apps-in-teams-meetings/build-apps-for-anonymous-user.md) |Anonymous users don't have a Microsoft Entra identity and aren't federated with a tenant. The anonymous participants are external users but their identity isn't shown in the meeting. An anonymous user can be a presenter or an attendee but can't be an organizer. <br>**See also**: [Federated or external](#f); [In-tenant](#i); [Guest](#g)|
@@ -304,9 +304,3 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Web part](../sbs-gs-spfx.yml) | A UI component used to build a page or a site in a Teams app created using VS Code and SharePoint Framework. <br>**See also**: [SPFx](#s) |
 | Webview | A webview is a control that displays web content inside an application. |
 | [Workbench](../sbs-gs-spfx.yml) | Overall VS Code UI that encompasses UI components, such as title bar, panel, and more. <br>**See also**: [Local workbench](#l); [Teams workbench](#t) |
-
-## Y
-
-| Term | Definition |
-| --- | --- |
-| [Yeoman generator for Teams](https://github.com/pnp/generator-teams)| Yeoman generator for Teams or YoTeams allows you to create Teams apps using TypeScript and JavaScript on your terms, in your preferred editor, and without any external or online dependencies. |

@@ -1,11 +1,11 @@
 ---
-title: Teams Connect shared channels
-author: Rajeshwari-v
+title: Teams Connect Shared Channels
+author: surbhigupta
 description: Learn about Teams Connect shared channels to securely collaborate with internal and external users in a shared space without switching tenants.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.date: 01/23/2025
+ms.date: 02/06/2025
 ---
 
 # Microsoft Teams Connect shared channels
@@ -107,4 +107,4 @@ Apps must function cross-tenants in installation and usage. The following table 
 * [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
 * [Shared channels in Microsoft Teams](/microsoftteams/shared-channels)
 * [Channel resource type](/graph/api/resources/channel)
-* [Retension policy for Teams locations](/microsoft-365/compliance/create-retention-policies)
+* [Retention policy for Teams locations](/microsoft-365/compliance/create-retention-policies)

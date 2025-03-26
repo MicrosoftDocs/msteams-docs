@@ -1,6 +1,6 @@
 ---
 title: Authentication for API-based Message Extension
-author: v-ypalikila
+author: surbhigupta
 description: Learn about the requirements and troubleshooting guidelines for an API-based message extension, authentication, register an API key, and schema mapping.
 ms.localizationpriority: medium
 ms.topic: overview

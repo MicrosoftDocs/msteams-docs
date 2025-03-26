@@ -1,11 +1,11 @@
 ---
 title: Debug Tab or Bot Apps in Mobile
 author: surbhigupta 
-description: Learn how to debug and test your Teams app with tab and bot capability on mobile client in both Visual Studio Code and command line.
+description: Learn how to debug and test your Teams app with tab and bot capability on Android and iOS mobile clients in both Visual Studio Code and Command Line.
 ms.author: surbhigupta 
 ms.localizationpriority: high
 ms.topic: overview
-ms.date: 12/11/2024
+ms.date: 02/06/2025
 ---
 
 # Debug for mobile
@@ -122,6 +122,9 @@ You can view the project folders and files under **Explorer** in the Microsoft V
 
         :::image type="content" source="../assets/images/debug-mobile/login.PNG" alt-text="Screenshot shows the personal tab app page.":::
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Debug%20your%20tab%20app%20using%20Visual%20Studio%20Code&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdebug-mobile%3Ftabs%3Dvscode%252Cios1%252Cios2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdebug-mobile.md&documentVersionIndependentId=ffc96a29-6bbb-879f-c8c1-ec1bc5a9f83d&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
+
 # [Command Line](#tab/cline)
 
 1. Go to [ngrok](https://ngrok.com) and sign up for a free account or log into your existing account.
@@ -141,6 +144,9 @@ You can view the project folders and files under **Explorer** in the Microsoft V
    1. `teamsfx deploy --env local`
    1. `teamsfx preview --env local`
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Debug%20your%20tab%20app%20using%20Command%20Line&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdebug-mobile%3Ftabs%3Dcline%252Cios1%252Cios2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdebug-mobile.md&documentVersionIndependentId=ffc96a29-6bbb-879f-c8c1-ec1bc5a9f83d&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
+
 ---
 
 ## Test your tab app on mobile client
@@ -150,7 +156,7 @@ You can view the project folders and files under **Explorer** in the Microsoft V
     :::image type="content" source="../assets/images/debug-mobile/mobile-more-option.PNG" alt-text="Screenshot shows the more option in Teams mobile client." lightbox="../assets/images/debug-mobile/debug-mobile.PNG":::
 
     > [!NOTE]
-    > If a you have debugged the app previously, it's recommended to clear the cache on the mobile device to ensure immediate app synchronization. After clearing the cache, the app takes some time to sync.
+    > If you've debugged the app previously, we recommend that you clear the cache on the mobile device to ensure immediate app synchronization. After clearing the cache, the app takes some time to sync.
 
 # [iOS](#tab/ios1)
 
@@ -184,7 +190,7 @@ To clear the Teams app data, go to **Teams** > **Settings** > **Data and storage
 1. To test your bot in mobile client, follow the steps listed in [Test your tab app on mobile client](#test-your-tab-app-on-mobile-client) for your bot.
 
     > [!NOTE]
-    > If a you have debugged the bot app previously and the app manifest (previously called Teams app manifest) file is changed, we recommend to clear the cache on the mobile device to ensure immediate app synchronization. After clearing the cache, the app takes some time to sync.
+    > If you've debugged the bot app previously and the app manifest (previously called Teams app manifest) file is changed, we recommend to clear the cache on the mobile device to ensure immediate app synchronization. After clearing the cache, the app takes some time to sync.
 
 # [iOS](#tab/ios2)
 
