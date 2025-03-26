@@ -100,60 +100,23 @@ The following JSON response is an example of a `config` response received from t
 
 ```json
 {
-    "name": "composeExtension/submitAction",
-    "type": "invoke",
-    "timestamp": "2024-03-08T14:10:47.575Z",
-    "localTimestamp": "2024-03-08T19:40:47.575+05:30",
-    "id": "f:7dfe18de-94e3-9f38-5d44-adeb31cd8243",
-    "channelId": "msteams",
-    "serviceUrl": "https://smba.trafficmanager.net/amer/",
-    "from": {
-        "id": "29:1PBlnIsEROUYzpFjULDVodMHrnpujmfhBdQAf0pcO1EkaDkhI0_Pj_ql-jZUYOGdSc3_KcqaIIjzbleraVJ2Z3g",
-        "name": "MOD Administrator",
-        "aadObjectId": "ce9def33-d7fc-444c-8728-be1f95e6b6f2"
-    },
-    "conversation": {
-        "isGroup": true,
-        "conversationType": "groupChat",
-        "tenantId": "4ad59956-0f88-4b88-a9d0-570b6eb4e66b",
-        "id": "19:1dd50ba7-e5bd-46ea-b34e-80a415148de7_ce9def33-d7fc-444c-8728-be1f95e6b6f2@unq.gbl.spaces"
-    },
-    "recipient": {
-        "id": "28:9a2b01fc-88c1-40e1-bf87-5079c8e35626",
-        "name": "PSDAzureBot"
-    },
-    "entities": [
-        {
-            "locale": "en-GB",
-            "country": "GB",
-            "platform": "Web",
-            "timezone": "Asia/Calcutta",
-            "type": "clientInfo"
-        }
-    ],
-    "channelData": {
-        "tenant": {
-            "id": "4ad59956-0f88-4b88-a9d0-570b6eb4e66b"
+    "composeExtension": {
+        "suggestedActions": {
+            "actions": [
+                {
+                    "type": "openUrl",
+                    "title": "Open url",
+                    "value": "https://ct3h34ng-7130.inc1.devtunnels.ms/searchSettings.html?settings="
+                }
+            ]
         },
-        "source": {
-            "name": "compose"
-        }
+        "type": "config"
     },
-    "value": {
-        "commandId": "razorView",
-        "commandContext": "compose",
-        "data": {
-            "Title": "Welcome to RazorView!",
-            "DisplayData": " Today&#x27;s date is 8-3-2024, Friday"
-        },
-        "context": {
-            "theme": "default"
-        }
-    },
-    "locale": "en-GB",
-    "localTimezone": "Asia/Calcutta"
+    "responseType": "composeExtension"
 }
 ```
+
+The `type` field within `composeExtension` is set to `config`, indicating the nature of this response as a configuration. `responseType` identifies that this response is intended for the `composeExtension` framework of the app.
 
 ### `auth` response type
 
