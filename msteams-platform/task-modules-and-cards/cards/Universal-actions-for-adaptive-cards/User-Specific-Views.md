@@ -182,7 +182,7 @@ The following code provides an example of an adaptiveCard/action invoke response
 
 The following code provides an example of an invoke response to return Adaptive Cards:
 
-### [C#](#tab/C)
+### [.NET](#tab/C)
 
 ```csharp
 string cardJson = "<adaptive card json>";
@@ -214,7 +214,27 @@ const cardRes = {
 
 ```
 
-***
+### [Python](#tab/python)
+
+```python
+card = "<adaptive card json>"
+
+card_res = {
+    "statusCode": 200,
+    "type": "application/vnd.microsoft.card.adaptive",
+    "value": card
+}
+
+res = {
+    "status": 200,
+    "body": card_res
+}
+
+return res
+
+```
+
+---
 
 The following list provides card design guidelines for User Specific Views:
 
