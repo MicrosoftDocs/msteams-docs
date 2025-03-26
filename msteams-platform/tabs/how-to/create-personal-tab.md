@@ -14,7 +14,7 @@ Tabs in chats, channels, or meetings behave more like apps, as you can pin only 
 
 > [!IMPORTANT]
 >
-> * We've introduced the [Teams Toolkit Overview](../../toolkit/teams-toolkit-fundamentals.md) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
+> We've introduced the [Teams Toolkit Overview](../../toolkit/teams-toolkit-fundamentals.md) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
 
 Ensure that you've all the [prerequisites](~/tabs/how-to/tab-requirements.md) to build your tab.
 
@@ -654,14 +654,14 @@ You can use the latest version of the Visual Studio to develop Teams apps with B
 To install the Microsoft Teams Toolkit extension:
 
 1. Download the latest version of the Visual Studio.
-1. Open `vs_enterprise__3bed52501a604464b1eff2ce580fd4eb.exe` from your download folder.
+1. Open the Visual Studio installer file (`.exe`) of  from your download folder.
 1. Select **Continue** in the **Visual Studio Installer** page to configure your installation.
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/visual-studio-installer.PNG" alt-text="Screenshot of Visual Studio Installer with continue options highlighted in red.":::
 
-1. Select **ASP.NET and web development** under **Workloads**.
+1. Under **Workloads**, select **ASP.NET and web development**.
 
-1. Select **Microsoft Teams development tools** under **Installation details**.
+1. Under **Installation details**, select **Microsoft Teams development tools**.
 
 1. Select **Install**.
 
@@ -704,17 +704,17 @@ You can use the CLI with the `teamsfx` command. Verify that the command is worki
 
 A tenant is like a space or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you upload and test your custom app. Let's verify if you're ready to develop with the tenant.
 
-### Enable custom app upload option
+### Enable custom app upload
 
 After creating the app, you must load your app in Teams without distributing it. This process is known as custom app upload. Sign in to your Microsoft 365 account to view this option.
 
 Do you already have a tenant and the admin access? Let's check if you really do!
 
-Verify if you can upload a custom app in Teams:
+To verify if you can upload a custom app in Teams:
 
 1. In the Teams client, select **Apps**.
 1. Select **Manage your apps**.
-1. Select **Upload a custom app**. If you see **Upload a custom app** option, custom app upload is enabled.
+1. Select **Upload an app**. If you see **Upload a custom app** option, custom app upload is enabled.
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/upload-custom-app.PNG" alt-text="Screenshot shows the option to upload a custom app in Teams.":::
 
@@ -771,9 +771,7 @@ Use Teams Toolkit to create your first tab project. The toolkit takes you throug
 
    The **Create a new project** page appears.
 
-1. Select the project details.
-
-   Select the project type:
+1. Select the project type and details:
 
    1. Search for **Microsoft Teams** from templates dropdown list.  
 
@@ -785,9 +783,7 @@ Use Teams Toolkit to create your first tab project. The toolkit takes you throug
 
       The **Configure your new project** page appears.
 
-1. Configure the new project details.
-
-    Select the following project configuration:
+1. Configure the new project details:
 
    1. Enter a suitable name for your project.
 
@@ -806,7 +802,7 @@ Use Teams Toolkit to create your first tab project. The toolkit takes you throug
 
       The **Create a new Teams application** page appears.
 
-1. Select Teams app feature.
+1. Select the Teams app feature:
 
    1. Select the **Tab** as the capability for your app.
 
@@ -862,6 +858,7 @@ To build and run your app:
 
 1. Select **Debug** > **Start Debugging** or select **F5** to run your app in debug mode.
     <!-- markdownlint-disable MD033 -->
+    <br>
     <details>
     <summary>Learn what happens when you run your app locally in the debugger.</summary>
 
@@ -912,6 +909,7 @@ To build and run your app:
     You can do normal debugging activities, such as setting breakpoints, as if it were any other web application. The app supports hot reloading.  If you change any file within the project, the page reloads.
 
     <!-- markdownlint-disable MD033 -->
+    <br>
     <details>
     <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
@@ -928,11 +926,11 @@ To build and run your app:
 
 You've learned to create, build, and run Teams app with tab capability. The following final steps are to deploy your app on Azure and preview in Teams follow the steps:
 
-1. [Provision your tab app in the cloud](#to-provision-your-tab-app-in-the-cloud): You can provision your tab app in the cloud.
-1. [Deploy your tab app to cloud](#to-deploy-your-tab-app-to-cloud): You can deploy your tab app to cloud.
-1. [Preview your tab app in Teams](#to-preview-your-tab-app-in-teams): You can preview your tab app in Teams.
+1. [Provision your tab app in the cloud](#to-provision-your-tab-app-in-the-cloud)
+1. [Deploy your tab app to cloud](#to-deploy-your-tab-app-to-cloud)
+1. [Preview your tab app in Teams](#to-preview-your-tab-app-in-teams)
 
-    Let's deploy the first app with tab capability on Azure using Teams Toolkit.
+Let's deploy the first app with tab capability on Azure using Teams Toolkit.
 
 ### **To provision your tab app in the cloud**
 
@@ -964,7 +962,7 @@ You've learned to create, build, and run Teams app with tab capability. The foll
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/view-resource.PNG" alt-text="Screenshot of Teams Toolkit with View Provisioned Resources highlighted in red.":::
 
-1. Sign in to your Azure portal account on sign-in prompt.
+1. Sign in to your Azure portal account on the sign-in prompt.
 
     Your app-dev-rg appears.
 
