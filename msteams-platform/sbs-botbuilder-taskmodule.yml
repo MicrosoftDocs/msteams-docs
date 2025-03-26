@@ -252,7 +252,7 @@ items:
   content: |
     1. Select **Adaptive Card** from **Task Module Invocation from Hero Card** or **Task Module Invocation from Adaptive Card**.
 
-       :::image type="content" source="~/assets/images/Teams-task-module/adaptive-card_1.png" alt-text="Screenshot shows the option to select Adaptive Card from the dialog.":::
+       :::image type="content" source="~/assets/images/Teams-task-module/adaptive-card_1.png" alt-text="Screenshot shows the option to select the Adaptive Card option from the dialog.":::
 
     1. Enter **Hello** and select **Submit**.
 

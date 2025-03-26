@@ -10,7 +10,7 @@ ms.date: 02/06/2025
 
 # Workflow bot in Teams
 
-A workflow bot allows users to interact with an Adaptive Card. Adaptive Card action handler enables the Adaptive Card to converse in Teams app. You can create a workflow bot in multiple scenarios for your users to enhance the user experience, such as incident management, ticketing, approval workflow, and project management cards. You can create and assign a work item with workflow bot and sync the content to Azure DevOps or Jira system.
+A workflow bot allows users to interact with an Adaptive Card. Adaptive Card action handler enables an Adaptive Card to converse in Teams app. You can create a workflow bot in multiple scenarios for your users to enhance the user experience, such as incident management, ticketing, approval workflow, and project management cards. You can create and assign a work item with workflow bot and sync the content to Azure DevOps or Jira system.
 
 A workflow bot can be installed into a team, group chat, or as personal app, depending on different scopes. The default command logic returns an Adaptive Card. You can customize this logic with your business requirement. For the customization, you need to call your existing APIs.
 
