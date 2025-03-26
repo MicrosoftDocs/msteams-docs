@@ -77,9 +77,9 @@ For `serviceUrl`, use the value from an incoming activity triggering the flow or
 
 > [!WARNING]
 >
-> * These URLs are for proactive messages only. Avoid hardcoding URLs. Use `serviceUrl` from the incoming activity or conversation reference from the bot. If it's unavailable, use global URLs based on region and cloud.
+> * These URLs are for proactive messages only. Avoid hardcoding them. Instead, use `serviceUrl` from the incoming activity or conversation reference. If it's unavailable, use global URLs based on region and cloud.
 >
-> * For any reply to messages, use the `serviceURL` from the incoming request. For more information, see [Activity.ServiceUrl property](/dotnet/api/microsoft.bot.schema.activity.serviceurl?view=botbuilder-dotnet-stable&preserve-view=true).
+> * For any reply to messages, use `serviceURL` from the incoming request. For more information, see [Activity.ServiceUrl](/dotnet/api/microsoft.bot.schema.activity.serviceurl?view=botbuilder-dotnet-stable&preserve-view=true) property.
 
 For a code sample, see [`MessageAllMembersAsync`](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L260&preserve-view=true).
 
