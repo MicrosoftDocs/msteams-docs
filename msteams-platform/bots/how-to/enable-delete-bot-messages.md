@@ -33,7 +33,7 @@ Here are some user scenarios for enabling bot users to delete messages:
 
 | Use case | How deleting the message helps |
 | --- | --- |
-| **Context**: A user requests a conversation summary, but the bot encounters an error and generates excessive error logs that dominate the chat. <br><br> **Problem**: The error logs dominate the chat, creating a poor user experience and cluttering the conversation with irrelevant information. | **Solution**: The user deletes the message with error logs and submits feedback about the poor bot experience for improvement. <br> **Steps**: <br> 1. A user requests the bot to create a summary of the conversation. <br> 2. The bot encounters an error while completing the action. <br> 3. The bot generates unnecessary error logs that take over the chat. <br> 4. The user deletes the message containing the error logs. <br> 5. The user submits feedback about the error and the poor bot experience. 6. The feedback is used to improve the bot's performance and prevent similar issues in the future. |
+| **Context**: A user requests a conversation summary, but the bot encounters an error and generates excessive error logs that dominate the chat. <br><br> **Problem**: The error logs dominate the chat, creating a poor user experience and cluttering the conversation with irrelevant information. | **Solution**: The user deletes the message with error logs and submits feedback about the poor bot experience for improvement. <br> **Steps**: <br> 1. A user requests the bot to create a summary of the conversation. <br> 2. The bot encounters an error while completing the action. <br> 3. The bot generates unnecessary error logs that take over the chat. <br> 4. The user deletes the message containing the error logs. <br> 5. The user submits feedback about the error and the poor bot experience. <br> The feedback is used to improve bot performance. |
 
 # [Deleting messages in group chat](#tab/group1)
 
@@ -41,7 +41,7 @@ Here are some user scenarios for enabling bot users to delete messages:
 
 | Use case | How deleting the message helps |
 | --- | --- |
-| **Context**: Confidential information was initially shared with the original group members, but external participants were later added who shouldn't have access to it. <br><br> **Problem**: When users search for related information in the chat, confidential information is visible to external users who don't have permission to view it, posing a risk of unauthorized access to sensitive data. | **Solution**: Any valid user can delete information not meant for all group chat members.  This ensures that confidential information stays secure and is only accessible to authorized users. <br> **Steps**: <br> 1. A user shares confidential information in a group chat. <br> 2. Over time, external users are added to the group chat. <br> 3. The information becomes visible to these external users during searches. <br> 4. A valid user identifies the unauthorized access and deletes the sensitive information from the chat. <br> 5.The deletion prevents external users from viewing the confidential information, maintaining data security. |
+| **Context**: Confidential information was initially shared with the original group members, but external participants were later added who shouldn't have access to it. <br><br> **Problem**: When users search for related information in the chat, confidential information is visible to external users who don't have permission to view it, posing a risk of unauthorized access to sensitive data. | **Solution**: Any valid user can delete information not meant for all group chat members.  This ensures that confidential information stays secure and is only accessible to authorized users. <br> **Steps**: <br> 1. A user shares confidential information in a group chat. <br> 2. Over time, external users are added to the group chat. <br> 3. The information becomes visible to these external users during searches. <br> 4. A valid user identifies the unauthorized access and deletes the sensitive information from the chat. <br> The deletion prevents external users from viewing the confidential information, maintaining data security. |
 
 ---
 
@@ -84,7 +84,7 @@ When a user hovers over a bot message, the **Delete** option in the overflow men
 
 ## Enable users to delete bot messages in your bot app
 
-Allowing bot users to delete messages is optional. To add this feature to a bot, it must be enabled it in the app and in the tenant. Enable this feature for your bot app using the following two mandatory configurations:
+Allowing bot users to delete messages is optional. To add this feature to a bot, it must be enabled in the app and in the tenant. Enable this feature for your bot app using the following two mandatory configurations:
 
 - [Update app manifest](#update-app-manifest) to enable it in the app.
 - [Configure in the Admin Center](#configure-in-the-admin-center) to enable it in the tenant.
