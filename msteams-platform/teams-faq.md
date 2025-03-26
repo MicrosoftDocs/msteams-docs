@@ -1126,6 +1126,16 @@ Pre-existing pinned configurable tab instances of your app continue to work the 
 <br>
 </details>
 </details>
+<br>
+&nbsp;
+</details>
+<details>
+<summary>How do I optimze my tab webpages to perform better on mobile devices?</summary>
+
+To optimize your tab app performance on Teams mobile, use service workers to cache static assets and conduct performance audits with dev tools. For more information, see [best practices for Teams mobile apps](resources/teams-mobile-best-practices.md).
+<br>
+</details>
+</details>
 
 ## Teams AI library
 
