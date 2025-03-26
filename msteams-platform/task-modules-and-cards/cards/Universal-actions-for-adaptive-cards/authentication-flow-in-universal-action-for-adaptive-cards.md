@@ -76,7 +76,7 @@ For an OAuth or nominal sign-on experience in which the user is presented with a
 
 1. Upon receiving this response, Teams client shows a **Sign-In** button in the card footer where user can sign in.
 
-   :::image type="content" source="../../../assets/images/authentication/adaptive-card-universal-action/sign-in-button.png" alt-text="Screenshot shows the Sign-In button on the Adaptive card.":::
+   :::image type="content" source="../../../assets/images/authentication/adaptive-card-universal-action/sign-in-button.png" alt-text="Screenshot shows the sign-in button on an Adaptive Card.":::
 
 1. When the user selects **Sign-In** button, the identity provider's sign-in page opens in a browser window opens. After the user signs in, the Token Service page appears with an authorization code value.
 1. Teams client creates and sends the `adaptiveCard/action` invoke activity with `name`. The value includes the `state` field containing the authorization code:

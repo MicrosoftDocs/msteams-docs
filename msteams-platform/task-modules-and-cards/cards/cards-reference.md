@@ -1,6 +1,6 @@
 ---
 title: Create & Explore Card Types in Teams
-description: In this module, learn what are cards and card actions available to bots in Teams and create a hero, thumbnail and adaptive cards.
+description: In this module, learn about cards and card actions available to bots in Teams, and how to create hero, thumbnail, and Adaptive Cards.
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 09/16/2024

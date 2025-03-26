@@ -238,7 +238,7 @@ items:
 
        :::image type="content" source="~/assets/images/Teams-task-module/open-app-card.png" alt-text="Screenshot of the scope selection dialog with the Open option highlighted..":::
 
-    1. In the compose message area, type **hi** and bot sends an Adaptive card. 
+    1. In the compose message area, type **hi** and bot sends an Adaptive Card. 
 
        :::image type="content" source="~/assets/images/Teams-task-module/chat_ready_1.png" alt-text="Chat":::
     
@@ -252,15 +252,15 @@ items:
   content: |
     1. Select **Adaptive Card** from **Task Module Invocation from Hero Card** or **Task Module Invocation from Adaptive Card**.
 
-       :::image type="content" source="~/assets/images/Teams-task-module/adaptive-card_1.png" alt-text="Adaptive card":::
+       :::image type="content" source="~/assets/images/Teams-task-module/adaptive-card_1.png" alt-text="Screenshot shows the option to select the Adaptive Card option from the dialog.":::
 
     1. Enter **Hello** and select **Submit**.
 
-       :::image type="content" source="~/assets/images/Teams-task-module/adaptive-card-text.png" alt-text="Screenshot shows Adaptive card message box.":::
+       :::image type="content" source="~/assets/images/Teams-task-module/adaptive-card-text.png" alt-text="Screenshot shows an Adaptive Card with a message box.":::
 
        **Adaptive Card** sends an acknowledgment message.
        
-       :::image type="content" source="~/assets/images/Teams-task-module/adaptive-card-submit.png" alt-text="Screenshot shows the Adaptive card sends an acknowledgment message.":::
+       :::image type="content" source="~/assets/images/Teams-task-module/adaptive-card-submit.png" alt-text="Screenshot shows an Adaptive Card with an acknowledgment message.":::
 
     1. Select **Custom Form** from **Task Module Invocation from Hero Card** or **Task Module Invocation from Adaptive Card**.
 
