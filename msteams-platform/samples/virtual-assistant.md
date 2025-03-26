@@ -108,7 +108,7 @@ A code snippet to extract  `skillId` from card action data is shown in the follo
             }
             catch
             {
-                // If not able to retrive skillId, empty skillId should be returned
+                // If not able to retrieve skillId, empty skillId should be returned
             }
 
             return skillId;
