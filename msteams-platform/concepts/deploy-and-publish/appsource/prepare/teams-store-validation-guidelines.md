@@ -13,6 +13,8 @@ Following these guidelines increases the chances of your app to pass the Microso
 
 > [!NOTE]
 >
+> * If you want to build a high-quality agent for your organization
+This requirement is only applicable to independent software vendor (ISV) apps and not apps built for your organization.
 > * Some guidelines may not be applicable to your app. For example, if your app doesn't include a bot, you can ignore bot-related guidelines.
 > * We've cross-referenced these guidelines to the Microsoft commercial certification policies and added Do’s and Don’ts with examples from pass or fail scenarios encountered in our validation process.
 > * Certain guidelines are marked as *Must fix*. If your app submission doesn't meet these mandatory guidelines, you'll receive a failure report from us with steps to mitigate. Your app submission passes Teams Store validation only after you've fixed the issues.
