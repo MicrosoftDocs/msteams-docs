@@ -328,6 +328,12 @@
       href: https://github.com/pnp/generator-teams 
   - name: SDKs
     items:
+    - name: Teams AI Library v2 (Spark) SDK
+      items:
+      - name: Overview
+        href: https://review.learn.microsoft.com/en-us/microsoft-365/extensibility/overview?branch=teamsaipoc?context=/microsoftteams/platform/context
+      - name: Quickstart
+        href: https://review.learn.microsoft.com/en-us/microsoft-365/extensibility/temp?branch=teamsaipoc?context=/microsoftteams/platform/context
     - name: TeamsFx SDK
       href: toolkit/TeamsFx-SDK.md
       displayName: getUserinfo
