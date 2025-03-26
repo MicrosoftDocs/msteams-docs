@@ -85,7 +85,7 @@ Use Delete messages-Bot framework's `DeleteActivity` method: [Update and delete
 <details>
 <summary>How can I test the validity of the card schema via code?</summary>
 
-You can test or validate the Adaptive Card schema using the **Adaptive cards editor (preview)** option in [Developer Portal > Tools](https://dev.teams.microsoft.com/tools).
+You can test or validate the Adaptive Card schema using the **Adaptive Cards editor (Preview)** option in [Developer Portal > Tools](https://dev.teams.microsoft.com/tools).
 </details>
 <details>
 <summary>Why am I unable to create a bot in Developer Portal?</summary>

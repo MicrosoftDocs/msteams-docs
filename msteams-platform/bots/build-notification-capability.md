@@ -302,7 +302,7 @@ You can customize sending the notification to the following targets:
      // find the first channel when the predicate is true.
      const channel = await notificationApp.notification.findChannel(c => Promise.resolve(c.info.name === "MyChannelName"));
     
-     // send adaptive card to the specific channel.
+     // send an Adaptive Card to the specific channel.
      await channel?.sendAdaptiveCard(...);
      ```
 
@@ -315,7 +315,7 @@ You can customize sending the notification to the following targets:
      // find the first person when the predicate is true.
      const member = await notificationApp.notification.findMember(m => Promise.resolve(m.account.name === "Bob"));
     
-     // send adaptive card to the specific person. 
+     // send an Adaptive Card to the specific person. 
      await member?.sendAdaptiveCard(...);
      ```
 
@@ -721,7 +721,7 @@ If Azurite exits due to port in use, you can [specify another listening port](/a
 
 The Adaptive Card action handler feature enables the app to respond to Adaptive Card actions that are triggered by end users to complete a sequential workflow. An Adaptive Card provides one or more buttons in the card to ask for user's input such as calling some APIs. The Adaptive Card then sends another Adaptive Card in the conversation to respond to the card action.
 
-For more information on how to add adaptive card actions to command bot, see [workflow bot in Teams](how-to/conversations/workflow-bot-in-teams.md).
+For more information on how to add Adaptive Card actions to command bot, see [workflow bot in Teams](how-to/conversations/workflow-bot-in-teams.md).
 
 <br>
 
