@@ -6,7 +6,6 @@ ms.topic: conceptual
 ms.author: anclear
 ms.date: 03/06/2025
 ms.localizationpriority: medium
-ms.date: 03/11/2025
 ---
 # Respond to search command
 
