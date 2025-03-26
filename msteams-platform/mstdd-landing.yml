@@ -46,6 +46,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Use custom icons in activity feed notifications
+        url: /graph/teams-send-activityfeednotifications
       - text: Advanced step-by-step guide to build custom engine agent
         url: sbs-Teams-AI.yml      
       - text: AI label, citations, feedback buttons, and sensitivity labels for bot messages

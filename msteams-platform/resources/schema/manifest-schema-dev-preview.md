@@ -888,6 +888,18 @@ Define the properties your app uses to post a user activity feed.
 |`type`|String|32 characters|✔️|The notification type.|
 |`description`|String|128 characters|✔️|A brief description of the notification.|
 |`templateText`|String|128 characters|✔️|Ex: "{actor} created task {taskId} for you"|
+|`allowedIconIds`|Array of strings| | |A list of custom icon IDs valid for that activity.|
+
+### activities.activityIcons
+
+**Optional** &ndash; Array of objects
+
+Defines the icons of activity types that your app can post to a user's activity feed.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`id`|String| |✔️|Defines the unique icon ID.|
+|`iconFile`|String| |✔️|Represents the icon image mapped to the unique icon ID. The value must match the name of the custom icon you add in the Teams app package.|
 
 ```json
 {
@@ -932,8 +944,6 @@ Define the properties your app uses to post a user activity feed.
    }
 }
 ```
-
-### activities.activityIcons
 
 ## configurableProperties
 

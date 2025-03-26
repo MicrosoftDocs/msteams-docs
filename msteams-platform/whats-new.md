@@ -33,6 +33,8 @@ Teams platform features that are available to all app developers.
 
 **2025 March**
 
+* ***March 31, 2025***: [Increase app engagement with custom icons in activity feed notifications](/graph/teams-send-activityfeednotifications?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json&tabs=desktop%2Chttp).
+
 * ***March 07, 2025***: [Introducing app manifest v1.20 with elementRelationshipSet, requirementSet, and intuneInfo properties.](resources/schema/manifest-schema.md)
 
 * ***March 07, 2025***: [Specify runtime requirements in app manifest to tailor your app's behavior in Microsoft 365 hosts](m365-apps/specify-runtime-requirements.md).
