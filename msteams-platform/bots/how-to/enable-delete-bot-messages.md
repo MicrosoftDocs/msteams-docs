@@ -84,17 +84,17 @@ When a user hovers over a bot message, the **Delete** option in the overflow men
 
 ## Enable users to delete bot messages in your bot app
 
-Allowing bot users to delete messages is optional. Enable this feature for your bot app using the following two mandatory configurations:
+Allowing bot users to delete messages is optional. To add this feature to a bot, it must be enabled it in the app and in the tenant. Enable this feature for your bot app using the following two mandatory configurations:
 
-- [Update app manifest](#update-app-manifest).
-- [Enable users to delete message in Admin Center](#enable-users-to-delete-bot-messages-in-admin-center).
+- [Update app manifest](#update-app-manifest) to enable it in the app.
+- [Configure in the Admin Center](#configure-in-the-admin-center) to enable it in the tenant.
 
 ### Update app manifest
 
 To enable the option of allowing bot users to delete messages, update the app manifest as follows:
 
-1. Open the app manifest file.
-1. Update the `allowBotMessageDeleteByUser` property in the `manifest.json` to `true`.
+1. Open the `manifest.json` file.
+1. Set the `allowBotMessageDeleteByUser` property to `true`.
 
     The following code snippet shows an example of app manifest update:
 
@@ -122,9 +122,9 @@ To enable the option of allowing bot users to delete messages, update the app ma
     }   
     ```
 
-1. Save the updates and upload the app package to test the functionality in Teams.
+1. Save the updates.
 
-### Enable users to delete bot messages in Admin Center
+### Configure in the Admin Center
 
 If your bot app has opted for this feature, users can delete messages only after the Admin enables it for the app in the tenant.
 
