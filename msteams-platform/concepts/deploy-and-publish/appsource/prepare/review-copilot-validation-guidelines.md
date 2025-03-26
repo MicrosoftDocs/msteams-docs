@@ -14,8 +14,7 @@ ms.collection: ce-skilling-ai-copilot
 
 > [!IMPORTANT]
 >
-> * This requirement is only applicable to independent software vendor (ISV) apps and not apps built for your organization.
->* These guidelines are applicable for ISV's who want to publish their agent on the store.
+> * These guidelines are applicable for ISV's who want to publish their agent on the store.
 > * Message extensions agents in Microsoft 365 Copilot are in public preview for Microsoft Word and Microsoft PowerPoint.
 > * Support for Excel and OneNote client applications to be available soon.
 > * Ensure that Microsoft 365 Copilot is available for your organization. You have two ways to get a developer environment for Microsoft 365 Copilot:

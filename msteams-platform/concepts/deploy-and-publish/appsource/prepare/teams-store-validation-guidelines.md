@@ -13,6 +13,8 @@ Following these guidelines increases the chances of your app to pass the Microso
 
 > [!NOTE]
 >
+> * If you want to build a high-quality agent for your organization
+This requirement is only applicable to independent software vendor (ISV) apps and not apps built for your organization.
 > * Some guidelines may not be applicable to your app. For example, if your app doesn't include a bot, you can ignore bot-related guidelines.
 > * We've cross-referenced these guidelines to the Microsoft commercial certification policies and added Do’s and Don’ts with examples from pass or fail scenarios encountered in our validation process.
 > * Certain guidelines are marked as *Must fix*. If your app submission doesn't meet these mandatory guidelines, you'll receive a failure report from us with steps to mitigate. Your app submission passes Teams Store validation only after you've fixed the issues.
@@ -1182,15 +1184,15 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
    Prompt starters help users start a conversation with your bot. To enable prompt starters, the `commands` property in app manifest needs to be defined.
 
-   * The bot must provide at least one command that enables the user to know about the value proposition of the app. [*Must fix*]
-   * Prompt starters or commands must be functional and return responses. [*Must fix*]
-   * Command description must be coherent and clearly communicate value of the command. [*Must fix*]
-   * Prompt starters or commands must be relevant to the app's functionality. [*Must fix*]
-   * The bot must have at least three unique prompt starters or commands. [*Good-to-fix*]
+  * The bot must provide at least one command that enables the user to know about the value proposition of the app. [*Must fix*]
+  * Prompt starters or commands must be functional and return responses. [*Must fix*]
+  * Command description must be coherent and clearly communicate value of the command. [*Must fix*]
+  * Prompt starters or commands must be relevant to the app's functionality. [*Must fix*]
+  * The bot must have at least three unique prompt starters or commands. [*Good-to-fix*]
 
    If your app sends a welcome message, ensure the following guidelines are met:
 
-   * If the app has a complex configuration flow (requires an enterprise license or lacks an intuitive sign up flow), then bots in such apps must always include configuration related information while sending a welcome message during the first run.
+  * If the app has a complex configuration flow (requires an enterprise license or lacks an intuitive sign up flow), then bots in such apps must always include configuration related information while sending a welcome message during the first run.
 
      For best experience, the welcome message must include the value offered by the bot to users, who installed the bot in channel, how to configure the bot, and briefly describe all supported bot commands. You can display the welcome message using an Adaptive Card with buttons for better usability. For more information, see [how to trigger a bot welcome message](~/bots/how-to/conversations/send-proactive-messages.md). For apps without a complex configuration flow, you can choose to trigger a welcome message during the bot first run experience. However, if a welcome message is triggered, it must follow the welcome message guidelines.
 
