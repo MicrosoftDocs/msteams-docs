@@ -159,7 +159,7 @@ Sample prompts are specified using `samplePrompts` property in the app manifest.
 
 ### Prompt starters
 
-Prompt starters guide users on how to start using declarative agents. You must ensure the following guidelines for prompt starters:
+Prompt starters guide users on how to start using declarative agents and custom engine agents. You must ensure the following guidelines for prompt starters:
 
 * A declarative agent must have at least three prompts and maximum of six prompts. [*Must fix*]
 * All prompt starters must be functional and return responses. [*Must fix*]
