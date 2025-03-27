@@ -92,7 +92,7 @@ Your service must respond with the results matching the user query. The response
 |`composeExtension.suggestedActions`|Suggested actions. Used for responses of type `auth` or `config`. |
 |`composeExtension.text`|Message to display. Used for responses of type `message`. |
 
-### Configuration response
+### config response
 
 The `config` response is the data returned by the server or the app to configure and enable the message extension within the messaging platform. When a user configures the message extension for the first time, a `config` response is used to prompt the user to set up the message extension and provide any necessary configuration.
 
@@ -155,7 +155,7 @@ The following JSON response is an example of a `config` response received from t
 }
 ```
 
-When the user interacts with the compose extension, the bot responds with a configuration prompt by returning a `config` type response. The response contains a URL in the `value` property that points to a hosted web page where the user can configure the messaging extension.
+When the user interacts with the compose extension, the bot responds with a configuration prompt by returning a `config` type response. The response contains a URL in the `value` property that points to a hosted webpage where the user can configure the messaging extension.
 
 The following code sample shows configuration response that appears when the user interacts with the compose extension:
 
@@ -179,12 +179,12 @@ The `value` property contains a URL `https://your-configuration-url.com` that op
 
 :::image type="content" source="../../../assets/images/configuration-response-me.png" alt-text="The screenshot shows the configuration response for message extension.":::
 
-1. The URL provided in the `value` property must host a web page that opens the URL as a Teams popup when the messaging extension configuration is triggered.
+1. The URL provided in the `value` property must host a webpage that opens the URL as a Teams dialog when the messaging extension configuration is triggered.
 2. If authentication is required, the page must use Teams authentication and call `authentication.notifySuccess()` upon successful login.
 3. After collecting user input, the page must notify Teams of the successful setup by calling:
 
   ```javascript
-    microsoftTeams.initialize();
+    microsoftTeams.app.initialize();
     
     function submitConfig() {
         const configData = {
