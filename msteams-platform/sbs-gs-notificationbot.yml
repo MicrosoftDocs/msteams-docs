@@ -185,18 +185,22 @@ items:
 
          :::image type="content" source="~/assets/images/sbs-notification-bot/default-program.png" alt-text="Default Program" lightbox="~/assets/images/sbs-notification-bot/default-program-1.png":::
 
-    1. Use the following code after `for (const target of await bot.notification.installations()) { ` in Visual Studio Code.
+    1. Use the following code after `for (const target of installations) { in Visual Studio Code.
 
          ```bash
-         if (target.type === "Channel") {
-           const members = await target.members();
-           await target.sendMessage("This is a message to channel: " + members.length + " members.");
-           for (const member of members) {
-             await member.sendMessage("This is a message to Member: " + member.account.email);
-           }
-         }
+          for (const target of installations) {
+            await target.sendAdaptiveCard(
+            new ACData.Template(notificationTemplate).expand({
+            $root: {
+            title: "New Event Occurred!",
+            appName: "Contoso App Notification",
+            description: `This is a sample http-triggered notification to ${target.type}`,
+            notificationUrl: "https://aka.ms/teamsfx-notification-new",
+                  },
+              })
+          );
          /* 
-         ```  
+         ```
 
           :::image type="content" source="~/assets/images/sbs-notification-bot/code-add.png" alt-text="Code Add" lightbox="~/assets/images/sbs-notification-bot/code-add-1.png":::
 
