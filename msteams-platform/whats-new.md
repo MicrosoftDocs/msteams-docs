@@ -33,7 +33,7 @@ Teams platform features that are available to all app developers.
 
 **2025 March**
 
-* ***March 26, 2025***: [Learn about the best practices to optimize tab app performance in Teams Android and iOS clients](resources/teams-mobile-best-practices.md).
+* ***March 27, 2025***: [Learn about the best practices to optimize tab app performance in Teams Android and iOS clients](resources/teams-mobile-best-practices.md).
 
 * ***March 07, 2025***: [Introducing app manifest v1.20 with elementRelationshipSet, requirementSet, and intuneInfo properties](resources/schema/manifest-schema.md).
 
