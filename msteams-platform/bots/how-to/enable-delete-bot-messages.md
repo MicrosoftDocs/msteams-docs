@@ -18,18 +18,22 @@ Bot users can now delete bot messages in any bot conversation. You can enable th
 
     <details>
     <summary>Select to view a use case</summary>
+
     | Use case | How deleting the message helps |
     | --- | --- |
     | **Context**: A user requests a conversation summary, but the bot encounters an error and generates incomplete summary the chat. <br><br> **Problem**: The erroneous summary creates a poor user experience and cluttering the conversation with irrelevant information. | **Solution**: The user deletes the message with errors and submits feedback about the poor bot experience for improvement. |
+
     </details>
 
 * **Remove incorrect information**: Users can delete messages that contain inaccurate or erroneous information.
 
     <details>
     <summary>Select to view a use case</summary>
+
     | Use case | How deleting the message helps |
     | --- | --- |
     | **Context**: Confidential information was initially shared with the original group members, but external participants were later added who shouldn't have access to it. <br><br> **Problem**: When users search for related information in the chat, confidential information is visible to external users who don't have permission to view it, posing a risk of unauthorized access to sensitive data. | **Solution**: Any valid user can delete information not meant for all group chat members.  This ensures that confidential information stays secure and is only accessible to authorized users. |
+
     </details>
 
 Maintaining a clean chat environment enhances user experience and helps keep the conversation contextually relevant.
@@ -39,7 +43,7 @@ Maintaining a clean chat environment enhances user experience and helps keep the
 | --- | --- |
 | **Sensitive or confidential information shared in group chat** <br><br> **Context**: Confidential information was initially shared with the original group members, but external participants were later added who shouldn't have access to it. <br><br> **Problem**: When users search for related information in the chat, confidential information is visible to external users who don't have permission to view it, posing a risk of unauthorized access to sensitive data. | **Solution**: Any valid user can delete information not meant for all group chat members.  This ensures that confidential information stays secure and is only accessible to authorized users. <br> **Steps**: <br> 1. A user shares confidential information in a group chat. <br> 2. Over time, external users are added to the group chat. <br> 3. The information becomes visible to these external users during searches. <br> 4. A valid user identifies the unauthorized access and deletes the sensitive information from the chat. <br> 5.The deletion prevents external users from viewing the confidential information, maintaining data security. |
 | **Incorrect or erroneous bot response in 1:1 chat** <br><br> **Context**: A user requests a conversation summary, but the bot encounters an error and generates excessive error logs that dominate the chat. <br><br> **Problem**: The error logs dominate the chat, creating a poor user experience and cluttering the conversation with irrelevant information. | **Solution**: The user deletes the message with error logs and submits feedback about the poor bot experience for improvement. <br> **Steps**: <br> 1. A user requests the bot to create a summary of the conversation. <br> 2. The bot encounters an error while completing the action. <br> 3. The bot generates unnecessary error logs that take over the chat. <br> 4. The user deletes the message containing the error logs. <br> 5. The user submits feedback about the error and the poor bot experience. 6. The feedback is used to improve the bot's performance and prevent similar issues in the future. |
--->
+
 Here are some user scenarios for enabling bot users to delete messages:
 
 # [Deleting messages in personal chat](#tab/personal1)
@@ -59,6 +63,7 @@ Here are some user scenarios for enabling bot users to delete messages:
 | **Context**: Confidential information was initially shared with the original group members, but external participants were later added who shouldn't have access to it. <br><br> **Problem**: When users search for related information in the chat, confidential information is visible to external users who don't have permission to view it, posing a risk of unauthorized access to sensitive data. | **Solution**: Any valid user can delete information not meant for all group chat members.  This ensures that confidential information stays secure and is only accessible to authorized users. |
 
 ---
+-->
 
 ## Delete bot message user experience
 
