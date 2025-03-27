@@ -769,7 +769,7 @@ await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 
 ```javascript
 // MessageFactory.text(): Specifies the type of text data in a message attachment.
-const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive card instead
+const replyActivity = MessageFactory.text('Hi'); // this could be an Adaptive Card instead
 replyActivity.channelData = {
     notification: {
         alertInMeeting: true,
