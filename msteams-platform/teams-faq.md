@@ -1124,9 +1124,6 @@ If you have both configurable tab and static tab defined in your app manifest fo
 
 Pre-existing pinned configurable tab instances of your app continue to work the same. You don't have the option to pin new instances of these configurable tabs. When you select to pin your tab, then Teams pins the static tab of your app.
 <br>
-</details>
-</details>
-<br>
 &nbsp;
 </details>
 <details>
@@ -1134,6 +1131,7 @@ Pre-existing pinned configurable tab instances of your app continue to work the 
 
 To optimize your tab app performance on Teams mobile, use service workers to cache static assets and minimize web page size. You can also conduct performance audits using dev tools to identify bottlenecks. For more information, see [best practices for Teams mobile apps](resources/teams-mobile-best-practices.md).
 <br>
+&nbsp;
 </details>
 </details>
 
