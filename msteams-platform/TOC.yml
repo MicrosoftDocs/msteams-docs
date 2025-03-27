@@ -789,7 +789,7 @@
     items:
      - name: Overview
        href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md
-       displayName: Adaptive cards universal action SSO authentication, Action.Execute SSO
+       displayName: Adaptive Cards, universal action, SSO authentication, Action.Execute, SSO
      - name: Add code to enable SSO
        href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/sso-adaptive-cards-universal-action.md
        displayName: SSO, Adaptive Cards, OAuth, universal action, SSO authentication, Action.Execute SSO
@@ -810,7 +810,7 @@
       href: messaging-extensions/how-to/add-authentication.md
     - name: Add authentication to Adaptive Cards
       href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/authentication-flow-in-universal-action-for-adaptive-cards.md
-      displayName: Adaptive cards universal action third party Idp authentication, Action.Execute OAuth nominal authentication
+      displayName: Adaptive Cards, universal action, third party Idp authentication, Action.Execute, OAuth, nominal authentication
   - name: Enable authentication for API-based message extensions
     items:
     - name: Overview
