@@ -38,7 +38,7 @@ You can enable users to delete bot messages in bot conversation. Maintaining a c
 
 Adding this feature to your bot enhances user experience to keep conversations contextually relevant.
 
-## Offer seamless user experience
+## Enhance user experience
 
 Users in any bot conversation can delete messages in the `personal`, `groupChat`, `channel`, and `meetingChat` scopes. The desktop and mobile clients offer a consistent user experience. Here are some examples of the user experience in personal and group chat for desktop and mobile client:
 
