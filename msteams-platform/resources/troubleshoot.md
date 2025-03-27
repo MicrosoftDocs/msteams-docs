@@ -1,10 +1,10 @@
 ---
-title: Troubleshoot your app
+title: Troubleshoot your App
 description: Learn about different issues or error scenarios while building apps for Microsoft Teams and how to troubleshoot the issues for bots, tabs, and app package.
 keywords: teams apps development troubleshooting
 ms.localizationpriority: medium
 ms.topic: troubleshooting
-ms.date: 07/09/2018
+ms.date: 02/06/2025
 ---
 
 # Troubleshoot your Microsoft Teams app
@@ -92,6 +92,9 @@ Common reasons for manifest read errors:
 * Invalid JSON. Use an IDE such as [Visual Studio Code](https://code.visualstudio.com) or [Visual Studio](https://www.visualstudio.com/vs/) that automatically validates the JSON syntax.
 * Encoding issues. Use UTF-8 for the *manifest.json* file. Other encodings, specifically with the BOM, may not be readable.
 * Malformed .zip package. The *manifest.json* file must be at the top level of the .zip file. Note that default Mac file compression might place the *manifest.json* in a subdirectory, which won't properly load in Microsoft Teams.
+
+> [!NOTE]
+> If the app manifest updates aren't reflecting, sign out and sign in to clear the cache and apply changes.
 
 ### Another extension with same ID exists
 

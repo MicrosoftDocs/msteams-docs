@@ -76,6 +76,9 @@ items:
 
    1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
 
+   > [!div class="nextstepaction"]
+   > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+free+Teams+developer+tenant+(optional)&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-api-based-message-extensions%3Ftutorial-step%3D1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-api-based-message-extensions.yml&documentVersionIndependentId=6b8f43f0-7f44-cbd3-0fea-5161c72e2c00&author=%40surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
    ## Get a free Azure account
 
    If you want to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
@@ -197,7 +200,7 @@ items:
 
     You can validate if the OpenAPI Description document is valid. To verify, follow these steps:
 
-    1. Go to [Swagger/OpenAPI validator](https://apitools.dev/swagger-parser/online/) and validate the OpenAPI Description document.
+    1. Go to [Swagger/OpenAPI validator](https://apitools.dev/swagger-parser/) and validate the OpenAPI Description document.
     1. Save the OpenAPI Description document.
     1. Go to [Swagger Editor](https://editor.swagger.io/).
     1. In the left pane, paste the OpenAPI Description in the editor.
@@ -212,6 +215,9 @@ items:
     1. Under `products`, copy the first product from the list and save it for future reference.
 
        :::image type="content" source="assets/images/Copilot/api-me-sbs-product-response.png" alt-text="Screenshots shows the highlighted product that is selected from the response body.":::
+
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+OpenAPI+Description+document&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-api-based-message-extensions%3Ftutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-api-based-message-extensions.yml&documentVersionIndependentId=6b8f43f0-7f44-cbd3-0fea-5161c72e2c00&author=%40surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 - title: Create response rendering template
   durationInMinutes: 5
@@ -333,7 +339,7 @@ items:
     ```json
        "previewCardTemplate": {
             "title": "${if(name, name, 'N/A')}",
-            "subtitle": "$${if(price, price, 'N/A')}",
+            "subtitle": "$${if(price, price, 'N/A')}"
         } 
     ```
     Create an if condition for the `title` and `subtitle`, where:
@@ -345,10 +351,12 @@ items:
     Save the preview card template for future reference.
     </details>
 
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Adaptive+Card+template&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-api-based-message-extensions%3Ftutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-api-based-message-extensions.yml&documentVersionIndependentId=6b8f43f0-7f44-cbd3-0fea-5161c72e2c00&author=%40surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
    ### Response rendering template
 
-    The response rendering template must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.ResponseRenderingTemplate.schema.json`](https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.ResponseRenderingTemplate.schema.json).
+    The response rendering template must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.ResponseRenderingTemplate.schema.json`](https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.ResponseRenderingTemplate.schema.json).
 
     To create a response rendering template, follow these steps:
 
@@ -356,8 +364,8 @@ items:
 
        ```json
        { 
-         "version": "1.0.0", 
-         "$schema": "<URL_REFERENCE_TO_SCHEMA>", 
+         "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.ResponseRenderingTemplate.schema.json", 
+         "version": "1.0", 
          "jsonPath": "", 
          "responseLayout": "", 
          "responseCardTemplate": { 
@@ -368,8 +376,11 @@ items:
         ```
     1. Update the properties in the response rendering template as follows:
 
-       1. `"version"`: `"1.0.0"`
-       1. `"$schema"`: `"http://adaptivecards.io/schemas/adaptive-card.json"`
+       1. `"$schema"`: `"https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.ResponseRenderingTemplate.schema.json"`
+       1. `"version"`: `"1.0"`
+
+          `version` is the version of the rendering template to use
+       
        1. `"jsonPath"`: `"tools"`
 
           `jsonPath` is the path to one or more results in the response JSON response. Add the `jsonPath` to the relevant data/array from the product list in the API response. In this case, the `jsonPath` is tools. For more information on how to determiner the JSON path, see [Querying JSON with JSON path](https://www.newtonsoft.com/json/help/html/QueryJsonSelectToken.htm).
@@ -394,73 +405,75 @@ items:
 
     ```json
     {
-            "version": "devPreview",
-            "jsonPath": "tools",
-            "responseLayout": "list",
-            "responseCardTemplate": {
-        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-        "type": "AdaptiveCard",
-        "version": "1.4",
-        "body": [
-            {
-            "type": "TextBlock",
-            "text": "AI Music Generator",
-            "weight": "Bolder",
-            "size": "Large"
-            },
-            {
-            "type": "TextBlock",
-            "text": "Categories",
-            "size": "Medium"
-            },
-            {
-            "type": "TextBlock",
-            "text": "Music Generation, AI Detection",
-            "wrap": true
-            },
-            {
-            "type": "TextBlock",
-            "text": "Description",
-            "size": "Medium"
-            },
-            {
-            "type": "TextBlock",
-            "text": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. With advanced AI technology, AI Music Generator makes music production accessible to everyone.",
-            "wrap": true
-            },
-            {
-            "type": "TextBlock",
-            "text": "Platform",
-            "size": "Medium"
-            },
-            {
-            "type": "TextBlock",
-            "text": "Web, App, API",
-            "wrap": true
-            }
-        ],
-        "actions": [
-            {
-            "type": "Action.OpenUrl",
-            "title": "Learn More",
-            "url": "https://goto.opentools.ai/ai-music-generator"
-            },
-            {
-            "type": "Action.OpenUrl",
-            "title": "Try It",
-            "url": "https://goto.opentools.ai/c/ai-music-generator"
-            }
-        ]
+        "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.ResponseRenderingTemplate.schema.json",
+        "version": "1.0",
+        "jsonPath": "tools",
+        "responseLayout": "list",
+        "responseCardTemplate": {
+            "type": "AdaptiveCard",
+            "version": "1.4",
+            "body": [
+                {
+                "type": "TextBlock",
+                "text": "AI Music Generator",
+                "weight": "Bolder",
+                "size": "Large"
+                },
+                {
+                "type": "TextBlock",
+                "text": "Categories",
+                "size": "Medium"
+                },
+                {
+                "type": "TextBlock",
+                "text": "Music Generation, AI Detection",
+                "wrap": true
+                },
+                {
+                "type": "TextBlock",
+                "text": "Description",
+                "size": "Medium"
+                },
+                {
+                "type": "TextBlock",
+                "text": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. With advanced AI technology, AI Music Generator makes music production accessible to everyone.",
+                "wrap": true
+                },
+                {
+                "type": "TextBlock",
+                "text": "Platform",
+                "size": "Medium"
+                },
+                {
+                "type": "TextBlock",
+                "text": "Web, App, API",
+                "wrap": true
+                }
+            ],
+            "actions": [
+                {
+                "type": "Action.OpenUrl",
+                "title": "Learn More",
+                "url": "https://goto.opentools.ai/ai-music-generator"
+                },
+                {
+                "type": "Action.OpenUrl",
+                "title": "Try It",
+                "url": "https://goto.opentools.ai/c/ai-music-generator"
+                }
+            ]
         },
         "previewCardTemplate": {
             "title": "${if(name, name, 'N/A')}",
-            "subtitle": "$${if(price, price, 'N/A')}",
+            "subtitle": "$${if(price, price, 'N/A')}"
         } 
-        }
-
+    }
     ```
 
     </details>
+
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Response+rendering+template&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-api-based-message-extensions%3Ftutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-api-based-message-extensions.yml&documentVersionIndependentId=6b8f43f0-7f44-cbd3-0fea-5161c72e2c00&author=%40surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 - title: Create app manifest
   durationInMinutes: 3
@@ -472,7 +485,7 @@ items:
     
     To create the manifest, follow these steps: 
     
-    1. Create a new JSON file. Your app manifest must conform to the schema defined in the [public developer preview app manifest schema](https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json).
+    1. Create a new JSON file. Your app manifest must conform to the 1.20 version of the schema defined in [App manifest schema](https://learn.microsoft.com/en-us/microsoftteams/platform/resources/schema/manifest-schema).
 
     1. Add the following code to the JSON file:
 
@@ -480,8 +493,8 @@ items:
 
        ```json
        {
-        "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
-        "manifestVersion": "devPreview",
+        "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.schema.json",
+        "manifestVersion": "1.20",
         "version": "1.0.3",
         "id": "<<YOUR-MICROSOFT-APP-ID>>",
         "packageName": "com.microsoft.teams.extension",
@@ -560,6 +573,9 @@ items:
           * Outline icon 
 
     
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+app+manifest&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-api-based-message-extensions%3Ftutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-api-based-message-extensions.yml&documentVersionIndependentId=6b8f43f0-7f44-cbd3-0fea-5161c72e2c00&author=%40surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 - title: Upload a custom app to Teams
   durationInMinutes: 1
   content: |
@@ -588,10 +604,13 @@ items:
 
        :::image type="content" source="assets/images/Copilot/api-based-me-ttk-sbs-result.png" alt-text="Screenshot shows the Adaptive Card with the search results in the chat message in Teams.":::
 
+    > [!div class="nextstepaction"]
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Upload+a+custom+app+to+Teams&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-api-based-message-extensions%3Ftutorial-step%3D5&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-api-based-message-extensions.yml&documentVersionIndependentId=6b8f43f0-7f44-cbd3-0fea-5161c72e2c00&author=%40surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 - title: Congratulations!
   durationInMinutes: 1
   content: |
 
     You did it! 
-    You learned to create a API-based message extension using OpenAPI Description document.
+    You learned to create an API-based message extension using OpenAPI Description document.
 

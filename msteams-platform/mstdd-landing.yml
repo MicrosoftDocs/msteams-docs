@@ -46,6 +46,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Advanced step-by-step guide to build custom engine agent
+        url: sbs-Teams-AI.yml      
       - text: AI label, citations, feedback buttons, and sensitivity labels for bot messages
         url: bots/how-to/format-ai-bot-messages.md
       - text: Copilot handoff
@@ -61,6 +63,12 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Precache your tab app to optimize its initial load time
+        url: tabs/how-to/app-caching.md#precaching-tab-apps
+      - text: App package editor in Developer Portal for Teams
+        url: concepts/build-and-test/manage-your-apps-in-developer-portal.md#configure
+      - text: Introducing third-party cloud storage for drag-dropped files in a Teams chat
+        url: concepts/device-capabilities/third-party-storage-capability.md
       - text: Tab app caching is generally available
         url: tabs/how-to/app-caching.md
       - text: AI label, citations, feedback buttons, and sensitivity labels in bot messages are generally available
@@ -75,12 +83,6 @@ landingContent:
         url: messaging-extensions/build-bot-based-agent.md
       - text: New app installation flow for Teams app installed from Teams Store or custom upload
         url: concepts/deploy-and-publish/add-default-install-scope.md
-      - text: Introducing default landing capability for tab and bot apps
-        url: concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability
-      - text: Build responsive Container layouts in Adaptive Cards
-        url: task-modules-and-cards/container-layouts.md
-      - text: Visually represent data with charts in Adaptive Cards
-        url: task-modules-and-cards/cards/charts-in-adaptive-cards.md
 
     - linkListType: reference
       links:

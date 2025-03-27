@@ -1,6 +1,6 @@
 ---
 title: Adaptive Card Previewer Overview
-author: v-vanv
+author: surbhigupta
 description: In this article, learn more about the Microsoft Adaptive Card previewer, features, advantages, and k=limitations of the Adaptive Card Previewer.
 ms.localizationpriority: medium
 ms.topic: overview
@@ -27,20 +27,20 @@ Adaptive Card Previewer provides faster and more reliable solutions to preview A
 
 * **Instant preview**: Allows you to preview Adaptive Cards in the Visual Studio Code editor through CodeLens or the Command Palette.
 
-   # [CodeLens](#tab/codelens)
+  # [CodeLens](#tab/codelens)
 
    You can select **Preview Adaptive Card** suggestion in the Adaptive Card template file to preview the Adaptive Card in the right pane.
 
    :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-preview-template.gif" alt-text="Graphic shows how the preview appears in Adaptive Card preview extension in Visual Studio Code." lightbox="../../assets/images/previewer-adaptive-card/acp-preview-template.gif":::
 
-   # [Command Palette](#tab/command-palette)
+  # [Command Palette](#tab/command-palette)
 
    You can use **Adaptive Card: Open Preview to the Side** or **Adaptive Card: Open Preview** to preview the Adaptive Card.
 
-   :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-open-preview.png" alt-text="Screenshot shows the options for instant preview of adaptive cards in Visual Studio Code editor through CodeLens or Command Palette.":::
+   :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-open-preview.png" alt-text="Screenshot shows the options for instant preview of Adaptive Cards in Visual Studio Code editor through CodeLens or Command Palette.":::
 
-   * To preview Adaptive Card in the right pane, select **Adaptive Card: Open Preview to the Side**.
-   * To preview Adaptive Card in a new window, select **Adaptive Card: Open Preview**.
+  * To preview Adaptive Card in the right pane, select **Adaptive Card: Open Preview to the Side**.
+  * To preview Adaptive Card in a new window, select **Adaptive Card: Open Preview**.
 
    :::image type="content" source="../../assets/images/previewer-adaptive-card/command-palette-preview.png" alt-text="Screenshot shows the preview of Adaptive Card when selecting the option Adaptive Card: Open Preview in Command Palette." lightbox= "../../assets/images/previewer-adaptive-card/command-palette-preview.png":::
 
