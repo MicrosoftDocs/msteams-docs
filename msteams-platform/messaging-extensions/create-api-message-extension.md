@@ -337,9 +337,9 @@ The following code is an example of a Response rendering template: <br/>
 |`responseCardTemplate`    |  `adaptiveCardTemplate`  | A template for creating an Adaptive Card from a result entry.      |   Yes      |
 |`previewCardTemplate`     |  `previewCardTemplate`       | A template for creating a preview card from a result entry. The resulting preview card is displayed in the message extension flyout menu.        |  Yes       |
 
-#### Json path
+#### JSON path
 
-The JSON path is optional but should be used for arrays or where the object to be used as the data for the adaptive card isn't the root object. The JSON path should follow the format defined by Newtonsoft. If the JSON path points to an array, then each entry in that array is bound with the adaptive card template and returns as separate results.
+The JSON path is optional but can be used for arrays or where the object to be used as the data for an Adaptive Card isn't the root object. The JSON path must follow the format defined by Newtonsoft. If the JSON path points to an array, then each entry in that array is bound with the Adaptive Card template and returns as separate results.
 
 **Example**
 Let's say you have the below JSON for a list of products and you want to create a card result for each entry.
