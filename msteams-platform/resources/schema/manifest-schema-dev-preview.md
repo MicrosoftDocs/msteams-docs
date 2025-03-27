@@ -916,7 +916,7 @@ Defines the icons of activity types that your app can post to a user's activity 
               },
            {
                 "type": "announcementCreated",
-                "description": "Annnouncements",
+                "description": "Announcements",
                 "templateText": "{actor} posted an announcement",
                 "allowedIconIds" : [
                     "announcementCreated"
