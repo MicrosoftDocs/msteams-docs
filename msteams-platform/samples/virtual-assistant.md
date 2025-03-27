@@ -1,6 +1,6 @@
 ---
 title: Create Virtual Assistant Bot in Teams
-description: Learn how to create Virtual Assistant bot for Teams using Code examples and snippets with features such as, Adaptive cards, handling interruptions and more.
+description: Learn how to create a Virtual Assistant bot using code examples and snippets, with features such as Adaptive Cards and handling interruptions.
 ms.localizationpriority: medium
 ms.topic: how-to
 ms.date: 12/21/2022
@@ -108,7 +108,7 @@ A code snippet to extract  `skillId` from card action data is shown in the follo
             }
             catch
             {
-                // If not able to retrive skillId, empty skillId should be returned
+                // If not able to retrieve skillId, empty skillId should be returned
             }
 
             return skillId;
@@ -587,4 +587,3 @@ You can also use existing skills from [Bot Framework Solutions repository](https
 * [Adaptive Cards](../task-modules-and-cards/what-are-cards.md#adaptive-cards)
 * [Book-a-room](app-templates.md#app-template-code-samples)
 * [Microsoft Teams bot](../bots/what-are-bots.md)
-

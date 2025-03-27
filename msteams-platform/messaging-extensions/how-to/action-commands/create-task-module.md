@@ -5,6 +5,8 @@ description: Learn to create and send dialogs (task modules). Handle the initial
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
+ms.owner: ginobuzz
+ms.date: 03/11/2025
 ---
 # Create and send dialogs
 
@@ -957,7 +959,7 @@ The task response to the invoke must be similar to that of the installed bot.
 
 #### Example
 
-The following code section is an example of just-in time installation of app with Adaptive card:
+The following code section is an example of just-in time installation of app with Adaptive Card:
 
 ```csharp
 private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)

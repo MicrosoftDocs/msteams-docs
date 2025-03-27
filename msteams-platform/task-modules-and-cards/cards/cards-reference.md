@@ -1,6 +1,6 @@
 ---
 title: Create & Explore Card Types in Teams
-description: In this module, learn what are cards and card actions available to bots in Teams and create a hero, thumbnail and adaptive cards.
+description: In this module, learn about cards and card actions available to bots in Teams, and how to create hero, thumbnail, and Adaptive Cards.
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 09/16/2024
@@ -68,7 +68,7 @@ You can identify and use different types of cards based on your application requ
 
 > [!NOTE]
 >
-> * For Adaptive Cards in Incoming Webhooks, all native Adaptive Card schema elements, except `Action.Submit`, are fully supported. The supported actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html), and [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
+> * For Adaptive Cards in Incoming Webhooks, all native Adaptive Card schema elements, except `Action.Submit`, are fully supported. The supported actions are [**Action.OpenURL**](https://adaptivecards.microsoft.com/?topic=Action.OpenUrl), [**Action.ShowCard**](https://adaptivecards.microsoft.com/?topic=Action.ShowCard), [**Action.ToggleVisibility**](https://adaptivecards.microsoft.com/?topic=Action.ToggleVisibility), and [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
 >
 > * Adaptive Card supports only Incoming Webhook connectors for Microsoft 365 groups type. For these connectors, you can send the Adaptive Card using the following [format](../../webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook).
 
@@ -119,14 +119,14 @@ To explore Adaptive Card templates, see [Adaptive Card starter collection](desig
 
 The following table provides the features that support Adaptive Cards:
 
-| Bots in Teams | Message extensions  | Connectors | Bot Framework |
+| Bots in Teams | Tabs | Message extensions | Connectors | Bot Framework |
 | --- | --- | --- | --- |
-| ✔️ | ✔️ | ❌ | ✔️ |
+| ✔️ | ❌ | ✔️ | ❌ | ✔️ |
 
 > [!NOTE]
 >
 > * Teams platform supports v1.5 or earlier of Adaptive Card features for bot sent cards and action based message extensions.
-> * Teams platform supports v1.5 or earlier of Adaptive Card features for other capabilities, such as cards sent by user (search based message extensions and link unfurling), tabs, and dialogs.
+> * Teams platform supports v1.5 or earlier of Adaptive Card features for other capabilities, such as cards sent by user (search based message extensions and link unfurling), and dialogs.
 > * Positive or destructive action styling is not supported in Adaptive Cards on the Teams platform.
 > * Test your full width Adaptive Card in narrow form factors such as mobile and meeting side panels to ensure that content is not truncated.
 > * Adaptive Cards within Teams don't provide support for file or image uploads.
@@ -370,7 +370,7 @@ The following code shows an example of a hero card:
        },
       {
         "type": "openUrl",
-        "title": "Wikipeda page",
+        "title": "Wikipedia page",
         "value": "https://en.wikipedia.org/wiki/Seattle_Center_Monorail"
        }
      ]

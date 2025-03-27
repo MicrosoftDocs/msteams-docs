@@ -10,7 +10,7 @@ ms.date: 02/06/2025
 
 # Workflow bot in Teams
 
-A workflow bot allows users to interact with an Adaptive Card. Adaptive Card action handler enables the Adaptive card to converse in Teams app. You can create a workflow bot in multiple scenarios for your users to enhance the user experience, such as incident management, ticketing, approval workflow, and project management cards. You can create and assign a work item with workflow bot and sync the content to Azure DevOps or Jira system.
+A workflow bot allows users to interact with an Adaptive Card. Adaptive Card action handler enables an Adaptive Card to converse in Teams app. You can create a workflow bot in multiple scenarios for your users to enhance the user experience, such as incident management, ticketing, approval workflow, and project management cards. You can create and assign a work item with workflow bot and sync the content to Azure DevOps or Jira system.
 
 A workflow bot can be installed into a team, group chat, or as personal app, depending on different scopes. The default command logic returns an Adaptive Card. You can customize this logic with your business requirement. For the customization, you need to call your existing APIs.
 
@@ -47,7 +47,7 @@ To handle card actions with TeamsFx SDK, each card action handler must implement
 TeamsFxAdaptiveCardActionHandler 
 {
     /**
-     * The verb defined in adaptive card action that can trigger this handler.
+     * The verb defined in Adaptive Card action that can trigger this handler.
      */
     triggerVerb: string;
 
@@ -146,7 +146,7 @@ You can return a new Adaptive Card for each action invoked to display the respon
 ```
 
 > [!NOTE]
-> You can design your card layout according to your business need. See, [adaptive Card designer](https://adaptivecards.io/designer/).
+> You can design your card layout according to your business need. See, [Adaptive Card Designer](https://adaptivecards.microsoft.com/designer.html).
 
 <br>
 
@@ -250,7 +250,7 @@ You can use the `adaptiveCardResponse` property in handler to customize how the 
 
 * The response card is replaced by the current card where the button is defined for the interactor that triggers the action. The users in the conversation can still view the original action card `AdaptiveCardResponse.ReplaceForInteractor` by default.
 
-   :::image type="content" source="../../../assets/images/sbs-workflow-bot/replace-for-interactor.png" alt-text="Screenshot shows how to customize how the bot sends an adaptive card." lightbox="../../../assets/images/sbs-workflow-bot/replace-for-interactor.png":::
+   :::image type="content" source="../../../assets/images/sbs-workflow-bot/replace-for-interactor.png" alt-text="Screenshot shows how to customize how the bot sends an Adaptive Card." lightbox="../../../assets/images/sbs-workflow-bot/replace-for-interactor.png":::
 
 * The response card is replaced by the action card for all users in the chat, and they can view the response card `AdaptiveCardResponse.ReplaceForAll`.
 
