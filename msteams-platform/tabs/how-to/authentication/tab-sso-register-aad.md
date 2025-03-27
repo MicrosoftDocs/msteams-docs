@@ -41,8 +41,8 @@ It's helpful if you learn about the configuration for registering your app on Mi
 
 To create and configure your app in Microsoft Entra ID for enabling SSO:
 
-- [Configure scope for access token.](#configure-scope-for-access-token)
 - [Configure access token version.](#configure-access-token-version)
+- [Configure scope for access token.](#configure-scope-for-access-token)
 
 <a name='configure-your-app-in-azure-ad'></a>
 
@@ -111,6 +111,33 @@ Register your app in Microsoft Entra ID and configure the tenancy and app's plat
     Your app is registered in Microsoft Entra ID. You now have app ID for your tab app.
 
 </details>
+
+### Configure access token version
+
+You must define the access token version for your app. This configuration is made in the Microsoft Entra application app manifest.
+
+#### To define the access token version
+
+1. Select **Manage** > **Manifest** from the left pane.
+
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-manifest.png" alt-text="Microsoft Entra admin center Manifest":::
+
+    The Microsoft Entra application app manifest appears.
+
+1. Enter **2** as the value for the `accessTokenAcceptedVersion` property.
+
+    > [!NOTE]
+    > If you've selected **Personal Microsoft accounts only** or **Accounts in any organizational directory (Any Microsoft Entra directory - Multitenant) and personal Microsoft accounts (for example, Skype and Xbox)** during app registration, update the value for the `accessTokenAcceptedVersion` property as 2.
+
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-manifest-value.png" alt-text="Value for accepted access token version":::
+
+1. Select **Save**
+
+    A message pops up on the browser stating that the app manifest was updated successfully.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-aad-manifest-msg.png" alt-text="Manifest updated message":::
+
+    After you've configured the version of access token, you must configure its scope.
 
 ### Configure scope for access token
 
@@ -244,32 +271,7 @@ To configure scope and authorize trusted client applications, you need:
 > [!NOTE]
 > You can authorize more than one client application. Repeat the steps of this procedure for configuring another authorized client application.
 
-You've successfully configured app scope, permissions, and client applications. Ensure that you note and save the application ID URI. Next, you configure the access token version.
-
-### Configure access token version
-
-You must define the access token version for your app. This configuration is made in the Microsoft Entra application app manifest.
-
-#### To define the access token version
-
-1. Select **Manage** > **Manifest** from the left pane.
-
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-manifest.png" alt-text="Microsoft Entra admin center Manifest":::
-
-    The Microsoft Entra application app manifest appears.
-
-1. Enter **2** as the value for the `accessTokenAcceptedVersion` property.
-
-    > [!NOTE]
-    > If you've selected **Personal Microsoft accounts only** or **Accounts in any organizational directory (Any Microsoft Entra directory - Multitenant) and personal Microsoft accounts (for example, Skype and Xbox)** during app registration, update the value for the `accessTokenAcceptedVersion` property as 2.
-
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-manifest-value.png" alt-text="Value for accepted access token version":::
-
-1. Select **Save**
-
-    A message pops up on the browser stating that the app manifest was updated successfully.
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-aad-manifest-msg.png" alt-text="Manifest updated message":::
+You've successfully configured app scope, permissions, and client applications. Ensure that you note and save the application ID URI.
 
 Congratulations! You've completed the app configuration in Microsoft Entra ID required to enable SSO for your tab app.
 
