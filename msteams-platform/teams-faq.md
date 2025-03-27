@@ -85,7 +85,7 @@ Use Delete messages-Bot framework's `DeleteActivity` method: [Update and delete
 <details>
 <summary>How can I test the validity of the card schema via code?</summary>
 
-You can test or validate the Adaptive Card schema using the **Adaptive cards editor (preview)** option in [Developer Portal > Tools](https://dev.teams.microsoft.com/tools).
+You can test or validate the Adaptive Card schema using the **Adaptive Cards editor (Preview)** option in [Developer Portal > Tools](https://dev.teams.microsoft.com/tools).
 </details>
 <details>
 <summary>Why am I unable to create a bot in Developer Portal?</summary>
@@ -101,6 +101,13 @@ App registration is disabled for the user or the user doesn't have enough permis
 * Ensure that the `joinParams` being passed to the `AddAsync` method are correct and contain the required information.
 * Ensure the values for `JoinUrl`, `MeetingId`, and other parameters are correct.
 * Ensure that the `scenarioId` is unique for each call. Reusing scenario IDs can sometimes cause issues.
+
+</details>
+
+<details>
+<summary>After registering my bot in the Azure portal, I get the error <b>You do not have permission to use this app here</b> when opening it in Teams. How can I resolve this?</summary>
+
+To use your app within Teams, you must upload it into Teams. For more information, see [upload your app to Teams](toolkit/test-app-behavior.md#upload-your-app-to-teams).
 
 </details>
 
@@ -1212,11 +1219,7 @@ Before provision, the toolkit asks you if you want to create a new resource grou
 <details>
 <summary>How can I provision a SharePoint-based app?</summary>
 
-You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4).
-
-> [!NOTE]
-> Building a Teams app using SharePoint Framework with Teams Toolkit doesn't have direct integration with Microsoft Entra admin center. The content in the document doesn't apply to SPFx-based apps.
-
+You can do so by following [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4).
 <br>
 &nbsp;
 </details>

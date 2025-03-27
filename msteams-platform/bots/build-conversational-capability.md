@@ -61,7 +61,7 @@ The following code shows an example of sending a simple Adaptive Card:
         "items": [
         {
             "size": "large",
-            "text": " Simple Adaptivecard Example with a Textbox",
+            "text": "Simple Adaptive Card example with a Textbox",
             "type": "TextBlock",
             "weight": "bolder",
             "wrap": true
@@ -990,7 +990,7 @@ DELETE /v3/conversations/{conversationId}/activities/{activityId}
 The suggested actions enable your bot to present buttons that the user can select to provide input. Suggested actions enhance user experience by enabling the user to answer a question or make a choice with selection of a button, rather than typing a response with a keyboard.
 When the user selects a button, it remains visible and accessible in the rich cards, but not for the suggested actions. This prevents the user from selection of stale buttons within a conversation.
 
-To add suggested actions to a message, set the `suggestedActions` property of an [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) object to specify the list of [card action](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) objects that represent the buttons to be presented to the user. For more information, see [`sugestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions).
+To add suggested actions to a message, set the `suggestedActions` property of an [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) object to specify the list of [card action](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) objects that represent the buttons to be presented to the user. For more information, see [`suggestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions).
 
 The following is an example for implementation and experience of suggested actions:
 
@@ -1154,7 +1154,7 @@ If the tenant or conversation ID isn't present in the activity or wasn't validat
 
 ### Receive only at-mentioned messages
 
-To enable you bots to get only those channel or chat messages where your bot is @mentioned, you must filter the messages. Use the following code snippet to enable your bot to receive only those message where it's @mentioned:
+To enable your bots to get only those channel or chat messages where your bot is @mentioned, you must filter the messages. Use the following code snippet to enable your bot to receive only those messages where it's @mentioned:
 
 ```csharp
     // When ChannelMessage.Read.Group or ChatMessage.Read.Chat RSC is in the app manifest, this method is called even when bot is not @mentioned.
