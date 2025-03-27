@@ -328,12 +328,24 @@
       href: https://github.com/pnp/generator-teams 
   - name: SDKs
     items:
-    - name: Teams AI Library v2 (Spark) SDK
+    - name: Teams AI Library v2 (preview)
       items:
       - name: Overview
-        href: https://review.learn.microsoft.com/en-us/microsoft-365/extensibility/overview?branch=teamsaipoc?context=/microsoftteams/platform/context
-      - name: Quickstart
-        href: https://review.learn.microsoft.com/en-us/microsoft-365/extensibility/temp?branch=teamsaipoc?context=/microsoftteams/platform/context
+        href: /microsoft-365/extensibility/schema?context=/microsoftteams/platform/context
+      - name: Basics
+        href: /microsoft-365/extensibility/schema?context=/microsoftteams/platform/context
+      - name: Dialogs
+        href: /microsoft-365/extensibility/schema?context=/microsoftteams/platform/context
+      - name: Message extensions
+        href: /microsoft-365/extensibility/schema?context=/microsoftteams/platform/context
+      - name: Cards
+        href: /microsoft-365/extensibility/schema?context=/microsoftteams/platform/context
+      - name: DevTools
+        href: /microsoft-365/extensibility/schema?context=/microsoftteams/platform/context
+      - name: AI
+        href: /microsoft-365/extensibility/schema?context=/microsoftteams/platform/context
+      - name: Activity
+        href: /microsoft-365/extensibility/schema?context=/microsoftteams/platform/context
     - name: TeamsFx SDK
       href: toolkit/TeamsFx-SDK.md
       displayName: getUserinfo
@@ -467,6 +479,16 @@
     - name: Build custom engine agent using Teams Toolkit
       href: Teams-AI-library-tutorial.yml
       displayName: custom engine agent
+    - name: Teams AI Library v2 (preview)
+      items:
+      - name: Overview
+        href: /microsoft-365/extensibility/schema?context=/microsoftteams/platform/context
+      - name: Quick start guide
+        href: /microsoft-365/extensibility/schema?context=/microsoftteams/platform/context
+      - name: Build with Teams AI library v2
+        href: /microsoft-365/extensibility/schema?context=/microsoftteams/platform/context
+      - name: Migrate from Teams AI Library v1
+        href: /microsoft-365/extensibility/schema?context=/microsoftteams/platform/context
     - name: Stream bot messages
       href: bots/streaming-ux.md
       displayName: Streaming, response generation, AI library, AI SDK, REST API
