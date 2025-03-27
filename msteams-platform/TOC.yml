@@ -38,6 +38,9 @@
   - name: Tool options and code samples
     href: get-started/tool-options-and-code-samples.md
     displayName: Teams app samples, tools to build Teams app
+  - name: Preview platform features
+    href: resources/dev-preview/developer-preview-intro.md 
+    displayName: developer preview, preview features
 - name: Plan your app
   items:
   - name: Overview
@@ -319,6 +322,24 @@
       displayName: ACP
   - name: SDKs
     items:
+    - name: Teams AI Library v2 (preview)
+      items:
+      - name: Overview
+        href: /microsoft-365/extensibility/schema?context=/microsoftteams/platform/context
+      - name: Basics
+        href: /microsoft-365/extensibility/schema?context=/microsoftteams/platform/context
+      - name: Dialogs
+        href: /microsoft-365/extensibility/schema?context=/microsoftteams/platform/context
+      - name: Message extensions
+        href: /microsoft-365/extensibility/schema?context=/microsoftteams/platform/context
+      - name: Cards
+        href: /microsoft-365/extensibility/schema?context=/microsoftteams/platform/context
+      - name: DevTools
+        href: /microsoft-365/extensibility/schema?context=/microsoftteams/platform/context
+      - name: AI
+        href: /microsoft-365/extensibility/schema?context=/microsoftteams/platform/context
+      - name: Activity
+        href: /microsoft-365/extensibility/schema?context=/microsoftteams/platform/context
     - name: TeamsFx SDK
       href: toolkit/TeamsFx-SDK.md
       displayName: getUserinfo
@@ -451,6 +472,17 @@
       displayName: AI activity handlers, Adaptive Card for AI bot, Teams AI library, AI library, Teams AI library, bot logic, OpenAI, Azure OpenAI, custom engine agent
     - name: Build custom engine agent using Teams Toolkit
       href: Teams-AI-library-tutorial.yml
+      displayName: custom engine agent
+    - name: Teams AI Library v2 (preview)
+      items:
+      - name: Overview
+        href: /microsoft-365/extensibility/schema?context=/microsoftteams/platform/context
+      - name: Quick start guide
+        href: /microsoft-365/extensibility/schema?context=/microsoftteams/platform/context
+      - name: Build with Teams AI library v2
+        href: /microsoft-365/extensibility/schema?context=/microsoftteams/platform/context
+      - name: Migrate from Teams AI Library v1
+        href: /microsoft-365/extensibility/schema?context=/microsoftteams/platform/context
   - name: Bot user experience
     items:
     - name: Custom engine agent user experience
@@ -941,14 +973,14 @@
 - name: App manifest
   items:
     - name: App manifest
-      href: resources/schema/manifest-schema.md
+      href: /microsoft-365/extensibility/schema
       displayName: version, validDomain, valid domain, validdomain, properties, meetingExtensionDefinition
     - name: Public developer preview
       items:
         - name: Overview
           href: resources/dev-preview/developer-preview-intro.md          
         - name: Public developer preview app manifest
-          href: resources/schema/manifest-schema-dev-preview.md
+          href: /microsoft-365/extensibility/schema/?view=m365-app-prev
           displayName: properties
 - name: Test your app
   items:
