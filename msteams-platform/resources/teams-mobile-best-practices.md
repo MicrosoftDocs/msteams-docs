@@ -1,5 +1,5 @@
 ---
-title: Best Practices for Teams Mobile Apps
+title: Teams Mobile Apps Best Practices
 author: surbhigupta
 ms.author: surbhigupta
 description: Learn how to optimize your tab app performance on Teams mobile with best practices such as using service workers and performance audits.
@@ -10,7 +10,7 @@ ms.date: 03/27/2025
 
 # Best practices for Teams mobile apps
 
- Mobile devices have limited processing power, network connectivity, and battery compared to desktops and laptops. If you want to increase the adoption of your Teams tab app on mobile devices, you must ensure a fast and responsive web experience on the Teams Android and iOS clients. This article outlines the best practices to optimize your Teams tab's web pages for the Teams mobile client.
+ Mobile devices have limited processing power, network connectivity, and battery compared to desktops and laptops. If you want to increase the adoption of your Teams tab app on mobile devices, you must ensure a fast and responsive web experience on the Teams Android and iOS clients. This article outlines the best practices to optimize your Teams tab's webpages for the Teams mobile client.
 
 ## Use service workers to cache static assets
 
@@ -22,7 +22,7 @@ ms.date: 03/27/2025
 
 Check out this [sample app](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-support-offline/nodejs) that makes use of a service worker to cache data and provide offline functionality.
 
-## Minimize web page size
+## Minimize webpage size
 
 In areas with weak signal strength, mobile data network can be slow and unstable, resulting in high latency. Hence, reducing the overall app package size and optimizing data transfers is critical. To reduce the page size, gather key performance metrics by running a performance audit using the **Performance** tab in dev tools. The performance audit helps identify bottlenecks and areas for improvement in your app.
 
@@ -48,9 +48,9 @@ To run a performance audit, follow these steps:
 
         :::image type="content" source="../assets/images/tabs/dev-tools-lighthouse.png" alt-text="Screenshot shows the lighthouse tab under dev tools." lightbox="../assets/images/tabs/dev-tools-lighthouse.png":::
 
-        The report shows various diagnostics for your app's web page and a set of actionable insights to decrease page load. Ensure that you take the required steps to reduce the latencies flagged in this report.
+        The report shows various diagnostics for your app's webpage and a set of actionable insights to decrease page load. Ensure that you take the required steps to reduce the latencies flagged in this report.
 
-1. Select the **Coverage** tab. Your web page might contain unused resources that don't provide any value to the functionality of the app. This tab allows you to see actual size and usage percentage of the resources on the web page.
+1. Select the **Coverage** tab. Your webpage might contain unused resources that don't provide any value to the functionality of the app. This tab allows you to see actual size and usage percentage of the resources on the webpage.
 
     1. If you can't find it in the home page of dev tools, go to **More tools** > **Coverage**.
 
