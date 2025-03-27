@@ -16,15 +16,21 @@ Bot users can now delete bot messages in any bot conversation. You can enable th
 
 * **Protect unintended content**: Users can delete bot messages to eliminate unintended or sensitive content to ensure confidential information remains protected. Here's a user scenario that demonstrates this:
 
+    <details>
+    <summary>Select to view a use case</summary>
     | Use case | How deleting the message helps |
     | --- | --- |
     | **Context**: A user requests a conversation summary, but the bot encounters an error and generates incomplete summary the chat. <br><br> **Problem**: The erroneous summary creates a poor user experience and cluttering the conversation with irrelevant information. | **Solution**: The user deletes the message with errors and submits feedback about the poor bot experience for improvement. |
+    </details>
 
 * **Remove incorrect information**: Users can delete messages that contain inaccurate or erroneous information.
 
+    <details>
+    <summary>Select to view a use case</summary>
     | Use case | How deleting the message helps |
     | --- | --- |
     | **Context**: Confidential information was initially shared with the original group members, but external participants were later added who shouldn't have access to it. <br><br> **Problem**: When users search for related information in the chat, confidential information is visible to external users who don't have permission to view it, posing a risk of unauthorized access to sensitive data. | **Solution**: Any valid user can delete information not meant for all group chat members.  This ensures that confidential information stays secure and is only accessible to authorized users. |
+    </details>
 
 Maintaining a clean chat environment enhances user experience and helps keep the conversation contextually relevant.
 
