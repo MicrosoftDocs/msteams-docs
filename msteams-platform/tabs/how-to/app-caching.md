@@ -135,7 +135,7 @@ If you enable precaching, your app utilizes resources, and telemetry data is tra
 
 To enable precaching for your tab app, follow these steps:
 
-1. [Enable app caching](#enable-app-caching).
+1. [Enable app caching](#enable-app-suspension).
 
 1. Update your app manifest as follows:
 
