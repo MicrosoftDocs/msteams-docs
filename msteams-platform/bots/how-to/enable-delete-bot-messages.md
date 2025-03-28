@@ -12,9 +12,9 @@ ms.date: 03/12/2025
 > [!NOTE]
 > Enabling deleting bot message for bot app user is available only in [public developer preview for Teams](../../resources/dev-preview/developer-preview-intro.md).
 
-You can enable users to delete bot messages in bot conversation. Maintaining a clean chat environment enhances user experience. Enabling this feature in your bot app allows users to:
+You can enable users to delete unintended or inaccurate bot messages in your bot app. Maintaining a clean chat environment enhances user experience. Enabling this feature in your bot app allows users to:
 
-* **Protect sensitive content**: Users can delete bot messages to eliminate unintended or sensitive content to ensure confidential information remains protected.
+* **Protect sensitive content**: Users can delete bot messages to eliminate confidential or sensitive content to ensure it remains protected.
 
     <details>
     <summary>Example use case</summary>
@@ -32,17 +32,17 @@ You can enable users to delete bot messages in bot conversation. Maintaining a c
 
     | Use case | How deleting the message helps |
     | --- | --- |
-    | **Context**: A user requests a conversation summary, but the bot encounters an error and generates incomplete summary the chat. <br><br> **Problem**: The erroneous summary creates a poor user experience and cluttering the conversation with irrelevant information. | **Solution**: The user deletes the message with errors and submits feedback about the poor bot experience for improvement. |
+    | **Context**: A user requests a conversation summary, but the bot encounters an error and generates incomplete summary of the chat. <br><br> **Problem**: The erroneous summary creates a poor user experience and clutters the conversation. | **Solution**: The user deletes the message with errors and submits feedback about the poor bot experience. |
 
     </details>
 
-Adding this feature to your bot enhances user experience to keep conversations contextually relevant.
+Adding this feature to your bot enhances user experience and keeps conversations contextually relevant.
 
 ## Enhance user experience
 
-Users in any bot conversation can delete messages in the `personal`, `groupChat`, `channel`, and `meetingChat` scopes. The desktop and mobile clients offer a consistent user experience. Here are some examples of the user experience in personal and group chat for desktop and mobile client:
+All users in any bot conversation can delete bot messages for personal or group chats. The desktop and mobile clients offer a consistent user experience. Here are some examples of the user experience in personal and group chat for desktop and mobile client:
 
-# [Personal chat in desktop client](#tab/personal2)
+# [1:1 in desktop client](#tab/personal2)
 
 [Add gif file]
 
@@ -76,9 +76,11 @@ enable this feature for your bot app:
 
 ### Update app manifest
 
-To enable the option of allowing bot users to delete messages, update the app manifest as follows:
+You can add this functionality to all bots in `personal` and `groupChat`scopes. To enable the option of allowing bot users to delete messages, update the app manifest as follows:
 
 1. Open the `manifest.json` file.
+1. Set the `scopes` to `personal` or `groupChat`or both.
+1. Set `capabilities` to `BotCapabilities`.
 1. Set the `allowBotMessageDeleteByUser` property to `true`.
 
     The following code snippet shows an example of app manifest update:
