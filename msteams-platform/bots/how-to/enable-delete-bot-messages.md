@@ -44,7 +44,7 @@ All users in any bot conversation can delete bot messages in personal or group c
 
 # [1:1 in desktop client](#tab/personal2)
 
-[Add gif file]
+    :::image type="content" source="../../assets/images/bots/one-on-one-chat.gif" alt-text="Graphical representation shows the process of deleting a bot message in a one-on-one chat in desktop client":::
 
 # [Group chat in desktop client](#tab/group)
 
