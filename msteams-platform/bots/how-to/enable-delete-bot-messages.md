@@ -36,11 +36,7 @@ Ensuring that conversations remain focused and productive is a crucial feature f
 
     </details>
 
-Adding this feature to your bot improves user experience and keeps conversations contextually relevant.
-
-<!--## Enhance user experience-->
-
-All users in a bot conversation can delete bot messages in one-on-one or group chats. The feature offers a consistent experience across both desktop and mobile clients. Here are some examples:
+Adding this feature to your bot improves user experience and keeps conversations contextually relevant. All users in a bot conversation can delete bot messages in one-on-one or group chats. The feature offers a consistent experience across both desktop and mobile clients. Here are some examples:
 
 # [1:1 in desktop client](#tab/personal)
 
