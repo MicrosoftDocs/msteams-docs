@@ -12,7 +12,7 @@ ms.date: 03/12/2025
 > [!NOTE]
 > Enabling users to delete bot messages is available only in [public developer preview for Teams](../../resources/dev-preview/developer-preview-intro.md).
 
-Ensuring that conversations remain focused and productive is a crucial feature for any bot app. You can enable users to delete bot messages that contain unintended or inaccurate information. It helps maintain a clean and organized chat environment, which enhances the overall user experience. Enabling this feature in your bot app allows users to:
+One of the crucial features of a bot app is to ensure that the conversations remain focused and productive. You can enable users to delete bot messages that contain unintended or inaccurate information. This helps maintain a clean and organized chat environment, which enhances the overall user experience. Enabling this feature in your bot app allows users to:
 
 * **Protect sensitive content**: Users can delete bot messages to eliminate confidential or sensitive content to ensure it remains protected.
 
@@ -21,7 +21,7 @@ Ensuring that conversations remain focused and productive is a crucial feature f
 
     | Use case | How deleting the message helps |
     | --- | --- |
-    | **Context**: Confidential information was initially shared with the in a group chat. However, external users were later added who shouldn't have access to such information. <br><br> **Problem**: When a user searches for related information in the chat, confidential information is visible to external users who don't have permission to view it. This is a potential security risk of unauthorized access to sensitive data. | **Solution**: Any user can delete information that isn't meant for all group chat members. This ensures that confidential information stays secure and is accessible only to authorized users. |
+    | **Context**: Confidential information was initially shared with the in a group chat. However, external users were later added who shouldn't have access to such information. <br><br> **Problem**: When a user searches for related information in the chat, the confidential information is visible to external users who don't have permission to view it. This is a potential security risk of unauthorized access to sensitive data. | **Solution**: Any user can delete information that isn't meant for all group chat members. This ensures that confidential information stays secure and is accessible only to authorized users. |
 
     </details>
 
@@ -68,7 +68,7 @@ Allowing bot users to delete messages is optional. To add this feature to a bot,
 enable this feature for your bot app:
 
 * [Update app manifest](#update-app-manifest) to enable it in the app.
-* [Configure in the Admin Center](#configure-in-the-admin-center) to enable it in the tenant.
+* [Configure in Admin Center](#configure-in-admin-center) to enable it in the tenant.
 
 ### Update app manifest
 
@@ -107,14 +107,14 @@ You can add this functionality to all bots in `personal` and `groupChat` scopes.
 
 1. Save the updates.
 
-### Configure in the Admin Center
+### Configure in Admin Center
 
 If your bot app has opted for this feature, users can delete messages only after the administrator enables it for the app in the tenant.
 
 > [!NOTE]
-> Ensure that you update the app description to include information about enabling the feature for the bot app in the Admin Center. This is required to enable the users in the tenant to delete bot messages.
+> Ensure that you update the app description to include information about enabling the feature for your bot app in Admin Center. This is required to enable users in the tenant to delete bot messages.
 
-:::image type="content" source="../../assets/images/bots/admin-center-config.png" alt-text="Image shows the configuration required in the Admin Center to enable the feature.":::
+:::image type="content" source="../../assets/images/bots/admin-center-config.png" alt-text="Image shows the configuration required in Admin Center to enable the feature.":::
 
 For more information, see [Add link to Admin docs].
 
