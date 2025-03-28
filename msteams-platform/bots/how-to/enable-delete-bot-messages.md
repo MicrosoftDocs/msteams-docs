@@ -42,15 +42,15 @@ Adding this feature to your bot enhances user experience and keeps conversations
 
 All users in any bot conversation can delete bot messages in personal or group chats. The desktop and mobile clients offer a consistent user experience. Here are some examples of the user experience in personal and group chat for desktop and mobile client:
 
-# [1:1 in desktop client](#tab/personal2)
+# [1:1 in desktop client](#tab/personal)
 
 :::image type="content" source="../../assets/images/bots/one-on-one-chat.gif" alt-text="Graphical representation shows the process of deleting a bot message in a one-on-one chat in desktop client":::
 
 # [Group chat in desktop client](#tab/group)
 
-[Add gif file]
+:::image type="content" source="../../assets/images/bots/group-chat.gif" alt-text="Graphical representation shows the process of deleting a bot message in a group chat in desktop client":::
 
-# [In mobile client](#tab/mobile2)
+# [In mobile client](#tab/mobile)
 
 :::image type="content" source="../../assets/images/bots/delete-message-mobile.png" alt-text="Image shows the user experience of deleting a bot message in a mobile client":::
 
