@@ -1,18 +1,20 @@
 ---
-title: Enable App Caching for Tab App
+title: Enable App Suspension for Tab App
 author: surbhigupta
-description: Learn how to enable app caching for tab app in Teams, improve app's launch time and about app caching limitations, troubleshooting, and code sample.
+description: Learn how to enable app suspension for tab app in Teams, improve app's subsequent launch time and about limitations, troubleshooting, and code sample.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 03/13/2025
 ---
 
-# App caching for your tab app
+# App suspension for your tab app
 
-App caching improves subsequent launch time of the apps within Teams by allowing you to keep some resources and assets in memory that you can use when rehydrating your app.
+When a user navigates away from an app, the app can either be suspended or terminated. Suspension means that the app is sitting in the background and is not visible to the user. Termination means that the app is completely closed and removed from memory. Suspending an app improves subsequent launch time of the apps within Teams, or other Microsoft 365 products, by allowing you to keep some resources and assets in memory that you can use when rehydrating your app.
 
-App caching is supported for the following:
+Previously, app suspension was referred to as a cached app and was supported only in Teams, but it is now supported for Teams apps extended to run across other Microsoft 365 applications as well.
+
+Within Teams, app suspension is supported for the following:
 
 | Scope | &nbsp; Desktop | iOS | Android |
 | --- | --- | --- | --- |
@@ -22,60 +24,82 @@ App caching is supported for the following:
 | Meeting tab | ✔️ Cache lifetime: 30 minutes| ✔️ | ❌ |
 | Meeting side panel or in-meeting apps | ✔️ Cache lifetime: 20 minutes| ❌ | ❌ |
 
-## Enable app caching
+## Enable app suspension
 
-To enable app caching, follow the steps:
+To enable app suspension, follow the steps:
 
-1. Call `teamsCore.registerBeforeUnloadHandler` and `teamsCore.registerOnLoadHandler` APIs.
+1. Call [app.lifeCycle.registerBeforeSuspendOrTerminate](/javascript/api/@microsoft/teams-js/app.lifecycle#@microsoft-teams-js-app-lifecycle-registerbeforesuspendorterminatehandler) and [app.lifeCycle.registerOnResumeHandler](/javascript/api/@microsoft/teams-js/app.lifecycle#@microsoft-teams-js-app-lifecycle-registeronresumehandler) APIs. These handlers are required to enable app suspension. Additional information about the [lifecycle module](/javascript/api/@microsoft/teams-js/app.lifecycle) is available in the TeamsJS reference.
 
-1. Use `contentUrl` and `entityId` passed into the load handler to route to the correct page within your app and invoke `notifySuccess` or `notifyFailure` to notify Teams client that the app initialization flow is complete.
+   The `app.lifecycle.registerBeforeSuspendOrTerminate` handler gives you an opportunity to perform some tasks before your app is suspended or terminated, while the `app.lifecycle.registerOnResumeHandler` is called when a user navigates back to your app.
+
+   Be aware that registering both handlers means that an app is enabled for app suspension, but does not guarantee that the app is not terminated in the background. Whether an app is terminated is dependent on additional factors such as available memory.
+
+   > [!NOTE]
+   > Previously `teamsCore.registerBeforeUnloadHandler` and `teamsCore.registerOnLoadHandler` were used to enable app caching, but they are now deprecated.
+
+1. Use `contentUrl` and `entityId` passed into the resume handler to route to the correct page within your app and invoke `notifySuccess` or `notifyFailure` to notify the host that the app initialization flow is complete.
 
    * [contentUrl](create-tab-pages/configuration-page.md#modify-or-remove-a-tab): Add content page URL.
    * [entityId](create-tab-pages/configuration-page.md#modify-or-remove-a-tab): Add a unique identifier.
 
-1. Dispose resources and perform any cleanup needed in the `beforeUnload` handler, then invoke the `readyToUnload` callback to notify Teams client that the app unload flow is complete.
+1. Dispose resources and perform any cleanup needed in the `beforeSuspendOrTerminate` handler.
 
-The following is the flow diagram of the first launch of an app that wants to opt into app caching (register the `load` or `beforeUnload` on the first launch of the app):
+The following is the flow diagram of the first launch of an app that wants to opt into app suspension (register the `resume` or `beforeSuspensionOrTerminate` handlers on the first launch of the app):
 
-:::image type="content" source="../../assets/images/saas-offer/first-launch-app.png" alt-text="Screenshot shows the flow of the first launch of the app in meeting side panel.":::
+:::image type="content" source="../../assets/images/tabs/first-launch-app.png" alt-text="Screenshot shows the flow of the first launch of the app in meeting side panel.":::
 
-The following is the flow diagram of the launch of cached app:
+The following is the flow diagram of the launch of suspended apps:
 
-:::image type="content" source="../../assets/images/saas-offer/cached-launch-app.png" alt-text="Screenshot shows the flow of the cached launch of the app in meeting side panel.":::
+:::image type="content" source="../../assets/images/tabs/suspended-launch-app.png" alt-text="Screenshot shows the flow of the suspended launch of the app in meeting side panel.":::
 
-When you opt into app caching, the iframe or webview that is used to host the embedded app is reused as users navigate to different instances of the app within a window. The iframe or webview used to host the app is hidden when the users leave the app and shown when the users return to the app.
+When you opt into app suspension, the iframe or webview that is used to host the embedded app is reused as users navigate to different instances of the app within a window. The iframe or webview used to host the app is hidden when the users leave the app and shown when the users return to the app.
 
 > [!NOTE]
-> If the app caching isn't enabled, the iframe or webview is recreated every time the user launches the app.
+> If app suspension isn't enabled, the iframe or webview is recreated every time the user launches the app.
 
-There are multiple reasons for an app to not get cached or for an app to get removed from the cache, some of the reasons are (numbers here are subject to change):
+There are multiple reasons for an app to not get suspended or for an app to get removed from the cache. Some general reasons across Microsoft 365 apps are:
+
+* The total memory load is high.
+* The total number of suspended apps exceed the maximum cache size. In this cirumcstance the oldest suspended app is removed.
+* The app is terminated if the machine's available memory is low.
+* The app is suspended for a long time without getting resumed.
+
+Within the Teams app some of the reasons are (numbers here are subject to change):
 
 * If the system memory load is high, the app is removed from the cache.
-* If the number of cached apps exceeds the maximum cache size, the oldest cached app is removed from the cache.
-* The app isn't cached if Teams doesn't receive the `readyToUnload` signal from the app within 30 seconds after sending the `beforeUnload` notification.
-* App caching is disabled if the system memory is less than 4 GB or if the available memory is less than 1 GB on Windows or 512 MB on Mac.
-* Side panel is the only supported frameContext for app caching in meetings.
-* App caching isn't supported for meetings where the invited user count is more than 20.
-* If an app fails to load, the app isn't cached.
+* If the number of suspended apps exceeds the maximum cache size, the oldest suspended app is removed from the cache.
+* The app isn't suspended if Teams doesn't receive the `readyToUnload` signal from the app within 30 seconds after sending the `beforeUnload` notification.
+* App suspension is disabled if the system memory is less than 4 GB or if the available memory is less than 1 GB on Windows or 512 MB on Mac.
+* Side panel is the only supported frameContext for app suspension in meetings.
+* App suspesnion isn't supported for meetings where the invited user count is more than 20.
+* If an app fails to load, the app isn't suspended.
 * On iOS, when the Teams app is terminated, the app is removed from the cache.
 
 ## Code example
 
-The following code snippet is an example of `teamsCore.registerOnLoadHandler` and `teamsCore.registerBeforeUnloadHandler` APIs:
+The following code snippet is an example of `app.lifecycle.registerOnResumeHandler` and `app.lifecycle.registerBeforeSuspendOrTerminateHandler` APIs:
 
 ```javascript
-microsoftTeams.teamsCore.registerOnLoadHandler((data) => {
-    console.log("got load from TEAMS", data.contentUrl, data.entityId);
-    // use contentUrl to route to correct page 
-    // invoke notifySuccess when ready  
-    app.notifySuccess();
-});
-microsoftTeams.teamsCore.registerBeforeUnloadHandler((readyToUnload) => {
-    // dispose resources and then invoke readyToUnload
-    readyToUnload();
-    return true;
-});
+MicrosoftTeams.app.lifecycle.registerOnResumeHandler((data) => {  
+
+   console.log("got resume call" , data.contentUrl, data.entityId);  
+
+   // use contentUrl to route to correct page  
+   // invoke notifySuccess when ready  
+
+   app.notifySuccess();  
+
+}); 
+
+MicrosoftTeams.app.lifecycle.registerBeforeSuspendOrTerminateHandler(() => {  
+
+   // dispose resources and resolve promise 
+
+}); 
 ```
+
+> [!NOTE]
+> Previously APIs in the `teamsCore` module were used to enable app caching. If an app registers for both `app.lifecycle` and `teamsCore` pairs of handlers, the `app.lifecycle` handlers will overwrite the `teamsCore` handlers.
 
 ## Debug tool for cached apps
 
@@ -143,53 +167,55 @@ Monitor the `isBackgroundLoad` property in the app context to optimize the app f
 
 ## Best practices
 
-The following are the best practices for app caching and precaching:
+The following are the best practices for app suspension and precaching:
 
 * We recommend that you implement web storage or service worker capabilities to store the data or webview locally. This helps to load the app faster in subsequent launches.
 
-* Register the `beforeUnload` and `onLoad` handlers right after calling `app.initialize` and before the app sends `notifySuccess`. If the Teams client doesn’t see these registrations before the user leaves the app, the app isn't cached.
+* Register the app suspension handlers early in your launch sequence, such as right after calling `app.initialize` and before the app sends `notifySuccess`. If the Teams client doesn’t see these registrations before the user leaves the app, the app isn't cached.
+
+* Try to reduce your memory footprint when the `app.lifecycle.onBeforeSuspendOrTerminateHandler` handler is called, and the app is about to be suspended. For example, release references, remove eventListeners, pause sync calls, or halt network requests.
 
 * Precaching increases the traffic to your app in addition to user-initiated requests. Ensure that the endpoint you provide as the `contentUrl` can handle background requests multiple times for each user in a day. Ensure that you make telemetry adjustments needed to accommodate the background loading of the app.
 
 * Ensure that your app uses less than or equal to 130 MB of memory in the precached state.
 
-## Limitations
+## General limitations
 
-The following are the limitations for app caching:
+The following are general limitations for app suspension:
 
-* Single-page apps that use client-side routing for page navigation can benefit from app caching. It's recommended that the same domain be used across all contexts of your app launch.
+* There is no guarantee that an app will be suspended. There are reasons that can lead to app termination even though an has registered the required handlers.  
 
-* Apps need to re-register for events such as `themeChange`, `focusEnter`, and so on, in the load handler. Teams client won't send any notifications to the app when cached. If your app requires notifications even when cached, caching might not be the right solution.
+* An app is suspended only when the user navigates away from the app. If an app has multiple static tabs, when the user switches between tabs, the tab won’t be suspended. The hanlder, `app.lifecycle.onBeforeSuspendOrTerminate`, will still be called.
 
-* The Teams client invokes the `loadHandler` only after the `unload` sequence of the app is completed. For example, if a user launches tab A of your app and then launches tab B of the same app, tab B won't get the load signal until the tab A invokes the `readyToUnload` callback.
+* The suspended app can be used within the same window. The app that is suspended in a pop out window cannot be reused in the Main window.
+
+* When an app is suspended, all the registered handlers are deleted. When the app is resumed all the handlers, such as `themeChange` or `focusEnter`, need to be reregistered. No notifications are sent to the app when suspended. If your app requires notifications even when suspended, suspension might not be the right solution.
+
+* Only Single-page apps that use client-side routing for page navigation can benefit from app suspension and resume. It's recommended that the same domain be used across all contexts of your app launch.
+
+* An app is expected to sleep when suspended. No SDK requests are allowed when the app is suspended.
+
+## Limitations within Teams
+
+The following are the limitations for app suspension within the Teams app:
+
+* The Teams client invokes the `resume` handler only after the `suspendOrTerminate` sequence of the app is completed. For example, if a user launches tab A of your app and then launches tab B of the same app, tab B won't get the `resume` signal until the `suspendOrTerminate` handler on tab A is done executing.
 
 * Apps are cached on a per-window basis. App caching happens on a per app (not on a per tab) basis within the same window.
 
-* App caching isn't supported for the meeting stage or dialog (referred as task module in TeamsJS v1.x) contexts, because these can be opened on top of the tab and the same iframe or webview can't be used to render the content in the tab and the dialog.
+* App suspension isn't supported for the meeting stage or dialog (referred as task module in TeamsJS v1.x) contexts, because these can be opened on top of the tab and the same iframe or webview can't be used to render the content in the tab and the dialog.
 
-* Register only the `beforeUnload` handler if your app doesn't require app caching but needs time to safely save state (as leaving the app can cause the app content to be abruptly removed from the Document Object Model (DOM)). If the app hasn't registered for the `load` event, it's removed from the DOM after the `unload` flow completes.
+* Register only the `beforeSuspendOrTerminate` handler if your app doesn't require app suspension but needs time to safely save state (as leaving the app can cause the app content to be abruptly removed from the Document Object Model (DOM)). If the app hasn't registered for the `resume` event, it's removed from the DOM after the `suspendOrTerminate` flow completes.
 
-* Follow the guidelines in this section to onboard your app to app caching in Teams meeting. For app caching support only in meetings, register the `load` or `beforeUnload` handlers if the context is `sidePanel`.
-
-* Apps are expected to sleep when cached (use minimal compute or network resources and minimizes SDK requests). All the register handlers and the following SDK requests are allowed when the app is cached:
-
-  * `initialize`
-  * `notifyappLoaded`
-  * `notifySuccess`
-  * `notifyFailure`
-  * `notifyExpectedFailure`
-  * `getContext`
-  * `getAuthToken`
-  * `readyToUnload`
-  * `getConfig/getSettings`
+* Follow the guidelines in this section to onboard your app to app suspension in Teams meeting. For app suspension support only in meetings, register the `resume` or `beforeSuspendOrTerminate` handlers if the context is `sidePanel`.
 
 ## Troubleshooting
 
-**Apps are not being cached? Why is load handler not invoked on subsequent navigation?**
+**Apps are not being suspended? Why is resume handler not invoked on subsequent navigation?**
 
 * Verify if the system and available memory constraints are met.
 
-* Reduce your memory footprint when cached. Use the `beforeUnload` handler to dispose resources, for example, release references and remove event listeners that might not be needed when cached.
+* Reduce your memory footprint when cached. Use the `beforeSuspendOrTerminate` handler to dispose resources, for example, release references and remove event listeners that might not be needed when cached.
 
 ## Code sample
 
