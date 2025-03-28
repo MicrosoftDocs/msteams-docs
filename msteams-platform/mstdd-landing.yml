@@ -48,6 +48,8 @@ landingContent:
       links:
       - text: Use custom activity icons in activity feed notifications
         url: /graph/teams-send-activityfeednotifications?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json&tabs=desktop%2Chttp
+      - text: Best practices to optimize tab performance in Teams mobile
+        url: resources/teams-mobile-best-practices.md
       - text: Advanced step-by-step guide to build custom engine agent
         url: sbs-Teams-AI.yml      
       - text: AI label, citations, feedback buttons, and sensitivity labels for bot messages

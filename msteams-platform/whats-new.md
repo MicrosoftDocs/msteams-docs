@@ -15,7 +15,7 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 <!------
 
-## Microsoft Build 2024 :::image type="icon" source="assets/images/bullhorn.png" border="false"
+## Microsoft Build 2025 :::image type="icon" source="assets/images/bullhorn.png" border="false"
 
 ---------->
 
@@ -35,7 +35,9 @@ Teams platform features that are available to all app developers.
 
 * ***March 31, 2025***: [Increase app engagement with custom activity icons in activity feed notifications](/graph/teams-send-activityfeednotifications?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json&tabs=desktop%2Chttp).
 
-* ***March 07, 2025***: [Introducing app manifest v1.20 with elementRelationshipSet, requirementSet, and intuneInfo properties.](resources/schema/manifest-schema.md)
+* ***March 27, 2025***: [Learn about the best practices to optimize tab app performance in Teams Android and iOS clients](resources/teams-mobile-best-practices.md).
+
+* ***March 07, 2025***: [Introducing app manifest v1.20 with elementRelationshipSet, requirementSet, and intuneInfo properties](resources/schema/manifest-schema.md).
 
 * ***March 07, 2025***: [Specify runtime requirements in app manifest to tailor your app's behavior in Microsoft 365 hosts](m365-apps/specify-runtime-requirements.md).
 
