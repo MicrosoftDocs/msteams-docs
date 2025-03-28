@@ -86,7 +86,7 @@ statefulClientBuilder.SetNotificationUrl(
 >
 > * The URL in `SetNotificationUrl` must be HTTPS.
 >
-> Your local instance must be listening to HTTP traffic on the signaling port. The requests made by the calls and online meetings platform reach the bot as localhost HTTP traffic unless end-to-end encryption is set up.
+> * Your local instance must be listening to HTTP traffic on the signaling port. The requests made by the calls and online meetings platform reach the bot as localhost HTTP traffic unless end-to-end encryption is set up.
 
 #### Update media
 

@@ -766,8 +766,6 @@ If you choose to submit a video as part of your app listing in your Partner Cent
 
 For more information on the criteria for creating an app value video or walkthrough video, see the [checklist to create a video](submission-checklist.md#create-a-video).
 
-<br></br>
-
 ### Privacy policy
 
 [*Must fix*]
