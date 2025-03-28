@@ -1,7 +1,7 @@
 **Create a client secret**
 
 > [!NOTE]
-> If you encounter the error **Client secrets are blocked by tenant-wide policy. Contact your tenant administrator for more information.**, you can create a certificate instead. For step-by-step instructions, visit [create a certificate for app registration.](/graph/auth-register-app-v2#add-credentials)
+> If you encounter the error **Client secrets are blocked by tenant-wide policy. Contact your tenant administrator for more information.**, you can create a certificate instead. For step-by-step instructions, refer to [create a certificate for app registration.](/graph/auth-register-app-v2#add-credentials)
 
 1. In the left pane, under **Manage**, select **Certificates & secrets**.
 
