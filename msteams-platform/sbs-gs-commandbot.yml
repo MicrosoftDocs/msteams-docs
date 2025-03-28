@@ -127,7 +127,7 @@ items:
 
          :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/hello-world-command.png" alt-text="Screenshot shows to add an App dropdown":::  
 
-       You receive the following command response in adaptive card:
+       You receive the following command response in an Adaptive Card:
 
         :::image type="content" source="~/assets/images/sbs-command-bot/final-output.png" alt-text="Screenshot shows the final output." lightbox="~/assets/images/sbs-command-bot/final-output.png":::      
      > [!div class="nextstepaction"]
@@ -248,7 +248,7 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-command-bot/hello-world-cloud.png" alt-text="Screenshot shows the Hello World Command to enter.":::
 
-        You receive the following command response in adaptive card:
+        You receive the following command response in an Adaptive Card:
 
          :::image type="content" source="~/assets/images/sbs-command-bot/cloud-final-output.png" alt-text="Screenshot shows the cloud final output.":::
 
