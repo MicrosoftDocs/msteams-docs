@@ -40,7 +40,7 @@ Adding this feature to your bot enhances user experience and keeps conversations
 
 ## Enhance user experience
 
-All users in any bot conversation can delete bot messages for personal or group chats. The desktop and mobile clients offer a consistent user experience. Here are some examples of the user experience in personal and group chat for desktop and mobile client:
+All users in any bot conversation can delete bot messages in personal or group chats. The desktop and mobile clients offer a consistent user experience. Here are some examples of the user experience in personal and group chat for desktop and mobile client:
 
 # [1:1 in desktop client](#tab/personal2)
 
