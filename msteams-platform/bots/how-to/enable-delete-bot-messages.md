@@ -116,7 +116,7 @@ If your bot app has opted for this feature, users can delete messages only after
 
 :::image type="content" source="../../assets/images/bots/admin-center-config.png" alt-text="Image shows the configuration required in Admin Center to enable the feature.":::
 
-For more information, see [Add link to Admin docs].
+For more information, see [messaging settings](/microsoftteams/delete-bot-messages).
 
 ## See also
 
