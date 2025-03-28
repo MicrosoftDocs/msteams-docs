@@ -543,6 +543,15 @@ For more information, see [icon guidelines](~/concepts/build-and-test/apps-packa
 
 </details>
 
+#### Custom activity icons
+
+If your app package contains custom activity icons for activity feed notifications, ensure that they meet the following guidelines:
+
+* The size of icon must be 32x32 pixels. [*Must fix*]
+* The icon must be enterprise-safe. [*Must fix*]
+* The icon can't be random or irrelevant and needs to match the information in the notification. [*Good-to-fix*]
+* The icon must be designed with good accessibility. [*Good-to-fix*]
+
 ### App descriptions
 
 You must have a short and long description for your app. App description helps improve your app discoverability in the Teams Store. The descriptions in your app configuration and Partner Center must be the same.
