@@ -12,7 +12,7 @@ ms.date: 03/12/2025
 > [!NOTE]
 > Enabling users to delete bot messages is available only in [public developer preview for Teams](../../resources/dev-preview/developer-preview-intro.md).
 
-You can enable users of your bot app to delete bot messages with unintended or inaccurate information. Maintaining a clean chat environment enhances user experience. Enabling this feature in your bot app allows users to:
+Ensuring that conversations remain focused and productive is a crucial feature for any bot app. You can enable users to delete bot messages that contain unintended or inaccurate information. It helps maintain a clean and organized chat environment, which enhances the overall user experience. Enabling this feature in your bot app allows users to:
 
 * **Protect sensitive content**: Users can delete bot messages to eliminate confidential or sensitive content to ensure it remains protected.
 
