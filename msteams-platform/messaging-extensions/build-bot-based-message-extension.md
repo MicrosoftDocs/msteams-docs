@@ -105,7 +105,7 @@ For more information, see [app manifest schema](~/resources/schema/manifest-sche
 > [!NOTE]
 > When a message action is initiated, attachment details aren't sent as part of the `turncontext` invoke activity.
 
-Action commands allow you to present your users with a modal pop-up called a task module in Teams. The task module collects or displays information, processes the interaction, and sends the information back to Teams. This document guides you on how to select action command invoke locations, create your task module, send final message or card, and create an action command.
+Action commands allow you to present your users with a modal pop-up called a task module in Teams. The task module collects or displays information, processes the interaction, and sends the information back to Teams. This document guides you on how to select action command invoke locations, create your task module, send final message or card, and create an action command manually.
 
 The action command in a message extension is configured using the `composeExtensions.commands` property and `action` type in the app manifest.
 
