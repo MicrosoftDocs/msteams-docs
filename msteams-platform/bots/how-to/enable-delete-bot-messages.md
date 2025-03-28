@@ -10,37 +10,37 @@ ms.date: 03/12/2025
 # Enable users to delete bot messages
 
 > [!NOTE]
-> Enabling deleting bot message for bot app user is available only in [public developer preview for Teams](../../resources/dev-preview/developer-preview-intro.md).
+> Enabling users to delete bot messages is available only in [public developer preview for Teams](../../resources/dev-preview/developer-preview-intro.md).
 
-You can enable users to delete unintended or inaccurate bot messages in your bot app. Maintaining a clean chat environment enhances user experience. Enabling this feature in your bot app allows users to:
+You can enable users of your bot app to delete bot messages with unintended or inaccurate information. Maintaining a clean chat environment enhances user experience. Enabling this feature in your bot app allows users to:
 
 * **Protect sensitive content**: Users can delete bot messages to eliminate confidential or sensitive content to ensure it remains protected.
 
     <details>
-    <summary>Example use case</summary>
+    <summary>Here's a use case</summary>
 
     | Use case | How deleting the message helps |
     | --- | --- |
-    | **Context**: Confidential information was initially shared with the original group members, but external participants were later added who shouldn't have access to it. <br><br> **Problem**: When users search for related information in the chat, confidential information is visible to external users who don't have permission to view it, posing a risk of unauthorized access to sensitive data. | **Solution**: Any user can delete information not meant for all group chat members.  This ensures that confidential information stays secure and is only accessible to authorized users. |
+    | **Context**: Confidential information was initially shared with the in a group chat. However, external users were later added who shouldn't have access to such information. <br><br> **Problem**: When a user searches for related information in the chat, confidential information is visible to external users who don't have permission to view it. This is a potential security risk of unauthorized access to sensitive data. | **Solution**: Any user can delete information that isn't meant for all group chat members. This ensures that confidential information stays secure and is accessible only to authorized users. |
 
     </details>
 
 * **Remove incorrect information**: Users can delete messages that contain inaccurate or erroneous information.
 
     <details>
-    <summary>Example use case</summary>
+    <summary>Here's a use case</summary>
 
     | Use case | How deleting the message helps |
     | --- | --- |
-    | **Context**: A user requests a conversation summary, but the bot encounters an error and generates incomplete summary of the chat. <br><br> **Problem**: The erroneous summary creates a poor user experience and clutters the conversation. | **Solution**: The user deletes the message with errors and submits feedback about the poor bot experience. |
+    | **Context**: A user requests the bot to generate a conversation summary, but the bot encounters an error and generates inaccurate summary of the chat. <br><br> **Problem**: The erroneous summary clutters the conversation. | **Solution**: The user deletes the message with errors and submits feedback about the poor bot experience. |
 
     </details>
 
-Adding this feature to your bot enhances user experience and keeps conversations contextually relevant.
+Adding this feature to your bot improves user experience and keeps conversations contextually relevant.
 
-## Enhance user experience
+<!--## Enhance user experience-->
 
-All users in any bot conversation can delete bot messages in personal or group chats. The desktop and mobile clients offer a consistent user experience. Here are some examples of the user experience in personal and group chat for desktop and mobile client:
+All users in a bot conversation can delete bot messages in one-on-one or group chats. The feature offers a consistent experience across both desktop and mobile clients. Here are some examples:
 
 # [1:1 in desktop client](#tab/personal)
 
@@ -52,7 +52,7 @@ All users in any bot conversation can delete bot messages in personal or group c
 
 # [In mobile client](#tab/mobile)
 
-:::image type="content" source="../../assets/images/bots/delete-message-mobile.png" alt-text="Image shows the user experience of deleting a bot message in a mobile client":::
+:::image type="content" source="../../assets/images/bots/delete-message-mobile.png" alt-text="Image shows the process of deleting a bot message in a mobile client":::
 
 ---
 <!--
@@ -79,11 +79,11 @@ enable this feature for your bot app:
 You can add this functionality to all bots in `personal` and `groupChat` scopes. To enable the option of allowing bot users to delete messages, update the app manifest as follows:
 
 1. Open the `manifest.json` file.
-1. Set the `scopes` to `personal` or `groupChat` or both.
+1. Set `scopes` to `personal` or `groupChat` or both.
 1. Set `capabilities` to `BotCapabilities`.
 1. Set the `allowBotMessageDeleteByUser` property to `true`.
 
-    The following code snippet shows an example of app manifest update:
+    The following code snippet shows an example of app manifest configuration:
 
     ```json
     { 
@@ -116,7 +116,7 @@ You can add this functionality to all bots in `personal` and `groupChat` scopes.
 If your bot app has opted for this feature, users can delete messages only after the administrator enables it for the app in the tenant.
 
 > [!NOTE]
-> Ensure that you update the app description for your app to include information about enabling the feature for the app in the Admin Center. This is required to enable the users in the tenant to delete bot messages.
+> Ensure that you update the app description to include information about enabling the feature for the bot app in the Admin Center. This is required to enable the users in the tenant to delete bot messages.
 
 :::image type="content" source="../../assets/images/bots/admin-center-config.png" alt-text="Image shows the configuration required in the Admin Center to enable the feature.":::
 
