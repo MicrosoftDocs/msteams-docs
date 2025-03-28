@@ -75,11 +75,11 @@ Add media files into an existing or new Adaptive Card either through [Developer 
 
 1. Select **Save** and then select **Send me this card**.
 
-   :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/media-element-ac-save.png" alt-text="Screenshot shows you how to save your Adaptive card and send it to your Teams" lightbox="../../assets/images/media-elements-in-adaptive-cards/media-element-ac-save.png":::
+   :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/media-element-ac-save.png" alt-text="Screenshot shows how to save your Adaptive Card and send it to your Teams chat." lightbox="../../assets/images/media-elements-in-adaptive-cards/media-element-ac-save.png":::
 
    Your Adaptive Card with media file is successfully saved and sent to your Teams chat. The following is an example of media file in your Adaptive Card:
 
-   :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/adaptive-card-teams.png" alt-text="Screenshot shows you the adaptive card with media files in Teams chat.":::
+   :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/adaptive-card-teams.png" alt-text="Screenshot shows an Adaptive Card with media files in a Teams chat.":::
 
 # [Adaptive Card Designer](#tab/adaptive-card-designer)
 
@@ -117,7 +117,7 @@ Add media files into an existing or new Adaptive Card either through [Developer 
 
    The following is an example of media file in your Adaptive Card:
 
-   :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/adaptive-card-teams.png" alt-text="Screenshot shows you the adaptive card with media files in Teams chat." lightbox="../../assets/images/media-elements-in-adaptive-cards/adaptive-card-teams.png":::
+   :::image type="content" source="../../assets/images/media-elements-in-adaptive-cards/adaptive-card-teams.png" alt-text="Screenshot shows an Adaptive Card with media files in a Teams chat." lightbox="../../assets/images/media-elements-in-adaptive-cards/adaptive-card-teams.png":::
 
 ---
 
