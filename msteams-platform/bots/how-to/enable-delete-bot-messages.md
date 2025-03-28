@@ -76,10 +76,10 @@ enable this feature for your bot app:
 
 ### Update app manifest
 
-You can add this functionality to all bots in `personal` and `groupChat`scopes. To enable the option of allowing bot users to delete messages, update the app manifest as follows:
+You can add this functionality to all bots in `personal` and `groupChat` scopes. To enable the option of allowing bot users to delete messages, update the app manifest as follows:
 
 1. Open the `manifest.json` file.
-1. Set the `scopes` to `personal` or `groupChat`or both.
+1. Set the `scopes` to `personal` or `groupChat` or both.
 1. Set `capabilities` to `BotCapabilities`.
 1. Set the `allowBotMessageDeleteByUser` property to `true`.
 
@@ -113,7 +113,7 @@ You can add this functionality to all bots in `personal` and `groupChat`scopes. 
 
 ### Configure in the Admin Center
 
-If your bot app has opted for this feature, users can delete messages only after the Admin enables it for the app in the tenant.
+If your bot app has opted for this feature, users can delete messages only after the administrator enables it for the app in the tenant.
 
 > [!NOTE]
 > Ensure that you update the app description for your app to include information about enabling the feature for the app in the Admin Center. This is required to enable the users in the tenant to delete bot messages.
