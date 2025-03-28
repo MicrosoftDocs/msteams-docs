@@ -47,7 +47,7 @@ landingContent:
     - linkListType: whats-new
       links:
       - text: Use custom activity icons in activity feed notifications
-        url: /graph/teams-send-activityfeednotifications?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json&tabs=desktop%2Chttp
+        url: /graph/teams-send-activityfeednotifications?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json&tabs=desktop%2Chttp#custom-activity-icons-in-activity-feed-notifications
       - text: Best practices to optimize tab performance in Teams mobile
         url: resources/teams-mobile-best-practices.md
       - text: Advanced step-by-step guide to build custom engine agent
