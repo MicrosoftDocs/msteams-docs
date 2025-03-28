@@ -21,7 +21,7 @@ You can enable users to delete unintended or inaccurate bot messages in your bot
 
     | Use case | How deleting the message helps |
     | --- | --- |
-    | **Context**: Confidential information was initially shared with the original group members, but external participants were later added who shouldn't have access to it. <br><br> **Problem**: When users search for related information in the chat, confidential information is visible to external users who don't have permission to view it, posing a risk of unauthorized access to sensitive data. | **Solution**: Any valid user can delete information not meant for all group chat members.  This ensures that confidential information stays secure and is only accessible to authorized users. |
+    | **Context**: Confidential information was initially shared with the original group members, but external participants were later added who shouldn't have access to it. <br><br> **Problem**: When users search for related information in the chat, confidential information is visible to external users who don't have permission to view it, posing a risk of unauthorized access to sensitive data. | **Solution**: Any user can delete information not meant for all group chat members.  This ensures that confidential information stays secure and is only accessible to authorized users. |
 
     </details>
 
