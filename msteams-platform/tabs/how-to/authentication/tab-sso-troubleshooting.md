@@ -122,6 +122,7 @@ In addition, inspect the access token that was sent to the tab app to verify if 
 You can use [JWT](https://jwt.ms) for inspecting the token.
 
 </details>
+<br>
 
 ## Bot SSO token error
 
@@ -188,6 +189,18 @@ To understand the bot behavior when the token exchange fails to trigger a consen
    > In Teams web client, the password prompt doesn't appear as there is an active Microsoft Entra session in the browser, which is used for authentication and to acquire a token. In Teams desktop client, the password prompt appears because the desktop client doesn't have any Microsoft Entra session to be shared and is asked to login.
 
 </details>
+<br>
+
+## Auth consent dialog error
+
+<br>
+<details>
+<summary>User selects <b>Continue</b> in the consent dialog for additional permissions and nothing happens.</summary>
+
+This error occurs if `https://token.botframework.com` is missing in the `validDomains` property of the app manifest. For more information about OAuth URLs, see [OAuth URL support in Azure AI Bot Service](/azure/bot-service/ref-oauth-redirect-urls?view=azure-bot-service-4.0&preserve-view=true).
+
+</details>
+<br>
 
 ## See also
 

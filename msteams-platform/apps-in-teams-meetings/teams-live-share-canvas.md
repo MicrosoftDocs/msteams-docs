@@ -18,7 +18,7 @@ To enable more seamless collaboration, Microsoft created PowerPoint Live, which 
 
 ## Install
 
-Live Share canvas is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/live-share-media), and you can download through npm or yarn. You must also install its peer dependencies, which includes `@microsoft/live-share`, `fluid-framework`, and `@fluidframework/azure-client`. If you are using Live Share in your tab application, you must also install `@microsoft/teams-js` version `2.11.0` or later.
+Live Share canvas is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/live-share-media), and you can download through npm or yarn. You must also install its peer dependencies, which include `@microsoft/live-share`, `fluid-framework`, and `@fluidframework/azure-client`. If you are using Live Share in your tab application, you must also install `@microsoft/teams-js` version `2.11.0` or later.
 
 ```bash
 npm install @microsoft/live-share @microsoft/live-share-canvas fluid-framework @fluidframework/azure-client --save
@@ -301,7 +301,7 @@ document.getElementById("point-eraser").onclick = () => {
 
 #### Laser pointer
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-laser-tool.gif" alt-text="GIF shows an example of drawing strokes on the canvas using the the laser pointer tool.":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-laser-tool.gif" alt-text="GIF shows an example of drawing strokes on the canvas using the laser pointer tool.":::
 
 The laser pointer is unique as the tip of the laser has a trailing effect as you move your mouse. When you draw strokes, the trailing effect renders for a short period before it fades out completely. This tool is perfect to point out information on the screen during collaboration, as the presenter doesn't have to switch between tools to erase strokes.
 
@@ -339,7 +339,7 @@ document.getElementById("laser-tip-size").onclick = () => {
 
 #### Line and arrow tools
 
-:::image type="content" source="../assets/images/teams-live-share/canvas-line-tool.gif" alt-text="GIF shows an example of drawing straight lines on a canvas using the line and arrow tool .":::
+:::image type="content" source="../assets/images/teams-live-share/canvas-line-tool.gif" alt-text="GIF shows an example of drawing straight lines on a canvas using the line and arrow tool.":::
 
 The line tool allows users to draw straight lines from one point to another, with an optional arrow that can be applied to the end.
 

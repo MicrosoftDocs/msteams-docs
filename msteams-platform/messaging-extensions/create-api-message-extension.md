@@ -337,9 +337,9 @@ The following code is an example of a Response rendering template: <br/>
 |`responseCardTemplate`    |  `adaptiveCardTemplate`  | A template for creating an Adaptive Card from a result entry.      |   Yes      |
 |`previewCardTemplate`     |  `previewCardTemplate`       | A template for creating a preview card from a result entry. The resulting preview card is displayed in the message extension flyout menu.        |  Yes       |
 
-#### Json path
+#### JSON path
 
-The JSON path is optional but should be used for arrays or where the object to be used as the data for the adaptive card isn't the root object. The JSON path should follow the format defined by Newtonsoft. If the JSON path points to an array, then each entry in that array is bound with the adaptive card template and returns as separate results.
+The JSON path is optional but can be used for arrays or where the object to be used as the data for an Adaptive Card isn't the root object. The JSON path must follow the format defined by Newtonsoft. If the JSON path points to an array, then each entry in that array is bound with the Adaptive Card template and returns as separate results.
 
 **Example**
 Let's say you have the below JSON for a list of products and you want to create a card result for each entry.
@@ -717,7 +717,7 @@ To build an API-based message extension using Teams Toolkit for Visual Studio Co
     ---
 
      > [!NOTE]
-     > Teams toolkit source file includes a security check to ensure that an incoming request is authorized. It uses a function `isApiKeyValid(req)` to verify if the request contains a valid API key. If the API key isn't valid, the code returns an 401 HTTP status code, indicating an Unauthorized response.
+     > Teams toolkit source file includes a security check to ensure that an incoming request is authorized. It uses a function `isApiKeyValid(req)` to verify if the request contains a valid API key. If the API key isn't valid, the code returns a 401 HTTP status code, indicating an unauthorized response.
 
 1. From the left pane, select **Teams Toolkit**.
 1. Under **ACCOUNTS**, sign in with your [Microsoft 365 account](/microsoftteams/platform/toolkit/accounts) and Azure account if you haven't already.
@@ -1150,7 +1150,7 @@ To build an API-based message extension with multiple parameters using Teams Too
 
     :::image type="content" source="../assets/images/messaging-extension/me-multi-parameter.png" alt-text="Screenshot shows you the multi-parameter result in the message compose area." lightbox="../assets/images/messaging-extension/me-multi-output.png":::
 
-Now you've succesfully created multi paramter in message extension.
+Now you've successfully created a message extension with multiple parameters.
 
 ---
 
