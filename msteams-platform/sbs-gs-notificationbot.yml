@@ -183,7 +183,7 @@ items:
 
        You can see the following page:
 
-         :::image type="content" source="~/assets/images/sbs-notification-bot/default-program.png" alt-text="Default Program" lightbox="~/assets/images/sbs-notification-bot/default-program-1.png":::
+         :::image type="content" source="~/assets/images/sbs-notification-bot/default-program.png" alt-text="Default Program" lightbox="~/assets/images/sbs-notification-bot/default-program.png":::
 
     1. Use the following code after `for (const target of installations) {` in Visual Studio Code.
 
@@ -199,10 +199,9 @@ items:
                 },
               })
             );
-         /* 
-         ```
+        ```
 
-          :::image type="content" source="~/assets/images/sbs-notification-bot/code-add.png" alt-text="Code Add" lightbox="~/assets/images/sbs-notification-bot/code-add-1.png":::
+          :::image type="content" source="~/assets/images/sbs-notification-bot/code-add.png" alt-text="Code Add" lightbox="~/assets/images/sbs-notification-bot/code-add.png":::
 
         **To customize storage (Optional):**
 
