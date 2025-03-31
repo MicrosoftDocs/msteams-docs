@@ -888,13 +888,13 @@ Define the properties your app uses to post a user activity feed.
 |`type`|String|32 characters|✔️|The notification type.|
 |`description`|String|128 characters|✔️|A brief description of the notification.|
 |`templateText`|String|128 characters|✔️|Ex: "{actor} created task {taskId} for you"|
-|`allowedIconIds`|Array of strings| | |A list of custom icon IDs valid for that activity.|
+|`allowedIconIds`|Array of strings|| |A list of custom icon IDs valid for that activity.|
 
 ### activities.activityIcons
 
 **Optional** &ndash; Array of objects
 
-Defines the icons of activity types that your app can post to a user's activity feed.
+Defines the icons of activity types that your app can post to a user's activity feed. You can define up to 20 icons per activity type.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -909,7 +909,7 @@ Defines the icons of activity types that your app can post to a user's activity 
            {
                 "type": "leadershipAnnouncements",
                 "description": "leadership Announcements",
-                "templateText": "{actor} shared an announcement",
+                "templateText": "Kayo Miwa shared an announcement",
                 "allowedIconIds" : [
                     "announcementCreated"
                 ]
@@ -917,7 +917,7 @@ Defines the icons of activity types that your app can post to a user's activity 
            {
                 "type": "announcementCreated",
                 "description": "Announcements",
-                "templateText": "{actor} posted an announcement",
+                "templateText": "Megan Bowen posted an announcement",
                 "allowedIconIds" : [
                     "announcementCreated"
                 ]
@@ -925,7 +925,7 @@ Defines the icons of activity types that your app can post to a user's activity 
               {
                 "type": "reaction",
                 "description": "reaction Activity",
-                "templateText": "{actor} reacted to your post in channel",
+                "templateText": "Adele Vance reacted to your post in channel",
                 "allowedIconIds" : [
                     "likeReaction",
                     "smileReaction"
@@ -934,7 +934,7 @@ Defines the icons of activity types that your app can post to a user's activity 
               {
                 "type": "taskCreated",
                 "description": "task created activity",
-                "templateText": "{actor} created {taskId} for you.",  
+                "templateText": "Pradeep Gupta created a new task item for you.",  
                 // No icons are associated with this activity type. When you send a notification using this activity type, Teams shows the default brand logo.
               }
             ],
