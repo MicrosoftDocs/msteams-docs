@@ -131,7 +131,7 @@ You must define the access token version for your app. This configuration is mad
 
    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-manifest-value.png" alt-text="Value for accepted access token version":::
 
-1. Select **Save**
+1. Select **Save**.
 
     A message pops up on the browser stating that the app manifest was updated successfully.
 
