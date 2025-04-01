@@ -100,8 +100,8 @@ You must define the access token version for your app. This configuration is mad
 
 1. Enter **2** as the value for the `accessTokenAcceptedVersion` property.
 
-> [!NOTE]
-> If you've selected **Personal Microsoft accounts only** or **Accounts in any organizational directory (Any Microsoft Entra directory - Multitenant) and personal Microsoft accounts (for example, Skype and Xbox)** during app registration, update the value for the `accessTokenAcceptedVersion` property as **2**.
+    > [!NOTE]
+    > If you've selected **Personal Microsoft accounts only** or **Accounts in any organizational directory (Any Microsoft Entra directory - Multitenant) and personal Microsoft accounts (for example, Skype and Xbox)** during app registration, update the value for the `accessTokenAcceptedVersion` property as **2**.
 
 1. Select **Save**.
 
