@@ -959,7 +959,7 @@ The task response to the invoke must be similar to that of the installed bot.
 
 #### Example
 
-The following code section is an example of just-in time installation of app with Adaptive card:
+The following code section is an example of just-in time installation of app with Adaptive Card:
 
 ```csharp
 private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
