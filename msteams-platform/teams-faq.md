@@ -85,7 +85,7 @@ Use Delete messages-Bot framework's `DeleteActivity` method: [Update and delete
 <details>
 <summary>How can I test the validity of the card schema via code?</summary>
 
-You can test or validate the Adaptive Card schema using the **Adaptive cards editor (preview)** option in [Developer Portal > Tools](https://dev.teams.microsoft.com/tools).
+You can test or validate the Adaptive Card schema using the **Adaptive Cards editor (Preview)** option in [Developer Portal > Tools](https://dev.teams.microsoft.com/tools).
 </details>
 <details>
 <summary>Why am I unable to create a bot in Developer Portal?</summary>
@@ -101,6 +101,13 @@ App registration is disabled for the user or the user doesn't have enough permis
 * Ensure that the `joinParams` being passed to the `AddAsync` method are correct and contain the required information.
 * Ensure the values for `JoinUrl`, `MeetingId`, and other parameters are correct.
 * Ensure that the `scenarioId` is unique for each call. Reusing scenario IDs can sometimes cause issues.
+
+</details>
+
+<details>
+<summary>After registering my bot in the Azure portal, I get the error <b>You do not have permission to use this app here</b> when opening it in Teams. How can I resolve this?</summary>
+
+To use your app within Teams, you must upload it into Teams. For more information, see [upload your app to Teams](toolkit/test-app-behavior.md#upload-your-app-to-teams).
 
 </details>
 
@@ -1117,6 +1124,14 @@ If you have both configurable tab and static tab defined in your app manifest fo
 
 Pre-existing pinned configurable tab instances of your app continue to work the same. You don't have the option to pin new instances of these configurable tabs. When you select to pin your tab, then Teams pins the static tab of your app.
 <br>
+&nbsp;
+</details>
+<details>
+<summary>How do I optimize my tab webpages to perform better on mobile devices?</summary>
+
+To optimize your tab app performance on Teams mobile, use service workers to cache static assets and minimize web page size. You can also conduct performance audits using dev tools to identify bottlenecks. For more information, see [best practices for Teams mobile apps](resources/teams-mobile-best-practices.md).
+<br>
+&nbsp;
 </details>
 </details>
 

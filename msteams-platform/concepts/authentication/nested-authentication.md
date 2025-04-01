@@ -12,8 +12,7 @@ ms.localizationpriority: medium
 
 > [!NOTE]
 >
-> * Nested app authentication (NAA) is available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
-> * NAA is supported only in single-page application (SPA), such as tabs.
+> Nested app authentication (NAA) is supported only in single-page application (SPA), such as tabs.
 
 NAA is a new authentication protocol for SPAs that are embedded in host environments, such as Teams, Outlook, and Microsoft 365. It simplifies the authentication process to facilitate single sign-on (SSO) across apps nested within supported host apps. The NAA model supports a primary identity for the host app that includes multiple app identities for nested apps. Microsoft utilizes this model in Teams tabs, personal apps, and Office Add-ins.
 
@@ -51,7 +50,7 @@ The NAA model provides several advantages over the On-Behalf-Of (OBO) flow:
 
 > [!NOTE]
 >
-> * As NAA is in developer preview and isn't supported by all host environments, ensure that you check the support status using the [isNAAChannelRecommended()](/javascript/api/@microsoft/teams-js/nestedappauth?) function and provide a fallback experience for unsupported environments.
+> * NAA isn't supported by all host environments (specialized government clouds or iOS Mac device), ensure to check the support status using the [isNAAChannelRecommended()](/javascript/api/@microsoft/teams-js/nestedappauth?) function and provide a fallback experience for unsupported environments.
 > * If the API returns the value as `true`, then call Microsoft Authentication Library (MSAL) for the NAA flow. If it returns `false`, continue to use your existing token retrieval method.
 
 To configure nested authentication, follow these steps:

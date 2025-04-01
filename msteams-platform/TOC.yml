@@ -786,7 +786,7 @@
     items:
      - name: Overview
        href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md
-       displayName: Adaptive cards universal action SSO authentication, Action.Execute SSO
+       displayName: Adaptive Cards, universal action, SSO authentication, Action.Execute, SSO
      - name: Add code to enable SSO
        href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/sso-adaptive-cards-universal-action.md
        displayName: SSO, Adaptive Cards, OAuth, universal action, SSO authentication, Action.Execute SSO
@@ -807,7 +807,7 @@
       href: messaging-extensions/how-to/add-authentication.md
     - name: Add authentication to Adaptive Cards
       href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/authentication-flow-in-universal-action-for-adaptive-cards.md
-      displayName: Adaptive cards universal action third party Idp authentication, Action.Execute OAuth nominal authentication
+      displayName: Adaptive Cards, universal action, third party Idp authentication, Action.Execute, OAuth, nominal authentication
   - name: Enable authentication for API-based message extensions
     items:
     - name: Overview
@@ -1174,6 +1174,9 @@
   - name: Cookies and local storage
     href: resources/samesite-cookie-update.md
     displayName: Cookies, third-party cookies, SameSite, Lax, Strict, None, Secure, SameSite=None, SameSite=Lax, SameSite=Strict
+  - name: Best practices for Teams mobile app
+    href: resources/teams-mobile-best-practices.md
+    displayName: Teams mobile app, best practices, service worker, lighthouse, performance audit
   - name: Contribute to Teams documentation
     href: resources/teams-contributor-reference.md
   - name: Troubleshoot your Microsoft Teams app
