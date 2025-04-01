@@ -78,9 +78,12 @@ An outline icon displays in two scenarios:
 
   Follow these specifications for the outline icon design:
 
-  * Ensure that the outline icon size is 32x32 pixels.
+  * The size of icon must be 32x32 pixels.
+  * The icon must be enterprise-safe.
   * The icon must be either white with a transparent background or transparent with a white background. No other colors are allowed.
   * The outline icon mustn't contain any additional padding around the symbol.
+  * The icon can't be random or irrelevant and needs to match the information in the notification.
+  * The icon must be designed with good accessibility.
 
 ### Best practices
 
