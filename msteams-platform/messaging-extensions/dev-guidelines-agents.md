@@ -400,7 +400,7 @@ A good parameter description explains the requirements of the system in a natura
 
 Here are the best practices you can adapt when defining the parameters:
 
-* Parameters must be clearly defined to ensure accurate responses from Agents. Copilot uses these descriptions to select the best command and predict parameter values based on the user query.
+* Parameters must be clearly defined to ensure accurate responses from agents. Copilot uses these descriptions to select the best command and predict parameter values based on the user query.
 * Parameter description must not contain grammar and punctuation errors.
 * Parameters defined in the manifest must not be identical.
 
