@@ -118,6 +118,8 @@ The following JSON response is an example of a `config` response received from t
 
 The `type` field within `composeExtension` is set to `config`, indicating the nature of this response as a configuration. `responseType` identifies that this response is for the `composeExtension` of the app.
 
+:::image type="content" source="~/assets/images/configuration-response-me.png" alt-text="Screenshot shows the configuration response for message extension.":::
+
 ### `auth` response type
 
 If your service requires user authentication, the users must sign in before they use the message extension. For more information, see [authentication](~/messaging-extensions/how-to/add-authentication.md#authentication).
