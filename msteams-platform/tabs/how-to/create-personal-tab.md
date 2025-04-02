@@ -654,7 +654,7 @@ You can use the latest version of the Visual Studio to develop Teams apps with B
 To install the Microsoft Teams Toolkit extension:
 
 1. Download the latest version of the Visual Studio.
-1. Open the Visual Studio installer file (`.exe`) of  from your download folder.
+1. Open the Visual Studio installer file (`.exe`) from your download folder.
 1. Select **Continue** in the **Visual Studio Installer** page to configure your installation.
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/visual-studio-installer.PNG" alt-text="Screenshot of Visual Studio Installer with continue options highlighted in red.":::
@@ -808,7 +808,7 @@ Use Teams Toolkit to create your first tab project. The toolkit takes you throug
 
    1. Select **Create**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/first-tab/create-tab.png" alt-text="Screenshot of Create a new Teams application with Tab and Create options highlighted in red.":::
+      :::image type="content" source="../../assets/images/teams-toolkit-v2/first-tab/create-tab.png" alt-text="Screenshot of Create a new Teams application with Tab and Create options highlighted in red.":::
 
    Your Teams tab app is created in few seconds.
 
