@@ -12,7 +12,7 @@ ms.date: 11/28/2022
 
 <!--Implement your analytics service-->
 
-Your application instrumentation can be captured and analyzed in any analytics service of your choice. It's recommended that you use a analytics service that allows tracking custom events and reporting it with custom context-based attributes.
+Your application instrumentation can be captured and analyzed in any analytics service of your choice. It's recommended that you use an analytics service that allows tracking custom events and reporting it with custom context-based attributes.
 
 [Azure Application Insights](/azure/azure-monitor/app/app-insights-overview), a feature of [Azure Monitor](/azure/azure-monitor/), helps in tracking and monitoring app instrumentation. It allows developers to instrument the app, track relevant metrics, and custom business events. You can track events in your Teams app across desktop, web, or mobile clients.
 

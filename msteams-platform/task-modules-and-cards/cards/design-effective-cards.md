@@ -313,8 +313,8 @@ Here's the code for implementing the design example you should follow.
                   "value": "Parking/Tolls"
                 },
                 {
-                  "title": "Accomodation",
-                  "value": "Accomodation"
+                  "title": "Accommodation",
+                  "value": "Accommodation"
                 },
                 {
                   "title": "Fuel-Gas/Petrol/Diesel",
@@ -329,8 +329,8 @@ Here's the code for implementing the design example you should follow.
                   "value": "Meals - Employees Only"
                 },
                 {
-                  "title": "Accomodations",
-                  "value": "Accomodations"
+                  "title": "Accommodations",
+                  "value": "Accommodations"
                 },
                 {
                   "title": "Misc.Expenses",

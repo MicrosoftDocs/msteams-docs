@@ -54,7 +54,7 @@ Now, you can use the refresh model to allow Adaptive Cards to update automatical
 
 ## Refresh model
 
-To automatically refresh your Adaptive Card, define its `refresh` property, which embeds an action of type `Action.Execute` and an `userIds` array.
+To automatically refresh your Adaptive Card, define its `refresh` property, which embeds an action of type `Action.Execute` and a `userIds` array.
 
 For more information, see [refresh schema and properties](/adaptive-cards/authoring-cards/universal-action-model#refresh-mechanism).
 

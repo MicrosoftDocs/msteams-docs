@@ -4,7 +4,7 @@ Microsoft Teams is a cloud-based communications platform that combines different
 
 Get documentation, sample code, tutorials, and more to help you build custom Microsoft Teams apps. See [Microsoft Teams developer documentation](https://learn.microsoft.com/microsoftteams/platform/mstdd-landing/).
 
-You can check out [Platform Annoucement](https://github.com/MicrosoftDocs/msteams-docs/discussions/categories/announcements).
+You can check out [Platform Announcement](https://github.com/MicrosoftDocs/msteams-docs/discussions/categories/announcements).
 
 ## How to contribute
 
