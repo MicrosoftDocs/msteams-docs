@@ -29,7 +29,6 @@ Teams Toolkit appears within Visual Studio Code as an extension. After you insta
 | 6 | • **New File** <br> • **Open File** <br> • **Open Folder** <br> • **Connect to** | • Create a new file. <br> • Open an existing file. <br> • Open an existing folder. <br> • Connect to remote development workspaces. |
 | 7 | **Recent** | View the recent files. |
 
-
 ### Explore the Teams Toolkit task pane
 
 You can explore the available functionalities from the Teams Toolkit task pane. The task pane appears only after you create an app project using Teams Toolkit. The following video helps you to learn about the process of creating a new Teams app:
@@ -154,11 +153,11 @@ From the task pane, you can see the following sections:
 
 1. Select **View How-to Guides** from the Teams Toolkit task pane under **DEVELOPMENT** section.
 
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/view-how-to-guides.png" alt-text="Screenshot shows the how-to guides menu options." lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/view-how-to-guides.png":::
+
    The **View How-to Guides** menu appears.
 
 2. Select the type of how-to guide that you want to view.
-
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/view-how-to-guides.png" alt-text="Screenshot shows the how-to guides menu options." lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/view-how-to-guides.png":::
 
     * Select any one of the Teams app scenario guides to view the guide to develop an app for a common app scenario, such as sending notifications using a bot.
     * Select any one of the Teams app development guides to view a guide that helps in app development, such as embedding a dashboard tab in a Teams app.
