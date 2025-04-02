@@ -109,7 +109,7 @@ Apps must function cross-tenants in installation and usage. The following table 
 > * Apps in federated group chats with external users aren't available in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](../cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](~/concepts/sovereign-cloud.md) environments.
 > * Apps aren't supported in one-on-one chats, channels, or meetings with external users.
 
-Teams supports the use of apps in federated group chats with external users. External users can't add, update, or remove apps from the group chat. Only the host of the group chat can add, update, or remove apps. However, all members of the chat, including external users, can use apps under the following conditions:
+Teams supports the use of apps in federated group chats with external users. These users can't add, update, or remove apps from the group chat. Only the host of the group chat can add, update, or remove apps. However, all members of the chat, including external users, can use apps under the following conditions:
 
 * The tenant admin of the group chat host's organization and the tenant admin of the external user's organization must allow the use of the app in federated group chats. For more information, see [Teams apps for external attendees or guests from outside an organization](/microsoftteams/apps-external-users).
 * The app allows access to externals users in federated group chats.
@@ -117,7 +117,7 @@ Teams supports the use of apps in federated group chats with external users. Ext
 If you're developing an app for use in federated group chats with external users, register your app as a multitenant app in Microsoft Entra ID. This action allows users across multiple organizations to access your app.
 
 > [!NOTE]
-> If you want to test the [code sample](#code-sample) with an external user in a federated group chat, you must first add a guest user to your tenant. For more information, see [Quickstart: Add a guest user and send an invitation](/entra/external-id/b2b-quickstart-add-guest-users-portal). After adding the user to the tenant, go to the federated group chat and add the external user to test the app.
+> If you want to test the [code sample](#code-sample) with an external user in a federated group chat, you must first add an external user as a guest to your tenant. For more information, see [Quickstart: Add a guest user and send an invitation](/entra/external-id/b2b-quickstart-add-guest-users-portal). After adding the user to the tenant, go to the federated group chat and add the guest to test the app.
 
 ## Code sample
 
