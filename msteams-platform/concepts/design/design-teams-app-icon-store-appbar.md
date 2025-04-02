@@ -170,7 +170,7 @@ Focus on your brand by using a full flat color as background.
 
 #### Don’t: Avoid placing your brand icon in a circle
 
-Elevate your brand by keeping the brand icon within 96 x 96 safe area.
+Elevate your brand by keeping the brand icon within 120 x 120 safe area.
 
    :::column-end:::
 :::row-end:::
@@ -189,7 +189,7 @@ If you have a long app name, try to abbreviate so that it’s easier to read whe
 
 #### Don’t: Include multiple words in app icon
 
-Avoid using multiple words on the icon. It's impossible to read the text when the icon is at smaller sizes, for example, 32 x 32 or 36 x 36.
+Avoid using multiple words on the icon. It's impossible to read the text when the icon is at smaller sizes, for example, 32 x 32.
 
    :::column-end:::
 :::row-end:::
@@ -198,9 +198,9 @@ Avoid using multiple words on the icon. It's impossible to read the text when th
    :::column span="":::
 :::image type="content" source="../../assets/images/design-guidelines/icon-balance-do.png "alt-text="Example shows a balanced app icon.":::
 
-#### Do: Create balance (96 x 96)
+#### Do: Create balance (120 x 120)
 
-Elevate your brand by keeping balance. Stick to the 96 x 96 safe area for a sense of equilibrium.
+Elevate your brand by keeping balance. Stick to the 120 x 120 safe area for a sense of equilibrium.
 
    :::column-end:::
    :::column span="":::
