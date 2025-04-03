@@ -24,6 +24,13 @@ Your tenant admin must allow app usage for custom apps to show in the Developer 
 
    :::image type="content" source="../../assets/images/tdp/mac-setting.png" alt-text="Screenshot shows where admin can allow custom app analytics.":::
 
+   > [!NOTE]
+   > Permission from your tenant admin is required in the new experience of custom app analytics. During April and May 2025, you can opt-in the new experience by clicking the banner.
+   >  IMAGE_PLACE_HOLDER_BANNER
+   > After May 2025, every is automatically switched to the new experience.
+
+### Get Started
+
 You can view your custom app's usage and other insights from the **Analytics** page. To access the page:
 
 1. Go to **[Developer Portal](https://dev.teams.microsoft.com)**.
