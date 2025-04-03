@@ -19,9 +19,6 @@ metadata:
 highlightedContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
    items: 
-    - title: What's new
-      itemType: whats-new
-      url: /microsoftteams/platform/whats-new
     - title: New to Teams development? 🚀Start here! 
       itemType: get-started
       url: /microsoftteams/platform/get-started/get-started-overview
@@ -34,6 +31,9 @@ highlightedContent:
     - title: Build your app 
       itemType: how-to-guide
       url: /microsoftteams/platform/overview#start-building
+    - title: Manage your app with Developer Portal
+      itemType: how-to-guide
+      url:  /microsoftteams/platform/concepts/build-and-test/teams-developer-portal      
     - title: Enhance your app with Microsoft Graph
       itemType: how-to-guide
       url:  /graph/teams-concept-overview
@@ -134,9 +134,6 @@ conceptualContent:
         - url: /microsoftteams/platform/samples/teams-low-code-solutions
           itemType: how-to-guide
           text: Build low-code Teams apps, bots, and flows with Microsoft Power Platform
-        - url:  https://dev.teams.microsoft.com/home
-          itemType: reference
-          text: Developer Portal for Teams
         - url:  /microsoftteams/platform/resources/schema/manifest-schema
           itemType: reference
           text: Manifest schema for Teams apps
