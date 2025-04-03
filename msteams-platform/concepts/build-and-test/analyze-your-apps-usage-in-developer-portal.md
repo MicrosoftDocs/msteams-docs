@@ -20,7 +20,7 @@ The app usage for a given day is reflected within 24 to 48 hours, and usage data
 
 ### Prerequisite
 
-Your tenant admin must allow app usage for custom apps to show in the Developer Portal. Either **Global admin** or **Teams admin** is able to allow it in [Microsoft 365 admin center](/microsoft-365/admin/admin-overview/admin-center-overview) -> **Settings** -> **Org settings** -> **Services** -> **Developer Portal for Teams**.
+Your tenant admin must allow app usage for custom apps to show in the Developer Portal. Either **Global admin** or **Teams admin** is able to allow it in [Microsoft 365 admin center](https://admin.microsoft.com) -> **Settings** -> **Org settings** -> **Services** -> **Developer Portal for Teams**.
 
    :::image type="content" source="../../assets/images/tdp/mac-setting.png" alt-text="Screenshot shows where admin can allow custom app analytics.":::
 
