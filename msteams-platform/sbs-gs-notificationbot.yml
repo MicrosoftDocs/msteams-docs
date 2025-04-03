@@ -187,20 +187,16 @@ items:
 
     1. Use the following code after `for (const target of installations) {` in Visual Studio Code.
 
-         ```bash
-          for (const target of installations) {
-            await target.sendAdaptiveCard(
-              new ACData.Template(notificationTemplate).expand({
-                $root: {
-                  title: "New Event Occurred!",
-                  appName: "Contoso App Notification",
-                  description: `This is a sample http-triggered notification to ${target.type}`,
-                  notificationUrl: "https://aka.ms/teamsfx-notification-new",
-                },
-              })
-            );
+         ```bash          
+            if (target.type === "Channel") {
+              const members = await target.members();
+              await target.sendMessage("This is a message to channel: " + members.length + " members.");
+              for (const member of members) {
+              await member.sendMessage("This is a message to Member: " + member.account.email);
+            }
+          }
         ```
-
+          
           :::image type="content" source="~/assets/images/sbs-notification-bot/code-add.png" alt-text="Code Add" lightbox="~/assets/images/sbs-notification-bot/code-add.png":::
 
         **To customize storage (Optional):**
