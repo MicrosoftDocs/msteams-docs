@@ -18,6 +18,22 @@ The app usage for a given day is reflected within 24 to 48 hours, and usage data
 
 # [Custom apps built for your org (LOB apps)](#tab/custom-apps-built-for-your-org)
 
+### Prerequisite
+
+Your tenant admin must allow app usage for custom apps to show in the Developer Portal. For more information, see [Link placefolder].
+
+Either a **Global admin** or a **Teams admin** can enable it in the [Microsoft 365 admin center](https://admin.microsoft.com) by navigating to **Settings** > **Org settings** > **Services** > **Developer Portal for Teams**.
+
+   :::image type="content" source="../../assets/images/tdp/mac-setting.png" alt-text="Screenshot shows where admin can allow custom app analytics.":::
+
+   > [!NOTE]
+   >
+   > * To access the new custom app analytics experience, you will need permission from your tenant admin. During April and May 2025, you can opt-in to this new experience by selecting the banner.
+   > * IMAGE_PLACE_HOLDER_BANNER
+   > * After May 2025, everyone will be automatically switched to the new experience.
+
+### Get Started
+
 You can view your custom app's usage and other insights from the **Analytics** page. To access the page:
 
 1. Go to **[Developer Portal](https://dev.teams.microsoft.com)**.
