@@ -12,8 +12,7 @@ ms.localizationpriority: medium
 
 > [!NOTE]
 >
-> * Nested app authentication (NAA) is available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
-> * NAA is supported only in single-page application (SPA), such as tabs.
+> Nested app authentication (NAA) is supported only in single-page application (SPA), such as tabs.
 
 NAA is a new authentication protocol for SPAs that are embedded in host environments, such as Teams, Outlook, and Microsoft 365. It simplifies the authentication process to facilitate single sign-on (SSO) across apps nested within supported host apps. The NAA model supports a primary identity for the host app that includes multiple app identities for nested apps. Microsoft utilizes this model in Teams tabs, personal apps, and Office Add-ins.
 
@@ -24,18 +23,18 @@ The NAA model provides several advantages over the On-Behalf-Of (OBO) flow:
 * You can use incremental and dynamic consent for scopes (permissions).
 * You don't need to preauthorize your hosts, such as Teams or Microsoft 365, to call your endpoints.
 
-The following table outlines the difference between Teams Microsoft Entra SSO and NAA:
+    The following table outlines the difference between Teams Microsoft Entra SSO and NAA:
 
-| Steps required for development | Traditional Teams Entra SSO | NAA |
-| --- |:---:|:---:|
-| Expose redirect URI | Required | Required |
-| Register API in Microsoft Entra ID | Required |  |
-| Define a custom scope in Microsoft Entra ID | Required |  |
-| Authorize Teams client apps | Required |  |
-| Revise app manifest (previously called Teams app manifest) | Required | Recommended* |
-| Acquire access token through TeamsJS SDK | Required |  |
-| Solicit user consent for more permissions | Required |  |
-| Conduct an OBO exchange on the server | Required |  |
+    | Steps required for development | Traditional Teams Entra SSO | NAA |
+    | --- |:---:|:---:|
+    | Expose redirect URI | Required | Required |
+    | Register API in Microsoft Entra ID | Required |  |
+    | Define a custom scope in Microsoft Entra ID | Required |  |
+    | Authorize Teams client apps | Required |  |
+    | Revise app manifest (previously called Teams app manifest) | Required | Recommended* |
+    | Acquire access token through TeamsJS SDK | Required |  |
+    | Solicit user consent for more permissions | Required |  |
+    | Conduct an OBO exchange on the server | Required |  |
 
 * The IT admin might block the app or consent to only certain permissions for the app in Microsoft Entra ID. To avoid it, you must include the app ID and the default resource in the app manifest for the admin to approve the permissions in Teams admin center.
 
@@ -51,7 +50,7 @@ The following table outlines the difference between Teams Microsoft Entra SSO an
 
 > [!NOTE]
 >
-> * As NAA is in developer preview and isn't supported by all host environments, ensure that you check the support status using the [isNAAChannelRecommended()](/javascript/api/@microsoft/teams-js/nestedappauth?) function and provide a fallback experience for unsupported environments.
+> * NAA isn't supported by all host environments (specialized government clouds or iOS Mac device), ensure to check the support status using the [isNAAChannelRecommended()](/javascript/api/@microsoft/teams-js/nestedappauth?) function and provide a fallback experience for unsupported environments.
 > * If the API returns the value as `true`, then call Microsoft Authentication Library (MSAL) for the NAA flow. If it returns `false`, continue to use your existing token retrieval method.
 
 To configure nested authentication, follow these steps:
@@ -101,8 +100,6 @@ For more information on upgrading your Teams app to run in Outlook and Microsoft
 
 Initialize MSAL and get an instance of the public client app to get access tokens, when needed.
 
-# [JavaScript](#tab/js1)
-
 ```javascript
 import {
   AccountInfo,
@@ -132,8 +129,6 @@ export function initializePublicClient() {
 }
 ```
 
----
-
 ### Acquire your first token
 
 The tokens acquired by MSAL.js through nested app authentication are issued for your Microsoft Entra app registration ID. MSAL.js handles token acquisition for user authentication. It tries to get an access token silently. If that's unsuccessful, it prompts the user for consent. The token is then used to call the Microsoft Graph API or other Microsoft Entra ID protected resources. Unlike the OBO flow, you don't need to preauthorize your hosts to call the endpoints.
@@ -152,8 +147,6 @@ To acquire a token, follow these steps:
 1. If no account is available, MSAL.js returns an `InteractionRequiredAuthError`. Call `publicClientApplication.acquireTokenPopup(accessTokenRequest)` to display an interactive dialog for the user. `acquireTokenSilent` can fail if the token expired or if the user didn't consent to all the requested scopes.
 
 The following code snippet shows an example to access a token:
-
-# [JavaScript](#tab/js2)
 
 ```javascript
 
@@ -194,15 +187,11 @@ The following code snippet shows an example to access a token:
 
 ```
 
----
-
 ### Call an API
 
 After you receive the token, use it to call the API. This ensures that the API is called with a valid token to make authenticated requests to the server.
 
 The following example shows how to make an authenticated request to Microsoft Graph API to access Microsoft 365 data:
-
-# [JavaScript](#tab/js3)
 
 ```javascript
 
@@ -222,8 +211,6 @@ fetch(graphEndpoint, options)
     });
 
 ```
-
----
 
 ### Best practices
 
