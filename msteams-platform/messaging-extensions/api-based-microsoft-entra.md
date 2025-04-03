@@ -33,8 +33,9 @@ The following image shows how SSO works when a Teams app user attempts to access
 To enable SSO authentication for API-based message extension, follow these steps:
 
 * [Register a new app in Microsoft Entra ID](#register-a-new-app-in-microsoft-entra-id).
+* [Configure access token version](#configure-access-token-version).
 * [Configure scope for access token](#configure-scope-for-access-token).
-* [Authenticate token](#authenticate-token).
+* [Authenticat.e token](#authenticate-token).
 * [Update app manifest](#update-app-manifest).
 
 ## Register a new app in Microsoft Entra ID
@@ -87,9 +88,30 @@ To enable SSO authentication for API-based message extension, follow these steps
 
     Your app is registered in Microsoft Entra ID. You now have the app ID for your API-based message extension app.
 
+## Configure access token version
+
+You must define the access token version for your app. This configuration is made in the Microsoft Entra application app manifest.
+
+### To define the access token version
+
+1. Select **Manage** > **Manifest** from the left pane.
+
+    The Microsoft Entra application app manifest appears.
+
+1. Enter **2** as the value for the `accessTokenAcceptedVersion` property.
+
+    > [!NOTE]
+    > If you've selected **Personal Microsoft accounts only** or **Accounts in any organizational directory (Any Microsoft Entra directory - Multitenant) and personal Microsoft accounts (for example, Skype and Xbox)** during app registration, update the value for the `accessTokenAcceptedVersion` property as **2**.
+
+1. Select **Save**.
+
+    A message pops up on the browser stating that the app manifest was updated successfully.
+
+After you've configured the version of access token, you must configure its scope.
+
 ## Configure scope for access token
 
-After you've created a new app registration, configure scope (permission) options for sending access token to Teams client, and authorizing trusted client applications to enable SSO.
+After you configure the access token version, configure scope (permission) options for sending access token to Teams client, and authorizing trusted client applications to enable SSO.
 
 To configure scope and authorize trusted client applications, you must:
 
@@ -209,11 +231,11 @@ To configure scope and authorize trusted client applications, you must:
 > [!NOTE]
 > You can authorize more than one client application. Repeat the steps of this procedure for configuring another authorized client application.
 
-You've successfully configured app scope, permissions, and client applications. Ensure that you note and save the app ID URI. Next, you configure the access token version.
+You've successfully configured app scope, permissions, and client applications. Ensure that you note and save the app ID URI. Next, you update the app manifest.
 
 ## Authenticate token
 
-When the message extension calls the API during authentication, it receives a request with the user’s access token. The message extension then adds the token in the authorization header of the outgoing HTTP request. The header format is `Authorization: Bearer <token_value>`. For example, when a message extension makes an API call to a service that requires authentication. The extension constructs an HTTP request as follows:
+After you've created a new app registration, you must configure the scope of access token. When the message extension calls the API during authentication, it receives a request with the user’s access token. The message extension then adds the token in the authorization header of the outgoing HTTP request. The header format is `Authorization: Bearer <token_value>`. For example, when a message extension makes an API call to a service that requires authentication. The extension constructs an HTTP request as follows:
 
 ```http
 GET /api/resource HTTP/1.1
@@ -285,7 +307,7 @@ After the API-based message extension gets a request header with token, perform 
     }
   ```
 
-* **Use the token**: Extract the user information from the token, such as name, email, and object ID and use the token to call the message extension app's own API. For more information on claims reference with details on the claims included in access tokens, see [access token claims](/entra/identity-platform/access-token-claims-reference).
+* **Use the token**: Extract the user information from the token, such as name, email, and object ID and use the token to call the message extension app's own API. For more information on claims reference with details on the claims included in access tokens, see [access token claims](/entra/identity-platform/access-token-claims-reference). Next, you configure the scope for access token.
 
 ## Update app manifest
 
