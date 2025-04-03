@@ -59,7 +59,7 @@ items:
 
     1. Select the Azure OpenAI service that you created.
 
-    1. Select **Go to Azure OpenAI Studio**.
+    1. Select **Go to Azure AI Foundry portal**.
         
         :::image type="content" source="../msteams-platform/assets/images/bots/go-to-azure-openai-studio.png" alt-text="Screenshot shows the go to Azure OpenAI studio in Azure portal.":::
 
@@ -73,7 +73,7 @@ items:
        * **Deployment name**: gpt-35-turbo
        * **Content Filter**: default
 
-    1. Select **Create**.
+    1. Select **Deploy**.
 
         :::image type="content" source="../msteams-platform/assets/images/bots/deploy-model.png" alt-text="Screenshot shows the new deploy model in Azure portal.":::     
 
