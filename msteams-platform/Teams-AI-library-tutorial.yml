@@ -25,7 +25,7 @@ items:
 
     > [!NOTE]
     >
-    > * Custom engine agent support for Microsoft 365 Copilot Chat is available only in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
+    > * Custom engine agent support for Microsoft 365 Copilot Chat is available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
     > * Custom engine agent isn't supported in Python.
 
 - title: Prerequisites
@@ -80,7 +80,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-default-location.png" alt-text="Screenshot shows the selection of default location.":::
 
-    You can also change the default location by the following steps:
+        You can also change the default location by the following steps:
 
     1. Select **Browse**.
 
@@ -96,15 +96,15 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/hello-bot.png" alt-text="Screenshot shows where to enter the app name.":::
 
-      A dialog appears. Select **Yes, I trust the authors** or **No, I don’t trust the authors** based on your requirement.
+         A dialog appears. Select **Yes, I trust the authors** or **No, I don’t trust the authors** based on your requirement.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/vsc-trust-authors.png":::
     
-      Your custom engine agent is created in a few seconds.
+         Your custom engine agent is created in a few seconds.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/app-created-bot.png" alt-text="Screenshot shows the app created." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/app-created-bot.png":::
 
-      After your app is created, the Teams Toolkit displays the following message:
+         After your app is created, the Teams Toolkit displays the following message:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/preview-project.png" alt-text="Screenshot shows the message that the feature is successfully created.":::
 
