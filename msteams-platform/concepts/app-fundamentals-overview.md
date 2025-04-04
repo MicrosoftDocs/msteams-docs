@@ -9,74 +9,142 @@ ms.date: 02/06/2025
 
 # Plan your app with Teams features
 
-Building an awesome Teams app is all about finding the right combination of features to meet your user's needs. The design, features, and capabilities of an app stem from this purpose.
+Building an awesome Teams app starts with identifying the right combination of features to meet your users' needs. Every design choice—from features to capabilities—stems from this underlying purpose.
 
-Teams is a collaboration platform. It's also a social platform and is natively cross-platform that sits at the heart of Microsoft 365 and offers a personal canvas for you to create apps.
+Microsoft Teams isn’t just a collaboration platform; it’s also a social, natively cross-platform solution deeply integrated with Microsoft 365. It offers a personal canvas to create robust apps that empower users across devices.
 
-In this section, learn how to:
+In this document, you will learn how to:
 
-* Identify and map use cases to Teams features.
-* Use planning checklist.
-* Plan beyond app deployment.
+• Identify and map use cases to Teams features.  
+• Use a planning checklist.  
+• Plan beyond app deployment.
+
+---
 
 ## Plan with Teams
 
-Teams as a platform offers you toolkits, libraries, and apps at every stage of app development. Let's break it down to app building lifecycle:
+Microsoft Teams provides a comprehensive suite of toolkits, libraries, and sample apps that support every stage of app development. The app building lifecycle is broken down into several key phases:
 
-:::image type="content" source="../assets/images/app-fundamentals/plan-app.png" alt-text="Diagram shows the steps in the app planning lifecycle.":::
+:::image type="content" source="../assets/images/app-fundamentals/plan-app.png" alt-text="Diagram shows the steps in the app planning lifecycle." :::
 
-* [Before you build](#before-you-build)
-* [During build](#during-build)
-* [Post-build](#post-build)
-* [Planning checklist](../concepts/design/planning-checklist.md)
+Below is an overview of the phases:
 
-### Before you build
+1. [Before you build](#before-you-build)  
+2. [During build](#during-build)  
+3. [Post-build](#post-build)  
+4. [Planning checklist](../concepts/design/planning-checklist.md)
 
-Understanding the user and their concern are the first indicators of how a Teams app can help. Build your use case around the problem, determine how an app can solve it, and draw a solution.
+Each phase is designed to guide you through the process, ensuring that every aspect of your Teams app—from initial concept to deployment—is thoroughly planned and executed.
 
-* **Understand your use case and Teams app features**: Understand your user's requirement and you can identify the right features.
+---
 
-* **Map your use cases**: Map common use cases to Teams feature based on requirements, such as share, collaborate, workflows, relevant social platforms, and more.
+## Before you build
 
-* **Plan analytics for your Teams app**: Plan to analyze the analysis and instrumentation data against your business goals, take corrective action by fixing issues, and intervening in the user journey or plan further enhancements to your app.
+Before you start development, it’s essential to deeply understand your user and their challenges. Use these key steps to structure your approach:
 
-* **Plan responsive tabs for Teams mobile**: It covers common scenarios and helps with planning apps for Teams mobile.
+1. **Understand your use case and Teams app features**  
+   - Identify your user’s requirements.  
+   - Determine which Teams features best address these needs.
 
-### During build
+2. **Map your use cases**  
+   - Establish clear mappings between common use cases and Teams capabilities, such as sharing, collaboration, workflows, and integration with social platforms.
 
-* **Create and build app project**: With Teams, you can choose the build environment that best suits your app requirement. Use Teams Toolkit or other SDKs, such as C#, Blazor, Node.js, and more to get started.
+3. **Plan analytics for your Teams app**  
+   - Outline how you will track and analyze both aggregate and user-specific data.  
+   - Use these insights to address issues, optimize the user journey, and plan enhancements to your app.
 
-* **Design your app UI**: Use Teams UI Toolkit and Fluent UI React components to design your app's layout.
+4. **Plan responsive tabs for Teams mobile**  
+   - Consider common usage scenarios on mobile devices.  
+   - Ensure the design accommodates responsive layouts for a smooth mobile experience.
 
-* **Use Teams as a platform**: Teams platform helps you build a single- or multi-capability app. Your Teams app is supported by the integrated products and services that strengthen the app experience.
+*Real-World Example*: When designing an app for remote project collaboration, map features like chat, file sharing, and meeting scheduling to improve team efficiency.
 
-    :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Diagram that shows the conceptual representation of the Teams solution.":::
+---
 
-    Your apps appear on Teams as Tabs, Bots, Messaging Extensions, Connectors and Webhooks, or as a multi-capability app. These capabilities are powered at the backend by Azure, Microsoft Graph, SharePoint, and Power apps that help automate tasks and processes.
+## During build
 
-    Together, these capabilities bring your app solution to life.
+The development phase provides a hands-on opportunity to bring your planned features to life. The following steps outline best practices to ensure a robust build process:
 
-* **Integrate device capabilities**: You can integrate the native device capabilities in your app, such as camera, QR or barcode scanner, photo gallery, microphone, and location.
+1. **Create and build the app project**  
+   - Select the development environment that suits your app’s requirements.  
+   - Leverage the Teams Toolkit or other SDKs (such as C#, Blazor, or Node.js) to kick-start your project.
 
-* **Instrument code for analytics**: Instrument your Teams app code with analytics markers (also known as instrumentation markers) to measure both aggregate and user-specific metrics for your app when app users use it.
+2. **Design your app UI**  
+   - Utilize the Teams UI Toolkit in tandem with Fluent UI React components to create a coherent and engaging layout.
+   - Focus on consistency and ease of use to improve user engagement.
 
-### Post-build
+3. **Use Teams as a platform**  
+   - Develop your app as either a single- or multi-capability solution.
+   - Tap into the integrated products and services (Azure, Microsoft Graph, SharePoint, Power Apps) that enrich the user experience.
 
-* Integrate your app with Teams and other apps, such as Microsoft 365, Microsoft Graph, and more.
-* Use Developer Portal to configure, manage, and deploy your app.
+    :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Diagram that shows the conceptual representation of the Teams solution." :::
 
-### Plan for government and sovereign clouds
+    Your app can leverage various Teams capabilities, including:
+    - Tabs
+    - Bots
+    - Messaging Extensions
+    - Connectors and Webhooks  
+      
+    Each capability is enhanced by backend services that automate tasks and streamline processes.  
+      
+    *Practical Use Case*: Use Teams integration to combine multiple data sources, such as CRM data and task management, into a single, unified user interface to streamline business operations.
 
-If you're planning to extend Teams app in a government cloud platform, it's essential to understand the capabilities of each government tenant and plan for purchase and deployment. To extend your Teams app in government cloud platforms, see plan for [government clouds](cloud-overview.md) and [sovereign cloud](sovereign-cloud.md).
+4. **Integrate device capabilities**  
+   - Enhance your app by incorporating native device features like cameras, QR or barcode scanners, photo galleries, microphones, and geolocation.
+   - This integration enriches the user experience, especially in mobile scenarios.
+
+5. **Instrument code for analytics**  
+   - Embed analytics markers (instrumentation markers) in critical sections of your code.
+   - Use these markers to track both aggregate data and individual user interactions, ensuring you can monitor performance and user behavior effectively.
+
+*Real-World Example*: While building a field service application, integrating device capabilities such as the camera and QR code scanner can facilitate real-time data capture during on-site visits.
+
+---
+
+## Post-build
+
+Once development is complete, focus on integrating and managing your app:
+
+1. **Integrate your app with Teams and other Microsoft services**  
+   - Connect your app seamlessly with Microsoft 365, Microsoft Graph, and other essential services to maximize functionality.
+
+2. **Use the Developer Portal**  
+   - Configure, manage, and deploy your app via the Developer Portal.
+   - This centralized management minimizes deployment complexities and provides a consistent experience.
+
+*Practical Scenario*: After developing a new communication tool, using the Developer Portal ensures consistent updates and management across your organization’s Teams environment.
+
+---
+
+## Plan for government and sovereign clouds
+
+If you plan to deploy your Teams app within government cloud platforms, it is crucial to:
+
+- Understand the specific capabilities and limitations of each government tenant.
+- Plan for the unique requirements related to purchase and deployment in these environments.
+
+For further details on extending your Teams app to government cloud platforms, refer to the following guides:  
+• Plan for [government clouds](cloud-overview.md)  
+• Plan for [sovereign cloud](sovereign-cloud.md)
+
+*Real-World Scenario*: Deploying a secure workflow management system for public sector employees will involve careful planning to ensure compliance with government cloud standards and regulations.
+
+---
 
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Use cases and Teams features](design/understand-use-cases.md)
 
+*Use Case Example*: Explore how different use cases can influence feature selection and app design to better cater to specific business needs.
+
+---
+
 ## See also
 
-* [Get started](../get-started/get-started-overview.md)
-* [Considerations for Teams integration](../samples/integrating-web-apps.md)
-* [Device capabilities](device-capabilities/device-capabilities-overview.md)
-* [Authenticate users in Microsoft Teams](authentication/authentication.md)
+• [Get started](../get-started/get-started-overview.md)  
+• [Considerations for Teams integration](../samples/integrating-web-apps.md)  
+• [Device capabilities](device-capabilities/device-capabilities-overview.md)  
+• [Authenticate users in Microsoft Teams](authentication/authentication.md)
+
+This detailed walkthrough ensures that you cover every aspect—from initial planning to final deployment—helping you build robust Teams applications tailored to your specific user needs and deployment environments.
