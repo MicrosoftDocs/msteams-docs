@@ -62,6 +62,9 @@ We recommend using delegated permissions for the signed-in user. If your applica
 
     You've now configured your app with Microsoft Graph permissions.
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+configure+API+permissions&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fauthentication%2Ftab-sso-graph-api%3Ftabs%3Ddotnet%23to-configure-api-permissions&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fauthentication%2Ftab-sso-graph-api.md&documentVersionIndependentId=a44ac17f-15cd-8809-e885-bcc8e48b4749&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ## Configure authentication for different platforms
 
 Depending on the platform or device where you want to target your app, additional configuration might require, such as redirect URIs, specific authentication settings, or details specific to the platform.
@@ -111,6 +114,9 @@ You can configure authentication for multiple platforms as long as the URL is un
 1. Select **Configure**.
 
     The platform is configured and displayed in the **Platform configurations** page.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+configure+authentication+for+a+platform&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fauthentication%2Ftab-sso-graph-api%3Ftabs%3Ddotnet%23to-configure-authentication-for-a-platform&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fauthentication%2Ftab-sso-graph-api.md&documentVersionIndependentId=a44ac17f-15cd-8809-e885-bcc8e48b4749&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Acquire access token for MS Graph
 
@@ -206,6 +212,9 @@ If you need to access Microsoft Graph data, configure your server-side code to:
 > - As a best practice for security, always use [server-side code to make Microsoft Graph calls](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow#middle-tier-access-token-request) or other calls that require passing an access token. This helps protect the token from being intercepted or leaked. DO NOT return the OBO token to the client because it would then enable the client to make direct calls to Microsoft Graph.
 > - Two separate apps registered in Microsoft Entra ID require individual tokens for each app. Use the [OBO flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) to enable communication between the apps.
 > - Don’t use `notifySuccess` result to return the token information to the parent page. Use `localStorage` to save the token and pass the item key via `notifySuccess`.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Exchange+the+token+ID+with+the+server-side+token&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fauthentication%2Ftab-sso-graph-api%3Ftabs%3Ddotnet%23exchange-the-token-id-with-the-server-side-token&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fauthentication%2Ftab-sso-graph-api.md&documentVersionIndependentId=a44ac17f-15cd-8809-e885-bcc8e48b4749&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Obtain consent
 
