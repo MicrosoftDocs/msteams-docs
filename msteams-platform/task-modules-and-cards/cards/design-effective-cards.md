@@ -1,11 +1,19 @@
 ---
 title: Designing Adaptive Cards for your app
-description: Learn about Adaptive Cards and its types and how to design Adaptive Cards with Adaptive Card designer, Microsoft Teams UI Kit, and Adaptive Card templates.
+description: Learn about Adaptive Cards and its types and how to design Adaptive Cards with Adaptive Card Designer, Microsoft Teams UI Kit, and Adaptive Card templates.
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.date: 11/07/2024
 ---
 # Designing Adaptive Cards for your Microsoft Teams app
+
+> [!IMPORTANT]
+>
+> This documentation is considered legacy. For comprehensive information and resources related to Adaptive Card design best practices, visit the [Adaptive Cards documentation hub](https://adaptivecards.microsoft.com/?topic=design-best-practices).
+>
+> :::image type="content" source="../../assets/images/adaptive-cards/new-adaptive-card-hub.png" alt-text="Screenshot shows the home page of the Microsoft Adaptive Cards website.":::
+>
+> The Adaptive Cards documentation hub offers complete and latest reference documentation, an updated Adaptive Card Designer, built-in JSON examples, design best practices, and a detailed release history of Adaptive Card features. For more information, see [introducing the Adaptive Cards documentation hub and new Adaptive Cards updates](https://devblogs.microsoft.com/microsoft365dev/introducing-the-adaptive-cards-documentation-hub-and-new-adaptive-cards-updates/#:~:text=Explore%20the%20latest%20adaptive%20card%20features%20and%20samples,productivity%E2%80%94all%20seamlessly%20integrated%20into%20your%20users%E2%80%99%20daily%20workflows.).
 
 An Adaptive Card contains a freeform body of card elements and optional set of actions. Adaptive Cards are actionable snippets of content that you can add to a conversation through a bot or message extension. Using text, graphics, and buttons, these cards provide rich communication to your audience.
 
@@ -20,12 +28,12 @@ You can find more comprehensive design guidelines for Adaptive Cards in Teams, i
 > [!div class="nextstepaction"]
 > [Get the Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
 
-## Adaptive Cards designer
+## Adaptive Card Designer
 
 You also can start designing your Adaptive Cards directly in the browser.
 
 > [!div class="nextstepaction"]
-> [Try the Adaptive Cards designer](https://adaptivecards.io/designer/)
+> [Try the Adaptive Card Designer](https://adaptivecards.microsoft.com/designer.html)
 
 ## Adaptive Card starter collection
 
@@ -180,7 +188,7 @@ Cards designed for a narrow screen scale well on wider screens (the opposite isn
 
 ### Column layouts
 
-Use [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) to format your card content into a table or grid. There are several options for formatting column width. These guidelines help you understand when to use each one.
+Use [`ColumnSet`](https://adaptivecards.microsoft.com/?topic=ColumnSet) to format your card content into a table or grid. There are several options for formatting column width. These guidelines help you understand when to use each one.
 
 * `"width": "auto"`: Sizes each column in the `ColumnSet` to fit whatever app content you include in that column.
   * **Do**: Use when you have content of varying width and don't need to prioritize a specific column.
@@ -393,7 +401,7 @@ Here's the code for implementing the design example you should follow.
 
 # [Design](#tab/design)
 
-When the the size of something you're displaying doesn't need to change, set you columns to a specific pixel width. This example shows the left column sized at 50 pixels, while the descriptions next to the thumbnails stretch the length of the card.
+When the size of something you're displaying doesn't need to change, set you columns to a specific pixel width. This example shows the left column sized at 50 pixels, while the descriptions next to the thumbnails stretch the length of the card.
 
 :::image type="content" source="~/assets/images/adaptive-cards/design-width-auto-do.png" alt-text="The screenshot shows how to set column width in Adaptive Cards.":::
 
@@ -482,7 +490,7 @@ Here's the code for implementing the design example.
       ],
       "selectAction": {
         "type": "Action.OpenUrl",
-        "url": "https://www.AdaptiveCards.io"
+        "url": "https://adaptivecards.microsoft.com/?topic=welcome"
       }
     },
     {
@@ -541,7 +549,7 @@ Here's the code for implementing the design example.
 
 ### Text
 
-Whether you're using [`TextBlock`](https://adaptivecards.io/explorer/TextBlock.html), [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html), or [`Input.ChoiceSet`](https://adaptivecards.io/explorer/Input.ChoiceSet.html), set the `wrap` property to `true` so your card text doesn't truncate on mobile.
+Whether you're using [`TextBlock`](https://adaptivecards.microsoft.com/?topic=TextBlock), [`ColumnSet`](https://adaptivecards.microsoft.com/?topic=ColumnSet), or [`Input.ChoiceSet`](https://adaptivecards.microsoft.com/?topic=Input.ChoiceSet), set the `wrap` property to `true` so your card text doesn't truncate on mobile.
 
 #### Example: Making sure text don't truncate
 
@@ -577,7 +585,7 @@ Here's the code for implementing the design example you should follow.
       "value": "1",
       "choices": [
         {
-          "title": "Chineese",
+          "title": "Chinese",
           "value": "1"
         },
         {

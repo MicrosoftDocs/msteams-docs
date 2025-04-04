@@ -49,7 +49,7 @@ After you have selected your desired filters, you can explore the following indi
 * [Usage by retention state](#usage-by-retention-state)
 * [Usage intensity](#usage-intensity)
 
- ### Usage by time period
+### Usage by time period
 
   The **Usage by time period** chart shows you the number of active users or tenants who opened and used your app across different time periods.
 
@@ -62,13 +62,13 @@ After you have selected your desired filters, you can explore the following indi
  | **Weekly R7** | Each data point represents a given R7 (Rolling 7 days) period. |
  | **Daily** | Each data point represents a given R1 (Rolling 1 day) period. |
 
- ### Usage by platform and OS
+### Usage by platform and OS
 
   The **Usage by platform and OS** chart shows your app's active usage across various endpoints, such as **Windows**, **Mac**, **iOS**, **Android**, and **Web**. The same user or tenant can use an app on multiple endpoints. Each data point represents a given R30 (Rolling 30 days) period.
 
    :::image type="content" source="../../assets/images/tdp/usage-by-platform-OS.png" alt-text="Screenshot shows you the usage by platform and OS chart for your published app.":::
 
- ### Usage by retention state
+### Usage by retention state
 
    The **Usage by retention state** chart lets you track four key retention or churn metrics for your app over time.
 
@@ -81,7 +81,7 @@ After you have selected your desired filters, you can explore the following indi
    | Resurrected users or tenants | Active users or tenants who used your app one or more times before but not in the immediately preceding R30 time period. |
    | Lapsed users or tenants | Active users or tenants who weren't seen during a given R30 time period but were seen during the immediately preceding R30 time period. |
 
- ### Usage intensity
+### Usage intensity
 
    The **Usage intensity** chart shows the key usage intensity metrics for your app.
 
@@ -93,7 +93,7 @@ After you have selected your desired filters, you can explore the following indi
    | **% of 5+ Days usage** | The percentage of active users who opened or used the app more than five days in the last R30 time period. |
    | **DAU/MAU** | The ratio of the average number of unique users or tenants who used your app on each day divided by the Monthly active users for the selected R30 time period. |
 
- ### App dashboard
+### App dashboard
 
    The **My App dashboard** table shows you the latest R30 (Rolling 30 days) data for each of the metrics under the previous four categories, and the Month over Month change. Use the time picker on the upper right side and select the desired date to view the following:
 
@@ -106,7 +106,7 @@ After you have selected your desired filters, you can explore the following indi
 
 # [Third-party apps](#tab/thirdpartyapps)
 
-To view app usage in Developer Portal, you need **Manager** or **Developer** role in Partner Center. The markeplace account owner or manager can [assign user roles and permissions](/partner-center/account-settings/user-roles).
+To view app usage in Developer Portal, you need **Manager** or **Developer** role in Partner Center. The marketplace account owner or manager can [assign user roles and permissions](/partner-center/account-settings/user-roles).
 
 You can view usage for your [third-party app](../../promote-app-adoption.md#access-to-your-apps) and other insights from the **Analytics** page. To access the page:
 
@@ -116,7 +116,6 @@ You can view usage for your [third-party app](../../promote-app-adoption.md#acce
 1. Select **Analytics** under the **Overview** section.
 
 To learn how to import your published app into Developer Portal, see [import an existing app](~/concepts/build-and-test/teams-developer-portal.md#import-an-existing-app).
-
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
@@ -142,22 +141,22 @@ As you explore the app usage metrics on this page, you can see the following thr
 * [Host product](#host-product)
 * [App capability](#app-capability)
 
- ### App usage
+### App usage
 
  The **App usage** tab shows you the following metrics:
 
-   * [Usage over time](#usage-by-time-period)
-   * [Usage by retention state](#usage-by-retention-state)
-   * [Usage by country or region](#usage-by-country-or-region)
-   * [Usage intensity](#usage-intensity)
+* [Usage over time](#usage-by-time-period)
+* [Usage by retention state](#usage-by-retention-state)
+* [Usage by country or region](#usage-by-country-or-region)
+* [Usage intensity](#usage-intensity)
 
-   :::image type="content" source="../../assets/images/tdp/tdp-app-usage.png" alt-text="Screenshots shows you app usage chart of your published app in Developer Portal."lightbox="../../assets/images/tdp/tdp-app-usage.png":::
+   :::image type="content" source="../../assets/images/tdp/tdp-app-usage.png" alt-text="Screenshot shows you app usage chart of your published app in Developer Portal."lightbox="../../assets/images/tdp/tdp-app-usage.png":::
 
- #### Usage over time
+#### Usage over time
 
    The **Usage over time** chart shows you the number of active users or tenants who opened and used your app across different time periods.
 
-   :::image type="content" source="../../assets/images/tdp/tdp-usage-over-time.png" alt-text="Screenshots shows you app usage over time of your published app in Developer Portal.":::
+   :::image type="content" source="../../assets/images/tdp/tdp-usage-over-time.png" alt-text="Screenshot shows you app usage over time of your published app in Developer Portal.":::
 
    | Metric | Definition |
    | :-----------------------| :------------------------------------------------------------------------------------------------------|
@@ -165,11 +164,11 @@ As you explore the app usage metrics on this page, you can see the following thr
    | **Weekly (WAU)** | Each data point represents a given R7 (Rolling 7 days) period. |
    | **Daily (DAU)** | Each data point represents a given R1 (Rolling 1 day) period. |
 
- #### Usage by retention state
+#### Usage by retention state
 
    The **Usage by retention state** chart lets you track four key retention or churn metrics for your app over time.
 
-   :::image type="content" source="../../assets/images/tdp/tdp-retention.png" alt-text="Screenshots shows you app usage by retention state of your published app in Developer Portal.":::
+   :::image type="content" source="../../assets/images/tdp/tdp-retention.png" alt-text="Screenshot shows you app usage by retention state of your published app in Developer Portal.":::
 
    | Metric | Definition |
    | :-----------------------| :------------------------------------------------------------------------------------------------------|
@@ -178,17 +177,17 @@ As you explore the app usage metrics on this page, you can see the following thr
    | Resurrected users or tenants | Active users or tenants who used your app one or more times before but not in the immediately preceding R28 time period. |
    | Lapsed users or tenants | Active users or tenants who weren't seen during a given R28 time period but were seen during the immediately preceding R28 time period. |
 
- #### Usage by country or region
+#### Usage by country or region
 
    The **Usage by region** chart shows the various regions where your app is being used. You can select **View details** for more information on active users in different countries or regions.
 
-   :::image type="content" source="../../assets/images/tdp/tdp-country.png" alt-text="Screenshots shows you app usage by country or region of your published app in Developer Portal."lightbox="../../assets/images/tdp/tdp-region.png":::
+   :::image type="content" source="../../assets/images/tdp/tdp-country.png" alt-text="Screenshot shows you app usage by country or region of your published app in Developer Portal."lightbox="../../assets/images/tdp/tdp-region.png":::
 
- #### Usage intensity
+#### Usage intensity
 
    The **Usage intensity** chart shows the key usage intensity metrics for your app.
 
-   :::image type="content" source="../../assets/images/tdp/tdp-usage-intensity.png" alt-text="Screenshots shows you app usage intensity of your published app in Developer Portal.":::
+   :::image type="content" source="../../assets/images/tdp/tdp-usage-intensity.png" alt-text="Screenshot shows you app usage intensity of your published app in Developer Portal.":::
 
    | Metric | Definition |
    | :-----------------------| :------------------------------------------------------------------------------------------------------|
@@ -196,7 +195,7 @@ As you explore the app usage metrics on this page, you can see the following thr
    | **% of 5+ Days usage** | The percentage of active users who opened or used the app more than five days in the last R28 time period. |
    | **DAU/MAU** | The ratio of the average number of unique users or tenants who used your app on each day divided by the Monthly active users for the selected R28 time period. |
 
- #### My app dashboard
+#### My app dashboard
 
    The **My App Dashboard** table shows you the latest R30 (Rolling 30 days) data for each of the metrics under the previous four categories, and the Month over Month change. Use the time picker on the upper left side and select the desired date to view the following:
 
@@ -205,65 +204,65 @@ As you explore the app usage metrics on this page, you can see the following thr
 
    You can select each of these metric names to see trends over time.
 
-   :::image type="content" source="../../assets/images/tdp/tdp-app-dashboard-view.png" alt-text="Screenshots shows you app capability usage of your published app in Developer Portal."lightbox="../../assets/images/tdp/tdp-app-dashboard-view.png":::
+   :::image type="content" source="../../assets/images/tdp/tdp-app-dashboard-view.png" alt-text="Screenshot shows you app capability usage of your published app in Developer Portal."lightbox="../../assets/images/tdp/tdp-app-dashboard-view.png":::
 
- ### Host product
+### Host product
 
    The **Host product** tab shows you the following app usage analytics:
 
-   * [Usage by host product](#usage-by-host-product)
-   * [Usage by operating system](#usage-by-operating-system)
-   * [Usage by platform](#usage-by-platform)
+* [Usage by host product](#usage-by-host-product)
+* [Usage by operating system](#usage-by-operating-system)
+* [Usage by platform](#usage-by-platform)
 
    The Key Performance Indicator (KPI) cards display metrics such as the host with the most active users and the operating system (OS) with the most active users, based on monthly, weekly, and daily data, in a metric card format.
 
-   :::image type="content" source="../../assets/images/tdp/tdp-host-product.png" alt-text="Screenshots shows you app usage in different host products of your published app in Developer Portal."lightbox="../../assets/images/tdp/tdp-host-product.png":::
+   :::image type="content" source="../../assets/images/tdp/tdp-host-product.png" alt-text="Screenshot shows you app usage in different host products of your published app in Developer Portal."lightbox="../../assets/images/tdp/tdp-host-product.png":::
 
- #### Usage by host product
+#### Usage by host product
 
    The **Usage by host product** chart shows your app's active usage across various host products, including **Teams**, **Outlook**, and the **Microsoft 365 app** of monthly, weekly, and daily data.
 
-   :::image type="content" source="../../assets/images/tdp/tdp-host-usage.png" alt-text="Screenshots shows you app usage in different host product of your published app in Developer Portal.":::
+   :::image type="content" source="../../assets/images/tdp/tdp-host-usage.png" alt-text="Screenshot shows you app usage in different host product of your published app in Developer Portal.":::
 
- #### Usage by platform
+#### Usage by platform
 
    The **Usage by platform** chart shows your app's active usage across various platforms, such as **Desktop**, **Mobile**, and **Web** of monthly, weekly, and daily data.
 
-   :::image type="content" source="../../assets/images/tdp/tdp-usage-platform.png" alt-text="Screenshots shows you app usage in different platform of your published app in Developer Portal.":::
+   :::image type="content" source="../../assets/images/tdp/tdp-usage-platform.png" alt-text="Screenshot shows you app usage in different platforms of your published app in Developer Portal.":::
 
    > [!NOTE]
    > The `Preview` tag indicates that the metric **Usage by host product** is in its initial phase and might undergo modifications as we collect feedback and continue to improve the experience.
 
- #### Usage by operating system
+#### Usage by operating system
 
    The **Usage by operating system** chart shows your app's active usage across various operating systems, such as **Windows**, **Mac**, **iOS**, and **Android** of monthly, weekly, and daily data.
 
-   :::image type="content" source="../../assets/images/tdp/tdp-operating-system.png" alt-text="Screenshots shows you app usage in different OS of your published app in Developer Portal.":::
+   :::image type="content" source="../../assets/images/tdp/tdp-operating-system.png" alt-text="Screenshot shows you app usage in different OS of your published app in Developer Portal.":::
 
- ### App capability
+### App capability
 
    The **App capability** tab shows you the usage of individual app capabilities that you've configured within your app.
 
   This page summarizes the overall usage of the following app capabilities in different host products.
 
-  * Bot
-  * Tab
-  * Message extension
-  * Personal app
-  * Connector
-  * Personal tab
+* Bot
+* Tab
+* Message extension
+* Personal app
+* Connector
+* Personal tab
 
-   :::image type="content" source="../../assets/images/tdp/tdp-app-capability.png" alt-text="Screenshots shows you app capability usage in different host products of your published app in Developer Portal." lightbox="../../assets/images/tdp/tdp-app-capability.png":::
+   :::image type="content" source="../../assets/images/tdp/tdp-app-capability.png" alt-text="Screenshot shows you app capability usage in different host products of your published app in Developer Portal." lightbox="../../assets/images/tdp/tdp-app-capability.png":::
 
    > [!NOTE]
    > The `Preview` tag indicates that the metric is in its initial phase and might undergo modifications as we collect feedback and continue to improve the experience.
 
- ### Known limitations
+### Known limitations
 
- * The usage data for message extension in Outlook and Outlook Add-in isn't available.
- * The usage data of the Outlook personal tab includes both personal tab and tab (meeting scenario) data.
- * The usage data for consumer apps isn't available.
- * The usage data for Android in Outlook, which doesn't have a tenant ID, isn't available.
+* The usage data for message extension in Outlook and Outlook Add-in isn't available.
+* The usage data of the Outlook personal tab includes both personal tab and tab (meeting scenario) data.
+* The usage data for consumer apps isn't available.
+* The usage data for Android in Outlook, which doesn't have a tenant ID, isn't available.
 
 ---
 

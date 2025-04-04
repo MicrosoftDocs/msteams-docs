@@ -205,7 +205,7 @@ The `botAadApp/create` action creates a new or reuses an existing Microsoft Entr
       # Required. The Microsoft Entra app's display name
       name: <your-app-name>
     writeToEnvironmentFile:
-      # The The Microsoft Entra app's client id created for bot.
+      # The Microsoft Entra app's client id created for bot.
       botId: <your-preferred-env-var-name>
       # The The Microsoft Entra app's client secret created for bot. 
       botPassword: <your-preferred-env-var-name>

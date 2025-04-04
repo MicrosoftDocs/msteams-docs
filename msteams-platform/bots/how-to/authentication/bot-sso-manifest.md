@@ -3,6 +3,7 @@ title: Enable SSO for Bot & Message Extension
 description: Learn to update and configure the app manifest to enable SSO for bot and message extension, upload a custom app and preview, and SSO support in Developer Portal.
 ms.topic: how-to
 ms.localizationpriority: high
+ms.date: 03/11/2025
 ---
 # Update app manifest for SSO and preview your app
 
@@ -73,6 +74,10 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
    1. `contentUrl`
    2. `configurationUrl`
    3. `validDomains`
+
+   > [!NOTE]
+   > To handle authentication and token exchange, add `https://token.botframework.com` to the `validDomains` property for bots using Bot Framework. For OAuth URLs and data residency list, see [OAuth URL support in Azure AI Bot Service](/azure/bot-service/ref-oauth-redirect-urls?view=azure-bot-service-4.0&preserve-view=true).
+
 6. Save the app manifest file. For more information, see [app manifest](../../../resources/schema/manifest-schema.md).
 
 <br>

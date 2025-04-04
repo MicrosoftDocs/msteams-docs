@@ -34,7 +34,7 @@ You can opt out of adding the SameSite cookie attribute to the `SetCookie` heade
 
 ## SameSite cookie attribute: 2020 release
 
-Chrome 80, released in February 2020, introduces new cookie values and imposes cookie policies by default. Three values are passed into the updated SameSite attribute: **Strict**, **Lax**, or **None**. If not specified, cookies SameSite attribute takes the value `SameSite=Lax` by default.
+Chrome 80 introduces new cookie values and imposes cookie policies by default. Three values are passed into the updated SameSite attribute: **Strict**, **Lax**, or **None**. If not specified, cookies SameSite attribute takes the value `SameSite=Lax` by default.
 
 SameSite cookie attributes are as follows:
 

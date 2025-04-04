@@ -4,6 +4,7 @@ description: Learn how to design, add, introduce, and manage a Microsoft Teams b
 author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: high
+ms.owner: ginobuzz
 ms.date: 01/23/2025
 ---
 # Designing your Microsoft Teams bot
@@ -93,7 +94,7 @@ You can include a tour with welcome messages and if the bot responds to somethin
 
 ### One-on-one chats
 
-In a personal app, a carousel can provide an effective overview of your bot and any other features of your app. Including buttons the let users try bot commands is encouraged. For example, **Create a task**.
+In a personal app, a carousel can provide an effective overview of your bot and any other features of your app. Include buttons such as **Create a task** to encourage users to try the bot commands.
 
 #### Mobile
 

@@ -4,7 +4,7 @@ description: Learn how to set third-party storage app for your Teams app for the
 ms.localizationpriority: medium
 ms.topic: how-to
 ms.author: surbhigupta
-ms.date: 02/05/2025
+ms.date: 02/26/2025
 ---
 
 # Third-party cloud storage app
@@ -28,7 +28,7 @@ For Teams app to support third-party cloud storage for drag-dropped files:
 
     Following code sample shows the first action added as `Upload` under `composeExtensions`:
 
-    ```javascript
+    ```json
     {
       "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.9/MicrosoftTeams.schema.json",
       "manifestVersion": "1.9",
