@@ -110,9 +110,9 @@ conceptualContent:
    # Card
     - title: Explore
       links:
-        - url: whats-new.md
-          itemType: whats-new
-          text: What's new in Teams development
+        - url: bots/how-to/teams-conversational-ai/ai-ux
+          itemType: concept
+          text: Custom engine agent
         - url: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md
           itemType: concept
           text: Teams AI library
