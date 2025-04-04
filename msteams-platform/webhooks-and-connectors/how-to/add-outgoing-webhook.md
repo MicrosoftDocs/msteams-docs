@@ -134,7 +134,7 @@ public static AuthResponse Validate(AuthenticationHeaderValue authenticationHead
     }
     catch (Exception ex)
     {
-        Trace.TraceError("Exception occcured while verifying HMAC on the incoming request. Exception: {0}", ex);
+        Trace.TraceError("Exception occurred while verifying HMAC on the incoming request. Exception: {0}", ex);
         return new AuthResponse(false, "Exception thrown while verifying MAC on incoming request.");
     }
 }
