@@ -110,7 +110,7 @@ conceptualContent:
    # Card
     - title: Explore
       links:
-        - url: microsoft-365-copilot/extensibility/overview-custom-engine-agent
+        - url: /microsoft-365-copilot/extensibility/overview-custom-engine-agent
           itemType: concept
           text: Custom engine agent
         - url: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md
