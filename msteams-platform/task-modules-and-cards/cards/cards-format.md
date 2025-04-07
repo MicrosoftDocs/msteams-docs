@@ -35,6 +35,14 @@ You can use newlines for Adaptive Cards using `\r` or `\n` escape sequences for 
 
 Formatting is different between the desktop and the mobile versions of Teams for Adaptive Cards and connector cards. In this section, you can go through the Markdown format example for Adaptive Cards and connector cards.
 
+> [!IMPORTANT]
+>
+> This documentation is considered legacy. For comprehensive information and resources related to text formatting in Adaptive Cards, visit the [Adaptive Cards documentation hub](https://adaptivecards.microsoft.com/?topic=TextBlock).
+>
+> :::image type="content" source="../../assets/images/adaptive-cards/new-adaptive-card-hub.png" alt-text="Screenshot shows the home page of the Microsoft Adaptive Cards website.":::
+>
+> The Adaptive Cards documentation hub offers complete and latest reference documentation, an updated Adaptive Card Designer, built-in JSON examples, design best practices, and a detailed release history of Adaptive Card features. For more information, see [introducing the Adaptive Cards documentation hub and new Adaptive Cards updates](https://devblogs.microsoft.com/microsoft365dev/introducing-the-adaptive-cards-documentation-hub-and-new-adaptive-cards-updates/#:~:text=Explore%20the%20latest%20adaptive%20card%20features%20and%20samples,productivity%E2%80%94all%20seamlessly%20integrated%20into%20your%20users%E2%80%99%20daily%20workflows.).
+
 # [Markdown format for Adaptive Cards](#tab/adaptive-md)
 
  The following table provides the supported styles for `Textblock`, `Fact.Title`, and `Fact.Value`:
@@ -105,7 +113,7 @@ The following code shows an example of Adaptive Cards formatting:
         },
         {
             "type": "TextBlock",
-            "text": "Check out [Adaptive Cards](https://adaptivecards.io)"
+            "text": "Check out [Adaptive Cards](https://adaptivecards.microsoft.com/?topic=welcome)"
         }
     ]
 }
@@ -143,7 +151,7 @@ Adaptive Cards support emojis. The following card payload shows an Adaptive Card
 
 You can add @mentions within an Adaptive Card body for bots and message extension responses. To add @mentions in cards, follow the same notification logic and rendering as that of message based [mentions in channel and group chat conversations](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions).
 
-Bots and message extensions can include mentions within the card content in [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) and [FactSet](https://adaptivecards.io/explorer/FactSet.html) elements.
+Bots and message extensions can include mentions within the card content in [TextBlock](https://adaptivecards.microsoft.com/?topic=TextBlock) and [FactSet](https://adaptivecards.microsoft.com/?topic=FactSet) elements.
 
 > [!NOTE]
 >
@@ -439,7 +447,7 @@ When a user selects a people icon, it displays the people card of that user.
 
 ### Information masking in Adaptive Cards
 
-Use the information masking property to mask specific information, such as password or sensitive information from users within the Adaptive Card [`Input.Text`](https://adaptivecards.io/explorer/Input.Text.html) input element.
+Use the information masking property to mask specific information, such as password or sensitive information from users within the Adaptive Card [`Input.Text`](https://adaptivecards.microsoft.com/?topic=Input.Text) input element.
 
 > [!NOTE]
 > The feature only supports client side information masking. The masked input text is sent as clear text to the HTTPS endpoint address that was specified during [bot configuration](../../build-your-first-app/build-bot.md#4-register-your-bot-endpoint).
@@ -698,7 +706,7 @@ For more information on how to design an Adaptive Card, see [designing Adaptive 
 
 ### Typeahead support
 
-Within the [`Input.Choiceset`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) schema element, asking users to filter and select a sizeable number of choices can significantly slow down task completion. Typeahead support within Adaptive Cards can simplify input selection by narrowing or filtering the set of input choices as the user types the input.
+Within the [`Input.ChoiceSet`](https://adaptivecards.microsoft.com/?topic=Input.ChoiceSet) schema element, asking users to filter and select a sizeable number of choices can significantly slow down task completion. Typeahead support within Adaptive Cards can simplify input selection by narrowing or filtering the set of input choices as the user types the input.
 
 To enable typeahead within the `Input.Choiceset`, set `style` to `filtered` and ensure `isMultiSelect` is set to `false`.
 
@@ -933,9 +941,9 @@ The `CodeBlock` element supports the following properties:
 
 Adaptive Card in Teams supports overflow menu. You can populate an overflow menu for all the secondary actions in an Adaptive Card. An overflow menu in an Adaptive Card can be added to the following:
 
-* [Actions](https://adaptivecards.io/explorer/ActionSet.html): In actions, the primary buttons appear on the Adaptive Card and the secondary buttons are inside the overflow menu.
+* **Actions**: In actions, the primary buttons appear on the Adaptive Card and the secondary buttons are inside the overflow menu.
 
-* [ActionSet](https://adaptivecards.io/explorer/ActionSet.html): ActionSet is a combination of multiple actions in an Adaptive Card. Each action set can have an overflow menu.
+* [ActionSet](https://adaptivecards.microsoft.com/?topic=ActionSet): ActionSet is a combination of multiple actions in an Adaptive Card. Each action set can have an overflow menu.
 
 > [!NOTE]
 > An Adaptive Card supports up to six primary actions to be viewed on the card. Any additional primary action is viewed in the overflow menu.
@@ -967,7 +975,7 @@ In the following example, there are two primary actions and one secondary action
         {
             "type": "Action.OpenUrl",
             "title": "View",
-            "url": "https://adaptivecards.io"
+            "url": "https://adaptivecards.microsoft.com/?topic=welcome"
         },
         {
             "type": "Action.Submit",
@@ -1133,11 +1141,11 @@ You can add borders and rounded corners only to the following elements:
 
 | Element | Borders | Rounded Corners |
 | --- | :---: | :---: |
-| [`Container`](https://adaptivecards.io/explorer/Container.html) | ✔️ | ✔️ |
-| [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) | ✔️ | ✔️ |
-| [`Column`](https://adaptivecards.io/explorer/Column.html) | ✔️ | ✔️ |
-| [`Table`](https://adaptivecards.io/explorer/Table.html) | ✔️ | ✔️ |
-| [`Image`](https://adaptivecards.io/explorer/Image.html) | ❌ | ✔️ |
+| [`Container`](https://adaptivecards.microsoft.com/?topic=Container) | ✔️ | ✔️ |
+| [`ColumnSet`](https://adaptivecards.microsoft.com/?topic=ColumnSet) | ✔️ | ✔️ |
+| [`Column`](https://adaptivecards.microsoft.com/?topic=Column) | ✔️ | ✔️ |
+| [`Table`](https://adaptivecards.microsoft.com/?topic=Table) | ✔️ | ✔️ |
+| [`Image`](https://adaptivecards.microsoft.com/?topic=Image) | ❌ | ✔️ |
 
 ### Implement borders and rounded corners in Adaptive Cards
 
@@ -1667,11 +1675,9 @@ Character formatting, such as bold and italic displays correctly on Android.
 
 ### Format example for simple cards
 
-The images in the previous section were created using Teams **App Studio**, where the text property of a hero card is set to the following string:
+You can test formatting in your own cards by modifying this code, where the text property of a hero card is set to the following string:
 
 `<p>bold: <strong>Bold Text</strong></p><p>italic: <em>Italic Text</em></p><p>strikethrough: <strike>Strikethrough text</strike></p><h1>Header 1</h1><h2>Header 2</h2><h3>Header 3</h3><p>bullet list: <ul><li>text</li><li>text</li></ul></p><p>ordered list: <ol><li>text</li><li>text</li></ol></p><pre>preformatted text</pre><blockquote>blockquote text</blockquote></p><p>hyperlink: <a href=\"https://www.bing.com/\">Bing</a></p><p>embedded image: <img src=\"https://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img></p>`
-
-You can test formatting in your own cards by modifying this code.
 
 ---
 
@@ -1685,7 +1691,7 @@ You can test formatting in your own cards by modifying this code.
 
 * [Cards and dialogs](../cards-and-task-modules.md)
 * [Use dialogs from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
-* [Schema explorer for Adaptive Cards](https://adaptivecards.io/explorer/TextBlock.html)
+* [Schema explorer for Adaptive Cards](https://adaptivecards.microsoft.com/?topic=AdaptiveCard)
 * [Create connectors for Microsoft 365 Groups](../../webhooks-and-connectors/how-to/connectors-creating.md)
 * [Create Incoming Webhooks](../../webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Adaptive Card Templating SDKs](/adaptive-cards/templating/sdk)

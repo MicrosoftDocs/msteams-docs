@@ -323,7 +323,7 @@ In the **Chat With Your Data** or RAG scenarios, Teams Toolkit provides the foll
 
 To build your data ingestion, follow these steps:
 
-1. **Load your source documents**: Ensure that your document has a meaningful text as the embedding model takes only text as a input.
+1. **Load your source documents**: Ensure that your document has meaningful text as the embedding model takes only text as input.
 
 1. **Split into chunks**: Ensure you split the document to avoid API call failures as the embedding model has an input token limitation.
 
@@ -881,7 +881,7 @@ class MyDataSource(DataSource):
 
 ---
 
-## Add more API for Custom API as data source
+## Add more APIs for Custom API as data source
 
 Follow these steps to extend the custom engine agent from Custom API template with more APIs.
 

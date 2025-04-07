@@ -5,7 +5,7 @@ description: Learn how to install Teams Toolkit from Visual Studio Code and mark
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 07/29/2022
+ms.date: 03/10/2025
 ---
 # Install Teams Toolkit
 
@@ -13,7 +13,7 @@ This section helps you to know about the prerequisites, install Microsoft Teams 
 
 ## Prerequisites
 
-* Download and install [Visual Studio Code](https://code.visualstudio.com/Download) before you set up Teams Toolkit for Visual Studio Code.
+* [Visual Studio Code](https://code.visualstudio.com/Download).
 * [NodeJS](https://nodejs.org) version 16 or later.
 * NPM 8 or later.
 
@@ -109,12 +109,9 @@ The Teams Toolkit for Visual Studio Code extension is available in a prerelease 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Explore Teams Toolkit](explore-Teams-Toolkit.md)
+> [Create a new Teams app](~/toolkit/create-new-project.md)
 
 ## See also
 
-* [Teams Toolkit Overview](~/toolkit/teams-toolkit-fundamentals.md)
-* [Prepare to build apps](~/toolkit/build-environments.md)
-* [Provision cloud resources](~/toolkit/provision.md)
-* [Deploy Teams app to the cloud](~/toolkit/deploy.md)
-* [Create new Teams app](~/toolkit/create-new-project.md)
+- [Explore Teams Toolkit features](~/toolkit/explore-Teams-Toolkit.md)
+- [Prepare to build apps](~/toolkit/build-environments.md)

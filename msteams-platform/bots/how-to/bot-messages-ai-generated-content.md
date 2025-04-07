@@ -202,7 +202,7 @@ await context.sendActivity({
 |--|--|--|--|
 | `citation` | Object | ✔️ | Details of the citation. |
 | `citation.@type` | String | ✔️ | Object of the citation.<br>Allowed value: `Claim` |
-| `citation.position` | Integer | ✔️ | Displays the citation number. |
+| `citation.position` | Integer | ✔️ | Displays the citation number. This value must be unique for every citation. |
 | `citation.appearance` | Object | ✔️ | Information about the appearance of the citation. |
 | `citation.appearance.@type` | String | ✔️ | Object of the citation appearance.<br>Allowed value: `DigitalDocument` |
 | `citation.appearance.name` | String | ✔️ | Title of the referenced content. Maximum characters: 80 |

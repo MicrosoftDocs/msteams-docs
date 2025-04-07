@@ -817,7 +817,7 @@ Use Teams Toolkit to create your first tab project. The toolkit takes you throug
    1. Enter a suitable name for your project.
 
       > [!NOTE]
-      > You can note that the project name you enter is automatically filled in as the **Solution name** also. If you want, you can change the solution name with no affect on project name.
+      > You can note that the project name you enter is automatically filled in as the **Solution name** also. If you want, you can change the solution name with no effect on project name.
 
    1. Select the folder path where you want to create the project workspace.
 

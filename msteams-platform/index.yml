@@ -53,6 +53,9 @@ conceptualContent:
   # Card
     - title: Learn
       links:
+        - url: /microsoft-365-copilot/extensibility/
+          itemType: concept
+          text: Extend Microsoft 365 Copilot
         - url: /training/modules/microsoft-teams-publish-app-to-store
           itemType: learn
           text: Publish Teams apps in Microsoft Teams Store
@@ -77,42 +80,32 @@ conceptualContent:
         - url: /microsoftteams/platform/m365-apps/overview
           itemType: overview
           text: Extend Teams apps across Microsoft 365
-        - url: /microsoft-365-copilot/extensibility/
-          itemType: concept
-          text: Extend Microsoft 365 Copilot
 
     # Card
     - title: Capabilities
-      links:
-        - url: messaging-extensions/build-bot-based-agent.md
-          itemType: concept
-          text: Build bot-based search message extension agent      
-        - url: /microsoftteams/platform/tabs/what-are-tabs
-          itemType: overview
-          text: Tabs
+      links:    
         - url: /microsoftteams/platform/bots/what-are-bots
           itemType: overview
           text: Bots
-        - url: /microsoftteams/platform/messaging-extensions/what-are-messaging-extensions
-          itemType: overview
-          text: Message extensions
-        - url: /microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings
-          itemType: overview
-          text: Apps for Teams meetings
         - url: /microsoftteams/platform/task-modules-and-cards/cards-and-task-modules
           itemType: concept
           text: Cards and task modules
-        - url: /microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors
+        - url: /microsoftteams/platform/messaging-extensions/what-are-messaging-extensions
           itemType: overview
-          text: Webhooks and connectors
-
+          text: Message extensions
+        - url: /microsoftteams/platform/tabs/what-are-tabs
+          itemType: overview
+          text: Tabs
+        - url: /microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings
+          itemType: overview
+          text: Apps for Teams meetings
 
    # Card
     - title: Explore
       links:
-        - url: whats-new.md
-          itemType: whats-new
-          text: What's new in Teams development
+        - url: /microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+          itemType: concept
+          text: Custom engine agent
         - url: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md
           itemType: concept
           text: Teams AI library

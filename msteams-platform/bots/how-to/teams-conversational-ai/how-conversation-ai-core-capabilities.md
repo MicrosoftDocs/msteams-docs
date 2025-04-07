@@ -247,7 +247,7 @@ Register Adaptive Card action handlers using the `app.adaptiveCards` property. T
 - [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/03.adaptiveCards.a.typeAheadBot/Program.cs#L52)
 
 ```csharp
-// Listen for messages that trigger returning an adaptive card
+// Listen for messages that trigger returning an Adaptive Card
     app.OnMessage(new Regex(@"static", RegexOptions.IgnoreCase), activityHandlers.StaticMessageHandler);
     app.OnMessage(new Regex(@"dynamic", RegexOptions.IgnoreCase), activityHandlers.DynamicMessageHandler);
 
@@ -270,7 +270,7 @@ Register Adaptive Card action handlers using the `app.adaptiveCards` property. T
 - [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/02.teams-features/b.adaptiveCards.typeAheadBot/src/index.ts#L86)
 
 ```javascript
-// Listen for messages that trigger returning an adaptive card
+// Listen for messages that trigger returning an Adaptive Card
 app.message(/dynamic/i, async (context, _state) => {
     const attachment = createDynamicSearchCard();
     await context.sendActivity({ attachments: [attachment] });
