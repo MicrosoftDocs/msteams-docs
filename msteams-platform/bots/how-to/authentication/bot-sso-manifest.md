@@ -74,6 +74,10 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
    1. `contentUrl`
    2. `configurationUrl`
    3. `validDomains`
+
+   > [!NOTE]
+   > To handle authentication and token exchange, add `https://token.botframework.com` to the `validDomains` property for bots using Bot Framework. For OAuth URLs and data residency list, see [OAuth URL support in Azure AI Bot Service](/azure/bot-service/ref-oauth-redirect-urls?view=azure-bot-service-4.0&preserve-view=true).
+
 6. Save the app manifest file. For more information, see [app manifest](../../../resources/schema/manifest-schema.md).
 
 <br>

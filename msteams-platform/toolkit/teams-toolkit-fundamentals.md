@@ -5,7 +5,7 @@ description: Learn about Teams Toolkit, its installation, navigation, and user j
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 01/23/2025
+ms.date: 03/18/2025
 ---
 
 # Microsoft Teams Toolkit Overview
@@ -13,10 +13,6 @@ ms.date: 01/23/2025
 Teams Toolkit makes it simple to get started with app development for Microsoft Teams, Outlook, and Microsoft 365 Copilot using Visual Studio Code.
 
 * Create new apps from project templates for common app scenarios.
-
-Teams Toolkit makes it simple to get started with app development for Microsoft Teams using Microsoft Visual Studio Code.
-
-* Start with a project template for common custom app built for your org (LOB app) scenarios or from a sample.
 * Save setup time with automated app registration and configuration.
 * Run and debug to Teams, Outlook, and Copilot directly from Visual Studio Code.
 * Smart defaults for hosting in Azure using infrastructure-as-code and Bicep.
@@ -53,7 +49,7 @@ Automate repetitive or tedious configuration using a composable task framework t
 
 ### Multiple environments
 
-Test your app with different groupings of hosted resources by creating unique configurations like `dev`, `test`, and `prod` using the Environments features.
+Test your app with different groupings of hosted resources by creating unique configurations such as `dev`, `test`, and `prod` using the Environments features.
 
 ### Quick access to Teams Developer Portal
 
