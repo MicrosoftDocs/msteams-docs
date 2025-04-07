@@ -12,8 +12,10 @@ ms.date: 12/02/2024
 
 > [!NOTE]
 >
-> - Tab apps for calling are supported for desktop and web client only. This feature isn't supported for Mobile clients.
-> - The personal scope apps are meant to enable calling, and aren't intended for working in meetings.
+> Tab apps for calling in personal scope are:
+>
+> - Supported only on desktop and web clients, not on mobile clients.
+> - Enable only the calling feature, and aren't intended for working in meetings.
 
 You can now create personal scope apps that integrate seamlessly with Public Switched Telephone Network (PSTN) and Teams-to-Teams calls. By using the right scope and context, you can build apps that utilize tab type, static scope, personal context, and meeting side panels effectively.
 
