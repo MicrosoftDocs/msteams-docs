@@ -35,16 +35,6 @@ Teams platform features that are available to all app developers.
 
 * ***April 08, 2025***: [Create personal scope apps that integrate seamlessly with Public Switched Telephone Network (PSTN) and Teams-to-Teams calls](apps-in-teams-meetings/build-tabs-for-calling.md).
 
-**2025 March**
-
-* ***March 27, 2025***: [Learn about the best practices to optimize tab app performance in Teams Android and iOS clients](resources/teams-mobile-best-practices.md).
-
-* ***March 07, 2025***: [Introducing app manifest v1.20 with elementRelationshipSet, requirementSet, and intuneInfo properties](resources/schema/manifest-schema.md).
-
-* ***March 07, 2025***: [Specify runtime requirements in app manifest to tailor your app's behavior in Microsoft 365 hosts](m365-apps/specify-runtime-requirements.md).
-
-* ***March 07, 2025***: [Enable Intune Mobile App Management (MAM) support for Outlook add-ins to ensure compliance with organizational data protection policies](/javascript/api/outlook/office.mailbox).
-
 :::column-end:::
 :::row-end:::
 <br/>
@@ -57,6 +47,10 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 27/03/2025 | Learn about the best practices to optimize tab app performance in Teams Android and iOS clients | Resources > [Best practices for Teams mobile apps](resources/teams-mobile-best-practices.md) |
+| 07/03/2025 | Introducing app manifest v1.20 with elementRelationshipSet, requirementSet, and intuneInfo properties | App manifest > [App manifest](resources/schema/manifest-schema.md) |
+| 07/03/2025 | Specify runtime requirements in app manifest to tailor your app's behavior in Microsoft 365 hosts | [Extend your app across Microsoft 365 > Specify Microsoft 365 host runtime requirements in app manifest](m365-apps/specify-runtime-requirements.md) |
+| 07/03/2025 | Enable Intune Mobile App Management (MAM) support for Outlook add-ins to ensure compliance with organizational data protection policies | [Office.Mailbox interface](/javascript/api/outlook/office.mailbox) |
 | 27/02/2025 | Create, manage, and customize your app package for declarative agents and other apps directly from Developer Portal. | Tools and SDKs > Tools > Developer Portal for Teams > [Manage your apps in Developer Portal](concepts/build-and-test/manage-your-apps-in-developer-portal.md#configure) |
 | 05/02/2025 | Use third-party cloud storage for drag-dropped files in message compose areas.| Integrate with Teams > [Third-party storage app](concepts/device-capabilities/third-party-storage-capability.md) |
 | 31/01/2025 | Create a scenario based custom engine agent using Teams Toolkit and Teams AI library. | [Build a custom engine agent using Teams AI library and Teams Toolkit](sbs-Teams-AI.yml) |
