@@ -6,96 +6,121 @@ ms.date: 02/06/2025
 ms.topic: reference
 ---
 
-# Tool options and code samples
+# Tool Options and Code Samples
 
-You've built your first tab app, interactive notification bot, and message extension. You can build a Teams app as per your app's requirements. Based on factors such as business needs, development environment, and domain knowledge, select the environment and tools to build your app.
+You've built your first tab app, interactive notification bot, and message extension. Now, you have the freedom to build a Teams app according to your unique requirements. Depending on your business needs, development environment, and domain expertise, you can select the environment and tools that best fit your app development process.
 
-A Teams app offers you the flexibility of choosing your build environment. It includes tools, framework, and languages to approach your app development. Build your Teams app in the environment that's best suited for your app. You can even select a combination. For example, you can use Teams Toolkit to build an app with JavaScript and host it on a SharePoint site.
+A Teams app provides the flexibility to choose your preferred build environment. This environment includes a wide selection of tools, frameworks, and languages. You are free to build your Teams app in any environment suited to your needs or even combine multiple approaches. For instance, you might use the Teams Toolkit to build an app with JavaScript and host it on a SharePoint site.
 
-This section takes you through the various options for building your Teams app.
+This section walks you through several options available to create your Teams app.
 
-* [Teams collaborative platform](#teams-collaborative-platform)
-* [Tools and SDKs](#tools-and-sdks)
-* [Teams app tutorials and code samples](#teams-app-tutorials-and-code-samples)
+• [Teams collaborative platform](#teams-collaborative-platform)  
+• [Tools and SDKs](#tools-and-sdks)  
+• [Teams app tutorials and code samples](#teams-app-tutorials-and-code-samples)
 
-## Teams collaborative platform
+## Teams Collaborative Platform
 
-As a collaborative platform for building apps, Teams offers the full range of apps and tools. Teams platform supports your app development at every stage from planning to distributing it.
+Microsoft Teams provides a comprehensive platform for app development by offering a full spectrum of features and tools. The Teams platform supports app development at every stage—from planning and design to building, testing, and distribution.
 
-You can use various tools and services to build your app. Following is an example development flow.
+You can use many tools and services to bring your app to life. Below is an example of a development flow that you can follow:
 
-1. Plan your project and figure out the requirement.
-1. Design your app. Use Teams UI Kit and Fluent UI React components for designing tabs UI.
-1. Build your app with JavaScript using Teams Toolkit.
-1. Extend functionality by adding more Teams capabilities, send activity feed notifications, and use Microsoft 365 data with :::image type="icon" source="../assets/icons/graph-small-icon.png"::: Microsoft Graph.
-1. Test the app on a developer tenant with sample user data.
-1. Deploy the app to Azure.
-1. Manage and publish the app to Microsoft Teams Store with Developer Portal. Monetize your app with options, such as SaaS offers, in-app purchases, and more.
+1. **Plan Your Project**  
+   Begin by clarifying your project goals and gathering the requirements needed to solve a business problem or enhance user experiences.
+
+2. **Design Your App**  
+   Create your app's layout and interface using the Teams UI Kit and Fluent UI React components to design engaging and intuitive tabs.
+
+3. **Build Your App**  
+   Develop your application using JavaScript with the Teams Toolkit, ensuring that the code meets the desired functionalities.
+
+4. **Extend Functionality**  
+   Enhance your app by integrating additional Teams capabilities, sending activity feed notifications, and accessing Microsoft 365 data via  
+   :::image type="icon" source="../assets/icons/graph-small-icon.png"::: Microsoft Graph. This integration allows you to create richer, more dynamic experiences.
+
+5. **Test on a Developer Tenant**  
+   Verify all functionalities by testing your app on a developer tenant using sample user data, ensuring everything works as expected.
+
+6. **Deploy the App to Azure**  
+   Once testing is complete, deploy your app to Azure to leverage cloud capabilities and improve scalability.
+
+7. **Manage and Publish Your App**  
+   Finally, use the Developer Portal to manage and publish your app to the Microsoft Teams Store. You also have the opportunity to monetize your app through options like SaaS offers, in-app purchases, and more.
 
 ## Tools and SDKs
 
-You can build your Microsoft Teams app with the help of the following tools and SDKs.
+Microsoft Teams provides a wide range of tools and Software Development Kits (SDKs) to support app development. These tools are designed to meet diverse technical requirements and allow you to build your Teams app with ease.
 
-:::image type="content" source="../assets/images/overview/choose-what-you-need.png" alt-text="Flow chart shows you the SDKs and tools you need to build your Teams app."lightbox="../assets/images/overview/choose-what-you-need.png":::
+:::image type="content" source="../assets/images/overview/choose-what-you-need.png" alt-text="Flow chart shows you the SDKs and tools you need to build your Teams app." lightbox="../assets/images/overview/choose-what-you-need.png" :::
 
-To start building your Teams app, you can select the tools and SDKs based on your app requirements.
+To begin building your Teams app, select the appropriate tools and SDKs based on the following factors:
 
-1. **App capabilities**: You can choose a single or a combination of capabilities based on your app requirements.
-1. **SDKs you need**: For example, if you're building AI capability for your bot app, you select Teams AI library.
-1. **UI  Components**: Choose the UI components to design your app based on your app capability.
-1. **Languages**: Choose the language in which you want to build your app.
-1. **Recommended Tools**: Choose the tools based on the language that you've selected. You can also use the Teams Developer Portal to manage and publish your app. The Teams Toolkit allows you to build your app with JavaScript and TypeScript or with C# in Visual Studio Code (VS Code) or Visual Studio.
+1. **App Capabilities**  
+   Decide whether your app will utilize a single capability or combine multiple features based on your app’s requirements. For example, a chat bot might need additional capabilities alongside basic tab functionality.
+
+2. **SDKs You Need**  
+   Choose the Software Development Kits based on your app’s goals. For instance, if you plan to add AI capabilities to your bot, you might select the Teams AI library to integrate advanced functionalities.
+
+3. **UI Components**  
+   Select the appropriate UI components to design a user-friendly interface that aligns with your app’s capabilities and meets user expectations.
+
+4. **Languages**  
+   Decide on the programming language that best suits your project requirements. Whether it’s C#, JavaScript, or TypeScript, select the language that aligns with your skill set and project needs.
+
+5. **Recommended Tools**  
+   Identify and use tools that complement your chosen programming language. Options include the Teams Developer Portal for app management and publishing, and the Teams Toolkit for building apps using JavaScript, TypeScript, or C# in Visual Studio Code (VS Code) or Visual Studio.
+
+Below is a detailed comparison table for various app capabilities, recommendations, and supported languages:
 
 | App capabilities | User interactions | Recommended tools | SDKs | Languages |
-|--------|-------------|--------|--------|--------|
-| **Tabs** | A full-screen embedded web experience. | VS Code or Visual Studio with Teams Toolkit extension, or [TeamsFx CLI](~/toolkit/teams-toolkit-cli.md) if you prefer using CLI | [Teams JavaScript client library](/javascript/api/overview/msteams-client#microsoft-teams-javascript-client-library) for UI functionalities, SharePoint Framework (SPFx), and Microsoft Graph SDK | C#, TypeScript, and JavaScript (including React) |
-| **Bots** | A chat bot that converses with members. |VS Code or Visual Studio with Teams Toolkit extension, or [TeamsFx CLI](~/toolkit/teams-toolkit-cli.md) if you prefer using CLI | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx), [Bot Framework SDK](https://dev.botframework.com/), [Teams AI library](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md), and Microsoft Graph SDK | C#, TypeScript, and JavaScript |
-| **Message extensions** | Shortcuts for inserting external content into a conversation or taking action on messages. | VS Code or Visual Studio with Teams Toolkit extension, or [TeamsFx CLI](~/toolkit/teams-toolkit-cli.md) if you prefer using CLI |  [TeamsFx SDK](/javascript/api/@microsoft/teamsfx), [Bot Framework SDK](https://dev.botframework.com/), [Teams AI library](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md), and Microsoft Graph SDK | C#, TypeScript, and JavaScript |
+|------------------|-------------------|-------------------|------|-----------|
+| **Tabs**         | A full-screen embedded web experience. | VS Code or Visual Studio with the Teams Toolkit extension, or [TeamsFx CLI](~/toolkit/teams-toolkit-cli.md) for CLI enthusiasts | [Teams JavaScript client library](/javascript/api/overview/msteams-client#microsoft-teams-javascript-client-library) for UI functionalities, SharePoint Framework (SPFx), and Microsoft Graph SDK | C#, TypeScript, and JavaScript (including React) |
+| **Bots**         | A chat bot that converses with members. | VS Code or Visual Studio with the Teams Toolkit extension, or [TeamsFx CLI](~/toolkit/teams-toolkit-cli.md) for CLI enthusiasts | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx), [Bot Framework SDK](https://dev.botframework.com/), [Teams AI library](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md), and Microsoft Graph SDK | C#, TypeScript, and JavaScript |
+| **Message extensions** | Shortcuts for inserting external content into a conversation or taking action on messages. | VS Code or Visual Studio with the Teams Toolkit extension, or [TeamsFx CLI](~/toolkit/teams-toolkit-cli.md) for CLI enthusiasts | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx), [Bot Framework SDK](https://dev.botframework.com/), [Teams AI library](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md), and Microsoft Graph SDK | C#, TypeScript, and JavaScript |
 
 > [!NOTE]
 >
-> * Meeting and calls can deliver a user experience for enabling collaboration, partnership, informed communication, and shared feedback. For more information, see [apps for Teams meetings and calls](../apps-in-teams-meetings/teams-apps-in-meetings.md).
-> * You can also use languages, such as Node.js, Java, Python, and Web technology like HTML and CSS to build your Teams app.
+> • Meeting and calls can deliver an enhanced user experience by enabling collaboration, partnership, informed communication, and shared feedback. For more information, see [apps for Teams meetings and calls](../apps-in-teams-meetings/teams-apps-in-meetings.md).  
+> • Additionally, you can use other languages and web technologies such as Node.js, Java, Python, HTML, and CSS to build your Teams app.
 
-**Example scenario**: If you want to build a social media dashboard app that sends notifications using TypeScript, consider the following scenario:
+**Example scenario**: Imagine you want to build a social media dashboard app that sends notifications using TypeScript. In this scenario, you would combine the Teams Toolkit with AI and UI components to create a robust application.
 
-:::image type="content" source="../assets/images/overview/sdks-scenario.png" alt-text="Diagram shows you the scenario where you build Teams app with TypeScript."lightbox="../assets/images/overview/sdks-scenario.png":::
+:::image type="content" source="../assets/images/overview/sdks-scenario.png" alt-text="Diagram shows you the scenario where you build Teams app with TypeScript." lightbox="../assets/images/overview/sdks-scenario.png" :::
 
 ### Explore SDKs
 
-You can also create and build your Teams app with various SDKs. Teams supports all the SDKs shown in the following image and you can choose SDKs based on your requirements:
+Microsoft Teams supports a multitude of SDKs that you can use to build a feature-rich app. The following image outlines the list of available SDKs. You can choose the SDKs that best align with your project requirements.
 
-:::image type="content" source="../assets/images/Tools-and-SDK-revamp/tools-and-sdk.png" alt-text="Diagram shows you the list of tools and SDKs for you to build your Teams app."lightbox="../assets/images/Tools-and-SDK-revamp/tools-and-sdk.png":::
+:::image type="content" source="../assets/images/Tools-and-SDK-revamp/tools-and-sdk.png" alt-text="Diagram shows you the list of tools and SDKs for you to build your Teams app." lightbox="../assets/images/Tools-and-SDK-revamp/tools-and-sdk.png" :::
 
 ### Explore Tools
 
-The following tools in the Teams platform help you during app development:
+The Teams platform offers a variety of tools designed to assist you during different phases of app development. The table below maps each development phase to the respective Teams platform tools:
 
-| App development phase | Teams platform tools |
-|-----|-----|
-| Design | [Teams UI kit](../concepts/design/design-teams-app-ui-templates.md#microsoft-teams-ui-kit) and [Fluent UI React components](../concepts/design/design-teams-app-ui-templates.md#fluent-ui-react-components) |
-| Build | [Teams Toolkit](../toolkit/teams-toolkit-fundamentals.md), [Tools and SDKs](../concepts/build-and-test/tool-sdk-overview.md), and [Microsoft Graph](/graph/teams-concept-overview) |
-| Test, deploy, and publish |[Microsoft Entra ID](/entra/fundamentals/whatis) and [Developer Portal](../concepts/build-and-test/teams-developer-portal.md) |
-| Distribute | [Partner Center](../concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md) and [Teams Store](../concepts/deploy-and-publish/appsource/publish.md) |
+| App Development Phase        | Teams Platform Tools                                                                                                                                           |
+|------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Design**                   | [Teams UI Kit](../concepts/design/design-teams-app-ui-templates.md#microsoft-teams-ui-kit) and [Fluent UI React components](../concepts/design/design-teams-app-ui-templates.md#fluent-ui-react-components) |
+| **Build**                    | [Teams Toolkit](../toolkit/teams-toolkit-fundamentals.md), [Tools and SDKs](../concepts/build-and-test/tool-sdk-overview.md), and [Microsoft Graph](/graph/teams-concept-overview) |
+| **Test, Deploy, and Publish** | [Microsoft Entra ID](/entra/fundamentals/whatis) and [Developer Portal](../concepts/build-and-test/teams-developer-portal.md)                                      |
+| **Distribute**               | [Partner Center](../concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md) and [Teams Store](../concepts/deploy-and-publish/appsource/publish.md) |
 
-## Teams app tutorials and code samples
+## Teams App Tutorials and Code Samples
 
-You can build your own Microsoft Teams app with different capabilities using the following tutorials and code samples.
+You can leverage various tutorials and code samples to build a Microsoft Teams app covering different capabilities. These resources provide step-by-step guidance and code examples to help you understand and implement your ideas.
 
-### Teams app tutorials
+### Teams App Tutorials
 
-To start building your Teams app, use the following languages or frameworks and prepare your development environment.
+Kick-start your development process using tutorials focused on different programming languages and frameworks. The table below categorizes the tutorials based on app capabilities:
 
-| &nbsp; | **Tab** | **Bot** | **Message extension** |
-| --- | --- | --- | --- |
-| **Basic app** | • [Build your first tab app using JavaScript](../sbs-gs-javascript.yml) <br> •  [Build your first app using C#](../sbs-gs-csharp.yml) <br> • [Build your first app with SPFx](../sbs-gs-spfx.yml) | [Build your first bot app using JavaScript](../sbs-gs-bot.yml) | [Build your first message extension app using JavaScript](../sbs-gs-msgext.yml)|
-| **Scenario-based app** | NA | • [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml) <br> • [Build command bot with JavaScript](../sbs-gs-commandbot.yml) <br> • [Create Teams workflow bot](../sbs-gs-workflow-bot.yml) | NA |
+|                         | **Tab**                                                                                                                                                                                                                                                                                     | **Bot**                                                                               | **Message Extension**                                                                        |
+|-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
+| **Basic App**           | • [Build your first tab app using JavaScript](../sbs-gs-javascript.yml) <br> • [Build your first app using C#](../sbs-gs-csharp.yml) <br> • [Build your first app with SPFx](../sbs-gs-spfx.yml)                                                                               | [Build your first bot app using JavaScript](../sbs-gs-bot.yml)                         | [Build your first message extension app using JavaScript](../sbs-gs-msgext.yml)                |
+| **Scenario-Based App**  | NA                                                                                                                                                                                                                                                                                           | • [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml) <br> • [Build command bot with JavaScript](../sbs-gs-commandbot.yml) <br> • [Create Teams workflow bot](../sbs-gs-workflow-bot.yml) | NA                                                                                           |
 
-### Code samples
+### Code Samples
 
-Code samples are designed to help you understand and build your own Teams app with different capabilities and scenarios. To learn more about the code samples, see [Microsoft Teams samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
+To further enhance your understanding and expedite your development, explore our comprehensive code samples. These samples demonstrate how to implement various Teams app functionalities and can be a valuable resource when building your own application. For more code samples and detailed examples, see [Microsoft Teams samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
 
-## See also
+## See Also
 
 :::row:::
     :::column span="1":::
@@ -114,7 +139,7 @@ Code samples are designed to help you understand and build your own Teams app wi
         **Design your app**
     :::column-end:::
     :::column span="2":::
-        Design your app UI with Teams UI Kit.
+        Design your app UI using the Teams UI Kit and create intuitive layouts with best practices.
 
         > [!div class="nextstepaction"]
         > [Design your Teams app](~/concepts/design/design-teams-app-process.md)
@@ -126,7 +151,7 @@ Code samples are designed to help you understand and build your own Teams app wi
         **Build your app**
     :::column-end:::
     :::column span="2":::
-        Looking for app development inspiration? Browse our list of real-world scenarios and industry solutions with high-fidelity concept mocks to understand the various ways a Teams app can help your users.
+        Find inspiration in real-world scenarios and industry solutions, complete with high-fidelity concept mocks that illustrate the diverse ways a Teams app can empower users.
 
         > [!div class="nextstepaction"]
         > [See app scenarios](https://adoption.microsoft.com/en-us/extensibility-look-book-gallery/)
@@ -138,7 +163,7 @@ Code samples are designed to help you understand and build your own Teams app wi
         **Extend your app across Microsoft 365**
     :::column-end:::
     :::column span="2":::
-You can preview your Teams apps running in other high usage Microsoft 365 experiences with the latest Teams JavaScript client library.
+        Preview and integrate your Teams apps within other high-usage Microsoft 365 experiences using the latest Teams JavaScript client library.
 
         > [!div class="nextstepaction"]
         > [Extend your app](~/m365-apps/overview.md)
@@ -150,7 +175,7 @@ You can preview your Teams apps running in other high usage Microsoft 365 experi
         **Test your app**
     :::column-end:::
     :::column span="2":::
-        After integrating your app with Teams, you must test your app before publishing it.
+        It is critical to thoroughly test your app after integrating it with Teams. Ensure functionality, performance, and user experience are all up to standard before publishing.
 
         > [!div class="nextstepaction"]
         > [Test your app](~/concepts/build-and-test/test-app-overview.md)
@@ -162,7 +187,7 @@ You can preview your Teams apps running in other high usage Microsoft 365 experi
         **Distribute your app**
     :::column-end:::
     :::column span="2":::
-        You can provide your Teams app to an individual, team, organization, or anyone who wants to use it.
+        Provide your app to individuals, teams, or organizations. Distribution options allow your app to reach a wide audience in a secure and manageable way.
 
         > [!div class="nextstepaction"]
         > [Distribute your app](~/concepts/deploy-and-publish/apps-publish-overview.md)
@@ -174,7 +199,7 @@ You can preview your Teams apps running in other high usage Microsoft 365 experi
         **Monetize your app**
     :::column-end:::
     :::column span="2":::
-        Teams Store offers app monetizing options, such as SaaS offers and In-app purchases. Choose the best monetizing option suitable for your Teams app.
+        Leverage monetization options such as SaaS offers and in-app purchases available through the Teams Store to generate revenue from your app.
 
         > [!div class="nextstepaction"]
         > [Monetize your app](~/concepts/deploy-and-publish/appsource/prepare/monetize-overview.md)
@@ -186,7 +211,7 @@ You can preview your Teams apps running in other high usage Microsoft 365 experi
         **Integrate with Teams**
     :::column-end:::
     :::column span="2":::
-        Blend the features that users love about an existing web app, service, or system with the collaborative features of Teams.
+        Enhance your existing web app, service, or system by integrating with Teams and blending it with collaborative features that users love.
 
         > [!div class="nextstepaction"]
         > [Integrate an existing app](~/samples/integrating-web-apps.md)
@@ -198,7 +223,7 @@ You can preview your Teams apps running in other high usage Microsoft 365 experi
         **A little code goes a long way**
     :::column-end:::
     :::column span="2":::
-        You don't need to be an expert programmer to build a great Teams app. Try one of several the low-code solutions.
+        You do not need to be an expert programmer to develop a high-quality Teams app. Try one of the available low-code solutions to quickly bring your ideas to life.
 
         > [!div class="nextstepaction"]
         > [Create a low-code app](~/samples/teams-low-code-solutions.md)
