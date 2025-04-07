@@ -1,6 +1,6 @@
 ---
 title: Create & Explore Card Types in Teams
-description: In this module, learn what are cards and card actions available to bots in Teams and create a hero, thumbnail and adaptive cards.
+description: In this module, learn about cards and card actions available to bots in Teams, and how to create hero, thumbnail, and Adaptive Cards.
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 09/16/2024
@@ -110,6 +110,8 @@ For more information on text formatting in cards, see [card formatting](~/task-m
 After identifying the common properties for all cards, you can now work with Adaptive Cards, which help you increase engagement and efficiency by adding your actionable content directly into the apps you use.
 
 ## Adaptive Card
+
+[!INCLUDE [adaptive-card-redirect](../../includes/adaptive-card-redirect.md)]
 
 An Adaptive Card is a customizable card that can contain any combination of text, speech, images, buttons, and input fields. For more information, see [Adaptive Cards](https://github.com/microsoft/AdaptiveCards/releases/tag/2020.07).
 
