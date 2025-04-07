@@ -52,7 +52,7 @@ Ensure to install and download the following before proceeding with the Microsof
     > In addition, the [Microsoft 365 Teams Theme](https://moodle.org/plugins/theme_boost_o365teams) plugin is highly recommended.
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Requisite+applications+and+plugins&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fresources%2Fmoodleinstructions%23requisite-applications-and-plugins&contentSourceUrl=https://github.com/MicrosoftDocs/msteams-docs/blob/main/msteams-platform/resources/moodleInstructions.md&documentVersionIndependentId=c74e8703-d539-04af-d552-f6088bda3bb0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Requisite+applications+and+plugins&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fresources%2Fmoodleinstructions%23requisite-applications-and-plugins&contentSourceUrl=https://github.com/MicrosoftDocs/msteams-docs/blob/main/msteams-platform/resources/moodleInstructions.md&documentVersionIndependentId=c74e8703-d539-04af-d552-f6088bda3bb0&platformId=aa3d5a15-ef0f-1580-7998-638a225ff138&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ### Microsoft 365 Moodle plugins
 
@@ -75,7 +75,7 @@ Ensure to install and download the following before proceeding with the Microsof
 <a name='configure-the-connection-between-the-microsoft-365-plugins-and-azure-ad'></a>
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Microsoft+365+Moodle+plugins&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fresources%2Fmoodleinstructions%23microsoft-365-moodle-plugins&contentSourceUrl=https://github.com/MicrosoftDocs/msteams-docs/blob/main/msteams-platform/resources/moodleInstructions.md&documentVersionIndependentId=c74e8703-d539-04af-d552-f6088bda3bb0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Microsoft+365+Moodle+plugins&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fresources%2Fmoodleinstructions%23microsoft-365-moodle-plugins&contentSourceUrl=https://github.com/MicrosoftDocs/msteams-docs/blob/main/msteams-platform/resources/moodleInstructions.md&documentVersionIndependentId=c74e8703-d539-04af-d552-f6088bda3bb0&platformId=aa3d5a15-ef0f-1580-7998-638a225ff138&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Configure the connection between the Microsoft 365 plugins and Microsoft Entra ID
 
@@ -188,7 +188,7 @@ Use the generated `AppID` and `Key` in your Microsoft 365 Moodle Plugins setup p
 1. On the **Teams Settings** page, configure the required settings to enable the Teams app integration. Click the **Check Moodle settings** link to update all required configurations for the Teams integration to work.
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+The+Moodle+tab+for+Microsoft+Teams+information+flow&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fresources%2Fmoodleinstructions%23microsoft-365-moodle-plugins&contentSourceUrl=https://github.com/MicrosoftDocs/msteams-docs/blob/main/msteams-platform/resources/moodleInstructions.md&documentVersionIndependentId=c74e8703-d539-04af-d552-f6088bda3bb0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+The+Moodle+tab+for+Microsoft+Teams+information+flow&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fresources%2Fmoodleinstructions%23microsoft-365-moodle-plugins&contentSourceUrl=https://github.com/MicrosoftDocs/msteams-docs/blob/main/msteams-platform/resources/moodleInstructions.md&documentVersionIndependentId=c74e8703-d539-04af-d552-f6088bda3bb0&platformId=aa3d5a15-ef0f-1580-7998-638a225ff138&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Deploy the Moodle Assistant Bot to Azure
 
@@ -249,7 +249,7 @@ After the resources have completed deploying to Azure, you must configure the Mi
 1. After saving the changes, go back to the **Team Settings** tab, select the **Download manifest file** button, and save the app manifest package to your computer for further use.
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Moodle+bot+information+flow&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fresources%2Fmoodleinstructions%23moodle-bot-information-flow&contentSourceUrl=https://github.com/MicrosoftDocs/msteams-docs/blob/main/msteams-platform/resources/moodleInstructions.md&documentVersionIndependentId=c74e8703-d539-04af-d552-f6088bda3bb0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Moodle+bot+information+flow&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fresources%2Fmoodleinstructions%23moodle-bot-information-flow&contentSourceUrl=https://github.com/MicrosoftDocs/msteams-docs/blob/main/msteams-platform/resources/moodleInstructions.md&documentVersionIndependentId=c74e8703-d539-04af-d552-f6088bda3bb0&platformId=aa3d5a15-ef0f-1580-7998-638a225ff138&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Deploy your Microsoft Teams app
 
@@ -275,7 +275,7 @@ To deploy your app:
 Now that you have the app installed, you can add the tab to any channel that you have access to. To do so, go to the channel, select the **plus** (➕) symbol and select your app from the list. Follow the prompts to finish adding your Moodle course tab to a channel.
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Deploy+your+Microsoft+Teams+app&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fresources%2Fmoodleinstructions%23deploy-your-microsoft-teams-app&contentSourceUrl=https://github.com/MicrosoftDocs/msteams-docs/blob/main/msteams-platform/resources/moodleInstructions.md&documentVersionIndependentId=c74e8703-d539-04af-d552-f6088bda3bb0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Deploy+your+Microsoft+Teams+app&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fresources%2Fmoodleinstructions%23deploy-your-microsoft-teams-app&contentSourceUrl=https://github.com/MicrosoftDocs/msteams-docs/blob/main/msteams-platform/resources/moodleInstructions.md&documentVersionIndependentId=c74e8703-d539-04af-d552-f6088bda3bb0&platformId=aa3d5a15-ef0f-1580-7998-638a225ff138&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Allow automatic creation of Moodle tabs in Microsoft Teams
 
@@ -295,7 +295,7 @@ When a Moodle course is synced, Teams automatically installs the Moodle app in t
 > To share any feature requests or feedback with us, visit our [User Voice page](https://support.microsoft.com/office/uservoice-pages-430e1a78-e016-472a-a10f-dc2a3df3450a).
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Allow+automatic+creation+of+Moodle+tabs+in+Microsoft+Teams&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fresources%2Fmoodleinstructions%23allow-automatic-creation-of-moodle-tabs-in-microsoft-teams&contentSourceUrl=https://github.com/MicrosoftDocs/msteams-docs/blob/main/msteams-platform/resources/moodleInstructions.md&documentVersionIndependentId=c74e8703-d539-04af-d552-f6088bda3bb0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Allow+automatic+creation+of+Moodle+tabs+in+Microsoft+Teams&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fresources%2Fmoodleinstructions%23allow-automatic-creation-of-moodle-tabs-in-microsoft-teams&contentSourceUrl=https://github.com/MicrosoftDocs/msteams-docs/blob/main/msteams-platform/resources/moodleInstructions.md&documentVersionIndependentId=c74e8703-d539-04af-d552-f6088bda3bb0&platformId=aa3d5a15-ef0f-1580-7998-638a225ff138&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## See also
 
