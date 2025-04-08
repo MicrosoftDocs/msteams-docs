@@ -98,14 +98,9 @@ You must define the access token version for your app. This configuration is mad
 
     The Microsoft Entra application app manifest appears.
 
-1. Enter **2** as the value for the `accessTokenAcceptedVersion` property.
+    :::image type="content" source="../assets/images/messaging-extension/api-me-access-token.png" alt-text="Image shows how to configure access token version.":::
 
-    > [!NOTE]
-    > If you've selected **Personal Microsoft accounts only** or **Accounts in any organizational directory (Any Microsoft Entra directory - Multitenant) and personal Microsoft accounts (for example, Skype and Xbox)** during app registration, update the value for the `accessTokenAcceptedVersion` property as **2**.
-
-1. Select **Save**.
-
-    A message pops up on the browser stating that the app manifest was updated successfully.
+1. Ensure that the `requestedAccessTokenVersion` property is set as **2**.
 
 After you've configured the version of access token, you must configure its scope.
 
@@ -247,7 +242,7 @@ After the API-based message extension gets a request header with token, perform 
 
 * **Authenticate**: Verify the token for the audience, scope, issuer, and signature claims to check if the token is for your app. For more claims, see [ID token claims](/entra/identity-platform/access-tokens#validate-tokens).
 
-  The following example shows the token V2 JSON Web Token (JWT) with a header and response:
+  The following example shows the JSON Web Token (JWT) V2 with a header and response:
 
   ```json
   {
