@@ -247,9 +247,7 @@ After the API-based message extension gets a request header with token, perform 
 
 * **Authenticate**: Verify the token for the audience, scope, issuer, and signature claims to check if the token is for your app. For more claims, see [ID token claims](/entra/identity-platform/access-tokens#validate-tokens).
 
-  The following example shows the JSON Web Token (JWT) with a header and response:
-
-  # [Token V2](#tab/token-v2)
+  The following example shows the token V2 JSON Web Token (JWT) with a header and response:
 
   ```json
   {
@@ -275,35 +273,6 @@ After the API-based message extension gets a request header with token, perform 
     "tid": "12345678-aaaa-bbbb-cccc-9876543210ab",
     "uti": "h7DMQwSPAEeiEe62JJUGAA",
     "ver": "2.0"
-    }
-  ```
-
-  # [Token V1](#tab/token-v1)
-
-  ```json
-  {
-  "typ": "JWT",
-  "rh": "0.AhoAv4j5cvGGr0GRqy180BHbR6Rnn7s7iddIqxdA7UZsDxYaABY.",
-  "alg": "RS256",
-  "kid": "q-23falevZhhD3hm9CQbkP5MQyU"
-  }.{
-    "aud": "api://00000002-0000-0000-c000-000000000000",
-    "iss": "https://sts.windows.net/{tenantid}/",
-    "iat": 1537231048,
-    "nbf": 1537231048,
-    "exp": 1537234948,
-    "acr": "1",
-    "aio": "AXQAi/8IAAAA",
-    "amr": ["pwd"],
-    "appid": "c44b4083-3bb0-49c1-b47d-974e53cbdf3c",
-    "appidacr": "0",
-    "ipaddr": "192.168.1.1",
-    "name": "John Doe",
-    "oid": "00000000-0000-0000-0000-000000000000",
-    "scp": "access_as_user",
-    "sub": "AAAAAAAAAAAAAAAAAAAAAIkzqFVrSaSaFHy782bbtaQ",
-    "tid": "12345678-aaaa-bbbb-cccc-9876543210ab",
-    "uti": "fqiBqXLPj0eQa82S-IYFAA",
     }
   ```
 
