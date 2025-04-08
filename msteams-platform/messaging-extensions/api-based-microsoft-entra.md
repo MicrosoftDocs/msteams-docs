@@ -88,11 +88,11 @@ To enable SSO authentication for API-based message extension, follow these steps
 
     Your app is registered in Microsoft Entra ID. You now have the app ID for your API-based message extension app.
 
-## Configure access token version
+## Verify access token version
 
-You must define the access token version for your app. This configuration is made in the Microsoft Entra application app manifest.
+You must ensure the access token version for your app. You can find this configuration in the Microsoft Entra application app manifest.
 
-### To define the access token version
+### To verify the access token version
 
 1. Select **Manage** > **Manifest** from the left pane.
 
@@ -102,7 +102,7 @@ You must define the access token version for your app. This configuration is mad
 
 1. Ensure that the `requestedAccessTokenVersion` property is set as **2**.
 
-After you've configured the version of access token, you must configure its scope.
+After you've verified the version of access token, you must configure its scope.
 
 ## Configure scope for access token
 
