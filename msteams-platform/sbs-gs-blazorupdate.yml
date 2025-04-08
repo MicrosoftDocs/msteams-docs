@@ -63,7 +63,7 @@ items:
      Your Visual Studio is installed in a few minutes.
     
     > [!div class="nextstepaction"]
-    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Install%20Microsoft%20Teams%20Toolkit%20using%20Visual%20Studio&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Install%20Microsoft%20Teams%20Toolkit%20using%20Visual%20Studio&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&platformId=9ffcec0d-9dff-8287-80ea-7e20da7c6758&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
     # [Command line](#tab/cli)
 
@@ -89,7 +89,7 @@ items:
     > Before you can run TeamsFx in PowerShell terminals, you must enable the remote signed execution policy for PowerShell.
 
     > [!div class="nextstepaction"]
-    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Install%20Microsoft%20Teams%20Toolkit%20using%20Command%20line&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Install%20Microsoft%20Teams%20Toolkit%20using%20Command%20line&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&platformId=9ffcec0d-9dff-8287-80ea-7e20da7c6758&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
     ---
 
@@ -112,7 +112,7 @@ items:
         > Contact Teams administrator, if you don't have the option to upload a custom app.
 
     > [!div class="nextstepaction"]
-    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Enable%20custom%20app%20upload&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Enable%20custom%20app%20upload&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&platformId=9ffcec0d-9dff-8287-80ea-7e20da7c6758&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
     ### Create a free Teams developer tenant (optional)
 
@@ -128,7 +128,7 @@ items:
     1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
 
     > [!div class="nextstepaction"]
-    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20a%20free%20Teams%20developer%20tenant%20%28optional%29&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20a%20free%20Teams%20developer%20tenant%20%28optional%29&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&platformId=9ffcec0d-9dff-8287-80ea-7e20da7c6758&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
     ## Get a free Azure account
 
@@ -194,7 +194,7 @@ items:
     You can add backend functionality by adding other ASP.NET Core controllers to your application.
 
     > [!div class="nextstepaction"]
-    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20project%20workspace%20for%20your%20tab%20app&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20project%20workspace%20for%20your%20tab%20app&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&platformId=9ffcec0d-9dff-8287-80ea-7e20da7c6758&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 - title: Build and run your first Teams tab app
   durationInMinutes: 1
@@ -248,7 +248,7 @@ items:
     1. Stop debugging in Visual Studio.
 
     > [!div class="nextstepaction"]
-    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Build%20and%20run%20your%20first%20Teams%20tab%20app&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Build%20and%20run%20your%20first%20Teams%20tab%20app&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&platformId=9ffcec0d-9dff-8287-80ea-7e20da7c6758&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 - title: Preview your first Teams tab app
   durationInMinutes: 1
@@ -298,7 +298,7 @@ items:
         Your resources are provisioned in the Azure portal.
 
     > [!div class="nextstepaction"]
-    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20To%20provision%20your%20tab%20app%20in%20Azure&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20To%20provision%20your%20tab%20app%20in%20Azure&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&platformId=9ffcec0d-9dff-8287-80ea-7e20da7c6758&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
     #### **To deploy your tab app to cloud**
 
@@ -313,7 +313,7 @@ items:
         Your tab app is successfully deployed to the cloud!
 
     > [!div class="nextstepaction"]
-    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20To%20deploy%20your%20tab%20app%20to%20cloud&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20To%20deploy%20your%20tab%20app%20to%20cloud&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&platformId=9ffcec0d-9dff-8287-80ea-7e20da7c6758&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
     #### **To preview your tab app in Teams**    
 
@@ -342,7 +342,7 @@ items:
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/azure-user-info.png" alt-text="Screenshot of your Personal Tab displaying basic information.":::
 
     > [!div class="nextstepaction"]
-    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20To%20preview%20your%20tab%20app%20in%20Teams&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20To%20preview%20your%20tab%20app%20in%20Teams&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&platformId=9ffcec0d-9dff-8287-80ea-7e20da7c6758&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 - title: Create project workspace for your bot app
   durationInMinutes: 1
@@ -412,7 +412,7 @@ items:
     You can add backend functionality by adding other ASP.NET Core controllers to your application.
 
     > [!div class="nextstepaction"]
-    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20your%20bot%20project&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D5&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20your%20bot%20project&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D5&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&platformId=9ffcec0d-9dff-8287-80ea-7e20da7c6758&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 - title: Build and run your first bot app
   durationInMinutes: 1
@@ -427,14 +427,14 @@ items:
       [!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
 
       > [!div class="nextstepaction"]
-      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20a%20tunnel%20using%20dev%20tunnel&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D6&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20a%20tunnel%20using%20dev%20tunnel&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D6&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&platformId=9ffcec0d-9dff-8287-80ea-7e20da7c6758&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
       # [ngrok](#tab/ngrok)
       
       [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
 
       > [!div class="nextstepaction"]
-      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20a%20tunnel%20using%20ngrok&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D6&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20a%20tunnel%20using%20ngrok&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D6&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&platformId=9ffcec0d-9dff-8287-80ea-7e20da7c6758&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
       ---     
 
@@ -475,7 +475,7 @@ items:
       To successfully run your app in Teams, ensure that you've enabled custom app upload in your Teams account. You can learn more about custom app upload in the prerequisites section.
 
      > [!div class="nextstepaction"]
-     > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Build%20and%20run%20your%20first%20bot%20app&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D6&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+     > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Build%20and%20run%20your%20first%20bot%20app&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D6&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&platformId=9ffcec0d-9dff-8287-80ea-7e20da7c6758&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 - title: Preview your first bot app
   durationInMinutes: 1
@@ -521,7 +521,7 @@ items:
         Your resources are provisioned in the Azure portal!
 
      > [!div class="nextstepaction"]
-     > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20To%20provision%20your%20bot%20app%20in%20Azure&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D7&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+     > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20To%20provision%20your%20bot%20app%20in%20Azure&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D7&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&platformId=9ffcec0d-9dff-8287-80ea-7e20da7c6758&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
     #### **To deploy your bot app to cloud**
 
@@ -536,7 +536,7 @@ items:
         Your bot app is successfully deployed to the cloud!
 
      > [!div class="nextstepaction"]
-     > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20To%20deploy%20your%20bot%20app%20to%20cloud&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D7&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+     > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20To%20deploy%20your%20bot%20app%20to%20cloud&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D7&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&platformId=9ffcec0d-9dff-8287-80ea-7e20da7c6758&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
     #### **To preview your bot app in Teams** 
 
@@ -557,7 +557,7 @@ items:
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/learn.png" alt-text="Screenshot of Microsoft Teams displaying the Learn Adaptive Card and Commands.":::
 
      > [!div class="nextstepaction"]
-     > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20To%20preview%20your%20bot%20app%20in%20Teams&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D7&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+     > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20To%20preview%20your%20bot%20app%20in%20Teams&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-blazorupdate%3Ftabs%3Dvs%252Cdev%26tutorial-step%3D7&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-blazorupdate.yml&documentVersionIndependentId=39c2bbc5-632b-60ac-a4ea-7a22ce0b783c&author=surbhigupta&platformId=9ffcec0d-9dff-8287-80ea-7e20da7c6758&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 - title: Congratulations!
   durationInMinutes: 1
