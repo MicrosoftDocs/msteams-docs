@@ -145,7 +145,7 @@ You must ensure the following guidelines for sample prompts and prompt starters:
 
 ### Sample prompts
 
-In case of messaging extension based declarative agent, the [`samplePrompts`](../../../../resources/schema/manifest-schema.md#composeextensionscommands) property provides guidance to users on utilizing the various agents in Microsoft 365 Copilot
+In case of messaging extension based declarative agent, the [`samplePrompts`](../../../../resources/schema/manifest-schema.md#composeextensionscommands) property provides guidance to users on utilizing the agents in Microsoft 365 Copilot
 
 :::image type="content" source="../../../../assets/images/Copilot/bot-based-sample-prompts.png" alt-text="Screenshot shows the sample prompts displayed when the message extension agent is enabled in Microsoft 365 Copilot.":::
 
@@ -161,7 +161,7 @@ Sample prompts are specified using `samplePrompts` property in the app manifest.
 
 Prompt starters guide users on how to start using declarative agents and custom engine agents. You must ensure the following guidelines for prompt starters:
 
-* A declarative agent must have at least three prompts and maximum of six prompts. [*Must fix*]
+* A declarative agent or a custom engine agent must have at least three prompts and maximum of six prompts. [*Must fix*]
 * All prompt starters must be functional and return responses. [*Must fix*]
 
 [Back to top](#validation-guidelines-for-agents)
