@@ -33,7 +33,7 @@ The following image shows how SSO works when a Teams app user attempts to access
 To enable SSO authentication for API-based message extension, follow these steps:
 
 * [Register a new app in Microsoft Entra ID](#register-a-new-app-in-microsoft-entra-id).
-* [Configure access token version](#configure-access-token-version).
+* [Verify access token version](#verify-access-token-version).
 * [Configure scope for access token](#configure-scope-for-access-token).
 * [Authenticat.e token](#authenticate-token).
 * [Update app manifest](#update-app-manifest).
