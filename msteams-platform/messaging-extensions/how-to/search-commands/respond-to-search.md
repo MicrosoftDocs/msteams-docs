@@ -175,7 +175,7 @@ The following code sample shows configuration response that appears when the use
 }
 ```
 
-The `value` property contains a URL `https://your-configuration-url.com` that opens a configuration page, which allows users to input necessary details and submit the configuration.
+The `value` property contains a URL `https://<your-ngrok-subdomain>.ngrok-free.app/searchSettings.html` that opens a configuration page, which allows users to input necessary details and submit the configuration.
 
 :::image type="content" source="../../../assets/images/configuration-response-me.png" alt-text="The screenshot shows the configuration response for message extension.":::
 
@@ -197,7 +197,7 @@ The `value` property contains a URL `https://your-configuration-url.com` that op
   ```
 
 4. Calling `notifySuccess(configData)` sends the configuration values back to Teams.
-5. Once `notifySuccess()` is executed, the configuration window automatically closes and the messaging extension is set up.
+5. Once `notifySuccess()` is executed, the configuration window automatically closes and the messaging extension is successfully set up.
 
 ### Response card types and previews
 
