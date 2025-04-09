@@ -106,7 +106,7 @@ The following JSON response is an example of a `config` response received from t
                 {
                     "type": "openUrl",
                     "title": "Open url",
-                    "value": "https://ct3h34ng-7130.inc1.devtunnels.ms/searchSettings.html?settings="
+                    "value": "https://example.com/searchSettings.html?settings="
                 }
             ]
         },

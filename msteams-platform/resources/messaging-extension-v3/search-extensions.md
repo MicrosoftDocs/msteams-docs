@@ -128,6 +128,7 @@ protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtens
     {
         escapedSettings = Uri.EscapeDataString(userConfigSettings);
     }
+
     return new MessagingExtensionResponse
     {
         ComposeExtension = new MessagingExtensionResult
@@ -160,7 +161,7 @@ The following response is the configuration response that appears when the user 
             "actions": [
                 {
                     "type": "openUrl",
-                    "value": "https://7a03-2405-201-a00c-7191-b472-ff64-112d-f806.ngrok-free.app"
+                    "value": "https://example.ngrok-free.app"
                 }
             ]
         }
