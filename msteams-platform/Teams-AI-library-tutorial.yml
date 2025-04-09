@@ -7,15 +7,15 @@ metadata:
   level: Beginner
   ms.date: 06/19/2024
   ms.topic: interactive-tutorial
-  nextTutorialHref: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md
-  nextTutorialTitle: Back to Teams AI library
+  nextTutorialHref: /microsoft-365-copilot/extensibility/overview-custom-engine-agent.md
+  nextTutorialTitle: Back to custom engine agent
   ms.custom: mvc
   ms.localizationpriority: high
 items:
 - durationInMinutes: 1
   content: |
 
-    This tutorial shows how to create a custom engine agent using Teams Toolkit to chat with your data on OpenAI or Azure OpenAI.
+    This tutorial shows how to create a custom engine agent using Teams Toolkit to chat with your data on OpenAI.
 
     In this tutorial, you'll learn:
 
@@ -149,30 +149,6 @@ items:
         Responses should be in a short journalistic style with no more than 80 words. 
         ```
         :::image type="content" source="../msteams-platform/assets/images/bots/prompts-chat.png" alt-text="Screenshot shows skprompt in explorer in Visual Studio Code.":::
-
-    1. Go to the `config.json` file under `prompts/chat`. Add the following code inside the `completion` brackets and replace the `endpoint`, `index_name`, and `key` values with your Azure AI Search resource details:
-
-        ```json
-           "data_sources": [
-             {
-                    "type": "azure_search",
-                    "parameters": {
-                         "endpoint": "AZURE-AI-SEARCH-ENDPOINT",
-                         "index_name": "YOUR-INDEX_NAME",
-                         "authentication": {
-                               "type": "api_key",
-                               "key": "AZURE-AI-SEARCH-KEY"
-                           }
-                     }
-               }
-             ]
-        ```
-
-    1. Go to `src/app/app.js` file and add the following variable inside `OpenAIModel`: 
-
-        ```javascript
-        azureApiVersion: '2024-02-15-preview'
-        ```
  
     1. From the left pane, select **Run and Debug (Ctrl+Shift+D)**.
 
@@ -202,4 +178,4 @@ items:
   durationInMinutes: 1
   content: |
 
-   Congratulations, you completed this tutorial! If you're interested in learning more about the source code, visit [Azure OpenAI sample on Teams AI library GitHub repository.](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai-apps/h.datasource-azureOpenAI)
+   Congratulations, you completed this tutorial!
