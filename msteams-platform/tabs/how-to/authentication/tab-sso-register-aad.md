@@ -112,11 +112,11 @@ Register your app in Microsoft Entra ID and configure the tenancy and app's plat
 
 </details>
 
-### Verify access token version
+### Configure access token version
 
 You must define the access token version for your app. You can find this configuration in the Microsoft Entra application app manifest.
 
-#### To verify the access token version
+#### To configure the access token version
 
 1. Select **Manage** > **Manifest** from the left pane.
 
@@ -124,14 +124,20 @@ You must define the access token version for your app. You can find this configu
 
     The Microsoft Entra application app manifest appears.
 
-1. Ensure that the value for the `requestedAccessTokenVersion` property is set to **2**.
+1. Ensure that the value for the `requestedAccessTokenVersion` property is set to **2**. If it isn't, set it to **2**.
 
     > [!NOTE]
     > If you've selected **Personal Microsoft accounts only** or **Accounts in any organizational directory (Any Microsoft Entra directory - Multitenant) and personal Microsoft accounts (for example, Skype and Xbox)** during app registration, update the value for the `requestedAccessTokenVersion` property as 2.
 
    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-manifest-value.png" alt-text="Value for accepted access token version":::
 
-    After you've verified the version of access token, you must configure its scope.
+1. Select **Save**
+
+    A message pops up on the browser stating that the app manifest was updated successfully.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-aad-manifest-msg.png" alt-text="Manifest updated message":::
+
+After you've verified and configured the version of access token, you must configure its scope.
 
 ### Configure scope for access token
 
