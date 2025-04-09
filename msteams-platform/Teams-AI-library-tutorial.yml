@@ -15,7 +15,7 @@ items:
 - durationInMinutes: 1
   content: |
 
-    This tutorial shows how to create a custom engine agent with Teams AI library using Teams Toolkit to chat with your data on OpenAI or Azure OpenAI. Teams AI library streamlines the process of building intelligent Teams apps by using the AI components and Large Language Models (LLMs) of your choice.
+    This tutorial shows how to create a custom engine agent using Teams Toolkit to chat with your data on OpenAI or Azure OpenAI.
 
     In this tutorial, you'll learn:
 
