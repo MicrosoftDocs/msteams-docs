@@ -129,7 +129,7 @@ You must define the access token version for your app. You can find this configu
     > [!NOTE]
     > If you've selected **Personal Microsoft accounts only** or **Accounts in any organizational directory (Any Microsoft Entra directory - Multitenant) and personal Microsoft accounts (for example, Skype and Xbox)** during app registration, update the value for the `requestedAccessTokenVersion` property as 2.
 
-   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-manifest-value.png" alt-text="Value for accepted access token version" lightbox="../../../assets/images/authentication/teams-sso-tabs/azure-manifest-value.png":::
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-manifest-value.png" alt-text="Value for access token version" lightbox="../../../assets/images/authentication/teams-sso-tabs/azure-manifest-value.png":::
 
 1. Select **Save**.
 
