@@ -33,7 +33,7 @@ The following image shows how SSO works when a Teams app user attempts to access
 To enable SSO authentication for API-based message extension, follow these steps:
 
 * [Register a new app in Microsoft Entra ID](#register-a-new-app-in-microsoft-entra-id).
-* [Verify access token version](#verify-access-token-version).
+* [Configure access token version](#configure-access-token-version).
 * [Configure scope for access token](#configure-scope-for-access-token).
 * [Authenticat.e token](#authenticate-token).
 * [Update app manifest](#update-app-manifest).
@@ -88,11 +88,11 @@ To enable SSO authentication for API-based message extension, follow these steps
 
     Your app is registered in Microsoft Entra ID. You now have the app ID for your API-based message extension app.
 
-## Verify access token version
+## Configure access token version
 
 You must ensure the access token version for your app. You can find this configuration in the Microsoft Entra application app manifest.
 
-### To verify the access token version
+### To configure the access token version
 
 1. Select **Manage** > **Manifest** from the left pane.
 
@@ -105,7 +105,7 @@ You must ensure the access token version for your app. You can find this configu
     > [!NOTE]
     > If you've selected **Personal Microsoft accounts only** or **Accounts in any organizational directory (Any Microsoft Entra directory - Multitenant) and personal Microsoft accounts (for example, Skype and Xbox)** during app registration, update the value for the `requestedAccessTokenVersion` property as 2.
 
-1. Select **Save**
+1. Select **Save**.
 
     A message pops up on the browser stating that the app manifest was updated successfully.
 
