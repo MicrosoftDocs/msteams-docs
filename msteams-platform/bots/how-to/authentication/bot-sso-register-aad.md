@@ -125,7 +125,7 @@ You must define the access token version for your app in the Microsoft Entra app
 
 1. Enter **2** as the value for the `accessTokenAcceptedVersion` property.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/azure-manifest-value.png" alt-text="Screenshot shows the Value for accepted access token version." :::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/azure-manifest-value.png" alt-text="Screenshot shows the Value for accepted access token version." lightbox="../../../assets/images/authentication/teams-sso-bots/azure-manifest-value.png":::
 
 1. Select **Save**.
 
