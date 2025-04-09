@@ -2,7 +2,7 @@
 title: Build a custom engine agent
 metadata:
   title: Tutorial - Build Custom Engine Agent
-  description: Learn how to create a custom engine agent using Teams AI library and Teams Toolkit, and configure custom engine agent.
+  description: Learn how to create a custom engine agent using Teams Toolkit and configure custom engine agent.
   audience: Developer
   level: Beginner
   ms.date: 06/19/2024
@@ -15,7 +15,7 @@ items:
 - durationInMinutes: 1
   content: |
 
-    This tutorial shows how to create a custom engine agent using Teams Toolkit to chat with your data on OpenAI.
+    This tutorial shows how to create a custom engine agent using Teams Toolkit with OpenAI.
 
     In this tutorial, you'll learn:
 
@@ -136,7 +136,7 @@ items:
   durationInMinutes: 1
   content: |
 
-   After you create your custom engine agent, let's configure it to interact with your data on OpenAI.
+   After you create your custom engine agent, let's configure it.
 
     ## Configure and debug your custom engine agent
 

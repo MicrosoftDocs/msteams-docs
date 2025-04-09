@@ -821,7 +821,7 @@ If you want your custom engine agent to support Microsoft 365 Copilot Chat, add 
     
     ```
 
-1. In your app manifest, set the `scopes` as `personal`:
+1. In your app manifest, set the `scopes` to `personal` for `bots` and `commandLists`:
 
     ```json
     "bots": [ 
