@@ -7,176 +7,184 @@ ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.date: 02/06/2025
 ---
+
 # Plan responsive tabs for Teams mobile
 
-Teams platform offers the opportunity to build apps on mobile and desktop. Your app users can prefer either desktop or mobile, or both. The users can prepare data on desktop but consume and share more data using mobile. The key to build any app is to understand and meet the user's needs.
+Teams platform offers the opportunity to build apps that run seamlessly on both mobile and desktop. Users may choose to work on either platform depending on their needs—data entry might occur on desktop, while data consumption and sharing may be more prominent on mobile. The critical aspect of building any app is to understand and meet your users' needs through careful planning, especially when transitioning from desktop to mobile experiences.
 
-Capabilities such as bots, message extensions, and connectors work seamlessly on desktop and mobile clients. However, building tabs and dialogs (referred as task modules in TeamsJS v1.x) require planning for hosting your web experience on Teams mobile.
+Capabilities such as bots, message extensions, and connectors operate consistently across platforms. However, building tabs and dialogs (referred to as task modules in TeamsJS v1.x) requires specific planning to ensure your web experience is optimized for Teams mobile.
 
-Consider the following before you implement responsive tabs for your app in Teams mobile:
+Below are key considerations before implementing responsive tabs for your Teams mobile app:
 
-* **App functionalities:** Consider cross-device functionality for the Teams app.
+## Considerations for Responsive Tabs Implementation
 
-    For example, if you've a well performing app on desktop, you can explore to build similar app on mobile. Initially, it can be difficult to shift the entire desktop experience on mobile, but you can start with basic and common scenarios. Add functionalities and capabilities after you gather more insights and user feedback.
+1. **App Functionalities:**  
+   - Evaluate the cross-device functionality of your Teams app.  
+   - If your desktop app performs well, consider developing a mobile version that starts by addressing basic and common scenarios.  
+   - Expand your mobile app functionality over time as you gather user feedback and usage insights.
 
-* **User roles:** Ensure to target appropriate user role on Teams mobile.
+2. **User Roles:**  
+   - Identify and target the appropriate user role for Teams mobile.  
+   - For example, if your app provides data visualization tools for end users such as data analysts and senior managers, decide whether to serve all desktop user roles initially or focus on a role with a larger base of early adopters on smaller screens.  
+   - Starting with a user role like data analysts may be more effective, and subsequent releases can support additional roles.
 
-    For example, if you're building an app that provides data visualization tools to end users such as data analysts and senior managers, both can use your app on Teams mobile. You can decide to cater to all the roles that you have on your desktop app. We recommend you to start with a user role that has larger base and possible early adopters for smaller screen experience.
-
-    In this case, the data analysts are the appropriate user role to target first. You can gradually add functionalities to support other user roles on your Teams mobile.
+---
 
 ## Understand different stages to build apps
 
-After you've identified the functionalities and user roles, it's time to understand the following three stages to plan any app on Teams mobile and enhance user experience:
+Once you have identified the functionalities and user roles for your application, consider the following three stages. Each stage represents a step in enhancing user experience on Teams mobile:
 
-| Stages | Description |
-| ----------- | ------------- |
-| **Consumption**| The first value that you want to deliver for your mobile users must be the right viewing experience on Teams mobile. To build an app on mobile, you can start with the consumption experience for your users. Since the mobile world has made scrolling for content a common practice, you can show relevant information. Additionally, you can use engagement mechanisms, such as notifications to inform updates. |
-| **Quick actions** | The next value that your users might want is the basic editing and querying experience on mobile. After your users start consuming the content on mobile, you can scale your app to the next step by migrating some actions from desktop app. You can also optimize and build new actions for mobile. |
-| **Enablement** | The final value that you can deliver to your users is the parity between desktop and mobile. As your users engage with your app, provide full immersive experience on mobile, either at par or better than desktop experience. To provide good experience for your users, make all use-cases, actions, and UI or UX elements responsive on mobile. </br> For more information on the design guidelines, see [design process for Teams apps](design-teams-app-process.md).|
+| Stages          | Description |
+| --------------- | ----------- |
+| **Consumption** | This initial stage focuses on delivering a strong viewing experience for mobile users. As mobile users frequently scroll through content, ensure that your app displays the most relevant information. Utilize engagement mechanisms such as notifications to communicate updates effectively. |
+| **Quick actions** | In this stage, introduce basic editing and querying features on mobile. Once users are accustomed to consuming content on mobile, gradually incorporate desktop actions that have been optimized or redesigned for mobile interaction. |
+| **Enablement**  | The final stage aims to deliver a fully immersive mobile experience that is on par with or even superior to the desktop version. Ensure that all use cases, actions, and UI/UX components are responsive and optimized for mobile devices. For additional design guidelines, see [design process for Teams apps](design-teams-app-process.md). |
+
+---
 
 ## Use cases
 
-You can go through the following use cases to understand how to plan different types of apps for Teams mobile:
+The following use cases illustrate how to plan different types of apps for Teams mobile by progressing through the stages of Consumption, Quick Actions, and Enablement. Each example describes a scenario with practical guidance for developers.
 
 <br>
 
 <details>
-
 <summary><b>Dashboarding and data visualization apps</b></summary>
 
-You can understand how to plan responsive tabs for dashboarding and data visualization apps on Teams mobile platform.
+This section explains how to plan responsive tabs for dashboarding and data visualization apps on the Teams mobile platform.
 
-**Consumption:**
+### Consumption
 
-In the first stage, you can implement the most basic consumption experience, to view data. The purpose of any app in the domain is to show data in the form of visualizations. In your app, you can show recently viewed visualizations on desktop, or list of all authorized charts for the users. After creating dashboards on desktop, users can access the information using mobile. You can show a detailed view of any chart selected by user as an expanded view in your tabs or by using dialogs.
+At this stage, focus on providing the most basic consumption experience to enable users to view data. The primary objective is to display data in the form of visualizations. Consider implementing features such as:
 
-You can show the following information:
+- Displaying recently viewed visualizations from the desktop.
+- Listing all authorized charts for the users.
+- Providing an expanded view of a selected chart using tabs or dialogs.
 
-* Dashboards and summaries.
-* Data visuals, maps, and infographics.
-* Charts, graphs, and tables.
+Key displayed information may include:
+- Dashboards and summaries.
+- Data visuals, maps, and infographics.
+- Charts, graphs, and tables.
 
-:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-consumption.png" alt-text="Show the data in the form of visualization."lightbox="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-consumption.png":::
+:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-consumption.png" alt-text="Show the data in the form of visualization." lightbox="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-consumption.png" :::
 
-**Quick actions:**
+### Quick actions
 
-In the second stage, the users can work on the existing charts and visuals from desktop experience. You can introduce the following actions:
+In the second stage, transition to allowing users to interact with existing visuals from the desktop. Implement functionalities such as:
 
-* Search content.
-* Filter data.
-* Create bookmarks.
+- Search content.
+- Filter data.
+- Create bookmarks.
 
-:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-quick-actions.png" alt-text="Quick actions on the existing chart and visuals."lightbox="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-quick-actions.png":::
+These quick actions make it easier for users to perform essential tasks without overwhelming them with the full desktop feature set.
 
-**Enablement:**
+:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-quick-actions.png" alt-text="Quick actions on the existing chart and visuals." lightbox="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-quick-actions.png" :::
 
-In the third stage, enable users to create content such as, charts and graphics from scratch. Plan to introduce all the capabilities in your app for mobile. For example, you can use dialogs to help access specific data items with detailed view.
+### Enablement
 
-You can provide following access to users:
+The final stage enhances the mobile experience by enabling users to create content from scratch. In this phase, you may enable features such as:
 
-* Modify title and description.
-* Insert data items to create visualizations.
-* Share visualizations in a channel or group chat.
+- Modifying titles and descriptions.
+- Inserting data items to create custom visualizations.
+- Sharing visualizations in a channel or group chat.
 
-:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-enablement.png" alt-text="Enable users to create content such as charts graphics."lightbox="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-enablement.png":::
+This stage ensures parity with, or an improvement over, the desktop experience.
+
+:::image type="content" source="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-enablement.png" alt-text="Enable users to create content such as charts and graphics." lightbox="../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-enablement.png" :::
 
 <br>
-
 </details>
 
 <br>
 
 <details>
-
 <summary><b>Task boarding apps</b></summary>
 
-You can understand how to plan responsive tabs for task boarding apps on Teams mobile platform.
+This section discusses best practices for planning responsive tabs for task boarding apps on Teams mobile.
 
-**Consumption:**
+### Consumption
 
-In the first stage, your app can show the list of tasks to the user in a vertical stack. If there are multiple categories of tasks, such as **Proposed**, **Active**, and **Closed** then provide filters for showing grouped tasks or as headers to see the grouped tasks.
+Begin by offering a simple view that displays a vertical list of tasks. If tasks are categorized (e.g., **Proposed**, **Active**, and **Closed**), add filters or headers to distinguish these groups.
 
-:::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-consumption.png" alt-text="Shows the list of tasks in a vertical stack."lightbox="../../assets/images/app-fundamentals/taskboarding-apps-consumption.png":::
+:::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-consumption.png" alt-text="Shows the list of tasks in a vertical stack." lightbox="../../assets/images/app-fundamentals/taskboarding-apps-consumption.png" :::
 
-**Quick actions:**
+### Quick actions
 
-In the second stage, you can provide the following functionalities to users:
+Enhance the task boarding experience with actions that reduce cognitive load and improve usability:
 
-* Create tasks or items with mandatory fields to reduce cognitive load of the users.
-* Change the board type or view.
-* Review tasks by expanding the view.
-* Use dialogs to see detailed view.
-* Move the tasks into different categories.
-* Share relevant tasks in chats and channels through emails and activity feed.
+- Allow users to create tasks or items with pre-defined mandatory fields.
+- Enable a switch between board types or views.
+- Provide the option to expand tasks for detailed review using dialogs.
+- Facilitate moving tasks between different categories.
+- Offer sharing options for tasks via chats, channels, or emails.
+- Integrate activity feed notifications to alert users about task changes.
 
-:::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-quick-actions.png" alt-text="Create tasks to reduce cognitive load of the users."lightbox="../../assets/images/app-fundamentals/taskboarding-apps-quick-actions.png":::
+:::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-quick-actions.png" alt-text="Create tasks to reduce cognitive load of the users." lightbox="../../assets/images/app-fundamentals/taskboarding-apps-quick-actions.png" :::
 
-**Enablement:**
+### Enablement
 
-In the third stage, you can enable users with the following features:
+Conclude with enabling full functionality on mobile by incorporating features such as:
 
-* Add new projects and boards.
-* Add and modify different categories, such as **Proposed**, **Active**, and **Closed**.
-* Configure the tasks for comments, attachments, and other complex features.
+- The ability to add new projects and boards.
+- Options to add or modify various task categories (e.g., **Proposed**, **Active**, **Closed**).
+- Advanced configurations for comments, attachments, and other complex task features.
 
-:::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-enablement.png" alt-text="Enable the user experience by adding projects and boards."lightbox="../../assets/images/app-fundamentals/taskboarding-apps-enablement.png":::
+:::image type="content" source="../../assets/images/app-fundamentals/taskboarding-apps-enablement.png" alt-text="Enable the user experience by adding projects and boards." lightbox="../../assets/images/app-fundamentals/taskboarding-apps-enablement.png" :::
 
 <br>
-
 </details>
 
 <br>
 
 <details>
-
 <summary><b>Co-authoring and whiteboarding apps</b></summary>
 
-You can understand how to plan responsive tabs for co-authoring and whiteboarding apps on Teams mobile platform.
+This section details how to plan responsive tabs for co-authoring and whiteboarding apps on Teams mobile.
 
-**Consumption:**
+### Consumption
 
-In the first stage, you can consider desktop experience to show the content and assets in your app.  You can show the following functions:
+In the initial stage, prioritize displaying content similar to the desktop experience. Include core functionalities such as:
 
-* Comments or feedback.
-* Zoom in or out.
-* Current stage or progress of a pending document.
+- Displaying comments or feedback.
+- Enabling zoom in/out for content clarity.
+- Indicating the current stage or progress of pending documents.
 
-:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-consumption.png" alt-text="Shows content and assets in desktop experience."lightbox="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-consumption.png":::
+:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-consumption.png" alt-text="Shows content and assets in desktop experience." lightbox="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-consumption.png" :::
 
-**Quick actions:**
+### Quick actions
 
-In the second stage, you can introduce the following actions:
+Next, introduce interactive capabilities tailored for the mobile environment:
 
-* Create a new board for collaboration or new documents for signing.
-* Share boards internally and with guests.
-* Configure admin permissions.
+- Allow users to create a new board for collaboration or initiate new documents.
+- Enable internal and guest sharing of boards.
+- Provide options to configure administrative permissions.
 
 > [!TIP]
-> You expose actions, which can be shown easily on the small screens.
+> Introducing these quick actions helps ensure the app’s functionality is accessible on smaller screens without overwhelming the interface.
 
-:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-quick-actions.png" alt-text="Introduces to create new board for collaboration."lightbox="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-quick-actions.png":::
+:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-quick-actions.png" alt-text="Introduces to create new board for collaboration." lightbox="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-quick-actions.png" :::
 
-**Enablement:**
+### Enablement
 
-In the third stage, provide complete experience to your users. You can enable users with the following features:
+Finally, deliver a complete experience by incorporating comprehensive editing and interaction features, including:
 
-* Adding text, shapes, and quick notes.
-* Navigate around content.
-* Add layers and filters.
-* Delete, undo, and redo operations.
-* Access camera and microphone using TeamsJS APIs. For more information on device capabilities, see [device capabilities overview](../device-capabilities/device-capabilities-overview.md).
+- Adding text, shapes, and quick notes.
+- Navigating smoothly around the content.
+- Adding layers and filters for enhanced editing.
+- Providing options for delete, undo, and redo operations.
+- Granting access to camera and microphone via TeamsJS APIs. For a detailed explanation of device capabilities, see [device capabilities overview](../device-capabilities/device-capabilities-overview.md).
 
-:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-enablement.png" alt-text="Enable user experience by adding text shapes and quick notes and other capabilities."lightbox="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-enablement.png":::
+:::image type="content" source="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-enablement.png" alt-text="Enable user experience by adding text shapes and quick notes and other capabilities." lightbox="../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-enablement.png" :::
 
 <br>
-
 </details>
+
+---
 
 ## See also
 
-* [Designing your tab](../../tabs/design/tabs.md)
-* [Designing your bot](../../bots/design/bots.md)
-* [Designing dialogs](../..//task-modules-and-cards/task-modules/design-teams-task-modules.md)
-* [Microsoft Teams Store validation guidelines](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
-* [Tabs on mobile](../../tabs/design/tabs-mobile.md)
+- [Designing your tab](../../tabs/design/tabs.md)
+- [Designing your bot](../../bots/design/bots.md)
+- [Designing dialogs](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
+- [Microsoft Teams Store validation guidelines](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
+- [Tabs on mobile](../../tabs/design/tabs-mobile.md)
