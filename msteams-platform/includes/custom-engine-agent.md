@@ -8,10 +8,9 @@
    >
    >    :::image type="content" source="../assets/images/copilot-extension-vsc.png" alt-text="Screenshot shows how to enable custom engine agent extension in Teams Toolkit.":::
    >
-   > 2. [Set up your data on Azure OpenAI](/microsoftteams/platform/teams-ai-library-tutorial?tutorial-step=2)
-   > 3. Perform the step 1. to step 4. from [create your custom engine agent](/microsoftteams/platform/teams-ai-library-tutorial?tutorial-step=3) and ensure you select the **Basic AI Chatbot Works in Teams and Microsoft 365 Copilot** in Teams Toolkit. Continue with the rest of steps to create your custom engine agent.<br>
+   > 2. Perform the step 1. to step 4. from [create your custom engine agent](/microsoftteams/platform/teams-ai-library-tutorial?tutorial-step=3) and ensure you select the **Basic AI Chatbot Works in Teams and Microsoft 365 Copilot** in Teams Toolkit. Continue with the rest of steps to create your custom engine agent.<br>
    >    :::image type="content" source="../assets/images/Copilot/basic-ai-chat.png" alt-text="Screenshot shows the basic AI chatbot in Teams Toolkit.":::<br>
-   > 4. [Configure your custom engine agent](/microsoftteams/platform/teams-ai-library-tutorial?tutorial-step=4). Ensure you perform the following steps before your debug:
+   > 3. [Configure your custom engine agent](/microsoftteams/platform/teams-ai-library-tutorial?tutorial-step=4). Ensure you perform the following steps before your debug:
    >     * Ensure that the app manifest contains `copilotAgents` and its sub property `customEngineAgents`:
    >
    >        ```json
