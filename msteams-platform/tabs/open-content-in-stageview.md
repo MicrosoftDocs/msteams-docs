@@ -1,6 +1,6 @@
 ---
 title: Multi-window Experience for App Content
-author: Rajeshwari-v
+author: surbhigupta
 description: Learn the types of Stageview, full screen UI component invoked to surface your app content. Open content in multi-window using deep links, Adaptive Cards or TeamsJS.
 ms.topic: conceptual
 ms.author: surbhigupta
@@ -86,6 +86,32 @@ When `openMode` isn't defined, the content opens by default in Collaborative Sta
 >
 > * The `openMode` values are case sensitive. If you don't use the correct casing, the content opens in Stageview Modal.
 > * When pop-out experience isn't supported, for example in a Teams web client, the content opens in Stageview Modal even when the `openMode` property is defined.
+
+</details>
+
+<details>
+<summary id="closestage" ><b>close() function</b></summary>
+
+When a Stageview is open, `close()` function allows you to programmatically close the Stageview after user action. This is an optional function that you can integrate into your Microsoft built apps. If the function is called from outside a Stageview, the close action isn't performed.
+
+Initialize your app using `microsoftTeams.app.initialize()` and implement `close()` function from the [`self` module](/javascript/api/@microsoft/teams-js/stageview.self):
+
+```typescript
+// App Initialize
+microsoftTeams.app.initialize();
+
+// User defined function to close the Stageview in Teams
+function closeStageView() {
+    // Attempt to close the Stageview using close() function
+    microsoftTeams.stageView.self.close()
+        .then(() => {
+            console.log("Stage view closed successfully."); // Log success message
+        })
+        .catch((error) => {
+            console.error("Error closing stage view:", error); // Log error if closing fails
+        });
+}
+```
 
 </details>
 
