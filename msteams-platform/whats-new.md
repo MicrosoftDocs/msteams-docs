@@ -461,16 +461,25 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-* ***April 08, 2025***: [Increase app engagement with custom activity icons in activity feed notifications](/graph/teams-send-activityfeednotifications?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json&tabs=desktop%2Chttp#custom-activity-icons-in-activity-feed-notifications).
-* ***March 17, 2025***: [Precache your tab app to optimize its initial load time](tabs/how-to/app-caching.md#precaching-tab-apps).
-* ***February 19, 2025***: [Add a stop stream generation button for streaming bot messages](bots/streaming-ux.md).
-* ***February 03, 2025***: [Create personal scope apps that integrate seamlessly with Public Switched Telephone Network (PSTN) and Teams-to-Teams calls](apps-in-teams-meetings/build-tabs-for-calling.md).
+* ***April 14, 2025***: [Increase app engagement with custom activity icons in activity feed notifications](/graph/teams-send-activityfeednotifications?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json&tabs=desktop%2Chttp#custom-activity-icons-in-activity-feed-notifications).
+* ***April 10, 2025***: [Introducing custom engine agents support for Microsoft 365 Copilot Chat.](bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#add-support-for-microsoft-365-copilot-chat)
 
 :::column-end:::
 :::row-end:::
 
 <br/>
 
+<details>
+
+<summary><b>2025</b></summary>
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ---------------- |
+| 17/03/2025 | Precache your tab app to optimize its initial load time | Build tabs > Tab features > [App caching for your tab app](tabs/how-to/app-caching.md#precaching-tab-apps) |
+| 19/02/2025 | Introducing stop stream generation button for streaming bot messages | Build bots > Bot user experience > [Stream bot messages](bots/streaming-ux.md) |
+| 03/02/2025 | Create personal scope apps that integrate seamlessly with Public Switched Telephone Network (PSTN) and Teams-to-Teams calls | Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > [Build tabs for meeting](apps-in-teams-meetings/build-tabs-for-meeting.md) |
+
+</details>
 </br>
 
 <details>
