@@ -15,7 +15,7 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 <!------
 
-## Microsoft Build 2024 :::image type="icon" source="assets/images/bullhorn.png" border="false"
+## Microsoft Build 2025 :::image type="icon" source="assets/images/bullhorn.png" border="false"
 
 ---------->
 
@@ -459,7 +459,8 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-***April 10, 2025***: [Introducing custom engine agents support for Microsoft 365 Copilot Chat.](bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#add-support-for-microsoft-365-copilot-chat)
+* ***April 14, 2025***: [Increase app engagement with custom activity icons in activity feed notifications](/graph/teams-send-activityfeednotifications?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json&tabs=desktop%2Chttp#custom-activity-icons-in-activity-feed-notifications).
+* ***April 10, 2025***: [Introducing custom engine agents support for Microsoft 365 Copilot Chat.](bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#add-support-for-microsoft-365-copilot-chat)
 
 :::column-end:::
 :::row-end:::
