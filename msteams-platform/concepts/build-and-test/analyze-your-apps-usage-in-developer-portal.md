@@ -82,10 +82,13 @@ After you have selected your desired filters, you can explore the following indi
 
    | Metric | Definition |
    | :-----------------------| :------------------------------------------------------------------------------------------------------|
-   | New users or tenants | Active users or tenants who are new and haven't used your app. |
-   | Returning users or tenants | Active users or tenants who used your app during a given R30 (Rolling 30 days) time period and the immediately preceding R30 time period. |
-   | Resurrected users or tenants | Active users or tenants who used your app one or more times before but not in the immediately preceding R30 time period. |
-   | Lapsed users or tenants | Active users or tenants who weren't seen during a given R30 time period but were seen during the immediately preceding R30 time period. |
+   | New users | Active users who are new and haven't used your app. |
+   | Returning users | Active users who used your app during a given R30 (Rolling 30 days) time period and the immediately preceding R30 time period. |
+   | Resurrected users | Active users who used your app one or more times before but not in the immediately preceding R30 time period. |
+   | Lapsed users | Active users who weren't seen during a given R30 time period but were seen during the immediately preceding R30 time period. |
+
+   > [!NOTE]
+   > All user’s data are counted separately and tenant can have multiple users using the app.
 
 ### Usage intensity
 
