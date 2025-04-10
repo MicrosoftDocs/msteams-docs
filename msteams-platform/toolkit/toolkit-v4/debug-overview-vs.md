@@ -27,8 +27,6 @@ Microsoft Teams Toolkit automates app startup services, initiates debugging, and
 
 Teams Toolkit automates the local debugging process for the following key features:
 
-* Prepare Teams app dependencies: Teams Toolkit prepares local debug dependencies and registers your Teams app in your tenant account. For Bot and Message Extension apps, Teams Toolkit registers and configures bot.
-
 * Start debugging: You can perform debugging with a single operation, press **F5** to start debugging. Teams Toolkit builds code, starts services, and launches the app in your browser.
 
 * Toggle breakpoints: You can toggle breakpoints in the source code of tabs, bots, message extensions, and Azure Functions. The breakpoints execute when you interact with the Teams app in your web browser.
