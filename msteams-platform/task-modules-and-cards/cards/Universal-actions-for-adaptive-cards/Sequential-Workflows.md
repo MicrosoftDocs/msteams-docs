@@ -107,6 +107,8 @@ The following code provides an example of an invoke request received on bot side
 
 The following code provides an example of an invoke response to return Adaptive Cards:
 
+# [.NET](#tab/csharp)
+
 ```C#
 string cardJson = "<adaptive card json>";
 var card = JsonConvert.DeserializeObject(cardJson);
@@ -118,6 +120,21 @@ var adaptiveCardResponse = JObject.FromObject(new
     value = card
  });
 ```
+
+# [Python](#tab/python)
+
+```python
+card_json = "<adaptive card json>"
+card = json.loads(card_json)
+
+adaptive_card_response = {
+    "statusCode": 200,
+    "type": "application/vnd.microsoft.adaptive.card",
+    "value": card
+}
+```
+
+---
 
 ## Code samples
 

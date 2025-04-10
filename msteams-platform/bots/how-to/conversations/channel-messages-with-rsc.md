@@ -208,7 +208,7 @@ The following steps guide you to upload and validate bot that receives all chat 
 
 The following code provides an example of the RSC permissions:
 
-# [C#](#tab/dotnet)
+# [.NET](#tab/dotnet)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onmessageactivityasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-token-app/csharp/Bots/TokenBot.cs#L52)
@@ -241,6 +241,19 @@ this.onMessage(async (context, next) => {
    await next();
 });
 
+```
+
+# [Python](#tab/python)
+
+```python
+# Handle when a message is addressed to the bot.
+# When rsc is enabled the method will be called even when bot is addressed without being @mentioned.
+
+async def on_message_activity(self, turn_context: TurnContext):
+    # Sends a message to the sender of the incoming activity.
+    await turn_context.send_activity(
+        MessageFactory.text("Using RSC the bot can receive messages across channels or chats in team without being @mentioned.")
+    )
 ```
 
 ---
