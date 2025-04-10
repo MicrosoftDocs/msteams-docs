@@ -85,12 +85,7 @@ The card can contain an inline image by including a link to the publicly availab
 
 Images are scaled up or down in size to maintain the aspect ratio for covering the image area. Images are then cropped from center to achieve the appropriate aspect ratio for the card.
 
-Here's a table of which images to use:
-
-| Maximum Image Dimensions | Supported Formats | Unsupported Formats |
-| --- | --- |
-| 1024 × 1024 | PNG, JPEG, GIF | Animated GIF, SVG |
-| --- | --- |
+Images must be at most 1024 × 1024 pixels and in PNG, JPEG, or GIF format. Animated GIF and SVG format aren't supported.
 
 The following table provides the properties of inline card images:
 
