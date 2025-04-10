@@ -96,88 +96,35 @@ Your service must respond with the results matching the user query. The response
 
 The `config` response is the data returned by the server or the app to configure and enable the message extension within the messaging platform. When a user configures the message extension for the first time, a `config` response is used to prompt the user to set up the message extension and provide any necessary configuration.
 
-The following JSON response is an example of a `config` response received from the app:
-
-```json
-{
-    "name": "composeExtension/submitAction",
-    "type": "invoke",
-    "timestamp": "2024-03-08T14:10:47.575Z",
-    "localTimestamp": "2024-03-08T19:40:47.575+05:30",
-    "id": "f:7dfe18de-94e3-9f38-5d44-adeb31cd8243",
-    "channelId": "msteams",
-    "serviceUrl": "https://smba.trafficmanager.net/amer/",
-    "from": {
-        "id": "29:1PBlnIsEROUYzpFjULDVodMHrnpujmfhBdQAf0pcO1EkaDkhI0_Pj_ql-jZUYOGdSc3_KcqaIIjzbleraVJ2Z3g",
-        "name": "MOD Administrator",
-        "aadObjectId": "ce9def33-d7fc-444c-8728-be1f95e6b6f2"
-    },
-    "conversation": {
-        "isGroup": true,
-        "conversationType": "groupChat",
-        "tenantId": "4ad59956-0f88-4b88-a9d0-570b6eb4e66b",
-        "id": "19:1dd50ba7-e5bd-46ea-b34e-80a415148de7_ce9def33-d7fc-444c-8728-be1f95e6b6f2@unq.gbl.spaces"
-    },
-    "recipient": {
-        "id": "28:9a2b01fc-88c1-40e1-bf87-5079c8e35626",
-        "name": "PSDAzureBot"
-    },
-    "entities": [
-        {
-            "locale": "en-GB",
-            "country": "GB",
-            "platform": "Web",
-            "timezone": "Asia/Calcutta",
-            "type": "clientInfo"
-        }
-    ],
-    "channelData": {
-        "tenant": {
-            "id": "4ad59956-0f88-4b88-a9d0-570b6eb4e66b"
-        },
-        "source": {
-            "name": "compose"
-        }
-    },
-    "value": {
-        "commandId": "razorView",
-        "commandContext": "compose",
-        "data": {
-            "Title": "Welcome to RazorView!",
-            "DisplayData": " Today&#x27;s date is 8-3-2024, Friday"
-        },
-        "context": {
-            "theme": "default"
-        }
-    },
-    "locale": "en-GB",
-    "localTimezone": "Asia/Calcutta"
-}
-```
-
-When the user interacts with the compose extension, the bot responds with a configuration prompt by returning a `config` type response. The response contains a URL in the `value` property that points to a hosted webpage where the user can configure the messaging extension.
-
-The following code sample shows configuration response that appears when the user interacts with the compose extension:
+The following code sample shows `config` response that appears when the user interacts with the compose extension:
 
 ```json
 {
     "composeExtension": {
-        "type": "config",
         "suggestedActions": {
             "actions": [
                 {
                     "type": "openUrl",
-                    "value": "https://7a03-2405-201-a00c-7191-b472-ff64-112d-f806.ngrok-free.app"
+                    "title": "Open url",
+                    "value": "https://example.com/searchSettings.html?settings="
                 }
             ]
-        }
-    }
+        },
+        "type": "config"
+    },
+    "responseType": "composeExtension"
 }
 ```
 
-The `value` property contains a URL `https://<your-ngrok-subdomain>.ngrok-free.app/searchSettings.html` that opens a configuration page, which allows users to input necessary details and submit the configuration.
+The `config` response includes:
+
+* The `value` property contains a URL `https://<your-ngrok-subdomain>.ngrok-free.app/searchSettings.html` that opens a configuration page, which allows users to input necessary details and submit the configuration.
+* The `type` field within `composeExtension` is set to `config`, indicating the nature of this response as a configuration. 
+* The `responseType` identifies that this response is for the `composeExtension` of the app.
 
 :::image type="content" source="../../../assets/images/configuration-response-me.png" alt-text="The screenshot shows the configuration response for message extension.":::
+
+To complete the messaging extension configuration flow, follow these steps on your hosted configuration page:
 
 1. The URL provided in the `value` property must host a webpage that opens the URL as a Teams dialog when the messaging extension configuration is triggered.
 2. If authentication is required, the page must use Teams authentication and call `authentication.notifySuccess()` upon successful login.
@@ -199,7 +146,12 @@ The `value` property contains a URL `https://<your-ngrok-subdomain>.ngrok-free.a
 4. Calling `notifySuccess(configData)` sends the configuration values back to Teams.
 5. Once `notifySuccess()` is executed, the configuration window automatically closes and the messaging extension is successfully set up.
 
-### Response card types and previews
+### `result` response type
+
+The result list is displayed in the Microsoft Teams UI with a preview of each item. The preview is generated in one of the two ways:
+
+* Using the `preview` property within the `attachment` object. The `preview` attachment can only be a Hero or a Thumbnail card.
+* Extracting from the basic `title`, `text`, and `image` properties of the `attachment` object. The basic properties are used only if the `preview` property isn't specified.
 
 > [!NOTE]
 > Message extension search results don't support padding.
@@ -211,22 +163,17 @@ Teams supports the following card types:
 * [Connector card for Microsoft 365 Groups](~/task-modules-and-cards/cards/cards-reference.md#connector-card-for-microsoft-365-groups)
 * [Adaptive Card](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-To have a better understanding and overview on cards, see [what are cards](~/task-modules-and-cards/what-are-cards.md).
+**Hero or Thumbnail card**
 
-To learn how to use the thumbnail and hero card types, see [add cards and card actions](~/task-modules-and-cards/cards/cards-actions.md).
+For Hero or Thumbnail card, except the invoke action other actions such as button and tap aren't supported in the preview card. For Hero and Thumbnail cards, you don't need to specify a preview property, a preview is generated by default.
 
-For more information about the connector card for Microsoft 365 Groups, see [Using connector cards for Microsoft 365 Groups](~/task-modules-and-cards/cards/cards-reference.md#connector-card-for-microsoft-365-groups).
+To have a better understanding and overview on cards, see [what are cards](~/task-modules-and-cards/what-are-cards.md). To learn how to use the thumbnail and hero card types, see [add cards and card actions](~/task-modules-and-cards/cards/cards-actions.md).
 
-The result list is displayed in the Microsoft Teams UI with a preview of each item. The preview is generated in one of the two ways:
-
-* Using the `preview` property within the `attachment` object. The `preview` attachment can only be a Hero or a Thumbnail card.
-* Extracting from the basic `title`, `text`, and `image` properties of the `attachment` object. The basic properties are used only if the `preview` property isn't specified.
-
-For Hero or Thumbnail card, except the invoke action other actions such as button and tap aren't supported in the preview card.
+**Adaptive Card or connector card**
 
 To send an Adaptive Card or connector card for Microsoft 365 Groups, you must include a preview. The `preview` property must be a Hero or Thumbnail card. If you don't specify the preview property in the `attachment` object, a preview isn't generated.
 
-For Hero and Thumbnail cards, you don't need to specify a preview property, a preview is generated by default.
+For more information about the connector card for Microsoft 365 Groups, see [Using connector cards for Microsoft 365 Groups](~/task-modules-and-cards/cards/cards-reference.md#connector-card-for-microsoft-365-groups).
 
 ### Response example
 
