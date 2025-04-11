@@ -185,7 +185,7 @@ items:
 
          :::image type="content" source="~/assets/images/sbs-notification-bot/default-program.png" alt-text="Default Program" lightbox="~/assets/images/sbs-notification-bot/default-program.png":::
 
-    1. Use the following code after `for (const target of installations) {` in Visual Studio Code.
+    1. Use the following code after `for (const target of installations) {` in Visual Studio Code:
 
          ```bash          
             if (target.type === "Channel") {
