@@ -77,7 +77,7 @@ The Adaptive Card Previewer doesn't support the following Adaptive Card features
 ## FAQs
 
 <details>
-<summary>Why do we have to use a new extension in Visual Studio Code? Can’t this extension be integrated into Teams Toolkit for Visual Studio Code?</summary>
+<summary>Why do we have to use a new extension in Visual Studio Code? Can’t this extension be integrated into Microsoft 365 Agents Toolkit for Visual Studio Code?</summary>
 
 Adaptive Card Previewer is a standalone extension because it uses a closed-source package to render the Adaptive Cards to ensure consistent rendering logic with the Teams platform. Teams Toolkit is an open-source project and doesn't include dependencies on packages that third-party developers can't access.
 <br>

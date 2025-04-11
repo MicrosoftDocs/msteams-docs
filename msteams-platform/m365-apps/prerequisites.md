@@ -142,7 +142,7 @@ You can preview Teams personal tabs running in Outlook and Microsoft 365 app for
 
 Optionally, you can use [Visual Studio Code](https://code.visualstudio.com/) to extend Teams apps into Microsoft 365 and Outlook.
 
-The extension [Teams Toolkit for Visual Studio Code](https://aka.ms/teams-toolkit) (`v2.10.0` or later) provides commands that can help modify your existing Teams code to be compatible with Outlook and Microsoft 365. For more information, see [enable Teams personal tab for Microsoft 365 and Outlook](extend-m365-teams-personal-tab.md).
+The extension [Microsoft 365 Agents Toolkit for Visual Studio Code](https://aka.ms/teams-toolkit) (`v2.10.0` or later) provides commands that can help modify your existing Teams code to be compatible with Outlook and Microsoft 365. For more information, see [enable Teams personal tab for Microsoft 365 and Outlook](extend-m365-teams-personal-tab.md).
 
 For Word, Excel and PowerPoint Add-ins development, see [Create Office Add-in projects using Teams Toolkit](/office/dev/add-ins/develop/teams-toolkit-overview).
 

@@ -1,7 +1,7 @@
 ---
 title: Configure Tab Capability
 author: surbhigupta
-description: Learn how to configure the tab capability within a Teams app with the Teams Toolkit for Visual Studio Code.
+description: Learn how to configure the tab capability within a Teams app with the Microsoft 365 Agents Toolkit for Visual Studio Code.
 ms.author: v-bvishnu
 ms.localizationpriority: medium
 ms.topic: reference

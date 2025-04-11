@@ -12,7 +12,7 @@ ms.date: 11/29/2021
 
 :::image type="content" source="~/assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
 
-You can see the FAQ for all the sections of Teams Toolkit for Visual Studio Code.
+You can see the FAQ for all the sections of Microsoft 365 Agents Toolkit for Visual Studio Code.
 
 FAQ for [Provision cloud resources using Teams Toolkit](../provision.md)
 
