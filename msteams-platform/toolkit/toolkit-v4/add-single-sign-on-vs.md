@@ -12,7 +12,7 @@ ms.date: 05/20/2022
 
 Microsoft Teams provides single sign-on (SSO) function for an app to obtain signed in Teams user token to access Microsoft Graph and other APIs. Teams Toolkit facilitates the interaction by abstracting some of the Microsoft Entra ID flows and integrations behind some simple APIs. This enables you to add SSO features easily to your Teams app.
 
-## Enable Single Sign-on in Teams Toolkit for Visual Studio
+## Enable single sign-on in Teams Toolkit for Visual Studio
 
 Teams provides SSO function for an app using the Microsoft Teams Toolkit for Microsoft Visual Studio.
 
@@ -29,7 +29,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
 * Add SSO application information in Teams Toolkit configuration files in order to make sure the authentication app can be registered on backend service and start Teams Toolkit when you're debugging or previewing Teams application.
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Enable+Single+Sign-on+in+Teams+Toolkit+for+Visual+Studio&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Ftoolkit-v4%2Fadd-single-sign-on-vs%23enable-single-sign-on-in-teams-toolkit-for-visual-studio&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Ftoolkit-v4%2Fadd-single-sign-on-vs.md&documentVersionIndependentId=f5590168-8c16-04cb-4c56-a7d76ea7d935&platformId=42e04429-d075-6f28-28fa-ae0f0380ff5f&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Enable+single+sign-on+in+Teams+Toolkit+for+Visual+Studio&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Ftoolkit-v4%2Fadd-single-sign-on-vs%23enable-single-sign-on-in-teams-toolkit-for-visual-studio&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Ftoolkit-v4%2Fadd-single-sign-on-vs.md&documentVersionIndependentId=f5590168-8c16-04cb-4c56-a7d76ea7d935&platformId=42e04429-d075-6f28-28fa-ae0f0380ff5f&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Teams tab application
 
