@@ -361,6 +361,9 @@ If you don't have a Microsoft Entra app yet or you've one but don't know where t
 > * If you don't use `aadApp/create` action to create Microsoft Entra application, you can add necessary environment variables with your preferred name without following above steps.
 > * Ensure you do not share the same Microsoft Entra app in multiple environments.
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Use+an+existing+Microsoft+Entra+app+for+your+Teams+app&&author=%40MuyangAmigo&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Ftoolkit-v4%2Fprovision-vs%23use-an-existing-microsoft-entra-app-for-your-teams-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Ftoolkit-v4%2Fprovision-vs.md&documentVersionIndependentId=c9aac37f-8bc7-7581-2dcc-dc393cd106f6&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 <a name='use-an-existing-azure-ad-app-for-your-bot'></a>
 
 #### Use an existing Microsoft Entra app for your bot
@@ -398,6 +401,9 @@ If you don't have a Microsoft Entra app for your bot yet or you've one but don't
 > * Remember to update the environment variable names in the examples if you use different names in `writeToEnvironmentFile`.
 > * If you don't use `botAadApp/create` action to create Microsoft Entra application, you can add necessary environment variables with your preferred name without following above steps.
 > * Ensure that you do not share the same Microsoft Entra app in multiple environments.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Use+an+existing+Microsoft+Entra+app+for+your+bot&&author=%40MuyangAmigo&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Ftoolkit-v4%2Fprovision-vs%23use-an-existing-microsoft-entra-app-for-your-bot&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Ftoolkit-v4%2Fprovision-vs.md&documentVersionIndependentId=c9aac37f-8bc7-7581-2dcc-dc393cd106f6&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## See also
 
