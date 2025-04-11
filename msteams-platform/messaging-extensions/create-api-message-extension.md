@@ -501,7 +501,7 @@ The properties in OpenAPI Description document are mapped to the Adaptive Card t
 
 </details>
 
-You can create an API-based message extension using Developer Portal for Teams, Teams Toolkit for Visual Studio Code, command line interface (CLI), or Visual Studio.
+You can create an API-based message extension using Developer Portal for Teams, Microsoft 365 Agents Toolkit for Visual Studio Code, command line interface (CLI), or Visual Studio.
 
 # [Developer Portal for Teams](#tab/developer-portal-for-teams)
 
@@ -611,7 +611,7 @@ To test your API-based message extension created in Developer Portal, you can us
 > [!NOTE]
 > Teams Toolkit supports OpenAPI Specification version 2.0 and 3.0.x.
 
-To build an API-based message extension using Teams Toolkit for Visual Studio Code, follow these steps:
+To build an API-based message extension using Microsoft 365 Agents Toolkit for Visual Studio Code, follow these steps:
 
 1. Open **Visual Studio Code**.
 1. From the left pane, select **Teams Toolkit**.
@@ -709,7 +709,7 @@ To build an API-based message extension using Teams Toolkit for Visual Studio Co
    1. Under **LIFECYCLE**, select **Provision**.
    1. If your OpenAPI specification document has a security scheme `bearerAuth`, which uses the HTTP bearer scheme, enter the API key in the command window and select **Enter**.
 
-        :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-api-key.png" alt-text="Screenshot shows the Enter API key command that appears in Teams Toolkit for Visual Studio Code.":::
+        :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-api-key.png" alt-text="Screenshot shows the Enter API key command that appears in Microsoft 365 Agents Toolkit for Visual Studio Code.":::
 
       > [!NOTE]
       > The API key must be a string with 10 to 2048 characters.
@@ -1100,7 +1100,7 @@ You can specify the input types, titles, descriptions, and required fields for t
 
 # [Teams Toolkit](#tab/teams-toolkit)
 
-To build an API-based message extension with multiple parameters using Teams Toolkit for Visual Studio Code, follow these steps:
+To build an API-based message extension with multiple parameters using Microsoft 365 Agents Toolkit for Visual Studio Code, follow these steps:
 
 1. Open **Visual Studio Code**.
 1. From the left pane, select **Teams Toolkit**.

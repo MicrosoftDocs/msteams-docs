@@ -17,7 +17,7 @@ This section helps you to know about the prerequisites, install Microsoft Teams 
 * [NodeJS](https://nodejs.org) version 16 or later.
 * NPM 8 or later.
 
-## Install Teams Toolkit for Visual Studio Code
+## Install Microsoft 365 Agents Toolkit for Visual Studio Code
 
 You can install Teams Toolkit using **Extensions** in Visual Studio Code, or install it from the Visual Studio Code Marketplace.
 
@@ -98,7 +98,7 @@ By default, Visual Studio Code automatically keeps Teams Toolkit up-to-date. If 
 
 ## Install a prerelease version
 
-The Teams Toolkit for Visual Studio Code extension is available in a prerelease version. To install a Teams Toolkit prerelease version, follow these steps:
+The Microsoft 365 Agents Toolkit for Visual Studio Code extension is available in a prerelease version. To install a Teams Toolkit prerelease version, follow these steps:
 
 1. Open **Visual Studio Code**.
 1. Select **Extensions** :::image type="icon" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/extension icon.png" border="false" alt-text="Screenshot shows the extension icon."::: from the Visual Studio Code activity bar.
