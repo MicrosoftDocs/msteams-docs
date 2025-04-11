@@ -323,8 +323,12 @@
       href: toolkit/TeamsFx-SDK.md
       displayName: getUserinfo
     - name: Teams JavaScript client library
-      href: tabs/how-to/using-teams-client-library.md
-      displayName: iFrame, execute URL, getTabInstances
+      items: 
+        - name: Overview 
+          href: tabs/how-to/using-teams-client-library.md
+          displayName: iFrame, execute URL, getTabInstances
+        - name: TeamsJS initialization process
+          href: tabs/how-to/app-initialization-process.md
     - name: Bot Framework SDK for Node.js
       href: https://github.com/Microsoft/botbuilder-js
     - name: Bot Framework SDK for .NET
@@ -389,8 +393,6 @@
   - name: Create a tab
     href: tabs/how-to/create-personal-tab.md
     displayName: App generator, Reorder static personal tabs, channel, or group custom tab, offline tab
-  - name: Initialization process for tab apps
-    href: tabs/how-to/app-initialization-process.md
   - name: Get context for your tab
     href: tabs/how-to/access-teams-context.md
     displayName: getContext, entityId, groupId, User context, authentication flow from Microsoft Entra ID, retrieve context, theme changes
