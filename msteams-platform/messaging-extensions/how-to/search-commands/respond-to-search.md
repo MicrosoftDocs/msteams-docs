@@ -106,7 +106,7 @@ The following code sample shows `config` response that appears when the user int
                 {
                     "type": "openUrl",
                     "title": "Open url",
-                    "value": "https://example.com/searchSettings.html?settings="
+                    "value": "https://ct3h34ng-7130.inc1.devtunnels.ms/searchSettings.html?settings="
                 }
             ]
         },
@@ -118,13 +118,17 @@ The following code sample shows `config` response that appears when the user int
 
 The `config` response includes:
 
-* The `value` property contains a URL `https://<your-ngrok-subdomain>.ngrok-free.app/searchSettings.html` that opens a configuration page, which allows users to input necessary details and submit the configuration.
+* The `value` property contains a URL that opens a configuration page in a Teams dialog, which allows users to input necessary details and submit the configuration. Here are the few examples of the `value` property:
+    *https://<your-subdomain>.ngrok-free.app/searchSettings.html
+    *https://<your-subdomain>.devtunnels.ms/searchSettings.html
 * The `type` field within `composeExtension` is set to `config`, indicating the nature of this response as a configuration. 
 * The `responseType` identifies that this response is for the `composeExtension` of the app.
 
 :::image type="content" source="../../../assets/images/configuration-response-me.png" alt-text="The screenshot shows the configuration response for message extension.":::
 
-To complete the messaging extension configuration flow, follow these steps on your hosted configuration page:
+Initialize the Teams SDK on the configuration page and use `authentication.notifySuccess()` to send the collected configuration data back to Teams. `submitConfig()` function demonstrates how to structure and return configuration values after the user completes the setup process.
+
+To complete the messaging extension configuration flow:
 
 1. The URL provided in the `value` property must host a webpage that opens the URL as a Teams dialog when the messaging extension configuration is triggered.
 2. If authentication is required, the page must use Teams authentication and call `authentication.notifySuccess()` upon successful login.
