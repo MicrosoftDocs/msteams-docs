@@ -11,7 +11,9 @@ ms.date: 12/02/2024
 # Build tabs for calling
 
 > [!NOTE]
-> Calling extensibility is available only for one-on-one calls and in [public developer preview for Teams](../resources/dev-preview/developer-preview-intro.md).
+>
+> - Tab apps for calling are supported only on desktop and web clients, and not on mobile clients.
+> - This feature enables the calling feature in personal scope only and isn't supported for Teams meetings.
 
 You can now create personal scope apps that integrate seamlessly with Public Switched Telephone Network (PSTN) and Teams-to-Teams calls. By using the right scope and context, you can build apps that utilize tab type, static scope, personal context, and meeting side panels effectively.
 
@@ -21,14 +23,14 @@ This integration is simple. You can create a new personal tab app or update an e
 
 Ensure the following requirements are in place before you create or update a tab app for supporting one-to-one calls:
 
-* **RSC Permissions needed**: Ensure the following [RSC permissions](/microsoftteams/platform/graph-api/rsc/resource-specific-consent) are granted for the app:
+- **RSC Permissions needed**: Ensure the following [RSC permissions](/microsoftteams/platform/graph-api/rsc/resource-specific-consent) are granted for the app:
 
-  * `OnlineMeetingParticipant.Read.Chat`
-  * `OnlineMeeting.ReadBasic.Chat`
+  - `OnlineMeetingParticipant.Read.Chat`
+  - `OnlineMeeting.ReadBasic.Chat`
 
-* **Teams JS SDK required**: [TeamsJS SDK Release latest version](https://github.com/OfficeDev/microsoft-teams-library-js/releases/tag/v2.29.0)
+- **Teams JS SDK required**: [TeamsJS SDK Release latest version](https://github.com/OfficeDev/microsoft-teams-library-js/releases/tag/v2.29.0)
 
-* **Caller ID information**: The tab app must utilize the `getMeetingDetailsVerbose` instead of `getMeetingDetails` to get the call related information. The app can get caller ID details such as phone number and email ID.
+- **Caller ID information**: The tab app must utilize the `getMeetingDetailsVerbose` instead of `getMeetingDetails` to get the call related information. The app can get caller ID details such as phone number and email ID.
 
   For more information, see [get meeting details API](meeting-apps-apis.md#get-meeting-details-api).
 
@@ -36,8 +38,8 @@ Ensure the following requirements are in place before you create or update a tab
 
 To enable personal tab app for one-to-one calls:
 
-* [Update app manifest](#update-app-manifest)
-* [Pin your personal tab app to calling extensions](#pin-your-personal-tab-app-to-calling-extensions)
+- [Update app manifest](#update-app-manifest)
+- [Pin your personal tab app to calling extensions](#pin-your-personal-tab-app-to-calling-extensions)
 
 ### Update app manifest
 
