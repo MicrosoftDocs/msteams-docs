@@ -5,7 +5,7 @@ description: Learn how to enable app suspension for tab app in Teams, improve ap
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.date: 03/13/2025
+ms.date: 04/12/2025
 ---
 
 # App suspension for your tab app
@@ -60,19 +60,18 @@ When you opt into app suspension, the iframe or webview that is used to host the
 There are multiple reasons for an app to not get suspended or for an app to get removed from the cache. Some general reasons across Microsoft 365 apps are:
 
 * The total memory load is high.
-* The total number of suspended apps exceed the maximum cache size. In this cirumcstance the oldest suspended app is removed.
+* The total number of suspended apps exceed the maximum cache size. In this circumstance the oldest suspended app is removed.
 * The app is terminated if the machine's available memory is low.
 * The app is suspended for a long time without getting resumed.
+* If an app fails to load, the app is terminated.
 
 Within the Teams app some of the reasons are (numbers here are subject to change):
 
 * If the system memory load is high, the app is removed from the cache.
-* If the number of suspended apps exceeds the maximum cache size, the oldest suspended app is removed from the cache.
-* The app isn't suspended if Teams doesn't receive the `readyToUnload` signal from the app within 30 seconds after sending the `beforeUnload` notification.
+* The app is terminated if Teams doesn't receive the `readyToUnload` signal from TeamsJS within 30 seconds after sending the `beforeUnload` notification.
 * App suspension is disabled if the system memory is less than 4 GB or if the available memory is less than 1 GB on Windows or 512 MB on Mac.
 * Side panel is the only supported frameContext for app suspension in meetings.
-* App suspesnion isn't supported for meetings where the invited user count is more than 20.
-* If an app fails to load, the app isn't suspended.
+* App suspension isn't supported for meetings where the invited user count is more than 20.
 * On iOS, when the Teams app is terminated, the app is removed from the cache.
 
 ## Code example
@@ -104,7 +103,7 @@ MicrosoftTeams.app.lifecycle.registerBeforeSuspendOrTerminateHandler(() => {
 ## Debug tool for cached apps
 
 > [!NOTE]
-> The debug tool for cached apps is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
+> The debug tool for cached apps is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) for Teams apps.
 
 You can enable Proto Task Manager in Teams, a debug tool that shows the status of your cached apps. In your Teams client, select the **Control+Shift+Alt+8** keys on Windows or **Command+Shift+Option+8** on Mac to open Proto Task Manager.
 
@@ -124,6 +123,7 @@ The **AppCaching** tab contains the following details:
 
 > [!NOTE]
 >
+> * Precaching is a feature specific to Teams, it is not supported for other hosts.
 > * Precaching tab apps is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 > * Precaching tab apps is supported only in Teams web and desktop clients.
 
@@ -131,7 +131,7 @@ While caching reduces the subsequent load times of an app, precaching optimizes 
 
 If you enable precaching, your app utilizes resources, and telemetry data is tracked while in the precached state. To learn how to optimize your app for precaching, see [best practices](#best-practices).
 
-### Enable precaching for tab app
+### Enable precaching for tab apps
 
 To enable precaching for your tab app, follow these steps:
 
@@ -195,17 +195,21 @@ The following are general limitations for app suspension:
 
 * An app is expected to sleep when suspended. No SDK requests are allowed when the app is suspended.
 
+* The host app invokes the `resume` handler only after the `suspendOrTerminate` sequence of the app is completed. For example, if a user launches tab A of your app and then launches tab B of the same app, tab B won't get the `resume` signal until the `suspendOrTerminate` handler on tab A is done executing.
+
+* Apps are cached on a per-window basis. App caching happens on a per app (not on a per tab) basis within the same window.
+
+* The table in the introductory section, [App suspension for your tab app](#app-suspension-for-your-tab-app), provides information about what `frameContext` Teams supports for caching. For non-Teams hubs, only `FrameContext.Content` is cached. That means, `FrameContext.Task`, which is inside `Dialog` is not supported.
+
+* Register only the `beforeSuspendOrTerminate` handler if your app doesn't require app suspension but needs time to safely save state (as leaving the app can cause the app content to be abruptly removed from the Document Object Model (DOM)). If the app hasn't registered for the `resume` event, it's removed from the DOM after the `suspendOrTerminate` flow completes.
+
 ## Limitations within Teams
 
 The following are the limitations for app suspension within the Teams app:
 
 * The Teams client invokes the `resume` handler only after the `suspendOrTerminate` sequence of the app is completed. For example, if a user launches tab A of your app and then launches tab B of the same app, tab B won't get the `resume` signal until the `suspendOrTerminate` handler on tab A is done executing.
 
-* Apps are cached on a per-window basis. App caching happens on a per app (not on a per tab) basis within the same window.
-
 * App suspension isn't supported for the meeting stage or dialog (referred as task module in TeamsJS v1.x) contexts, because these can be opened on top of the tab and the same iframe or webview can't be used to render the content in the tab and the dialog.
-
-* Register only the `beforeSuspendOrTerminate` handler if your app doesn't require app suspension but needs time to safely save state (as leaving the app can cause the app content to be abruptly removed from the Document Object Model (DOM)). If the app hasn't registered for the `resume` event, it's removed from the DOM after the `suspendOrTerminate` flow completes.
 
 * Follow the guidelines in this section to onboard your app to app suspension in Teams meeting. For app suspension support only in meetings, register the `resume` or `beforeSuspendOrTerminate` handlers if the context is `sidePanel`.
 
