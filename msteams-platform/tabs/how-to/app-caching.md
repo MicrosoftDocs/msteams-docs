@@ -10,11 +10,11 @@ ms.date: 04/12/2025
 
 # App suspension for your tab app
 
-When a user navigates away from an app, the app can either be suspended or terminated. Suspension means that the app is sitting in the background and is not visible to the user. Termination means that the app is completely closed and removed from memory. Suspending an app improves subsequent launch time of the apps within Teams, or other Microsoft 365 products, by allowing you to keep some resources and assets in memory that you can use when rehydrating your app.
+When a user navigates away from an app, the app can either be suspended or terminated. Suspension means that the app is sitting in the background and isn't visible to the user. Termination means that the app is completely closed and removed from memory. Suspending an app improves subsequent launch time of the apps within Teams, or other Microsoft 365 products, by allowing you to keep some resources and assets in memory that you can use when you rehydrate your app.
 
-Previously, app suspension was referred to as a cached app and was supported only in Teams, but it is now supported for Teams apps extended to run across other Microsoft 365 applications as well.
+Previously, app suspension was referred to as a cached app and was supported only in Teams, but it's now supported for Teams apps extended to run across other Microsoft 365 applications as well.
 
-Within Teams, app suspension is supported for the following:
+Within Teams, app suspension is supported for the following scopes and clients:
 
 | Scope | &nbsp; Desktop | iOS | Android |
 | --- | --- | --- | --- |
@@ -32,10 +32,10 @@ To enable app suspension, follow the steps:
 
    The `app.lifecycle.registerBeforeSuspendOrTerminate` handler gives you an opportunity to perform some tasks before your app is suspended or terminated, while the `app.lifecycle.registerOnResumeHandler` is called when a user navigates back to your app.
 
-   Be aware that registering both handlers means that an app is enabled for app suspension, but does not guarantee that the app is not terminated in the background. Whether an app is terminated is dependent on additional factors such as available memory.
+   Registering both handlers enables an app for app suspension, but it's important to understand that being registered doesn't guarantee that the app isn't terminated in the background. Whether an app is terminated depends on other factors such as available memory.
 
    > [!NOTE]
-   > Previously `teamsCore.registerBeforeUnloadHandler` and `teamsCore.registerOnLoadHandler` were used to enable app caching, but they are now deprecated.
+   > Previously `teamsCore.registerBeforeUnloadHandler` and `teamsCore.registerOnLoadHandler` were used to enable app caching, but they're now deprecated.
 
 1. Use `contentUrl` and `entityId` passed into the resume handler to route to the correct page within your app and invoke `notifySuccess` or `notifyFailure` to notify the host that the app initialization flow is complete.
 
@@ -44,11 +44,11 @@ To enable app suspension, follow the steps:
 
 1. Dispose resources and perform any cleanup needed in the `beforeSuspendOrTerminate` handler.
 
-The following is the flow diagram of the first launch of an app that wants to opt into app suspension (register the `resume` or `beforeSuspensionOrTerminate` handlers on the first launch of the app):
+The following flow diagram shows the first launch of an app that wants to opt into app suspension (register the `resume` or `beforeSuspensionOrTerminate` handlers on the first launch of the app):
 
 :::image type="content" source="../../assets/images/tabs/first-launch-app.png" alt-text="Screenshot shows the flow of the first launch of the app in meeting side panel.":::
 
-The following is the flow diagram of the launch of suspended apps:
+The following flow diagram shows the launch of suspended apps:
 
 :::image type="content" source="../../assets/images/tabs/suspended-launch-app.png" alt-text="Screenshot shows the flow of the suspended launch of the app in meeting side panel.":::
 
@@ -60,10 +60,10 @@ When you opt into app suspension, the iframe or webview that is used to host the
 There are multiple reasons for an app to not get suspended or for an app to get removed from the cache. Some general reasons across Microsoft 365 apps are:
 
 * The total memory load is high.
-* The total number of suspended apps exceed the maximum cache size. In this circumstance the oldest suspended app is removed.
+* The total number of suspended apps exceed the maximum cache size. In this circumstance, the oldest suspended app is removed.
 * The app is terminated if the machine's available memory is low.
 * The app is suspended for a long time without getting resumed.
-* If an app fails to load, the app is terminated.
+* The app fails to load and is terminated.
 
 Within the Teams app some of the reasons are (numbers here are subject to change):
 
@@ -98,7 +98,7 @@ MicrosoftTeams.app.lifecycle.registerBeforeSuspendOrTerminateHandler(() => {
 ```
 
 > [!NOTE]
-> Previously APIs in the `teamsCore` module were used to enable app caching. If an app registers for both `app.lifecycle` and `teamsCore` pairs of handlers, the `app.lifecycle` handlers will overwrite the `teamsCore` handlers.
+> Previously APIs in the `teamsCore` module were used to enable app caching. If an app registers for both `app.lifecycle` and `teamsCore` pairs of handlers, the `app.lifecycle` handlers overwrite the `teamsCore` handlers.
 
 ## Debug tool for cached apps
 
@@ -114,8 +114,8 @@ The **AppCaching** tab contains the following details:
 * **state**: Shows the app's cached or uncached state.
 * **isActive**: Shows the active or inactive status of the cached app.
 * **timeElapsed**: Shows the time elapsed since the app was cached.
-* **supportsLoad**: Shows if the app has registered the `Load` handler if app caching is enabled.
-* **supportsBeforeUnload**: Shows if the app has registered the `BeforeUnload` handler if app caching is enabled.
+* **supportsLoad**: Shows if the app registered the `Load` handler if app caching is enabled.
+* **supportsBeforeUnload**: Shows if the app registered the `BeforeUnload` handler if app caching is enabled.
 * **totalFrameMemory**: Shows the memory usage of the app.
 * **totalFrameCommitMemory**: Shows the CPU usage of the app.
 
@@ -123,7 +123,7 @@ The **AppCaching** tab contains the following details:
 
 > [!NOTE]
 >
-> * Precaching is a feature specific to Teams, it is not supported for other hosts.
+> * Precaching is a feature specific to Teams, it's not supported for other hosts.
 > * Precaching tab apps is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 > * Precaching tab apps is supported only in Teams web and desktop clients.
 
@@ -161,7 +161,7 @@ To enable precaching for your tab app, follow these steps:
 
 ### Monitor background loading
 
-You can identify if Teams loaded the app in the background without user interaction if you monitor the `isBackgroundLoad` property. If the property's state is `true`, it indicates that Teams has loaded the app in the background and isn't able to interact with the user. Hence, the app doesn't need to render UI elements such as sign-in prompts.
+You can identify if Teams loaded the app in the background without user interaction if you monitor the `isBackgroundLoad` property. If the property's state is `true`, it indicates that Teams loaded the app in the background and isn't able to interact with the user. Hence, the app doesn't need to render UI elements such as sign-in prompts.
 
 Monitor the `isBackgroundLoad` property in the app context to optimize the app for effective precache loading and rendering. For more information, see [isBackgroundLoad](/javascript/api/%40microsoft/teams-js/app.pageinfo?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo-isbackgroundload&preserve-view=true).
 
@@ -169,7 +169,7 @@ Monitor the `isBackgroundLoad` property in the app context to optimize the app f
 
 The following are the best practices for app suspension and precaching:
 
-* We recommend that you implement web storage or service worker capabilities to store the data or webview locally. This helps to load the app faster in subsequent launches.
+* We recommend that you implement web storage or service worker capabilities to store the data or webview locally. This strategy helps to load the app faster in subsequent launches.
 
 * Register the app suspension handlers early in your launch sequence, such as right after calling `app.initialize` and before the app sends `notifySuccess`. If the Teams client doesn’t see these registrations before the user leaves the app, the app isn't cached.
 
@@ -183,11 +183,11 @@ The following are the best practices for app suspension and precaching:
 
 The following are general limitations for app suspension:
 
-* There is no guarantee that an app will be suspended. There are reasons that can lead to app termination even though an has registered the required handlers.  
+* There's no guarantee that an app will be suspended. There are reasons that can lead to app termination even though an app registered the required handlers.  
 
-* An app is suspended only when the user navigates away from the app. If an app has multiple static tabs, when the user switches between tabs, the tab won’t be suspended. The hanlder, `app.lifecycle.onBeforeSuspendOrTerminate`, will still be called.
+* An app is suspended only when the user navigates away from the app. If an app has multiple static tabs, when the user switches between tabs, the tab won’t be suspended. The handler, `app.lifecycle.onBeforeSuspendOrTerminate`, will still be called.
 
-* The suspended app can be used within the same window. The app that is suspended in a pop out window cannot be reused in the Main window.
+* The suspended app can be used within the same window. The app that is suspended in a pop out window can't be reused in the Main window.
 
 * When an app is suspended, all the registered handlers are deleted. When the app is resumed all the handlers, such as `themeChange` or `focusEnter`, need to be reregistered. No notifications are sent to the app when suspended. If your app requires notifications even when suspended, suspension might not be the right solution.
 
@@ -195,11 +195,11 @@ The following are general limitations for app suspension:
 
 * An app is expected to sleep when suspended. No SDK requests are allowed when the app is suspended.
 
-* The host app invokes the `resume` handler only after the `suspendOrTerminate` sequence of the app is completed. For example, if a user launches tab A of your app and then launches tab B of the same app, tab B won't get the `resume` signal until the `suspendOrTerminate` handler on tab A is done executing.
+* The host app invokes the `resume` handler only after the `suspendOrTerminate` sequence of the app is completed. For example, if a user launches tab A of your app and then launches tab B of the same app, tab B doesn't get the `resume` signal until the `suspendOrTerminate` handler on tab A is done executing.
 
 * Apps are cached on a per-window basis. App caching happens on a per app (not on a per tab) basis within the same window.
 
-* The table in the introductory section, [App suspension for your tab app](#app-suspension-for-your-tab-app), provides information about what `frameContext` Teams supports for caching. For non-Teams hubs, only `FrameContext.Content` is cached. That means, `FrameContext.Task`, which is inside `Dialog` is not supported.
+* The table in the introductory section, [App suspension for your tab app](#app-suspension-for-your-tab-app), provides information about what `frameContext` Teams supports for caching. For non-Teams hubs, only `FrameContext.Content` is cached. That means, `FrameContext.Task`, which is inside `Dialog` isn't supported.
 
 * Register only the `beforeSuspendOrTerminate` handler if your app doesn't require app suspension but needs time to safely save state (as leaving the app can cause the app content to be abruptly removed from the Document Object Model (DOM)). If the app hasn't registered for the `resume` event, it's removed from the DOM after the `suspendOrTerminate` flow completes.
 
