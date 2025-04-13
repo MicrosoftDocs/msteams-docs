@@ -92,5 +92,5 @@ Within TeamsJS there are also APIs that support the caching of resources to impr
 ## Related content
 
 - [Create a content page](create-tab-pages/content-page.md)
-- [Show a native loading indicator](create-tab-pages/content-page?tabs=teamsjs-v2#show-a-native-loading-indicator)
+- [Show a native loading indicator](create-tab-pages/content-page.md#show-a-native-loading-indicator)
 - [TeamsJS reference](/javascript/api/@microsoft/teams-js/)
