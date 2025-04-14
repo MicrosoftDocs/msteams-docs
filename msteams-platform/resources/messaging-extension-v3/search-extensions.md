@@ -161,7 +161,7 @@ The following response is the configuration response that appears when the user 
             "actions": [
                 {
                     "type": "openUrl",
-                    "value": "https://example.ngrok-free.app"
+                    "value": "https://<your-tunnel-url>/searchSettings.html?settings="
                 }
             ]
         }

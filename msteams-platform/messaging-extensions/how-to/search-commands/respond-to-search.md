@@ -94,7 +94,7 @@ Your service must respond with the results matching the user query. The response
 
 ### `config` response type
 
-The `config` response is the data returned by the server or the app to configure and enable the message extension within the messaging platform. When a user configures the message extension for the first time, a `config` response is used to prompt the user to set up the message extension and provide any necessary configuration.
+The `config` response is the data returned by the server or the app to configure and enable the message extension within the messaging platform. When a user configures the message extension for the first time, a `config` response is used to prompt the user to set up the message extension and provide the necessary configuration.
 
 The following JSON response is an example of a `config` response received from the app:
 
@@ -106,7 +106,7 @@ The following JSON response is an example of a `config` response received from t
                 {
                     "type": "openUrl",
                     "title": "Open url",
-                    "value": "https://example.com/searchSettings.html?settings="
+                    "value": "https://<your-tunnel-url>/searchSettings.html?settings="
                 }
             ]
         },
@@ -116,7 +116,13 @@ The following JSON response is an example of a `config` response received from t
 }
 ```
 
-The `type` field within `composeExtension` is set to `config`, indicating the nature of this response as a configuration. `responseType` identifies that this response is for the `composeExtension` of the app.
+The `config` response includes:
+
+* `value`: Specifies the URL that opens the configuration page in a Teams dialog, which allows users to input necessary details and submit the configuration. `<your-tunnel-url>` can be one of the following:
+    *abc123.ngrok-free.app
+    *ct3h34ng-7130.inc1.devtunnels.ms
+* `type`: Indicates the nature of this response as a configuration. The field is within `composeExtension` and is set to `config`. 
+* `responseType`: Identifies this response is for the app's `composeExtension`.
 
 :::image type="content" source="~/assets/images/configuration-response-me.png" alt-text="Screenshot shows the configuration response for message extension.":::
 
