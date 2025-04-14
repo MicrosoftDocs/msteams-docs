@@ -109,6 +109,9 @@ When you call `getAuthToken()` and app user's consent is required for user-level
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tabs-sso-prompt.png" alt-text="Tab single sign-on dialog prompt":::
 
+> [!NOTE]
+> The Microsoft Entra consent dialog that is shown should not be customized.
+
 The consent dialog that appears is for open-id scopes defined in Microsoft Entra ID. The app user must give consent only once. The app user can access and use your tab app for the granted permissions and scopes after consenting.
 
 > [!IMPORTANT]
