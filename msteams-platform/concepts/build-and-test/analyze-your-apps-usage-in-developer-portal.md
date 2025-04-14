@@ -16,21 +16,35 @@ Whether you’re tracking active users, retention rates, or usage patterns acros
 
 The app usage for a given day is reflected within 24 to 48 hours, and usage data for the new apps can take up to three to five days to reflect in the charts.
 
-# [Custom apps built for your org (LOB apps)](#tab/custom-apps-built-for-your-org)
+# [Custom apps (new analytics))](#tab/custom-apps-new)
 
 ### Prerequisite
 
-Your tenant admin must allow app usage for custom apps to show in the Developer Portal. For more information, see [Link placefolder].
+Your tenant admin must allow app usage for custom apps to show in the Developer Portal. For more information, see [Enable developers to use app analytics](https://review.learn.microsoft.com/en-us/microsoft-365/admin/manage/enable-dev-analytics).
 
-Either a **Global admin** or a **Teams admin** can enable it in the [Microsoft 365 admin center](https://admin.microsoft.com) by navigating to **Settings** > **Org settings** > **Services** > **Developer Portal for Teams**.
+A **Global admin** or a **Teams admin** can enable it in the [Microsoft 365 admin center](https://admin.microsoft.com) by navigating to **Settings** > **Org settings** > **Services** > **Developer Portal for Teams**.
 
    :::image type="content" source="../../assets/images/tdp/mac-setting.png" alt-text="Screenshot shows where admin can allow custom app analytics.":::
 
    > [!NOTE]
    >
-   > * To access the new custom app analytics experience, you will need permission from your tenant admin. During April and May 2025, you can opt-in to this new experience by selecting the banner.
-   > * IMAGE_PLACE_HOLDER_BANNER
-   > * After May 2025, everyone will be automatically switched to the new experience.
+   > * You may get more insights into app's usage with our new app analytics. 
+   > * To opt-in new app analytics, clic the banner on the **Analytics** page in Developer Portal.
+   > * If you can't view these analytics, contact your admin to enable the setting in the Microsoft 365 admin center.
+
+### Metric definitions
+This section describes the metrics available in Developer Portal for custom apps.
+### App usage
+This section describes the app usage metrics & insights available in Developer Portal for custom apps.
+### Host product
+This section describes the host product metrics & insights available in Developer Portal for custom apps.
+### App capability
+This section describes the app capability metrics & insights available in Developer Portal for custom apps.
+### Known limitations
+This section describes the known limitations custom apps analytics.
+
+
+# [Custom apps built for your org (LOB apps)](#tab/custom-apps-built-for-your-org)
 
 ### Get Started
 
@@ -122,6 +136,8 @@ After you have selected your desired filters, you can explore the following indi
 
 # [Third-party apps](#tab/thirdpartyapps)
 
+### Prerequisite
+
 To view app usage in Developer Portal, you need **Manager** or **Developer** role in Partner Center. The marketplace account owner or manager can [assign user roles and permissions](/partner-center/account-settings/user-roles).
 
 You can view usage for your [third-party app](../../promote-app-adoption.md#access-to-your-apps) and other insights from the **Analytics** page. To access the page:
@@ -132,6 +148,8 @@ You can view usage for your [third-party app](../../promote-app-adoption.md#acce
 1. Select **Analytics** under the **Overview** section.
 
 To learn how to import your published app into Developer Portal, see [import an existing app](~/concepts/build-and-test/teams-developer-portal.md#import-an-existing-app).
+
+### Metric definitions
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
