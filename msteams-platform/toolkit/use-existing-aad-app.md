@@ -5,7 +5,7 @@ description: Learn how to use an existing Microsoft Entra app in TeamsFx or crea
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 05/09/2023
+ms.date: 02/27/2025
 ---
 
 # Use existing Entra app in TeamsFx
@@ -28,6 +28,9 @@ This section provides information for using existing Microsoft Entra app or manu
    * Select **Register**.
 
 1. When the app is registered, you're taken to the app's **Overview** page. Copy the **Application (client) ID**, **Object ID**, and **Directory (tenant) ID**; it's needed later. Verify that the **Supported account types** is set to **My organization only**.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20a%20Microsoft%20Entra%20app&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fuse-existing-aad-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fuse-existing-aad-app.md&documentVersionIndependentId=77f06929-b242-9b97-eb5b-2f1e713b693a&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 <a name='create-client-secret-for-azure-ad-app-optional'></a>
 
@@ -73,6 +76,9 @@ This section provides information for using existing Microsoft Entra app or manu
 
 2. Go to app's **Manifest** page, copy the **id** under **oauth2Permissions** as **Access As User Scope ID**.
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20access%20as%20user%20scope%20for%20Microsoft%20Entra%20app%20%28optional%29&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fuse-existing-aad-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fuse-existing-aad-app.md&documentVersionIndependentId=77f06929-b242-9b97-eb5b-2f1e713b693a&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
+
 <a name='get-necessary-info-from-existing-azure-ad-app'></a>
 
 ## Get necessary info from existing Microsoft Entra app
@@ -92,6 +98,9 @@ This section provides information for using existing Microsoft Entra app or manu
     > If you can't copy the secret, please follow the [instruction](#create-client-secret-for-azure-ad-app-optional) to create a new client secret.
 
 1. Go to apps **Expose an API** page. If you've already added **access_as_user** scope under **Scopes defined by this API** and pre-auth the two Teams Client Ids, go to app's **Manifest** page, copy the **id** under **oauth2Permissions** as **Access As User Scope ID**.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Get%20necessary%20info%20from%20existing%20Microsoft%20Entra%20app&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fuse-existing-aad-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fuse-existing-aad-app.md&documentVersionIndependentId=77f06929-b242-9b97-eb5b-2f1e713b693a&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 ## Set necessary info in TeamsFx project
 
@@ -125,6 +134,8 @@ This section provides information for using existing Microsoft Entra app or manu
       AAD_APP_ACCESS_AS_USER_PERMISSION_ID=<id of access_as_user permission> # example: 00000000-0000-0000-0000-000000000000
       ```
 
+      `AAD_APP_OAUTH_AUTHORITY_HOST` represents the host of the authority URL of your Microsoft Entra tenant, for example, <https://login.microsoftonline.com>. Your bot uses this URL to authenticate users via OAuth 2.0. For environment-specific endpoints, see [Microsoft Entra authentication endpoints](/entra/identity-platform/authentication-national-cloud).
+
    1. If your application requires a Microsoft Entra app client secret, add below environment variable and its value to `env\.env.{env}.user` file.
 
       ```yml
@@ -135,6 +146,9 @@ This section provides information for using existing Microsoft Entra app or manu
       > Remember to update the environment variable names in the examples if you use different names in `writeToEnvironmentFile`.
 
 1. Open Teams Toolkit extension and select **Provision in the cloud**. Wait until your project is successfully provisioned.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Set%20necessary%20info%20in%20TeamsFx%20project&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fuse-existing-aad-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fuse-existing-aad-app.md&documentVersionIndependentId=77f06929-b242-9b97-eb5b-2f1e713b693a&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 <a name='upload-azure-ad-app-manifest-to-azure-portal'></a>
 
@@ -157,3 +171,6 @@ If you see the above message, update Microsoft Entra app permission and follow t
 1. Select **App Registrations** and find your existing Microsoft Entra app.
 
 1. Go to app's **Manifest** page, paste the manifest content into the editor and select **Save** to save the changes.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Upload%20Microsoft%20Entra%20app%20manifest%20to%20Azure%20portal&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fuse-existing-aad-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fuse-existing-aad-app.md&documentVersionIndependentId=77f06929-b242-9b97-eb5b-2f1e713b693a&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)

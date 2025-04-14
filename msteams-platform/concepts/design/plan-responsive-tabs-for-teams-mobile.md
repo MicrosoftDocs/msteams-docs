@@ -5,7 +5,7 @@ description: Learn how to plan responsive tabs for Teams mobile which includes a
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
-ms.date: 12/09/2022
+ms.date: 02/06/2025
 ---
 # Plan responsive tabs for Teams mobile
 
@@ -175,7 +175,6 @@ In the third stage, provide complete experience to your users. You can enable us
 
 ## See also
 
-* [Plan your app with Teams features](../app-fundamentals-overview.md)
 * [Designing your tab](../../tabs/design/tabs.md)
 * [Designing your bot](../../bots/design/bots.md)
 * [Designing dialogs](../..//task-modules-and-cards/task-modules/design-teams-task-modules.md)

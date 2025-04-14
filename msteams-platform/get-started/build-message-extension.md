@@ -2,11 +2,11 @@
 title: Build Message Extension in Codespaces
 description: Learn how to build your first message extension for your Teams app with the help of GitHub codespaces that opens Toolkit extension and step-by-step guides.
 ms.localizationpriority: medium
-ms.date: 12/11/2024
+ms.date: 02/06/2025
 ms.topic: reference
 ---
 
-# Build message extension
+# Build a message extension app
 
 A message extension allows the users to interact with your web service through buttons and forms in the Microsoft Teams client. They can search or initiate actions in an external system from the compose message area, the command box, or directly from a message. You can send back the results of that interaction to the Teams client in the form of a richly formatted card.
 

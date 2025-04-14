@@ -1,6 +1,6 @@
 ---
 title: Explore & Configure Deep Links to Apps
-author: v-npaladugu
+author: surbhigupta
 description: Learn how to create deep links to an application and navigate using them in your Microsoft Teams apps and tabs and generate deep link to share content to meetings.
 ms.topic: conceptual
 ms.author: surbhigupta
@@ -162,6 +162,8 @@ Here are the examples to create deep link to browse within your app:
 >   ```
 >
 > * Deep link to a Teams app with encoded URI isn't supported in Outlook.
+
+For more information on how to get the query parameters for the built-in tab types, see [configure the built-in tab types in Microsoft Teams](/graph/teams-configuring-builtin-tabs).
 
 ### Configure deep link to a tab using TeamsJS
 

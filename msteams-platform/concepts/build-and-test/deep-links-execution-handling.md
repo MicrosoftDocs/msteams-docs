@@ -1,10 +1,11 @@
 ---
 title: Execution and handling of deep links
-author: v-npaladugu
+author: surbhigupta
 description: Learn how to execute deep links in your Microsoft Teams personal tab, shared tab, chat message, and bot, handle deep links, and consume a deep link from a tab.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
+ms.date: 02/26/2025
 ---
 
 # Configuration and handling of deep links
@@ -61,7 +62,7 @@ Example: `https://teams.microsoft.com/l/app/{appId}`, where `appId` is your appl
 
 ### Adaptive Card
 
-You can include an `openURL` action in an Adaptive Card and add a deep link to it. The deep link is executed within Teams. As raw links or hyperlinks in an Adaptive Card open in the browser, we recommend that you use `openURL` action. For more information, see [Action.OpenUrl](https://adaptivecards.io/explorer/Action.OpenUrl.html).
+You can include an `openURL` action in an Adaptive Card and add a deep link to it. The deep link is executed within Teams. As raw links or hyperlinks in an Adaptive Card open in the browser, we recommend that you use `openURL` action. For more information, see [Action.OpenUrl](https://adaptivecards.microsoft.com/?topic=Action.OpenUrl).
 
 Following is an example Adaptive Card payload:
 

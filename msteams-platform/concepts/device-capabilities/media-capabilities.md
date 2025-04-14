@@ -1,6 +1,6 @@
 ---
 title: Add Media Capabilities to Teams App 
-author: Rajeshwari-v
+author: surbhigupta
 description: Learn how to use Teams JavaScript client library to enable media capabilities using code examples and also learn the advantage of integrating media capabilities.
 ms.topic: conceptual
 ms.localizationpriority: medium
@@ -40,8 +40,6 @@ Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#
     "media",
 ],
 ```
-> [!NOTE]
-> The Media API isn't supported in the [new Teams client](../../resources/teams-updates.md). We recommend you to use HTML5 `media`.
 
 ## Media capability APIs
 

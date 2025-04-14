@@ -1,6 +1,6 @@
 ---
 title: Build Bot-based Message Extensions
-author: v-ypalikila
+author: surbhigupta
 description: Learn about Bot-based message extension using Bot Framework to interact with your web service from different locations in the Teams client.
 ms.localizationpriority: medium
 ms.topic: overview
@@ -27,7 +27,7 @@ Message extension search commands allow users to search external systems and ins
 
 See the following video to learn how to define message extension search commands:
 <br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK]
+> [!VIDEO 64d251ff-0c4c-43df-a3f9-58171a3faf04]
 <br>
 
 The search command in a message extension is configured using the `composeExtensions.commands` property and the `query` type in the app manifest (previously called as Teams app manifest). Command and parameter descriptions enhance the usability and effectiveness of a message extension. A good command description offers a clear and concise summary of the app’s features.
@@ -105,7 +105,7 @@ For more information, see [app manifest schema](~/resources/schema/manifest-sche
 > [!NOTE]
 > When a message action is initiated, attachment details aren't sent as part of the `turncontext` invoke activity.
 
-Action commands allow you to present your users with a modal pop-up called a task module in Teams. The task module collects or displays information, processes the interaction, and sends the information back to Teams. This document guides you on how to select action command invoke locations, create your task module, send final message, or card, create action command using app studio, or create it manually.
+Action commands allow you to present your users with a modal pop-up called a task module in Teams. The task module collects or displays information, processes the interaction, and sends the information back to Teams. This document guides you on how to select action command invoke locations, create your task module, send final message or card, and create an action command manually.
 
 The action command in a message extension is configured using the `composeExtensions.commands` property and `action` type in the app manifest.
 

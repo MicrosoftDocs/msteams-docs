@@ -1,9 +1,9 @@
 ---
 title: Requirements for Building Tabs
-description: In this article, learn about the prerequisites and tools needed to build a Microsoft Teams personal, channel, or group tab.
+description: Learn about the permissions, compatibility, and other prerequisites, and tools required to build a Microsoft Teams personal, channel, or group tab.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.date: 03/28/2023
+ms.date: 02/06/2025
 ---
 
 # Prerequisites
@@ -55,7 +55,7 @@ Ensure that you adhere to the following prerequisites while building your Teams 
 | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com), **ASP.NET and web development** workload| .NET. You can install the free community edition of Visual Studio 2022. |
 | &nbsp; | [Git](https://git-scm.com/downloads) | Git to use the sample apps repo from GitHub. |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
-| &nbsp; | [ngrok](https://ngrok.com/download) | Ngrok is a reverse proxy software tool. Ngrok creates a tunnel to your locally running web server's publicly available HTTPS endpoints. Your server's web endpoints are available during the current session on your computer. When you shut down or put your device to sleep, the service is no longer available. |
+| &nbsp; | [ngrok](https://ngrok.com/downloads) | Ngrok is a reverse proxy software tool. Ngrok creates a tunnel to your locally running web server's publicly available HTTPS endpoints. Your server's web endpoints are available during the current session on your computer. When you shut down or put your device to sleep, the service is no longer available. |
 | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and publish your Teams app including to your organization or the Microsoft Teams Store. |
 
 ### Build your Teams tab

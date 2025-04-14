@@ -17,11 +17,12 @@ body:
     attributes:
       label: Type of issue
       options:
-        - Typo
-        - Code doesn't work
+        - "Select an option"  # Placeholder
+        - Code doesn't work        
         - Feature doesn't work (bug)
         - Missing information
         - Outdated article
+        - Typo
         - Other (describe below)
     validations:
       required: true
@@ -67,3 +68,9 @@ body:
       required: true
     attributes:
       label: Document Id
+  - type: input
+    id: platformId
+    validations:
+      required: true
+    attributes:
+      label: Platform Id

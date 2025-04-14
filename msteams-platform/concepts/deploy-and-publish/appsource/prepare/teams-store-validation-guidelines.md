@@ -5,7 +5,7 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
-ms.date: 12/11/2024
+ms.date: 02/25/2025
 ---
 # Teams Store validation guidelines
 
@@ -62,16 +62,19 @@ Following these guidelines increases the chances of your app to pass the Microso
       :::image type="icon" source="../../../../assets/icons/notifications.png" link="#notifications" border="false":::
    :::column-end:::
    :::column span="":::
+      :::image type="icon" source="../../../../assets/icons/ms-graph-connectors.png" link="#microsoft-graph-connector" border="false":::
+   :::column-end:::
+   :::column span="":::
       :::image type="icon" source="../../../../assets/icons/microsoft-365.png" link="#microsoft-365-app-compliance-program" border="false":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/advertising.png" link="#advertising" border="false":::
    :::column-end:::
+:::row-end:::
+:::row:::
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/crypto-currency-based-apps-icon.png" link="#cryptocurrency-based-apps" border="false":::
    :::column-end:::
-:::row-end:::
-:::row:::
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/app-functionality-icon.png" link="#app-functionality" border="false":::
    :::column-end:::
@@ -683,7 +686,7 @@ For guidance on how to create an accurate, concise, and informative short and lo
 
 Screenshots provide a prominent visual preview of your app to complement your app name, icon, and descriptions.
 
-<br></br>
+<br>
 <details><summary>Expand to know more</summary>
 
 Remember the following:
@@ -700,7 +703,7 @@ Remember the following:
 * Use text judiciously.
 * Frame screenshots with a color that reflects your brand and include marketing content.
 * Use high-resolution screenshots that are sharp and contain legible and clearly readable text. [*Must fix*]
-* At least one screenshot must depict your app’s functionality on mobile devices. [*Must fix*]
+* At least one screenshot must depict your app’s functionality on mobile devices. [*Good-to-fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-guidelines-pass-app-functionality-mobile.png" alt-text="Screenshot shows the passed scenario of app functionality on mobile devices.":::
 
@@ -717,7 +720,7 @@ Remember the following:
 
 * Provided screenshots mustn't incorrectly reference Microsoft Teams as MS, MSFT, or MS Teams. [*Must fix*]
 
-* If your Teams app is extensible across Microsoft 365 clients (Microsoft 365, Outlook, and Microsoft Teams), the screenshots provided must depict the app functionality in other Microsoft 365 clients. [*Must fix*]
+* If your Teams app is extensible across Microsoft 365 clients (Microsoft 365, Outlook, and Microsoft Teams), the screenshots provided must depict the app functionality in other Microsoft 365 clients. [*Good-to-fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-guidelines-pass-app-functionality-MS-365.png" alt-text="Screenshot shows the passed scenario of Teams app functionality in MS 365 clients.":::
 
@@ -728,6 +731,10 @@ Remember the following:
 * If your app supports Tabs as a capability, the screenshots showcasing the app in the context of a Teams tab, in app listing, must contain Team’s chrome. [*Must fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-guildelines-pass-tabs-capability.png" alt-text="Screenshot shows the passed scenario of screenshot of tab capability.":::
+
+* If your Teams app is extensible across Microsoft Copilot, the screenshots provided must depict the app's functionality within Copilot. [*Must fix*]
+
+   :::image type="content" source="../../../../assets/images/Copilot/teams-app-in-copilot.png" alt-text="Screenshot shows the app functionality within Copilot.":::
 
 **Don'ts:**
 
@@ -1149,7 +1156,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
    :::image type="content" source="../../../../assets/images/submission/validation-bot-response-truncate-mobile.png" alt-text="Graphic shows an example of a bot message truncating on mobile.":::
 
-* All the links in a bot response adaptive card must be responsive. Any link that takes the user outside the Teams platform must have a clear redirect text such as, **View in..** or **This way to..**, a pop-out icon in the bot response action button, or have a suitable redirect text in the bot response message body. [*Must fix*]
+* All the links in a bot response Adaptive Card must be responsive. Any link that takes the user outside the Teams platform must have a clear redirect text such as, **View in..** or **This way to..**, a pop-out icon in the bot response action button, or have a suitable redirect text in the bot response message body. [*Must fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-bot-action-button-redirect-warning.png" alt-text="Graphic shows an example of bot response action button with a redirect.":::
 
@@ -1175,15 +1182,15 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
    Prompt starters help users start a conversation with your bot. To enable prompt starters, the `commands` property in app manifest needs to be defined.
 
-   * The bot must provide at least one command that enables the user to know about the value proposition of the app. [*Must fix*]
-   * Prompt starters or commands must be functional and return responses. [*Must fix*]
-   * Command description must be coherent and clearly communicate value of the command. [*Must fix*]
-   * Prompt starters or commands must be relevant to the app's functionality. [*Must fix*]
-   * The bot must have at least three unique prompt starters or commands. [*Good-to-fix*]
+  * The bot must provide at least one command that enables the user to know about the value proposition of the app. [*Must fix*]
+  * Prompt starters or commands must be functional and return responses. [*Must fix*]
+  * Command description must be coherent and clearly communicate value of the command. [*Must fix*]
+  * Prompt starters or commands must be relevant to the app's functionality. [*Must fix*]
+  * The bot must have at least three unique prompt starters or commands. [*Good-to-fix*]
 
    If your app sends a welcome message, ensure the following guidelines are met:
 
-   * If the app has a complex configuration flow (requires an enterprise license or lacks an intuitive sign up flow), then bots in such apps must always include configuration related information while sending a welcome message during the first run.
+  * If the app has a complex configuration flow (requires an enterprise license or lacks an intuitive sign up flow), then bots in such apps must always include configuration related information while sending a welcome message during the first run.
 
      For best experience, the welcome message must include the value offered by the bot to users, who installed the bot in channel, how to configure the bot, and briefly describe all supported bot commands. You can display the welcome message using an Adaptive Card with buttons for better usability. For more information, see [how to trigger a bot welcome message](~/bots/how-to/conversations/send-proactive-messages.md). For apps without a complex configuration flow, you can choose to trigger a welcome message during the bot first run experience. However, if a welcome message is triggered, it must follow the welcome message guidelines.
 
@@ -1366,9 +1373,9 @@ If your app includes a message extension, ensure that it adheres to these guidel
 
 * Preview images in Adaptive Cards in messaging extensions must load properly. [*Must fix*]
 
-  :::image type="content" source="../../../../assets/images/submission/validation-preview-image-adaptive-card-loading.png" alt-text="Graphic shows an example of preview image loading in adaptive card.":::
+  :::image type="content" source="../../../../assets/images/submission/validation-preview-image-adaptive-card-loading.png" alt-text="Graphic shows an example of preview image loading in an Adaptive Card.":::
 
-  :::image type="content" source="../../../../assets/images/submission/validation-preview-image-adaptive-card-not-loading.png" alt-text="Graphic shows an example of preview image not loading in adaptive card.":::
+  :::image type="content" source="../../../../assets/images/submission/validation-preview-image-adaptive-card-not-loading.png" alt-text="Graphic shows an example of preview image not loading in an Adaptive Card.":::
 
 * Messaging extension response card must include the app icon to avoid end user confusion. [*Must fix*]
 
@@ -1676,6 +1683,18 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/tea
 * When selecting a notification, the user must be directed to relevant content within Teams. [*Must fix*]
 
 </details>
+
+[Back to top](#teams-store-validation-guidelines)
+
+## Microsoft Graph connector
+
+Recommended way to publish your Graph connector is through the [Graph connector gallery](/microsoftsearch/connectors-gallery) and you must not include it within your manifest.json file. The guidelines for the declarative agent file are different, which can be found [here](review-copilot-validation-guidelines.md).
+
+***Example***
+
+Don’t include Graph connector node in the manifest file.
+
+:::image type="content" source="../../../../assets/images/Copilot/da-graph-connector.png" alt-text="Screenshot of the Graph connector node in the manifest file.":::
 
 [Back to top](#teams-store-validation-guidelines)
 
