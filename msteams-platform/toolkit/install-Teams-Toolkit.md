@@ -40,7 +40,7 @@ You can install Teams Toolkit using **Extensions** in Visual Studio Code, or ins
   
     :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-ga.PNG" alt-text="Screenshot show the Teams Toolkit.":::
 
-   After successful installation of Teams Toolkit in Visual Studio Code, the Teams Toolkit icon appears in the Visual Studio Code activity bar.
+   After successful installation of Microsoft 365 Agents Toolkit in Visual Studio Code, the Teams Toolkit icon appears in the Visual Studio Code activity bar.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/toolkit-activity-bar.jpg" alt-text="Screenshot shows the Teams Toolkit icon in the activity bar.":::
 
@@ -60,13 +60,13 @@ You can install Teams Toolkit using **Extensions** in Visual Studio Code, or ins
 
    Visual Studio Code opens with the Teams Toolkit extension page.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/ttk-in-vsc.png" alt-text="Screenshot shows how to select Teams Toolkit in Visual Studio Code."
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/ttk-in-vsc.png" alt-text="Screenshot shows how to select Microsoft 365 Agents Toolkit in Visual Studio Code."
 
 1. Select **Install**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-ga.png" alt-text="Screenshot shows the selection of Install option in Teams Toolkit.":::
 
-   After successful installation of Teams Toolkit in Visual Studio Code, the Teams Toolkit icon appears in the Visual Studio Code activity bar.
+   After successful installation of Microsoft 365 Agents Toolkit in Visual Studio Code, the Teams Toolkit icon appears in the Visual Studio Code activity bar.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/toolkit-activity-bar.jpg" alt-text="Screenshot shows the Teams Toolkit icon in the activity bar after installation.":::
 

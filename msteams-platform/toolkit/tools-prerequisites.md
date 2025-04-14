@@ -103,7 +103,7 @@ To create a free Microsoft 365 developer account:
 
 ### Azure account
 
-An Azure account allows you to host a Teams app or the back-end resources for your Teams app to Azure. You can do this using Teams Toolkit in Visual Studio Code. You must have an Azure subscription in the following scenarios:
+An Azure account allows you to host a Teams app or the back-end resources for your Teams app to Azure. You can do this using Microsoft 365 Agents Toolkit in Visual Studio Code. You must have an Azure subscription in the following scenarios:
 
 * If you already have an existing app on a different cloud provider other than Azure, and you want to integrate the app on Teams platform.
 * If you want to host the back-end resources for your app using another cloud provider, or on your own servers if they're available in the public domain.
