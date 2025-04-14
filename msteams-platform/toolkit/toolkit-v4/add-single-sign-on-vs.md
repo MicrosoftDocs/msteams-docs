@@ -265,7 +265,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
     ```
 
     > [!NOTE]
-    > You can use use `$ENV_NAME$` to reference envs in local/remote service.
+    > You can use `$ENV_NAME$` to reference envs in local/remote service.
 
    Example for TeamsFx Tab template.
   

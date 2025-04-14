@@ -1,18 +1,18 @@
 ---
-title: Get started - Overview
-description: In this module, learn how to create your first Microsoft Teams app based on language and developement environment, understand app capabilities, SDKs.
+title: Get Started - Overview
+description: Learn how to create your first Microsoft Teams app based on language and developement environments, understand app capabilities, and SDKs.
 ms.localizationpriority: high
-ms.date: 06/07/2023
+ms.date: 02/06/2025
 ms.topic: reference
 ---
 
-# Get started
+# Build your Teams app
 
 Get started with building apps for Microsoft Teams and beyond!
 
 Use GitHub Codespaces or walk through the step-by-step guide to build a basic, real-world Teams app. This module introduces you to common tools, fundamental concepts, and more advanced functionalities.
 
-Here's an idea of what you'll learn:
+Here's an idea of what you'll learn
 
 * Get started quickly with the Microsoft Teams Toolkit.
 * Build tab, scenario-based apps, and message extension with GitHub Codespaces or step-by-step guide.
@@ -54,6 +54,11 @@ If you want to build a message extension app, select the following:
 
 > [!div class="nextstepaction"]
 > [Build message extension](build-message-extension.md)
+
+If you want to build a declarative agent, select the following:
+
+> [!div class="nextstepaction"]
+> [Build declarative agent](/microsoft-365-copilot/extensibility/build-declarative-agents?tabs=ttk)
 
 ## See also
 

@@ -5,7 +5,7 @@ ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.date: 12/11/2024
+ms.date: 02/10/2025
 ---
 # Maintain your published Microsoft Teams app
 
@@ -130,6 +130,8 @@ To discontinue your app:
 * Contact the Microsoft Teams App Health evaluation team at [apphealthevaluation@microsoft.com](mailto:apphealthevaluation@microsoft.com) or [teams-sas@microsoft.com](mailto:teams-sas@microsoft.com) to remove your app from the Teams Store.
 
 * Contact your customers where appropriate. Delete or revoke any security or authorization tokens generated for your app.
+
+After the app is discontinued, Microsoft AppSource stores the partner communication data for six months. After this duration, the data is permanently deleted.
 
 ## Ratings and review for Teams apps
 

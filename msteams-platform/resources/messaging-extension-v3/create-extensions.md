@@ -291,7 +291,7 @@ The bot can also respond with an auth/config response if the user needs to authe
 
 In this method, your service can show an `<iframe>` based widget to show any custom UI and collect user input. For this approach, set the `fetchTask` parameter to `true` in the manifest.
 
-Just like in the Adaptive Card flow, your service sends a `fetchTask` event and responds with a URL based [task module response](~/task-modules-and-cards/task-modules/invoking-task-modules.md#dialoginfo-object). Following is a sample response with an Adaptive card:
+Just like in the Adaptive Card flow, your service sends a `fetchTask` event and responds with a URL based [task module response](~/task-modules-and-cards/task-modules/invoking-task-modules.md#dialoginfo-object). Following is a sample response with an Adaptive Card:
 
 ```json
 {

@@ -1,12 +1,12 @@
 ---
-title: Tool Options and Code Samples
+title: Explore Tools and Code Samples
 description: Learn about tools, SDKs, tutorials, and code samples to build apps with various capabilities such as AI, UI, and various languages, to prepare your environment.
 ms.localizationpriority: high
-ms.date: 06/07/2023
+ms.date: 02/06/2025
 ms.topic: reference
 ---
 
-# Explore tools and code samples
+# Tool options and code samples
 
 You've built your first tab app, interactive notification bot, and message extension. You can build a Teams app as per your app's requirements. Based on factors such as business needs, development environment, and domain knowledge, select the environment and tools to build your app.
 
@@ -44,7 +44,7 @@ To start building your Teams app, you can select the tools and SDKs based on you
 1. **SDKs you need**: For example, if you're building AI capability for your bot app, you select Teams AI library.
 1. **UI  Components**: Choose the UI components to design your app based on your app capability.
 1. **Languages**: Choose the language in which you want to build your app.
-1. **Recommended Tools**: Choose the tools based on the language that you've selected. You can also use the Teams Developer Portal to manage and publish your app. The Teams Toolkit and Yo Teams allows you to build your app with JavaScript and TypeScript or with C# in Visual Studio Code (VS Code) or Visual Studio.
+1. **Recommended Tools**: Choose the tools based on the language that you've selected. You can also use the Teams Developer Portal to manage and publish your app. The Teams Toolkit allows you to build your app with JavaScript and TypeScript or with C# in Visual Studio Code (VS Code) or Visual Studio.
 
 | App capabilities | User interactions | Recommended tools | SDKs | Languages |
 |--------|-------------|--------|--------|--------|

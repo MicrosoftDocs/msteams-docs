@@ -1,11 +1,11 @@
 ---
 title: Map Use Cases to App Features
 author: surbhigupta
-description: Identify how your app's use cases can work within the Teams experience, app features, and capabilities; map common use cases with capabilities.
+description: Learn to identify how your app's use cases can work within the Teams experience, app features, and capabilities, and map common use cases with capabilities.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
-ms.date: 12/01/2022
+ms.date: 02/06/2025
 ---
 # Map your use cases to Teams app features
 
@@ -97,7 +97,7 @@ Let's look at how Teams capabilities enable different features for your Teams ap
 :::row-end:::
 
 :::row:::
-      :::image type="content" source="~/assets/images/overview/flowchart-adaptive-card.png" alt-text="Microsoft Teams app capabilities for adaptive cards." link="~/task-modules-and-cards/cards/cards-reference.md#adaptive-card" border="false":::
+      :::image type="content" source="~/assets/images/overview/flowchart-adaptive-card.png" alt-text="Microsoft Teams app capabilities for Adaptive Cards." link="~/task-modules-and-cards/cards/cards-reference.md#adaptive-card" border="false":::
 :::row-end:::
 
 :::row:::

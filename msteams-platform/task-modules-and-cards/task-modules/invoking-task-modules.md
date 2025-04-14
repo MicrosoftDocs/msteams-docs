@@ -163,11 +163,11 @@ If you're invoking from a tab, use an Adaptive Card:
     "body": [
         {
             "type": "TextBlock",
-            "text": "Here is a ninja cat:"
+            "text": "Here is a guitar:"
         },
         {
             "type": "Image",
-            "url": "http://adaptivecards.io/content/cats/1.png",
+            "url": "https://adaptivecards.microsoft.com/images/guitar1.jpeg",
             "size": "Medium"
         }
     ],
@@ -185,11 +185,11 @@ If you're invoking from a bot, use an Adaptive Card bot card attachment:
         "body": [
             {
                 "type": "TextBlock",
-                "text": "Here is a ninja cat:"
+                "text": "Here is a guitar:"
             },
             {
                 "type": "Image",
-                "url": "http://adaptivecards.io/content/cats/1.png",
+                "url": "https://adaptivecards.microsoft.com/images/guitar1.jpeg",
                 "size": "Medium"
             }
         ],

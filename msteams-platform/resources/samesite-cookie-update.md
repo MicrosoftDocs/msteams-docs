@@ -1,11 +1,11 @@
 ---
 title: Implement SameSite Cookie Attribute
 author: laujan
-description: Learn types of cookies, SameSite cookies and attributes, their impacts on Teams tabs, dialogs (task modules), message extensions, and their authentication in Teams.
+description: Learn about types of cookies, SameSite cookies and attributes, Teams implications, Android WebView, third party cookies deprecation, and storage partitioning.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
-ms.date: 05/18/2022
+ms.date: 02/06/2025
 ---
 
 # Cookies and local storage
@@ -34,7 +34,7 @@ You can opt out of adding the SameSite cookie attribute to the `SetCookie` heade
 
 ## SameSite cookie attribute: 2020 release
 
-Chrome 80, released in February 2020, introduces new cookie values and imposes cookie policies by default. Three values are passed into the updated SameSite attribute: **Strict**, **Lax**, or **None**. If not specified, cookies SameSite attribute takes the value `SameSite=Lax` by default.
+Chrome 80 introduces new cookie values and imposes cookie policies by default. Three values are passed into the updated SameSite attribute: **Strict**, **Lax**, or **None**. If not specified, cookies SameSite attribute takes the value `SameSite=Lax` by default.
 
 SameSite cookie attributes are as follows:
 
