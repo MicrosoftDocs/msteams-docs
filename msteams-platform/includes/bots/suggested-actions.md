@@ -6,7 +6,8 @@ When a user selects a button, it remains visible and accessible on the rich card
 >
 > * `SuggestedActions` are only supported for one-on-one chat bots with both text based messages and Adaptive Cards.
 > * `SuggestedActions` aren't supported for chat bots with attachments for any conversation type.
-> * `imBack` is the only supported action type and Teams display up to three suggested actions.
+
+### `imBack`
 
 To add suggested actions to a message, specify a list of [card action](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) objects that represent the buttons to be displayed to the user for the [`sugestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions) property of the [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) object.
 
@@ -46,6 +47,7 @@ The following is an example to implement and experience suggested actions:
   "replyToId": "5d5cdc723"
 }
 ```
+
 The following illustrates an example of suggested actions:
 
 # [Desktop](#tab/desktop)
@@ -55,3 +57,21 @@ The following illustrates an example of suggested actions:
 # [Mobile](#tab/mobile)
 
 :::image type="content" source="~/assets/images/Cards/suggested-actions-mobile.png" alt-text="Screenshot that shows the suggested actions in mobile." lightbox="~/assets/images/Cards/suggested-actions-mobile.png":::
+
+### `Action.Compose`
+
+You can use the `Action.Compose` to insert message in the compose box. It helps you to add a new action type. It's a action that enables you to include semantic object like tags, mention any user in the chat or channel, other rich objects like emojis and gifs.
+
+```json
+{
+   Type: “Action.Compose”,
+   Title: “button title”,
+   Value: {
+      type: “Teams.chatMessage”,
+      data: <GraphAPI Chat Message Object>
+   }
+}
+```
+
+> [!NOTE]
+> If the message is received in a hub that doesn't support it, the app shows an error message. The bots are aware of the channel to which its posting.
