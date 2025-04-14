@@ -16,7 +16,7 @@ Whether you’re tracking active users, retention rates, or usage patterns acros
 
 The app usage for a given day is reflected within 24 to 48 hours, and usage data for the new apps can take up to three to five days to reflect in the charts.
 
-# [Custom apps built for your org (New)](#tab/custom-apps-new)
+# [Custom apps built for your org (New)](#tab/custom-apps-built-for-your-org)
 
 ### Prerequisite
 
@@ -43,7 +43,7 @@ This section describes the app capability metrics & insights available in Develo
 This section describes the known limitations custom apps analytics.
 
 
-# [Custom apps built for your org (Deprecating)](#tab/custom-apps-built-for-your-org)
+# [Custom apps built for your org (Deprecating)](#tab/custom-apps-deprecating)
 
 ### Get Started
 
