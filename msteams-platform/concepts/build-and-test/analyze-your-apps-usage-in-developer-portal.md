@@ -16,11 +16,11 @@ Whether you’re tracking active users, retention rates, or usage patterns acros
 
 The app usage for a given day is reflected within 24 to 48 hours, and usage data for the new apps can take up to three to five days to reflect in the charts.
 
-# [Custom apps (new analytics))](#tab/custom-apps-new)
+# [Custom apps built for your org (New)](#tab/custom-apps-new)
 
 ### Prerequisite
 
-Your tenant admin must allow app usage for custom apps to show in the Developer Portal. For more information, see [Enable developers to use app analytics](https://review.learn.microsoft.com/en-us/microsoft-365/admin/manage/enable-dev-analytics).
+Your tenant admin must allow app usage for custom apps to show in the Developer Portal. For more information, see [Enable developers to use app analytics](https://review.learn.microsoft.com/microsoft-365/admin/manage/enable-dev-analytics).
 
 A **Global admin** or a **Teams admin** can enable it in the [Microsoft 365 admin center](https://admin.microsoft.com) by navigating to **Settings** > **Org settings** > **Services** > **Developer Portal for Teams**.
 
@@ -28,9 +28,8 @@ A **Global admin** or a **Teams admin** can enable it in the [Microsoft 365 admi
 
    > [!NOTE]
    >
-   > * You may get more insights into app's usage with our new app analytics. 
-   > * To opt-in new app analytics, clic the banner on the **Analytics** page in Developer Portal.
-   > * If you can't view these analytics, contact your admin to enable the setting in the Microsoft 365 admin center.
+   > * You may now get more insights into app's usage with our new app analytics. 
+   > * To opt-in the new experience, click the banner on the Analytics page in Developer Portal.
 
 ### Metric definitions
 This section describes the metrics available in Developer Portal for custom apps.
@@ -44,7 +43,7 @@ This section describes the app capability metrics & insights available in Develo
 This section describes the known limitations custom apps analytics.
 
 
-# [Custom apps built for your org (LOB apps)](#tab/custom-apps-built-for-your-org)
+# [Custom apps built for your org (Deprecating)](#tab/custom-apps-built-for-your-org)
 
 ### Get Started
 
