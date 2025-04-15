@@ -12,7 +12,7 @@ ms.date: 05/20/2022
 
 Microsoft Teams provides single sign-on (SSO) function for an app to obtain signed in Teams user token to access Microsoft Graph and other APIs. Teams Toolkit facilitates the interaction by abstracting some of the Microsoft Entra ID flows and integrations behind some simple APIs. This enables you to add SSO features easily to your Teams app.
 
-## Enable Single Sign-on in Teams Toolkit for Visual Studio
+## Enable single sign-on in Microsoft 365 Agents Toolkit for Visual Studio
 
 Teams provides SSO function for an app using the Microsoft Teams Toolkit for Microsoft Visual Studio.
 

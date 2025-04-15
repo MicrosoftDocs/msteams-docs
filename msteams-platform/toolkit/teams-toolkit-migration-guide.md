@@ -23,7 +23,7 @@ The separation of Teams project and source code allows the integration of existi
 
 Before starting the migration process, ensure that you have the following:
 
-* A Teams project that is created using Teams Toolkit for Visual Studio 17.9 or earlier version.
+* A Teams project that is created using Microsoft 365 Agents Toolkit for Visual Studio 17.9 or earlier version.
 * Visual Studio version 17.10 Preview 3 or later.
 * Multiple startups feature. To enable multiple startups, go to **Tools** > **Options** > **Preview Feature** > **Enable Multi-Project Launch Profiles**.
 

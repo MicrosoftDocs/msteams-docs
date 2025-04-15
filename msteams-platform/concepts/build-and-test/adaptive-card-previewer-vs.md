@@ -1,7 +1,7 @@
 ---
 title: Adaptive Card Previewer - Visual Studio
 author: surbhigupta
-description: In this article, learn more about the Microsoft Adaptive Card previewer using Teams Toolkit for Visual Studio, features, advantages, limitations.
+description: In this article, learn more about the Microsoft Adaptive Card previewer using toolkit for Visual Studio, features, advantages, limitations.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
@@ -10,7 +10,7 @@ ms.date: 02/13/2024
 
 # Microsoft Adaptive Card Previewer Microsoft Visual Studio
 
-The Adaptive Card Previewer, integrated with the Microsoft Teams Toolkit for Visual Studio, enables real-time previews of Adaptive Cards created for Microsoft Teams bots. You can open a side-by-side preview of your Adaptive Card to observe live changes, switch between different themes, and refine your designs to ensure they're accurate and effective.
+The Adaptive Card Previewer, integrated with the Microsoft 365 Agents Toolkit for Visual Studio, enables real-time previews of Adaptive Cards created for Microsoft Teams bots. You can open a side-by-side preview of your Adaptive Card to observe live changes, switch between different themes, and refine your designs to ensure they're accurate and effective.
 
 ## Explore Adaptive Card Previewer
 
