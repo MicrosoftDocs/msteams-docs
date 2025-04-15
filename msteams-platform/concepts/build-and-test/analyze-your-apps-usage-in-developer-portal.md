@@ -10,9 +10,9 @@ ms.date: 12/15/2022
 
 # Analyze app usage in Developer Portal
 
-Developer Portal provides a comprehensive suite of tools to help you analyze and understand your app’s performance and user engagement. By using these analytics, you can gain valuable insights into how users interact with your app, identify areas for improvement, and make data-driven decisions to enhance the overall user experience.
+Developer Portal provides a comprehensive suite of tools to help you analyze and understand your app's performance and user engagement. By using these analytics, you can gain valuable insights into how users interact with your app, identify areas for improvement, and make data-driven decisions to enhance the overall user experience.
 
-Whether you’re tracking active users, retention rates, or usage patterns across different platforms, Developer Portal helps you with the information you need to optimize your app and ensure its success. Custom apps built for your org (LOB apps) can access app usage data only for Teams. However, for third-party apps you can explore new Microsoft 365 dimensions, such as host product and capabilities.
+Whether you're tracking active users, retention rates, or usage patterns across different platforms, Developer Portal helps you with the information you need to optimize your app and ensure its success. Custom apps built for your org (LOB apps) can access app usage data only for Teams. However, for third-party apps you can explore new Microsoft 365 dimensions, such as host product and capabilities.
 
 The app usage for a given day is reflected within 24 to 48 hours, and usage data for the new apps can take up to three to five days to reflect in the charts.
 
@@ -20,7 +20,7 @@ The app usage for a given day is reflected within 24 to 48 hours, and usage data
 
 ### Prerequisite
 
-Your tenant admin must allow app usage for custom apps to show in the Developer Portal. For more information, see [Enable developers to use app analytics](https://review.learn.microsoft.com/microsoft-365/admin/manage/enable-dev-analytics).
+Your tenant admin must allow app usage for custom apps to show in the Developer Portal. For more information, see [Enable developers to use app analytics](/microsoft-365/admin/manage/enable-dev-analytics.md).
 
 A **Global admin** or a **Teams admin** can enable it in the [Microsoft 365 admin center](https://admin.microsoft.com) by navigating to **Settings** > **Org settings** > **Services** > **Developer Portal for Teams**.
 
