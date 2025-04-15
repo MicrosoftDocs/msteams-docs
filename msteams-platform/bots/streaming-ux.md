@@ -35,9 +35,19 @@ Streaming bot messages has two types of updates:
 
   :::image type="content" source="../assets/images/bots/stream_type_streaming.png" alt-text="Screenshot shows the bots response streaming." lightbox="../assets/images/bots/stream_type_streaming.png" border="false":::
 
-The :::image type="icon" source="../assets/icons/stop-button.png"::: button lets users control streaming responses by stopping them early. It's available by default during streaming, allowing users to refine prompts or send new ones. Understanding how the stop streaming button works can help design more effective and user-friendly conversational interfaces.
+  - **Stop** button: The :::image type="icon" source="../assets/icons/stop-button.png"::: button lets users control streaming responses by stopping them early. It's available by default during streaming, allowing users to refine prompts or send new ones. Understanding how the stop streaming button works can help design more effective and user-friendly conversational interfaces.
+  - Streaming content: While streaming, the bot messages must contain the previous streamed content.
 
-You can implement streaming bot messages in your app in one of the following ways:
+      **For example**: This is an example of acceptable streaming response.
+        *A brown*
+        *A brown fox*
+        *A brown fox jumps over the fence*
+
+      **Non-example**: This is an example of a streaming response that will return an error.
+        *A brown*
+        *Hello*
+
+    You can implement streaming bot messages in your app in one of the following ways:
 
 - [Stream using Teams AI library](#stream-message-through-teams-ai-library).
 - [Stream using REST API](#stream-message-through-rest-api).
