@@ -547,7 +547,7 @@ For more information, see [icon guidelines](~/concepts/build-and-test/apps-packa
 
 If your app package contains custom activity icons for activity feed notifications, ensure that they meet the following guidelines:
 
-* The size of icon must be 32x32 pixels and in PNG format. [*Must fix*]
+* The icon size must be 32x32 pixels and in PNG format. [*Must fix*]
 * The icon must be enterprise-safe. For example, the icons mustn't promote violence or a scam. [*Must fix*]
 * The @ icon must be used only in a notification about a user or group being tagged similar to how Teams uses the icon. [*Must fix*]
 * The icon can't be random or irrelevant and needs to match the information in the notification. [*Good-to-fix*]
