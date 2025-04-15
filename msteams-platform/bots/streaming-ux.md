@@ -31,6 +31,8 @@ Streaming bot messages has two types of updates:
 
   :::image type="content" source="../assets/images/bots/stream_type_informative.png" alt-text="Screenshot shows the bots informative updates of streaming." lightbox="../assets/images/bots/stream_type_informative.png" border="false":::
 
+    Informative messages must not be more than 1 kb or 1000 characters.
+
 - **Response streaming**: Response streaming is displayed as a typing indicator. It reveals the bot's response to the user as small updates while the complete response is being generated.
 
   :::image type="content" source="../assets/images/bots/stream_type_streaming.png" alt-text="Screenshot shows the bots response streaming." lightbox="../assets/images/bots/stream_type_streaming.png" border="false":::
