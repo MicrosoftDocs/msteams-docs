@@ -40,7 +40,7 @@ The schema defines the following properties:
 
 |Property|Type|Maximum length|Description|Required|
 |---------------|--------|---------|------------------|----|
-|`$schema`|URL|String|The `https://` URL referencing the JSON Schema for the manifest.||
+|`$schema`|URL|String|The `https://` URL referencing the JSON schema for the manifest.||
 |`name.short`|String|30|This property specifies a localized value for the [name.short property](manifest-schema.md#name). The short display name for the app. It replaces the corresponding string from the app manifest with the value provided here.|✔️|
 |`name.full`|String|100|This property specifies a localized value for the [name.full property](manifest-schema.md#name). The full name of the app. It replaces the corresponding string from the app manifest with the value provided here.|✔️|
 |`description.short`|String|80|This property specifies a localized value for the [description.short property](manifest-schema.md#description). A short description of the app, used when space is limited. It replaces the corresponding string from the app manifest with the value provided here.|✔️|
