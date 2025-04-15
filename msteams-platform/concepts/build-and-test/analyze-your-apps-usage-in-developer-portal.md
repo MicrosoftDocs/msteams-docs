@@ -16,11 +16,11 @@ Whether you're tracking active users, retention rates, or usage patterns across 
 
 The app usage for a given day is reflected within 24 to 48 hours, and usage data for the new apps can take up to three to five days to reflect in the charts.
 
-# [Custom apps built for your org (New)](#tab/custom-apps-built-for-your-org)
+# [Custom apps (New)](#tab/custom-apps-built-for-your-org)
 
 ### Prerequisite
 
-Your tenant admin must allow app usage for custom apps to show in the Developer Portal. For more information, see [Enable developers to use app analytics](/microsoft-365/admin/manage/enable-dev-analytics.md).
+Your tenant admin must allow app usage for custom apps to show in the Developer Portal. For more information, see [Enable developers to use app analytics](/microsoft-365/admin/manage/enable-dev-analytics).
 
 A **Global admin** or a **Teams admin** can enable it in the [Microsoft 365 admin center](https://admin.microsoft.com) by navigating to **Settings** > **Org settings** > **Services** > **Developer Portal for Teams**.
 
@@ -29,7 +29,7 @@ A **Global admin** or a **Teams admin** can enable it in the [Microsoft 365 admi
    > [!NOTE]
    >
    > * You may now get more insights into app's usage with our new app analytics. 
-   > * To opt-in the new experience, click the banner on the Analytics page in Developer Portal.
+   > * You may click the banner on the Analytics page to opt-in new custom app analytics.
 
 ### Metric definitions
 This section describes the metrics available in Developer Portal for custom apps.
@@ -43,7 +43,12 @@ This section describes the app capability metrics & insights available in Develo
 This section describes the known limitations custom apps analytics.
 
 
-# [Custom apps built for your org (Deprecating)](#tab/custom-apps-deprecating)
+# [Custom apps (Deprecating)](#tab/custom-apps-deprecating)
+
+   > [!NOTE]
+   >
+   > * The current custom app analytics is being deprecated soon. 
+   > * To opt-in the [new experience](#tab/custom-apps-built-for-your-org), click the banner on the Analytics page in Developer Portal.
 
 ### Get Started
 
@@ -133,7 +138,7 @@ After you have selected your desired filters, you can explore the following indi
 
    :::image type="content" source="../../assets/images/tdp/app-dashboard.png" alt-text="Screenshots shows you app dashboard chart for your published app in Developer Portal.":::
 
-# [Third-party apps](#tab/thirdpartyapps)
+# [Published apps](#tab/thirdpartyapps)
 
 ### Prerequisite
 
