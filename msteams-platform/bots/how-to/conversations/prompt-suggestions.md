@@ -1,6 +1,6 @@
 ---
 title: Add Prompt Suggestions
-author: v-npaladugu
+author: surbhigupta
 description: Learn how to create and handle a prompt starter and suggested actions for your Microsoft Teams bot to help your users initiate conversations.
 ms.topic: how-to
 ms.localizationpriority: medium

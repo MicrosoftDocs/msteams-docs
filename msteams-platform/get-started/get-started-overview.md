@@ -55,6 +55,11 @@ If you want to build a message extension app, select the following:
 > [!div class="nextstepaction"]
 > [Build message extension](build-message-extension.md)
 
+If you want to build a declarative agent, select the following:
+
+> [!div class="nextstepaction"]
+> [Build declarative agent](/microsoft-365-copilot/extensibility/build-declarative-agents?tabs=ttk)
+
 ## See also
 
 * [Microsoft Teams samples](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)

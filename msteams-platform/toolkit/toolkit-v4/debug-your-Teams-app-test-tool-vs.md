@@ -1,6 +1,6 @@
 ---
 title: Debug Bot with Teams App Test Tool
-author: v-ganr
+author: surbhigupta
 description: Learn how to build, configure, and deploy bot using Teams App Test Tool in Visual Studio, and to mock an activity using predefined and custom activity triggers.
 ms.localizationpriority: medium
 ms.topic: overview
@@ -90,7 +90,7 @@ Test Tool offers a faster debug experience for bot applications when compared to
     
     1. Replace model name with Azure OpenAI model deployment name in `Program.cs` file.
    
-         :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/azure-openai-model-deployment-name.png" alt-text="Screenshot shows the AzureOpenAI model deployement name updated.":::
+         :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/azure-openai-model-deployment-name.png" alt-text="Screenshot shows the AzureOpenAI model deployment name updated.":::
     ---
 
 1. In the debug dropdown list, select **Teams App Test Tool (browser)**.

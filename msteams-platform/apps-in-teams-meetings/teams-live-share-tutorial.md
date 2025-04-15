@@ -195,7 +195,7 @@ sidePanelTemplate["innerHTML"] = `
     .text { font-size: medium; }
   </style>
   <div class="wrapper">
-    <p class="title">Lets get started</p>
+    <p class="title">Let's get started</p>
     <p class="text">Press the share to stage button to share Dice Roller to the meeting stage.</p>
   </div>
 `;
