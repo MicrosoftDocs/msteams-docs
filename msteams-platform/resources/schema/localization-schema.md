@@ -22,7 +22,7 @@ Example of localization JSON schema v1.20 is as follows:
 
 ```json
 {
-    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.19/MicrosoftTeams.Localization.schema.json",
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.20/MicrosoftTeams.Localization.schema.json",
     "name.short": "Portail de Développement",
     "name.full": "Portail des développeurs",
     "description.short": "Configurer, distribuer et gérer vos applications Microsoft Teams",
