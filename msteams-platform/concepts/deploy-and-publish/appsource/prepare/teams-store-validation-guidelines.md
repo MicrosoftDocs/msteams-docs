@@ -1,6 +1,6 @@
 ---
 title: Teams Store Validation Guidelines
-description: Learn to increase the chances of your app to pass the Teams Store submission process. Understand the must fix and good-to-fix validation guidelines.
+description: Learn to increase the chances of your app to pass the Teams Store submission process. Understand the must-fix and good-to-fix validation guidelines.
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
