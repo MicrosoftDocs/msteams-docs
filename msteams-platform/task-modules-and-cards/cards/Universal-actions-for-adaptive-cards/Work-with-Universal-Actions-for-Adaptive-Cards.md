@@ -1,6 +1,6 @@
 ---
 title: Use Universal Actions for Adaptive Card
-description: Learn to work with the Universal Actions for Adaptive Cards, including Schema for UniversalActions for Adaptive cards, Refresh model, and backward compatibility
+description: Learn about Universal Actions for Adaptive Cards, including schema for Universal Actions for Adaptive Cards, refresh model, and backward compatibility.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 12/20/2022
@@ -54,7 +54,7 @@ Now, you can use the refresh model to allow Adaptive Cards to update automatical
 
 ## Refresh model
 
-To automatically refresh your Adaptive Card, define its `refresh` property, which embeds an action of type `Action.Execute` and an `userIds` array.
+To automatically refresh your Adaptive Card, define its `refresh` property, which embeds an action of type `Action.Execute` and a `userIds` array.
 
 For more information, see [refresh schema and properties](/adaptive-cards/authoring-cards/universal-action-model#refresh-mechanism).
 
