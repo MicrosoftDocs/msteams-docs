@@ -30,9 +30,12 @@ A **Global admin** or a **Teams admin** can enable it in the [Microsoft 365 admi
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
-| **Monthly R28 active users (MAU)** | The default usage metric. It shows the count of unique active users who used your app within that rolling 28 days window in UTC. |
-| **Daily active users (DAU)** | It shows you the count of unique active users who used your app in a given day in UTC. |
-| **Weekly R7** | It shows the count of unique active users who used your app within that rolling 7 days window in UTC. |
+| **Monthly active users (MAU)** | Number of unique users who performed an intentional activity with your app within that rolling 28 days window in UTC. |
+| **Weekly active users (WAU)** | Number of unique users who performed an intentional activity with your app within that rolling 7 days window in UTC. |
+| **Daily active users (DAU)** | Number of unique users who performed an intentional activity with your app in a given day in UTC. |
+| **Monthly active tenants** | Number of unique tenants who performed an intentional activity with your app within that rolling 28 days window in UTC. |
+| **Weekly active tenants** | Number of unique tenants who performed an intentional activity with your app within that rolling 7 days window in UTC. |
+| **Daily active tenants** | Number of unique tenants who performed an intentional activity with your app in a given day in UTC. |
 
 As you explore individual metrics on this page, you can use the **Filter** button to analyze your app's usage from the following filter options:
 
