@@ -15,8 +15,7 @@ ms.localizationpriority: high
 > Streaming bot message is available:
 >
 > - only for one-on-one chats.
-> - is generally available only on web and desktop client.
-> - is available in public developer preview on Android and iOS.
+> - is generally available on web, desktop, and mobile.
 >
 > Streaming bot message isn't available with function calling and the OpenAI `o1` model.
 
@@ -32,11 +31,23 @@ Streaming bot messages has two types of updates:
 
   :::image type="content" source="../assets/images/bots/stream_type_informative.png" alt-text="Screenshot shows the bots informative updates of streaming." lightbox="../assets/images/bots/stream_type_informative.png" border="false":::
 
+    Informative messages must not be more than 1 kb or 1000 characters.
+
 - **Response streaming**: Response streaming is displayed as a typing indicator. It reveals the bot's response to the user as small updates while the complete response is being generated.
 
   :::image type="content" source="../assets/images/bots/stream_type_streaming.png" alt-text="Screenshot shows the bots response streaming." lightbox="../assets/images/bots/stream_type_streaming.png" border="false":::
 
-The :::image type="icon" source="../assets/icons/stop-button.png"::: button lets users control streaming responses by stopping them early. It's available by default during streaming, allowing users to refine prompts or send new ones. Understanding how the stop streaming button works can help design more effective and user-friendly conversational interfaces.
+  - The **Stop** button: The :::image type="icon" source="../assets/icons/stop-button.png"::: button lets users control streaming responses by stopping them early. It's available by default during streaming, allowing users to refine prompts or send new ones. Understanding how the stop streaming button works can help design more effective and user-friendly conversational interfaces.
+  - Streaming content: While streaming, the bot messages must contain the previous streamed content.
+
+      **For example**: This is an example of acceptable streaming response.<br>
+        *A brown*<br>
+        *A brown fox*<br>
+        *A brown fox jumps over the fence*
+
+      **Non-example**: This is an example of a streaming response that will return an error.<br>
+        *A brown*<br>
+        *Hello*
 
 You can implement streaming bot messages in your app in one of the following ways:
 

@@ -31,6 +31,7 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
+***April 30, 2025***: [Introducing streaming messages for bot apps](bots/streaming-ux.md).
 **2025 April**
 
 * ***April 10, 2025***: [Create personal scope apps that integrate seamlessly with Public Switched Telephone Network (PSTN) and Teams-to-Teams calls](apps-in-teams-meetings/build-tabs-for-calling.md).
