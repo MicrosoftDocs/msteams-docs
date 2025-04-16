@@ -1,7 +1,7 @@
 ---
 title: Build API-based Message Extension
 author: surbhigupta
-description: Learn how to create or build an API-based message extension using Developer Portal for Teams, Teams Toolkit for Visual Studio, Visual Studio Code, and CLI.
+description: Learn how to create or build an API-based message extension using Developer Portal for Teams, toolkit for Visual Studio, Visual Studio Code, and CLI.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
@@ -791,7 +791,7 @@ To create an API-based message extension using Teams Toolkit CLI, follow these s
 
 Before you get started, ensure that you install Visual Studio Enterprise 2022 Preview version 17.9.0 Preview 1.0 and install the **Microsoft Teams development tools** under **ASP.NET and web development** workload.
 
-To create an API-based message extension using Teams Toolkit for Visual Studio, follow these steps:
+To create an API-based message extension using Microsoft 365 Agents Toolkit for Visual Studio, follow these steps:
 
 1. Open **Visual Studio**.
 1. Go to **File** > **New** > **Project...** or **New Project**.
@@ -859,7 +859,7 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
    1. Go to **Solution Explorer** and select your project.
    1. Right-click the menu and select **Teams Toolkit** > **Provision in the Cloud**.
 
-      :::image type="content" source="../assets/images/Copilot/api-based-VS-provision-cloud.png" alt-text="Screenshot shows the Provision in the Cloud option under Teams Toolkit in Visual Studio.":::
+      :::image type="content" source="../assets/images/Copilot/api-based-VS-provision-cloud.png" alt-text="Screenshot shows the Provision in the Cloud option under Microsoft 365 Agents Toolkit in Visual Studio.":::
 
       If prompted, sign in with a Microsoft 365 account. A message appears that the app is successfully prepared.
 

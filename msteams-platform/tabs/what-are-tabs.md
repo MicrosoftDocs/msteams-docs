@@ -158,5 +158,5 @@ Now let's build your tab. But first select your choice of tab to build:
 * [Extend tab app with Microsoft Graph permissions and scopes](how-to/authentication/tab-sso-graph-api.md)
 * [Microsoft Teams updates](../resources/teams-updates.md)
 * [Grant tab device permission in Teams](~/sbs-tab-device-permissions.yml)
-* [Teams Toolkit for Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md)
-* [Teams Toolkit for Visual Studio](../toolkit/visual-studio-overview.md)
+* [Microsoft 365 Agents Toolkit for Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md)
+* [Microsoft 365 Agents Toolkit for Visual Studio](../toolkit/visual-studio-overview.md)

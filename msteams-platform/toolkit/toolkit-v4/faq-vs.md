@@ -1,7 +1,7 @@
 ---
-title: FAQ for Teams Toolkit in Visual Studio
+title: FAQ for Microsoft 365 Agents Toolkit in Visual Studio
 author: MuyangAmigo
-description: Learn how to troubleshoot errors with Teams Toolkit in Visual Studio Code, switch Azure subscription, change resource group, and provision SharePoint based app.
+description: Learn how to troubleshoot errors with toolkit in Visual Studio, switch Azure subscription, change resource group, and provision SharePoint based app.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview

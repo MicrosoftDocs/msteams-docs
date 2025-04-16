@@ -1,7 +1,7 @@
 ---
-title: Install Teams Toolkit in Visual Studio
+title: Install Microsoft 365 Agents Toolkit in Visual Studio
 author: zyxiaoyuer
-description: Learn how to install Microsoft Teams Toolkit for Visual Studio and to use Visual Studio installer to install the required version of Visual Studio.
+description: Learn how to install Microsoft 365 Agents Toolkit for Visual Studio and to use Visual Studio installer to install the required version of Visual Studio.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
@@ -12,7 +12,7 @@ ms.date: 07/29/2022
 
 You can learn how to install Microsoft Teams Toolkit and enjoy enhanced experience for app development.
 
-## Install Teams Toolkit for Visual Studio
+## Install Microsoft 365 Agents Toolkit for Visual Studio
 
 1. Download and open [Microsoft Visual Studio installer](https://aka.ms/VSDownload).
 1. Select **Install**. If you've already installed Visual Studio, select **Modify**.
