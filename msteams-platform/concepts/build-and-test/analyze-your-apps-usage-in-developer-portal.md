@@ -392,7 +392,7 @@ As you explore the app usage metrics on this page, you can see the following thr
 
 #### Usage by host product
 
-   The **Usage by host product** chart shows your app's active usage across various host products, including **Teams**, **Outlook**, and the **Microsoft 365 app** of monthly, weekly, and daily data.
+   The **Usage by host product** chart shows your app's active usage across various host products, including **Microsoft 365 Copilot**, **Teams**, **Outlook**, and the **Microsoft 365 app** of monthly, weekly, and daily data.
 
    :::image type="content" source="../../assets/images/tdp/tdp-host-usage.png" alt-text="Screenshot shows you app usage in different host product of your published app in Developer Portal.":::
 
@@ -403,8 +403,9 @@ As you explore the app usage metrics on this page, you can see the following thr
    :::image type="content" source="../../assets/images/tdp/tdp-usage-platform.png" alt-text="Screenshot shows you app usage in different platforms of your published app in Developer Portal.":::
 
    > [!NOTE]
-   > The `Preview` tag indicates that the metric **Usage by host product** is in its initial phase and might undergo modifications as we collect feedback and continue to improve the experience.
-
+   > * The `Preview` tag indicates that the metric **Usage by host product** is in its initial phase and might undergo modifications as we collect feedback and continue to improve the experience.
+   > * The **Microsoft 365 Copilot Agent** currently includes usage of declarative agents only. The usage of the custom engine agent is not available in the Developer Portal.
+   
 #### Usage by operating system
 
    The **Usage by operating system** chart shows your app's active usage across various operating systems, such as **Windows**, **Mac**, **iOS**, and **Android** of monthly, weekly, and daily data.
@@ -417,6 +418,7 @@ As you explore the app usage metrics on this page, you can see the following thr
 
   This page summarizes the overall usage of the following app capabilities in different host products.
 
+* Copilot Agent
 * Bot
 * Tab
 * Message extension
@@ -427,7 +429,8 @@ As you explore the app usage metrics on this page, you can see the following thr
    :::image type="content" source="../../assets/images/tdp/tdp-app-capability.png" alt-text="Screenshot shows you app capability usage in different host products of your published app in Developer Portal." lightbox="../../assets/images/tdp/tdp-app-capability.png":::
 
    > [!NOTE]
-   > The `Preview` tag indicates that the metric is in its initial phase and might undergo modifications as we collect feedback and continue to improve the experience.
+   > * The `Preview` tag indicates that the metric is in its initial phase and might undergo modifications as we collect feedback and continue to improve the experience.
+   > * The **Microsoft 365 Copilot Agent** currently includes usage of declarative agents only. The usage of the custom engine agent is not available in the Developer Portal.
 
 ### Known limitations
 
