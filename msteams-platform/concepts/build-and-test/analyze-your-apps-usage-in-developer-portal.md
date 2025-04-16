@@ -26,11 +26,6 @@ A **Global admin** or a **Teams admin** can enable it in the [Microsoft 365 admi
 
    :::image type="content" source="../../assets/images/tdp/mac-setting.png" alt-text="Screenshot shows where admin can allow custom app analytics.":::
 
-   > [!NOTE]
-   >
-   > * You may now get more insights into app's usage with our new app analytics. 
-   > * You may click the banner on the Analytics page to opt-in new custom app analytics.
-
 ### Metric definitions
 
 | Metric | Definition |
@@ -184,7 +179,8 @@ As you explore the app usage metrics on this page, you can see the following thr
    > [!NOTE]
    >
    > * The current custom app analytics is being deprecated soon. 
-   > * To opt-in the [new experience](../#tab/custom-apps-built-for-your-org), click the banner on the Analytics page in Developer Portal.
+   > * You can now opt-in the new custom app analytics in Developer Portal by clicking the banner on the Analytics page.
+   > * Learn more about the new custom app analytics [here](/microsoftteams/platform/concepts/build-and-test/analyze-your-apps-usage-in-developer-portal&tabs=custom-apps-built-for-your-org).
 
 ### Get Started
 
