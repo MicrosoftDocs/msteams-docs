@@ -180,7 +180,7 @@ As you explore the app usage metrics on this page, you can see the following thr
    >
    > * The current custom app analytics is being deprecated soon. 
    > * You can now opt-in the new custom app analytics in Developer Portal by clicking the banner on the Analytics page.
-   > * Learn more about the new custom app analytics [here](/microsoftteams/platform/concepts/build-and-test/analyze-your-apps-usage-in-developer-portal&tabs=custom-apps-built-for-your-org).
+   > * Learn more about the new custom app analytics [here](/microsoftteams/platform/concepts/build-and-test/analyze-your-apps-usage-in-developer-portal?tabs=custom-apps-built-for-your-org).
 
 ### Get Started
 
