@@ -242,6 +242,7 @@ To update your app's code:
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+code+to+handle+an+access+token&&author=%40surbhigupta&pageUrl=https%3A%2F%2Freview.learn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code%3Fbranch%3Dpr-en-us-12508%26tabs%3Dcs1%252Ccs2%252Ccs3%252Ccs4%252Ccs5%26pivots%3Dbot-app%23add-code-to-handle-an-access-token&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code.md&documentVersionIndependentId=039ff5cc-7243-ce4b-527e-c152755eeb72&platformId=915789b2-9617-01bb-fb21-d6789a634ed8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ---
 
 ### Consent dialog for getting access token
