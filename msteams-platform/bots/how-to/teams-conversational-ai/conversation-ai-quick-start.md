@@ -282,9 +282,9 @@ Teams Toolkit automatically provisions `MicrosoftAppId` and `MicrosoftAppPasswor
 
 1. Go to **Solution Explorer** and select your project.
 
-1. Right-click menu and select **Teams Toolkit** > **Prepare Teams App Dependencies**.
+1. Right-click menu and select **Teams Toolkit** > **Select Microsoft 365 Account**.
 
-   :::image type="content" source="../../../assets/images/bots/dotnet-ai-library-prepare-teams.png" alt-text="Screenshot shows an example of the Prepared Teams app Dependencies option under Teams Toolkit section in Visual Studio.":::
+   :::image type="content" source="../../../assets/images/bots/dotnet-ai-library-prepare-teams.png" alt-text="Screenshot shows an example of the Select Microsoft 365 Account option under Teams Toolkit section in Visual Studio.":::
 
    If prompted, sign in to your Microsoft 365 account. You receive a message that Teams app dependencies are successfully prepared.
 
