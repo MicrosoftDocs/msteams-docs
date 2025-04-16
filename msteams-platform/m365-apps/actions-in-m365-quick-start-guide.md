@@ -1,6 +1,6 @@
 ---
 title: Get Started - Actions in Microsoft 365
-description: In this article, learn how to build and run the sample app for Actions in Microsoft 365 using Teams Toolkit in Visual Studio Code, its functions and use cases.
+description: In this article, learn how to build and run the sample app for Actions in Microsoft 365 using Microsoft 365 Agents Toolkit in Visual Studio Code, its functions and use cases.
 ms.date: 12/8/2023
 ms.author: mosdevdocs
 author: v-preethah

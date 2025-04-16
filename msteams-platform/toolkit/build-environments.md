@@ -1,7 +1,7 @@
 ---
 title: Build Apps with Teams Toolkit - Prepare
 author: surbhigupta
-description: Learn about build environments such as SPFx of Teams Toolkit in Visual Studio Code. Toolkit integrates Azure Functions capabilities for building apps.
+description: Learn about build environments such as SPFx of Microsoft 365 Agents Toolkit in Visual Studio Code. Toolkit integrates Azure Functions capabilities for building apps.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
@@ -31,7 +31,7 @@ The apps built with JavaScript or TypeScript have the following advantages:
 * Compatible for creating an app with the existing APIs.
 * An app created in Teams Toolkit also supports React.
 
-Teams Toolkit in Visual Studio Code supports building the following apps using JavaScript or TypeScript:
+Microsoft 365 Agents Toolkit in Visual Studio Code supports building the following apps using JavaScript or TypeScript:
 
 * Tab app: Your tab app can have web-based content. You can have a custom tab for your web content in Teams or add Teams-specific functionality to your web content.
 * Bot app: A bot can be chatbot or conversational bot that allows you to do simple and repetitive tasks, such as customer service or support staff.
@@ -42,7 +42,7 @@ Teams Toolkit in Visual Studio Code supports building the following apps using J
 
 ### Create your Teams app using SPFx
 
-Teams Toolkit in Visual Studio Code allows you to create tab apps using SPFx. These apps have the following advantages:
+Microsoft 365 Agents Toolkit in Visual Studio Code allows you to create tab apps using SPFx. These apps have the following advantages:
 
 * Provides easy integration with data residing in SPFx to your Teams.
 * Integrates your SPFx solution with your business APIs secured with Microsoft Entra ID.

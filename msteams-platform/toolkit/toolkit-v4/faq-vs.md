@@ -1,7 +1,7 @@
 ---
 title: FAQ for Teams Toolkit in Visual Studio
 author: MuyangAmigo
-description: Learn how to troubleshoot errors with Teams Toolkit in Visual Studio Code, switch Azure subscription, change resource group, and provision SharePoint based app.
+description: Learn how to troubleshoot errors with Microsoft 365 Agents Toolkit in Visual Studio Code, switch Azure subscription, change resource group, and provision SharePoint based app.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
@@ -12,7 +12,7 @@ ms.date: 11/29/2021
 
 :::image type="content" source="~/assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
 
-You can see the FAQ for all the sections of Teams Toolkit for Visual Studio Code.
+You can see the FAQ for all the sections of Microsoft 365 Agents Toolkit for Visual Studio Code.
 
 FAQ for [Provision cloud resources using Teams Toolkit](../provision.md)
 
@@ -22,7 +22,7 @@ FAQ for [Provision cloud resources using Teams Toolkit](../provision.md)
 
 <summary><b>How to troubleshoot?</b></summary>
 
-If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document. If you're using TeamsFx CLI, a hyperlink appears at the end of the error message that directs you to the help doc.
+If you get errors with Microsoft 365 Agents Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document. If you're using TeamsFx CLI, a hyperlink appears at the end of the error message that directs you to the help doc.
 
 <br>
 
