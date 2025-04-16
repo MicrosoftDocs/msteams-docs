@@ -32,15 +32,151 @@ A **Global admin** or a **Teams admin** can enable it in the [Microsoft 365 admi
    > * You may click the banner on the Analytics page to opt-in new custom app analytics.
 
 ### Metric definitions
-This section describes the metrics available in Developer Portal for custom apps.
+
+| Metric | Definition |
+| :-----------------------| :------------------------------------------------------------------------------------------------------|
+| **Monthly R28 active users (MAU)** | The default usage metric. It shows the count of unique active users who used your app within that rolling 28 days window in UTC. |
+| **Daily active users (DAU)** | It shows you the count of unique active users who used your app in a given day in UTC. |
+| **Weekly R7** | It shows the count of unique active users who used your app within that rolling 7 days window in UTC. |
+
+As you explore individual metrics on this page, you can use the **Filter** button to analyze your app's usage from the following filter options:
+
+* **Aggregation type**: This filter allows you to group the metrics by a count of distinct users or a count of distinct tenants or customers.
+* **Platform**
+* **Operating system**
+* **Area**
+
+ :::image type="content" source="../../assets/images/tdp/filter-tdp-analytics.png" alt-text="Screenshot shows you the app analytics page filter in Developer Portal for Teams."lightbox="../../assets/images/tdp/filter-tdp-analytics.png":::
+
+> [!TIP]
+> To know more about each metric definition, select **See metric definitions**. A pop-up help window appears on the right-side of the window with the required definitions.
+
+As you explore the app usage metrics on this page, you can see the following three sections:
+
+* [App usage](#app-usage)
+* [Host product](#host-product)
+* [App capability](#app-capability)
+
 ### App usage
-This section describes the app usage metrics & insights available in Developer Portal for custom apps.
+
+ The **App usage** tab shows you the following metrics:
+
+* [Usage over time](#usage-by-time-period)
+* [Usage by retention state](#usage-by-retention-state)
+* [Usage by country or region](#usage-by-country-or-region)
+* [Usage intensity](#usage-intensity)
+
+   :::image type="content" source="../../assets/images/tdp/tdp-app-usage.png" alt-text="Screenshot shows you app usage chart of your published app in Developer Portal."lightbox="../../assets/images/tdp/tdp-app-usage.png":::
+
+#### Usage over time
+
+   The **Usage over time** chart shows you the number of active users or tenants who opened and used your app across different time periods.
+
+   :::image type="content" source="../../assets/images/tdp/tdp-usage-over-time.png" alt-text="Screenshot shows you app usage over time of your published app in Developer Portal.":::
+
+   | Metric | Definition |
+   | :-----------------------| :------------------------------------------------------------------------------------------------------|
+   | **Monthly (MAU)** | Each data point represents a given R28 (Rolling 28 days) period. |
+   | **Weekly (WAU)** | Each data point represents a given R7 (Rolling 7 days) period. |
+   | **Daily (DAU)** | Each data point represents a given R1 (Rolling 1 day) period. |
+
+#### Usage by retention state
+
+   The **Usage by retention state** chart lets you track four key retention or churn metrics for your app over time.
+
+   :::image type="content" source="../../assets/images/tdp/tdp-retention.png" alt-text="Screenshot shows you app usage by retention state of your published app in Developer Portal.":::
+
+   | Metric | Definition |
+   | :-----------------------| :------------------------------------------------------------------------------------------------------|
+   | New users or tenants | Active users or tenants who are new and haven't used your app. |
+   | Returning users or tenants | Active users or tenants who used your app during a given R28 (Rolling 28 days) time period and the immediately preceding R28 time period. |
+   | Resurrected users or tenants | Active users or tenants who used your app one or more times before but not in the immediately preceding R28 time period. |
+   | Lapsed users or tenants | Active users or tenants who weren't seen during a given R28 time period but were seen during the immediately preceding R28 time period. |
+
+#### Usage by country or region
+
+   The **Usage by region** chart shows the various regions where your app is being used. You can select **View details** for more information on active users in different countries or regions.
+
+   :::image type="content" source="../../assets/images/tdp/tdp-country.png" alt-text="Screenshot shows you app usage by country or region of your published app in Developer Portal."lightbox="../../assets/images/tdp/tdp-region.png":::
+
+#### Usage intensity
+
+   The **Usage intensity** chart shows the key usage intensity metrics for your app.
+
+   :::image type="content" source="../../assets/images/tdp/tdp-usage-intensity.png" alt-text="Screenshot shows you app usage intensity of your published app in Developer Portal.":::
+
+   | Metric | Definition |
+   | :-----------------------| :------------------------------------------------------------------------------------------------------|
+   | **Median days used per month** | The median number of days in which your app was opened in the last R28 (Rolling 28 days) time period. |
+   | **% of 5+ Days usage** | The percentage of active users who opened or used the app more than five days in the last R28 time period. |
+   | **DAU/MAU** | The ratio of the average number of unique users or tenants who used your app on each day divided by the Monthly active users for the selected R28 time period. |
+
+#### My app dashboard
+
+   The **My App Dashboard** table shows you the latest R30 (Rolling 30 days) data for each of the metrics under the previous four categories, and the Month over Month change. Use the time picker on the upper left side and select the desired date to view the following:
+
+* Daily R30 data for the last 75 days.
+* End of month R30 data for up to 12 months.
+
+   You can select each of these metric names to see trends over time.
+
+   :::image type="content" source="../../assets/images/tdp/tdp-app-dashboard-view.png" alt-text="Screenshot shows you app capability usage of your published app in Developer Portal."lightbox="../../assets/images/tdp/tdp-app-dashboard-view.png":::
+
 ### Host product
-This section describes the host product metrics & insights available in Developer Portal for custom apps.
+
+   The **Host product** tab shows you the following app usage analytics:
+
+* [Usage by host product](#usage-by-host-product)
+* [Usage by operating system](#usage-by-operating-system)
+* [Usage by platform](#usage-by-platform)
+
+   The Key Performance Indicator (KPI) cards display metrics such as the host with the most active users and the operating system (OS) with the most active users, based on monthly, weekly, and daily data, in a metric card format.
+
+   :::image type="content" source="../../assets/images/tdp/tdp-host-product.png" alt-text="Screenshot shows you app usage in different host products of your published app in Developer Portal."lightbox="../../assets/images/tdp/tdp-host-product.png":::
+
+#### Usage by host product
+
+   The **Usage by host product** chart shows your app's active usage across various host products, including **Teams**, **Outlook**, and the **Microsoft 365 app** of monthly, weekly, and daily data.
+
+   :::image type="content" source="../../assets/images/tdp/tdp-host-usage.png" alt-text="Screenshot shows you app usage in different host product of your published app in Developer Portal.":::
+
+#### Usage by platform
+
+   The **Usage by platform** chart shows your app's active usage across various platforms, such as **Desktop**, **Mobile**, and **Web** of monthly, weekly, and daily data.
+
+   :::image type="content" source="../../assets/images/tdp/tdp-usage-platform.png" alt-text="Screenshot shows you app usage in different platforms of your published app in Developer Portal.":::
+
+   > [!NOTE]
+   > The `Preview` tag indicates that the metric **Usage by host product** is in its initial phase and might undergo modifications as we collect feedback and continue to improve the experience.
+
+#### Usage by operating system
+
+   The **Usage by operating system** chart shows your app's active usage across various operating systems, such as **Windows**, **Mac**, **iOS**, and **Android** of monthly, weekly, and daily data.
+
+   :::image type="content" source="../../assets/images/tdp/tdp-operating-system.png" alt-text="Screenshot shows you app usage in different OS of your published app in Developer Portal.":::
+
 ### App capability
-This section describes the app capability metrics & insights available in Developer Portal for custom apps.
+
+   The **App capability** tab shows you the usage of individual app capabilities that you've configured within your app.
+
+  This page summarizes the overall usage of the following app capabilities in different host products.
+
+* Bot
+* Tab
+* Message extension
+* Personal app
+* Connector
+* Personal tab
+
+   :::image type="content" source="../../assets/images/tdp/tdp-app-capability.png" alt-text="Screenshot shows you app capability usage in different host products of your published app in Developer Portal." lightbox="../../assets/images/tdp/tdp-app-capability.png":::
+
+   > [!NOTE]
+   > The `Preview` tag indicates that the metric is in its initial phase and might undergo modifications as we collect feedback and continue to improve the experience.
+
 ### Known limitations
-This section describes the known limitations custom apps analytics.
+
+* Limit 1
+* Limit 2
 
 
 # [Custom apps (Deprecating)](#tab/custom-apps-deprecating)
@@ -48,7 +184,7 @@ This section describes the known limitations custom apps analytics.
    > [!NOTE]
    >
    > * The current custom app analytics is being deprecated soon. 
-   > * To opt-in the [new experience](#tab/custom-apps-built-for-your-org), click the banner on the Analytics page in Developer Portal.
+   > * To opt-in the [new experience](../#tab/custom-apps-built-for-your-org), click the banner on the Analytics page in Developer Portal.
 
 ### Get Started
 
