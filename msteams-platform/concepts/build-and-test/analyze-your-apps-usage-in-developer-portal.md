@@ -139,8 +139,8 @@ App Analytics provide you insights into **App usage**, **Host product** and **Ca
    :::image type="content" source="../../assets/images/tdp/tdp-usage-platform.png" alt-text="Screenshot shows you app usage in different platforms of your published app in Developer Portal.":::
 
    > [!NOTE]
-   > The `Preview` tag indicates that the metric **Usage by host product** is in its initial phase and might undergo modifications as we collect feedback and continue to improve the experience.
-   > The **Microsoft 365 Copilot Agent** currently includes usage of declarative agents only. The usage of the custom engine agent is not available in the Developer Portal.
+   > * The `Preview` tag indicates that the metric **Usage by host product** is in its initial phase and might undergo modifications as we collect feedback and continue to improve the experience.
+   > * The **Microsoft 365 Copilot Agent** currently includes usage of declarative agents only. The usage of the custom engine agent is not available in the Developer Portal.
 
 #### Usage by operating system
 
@@ -154,7 +154,7 @@ App Analytics provide you insights into **App usage**, **Host product** and **Ca
 
   This page summarizes the overall usage of the following app capabilities in different host products.
 
-   * Agent
+   * Copilot Agent
    * Bot
    * Tab
    * Message extension
@@ -165,8 +165,8 @@ App Analytics provide you insights into **App usage**, **Host product** and **Ca
    :::image type="content" source="../../assets/images/tdp/tdp-app-capability.png" alt-text="Screenshot shows you app capability usage in different host products of your published app in Developer Portal." lightbox="../../assets/images/tdp/tdp-app-capability.png":::
 
    > [!NOTE]
-   > The `Preview` tag indicates that the metric is in its initial phase and might undergo modifications as we collect feedback and continue to improve the experience.
-   > The **Microsoft 365 Copilot Agent** currently includes usage of declarative agents only. The usage of the custom engine agent is not available in the Developer Portal.
+   > * The `Preview` tag indicates that the metric is in its initial phase and might undergo modifications as we collect feedback and continue to improve the experience.
+   > * The **Microsoft 365 Copilot Agent** currently includes usage of declarative agents only. The usage of the custom engine agent is not available in the Developer Portal.
 
 ### Known limitations
 
