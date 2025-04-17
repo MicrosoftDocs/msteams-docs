@@ -4,6 +4,7 @@ description: In this module, learn how to get started developing bots in Microso
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 01/23/2025
+ms.owner: angovil
 ---
 # Add bots to Microsoft Teams apps
 
