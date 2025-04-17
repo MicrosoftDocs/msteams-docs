@@ -119,7 +119,7 @@ To update your app's code:
                         try
                         {
                             // Delete the conversationState for the current conversation to prevent the
-                            // bot from getting stuck in a error-loop caused by being in a bad state.
+                            // bot from getting stuck in an error-loop caused by being in a bad state.
                             // conversationState must be thought of as similar to "cookie-state" in a Web pages.
                             await conversationState.DeleteAsync(turnContext);
                         }

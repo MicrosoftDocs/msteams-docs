@@ -89,6 +89,32 @@ When `openMode` isn't defined, the content opens by default in Collaborative Sta
 
 </details>
 
+<details>
+<summary id="closestage" ><b>close() function</b></summary>
+
+When a Stageview is open, `close()` function allows you to programmatically close the Stageview after user action. This is an optional function that you can integrate into your Microsoft built apps. If the function is called from outside a Stageview, the close action isn't performed.
+
+Initialize your app using `microsoftTeams.app.initialize()` and implement `close()` function from the [`self` module](/javascript/api/@microsoft/teams-js/stageview.self):
+
+```typescript
+// App Initialize
+microsoftTeams.app.initialize();
+
+// User defined function to close the Stageview in Teams
+function closeStageView() {
+    // Attempt to close the Stageview using close() function
+    microsoftTeams.stageView.self.close()
+        .then(() => {
+            console.log("Stage view closed successfully."); // Log success message
+        })
+        .catch((error) => {
+            console.error("Error closing stage view:", error); // Log error if closing fails
+        });
+}
+```
+
+</details>
+
 ### Invoke Collaborative Stageview from Adaptive Card
 
 Collaborative Stageview from an Adaptive Card allows users to engage with your content while continuing the conversation flow. If Collaborative Stageview is invoked from an Adaptive Card JSON in Teams web client, it opens in a Stageview Modal.
