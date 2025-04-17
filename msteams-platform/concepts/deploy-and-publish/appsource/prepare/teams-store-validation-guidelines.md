@@ -1882,7 +1882,6 @@ The long description of an app must clearly call out the following:
 * Microsoft 365 Copilot must respond accurately and not display an error when a user prompts with a single parameter.
 * Microsoft 365 Copilot must respond accurately and not show an error when a user prompts with a multi parameter.
 * Microsoft 365 Copilot must respond accurately and not show an error when a user prompts with a follow-up.
-* Message extension must contain at least two parameters for enhanced user experience in Microsoft 365 Copilot.
 
 [Back to top](#teams-store-validation-guidelines)
 
