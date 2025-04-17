@@ -31,11 +31,11 @@ Teams Toolkit CLI encapsulates common functionality and integration patterns, su
 
 ## Get started
 
-Install `teamsapp-cli` from `npm` and run `teamsapp -h` to check all available commands:
+Install `teamsapp-cli` from `npm` and run `atk -h` to check all available commands:
 
 ```bash
-  npm install -g @microsoft/teamsapp-cli
-  teamsapp -h
+  npm install -g @microsoft/atk-cli
+  atk -h
 ```
 
 :::image type="content" source="../assets/images/teams-toolkit-cli/npm-package-install.png" alt-text="Screenshot shows the installation of npm package." lightbox="../assets/images/teams-toolkit-cli/npm-package-install.png":::
