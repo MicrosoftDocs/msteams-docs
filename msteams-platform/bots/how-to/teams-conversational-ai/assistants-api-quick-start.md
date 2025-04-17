@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.localizationpriority: high
 zone_pivot_groups: assistant-ai-library-quick-start
 ms.author: v-bvishnu
+ms.owner: angovil
 ms.date: 05/20/2024
 ---
 
