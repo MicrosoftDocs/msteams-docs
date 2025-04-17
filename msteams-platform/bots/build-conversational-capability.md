@@ -6,7 +6,6 @@ ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.owner: angovil
 ms.date: 02/26/2025
-ms.owner: angovil
 ---
 
 # Send and receive messages
