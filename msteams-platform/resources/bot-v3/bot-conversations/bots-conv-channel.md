@@ -4,6 +4,7 @@ description: Learn about end-to-end scenario and @ mentions in bot conversation 
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 04/02/2023
+ms.owner: angovil
 ---
 # Channel and Group chat conversations with a Microsoft Teams bot
 
