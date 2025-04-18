@@ -4,6 +4,7 @@ description: Learn how to test, debug, disable bots in Microsoft Teams, test you
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 02/06/2025
+ms.owner: angovil
 ---
 # Test and debug your Microsoft Teams bot
 

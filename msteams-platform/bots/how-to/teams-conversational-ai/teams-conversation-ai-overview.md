@@ -6,6 +6,7 @@ ms.topic: overview
 ms.author: surbhigupta
 author: surbhigupta12
 ms.date: 11/12/2024
+ms.owner: angovil
 ---
 
 # Teams AI library
