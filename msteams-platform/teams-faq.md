@@ -4,6 +4,7 @@ description: In this article, check FAQS on Adaptive Card Previewer, bots, Live 
 ms.topic: reference
 ms.date: 01/23/2025
 ms.localizationpriority: high
+ms.owner: angovil
 ---
 
 # Frequently asked questions

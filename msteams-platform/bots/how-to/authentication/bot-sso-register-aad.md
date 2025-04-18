@@ -107,6 +107,9 @@ You've configured the messaging endpoint for your bot resource. Next, you must e
 
 <a name='configure-sso-for-azure-ad-app'></a>
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+configure+messaging+endpoint+for+your+bot+resource&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad%3Ftabs%3Dbotid%23to-configure-messaging-endpoint-for-your-bot-resource&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad.md&documentVersionIndependentId=ac68d7e8-2a35-5208-8724-68bd2fdd79b6&platformId=cdaccc16-060c-8eb1-2cee-c1f6a26e285c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ## Configure SSO for Microsoft Entra app
 
 You must configure permissions and scopes, authorize client applications, update app manifest (previously called Teams app manifest), and create client secret for your Microsoft Entra app. These configurations help to invoke SSO for your bot app.
@@ -193,6 +196,9 @@ You need:
 
 The application ID URI is configured. You can now define scope and permissions for your app.
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+configure+application+ID+URI&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad%3Ftabs%3Dbotid%23to-configure-application-id-uri&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad.md&documentVersionIndependentId=ac68d7e8-2a35-5208-8724-68bd2fdd79b6&platformId=cdaccc16-060c-8eb1-2cee-c1f6a26e285c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 #### To configure API scope
 
 1. Select **+ Add a scope** in the **Scopes defined by this API** section.
@@ -225,6 +231,9 @@ The application ID URI is configured. You can now define scope and permissions f
     > The new scope you defined displays on the page. Ensure that you note and save the scope that you've configured. You'll need it to update OAuth connection later.
 
 The scope and permissions are now configured. Next, you must configure the authorized client applications for your Microsoft Entra app.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+configure+API+scope&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad%3Ftabs%3Dbotid%23to-configure-api-scope&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad.md&documentVersionIndependentId=ac68d7e8-2a35-5208-8724-68bd2fdd79b6&platformId=cdaccc16-060c-8eb1-2cee-c1f6a26e285c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 #### To configure authorized client application
 
@@ -272,6 +281,9 @@ The scope and permissions are now configured. Next, you must configure the autho
 
 You've successfully configured app scope, permissions, and client applications. Ensure that you note and save the application ID URI. Next, you configure the access token version.
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+configure+authorized+client+application&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad%3Ftabs%3Dbotid%23to-configure-authorized-client-application&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad.md&documentVersionIndependentId=ac68d7e8-2a35-5208-8724-68bd2fdd79b6&platformId=cdaccc16-060c-8eb1-2cee-c1f6a26e285c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ### Configure access token version
 
 You must define the access token version for your app in the Microsoft Entra app manifest.
@@ -295,6 +307,9 @@ You must define the access token version for your app in the Microsoft Entra app
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-aad-manifest-msg.png" alt-text="Screenshot shows the Manifest updated message.":::
 
 You've updated the access token version. Next, you'll create a client secret for your app.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+define+the+access+token+version&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad%3Ftabs%3Dbotid%23to-define-the-access-token-version&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad.md&documentVersionIndependentId=ac68d7e8-2a35-5208-8724-68bd2fdd79b6&platformId=cdaccc16-060c-8eb1-2cee-c1f6a26e285c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ### Create client secret
 
@@ -332,6 +347,9 @@ A client secret is a string that the application uses to prove its identity when
    > Ensure that you copy the value of client secret right after you create it. The value is visible only at the time when the client secret is created, and it can't be viewed after that.
 
 You've configured the client secret. Next, you must configure the redirect URL.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+create+a+client+secret+for+your+app&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad%3Ftabs%3Dbotid%23to-create-a-client-secret-for-your-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad.md&documentVersionIndependentId=ac68d7e8-2a35-5208-8724-68bd2fdd79b6&platformId=cdaccc16-060c-8eb1-2cee-c1f6a26e285c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ### Configure redirect URL
 
@@ -390,6 +408,9 @@ You can configure authentication for multiple platforms as long as the URL is un
     The platform is configured and displayed in the **Platform configurations** page.
 
 The Microsoft Entra app configuration is complete, and now you must enable SSO support for your bot resource by configuring OAuth connection.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+configure+redirect+URL&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad%3Ftabs%3Dbotid%23to-configure-redirect-url&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad.md&documentVersionIndependentId=ac68d7e8-2a35-5208-8724-68bd2fdd79b6&platformId=cdaccc16-060c-8eb1-2cee-c1f6a26e285c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Configure OAuth connection
 
@@ -456,6 +477,9 @@ Congratulations! You've completed the following app configurations in Microsoft 
   * Client secret
   * Redirect URL
 * Messaging endpoint and OAuth connection
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+update+OAuth+connection&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad%3Ftabs%3Dbotid%23to-update-oauth-connection&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad.md&documentVersionIndependentId=ac68d7e8-2a35-5208-8724-68bd2fdd79b6&platformId=cdaccc16-060c-8eb1-2cee-c1f6a26e285c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 # [Use Microsoft Entra app and then configure bot resource](#tab/windows)
 
@@ -559,6 +583,9 @@ To configure scope and authorize trusted client applications, you'll need:
 
 The application ID URI is configured. You can now define scope and permissions for your app.
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+configure+application+ID+URI+for+your+app&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad.md&documentVersionIndependentId=ac68d7e8-2a35-5208-8724-68bd2fdd79b6&platformId=cdaccc16-060c-8eb1-2cee-c1f6a26e285c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 #### To configure API scope for your app
 
 1. Select **+ Add a scope** in the **Scopes defined by this API** section.
@@ -591,6 +618,9 @@ The application ID URI is configured. You can now define scope and permissions f
     > The new scope you defined displays on the page. Ensure that you note and save the scope that you've configured. You'll need it to update OAuth connection later.
 
 The scope and permissions are now configured. Next, you must configure the authorized client applications for your Microsoft Entra app.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+configure+API+scope+for+your+app&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad%3Ftabs%3Dwindows%23to-configure-api-scope-for-your-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad.md&documentVersionIndependentId=ac68d7e8-2a35-5208-8724-68bd2fdd79b6&platformId=cdaccc16-060c-8eb1-2cee-c1f6a26e285c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 #### To configure an authorized client application
 
@@ -638,6 +668,9 @@ The scope and permissions are now configured. Next, you must configure the autho
 
 You've successfully configured app scope, permissions, and client applications. Ensure that you note and save the application ID URI. Next, you configure the access token version.
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+configure+an+authorized+client+application&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad%3Ftabs%3Dwindows%23to-configure-an-authorized-client-application&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad.md&documentVersionIndependentId=ac68d7e8-2a35-5208-8724-68bd2fdd79b6&platformId=cdaccc16-060c-8eb1-2cee-c1f6a26e285c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ### Configure the access token version
 
 You must define the access token version for your app in the Microsoft Entra app manifest.
@@ -661,6 +694,9 @@ You must define the access token version for your app in the Microsoft Entra app
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-aad-manifest-msg.png" alt-text="Screenshot shows the Manifest updated message.":::
 
 You've updated the access token version. Next step is to create a client secret for your app next.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+define+access+token+version&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad%3Ftabs%3Dwindows%23to-define-access-token-version&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad.md&documentVersionIndependentId=ac68d7e8-2a35-5208-8724-68bd2fdd79b6&platformId=cdaccc16-060c-8eb1-2cee-c1f6a26e285c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ### Create client secret for your app
 
@@ -696,6 +732,9 @@ A client secret is a string that the application uses to prove its identity when
 
    > [!IMPORTANT]
    > Ensure that you copy the value of client secret right after you create it. The value is visible only at the time when the client secret is created, and it can't be viewed after that.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+create+a+client+secret&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad%3Ftabs%3Dwindows%23to-create-a-client-secret&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad.md&documentVersionIndependentId=ac68d7e8-2a35-5208-8724-68bd2fdd79b6&platformId=cdaccc16-060c-8eb1-2cee-c1f6a26e285c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ### Configure redirect URL for your app
 
@@ -755,6 +794,9 @@ The configuration for Microsoft Entra app is complete, and now you can configure
 
 <a name='configure-bot-resource-in-azure-ad'></a>
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+configure+redirect+URL+for+your+app&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad%3Ftabs%3Dwindows%23to-configure-redirect-url-for-your-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad.md&documentVersionIndependentId=ac68d7e8-2a35-5208-8724-68bd2fdd79b6&platformId=cdaccc16-060c-8eb1-2cee-c1f6a26e285c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ## Configure bot resource in Microsoft Entra ID
 
 Before you enable SSO for your bot app, you must create and configure your bot resource in Microsoft Entra ID. For more information, see [Create Teams conversation bot](../../../sbs-teams-conversation-bot.yml).
@@ -793,6 +835,9 @@ Messaging endpoint is where messages are sent to your bot. It enables communicat
     The messaging endpoint is configured.
 
 Now, you must configure the OAuth connection to enable SSO for your bot resource.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+configure+messaging+endpoint&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad%3Ftabs%3Dwindows%23to-configure-messaging-endpoint&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad.md&documentVersionIndependentId=ac68d7e8-2a35-5208-8724-68bd2fdd79b6&platformId=cdaccc16-060c-8eb1-2cee-c1f6a26e285c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ### Configure OAuth connection for your bot resource
 
@@ -860,6 +905,9 @@ Congratulations! You've completed the following app configurations in Microsoft 
   * Client secret
   * Redirect URL
 * Messaging endpoint and OAuth connection
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+update+OAuth+connection+for+your+bot+resource&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad%3Ftabs%3Dwindows%23to-update-oauth-connection-for-your-bot-resource&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad.md&documentVersionIndependentId=ac68d7e8-2a35-5208-8724-68bd2fdd79b6&platformId=cdaccc16-060c-8eb1-2cee-c1f6a26e285c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ---
 
