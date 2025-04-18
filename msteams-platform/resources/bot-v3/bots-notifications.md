@@ -4,6 +4,7 @@ description: In this module, learn how to handle events in bots for Microsoft Te
 ms.date: 04/02/2023
 ms.topic: how-to
 ms.localizationpriority: medium
+ms.owner: angovil
 ---
 # Handle bot events in Microsoft Teams
 
