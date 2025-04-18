@@ -55,7 +55,9 @@ To set up the pipeline with GitHub, follow these steps:
 1. Open Visual Studio Code.
 
 1. Create a `cd.yml` file in your project under `.github/workflows` folder and add the following code in the file:
+
    # [Certificate-based authentication](#tab/certificate)
+
     ```yaml
     on:
       push:
@@ -79,7 +81,7 @@ To set up the pipeline with GitHub, follow these steps:
     
           - name: install cli
             run: |
-              npm install @microsoft/teamsapp-cli@${{env.TEAMSAPP_CLI_VERSION}}
+              npm install @microsoft/atk-cli@${{env.TEAMSAPP_CLI_VERSION}}
 
           - name: Retrieve the secret and decode it to a file
             env:
@@ -89,7 +91,7 @@ To set up the pipeline with GitHub, follow these steps:
     
           - name: Login Azure by service principal
             run: |
-              npx teamsapp auth login azure --username ${{vars.AZURE_SERVICE_PRINCIPAL_CLIENT_ID}}  \
+              npx atk auth login azure --username ${{vars.AZURE_SERVICE_PRINCIPAL_CLIENT_ID}}  \
               --service-principal true \
               --tenant ${{vars.AZURE_TENANT_ID}} \
               --password cert.pem \
@@ -97,12 +99,12 @@ To set up the pipeline with GitHub, follow these steps:
     
           - name: Deploy to hosting environment
             run: |
-              npx teamsapp deploy --ignore-env-file true \
+              npx atk deploy --ignore-env-file true \
               --interactive false
     
           - name: Package app
             run: |
-              npx teamsapp package
+              npx atk package
     
           - name: upload appPackage
             uses: actions/upload-artifact@v4
@@ -110,7 +112,9 @@ To set up the pipeline with GitHub, follow these steps:
               name: artifact
               path: appPackage/build/appPackage.zip
     ```
+
    # [Password-based authentication](#tab/secret)
+
     ```yaml
     on:
       push:
@@ -134,11 +138,11 @@ To set up the pipeline with GitHub, follow these steps:
     
           - name: install cli
             run: |
-              npm install @microsoft/teamsapp-cli@${{env.TEAMSAPP_CLI_VERSION}}
+              npm install @microsoft/atk-cli@${{env.TEAMSAPP_CLI_VERSION}}
     
           - name: Login Azure by service principal
             run: |
-              npx teamsapp auth login azure --username ${{vars.AZURE_SERVICE_PRINCIPAL_CLIENT_ID}}  \
+              npx atk auth login azure --username ${{vars.AZURE_SERVICE_PRINCIPAL_CLIENT_ID}}  \
               --service-principal true \
               --tenant ${{vars.AZURE_TENANT_ID}} \
               --password ${{secrets.AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET }} \
@@ -146,12 +150,12 @@ To set up the pipeline with GitHub, follow these steps:
     
           - name: Deploy to hosting environment
             run: |
-              npx teamsapp deploy --ignore-env-file true \
+              npx atk deploy --ignore-env-file true \
               --interactive false
     
           - name: Package app
             run: |
-              npx teamsapp package
+              npx atk package
     
           - name: upload appPackage
             uses: actions/upload-artifact@v4
@@ -159,7 +163,7 @@ To set up the pipeline with GitHub, follow these steps:
               name: artifact
               path: appPackage/build/appPackage.zip
     ```
-    
+
     > [!NOTE]
     > The default pipeline triggers when push events occur on the main branch. You've the option to modify it to suit your specific requirements.
 
@@ -167,7 +171,8 @@ To set up the pipeline with GitHub, follow these steps:
 
 1. Update the following variables and secrets you created during the prerequisites:
 
-    * # [Certificate-based authentication](#tab/certificate)
+   * # [Certificate-based authentication](#tab/certificate)
+
       `AZURE_SERVICE_PRINCIPAL_CLIENT_ID`, `AZURE_TENANT_ID`, and `AZURE_SERVICE_PRINCIPAL_CERTIFICATE_BASE64`. `AZURE_SERVICE_PRINCIPAL_CERTIFICATE_BASE64` is the Base64 string encoded content of the certificate that you've generated.
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/repo-settings.png" alt-text="Screenshot shows the repo settings.":::
@@ -176,7 +181,8 @@ To set up the pipeline with GitHub, follow these steps:
       > The `AZURE_SERVICE_PRINCIPAL_CERTIFICATE_BASE64` variable must be set as secret.
       > Use the [GitHub environment](https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment#environment-variables) for different variable sets.
 
-      # [Password-based authentication](#tab/secret)
+     # [Password-based authentication](#tab/secret)
+
       `AZURE_SERVICE_PRINCIPAL_CLIENT_ID`, `AZURE_TENANT_ID`, and `AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET`
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/repo-settings.png" alt-text="Screenshot shows the repo settings.":::
@@ -237,7 +243,8 @@ To set up the pipeline with Azure DevOps, follow these steps:
 
 1. Create a `cd.yml` file in your project and add the following code in the file:
 
-    # [Certificate-based authentication](#tab/certificate)
+   # [Certificate-based authentication](#tab/certificate)
+
     ```yaml
     trigger:
       - main
@@ -255,7 +262,7 @@ To set up the pipeline with Azure DevOps, follow these steps:
           checkLatest: true
     
       - script: |
-          npm install @microsoft/teamsapp-cli@$(TEAMSAPP_CLI_VERSION)
+          npm install @microsoft/atk-cli@$(TEAMSAPP_CLI_VERSION)
         displayName: "Install CLI"
 
       - task: DownloadSecureFile@1  
@@ -265,16 +272,16 @@ To set up the pipeline with Azure DevOps, follow these steps:
           secureFile: 'azure_sp_cert.pem' 
     
       - script: |
-          npx teamsapp auth login azure --username $(AZURE_SERVICE_PRINCIPAL_CLIENT_ID) --service-principal true --tenant $(AZURE_TENANT_ID) --password $(certFile.secureFilePath) --interactive false
+          npx atk auth login azure --username $(AZURE_SERVICE_PRINCIPAL_CLIENT_ID) --service-principal true --tenant $(AZURE_TENANT_ID) --password $(certFile.secureFilePath) --interactive false
         displayName: "Login Azure by service principal"
     
       - script: |
-          npx teamsapp deploy --ignore-env-file true --interactive false
+          npx atk deploy --ignore-env-file true --interactive false
         displayName: "Deploy to Azure"
         workingDirectory: $(System.DefaultWorkingDirectory)
     
       - script: |
-          npx teamsapp package
+          npx atk package
         displayName: "Package app"
         workingDirectory: $(System.DefaultWorkingDirectory)
     
@@ -282,7 +289,8 @@ To set up the pipeline with Azure DevOps, follow these steps:
         artifact: artifact
     ```
 
-    # [password-based authentication](#tab/secret)
+   # [Password-based authentication](#tab/secret)
+
     ```yaml
     trigger:
       - main
@@ -300,20 +308,20 @@ To set up the pipeline with Azure DevOps, follow these steps:
           checkLatest: true
     
       - script: |
-          npm install @microsoft/teamsapp-cli@$(TEAMSAPP_CLI_VERSION)
+          npm install @microsoft/atk-cli@$(TEAMSAPP_CLI_VERSION)
         displayName: "Install CLI"
     
       - script: |
-          npx teamsapp auth login azure --username $(AZURE_SERVICE_PRINCIPAL_CLIENT_ID) --service-principal true --tenant $(AZURE_TENANT_ID) --password $(AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET) --interactive false
+          npx atk auth login azure --username $(AZURE_SERVICE_PRINCIPAL_CLIENT_ID) --service-principal true --tenant $(AZURE_TENANT_ID) --password $(AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET) --interactive false
         displayName: "Login Azure by service principal"
     
       - script: |
-          npx teamsapp deploy --ignore-env-file true --interactive false
+          npx atk deploy --ignore-env-file true --interactive false
         displayName: "Deploy to Azure"
         workingDirectory: $(System.DefaultWorkingDirectory)
     
       - script: |
-          npx teamsapp package
+          npx atk package
         displayName: "Package app"
         workingDirectory: $(System.DefaultWorkingDirectory)
     
@@ -331,6 +339,7 @@ To set up the pipeline with Azure DevOps, follow these steps:
     After you push your code to the repo, navigate to **Pipelines** and select **New pipeline**. Select your repo and the existing yml file to configure your pipeline.
 
 1. # [Certificate-based authentication](#tab/certificate)
+
    Update the following variables and set the certificate that you've created during the prerequisites:
     * `AZURE_SERVICE_PRINCIPAL_CLIENT_ID`, `AZURE_TENANT_ID`
 
@@ -358,6 +367,7 @@ To set up the pipeline with Azure DevOps, follow these steps:
     In your Azure DevOps project, navigate to **Pipelines** > **Library** and add a new secure file. Upload the certificate (.pem) file and name the file as `azure_sp_cert.pem`.
 
    # [Password-based authentication](#tab/secret)
+
    Update the following variables and secrets that you've created during the prerequisites:
     * `AZURE_SERVICE_PRINCIPAL_CLIENT_ID`, `AZURE_TENANT_ID`, and `AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET`
 
@@ -409,7 +419,7 @@ If the Teams App CLI doesn't meet your pipeline requirements, you can develop a 
 > [!NOTE]
 > If you already have a complete CI/CD pipeline for deploying to your Azure resource, and your Teams app needs to read environment variables during runtime, configure these environment variables in the settings of your Azure resource. For post-deployment testing, see [generate Teams app package](#generate-teams-app-package).
 
-The `teamsapp deploy` command executes the actions defined in the `deploy` stage of the `teamsapp.yml` file. The `deploy` stage consists of `build` and `deploy` actions. To create a custom deployment method, rewrite these actions based on your specific requirements and preferences.
+The `atk deploy` command executes the actions defined in the `deploy` stage of the `teamsapp.yml` file. The `deploy` stage consists of `build` and `deploy` actions. To create a custom deployment method, rewrite these actions based on your specific requirements and preferences.
 
 As an example, a basic bot TypeScript project has the following deploy stage in its `teamsapp.yml`:
 
@@ -510,7 +520,7 @@ When you deploy app code to Azure App Service, Azure Functions, or Azure Contain
 
 ## Generate Teams app package
 
-To publish your Teams app, the `appPackage` is required. You can automatically create the `appPackage.zip` using the `teamsapp package` command in `Teamsapp` CLI. If you're unable to use `Teamsapp` CLI, follow these steps to manually create the `appPackage`:
+To publish your Teams app, the `appPackage` is required. You can automatically create the `appPackage.zip` using the `atk package` command in `Teamsapp` CLI. If you're unable to use `Teamsapp` CLI, follow these steps to manually create the `appPackage`:
 
 1. Prepare a `appPackage` folder.
 1. Place the `manifest.json` file in the `appPackage` folder. The default `manifest.json` file in the Teams Toolkit project contains placeholders, denoted by ${{}}. Replace these placeholders with the correct values.
