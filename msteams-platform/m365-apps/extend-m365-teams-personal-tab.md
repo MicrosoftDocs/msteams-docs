@@ -112,10 +112,10 @@ Open your app manifest and update the `$schema` and `manifestVersion` manually w
     "manifestVersion" : "1.16"
 }
 ```
+---
+
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Update+the+app+manifest&&author=%40erikadoyle&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-teams-toolkit%23update-the-app-manifest&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
-
----
 
 You can use Teams Toolkit to [validate your app manifest](../toolkit/TeamsFx-preview-and-customize-app-manifest.md#validate-your-app) and identify any errors.
 
