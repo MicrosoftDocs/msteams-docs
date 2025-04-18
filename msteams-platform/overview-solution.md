@@ -19,7 +19,7 @@ A developer at Tours and Travel agency builds an app for their users, the travel
 - Check and send the forecast to travelers registered with the travel agency.
 - Notify users a day before the departure date so they can plan their journey.
 
-Developers collate and map requirements to Teams functionalities using the table:
+Developers collate and map requirements to Teams functionalities:
 
 | User app needs         | Check forecast                                               | Notification before travel                   | Registered user                                                                      |
 | ---------------------- | :-----------------------------------------------------------:| :--------------------------------------------: | ------------------------------------------------------------------------------------ |
