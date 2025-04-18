@@ -479,7 +479,6 @@ It launches ngrok to listen on the port you specify. In return, it gives you an 
 > [!NOTE]
 > If you stop and restart ngrok, the URL changes. To use ngrok in your project, and depending on the capabilities you're using, you must update all URL references.
 
-
 ## Additional information
 
 ### TeamsAppManifest/manifest.json
@@ -532,7 +531,6 @@ This manifest contains information needed by Teams to connect with the bot:
 ```
 
 With authentication, Teams behaves differently than other channels.
-
 
 ### Handling Invoke Activity
 
@@ -600,7 +598,6 @@ Within the following dialog step, check for the presence of a token in the resul
 **dialogs/logoutDialog.js**
 
 [!code-javascript[allow-logout](~/../Microsoft-Teams-Samples/samples/bot-conversation-sso-quickstart/js/dialogs/logoutDialog.js?range=31-42&highlight=7)]
-
 
 # [Python](#tab/python-sample)
 
