@@ -12,7 +12,7 @@ Microsoft Teams Platform is a powerful, flexible platform for creating apps for 
 
 ## The user story
 
-Developers review Teams offerings and map them to user needs. Consider the following scenario:
+You've had a view of Teams offerings. You can now map them to user needs. Consider the following scenario:
 
 A developer at Tours and Travel agency builds an app for their users, the travelers. The app must:
 
@@ -28,13 +28,11 @@ Developers collate and map requirements to Teams functionalities using the table
 | **Scope**              |                                                              | Personal app                                 |                                                                                      |
 | **Integration point**  |                                                              | Notification                                 |                                                                                      |
 
-Developers design a Teams app solution as follows:
-
-A Teams *notification bot* app that checks the forecast and *sends forecast notifications* to *registered users* before their travel date.
+** Teams app solution**: A Teams *notification bot* app that checks the forecast and *sends forecast notifications* to *registered users* before their travel date.
 
 :::image type="content" border="false" source="../msteams-platform/assets/images/overview/developer-scenario-solution.png" alt-text="Screenshot shows you to builds a bot for Teams that sends weather forecast to customers so that they can plan ahead their traveling dates." lightbox="../msteams-platform/assets/images/overview/developer-scenario-solution.png" :::
 
-Teams provides these and many more capabilities to build a feature-rich app solution. To develop this app, developers follow these steps:
+Teams provides these and many more capabilities to build a feature-rich app solution. To develop this app:
 
 1. Create a notification bot app.
 2. Integrate with an external weather forecast API to connect and request forecasts for specific dates and locations.
@@ -43,9 +41,9 @@ Teams provides these and many more capabilities to build a feature-rich app solu
 
 ## Dive deeper
 
-Developers choose to customize their app with additional functionalities such as user authentication and leverage tools like Microsoft Graph and the Developer Portal.
+Choose to customize your app with additional functionalities such as user authentication and leverage tools like Microsoft Graph and Developer Portal.
 
-Developers explore Teams Developer Documentation for building a Teams app that meets their requirements. Use the following references:
+Explore Teams Developer Documentation for building a Teams app that meets your requirements. Use the following references:
 
 | What do you want?                                                                                             | Where to go                                                                                                          |
 | ------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
