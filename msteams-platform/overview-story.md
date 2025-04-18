@@ -19,7 +19,7 @@ As a developer, you want an efficient way to share critical and contextual infor
 
 ## Delve Into App Ideation
 
-When brainstorming your app, consider the entire user journey. The following steps help you analyze and define your app’s purpose and features.
+When brainstorming your app, consider the entire user journey. The following steps help you analyze and define your app’s purpose and features:
 
 :::row:::
    :::column span="":::
