@@ -4,6 +4,7 @@ author: surbhigupta
 description: Learn about command bot, installation, customize initialization, add command and responses, and customize trigger pattern.
 ms.topic: conceptual
 ms.author: surbhigupta
+ms.owner: angovil
 ms.localizationpriority: high
 ms.date: 12/11/2024
 ---
