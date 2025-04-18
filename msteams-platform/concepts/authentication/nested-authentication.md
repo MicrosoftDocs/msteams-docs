@@ -100,7 +100,7 @@ For more information on upgrading your Teams app to run in Outlook and Microsoft
 
 Initialize MSAL and get an instance of the public client app to get access tokens, when needed.
 
-```javascript
+```JavaScript
 import {
   AccountInfo,
   IPublicClientApplication,
@@ -146,46 +146,46 @@ To acquire a token, follow these steps:
 
 1. If no account is available, MSAL.js returns an `InteractionRequiredAuthError`. Call `publicClientApplication.acquireTokenPopup(accessTokenRequest)` to display an interactive dialog for the user. `acquireTokenSilent` can fail if the token expired or if the user didn't consent to all the requested scopes.
 
-The following code snippet shows an example to access a token:
+    The following code snippet shows an example to access a token:
 
-```javascript
-
-  // MSAL.js exposes several account APIs, logic to determine which account to use is the responsibility of the developer
-  const account = publicClientApplication.getActiveAccount();
-
-  const accessTokenRequest = {
-  scopes: ["user.read"],
-  account: account,
-  };
-
-  publicClientApplication
-    .acquireTokenSilent(accessTokenRequest)
-    .then(function (accessTokenResponse) {
-      // Acquire token silent success
-      let accessToken = accessTokenResponse.accessToken;
-      // Call your API with token
-      callApi(accessToken);
-    })
-    .catch(function (error) {
-      //Acquire token silent failure, and send an interactive request
-      if (error instanceof InteractionRequiredAuthError) {
-        publicClientApplication
-          .acquireTokenPopup(accessTokenRequest)
-          .then(function (accessTokenResponse) {
-            // Acquire token interactive success
-            let accessToken = accessTokenResponse.accessToken;
-            // Call your API with token
-            callApi(accessToken);
-          })
-          .catch(function (error) {
-            // Acquire token interactive failure
-            console.log(error);
-          });
-      }
-      console.log(error);
-    });
-
-```
+    ```JavaScript
+    
+      // MSAL.js exposes several account APIs, logic to determine which account to use is the responsibility of the developer
+      const account = publicClientApplication.getActiveAccount();
+    
+      const accessTokenRequest = {
+      scopes: ["user.read"],
+      account: account,
+      };
+    
+      publicClientApplication
+        .acquireTokenSilent(accessTokenRequest)
+        .then(function (accessTokenResponse) {
+          // Acquire token silent success
+          let accessToken = accessTokenResponse.accessToken;
+          // Call your API with token
+          callApi(accessToken);
+        })
+        .catch(function (error) {
+          //Acquire token silent failure, and send an interactive request
+          if (error instanceof InteractionRequiredAuthError) {
+            publicClientApplication
+              .acquireTokenPopup(accessTokenRequest)
+              .then(function (accessTokenResponse) {
+                // Acquire token interactive success
+                let accessToken = accessTokenResponse.accessToken;
+                // Call your API with token
+                callApi(accessToken);
+              })
+              .catch(function (error) {
+                // Acquire token interactive failure
+                console.log(error);
+              });
+          }
+          console.log(error);
+        });
+    
+    ```
 
 ### Call an API
 
