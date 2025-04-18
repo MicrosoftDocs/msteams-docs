@@ -3,6 +3,7 @@ title: Fetch Meeting Transcripts & Recordings
 description: In this module, learn the process, scenarios, and APIs to fetch transcripts and recordings in the post-meeting scenario.
 ms.localizationpriority: high
 ms.topic: conceptual
+ms.owner: vichug
 ms.date: 02/20/2023
 ---
 # Get meeting transcripts and recordings using Graph APIs

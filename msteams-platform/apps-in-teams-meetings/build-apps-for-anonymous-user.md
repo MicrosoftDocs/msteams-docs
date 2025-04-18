@@ -5,6 +5,7 @@ description: Learn how to build apps for anonymous users and test the experience
 ms.topic: conceptual
 ms.author: v-sdhakshina
 ms.localizationpriority: medium
+ms.owner: vichug
 ms.date: 02/07/2023
 ---
 
