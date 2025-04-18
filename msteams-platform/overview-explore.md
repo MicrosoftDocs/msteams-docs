@@ -7,17 +7,17 @@ ms.localizationpriority: high
 ms.date: 10/11/2024
 ---
 
-# Explore Teams Platform Features
+# Explore Teams platform features
 
 Teams provides a rich and integrated environment to build modern applications. By leveraging Teams as a platform, you can enhance your desktop and mobile solutions with powerful capabilities. Choose the right features to best suit your app’s requirements.
 
 :::image type="content" source="../msteams-platform/assets/images/overview/what-is-m365-dev-plat.png" alt-text="Graphic shows the conceptual representation of Teams as a platform and its capabilities." lightbox="../msteams-platform/assets/images/overview/what-is-m365-dev-plat.png":::
 
-## Teams App Features
+## Teams app features
 
 [!INCLUDE [deprecation-note](~/includes/deprecation-note.md)]
 
-Below is a detailed table describing each feature available on Teams, its purpose, and common use cases:
+Following is a detailed table describing each feature available on Teams, its purpose, and common use cases:
 
 | Feature                         | Description                                                                                                                                                                                                                                                                                                                                                                                                                           | Useful for                                                                                                                                                                                                                                                                                 |
 |---------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -28,21 +28,21 @@ Below is a detailed table describing each feature available on Teams, its purpos
 | Personal app                    | A personal app offers a dedicated workspace—a tab or bot—to help users concentrate on their individual tasks or view personalized activities.                                                                                                                                                                                                                                                                                     | Providing a private workspace like OneNote within Teams or offering an overview of tasks via Planner across various boards that have been added as channel tabs.                                                                                                                            |
 | Webhooks and connectors         | These allow your app to interact and communicate with external systems by sending or receiving notifications and messages.                                                                                                                                                                                                                                                                                                             | Subscribing to notifications from external web services and integrating external messages into your Teams environment.                                                                                                                                                                        |
 | Microsoft Graph                 | Microsoft Graph APIs empower your Teams app with collaborative features, offering access to Microsoft 365 data and driving engagement through activity feed notifications.                                                                                                                                                                                                                                                     | Sending activity feed notifications, importing/exporting messages, retrieving meeting transcripts or recordings, employing resource-specific consent (RSC) permissions, and executing CRUD operations on users, chats, channels, or apps.                                                  |
-| Adaptive Card                   | Adaptive Cards enable you to organize information into structured groups while allowing user interactions with specific data segments.                                                                                                                                                                                                                                                                                                | Sharing details using a combination of text and images, or gathering user input via forms.                                                                                                                                                                                                  |
+| Adaptive Cards                  | Adaptive Cards enable you to organize information into structured groups while allowing user interactions with specific data segments.                                                                                                                                                                                                                                                                                                | Sharing details using a combination of text and images, or gathering user input via forms.                                                                                                                                                                                                  |
 | Dialogs (referred as task modules in TeamsJS v1.x) | Dialogs allow you to present modal pop-up experiences within your Teams application. They enable you to run custom HTML or JavaScript code and embed <iframe>-based content such as YouTube or Microsoft Stream videos.                                                                                                                                                                                                       | Building interactive, modal interfaces that can run custom scripts or embed multimedia content to enhance user engagement.                                                                                                                                                                |
 | Copilot extensibility           | Copilot extensibility offers the ability to customize Microsoft 365 Copilot by integrating additional knowledge bases and skills. Agents can seamlessly incorporate your organization’s expertise, processes, and automation capabilities into the Copilot experience.                                                                                                                                                            | Generating unique insights, automating customer support, aiding in content creation, and performing data analysis by leveraging organizational data and processes.                                                                                                                      |
 
 For additional details on extending Microsoft 365 Copilot, see [Microsoft 365 Copilot extensibility](/microsoft-365-copilot/extensibility/).
 
-### Extend Your Teams App Across Microsoft 365
+### Extend your Teams app across Microsoft 365
 
-If you have already built some Teams apps, you can enhance them further by extending across Microsoft 365. This expansion enables your apps to be accessible not only within Teams but also through other Microsoft 365 platforms such as Outlook.
+If you've already built some Teams apps, you can enhance them further by extending across Microsoft 365. This expansion enables your apps to be accessible not only within Teams but also through other Microsoft 365 platforms such as Outlook.
 
 :::image type="content" border="false" source="assets/images/overview/app-manifest.png" alt-text="Screenshot shows you the configuration of properties in app manifest." lightbox="assets/images/overview/app-manifest.png":::
 
 ## Next Step
 
-You have now explored a variety of Teams platform features. With this knowledge, you are better equipped to build and expand your app.
+You've now explored a variety of Teams platform features. With this knowledge, you are better equipped to build and expand your app.
 
 Let's move forward and review the solution for the user story.
 
