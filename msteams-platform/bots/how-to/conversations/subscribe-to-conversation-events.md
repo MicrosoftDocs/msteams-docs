@@ -5,6 +5,7 @@ description: Learn about conversation update, message reaction, app installation
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
+ms.owner: angovil
 ms.date: 11/14/2024
 ---
 

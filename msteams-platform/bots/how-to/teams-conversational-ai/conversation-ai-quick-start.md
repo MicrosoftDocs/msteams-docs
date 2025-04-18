@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.localizationpriority: high
 zone_pivot_groups: ai-library-quick-start
 ms.author: surbhigupta
+ms.owner: angovil
 ms.date: 12/11/2024
 ---
 
