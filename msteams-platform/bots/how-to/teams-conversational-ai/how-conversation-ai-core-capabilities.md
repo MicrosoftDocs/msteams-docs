@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
 ms.date: 02/26/2025
+ms.owner: angovil
 ---
 
 # Understand Teams AI library
