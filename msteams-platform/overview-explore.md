@@ -40,7 +40,7 @@ If you've already built some Teams apps, you can enhance them further by extendi
 
 :::image type="content" border="false" source="assets/images/overview/app-manifest.png" alt-text="Screenshot shows you the configuration of properties in app manifest." lightbox="assets/images/overview/app-manifest.png":::
 
-## Next Step
+## Next step
 
 You've now explored a variety of Teams platform features. With this knowledge, you are better equipped to build and expand your app.
 
