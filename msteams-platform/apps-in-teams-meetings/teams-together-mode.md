@@ -5,6 +5,7 @@ description: Learn how to work with custom Together Mode scenes in Microsoft Tea
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
+ms.owner: kartikd
 ms.date: 04/07/2022
 ---
 

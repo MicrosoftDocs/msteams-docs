@@ -4,6 +4,7 @@ description: Learn how to use external OAuth providers, add authentication to ex
 ms.topic: how-to
 ms.localizationpriority: high
 ms.date: 09/01/2022
+ms.owner: ryanbliss
 ---
 
 # Use external OAuth providers
