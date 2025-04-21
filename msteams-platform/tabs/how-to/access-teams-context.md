@@ -4,6 +4,7 @@ description: Learn to get context for your tab, context of user, team, or compan
 ms.localizationpriority: high
 ms.topic: how-to
 ms.date: 03/19/2025
+ms.owner: ryanbliss
 ---
 
 # Get context for your tab
