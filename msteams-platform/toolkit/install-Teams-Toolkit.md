@@ -114,6 +114,10 @@ The Teams Toolkit for Visual Studio Code extension is available in a prerelease 
 1. On the Teams Toolkit page, select the dropdown arrow next to **Install**.
 1. Select **Install Pre-Release Version**.
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Install+a+prerelease+version&&author=%40zyxiaoyuer&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Finstall-teams-toolkit%3Ftabs%3Dvscode%23install-a-prerelease-version&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Finstall-Teams-Toolkit.md&documentVersionIndependentId=8402fe47-1338-4cb0-9cc0-c35f06dc6ca5&platformId=857dcef4-57f6-1b0a-65f7-221c9f49c1c7&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+
 ## Next step
 
 > [!div class="nextstepaction"]
