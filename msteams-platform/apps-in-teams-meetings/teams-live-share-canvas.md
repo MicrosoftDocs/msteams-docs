@@ -5,6 +5,7 @@ description: In this module, learn more about Live Share canvas, an extension en
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
+ms.owner: ryanbliss
 ms.date: 10/04/2022
 ---
 

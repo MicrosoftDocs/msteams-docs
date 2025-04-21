@@ -6,6 +6,7 @@ ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 01/17/2023
+ms.owner: ryanbliss
 ---
 
 # Build a dashboard tab app
