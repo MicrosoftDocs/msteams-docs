@@ -130,6 +130,9 @@ The following are the launcher.js definitions:
 | buttonType | `data-button-type` | String | No | primaryShareInMeeting | Specifies the button background color: `primaryShareInMeeting` or `secondaryShareInMeeting`. |
 | buttonSize | `data-button-size` | String | No | NA | Button size in pixels. |
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Enable+share+in+meeting&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fbuild-and-test%2Fshare-in-meeting%3Ftabs%3Dmethod-1%23enable-share-in-meeting&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fconcepts%2Fbuild-and-test%2Fshare-in-meeting.md&documentVersionIndependentId=e6fac06a-05f4-569d-cd2f-04648f8c1c23&platformId=52dfe6dc-7b1e-7f4d-4f87-87a07c550114&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ## End user experience on third-party apps
 
 After you enable Share in meeting on third-party apps, you can share the apps to the meeting stage. To access, follow the steps:
@@ -165,6 +168,9 @@ If meeting extension isn't installed:
 1. The web app is shared to meeting stage and all the participants can interact and edit together.
 
    :::image type="content" source="../../assets/images/share-in-teams-meeting/share-stage.png" alt-text="Screenshot shows app shared to the teams meeting stage experience.":::
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+End+user+experience+on+third-party+apps&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fbuild-and-test%2Fshare-in-meeting%3Ftabs%3Dmethod-1%23end-user-experience-on-third-party-apps&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fconcepts%2Fbuild-and-test%2Fshare-in-meeting.md&documentVersionIndependentId=e6fac06a-05f4-569d-cd2f-04648f8c1c23&platformId=52dfe6dc-7b1e-7f4d-4f87-87a07c550114&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Generate a deep link to share content to stage in meetings
 
