@@ -101,7 +101,7 @@ Test Tool opens the bot in a webpage.
 | `src`        | The source code for the application.                |
 |`teamsapp.yml`|This is the main Teams Toolkit project file. The project file defines two primary things:  Properties and configuration Stage definitions. |
 |`teamsapp.local.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging.|
-|`teamsapp.testtool.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
+|`teamsapp.testtool.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging in Microsoft 365 Agents Playground.|
 |`src/index.js`| Sets up the bot app server.|
 |`src/adapter.js`| Sets up the bot adapter.|
 |`src/config.js`| Defines the environment variables.|
@@ -120,7 +120,7 @@ Test Tool opens the bot in a webpage.
 | `src`        | The source code for the application.                 |
 |`teamsapp.yml`|This is the main Teams Toolkit project file. The project file defines two primary things:  Properties and configuration Stage definitions. |
 |`teamsapp.local.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging.|
-|`teamsapp.testtool.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
+|`teamsapp.testtool.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging in Microsoft 365 Agents Playground.|
 |`src/app.py`| Hosts an aiohttp API server and exports an app module.|
 |`src/bot.py`| Handles business logics for the basic AI chatbot.|
 |`src/config.py`| Defines the environment variables.|

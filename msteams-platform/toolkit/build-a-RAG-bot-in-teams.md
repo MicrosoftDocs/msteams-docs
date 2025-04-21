@@ -117,7 +117,7 @@ Test Tool opens the bot in a webpage.
 |`src/data/*.md`| Raw text data sources.|
 |`teamsapp.yml`|This is the main Teams Toolkit project file. The project file defines the properties and configuration stage definitions. |
 |`teamsapp.local.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging.|
-|`teamsapp.testtool.yml`| This overrides `teamsapp.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
+|`teamsapp.testtool.yml`| This overrides `teamsapp.yml` with actions that enable local execution and debugging in Microsoft 365 Agents Playground.|
 
 ## RAG scenarios for Teams AI
 
