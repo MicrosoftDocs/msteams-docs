@@ -142,6 +142,9 @@ Upon completion, your *package.json* file references `@microsoft/teams-js@2.0.0`
 > [!IMPORTANT]
 > Code inside *.html* files is not supported by the upgrade tooling and require manual changes.
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Update+TeamsJS+references&&author=%40erikadoyle&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-teams-toolkit%23update-teamsjs-references&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ## Configure Content Security Policy headers
 
 As in Microsoft Teams, tab applications are hosted within [iframe elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) in Microsoft 365 app and Outlook web clients.
