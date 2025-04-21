@@ -5,6 +5,7 @@ author: v-sdhakshina
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 01/24/2023
+ms.owner: ryanbliss
 ---
 
 # Enable SSO for Adaptive Cards Universal Actions in your bot
