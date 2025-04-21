@@ -102,8 +102,7 @@ After you select your desired filters, you can explore the following individual 
 
    You can select each of these **Metric name** to see trends over time.
 
-   :::image type="content" source="../../assets/images/tdp/app-dashboard.png" alt-text="Screenshots shows the app dashboard chart for your published app in Developer Portal.":::
-
+   :::image type="content" source="../../assets/images/tdp/app-dashboard.png" alt-text="Screenshot shows the app dashboard chart for your published app in Developer Portal.":::
 # [Third-party apps](#tab/thirdpartyapps)
 
 To view app usage in Developer Portal, you need **Manager** or **Developer** role in Partner Center. The marketplace account owner or manager can [assign user roles and permissions](/partner-center/account-settings/user-roles).
