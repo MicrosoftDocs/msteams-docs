@@ -4,6 +4,7 @@ description: Learn about Single sign-on (SSO) authentication in Microsoft Teams 
 ms.topic: conceptual
 ms.date: 11/12/2024
 ms.localizationpriority: high
+ms.owner: ryanbliss
 ---
 # Enable SSO for your app
 
