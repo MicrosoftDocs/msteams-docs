@@ -207,7 +207,7 @@ As you explore individual metrics on this page, you can use the **Filter** butto
 * **Operating system**
 * **Area**
 
- :::image type="content" source="../../assets/images/tdp/dev-analytics-filter.png" alt-text="Screenshot shows you analytics page filter in Developer Portal.":::
+ :::image type="content" source="../../assets/images/tdp/dev-analytics-filter.png" alt-text="Screenshot shows you the analytics page filter in Developer Portal.":::
 
 After you have selected your desired filters, you can explore the following individual widgets:
 
@@ -325,9 +325,9 @@ As you explore the app usage metrics on this page, you can see the following thr
 
 #### Usage over time
 
-   The **Usage over time** chart shows the number of active users or tenants who opened and used your app across different time periods.
+   The **Usage over time** chart shows you the number of active users or tenants who opened and used your app across different time periods.
 
-   :::image type="content" source="../../assets/images/tdp/tdp-usage-over-time.png" alt-text="Screenshot shows app usage over time of your published app in Developer Portal.":::
+   :::image type="content" source="../../assets/images/tdp/tdp-usage-over-time.png" alt-text="Screenshot shows you app usage over time of your published app in Developer Portal.":::
 
    | Metric | Definition |
    | :-----------------------| :------------------------------------------------------------------------------------------------------|
@@ -339,7 +339,7 @@ As you explore the app usage metrics on this page, you can see the following thr
 
    The **Usage by retention state** chart lets you track four key retention or churn metrics for your app over time.
 
-   :::image type="content" source="../../assets/images/tdp/tdp-retention.png" alt-text="Screenshot shows app usage by retention state of your published app in Developer Portal.":::
+   :::image type="content" source="../../assets/images/tdp/tdp-retention.png" alt-text="Screenshot shows you app usage by retention state of your published app in Developer Portal.":::
 
    | Metric | Definition |
    | :-----------------------| :------------------------------------------------------------------------------------------------------|
