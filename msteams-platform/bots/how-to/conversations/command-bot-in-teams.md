@@ -353,7 +353,7 @@ const commandApp = new ConversationBot({
 ```csharp
 /** Update ConversationBot in Program.cs **/
 builder.Services.AddSingleton<HelloWorldCommandHandler>();
-builder.Services.AddSingleton<DoSomethingCommandHandler>(); // Add doSomething command handler to serrvice container
+builder.Services.AddSingleton<DoSomethingCommandHandler>(); // Add doSomething command handler to service container
 builder.Services.AddSingleton(sp =>
 {
     var options = new ConversationOptions()
