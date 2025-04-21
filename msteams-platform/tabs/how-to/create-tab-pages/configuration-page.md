@@ -6,6 +6,7 @@ ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.date: 02/06/2025
+ms.owner: ryanbliss
 ---
 # Create a configuration page
 

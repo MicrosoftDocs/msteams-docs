@@ -5,6 +5,7 @@ ms.topic: reference
 ms.localizationpriority: medium
 keywords: Share in Meeting
 ms.date: 10/29/2024
+ms.owner: ryanbliss
 ---
 # Share in meeting
 

@@ -5,6 +5,7 @@ description: Learn how to get started with Live Share SDK, build Dice Roller sam
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
+ms.owner: ryanbliss
 ms.date: 04/07/2022
 ---
 
