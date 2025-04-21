@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.date: 02/06/2025
 ms.localizationpriority: medium
+ms.owner: slamba
 ---
 
 # Universal Actions for search based message extensions

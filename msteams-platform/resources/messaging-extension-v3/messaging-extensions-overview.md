@@ -4,6 +4,7 @@ description: In this module, learn about the types of message extensions, user s
 ms.topic: overview
 ms.localizationpriority: medium
 ms.date: 04/02/2023
+ms.owner: slamba
 ---
 # Develop message extensions for Microsoft Teams
 
