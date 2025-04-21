@@ -4,6 +4,7 @@ description: In this module, learn how to get context for bots in Microsoft Team
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 04/02/2023
+ms.owner: angovil
 ---
 # Get context for your Microsoft Teams bot
 
