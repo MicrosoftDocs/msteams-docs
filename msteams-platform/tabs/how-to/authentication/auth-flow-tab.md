@@ -4,6 +4,7 @@ description: Learn about Teams authentication flow in tabs using third-party OAu
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.date: 03/02/2025
+ms.owner: ryanbliss
 ---
 # Enable authentication using third-party OAuth provider
 

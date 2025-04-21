@@ -5,6 +5,7 @@ description: Learn how to quickly build and run the Dice Roller sample using Mic
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
+ms.owner: ryanbliss
 ms.date: 04/07/2022
 ---
 
