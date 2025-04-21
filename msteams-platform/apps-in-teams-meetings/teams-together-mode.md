@@ -5,6 +5,7 @@ description: Learn how to work with custom Together Mode scenes in Microsoft Tea
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
+ms.owner: kartikd
 ms.date: 04/07/2022
 ---
 
@@ -175,6 +176,9 @@ To build a scene using **Scene studio** in Teams Developer Portal, follow these 
 
     :::image type="content" source="~/assets/images/apps-in-meetings/add-in-teams.png" alt-text="Screenshot shows the options to add the scene in teams.":::
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Build+scene+using+Scene+studio&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fapps-in-teams-meetings%2Fteams-together-mode%23build-scene-using-scene-studio&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fapps-in-teams-meetings%2Fteams-together-mode.md&documentVersionIndependentId=278c15ae-7d16-091a-8320-90b3e15aacfc&platformId=07fe6a7b-ddd1-047c-79c6-3929618df471&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ## Test Custom Together Mode scenes in Teams
 
 Before you start, you must create a new Teams meeting to test and launch Custom Together Mode scenes in Teams.
@@ -207,6 +211,9 @@ Join the Teams meeting and follow these steps to test the Custom Together Mode:
     > * Participants can switch in or out of Custom Together Mode scenes individually, but when using Custom Together Mode scenes, all participants share the same scene.
 
     :::image type="content" source="../assets/images/apps-in-meetings/launch-together-mode.png" alt-text="Screenshot shows the custom scene launched in a Teams meeting.":::
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Test+Custom+Together+Mode+scenes+in+Teams&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fapps-in-teams-meetings%2Fteams-together-mode%23test-custom-together-mode-scenes-in-teams&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fapps-in-teams-meetings%2Fteams-together-mode.md&documentVersionIndependentId=278c15ae-7d16-091a-8320-90b3e15aacfc&platformId=07fe6a7b-ddd1-047c-79c6-3929618df471&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Share scene using Scene studio
 
@@ -247,6 +254,9 @@ To delete a scene you created, follow these steps:
 
    :::image type="content" source="~/assets/images/apps-in-meetings/delete-scene.png" alt-text="Screenshot shows the option to delete a scene in scene studio.":::
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Share+scene+using+Scene+studio&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fapps-in-teams-meetings%2Fteams-together-mode%23share-scene-using-scene-studio&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fapps-in-teams-meetings%2Fteams-together-mode.md&documentVersionIndependentId=278c15ae-7d16-091a-8320-90b3e15aacfc&platformId=07fe6a7b-ddd1-047c-79c6-3929618df471&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ### Import a scene
 
 You can import the scene package, which is a zip file retrieved from **Scene studio** to further enhance the scene.
@@ -258,6 +268,9 @@ You can import the scene package, which is a zip file retrieved from **Scene stu
 
 1. Select the scene package file you want to import.
    This functionality allows you to unwrap a scene package and enhance the scene.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Import+a+scene&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fapps-in-teams-meetings%2Fteams-together-mode%23import-a-scene&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fapps-in-teams-meetings%2Fteams-together-mode.md&documentVersionIndependentId=278c15ae-7d16-091a-8320-90b3e15aacfc&platformId=07fe6a7b-ddd1-047c-79c6-3929618df471&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Example
 

@@ -4,6 +4,7 @@ description: Learn to update and configure the app manifest to enable SSO for bo
 ms.topic: how-to
 ms.localizationpriority: high
 ms.date: 03/11/2025
+ms.owner: ryanbliss
 ---
 # Update app manifest for SSO and preview your app
 

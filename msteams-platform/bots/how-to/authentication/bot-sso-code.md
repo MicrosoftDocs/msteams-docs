@@ -5,6 +5,7 @@ ms.topic: how-to
 ms.localizationpriority: high
 zone_pivot_groups: enable-sso
 ms.date: 11/13/2024
+ms.owner: ryanbliss
 ---
 # Add code to enable SSO in your bot app
 
