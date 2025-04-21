@@ -5,6 +5,7 @@ ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API
 ms.date: 11/21/2022
+ms.owner: ryanbliss
 ---
 # Update app manifest for SSO and preview app
 
