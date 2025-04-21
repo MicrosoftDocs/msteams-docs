@@ -3,6 +3,7 @@ title: Get Meeting ID & Organizer ID
 description: Learn about the process to obtain meeting ID and organizer ID for fetching meeting transcripts and recordings using Microsoft Graph APIs.
 ms.localizationpriority: high
 ms.topic: conceptual
+ms.owner: vichug
 ms.date: 01/05/2023
 ---
 # Obtain meeting ID and organizer ID
