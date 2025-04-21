@@ -176,7 +176,7 @@ To build a scene using **Scene studio** in Teams Developer Portal, follow these 
     :::image type="content" source="~/assets/images/apps-in-meetings/add-in-teams.png" alt-text="Screenshot shows the options to add the scene in teams.":::
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Elements+of+a+scene&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fapps-in-teams-meetings%2Fteams-together-mode%23elements-of-a-scene&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fapps-in-teams-meetings%2Fteams-together-mode.md&documentVersionIndependentId=278c15ae-7d16-091a-8320-90b3e15aacfc&platformId=07fe6a7b-ddd1-047c-79c6-3929618df471&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Build+scene+using+Scene+studio&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fapps-in-teams-meetings%2Fteams-together-mode%23build-scene-using-scene-studio&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fapps-in-teams-meetings%2Fteams-together-mode.md&documentVersionIndependentId=278c15ae-7d16-091a-8320-90b3e15aacfc&platformId=07fe6a7b-ddd1-047c-79c6-3929618df471&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Test Custom Together Mode scenes in Teams
 
