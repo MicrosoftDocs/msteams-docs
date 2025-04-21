@@ -4,6 +4,7 @@ description: Learn about SharePoint web parts and how to add and deploy your exi
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 12/11/2024
+ms.owner: ryanbliss
 ---
 
 # Add Teams tab to SharePoint

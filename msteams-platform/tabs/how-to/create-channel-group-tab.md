@@ -5,6 +5,7 @@ ms.localizationpriority: high
 ms.topic: quickstart
 zone_pivot_groups: teams-app-environment-blazor
 ms.date: 02/06/2025
+ms.owner: ryanbliss
 ---
 
 # Create a configurable tab
