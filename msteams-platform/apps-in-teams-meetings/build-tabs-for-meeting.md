@@ -5,6 +5,7 @@ description: Learn to build a tab for a meeting chat, meeting side panel, and me
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
+ms.owner: vichug
 ms.date: 03/05/2025
 ---
 

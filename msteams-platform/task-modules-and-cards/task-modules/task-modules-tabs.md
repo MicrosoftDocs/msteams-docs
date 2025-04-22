@@ -4,6 +4,7 @@ description: Learn how to invoke dialogs (task modules) from Teams tabs and subm
 ms.localizationpriority: medium
 ms.topic: how-to
 ms.date: 02/22/2023
+ms.owner: ryanbliss
 ---
 
 # Use dialogs in tabs

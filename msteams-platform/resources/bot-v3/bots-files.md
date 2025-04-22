@@ -5,6 +5,7 @@ keywords: teams bots files send receive
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 04/02/2023
+ms.owner: angovil
 ---
 # Send and receive files using bots
 

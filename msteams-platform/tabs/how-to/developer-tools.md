@@ -4,6 +4,7 @@ description: Learn about Dev Tools for Microsoft Teams tabs and how to access an
 ms.localizationpriority: medium
 ms.topic: how-to
 ms.date: 11/12/2024
+ms.owner: ryanbliss
 ---
 
 # Dev Tools for Microsoft Teams tabs
