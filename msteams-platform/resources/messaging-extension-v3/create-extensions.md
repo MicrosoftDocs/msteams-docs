@@ -4,6 +4,7 @@ description: Learn how to create and configure action-based message extensions f
 ms.localizationpriority: medium
 ms.topic: how-to
 ms.date: 04/02/2023
+ms.owner: slamba
 ---
 # Initiate actions with message extensions
 
