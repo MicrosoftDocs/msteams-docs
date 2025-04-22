@@ -1,14 +1,14 @@
 ### YamlMime:Tutorial
-title: Debug your AI chat bot using Teams App Test Tool
+title: Debug your AI chat bot using Microsoft 365 Agents Playground
 metadata:
-  title: Teams App Test Tool to Debug AI Chatbot
-  description: Learn how to create project workspace, build, run, and debug AI chat bot using Teams App Test Tool and about activity triggers.
+  title: Microsoft 365 Agents Playground to Debug AI Chatbot
+  description: Learn how to create project workspace, build, run, and debug AI chat bot using Microsoft 365 Agents Playground and about activity triggers.
   audience: Developer
   level: Advanced
   ms.date: 10/21/2021
   ms.topic: interactive-tutorial
   nextTutorialHref: toolkit/debug-your-teams-app-test-tool.md
-  nextTutorialTitle: Teams App Test Tool
+  nextTutorialTitle: Microsoft 365 Agents Playground
   ms.custom: mvc
   ms.localizationpriority: high
 items:
@@ -20,8 +20,8 @@ items:
 
     > [!NOTE]
     >
-    > * Teams App Test Tool is available only in Teams Toolkit v5.4.0.
-    > * Teams App Test Tool is supported only for desktop and web clients.
+    > * Microsoft 365 Agents Playground is available only in Teams Toolkit v5.4.0.
+    > * Microsoft 365 Agents Playground is supported only for desktop and web clients.
 
     This step-by-step guide helps you to build an AI chat bot using Teams Toolkit and debug with the Test Tool. You'll see the following output after you've completed this guide, where the user can access and use the AI chat bot:
 
