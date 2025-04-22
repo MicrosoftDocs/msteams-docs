@@ -4,6 +4,7 @@ description: Learn to configure your bot or message extension app with Microsoft
 ms.topic: how-to
 ms.localizationpriority: high
 ms.date: 03/11/2025
+ms.owner: ryanbliss
 ---
 # Configure your app in Microsoft Entra ID
 
