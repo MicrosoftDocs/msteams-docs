@@ -698,7 +698,7 @@ Here's a list of tools you require for building and deploying your app.
 | &nbsp;    | Install   | For using... |
 | --- | --- | --- |
 | **Required** | &nbsp; | &nbsp; |
-| &nbsp; | [Visual Studio version 17.2.0 preview 2.1](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&ch=pre&rel=17)|  Select Visual Studio Enterprise 2022 Preview (version 17.2.0 preview 2.1). |
+| &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&ch=pre&rel=17)| You can install the enterprise version in Visual Studio 2022. Use the latest version. |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and calls - all in one place. |
 | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge/) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 
@@ -716,8 +716,8 @@ You can use the latest version of the Visual Studio to develop Teams apps with B
 
 To install the Microsoft Teams Toolkit extension:
 
-1. Download the latest version of the Visual Studio.
-1. Open `vs_enterprise__3bed52501a604464b1eff2ce580fd4eb.exe` from your download folder.
+1. Download the latest version of the [Visual Studio](https://visualstudio.microsoft.com/).
+1. Open VisualStudioSetup.exe from your download folder.
 1. Select **Continue** in the **Visual Studio Installer** page to configure your installation.
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/visual-studio-installer.PNG" alt-text="Screenshot of Visual Studio Installer with continue options highlighted in red.":::
