@@ -108,8 +108,8 @@ Open your app manifest and update the `$schema` and `manifestVersion` manually w
 
 ```json
 {
-    "$schema" : "https://developer.microsoft.com/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
-    "manifestVersion" : "1.16"
+    "$schema" : "https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.schema.json",
+    "manifestVersion" : "1.20"
 }
 ```
 ---
