@@ -717,7 +717,7 @@ You can use the latest version of the Visual Studio to develop Teams apps with B
 To install the Microsoft Teams Toolkit extension:
 
 1. Download the latest version of the [Visual Studio](https://visualstudio.microsoft.com/).
-1. Open VisualStudioSetup.exe from your download folder.
+1. Open VisualStudioSetup file (`.exe`) from your download folder.
 1. Select **Continue** in the **Visual Studio Installer** page to configure your installation.
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/visual-studio-installer.PNG" alt-text="Screenshot of Visual Studio Installer with continue options highlighted in red.":::
