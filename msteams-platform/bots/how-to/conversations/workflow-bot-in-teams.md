@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.author: v-bvishnu
 ms.localizationpriority: high
 ms.date: 02/06/2025
+ms.owner: ryanbliss
 ---
 
 # Workflow bot in Teams

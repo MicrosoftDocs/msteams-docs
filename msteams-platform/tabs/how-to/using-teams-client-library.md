@@ -8,6 +8,7 @@ ms.subservice: m365apps
 ms.topic: conceptual
 keywords: SDK TeamsJS Teams client JavaScript library
 ms.date: 12/19/2024
+ms.owner: ryanbliss
 ---
 
 # Teams JavaScript client library

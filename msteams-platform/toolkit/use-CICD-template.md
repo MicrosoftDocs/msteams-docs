@@ -289,8 +289,7 @@ To set up the pipeline with Azure DevOps, follow these steps:
         artifact: artifact
     ```
 
-   # [Password-based authentication](#tab/secret)
-
+    # [Password-based authentication](#tab/secret)
     ```yaml
     trigger:
       - main
