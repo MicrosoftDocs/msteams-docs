@@ -22,7 +22,7 @@ Ensure the following requirements are met before you start building your Teams a
 | &nbsp; | Tools | Purpose | For environment type|
 | --- | --- | --- | --- |
 | **Required** | &nbsp; | &nbsp; | &nbsp; |
-| &nbsp; | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)| A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. | JavaScript and SPFx |
+| &nbsp; | [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)| A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. | JavaScript and SPFx |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Collaborate with everyone you work with through apps for chat, meetings, and call - all in one place.| JavaScript and SPFx|
 | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).| JavaScript and SPFx|
    | &nbsp; |[Node Package Manager (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx) | Install and manage packages for use in both Node.js and ASP.NET Core applications.| JavaScript and SPFx|
@@ -109,7 +109,7 @@ An Azure account allows you to host a Teams app or the back-end resources for yo
 * If you want to host the back-end resources for your app using another cloud provider, or on your own servers if they're available in the public domain.
 
 > [!NOTE]
-> You can use Azure account to provision Azure resource to host your Teams app. You can [create a free account](https://azure.microsoft.com/free/) in case you don't have any. If you don't use Teams Toolkit to provision and deploy, Azure account isn't required.
+> You can use Azure account to provision Azure resource to host your Teams app. You can [create a free account](https://azure.microsoft.com/free/) in case you don't have any. If you don't use Microsoft 365 Agents Toolkit to provision and deploy, Azure account isn't required.
 
 ### SharePoint collection site administrator account
 
@@ -125,15 +125,15 @@ You can verify if the app upload permission is enabled using either Visual Studi
 <details>
 <summary><b>Verify custom app upload permission using Visual Studio Code</b></summary>
 
-You can use this method to verify custom app upload permission only after you have created an app project using Teams Toolkit. If you haven't created an app project, you can verify custom app upload permission using Teams client.
+You can use this method to verify custom app upload permission only after you have created an app project using Microsoft 365 Agents Toolkit. If you haven't created an app project, you can verify custom app upload permission using Teams client.
 
 1. Open **Visual Studio Code**.
-1. Select **Teams Toolkit** from the Visual Studio Code activity bar.
+1. Select **Microsoft 365 Agents Toolkit** from the Visual Studio Code activity bar.
 
    > [!NOTE]
-   > If you're unable to see the option, see [install Teams Toolkit](install-Teams-Toolkit.md) to install Teams Toolkit extension in Visual Studio Code.
+   > If you're unable to see the option, see [install Microsoft 365 Agents Toolkit](install-Teams-Toolkit.md) to install Microsoft 365 Agents Toolkit extension in Visual Studio Code.
 
-1. Create a new Teams Toolkit app project or open an existing app project.
+1. Create a new Microsoft 365 Agents Toolkit app project or open an existing app project.
 
 1. Select **Sign in to Microsoft 365** under **ACCOUNTS**.
 
@@ -160,7 +160,7 @@ You can use this method to verify custom app upload permission only after you ha
 
 ### Enable custom app upload using admin center
 
-If the custom app upload option isn’t visible in Teams Toolkit extension in Visual Studio Code or if the option to upload a custom app isn’t available in Teams, it indicates that you don't have the required permission for custom app upload.
+If the custom app upload option isn’t visible in Microsoft 365 Agents Toolkit extension in Visual Studio Code or if the option to upload a custom app isn’t available in Teams, it indicates that you don't have the required permission for custom app upload.
 
 You must enable custom app upload in Teams:
 
@@ -202,6 +202,6 @@ If you have admin rights, you can enable custom app upload:
 
 ## See also
 
-* [Teams Toolkit Overview](~/toolkit/teams-toolkit-fundamentals.md)
+* [Microsoft 365 Agents Toolkit Overview](~/toolkit/teams-toolkit-fundamentals.md)
 * [Manage custom app policies and settings in Teams](/microsoftteams/teams-custom-app-policies-and-settings)
 * [Manage app setup policies in Teams](/microsoftteams/teams-app-setup-policies)

@@ -1,7 +1,7 @@
 ---
 title: Enable SSO for Teams App
 author: surbhigupta
-description: In this module, learn how to add single sign-on (SSO) of Teams Toolkit, enable SSO support, update your application to use SSO.
+description: In this module, learn how to add single sign-on (SSO) of Microsoft 365 Agents Toolkit, enable SSO support, update your application to use SSO.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
@@ -10,23 +10,23 @@ ms.date: 05/20/2022
 
 # Add single sign-on to your Teams app
 
-Microsoft Teams provides single sign-on (SSO) function for an app to obtain signed in Teams user token to access Microsoft Graph and other APIs. Teams Toolkit facilitates the interaction by abstracting some of the Microsoft Entra ID flows and integrations behind some simple APIs. This enables you to add SSO features easily to your Teams app.
+Microsoft Teams provides single sign-on (SSO) function for an app to obtain signed in Teams user token to access Microsoft Graph and other APIs. Microsoft 365 Agents Toolkit facilitates the interaction by abstracting some of the Microsoft Entra ID flows and integrations behind some simple APIs. This enables you to add SSO features easily to your Teams app.
 
-## Enable single sign-on in Teams Toolkit for Visual Studio
+## Enable single sign-on in Microsoft 365 Agents Toolkit for Visual Studio
 
-Teams provides SSO function for an app using the Microsoft Teams Toolkit for Microsoft Visual Studio.
+Teams provides SSO function for an app using the Microsoft 365 Agents Toolkit for Microsoft Visual Studio.
 
 1. Open **Visual Studio**.
 
-1. Select **Project** > **Teams Toolkit** > **Add Authentication Code**.
+1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Add Authentication Code**.
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-add-authentication-code.PNG" alt-text="Screenshot shows the option to add authentication code.":::
 
-Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** folder, including the app manifest (previously called Teams app manifest) template file for Microsoft Entra application and authentication redirect pages. Link the files to your Teams application by updating authentication configurations to ensure the SSO works for your application.
+Microsoft 365 Agents Toolkit helps you generate the authentication files in **TeamsFx-Auth** folder, including the app manifest (previously called Teams app manifest) template file for Microsoft Entra application and authentication redirect pages. Link the files to your Teams application by updating authentication configurations to ensure the SSO works for your application.
 
 * In the Microsoft Entra app manifest file, specify the URIs (Uniform Resource Identifier) such as, the URI to identify the Microsoft Entra authentication app and the redirect URI for returning token.
 * In the app manifest file, add the SSO application to link it with Teams application.
-* Add SSO application information in Teams Toolkit configuration files in order to make sure the authentication app can be registered on backend service and start Teams Toolkit when you're debugging or previewing Teams application.
+* Add SSO application information in Microsoft 365 Agents Toolkit configuration files in order to make sure the authentication app can be registered on backend service and start Microsoft 365 Agents Toolkit when you're debugging or previewing Teams application.
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Enable+single+sign-on+in+Teams+Toolkit+for+Visual+Studio&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Ftoolkit-v4%2Fadd-single-sign-on-vs%23enable-single-sign-on-in-teams-toolkit-for-visual-studio&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Ftoolkit-v4%2Fadd-single-sign-on-vs.md&documentVersionIndependentId=f5590168-8c16-04cb-4c56-a7d76ea7d935&platformId=42e04429-d075-6f28-28fa-ae0f0380ff5f&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
@@ -457,7 +457,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
 
 1. Update `teamsapp.yml` and `teamsapp.local.yml` files:
    Microsoft Entra related changes and configs needs to be added into your `yml` files:
-    * Add `aadApp/create` under `provision` for creating new Microsoft Entra apps used for SSO. For more information, see [available actions in Teams Toolkit](https://github.com/OfficeDev/TeamsFx/wiki/Available-actions-in-Teams-Toolkit#aadappcreate).
+    * Add `aadApp/create` under `provision` for creating new Microsoft Entra apps used for SSO. For more information, see [available actions in Microsoft 365 Agents Toolkit](https://github.com/OfficeDev/TeamsFx/wiki/Available-actions-in-Teams-Toolkit#aadappcreate).
 
     * Add `aadApp/update` under `provision` for updating your Microsoft Entra app with Microsoft Entra app manifest in step 1. For more information, see [aadApp/update](https://github.com/OfficeDev/TeamsFx/wiki/Available-actions-in-Teams-Toolkit#aadappupdate).
 
@@ -779,7 +779,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals-vs.md)
+* [Microsoft 365 Agents Toolkit Overview](teams-toolkit-fundamentals-vs.md)
 * [Prerequisites for creating your Teams app](tools-prerequisites-vs.md)
 * [Enable SSO for tab app](~/tabs/how-to/authentication/tab-sso-overview.md)
 * [Enable SSO for your bot and message extension](~/bots/how-to/authentication/bot-sso-overview.md)
