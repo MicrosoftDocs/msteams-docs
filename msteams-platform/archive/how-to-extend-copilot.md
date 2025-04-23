@@ -30,13 +30,13 @@ Plugins allow Copilot to:
 > [!NOTE]
 > Plugins for Microsoft 365 Copilot are in early access preview.
 
-If you already have a Teams message extension, then you already have a plugin that works with Copilot. If not, create a [message extension using the Teams Toolkit](~/messaging-extensions/what-are-messaging-extensions.md).
+If you already have a Teams message extension, then you already have a plugin that works with Copilot. If not, create a [message extension using the Microsoft 365 Agents Toolkit](~/messaging-extensions/what-are-messaging-extensions.md).
 
 **Scenario 1: I want to create a new plugin from an existing API or OpenAI plugin**
 
 To build a message extension that allows you to convert an existing API or OpenAI plugin to work for Microsoft Copilot, follow these steps:
 
-1. Using the Teams Toolkit for Microsoft Visual Studio Code, go to **Create plugin for Copilot**.
+1. Using the Microsoft 365 Agents Toolkit for Microsoft Visual Studio Code, go to **Create plugin for Copilot**.
 2. Provide a link to either an OpenAPI Description document or an OpenAI plugin.
 3. Update your manifest with plugin metadata such as name, publisher, APIs used.
 4. Optional: If you want your plugin to return an Adaptive Card, provide an Adaptive Card template and reference the template in the manifest.
@@ -92,7 +92,7 @@ To ensure your plugin works as intended, it's important to include good descript
 
 ## Upgrading your plugin to a rich conversational Teams app  
 
-When you connect your API to Teams, you've built a simple, powerful Microsoft 365 Copilot plugin. Teams makes it easier and helps you enhance this experience by adding rich conversational components. In addition to your plugin, you can use Teams Toolkit to add a bot to your manifest file. Developing a bot has never been easier with the release of the new [Teams AI library](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md). By bot, your plugin becomes a full conversational Teams app, allowing you to develop link unfurling experiences, message extensions, message actions, search bar actions, and end-to-end conversational bots.
+When you connect your API to Teams, you've built a simple, powerful Microsoft 365 Copilot plugin. Teams makes it easier and helps you enhance this experience by adding rich conversational components. In addition to your plugin, you can use Microsoft 365 Agents Toolkit to add a bot to your manifest file. Developing a bot has never been easier with the release of the new [Teams AI library](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md). By bot, your plugin becomes a full conversational Teams app, allowing you to develop link unfurling experiences, message extensions, message actions, search bar actions, and end-to-end conversational bots.
 
 ## Connecting external data sources
 

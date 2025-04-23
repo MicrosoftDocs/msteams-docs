@@ -46,7 +46,7 @@ Let's learn about some common bot elements and how they work together to make a 
 
 ### Explore bot capabilities
 
-You can choose one or more of the following capabilities for your bot app. Use either Bot Framework SDK or Teams AI library with Teams Toolkit to build these capabilities in your bot.
+You can choose one or more of the following capabilities for your bot app. Use either Bot Framework SDK or Teams AI library with Microsoft 365 Agents Toolkit to build these capabilities in your bot.
 
 * **Custom engine agent**: A custom engine agent is a bot that uses AI to perform automated tasks. It understands natural language, can engage in conversations, and answer questions. You can use them for virtual assistance, language translation, predictive analysis, and more. Custom engine agents, which are AI-enabled Teams bots, can be built using custom AI models of your choice.
 
@@ -70,7 +70,7 @@ You can choose one or more of the following capabilities for your bot app. Use e
     For more information, see [how to build workflow bot with JavaScript](../sbs-gs-workflow-bot.yml).
 
   * **Command bot**:
-    Use a command bot to automate responses for simple commands in a chat. With Teams Toolkit, you can create a command bot template that displays the UI using an Adaptive Card.
+    Use a command bot to automate responses for simple commands in a chat. With Microsoft 365 Agents Toolkit, you can create a command bot template that displays the UI using an Adaptive Card.
 
     For more information, see [build command bot with JavaScript](../sbs-gs-commandbot.yml).
 
