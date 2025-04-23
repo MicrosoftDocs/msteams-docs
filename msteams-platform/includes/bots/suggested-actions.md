@@ -62,7 +62,7 @@ The following illustrates an example of `imBack` action:
 
 ### `Action.Compose`
 
-You can use the `Action.Compose` to insert message in the compose box. It helps you to add a new action type. It's a action that enables you to include semantic object like tags, mention any user in the chat or channel, other rich objects like emojis and gifs.
+You can use the `Action.Compose` to insert a message in the compose box, which helps you add a new action type. This action enables you to include semantic objects like tags, mention users in the chat or channel, and other rich objects like emojis and gifs.
 
 ```json
 {
