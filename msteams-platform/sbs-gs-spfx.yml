@@ -2,7 +2,7 @@
 title: Build your first app with SPFx
 metadata:
   title: Hello World with SPFx
-  description: In this tutorial, learn to build Hello World app with SPFx, install Teams Toolkit, setup development tenant, and enable custom app upload.
+  description: In this tutorial, learn to build Hello World app with SPFx, install Microsoft 365 Agents Toolkit, setup development tenant, and enable custom app upload.
   audience: Developer
   level: Beginner
   ms.date: 02/24/2025
@@ -24,7 +24,7 @@ items:
     :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/your-helloworld-app-tab1.png" alt-text="Diagram showing this app has three features. Tab is highlighted.":::
 
     > [!NOTE]
-    > Teams Toolkit offers only the tab capability in a Teams app built with SharePoint Framework. The bot and message extension capabilities aren't available.
+    > Microsoft 365 Agents Toolkit offers only the tab capability in a Teams app built with SharePoint Framework. The bot and message extension capabilities aren't available.
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -35,7 +35,7 @@ items:
     | --- | --- | --- |
     | **Required** | &nbsp; | &nbsp; |
     | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript or TypeScript, build environments. Use latest version. |
-    | &nbsp; | [Teams Toolkit](#install-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use Teams Toolkit v5.|
+    | &nbsp; | [Microsoft 365 Agents Toolkit](#install-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use Microsoft 365 Agents Toolkit v5.|
     | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
     | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
     | **Optional** | &nbsp; | &nbsp; |
@@ -63,7 +63,7 @@ items:
     This tutorial walks you through the steps to create, build, and deploy a Teams app using SharePoint Framework SPFx. This app will have a tab capability.  
 
     In this tutorial, you learn:
-    1. [How to set up a new project with Teams Toolkit](#create-your-project)
+    1. [How to set up a new project with Microsoft 365 Agents Toolkit](#create-your-project)
     1. [About the directory structure of your app](#take-a-tour-of-the-source-code)
 
     > [!IMPORTANT]
@@ -76,11 +76,11 @@ items:
     # [Visual Studio Code](#tab/vscode)
 
     1. Open Visual Studio code.
-    1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
+    1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
 
     1. Select **Create a new app**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/create-project.png" alt-text="Location of the Create New Project link in the Microsoft 365 Agents Toolkit sidebar.":::
 
     1. Select **Tab**.
 
@@ -114,13 +114,13 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/application-name.png" alt-text="Screenshot showing how to select the folder.":::
     
-        After your app is created, the Teams Toolkit displays the following message:
+        After your app is created, the Microsoft 365 Agents Toolkit displays the following message:
         
         :::image type="content" source="~/assets/images/teams-toolkit-v2/preview-project.png" alt-text="localdebug":::
         
         Select **Local debug** to preview your project.
 
-        Teams Toolkit invokes Yeoman CLI to scaffold your Teams app, and install the required dependencies in the process.</br>
+        Microsoft 365 Agents Toolkit invokes Yeoman CLI to scaffold your Teams app, and install the required dependencies in the process.</br>
         
         :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-tooklit-updated.png" alt-text="bot home" lightbox="~/assets/images/teams-toolkit-v2/spfx-tooklit-updated.png":::
  
@@ -170,7 +170,7 @@ items:
 
     The Toolkit creates scaffolding for you in the project directory for the tab capability. 
 
-    Among other items in this directory, the Teams Toolkit contains:
+    Among other items in this directory, the Microsoft 365 Agents Toolkit contains:
  
     - appPackage: contains the app icons, `color.png` and `outline.png`.
     - `manifest.local.json`: contains the app manifest for local debug.
@@ -185,7 +185,7 @@ items:
 - title: Build your tab app
   durationInMinutes: 1
   content: |
-    After you set up your project workspace with Teams Toolkit, build your tab project. You need to sign in to your Microsoft 365 account.
+    After you set up your project workspace with Microsoft 365 Agents Toolkit, build your tab project. You need to sign in to your Microsoft 365 account.
 
     In this page, you learn to [build and run your first app](#build-and-run-your-app-locally-in-visual-studio-code).
 
@@ -196,7 +196,7 @@ items:
     # [Visual Studio Code](#tab/viscode)
 
     1. Open Visual Studio Code.
-    1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
+    1. Select the Microsoft 365 Agents Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
     1. Select **Sign in to M365**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/account-signin-spfx.png" alt-text="Screenshot showing where to sign in to Microsoft 365.":::
@@ -205,7 +205,7 @@ items:
 
     1. Sign in to your Microsoft 365 account using your credentials.
     1. Close the browser when prompted, and return to Visual Studio Code.
-    1. Return to Teams Toolkit within Visual Studio Code.
+    1. Return to Microsoft 365 Agents Toolkit within Visual Studio Code.
 
         The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name.
 
@@ -327,14 +327,14 @@ items:
   content: |
     You've learned to create, build, and run Teams app with Tab capability. The final step is to deploy your app.
 
-    Let's deploy the first app with Tab capability on SharePoint using Teams Toolkit.
+    Let's deploy the first app with Tab capability on SharePoint using Microsoft 365 Agents Toolkit.
 
     In this page, you learn to:
     1. [Deploy your first app](#deploy-your-app-to-sharepoint)
     1. [Distribute the app package on SharePoint](#distribute-the-app-package-on-sharepoint)
 
     > [!Note]
-    > Building a Teams app using SharePoint Framework with Teams Toolkit does not have direct integration with the Microsoft Entra admin center.
+    > Building a Teams app using SharePoint Framework with Microsoft 365 Agents Toolkit does not have direct integration with the Microsoft Entra admin center.
 
     ## Deploy your app to SharePoint
 
@@ -343,7 +343,7 @@ items:
     # [Visual Studio Code](#tab/vscode)
 
     1. Open Visual Studio Code.
-    1. Select the Teams Toolkit from the sidebar by selecting the Teams icon.
+    1. Select the Microsoft 365 Agents Toolkit from the sidebar by selecting the Teams icon.
     1. Select **Provision** under **LIFECYCLE**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot showing the provisioning command":::
@@ -356,11 +356,11 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/deploying-command.png" alt-text="Screenshot for showing the deploying command":::
 
-        The app package is built, and uploaded to the SharePoint site. The Teams Toolkit displays a message with the local path where the app package is saved.
+        The app package is built, and uploaded to the SharePoint site. The Microsoft 365 Agents Toolkit displays a message with the local path where the app package is saved.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-package.png" alt-text="Screenshot for the SPFx App Package message":::
 
-        After the package is built, Teams Toolkit displays a message with the url of the SharePoint site where your app package has been uploaded.
+        After the package is built, Microsoft 365 Agents Toolkit displays a message with the url of the SharePoint site where your app package has been uploaded.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-package-uploaded.png"alt-text="Screenshot for the SPFx package uploaded to SharePoint site":::
 
