@@ -21,7 +21,7 @@ Message extensions built using API (API-based) use a web service to manage user 
 * Retrieve real-time information, such as latest news coverage on a product launch.
 * Retrieve knowledge-based information, for example, my team’s design files in Figma.
 
-See the video to learn more about building an API-based message extension using Teams Toolkit:
+See the video to learn more about building an API-based message extension using Microsoft 365 Agents Toolkit:
 </br>
 </br>
 

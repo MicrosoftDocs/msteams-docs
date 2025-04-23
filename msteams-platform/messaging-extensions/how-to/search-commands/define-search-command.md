@@ -27,7 +27,7 @@ To add the search command to your [app manifest](../../../resources/schema/manif
 
 ### Create search message extension using Bot Framework
 
-You can create a search message extension using Teams Toolkit and Developer Portal for Teams.
+You can create a search message extension using Microsoft 365 Agents Toolkit and Developer Portal for Teams.
 
 #### Prerequisites
 
@@ -38,12 +38,12 @@ Before you get started, ensure that you meet the following requirements:
 * [Set up your dev environment for extending Teams apps across Microsoft 365.](../../../m365-apps/prerequisites.md) After you've enrolled your developer tenant in Office 365 Targeted Release, it might take a couple of days for the enrollment to take effect.
 * [Teams Toolkit Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version 5.2.0 and higher or Teams Toolkit CLI.
 
-# [Teams Toolkit](#tab/Teams-toolkit)
+# [Microsoft 365 Agents Toolkit](#tab/Teams-toolkit)
 
-To create a search-based message extension using Teams Toolkit, follow these steps:
+To create a search-based message extension using Microsoft 365 Agents Toolkit, follow these steps:
 
 1. Open **Visual Studio Code**.
-1. From the left pane, Select **Teams Toolkit**.
+1. From the left pane, Select **Microsoft 365 Agents Toolkit**.
 1. Select **Create a New App**.
 1. Select **Message Extension**.
 1. Select **Custom Search Results**.
@@ -51,17 +51,17 @@ To create a search-based message extension using Teams Toolkit, follow these ste
 1. Select **Default folder**.
 1. Enter the name of your app and select **Enter**.
 
-   Teams Toolkit scaffolds your project and creates a search message extension.
+   Microsoft 365 Agents Toolkit scaffolds your project and creates a search message extension.
 
 To run the message extension in Teams, follow these steps:
 
-1. From the left pane, select **Teams Toolkit**.
+1. From the left pane, select **Microsoft 365 Agents Toolkit**.
 1. Under **ACCOUNTS**, sign in with your [Microsoft 365 account](/microsoftteams/platform/toolkit/accounts) and Azure account if you haven't already.
 
-   :::image type="content" source="../../../assets/images/Copilot/api-based-me-ttk-accounts.png" alt-text="Screenshot shows the Microsoft 365 and Azure sign in option in Teams Toolkit.":::
+   :::image type="content" source="../../../assets/images/Copilot/api-based-me-ttk-accounts.png" alt-text="Screenshot shows the Microsoft 365 and Azure sign in option in Microsoft 365 Agents Toolkit.":::
 
 1. From the left pane, Select **Run and Debug (Ctrl+Shift+D)**.
-1. From the launch configuration dropdown, select `Preview in Teams (Edge)` or `Preview in Teams (Chrome)`. Teams Toolkit launches Teams web client in a browser window.
+1. From the launch configuration dropdown, select `Preview in Teams (Edge)` or `Preview in Teams (Chrome)`. Microsoft 365 Agents Toolkit launches Teams web client in a browser window.
 1. Go to a chat message and select the **Actions and apps** icon. In the flyout menu, search for your app.
 1. Select your message extension from the list and enter a search command in the search box.
 1. Select an item from the list. The item unfurls into an Adaptive Card in the message compose area.
