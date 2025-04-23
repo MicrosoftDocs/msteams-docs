@@ -1,7 +1,7 @@
 ---
 title: Develop Single Sign-on Experience
 author: surbhigupta
-description: Learn how to develop single sign-on experience in Teams app using Teams Toolkit.
+description: Learn how to develop single sign-on experience in Teams app using Microsoft 365 Agents Toolkit.
 ms.topic: reference
 ms.date: 12/17/2024
 ms.localizationpriority: medium
@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 # Enable single sign-on for Teams app
 
-Microsoft Teams provides single sign-on (SSO) function for an app to obtain signed in Teams user token to access Microsoft Graph and other APIs. Microsoft Teams Toolkit streamlines the process by incorporating certain Microsoft Entra workflows and integrations into straightforward, high-level APIs. As a result, you can effortlessly incorporate SSO capabilities into your Teams app. For more information, see [authenticate users in Microsoft Teams.](../concepts/authentication/authentication.md)
+Microsoft Teams provides single sign-on (SSO) function for an app to obtain signed in Teams user token to access Microsoft Graph and other APIs. Microsoft 365 Agents Toolkit streamlines the process by incorporating certain Microsoft Entra workflows and integrations into straightforward, high-level APIs. As a result, you can effortlessly incorporate SSO capabilities into your Teams app. For more information, see [authenticate users in Microsoft Teams.](../concepts/authentication/authentication.md)
 
 ## Key configurations
 
@@ -19,9 +19,9 @@ To enable SSO, configure your Teams app as follows:
 
 * **Teams app manifest**: Connect your SSO app to your Teams app by incorporating the correct configuration.
 
-* **Teams Toolkit configuration and infra files**: Ensure the necessary configurations are in place to enable SSO for your Teams app.
+* **Microsoft 365 Agents Toolkit configuration and infra files**: Ensure the necessary configurations are in place to enable SSO for your Teams app.
 
-* **SSO app information in Teams Toolkit configuration files**: Ensure the authentication app registers on the backend service and Teams Toolkit initiates it during the debugging or previewing of the Teams app.
+* **SSO app information in Microsoft 365 Agents Toolkit configuration files**: Ensure the authentication app registers on the backend service and Microsoft 365 Agents Toolkit initiates it during the debugging or previewing of the Teams app.
 
 # [Tab app](#tab/tab-app)
 
@@ -47,9 +47,9 @@ In the `./appPackages/manifest.json` file, add the following code:
 > [!NOTE]
 > You can use `{{ENV_NAME}}` to reference variables in `env/.env.{TEAMSFX_ENV}` file.
 
-## Update Teams Toolkit configuration files
+## Update Microsoft 365 Agents Toolkit configuration files
 
-1. Locate your Teams Toolkit configuration files, such as `./teamsapp.yml` and `./teamsapp.local.yml`. Update the required configurations related to Microsoft Entra in these files.
+1. Locate your Microsoft 365 Agents Toolkit configuration files, such as `./teamsapp.yml` and `./teamsapp.local.yml`. Update the required configurations related to Microsoft Entra in these files.
 
 1. Add the `aadApp/create` action under `provision` in `./teamsapp.yml` and `./teamsapp.local.yml` to create new Microsoft Entra app used for SSO:
   
@@ -196,9 +196,9 @@ For more information, see [SSO enabled tab app.](https://github.com/OfficeDev/te
     ]
     ```
 
-## Update Teams Toolkit configuration files
+## Update Microsoft 365 Agents Toolkit configuration files
 
-1. Locate your Teams Toolkit configuration files, such as `./teamsapp.yml` and `./teamsapp.local.yml`. Update necessary configurations related to Microsoft Entra in these files.
+1. Locate your Microsoft 365 Agents Toolkit configuration files, such as `./teamsapp.yml` and `./teamsapp.local.yml`. Update necessary configurations related to Microsoft Entra in these files.
 
 1. Add the following code `aadApp/create` under `provision` in `./teamsapp.yml` and `./teamsapp.local.yml` to create new Microsoft Entra apps used for SSO:
   
@@ -461,7 +461,7 @@ To use the `teamsFx` tab or bot template, follow these steps:
 
 ## Debug your app
 
-To debug your app, select the **F5** key. Teams Toolkit uses the Microsoft Entra manifest to register an SSO-enabled app. For more information, see [debug your Teams app locally.](debug-local.md)
+To debug your app, select the **F5** key. Microsoft 365 Agents Toolkit uses the Microsoft Entra manifest to register an SSO-enabled app. For more information, see [debug your Teams app locally.](debug-local.md)
 
 ## Customize Microsoft Entra apps
 

@@ -1,16 +1,16 @@
 ---
-title: Teams Toolkit Overview
+title: Microsoft 365 Agents Toolkit Overview
 author: zyxiaoyuer
-description: Learn about Teams Toolkit, its installation, navigation, and user journey. Teams Toolkit is available for Visual Studio Code.
+description: Learn about Microsoft 365 Agents Toolkit, its installation, navigation, and user journey. Microsoft 365 Agents Toolkit is available for Visual Studio Code.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 03/18/2025
 ---
 
-# Microsoft Teams Toolkit Overview
+# Microsoft 365 Agents Toolkit Overview
 
-Teams Toolkit makes it simple to get started with app development for Microsoft Teams, Outlook, and Microsoft 365 Copilot using Visual Studio Code.
+Microsoft 365 Agents Toolkit makes it simple to get started with app development for Microsoft Teams, Outlook, and Microsoft 365 Copilot using Visual Studio Code.
 
 * Create new apps from project templates for common app scenarios.
 * Save setup time with automated app registration and configuration.
@@ -18,24 +18,24 @@ Teams Toolkit makes it simple to get started with app development for Microsoft 
 * Smart defaults for hosting in Azure using infrastructure-as-code and Bicep.
 * Test with different configurations such as dev, test, and prod using the environment features.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png" alt-text="Illustration shows the User Journey of the Teams Toolkit." lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png" alt-text="Illustration shows the User Journey of the Microsoft 365 Agents Toolkit." lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
 
 ## Available for Visual Studio Code
 
-Teams Toolkit is available as a free extension for Visual Studio Code. To get started, see [install Teams Toolkit](install-Teams-Toolkit.md).
+Microsoft 365 Agents Toolkit is available as a free extension for Visual Studio Code. To get started, see [install Microsoft 365 Agents Toolkit](install-Teams-Toolkit.md).
 
-| Teams Toolkit | Visual Studio Code |
+| Microsoft 365 Agents Toolkit | Visual Studio Code |
 | - | ------------------ |
 | Installation | Available in the Visual Studio Code Marketplace |
 | Build with | JavaScript, TypeScript, React, SPFx |
 
 > [!IMPORTANT]
 >
-> Teams Toolkit doesn't support building apps for Government Community Cloud (GCC), GCC High, Department of Defense (DoD), and Teams operated by 21Vianet environments.
+> Microsoft 365 Agents Toolkit doesn't support building apps for Government Community Cloud (GCC), GCC High, Department of Defense (DoD), and Teams operated by 21Vianet environments.
 
 ## Features
 
-The following list provides the key features of Teams Toolkit:
+The following list provides the key features of Microsoft 365 Agents Toolkit:
 
 ### Project templates
 
@@ -67,4 +67,4 @@ Teams App Test Tool (Test Tool) makes debugging bot-based apps effortless. You c
 
 ## See also
 
-[Install Teams Toolkit](install-Teams-Toolkit.md)
+[Install Microsoft 365 Agents Toolkit](install-Teams-Toolkit.md)

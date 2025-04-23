@@ -1,13 +1,13 @@
 ---
-title: Publish Custom Apps with Teams Toolkit
+title: Publish Custom Apps with Microsoft 365 Agents Toolkit
 author: zyxiaoyuer
-description: In this module, learn how to publish Teams apps using Teams Toolkit and publish to individual scope or custom app upload permission.
+description: In this module, learn how to publish Teams apps using Microsoft 365 Agents Toolkit and publish to individual scope or custom app upload permission.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Publish Teams apps using Teams Toolkit
+# Publish Teams apps using Microsoft 365 Agents Toolkit
 
 After creating the app, you can publish your app to different scopes, such as an individual, a team, or an organization. The distribution depends on multiple factors such as needs, business and technical requirements, and your goal for the app. Distribution to different scope may need different review process. In general, the bigger the scope, the more review the app needs to go through for security and compliance concerns.
 
@@ -61,17 +61,17 @@ Perform the following steps to upload app package:
 
 ## Publish to your organization
 
-When the app is ready for use in production, you can submit the app using the Teams app submission API, called from Microsoft Graph API. Teams app submission API is an integrated development environment (IDE) such as Microsoft Visual Studio Code installed with Microsoft Teams Toolkit. The following steps help you to publish the app to your organization:
+When the app is ready for use in production, you can submit the app using the Teams app submission API, called from Microsoft Graph API. Teams app submission API is an integrated development environment (IDE) such as Microsoft Visual Studio Code installed with Microsoft 365 Agents Toolkit. The following steps help you to publish the app to your organization:
 
-* [Publish from Teams Toolkit](#publish-from-teams-toolkit)
+* [Publish from Microsoft 365 Agents Toolkit](#publish-from-teams-toolkit)
 * [Approve on admin center](#approve-on-admin-center)
 
-### Publish from Teams Toolkit
+### Publish from Microsoft 365 Agents Toolkit
 
 > [!NOTE]
 > You can use CICD pipelines to publish your Teams app. For more information, see [set up CI/CD pipelines](use-CICD-template.md).
 
-The following steps help you to publish the app from Teams Toolkit:
+The following steps help you to publish the app from Microsoft 365 Agents Toolkit:
 
 1. You can publish your Teams app in one of the following ways:
      * Select **Publish** under **LIFECYCLE**.
@@ -79,7 +79,7 @@ The following steps help you to publish the app from Teams Toolkit:
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-publish_1.png" alt-text="Screenshot shows the Publish option highlighted.":::
 
-1. Select your environment, Teams Toolkit runs the `publish` lifecycle defined in `teamsapp.yml`.
+1. Select your environment, Microsoft 365 Agents Toolkit runs the `publish` lifecycle defined in `teamsapp.yml`.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-env.jpg" alt-text="Screenshot shows the environment options.":::
 
@@ -135,7 +135,7 @@ For more information, see [how to publish to the Teams Store](../concepts/deploy
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Microsoft 365 Agents Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Distribute your Microsoft Teams app](../concepts/deploy-and-publish/apps-publish-overview.md)
 * [Create Teams app package](../concepts/build-and-test/apps-package.md)
 * [Prepare your Microsoft 365 tenant](../concepts/build-and-test/prepare-your-o365-tenant.md)
