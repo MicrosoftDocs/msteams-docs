@@ -5,6 +5,7 @@ description: In this module, learn more about Live Share media capabilities, sus
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
+ms.owner: ryanbliss
 ms.date: 04/07/2022
 ---
 
