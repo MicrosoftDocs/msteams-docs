@@ -44,7 +44,7 @@ Understanding the user and their concern are the first indicators of how a Teams
 
 ### During build
 
-* **Create and build app project**: With Teams, you can choose the build environment that best suits your app requirement. Use Teams Toolkit or other SDKs, such as C#, Blazor, Node.js, and more to get started.
+* **Create and build app project**: With Teams, you can choose the build environment that best suits your app requirement. Use Microsoft 365 Agents Toolkit or other SDKs, such as C#, Blazor, Node.js, and more to get started.
 
 * **Design your app UI**: Use Teams UI Toolkit and Fluent UI React components to design your app's layout.
 
