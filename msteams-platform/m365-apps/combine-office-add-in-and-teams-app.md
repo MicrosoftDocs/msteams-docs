@@ -194,7 +194,7 @@ To separate the source code for the tab or bot, perform the following steps:
 
 ### Merge the manifest
 
-The Teams app's manifest is generated at debug-and-upload time (or build time) from the `manifest.json` file in the **\appPackage** folder of the Teams project. This file is a **template** for a manifest. In this article, it's referred to as the *template* or *manifest template*. Most of the markup is hardcoded into the template, but there are also some configuration files that contain data that gets added to the final generated manifest. In this procedure, perform the following tasks:
+The Teams app's manifest is generated at debug-and-sideload time (or build time) from the `manifest.json` file in the **\appPackage** folder of the Teams project. This file is a **template** for a manifest. In this article, it's referred to as the *template* or *manifest template*. Most of the markup is hardcoded into the template, but there are also some configuration files that contain data that gets added to the final generated manifest. In this procedure, perform the following tasks:
 
 - Copy markup from the add-in's manifest to the Teams app's manifest template.
 - Edit the configuration files. 
