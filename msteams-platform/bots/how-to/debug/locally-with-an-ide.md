@@ -5,6 +5,7 @@ description: Learn about testing and debugging your bot locally with an IDE with
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
+ms.owner: angovil
 ms.date: 02/12/2025
 ---
 
