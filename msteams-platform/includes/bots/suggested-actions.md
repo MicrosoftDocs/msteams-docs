@@ -48,15 +48,17 @@ The following is an example to implement and experience suggested actions:
 }
 ```
 
-The following illustrates an example of suggested actions:
+The following illustrates an example of `imBack` action:
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Screenshot that shows the suggested actions in desktop." lightbox="~/assets/images/Cards/suggested-actions.png":::
+:::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Screenshot that shows the imBack suggested action in desktop." lightbox="~/assets/images/Cards/suggested-actions.png":::
 
 # [Mobile](#tab/mobile)
 
 :::image type="content" source="~/assets/images/Cards/suggested-actions-mobile.png" alt-text="Screenshot that shows the suggested actions in mobile." lightbox="~/assets/images/Cards/suggested-actions-mobile.png":::
+
+---
 
 ### `Action.Compose`
 
@@ -72,6 +74,18 @@ You can use the `Action.Compose` to insert message in the compose box. It helps 
    }
 }
 ```
+
+The following illustrates an example of `Actions.Compose` action:
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="~/assets/images/Cards/actions-compose.png" alt-text="Screenshot that shows the Actions.Compose suggested action in desktop." lightbox="~/assets/images/Cards/suggested-actions.png":::
+
+# [Mobile](#tab/mobile)
+
+<!--
+:::image type="content" source="~/assets/images/Cards/suggested-actions-mobile.png" alt-text="Screenshot that shows the suggested actions in mobile." lightbox="~/assets/images/Cards/suggested-actions-mobile.png":::
+-->
 
 > [!NOTE]
 > If the message is received in a hub that doesn't support it, the app shows an error message. The bots are aware of the channel to which its posting.
