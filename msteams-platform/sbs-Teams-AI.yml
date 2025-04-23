@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
-title: Build a custom engine agent using Teams AI library and Teams Toolkit
+title: Build a custom engine agent using Teams AI library and Microsoft 365 Agents Toolkit
 metadata:
-  title: Build a custom engine agent using Teams AI library and Teams Toolkit
-  description: Learn how to build a custom engine agent with Teams AI library and set up, build, and deploy a bot app with Teams Toolkit.
+  title: Build a custom engine agent using Teams AI library and Microsoft 365 Agents Toolkit
+  description: Learn how to build a custom engine agent with Teams AI library and set up, build, and deploy a bot app with Microsoft 365 Agents Toolkit.
   audience: Developer
   level: Advanced
   ms.date: 07/23/2024
@@ -18,7 +18,7 @@ items:
     
    In this tutorial, you'll learn:
 
-   - How to set up a new project with Teams Toolkit.
+   - How to set up a new project with Microsoft 365 Agents Toolkit.
    - How to import Teams AI library capabilities.
    - How to deploy your custom engine agent in Teams and control over light operations.
 
@@ -34,7 +34,7 @@ items:
 
    | &nbsp; | Install | For using... |
    | --- | --- | --- |
-   | &nbsp; |[Teams Toolkit](#install-the-teams-toolkit) |	Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
+   | &nbsp; |[Microsoft 365 Agents Toolkit](#install-the-teams-toolkit) |	Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
    | &nbsp; |[Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | To collaborate with everyone, you work with apps for chat, meetings, and call all in one place.|
    | &nbsp; |[Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
    | &nbsp; |[Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
@@ -46,9 +46,9 @@ items:
 
    After you've installed the required tools, set up the development environment.
 
-   ### Install the Teams Toolkit
+   ### Install the Microsoft 365 Agents Toolkit
 
-   Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams Store, and more. 
+   Microsoft 365 Agents Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams Store, and more. 
     
    You can use the toolkit with Visual Studio Code.
    You can also use CLI (command-line interface), called `teamsapp`.
@@ -56,16 +56,16 @@ items:
    # [Visual Studio Code](#tab/vscode)
 
    1. Open Visual Studio Code and select the **Extensions** view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
-   1. In the search box, enter **Teams Toolkit**.
-   1. Select **Install** next to the Teams Toolkit.
+   1. In the search box, enter **Microsoft 365 Agents Toolkit**.
+   1. Select **Install** next to the Microsoft 365 Agents Toolkit.
 
-      :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/install-toolkit-vscodeversion.png" alt-text="Illustration shows the Teams Toolkit extension installation." lightbox="~/assets\images\teams-toolkit-v2\prerequisites\install-toolkit-vscodeversion-1.png":::
+      :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/install-toolkit-vscodeversion.png" alt-text="Illustration shows the Microsoft 365 Agents Toolkit extension installation." lightbox="~/assets\images\teams-toolkit-v2\prerequisites\install-toolkit-vscodeversion-1.png":::
 
-    The Teams Toolkit icon appears in the Visual Studio Code **Activity Bar** after it's installed.
+    The Microsoft 365 Agents Toolkit icon appears in the Visual Studio Code **Activity Bar** after it's installed.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/hw-teams-toolkit-sidebar-icon.png" alt-text="Illustration shows the Teams Toolkit icon in Visual Studio Code sidebar.":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/hw-teams-toolkit-sidebar-icon.png" alt-text="Illustration shows the Microsoft 365 Agents Toolkit icon in Visual Studio Code sidebar.":::
 
-   You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
+   You can also find the Microsoft 365 Agents Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
    # [Command line](#tab/cli)
 
@@ -154,7 +154,7 @@ items:
 
     In this tutorial, you'll learn:
 
-    1. [How to set up a new custom engine agent project with Teams Toolkit.](#create-your-custom-engine-agent-project-workspace)
+    1. [How to set up a new custom engine agent project with Microsoft 365 Agents Toolkit.](#create-your-custom-engine-agent-project-workspace)
     1. [About the directory structure of your app project.](#take-a-tour-of-the-app-source-code)
 
     ## Create your custom engine agent project workspace
@@ -164,11 +164,11 @@ items:
     # [Visual Studio Code](#tab/vscode)
 
     1. Open Visual Studio Code.
-    1. Select the Teams Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the Visual Studio Code **Activity Bar**.
+    1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the Visual Studio Code **Activity Bar**.
 
     1. Select **Create a New App**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Microsoft 365 Agents Toolkit sidebar.":::
 
     1. Select **Custom Engine Agent**.
 
@@ -180,11 +180,11 @@ items:
    
     1. Select **TypeScript** as the programming language.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/typescript-programming-language.png" alt-text="Screenshot shows the TypeScript option for programming language in Teams Toolkit.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/typescript-programming-language.png" alt-text="Screenshot shows the TypeScript option for programming language in Microsoft 365 Agents Toolkit.":::
 
     1. Select **OpenAI** or **Azure OpenAI**.
     
-        :::image type="content" source="assets/images/bots/service-for-llm.png" alt-text="Screenshot shows the TypeScript option for programming language in Teams Toolkit.":::
+        :::image type="content" source="assets/images/bots/service-for-llm.png" alt-text="Screenshot shows the TypeScript option for programming language in Microsoft 365 Agents Toolkit.":::
 
      
     1. Enter **OpenAI Key** or **Azure OpenAI key and Azure OpenAI Endpoint**.
@@ -216,7 +216,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/app-created-bot.png" alt-text="Screenshot shows the app created." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/app-created-bot.png":::
 
-        After your app is created, the Teams Toolkit displays the following message:
+        After your app is created, the Microsoft 365 Agents Toolkit displays the following message:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/preview-project.png" alt-text="Screenshot shows the message that the feature is successfully created.":::
     
@@ -261,7 +261,7 @@ items:
 
     After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
 
-    :::image type="content" source="../msteams-platform/assets/images/bots/Teams-AI-library-ttk-files.png" alt-text="Screenshot shows the Teams Toolkit sample bot folder Structure.":::
+    :::image type="content" source="../msteams-platform/assets/images/bots/Teams-AI-library-ttk-files.png" alt-text="Screenshot shows the Microsoft 365 Agents Toolkit sample bot folder Structure.":::
 
     | Folder name | Contents |
     | --- | --- |
@@ -271,7 +271,7 @@ items:
     | `appPackage` | App manifest template files and app icons (color.png and outline.png). |
     | `appPackage/manifest.json` | App manifest for running the app in local and remote environment.  |
     | `config.ts` | `config.ts` wraps access to environment variables that is used to set up the bots adapter. |
-    | `teamsapp.yml` |	This is the main Teams Toolkit project that defines properties and configuration stage definitions. |
+    | `teamsapp.yml` |	This is the main Microsoft 365 Agents Toolkit project that defines properties and configuration stage definitions. |
     | `teamsapp.local.yml` |This overrides teamsapp.yml with actions that enable local execution and debugging. |
 
 
@@ -279,7 +279,7 @@ items:
   durationInMinutes: 1
   content: |
 
-    After you set up your project workspace with Teams Toolkit, build your project. Ensure that you've signed in to your Microsoft 365 account.
+    After you set up your project workspace with Microsoft 365 Agents Toolkit, build your project. Ensure that you've signed in to your Microsoft 365 account.
 
     ## Sign in to your Microsoft 365 account
 
@@ -288,14 +288,14 @@ items:
     # [Visual Studio Code](#tab/viscode)
 
     1. Open Visual Studio Code.
-    1. Select the Teams Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the sidebar.
+    1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the sidebar.
     1. Select **Sign in to M365**.
 
         Your default web browser opens to let you sign in to the account.
 
     1. Sign in to your Microsoft 365 account using your credentials.
     1. Close the browser when prompted and return to Visual Studio Code.
-    1. Return to Teams Toolkit within Visual Studio Code.
+    1. Return to Microsoft 365 Agents Toolkit within Visual Studio Code.
 
         Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
 
@@ -333,7 +333,7 @@ items:
 
     ## Update your custom engine agent with Teams AI library capabilities
 
-    Teams Toolkit is the easiest way to scaffold and get a custom engine agent running. Teams Toolkit creates the basic structure for you to get started with configuring your custom engine agent. 
+    Microsoft 365 Agents Toolkit is the easiest way to scaffold and get a custom engine agent running. Microsoft 365 Agents Toolkit creates the basic structure for you to get started with configuring your custom engine agent. 
     
     Let's get started to configure Teams AI library capabilities:
 
@@ -348,7 +348,7 @@ items:
        ```
 
        > [!NOTE]
-       > If you’re creating the sample through Teams Toolkit, you’ll find the `.env.local.user` file in the setup that is created automatically. If the file isn't available, create the `.env.local.user` file and update the OpenAI key or Azure OpenAI key and Azure OpenAI Endpoint.
+       > If you’re creating the sample through Microsoft 365 Agents Toolkit, you’ll find the `.env.local.user` file in the setup that is created automatically. If the file isn't available, create the `.env.local.user` file and update the OpenAI key or Azure OpenAI key and Azure OpenAI Endpoint.
 
     1. Go to the `app.ts` file:
 
@@ -562,14 +562,14 @@ items:
     1. Select the **F5** key to run your app in debug mode.
 
         > [!NOTE]
-        > If Teams Toolkit is unable to check a particular prerequisite, it prompts you to check.
+        > If Microsoft 365 Agents Toolkit is unable to check a particular prerequisite, it prompts you to check.
 
         <!-- markdownlint-disable MD033 -->
 
         <details>
         <summary>Learn what happens when you run your app locally in the debugger.</summary>
 
-        In case you're wondering, when you press the **F5** key, the Teams Toolkit:
+        In case you're wondering, when you press the **F5** key, the Microsoft 365 Agents Toolkit:
 
         1. Checks all the following prerequisites:
           - You're logged in with a Microsoft 365 account.
@@ -629,7 +629,7 @@ items:
 
     You've learned to create, build, and run custom engine agent. The final step is to deploy your app on Azure.
 
-    Let's deploy the custom engine agent on Azure using Teams Toolkit.
+    Let's deploy the custom engine agent on Azure using Microsoft 365 Agents Toolkit.
 
     ## Sign in to your Azure account
 
@@ -639,7 +639,7 @@ items:
 
     1. Open Visual Studio Code.
     1. Open the project folder in which you created the app.
-    1. Select the Teams Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the sidebar.
+    1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the sidebar.
     1. Select **Sign in to Azure**.
 
         > [!TIP]
@@ -693,11 +693,11 @@ items:
 
     # [Visual Studio Code](#tab/vscode)
 
-    Select the Teams Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the Visual Studio Code sidebar.
+    Select the Microsoft 365 Agents Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the Visual Studio Code sidebar.
 
     1. Select **Provision**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot showing the selection of provision in the cloud under Teams toolkit.":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot showing the selection of provision in the cloud under Microsoft 365 Agents Toolkit.":::
 
     1. Select a subscription to use for the Azure resources.
 
