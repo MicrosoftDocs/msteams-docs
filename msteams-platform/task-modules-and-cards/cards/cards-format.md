@@ -946,7 +946,7 @@ Adaptive Card in Teams supports overflow menu. You can populate an overflow menu
 * [ActionSet](https://adaptivecards.microsoft.com/?topic=ActionSet): ActionSet is a combination of multiple actions in an Adaptive Card. Each action set can have an overflow menu.
 
 > [!NOTE]
-> An Adaptive Card supports up to six primary actions to be viewed on the card. Any additional primary action is viewed in the overflow menu. 
+> An Adaptive Card supports up to six primary actions to be viewed on the card. Any additional primary action is viewed in the overflow menu.
 
   :::image type="content" source="../../assets/images/Cards/overflow-menu-gif.gif" alt-text="The graphical representation shows the overflow menu experience in an Adaptive Card.":::
 
