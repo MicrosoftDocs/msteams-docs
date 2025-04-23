@@ -111,7 +111,7 @@ Building an awesome Teams app is all about finding the right combination of feat
 <details>
 <summary>Choose build environment</summary>
 
-With Teams, you can choose the build environment that best suits your app requirement. Use Teams Toolkit or other SDKs, such as C#, Blazor, Node.js, and more to get started. For more information, see [plan your app with Teams features](../app-fundamentals-overview.md).
+With Teams, you can choose the build environment that best suits your app requirement. Use Microsoft 365 Agents Toolkit or other SDKs, such as C#, Blazor, Node.js, and more to get started. For more information, see [plan your app with Teams features](../app-fundamentals-overview.md).
 
 Suggestion: Options that help select the correct environment based on app needs.
 </details>

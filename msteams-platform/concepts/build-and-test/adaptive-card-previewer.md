@@ -13,7 +13,7 @@ ms.date: 10/20/2023
 > [!NOTE]
 > Adaptive Card Previewer is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 
-Microsoft Adaptive Card Previewer enables you to preview Adaptive Cards when you refine the designs. It works with Teams Toolkit, allows you to preview Adaptive Cards created for Teams bot and message extension. You can open a side-by-side preview to observe live changes and switch between different themes.
+Microsoft Adaptive Card Previewer enables you to preview Adaptive Cards when you refine the designs. It works with Microsoft 365 Agents Toolkit, allows you to preview Adaptive Cards created for Teams bot and message extension. You can open a side-by-side preview to observe live changes and switch between different themes.
 
 :::image type="content" source="../../assets/images/previewer-adaptive-card/adaptive-card-previewer.png" alt-text="Screenshot shows the Adaptive Card Previewer extension Visual Studio Code." lightbox="../../assets/images/previewer-adaptive-card/adaptive-card-previewer.png":::
 
@@ -21,7 +21,7 @@ Microsoft Adaptive Card Previewer enables you to preview Adaptive Cards when you
 
 Adaptive Card Previewer provides faster and more reliable solutions to preview Adaptive Card designs. Adaptive Card Previewer supports the following features:
 
-* **Teams Toolkit Integration**: Enables Just-in-Time (JIT) installation of Adaptive Card Previewer when you update Adaptive Cards generated from a Teams Toolkit project.
+* **Microsoft 365 Agents Toolkit Integration**: Enables Just-in-Time (JIT) installation of Adaptive Card Previewer when you update Adaptive Cards generated from a Microsoft 365 Agents Toolkit project.
 
   :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-preview-example.png" alt-text="Screenshot shows a sample preview of an Adaptive Card when updating an Adaptive Card." lightbox="../../assets/images/previewer-adaptive-card/acp-preview-example.png":::
 
@@ -60,7 +60,7 @@ Adaptive Card Previewer provides faster and more reliable solutions to preview A
 
 The Adaptive Card Previewer offers the following benefits:
 
-* **Quick updates**: Allows you to preview Adaptive Card designs within their integrated development environment, eliminates the need to switch between tools constantly. You can create a bot or messaging extension with Teams Toolkit, open the Adaptive Card metadata file, and use **CodeLens** or a specific command to preview the card. Any update or changes to the card are reflected instantly through the **Hot Reload** feature in the preview.
+* **Quick updates**: Allows you to preview Adaptive Card designs within their integrated development environment, eliminates the need to switch between tools constantly. You can create a bot or messaging extension with Microsoft 365 Agents Toolkit, open the Adaptive Card metadata file, and use **CodeLens** or a specific command to preview the card. Any update or changes to the card are reflected instantly through the **Hot Reload** feature in the preview.
 
 * **Reliable previews**: Uses the same rendering stack as Teams and Outlook to ensure accurate and consistent preview results are aligned with the actual card rendering.
 
@@ -79,7 +79,7 @@ The Adaptive Card Previewer doesn't support the following Adaptive Card features
 <details>
 <summary>Why do we have to use a new extension in Visual Studio Code? Can’t this extension be integrated into Teams Toolkit for Visual Studio Code?</summary>
 
-Adaptive Card Previewer is a standalone extension because it uses a closed-source package to render the Adaptive Cards to ensure consistent rendering logic with the Teams platform. Teams Toolkit is an open-source project and doesn't include dependencies on packages that third-party developers can't access.
+Adaptive Card Previewer is a standalone extension because it uses a closed-source package to render the Adaptive Cards to ensure consistent rendering logic with the Teams platform. Microsoft 365 Agents Toolkit is an open-source project and doesn't include dependencies on packages that third-party developers can't access.
 <br>
 &nbsp;
 </details>

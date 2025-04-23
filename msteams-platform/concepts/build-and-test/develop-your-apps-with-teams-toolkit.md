@@ -1,5 +1,5 @@
 ---
-title: App Development with Teams Toolkit
+title: App Development with Microsoft 365 Agents Toolkit
 description: Learn how to integrate your app from Teams Developer Portal to Teams Toolkit in Microsoft Visual Studio Code and Visual Studio.
 ms.localizationpriority: medium
 ms.topic: overview
@@ -7,14 +7,14 @@ ms.author: v-sdhakshina
 ms.date: 04/24/2023
 ---
 
-# Develop your apps with Teams Toolkit
+# Develop your apps with Microsoft 365 Agents Toolkit
 
 After you create your app in Teams Developer Portal, you can:
 
 * [Open your app in Visual Studio Code](#open-your-app-in-visual-studio-code).
 * [Open your app in Visual Studio](#open-your-app-in-visual-studio).
 
-Teams Toolkit scaffolds the necessary files based on the feature and configurations you set in Teams Developer Portal. This makes a seamless transition between Teams Developer Portal and Teams Toolkit in Visual Studio Code and Visual Studio.
+Microsoft 365 Agents Toolkit scaffolds the necessary files based on the feature and configurations you set in Teams Developer Portal. This makes a seamless transition between Teams Developer Portal and Teams Toolkit in Visual Studio Code and Visual Studio.
 
 ## Open your app in Visual Studio Code
 
@@ -22,9 +22,9 @@ In Teams Developer Portal, you can open and launch your project (React app) in V
 
 Following are the steps to open your app in Visual Studio Code:
 
-1. Select **Develop** > **Open in Teams Toolkit** > **Open in Visual Studio Code (JS/TS)**.
+1. Select **Develop** > **Open in Microsoft 365 Agents Toolkit** > **Open in Visual Studio Code (JS/TS)**.
 
-    :::image type="content" source="../../assets/images/tdp/open-in-teams-toolkit.png" alt-text="Screenshot shows the Developer Portal with Open in Teams Toolkit highlighted in red." lightbox="../../assets/images/tdp/open-in-teams-toolkit.png":::
+    :::image type="content" source="../../assets/images/tdp/open-in-teams-toolkit.png" alt-text="Screenshot shows the Developer Portal with Open in Microsoft 365 Agents Toolkit highlighted in red." lightbox="../../assets/images/tdp/open-in-teams-toolkit.png":::
 
     A dialog is displayed.
 
@@ -45,35 +45,35 @@ Following are the steps to open your app in Visual Studio Code:
 
 1. Select your preferred programming language.
 
-    :::image type="content" source="../../assets/images/tdp/select-programmimg-language.png" alt-text="Screenshot shows Teams Toolkit with Select a programming language highlighted in red.":::
+    :::image type="content" source="../../assets/images/tdp/select-programmimg-language.png" alt-text="Screenshot shows Microsoft 365 Agents Toolkit with Select a programming language highlighted in red.":::
 
 1. Select your workspace folder.
 
-    :::image type="content" source="../../assets/images/tdp/workspace-folder.png" alt-text="Screenshot shows the Teams Toolkit with workspace folder highlighted in red":::
+    :::image type="content" source="../../assets/images/tdp/workspace-folder.png" alt-text="Screenshot shows the Microsoft 365 Agents Toolkit with workspace folder highlighted in red":::
 
 1. Enter an app name.
 
-    :::image type="content" source="../../assets/images/tdp/select-application-name.png" alt-text="Screenshot of Teams Toolkit with Application name highlighted in red.":::
+    :::image type="content" source="../../assets/images/tdp/select-application-name.png" alt-text="Screenshot of Microsoft 365 Agents Toolkit with Application name highlighted in red.":::
 
 1. Select your app and select **OK**.
 
-   Teams Toolkit converts the URL you configured in Teams Developer Portal to a localhost address to work with the debugging process.
+   Microsoft 365 Agents Toolkit converts the URL you configured in Teams Developer Portal to a localhost address to work with the debugging process.
 
-    :::image type="content" source="../../assets/images/tdp/select-ok.png" alt-text="Screenshot shows Teams Toolkit with OK option highlighted in red.":::
+    :::image type="content" source="../../assets/images/tdp/select-ok.png" alt-text="Screenshot shows Microsoft 365 Agents Toolkit with OK option highlighted in red.":::
 
-   Teams Toolkit scaffolds your project with all the necessary config and code files, now you're ready to start development.
+   Microsoft 365 Agents Toolkit scaffolds your project with all the necessary config and code files, now you're ready to start development.
 
     :::image type="content" source="../../assets/images/tdp/scaffold.png" alt-text="Screenshot shows you the scaffolding of your project in Visual Studio Code. ":::
 
 ## Open your app in Visual Studio
 
-You can open your project in Visual Studio and scaffold your project in Visual Studio with Teams Toolkit. Ensure that you installed [Visual Studio 2022 version 17.6 Preview 2](/visualstudio/releases/2022/release-notes-preview#17.6.0-pre.2.0).
+You can open your project in Visual Studio and scaffold your project in Visual Studio with Microsoft 365 Agents Toolkit. Ensure that you installed [Visual Studio 2022 version 17.6 Preview 2](/visualstudio/releases/2022/release-notes-preview#17.6.0-pre.2.0).
 
 Following are the steps to open your app in Visual Studio:
 
-1. Select **Develop** > **Open in Teams Toolkit** > **Open in Visual Studio (.NET) (Preview)**.
+1. Select **Develop** > **Open in Microsoft 365 Agents Toolkit** > **Open in Visual Studio (.NET) (Preview)**.
 
-    :::image type="content" source="../../assets/images/tdp/tdp-teams-toolkit-vs.png" alt-text="Screenshot shows the Developer Portal with Open in Teams Toolkit." lightbox="../../assets/images/tdp/tdp-teams-toolkit-vs.png":::
+    :::image type="content" source="../../assets/images/tdp/tdp-teams-toolkit-vs.png" alt-text="Screenshot shows the Developer Portal with Open in Microsoft 365 Agents Toolkit." lightbox="../../assets/images/tdp/tdp-teams-toolkit-vs.png":::
 
 1. Select **Open** to scaffold your project.
 
@@ -87,18 +87,18 @@ Following are the steps to open your app in Visual Studio:
 
 1. Select the application type and select **Next**.
 
-   Teams Toolkit converts the app you configured in Teams Developer Portal to a localhost address to work with the debugging process.
+   Microsoft 365 Agents Toolkit converts the app you configured in Teams Developer Portal to a localhost address to work with the debugging process.
 
     :::image type="content" source="../../assets/images/tdp/tdp-vs-bot.png" alt-text="Screenshot shows you the type of app in visual studio.":::
 
-   Teams Toolkit scaffolds your project with all the necessary config and code files, now you're ready to start development.
+   Microsoft 365 Agents Toolkit scaffolds your project with all the necessary config and code files, now you're ready to start development.
 
     :::image type="content" source="../../assets/images/tdp/vs-scaffold.png" alt-text="Screenshot shows you the scaffolding of your project in visual studio. ":::
 
-After you open your app in Teams Toolkit, you can now [develop](/microsoftteams/platform/toolkit/teamsfx-multi-env) and [debug](../../toolkit/debug-overview.md) your Teams app in Teams Toolkit.
+After you open your app in Microsoft 365 Agents Toolkit, you can now [develop](/microsoftteams/platform/toolkit/teamsfx-multi-env) and [debug](../../toolkit/debug-overview.md) your Teams app in Microsoft 365 Agents Toolkit.
 
   > [!NOTE]
-  > You can work in Teams Toolkit through Developer Portal in preview version only.
+  > You can work in Microsoft 365 Agents Toolkit through Developer Portal in preview version only.
 
 ## See also
 
