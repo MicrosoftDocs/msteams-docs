@@ -118,9 +118,7 @@ The following code sample shows `config` response that appears when the user int
 
 The `config` response includes:
 
-* The `value` property contains a URL that opens a configuration page in a Teams dialog, which allows users to input necessary details and submit the configuration. Here are the few examples of the `value` property:
-    *`https://<your-subdomain>.ngrok-free.app/searchSettings.html`
-    *`https://<your-subdomain>.devtunnels.ms/searchSettings.html`
+* The `value` property contains a URL that opens a configuration page in a Teams dialog, which allows users to input necessary details and submit the configuration. Few examples of the `value` property are `https://<your-subdomain>.ngrok-free.app/searchSettings.html` and `https://<your-subdomain>.devtunnels.ms/searchSettings.html`.
 * The `type` field within `composeExtension` is set to `config`, indicating the nature of this response as a configuration. 
 * The `responseType` identifies that this response is for the `composeExtension` of the app.
 
