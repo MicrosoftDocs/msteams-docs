@@ -108,7 +108,7 @@ After obtaining the `itemId` of the triggering content, you can use the [Graph A
 GET /users/{user-id}/drive/items/{item-id}
 ```
 
-## Upload your app using Teams Toolkit
+## Upload your custom app using Teams Toolkit
 
 After you update the app package with the required information, you're ready to test your Actions in the Teams Toolkit. To initiate debugging, select the **F5** key.
 
