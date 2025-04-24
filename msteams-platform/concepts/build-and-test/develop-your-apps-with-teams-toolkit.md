@@ -3,7 +3,7 @@ title: App Development with Microsoft 365 Agents Toolkit
 description: Learn how to integrate your app from Teams Developer Portal to Teams Toolkit in Microsoft Visual Studio Code and Visual Studio.
 ms.localizationpriority: medium
 ms.topic: overview
-ms.author: v-surbhigupta
+ms.author: surbhigupta
 ms.date: 04/24/2023
 ---
 
