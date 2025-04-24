@@ -14,13 +14,12 @@ ms.collection: ce-skilling-ai-copilot
 
 > [!IMPORTANT]
 >
-> * Agents for Microsoft 365 Copilot are in preview and work only in Microsoft 365 Copilot.
+> * These guidelines are applicable for ISVs who want to publish their agent on the store.
 > * Message extensions agents in Microsoft 365 Copilot are in public preview for Microsoft Word and Microsoft PowerPoint.
 > * Support for Excel and OneNote client applications to be available soon.
 > * Ensure that Microsoft 365 Copilot is available for your organization. You have two ways to get a developer environment for Microsoft 365 Copilot:
 >   * A sandbox Microsoft 365 tenant with Microsoft 365 Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 >   * An enterprise customer production environment with Microsoft 365 Copilot licenses.
-> * If you want to configure a custom Microsoft Graph connector for Microsoft 365 Copilot, ensure that you adhere to the [guidelines to create or upgrade Graph connectors](/graph/connecting-external-content-deploy-teams?branch=main#make-your-microsoft-graph-connector-available-for-other-organizations-in-the-teams-admin-center).
 
 This section is in line with [Microsoft commercial marketplace policy number 1140.9](/legal/marketplace/certification-policies#11409-copilot-extensions-for-copilot-for-microsoft-365).
 
@@ -126,15 +125,15 @@ You must ensure to meet the following guidelines for agents:
 
 * The Teams Store validation guidelines related to app name for Microsoft 365 apps are applicable. For more information, see [app name](teams-store-validation-guidelines.md#app-name).
 * For declarative agent, ensure that the following parameters are identical: [*Must fix*]
-  * `name` in the app manifest
-  * `name` in declarativeAgent1.json
-  * `name_for_human` in plugin.json files
+  * `name` in the manifest.json
+  * `name` in the declarative agent json file
+  * `name_for_human` in the plugin json files
 
 [Back to top](#validation-guidelines-for-agents)
 
 ## Compound utterances
 
-Agents must support at least three unique compound utterances by handling three or more parameters.
+Agents must support at least three unique compound utterances by handling three or more parameters. Guidelines for agents provide detailed information on [parameter description](../../../../messaging-extensions/dev-guidelines-agents.md#parameter-description) and ways to [enhance message extension to retrieve information through compound utterances](../../../../messaging-extensions/dev-guidelines-agents.md#enhance-message-extension-to-retrieve-information-through-compound-utterances).
 
 :::image type="content" source="../../../../assets/images/Copilot/high-quaity-me-pass-multi-parameters.png" alt-text="Screenshot shows an example of a pass scenario where the Northwind app returns a response for a seafood and in stock parameters.":::
 
@@ -146,7 +145,7 @@ You must ensure the following guidelines for sample prompts and prompt starters:
 
 ### Sample prompts
 
-The [`samplePrompts`](../../../../resources/schema/manifest-schema.md#composeextensionscommands) property provides guidance to users on utilizing the various agents in Microsoft 365 Copilot.
+In case of message extension based declarative agent, the [`samplePrompts`](../../../../resources/schema/manifest-schema.md#composeextensionscommands) property provides guidance to users on utilizing the agents in Microsoft 365 Copilot
 
 :::image type="content" source="../../../../assets/images/Copilot/bot-based-sample-prompts.png" alt-text="Screenshot shows the sample prompts displayed when the message extension agent is enabled in Microsoft 365 Copilot.":::
 
@@ -160,9 +159,9 @@ Sample prompts are specified using `samplePrompts` property in the app manifest.
 
 ### Prompt starters
 
-Prompt starters guide users on how to start using declarative agents. You must ensure the following guidelines for prompt starters:
+Prompt starters guide users on how to start using declarative agents and custom engine agents. You must ensure the following guidelines for prompt starters:
 
-* A declarative agent must have at least three prompts and maximum of six prompts. [*Must fix*]
+* A declarative agent or a custom engine agent must have at least three prompts and maximum of six prompts. [*Must fix*]
 * All prompt starters must be functional and return responses. [*Must fix*]
 
 [Back to top](#validation-guidelines-for-agents)
@@ -266,7 +265,7 @@ For an agent to be validated, invoked, and to work seamlessly, ensure that it me
 | Manifest version | *App manifest version must be 1.13 or later. [*Must fix*] <br>* If you're using declarative agent, you must use [public developer preview app manifest schema](../../../../resources/schema/manifest-schema-dev-preview.md). [*Must fix*] |
 | Response time | Response time mustn't exceed nine seconds for 99 percent, five seconds for 75 percent and two seconds for 50 percent. [*Must fix*] |
 | Reliability | Apps must maintain 99.9% availability. For instance, if Microsoft 365 Copilot calls an agent 1,000 times, it must provide a meaningful response 999 times. [*Must fix*] |
-| Zero regressions | If you need to resubmit your agent for validation, the existing message extension functionality that was working earlier mustn't break. This requirement is only applicable to independent software vendor (ISV) apps and not apps built for your organization. [*Must fix*] |
+| Zero regressions | If you need to resubmit your agent for validation, the existing message extension functionality that was working earlier mustn't break. [*Must fix*] |
 | Microsoft 365 channel | For users to interact with your message extension from Outlook, you need to add Microsoft 365 channel to your bot. For more information, see [add Microsoft 365 channel for your app](../../../../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app). [*Must fix*]|
 | Single sign-on (SSO) | If applicable, update your Microsoft Entra app registration for SSO. [*Must fix*] |
 | Content Security Policy (CSP) | If applicable, modify your CSP headers and X-Frame-Options in accordance with [configure Content Security Policy headers](/microsoftteams/platform/m365-apps/extend-m365-teams-personal-tab?tabs=manifest-teams-toolkit#configure-content-security-policy-headers). [*Must fix*] |
