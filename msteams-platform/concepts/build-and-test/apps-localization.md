@@ -67,9 +67,9 @@ The following `manifest.json` helps to add the `localizationInfo` property with 
 }
 ```
 
-### Example localization .json change
+### Example localization.json change
 
-Following is an example for localization .json:
+Following is an example for localization.json:
 
 ```json
 {
@@ -127,7 +127,7 @@ The `manifest.json` change is shown in the following example:
 }
 ```
 
-### Example localization .json file
+### Example localization.json file
 
  The `localization.json` change is shown in the following example:
 
