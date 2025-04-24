@@ -33,6 +33,8 @@ Teams platform features that are available to all app developers.
 
 **2025 April**
 
+* ***April 20, 2025***: [Introducing app manifest v1.20 with Copilot Agents bot node with a new scope, allowBotMessageDeleteByUser property in bots, and defaultInstallScope.](resources/schema/manifest-schema.md) 
+
 * ***April 10, 2025***: [Create personal scope apps that integrate seamlessly with Public Switched Telephone Network (PSTN) and Teams-to-Teams calls](apps-in-teams-meetings/build-tabs-for-calling.md).
 
 :::column-end:::
