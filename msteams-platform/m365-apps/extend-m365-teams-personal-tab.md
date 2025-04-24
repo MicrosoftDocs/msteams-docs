@@ -324,7 +324,7 @@ Use the [Microsoft Teams developer community channels](/microsoftteams/platform/
 
 ### Debugging
 
-You can debug your tab application running in Teams, Microsoft 365 app, and Outlook with Microsoft 365 Agents Toolkit in Visual Studio Code.
+You can debug your tab application running in Teams, Microsoft 365 app, and Outlook with Microsoft 365 Agents Toolkit for Visual Studio Code.
 
 :::image type="content" source="images/toolkit-debug-targets.png" alt-text="Screenshot shows the debug dropdown menu in Teams Toolkit.":::
 

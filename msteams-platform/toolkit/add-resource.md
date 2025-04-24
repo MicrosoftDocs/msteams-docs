@@ -1,7 +1,7 @@
 ---
 title: Add Resources and API Connection
 author: MuyangAmigo
-description: Learn how to add cloud resources such as Azure Functions, Azure API Management and integrate API connections using Microsoft 365 Agents Toolkit in Visual Studio Code.
+description: Learn how to add cloud resources such as Azure Functions, Azure API Management and integrate API connections using Microsoft 365 Agents Toolkit for Visual Studio Code.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview

@@ -1,7 +1,7 @@
 ---
 title: Provision Cloud Resources
 author: MuyangAmigo
-description: Learn how to do provision cloud resources using Microsoft 365 Agents Toolkit in Visual Studio Code, resource creation and customize resource provision.
+description: Learn how to do provision cloud resources using Microsoft 365 Agents Toolkit for Visual Studio Code, resource creation and customize resource provision.
 ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview

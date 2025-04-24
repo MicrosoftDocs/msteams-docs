@@ -2,7 +2,7 @@
 title: Build command bot with JavaScript
 metadata:
   title: Build Command Bot with Teams Toolkit
-  description: In this module, learn how to build a command bot for Microsoft Teams using Microsoft 365 Agents Toolkit in Visual Studio Code to automate tasks with Adaptive Cards.
+  description: In this module, learn how to build a command bot for Microsoft Teams using Microsoft 365 Agents Toolkit for Visual Studio Code to automate tasks with Adaptive Cards.
   audience: Developer
   level: Beginner
   ms.date: 12/11/2024

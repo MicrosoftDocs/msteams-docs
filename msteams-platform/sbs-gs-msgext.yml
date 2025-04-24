@@ -23,7 +23,7 @@ items:
    - How to build a message extension app.
    - How to deploy your app.
    
-   This step-by-step guide helps you to build a message extension Teams app with Microsoft 365 Agents Toolkit in Visual Studio Code. You'll see the following output after you complete this guide:
+   This step-by-step guide helps you to build a message extension Teams app with Microsoft 365 Agents Toolkit for Visual Studio Code. You'll see the following output after you complete this guide:
 
    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/app-added-mex-local-debug.png" alt-text="Screenshot shows the final output of the message extension app in Teams." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/app-added-mex-local-debug.png":::
 

@@ -14,7 +14,7 @@ After you create your app in Teams Developer Portal, you can:
 * [Open your app in Visual Studio Code](#open-your-app-in-visual-studio-code).
 * [Open your app in Visual Studio](#open-your-app-in-visual-studio).
 
-Teams Toolkit scaffolds the necessary files based on the feature and configurations you set in Teams Developer Portal. This makes a seamless transition between Teams Developer Portal and Microsoft 365 Agents Toolkit in Visual Studio Code and Visual Studio.
+Teams Toolkit scaffolds the necessary files based on the feature and configurations you set in Teams Developer Portal. This makes a seamless transition between Teams Developer Portal and Microsoft 365 Agents Toolkit for Visual Studio Code and Visual Studio.
 
 ## Open your app in Visual Studio Code
 
