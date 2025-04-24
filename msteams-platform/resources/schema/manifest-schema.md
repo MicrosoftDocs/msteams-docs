@@ -687,8 +687,8 @@ A list of commands that your bot can recommend to users. The object is an array 
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`title`|String|32|✔️|The bot command name.|
-|`description`|String|128 characters|✔️|A simple text description or an example of the command syntax and its arguments.|
+|`title`|String|128|✔️|The bot command name.|
+|`description`|String|4000 characters|✔️|A simple text description or an example of the command syntax and its arguments.|
 
 ### bots.requirementSet
 
@@ -951,6 +951,7 @@ Specifies the install scope defined for this app by default. The default install
 * `team`
 * `groupChat`
 * `meetings`
+* `copilot`
 
 ## defaultGroupCapability
 
