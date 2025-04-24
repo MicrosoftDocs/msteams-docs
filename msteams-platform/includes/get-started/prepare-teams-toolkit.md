@@ -2,7 +2,7 @@
 
 After you install the required tools, set up the development environment.
 
-### Install Microsoft 365 Agents Toolkit
+### Install-Microsoft-365-Agents-Toolkit
 
 Microsoft 365 Agents Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app and publish to the Teams Store.
 
