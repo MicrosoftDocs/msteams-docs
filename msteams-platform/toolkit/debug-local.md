@@ -1,7 +1,7 @@
 ---
-title: Teams Toolkit - Debug your Apps Locally
+title: Microsoft 365 Agents Toolkit - Debug your Apps Locally
 author: surbhigupta 
-description: Learn how to set up Teams Toolkit to debug Teams app in Visual Studio Code, debug process, dev tunnel, and debug configurations.
+description: Learn how to set up Microsoft 365 Agents Toolkit to debug Teams app in Visual Studio Code, debug process, dev tunnel, and debug configurations.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
@@ -10,18 +10,18 @@ ms.date: 12/11/2024
 
 # Debug your Teams app locally
 
-Microsoft Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. During the debug process, Teams Toolkit automatically starts app services, launches debuggers, and uploads Teams app. You can preview your Teams app in Teams web client locally after debugging.
+Microsoft 365 Agents Toolkit helps you to debug and preview your Microsoft Teams app locally. During the debug process, Microsoft 365 Agents Toolkit automatically starts app services, launches debuggers, and uploads Teams app. You can preview your Teams app in Teams web client locally after debugging.
 
 ## Debug your Teams app locally for Visual Studio Code
 
-Teams Toolkit in Microsoft Visual Studio Code gives you the features to automate debugging of your Teams app locally. Visual Studio Code allows you to debug tab, bot, and message extension. You need to set up Teams Toolkit before you debug your app.
+Microsoft 365 Agents Toolkit in Microsoft Visual Studio Code gives you the features to automate debugging of your Teams app locally. Visual Studio Code allows you to debug tab, bot, and message extension. You need to set up Microsoft 365 Agents Toolkit before you debug your app.
 
 > [!NOTE]
-> Your old Teams Toolkit project gets upgraded to use new tasks, for more information, see [tasks doc](https://aka.ms/teamsfx-tasks).
+> Your old Microsoft 365 Agents Toolkit project gets upgraded to use new tasks, for more information, see [tasks doc](https://aka.ms/teamsfx-tasks).
 
-## Set up your Teams Toolkit for debugging
+## Set up your Microsoft 365 Agents Toolkit for debugging
 
-The following steps help you set up your Teams Toolkit before you initiate the debug process:
+The following steps help you set up your Microsoft 365 Agents Toolkit before you initiate the debug process:
 
 # [Windows](#tab/Windows)
 
@@ -81,7 +81,7 @@ Toolkit launches a new Microsoft Edge or Chrome browser instance based on your s
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mac-settings.png" alt-text="Screenshot shows the mac sign in dialog.":::
 
-Teams Toolkit launches your browser instance and opens a webpage to load Teams client.
+Microsoft 365 Agents Toolkit launches your browser instance and opens a webpage to load Teams client.
 
 # [Command line](#tab/cli)
 
@@ -142,7 +142,7 @@ npm run prepare-storage:teamsapp
 
 ## Debug your app
 
-After the initial setup process, Teams Toolkit starts the following processes:
+After the initial setup process, Microsoft 365 Agents Toolkit starts the following processes:
 
 * [Starts app services](#starts-app-services)
 * [Launches debug configurations](#launches-debug-configurations)
@@ -209,7 +209,7 @@ The following table lists the required arguments:
 | **Arguments** | **Type** | **Required** | **Description** |
 | --- | --- | --- |--------|
 | `type` | string | required | The type of tunnel service to use. This argument must be set to `dev-tunnel`. |
-| `env` | string | optional | The environment name. Teams Toolkit writes the environment variables defined in `output` to `.env.<env>` file. |
+| `env` | string | optional | The environment name. Microsoft 365 Agents Toolkit writes the environment variables defined in `output` to `.env.<env>` file. |
 | `ports` | array | required | An array of port configurations, each specifying the local port number, protocol, and access control settings. |
 
 The `ports` argument must be an array of objects, with each object specifying the configuration for a particular port. Each object must contain the following fields:
@@ -277,9 +277,9 @@ When Teams client opens in the web browser, perform the following steps:
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Microsoft 365 Agents Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Introduction to Azure Functions](/azure/azure-functions/functions-overview)
-* [Use Teams Toolkit to provision cloud resources](provision.md)
+* [Use Microsoft 365 Agents Toolkit to provision cloud resources](provision.md)
 * [Add How-to guides to Teams app](add-how-to-guides-vsc.md)
 * [Deploy to the cloud](deploy.md)
-* [Manage multiple environments in Teams Toolkit](teamsfx-multi-env.md)
+* [Manage multiple environments in Microsoft 365 Agents Toolkit](teamsfx-multi-env.md)
