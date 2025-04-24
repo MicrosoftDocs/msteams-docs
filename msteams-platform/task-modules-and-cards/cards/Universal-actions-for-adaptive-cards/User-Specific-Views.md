@@ -236,7 +236,7 @@ return result
 
 ---
 
-The following list provides card design guidelines for User Specific Views:
+The following list provides card design guidelines for User Specific Views: 
 
 * Refresh behavior: You can create a maximum of 60 User Specific Views for a particular card sent to a conversation by specifying their `userIds` in the `Refresh` property.
 
