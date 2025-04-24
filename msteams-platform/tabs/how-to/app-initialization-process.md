@@ -50,7 +50,7 @@ When an app has the `showLoadingIndicator` flag set to **false**, or not set at 
 
 The following state diagram shows the behavior of an app that is intended to load immediately, without display of a loading indicator.
 
-:::image type="content" source="../../assets/images/tabs/app-initialization-immediate-flow.png" alt-text="State diagram showing the initialization flow for an app that loads immediately.":::
+:::image type="content" source="../../assets/images/tabs/app-initialization-immediate-flow.png" alt-text="State diagram showing the initialization flow for an app that loads immediately." lightbox="../../assets/images/tabs/app-initialization-immediate-flow.png":::
 
 > [!NOTE]
 > Be aware that if the app uses caching, it enters a *cached/suspended* state, where API calls don't impact it until it resumes. Note that when an app resumes from cache, its state is set to **Loading** because the platform is be waiting for it to call `app.notifySuccess()` to complete the loading sequence. Upon resume the app must call `app.notifySuccess()` to complete loading.
@@ -68,7 +68,7 @@ When an app has the `showLoadingIndicator` flag set to **true** in the [app mani
 
 The following state diagram shows the behavior of an app that is intended to load with a loading indicator. Unlike an app that loads immediately after `app.initialize()`, apps that use the loading indicator must call other APIs to inform the system of the apps progress.
 
-:::image type="content" source="../../assets/images/tabs/app-initialization-loading-indicator-flow.png" alt-text="State diagram showing the initialization flow for an app that requires a loading indicator.":::
+:::image type="content" source="../../assets/images/tabs/app-initialization-loading-indicator-flow.png" alt-text="State diagram showing the initialization flow for an app that requires a loading indicator." lightbox="../../assets/images/tabs/app-initialization-loading-indicator-flow.png":::
 
 > [!NOTE]
 > Be aware that if the app uses caching, it enters a *cached/suspended* state, where API calls don't impact it until it resumes. Note that when an app resumes from cache, its state is set to **Loading** because the platform is be waiting for it to call `app.notifySuccess()` to complete the loading sequence. Upon resume the app must call `app.notifySuccess()` to complete loading.
