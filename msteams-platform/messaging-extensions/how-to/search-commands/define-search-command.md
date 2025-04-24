@@ -36,7 +36,7 @@ Before you get started, ensure that you meet the following requirements:
 * [Node.js](https://nodejs.org/en). The supported versions are 16, 18.
 * [Microsoft 365 account for development](../../../toolkit/tools-prerequisites.md#microsoft-365-developer-program)
 * [Set up your dev environment for extending Teams apps across Microsoft 365.](../../../m365-apps/prerequisites.md) After you've enrolled your developer tenant in Office 365 Targeted Release, it might take a couple of days for the enrollment to take effect.
-* [Teams Toolkit Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version 5.2.0 and higher or Teams Toolkit CLI.
+* [Teams Toolkit Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version 5.2.0 and higher or Microsoft 365 Agents Toolkit CLI.
 
 # [Teams Toolkit](#tab/Teams-toolkit)
 

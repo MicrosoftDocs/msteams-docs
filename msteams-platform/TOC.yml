@@ -290,7 +290,7 @@
       - name: Migrate project from 17.9 to 17.10+
         href: toolkit/teams-toolkit-migration-guide.md
         displayName: migrate Teams toolkit, new project structure, YAML configuration
-    - name: Teams Toolkit CLI
+    - name: Microsoft 365 Agents Toolkit CLI
       href: toolkit/Teams-Toolkit-CLI.md
     - name: Developer Portal for Teams
       items:
@@ -547,7 +547,7 @@
       displayName: OpenAPI Description, Search, single parameter, search based message extension
     - name: Create API-based message extensions
       href: messaging-extensions/create-api-message-extension.md
-      displayName: API-based, Teams Toolkit CLI, Developer Portal, Visual Studio Code, Visual Studio
+      displayName: API-based, Microsoft 365 Agents Toolkit CLI, Developer Portal, Visual Studio Code, Visual Studio
   - name: Build message extensions using Bot Framework  
     items:
     - name: Bot-based message extensions
