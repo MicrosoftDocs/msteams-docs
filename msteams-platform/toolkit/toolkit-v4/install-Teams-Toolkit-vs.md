@@ -1,5 +1,5 @@
 ---
-title: Install Microsoft 365 Agents Toolkit in Visual Studio
+title: Install toolkit for Visual Studio
 author: zyxiaoyuer
 description: Learn how to install Microsoft 365 Agents Toolkit for Visual Studio and to use Visual Studio installer to install the required version of Visual Studio.
 ms.author: zhany

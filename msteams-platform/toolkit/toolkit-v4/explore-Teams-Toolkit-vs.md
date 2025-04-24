@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 07/29/2022
 ---
-# Explore Microsoft 365 Agents Toolkit in Visual Studio
+# Explore Microsoft 365 Agents Toolkit for Visual Studio
 
 In this article, learn how to explore Microsoft Teams Toolkit and its features in Microsoft Visual Studio.
 
