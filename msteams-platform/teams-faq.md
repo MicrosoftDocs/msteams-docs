@@ -4,6 +4,7 @@ description: In this article, check FAQS on Adaptive Card Previewer, bots, Live 
 ms.topic: reference
 ms.date: 01/23/2025
 ms.localizationpriority: high
+ms.owner: angovil
 ---
 
 # Frequently asked questions
@@ -1194,7 +1195,7 @@ Teams AI library works alongside the existing Bot Framework SDK and isn't a repl
 <br>
 </details>
 
-## Teams toolkit
+## Teams Toolkit
 
 FAQ for [Provision cloud resources](toolkit/provision.md) using Teams Toolkit.
 <br>
@@ -1202,8 +1203,9 @@ FAQ for [Provision cloud resources](toolkit/provision.md) using Teams Toolkit.
 <details>
 <summary>How to troubleshoot?</summary>
 
-If you get errors with Microsoft 365 Agents Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document.
+If you get errors with Microsoft 365 Agents Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document. If you're using TeamsFx CLI, there'll be a hyperlink at the end of error message that points to the help doc.
 <br>
+
 &nbsp;
 </details>
 <details>

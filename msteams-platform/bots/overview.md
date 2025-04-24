@@ -5,6 +5,7 @@ ms.localizationpriority: high
 ms.date: 09/20/2024
 ms.topic: conceptual
 ms.author: surbhigupta
+ms.owner: angovil
 ---
 
 # Bot overview
