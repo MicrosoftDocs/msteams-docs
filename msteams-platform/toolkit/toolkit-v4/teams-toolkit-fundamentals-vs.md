@@ -1,7 +1,7 @@
 ---
 title: Teams Toolkit for Visual Studio
 author: zyxiaoyuer
-description: Learn about Teams Toolkit, it's installation, navigation, and user journey. Teams Toolkit is available for Visual Studio.
+description: Learn about Microsoft 365 Agents Toolkit, it's installation, navigation, and user journey. Microsoft 365 Agents Toolkit is available for Visual Studio.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
@@ -10,7 +10,7 @@ ms.date: 09/16/2024
 
 # Teams Toolkit Visual Studio Overview
 
-Microsoft Teams Toolkit makes it simple to get started with app development for Microsoft Teams using Microsoft Visual Studio.
+Microsoft Microsoft 365 Agents Toolkit makes it simple to get started with app development for Microsoft Teams using Microsoft Visual Studio.
 
 * Start with a project template for common custom app built for your org (LOB app) scenarios or from a sample.
 * Save setup time with automated app registration and configuration.
@@ -18,33 +18,33 @@ Microsoft Teams Toolkit makes it simple to get started with app development for 
 * Smart defaults for hosting in Microsoft Azure using infrastructure-as-code and Bicep.
 * Bring your app to your organization or the Microsoft Teams Store using built-in publishing tools.
 
-:::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-user-journey.png" alt-text="Screenshot shows the User Journey of the Teams Toolkit." lightbox="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-user-journey.png":::
+:::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-user-journey.png" alt-text="Screenshot shows the User Journey of the Microsoft 365 Agents Toolkit." lightbox="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-user-journey.png":::
 
 ## Available for Visual Studio
 
-Teams Toolkit is available for free for Visual Studio 2022 Community, Professional, and Enterprise. For more information about installation and setup, see how to [install Teams Toolkit](./install-Teams-Toolkit-vs.md).
+Microsoft 365 Agents Toolkit is available for free for Visual Studio 2022 Community, Professional, and Enterprise. For more information about installation and setup, see how to [install Microsoft 365 Agents Toolkit](./install-Teams-Toolkit-vs.md).
 
-| Teams Toolkit | Visual Studio |
+| Microsoft 365 Agents Toolkit | Visual Studio |
 | - | ------------- |
 | Installation | Available in the Visual Studio Installer |
 | Build with | C#, .NET, ASP.NET, and Blazor |
 
 ## Features
 
-The following are the key features of Teams Toolkit:
+The following are the key features of Microsoft 365 Agents Toolkit:
 
 * [Project templates](#project-templates)
 * [Automatic registration and configuration](#automatic-registration-and-configuration)
-* [CodeLens to trigger Teams Toolkit lifecycle](#codelens-to-trigger-teams-toolkit-lifecycle)
-* [Teams Toolkit documentation](#teams-toolkit-documentation)
+* [CodeLens to trigger Microsoft 365 Agents Toolkit lifecycle](#codelens-to-trigger-teams-toolkit-lifecycle)
+* [Microsoft 365 Agents Toolkit documentation](#teams-toolkit-documentation)
 * [Agent for Microsoft 365 Copilot](#agent-for-microsoft-365-copilot)
 
 > [!NOTE]
-> CodeLens to trigger Teams Toolkit lifecycle, Teams Toolkit documentation, and agent for Microsoft 365 Copilot is available in public developer preview.
+> CodeLens to trigger Microsoft 365 Agents Toolkit lifecycle, Microsoft 365 Agents Toolkit documentation, and agent for Microsoft 365 Copilot is available in public developer preview.
 
 ### Project templates
 
-You can start with the capability-focused templates such as tabs, bots, and message extensions or by following the existing samples if you're already familiar with Teams app development. Teams Toolkit reduces the complexity of getting started with the help of templates for custom app built for org scenarios and smart defaults to accelerate your time to production.
+You can start with the capability-focused templates such as tabs, bots, and message extensions or by following the existing samples if you're already familiar with Teams app development. Microsoft 365 Agents Toolkit reduces the complexity of getting started with the help of templates for custom app built for org scenarios and smart defaults to accelerate your time to production.
 
 Perform the following the steps to select templates and app capability:
 
@@ -58,21 +58,21 @@ Perform the following the steps to select templates and app capability:
 
 ### Automatic registration and configuration
 
-You can save time and let the toolkit automatically register the app in Teams Developer Portal. When you first run or debug the app, Teams Toolkit automatically registers the Teams app to your Microsoft 365 tenant and configures settings such as Microsoft Entra ID for your Teams app. Sign in with your Microsoft 365 account to control where the app is configured and customize the Microsoft Entra manifest.
+You can save time and let the toolkit automatically register the app in Teams Developer Portal. When you first run or debug the app, Microsoft 365 Agents Toolkit automatically registers the Teams app to your Microsoft 365 tenant and configures settings such as Microsoft Entra ID for your Teams app. Sign in with your Microsoft 365 account to control where the app is configured and customize the Microsoft Entra manifest.
 
-### CodeLens to trigger Teams Toolkit lifecycle
+### CodeLens to trigger Microsoft 365 Agents Toolkit lifecycle
 
-Teams Toolkit provides developers with lifecycle actions and grants access to configuration definitions within the teamsapp.yml file. You can now preview and trigger these predefined lifecycle actions using the CodeLens feature directly within the teamsapp.yml file. This streamlined process enhances the development workflow.
+Microsoft 365 Agents Toolkit provides developers with lifecycle actions and grants access to configuration definitions within the teamsapp.yml file. You can now preview and trigger these predefined lifecycle actions using the CodeLens feature directly within the teamsapp.yml file. This streamlined process enhances the development workflow.
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/codelens-trigger-teams-toolkit.png" alt-text="Screenshot shows the lifecycle access and access through CodeLens in teamsapp.yml file.":::
 
-### Teams Toolkit documentation
+### Microsoft 365 Agents Toolkit documentation
 
-To view the Teams Toolkit documentation, follow these steps from Teams Toolkit:
+To view the Microsoft 365 Agents Toolkit documentation, follow these steps from Microsoft 365 Agents Toolkit:
 
-1. Select **Project** > **Teams Toolkit**.
+1. Select **Project** > **Microsoft 365 Agents Toolkit**.
 
-1. Select **Teams Toolkit Documentation**.
+1. Select **Microsoft 365 Agents Toolkit Documentation**.
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-documentation.png" alt-text="Screenshot shows the option to select and view the documentation.":::
 
@@ -80,7 +80,7 @@ A browser window opens to view the documentation.
 
 ### Agent for Microsoft 365 Copilot
 
-The latest version of Teams Toolkit incorporates numerous preview features designed to support agent for Microsoft 365 Copilot development. To enable and activate the preview feature, follow these steps:
+The latest version of Microsoft 365 Agents Toolkit incorporates numerous preview features designed to support agent for Microsoft 365 Copilot development. To enable and activate the preview feature, follow these steps:
 
 1. Select **Tools** > **Options...**.
 
@@ -90,13 +90,13 @@ The latest version of Teams Toolkit incorporates numerous preview features desig
 
 1. Enter **Copilot**, select **Preview Features**.
 
-1. Select the **Teams Toolkit: Develop Copilot Plugin (requires restart)** checkbox.
+1. Select the **Microsoft 365 Agents Toolkit: Develop Copilot Plugin (requires restart)** checkbox.
 
 1. Select **OK**.
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/preview-copilot-plugin.png" alt-text="Screenshot shows the selection of agent from preview feature.":::
 
-Enhance the capabilities of Microsoft 365 Copilot by converting your app into an agent that helps user productivity in daily tasks and workflows. Activate these agents for Microsoft 365 Copilot using the Teams Toolkit. Teams Toolkit agent supports specific capabilities, such as Custom Search Results and [AI Assistant Bot [Preview]](/microsoft-365-copilot/extensibility/).
+Enhance the capabilities of Microsoft 365 Copilot by converting your app into an agent that helps user productivity in daily tasks and workflows. Activate these agents for Microsoft 365 Copilot using the Microsoft 365 Agents Toolkit. Microsoft 365 Agents Toolkit agent supports specific capabilities, such as Custom Search Results and [AI Assistant Bot [Preview]](/microsoft-365-copilot/extensibility/).
 
 #### TeamsFx .NET SDK reference
 
@@ -108,4 +108,4 @@ Enhance the capabilities of Microsoft 365 Copilot by converting your app into an
 
 ## See also
 
-[Install Teams Toolkit](install-Teams-Toolkit-vs.md)
+[Install Microsoft 365 Agents Toolkit](install-Teams-Toolkit-vs.md)

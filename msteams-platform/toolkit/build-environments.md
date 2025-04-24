@@ -1,5 +1,5 @@
 ---
-title: Build Apps with Teams Toolkit - Prepare
+title: Build Apps with Microsoft 365 Agents Toolkit - Prepare
 author: surbhigupta
 description: Learn about build environments such as SPFx of Teams Toolkit in Visual Studio Code. Toolkit integrates Azure Functions capabilities for building apps.
 ms.author: surbhigupta
@@ -8,11 +8,11 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Prepare to build apps using Teams Toolkit
+# Prepare to build apps using Microsoft 365 Agents Toolkit
 
-Microsoft Teams Toolkit supports different build environments for creating apps. It helps to integrate Azure Functions capabilities and cloud services in the Microsoft Teams app that you've built.
+Microsoft Microsoft 365 Agents Toolkit supports different build environments for creating apps. It helps to integrate Azure Functions capabilities and cloud services in the Microsoft Teams app that you've built.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/build-apps-ttk-vsc.png" alt-text="Illustration shows the steps to prepare to build apps using Teams Toolkit." lightbox="../assets/images/teams-toolkit-v2/build-apps-ttk-vsc.png":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/build-apps-ttk-vsc.png" alt-text="Illustration shows the steps to prepare to build apps using Microsoft 365 Agents Toolkit." lightbox="../assets/images/teams-toolkit-v2/build-apps-ttk-vsc.png":::
 
 ## Build environments
 
@@ -29,7 +29,7 @@ The apps built with JavaScript or TypeScript have the following advantages:
 * Provides quick upgrades to the existing apps.
 * Distributes apps on multiple platforms, such as Android and iOS.
 * Compatible for creating an app with the existing APIs.
-* An app created in Teams Toolkit also supports React.
+* An app created in Microsoft 365 Agents Toolkit also supports React.
 
 Teams Toolkit in Visual Studio Code supports building the following apps using JavaScript or TypeScript:
 
@@ -53,7 +53,7 @@ Teams Toolkit in Visual Studio Code allows you to create tab apps using SPFx. Th
 
 ## Support for Azure Functions
 
-You can use Teams Toolkit to integrate [Azure Functions](/azure/azure-functions/functions-overview) capabilities while building apps. You can focus on the pieces of code that matter, and Azure Functions handles the rest.
+You can use Microsoft 365 Agents Toolkit to integrate [Azure Functions](/azure/azure-functions/functions-overview) capabilities while building apps. You can focus on the pieces of code that matter, and Azure Functions handles the rest.
 Azure Functions provides "compute on-demand" in two significant ways:
 
 1. Allows implementing system's logic into your readily available blocks of code. These blocks are called functions.
@@ -68,7 +68,7 @@ Azure Functions integrates with an array of [cloud services](add-resource.md) to
 
 ## Node.js version compatibility table for project type
 
-|Teams Toolkit Version | Project Type | Supported Node.js Versions  |
+|Microsoft 365 Agents Toolkit Version | Project Type | Supported Node.js Versions  |
 |---|---|---|
 | 5.0.0 | Notify with http or timer trigger <br> Azure functions <br> SPFx <br> Non-SPFx | 16, 18 <br> 16, 18 <br> 16 <br> 16, 18 |
 | 4.2.2 | Notify with http or timer trigger <br> Azure functions <br> SPFx | 14, 16, 18 (Preview) <br> 14, 16, 18 (Preview) <br> 16 <br> 14, 16, 18 |
@@ -80,6 +80,6 @@ Azure Functions integrates with an array of [cloud services](add-resource.md) to
 
 ## See also
 
-* [Teams Toolkit Overview](~/toolkit/teams-toolkit-fundamentals.md)
+* [Microsoft 365 Agents Toolkit Overview](~/toolkit/teams-toolkit-fundamentals.md)
 * [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md)
 * [Create a new Teams project](create-new-project.md)
