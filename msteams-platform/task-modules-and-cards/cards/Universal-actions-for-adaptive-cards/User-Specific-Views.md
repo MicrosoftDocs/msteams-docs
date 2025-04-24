@@ -219,18 +219,18 @@ const cardRes = {
 ```python
 card = "<adaptive card json>"
 
-card_res = {
+card_body = {
     "statusCode": 200,
     "type": "application/vnd.microsoft.card.adaptive",
     "value": card
 }
 
-res = {
+result = {
     "status": 200,
-    "body": card_res
+    "body": card_body
 }
 
-return res
+return result
 
 ```
 
