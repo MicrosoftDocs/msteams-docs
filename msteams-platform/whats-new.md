@@ -33,8 +33,6 @@ Teams platform features that are available to all app developers.
 
 **2025 April**
 
-* ***April 25, 2025***: [Introducing custom engine agents support for Microsoft 365 Copilot Chat](resources/schema/manifest-schema.md).
-
 * ***April 23, 2025***: [Precache your tab app to optimize its initial load time](tabs/how-to/app-caching.md).
 
 * ***April 20, 2025***: [You can specify a 32x32 color icon with a transparent background to ensure a consistent appearance when your app runs in Outlook and Microsoft 365](concepts/build-and-test/apps-package.md)
