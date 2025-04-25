@@ -22,7 +22,7 @@ To set up your development environment:
 > * [Install Microsoft 365 Apps in your test environment](#install-microsoft-365-apps-in-your-test-environment)
 > * [*Optional*] [Enroll your Microsoft 365 tenant in Microsoft 365 Targeted Releases](#enroll-your-developer-tenant-for-microsoft-365-targeted-releases-optional)
 > * [*Optional*] [Install Beta Channel builds of Microsoft 365 Apps in your test environment](#install-microsoft-365-apps-in-your-test-environment)
-> * [*Optional*] [Install Teams Toolkit extension for Microsoft Visual Studio Code](#install-visual-studio-code-and-teams-toolkit-extension)
+> * [*Optional*] [Install Teams Toolkit extension for Microsoft Visual Studio Code](#install-visual-studio-code-and-Microsoft-365-agents-toolkit-extension)
 
 ## Prepare a Developer Tenant for testing
 
