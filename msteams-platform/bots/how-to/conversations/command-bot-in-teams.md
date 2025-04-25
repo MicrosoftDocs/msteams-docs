@@ -423,7 +423,7 @@ If you're responding to a command that needs to access Microsoft Graph data of a
 
 ### Connect to existing APIs
 
-If you don't have the required SDK and need to invoke external APIs in your code, the **Teams: Connect to an API** command in Microsoft Visual Studio Code (VS Code) Teams Toolkit extension, or the **teamsfx add api-connection** command in TeamsFx CLI can be used to bootstrap code to call target APIs. For more information, see [configure API connection](../../../toolkit/add-API-connection.md#).
+If you don't have the required SDK and need to invoke external APIs in your code, the **Teams: Connect to an API** command in Microsoft Visual Studio Code (VS Code) Teams Toolkit extension, or the **teamsfx add api-connection** command in Microsoft 365 Agents Toolkit CLI can be used to bootstrap code to call target APIs. For more information, see [configure API connection](../../../toolkit/add-API-connection.md#).
 
 ## FAQ
 

@@ -14,7 +14,7 @@ zone_pivot_groups: toolkit-cli
 > [!IMPORTANT]
 >
 > * We recommend that you use Teams Toolkit CLI v3 to build your Teams app.
-> * TeamsFx CLI v1 isn't supported and TeamsFx CLI v2 will be depreated by March 2025.
+> * Microsoft 365 Agents Toolkit CLI v1 isn't supported and Microsoft 365 Agents Toolkit CLI v2 will be depreated by March 2025.
 
 Microsoft Teams Toolkit command line interface (Teams Toolkit CLI) is a text-based command line interface that accelerates Microsoft Teams application development. It aims to provide keyboard centric experience while building Teams applications. For more information, see [source code](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli) and [npm package](https://www.npmjs.com/package/@microsoft/teamsfx-cli).
 
@@ -526,7 +526,7 @@ Following is a list of main TeamsFx features:
 
 * **TeamsFx Collaboration**: Lets developers and project owner invite other collaborators to the TeamsFx project. You can collaborate to debug and deploy a TeamsFx project.
 
-* **TeamsFx CLI**: Accelerates Teams application development. It also enables CI/CD scenario where you can integrate CLI in scripts for automation.
+* **Microsoft 365 Agents Toolkit CLI**: Accelerates Teams application development. It also enables CI/CD scenario where you can integrate CLI in scripts for automation.
 
 * **TeamsFx SDK**: Provides access to database, such as the primary TeamsFx code library contains simple authentication for both client and server-side code tailored for Teams developers.
 
@@ -873,7 +873,7 @@ Following is a list of main TeamsFx features:
 
 * **TeamsFx Collaboration**: Lets developers and project owner invite other collaborators to the TeamsFx project. You can collaborate to debug and deploy a TeamsFx project.
 
-* **TeamsFx CLI**: Accelerates Teams application development. It also enables CI/CD scenario where you can integrate CLI in scripts for automation.
+* **Microsoft 365 Agents Toolkit CLI**: Accelerates Teams application development. It also enables CI/CD scenario where you can integrate CLI in scripts for automation.
 
 * **TeamsFx SDK**: Provides access to database, such as the primary TeamsFx code library containing simple authentication for both client and server-side code tailored for Teams developers.
 
@@ -1161,7 +1161,7 @@ The secrets in `.userdata` file are encrypted, `teamsfx config` and can help you
 
 ## `teamsfx permission`
 
-TeamsFx CLI provides `teamsFx permission` commands for collaboration scenarios.
+Microsoft 365 Agents Toolkit CLI provides `teamsFx permission` commands for collaboration scenarios.
 
 |  command | Description |
 |:------------------------------|-------------|
