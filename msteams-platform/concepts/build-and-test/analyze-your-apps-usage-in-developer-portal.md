@@ -5,7 +5,7 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
 ms.owner: luywang
-ms.date: 12/15/2022
+ms.date: 05/08/2025
 ---
 
 # Analyze app usage in Developer Portal
@@ -20,7 +20,13 @@ The app usage for a given day is reflected within 24 to 48 hours, and usage data
 
 ## Prerequisite
 
-Your tenant admin must allow app usage for custom apps to show in Developer Portal. For more information, see [enable developers to use app analytics](/microsoft-365/admin/manage/enable-dev-analytics). A global admin or a Teams admin can enable it in the [Microsoft 365 admin center](https://admin.microsoft.com) by navigating to **Settings** > **Org settings** > **Services** > **Developer Portal for Teams**.
+Your tenant admin (a global administrator or a Teams administrator) must allow app usage for custom apps to appear in Developer Portal. To allow app usage:
+
+1. Go to [Microsoft 365 admin center](https://admin.microsoft.com).
+1. Navigate to **Settings** > **Org settings** > **Services** > **Developer Portal for Teams**.
+1. Select **Allow app usage for all custom apps to show in the Developer Portal**.
+
+For more information, see [enable developers to use app analytics](/microsoft-365/admin/manage/enable-dev-analytics).
 
    :::image type="content" source="../../assets/images/tdp/mac-setting.png" alt-text="Screenshot shows where admin can allow custom app analytics in Microsoft 365 admin center." lightbox="../../assets/images/tdp/mac-setting.png":::
 
@@ -37,22 +43,25 @@ Your tenant admin must allow app usage for custom apps to show in Developer Port
 
 As you explore individual metrics on this page, you can use the **Filter** button to analyze your app's usage from the following filter options:
 
-* **Aggregation type**: This filter allows you to view active users or active tenants.
-* **Platform**: This filter allows you to group the metrics by the platform on which users performed intentional activities with your app. The platform can be **Desktop**, **Mobile**, or **Web**.
-* **Operating system**: This filter allows you to group the metrics by the operating system on which users performed intentional activities with your app. The operating system can be **Windows**, **Mac**, **iOS**, or **Android**, etc.
-* **Area**: This filter allows you to group the metrics by the geo location of the active usage.
+* **Aggregation type**: Allows you to view active users or active tenants.
+* **Platform**: Allows you to group the metrics by the platform on which users performed intentional activities with your app. The platform can be **Desktop**, **Mobile**, or **Web**.
+* **Operating system**: Allows you to group the metrics by the operating system on which users performed intentional activities with your app. The operating system can be **Windows**, **Mac**, **iOS**, **Android** or other operating systems.
+* **Area**: Allows you to group the metrics by the geographical location of the active usage.
 
  :::image type="content" source="../../assets/images/tdp/filter-tdp-analytics.png" alt-text="Screenshot shows the app analytics page filter in Developer Portal." lightbox="../../assets/images/tdp/filter-tdp-analytics.png":::
 
 > [!TIP]
-> To know more about each metric definition, select **See metric definitions**. A pop-up help window appears on the right-side of the window with the required definitions.
+> To know more about each metric definition, select **See metric definitions**. A pop-up window appears on the right-side of the window with the required definitions.
+
+## App analytics
+
 As you explore the app usage metrics on this page, you can see the following three sections:
 
 * [App usage](#app-usage)
 * [Host product](#host-product)
 * [App capability](#app-capability)
 
-## App usage
+### App usage
 
  The **App usage** tab shows the following metrics:
 
@@ -63,13 +72,13 @@ As you explore the app usage metrics on this page, you can see the following thr
 
    :::image type="content" source="../../assets/images/tdp/tdp-app-usage.png" alt-text="Screenshot shows app usage chart of your published app in Developer Portal." lightbox="../../assets/images/tdp/tdp-app-usage.png":::
 
-### Usage over time
+#### Usage over time
 
    Use the **Usage over time** chart to see how many users are using your app on a monthly, weekly, or daily basis.
 
    :::image type="content" source="../../assets/images/tdp/tdp-usage-over-time.png" alt-text="Screenshot shows app usage over time of your published app in Developer Portal.":::
 
-### Usage by retention state
+#### Usage by retention state
 
    Use the **Usage by retention state** chart to see how many users are new, returning, or disengaging with your app on a monthly, weekly, or daily basis.
 
@@ -82,13 +91,13 @@ As you explore the app usage metrics on this page, you can see the following thr
    | Resurrected users or tenants | Active users or tenants who started using your app again in the current period, after a previous period of inactivity. |
    | Lapsed users or tenants | Active users or tenants who stopped using your app in the current period, after a previous period of activity. |
 
-### Usage by country or region
+#### Usage by country or region
 
    Use the **Usage by country/region** chart to understand global usage for the selected period. Each user is mapped to a single area or geography. You can select **View details** for more information on active users in different countries or regions.
 
    :::image type="content" source="../../assets/images/tdp/tdp-country.png" alt-text="Screenshot shows app usage by country or region of your published app in Developer Portal." lightbox="../../assets/images/tdp/tdp-region.png":::
 
-### Usage intensity
+#### Usage intensity
 
    The **Usage intensity** chart shows frequency and depth of use. They're one indicator that users are finding value in continuing to use your app.
 
@@ -100,7 +109,7 @@ As you explore the app usage metrics on this page, you can see the following thr
    | **% of 5+ Days usage** | Percentage of active users who opened or used your app more than five days in the last month. |
    | **DAU/MAU** | Average number of daily active users (DAU) divided by monthly active users (MAU) for a rolling 30-day time period. |
 
-### My app dashboard
+#### My App Dashboard
 
    The **My App Dashboard** table shows the latest R30 (Rolling 30 days) data for each of the metrics under the previous four categories, and the Month over Month change. Use the time picker on the upper left side and select the desired date to view the following:
 
@@ -111,25 +120,26 @@ As you explore the app usage metrics on this page, you can see the following thr
 
    :::image type="content" source="../../assets/images/tdp/tdp-app-dashboard-view.png" alt-text="Screenshot shows app capability usage of your published app in Developer Portal." lightbox="../../assets/images/tdp/tdp-app-dashboard-view.png":::
 
-## Host product
+### Host product
 
    The **Host product** tab shows the following app usage analytics:
 
-   * Usage by host product
-   * Usage by operating system
-   * Usage by platform
+   * [Usage by host product](#usage-by-host-product)
+   * [Usage by platform](#usage-by-platform)
+   * [Usage by operating system](#usage-by-operating-system)
+
 
    The first two scorecards display metrics such as the host with the most active users and the operating system (OS) with the most active users, based on monthly, weekly, and daily data.
 
    :::image type="content" source="../../assets/images/tdp/tdp-host-product.png" alt-text="Screenshot shows app usage in different host products of your published app in Developer Portal." lightbox="../../assets/images/tdp/tdp-host-product-full.png":::
 
-### Usage by host product
+#### Usage by host product
 
    The **Usage by host product** chart shows your app's active usage across various host products, including **Microsoft 365 Copilot**, **Teams**, **Outlook**, and the **Microsoft 365 app**.
 
    :::image type="content" source="../../assets/images/tdp/tdp-host-usage.png" alt-text="Screenshot shows app usage in different host product of your published app in Developer Portal.":::
 
-### Usage by platform
+#### Usage by platform
 
    The **Usage by platform** chart shows your app's active usage across various platforms, such as **Desktop**, **Mobile**, and **Web**.
 
@@ -140,7 +150,7 @@ As you explore the app usage metrics on this page, you can see the following thr
    > * The `Preview` tag indicates that the metric **Usage by host product** is in its initial phase and might undergo modifications as we collect feedback and continue to improve the experience.
    > * The **Microsoft 365 Copilot Agent** includes usage of declarative agents only. The usage of the custom engine agent isn't available in the Developer Portal.
 
-### Usage by operating system
+#### Usage by operating system
 
    The **Usage by operating system** chart shows your app's active usage across various operating systems, such as **Windows**, **Mac**, **iOS**, and **Android**.
 
@@ -193,6 +203,8 @@ You can view your custom app's usage and other insights from the **Analytics** p
 
    :::image type="content" source="../../assets/images/tdp/dev-app-portal.png" alt-text="Screenshot shows the analytics page of your app in Developer Portal." lightbox="../../assets/images/tdp/dev-app-portal.png":::
 
+## Metric definitions
+
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
 | **Monthly R30 active users (MAU)** | The default usage metric. It shows the count of unique active users who used your app within that rolling 30 days window in UTC. |
@@ -201,12 +213,14 @@ You can view your custom app's usage and other insights from the **Analytics** p
 
 As you explore individual metrics on this page, you can use the **Filter** button to analyze your app's usage from the following filter options:
 
-* **Aggregation type**: This filter allows you to group the metrics by a count of distinct users or a count of distinct tenants or customers.
-* **Platform**
-* **Operating system**
-* **Area**
+* **Aggregation type**: Allows you to group the metrics by active users or active tenants.
+* **Platform**: Allows you to group the metrics by the platform on which users performed intentional activities with your app. The platform can be desktop, mobile, or web.
+* **Operating system**: Allows you to group the metrics by the operating system on which users performed intentional activities with your app. The operating system can be Windows, Mac, iOS, Android or other operating systems.
+* **Area**: Allows you to group the metrics by the geographical location of the active usage.
 
  :::image type="content" source="../../assets/images/tdp/dev-analytics-filter.png" alt-text="Screenshot shows the analytics page filter in Developer Portal.":::
+
+## App usage
 
 After you select your desired filters, you can explore the following individual widgets:
 
@@ -291,15 +305,17 @@ To learn how to import your published app into Developer Portal, see [import an 
 
 As you explore individual metrics on this page, you can use the **Filter** button to analyze your app's usage from the following filter options:
 
-* **Aggregation type**: This filter allows you to group the metrics by a count of distinct users or a count of distinct tenants or customers.
-* **Platform**
-* **Operating system**
-* **Area**
+* **Aggregation type**: Allows you to group the metrics by active users or active tenants.
+* **Platform**: Allows you to group the metrics by the platform on which users performed intentional activities with your app. The platform can be desktop, mobile, or web.
+* **Operating system**: Allows you to group the metrics by the operating system on which users performed intentional activities with your app. The operating system can be Windows, Mac, iOS, Android or other operating systems.
+* **Area**: Allows you to group the metrics by the geographical location of the active usage.
 
  :::image type="content" source="../../assets/images/tdp/filter-tdp-analytics.png" alt-text="Screenshot shows the app analytics page filter in Developer Portal." lightbox="../../assets/images/tdp/filter-tdp-analytics.png":::
 
 > [!TIP]
 > To know more about each metric definition, select **See metric definitions**. A pop-up help window appears on the right-side of the window with the required definitions.
+
+## App analytics
 
 As you explore the app usage metrics on this page, you can see the following three sections:
 
@@ -423,14 +439,14 @@ As you explore the app usage metrics on this page, you can see the following thr
    > [!NOTE]
    > The `Preview` tag indicates that the metric is in its initial phase and might undergo modifications as we collect feedback and continue to improve the experience.
 
+---
+
 ### Known limitations
 
 * The usage data for message extensions in Outlook and Outlook Add-in isn't available.
 * The usage data of the Outlook personal tab includes both personal tab and tab (meeting scenario) data.
 * The usage data for consumer apps isn't available.
 * The usage data for Android in Outlook, which doesn't have a tenant ID, isn't available.
-
----
 
 ## See also
 
