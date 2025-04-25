@@ -790,7 +790,7 @@ If you already have a bot on Teams, you can upgrade your existing bots to custom
 
 > [!NOTE]
 >
-> * Custom engine agent isn't supported in Python.
+> Custom engine agent isn't supported in Python.
 
 Here is the required to-do list to upgrade your bot to custom engine agent:
 
