@@ -16,8 +16,8 @@ The Microsoft Teams JavaScript client library (TeamsJS) supports the development
 
 The app initialization process is a foundational aspect of using the TeamsJS library. It allows TeamsJS to setup communication with the underlying platform and coordinate all the internal setup required to get the app ready as well as provides you with an opportunity, should you need it, to complete your own initialization tasks while your app loads. While the specific steps required depend upon the type of app, the goal remains the same. App initialization ensures that your app is fully ready before it loads and users begin interacting with it. It's important to remember that all apps that make TeamsJS API calls, should go through the initialization process. The following sections will:
 
-- Discuss the types of app initialization flows
 - Review the APIs for app initialization and their role
+- Discuss the types of app initialization flows
 - Show and explain the state changes during app initialization
 - Provide recommendations for app initialization
 
@@ -52,10 +52,13 @@ The following state diagram shows the behavior of an app that is intended to loa
 
 :::image type="content" source="../../assets/images/tabs/app-initialization-immediate-flow.png" alt-text="State diagram showing the initialization flow for an app that loads immediately." lightbox="../../assets/images/tabs/app-initialization-immediate-flow.png":::
 
-> [!NOTE]
-> Be aware that if the app uses caching, it enters a *cached/suspended* state, where API calls don't impact it until it resumes. Note that when an app resumes from cache, its state is set to **Loading** because the platform is be waiting for it to call `app.notifySuccess()` to complete the loading sequence. Upon resume the app must call `app.notifySuccess()` to complete loading.
-
 For apps that don't require time for loading the process is straight forward, the app calls `app.initialize()` and is fully loaded.
+
+#### App caching considerations for immediate apps
+
+Within TeamsJS there are also APIs that support the caching of resources to improve the subsequent launch times of apps. These APIs allow developers to keep some resources and assets in memory so that they can be use when rehydrating their apps.
+
+It's important to be aware that if the app uses caching, it enters a *cached/suspended* state, where API calls don't impact it until it resumes. Note that when an app resumes from cache, its state is set to **Loading** because the platform is be waiting for it to call `app.notifySuccess()` to complete the loading sequence. Upon resume the app must call `app.notifySuccess()` to complete loading. For more information about caching, see [App caching for your tab app](app-caching.md).
 
 ### Loading app flow
 
@@ -70,10 +73,13 @@ The following state diagram shows the behavior of an app that is intended to loa
 
 :::image type="content" source="../../assets/images/tabs/app-initialization-loading-indicator-flow.png" alt-text="State diagram showing the initialization flow for an app that requires a loading indicator." lightbox="../../assets/images/tabs/app-initialization-loading-indicator-flow.png":::
 
-> [!NOTE]
-> Be aware that if the app uses caching, it enters a *cached/suspended* state, where API calls don't impact it until it resumes. Note that when an app resumes from cache, its state is set to **Loading** because the platform is be waiting for it to call `app.notifySuccess()` to complete the loading sequence. Upon resume the app must call `app.notifySuccess()` to complete loading.
-
 For apps that need time to load the most common path is to call `app.initialize()` and then either `app.notifySuccess()` or `app.notifyExpectedFailure()` to complete loading. That said, an app can alternately call `app.notifyAppLoaded()` after `app.initialize()` to remove the spinner while still loading.
+
+#### App caching considerations for loading apps
+
+Within TeamsJS there are also APIs that support the caching of resources to improve the subsequent launch times of apps. These APIs allow developers to keep some resources and assets in memory so that they can be use when rehydrating their apps.
+
+It's important to be aware that if the app uses caching, it enters a *cached/suspended* state, where API calls don't impact it until it resumes. Note that when an app resumes from cache, its state is set to **Loading** because the platform is be waiting for it to call `app.notifySuccess()` to complete the loading sequence. Upon resume the app must call `app.notifySuccess()` to complete loading. For more information about caching, see [App caching for your tab app](app-caching.md).
 
 ### Recommended app initialization call patterns
 
@@ -83,14 +89,11 @@ It's important to understand that since the state diagrams for either flow are a
 1. The app encounters an error and is reinitialized by calling `app.initialize()` again.
 1. The app calls `app.notifySuccess()` to reach the **Loaded** state.
 
-While multiple calls to `app.initialize()` are valid, we don't recommend making an excessive number before calling `app.notifySuccess()` as there is a chance of failure.
-
-### App caching APIs
-
-Within TeamsJS there are also APIs that support the caching of resources to improve the subsequent launch times of apps. These APIs allow developers to keep some resources and assets in memory so that they can be use when rehydrating their apps. For more information, see [App caching for your tab app](app-caching.md).
+While multiple calls to `app.initialize()` are valid, we **don't recommend** making an excessive number before calling `app.notifySuccess()` as there is a chance of failure.
 
 ## Related content
 
 - [Create a content page](create-tab-pages/content-page.md)
 - [Show a native loading indicator](create-tab-pages/content-page.md#show-a-native-loading-indicator)
 - [TeamsJS reference](/javascript/api/@microsoft/teams-js/)
+- [App caching for your tab app](app-caching.md)
