@@ -34,6 +34,7 @@ Teams platform features that are available to all app developers.
 **2025 April**
 
 * ***April 10, 2025***: [Create personal scope apps that integrate seamlessly with Public Switched Telephone Network (PSTN) and Teams-to-Teams calls](apps-in-teams-meetings/build-tabs-for-calling.md).
+* ***April 3, 2025***: [Enable OAuth authentication for API based message extension](messaging-extensions/api-based-oauth.md).
 
 :::column-end:::
 :::row-end:::
