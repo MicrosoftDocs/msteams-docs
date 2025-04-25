@@ -35,7 +35,7 @@ Teams platform features that are available to all app developers.
 
 * ***April 23, 2025***: [Precache your tab app to optimize its initial load time](tabs/how-to/app-caching.md).
 
-* ***April 20, 2025***: [You can specify a 32x32 color icon with a transparent background to ensure a consistent appearance when your app runs in Outlook and Microsoft 365](concepts/build-and-test/apps-package.md)
+* ***April 20, 2025***: [You can specify a 32x32 color icon with a transparent background to ensure a consistent appearance when your app runs in Outlook and Microsoft 365](https://learn.microsoft.com/microsoftteams/platform/concepts/build-and-test/apps-package#outline-icon)
 
 * ***April 10, 2025***: [Create personal scope apps that integrate seamlessly with Public Switched Telephone Network (PSTN) and Teams-to-Teams calls](apps-in-teams-meetings/build-tabs-for-calling.md).
 
