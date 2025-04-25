@@ -259,11 +259,6 @@ As you explore the app usage metrics on this page, you can see the following thr
 
    :::image type="content" source="../../assets/images/tdp/tdp-app-capability.png" alt-text="Screenshot shows the app capability usage in different host products of your published app in Developer Portal." lightbox="../../assets/images/tdp/tdp-app-capability-full.png":::
 
-   > [!NOTE]
-   >
-   > * The `Preview` tag indicates that the metric is in its initial phase and might undergo modifications as we collect feedback and continue to improve the experience.
-   > * The **Microsoft 365 Copilot Agent** includes usage of declarative agents only. The usage of the custom engine agent isn't available in the Developer Portal.
-
 ### Known limitations
 
 * The usage data for message extensions in Outlook and Outlook Add-in isn't available.
