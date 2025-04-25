@@ -127,10 +127,10 @@ To learn how to import your published app into Developer Portal, see [import an 
 
 As you explore individual metrics on this page, you can use the **Filter** button to analyze your app's usage from the following filter options:
 
-* **Aggregation type**: This filter allows you to group the metrics by a count of distinct users or a count of distinct tenants or customers.
-* **Platform**
-* **Operating system**
-* **Area**
+* **Aggregation type**: Allows you to group the metrics by active users or active tenants.
+* **Platform**: Allows you to group the metrics by the platform on which users performed intentional activities with your app. The platform can be desktop, mobile, or web.
+* **Operating system**: Allows you to group the metrics by the operating system on which users performed intentional activities with your app. The operating system can be Windows, Mac, iOS, Android or other operating systems.
+* **Area**: Allows you to group the metrics by the geographical location of the active usage.
 
  :::image type="content" source="../../assets/images/tdp/filter-tdp-analytics.png" alt-text="Screenshot shows the app analytics page filter in Developer Portal." lightbox="../../assets/images/tdp/filter-tdp-analytics.png":::
 
@@ -218,7 +218,7 @@ As you explore the app usage metrics on this page, you can see the following thr
 
    The Key Performance Indicator (KPI) cards display metrics such as the host with the most active users and the operating system (OS) with the most active users, based on monthly, weekly, and daily data, in a metric card format.
 
-   :::image type="content" source="../../assets/images/tdp/tdp-host-product.png" alt-text="Screenshot shows the app usage in different host products of your published app in Developer Portal." lightbox="../../assets/images/tdp/tdp-host-product.png":::
+   :::image type="content" source="../../assets/images/tdp/tdp-host-product.png" alt-text="Screenshot shows the app usage in different host products of your published app in Developer Portal." lightbox="../../assets/images/tdp/tdp-host-product-full.png":::
 
 #### Usage by host product
 
