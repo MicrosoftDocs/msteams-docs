@@ -4,6 +4,7 @@ description: Learn about end-to-end scenario of bot conversation in one-on-one c
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 04/02/2023
+ms.owner: angovil
 ---
 # Have a personal (one-on-one) conversation with a Microsoft Teams bot
 
