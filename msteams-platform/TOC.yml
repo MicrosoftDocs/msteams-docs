@@ -437,10 +437,15 @@
     - name: Custom engine agent overview
       href: /microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
       displayName: AI bot, Teams AI library, custom agent
-    - name: What is Teams AI library?
+    - name: Teams AI library v2
+      items:
+      - name: Migrate to Teams AI library v2
+    - name: Teams AI library v1
+      items:
+      - name: What is Teams AI library?
       href: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md
       displayName: OpenAI, Azure OpenAI, LLM, ChatGPT, prompt, Math tutor, Assistants API, AI bot, custom engine agent, RAG, Intents to actions, AI, Teams AI library, custom engine agent, AI bot, responsible AI, prompts, augmentation, Function calls using AI SDK, AI SDK
-    - name: Quick start guide
+      - name: Quick start guide
       href: bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md
       displayName: custom engine agent, AI bot, JavaScript, Python, C#, code sample, Teams Toolkit
     - name: Build with Teams AI library
