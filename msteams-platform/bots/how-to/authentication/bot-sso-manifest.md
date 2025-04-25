@@ -87,8 +87,8 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.20",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.21/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.21",
   "version": "1.0",
   "id": "00000000-0000-0000-0000-000000000000",
   "packageName": "com.microsoft.teams.samples.auth",
@@ -119,8 +119,7 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
       "entityId": "simpleAuth",
       "name": "Simple Auth",
       "scopes": [
-        "personal",
-        "groupChat"
+        "personal"
       ]
     },
     {
@@ -128,8 +127,7 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
       "entityId": "silentAuth",
       "name": "Silent Auth",
       "scopes": [
-        "personal",
-        "groupChat"
+        "personal"
       ]
     },
     {
@@ -137,8 +135,7 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
       "entityId": "ssoAuth",
       "name": "SSO Auth",
       "scopes": [
-        "personal",
-        "groupChat"
+        "personal"
       ]
     }
   ],
