@@ -5,7 +5,7 @@ description: Learn about the requirements for implementing OAuth for an API base
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.date: 10/29/2024
+ms.date: 04/03/2025
 ---
 
 # Enable OAuth authentication for API based message extension
