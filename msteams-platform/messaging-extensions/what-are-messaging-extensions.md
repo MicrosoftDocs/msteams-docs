@@ -5,6 +5,7 @@ description: Learn how to build message extensions and the scenarios where they 
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
+ms.owner: slamba
 ms.date: 01/23/2025
 ---
 # Build message extensions

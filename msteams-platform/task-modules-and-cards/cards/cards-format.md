@@ -8,6 +8,14 @@ ms.date: 11/07/2024
 
 # Format cards in Teams
 
+> [!IMPORTANT]
+>
+> This documentation is considered legacy. For comprehensive information and resources related to text formatting in Adaptive Cards, visit the [Adaptive Cards documentation hub](https://adaptivecards.microsoft.com/?topic=TextBlock).
+>
+> :::image type="content" source="../../assets/images/adaptive-cards/new-adaptive-card-hub.png" alt-text="Screenshot shows the home page of the Microsoft Adaptive Cards website.":::
+>
+> The Adaptive Cards documentation hub offers complete and latest reference documentation, an updated Adaptive Card Designer, built-in JSON examples, design best practices, and a detailed release history of Adaptive Card features. For more information, see [introducing the Adaptive Cards documentation hub and new Adaptive Cards updates](https://devblogs.microsoft.com/microsoft365dev/introducing-the-adaptive-cards-documentation-hub-and-new-adaptive-cards-updates/#:~:text=Explore%20the%20latest%20adaptive%20card%20features%20and%20samples,productivity%E2%80%94all%20seamlessly%20integrated%20into%20your%20users%E2%80%99%20daily%20workflows.).
+
 Following are the two ways to add rich text formatting to your cards:
 
 * [Markdown](#format-cards-with-markdown)
@@ -34,14 +42,6 @@ The following card types support Markdown formatting in Teams:
 You can use newlines for Adaptive Cards using `\r` or `\n` escape sequences for newlines in lists. Formatting is different between the desktop and the mobile versions of Teams for Adaptive Cards. Card-based mentions are supported in web, desktop, and mobile clients. You can use the information masking property to mask specific information, such as password or sensitive information from users within the Adaptive Card `Input.Text` input element. You can expand the width of an Adaptive Card using the `width` object. You can enable typeahead support within Adaptive Cards and filter the set of input choices as the user types the input. You can use the `msteams` property to add the ability to display images in Stageview selectively.
 
 Formatting is different between the desktop and the mobile versions of Teams for Adaptive Cards and connector cards. In this section, you can go through the Markdown format example for Adaptive Cards and connector cards.
-
-> [!IMPORTANT]
->
-> This documentation is considered legacy. For comprehensive information and resources related to text formatting in Adaptive Cards, visit the [Adaptive Cards documentation hub](https://adaptivecards.microsoft.com/?topic=TextBlock).
->
-> :::image type="content" source="../../assets/images/adaptive-cards/new-adaptive-card-hub.png" alt-text="Screenshot shows the home page of the Microsoft Adaptive Cards website.":::
->
-> The Adaptive Cards documentation hub offers complete and latest reference documentation, an updated Adaptive Card Designer, built-in JSON examples, design best practices, and a detailed release history of Adaptive Card features. For more information, see [introducing the Adaptive Cards documentation hub and new Adaptive Cards updates](https://devblogs.microsoft.com/microsoft365dev/introducing-the-adaptive-cards-documentation-hub-and-new-adaptive-cards-updates/#:~:text=Explore%20the%20latest%20adaptive%20card%20features%20and%20samples,productivity%E2%80%94all%20seamlessly%20integrated%20into%20your%20users%E2%80%99%20daily%20workflows.).
 
 # [Markdown format for Adaptive Cards](#tab/adaptive-md)
 

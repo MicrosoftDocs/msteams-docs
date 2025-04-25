@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 03/13/2025
+ms.owner: ryanbliss
 ---
 
 # App caching for your tab app

@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.author: anclear
 ms.date: 09/16/2024
 ms.localizationpriority: medium
+ms.owner: slamba
 ---
 # Define message extension search commands
 

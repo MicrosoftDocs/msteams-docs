@@ -4,6 +4,7 @@ description: Learn how to send and receive files through the bot using Microsoft
 ms.date: 01/23/2025
 ms.localizationpriority: medium
 ms.topic: how-to
+ms.owner: angovil
 ---
 # Send and receive files using bot
 
