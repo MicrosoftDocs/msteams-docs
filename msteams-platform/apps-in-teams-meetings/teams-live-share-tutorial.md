@@ -355,8 +355,6 @@ After you're ready to deploy your code, you can use Teams Toolkit or the Teams D
 * [Publish your app using Developer Portal](../toolkit/publish-your-teams-apps-using-developer-portal.md).
 * [Deploy your app with Teams Toolkit for Visual Studio](../toolkit/toolkit-v4/deploy-vs.md).
 
-
-
 > [!NOTE]
 > You need to add your provisioned appId to the `manifest.json` before uploading or distributing the app.
 
