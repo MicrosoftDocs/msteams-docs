@@ -33,7 +33,7 @@ Teams platform features that are available to all app developers.
 
 **2025 April**
 
-* ***April 21, 2025***: [Introducing app manifest v1.21 with defaultInstallScope, copilot agents in bot scopes, longer titles and descriptions for bot commands](resources/schema/manifest-schema.md)
+* ***April 21, 2025***: [Introducing app manifest v1.21 with defaultInstallScope, copilot agents in bot scopes, longer titles and descriptions for bot commands](resources/schema/manifest-schema.md).
 
 * ***April 21, 2025***: [Precache your tab app to optimize its initial load time](tabs/how-to/app-caching.md#precaching-tab-apps).
 
