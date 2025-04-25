@@ -133,19 +133,19 @@ To complete the messaging extension configuration flow:
 2. If authentication is required, the page must use Teams authentication and call `authentication.notifySuccess()` upon successful login.
 3. After collecting user input, the page must notify Teams of the successful setup by calling:
 
-  ```javascript
-    microsoftTeams.app.initialize();
+      ```javascript
+        microsoftTeams.app.initialize();
+        
+        function submitConfig() {
+            const configData = {
+                setting1: "User-selected value",
+                setting2: "Another value"
+            };
+        
+            microsoftTeams.authentication.notifySuccess(configData);
+        }
+      ```
     
-    function submitConfig() {
-        const configData = {
-            setting1: "User-selected value",
-            setting2: "Another value"
-        };
-    
-        microsoftTeams.authentication.notifySuccess(configData);
-    }
-  ```
-
 4. Calling `notifySuccess(configData)` sends the configuration values back to Teams.
 5. Once `notifySuccess()` is executed, the configuration window automatically closes and the messaging extension is successfully set up.
 
