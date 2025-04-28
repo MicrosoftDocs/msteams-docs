@@ -40,6 +40,7 @@ Teams platform features that are available to all app developers.
 * ***April 21, 2025***: [Introducing custom engine agents support for Microsoft 365 Copilot Chat](bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#add-support-for-microsoft-365-copilot-chat).
 
 * ***April 10, 2025***: [Create personal scope apps that integrate seamlessly with Public Switched Telephone Network (PSTN) and Teams-to-Teams calls](apps-in-teams-meetings/build-tabs-for-calling.md).
+* ***April 3, 2025***: [Enable OAuth authentication for API based message extension](messaging-extensions/api-based-oauth.md).
 
 :::column-end:::
 :::row-end:::
