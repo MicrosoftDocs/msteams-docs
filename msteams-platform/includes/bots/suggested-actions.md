@@ -83,6 +83,7 @@ The following illustrates an example of `Actions.Compose` action:
 
 # [Mobile](#tab/mobile)
 
+[TBD: Add mobile client screenshot]
 <!--
 :::image type="content" source="~/assets/images/Cards/suggested-actions-mobile.png" alt-text="Screenshot that shows the suggested actions in mobile." lightbox="~/assets/images/Cards/suggested-actions-mobile.png":::
 -->
