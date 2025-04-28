@@ -8,7 +8,7 @@ ms.owner: ryanbliss
 ---
 # Update app manifest for SSO and preview your app
 
-Before you update app manifest (previously called Teams app manifest), ensure that you've configured code to enable SSO in your app.
+Before you update app manifest (previously called Teams app manifest), ensure that you've configured code to enable single sign-on (SSO) in your app.
 
 > [!div class="nextstepaction"]
 > [Add code](bot-sso-code.md)
@@ -87,8 +87,8 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.7",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.21/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.21",
   "version": "1.0",
   "id": "00000000-0000-0000-0000-000000000000",
   "packageName": "com.microsoft.teams.samples.auth",
@@ -190,11 +190,11 @@ To preview your app in Teams:
 
 1. Select your app package zip file, and then select **Add**.
 
-    The custom app is uploaded. The consent dialog appears to inform you of the permissions that may be required.
+    The custom app is uploaded. The consent dialog appears to inform you of the permissions that might be required.
 
 1. Select **Continue**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-consent.png" alt-text="Bot consent message" border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-consent.png" alt-text="Screenshot shows a bot authentication consent message in Teams." border="false" lightbox="../../../assets/images/authentication/teams-sso-bots/bot-consent.png":::
 
   Teams opens the app and you can use it.
 
