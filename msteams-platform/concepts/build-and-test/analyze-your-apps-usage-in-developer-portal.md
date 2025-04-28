@@ -115,7 +115,7 @@ The **Usage intensity** chart shows frequency and depth of use. They're one indi
 | **% of 5+ days usage** | Percentage of active users who opened or used your app more than five days in the last month. |
 | **DAU/MAU** | Average number of daily active users (DAU) divided by monthly active users (MAU) for a rolling 30-day time period. |
 
-#### App Dashboard
+#### App dashboard
 
 The **My App Dashboard** table shows the latest R30 (Rolling 30 days) data for each of the metrics under the previous four categories, and the Month over Month change. Use the time picker on the upper left side and select the desired date to view the following:
 
