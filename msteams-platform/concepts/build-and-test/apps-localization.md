@@ -37,7 +37,7 @@ The images that you upload with the English language are used in AppSource.
 
 ## Localize strings in your app manifest
 
-Use the Microsoft Teams app schema `v1.5` and later to localize your app. You can do this by setting the `$schema` attribute in your manifest.json file to `https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json` or higher and updating the `manifestVersion` property to `$schema` version (`1.5` in this case).
+Use the Microsoft Teams app schema `v1.21` and later to localize your app. You can do this by setting the `$schema` attribute in your manifest.json file to `https://developer.microsoft.com/json-schemas/teams/v1.21/MicrosoftTeams.schema.json` or higher and updating the `manifestVersion` property to `$schema` version (`1.21` in this case).
 
 Add the `localizationInfo` property with the default language that your application supports. The default language is used as the final fallback language if the user's client settings don't match with any of your additional languages.
 
@@ -52,8 +52,8 @@ The following `manifest.json` helps to add the `localizationInfo` property with 
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.5",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.21/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.21",
   "localizationInfo": {
   "defaultLanguageTag": "en",
   "additionalLanguages": [
@@ -74,7 +74,7 @@ Following is an example for localization.json:
 ```json
 {
   "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.21/MicrosoftTeams.Localization.schema.json",
-  "manifestVersion": "1.5",
+  "manifestVersion": "1.21",
   "name.short": "Localización",
   "name.full": "Aplicación de localización",
   ...
