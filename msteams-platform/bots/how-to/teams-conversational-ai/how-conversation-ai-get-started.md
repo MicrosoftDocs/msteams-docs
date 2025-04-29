@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
 ms.date: 02/06/2025
+ms.owner: angovil
 ---
 
 # Build with Teams AI library
@@ -789,8 +790,7 @@ If you already have a bot on Teams, you can upgrade your existing bots to custom
 
 > [!NOTE]
 >
-> * Custom engine agent support for Microsoft 365 Copilot Chat is available only in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
-> * Custom engine agent isn't supported in Python.
+> Custom engine agent isn't supported in Python.
 
 Here is the required to-do list to upgrade your bot to custom engine agent:
 
@@ -803,7 +803,7 @@ Here is the required to-do list to upgrade your bot to custom engine agent:
 
 ## Add support for Microsoft 365 Copilot Chat
 
-You can now add support for custom engine agents in Microsoft 365 Copilot Chat, which is currently in public developer preview. Additionally, you can preview support for asynchronous patterns, including follow-up messages and long-running tasks. For more information, see [asynchronous patterns](/microsoft-365-copilot/extensibility/ux-custom-engine-agent).
+You can now add support for custom engine agents in Microsoft 365 Copilot Chat. Additionally, you can preview support for asynchronous patterns, including follow-up messages and long-running tasks. For more information, see [asynchronous patterns](/microsoft-365-copilot/extensibility/ux-custom-engine-agent).
 
 If you want your custom engine agent to support Microsoft 365 Copilot Chat, add the following into your app manifest:
 
