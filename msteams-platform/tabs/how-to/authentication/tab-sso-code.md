@@ -5,6 +5,7 @@ ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API
 ms.date: 12/13/2022
+ms.owner: ryanbliss
 ---
 # Add code to enable SSO
 
@@ -108,6 +109,9 @@ When Teams receives the access token, it's cached and reused as needed. This tok
 When you call `getAuthToken()` and app user's consent is required for user-level permissions, a Microsoft Entra dialog is shown to the app user who's signed in.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tabs-sso-prompt.png" alt-text="Tab single sign-on dialog prompt":::
+
+> [!NOTE]
+> You mustn't block or modify the Microsoft Entra consent dialog. Modifying the dialog can lead to improper authentication handling in certain scenarios.
 
 The consent dialog that appears is for open-id scopes defined in Microsoft Entra ID. The app user must give consent only once. The app user can access and use your tab app for the granted permissions and scopes after consenting.
 

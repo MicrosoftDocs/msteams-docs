@@ -4,6 +4,7 @@ description: In this article, learn how to add and create bot menus in Microsoft
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 04/02/2023
+ms.owner: angovil
 ---
 # Add a bot menu in Microsoft Teams
 
