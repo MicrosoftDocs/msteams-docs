@@ -31,8 +31,9 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-***April 30, 2025***: [Introducing streaming messages for bot apps](bots/streaming-ux.md).
 **2025 April**
+
+* ***April 30, 2025***: [Introducing streaming messages for bot apps](bots/streaming-ux.md).
 
 * ***April 21, 2025***: [Precache your tab app to optimize its initial load time](tabs/how-to/app-caching.md#precaching-tab-apps).
 
