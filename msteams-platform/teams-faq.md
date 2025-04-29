@@ -4,6 +4,7 @@ description: In this article, check FAQS on Adaptive Card Previewer, bots, Live 
 ms.topic: reference
 ms.date: 01/23/2025
 ms.localizationpriority: high
+ms.owner: angovil
 ---
 
 # Frequently asked questions
@@ -85,7 +86,7 @@ Use Delete messages-Bot framework's `DeleteActivity` method: [Update and delete
 <details>
 <summary>How can I test the validity of the card schema via code?</summary>
 
-You can test or validate the Adaptive Card schema using the **Adaptive cards editor (preview)** option in [Developer Portal > Tools](https://dev.teams.microsoft.com/tools).
+You can test or validate the Adaptive Card schema using the **Adaptive Cards editor (Preview)** option in [Developer Portal > Tools](https://dev.teams.microsoft.com/tools).
 </details>
 <details>
 <summary>Why am I unable to create a bot in Developer Portal?</summary>
@@ -1124,6 +1125,14 @@ If you have both configurable tab and static tab defined in your app manifest fo
 
 Pre-existing pinned configurable tab instances of your app continue to work the same. You don't have the option to pin new instances of these configurable tabs. When you select to pin your tab, then Teams pins the static tab of your app.
 <br>
+&nbsp;
+</details>
+<details>
+<summary>How do I optimize my tab webpages to perform better on mobile devices?</summary>
+
+To optimize your tab app performance on Teams mobile, use service workers to cache static assets and minimize web page size. You can also conduct performance audits using dev tools to identify bottlenecks. For more information, see [best practices for Teams mobile apps](resources/teams-mobile-best-practices.md).
+<br>
+&nbsp;
 </details>
 </details>
 
@@ -1186,7 +1195,7 @@ Teams AI library works alongside the existing Bot Framework SDK and isn't a repl
 <br>
 </details>
 
-## Teams toolkit
+## Teams Toolkit
 
 FAQ for [Provision cloud resources](toolkit/provision.md) using Teams Toolkit.
 <br>
@@ -1194,8 +1203,9 @@ FAQ for [Provision cloud resources](toolkit/provision.md) using Teams Toolkit.
 <details>
 <summary>How to troubleshoot?</summary>
 
-If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document.
+If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document. If you're using TeamsFx CLI, there'll be a hyperlink at the end of error message that points to the help doc.
 <br>
+
 &nbsp;
 </details>
 <details>

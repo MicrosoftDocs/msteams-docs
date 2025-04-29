@@ -4,6 +4,7 @@ author: surbhigupta12
 description: Enable bots to receive all conversation messages without being @mentioned using RSC permissions. Read on webApplicationInfo or authorization section in manifest.
 ms.topic: conceptual
 ms.localizationpriority: medium
+ms.owner: angovil
 ms.date: 01/23/2025
 ---
 

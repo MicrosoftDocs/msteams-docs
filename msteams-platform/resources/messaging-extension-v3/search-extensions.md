@@ -4,6 +4,7 @@ description: Learn how to create search based message extensions for Microsoft T
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 04/02/2023
+ms.owner: slamba
 ---
 # Search with message extensions
 
@@ -247,7 +248,7 @@ We support the following attachment types:
 * [Thumbnail card](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [Hero card](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
 * [Connector card for Microsoft 365 Groups](~/task-modules-and-cards/cards/cards-reference.md#connector-card-for-microsoft-365-groups)
-* [Adaptive card](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
+* [Adaptive Card](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
 For more information, see [Cards](~/task-modules-and-cards/what-are-cards.md) for an overview.
 

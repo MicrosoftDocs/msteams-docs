@@ -4,6 +4,7 @@ description: In this module, learn how to use proactive messaging for bots and b
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 04/02/2023
+ms.owner: angovil
 ---
 # Proactive messaging for bots
 

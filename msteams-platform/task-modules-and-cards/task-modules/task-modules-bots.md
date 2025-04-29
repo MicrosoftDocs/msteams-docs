@@ -255,7 +255,7 @@ def __set_task_info(task_info: TaskModuleTaskInfo, ui_constants: UISettings):
 
 ### Bot Framework card actions vs. Adaptive Card Action.Submit actions
 
-The schema for Bot Framework card actions is different from Adaptive Card `Action.Submit` actions and the way to invoke dialogs is also different. The `data` object in `Action.Submit` contains an `msteams` object so it doesn't interfere with other properties in the card. The following table shows an example of each card action:
+The schema for Bot Framework card actions is different from Adaptive Card `Action.Submit` actions and the way to invoke dialogs is also different. The `data` object in `Action.Submit` contains a `msteams` object so it doesn't interfere with other properties in the card. The following table shows an example of each card action:
 
 | Bot Framework card action                              | Adaptive Card Action.Submit action                     |
 | ------------------------------------------------------ | ------------------------------------------------------ |
