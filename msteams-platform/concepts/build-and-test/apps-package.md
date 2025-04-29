@@ -59,9 +59,6 @@ For your app to pass Teams Store review, these icons must meet the following siz
 
 * **Outlook and Microsoft 365 (Preview)**: You can specify a [32x32 color icon](~/resources/schema/manifest-schema-dev-preview.md#icons) with a transparent background to ensure a consistent appearance when your app runs in Outlook and Microsoft 365. If not specified, a scaled down [color icon](#color-icon) with rounded corners (and in some cases, opaque background) is used, which may not share the same look and feel of the host environment.
 
-  > [!NOTE]
-  > 32x32 color icon is available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
-
   :::image type="content" source="../../assets/images/icons/design-outline-icon.png" alt-text="Screenshot shows the design guidance of an outline and 32x32 color icon.":::
 
 |Microsoft 365 host application |Scenario  | Required|
