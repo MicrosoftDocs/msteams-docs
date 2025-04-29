@@ -4,6 +4,7 @@ description: Learn about webpage within Teams client in personal, channel, or gr
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.date: 11/23/2022
+ms.owner: ryanbliss
 ---
 
 # Create a content page
