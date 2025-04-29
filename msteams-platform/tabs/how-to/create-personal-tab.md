@@ -15,7 +15,7 @@ Tabs in chats, channels, or meetings behave more like apps, as you can pin only 
 
 > [!IMPORTANT]
 >
-> We've introduced the [Microsoft 365 Agents Toolkit Overview](../../toolkit/teams-toolkit-fundamentals.md) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Microsoft 365 Agents Toolkit v5 for building your Teams app.
+> We've introduced [Microsoft 365 Agents Toolkit Overview](../../toolkit/teams-toolkit-fundamentals.md) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Microsoft 365 Agents Toolkit v5 for building your Teams app.
 
 Ensure that you've all the [prerequisites](~/tabs/how-to/tab-requirements.md) to build your tab.
 
@@ -644,7 +644,7 @@ Here's a list of tools you require for building and deploying your app.
 
 After you've installed the required tools, set up the development environment.
 
-### Install Microsoft Microsoft 365 Agents Toolkit
+### Install Microsoft 365 Agents Toolkit
 
 The Microsoft 365 Agents Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams Store, and more. You can use the toolkit with Visual Studio, or as a Command Line Interface (called `teamsfx`).
 
@@ -652,7 +652,7 @@ The Microsoft 365 Agents Toolkit helps simplify the development process with too
 
 You can use the latest version of the Visual Studio to develop Teams apps with Blazor Server in .NET.
 
-To install the Microsoft Microsoft 365 Agents Toolkit extension:
+To install the Microsoft 365 Agents Toolkit extension:
 
 1. Download the latest version of the Visual Studio.
 1. Open the Visual Studio installer file (`.exe`) from your download folder.
