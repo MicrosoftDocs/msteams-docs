@@ -35,7 +35,7 @@ To enable SSO authentication for API-based message extension, follow these steps
 * [Register a new app in Microsoft Entra ID](#register-a-new-app-in-microsoft-entra-id).
 * [Configure access token version](#configure-access-token-version).
 * [Configure scope for access token](#configure-scope-for-access-token).
-* [Authenticat.e token](#authenticate-token).
+* [Authenticate token](#authenticate-token).
 * [Update app manifest](#update-app-manifest).
 
 ## Register a new app in Microsoft Entra ID
@@ -100,7 +100,7 @@ You must ensure the access token version for your app. You can find this configu
 
 1. Set the `requestedAccessTokenVersion` property to **2**.
 
-    :::image type="content" source="../assets/images/messaging-extension/api-me-access-token.png" alt-text="Image shows how to configure access token version." lightbox="../assets/images/messaging-extension/api-me-access-token.png":::
+    :::image type="content" source="../assets/images/messaging-extension/azure-manifest-value.png" alt-text="Image shows how to configure access token version." lightbox="../assets/images/messaging-extension/azure-manifest-value.png":::
 
     > [!NOTE]
     > If you've selected **Personal Microsoft accounts only** or **Accounts in any organizational directory (Any Microsoft Entra directory - Multitenant) and personal Microsoft accounts (for example, Skype and Xbox)** during app registration, update the value for the `requestedAccessTokenVersion` property as **2**.
@@ -246,7 +246,7 @@ You've successfully configured app scope, permissions, and client applications. 
 
 ## Authenticate token
 
-After you've created a new app registration, you must configure the scope of access token. When the message extension calls the API during authentication, it receives a request with the user’s access token. The message extension then adds the token in the authorization header of the outgoing HTTP request. The header format is `Authorization: Bearer <token_value>`. For example, when a message extension makes an API call to a service that requires authentication. The extension constructs an HTTP request as follows:
+When the message extension calls the API during authentication, it receives a request with the user’s access token. The message extension then adds the token in the authorization header of the outgoing HTTP request. The header format is `Authorization: Bearer <token_value>`. For example, when a message extension makes an API call to a service that requires authentication. The extension constructs an HTTP request as follows:
 
 ```http
 GET /api/resource HTTP/1.1
