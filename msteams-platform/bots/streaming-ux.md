@@ -586,8 +586,8 @@ The following are the success and error codes:
 | `403`|`ContentStreamNotAllowed` | `Content stream is not allowed on an already completed streamed message`| A bot can't continuously stream on a message that has already streamed and completed.|
 | `403`| `ContentStreamNotAllowed` | `Content stream finished due to exceeded streaming time.`| The bot failed to complete the streaming process within the strict time limit of two minutes. |
 | `403`| `ContentStreamNotAllowed` | `Message size too large`| The bot sent a message that exceeds the current [message size](~/bots/how-to/format-your-bot-messages.md) restriction. |
-| '403' | `ContentStreamNotAllowed` | Content stream was canceled by user. | The streaming was stopped by the user. |
-| '403' | `ContentStreamNotAllowed` | Request streamed content should contain the previously streamed content. | The incoming content for the stream message does not contain what has been already streamed. |
+| `403` | `ContentStreamNotAllowed` | Content stream was canceled by user. | The streaming was stopped by the user. |
+| `403` | `ContentStreamNotAllowed` | Request streamed content should contain the previously streamed content. | The incoming content for the stream message does not contain what has been already streamed. |
 | `429`| NA | `API calls quota exceeded`| The number of messages streamed by the bot has exceeded quota. |
 
 [Back to top](#stream-messages-user-experience)
