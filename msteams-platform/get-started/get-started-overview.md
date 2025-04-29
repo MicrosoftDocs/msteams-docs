@@ -14,7 +14,7 @@ Use GitHub Codespaces or walk through the step-by-step guide to build a basic, r
 
 Here's an idea of what you'll learn
 
-* Get started quickly with the Microsoft 365 Agents Toolkit.
+* Get started quickly with Microsoft 365 Agents Toolkit.
 * Build tab, scenario-based apps, and message extension with GitHub Codespaces or step-by-step guide.
 * Learn about tutorials and code samples available for building your Teams app.
 * Learn about various tools and SDKs available for building your Teams app.

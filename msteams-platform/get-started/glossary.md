@@ -262,7 +262,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Teams app capabilities](../concepts/design/map-use-cases.md#app-capabilities-mapped-to-features)| The Teams app capabilities are the core functionalities that you can build in your app, as defined in your app manifest. They're also called entry or extension points because they enable integration and interaction. <br> **See also**: [App scope](#a)|
 | [Teams identity](../tabs/how-to/authentication/tab-sso-overview.md) | The Microsoft account or Microsoft 365 account of an app user that is used to log in to Teams client, web, or mobile app. |
 | [Teams identity](../tabs/how-to/authentication/tab-sso-overview.md) | The Microsoft account or Microsoft 365 account of an app user that is used to sign in to Teams client, web, or mobile app. |
-| [Microsoft 365 Agents Toolkit](../toolkit/teams-toolkit-fundamentals.md) | The Microsoft 365 Agents Toolkit enables you to create custom Teams apps directly within the VS Code environment.  |
+| [Microsoft 365 Agents Toolkit](../toolkit/teams-toolkit-fundamentals.md) | Microsoft 365 Agents Toolkit enables you to create custom Teams apps directly within the VS Code environment.  |
 | [Teams Toolkit CLI](../toolkit/Teams-Toolkit-CLI.md) | Teams Toolkit CLI is a text-based command line interface that accelerates Teams application development. It's also called Teamsapp CLI.|
 | [TeamsFx SDK](../toolkit/teamsfx-sdk.md) | TeamsFx SDK is pre-configured in a scaffolded project using TeamsFx toolkit or CLI. |
 | [TeamsJS capability](../m365-apps/teamsjs-support-m365.md)| The TeamsJS capability is a logical grouping of functionality supported across one or more Microsoft 365 application hosts. |
