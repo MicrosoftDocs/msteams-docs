@@ -21,13 +21,12 @@ Teams Toolkit appears within Visual Studio Code as an extension. After you insta
 
 | Serial No. | UI Elements | Definition |
 | --- | --- | --- |
-| 1 | **Build a Notification Bot** | Build a notification bot. |
-| 2 | **Build a Declarative Agent** | Build a declarative agent. |
-| 3 | **Create a New App** | Create a new Teams app based on your requirement. |
-| 4 | **View Samples** | Select and build existing app samples based on common use cases for a Teams app. |
-| 5 | **Create App with GitHub Copilot** | Create an app with GitHub Copilot. |
-| 6 | • **New File** <br> • **Open File** <br> • **Open Folder** <br> • **Connect to** | • Create a new file. <br> • Open an existing file. <br> • Open an existing folder. <br> • Connect to remote development workspaces. |
-| 7 | **Recent** | View the recent files. |
+| 1 | **Build a Declatative Agent** | Build a declarative agent. |
+| 2 | **Create a New Agent/App** | Create a new agent/app. |
+| 3 | **View Samples** | Select and build existing app samples based on common use cases for a Teams app. |
+| 4 | **Create App with GitHub Copilot** | Create an app with GitHub Copilot. |
+| 5 | • **New File** <br> • **Open File** <br> • **Open Folder** <br> • **Connect to** | • Create a new file. <br> • Open an existing file. <br> • Open an existing folder. <br> • Connect to remote development workspaces. |
+| 6 | **Recent** | View the recent files. |
 
 ### Explore the Teams Toolkit task pane
 
