@@ -466,7 +466,8 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-***April 10, 2025***: [Introducing custom engine agents support for Microsoft 365 Copilot Chat.](bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#add-support-for-microsoft-365-copilot-chat)
+* ***May 5, 2025***: [Use AI-generated meeting insights APIs to fetch meeting notes, action items, and @mention events from scheduled meetings.](graph-api/meeting-transcripts/overview-transcripts.md#get-ai-generated-meeting-insights)
+* ***April 10, 2025***: [Introducing custom engine agents support for Microsoft 365 Copilot Chat.](bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#add-support-for-microsoft-365-copilot-chat)
 
 :::column-end:::
 :::row-end:::

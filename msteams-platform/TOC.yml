@@ -637,8 +637,8 @@
       href: /graph/api/resources/calltranscript?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     - name: Get recordings
       href: /graph/api/resources/callrecording?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-    - name: Get AI insights
-      href: graph/api/resources/callaiinsight?view=graph-rest-beta&toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+    - name: Get AI-generated insights
+      href: /graph/api/resources/callaiinsight?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
   - name: Enhanced collaboration with Live Share
     items:
     - name: Live Share SDK
