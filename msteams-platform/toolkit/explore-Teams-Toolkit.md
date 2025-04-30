@@ -90,13 +90,15 @@ From the task pane, you can see the following sections:
 
         To create and debug your Teams app, you need the following features:
         
-       * **Create a New App**: Use the Teams Toolkit wizard to prepare project scaffolding for app development.
+       * **Create a New Agent/App**: Use the Teams Toolkit wizard to prepare project scaffolding for app development.
 
         * **View Samples**: Select any of the Teams Toolkit's sample apps. The toolkit downloads the app code from GitHub and you can build the sample app.
 
         * **View How-to Guides**: Select to view Teams app scenario guides and development guides.
 
         * **Preview Your Teams App (F5)**: Select to view the Teams app debug options.
+
+        * **Get Help from GitHub Copilot**: Select to get AI-powered code suggestions.
    :::column-end:::
 :::row-end:::
 
@@ -112,7 +114,7 @@ From the task pane, you can see the following sections:
         
         * **Deploy**: Deploy the source code to Azure.
        
-        * **Publish**: Publish your developed app and publish it to scopes, such as personal, team, channel, or organization.
+        * **Publish to Organization**: Publish your developed app and publish it to scopes, such as personal, team, channel, or organization.
    :::column-end:::
 :::row-end:::
 
@@ -128,7 +130,7 @@ From the task pane, you can see the following sections:
         
         * **Validate Application**: Validate if the app manifest file is in right schema or validate the app package.
         
-        * **Open Developer Portal to Publish**: Use Developer Portal to publish and manage your Teams app. 
+        * **Publish to Store in Developer Portal**: Use Developer Portal to publish and manage your Teams app. 
    :::column-end:::
 :::row-end:::
 
