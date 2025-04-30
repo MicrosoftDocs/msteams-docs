@@ -157,7 +157,7 @@
     displayName: Tools and SDKs
   - name: Tools 
     items:
-    - name: Microsoft 365 Agents Toolkit for Visual Studio Code
+    - name: Teams Toolkit for Visual Studio Code
       items:
       - name: Teams Toolkit overview
         href: toolkit/teams-toolkit-fundamentals.md
