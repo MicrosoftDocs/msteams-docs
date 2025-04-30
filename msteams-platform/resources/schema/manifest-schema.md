@@ -566,9 +566,6 @@ Represents a customization of Microsoft 365 Copilot, as defined by its manifest 
 
 Represents a conversational Teams bot that uses custom AI language models and orchestration, surfaced as an agent in the Microsoft 365 Copilot UI.
 
-> [!NOTE]
-> Custom engine agents support in Microsoft 365 Copilot is currently in public preview.
-
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`id`|String| |✔️| Unique (bot) identifier for the custom engine agent. Must match the `id` specified in the `bots` section of the manifest and be of `personal` scope. |
@@ -687,8 +684,8 @@ A list of commands that your bot can recommend to users. The object is an array 
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`title`|String|32|✔️|The bot command name.|
-|`description`|String|128 characters|✔️|A simple text description or an example of the command syntax and its arguments.|
+|`title`|String|128|✔️|The bot command name.|
+|`description`|String|4000 characters|✔️|A simple text description or an example of the command syntax and its arguments.|
 
 ### bots.requirementSet
 
@@ -951,6 +948,7 @@ Specifies the install scope defined for this app by default. The default install
 * `team`
 * `groupChat`
 * `meetings`
+* `copilot`
 
 ## defaultGroupCapability
 
