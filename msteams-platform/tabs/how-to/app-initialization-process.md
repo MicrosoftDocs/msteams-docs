@@ -12,18 +12,18 @@ ms.date: 04/11/2025
 
 # TeamsJS app initialization process
 
-The Microsoft Teams JavaScript client library (TeamsJS) supports the development of apps that run in Microsoft Teams, as well as other Microsoft 365 applications including Microsoft Outlook and the Microsoft 365 app. For apps to take advantage of the functionality provided by TeamsJS though, they must first go through the app initialization process.
+The Microsoft Teams JavaScript client library (TeamsJS) supports the development of apps that run in Microsoft Teams, and other Microsoft 365 applications including Microsoft Outlook and the Microsoft 365 app. For apps to take advantage of the functionality provided by TeamsJS though, they must first go through the app initialization process.
 
-The app initialization process is a foundational aspect of using the TeamsJS library. It allows TeamsJS to setup communication with the underlying platform and coordinate all the internal setup required to get the app ready as well as provides you with an opportunity, should you need it, to complete your own initialization tasks while your app loads. While the specific steps required depend upon the type of app, the goal remains the same. App initialization ensures that your app is fully ready before it loads and users begin interacting with it. It's important to remember that all apps that make TeamsJS API calls, should go through the initialization process. The following sections will:
+The app initialization process is a foundational aspect of using the TeamsJS library. It allows TeamsJS to setup communication with the underlying platform and coordinate all the internal setup required to get the app ready. Additionally, it provides you with an opportunity to complete your own initialization tasks while your app loads. Although the specific steps required depend upon the type of app, the goal remains the same. App initialization ensures that your app is fully ready before it loads and users begin interacting with it. It's important to remember that all apps that make TeamsJS API calls, should go through the initialization process. The following sections will:
 
 - Review the APIs for app initialization and their role
-- Discuss the types of app initialization flows
+- Discuss the types of app initialization flow
 - Show and explain the state changes during app initialization
 - Provide recommendations for app initialization
 
 ## APIs for app initialization
 
-There are specific APIs within the [Teams JavaScript client library](using-teams-client-library.md) (TeamsJS) used during the app initialization process. We'll illustrate how they're used in the following sections, but to provide contextual information those APIs are:
+There are specific APIs within the [Teams JavaScript client library](using-teams-client-library.md) (TeamsJS) used during the app initialization process. We illustrate how they're used in the following sections, but to provide contextual information those APIs are:
 
 - [app.initialize()](/javascript/api/@microsoft/teams-js/app#@microsoft-teams-js-app-initialize) - Initializes the TeamsJS library. Before any other library calls are made, `app.initialize()` has to be called and complete successfully. This call establishes communication between TeamsJS and the underlying platform, and also returns runtime and host configuration information to the app.
 - [app.notifyApploaded()](/javascript/api/@microsoft/teams-js/app#@microsoft-teams-js-app-notifyapploaded) - Notifies the frame that the app is partially loaded and that the loading indicator can be hidden if one was shown.
@@ -36,13 +36,13 @@ There are specific APIs within the [Teams JavaScript client library](using-teams
 
 ## Types of app initialization flows
 
-There are two flows that apps can follow for initialization depending upon their needs. For apps that require extra time during loading to download assets or complete their own setup, there's a way to display a loading indicator and notify the system as the app progresses through its necessary loading behaviors. For apps that don't require a loading indicator and are able to begin running immediately there's a simpler flow available. We call these two app types *loading* and *immediate* apps respectively. For addional information about the loading indicator, see [Show a native loading indicator](create-tab-pages/content-page.md#show-a-native-loading-indicator).
+There are two flows that apps can follow for initialization depending upon their needs. For apps that require extra time during loading to download assets or complete their own setup, there's a way to display a loading indicator and notify the system as the app progresses through its necessary loading behaviors. For apps that don't require a loading indicator and are able to begin running immediately there's a simpler flow available. We call these two app types *loading* and *immediate* apps respectively. For additional information about the loading indicator, see [Show a native loading indicator](create-tab-pages/content-page.md#show-a-native-loading-indicator).
 
 It's up to you to choose and define which flow the app follows. The following sections describe the two flows and provide state diagrams to help illustrate how they work.
 
 ### Immediate app flow
 
-When an app has the `showLoadingIndicator` flag set to **false** or not set at all in the [app manifest](../../resources/schema/manifest-schema.md) the app initialization process is very straight forward. The app calls `app.initialize()` before any calls to other TeamsJS APIs and that's all that is required. The app is expected to be initialized immediately after the call to `app.initialize()`. No calls to other initialization APIs, such as `app.notifySuccess()` or `app.notifyFailure()`, are needed. Essentially, the flow is:
+When an app has the `showLoadingIndicator` flag set to **false** or not set at all in the [app manifest](../../resources/schema/manifest-schema.md), the app initialization process is very straight forward. The app calls `app.initialize()` before any calls to other TeamsJS APIs and that's all that is required. The app is expected to be initialized immediately after the call to `app.initialize()`. No calls to other initialization APIs, such as `app.notifySuccess()` or `app.notifyFailure()`, are needed. Essentially, the flow is:
 
 1. The [IFrame](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) is created and page loaded.
 1. The app calls `app.initialize()`.
@@ -56,9 +56,9 @@ For apps that don't require time for loading the process is straight forward, th
 
 #### App caching considerations for immediate apps
 
-Within TeamsJS there are also APIs that support the caching of resources to improve the subsequent launch times of apps. These APIs allow developers to keep some resources and assets in memory so that they can be use when rehydrating their apps. For more information about caching, see [App caching for your tab app](app-caching.md).
+Within TeamsJS, there are also APIs that support the caching of resources to improve the subsequent launch times of apps. These APIs allow developers to keep some resources and assets in memory so that they can be use when rehydrating their apps. For more information about caching, see [App caching for your tab app](app-caching.md).
 
-It's important to be aware that if the app uses caching, it enters a *cached/suspended* state, where API calls don't impact it until it resumes. Note that when an app resumes from cache, its state is set to **Loading** because the platform is be waiting for it to call `app.notifySuccess()` to complete the loading sequence. Upon resume the app must call `app.notifySuccess()` to complete loading.
+It's important to be aware that if the app uses caching, it enters a *cached/suspended* state, where API calls don't impact it until it resumes. When an app resumes from cache, its state is set to **Loading** because the platform is waiting for it to call `app.notifySuccess()` to complete the loading sequence. Upon resume the app must call `app.notifySuccess()` to complete loading.
 
 ### Loading app flow
 
