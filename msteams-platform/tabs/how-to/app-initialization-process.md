@@ -32,7 +32,7 @@ There are specific APIs within the [Teams JavaScript client library](using-teams
 - [app.notifyExpectedFailure()](/javascript/api/@microsoft/teams-js/app#@microsoft-teams-js-app-notifyexpectedfailure) - Notifies the frame that the app initialized with some expected errors, but can be considered loaded successfully.
 
 > [!IMPORTANT]
-> All of the initialization functions listed are idempotent. That means that no matter how many times they're called with the same input, the result is always the same and the system's state is unchanged after the first call. For example, when the `app.initialize()` function is called and completes successfully, it always resets the app to the loading state even if it was called before.
+> All of the initialization functions listed are **idempotent**. That means that no matter how many times they're called with the same input, the result is always the same and the system's state is unchanged after the first call. For example, when the `app.initialize()` function is called and completes successfully, it always resets the app to the loading state even if it was called before.
 
 ## Types of app initialization flows
 
@@ -42,7 +42,7 @@ It's up to you to choose and define which flow the app follows. The following se
 
 ### Immediate app flow
 
-When an app has the `showLoadingIndicator` flag set to **false**, or not set at all, in the [app manifest](../../resources/schema/manifest-schema.md) the app initialization process is very straight forward. The app calls `app.initialize()` before any calls to other TeamsJS APIs and that's all that is required. The app is expected to be initialized immediately after the call to `app.initialize()`. No calls to other initialization APIs, such as `app.notifySuccess()` or `app.notifyFailure()`, are needed. Essentially, the flow is:
+When an app has the `showLoadingIndicator` flag set to **false** or not set at all in the [app manifest](../../resources/schema/manifest-schema.md) the app initialization process is very straight forward. The app calls `app.initialize()` before any calls to other TeamsJS APIs and that's all that is required. The app is expected to be initialized immediately after the call to `app.initialize()`. No calls to other initialization APIs, such as `app.notifySuccess()` or `app.notifyFailure()`, are needed. Essentially, the flow is:
 
 1. The [IFrame](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) is created and page loaded.
 1. The app calls `app.initialize()`.
@@ -56,9 +56,9 @@ For apps that don't require time for loading the process is straight forward, th
 
 #### App caching considerations for immediate apps
 
-Within TeamsJS there are also APIs that support the caching of resources to improve the subsequent launch times of apps. These APIs allow developers to keep some resources and assets in memory so that they can be use when rehydrating their apps.
+Within TeamsJS there are also APIs that support the caching of resources to improve the subsequent launch times of apps. These APIs allow developers to keep some resources and assets in memory so that they can be use when rehydrating their apps. For more information about caching, see [App caching for your tab app](app-caching.md).
 
-It's important to be aware that if the app uses caching, it enters a *cached/suspended* state, where API calls don't impact it until it resumes. Note that when an app resumes from cache, its state is set to **Loading** because the platform is be waiting for it to call `app.notifySuccess()` to complete the loading sequence. Upon resume the app must call `app.notifySuccess()` to complete loading. For more information about caching, see [App caching for your tab app](app-caching.md).
+It's important to be aware that if the app uses caching, it enters a *cached/suspended* state, where API calls don't impact it until it resumes. Note that when an app resumes from cache, its state is set to **Loading** because the platform is be waiting for it to call `app.notifySuccess()` to complete the loading sequence. Upon resume the app must call `app.notifySuccess()` to complete loading.
 
 ### Loading app flow
 
@@ -67,7 +67,7 @@ When an app has the `showLoadingIndicator` flag set to **true** in the [app mani
 1. The IFrame is created and page loaded.
 1. The app calls `app.initialize()`.
 1. Once ready the app can optionally call `app.notifyAppLoaded()`.
-1. Depending on the results, the app calls app.`notifySuccess()`, `app.notifyFailure()`, or `app.notifyExpectedFailure()` as appropriate.
+1. Depending on the results, the app calls `app.notifySuccess()`, `app.notifyFailure()`, or `app.notifyExpectedFailure()` as appropriate.
 
 The following state diagram shows the behavior of an app that is intended to load with a loading indicator. Unlike an app that loads immediately after `app.initialize()`, apps that use the loading indicator must call other APIs to inform the system of the apps progress.
 
@@ -77,9 +77,9 @@ For apps that need time to load the most common path is to call `app.initialize(
 
 #### App caching considerations for loading apps
 
-Within TeamsJS there are also APIs that support the caching of resources to improve the subsequent launch times of apps. These APIs allow developers to keep some resources and assets in memory so that they can be use when rehydrating their apps.
+Within TeamsJS there are also APIs that support the caching of resources to improve the subsequent launch times of apps. These APIs allow developers to keep some resources and assets in memory so that they can be use when rehydrating their apps. For more information about caching, see [App caching for your tab app](app-caching.md).
 
-It's important to be aware that if the app uses caching, it enters a *cached/suspended* state, where API calls don't impact it until it resumes. Note that when an app resumes from cache, its state is set to **Loading** because the platform is be waiting for it to call `app.notifySuccess()` to complete the loading sequence. Upon resume the app must call `app.notifySuccess()` to complete loading. For more information about caching, see [App caching for your tab app](app-caching.md).
+It's important to be aware that if the app uses caching, it enters a *cached/suspended* state, where API calls don't impact it until it resumes. Note that when an app resumes from cache, its state is set to **Loading** because the platform is waiting for it to call `app.notifySuccess()` to complete the loading sequence. Upon resume the app must call `app.notifySuccess()` to complete loading.
 
 ### Recommended app initialization call patterns
 
@@ -89,7 +89,7 @@ It's important to understand that since the state diagrams for either flow are a
 1. The app encounters an error and is reinitialized by calling `app.initialize()` again.
 1. The app calls `app.notifySuccess()` to reach the **Loaded** state.
 
-While multiple calls to `app.initialize()` are valid, we **don't recommend** making an excessive number before calling `app.notifySuccess()` as there is a chance of failure.
+While multiple calls to `app.initialize()` are valid, we **don't recommend** making an excessive number before calling `app.notifySuccess()` as that will increase the risk of failure.
 
 ## Related content
 
