@@ -148,7 +148,7 @@ To gain insights on the app usage and analyze trends, explore the following thre
 
 * [App usage](#app-usage)
 * [Host product](#host-product)
-* [App capability](#app-capability)
+* [App capability](#capability)
 
 ### App usage
 
@@ -219,7 +219,7 @@ You can select each of these metric names to see trends over time.
 
 The **Host product** tab shows the following app usage analytics:
 
-* [Usage by host product](#usage-by-host-product)
+* [Usage by host product](#app-usage-by-host-product)
 * [Usage by operating system](#usage-by-operating-system)
 * [Usage by platform](#usage-by-platform)
 
@@ -252,7 +252,7 @@ The **Usage by operating system** chart shows your app's active usage across var
 
 The **Capability** tab shows the usage of individual app capabilities that you've configured within your app. This page summarizes the overall usage of the following app capabilities in different host products:
 
-* Microosft 365 Copilot Agent
+* Microsoft 365 Copilot Agent
 * Bots
 * Tabs
 * Message extension
