@@ -46,9 +46,9 @@ items:
    After you install the required tools, set up the development environment. 
 
 
-   ### Install the Microsoft 365 Agents Toolkit
+   ### Install Microsoft 365 Agents Toolkit
 
-   The Microsoft 365 Agents Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams Store, and more. 
+   Microsoft 365 Agents Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams Store, and more. 
     
    You can use the toolkit with Visual Studio Code, or CLI (command-line interface), called `Teamsapp`.
 
@@ -57,7 +57,7 @@ items:
 
    1. Open Visual Studio Code and select the **Extensions** view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
    1. In the search box, enter **Microsoft 365 Agents Toolkit**.
-   1. Select **Install** next to the Microsoft 365 Agents Toolkit.
+   1. Select **Install** next to Microsoft 365 Agents Toolkit.
 
       :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/install-toolkit-vscodeversion.png" alt-text="Illustration shows the Microsoft 365 Agents Toolkit extension installation." lightbox="~/assets\images\teams-toolkit-v2\prerequisites\install-toolkit-vscodeversion-1.png":::
 
@@ -65,7 +65,7 @@ items:
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/hw-teams-toolkit-sidebar-icon.png" alt-text="Illustration shows the Microsoft 365 Agents Toolkit icon in Visual Studio Code sidebar.":::
 
-   You can also find the Microsoft 365 Agents Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
+   You can also find Microsoft 365 Agents Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
    > [!NOTE]
    > The latest version of Microsoft 365 Agents Toolkit is v5.
@@ -450,7 +450,7 @@ items:
 
         :::image type="content" source="assets/images/Copilot/api-based-me-ttk-api-me-readme.png" alt-text="Screenshot shows the app created." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/app-created-bot.png":::
 
-        After your app is created, the Microsoft 365 Agents Toolkit displays the following message:
+        After your app is created, Microsoft 365 Agents Toolkit displays the following message:
 
         :::image type="content" source="assets/images/Copilot/api-based-me-ttk-api-me-debug.png" alt-text="Screenshot shows the message from Microsoft 365 Agents Toolkit that the feature is successfully created along with the option to select Debug.":::
         
@@ -461,7 +461,7 @@ items:
 
     After scaffolding is done, view the project directories and files under **Explorer** in Visual Studio Code.
 
-    :::image type="content" source="../msteams-platform/assets/images/Copilot/api-based-me-ttk-explorer.png" alt-text="Screenshot shows the Microsoft 365 Agents Toolkit sample bot folder Structure.":::
+    :::image type="content" source="../msteams-platform/assets/images/Copilot/api-based-me-ttk-explorer.png" alt-text="Screenshot shows the Microsoft 365 Agents Toolkit sample bot folder structure.":::
 
     | Folder name | Contents |
     | --- | --- |
@@ -482,7 +482,7 @@ items:
     1. Go to Microsoft 365 Agents Toolkit and from the left pane, select **Run and Debug** (**Ctrl+Shift+D**).
     1. Select **Launch Remote in Teams (Edge)** from the launch configuration dropdown.        
 
-        The Microsoft 365 Agents Toolkit provisions your app on Azure and deploys it to Teams.
+        Microsoft 365 Agents Toolkit provisions your app on Azure and deploys it to Teams.
 
         > [!NOTE]
         > The first time you provision your app, it takes a few minutes to complete. Subsequent provisions are faster.
