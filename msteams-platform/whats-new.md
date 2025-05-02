@@ -33,6 +33,8 @@ Teams platform features that are available to all app developers.
 
 **2025 April**
 
+* ***April 30, 2025***: [Introducing streaming messages for bot apps](bots/streaming-ux.md).
+
 * ***April 21, 2025***: [Precache your tab app to optimize its initial load time](tabs/how-to/app-caching.md#precaching-tab-apps).
 
 * ***April 21, 2025***: [You can specify a 32x32 color icon with a transparent background to ensure a consistent appearance when your app runs in Outlook and Microsoft 365](concepts/build-and-test/apps-package.md#color-icon).
