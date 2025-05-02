@@ -95,7 +95,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/app-name.png" alt-text="Screenshot shows to enter the application name.":::
 
-    1. After your app is created, the Microsoft 365 Agents Toolkit displays the following message:
+    1. After your app is created, Microsoft 365 Agents Toolkit displays the following message:
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/new-window-notification.png" alt-text="Screenshot shows the new window Notification for scaffolding.":::
 
@@ -180,7 +180,7 @@ items:
 
         The **ACCOUNTS** section of the sidebar shows the two accounts separately. It also lists the number of usable Azure subscriptions available to you. Ensure you have at least one usable Azure subscription available. If not, sign out and use a different account.
 
-        Congratulations, you have created a Teams app! Now let's go ahead and learn how to deploy one of the apps to Azure using the Microsoft 365 Agents Toolkit.
+        Congratulations, you have created a Teams app! Now let's go ahead and learn how to deploy one of the apps to Azure using Microsoft 365 Agents Toolkit.
 
     > [!div class="nextstepaction"]
     > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Sign+in+to+your+Azure+account&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-commandbot%3Ftabs%3Dcli%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-commandbot.yml&documentVersionIndependentId=e7ac1764-9172-9f3e-2091-5dfd755eded4&platformId=42fb0b32-8926-3242-aa1e-05eb3f8af9a4&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
