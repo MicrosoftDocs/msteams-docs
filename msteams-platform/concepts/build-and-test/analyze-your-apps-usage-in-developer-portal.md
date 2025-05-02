@@ -28,6 +28,17 @@ For more information, see [enable developers to use app analytics](/microsoft-36
 
 :::image type="content" source="../../assets/images/tdp/mac-setting.png" alt-text="Screenshot shows where admin can allow custom app analytics in Microsoft 365 admin center." lightbox="../../assets/images/tdp/mac-setting.png":::
 
+## Get Started
+
+You can view your custom app's usage and other insights from the **Analytics** page. To access the page:
+
+1. Go to **[Developer Portal](https://dev.teams.microsoft.com)**.
+1. Select **Apps** from the left pane.
+1. Select the required app from the **Apps** page.
+1. Select **Analytics** under the **Overview** section.
+ 
+:::image type="content" source="../../assets/images/tdp/analy-dev-portal.png" alt-text="Screenshot shows the analytics page of your app in Developer Portal." lightbox="../../assets/images/tdp/analy-dev-portal.png":::
+
 ## Metric definitions
 
 | Metric | Definition |
@@ -178,9 +189,8 @@ The **Capability** tab shows the usage of individual app capabilities that you'v
 
    > [!NOTE]
    >
-   > * The current custom app analytics is being deprecated soon.
-   > * You can opt in to the new custom app analytics in Developer Portal by selecting the banner on the Analytics page.
-   > * Learn more about the new custom app analytics [here](/microsoftteams/platform/concepts/build-and-test/analyze-your-apps-usage-in-developer-portal?tabs=custom-apps-built-for-your-org).
+   > * The current custom app analytics is deprecating soon.
+   > * You can opt for the new custom app analytics in Developer Portal by selecting the banner on the Analytics page. For more information, see [new custom app analytics](/microsoftteams/platform/concepts/build-and-test/analyze-your-apps-usage-in-developer-portal?tabs=custom-apps-built-for-your-org).
 
 ## Get Started
 
