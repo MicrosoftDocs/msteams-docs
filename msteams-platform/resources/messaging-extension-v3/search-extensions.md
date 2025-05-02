@@ -142,7 +142,7 @@ protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtens
                                 new CardAction
                                 {
                                     Type = ActionTypes.OpenUrl,
-                                    Value = "https://<your-web-domain>/searchSettings.html?settings={escapedSettings}",
+                                    Value = "https://<your-tunnel-url>/searchSettings.html?settings={escapedSettings}",
                                 },
                             },
                     },
