@@ -53,7 +53,7 @@ conceptualContent:
   # Card
     - title: Learn
       links:
-        - url: /bots/how-to/teams-conversational-ai/ai-ux
+        - url: bots/how-to/teams-conversational-ai/ai-ux.md        
           itemType: concept
           text: Custom engine agent user experience
         - url: Teams-AI-library-tutorial.yml
