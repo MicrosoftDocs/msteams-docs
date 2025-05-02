@@ -21,6 +21,206 @@ landingContent:
 # Cards and links should be based on top customer tasks or top subjects
 # Start card title with a verb
 
+
+
+- title: Build custom engine agents
+  linkLists:
+    - linkListType: concept
+      links:
+      - text: Custom engine agents overview
+        url: /microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+      - text: Teams AI library
+        url: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md
+      - text: Build custom engine agents using Teams Toolkit
+        url: Teams-AI-library-tutorial.yml
+      - text: Custom engine agent user experience
+        url: bots/how-to/teams-conversational-ai/ai-ux.md
+      - text: Enhance AI-generated bot Messages
+        url: bots/how-to/bot-messages-ai-generated-content.md
+      - text: Custom engine agents support for Microsoft 365 Copilot Chat
+        url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#add-support-for-microsoft-365-copilot-chat
+      - text: Extend bot-based message extension as an agent for Microsoft 365 Copilot
+        url: messaging-extensions/build-bot-based-agent.md
+     
+- title: Build apps for Teams
+  linkLists:
+    - linkListType: overview
+      links:
+      - text: Build apps for Microsoft Teams
+        url: ../msteams-platform/overview.md
+      - text: App fundamentals
+        url: ~/concepts/app-fundamentals-overview.md
+      - text: Design your app
+        url: ~/concepts/design/design-teams-app-overview.md
+      - text: Code samples
+        url: https://github.com/OfficeDev/Microsoft-Teams-Samples
+      - text: Build apps for Teams meeting stage
+        url:  ~/apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
+    - linkListType: whats-new
+      links:
+      - text: What's new
+        url: ../msteams-platform/whats-new.md
+
+- title: Step-by-step guides
+  linkLists:
+    - linkListType: get-started
+      links:
+      - text: Get started with building apps
+        url: ../msteams-platform/get-started/get-started-overview.md
+      - text: Get started with GitHub
+        url: /contribute/additional-resources
+      - text: Glossary
+        url: ~/get-started/glossary.md
+      - text: Overview
+        url: ~/overview.md        
+    - linkListType: tutorial
+      links:
+      - text: Build app with JavaScript
+        url: sbs-gs-javascript.yml
+      - text: Build your first app using Blazor
+        url:  sbs-gs-blazorupdate.yml
+      - text: Build app with SPFx
+        url: sbs-gs-spfx.yml
+      - text: Build app with C# or .NET
+        url: sbs-gs-csharp.yml
+      - text: Build app with Node.js
+        url: sbs-gs-nodejs.yml
+      - text: Build command bot with JavaScript
+        url: sbs-gs-commandbot.yml
+      - text: Build notification bot with JavaScript
+        url: sbs-gs-notificationbot.yml
+      - text: Build workflow bot
+        url: sbs-gs-workflow-bot.yml   
+    - linkListType: tutorial
+      links:
+        - text: Debug your AI chat bot using Teams App Test Tool
+          url: ~/sbs-teams-app-test-tool.yml
+        - text: Bot configuration experience
+          url: ~/qsg-bot-configuration-experience.yml
+        - text: Create Teams conversation bot
+          url: ~/sbs-teams-conversation-bot.yml
+        - text: Create Calling and meeting bot
+          url: ~/sbs-calling-and-meeting.yml
+        - text: Configure SSO for tabs and message extensions
+          url: ~/sbs-tabs-and-messaging-extensions-with-SSO.yml  
+        - text: Build tabs with Adaptive Card
+          url: ~/sbs-tab-with-adaptive-cards.yml
+        - text: Build a bot to send Proactive messages
+          url: ~/sbs-send-proactive.yml
+        - text: Build a bot with SSO authentication
+          url: ~/sbs-bots-with-sso.yml
+        - text: Generate meeting token
+          url: ~/sbs-meeting-token-generator.yml
+    - linkListType: tutorial
+      links:
+        - text: Generate meeting side panel
+          url: ~/sbs-meetings-sidepanel.yml
+        - text: Build an in-meeting document signing app
+          url:  ~/sbs-inmeeting-document-signing.yml
+        - text: Build command bot with JavaScript
+          url: sbs-gs-commandbot.yml
+        - text: Build notification bot with JavaScript
+          url: sbs-gs-notificationbot.yml
+        - text: Upload files to Teams from a bot
+          url: ~/sbs-file-handling-in-bot.yml
+        - text: Generate meeting content bubble
+          url: ~/sbs-meeting-content-bubble.yml
+        - text: Invoke dialogs from Microsoft Teams
+          url: ~/sbs-botbuilder-taskmodule.yml
+        - text: Build search based message extension
+          url: ~/sbs-messagingextension-searchcommand.yml
+        - text: Build action based message extension
+          url: ~/sbs-meetingextension-action.yml
+        - text: Build Outgoing Webhooks
+          url: ~/sbs-outgoing-webhooks.yml
+    - linkListType: tutorial
+      links:
+        - text: Unfurl links in Teams using bot
+          url: ~/sbs-botbuilder-linkunfurling.yml
+        - text: Build Teams connectors
+          url: ~/sbs-teams-connectors.yml
+        - text: Send activity feed notification 
+          url:  ~/sbs-graphactivity-feedbroadcast.yml          
+        
+- title: Build app capabilities
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Build tabs
+      url: ~/tabs/what-are-tabs.md
+    - text: Build bots
+      url: ~/bots/what-are-bots.md
+    - text: Build message extensions
+      url: ~/messaging-extensions/what-are-messaging-extensions.md
+    - text: Build apps for Teams meetings
+      url: ~/apps-in-teams-meetings/teams-apps-in-meetings.md
+    - text: Build webhooks and connectors
+      url: ~/webhooks-and-connectors/what-are-webhooks-and-connectors.md
+    - text: Build cards and dialogs
+      url: ~/task-modules-and-cards/cards-and-task-modules.md
+    - text: App manifest
+      url: ../msteams-platform/resources/schema/manifest-schema.md
+    - text: Public developer preview manifest schema
+      url: ~/resources/schema/manifest-schema-dev-preview.md  
+
+- title: Teams app scenarios
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Best practices for Teams app scenarios
+      url: https://developer.microsoft.com/microsoft-teams/app-development-resources/?filter=bestpractices
+    - text: Explore low-code apps for Teams
+      url:  ~/samples/teams-low-code-solutions.md
+
+- title: Monetize your app
+  linkLists:
+    - linkListType: concept
+      links:
+      - text: Guidelines for apps linked to SaaS offers
+        url: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer
+      - text: Microsoft Teams Store validation guidelines
+        url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
+      - text: Monetize your Teams app with a transactable SaaS offer
+        url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
+      - text: In-app purchases
+        url: ~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
+      - text: Test preview for monetized apps
+        url: ~/concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md
+      - text: Additional tips for rapid approval to publish your app linked to a SaaS offer
+        url: ~/concepts/deploy-and-publish/appsource/publish.md#additional-tips-for-rapid-approval-to-publish-your-app-linked-to-a-saas-offer     
+
+- title: Publish Teams app
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Publish Teams apps in Microsoft Teams Store
+      url: /training/modules/microsoft-teams-publish-app-to-store
+    - text: Publish your Teams apps
+      url: ~/concepts/deploy-and-publish/apps-publish-overview.md
+    - text: Upload your app in Microsoft Teams
+      url: ~/concepts/deploy-and-publish/apps-upload.md
+    - text: Publish to Microsoft Teams Store
+      url: ~/concepts/deploy-and-publish/appsource/publish.md
+    - text: Microsoft Teams Store validation guidelines
+      url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
+    - text: Common reasons for app validation failure
+      url: ~/concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md      
+    - text: Maintain your published app
+      url: ~/concepts/deploy-and-publish/appsource/post-publish/overview.md
+
+# - title: Notifications
+#  linkLists:
+#  - linkListType: reference
+#    links:
+#    - text: Design activity feed notifications
+#      url: concepts/design/activity-feed-notifications.md 
+#    - text: Send activity feed notifications
+#      url: /graph/teams-send-activityfeednotifications
+#    - text: Best practices for activity feed notifications
+#      url: /graph/teams-activity-feed-notifications-best-practices
+#    - text: Send proactive messages
+#      url: bots/how-to/conversations/send-proactive-messages.md
+
 # - title: 
 #  linkLists:
 #    - linkListType: whats-new
@@ -77,25 +277,15 @@ landingContent:
 #      - text: Multi parameters for API-based message extensions
 #        url: messaging-extensions/create-api-message-extension.md#multi-parameters
 
-- title: What's new
-  linkLists:
-    - linkListType: whats-new
-      links:
-      - text: Custom engine agents support for Microsoft 365 Copilot Chat
-        url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#add-support-for-microsoft-365-copilot-chat
-      - text: Extend bot-based message extension as an agent for Microsoft 365 Copilot
-        url: messaging-extensions/build-bot-based-agent.md
+# - title: What's new
+#  linkLists:
+#    - linkListType: whats-new
+#      links:
+#      - text: Custom engine agents support for Microsoft 365 Copilot Chat
+#        url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#add-support-for-microsoft-365-copilot-chat
+#      - text: Extend bot-based message extension as an agent for Microsoft 365 Copilot
+#        url: messaging-extensions/build-bot-based-agent.md
 
-- title: Build custom engine agents
-  linkLists:
-    - linkListType: concept
-      links:
-      - text: Custom engine agents overview
-        url: /microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-      - text: Build custom engine agents using Teams Toolkit
-        url: Teams-AI-library-tutorial.yml
-      - text: Teams AI library
-        url: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md
 
 #- title: Get started
 #  linkLists:
@@ -127,184 +317,3 @@ landingContent:
 #        url: sbs-gs-notificationbot.yml
 #      - text: Build workflow bot
 #        url: sbs-gs-workflow-bot.yml
-     
-- title: Monetize your app
-  linkLists:
-    - linkListType: concept
-      links:
-      - text: Guidelines for apps linked to SaaS offers
-        url: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer
-      - text: Microsoft Teams Store validation guidelines
-        url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
-      - text: Monetize your Teams app with a transactable SaaS offer
-        url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
-      - text: In-app purchases
-        url: ~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
-      - text: Test preview for monetized apps
-        url: ~/concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md
-      - text: Additional tips for rapid approval to publish your app linked to a SaaS offer
-        url: ~/concepts/deploy-and-publish/appsource/publish.md#additional-tips-for-rapid-approval-to-publish-your-app-linked-to-a-saas-offer     
-
-- title: Build apps for Teams
-  linkLists:
-    - linkListType: overview
-      links:
-      - text: Build apps for Microsoft Teams
-        url: ../msteams-platform/overview.md
-      - text: App fundamentals
-        url: ~/concepts/app-fundamentals-overview.md
-      - text: Design your app
-        url: ~/concepts/design/design-teams-app-overview.md
-      - text: Code samples
-        url: https://github.com/OfficeDev/Microsoft-Teams-Samples
-      - text: Build apps for Teams meeting stage
-        url:  ~/apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
-    - linkListType: whats-new
-      links:
-      - text: What's new
-        url: ../msteams-platform/whats-new.md
-
-- title: Build app capabilities
-  linkLists:
-  - linkListType: concept
-    links:
-    - text: Build tabs
-      url: ~/tabs/what-are-tabs.md
-    - text: Build bots
-      url: ~/bots/what-are-bots.md
-    - text: Build message extensions
-      url: ~/messaging-extensions/what-are-messaging-extensions.md
-    - text: Build apps for Teams meetings
-      url: ~/apps-in-teams-meetings/teams-apps-in-meetings.md
-    - text: Build webhooks and connectors
-      url: ~/webhooks-and-connectors/what-are-webhooks-and-connectors.md
-    - text: Build cards and dialogs
-      url: ~/task-modules-and-cards/cards-and-task-modules.md
-    - text: App manifest
-      url: ../msteams-platform/resources/schema/manifest-schema.md
-    - text: Public developer preview manifest schema
-      url: ~/resources/schema/manifest-schema-dev-preview.md  
-
-- title: Step-by-step guides
-  linkLists:
-    - linkListType: get-started
-      links:
-      - text: Get started with building apps
-        url: ../msteams-platform/get-started/get-started-overview.md
-      - text: Get started with GitHub
-        url: /contribute/additional-resources
-      - text: Glossary
-        url: ~/get-started/glossary.md
-      - text: Overview
-        url: ~/overview.md        
-    - linkListType: tutorial
-      links:
-      - text: Build app with JavaScript
-        url: sbs-gs-javascript.yml
-      - text: Build your first app using Blazor
-        url:  sbs-gs-blazorupdate.yml
-      - text: Build app with SPFx
-        url: sbs-gs-spfx.yml
-      - text: Build app with C# or .NET
-        url: sbs-gs-csharp.yml
-      - text: Build app with Node.js
-        url: sbs-gs-nodejs.yml
-      - text: Build command bot with JavaScript
-        url: sbs-gs-commandbot.yml
-      - text: Build notification bot with JavaScript
-        url: sbs-gs-notificationbot.yml
-      - text: Build workflow bot
-        url: sbs-gs-workflow-bot.yml   
-    - linkListType: tutorial
-      links:
-        - text: Debug your AI chat bot using Teams App Test Tool
-          url: ~/sbs-teams-app-test-tool.yml
-        - text: Bot configuration experience
-          url: ~/qsg-bot-configuration-experience.yml
-        - text: Create Teams conversation bot
-          url: ~/sbs-teams-conversation-bot.yml
-        - text: Create Calling and meeting bot
-          url: ~/sbs-calling-and-meeting.yml
-        - text: Configure SSO for tabs and message extensions
-          url: ~/sbs-tabs-and-messaging-extensions-with-SSO.yml  
-        - text: Build tabs with Adaptive Card
-          url: ~/sbs-tab-with-adaptive-cards.yml
-        - text: Build a bot to send Proactive messages
-          url: ~/sbs-send-proactive.yml
-        - text: Build a bot with SSO authentication
-          url: ~/sbs-bots-with-sso.yml
-        - text: Generate meeting token
-          url: ~/sbs-meeting-token-generator.yml
-
-    - linkListType: tutorial
-      links:
-        - text: Generate meeting side panel
-          url: ~/sbs-meetings-sidepanel.yml
-        - text: Build an in-meeting document signing app
-          url:  ~/sbs-inmeeting-document-signing.yml
-        - text: Build command bot with JavaScript
-          url: sbs-gs-commandbot.yml
-        - text: Build notification bot with JavaScript
-          url: sbs-gs-notificationbot.yml
-        - text: Upload files to Teams from a bot
-          url: ~/sbs-file-handling-in-bot.yml
-        - text: Generate meeting content bubble
-          url: ~/sbs-meeting-content-bubble.yml
-        - text: Invoke dialogs from Microsoft Teams
-          url: ~/sbs-botbuilder-taskmodule.yml
-        - text: Build search based message extension
-          url: ~/sbs-messagingextension-searchcommand.yml
-        - text: Build action based message extension
-          url: ~/sbs-meetingextension-action.yml
-        - text: Build Outgoing Webhooks
-          url: ~/sbs-outgoing-webhooks.yml
-    - linkListType: tutorial
-      links:
-        - text: Unfurl links in Teams using bot
-          url: ~/sbs-botbuilder-linkunfurling.yml
-        - text: Build Teams connectors
-          url: ~/sbs-teams-connectors.yml
-        - text: Send activity feed notification 
-          url:  ~/sbs-graphactivity-feedbroadcast.yml          
-        
-           
-- title: Teams app scenarios
-  linkLists:
-  - linkListType: reference
-    links:
-    - text: Best practices for Teams app scenarios
-      url: https://developer.microsoft.com/microsoft-teams/app-development-resources/?filter=bestpractices
-    - text: Explore low-code apps for Teams
-      url:  ~/samples/teams-low-code-solutions.md
-
-- title: Publish Teams app
-  linkLists:
-  - linkListType: concept
-    links:
-    - text: Publish Teams apps in Microsoft Teams Store
-      url: /training/modules/microsoft-teams-publish-app-to-store
-    - text: Publish your Teams apps
-      url: ~/concepts/deploy-and-publish/apps-publish-overview.md
-    - text: Upload your app in Microsoft Teams
-      url: ~/concepts/deploy-and-publish/apps-upload.md
-    - text: Publish to Microsoft Teams Store
-      url: ~/concepts/deploy-and-publish/appsource/publish.md
-    - text: Microsoft Teams Store validation guidelines
-      url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
-    - text: Common reasons for app validation failure
-      url: ~/concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md      
-    - text: Maintain your published app
-      url: ~/concepts/deploy-and-publish/appsource/post-publish/overview.md
-
-# - title: Notifications
-#  linkLists:
-#  - linkListType: reference
-#    links:
-#    - text: Design activity feed notifications
-#      url: concepts/design/activity-feed-notifications.md 
-#    - text: Send activity feed notifications
-#      url: /graph/teams-send-activityfeednotifications
-#    - text: Best practices for activity feed notifications
-#      url: /graph/teams-activity-feed-notifications-best-practices
-#    - text: Send proactive messages
-#      url: bots/how-to/conversations/send-proactive-messages.md
