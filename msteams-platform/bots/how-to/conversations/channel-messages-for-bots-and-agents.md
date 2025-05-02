@@ -13,6 +13,8 @@ Receiving all messages, even without @mentions, enhances bots and agents by prov
 
 Developers can customize bot behavior to fit specific needs by specifying permissions in the app manifest. Conversation owners can consent for a bot to receive all messages in channels and chats without @mentions. Consent can be granted during the app installation or upgrade process. For more information, see [RSC permissions](../../../graph-api/rsc/resource-specific-consent.md).
 
+While RSC permissions are supported for existing bot apps, we recommend migrating to agents. For new apps, we encourage building agents from scratch and using RSC permissions to enhance the experience.
+
 > [!NOTE]
 > Bots that receive all conversation messages with RSC are supported in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](../../../concepts/cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](../../../concepts/sovereign-cloud.md) environments.
 
