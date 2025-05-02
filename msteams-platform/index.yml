@@ -77,8 +77,8 @@ conceptualContent:
         - url: /training/modules/msteams-task-modules/
           itemType: learn
           text: Collect input and gather information with task modules
+        - url: /m365-apps/overview
           itemType: learn
-          itemType: overview
           text: Extend Teams apps across Microsoft 365
 
     # Card
