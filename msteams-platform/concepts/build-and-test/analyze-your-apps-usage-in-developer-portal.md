@@ -106,6 +106,8 @@ After you select your desired filters, you can explore the following individual 
 
 # [Third-party apps](#tab/thirdpartyapps)
 
+## Get started
+
 To view app usage in Developer Portal, you need **Manager** or **Developer** role in Partner Center. The marketplace account owner or manager can [assign user roles and permissions](/partner-center/account-settings/user-roles).
 
 You can view usage for your [third-party app](../../promote-app-adoption.md#access-to-your-apps) and other insights from the **Analytics** page. To access the page:
@@ -219,7 +221,7 @@ You can select each of these metric names to see trends over time.
 
 The **Host product** tab shows the following app usage analytics:
 
-* [Usage by host product](#app-usage-by-host-product)
+* [App usage by host product](#app-usage-by-host-product)
 * [Usage by operating system](#usage-by-operating-system)
 * [Usage by platform](#usage-by-platform)
 
