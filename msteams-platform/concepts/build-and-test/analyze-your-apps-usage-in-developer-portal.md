@@ -95,14 +95,14 @@ After you select your desired filters, you can explore the following individual 
 
 ### App dashboard
 
-The **My App dashboard** table shows the latest R30 (Rolling 30 days) data for each of the metrics under the previous four categories, and the Month over Month change. Use the time picker on the upper right side and select the desired date to view the following:
+  The **My App dashboard** table shows the latest R30 (Rolling 30 days) data for each of the metrics under the previous four categories, and the Month over Month change. Use the time picker on the upper right side and select the desired date to view the following:
 
 * Daily R30 data for the last 75 days.
 * End of month R30 data for up to 12 months.
 
-You can select each of these **Metric name** to see trends over time.
+  You can select each of these **Metric name** to see trends over time.
 
-:::image type="content" source="../../assets/images/tdp/app-dashboard.png" alt-text="Screenshot shows the app dashboard chart for your published app in Developer Portal.":::
+  :::image type="content" source="../../assets/images/tdp/app-dashboard.png" alt-text="Screenshot shows the app dashboard chart for your published app in Developer Portal.":::
 
 # [Third-party apps](#tab/thirdpartyapps)
 
@@ -114,6 +114,8 @@ You can view usage for your [third-party app](../../promote-app-adoption.md#acce
 1. Select **Apps** from the left pane.
 1. Select the required app from the **Apps** page.
 1. Select **Analytics** under the **Overview** section.
+
+:::image type="content" source="../../assets/images/tdp/analy-dev-portal.png" alt-text="Screenshot shows the analytics page of your app in Developer Portal." lightbox="../../assets/images/tdp/analy-dev-portal.png":::
 
 To learn how to import your published app into Developer Portal, see [import an existing app](~/concepts/build-and-test/teams-developer-portal.md#import-an-existing-app).
 
@@ -133,16 +135,16 @@ To learn how to import your published app into Developer Portal, see [import an 
 
 As you explore individual metrics on this page, you can use the **Filter** button to analyze your app's usage from the following filter options:
 
-* **Aggregation type**: Allows you to group the metrics by active users or active tenants.
-* **Platform**: Allows you to group the metrics by the platform on which users performed intentional activities with your app. The platform can be Desktop, Mobile, Web, or other available options.
-* **Operating system**: Allows you to group the metrics by the operating system on which users performed intentional activities with your app. The operating system can be Windows, Mac, iOS, Android or other available options.
+* **Aggregation type**: Allows you to view active users or active tenants.
+* **Platform**: Allows you to group the metrics by the platform on which users performed intentional activities with your app. The platform can be **Desktop**, **Mobile**, **Web**, or other available options.
+* **Operating system**: Allows you to group the metrics by the operating system on which users performed intentional activities with your app. The operating system can be **Windows**, **Mac**, **iOS**, **Android** or other available options.
 * **Area**: Allows you to group the metrics by the geographical location of the active usage.
 
  :::image type="content" source="../../assets/images/tdp/filter-tdp-analytics.png" alt-text="Screenshot shows the app analytics page filter in Developer Portal." lightbox="../../assets/images/tdp/filter-tdp-analytics.png":::
 
 ## App analytics
 
-To analyze the app usage trends, you can see the following three sections:
+To gain insights on the app usage and analyze trends, explore the following three sections under **Analytics**:
 
 * [App usage](#app-usage)
 * [Host product](#host-product)
@@ -150,7 +152,7 @@ To analyze the app usage trends, you can see the following three sections:
 
 ### App usage
 
-The **App usage** tab shows the following metrics:
+The **App usage** tab shows the following metrics to help you track engagement and user behavior:
 
 * [Usage over time](#usage-by-time-period)
 * [Usage by retention state](#usage-by-retention-state)
@@ -173,7 +175,7 @@ The **Usage over time** chart shows the number of active users or tenants who op
 
 #### Usage by retention state
 
-The **Usage by retention state** chart lets you track four key retention or churn metrics for your app over time.
+The **Usage by retention state** chart allows you to track four key retention or churn metrics for your app over time.
 
 :::image type="content" source="../../assets/images/tdp/tdp-retention.png" alt-text="Screenshot shows the app usage by retention state of your published app in Developer Portal.":::
 
@@ -192,19 +194,19 @@ The **Usage by country/region** chart shows the various regions where your app i
 
 #### Usage intensity
 
-The **Usage intensity** chart shows the key usage intensity metrics for your app.
+The **Usage intensity** chart shows frequency and depth of use. They're one indicator that users are finding value in continuing to use your app.
 
 :::image type="content" source="../../assets/images/tdp/tdp-usage-intensity.png" alt-text="Screenshot shows the app usage intensity of your published app in Developer Portal.":::
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
-| **Median days used per month** | The median number of days in which your app was opened in the last R28 (Rolling 28 days) time period. |
-| **% of 5+ days usage** | The percentage of active users who opened or used the app more than five days in the last R28 time period. |
-| **DAU/MAU** | The ratio of the average number of unique users or tenants who used your app on each day divided by the Monthly active users for the selected R28 time period. |
+| **Median days used per month** | Median number of days in which your app was opened in the last R28 (Rolling 28 days) time period. |
+| **% of 5+ days usage** | Percentage of active users who opened or used the app more than five days in the last R28 time period. |
+| **DAU/MAU** | Ratio of the average number of unique users or tenants who used your app on each day divided by the monthly active users for the selected R28 time period. |
 
 #### App dashboard
 
-The **My App Dashboard** table shows the latest R30 (Rolling 30 days) data for each of the metrics under the previous four categories, and the Month over Month change. Use the time picker on the upper left side and select the desired date to view the following:
+The **My App Dashboard** table shows the latest R30 (Rolling 30 days) data for each of the metrics under the previous four categories, and the Month over Month (MoM) change. Use the time picker on the upper left side and select the desired date to view the following:
 
 * Daily R30 data for the last 75 days.
 * End of month R30 data for up to 12 months.
@@ -225,42 +227,43 @@ The Key Performance Indicator (KPI) cards display metrics such as the host with 
 
 :::image type="content" source="../../assets/images/tdp/tdp-host-product.png" alt-text="Screenshot shows the app usage in different host products of your published app in Developer Portal." lightbox="../../assets/images/tdp/tdp-host-product-full.png":::
 
-#### Usage by host product
+#### App usage by host product
 
-The **Usage by host product** chart shows your app's active usage across various host products, including **Microsoft 365 Copilot**, **Teams**, **Outlook**, and **Microsoft 365 app** of monthly, weekly, and daily data.
+The **App usage by host product** chart shows your app's active usage across various host products, including **Microsoft 365 app**, **Microsoft 365 Copilot**, **Outlook**, and **Teams**.
 
 :::image type="content" source="../../assets/images/tdp/tdp-host-usage.png" alt-text="Screenshot shows the app usage in different host product of your published app in Developer Portal.":::
 
 #### Usage by platform
 
-The **Usage by platform** chart shows your app's active usage across various platforms, such as **Desktop**, **Mobile**, and **Web** of monthly, weekly, and daily data.
+The **Usage by platform** chart shows your app's active usage across various platforms, such as **Desktop**, **Mobile**, **Web**, and other platforms where the app is used.
 
 :::image type="content" source="../../assets/images/tdp/tdp-usage-platform.png" alt-text="Screenshot shows the app usage in different platforms of your published app in Developer Portal.":::
 
    > [!NOTE]
-   >
-   > * The `Preview` tag indicates that the metric **Usage by host product** is in its initial phase and might undergo modifications as we collect feedback and continue to improve the experience.
-   > * The **Microsoft 365 Copilot Agent** includes usage of declarative agents only. The usage of the custom engine agent isn't available in the Developer Portal.
+   > The `Preview` tag indicates that the metric **Usage by host product** is in its initial phase and might undergo modifications as we collect feedback and continue to improve the experience.
 
 #### Usage by operating system
 
-The **Usage by operating system** chart shows your app's active usage across various operating systems, such as **Android**, **Chrome OS**, **Linux**, **Mac**, **Windows**, and **iOS** of monthly, weekly, and daily data.
+The **Usage by operating system** chart shows your app's active usage across various operating systems, such as **Android**, **Chrome OS**, **Linux**, **Mac**, **Windows**, and **iOS**.
 
 :::image type="content" source="../../assets/images/tdp/tdp-operating-system.png" alt-text="Screenshot shows the app usage in different OS of your published app in Developer Portal.":::
 
-### App capability
+### Capability
 
-The **App capability** tab shows the usage of individual app capabilities that you've configured within your app. This page summarizes the overall usage of the following app capabilities in different host products:
+The **Capability** tab shows the usage of individual app capabilities that you've configured within your app. This page summarizes the overall usage of the following app capabilities in different host products:
 
-* Copilot Agent
-* Personal app
-* Bot
-* Tab
+* Microosft 365 Copilot Agent
+* Bots
+* Tabs
 * Message extension
+* Personal app
 * Connector
 * Personal tab
 
 :::image type="content" source="../../assets/images/tdp/tdp-app-capability.png" alt-text="Screenshot shows the app capability usage in different host products of your published app in Developer Portal." lightbox="../../assets/images/tdp/tdp-app-capability-full.png":::
+
+> [!NOTE]
+> The **Microsoft 365 Copilot Agent** includes usage of declarative agents only. The usage of the custom engine agent isn't available in the Developer Portal.
 
 ---
 
