@@ -150,7 +150,7 @@ To gain insights on the app usage and analyze trends, explore the following thre
 
 * [App usage](#app-usage)
 * [Host product](#host-product)
-* [App capability](#capability)
+* [Capability](#capability)
 
 ### App usage
 
