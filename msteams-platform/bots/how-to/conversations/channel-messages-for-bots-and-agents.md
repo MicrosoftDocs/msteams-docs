@@ -10,9 +10,7 @@ ms.date: 01/23/2025
 # Receive all messages for bots and agents
 
 > [!NOTE]
-> For new apps, you must build [agents](/microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json) from scratch and use RSC permissions to enhance the experience. While RSC permissions are supported for existing bot apps, leverage AI to empower your bots by migrating to agents instead.
-
-While RSC permissions are supported for existing bot apps, we recommend migrating to [agents](/microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json). For new apps, build agents from scratch and use RSC permissions to enhance the experience.
+> For new apps, you must build [agents](/microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json) from scratch and use RSC permissions to enhance the experience. While RSC permissions are supported for existing bot apps, you can leverage AI to empower your bots by [migrating to agents](/microsoftteams/platform/bots/how-to/teams-conversational-ai/how-conversation-ai-get-started).
 
 Receiving all messages, even without @mentions, enhances bots and agents by providing better context, allowing proactive responses, personalized interactions, and faster issue resolution. The Resource-specific Consent (RSC) permissions model of Microsoft Teams Graph APIs improves performance and ensures timely responses.
 
