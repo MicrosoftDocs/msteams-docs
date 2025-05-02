@@ -42,24 +42,40 @@ landingContent:
 #      - text: Integrate People Picker
 #        url: ~/concepts/device-capabilities/people-picker-capability.md
 
-- title: What's new
-  linkLists:
-    - linkListType: whats-new
-      links:
-      - text: Best practices to optimize tab performance in Teams mobile
-        url: resources/teams-mobile-best-practices.md
-      - text: Advanced step-by-step guide to build custom engine agent
-        url: sbs-Teams-AI.yml      
-      - text: AI label, citations, feedback buttons, and sensitivity labels for bot messages
-        url: bots/how-to/format-ai-bot-messages.md
-      - text: Copilot handoff
-        url: bots/how-to/conversations/bot-copilot-handoff.md
-      - text: Assistants API to create powerful AI assistants
-        url: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md#how-do-teams-ai-library-features-benefit-me
-      - text: Build apps with Teams AI library
-        url: bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md
-      - text: Build a custom engine agent to chat with your data
-        url: teams-ai-library-tutorial.yml
+#- title: What's new
+#  linkLists:
+#    - linkListType: whats-new
+#      links:
+#      - text: Best practices to optimize tab performance in Teams mobile
+#        url: resources/teams-mobile-best-practices.md
+#      - text: Advanced step-by-step guide to build custom engine agent
+#        url: sbs-Teams-AI.yml      
+#      - text: AI label, citations, feedback buttons, and sensitivity labels for bot messages
+#        url: bots/how-to/format-ai-bot-messages.md
+#      - text: Copilot handoff
+#        url: bots/how-to/conversations/bot-copilot-handoff.md
+#      - text: Assistants API to create powerful AI assistants
+#        url: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md#how-do-teams-ai-library-features-benefit-me
+#      - text: Build apps with Teams AI library
+#        url: bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md
+#      - text: Build a custom engine agent to chat with your data
+#        url: teams-ai-library-tutorial.yml
+#      - text: Precache your tab app to optimize its initial load time
+#        url: tabs/how-to/app-caching.md#precaching-tab-apps
+#      - text: App package editor in Developer Portal for Teams
+#        url: concepts/build-and-test/manage-your-apps-in-developer-portal.md#configure
+#      - text: Introducing third-party cloud storage for drag-dropped files in a Teams chat
+#        url: concepts/device-capabilities/third-party-storage-capability.md
+#      - text: Tab app caching is generally available
+#        url: tabs/how-to/app-caching.md
+#      - text: AI label, citations, feedback buttons, and sensitivity labels in bot messages are generally available
+#        url: bots/how-to/bot-messages-ai-generated-content.md
+#      - text: Introducing share to meeting from personal app
+#        url: concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md#share-to-meeting-from-personal-app
+#      - text: Text customization for share to stage button
+#        url: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#advanced-share-to-stage-apis
+#      - text: Multi parameters for API-based message extensions
+#        url: messaging-extensions/create-api-message-extension.md#multi-parameters
 
 - title: What's new
   linkLists:
@@ -67,33 +83,19 @@ landingContent:
       links:
       - text: Custom engine agents support for Microsoft 365 Copilot Chat
         url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#add-support-for-microsoft-365-copilot-chat
-      - text: Precache your tab app to optimize its initial load time
-        url: tabs/how-to/app-caching.md#precaching-tab-apps
-      - text: App package editor in Developer Portal for Teams
-        url: concepts/build-and-test/manage-your-apps-in-developer-portal.md#configure
-      - text: Introducing third-party cloud storage for drag-dropped files in a Teams chat
-        url: concepts/device-capabilities/third-party-storage-capability.md
-      - text: Tab app caching is generally available
-        url: tabs/how-to/app-caching.md
-      - text: AI label, citations, feedback buttons, and sensitivity labels in bot messages are generally available
-        url: bots/how-to/bot-messages-ai-generated-content.md
-      - text: Introducing share to meeting from personal app
-        url: concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md#share-to-meeting-from-personal-app
-      - text: Text customization for share to stage button
-        url: apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md#advanced-share-to-stage-apis
-      - text: Multi parameters for API-based message extensions
-        url: messaging-extensions/create-api-message-extension.md#multi-parameters
       - text: Extend bot-based message extension as an agent for Microsoft 365 Copilot
         url: messaging-extensions/build-bot-based-agent.md
 
-    - linkListType: reference
+- title: Build custom engine agents
+  linkLists:
+    - linkListType: concept
       links:
-      - text: Extend Microsoft 365 Copilot
-        url: /microsoft-365-copilot/extensibility/
-      - text: Community chat room for Microsoft Teams app developers
-        url: https://gitter.im/OfficeDev/home
-
-
+      - text: Custom engine agents overview
+        url: /microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+      - text: Build custom engine agents using Teams Toolkit
+        url: Teams-AI-library-tutorial.yml
+      - text: Teams AI library
+        url: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md
 
 - title: Get started
   linkLists:
