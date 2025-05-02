@@ -114,7 +114,7 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/application-name.png" alt-text="Screenshot showing how to select the folder.":::
     
-        After your app is created, the Microsoft 365 Agents Toolkit displays the following message:
+        After your app is created, Microsoft 365 Agents Toolkit displays the following message:
         
         :::image type="content" source="~/assets/images/teams-toolkit-v2/preview-project.png" alt-text="localdebug":::
         
@@ -170,7 +170,7 @@ items:
 
     The Toolkit creates scaffolding for you in the project directory for the tab capability. 
 
-    Among other items in this directory, the Microsoft 365 Agents Toolkit contains:
+    Among other items in this directory, Microsoft 365 Agents Toolkit contains:
  
     - appPackage: contains the app icons, `color.png` and `outline.png`.
     - `manifest.local.json`: contains the app manifest for local debug.
@@ -343,7 +343,7 @@ items:
     # [Visual Studio Code](#tab/vscode)
 
     1. Open Visual Studio Code.
-    1. Select the Microsoft 365 Agents Toolkit from the sidebar by selecting the Teams icon.
+    1. Select Microsoft 365 Agents Toolkit from the sidebar by selecting the Teams icon.
     1. Select **Provision** under **LIFECYCLE**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot showing the provisioning command":::
@@ -356,7 +356,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/deploying-command.png" alt-text="Screenshot for showing the deploying command":::
 
-        The app package is built, and uploaded to the SharePoint site. The Microsoft 365 Agents Toolkit displays a message with the local path where the app package is saved.
+        The app package is built, and uploaded to the SharePoint site. Microsoft 365 Agents Toolkit displays a message with the local path where the app package is saved.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-package.png" alt-text="Screenshot for the SPFx App Package message":::
 

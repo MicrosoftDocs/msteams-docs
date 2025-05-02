@@ -44,7 +44,7 @@ items:
    | --- | --- | --- |
    | **Required** | &nbsp; | &nbsp; |
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript or TypeScript, build environments. Use the latest version. |
-   | &nbsp; | [Microsoft 365 Agents Toolkit](#install-teams-toolkit) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the prerelease version.|
+   | &nbsp; | [Microsoft 365 Agents Toolkit](#install-microsoft-365-agents-toolkit) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the prerelease version.|
    | &nbsp; | [Node.js](https://nodejs.org/en/download) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call all in one place.|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
@@ -168,7 +168,7 @@ items:
 
         :::image type="content" source="assets/images/teams-toolkit-v2/first-msgext/create-project.png" alt-text="Screen shows the location of the Create New Project link in the Microsoft 365 Agents Toolkit sidebar.":::
 
-    1. Select **Message Extension** to create an app using the Microsoft 365 Agents Toolkit.
+    1. Select **Message Extension** to create an app using Microsoft 365 Agents Toolkit.
 
         :::image type="content" source="assets/images/teams-toolkit-v2/first-msgext/create-new-app1.png" alt-text="Screenshot shows the Wizard start for Create New Project.":::
 
@@ -208,7 +208,7 @@ items:
 
         :::image type="content" source="assets/images/Copilot/bot-based-plugin-sbs-ttk-creates-app.png" alt-text="Screenshot showing the app created." lightbox="assets/images/Copilot/bot-based-plugin-sbs-ttk-creates-app.png":::
 
-        After your app is created, the Microsoft 365 Agents Toolkit displays the following message: 
+        After your app is created, Microsoft 365 Agents Toolkit displays the following message: 
 
         :::image type="content" source="assets/images/teams-toolkit-v2/preview-project-msg.png" alt-text="Screenshot shows the local debug.":::
 
@@ -263,7 +263,7 @@ items:
     1. Close the browser when prompted and return to Visual Studio Code.
     1. Return to Microsoft 365 Agents Toolkit within Visual Studio Code.
 
-        The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name. The Microsoft 365 Agents Toolkit displays **Sideloading enabled** if custom app upload is enabled for your Microsoft 365 account.
+        The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name. Microsoft 365 Agents Toolkit displays **Sideloading enabled** if custom app upload is enabled for your Microsoft 365 account.
 
         :::image type="content" source="assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled-msg.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure.":::
 
@@ -289,7 +289,7 @@ items:
         <details>
         <summary>Learn what happens when you run your app locally in the debugger.</summary>
 
-        When you select **F5**, the Microsoft 365 Agents Toolkit:
+        When you select **F5**, Microsoft 365 Agents Toolkit:
 
         1. Checks all the following prerequisites:
           - You're logged in with a Microsoft 365 account.
@@ -407,7 +407,7 @@ items:
         The **ACCOUNTS** section of the sidebar shows the two accounts separately. It also lists the number of usable Azure subscriptions available to you. Ensure you have at least one usable Azure subscription available. If not, sign out and use a different account.
 
         Congratulations, you have signed in your Azure account! 
-        Now let's go ahead and learn how to deploy one of the apps to Azure using the Microsoft 365 Agents Toolkit.
+        Now let's go ahead and learn how to deploy one of the apps to Azure using Microsoft 365 Agents Toolkit.
     > [!div class="nextstepaction"]
     > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Sign%20in%20to%20your%20Azure%20account&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-messagingextension-searchcommand-plugin%3Ftutorial-step%3D5&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-messagingextension-searchcommand-plugin.yml&documentVersionIndependentId=66a6601b-c22e-2304-9ee2-97514084c255&author=surbhigupta&platformId=b9ddcc8e-3e40-8828-fa95-081c44e7ea78&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A)
     
