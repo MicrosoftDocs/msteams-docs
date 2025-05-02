@@ -12,9 +12,7 @@ ms.date: 05/08/2025
 
 Developer Portal for Microsoft Teams provides a comprehensive suite of tools to help you analyze and understand your app's performance and user engagement. By using these analytics, you can gain valuable insights into how users interact with your app, identify areas for improvement, and make data-driven decisions to enhance the overall user experience.
 
-Whether you're tracking active users, retention rates, or usage patterns across different platforms, Developer Portal helps you with the information you need to optimize your app and ensure its success. Custom apps built for your org (LOB apps) can access app usage data only for Teams. However, for third-party apps you can explore new Microsoft 365 dimensions, such as host product and capabilities.
-
-The app usage for a given day is reflected within 24 to 48 hours, and usage data for the new apps can take up to three to five days to reflect in the charts.
+Whether you're tracking active users, retention rates, or usage patterns across different platforms, Developer Portal helps you with the information you need to optimize your app and ensure its success. The app usage data for a given day is reflected within 24 to 48 hours and for the new apps it can take up to three to five days for the charts to reflect the data.
 
 # [Custom apps (New)](#tab/custom-apps-built-for-your-org)
 
@@ -47,15 +45,15 @@ For more information, see [enable developers to use app analytics](/microsoft-36
 As you explore individual metrics on this page, you can use the **Filter** button to analyze your app's usage from the following filter options:
 
 * **Aggregation type**: Allows you to view active users or active tenants.
-* **Platform**: Allows you to group the metrics by the platform on which users performed intentional activities with your app. The platform can be **Desktop**, **Mobile**, or **Web**.
-* **Operating system**: Allows you to group the metrics by the operating system on which users performed intentional activities with your app. The operating system can be **Windows**, **Mac**, **iOS**, **Android** or other operating systems.
+* **Platform**: Allows you to group the metrics by the platform on which users performed intentional activities with your app. The platform can be **Desktop**, **Mobile**, **Web**, or other available options.
+* **Operating system**: Allows you to group the metrics by the operating system on which users performed intentional activities with your app. The operating system can be **Windows**, **Mac**, **iOS**, **Android** or other available options.
 * **Area**: Allows you to group the metrics by the geographical location of the active usage.
 
  :::image type="content" source="../../assets/images/tdp/filter-tdp-analytics.png" alt-text="Screenshot shows the app analytics page filter in Developer Portal." lightbox="../../assets/images/tdp/filter-tdp-analytics.png":::
 
 ## App analytics
 
-To analyze the app usage trends, you can see the following three sections:
+To gain insights on the app usage and analyze trends, explore the following three sections under **Analytics**:
 
 * [App usage](#app-usage)
 * [Host product](#host-product)
@@ -63,7 +61,7 @@ To analyze the app usage trends, you can see the following three sections:
 
 ### App usage
 
-The **App usage** tab shows the following metrics:
+The **App usage** tab shows the following metrics to help you track engagement and user behavior:
 
 * [Usage over time](#usage-over-time)
 * [Usage by retention state](#usage-by-retention-state)
@@ -138,15 +136,15 @@ The first two scorecards display metrics such as the host with the most active u
 
 :::image type="content" source="../../assets/images/tdp/tdp-host-product.png" alt-text="Screenshot shows app usage in different host products of your published app in Developer Portal." lightbox="../../assets/images/tdp/tdp-host-product-full.png":::
 
-#### Usage by host product
+#### App usage by host product
 
-The **Usage by host product** chart shows your app's active usage across various host products, including **Microsoft 365 Copilot**, **Teams**, **Outlook**, and **Microsoft 365 app**.
+The **App usage by host product** chart shows your app's active usage across various host products, including **Microsoft 365 app**, **Microsoft 365 Copilot**, **Outlook**, and **Teams**.
 
 :::image type="content" source="../../assets/images/tdp/tdp-host-usage.png" alt-text="Screenshot shows app usage in different host product of your published app in Developer Portal.":::
 
 #### Usage by platform
 
-The **Usage by platform** chart shows your app's active usage across various platforms, such as **Desktop**, **Mobile**, and **Web**.
+The **Usage by platform** chart shows your app's active usage across various platforms, such as **Desktop**, **Mobile**, **Web**, and other platforms where the app is used.
 
 :::image type="content" source="../../assets/images/tdp/tdp-usage-platform.png" alt-text="Screenshot shows app usage in different platforms of your published app in Developer Portal.":::
 
@@ -163,9 +161,9 @@ The **Usage by operating system** chart shows your app's active usage across var
 
 The **Capability** tab shows the usage of individual app capabilities that you've configured within your app. This page summarizes the overall usage of the following app capabilities in different host products.
 
-   * Copilot Agent
-   * Bot
-   * Tab
+   * Microosft 365 Copilot Agent
+   * Bots
+   * Tabs
    * Message extension
    * Personal app
    * Connector
