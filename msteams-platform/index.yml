@@ -58,7 +58,7 @@ conceptualContent:
           text: Extend Microsoft 365 Copilot
         - url: Teams-AI-library-tutorial.yml
           itemType: learn
-          text: BBuild a custom engine agent
+          text: Build a custom engine agent
         - url: /training/modules/microsoft-teams-publish-app-to-store
           itemType: learn
           text: Publish Teams apps in Microsoft Teams Store
