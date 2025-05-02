@@ -56,6 +56,9 @@ conceptualContent:
         - url: /microsoft-365-copilot/extensibility/
           itemType: concept
           text: Extend Microsoft 365 Copilot
+        - url: /teams-ai-library-tutorial
+          itemType: learn
+          text: BBuild a custom engine agent
         - url: /training/modules/microsoft-teams-publish-app-to-store
           itemType: learn
           text: Publish Teams apps in Microsoft Teams Store
@@ -74,10 +77,7 @@ conceptualContent:
         - url: /training/modules/msteams-task-modules/
           itemType: learn
           text: Collect input and gather information with task modules
-        - url: /training/modules/msteams-webhooks-connectors/
           itemType: learn
-          text: Connect web services to channels and teams with webhooks and connectors for Microsoft 365 Groups
-        - url: /microsoftteams/platform/m365-apps/overview
           itemType: overview
           text: Extend Teams apps across Microsoft 365
 
