@@ -53,9 +53,9 @@ conceptualContent:
   # Card
     - title: Learn
       links:
-        - url: /microsoft-365-copilot/extensibility/
+        - url: bots/how-to/teams-conversational-ai/ai-ux.md        
           itemType: concept
-          text: Extend Microsoft 365 Copilot
+          text: Custom engine agent user experience
         - url: Teams-AI-library-tutorial.yml
           itemType: learn
           text: Build a custom engine agent
