@@ -10,13 +10,15 @@ ms.date: 01/23/2025
 # Receive all messages for bots and agents
 
 > [!NOTE]
-> While RSC permissions are supported for existing bot apps, we recommend migrating to [agents](/microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json). For new apps, we encourage building agents from scratch and using RSC permissions to enhance the experience.
+> For new apps, you must build [agents](/microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json) from scratch and use RSC permissions to enhance the experience. While RSC permissions are supported for existing bot apps, leverage AI to empower your bots by migrating to agents instead.
+
+While RSC permissions are supported for existing bot apps, we recommend migrating to [agents](/microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json). For new apps, build agents from scratch and use RSC permissions to enhance the experience.
 
 Receiving all messages, even without @mentions, enhances bots and agents by providing better context, allowing proactive responses, personalized interactions, and faster issue resolution. The Resource-specific Consent (RSC) permissions model of Microsoft Teams Graph APIs improves performance and ensures timely responses.
 
 Developers can customize bot behavior to fit specific needs by specifying permissions in the app manifest. Conversation owners can consent for a bot to receive all messages in channels and chats without @mentions. Consent can be granted during the app installation or upgrade process. For more information, see [RSC permissions](../../../graph-api/rsc/resource-specific-consent.md).
 
-Note than bots that receive all conversation messages with RSC are supported in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](../../../concepts/cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](../../../concepts/sovereign-cloud.md) environments.
+**Note**: Bots that receive all conversation messages with RSC are supported in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](../../../concepts/cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](../../../concepts/sovereign-cloud.md) environments.
 
 ## Enable bots to receive all channel or chat messages
 
