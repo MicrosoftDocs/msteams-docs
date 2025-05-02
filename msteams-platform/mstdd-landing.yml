@@ -164,14 +164,6 @@ landingContent:
       - text: What's new
         url: ../msteams-platform/whats-new.md  
 
-- title: Teams app scenarios
-  linkLists:
-  - linkListType: reference
-    links:
-    - text: Best practices for Teams app scenarios
-      url: https://developer.microsoft.com/microsoft-teams/app-development-resources/?filter=bestpractices
-    - text: Explore low-code apps for Teams
-      url:  ~/samples/teams-low-code-solutions.md
 
 - title: Publish Teams app
   linkLists:
@@ -191,6 +183,15 @@ landingContent:
       url: ~/concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md      
     - text: Maintain your published app
       url: ~/concepts/deploy-and-publish/appsource/post-publish/overview.md
+
+- title: Teams app scenarios
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Best practices for Teams app scenarios
+      url: https://developer.microsoft.com/microsoft-teams/app-development-resources/?filter=bestpractices
+    - text: Explore low-code apps for Teams
+      url:  ~/samples/teams-low-code-solutions.md
 
 - title: Monetize your app
   linkLists:
