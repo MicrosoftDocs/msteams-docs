@@ -28,7 +28,7 @@ For more information, see [enable developers to use app analytics](/microsoft-36
 
 :::image type="content" source="../../assets/images/tdp/mac-setting.png" alt-text="Screenshot shows where admin can allow custom app analytics in Microsoft 365 admin center." lightbox="../../assets/images/tdp/mac-setting.png":::
 
-## Get Started
+## Get started
 
 You can view your custom app's usage and other insights from the **Analytics** page. To access the page:
 
@@ -68,7 +68,7 @@ To gain insights on the app usage and analyze trends, explore the following thre
 
 * [App usage](#app-usage)
 * [Host product](#host-product)
-* [App capability](#app-capability)
+* [Capability](#capability)
 
 ### App usage
 
@@ -95,7 +95,7 @@ The **Usage over time** chart shows the number of active users or tenants who op
 
 #### Usage by retention state
 
-The **Usage by retention state** chart allows you track four key retention or churn metrics for your app over time.
+The **Usage by retention state** chart allows you to track four key retention or churn metrics for your app over time.
 
 :::image type="content" source="../../assets/images/tdp/tdp-retention.png" alt-text="Screenshot shows app usage by retention state of your published app in Developer Portal.":::
 
@@ -139,7 +139,7 @@ You can select each of these metric names to see trends over time.
 
 The **Host product** tab shows the following app usage analytics:
 
-* [Usage by host product](#usage-by-host-product)
+* [App usage by host product](#usage-by-host-product)
 * [Usage by platform](#usage-by-platform)
 * [Usage by operating system](#usage-by-operating-system)
 
@@ -172,7 +172,7 @@ The **Usage by operating system** chart shows your app's active usage across var
 
 The **Capability** tab shows the usage of individual app capabilities that you've configured within your app. This page summarizes the overall usage of the following app capabilities in different host products.
 
-   * Microosft 365 Copilot Agent
+   * Microsoft 365 Copilot Agent
    * Bots
    * Tabs
    * Message extension
@@ -250,7 +250,7 @@ The **Usage by platform and OS** chart shows your app's active usage across vari
 
 ### Usage by retention state
 
-The **Usage by retention state** chart lets you track four key retention or churn metrics for your app over time.
+The **Usage by retention state** chart allows you to track four key retention or churn metrics for your app over time.
 
 :::image type="content" source="../../assets/images/tdp/usage-by-retention-state.png" alt-text="Screenshot shows the usage by retention state chart for your published app.":::
 
