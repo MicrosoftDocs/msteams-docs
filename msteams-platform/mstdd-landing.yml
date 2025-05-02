@@ -41,25 +41,28 @@ landingContent:
         url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#add-support-for-microsoft-365-copilot-chat
       - text: Extend bot-based message extension as an agent for Microsoft 365 Copilot
         url: messaging-extensions/build-bot-based-agent.md
-     
-- title: Build apps for Teams
+
+- title: Build app capabilities
   linkLists:
-    - linkListType: overview
-      links:
-      - text: Build apps for Microsoft Teams
-        url: ../msteams-platform/overview.md
-      - text: App fundamentals
-        url: ~/concepts/app-fundamentals-overview.md
-      - text: Design your app
-        url: ~/concepts/design/design-teams-app-overview.md
-      - text: Code samples
-        url: https://github.com/OfficeDev/Microsoft-Teams-Samples
-      - text: Build apps for Teams meeting stage
-        url:  ~/apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
-    - linkListType: whats-new
-      links:
-      - text: What's new
-        url: ../msteams-platform/whats-new.md
+  - linkListType: concept
+    links:
+    - text: Build tabs
+      url: ~/tabs/what-are-tabs.md
+    - text: Build bots
+      url: ~/bots/what-are-bots.md
+    - text: Build message extensions
+      url: ~/messaging-extensions/what-are-messaging-extensions.md
+    - text: Build apps for Teams meetings
+      url: ~/apps-in-teams-meetings/teams-apps-in-meetings.md
+    - text: Build webhooks and connectors
+      url: ~/webhooks-and-connectors/what-are-webhooks-and-connectors.md
+    - text: Build cards and dialogs
+      url: ~/task-modules-and-cards/cards-and-task-modules.md
+    - text: App manifest
+      url: ../msteams-platform/resources/schema/manifest-schema.md
+    - text: Public developer preview manifest schema
+      url: ~/resources/schema/manifest-schema-dev-preview.md
+
 
 - title: Step-by-step guides
   linkLists:
@@ -142,26 +145,24 @@ landingContent:
         - text: Send activity feed notification 
           url:  ~/sbs-graphactivity-feedbroadcast.yml          
         
-- title: Build app capabilities
+- title: Build apps for Teams
   linkLists:
-  - linkListType: concept
-    links:
-    - text: Build tabs
-      url: ~/tabs/what-are-tabs.md
-    - text: Build bots
-      url: ~/bots/what-are-bots.md
-    - text: Build message extensions
-      url: ~/messaging-extensions/what-are-messaging-extensions.md
-    - text: Build apps for Teams meetings
-      url: ~/apps-in-teams-meetings/teams-apps-in-meetings.md
-    - text: Build webhooks and connectors
-      url: ~/webhooks-and-connectors/what-are-webhooks-and-connectors.md
-    - text: Build cards and dialogs
-      url: ~/task-modules-and-cards/cards-and-task-modules.md
-    - text: App manifest
-      url: ../msteams-platform/resources/schema/manifest-schema.md
-    - text: Public developer preview manifest schema
-      url: ~/resources/schema/manifest-schema-dev-preview.md  
+    - linkListType: overview
+      links:
+      - text: Build apps for Microsoft Teams
+        url: ../msteams-platform/overview.md
+      - text: App fundamentals
+        url: ~/concepts/app-fundamentals-overview.md
+      - text: Design your app
+        url: ~/concepts/design/design-teams-app-overview.md
+      - text: Code samples
+        url: https://github.com/OfficeDev/Microsoft-Teams-Samples
+      - text: Build apps for Teams meeting stage
+        url:  ~/apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
+    - linkListType: whats-new
+      links:
+      - text: What's new
+        url: ../msteams-platform/whats-new.md  
 
 - title: Teams app scenarios
   linkLists:
@@ -171,23 +172,6 @@ landingContent:
       url: https://developer.microsoft.com/microsoft-teams/app-development-resources/?filter=bestpractices
     - text: Explore low-code apps for Teams
       url:  ~/samples/teams-low-code-solutions.md
-
-- title: Monetize your app
-  linkLists:
-    - linkListType: concept
-      links:
-      - text: Guidelines for apps linked to SaaS offers
-        url: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer
-      - text: Microsoft Teams Store validation guidelines
-        url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
-      - text: Monetize your Teams app with a transactable SaaS offer
-        url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
-      - text: In-app purchases
-        url: ~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
-      - text: Test preview for monetized apps
-        url: ~/concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md
-      - text: Additional tips for rapid approval to publish your app linked to a SaaS offer
-        url: ~/concepts/deploy-and-publish/appsource/publish.md#additional-tips-for-rapid-approval-to-publish-your-app-linked-to-a-saas-offer     
 
 - title: Publish Teams app
   linkLists:
@@ -207,6 +191,25 @@ landingContent:
       url: ~/concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md      
     - text: Maintain your published app
       url: ~/concepts/deploy-and-publish/appsource/post-publish/overview.md
+
+- title: Monetize your app
+  linkLists:
+    - linkListType: concept
+      links:
+      - text: Guidelines for apps linked to SaaS offers
+        url: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer
+      - text: Microsoft Teams Store validation guidelines
+        url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
+      - text: Monetize your Teams app with a transactable SaaS offer
+        url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
+      - text: In-app purchases
+        url: ~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
+      - text: Test preview for monetized apps
+        url: ~/concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md
+      - text: Additional tips for rapid approval to publish your app linked to a SaaS offer
+        url: ~/concepts/deploy-and-publish/appsource/publish.md#additional-tips-for-rapid-approval-to-publish-your-app-linked-to-a-saas-offer     
+
+
 
 # - title: Notifications
 #  linkLists:
