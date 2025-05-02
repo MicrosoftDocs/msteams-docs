@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.author: v-sdhakshina
 ms.localizationpriority: medium
 ms.date: 01/11/2023
+ms.owner: ginobuzz
 ---
 
 # Build extensible conversation for meeting chat

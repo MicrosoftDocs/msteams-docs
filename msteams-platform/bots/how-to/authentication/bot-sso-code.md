@@ -5,6 +5,7 @@ ms.topic: how-to
 ms.localizationpriority: high
 zone_pivot_groups: enable-sso
 ms.date: 11/13/2024
+ms.owner: ryanbliss
 ---
 # Add code to enable SSO in your bot app
 
@@ -42,9 +43,15 @@ To update the development environment variables:
     - For `ConnectionName`, update the name of the OAuth connection you configured in Microsoft Entra ID.
     - For `MicrosoftAppTenantId`, update the tenant ID.
 
+    > [!NOTE]
+    > You can customize the OAuth redirect URL for your bot and identity provider based on your data residency requirements, whether your bot is in the public cloud, Microsoft Azure Government cloud, or Microsoft Azure operated by 21Vianet. For OAuth URLs and data residency list, see [OAuth URL support in Azure AI Bot Service](/azure/bot-service/ref-oauth-redirect-urls?view=azure-bot-service-4.0&preserve-view=true).
+
 1. Save the file.
 
 You've now configured the required environment variables for your bot app and SSO. Next, add the code for handling bot tokens.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Update+development+environment+variables&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code%3Ftabs%3Dcs1%252Ccs2%252Ccs3%252Ccs4%252Ccs5%26pivots%3Dbot-app%23update-development-environment-variables&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code.md&documentVersionIndependentId=039ff5cc-7243-ce4b-527e-c152755eeb72&platformId=915789b2-9617-01bb-fb21-d6789a634ed8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Add code to handle an access token
 
@@ -116,7 +123,7 @@ To update your app's code:
                         try
                         {
                             // Delete the conversationState for the current conversation to prevent the
-                            // bot from getting stuck in a error-loop caused by being in a bad state.
+                            // bot from getting stuck in an error-loop caused by being in a bad state.
                             // conversationState must be thought of as similar to "cookie-state" in a Web pages.
                             await conversationState.DeleteAsync(turnContext);
                         }
@@ -234,7 +241,8 @@ To update your app's code:
         });
     ```
 
----
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+code+to+handle+an+access+token&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code%3Ftabs%3Dcs1%252Ccs2%252Ccs3%252Ccs4%252Ccs5%26pivots%3Dbot-app%23add-code-to-handle-an-access-token&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code.md&documentVersionIndependentId=039ff5cc-7243-ce4b-527e-c152755eeb72&platformId=915789b2-9617-01bb-fb21-d6789a634ed8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ### Consent dialog for getting access token
 
@@ -371,6 +379,9 @@ async loginStep(stepContext) {
 > [!NOTE]
 > The code snippets use the Waterfall Dialog. For more information, see [About component and waterfall dialogs](/azure/bot-service/bot-builder-concept-waterfall-dialogs?view=azure-bot-service-4.0&preserve-view=true).
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+code+to+receive+the+token&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code%3Ftabs%3Dcs1%252Ccs2%252Ccs3%252Ccs4%252Ccs5%26pivots%3Dbot-app%23add-code-to-receive-the-token&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code.md&documentVersionIndependentId=039ff5cc-7243-ce4b-527e-c152755eeb72&platformId=915789b2-9617-01bb-fb21-d6789a634ed8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ### Validate the access token
 
 Web APIs on your server must decode the access token and verify if it's sent from the client.
@@ -385,7 +396,6 @@ There are a number of libraries available that can handle JWT validation. Basic 
 - Checking that the token is well-formed.
 - Checking that the token was issued by the intended authority.
 - Checking that the token is targeted to the web API.
-
 Keep in mind the following guidelines when validating the token:
 
 - Valid SSO tokens are issued by Microsoft Entra ID. The `iss` claim in the token must start with this value.
@@ -471,7 +481,8 @@ Use the following code snippet to handle the access token in case the app user l
         }
     }
 ```
-
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Handle+app+user+log+out&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code%3Ftabs%3Dcs1%252Ccs2%252Ccs3%252Ccs4%252Ccs5%26pivots%3Dmex-app%23handle-app-user-log-out&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code.md&documentVersionIndependentId=039ff5cc-7243-ce4b-527e-c152755eeb72&platformId=915789b2-9617-01bb-fb21-d6789a634ed8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 ---
 
 ## Code sample
