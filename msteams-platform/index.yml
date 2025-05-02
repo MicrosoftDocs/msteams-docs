@@ -56,7 +56,7 @@ conceptualContent:
         - url: /microsoft-365-copilot/extensibility/
           itemType: concept
           text: Extend Microsoft 365 Copilot
-        - url: teams-ai-library-tutorial
+        - url: Teams-AI-library-tutorial.yml
           itemType: learn
           text: BBuild a custom engine agent
         - url: /training/modules/microsoft-teams-publish-app-to-store
@@ -77,8 +77,8 @@ conceptualContent:
         - url: /training/modules/msteams-task-modules/
           itemType: learn
           text: Collect input and gather information with task modules
-        - url: /m365-apps/overview
-          itemType: learn
+        - url: /microsoftteams/platform/m365-apps/overview
+          itemType: overview
           text: Extend Teams apps across Microsoft 365
 
     # Card
