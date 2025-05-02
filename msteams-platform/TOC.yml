@@ -424,7 +424,7 @@
     - name: Build a dashboard tab app
       href: tabs/how-to/Build-a-dashboard-tab-app.md
       displayName: Dashboard, widget, Graph API call
-- name: Build bots
+- name: Build bots and agents
   items:
   - name: Overview
     href: bots/overview.md
@@ -819,6 +819,9 @@
     - name: Enable SSO for API based message extensions
       href: messaging-extensions/api-based-microsoft-entra.md
       display name: API key, API key registration, access token, register API key, SSO
+    - name: Enable OAuth for API based message extension
+      href: messaging-extensions/api-based-oauth.md
+      displayName: Authorization server, Developer Portal, OAuth authentication, OAuth 2.0, Identity platform
   - name: Enable nested app authentication
     href: concepts/authentication/nested-authentication.md
     displayName: Nested app, authentication, tabs, single page apps, use case scenario, MSAL, SSO
