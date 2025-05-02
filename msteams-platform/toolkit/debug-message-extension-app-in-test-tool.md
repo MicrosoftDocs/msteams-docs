@@ -73,7 +73,7 @@ Ensure that you install the following tools to build and deploy your bot in Test
 
 1. Based on the option selected in the earlier step, select the following tab:
 
-    ## Search Command
+   ## Search Command
 
     To test a **Search Command** in the Test Tool, follow these steps:
 
@@ -108,7 +108,7 @@ Ensure that you install the following tools to build and deploy your bot in Test
 
    You can test an **Action Command** in the Test Tool in the following ways:
 
-      # [**+** icon](#tab/action-commands)
+   # [**+** icon](#tab/action-commands)
 
       1. Select the **+** icon in the message compose area.
 
@@ -116,7 +116,7 @@ Ensure that you install the following tools to build and deploy your bot in Test
 
          :::image type="content" source="../assets/images/teams-toolkit-v2/action-commands.png" alt-text="Screenshot shows the action command.":::
 
-      # [**...** icon](#tab/action-commands1)
+   # [**...** icon](#tab/action-commands1)
 
       1. Above the message, select the **...** option.
 
@@ -258,7 +258,7 @@ In Teams, commands are available in the app manifest. Since the Test Tool doesn'
 </br>
 
 <details>
-<summary>How to do Static list of parameters work in Teams app Test Tool?</summary>
+<summary>How do Static list of parameters work in Teams app Test Tool?</summary>
 
 The static list of parameters is the simple method to create dialogs for action commands, however you can't format the static list.
 
