@@ -50,8 +50,9 @@ You can choose one or more of the following capabilities for your bot app. Use e
 
 * **Custom engine agent**: A custom engine agent is a bot that uses AI to perform automated tasks. It understands natural language, can engage in conversations, and answer questions. You can use them for virtual assistance, language translation, predictive analysis, and more. Custom engine agents, which are AI-enabled Teams bots, can be built using custom AI models of your choice.
 
-  For more information, see [how to build a custom engine agent](../Teams-AI-library-tutorial.yml).
-  You can also use Teams AI library v2 for adding more advanced features to your agents. For more information, see [add link to the Teams AI library v2 repo].
+  * For more information, see [how to build a custom engine agent](../Teams-AI-library-tutorial.yml).
+
+  * You can also use Teams AI library v2 for adding more advanced features to your agents. For more information, see [quick start guide](/microsoftteams/platform/teams-ai-library/getting-started/quickstart).
 
 * **Conventional bots**:
 
