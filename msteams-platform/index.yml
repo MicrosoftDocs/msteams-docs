@@ -2,7 +2,7 @@
 
 title: Microsoft Teams developer documentation # < 60 chars
 # brand: aspnet | azure | dotnet | dynamics | m365 | ms-graph | office | power-bi | power-platform | sql | sql-server | vs | visual-studio | windows | xamarin
-summary: "Get documentation, sample code, tutorials, and more to help you build custom Microsoft Teams apps."
+summary: "Get documentation, sample code, tutorials, and more to help you build custom Microsoft Teams apps and agents."
 brand: teams
 
 metadata:
