@@ -31,6 +31,10 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
+**2025 May**
+
+* **Teams AI Library v2**: [Introducing Teams AI library v2 for building agents tailored for working in Microsoft Teams](/microsoftteams/platform/teams-ai-library/getting-started/quickstart)
+
 **2025 April**
 
 * ***April 30, 2025***: [Introducing streaming messages for bot apps](bots/streaming-ux.md).
