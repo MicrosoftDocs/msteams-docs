@@ -87,8 +87,8 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.7",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.21/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.21",
   "version": "1.0",
   "id": "00000000-0000-0000-0000-000000000000",
   "packageName": "com.microsoft.teams.samples.auth",
@@ -143,7 +143,8 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
     {
       "botId": "<<REGISTERED_BOT_ID>>",
       "scopes": [
-        "personal"
+        "personal",
+        "groupChat"
       ]
     }
   ],
