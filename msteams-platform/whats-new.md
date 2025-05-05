@@ -33,7 +33,7 @@ Teams platform features that are available to all app developers.
 
 **2025 May**
 
-* **Teams AI Library v2**: [Introducing Teams AI library v2 for building agents tailored for working in Microsoft Teams](/microsoftteams/platform/teams-ai-library/getting-started/quickstart)
+* **Teams AI Library v2 (preview)**: [Introducing Teams AI library v2 for building agents tailored for working in Microsoft Teams](/microsoftteams/platform/teams-ai-library/getting-started/quickstart)
 
 **2025 April**
 
