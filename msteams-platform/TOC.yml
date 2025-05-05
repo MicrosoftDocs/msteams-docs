@@ -438,7 +438,7 @@
   - name: Teams AI library v2 (preview)
     items:
       - name: Quick start guide
-        href: /teams-ai-library/getting-started/quickstart?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+        href: /microsoftteams/platform/teams-ai-library/getting-started/quickstart?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
   - name: Teams AI library v1
     items:
     - name: What is Teams AI library?
