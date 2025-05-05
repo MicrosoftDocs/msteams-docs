@@ -79,7 +79,7 @@ items:
 
    ``` cmd
 
-   npm install -g @microsoft/teamsapp-cli
+   npm install -g @microsoft/atk-cli
 
    ```
 
@@ -87,7 +87,7 @@ items:
 
    ```cmd
 
-   sudo npm install -g --unsafe-perm @microsoft/teamsapp-cli
+   sudo npm install -g --unsafe-perm @microsoft/atk-cli
 
    ```
 
@@ -95,7 +95,7 @@ items:
 
    Ensure you add the npm global cache to your path. This step is normally done as part of the Node.js installer.
 
-   You can use the CLI with the `teamsapp` command. Verify that the command is working by running `teamsapp -h`.
+   You can use the CLI with the `atk` command. Verify that the command is working by running `atk -h`.
 
    > [!CAUTION]
    > Before you can run Teamsapp in PowerShell terminals, you must enable the 'remote signed' execution policy for PowerShell.
@@ -190,7 +190,7 @@ items:
 
         ```cmd
 
-        teamsapp account login m365
+        atk account login m365
 
         ```
 
@@ -200,7 +200,7 @@ items:
 
         ```cmd
 
-        teamsapp account login azure
+        atk account login azure
 
         ```
 

@@ -113,7 +113,7 @@ Teams Toolkit launches your browser instance and opens a webpage to load Teams c
 1. Run the following command to provision the app to Teams:
 
     ```cmd
-    teamsapp provision --env local
+    atk provision --env local
     ```
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/provision-env-local.png" alt-text="Screenshot shows provision the app to Teams.":::
@@ -121,7 +121,7 @@ Teams Toolkit launches your browser instance and opens a webpage to load Teams c
 1. Run the following command to deploy the app to Teams:
 
     ```cmd
-    teamsapp deploy --env local
+    atk deploy --env local
     ```
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/deploy-env-local.png" alt-text="Screenshot shows deploy the app to Teams.":::
@@ -129,13 +129,13 @@ Teams Toolkit launches your browser instance and opens a webpage to load Teams c
 1. Run the following command to preview your application locally:
 
     ```cmd
-    teamsapp preview --env local
+    atk preview --env local
     ```
 
 If you want to preview a notification bot hosted on Azure Functions, run the following command in your project directory:
 
 ```cmd
-npm run prepare-storage:teamsapp
+npm run prepare-storage:atk
 ```
 
 ---
@@ -254,7 +254,7 @@ The following table lists the debug configuration names and types for project wi
 
 ### Uploads the Teams app
 
-The configuration **Attach to Frontend** or **Launch App** launches Microsoft Edge or Chrome browser instance to load Teams client in web page. After the Teams client is loaded, upload Teams app that is controlled by the uploading URL defined in the launch configurations [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}). 
+The configuration **Attach to Frontend** or **Launch App** launches Microsoft Edge or Chrome browser instance to load Teams client in web page. After the Teams client is loaded, upload Teams app that is controlled by the uploading URL defined in the launch configurations [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}).
 
 When Teams client opens in the web browser, perform the following steps:
 
