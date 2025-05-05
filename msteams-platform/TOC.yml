@@ -425,8 +425,8 @@
       href: tabs/how-to/Build-a-dashboard-tab-app.md
       displayName: Dashboard, widget, Graph API call
 - name: Build bots and agents
-  items: 
-  expanded: true
+  expand: true
+  items:
   - name: Overview
     href: bots/overview.md
     displayName: AI bot, bot capability, command bot, workflow bot, custom engine agent, agent, conversational bot, activity handler, bot logic, notification bot
