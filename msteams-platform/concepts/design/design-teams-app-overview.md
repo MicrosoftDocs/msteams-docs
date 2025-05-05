@@ -9,6 +9,8 @@ ms.date: 12/27/2022
 ---
 # Designing your Microsoft Teams app
 
+[!INCLUDE [agent-information](../../includes/agent-information.md)]
+
 :::image type="content" source="../../assets/images/design-guidelines-overview.png" alt-text="Conceptual image introducing the Microsoft Teams design guidelines.":::
 
 Whether you're a designer, product manager, developer, or maker using low-code tools, these guidelines can help you quickly make the right design decisions for your Microsoft Teams app.
