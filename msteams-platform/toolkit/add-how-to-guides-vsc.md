@@ -46,7 +46,7 @@ Microsoft Teams Toolkit project templates focus on getting started with an app t
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add-capabilities-command-palette_1.png" alt-text="Screenshot shows the Command Palette option.":::
 
-   1. Select **Teams: View How-to Guides**.
+   1. Select **Microsoft 365 Agents: View How-to Guides**.
 
       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/teams-add-features_1.png" alt-text="Screenshot shows option to add capabilities by using command palette.":::
 
