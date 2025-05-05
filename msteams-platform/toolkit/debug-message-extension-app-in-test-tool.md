@@ -258,7 +258,7 @@ In Teams, commands are available in the app manifest. Since the Test Tool doesn'
 </br>
 
 <details>
-<summary>How do Static list of parameters work in Teams app Test Tool?</summary>
+<summary>How does a static list of parameters work in Teams app Test Tool?</summary>
 
 The static list of parameters is the simple method to create dialogs for action commands, however you can't format the static list.
 

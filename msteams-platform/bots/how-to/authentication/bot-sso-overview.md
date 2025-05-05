@@ -17,7 +17,7 @@ This section covers SSO configuration required for bot and messaging extension a
 
 ## SSO user experience in Teams
 
-App users sign in to Teams using either their personal Microsoft account or Microsoft 365 account. You can take advantage of this and use SSO to authenticate and authorize the app users. Microsoft Entra ID provides app users access to your bot or message extension app.
+App users sign in to Teams using either personal Microsoft account or Microsoft 365 account. You can take advantage of this and use SSO to authenticate and authorize the app users. Microsoft Entra ID provides app users access to your bot or message extension app.
 
 - Teams authenticates and stores the identity of its app user.
 - Your bot uses the stored identity of the app user who is already validated by Teams.
@@ -31,7 +31,7 @@ Now, let's see what happens at the backend during runtime to achieve SSO experie
 
 ## SSO in Teams at runtime
 
-Achieve SSO in a bot or message extension app by obtaining an access token for the Teams app user who's signed in. This process involves the bot app client and server, Teams client, Bot Framework, and Microsoft Entra ID. During this interaction, the app user must give consent to obtain the access token in a multitenant environment.
+Achieve SSO in a bot or message extension app by obtaining access token for the Teams app user who's signed in. This process involves the bot app client and server, Teams client, Bot Framework, and Microsoft Entra ID. During this interaction, the app user must give consent to obtain the access token in a multitenant environment.
 
 The following image shows how SSO works when a Teams app user attempts to access the bot or message extension app:
 
