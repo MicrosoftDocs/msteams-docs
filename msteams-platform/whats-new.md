@@ -470,7 +470,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2025 May**
 
-* May 06th, 2025: **Teams AI Library v2 (preview)**: [Introducing Teams AI Library v2 with all the SDKs you need to create collaborative agents for Microsoft Teams, now in one place.](/microsoftteams/platform/teams-ai-library/getting-started/quickstart)
+* **May 06, 2025**: [Introducing Teams AI Library v2. This new library consolidates all the SDKs needed to create collaborative agents for Microsoft Teams.](/microsoftteams/platform/teams-ai-library/getting-started/quickstart)
 
 :::column-end:::
 :::row-end:::
