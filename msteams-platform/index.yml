@@ -2,7 +2,7 @@
 
 title: Microsoft Teams developer documentation # < 60 chars
 # brand: aspnet | azure | dotnet | dynamics | m365 | ms-graph | office | power-bi | power-platform | sql | sql-server | vs | visual-studio | windows | xamarin
-summary: "Get documentation, sample code, tutorials, and more to help you build custom Microsoft Teams apps."
+summary: "Get documentation, sample code, tutorials, and more to help you build custom Microsoft Teams apps and agents."
 brand: teams
 
 metadata:
@@ -25,19 +25,19 @@ highlightedContent:
     - title: New to Teams development? 🚀Start here! 
       itemType: get-started
       url: /microsoftteams/platform/get-started/get-started-overview
-    - title: Plan your app
+    - title: Plan your app or agent
       itemType: overview
       url: /microsoftteams/platform/concepts/design/understand-use-cases
-    - title: Design your app
+    - title: Design your app or agent
       itemType: overview
       url: /microsoftteams/platform/concepts/design/design-teams-app-overview
-    - title: Build your app 
+    - title: Build your app or agent
       itemType: how-to-guide
       url: /microsoftteams/platform/overview#start-building
-    - title: Enhance your app with Microsoft Graph
+    - title: Enhance your app or agent with Microsoft Graph
       itemType: how-to-guide
       url:  /graph/teams-concept-overview
-    - title: Publish your app to the Microsoft Teams Store
+    - title: Publish your app or agent to the Microsoft Teams Store
       itemType: deploy
       url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/publish
     - title: Code samples
@@ -53,9 +53,12 @@ conceptualContent:
   # Card
     - title: Learn
       links:
-        - url: /microsoft-365-copilot/extensibility/
+        - url: bots/how-to/teams-conversational-ai/ai-ux.md        
           itemType: concept
-          text: Extend Microsoft 365 Copilot
+          text: Custom engine agent user experience
+        - url: Teams-AI-library-tutorial.yml
+          itemType: learn
+          text: Build a custom engine agent
         - url: /training/modules/microsoft-teams-publish-app-to-store
           itemType: learn
           text: Publish Teams apps in Microsoft Teams Store
@@ -74,9 +77,6 @@ conceptualContent:
         - url: /training/modules/msteams-task-modules/
           itemType: learn
           text: Collect input and gather information with task modules
-        - url: /training/modules/msteams-webhooks-connectors/
-          itemType: learn
-          text: Connect web services to channels and teams with webhooks and connectors for Microsoft 365 Groups
         - url: /microsoftteams/platform/m365-apps/overview
           itemType: overview
           text: Extend Teams apps across Microsoft 365
@@ -86,7 +86,7 @@ conceptualContent:
       links:    
         - url: /microsoftteams/platform/bots/what-are-bots
           itemType: overview
-          text: Bots
+          text: Bots and agents
         - url: /microsoftteams/platform/task-modules-and-cards/cards-and-task-modules
           itemType: concept
           text: Cards and task modules

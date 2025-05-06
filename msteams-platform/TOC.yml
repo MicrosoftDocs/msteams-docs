@@ -38,7 +38,7 @@
   - name: Tool options and code samples
     href: get-started/tool-options-and-code-samples.md
     displayName: Teams app samples, tools to build Teams app
-- name: Plan your app
+- name: Plan your app or agent
   items:
   - name: Overview
     href: concepts/app-fundamentals-overview.md
@@ -77,7 +77,7 @@
     - name: Plan for sovereign clouds
       href: concepts/sovereign-cloud.md
       displayName: Teams operated by 21Vianet, gallatin
-- name: Design your app
+- name: Design your app or agent
   items:
   - name: Overview
     href: concepts/design/design-teams-app-overview.md
@@ -424,12 +424,13 @@
     - name: Build a dashboard tab app
       href: tabs/how-to/Build-a-dashboard-tab-app.md
       displayName: Dashboard, widget, Graph API call
-- name: Build bots
+- name: Build bots and agents
+  expand: true
   items:
   - name: Overview
     href: bots/overview.md
     displayName: AI bot, bot capability, command bot, workflow bot, custom engine agent, agent, conversational bot, activity handler, bot logic, notification bot
-  - name: Types of bots
+  - name: Bots and agents in Teams
     href: bots/build-a-bot.md
     displayName: Bot samples, Code sample, Teams AI library, Microsoft Bot Framework SDK, build a bot, build AI bot, command bot, workflow bot, custom engine agent, agent, conversational bot, notification bot, tools, platforms, Azure OpenAI, Teams Toolkit, Azure AI Foundry
   - name: Build custom engine agent
@@ -953,7 +954,7 @@
         - name: Public developer preview app manifest
           href: resources/schema/manifest-schema-dev-preview.md
           displayName: properties
-- name: Test your app
+- name: Test your app or agent
   items:
   - name: Overview
     href: concepts/build-and-test/test-app-overview.md
@@ -992,7 +993,7 @@
       href: graph-api/rsc/test-team-rsc-json-file.md
     - name: JSON test file for chat RSC
       href: graph-api/rsc/test-chat-rsc-json-file.md
-- name: Publish your app
+- name: Publish your app or agent
   items:
   - name: Overview
     href: concepts/deploy-and-publish/apps-publish-overview.md
