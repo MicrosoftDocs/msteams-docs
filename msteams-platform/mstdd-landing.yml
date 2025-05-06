@@ -1,7 +1,7 @@
 ### YamlMime:Landing
 
 title: Microsoft Teams developer documentation # < 60 chars
-summary: Welcome to overview of Microsoft Teams developer documentation. Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work. # < 160 chars
+summary: Welcome to overview of Microsoft Teams developer documentation. Teams apps and agents bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work. # < 160 chars
 
 metadata:
   title: Microsoft Teams Developer Documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
@@ -50,7 +50,7 @@ landingContent:
     links:
     - text: Build tabs
       url: ~/tabs/what-are-tabs.md
-    - text: Build bots
+    - text: Build bots and agents
       url: ~/bots/what-are-bots.md
     - text: Build message extensions
       url: ~/messaging-extensions/what-are-messaging-extensions.md
