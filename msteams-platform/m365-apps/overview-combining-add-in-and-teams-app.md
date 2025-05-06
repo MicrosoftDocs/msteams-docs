@@ -29,7 +29,7 @@ There can be no algorithmic procedure for merging an add-in and a Teams app for 
 > - **IIS/.NET**:
 >
 >   - Add-in projects can be created in Visual Studio with the [Office Developer Tools](https://visualstudio.microsoft.com/vs/features/office-tools/), in which case the web application portion is built on ASP.NET and Internet Information Server (IIS).
->   - Teams app projects can be created in Visual Studio with the [Microsoft 365 Agents Toolkit for Visual Studio](/microsoftteams/platform/toolkit/toolkit-v4/install-teams-toolkit-vs), in which case the web application portion is a Blazor/C# application.
+>   - Teams app projects can be created in Visual Studio with [Microsoft 365 Agents Toolkit for Visual Studio](/microsoftteams/platform/toolkit/toolkit-v4/install-teams-toolkit-vs), in which case the web application portion is a Blazor/C# application.
 >
 > - **Node.js server/JavaScript or TypeScript**:
 >
