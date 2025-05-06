@@ -119,7 +119,7 @@ You can view usage for your [third-party app](../../promote-app-adoption.md#acce
 
 :::image type="content" source="../../assets/images/tdp/analy-dev-portal.png" alt-text="Screenshot shows the analytics page of your app and agent in Developer Portal." lightbox="../../assets/images/tdp/analy-dev-portal.png":::
 
-To learn how to import your published app and agent into Developer Portal, see [import an existing app](~/concepts/build-and-test/teams-developer-portal.md#import-an-existing-app).
+To learn how to import your published app into Developer Portal, see [import an existing app](~/concepts/build-and-test/teams-developer-portal.md#import-an-existing-app).
 
 ## Metric definitions
 
@@ -152,7 +152,7 @@ To gain insights on the app and agent usage and analyze trends, explore the foll
 * [Host product](#host-product)
 * [Capability](#capability)
 
-### App usage
+### App and agent usage
 
 The **App usage** tab shows the following metrics to help you track engagement and user behavior:
 
@@ -161,19 +161,19 @@ The **App usage** tab shows the following metrics to help you track engagement a
 * [Usage by country or region](#usage-by-country-or-region)
 * [Usage intensity](#usage-intensity)
 
-:::image type="content" source="../../assets/images/tdp/tdp-app-usage.png" alt-text="Screenshot shows the app and agent usage chart of your published app or agent in Developer Portal." lightbox="../../assets/images/tdp/tdp-app-usage.png":::
+:::image type="content" source="../../assets/images/tdp/tdp-app-usage.png" alt-text="Screenshot shows the app and agent usage chart of your published app in Developer Portal." lightbox="../../assets/images/tdp/tdp-app-usage.png":::
 
 #### Usage over time
 
 The **Usage over time** chart shows the number of active users or tenants who opened and used your app and agent across different time periods.
 
-:::image type="content" source="../../assets/images/tdp/tdp-usage-over-time.png" alt-text="Screenshot shows the app and agent usage over time of your published app or agent in Developer Portal.":::
+:::image type="content" source="../../assets/images/tdp/tdp-usage-over-time.png" alt-text="Screenshot shows the app and agent usage over time of your published app in Developer Portal.":::
 
 #### Usage by retention state
 
 The **Usage by retention state** chart allows you to track four key retention or churn metrics for your app and agent over time.
 
-:::image type="content" source="../../assets/images/tdp/tdp-retention.png" alt-text="Screenshot shows the app and agent usage by retention state of your published app or agent in Developer Portal.":::
+:::image type="content" source="../../assets/images/tdp/tdp-retention.png" alt-text="Screenshot shows the app and agent usage by retention state of your published app in Developer Portal.":::
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
@@ -186,13 +186,13 @@ The **Usage by retention state** chart allows you to track four key retention or
 
 The **Usage by country/region** chart shows the various regions where your app and agent is being used. You can select **View details** for more information on active users in different countries or regions.
 
-:::image type="content" source="../../assets/images/tdp/tdp-country.png" alt-text="Screenshot shows the app and agent usage by country or region of your published app or agent in Developer Portal." lightbox="../../assets/images/tdp/tdp-region.png":::
+:::image type="content" source="../../assets/images/tdp/tdp-country.png" alt-text="Screenshot shows the app and agent usage by country or region of your published app in Developer Portal." lightbox="../../assets/images/tdp/tdp-region.png":::
 
 #### Usage intensity
 
 The **Usage intensity** chart shows frequency and depth of use. They're one indicator that users are finding value in continuing to use your app and agent.
 
-:::image type="content" source="../../assets/images/tdp/tdp-usage-intensity.png" alt-text="Screenshot shows the app and agent usage intensity of your published app or agent in Developer Portal.":::
+:::image type="content" source="../../assets/images/tdp/tdp-usage-intensity.png" alt-text="Screenshot shows the app and agent usage intensity of your published app in Developer Portal.":::
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
@@ -209,7 +209,7 @@ The **My App Dashboard** table shows the latest R30 (Rolling 30 days) data for e
 
 You can select each of these metric names to see trends over time.
 
-:::image type="content" source="../../assets/images/tdp/tdp-app-dashboard-view.png" alt-text="Screenshot shows the app capability usage of your published app or agent in Developer Portal." lightbox="../../assets/images/tdp/tdp-app-dashboard-view.png":::
+:::image type="content" source="../../assets/images/tdp/tdp-app-dashboard-view.png" alt-text="Screenshot shows the app capability usage of your published app in Developer Portal." lightbox="../../assets/images/tdp/tdp-app-dashboard-view.png":::
 
 ### Host product
 
@@ -221,19 +221,19 @@ The **Host product** tab shows the following usage analytics for app and agent:
 
 The Key Performance Indicator (KPI) cards display metrics such as the host with most active users and the operating system (OS) with most active users based on monthly, weekly, and daily data in a metric card format.
 
-:::image type="content" source="../../assets/images/tdp/tdp-host-product.png" alt-text="Screenshot shows the app and agent usage in different host products of your published app or agent in Developer Portal." lightbox="../../assets/images/tdp/tdp-host-product-full.png":::
+:::image type="content" source="../../assets/images/tdp/tdp-host-product.png" alt-text="Screenshot shows the app and agent usage in different host products of your published app in Developer Portal." lightbox="../../assets/images/tdp/tdp-host-product-full.png":::
 
 #### App and agent usage by host product
 
 The **App usage by host product** chart shows your app's or agent's active usage across various host products, including **Microsoft 365 app**, **Microsoft 365 Copilot**, **Outlook**, and **Teams**.
 
-:::image type="content" source="../../assets/images/tdp/tdp-host-usage.png" alt-text="Screenshot shows the app and agent usage in different host product of your published app or agent in Developer Portal.":::
+:::image type="content" source="../../assets/images/tdp/tdp-host-usage.png" alt-text="Screenshot shows the app and agent usage in different host product of your published app in Developer Portal.":::
 
 #### Usage by platform
 
 The **Usage by platform** chart shows your app's and agent's active usage across various platforms, such as **Desktop**, **Mobile**, **Web**, and other platforms where the app or agent is used.
 
-:::image type="content" source="../../assets/images/tdp/tdp-usage-platform.png" alt-text="Screenshot shows the app and agent usage in different platforms of your published app or agent in Developer Portal.":::
+:::image type="content" source="../../assets/images/tdp/tdp-usage-platform.png" alt-text="Screenshot shows the app and agent usage in different platforms of your published app in Developer Portal.":::
 
    > [!NOTE]
    > The `Preview` tag indicates that the metric **Usage by host product** is in its initial phase and might undergo modifications as we collect feedback and continue to improve the experience.
@@ -242,7 +242,7 @@ The **Usage by platform** chart shows your app's and agent's active usage across
 
 The **Usage by operating system** chart shows your app's or agent's active usage across various operating systems, such as **Android**, **Chrome OS**, **Linux**, **Mac**, **Windows**, and **iOS**.
 
-:::image type="content" source="../../assets/images/tdp/tdp-operating-system.png" alt-text="Screenshot shows the app and agent usage in different OS of your published app or agent in Developer Portal.":::
+:::image type="content" source="../../assets/images/tdp/tdp-operating-system.png" alt-text="Screenshot shows the app and agent usage in different OS of your published app in Developer Portal.":::
 
 ### Capability
 
@@ -256,7 +256,7 @@ The **Capability** tab shows the usage of individual app and agent capabilities 
 * Connector
 * Personal tab
 
-:::image type="content" source="../../assets/images/tdp/tdp-app-capability.png" alt-text="Screenshot shows the app and agent capability usage in different host products of your published app or agent in Developer Portal." lightbox="../../assets/images/tdp/tdp-app-capability-full.png":::
+:::image type="content" source="../../assets/images/tdp/tdp-app-capability.png" alt-text="Screenshot shows the app and agent capability usage in different host products of your published app in Developer Portal." lightbox="../../assets/images/tdp/tdp-app-capability-full.png":::
 
 > [!NOTE]
 > **Microsoft 365 Copilot Agent** includes usage of declarative agents only. The usage of custom engine agent is expected to be introduced later in Developer Portal.
