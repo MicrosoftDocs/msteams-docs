@@ -34,10 +34,6 @@ You can leverage Teams AI library to:
 
 Teams AI library supports both JavaScript and C#. It allows you to harness AI capabilities to build intelligent, user-friendly applications for Microsoft Teams. The library provides the flexibility to create AI-powered experiences using the tools and languages that best suits your project needs and ensures the best possible outcomes for your Teams users.
 
-### Teams AI library v2
-
-Teams AI library v2 helps you build integrated AI experiences in Microsoft Teams. Use Teams-specific features like real-time collaboration, advanced cards, meetings, and group scope. These features help create intuitive AI-powered solutions for Teams users. For more information, see [add link to the Teams AI library v2 repo].
-
 ## How do Teams AI library features benefit me?
 
 Teams AI library offers a variety of features that can simplify the development of your custom engine agent.
@@ -344,5 +340,6 @@ The following code snippet shows how to enable tool choice and to toggle paralle
 
 ## See also
 
+* [Teams AI library v2 (preview)](/microsoftteams/platform/teams-ai-library/welcome/overview)
 * [Copilot handoff](../conversations/bot-copilot-handoff.md)
 * [Teams AI library FAQs](../../../teams-faq.md#teams-ai-library)

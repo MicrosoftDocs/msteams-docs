@@ -438,8 +438,8 @@
     displayName: AI bot, Teams AI library, custom agent
   - name: Teams AI library v2 (preview)
     items:
-      - name: Quick start guide
-        href: /microsoftteams/platform/teams-ai-library/getting-started/quickstart
+      - name: Get started with Teams AI library v2 (preview)
+        href: /microsoftteams/platform/teams-ai-library/welcome/overview
   - name: Teams AI library v1
     items:
     - name: What is Teams AI library?
