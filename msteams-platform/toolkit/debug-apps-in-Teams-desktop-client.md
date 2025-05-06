@@ -52,13 +52,9 @@ Ensure you install the following tools for building and deploying your app in Te
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug-apps-in-teams-desktop-client/custom-engine-copilot.png" alt-text="Screenshot shows the Teams Toolkit app templates.":::
 
-1. Select **Basic AI Chatbot**.
+1. Select **Basic Custom Engine Agent**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug-apps-in-teams-desktop-client/app-feature.png" alt-text="Screenshot shows the app capabilities to add to your new app.":::
-
-1. Select **JavaScript**.
-
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/select-language-tab.png" alt-text="Screenshot shows the option to select the programming language.":::
 
 1. Select **OpenAI**.
 
