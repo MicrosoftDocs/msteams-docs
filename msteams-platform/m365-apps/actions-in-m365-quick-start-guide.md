@@ -22,7 +22,7 @@ Get started with Actions in Microsoft 365, which helps integrate an app into the
 
 ### Build and run the sample app
 
-Let's learn how to build and run a sample app in your local environment. You'll use Teams Toolkit for Visual Studio Code to setup and sideload the application to your tenant. Let’s get started!
+Let's learn how to build and run a sample app in your local environment. You'll use Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) for Visual Studio Code to setup and sideload the application to your tenant. Let’s get started!
 
 1. Go to the [sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/m365-actions-preview/nodejs).
 

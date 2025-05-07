@@ -39,11 +39,11 @@ To preview your Teams meeting app in Outlook, ensure the following:
 * [Visual Studio Code](https://code.visualstudio.com/) installed to your development environment.
 * [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) extension for Visual Studio Code.
 
-To preview your Teams meeting app in Outlook, you can either build a new meeting app with Microsoft 365 Agents Toolkit or extend an existing Teams meeting app in Outlook.
+To preview your Teams meeting app in Outlook, you can either build a new meeting app with Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) or extend an existing Teams meeting app in Outlook.
 
 # [Build Teams meeting app for Outlook](#tab/ttk)
 
-You can build a Teams meeting app for Outlook through the Microsoft 365 Agents Toolkit extension for Visual Studio Code. To build a Teams meeting app to preview in Outlook:
+You can build a Teams meeting app for Outlook through Agents Toolkit extension for Visual Studio Code. To build a Teams meeting app to preview in Outlook:
 
 1. Go to Teams and sign in using your sandbox tenant account.
 
@@ -55,7 +55,7 @@ You can build a Teams meeting app for Outlook through the Microsoft 365 Agents T
 
 1. Select **My First Meeting App** > **Create** and specify the folder to create the workspace.
 
-    :::image type="content" source="images/toolkit-meeting-app-sample.png" alt-text="My First Meeting App sample in Microsoft 365 Agents Toolkit":::
+    :::image type="content" source="images/toolkit-meeting-app-sample.png" alt-text="My First Meeting App sample in Agents Toolkit":::
 
 1. Select **F5** to debug and run the sample locally in Teams. Teams prompts you to install the app.
 
@@ -102,9 +102,9 @@ Open your Teams app manifest and update the `$schema` and `manifestVersion` prop
 
 Use TeamsJS client library version 2.5.0 or later to extend your Teams meeting app to run in Outlook. If your app uses TeamsJS v2.5.0 or later, application code changes aren't required to run in Outlook.
 
-If you need to upgrade your TeamsJS npm package from v1.x.x to the latest v2.x.x TeamsJS, you can use Microsoft 365 Agents Toolkit to help identify and automate the required code changes. For more information, see [TeamsJS library](../tabs/how-to/using-teams-client-library.md#whats-new-in-teamsjs-version-2xx).
+If you need to upgrade your TeamsJS npm package from v1.x.x to the latest v2.x.x TeamsJS, you can use Agents Toolkit to help identify and automate the required code changes. For more information, see [TeamsJS library](../tabs/how-to/using-teams-client-library.md#whats-new-in-teamsjs-version-2xx).
 
-Follow these steps to update your TeamsJS to the latest version using Microsoft 365 Agents Toolkit:
+Follow these steps to update your TeamsJS to the latest version using Agents Toolkit:
 
 1. Open your app in Visual Studio Code and select **Microsoft 365 Agents Toolkit** extension.
 1. Under **View**, select **Command Palette...** or **Ctrl+Shift+P**.
@@ -119,7 +119,7 @@ Your package.json file references `@microsoft/teams-js@2.x.x` and your `*.js/.ts
 
 > [!NOTE]
 >
-> Upgrading to the latest TeamsJS version through Microsoft 365 Agents Toolkit doesn't update the code in the html files. You must update the html files manually.
+> Upgrading to the latest TeamsJS version through Agents Toolkit doesn't update the code in the html files. You must update the html files manually.
 
 ### Configure CSP headers for Outlook
 
@@ -149,7 +149,7 @@ You can [upload your custom app in Teams admin center](#upload-your-custom-app-i
 
 To test your app in Microsoft 365 and Outlook, upload your [app package](../concepts/build-and-test/apps-package.md) to Teams admin center.
 
-1. Package your Teams [app manifest](../resources/schema/manifest-schema.md) and [app icons](/microsoftteams/platform/resources/schema/manifest-schema#icons) in a zip file. To create an app package through Microsoft 365 Agents Toolkit, see [build app package.](~/toolkit/publish.md#build-app-package)
+1. Package your Teams [app manifest](../resources/schema/manifest-schema.md) and [app icons](/microsoftteams/platform/resources/schema/manifest-schema#icons) in a zip file. To create an app package through Agents Toolkit, see [build app package.](~/toolkit/publish.md#build-app-package)
 
 1. Go to [Teams admin center](https://admin.teams.microsoft.com) and select **Teams apps** > **Manage apps**.
 
