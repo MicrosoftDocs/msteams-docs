@@ -21,16 +21,20 @@ Developers can customize bot behavior to fit specific needs by specifying permis
 
 ## Enable bots to receive all channel or chat messages
 
-The RSC permissions are extended to bots, and with user consent and app installation, these permissions:
+The RSC permissions are extended to bots and agents, and with user consent and app installation, these permissions:
 
 - Allow a specified graph application to get all messages in channels and chats, respectively.
-
 - Enable a bot defined in the app manifest to receive all conversations messages without being @mentioned in relevant contexts, where the following permissions apply:
 
   - `ChannelMessage.Read.Group`
   - `ChatMessage.Read.Chat`
 
-### Filtering at mention messages
+To enable bots or agents to receive all messages:
+
+- [Filter at mention messages](#filter-at-mention-messages)
+- [Use Graph REST APIs to access all messages](#use-graph-rest-apis-to-access-all-messages)
+
+### Filter at mention messages
 
 You can enable the developer to filter bot messages and process only the messages that @mention the bots or the agent. This can be useful for several reasons:
 
@@ -59,24 +63,11 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
 Developers can create more efficient and user-friendly conversational interfaces in the bots and agents.
 
-### RSC permission
+### Use Graph REST APIs to access all messages
 
 Services that need access to all Teams message data must use the Graph REST APIs to access archived data in channels and chats. The bot or the agent must use the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions appropriately to build and enhance engaging experience for users.
 
-To pass the Microsoft Teams Store approval, the app description must include how the bot or the agent app uses the data it reads:
-
-- The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` need not be used by bots to extract large amounts of customer data.
-- The ability for bots to receive all messages in chats using `ChatMessage.Read.Chat` is only enabled after a re-installation or new installation into a chat:
-
-  - If you have an app that's using the `ChatMessage.Read.Chat` for Graph scenarios, then test the app following the steps in [upload a custom app in a conversation](channel-messages-for-bots-and-agents.md#upload-a-custom-app-in-a-conversation) and modify the app before the feature is [generally available](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=receive%2Call%2Cgroup%2Cchat%2Cmessages).
-  - If you don't want your app to receive all chat messages, use the [code snippet](#filtering-at-mention-messages) for filtering the @mention messages only.
-  - If no action is taken, your bot receives all the messages after the new installation.
-
-- Note that `ChatMessage.Read.Chat` allows the app to read chat messages, without a signed-in user. For more information, see [RSC permissions](/graph/permissions-reference).
-- The app reads only the information that's necessary for its core functions.
-- The app uses data relevant to the specific business needs that it addresses to increase productivity and collaboration.
-
-For more information, see [app descriptions](../../../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-descriptions).
+For more information about updating RSC permissions in app description, see [Update app description for bots or agents](#update-app-description-for-bots-or-agents).
 
 ## Use RSC permissions to enhance AI agents in Teams
 
@@ -96,7 +87,7 @@ For example, use RSC permissions for an AI agent to manage channel content.
 
 For your bot or agent to receive all conversation messages, specify the relevant RSC permission strings in the `authorization.permissions.resourceSpecific` property of your app manifest. For more information, see [app manifest schema](../../../resources/schema/manifest-schema.md).
 
-Here's an example of the app manifest, and a sample code snippet follows the example.
+Here's an app manifest example followed by a sample code snippet:
 
 :::image type="content" source="../../../assets/images/bots/RSC/appmanifest_2.png" alt-text="Screenshot shows the changes to be made in the app manifest.":::
 
@@ -257,6 +248,23 @@ The following steps guide you to upload and validate a bot that receives all cha
    :::image type="content" source="../../../assets/images/bots/Bot_NoMention.png" alt-text="Screenshot shows the bot replying to a message without @mention.":::
 
 ---
+
+## Update app description for bots or agents
+
+To pass the Microsoft Teams Store approval, the app description must include how the bot or the agent app uses the data it reads:
+
+- The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` need not be used by bots to extract large amounts of customer data.
+- The ability for bots to receive all messages in chats using `ChatMessage.Read.Chat` is only enabled after a re-installation or new installation into a chat:
+
+  - If you have an app that's using the `ChatMessage.Read.Chat` for Graph scenarios, then test the app following the steps in [upload a custom app in a conversation](channel-messages-for-bots-and-agents.md#upload-a-custom-app-in-a-conversation) and modify the app before the feature is [generally available](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=receive%2Call%2Cgroup%2Cchat%2Cmessages).
+  - If you don't want your app to receive all chat messages, use the [code snippet](#filtering-at-mention-messages) for filtering the @mention messages only.
+  - If no action is taken, your bot receives all the messages after the new installation.
+
+- Note that `ChatMessage.Read.Chat` allows the app to read chat messages, without a signed-in user. For more information, see [RSC permissions](/graph/permissions-reference).
+- The app reads only the information that's necessary for its core functions.
+- The app uses data relevant to the specific business needs that it addresses to increase productivity and collaboration.
+
+For more information, see [app descriptions](../../../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-descriptions).
 
 ## Code snippets
 
