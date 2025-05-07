@@ -96,7 +96,7 @@ For example, use RSC permissions for an AI agent to manage channel content.
 
 For your bot or agent to receive all conversation messages, specify the relevant RSC permission strings in the `authorization.permissions.resourceSpecific` property of your app manifest. For more information, see [app manifest schema](../../../resources/schema/manifest-schema.md).
 
-The following code provides an example of the app manifest:
+Here's an example of the app manifest, and a sample code snippet follows the example.
 
 :::image type="content" source="../../../assets/images/bots/RSC/appmanifest_2.png" alt-text="Screenshot shows the changes to be made in the app manifest.":::
 
@@ -107,7 +107,7 @@ In this code example:
 - **authorization.permissions.resourceSpecific**: RSC permissions for your app with either or both `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` specified. For more information, see [resource-specific permissions](../../../graph-api/rsc/resource-specific-consent.md#supported-rsc-permissions).
 
 <details>
-<summary>Select to view a code snippet for app manifest version 1.12 or later </summary>
+<summary>Select to view a <b>sample code snippet</b> for app manifest version 1.12 or later</summary>
 
 The following code snippet provides an example of how you can declare RSC permissions in the app manifest:
 
