@@ -2,7 +2,7 @@
 
 title: Microsoft Teams developer documentation # < 60 chars
 # brand: aspnet | azure | dotnet | dynamics | m365 | ms-graph | office | power-bi | power-platform | sql | sql-server | vs | visual-studio | windows | xamarin
-summary: "Get documentation, sample code, tutorials, and more to help you build custom Microsoft Teams apps."
+summary: "Get documentation, sample code, tutorials, and more to help you build custom Microsoft Teams apps and agents."
 brand: teams
 
 metadata:
@@ -80,6 +80,9 @@ conceptualContent:
         - url: /microsoftteams/platform/m365-apps/overview
           itemType: overview
           text: Extend Teams apps across Microsoft 365
+        - url: concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md
+          itemType: reference
+          text: Plan your app growth in Teams
 
     # Card
     - title: Capabilities
@@ -106,12 +109,12 @@ conceptualContent:
         - url: /microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
           itemType: concept
           text: Custom engine agent
+        - url: /microsoftteams/platform/teams-ai-library/welcome/overview
+          itemType: quickstart
+          text: Teams AI library v2 (preview)
         - url: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md
           itemType: concept
-          text: Teams AI library
-        - url: concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md
-          itemType: reference
-          text: Plan your app growth in Teams
+          text: Teams AI library v1
         - url: concepts/design/overview-analytics.md
           itemType: reference
           text: Plan analytics for Teams apps
