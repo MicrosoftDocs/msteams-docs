@@ -98,7 +98,7 @@ landingContent:
         url: sbs-gs-workflow-bot.yml   
     - linkListType: tutorial
       links:
-        - text: Debug your AI chat bot using Teams App Test Tool
+        - text: Debug your AI chat bot using Microsoft 365 Agents Playground
           url: ~/sbs-teams-app-test-tool.yml
         - text: Bot configuration experience
           url: ~/qsg-bot-configuration-experience.yml
