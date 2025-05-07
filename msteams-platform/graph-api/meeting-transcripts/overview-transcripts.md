@@ -6,14 +6,13 @@ ms.topic: conceptual
 ms.owner: vichug
 ms.date: 05/05/2025
 ---
+
 # Get meeting transcripts, recordings, and AI-generated insights using Graph APIs
 
 > [!NOTE]
->
-> * The APIs to fetch AI-generated meeting insights are only available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
-> * The APIs to fetch meeting transcript, recording, and AI-generated insights are metered APIs. For more information, see [payment models for meeting APIs](/graph/teams-licenses#payment-models-for-meeting-apis).
+> The APIs to fetch meeting transcript, recording, and AI-generated insights are metered APIs. For more information, see [payment models for meeting APIs](/graph/teams-licenses#payment-models-for-meeting-apis).
 
-You can now configure your app to fetch Microsoft Teams meeting transcripts, recordings, and AI-generated insights in the post-meeting scenario. Your app can use Microsoft Graph REST APIs to access and fetch transcripts, recordings, and AI insights generated for a Teams meeting that is scheduled beforehand.
+You can now configure your app to fetch Microsoft Teams meeting transcripts, recordings, and AI-generated insights in the post-meeting scenario. Your app can use Microsoft Graph REST APIs to access and fetch transcripts, recordings, and AI insights generated for a scheduled Teams meeting.
 
 ## Use cases
 
@@ -70,11 +69,11 @@ For more information about how your app can know when a transcript or recording 
 For more information about how your app can know when the meetings ends, see [subscribe to change notifications](fetch-id.md#subscribe-to-change-notifications) and [use Bot Framework to get meeting ID and organizer ID](fetch-id.md#use-bot-framework-to-get-meeting-id-and-organizer-id).
 
 > [!NOTE]
-> The process for calling Graph APIs to access and retrieve transcripts and recordings remains the same for both meeting-specific RSC application permissions and organization-wide application permissions. These APIs support private chat meetings and channel meetings only in beta release.
+> The process for calling Graph APIs to access and retrieve transcripts and recordings remains the same for both meeting-specific RSC application permissions and organization-wide application permissions. These APIs support private chat meetings and channel meetings only in beta.
 
-## Get AI-generated meeting insights
+## Get meeting insights
 
-Your app can fetch AI-generated meeting insights, including meeting notes, action items, and @mention events. The APIs to get AI-generated meeting insights use the [on-behalf-on (OBO) flow](/entra/identity-platform/v2-oauth2-on-behalf-of-flow) to call other APIs. The user on whose behalf the API is making calls must have a [Microsoft 365 Copilot license](/copilot/microsoft-365/microsoft-365-copilot-licensing). For more information on how to fetch AI-generated insights for a particular meeting, see [get callAiInsight](/graph/api/resources/callaiinsight?view=graph-rest-beta&preserve-view=true).
+Your app can fetch AI-generated meeting insights, including conversation summaries, action items, and @mention utterances using Meeting AI Insights API. For more information, see [get meeting insights with Meeting AI Insights API](meeting-insights.md).
 
 ## Next step
 

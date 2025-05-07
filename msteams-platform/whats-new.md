@@ -470,7 +470,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2025 May**
 
-* ***May 07, 2025***: [Use Meeting AI Insights API to fetch conversation summaries, action items, and @mention utterances from Teams meetings.](graph-api/meeting-transcripts/overview-transcripts.md#get-ai-generated-meeting-insights)
+* ***May 09, 2025***: [Use Meeting AI Insights API to fetch conversation summaries, action items, and @mention utterances from Teams meetings.](graph-api/meeting-transcripts/meeting-insights.md)
 
 * ***May 06, 2025***: [Introducing Teams AI library v2. This new library consolidates all the SDKs needed to create collaborative agents for Microsoft Teams.](/microsoftteams/platform/teams-ai-library/welcome/overview)
 

@@ -635,7 +635,7 @@
       displayName: OnMessageActivityAsync, payload, recurring, getparticipant, captions, targeted meeting notification, real-time meeting events, meeting start and end events
   - name: Get meeting transcripts, recordings, and AI insights
     items:
-    - name: Meeting transcripts, recordings, and AI insights
+    - name: Meeting transcripts, recordings, and insights
       href: graph-api/meeting-transcripts/overview-transcripts.md
       displayName: get teams meeting transcripts, get teams meeting recordings, teams automatic meeting recording, get teams meeting AI insights
     - name: Get change notifications
@@ -644,8 +644,9 @@
       href: /graph/api/resources/calltranscript?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     - name: Get recordings
       href: /graph/api/resources/callrecording?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-    - name: Get AI-generated insights
-      href: /graph/api/resources/callaiinsight?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+    - name: Get AI insights
+      href: graph-api/meeting-transcripts/meeting-insights.md
+      displayName: get AI insights, get meeting insights, get meeting AI insights, meeting AI insghts API
   - name: Enhanced collaboration with Live Share
     items:
     - name: Live Share SDK
