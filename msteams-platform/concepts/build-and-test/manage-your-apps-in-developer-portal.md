@@ -151,7 +151,7 @@ In the **Advanced** section, you can see the following components to manage your
 
 ## Develop
 
-In the **Develop** section, you can open and develop your app in Teams Toolkit in the Visual Studio Code and Visual Studio. For more information, see [develop your app with Microsoft 365 Agents Toolkit](develop-your-apps-with-teams-toolkit.md).
+In the **Develop** section, you can open and develop your app in Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) in the Visual Studio Code and Visual Studio. For more information, see [develop your app with Microsoft 365 Agents Toolkit](develop-your-apps-with-teams-toolkit.md).
 
 ## Publish
 
