@@ -96,8 +96,8 @@ Upon successful testing, you can push the offer to go live where app validations
 ## Code sample
 
 | **Sample name** | **Description** | **Node.js** | **Manifest**|
-|-----------------|-----------------|----------------|----------------|----------------|
-| Tab app monetization | This is a sample tab application that shows how to open a purchase dialog and trigger purchase flow using Teams JS SDK.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-monetization/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-monetization/nodejs/demo-manifest/tab-app-monetization.zip)|
+|-----------------|-----------------|----------------|----------------|
+| Tab app monetization | This sample demonstrates a Teams tab application that opens a purchase dialog and triggers a monetization flow through the Teams JS SDK. Users can experience app monetization features seamlessly integrated within Microsoft Teams. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-monetization/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-monetization/nodejs/demo-manifest/tab-app-monetization.zip)|
 
 ## Next step
 

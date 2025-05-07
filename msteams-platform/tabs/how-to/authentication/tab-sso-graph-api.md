@@ -261,7 +261,7 @@ This approach helps reduce the possibility of user being prompted for consent mo
 
 | **Sample name** | **Description** | **C#** | **Node.js** |
 | --- | --- | --- | --- |
-| Tabs Microsoft Entra SSO | Microsoft Teams sample app for tabs Microsoft Entra SSO, which uses OBO flow to call Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/nodejs)|
+| Tabs Microsoft Entra SSO | This sample app showcases a tab with Microsoft Entra SSO and uses OBO flow to call Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/nodejs)|
 
 ## See also
 
