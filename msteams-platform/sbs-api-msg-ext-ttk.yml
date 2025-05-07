@@ -18,7 +18,7 @@ items:
     > [!NOTE]
     >
     > * API-based message extensions only support search commands.
-    > * Microsoft 365 Agents Toolkit supports OpenAPI Specification version 2.0 and 3.0.x.
+    > * Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) supports OpenAPI Specification version 2.0 and 3.0.x.
     
     Message extensions built using an API (API-based) significantly enhance the functionality of your Teams apps by allowing them to interact with external services. It helps streamline workflows by reducing the need to switch between different applications.
 
@@ -32,7 +32,7 @@ items:
 
    | Install | For using... |
    | --- | --- |
-   |[Microsoft 365 Agents Toolkit](#install-microsoft-365-agents-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
+   |[Agents Toolkit](#install-microsoft-365-agents-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
    |[Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call all in one place.|
    |[Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
    |[Microsoft Edge](https://www.microsoft.com/edge/) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
@@ -46,9 +46,9 @@ items:
    After you install the required tools, set up the development environment. 
 
 
-   ### Install Microsoft 365 Agents Toolkit
+   ### Install Agents Toolkit
 
-   Microsoft 365 Agents Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams Store, and more. 
+   Agents Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams Store, and more. 
     
    You can use the toolkit with Visual Studio Code, or CLI (command-line interface), called `Teamsapp`.
 
@@ -59,16 +59,16 @@ items:
    1. In the search box, enter **Microsoft 365 Agents Toolkit**.
    1. Select **Install** next to Microsoft 365 Agents Toolkit.
 
-      :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/install-toolkit-vscodeversion.png" alt-text="Illustration shows the Microsoft 365 Agents Toolkit extension installation." lightbox="~/assets\images\teams-toolkit-v2\prerequisites\install-toolkit-vscodeversion-1.png":::
+      :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/install-toolkit-vscodeversion.png" alt-text="Illustration shows the Agents Toolkit extension installation." lightbox="~/assets\images\teams-toolkit-v2\prerequisites\install-toolkit-vscodeversion-1.png":::
 
-    The Microsoft 365 Agents Toolkit icon appears in the Visual Studio Code **Activity Bar**.
+    The Agents Toolkit icon appears in the Visual Studio Code **Activity Bar**.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/hw-teams-toolkit-sidebar-icon.png" alt-text="Illustration shows the Microsoft 365 Agents Toolkit icon in Visual Studio Code sidebar.":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/hw-teams-toolkit-sidebar-icon.png" alt-text="Illustration shows the Agents Toolkit icon in Visual Studio Code sidebar.":::
 
-   You can also find Microsoft 365 Agents Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
+   You can also find Agents Toolkit on [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
    > [!NOTE]
-   > The latest version of Microsoft 365 Agents Toolkit is v5.
+   > The latest version of Agents Toolkit is v5.
 
     > [!div class="nextstepaction"]
     > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Install+the+Teams+Toolkit+using+Visual+Studio+Code&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-api-based-message-extensions%3Ftutorial-step%3D1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-api-based-message-extensions.yml&documentVersionIndependentId=6b8f43f0-7f44-cbd3-0fea-5161c72e2c00&author=%40surbhigupta&platformId=6b13e83f-7bee-b6a8-65fe-d51388d867b1&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
@@ -157,7 +157,7 @@ items:
   durationInMinutes: 1
   content: |
 
-    After you set up your project workspace with Microsoft 365 Agents Toolkit, build your bot project. Ensure that you're signed in to your Microsoft 365 account.
+    After you set up your project workspace with Agents Toolkit, build your bot project. Ensure that you're signed in to your Microsoft 365 account.
 
     ## Sign in to your Microsoft 365 account
 
@@ -166,14 +166,14 @@ items:
     # [Visual Studio Code](#tab/viscode)
 
     1. Open Visual Studio Code.
-    1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the sidebar.
+    1. Select the Agents Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the sidebar.
     1. Select **Sign in to M365**.
 
         Your default web browser opens to let you sign in to the account.
 
     1. Sign in to your Microsoft 365 account using your credentials.
     1. Close the browser when prompted and return to Visual Studio Code.
-    1. Return to Microsoft 365 Agents Toolkit within Visual Studio Code.
+    1. Return to Agents Toolkit within Visual Studio Code.
 
         Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
 
@@ -321,9 +321,9 @@ items:
 
     > [!NOTE]
     >
-    > Microsoft 365 Agents Toolkit supports OpenAPI Specification version 2.0 and 3.0.x.
+    > Agents Toolkit supports OpenAPI Specification version 2.0 and 3.0.x.
 
-    Now that you have your OpenAPI Description document, it also requires a response rendering template for the app to respond to the GET or POST requests. The response rendering template consists of an Adaptive Card template, Preview card template, and metadata. If your building an app using Microsoft 365 Agents Toolkit or Developer portal for Teams, the response rendering template is extracted from the OpenAPI Description document automatically.
+    Now that you have your OpenAPI Description document, it also requires a response rendering template for the app to respond to the GET or POST requests. The response rendering template consists of an Adaptive Card template, Preview card template, and metadata. If your building an app using Agents Toolkit or Developer Portal for Teams, the response rendering template is extracted from the OpenAPI Description document automatically.
 
      The following code is an example of the response rendering template: <br/>
      <br/>
@@ -406,11 +406,11 @@ items:
 
     1. Open Visual Studio Code.
 
-    1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the Visual Studio Code **Activity Bar**.
+    1. Select the Agents Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the Visual Studio Code **Activity Bar**.
 
     1. Select **Create a New App**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Microsoft 365 Agents Toolkit sidebar.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Agents Toolkit sidebar.":::
 
     1. Select **Message Extension**.
 
@@ -450,9 +450,9 @@ items:
 
         :::image type="content" source="assets/images/Copilot/api-based-me-ttk-api-me-readme.png" alt-text="Screenshot shows the app created." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/app-created-bot.png":::
 
-        After your app is created, Microsoft 365 Agents Toolkit displays the following message:
+        After your app is created, Agents Toolkit displays the following message:
 
-        :::image type="content" source="assets/images/Copilot/api-based-me-ttk-api-me-debug.png" alt-text="Screenshot shows the message from Microsoft 365 Agents Toolkit that the feature is successfully created along with the option to select Debug.":::
+        :::image type="content" source="assets/images/Copilot/api-based-me-ttk-api-me-debug.png" alt-text="Screenshot shows the message from Agents Toolkit that the feature is successfully created along with the option to select Debug.":::
         
         Select **Local debug** to preview your project.
         
@@ -461,7 +461,7 @@ items:
 
     After scaffolding is done, view the project directories and files under **Explorer** in Visual Studio Code.
 
-    :::image type="content" source="../msteams-platform/assets/images/Copilot/api-based-me-ttk-explorer.png" alt-text="Screenshot shows the Microsoft 365 Agents Toolkit sample bot folder structure.":::
+    :::image type="content" source="../msteams-platform/assets/images/Copilot/api-based-me-ttk-explorer.png" alt-text="Screenshot shows the Agents Toolkit sample bot folder structure.":::
 
     | Folder name | Contents |
     | --- | --- |
@@ -470,7 +470,7 @@ items:
     | `appPackage/manifest.json` | App manifest for running the app in local and remote environment. |
     |`appPackage/apiSpecificationFiles/openapi.yml`|A description file that contains the structure and syntax of an API in the OpenAPI Description.|
     | `appPackage/responseTemplates` | The response rendering template, which consists of the Adaptive Card template, preview card template, and metadata. |
-    | `teamsapp.yml` |	This is the main Microsoft 365 Agents Toolkit project that defines properties and configuration stage definitions. |
+    | `teamsapp.yml` | This is the main Agents Toolkit project that defines properties and configuration stage definitions. |
 
     > [!Tip]
     > Familiarize yourself with bots outside Teams before you integrate your first bot within Teams.
@@ -482,7 +482,7 @@ items:
     1. Go to Microsoft 365 Agents Toolkit and from the left pane, select **Run and Debug** (**Ctrl+Shift+D**).
     1. Select **Launch Remote in Teams (Edge)** from the launch configuration dropdown.        
 
-        Microsoft 365 Agents Toolkit provisions your app on Azure and deploys it to Teams.
+        Agents Toolkit provisions your app on Azure and deploys it to Teams.
 
         > [!NOTE]
         > The first time you provision your app, it takes a few minutes to complete. Subsequent provisions are faster.
