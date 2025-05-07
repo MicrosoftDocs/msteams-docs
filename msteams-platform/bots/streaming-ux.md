@@ -15,8 +15,7 @@ ms.localizationpriority: high
 > Streaming bot message is available:
 >
 > - only for one-on-one chats.
-> - is generally available only on web and desktop client.
-> - is available in public developer preview on Android and iOS.
+> - is generally available on web, desktop, and mobile.
 >
 > Streaming bot message isn't available with function calling and the OpenAI `o1` model.
 
@@ -32,11 +31,25 @@ Streaming bot messages has two types of updates:
 
   :::image type="content" source="../assets/images/bots/stream_type_informative.png" alt-text="Screenshot shows the bots informative updates of streaming." lightbox="../assets/images/bots/stream_type_informative.png" border="false":::
 
+    Informative messages must not be more than 1 kb or 1000 characters.
+
 - **Response streaming**: Response streaming is displayed as a typing indicator. It reveals the bot's response to the user as small updates while the complete response is being generated.
 
   :::image type="content" source="../assets/images/bots/stream_type_streaming.png" alt-text="Screenshot shows the bots response streaming." lightbox="../assets/images/bots/stream_type_streaming.png" border="false":::
 
-The :::image type="icon" source="../assets/icons/stop-button.png"::: button lets users control streaming responses by stopping them early. It's available by default during streaming, allowing users to refine prompts or send new ones. Understanding how the stop streaming button works can help design more effective and user-friendly conversational interfaces.
+  - The **Stop** button: The :::image type="icon" source="../assets/icons/stop-button.png"::: button lets users control streaming responses by stopping them early. It's available by default during streaming, allowing users to refine prompts or send new ones. Understanding how the stop streaming button works can help design more effective and user-friendly conversational interfaces.
+  - Streaming content: While streaming, the bot messages must contain the previous streamed content.
+
+      **For example**: This is an example of acceptable streaming response.<br>
+        *A brown*<br>
+        *A brown fox*<br>
+        *A brown fox jumps over the fence*
+
+      **Non-example**: This is an example of a streaming response that will return an error.<br>
+        *A brown*<br>
+        *Hello*
+
+    For more information about the error, see [error codes](#error-codes).
 
 You can implement streaming bot messages in your app in one of the following ways:
 
@@ -573,7 +586,8 @@ The following are the success and error codes:
 | `403`|`ContentStreamNotAllowed` | `Content stream is not allowed on an already completed streamed message`| A bot can't continuously stream on a message that has already streamed and completed.|
 | `403`| `ContentStreamNotAllowed` | `Content stream finished due to exceeded streaming time.`| The bot failed to complete the streaming process within the strict time limit of two minutes. |
 | `403`| `ContentStreamNotAllowed` | `Message size too large`| The bot sent a message that exceeds the current [message size](~/bots/how-to/format-your-bot-messages.md) restriction. |
-| '403' | `ContentStreamNotAllowed` | Content stream was canceled by user. | The streaming was stopped by the user. |
+| `403` | `ContentStreamNotAllowed` | `Content stream was canceled by user` | The streaming was stopped by the user. |
+| `403` | `ContentStreamNotAllowed` | `Request streamed content should contain the previously streamed content` | The incoming content for the stream message does not contain what has been already streamed. |
 | `429`| NA | `API calls quota exceeded`| The number of messages streamed by the bot has exceeded quota. |
 
 [Back to top](#stream-messages-user-experience)
