@@ -248,7 +248,7 @@ items:
 
         Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
 
-        The account logins are shared between Visual Studio Code and the Microsoft 365 Agents Toolkit CLI.
+        The account logins are shared between Visual Studio Code and Microsoft 365 Agents Toolkit CLI.
 
         Now that the development environment is configured, you can create, build, and deploy your first Teams app.
 
