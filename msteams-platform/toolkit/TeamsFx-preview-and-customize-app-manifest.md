@@ -1,5 +1,5 @@
 ---
-title: Customize app manifest in toolkit
+title: Customize app manifest in Microsoft 365 Agents
 author: surbhigupta
 description: Learn how to edit and preview app manifest in local and remote environments, customize app manifest in Visual Studio Code, and ways to validate and update app.
 ms.author: surbhigupta
