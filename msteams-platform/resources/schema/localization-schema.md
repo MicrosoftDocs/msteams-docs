@@ -3,7 +3,7 @@ title: Localize JSON Schema Reference
 description: Learn and know about the localization schema supported by the localization file for Microsoft Teams using an example schema and about schema versions.
 ms.topic: reference
 ms.localizationpriority: medium
-ms.date: 04/14/2025
+ms.date: 05/08/2025
 ---
 
 # Localize JSON schema reference
