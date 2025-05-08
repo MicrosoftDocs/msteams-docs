@@ -10,7 +10,7 @@ ms.date: 12/11/2024
 
 # Debug your Teams app locally
 
-Microsoft 365 Agents Toolkit helps you to debug and preview your Microsoft Teams app locally. During the debug process, Microsoft 365 Agents Toolkit automatically starts app services, launches debuggers, and uploads Teams app. You can preview your Teams app in Teams web client locally after debugging.
+Microsoft 365 Agents Toolkit helps you to debug and preview your Microsoft Teams app locally. During debugging, Microsoft 365 Agents Toolkit automatically starts app services, launches debuggers, and uploads Teams app. You can preview your Teams app in Teams web client locally after debugging.
 
 ## Debug your Teams app locally for Visual Studio Code
 

@@ -1,7 +1,7 @@
 ---
 title: Debug your apps in Teams Desktop Client
 author: surbhigupta
-description: Learn how to debug your bot, agent, custom engine agent, message extension apps in Teams desktop client using Microsoft 365 Agents Toolkit.
+description: Learn how to debug your bot, agent, custom engine agent, and message extension apps in Teams desktop client using Microsoft 365 Agents Toolkit.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
