@@ -42,7 +42,7 @@ Here are some use cases for fetching AI-generated insights using Meeting AI Insi
 
 * The Meeting AI Insights API only works with delegated permissions and hence requires a token from a signed-in user to be passed in the call. The signed-in user must have a [Microsoft 365 Copilot license](/copilot/microsoft-365/microsoft-365-copilot-licensing) and access to the meeting’s transcript file.
 
-## Fetching meeting insights
+## Fetch meeting insights
 
 To fetch the insights of a particular meeting, follow these steps:
 
@@ -50,7 +50,7 @@ To fetch the insights of a particular meeting, follow these steps:
 
 1. Each transcript event of the meeting creates an associated [AI insight object](/graph/api/onlinemeeting-list-aiinsights?view=graph-rest-beta&preserve-view=true). Use the [List AI Insights API](/graph/api/onlinemeeting-list-aiinsights?view=graph-rest-beta&preserve-view=true) to fetch all insight objects related to the meeting and use the included metadata in the response to select the relevant object for your scenario. Here's an example response:
 
-    ```https
+    ```json
     HTTP/1.1 200 OK
     Content-Type: application/json
     
@@ -79,77 +79,77 @@ To fetch the insights of a particular meeting, follow these steps:
 
 1. Each insight object provides detailed meeting notes, action items, and participant-specific @mention utterances, which can be accessed by making a GET HTTP request to AI Insights API for a specific insight ID. Here's an example response:
 
-```https
-HTTP/1.1 200 OK
-Content-type: application/json
-
-{
-  "@odata.context": "https://graph.microsoft.com/beta/$metadata#copilot/users('b935e675-5e67-48b9-8d45-249d5f88e964')/onlineMeetings('YTc3OT...')/aiInsights/$entity",
-  "id": "Z2HWbT...",
-  "callId": "af630fe0-04d3-4559-8cf9-91fe45e36296",
-  "contentCorrelationId": "bc842d7a-2f6e-4b18-a1c7-73ef91d5c8e3",
-  "createdDateTime": "2024-05-27T08:17:10.7261294Z",
-  "endDateTime": "2024-05-27T08:32:10.7261294Z",
-  "meetingNotes": [
+    ```json
+    HTTP/1.1 200 OK
+    Content-type: application/json
+    
     {
-      "title": "Introducing Project Objectives and Key Stakeholders",
-      "text": "The stakeholders present included representatives from each department involved in the project, ensuring alignment and clear communication channels from the start.",
-      "subpoints": [
+      "@odata.context": "https://graph.microsoft.com/beta/$metadata#copilot/users('b935e675-5e67-48b9-8d45-249d5f88e964')/onlineMeetings('YTc3OT...')/aiInsights/$entity",
+      "id": "Z2HWbT...",
+      "callId": "af630fe0-04d3-4559-8cf9-91fe45e36296",
+      "contentCorrelationId": "bc842d7a-2f6e-4b18-a1c7-73ef91d5c8e3",
+      "createdDateTime": "2024-05-27T08:17:10.7261294Z",
+      "endDateTime": "2024-05-27T08:32:10.7261294Z",
+      "meetingNotes": [
         {
-          "title": "Discussion on action items",
-          "text": "Action items were assigned to team members, and a follow-up meeting schedule was established."
+          "title": "Introducing Project Objectives and Key Stakeholders",
+          "text": "The stakeholders present included representatives from each department involved in the project, ensuring alignment and clear communication channels from the start.",
+          "subpoints": [
+            {
+              "title": "Discussion on action items",
+              "text": "Action items were assigned to team members, and a follow-up meeting schedule was established."
+            }
+          ]
         }
-      ]
-    }
-  ],
-  "actionItems": [
-    {
-      "title": "Finalize Project Timeline",
-      "text": "Review and finalize the project timeline to ensure alignment with stakeholder expectations and resource availability.",
-      "ownerDisplayName": "Bella Smith",
-    },
-    {
-      "title": "Prepare Presentation Draft",
-      "text": "Draft a presentation outlining project goals, objectives, and progress updates for review by the project stakeholders.",
-      "ownerDisplayName": "Bella Smith",
-    },
-  ],
-  "viewpoint": {
-    "mentionEvents": [
-      {
-        "speaker": {
-            "application": null,
-            "device": null,
-            "user": {
-                "@odata.type": "#Microsoft.Teams.GraphSvc.teamworkUserIdentity",
-                "id": "9a7608d3-53e4-4a92-804f-ef43f1e5f5b5",
-                "displayName": "John Smith",
-                "userIdentityType": "aadUser",
-                "tenantId": "d1aeb56e-5a25-4d91-a4f6-0f5e6a50d887"
-            }
+      ],
+      "actionItems": [
+        {
+          "title": "Finalize Project Timeline",
+          "text": "Review and finalize the project timeline to ensure alignment with stakeholder expectations and resource availability.",
+          "ownerDisplayName": "Bella Smith",
         },
-        "eventDateTime": "2024-05-21T09:00:00",
-        "transcriptUtterance": "We need to get approval from Sarah Johnson before proceeding with the budget allocation."
-      },
-      {
-        "speaker": {
-            "application": null,
-            "device": null,
-            "user": {
-                "@odata.type": "#Microsoft.Teams.GraphSvc.teamworkUserIdentity",
-                "id": "6aeb9f22-c986-4835-9617-9e5932bc8250",
-                "displayName": "Emily Davis",
-                "userIdentityType": "aadUser",
-                "tenantId": "d1aeb56e-5a25-4d91-a4f6-0f5e6a50d887"
-            }
+        {
+          "title": "Prepare Presentation Draft",
+          "text": "Draft a presentation outlining project goals, objectives, and progress updates for review by the project stakeholders.",
+          "ownerDisplayName": "Bella Smith",
         },
-        "eventDateTime": "2024-05-21T09:15:00",
-        "transcriptUtterance": "Sarah Johnson suggested reaching out to potential vendors for the upcoming project."
+      ],
+      "viewpoint": {
+        "mentionEvents": [
+          {
+            "speaker": {
+                "application": null,
+                "device": null,
+                "user": {
+                    "@odata.type": "#Microsoft.Teams.GraphSvc.teamworkUserIdentity",
+                    "id": "9a7608d3-53e4-4a92-804f-ef43f1e5f5b5",
+                    "displayName": "John Smith",
+                    "userIdentityType": "aadUser",
+                    "tenantId": "d1aeb56e-5a25-4d91-a4f6-0f5e6a50d887"
+                }
+            },
+            "eventDateTime": "2024-05-21T09:00:00",
+            "transcriptUtterance": "We need to get approval from Sarah Johnson before proceeding with the budget allocation."
+          },
+          {
+            "speaker": {
+                "application": null,
+                "device": null,
+                "user": {
+                    "@odata.type": "#Microsoft.Teams.GraphSvc.teamworkUserIdentity",
+                    "id": "6aeb9f22-c986-4835-9617-9e5932bc8250",
+                    "displayName": "Emily Davis",
+                    "userIdentityType": "aadUser",
+                    "tenantId": "d1aeb56e-5a25-4d91-a4f6-0f5e6a50d887"
+                }
+            },
+            "eventDateTime": "2024-05-21T09:15:00",
+            "transcriptUtterance": "Sarah Johnson suggested reaching out to potential vendors for the upcoming project."
+          }
+        ]
       }
-    ]
-  }
-}
-```
+    }
+    ```
 
 | Property | Description |
 | --- | --- |
