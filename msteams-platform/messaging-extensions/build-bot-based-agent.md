@@ -39,7 +39,7 @@ Descriptions enhance the usability and effectiveness of a message extension agen
 
 For more information, see [guidelines to create and upgrade agents](dev-guidelines-agents.md).
 
-All bot-based search message extensions that are eligible for agent support must meet [policy requirement](../concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md) and are subject to validation to ensure the agent meets quality, security, privacy, and usefulness expectations. You can create a bot-based search message extension using Teams Toolkit for Visual Studio Code, Visual Studio, Teams Toolkit command line interface (CLI), or Developer Portal for Teams and extend the message extension to function as an agent in Microsoft 365 Copilot.
+All bot-based search message extensions that are eligible for agent support must meet [policy requirement](../concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md) and are subject to validation to ensure the agent meets quality, security, privacy, and usefulness expectations. You can create a bot-based search message extension using Microsoft 365 Agents Toolkit for Visual Studio Code, Visual Studio, Teams Toolkit command line interface (CLI), or Developer Portal for Teams and extend the message extension to function as an agent in Microsoft 365 Copilot.
 
 ## Prerequisites
 
@@ -89,7 +89,7 @@ To run your message extension in Teams, follow these steps:
    1. Select **Sign in to Microsoft 365** and enter your Microsoft 365 credentials.
    1. Select **Sign in to Azure** and enter your Azure credentials.
 
-      :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-accounts.png" alt-text="Screenshot shows the Sign in to Microsoft 365 and Azure option under ACCOUNTS in Teams Toolkit for Visual Studio Code.":::
+      :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-accounts.png" alt-text="Screenshot shows the Sign in to Microsoft 365 and Azure option under ACCOUNTS in Microsoft 365 Agents Toolkit for Visual Studio Code.":::
 
 1. From the left pane, select **Run and Debug (Ctrl+Shift+D)**.
 1. Select **Debug in Teams (Edge)** or **Debug in Teams (Chrome)**. Teams Toolkit launches your app in Teams using a web browser.

@@ -1,7 +1,7 @@
 ---
 title: Configure Bot Capability
 author: surbhigupta
-description: Learn how to configure the bot capability within a Teams app with Microsoft Teams Toolkit for Visual Studio Code.
+description: Learn how to configure the bot capability within a Teams app with Microsoft 365 Agents Toolkit for Visual Studio Code.
 ms.author: v-preethah
 ms.localizationpriority: medium
 ms.topic: reference
