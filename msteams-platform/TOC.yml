@@ -646,7 +646,7 @@
       href: /graph/api/resources/callrecording?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     - name: Get AI insights
       href: graph-api/meeting-transcripts/meeting-insights.md
-      displayName: get AI insights, get meeting insights, get meeting AI insights, meeting AI insghts API
+      displayName: get AI insights, get meeting insights, get meeting AI insights, meeting AI insights API
   - name: Enhanced collaboration with Live Share
     items:
     - name: Live Share SDK

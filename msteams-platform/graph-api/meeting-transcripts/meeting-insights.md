@@ -50,24 +50,24 @@ To fetch the insights of a particular meeting, follow these steps:
 
 1. Each transcript event of the meeting creates an associated [AI insight object](/graph/api/onlinemeeting-list-aiinsights?view=graph-rest-beta&preserve-view=true). Use the [List AI Insights API](/graph/api/onlinemeeting-list-aiinsights?view=graph-rest-beta&preserve-view=true) to fetch all insight objects related to the meeting and use the included metadata in the response to select the relevant object for your scenario. Here's an example response:
 
-```https
-HTTP/1.1 200 OK
-Content-Type: application/json
-
-{
-  "@odata.context": "https://graph.microsoft.com/beta/$metadata#copilot/users('b935e675-5e67-48b9-8d45-249d5f88e964')/onlineMeetings('YTc3O...')/aiInsights",
-  "@odata.count": 1,
-  "value": [
+    ```https
+    HTTP/1.1 200 OK
+    Content-Type: application/json
+    
     {
-      "id": "VjEj...",
-      "callId": "af630fe0-04d3-4559-8cf9-91fe45e36296",
-      "contentCorrelationId": "bc842d7a-2f6e-4b18-a1c7-73ef91d5c8e3",
-      "createdDateTime": "2025-05-09T08:17:10.7261294Z",
-      "endDateTime": "2025-05-09T08:17:10.7261294Z"
+      "@odata.context": "https://graph.microsoft.com/beta/$metadata#copilot/users('b935e675-5e67-48b9-8d45-249d5f88e964')/onlineMeetings('YTc3O...')/aiInsights",
+      "@odata.count": 1,
+      "value": [
+        {
+          "id": "VjEj...",
+          "callId": "af630fe0-04d3-4559-8cf9-91fe45e36296",
+          "contentCorrelationId": "bc842d7a-2f6e-4b18-a1c7-73ef91d5c8e3",
+          "createdDateTime": "2025-05-09T08:17:10.7261294Z",
+          "endDateTime": "2025-05-09T08:17:10.7261294Z"
+        }
+      ]
     }
-  ]
-}
-```
+    ```
 
 | Property | Description |
 | --- | --- |
@@ -161,7 +161,7 @@ Content-type: application/json
 
 * AI-generated insights are only available after a meeting ends. The API doesn't support accessing live notes during a meeting.
 
-* AI-generated insights might take upto four hours to be available after the call ends.
+* AI-generated insights might take up to four hours to be available after the call ends.
 
 * Application-level permissions aren't supported.
 
