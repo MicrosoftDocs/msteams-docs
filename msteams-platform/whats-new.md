@@ -33,6 +33,8 @@ Teams platform features that are available to all app developers.
 
 **2025 April**
 
+* ***May 7, 2025***: [Introducing agent usage analytics in Developer Portal for third-party apps](concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md#third-party-appstabthirdpartyapps).
+
 * ***April 30, 2025***: [Introducing streaming messages for bot apps](bots/streaming-ux.md).
 
 * ***April 21, 2025***: [Precache your tab app to optimize its initial load time](tabs/how-to/app-caching.md#precaching-tab-apps).
