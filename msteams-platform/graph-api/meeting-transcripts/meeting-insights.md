@@ -15,14 +15,12 @@ ms.date: 05/09/2025
 > * AI-generated meeting insights fetched through Meeting AI Insights API are only available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 > * Meeting AI Insights API is part of M365 Copilot API namespace. Results can only be fetched on behalf of a M365 Copilot licensed user. For more information, see [license requirements for Meeting Insights API](/graph/teams-licenses#payment-requirements-for-meeting-apis).
 
-Meeting AI Insights API allows you to use smart meeting features, such as highlighting key takeaways or creating follow-up tasks from meeting insights and summaries, without needing to build or maintain your own AI infrastructure. You can use the API to get AI-generated insights from a transcribed Microsoft Teams meeting after it ends. The AI-generated insights include:
-
+The Meeting AI Insights API enables developers to programmatically access structured insights derived from transcribed Microsoft Teams meetings. These AI-generated insights include:
 * Comprehensive conversation summaries
 * Action items extracted from the discussion
 * Participant-specific @mention utterances
-
+This API empowers developers to deliver intelligent meeting experiences—such as surfacing key takeaways or generating follow-ups—without the need to build or maintain their own AI infrastructure. Insights are generated after the meeting concludes and are accessible via Microsoft Graph API endpoints. 
 Meeting AI Insights API provides AI-generated insights for all meetings and calls for which a recap is available, including scheduled private and channel meetings, one-on-one and group Voice over Internet Protocol (VoIP) calls, webinars, and adhoc meetings.
-
 > [!NOTE]
 > Meeting AI Insights API is only available for organizers and presenters of a town hall meeting.
 
