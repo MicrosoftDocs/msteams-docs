@@ -118,7 +118,7 @@ You can have multiple channels or group tabs, and up to 16 static tabs per app.
 
 ## Build a tab app
 
-You can build a personal tab app or a configurable tab app using Teams Toolkit or Codespaces.
+You can build a personal tab app or a configurable tab app using Microsoft 365 Agents Toolkit or Codespaces.
 
 For more information, see [build your basic tab app](../get-started/build-basic-tab-app.md).
 
