@@ -14,7 +14,7 @@ Tabs are Teams-aware webpages embedded in Microsoft Teams and a good way to begi
 
 In this tutorial, you'll learn about a basic Teams tab app in one of the following ways:
 
-* **GitHub Codespaces**: The codespace instance allows you to experience a Teams app instantaneously. It opens Visual Studio Code (VS Code), where the Teams Toolkit extension, the app source code, and all the dependencies are pre-packaged for you.
+* **GitHub Codespaces**: The codespace instance allows you to experience a Teams app instantaneously. It opens Visual Studio Code (VS Code), where the Microsoft 365 Agents Toolkit extension, the app source code, and all the dependencies are pre-packaged for you.
 * **Step-by-step guide**: Allows you to set up your development environment and create a Teams app from start.
 
 # [GitHub Codespaces](#tab/teamstoolkitcodespaces)
@@ -45,11 +45,11 @@ To create a Teams tab app with GitHub Codespaces, follow these steps:
 
    :::image type="content" source="../assets/images/get-started/building-codespace.png" alt-text="Screenshot shows you the codespace building your tab.":::
 
-   Teams Toolkit prepares the tab app project for you and opens it in VS Code in the browser. The Teams Toolkit icon appears in the activity bar of VS Code.
+   Microsoft 365 Agents Toolkit prepares the tab app project for you and opens it in VS Code in the browser. The Microsoft 365 Agents Toolkit icon appears in the activity bar of VS Code.
 
 1. Select **Sign in to your Microsoft 365** and **Sign in to Azure** to sign in with your Microsoft 365 account.
 
-   :::image type="content" source="../assets/images/get-started/toolkit-in-browser-sign-in.png" alt-text="Screenshot shows you the Teams Toolkit window in browser to sign in."lightbox="../assets/images/get-started/add-tab-in-teams.png":::
+   :::image type="content" source="../assets/images/get-started/toolkit-in-browser-sign-in.png" alt-text="Screenshot shows you the Microsoft 365 Agents Toolkit window in browser to sign in."lightbox="../assets/images/get-started/add-tab-in-teams.png":::
 
     > [!NOTE]
     >
@@ -57,7 +57,7 @@ To create a Teams tab app with GitHub Codespaces, follow these steps:
 
 1. Select **Preview your Teams App (F5)** to build your tab app.
 
-      :::image type="content" source="../assets/images/get-started/toolkit-in-browser.png" alt-text="Screenshot shows you the Teams Toolkit window in browser with your tab app."lightbox="../assets/images/get-started/toolkit-in-browser.png":::
+      :::image type="content" source="../assets/images/get-started/toolkit-in-browser.png" alt-text="Screenshot shows you the Microsoft 365 Agents Toolkit window in browser with your tab app."lightbox="../assets/images/get-started/toolkit-in-browser.png":::
 
    GitHub Codespaces builds your tab app, loads it to Teams client, and opens it in a separate browser tab.
 
@@ -82,7 +82,7 @@ To create a Teams tab app with GitHub Codespaces, follow these steps:
 
 # [Step-by-step guide](#tab/step-by-step-guide)
 
-If you want to learn how to start a project with Teams Toolkit from the beginning, you'll need to set up your development environment. Select the following button to start building your basic tab app.
+If you want to learn how to start a project with Microsoft 365 Agents Toolkit from the beginning, you'll need to set up your development environment. Select the following button to start building your basic tab app.
 
 > [!div class="nextstepaction"]
 > [Start building a basic tab app](../sbs-gs-javascript.yml)

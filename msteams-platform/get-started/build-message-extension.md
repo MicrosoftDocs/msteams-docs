@@ -16,7 +16,7 @@ In this tutorial, you'll learn to build a search-based message extension app, an
 
 Get familiarized with search based message extension app in one of the following ways:
 
-* **GitHub Codespaces**: The codespace instance allows you to experience a Teams app instantaneously. It opens Visual Studio Code (VS Code), where the Teams Toolkit extension, the app source code, and all the dependencies are pre-packaged for you.
+* **GitHub Codespaces**: The codespace instance allows you to experience a Teams app instantaneously. It opens Visual Studio Code (VS Code), where the Microsoft 365 Agents Toolkit extension, the app source code, and all the dependencies are pre-packaged for you.
 * **Step-by-step guide**: Allows you to set up your development environment and build a Teams app from start.
 
 # [GitHub Codespaces](#tab/teamstoolkitcodespaces)
@@ -46,11 +46,11 @@ To create a search-based message extension app with GitHub Codespaces, follow th
 
    :::image type="content" source="../assets/images/get-started/building-codespace.png" alt-text="Screenshot shows you the codespace building your message extension.":::
 
-   Teams Toolkit prepares the message extension for you and opens it in VS Code in the browser. The Teams Toolkit icon appears in the activity bar of VS Code.
+   Microsoft 365 Agents Toolkit prepares the message extension for you and opens it in VS Code in the browser. The Microsoft 365 Agents Toolkit icon appears in the activity bar of VS Code.
 
 1. Select **Sign in to your Microsoft 365** and **Sign in to Azure** to sign in with your Microsoft 365 account.
 
-   :::image type="content" source="../assets/images/get-started/codespace/me-sign-in.png" alt-text="Screenshot shows you the Teams Toolkit window in browser to sign in."lightbox="../assets/images/get-started/add-tab-in-teams.png":::
+   :::image type="content" source="../assets/images/get-started/codespace/me-sign-in.png" alt-text="Screenshot shows you the Microsoft 365 Agents Toolkit window in browser to sign in."lightbox="../assets/images/get-started/add-tab-in-teams.png":::
 
     > [!NOTE]
     >
@@ -58,7 +58,7 @@ To create a search-based message extension app with GitHub Codespaces, follow th
 
 1. Select **Preview your Teams App (F5)** to build your message extension.
 
-      :::image type="content" source="../assets/images/get-started/codespace/me-preview-teams.png" alt-text="Screenshot shows you the Teams Toolkit window in browser with your message extension."lightbox="../assets/images/get-started/codespace/me-preview-teams.png":::
+      :::image type="content" source="../assets/images/get-started/codespace/me-preview-teams.png" alt-text="Screenshot shows you the Microsoft 365 Agents Toolkit window in browser with your message extension."lightbox="../assets/images/get-started/codespace/me-preview-teams.png":::
 
       GitHub Codespaces builds your message extension app, loads it to Teams client, and opens in a separate browser tab.
 
@@ -79,7 +79,7 @@ To create a search-based message extension app with GitHub Codespaces, follow th
 
 # [Step-by-step guide](#tab/step-by-step-guide)
 
-If you want to learn how to start a project with Teams Toolkit from the beginning, you'll need to set up your development environment. Select the following button to start building your message extension app.
+If you want to learn how to start a project with Microsoft 365 Agents Toolkit from the beginning, you'll need to set up your development environment. Select the following button to start building your message extension app.
 
 > [!div class="nextstepaction"]
 > [Build your first message extension app using JavaScript](../sbs-gs-msgext.yml)
