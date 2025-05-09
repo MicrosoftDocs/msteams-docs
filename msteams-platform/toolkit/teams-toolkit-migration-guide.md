@@ -1,20 +1,20 @@
 ---
-title: Migrate Teams Toolkit project from 17.9 to 17.10+ version
+title: Migrate toolkit project from 17.9 to 17.10+ version
 author: v-preethah
-description: This guide provides the steps to migrate from scaffolded template to the new project structure in Microsoft Teams using Teams Toolkit.
+description: This guide provides the steps to migrate from scaffolded template to the new project structure in Microsoft Teams using Microsoft 365 Agents Toolkit.
 ms.author: v-preethah
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 06/05/2024
 ---
 
-# Migrate Teams Toolkit project from 17.9 to 17.10+ version
+# Migrate Microsoft 365 Agents Toolkit project from 17.9 to 17.10+ version
 
 This guide details the process of migrating from the traditional, scaffolded template to the new project structure in Microsoft Teams. The transition is essential to use the latest features and improve project maintainability. The new project structure introduces a more streamlined and efficient way of managing your Teams applications through `.ttkproj` file to represent the new project type.
 
-In the new Teams Toolkit version 17.10, a Teams solution contains two projects, Teams project and your source code. 
+In the new Microsoft 365 Agents Toolkit version 17.10, a Teams solution contains two projects, Teams project and your source code. 
 
-- **Teams project**: Teams project contains the Teams app package and Teams Toolkit configuration files. 
+- **Teams project**: Teams project contains the Teams app package and Microsoft 365 Agents Toolkit configuration files. 
 - **Source code**: Your source code project is the business logic for your tab, bot, or others. 
 
 The separation of Teams project and source code allows the integration of existing web or bot solutions into Teams. This approach simplifies the process of integrating any existing project or solution with Teams.

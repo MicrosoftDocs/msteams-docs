@@ -1,7 +1,7 @@
 ---
 title: Test App in Local & Cloud Environments
 author: surbhigupta
-description: Learn about the prerequisites and how to test app behavior in local and cloud environments using Teams Toolkit after integration with Teams.
+description: Learn about the prerequisites and how to test app behavior in local and cloud environments using toolkit after integration with Teams.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
@@ -56,9 +56,9 @@ You can upload your custom app to a team, chat, meeting, or for personal use dep
 
         :::image type="content" source="~/assets/images/publish-app/teams-app-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
-You can test your Teams app after integrating with Teams. To test your Teams app, you need to create at least one workspace in your environment. You can use Microsoft Teams Toolkit for testing your Teams app:
+You can test your Teams app after integrating with Teams. To test your Teams app, you need to create at least one workspace in your environment. You can use Microsoft 365 Agents Toolkit for testing your Teams app:
 
-* **Locally hosted in Teams**: Teams Toolkit locally hosts your Teams app by uploading it into Teams for testing in local environment.
+* **Locally hosted in Teams**: Microsoft 365 Agents Toolkit locally hosts your Teams app by uploading it into Teams for testing in local environment.
 
 * **Cloud-hosted in Teams**: For testing your Teams app remotely, you need to Cloud-host it using provisioning and deploying on Microsoft Entra ID. It involves uploading your solution to the Microsoft Entra ID and then upload into Teams.
 
@@ -78,10 +78,10 @@ To host your development and production code and their HTTPS endpoints, you need
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Microsoft 365 Agents Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Debug your Microsoft Teams app locally](debug-local.md)
 * [Debug background process](debug-background-process.md)
-* [Use Teams Toolkit to provision cloud resources](provision.md)
+* [Use Microsoft 365 Agents Toolkit to provision cloud resources](provision.md)
 * [Deploy to the cloud](deploy.md)
 * [Preview and customize Teams app manifest](TeamsFx-preview-and-customize-app-manifest.md)
 * [Manage multiple environments](TeamsFx-multi-env.md)
