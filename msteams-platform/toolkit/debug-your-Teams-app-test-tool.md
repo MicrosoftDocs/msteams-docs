@@ -1,7 +1,7 @@
 ---
 title: Debug bot using Teams App Test Tool
 author: surbhigupta 
-description: Learn about Teams app Test Tool in Teams Toolkit and debug existing app, advantages, activity triggers, and customize Teams context.
+description: Learn about Teams app Test Tool in Microsoft 365 Agents Toolkit and debug existing app, advantages, activity triggers, and customize Teams context.
 ms.author: surbhigupta 
 ms.localizationpriority: high
 ms.topic: overview
@@ -12,7 +12,7 @@ ms.date: 11/16/2023
 
 > [!NOTE]
 >
-> Teams App Test Tool is available in the latest prerelease version of the Microsoft Teams Toolkit. Ensure that you install the [latest prerelease version](install-Teams-Toolkit.md#install-a-prerelease-version) of the Teams Toolkit.
+> Teams App Test Tool is available in the latest prerelease version of the Microsoft 365 Agents Toolkit. Ensure that you install the [latest prerelease version](install-Teams-Toolkit.md#install-a-prerelease-version) of Microsoft 365 Agents Toolkit.
 
 Teams App Test Tool (Test Tool) makes debugging bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Microsoft Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Test Tool.
 
@@ -44,7 +44,7 @@ Ensure you install the following tools for building and deploying your bots in T
 
 | &nbsp; | Install | For using... |
 | --- | --- | --- |
-| &nbsp; | [Teams Toolkit](install-Teams-Toolkit.md) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest prerelease version. |
+| &nbsp; | [Microsoft 365 Agents Toolkit](install-Teams-Toolkit.md) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest prerelease version. |
 | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type). |
 | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
 
@@ -57,7 +57,7 @@ To use a Teams bot on Test Tool, you need to provide:
 * Message endpoint: A bot message endpoint is the URL that links Test Tool and your bot. You can update the endpoint with the `BOT_ENDPOINT` environment variable or use the default value of `http://localhost:3978/api/messages`.
 * Configuration file (Optional): A configuration file informs Test Tool about your customized contextual information in Teams. The file is named **.teamsapptesttool.yml** in the project's root folder. If Teams can't find this file, it uses the default configuration. For more information, see [customize Teams context](#customize-teams-context).
 
-## Test Tool experience in Teams Toolkit
+## Test Tool experience in Microsoft 365 Agents Toolkit
 
 Test Tool offers a faster debug experience for bot applications when compared to the Teams client.
 
@@ -65,15 +65,15 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
 1. Open Visual Studio Code.
 
-1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="false"::: icon in the Visual Studio Code **Activity Bar**.
+1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="false"::: icon in the Visual Studio Code **Activity Bar**.
 
 1. Select **Create a New App**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Microsoft 365 Agents Toolkit sidebar.":::
 
 1. Select **Bot**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/create-new-app1.png" alt-text="Screenshot shows the Teams Toolkit app templates.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/create-new-app1.png" alt-text="Screenshot shows the Microsoft 365 Agents Toolkit app templates.":::
 
 1. Select **AI Chat Bot**. If you need a different functionality for your bot, pick a different option.
 
@@ -131,7 +131,7 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
         :::image type="content" source="../assets/images/teams-toolkit-v2/debug/npm-teams-app-test-tool.png" alt-text="Screenshot shows install teams app test tool cli.":::
 
-   1. Use the `teamsapp` command from [Teams Toolkit CLI](Teams-Toolkit-CLI.md) to create your first project. Start from the folder where you want to create the project folder.
+   1. Use the `teamsapp` command from [Microsoft 365 Agents Toolkit CLI](Teams-Toolkit-CLI.md) to create your first project. Start from the folder where you want to create the project folder.
 
       ```cmd
       teamsapp new   
@@ -429,9 +429,9 @@ It's vital to recognize that updating the configuration file has three major imp
 
 ## Debug an existing app with Test Tool
 
-Ensure you have an existing bot created using Teams Toolkit. To debug your bot with Test Tool, follow these steps:
+Ensure you have an existing bot created using Microsoft 365 Agents Toolkit. To debug your bot with Test Tool, follow these steps:
 
-1. Open the existing bot's project folder in Teams Toolkit.
+1. Open the existing bot's project folder in Microsoft 365 Agents Toolkit.
 
 1. Go to **EXPLORER** > **.vscode**.
 1. Select **launch.json** and add the following code at the end of the file:
@@ -593,8 +593,8 @@ Follow the [step-by-step guide](../sbs-teams-app-test-tool.yml) to debug an AI c
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
-* [Install Teams Toolkit](install-Teams-Toolkit.md)
+* [Microsoft 365 Agents Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Install Microsoft 365 Agents Toolkit](install-Teams-Toolkit.md)
 * [Build bots for Teams](../bots/what-are-bots.md)
 * [Adaptive Card](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 * [Bot Framework SDK](https://dev.botframework.com/)
