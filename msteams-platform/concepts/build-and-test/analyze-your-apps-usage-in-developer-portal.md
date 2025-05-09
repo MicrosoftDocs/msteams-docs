@@ -267,5 +267,5 @@ As you explore the app usage metrics on this page, you can see the following thr
 
 ## See also
 
-* [Teams Toolkit Overview](../../toolkit/teams-toolkit-fundamentals.md#quick-access-to-teams-developer-portal)
+* [Microsoft 365 Agents Toolkit Overview](../../toolkit/teams-toolkit-fundamentals.md#quick-access-to-teams-developer-portal)
 * [Include a SaaS offer with your Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
