@@ -13,7 +13,7 @@ ms.date: 05/09/2025
 > [!IMPORTANT]
 >
 > * AI-generated meeting insights fetched through Meeting AI Insights API are only available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
-> * Meeting AI Insights API is part of M365 Copilot API namespace. Results can only be fetched on behalf of a M365 Copilot licensed user. For more information, see [license requirements for Meeting Insights API](/graph/teams-licenses#payment-requirements-for-meeting-apis).
+> * Meeting AI Insights API is part of M365 Copilot API namespace. Results can only be fetched on behalf of a M365 Copilot licensed user. For more information, see [license requirements for Meeting Insights API](/graph/teams-licenses#license-requirements-for-teams-meeting-ai-insights-apis).
 
 The Meeting AI Insights API enables developers to programmatically access structured insights derived from transcribed Microsoft Teams meetings. These AI-generated insights include:
 * Comprehensive conversation summaries
