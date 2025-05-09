@@ -23,7 +23,7 @@ Ensure that you install the following tools to build and deploy your bot in Test
 
 | &nbsp; | Install | For using... |
 | --- | --- | --- |
-| &nbsp; | [Teams Toolkit](install-Teams-Toolkit.md) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest release version. |
+| &nbsp; | [Microsoft 365 Agents Toolkit](install-Teams-Toolkit.md) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest release version. |
 | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type). |
 | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
 
@@ -47,7 +47,7 @@ Ensure that you install the following tools to build and deploy your bot in Test
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-app-select-folder.png" alt-text="Screenshot shows the test tool sample app folder.":::
 
-1. From the left pane, select **Teams Toolkit**.
+1. From the left pane, select **Microsoft 365 Agents Toolkit**.
 
 1. From the left pane, select **Run and Debug (Ctrl+Shift+D)** and select **Debug in Test Tool (Preview)** in dropdown list.
 
