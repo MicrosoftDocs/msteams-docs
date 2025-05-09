@@ -4,7 +4,7 @@ description: In this module, learn the process, scenarios, and APIs to fetch tra
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.owner: vichug
-ms.date: 05/05/2025
+ms.date: 05/12/2025
 ---
 
 # Get meeting transcripts, recordings, and AI-generated insights using Graph APIs
@@ -79,6 +79,14 @@ Your app can fetch AI-generated meeting insights, including conversation summari
 
 > [!div class="nextstepaction"]
 > [Get notified when the meeting transcripts and recordings are available](/graph/teams-changenotifications-callrecording-and-calltranscript)
+
+## Code samples
+
+| Sample name | Description | Node.js | C# |
+| --- | --- | --- | --- | --- |
+| Meeting transcript bot | This sample app retrieves meeting transcripts using Microsoft Graph API and displays them in a dialog.
+ | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-transcription/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-transcription/csharp) |
+| Meeting transcripts recordings | This sample app retrieves Teams meeting transcripts and recordings using Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-meeting-transcript-recording/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-meeting-transcript-recording/csharp) |
 
 ## See also
 
