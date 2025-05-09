@@ -1,7 +1,7 @@
 ---
 title: Tools and SDKs to Build Teams App
 author: v-sdhakshina
-description: Learn more about the tools such as Teams Toolkit, Teams Toolkit CLI, Developer Portal, and SDKs available for building your Teams app.
+description: Learn more about the tools such as Teams Toolkit, Microsoft 365 Agents Toolkit CLI, Developer Portal, and SDKs available for building your Teams app.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
@@ -22,7 +22,7 @@ Teams platform brings you different tools to build and develop your Teams apps. 
 | Tools | Why do you need? | Environment | Test and debug |
 | -------- | ------------- | ----------------- | ---------------------- |
 | [Teams Toolkit](../../toolkit/teams-toolkit-fundamentals.md) | Teams Toolkit makes it simple to get started with app development for Teams. You can begin with a project template for common custom app built for your org (LOB app) scenarios or start from a sample. Save time on setup through automated app registration and configuration using Visual Studio Code and Visual Studio. | **Visual Studio Code**: JavaScript and TypeScript </br> **Visual Studio**: .NET and Blazor | In Visual Studio Code and Visual Studio |
-| [Teams Toolkit CLI](../../toolkit/Teams-Toolkit-CLI.md) | TeamsFx CLI is a text-based command line interface (CLI) that accelerates Teams application development. It aims to provide keyboard centric experience when building Teams applications. | JavaScript and .NET | Use command prompt |
+| [Microsoft 365 Agents Toolkit CLI](../../toolkit/Teams-Toolkit-CLI.md) | TeamsFx CLI is a text-based command line interface (CLI) that accelerates Teams application development. It aims to provide keyboard centric experience when building Teams applications. | JavaScript and .NET | Use command prompt |
 | [Developer Portal for Teams](teams-developer-portal.md) | Developer Portal for Teams is the primary tool for configuring, distributing, and managing your Teams apps. With Developer Portal, you can create a basic app manifest (previously known as Teams app manifest) and publish the app to Teams.  | Supports all languages | Developer Portal for Teams |
 
 </br>
@@ -99,4 +99,4 @@ The following flow diagram explains the different SDKs, libraries, and its relat
 | Tool | Details |
 | ----------------- | -------------- |
 | Teams Toolkit | We recommend using [Teams Toolkit v5](../../toolkit/teams-toolkit-fundamentals.md) to build your apps, as Teams Toolkit v4 is available only with limited functionality. |
-| Teams Toolkit CLI | We recommend that you use [Teams Toolkit CLI v3](../../toolkit/Teams-Toolkit-CLI.md) to build your Teams app, as TeamsFx CLI v1 and TeamsFx CLI v2 are available only with limited functionality. |
+| Microsoft 365 Agents Toolkit CLI | We recommend that you use [Microsoft 365 Agents Toolkit CLI v3](../../toolkit/Teams-Toolkit-CLI.md) to build your Teams app, as TeamsFx CLI v1 and TeamsFx CLI v2 are available only with limited functionality. |
