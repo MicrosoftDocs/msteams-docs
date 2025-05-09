@@ -169,4 +169,5 @@ To fetch the insights of a particular meeting, follow these steps:
 
 ## See also
 
-[Working with the cloud communications API in Microsoft Graph](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
+* [callAiInsight resource type](/graph/api/resources/callaiinsight?view=graph-rest-beta&preserve-view=true)
+* [Working with the cloud communications API in Microsoft Graph](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
