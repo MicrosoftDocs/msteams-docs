@@ -67,11 +67,11 @@ items:
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
 
-    1. Select **Bot**.
+    1. Select **Teams App** > **Bot**.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/create-newapp.png" alt-text="Screenshot shows the Teams Toolkit app templates.":::
 
-    1. Select **AI Chat Bot**. If you need a different functionality for your bot, select the required option.
+    1. Select **Basic Bot**. If you need a different functionality for your bot, select the required option.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/ai-chat-bot.png" alt-text="Screenshot shows the app feature to add to your new app.":::
 

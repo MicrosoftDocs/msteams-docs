@@ -408,7 +408,7 @@ items:
 
     1. Select the Teams Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the Visual Studio Code **Activity Bar**.
 
-    1. Select **Create a New App**.
+    1. Select **Create a New Agent/App** > **Teams App**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
 
