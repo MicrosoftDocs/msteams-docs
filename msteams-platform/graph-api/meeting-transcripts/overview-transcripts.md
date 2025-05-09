@@ -71,7 +71,7 @@ For more information about how your app can know when the meetings ends, see [su
 > [!NOTE]
 > The process for calling Graph APIs to access and retrieve transcripts and recordings remains the same for both meeting-specific RSC application permissions and organization-wide application permissions. These APIs support private chat meetings and channel meetings only in beta.
 
-## Get meeting insights
+## Get meeting AI insights and summaries
 
 Your app can fetch AI-generated meeting insights, including conversation summaries, action items, and @mention utterances using Meeting AI Insights API. For more information, see [get meeting insights with Meeting AI Insights API](meeting-insights.md).
 

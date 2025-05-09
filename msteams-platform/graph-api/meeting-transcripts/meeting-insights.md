@@ -8,14 +8,14 @@ ms.author: surbhigupta
 ms.date: 05/09/2025
 ---
 
-# Get meeting insights with Meeting AI Insights API
+# Get meeting AI insights and summaries with Meeting AI Insights API
 
 > [!IMPORTANT]
 >
 > * AI-generated meeting insights fetched through Meeting AI Insights API are only available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 > * Meeting AI Insights API is a metered API. For more information, see [payment models for meeting APIs](/graph/teams-licenses#payment-models-for-meeting-apis).
 
-Meeting AI Insights API allows you to use smart meeting features, such as highlighting key takeaways or creating follow-up tasks, without needing to build or maintain your own AI infrastructure. You can use the API to get AI-generated insights from a transcribed Microsoft Teams meeting after it ends. The AI-generated insights include:
+Meeting AI Insights API allows you to use smart meeting features, such as highlighting key takeaways or creating follow-up tasks from meeting insights and summaries, without needing to build or maintain your own AI infrastructure. You can use the API to get AI-generated insights from a transcribed Microsoft Teams meeting after it ends. The AI-generated insights include:
 
 * Comprehensive conversation summaries
 * Action items extracted from the discussion
