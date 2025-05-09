@@ -159,15 +159,15 @@
     items:
     - name: Microsoft 365 Agents Toolkit for Visual Studio Code
       items:
-      - name: Microsoft 365 Agents Toolkit overview
+      - name: Agents Toolkit overview
         href: toolkit/teams-toolkit-fundamentals.md
         displayName: TTK, version, Developer Portal, debug, Teams App Test Tool, dev tunnel
-      - name: Install Microsoft 365 Agents Toolkit
+      - name: Install Agents Toolkit
         href: toolkit/install-Teams-Toolkit.md
         displayName: download
-      - name: Explore Microsoft 365 Agents Toolkit
+      - name: Explore Agents Toolkit
         href: toolkit/explore-Teams-Toolkit.md
-      - name: Build apps using Microsoft 365 Agents Toolkit 
+      - name: Build apps using Agents Toolkit 
         href: toolkit/build-environments.md
         items:
         - name: Prerequisites to create Teams app
@@ -236,7 +236,7 @@
           href: toolkit/test-app-behavior.md
       - name: Publish your Teams app
         items:
-        - name: Publish Teams apps using Microsoft 365 Agents Toolkit 
+        - name: Publish Teams apps using Agents Toolkit 
           href: toolkit/publish.md
           displayName: license
         - name: Publish Teams apps using Developer Portal 
@@ -251,12 +251,12 @@
       - name: Overview
         href: toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md
         displayName: TTK, version, 17.7
-      - name: Install Microsoft 365 Agents Toolkit
+      - name: Install Agents Toolkit
         href: toolkit/toolkit-v4/install-Teams-Toolkit-vs.md
         displayName: download
-      - name: Explore Microsoft 365 Agents Toolkit
+      - name: Explore Agents Toolkit
         href: toolkit/toolkit-v4/explore-Teams-Toolkit-vs.md
-      - name: Prepare to build apps using Microsoft 365 Agents Toolkit
+      - name: Prepare to build apps using Agents Toolkit
         href: toolkit/toolkit-v4/build-environments-vs.md
         items:
         - name: Prerequisites to create Teams app
@@ -434,7 +434,7 @@
     displayName: AI bot, bot capability, command bot, workflow bot, custom engine agent, agent, conversational bot, activity handler, bot logic, notification bot
   - name: Bots and agents in Teams
     href: bots/build-a-bot.md
-    displayName: Bot samples, Code sample, Teams AI library, Microsoft Bot Framework SDK, build a bot, build AI bot, command bot, workflow bot, custom engine agent, agent, conversational bot, notification bot, tools, platforms, Azure OpenAI, Teams Toolkit, Azure AI Foundry
+    displayName: Bot samples, Code sample, Teams AI library, Microsoft Bot Framework SDK, build a bot, build AI bot, command bot, workflow bot, custom engine agent, agent, conversational bot, notification bot, tools, platforms, Azure OpenAI, Microsoft 365 Agents Toolkit, Azure AI Foundry
   - name: Custom engine agent overview
     href: /microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     displayName: AI bot, Teams AI library, custom agent

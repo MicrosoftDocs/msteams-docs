@@ -14,9 +14,9 @@ This section contains the frequently asked questions and the answers.
 ## Adaptive Card Previewer
 
 <details>
-<summary>Why do we have to use a new extension in Visual Studio Code? Can’t this extension be integrated into Microsoft 365 Agents Toolkit for Visual Studio Code?</summary>
+<summary>Why do we have to use a new extension in Visual Studio Code? Can’t this extension be integrated into Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) for Visual Studio Code?</summary>
 
-Adaptive Card Previewer is a standalone extension because it uses a closed-source package to render the Adaptive Cards to ensure consistent rendering logic with the Teams platform. Microsoft 365 Agents Toolkit is an open-source project and doesn't include dependencies on packages that third-party developers can't access.
+Adaptive Card Previewer is a standalone extension because it uses a closed-source package to render the Adaptive Cards to ensure consistent rendering logic with the Teams platform. Agents Toolkit is an open-source project and doesn't include dependencies on packages that third-party developers can't access.
 <br>
 &nbsp;
 </details>
@@ -442,7 +442,7 @@ You can use the following Graph API [Get user mailbox settings](/graph/api/user-
 <details>
 <summary>How can I deploy the code in Azure using Microsoft 365 Agents Toolkit, and use Graph API to get a user profile photo?</summary>
 
-For more information on Microsoft 365 Agents Toolkit, see [Create a new Teams project](toolkit/create-new-project.md) and [Teams Toolkit CLI](toolkit/Teams-Toolkit-CLI.md).
+For more information on Agents Toolkit, see [Create a new Teams project](toolkit/create-new-project.md) and [Teams Toolkit CLI](toolkit/Teams-Toolkit-CLI.md).
 
 <br>
 &nbsp;
@@ -1033,7 +1033,7 @@ Configure the application you're using to only execute HTML encoding of the scop
 <details>
 <summary>How can I implement Bot SSO using React?</summary>
 
-If you use Microsoft 365 Agents Toolkit to build your app, see [Add single sign-on to Teams app](toolkit/add-single-sign-on.md) for more information.
+If you use Agents Toolkit to build your app, see [Add single sign-on to Teams app](toolkit/add-single-sign-on.md) for more information.
 
 For more information about Node js code sample, see [Bot SSO quick-start](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js).
 <br>
@@ -1197,13 +1197,13 @@ Teams AI library works alongside the existing Bot Framework SDK and isn't a repl
 
 ## Microsoft 365 Agents Toolkit
 
-FAQ for [Provision cloud resources](toolkit/provision.md) using Microsoft 365 Agents Toolkit.
+FAQ for [Provision cloud resources](toolkit/provision.md) using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit).
 <br>
 
 <details>
 <summary>How to troubleshoot?</summary>
 
-If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document. If you're using TeamsFx CLI, there'll be a hyperlink at the end of error message that points to the help doc.
+If you get errors with Agents Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document. If you're using TeamsFx CLI, there'll be a hyperlink at the end of error message that points to the help doc.
 <br>
 
 &nbsp;
@@ -1239,7 +1239,7 @@ You can do so by following [provision SharePoint-based app](/microsoftteams/plat
 Shared references to deploy the code using toolkit:
 
 * [Create a new Teams app using Microsoft 365 Agents Toolkit](toolkit/create-new-project.md)
-* [Teams Toolkit CLI](toolkit/Teams-Toolkit-CLI.md)
+* [Agents Toolkit CLI](toolkit/Teams-Toolkit-CLI.md)
 
 You can call Graph API to get the app user's profile photo.
 

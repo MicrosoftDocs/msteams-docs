@@ -71,7 +71,7 @@ You can choose one or more of the following capabilities for your bot app. Use e
     For more information, see [how to build workflow bot with JavaScript](../sbs-gs-workflow-bot.yml).
 
   * **Command bot**:
-    Use a command bot to automate responses for simple commands in a chat. With Microsoft 365 Agents Toolkit, you can create a command bot template that displays the UI using an Adaptive Card.
+    Use a command bot to automate responses for simple commands in a chat. With Agents Toolkit, you can create a command bot template that displays the UI using an Adaptive Card.
 
     For more information, see [build command bot with JavaScript](../sbs-gs-commandbot.yml).
 
