@@ -15,7 +15,7 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 <!------
 
-## Microsoft Build 2024 :::image type="icon" source="assets/images/bullhorn.png" border="false"
+## Microsoft Build 2025 :::image type="icon" source="assets/images/bullhorn.png" border="false"
 
 ---------->
 
@@ -469,6 +469,8 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
 **2025 May**
+
+* ***May 12, 2025***: [Increase app engagement with custom activity icons in activity feed notifications](/graph/teams-send-activityfeednotifications?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json&tabs=desktop%2Chttp#custom-activity-icons-in-activity-feed-notifications).
 
 * ***May 06, 2025***: [Introducing Teams AI library v2. This new library consolidates all the SDKs needed to create collaborative agents for Microsoft Teams.](/microsoftteams/platform/teams-ai-library/welcome/overview)
 
