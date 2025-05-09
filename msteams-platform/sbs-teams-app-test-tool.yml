@@ -20,10 +20,10 @@ items:
 
     > [!NOTE]
     >
-    > * Teams App Test Tool is available only in Microsoft 365 Agents Toolkit v5.4.0.
+    > * Teams App Test Tool is available only in v5.4.0 of Microsoft 365 Agents Toolkit (previously known as Teams Toolkit).
     > * Teams App Test Tool is supported only for desktop and web clients.
 
-    This step-by-step guide helps you to build an AI chat bot using Microsoft 365 Agents Toolkit and debug with the Test Tool. You'll see the following output after you've completed this guide, where the user can access and use the AI chat bot:
+    This step-by-step guide helps you to build an AI chat bot using Agents Toolkit and debug with the Test Tool. You'll see the following output after you've completed this guide, where the user can access and use the AI chat bot:
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="~/assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
     
@@ -35,7 +35,7 @@ items:
    | Install | For using... |
    | --- | --- |
    | [Visual Studio Code](https://code.visualstudio.com/download) or  [Visual Studio](https://visualstudio.microsoft.com/downloads/) | JavaScript, TypeScript, or C# build environments. Use the latest version. |
-   | [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use Microsoft 365 Agents Toolkit v5.4.0. For more information, see [install Microsoft 365 Agents Toolkit](/microsoftteams/platform/toolkit/install-teams-toolkit?tabs=vscode&pivots=visual-studio-code-v5#install-teams-toolkit-for-visual-studio-code).|
+   | [Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use Agents Toolkit v5.4.0. For more information, see [install Agents Toolkit](/microsoftteams/platform/toolkit/install-teams-toolkit?tabs=vscode&pivots=visual-studio-code-v5#install-teams-toolkit-for-visual-studio-code).|
    | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
    | [OpenAI](https://openai.com/api/) or  [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
    | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
@@ -65,11 +65,11 @@ items:
 
     1. Select **Create a new app**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Microsoft 365 Agents Toolkit sidebar.":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Agents Toolkit sidebar.":::
 
     1. Select **Bot**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/create-newapp.png" alt-text="Screenshot shows the Microsoft 365 Agents Toolkit app templates.":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/create-newapp.png" alt-text="Screenshot shows the Agents Toolkit app templates.":::
 
     1. Select **AI Chat Bot**. If you need a different functionality for your bot, select the required option.
 
@@ -111,7 +111,7 @@ items:
 
     After you finish scaffolding, explore the project directories and files in the **EXPLORER** section of the Visual Studio Code.
     
-    :::image type="content" source="../msteams-platform/assets/images/test-tool/source-code.png" alt-text="Screenshot shows the Microsoft 365 Agents Toolkit sample bot folder Structure.":::
+    :::image type="content" source="../msteams-platform/assets/images/test-tool/source-code.png" alt-text="Screenshot shows the Agents Toolkit sample bot folder Structure.":::
     
     | Folder or file name | Contents |
     | --- | --- |
@@ -120,14 +120,14 @@ items:
     | `appPackage` | App manifest template files and app icons (color.png and outline.png). |
     | `appPackage/manifest.json` | App manifest for running the app in local and remote environment.  |
     |`src/app.js`| Handles business logics for the AI chat bot.|
-    |`teamsapp.yml`|This is the main Microsoft 365 Agents Toolkit project file. The project file defines two primary things:  Properties and configuration and stage definitions. |
+    |`teamsapp.yml`| This is the main Agents Toolkit project file. The project file defines two primary things:  Properties and configuration and stage definitions. |
     |`teamsapp.local.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging.|
     |`teamsapp.testtool.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging in Test Tool.|
 
 - title: Build and run your AI chat bot app
   durationInMinutes: 1
   content: |
-    After you set up your project workspace with Microsoft 365 Agents Toolkit, build your AI chat bot project.
+    After you set up your project workspace with Agents Toolkit, build your AI chat bot project.
 
     ## Create Open AI key and endpoint for your AI chat bot
 

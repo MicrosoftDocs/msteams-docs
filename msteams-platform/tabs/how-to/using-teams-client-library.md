@@ -178,7 +178,7 @@ async function example() {
 ---
 
 > [!TIP]
-> When you use [Microsoft 365 Agents Toolkit to update to TeamsJS v.2.0](#updating-to-teamsjs-version-20), the required updates are flagged for you with `TODO` comments in your client code.
+> When you use [Agents Toolkit to update to TeamsJS v.2.0](#updating-to-teamsjs-version-20), the required updates are flagged for you with `TODO` comments in your client code.
 
 Cross-cloud communication through SDK is restricted for security reasons; hence, Teams operated by 21Vianet domain isn't included in `validOrigins`. To enable an app to function in Teams operated by 21Vianet, specify the Teams operated by 21Vianet domain during the SDK initialization in your app deployment, using the [validMessageOrigins](/javascript/api/@microsoft/teams-js/app) parameter.
 
@@ -389,9 +389,9 @@ You can also visualize the changes by reviewing the `transformLegacyContextToApp
 
 ## Updating to TeamsJS version 2.0
 
-The easiest way to update your Teams app with TeamsJS version 2.0.x is to use the [Microsoft 365 Agents Toolkit extension](https://aka.ms/teams-toolkit) for Visual Studio Code. This section walks you through the steps to do that. If you prefer to manually update your code, see the [Callbacks converted to promises](#callbacks-converted-to-promises) and [APIs organized into capabilities](#apis-organized-into-capabilities) sections for more information on required API changes.
+The easiest way to update your Teams app with TeamsJS version 2.0.x is to use the [Agents Toolkit extension](https://aka.ms/teams-toolkit) for Visual Studio Code. This section walks you through the steps to do that. If you prefer to manually update your code, see the [Callbacks converted to promises](#callbacks-converted-to-promises) and [APIs organized into capabilities](#apis-organized-into-capabilities) sections for more information on required API changes.
 
-### 1. Install the latest Microsoft 365 Agents Toolkit Visual Studio Code extension
+### 1. Install the latest Agents Toolkit Visual Studio Code extension
 
 In the *Visual Studio Code Extensions Marketplace*, search for **Microsoft 365 Agents Toolkit** and install the latest version.
 
@@ -399,7 +399,7 @@ In the *Visual Studio Code Extensions Marketplace*, search for **Microsoft 365 A
 
 To run in Outlook and Microsoft 365 app, your app needs to depend on the [npm package](https://www.npmjs.com/package/@microsoft/teams-js/v/2.0.0) `@microsoft/teams-js@2.0.0` (or later). To perform these steps manually, and for more information on the API changes, see the following sections on [Callbacks converted to promises](#callbacks-converted-to-promises) and [APIs organized into capabilities](#apis-organized-into-capabilities).
 
-1. Ensure you have the latest [Microsoft 365 Agents Toolkit](https://aka.ms/teams-toolkit) (version 2.10.0 or later)
+1. Ensure you have the latest [Agents Toolkit](https://aka.ms/teams-toolkit) (version 2.10.0 or later)
 1. Open the *Command palette*: `Ctrl+Shift+P`
 1. Run the command `Teams: Upgrade Teams JS SDK references to support Outlook and Microsoft 365 apps`
 
@@ -418,9 +418,9 @@ After completion, the utility updates your `package.json` file with the TeamsJS 
 
 ### 3. Update the app manifest (optional)
 
-If you're updating a Teams app to run in Microsoft 365 app and Outlook, you also need to update the app manifest to version 1.13 or later. You can do this easily with Microsoft 365 Agents Toolkit, or manually.
+If you're updating a Teams app to run in Microsoft 365 app and Outlook, you also need to update the app manifest to version 1.13 or later. You can do this easily with Agents Toolkit, or manually.
 
-# [Microsoft 365 Agents Toolkit](#tab/manifest-teams-toolkit)
+# [Agents Toolkit](#tab/manifest-teams-toolkit)
 
 1. Open the *Command palette*: `Ctrl+Shift+P`
 1. Run **Teams: Upgrade Teams manifest to support Outlook and Microsoft 365 apps** command and select your app manifest file. Changes are made in place.
@@ -438,9 +438,9 @@ Open your app manifest and update the `$schema` and `manifestVersion` with the f
 
 ---
 
-If you used Microsoft 365 Agents Toolkit to create your personal app, you can also use it to validate the changes to your app manifest file and identify any errors. Open the command palette `Ctrl+Shift+P` and find **Teams: Validate manifest file** or select the option from the Deployment menu of the Microsoft 365 Agents Toolkit (look for the Teams icon on the left side of Visual Studio Code).
+If you used Agents Toolkit to create your personal app, you can also use it to validate the changes to your app manifest file and identify any errors. Open the command palette `Ctrl+Shift+P` and find **Teams: Validate manifest file** or select the option from the Deployment menu of the Agents Toolkit (look for the Teams icon on the left side of Visual Studio Code).
 
-:::image type="content" source="../../m365-apps/images/toolkit-validate-manifest-file.png" alt-text="Microsoft 365 Agents Toolkit 'Validate manifest file' option under 'Deployment' menu":::
+:::image type="content" source="../../m365-apps/images/toolkit-validate-manifest-file.png" alt-text="Agents Toolkit 'Validate manifest file' option under 'Deployment' menu":::
 
 ## Next steps
 

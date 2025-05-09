@@ -32,7 +32,7 @@ items:
     | &nbsp; | Install | For using |
     | --- | --- | --- |
     | &nbsp; | [Microsoft Visual Studio Code](https://code.visualstudio.com/download) | JavaScript or TypeScript, build environments. Use the latest version. |
-    | &nbsp; | [Microsoft Microsoft 365 Agents Toolkit](#install-teams-toolkit) | Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
+    | &nbsp; | [Microsoft 365 Agents Toolkit](#install-teams-toolkit) (previously known as Teams Toolkit) | Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
     | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
     | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge/) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
@@ -118,7 +118,7 @@ items:
 
     ## Take a tour of the source code
 
-    Microsoft 365 Agents Toolkit provides components for building an app. After creating the project, you can view the project folders and files in the **EXPLORER** area of Visual Studio Code.
+    Agents Toolkit provides components for building an app. After creating the project, you can view the project folders and files in the **EXPLORER** area of Visual Studio Code.
 
     :::image type="content" source="~/assets/images/proactive-scenario/file-structure.png" alt-text="Screenshot shows the structure tab.":::
 
@@ -137,7 +137,7 @@ items:
   durationInMinutes: 1
   content: |
 
-    You've learnt to build and run Teams app with proactive message bot capability. Let's deploy the first app with proactive message bot capability on Azure using Microsoft 365 Agents Toolkit.
+    You've learnt to build and run Teams app with proactive message bot capability. Let's deploy the first app with proactive message bot capability on Azure using Agents Toolkit.
 
     ## Sign in to your Azure account
 
