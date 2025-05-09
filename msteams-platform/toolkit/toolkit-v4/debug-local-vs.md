@@ -1,7 +1,7 @@
 ---
 title: Debug Teams App Locally 
 author: surbhigupta 
-description: Learn how to set up dev tunnel for bots and message extensions and prepare Teams Toolkit to debug your Teams app locally using Visual Studio.
+description: Learn how to set up dev tunnel for bots and message extensions and prepare Microsoft 365 Agents Toolkit to debug your Teams app locally using Visual Studio.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
@@ -10,7 +10,7 @@ ms.date: 12/11/2024
 
 # Debug your Microsoft Teams app locally using Microsoft Visual Studio
 
-Visual Studio allows you to debug tabs, bots, and message extensions. You can debug your app locally in Visual Studio using Microsoft Teams Toolkit by performing:
+Visual Studio allows you to debug tabs, bots, and message extensions. You can debug your app locally in Visual Studio using Microsoft Microsoft 365 Agents Toolkit by performing:
 
 ## Set up dev tunnel (Only for bot and message extension)
 
@@ -27,12 +27,12 @@ In the debug dropdown menu:
 1. Enter the name of the dev tunnel and under **Access** select **Public** from the dropdown.
 1. Select **OK**.
 
-### Set up your Teams Toolkit
+### Set up your Microsoft 365 Agents Toolkit
 
 To debug your app after you create a project, perform the following steps:
 
 1. Right-click on your project.
-1. Select **Teams Toolkit** > **Prepare Teams App Dependencies**.
+1. Select **Microsoft 365 Agents Toolkit** > **Prepare Teams App Dependencies**.
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-localdebug-teamsappdependencies.png" alt-text="Screenshot shows the local debug teams app dependencies.":::
 
@@ -52,7 +52,7 @@ To debug your app after you create a project, perform the following steps:
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-localdebug-Startdebug.png" alt-text="Screenshot shows start debugging.":::
 
-   Visual Studio launches the Teams app inside Microsoft Teams client in your browser. For more information, see [Teams Toolkit Overview](teams-toolkit-fundamentals-vs.md).
+   Visual Studio launches the Teams app inside Microsoft Teams client in your browser. For more information, see [Microsoft 365 Agents Toolkit Overview](teams-toolkit-fundamentals-vs.md).
 
 1. Select **Add** to install your app in Teams.
 
@@ -78,8 +78,8 @@ To debug your app after you create a project, perform the following steps:
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals-vs.md)
+* [Microsoft 365 Agents Toolkit Overview](teams-toolkit-fundamentals-vs.md)
 * [Introduction to Azure Functions](/azure/azure-functions/functions-overview)
-* [Use Teams Toolkit to provision cloud resources](provision-vs.md)
+* [Use Microsoft 365 Agents Toolkit to provision cloud resources](provision-vs.md)
 * [Deploy to the cloud](deploy-vs.md)
-* [Manage multiple environments in Teams Toolkit](teamsfx-multi-env-v4.md)
+* [Manage multiple environments in Microsoft 365 Agents Toolkit](teamsfx-multi-env-v4.md)
