@@ -167,6 +167,13 @@ The following table lists the updates to Teams AI library:
 | Augmentation        | Augmentations simplify prompt engineering tasks by letting the developer add named augmentations to their prompt. Only `functions`, `sequence`, and `monologue` style augmentations are supported. | ✔️   | ✔️         | ✔️     |
 | Data Sources        | A new DataSource plugin makes it easy to add RAG to any prompt. You can register a named data source with the planner and then specify the names of the data sources you wish to augment the prompt. | ❌   | ✔️         | ✔️     |
 
+## Function calls using AI SDK
+
+Function calls, implemented within the AI SDK, unlock numerous capabilities, enabling the AI model to generate accurate responses seamlessly. It enables direct connection with external tools, thereby making AI even more powerful. These capabilities include performing complex calculations, retrieving important data, creating smoother workflows, and enabling dynamic interactions with users.
+
+> [!NOTE]
+> Structured outputs aren't supported.
+
 To use function calling with the Chat Completions API:
 
 1. Set up the planner where the default prompt uses the Tools Augmentation. Update one of the following files of your bot app:
