@@ -13,7 +13,7 @@ ms.owner: angovil
 
 Teams AI library is a Teams-centric interface for integrating GPT-based language models and user intent engines. It simplifies the development process by reducing the need to write and maintain complex conversational bot logic.
 
-:::image type="content" border="false" source="../../../assets/images/bots/teams-ai-library.png" alt-text="Visual representation of a user input and a bot response." lightbox="../../../assets/images/bots/teams-ai-library.png" :::
+:::image type="content" border="false" source="../../../assets/images/bots/teams-ai-library.png" alt-text="Visual representation of a user input and a bot response."lightbox="../../../assets/images/bots/teams-ai-library.png":::
 
 You can leverage prebuilt, reusable code snippets that allow you to quickly build intelligent apps. This capabilities-driven approach lets you focus on business logic rather than learning the intricacies of Microsoft Teams conversational frameworks.
 
@@ -23,7 +23,7 @@ Teams AI library enables your apps to engage users in natural and conversational
 
 You can rely on the built-in conversational bot capabilities in Teams (such as Power Virtual Agents or the Bot Framework) to handle the complexities of natural language processing.
 
-:::image type="content" source="../../../assets/images/bots/teams-ai-library-benefits.png" alt-text="Screenshot shows the benefits of using Teams AI library." :::
+:::image type="content" source="../../../assets/images/bots/teams-ai-library-benefits.png" alt-text="Screenshot shows the benefits of using Teams AI library.":::
 
 You can leverage Teams AI library to:
 
@@ -40,7 +40,7 @@ Teams AI library offers a variety of features that simplify the development of y
 
 As a developer, you might want to build an intelligent lightbot that controls the light in response to the user's command. Teams AI library provides features that can make building your custom engine agent a breeze, ensuring your AI-powered lightbot delivers a fun, interactive user experience.
 
-Below are some key features and their benefits:
+Following are some key features and their benefits:
 
 :::row:::
     :::column span="":::
@@ -167,158 +167,147 @@ The following table lists the updates to Teams AI library:
 | Augmentation        | Augmentations simplify prompt engineering tasks by letting the developer add named augmentations to their prompt. Only `functions`, `sequence`, and `monologue` style augmentations are supported. | ✔️   | ✔️         | ✔️     |
 | Data Sources        | A new DataSource plugin makes it easy to add RAG to any prompt. You can register a named data source with the planner and then specify the names of the data sources you wish to augment the prompt. | ❌   | ✔️         | ✔️     |
 
-## Function calls using AI SDK
+To use function calling with the Chat Completions API:
 
-Function calls, implemented within the AI SDK, unlock numerous capabilities by enabling the AI model to generate accurate responses seamlessly. They enable direct connections with external tools, making AI even more powerful. These capabilities include performing complex calculations, retrieving important data, creating smoother workflows, and enabling dynamic interactions with users.
+1. Set up the planner where the default prompt uses the Tools Augmentation. Update one of the following files of your bot app:
 
-> [!NOTE]
-> Structured outputs aren't supported.
+    * For a JavaScript app: Update `index.ts`.
+    * For a C# bot app: Update `Program.cs`.
+    * For a Python app: Update `bot.py`.
 
-To use function calling with the Chat Completions API, follow these steps:
+   The following code snippet shows how to set up the `ToolsAugmentation` class:
 
-### 1. Set Up the Planner
+   # [JavaScript](#tab/javascript)
 
-Update one of the following files of your bot app:
+    ```JavaScript
+    const planner = new ActionPlanner({
+        model,
+        prompts,
+        defaultPrompt: 'tools'
+    });
+    ```
 
-* For a JavaScript app: update `index.ts`.
-* For a C# bot app: update `Program.cs`.
-* For a Python app: update `bot.py`.
+   # [C#](#tab/dotnet)
 
-The following code snippet shows how to set up the `ToolsAugmentation` class:
+    ```C#
+    ActionPlannerOptions<TurnState> options = new ActionPlannerOptions<TurnState>() 
+    { 
+        Model = model,
+        Prompts = prompts,
+        async (context, state, planner) =>
+        {
+            return await Task.FromResult(prompts.GetPrompt("Tools"));
+        } 
+    }
+    ActionPlanner<TurnState> planner = new ActionPlanner(options)
+    ```
 
-#### [JavaScript](#tab/javascript)
+   # [Python](#tab/python)
 
-```JavaScript
-const planner = new ActionPlanner({
-    model,
-    prompts,
-    defaultPrompt: 'tools'
-});
-```
+    ```Python
+    planner = ActionPlanner(ActionPlannerOptions(model=model, prompts=prompts, default_prompt="tools"))
+    ```
 
-#### [C#](#tab/dotnet)
+    ---
 
-```C#
-ActionPlannerOptions<TurnState> options = new ActionPlannerOptions<TurnState>() 
-{ 
-    Model = model,
-    Prompts = prompts,
-    async (context, state, planner) =>
+1. Specify tools augmentation in the `config.json` file.
+
+    ```JSON
     {
-        return await Task.FromResult(prompts.GetPrompt("Tools"));
-    } 
-};
-ActionPlanner<TurnState> planner = new ActionPlanner(options);
-```
+        "schema": 1.1,
+        "description": "",
+        "type": "",
+        "completion": {
+    +       "tool_choice": "auto",
+    +       "parallel_tool_calls": true,
+        },
+    +    "augmentation": {
+    +        "augmentation_type": "tools"
+    +    }
+    }
+    ```
 
-#### [Python](#tab/python)
+1. Specify all your `function definitions` in the `actions.json` file, which is in the `prompts` folder. Ensure that you follow the schema to avoid errors when the action is called by the LLM.
 
-```Python
-planner = ActionPlanner(ActionPlannerOptions(model=model, prompts=prompts, default_prompt="tools"))
-```
+    ```JSON
+    [{
+        "name": "CreateList",
+        "description": "Creates a list"
+    }]
+    ```
 
----
+1. Register your `handlers` in your `application` class.
 
-### 2. Specify Tools Augmentation in config.json
+    * Each handler is a callback function that runs when a specific event happens. The function call handler executes code in response to the event.
+    * The function call must return a string as the output of the function call.
+    * When the model requests to invoke any functions, these are mapped to `DO` commands within a `Plan` and are invoked in the AI class `run` function. The outputs are then returned to the model with tool call IDs to show that the tools were used.
 
-Update the `config.json` file to include tools augmentation:
+   The following code snippet shows how to register `handlers`:
 
-```JSON
-{
-    "schema": 1.1,
-    "description": "",
-    "type": "",
-    "completion": {
-+       "tool_choice": "auto",
-+       "parallel_tool_calls": true
-    },
-+    "augmentation": {
-+        "augmentation_type": "tools"
-+    }
-}
-```
+   # [JavaScript](#tab/javascript1)
 
-### 3. Specify Function Definitions
-
-Define all your function definitions in the `actions.json` file, which is located in the `prompts` folder. Ensure you follow the schema to avoid errors when the action is called by the LLM.
-
-```JSON
-[{
-    "name": "CreateList",
-    "description": "Creates a list"
-}]
-```
-
-### 4. Register Your Handlers in Your Application Class
-
-Register your handlers, which are callback functions that run when specific events happen. The function call handler executes code in response to an event. The function must return a string as the output. When the model requests to invoke any functions, these are mapped to `DO` commands within a `Plan` and invoked in the AI class `run` function. The outputs are then returned to the model with tool call IDs, showing that the tools were used.
-
-The following code snippet shows how to register handlers:
-
-#### [JavaScript](#tab/javascript1)
-
-```JavaScript
-app.ai.action("createList", async (context: TurnContext, state: ApplicationTurnState, parameters: ListAndItems) => {
-    // Example: create a list with name "Grocery Shopping".
+    ```JavaScript
+    app.ai.action("createList", async (context: TurnContext, state: ApplicationTurnState, parameters: ListAndItems) => {
+    // Ex. create a list with name "Grocery Shopping".
     ensureListExists(state, parameters.list);
     return `list created and items added. think about your next action`;
-});
-```
+    });
+    ```
 
-#### [C#](#tab/dotnet1)
+   # [C#](#tab/dotnet1)
 
-```C#
-[Action("CreateList")]
-public string CreateList([ActionTurnState] ListState turnState, [ActionParameters] Dictionary<string, object> parameters)
-{
-    ArgumentNullException.ThrowIfNull(turnState);
-    ArgumentNullException.ThrowIfNull(parameters);
+    ```C#
+    [Action("CreateList")]
+    public string CreateList([ActionTurnState] ListState turnState, [ActionParameters] Dictionary<string, object> parameters)
+    {
+        ArgumentNullException.ThrowIfNull(turnState);
+        ArgumentNullException.ThrowIfNull(parameters);
 
-    string listName = GetParameterString(parameters, "list");
+        string listName = GetParameterString(parameters, "list");
 
-    EnsureListExists(turnState, listName);
+        EnsureListExists(turnState, listName);
 
-    return "list created. think about your next action";
-}
-```
+        return "list created. think about your next action";
+    }
+    ```
 
-#### [Python](#tab/python1)
+   # [Python](#tab/python1)
 
-```Python
-@app.ai.action("createList")
-async def create_list(context: ActionTurnContext, state: AppTurnState):
+    ```Python
+    @app.ai.action("createList")
+    async def create_list(context: ActionTurnContext, state: AppTurnState):
     ensure_list_exists(state, context.data["list"])
-    # Continues execution of the next command in the plan.
+    # Continues exectuion of next command in the plan.
     return ""
-```
+    ```
 
----
+    ---
 
-### Enable Tool Options
+### Enable tool options
 
-You can enable the following tool options to further tailor your bot's behavior:
+You can enable the following tool options:
 
-* **Enable Tool Choice**: Allow the model to select the function it must call.
-  - In the `config.json` file, set `tool_choice` to `required` to mandate that the model always calls at least one function.
-  - Alternatively, set `tool_choice` to a specific function using its definition.
-  - Set `tool_choice` to `none` to disable the tool.
-  
-  The default value of `tool_choice` is `auto`, enabling the model to select which functions to call.
+* **Enable Tool Choice**: Allow the model to select the function it must call by enabling tool selection. In the `config.json` file:
 
-* **Toggle Parallel Tool Calls**: Executing tools in parallel speeds up processing and reduces the number of back-and-forth calls to the API.
-  - In `config.json`, set `parallel_tool_calls` to `true` or `false`.
-  - By default, `parallel_tool_calls` is set to `true`.
+  * Set `tool_choice` as `required` to mandate the model to always call at least one function.
+  * Set `tool_choice` to a specific function using its definition for using that function.
+  * Set `tool_choice` as `none` to disable the tool.
 
-The code snippet below shows the configuration:
+  The default value of `tool_choice`is `auto`. It enables the model to select the functions that it must call.
+
+* **Toggle Parallel Tool Calls**: Executing tools in parallel is faster and reduces the number of back-and-forth calls to the API. In the `config.json` file, you can set `parallel_tool_calls` to `true` or `false`. By default, the `parallel_tool_calls` parameter is set to `true`.
+
+The following code snippet shows how to enable tool choice and to toggle parallel tool calls:
 
 ```JSON
 {
+
     "schema": 1.1,
     "description": "",
     "type": "",
     "completion": {
 +       "tool_choice": "auto",
-+       "parallel_tool_calls": true
++       "parallel_tool_calls": true,
     },
 +    "augmentation": {
 +        "augmentation_type": "tools"
