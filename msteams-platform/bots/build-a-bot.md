@@ -9,7 +9,7 @@ ms.author: surbhigupta
 
 # Types of bots
 
-When deciding how to develop your bot, you consider your available options. You choose between an AI-enabled bot and a conventional one. This article presents an overview to help you start. It explains how you build a basic bot app and then enhance it into a custom engine agent.
+When deciding how to develop your bot, it's important to know your options. You must choose between an AI-enabled bot or a conventional one. This article gives a quick overview to help you start. It shows you how to build a basic bot app and then enhance it into a custom engine agent.
 
 ## Choose the tools and platforms
 
@@ -27,7 +27,7 @@ If you want to create your own bot, you use the following list of tools and plat
 
 ## Build a bot
 
-You start by building a bot using Teams Toolkit, Bot Framework SDK, or Teams AI library. After you build a conventional Teams bot app, you add an AI layer to elevate its capabilities.
+Let's start by building a bot. You can use Teams Toolkit, Bot Framework SDK, or Teams AI library. After you build a conventional Teams bot app, you can add the AI layer to your bot to elevate it.
 
 ### Build a conventional Teams bot app
 
@@ -38,7 +38,7 @@ You start by building a bot using Teams Toolkit, Bot Framework SDK, or Teams AI 
 
 ### Build an AI-powered Teams bot app
 
-You build a new custom engine agent or elevate your existing conventional bot to use AI.
+You can build a new custom engine agent or elevate your existing conventional bot to be powered by AI.
 
 | # | I want to build ... | Here's how... |
 | --- | --- | --- |
