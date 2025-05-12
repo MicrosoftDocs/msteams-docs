@@ -10,7 +10,7 @@ ms.date: 02/06/2025
 
 # Publish Teams app with Developer Portal
 
-You can configure and manage your app in Developer Portal within Microsoft 365 Agents Toolkit.
+You can configure and manage your app in Developer Portal within Microsoft 365 Agents Toolkit (previously known as Teams Toolkit).
 
 ## To publish app using Developer Portal
 
@@ -27,7 +27,7 @@ The following steps help to publish your app in Developer Portal:
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-your-teams-app-package.png" alt-text="Screenshot showing the selection of zip Teams app package.":::
 
 1. Sign in to [Developer Portal for Teams](https://dev.teams.microsoft.com/home) using the corresponding account.
-1. Microsoft 365 Agents Toolkit opens your selected Teams app's page and navigate to the **Publish** > **Publish to store** page.
+1. Agents Toolkit opens your selected Teams app's page and navigate to the **Publish** > **Publish to store** page.
 1. Select **Publish** > **Publish to your org**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/publish-to-your-org.png" alt-text="Screenshot showing the selection of publish to your org.":::

@@ -61,17 +61,17 @@ Perform the following steps to upload app package:
 
 ## Publish to your organization
 
-When the app is ready for use in production, you can submit the app using the Teams app submission API, called from Microsoft Graph API. Teams app submission API is an integrated development environment (IDE) such as Microsoft Visual Studio Code installed with Microsoft 365 Agents Toolkit. The following steps help you to publish the app to your organization:
+When the app is ready for use in production, you can submit the app using the Teams app submission API, called from Microsoft Graph API. Teams app submission API is an integrated development environment (IDE) such as Microsoft Visual Studio Code installed with Agents Toolkit (previously known as Teams Toolkit). The following steps help you to publish the app to your organization:
 
-* [Publish from Microsoft 365 Agents Toolkit](#publish-from-teams-toolkit)
+* [Publish from Agents Toolkit](#publish-from-teams-toolkit)
 * [Approve on admin center](#approve-on-admin-center)
 
-### Publish from Microsoft 365 Agents Toolkit
+### Publish from Agents Toolkit
 
 > [!NOTE]
 > You can use CICD pipelines to publish your Teams app. For more information, see [set up CI/CD pipelines](use-CICD-template.md).
 
-The following steps help you to publish the app from Microsoft 365 Agents Toolkit:
+The following steps help you to publish the app from Agents Toolkit:
 
 1. You can publish your Teams app in one of the following ways:
      * Select **Publish** under **LIFECYCLE**.
@@ -79,7 +79,7 @@ The following steps help you to publish the app from Microsoft 365 Agents Toolki
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-publish_1.png" alt-text="Screenshot shows the Publish option highlighted.":::
 
-1. Select your environment, Microsoft 365 Agents Toolkit runs the `publish` lifecycle defined in `teamsapp.yml`.
+1. Select your environment, Agents Toolkit runs the `publish` lifecycle defined in `teamsapp.yml`.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-env.jpg" alt-text="Screenshot shows the environment options.":::
 

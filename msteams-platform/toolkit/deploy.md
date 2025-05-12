@@ -1,7 +1,7 @@
 ---
 title: Deploy to the cloud
 author: MuyangAmigo
-description: Learn how to deploy and customize Teams app to cloud resources such as Azure App Services, Azure Storage, or SharePoint using Teams Toolkit in Visual Studio Code.
+description: Learn how to deploy and customize Teams app to cloud resources such as Azure App Services, Azure Storage, or SharePoint using Agents Toolkit in Visual Studio Code.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Deploy Microsoft Teams app to the cloud using Microsoft Visual Studio Code
 
-Microsoft 365 Agents Toolkit helps to deploy or upload the front-end and back-end code in your app to your provisioned cloud resources in Azure.
+Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) helps to deploy or upload the front-end and back-end code in your app to your provisioned cloud resources in Azure.
 
 You can deploy to the following types of cloud resources:
 
@@ -22,9 +22,9 @@ You can deploy to the following types of cloud resources:
 > [!NOTE]
 > Before you deploy app code to Azure cloud, you need to successfully complete the [provisioning of cloud resources](provision.md).
 
-## Deploy Teams apps using Microsoft 365 Agents Toolkit
+## Deploy Teams apps using Agents Toolkit
 
-The Get started guide helps to deploy using Microsoft 365 Agents Toolkit. You can use the following to deploy your Teams app:
+The Get started guide helps to deploy using Agents Toolkit. You can use the following to deploy your Teams app:
 
 ### Sign in to your Azure account
 
@@ -47,7 +47,7 @@ The ACCOUNTS section of the sidebar shows the two accounts separately. It also l
 
 Now you're ready to deploy your app to Azure!
 
-Congratulations, you've created a Teams app! Now let's go ahead and learn how to deploy one of the apps to Azure using the Microsoft 365 Agents Toolkit.
+Congratulations, you've created a Teams app! Now let's go ahead and learn how to deploy one of the apps to Azure using Agents Toolkit.
 
 ## Deploy to Azure
 
