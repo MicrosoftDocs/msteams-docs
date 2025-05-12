@@ -1,7 +1,7 @@
 ---
 title: Customize Microsoft Entra Manifest
 author: zyxiaoyuer
-description: Learn how to edit, customize, preview, and manage Microsoft Entra manifest with CodeLens in Microsoft 365 Agents Toolkit, app development lifecycle, and view app in Azure portal.
+description: Learn how to edit, customize, preview, and manage Microsoft Entra manifest with CodeLens in Agents Toolkit, app development lifecycle, and view app in Azure portal.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
@@ -10,7 +10,7 @@ ms.date: 02/06/2025
 
 # Edit Microsoft Entra manifest
 
-Microsoft 365 Agents Toolkit now manages Microsoft Entra application with the app manifest file as the source of truth during your Microsoft Teams application development lifecycle.
+Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) now manages Microsoft Entra application with the app manifest file as the source of truth during your Microsoft Teams application development lifecycle.
 
 <a name='customize-azure-ad-manifest-template'></a>
 
@@ -171,7 +171,7 @@ Placeholder argument CodeLens helps you to see the values for local debug and de
 
 ### Required resource access CodeLens
 
-Microsoft Entra manifest template in Microsoft 365 Agents Toolkit also supports user readable strings for `Microsoft Graph` and `Office 365 SharePoint Online` permissions. The official [Microsoft Entra manifest schema](/azure/active-directory/develop/reference-app-manifest), which is the `resourceAppId` and `resourceAccess` in `requiredResourceAccess` property supports only the UUID. If you enter UUID, the CodeLens shows user readable strings, otherwise it shows the UUID.
+Microsoft Entra manifest template in Agents Toolkit also supports user readable strings for `Microsoft Graph` and `Office 365 SharePoint Online` permissions. The official [Microsoft Entra manifest schema](/azure/active-directory/develop/reference-app-manifest), which is the `resourceAppId` and `resourceAccess` in `requiredResourceAccess` property supports only the UUID. If you enter UUID, the CodeLens shows user readable strings, otherwise it shows the UUID.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add resource.png" alt-text="Screenshot shows the add resource to required resource access.":::
 
@@ -224,19 +224,19 @@ You need to interact with Microsoft Entra application during various stages of y
 
 1. **To create Project**
 
-      You can create a project with Microsoft 365 Agents Toolkit that comes with single sign-on (SSO) support by default such as `SSO-enabled tab`. For more information on how to create a new app, see [create new Teams application using Microsoft 365 Agents Toolkit](create-new-project.md). A Microsoft Entra manifest file is automatically created for you in `aad.template.json`. Microsoft 365 Agents Toolkit creates or updates the Microsoft Entra application during local development or while you move the application to the cloud.
+      You can create a project with Agents Toolkit that comes with single sign-on (SSO) support by default such as `SSO-enabled tab`. For more information on how to create a new app, see [create new Teams application using Agents Toolkit](create-new-project.md). A Microsoft Entra manifest file is automatically created for you in `aad.template.json`. Agents Toolkit creates or updates the Microsoft Entra application during local development or while you move the application to the cloud.
 
 1. **To add SSO to your bot or tab**
 
-      After you create a Teams application without built-in SSO, Microsoft 365 Agents Toolkit progressively helps you to add SSO for the project. As a result, a Microsoft Entra manifest file is automatically created for you in `aad.template.json`.
+      After you create a Teams application without built-in SSO, Agents Toolkit progressively helps you to add SSO for the project. As a result, a Microsoft Entra manifest file is automatically created for you in `aad.template.json`.
 
-      Microsoft 365 Agents Toolkit creates or updates the Microsoft Entra application during next local development session or while you move the application to the cloud.
+      Agents Toolkit creates or updates the Microsoft Entra application during next local development session or while you move the application to the cloud.
 
 1. **To build locally**
 
-    Microsoft 365 Agents Toolkit performs the following functions during local development:
+    Agents Toolkit performs the following functions during local development:
 
-    - Read the `.env.local` file to find an existing Microsoft Entra application. If a Microsoft Entra application already exists, Microsoft 365 Agents Toolkit reuses the existing Microsoft Entra application. Otherwise, you need to create a new application using the `aad.template.json` file.
+    - Read the `.env.local` file to find an existing Microsoft Entra application. If a Microsoft Entra application already exists, Agents Toolkit reuses the existing Microsoft Entra application. Otherwise, you need to create a new application using the `aad.template.json` file.
 
     - Initially ignores some properties in the manifest file that requires more context, such as `replyUrls` property that requires a local development endpoint during the creation of a new Microsoft Entra application with the manifest file.
 
@@ -246,9 +246,9 @@ You need to interact with Microsoft Entra application during various stages of y
 
 1. **To provision for cloud resources**
 
-      You need to provision cloud resources and deploy your application while moving your application to the cloud. At stages, such as local debug, Microsoft 365 Agents Toolkit:
+      You need to provision cloud resources and deploy your application while moving your application to the cloud. At stages, such as local debug, Agents Toolkit:
 
-      - Reads the `.env.{env}` file to find an existing Microsoft Entra application. If a Microsoft Entra application already exists, Microsoft 365 Agents Toolkit reuses the existing Microsoft Entra application. Otherwise, you need to create a new application using the `aad.template.json` file.
+      - Reads the `.env.{env}` file to find an existing Microsoft Entra application. If a Microsoft Entra application already exists, Agents Toolkit reuses the existing Microsoft Entra application. Otherwise, you need to create a new application using the `aad.template.json` file.
 
       - Ignores some properties in the manifest file initially that requires more context such as `replyUrls` property. This property requires frontend or bot endpoint during the creation of a new Microsoft Entra application with the manifest file.
 
@@ -258,13 +258,13 @@ You need to interact with Microsoft Entra application during various stages of y
 
     - The cloud command deploys your application to the provisioned resources. It doesn't include deploying Microsoft Entra application changes you've made.
 
-    - Microsoft 365 Agents Toolkit updates the Microsoft Entra application according to the Microsoft Entra manifest template file.
+    - Agents Toolkit updates the Microsoft Entra application according to the Microsoft Entra manifest template file.
 
 ## Limitations
 
-1. Microsoft 365 Agents Toolkit extension doesn't support all the properties listed in Microsoft Entra manifest schema.
+1. Agents Toolkit extension doesn't support all the properties listed in Microsoft Entra manifest schema.
   
-      The following table lists the properties that aren't supported in Microsoft 365 Agents Toolkit extension:
+      The following table lists the properties that aren't supported in Agents Toolkit extension:
 
       |**Not supported properties**|**Reason**|
       |-----------|----------|

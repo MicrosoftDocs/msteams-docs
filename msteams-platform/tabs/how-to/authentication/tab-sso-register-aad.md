@@ -54,7 +54,7 @@ You can configure your tab app in Microsoft Entra ID to configure the scope and 
 Register your app in Microsoft Entra ID and configure the tenancy and app's platform, before you can enable it for SSO. Microsoft Entra ID generates a new app ID that you must note. You need to update it later in the app manifest (previously called Teams app manifest) file.
 
 > [!NOTE]
-> Microsoft Microsoft 365 Agents Toolkit registers the Microsoft Entra application in an SSO project. You can skip this section if you've used Microsoft 365 Agents Toolkit to create your app. However, you would need to configure permissions and scope, and trust client applications.
+> Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) registers the Microsoft Entra application in an SSO project. You can skip this section if you've used Agents Toolkit to create your app. However, you would need to configure permissions and scope, and trust client applications.
 
 <details>
 <summary><b>Learn how to register your app in Microsoft Entra ID</b></summary>

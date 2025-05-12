@@ -9,7 +9,7 @@ ms.date: 05/20/2022
 ---
 # Add single sign-on to Teams app
 
-Microsoft Teams provides single sign-on (SSO) function for an app to obtain signed in Teams user token to access Microsoft Graph and other APIs. Microsoft 365 Agents Toolkit facilitates the interaction by abstracting few of the Microsoft Entra ID flows and integrations behind simple APIs and enables you to add SSO features easily to your Teams app.
+Microsoft Teams provides single sign-on (SSO) function for an app to obtain signed in Teams user token to access Microsoft Graph and other APIs. Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) facilitates the interaction by abstracting few of the Microsoft Entra ID flows and integrations behind simple APIs and enables you to add SSO features easily to your Teams app.
 
 ## Add SSO to Teams app for Microsoft Visual Studio Code
 
@@ -17,7 +17,7 @@ For apps that interact with the user in a chat, Team, or channel, SSO manifests 
 
 ## Enable SSO support
 
-Microsoft 365 Agents Toolkit helps you to add SSO to the following Teams capabilities in Visual Studio Code:
+Agents Toolkit helps you to add SSO to the following Teams capabilities in Visual Studio Code:
 
 * Tab
 * Bot
@@ -28,7 +28,7 @@ Microsoft 365 Agents Toolkit helps you to add SSO to the following Teams capabil
 
 ### Add SSO using Visual Studio Code
 
-You can perform the following steps to add SSO using Microsoft 365 Agents Toolkit in Visual Studio Code:
+You can perform the following steps to add SSO using Agents Toolkit in Visual Studio Code:
 
 1. Open **Visual Studio Code**.
 2. Select **Microsoft 365 Agents Toolkit** from the Visual Studio Code activity bar.
@@ -45,7 +45,7 @@ You can perform the following steps to add SSO using Microsoft 365 Agents Toolki
    |Develop Single Sign-on Experience in Teams | [Enable single sign-on for tab app](develop-single-sign-on-experience-in-Teams.md) |
 
 > [!NOTE]
-> When SSO is enabled, Microsoft 365 Agents Toolkit by default provisions a single-tenant Microsoft Entra app, which means only user and guest accounts in the same directory as your M365 account can sign in to your Teams app. For more information on supporting multitenant to update your TeamsFx project, see [Multi-tenancy support for Microsoft Entra app](https://github.com/OfficeDev/TeamsFx/wiki/Multi-tenancy-Support-for-Azure-AD-app).
+> When SSO is enabled, Agents Toolkit by default provisions a single-tenant Microsoft Entra app, which means only user and guest accounts in the same directory as your M365 account can sign in to your Teams app. For more information on supporting multitenant to update your TeamsFx project, see [Multi-tenancy support for Microsoft Entra app](https://github.com/OfficeDev/TeamsFx/wiki/Multi-tenancy-Support-for-Azure-AD-app).
 
 ## See also
 

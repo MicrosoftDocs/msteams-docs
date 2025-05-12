@@ -16,14 +16,14 @@ The advanced Q&A chatbots are powerful apps built with the help of Large Languag
 
 * **Retrieval and generation**: The RAG chain, which takes the user query at run time and retrieves the relevant data from the index, then passes it to the model.
 
-Microsoft Teams enables you to build a conversational bot with RAG to create an enhanced experience to maximize  productivity. Microsoft 365 Agents Toolkit provides a series of ready to use app templates in the **Chat With Your Data** category that combines the functionalities of Azure AI search, Microsoft 365 SharePoint, and custom API as different data source and LLMs to create a conversational search experience in Teams.
+Microsoft Teams enables you to build a conversational bot with RAG to create an enhanced experience to maximize  productivity. Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) provides a series of ready to use app templates in the **Chat With Your Data** category that combines the functionalities of Azure AI search, Microsoft 365 SharePoint, and custom API as different data source and LLMs to create a conversational search experience in Teams.
 
 ## Prerequisites
 
 | Install | For using... |
 | --- | --- |
 | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or Python build environments. Use the latest version. |
-| [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
+| [Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
 | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
 | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and calls all in one place.|
 | [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's Generative Pretrained Transformer (GPT). If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
@@ -36,7 +36,7 @@ Microsoft Teams enables you to build a conversational bot with RAG to create an 
 
 1. Select **Create a New App**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/create-new-app.png" alt-text="Screenshot shows the location of the Create New Project link in the Microsoft 365 Agents Toolkit sidebar.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/create-new-app.png" alt-text="Screenshot shows the location of the Create New Project link in the Agents Toolkit sidebar.":::
 
 1. Select **Custom Engine Agent**.
 
@@ -115,7 +115,7 @@ Test Tool opens the bot in a webpage.
 |`src/app/app.js`| Handles business logics for the RAG bot.|
 |`src/app/myDataSource.js`| Defines the data source.|
 |`src/data/*.md`| Raw text data sources.|
-|`teamsapp.yml`|This is the main Microsoft 365 Agents Toolkit project file. The project file defines the properties and configuration stage definitions. |
+|`teamsapp.yml`| This is the main Agents Toolkit project file. The project file defines the properties and configuration stage definitions. |
 |`teamsapp.local.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging.|
 |`teamsapp.testtool.yml`| This overrides `teamsapp.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
 
@@ -307,7 +307,7 @@ Here's a minimal set of implementations to add RAG to your app. In general, it i
 
 ## Select data sources
 
-In the **Chat With Your Data** or RAG scenarios, Microsoft 365 Agents Toolkit provides the following types of data sources:
+In the **Chat With Your Data** or RAG scenarios, Agents Toolkit provides the following types of data sources:
 
 * **Customize**: Allows you to fully control the data ingestion to build your own vector index and use it as data source. For more information, see [build your own data ingestion](#build-your-own-data-ingestion).
 
