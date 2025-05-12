@@ -1,7 +1,7 @@
 ---
 title: Configure Tab Capability
 author: surbhigupta
-description: Learn how to configure the tab capability within a Teams app with the Teams Toolkit for Visual Studio Code.
+description: Learn how to configure the tab capability within a Teams app with Microsoft 365 Agents Toolkit for Visual Studio Code.
 ms.author: v-bvishnu
 ms.localizationpriority: medium
 ms.topic: reference
@@ -31,7 +31,7 @@ The following steps help you to configure the tab capability in a Teams app:
 1. [Provision app to Azure](#provision-app-to-azure)
 
 > [!TIP]
-> If you develop a server-side tab app, you don't need to update the folder structure, debug profile, or bicep infrastructure. Add new routes to the tab in your bot service and update the app manifest in Microsoft 365 Agents Toolkit.
+> If you develop a server-side tab app, you don't need to update the folder structure, debug profile, or bicep infrastructure. Add new routes to the tab in your bot service and update the app manifest in Agents Toolkit (previously known as Teams Toolkit).
 For more information, see [sample app](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/hello-world-bot-with-tab).
 
 ### Update app manifest
@@ -63,11 +63,11 @@ For more information, see [sample app](https://github.com/OfficeDev/TeamsFx-Samp
    ```
 
    > [!NOTE]
-   > `TAB_ENDPOINT` and `TAB_DOMAIN` are built-in variables of Microsoft 365 Agents Toolkit. They're replaced with the true endpoint during runtime based on your current environment.
+   > `TAB_ENDPOINT` and `TAB_DOMAIN` are built-in variables of Agents Toolkit. They're replaced with the true endpoint during runtime based on your current environment.
 
 ### Setup local debug environment
 
-1. Bring your tab app code into your project in Visual Studio Code. If you don't have one, you can [create a new tab app with Microsoft 365 Agents Toolkit](create-new-project.md) and copy the source code into your current project. By default, your tab app's folder structure looks as follows:
+1. Bring your tab app code into your project in Visual Studio Code. If you don't have one, you can [create a new tab app with Agents Toolkit](create-new-project.md) and copy the source code into your current project. By default, your tab app's folder structure looks as follows:
 
    ```
        |-- appPackage/
@@ -167,7 +167,7 @@ For more information, see [sample app](https://github.com/OfficeDev/TeamsFx-Samp
 
    For more information on how to configure the debug profile, see [sample app](https://github.com/OfficeDev/teams-toolkit-samples/tree/dev/hello-world-bot-with-tab/.vscode).
 
-1. To enable your tab project to work with Microsoft 365 Agents Toolkit, add the following actions to the `teamsapp.local.yml` file:
+1. To enable your tab project to work with Agents Toolkit, add the following actions to the `teamsapp.local.yml` file:
 
    ```yaml
    provision:

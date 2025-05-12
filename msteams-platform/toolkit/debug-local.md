@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 Agents Toolkit - Debug your Apps Locally
+title: Agents Toolkit - Debug your Apps Locally
 author: surbhigupta 
 description: Learn how to set up Microsoft 365 Agents Toolkit to debug Teams app in Visual Studio Code, debug process, dev tunnel, and debug configurations.
 ms.author: surbhigupta
@@ -10,18 +10,18 @@ ms.date: 12/11/2024
 
 # Debug your Teams app locally
 
-Microsoft 365 Agents Toolkit helps you to debug and preview your Microsoft Teams app locally. During debugging, Microsoft 365 Agents Toolkit automatically starts app services, launches debuggers, and uploads Teams app. You can preview your Teams app in Teams web client locally after debugging.
+Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) helps you to debug and preview your Microsoft Teams app locally. During debugging, Agents Toolkit automatically starts app services, launches debuggers, and uploads Teams app. You can preview your Teams app in Teams web client locally after debugging.
 
 ## Debug your Teams app locally for Visual Studio Code
 
-Microsoft 365 Agents Toolkit in Microsoft Visual Studio Code gives you the features to automate debugging of your Teams app locally. Visual Studio Code allows you to debug tab, bot, and message extension. You need to set up Microsoft 365 Agents Toolkit before you debug your app.
+Agents Toolkit in Microsoft Visual Studio Code gives you the features to automate debugging of your Teams app locally. Visual Studio Code allows you to debug tab, bot, and message extension. You need to set up Agents Toolkit before you debug your app.
 
 > [!NOTE]
-> Your old Microsoft 365 Agents Toolkit project gets upgraded to use new tasks, for more information, see [tasks doc](https://aka.ms/teamsfx-tasks).
+> Your old Agents Toolkit project gets upgraded to use new tasks, for more information, see [tasks doc](https://aka.ms/teamsfx-tasks).
 
-## Set up your Microsoft 365 Agents Toolkit for debugging
+## Set up your Agents Toolkit for debugging
 
-The following steps help you set up your Microsoft 365 Agents Toolkit before you initiate the debug process:
+The following steps help you set up your Agents Toolkit before you initiate the debug process:
 
 # [Windows](#tab/Windows)
 
@@ -81,7 +81,7 @@ Toolkit launches a new Microsoft Edge or Chrome browser instance based on your s
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mac-settings.png" alt-text="Screenshot shows the mac sign in dialog.":::
 
-Microsoft 365 Agents Toolkit launches your browser instance and opens a webpage to load Teams client.
+Agents Toolkit launches your browser instance and opens a webpage to load Teams client.
 
 # [Command line](#tab/cli)
 
@@ -142,7 +142,7 @@ npm run prepare-storage:teamsapp
 
 ## Debug your app
 
-After the initial setup process, Microsoft 365 Agents Toolkit starts the following processes:
+After the initial setup process, Agents Toolkit starts the following processes:
 
 * [Starts app services](#starts-app-services)
 * [Launches debug configurations](#launches-debug-configurations)
@@ -209,7 +209,7 @@ The following table lists the required arguments:
 | **Arguments** | **Type** | **Required** | **Description** |
 | --- | --- | --- |--------|
 | `type` | string | required | The type of tunnel service to use. This argument must be set to `dev-tunnel`. |
-| `env` | string | optional | The environment name. Microsoft 365 Agents Toolkit writes the environment variables defined in `output` to `.env.<env>` file. |
+| `env` | string | optional | The environment name. Agents Toolkit writes the environment variables defined in `output` to `.env.<env>` file. |
 | `ports` | array | required | An array of port configurations, each specifying the local port number, protocol, and access control settings. |
 
 The `ports` argument must be an array of objects, with each object specifying the configuration for a particular port. Each object must contain the following fields:

@@ -1,7 +1,7 @@
 ---
 title: Configure Bot Capability
 author: surbhigupta
-description: Learn how to configure the bot capability within a Teams app with Microsoft Teams Toolkit for Visual Studio Code.
+description: Learn how to configure the bot capability within a Teams app with Microsoft 365 Agents Toolkit for Visual Studio Code.
 ms.author: v-preethah
 ms.localizationpriority: medium
 ms.topic: reference
@@ -30,9 +30,9 @@ The following steps help you to add bot to a tab app:
 * [Setup local debug environment](#setup-local-debug-environment)
 * [Provision the app to Azure](#provision-the-app-to-azure)
 
-## Create bot app using Microsoft 365 Agents Toolkit
+## Create bot app using Agents Toolkit
 
-To create a bot app using Microsoft 365 Agents Toolkit, see [create a bot app with Microsoft 365 Agents Toolkit](create-new-project.md).
+To create a bot app using Agents Toolkit (previously known as Teams Toolkit), see [create a bot app with Agents Toolkit](create-new-project.md).
 
 ## Configure bot capability in app manifest
 
@@ -460,13 +460,13 @@ You can add the bot capability to a message extension app easily as message exte
 
 The following steps help you to add the bot capability to a message extension app:
 
-* [Create bot app using Microsoft 365 Agents Toolkit](#create-bot-app-using-teams-toolkit)
+* [Create bot app using Agents Toolkit](#create-bot-app-using-agents-toolkit)
 * [Update manifest file](#update-manifest-file)
 * [Add bot code to project](#add-bot-code-to-project)
 
-## Create bot app using Microsoft 365 Agents Toolkit
+## Create bot app using Agents Toolkit
 
-To create a bot app with Microsoft 365 Agents Toolkit, see [create a new Teams bot app](create-new-project.md).
+To create a bot app with Agents Toolkit, see [create a new Teams bot app](create-new-project.md).
 
 ## Update manifest file
 
@@ -510,7 +510,7 @@ The following code snippet is an example:
 
 ## Add bot code to project
 
-1. Your message extension app contains a class that extends `TeamsActivityHandler`. Copy your configured bot code from the bot app into this class in Visual Studio Code. The following code is an example of a message extension that contains functions from a bot app created in Microsoft 365 Agents Toolkit:
+1. Your message extension app contains a class that extends `TeamsActivityHandler`. Copy your configured bot code from the bot app into this class in Visual Studio Code. The following code is an example of a message extension that contains functions from a bot app created in Agents Toolkit:
 
    ```javascript
       public class YourHandler extends TeamsActivityHandler{

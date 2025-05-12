@@ -24,19 +24,19 @@ The debugging process workflow is as follows:
 
 ## Validate prerequisites
 
-Microsoft 365 Agents Toolkit checks the following prerequisites during the debugging process:
+Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) checks the following prerequisites during the debugging process:
 
-* Microsoft 365 Agents Toolkit checks if Node.js is installed. If Node.js isn't installed, the debugging terminates.
-* Microsoft 365 Agents Toolkit checks if Node.js version matches the versions defined in `package.json` file. If the version doesn't match, Microsoft 365 Agents Toolkit displays a warning message in output channel.
-* Microsoft 365 Agents Toolkit prompts you to sign in to Microsoft 365 account, if you haven't signed in with your valid credentials.
+* Agents Toolkit checks if Node.js is installed. If Node.js isn't installed, the debugging terminates.
+* Agents Toolkit checks if Node.js version matches the versions defined in `package.json` file. If the version doesn't match, Agents Toolkit displays a warning message in output channel.
+* Agents Toolkit prompts you to sign in to Microsoft 365 account, if you haven't signed in with your valid credentials.
 * Custom app upload for your developer tenant is turned on to prevent local debug termination.
-* If Ngrok isn't installed or the version doesn't match the requirement, Microsoft 365 Agents Toolkit installs Ngrok npm package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. Ngrok binary version 2.3 is applicable for bot and message extension and is managed by Ngrok npm package in `/.fx/bin/ngrok/node modules/ngrok/bin`.
+* If Ngrok isn't installed or the version doesn't match the requirement, Agents Toolkit installs Ngrok npm package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. Ngrok binary version 2.3 is applicable for bot and message extension and is managed by Ngrok npm package in `/.fx/bin/ngrok/node modules/ngrok/bin`.
 
   > [!NOTE]
-  > Microsoft 365 Agents Toolkit project templates use the ngrok@4.3.3 npm package, which contains v2.3.40. For more information on how to get a valid license, see [ngrok](https://ngrok.com/).
+  > Agents Toolkit project templates use the ngrok@4.3.3 npm package, which contains v2.3.40. For more information on how to get a valid license, see [ngrok](https://ngrok.com/).
 
-* If Azure Functions Core Tools version 4 isn't installed or the version doesn't match the requirement, Microsoft 365 Agents Toolkit installs Azure Functions Core Tools npm package `azure-functions-core-tools@3` for Windows and macOS in  `~/.fx/bin/func`. The Azure Functions Core Tools npm package in `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.
-* If .NET Core SDK isn't installed or the version doesn't match the requirement, Microsoft 365 Agents Toolkit installs .NET Core SDK for Windows and macOS in `~/.fx/bin/dotnet`. .NET Core SDK version is applicable for Azure Functions. For Linux, the local debug terminates.
+* If Azure Functions Core Tools version 4 isn't installed or the version doesn't match the requirement, Agents Toolkit installs Azure Functions Core Tools npm package `azure-functions-core-tools@3` for Windows and macOS in  `~/.fx/bin/func`. The Azure Functions Core Tools npm package in `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.
+* If .NET Core SDK isn't installed or the version doesn't match the requirement, Agents Toolkit installs .NET Core SDK for Windows and macOS in `~/.fx/bin/dotnet`. .NET Core SDK version is applicable for Azure Functions. For Linux, the local debug terminates.
 
   The following table lists the .NET Core versions:
 
@@ -45,10 +45,10 @@ Microsoft 365 Agents Toolkit checks the following prerequisites during the debug
   |Windows, macOS (x64), and Linux | **3.1 (recommended)**, 5.0, 6.0 |
   |macOS (arm64) |6.0 |
 
-* If the development certificate for localhost isn't installed for tab in Windows or macOS, then Microsoft 365 Agents Toolkit prompts you to install it.
-* If Azure Functions binding extensions isn't installed, then Microsoft 365 Agents Toolkit installs Azure Functions binding extensions in `api/extensions.csproj`.
-* If npm packages aren't installed, then Microsoft 365 Agents Toolkit installs all npm packages applicable for tab app, bot app, message extension, and Azure Functions.
-* Microsoft 365 Agents Toolkit starts Ngrok to create an HTTP tunnel for bot and message extension.
+* If the development certificate for localhost isn't installed for tab in Windows or macOS, then Agents Toolkit prompts you to install it.
+* If Azure Functions binding extensions isn't installed, then Agents Toolkit installs Azure Functions binding extensions in `api/extensions.csproj`.
+* If npm packages aren't installed, then Agents Toolkit installs all npm packages applicable for tab app, bot app, message extension, and Azure Functions.
+* Agents Toolkit starts Ngrok to create an HTTP tunnel for bot and message extension.
 * If tab, bot, message extension, and Azure Functions ports aren't available, the local debug terminates.
 
   The following table lists the ports available for components:
@@ -69,9 +69,9 @@ Microsoft 365 Agents Toolkit checks the following prerequisites during the debug
 |Tab with Azure functions | Node.js LTS versions 10, 12, **14 (recommended)** |The local debug terminates, if Node.js isn't installed or the version doesn't match the requirement.|
 |Bot | Node.js LTS versions 10, 12, **14 (recommended)**, 16|The local debug terminates, if Node.js isn't installed or the version doesn't match the requirement.|
 |Message extension | Node.js LTS versions 10, 12, **14 (recommended)**, 16 |The local debug terminates, if Node.js isn't installed or the version doesn't match the requirement.|
-|Sign-in to Microsoft 365 account | Microsoft 365 credentials |Microsoft 365 Agents Toolkit prompts you to sign-in to Microsoft 365 account, if you haven't signed in. |
-|Bot, message extension | Ngrok version 2.3| • If Ngrok isn't installed or the version doesn't match the requirement, the Microsoft 365 Agents Toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. </br> • The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.|
-|Azure functions | Azure Functions Core Tools version 3| • If Azure Functions Core Tools isn't installed or the version doesn't match the requirement, the Microsoft 365 Agents Toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. </br> • The Azure Functions Core Tools NPM package in `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.|
+|Sign-in to Microsoft 365 account | Microsoft 365 credentials |Agents Toolkit prompts you to sign-in to Microsoft 365 account, if you haven't signed in. |
+|Bot, message extension | Ngrok version 2.3| • If Ngrok isn't installed or the version doesn't match the requirement, Agents Toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. </br> • The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.|
+|Azure functions | Azure Functions Core Tools version 3| • If Azure Functions Core Tools isn't installed or the version doesn't match the requirement, Agents Toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. </br> • The Azure Functions Core Tools NPM package in `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.|
 |Azure functions |.NET Core SDK version|• If .NET Core SDK isn't installed or the version  doesn't match the requirement, the Toolkit installs .NET Core SDK for Windows and macOS in `~/.fx/bin/dotnet`.</br> • For Linux, the local debug terminates.|
 |Azure functions | Azure functions binding extensions defined in `api/extensions.csproj`| If Azure functions binding extensions isn't installed, the Toolkit installs Azure functions binding extensions.|
 |NPM packages| NPM packages for tab app, bot app, message extension app, and Azure functions|If NPM isn't installed, the Toolkit installs all NPM packages.|
@@ -88,9 +88,9 @@ Use the following .NET Core versions:
 |macOs (arm64) |6.0 |
 
 > [!NOTE]
-> If the development certificate for localhost isn't installed for tab in Windows or MacOS, the Microsoft 365 Agents Toolkit prompts you to install it.</br> -->
+> If the development certificate for localhost isn't installed for tab in Windows or MacOS, Agents Toolkit prompts you to install it.</br> -->
 
-When you select **Start Debugging (F5)**, Microsoft 365 Agents Toolkit output channel displays the progress and result after checking the prerequisites.
+When you select **Start Debugging (F5)**, Agents Toolkit output channel displays the progress and result after checking the prerequisites.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck.png" alt-text="Screenshot shows the prerequisites check summary.":::
 
@@ -98,15 +98,15 @@ For more information, see [validate prerequisites task](https://aka.ms/teamsfx-t
 
 ## Start local tunnel
 
-For bot and message extension, Microsoft 365 Agents Toolkit starts a local tunnel service to make the bot messaging endpoint public. For more information, see [start local tunnel task](https://aka.ms/teamsfx-tasks/local-tunnel).
+For bot and message extension, Agents Toolkit starts a local tunnel service to make the bot messaging endpoint public. For more information, see [start local tunnel task](https://aka.ms/teamsfx-tasks/local-tunnel).
 
 ## Create the debug resources
 
-Microsoft 365 Agents Toolkit executes lifecycle `provision` defined in `teamsapp.local.yml` to create Teams app related resources required for debugging. For more information, see [Provision task](https://aka.ms/teamsfx-tasks/provision) and [available actions](https://aka.ms/teamsfx-actions).
+Agents Toolkit executes lifecycle `provision` defined in `teamsapp.local.yml` to create Teams app related resources required for debugging. For more information, see [Provision task](https://aka.ms/teamsfx-tasks/provision) and [available actions](https://aka.ms/teamsfx-actions).
 
 ## Build project
 
-Microsoft 365 Agents Toolkit executes lifecycle `deploy` defined in `teamsapp.local.yml` to build the project. For more information, see [Deploy task](https://aka.ms/teamsfx-tasks/deploy) and [available actions](https://aka.ms/teamsfx-actions).
+Agents Toolkit executes lifecycle `deploy` defined in `teamsapp.local.yml` to build the project. For more information, see [Deploy task](https://aka.ms/teamsfx-tasks/deploy) and [available actions](https://aka.ms/teamsfx-actions).
 
 ## Take a tour of your app source code
 
@@ -114,11 +114,11 @@ You can view the project folders and files under **Explorer** in Visual Studio C
 
 | Folder name| Contents| Debug configuration type |
 | --- | --- | --- |
-|  `teamsapp.local.yml` | The main Microsoft 365 Agents Toolkit project file for debugging. | This file defines the life cycles and actions required for debugging. |
-|  `env/.env.local` | Environment variables file for Microsoft 365 Agents Toolkit project. | The values of each environment variable are consumed or generated during debugging. |
+|  `teamsapp.local.yml` | The main Agents Toolkit project file for debugging. | This file defines the life cycles and actions required for debugging. |
+|  `env/.env.local` | Environment variables file for Agents Toolkit project. | The values of each environment variable are consumed or generated during debugging. |
 | `.localConfigs` | Environment variables file for the app code. | The values of each environment variable are generated during debugging. |
 
-For more information on the project folder structure, see [Microsoft 365 Agents Toolkit project](https://aka.ms/teamsfx-v5.0-guide#teams-toolkit-project).
+For more information on the project folder structure, see [Agents Toolkit project](https://aka.ms/teamsfx-v5.0-guide#teams-toolkit-project).
 
 ## See also
 
