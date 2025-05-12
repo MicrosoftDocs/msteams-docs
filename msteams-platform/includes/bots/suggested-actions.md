@@ -64,7 +64,7 @@ The following illustrates an example of `imBack` action:
 
 You can use the `Action.Compose` to insert a message in the compose box, which helps you add a new action type. This action enables you to include semantic objects like tags, mention users in the chat or channel, and other rich objects like emojis and gifs.
 
-The value object must follow the [`chatMessage`](/graph/api/resources/chatmessage?view=graph-rest-1.0) object in the Graph API. The following code snippet shows an example of implementing `Action.Compose`:
+The value object must follow the [`chatMessage`](/graph/api/resources/chatmessage?view=graph-rest-1.0&preserve-view=true) object in the Graph API. The following code snippet shows an example of implementing `Action.Compose`:
 
 ```json
 {
