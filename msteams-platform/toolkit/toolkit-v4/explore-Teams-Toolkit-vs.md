@@ -1,7 +1,7 @@
 ---
 title: Explore Microsoft 365 Agents Toolkit UI & Features
 author: zyxiaoyuer
-description: Learn about Microsoft 365 Agents Toolkit UI in Visual Studio, and functions such as app dependencies, manifest update, and authentication code to build and develop your app.
+description: Learn about Microsoft 365 Agents Toolkit UI in VS, and functions such as app dependencies, manifest update, and authentication code to build and develop your app.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview

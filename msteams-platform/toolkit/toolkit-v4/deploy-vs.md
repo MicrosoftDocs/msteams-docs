@@ -1,7 +1,7 @@
 ---
 title: Deploy to the cloud using Visual Studio
 author: MuyangAmigo
-description: Learn how to deploy Teams app to cloud resources such as Azure or SharePoint using Microsoft 365 Agents Toolkit in Visual Studio, and to customize and edit deploy section.
+description: Learn how to deploy Teams app to cloud resources using Microsoft 365 Agents Toolkit in Visual Studio, and to customize and edit deploy section.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview

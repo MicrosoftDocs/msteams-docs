@@ -1,7 +1,7 @@
 ---
 title: Create New Teams App in Microsoft 365 Agents Toolkit
 author: zyxiaoyuer
-description: Learn how to create basic and scenario-based Teams app in Visual Studio Code, its directory structure, and Teams app template available in Microsoft 365 Agents Toolkit.
+description: Learn how to create basic and scenario-based Teams app in VSC, its directory structure, and Teams app template available in Microsoft 365 Agents Toolkit.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
