@@ -107,6 +107,7 @@ For more information, see [sample app](https://github.com/OfficeDev/TeamsFx-Samp
              args: install --no-audit
              workingDirectory: ./bot
    ```
+
 1. To configure the debug profile for your tab project, add the following code to the `tasks.json` file:
 
    ```json

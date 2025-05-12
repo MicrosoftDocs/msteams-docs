@@ -160,6 +160,7 @@ The following code snippet is an example:
 
    > [!TIP]
    > Use the command `npm init -y` to create a root `package.json` file.
+
    ```
    |--.vscode/
    |--appPackage/
