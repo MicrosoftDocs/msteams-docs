@@ -9,7 +9,7 @@ When a user selects a button, it remains visible and accessible on the rich card
 
 ### `imBack`
 
-To add suggested actions to a message, specify a list of [card action](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) objects that represent the buttons to be displayed to the user for the [`sugestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions) property of the [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) object.
+To add suggested actions to a message, specify a list of [card action](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) objects that represent the buttons to be displayed to the user for the [`suggestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions) property of the [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) object.
 
 The following is an example to implement and experience suggested actions:
 
@@ -64,6 +64,8 @@ The following illustrates an example of `imBack` action:
 
 You can use the `Action.Compose` to insert a message in the compose box, which helps you add a new action type. This action enables you to include semantic objects like tags, mention users in the chat or channel, and other rich objects like emojis and gifs.
 
+The value object must follow the [`chatMessage`](/graph/api/resources/chatmessage?view=graph-rest-1.0) object in the Graph API. The following code snippet shows an example of implementing `Action.Compose`:
+
 ```json
 {
    Type: “Action.Compose”,
@@ -74,6 +76,25 @@ You can use the `Action.Compose` to insert a message in the compose box, which h
    }
 }
 ```
+
+A modified version for other hubs can be shown as this example:
+
+```json
+{ 
+
+   Type: “Action.Compose”, 
+
+   Title: “button title”, 
+
+   Value: { 
+      type: “Teams.chatMessage”, 
+      data: <GraphAPI Chat Message Object> 
+   } 
+
+}
+```
+
+It can show an error message, if unsupported. Bots are aware of the channel to which they post.
 
 The following illustrates an example of `Actions.Compose` action:
 
