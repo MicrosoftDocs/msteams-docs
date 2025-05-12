@@ -5,23 +5,26 @@ ms.localizationpriority: high
 ms.topic: conceptual
 ms.owner: vichug
 ms.author: surbhigupta
-ms.date: 05/09/2025
+ms.date: 05/13/2025
 ---
 
-# Get meeting AI insights and summaries with Meeting AI Insights API
+# Get meeting AI summaries with Meeting AI Insights API
 
 > [!IMPORTANT]
 >
 > * AI-generated meeting insights fetched through Meeting AI Insights API are only available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
-> * Meeting AI Insights API is part of M365 Copilot API namespace. Results can only be fetched on behalf of a M365 Copilot licensed user. For more information, see [license requirements for Meeting Insights API](/graph/teams-licenses#license-requirements-for-teams-meeting-ai-insights-apis).
+> * Meeting AI Insights API is part of the Microsoft 365 Copilot API namespace. Insights can only be fetched on behalf of a Microsoft 365 Copilot licensed user. For more information, see [license requirements for Meeting Insights API](/graph/teams-licenses#license-requirements-for-teams-meeting-ai-insights-apis).
 
-The Meeting AI Insights API enables developers to programmatically access structured insights derived from transcribed Microsoft Teams meetings. These AI-generated insights include:
+The Meeting AI Insights API enables you to programmatically access structured AI-generated insights from transcribed Microsoft Teams meetings. These insights include:
+
 * Comprehensive conversation summaries
 * Action items extracted from the discussion
 * Participant-specific @mention utterances
 
-This API empowers developers to deliver intelligent meeting experiences—such as surfacing key takeaways or generating follow-ups—without the need to build or maintain their own AI infrastructure. Insights are generated after the meeting concludes and are accessible via Microsoft Graph API endpoints. 
-Meeting AI Insights API provides AI-generated insights for all meetings and calls for which a recap is available, including scheduled private and channel meetings, one-on-one and group Voice over Internet Protocol (VoIP) calls, webinars, and adhoc meetings.
+The API empowers you to deliver intelligent meeting experiences, such as surfacing key takeaways or generating follow-ups, without the need to build or maintain your own AI infrastructure. Insights are generated after the meeting concludes and are accessible through Microsoft Graph API endpoints.
+
+The API provides AI-generated insights for all meetings and calls for which a recap is available, including scheduled private and channel meetings, one-on-one and group Voice over Internet Protocol (VoIP) calls, webinars, and adhoc meetings.
+
 > [!NOTE]
 > Meeting AI Insights API is only available for organizers and presenters of a town hall meeting.
 
@@ -30,14 +33,14 @@ Meeting AI Insights API provides AI-generated insights for all meetings and call
 Here are some use cases for fetching AI-generated insights using Meeting AI Insights API:
 
 | Use case | Scenario | Integration | Impact |
-| --- | --- | -- | -- |
+|---|---|---|---|
 | Autogenerate meeting summaries for CRM updates | A sales team conducts regular customer meetings over Teams. After each call, they need to log meeting summaries and follow-ups in their CRM. | After each meeting, you can have a backend service listen for meeting end events and use Microsoft Graph APIs to fetch post-meeting insights. The service extracts summaries and action items, and maps them to specific fields in the company's CRM records. Optionally, the integration can include a Teams message card confirming the update. | - Saves time for sales representatives by eliminating manual entry.<br>- Ensures consistent capture of key details across all customer interactions. |
 | Capture post-meeting knowledge in a project management app | Product and engineering teams hold regular meetings to make design and feature decisions. Team members often forget to document what was discussed and agreed upon. | You can use a bot or a background job to query the Graph API for concluded meetings owned by product leads. The API fetches insights and uses natural language processing (NLP) to classify them, such as decisions, tasks, or risk items. These classifications are converted into tasks or notes in Azure DevOps, Jira, or Notion and assigned to the correct stakeholders using Graph user identities. | - Prevents information loss.<br>- Automatically bridges the gap between conversation and task tracking.<br>- Promotes alignment and accountability. |
 | Generate executive briefings for strategic meetings | Executives participate in multiple high-level meetings across functions such as finance, operations, or board reviews. They need quick, reliable summaries to stay up-to-date and take action. | You can create a digital assistant to call the Graph API after the designated executive meetings conclude to retrieve insights, prioritize key decisions and blockers, and format them into a concise daily briefing card. This card is posted to the executive's Teams chat or sent as a morning email summary. The integration can optionally highlight recurring themes using keyword clustering across meetings. | - Improves executive focus and decision velocity.<br>- Reduces reliance on manual note-taking and follow-ups. Enables faster cross-functional awareness. |
 
 ## Prerequisites
 
-* You must enable the transcription or recording for the meeting for which the insights are to be generated. You can programmatically set a meeting to autotranscribe or autorecord using the [update onlineMeeting API](/graph/api/onlinemeeting-update?view=graph-rest-1.0&preserve-view=true&tabs=http) or directly through the [meeting options](/microsoftteams/manage-meeting-recording-options#record-and-transcribe-automatically)
+* You must enable the transcription or recording for the meeting for which the insights are to be generated. You can programmatically set a meeting to autotranscribe or autorecord using the [update onlineMeeting API](/graph/api/onlinemeeting-update?view=graph-rest-1.0&preserve-view=true&tabs=http) or directly through the [meeting options](/microsoftteams/manage-meeting-recording-options#record-and-transcribe-automatically).
 
 * The Meeting AI Insights API only works with delegated permissions and hence requires a token from a signed-in user to be passed in the call. The signed-in user must have a [Microsoft 365 Copilot license](/copilot/microsoft-365/microsoft-365-copilot-licensing) and access to the meeting’s transcript file.
 
@@ -47,7 +50,15 @@ To fetch the insights of a particular meeting, follow these steps:
 
 1. If you don’t have the `meetingId`, call online meeting API with the `JoinWebUrl` property to retrieve the `meetingId`. For more information, see [retrieve an online meeting by JoinWebUrl](/graph/api/onlinemeeting-get?view=graph-rest-1.0&preserve-view=true&tabs=http#example-3-retrieve-an-online-meeting-by-joinweburl).
 
-1. Each transcript event of the meeting creates an associated [AI insight object](/graph/api/onlinemeeting-list-aiinsights?view=graph-rest-beta&preserve-view=true). Use the [List AI Insights API](/graph/api/onlinemeeting-list-aiinsights?view=graph-rest-beta&preserve-view=true) to fetch all insight objects related to the meeting and use the included metadata in the response to select the relevant object for your scenario. Here's an example response:
+1. Each transcript event of the meeting creates an associated [AI insight object](/graph/api/onlinemeeting-list-aiinsights?view=graph-rest-beta&preserve-view=true). Use the [List AI Insights API](/graph/api/onlinemeeting-list-aiinsights?view=graph-rest-beta&preserve-view=true) to fetch all insight objects related to the meeting and use the included metadata in the response to select the relevant object for your scenario. Here's an example request and response:
+
+    **Request**
+
+    ```http
+    GET /copilot/users/{userId}/onlineMeetings/{onlineMeetingId}/aiInsights
+    ```
+
+    **Response**
 
     ```json
     HTTP/1.1 200 OK
@@ -72,11 +83,19 @@ To fetch the insights of a particular meeting, follow these steps:
     | --- | --- |
     | `id` | A unique identifier for the generated insight. |
     | `callId` | A unique identifier for the [call](/graph/api/resources/call?view=graph-rest-1.0&preserve-view=true) during which this insight is generated. |
-    | `contentCorrelationId` | A unique identifier that correlates the [transcript](/graph/api/resources/calltranscript?&view=graph-rest-beta&preserve-view=true) from which the insight is generated. |
+    | `contentCorrelationId` | A unique identifier that correlates the [transcript](/graph/api/resources/calltranscript?&view=graph-rest-beta&preserve-view=true) of the meeting from which the insight is generated. |
     | `createdDateTime` | The date and time at which the corresponding transcript was created. The timestamp type represents the date and time information using the ISO 8601 format and is always in Coordinated Universal Time (UTC). |
     | `endDateTime` | The date and time at which the corresponding transcript ends. The timestamp type represents the date and time information using the ISO 8601 format and is always in UTC. |
 
-1. Each insight object provides detailed meeting notes, action items, and participant-specific @mention utterances, which can be accessed by calling AI Insights API for a specific insight object ID. Here's an example response:
+1. Each insight object provides detailed meeting notes, action items, and participant-specific @mention utterances, which can be accessed by calling [GET AI Insights API](/graph/api/callaiinsight-get?view=graph-rest-beta&preserve-view=true) for a specific insight object ID. Here's an example request and response:
+
+    **Request**
+
+    ```http
+    GET /copilot/users/{userId}/onlineMeetings/{onlineMeetingId}/aiInsights/{aiInsightId}
+    ```
+
+    **Response**
 
     ```json
     HTTP/1.1 200 OK

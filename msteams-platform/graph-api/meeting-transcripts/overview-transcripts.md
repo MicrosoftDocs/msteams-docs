@@ -1,10 +1,11 @@
 ---
-title: Fetch Meeting Transcripts & Recordings
+title: Get Transcripts, Recordings & Insights
 description: In this module, learn the process, scenarios, and APIs to fetch transcripts, recordings, and AI-generated insights in the post-meeting scenario.
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.owner: vichug
-ms.date: 05/12/2025
+ms.author: surbhigupta
+ms.date: 05/13/2025
 ---
 
 # Get meeting transcripts, recordings, and AI-generated insights using Graph APIs
@@ -71,7 +72,7 @@ For more information about how your app can know when the meetings ends, see [su
 > [!NOTE]
 > The process for calling Graph APIs to access and retrieve transcripts and recordings remains the same for both meeting-specific RSC application permissions and organization-wide application permissions. These APIs support private chat meetings and channel meetings only in beta.
 
-## Get meeting AI insights and summaries
+## Get AI-generated meeting summaries and insights
 
 Your app can fetch AI-generated meeting insights, including conversation summaries, action items, and @mention utterances using Meeting AI Insights API. For more information, see [get meeting insights with Meeting AI Insights API](meeting-insights.md).
 
