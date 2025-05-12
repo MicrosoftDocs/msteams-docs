@@ -11,7 +11,7 @@ ms.date: 12/11/2024
 
 # Command bot in Teams
 
-Microsoft Teams allows you to automate simple and repetitive tasks in a conversation. You can build a command bot that can respond to simple commands sent in chats with Adaptive Cards. You can create a command bot template in Microsoft 365 Agents Toolkit that responds to chat commands by displaying UI using an Adaptive Card. This enables users to send messages in Teams and your app can provide a response as required.
+Microsoft Teams allows you to automate simple and repetitive tasks in a conversation. You can build a command bot that can respond to simple commands sent in chats with Adaptive Cards. You can create a command bot template in Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) that responds to chat commands by displaying UI using an Adaptive Card. This enables users to send messages in Teams and your app can provide a response as required.
 
 The command bot template is built using the TeamsFx SDK, which provides a simple set of functions over the Microsoft Bot Framework. Command bot can be used in different scenarios such as checking ticket status and retrieving help information.
 
@@ -419,11 +419,11 @@ If needed, you can add new cards for your application. For more information on h
 
 ### Access Microsoft Graph
 
-If you're responding to a command that needs to access Microsoft Graph data of an already signed in Teams user, you can do so by single sign-on (SSO) with their Teams user token. Read more about how Microsoft 365 Agents Toolkit can help you to add [single sign-on to Teams app](../../../toolkit/add-single-sign-on.md).
+If you're responding to a command that needs to access Microsoft Graph data of an already signed in Teams user, you can do so by single sign-on (SSO) with their Teams user token. Read more about how Agents Toolkit can help you to add [single sign-on to Teams app](../../../toolkit/add-single-sign-on.md).
 
 ### Connect to existing APIs
 
-If you don't have the required SDK and need to invoke external APIs in your code, the **Teams: Connect to an API** command in Visual Studio Code (VS Code) Microsoft 365 Agents Toolkit extension, or the **teamsfx add api-connection** command in TeamsFx CLI can be used to bootstrap code to call target APIs. For more information, see [configure API connection](../../../toolkit/add-API-connection.md#).
+If you don't have the required SDK and need to invoke external APIs in your code, the **Teams: Connect to an API** command in Visual Studio Code (VS Code) Agents Toolkit extension, or the **teamsfx add api-connection** command in TeamsFx CLI can be used to bootstrap code to call target APIs. For more information, see [configure API connection](../../../toolkit/add-API-connection.md#).
 
 ## FAQ
 
