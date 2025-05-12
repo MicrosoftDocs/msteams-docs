@@ -257,7 +257,7 @@ To pass the Microsoft Teams Store approval, the app description must include how
 - The ability for bots to receive all messages in chats using `ChatMessage.Read.Chat` is only enabled after a re-installation or new installation into a chat:
 
   - If you have an app that's using the `ChatMessage.Read.Chat` for Graph scenarios, then test the app following the steps in [upload a custom app in a conversation](channel-messages-for-bots-and-agents.md#upload-a-custom-app-in-a-conversation) and modify the app before the feature is [generally available](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=receive%2Call%2Cgroup%2Cchat%2Cmessages).
-  - If you don't want your app to receive all chat messages, use the [code snippet](#filtering-at-mention-messages) for filtering the @mention messages only.
+  - If you don't want your app to receive all chat messages, use the [code snippet](#filter-at-mention-messages) for filtering the @mention messages only.
   - If no action is taken, your bot receives all the messages after the new installation.
 
 - Note that `ChatMessage.Read.Chat` allows the app to read chat messages, without a signed-in user. For more information, see [RSC permissions](/graph/permissions-reference).
