@@ -1,9 +1,8 @@
 ---
 title: Apps for Teams Meeting Stage
-author: v-sdhakshina
 description: Learn how to build apps for Teams meeting stage, share to stage APIs, and generate a deep link to share content to stage in meetings.
 ms.topic: conceptual
-ms.author: v-sdhakshina
+ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.owner: kanchankaur
 ms.date: 10/29/2024
@@ -348,7 +347,7 @@ The following table includes the query parameter:
 
 Use this field to specify if the app has its own share to stage experience. To avoid user confusion due to multiple buttons serving the same purpose, you can opt to hide the native share button. This ensures that users experience either the app's custom share to stage feature or the default native experience, but not both.
 
-The `supportsCustomShareToStage` property name in the app manifest indicates whether the app has enabled support for sharing app content to the stage. 
+The `supportsCustomShareToStage` property name in the app manifest indicates whether the app has enabled support for sharing app content to the stage.
 
 The following code is an example of `supportsCustomShareToStage` property in the app manifest:
 
