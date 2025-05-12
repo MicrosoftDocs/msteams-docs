@@ -2,7 +2,7 @@
 title: Configure Message Extension Capability
 author: surbhigupta
 description: Learn how to configure the message extension capability within a Teams app with Microsoft 365 Agents Toolkit for Visual Studio Code.
-ms.author: v-bvishnu
+ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 12/17/2024
@@ -28,7 +28,7 @@ To configure the message extension capability in your app, ensure the following 
 
 To add a message extension to a tab app, follow these steps:
 
-1. [Create message extension app using Agents Toolkit](#create-message-extension-app-using-microsoft-teams-toolkit)
+1. [Create message extension app using Agents Toolkit](#create-message-extension-app-using-agents-toolkit)
 1. [Configure message extension in app manifest](#configure-message-extension-in-app-manifest)
 1. [Add message extension code to your project](#add-message-extension-code-to-your-project)
 1. [Setup local debug environment](#setup-local-debug-environment)
@@ -507,7 +507,7 @@ You can add the message extension capability to a bot app easily as message exte
 
 To add a message extension to a bot app, follow these steps:
 
-1. [Create a message extension app using Agents Toolkit](#create-a-message-extension-using-teams-toolkit)
+1. [Create a message extension app using Agents Toolkit](#create-a-message-extension-using-agents-toolkit)
 1. [Configure message extension in app manifest](#configure-message-extension-in-app-manifest)
 1. [Add message extension code to project](#add-message-extension-code-to-project)
 
