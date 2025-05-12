@@ -157,9 +157,9 @@ To gain insights on the app and agent usage and analyze trends, explore the foll
 The **App usage** tab shows the following metrics to help you track engagement and user behavior:
 
 * [Usage over time](#usage-over-time)
-* [Usage by retention state](#usage-by-retention-state)
+* [Usage by retention state](#usage-by-retention-state-1)
 * [Usage by country or region](#usage-by-country-or-region)
-* [Usage intensity](#usage-intensity)
+* [Usage intensity](#usage-intensity-1)
 
 :::image type="content" source="../../assets/images/tdp/tdp-app-usage.png" alt-text="Screenshot shows the app and agent usage chart of your published app in Developer Portal." lightbox="../../assets/images/tdp/tdp-app-usage.png":::
 
