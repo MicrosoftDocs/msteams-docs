@@ -50,7 +50,7 @@ To fetch the insights of a particular meeting, follow these steps:
 
 1. If you don’t have the `meetingId`, call online meeting API with the `JoinWebUrl` property to retrieve the `meetingId`. For more information, see [retrieve an online meeting by JoinWebUrl](/graph/api/onlinemeeting-get?view=graph-rest-1.0&preserve-view=true&tabs=http#example-3-retrieve-an-online-meeting-by-joinweburl).
 
-1. Each transcript event of the meeting creates an associated [AI insight object](/graph/api/onlinemeeting-list-aiinsights?view=graph-rest-beta&preserve-view=true). Use the [List AI Insights API](/graph/api/onlinemeeting-list-aiinsights?view=graph-rest-beta&preserve-view=true) to fetch all insight objects related to the meeting and use the included metadata in the response to select the relevant object for your scenario. Here's an example request and response:
+1. Each transcript event of the meeting creates an associated [AI insight object](/graph/api/onlinemeeting-list-aiinsights?view=graph-rest-beta&preserve-view=true). Use the List AI Insights API to fetch all insight objects related to the meeting and use the included metadata in the response to select the relevant object for your scenario. Here's an example request and response:
 
     **Request**
 
@@ -65,7 +65,7 @@ To fetch the insights of a particular meeting, follow these steps:
     Content-Type: application/json
     
     {
-      "@odata.context": "https://graph.microsoft.com/beta/$metadata#copilot/users('b935e675-5e67-48b9-8d45-249d5f88e964')/onlineMeetings('YTc3O...')/aiInsights",
+      "@odata.context": "https://graph.microsoft.com/beta/$metadata#copilot/users('000000000-0000-0000-0000-000000000000')/onlineMeetings('00000...')/aiInsights",
       "@odata.count": 1,
       "value": [
         {
@@ -102,7 +102,7 @@ To fetch the insights of a particular meeting, follow these steps:
     Content-type: application/json
     
     {
-      "@odata.context": "https://graph.microsoft.com/beta/$metadata#copilot/users('b935e675-5e67-48b9-8d45-249d5f88e964')/onlineMeetings('YTc3OT...')/aiInsights/$entity",
+      "@odata.context": "https://graph.microsoft.com/beta/$metadata#copilot/users('00000000-0000-0000-0000-000000000000')/onlineMeetings('000000...')/aiInsights/$entity",
       "id": "Z2HWbT...",
       "callId": "af630fe0-04d3-4559-8cf9-91fe45e36296",
       "contentCorrelationId": "bc842d7a-2f6e-4b18-a1c7-73ef91d5c8e3",
