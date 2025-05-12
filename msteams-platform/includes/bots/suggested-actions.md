@@ -104,7 +104,7 @@ The following illustrates an example of `Actions.Compose` action:
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="../../assets/images/Cards/prompt-suggestion-mobile.png" alt-text="Screenshot shows the Actions.Compose suggested action in mobile."lightbox="../../assets/images/Cards/prompt-suggestion-mobile.png":::
+:::image type="content" source="../../assets/images/Cards/prompt-suggestion-mobile.png" alt-text="Screenshot shows the Actions.Compose suggested action in mobile."lightbox="../../assets/images/Cards/prompt-suggestion-mobile - large.png":::
 
 > [!NOTE]
 > If the message is received in a hub that doesn't support it, the app shows an error message. The bots are aware of the channel to which its posting.
