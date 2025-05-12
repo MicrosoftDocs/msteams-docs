@@ -1,9 +1,8 @@
 ---
 title: Build Extensible Conversations
-author: v-sdhakshina
 description: In this article, learn how to build extensible conversation for Microsoft Teams meeting chat with bots, cards, and message extensions.
 ms.topic: conceptual
-ms.author: v-sdhakshina
+ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.date: 01/11/2023
 ms.owner: ginobuzz
@@ -48,6 +47,7 @@ The following table provides the user types and lists the features that each use
 | Anonymous |  Can view and interact with the messages sent by the bot. Can't invoke the bot. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
 
 > [!Note]
+>
 > * If a federated user is a participant in the meeting, the tenant user can't view the message extensions.
 > * If an anonymous user and a tenant user are participants in the meeting, the tenant user can view the message extensions.
 
