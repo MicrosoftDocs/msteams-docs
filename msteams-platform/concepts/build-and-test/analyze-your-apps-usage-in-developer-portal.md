@@ -51,7 +51,7 @@ After you select your desired filters, you can explore the following individual 
 
 ### Usage by time period
 
-  The **Usage by time period** chart shows the number of active users or tenants who opened and used your app and agent across different time periods.
+  The **Usage by time period** chart shows the number of active users or tenants who opened and used your app across different time periods.
 
    :::image type="content" source="../../assets/images/tdp/usage-by-time-period.png" alt-text="Screenshot shows the usage by time period chart for your published app.":::
 
@@ -95,14 +95,14 @@ After you select your desired filters, you can explore the following individual 
 
 ### App dashboard
 
-  The **My App dashboard** table shows the latest R30 (Rolling 30 days) data for each of the metrics under the previous four categories, and the Month over Month change. Use the time picker on the upper right side and select the desired date to view the following:
+   The **My App dashboard** table shows the latest R30 (Rolling 30 days) data for each of the metrics under the previous four categories, and the Month over Month change. Use the time picker on the upper right side and select the desired date to view the following:
 
 * Daily R30 data for the last 75 days.
 * End of month R30 data for up to 12 months.
 
-  You can select each of these **Metric name** to see trends over time.
+   You can select each of these **Metric name** to see trends over time.
 
-  :::image type="content" source="../../assets/images/tdp/app-dashboard.png" alt-text="Screenshot shows the app dashboard chart for your published app in Developer Portal.":::
+   :::image type="content" source="../../assets/images/tdp/app-dashboard.png" alt-text="Screenshot shows the app dashboard chart for your published app in Developer Portal.":::
 
 # [Third-party apps](#tab/thirdpartyapps)
 
@@ -156,7 +156,7 @@ To gain insights on the app and agent usage and analyze trends, explore the foll
 
 The **App usage** tab shows the following metrics to help you track engagement and user behavior:
 
-* [Usage over time](#usage-by-time-period)
+* [Usage over time](#usage-over-time)
 * [Usage by retention state](#usage-by-retention-state)
 * [Usage by country or region](#usage-by-country-or-region)
 * [Usage intensity](#usage-intensity)

@@ -31,20 +31,9 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2025 April**
+**2025 May**
 
-* ***May 7, 2025***: [Introducing agent usage analytics in Developer Portal for third-party apps](concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md#third-party-appstabthirdpartyapps).
-
-* ***April 30, 2025***: [Introducing streaming messages for bot apps](bots/streaming-ux.md).
-
-* ***April 21, 2025***: [Precache your tab app to optimize its initial load time](tabs/how-to/app-caching.md#precaching-tab-apps).
-
-* ***April 21, 2025***: [You can specify a 32x32 color icon with a transparent background to ensure a consistent appearance when your app runs in Outlook and Microsoft 365](concepts/build-and-test/apps-package.md#color-icon).
-
-* ***April 21, 2025***: [Introducing custom engine agents support for Microsoft 365 Copilot Chat](bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#add-support-for-microsoft-365-copilot-chat).
-
-* ***April 10, 2025***: [Create personal scope apps that integrate seamlessly with Public Switched Telephone Network (PSTN) and Teams-to-Teams calls](apps-in-teams-meetings/build-tabs-for-calling.md).
-* ***April 3, 2025***: [Enable OAuth authentication for API based message extension](messaging-extensions/api-based-oauth.md).
+***May 12, 2025***: [Introducing agent usage analytics in Developer Portal for third-party apps](/microsoftteams/platform/concepts/build-and-test/analyze-your-apps-usage-in-developer-portal?tabs=thirdpartyapps).
 
 :::column-end:::
 :::row-end:::
@@ -58,10 +47,16 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-| 27/03/2025 | Learn about the best practices to optimize tab app performance in Teams Android and iOS clients | Resources > [Best practices for Teams mobile apps](resources/teams-mobile-best-practices.md) |
-| 07/03/2025 | Introducing app manifest v1.20 with elementRelationshipSet, requirementSet, and intuneInfo properties | App manifest > [App manifest](resources/schema/manifest-schema.md) |
-| 07/03/2025 | Specify runtime requirements in app manifest to tailor your app's behavior in Microsoft 365 hosts | [Extend your app across Microsoft 365 > Specify Microsoft 365 host runtime requirements in app manifest](m365-apps/specify-runtime-requirements.md) |
-| 07/03/2025 | Enable Intune Mobile App Management (MAM) support for Outlook add-ins to ensure compliance with organizational data protection policies | [Office.Mailbox interface](/javascript/api/outlook/office.mailbox) |
+| 30/04/2025 | Introducing streaming messages for bot apps. | Build bots and agents > Bot user experience > [Stream bot messages](bots/streaming-ux.md) |
+| 21/04/2025 | Precache your tab app to optimize its initial load time. | Build tabs > Tab features > App caching for your tab app > [Debug tool for cached apps](tabs/how-to/app-caching.md#precaching-tab-apps) |
+| 21/04/2025 | You can specify a 32x32 color icon with a transparent background to ensure a consistent appearance when your app runs in Outlook and Microsoft 365. | Publish your app or agent > Create Teams app package > [Color icon](concepts/build-and-test/apps-package.md#color-icon) |
+| 21/04/2025 | Introducing custom engine agents support for Microsoft 365 Copilot Chat. | Build bots and agents > Teams AI library v1 > Build with Teams AI library > [Add support for Microsoft 365 Copilot Chat](bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#add-support-for-microsoft-365-copilot-chat) |
+| 10/04/2025 | Create personal scope apps that integrate seamlessly with Public Switched Telephone Network (PSTN) and Teams-to-Teams calls. | Build apps for Teams meetings and calls > [Build tabs for calling](apps-in-teams-meetings/build-tabs-for-calling.md) |
+| 03/04/2025 | Enable OAuth authentication for API based message extension. | Add authentication > Enable authentication for API-based message extension > [Enable OAuth for API based message extension](messaging-extensions/api-based-oauth.md) |
+| 27/03/2025 | Learn about the best practices to optimize tab app performance in Teams Android and iOS clients. | Resources > [Best practices for Teams mobile apps](resources/teams-mobile-best-practices.md) |
+| 07/03/2025 | Introducing app manifest v1.20 with elementRelationshipSet, requirementSet, and intuneInfo properties. | App manifest > [App manifest](resources/schema/manifest-schema.md) |
+| 07/03/2025 | Specify runtime requirements in app manifest to tailor your app's behavior in Microsoft 365 hosts. | [Extend your app across Microsoft 365 > Specify Microsoft 365 host runtime requirements in app manifest](m365-apps/specify-runtime-requirements.md) |
+| 07/03/2025 | Enable Intune Mobile App Management (MAM) support for Outlook add-ins to ensure compliance with organizational data protection policies. | [Office.Mailbox interface](/javascript/api/outlook/office.mailbox) |
 | 27/02/2025 | Create, manage, and customize your app package for declarative agents and other apps directly from Developer Portal. | Tools and SDKs > Tools > Developer Portal for Teams > [Manage your apps in Developer Portal](concepts/build-and-test/manage-your-apps-in-developer-portal.md#configure) |
 | 05/02/2025 | Use third-party cloud storage for drag-dropped files in message compose areas.| Integrate with Teams > [Third-party storage app](concepts/device-capabilities/third-party-storage-capability.md) |
 | 31/01/2025 | Create a scenario based custom engine agent using Teams Toolkit and Teams AI library. | [Build a custom engine agent using Teams AI library and Teams Toolkit](sbs-Teams-AI.yml) |
