@@ -100,9 +100,7 @@ The **AppCaching** tab contains the following details:
 ## Precaching tab apps
 
 > [!NOTE]
->
-> * Precaching tab apps is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
-> * Precaching tab apps is supported only in Teams web and desktop clients.
+> Precaching tab apps is supported only in Teams web and desktop clients.
 
 While caching reduces the subsequent load times of an app, precaching optimizes an app's initial load time by allowing Teams to preload the app. Teams preloads apps in the background after launch or when idle, based on users' recent app usage patterns and the apps' cache history. The preloaded apps remain cached until the user opens the app, resulting in a faster loading time.
 

@@ -354,5 +354,6 @@ Below is a table listing sample projects demonstrating various features of Teams
 
 ## See also
 
+* [Teams AI library v2 (preview)](/microsoftteams/platform/teams-ai-library/welcome/overview)
 * [Copilot handoff](../conversations/bot-copilot-handoff.md)
 * [Teams AI library FAQs](../../../teams-faq.md#teams-ai-library)
