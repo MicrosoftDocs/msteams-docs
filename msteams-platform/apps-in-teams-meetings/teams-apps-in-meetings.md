@@ -69,13 +69,13 @@ Meetings enable collaboration, partnership, informed communication, and shared f
 :::row-end:::
 
 <br>
-You can create scenes for meetings, provide notifications to users, populate in-meeting dialogs, and more with meeting app extensibility.
+You can use Copilot agents in meetings, create scenes, provide notifications to users, populate in-meeting dialogs, and more with meeting app extensibility.
 
-Custom apps built for your org (LOB apps) for meetings and calls are available in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](~/concepts/cloud-overview.md), and [Teams operated by 21Vianet](~/concepts/sovereign-cloud.md) environments.
-
-Third-party apps built for meetings and calls are available in GCC but aren't available for GCC High, DoD, and Teams operated by 21Vianet environments.
-
-
+> [!IMPORTANT]
+>
+> * Custom apps built for your org (LOB apps) for meetings and calls are available in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](~/concepts/cloud-overview.md), and [Teams operated by 21Vianet](~/concepts/sovereign-cloud.md) environments.
+> * Third-party apps built for meetings and calls are available in GCC but aren't available for GCC High, DoD, and Teams operated by 21Vianet environments.
+> * Declarative agents and custom engine agents are supported in personal chats, group chats and meetings.
 
 You must be familiar with the concepts in this article to create custom meeting experiences with apps in Microsoft Teams.
 

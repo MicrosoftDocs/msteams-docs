@@ -15,6 +15,12 @@ items:
 - durationInMinutes: 1
   content: |
    You can create a custom engine agent for Microsoft Teams to gain precise control over light operations. This showcases the effectiveness of the language model in accurately understanding and executing user intent, aligning it with app actions.
+
+   > [!NOTE]
+   >
+   > * Custom engine agents are supported in personal chats, group chats, and meetings.
+   > * Custom engine agent support for Microsoft 365 Copilot Chat is available only in [public developer preview](https://learn.microsoft.com/microsoftteams/platform/resources/dev-preview/developer-preview-intro?tabs=new-teams-client).
+   > * Custom engine agent isn't supported in Python.
     
    In this tutorial, you'll learn:
 
@@ -22,7 +28,7 @@ items:
    - How to import Teams AI library capabilities.
    - How to deploy your custom engine agent in Teams and control over light operations.
 
-   You can see the following output:
+     You can see the following output:
 
    :::image type="content" source="assets/images/bots/ai-concepts-lightbot.png" alt-text="Screenshot shows an example of the chat window in the local machine.":::
 

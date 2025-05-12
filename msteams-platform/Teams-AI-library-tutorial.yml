@@ -25,6 +25,7 @@ items:
 
     > [!NOTE]
     >
+    > * Custom engine agents are supported in personal chats, group chats, and meetings.
     > * Custom engine agent support for Microsoft 365 Copilot Chat is available only in [public developer preview](https://learn.microsoft.com/microsoftteams/platform/resources/dev-preview/developer-preview-intro?tabs=new-teams-client).
     > * Custom engine agent isn't supported in Python.
 
