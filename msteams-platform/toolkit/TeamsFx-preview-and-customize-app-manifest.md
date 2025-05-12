@@ -10,9 +10,9 @@ ms.date: 05/13/2022
 
 # Customize app manifest
 
-App manifest (previously called Teams app manifest) describes how your app integrates into Microsoft Teams. After scaffolding, the default app manifest file is available at `appPackage/manifest.json`. The app manifest file contains some environment variables with format of `${{XX_XX}}`, and the actual values are resolved using Microsoft 365 Agents Toolkit with env files such as `env/.env.dev` and `env/.env.local`.
+App manifest (previously called Teams app manifest) describes how your app integrates into Microsoft Teams. After scaffolding, the default app manifest file is available at `appPackage/manifest.json`. The app manifest file contains some environment variables with format of `${{XX_XX}}`, and the actual values are resolved using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) with env files such as `env/.env.dev` and `env/.env.local`.
 
-To preview app manifest with actual content, Microsoft 365 Agents Toolkit generates the preview app manifest files under `appPackage/build` folder as shown in the following folder structure:
+To preview app manifest with actual content, Agents Toolkit generates the preview app manifest files under `appPackage/build` folder as shown in the following folder structure:
 
 ```text
 └───appPackage
@@ -77,7 +77,7 @@ For example, you can customize app description by defining a new environment var
     }
    ```
 
-1. Starting with Microsoft 365 Agents Toolkit 5.10, using the `file` function you can store the value of a field, such as a lengthy or multiline app description, in a separate text file. For example, create a `description.txt` file in the parent folder of `manifest.json` to store your app's complete description. Then, set the value of `description.full` in `manifest.json` as `$[file('description.txt')]`. Microsoft 365 Agents Toolkit reads the content from the text file and uses it as full description when building an app package.
+1. Starting with Agents Toolkit 5.10, using the `file` function you can store the value of a field, such as a lengthy or multiline app description, in a separate text file. For example, create a `description.txt` file in the parent folder of `manifest.json` to store your app's complete description. Then, set the value of `description.full` in `manifest.json` as `$[file('description.txt')]`. Agents Toolkit reads the content from the text file and uses it as full description when building an app package.
 
    `description.txt`
 
@@ -134,13 +134,13 @@ This option renders `appPackage/manifest.json` with environment variables, and t
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/validate-schema.png" alt-text="Screenshot shows the selection of validate using manifest schema.":::
 
-Alternatively, use the following Microsoft 365 Agents Toolkit command line interface (Microsoft 365 Agents Toolkit CLI) command:
+Alternatively, use the following Agents Toolkit command line interface (Agents Toolkit CLI) command:
 
 ```bash
 teamsfx validate --manifest-path <YOUR-PATH-TO-MANIFEST>
 ```
 
-If you meet `MissingEnvironmentVariablesError`, it means that Microsoft 365 Agents Toolkit can't find corresponding environment variables defined in manifest.json. You may need to run **Provision** or select F5 to generate environment variables, or manually update `.env.xx` file to fulfill the value.
+If you meet `MissingEnvironmentVariablesError`, it means that Agents Toolkit can't find corresponding environment variables defined in manifest.json. You may need to run **Provision** or select F5 to generate environment variables, or manually update `.env.xx` file to fulfill the value.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/missing-env.png" alt-text="Screenshot shows the missing environment variables error.":::
 
@@ -150,7 +150,7 @@ This option validates the zipped app package with validation rules.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/validate-app-package.png" alt-text="Screenshot shows the selection of Validate app package using validation rules.":::
 
-Alternatively, use the following Teams Toolkit CLI command:
+Alternatively, use the following Agents Toolkit CLI command:
 
 ```bash
 teamsfx validate --app-package-file-path <YOUR-PATH-TO-APP-PACKAGE>
@@ -166,7 +166,7 @@ After you've previewed and validated the app manifest file, you can sync your lo
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/update-teams-app.png" alt-text="Screenshot shows the selection of Teams update Teams app.":::
 
-Alternatively, use the following Teams Toolkit CLI command:
+Alternatively, use the following Agents Toolkit CLI command:
 
 ```bash
 teamsfx update teams-app

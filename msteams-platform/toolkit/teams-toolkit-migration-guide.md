@@ -12,9 +12,9 @@ ms.date: 06/05/2024
 
 This guide details the process of migrating from the traditional, scaffolded template to the new project structure in Microsoft Teams. The transition is essential to use the latest features and improve project maintainability. The new project structure introduces a more streamlined and efficient way of managing your Teams applications through `.ttkproj` file to represent the new project type.
 
-In the new Microsoft 365 Agents Toolkit version 17.10, a Teams solution contains two projects, Teams project and your source code. 
+In the new Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) version 17.10, a Teams solution contains two projects, Teams project and your source code. 
 
-- **Teams project**: Teams project contains the Teams app package and Microsoft 365 Agents Toolkit configuration files. 
+- **Teams project**: Teams project contains the Teams app package and Agents Toolkit configuration files. 
 - **Source code**: Your source code project is the business logic for your tab, bot, or others. 
 
 The separation of Teams project and source code allows the integration of existing web or bot solutions into Teams. This approach simplifies the process of integrating any existing project or solution with Teams.
@@ -23,7 +23,7 @@ The separation of Teams project and source code allows the integration of existi
 
 Before starting the migration process, ensure that you have the following:
 
-* A Teams project that is created using Teams Toolkit for Visual Studio 17.9 or earlier version.
+* A Teams project that is created using Agents Toolkit for Visual Studio 17.9 or earlier version.
 * Visual Studio version 17.10 Preview 3 or later.
 * Multiple startups feature. To enable multiple startups, go to **Tools** > **Options** > **Preview Feature** > **Enable Multi-Project Launch Profiles**.
 
@@ -160,7 +160,7 @@ Perform the following steps to migrate to the new project structure:
 You've successfully migrated your project and your folder structure is updated as follows:
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Migration+process&&author=%40v-preethah&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fteams-toolkit-migration-guide%3Ftabs%3Dchannel-meeting%252Cnew%23migration-process&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fteams-toolkit-migration-guide.md&documentVersionIndependentId=0e6d94db-f134-055f-aec4-3f992c8faa18&platformId=a10ef4e6-085d-ae74-f8e8-654e7731ba51&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Migration+process&&author=%40v-preethah&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fagents-toolkit-migration-guide%3Ftabs%3Dchannel-meeting%252Cnew%23migration-process&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fagents-toolkit-migration-guide.md&documentVersionIndependentId=0e6d94db-f134-055f-aec4-3f992c8faa18&platformId=a10ef4e6-085d-ae74-f8e8-654e7731ba51&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ##### Folder Structure
 

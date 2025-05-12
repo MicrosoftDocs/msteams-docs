@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Collaborate on Microsoft Teams project using Microsoft 365 Agents Toolkit
 
-Multiple developers can work together to debug, provision, and deploy the same Microsoft 365 Agents Toolkit project, but it requires manually setting the right permissions of Teams App and Microsoft Entra ID. Microsoft 365 Agents Toolkit's collaboration feature simplifies this process between developers and project owners.
+Multiple developers can work together to debug, provision, and deploy the same Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) project, but it requires manually setting the right permissions of Teams App and Microsoft Entra ID. Agents Toolkit's collaboration feature simplifies this process between developers and project owners.
 
 ## Collaborate with other developers
 
@@ -23,7 +23,7 @@ The following sections guide us to understand the collaboration process as proje
 
   1. Select **Microsoft 365 Agents Toolkit** in the activity bar.
   
-     :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-teams-toolkit.png" alt-text="Screenshot shows the select teams toolkit from activity bar.":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-teams-toolkit.png" alt-text="Screenshot shows the select Agents Toolkit from activity bar.":::
 
   1. In **ENVIRONMENT** section, select Manage Collaborators button as shown in the following image:
 
