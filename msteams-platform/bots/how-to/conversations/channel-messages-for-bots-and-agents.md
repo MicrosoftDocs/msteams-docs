@@ -104,10 +104,10 @@ The following code snippet provides an example of how you can declare RSC permis
 
 ```json
 {
-    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.12/MicrosoftTeams.schema.json",
-    "manifestVersion": "1.12",
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.21/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.21",
     "version": "1.0.0",
-    "id": "8239c8f3-ed78-4512-933e-babfd28856f1",
+    "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
     "packageName": "com.contoso.rscechobot",
     "developer": {
         "name": "Contoso",
@@ -162,7 +162,7 @@ The following code snippet provides an example of how you can declare RSC permis
     },
     "bots": [
         {
-            "botId": "07338883-af76-47b3-86e4-2603c50be638",
+            "botId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
             "scopes": [
                 "personal",
                 "team",
