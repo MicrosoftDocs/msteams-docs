@@ -13,7 +13,7 @@ When deciding how to develop your bot, it's important to know your options. You 
 
 ## Choose the tools and platforms
 
-If you want to create your own bot, you use the following list of tools and platforms to get started:
+If you want to create your own bot, here's a list of tools and platforms to help you get started:
 
 :::image type="content" source="../assets/images/bots/m365-bot-decisions.png" alt-text="Infographics depicts a decision tree for building a bot." Lightbox="../assets/images/bots/m365-bot-decisions.png":::
 
