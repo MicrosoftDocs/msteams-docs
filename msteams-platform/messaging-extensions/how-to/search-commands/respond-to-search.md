@@ -106,8 +106,8 @@ The following code snippet shows the `config` response that appears when the use
             "actions": [
                 {
                     "type": "openUrl",
-                    "title": "Open url",
-                    "value": "https://<your-subdomain>.devtunnels.ms/searchSettings.html?settings="
+                    "title": "Open URL",
+                    "value": "https://<your-subdomain>"
                 }
             ]
         },
