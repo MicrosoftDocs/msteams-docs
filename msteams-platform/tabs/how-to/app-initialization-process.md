@@ -73,6 +73,10 @@ The following state diagram shows the behavior of an app that is intended to loa
 
 :::image type="content" source="../../assets/images/tabs/app-initialization-loading-indicator-flow.png" alt-text="State diagram showing the initialization flow for an app that requires a loading indicator." lightbox="../../assets/images/tabs/app-initialization-loading-indicator-flow.png":::
 
+The following state diagram illustrates the initialization behavior when an app makes use of caching.
+
+:::image type="content" source="../../assets/images/tabs/app-initialization-loading-indicator-flow-cache-transitions.png" alt-text="State diagram showing the use of caching as part of the initialization flow for an app that requires a loading indicator." lightbox="../../assets/images/tabs/app-initialization-loading-indicator-flow-cache-transitions.png":::
+
 For apps that need time to load the most common path is to call `app.initialize()` and then either `app.notifySuccess()` or `app.notifyExpectedFailure()` to complete loading. That said, an app can alternately call `app.notifyAppLoaded()` after `app.initialize()` to remove the spinner while still loading.
 
 #### App caching considerations for loading apps
