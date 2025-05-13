@@ -23,7 +23,7 @@ You can set up a Continuous Integration and Continuous Deployment (CI/CD) pipeli
 
 To build the project, you must compile the source code and create the required deployment artifacts. There are two methods to deploy the artifacts:
 
-* [Set up CI/CD pipelines with Agents Toolkit CLI](#set-up-cicd-pipelines-with-teams-toolkit-cli). *[Recommended]*
+* [Set up CI/CD pipelines with Agents Toolkit CLI](#set-up-cicd-pipelines-with-agents-toolkit-cli). *[Recommended]*
 
 * [Set up CI/CD pipelines using your own workflow](#set-up-cicd-pipelines-using-your-own-workflow). *[Optional]*
 
