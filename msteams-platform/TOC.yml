@@ -303,9 +303,9 @@
       - name: Develop your apps with Teams Toolkit
         href: concepts/build-and-test/develop-your-apps-with-teams-toolkit.md
         displayName: visual studio code, visual studio, teams toolkit, react web app, publish react app, debug
-      - name: Analyze apps usage in Developer Portal
+      - name: Analyze app and agent usage in Developer Portal
         href: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md  
-        displayName: App usage, metrics, usage, analytics, insights, telemetry, Import an existing app
+        displayName: App usage, metrics, usage, analytics, insights, telemetry, Import an existing app, agent usage
     - name: Adaptive Card Previewer for VSC
       items:
       - name: Overview
