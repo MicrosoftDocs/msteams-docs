@@ -62,33 +62,26 @@ The following is an example to implement and experience suggested actions:
 
 You can use the `Action.Compose` to insert a message in the compose box, which helps you add a new action type. This action enables you to include semantic objects like tags, mention users in the chat or channel, and other rich objects like emojis and gifs.
 
-The value object must follow the [`chatMessage`](/graph/api/resources/chatmessage?view=graph-rest-1.0&preserve-view=true) object in the Graph API. The following code snippet shows an example of implementing `Action.Compose`:
-
-```json
-{
-   Type: “Action.Compose”,
-   Title: “button title”,
-   Value: {
-      type: “Teams.chatMessage”,
-      data: <GraphAPI Chat Message Object>
-   }
-}
-```
-
-A modified version for other hubs can be shown as this example:
+The following code snippet shows an example of implementing `Action.Compose`:
 
 ```json
 { 
-
    Type: “Action.Compose”, 
-
    Title: “button title”, 
+   Value: <chatMessage> 
+} 
+```
 
+The value object must follow the [`chatMessage`](/graph/api/resources/chatmessage?view=graph-rest-1.0&preserve-view=true) object in the Graph API. A modified version for other hubs can be shown as this example:
+
+```json
+{ 
+   Type: “Action.Compose”, 
+   Title: “button title”, 
    Value: { 
       type: “Teams.chatMessage”, 
       data: <GraphAPI Chat Message Object> 
    } 
-
 }
 ```
 
