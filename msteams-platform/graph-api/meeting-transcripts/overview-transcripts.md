@@ -69,7 +69,7 @@ For more information about how your app can know when the meetings ends, see [su
 ## Code samples
 
 | Sample name | Description | Node.js | C# |
-| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- |
 | Meeting transcript bot | This sample app retrieves meeting transcripts using Microsoft Graph API and displays them in a dialog. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-transcription/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-transcription/csharp) |
 | Meeting transcripts recordings | This sample app retrieves Teams meeting transcripts and recordings using Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-meeting-transcript-recording/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-meeting-transcript-recording/csharp) |
 
