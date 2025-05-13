@@ -16,7 +16,7 @@ Select the Microsoft 365 Agents Toolkit :::image type="icon" source="~/assets/im
 
 1. Select **Provision**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot shows the selection of provision in the cloud under Teams toolkit.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot shows the selection of provision in the cloud under Agents toolkit.":::
 
 1. Select a subscription to use for the Azure resources.
 
