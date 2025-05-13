@@ -17,9 +17,7 @@ Add group/channel screenshot for suggested actions for mobile client
 
 ---
 
-# [imBack](#tab/iamback)
-
-### `imBack`
+# [`imBack`](#tab/iamback)
 
 To add suggested actions to a message, specify a list of [card action](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) objects that represent the buttons to be displayed to the user for the [`suggestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions) property of the [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) object.
 
@@ -60,7 +58,7 @@ The following is an example to implement and experience suggested actions:
 }
 ```
 
-# [Action.Compose](#tab/actioncompose)
+# [`Action.Compose`](#tab/actioncompose)
 
 You can use the `Action.Compose` to insert a message in the compose box, which helps you add a new action type. This action enables you to include semantic objects like tags, mention users in the chat or channel, and other rich objects like emojis and gifs.
 
@@ -94,10 +92,9 @@ A modified version for other hubs can be shown as this example:
 }
 ```
 
-It can show an error message, if unsupported. Bots are aware of the channel to which they post.
-
 > [!NOTE]
 > If the message is received in a hub that doesn't support it, the app shows an error message. The bots are aware of the channel to which its posting.
+---
 
 <!--
 ### `imBack`
