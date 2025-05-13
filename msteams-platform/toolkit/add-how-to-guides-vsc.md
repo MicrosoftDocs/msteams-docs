@@ -10,7 +10,7 @@ ms.date: 12/19/2024
 
 # How-to guides for Microsoft Teams apps
 
-Microsoft 365 Agents Toolkit project templates focus on getting started with an app that implements a single [app capability](~/concepts/design/app-structure.md). However, apps can have multiple capabilities. We've created a set of How-to guides with the steps needed to add different capabilities to a project created with Agents Toolkit.
+Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) project templates focus on getting started with an app that implements a single [app capability](~/concepts/design/app-structure.md). However, apps can have multiple capabilities. We've created a set of How-to guides with the steps needed to add different capabilities to a project created with Agents Toolkit.
 
 ## How-to guides for adding capabilities
 
@@ -23,7 +23,7 @@ Microsoft 365 Agents Toolkit project templates focus on getting started with an 
 
 ## Open the guides from Agents Toolkit
 
-* [Use Agents Toolkit pane](#use-teams-toolkit-pane)
+* [Use Agents Toolkit pane](#use-agents-toolkit-pane)
 * [Use the Command Palette](#use-the-command-palette)
 
 ### Use Agents Toolkit pane
