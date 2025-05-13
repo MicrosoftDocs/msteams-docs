@@ -94,6 +94,7 @@ A modified version for other hubs can be shown as this example:
 
 > [!NOTE]
 > If the message is received in a hub that doesn't support it, the app shows an error message. The bots are aware of the channel to which its posting.
+
 ---
 
 <!--
