@@ -53,6 +53,9 @@ conceptualContent:
   # Card
     - title: Learn
       links:
+        - url: /training/modules/copilot-custom-engine-agents-intro/
+          itemType: learn
+          text: Introduction to custom engine agents      
         - url: bots/how-to/teams-conversational-ai/ai-ux.md        
           itemType: concept
           text: Custom engine agent user experience
@@ -62,9 +65,6 @@ conceptualContent:
         - url: /training/modules/microsoft-teams-publish-app-to-store
           itemType: learn
           text: Publish Teams apps in Microsoft Teams Store
-        - url: /training/modules/copilot-custom-engine-agents-intro/
-          itemType: learn
-          text: Introduction to custom engine agents
         - url: /training/modules/intro-microsoft-teams-apps
           itemType: learn
           text: Build apps for Microsoft Teams
