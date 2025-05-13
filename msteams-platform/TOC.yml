@@ -635,9 +635,9 @@
       displayName: OnMessageActivityAsync, payload, recurring, getparticipant, captions, targeted meeting notification, real-time meeting events, meeting start and end events
   - name: Get meeting transcripts, recordings, and AI summaries
     items:
-    - name: Meeting transcripts, recordings, and AI summaries
+    - name: Meeting transcripts and recordings
       href: graph-api/meeting-transcripts/overview-transcripts.md
-      displayName: get teams meeting transcripts, get teams meeting recordings, teams automatic meeting recording, get teams meeting AI insights
+      displayName: get teams meeting transcripts, get teams meeting recordings, teams automatic meeting recording
     - name: Get change notifications
       href: /graph/teams-changenotifications-callrecording-and-calltranscript?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     - name: Get transcripts

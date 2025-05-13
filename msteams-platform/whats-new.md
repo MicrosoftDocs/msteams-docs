@@ -33,7 +33,9 @@ Teams platform features that are available to all app developers.
 
 **2025 May**
 
-***May 13, 2025***: [Introducing agent usage analytics for third-party apps in Developer Portal](/microsoftteams/platform/concepts/build-and-test/analyze-your-apps-usage-in-developer-portal?tabs=thirdpartyapps).
+* ***May 14, 2025***: [Use Meeting AI Insights API to fetch conversation summaries, action items, and @mention utterances directly from Teams meetings.](graph-api/meeting-transcripts/meeting-insights.md)
+
+* ***May 13, 2025***: [Introducing agent usage analytics for third-party apps in Developer Portal](/microsoftteams/platform/concepts/build-and-test/analyze-your-apps-usage-in-developer-portal?tabs=thirdpartyapps).
 
 :::column-end:::
 :::row-end:::
@@ -466,8 +468,6 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
 **2025 May**
-
-* ***May 13, 2025***: [Use Meeting AI Insights API to fetch conversation summaries, action items, and @mention utterances from Teams meetings.](graph-api/meeting-transcripts/meeting-insights.md)
 
 * ***May 06, 2025***: [Introducing Teams AI library v2. This new library consolidates all the SDKs needed to create collaborative agents for Microsoft Teams.](/microsoftteams/platform/teams-ai-library/welcome/overview)
 

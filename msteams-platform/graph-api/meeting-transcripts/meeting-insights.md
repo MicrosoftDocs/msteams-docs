@@ -5,14 +5,14 @@ ms.localizationpriority: high
 ms.topic: conceptual
 ms.owner: vichug
 ms.author: surbhigupta
-ms.date: 05/13/2025
+ms.date: 05/14/2025
 ---
 
-# Get meeting AI summaries with Meeting AI Insights API
+# Get AI-generated meeting summaries with Meeting AI Insights API
 
 > [!IMPORTANT]
 >
-> * AI-generated meeting insights fetched through Meeting AI Insights API are only available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
+> * Meeting AI Insights API is available under the beta version in Microsoft Graph. For more information, see [versioning, support, and breaking change policies for Microsoft Graph](/graph/versioning-and-support#beta-version).
 > * Meeting AI Insights API is part of the Microsoft 365 Copilot API namespace. Insights can only be fetched on behalf of a Microsoft 365 Copilot licensed user. For more information, see [license requirements for Meeting Insights API](/graph/teams-licenses#license-requirements-for-teams-meeting-ai-insights-apis).
 
 The Meeting AI Insights API enables you to programmatically access structured AI-generated insights from transcribed Microsoft Teams meetings. These insights include:
@@ -48,9 +48,9 @@ Here are some use cases for fetching AI-generated insights using Meeting AI Insi
 
 To fetch the insights of a particular meeting, follow these steps:
 
-1. If you don’t have the `meetingId`, call online meeting API with the `JoinWebUrl` property to retrieve the `meetingId`. For more information, see [retrieve an online meeting by JoinWebUrl](/graph/api/onlinemeeting-get?view=graph-rest-1.0&preserve-view=true&tabs=http#example-3-retrieve-an-online-meeting-by-joinweburl).
+1. If you don’t have the meeting identifier (`id`), call online meeting API with the `JoinWebUrl` property to retrieve the `id`. For more information, see [retrieve an online meeting by JoinWebUrl](/graph/api/onlinemeeting-get?view=graph-rest-1.0&preserve-view=true&tabs=http#example-3-retrieve-an-online-meeting-by-joinweburl).
 
-1. Each transcript event of the meeting creates an associated [AI insight object](/graph/api/onlinemeeting-list-aiinsights?view=graph-rest-beta&preserve-view=true). Use the List AI Insights API to fetch all insight objects related to the meeting and use the included metadata in the response to select the relevant object for your scenario. Here's an example request and response:
+1. Each transcript event of the meeting creates an associated [AI insight object](/graph/api/resources/callaiinsight?view=graph-rest-beta&preserve-view=true). Use the [List AI Insights API](/graph/api/onlinemeeting-list-aiinsights?view=graph-rest-beta&preserve-view=true) to fetch all the AI insight objects related to the meeting and use the included metadata in the response to select the relevant AI insight object for your scenario. Here's an example request and response:
 
     **Request**
 
@@ -81,13 +81,13 @@ To fetch the insights of a particular meeting, follow these steps:
 
     | Property | Description |
     | --- | --- |
-    | `id` | A unique identifier for the generated insight. |
+    | `id` | A unique identifier for the generated AI insight object. |
     | `callId` | A unique identifier for the [call](/graph/api/resources/call?view=graph-rest-1.0&preserve-view=true) during which this insight is generated. |
-    | `contentCorrelationId` | A unique identifier that correlates the [transcript](/graph/api/resources/calltranscript?&view=graph-rest-beta&preserve-view=true) of the meeting from which the insight is generated. |
+    | `contentCorrelationId` | A unique identifier that correlates the [transcript](/graph/api/resources/calltranscript?&view=graph-rest-beta&preserve-view=true) of the meeting from which the AI insight object is generated. |
     | `createdDateTime` | The date and time at which the corresponding transcript was created. The timestamp type represents the date and time information using the ISO 8601 format and is always in Coordinated Universal Time (UTC). |
     | `endDateTime` | The date and time at which the corresponding transcript ends. The timestamp type represents the date and time information using the ISO 8601 format and is always in UTC. |
 
-1. Each insight object provides detailed meeting notes, action items, and participant-specific @mention utterances, which can be accessed by calling [GET AI Insights API](/graph/api/callaiinsight-get?view=graph-rest-beta&preserve-view=true) for a specific insight object ID. Here's an example request and response:
+1. Each AI insight object provides detailed meeting notes, action items, and participant-specific @mention utterances, which can be accessed by calling [GET AI Insights API](/graph/api/callaiinsight-get?view=graph-rest-beta&preserve-view=true) for a specific insight object ID. Here's an example request and response:
 
     **Request**
 
@@ -126,11 +126,6 @@ To fetch the insights of a particular meeting, follow these steps:
           "text": "Review and finalize the project timeline to ensure alignment with stakeholder expectations and resource availability.",
           "ownerDisplayName": "Bella Smith",
         },
-        {
-          "title": "Prepare Presentation Draft",
-          "text": "Draft a presentation outlining project goals, objectives, and progress updates for review by the project stakeholders.",
-          "ownerDisplayName": "Bella Smith",
-        },
       ],
       "viewpoint": {
         "mentionEvents": [
@@ -149,21 +144,6 @@ To fetch the insights of a particular meeting, follow these steps:
             "eventDateTime": "2024-05-21T09:00:00",
             "transcriptUtterance": "We need to get approval from Sarah Johnson before proceeding with the budget allocation."
           },
-          {
-            "speaker": {
-                "application": null,
-                "device": null,
-                "user": {
-                    "@odata.type": "#Microsoft.Teams.GraphSvc.teamworkUserIdentity",
-                    "id": "6aeb9f22-c986-4835-9617-9e5932bc8250",
-                    "displayName": "Emily Davis",
-                    "userIdentityType": "aadUser",
-                    "tenantId": "d1aeb56e-5a25-4d91-a4f6-0f5e6a50d887"
-                }
-            },
-            "eventDateTime": "2024-05-21T09:15:00",
-            "transcriptUtterance": "Sarah Johnson suggested reaching out to potential vendors for the upcoming project."
-          }
         ]
       }
     }

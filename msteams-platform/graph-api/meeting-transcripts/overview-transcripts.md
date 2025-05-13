@@ -1,29 +1,29 @@
 ---
-title: Get Transcripts, Recordings & Insights
-description: In this module, learn the process, scenarios, and APIs to fetch transcripts, recordings, and AI-generated insights in the post-meeting scenario.
+title: Fetch Meeting Transcripts & Recordings
+description: In this module, learn the process, scenarios, and APIs to fetch transcripts and recordings in the post-meeting scenario.
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.owner: vichug
 ms.author: surbhigupta
-ms.date: 05/13/2025
+ms.date: 05/14/2025
 ---
 
-# Get meeting transcripts, recordings, and AI-generated insights using Graph APIs
+# Get meeting transcripts and recordings using Graph APIs
 
 > [!NOTE]
-> The APIs to fetch meeting transcript, recording, and AI-generated insights are metered APIs. For more information, see [payment models for meeting APIs](/graph/teams-licenses#payment-models-for-meeting-apis).
+> The APIs to fetch meeting transcripts and recordings are metered APIs. For more information, see [payment models for meeting APIs](/graph/teams-licenses#payment-models-for-meeting-apis).
 
-You can now configure your app to fetch Microsoft Teams meeting transcripts, recordings, and AI-generated insights in the post-meeting scenario. Your app can use Microsoft Graph REST APIs to access and fetch transcripts, recordings, and AI insights generated for a scheduled Teams meeting.
+You can now configure your app to fetch Microsoft Teams meeting transcripts and recordings in the post-meeting scenario. Your app can use Microsoft Graph REST APIs to access and fetch transcripts and recordings generated for a scheduled Teams meeting.
 
 ## Use cases
 
-Here are some use cases for fetching meeting transcripts, recordings, and AI-generated insights using Graph API:
+Here are some use cases for fetching meeting transcripts and recordings using Graph API:
 
 | Use case | How the APIs help... |
 | --- | --- |
-| You need to obtain transcripts and recordings for capturing meaningful insights from multiple meetings across the Sales vertical. It's time-consuming and inefficient to keep track of all meetings, and to retrieve meeting transcripts and recordings manually. After the meeting is over, you'd need to examine conversations in all those meetings to obtain useful information. | Use Graph APIs in your app to fetch meeting transcripts, recordings, and AI-generated insights from all meetings relevant for your purpose. Your app can receive meeting notifications, and get the transcript, recording, and AI-generated insights after the meeting ends. This data can be used to gain: <br> • Aggregated insights and intelligence analysis <br> • New leads and highlights <br> • Meeting follow-ups and summaries |
-| As an HR initiative, you're holding a brainstorming session to understand and improve employee health and productivity. Having to continually take notes to provide a post-meeting summary can impede the flow of thoughts, and you might not capture all valuable suggestions. After the session, you'd need to analyze the discussion to gather data points for planning improvements. | Using Graph APIs in your app to fetch transcripts, recordings, and AI-generated insights post-meeting frees you and the participants to fully focus on the discussion. The content of the meeting transcript, recording, and AI-generated insights is available for: <br> • Engagement and sentiment analysis <br> • Listing tasks or issues <br> • Follow-up meetings and notifications |
-|A salesperson at a leading tech company must connect with clients and close deals. With numerous meetings scheduled through Teams and Outlook calendar, it's crucial to attend all calls and stay updated on discussions and latest updates.|Create an app with the following capabilities:<br> • Notify you when a meeting is scheduled using Teams or Outlook calendar. <br> • Enable your app to set `AutoRecording=true` for these meetings. <br> • Add a bot as a meeting participant to display a banner indicating that the meeting is being recorded and that the content is used by your app for analysis.<br> • Allow your app to access meeting recordings, transcripts, and AI-generated insights.<br> • Allow your app without requiring admin approval for the `OnlineMeetingRecording.Read.All` permissions, as obtaining admin approval for these permissions can be time consuming. <br> Here's a [sample app](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-meeting-auto-recording/csharp) that showcases this use case scenario. |
+| You need to obtain transcripts and recordings for capturing meaningful insights from multiple meetings across the Sales vertical. It's time-consuming and inefficient to keep track of all meetings, and to retrieve meeting transcripts and recordings manually. After the meeting is over, you'd need to examine conversations in all those meetings to obtain useful information. | Use Graph APIs in your app to fetch meeting transcripts and recordings automatically from all meetings relevant for your purpose. Your app can receive meeting notifications, and get the transcript and recording when it's generated after the meeting ends. This data can then be used to gain: <br> • Aggregated insights and intelligence analysis <br> • New leads and highlights <br> • Meeting follow-ups and summaries |
+| As an HR initiative, you're holding a brainstorming session to understand and improve employee health and productivity. Having to continually take notes to provide a post-meeting summary can impede the flow of thoughts, and you might not capture all valuable suggestions. After the session, you'd need to analyze the discussion to gather data points for planning improvements. | Using Graph APIs in your app to fetch transcripts and recordings post-meeting frees you and the participants to fully focus on the discussion. The content of the meeting transcript and recording is available for: <br> • Engagement and sentiment analysis <br> • Listing tasks or issues <br> • Follow-up meetings and notifications |
+|A salesperson at a leading tech company must connect with clients and close deals. With numerous meetings scheduled through Teams and Outlook calendar, it's crucial to attend all calls and stay updated on discussions and latest updates.|Create an app with the following capabilities:<br> • Notify you when a meeting is scheduled using Teams or Outlook calendar. <br> • Enable your app to set `AutoRecording=true` for these meetings. <br> • Add a bot as a meeting participant to display a banner indicating that the meeting is being recorded and that the content is used by your app for analysis.<br> • Allow your app to access meeting recordings and transcripts.<br> • Allow your app without requiring admin approval for the `OnlineMeetingRecording.Read.All` permissions, as obtaining admin approval for these permissions can be time consuming. <br> Here's a [sample app](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-meeting-auto-recording/csharp) that showcases this use case scenario. |
 
 ## Get meeting transcripts and recordings
 
@@ -72,9 +72,9 @@ For more information about how your app can know when the meetings ends, see [su
 > [!NOTE]
 > The process for calling Graph APIs to access and retrieve transcripts and recordings remains the same for both meeting-specific RSC application permissions and organization-wide application permissions. These APIs support private chat meetings and channel meetings only in beta.
 
-## Get AI-generated meeting summaries and insights
+## Get AI-generated meeting summaries
 
-Your app can fetch AI-generated meeting insights, including conversation summaries, action items, and @mention utterances using Meeting AI Insights API. For more information, see [get meeting insights with Meeting AI Insights API](meeting-insights.md).
+Your app can directly fetch AI-generated meeting summaries, including conversation summaries, action items, and @mention utterances using Meeting AI Insights API. For more information, see [get meeting insights with Meeting AI Insights API](meeting-insights.md).
 
 ## Code samples
 
