@@ -106,11 +106,9 @@ After you select your desired filters, you can explore the following individual 
 
 # [Third-party apps](#tab/thirdpartyapps)
 
-## Get started
-
 To view app and agent usage in Developer Portal, you need **Manager** or **Developer** role in Partner Center. The marketplace account owner or manager can [assign user roles and permissions](/partner-center/account-settings/user-roles).
 
-You can view usage for your [third-party app](../../promote-app-adoption.md#access-to-your-apps) and other insights from the **Analytics** page. To access the page:
+You can view the app or agent usage for your [third-party app](../../promote-app-adoption.md#access-to-your-apps) and other insights from the **Analytics** page. To access the page:
 
 1. Go to **[Developer Portal](https://dev.teams.microsoft.com)**.
 1. Select **Apps** from the left pane.
