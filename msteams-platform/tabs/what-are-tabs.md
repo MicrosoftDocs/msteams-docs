@@ -5,6 +5,7 @@ description: Learn about types of tabs, different tab context and it's benefits,
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 02/06/2025
+ms.owner: ryanbliss
 ---
 
 # Build tabs for Teams
@@ -64,10 +65,10 @@ Following are a few benefits of static tabs in chats, channels, and meetings:
 
 The following table helps you determine the best fit for your app:
 
-| &nbsp; | Personal | Channels | Group chat | Meetings |
-|---|---|---|
-|[Static tabs](~/tabs/how-to/create-personal-tab.md)|✔️|✔️|✔️|✔️|
-|[Configurable tabs](~/tabs/how-to/create-channel-group-tab.md)|❌|✔️|✔️|✔️|
+| &nbsp; | Personal | Channels | Group chat | Meetings | Calling |
+| --- |:---:|:---:|:---:|:---:|:---:|
+|[Static tabs](~/tabs/how-to/create-personal-tab.md)|✔️|✔️|✔️|✔️|✔️|
+|[Configurable tabs](~/tabs/how-to/create-channel-group-tab.md)|❌|✔️|✔️|✔️|❌|
 
 > [!NOTE]
 > If you have both [configurable tab](~/tabs/how-to/create-tab-pages/configuration-page.md) and [static tab](~/tabs/how-to/create-personal-tab.md) defined in your app manifest for a specific scope, Teams pins the static tab by default.

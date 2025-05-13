@@ -5,6 +5,7 @@ description: Learn about Live Share SDK capabilities, data structure, join a ses
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
+ms.owner: ryanbliss
 ms.date: 04/07/2022
 ---
 
