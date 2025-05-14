@@ -467,7 +467,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2025 May**
 
-* ***May 13, 2025***: [Increase app engagement with custom activity icons in activity feed notifications](/graph/teams-send-activityfeednotifications?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json&tabs=desktop%2Chttp#custom-activity-icons-in-activity-feed-notifications).
+* ***May 14, 2025***: [Increase app engagement with custom activity icons in activity feed notifications](/graph/teams-send-activityfeednotifications?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json&tabs=desktop%2Chttp#custom-activity-icons-in-activity-feed-notifications).
 
 * ***May 06, 2025***: [Introducing Teams AI library v2. This new library consolidates all the SDKs needed to create collaborative agents for Microsoft Teams.](/microsoftteams/platform/teams-ai-library/welcome/overview)
 
