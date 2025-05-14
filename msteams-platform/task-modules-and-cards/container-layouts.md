@@ -4,7 +4,7 @@ author: surbhigupta
 description: Learn about container layouts in Adaptive Cards, including Layout.Flow, Layout.AreaGrid, and Layout.Stack, to create responsive and flexible card designs.
 ms.localizationpriority: medium
 ms.topic: overview
-ms.author: v-sdhakshina
+ms.author: surbhigupta
 ms.date: 11/07/2024
 ---
 

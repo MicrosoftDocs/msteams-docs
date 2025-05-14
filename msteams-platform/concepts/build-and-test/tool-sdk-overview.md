@@ -99,4 +99,4 @@ The following flow diagram explains the different SDKs, libraries, and its relat
 | Tool | Details |
 | ----------------- | -------------- |
 | Teams Toolkit | We recommend using [Teams Toolkit v5](../../toolkit/teams-toolkit-fundamentals.md) to build your apps, as Teams Toolkit v4 is available only with limited functionality. |
-| Microsoft 365 Agents Toolkit CLI | We recommend that you use [Microsoft 365 Agents Toolkit CLI v3](../../toolkit/Teams-Toolkit-CLI.md) to build your Teams app, as TeamsFx CLI v1 and TeamsFx CLI v2 are available only with limited functionality. |
+| Agents Toolkit CLI | We recommend that you use [Agents Toolkit CLI v3](../../toolkit/Teams-Toolkit-CLI.md) to build your Teams app, as TeamsFx CLI v1 and TeamsFx CLI v2 are available only with limited functionality. |
