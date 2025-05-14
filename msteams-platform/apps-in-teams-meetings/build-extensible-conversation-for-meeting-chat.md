@@ -10,7 +10,7 @@ ms.owner: ginobuzz
 
 # Build extensible conversation for meeting chat
 
-You can make conversations extensible in Microsoft Teams meetings. Bots, message extensions, cards and dialogs (referred as task modules in TeamsJS v1.x), and Copilot agents can be combined to deliver an intuitive experience.
+You can make conversations extensible in Microsoft Teams meetings. Bots, Copilot agents, message extensions, cards and dialogs (referred as task modules in TeamsJS v1.x) can be combined to deliver an intuitive experience.
 
 ## Bots
 
@@ -27,6 +27,10 @@ The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create 
 | Teams conversation bot | This sample app shows how to use different bot conversation events available in bot framework v4. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/java) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp/demo-manifest/bot-conversation.zip)
 |Bot samples | Set of bot framework v4 samples  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) |
 
+## Copilot agents
+
+Agents are scoped versions of Microsoft 365 Copilot that act as AI assistants to automate and run business processes. Agents enable you to bring custom knowledge, skills, and process automation into Microsoft 365 Copilot for your organizational needs. You can optimize agents for specific tasks, such as summarize meetings, list action items, and take actions such as updating records. Declarative agents and custom engine agents are supported in Teams meetings. For more information, see [your extensibility options for Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/decision-guide).
+
 ## Message extensions
 
 Message extensions allow the users to interact with your web service through buttons and forms in the Teams client. Users can search or initiate actions in an external system from the compose message area, the command box, or directly from a message. You can send back the results of that interaction to the Teams client in the form of a richly formatted card. Implementing message extensions for meeting chats is no different than regular chats. To implement message extension, start with [message extensions](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions?tabs=dotnet).
@@ -34,10 +38,6 @@ Message extensions allow the users to interact with your web service through but
 ## Cards and dialogs
 
 Cards provide users with various visual, audio, and selectable messages and help in conversation flow. With dialogs, you can create modal pop-up experiences in Teams. They're useful for starting and completing the tasks, or displaying rich information like videos or Power business intelligence (BI) dashboards. For more information, see [building cards and dialogs](/microsoftteams/platform/task-modules-and-cards/cards-and-task-modules).
-
-## Copilot agents
-
-Agents are scoped versions of Microsoft 365 Copilot that act as AI assistants to automate and run business processes. Agents enable you to bring custom knowledge, skills, and process automation into Microsoft 365 Copilot for your organizational needs. You can optimize agents for specific tasks, such as summarize meetings, list action items, and take actions such as updating records. Declarative agents and custom engine agents are supported in Teams meeting. For more information, see [your extensibility options for Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/decision-guide).
 
 ## Feature compatibility by user types
 
