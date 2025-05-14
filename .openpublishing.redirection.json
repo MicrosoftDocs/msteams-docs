@@ -1267,6 +1267,10 @@
       {
         "source_path": "msteams-platform/toolkit/teams-toolkit-migration-guide.md",
         "redirect_url": "/microsoftteams/platform/toolkit/agents-toolkit-migration-guide"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/debug-your-Teams-app-test-tool.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/debug-your-agents-playground"
       }
     ]
 }
