@@ -53,6 +53,9 @@ conceptualContent:
   # Card
     - title: Learn
       links:
+        - url: /training/modules/copilot-custom-engine-agents-intro/
+          itemType: learn
+          text: Introduction to custom engine agents      
         - url: bots/how-to/teams-conversational-ai/ai-ux.md        
           itemType: concept
           text: Custom engine agent user experience
