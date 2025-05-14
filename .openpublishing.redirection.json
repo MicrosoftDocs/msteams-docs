@@ -1273,19 +1273,19 @@
         "redirect_url": "/microsoftteams/platform/toolkit/debug-your-agents-playground"
       },
       {
-        "source_path": "msteams-platform/toolkit/toolkit-v4/debug-your-agents-playground-vs.md",
+        "source_path": "msteams-platform/toolkit/toolkit-v4/debug-your-Teams-app-test-tool-vs.md",
         "redirect_url": "/microsoftteams/platform/toolkit/toolkit-v4/debug-your-agents-playground-vs"
       },
       {
-        "source_path": "msteams-platform/toolkit/toolkit-v4/explore-Agents-Toolkit-vs.md",
+        "source_path": "msteams-platform/toolkit/toolkit-v4/explore-Teams-Toolkit-vs.md",
         "redirect_url": "/microsoftteams/platform/toolkit/toolkit-v4/explore-Agents-Toolkit-vs"
       },
       {
-        "source_path": "msteams-platform/toolkit/toolkit-v4/install-Agents-Toolkit-vs.md",
+        "source_path": "msteams-platform/toolkit/toolkit-v4/install-Teams-Toolkit-vs.md",
         "redirect_url": "/microsoftteams/platform/toolkit/toolkit-v4/install-Agents-Toolkit-vs"
       },
       {
-        "source_path": "msteams-platform/toolkit/toolkit-v4/agents-toolkit-fundamentals-vs.md",
+        "source_path": "msteams-platform/toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md",
         "redirect_url": "/microsoftteams/platform/toolkit/toolkit-v4/agents-toolkit-fundamentals-vs"
       }
     ]
