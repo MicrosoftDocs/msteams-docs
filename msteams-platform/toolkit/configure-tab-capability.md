@@ -2,7 +2,7 @@
 title: Configure Tab Capability
 author: surbhigupta
 description: Learn how to configure the tab capability within a Teams app with the Teams Toolkit for Visual Studio Code.
-ms.author: v-bvishnu
+ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 12/17/2024
@@ -107,6 +107,7 @@ For more information, see [sample app](https://github.com/OfficeDev/TeamsFx-Samp
              args: install --no-audit
              workingDirectory: ./bot
    ```
+
 1. To configure the debug profile for your tab project, add the following code to the `tasks.json` file:
 
    ```json
