@@ -41,7 +41,7 @@ To create a new Teams app, follow the steps:
 
       The **Create a new project** window appears.  
 
-1. Enter **Teams** in the search box and from search results, select **Microsoft Teams App**.
+1. Enter **Microsoft 365 Agents** in the search box and from search results, select **Microsoft 365 Agents**.
 
 1. Select **Next**.
 

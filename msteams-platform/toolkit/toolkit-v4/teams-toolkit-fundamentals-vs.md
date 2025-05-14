@@ -50,7 +50,7 @@ Perform the following the steps to select templates and app capability:
 
 1. Select **File > New > Project**.
 
-1. Enter **Teams** in the search box and from search results, select **Microsoft Teams App** template.
+1. Enter **Microsoft 365 Agents** in the search box and from search results, select **Microsoft 365 Agents** template.
 
 1. Select **Next**.
 
@@ -70,9 +70,9 @@ Teams Toolkit provides developers with lifecycle actions and grants access to co
 
 To view the Teams Toolkit documentation, follow these steps from Teams Toolkit:
 
-1. Select **Project** > **Teams Toolkit**.
+1. Select **Project** > **Microsoft 365 Agents Toolkit**.
 
-1. Select **Teams Toolkit Documentation**.
+1. Select **Microsoft 365 Agents Toolkit Documentation**.
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-documentation.png" alt-text="Screenshot shows the option to select and view the documentation.":::
 
