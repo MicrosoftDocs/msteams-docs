@@ -740,7 +740,7 @@ To build an API-based message extension using Teams Toolkit for Visual Studio Co
 
 # [Microsoft 365 Agents Toolkit CLI](#tab/teams-toolkit-cli)
 
-To create an API-based message extension using Microsoft 365 Agents Toolkit CLI, follow these steps:
+To create an API-based message extension using Microsoft 365 Agents Toolkit CLI (previously known as Teams Toolkit CLI), follow these steps:
 
 1. Go to **Command Prompt**.
 
@@ -776,9 +776,9 @@ To create an API-based message extension using Microsoft 365 Agents Toolkit CLI,
 
    ```teamsapp provision --env dev```
 
-   Microsoft 365 Agents Toolkit CLI opens a browser window and requests you to sign in to your Microsoft Account.
+   Agents Toolkit CLI opens a browser window and requests you to sign in to your Microsoft Account.
 
-1. Sign in to your Microsoft account. Microsoft 365 Agents Toolkit CLI executes validation and provisions your app on Azure.
+1. Sign in to your Microsoft account. Agents Toolkit CLI executes validation and provisions your app on Azure.
 
    :::image type="content" source="../assets/images/Copilot/api-based-CLI-provision-me.png" alt-text="Screenshot shows the sign in request and the provision stages in the command prompt window.":::
 

@@ -134,7 +134,7 @@ This option renders `appPackage/manifest.json` with environment variables, and t
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/validate-schema.png" alt-text="Screenshot shows the selection of validate using manifest schema.":::
 
-Alternatively, use the following Microsoft 365 Agents Toolkit command line interface (Microsoft 365 Agents Toolkit CLI) command:
+Alternatively, use the following Microsoft 365 Agents Toolkit command line interface (Microsoft 365 Agents Toolkit CLI (previously known as Teams Toolkit CLI)) command:
 
 ```bash
 teamsfx validate --manifest-path <YOUR-PATH-TO-MANIFEST>
@@ -150,7 +150,7 @@ This option validates the zipped app package with validation rules.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/validate-app-package.png" alt-text="Screenshot shows the selection of Validate app package using validation rules.":::
 
-Alternatively, use the following Microsoft 365 Agents Toolkit CLI command:
+Alternatively, use the following Agents Toolkit CLI command:
 
 ```bash
 teamsfx validate --app-package-file-path <YOUR-PATH-TO-APP-PACKAGE>
@@ -166,7 +166,7 @@ After you've previewed and validated the app manifest file, you can sync your lo
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/update-teams-app.png" alt-text="Screenshot shows the selection of Teams update Teams app.":::
 
-Alternatively, use the following Microsoft 365 Agents Toolkit CLI command:
+Alternatively, use the following Agents Toolkit CLI command:
 
 ```bash
 teamsfx update teams-app

@@ -224,7 +224,7 @@ Before you get started, ensure that you set the environment variable **DEVELOP_C
 
    :::image type="content" source="../assets/images/Copilot/bot-based-plugin-CLI-add-env-variable.png" alt-text="Screenshot shows the Variable name and Variable value fields in the New User Variable dialog.":::
 
-To create a bot-based search message extension agent using Microsoft 365 Agents Toolkit CLI, follow these steps:
+To create a bot-based search message extension agent using Microsoft 365 Agents Toolkit CLI (previously known as Teams Toolkit CLI), follow these steps:
 
 1. Go to **Command Prompt**.
 
@@ -257,9 +257,9 @@ To create a bot-based search message extension agent using Microsoft 365 Agents 
     teamsapp provision --env dev
    ```
 
-   Microsoft 365 Agents Toolkit CLI opens a browser window and requests you to sign in to your Microsoft Account.
+   Agents Toolkit CLI opens a browser window and requests you to sign in to your Microsoft Account.
 
-1. Sign in to your Microsoft account. Microsoft 365 Agents Toolkit CLI executes validation and provisions your app on Azure.
+1. Sign in to your Microsoft account. Agents Toolkit CLI executes validation and provisions your app on Azure.
 
 1. From the list, select a subscription.
 
