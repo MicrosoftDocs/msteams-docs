@@ -43,12 +43,12 @@ Agents are scoped versions of Microsoft 365 Copilot that act as AI assistants to
 
 The following table provides the user types and lists the features that each user can access in meetings:
 
-| User type | Bots | Message extensions | Adaptive Cards | Dialogs |Copilot agents|
-| :-- | :-- | :-- | :-- | :-- |:-- |
-| In-tenant | Can view messages, interact with the content, and invoke the bot. | Available | Available | Available |Available |
-| Guest, part of the tenant Microsoft Entra ID | Can view messages, interact with the content, and invoke the bot. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |Interactions in the meeting chat are allowed. |
-| Federated, for more information, see [non-standard users](/microsoftteams/non-standard-users). |Can view messages, interact with the content, and invoke the bot. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |Not available |
-| Anonymous |  Can view and interact with the messages sent by the bot. Can't invoke the bot. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |Not available |
+| User type | Bots and Copilot agents | Message extensions | Adaptive Cards | Dialogs |
+| :-- | :-- | :-- | :-- | :-- |
+| In-tenant | Can view messages, interact with the content, and invoke the bot and agent. | Available | Available | Available |
+| Guest, part of the tenant Microsoft Entra ID | Can view messages, interact with the content, and invoke the bot and agent. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
+| Federated, for more information, see [non-standard users](/microsoftteams/non-standard-users). |Can view messages, interact with the content, and invoke the bot and agent. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
+| Anonymous |  Can view and interact with the messages sent by the bot. Can't invoke the bot and agent. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
 
 > [!Note]
 >
