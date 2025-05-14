@@ -1,7 +1,7 @@
 ---
 title: Cloud Provisioning using Visual Studio
 author: MuyangAmigo
-description: Learn how to do provision cloud resources using Teams Toolkit v4 in Visual Studio Code and Visual Studio, resource creation and customize resource provision.
+description: Learn how to do provision cloud resources using Agents Toolkit v4 in Visual Studio Code and Visual Studio, resource creation and customize resource provision.
 ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
@@ -274,7 +274,7 @@ The provision steps are defined in the `teamsapp.yml` file, under the `provision
 
 #### Reference environment variables in parameter files
 
-Microsoft 365 Agents Toolkit supports referencing the values from environment variables in the `teamsapp.yml` file, Teams app manifest, Microsoft Entra app manifest, and Azure parameter files. You can use the syntax `${{ENV_VARIABLE_NAME}}` to reference environment variables.
+Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) supports referencing the values from environment variables in the `teamsapp.yml` file, Teams app manifest, Microsoft Entra app manifest, and Azure parameter files. You can use the syntax `${{ENV_VARIABLE_NAME}}` to reference environment variables.
 
 The following example sets the value of environment variable `MY_AZURE_SUBSCRIPTION_ID` to `subscriptionId`:
 
@@ -302,7 +302,7 @@ The `arm/deploy` action support ARM templates that are written in bicep and json
 
 ### Manage your resources
 
-You can sign in to [Azure portal](https://portal.azure.com/) and manage all resources created using Microsoft 365 Agents Toolkit.
+You can sign in to [Azure portal](https://portal.azure.com/) and manage all resources created using Agents Toolkit.
 
 * You can select a resource group from the existing list or the new resource group that you've created.
 * You can see the details of the resource group you've selected in the overview section of the table of contents.
@@ -322,7 +322,7 @@ To use a Microsoft Entra app created for your Teams app and to add environment v
 
 1. Open the `teamsapp.yml` file and find the `aadApp/create` action.
 
-1. Find the environment variable names that store information for Microsoft Entra app in the `writeToEnvironmentFile` property. If you create projects using Microsoft 365 Agents Toolkit the default  `writeToenvironmentFile` property definition is as follows:
+1. Find the environment variable names that store information for Microsoft Entra app in the `writeToEnvironmentFile` property. If you create projects using Agents Toolkit the default  `writeToenvironmentFile` property definition is as follows:
 
      ```yml
       writeToEnvironmentFile:
@@ -369,7 +369,7 @@ You can follow the steps to add environment variables to the .env files to use a
 
 1. Open the `teamsapp.yml` file and find the `botAadApp/create` action.
 
-1. Find the environment variable names that store information for Microsoft Entra app in the `writeToEnvironmentFile` property. The default `writeToEnvironmentFile` definition if you create projects using Microsoft 365 Agents Toolkit is as follows:
+1. Find the environment variable names that store information for Microsoft Entra app in the `writeToEnvironmentFile` property. The default `writeToEnvironmentFile` definition if you create projects using Agents Toolkit is as follows:
 
     ```yml
      writeToEnvironmentFile:

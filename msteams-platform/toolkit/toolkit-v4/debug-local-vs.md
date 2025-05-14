@@ -10,7 +10,7 @@ ms.date: 12/11/2024
 
 # Debug your Microsoft Teams app locally using Microsoft Visual Studio
 
-Visual Studio allows you to debug tabs, bots, and message extensions. You can debug your app locally in Visual Studio using Microsoft Microsoft 365 Agents Toolkit by performing:
+Visual Studio allows you to debug tabs, bots, and message extensions. You can debug your app locally in Visual Studio using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) by performing:
 
 ## Set up dev tunnel (Only for bot and message extension)
 
@@ -27,7 +27,7 @@ In the debug dropdown menu:
 1. Enter the name of the dev tunnel and under **Access** select **Public** from the dropdown.
 1. Select **OK**.
 
-### Set up your Microsoft 365 Agents Toolkit
+### Set up your Agents Toolkit
 
 To debug your app after you create a project, perform the following steps:
 
@@ -80,6 +80,6 @@ To debug your app after you create a project, perform the following steps:
 
 * [Microsoft 365 Agents Toolkit Overview](teams-toolkit-fundamentals-vs.md)
 * [Introduction to Azure Functions](/azure/azure-functions/functions-overview)
-* [Use Microsoft 365 Agents Toolkit to provision cloud resources](provision-vs.md)
+* [Use Agents Toolkit to provision cloud resources](provision-vs.md)
 * [Deploy to the cloud](deploy-vs.md)
-* [Manage multiple environments in Microsoft 365 Agents Toolkit](teamsfx-multi-env-v4.md)
+* [Manage multiple environments in Agents Toolkit](teamsfx-multi-env-v4.md)

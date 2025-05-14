@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Deploy Microsoft Teams app to the cloud using Microsoft Visual Studio
 
-Microsoft 365 Agents Toolkit helps to deploy or upload the front-end and back-end code in your app to your provisioned cloud resources in Azure.
+Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) helps to deploy or upload the front-end and back-end code in your app to your provisioned cloud resources in Azure.
 
 You can deploy your Teams app to the following cloud resources:
 
@@ -23,7 +23,7 @@ You can deploy your Teams app to the following cloud resources:
 >
 > Before you deploy your app code to Azure cloud, you need to complete the provisioning of cloud resources.
 
-To deploy Teams app using Microsoft Microsoft 365 Agents Toolkit, follow these steps:
+To deploy Teams app using Agents Toolkit, follow these steps:
 
 1. Open **Visual Studio**.
 1. Select **Create a new project** or open an existing project from the list.

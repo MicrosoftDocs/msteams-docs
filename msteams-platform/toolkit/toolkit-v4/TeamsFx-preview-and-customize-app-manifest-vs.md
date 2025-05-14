@@ -1,7 +1,7 @@
 ---
-title: Customize App Manifest in Microsoft 365 Agents Toolkit
+title: Customize App Manifest in Agents Toolkit
 author: surbhigupta
-description: Learn how to customize and preview the app manifest for different environments in Teams Toolkit for Visual Studio, and sync local changes in Developer Portal.
+description: Learn how to customize and preview the app manifest for different environments in Agents Toolkit for Visual Studio, and sync local changes in Developer Portal.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
@@ -49,7 +49,7 @@ You can preview the app manifest file either **For Local** or **For Azure**. To 
 
         :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/solution-zip.png" alt-text="Screenshot shows the solution zip app package for local or Azure.":::
 
-     Microsoft 365 Agents Toolkit generates the zip app package.
+     Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) generates the zip app package.
 
 1. Under `appPackage` folder, right-click on the `manifest.json` file.
 
