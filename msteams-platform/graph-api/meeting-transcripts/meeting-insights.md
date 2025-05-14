@@ -25,7 +25,7 @@ The API empowers you to deliver intelligent meeting experiences, such as surfaci
 
 
 > [!NOTE]
-> Meeting AI Insights API is only available for organizers and presenters of a town hall meeting.
+> Meeting AI Insights API currently provides insights only for scheduled private meetings.
 
 ## Use cases
 
