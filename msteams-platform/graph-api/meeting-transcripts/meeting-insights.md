@@ -39,7 +39,7 @@ Here are some use cases for fetching AI-generated insights using Meeting AI Insi
 
 ## Prerequisites
 
-* You must enable the transcription or recording for the meeting for which the insights are to be generated. You can programmatically set a meeting to autotranscribe or autorecord using the [update onlineMeeting API](/graph/api/onlinemeeting-update?view=graph-rest-1.0&preserve-view=true&tabs=http) or directly through the [meeting options](/microsoftteams/manage-meeting-recording-options#record-and-transcribe-automatically).
+* You must [turn on the transcription or recording](https://support.microsoft.com/en-us/office/view-live-transcription-in-microsoft-teams-meetings-dc1a8f23-2e20-4684-885e-2152e06a4a8b) for the meeting for which the insights are to be generated. Alternatively, you can set a meeting to autotranscribe or autorecord programmatically using the [update onlineMeeting API](/graph/api/onlinemeeting-update?view=graph-rest-1.0&preserve-view=true&tabs=http) or directly through the [meeting options](/microsoftteams/manage-meeting-recording-options#record-and-transcribe-automatically).
 
 * The Meeting AI Insights API only works with delegated permissions and hence requires a token from a signed-in user to be passed in the call. The signed-in user must have a [Microsoft 365 Copilot license](/copilot/microsoft-365/microsoft-365-copilot-licensing) and access to the meeting’s transcript file.
 
