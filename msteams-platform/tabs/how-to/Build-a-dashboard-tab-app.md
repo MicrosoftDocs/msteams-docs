@@ -13,7 +13,7 @@ ms.owner: ryanbliss
 
 A dashboard is a tool to track, analyze, and display data to gain insight of an organization or a specific process. Dashboards in Teams allow you to monitor and view important metrics.
 
-The dashboard tab template from Microsoft 365 Agents Toolkit allows you to get started with integrating a canvas with multiple cards that provide an overview of content in Teams. You can:
+The dashboard tab template from Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) allows you to get started with integrating a canvas with multiple cards that provide an overview of content in Teams. You can:
 
 * Use widgets to display content from apps and services within your dashboard tab.
 * Integrate your app with Graph API to visualize details about the implementation of the selected data.

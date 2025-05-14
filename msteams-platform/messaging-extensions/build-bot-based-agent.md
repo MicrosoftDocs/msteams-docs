@@ -39,7 +39,7 @@ Descriptions enhance the usability and effectiveness of a message extension agen
 
 For more information, see [guidelines to create and upgrade agents](dev-guidelines-agents.md).
 
-All bot-based search message extensions that are eligible for agent support must meet [policy requirement](../concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md) and are subject to validation to ensure the agent meets quality, security, privacy, and usefulness expectations. You can create a bot-based search message extension using Teams Toolkit for Visual Studio Code, Visual Studio, Teams Toolkit command line interface (CLI), or Developer Portal for Teams and extend the message extension to function as an agent in Microsoft 365 Copilot.
+All bot-based search message extensions that are eligible for agent support must meet [policy requirement](../concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md) and are subject to validation to ensure the agent meets quality, security, privacy, and usefulness expectations. You can create a bot-based search message extension using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) for Visual Studio Code, Visual Studio, Agents Toolkit command line interface (CLI), or Developer Portal for Teams and extend the message extension to function as an agent in Microsoft 365 Copilot.
 
 ## Prerequisites
 
@@ -60,7 +60,7 @@ Let's create a bot-based search message extension agent for Teams and Microsoft 
 
 Before you get started, ensure that you install the following tools to build and deploy your message extension:
 
-* Install the latest [Microsoft 365 Agents Toolkit prerelease version](../toolkit/install-Teams-Toolkit.md#install-a-prerelease-version).
+* Install the latest [Agents Toolkit prerelease version](../toolkit/install-Teams-Toolkit.md#install-a-prerelease-version).
 * Ensure that the **Develop Copilot Plugin** feature flag is enabled. To enable the feature flag, follow these steps:
   1. Open **Visual Studio Code**.
   1. Go to **Manage** :::image type="icon" source="../assets/icons/gear-icon.png" border="false"::: > **Settings**.
@@ -80,7 +80,7 @@ To create a bot-based search message extension agent using Visual Studio Code, f
 
 1. Select a programming language.
 1. Select **Default folder**.
-1. Enter the name of your app and select **Enter**. Microsoft 365 Agents Toolkit scaffolds your app and creates a message extension.
+1. Enter the name of your app and select **Enter**. Agents Toolkit scaffolds your app and creates a message extension.
 
 To run your message extension in Teams, follow these steps:
 
@@ -89,10 +89,10 @@ To run your message extension in Teams, follow these steps:
    1. Select **Sign in to Microsoft 365** and enter your Microsoft 365 credentials.
    1. Select **Sign in to Azure** and enter your Azure credentials.
 
-      :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-accounts.png" alt-text="Screenshot shows the Sign in to Microsoft 365 and Azure option under ACCOUNTS in Teams Toolkit for Visual Studio Code.":::
+      :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-accounts.png" alt-text="Screenshot shows the Sign in to Microsoft 365 and Azure option under ACCOUNTS in Agents Toolkit for Visual Studio Code.":::
 
 1. From the left pane, select **Run and Debug (Ctrl+Shift+D)**.
-1. Select **Debug in Teams (Edge)** or **Debug in Teams (Chrome)**. Microsoft 365 Agents Toolkit launches your app in Teams using a web browser.
+1. Select **Debug in Teams (Edge)** or **Debug in Teams (Chrome)**. Agents Toolkit launches your app in Teams using a web browser.
 1. Select **Add**. The app is installed on Teams.
 1. Go to a chat and select **Actions and apps**.
 1. From the message extension fly-out menu, enter the name of your message extension in the search box.
@@ -165,7 +165,7 @@ To create a bot-based search message extension agent using Visual Studio, follow
 1. Go to **Solution Explorer** and select your project.
 1. Right-click the project menu and select **Microsoft 365 Agents Toolkit** > **Prepare Teams App Dependencies**.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-VS-teams-app-dependencies.png" alt-text="Screenshot shows the Prepare Teams app dependencies option under Teams Toolkit in Visual Studio app project.":::
+   :::image type="content" source="../assets/images/Copilot/bot-based-VS-teams-app-dependencies.png" alt-text="Screenshot shows the Prepare Teams app dependencies option under Agents Toolkit in Visual Studio app project.":::
 
    If prompted, sign in with a Microsoft 365 account.
 
@@ -224,7 +224,7 @@ Before you get started, ensure that you set the environment variable **DEVELOP_C
 
    :::image type="content" source="../assets/images/Copilot/bot-based-plugin-CLI-add-env-variable.png" alt-text="Screenshot shows the Variable name and Variable value fields in the New User Variable dialog.":::
 
-To create a bot-based search message extension agent using Teams Toolkit CLI, follow these steps:
+To create a bot-based search message extension agent using Agents Toolkit CLI, follow these steps:
 
 1. Go to **Command Prompt**.
 
@@ -249,7 +249,7 @@ To create a bot-based search message extension agent using Teams Toolkit CLI, fo
 
 1. Enter the name of your application and select **Enter**.
 
-   Microsoft 365 Agents Toolkit scaffolds and creates a project in the specified location.
+   Agents Toolkit scaffolds and creates a project in the specified location.
 
 1. Go to the folder path where your project is created and enter the following command to provision your app in Azure:
 
@@ -257,9 +257,9 @@ To create a bot-based search message extension agent using Teams Toolkit CLI, fo
     teamsapp provision --env dev
    ```
 
-   Teams Toolkit CLI opens a browser window and requests you to sign in to your Microsoft Account.
+   Agents Toolkit CLI opens a browser window and requests you to sign in to your Microsoft Account.
 
-1. Sign in to your Microsoft account. Teams Toolkit CLI executes validation and provisions your app on Azure.
+1. Sign in to your Microsoft account. Agents Toolkit CLI executes validation and provisions your app on Azure.
 
 1. From the list, select a subscription.
 
@@ -270,7 +270,7 @@ To create a bot-based search message extension agent using Teams Toolkit CLI, fo
 
    :::image type="content" source="../assets/images/Copilot/bot-based-CLI-provisoin-preview.png" alt-text="Screenshot shows the Cost may incur according to the usage. Do you want to provision resources in dev environment using accounts listed option in the CLI window.":::
 
-   Microsoft 365 Agents Toolkit validates your app manifest and provisions your app on Azure.
+   Agents Toolkit validates your app manifest and provisions your app on Azure.
 
 1. In the command prompt window, enter the following command to preview your app in Teams:
 
