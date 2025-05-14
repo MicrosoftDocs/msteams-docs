@@ -52,7 +52,7 @@ You can view the project folders and files under **Explorer** in Visual Studio a
 
 ## See also
 
-* [Teams Toolkit Visual Studio Overview](teams-toolkit-fundamentals-vs.md)
+* [Teams Toolkit Visual Studio Overview](agents-toolkit-fundamentals-vs.md)
 * [Debug your Teams app locally using Visual Studio](debug-local-vs.md)
 * [Provision cloud resources in Visual Studio](provision-vs.md)
 * [Deploy Teams app to the cloud VS](deploy-vs.md)

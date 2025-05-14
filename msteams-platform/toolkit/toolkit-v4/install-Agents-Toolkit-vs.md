@@ -35,11 +35,11 @@ The Visual Studio 2022 window appears.
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Explore Teams Toolkit](explore-Teams-Toolkit-vs.md)
+> [Explore Teams Toolkit](explore-Agents-Toolkit-vs.md)
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals-vs.md)
+* [Teams Toolkit Overview](agents-toolkit-fundamentals-vs.md)
 * [Prepare to build apps](build-environments-vs.md)
 * [Provision cloud resources](provision-vs.md)
 * [Deploy Teams app to the cloud](deploy-vs.md)

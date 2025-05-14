@@ -779,7 +779,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals-vs.md)
+* [Teams Toolkit Overview](agents-toolkit-fundamentals-vs.md)
 * [Prerequisites for creating your Teams app](tools-prerequisites-vs.md)
 * [Enable SSO for tab app](~/tabs/how-to/authentication/tab-sso-overview.md)
 * [Enable SSO for your bot and message extension](~/bots/how-to/authentication/bot-sso-overview.md)

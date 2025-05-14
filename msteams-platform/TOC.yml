@@ -249,13 +249,13 @@
     - name: Teams Toolkit for Visual Studio
       items:
       - name: Overview
-        href: toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md
+        href: toolkit/toolkit-v4/agents-toolkit-fundamentals-vs.md
         displayName: TTK, version, 17.7
       - name: Install Teams Toolkit
-        href: toolkit/toolkit-v4/install-Teams-Toolkit-vs.md
+        href: toolkit/toolkit-v4/install-Agents-Toolkit-vs.md
         displayName: download
       - name: Explore Teams Toolkit
-        href: toolkit/toolkit-v4/explore-Teams-Toolkit-vs.md
+        href: toolkit/toolkit-v4/explore-Agents-Toolkit-vs.md
       - name: Prepare to build apps using Teams Toolkit
         href: toolkit/toolkit-v4/build-environments-vs.md
         items:
@@ -274,7 +274,7 @@
          - name: Debug overview
            href: toolkit/toolkit-v4/debug-overview-vs.md
          - name: Debug with Teams App Test Tool
-           href: toolkit/toolkit-v4/debug-your-Teams-app-test-tool-vs.md
+           href: toolkit/toolkit-v4/debug-your-agents-playground-vs.md
          - name: Debug Teams app locally
            href: toolkit/toolkit-v4/debug-local-vs.md
            displayName: DevTunnel
