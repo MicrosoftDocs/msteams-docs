@@ -2,9 +2,10 @@
 title: Overview to bots
 description: Learn about bots, the application of bots across industry, build familiarity with bots in Teams environment and bot development SDKs and libraries. It offers a map through the module to help you navigate through various tasks for building a bot.
 ms.localizationpriority: high
-ms.date: 09/20/2024
+ms.date: 05/07/2025
 ms.topic: conceptual
 ms.author: surbhigupta
+ms.owner: angovil
 ---
 
 # Bot overview
@@ -49,7 +50,8 @@ You can choose one or more of the following capabilities for your bot app. Use e
 
 * **Custom engine agent**: A custom engine agent is a bot that uses AI to perform automated tasks. It understands natural language, can engage in conversations, and answer questions. You can use them for virtual assistance, language translation, predictive analysis, and more. Custom engine agents, which are AI-enabled Teams bots, can be built using custom AI models of your choice.
 
-  For more information, see [how to build a custom engine agent](../Teams-AI-library-tutorial.yml).
+  * Use [Teams AI library v2 (preview)](/microsoftteams/platform/teams-ai-library/welcome/overview) for adding more advanced features to your agents.
+  * For more information, see [how to build a custom engine agent](../Teams-AI-library-tutorial.yml).
 
 * **Conventional bots**:
 

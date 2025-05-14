@@ -1225,6 +1225,10 @@
         "redirect_url": "/microsoftteams/platform/tabs/what-are-tabs"
       },
       {
+        "source_path": "msteams-platform/bots/how-to/conversations/channel-messages-with-rsc.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/conversations/channel-messages-for-bots-and-agents"
+      },
+      {  
         "source_path": "msteams-platform/bots/how-to/update-and-delete-bot-messages.md",
         "redirect_url": "/microsoftteams/platform/bots/build-conversational-capability#update-and-delete-messages-sent-from-bot"
       },
@@ -1235,6 +1239,14 @@
       {
         "source_path": "msteams-platform/bots/bot-features.md",
         "redirect_url": "/microsoftteams/platform/bots/overview"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/faq-vs.md",
+        "redirect_url": "/microsoftteams/platform/teams-faq#teams-toolkit"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/faq.md",
+        "redirect_url": "/microsoftteams/platform/teams-faq#teams-toolkit"
       }
     ]
 }

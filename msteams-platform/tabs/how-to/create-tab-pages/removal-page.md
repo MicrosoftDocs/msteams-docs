@@ -4,6 +4,7 @@ description: Learn to enable your tab to be reconfigured after installation. Ext
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.date: 02/06/2025
+ms.owner: ryanbliss
 ---
 # Create a removal page
 

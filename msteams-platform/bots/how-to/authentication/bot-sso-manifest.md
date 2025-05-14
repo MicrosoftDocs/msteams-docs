@@ -4,10 +4,11 @@ description: Learn to update and configure the app manifest to enable SSO for bo
 ms.topic: how-to
 ms.localizationpriority: high
 ms.date: 03/11/2025
+ms.owner: ryanbliss
 ---
 # Update app manifest for SSO and preview your app
 
-Before you update app manifest (previously called Teams app manifest), ensure that you've configured code to enable SSO in your app.
+Before you update app manifest (previously called Teams app manifest), ensure that you configure the code to enable single sign-on (SSO) in your app.
 
 > [!div class="nextstepaction"]
 > [Add code](bot-sso-code.md)
@@ -166,6 +167,9 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
 > [!NOTE]
 > During debug, you can use ngrok to test your app in Microsoft Entra ID. In that case, you need to replace the subdomain in `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` with the ngrok URL. You'll need to update the URL whenever your ngrok subdomain changes. For example, api://23c3-103-50-148-128.ngrok.io/bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c.
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+configure+app+manifest&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-manifest%23to-configure-app-manifest&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-manifest.md&documentVersionIndependentId=5f4e812e-2836-0c23-5b4f-e416ae624372&platformId=d090c8ed-5fba-59a0-60b4-d8db1a29b26f&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ## Upload a custom app and Preview in Teams
 
 You've configured the app to enable SSO. You can now upload your custom app in Teams and preview it in Teams environment.
@@ -186,30 +190,36 @@ To preview your app in Teams:
 
 1. Select your app package zip file, and then select **Add**.
 
-    The custom app is uploaded. The consent dialog appears to inform you of the permissions that may be required.
+    The custom app is uploaded. The consent dialog appears to inform you of the permissions that might be required.
 
 1. Select **Continue**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-consent.png" alt-text="Bot consent message" border="false":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-consent.png" alt-text="Screenshot shows a bot authentication consent message in Teams." border="false" lightbox="../../../assets/images/authentication/teams-sso-bots/bot-consent.png":::
 
   Teams opens the app and you can use it.
 
   Congratulations! You've enabled SSO for your bot or message extension app.
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Upload+a+custom+app+and+Preview+in+Teams&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-manifest%23upload-a-custom-app-and-preview-in-teams&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-manifest.md&documentVersionIndependentId=5f4e812e-2836-0c23-5b4f-e416ae624372&platformId=d090c8ed-5fba-59a0-60b4-d8db1a29b26f&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ## SSO support in Developer Portal
 
-You can also upload your SSO-enabled app in Developer Portal. To enable SSO support in Developer Portal after you've imported it:
+You can import your SSO-enabled app in Developer Portal for Teams. For more information, see [import an existing app](../../../concepts/build-and-test/teams-developer-portal.md#import-an-existing-app). To enable SSO support for your app in Developer Portal after you import it, follow these steps:
 
-1. Open [Developer Portal](https://dev.teams.microsoft.com/home).
-1. Select **Tools**, and from the list of apps that appears select your app to open it in Developer Portal.
-1. Select **Configure**.
+1. Go to [Developer Portal](https://dev.teams.microsoft.com/home).
 
-    The **Configure** page appears.
+1. Select **Apps**, and from the list that appears, select your app.
 
-1. Enter the messaging endpoint you configured in Microsoft Entra ID as **Endpoint address**.
+1. Go to **Configure** > **Single sign-on**.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/dev-portal-sso.png" alt-text="Developer Portal support for SSO in a bot app":::
+1. Under **Application ID URI**, enter the messaging endpoint you configured as the endpoint address in Microsoft Entra ID.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/dev-portal-sso.png" alt-text="Screenshot shows how to configure SSO for an app in Developer Portal." lightbox="../../../assets/images/authentication/teams-sso-bots/dev-portal-sso.png":::
 
 1. Select **Save**.
 
-Developer Portal would now support SSO for your app.
+Developer Portal now supports SSO for your app.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+SSO+support+in+Developer+Portal&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-manifest%23sso-support-in-developer-portal&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-manifest.md&documentVersionIndependentId=5f4e812e-2836-0c23-5b4f-e416ae624372&platformId=d090c8ed-5fba-59a0-60b4-d8db1a29b26f&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
