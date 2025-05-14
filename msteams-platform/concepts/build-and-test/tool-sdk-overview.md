@@ -1,6 +1,5 @@
 ---
 title: Tools and SDKs to Build Teams App
-author: v-sdhakshina
 description: Learn more about the tools such as Teams Toolkit, Teams Toolkit CLI, Developer Portal, and SDKs available for building your Teams app.
 ms.localizationpriority: medium
 ms.topic: overview

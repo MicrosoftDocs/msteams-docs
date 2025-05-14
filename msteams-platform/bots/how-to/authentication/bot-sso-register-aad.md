@@ -16,7 +16,7 @@ Microsoft Entra ID provides app users access to your bot or message extension ap
 
 The bot and message extension apps use Bot Framework for communicating with app users and implementing authentication.
 
-To configure SSO for your bot or message extension app, you'll need to:
+To configure single sign-on (SSO) for your bot or message extension app, you'll need to:
 
 * Configure bot resource in Microsoft Entra ID
 * Configure app in Microsoft Entra ID
@@ -24,8 +24,8 @@ To configure SSO for your bot or message extension app, you'll need to:
 > [!NOTE]
 > Ensure that you've created an app and a bot resource in Microsoft Entra ID.
 >
-> * For more information about creating an app in Microsoft Entra ID, see [Register a new app in Microsoft Entra ID](../../../tabs/how-to/authentication/tab-sso-register-aad.md#to-register-a-new-app-in-azure-ad).
-> * For more information about creating and configuring your bot resource in Microsoft Entra ID, see [Create Teams conversation bot](../../../sbs-teams-conversation-bot.yml).
+> * For more information about creating an app in Microsoft Entra ID, see [register a new app in Microsoft Entra ID](../../../tabs/how-to/authentication/tab-sso-register-aad.md#to-register-a-new-app-in-azure-ad).
+> * For more information about creating and configuring your bot resource in Microsoft Entra ID, see [create Teams conversation bot](../../../sbs-teams-conversation-bot.yml).
 
 You can configure your bot resource and app in Microsoft Entra ID for your bot or message extension app in one of the following two ways:
 
@@ -70,8 +70,8 @@ To enable SSO for your app in Microsoft Entra ID:
 
 * **[Configure messaging endpoint](#configure-messaging-endpoint)**
 * **[Configure SSO for Microsoft Entra app](#configure-sso-for-azure-ad-app)**:
-  * [Configure scope for the access token](#configure-scope-for-the-access-token)
   * [Configure access token version](#configure-access-token-version)
+  * [Configure scope for the access token](#configure-scope-for-the-access-token)
   * [Create client secret](#create-client-secret)
   * [Configure redirect URL](#configure-redirect-url)
 * **[Configure OAuth connection](#configure-oauth-connection)**
@@ -114,6 +114,30 @@ You've configured the messaging endpoint for your bot resource. Next, you must e
 ## Configure SSO for Microsoft Entra app
 
 You must configure permissions and scopes, authorize client applications, update app manifest (previously called Teams app manifest), and create client secret for your Microsoft Entra app. These configurations help to invoke SSO for your bot app.
+
+### Configure access token version
+
+You must define the access token version for your app in the Microsoft Entra app manifest.
+
+#### To define the access token version
+
+1. Select **Manage** > **Manifest** from the left pane.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/azure-portal-manifest.png" alt-text="Screenshot shows the Microsoft Entra admin center Manifest." :::
+
+    The Microsoft Entra app manifest appears.
+
+1. Set the `requestedAccessTokenVersion` property to **2**.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/azure-manifest-value.png" alt-text="Screenshot shows the Value for access token version." lightbox="../../../assets/images/authentication/teams-sso-bots/azure-manifest-value.png":::
+
+1. Select **Save**.
+
+    A message appears on the browser stating that the app manifest was updated successfully.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-aad-manifest-msg.png" alt-text="Screenshot shows the Manifest updated message.":::
+
+You've updated the access token version. Next, you'll configure the scope of the access token.
 
 ### Configure scope for the access token
 
@@ -280,34 +304,7 @@ The scope and permissions are now configured. Next, you must configure the autho
     > [!NOTE]
     > You can authorize more than one client application. Repeat the steps of this procedure for configuring another authorized client application.
 
-You've successfully configured app scope, permissions, and client applications. Ensure that you note and save the application ID URI. Next, you configure the access token version.
-
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+configure+authorized+client+application&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad%3Ftabs%3Dbotid%23to-configure-authorized-client-application&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad.md&documentVersionIndependentId=ac68d7e8-2a35-5208-8724-68bd2fdd79b6&platformId=cdaccc16-060c-8eb1-2cee-c1f6a26e285c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
-
-### Configure access token version
-
-You must define the access token version for your app in the Microsoft Entra app manifest.
-
-#### To define the access token version
-
-1. Select **Manage** > **Manifest** from the left pane.
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/azure-portal-manifest.png" alt-text="Screenshot shows the Microsoft Entra admin center Manifest." :::
-
-    The Microsoft Entra app manifest appears.
-
-1. Enter **2** as the value for the `accessTokenAcceptedVersion` property.
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/azure-manifest-value.png" alt-text="Screenshot shows the Value for accepted access token version." :::
-
-1. Select **Save**.
-
-    A message appears on the browser stating that the app manifest was updated successfully.
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-aad-manifest-msg.png" alt-text="Screenshot shows the Manifest updated message.":::
-
-You've updated the access token version. Next, you'll create a client secret for your app.
+You've successfully configured app scope, permissions, and client applications. Ensure that you note and save the application ID URI. Next, you'll create a client secret for your app.
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+define+the+access+token+version&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad%3Ftabs%3Dbotid%23to-define-the-access-token-version&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad.md&documentVersionIndependentId=ac68d7e8-2a35-5208-8724-68bd2fdd79b6&platformId=cdaccc16-060c-8eb1-2cee-c1f6a26e285c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
@@ -487,8 +484,8 @@ Congratulations! You've completed the following app configurations in Microsoft 
 To create and configure your app for enabling SSO in Microsoft Entra ID:
 
 * [**Configure your Microsoft Entra app for SSO**](#configure-your-azure-ad-app-for-sso)
-  * [Configure scope for access token](#configure-scope-for-access-token)
   * [Configure the access token version](#configure-the-access-token-version)
+  * [Configure scope for access token](#configure-scope-for-access-token)
   * [Create client secret for your app](#create-client-secret-for-your-app)
   * [Configure redirect URL for your app](#configure-redirect-url-for-your-app)
 * [**Configure bot resource in Microsoft Entra ID**](#configure-bot-resource-in-azure-ad)
@@ -503,6 +500,30 @@ You must configure permissions and scopes, authorize client applications, update
 
 > [!IMPORTANT]
 > Ensure that you've [registered your app](../../../tabs/how-to/authentication/tab-sso-register-aad.md#to-register-a-new-app-in-azure-ad) in Microsoft Entra ID. At registration, Microsoft Entra ID generates a new app ID that you must note. You'll need to update it later in the app manifest file.
+
+### Configure the access token version
+
+You must define the access token version for your app in the Microsoft Entra app manifest.
+
+#### To define access token version
+
+1. Select **Manage** > **Manifest** from the left pane.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/azure-portal-manifest.png" alt-text="Screenshot shows the Microsoft Entra admin center Manifest." :::
+
+    The Microsoft Entra app manifest appears.
+
+1. Set the `requestedAccessTokenVersion` property to **2**.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/azure-manifest-value.png" alt-text="Screenshot shows the Value for access token version." lightbox="../../../assets/images/authentication/teams-sso-bots/azure-manifest-value.png":::
+
+1. Select **Save**.
+
+    A message appears on the browser stating that the app manifest was updated successfully.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-aad-manifest-msg.png" alt-text="Screenshot shows the Manifest updated message.":::
+
+You've updated the access token version. Next, you'll configure the scope for access token.
 
 ### Configure scope for access token
 
@@ -667,34 +688,7 @@ The scope and permissions are now configured. Next, you must configure the autho
     > [!NOTE]
     > You can authorize more than one client application. Repeat the steps of this procedure for configuring another authorized client application.
 
-You've successfully configured app scope, permissions, and client applications. Ensure that you note and save the application ID URI. Next, you configure the access token version.
-
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+configure+an+authorized+client+application&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad%3Ftabs%3Dwindows%23to-configure-an-authorized-client-application&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad.md&documentVersionIndependentId=ac68d7e8-2a35-5208-8724-68bd2fdd79b6&platformId=cdaccc16-060c-8eb1-2cee-c1f6a26e285c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
-
-### Configure the access token version
-
-You must define the access token version for your app in the Microsoft Entra app manifest.
-
-#### To define access token version
-
-1. Select **Manage** > **Manifest** from the left pane.
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/azure-portal-manifest.png" alt-text="Screenshot shows the Microsoft Entra admin center Manifest." :::
-
-    The Microsoft Entra app manifest appears.
-
-1. Enter **2** as the value for the `accessTokenAcceptedVersion` property.
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/azure-manifest-value.png" alt-text="Screenshot shows the Value for accepted access token version." :::
-
-1. Select **Save**.
-
-    A message appears on the browser stating that the app manifest was updated successfully.
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-aad-manifest-msg.png" alt-text="Screenshot shows the Manifest updated message.":::
-
-You've updated the access token version. Next step is to create a client secret for your app next.
+You've successfully configured app scope, permissions, and client applications. Ensure that you note and save the application ID URI. Next, step is to create a client secret for your app next.
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+define+access+token+version&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad%3Ftabs%3Dwindows%23to-define-access-token-version&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad.md&documentVersionIndependentId=ac68d7e8-2a35-5208-8724-68bd2fdd79b6&platformId=cdaccc16-060c-8eb1-2cee-c1f6a26e285c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
