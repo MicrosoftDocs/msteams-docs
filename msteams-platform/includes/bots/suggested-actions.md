@@ -2,9 +2,8 @@ Suggested actions help users with ideas of what to ask next, based on the previo
 
 When a user selects a button, it remains visible and accessible on the rich cards. Suggested actions are supported in all scopes:
 
-- Personal: In one-on-one chats, actions are shown as smart replies, so only the actions from the last message appear.
-- Team
-- Group chat: In group chats and channels, actions are always saved with the message.
+- `personal`: In one-on-one chats, actions are shown as smart replies, so only the actions from the last message appear.
+- `team` and `groupChat`: In group chats and channels, actions are always saved with the message.
 
 > [!NOTE]
 >
