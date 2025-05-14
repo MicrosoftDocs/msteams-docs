@@ -349,7 +349,7 @@ Users invited to the meeting can see your app on stage when they join the meetin
 
 ## Deployment
 
-After you're ready to deploy your code, you can use Microsoft 365 Agents Toolkit or the Teams Developer Portal to provision and upload your app's zip file.
+After you're ready to deploy your code, you can use Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) or the Teams Developer Portal to provision and upload your app's zip file.
 
 > [!NOTE]
 > You need to add your provisioned appId to the `manifest.json` before uploading or distributing the app.
