@@ -63,10 +63,10 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/project-name-vs.png" alt-text="Screenshot shows the option to enter the project name.":::
 
-1. Select **AI Chat Bot** > **Create**.
+1. Select **Echo Bot** > **Create**.
 
    > [!NOTE]
-   > * [OpenAI](https://platform.openai.com/apps) or  [Azure OpenAI](https://oai.azure.com/portal) are the prerequisite to debug **AI Chat Bot** app.
+   > * [OpenAI](https://platform.openai.com/apps) or  [Azure OpenAI](https://oai.azure.com/portal) are the prerequisite to debug **Echo Bot** app.
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/project-teams-application-vs.png" alt-text="Screenshot shows the selection of Teams application to create a new project.":::
 
