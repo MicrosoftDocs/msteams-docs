@@ -18,7 +18,7 @@ Collaboration and communication serve as key pillars for any organization. Conci
 
 Organizations connect with customers, provide services, and share information with apps. Apps become the meeting place for people to work together. A well-placed app builds a cohesive environment for external and internal business needs.
 
-Consider example areas where an app meets a business requirement:
+Consider example areas where an app meets a business requirements:
 
 :::image type="content" border="false" source="../msteams-platform/assets/images/overview/why-teams-apps.png" alt-text="Screenshot shows you why should you build Teams app." :::
 
