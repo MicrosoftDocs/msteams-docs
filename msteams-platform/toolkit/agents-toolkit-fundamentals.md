@@ -22,7 +22,7 @@ Teams Toolkit makes it simple to get started with app development for Microsoft 
 
 ## Available for Visual Studio Code
 
-Teams Toolkit is available as a free extension for Visual Studio Code. To get started, see [install Teams Toolkit](install-Teams-Toolkit.md).
+Teams Toolkit is available as a free extension for Visual Studio Code. To get started, see [install Teams Toolkit](install-Agents-Toolkit.md).
 
 | Teams Toolkit | Visual Studio Code |
 | - | ------------------ |
@@ -63,8 +63,8 @@ Run and debug your bot projects using Visual Studio Code and the included Dev Tu
 
 ### Teams App Test Tool
 
-Teams App Test Tool (Test Tool) makes debugging bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Test Tool. For more information, see [Test Tool](debug-your-Teams-app-test-tool.md).
+Teams App Test Tool (Test Tool) makes debugging bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Test Tool. For more information, see [Test Tool](debug-your-agents-playground.md).
 
 ## See also
 
-[Install Teams Toolkit](install-Teams-Toolkit.md)
+[Install Teams Toolkit](install-Agents-Toolkit.md)

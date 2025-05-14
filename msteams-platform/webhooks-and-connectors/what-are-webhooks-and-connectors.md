@@ -21,7 +21,7 @@ Webhooks and connectors help to connect the web services to channels and teams i
 >
 > * Only Incoming Webhook connectors type are available in GCC High environment and the [admins](/microsoftteams/office-365-custom-connectors#considerations-when-using-connectors-in-teams) need to manually upload to display the app in the connectors page.
 >
-> * You can choose to build notification bot Teams app other than Incoming Webhooks. They perform similarly but notification bot has more functionalities. For more information, see [build notification bot with JavaScript](../sbs-gs-notificationbot.yml) or [Incoming Webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification). To get started, download and explore [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension). For more information, see [Teams Toolkit documents](../toolkit/teams-toolkit-fundamentals.md).
+> * You can choose to build notification bot Teams app other than Incoming Webhooks. They perform similarly but notification bot has more functionalities. For more information, see [build notification bot with JavaScript](../sbs-gs-notificationbot.yml) or [Incoming Webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification). To get started, download and explore [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension). For more information, see [Teams Toolkit documents](../toolkit/agents-toolkit-fundamentals.md).
 
 ## Outgoing Webhooks
 
@@ -56,7 +56,7 @@ Before you start to learn how to build Incoming Webhooks, you may also want to k
 | Send Adaptive Card | No | Yes | Yes |
 | Send a welcome message | Yes | Yes | No |
 | Trigger supported |All triggers are supported. | All triggers are supported. <br> If you use Teams Toolkit, you can quickly get a template project with the following triggers: <br> • Time trigger hosted on Azure functions. <br> • Express HTTP trigger hosted on Azure app service. <br> • HTTP trigger hosted on Azure Functions.| All triggers are supported.|
-| Building Tools |[Quick start - Microsoft Graph](https://developer.microsoft.com/graph/quick-start) | • [Teams Toolkit Overview for Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md) <br> • [Teams Toolkit Overview for Visual Studio](../toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md) <br> • [Teams Toolkit CLI](../toolkit/Teams-Toolkit-CLI.md) <br> • [TeamsFx SDK](../toolkit/TeamsFx-SDK.md) | No tools are required. |
+| Building Tools |[Quick start - Microsoft Graph](https://developer.microsoft.com/graph/quick-start) | • [Teams Toolkit Overview for Visual Studio Code](../toolkit/agents-toolkit-fundamentals.md) <br> • [Teams Toolkit Overview for Visual Studio](../toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md) <br> • [Teams Toolkit CLI](../toolkit/Agents-Toolkit-CLI.md) <br> • [TeamsFx SDK](../toolkit/TeamsFx-SDK.md) | No tools are required. |
 | Cloud resource required | Microsoft Entra app  | Azure Bot Framework  | No resources are required. |
 | Tutorial | • [Send activity feed notifications to users in Microsoft Teams](/graph/teams-send-activityfeednotifications) <br> • [Send activity feed notification](../sbs-graphactivity-feedbroadcast.yml) | [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml) | [Incoming Webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification) |
 

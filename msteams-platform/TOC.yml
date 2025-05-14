@@ -160,13 +160,13 @@
     - name: Teams Toolkit for Visual Studio Code
       items:
       - name: Teams Toolkit overview
-        href: toolkit/teams-toolkit-fundamentals.md
+        href: toolkit/agents-toolkit-fundamentals.md
         displayName: TTK, version, Developer Portal, debug, Teams App Test Tool, dev tunnel
       - name: Install Teams Toolkit
-        href: toolkit/install-Teams-Toolkit.md
+        href: toolkit/install-Agents-Toolkit.md
         displayName: download
       - name: Explore Teams Toolkit
-        href: toolkit/explore-Teams-Toolkit.md
+        href: toolkit/explore-Agents-Toolkit.md
       - name: Build apps using Teams Toolkit 
         href: toolkit/build-environments.md
         items:
@@ -204,7 +204,7 @@
          - name: App debug overview
            href: toolkit/debug-overview.md
          - name: Debug using Teams App Test Tool
-           href: toolkit/debug-your-teams-app-test-tool.md
+           href: toolkit/debug-your-agents-playground.md
            displayName: Mock activity, custom activity, predefined activity
          - name: Debug message extension app in Test Tool
            href: toolkit/debug-message-extension-app-in-test-tool.md          
@@ -288,10 +288,10 @@
          - name: Deploy to cloud using VS
            href: toolkit/toolkit-v4/deploy-vs.md
       - name: Migrate project from 17.9 to 17.10+
-        href: toolkit/teams-toolkit-migration-guide.md
+        href: toolkit/agents-toolkit-migration-guide.md
         displayName: migrate Teams toolkit, new project structure, YAML configuration
     - name: Teams Toolkit CLI
-      href: toolkit/Teams-Toolkit-CLI.md
+      href: toolkit/Agents-Toolkit-CLI.md
     - name: Developer Portal for Teams
       items:
       - name: Overview

@@ -232,7 +232,7 @@ You can use **Custom activity** to customize activity trigger `reactionsAdded`, 
 
 ## See also
 
-* [Teams Toolkit Overview](../teams-toolkit-fundamentals.md)
+* [Teams Toolkit Overview](../agents-toolkit-fundamentals.md)
 * [Build bots for Teams](../../bots/what-are-bots.md)
 * [Adaptive Card](../../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 * [Bot Framework SDK](https://dev.botframework.com/)
