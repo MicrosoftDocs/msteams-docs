@@ -162,7 +162,7 @@ To fetch the insights of a particular meeting, follow these steps:
 
 * Application-level permissions aren't supported.
 
-* Public Switched Telephone Network (PSTN) calls aren't supported.
+* Only private scheduled meetings are currently supported.
 
 ## See also
 
