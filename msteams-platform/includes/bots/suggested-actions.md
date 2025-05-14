@@ -1,11 +1,14 @@
 Suggested actions help users with ideas of what to ask next, based on the previous response or conversation. Your bot should offer context-specific suggestions to the user, rather than generic or fixed ones. You can use your bot’s large language model (LLM) to generate up to three suggestions along with its responses. Then, you can extract these suggestions and present them as options for the user to choose.
 
-When a user selects a button, it remains visible and accessible on the rich cards. However, for suggested actions, the buttons are designed to disappear after selection to prevent the user from selecting stale options that may no longer be relevant.
+When a user selects a button, it remains visible and accessible on the rich cards. Suggested actions are supported in all scopes:
+
+- Personal: In one-on-one chats, actions are shown as smart replies, so only the actions from the last message appear.
+- Team
+- Group chat: In group chats and channels, actions are always saved with the message.
 
 > [!NOTE]
 >
-> * `SuggestedActions` are only supported for one-on-one chat bots with both text based messages and Adaptive Cards.
-> * `SuggestedActions` aren't supported for chat bots with attachments for any conversation type.
+> `SuggestedActions` aren't supported for chat bots with attachments for any conversation type.
 
 # [Desktop](#tab/desktop)
 
