@@ -28,7 +28,7 @@ If you want to create your own bot, here's a list of tools and platforms to help
 
 :::row:::
     :::column span="1":::
-        1. **Bot type**
+        **Bot type**
     :::column-end:::
     :::column span="3":::
         - Custom engine agent
@@ -38,24 +38,21 @@ If you want to create your own bot, here's a list of tools and platforms to help
 
 :::row:::
     :::column span="1":::
-        2. **Bot capabilities**
+        **Bot capabilities**
     :::column-end:::
     :::column span="3":::
-        Choose the capabilities you want to build in your bot:
-
         - Conversational capability
         - Notification capability
-        - Workflow capability 
+        - Workflow capability
         - Command capability
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column span="1":::
-        3. **Tools and Platforms**
+        **Tools and Platforms**
     :::column-end:::
     :::column span="3":::
-
         - **Teams AI library v2**: Teams AI Library v2 is a set of tools for developing agents and applications for Microsoft Teams. It enhances developer experience, making it easier to create powerful agents and applications. <br> If you already have an agent or an application, you can migrate it to use Teams AI library v2 for adding more advanced capabilities.
 
         - **Teams AI library**: Teams custom engine agents use AI to communicate naturally with users. These agents can handle tasks from simple questions to complex operations. <br> If you have an existing Bot Framework SDK bot, you can migrate it to Teams AI library for enhanced capabilities. For more information, see [why you must migrate to Teams AI library](how-to/teams-conversational-ai/how-conversation-ai-get-started.md#migrate-your-bot-to-use-teams-ai-library).
@@ -74,7 +71,7 @@ If you want to create your own bot, here's a list of tools and platforms to help
 
 :::row:::
     :::column span="1":::
-        4. **Bot registration service**
+        **Bot registration service**
     :::column-end:::
     :::column span="3":::
         - Azure AD
@@ -84,7 +81,7 @@ If you want to create your own bot, here's a list of tools and platforms to help
 
 :::row:::
     :::column span="1":::
-        5. **Advanced bot capabilities**
+        **Advanced bot capabilities**
     :::column-end:::
     :::column span="3":::
         - Call and media bot
