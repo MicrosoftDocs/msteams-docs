@@ -343,7 +343,7 @@ items:
     # [Visual Studio Code](#tab/vscode)
 
     1. Open Visual Studio Code.
-    1. Select Microsoft 365 Agents Toolkit from the sidebar by selecting the Teams icon.
+    1. Select Microsoft 365 Agents Toolkit from the sidebar by selecting the M365 icon.
     1. Select **Provision** under **LIFECYCLE**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot showing the provisioning command":::
