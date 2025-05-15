@@ -156,7 +156,7 @@ The **Usage by platform** chart shows your app's and agent's active usage across
 :::image type="content" source="../../assets/images/tdp/tdp-usage-platform.png" alt-text="Screenshot shows app and agent usage in different platforms of your published app in Developer Portal.":::
 
 > [!NOTE]
-> The `Preview` tag indicates that the metric **Usage by host product** is in its initial phase and might undergo modifications as we collect feedback and continue to improve the experience.
+> The **Preview** tag indicates that the metric **Usage by host product** is in its initial phase and might undergo modifications as we collect feedback and continue to improve the experience.
 
 #### Usage by operating system
 
@@ -410,7 +410,7 @@ The **Usage by platform** chart shows your app's and agent's active usage across
 :::image type="content" source="../../assets/images/tdp/tdp-usage-platform.png" alt-text="Screenshot shows the app and agent usage in different platforms of your published app in Developer Portal.":::
 
    > [!NOTE]
-   > The `Preview` tag indicates that the metric **Usage by host product** is in its initial phase and might undergo modifications as we collect feedback and continue to improve the experience.
+   > The **Preview** tag indicates that the metric **Usage by host product** is in its initial phase and might undergo modifications as we collect feedback and continue to improve the experience.
 
 #### Usage by operating system
 
