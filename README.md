@@ -21,7 +21,7 @@ This project adopts the [Microsoft Open Source code of conduct](https://opensour
 ## Learning resources
 
 * [Microsoft 365 Agents Toolkit fundamentals](https://learn.microsoft.com/microsoftteams/platform/toolkit/teams-toolkit-fundamentals/)
-* [Teams Toolkit for Visual Studio](https://learn.microsoft.com/microsoftteams/platform/toolkit/visual-studio-overview/)
+* [Microsoft 365 Agents Toolkit for Visual Studio](https://learn.microsoft.com/microsoftteams/platform/toolkit/visual-studio-overview/)
 * [TeamsFx SDK for TypeScript or JavaScript](https://learn.microsoft.com/microsoftteams/platform/toolkit/teamsfx-sdk/)
 * [Teams JavaScript client SDK](https://learn.microsoft.com/microsoftteams/platform/tabs/how-to/using-teams-client-sdk/) and [Teams JavaScript client SDK v2 preview](https://learn.microsoft.com/microsoftteams/platform/m365-apps/using-teams-client-sdk-preview?tabs=manifest-teams-toolkit%2Cjavascript/)
 * [Microsoft Graph SDKs](https://learn.microsoft.com/graph/sdks/sdks-overview/)
