@@ -34,7 +34,7 @@ To create a basic Teams app:
 
 1. Open **Visual Studio Code**.
 
-1. Select the **Teams Toolkit** > **Create a new Agent/App** > **Teams Toolkit**.
+1. Select the **Teams Toolkit** > **Create a New Agent/App** > select **Teams App**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Screenshot shows the Create New Project button in the Teams Toolkit sidebar.":::
 
