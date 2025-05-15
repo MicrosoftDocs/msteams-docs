@@ -19,9 +19,6 @@ If you want to create your own bot, here's a list of tools and platforms to help
 
 :::row:::
     :::column span="1":::
-        **#**
-    :::column-end:::
-    :::column span="1":::
         **Choose ...**
     :::column-end:::
     :::column span="3":::
@@ -31,10 +28,7 @@ If you want to create your own bot, here's a list of tools and platforms to help
 
 :::row:::
     :::column span="1":::
-        1
-    :::column-end:::
-    :::column span="1":::
-        **Bot type**
+        1. **Bot type**
     :::column-end:::
     :::column span="3":::
         - Custom engine agent
@@ -44,10 +38,7 @@ If you want to create your own bot, here's a list of tools and platforms to help
 
 :::row:::
     :::column span="1":::
-        2
-    :::column-end:::
-    :::column span="1":::
-        **Bot capabilities**
+        2. **Bot capabilities**
     :::column-end:::
     :::column span="3":::
         Choose the capabilities you want to build in your bot:
@@ -61,10 +52,7 @@ If you want to create your own bot, here's a list of tools and platforms to help
 
 :::row:::
     :::column span="1":::
-        3
-    :::column-end:::
-    :::column span="1":::
-        **Tools and Platforms**
+        3. **Tools and Platforms**
     :::column-end:::
     :::column span="3":::
         - **Teams AI library v2**:
@@ -85,10 +73,7 @@ If you want to create your own bot, here's a list of tools and platforms to help
 
 :::row:::
     :::column span="1":::
-        2
-    :::column-end:::
-    :::column span="1":::
-        **Bot registration service**
+        4. **Bot registration service**
     :::column-end:::
     :::column span="3":::
         - Azure AD
@@ -98,10 +83,7 @@ If you want to create your own bot, here's a list of tools and platforms to help
 
 :::row:::
     :::column span="1":::
-        2
-    :::column-end:::
-    :::column span="1":::
-        **Advanced bot capabilities**
+        5. **Advanced bot capabilities**
     :::column-end:::
     :::column span="3":::
         - Call and media bot
