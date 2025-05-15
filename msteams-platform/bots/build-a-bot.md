@@ -18,10 +18,10 @@ If you want to create your own bot, here's a list of tools and platforms to help
 :::image type="content" source="../assets/images/bots/m365-bot-decisions.png" alt-text="Infographics depicts a decision tree for building a bot." Lightbox="../assets/images/bots/m365-bot-decisions.png":::
 
 :::row:::
-    :::column span="":::
+    :::column span="1":::
         **#**
     :::column-end:::
-    :::column span="":::
+    :::column span="2":::
         **Choose ...**
     :::column-end:::
     :::column span="2":::
@@ -30,10 +30,10 @@ If you want to create your own bot, here's a list of tools and platforms to help
 :::row-end:::
 
 :::row:::
-    :::column span="":::
+    :::column span="1":::
         1
     :::column-end:::
-    :::column span="":::
+    :::column span="2":::
         **Bot type**
     :::column-end:::
     :::column span="2":::
@@ -43,10 +43,10 @@ If you want to create your own bot, here's a list of tools and platforms to help
 :::row-end:::
 
 :::row:::
-    :::column span="":::
-        1
+    :::column span="1":::
+        2
     :::column-end:::
-    :::column span="":::
+    :::column span="2":::
         **Bot capabilities**
     :::column-end:::
     :::column span="2":::
