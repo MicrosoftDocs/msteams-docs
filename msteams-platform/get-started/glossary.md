@@ -170,7 +170,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Meeting surfaces](../resources/schema/manifest-schema.md#configurabletabs) | The set of `meetingSurfaceItem` scopes where a tab is supported. <br>**See also**: [Configurable tab](#c)|
 | [Microsoft 365 account](../toolkit/accounts.md#microsoft-365-developer-account-types) | Microsoft 365 account includes 25 user licenses, including the administrator, for development purposes only. |
 | Microsoft 365 client ID | See [Client ID](#c) |
-| [Microsoft 365 Agents Toolkit](../toolkit/teams-toolkit-fundamentals.md) | Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) enables you to create custom Teams apps directly within the VS Code environment. |
+| [Microsoft 365 Agents Toolkit](../toolkit/teams-toolkit-fundamentals.md) | Agents Toolkit enables you to create custom Teams apps directly within the VS Code environment. |
 | [Microsoft 365 Agents Toolkit CLI](../toolkit/Teams-Toolkit-CLI.md) | Agents Toolkit CLI is a text-based command line interface that accelerates Teams application development. |
 | [Add Microsoft 365 channel for your bot](../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app) | A feature of Teams message extension app that lets the users interact with it from Microsoft 365. |
 | [Microsoft 365 developer program](../toolkit/tools-prerequisites.md)| The Microsoft 365 Developer Program helps you build apps that extend Microsoft 365. |
