@@ -12,7 +12,7 @@ ms.owner: angovil
 # Teams AI library
 
 > [!IMPORTANT]
-> Teams AI v2 is now available in preview. Learn more about the new and improved developer experience, MCP support, and more [here](https://aka.ms/teamsaiv2).
+> [Teams AI library v2](/microsoftteams/platform/teams-ai-library/) is available in developer preview. Learn more about the new and improved developer experience, MCP support, and more.
 
 Teams AI library is a Teams-centric interface for integrating GPT-based language models and user intent engines. It simplifies the development process by reducing the need to write and maintain complex conversational bot logic.
 
@@ -78,7 +78,7 @@ Following are some key features and their benefits:
     :::column-end:::
     :::column span="2":::
         A simple interface for actions and predictions allows a bot to react when needed. Ambient presence lets a bot learn intent, use business logic prompts, and generate responses. For example, if a user is out of office and needs to summarize a thread, Teams AI library:
-        
+
             1. Understands the intent as summarization.
             1. Uses prompts to make summarizations over time, focused on the user’s interactions.
             1. Provides actions to summarize the chat content.
