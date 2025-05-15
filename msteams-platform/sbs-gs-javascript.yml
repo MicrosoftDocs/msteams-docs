@@ -29,7 +29,7 @@ items:
 
     This step-by-step guide helps you to build tab with Teams Toolkit. You'll see the following output after you've completed this guide:
 
-    :::image type="content" source="../msteams-platform/assets/images/toolkit-v2/first-tab/tab-app-localdebug.png" alt-text="Screenshot shows the completed app" lightbox="../msteams-platform\assets\images\teams-toolkit-v2\first-tab\tab-app-localdebug-1.png":::
+    :::image type="content" source="../msteams-platform/assets/images/toolkit-v2/first-tab/tab-app-localdebug.png" alt-text="Screenshot shows the completed app" lightbox="../msteams-platform/assets/images/toolkit-v2/first-tab/tab-app-localdebug-1.png":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -313,7 +313,7 @@ items:
 
     1. Congratulations, your first app is running on Teams!
 
-        :::image type="content" source="../msteams-platform/assets/images/toolkit-v2/first-tab/tab-app-localdebug.png" alt-text="Screenshot shows the completed app" lightbox="../msteams-platform\assets\images\teams-toolkit-v2\first-tab\tab-app-localdebug-1.png":::
+        :::image type="content" source="../msteams-platform/assets/images/toolkit-v2/first-tab/tab-app-localdebug.png" alt-text="Screenshot shows the completed app" lightbox="../msteams-platform/assets/images/toolkit-v2/first-tab/tab-app-localdebug-1.png":::
 
         > [!NOTE]
         > If you want to extend your app to Outlook and Microsoft 365, you can choose to debug your app with Outlook and Microsoft 365 from RUN AND DEBUG dropdown in Visual Studio Code.
