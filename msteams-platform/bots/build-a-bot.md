@@ -62,9 +62,9 @@ If you want to create your own bot, here's a list of tools and platforms to help
 
         - **Bot Framework SDK**: The [Bot Framework](https://dev.botframework.com/) SDK allows you to create bots using C#, Python, and JavaScript. Modify existing bots to work in Teams using C# or Node.js. You can develop Teams apps with any web technology and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly, ensuring token handling in all cases. The [SDK](/azure/bot-service/bot-service-overview?view=azure-bot-service-4.0&preserve-view=true) extends Bot Builder to:
 
-            - Use specialized card types like the connector card for Microsoft 365 Groups.
-            - Set Teams-specific channel data on activities.
-            - Process message extension requests.
+        &nbsp;&nbsp;&nbsp;&nbsp;- Use specialized card types like the connector card for Microsoft 365 Groups.
+        &nbsp;&nbsp;&nbsp;&nbsp;- Set Teams-specific channel data on activities.
+        &nbsp;&nbsp;&nbsp;&nbsp;- Process message extension requests.
 
         - **Teams Toolkit**: Teams Toolkit makes it simple to start developing bot apps for Teams. You can use a project template for common custom bot app scenarios (LOB app) or start from a sample. <br> For more information, see [tools and SDKs](../concepts/build-and-test/tool-sdk-overview.md).
 
