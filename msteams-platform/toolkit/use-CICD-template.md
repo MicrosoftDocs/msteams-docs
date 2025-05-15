@@ -23,16 +23,16 @@ You can set up a Continuous Integration and Continuous Deployment (CI/CD) pipeli
 
 To build the project, you must compile the source code and create the required deployment artifacts. There are two methods to deploy the artifacts:
 
-* [Set up CI/CD pipelines with Microsoft 365 Agents Toolkit CLI](#set-up-cicd-pipelines-with-teams-toolkit-cli) (previously known as Teams Toolkit CLI). *[Recommended]*
+* [Set up CI/CD pipelines](#set-up-cicd-pipelines-with-teams-toolkit-cli) with Microsoft 365 Agents Toolkit CLI(previously known as Teams Toolkit CLI). *[Recommended]*
 
 * [Set up CI/CD pipelines using your own workflow](#set-up-cicd-pipelines-using-your-own-workflow). *[Optional]*
 
-## Set up CI/CD pipelines with Microsoft 365 Agents Toolkit CLI
+## Set up CI/CD pipelines with Agents Toolkit CLI
 
 > [!NOTE]
 > Use Teams Toolkit version 5.6.0 or a later.
 
-You can use [Teams Toolkit command line interface (CLI)](Teams-Toolkit-CLI.md) to set up CI/CD pipeline for your Teams app.
+You can use [Agents Toolkit command line interface (CLI)](Teams-Toolkit-CLI.md) to set up CI/CD pipeline for your Teams app.
 
 ### Prerequisites
 
@@ -40,7 +40,7 @@ You can use [Teams Toolkit command line interface (CLI)](Teams-Toolkit-CLI.md) t
 | --- | --- |
 | Set up required resources for your Teams app, such as Teams app ID, bot ID, and so on. | • Manually extract the resources from the `manifest.json` file under the `appPackage` folder. <br> • Automatically generate to run the `Provision` command in Teams Toolkit. |
 | Configure Azure resources |• Manually prepare the resources by examining the bicep files under the `infra` folder. <br> • Automatically prepare the resources using the `Provision` command in Teams Toolkit.|
-| Ensure you've a properly configured service principal with appropriate access policies on resources. | The `Teamsapp` command-line interface (CLI) supports Azure login through certificate-based authentication or password-based authentication (application secret). You can either [create a service principal with certificate-based authentication](/cli/azure/azure-cli-sp-tutorial-3) and save the generated certificate, `appId` (client ID) and `tenant` (tenant ID) or [create a secret](/entra/identity-platform/howto-create-service-principal-portal) and save the client ID, client secret, and tenant ID of the service principal. <br> :::image type="content" source="../assets/images/teams-toolkit-v2/service-principal.png" alt-text="Screenshot shows the service principal secret."::: <br> For more information about service principal, see: <br> • [Create service principal using Entra portal](/entra/identity-platform/howto-create-service-principal-portal). <br> • [Create service principal using Azure CLI](/cli/azure/azure-cli-sp-tutorial-1?tabs=bash). |
+| Ensure you've a properly configured service principal with appropriate access policies on resources. | The `atk` command-line interface (CLI) supports Azure login through certificate-based authentication or password-based authentication (application secret). You can either [create a service principal with certificate-based authentication](/cli/azure/azure-cli-sp-tutorial-3) and save the generated certificate, `appId` (client ID) and `tenant` (tenant ID) or [create a secret](/entra/identity-platform/howto-create-service-principal-portal) and save the client ID, client secret, and tenant ID of the service principal. <br> :::image type="content" source="../assets/images/teams-toolkit-v2/service-principal.png" alt-text="Screenshot shows the service principal secret."::: <br> For more information about service principal, see: <br> • [Create service principal using Entra portal](/entra/identity-platform/howto-create-service-principal-portal). <br> • [Create service principal using Azure CLI](/cli/azure/azure-cli-sp-tutorial-1?tabs=bash). |
 
 After you've completed the prerequisites, let's set up a pipeline:
 
@@ -79,7 +79,7 @@ To set up the pipeline with GitHub, follow these steps:
     
           - name: install cli
             run: |
-              npm install @microsoft/teamsapp-cli@${{env.TEAMSAPP_CLI_VERSION}}
+              npm install @microsoft/atk-cli@${{env.TEAMSAPP_CLI_VERSION}}
 
           - name: Retrieve the secret and decode it to a file
             env:
@@ -89,7 +89,7 @@ To set up the pipeline with GitHub, follow these steps:
     
           - name: Login Azure by service principal
             run: |
-              npx teamsapp auth login azure --username ${{vars.AZURE_SERVICE_PRINCIPAL_CLIENT_ID}}  \
+              npx atk auth login azure --username ${{vars.AZURE_SERVICE_PRINCIPAL_CLIENT_ID}}  \
               --service-principal true \
               --tenant ${{vars.AZURE_TENANT_ID}} \
               --password cert.pem \
@@ -97,12 +97,12 @@ To set up the pipeline with GitHub, follow these steps:
     
           - name: Deploy to hosting environment
             run: |
-              npx teamsapp deploy --ignore-env-file true \
+              npx atk deploy --ignore-env-file true \
               --interactive false
     
           - name: Package app
             run: |
-              npx teamsapp package
+              npx atk package
     
           - name: upload appPackage
             uses: actions/upload-artifact@v4
@@ -121,7 +121,7 @@ To set up the pipeline with GitHub, follow these steps:
         runs-on: ubuntu-latest
         env:
           TEAMSAPP_CLI_VERSION: "3.0.4"
-          # Add extra environment variables here so that teamsapp cli can use them.
+          # Add extra environment variables here so that atk cli can use them.
     
         steps:
           - name: "Checkout GitHub Action"
@@ -134,11 +134,11 @@ To set up the pipeline with GitHub, follow these steps:
     
           - name: install cli
             run: |
-              npm install @microsoft/teamsapp-cli@${{env.TEAMSAPP_CLI_VERSION}}
+              npm install @microsoft/atk-cli@${{env.TEAMSAPP_CLI_VERSION}}
     
           - name: Login Azure by service principal
             run: |
-              npx teamsapp auth login azure --username ${{vars.AZURE_SERVICE_PRINCIPAL_CLIENT_ID}}  \
+              npx atk auth login azure --username ${{vars.AZURE_SERVICE_PRINCIPAL_CLIENT_ID}}  \
               --service-principal true \
               --tenant ${{vars.AZURE_TENANT_ID}} \
               --password ${{secrets.AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET }} \
@@ -146,12 +146,12 @@ To set up the pipeline with GitHub, follow these steps:
     
           - name: Deploy to hosting environment
             run: |
-              npx teamsapp deploy --ignore-env-file true \
+              npx atk deploy --ignore-env-file true \
               --interactive false
     
           - name: Package app
             run: |
-              npx teamsapp package
+              npx atk package
     
           - name: upload appPackage
             uses: actions/upload-artifact@v4
@@ -185,11 +185,11 @@ To set up the pipeline with GitHub, follow these steps:
       > The `AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET` variable must be set as secret.
       > Utilize the [GitHub environment](https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment#environment-variables) to use different sets of variables.
 
-    * Go to the `teamsapp.yml` file. In the `deploy` stage, the values enclosed in `${{}}` are the required variable keys. If you've used the `provision` command from Teams Toolkit, you can locate the values in the environment files in the `.env` folder.
+    * Go to the `m365agents.yml` file. In the `deploy` stage, the values enclosed in `${{}}` are the required variable keys. If you've used the `provision` command from Teams Toolkit, you can locate the values in the environment files in the `.env` folder.
 
       Set the `BOT_AZURE_APP_SERVICE_RESOURCE_ID` as a repository variable:
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teamsappyml.png" alt-text="Screenshot shows the bot Azure app service resource ID in teamsapp.yml file.":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teamsappyml.png" alt-text="Screenshot shows the bot Azure app service resource ID in m365agents.yml file.":::
 
     * Go to the `appPackage/manifest.json` file. The values enclosed in `${{}}` are the required variable keys. If you've used the `provision` command from Teams Toolkit, you can locate the values in the environment files in the `.env` folder.
 
@@ -255,7 +255,7 @@ To set up the pipeline with Azure DevOps, follow these steps:
           checkLatest: true
     
       - script: |
-          npm install @microsoft/teamsapp-cli@$(TEAMSAPP_CLI_VERSION)
+          npm install @microsoft/atk-cli@$(TEAMSAPP_CLI_VERSION)
         displayName: "Install CLI"
 
       - task: DownloadSecureFile@1  
@@ -265,16 +265,16 @@ To set up the pipeline with Azure DevOps, follow these steps:
           secureFile: 'azure_sp_cert.pem' 
     
       - script: |
-          npx teamsapp auth login azure --username $(AZURE_SERVICE_PRINCIPAL_CLIENT_ID) --service-principal true --tenant $(AZURE_TENANT_ID) --password $(certFile.secureFilePath) --interactive false
+          npx atk auth login azure --username $(AZURE_SERVICE_PRINCIPAL_CLIENT_ID) --service-principal true --tenant $(AZURE_TENANT_ID) --password $(certFile.secureFilePath) --interactive false
         displayName: "Login Azure by service principal"
     
       - script: |
-          npx teamsapp deploy --ignore-env-file true --interactive false
+          npx atk deploy --ignore-env-file true --interactive false
         displayName: "Deploy to Azure"
         workingDirectory: $(System.DefaultWorkingDirectory)
     
       - script: |
-          npx teamsapp package
+          npx atk package
         displayName: "Package app"
         workingDirectory: $(System.DefaultWorkingDirectory)
     
@@ -300,20 +300,20 @@ To set up the pipeline with Azure DevOps, follow these steps:
           checkLatest: true
     
       - script: |
-          npm install @microsoft/teamsapp-cli@$(TEAMSAPP_CLI_VERSION)
+          npm install @microsoft/atk-cli@$(TEAMSAPP_CLI_VERSION)
         displayName: "Install CLI"
     
       - script: |
-          npx teamsapp auth login azure --username $(AZURE_SERVICE_PRINCIPAL_CLIENT_ID) --service-principal true --tenant $(AZURE_TENANT_ID) --password $(AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET) --interactive false
+          npx atk auth login azure --username $(AZURE_SERVICE_PRINCIPAL_CLIENT_ID) --service-principal true --tenant $(AZURE_TENANT_ID) --password $(AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET) --interactive false
         displayName: "Login Azure by service principal"
     
       - script: |
-          npx teamsapp deploy --ignore-env-file true --interactive false
+          npx atk deploy --ignore-env-file true --interactive false
         displayName: "Deploy to Azure"
         workingDirectory: $(System.DefaultWorkingDirectory)
     
       - script: |
-          npx teamsapp package
+          npx atk package
         displayName: "Package app"
         workingDirectory: $(System.DefaultWorkingDirectory)
     
@@ -334,11 +334,11 @@ To set up the pipeline with Azure DevOps, follow these steps:
    Update the following variables and set the certificate that you've created during the prerequisites:
     * `AZURE_SERVICE_PRINCIPAL_CLIENT_ID`, `AZURE_TENANT_ID`
 
-    * Go to the `teamsapp.yml` file. In the `deploy` stage, the values enclosed in `${{}}` are the required variable keys. If you've used the `provision` command from Teams Toolkit, you can locate the values in the environment files in the `.env` folder.
+    * Go to the `m365agents.yml` file. In the `deploy` stage, the values enclosed in `${{}}` are the required variable keys. If you've used the `provision` command from Teams Toolkit, you can locate the values in the environment files in the `.env` folder.
 
       Set the `BOT_AZURE_APP_SERVICE_RESOURCE_ID` as a repository variable:
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teamsappyml.png" alt-text="Screenshot shows the bot Azure app service resource ID in teamsapp.yml file.":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teamsappyml.png" alt-text="Screenshot shows the bot Azure app service resource ID in m365agents.yml file.":::
 
     * Go to the `appPackage/manifest.json` file. The values enclosed in `${{}}` are the required variable keys. If you've used the `provision` command from Teams Toolkit, you can locate the values in the environment files in the `.env` folder.
 
@@ -361,11 +361,11 @@ To set up the pipeline with Azure DevOps, follow these steps:
    Update the following variables and secrets that you've created during the prerequisites:
     * `AZURE_SERVICE_PRINCIPAL_CLIENT_ID`, `AZURE_TENANT_ID`, and `AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET`
 
-    * Go to the `teamsapp.yml` file. In the `deploy` stage, the values enclosed in `${{}}` are the required variable keys. If you've used the `provision` command from Teams Toolkit, you can locate the values in the environment files in the `.env` folder.
+    * Go to the `m365agents.yml` file. In the `deploy` stage, the values enclosed in `${{}}` are the required variable keys. If you've used the `provision` command from Teams Toolkit, you can locate the values in the environment files in the `.env` folder.
 
       Set the `BOT_AZURE_APP_SERVICE_RESOURCE_ID` as a repository variable:
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teamsappyml.png" alt-text="Screenshot shows the bot Azure app service resource ID in teamsapp.yml file.":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teamsappyml.png" alt-text="Screenshot shows the bot Azure app service resource ID in m365agents.yml file.":::
 
     * Go to the `appPackage/manifest.json` file. The values enclosed in `${{}}` are the required variable keys. If you've used the `provision` command from Teams Toolkit, you can locate the values in the environment files in the `.env` folder.
 
@@ -404,14 +404,14 @@ To set up the pipeline with Azure DevOps, follow these steps:
 
 ## Set up CI/CD pipelines using your own workflow
 
-If the Teams App CLI doesn't meet your pipeline requirements, you can develop a custom deployment process that suits your needs. This section provides guidance on deploying to Azure with custom methods.
+If Agents Toolkit CLI doesn't meet your pipeline requirements, you can develop a custom deployment process that suits your needs. This section provides guidance on deploying to Azure with custom methods.
 
 > [!NOTE]
 > If you already have a complete CI/CD pipeline for deploying to your Azure resource, and your Teams app needs to read environment variables during runtime, configure these environment variables in the settings of your Azure resource. For post-deployment testing, see [generate Teams app package](#generate-teams-app-package).
 
-The `teamsapp deploy` command executes the actions defined in the `deploy` stage of the `teamsapp.yml` file. The `deploy` stage consists of `build` and `deploy` actions. To create a custom deployment method, rewrite these actions based on your specific requirements and preferences.
+The `atk deploy` command executes the actions defined in the `deploy` stage of the `m365agents.yml` file. The `deploy` stage consists of `build` and `deploy` actions. To create a custom deployment method, rewrite these actions based on your specific requirements and preferences.
 
-As an example, a basic bot TypeScript project has the following deploy stage in its `teamsapp.yml`:
+As an example, a basic bot TypeScript project has the following deploy stage in its `m365agents.yml`:
 
 ```yaml
 deploy:
@@ -510,7 +510,7 @@ When you deploy app code to Azure App Service, Azure Functions, or Azure Contain
 
 ## Generate Teams app package
 
-To publish your Teams app, the `appPackage` is required. You can automatically create the `appPackage.zip` using the `teamsapp package` command in `Teamsapp` CLI. If you're unable to use `Teamsapp` CLI, follow these steps to manually create the `appPackage`:
+To publish your Teams app, the `appPackage` is required. You can automatically create the `appPackage.zip` using the `atk package` command in `atk` CLI. If you're unable to use `Teamsapp` CLI, follow these steps to manually create the `appPackage`:
 
 1. Prepare a `appPackage` folder.
 1. Place the `manifest.json` file in the `appPackage` folder. The default `manifest.json` file in the Teams Toolkit project contains placeholders, denoted by ${{}}. Replace these placeholders with the correct values.

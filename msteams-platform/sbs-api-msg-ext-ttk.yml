@@ -50,7 +50,7 @@ items:
 
    The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams Store, and more. 
     
-   You can use the toolkit with Visual Studio Code, or CLI (command-line interface), called `Teamsapp`.
+   You can use the toolkit with Visual Studio Code or CLI (command-line interface) called `atk`.
 
 
    # [Visual Studio Code](#tab/vscode)
@@ -95,7 +95,7 @@ items:
 
    Ensure you add the npm global cache to your path. This step is normally done as part of the Node.js installer.
 
-   You can use the CLI with the `teamsapp` command. Verify that the command is working by running `teamsapp -h`.
+   You can use the CLI with the `atk` command. Verify that the command is working by running `teamsapp -h`.
 
    > [!CAUTION]
    > Before you can run Teamsapp in PowerShell terminals, you must enable the 'remote signed' execution policy for PowerShell.

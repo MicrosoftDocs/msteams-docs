@@ -134,7 +134,7 @@ This option renders `appPackage/manifest.json` with environment variables, and t
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/validate-schema.png" alt-text="Screenshot shows the selection of validate using manifest schema.":::
 
-Alternatively, use the following Microsoft 365 Agents Toolkit command line interface (Microsoft 365 Agents Toolkit CLI (previously known as Teams Toolkit CLI)) command:
+Alternatively, use the following Microsoft 365 Agents Toolkit command line interface (previously known as Teams Toolkit CLI) command:
 
 ```bash
 teamsfx validate --manifest-path <YOUR-PATH-TO-MANIFEST>

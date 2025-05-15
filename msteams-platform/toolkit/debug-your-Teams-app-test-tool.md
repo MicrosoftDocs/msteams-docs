@@ -50,7 +50,7 @@ Ensure you install the following tools for building and deploying your bots in T
 
 ## Understand Test Tool
 
-Test Tool is an npm package that has a CLI command called `teamsapptester`. When you run `teamsapptester start`, it opens a web app on your local machine that emulates the Teams web client and Bot Framework service. This web app doesn't need any cloud resources as it uses mock data to simulate the contextual information of Teams.
+Test Tool is an npm package that has a CLI command called `atktester`. When you run `atktester start`, it opens a web app on your local machine that emulates the Teams web client and Bot Framework service. This web app doesn't need any cloud resources as it uses mock data to simulate the contextual information of Teams.
 
 To use a Teams bot on Test Tool, you need to provide:
 
@@ -131,7 +131,7 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
         :::image type="content" source="../assets/images/teams-toolkit-v2/debug/npm-teams-app-test-tool.png" alt-text="Screenshot shows install teams app test tool cli.":::
 
-   1. Use the `teamsapp` command from [Microsoft 365 Agents Toolkit CLI](Teams-Toolkit-CLI.md) (previously known as Teams Toolkit CLI) to create your first project. Start from the folder where you want to create the project folder.
+   1. Use the `atk` command from [Microsoft 365 Agents Toolkit CLI](Teams-Toolkit-CLI.md) (previously known as Teams Toolkit CLI) to create your first project. Start from the folder where you want to create the project folder.
 
       ```cmd
       teamsapp new   

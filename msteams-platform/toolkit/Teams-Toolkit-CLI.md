@@ -1,5 +1,5 @@
 ---
-title: Introduction to Microsoft 365 Agents Toolkit CLI
+title: Introduction to Agents Toolkit CLI
 author: MuyangAmigo
 description: Learn about Teams Toolkit Command Line Interface for Teams app development in different versions, supported commands, scenarios, interactive mode, global options.
 ms.author: zhany
@@ -9,14 +9,14 @@ ms.date: 11/29/2021
 zone_pivot_groups: toolkit-cli
 ---
 
-# Teams Toolkit command line interface
+# Agents Toolkit command line interface
 
 > [!IMPORTANT]
 >
-> * We recommend that you use Microsoft 365 Agents Toolkit CLI v3 to build your Teams app.
-> * TeamsFx CLI v1 isn't supported and TeamsFx CLI v2 will be depreated by March 2025.
+> * We recommend that you use Microsoft 365 Agents Toolkit CLI (previously known as TeamsFx CLI) v3 to build your Teams app.
+> * Agents Toolkit CLI v1 isn't supported and Agents Toolkit CLI v2 will be depreated by March 2025.
 
-Microsoft 365 Agents Toolkit command line interface (Microsoft 365 Agents Toolkit CLI (previously known as Teams Toolkit CLI)) is a text-based command line interface that accelerates Microsoft Teams application development. It aims to provide keyboard centric experience while building Teams applications. For more information, see [source code](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli) and [npm package](https://www.npmjs.com/package/@microsoft/teamsfx-cli).
+Agents Toolkit command line interface (also previously known as Teams Toolkit CLI) is a text-based command line interface that accelerates Microsoft Teams application development. It aims to provide keyboard centric experience while building Teams applications. For more information, see [source code](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli) and [npm package](https://www.npmjs.com/package/@microsoft/teamsfx-cli).
 
 ::: zone pivot="version-three"
 

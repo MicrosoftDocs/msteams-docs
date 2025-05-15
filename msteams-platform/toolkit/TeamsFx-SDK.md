@@ -42,7 +42,7 @@ You must have working knowledge of:
 
 ## Get started
 
-TeamsFx SDK is pre-configured in the scaffolded project using TeamsFx Toolkit or CLI.
+TeamsFx SDK is pre-configured in the scaffolded project using Microsoft 365 Agents Toolkit CLI (previously known as TeamsFx Toolkit or CLI).
 For more information, see [Teams app project](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md).
 
  > [!Tip]
@@ -829,6 +829,6 @@ If you're using the version of SDK that has `loadConfiguration()`, you can perfo
 ## See also
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
-* [Microsoft 365 Agents Toolkit CLI](Teams-Toolkit-CLI.md) (previously known as Teams Toolkit CLI)
+* [Microsoft 365 Agents Toolkit CLI](Teams-Toolkit-CLI.md)
 * [Microsoft TeamsFx sample gallery](https://github.com/OfficeDev/TeamsFx-Samples).
 * [Add single sign-on to Teams app](add-single-sign-on.md)
