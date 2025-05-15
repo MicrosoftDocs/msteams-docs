@@ -74,7 +74,7 @@ For more information about how your app can know when the meetings ends, see [su
 
 ## Get AI-generated meeting summaries
 
-Your app can directly fetch AI-generated meeting summaries, including conversation summaries, action items, and @mention utterances using Meeting AI Insights API. For more information, see [get meeting insights with Meeting AI Insights API](meeting-insights.md).
+Your app can directly fetch AI-generated meeting summaries, including conversation summaries, action items, and mentions using Meeting AI Insights API. For more information, see [get meeting insights with Meeting AI Insights API](meeting-insights.md).
 
 ## Code samples
 
