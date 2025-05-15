@@ -456,9 +456,9 @@ items:
         <details>
         <summary>3. Update Teams Toolkit configuration files.</summary>
 
-        To update Teams Toolkit configuration code in **teamsapp.yml** and **teamsapp.local.yml** files, follow the steps:
+        To update Teams Toolkit configuration code in **m365agents.yml** and **m365agents.local.yml** files, follow the steps:
 
-        # [teamsapp.yml](#tab/teamsappyml)
+        # [m365agents.yml](#tab/teamsappyml)
 
         1. Add the code under `provision`.
         
@@ -494,7 +494,7 @@ items:
 
             :::image type="content" source="assets/images/sbs-create-a-new-dashboard/cli-teams-app.png" alt-text="Screenshot shows the information to react code for cli.":::
 
-        # [teamsapp.local.yml](#tab/teamsapplocalyml)
+        # [m365agents.local.yml](#tab/teamsapplocalyml)
         
         1. Add the code under `provision`.
         

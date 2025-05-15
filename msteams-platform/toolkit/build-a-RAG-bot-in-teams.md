@@ -115,9 +115,9 @@ Test Tool opens the bot in a webpage.
 |`src/app/app.js`| Handles business logics for the RAG bot.|
 |`src/app/myDataSource.js`| Defines the data source.|
 |`src/data/*.md`| Raw text data sources.|
-|`teamsapp.yml`|This is the main Teams Toolkit project file. The project file defines the properties and configuration stage definitions. |
-|`teamsapp.local.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging.|
-|`teamsapp.testtool.yml`| This overrides `teamsapp.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
+|`m365agents.yml`|This is the main Teams Toolkit project file. The project file defines the properties and configuration stage definitions. |
+|`m365agents.local.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging.|
+|`teamsapp.testtool.yml`| This overrides `m365agents.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
 
 ## RAG scenarios for Teams AI
 

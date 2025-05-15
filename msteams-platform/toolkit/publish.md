@@ -79,7 +79,7 @@ The following steps help you to publish the app from Teams Toolkit:
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-publish_1.png" alt-text="Screenshot shows the Publish option highlighted.":::
 
-1. Select your environment, Teams Toolkit runs the `publish` lifecycle defined in `teamsapp.yml`.
+1. Select your environment, Teams Toolkit runs the `publish` lifecycle defined in `m365agents.yml`.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-env.jpg" alt-text="Screenshot shows the environment options.":::
 

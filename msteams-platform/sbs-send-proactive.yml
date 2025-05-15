@@ -128,10 +128,10 @@ items:
     | - | - |
     | `.vscode/` | Visual Studio Code files for debugging. |
     | `appManifest/` | Templates for the app manifest (previously called Teams app manifest). |
-    | `env/`| Name / value pairs are stored in environment files and used by `teamsapp.yml` to customize the provisioning and deployment rules. |
+    | `env/`| Name / value pairs are stored in environment files and used by `m365agents.yml` to customize the provisioning and deployment rules. |
     | `manifest.json` | App manifest for publishing through the Developer Portal for Teams is stored in `Properties/manifest.json`. |
-    | `teamsapp.yml` | Main project file describes your app configuration and defines the set of actions to run in each lifecycle stage. |
-    | `teamsapp.local.yml`| This overrides `teamsapp.yml` with actions that enable local execution and debugging. |    
+    | `m365agents.yml` | Main project file describes your app configuration and defines the set of actions to run in each lifecycle stage. |
+    | `m365agents.local.yml`| This overrides `m365agents.yml` with actions that enable local execution and debugging. |    
 
 - title: Deploy your Proactive message bot
   durationInMinutes: 1

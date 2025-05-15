@@ -178,8 +178,8 @@ items:
 
    | Folder / File | Contents |
    | --- | --- |
-   | `teamsapp.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stage. |
-   | `teamsapp.local.yml` | Overrides `teamsapp.yml` with actions that enable local execution and debugging. |
+   | `m365agents.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stage. |
+   | `m365agents.local.yml` | Overrides `m365agents.yml` with actions that enable local execution and debugging. |
    | `.vscode/` | Visual Studio Code files for local debug. |
    | `appPackage/` | Templates for the Teams application manifest. |
    | `infra/` | Templates for provisioning Azure resources. |

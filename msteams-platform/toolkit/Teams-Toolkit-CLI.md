@@ -56,8 +56,8 @@ The following table lists the supported commands to help developers build and ma
 | [`teamsapp install`](#teamsapp-install) | Upload a custom app for a specific application package across Microsoft 365. |
 | [`teamsapp launchinfo`](#teamsapp-launchinfo) | Get launch information of an installed Microsoft 365 App. |
 | [`teamsapp list`](#teamsapp-list) | List available Teams application templates and samples. |
-| [`teamsapp provision`](#teamsapp-provision) | Run the provision stage in `teamsapp.yml` or `teamsapp.local.yml`.|
-| [`teamsapp deploy`](#teamsapp-deploy) | Run the deploy stage in `teamsapp.yml` or `teamsapp.local.yml`. |
+| [`teamsapp provision`](#teamsapp-provision) | Run the provision stage in `m365agents.yml` or `m365agents.local.yml`.|
+| [`teamsapp deploy`](#teamsapp-deploy) | Run the deploy stage in `m365agents.yml` or `m365agents.local.yml`. |
 | [`teamsapp package`](#teamsapp-package) | Build your Teams app into package for publishing.|
 | [`teamsapp validate`](#teamsapp-validate) | Validate the current application.|
 | [`teamsapp publish`](#teamsapp-publish) | Publish the app to Teams.|
@@ -272,9 +272,9 @@ The following table lists the parameters available for `teamsapp list`:
 
 ## `teamsapp provision`
 
-The `teamsapp provision` command runs the provision stage in `teamsapp.yml`.
+The `teamsapp provision` command runs the provision stage in `m365agents.yml`.
 
-To trigger the provision stage in `teamsapp.local.yml`, run `teamsapp provision --env local`.
+To trigger the provision stage in `m365agents.local.yml`, run `teamsapp provision --env local`.
 
 ### `teamsapp provision` parameters
 
@@ -287,9 +287,9 @@ The following table lists the parameters available for `teamsapp provision`:
 
 ## `teamsapp deploy`
 
-The `teamsapp deploy` command runs the deploy stage in `teamsapp.yml`.
+The `teamsapp deploy` command runs the deploy stage in `m365agents.yml`.
 
-To trigger the deploy stage in `teamsapp.local.yml`, run `teamsapp deploy --env local`.
+To trigger the deploy stage in `m365agents.local.yml`, run `teamsapp deploy --env local`.
 
 ### `teamsapp deploy` parameters
 
@@ -337,7 +337,7 @@ The following table lists the parameters available for `teamsapp validate`:
 
 ## `teamsapp publish`
 
-The `teamsapp publish` command runs the publish stage in `teamsapp.yml`.
+The `teamsapp publish` command runs the publish stage in `m365agents.yml`.
 
 ### `teamsapp publish` parameters
 
@@ -549,11 +549,11 @@ Install `teamsfx-cli` from `npm` and run `teamsfx -h` to check all available com
 | `teamsfx env` | Manage environments. |
 | `teamsfx help` | Show Teams Toolkit CLI help. |
 | `teamsfx list` | List the available Teams application templates and samples. |
-| `teamsfx provision` | Run the provision stage in teamsapp.yml or teamsapp.local.yml.|
-| `teamsfx deploy` | Run the deploy stage in teamsapp.yml or teamsapp.local.yml. |
+| `teamsfx provision` | Run the provision stage in m365agents.yml or m365agents.local.yml.|
+| `teamsfx deploy` | Run the deploy stage in m365agents.yml or m365agents.local.yml. |
 | `teamsfx package` | Build your Teams app into a package for publishing.|
 | `teamsfx validate` | Validate the Teams app using the app manifest schema or validation rules. |
-| `teamsfx publish` | Run the publish stage in teamsapp.yml.|
+| `teamsfx publish` | Run the publish stage in m365agents.yml.|
 | `teamsfx preview` | Preview the current application. |
 | `teamsfx m365`  | Manage Microsoft 365 app. |
 | `teamsfx permission`| Check, grant, and list permissions for users who can access and manage Teams application and Microsoft Entra application. |
@@ -645,9 +645,9 @@ teamsfx env add staging --env dev
 
 ## `teamsfx provision`
 
-Run the provision stage in `teamsapp.yml`.
+Run the provision stage in `m365agents.yml`.
 
-Running `teamsfx provision --env local` triggers the provision stage in `teamsapp.local.yml` instead.
+Running `teamsfx provision --env local` triggers the provision stage in `m365agents.local.yml` instead.
 
 ### Parameters for `teamsfx provision`
 
@@ -658,9 +658,9 @@ Running `teamsfx provision --env local` triggers the provision stage in `teamsap
 
 ## `teamsfx deploy`
 
-Run the deploy stage in `teamsapp.yml`.
+Run the deploy stage in `m365agents.yml`.
 
-Running `teamsfx deploy --env local` triggers the deploy stage in `teamsapp.local.yml` instead.
+Running `teamsfx deploy --env local` triggers the deploy stage in `m365agents.local.yml` instead.
 
 ### Parameters for `teamsfx deploy`
 
@@ -684,9 +684,9 @@ Validate the Teams app using the app manifest schema or validation rules.
 
 ## `teamsfx publish`
 
-Run the publish stage in `teamsapp.yml`.
+Run the publish stage in `m365agents.yml`.
 
-Running `teamsfx publish --env local` triggers the publish stage in `teamsapp.local.yml` instead.
+Running `teamsfx publish --env local` triggers the publish stage in `m365agents.local.yml` instead.
 
 ### Parameters for `teamsfx publish`
 

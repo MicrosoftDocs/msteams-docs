@@ -39,7 +39,7 @@ To deploy Teams app using Microsoft Teams Toolkit, follow these steps:
 
 ## Customize deploy lifecycle in Teams using Visual Studio
 
-To customize the deployment process, you can edit the following `deploy` sections in the `teamsapp.yml` file:
+To customize the deployment process, you can edit the following `deploy` sections in the `m365agents.yml` file:
 
 * [cli/runNpmCommand](#clirunnpmcommand)
 * [cli/runDotnetCommand](#clirundotnetcommand)

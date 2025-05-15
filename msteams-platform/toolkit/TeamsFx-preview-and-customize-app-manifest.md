@@ -45,7 +45,7 @@ You can also trigger **Zip Teams App Package** from tree view or **Teams: Zip Te
 
 During local debug or provision, Teams Toolkit loads app manifest from `appPackage/manifest.json` and resolves app manifest by environment variables defined in `env/.env.xx`, then creates or updates Teams app in [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
 
-1. You can define your own manifest.json file in `teamsapp.yml` and `teamsapp.local.yml`.
+1. You can define your own manifest.json file in `m365agents.yml` and `m365agents.local.yml`.
 For example, you can put your manifest.json file in `test/test.json`, and update the `manifestPath` parameters in yaml files.
 
     ```text

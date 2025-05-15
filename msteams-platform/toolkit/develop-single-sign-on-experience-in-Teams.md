@@ -49,9 +49,9 @@ In the `./appPackages/manifest.json` file, add the following code:
 
 ## Update Teams Toolkit configuration files
 
-1. Locate your Teams Toolkit configuration files, such as `./teamsapp.yml` and `./teamsapp.local.yml`. Update the required configurations related to Microsoft Entra in these files.
+1. Locate your Teams Toolkit configuration files, such as `./m365agents.yml` and `./m365agents.local.yml`. Update the required configurations related to Microsoft Entra in these files.
 
-1. Add the `aadApp/create` action under `provision` in `./teamsapp.yml` and `./teamsapp.local.yml` to create new Microsoft Entra app used for SSO:
+1. Add the `aadApp/create` action under `provision` in `./m365agents.yml` and `./m365agents.local.yml` to create new Microsoft Entra app used for SSO:
   
     ```yaml
     - uses: aadApp/create
@@ -72,7 +72,7 @@ In the `./appPackages/manifest.json` file, add the following code:
 
     For more information, see [`aadApp/create`.](https://github.com/OfficeDev/teams-toolkit/wiki/Available-actions-in-Teams-Toolkit#aadappcreate)
 
-1. Add the `aadApp/update` action under `provision` in `./teamsapp.yml` and `./teamsapp.local.yml` to update your Microsoft Entra app:
+1. Add the `aadApp/update` action under `provision` in `./m365agents.yml` and `./m365agents.local.yml` to update your Microsoft Entra app:
 
     ```yaml
     - uses: aadApp/update
@@ -89,7 +89,7 @@ In the `./appPackages/manifest.json` file, add the following code:
 
 1. For a React project, update `cli/runNpmCommand` under `deploy`.
 
-1. If you're building a tab app using the React framework in CLI, find the `cli/runNpmCommand` action with `build app` in the `teamsapp.yml` file and add the following environment variables:
+1. If you're building a tab app using the React framework in CLI, find the `cli/runNpmCommand` action with `build app` in the `m365agents.yml` file and add the following environment variables:
 
     ```yaml
     env:
@@ -97,7 +97,7 @@ In the `./appPackages/manifest.json` file, add the following code:
       REACT_APP_START_LOGIN_PAGE_URL: ${{TAB_ENDPOINT}}/auth-start.html
     ```
 
-1. If you're building a tab app with React framework, find the `file/createOrUpdateEnvironmentFile` action for deployment in `teamsapp.local.yml` file and add the following environment variables:
+1. If you're building a tab app with React framework, find the `file/createOrUpdateEnvironmentFile` action for deployment in `m365agents.local.yml` file and add the following environment variables:
 
     ```yaml
     envs:
@@ -198,9 +198,9 @@ For more information, see [SSO enabled tab app.](https://github.com/OfficeDev/te
 
 ## Update Teams Toolkit configuration files
 
-1. Locate your Teams Toolkit configuration files, such as `./teamsapp.yml` and `./teamsapp.local.yml`. Update necessary configurations related to Microsoft Entra in these files.
+1. Locate your Teams Toolkit configuration files, such as `./m365agents.yml` and `./m365agents.local.yml`. Update necessary configurations related to Microsoft Entra in these files.
 
-1. Add the following code `aadApp/create` under `provision` in `./teamsapp.yml` and `./teamsapp.local.yml` to create new Microsoft Entra apps used for SSO:
+1. Add the following code `aadApp/create` under `provision` in `./m365agents.yml` and `./m365agents.local.yml` to create new Microsoft Entra apps used for SSO:
   
     ```yaml
     - uses: aadApp/create
@@ -222,7 +222,7 @@ For more information, see [SSO enabled tab app.](https://github.com/OfficeDev/te
 
     For more information, see [`aadApp/create`.](https://github.com/OfficeDev/teams-toolkit/wiki/Available-actions-in-Teams-Toolkit#aadappcreate)
 
-1. Add the following code `aadApp/update` under `provision` in `./teamsapp.yml` and `./teamsapp.local.yml` to update your Microsoft Entra app:
+1. Add the following code `aadApp/update` under `provision` in `./m365agents.yml` and `./m365agents.local.yml` to update your Microsoft Entra app:
 
     ```yaml
     - uses: aadApp/update
@@ -236,7 +236,7 @@ For more information, see [SSO enabled tab app.](https://github.com/OfficeDev/te
 
     For more information, see [`aadApp/update`](https://github.com/OfficeDev/teams-toolkit/wiki/Available-actions-in-Teams-Toolkit#aadappupdate)
 
-1. Locate the `createOrUpdateEnvironmentFile` action in `teamsapp.local.yml` file and add the following environment variables:
+1. Locate the `createOrUpdateEnvironmentFile` action in `m365agents.local.yml` file and add the following environment variables:
 
     ```yaml
     envs:
