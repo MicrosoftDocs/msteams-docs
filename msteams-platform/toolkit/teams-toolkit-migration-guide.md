@@ -166,11 +166,11 @@ You've successfully migrated your project and your folder structure is updated a
 
 # [New structure](#tab/new)
 
-:::image type="content" source="../assets/images/teams-toolkit-overview/new-structure-migration.png" alt-text="Screenshot shows the new structure.":::
+:::image type="content" source="../assets/images/toolkit-overview/new-structure-migration.png" alt-text="Screenshot shows the new structure.":::
 
 # [Old structure](#tab/old)
 
-:::image type="content" source="../assets/images/teams-toolkit-overview/old-structure-migration.png" alt-text="Screenshot shows the old structure.":::
+:::image type="content" source="../assets/images/toolkit-overview/old-structure-migration.png" alt-text="Screenshot shows the old structure.":::
 
 ---
 
