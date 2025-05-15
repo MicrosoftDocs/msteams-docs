@@ -5,7 +5,7 @@ ms.localizationpriority: high
 ms.topic: conceptual
 ms.owner: vichug
 ms.author: surbhigupta
-ms.date: 05/14/2025
+ms.date: 05/15/2025
 ---
 
 # Get AI-generated meeting summaries with Meeting AI Insights API
@@ -23,9 +23,8 @@ The Meeting AI Insights API enables you to programmatically access structured AI
 
 The API empowers you to deliver intelligent meeting experiences, such as surfacing key takeaways or generating follow-ups, without the need to build or maintain your own AI infrastructure. Insights are generated after the meeting concludes and are accessible through Microsoft Graph API endpoints.
 
-
 > [!NOTE]
-> Meeting AI Insights API currently provides insights only for scheduled private meetings.
+> Meeting AI Insights API provides insights only for scheduled meetings on the calendar and private chat and channel meetings.
 
 ## Use cases
 
@@ -157,12 +156,8 @@ To fetch the insights of a particular meeting, follow these steps:
 ## Limitations
 
 * AI-generated insights are only available after a meeting ends. The API doesn't support accessing live notes during a meeting.
-
 * AI-generated insights might take up to four hours to be available after the call ends.
-
 * Application-level permissions aren't supported.
-
-* Only private scheduled meetings are currently supported.
 
 ## See also
 
