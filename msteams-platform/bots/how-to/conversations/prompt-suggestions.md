@@ -150,7 +150,7 @@ You must handle menu commands in your bot code as you handle any message from us
 
 ## Handle `commands` in your bot
 
-Bots in a group or channel respond when they're @mentioned in a message. Every message received by a bot when in a group or channel scope contains its name in the message text. Before handling the command being returned, your message parsing must handle the message received by a bot with its name.
+Bots in a group or channel respond only when they're @mentioned in a message. Every message received by a bot when in a group or channel scope contains its name in the message text. Before handling the command being returned, your message parsing must handle the message received by a bot with its name.
 
 > [!NOTE]
 > Handle the commands in code, they are sent to your bot as a regular message. You must handle them as you would handle any other message from your users. The commands in code insert pre-configured text into the text box. The user must then send that text as they do for any other message.
