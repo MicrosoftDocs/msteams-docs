@@ -21,7 +21,7 @@ If you want to create your own bot, here's a list of tools and platforms to help
     :::column span="1":::
         **#**
     :::column-end:::
-    :::column span="2":::
+    :::column span="1":::
         **Choose ...**
     :::column-end:::
     :::column span="2":::
@@ -33,7 +33,7 @@ If you want to create your own bot, here's a list of tools and platforms to help
     :::column span="1":::
         1
     :::column-end:::
-    :::column span="2":::
+    :::column span="1":::
         **Bot type**
     :::column-end:::
     :::column span="2":::
@@ -46,7 +46,7 @@ If you want to create your own bot, here's a list of tools and platforms to help
     :::column span="1":::
         2
     :::column-end:::
-    :::column span="2":::
+    :::column span="1":::
         **Bot capabilities**
     :::column-end:::
     :::column span="2":::
