@@ -2,7 +2,7 @@
 title: Configure Message Extension Capability
 author: surbhigupta
 description: Learn how to configure the message extension capability within a Teams app with Microsoft Teams Toolkit for Visual Studio Code.
-ms.author: v-bvishnu
+ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 12/17/2024
@@ -160,6 +160,7 @@ The following code snippet is an example:
 
    > [!TIP]
    > Use the command `npm init -y` to create a root `package.json` file.
+
    ```
    |--.vscode/
    |--appPackage/
