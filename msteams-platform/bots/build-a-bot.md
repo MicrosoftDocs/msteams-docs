@@ -66,7 +66,7 @@ If you want to create your own bot, here's a list of tools and platforms to help
             - Set Teams-specific channel data on activities.
             - Process message extension requests.
 
-              You can develop Teams apps with any web technology and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly, ensuring token handling in all cases.
+            You can develop Teams apps with any web technology and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly, ensuring token handling in all cases.
         - **Teams Toolkit**:
           Teams Toolkit makes it simple to start developing bot apps for Teams. You can use a project template for common custom bot app scenarios (LOB app) or start from a sample. <br> For more information, see [tools and SDKs](../concepts/build-and-test/tool-sdk-overview.md).
         - **Azure AI services**:
