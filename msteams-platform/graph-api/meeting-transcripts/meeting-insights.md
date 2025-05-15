@@ -85,7 +85,7 @@ To fetch the insights of a particular meeting, follow these steps:
     | `createdDateTime` | The date and time at which the corresponding transcript was created. The timestamp type represents the date and time information using the ISO 8601 format and is always in Coordinated Universal Time (UTC). |
     | `endDateTime` | The date and time at which the corresponding transcript ends. The timestamp type represents the date and time information using the ISO 8601 format and is always in UTC. |
 
-1. Each AI insight object provides detailed meeting notes, action items, and participant-specific @mention utterances, which can be accessed by calling [GET AI Insights API](/graph/api/callaiinsight-get?view=graph-rest-beta&preserve-view=true) for a specific insight object ID. Here's an example request and response:
+1. Each AI insight object provides detailed meeting notes, action items, and participant-specific mentions, which can be accessed by calling [GET AI Insights API](/graph/api/callaiinsight-get?view=graph-rest-beta&preserve-view=true) for a specific insight object ID. Here's an example request and response:
 
     **Request**
 
