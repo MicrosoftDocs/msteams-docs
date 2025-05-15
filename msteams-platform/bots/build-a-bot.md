@@ -74,6 +74,7 @@ If you want to create your own bot, here's a list of tools and platforms to help
         **Bot registration service**
     :::column-end:::
     :::column span="3":::
+
         - Azure AD
         - Developer Portal
     :::column-end:::
@@ -84,6 +85,7 @@ If you want to create your own bot, here's a list of tools and platforms to help
         **Advanced bot capabilities**
     :::column-end:::
     :::column span="3":::
+
         - Call and media bot
         - Access data using MS Graph
         - SSO
