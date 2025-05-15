@@ -97,7 +97,7 @@ To fetch the insights of a particular meeting, follow these steps:
 
     ```json
     HTTP/1.1 200 OK
-    Content-type: application/json
+    Content-Type: application/json
     
     {
       "@odata.context": "https://graph.microsoft.com/beta/$metadata#copilot/users('00000000-0000-0000-0000-000000000000')/onlineMeetings('000000...')/aiInsights/$entity",
