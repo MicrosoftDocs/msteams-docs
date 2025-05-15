@@ -33,7 +33,7 @@ Teams Toolkit supports the following debug features:
 * [Toggle breakpoints](#toggle-breakpoints)
 * [Hot reload](#hot-reload)
 * [Stop debugging](#stop-debugging)
-* [Microsoft 365 Agents Playground](#Microsoft-365-Agents-Playground) (previously known as Teams App Test Tool)
+* [Microsoft 365 Agents Playground](#microsoft-365-agents-playground) (previously known as Teams App Test Tool)
 * [Debug apps in Teams desktop client](#debug-apps-in-teams-desktop-client)
 
 Teams Toolkit performs background functions during debug process, which include verifying the prerequisites required for debug. You can see the progress of the verification process in the output channel of Teams Toolkit. In the setup process you can register and configure your Teams app.
