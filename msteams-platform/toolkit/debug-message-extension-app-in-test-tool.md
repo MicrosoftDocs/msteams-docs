@@ -45,7 +45,7 @@ Ensure that you install the following tools to build and deploy your bot in Test
 
 1. Select **Select Folder**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-app-select-folder.png" alt-text="Screenshot shows the test tool sample app folder.":::
+   :::image type="content" source="../assets/images/toolkit-v2/app-select-folder.png" alt-text="Screenshot shows the test tool sample app folder.":::
 
 1. From the left pane, select **Teams Toolkit**.
 
@@ -53,11 +53,11 @@ Ensure that you install the following tools to build and deploy your bot in Test
 
 1. Test Tool opens the bot in a webpage.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/test-tool-in-browser-window.png" alt-text="Screenshot shows the test tool opens in a webpage.":::
+   :::image type="content" source="../assets/images/toolkit-v2/test-tool-in-browser-window.png" alt-text="Screenshot shows the test tool opens in a webpage.":::
 
 1. In the message compose area, type `help`. Test Tool displays all the message extension commands in the sample app.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/help-in-teams-app-test-tool.png" alt-text="Screenshot shows the help in the message compose area of test tool.":::
+   :::image type="content" source="../assets/images/toolkit-v2/help-in-teams-app-test-tool.png" alt-text="Screenshot shows the help in the message compose area of test tool.":::
 
 1. Select the **+** icon to display the type of message extension:
 
@@ -67,7 +67,7 @@ Ensure that you install the following tools to build and deploy your bot in Test
 
    * Link Unfurling
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/list-of-message-extension.png" alt-text="Screenshot shows the list of message extension.":::
+   :::image type="content" source="../assets/images/toolkit-v2/list-of-message-extension.png" alt-text="Screenshot shows the list of message extension.":::
 
 1. Select the type of message extension you want to debug.
 
@@ -81,7 +81,7 @@ Ensure that you install the following tools to build and deploy your bot in Test
 
     1. The Test Tool sends a `composeExtension/query` invoke request.
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/search-command-invoke.png" alt-text="Screenshot shows the search commands invoke.":::
+       :::image type="content" source="../assets/images/toolkit-v2/search-command-invoke.png" alt-text="Screenshot shows the search commands invoke.":::
 
     1. Search results are displayed.
 
@@ -97,7 +97,7 @@ Ensure that you install the following tools to build and deploy your bot in Test
 
     1. Update the values for **Command ID** and **Parameter name**.
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/advanced-configurations.png" alt-text="Screenshot shows the search command for advanced configurations.":::
+       :::image type="content" source="../assets/images/toolkit-v2/advanced-configurations.png" alt-text="Screenshot shows the search command for advanced configurations.":::
 
     1. When the message extension is triggered, it retrieves these predefined values from the context.
 
@@ -114,7 +114,7 @@ Ensure that you install the following tools to build and deploy your bot in Test
 
       1. Select **Action Command**.
 
-         :::image type="content" source="../assets/images/teams-toolkit-v2/action-commands.png" alt-text="Screenshot shows the action command.":::
+         :::image type="content" source="../assets/images/toolkit-v2/action-commands.png" alt-text="Screenshot shows the action command.":::
 
    # [**...** icon](#tab/action-commands1)
 
@@ -122,7 +122,7 @@ Ensure that you install the following tools to build and deploy your bot in Test
 
       1. Select **Action Command**.
 
-         :::image type="content" source="../assets/images/teams-toolkit-v2/message-action-command.png" alt-text="Screenshot shows the message in action command.":::
+         :::image type="content" source="../assets/images/toolkit-v2/message-action-command.png" alt-text="Screenshot shows the message in action command.":::
 
     ---
 
@@ -134,13 +134,13 @@ You can create a dialog with an Action Command in two ways:
 * [Adaptive Cards](#create-dialog-with-adaptive-cards)
 * [Static list of parameters](#create-dialog-with-static-list-of-parameters)
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/list-of-action-commands.png" alt-text="Screenshot shows the list of action commands.":::
+   :::image type="content" source="../assets/images/toolkit-v2/list-of-action-commands.png" alt-text="Screenshot shows the list of action commands.":::
 
 #### Create dialog with Adaptive Cards
 
 In the action-based message extension dialog, select **Adaptive Cards**. Test Tool dynamically retrieves the dialog from the message extension. It sends a `composeExtension/fetchTask` invoke request and then displays the Adaptive Card based on the response received from the app.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/create-dialog-with-adaptive-cards.png" alt-text="Screenshot shows to how create dialog with Adaptive Cards.":::
+   :::image type="content" source="../assets/images/toolkit-v2/create-dialog-with-adaptive-cards.png" alt-text="Screenshot shows to how create dialog with Adaptive Cards.":::
 
 #### Create dialog with static list of parameters
 
@@ -169,7 +169,7 @@ The following code is a sample of the static list of parameters in JSON format:
    }]
    ```
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/static-list-of-parameters-in-teams-app-test-tool.png" alt-text="Screenshot shows how to create a static list of parameters in teams app test tool.":::
+:::image type="content" source="../assets/images/toolkit-v2/static-list-of-parameters-in-teams-app-test-tool.png" alt-text="Screenshot shows how to create a static list of parameters in teams app test tool.":::
 
 Static list of parameters are available under the `composeExtensions` property in app manifest. For example, see [manifest.json](https://github.com/OfficeDev/TeamsFx/blob/main/templates/ts/message-extension-action/appPackage/manifest.json.tpl#L41-L59).
 
@@ -196,7 +196,7 @@ To test an **Link Unfurling** in the Test Tool, follow these steps:
 
 1. Select **Link Unfurling**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/link-unfurling.png" alt-text="Screenshot shows how to create a link unfurling in teams app test tool.":::
+   :::image type="content" source="../assets/images/toolkit-v2/link-unfurling.png" alt-text="Screenshot shows how to create a link unfurling in teams app test tool.":::
 
    A **Enter a URL** dialog appears.
 
@@ -204,7 +204,7 @@ To test an **Link Unfurling** in the Test Tool, follow these steps:
 
 1. Select **Send to Conversation**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/link-unfurling-card.png" alt-text="Screenshot shows how to create link unfurling in teams app test tool.":::
+   :::image type="content" source="../assets/images/toolkit-v2/link-unfurling-card.png" alt-text="Screenshot shows how to create link unfurling in teams app test tool.":::
 
    The Test Tool triggers a `composeExtension/queryLink` invoke request with the URL to the message extension. You can review the Adaptive Card that the Test Tool renders based on the invoke response from the app.
 
@@ -234,7 +234,7 @@ When you use the search box in a search-based message extension in Teams, your a
 
 If your app uses these two parameters, you can provide additional inputs by selecting `Specify Command ID or Parameter` and updating the required values. Test Tool includes these parameters in the invoke activity payload during a search. If you don't specify them, the payload avoids these parameters.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/specify-command-parameter.png" alt-text="Screenshot shows the specify command ID or Parameter.":::
+:::image type="content" source="../assets/images/toolkit-v2/specify-command-parameter.png" alt-text="Screenshot shows the specify command ID or Parameter.":::
 
 In Teams, the parameters are available in the app manifest. Since the Test Tool doesn't process the manifest, you need to input the parameters manually.
 
@@ -249,7 +249,7 @@ In Teams, dialogs are triggered from action commands and your app receives a `co
 
 To test various action commands, you must enter the `Command ID` in the respective field. If you don't update, the command IDs aren't included in the activity payload.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/command-parameter.png" alt-text="Screenshot shows the command ID parameter in Action Command.":::
+:::image type="content" source="../assets/images/toolkit-v2/command-parameter.png" alt-text="Screenshot shows the command ID parameter in Action Command.":::
 
 In Teams, commands are available in the app manifest. Since the Test Tool doesn't process the manifest, you need to input the commands manually.
 
@@ -264,7 +264,7 @@ The static list of parameters is the simple method to create dialogs for action 
 
 When you create a dialog using a static list of parameters, the message extension receives a `composeExtension/submitAction` invoke activity upon the user’s submission of the dialog.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/static-list-of-parameters.png" alt-text="Screenshot shows the static list of parameter in Action Command.":::
+:::image type="content" source="../assets/images/toolkit-v2/static-list-of-parameters.png" alt-text="Screenshot shows the static list of parameter in Action Command.":::
 
 In Teams, the parameters are available in the app manifest. Since the Test Tool doesn't process the manifest, you need to input the parameters manually.
 

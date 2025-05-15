@@ -52,7 +52,7 @@ AKS is a managed container orchestration service provided by Azure. With AKS, yo
 
 ### Architecture
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/architecture.png" alt-text="Screenshot shows the Teams bot to Azure Kubernetes Service architecture.":::
+:::image type="content" source="../assets/images/toolkit-v2/architecture.png" alt-text="Screenshot shows the Teams bot to Azure Kubernetes Service architecture.":::
 
 The Teams backend server interacts with your bot through the Azure Bot Service. This service requires your bot to be reachable through a public HTTPS endpoint. To set up, deploy an ingress controller on your Kubernetes cluster and secure it with a TLS certificate.
 
@@ -170,7 +170,7 @@ You can deploy a Teams bot to your personal Kubernetes cluster or a Kubernetes s
 
 ### Architecture
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/on-premise-kubernetes-cluster-architecture.png" alt-text="Screenshot shows the on-premises kubernetes cluster architecture.":::
+:::image type="content" source="../assets/images/toolkit-v2/on-premise-kubernetes-cluster-architecture.png" alt-text="Screenshot shows the on-premises kubernetes cluster architecture.":::
 
 The Teams backend server interacts with your bot through the Azure Bot Service. This service requires your bot to be reachable through a public HTTPS endpoint. To set up, deploy an ingress controller on your Kubernetes cluster and secure it with a TLS certificate.
 

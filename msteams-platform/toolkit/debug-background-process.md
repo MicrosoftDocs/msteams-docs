@@ -92,7 +92,7 @@ Use the following .NET Core versions:
 
 When you select **Start Debugging (F5)**, Teams Toolkit output channel displays the progress and result after checking the prerequisites.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck.png" alt-text="Screenshot shows the prerequisites check summary.":::
+:::image type="content" source="../assets/images/toolkit-v2/debug/prerequisites-debugcheck.png" alt-text="Screenshot shows the prerequisites check summary.":::
 
 For more information, see [validate prerequisites task](https://aka.ms/teamsfx-tasks/check-prerequisites).
 
