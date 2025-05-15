@@ -2,7 +2,7 @@
 title: What's New for Developers in Teams
 description: Learn about new Microsoft Teams developer features and updates to existing features, deprecation notes, and changes. Subscribe to the RSS feed for latest updates.
 ms.topic: reference
-ms.date: 12/11/2024
+ms.date: 05/07/2025
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
 ---
@@ -31,18 +31,9 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2025 April**
+**2025 May**
 
-* ***April 30, 2025***: [Introducing streaming messages for bot apps](bots/streaming-ux.md).
-
-* ***April 21, 2025***: [Precache your tab app to optimize its initial load time](tabs/how-to/app-caching.md#precaching-tab-apps).
-
-* ***April 21, 2025***: [You can specify a 32x32 color icon with a transparent background to ensure a consistent appearance when your app runs in Outlook and Microsoft 365](concepts/build-and-test/apps-package.md#color-icon).
-
-* ***April 21, 2025***: [Introducing custom engine agents support for Microsoft 365 Copilot Chat](bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#add-support-for-microsoft-365-copilot-chat).
-
-* ***April 10, 2025***: [Create personal scope apps that integrate seamlessly with Public Switched Telephone Network (PSTN) and Teams-to-Teams calls](apps-in-teams-meetings/build-tabs-for-calling.md).
-* ***April 3, 2025***: [Enable OAuth authentication for API based message extension](messaging-extensions/api-based-oauth.md).
+***May 13, 2025***: [Introducing agent usage analytics for third-party apps in Developer Portal](/microsoftteams/platform/concepts/build-and-test/analyze-your-apps-usage-in-developer-portal?tabs=thirdpartyapps).
 
 :::column-end:::
 :::row-end:::
@@ -56,10 +47,16 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-| 27/03/2025 | Learn about the best practices to optimize tab app performance in Teams Android and iOS clients | Resources > [Best practices for Teams mobile apps](resources/teams-mobile-best-practices.md) |
-| 07/03/2025 | Introducing app manifest v1.20 with elementRelationshipSet, requirementSet, and intuneInfo properties | App manifest > [App manifest](resources/schema/manifest-schema.md) |
-| 07/03/2025 | Specify runtime requirements in app manifest to tailor your app's behavior in Microsoft 365 hosts | [Extend your app across Microsoft 365 > Specify Microsoft 365 host runtime requirements in app manifest](m365-apps/specify-runtime-requirements.md) |
-| 07/03/2025 | Enable Intune Mobile App Management (MAM) support for Outlook add-ins to ensure compliance with organizational data protection policies | [Office.Mailbox interface](/javascript/api/outlook/office.mailbox) |
+| 30/04/2025 | Introducing streaming messages for bot apps. | Build bots and agents > Bot user experience > [Stream bot messages](bots/streaming-ux.md) |
+| 21/04/2025 | Precache your tab app to optimize its initial load time. | Build tabs > Tab features > App caching for your tab app > [Debug tool for cached apps](tabs/how-to/app-caching.md#precaching-tab-apps) |
+| 21/04/2025 | You can specify a 32x32 color icon with a transparent background to ensure a consistent appearance when your app runs in Outlook and Microsoft 365. | Publish your app or agent > Create Teams app package > [Color icon](concepts/build-and-test/apps-package.md#color-icon) |
+| 21/04/2025 | Introducing custom engine agents support for Microsoft 365 Copilot Chat. | Build bots and agents > Teams AI library v1 > Build with Teams AI library > [Add support for Microsoft 365 Copilot Chat](bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#add-support-for-microsoft-365-copilot-chat) |
+| 10/04/2025 | Create personal scope apps that integrate seamlessly with Public Switched Telephone Network (PSTN) and Teams-to-Teams calls. | Build apps for Teams meetings and calls > [Build tabs for calling](apps-in-teams-meetings/build-tabs-for-calling.md) |
+| 03/04/2025 | Enable OAuth authentication for API based message extension. | Add authentication > Enable authentication for API-based message extension > [Enable OAuth for API based message extension](messaging-extensions/api-based-oauth.md) |
+| 27/03/2025 | Learn about the best practices to optimize tab app performance in Teams Android and iOS clients. | Resources > [Best practices for Teams mobile apps](resources/teams-mobile-best-practices.md) |
+| 07/03/2025 | Introducing app manifest v1.20 with elementRelationshipSet, requirementSet, and intuneInfo properties. | App manifest > [App manifest](resources/schema/manifest-schema.md) |
+| 07/03/2025 | Specify runtime requirements in app manifest to tailor your app's behavior in Microsoft 365 hosts. | [Extend your app across Microsoft 365 > Specify Microsoft 365 host runtime requirements in app manifest](m365-apps/specify-runtime-requirements.md) |
+| 07/03/2025 | Enable Intune Mobile App Management (MAM) support for Outlook add-ins to ensure compliance with organizational data protection policies. | [Office.Mailbox interface](/javascript/api/outlook/office.mailbox) |
 | 27/02/2025 | Create, manage, and customize your app package for declarative agents and other apps directly from Developer Portal. | Tools and SDKs > Tools > Developer Portal for Teams > [Manage your apps in Developer Portal](concepts/build-and-test/manage-your-apps-in-developer-portal.md#configure) |
 | 05/02/2025 | Use third-party cloud storage for drag-dropped files in message compose areas.| Integrate with Teams > [Third-party storage app](concepts/device-capabilities/third-party-storage-capability.md) |
 | 31/01/2025 | Create a scenario based custom engine agent using Teams Toolkit and Teams AI library. | [Build a custom engine agent using Teams AI library and Teams Toolkit](sbs-Teams-AI.yml) |
@@ -197,10 +194,10 @@ Teams platform features that are available to all app developers.
 | 23/02/2023 | Enable single sign-on (SSO) authentication to access Adaptive Cards Universal Actions in a bot. | Add authentication > Enable SSO for your Teams app > Enable SSO for Adaptive Cards Universal Actions in your bot > [Overview](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md) |
 |23/02/2023| Enable third party authentication to add user-specific views in instances where an Adaptive Card with Universal Action is shared. | Add authentication > Use third party IdP authentication > [Third party authentication for Adaptive Cards Universal Actions](task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/authentication-flow-in-universal-action-for-adaptive-cards.md) |
 |21/02/2023| Send notifications to specific participants on a meeting stage with targeted in-meeting notification. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > [Targeted in-meeting notification for apps in Teams](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification) |
-|20/02/2023| Plan, strategize, and execute your app growth in Teams to make it a successful app on the marketplace. | Grow your app > [Strategize and execute growth for your app](concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md)|
-|17/02/2023| Build a dashboard tab app that acts as a tool to track, analyze, monitor, display, and extract data. | Build Tabs > [Build a dashboard tab app](tabs/how-to/build-a-dashboard-tab-app.md#build-a-dashboard-tab-app)|
+|20/02/2023| Plan, strategize, and execute your app growth in Teams to make it a successful app on the marketplace. | Grow your app > [Strategize and execute growth for your app](concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md) |
+|17/02/2023| Build a dashboard tab app that acts as a tool to track, analyze, monitor, display, and extract data. | Build Tabs > [Build a dashboard tab app](tabs/how-to/build-a-dashboard-tab-app.md#build-a-dashboard-tab-app) |
 |09/02/2023| Build apps for anonymous users that support anonymous users to attend Teams meetings with an alternative authentication experience. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > [Build apps for anonymous users](apps-in-teams-meetings/build-apps-for-anonymous-user.md) |
-|31/01/2023| Get update and soft delete activity notification in a bot when you edit, undelete or soft delete a message in a chat. | Build bots > Bot conversations > [Messages in bot conversations](bots/how-to/conversations/conversation-messages.md#get-edit-message-activity)
+|31/01/2023| Get update and soft delete activity notification in a bot when you edit, undelete or soft delete a message in a chat. | Build bots > Bot conversations > [Messages in bot conversations](bots/how-to/conversations/conversation-messages.md#get-edit-message-activity) |
 
 </details>
 </br>
@@ -307,7 +304,7 @@ Explore updates from the previous GA releases listed here.
 |11/24/2021| Introduced step-by-step guide to generate meeting token | Build apps for Teams meetings > Enable and configure apps for meetings > [Step-by-step guide to create meeting token in Teams](sbs-meeting-token-generator.yml)|
 |11/17/2021| Updated Teams Store validation guidelines|[Teams Store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)|
 |11/17/2021| Static and dynamic typeahead search for desktop and mobile users | • Build cards and task modules > Build cards > [Typeahead search in Adaptive Cards](task-modules-and-cards/cards/dynamic-search.md) </br> • Build cards and task modules > Build cards > Overview >  [Typeahead search in Adaptive Cards](task-modules-and-cards/what-are-cards.md#typeahead search-in-adaptive-cards) </br> • Build cards and task modules > Overview > [Cards and task modules](task-modules-and-cards/cards-and-task-modules.md)|
-|11/13/2021| Bots can be enabled to receive all channel messages using resource-specific consent (RSC) | • Build bots > Bot conversations > Messages in bot conversations > [Receive all channel messages with RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Build bots > Bot conversations > [Bot conversation overview](~/bots/how-to/conversations/conversation-basics.md) </br> • Build bots > Bot conversations > [Channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md) |
+|11/13/2021| Bots can be enabled to receive all channel messages using resource-specific consent (RSC) | • Build bots > Bot conversations > Messages in bot conversations > [Receive all channel messages with RSC](~/bots/how-to/conversations/channel-messages-for-bots-and-agents.md) </br> • Build bots > Bot conversations > [Bot conversation overview](~/bots/how-to/conversations/conversation-basics.md) </br> • Build bots > Bot conversations > [Channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md) |
 |10/28/2021| Monetize your Teams app with a transactable SaaS offer | Publish your app > Publish to the Teams Store > [Include a SaaS offer with your Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) |
 |10/25/2021| Updated Get started module for Microsoft Teams Developer Documentation with new structure and procedures in a step-by-step guide | Get started > [Get started with your first Teams app](get-started/get-started-overview.md) |
 |10/20/2021| Meeting stage is now available in GA | Build apps for Teams meetings > [Enable and configure your apps for Teams meetings](apps-in-teams-meetings/build-tabs-for-meeting.md) |
@@ -468,7 +465,9 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-***April 10, 2025***: [Introducing custom engine agents support for Microsoft 365 Copilot Chat.](bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#add-support-for-microsoft-365-copilot-chat)
+**2025 May**
+
+* ***May 06, 2025***: [Introducing Teams AI library v2. This new library consolidates all the SDKs needed to create collaborative agents for Microsoft Teams.](/microsoftteams/platform/teams-ai-library/welcome/overview)
 
 :::column-end:::
 :::row-end:::
@@ -481,6 +480,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ---------------- |
+| 10/04/2025 | Introducing custom engine agents support for Microsoft 365 Copilot Chat. | Build bots and agents > Teams AI library v1 > [Build with Teams AI library](bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#add-support-for-microsoft-365-copilot-chat) |
 | 17/03/2025 | Precache your tab app to optimize its initial load time | Build tabs > Tab features > [App caching for your tab app](tabs/how-to/app-caching.md#precaching-tab-apps) |
 | 19/02/2025 | Introducing stop stream generation button for streaming bot messages | Build bots > Bot user experience > [Stream bot messages](bots/streaming-ux.md) |
 | 03/02/2025 | Create personal scope apps that integrate seamlessly with Public Switched Telephone Network (PSTN) and Teams-to-Teams calls | Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > [Build tabs for meeting](apps-in-teams-meetings/build-tabs-for-meeting.md) |
@@ -549,7 +549,7 @@ Developer preview is a public program that provides early access to unreleased T
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
 |05/12/2022| Use share in meeting to share any document or third-party app to the meeting stage.|Build apps for Teams meetings and calls > Enable and configure apps for meetings > [Share in meeting](concepts/build-and-test/share-in-meeting.md) |
-|10/11/2022| Enable bots to receive all conversation messages without being @mentioned in relevant contexts.|Build bots > Bot conversations > Message in bot conversations > [Receive all conversation messages with RSC](bots/how-to/conversations/channel-messages-with-rsc.md) |
+|10/11/2022| Enable bots to receive all conversation messages without being @mentioned in relevant contexts.|Build bots > Bot conversations > Message in bot conversations > [Receive all conversation messages with RSC](bots/how-to/conversations/channel-messages-for-bots-and-agents.md) |
 | 09/23/2022 | Use apps in Teams meetings scheduled through public channels. | Build apps for Teams meetings and calls > [Apps for Teams meetings and calls](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 08/23/2022 | Share apps to the Teams meeting stage in mobile. | Build apps for Teams meetings and calls > [Enable and configure apps for meetings](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 08/03/2022 | Use toggle incoming audio API to toggle the incoming audio state setting for the user in Teams meeting stage from mute to unmute or vice-versa. | Build apps for Teams meetings and calls > [Meeting apps API references](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
