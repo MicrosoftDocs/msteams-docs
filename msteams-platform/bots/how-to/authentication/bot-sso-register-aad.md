@@ -16,7 +16,7 @@ Microsoft Entra ID provides app users access to your bot or message extension ap
 
 The bot and message extension apps use Bot Framework for communicating with app users and implementing authentication.
 
-To configure SSO for your bot or message extension app, you'll need to:
+To configure single sign-on (SSO) for your bot or message extension app, you'll need to:
 
 * Configure bot resource in Microsoft Entra ID
 * Configure app in Microsoft Entra ID
@@ -24,8 +24,8 @@ To configure SSO for your bot or message extension app, you'll need to:
 > [!NOTE]
 > Ensure that you've created an app and a bot resource in Microsoft Entra ID.
 >
-> * For more information about creating an app in Microsoft Entra ID, see [Register a new app in Microsoft Entra ID](../../../tabs/how-to/authentication/tab-sso-register-aad.md#to-register-a-new-app-in-azure-ad).
-> * For more information about creating and configuring your bot resource in Microsoft Entra ID, see [Create Teams conversation bot](../../../sbs-teams-conversation-bot.yml).
+> * For more information about creating an app in Microsoft Entra ID, see [register a new app in Microsoft Entra ID](../../../tabs/how-to/authentication/tab-sso-register-aad.md#to-register-a-new-app-in-azure-ad).
+> * For more information about creating and configuring your bot resource in Microsoft Entra ID, see [create Teams conversation bot](../../../sbs-teams-conversation-bot.yml).
 
 You can configure your bot resource and app in Microsoft Entra ID for your bot or message extension app in one of the following two ways:
 
