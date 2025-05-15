@@ -23,8 +23,6 @@ You can stream bot messages to deliver a bot's responses to the user as small up
 
 When users observe the bot processing their request in real time, it can increase their satisfaction and trust. This perceived responsiveness and transparency enhances user engagement and decreases conversation abandonment with the bot.
 
-[!INCLUDE [teams-ai-lib-v2-rec](../includes/teams-ai-lib-v2-rec.md)]
-
 ## Stream messages user experience
 
 Streaming bot messages has two types of updates:
@@ -61,6 +59,8 @@ You can implement streaming bot messages in your app in one of the following way
 In addition, you'll also learn how to [stop streaming bot response](#stop-streaming-bot-response) and [response codes](#response-codes) for streaming bot messages.
 
 ## Stream message through Teams AI library
+
+[!INCLUDE [teams-ai-lib-v2-rec](../includes/teams-ai-lib-v2-rec.md)]
 
 Teams AI library provides the capability to stream messages for AI-powered bots. Streaming bot messages helps to ease the response time lag while the Large Language Model (LLM) generates the complete response. The primary factors contributing to slow response time include multiple preprocessing steps, such as Retrieval-Augmented Generation (RAG) or function calls, and the time required by the LLM to generate a full response.
 
