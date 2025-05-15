@@ -1,7 +1,7 @@
 ---
 title: Debug Bot with Microsoft 365 Agents Playground
 author: surbhigupta
-description: Learn how to build, configure, and deploy bot using Microsoft 365 Agents Playground in Visual Studio, and to mock an activity using predefined and custom activity triggers.
+description: Learn how to build, configure, and deploy bot using Agents Playground in Visual Studio, and to mock an activity using predefined and custom activity triggers.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
@@ -10,42 +10,42 @@ ms.date: 02/13/2024
 
 # Microsoft 365 Agents Playground for Visual Studio
 
-Microsoft 365 Agents Playground makes debugging bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Microsoft Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Microsoft 365 Agents Playground.
+Microsoft 365 Agents Playground (previously known as Teams App Test Tool) makes debugging bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Microsoft Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Agents Playground.
 
-The following image shows a sample app displaying a response in Microsoft 365 Agents Playground:
+The following image shows a sample app displaying a response in Agents Playground:
 
- :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/test-tool-sample-app-output-vs.png" alt-text="Screenshot shows Microsoft 365 Agents Playground Adaptive Card." lightbox="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/test-tool-sample-app-output-vs.png":::
+ :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/test-tool-sample-app-output-vs.png" alt-text="Screenshot shows Agents Playground Adaptive Card." lightbox="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/test-tool-sample-app-output-vs.png":::
 
-The following are the advantages of Microsoft 365 Agents Playground:
+The following are the advantages of Agents Playground:
 
-* **Sandbox environment**: The sandbox environment of Microsoft 365 Agents Playground emulates the behavior, look, and user experience of Teams.
+* **Sandbox environment**: The sandbox environment of Agents Playground emulates the behavior, look, and user experience of Teams.
 
-* **Tunneling**: An external tunnel service isn't necessary as Microsoft 365 Agents Playground runs on a local server that your bot can communicate with.
+* **Tunneling**: An external tunnel service isn't necessary as Agents Playground runs on a local server that your bot can communicate with.
 
 * **Reduce account dependencies**: Microsoft 365 Developer tenant and the app uploading permissions aren't necessary to debug the bot.
 
 * **Rapid inner-loop iterations**: Optimizes the process of making changes to the app design and bot logic without having to redeploy the bot to the cloud.
 
-* **Mock data and activities**: Microsoft 365 Agents Playground makes it easy to test complex scenarios such as, sending a welcome message when a new member joins the channel and using mock data and activity triggers.
+* **Mock data and activities**: Agents Playground makes it easy to test complex scenarios such as, sending a welcome message when a new member joins the channel and using mock data and activity triggers.
 
-* **Reliable**: Microsoft 365 Agents Playground is reliable as the bot's Adaptive Card utilizes the same rendering technology as in Teams.
+* **Reliable**: Agents Playground is reliable as the bot's Adaptive Card utilizes the same rendering technology as in Teams.
 
-* **Integration with existing Teams bot applications**: Microsoft 365 Agents Playground integrates effortlessly with existing Teams bot applications built with Bot Framework SDK.
+* **Integration with existing Teams bot applications**: Agents Playground integrates effortlessly with existing Teams bot applications built with Bot Framework SDK.
 
-* **Support for different scopes**: Microsoft 365 Agents Playground supports testing in personal, team, and group chat scopes.
+* **Support for different scopes**: Agents Playground supports testing in personal, team, and group chat scopes.
 
 ## Prerequisites
 
-Ensure you install the following tools for building and deploying your bot in Microsoft 365 Agents Playground:
+Ensure you install the following tools for building and deploying your bot in Agents Playground:
 
 | Install | For using... |
 | --- | --- |
 | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. |
 | [Visual Studio 2022](https://visualstudio.microsoft.com)<br> | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the version 17.9 or later. |
 
-## Microsoft 365 Agents Playground experience in Visual Studio
+## Agents Playground experience in Visual Studio
 
-Microsoft 365 Agents Playground offers a faster debug experience for bot applications when compared to the Teams client. Microsoft 365 Agents Playground provides support for all bot app features. In this scenario, we're using **AI Chat Bot** as an example. To debug your bot in Microsoft 365 Agents Playground, follow these steps:
+Agents Playground offers a faster debug experience for bot applications when compared to the Teams client. Agents Playground provides support for all bot app features. In this scenario, we're using **AI Chat Bot** as an example. To debug your bot in Agents Playground, follow these steps:
 
 1. Open Visual Studio.
 
@@ -74,7 +74,7 @@ Microsoft 365 Agents Playground offers a faster debug experience for bot applica
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/project-get-started-vs.png" alt-text="Screenshot shows the get started page of the application in Visual Studio." lightbox="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/project-get-started-vs.png":::
 
-1. The `appsettings.TestTool.json` file helps to configure Microsoft 365 Agents Playground by updating few parameters. To update `appsettings.TestTool.json` file, follow either OpenAI or Azure OpenAI steps:
+1. The `appsettings.TestTool.json` file helps to configure Agents Playground by updating few parameters. To update `appsettings.TestTool.json` file, follow either OpenAI or Azure OpenAI steps:
 
     # [OpenAI](#tab/openai)
     
@@ -97,7 +97,7 @@ Microsoft 365 Agents Playground offers a faster debug experience for bot applica
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/app-test-tool.png" alt-text="Screenshot shows the option to select the Teams app test tool from the dropdown list.":::
 
-   Microsoft 365 Agents Playground opens the bot in a webpage.
+   Agents Playground opens the bot in a webpage.
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/test-tool.png" alt-text="Screenshot shows the bot opens the test tool in web page." lightbox="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/debug-test-tool-vs.png":::
 
@@ -106,14 +106,14 @@ Microsoft 365 Agents Playground offers a faster debug experience for bot applica
 
 ## Activity triggers
 
-You can mock an activity in Microsoft 365 Agents Playground using activity triggers. There are two types of activity triggers:
+You can mock an activity in Agents Playground using activity triggers. There are two types of activity triggers:
 
 * [Predefined activity triggers](#predefined-activity-triggers)
 * [Custom activity triggers](#custom-activity-triggers)
 
 ### Predefined activity triggers
 
-Microsoft 365 Agents Playground provides predefined activity triggers to test the functionalities of your bot.
+Agents Playground provides predefined activity triggers to test the functionalities of your bot.
 
 | Category | Activity | Handler |
 | --- | --- | --- |
@@ -125,7 +125,7 @@ Microsoft 365 Agents Playground provides predefined activity triggers to test th
 > [!NOTE]
 > All types of activities aren't available in all scopes. For example, you can't add or remove a channel in a personal chat or a group chat.
 
-Predefined activity triggers are available in the **Mock an Activity** menu in Microsoft 365 Agents Playground. In this scenario, we're using **Add user** activity trigger as an example. To mock an **Add user** activity, follow these steps:
+Predefined activity triggers are available in the **Mock an Activity** menu in Agents Playground. In this scenario, we're using **Add user** activity trigger as an example. To mock an **Add user** activity, follow these steps:
 
 1. In Visual Studio Code, go to **Solution Explorer**.
 1. Select the **Program.cs** file.
@@ -142,7 +142,7 @@ Predefined activity triggers are available in the **Mock an Activity** menu in M
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/debug-VS/add-a-user-code-vs.png" alt-text="Screenshot shows the code added to program.cs file for predefined mock activity add user.":::
 
-1. In Microsoft 365 Agents Playground, go to **Mock an Activity** and select **Add user**.
+1. In Agents Playground, go to **Mock an Activity** and select **Add user**.
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/debug-VS/add-user-vs.png" alt-text="Screenshot shows the add user option under mock an activity.":::
 
@@ -161,7 +161,7 @@ Predefined activity triggers are available in the **Mock an Activity** menu in M
 
 ### Custom activity triggers
 
-You can use **Custom activity** to customize activity trigger `reactionsAdded`, to fit the requirements of your bot app. Microsoft 365 Agents Playground automatically populates the required properties of the activity. You can also modify the activity type and add more properties such as, `MembersAdded`, `membersremoved`, and `reactionsremoved`.
+You can use **Custom activity** to customize activity trigger `reactionsAdded`, to fit the requirements of your bot app. Agents Playground automatically populates the required properties of the activity. You can also modify the activity type and add more properties such as, `MembersAdded`, `membersremoved`, and `reactionsremoved`.
 
 1. In Visual Studio Code, go to **Solution Explorer**.
 1. Select the **Program.cs** file.
@@ -178,7 +178,7 @@ You can use **Custom activity** to customize activity trigger `reactionsAdded`, 
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/debug-VS/custom-activity-code-vs.png" alt-text="Screenshot shows the code added to program.cs file for customization on mock activity.":::
 
-1. Go to Microsoft 365 Agents Playground webpage and select the latest response from Log Panel to copy `replyToId`.
+1. Go to Agents Playground webpage and select the latest response from Log Panel to copy `replyToId`.
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/debug-VS/custom-activity-reply-to-do.png" alt-text="Screenshot shows the selection of replyToID to copy for customization on mock activity.":::
 
@@ -214,18 +214,18 @@ You can use **Custom activity** to customize activity trigger `reactionsAdded`, 
 
 ## Limitations
 
-* Bot features enabled through app manifest aren't available, as Microsoft 365 Agents Playground doesn't process it.
+* Bot features enabled through app manifest aren't available, as Agents Playground doesn't process it.
 
-* Microsoft 365 Agents Playground doesn't support all types of cards except Adaptive Cards.
+* Agents Playground doesn't support all types of cards except Adaptive Cards.
 
-* Microsoft 365 Agents Playground doesn't support the following Adaptive Card features:
+* Agents Playground doesn't support the following Adaptive Card features:
 
   * [Typeahead](../../task-modules-and-cards/cards/dynamic-search.md)
   * [User mention](../../task-modules-and-cards/cards/cards-format.md#microsoft-entra-object-id-and-upn-in-user-mention)
   * [Stageview](../../task-modules-and-cards/cards/cards-format.md#stageview-for-images-in-adaptive-cards)
   * [Full width Adaptive Card](../../task-modules-and-cards/cards/cards-format.md#full-width-adaptive-card)
 
-* Microsoft 365 Agents Playground doesn't support the following experiences:
+* Agents Playground doesn't support the following experiences:
 
   * Mobile
   * Meeting
