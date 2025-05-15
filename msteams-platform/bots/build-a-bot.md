@@ -24,7 +24,7 @@ If you want to create your own bot, here's a list of tools and platforms to help
     :::column span="1":::
         **Choose ...**
     :::column-end:::
-    :::column span="2":::
+    :::column span="3":::
         **From the following options ...**
     :::column-end:::
 :::row-end:::
@@ -36,7 +36,7 @@ If you want to create your own bot, here's a list of tools and platforms to help
     :::column span="1":::
         **Bot type**
     :::column-end:::
-    :::column span="2":::
+    :::column span="3":::
         - Custom engine agent
         - Conventional bot
     :::column-end:::
@@ -49,7 +49,7 @@ If you want to create your own bot, here's a list of tools and platforms to help
     :::column span="1":::
         **Bot capabilities**
     :::column-end:::
-    :::column span="2":::
+    :::column span="3":::
         Choose the capabilities you want to build in your bot:
 
         - Conversational capability
@@ -59,6 +59,60 @@ If you want to create your own bot, here's a list of tools and platforms to help
     :::column-end:::
 :::row-end:::
 
+:::row:::
+    :::column span="1":::
+        3
+    :::column-end:::
+    :::column span="1":::
+        **Tools and Platforms**
+    :::column-end:::
+    :::column span="3":::
+        - **Teams AI library v2**:
+          Teams AI Library v2 is a set of tools for developing agents and applications for Microsoft Teams. It enhances developer experience, making it easier to create powerful agents and applications. <br> If you already have an agent or an application, you can migrate it to use Teams AI library v2 for adding more advanced capabilities. <br><br> -
+        - **Teams AI library**:
+          Teams custom engine agents use AI to communicate naturally with users. These agents can handle tasks from simple questions to complex operations. <br> If you have an existing Bot Framework SDK bot, you can migrate it to Teams AI library for enhanced capabilities. For more information, see [why you must migrate to Teams AI library](how-to/teams-conversational-ai/how-conversation-ai-get-started.md#migrate-your-bot-to-use-teams-ai-library).
+        - **Bot Framework SDK**:
+          The [Bot Framework](https://dev.botframework.com/) SDK allows you to create bots using C#, Python, and JavaScript. You can modify existing bots to work in Teams using C# or Node.js. The [SDK](/azure/bot-service/bot-service-overview?view=azure-bot-service-4.0&preserve-view=true) extends Bot Builder to:
+            • Use specialized card types like the connector card for Microsoft 365 Groups.
+            • Set Teams-specific channel data on activities.
+            • Process message extension requests. <br> You can develop Teams apps with any web technology and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly, ensuring token handling in all cases.
+        - **Teams Toolkit**:
+          Teams Toolkit makes it simple to start developing bot apps for Teams. You can use a project template for common custom bot app scenarios (LOB app) or start from a sample. <br> For more information, see [tools and SDKs](../concepts/build-and-test/tool-sdk-overview.md).
+        - **Azure AI services**:
+          Azure AI services offer tools and frameworks for building, deploying, and managing intelligent applications. The Azure AI Foundry tool is crucial for creating and testing custom engine agents to manage and test AI models. <br> For more information, see [Azure AI Foundry](https://ai.azure.com/).
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column span="1":::
+        2
+    :::column-end:::
+    :::column span="1":::
+        **Bot registration service**
+    :::column-end:::
+    :::column span="3":::
+        - Azure AD
+        - Developer Portal
+    :::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column span="1":::
+        2
+    :::column-end:::
+    :::column span="1":::
+        **Advanced bot capabilities**
+    :::column-end:::
+    :::column span="3":::
+        - Call and media bot
+        - Access data using MS Graph
+        - SSO
+        - Bot on Mobile
+        - Support for Microsoft 365 Copilot Chat
+    :::column-end:::
+:::row-end:::
+
+<!--
 | # | Choose ... | From the following options ... |
 | --- | --- | --- |
 | 1. | Bot type | - Custom engine agent <br> - Conventional bot |
@@ -66,6 +120,7 @@ If you want to create your own bot, here's a list of tools and platforms to help
 | 3. | Tools and Platforms | - **Teams AI library v2**: <br> Teams AI Library v2 is a set of tools for developing agents and applications for Microsoft Teams. It enhances developer experience, making it easier to create powerful agents and applications. <br> If you already have an agent or an application, you can migrate it to use Teams AI library v2 for adding more advanced capabilities. <br><br> - **Teams AI library**: <br> Teams custom engine agents use AI to communicate naturally with users. These agents can handle tasks from simple questions to complex operations. <br> If you have an existing Bot Framework SDK bot, you can migrate it to Teams AI library for enhanced capabilities. For more information, see [why you must migrate to Teams AI library](how-to/teams-conversational-ai/how-conversation-ai-get-started.md#migrate-your-bot-to-use-teams-ai-library). <br> <br> - **Bot Framework SDK**: The [Bot Framework](https://dev.botframework.com/) SDK allows you to create bots using C#, Python, and JavaScript. You can modify existing bots to work in Teams using C# or Node.js. The [SDK](/azure/bot-service/bot-service-overview?view=azure-bot-service-4.0&preserve-view=true) extends Bot Builder to: <br> &nbsp;&nbsp;• Use specialized card types like the connector card for Microsoft 365 Groups. <br> &nbsp;&nbsp;• Set Teams-specific channel data on activities. <br> &nbsp;&nbsp;• Process message extension requests. <br> You can develop Teams apps with any web technology and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly, ensuring token handling in all cases. <br> <br> - **Teams Toolkit**: <br> Teams Toolkit makes it simple to start developing bot apps for Teams. You can use a project template for common custom bot app scenarios (LOB app) or start from a sample. <br> For more information, see [tools and SDKs](../concepts/build-and-test/tool-sdk-overview.md). <br> <br> - **Azure AI services**:  <br> Azure AI services offer tools and frameworks for building, deploying, and managing intelligent applications. The Azure AI Foundry tool is crucial for creating and testing custom engine agents to manage and test AI models. <br> For more information, see [Azure AI Foundry](https://ai.azure.com/). |
 | 4. | Bot registration service | - Azure AD <br> - Developer Portal |
 | 5. | Advanced bot capabilities | - Call and media bot <br> - Access data using MS Graph <br> - SSO <br> - Bot on Mobile <br> - Support for Microsoft 365 Copilot Chat |
+-->
 
 ## Build a bot
 
