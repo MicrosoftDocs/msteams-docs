@@ -20,7 +20,7 @@ The app and agent usage for a given day is reflected within 24 to 48 hours, and 
 
 ## Prerequisite
 
-To analyze custom app and agent usage, your tenant admin (a global administrator or a Teams administrator) must allow app and agent usage data for custom apps to be shown in Developer Portal. To allow app and agent usage:
+To analyze custom app usage, your tenant admin (a global administrator or a Teams administrator) must allow app and agent usage data for custom apps to be shown in Developer Portal. To allow app and agent usage:
 
 1. Go to [Microsoft 365 admin center](https://admin.microsoft.com).
 1. Navigate to **Settings** > **Org settings** > **Services** > **Developer Portal for Teams**.
@@ -32,7 +32,7 @@ For more information, see [enable developers to use app analytics](/microsoft-36
 
 ## Get started
 
-You can view your custom app's and agent's usage and other insights from the **Analytics** page. To access the page:
+You can view your custom app's usage and other insights from the **Analytics** page. To access the page:
 
 1. Go to **[Developer Portal](https://dev.teams.microsoft.com)**.
 1. Select **Apps** from the left pane.
@@ -110,7 +110,7 @@ The **Usage by country/region** chart shows the various regions where your app a
 
 #### Usage intensity
 
-The **Usage intensity** chart shows frequency and depth of use. They're one indicator that users are finding value in continuing to use your app agent.
+The **Usage intensity** chart shows frequency and depth of use. They're one indicator that users are finding value in continuing to use your app and agent.
 
 :::image type="content" source="../../assets/images/tdp/tdp-usage-intensity.png" alt-text="Screenshot shows app and agent usage intensity of your published app in Developer Portal.":::
 
@@ -318,7 +318,7 @@ As you explore individual metrics on this page, you can use the **Filter** butto
 
  :::image type="content" source="../../assets/images/tdp/filter-tdp-analytics.png" alt-text="Screenshot shows the app and agent analytics page filter in Developer Portal." lightbox="../../assets/images/tdp/filter-tdp-analytics.png":::
 
-## App analytics
+## App and agent analytics
 
 To gain insights on the app and agent usage and analyze trends, explore the following three sections under **Analytics**:
 
