@@ -81,7 +81,7 @@ To fetch the insights of a particular meeting, follow these steps:
     | Property | Description |
     | --- | --- |
     | `id` | A unique identifier for the generated AI insight object. |
-    | `callId` | A unique identifier for the [call](/graph/api/resources/call?view=graph-rest-1.0&preserve-view=true) during which this insight is generated. |
+    | `callId` | A unique identifier for the call during which this insight is generated. |
     | `contentCorrelationId` | A unique identifier that correlates the [transcript](/graph/api/resources/calltranscript?&view=graph-rest-beta&preserve-view=true) of the meeting from which the AI insight object is generated. |
     | `createdDateTime` | The date and time at which the corresponding transcript was created. The timestamp type represents the date and time information using the ISO 8601 format and is always in Coordinated Universal Time (UTC). |
     | `endDateTime` | The date and time at which the corresponding transcript ends. The timestamp type represents the date and time information using the ISO 8601 format and is always in UTC. |
