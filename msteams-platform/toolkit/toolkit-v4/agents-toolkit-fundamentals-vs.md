@@ -22,7 +22,7 @@ Microsoft Teams Toolkit makes it simple to get started with app development for 
 
 ## Available for Visual Studio
 
-Teams Toolkit is available for free for Visual Studio 2022 Community, Professional, and Enterprise. For more information about installation and setup, see how to [install Teams Toolkit](./install-Teams-Toolkit-vs.md).
+Teams Toolkit is available for free for Visual Studio 2022 Community, Professional, and Enterprise. For more information about installation and setup, see how to [install Teams Toolkit](./install-Agents-Toolkit-vs.md).
 
 | Teams Toolkit | Visual Studio |
 | - | ------------- |
@@ -108,4 +108,4 @@ Enhance the capabilities of Microsoft 365 Copilot by converting your app into an
 
 ## See also
 
-[Install Teams Toolkit](install-Teams-Toolkit-vs.md)
+[Install Teams Toolkit](install-Agents-Toolkit-vs.md)

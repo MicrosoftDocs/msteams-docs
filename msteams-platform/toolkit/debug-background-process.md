@@ -122,7 +122,7 @@ For more information on the project folder structure, see [Teams Toolkit project
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Teams Toolkit Overview](agents-toolkit-fundamentals.md)
 * [Debug your Teams app using Teams Toolkit](debug-local.md)
 * [Use Teams Toolkit to provision cloud resources](provision.md)
 * [Deploy to the cloud](deploy.md)

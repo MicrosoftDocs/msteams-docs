@@ -277,7 +277,7 @@ When Teams client opens in the web browser, perform the following steps:
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Teams Toolkit Overview](agents-toolkit-fundamentals.md)
 * [Introduction to Azure Functions](/azure/azure-functions/functions-overview)
 * [Use Teams Toolkit to provision cloud resources](provision.md)
 * [Add How-to guides to Teams app](add-how-to-guides-vsc.md)

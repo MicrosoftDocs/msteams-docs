@@ -32,7 +32,7 @@ To build the project, you must compile the source code and create the required d
 > [!NOTE]
 > Use Teams Toolkit version 5.6.0 or a later.
 
-You can use [Teams Toolkit command line interface (CLI)](Teams-Toolkit-CLI.md) to set up CI/CD pipeline for your Teams app.
+You can use [Teams Toolkit command line interface (CLI)](Agents-Toolkit-CLI.md) to set up CI/CD pipeline for your Teams app.
 
 ### Prerequisites
 

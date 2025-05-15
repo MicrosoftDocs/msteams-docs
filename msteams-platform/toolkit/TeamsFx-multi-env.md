@@ -58,7 +58,7 @@ When you have multiple environments and select the Production, dev, or local men
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Teams Toolkit Overview](agents-toolkit-fundamentals.md)
 * [App manifest schema for Teams](../resources/schema/manifest-schema.md)
 * [Add more cloud resources](add-resource.md)
 * [Collaborate with other developers on Teams project](TeamsFx-collaboration.md)

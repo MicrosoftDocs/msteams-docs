@@ -87,7 +87,7 @@ You can launch Teams app as a web app instead of running the app in Teams client
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals-vs.md)
+* [Teams Toolkit Overview](agents-toolkit-fundamentals-vs.md)
 * [Debug background process](debug-background-process-vs.md)
 * [Use Teams Toolkit to provision cloud resources](provision-vs.md)
 * [Deploy to the cloud](deploy-vs.md)

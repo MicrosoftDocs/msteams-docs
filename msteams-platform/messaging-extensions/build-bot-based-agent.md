@@ -60,7 +60,7 @@ Let's create a bot-based search message extension agent for Teams and Microsoft 
 
 Before you get started, ensure that you install the following tools to build and deploy your message extension:
 
-* Install the latest [Teams Toolkit prerelease version](../toolkit/install-Teams-Toolkit.md#install-a-prerelease-version).
+* Install the latest [Teams Toolkit prerelease version](../toolkit/install-Agents-Toolkit.md#install-a-prerelease-version).
 * Ensure that the **Develop Copilot Plugin** feature flag is enabled. To enable the feature flag, follow these steps:
   1. Open **Visual Studio Code**.
   1. Go to **Manage** :::image type="icon" source="../assets/icons/gear-icon.png" border="false"::: > **Settings**.

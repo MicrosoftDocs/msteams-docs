@@ -131,7 +131,7 @@ You can use this method to verify custom app upload permission only after you ha
 1. Select **Teams Toolkit** from the Visual Studio Code activity bar.
 
    > [!NOTE]
-   > If you're unable to see the option, see [install Teams Toolkit](install-Teams-Toolkit.md) to install Teams Toolkit extension in Visual Studio Code.
+   > If you're unable to see the option, see [install Teams Toolkit](install-Agents-Toolkit.md) to install Teams Toolkit extension in Visual Studio Code.
 
 1. Create a new Teams Toolkit app project or open an existing app project.
 
@@ -202,6 +202,6 @@ If you have admin rights, you can enable custom app upload:
 
 ## See also
 
-* [Teams Toolkit Overview](~/toolkit/teams-toolkit-fundamentals.md)
+* [Teams Toolkit Overview](~/toolkit/agents-toolkit-fundamentals.md)
 * [Manage custom app policies and settings in Teams](/microsoftteams/teams-custom-app-policies-and-settings)
 * [Manage app setup policies in Teams](/microsoftteams/teams-app-setup-policies)

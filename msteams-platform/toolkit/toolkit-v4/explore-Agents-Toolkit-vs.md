@@ -59,7 +59,7 @@ After you've created your Teams app project, you can use the following options t
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals-vs.md)
+* [Teams Toolkit Overview](agents-toolkit-fundamentals-vs.md)
 * [Create a new Teams app using Teams Toolkit](create-new-project-vs.md)
 * [App manifest schema](~/resources/schema/manifest-schema.md)
 * [Prepare to build apps using Teams Toolkit](build-environments-vs.md)

@@ -401,6 +401,6 @@ If you don't have a Microsoft Entra app for your bot yet or you've one but don't
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals-vs.md)
+* [Teams Toolkit Overview](agents-toolkit-fundamentals-vs.md)
 * [Deploy Teams app to the cloud](deploy-vs.md)
 * [Edit Teams app manifest using Visual Studio](TeamsFx-preview-and-customize-app-manifest-vs.md)

@@ -202,7 +202,7 @@ To preview values for all the environments, you can hover over the placeholder. 
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Teams Toolkit Overview](agents-toolkit-fundamentals.md)
 * [App manifest schema](../resources/schema/manifest-schema.md)
 * [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md)
 * [Manage multiple environments](TeamsFx-multi-env.md)
