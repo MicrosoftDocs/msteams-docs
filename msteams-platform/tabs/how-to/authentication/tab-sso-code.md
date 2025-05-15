@@ -137,7 +137,7 @@ The access token returned from `getAuthToken()` can be used to establish the app
 Teams can cache this information associated with the app user's identity, such as the user's preferences.
 
 > [!NOTE]
-> If you need to construct a unique ID to represent the app user in your system, see [Using claims to reliably identify a user](/azure/active-directory/develop/id-tokens#using-claims-to-reliably-identify-a-user-subject-and-object-id).
+> If you need to construct a unique ID to represent the app user in your system, see [Using claims to reliably identify a user](/entra/identity-platform/claims-validation#validate-the-subject).
 
 ## Pass the access token to server-side code
 
