@@ -430,7 +430,7 @@ The **Capability** tab shows the usage of individual app and agent capabilities 
 * Connector
 * Personal tab
 
-:::image type="content" source="../../assets/images/tdp/tdp-app-capability.png" alt-text="Screenshot shows the app and agent capability usage in different host products of your published app in Developer Portal." lightbox="../../assets/images/tdp/tdp-app-capability-full.png":::
+:::image type="content" source="../../assets/images/tdp/tdp-app-capability.png" alt-text="Screenshot shows the app and agent capability usage in different host products of your published app in Developer Portal." lightbox="../../assets/images/tdp/tdp-app-capability.png":::
 
 > [!NOTE]
 > **Microsoft 365 Copilot Agent** includes usage of declarative agents only. The usage of custom engine agent is expected to be introduced later in Developer Portal.
