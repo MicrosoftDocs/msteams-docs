@@ -33,7 +33,7 @@ Teams Toolkit supports the following debug features:
 * [Toggle breakpoints](#toggle-breakpoints)
 * [Hot reload](#hot-reload)
 * [Stop debugging](#stop-debugging)
-* [Microsoft 365 Agents Playground](#teams-app-test-tool)
+* [Microsoft 365 Agents Playground](#teams-app-test-tool) (previously known as Teams App Test Tool)
 * [Debug apps in Teams desktop client](#debug-apps-in-teams-desktop-client)
 
 Teams Toolkit performs background functions during debug process, which include verifying the prerequisites required for debug. You can see the progress of the verification process in the output channel of Teams Toolkit. In the setup process you can register and configure your Teams app.
@@ -64,9 +64,9 @@ When you complete local debug, you can select **Stop (Shift+F5)** or **[Alt] Dis
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/stop-debug.png" alt-text="Screenshot shows the stop debugging option.":::
 
-### Microsoft 365 Agents Playground
+### Microsoft 365 Agents Playground 
 
-Microsoft 365 Agents Playground makes debugging your bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Microsoft 365 Agents Playground. For more information, see [Microsoft 365 Agents Playground](debug-your-Teams-app-test-tool.md).
+Agents Playground makes debugging your bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Agents Playground. For more information, see [Agents Playground](debug-your-Teams-app-test-tool.md).
 
 ### Debug apps in Teams desktop client
 
