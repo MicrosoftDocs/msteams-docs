@@ -73,7 +73,7 @@ Ensure that you install the following tools to build and deploy your bot in Micr
 
 1. Based on the option selected in the earlier step, select the following tab:
 
-    ## Search Command
+   ## Search Command
 
     To test a **Search Command** in Microsoft 365 Agents Playground, follow these steps:
 
@@ -108,7 +108,7 @@ Ensure that you install the following tools to build and deploy your bot in Micr
 
    You can test an **Action Command** in Microsoft 365 Agents Playground in the following ways:
 
-      # [**+** icon](#tab/action-commands)
+   # [**+** icon](#tab/action-commands)
 
       1. Select the **+** icon in the message compose area.
 
@@ -116,7 +116,7 @@ Ensure that you install the following tools to build and deploy your bot in Micr
 
          :::image type="content" source="../assets/images/teams-toolkit-v2/action-commands.png" alt-text="Screenshot shows the action command.":::
 
-      # [**...** icon](#tab/action-commands1)
+   # [**...** icon](#tab/action-commands1)
 
       1. Above the message, select the **...** option.
 
