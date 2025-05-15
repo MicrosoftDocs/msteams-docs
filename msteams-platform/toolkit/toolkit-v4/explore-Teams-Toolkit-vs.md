@@ -25,7 +25,7 @@ To view the Teams Toolkit from the **Project** menu, follow these steps:
 1. Select **Project**.
 1. Select **Teams Toolkit**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-installed.png" alt-text="Screenshot shows the Teams toolkit project menu.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/teams-toolkit-vs/teams-toolkit-installed.png" alt-text="Screenshot shows the Teams toolkit project menu.":::
 
 # [Solution Explorer](#tab/solutionexplorer)
 
@@ -38,13 +38,13 @@ To view the Teams Toolkit from the **Project** menu, follow these steps:
    > [!NOTE]
    > In this scenario the project name is **MyTeamsApp14**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/ttk-solution explorer.png" alt-text="Screenshots the Teams toolkit operations from Project":::
+   :::image type="content" source="../../assets/images/toolkit-v2/teams-toolkit-vs/ttk-solution explorer.png" alt-text="Screenshots the Teams toolkit operations from Project":::
   
 ---
 
 After you've created your Teams app project, you can use the following options to develop and build your app:
 
-:::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/ttk-solution explorer-options.png" alt-text="Teams toolkit operations from Project menu":::
+:::image type="content" source="../../assets/images/toolkit-v2/teams-toolkit-vs/ttk-solution explorer-options.png" alt-text="Teams toolkit operations from Project menu":::
 
 |Function  |Description  |
 |---------|---------|

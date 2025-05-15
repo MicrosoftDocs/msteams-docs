@@ -51,7 +51,7 @@ items:
 
     1. Open Visual Studio Code.
     
-    1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code Activity Bar.
+    1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code Activity Bar.
 
     1. In the left pane, select **View Samples**.
 
@@ -145,7 +145,7 @@ items:
 
     1. Open Visual Studio Code.
     1. Open the project folder where you created the proactive message bot app.
-    1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code Activity Bar.
+    1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code Activity Bar.
     1. Select **Sign in to Azure** using your credentials.
 
         > [!TIP]
@@ -171,7 +171,7 @@ items:
 
     # [Visual Studio Code](#tab/vscode)
    
-    1. Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code Activity Bar.
+    1. Select the Teams Toolkit :::image type="icon" source="~/assets/images/toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code Activity Bar.
 
     1. Select **Provision** under **LIFECYCLE**.
 

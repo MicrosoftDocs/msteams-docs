@@ -53,12 +53,12 @@ Congratulations, you've created a Teams app! Now let's go ahead and learn how to
 
 1. Select **Deploy** from the **LIFECYCLE** section in the left pane.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/deploy_to_the_cloud_button.png" alt-text="Screenshot showing the selection of Deploy.":::
+   :::image type="content" source="../assets/images/toolkit-v2/deploy_to_the_cloud_button.png" alt-text="Screenshot showing the selection of Deploy.":::
 
 1. Select an environment. (If there's only one environment, this step is skipped.)
 1. Select **Deploy**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/click_deploy.png" alt-text="Screenshot showing the selection of Deploy under Visual Studio Code.":::
+   :::image type="content" source="../assets/images/toolkit-v2/click_deploy.png" alt-text="Screenshot showing the selection of Deploy under Visual Studio Code.":::
 
 1. Select the Teams Toolkit icon in the sidebar.
 

@@ -20,11 +20,11 @@ For bot and message extension, you can use Dev Tunnel. It starts a local tunnel 
 
 In the debug dropdown, select **Dev Tunnels (no active tunnel)** > **Create a Tunnel** or select an existing public dev tunnel.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-create-devtunnel.png" alt-text="Screenshot shows the steps to create a tunnel.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/teams-toolkit-vs/vs-create-devtunnel.png" alt-text="Screenshot shows the steps to create a tunnel.":::
 
 The tunnel creation dialog opens.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-create-devtunnel-detail.png" alt-text="Screenshot shows how to create a dev tunnel.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/teams-toolkit-vs/vs-create-devtunnel-detail.png" alt-text="Screenshot shows how to create a dev tunnel.":::
 
 * Select the **Account** to use to create the tunnel. Azure, Microsoft Account (MSA), and GitHub are the account types that are supported.
 * Enter a **Name** for the tunnel.
@@ -34,7 +34,7 @@ The tunnel creation dialog opens.
 
 The tunnel you create is under **Dev Tunnels(MyPublicDevTunnel)** > **MyPublicDevTunnel**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-select-devtunnel.png" alt-text="Screenshot shows how to select dev tunnel.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/teams-toolkit-vs/vs-select-devtunnel.png" alt-text="Screenshot shows how to select dev tunnel.":::
 
 ## Create the debug resources
 

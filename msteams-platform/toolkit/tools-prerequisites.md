@@ -67,7 +67,7 @@ You can sign up for the developer program using one of the following account typ
 
     :::column-end:::
     :::column span="1":::
-             :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/personal-account-icon.png" alt-text="Screenshot shows the personal account icon.":::
+             :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/personal-account-icon.png" alt-text="Screenshot shows the personal account icon.":::
    :::column-end:::
 
   :::row-end:::
@@ -84,7 +84,7 @@ You can sign up for the developer program using one of the following account typ
 
     :::column-end:::
     :::column span="1":::
-             :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/work-account-icon.png" alt-text="Screenshot shows the work account icon.":::
+             :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/work-account-icon.png" alt-text="Screenshot shows the work account icon.":::
     :::column-end:::
 
   :::row-end:::
@@ -99,7 +99,7 @@ To create a free Microsoft 365 developer account:
 
    After the completion of the subscription, the following information appears:
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/m365-account_1.png" alt-text="Screenshot shows the M365 Account subscription options.":::
+    :::image type="content" source="../assets/images/toolkit-v2/m365-account_1.png" alt-text="Screenshot shows the M365 Account subscription options.":::
 
 ### Azure account
 
@@ -137,11 +137,11 @@ You can use this method to verify custom app upload permission only after you ha
 
 1. Select **Sign in to Microsoft 365** under **ACCOUNTS**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/accounts1_1.png" alt-text="Screenshot shows the accounts details.":::
+    :::image type="content" source="../assets/images/toolkit-v2/accounts1_1.png" alt-text="Screenshot shows the accounts details.":::
 
 1. Verify if you can see the option **Sideloading enabled** as shown in the following image:
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading_1.png" alt-text="Screenshot shows the custom app upload enabled option highlighted in red.":::
+    :::image type="content" source="../assets/images/toolkit-v2/sideloading_1.png" alt-text="Screenshot shows the custom app upload enabled option highlighted in red.":::
 
 </details>
 <br>
@@ -150,11 +150,11 @@ You can use this method to verify custom app upload permission only after you ha
 
 1. In the Teams client, select **Apps** > **Manage your apps** > **Upload an app**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/upload-an-app.png" alt-text="Screenshot shows the option to upload an app in Teams.":::
+    :::image type="content" source="../assets/images/toolkit-v2/upload-an-app.png" alt-text="Screenshot shows the option to upload an app in Teams.":::
 
 1. Check if you can see the option **Upload a custom app**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/upload-custom-app.png" alt-text="Screenshot shows the option to upload a custom app in Teams.":::
+    :::image type="content" source="../assets/images/toolkit-v2/upload-custom-app.png" alt-text="Screenshot shows the option to upload a custom app in Teams.":::
 
 </details>
 
@@ -171,25 +171,25 @@ If you have admin rights, you can enable custom app upload:
 
   1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
 
-  1. Select the :::image type="icon" source="../assets/images/teams-toolkit-v2/showall icon.PNG"::: icon > **Teams**.
+  1. Select the :::image type="icon" source="../assets/images/toolkit-v2/showall icon.PNG"::: icon > **Teams**.
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/m365-admin-center_1.png" alt-text="Screenshot shows the Teams client in the left pane of Microsoft 365 Admin center.":::
+       :::image type="content" source="../assets/images/toolkit-v2/m365-admin-center_1.png" alt-text="Screenshot shows the Teams client in the left pane of Microsoft 365 Admin center.":::
 
      > [!Note]
      > It can take up to 24 hours for the Teams option to appear. You can [upload your custom app to a Teams environment](/microsoftteams/upload-custom-apps) for testing and validation.
 
   1. Sign in to Microsoft Teams admin center with your admin credentials.
-  1. Select the :::image type="icon" source="../assets/images/teams-toolkit-v2/showall icon.PNG"::: icon > **Teams apps** > **Setup policies**.
+  1. Select the :::image type="icon" source="../assets/images/toolkit-v2/showall icon.PNG"::: icon > **Teams apps** > **Setup policies**.
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/m365-admin-center1_1.png" alt-text="Screenshot shows the Setup policies under Teams apps in Microsoft 365 Admin center.":::
+     :::image type="content" source="../assets/images/toolkit-v2/m365-admin-center1_1.png" alt-text="Screenshot shows the Setup policies under Teams apps in Microsoft 365 Admin center.":::
 
   1. Select **Global (Org-wide default)**.
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/select-manage-policies_1.png" alt-text="Screenshot shows the Manage policies tab with Global (Org-wide default) option highlighted.":::
+     :::image type="content" source="../assets/images/toolkit-v2/select-manage-policies_1.png" alt-text="Screenshot shows the Manage policies tab with Global (Org-wide default) option highlighted.":::
 
   1. Set **Upload custom apps** toggle to **On**.
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/Upload-custom-apps_1.png" alt-text="Screenshot shows the Upload custom apps toggle highlighted.":::
+     :::image type="content" source="../assets/images/toolkit-v2/Upload-custom-apps_1.png" alt-text="Screenshot shows the Upload custom apps toggle highlighted.":::
 
   5. Select **Save**.
 
