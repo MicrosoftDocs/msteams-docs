@@ -18,10 +18,10 @@ items:
 
     In this tutorial, you learn:
 
-    - How to build command bot with Microsoft 365 Agents Toolkit.
+    - How to build command bot with Microsoft 365 Agents Toolkit (previously known as Teams Toolkit).
     - About the directory structure of your app.
     
-    This step-by-step guide helps you to build command bot with Microsoft 365 Agents Toolkit. You can see the following output:
+    This step-by-step guide helps you to build command bot with Agents Toolkit. You can see the following output:
 
       :::image type="content" source="~/assets/images/sbs-command-bot/final-output.png" alt-text="Screenshot shows the final output." lightbox="~/assets/images/sbs-command-bot/final-output.png":::
 
@@ -35,14 +35,14 @@ items:
    | --- | --- | --- |
    | **Required** | &nbsp; | &nbsp; |
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript or TypeScript, build environments. Use the latest version. |
-   | &nbsp; | [Microsoft 365 Agents Toolkit](#install-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
+   | &nbsp; | [Agents Toolkit](#install-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
    | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call all in one place.|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge/) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
    | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
    
    > [!NOTE]
-   > The guide is tested on Microsoft 365 Agents Toolkit latest version and Nodejs version 18 and 20. The steps in this guide may work with other versions, but that hasn't been tested.
+   > The guide is tested on Agents Toolkit latest version and Nodejs version 18 and 20. The steps in this guide may work with other versions, but that hasn't been tested.
 
    [!INCLUDE [Set up prerequisites](includes/get-started/prepare-teams-toolkit.md)]
 
@@ -61,7 +61,7 @@ items:
 
     1. Select **Create a New App**.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/create-new-teams-app.png" alt-text="Location of the Create New Project link in the Microsoft 365 Agents Toolkit sidebar.":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/create-new-teams-app.png" alt-text="Location of the Create New Project link in the Agents Toolkit sidebar.":::
 
     1. Select **Bot** to create a new bot project.
 
@@ -95,7 +95,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/app-name.png" alt-text="Screenshot shows to enter the application name.":::
 
-    1. After your app is created, Microsoft 365 Agents Toolkit displays the following message:
+    1. After your app is created, Agents Toolkit displays the following message:
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/new-window-notification.png" alt-text="Screenshot shows the new window Notification for scaffolding.":::
 
@@ -135,7 +135,7 @@ items:
      
     ## Take tour of source code
 
-    Microsoft 365 Agents Toolkit provides components for building an app. After creating the project, you can view the project folders and files in the **Explorer** area of Visual Studio Code.
+    Agents Toolkit provides components for building an app. After creating the project, you can view the project folders and files in the **Explorer** area of Visual Studio Code.
 
       :::image type="content" source="~/assets/images/sbs-command-bot/folder-structure-command-bot.png" alt-text="Screenshot shows the structure tab":::
 
@@ -161,7 +161,7 @@ items:
 
     You've learnt to build, and run Teams app with command bot capability. The final step is to deploy your app on Azure.
 
-    Let's deploy the first app with command bot capability on Azure using Microsoft 365 Agents Toolkit.
+    Let's deploy the first app with command bot capability on Azure using Agents Toolkit.
 
     ## Sign in to your Azure account
 
