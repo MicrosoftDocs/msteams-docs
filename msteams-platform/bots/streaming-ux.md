@@ -23,6 +23,8 @@ You can stream bot messages to deliver a bot's responses to the user as small up
 
 When users observe the bot processing their request in real time, it can increase their satisfaction and trust. This perceived responsiveness and transparency enhances user engagement and decreases conversation abandonment with the bot.
 
+[!INCLUDE [teams-ai-lib-v2-rec](../includes/teams-ai-lib-v2-rec.md)]
+
 ## Stream messages user experience
 
 Streaming bot messages has two types of updates:
