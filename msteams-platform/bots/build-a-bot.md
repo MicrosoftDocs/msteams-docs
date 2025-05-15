@@ -1,6 +1,6 @@
 ---
 title: Bots and Agents
-description: Learn to build a basic chatbot using Microsoft 365 Agents Toolkit, Bot Framework SDK. Additionally, learn to build an custom engine agent.
+description: Learn to build a basic chatbot using Microsoft 365 Agents Toolkit, Bot Framework SDK. Additionally, learn to build a custom engine agent.
 ms.localizationpriority: high
 ms.date: 09/25/2024
 ms.topic: conceptual
