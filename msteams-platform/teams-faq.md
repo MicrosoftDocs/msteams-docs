@@ -442,7 +442,7 @@ You can use the following Graph API [Get user mailbox settings](/graph/api/user-
 <details>
 <summary>How can I deploy the code in Azure using Teams Toolkit, and use Graph API to get a user profile photo?</summary>
 
-For more information on Teams Toolkit, see [Create a new Teams project](toolkit/create-new-project.md) and [Teams Toolkit CLI](toolkit/Teams-Toolkit-CLI.md).
+For more information on Teams Toolkit, see [Create a new Teams project](toolkit/create-new-project.md) and [Agents Toolkit CLI](toolkit/Teams-Toolkit-CLI.md).
 
 <br>
 &nbsp;
@@ -1203,7 +1203,7 @@ FAQ for [Provision cloud resources](toolkit/provision.md) using Teams Toolkit.
 <details>
 <summary>How to troubleshoot?</summary>
 
-If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document. If you're using Microsoft 365 Agents Toolkit CLI, there'll be a hyperlink at the end of error message that points to the help doc.
+If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document. If you're using Microsoft 365 Agents Toolkit CLI (previously known as TeamsFx CLI), there'll be a hyperlink at the end of error message that points to the help doc.
 <br>
 
 &nbsp;
@@ -1239,7 +1239,7 @@ You can do so by following [provision SharePoint-based app](/microsoftteams/plat
 Shared references to deploy the code using toolkit:
 
 * [Create a new Teams app using Teams Toolkit](toolkit/create-new-project.md)
-* [Teams Toolkit CLI](toolkit/Teams-Toolkit-CLI.md)
+* [Agents Toolkit CLI](toolkit/Teams-Toolkit-CLI.md)
 
 You can call Graph API to get the app user's profile photo.
 

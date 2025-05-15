@@ -737,7 +737,7 @@ Your Visual Studio is installed in a few minutes.
 
 # [Command line](#tab/cli)
 
-To install the Microsoft 365 Agents Toolkit CLI, use the `npm` package manager:
+To install the Microsoft 365 Agents Toolkit CLI (previously known as TeamsFx CLI), use the `npm` package manager:
 
 ``` bash
 npm install -g @microsoft/teamsfx-cli
