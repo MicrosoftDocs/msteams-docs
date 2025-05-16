@@ -52,20 +52,20 @@ Now, you can use the same process to deploy your Bot and Message Extension apps 
 
 In your terminal window:
 
-1. Run `teamsfx provision`.
+1. Run `atk provision`.
 
    ``` bash
-   teamsfx provision
+   atk provision
    ```
 
    When prompted, select an Azure subscription to use Azure resources.
 
    Your app is hosted using Azure resources.
 
-1. Run `teamsfx deploy`.
+1. Run `atk deploy`.
 
    ``` bash
-   teamsfx deploy
+   atk deploy
    ```
 
 ---

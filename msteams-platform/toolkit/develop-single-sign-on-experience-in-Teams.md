@@ -374,7 +374,7 @@ To use the `teamsFx` tab or bot template, follow these steps:
         
         export const commandBot = new ConversationBot({
             ...
-            // To learn more about ssoConfig, please refer teamsfx sdk document: https://docs.microsoft.com/microsoftteams/platform/toolkit/teamsfx-sdk
+            // To learn more about ssoConfig, please refer atk sdk document: https://docs.microsoft.com/microsoftteams/platform/toolkit/teamsfx-sdk
             ssoConfig: {
             aad :{
               scopes:["User.Read"],

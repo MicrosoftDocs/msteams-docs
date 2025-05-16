@@ -148,10 +148,10 @@ items:
 
     # [Command line](#tab/cli)
 
-    Use the `teamsfx` CLI to create your first project. Start from the folder where you want to create the project folder.
+    Use the `atk' CLI to create your first project. Start from the folder where you want to create the project folder.
 
     ``` bash
-    teamsfx new
+    atk new
     ```
     You can use the CLI to create a new Teams app. The CLI leads you through a series of questions. Every question includes an instruction on answering it.
 
@@ -232,7 +232,7 @@ items:
     1. Sign in to Microsoft 365 with the TeamsFx CLI:
 
         ``` bash
-        teamsfx account login m365
+        atk account login m365
         ```
 
         Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
@@ -240,7 +240,7 @@ items:
     2. Sign in to Azure with the TeamsFx CLI:
 
         ``` bash
-        teamsfx account login azure
+        atk account login azure
         ```
 
         Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
@@ -372,7 +372,7 @@ items:
     1. Sign in to Microsoft 365 with the TeamsFx CLI:
 
         ``` bash
-        teamsfx account login m365
+        atk account login m365
         ```
 
         Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
@@ -380,7 +380,7 @@ items:
     2. Sign in to Azure with the TeamsFx CLI:
 
         ``` bash
-        teamsfx account login azure
+        atk account login azure
         ```
 
         Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.

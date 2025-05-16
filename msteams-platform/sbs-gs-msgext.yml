@@ -144,14 +144,14 @@ items:
    
    # [Command Line](#tab/cli1)
 
-   Use the `teamsfx` CLI to create your first project.
+   Use the `atk' CLI to create your first project.
     
    1. Go to the folder where you want to create the project folder and open Command Prompt.
 
    1. Enter the following command to create a new Teams app:
 
         ``` bash
-        teamsfx new
+        atk new
         ```
 
    1. CLI provides you with a series of options to choose from. Use arrow keys to select an option. After you make the choice, select Enter to confirm.
@@ -228,7 +228,7 @@ items:
    1. Sign in to Microsoft 365 with the following TeamsFx CLI command:
 
         ``` bash
-        teamsfx account login m365
+        atk account login m365
         ```
 
         Your default web browser opens to let you sign in. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
@@ -439,7 +439,7 @@ items:
    1. Sign in to Azure with the following TeamsFx CLI command:
 
         ``` bash
-        teamsfx account login azure
+        atk account login azure
         ```
 
    1. Your default web browser opens to let you sign in. Sign in to your Azure account using your credentials. Close the browser when you're prompted.

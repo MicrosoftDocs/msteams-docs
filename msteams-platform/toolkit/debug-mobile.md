@@ -140,9 +140,9 @@ You can view the project folders and files under **Explorer** in the Microsoft V
     ```
 
 1. Run the following commands in your project directory:
-   1. `teamsfx provision --env local`
-   1. `teamsfx deploy --env local`
-   1. `teamsfx preview --env local`
+   1. `atk provision --env local`
+   1. `atk deploy --env local`
+   1. `atk preview --env local`
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Debug%20your%20tab%20app%20using%20Command%20Line&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdebug-mobile%3Ftabs%3Dcline%252Cios1%252Cios2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdebug-mobile.md&documentVersionIndependentId=ffc96a29-6bbb-879f-c8c1-ec1bc5a9f83d&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)

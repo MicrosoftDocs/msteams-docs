@@ -68,18 +68,18 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
 1. Go to the folder where you created your message extension app and open Command Prompt.
 
-1. Run `teamsfx provision`.
+1. Run `atk provision`.
 
    ``` bash
-   teamsfx provision
+   atk provision
    ```
 
    When prompted, select an Azure subscription and resource group to use Azure resources. Your app is hosted using Azure resources.
 
-1. Run `teamsfx deploy`.
+1. Run `atk deploy`.
 
    ``` bash
-   teamsfx deploy
+   atk deploy
    ```
 
    Your message extension app is deployed.
