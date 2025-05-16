@@ -17,8 +17,8 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-| <date> | <feature name> | <breadcrumbs> |
-| <date> | <feature name> | <breadcrumbs> |
+| publish date | build feature name | path with breadcrumbs |
+| publish date | build feature name | path with breadcrumbs |
 
 ## Generally available
 
