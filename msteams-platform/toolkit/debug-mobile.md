@@ -108,15 +108,15 @@ You can view the project folders and files under **Explorer** in the Microsoft V
    2. Select **Launch Remote in Teams (Edge)** from the launch configuration dropdown.
    3. Select the Start debugging (F5) button.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot shows how to launch the app remotely.":::
+        :::image type="content" source="~/assets/images/toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot shows how to launch the app remotely.":::
 
    4. Select **Add** to upload the custom app to Teams.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="Screenshot of the app details dialog to add the tab app to Teams.":::
+        :::image type="content" source="~/assets/images/toolkit-v2/deploy-azure/remote-app-client.png" alt-text="Screenshot of the app details dialog to add the tab app to Teams.":::
 
    5. Select **Open**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-scope-debug-mobile.png" alt-text="Screenshot of the scope selection dialog to open the app in personal scope.":::
+        :::image type="content" source="~/assets/images/toolkit-v2/deploy-azure/add-scope-debug-mobile.png" alt-text="Screenshot of the scope selection dialog to open the app in personal scope.":::
 
         The app opens as a personal tab.
 

@@ -38,7 +38,7 @@ Install `teamsapp-cli` from `npm` and run `teamsapp -h` to check all available c
   teamsapp -h
 ```
 
-:::image type="content" source="../assets/images/teams-toolkit-cli/npm-package-install.png" alt-text="Screenshot shows the installation of npm package." lightbox="../assets/images/teams-toolkit-cli/npm-package-install.png":::
+:::image type="content" source="../assets/images/toolkit-cli/npm-package-install.png" alt-text="Screenshot shows the installation of npm package." lightbox="../assets/images/toolkit-cli/npm-package-install.png":::
 
 ## Supported commands
 
@@ -67,7 +67,7 @@ The following table lists the supported commands to help developers build and ma
 | [`teamsapp collaborator`](#teamsapp-collaborator)| Collaborate with other developers in the same project.|
 | [`teamsapp uninstall`](#teamsapp-uninstall) | Remove an acquired Microsoft 365 App. |
 
-:::image type="content" source="../assets/images/teams-toolkit-cli/list-of-commands.png" alt-text="Screenshot shows the list of available commands.":::
+:::image type="content" source="../assets/images/toolkit-cli/list-of-commands.png" alt-text="Screenshot shows the list of available commands.":::
 
 ## Global options
 
@@ -82,7 +82,7 @@ The following are the global options you can use with each command:
 | `--verbose` | Prints the diagnostic information. The default value is false.|
 | `--telemetry` | Enables telemetry. The default value is true.|
 
-:::image type="content" source="../assets/images/teams-toolkit-cli/global-options.png" alt-text="Screenshot shows the list of global options.":::
+:::image type="content" source="../assets/images/toolkit-cli/global-options.png" alt-text="Screenshot shows the list of global options.":::
 
 ## Interactive mode
 
@@ -126,7 +126,7 @@ The following table lists the parameters available for `teamsapp new`:
 |`--spfx-solution -s`| No| Create or import an existing SharePoint Framework solution. The available options are `new` and `import`. The default value is `new`.|
 |`--spfx-install-latest-package`| No| Install the latest version of SharePoint Framework. The default value is `true`.|
 
-:::image type="content" source="../assets/images/teams-toolkit-cli/teamsapp-new-parameters.png" alt-text="Screenshot shows the teamsapp new parameters."lightbox="../assets/images/teams-toolkit-cli/teamsapp-new-parameters.png":::
+:::image type="content" source="../assets/images/toolkit-cli/atk-new-parameters.png" alt-text="Screenshot shows the teamsapp new parameters."lightbox="../assets/images/toolkit-cli/atk-new-parameters.png":::
 
 ### `teamsapp new` scenarios
 
@@ -152,7 +152,7 @@ The supported feature for Teams application.
 |:----------------  |:-------------|
 | `Integrate SPFxWebPart with Teams App` | Incorporate an autohosted SharePoint Framework (SPFx) web part into Teams. An autohosted SPFx web part is a component that is automatically hosted in SharePoint. |
 
-:::image type="content" source="../assets/images/teams-toolkit-cli/teamsapp-add.png" alt-text="Screenshot shows the teamsapp add command.":::
+:::image type="content" source="../assets/images/toolkit-cli/atk-add.png" alt-text="Screenshot shows the teamsapp add command.":::
 
 ## `teamsapp auth`
 
@@ -164,7 +164,7 @@ The following table lists the cloud service accounts for Teams application:
 | `teamsapp auth login`  | Log in to the selected cloud service. The available options are Microsoft 365 or Azure. |
 | `teamsapp auth logout`  | Log out of selected cloud service. The available options are Microsoft 365 or Azure. |
 
-:::image type="content" source="../assets/images/teams-toolkit-cli/teamsapp-auth.png" alt-text="Screenshot shows the teamsapp auth commands.":::
+:::image type="content" source="../assets/images/toolkit-cli/atk-auth.png" alt-text="Screenshot shows the teamsapp auth commands.":::
 
 ## `teamsapp entra-app`
 
@@ -174,7 +174,7 @@ Manage the Microsoft Entra app in the current application.
 |:----------------  |:-------------|
 | `update` | Updates the Teams Entra App within your current application. |
 
-:::image type="content" source="../assets/images/teams-toolkit-cli/teamsapp-entra-app.png" alt-text="Screenshot shows the teamsapp entra-app command.":::
+:::image type="content" source="../assets/images/toolkit-cli/atk-entra-app.png" alt-text="Screenshot shows the teamsapp entra-app command.":::
 
 ## `teamsapp env`
 
@@ -185,7 +185,7 @@ Manage Teams application environments.
 | `teamsapp env add`  | Adds a new environment by copying the current environment. |
 | `teamsapp env list` | Lists all available environments. |
 
-:::image type="content" source="../assets/images/teams-toolkit-cli/teamsapp-env.png" alt-text="Screenshot shows the teamsapp env commands.":::
+:::image type="content" source="../assets/images/toolkit-cli/atk-env.png" alt-text="Screenshot shows the teamsapp env commands.":::
 
 ### `teamsapp env` scenario
 
@@ -199,7 +199,7 @@ teamsapp env add staging --env dev
 
 The `teamsapp help` command displays all the commands available for Teams Toolkit CLI.
 
-:::image type="content" source="../assets/images/teams-toolkit-cli/teamsapp-help.png" alt-text="Screenshot shows the teamsapp help commands." lightbox="../assets/images/teams-toolkit-cli/teamsapp-help.png":::
+:::image type="content" source="../assets/images/toolkit-cli/atk-help.png" alt-text="Screenshot shows the teamsapp help commands." lightbox="../assets/images/toolkit-cli/atk-help.png":::
 
 ## `teamsapp install`
 
@@ -268,7 +268,7 @@ The following table lists the parameters available for `teamsapp list`:
 | `--samples` | Displays a list of available Teams app samples. |
 | `--templates` | Displays a list of available Teams app templates. |
 
-:::image type="content" source="../assets/images/teams-toolkit-cli/teamsapp-list.png" alt-text="Screenshot shows the teamsapp list commands.":::
+:::image type="content" source="../assets/images/toolkit-cli/atk-list.png" alt-text="Screenshot shows the teamsapp list commands.":::
 
 ## `teamsapp provision`
 
@@ -439,7 +439,7 @@ Check, grant, and list user permission to access and manage Teams application an
 | `teamsapp collaborator status` | Displays the current permission status of the project. |
 | `teamsapp collaborator grant` | Grants a user permission to access the project. |
 
-:::image type="content" source="../assets/images/teams-toolkit-cli/teamsapp-collaborator.png" alt-text="Screenshot shows the teamsapp collaborator commands.":::
+:::image type="content" source="../assets/images/toolkit-cli/atk-collaborator.png" alt-text="Screenshot shows the teamsapp collaborator commands.":::
 
 ### `teamsapp collaborator status` parameters
 
@@ -1241,7 +1241,7 @@ The following list provides required permissions for `TeamsFx` projects:
       teamsfx permission status --env dev --list-all-collaborators
       ```
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/permission-status-all-1.png" alt-text="permission-1" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/permission-status-all-1.png":::
+      :::image type="content" source="../assets/images/toolkit-v2/teams toolkit fundamentals/permission-status-all-1.png" alt-text="permission-1" lightbox="../assets/images/toolkit-v2/teams toolkit fundamentals/permission-status-all-1.png":::
 
     * To add another account as collaborator. Ensure the added account is under the same tenant:
 
@@ -1249,7 +1249,7 @@ The following list provides required permissions for `TeamsFx` projects:
       teamsfx permission grant --env dev --email user-email@user-tenant.com
       ```
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/permission-grant-1.png" alt-text="permission" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/permission-grant-1.png":::
+      :::image type="content" source="../assets/images/toolkit-v2/teams toolkit fundamentals/permission-grant-1.png" alt-text="permission" lightbox="../assets/images/toolkit-v2/teams toolkit fundamentals/permission-grant-1.png":::
 
     * To push your project to GitHub
 

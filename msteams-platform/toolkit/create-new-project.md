@@ -16,7 +16,7 @@ In this section, you can learn how to create a new Microsoft Teams project using
 
 You can build a new Teams project by selecting **Create a New App** in Microsoft Teams Toolkit. You can start from built-in Teams app templates or start from official Teams app samples in Teams Toolkit. What's more, Teams Toolkit  supports to start with Outlook Add-in templates to build your own Outlook Add-ins.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-capabilities-tabapp_1.png" alt-text="Screenshot shows the App Capability options.":::
+:::image type="content" source="../assets/images/toolkit-v2/first-tab/select-capabilities-tabapp_1.png" alt-text="Screenshot shows the App Capability options.":::
 
 To start with Teams capabilities, you can create the following types of Teams app:
 
@@ -36,45 +36,45 @@ To create a basic Teams app:
 
 1. Select the **Teams Toolkit** > **Create a New App**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Screenshot shows the Create New Project button in the Teams Toolkit sidebar.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-tab/create-project.png" alt-text="Screenshot shows the Create New Project button in the Teams Toolkit sidebar.":::
 
 1. In this example, select **Tab** as app capability.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-capabilities-tabapp_1.png" alt-text="Screenshot shows the App Capability to select.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-tab/select-capabilities-tabapp_1.png" alt-text="Screenshot shows the App Capability to select.":::
 
 1. Select **Basic Tab** as app capability.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-basic-tab.png" alt-text="Screenshot shows the option to select App Feature using a Tab as Basic Tab.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-tab/select-basic-tab.png" alt-text="Screenshot shows the option to select App Feature using a Tab as Basic Tab.":::
 
 1. Select **JavaScript** as the programming language.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-language-tab_1.png" alt-text="Screenshot shows the programming language to select.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-tab/select-language-tab_1.png" alt-text="Screenshot shows the programming language to select.":::
 
 1. Select **Default folder** to store your project root folder in the default location.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-default-location.png" alt-text="Screenshot shows the default location option to select.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-tab/select-default-location.png" alt-text="Screenshot shows the default location option to select.":::
 
     <details>
     <summary>Learn to change the default folder:</summary>
 
     1. Select **Browse**.
 
-        :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-browse_1.png" alt-text="Screenshot shows the Browse option highlighted to browse for storage.":::
+        :::image type="content" source="../assets/images/toolkit-v2/first-tab/select-browse_1.png" alt-text="Screenshot shows the Browse option highlighted to browse for storage.":::
 
     1. Select the location for project workspace.
 
-        :::image type="content" source="../assets/images/teams-toolkit-v2/select-folder_1.png" alt-text="Screenshot shows the Select Folder option highlighted.":::
+        :::image type="content" source="../assets/images/toolkit-v2/select-folder_1.png" alt-text="Screenshot shows the Select Folder option highlighted.":::
 
     The folder you select is the location for your project workspace.
     </details>
 
     1. Enter a suitable name for your app, such as helloworld, as the application name. Ensure that you use only alphanumeric characters. Press **Enter**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/enter-name-tab1.png" alt-text="Screenshot shows where to enter the app name.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-tab/enter-name-tab1.png" alt-text="Screenshot shows where to enter the app name.":::
 
    The Teams tab app is created in a few seconds.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/tab-app-created.png" alt-text="Screenshot shows the app created." lightbox="../assets/images/teams-toolkit-v2/first-tab/tab-app-created.png":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-tab/tab-app-created.png" alt-text="Screenshot shows the app created." lightbox="../assets/images/toolkit-v2/first-tab/tab-app-created.png":::
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20a%20new%20Teams%20app&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fcreate-new-project&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fcreate-new-project.md&documentVersionIndependentId=13410ab8-6255-e478-9a1d-4b3b348f1d16&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
