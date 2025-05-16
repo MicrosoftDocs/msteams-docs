@@ -50,7 +50,7 @@ Alternately, you can use a basic single sign-on (SSO) **hello world** app that's
 Use the Agents Toolkit extension for Visual Studio Code to start with a personal tab that's enabled to run in Teams, Outlook, and Microsoft 365.
 
 1. Open **Visual Studio Code**.
-2. Select the Agents Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="false"::: icon in the activity bar.
+2. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="false"::: icon in the activity bar.
 3. Select **Create a New App**.
 4. Select **Tab**.
 5. Select **Basic Tab**.
