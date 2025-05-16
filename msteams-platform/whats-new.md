@@ -33,7 +33,8 @@ Teams platform features that are available to all app developers.
 
 **2025 May**
 
-***May 13, 2025***: [Introducing agent usage analytics for third-party apps in Developer Portal](/microsoftteams/platform/concepts/build-and-test/analyze-your-apps-usage-in-developer-portal?tabs=thirdpartyapps).
+* ***May 19, 2025***: [Introducing Microsoft 365 admin center permission to view custom app analytics and the agent usage analytics for custom apps in Developer Portal.](/microsoftteams/platform/concepts/build-and-test/analyze-your-apps-usage-in-developer-portal?tabs=custom-apps-built-for-your-org).
+* ***May 13, 2025***: [Introducing agent usage analytics for third-party apps in Developer Portal](/microsoftteams/platform/concepts/build-and-test/analyze-your-apps-usage-in-developer-portal?tabs=thirdpartyapps).
 
 :::column-end:::
 :::row-end:::

@@ -135,7 +135,7 @@ You can select each of these metric names to see trends over time.
 
 The **Host product** tab shows the following usage analytics for app and agent:
 
-* [Usage by host product](#usage-by-host-product)
+* [App and agent usage by host product](#app-and-agent-usage-by-host-product)
 * [Usage by platform](#usage-by-platform)
 * [Usage by operating system](#usage-by-operating-system)
 
@@ -143,7 +143,7 @@ The first two scorecards display metrics such as the host with the most active u
 
 :::image type="content" source="../../assets/images/tdp/tdp-host-product.png" alt-text="Screenshot shows app and agent usage in different host products of your published app in Developer Portal." lightbox="../../assets/images/tdp/tdp-host-product-full.png":::
 
-#### Usage by host product
+#### App and agent usage by host product
 
 The **App usage by host product** chart shows your app's and agent's active usage across various host products, including **Microsoft 365 app**, **Microsoft 365 Copilot**, **Outlook**, and **Teams**.
 
