@@ -14,7 +14,7 @@ Teams App Test Tool (Test Tool) makes debugging bot-based apps effortless. You c
 
 The following image shows a sample app displaying a response in Test Tool:
 
- :::image type="content" source="../../assets/images/toolkit-v2/teams-toolkit-vs/test-tool-sample-app-output-vs.png" alt-text="Screenshot shows the Teams App Test Tool Adaptive Card." lightbox="../../assets/images/toolkit-v2/teams-toolkit-vs/test-tool-sample-app-output-vs.png":::
+ :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/test-tool-sample-app-output-vs.png" alt-text="Screenshot shows the Teams App Test Tool Adaptive Card." lightbox="../../assets/images/toolkit-v2/toolkit-vs/test-tool-sample-app-output-vs.png":::
 
 The following are the advantages of Test Tool:
 
@@ -51,28 +51,28 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
 1. Select **Create a new project**.
 
-   :::image type="content" source="../../assets/images/toolkit-v2/teams-toolkit-vs/create-new-project-vs.png" alt-text="Screenshot shows the selection to create a new project.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/create-new-project-vs.png" alt-text="Screenshot shows the selection to create a new project.":::
 
 1. In the search box, enter **Microsoft Teams**. From the search results, select **Microsoft Teams App**.
 
 1. Select **Next**.
 
-   :::image type="content" source="../../assets/images/toolkit-v2/teams-toolkit-vs/new-project-template-vs.png" alt-text="Screenshot shows the selection of templates to create a new project.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/new-project-template-vs.png" alt-text="Screenshot shows the selection of templates to create a new project.":::
 
 1. Enter **Project name** and select **Create**.
 
-    :::image type="content" source="../../assets/images/toolkit-v2/teams-toolkit-vs/project-name-vs.png" alt-text="Screenshot shows the option to enter the project name.":::
+    :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/project-name-vs.png" alt-text="Screenshot shows the option to enter the project name.":::
 
 1. Select **AI Chat Bot** > **Create**.
 
    > [!NOTE]
    > * [OpenAI](https://platform.openai.com/apps) or  [Azure OpenAI](https://oai.azure.com/portal) are the prerequisite to debug **AI Chat Bot** app.
 
-    :::image type="content" source="../../assets/images/toolkit-v2/teams-toolkit-vs/project-teams-application-vs.png" alt-text="Screenshot shows the selection of Teams application to create a new project.":::
+    :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/project-teams-application-vs.png" alt-text="Screenshot shows the selection of Teams application to create a new project.":::
 
     A GettingStarted window appears.
 
-    :::image type="content" source="../../assets/images/toolkit-v2/teams-toolkit-vs/project-get-started-vs.png" alt-text="Screenshot shows the get started page of the application in Visual Studio." lightbox="../../assets/images/toolkit-v2/teams-toolkit-vs/project-get-started-vs.png":::
+    :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/project-get-started-vs.png" alt-text="Screenshot shows the get started page of the application in Visual Studio." lightbox="../../assets/images/toolkit-v2/toolkit-vs/project-get-started-vs.png":::
 
 1. The `appsettings.TestTool.json` file helps to configure the Test Tool by updating few parameters. To update `appsettings.TestTool.json` file, follow either OpenAI or Azure OpenAI steps:
 
@@ -80,26 +80,26 @@ Test Tool offers a faster debug experience for bot applications when compared to
     
     Update OpenAI `ApiKey` in the `appsettings.TestTool.json` file.
     
-    :::image type="content" source="../../assets/images/toolkit-v2/teams-toolkit-vs/app-seetings-test-tool.png" alt-text="Screenshot displays the updated OpenAI key.":::
+    :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/app-seetings-test-tool.png" alt-text="Screenshot displays the updated OpenAI key.":::
     
     # [Azure OpenAI](#tab/azureopenai)
     
     1. Update Azure `OpenAIApiKey` and `OpenAIEndpoint` in the `appsettings.TestTool.json` file.
 
-        :::image type="content" source="../../assets/images/toolkit-v2/teams-toolkit-vs/app-seetings-test-tool-azureAI.png" alt-text="Screenshot displays the updated OpenAI key and endpoint for Azure.":::
+        :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/app-seetings-test-tool-azureAI.png" alt-text="Screenshot displays the updated OpenAI key and endpoint for Azure.":::
     
     1. Replace model name with Azure OpenAI model deployment name in `Program.cs` file.
    
-         :::image type="content" source="../../assets/images/toolkit-v2/teams-toolkit-vs/azure-openai-model-deployment-name.png" alt-text="Screenshot shows the AzureOpenAI model deployment name updated.":::
+         :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/azure-openai-model-deployment-name.png" alt-text="Screenshot shows the AzureOpenAI model deployment name updated.":::
     ---
 
 1. In the debug dropdown list, select **Teams App Test Tool (browser)**.
 
-   :::image type="content" source="../../assets/images/toolkit-v2/teams-toolkit-vs/app-test-tool.png" alt-text="Screenshot shows the option to select the Teams app test tool from the dropdown list.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/app-test-tool.png" alt-text="Screenshot shows the option to select the Teams app test tool from the dropdown list.":::
 
    Test Tool opens the bot in a webpage.
 
-   :::image type="content" source="../../assets/images/toolkit-v2/teams-toolkit-vs/test-tool.png" alt-text="Screenshot shows the bot opens the test tool in web page." lightbox="../../assets/images/toolkit-v2/teams-toolkit-vs/debug-test-tool-vs.png":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/test-tool.png" alt-text="Screenshot shows the bot opens the test tool in web page." lightbox="../../assets/images/toolkit-v2/toolkit-vs/debug-test-tool-vs.png":::
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Test+Tool+experience+in+Visual+Studio&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Ftoolkit-v4%2Fdebug-your-teams-app-test-tool-vs%3Ftabs%3Dopenai%23test-tool-experience-in-visual-studio&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Ftoolkit-v4%2Fdebug-your-Teams-app-test-tool-vs.md&documentVersionIndependentId=5f102ce2-7c72-b348-78aa-27881c4b18af&platformId=b9d3de6f-bea0-0124-0e30-0a5db1d1c05f&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)

@@ -162,7 +162,7 @@ items:
      To create a bot-based message extension agent, follow these steps:
 
     1. Open **Visual Studio Code**.
-    1. Select the Teams Toolkit :::image type="icon" source="assets/images/toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
+    1. Select the Teams Toolkit :::image type="icon" source="assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
 
     1. Select **Create a New App**.
 
@@ -255,7 +255,7 @@ items:
     Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
 
     1. Open **Visual Studio Code**.
-    1. Select the Teams Toolkit  :::image type="icon" source="assets/images/toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
+    1. Select the Teams Toolkit  :::image type="icon" source="assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the sidebar.
     1. Select **Sign in to Microsoft 365** using your credentials.
 
         Your default web browser opens to let you sign in to the account.
@@ -395,7 +395,7 @@ items:
 
     1. Open Visual Studio Code.
     1. Open the project folder in which you created the message extension app.
-    1. Select the Teams Toolkit  :::image type="icon" source="assets/images/toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
+    1. Select the Teams Toolkit  :::image type="icon" source="assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the sidebar.
     1. Select **Sign in to Azure** using your credentials.
 
         > [!TIP]
@@ -423,7 +423,7 @@ items:
     </details>
     <br>
 
-      Select the Teams Toolkit :::image type="icon" source="~/assets/images/toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
+      Select the Teams Toolkit :::image type="icon" source="~/assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
     1. Select **Provision**.
 

@@ -12,7 +12,7 @@ The <b>Provision</b> step creates resources in Azure and Microsoft 365 for your 
 
 # [Visual Studio Code](#tab/vsc4)
 
-Select the Teams Toolkit :::image type="icon" source="~/assets/images/toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code activity bar.
+Select the Teams Toolkit :::image type="icon" source="~/assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code activity bar.
 
 1. Select **Provision**.
 

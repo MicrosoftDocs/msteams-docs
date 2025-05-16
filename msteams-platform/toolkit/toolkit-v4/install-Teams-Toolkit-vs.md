@@ -19,7 +19,7 @@ You can learn how to install Microsoft Teams Toolkit and enjoy enhanced experien
 
    Visual Studio installer shows all workloads.
 
-   :::image type="content" source="../../assets/images/toolkit-v2/teams-toolkit-vs/visual-studio-install.png" alt-text="Screenshot shows how to install Visual studio." lightbox="../../assets/images/toolkit-v2/teams-toolkit-vs/visual-studio-install.png":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/visual-studio-install.png" alt-text="Screenshot shows how to install Visual studio." lightbox="../../assets/images/toolkit-v2/toolkit-vs/visual-studio-install.png":::
 
 1. From the installation screen, perform the following steps:
    1. Select **Workloads** > **ASP.NET and web development**.
@@ -28,7 +28,7 @@ You can learn how to install Microsoft Teams Toolkit and enjoy enhanced experien
 
 1. Select **Launch**.
 
-   :::image type="content" source="../../assets/images/toolkit-v2/teams-toolkit-vs/visual-studio-launch.png" alt-text="Screenshot shows how to launch visual studio.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/visual-studio-launch.png" alt-text="Screenshot shows how to launch visual studio.":::
 
 The Visual Studio 2022 window appears.
 

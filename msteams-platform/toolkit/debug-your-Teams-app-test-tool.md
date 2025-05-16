@@ -65,7 +65,7 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
 1. Open Visual Studio Code.
 
-1. Select the Teams Toolkit :::image type="icon" source="../assets/images/toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="false"::: icon in the Visual Studio Code **Activity Bar**.
+1. Select the Teams Toolkit :::image type="icon" source="../assets/images/toolkit-v2/toolkit-sidebar-icon.PNG" border="false"::: icon in the Visual Studio Code **Activity Bar**.
 
 1. Select **Create a New App**.
 

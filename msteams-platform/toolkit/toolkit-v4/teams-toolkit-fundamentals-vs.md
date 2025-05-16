@@ -18,7 +18,7 @@ Microsoft Teams Toolkit makes it simple to get started with app development for 
 * Smart defaults for hosting in Microsoft Azure using infrastructure-as-code and Bicep.
 * Bring your app to your organization or the Microsoft Teams Store using built-in publishing tools.
 
-:::image type="content" source="../../assets/images/toolkit-v2/teams-toolkit-vs/teams-toolkit-user-journey.png" alt-text="Screenshot shows the User Journey of the Teams Toolkit." lightbox="../../assets/images/toolkit-v2/teams-toolkit-vs/teams-toolkit-user-journey.png":::
+:::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/toolkit-user-journey.png" alt-text="Screenshot shows the User Journey of the Teams Toolkit." lightbox="../../assets/images/toolkit-v2/toolkit-vs/toolkit-user-journey.png":::
 
 ## Available for Visual Studio
 
@@ -54,7 +54,7 @@ Perform the following the steps to select templates and app capability:
 
 1. Select **Next**.
 
-   :::image type="content" source="../../assets/images/toolkit-v2/teams-toolkit-vs/new-project-template-vs.png" alt-text="Screenshot shows the search and select Microsoft Teams app." lightbox="../../assets/images/toolkit-v2/teams-toolkit-vs/new-project-template-vs.png":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/new-project-template-vs.png" alt-text="Screenshot shows the search and select Microsoft Teams app." lightbox="../../assets/images/toolkit-v2/toolkit-vs/new-project-template-vs.png":::
 
 ### Automatic registration and configuration
 
@@ -64,7 +64,7 @@ You can save time and let the toolkit automatically register the app in Teams De
 
 Teams Toolkit provides developers with lifecycle actions and grants access to configuration definitions within the teamsapp.yml file. You can now preview and trigger these predefined lifecycle actions using the CodeLens feature directly within the teamsapp.yml file. This streamlined process enhances the development workflow.
 
-   :::image type="content" source="../../assets/images/toolkit-v2/teams-toolkit-vs/codelens-trigger-teams-toolkit.png" alt-text="Screenshot shows the lifecycle access and access through CodeLens in teamsapp.yml file.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/codelens-trigger-teams-toolkit.png" alt-text="Screenshot shows the lifecycle access and access through CodeLens in teamsapp.yml file.":::
 
 ### Teams Toolkit documentation
 
@@ -74,7 +74,7 @@ To view the Teams Toolkit documentation, follow these steps from Teams Toolkit:
 
 1. Select **Teams Toolkit Documentation**.
 
-   :::image type="content" source="../../assets/images/toolkit-v2/teams-toolkit-vs/teams-toolkit-documentation.png" alt-text="Screenshot shows the option to select and view the documentation.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/toolkit-documentation.png" alt-text="Screenshot shows the option to select and view the documentation.":::
 
 A browser window opens to view the documentation.
 
@@ -84,7 +84,7 @@ The latest version of Teams Toolkit incorporates numerous preview features desig
 
 1. Select **Tools** > **Options...**.
 
-   :::image type="content" source="../../assets/images/toolkit-v2/teams-toolkit-vs/preview-tools-option.png" alt-text="Screenshot shows the selection of Options under Tools menu.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/preview-tools-option.png" alt-text="Screenshot shows the selection of Options under Tools menu.":::
 
     A pop-up window appears.
 
@@ -94,7 +94,7 @@ The latest version of Teams Toolkit incorporates numerous preview features desig
 
 1. Select **OK**.
 
-   :::image type="content" source="../../assets/images/toolkit-v2/teams-toolkit-vs/preview-copilot-plugin.png" alt-text="Screenshot shows the selection of agent from preview feature.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/preview-copilot-plugin.png" alt-text="Screenshot shows the selection of agent from preview feature.":::
 
 Enhance the capabilities of Microsoft 365 Copilot by converting your app into an agent that helps user productivity in daily tasks and workflows. Activate these agents for Microsoft 365 Copilot using the Teams Toolkit. Teams Toolkit agent supports specific capabilities, such as Custom Search Results and [AI Assistant Bot [Preview]](/microsoft-365-copilot/extensibility/).
 

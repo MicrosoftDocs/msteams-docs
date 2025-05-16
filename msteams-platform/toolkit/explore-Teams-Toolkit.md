@@ -47,7 +47,7 @@ Let's take a tour of Teams Toolkit.
 | --- | --- |
 | **Explorer** :::image type="icon" source="../assets/images/toolkit-v2/file-explorer-icon.PNG":::  | View the directory structure of the app. |
 | **Run and Debug** :::image type="icon" source="../assets/images/toolkit-v2/run-debug-icon.PNG":::  | Start the local or remote debug process. |
-| **Teams Toolkit** :::image type="icon" source="../assets/images/toolkit-v2/teams-toolkit-sidebar-icon.PNG"::: | View the task pane  in the Teams Toolkit. |
+| **Teams Toolkit** :::image type="icon" source="../assets/images/toolkit-v2/toolkit-sidebar-icon.PNG"::: | View the task pane  in the Teams Toolkit. |
 
 From the task pane, you can see the following sections:
 

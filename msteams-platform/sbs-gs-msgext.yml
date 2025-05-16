@@ -89,7 +89,7 @@ items:
 
    1. Open Visual Studio Code.
     
-   1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code activity bar.
+   1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code activity bar.
 
    1. Select **Create a New App**.
 
@@ -202,7 +202,7 @@ items:
 
    1. Open Visual Studio Code.
     
-   1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the activity bar.
+   1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the activity bar.
  
    1. Select **Sign in to Microsoft 365** using your credentials. Your default web browser opens to let you sign in.
 
@@ -418,7 +418,7 @@ items:
  
    1. Open the project folder in which you created the message extension app.
 
-   1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the activity bar.
+   1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the activity bar.
 
    1. Select **Sign in to Azure** using your credentials. Your default web browser opens to let you sign in.
 

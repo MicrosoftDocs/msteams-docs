@@ -28,7 +28,7 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
 
 1. Open **Visual Studio Code**.
 
-1. Select the Teams Toolkit :::image type="icon" source="~/assets/images/toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="false"::: icon in the Visual Studio Code **Activity Bar**
+1. Select the Teams Toolkit :::image type="icon" source="~/assets/images/toolkit-v2/toolkit-sidebar-icon.PNG" border="false"::: icon in the Visual Studio Code **Activity Bar**
 
 1. Select **Create a New App**.
 
