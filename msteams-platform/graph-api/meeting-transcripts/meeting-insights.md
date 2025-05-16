@@ -163,7 +163,7 @@ To fetch the insights of a particular meeting, follow these steps:
 
 | Sample name | Description | Node.js |
 | --- | --- | --- |
-| Meeting insights bot | This sample app retrieves meeting summaries, action items, and mentions using Meeting AI Insights API and displays them in a dialog. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/) |
+| Meeting insights bot | This sample app retrieves meeting summaries, action items, and mentions using Meeting AI Insights API and displays them in a dialog. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-meeting-ai-insights/nodejs) |
 
 ## See also
 
