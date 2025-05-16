@@ -1,5 +1,5 @@
 > [!NOTE]
-> Teams AI library v2 is available in developer preview.
+> Teams AI library v2 is available in developer preview. Learn more about the new and improved developer experience, MCP support, and more. If you:
 >
-> - If you have an agent that is meant for Teams, learn to migrate your agent to use Teams AI library v2.
-> - If you want to build an agent for Teams, here's the [quick start guide](/microsoftteams/platform/teams-ai-library/getting-started/quickstart).
+> - Have an existing agent for Teams, learn how to migrate your agent to use Teams AI library v2.
+> - Want to build a new agent for Teams, see the [quick start guide](/microsoftteams/platform/teams-ai-library/getting-started/quickstart).
