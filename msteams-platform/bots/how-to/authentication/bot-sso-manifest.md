@@ -191,11 +191,11 @@ To preview your app in Teams:
 
 1. Select your app package zip file, and then select **Add**.
 
-    The custom app is uploaded. The consent dialog appears to inform you of the permissions that might be required.
+    The custom app is uploaded. A consent dialog appears to inform you of the permissions that might be required.
 
-1. Select **Continue**.
+1. Select **View permissions** and provide the necessary permissions to authenticate the app.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-consent.png" alt-text="Screenshot shows a bot authentication consent message in Teams." border="false" lightbox="../../../assets/images/authentication/teams-sso-bots/bot-consent.png":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-consent.png" alt-text="Screenshot shows a bot authentication consent message in Teams." lightbox="../../../assets/images/authentication/teams-sso-bots/bot-consent.png":::
 
   Teams opens the app and you can use it.
 
