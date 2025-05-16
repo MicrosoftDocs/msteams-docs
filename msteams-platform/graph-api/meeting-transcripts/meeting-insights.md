@@ -19,7 +19,7 @@ The Meeting AI Insights API enables you to programmatically access structured AI
 
 * Comprehensive conversation summaries
 * Action items extracted from the discussion
-* Utterances where participants were directly mentioned
+* Utterances where participants are directly mentioned
 
 The API empowers you to deliver intelligent meeting experiences, such as surfacing key takeaways or generating follow-ups, without the need to build or maintain your own AI infrastructure. Insights are generated after the meeting concludes and are accessible through Microsoft Graph API endpoints.
 
@@ -158,6 +158,12 @@ To fetch the insights of a particular meeting, follow these steps:
 * AI-generated insights are only available after a meeting ends. The API doesn't support accessing live notes during a meeting.
 * AI-generated insights might take up to four hours to be available after the call ends.
 * Application-level permissions aren't supported.
+
+## Code sample
+
+| Sample name | Description | Node.js |
+| --- | --- | --- |
+| Meeting insights bot | This sample app retrieves meeting summaries, action items, and mentions using Meeting AI Insights API and displays them in a dialog. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/) |
 
 ## See also
 
