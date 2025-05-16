@@ -5,7 +5,7 @@ ms.localizationpriority: high
 ms.topic: conceptual
 ms.owner: vichug
 ms.author: surbhigupta
-ms.date: 05/15/2025
+ms.date: 05/16/2025
 ---
 
 # Get AI-generated meeting summaries with Meeting AI Insights API
