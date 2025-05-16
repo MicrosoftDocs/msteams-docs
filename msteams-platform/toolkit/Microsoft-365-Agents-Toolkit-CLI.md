@@ -5,8 +5,7 @@ description: Learn about Microsoft 365 Agents Toolkit Command Line Interface for
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 05/14/2025
-zone_pivot_groups: toolkit-cli
+ms.date: 05/16/2025
 ---
 
 # Microsoft 365 Agents Toolkit command line interface
