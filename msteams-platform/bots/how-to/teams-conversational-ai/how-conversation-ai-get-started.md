@@ -790,7 +790,9 @@ If you already have a bot on Teams, you can upgrade your existing bots to custom
 
 > [!NOTE]
 >
-> Custom engine agent isn't supported in Python.
+> * Custom engine agents are supported only in personal chats, group chats, and meetings.
+> * Custom engine agent support for Microsoft 365 Copilot Chat is available only in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
+> * Custom engine agent isn't supported in Python.
 
 Here is the required to-do list to upgrade your bot to custom engine agent:
 
