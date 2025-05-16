@@ -32,7 +32,7 @@ Use this account to access the Microsoft Azure portal and to provision new cloud
 
 1. Open Visual Studio Code.
 1. Open the project folder in which you created app.
-1. Select the Agents Toolkit icon in the sidebar.
+1. Select the Microsoft 365 Agents Toolkit icon in the sidebar.
 1. Select **Sign in to Azure**.
 
     > [!TIP]
@@ -60,7 +60,7 @@ Congratulations, you've created a Teams app! Now let's go ahead and learn how to
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/click_deploy.png" alt-text="Screenshot showing the selection of Deploy under Visual Studio Code.":::
 
-1. Select the Agents Toolkit icon in the sidebar.
+1. Select the Microsoft 365 Agents Toolkit icon in the sidebar.
 
 ### Customize deploy lifecycle in Teams
 
