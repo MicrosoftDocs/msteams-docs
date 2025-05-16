@@ -46,7 +46,7 @@ To create a search-based message extension app with GitHub Codespaces, follow th
 
    :::image type="content" source="../assets/images/get-started/building-codespace.png" alt-text="Screenshot shows you the codespace building your message extension.":::
 
-   Agents Toolkit prepares the message extension for you and opens it in VS Code in the browser. The Agents Toolkit icon appears in the activity bar of VS Code.
+   Agents Toolkit prepares the message extension for you and opens it in VS Code in the browser. The Microsoft 365 Agents Toolkit icon appears in the activity bar of VS Code.
 
 1. Select **Sign in to your Microsoft 365** and **Sign in to Azure** to sign in with your Microsoft 365 account.
 
