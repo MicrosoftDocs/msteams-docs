@@ -9,6 +9,8 @@ ms.date: 09/27/2024
 
 # Custom engine agent user experience
 
+[!INCLUDE [teams-ai-lib-v2-rec](../../../includes/teams-ai-lib-v2-rec.md)]
+
 A custom engine agent transforms system interactions. For developers, creating an exceptional user experience is crucial. This article details the steps, principles, and considerations for designing intuitive, user-centered interfaces that seamlessly integrate AI capabilities. The main goals are to simplify complex tasks, enhance productivity, and offer personalized experiences through adaptive learning. A custom engine agent includes features that enhance its functionality and integration within the Microsoft ecosystem:
 
 - **Generative AI integration**: Uses advanced AI models for natural language processing and interaction.
