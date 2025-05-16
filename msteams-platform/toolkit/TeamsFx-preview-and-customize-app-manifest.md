@@ -137,7 +137,7 @@ This option renders `appPackage/manifest.json` with environment variables, and t
 Alternatively, use the following Microsoft Teams Toolkit command line interface (Teams Toolkit CLI) command:
 
 ```bash
-teamsfx validate --manifest-path <YOUR-PATH-TO-MANIFEST>
+atk validate --manifest-path <YOUR-PATH-TO-MANIFEST>
 ```
 
 If you meet `MissingEnvironmentVariablesError`, it means that Teams Toolkit can't find corresponding environment variables defined in manifest.json. You may need to run **Provision** or select F5 to generate environment variables, or manually update `.env.xx` file to fulfill the value.
@@ -153,7 +153,7 @@ This option validates the zipped app package with validation rules.
 Alternatively, use the following Teams Toolkit CLI command:
 
 ```bash
-teamsfx validate --app-package-file-path <YOUR-PATH-TO-APP-PACKAGE>
+atk validate --app-package-file-path <YOUR-PATH-TO-APP-PACKAGE>
 ```
 
 It has other validation rules than the app manifest schema. For example, if static tab section has entityId `conversations` and name, the following error appears:
@@ -169,7 +169,7 @@ After you've previewed and validated the app manifest file, you can sync your lo
 Alternatively, use the following Teams Toolkit CLI command:
 
 ```bash
-teamsfx update teams-app
+atk update teams-app
 ```
 
 > [!NOTE]
