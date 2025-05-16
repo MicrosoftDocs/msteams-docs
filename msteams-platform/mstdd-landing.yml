@@ -21,7 +21,16 @@ landingContent:
 # Cards and links should be based on top customer tasks or top subjects
 # Start card title with a verb
 
-
+- title: Build apps for Teams
+  linkLists:
+    - linkListType: concept
+      links:
+      - text: BUILD feature name
+        url: ../msteams-platform/overview.md
+      - text: Build feature name
+        url: ~/concepts/app-fundamentals-overview.md
+      - text: BUILD feature name
+        url: ~/concepts/design/design-teams-app-overview.md
 
 - title: Build custom engine agents
   linkLists:
