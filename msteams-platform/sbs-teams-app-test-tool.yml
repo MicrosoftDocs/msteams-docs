@@ -115,14 +115,14 @@ items:
     
     | Folder or file name | Contents |
     | --- | --- |
-    | `env/.env.testtool` | The configuration file with environment variables that can be committed to Git.  |
-    | `env/.env.testtool.user` |The configuration file with environment variables, including credentials, which aren't committed to Git by default.  |
+    | `env/.env.playground` | The configuration file with environment variables that can be committed to Git.  |
+    | `env/.env.playground.user` |The configuration file with environment variables, including credentials, which aren't committed to Git by default.  |
     | `appPackage` | App manifest template files and app icons (color.png and outline.png). |
     | `appPackage/manifest.json` | App manifest for running the app in local and remote environment.  |
     |`src/app.js`| Handles business logics for the AI chat bot.|
     |`m365agents.yml`|This is the main Teams Toolkit project file. The project file defines two primary things:  Properties and configuration and stage definitions. |
     |`m365agents.local.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging.|
-    |`teamsapp.testtool.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging in Test Tool.|
+    |`m365agents.playground.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging in Test Tool.|
 
 - title: Build and run your AI chat bot app
   durationInMinutes: 1
@@ -208,7 +208,7 @@ items:
 
     1. Open your project in Visual Studio Code.
 
-    1. Under **EXPLORER**, go to **env** > **.env.testtool.user** file.
+    1. Under **EXPLORER**, go to **env** > **.env.playground.user** file.
 
     1. Enter your **SECRET_AZURE_OPENAI_API_KEY** and **SECRET_AZURE_OPENAI_ENDPOINT**.
 

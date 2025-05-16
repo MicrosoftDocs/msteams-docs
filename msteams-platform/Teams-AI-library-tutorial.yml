@@ -130,7 +130,7 @@ items:
      | `src/app/app.js`| Handles business logics for the Basic AI Chatbot. |
      | `m365agents.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
      | `m365agents.local.yml` | This override `m365agents.yml` with actions that enable local execution and debugging. |
-     | `teamsapp.testtool.yml` | This override `m365agents.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
+     | `m365agents.playground.yml` | This override `m365agents.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
 
 - title: Configure your custom engine agent
   durationInMinutes: 1

@@ -76,7 +76,7 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/ai-agent-project-output-biuld-new.png" alt-text="Screenshot shows the ai chatbot created and readme file is available.":::
 
-    1. Under **EXPLORER**, go to the **env** > **.env.testtool.user** file.
+    1. Under **EXPLORER**, go to the **env** > **.env.playground.user** file.
 
     1. Update the following values:
        * `SECRET_AZURE_OPENAI_API_KEY=<your-key>`
@@ -123,7 +123,7 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
     | - | - |
     |`m365agents.yml`|This is the main Teams Toolkit project file. The project file defines the properties and configuration stage definitions. |
     |`m365agents.local.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging.|
-    |`teamsapp.testtool.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
+    |`m365agents.playground.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
 
    # [Assistants API](#tab/assistantsapi)
 
@@ -234,7 +234,7 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
     | - | - |
     |`m365agents.yml`|This is the main Teams Toolkit project file. The project file defines two primary things:  Properties and configuration Stage definitions. |
     |`m365agents.local.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging.|
-    |`teamsapp.testtool.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
+    |`m365agents.playground.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
 
     ---
 

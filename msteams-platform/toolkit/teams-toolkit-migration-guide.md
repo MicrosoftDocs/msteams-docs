@@ -56,7 +56,7 @@ Perform the following steps to migrate to the new project structure:
 
     * Create a `launchSettings.json` file in the **TeamsApp** folder. Add the contents of the file `launchSettings.json` of your project folder to the newly created `launchSettings.json` in the **TeamsApp** folder.
     * In the newly created `launchSettings.json` of the **TeamsApp** folder, delete the `dotnetRunMessages`, `launchBrowser`, `applicationUrl`, `environmentVariables`, and `hotReloadProfile` fields.
-    * In the `launchSettings.json` of your project folder, delete the `launchBrowser`, `launchTestTool`, and `launchUrl` fields and duplicated profiles.
+    * In the `launchSettings.json` of your project folder, delete the `launchBrowser`, `launchPlayground`, and `launchUrl` fields and duplicated profiles.
 
     > [!NOTE]
     >
