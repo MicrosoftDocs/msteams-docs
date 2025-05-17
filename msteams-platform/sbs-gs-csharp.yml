@@ -62,7 +62,7 @@ items:
 
           :::image type="content" source="~/assets/images/sbs-csharp/manage-ext.png" alt-text="Screenshot shows the Manage Extensions." lightbox="~/assets/images/sbs-csharp/manage-extension.png":::
 
-      1. From the left pane, select **Installed**. The **Teams Toolkit** extension is avaialble.
+      1. From the left pane, select **Installed**. The **Microsoft 365 Agents Toolkit** extension is avaialble.
     
           :::image type="content" source="~/assets/images/sbs-csharp/select-ttk.png" alt-text="Screenshot shows the selection of Teams Toolkit." lightbox="~/assets/images/sbs-csharp/select-installed-ttk.png":::
 
@@ -194,7 +194,7 @@ items:
 
     1. In the **Solution Explorer**, under **Solution MyTeamsApp**, right-click on **MyTeamsApp**.
 
-    1. Select **Teams Toolkit** > **Prepare Teams App Dependencies**.
+    1. Select **Microsoft 365 Agents Toolkit** > **Prepare Teams App Dependencies**.
 
         :::image type="content" source="~/assets/images/sbs-csharp/app-dependencies.png" alt-text="Screenshot shows the selection of Teams app Dependencies." lightbox="~/assets/images/sbs-csharp/teams-app-dependencies.png":::
     

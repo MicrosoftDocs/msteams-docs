@@ -22,7 +22,7 @@ You can add cloud resources in the following ways:
 ### To add cloud resources using Teams Toolkit
 
    1. Open your Teams app project in **Visual Studio Code**.
-   1. Select **Teams Toolkit** from the Visual Studio Code activity bar.
+   1. Select **Microsoft 365 Agents Toolkit** from the Visual Studio Code activity bar.
    1. Select **View How-to Guides** in the **DEVELOPMENT** section.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-view-how-to-guides.png" alt-text="Screenshot shows the option to select View How-to Guides under Development.":::
@@ -66,7 +66,7 @@ You can add cloud resources in the following ways:
 Add a connection to an existing API, developed by your organization or a third party, using the following steps:
 
 1. Open your Teams app project in **Microsoft Visual Studio Code**.
-1. Select **Teams Toolkit** from the Visual Studio Code activity bar.
+1. Select **Microsoft 365 Agents Toolkit** from the Visual Studio Code activity bar.
 1. Select **View How-to Guides** in the **DEVELOPMENT** section.
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-view-how-to-guides.png" alt-text="Screenshot shows the option to select View How-to Guides under Development.":::

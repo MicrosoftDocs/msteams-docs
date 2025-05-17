@@ -70,7 +70,7 @@ Teams Toolkit provides developers with lifecycle actions and grants access to co
 
 To view the Teams Toolkit documentation, follow these steps from Teams Toolkit:
 
-1. Select **Project** > **Teams Toolkit**.
+1. Select **Project** > **Microsoft 365 Agents Toolkit**.
 
 1. Select **Teams Toolkit Documentation**.
 

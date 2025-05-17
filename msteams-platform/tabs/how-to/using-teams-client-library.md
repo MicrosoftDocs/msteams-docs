@@ -393,7 +393,7 @@ The easiest way to update your Teams app with TeamsJS version 2.0.x is to use th
 
 ### 1. Install the latest Teams Toolkit Visual Studio Code extension
 
-In the *Visual Studio Code Extensions Marketplace*, search for **Teams Toolkit** and install the latest version.
+In the *Visual Studio Code Extensions Marketplace*, search for **Microsoft 365 Agents Toolkit** and install the latest version.
 
 ### 2. Update TeamsJS references
 

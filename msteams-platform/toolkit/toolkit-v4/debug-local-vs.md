@@ -32,7 +32,7 @@ In the debug dropdown menu:
 To debug your app after you create a project, perform the following steps:
 
 1. Right-click on your project.
-1. Select **Teams Toolkit** > **Prepare Teams App Dependencies**.
+1. Select **Microsoft 365 Agents Toolkit** > **Prepare Teams App Dependencies**.
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-localdebug-teamsappdependencies.png" alt-text="Screenshot shows the local debug teams app dependencies.":::
 

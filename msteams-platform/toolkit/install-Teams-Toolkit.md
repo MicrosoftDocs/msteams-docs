@@ -30,13 +30,13 @@ You can install Teams Toolkit using **Extensions** in Visual Studio Code, or ins
 
     The **EXTENSIONS: MARKETPLACE** pane appears.
 
-1. Enter **Teams Toolkit** in the search box.
+1. Enter **Microsoft 365 Agents Toolkit** in the search box.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-search.PNG" alt-text="Screenshot show the Teams Toolkit listed in the search result.":::
 
    Teams Toolkit appears in the search result.
 
-1. Select **Teams Toolkit**, and then from the Teams Toolkit extension page that appears in the right pane, select  **Install**.
+1. Select **Microsoft 365 Agents Toolkit**, and then from the Teams Toolkit extension page that appears in the right pane, select  **Install**.
   
     :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-ga.PNG" alt-text="Screenshot show the Teams Toolkit.":::
 
@@ -83,11 +83,11 @@ By default, Visual Studio Code automatically keeps Teams Toolkit up-to-date. If 
 
 1. Select **Extensions** :::image type="icon" source="../assets/images/teams-toolkit-v2/extension icon.png" border="false"::: from the Visual Studio Code activity bar.
 
-1. Enter **Teams Toolkit** in the search box.
+1. Enter **Microsoft 365 Agents Toolkit** in the search box.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/TeamsToolkit-search.png" alt-text="Screenshot shows the Teams Toolkit search and the result.":::
 
-1. Select **Teams Toolkit**.
+1. Select **Microsoft 365 Agents Toolkit**.
 
 1. On the Teams Toolkit page, select the dropdown next to **Uninstall**.
 
@@ -110,7 +110,7 @@ The Teams Toolkit for Visual Studio Code extension is available in a prerelease 
 
 1. Open **Visual Studio Code**.
 1. Select **Extensions** :::image type="icon" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/extension icon.png" border="false" alt-text="Screenshot shows the extension icon."::: from the Visual Studio Code activity bar.
-1. Enter **Teams Toolkit** in the search box.
+1. Enter **Microsoft 365 Agents Toolkit** in the search box.
 1. On the Teams Toolkit page, select the dropdown arrow next to **Install**.
 1. Select **Install Pre-Release Version**.
 

@@ -18,7 +18,7 @@ Teams provides SSO function for an app using the Microsoft Teams Toolkit for Mic
 
 1. Open **Visual Studio**.
 
-1. Select **Project** > **Teams Toolkit** > **Add Authentication Code**.
+1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Add Authentication Code**.
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-add-authentication-code.PNG" alt-text="Screenshot shows the option to add authentication code.":::
 

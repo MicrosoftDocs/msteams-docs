@@ -160,7 +160,7 @@ Get started with Teams AI library using the **Math tutor assistant** sample. It 
 
 1. Copy the sample to a new directory that isn't a subdirectory of `teams-ai`.
 
-1. From the left pane, select **Teams Toolkit**.
+1. From the left pane, select **Microsoft 365 Agents Toolkit**.
 
 1. Under **ACCOUNTS**, sign in to the following:
 

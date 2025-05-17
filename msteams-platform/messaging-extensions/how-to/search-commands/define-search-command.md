@@ -43,7 +43,7 @@ Before you get started, ensure that you meet the following requirements:
 To create a search-based message extension using Teams Toolkit, follow these steps:
 
 1. Open **Visual Studio Code**.
-1. From the left pane, Select **Teams Toolkit**.
+1. From the left pane, Select **Microsoft 365 Agents Toolkit**.
 1. Select **Create a New App**.
 1. Select **Message Extension**.
 1. Select **Custom Search Results**.
@@ -55,7 +55,7 @@ To create a search-based message extension using Teams Toolkit, follow these ste
 
 To run the message extension in Teams, follow these steps:
 
-1. From the left pane, select **Teams Toolkit**.
+1. From the left pane, select **Microsoft 365 Agents Toolkit**.
 1. Under **ACCOUNTS**, sign in with your [Microsoft 365 account](/microsoftteams/platform/toolkit/accounts) and Azure account if you haven't already.
 
    :::image type="content" source="../../../assets/images/Copilot/api-based-me-ttk-accounts.png" alt-text="Screenshot shows the Microsoft 365 and Azure sign in option in Teams Toolkit.":::

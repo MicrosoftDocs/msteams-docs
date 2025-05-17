@@ -29,7 +29,7 @@ Microsoft Teams Toolkit project templates focus on getting started with an app t
 ### Use Teams Toolkit pane
 
    1. Open your app project in **Microsoft Visual Studio Code**.
-   1. Select **Teams Toolkit** from the Visual Studio Code activity bar.
+   1. Select **Microsoft 365 Agents Toolkit** from the Visual Studio Code activity bar.
    1. Select **View How-to Guides** in the **DEVELOPMENT** section.
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-view-how-to-guides.png" alt-text="Screenshot shows the option to select View How-to Guides under Development.":::
