@@ -13,7 +13,7 @@ ms.date: 10/20/2023
 > [!NOTE]
 > Adaptive Card Previewer is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 
-Microsoft Adaptive Card Previewer enables you to preview Adaptive Cards when you refine the designs. It works with Microsoft 365 Agents Toolkit (previously known as Teams Toolkit), allows you to preview Adaptive Cards created for Teams bot and message extension. You can open a side-by-side preview to observe live changes and switch between different themes.
+Microsoft Adaptive Card Previewer enables you to preview Adaptive Cards when you refine the designs. It works with Microsoft 365 Agents Toolkit (previously known as Teams Toolkit), allows you to preview Adaptive Cards created for Agents, Teams bot and message extensions. You can open a side-by-side preview to observe live changes and switch between different themes.
 
 :::image type="content" source="../../assets/images/previewer-adaptive-card/adaptive-card-previewer.png" alt-text="Screenshot shows the Adaptive Card Previewer extension Visual Studio Code." lightbox="../../assets/images/previewer-adaptive-card/adaptive-card-previewer.png":::
 
@@ -21,7 +21,7 @@ Microsoft Adaptive Card Previewer enables you to preview Adaptive Cards when you
 
 Adaptive Card Previewer provides faster and more reliable solutions to preview Adaptive Card designs. Adaptive Card Previewer supports the following features:
 
-* **Agents Toolkit Integration**: Enables Just-in-Time (JIT) installation of Adaptive Card Previewer when you update Adaptive Cards generated from a Agents Toolkit project.
+* **Agents Toolkit Integration**: Enables Just-in-Time (JIT) installation of Adaptive Card Previewer when you update Adaptive Cards generated from an Agents Toolkit project.
 
   :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-preview-example.png" alt-text="Screenshot shows a sample preview of an Adaptive Card when updating an Adaptive Card." lightbox="../../assets/images/previewer-adaptive-card/acp-preview-example.png":::
 
