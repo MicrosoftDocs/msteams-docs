@@ -132,7 +132,7 @@ items:
         :::image type="content" source="~/assets/images/sbs-csharp/visual-studio-welcome.png" alt-text="Screenshot shows the selection of New Project in Visual Studio.":::
 
     1. In the search box, enter **Teams**.
-    1. Select **Microsoft Teams App** > **Next**.
+    1. Select **Microsoft 365 Agents** > **Next**.
     
         :::image type="content" source="~/assets/images/sbs-csharp/project-template.png" alt-text="Screenshot shows the selection of Teams." lightbox="~/assets/images/sbs-csharp/new-project-template-vs.png":::
 
