@@ -51,7 +51,7 @@ Use the Agents Toolkit extension for Visual Studio Code to start with a personal
 
 1. Open **Visual Studio Code**.
 2. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="false"::: icon in the activity bar.
-3. Select **Create a New App**.
+3. Select **Create a New Agent/App** > **Teams App**.
 4. Select **Tab**.
 5. Select **Basic Tab**.
 
@@ -61,11 +61,13 @@ Use the Agents Toolkit extension for Visual Studio Code to start with a personal
 7. Select a location on your local machine for the workspace folder and enter your application name.
 8. Once your app is created, within the Agents Toolkit extension, make sure you're signed in to the appropriate Microsoft 365 Developer Program sandbox tenant and Azure account. These options are available in the **ACCOUNTS** section of the extension.
 9. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
-10. Enter **Teams: Provision** to create the Teams app resources such as Azure App Service, App Service plan, Azure Bot, and Managed Identity in your Azure account. Alternatively, you can select **Provision** under **LIFECYCLE** section of the extension.
-11. Select a subscription and a resource group. If you choose to create a new resource group, you need to specify the location.
-12. Select **Provision**.
-13. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
-14. Enter **Teams: Deploy** to deploy the sample code to the provisioned resources in Azure and start the app. Alternatively, you can select **Deploy** under the **LIFECYCLE** section of the extension.
+10. Enter **Microsoft 365 Agents: Provision** to create the Teams app resources such as Azure App Service, App Service plan, Azure Bot, and Managed Identity in your Azure account. 
+    Alternatively, you can select **Provision** under **LIFECYCLE** section of the extension.
+1. Select a subscription and a resource group. If you choose to create a new resource group, you need to specify the location.
+1. Select **Provision**.
+1. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
+1. Enter **Microsoft 365 Agents: Deploy** to deploy the sample code to the provisioned resources in Azure and start the app. 
+    Alternatively, you can select **Deploy** under the **LIFECYCLE** section of the extension.
 
 From here, you can skip ahead to [upload your custom app in Teams](#upload-your-custom-app-in-teams) and preview your app in Outlook and the Microsoft 365 app. The app manifest and TeamsJS API calls are already updated for Microsoft 365 app.
 
@@ -99,7 +101,7 @@ You have two options for updating your app manifest:
 # [Agents Toolkit](#tab/manifest-teams-toolkit)
 
 1. Open the command palette: `Ctrl+Shift+P`.
-1. Run the `Teams: Upgrade Teams manifest` command and select your app manifest file. Changes are made in place.
+1. Run the `Microsoft 365 Agents: Upgrade Teams manifest` command and select your app manifest file. Changes are made in place.
 
 
 # [Manual steps](#tab/manifest-manual)
@@ -128,7 +130,7 @@ Your app must refer to the npm package `@microsoft/teams-js@2.19.0` (or later) t
 You can use Agents Toolkit to help identify and automate the required code changes to upgrade from 1.x TeamsJS versions to TeamsJS 2.x.x versions. Alternately, you can perform the same steps manually; refer to [TeamsJS library](../tabs/how-to/using-teams-client-library.md#whats-new-in-teamsjs-version-2xx) for details.
 
 1. Open the *Command palette*: `Ctrl+Shift+P`.
-1. Run the command `Teams: Upgrade Teams JS SDK and code references`.
+1. Run the command `Microsoft 365 Agents: Upgrade Teams JS SDK and code references`.
 
 Upon completion, your *package.json* file references `@microsoft/teams-js@2.0.0` (or later) and your `*.js/.ts` and `*.jsx/.tsx` files are updated with:
 
@@ -330,7 +332,7 @@ You can debug your tab application running in Teams, Microsoft 365 app, and Outl
 
 Choose the desired debug method and select the **F5** key. Upon the first run of the local debug, Agents Toolkit prompts you to sign in to your Microsoft 365 tenant account.
 
-Provide feedback and report any issues with Agents Toolkit debugging experience at [Microsoft Teams Framework (TeamsFx)](https://github.com/OfficeDev/TeamsFx/issues).
+PProvide feedback and report any issues with Agents Toolkit debugging experience at [Microsoft 365 Agents Toolkit GitHub Repo](https://github.com/OfficeDev/teams-toolkit/issues).
 
 #### Mobile debugging
 

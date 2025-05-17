@@ -108,7 +108,7 @@ Follow these steps to update your TeamsJS to the latest version using Agents Too
 
 1. Open your app in Visual Studio Code and select **Microsoft 365 Agents Toolkit** extension.
 1. Under **View**, select **Command Palette...** or **Ctrl+Shift+P**.
-1. Run the command `Teams: Upgrade Teams JS SDK and code references`.
+1. Run the command `Microsoft 365 Agents: Upgrade Teams JS SDK and code references`.
 
 Your package.json file references `@microsoft/teams-js@2.x.x` and your `*.js/.ts` and `*.jsx/.tsx` files are updated with:
 

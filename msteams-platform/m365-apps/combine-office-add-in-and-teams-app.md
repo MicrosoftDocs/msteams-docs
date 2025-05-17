@@ -160,8 +160,8 @@ To separate the source code for the tab or bot, perform the following steps:
 ### Create an Outlook Add-in project
 
 1. Open a second instance of Visual Studio Code.
-1. Select **Microsoft 365 Agents Toolkit** from the **Activity Bar**.
-1. Select **Create a new app**.
+1. Select the **Microsoft 365 Agents Toolkit** icon from the **Activity Bar**.
+1. Select **Create a New Agent/App**.
 1. In the **Select an option** dropdown menu, select **Outlook add-in** > **Taskpane**.
 1. Select the folder where you want to create the add-in.
 1. Give a name (with no spaces) to the project when prompted.
