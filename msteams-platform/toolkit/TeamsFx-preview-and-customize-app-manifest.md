@@ -31,7 +31,7 @@ To preview the app manifest file in local environment, select the F5 key to run 
 
 You can also trigger **Zip Teams App Package** from tree view or **Teams: Zip Teams App Package** from command palette to generate the preview app manifest and app package.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/zip-app-package.png" alt-text="Screenshot shows the selection of Zip Teams App Package.":::
+:::image type="content" source="../assets/images/toolkit-v2/customize app manifest/zip-app-package.png" alt-text="Screenshot shows the selection of Zip Teams App Package.":::
 
 ## Preview the app manifest file in remote environment
 
@@ -39,7 +39,7 @@ To preview the app manifest file in remote environment, you can trigger **Provis
 
 You can also trigger **Zip Teams App Package** from tree view or **Teams: Zip Teams App Package** from command palette to generate the preview app manifest and app package.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/zip-app-package (1).png" alt-text="Screenshot shows the option to zip the Teams app package.":::
+:::image type="content" source="../assets/images/toolkit-v2/customize app manifest/zip-app-package (1).png" alt-text="Screenshot shows the option to zip the Teams app package.":::
 
 ## Customize app manifest in Visual Studio Code
 
@@ -126,13 +126,13 @@ For example, you can customize app description by defining a new environment var
 
 After customization, you might want to validate your app manifest or app package. You can trigger **Validate Application** from tree view, or **Teams: Validate Application** from command palette. There are two options, **Validate using manifest schema** or **Validate app package using validation rules**.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/validate-application.png" alt-text="Screenshot shows the selection of validate application under utility.":::
+:::image type="content" source="../assets/images/toolkit-v2/customize app manifest/validate-application.png" alt-text="Screenshot shows the selection of validate application under utility.":::
 
 ### Validate using the app manifest schema
 
 This option renders `appPackage/manifest.json` with environment variables, and then validates your app manifest with its schema.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/validate-schema.png" alt-text="Screenshot shows the selection of validate using manifest schema.":::
+:::image type="content" source="../assets/images/toolkit-v2/customize app manifest/validate-schema.png" alt-text="Screenshot shows the selection of validate using manifest schema.":::
 
 Alternatively, use the following Microsoft Teams Toolkit command line interface (Teams Toolkit CLI) command:
 
@@ -142,13 +142,13 @@ teamsfx validate --manifest-path <YOUR-PATH-TO-MANIFEST>
 
 If you meet `MissingEnvironmentVariablesError`, it means that Teams Toolkit can't find corresponding environment variables defined in manifest.json. You may need to run **Provision** or select F5 to generate environment variables, or manually update `.env.xx` file to fulfill the value.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/missing-env.png" alt-text="Screenshot shows the missing environment variables error.":::
+:::image type="content" source="../assets/images/toolkit-v2/customize app manifest/missing-env.png" alt-text="Screenshot shows the missing environment variables error.":::
 
 ### Validate app package using validation rules
 
 This option validates the zipped app package with validation rules.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/validate-app-package.png" alt-text="Screenshot shows the selection of Validate app package using validation rules.":::
+:::image type="content" source="../assets/images/toolkit-v2/customize app manifest/validate-app-package.png" alt-text="Screenshot shows the selection of Validate app package using validation rules.":::
 
 Alternatively, use the following Teams Toolkit CLI command:
 
@@ -158,13 +158,13 @@ teamsfx validate --app-package-file-path <YOUR-PATH-TO-APP-PACKAGE>
 
 It has other validation rules than the app manifest schema. For example, if static tab section has entityId `conversations` and name, the following error appears:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/validation-output.png" alt-text="Screenshot shows the validation output." lightbox="../assets/images/teams-toolkit-v2/customize app manifest/validation-output.png":::
+:::image type="content" source="../assets/images/toolkit-v2/customize app manifest/validation-output.png" alt-text="Screenshot shows the validation output." lightbox="../assets/images/toolkit-v2/customize app manifest/validation-output.png":::
 
 ## Update Teams app
 
 After you've previewed and validated the app manifest file, you can sync your local changes to Teams Developer Portal by triggering **Teams: Update Teams App** command from command palette.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/update-teams-app.png" alt-text="Screenshot shows the selection of Teams update Teams app.":::
+:::image type="content" source="../assets/images/toolkit-v2/customize app manifest/update-teams-app.png" alt-text="Screenshot shows the selection of Teams update Teams app.":::
 
 Alternatively, use the following Teams Toolkit CLI command:
 
@@ -187,18 +187,18 @@ If the app manifest file is outdated due to configuration file change or templat
 
 In `appPackage/manifest.json`, you can go to CodeLens to preview the values for `local` and `dev` environments.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/codelens-v5.png" alt-text="Screenshot shows the CodeLens v5.":::
+:::image type="content" source="../assets/images/toolkit-v2/customize app manifest/codelens-v5.png" alt-text="Screenshot shows the CodeLens v5.":::
 
 > [!NOTE]
 > Provision the environment or execute local debug to generate environment variables.
 
 You can go to `.env` file by selecting CodeLens, which provides a dropdown list with all the environment names. After you select an environment, the corresponding `.env` file opens.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/select-env-with-local.png" alt-text="Screenshot shows the selection of dev environment.":::
+:::image type="content" source="../assets/images/toolkit-v2/customize app manifest/select-env-with-local.png" alt-text="Screenshot shows the selection of dev environment.":::
 
 To preview values for all the environments, you can hover over the placeholder. It shows a list of environment names and corresponding values. If you didn't provision the environment or execute local debug, the environment variables might not exist. Provision or debug the app locally to see the placeholder value.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/hover-v5.png" alt-text="Screenshot shows the placeholder when hovered displays a list with environment names and corresponding values.":::
+:::image type="content" source="../assets/images/toolkit-v2/customize app manifest/hover-v5.png" alt-text="Screenshot shows the placeholder when hovered displays a list with environment names and corresponding values.":::
 
 ## See also
 

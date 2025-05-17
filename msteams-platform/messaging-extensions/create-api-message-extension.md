@@ -619,7 +619,7 @@ To build an API-based message extension using Teams Toolkit for Visual Studio Co
 1. Select **Create a New App**.
 1. Select **Message Extension**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/create-me.png" alt-text="Screenshot shows the message extension option in Teams Toolkit.":::
+   :::image type="content" source="../assets/images/toolkit-v2/first-msgext/create-me.png" alt-text="Screenshot shows the message extension option in Teams Toolkit.":::
 
 1. Select **Custom Search Results**.
 
@@ -1108,7 +1108,7 @@ To build an API-based message extension with multiple parameters using Teams Too
 1. Select **Create a New App**.
 1. Select **Message Extension**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/create-new-app1.png" alt-text="Screenshot shows the message extension option in Teams Toolkit.":::
+   :::image type="content" source="../assets/images/toolkit-v2/first-msgext/create-new-app1.png" alt-text="Screenshot shows the message extension option in Teams Toolkit.":::
 
 1. Select **Custom Search Results**.
 

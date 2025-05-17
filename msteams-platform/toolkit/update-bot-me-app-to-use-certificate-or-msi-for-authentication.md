@@ -46,7 +46,7 @@ To use a certificate for bot authentication:
 
 1. Under **Certificates**, select **Upload certificate**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/certificates-secrets.png" alt-text="Screenshot shows the certificates and secrets option.":::
+    :::image type="content" source="../assets/images/toolkit-v2/certificates-secrets.png" alt-text="Screenshot shows the certificates and secrets option.":::
 
     The **Upload a certificate** window appears.
 
@@ -59,7 +59,7 @@ To use a certificate for bot authentication:
 
 1. Select **Add**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/upload-certificate.png" alt-text="Screenshot shows the upload certificate option.":::
+    :::image type="content" source="../assets/images/toolkit-v2/upload-certificate.png" alt-text="Screenshot shows the upload certificate option.":::
 
 ## Update the bot app code
 
@@ -112,7 +112,7 @@ To delete the bot secret:
 1. In the left pane, under **Manage**, select **Certificates & secrets**.
 1. Delete the secrets from Entra.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/delete-client-secret-value.png" alt-text="Screenshot shows the delete client secret value.":::
+    :::image type="content" source="../assets/images/toolkit-v2/delete-client-secret-value.png" alt-text="Screenshot shows the delete client secret value.":::
 
 Your bot app now uses the certificate for authentication.
 
@@ -162,7 +162,7 @@ To create a new **Azure Bot** service with MSI type, follow these steps:
 
 1. From the **Creation type**, select **Create new Microsoft App ID**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/microsoft-app-id.png" alt-text="Screenshot shows the microsoft app ID option.":::
+    :::image type="content" source="../assets/images/toolkit-v2/microsoft-app-id.png" alt-text="Screenshot shows the microsoft app ID option.":::
 
     OR
 
@@ -231,7 +231,7 @@ To delete the bot secret:
 1. In the left pane, under **Manage**, select **Certificates & secrets**.
 1. Delete the secrets from Entra.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/delete-client-secret-value.png" alt-text="Screenshot shows the delete client secret value.":::
+    :::image type="content" source="../assets/images/toolkit-v2/delete-client-secret-value.png" alt-text="Screenshot shows the delete client secret value.":::
 
 Your bot app now uses MSI for authentication.
 

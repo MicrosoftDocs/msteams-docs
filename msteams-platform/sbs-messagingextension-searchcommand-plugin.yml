@@ -99,7 +99,7 @@ items:
    1. Select **Upload an app**.
    1. Look for the option to **Upload a custom app**. If the option is visible, you've enabled custom app upload. 
     
-      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Screenshot shows the option to upload a custom app in Teams.":::
+      :::image type="content" source="../msteams-platform/assets/images/toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Screenshot shows the option to upload a custom app in Teams.":::
 
         > [!NOTE]
         > Contact your Teams administrator, if you don't find the option to upload a custom app.
@@ -162,19 +162,19 @@ items:
      To create a bot-based message extension agent, follow these steps:
 
     1. Open **Visual Studio Code**.
-    1. Select the Teams Toolkit :::image type="icon" source="assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
+    1. Select the Teams Toolkit :::image type="icon" source="assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
 
     1. Select **Create a New App**.
 
-        :::image type="content" source="assets/images/teams-toolkit-v2/first-msgext/create-project.png" alt-text="Screen shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
+        :::image type="content" source="assets/images/toolkit-v2/first-msgext/create-project.png" alt-text="Screen shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
 
     1. Select **Message Extension** to create an app using the Teams Toolkit.
 
-        :::image type="content" source="assets/images/teams-toolkit-v2/first-msgext/create-new-app1.png" alt-text="Screenshot shows the Wizard start for Create New Project.":::
+        :::image type="content" source="assets/images/toolkit-v2/first-msgext/create-new-app1.png" alt-text="Screenshot shows the Wizard start for Create New Project.":::
 
     1. Select **Custom Search Results**.
 
-        :::image type="content" source="assets/images/teams-toolkit-v2/first-msgext/select-capabilities-mex1.png" alt-text="Screenshot showing how to add capabilities to your new app.":::
+        :::image type="content" source="assets/images/toolkit-v2/first-msgext/select-capabilities-mex1.png" alt-text="Screenshot showing how to add capabilities to your new app.":::
 
     1. Select **Start with a Bot**.
 
@@ -182,27 +182,27 @@ items:
     
     1. Select **JavaScript** as the programming language.
 
-        :::image type="content" source="assets/images/teams-toolkit-v2/first-msgext/select-language-tab.png" alt-text="Screenshot showing how to select the programming language.":::
+        :::image type="content" source="assets/images/toolkit-v2/first-msgext/select-language-tab.png" alt-text="Screenshot showing how to select the programming language.":::
 
     1. Select **Default folder** to store your project root folder in default location.
 
-        :::image type="content" source="assets/images/teams-toolkit-v2/first-msgext/select-default-location.png" alt-text="Screenshot shows the selection of default location.":::
+        :::image type="content" source="assets/images/toolkit-v2/first-msgext/select-default-location.png" alt-text="Screenshot shows the selection of default location.":::
 
         You can also change the default location by the following steps:
 
         1. Select **Browse**.
 
-            :::image type="content" source="assets/images/teams-toolkit-v2/first-msgext/select-browse.png" alt-text="Screenshot shows the selection of browse location option.":::
+            :::image type="content" source="assets/images/toolkit-v2/first-msgext/select-browse.png" alt-text="Screenshot shows the selection of browse location option.":::
             
         1. Select the location for project workspace.
 
         1. Select the **Select Folder**.
 
-            :::image type="content" source="assets/images/teams-toolkit-v2/select-folder.png" alt-text="Screenshot showing how to select the folder.":::
+            :::image type="content" source="assets/images/toolkit-v2/select-folder.png" alt-text="Screenshot showing how to select the folder.":::
 
     1. Enter a suitable name for your app. Select **Enter**.
 
-        :::image type="content" source="assets/images/teams-toolkit-v2/first-msgext/enter-project-name.png" alt-text="Screenshot showing how to enter the app name.":::
+        :::image type="content" source="assets/images/toolkit-v2/first-msgext/enter-project-name.png" alt-text="Screenshot showing how to enter the app name.":::
 
         Teams Toolkit creates the app in a few seconds.
 
@@ -210,7 +210,7 @@ items:
 
         After your app is created, the Teams Toolkit displays the following message: 
 
-        :::image type="content" source="assets/images/teams-toolkit-v2/preview-project-msg.png" alt-text="Screenshot shows the local debug.":::
+        :::image type="content" source="assets/images/toolkit-v2/preview-project-msg.png" alt-text="Screenshot shows the local debug.":::
 
         You can select **Local debug** to preview your project. 
 
@@ -255,7 +255,7 @@ items:
     Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
 
     1. Open **Visual Studio Code**.
-    1. Select the Teams Toolkit  :::image type="icon" source="assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
+    1. Select the Teams Toolkit  :::image type="icon" source="assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the sidebar.
     1. Select **Sign in to Microsoft 365** using your credentials.
 
         Your default web browser opens to let you sign in to the account.
@@ -265,7 +265,7 @@ items:
 
         The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name. The Teams Toolkit displays **Sideloading enabled** if custom app upload is enabled for your Microsoft 365 account.
 
-        :::image type="content" source="assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled-msg.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure.":::
+        :::image type="content" source="assets/images/toolkit-v2/first-tab/m365-sideloading-enabled-msg.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure.":::
 
         Now you're ready to build the app and run it locally!
     > [!div class="nextstepaction"]
@@ -307,7 +307,7 @@ items:
         
         </details>
 
-        :::image type="content" source="assets/images/teams-toolkit-v2/first-msgext/f5-build-and-run-mex.png" alt-text="Screenshot showing when F5 key is pressed to debug." lightbox="assets/images/teams-toolkit-v2/first-msgext/f5-build-and-run-mex.png":::
+        :::image type="content" source="assets/images/toolkit-v2/first-msgext/f5-build-and-run-mex.png" alt-text="Screenshot showing when F5 key is pressed to debug." lightbox="assets/images/toolkit-v2/first-msgext/f5-build-and-run-mex.png":::
 
         > [!NOTE]
         > When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window opens when the build is complete. This process can take three to five minutes to complete.
@@ -395,7 +395,7 @@ items:
 
     1. Open Visual Studio Code.
     1. Open the project folder in which you created the message extension app.
-    1. Select the Teams Toolkit  :::image type="icon" source="assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
+    1. Select the Teams Toolkit  :::image type="icon" source="assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the sidebar.
     1. Select **Sign in to Azure** using your credentials.
 
         > [!TIP]
@@ -423,35 +423,35 @@ items:
     </details>
     <br>
 
-      Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
+      Select the Teams Toolkit :::image type="icon" source="~/assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
     1. Select **Provision**.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot showing the selection of provision in the cloud under Teams toolkit.":::
+       :::image type="content" source="~/assets/images/toolkit-v2/provisioning-commands.png" alt-text="Screenshot showing the selection of provision in the cloud under Teams toolkit.":::
 
     1. Select a subscription to use for the Azure resources.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot showing the subscription to use for the Azure resources.":::
+       :::image type="content" source="~/assets/images/toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot showing the subscription to use for the Azure resources.":::
 
         Your app is hosted using Azure resources. A dialog warns you that costs might be incurred when running resources in Azure.
 
     1. Select **Provision**.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Screenshot showing a dialog box that costs may be incurred when running resources in Azure.":::
+       :::image type="content" source="~/assets/images/toolkit-v2/deploy-azure/provision-warning.png" alt-text="Screenshot showing a dialog box that costs may be incurred when running resources in Azure.":::
 
        The provisioning process creates resources in the Azure cloud. It might take some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Screenshot showing a notice, which displays 'hellomsg' successfully provisioned in the cloud.":::
+       :::image type="content" source="~/assets/images/toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Screenshot showing a notice, which displays 'hellomsg' successfully provisioned in the cloud.":::
 
        If you want, you can view the provisioned resources. For this tutorial, you don't need to view resources.
 
        The provisioned resource appears in the **ENVIRONMENT** section.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="Screenshot showing the resource being provisioned in the environment section.":::
+       :::image type="content" source="~/assets/images/toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="Screenshot showing the resource being provisioned in the environment section.":::
 
     1. Select **Deploy** from the **LIFECYCLE** panel after provisioning is complete.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="Screenshot showing deploy to cloud.":::
+       :::image type="content" source="~/assets/images/toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="Screenshot showing deploy to cloud.":::
 
       As with provisioning, deployment takes some time. You can monitor the process by watching the dialogs in the bottom-right corner. After a few minutes, you see a completion notice.
 
@@ -467,7 +467,7 @@ items:
     1. Select **Launch Remote (Edge)** from the launch configuration dropdown.
     1. Select the **Start debugging (F5)** to launch your app from Azure.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot showing the launch app remotely.":::
+       :::image type="content" source="~/assets/images/toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot showing the launch app remotely.":::
 
     1. Select **Add**.
 
