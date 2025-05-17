@@ -1,14 +1,27 @@
 Suggested actions help users with ideas of what to ask next, based on the previous response or conversation. Your bot should offer context-specific suggestions to the user, rather than generic or fixed ones. You can use your bot’s large language model (LLM) to generate up to three suggestions along with its responses. Then, you can extract these suggestions and present them as options for the user to choose.
 
-When a user selects a button, it remains visible and accessible on the rich cards. However, for suggested actions, the buttons are designed to disappear after selection to prevent the user from selecting stale options that may no longer be relevant.
+When a user selects a button, it remains visible and accessible on the rich cards. Suggested actions are supported in all scopes:
+
+- `personal`: In one-on-one chats, actions are shown as smart replies, so only the actions from the last message appear.
+- `team` and `groupChat`: In group chats and channels, actions are always saved with the message.
 
 > [!NOTE]
 >
-> * `SuggestedActions` are only supported for one-on-one chat bots with both text based messages and Adaptive Cards.
-> * `SuggestedActions` aren't supported for chat bots with attachments for any conversation type.
-> * `imBack` is the only supported action type and Teams display up to three suggested actions.
+> `SuggestedActions` aren't supported for chat bots with attachments for any conversation type.
 
-To add suggested actions to a message, specify a list of [card action](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) objects that represent the buttons to be displayed to the user for the [`sugestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions) property of the [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) object.
+# [Desktop](#tab/desktop)
+
+Add group/channel screenshot for suggested actions for desktop client
+
+# [Mobile](#tab/mobile)
+
+Add group/channel screenshot for suggested actions for mobile client
+
+---
+
+# [`imBack`](#tab/iamback)
+
+To add suggested actions to a message, specify a list of [card action](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) objects that represent the buttons to be displayed to the user for the [`suggestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions) property of the [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) object.
 
 The following is an example to implement and experience suggested actions:
 
@@ -46,12 +59,131 @@ The following is an example to implement and experience suggested actions:
   "replyToId": "5d5cdc723"
 }
 ```
-The following illustrates an example of suggested actions:
+
+# [`Action.Compose`](#tab/actioncompose)
+
+You can use the `Action.Compose` to insert a message in the compose box, which helps you add a new action type. This action enables you to include semantic objects like tags, mention users in the chat or channel, and other rich objects like emojis and gifs.
+
+The following code snippet shows an example of implementing `Action.Compose`:
+
+```json
+{ 
+   Type: “Action.Compose”, 
+   Title: “button title”, 
+   Value: <chatMessage> 
+} 
+```
+
+The value object must follow the [`chatMessage`](/graph/api/resources/chatmessage?view=graph-rest-1.0&preserve-view=true) object in the Graph API. A modified version for other hubs can be shown as this example:
+
+```json
+{ 
+   Type: “Action.Compose”, 
+   Title: “button title”, 
+   Value: { 
+      type: “Teams.chatMessage”, 
+      data: <GraphAPI Chat Message Object> 
+   } 
+}
+```
+
+> [!NOTE]
+> If the message is received in a hub that doesn't support it, the app shows an error message. The bots are aware of the channel to which its posting.
+
+---
+
+<!--
+### `imBack`
+
+To add suggested actions to a message, specify a list of [card action](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) objects that represent the buttons to be displayed to the user for the [`suggestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions) property of the [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) object.
+
+The following is an example to implement and experience suggested actions:
+
+``` json
+{
+  "type": "message",
+  "from": {
+    "id": "12345678",
+    "name": "sender's name"
+  },
+  "conversation": {
+    "id": "abcd1234",
+    "name": "conversation's name"
+  },
+  "recipient": {
+    "id": "1234abcd",
+    "name": "recipient's name"
+  },
+  "text": "What are the tasks for the day.",
+  "inputHint": "expectingInput",
+  "suggestedActions": {
+    "actions": [
+      {
+        "type": "imBack",
+        "title": "Create a new query identifying overdue tasks",
+        "value": "Create a new query identifying overdue tasks"
+      },
+      {
+        "type": "imBack",
+        "title": "Create a new work item for this feature",
+        "value": "Create a new work item for this feature"
+            }
+        ]
+    },
+  "replyToId": "5d5cdc723"
+}
+```
+
+---
+
+### `Action.Compose`
+
+You can use the `Action.Compose` to insert a message in the compose box, which helps you add a new action type. This action enables you to include semantic objects like tags, mention users in the chat or channel, and other rich objects like emojis and gifs.
+
+The value object must follow the [`chatMessage`](/graph/api/resources/chatmessage?view=graph-rest-1.0&preserve-view=true) object in the Graph API. The following code snippet shows an example of implementing `Action.Compose`:
+
+```json
+{
+   Type: “Action.Compose”,
+   Title: “button title”,
+   Value: {
+      type: “Teams.chatMessage”,
+      data: <GraphAPI Chat Message Object>
+   }
+}
+```
+
+A modified version for other hubs can be shown as this example:
+
+```json
+{ 
+
+   Type: “Action.Compose”, 
+
+   Title: “button title”, 
+
+   Value: { 
+      type: “Teams.chatMessage”, 
+      data: <GraphAPI Chat Message Object> 
+   } 
+
+}
+```
+
+It can show an error message, if unsupported. Bots are aware of the channel to which they post.
+
+The following illustrates an example of `Actions.Compose` action:
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Screenshot that shows the suggested actions in desktop." lightbox="~/assets/images/Cards/suggested-actions.png":::
+:::image type="content" source="~/assets/images/Cards/actions-compose.png" alt-text="Screenshot that shows the Actions.Compose suggested action in desktop." lightbox="~/assets/images/Cards/suggested-actions.png":::
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="~/assets/images/Cards/suggested-actions-mobile.png" alt-text="Screenshot that shows the suggested actions in mobile." lightbox="~/assets/images/Cards/suggested-actions-mobile.png":::
+:::image type="content" source="../../assets/images/Cards/prompt-suggestion-mobile.png" alt-text="Screenshot shows the Actions.Compose suggested action in mobile."lightbox="../../assets/images/Cards/prompt-suggestion-mobile - large.png":::
+
+---
+
+> [!NOTE]
+> If the message is received in a hub that doesn't support it, the app shows an error message. The bots are aware of the channel to which its posting.
+-->
