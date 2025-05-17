@@ -13,8 +13,8 @@ zone_pivot_groups: toolkit-cli
 
 > [!IMPORTANT]
 >
-> * We recommend that you use Teams Toolkit CLI v3 to build your Teams app.
-> * TeamsFx CLI v1 isn't supported and TeamsFx CLI v2 will be depreated by March 2025.
+> * While Teams Toolkit CLI is still supported to build your Teams app, we recommend that you use Microsoft 365 Agents Toolkit CLI.
+> * TeamsFx CLI v2 and v1 aren't supported.
 
 Microsoft Teams Toolkit command line interface (Teams Toolkit CLI) is a text-based command line interface that accelerates Microsoft Teams application development. It aims to provide keyboard centric experience while building Teams applications. For more information, see [source code](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli) and [npm package](https://www.npmjs.com/package/@microsoft/teamsfx-cli).
 
@@ -562,7 +562,7 @@ Install `teamsfx-cli` from `npm` and run `teamsfx -h` to check all available com
 
 ## Interactive mode
 
-`atk' command runs in interactive mode by default. You can work in non-interactive mode by setting `--interactive` flag to `false`.
+`teamsfx' command runs in interactive mode by default. You can work in non-interactive mode by setting `--interactive` flag to `false`.
 
 ## `teamsfx new`
 
@@ -720,8 +720,8 @@ Preview the current application.
 | `--folder` | No | Select root folder of the project. Defaults to `./`. |
 | `--env` | No | Select an existing env for the project. Defaults to `local`. |
 | `--teams-manifest-file` | No | Select the Teams app `manifest file path`, defaults to `${folder}/appPackage/manifest.json`. |
-| `--run-command` | No | The command to start local service. Work for `local` environment only. If undefined, `atk' uses the auto detected one from project type (`npm run dev:teamsfx` or `dotnet run` or `func start`). If empty, `atk' skips starting local service. |
-| `--running-pattern` | No | The ready signal output that service is launched. Work for `local` environment only. If undefined, `atk' uses the default common pattern ("started/successfully/finished/crashed/failed"). If empty, `atk' treats process start as ready signal. |
+| `--run-command` | No | The command to start local service. Work for `local` environment only. If undefined, `teamsfx' uses the auto detected one from project type (`npm run dev:teamsfx` or `dotnet run` or `func start`). If empty, `teamsfx' skips starting local service. |
+| `--running-pattern` | No | The ready signal output that service is launched. Work for `local` environment only. If undefined, `teamsfx' uses the default common pattern ("started/successfully/finished/crashed/failed"). If empty, `teamsfx' treats process start as ready signal. |
 | `--open-only` | No | Work for `local` environment only. If true, directly open web client without launching local service. Defaults to `false`. |
 | `--m365-host` | No | Preview the application in Teams, Outlook, or the Microsoft 365 app [string] [choices: `teams`, `outlook`, `office`]. Defaults to `teams`. |
 | `--browser` | No | Select browser to open Teams web client [string] [choices: `chrome`, `edge`, `default`]. Defaults to `default`. |
@@ -802,7 +802,7 @@ Check, grant, and list user permission.
 
 * Grant Permission
 
-  Project creator and collaborators can use `atk' permission grant command to add a new collaborator to the project:
+  Project creator and collaborators can use `teamsfx' permission grant command to add a new collaborator to the project:
 
   ```typescript
   teamsfx permission grant --env dev --email user-email@user-tenant.com

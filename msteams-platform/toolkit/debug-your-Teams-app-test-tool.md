@@ -55,7 +55,7 @@ Test Tool is an npm package that has a CLI command called `teamsapptester`. When
 To use a Teams bot on Test Tool, you need to provide:
 
 * Message endpoint: A bot message endpoint is the URL that links Test Tool and your bot. You can update the endpoint with the `BOT_ENDPOINT` environment variable or use the default value of `http://localhost:3978/api/messages`.
-* Configuration file (Optional): A configuration file informs Test Tool about your customized contextual information in Teams. The file is named **.teamsappplayground.yml** in the project's root folder. If Teams can't find this file, it uses the default configuration. For more information, see [customize Teams context](#customize-teams-context).
+* Configuration file (Optional): A configuration file informs Test Tool about your customized contextual information in Teams. The file is named **.m365agentsplayground.yml** in the project's root folder. If Teams can't find this file, it uses the default configuration. For more information, see [customize Teams context](#customize-teams-context).
 
 ## Test Tool experience in Teams Toolkit
 
@@ -373,7 +373,7 @@ If your bot code uses Bot Framework APIs, you can modify the configuration file 
 
 To comprehensively test this bot in Test Tool, it's crucial to update the configuration file to use the correct email addresses of the owners of the inactive bugs.
 
-1. Go to the `.teamsappplayground.yml` file in the project's root folder.
+1. Go to the `.m365agentsplayground.yml` file in the project's root folder.
 
 1. Go to the `users` section and update the `name`, `userPrincipleName`, and `email` of the required user.
 
