@@ -615,8 +615,8 @@ To test your API-based message extension created in Developer Portal, you can us
 To build an API-based message extension using Teams Toolkit for Visual Studio Code, follow these steps:
 
 1. Open **Visual Studio Code**.
-1. From the left pane, select **Teams Toolkit**.
-1. Select **Create a New App**.
+1. From the left pane, select **Microsoft 365 Agents Toolkit**.
+1. Select **Create a New Agent/App** > **Teams App**.
 1. Select **Message Extension**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/create-me.png" alt-text="Screenshot shows the message extension option in Teams Toolkit.":::
@@ -797,7 +797,7 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
 1. Open **Visual Studio**.
 1. Go to **File** > **New** > **Project...** or **New Project**.
 
-1. Search for **Teams** and select **Microsoft Teams App**.
+1. Search for **Microsoft** and select **Microsoft 365 Agents**.
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-vs-teams.png" alt-text="Screenshot shows the Microsoft Teams app option in Visual Studio.":::
 
@@ -1104,8 +1104,8 @@ You can specify the input types, titles, descriptions, and required fields for t
 To build an API-based message extension with multiple parameters using Teams Toolkit for Visual Studio Code, follow these steps:
 
 1. Open **Visual Studio Code**.
-1. From the left pane, select **Teams Toolkit**.
-1. Select **Create a New App**.
+1. From the left pane, select **Microsoft 365 Agents Toolkit**.
+1. Select **Create a New Agent/App** > **Teams App**.
 1. Select **Message Extension**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/create-new-app1.png" alt-text="Screenshot shows the message extension option in Teams Toolkit.":::

@@ -71,8 +71,8 @@ You can create an action command using **Teams Toolkit** and **Developer Portal 
 To create an action-based message extension using Teams Toolkit, follow these steps:
 
 1. Open **Visual Studio Code**.
-1. From the left pane, Select **Teams Toolkit**.
-1. Select **Create a New App**.
+1. From the left pane, Select **Microsoft 365 Agents Toolkit**.
+1. Select **Create a New Agent/App** > **Teams App**.
 1. Select **Message Extension**.
 1. Select **Collect From Input and Process Data**.
 1. Select a **programming language**.
