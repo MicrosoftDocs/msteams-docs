@@ -157,6 +157,9 @@
     displayName: Tools and SDKs
   - name: Tools 
     items:
+    - name: Microsoft 365 Agents Toolkit
+      href: /microsoft-365/developer/overview-m365-agents-toolkit?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+      displayName: ATK, M365, Microsoft 365, Agents Toolkit
     - name: Teams Toolkit for Visual Studio Code
       items:
       - name: Teams Toolkit overview
