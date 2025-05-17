@@ -924,7 +924,7 @@ After you set up your project workspace with Teams Toolkit, build your tab proje
 
 To build and run your app:
 
-1. Select **Project** > **Teams Toolkit** > **Prepare Teams App Dependencies**.
+1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Prepare Teams App Dependencies**.
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png" alt-text="Screenshot shows how to select the option to prepare Teams app dependencies for your project in visual studio."lightbox="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png":::
 
@@ -1008,7 +1008,7 @@ You've learned to create, build, and run Teams app with tab capability. The foll
 
 ### **To provision your tab app in the cloud**
 
-1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.
+1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Provision in the Cloud**.
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-provision_1.png" alt-text="Screenshot shows how to select provision in the cloud options for the project in visual studio."lightbox="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-provision_1.png":::
 
@@ -1049,7 +1049,7 @@ You've learned to create, build, and run Teams app with tab capability. The foll
 
 #### **To deploy your tab app to cloud**
 
-1. Select **Project** > **Teams Toolkit** > **Deploy to the Cloud**.
+1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Deploy to the Cloud**.
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-deploytocloud_1.png" alt-text="Screenshot shows how to select the option to deploy to the cloud for your project in visual studio. "lightbox="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-deploytocloud_1.png":::
 
@@ -1061,7 +1061,7 @@ You've learned to create, build, and run Teams app with tab capability. The foll
 
 #### **To preview your tab app in Teams**
 
-1. Select **Project** > **Teams Toolkit** > **Preview in Teams**.
+1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Preview in Teams**.
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-preview_1.png" alt-text="Screenshot shows how to select preview in Teams options for your project in visual studio."lightbox="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-preview_1.png":::
 

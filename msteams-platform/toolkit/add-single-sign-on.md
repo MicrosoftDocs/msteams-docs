@@ -31,7 +31,7 @@ Teams Toolkit helps you to add SSO to the following Teams capabilities in Visual
 You can perform the following steps to add SSO using Teams Toolkit in Visual Studio Code:
 
 1. Open **Visual Studio Code**.
-2. Select **Teams Toolkit** from the Visual Studio Code activity bar.
+2. Select **Microsoft 365 Agents Toolkit** from the Visual Studio Code activity bar.
 3. Select **View How-to Guides** in the **DEVELOPMENT** section.
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-view-how-to-guides.png" alt-text="Screenshot shows the option to select View How-to Guides under Development.":::

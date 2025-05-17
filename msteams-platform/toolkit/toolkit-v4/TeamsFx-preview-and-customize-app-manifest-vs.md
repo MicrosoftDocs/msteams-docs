@@ -33,7 +33,7 @@ TEAMS_APP_DESCRIPTION=This is an amazing app
 
 You can preview the app manifest file either **For Local** or **For Azure**. To preview the app manifest file, follow these steps:
 
-1. Select **Project** > **Teams Toolkit**.
+1. Select **Project** > **Microsoft 365 Agents Toolkit**.
 
 1. Select **Prepare Teams App Dependencies** or **Provision in the Cloud...** to generate environment variables for local or remote Teams app.
 
@@ -41,11 +41,11 @@ You can preview the app manifest file either **For Local** or **For Azure**. To 
 
 1. Upload the **Zip App Package** in the following ways:
 
-    1. Select **Project** > **Teams Toolkit** > **Zip App Package** and then select either **For Local** or **For Azure**
+    1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Zip App Package** and then select either **For Local** or **For Azure**
 
         :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/zip-app-package.png" alt-text="Screenshot shows the zip app package for local or Azure.":::
 
-    1. From **Solution Explorer**, right-click on **MyTeamsApp14** (in this scenario the project name is MyTeamsApp14). Go to **Teams Toolkit** > **Zip App Package** and then select either **For Local** or **For Azure**.
+    1. From **Solution Explorer**, right-click on **MyTeamsApp14** (in this scenario the project name is MyTeamsApp14). Go to **Microsoft 365 Agents Toolkit** > **Zip App Package** and then select either **For Local** or **For Azure**.
 
         :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/solution-zip.png" alt-text="Screenshot shows the solution zip app package for local or Azure.":::
 
@@ -69,7 +69,7 @@ You can preview app manifest file under `appPackage/build` in Visual Studio.
 After you've previewed the app manifest file in Visual Studio, you can sync the local changes to Developer Portal. To sync changes to Developer Portal follow these steps:
 
 1. Select **Project**.
-1. Select **Teams Toolkit**.
+1. Select **Microsoft 365 Agents Toolkit**.
 1. Select **Update Manifest in Teams Developer Portal**.
 
 :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/update-teams-app.png" alt-text="Screenshot shows update app manifest in teams developer portal.":::
@@ -77,7 +77,7 @@ After you've previewed the app manifest file in Visual Studio, you can sync the 
 You can also sync the local changes to Developer Portal from **Solution Explorer**:
 
 1. Right-click on **MyTeamsApp14**.
-1. Select **Teams Toolkit**.
+1. Select **Microsoft 365 Agents Toolkit**.
 1. Select **Update Manifest in Teams Developer Portal**
 
 :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/solution-update-teams-app.png" alt-text="Screenshot shows solution update to teams app.":::

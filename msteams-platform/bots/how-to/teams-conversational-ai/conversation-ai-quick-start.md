@@ -157,7 +157,7 @@ Get started with Teams AI library using the LightBot sample. It enables your com
 
     ---
 
-1. From the left pane, select **Teams Toolkit**.
+1. From the left pane, select **Microsoft 365 Agents Toolkit**.
 
 1. Under **ACCOUNTS**, sign-in to the following:
 
@@ -283,7 +283,7 @@ Teams Toolkit automatically provisions `MicrosoftAppId` and `MicrosoftAppPasswor
 
 1. Go to **Solution Explorer** and select your project.
 
-1. Right-click menu and select **Teams Toolkit** > **Prepare Teams App Dependencies**.
+1. Right-click menu and select **Microsoft 365 Agents Toolkit** > **Prepare Teams App Dependencies**.
 
    :::image type="content" source="../../../assets/images/bots/dotnet-ai-library-prepare-teams.png" alt-text="Screenshot shows an example of the Prepared Teams app Dependencies option under Teams Toolkit section in Visual Studio.":::
 
@@ -314,8 +314,8 @@ Teams Toolkit automatically provisions `MicrosoftAppId` and `MicrosoftAppPasswor
 You can also deploy the samples to Azure using Teams Toolkit. To deploy, follow these steps:
 
 1. In Visual Studio, go to **Solution Explorer** and select your project.
-1. Right-click menu and select **Teams Toolkit** > **Provision in the Cloud**. Toolkit provisions your sample to Azure.
-1. Right-click menu and select **Teams Toolkit** > **Deploy to the Cloud**.
+1. Right-click menu and select **Microsoft 365 Agents Toolkit** > **Provision in the Cloud**. Toolkit provisions your sample to Azure.
+1. Right-click menu and select **Microsoft 365 Agents Toolkit** > **Deploy to the Cloud**.
 
 ::: zone-end
 

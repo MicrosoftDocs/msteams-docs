@@ -615,7 +615,7 @@ To test your API-based message extension created in Developer Portal, you can us
 To build an API-based message extension using Teams Toolkit for Visual Studio Code, follow these steps:
 
 1. Open **Visual Studio Code**.
-1. From the left pane, select **Teams Toolkit**.
+1. From the left pane, select **Microsoft 365 Agents Toolkit**.
 1. Select **Create a New App**.
 1. Select **Message Extension**.
 
@@ -720,7 +720,7 @@ To build an API-based message extension using Teams Toolkit for Visual Studio Co
      > [!NOTE]
      > Teams toolkit source file includes a security check to ensure that an incoming request is authorized. It uses a function `isApiKeyValid(req)` to verify if the request contains a valid API key. If the API key isn't valid, the code returns a 401 HTTP status code, indicating an unauthorized response.
 
-1. From the left pane, select **Teams Toolkit**.
+1. From the left pane, select **Microsoft 365 Agents Toolkit**.
 1. Under **ACCOUNTS**, sign in with your [Microsoft 365 account](/microsoftteams/platform/toolkit/accounts) and Azure account if you haven't already.
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-accounts.png" alt-text="Screenshot shows the Microsoft 365 and Azure sign in option in Teams Toolkit.":::
@@ -846,7 +846,7 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
        The tunnel you created is listed under **Dev Tunnels**.
 
    1. Go to **Solution Explorer** and select your project.
-   1. Right-click the menu and select **Teams Toolkit** > **Prepare Teams App Dependencies**.
+   1. Right-click the menu and select **Microsoft 365 Agents Toolkit** > **Prepare Teams App Dependencies**.
 
       If prompted, sign in with a Microsoft 365 account. A message appears that the app is successfully prepared.
 
@@ -858,13 +858,13 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
    1. Select the dropdown and select the APIs from the list.
    1. Select **Create**. The project is scaffolded and you can find API specification, manifest, and response template files in the **appPackage** folder.
    1. Go to **Solution Explorer** and select your project.
-   1. Right-click the menu and select **Teams Toolkit** > **Provision in the Cloud**.
+   1. Right-click the menu and select **Microsoft 365 Agents Toolkit** > **Provision in the Cloud**.
 
       :::image type="content" source="../assets/images/Copilot/api-based-VS-provision-cloud.png" alt-text="Screenshot shows the Provision in the Cloud option under Teams Toolkit in Visual Studio.":::
 
       If prompted, sign in with a Microsoft 365 account. A message appears that the app is successfully prepared.
 
-   1. Right-click your project and select **Teams Toolkit** > **Preview in** > **Teams**.
+   1. Right-click your project and select **Microsoft 365 Agents Toolkit** > **Preview in** > **Teams**.
    1. Select the **manifest.json** file and select **Open**. Visual Studio launches a Teams web client.
 
     ---
@@ -1104,7 +1104,7 @@ You can specify the input types, titles, descriptions, and required fields for t
 To build an API-based message extension with multiple parameters using Teams Toolkit for Visual Studio Code, follow these steps:
 
 1. Open **Visual Studio Code**.
-1. From the left pane, select **Teams Toolkit**.
+1. From the left pane, select **Microsoft 365 Agents Toolkit**.
 1. Select **Create a New App**.
 1. Select **Message Extension**.
 
@@ -1130,7 +1130,7 @@ To build an API-based message extension with multiple parameters using Teams Too
 1. Select **Default folder**.
 1. Enter the name of your app and select **Enter**. Teams Toolkit scaffolds the OpenAPI Description document and created an API-based message extension.
 1. Under **LIFECYCLE**, select **Provision**.
-1. From the left pane, select **Teams Toolkit**.
+1. From the left pane, select **Microsoft 365 Agents Toolkit**.
 1. Under **ACCOUNTS**, sign in with your [Microsoft 365 account](/microsoftteams/platform/toolkit/accounts) and Azure account if you haven't already.
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-accounts.png" alt-text="Screenshot shows the Microsoft 365 and Azure sign in option in Teams Toolkit.":::

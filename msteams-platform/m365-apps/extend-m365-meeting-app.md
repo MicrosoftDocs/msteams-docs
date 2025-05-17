@@ -51,7 +51,7 @@ You can build a Teams meeting app for Outlook through the Teams Toolkit extensio
 
     :::image type="content" source="images/teams-new-meeting.png" alt-text="New meeting panel in Teams":::
 
-1. Open the **Teams Toolkit** extension in Visual Studio Code and select **View Samples**.
+1. Open the **Microsoft 365 Agents Toolkit** extension in Visual Studio Code and select **View Samples**.
 
 1. Select **My First Meeting App** > **Create** and specify the folder to create the workspace.
 
@@ -106,7 +106,7 @@ If you need to upgrade your TeamsJS npm package from v1.x.x to the latest v2.x.x
 
 Follow these steps to update your TeamsJS to the latest version using Teams Toolkit:
 
-1. Open your app in Visual Studio Code and select **Teams Toolkit** extension.
+1. Open your app in Visual Studio Code and select **Microsoft 365 Agents Toolkit** extension.
 1. Under **View**, select **Command Palette...** or **Ctrl+Shift+P**.
 1. Run the command `Teams: Upgrade Teams JS SDK and code references`.
 

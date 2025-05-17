@@ -16,7 +16,7 @@ TeamsFx integrates with Azure and the Microsoft 365 cloud, which allows to place
 
 1. Open **Visual Studio**.
 1. Open the **Microsoft Teams App project**.
-1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.
+1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Provision in the Cloud**.
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-vs-provision-in-cloud.png" alt-text="Screenshot shows sign in to Azure account.":::
 
@@ -33,7 +33,7 @@ TeamsFx integrates with Azure and the Microsoft 365 cloud, which allows to place
 
 After you open your project in Visual Studio, to provision cloud resources follow these steps:
 
-1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud...**.
+1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Provision in the Cloud...**.
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-vs-provision-in-cloud.png" alt-text="Screenshot shows how to provision in cloud.":::
 

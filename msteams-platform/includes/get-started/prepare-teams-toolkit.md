@@ -11,7 +11,7 @@ You can use Teams Toolkit with Visual Studio Code or a command-line interface ca
 # [Visual Studio Code](#tab/vscode)
 
 1. Open Visual Studio Code and select **Extensions** (**Ctrl+Shift+X** or **View** > **Extensions**).
-2. In the search box, enter **Teams Toolkit**.
+2. In the search box, enter **Microsoft 365 Agents Toolkit**.
 3. Select **Install**.
 
    :::image type="content" source="../../assets/images/include-files/install-toolkit-vs.png" alt-text="Screenshot shows the Teams Toolkit extension installation.":::

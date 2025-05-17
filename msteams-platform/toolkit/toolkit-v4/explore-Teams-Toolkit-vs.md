@@ -23,7 +23,7 @@ You can view Teams Toolkit in Visual studio in the following ways:
 To view the Teams Toolkit from the **Project** menu, follow these steps:
 
 1. Select **Project**.
-1. Select **Teams Toolkit**.
+1. Select **Microsoft 365 Agents Toolkit**.
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-installed.png" alt-text="Screenshot shows the Teams toolkit project menu.":::
 
@@ -33,7 +33,7 @@ To view the Teams Toolkit from the **Project** menu, follow these steps:
 
 1. Select **View** > **Solution Explorer** to view **Solution Explorer** panel.
 1. Right-click on your app project name.
-1. Select **Teams Toolkit**.
+1. Select **Microsoft 365 Agents Toolkit**.
 
    > [!NOTE]
    > In this scenario the project name is **MyTeamsApp14**.

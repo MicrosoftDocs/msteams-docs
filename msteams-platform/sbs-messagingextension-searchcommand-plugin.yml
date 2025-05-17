@@ -70,7 +70,7 @@ items:
    You can use Teams Toolkit with Visual Studio Code. To install Teams Toolkit, follow these steps:
 
    1. Open Visual Studio Code and select **Extensions** (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
-   1. In the search box, enter **Teams Toolkit**.
+   1. In the search box, enter **Microsoft 365 Agents Toolkit**.
    1. On the Teams Toolkit page, select the dropdown arrow next to **Install**.
    1. Select **Install Pre-Release Version**.
 
@@ -361,7 +361,7 @@ items:
   content: |
     To trigger the message extension in Microsoft 365 Copilot, follow these steps:
 
-    1. From the left pane, select **Teams Toolkit**.
+    1. From the left pane, select **Microsoft 365 Agents Toolkit**.
     1. From the left pane, select **Run and Debug (Ctrl+Shift+D)**.
     1. Select Debug in **Copilot (Edge)** or **Debug in Copilot (Chrome)**.
     1. Select **F5** to build and run your app in Microsoft 365 Copilot.

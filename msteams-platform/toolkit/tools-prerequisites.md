@@ -128,7 +128,7 @@ You can verify if the app upload permission is enabled using either Visual Studi
 You can use this method to verify custom app upload permission only after you have created an app project using Teams Toolkit. If you haven't created an app project, you can verify custom app upload permission using Teams client.
 
 1. Open **Visual Studio Code**.
-1. Select **Teams Toolkit** from the Visual Studio Code activity bar.
+1. Select **Microsoft 365 Agents Toolkit** from the Visual Studio Code activity bar.
 
    > [!NOTE]
    > If you're unable to see the option, see [install Teams Toolkit](install-Teams-Toolkit.md) to install Teams Toolkit extension in Visual Studio Code.
