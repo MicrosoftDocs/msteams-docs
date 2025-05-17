@@ -662,7 +662,7 @@ To install the Microsoft Teams Toolkit extension:
 
 1. Under **Workloads**, select **ASP.NET and web development**.
 
-1. Under **Installation details**, select **Microsoft Teams development tools**.
+1. Under **Installation details**, select **Microsoft 365 Agents Toolkit**.
 
 1. Select **Install**.
 
@@ -774,9 +774,9 @@ Use Teams Toolkit to create your first tab project. The toolkit takes you throug
 
 1. Select the project type and details:
 
-   1. Search for **Microsoft Teams** from templates dropdown list.  
+   1. Search for **Microsoft 365** from templates dropdown list.  
 
-   1. Select **Microsoft Teams App** as the template.
+   1. Select **Microsoft 365 Agents** as the template.
 
    1. Select **Next**.
 
@@ -849,7 +849,7 @@ After you set up your project workspace with Teams Toolkit, build your tab proje
 
 To build and run your app:
 
-1. Select **Project** > **Teams Toolkit** > **Prepare Teams App Dependencies**.
+1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Select Microsoft 365 Account**.
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png" alt-text="Screenshot of Visual Studio with Project, Teams Toolkit, and Prepare Teams App Dependencies options are highlighted in red."lightbox="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png":::
 
@@ -935,7 +935,7 @@ Let's deploy the first app with tab capability on Azure using Teams Toolkit.
 
 ### **To provision your tab app in the cloud**
 
-1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.
+1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Provision in the Cloud**.
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-provision_1.png" alt-text="Screenshot of Visual Studio with Project, Teams Toolkit, and Provision in the Cloud options are highlighted in red."lightbox="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-provision_1.png":::
 
