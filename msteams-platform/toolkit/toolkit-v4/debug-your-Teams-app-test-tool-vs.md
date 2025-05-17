@@ -53,7 +53,7 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/create-new-project-vs.png" alt-text="Screenshot shows the selection to create a new project.":::
 
-1. In the search box, enter **Microsoft Teams**. From the search results, select **Microsoft Teams App**.
+1. In the search box, enter **Microsoft 365 Agents**. From the search results, select **Microsoft 365 Agents**.
 
 1. Select **Next**.
 
@@ -63,14 +63,14 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/project-name-vs.png" alt-text="Screenshot shows the option to enter the project name.":::
 
-1. Select **AI Chat Bot** > **Create**.
+1. Select **Echo Bot** > **Create**.
 
    > [!NOTE]
-   > * [OpenAI](https://platform.openai.com/apps) or  [Azure OpenAI](https://oai.azure.com/portal) are the prerequisite to debug **AI Chat Bot** app.
+   > * [OpenAI](https://platform.openai.com/apps) or  [Azure OpenAI](https://oai.azure.com/portal) are the prerequisite to debug **Echo Bot** app.
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/project-teams-application-vs.png" alt-text="Screenshot shows the selection of Teams application to create a new project.":::
 
-    A GettingStarted window appears.
+    A README window appears.
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/project-get-started-vs.png" alt-text="Screenshot shows the get started page of the application in Visual Studio." lightbox="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/project-get-started-vs.png":::
 

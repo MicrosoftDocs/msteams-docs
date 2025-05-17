@@ -903,7 +903,7 @@ To consent application permissions, follow these steps:
 
 #### Add an Azure function
 
-In the left pane of the Visual Studio Code, go to **Teams Toolkit** > **Adding features** > **Azure Functions** and enter the function name.
+In the left pane of the Visual Studio Code, go to **Microsoft 365 Agents Toolkit** > **Adding features** > **Azure Functions** and enter the function name.
 
 :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/azure-functions.png" alt-text="Screenshot shows the selection of Azure Functions.":::
 

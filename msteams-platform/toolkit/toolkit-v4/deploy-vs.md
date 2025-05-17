@@ -27,7 +27,7 @@ To deploy Teams app using Microsoft Teams Toolkit, follow these steps:
 
 1. Open **Visual Studio**.
 1. Select **Create a new project** or open an existing project from the list.
-1. Select **Project** > **Teams Toolkit** > **Deploy to the Cloud**.
+1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Deploy to the Cloud**.
 
       :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/deploy-to-the-cloud-button.png" alt-text="Screenshot shows steps to deploy to the cloud.":::
 
