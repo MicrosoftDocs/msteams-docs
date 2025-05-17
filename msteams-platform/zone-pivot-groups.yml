@@ -81,7 +81,7 @@ groups:
   prompt: Before you begin, select the command line interface version.
   pivots:
   - id: version-three
-    title: Teams Toolkit CLI v3
+    title: Microsoft 365 Agents Toolkit CLI v3
   - id: version-two
     title: TeamsFx CLI v2    
   - id: version-one

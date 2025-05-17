@@ -39,7 +39,7 @@ Descriptions enhance the usability and effectiveness of a message extension agen
 
 For more information, see [guidelines to create and upgrade agents](dev-guidelines-agents.md).
 
-All bot-based search message extensions that are eligible for agent support must meet [policy requirement](../concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md) and are subject to validation to ensure the agent meets quality, security, privacy, and usefulness expectations. You can create a bot-based search message extension using Teams Toolkit for Visual Studio Code, Visual Studio, Teams Toolkit command line interface (CLI), or Developer Portal for Teams and extend the message extension to function as an agent in Microsoft 365 Copilot.
+All bot-based search message extensions that are eligible for agent support must meet [policy requirement](../concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md) and are subject to validation to ensure the agent meets quality, security, privacy, and usefulness expectations. You can create a bot-based search message extension using Teams Toolkit for Visual Studio Code, Visual Studio, Microsoft 365 Agents Toolkit command line interface (CLI) (previously known as Teams Toolkit CLI), or Developer Portal for Teams and extend the message extension to function as an agent in Microsoft 365 Copilot.
 
 ## Prerequisites
 
@@ -224,7 +224,7 @@ Before you get started, ensure that you set the environment variable **DEVELOP_C
 
    :::image type="content" source="../assets/images/Copilot/bot-based-plugin-CLI-add-env-variable.png" alt-text="Screenshot shows the Variable name and Variable value fields in the New User Variable dialog.":::
 
-To create a bot-based search message extension agent using Teams Toolkit CLI, follow these steps:
+To create a bot-based search message extension agent using Agents Toolkit CLI, follow these steps:
 
 1. Go to **Command Prompt**.
 
@@ -257,9 +257,9 @@ To create a bot-based search message extension agent using Teams Toolkit CLI, fo
     teamsapp provision --env dev
    ```
 
-   Teams Toolkit CLI opens a browser window and requests you to sign in to your Microsoft Account.
+   Agents Toolkit CLI opens a browser window and requests you to sign in to your Microsoft Account.
 
-1. Sign in to your Microsoft account. Teams Toolkit CLI executes validation and provisions your app on Azure.
+1. Sign in to your Microsoft account. Agents Toolkit CLI executes validation and provisions your app on Azure.
 
 1. From the list, select a subscription.
 
