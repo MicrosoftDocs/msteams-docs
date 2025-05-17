@@ -29,7 +29,7 @@ By default, Teams Toolkit doesn't load any env variables, and just proceed with 
 
 To build a Microsoft Teams app, certain resources, such as app registrations and the Teams client are hosted in the cloud. However, the other resources, such as including the application logic can be hosted locally to simplify the testing changes during app development. All the Teams Toolkit project templates and samples are configured with a `local` environment. The local environment has `./env/.env.local` and `./env/.env.local.user` files and helps you to run your app with a locally hosted web server. When using Visual Studio Code (VS Code) and Visual Studio (VS), the project templates and samples are set up to support debugging with breakpoints.
 
-To differentiate between a local environment and all other environments, you can create a separate project file called `teamsapp.local.yml` in the same directory as `teamsapp.yml`.
+To differentiate between a local environment and all other environments, you can create a separate project file called `m365agents.local.yml` in the same directory as `m365agents.yml`.
 
 ## Create a new environment manually in Visual Studio Code
 

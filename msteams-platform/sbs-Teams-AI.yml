@@ -265,14 +265,14 @@ items:
 
     | Folder name | Contents |
     | --- | --- |
-    | `env/.env.local.user` |Configuration file for local environment used by `teamsapp.yml` to customize the provisioning and deployment rules.  |
+    | `env/.env.local.user` |Configuration file for local environment used by `m365agents.yml` to customize the provisioning and deployment rules.  |
     | `index.ts` |  Main entry point for the app. |
     | `teamsBot.ts` | Teams activity handler. |
     | `appPackage` | App manifest template files and app icons (color.png and outline.png). |
     | `appPackage/manifest.json` | App manifest for running the app in local and remote environment.  |
     | `config.ts` | `config.ts` wraps access to environment variables that is used to set up the bots adapter. |
-    | `teamsapp.yml` |	This is the main Teams Toolkit project that defines properties and configuration stage definitions. |
-    | `teamsapp.local.yml` |This overrides teamsapp.yml with actions that enable local execution and debugging. |
+    | `m365agents.yml` |	This is the main Teams Toolkit project that defines properties and configuration stage definitions. |
+    | `m365agents.local.yml` |This overrides m365agents.yml with actions that enable local execution and debugging. |
 
 
 - title: Build and run your first custom engine agent

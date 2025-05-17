@@ -112,7 +112,7 @@ To provision resources with Teams Toolkit, follow these steps:
 
 1. Go to the `env/.env.${envName}` file and update the `BOT_DOMAIN` value with your FQDN.
 
-1. Go to the `teamsapp.yml` file and update the following `arm/deploy` action to ensure that Teams Toolkit provisions an Azure Bot Service during the execution of the `provision` command:
+1. Go to the `m365agents.yml` file and update the following `arm/deploy` action to ensure that Teams Toolkit provisions an Azure Bot Service during the execution of the `provision` command:
 
     ```bash
     - uses: arm/deploy 
@@ -186,7 +186,7 @@ To provision resources with Teams Toolkit, follow these steps:
 
 1. Go to the `env/.env.${envName}` file and update the `BOT_DOMAIN` value with your FQDN.
 
-1. Go to the `teamsapp.yml` file and update the following `arm/deploy` action to ensure that Teams Toolkit provisions an Azure Bot Service during the execution of the `provision` command:
+1. Go to the `m365agents.yml` file and update the following `arm/deploy` action to ensure that Teams Toolkit provisions an Azure Bot Service during the execution of the `provision` command:
 
     ```yml
     - uses: arm/deploy 
@@ -200,7 +200,7 @@ To provision resources with Teams Toolkit, follow these steps:
         bicepCliVersion: v0.9.1
     ```
 
-1. In the `teamsapp.yml` file, update the `botFramework/create` action during the provision stage. This action enables Teams Toolkit to create a bot registration with the appropriate messaging endpoint.
+1. In the `m365agents.yml` file, update the `botFramework/create` action during the provision stage. This action enables Teams Toolkit to create a bot registration with the appropriate messaging endpoint.
 
     >[!NOTE]
     > We recommend you use Azure Bot Service for channeling. If you don't have an Azure account and can't create Azure Bot Service, you can create a bot registration.
@@ -216,7 +216,7 @@ To provision resources with Teams Toolkit, follow these steps:
             - name: msteams
     ```
 
-    You can remove the `arm/deploy` action in `teamsapp.yml` file, as we don't need any Azure resources.
+    You can remove the `arm/deploy` action in `m365agents.yml` file, as we don't need any Azure resources.
 
 1. Run the `provision` command in Teams Toolkit.
 
@@ -320,7 +320,7 @@ To provision resources with Teams Toolkit, follow these steps:
 
 1. Go to the `env/.env.${envName}` file and update the `TAB_DOMAIN` value with your FQDN.
 
-1. Go to the `teamsapp.yml` file and remove the `arm/deploy` action, as no additional Azure resources are required.
+1. Go to the `m365agents.yml` file and remove the `arm/deploy` action, as no additional Azure resources are required.
 
 1. Run the `provision` command in Teams Toolkit.
 

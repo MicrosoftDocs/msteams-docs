@@ -465,12 +465,12 @@ items:
 
     | Folder name | Contents |
     | --- | --- |
-    | `env/.env.dev.user` |Configuration file for local environment used by `teamsapp.yml` to customize the provisioning and deployment rules. |
+    | `env/.env.dev.user` |Configuration file for local environment used by `m365agents.yml` to customize the provisioning and deployment rules. |
     | `appPackage` | App manifest template files and app icons (color.png and outline.png). |
     | `appPackage/manifest.json` | App manifest for running the app in local and remote environment. |
     |`appPackage/apiSpecificationFiles/openapi.yml`|A description file that contains the structure and syntax of an API in the OpenAPI Description.|
     | `appPackage/responseTemplates` | The response rendering template, which consists of the Adaptive Card template, preview card template, and metadata. |
-    | `teamsapp.yml` |	This is the main Teams Toolkit project that defines properties and configuration stage definitions. |
+    | `m365agents.yml` |	This is the main Teams Toolkit project that defines properties and configuration stage definitions. |
 
     > [!Tip]
     > Familiarize yourself with bots outside Teams before you integrate your first bot within Teams.

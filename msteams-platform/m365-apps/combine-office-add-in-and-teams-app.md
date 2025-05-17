@@ -68,8 +68,8 @@ Begin by separating the source code for the tab (or bot) into its own subfolder.
 |-- .webappignore
 |-- package-lock.json
 |-- package.json
-|-- teamsapp.local.yml
-|-- teamsapp.yml
+|-- m365agents.local.yml
+|-- m365agents.yml
 |-- tsconfig.json
 |-- web.config
 ```
@@ -105,8 +105,8 @@ To separate the source code for the tab or bot, perform the following steps:
     |-- |-- web.config
     |-- .gitignore
     |-- .localConfigs
-    |-- teamsapp.local.yml
-    |-- teamsapp.yml
+    |-- m365agents.local.yml
+    |-- m365agents.yml
     ```
 
 1. In the `package.json` that you just moved to the tab folder, delete the script named `dev:teamsfx` from the `scripts` object. This script is added to a new `package.json` in the next step.
@@ -135,8 +135,8 @@ To separate the source code for the tab or bot, perform the following steps:
     ```
 
 1. Change the `name`, `version`, and `author` properties, as needed.
-1. Open the `teamsapp.yml` file in the root of the project, find the line `ignoreFile: .webappignore`, and change it to `ignoreFile: ./tab/.webappignore`.
-1. Open the `teamsapp.local.yml` file in the root of the project, find the line `args: install --no-audit`, and change this to `args: run install:tab --no-audit`.
+1. Open the `m365agents.yml` file in the root of the project, find the line `ignoreFile: .webappignore`, and change it to `ignoreFile: ./tab/.webappignore`.
+1. Open the `m365agents.local.yml` file in the root of the project, find the line `args: install --no-audit`, and change this to `args: run install:tab --no-audit`.
 1. Open **TERMINAL** in Visual Studio Code. Navigate to the root of the project and run `npm install`. A new `node_modules` folder and a new `package.lock.json` file are created in the project root. 
 1. Next run `npm run install:tab`. A new `node_modules` folder and a new `package.lock.json` file are created in the tab folder, if they aren't there already. 
 1. Verify that you can sideload the tab with the following steps:
@@ -222,7 +222,7 @@ Unless specified otherwise, the file you change is `\appPackage\manifest.json`.
     > - It's the label under the launch button of the Teams tab.
     > - It is content of the title bar of the add-in's task pane.
 
-1. If you changed the "name.short" value from its default (which is the name of the project followed by the `${{TEAMSFX_ENV}}` variable), make exactly the same change in all places where the project name appears in the following two files in the root of the project: teamsapp.yml and teamsapp.local.yml.
+1. If you changed the "name.short" value from its default (which is the name of the project followed by the `${{TEAMSFX_ENV}}` variable), make exactly the same change in all places where the project name appears in the following two files in the root of the project: m365agents.yml and m365agents.local.yml.
 1. If there's no "authorization.permissions.resourceSpecific" array in the Teams manifest template, copy it from the add-in manifest as a top-level property. If there's already one in the Teams template, copy any objects from the array in the add-in manifest to the array in the Teams template. The following JSON is an example:
 
     ```json
@@ -311,8 +311,8 @@ Unless specified otherwise, the file you change is `\appPackage\manifest.json`.
     |-- .gitignore
     |-- .localConfigs
     |-- package.json
-    |-- teamsapp.local.yml
-    |-- teamsapp.yml
+    |-- m365agents.local.yml
+    |-- m365agents.yml
     ```
 
 ### Edit the tooling configuration files
@@ -354,7 +354,7 @@ Unless specified otherwise, the file you change is `\appPackage\manifest.json`.
 1. Navigate to the **add-in** folder and run the command `npm install`. 
 1. In the **add-in** folder, open the `webpack.config.js` file. 
 1. Change the line `from: "appPackage/manifest*.json",` to `from: "../appPackage/build/manifest*.json",`.
-1. In the root of the project, open the `teamsapp.local.yml` file and find the `provision` section. Use the `#` character to comment out the lines that validate the manifest template. This is necessary because the Teams manifest validation system isn't yet compatible with the changes you made to the manifest template. When you're done, the lines should look like the following code:
+1. In the root of the project, open the `m365agents.local.yml` file and find the `provision` section. Use the `#` character to comment out the lines that validate the manifest template. This is necessary because the Teams manifest validation system isn't yet compatible with the changes you made to the manifest template. When you're done, the lines should look like the following code:
 
     ```
     # - uses: teamsApp/validateManifest
@@ -365,7 +365,7 @@ Unless specified otherwise, the file you change is `\appPackage\manifest.json`.
 
     Ensure that you comment out only the `teamsApp/validateManifest` section. Don't comment out the `teamsManifest/validateAppPackage` section.
 
-1. Repeat the preceding step for the `teamsapp.yml` file. The three lines are found in both the `provision` and the `publish` sections. Comment them out in both places.
+1. Repeat the preceding step for the `m365agents.yml` file. The three lines are found in both the `provision` and the `publish` sections. Comment them out in both places.
 1. Open the `.vscode\tasks.json` file in the **add-in** project and copy all the tasks in the `tasks` array. Add them to `tasks` array of the same file in the Teams project. Don't remove any of the tasks that are already there. Be sure all tasks are separated by commas. 
 1. In each of the task objects that you just copied, add the following `options` property to ensure that these tasks run in the **add-in** folder.
 
@@ -407,7 +407,7 @@ Unless specified otherwise, the file you change is `\appPackage\manifest.json`.
         "type": "teamsfx",
         "command": "provision",
         "args": {
-            "template": "${workspaceFolder}/teamsapp.local.yml",
+            "template": "${workspaceFolder}/m365agents.local.yml",
             "env": "local"
         }
     },
@@ -526,7 +526,7 @@ To see both the app and the add-in running at the same time, take the following 
 
 ### Move the application to Azure
 
-1. Open the `teamsapp.yml` file in the root of the project and find the line `deploymentName: Create-resources-for-tab`. Change it to `deploymentName: Create-resources-for-tab-and-addin`.
+1. Open the `m365agents.yml` file in the root of the project and find the line `deploymentName: Create-resources-for-tab`. Change it to `deploymentName: Create-resources-for-tab-and-addin`.
 
 1. In the same file, add the following code to the end of the `provision:` section. 
     > [!NOTE]

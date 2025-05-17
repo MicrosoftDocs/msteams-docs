@@ -152,8 +152,8 @@ The following code snippet is an example:
    |   |--views/
    |--package.json
    |--tsconfig.json
-   |--teamsapp.local.yml
-   |--teamsapp.yml
+   |--m365agents.local.yml
+   |--m365agents.yml
    ```
 
 1. Reorganize the folder structure as follows:
@@ -182,8 +182,8 @@ The following code snippet is an example:
    |   |--package.json
    |   |--tsconfig.json
    |--package.json <!--root package.json-->
-   |--teamsapp.local.yml
-   |--teamsapp.yml
+   |--m365agents.local.yml
+   |--m365agents.yml
    ```
 
 1. Add the following code to your root `package.json`:
@@ -309,7 +309,7 @@ The following code snippet is an example:
    ]
    ```
 
-1. Under the `teamsapp.local.yml` file:
+1. Under the `m365agents.local.yml` file:
    1. Under `provision`, add the `botAadApp/create` and `botFramework/create` actions.
    1. Under `deploy`, update the code of the `file/createOrUpdateEnvironmentFile` action.
 
@@ -353,7 +353,7 @@ The following code snippet is an example:
            BOT_PASSWORD: ${{SECRET_BOT_PASSWORD}}
    ```
 
-   For more information, see [sample app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab/teamsapp.local.yml).
+   For more information, see [sample app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab/m365agents.local.yml).
 
 1. Under the **Run and Debug**, select **Debug (Edge)** or **Debug (Chrome)**.
 
@@ -453,8 +453,8 @@ The following code snippet is an example:
    }
    ```
 
-1. Under the `teamsapp.yml` file:
-   1. Under `provision`, add the `botAadApp/create` action. For more information, see [sample app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab/teamsapp.yml).
+1. Under the `m365agents.yml` file:
+   1. Under `provision`, add the `botAadApp/create` action. For more information, see [sample app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab/m365agents.yml).
    1. Under the `deploy` section, add the following code:
 
    ```yaml

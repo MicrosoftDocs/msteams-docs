@@ -73,7 +73,7 @@ From the task pane, you can see the following sections:
 
         To deploy your Teams app, you need the following environments:
 
-       * **testtool**: Deploy your app in the testool environment with testtool environment configurations.
+       * **playground**: Deploy your app in the testool environment with playground environment configurations.
         
        * **local**: Deploy your app in the default local environment with local environment configurations.
 

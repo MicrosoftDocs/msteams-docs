@@ -38,7 +38,7 @@ The tunnel you create is under **Dev Tunnels(MyPublicDevTunnel)** > **MyPublicDe
 
 ## Create the debug resources
 
-Teams Toolkit executes lifecycle `provision` defined in the `teamsapp.local.yml` file to create necessary resources for debugging Teams apps. For more information, see [Provision task](https://aka.ms/teamsfx-tasks/provision) and [available actions](https://aka.ms/teamsfx-actions).
+Teams Toolkit executes lifecycle `provision` defined in the `m365agents.local.yml` file to create necessary resources for debugging Teams apps. For more information, see [Provision task](https://aka.ms/teamsfx-tasks/provision) and [available actions](https://aka.ms/teamsfx-actions).
 
 ## Take a tour of your app source code
 
@@ -46,7 +46,7 @@ You can view the project folders and files under **Explorer** in Visual Studio a
 
 | Folder name| Contents| Description |
 | --- | --- | --- |
-| `teamsapp.local.yml` | The main Teams Toolkit project file for debugging. | This file defines the lifecycles and actions required for debugging. |
+| `m365agents.local.yml` | The main Teams Toolkit project file for debugging. | This file defines the lifecycles and actions required for debugging. |
 | `env/.env.local` | Environment variables file for Teams Toolkit project. | The values of each environment variable are consumed or generated during preparing Teams app dependencies. |
 | `appsettings.Development.json` | Environment variables file for the app code. | The values of each environment variable are generated during preparing Teams app dependencies. |
 

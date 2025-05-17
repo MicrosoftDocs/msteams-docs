@@ -64,7 +64,7 @@ Congratulations, you've created a Teams app! Now let's go ahead and learn how to
 
 ### Customize deploy lifecycle in Teams
 
-To customize the deployment process, you can edit the deploy sections in 'teamsapp.yml'.
+To customize the deployment process, you can edit the deploy sections in 'm365agents.yml'.
 
 #### cli/runNpmCommand
 

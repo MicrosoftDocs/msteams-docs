@@ -122,7 +122,7 @@ Get started with Teams AI library using the **Math tutor assistant** sample. It 
       SECRET_AZURE_OPENAI_ENDPOINT=<your Azure OpenAI Endpoint>
    ```
 
-   1. Go to `teamsapp.local.yml` file and modify the last step to use Azure OpenAI variables:
+   1. Go to `m365agents.local.yml` file and modify the last step to use Azure OpenAI variables:
 
       ```yaml
       - uses: file/createOrUpdateEnvironmentFile

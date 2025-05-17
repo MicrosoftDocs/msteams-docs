@@ -659,8 +659,8 @@ To build an API-based message extension using Teams Toolkit for Visual Studio Co
       | `src/keyGen.ts` | Designed to generate an API key used for authorization. |
       | `appPackage/apiSpecificationFile/repair.yml` | A file that describes the structure and behavior of the repair API. |
       | `appPackage/responseTemplates/repair.json` | A template file for rendering API response. |
-      | `teamsapp.yml` | The main Teams Toolkit project file. The project file defines two primary things: Properties and configuration Stage definitions.|
-      |`teamsapp.local.yml` | Overrides teamsapp.yml with actions that enable local execution and debugging.|
+      | `m365agents.yml` | The main Teams Toolkit project file. The project file defines two primary things: Properties and configuration Stage definitions.|
+      |`m365agents.local.yml` | Overrides m365agents.yml with actions that enable local execution and debugging.|
       |`aad.manifest.json` | Defines the configuration of Microsoft Entra app. This template only provisions a single tenant Microsoft Entra app.|
 
    1. Based on the options selected in **step a**, follow these steps:
@@ -830,8 +830,8 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
       |`appPackage/apiSpecificationFile/repair.yml` |  A file that describes the structure and behavior of the repair API.|
       |`appPackage/responseTemplates/repair.json` |  A generated Adaptive Card that used to render API response.|
       |`appPackage/responseTemplates/repair.data.json` | The data source for the repair API.|
-      | `teamsapp.yml` | The main Teams Toolkit project file. The project file defines two primary things: Properties and configuration Stage definitions.|
-      |`teamsapp.local.yml` | Overrides teamsapp.yml with actions that enable local execution and debugging.|
+      | `m365agents.yml` | The main Teams Toolkit project file. The project file defines two primary things: Properties and configuration Stage definitions.|
+      |`m365agents.local.yml` | Overrides m365agents.yml with actions that enable local execution and debugging.|
 
    1. After you've updated the source code, in the debug dropdown menu, select **Dev Tunnels (no active tunnel)** > **Create a Tunnel...**.
 

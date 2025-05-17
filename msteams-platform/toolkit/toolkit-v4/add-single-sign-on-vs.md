@@ -98,7 +98,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
       }
       ```
 
-1. Update the `teamsapp.yml` file and the `teamsapp.local.yml` file.
+1. Update the `m365agents.yml` file and the `m365agents.local.yml` file.
 
    Add Microsoft Entra related changes and configs into your `yml` files:
 
@@ -114,7 +114,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
 
        For more information, see [file/updateJson](https://github.com/OfficeDev/TeamsFx/wiki/Available-actions-in-Teams-Toolkit#fileupdatejson).
 
-    * In both the `teamsapp.yml` file and the `teamsapp.local.yml` file add the following code under the `provision` to create Microsoft Entra app.
+    * In both the `m365agents.yml` file and the `m365agents.local.yml` file add the following code under the `provision` to create Microsoft Entra app.
 
       ```yml
       - uses: aadApp/create
@@ -146,7 +146,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
       > [!NOTE]
       > Replace the value of `manifestPath` with the relative path of Microsoft Entra app manifest noted in step 1. For example: `./aad.manifest.json`
 
-    In the `teamsapp.local.yml` file:
+    In the `m365agents.local.yml` file:
     * Add the following code under `provision` to add Microsoft Entra related configs to local debug service.
 
          ```json
@@ -455,7 +455,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
     ]
     ```
 
-1. Update `teamsapp.yml` and `teamsapp.local.yml` files:
+1. Update `m365agents.yml` and `m365agents.local.yml` files:
    Microsoft Entra related changes and configs needs to be added into your `yml` files:
     * Add `aadApp/create` under `provision` for creating new Microsoft Entra apps used for SSO. For more information, see [available actions in Teams Toolkit](https://github.com/OfficeDev/TeamsFx/wiki/Available-actions-in-Teams-Toolkit#aadappcreate).
 
@@ -469,7 +469,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
 
    Example for TeamsFx Bot template
 
-   In both `teamsapp.yml` and `teamsapp.local.yml` files:
+   In both `m365agents.yml` and `m365agents.local.yml` files:
     * Add the code under `provision` to create Microsoft Entra app.
 
     ```yml
@@ -503,7 +503,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
       > Replace the value of "manifestPath" with the relative path of Microsoft Entra app manifest noted in step 1.
             For example, './aad.manifest.json'
 
-   In the `teamsapp.local.yml` file:
+   In the `m365agents.local.yml` file:
     * Update `file/createOrUpdateJsonFile` under `provision` to add Microsoft Entra related configs to local debug service.
 
         ```json

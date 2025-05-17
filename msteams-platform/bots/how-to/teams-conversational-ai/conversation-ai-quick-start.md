@@ -121,7 +121,7 @@ Get started with Teams AI library using the LightBot sample. It enables your com
        SECRET_AZURE_OPENAI_ENDPOINT=<your Azure OpenAI Endpoint>
        ```
 
-   1. Go to the `teamsapp.local.yml` file and modify the last step to use Azure OpenAI variables:
+   1. Go to the `m365agents.local.yml` file and modify the last step to use Azure OpenAI variables:
 
        ```yaml
           - uses: file/createOrUpdateEnvironmentFile

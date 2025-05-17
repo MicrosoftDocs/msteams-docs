@@ -107,7 +107,7 @@ This section provides information for using existing Microsoft Entra app or manu
 > [!NOTE]
 > If you don't use `aadApp/create` action to create Microsoft Entra application, you can add required environment variables with your preferred name without following the below steps.
 
-1. Open `teamsapp.yml` and find the `aadApp/create` action.
+1. Open `m365agents.yml` and find the `aadApp/create` action.
 
 1. Find the environment variable names that store information for Microsoft Entra app in the `writeToEnvironmentFile` property. Below are the default `writeToenvironmentFile` definition if you create projects using Teams Toolkit:
 
