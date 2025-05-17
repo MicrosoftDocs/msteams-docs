@@ -161,7 +161,7 @@
       items:
       - name: Teams Toolkit overview
         href: toolkit/teams-toolkit-fundamentals.md
-        displayName: TTK, version, Developer Portal, debug, Teams App Test Tool, dev tunnel
+        displayName: TTK, version, Developer Portal, debug, Microsoft 365 Agents Playground, dev tunnel
       - name: Install Teams Toolkit
         href: toolkit/install-Teams-Toolkit.md
         displayName: download
@@ -203,10 +203,10 @@
         items:
          - name: App debug overview
            href: toolkit/debug-overview.md
-         - name: Debug using Teams App Test Tool
+         - name: Debug using Microsoft 365 Agents Playground
            href: toolkit/debug-your-teams-app-test-tool.md
            displayName: Mock activity, custom activity, predefined activity
-         - name: Debug message extension app in Test Tool
+         - name: Debug message extension app in Microsoft 365 Agents Playground
            href: toolkit/debug-message-extension-app-in-test-tool.md          
          - name: Debug your app locally
            href: toolkit/debug-local.md
@@ -273,7 +273,7 @@
         items: 
          - name: Debug overview
            href: toolkit/toolkit-v4/debug-overview-vs.md
-         - name: Debug with Teams App Test Tool
+         - name: Debug with Microsoft 365 Agents Playground
            href: toolkit/toolkit-v4/debug-your-Teams-app-test-tool-vs.md
          - name: Debug Teams app locally
            href: toolkit/toolkit-v4/debug-local-vs.md
