@@ -176,7 +176,7 @@ Agents Playground offers a faster debug experience for bot applications when com
    1. Run the following command to launch profile:
 
       ```cmd
-      dotnet run --launch-profile " Agents Playground (browser)"
+      dotnet run --launch-profile "Agents Playground (browser)"
       ```
 
    1. Run the following command in a separate terminal to define your bot message endpoint:
@@ -293,7 +293,7 @@ The configuration file in the project's root folder allows you to customize Team
 
 ### Default configuration
 
-<details><summary> Agents Playground contains a built-in configuration file in the project's root folder.</summary>
+<details><summary>Agents Playground contains a built-in configuration file in the project's root folder.</summary>
 
 ```yaml
 # yaml-language-server: $schema=https://aka.ms/teams-app-test-tool-config/0.1.0/config.schema.json

@@ -238,7 +238,7 @@ items:
     
     ## Debug and run your AI chat bot app
 
-    1. From the left pane, select **RUN and DEBUG** (Ctrl+Shift+D), and then select **Debug in Agents Playground (Preview)** from the dropdown list.
+    1. From the left pane, select **RUN and DEBUG** (Ctrl+Shift+D), and then select **Debug in Agents Playground** from the dropdown list.
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/select-debug-in-test-tool.png" lightbox="~/assets/images/teams-toolkit-v2/debug/select-debug-in-test-tool.png" alt-text="Screenshot shows the option to select debug in test tool.":::
  
