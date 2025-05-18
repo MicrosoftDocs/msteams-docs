@@ -279,7 +279,7 @@ When Teams client opens in the web browser, perform the following steps:
 
 * [Microsoft 365 Agents Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Introduction to Azure Functions](/azure/azure-functions/functions-overview)
-* [Use Microsoft 365 Agents Toolkit to provision cloud resources](provision.md)
+* [Use Agents Toolkit to provision cloud resources](provision.md)
 * [Add How-to guides to Teams app](add-how-to-guides-vsc.md)
 * [Deploy to the cloud](deploy.md)
-* [Manage multiple environments in Microsoft 365 Agents Toolkit](teamsfx-multi-env.md)
+* [Manage multiple environments in Agents Toolkit](teamsfx-multi-env.md)

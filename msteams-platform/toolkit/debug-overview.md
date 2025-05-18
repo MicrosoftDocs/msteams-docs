@@ -350,6 +350,6 @@ Agents Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, 
 
 * [Microsoft 365 Agents Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Debug background process](debug-background-process.md)
-* [Use Microsoft 365 Agents Toolkit to provision cloud resources](provision.md)
+* [Use Agents Toolkit to provision cloud resources](provision.md)
 * [Deploy to the cloud](deploy.md)
 * [Preview and customize app manifest](TeamsFx-preview-and-customize-app-manifest.md)
