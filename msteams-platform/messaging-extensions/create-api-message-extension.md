@@ -616,7 +616,7 @@ To build an API-based message extension using Agents Toolkit for Visual Studio C
 
 1. Open **Visual Studio Code**.
 1. From the left pane, select **Microsoft 365 Agents Toolkit**.
-1. Select **Create a New App**.
+1. Select **Create a New Agent/App**.
 1. Select **Message Extension**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/create-me.png" alt-text="Screenshot shows the message extension option in Agents Toolkit.":::
@@ -846,7 +846,7 @@ To create an API-based message extension using Agents Toolkit for Visual Studio,
        The tunnel you created is listed under **Dev Tunnels**.
 
    1. Go to **Solution Explorer** and select your project.
-   1. Right-click the menu and select **Microsoft 365 Agents Toolkit** > **Prepare Teams App Dependencies**.
+   1. Right-click the menu and select **Microsoft 365 Agents Toolkit** > **Select Microsoft 365 Account**.
 
       If prompted, sign in with a Microsoft 365 account. A message appears that the app is successfully prepared.
 

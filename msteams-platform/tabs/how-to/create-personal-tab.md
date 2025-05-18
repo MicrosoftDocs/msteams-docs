@@ -646,7 +646,7 @@ After you've installed the required tools, set up the development environment.
 
 ### Install Agents Toolkit
 
-Agents Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams Store, and more. You can use the toolkit with Visual Studio, or as a Command Line Interface (called `teamsfx`).
+Agents Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams Store, and more. You can use Agents toolkit with Visual Studio, or as Agents Toolkit Command Line Interface.
 
 # [Latest version of the Visual Studio](#tab/vs)
 
@@ -849,9 +849,9 @@ After you set up your project workspace with Agents Toolkit, build your tab proj
 
 To build and run your app:
 
-1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Prepare Teams App Dependencies**.
+1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Select Microsoft 365 Account**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png" alt-text="Screenshot of Visual Studio with Project, Microsoft 365 Agents Toolkit, and Prepare Teams App Dependencies options are highlighted in red."lightbox="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png" alt-text="Screenshot of Visual Studio with Project, Microsoft 365 Agents Toolkit, and Select Microsoft 365 Account options are highlighted in red."lightbox="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png":::
 
 1. Select your Microsoft 365 account or **Add an account** to sign in.
 
