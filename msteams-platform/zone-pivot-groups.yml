@@ -52,7 +52,7 @@ groups:
     title: Visual Studio Code
   - id: visual-studio
     title: Visual Studio
-- id: teams-toolkit-platform
+- id: toolkit-platform
   title: Microsoft 365 Agents Toolkit platform
   prompt: Before you begin, select the tool version.
   pivots:
@@ -60,7 +60,7 @@ groups:
     title: Version 5
   - id: visual-studio-code-v4
     title: Version 4   
-- id: teams-toolkit-platform-vs
+- id: toolkit-platform-vs
   title: Microsoft 365 Agents Toolkit platform-vs
   prompt: Before you begin, select your tool version.
   pivots:
@@ -77,11 +77,11 @@ groups:
   - id: mex-app
     title: Add code for message extension app
 - id: toolkit-cli
-  title: TeamsFx command line interface
+  title: Teams Toolkit command line interface
   prompt: Before you begin, select the command line interface version.
   pivots:
   - id: version-three
-    title: Microsoft 365 Agents Toolkit CLI v3
+    title: Teams Toolkit CLI
   - id: version-two
     title: TeamsFx CLI v2    
   - id: version-one

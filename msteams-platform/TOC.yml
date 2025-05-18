@@ -161,7 +161,7 @@
       items:
       - name: Agents Toolkit overview
         href: toolkit/teams-toolkit-fundamentals.md
-        displayName: TTK, version, Developer Portal, debug, Teams App Test Tool, dev tunnel
+        displayName: TTK, version, Developer Portal, debug, Microsoft 365 Agents Playground, dev tunnel
       - name: Install Agents Toolkit
         href: toolkit/install-Teams-Toolkit.md
         displayName: download
@@ -203,10 +203,10 @@
         items:
          - name: App debug overview
            href: toolkit/debug-overview.md
-         - name: Debug using Teams App Test Tool
+         - name: Debug using Agents Playground
            href: toolkit/debug-your-teams-app-test-tool.md
            displayName: Mock activity, custom activity, predefined activity
-         - name: Debug message extension app in Test Tool
+         - name: Debug message extension app in Agents Playground
            href: toolkit/debug-message-extension-app-in-test-tool.md          
          - name: Debug your app locally
            href: toolkit/debug-local.md
@@ -273,7 +273,7 @@
         items: 
          - name: Debug overview
            href: toolkit/toolkit-v4/debug-overview-vs.md
-         - name: Debug with Teams App Test Tool
+         - name: Debug with Agents Playground
            href: toolkit/toolkit-v4/debug-your-Teams-app-test-tool-vs.md
          - name: Debug Teams app locally
            href: toolkit/toolkit-v4/debug-local-vs.md
@@ -290,7 +290,7 @@
       - name: Migrate project from 17.9 to 17.10+
         href: toolkit/teams-toolkit-migration-guide.md
         displayName: migrate Teams toolkit, new project structure, YAML configuration
-    - name: Microsoft 365 Agents Toolkit CLI
+    - name: Teams Toolkit CLI
       href: toolkit/Teams-Toolkit-CLI.md
     - name: Developer Portal for Teams
       items:

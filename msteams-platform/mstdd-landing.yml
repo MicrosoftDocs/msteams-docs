@@ -33,7 +33,7 @@ landingContent:
         url: /microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
       - text: Teams AI library v1
         url: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md
-      - text: Build custom engine agents using Teams Toolkit
+      - text: Build custom engine agents using Agents Toolkit
         url: Teams-AI-library-tutorial.yml
       - text: Custom engine agent user experience
         url: bots/how-to/teams-conversational-ai/ai-ux.md
@@ -98,7 +98,7 @@ landingContent:
         url: sbs-gs-workflow-bot.yml   
     - linkListType: tutorial
       links:
-        - text: Debug your AI chat bot using Teams App Test Tool
+        - text: Debug your AI chat bot using Agents Playground
           url: ~/sbs-teams-app-test-tool.yml
         - text: Bot configuration experience
           url: ~/qsg-bot-configuration-experience.yml
