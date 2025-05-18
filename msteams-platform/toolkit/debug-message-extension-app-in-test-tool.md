@@ -258,7 +258,7 @@ In Teams, commands are available in the app manifest. Since Agents Playground do
 </br>
 
 <details>
-<summary>How to do Static list of parameters work in Agents Playground?</summary>
+<summary>How does a static list of parameters work in Agents Playground?</summary>
 
 The static list of parameters is the simple method to create dialogs for action commands, however you can't format the static list.
 
