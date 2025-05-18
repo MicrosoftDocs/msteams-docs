@@ -332,7 +332,7 @@ You can debug your tab application running in Teams, Microsoft 365 app, and Outl
 
 Choose the desired debug method and select the **F5** key. Upon the first run of the local debug, Agents Toolkit prompts you to sign in to your Microsoft 365 tenant account.
 
-PProvide feedback and report any issues with Agents Toolkit debugging experience at [Microsoft 365 Agents Toolkit GitHub Repo](https://github.com/OfficeDev/teams-toolkit/issues).
+Provide feedback and report any issues with Agents Toolkit debugging experience at [Microsoft 365 Agents Toolkit GitHub Repo](https://github.com/OfficeDev/teams-toolkit/issues).
 
 #### Mobile debugging
 
