@@ -67,7 +67,7 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
 1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="false"::: icon in the Visual Studio Code **Activity Bar**.
 
-1. Select **Create a New App**.
+1. Select **Create a New Agent/App** > **Teams App**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
 

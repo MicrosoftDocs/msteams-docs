@@ -71,7 +71,7 @@ To create a bot-based search message extension agent using Visual Studio Code, f
 
 1. Open **Visual Studio Code**.
 1. From the left pane, select **Microsoft 365 Agents Toolkit**.
-1. Select **Create a New App**.
+1. Select **Create a New Agent/App** > **Teams App**.
 1. Select **Message Extension**.
 1. Select **Custom Search Results**.
 1. Select **Start with a Bot**.

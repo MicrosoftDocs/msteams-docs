@@ -51,7 +51,7 @@ Use the Teams Toolkit extension for Visual Studio Code to start with a personal 
 
 1. Open **Visual Studio Code**.
 2. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="false"::: icon in the activity bar.
-3. Select **Create a New App**.
+3. Select **Create a New Agent/App** > **Teams App**.
 4. Select **Tab**.
 5. Select **Basic Tab**.
 
