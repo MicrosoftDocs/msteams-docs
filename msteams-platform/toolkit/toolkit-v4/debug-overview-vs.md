@@ -17,7 +17,7 @@ Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) automates app s
 | &nbsp; | Install | For using... |
 | --- | --- | --- |
 | &nbsp; | Visual Studio 2022 | You can install the enterprise edition of Visual Studio, and install the **ASP.NET** workload and Microsoft Teams Development Tools. Use the latest version |
-| &nbsp; | Agents Toolkit | A Visual Studio extension that creates a project scaffolding for your app. Use latest version. |
+| &nbsp; | Microsoft 365 Agents Toolkit | A Visual Studio extension that creates a project scaffolding for your app. Use latest version. |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place. |
 | &nbsp; | [Prepare your Microsoft 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md) | Access to Teams account with the appropriate permissions to install an app. |
 | &nbsp; | [Microsoft 365 developer account](~/concepts/build-and-test/prepare-your-o365-tenant.md) | Access to Teams account with the appropriate permissions to install an app. |
@@ -27,7 +27,7 @@ Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) automates app s
 
 Agents Toolkit automates the local debugging process for the following key features:
 
-* Prepare Teams app dependencies: Agents Toolkit prepares local debug dependencies and registers your Teams app in your tenant account. For Bot and Message Extension apps, Agents Toolkit registers and configures bot.
+* Select Microsoft 365 Account: Agents Toolkit prepares local debug dependencies and registers your Teams app in your tenant account. For Bot and Message Extension apps, Agents Toolkit registers and configures bot.
 
 * Start debugging: You can perform debugging with a single operation, press **F5** to start debugging. Agents Toolkit builds code, starts services, and launches the app in your browser.
 

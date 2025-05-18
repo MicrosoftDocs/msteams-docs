@@ -35,8 +35,8 @@ The following are the key features of Agents Toolkit:
 
 * [Project templates](#project-templates)
 * [Automatic registration and configuration](#automatic-registration-and-configuration)
-* [CodeLens to trigger Microsoft 365 Agents Toolkit lifecycle](#codelens-to-trigger-agents-toolkit-lifecycle)
-* [Microsoft 365 Agents Toolkit documentation](#agents-toolkit-documentation)
+* [CodeLens to trigger Agents Toolkit lifecycle](#codelens-to-trigger-agents-toolkit-lifecycle)
+* [Agents Toolkit documentation](#agents-toolkit-documentation)
 * [Agent for Microsoft 365 Copilot](#agent-for-microsoft-365-copilot)
 
 > [!NOTE]

@@ -46,18 +46,18 @@ After you've created your Teams app project, you can use the following options t
 
 |Function  |Description  |
 |---------|---------|
-|**Prepare Teams App Dependencies**     |Before you debug locally, ensure that you prepare your app for dependencies. This option helps you to set up the local debug dependencies and register Teams app in the Teams platform. You must have a Microsoft 365 account. For more information, see [how to debug your Teams app locally using Visual Studio](debug-local-vs.md).         |
-|**Update Manifest in Teams Developer Portal**     | Helps you to update the app manifest (previously called Teams app manifest) file. When you update the app manifest file, only then you can redeploy the app manifest file to Azure without deploying the whole project again. Use this command to update your changes to remote. For more information, see [how to edit app manifest using Visual Studio](TeamsFx-preview-and-customize-app-manifest-vs.md).       |
-|**Add Authentication Code**     | Helps you obtain signed-in Teams user token to access Microsoft Graph and other APIs. Agents Toolkit facilitates the interaction by abstracting from the Microsoft Entra ID, which flows and integrates with simple APIs. For more information, see [how to add single sign-on to Teams app](add-single-sign-on-vs.md).        |
-|**Provision in the Cloud**     | Helps you to create Azure resources that host your Teams app. For more information, see [how to provision cloud resources using Visual Studio](provision-vs.md).        |
-|**Deploy to the Cloud**     | Helps you to copy your code to the cloud resources that you provisioned in Microsoft Entra ID. For more information, see [how to deploy Teams app to the cloud using Visual Studio](deploy-vs.md).        |
-|**Preview in**     | Launches the Teams web client, Outlook and the Microsoft 365 app lets you preview the Teams app in your browser.         |
-|**Zip App Package**     | Generates a Teams app package in the **Build** folder under the project. You can upload the app package to the Teams client and run the Teams app.         |
-|**Microsoft 365 Agents Toolkit Documentation**     | Launches a web page to view Agents Toolkit documentation.         |
+|**Select Microsoft 365 Account** |Before you debug locally, ensure that you prepare your app for dependencies. This option helps you to set up the local debug dependencies and register Teams app in the Teams platform. You must have a Microsoft 365 account. For more information, see [how to debug your Teams app locally using Visual Studio](debug-local-vs.md).         |
+|**Update Manifest in Teams Developer Portal** | Helps you to update the app manifest (previously called Teams app manifest) file. When you update the app manifest file, only then you can redeploy the app manifest file to Azure without deploying the whole project again. Use this command to update your changes to remote. For more information, see [how to edit app manifest using Visual Studio](TeamsFx-preview-and-customize-app-manifest-vs.md).       |
+|**Add Authentication Code** | Helps you obtain signed-in Teams user token to access Microsoft Graph and other APIs. Agents Toolkit facilitates the interaction by abstracting from the Microsoft Entra ID, which flows and integrates with simple APIs. For more information, see [how to add single sign-on to Teams app](add-single-sign-on-vs.md).        |
+|**Provision in the Cloud** | Helps you to create Azure resources that host your Teams app. For more information, see [how to provision cloud resources using Visual Studio](provision-vs.md).        |
+|**Deploy to the Cloud** | Helps you to copy your code to the cloud resources that you provisioned in Microsoft Entra ID. For more information, see [how to deploy Teams app to the cloud using Visual Studio](deploy-vs.md).        |
+|**Preview in** | Launches the Teams web client, Outlook and the Microsoft 365 app lets you preview the Teams app in your browser.         |
+|**Zip App Package** | Generates a Teams app package in the **Build** folder under the project. You can upload the app package to the Teams client and run the Teams app.         |
+|**Microsoft 365 Agents Toolkit Documentation** | Launches a web page to view Agents Toolkit documentation.         |
 
 ## See also
 
 * [Microsoft 365 Agents Toolkit Overview](teams-toolkit-fundamentals-vs.md)
-* [Create a new Teams app using Microsoft 365 Agents Toolkit](create-new-project-vs.md)
+* [Create a new Teams app using Agents Toolkit](create-new-project-vs.md)
 * [App manifest schema](~/resources/schema/manifest-schema.md)
-* [Prepare to build apps using Microsoft 365 Agents Toolkit](build-environments-vs.md)
+* [Prepare to build apps using Agents Toolkit](build-environments-vs.md)
