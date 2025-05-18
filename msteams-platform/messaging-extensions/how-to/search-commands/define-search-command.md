@@ -38,7 +38,7 @@ Before you get started, ensure that you meet the following requirements:
 * [Set up your dev environment for extending Teams apps across Microsoft 365.](../../../m365-apps/prerequisites.md) After you've enrolled your developer tenant in Office 365 Targeted Release, it might take a couple of days for the enrollment to take effect.
 * [Teams Toolkit Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version 5.2.0 and higher or Teams Toolkit CLI.
 
-# [Teams Toolkit](#tab/Teams-toolkit)
+# [Microsoft 365 Agents Toolkit](#tab/Teams-toolkit)
 
 To create a search-based message extension using Teams Toolkit, follow these steps:
 

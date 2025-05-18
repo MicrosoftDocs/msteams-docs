@@ -1099,7 +1099,7 @@ You can specify the input types, titles, descriptions, and required fields for t
                     ],
 ```
 
-# [Teams Toolkit](#tab/teams-toolkit)
+# [Microsoft 365 Agents Toolkit](#tab/teams-toolkit)
 
 To build an API-based message extension with multiple parameters using Teams Toolkit for Visual Studio Code, follow these steps:
 

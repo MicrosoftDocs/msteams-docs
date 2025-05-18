@@ -32,7 +32,7 @@ To complete this tutorial, you need:
 * A machine with Microsoft 365 apps installed from the Microsoft 365 Apps *Current Channel*.
 * (Optional) Your sandbox tenant enrolled in Microsoft 365 Targeted Releases.
 * (Optional) An Android device or emulator with Microsoft 365 for Android app installed.
-* (Optional) [Teams Toolkit](https://aka.ms/teams-toolkit) extension for Microsoft Visual Studio Code to help update your code.
+* (Optional) [Microsoft 365 Agents Toolkit](https://aka.ms/teams-toolkit) extension for Microsoft Visual Studio Code to help update your code.
 
 > [!div class="nextstepaction"]
 > [Install prerequisites](prerequisites.md)
@@ -96,7 +96,7 @@ You need to use the app manifest schema version `1.13` (or later) to enable your
 
 You have two options for updating your app manifest:
 
-# [Teams Toolkit](#tab/manifest-teams-toolkit)
+# [Microsoft 365 Agents Toolkit](#tab/manifest-teams-toolkit)
 
 1. Open the command palette: `Ctrl+Shift+P`.
 1. Run the `Teams: Upgrade Teams manifest` command and select your app manifest file. Changes are made in place.

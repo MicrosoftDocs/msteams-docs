@@ -37,7 +37,7 @@ To preview your Teams meeting app in Outlook, ensure the following:
 * [NodeJS](https://nodejs.org/download) (with npm) installed.
 * [TeamsFx CLI v2](~/toolkit/teams-toolkit-cli.md) library installed from npm.
 * [Visual Studio Code](https://code.visualstudio.com/) installed to your development environment.
-* [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) extension for Visual Studio Code.
+* [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) extension for Visual Studio Code.
 
 To preview your Teams meeting app in Outlook, you can either build a new meeting app with Teams Toolkit or extend an existing Teams meeting app in Outlook.
 

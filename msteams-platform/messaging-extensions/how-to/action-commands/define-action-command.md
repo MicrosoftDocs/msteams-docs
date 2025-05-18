@@ -66,7 +66,7 @@ If the message extension is invoked from the compose box or directly from a mess
 
 You can create an action command using **Teams Toolkit** and **Developer Portal for Teams**.
 
-# [Teams Toolkit](#tab/Teams-toolkit)
+# [Microsoft 365 Agents Toolkit](#tab/Teams-toolkit)
 
 To create an action-based message extension using Teams Toolkit, follow these steps:
 

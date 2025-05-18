@@ -399,7 +399,7 @@ In the *Visual Studio Code Extensions Marketplace*, search for **Teams Toolkit**
 
 To run in Outlook and Microsoft 365 app, your app needs to depend on the [npm package](https://www.npmjs.com/package/@microsoft/teams-js/v/2.0.0) `@microsoft/teams-js@2.0.0` (or later). To perform these steps manually, and for more information on the API changes, see the following sections on [Callbacks converted to promises](#callbacks-converted-to-promises) and [APIs organized into capabilities](#apis-organized-into-capabilities).
 
-1. Ensure you have the latest [Teams Toolkit](https://aka.ms/teams-toolkit) (version 2.10.0 or later)
+1. Ensure you have the latest [Microsoft 365 Agents Toolkit](https://aka.ms/teams-toolkit) (version 2.10.0 or later)
 1. Open the *Command palette*: `Ctrl+Shift+P`
 1. Run the command `Teams: Upgrade Teams JS SDK references to support Outlook and Microsoft 365 apps`
 
@@ -420,7 +420,7 @@ After completion, the utility updates your `package.json` file with the TeamsJS 
 
 If you're updating a Teams app to run in Microsoft 365 app and Outlook, you also need to update the app manifest to version 1.13 or later. You can do this easily with Teams Toolkit, or manually.
 
-# [Teams Toolkit](#tab/manifest-teams-toolkit)
+# [Microsoft 365 Agents Toolkit](#tab/manifest-teams-toolkit)
 
 1. Open the *Command palette*: `Ctrl+Shift+P`
 1. Run **Teams: Upgrade Teams manifest to support Outlook and Microsoft 365 apps** command and select your app manifest file. Changes are made in place.
