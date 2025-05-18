@@ -12,7 +12,7 @@ ms.date: 03/03/2022
 
 Visual Studio uses the `launchSettings.json` file to store configuration information that describes how to start an ASP.NET Core application. The file holds essential application settings used solely during development on the local machine. You can find it in the Properties folder of your project. It specifies details like the command to run, the browser's URL, and the required environment variables to be set.
 
-After selecting **Prepare Teams App Dependencies**, Microsoft Teams Toolkit updates the launchUrl using the real Microsoft Teams app ID, Teams tenant ID, and Microsoft 365 account.
+After selecting **Select Microsoft 365 Account**, Microsoft 365 Agents Toolkit updates the launchUrl using the real Microsoft Teams app ID, Teams tenant ID, and Microsoft 365 account.
 
 ## Start local tunnel
 

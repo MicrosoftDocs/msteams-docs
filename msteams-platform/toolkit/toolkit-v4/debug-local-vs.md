@@ -69,7 +69,7 @@ To debug your app after you create a project, perform the following steps:
    > [!NOTE]
    > When you debug a notification bot app, ensure that you post HTTP request to `http://localhost:5130/api/notification` in order to trigger notification. If you've selected HTTP trigger when creating the project, you can use any API tools such as, cURL (Windows Command Prompt), Postman, or any other API tool.
 
-   Before you try to run the Teams app locally, if you make any changes to the app manifest (previously called Teams app manifest) file `/appPackage/manifest.json`, ensure that you perform the **Prepare Teams App Dependencies** command.
+   Before you try to run the Teams app locally, if you make any changes to the app manifest (previously called Teams app manifest) file `/appPackage/manifest.json`, ensure that you perform the **Select Microsoft 365 Account** command.
 
 ## Next step
 
