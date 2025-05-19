@@ -91,7 +91,7 @@ By default, Visual Studio Code automatically keeps Agents Toolkit up-to-date. If
 
 1. On the Agents Toolkit page, select the dropdown next to **Uninstall**.
 
-1. Select **Install Another Version...** from the dropdown list.
+1. Select **Install Specific Version...** from the dropdown list.
 
    :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/install-another-version.png" alt-text="Screenshot shows the option to select other version of Visual Studio Code.":::
 

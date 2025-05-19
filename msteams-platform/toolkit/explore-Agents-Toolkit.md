@@ -21,13 +21,12 @@ Agents Toolkit appears within Visual Studio Code as an extension. After you inst
 
 | Serial No. | UI Elements | Definition |
 | --- | --- | --- |
-| 1 | **Build a Notification Bot** | Build a notification bot. |
-| 2 | **Build a Declarative Agent** | Build a declarative agent. |
-| 3 | **Create a New App** | Create a new Teams app based on your requirement. |
-| 4 | **View Samples** | Select and build existing app samples based on common use cases for a Teams app. |
-| 5 | **Create App with GitHub Copilot** | Create an app with GitHub Copilot. |
-| 6 | • **New File** <br> • **Open File** <br> • **Open Folder** <br> • **Connect to** | • Create a new file. <br> • Open an existing file. <br> • Open an existing folder. <br> • Connect to remote development workspaces. |
-| 7 | **Recent** | View the recent files. |
+| 1 | **Build a Declatative Agent** | Build a declarative agent. |
+| 2 | **Create a New Agent/App** | Create a new agent/app. |
+| 3 | **View Samples** | Select and build existing app samples based on common use cases for a Teams app. |
+| 4 | **Create App with GitHub Copilot** | Create an app with GitHub Copilot. |
+| 5 | • **New File** <br> • **Open File** <br> • **Open Folder** <br> • **Connect to** | • Create a new file. <br> • Open an existing file. <br> • Open an existing folder. <br> • Connect to remote development workspaces. |
+| 6 | **Recent** | View the recent files. |
 
 ### Explore the Agents Toolkit task pane
 
@@ -91,13 +90,15 @@ From the task pane, you can see the following sections:
 
         To create and debug your Teams app, you need the following features:
         
-       * **Create a New App**: Use Agents Toolkit wizard to prepare project scaffolding for app development.
+       * **Create a New Agent/App**: Use Agents Toolkit wizard to prepare project scaffolding for app development.
 
         * **View Samples**: Select any of Agents Toolkit's sample apps. The toolkit downloads the app code from GitHub and you can build the sample app.
 
         * **View How-to Guides**: Select to view Teams app scenario guides and development guides.
 
         * **Preview Your Teams App (F5)**: Select to view the Teams app debug options.
+
+        * **Get Help from GitHub Copilot**: Select to get AI-powered code suggestions.
    :::column-end:::
 :::row-end:::
 
@@ -113,7 +114,7 @@ From the task pane, you can see the following sections:
         
         * **Deploy**: Deploy the source code to Azure.
        
-        * **Publish**: Publish your developed app and publish it to scopes, such as personal, team, channel, or organization.
+        * **Publish to Organization**: Publish your developed app and publish it to scopes, such as personal, team, channel, or organization.
    :::column-end:::
 :::row-end:::
 
@@ -129,7 +130,7 @@ From the task pane, you can see the following sections:
         
         * **Validate Application**: Validate if the app manifest file is in right schema or validate the app package.
         
-        * **Open Developer Portal to Publish**: Use Developer Portal to publish and manage your Teams app. 
+        * **Publish to Store in Developer Portal**: Use Developer Portal to publish and manage your Teams app. 
    :::column-end:::
 :::row-end:::
 

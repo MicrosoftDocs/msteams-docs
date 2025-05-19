@@ -43,8 +43,8 @@ Before you get started, ensure that you meet the following requirements:
 To create a search-based message extension using Agents Toolkit, follow these steps:
 
 1. Open **Visual Studio Code**.
-1. From the left pane, select **Microsoft 365 Agents Toolkit**.
-1. Select **Create a New App**.
+1. From the left pane, Select **Microsoft 365 Agents Toolkit**.
+1. Select **Create a New Agent/App** > **Teams App**.
 1. Select **Message Extension**.
 1. Select **Custom Search Results**.
 1. Select a **programming language**.
