@@ -157,7 +157,10 @@
     displayName: Tools and SDKs
   - name: Tools 
     items:
-    - name: Microsoft 365 Agents Toolkit for Visual Studio Code
+    - name: Microsoft 365 Agents Toolkit
+      href: /microsoft-365/developer/overview-m365-agents-toolkit?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+      displayName: ATK, M365, Microsoft 365, Agents Toolkit
+    - name: Agents Toolkit for VSC
       items:
       - name: Agents Toolkit overview
         href: toolkit/teams-toolkit-fundamentals.md
@@ -246,7 +249,7 @@
           displayName: Microsoft Teams samples
         - name: FAQ
           href: toolkit/faq.md
-    - name: Microsoft 365 Agents Toolkit for Visual Studio
+    - name: Agents Toolkit for VS
       items:
       - name: Overview
         href: toolkit/toolkit-v4/agents-toolkit-fundamentals-vs.md
@@ -291,6 +294,8 @@
         href: toolkit/agents-toolkit-migration-guide.md
         displayName: migrate Teams toolkit, new project structure, YAML configuration
     - name: Microsoft 365 Agents Toolkit CLI
+      href: toolkit/Microsoft-365-Agents-Toolkit-CLI.md
+    - name: Teams Toolkit CLI
       href: toolkit/Teams-Toolkit-CLI.md
     - name: Developer Portal for Teams
       items:
