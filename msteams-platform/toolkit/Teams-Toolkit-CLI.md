@@ -1,5 +1,5 @@
 ---
-title: Introduction to Agents Toolkit CLI
+title: Introduction to Teams Toolkit CLI
 author: MuyangAmigo
 description: Learn about Teams Toolkit Command Line Interface for Teams app development in different versions, supported commands, scenarios, interactive mode, global options.
 ms.author: zhany
@@ -9,20 +9,20 @@ ms.date: 11/29/2021
 zone_pivot_groups: toolkit-cli
 ---
 
-# Agents Toolkit command line interface
+# Teams Toolkit command line interface
 
 > [!IMPORTANT]
 >
-> * We recommend that you use Microsoft 365 Agents Toolkit CLI (previously known as TeamsFx CLI) v3 to build your Teams app.
-> * Agents Toolkit CLI v1 isn't supported and Agents Toolkit CLI v2 will be depreated by March 2025.
+> * We recommend that you use Microsoft 365 Agents Toolkit CLI (previously known as TeamsFx CLI) to build your Teams app.
+> * Teams Toolkit CLI v1 and v2 aren't supported.
 
-Agents Toolkit command line interface (also previously known as Teams Toolkit CLI) is a text-based command line interface that accelerates Microsoft Teams application development. It aims to provide keyboard centric experience while building Teams applications. For more information, see [source code](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli) and [npm package](https://www.npmjs.com/package/@microsoft/teamsfx-cli).
+Teams Toolkit command line interface (also previously known as Teams Toolkit CLI) is a text-based command line interface that accelerates Microsoft Teams application development. It aims to provide keyboard centric experience while building Teams applications. For more information, see [source code](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli) and [npm package](https://www.npmjs.com/package/@microsoft/teamsfx-cli).
 
 ::: zone pivot="version-three"
 
-Agents Toolkit CLI encapsulates common functionality and integration patterns, such as simplified access to Microsoft Identity. You can build apps for Teams with zero configuration. Teams Toolkit command-line interface (CLI) provides the following features to facilitate the development of Teams applications:
+Teams Toolkit CLI encapsulates common functionality and integration patterns, such as simplified access to Microsoft Identity. You can build apps for Teams with zero configuration. Teams Toolkit command-line interface (CLI) provides the following features to facilitate the development of Teams applications:
 
-* **Collaboration**: Invite other developers to collaborate on your Agents Toolkit CLI project to debug and deploy.
+* **Collaboration**: Invite other developers to collaborate on your Teams Toolkit CLI project to debug and deploy.
 * **Application Creation**: Generate a new Teams application using available templates and samples.
 * **Application Preview**: Upload and preview your custom app in Teams, Outlook, and the Microsoft 365 app.
 * **Resource Provisioning and Deployment**: Provision necessary cloud resources and deploy your application to Azure.
@@ -52,7 +52,7 @@ The following table lists the supported commands to help developers build and ma
 | [`teamsapp auth`](#teamsapp-auth)| Manage authentication for cloud service accounts. The supported cloud services are Azure and Microsoft 365. |
 | [`teamsapp entra-app`](#teamsapp-install) | Manage the Microsoft Entra app in the current application. |
 | [`teamsapp env`](#teamsapp-env) | Manage environments. |
-| [`teamsapp help`](#teamsapp-help) |  Show Agents Toolkit CLI help. |
+| [`teamsapp help`](#teamsapp-help) |  Show Teams Toolkit CLI help. |
 | [`teamsapp install`](#teamsapp-install) | Upload a custom app for a specific application package across Microsoft 365. |
 | [`teamsapp launchinfo`](#teamsapp-launchinfo) | Get launch information of an installed Microsoft 365 App. |
 | [`teamsapp list`](#teamsapp-list) | List available Teams application templates and samples. |
@@ -75,8 +75,8 @@ The following are the global options you can use with each command:
 
 | Options | Description |
 |---------|-------------|
-| `--version -v` | Displays the version of Agents Toolkit CLI.|
-| `--help -h` | Provides help for Agents Toolkit CLI.|
+| `--version -v` | Displays the version of Teams Toolkit CLI.|
+| `--help -h` | Provides help for Teams Toolkit CLI.|
 | `--interactive -i` | Executes the command in interactive mode. The default value is true.|
 | `--debug` | Prints the debug information. The default value is false.|
 | `--verbose` | Prints the diagnostic information. The default value is false.|
@@ -197,7 +197,7 @@ teamsapp env add staging --env dev
 
 ## `teamsapp help`
 
-The `teamsapp help` command displays all the commands available for Agents Toolkit CLI.
+The `teamsapp help` command displays all the commands available for Teams Toolkit CLI.
 
 :::image type="content" source="../assets/images/teams-toolkit-cli/teamsapp-help.png" alt-text="Screenshot shows the teamsapp help commands." lightbox="../assets/images/teams-toolkit-cli/teamsapp-help.png":::
 
@@ -547,7 +547,7 @@ Install `teamsfx-cli` from `npm` and run `teamsfx -h` to check all available com
 | `teamsfx add`| Add a feature to your Teams application.|
 | `teamsfx account`| Manage Microsoft 365 and Azure accounts. The supported cloud services are Azure and Microsoft 365. |
 | `teamsfx env` | Manage environments. |
-| `teamsfx help` | Show Agents Toolkit CLI help. |
+| `teamsfx help` | Show Teams Toolkit CLI help. |
 | `teamsfx list` | List the available Teams application templates and samples. |
 | `teamsfx provision` | Run the provision stage in teamsapp.yml or teamsapp.local.yml.|
 | `teamsfx deploy` | Run the deploy stage in teamsapp.yml or teamsapp.local.yml. |
@@ -1180,7 +1180,7 @@ TeamsFx CLI provides `teamsFx permission` commands for collaboration scenarios.
 | Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
 |`--env`| Yes | Provide env name. |
-|`--list-all-collaborators` | No | With this flag, Agents Toolkit CLI prints all collaborators for the project. |
+|`--list-all-collaborators` | No | With this flag, Teams Toolkit CLI prints all collaborators for the project. |
 
 ### Scenarios for `teamsfx permission`
 
