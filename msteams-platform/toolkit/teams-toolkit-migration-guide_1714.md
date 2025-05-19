@@ -41,7 +41,7 @@ Perform the following steps to migrate to one-click F5 experience:
 
 2. In `Configuration Manager` window, check the `deploy` stage for M365Agent/TeamsApp project for prepare Teams App dependencies to be executed when deploying.
 
-     :::image type="content" source="../assets/images/teams-toolkit-overview/debug_check_deploy.png" alt-text="Screenshot shows the configuration manager window.":::
+     :::image type="content" source="../assets/images/toolkit-overview/debug_check_deploy.png" alt-text="Screenshot shows the configuration manager window.":::
 
 3. (Optional) Create **Microsoft Teams (browser) (skip update app)** debug profile. Follow **Microsoft Teams (browser)** debug profile to add following contents:
 
@@ -55,7 +55,7 @@ Perform the following steps to migrate to one-click F5 experience:
     },
    ```
 
-   In `{{solutionName}}.slnLaunch.user` file at the same level as the solution file, add the content according to the files of `launchSettings.json`.
+   In `{{solutionName}}.slnLaunch.user` file at the same level as the solution file, add the content according to the files of `launchSettings.json`:
 
    ```json
     [
