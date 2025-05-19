@@ -20,7 +20,7 @@ Teams provides SSO function for an app using Agents Toolkit for Microsoft Visual
 
 1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Add Authentication Code**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-add-authentication-code.PNG" alt-text="Screenshot shows the option to add authentication code.":::
+    :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/vs-add-authentication-code.PNG" alt-text="Screenshot shows the option to add authentication code.":::
 
 Agents Toolkit helps you generate the authentication files in **TeamsFx-Auth** folder, including the app manifest (previously called Teams app manifest) template file for Microsoft Entra application and authentication redirect pages. Link the files to your Teams application by updating authentication configurations to ensure the SSO works for your application.
 

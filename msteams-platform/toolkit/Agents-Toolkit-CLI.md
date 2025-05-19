@@ -1241,7 +1241,7 @@ The following list provides required permissions for `TeamsFx` projects:
       teamsfx permission status --env dev --list-all-collaborators
       ```
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/permission-status-all-1.png" alt-text="permission-1" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/permission-status-all-1.png":::
+      :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/permission-status-all-1.png" alt-text="permission-1" lightbox="../assets/images/toolkit-v2/toolkit-fundamentals/permission-status-all-1.png":::
 
     * To add another account as collaborator. Ensure the added account is under the same tenant:
 
@@ -1249,7 +1249,7 @@ The following list provides required permissions for `TeamsFx` projects:
       teamsfx permission grant --env dev --email user-email@user-tenant.com
       ```
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/permission-grant-1.png" alt-text="permission" lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/permission-grant-1.png":::
+      :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/permission-grant-1.png" alt-text="permission" lightbox="../assets/images/toolkit-v2/toolkit-fundamentals/permission-grant-1.png":::
 
     * To push your project to GitHub
 
@@ -1305,7 +1305,7 @@ The following list provides required permissions for `TeamsFx` projects:
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Teams Toolkit Overview](agents-toolkit-fundamentals.md)
 * [TeamsFx SDK for TypeScript or JavaScript](TeamsFx-SDK.md)
 * [Manage multiple environments in Teams Toolkit](TeamsFx-multi-env.md)
 * [Collaborate on Teams project using Teams Toolkit](TeamsFx-collaboration.md)
