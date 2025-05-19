@@ -1,16 +1,16 @@
 ---
-title: Collaborate on TeamsFx - Teams Toolkit
+title: Collaborate on TeamsFx - Agents Toolkit
 author: surbhigupta
-description: In this module, learn how to collaborate on TeamsFx Project as project owner or collaborator using Teams Toolkit, remove collaboration, and test app behavior.
+description: In this module, learn how to collaborate on TeamsFx Project as project owner or collaborator using toolkit, remove collaboration, and test app behavior.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Collaborate on Microsoft Teams project using Microsoft Teams Toolkit
+# Collaborate on Microsoft Teams project using Microsoft 365 Agents Toolkit
 
-Multiple developers can work together to debug, provision, and deploy the same Teams Toolkit project, but it requires manually setting the right permissions of Teams App and Microsoft Entra ID. Teams Toolkit's collaboration feature simplifies this process between developers and project owners.
+Multiple developers can work together to debug, provision, and deploy the same Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) project, but it requires manually setting the right permissions of Teams App and Microsoft Entra ID. Agents Toolkit's collaboration feature simplifies this process between developers and project owners.
 
 ## Collaborate with other developers
 
@@ -21,9 +21,9 @@ The following sections guide us to understand the collaboration process as proje
   > [!NOTE]
   > Before adding collaborators for an environment, project owner needs to [provision](provision.md) the project first.
 
-  1. Select **Teams Toolkit** in the activity bar.
+  1. Select **Microsoft 365 Agents Toolkit** in the activity bar.
   
-     :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/select-teams-toolkit.png" alt-text="Screenshot shows the select teams toolkit from activity bar.":::
+     :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/select-teams-toolkit.png" alt-text="Screenshot shows the select Agents Toolkit from activity bar.":::
 
   1. In **ENVIRONMENT** section, select Manage Collaborators button as shown in the following image:
 
@@ -93,7 +93,7 @@ Removing collaborators requires the following manual steps:
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Microsoft 365 Agents Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Provision cloud resources](provision.md)
 * [Deploy Teams app to the cloud](deploy.md)
 * [Manage multiple environments](TeamsFx-multi-env.md)

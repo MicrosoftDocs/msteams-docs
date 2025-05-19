@@ -1,7 +1,7 @@
 ---
 title: Build API-based Message Extension
 author: surbhigupta
-description: Learn how to create or build an API-based message extension using Developer Portal for Teams, Teams Toolkit for Visual Studio, Visual Studio Code, and CLI.
+description: Learn how to create or build an API-based message extension using Developer Portal for Teams, Agents Toolkit for Visual Studio, Visual Studio Code, and CLI.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
@@ -502,7 +502,7 @@ The properties in OpenAPI Description document are mapped to the Adaptive Card t
 
 </details>
 
-You can create an API-based message extension using Developer Portal for Teams, Teams Toolkit for Visual Studio Code, command line interface (CLI), or Visual Studio.
+You can create an API-based message extension using Developer Portal for Teams, Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) for Visual Studio Code, command line interface (CLI), or Visual Studio.
 
 # [Developer Portal for Teams](#tab/developer-portal-for-teams)
 
@@ -610,16 +610,16 @@ To test your API-based message extension created in Developer Portal, you can us
 # [Visual Studio Code](#tab/visual-studio-code)
 
 > [!NOTE]
-> Teams Toolkit supports OpenAPI Specification version 2.0 and 3.0.x.
+> Agents Toolkit supports OpenAPI Specification version 2.0 and 3.0.x.
 
-To build an API-based message extension using Teams Toolkit for Visual Studio Code, follow these steps:
+To build an API-based message extension using Agents Toolkit for Visual Studio Code, follow these steps:
 
 1. Open **Visual Studio Code**.
-1. From the left pane, select **Teams Toolkit**.
-1. Select **Create a New App**.
+1. From the left pane, select **Microsoft 365 Agents Toolkit**.
+1. Select **Create a New Agent/App**.
 1. Select **Message Extension**.
 
-   :::image type="content" source="../assets/images/toolkit-v2/first-msgext/create-me.png" alt-text="Screenshot shows the message extension option in Teams Toolkit.":::
+   :::image type="content" source="../assets/images/toolkit-v2/first-msgext/create-me.png" alt-text="Screenshot shows the message extension option in Agents Toolkit.":::
 
 1. Select **Custom Search Results**.
 
@@ -649,7 +649,7 @@ To build an API-based message extension using Teams Toolkit for Visual Studio Co
 
    1. Select **Default folder**.
 
-   1. Enter the name of your app and select **Enter**. Teams Toolkit creates a new plugin with API from Azure functions.
+   1. Enter the name of your app and select **Enter**. Agents Toolkit creates a new plugin with API from Azure functions.
    1. To get started, you must update the source code in the following files:
 
       | File | Contents |
@@ -659,8 +659,8 @@ To build an API-based message extension using Teams Toolkit for Visual Studio Co
       | `src/keyGen.ts` | Designed to generate an API key used for authorization. |
       | `appPackage/apiSpecificationFile/repair.yml` | A file that describes the structure and behavior of the repair API. |
       | `appPackage/responseTemplates/repair.json` | A template file for rendering API response. |
-      | `teamsapp.yml` | The main Teams Toolkit project file. The project file defines two primary things: Properties and configuration Stage definitions.|
-      |`teamsapp.local.yml` | Overrides teamsapp.yml with actions that enable local execution and debugging.|
+      | `m365agents.yml` | The main Agents Toolkit project file. The project file defines two primary things: Properties and configuration Stage definitions.|
+      |`m365agents.local.yml` | Overrides m365agents.yml with actions that enable local execution and debugging.|
       |`aad.manifest.json` | Defines the configuration of Microsoft Entra app. This template only provisions a single tenant Microsoft Entra app.|
 
    1. Based on the options selected in **step a**, follow these steps:
@@ -706,11 +706,11 @@ To build an API-based message extension using Teams Toolkit for Visual Studio Co
       > GET and POST APIs are supported for API-based message extensions.
 
    1. Select **Default folder**.
-   1. Enter the name of your app and select **Enter**. Teams Toolkit scaffolds the OpenAPI Description document and created an API-based message extension.
+   1. Enter the name of your app and select **Enter**. Agents Toolkit scaffolds the OpenAPI Description document and created an API-based message extension.
    1. Under **LIFECYCLE**, select **Provision**.
    1. If your OpenAPI specification document has a security scheme `bearerAuth`, which uses the HTTP bearer scheme, enter the API key in the command window and select **Enter**.
 
-        :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-api-key.png" alt-text="Screenshot shows the Enter API key command that appears in Teams Toolkit for Visual Studio Code.":::
+        :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-api-key.png" alt-text="Screenshot shows the Enter API key command that appears in Agents Toolkit for Visual Studio Code.":::
 
       > [!NOTE]
       > The API key must be a string with 10 to 2048 characters.
@@ -718,15 +718,15 @@ To build an API-based message extension using Teams Toolkit for Visual Studio Co
     ---
 
      > [!NOTE]
-     > Teams toolkit source file includes a security check to ensure that an incoming request is authorized. It uses a function `isApiKeyValid(req)` to verify if the request contains a valid API key. If the API key isn't valid, the code returns a 401 HTTP status code, indicating an unauthorized response.
+     > Agents Toolkit source file includes a security check to ensure that an incoming request is authorized. It uses a function `isApiKeyValid(req)` to verify if the request contains a valid API key. If the API key isn't valid, the code returns a 401 HTTP status code, indicating an unauthorized response.
 
-1. From the left pane, select **Teams Toolkit**.
+1. From the left pane, select **Microsoft 365 Agents Toolkit**.
 1. Under **ACCOUNTS**, sign in with your [Microsoft 365 account](/microsoftteams/platform/toolkit/accounts) and Azure account if you haven't already.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-accounts.png" alt-text="Screenshot shows the Microsoft 365 and Azure sign in option in Teams Toolkit.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-accounts.png" alt-text="Screenshot shows the Microsoft 365 and Azure sign in option in Agents Toolkit.":::
 
 1. From the left pane, select **Run and Debug (Ctrl+Shift+D)**.
-1. From the launch configuration dropdown, select `Preview in Teams (Edge)` or `Preview in Teams (Chrome)`. Teams Toolkit launches Teams web client in a browser window.
+1. From the launch configuration dropdown, select `Preview in Teams (Edge)` or `Preview in Teams (Chrome)`. Agents Toolkit launches Teams web client in a browser window.
 1. Go to a chat message and select the **Actions and apps** icon. In the flyout menu, search for your app.
 1. Select your message extension from the list and enter a search command in the search box.
 
@@ -738,19 +738,19 @@ To build an API-based message extension using Teams Toolkit for Visual Studio Co
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-sbs-result.png" alt-text="Screenshot shows the Adaptive Card with the search results in the chat message in Teams.":::
 
-# [Teams Toolkit CLI](#tab/teams-toolkit-cli)
+# [Microsoft 365 Agents Toolkit CLI](#tab/teams-toolkit-cli)
 
-To create an API-based message extension using Teams Toolkit CLI, follow these steps:
+To create an API-based message extension using Microsoft 365 Agents Toolkit CLI (previously known as Teams Toolkit CLI), follow these steps:
 
 1. Go to **Command Prompt**.
 
 1. Enter the following command:
 
    ```
-   npm install -g @microsoft/teamsapp-cli
+   npm install -g @microsoft/atk-cli
    ```
 
-1. Type `teamsapp new` in the terminal
+1. Type `atk new` in the terminal
 
 1. Select **Message Extension**.
 
@@ -774,17 +774,17 @@ To create an API-based message extension using Teams Toolkit CLI, follow these s
 
 1. Go to the folder path where your project is created and enter the following command to provision your app in Azure:
 
-   ```teamsapp provision --env dev```
+   ```atk provision --env dev```
 
-   Teams Toolkit CLI opens a browser window and requests you to sign in to your Microsoft Account.
+   Agents Toolkit CLI opens a browser window and requests you to sign in to your Microsoft Account.
 
-1. Sign in to your Microsoft account. Teams Toolkit CLI executes validation and provisions your app on Azure.
+1. Sign in to your Microsoft account. Agents Toolkit CLI executes validation and provisions your app on Azure.
 
    :::image type="content" source="../assets/images/Copilot/api-based-CLI-provision-me.png" alt-text="Screenshot shows the sign in request and the provision stages in the command prompt window.":::
 
 1. In the command prompt window, enter the following command to preview your app in Teams:
 
-   ```teamsapp preview --env dev```
+   ```atk preview --env dev```
 
    A new browser window with Teams web client opens. You can add your app to Teams.
 
@@ -792,7 +792,7 @@ To create an API-based message extension using Teams Toolkit CLI, follow these s
 
 Before you get started, ensure that you install Visual Studio Enterprise 2022 Preview version 17.9.0 Preview 1.0 and install the **Microsoft Teams development tools** under **ASP.NET and web development** workload.
 
-To create an API-based message extension using Teams Toolkit for Visual Studio, follow these steps:
+To create an API-based message extension using Agents Toolkit for Visual Studio, follow these steps:
 
 1. Open **Visual Studio**.
 1. Go to **File** > **New** > **Project...** or **New Project**.
@@ -830,8 +830,8 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
       |`appPackage/apiSpecificationFile/repair.yml` |  A file that describes the structure and behavior of the repair API.|
       |`appPackage/responseTemplates/repair.json` |  A generated Adaptive Card that used to render API response.|
       |`appPackage/responseTemplates/repair.data.json` | The data source for the repair API.|
-      | `teamsapp.yml` | The main Teams Toolkit project file. The project file defines two primary things: Properties and configuration Stage definitions.|
-      |`teamsapp.local.yml` | Overrides teamsapp.yml with actions that enable local execution and debugging.|
+      | `m365agents.yml` | The main Agents Toolkit project file. The project file defines two primary things: Properties and configuration Stage definitions.|
+      |`m365agents.local.yml` | Overrides m365agents.yml with actions that enable local execution and debugging.|
 
    1. After you've updated the source code, in the debug dropdown menu, select **Dev Tunnels (no active tunnel)** > **Create a Tunnel...**.
 
@@ -846,7 +846,7 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
        The tunnel you created is listed under **Dev Tunnels**.
 
    1. Go to **Solution Explorer** and select your project.
-   1. Right-click the menu and select **Teams Toolkit** > **Prepare Teams App Dependencies**.
+   1. Right-click the menu and select **Microsoft 365 Agents Toolkit** > **Select Microsoft 365 Account**.
 
       If prompted, sign in with a Microsoft 365 account. A message appears that the app is successfully prepared.
 
@@ -858,13 +858,13 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
    1. Select the dropdown and select the APIs from the list.
    1. Select **Create**. The project is scaffolded and you can find API specification, manifest, and response template files in the **appPackage** folder.
    1. Go to **Solution Explorer** and select your project.
-   1. Right-click the menu and select **Teams Toolkit** > **Provision in the Cloud**.
+   1. Right-click the menu and select **Microsoft 365 Agents Toolkit** > **Provision in the Cloud**.
 
-      :::image type="content" source="../assets/images/Copilot/api-based-VS-provision-cloud.png" alt-text="Screenshot shows the Provision in the Cloud option under Teams Toolkit in Visual Studio.":::
+      :::image type="content" source="../assets/images/Copilot/api-based-VS-provision-cloud.png" alt-text="Screenshot shows the Provision in the Cloud option under Agents Toolkit in Visual Studio.":::
 
       If prompted, sign in with a Microsoft 365 account. A message appears that the app is successfully prepared.
 
-   1. Right-click your project and select **Teams Toolkit** > **Preview in** > **Teams**.
+   1. Right-click your project and select **Microsoft 365 Agents Toolkit** > **Preview in** > **Teams**.
    1. Select the **manifest.json** file and select **Open**. Visual Studio launches a Teams web client.
 
     ---
@@ -1099,16 +1099,16 @@ You can specify the input types, titles, descriptions, and required fields for t
                     ],
 ```
 
-# [Teams Toolkit](#tab/teams-toolkit)
+# [Agents Toolkit](#tab/agents-toolkit)
 
-To build an API-based message extension with multiple parameters using Teams Toolkit for Visual Studio Code, follow these steps:
+To build an API-based message extension with multiple parameters using Agents Toolkit for Visual Studio Code, follow these steps:
 
 1. Open **Visual Studio Code**.
-1. From the left pane, select **Teams Toolkit**.
+1. From the left pane, select **Microsoft 365 Agents Toolkit**.
 1. Select **Create a New App**.
 1. Select **Message Extension**.
 
-   :::image type="content" source="../assets/images/toolkit-v2/first-msgext/create-new-app1.png" alt-text="Screenshot shows the message extension option in Teams Toolkit.":::
+   :::image type="content" source="../assets/images/toolkit-v2/first-msgext/create-new-app1.png" alt-text="Screenshot shows the message extension option in Agents Toolkit.":::
 
 1. Select **Custom Search Results**.
 
@@ -1128,15 +1128,15 @@ To build an API-based message extension with multiple parameters using Teams Too
       > GET and POST APIs are supported for API-based message extensions.
 
 1. Select **Default folder**.
-1. Enter the name of your app and select **Enter**. Teams Toolkit scaffolds the OpenAPI Description document and created an API-based message extension.
+1. Enter the name of your app and select **Enter**. Agents Toolkit scaffolds the OpenAPI Description document and created an API-based message extension.
 1. Under **LIFECYCLE**, select **Provision**.
-1. From the left pane, select **Teams Toolkit**.
+1. From the left pane, select **Microsoft 365 Agents Toolkit**.
 1. Under **ACCOUNTS**, sign in with your [Microsoft 365 account](/microsoftteams/platform/toolkit/accounts) and Azure account if you haven't already.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-accounts.png" alt-text="Screenshot shows the Microsoft 365 and Azure sign in option in Teams Toolkit.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-accounts.png" alt-text="Screenshot shows the Microsoft 365 and Azure sign in option in Agents Toolkit.":::
 
 1. From the left pane, select **Run and Debug (Ctrl+Shift+D)**.
-1. From the launch configuration dropdown, select `Preview in Teams (Edge)` or `Preview in Teams (Chrome)`. Teams Toolkit launches Teams web client in a browser window.
+1. From the launch configuration dropdown, select `Preview in Teams (Edge)` or `Preview in Teams (Chrome)`. Agents Toolkit launches Teams web client in a browser window.
 1. Go to a chat message and select the **Actions and apps** icon. In the flyout menu, search for your app.
 1. Select your message extension from the list and enter a search command in the search box.
 1. Select the required parameter from the **PetId** dropdown and enter required details as the secondary parameter in the **Text** box.
@@ -1159,7 +1159,7 @@ Now you've successfully created a message extension with multiple parameters.
 
 To build an API-based message extension, follow these step-by-step guides:
 
-* [For beginners](../sbs-api-msg-ext-ttk.yml): Build an API-based message extension using Teams Toolkit.
+* [For beginners](../sbs-api-msg-ext-ttk.yml): Build an API-based message extension using Agents Toolkit.
 * [For advanced users](../sbs-api-based-message-extensions.yml): Build an API-based message extension from the ground up.
 
 ## See also

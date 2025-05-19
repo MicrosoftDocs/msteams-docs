@@ -12,7 +12,7 @@ The <b>Provision</b> step creates resources in Azure and Microsoft 365 for your 
 
    # [Visual Studio Code](#tab/vscode)
 
-   Select the Teams Toolkit :::image type="icon" source="~/assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
+   Select the Microsoft 365 Agents Toolkit :::image type="icon" source="~/assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
    1. Select **Provision**.
 
@@ -59,18 +59,18 @@ The <b>Provision</b> step creates resources in Azure and Microsoft 365 for your 
 
    In your terminal window:
 
-   1. Run `teamsfx provision`.
+   1. Run `atk provision`.
 
       ``` bash
-      teamsfx provision
+      atk provision
       ```
 
       When prompted, select an Azure subscription to use Azure resources.
 
-   1. Run `teamsfx deploy`.
+   1. Run `atk deploy`.
 
       ``` bash
-      teamsfx deploy
+      atk deploy
       ```
 
 ---

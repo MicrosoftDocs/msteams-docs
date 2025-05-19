@@ -1,7 +1,7 @@
 ---
-title: Create New Teams App in Teams Toolkit
+title: Create New Teams App in Agents Toolkit
 author: zyxiaoyuer
-description: Learn how to create basic and scenario-based Teams app in Visual Studio Code, its directory structure, and Teams app template available in Teams Toolkit.
+description: Learn how to create basic and scenario-based Teams app in VSC, its directory structure, and Teams app template available in Microsoft 365 Agents Toolkit.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
@@ -14,7 +14,7 @@ In this section, you can learn how to create a new Microsoft Teams project using
 
 ## Create a new Teams project using Visual Studio Code
 
-You can build a new Teams project by selecting **Create a New App** in Microsoft Teams Toolkit. You can start from built-in Teams app templates or start from official Teams app samples in Teams Toolkit. What's more, Teams Toolkit  supports to start with Outlook Add-in templates to build your own Outlook Add-ins.
+You can build a new Teams project by selecting **Create a New App** in Microsoft 365 Agents Toolkit (previously known as Teams Toolkit). You can start from built-in Teams app templates or start from official Teams app samples in Agents Toolkit. What's more, Agents Toolkit  supports to start with Outlook Add-in templates to build your own Outlook Add-ins.
 
 :::image type="content" source="../assets/images/toolkit-v2/first-tab/select-capabilities-tabapp_1.png" alt-text="Screenshot shows the App Capability options.":::
 
@@ -34,9 +34,9 @@ To create a basic Teams app:
 
 1. Open **Visual Studio Code**.
 
-1. Select the **Teams Toolkit** > **Create a New App**.
+1. Select the **Microsoft 365 Agents Toolkit** > **Create a New App**.
 
-    :::image type="content" source="../assets/images/toolkit-v2/first-tab/create-project.png" alt-text="Screenshot shows the Create New Project button in the Teams Toolkit sidebar.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-tab/create-project.png" alt-text="Screenshot shows the Create New Project button in the Agents Toolkit sidebar.":::
 
 1. In this example, select **Tab** as app capability.
 
@@ -81,7 +81,7 @@ To create a basic Teams app:
 
 ### Directory structure for different app types
 
-Teams Toolkit provides all components for building an app. After creating the project, you can view the project folders and files under **EXPLORER** section.
+Agents Toolkit provides all components for building an app. After creating the project, you can view the project folders and files under **EXPLORER** section.
 
 <br>
 <details>
@@ -99,8 +99,8 @@ The following example shows a basic Teams tab app directory structure:
 | `src/app.js` | Application entry point and `express` handlers for website. |
 | `src/views/hello.html`| An HTML template that is bind to the tab endpoint. |
 | `src/static` | The web server can serve static assets such as CSS and JavaScript files. |
-| `teamsapp.yml` | This configuration file defines the Teams Toolkit behavior for provision, deploy, and publish lifecycle. You can customize this file to change the behavior of Teams Toolkit in each lifecycle. |
-| `teamsapp.local.yml` | This overrides teamsapp.yml with actions that enable local execution and debugging. |
+| `m365agents.yml` | This configuration file defines the Agents Toolkit behavior for provision, deploy, and publish lifecycle. You can customize this file to change the behavior of Agents Toolkit in each lifecycle. |
+| `m365agents.local.yml` | This overrides m365agents.yml with actions that enable local execution and debugging. |
 
 > [!NOTE]
 > If you have a bot or message extension app, relevant folders are added to the directory structure.
@@ -128,8 +128,8 @@ The new project folder contains the following content:
 | `appPackage` | The app manifest file and icon files that Teams used to recognize your Teams app. |
 | `env` | Stores different environment parameters. |
 | `infra` | Azure `bicep` template files. Used for deploy your Teams app to Azure. |
-| `teamsapp.yml` | This configuration file defines the Teams Toolkit behavior for provision, deploy, and publish lifecycle. You can customize this file to change the behavior of Teams Toolkit in each lifecycle. |
-| `teamsapp.local.yml` | This overrides teamsapp.yml with actions that enable local execution and debugging. |
+| `m365agents.yml` | This configuration file defines the Agents Toolkit behavior for provision, deploy, and publish lifecycle. You can customize this file to change the behavior of Agents Toolkit in each lifecycle. |
+| `m365agents.local.yml` | This overrides m365agents.yml with actions that enable local execution and debugging. |
 
 The core notification implementation is stored in the **src** folder and it contains:
 
@@ -158,8 +158,8 @@ To learn more about the directory structure of different types of scenario-based
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Microsoft 365 Agents Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Build a Teams app with Blazor](../sbs-gs-blazorupdate.yml)
 * [Build a Teams app with C# or .NET](../sbs-gs-csharp.yml)
 * [Prerequisites for all types of environment and create your Teams app](tools-prerequisites.md)
-* [Prepare to build apps using Microsoft Teams Toolkit](build-environments.md)
+* [Prepare to build apps using Agents Toolkit](build-environments.md)

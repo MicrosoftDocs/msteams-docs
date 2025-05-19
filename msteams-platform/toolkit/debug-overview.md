@@ -134,11 +134,11 @@ In `.vscode/tasks.json` under `"Validate prerequisites"` > `"args"` > `"prerequi
 <details>
 <summary><b>Use your development certificate</b></summary>
 
-1. In `teamsapp.local.yml`, remove `devCert` from `devTool/install` action (or remove the whole `devTool/install` action if it only contains `devCert`).
-1. In `teamsapp.local.yml`, set `"SSL_CRT_FILE"` and `"SSL_KEY_FILE"` in `file/createOrUpdateEnvironmentFile` action to your certificate file path and key file path.
+1. In `m365agents.local.yml`, remove `devCert` from `devTool/install` action (or remove the whole `devTool/install` action if it only contains `devCert`).
+1. In `m365agents.local.yml`, set `"SSL_CRT_FILE"` and `"SSL_KEY_FILE"` in `file/createOrUpdateEnvironmentFile` action to your certificate file path and key file path.
 
     ```yml
-    # teamsapp.local.yml
+    # m365agents.local.yml
     ...
       # Remove devCert or this whole action
       - uses: devTool/install
@@ -161,10 +161,10 @@ In `.vscode/tasks.json` under `"Validate prerequisites"` > `"args"` > `"prerequi
 <details>
 <summary><b>Customize npm install command</b></summary>
 
-In `teamsapp.local.yml`, edit `args` of `cli/runNpmCommand` action.
+In `m365agents.local.yml`, edit `args` of `cli/runNpmCommand` action.
 
 ```yml
-# teamsapp.local.yml
+# m365agents.local.yml
 ...
   - uses: cli/runNpmCommand
     with:
@@ -186,7 +186,7 @@ In `teamsapp.local.yml`, edit `args` of `cli/runNpmCommand` action.
 
 * Tab
 
-  1. Search for `"53000"` across your project and look for appearances in `teamsapp.local.yml` and `tasks.json`.
+  1. Search for `"53000"` across your project and look for appearances in `m365agents.local.yml` and `tasks.json`.
   1. Replace it with your port.
   
      :::image type="content" source="../assets/images/toolkit-v2/debug/modify-ports-tab.png" alt-text="Screenshot shows the search result to replace your port for tab.":::
@@ -196,10 +196,10 @@ In `teamsapp.local.yml`, edit `args` of `cli/runNpmCommand` action.
 <details>
 <summary><b>Use your own app package</b></summary>
 
-Teams Toolkit by default creates a set of `teamsApp` actions to manage app package. You can update those in `teamsapp.local.yml` to use your own app package.
+Teams Toolkit by default creates a set of `teamsApp` actions to manage app package. You can update those in `m365agents.local.yml` to use your own app package.
 
 ```yml
-# teamsapp.local.yml
+# m365agents.local.yml
 ...
   - uses: teamsApp/create # Creates a Teams app
     ...

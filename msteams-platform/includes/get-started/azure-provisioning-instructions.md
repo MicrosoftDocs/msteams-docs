@@ -12,11 +12,11 @@ The <b>Provision</b> step creates resources in Azure and Microsoft 365 for your 
 
 # [Visual Studio Code](#tab/vsc4)
 
-Select the Teams Toolkit :::image type="icon" source="~/assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code activity bar.
+Select the Microsoft 365 Agents Toolkit :::image type="icon" source="~/assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code activity bar.
 
 1. Select **Provision**.
 
-   :::image type="content" source="~/assets/images/toolkit-v2/provisioning-commands.png" alt-text="Screenshot shows the selection of provision in the cloud under Teams toolkit.":::
+   :::image type="content" source="~/assets/images/toolkit-v2/provisioning-commands.png" alt-text="Screenshot shows the selection of provision in the cloud under Agents toolkit.":::
 
 1. Select a subscription.
 
@@ -68,18 +68,18 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/toolkit-v2
 
 1. Go to the folder where you created your message extension app and open Command Prompt.
 
-1. Run `teamsfx provision`.
+1. Run `atk provision`.
 
    ``` bash
-   teamsfx provision
+   atk provision
    ```
 
    When prompted, select an Azure subscription and resource group to use Azure resources. Your app is hosted using Azure resources.
 
-1. Run `teamsfx deploy`.
+1. Run `atk deploy`.
 
    ``` bash
-   teamsfx deploy
+   atk deploy
    ```
 
    Your message extension app is deployed.
@@ -88,7 +88,7 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/toolkit-v2
 
 ## Run the deployed app
 
-After the provisioning and deployment steps are complete, go to **Run and Debug** (**Ctrl+Shift+D** or **View > Run**) in Teams Toolkit.
+After the provisioning and deployment steps are complete, go to **Run and Debug** (**Ctrl+Shift+D** or **View > Run**) in Agents Toolkit.
 
 1. Select the **RUN AND DEBUG** dropdown menu.
 1. Select **Launch Remote in Teams (Edge)**.

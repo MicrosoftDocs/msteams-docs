@@ -475,11 +475,11 @@ export const commandBot = new ConversationBot({
 
 ### Access Microsoft Graph
 
-If you're responding to a command that needs to access Microsoft Graph data of an already signed in Teams user, you can do so by single sign-on (SSO) with their Teams user token. Read more about how Teams Toolkit can help you to [add single sign-on to Teams app](../../../toolkit/add-single-sign-on.md).
+If you're responding to a command that needs to access Microsoft Graph data of an already signed in Teams user, you can do so by single sign-on (SSO) with their Teams user token. Read more about how Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) can help you to [add single sign-on to Teams app](../../../toolkit/add-single-sign-on.md).
 
 ### Connect to existing APIs
 
-You need to often connect to existing APIs for retrieving data to send to Teams. Teams Toolkit makes it easy for you to configure and manage authentication for existing APIs. For more information, see how to [integrate existing third party APIs](../../../toolkit/add-API-connection.md).
+You need to often connect to existing APIs for retrieving data to send to Teams. Agents Toolkit makes it easy for you to configure and manage authentication for existing APIs. For more information, see how to [integrate existing third party APIs](../../../toolkit/add-API-connection.md).
 
 ## FAQ
 
