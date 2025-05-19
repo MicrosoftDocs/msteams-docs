@@ -29,7 +29,7 @@ Before you get started, ensure that you have the following tools:
 
 Azure Container Apps is a fully managed service that enables you to run containerized applications in the cloud. It's an ideal choice if you don't need direct access to all native Kubernetes APIs and cluster management and you prefer a fully managed experience grounded on best practices.
 
-With the help of sample applications, you can run the provision and deploy commands in Teams Toolkit. Teams Toolkit creates an Azure Container Registry and Azure Container Apps for you and constructs your app into a container image and deploys it to Azure Container Apps.
+With the help of sample applications, you can run the provision and deploy commands in Microsoft 365 Agents Toolkit (previously known as Teams Toolkit). Agents Toolkit creates an Azure Container Registry and Azure Container Apps for you and constructs your app into a container image and deploys it to Azure Container Apps.
 
 The `provision` command creates and configures the following resources:
 
@@ -102,17 +102,17 @@ You can use Microsoft Entra ID to authenticate your bot with Azure Bot Service. 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Setup%20ingress%20with%20HTTPS%20on%20AKS&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdeploy-teams-app-to-container-service&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdeploy-Teams-app-to-container-service.md&documentVersionIndependentId=1276497c-0a84-5a91-c324-3cedca1a2298&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
-### Provision resources with Teams Toolkit
+### Provision resources with Agents Toolkit
 
-You can use the `provision` command in Teams Toolkit to create a Teams app with bot capability, incorporate the Azure Bot Service, and add the Microsoft Entra ID for authentication.
+You can use the `provision` command in Agents Toolkit to create a Teams app with bot capability, incorporate the Azure Bot Service, and add the Microsoft Entra ID for authentication.
 
-To provision resources with Teams Toolkit, follow these steps:
+To provision resources with Agents Toolkit, follow these steps:
 
 1. Open the sample app that you've downloaded earlier.
 
 1. Go to the `env/.env.${envName}` file and update the `BOT_DOMAIN` value with your FQDN.
 
-1. Go to the `teamsapp.yml` file and update the following `arm/deploy` action to ensure that Teams Toolkit provisions an Azure Bot Service during the execution of the `provision` command:
+1. Go to the `teamsapp.yml` file and update the following `arm/deploy` action to ensure that Agents Toolkit provisions an Azure Bot Service during the execution of the `provision` command:
 
     ```bash
     - uses: arm/deploy 
@@ -126,7 +126,7 @@ To provision resources with Teams Toolkit, follow these steps:
         bicepCliVersion: v0.9.1
     ```
 
-1. Run the `provision` command in Teams Toolkit.
+1. Run the `provision` command in Agents Toolkit.
 
 1. After provisioning, locate the `BOT_ID` in `env/.env.${envName}` file and the encrypted `SECRET_BOT_PASSWORD` in `env/.env.${envName}.user` file. To obtain the actual value of `BOT_PASSWORD`. Select the Decrypt secret annotation.
 
@@ -137,7 +137,7 @@ To provision resources with Teams Toolkit, follow these steps:
     ```
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Provision%20resources%20with%20Teams%20Toolkit&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdeploy-teams-app-to-container-service&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdeploy-Teams-app-to-container-service.md&documentVersionIndependentId=1276497c-0a84-5a91-c324-3cedca1a2298&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Provision%20resources%20with%20Agents%20Toolkit&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdeploy-teams-app-to-container-service&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdeploy-Teams-app-to-container-service.md&documentVersionIndependentId=1276497c-0a84-5a91-c324-3cedca1a2298&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 ### Apply the deployment
 
@@ -176,17 +176,17 @@ The Teams backend server interacts with your bot through the Azure Bot Service. 
 
 You can use Microsoft Entra ID to authenticate your bot with Azure Bot Service. Create a Kubernetes secret that includes the app ID and password and integrate the secret into your container's runtime configuration.
 
-### Provision resources with Teams Toolkit
+### Provision resources with Agents Toolkit
 
-You can use the `provision` command in Teams Toolkit to create a Teams app with bot capability, incorporate the Azure Bot Service, and add the Microsoft Entra ID for authentication.
+You can use the `provision` command in Agents Toolkit to create a Teams app with bot capability, incorporate the Azure Bot Service, and add the Microsoft Entra ID for authentication.
 
-To provision resources with Teams Toolkit, follow these steps:
+To provision resources with Agents Toolkit, follow these steps:
 
 1. Open the sample app that you've downloaded earlier.
 
 1. Go to the `env/.env.${envName}` file and update the `BOT_DOMAIN` value with your FQDN.
 
-1. Go to the `teamsapp.yml` file and update the following `arm/deploy` action to ensure that Teams Toolkit provisions an Azure Bot Service during the execution of the `provision` command:
+1. Go to the `teamsapp.yml` file and update the following `arm/deploy` action to ensure that Agents Toolkit provisions an Azure Bot Service during the execution of the `provision` command:
 
     ```yml
     - uses: arm/deploy 
@@ -200,7 +200,7 @@ To provision resources with Teams Toolkit, follow these steps:
         bicepCliVersion: v0.9.1
     ```
 
-1. In the `teamsapp.yml` file, update the `botFramework/create` action during the provision stage. This action enables Teams Toolkit to create a bot registration with the appropriate messaging endpoint.
+1. In the `teamsapp.yml` file, update the `botFramework/create` action during the provision stage. This action enables Agents Toolkit to create a bot registration with the appropriate messaging endpoint.
 
     >[!NOTE]
     > We recommend you use Azure Bot Service for channeling. If you don't have an Azure account and can't create Azure Bot Service, you can create a bot registration.
@@ -218,7 +218,7 @@ To provision resources with Teams Toolkit, follow these steps:
 
     You can remove the `arm/deploy` action in `teamsapp.yml` file, as we don't need any Azure resources.
 
-1. Run the `provision` command in Teams Toolkit.
+1. Run the `provision` command in Agents Toolkit.
 
 1. After provisioning, locate the `BOT_ID` in the `env/.env.${envName}` file and the encrypted `SECRET_BOT_PASSWORD` in the `env/.env.${envName}.user` file. To obtain the actual value of `BOT_PASSWORD`. Select the Decrypt secret annotation.
 
@@ -229,7 +229,7 @@ To provision resources with Teams Toolkit, follow these steps:
     ```
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Provision%20resources%20with%20Teams%20Toolkit&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdeploy-teams-app-to-container-service&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdeploy-Teams-app-to-container-service.md&documentVersionIndependentId=1276497c-0a84-5a91-c324-3cedca1a2298&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Provision%20resources%20with%20Agents%20Toolkit&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdeploy-teams-app-to-container-service&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdeploy-Teams-app-to-container-service.md&documentVersionIndependentId=1276497c-0a84-5a91-c324-3cedca1a2298&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 
 ### Apply the deployment
@@ -310,11 +310,11 @@ You can also deploy a Teams tab app to your personal Kubernetes cluster or a Kub
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Setup%20ingress%20with%20HTTPS%20on%20AKS&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdeploy-teams-app-to-container-service&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdeploy-Teams-app-to-container-service.md&documentVersionIndependentId=1276497c-0a84-5a91-c324-3cedca1a2298&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
-### Provision resources with Teams Toolkit
+### Provision resources with Agents Toolkit
 
-You can use the `provision` command in Teams Toolkit to create a Teams app with tab capability, incorporate the Azure Bot Service, and add the Microsoft Entra ID for authentication.
+You can use the `provision` command in Agents Toolkit to create a Teams app with tab capability, incorporate the Azure Bot Service, and add the Microsoft Entra ID for authentication.
 
-To provision resources with Teams Toolkit, follow these steps:
+To provision resources with Agents Toolkit, follow these steps:
 
 1. Open the sample app that you've downloaded earlier.
 
@@ -322,16 +322,16 @@ To provision resources with Teams Toolkit, follow these steps:
 
 1. Go to the `teamsapp.yml` file and remove the `arm/deploy` action, as no additional Azure resources are required.
 
-1. Run the `provision` command in Teams Toolkit.
+1. Run the `provision` command in Agents Toolkit.
 
-1. Use the Teams Toolkit to create a Microsoft Entra ID, which you might want to set as your apps environment variables.
+1. Use Agents Toolkit to create a Microsoft Entra ID, which you might want to set as your apps environment variables.
 
 1. After provisioning, locate the `AAD_APP_CLIENT_ID` in the `env/.env.${envName}` file and the encrypted `SECRET_AAD_APP_CLIENT_SECRET` in the `env/.env.${envName}.user` file.
 
 1. To obtain the actual value of `SECRET_AAD_APP_CLIENT_SECRET`. Select the Decrypt secret annotation.
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Provision%20resources%20with%20Teams%20Toolkit&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdeploy-teams-app-to-container-service&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdeploy-Teams-app-to-container-service.md&documentVersionIndependentId=1276497c-0a84-5a91-c324-3cedca1a2298&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Provision%20resources%20with%20Agents%20Toolkit&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdeploy-teams-app-to-container-service&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdeploy-Teams-app-to-container-service.md&documentVersionIndependentId=1276497c-0a84-5a91-c324-3cedca1a2298&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 ### Apply the deployment
 
