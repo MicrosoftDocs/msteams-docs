@@ -203,7 +203,7 @@ The following table lists the parameters available for `atk install`:
 
 | Command       | Description                           |
 | :------------ | :------------------------------------ |
-| `--file-path` | Path to the App manifest zip package. |
+| `--file-path` | Path to the app manifest zip package. |
 | `--xml-path`  | Path to the XML manifest xml file.    |
 | `--scope`     | App scope. Options: Personal, Shared. |
 
