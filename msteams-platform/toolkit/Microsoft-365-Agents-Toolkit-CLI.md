@@ -12,7 +12,7 @@ ms.date: 05/16/2025
 
 Microsoft 365 Agents Toolkit command line interface (Agents Toolkit CLI) is a text-based command line interface that can help scaffold, validate, and deploy applications for Microsoft 365 from the terminal or a CI/CD process. For more information, see [source code](https://github.com/OfficeDev/teams-toolkit/tree/dev/packages/cli) and [npm package](https://www.npmjs.com/package/@microsoft/m365agentstoolkit-cli).
 
-Whether you prefer keyboard-centric developer operations, or you are automating your CI/CD pipeline, the Agents Toolkit CLI offers the same features as the IDE extensions. It provides the following features to facilitate the development of agents or apps for Microsoft 365 Copilot, Microsoft Teams and Microsoft 365:
+Whether you prefer keyboard-centric developer operations, or you are automating your CI/CD pipeline, Agents Toolkit CLI offers the same features as the IDE extensions. It provides the following features to facilitate the development of agents or apps for Microsoft 365 Copilot, Microsoft Teams, and Microsoft 365:
 
 - **Collaboration**: Invite other developers to collaborate on your Agents Toolkit project to debug and deploy.
 - **Agent/Application Creation**: Generate a new agent or app using available templates and samples.
@@ -201,10 +201,10 @@ Sideload a given application package across Microsoft 365.
 
 The following table lists the parameters available for `atk install`:
 
-| Command       | Description                           |
-| :------------ | :------------------------------------ |
-| `--file-path` | Path to the app manifest zip package. |
-| `--xml-path`  | Path to the XML manifest xml file.    |
+| Command       | Description                                               |
+| :------------ | :-------------------------------------------------------- |
+| `--file-path` | Path to the app manifest zip package.                     |
+| `--xml-path`  | Path to the XML manifest xml file.                        |
 | `--scope`     | App scope. The available options are Personal and Shared. |
 
 ### `atk install` scenarios
