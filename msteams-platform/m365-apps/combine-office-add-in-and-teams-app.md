@@ -37,7 +37,7 @@ Before you start, ensure that you meet the following requirements:
 - A Microsoft 365 account that includes Teams to test the application. Alternatively, you can have separate subscriptions to both Microsoft 365 and Teams. For example, a test account with *.onmicrosoft.com through the [Microsoft 365 Developer Program](/office/developer-program/microsoft-365-developer-program). 
 - Your Microsoft 365 account is added as an account in desktop Outlook. For more information, see [add an email account to Outlook](https://support.microsoft.com/office/add-an-email-account-to-outlook-e9da47c4-9b89-4b49-b945-a204aeea6726).
  - An Azure account with active subscription to deploy the Teams app to Azure. If you don't have one, you can create your [free Azure account](https://azure.microsoft.com/free/).
- - A Teams app created using the latest version of Teams Toolkit.
+ - A Teams app created using the latest version of Microsoft 365 Agents Toolkit (previously known as Teams Toolkit).
 
 ## Add an Outlook Add-in to a Teams app
 
@@ -53,7 +53,7 @@ To add an Outlook Add-in to a Teams app:
 
 ### Prepare the Teams app project
 
-Begin by separating the source code for the tab (or bot) into its own subfolder. These instructions assume that the project initially has the following structure. To create a Teams app project with this structure, use the latest Teams Toolkit version. 
+Begin by separating the source code for the tab (or bot) into its own subfolder. These instructions assume that the project initially has the following structure. To create a Teams app project with this structure, use the latest Agents Toolkit version. 
 
 ```
 |-- .vscode/
@@ -141,7 +141,7 @@ To separate the source code for the tab or bot, perform the following steps:
 1. Next run `npm run install:tab`. A new `node_modules` folder and a new `package.lock.json` file are created in the tab folder, if they aren't there already. 
 1. Verify that you can sideload the tab with the following steps:
 
-    1. Open Teams Toolkit. 
+    1. Open Agents Toolkit. 
     1. In the **ACCOUNTS** section, verify that you're signed in to Microsoft 365 account.
     1. Select **View** > **Run** in Visual Studio Code.
     1. In the **RUN AND DEBUG** dropdown menu, select **Debug in Teams (Edge)** and press F5. 
@@ -160,19 +160,19 @@ To separate the source code for the tab or bot, perform the following steps:
 ### Create an Outlook Add-in project
 
 1. Open a second instance of Visual Studio Code.
-1. Select Teams Toolkit from the **Activity Bar**.
-1. Select **Create a new app**.
+1. Select the **Microsoft 365 Agents Toolkit** icon from the **Activity Bar**.
+1. Select **Create a New Agent/App**.
 1. In the **Select an option** dropdown menu, select **Outlook add-in** > **Taskpane**.
 1. Select the folder where you want to create the add-in.
 1. Give a name (with no spaces) to the project when prompted.
 
-    Teams Toolkit creates the project with basic files and scaffolding and opens it in a new Visual Studio Code window. You'll use this project as a source for files and markup that you add to the Teams project.
+    Agents Toolkit creates the project with basic files and scaffolding and opens it in a new Visual Studio Code window. You'll use this project as a source for files and markup that you add to the Teams project.
     
 1. Although you won't be developing this project, perform the following steps to verify that it can be sideloaded from Visual Studio Code before you continue:
 
     1. Ensure the Outlook desktop is closed.
     1. Open Visual Studio Code.
-    1. Select Teams Toolkit from the **Activity Bar**.
+    1. Select **Microsoft 365 Agents Toolkit** from the **Activity Bar**.
     1. In the **ACCOUNTS** section, verify that you're signed into Microsoft 365.
     1. Select **View** > **Run** in Visual Studio Code. 
     1. In the **RUN AND DEBUG** dropdown menu, select **Outlook Desktop (Edge Chromium)** and press F5. 
@@ -251,7 +251,7 @@ Unless specified otherwise, the file you change is `\appPackage\manifest.json`.
     ADDIN_ENDPOINT=
     ```
 
-1. In the Teams manifest template, add the placeholder `"${{ADDIN_DOMAIN}}",` to the top of the `"validDomains"` array. The Teams Toolkit replaces this with a localhost domain when you're developing locally. When you deploy the finished combined app to staging or production as described in [Move the application to Azure](#move-the-application-to-azure), Teams Toolkit replaces the placeholder with the staging/production URI. The following JSON is an example:
+1. In the Teams manifest template, add the placeholder `"${{ADDIN_DOMAIN}}",` to the top of the `"validDomains"` array. Agents Toolkit replaces this with a localhost domain when you're developing locally. When you deploy the finished combined app to staging or production as described in [Move the application to Azure](#move-the-application-to-azure), Agents Toolkit replaces the placeholder with the staging/production URI. The following JSON is an example:
 
     ```json
     "validDomains": [
@@ -470,7 +470,7 @@ Unless specified otherwise, the file you change is `\appPackage\manifest.json`.
 
       1. Ensure the Outlook desktop is closed.
       1. Open Visual Studio Code.
-      1. Select Teams Toolkit from the **Activity Bar**.
+      1. Select **Microsoft 365 Agents Toolkit** from the **Activity Bar**.
       1. In the **ACCOUNTS** section, verify that you're signed into Microsoft 365.
       1. Select **View** > **Run** in Visual Studio Code. 
       1. In the **RUN AND DEBUG** dropdown menu, select **Launch Add-in Outlook Desktop (Edge Chromium)** and press F5. 
@@ -500,7 +500,7 @@ To see both the app and the add-in running at the same time, take the following 
 
 1. Ensure the Outlook desktop is closed.
 1. Open Visual Studio Code.
-1. Select Teams Toolkit from the **Activity Bar**.
+1. Select **Microsoft 365 Agents Toolkit** from the **Activity Bar**.
 1. In the **ACCOUNTS** section, verify that you're signed into Microsoft 365.
 1. Select **View** > **Run** in Visual Studio Code. 
 1. In the **RUN AND DEBUG** dropdown menu, select **Launch App and Add-in Outlook Desktop (Edge Chromium)** and press F5. 
@@ -643,10 +643,10 @@ To see both the app and the add-in running at the same time, take the following 
     output ADDIN_ENDPOINT string = addinModule.outputs.ADDIN_ENDPOINT
     ```
 
-1. In Visual Studio Code, open Teams Toolkit.
+1. In Visual Studio Code, open Agents Toolkit.
 1. In the **ACCOUNTS** section, be sure you're signed into your Azure account (in addition to being signed into your Microsoft 365 account). 
-   For more information about signing in, open [Exercise - Create Azure resources to host a Teams tab app](/training/modules/teams-toolkit-vsc-deploy-apps/03-create-azure-resources-exercise) and scroll to the **Sign in to Azure in Teams Toolkit** section.
-1. In the **LIFECYCLE** section of Teams Toolkit, select **Provision**. 
+   For more information about signing in, open [Exercise - Create Azure resources to host a Teams tab app](/training/modules/teams-toolkit-vsc-deploy-apps/03-create-azure-resources-exercise) and scroll to the **Sign in to Azure in Microsoft 365 Agents Toolkit** section.
+1. In the **LIFECYCLE** section of Agents Toolkit, select **Provision**. 
     It can take several minutes. You might be prompted to select one of your Azure resource groups.
 1. When provisioning completes, select **Deploy** to deploy your app code to Azure.
 

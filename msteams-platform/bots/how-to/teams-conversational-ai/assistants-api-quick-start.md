@@ -21,7 +21,7 @@ To get started, ensure that you have the following tools:
 | Install | For using... |
 | --- | --- |
 | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or C Sharp build environments. Use the latest version. |
-| [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
+| [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) (previously known as Teams Toolkit) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
 |[Git](https://git-scm.com/downloads)|Git is a version control system that helps you manage different versions of code within a repository. |
 | [Node.js](https://nodejs.org/en) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
 | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | To collaborate with everyone, you work with through apps for chat, meetings, and call-all in one place.|
@@ -32,11 +32,11 @@ To get started, ensure that you have the following tools:
 <br/>
 If you've already run the samples before or encountered a runtime error, follow these steps to start fresh:
 
-* Check all the `.env` and `env/.env.*.*` files in the sample and delete any automatically populated values to ensure that Teams Toolkit generates new resources for you.
-* If you don’t want Teams Toolkit to generate the app ID and password, update the `MicrosoftAppId` and `MicrosoftAppPassword` in the `.env` file with your own values.
+* Check all the `.env` and `env/.env.*.*` files in the sample and delete any automatically populated values to ensure that Agents Toolkit generates new resources for you.
+* If you don’t want Agents Toolkit to generate the app ID and password, update the `MicrosoftAppId` and `MicrosoftAppPassword` in the `.env` file with your own values.
 * Remove values or leave the values blank for  **SECRET_BOT_PASSWORD** and **TEAMS_APP_UPDATE_TIME** in the `.env` file to avoid conflicts.
 
-Teams Toolkit automatically provisions `MicrosoftAppId` and `MicrosoftAppPassword` resources. If you want to use your own resources, you need to manually add them to the `.env` file. Teams Toolkit doesn't auto-generate the following resources:
+Agents Toolkit automatically provisions `MicrosoftAppId` and `MicrosoftAppPassword` resources. If you want to use your own resources, you need to manually add them to the `.env` file. Agents Toolkit doesn't auto-generate the following resources:
 
 * An Azure OpenAI or OpenAI key
 * A database or similar storage options
@@ -160,7 +160,7 @@ Get started with Teams AI library using the **Math tutor assistant** sample. It 
 
 1. Copy the sample to a new directory that isn't a subdirectory of `teams-ai`.
 
-1. From the left pane, select **Teams Toolkit**.
+1. From the left pane, select **Microsoft 365 Agents Toolkit**.
 
 1. Under **ACCOUNTS**, sign in to the following:
 
@@ -182,13 +182,13 @@ Get started with Teams AI library using the **Math tutor assistant** sample. It 
    :::image type="content" source="../../../assets/images/bots/mathbot-output.png" alt-text="Screenshot shows an example of the mathbot output." lightbox="../../../assets/images/bots/mathbot-output.png":::
 
 > [!NOTE]
-> If you're building a bot for the first time, it's recommended to use Teams Toolkit extension for Visual Studio Code to build a bot, see [build your first bot app using JavaScript](../../../sbs-gs-bot.yml).
+> If you're building a bot for the first time, it's recommended to use Agents Toolkit extension for Visual Studio Code to build a bot, see [build your first bot app using JavaScript](../../../sbs-gs-bot.yml).
 
 ## Additional tools
 
 You can also use the following tools to run and set up a sample:
 
-1. **Teams Toolkit CLI**: You can use the Teams Toolkit CLI to create and manage Microsoft Teams apps from the command line. For more information, see [Teams Toolkit CLI set up instructions](https://github.com/microsoft/teams-ai/blob/main/getting-started/OTHER/TEAMS-TOOLKIT-CLI.md).
+1. **Microsoft 365 Agents Toolkit CLI**: You can use the Agents Toolkit CLI to create and manage Microsoft Teams apps from the command line. For more information, see [Agents Toolkit CLI set up instructions](https://github.com/microsoft/teams-ai/blob/main/getting-started/OTHER/TEAMS-TOOLKIT-CLI.md).
 
 1. **Bot Framework Emulator**: The [Bot Framework Emulator](https://github.com/microsoft/BotFramework-Emulator) is a desktop application that allows you to test and debug your bot locally. You can connect to your bot by entering the bot’s endpoint URL and Microsoft app ID and password. You can then send messages to your bot and see its responses in real-time. For more information, see [Bot Framework Emulator set up instructions](https://github.com/microsoft/teams-ai/blob/main/getting-started/OTHER/BOTFRAMEWORK-EMULATOR.md).
 

@@ -2,13 +2,13 @@
 title: Build a dashboard in Teams
 metadata:
   title: Build Dashboard Tab App - Tutorial
-  description: Learn how to create a dashboard tab app using Teams Toolkit in Visual Studio Code. Learn to add a new widget and implement Graph API call.
+  description: Learn how to create a dashboard tab app using Microsoft 365 Agents Toolkit in Visual Studio Code. Learn to add a new widget and implement Graph API call.
   audience: Developer
   level: Beginner
   ms.date: 12/11/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: tabs/how-to/build-a-dashboard-tab-app.md
-  nextTutorialTitle: Dashboard, widget, and Graph API call in Teams toolkit
+  nextTutorialTitle: Dashboard, widget, and Graph API call in Microsoft 365 Agents Toolkit
   ms.custom: mvc
   ms.localizationpriority: high
 items:
@@ -25,7 +25,7 @@ items:
     | Install | For using |
     | --- | --- |    
     | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
-    | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) or [TeamsFx CLI](~/toolkit/teams-toolkit-cli.md) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use Teams Toolkit v5. |
+    | [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) or [TeamsFx CLI](~/toolkit/teams-toolkit-cli.md) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use Agents Toolkit v5. |
     | [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program) | Teams account with the appropriate permissions to install an app. |
     | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
     | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
@@ -34,11 +34,11 @@ items:
 - title: Create a new dashboard
   content: |
 
-   Teams Toolkit supports to create a dashboard and scaffolding.
+   Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) supports to create a dashboard and scaffolding.
 
    To create a new dashboard:
 
-     1. Select the Teams Toolkit icon in the Visual Studio Code **Activity Bar**.
+     1. Select the Microsoft 365 Agents Toolkit icon in the Visual Studio Code **Activity Bar**.
 
      1. Select **Create a New App**.
 
@@ -68,11 +68,11 @@ items:
       
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/teams-app-preview.png" alt-text="Screenshot shows the teams tab app dashboard preview in Visual Studio Code.":::
 
-        After your app is created, Teams Toolkit displays the following message:
+        After your app is created, Agents Toolkit displays the following message:
 
         :::Image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard-debug.png" alt-text="Screenshot shows the local debug.":::
 
-     1. Select the Teams Toolkit icon in sidebar.
+     1. Select the Microsoft 365 Agents Toolkit icon in sidebar.
 
      1. Select **Sign in to Microsoft 365**.
 
@@ -454,9 +454,9 @@ items:
         </details>
 
         <details>
-        <summary>3. Update Teams Toolkit configuration files.</summary>
+        <summary>3. Update Agents Toolkit configuration files.</summary>
 
-        To update Teams Toolkit configuration code in **m365agents.yml** and **m365agents.local.yml** files, follow the steps:
+        To update Agents Toolkit configuration code in **m365agents.yml** and **m365agents.local.yml** files, follow the steps:
 
         # [m365agents.yml](#tab/m365agentsyml)
 

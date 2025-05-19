@@ -1,7 +1,7 @@
 ---
 title: Build an AI Agent in Teams
 author: surbhigupta
-description: Learn how to build AI Agent in Teams AI library using Assistants API within Teams Toolkit, customize prompt augmentation, and assistant creation.
+description: Learn how to build AI Agent in Teams AI library using Assistants API within Microsoft 365 Agents Toolkit, customize prompt augmentation, and assistant creation.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
@@ -19,7 +19,7 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
 | Install | For using... |
 | --- | --- |
 | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or Python build environments. Use the latest version. |
-| [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
+| [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) (previously known as Teams Toolkit) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
 | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
 | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and calls all in one place.|
 | [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's Generative Pretrained Transformer (GPT). If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
@@ -28,11 +28,11 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
 
 1. Open **Visual Studio Code**.
 
-1. Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="false"::: icon in the Visual Studio Code **Activity Bar**
+1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="false"::: icon in the Visual Studio Code **Activity Bar**
 
 1. Select **Create a New App**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/create-new-app.png" alt-text="Screenshot shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/create-new-app.png" alt-text="Screenshot shows the location of the Create New Project link in the Agents Toolkit sidebar.":::
 
 1. Select **Custom Engine Agent**.
 
@@ -117,11 +117,11 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
     |`src/app/messages.js`| Defines the message activity handlers.|
     |`src/app/actions.js`| Defines the AI actions.|
 
-    The following are Teams Toolkit specific project files. For more information on how Teams Toolkit works, see [a complete guide on GitHub](https://github.com/OfficeDev/TeamsFx/wiki/Teams-Toolkit-Visual-Studio-Code-v5-Guide#overview):
+    The following are Agents Toolkit specific project files. For more information on how Agents Toolkit works, see [a complete guide on GitHub](https://github.com/OfficeDev/TeamsFx/wiki/Teams-Toolkit-Visual-Studio-Code-v5-Guide#overview):
 
     | File                                 | Contents                                           |
     | - | - |
-    |`m365agents.yml`|This is the main Teams Toolkit project file. The project file defines the properties and configuration stage definitions. |
+    |`m365agents.yml`| This is the main Agents Toolkit project file. The project file defines the properties and configuration stage definitions. |
     |`m365agents.local.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging.|
     |`m365agents.playground.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
 
@@ -228,11 +228,11 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
     |`src/app/messages.js`| Defines the message activity handlers.|
     |`src/app/actions.js`| Defines the AI actions.|
 
-    The following are Teams Toolkit specific project files. For more information on how Teams Toolkit works, see [a complete guide on GitHub](https://github.com/OfficeDev/TeamsFx/wiki/Teams-Toolkit-Visual-Studio-Code-v5-Guide#overview):
+    The following are Agents Toolkit specific project files. For more information on how Agents Toolkit works, see [a complete guide on GitHub](https://github.com/OfficeDev/TeamsFx/wiki/Teams-Toolkit-Visual-Studio-Code-v5-Guide#overview):
 
     | File                                 | Contents                                           |
     | - | - |
-    |`m365agents.yml`|This is the main Teams Toolkit project file. The project file defines two primary things:  Properties and configuration Stage definitions. |
+    |`m365agents.yml`| This is the main Agents Toolkit project file. The project file defines two primary things:  Properties and configuration Stage definitions. |
     |`m365agents.local.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging.|
     |`m365agents.playground.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
 

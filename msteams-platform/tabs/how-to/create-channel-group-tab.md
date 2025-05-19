@@ -691,7 +691,7 @@ Blazor lets you build interactive web UIs using C#, instead of JavaScript. You c
 :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app.png" alt-text="Screenshot of the Blazor app displaying the tab, Bot, and Message Extension output after the step-by-step Blazor guide is successfully completed.":::
 
 > [!NOTE]
-> Teams Toolkit doesn't support the message extension capability.
+> Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) doesn't support the message extension capability.
 
 Here's a list of tools you require for building and deploying your app.
 
@@ -706,15 +706,15 @@ Here's a list of tools you require for building and deploying your app.
 
 After you've installed the required tools, set up the development environment.
 
-### Install Microsoft Teams Toolkit
+### Install Agents Toolkit
 
-The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams Store, and more. You can use the toolkit with Visual Studio, or as a Command Line Interface (called `teamsfx`).
+Agents Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams Store, and more. You can use the toolkit with Visual Studio, or as a Command Line Interface (called `teamsfx`).
 
 # [Latest version of the Visual Studio](#tab/vs)
 
 You can use the latest version of the Visual Studio to develop Teams apps with Blazor Server in .NET.
 
-To install the Microsoft Teams Toolkit extension:
+To install the Agents Toolkit extension:
 
 1. Download the latest version of [Visual Studio](https://visualstudio.microsoft.com/).
 1. Open VisualStudioSetup file (`.exe`) from your download folder.
@@ -733,7 +733,7 @@ To install the Microsoft Teams Toolkit extension:
 Your Visual Studio is installed in a few minutes.
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Install+Microsoft+Teams+Toolkit+using+Latest+version+of+the+Visual+Studio&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-channel-group-tab%3Ftabs%3Dvs%26pivots%3Dblazor-app%23install-microsoft-teams-toolkit&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-channel-group-tab.md&documentVersionIndependentId=ee36a237-40e1-cf4e-ebde-229c06854171&platformId=08d6a9b2-2d15-57d5-557c-cded5d0fa303&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Install+Microsoft+Agents+Toolkit+using+Latest+version+of+the+Visual+Studio&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-channel-group-tab%3Ftabs%3Dvs%26pivots%3Dblazor-app%23install-microsoft-agents-toolkit&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-channel-group-tab.md&documentVersionIndependentId=ee36a237-40e1-cf4e-ebde-229c06854171&platformId=08d6a9b2-2d15-57d5-557c-cded5d0fa303&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 # [Command line](#tab/cli)
 
@@ -759,7 +759,7 @@ You can use the CLI with the `atk' command. Verify that the command is working b
 > Before you can run TeamsFx in PowerShell terminals, you must enable the remote signed execution policy for PowerShell.
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Install+Microsoft+Teams+Toolkit+using+Command+line&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-channel-group-tab%3Ftabs%3Dcli%26pivots%3Dblazor-app%23install-microsoft-teams-toolkit&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-channel-group-tab.md&documentVersionIndependentId=ee36a237-40e1-cf4e-ebde-229c06854171&platformId=08d6a9b2-2d15-57d5-557c-cded5d0fa303&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Install+Microsoft+Agents+Toolkit+using+Command+line&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-channel-group-tab%3Ftabs%3Dcli%26pivots%3Dblazor-app%23install-microsoft-agents-toolkit&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-channel-group-tab.md&documentVersionIndependentId=ee36a237-40e1-cf4e-ebde-229c06854171&platformId=08d6a9b2-2d15-57d5-557c-cded5d0fa303&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ---
 
@@ -819,12 +819,12 @@ This tutorial walks you through the steps to create, run, and deploy your first 
 
 In this page, you'll learn:
 
-1. [How to set up a new tab project with Teams Toolkit](#create-your-tab-project)
+1. [How to set up a new tab project with Agents Toolkit](#create-your-tab-project)
 1. [About the directory structure of your app](#take-a-tour-of-the-source-code-for-teams-tab-app)
 
 ## Create your tab project
 
-Use Teams Toolkit to create your first tab project. The toolkit takes you through a series of pages to create and configure your Teams app project:
+Use Agents Toolkit to create your first tab project. The toolkit takes you through a series of pages to create and configure your Teams app project:
 
 1. **Create a new project** page: You can select the project type.
 1. **Configure your new project** page: You can enter the project details.
@@ -905,7 +905,7 @@ After project creation, you've the components to build a basic personal app. You
 
 :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/blazor-app-solution-explorer_1.png" alt-text="Screenshot shows the solution explorer displaying the components to build a basic personal app in visual studio.":::
 
-Teams Toolkit creates a scaffolding for your project based on the capabilities you selected. Among other files, Teams Toolkit maintains:
+Agents Toolkit creates a scaffolding for your project based on the capabilities you selected. Among other files, Agents Toolkit maintains:
 
 | Folder name | Contents |
 | --- | --- |
@@ -920,13 +920,13 @@ You can add backend functionality by adding other ASP.NET Core controllers to yo
 
 ## Build and run your first Teams tab app
 
-After you set up your project workspace with Teams Toolkit, build your tab project.
+After you set up your project workspace with Agents Toolkit, build your tab project.
 
 To build and run your app:
 
-1. Select **Project** > **Teams Toolkit** > **Prepare Teams App Dependencies**.
+1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Select Microsoft 365 Account**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png" alt-text="Screenshot shows how to select the option to prepare Teams app dependencies for your project in visual studio."lightbox="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png" alt-text="Screenshot shows how to select the option to Select Microsoft 365 Account for your project in visual studio."lightbox="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png":::
 
 1. Select your Microsoft 365 account or **Add an account** to sign in.
 
@@ -937,7 +937,7 @@ To build and run your app:
     <details>
     <summary>Learn what happens when you run your app locally in the debugger.</summary>
 
-    When you select **F5**, Teams Toolkit:
+    When you select **F5**, Agents Toolkit:
 
     1. Registers your application with Microsoft Entra ID.
     1. Registers your application for uploading in Teams.
@@ -1004,11 +1004,11 @@ You've learned to create, build, and run Teams app with tab capability. The foll
 1. [Deploy your tab app to cloud](#to-deploy-your-tab-app-to-cloud): You can deploy your tab app to cloud.
 1. [Preview your tab app in Teams](#to-preview-your-tab-app-in-teams): You can preview your tab app in Teams.
 
-    Let's deploy the first app with tab capability on Azure using Teams Toolkit.
+    Let's deploy the first app with tab capability on Azure using Agents Toolkit.
 
 ### **To provision your tab app in the cloud**
 
-1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.
+1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Provision in the Cloud**.
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-provision_1.png" alt-text="Screenshot shows how to select provision in the cloud options for the project in visual studio."lightbox="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-provision_1.png":::
 
@@ -1024,7 +1024,7 @@ You've learned to create, build, and run Teams app with tab capability. The foll
 
 1. Select **Provision**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/provision-warning.PNG" alt-text="Screenshot shows the option to select provision in the prompted Teams Toolkit warning.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/provision-warning.PNG" alt-text="Screenshot shows the option to select provision in the prompted Agents Toolkit warning.":::
 
    It takes a few minutes for your resource group to provision in the cloud.
 
@@ -1034,7 +1034,7 @@ You've learned to create, build, and run Teams app with tab capability. The foll
 
 1. Select **View Provisioned Resources** to view on Azure portal.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/view-resource.PNG" alt-text="Screenshot shows the option to select view provisioned resources in Teams Toolkit info dialog box.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/view-resource.PNG" alt-text="Screenshot shows the option to select view provisioned resources in Agents Toolkit info dialog box.":::
 
 1. Sign in to your Azure portal account on sign-in prompt.
 
@@ -1049,7 +1049,7 @@ You've learned to create, build, and run Teams app with tab capability. The foll
 
 #### **To deploy your tab app to cloud**
 
-1. Select **Project** > **Teams Toolkit** > **Deploy to the Cloud**.
+1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Deploy to the Cloud**.
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-deploytocloud_1.png" alt-text="Screenshot shows how to select the option to deploy to the cloud for your project in visual studio. "lightbox="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-deploytocloud_1.png":::
 
@@ -1061,7 +1061,7 @@ You've learned to create, build, and run Teams app with tab capability. The foll
 
 #### **To preview your tab app in Teams**
 
-1. Select **Project** > **Teams Toolkit** > **Preview in Teams**.
+1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Preview in Teams**.
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-preview_1.png" alt-text="Screenshot shows how to select preview in Teams options for your project in visual studio."lightbox="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-preview_1.png":::
 
