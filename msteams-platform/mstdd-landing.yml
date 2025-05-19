@@ -21,16 +21,16 @@ landingContent:
 # Cards and links should be based on top customer tasks or top subjects
 # Start card title with a verb
 
-- title: Build 2025
+- title: Microsoft Build 2025
   linkLists:
     - linkListType: concept
       links:
-      - text: BUILD feature name
-        url: ../msteams-platform/overview.md
-      - text: Build feature name
-        url: ~/concepts/app-fundamentals-overview.md
-      - text: BUILD feature name
-        url: ~/concepts/design/design-teams-app-overview.md
+      - text: Teams AI library v2 (preview)
+        url: /microsoftteams/platform/teams-ai-library/welcome/overview.md
+      - text: Agent usage analytics for third-party apps in Developer Portal
+        url: /microsoftteams/platform/concepts/build-and-test/analyze-your-apps-usage-in-developer-portal?tabs=thirdpartyapps
+      - text: Custom activity icons
+        url: /graph/teams-send-activityfeednotifications?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json&tabs=desktop%2Chttp#custom-activity-icons-in-activity-feed-notifications
 
 - title: Build custom engine agents
   linkLists:
