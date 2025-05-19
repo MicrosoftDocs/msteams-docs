@@ -42,7 +42,7 @@ You must have working knowledge of:
 
 ## Get started
 
-TeamsFx SDK is pre-configured in the scaffolded project using Agents Toolkit or CLI.
+TeamsFx SDK is pre-configured in the scaffolded project using Microsoft 365 Agents Toolkit CLI (previously known as TeamsFx Toolkit or CLI).
 For more information, see [Teams app project](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md).
 
  > [!Tip]
@@ -266,7 +266,7 @@ Basic type of API error response is `ErrorWithCode`, which contains error code a
 
 ```typescript
 try {
-  const teamsfx = new TeamsFx();
+  const atk = new TeamsFx();
   await teamsfx.login("User.Read");
 } catch (err: unknown) {
   if (err instanceof ErrorWithCode && err.code !== ErrorCode.ConsentFailed) {
@@ -379,7 +379,7 @@ This section provides several code snippets for common scenarios that are relate
        import {TeamsUserCredential} from "@microsoft/teamsfx";
 
        const scope = ["User.Read"];
-       const teamsfx = new TeamsFx();
+       const atk = new TeamsFx();
        const provider = new TeamsFxProvider(teamsfx, scope);
        Providers.globalProvider = provider;   
        ```
@@ -743,7 +743,7 @@ This section provides several code snippets for other scenarios that are related
      //    sqlUsername: process.env.SQL_USER_NAME,
      //    sqlPassword: process.env.SQL_PASSWORD,
      // });
-     const teamsfx = new TeamsFx();
+     const atk = new TeamsFx();
      // If there's only one SQL database
      const config = await getTediousConnectionConfig(teamsfx);
      // If there are multiple SQL databases

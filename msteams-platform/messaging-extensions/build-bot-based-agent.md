@@ -39,7 +39,7 @@ Descriptions enhance the usability and effectiveness of a message extension agen
 
 For more information, see [guidelines to create and upgrade agents](dev-guidelines-agents.md).
 
-All bot-based search message extensions that are eligible for agent support must meet [policy requirement](../concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md) and are subject to validation to ensure the agent meets quality, security, privacy, and usefulness expectations. You can create a bot-based search message extension using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) for Visual Studio Code, Visual Studio, Agents Toolkit command line interface (CLI), or Developer Portal for Teams and extend the message extension to function as an agent in Microsoft 365 Copilot.
+All bot-based search message extensions that are eligible for agent support must meet [policy requirement](../concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md) and are subject to validation to ensure the agent meets quality, security, privacy, and usefulness expectations. You can create a bot-based search message extension using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) for Visual Studio Code, Visual Studio, Agents Toolkit command line interface (CLI) (previously known as Teams Toolkit CLI), or Developer Portal for Teams and extend the message extension to function as an agent in Microsoft 365 Copilot.
 
 ## Prerequisites
 
@@ -231,10 +231,10 @@ To create a bot-based search message extension agent using Agents Toolkit CLI, f
 1. Enter the following command:
 
    ```
-   npm install -g @microsoft/teamsapp-cli
+   npm install -g @microsoft/atk-cli
    ```
 
-1. Enter `teamsapp new` in the terminal.
+1. Enter `atk new` in the terminal.
 
 1. Select **Message Extension**. Use the arrow keys to switch between options.
 

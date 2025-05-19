@@ -172,6 +172,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Microsoft 365 Agents Toolkit](../toolkit/teams-toolkit-fundamentals.md) | Agents Toolkit enables you to create custom Teams apps directly within the Visual Studio Code environment. |
 | [Microsoft 365 Agents Toolkit CLI](../toolkit/Teams-Toolkit-CLI.md) | Agents Toolkit CLI is a text-based command line interface that accelerates Teams application development. It was previously known as Teams Toolkit CLI or TeamsFx CLI or Teams App CLI. |
 | Microsoft 365 client ID | See [Client ID](#c) |
+| [Microsoft 365 Agents Toolkit CLI](../toolkit/Teams-Toolkit-CLI.md) | Agents Toolkit CLI is a text-based command line interface that accelerates Teams application development. It was previously known as Teams Toolkit CLI or TeamsFx CLI or Teams App CLI. |
 | [Add Microsoft 365 channel for your bot](../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app) | A feature of Teams message extension app that lets the users interact with it from Microsoft 365. |
 | [Microsoft 365 developer program](../toolkit/tools-prerequisites.md)| The Microsoft 365 Developer Program helps you build apps that extend Microsoft 365. |
 | Microsoft App Password | A secret string that the application uses to prove its identity when requesting a token. Also, it can be referred to as application password. <br> **See also**: [Client secret](#c) |
@@ -264,7 +265,9 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Teams app capabilities](../concepts/design/map-use-cases.md#app-capabilities-mapped-to-features)| The Teams app capabilities are the core functionalities that you can build in your app, as defined in your app manifest. They're also called entry or extension points because they enable integration and interaction. <br> **See also**: [App scope](#a)|
 | [Teams identity](../tabs/how-to/authentication/tab-sso-overview.md) | The Microsoft account or Microsoft 365 account of an app user that is used to log in to Teams client, web, or mobile app. |
 | [Teams identity](../tabs/how-to/authentication/tab-sso-overview.md) | The Microsoft account or Microsoft 365 account of an app user that is used to sign in to Teams client, web, or mobile app. |
-| [TeamsFx SDK](../toolkit/teamsfx-sdk.md) | TeamsFx SDK is pre-configured in a scaffolded project using Agents toolkit or CLI. |
+| [Microsoft 365 Agents Toolkit](../toolkit/agents-toolkit-fundamentals.md) | The Microsoft 365 Agents enables you to create custom Teams apps directly within the VS Code environment.  |
+| [Microsoft 365 Agents Toolkit CLI](../toolkit/Agents-Toolkit-CLI.md) | Microsoft 365 Agents CLI is a text-based command line interface that accelerates Teams application development. It's also called Teamsapp CLI.|
+| [Microsoft 365 Agents SDK](../toolkit/teamsfx-sdk.md) | Microsoft 365 Agents SDK is pre-configured in a scaffolded project using TeamsFx toolkit or CLI. |
 | [TeamsJS capability](../m365-apps/teamsjs-support-m365.md)| The TeamsJS capability is a logical grouping of functionality supported across one or more Microsoft 365 application hosts. |
 | [TeamsJS library](../tabs/how-to/using-teams-client-library.md) | The TeamsJS library enables you to create hosted experiences in supported clients including Teams, Outlook, and Microsoft 365. (**Note**: When using TeamsJS v.1.x, hosted experiences are for Teams client only.) |
 | [Teams Mobile](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) | Microsoft Teams available as a mobile app. |

@@ -56,7 +56,7 @@ items:
 
     1. Open Visual Studio Code.
     
-    1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
+    1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="../msteams-platform/assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
 
     1. Select **Create a New App**.
 
@@ -107,7 +107,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/my-notification-bot.png" alt-text="Screenshot showing the app created.":::
   
-    1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code **Activity Bar**.
+    1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code **Activity Bar**.
 
     1. Select **Debug in Teams (Edge)** or **Debug in Teams (Chrome)** from the dropdown list.
 
@@ -163,14 +163,14 @@ items:
     | --- | --- |
     | `.vscode` | VSCode files for debugging. |
     | `appPackage` | Templates for the app manifest (previously called Teams app manifest). |
-    | `env` | Name / value pairs are stored in environment files and used by teamsapp.yml to customize the provisioning and deployment rules. |
+    | `env` | Name / value pairs are stored in environment files and used by m365agents.yml to customize the provisioning and deployment rules. |
     | `infra` | Templates for provisioning Azure resources. |
     | `src\`| The source code for the notification Teams application. |
     | `src\index.js`| Application entry point and `restify` handlers for notifications. |
     | `src\teamsbot.js` | An empty teams activity handler for bot customization. |
     | `src\adaptiveCards\notification-default.json` | A generated Adaptive Card that is sent to Teams. |
-    | `teamsapp.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
-    | `teamsapp.local.yml` | This overrides `teamsapp.yml` with actions that enable local execution and debugging. |
+    | `m365agents.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
+    | `m365agents.local.yml` | This overrides `m365agents.yml` with actions that enable local execution and debugging. |
 
 - title: Send notification to Teams channel
   durationInMinutes: 1
@@ -234,7 +234,7 @@ items:
             > [!NOTE]
             > It's required to use your own storage for production environment. If storage isn't provided, default local file storage is considered.
 
-    1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code sidebar.
+    1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code sidebar.
 
     1. Select **Debug in Teams (Edge)** or **Debug in Teams (Chrome)** from the dropdown list.
 
@@ -288,7 +288,7 @@ items:
 
     1. Open Visual Studio Code.
     1. Open the project folder where you created the notification bot app.
-    1. Select the Microsoft 365 Agents Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
+    1. Select the Microsoft 365 Agents Toolkit  :::image type="icon" source="../msteams-platform/assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the sidebar.
     1. Select **Sign in to Azure** using your credentials.
 
         > [!TIP]
@@ -309,7 +309,7 @@ items:
 
     # [Visual Studio Code](#tab/vscode)
 
-    1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
+    1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="~/assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
     1. Select **Provision** under **LIFECYCLE**.
 
@@ -356,28 +356,28 @@ items:
 
     In your terminal window:
 
-    1. Run `teamsfx new` to create new project.
+    1. Run `atk new` to create new project.
 
        ``` bash
-       teamsfx new
+       atk new
        ```
 
-    1. Run `teamsfx provision` to create azure resource.
+    1. Run `atk provision` to create azure resource.
 
        ``` bash
-       teamsfx provision
+       atk provision
        ```
 
-    1. Run `teamsfx deploy` to deploy the app.
+    1. Run `atk deploy` to deploy the app.
 
        ``` bash
-       teamsfx deploy
+       atk deploy
        ```
 
-    1. Run `teamsfx preview` to run the app.
+    1. Run `atk preview` to run the app.
 
        ``` bash
-       teamsfx preview
+       atk preview
        ```
 
     > [!div class="nextstepaction"]

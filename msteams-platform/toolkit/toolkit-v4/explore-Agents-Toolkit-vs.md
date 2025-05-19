@@ -23,7 +23,7 @@ To view Agents Toolkit from the **Project** menu, follow these steps:
 1. Select **Project**.
 1. Select **Microsoft 365 Agents Toolkit**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-installed.png" alt-text="Screenshot shows the Microsoft 365 Agents Toolkit project menu.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/toolkit-installed.png" alt-text="Screenshot shows the Agents toolkit project menu.":::
 
 # [Solution Explorer](#tab/solutionexplorer)
 
@@ -36,13 +36,13 @@ To view Agents Toolkit from the **Project** menu, follow these steps:
    > [!NOTE]
    > In this scenario the project name is **MyTeamsApp14**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/ttk-solution explorer.png" alt-text="Screenshots the Microsoft 365 Agents Toolkit operations from Project":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/toolkit-solution explorer.png" alt-text="Screenshots the Agents toolkit operations from Project":::
   
 ---
 
 After you've created your Teams app project, you can use the following options to develop and build your app:
 
-:::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/ttk-solution explorer-options.png" alt-text="Microsoft 365 Agents Toolkit operations from Project menu":::
+:::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/toolkit-solution explorer-options.png" alt-text="Agents toolkit operations from Project menu":::
 
 |Function  |Description  |
 |---------|---------|

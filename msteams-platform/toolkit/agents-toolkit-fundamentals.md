@@ -18,7 +18,7 @@ Agents Toolkit (previously known as Teams Toolkit) makes it simple to get starte
 * Smart defaults for hosting in Azure using infrastructure-as-code and Bicep.
 * Test with different configurations such as dev, test, and prod using the environment features.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png" alt-text="Illustration shows the User Journey of Agents Toolkit." lightbox="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/teams-toolkit-user-journey2.png":::
+:::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/toolkit-user-journey2.png" alt-text="Illustration shows the User Journey of the Agents Toolkit." lightbox="../assets/images/toolkit-v2/toolkit-fundamentals/toolkit-user-journey2.png":::
 
 ## Available for Visual Studio Code
 
@@ -41,7 +41,7 @@ The following list provides the key features of Agents Toolkit:
 
 Save time getting started with new Teams apps using the capability-focused templates for tabs, bots, message extensions, and common app scenarios.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create-new-app_2.png" alt-text="Screenshot shows the list of new Teams app menu to create in Visual Studio Code.":::
+:::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/create-new-app_2.png" alt-text="Screenshot shows the list of new Teams app menu to create in Visual Studio Code.":::
 
 ### Composable automation tasks
 
@@ -55,7 +55,7 @@ Test your app with different groupings of hosted resources by creating unique co
 
 You can access Teams Developer Portal where you can configure, publish, and manage your app. For more information, see [manage your Teams apps using Developer Portal](../concepts/build-and-test/manage-your-apps-in-developer-portal.md).
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/build-environment-dev-portal.png" alt-text="Screenshot shows the Developer Portal option.":::
+:::image type="content" source="../assets/images/toolkit-v2/build-environment-dev-portal.png" alt-text="Screenshot shows the Developer Portal option.":::
 
 ### Debug tunneling for bots
 

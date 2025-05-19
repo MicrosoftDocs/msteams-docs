@@ -12,7 +12,7 @@ ms.date: 11/29/2021
 
 Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) supports different build environments for creating apps. It helps to integrate Azure Functions capabilities and cloud services in the Microsoft Teams app that you've built.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/build-apps-ttk-vsc.png" alt-text="Illustration shows the steps to prepare to build apps using Agents Toolkit." lightbox="../assets/images/teams-toolkit-v2/build-apps-ttk-vsc.png":::
+:::image type="content" source="../assets/images/toolkit-v2/build-apps-ttk-vsc.png" alt-text="Illustration shows the steps to prepare to build apps using Agents Toolkit." lightbox="../assets/images/toolkit-v2/build-apps-ttk-vsc.png":::
 
 ## Build environments
 

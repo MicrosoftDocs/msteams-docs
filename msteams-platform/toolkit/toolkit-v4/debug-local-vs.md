@@ -22,7 +22,7 @@ In the debug dropdown menu:
 
 1. If you haven't created a tunnel, select **Create a Tunnel...**. A new window appears.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-devtunnel.PNG" alt-text="Screenshot shows the dev tunnel for debug option.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/vs-devtunnel.PNG" alt-text="Screenshot shows the dev tunnel for debug option.":::
 
 1. Enter the name of the dev tunnel and under **Access** select **Public** from the dropdown.
 1. Select **OK**.
@@ -34,7 +34,7 @@ To debug your app after you create a project, perform the following steps:
 1. Right-click on your project.
 1. Select **Microsoft 365 Agents Toolkit** > **Select Microsoft 365 Account**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-localdebug-teamsappdependencies.png" alt-text="Screenshot shows the local debug teams app dependencies.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/vs-localdebug-teamsappdependencies.png" alt-text="Screenshot shows the local debug teams app dependencies.":::
 
    > [!NOTE]
    > In this scenario the project name is MyTeamsApp1.
@@ -43,26 +43,26 @@ To debug your app after you create a project, perform the following steps:
 
 1. Sign in to your **Microsoft 365 Account** and then select **Continue**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-localdebug-signin-m365.png" alt-text="Screenshot shows sign in to Microsoft 365 account.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/vs-localdebug-signin-m365.png" alt-text="Screenshot shows sign in to Microsoft 365 account.":::
 
    > [!NOTE]
    > Learn more about the custom app upload permission, see [prepare your Microsoft 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).
 
 1. Select **Debug** > **Start Debugging** or select **F5**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-localdebug-Startdebug.png" alt-text="Screenshot shows start debugging.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/vs-localdebug-Startdebug.png" alt-text="Screenshot shows start debugging.":::
 
    Visual Studio launches the Teams app inside Microsoft Teams client in your browser. For more information, see [Microsoft 365 Agents Toolkit Overview](teams-toolkit-fundamentals-vs.md).
 
 1. Select **Add** to install your app in Teams.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-localdebug-add-loadapp.png" alt-text="Screenshot of the app details dialog with the option to add the app in Teams.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/vs-localdebug-add-loadapp.png" alt-text="Screenshot of the app details dialog with the option to add the app in Teams.":::
 
 1. Select **Open** to open the app in personal scope.
 
     Alternatively, you can either search and select the required scope or select a channel or chat from the list, and move through the dialog to select **Go**.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/teams-toolkit-vs/debug-mobile-local.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
+    :::image type="content" source="~/assets/images/toolkit-v2/toolkit-vs/debug-mobile-local.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
    You can also use the hot reload function of Visual Studio during debug. For more information, see [.NET hot reload](https://devblogs.microsoft.com/dotnet/introducing-net-hot-reload/).
 

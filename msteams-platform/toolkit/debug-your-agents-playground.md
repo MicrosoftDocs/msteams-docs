@@ -18,7 +18,7 @@ Teams App Test Tool (Test Tool) makes debugging bot-based apps effortless. You c
 
 The following image shows a sample app displaying an Adaptive Card with a list of commands in Test Tool. It also provides a description of the commands so that you can test your app without manually searching your code:
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/sample-app-output.png" alt-text="Screenshot shows Teams App Test Tool Adaptive Card.":::
+   :::image type="content" source="../assets/images/toolkit-v2/debug/sample-app-output.png" alt-text="Screenshot shows Teams App Test Tool Adaptive Card.":::
 
 The following are the advantages of Test Tool:
 
@@ -55,7 +55,7 @@ Test Tool is an npm package that has a CLI command called `teamsapptester`. When
 To use a Teams bot on Test Tool, you need to provide:
 
 * Message endpoint: A bot message endpoint is the URL that links Test Tool and your bot. You can update the endpoint with the `BOT_ENDPOINT` environment variable or use the default value of `http://localhost:3978/api/messages`.
-* Configuration file (Optional): A configuration file informs Test Tool about your customized contextual information in Teams. The file is named **.teamsapptesttool.yml** in the project's root folder. If Teams can't find this file, it uses the default configuration. For more information, see [customize Teams context](#customize-teams-context).
+* Configuration file (Optional): A configuration file informs Test Tool about your customized contextual information in Teams. The file is named **.m365agentsplayground.yml** in the project's root folder. If Teams can't find this file, it uses the default configuration. For more information, see [customize Teams context](#customize-teams-context).
 
 ## Test Tool experience in Agents Toolkit
 
@@ -65,54 +65,54 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
 1. Open Visual Studio Code.
 
-1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="false"::: icon in the Visual Studio Code **Activity Bar**.
+1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="../assets/images/toolkit-v2/toolkit-sidebar-icon.PNG" border="false"::: icon in the Visual Studio Code **Activity Bar**.
 
 1. Select **Create a New App**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Agents Toolkit sidebar.":::
+    :::image type="content" source="../assets/images/toolkit-v2/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Agents Toolkit sidebar.":::
 
 1. Select **Bot**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/create-new-app1.png" alt-text="Screenshot shows the Agents Toolkit app templates.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-bot/create-new-app1.png" alt-text="Screenshot shows the Teams Toolkit app templates.":::
 
 1. Select **AI Chat Bot**. If you need a different functionality for your bot, pick a different option.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/ai-chat-bot.png" alt-text="Screenshot shows the app feature to add to your new app.":::
+    :::image type="content" source="../assets/images/toolkit-v2/debug/ai-chat-bot.png" alt-text="Screenshot shows the app feature to add to your new app.":::
 
 1. Select **JavaScript**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/select-language-tab.png" alt-text="Screenshot shows the option to select the programming language.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-bot/select-language-tab.png" alt-text="Screenshot shows the option to select the programming language.":::
 
 1. Select **Default folder**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/select-default-location.png" alt-text="Screenshot shows the selection of default location.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-bot/select-default-location.png" alt-text="Screenshot shows the selection of default location.":::
 
     To change the default location, follow these steps:
 
     1. Select **Browse**.
 
-        :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/select-browse.png" alt-text="Screenshot shows the selection of browse location option.":::
+        :::image type="content" source="../assets/images/toolkit-v2/first-bot/select-browse.png" alt-text="Screenshot shows the selection of browse location option.":::
 
     1. Select the location for the project workspace.
     1. Select **Select Folder**.
 
-        :::image type="content" source="../assets/images/teams-toolkit-v2/select-folder.png" alt-text="Screenshot shows the folder to select.":::
+        :::image type="content" source="../assets/images/toolkit-v2/select-folder.png" alt-text="Screenshot shows the folder to select.":::
 
 1. Enter a suitable name for your app and then select the **Enter** key.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/hello-bot.png" alt-text="Screenshot shows where to enter the app name.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-bot/hello-bot.png" alt-text="Screenshot shows where to enter the app name.":::
 
     A dialog appears, where you need to choose yes or no to trust the authors of the files in this folder.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder.":::
 
 1. From the left pane, select **Run and Debug** (`Ctrl+Shift+D`) and select **Debug in Test Tool (Preview)** in dropdown list.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/select-debug-in-test-tool.png" alt-text="Screenshot shows the option to select debug in test tool.":::
+   :::image type="content" source="../assets/images/toolkit-v2/debug/select-debug-in-test-tool.png" alt-text="Screenshot shows the option to select debug in test tool.":::
 
 1. Test Tool opens the bot in a webpage.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
+   :::image type="content" source="../assets/images/toolkit-v2/debug/test-tool.png" lightbox="../assets/images/toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Test%20Tool%20experience%20in%20Agents%20Toolkit%20in%20Visual%20Studio%20Code&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdebug-your-teams-app-test-tool%3Ftabs%3Dvscode%252Cclijs%23test-tool-experience-in-teams-toolkit&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdebug-your-Teams-app-test-tool.md&documentVersionIndependentId=6fa9130b-1aa5-b068-4211-a5a4cc32effa&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
@@ -129,9 +129,9 @@ Test Tool offers a faster debug experience for bot applications when compared to
       npm install -g @microsoft/teams-app-test-tool
       ```
 
-        :::image type="content" source="../assets/images/teams-toolkit-v2/debug/npm-teams-app-test-tool.png" alt-text="Screenshot shows install teams app test tool cli.":::
+        :::image type="content" source="../assets/images/toolkit-v2/debug/npm-teams-app-test-tool.png" alt-text="Screenshot shows install teams app test tool cli.":::
 
-   1. Use the `teamsapp` command from [Agents Toolkit CLI](Teams-Toolkit-CLI.md) to create your first project. Start from the folder where you want to create the project folder.
+   1. Use the `atk` command from [Microsoft 365 Agents Toolkit CLI](Teams-Toolkit-CLI.md) (previously known as Teams Toolkit CLI) to create your first project. Start from the folder where you want to create the project folder.
 
       ```cmd
       teamsapp new   
@@ -139,26 +139,26 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
       You can use the CLI to create a new Teams app. The CLI leads you through a series of questions. Use the arrow keys to select an option. After you make a choice, select **Enter** to confirm. After you enter a suitable name for your app, your project is created.
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/debug/teamsapp-new.png" alt-text="Screenshot shows the process of creating a new app on Teams.":::
+       :::image type="content" source="../assets/images/toolkit-v2/debug/teamsapp-new.png" alt-text="Screenshot shows the process of creating a new app on Teams.":::
 
    1. Run the following command to deploy your app and install the required dependencies and npm packages:
 
       ```cmd
-      teamsapp deploy --env=testtool
+      teamsapp deploy --env=playground
       ```
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/debug/teamsapp-deploy-env-testtool.png" alt-text="Screenshot shows the process of installing the required dependencies and npm packages.":::
+       :::image type="content" source="../assets/images/toolkit-v2/debug/teamsapp-deploy-env-testtool.png" alt-text="Screenshot shows the process of installing the required dependencies and npm packages.":::
 
    1. Run the following command to start your bot app:
 
       ```cmd
-      npm run dev:teamsapp:testtool
+      npm run dev:atk:playground
       ```
 
    1. Run the following command in a separate terminal to launch Teams App Test Tool:
 
       ```cmd
-      npm run dev:teamsapp:launch-testtool
+      npm run dev:atk:launch-playground
       ```
 
    # [C#](#tab/clicsharp)
@@ -211,7 +211,7 @@ Test Tool offers a faster debug experience for bot applications when compared to
      ---
    1. Test Tool opens the bot in a webpage.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool."
+    :::image type="content" source="../assets/images/toolkit-v2/debug/test-tool.png" lightbox="../assets/images/toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool."
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Test%20Tool%20experience%20in%20Agents%20Toolkit%20in%20Command%20line&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdebug-your-teams-app-test-tool%3Ftabs%3Dcli%252Cclijs%23test-tool-experience-in-teams-toolkit&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdebug-your-Teams-app-test-tool.md&documentVersionIndependentId=6fa9130b-1aa5-b068-4211-a5a4cc32effa&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
@@ -245,17 +245,17 @@ To mock an **Add user** activity, follow these steps:
 
 1. In Test Tool, go to **Mock an Activity** and select **Add user**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/add-user.png" alt-text="Screenshot shows the add user option under mock an activity.":::
+   :::image type="content" source="../assets/images/toolkit-v2/debug/add-user.png" alt-text="Screenshot shows the add user option under mock an activity.":::
 
    A pop-up window appears to preview the activity handler.
 
 1. Select **Send activity**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/add-a-user-request.png" alt-text="Screenshot shows the option to send activity for predefined mock activity add user.":::
+   :::image type="content" source="../assets/images/toolkit-v2/debug/add-a-user-request.png" alt-text="Screenshot shows the option to send activity for predefined mock activity add user.":::
 
    Bot sends a response.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/add-a-user-response.png" alt-text="Screenshot shows the response of predefined mock activity add user.":::
+   :::image type="content" source="../assets/images/toolkit-v2/debug/add-a-user-response.png" alt-text="Screenshot shows the response of predefined mock activity add user.":::
 
 ### Custom activity triggers
 
@@ -263,7 +263,7 @@ You can use **Custom activity** to customize activity triggers such as, `reactio
 
 1. Select **Mock an Activity** > **Custom activity**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mock-activity.png" alt-text="Screenshot shows the list of option under mock an activity.":::
+   :::image type="content" source="../assets/images/toolkit-v2/debug/mock-activity.png" alt-text="Screenshot shows the list of option under mock an activity.":::
 
 1. Add `messageReaction` to customize the activity under the property `type` and invoke the custom activity.
 
@@ -281,11 +281,11 @@ You can use **Custom activity** to customize activity triggers such as, `reactio
 
 1. Select **Send activity**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/custom-activity-request.png" alt-text="Screenshot shows the option to send activity after customization on mock activity.":::
+   :::image type="content" source="../assets/images/toolkit-v2/debug/custom-activity-request.png" alt-text="Screenshot shows the option to send activity after customization on mock activity.":::
 
    Bot sends an `onReactionsAdded` handler in response.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/custom-activity-response.png" alt-text="Screenshot shows the response of custom mock activity.":::
+   :::image type="content" source="../assets/images/toolkit-v2/debug/custom-activity-response.png" alt-text="Screenshot shows the response of custom mock activity.":::
 
 ## Customize Teams context
 
@@ -373,7 +373,7 @@ If your bot code uses Bot Framework APIs, you can modify the configuration file 
 
 To comprehensively test this bot in Test Tool, it's crucial to update the configuration file to use the correct email addresses of the owners of the inactive bugs.
 
-1. Go to the `.teamsapptesttool.yml` file in the project's root folder.
+1. Go to the `.m365agentsplayground.yml` file in the project's root folder.
 
 1. Go to the `users` section and update the `name`, `userPrincipleName`, and `email` of the required user.
 
@@ -465,7 +465,7 @@ Ensure you have an existing bot created using Agents Toolkit. To debug your bot 
         { 
           "label": "Start Test Tool", 
           "type": "shell", 
-          "command": "npm run dev:teamsfx:launch-testtool", 
+          "command": "npm run dev:teamsfx:launch-playground", 
           "isBackground": true, 
           "options": { 
             "env": { 
@@ -503,31 +503,31 @@ Ensure you have an existing bot created using Agents Toolkit. To debug your bot 
     }
     ```
 
-1. Under **EXPLORER**, create a **.localConfigs.testtool** file and add the following code:
+1. Under **EXPLORER**, create a **.localConfigs.playground** file and add the following code:
 
     ```json
-    // .localConfigs.testTool
+    // .localConfigs.playground
     # A gitignored place holder file for local runtime configurations when debug in test tool
     BOT_ID=
     BOT_PASSWORD=
-    TEAMSFX_NOTIFICATION_STORE_FILENAME=.notification.testtoolstore.json
+    TEAMSFX_NOTIFICATION_STORE_FILENAME=.notification.playgroundstore.json
     ```
 
 1. Go to **EXPLORER** > **env**.
-1. Create a **.env.testtool** file and add the following code:
+1. Create a **.env.playground** file and add the following code:
 
     ```json
-    // .env.testtool
+    // .env.playground
     # This file includes environment variables that can be committed to git. It's gitignored by default because it represents your local development environment
     # Built-in environment variables
-    TEAMSFX_ENV=testtool
+    TEAMSFX_ENV=playground
     # Environment variables used by test tool
     TEAMSAPPTESTER_PORT=56150
     ```
 
-1. If you have custom environment variables, set their values in **.env.testtool** or **.env.testtool.user**.
+1. If you have custom environment variables, set their values in **.env.playground** or **.env.playground.user**.
 
-1. Add either an OpenAI key or Azure OpenAI key and endpoint in **.env.testtool.user**.
+1. Add either an OpenAI key or Azure OpenAI key and endpoint in **.env.playground.user**.
 
     ```json
     # SECRET_OPENAI_API_KEY=***********
@@ -540,20 +540,20 @@ Ensure you have an existing bot created using Agents Toolkit. To debug your bot 
     ```json
     "scripts": {
         ... 
-        "dev:teamsfx:testtool": "env-cmd --silent -f .localConfigs.testTool npm run dev", 
-        "dev:teamsfx:launch-testtool": "env-cmd --silent -f env/.env.testtool teamsapptester start", 
+        "dev:teamsfx:playground": "env-cmd --silent -f .localConfigs.playgroundnd npm run dev", 
+        "dev:teamsfx:launch-playground": "env-cmd --silent -f env/.env.playground teamsapptester start", 
         ... 
     },
     ```
 
 1. From the left pane, select **Run and Debug** (`Ctrl+Shift+D`) and select **Debug in Test Tool** in dropdown list.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/select-debug-in-test-tool.png" alt-text="Screenshot shows the option to select debug in test tool.":::
+   :::image type="content" source="../assets/images/toolkit-v2/debug/select-debug-in-test-tool.png" alt-text="Screenshot shows the option to select debug in test tool.":::
 
 Test Tool successfully debugs your existing bot.
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Debug%20an%20existing%20app%20with%20Test%20Tool&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdebug-your-teams-app-test-tool%3Ftabs%3Dvscode%252Cclijs%23debug-an-existing-app-with-test-tool&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdebug-your-Teams-app-test-tool.md&documentVersionIndependentId=6fa9130b-1aa5-b068-4211-a5a4cc32effa&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Debug%20an%20existing%20app%20with%20Test%20Tool&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdebug-your-teams-app-test-tool%3Ftabs%3Dvscode%252Cclijs%23debug-an-existing-app-with-test-tool&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdebug-your-agents-playground.md&documentVersionIndependentId=6fa9130b-1aa5-b068-4211-a5a4cc32effa&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 ## FAQ
 
@@ -569,7 +569,7 @@ You can always use the Teams client to test the features that Test Tool doesn't 
 
 Test Tool shows a warning message in conversation and log panel when it detects unsupported features.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug/features-not-supported.png" alt-text="Screenshot shows the warning message of an unsupported feature.":::
+:::image type="content" source="../assets/images/toolkit-v2/debug/features-not-supported.png" alt-text="Screenshot shows the warning message of an unsupported feature.":::
 <br>
 &nbsp;
 </details>

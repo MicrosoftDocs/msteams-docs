@@ -92,7 +92,7 @@ Use the following .NET Core versions:
 
 When you select **Start Debugging (F5)**, Agents Toolkit output channel displays the progress and result after checking the prerequisites.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck.png" alt-text="Screenshot shows the prerequisites check summary.":::
+:::image type="content" source="../assets/images/toolkit-v2/debug/prerequisites-debugcheck.png" alt-text="Screenshot shows the prerequisites check summary.":::
 
 For more information, see [validate prerequisites task](https://aka.ms/teamsfx-tasks/check-prerequisites).
 
@@ -102,11 +102,11 @@ For bot and message extension, Agents Toolkit starts a local tunnel service to m
 
 ## Create the debug resources
 
-Agents Toolkit executes lifecycle `provision` defined in `teamsapp.local.yml` to create Teams app related resources required for debugging. For more information, see [Provision task](https://aka.ms/teamsfx-tasks/provision) and [available actions](https://aka.ms/teamsfx-actions).
+Agents Toolkit executes lifecycle `provision` defined in `m365agents.local.yml` to create Teams app related resources required for debugging. For more information, see [Provision task](https://aka.ms/teamsfx-tasks/provision) and [available actions](https://aka.ms/teamsfx-actions).
 
 ## Build project
 
-Agents Toolkit executes lifecycle `deploy` defined in `teamsapp.local.yml` to build the project. For more information, see [Deploy task](https://aka.ms/teamsfx-tasks/deploy) and [available actions](https://aka.ms/teamsfx-actions).
+Agents Toolkit executes lifecycle `deploy` defined in `m365agents.local.yml` to build the project. For more information, see [Deploy task](https://aka.ms/teamsfx-tasks/deploy) and [available actions](https://aka.ms/teamsfx-actions).
 
 ## Take a tour of your app source code
 
@@ -114,7 +114,7 @@ You can view the project folders and files under **Explorer** in Visual Studio C
 
 | Folder name| Contents| Debug configuration type |
 | --- | --- | --- |
-|  `teamsapp.local.yml` | The main Agents Toolkit project file for debugging. | This file defines the life cycles and actions required for debugging. |
+|  `m365agents.local.yml` | The main Agents Toolkit project file for debugging. | This file defines the life cycles and actions required for debugging. |
 |  `env/.env.local` | Environment variables file for Agents Toolkit project. | The values of each environment variable are consumed or generated during debugging. |
 | `.localConfigs` | Environment variables file for the app code. | The values of each environment variable are generated during debugging. |
 

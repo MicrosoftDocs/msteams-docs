@@ -51,7 +51,7 @@ items:
 
     1. Open Visual Studio Code.
     
-    1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code Activity Bar.
+    1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="../msteams-platform/assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code Activity Bar.
 
     1. In the left pane, select **View Samples**.
 
@@ -128,10 +128,10 @@ items:
     | - | - |
     | `.vscode/` | Visual Studio Code files for debugging. |
     | `appManifest/` | Templates for the app manifest (previously called Teams app manifest). |
-    | `env/`| Name / value pairs are stored in environment files and used by `teamsapp.yml` to customize the provisioning and deployment rules. |
+    | `env/`| Name / value pairs are stored in environment files and used by `m365agents.yml` to customize the provisioning and deployment rules. |
     | `manifest.json` | App manifest for publishing through the Developer Portal for Teams is stored in `Properties/manifest.json`. |
-    | `teamsapp.yml` | Main project file describes your app configuration and defines the set of actions to run in each lifecycle stage. |
-    | `teamsapp.local.yml`| This overrides `teamsapp.yml` with actions that enable local execution and debugging. |    
+    | `m365agents.yml` | Main project file describes your app configuration and defines the set of actions to run in each lifecycle stage. |
+    | `m365agents.local.yml`| This overrides `m365agents.yml` with actions that enable local execution and debugging. |    
 
 - title: Deploy your Proactive message bot
   durationInMinutes: 1
@@ -145,7 +145,7 @@ items:
 
     1. Open Visual Studio Code.
     1. Open the project folder where you created the proactive message bot app.
-    1. Select the Microsoft 365 Agents Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code Activity Bar.
+    1. Select the Microsoft 365 Agents Toolkit  :::image type="icon" source="../msteams-platform/assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code Activity Bar.
     1. Select **Sign in to Azure** using your credentials.
 
         > [!TIP]
@@ -171,7 +171,7 @@ items:
 
     # [Visual Studio Code](#tab/vscode)
    
-    1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code Activity Bar.
+    1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="~/assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code Activity Bar.
 
     1. Select **Provision** under **LIFECYCLE**.
 
@@ -243,28 +243,28 @@ items:
 
     In your terminal window:
 
-    1. Run `teamsfx new` to create new project.
+    1. Run `atk new` to create new project.
 
        ``` bash
-       teamsfx new
+       atk new
        ```
 
-    1. Run `teamsfx provision` to create azure resource.
+    1. Run `atk provision` to create azure resource.
 
        ``` bash
-       teamsfx provision
+       atk provision
        ```
 
-    1. Run `teamsfx deploy` to deploy the app.
+    1. Run `atk deploy` to deploy the app.
 
        ``` bash
-       teamsfx deploy
+       atk deploy
        ```
 
-    1. Run `teamsfx preview` to run the app.
+    1. Run `atk preview` to run the app.
 
        ``` bash
-       teamsfx preview
+       atk preview
        ```
 
     > [!div class="nextstepaction"]

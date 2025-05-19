@@ -25,7 +25,7 @@ items:
     | Install | For using |
     | --- | --- |    
     | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
-    | [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) or [TeamsFx CLI](~/toolkit/teams-toolkit-cli.md) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use Agents Toolkit v5. |
+    | [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) or [Microsoft 365 Agents Toolkit CLI](~/toolkit/teams-toolkit-cli.md) (previously known as TeamsFx CLI) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use Agents Toolkit v5. |
     | [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program) | Teams account with the appropriate permissions to install an app. |
     | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
     | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
@@ -112,13 +112,13 @@ items:
 
          ---
 
-      In TeamsFx CLI,
+      In Agents Toolkit CLI,
 
-      * If you prefer an interactive mode, execute `teamsfx new` command and then use the keyboard to go through the same flow as in Visual Studio Code.
+      * If you prefer an interactive mode, execute `atk new` command and then use the keyboard to go through the same flow as in Visual Studio Code.
 
       * If you prefer non-interactive mode, enter all the required parameters in one command:
 
-        `teamsfx new--interactive false--capabilities "dashboard-tab"--programming-language "TypeScript"--folder "./"--app-name dashboard-cli-001`
+        `atk new--interactive false--capabilities "dashboard-tab"--programming-language "TypeScript"--folder "./"--app-name dashboard-cli-001`
 
    > [!div class="nextstepaction"]
    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20a%20new%20dashboard&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-create-dashboard-widget-graph-api-call-in-teams-toolkit%3Ftabs%3Ddarktheme%252Cteamsappyml%252Cauth-start%26tutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-create-dashboard-widget-graph-api-call-in-Teams-toolkit.yml&documentVersionIndependentId=6bb7ec5f-2b26-1b11-71a4-3ee70562407b&author=surbhigupta&platformId=cf24cc3f-ca3c-29e2-df0d-68bea430c9b1&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
@@ -456,9 +456,9 @@ items:
         <details>
         <summary>3. Update Agents Toolkit configuration files.</summary>
 
-        To update Agents Toolkit configuration code in **teamsapp.yml** and **teamsapp.local.yml** files, follow the steps:
+        To update Agents Toolkit configuration code in **m365agents.yml** and **m365agents.local.yml** files, follow the steps:
 
-        # [teamsapp.yml](#tab/teamsappyml)
+        # [m365agents.yml](#tab/m365agentsyml)
 
         1. Add the code under `provision`.
         
@@ -494,7 +494,7 @@ items:
 
             :::image type="content" source="assets/images/sbs-create-a-new-dashboard/cli-teams-app.png" alt-text="Screenshot shows the information to react code for cli.":::
 
-        # [teamsapp.local.yml](#tab/teamsapplocalyml)
+        # [m365agents.local.yml](#tab/m365agentslocalyml)
         
         1. Add the code under `provision`.
         

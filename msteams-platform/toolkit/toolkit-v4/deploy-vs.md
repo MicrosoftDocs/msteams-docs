@@ -29,17 +29,17 @@ To deploy Teams app using Agents Toolkit, follow these steps:
 1. Select **Create a new project** or open an existing project from the list.
 1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Deploy to the Cloud**.
 
-      :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/deploy-to-the-cloud-button.png" alt-text="Screenshot shows steps to deploy to the cloud.":::
+      :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/deploy-to-the-cloud-button.png" alt-text="Screenshot shows steps to deploy to the cloud.":::
 
 1. In the pop-up window that appears, select **Deploy**.
 
-      :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/deploy_warning.png" alt-text="Screenshot shows deploy warning window.":::
+      :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/deploy_warning.png" alt-text="Screenshot shows deploy warning window.":::
 
       The app is deployed to Azure cloud.
 
 ## Customize deploy lifecycle in Teams using Visual Studio
 
-To customize the deployment process, you can edit the following `deploy` sections in the `teamsapp.yml` file:
+To customize the deployment process, you can edit the following `deploy` sections in the `m365agents.yml` file:
 
 * [cli/runNpmCommand](#clirunnpmcommand)
 * [cli/runDotnetCommand](#clirundotnetcommand)

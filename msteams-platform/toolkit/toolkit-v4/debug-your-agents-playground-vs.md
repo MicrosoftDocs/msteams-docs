@@ -14,7 +14,7 @@ Microsoft 365 Agents Playground (previously known as Teams App Test Tool) makes 
 
 The following image shows a sample app displaying a response in Agents Playground:
 
- :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/test-tool-sample-app-output-vs.png" alt-text="Screenshot shows Agents Playground Adaptive Card." lightbox="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/test-tool-sample-app-output-vs.png":::
+ :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/test-tool-sample-app-output-vs.png" alt-text="Screenshot shows the Agents Playground Adaptive Card." lightbox="../../assets/images/toolkit-v2/toolkit-vs/test-tool-sample-app-output-vs.png":::
 
 The following are the advantages of Agents Playground:
 
@@ -51,58 +51,58 @@ Agents Playground offers a faster debug experience for bot applications when com
 
 1. Select **Create a new project**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/create-new-project-vs.png" alt-text="Screenshot shows the selection to create a new project.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/create-new-project-vs.png" alt-text="Screenshot shows the selection to create a new project.":::
 
 1. In the search box, enter **Microsoft Teams**. From the search results, select **Microsoft Teams App**.
 
 1. Select **Next**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/new-project-template-vs.png" alt-text="Screenshot shows the selection of templates to create a new project.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/new-project-template-vs.png" alt-text="Screenshot shows the selection of templates to create a new project.":::
 
 1. Enter **Project name** and select **Create**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/project-name-vs.png" alt-text="Screenshot shows the option to enter the project name.":::
+    :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/project-name-vs.png" alt-text="Screenshot shows the option to enter the project name.":::
 
 1. Select **AI Chat Bot** > **Create**.
 
    > [!NOTE]
    > * [OpenAI](https://platform.openai.com/apps) or  [Azure OpenAI](https://oai.azure.com/portal) are the prerequisite to debug **AI Chat Bot** app.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/project-teams-application-vs.png" alt-text="Screenshot shows the selection of Teams application to create a new project.":::
+    :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/project-teams-application-vs.png" alt-text="Screenshot shows the selection of Teams application to create a new project.":::
 
     A GettingStarted window appears.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/project-get-started-vs.png" alt-text="Screenshot shows the get started page of the application in Visual Studio." lightbox="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/project-get-started-vs.png":::
+    :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/project-get-started-vs.png" alt-text="Screenshot shows the get started page of the application in Visual Studio." lightbox="../../assets/images/toolkit-v2/toolkit-vs/project-get-started-vs.png":::
 
-1. The `appsettings.TestTool.json` file helps to configure Agents Playground by updating few parameters. To update `appsettings.TestTool.json` file, follow either OpenAI or Azure OpenAI steps:
+1. The `appsettings.Playground.json` file helps to configure Agents Playground by updating few parameters. To update `appsettings.Playground.json` file, follow either OpenAI or Azure OpenAI steps:
 
     # [OpenAI](#tab/openai)
     
-    Update OpenAI `ApiKey` in the `appsettings.TestTool.json` file.
+    Update OpenAI `ApiKey` in the `appsettings.Playground.json` file.
     
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/app-seetings-test-tool.png" alt-text="Screenshot displays the updated OpenAI key.":::
+    :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/app-seetings-test-tool.png" alt-text="Screenshot displays the updated OpenAI key.":::
     
     # [Azure OpenAI](#tab/azureopenai)
     
-    1. Update Azure `OpenAIApiKey` and `OpenAIEndpoint` in the `appsettings.TestTool.json` file.
+    1. Update Azure `OpenAIApiKey` and `OpenAIEndpoint` in the `appsettings.Playground.json` file.
 
-        :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/app-seetings-test-tool-azureAI.png" alt-text="Screenshot displays the updated OpenAI key and endpoint for Azure.":::
+        :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/app-seetings-test-tool-azureAI.png" alt-text="Screenshot displays the updated OpenAI key and endpoint for Azure.":::
     
     1. Replace model name with Azure OpenAI model deployment name in `Program.cs` file.
    
-         :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/azure-openai-model-deployment-name.png" alt-text="Screenshot shows the AzureOpenAI model deployment name updated.":::
+         :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/azure-openai-model-deployment-name.png" alt-text="Screenshot shows the AzureOpenAI model deployment name updated.":::
     ---
 
 1. In the debug dropdown list, select **Microsoft 365 Agents Playground (browser)**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/app-test-tool.png" alt-text="Screenshot shows the option to select the Teams app test tool from the dropdown list.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/app-test-tool.png" alt-text="Screenshot shows the option to select the Teams app test tool from the dropdown list.":::
 
    Agents Playground opens the bot in a webpage.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/test-tool.png" alt-text="Screenshot shows the bot opens the test tool in web page." lightbox="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/debug-test-tool-vs.png":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/test-tool.png" alt-text="Screenshot shows the bot opens the test tool in web page." lightbox="../../assets/images/toolkit-v2/toolkit-vs/debug-test-tool-vs.png":::
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Test+Tool+experience+in+Visual+Studio&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Ftoolkit-v4%2Fdebug-your-teams-app-test-tool-vs%3Ftabs%3Dopenai%23test-tool-experience-in-visual-studio&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Ftoolkit-v4%2Fdebug-your-Teams-app-test-tool-vs.md&documentVersionIndependentId=5f102ce2-7c72-b348-78aa-27881c4b18af&platformId=b9d3de6f-bea0-0124-0e30-0a5db1d1c05f&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Test+Tool+experience+in+Visual+Studio&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Ftoolkit-v4%2Fdebug-your-teams-app-test-tool-vs%3Ftabs%3Dopenai%23test-tool-experience-in-visual-studio&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Ftoolkit-v4%2Fdebug-your-agents-playground-vs.md&documentVersionIndependentId=5f102ce2-7c72-b348-78aa-27881c4b18af&platformId=b9d3de6f-bea0-0124-0e30-0a5db1d1c05f&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Activity triggers
 
@@ -140,24 +140,24 @@ Predefined activity triggers are available in the **Mock an Activity** menu in A
 
     The `OnConversationUpdate` handler recognizes the members who join the conversation as described by the Add user activity.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/debug-VS/add-a-user-code-vs.png" alt-text="Screenshot shows the code added to program.cs file for predefined mock activity add user.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/debug-VS/add-a-user-code-vs.png" alt-text="Screenshot shows the code added to program.cs file for predefined mock activity add user.":::
 
 1. In Agents Playground, go to **Mock an Activity** and select **Add user**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/debug-VS/add-user-vs.png" alt-text="Screenshot shows the add user option under mock an activity.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/debug-VS/add-user-vs.png" alt-text="Screenshot shows the add user option under mock an activity.":::
 
    A pop-up dialog appears to preview the activity handler.
 
 1. Select **Send activity**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/debug-VS/add-a-user-request-vs.png" alt-text="Screenshot shows the option to send activity for predefined mock activity add user.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/debug-VS/add-a-user-request-vs.png" alt-text="Screenshot shows the option to send activity for predefined mock activity add user.":::
 
    Bot sends a response.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/debug-VS/add-a-user-response-vs.png" alt-text="Screenshot shows the response of predefined mock activity add user.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/debug-VS/add-a-user-response-vs.png" alt-text="Screenshot shows the response of predefined mock activity add user.":::
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Predefined+activity+triggers&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Ftoolkit-v4%2Fdebug-your-teams-app-test-tool-vs%3Ftabs%3Dopenai%23predefined-activity-triggers&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Ftoolkit-v4%2Fdebug-your-Teams-app-test-tool-vs.md&documentVersionIndependentId=5f102ce2-7c72-b348-78aa-27881c4b18af&platformId=b9d3de6f-bea0-0124-0e30-0a5db1d1c05f&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Predefined+activity+triggers&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Ftoolkit-v4%2Fdebug-your-teams-app-test-tool-vs%3Ftabs%3Dopenai%23predefined-activity-triggers&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Ftoolkit-v4%2Fdebug-your-agents-playground-vs.md&documentVersionIndependentId=5f102ce2-7c72-b348-78aa-27881c4b18af&platformId=b9d3de6f-bea0-0124-0e30-0a5db1d1c05f&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ### Custom activity triggers
 
@@ -176,15 +176,15 @@ You can use **Custom activity** to customize activity trigger `reactionsAdded`, 
 
     The `OnMessageReactionsAdded` handler identifies the reaction to append by using the `ReplyToId` property of the earlier conversation.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/debug-VS/custom-activity-code-vs.png" alt-text="Screenshot shows the code added to program.cs file for customization on mock activity.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/debug-VS/custom-activity-code-vs.png" alt-text="Screenshot shows the code added to program.cs file for customization on mock activity.":::
 
 1. Go to Agents Playground webpage and select the latest response from Log Panel to copy `replyToId`.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/debug-VS/custom-activity-reply-to-do.png" alt-text="Screenshot shows the selection of replyToID to copy for customization on mock activity.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/debug-VS/custom-activity-reply-to-do.png" alt-text="Screenshot shows the selection of replyToID to copy for customization on mock activity.":::
 
 1. Select **Mock an Activity** > **Custom activity**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/debug-VS/mock-activity-vs.png" alt-text="Screenshot shows the list of option under mock an activity.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/debug-VS/mock-activity-vs.png" alt-text="Screenshot shows the list of option under mock an activity.":::
 
 1. To customize the activity, add `messageReaction` under the `type` property.
 1. Replace with the latest `replyToId`.
@@ -203,14 +203,14 @@ You can use **Custom activity** to customize activity trigger `reactionsAdded`, 
 
 1. Select **Send activity**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/debug-VS/custom-activity-request-vs.png" alt-text="Screenshot shows the option to send activity after customization on mock activity.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/debug-VS/custom-activity-request-vs.png" alt-text="Screenshot shows the option to send activity after customization on mock activity.":::
 
    Bot sends an `onReactionsAdded` handler in response.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/debug-VS/custom-activity-response-vs.png" alt-text="Screenshot shows the response of custom mock activity.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/debug-VS/custom-activity-response-vs.png" alt-text="Screenshot shows the response of custom mock activity.":::
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Custom+activity+triggers&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Ftoolkit-v4%2Fdebug-your-teams-app-test-tool-vs%3Ftabs%3Dopenai%23custom-activity-triggers&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Ftoolkit-v4%2Fdebug-your-Teams-app-test-tool-vs.md&documentVersionIndependentId=5f102ce2-7c72-b348-78aa-27881c4b18af&platformId=b9d3de6f-bea0-0124-0e30-0a5db1d1c05f&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Custom+activity+triggers&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Ftoolkit-v4%2Fdebug-your-teams-app-test-tool-vs%3Ftabs%3Dopenai%23custom-activity-triggers&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Ftoolkit-v4%2Fdebug-your-agents-playground-vs.md&documentVersionIndependentId=5f102ce2-7c72-b348-78aa-27881c4b18af&platformId=b9d3de6f-bea0-0124-0e30-0a5db1d1c05f&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Limitations
 

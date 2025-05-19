@@ -18,11 +18,11 @@ TeamsFx integrates with Azure and the Microsoft 365 cloud, which allows to place
 1. Open the **Microsoft Teams App project**.
 1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Provision in the Cloud**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-vs-provision-in-cloud.png" alt-text="Screenshot shows sign in to Azure account.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/toolkit-vs-provision-in-cloud.png" alt-text="Screenshot shows sign in to Azure account.":::
 
 1. Select **Sign in...**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-vs-provision-start.png" alt-text="Screenshot shows the sign in to Azure account.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/toolkit-vs-provision-start.png" alt-text="Screenshot shows the sign in to Azure account.":::
 
    > [!NOTE]
    > If you're already signed in, your username is displayed, or you've an option to **Add an account**.
@@ -35,7 +35,7 @@ After you open your project in Visual Studio, to provision cloud resources follo
 
 1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Provision in the Cloud...**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-vs-provision-in-cloud.png" alt-text="Screenshot shows how to provision in cloud.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/toolkit-vs-provision-in-cloud.png" alt-text="Screenshot shows how to provision in cloud.":::
 
    The **Provision** window appears.
 
@@ -46,17 +46,17 @@ After you open your project in Visual Studio, to provision cloud resources follo
    1. Select your **Region** from the dropdown menu.
    1. Select **Provision**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-vs-provision-select-subscription.png" alt-text="Screenshot shows the selection of resource group." lightbox="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-vs-provision-select-subscription.png":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/toolkit-vs-provision-select-subscription.png" alt-text="Screenshot shows the selection of resource group." lightbox="../../assets/images/toolkit-v2/toolkit-vs/toolkit-vs-provision-select-subscription.png":::
 
 1. In the pop-up window that appears, select **Provision**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-vs-provision-warning.png" alt-text="Screenshot shows the provision warning.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/toolkit-vs-provision-warning.png" alt-text="Screenshot shows the provision warning.":::
 
    The provisioning process creates resources in the Azure cloud. You can monitor the progress by observing the Microsoft 365 Agents Toolkit output window.
 
 1. In the pop-up window that appears, to view all the resources that are provisioned, select **View provisioned resources**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-vs-provision-provision-success-info.png" alt-text="Screenshot shows the provisioned resources.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/toolkit-vs-provision-provision-success-info.png" alt-text="Screenshot shows the provisioned resources.":::
 
 ## Provision actions
 
@@ -270,11 +270,11 @@ The `script` action executes a user-defined script.
 
 ### Customize resource provision
 
-The provision steps are defined in the `teamsapp.yml` file, under the `provision` property. You can add, remove, or update actions to the `provision` property to define the expected actions you want to do during provision.
+The provision steps are defined in the `m365agents.yml` file, under the `provision` property. You can add, remove, or update actions to the `provision` property to define the expected actions you want to do during provision.
 
 #### Reference environment variables in parameter files
 
-Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) supports referencing the values from environment variables in the `teamsapp.yml` file, Teams app manifest, Microsoft Entra app manifest, and Azure parameter files. You can use the syntax `${{ENV_VARIABLE_NAME}}` to reference environment variables.
+Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) supports referencing the values from environment variables in the `m365agents.yml` file, Teams app manifest, Microsoft Entra app manifest, and Azure parameter files. You can use the syntax `${{ENV_VARIABLE_NAME}}` to reference environment variables.
 
 The following example sets the value of environment variable `MY_AZURE_SUBSCRIPTION_ID` to `subscriptionId`:
 
@@ -320,7 +320,7 @@ You can customize your bot or the Teams app by adding environment variables to u
 
 To use a Microsoft Entra app created for your Teams app and to add environment variables to the .env files, follow these steps.
 
-1. Open the `teamsapp.yml` file and find the `aadApp/create` action.
+1. Open the `m365agents.yml` file and find the `aadApp/create` action.
 
 1. Find the environment variable names that store information for Microsoft Entra app in the `writeToEnvironmentFile` property. If you create projects using Agents Toolkit the default  `writeToenvironmentFile` property definition is as follows:
 
@@ -367,7 +367,7 @@ If you don't have a Microsoft Entra app yet or you've one but don't know where t
 
 You can follow the steps to add environment variables to the .env files to use a Microsoft Entra app created for your Teams app.
 
-1. Open the `teamsapp.yml` file and find the `botAadApp/create` action.
+1. Open the `m365agents.yml` file and find the `botAadApp/create` action.
 
 1. Find the environment variable names that store information for Microsoft Entra app in the `writeToEnvironmentFile` property. The default `writeToEnvironmentFile` definition if you create projects using Agents Toolkit is as follows:
 

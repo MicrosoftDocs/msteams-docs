@@ -35,7 +35,7 @@ items:
    | --- | --- | --- |
    | **Required** | &nbsp; | &nbsp; |
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript or TypeScript, build environments. Use the latest version. |
-   | &nbsp; | [Microsoft 365 Agents Toolkit](#install-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
+   | &nbsp; | [Microsoft 365 Agents Toolkit](#install-microsoft-365-agents-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
    | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call all in one place.|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge/) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
@@ -57,7 +57,7 @@ items:
 
     1. Open Visual Studio Code.
 
-    1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
+    1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="../msteams-platform/assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
 
     1. Select **Create a New App**.
 
@@ -103,7 +103,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/command-bot.png" alt-text="Screenshot shows the app created.":::
 
-    1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code **Activity Bar**.
+    1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code **Activity Bar**.
 
     1. Select **Debug in Teams (Edge)** or **Debug in Teams (Chrome)** from the dropdown list.
 
@@ -143,9 +143,9 @@ items:
 
     | Folder / File | Contents |
     | - | - |
-    | `teamsapp.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
-    | `teamsapp.local.yml`| This overrides `teamsapp.yml` with actions that enable local execution and debugging. |
-    | `env/`| Name / value pairs are stored in environment files and used by `teamsapp.yml` to customize the provisioning and deployment rules. |
+    | `m365agents.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
+    | `m365agents.local.yml`| This overrides `m365agents.yml` with actions that enable local execution and debugging. |
+    | `env/`| Name / value pairs are stored in environment files and used by `m365agents.yml` to customize the provisioning and deployment rules. |
     | `.vscode/` | VSCode files for debugging. |
     | `appPackage/` | Templates for the Teams application manifest. |
     | `infra/` | Templates for provisioning Azure resources. |
@@ -169,7 +169,7 @@ items:
 
     1. Open Visual Studio Code.
     1. Open the project folder that you created the command bot app.
-    1. Select the Microsoft 365 Agents Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
+    1. Select the Microsoft 365 Agents Toolkit  :::image type="icon" source="../msteams-platform/assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the sidebar.
     1. Select **Sign in to Azure** using your credentials.
 
         > [!TIP]
@@ -191,7 +191,7 @@ items:
 
     # [Visual Studio Code](#tab/vscode)
 
-    1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
+    1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="~/assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
     1. Select **Provision** under **LIFECYCLE**.
 
@@ -259,28 +259,28 @@ items:
 
     In your terminal window:
 
-    1. Run `teamsfx new` to create new project.
+    1. Run `atk new` to create new project.
 
        ``` bash
-       teamsfx new
+       atk new
        ```
 
-    1. Run `teamsfx provision` to create azure resource.
+    1. Run `atk provision` to create azure resource.
 
        ``` bash
-       teamsfx provision
+       atk provision
        ```
 
-    1. Run `teamsfx deploy` to deploy the app.
+    1. Run `atk deploy` to deploy the app.
 
        ``` bash
-       teamsfx deploy
+       atk deploy
        ```
 
-    1. Run `teamsfx preview` to run the app.
+    1. Run `atk preview` to run the app.
 
        ``` bash
-       teamsfx preview
+       atk preview
        ```
       > [!div class="nextstepaction"]
       > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Deploy+your+app+to+Azure+using+Command+Line&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-commandbot%3Ftabs%3Dvscode%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-commandbot.yml&documentVersionIndependentId=e7ac1764-9172-9f3e-2091-5dfd755eded4&platformId=42fb0b32-8926-3242-aa1e-05eb3f8af9a4&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
