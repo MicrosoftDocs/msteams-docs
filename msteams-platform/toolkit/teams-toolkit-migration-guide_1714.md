@@ -5,7 +5,7 @@ description: This guide provides the steps to migrate scaffolded project from Mi
 ms.author: huihuiwu
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 15/19/2025
+ms.date: 05/19/2025
 ---
 
 # Migrate projects from VS 17.13 or lower version to VS 17.14+ version
