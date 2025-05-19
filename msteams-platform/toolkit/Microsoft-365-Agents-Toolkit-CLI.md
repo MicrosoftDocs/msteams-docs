@@ -150,7 +150,7 @@ Add feature to your Microsoft 365 App.
 | :-------------------------------- | :------------------------------------------------------------------------------ |
 | `atk add spfx-web-part [options]` | Auto-hosted SPFx web part tightly integrated with Microsoft 365.                |
 | `atk add action [options]`        | An action to extend Copilot using your APIs.                                    |
-| `atk add auth-config [options]`   | Add Configurations to Support Actions with Authentication in Declarative Agent. |
+| `atk add auth-config [options]`   | Add configurations to support actions with authentication in declarative agent. |
 | `atk add capability [options]`    | A capability to extend Copilot using your APIs.                                 |
 
 ## `atk auth`
@@ -205,7 +205,7 @@ The following table lists the parameters available for `atk install`:
 | :------------ | :------------------------------------ |
 | `--file-path` | Path to the app manifest zip package. |
 | `--xml-path`  | Path to the XML manifest xml file.    |
-| `--scope`     | App scope. Options: Personal, Shared. |
+| `--scope`     | App scope. The available options are Personal and Shared. |
 
 ### `atk install` scenarios
 
@@ -256,7 +256,7 @@ atk launchinfo --manifest-id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
 ## `atk list`
 
-List available Microsoft 365 App templates and samples.
+List available Microsoft 365 app templates and samples.
 
 ### `atk list` parameters
 
