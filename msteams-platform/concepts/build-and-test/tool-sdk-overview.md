@@ -1,6 +1,7 @@
 ---
 title: Tools and SDKs to Build Teams App
-description: Learn more about the tools such as Teams Toolkit, Teams Toolkit CLI, Developer Portal, and SDKs available for building your Teams app.
+author: v-sdhakshina
+description: Learn more about the tools such as Microsoft 365 Agents Toolkit, Agents Toolkit CLI, Developer Portal, and SDKs available for building your Teams app.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
@@ -20,20 +21,20 @@ Teams platform brings you different tools to build and develop your Teams apps. 
 
 | Tools | Why do you need? | Environment | Test and debug |
 | -------- | ------------- | ----------------- | ---------------------- |
-| [Teams Toolkit](../../toolkit/teams-toolkit-fundamentals.md) | Teams Toolkit makes it simple to get started with app development for Teams. You can begin with a project template for common custom app built for your org (LOB app) scenarios or start from a sample. Save time on setup through automated app registration and configuration using Visual Studio Code and Visual Studio. | **Visual Studio Code**: JavaScript and TypeScript </br> **Visual Studio**: .NET and Blazor | In Visual Studio Code and Visual Studio |
-| [Teams Toolkit CLI](../../toolkit/Teams-Toolkit-CLI.md) | TeamsFx CLI is a text-based command line interface (CLI) that accelerates Teams application development. It aims to provide keyboard centric experience when building Teams applications. | JavaScript and .NET | Use command prompt |
+| [Microsoft 365 Agents Toolkit (previously known as Teams Toolkit)](../../toolkit/teams-toolkit-fundamentals.md) | Agents Toolkit makes it simple to get started with app development for Teams. You can begin with a project template for common custom app built for your org (LOB app) scenarios or start from a sample. Save time on setup through automated app registration and configuration using Visual Studio Code and Visual Studio. | **Visual Studio Code**: JavaScript and TypeScript </br> **Visual Studio**: .NET and Blazor | In Visual Studio Code and Visual Studio |
+| [Microsoft 365 Agents Toolkit CLI](../../toolkit/Teams-Toolkit-CLI.md) (previously known as Teams Toolkit CLI) | Agents Toolkit CLI is a text-based command line interface (CLI) that accelerates Teams application development. It aims to provide keyboard centric experience when building Teams applications. | JavaScript and .NET | Use command prompt |
 | [Developer Portal for Teams](teams-developer-portal.md) | Developer Portal for Teams is the primary tool for configuring, distributing, and managing your Teams apps. With Developer Portal, you can create a basic app manifest (previously known as Teams app manifest) and publish the app to Teams.  | Supports all languages | Developer Portal for Teams |
 
 </br>
 
 <details>
-<summary><b>More information on building Teams app with Teams Toolkit.</b></summary>
+<summary><b>More information on building Teams app with Agents Toolkit.</b></summary>
 
-| &nbsp; | Teams Toolkit |
+| &nbsp; | Agents Toolkit |
 | -------- | ------------- |
 | Environment variables | Use `.env` file |
-| Generate manifest | Teams Toolkit autogenerates when creating projects. |
-| Deploy Teams app | Automatically update use command `Teams: Update Teams App` |
+| Generate manifest | Agents Toolkit autogenerates when creating projects. |
+| Deploy Teams app | Automatically update use command `Microsoft 365 Agents: Update Teams App` |
 | Create Microsoft Entra app | Automatically create when debugging or provisioning the project. Users can also use their existing Microsoft Entra app by filling in Teams app ID in `.env` file. |
 | Add SSO | Provide SSO-enabled samples and how-to guides to add SSO. |
 | Bot or Message extension Registration | Automatically create when debugging or provisioning the project. User can also specify their own Bot ID. |
@@ -97,5 +98,5 @@ The following flow diagram explains the different SDKs, libraries, and its relat
 
 | Tool | Details |
 | ----------------- | -------------- |
-| Teams Toolkit | We recommend using [Teams Toolkit v5](../../toolkit/teams-toolkit-fundamentals.md) to build your apps, as Teams Toolkit v4 is available only with limited functionality. |
-| Teams Toolkit CLI | We recommend that you use [Teams Toolkit CLI v3](../../toolkit/Teams-Toolkit-CLI.md) to build your Teams app, as TeamsFx CLI v1 and TeamsFx CLI v2 are available only with limited functionality. |
+| Microsoft 365 Agents Toolkit | We recommend using [Agents Toolkit v5](../../toolkit/teams-toolkit-fundamentals.md) to build your apps, as Agents Toolkit v4 is available only with limited functionality. |
+| Microsoft 365 Agents Toolkit CLI | We recommend that you use [Agents Toolkit CLI](../../toolkit/Teams-Toolkit-CLI.md) to build your Teams app, as TeamsFx CLI v1 and v2 are available only with limited functionality. |
