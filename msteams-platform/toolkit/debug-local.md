@@ -27,29 +27,29 @@ The following steps help you set up your Teams Toolkit before you initiate the d
 
 1. Select **Debug in Teams (Edge)** or **Debug in Teams (Chrome)** from the **RUN AND DEBUG ▷** dropdown.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Screenshot shows the Browser option.":::
+   :::image type="content" source="../assets/images/toolkit-v2/debug/debug-run.png" alt-text="Screenshot shows the Browser option.":::
 
 1. Select **Run** > **Start Debugging (F5)**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="Screenshot shows the Start debugging option.":::
+   :::image type="content" source="../assets/images/toolkit-v2/debug/start-debugging.png" alt-text="Screenshot shows the Start debugging option.":::
 
 3. Select **Create a Microsoft 365 Testing Tenant** to Microsoft 365 account.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="Screenshot shows the Sign in option highlighted.":::
+   :::image type="content" source="../assets/images/toolkit-v2/debug/microsoft365-signin.png" alt-text="Screenshot shows the Sign in option highlighted.":::
 
    > [!TIP]
    > You can select **Create a Microsoft 365 Testing Tenant** to learn about Microsoft 365 Developer Program. Your default web browser opens to let you sign in to your Microsoft 365 account with your credentials.
 
 4. Select **Install** to install the development certificate for localhost.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/install-certificate.png" alt-text="Screenshot shows the certificate to install.":::
+    :::image type="content" source="../assets/images/toolkit-v2/debug/install-certificate.png" alt-text="Screenshot shows the certificate to install.":::
 
    > [!TIP]
    > You can select **Learn More** to know about the development certificate.
 
 5. Select **Yes** in the **Security Warning** dialog.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/development-certificate.png" alt-text="Screenshot shows the certification authority to install the certificate.":::
+    :::image type="content" source="../assets/images/toolkit-v2/debug/development-certificate.png" alt-text="Screenshot shows the certification authority to install the certificate.":::
 
 Toolkit launches a new Microsoft Edge or Chrome browser instance based on your selection and opens a web page to load Teams client.  
 
@@ -57,29 +57,29 @@ Toolkit launches a new Microsoft Edge or Chrome browser instance based on your s
 
 1. Select **Debug in Teams (Edge)** or **Debug in Teams (Chrome)** from the **RUN AND DEBUG ▷** dropdown.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Screenshot shows the Browser lists.":::
+   :::image type="content" source="../assets/images/toolkit-v2/debug/debug-run.png" alt-text="Screenshot shows the Browser lists.":::
 
 1. Select **Start Debugging (F5)** or  **Run** to run your Teams app in debug mode.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/start-debugging.png" alt-text="Screenshot shows the Debug option.":::
+   :::image type="content" source="../assets/images/toolkit-v2/debug/start-debugging.png" alt-text="Screenshot shows the Debug option.":::
 
 3. Select **Sign in**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/microsoft365-signin.png" alt-text="Screenshot shows the Sign in option highlighted in the dialog.":::
+   :::image type="content" source="../assets/images/toolkit-v2/debug/microsoft365-signin.png" alt-text="Screenshot shows the Sign in option highlighted in the dialog.":::
 
    > [!TIP]
    > You can select **Create a Microsoft 365 Testing Tenant** to learn about Microsoft 365 Developer Program. Your default web browser opens to let you sign in to your Microsoft 365 account using your credentials.
 
 4. Select **Install** to install the development certificate for localhost.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/install-certificate.png" alt-text="Screenshot shows the dialog to Install the certificate.":::
+    :::image type="content" source="../assets/images/toolkit-v2/debug/install-certificate.png" alt-text="Screenshot shows the dialog to Install the certificate.":::
 
    > [!TIP]
    > You can select **Learn More** to know about the development certificate.
 
 5. Enter your **User Name** and **Password**, then select **Update Settings**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mac-settings.png" alt-text="Screenshot shows the mac sign in dialog.":::
+    :::image type="content" source="../assets/images/toolkit-v2/debug/mac-settings.png" alt-text="Screenshot shows the mac sign in dialog.":::
 
 Teams Toolkit launches your browser instance and opens a webpage to load Teams client.
 
@@ -93,7 +93,7 @@ Teams Toolkit launches your browser instance and opens a webpage to load Teams c
     devtunnel user login
     ```
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/devtunnel-user-login.png" alt-text="Screenshot shows the devtunnel login.":::
+    :::image type="content" source="../assets/images/toolkit-v2/debug/devtunnel-user-login.png" alt-text="Screenshot shows the devtunnel login.":::
 
 1. Run the following command to start your local tunnel service:
 
@@ -108,34 +108,34 @@ Teams Toolkit launches your browser instance and opens a webpage to load Teams c
     BOT_ENDPOINT=https://sample-id-3978.devtunnels.ms/
     ```
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/bot-domain.png" alt-text="Screenshot shows the bot domain and endpoint.":::
+    :::image type="content" source="../assets/images/toolkit-v2/debug/bot-domain.png" alt-text="Screenshot shows the bot domain and endpoint.":::
 
 1. Run the following command to provision the app to Teams:
 
     ```cmd
-    teamsapp provision --env local
+    atk provision --env local
     ```
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/provision-env-local.png" alt-text="Screenshot shows provision the app to Teams.":::
+   :::image type="content" source="../assets/images/toolkit-v2/debug/provision-env-local.png" alt-text="Screenshot shows provision the app to Teams.":::
 
 1. Run the following command to deploy the app to Teams:
 
     ```cmd
-    teamsapp deploy --env local
+    atk deploy --env local
     ```
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/deploy-env-local.png" alt-text="Screenshot shows deploy the app to Teams.":::
+   :::image type="content" source="../assets/images/toolkit-v2/debug/deploy-env-local.png" alt-text="Screenshot shows deploy the app to Teams.":::
 
 1. Run the following command to preview your application locally:
 
     ```cmd
-    teamsapp preview --env local
+    atk preview --env local
     ```
 
 If you want to preview a notification bot hosted on Azure Functions, run the following command in your project directory:
 
 ```cmd
-npm run prepare-storage:teamsapp
+npm run prepare-storage:atk
 ```
 
 ---
@@ -167,7 +167,7 @@ Runs tasks as defined in `.vscode/tasks.json`. By default, the task name is `"St
 
 The following image displays task names in the **OUTPUT** and **TERMINAL** tabs of the Visual Studio Code while running tab, bot or message extension, and Azure Functions.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug/Terminal1.png" alt-text="Screenshot shows the Start app services." lightbox="../assets/images/teams-toolkit-v2/debug/Terminal1.png":::
+:::image type="content" source="../assets/images/toolkit-v2/debug/Terminal1.png" alt-text="Screenshot shows the Start app services." lightbox="../assets/images/toolkit-v2/debug/Terminal1.png":::
 
 ### Start local tunnel
 
@@ -234,7 +234,7 @@ When `writeToEnvironmentFile` is included, the specified environment variables a
 
 Launches the debug configurations as defined in `.vscode/launch.json`.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug/launch-debuggers.png" alt-text="Screenshot shows the Launch debugger.":::
+:::image type="content" source="../assets/images/toolkit-v2/debug/launch-debuggers.png" alt-text="Screenshot shows the Launch debugger.":::
 
 The following table lists the debug configuration names and types for project with tab, bot or message extension app, and Azure Functions:
 
@@ -260,13 +260,13 @@ When Teams client opens in the web browser, perform the following steps:
 
 1. Select **Add** to upload the app in Teams.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="Screenshot of the app details dialog to add the app.":::
+   :::image type="content" source="../assets/images/toolkit-v2/debug/hello-local-debug.png" alt-text="Screenshot of the app details dialog to add the app.":::
 
 1. Select **Open** to open the app in personal scope.
 
     Alternatively, you can either search and select the required scope or select a channel or chat from the list, and move through the dialog to select **Go**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/local-debug-add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
+    :::image type="content" source="../assets/images/toolkit-v2/debug/local-debug-add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
    Your app is added to Teams!
 
@@ -277,7 +277,7 @@ When Teams client opens in the web browser, perform the following steps:
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Teams Toolkit Overview](agents-toolkit-fundamentals.md)
 * [Introduction to Azure Functions](/azure/azure-functions/functions-overview)
 * [Use Teams Toolkit to provision cloud resources](provision.md)
 * [Add How-to guides to Teams app](add-how-to-guides-vsc.md)

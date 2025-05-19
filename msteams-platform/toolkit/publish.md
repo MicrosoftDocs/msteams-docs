@@ -11,7 +11,7 @@ ms.date: 11/29/2021
 
 After creating the app, you can publish your app to different scopes, such as an individual, a team, or an organization. The distribution depends on multiple factors such as needs, business and technical requirements, and your goal for the app. Distribution to different scope may need different review process. In general, the bigger the scope, the more review the app needs to go through for security and compliance concerns.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/publish-flow_1.png" alt-text="Screenshot shows the publish flow.":::
+:::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/publish-flow_1.png" alt-text="Screenshot shows the publish flow.":::
 
 Here's what you'll learn in this section:
 
@@ -49,13 +49,13 @@ Perform the following steps to upload app package:
 
 1. In the Teams client, select **Apps** > **Manage your apps** > **Upload an app**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/publish-manage-teams-upload-app.png" alt-text="Screenshot shows the publish an app option.":::
+   :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/publish-manage-teams-upload-app.png" alt-text="Screenshot shows the publish an app option.":::
 
    The **Upload an app** window appears.
 
 2. Select **Upload a custom app**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/upload-custom-app.png" alt-text="Screenshot shows the option to upload a custom app in Teams.":::
+   :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/upload-custom-app.png" alt-text="Screenshot shows the option to upload a custom app in Teams.":::
 
    Now, the custom app is uploaded into the Teams client and you can add and view it.
 
@@ -77,11 +77,11 @@ The following steps help you to publish the app from Agents Toolkit:
      * Select **Publish** under **LIFECYCLE**.
      * Select **View** > **Command Palette...** > **Teams: Publish**.
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-publish_1.png" alt-text="Screenshot shows the Publish option highlighted.":::
+       :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/select-publish_1.png" alt-text="Screenshot shows the Publish option highlighted.":::
 
-1. Select your environment, Agents Toolkit runs the `publish` lifecycle defined in `teamsapp.yml`.
+1. Select your environment, Agents Toolkit runs the `publish` lifecycle defined in `m365agents.yml`.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-env.jpg" alt-text="Screenshot shows the environment options.":::
+    :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/select-env.jpg" alt-text="Screenshot shows the environment options.":::
 
 Now the app is available on the Manage apps of Microsoft Teams admin center, where you and the admin can review and approve it.
 
@@ -107,19 +107,19 @@ The following steps help you to approve from admin center:
 
 1. Select **Go to admin portal**.
 
-1. Select the :::image type="icon" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/Showall.PNG"::: icon > **Teams apps** > **Manage apps**.
+1. Select the :::image type="icon" source="../assets/images/toolkit-v2/toolkit-fundamentals/Showall.PNG"::: icon > **Teams apps** > **Manage apps**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-manage-apps.png" alt-text="Screenshot shows the select Manage apps option.":::
+   :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/select-manage-apps.png" alt-text="Screenshot shows the select Manage apps option.":::
 
    You can view all Teams app for your organization.
 
    In the **Pending approval** widget at the top of the page, lets you know when a custom app is submitted for approval. In the table, a newly submitted app automatically publishes the status of submitted and blocked apps. You can sort the publishing status column in descending order to find the app.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/admin-approval-for-teams-app.png" alt-text="Screenshot shows the teams apps pending for approval.":::
+   :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/admin-approval-for-teams-app.png" alt-text="Screenshot shows the teams apps pending for approval.":::
 
 1. Select the app name to go to the app details page. On the **About** tab, you can view details about the app, including description, status, and app ID.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/about-submitted-app.png" alt-text="Screenshot shows the submitted app.":::
+   :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/about-submitted-app.png" alt-text="Screenshot shows the submitted app.":::
 
 1. Select the status dropdown and change from **Submitted** to **Publish**.
 

@@ -121,7 +121,7 @@ Get started with Teams AI library using the LightBot sample. It enables your com
        SECRET_AZURE_OPENAI_ENDPOINT=<your Azure OpenAI Endpoint>
        ```
 
-   1. Go to the `teamsapp.local.yml` file and modify the last step to use Azure OpenAI variables:
+   1. Go to the `m365agents.local.yml` file and modify the last step to use Azure OpenAI variables:
 
        ```yaml
           - uses: file/createOrUpdateEnvironmentFile
@@ -432,7 +432,7 @@ Agents Toolkit automatically provisions `BOT_ID` and `BOT_PASSWORD` resources. I
 
 You can also use the following tools to run and set up a sample:
 
-1. **Microsoft 365 Agents Toolkit CLI**: You can use the Agents Toolkit CLI to create and manage Teams apps from the command line. For more information, see [Agents Toolkit CLI set up instructions](https://github.com/microsoft/teams-ai/blob/main/getting-started/OTHER/TEAMS-TOOLKIT-CLI.md).
+1. **Microsoft 365 Agents Toolkit CLI** (previously known as Teams Toolkit CLI): You can use Agents Toolkit CLI to create and manage Teams apps from the command line. For more information, see [Agents Toolkit CLI set up instructions](https://github.com/microsoft/teams-ai/blob/main/getting-started/OTHER/TEAMS-TOOLKIT-CLI.md).
 
 1. **Bot Framework Emulator**: The [Bot Framework Emulator](https://github.com/microsoft/BotFramework-Emulator) is a desktop application that allows you to test and debug your bot locally. You can connect to your bot by entering the bot’s endpoint URL and Microsoft app ID and password. You can then send messages to your bot and see its responses in real-time. For more information, see [Bot Framework Emulator set up instructions](https://github.com/microsoft/teams-ai/blob/main/getting-started/OTHER/BOTFRAMEWORK-EMULATOR.md).
 

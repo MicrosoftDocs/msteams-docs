@@ -619,7 +619,7 @@ To build an API-based message extension using Agents Toolkit for Visual Studio C
 1. Select **Create a New Agent/App**.
 1. Select **Message Extension**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/create-me.png" alt-text="Screenshot shows the message extension option in Agents Toolkit.":::
+   :::image type="content" source="../assets/images/toolkit-v2/first-msgext/create-me.png" alt-text="Screenshot shows the message extension option in Agents Toolkit.":::
 
 1. Select **Custom Search Results**.
 
@@ -659,8 +659,8 @@ To build an API-based message extension using Agents Toolkit for Visual Studio C
       | `src/keyGen.ts` | Designed to generate an API key used for authorization. |
       | `appPackage/apiSpecificationFile/repair.yml` | A file that describes the structure and behavior of the repair API. |
       | `appPackage/responseTemplates/repair.json` | A template file for rendering API response. |
-      | `teamsapp.yml` | The main Agents Toolkit project file. The project file defines two primary things: Properties and configuration Stage definitions.|
-      |`teamsapp.local.yml` | Overrides teamsapp.yml with actions that enable local execution and debugging.|
+      | `m365agents.yml` | The main Agents Toolkit project file. The project file defines two primary things: Properties and configuration Stage definitions.|
+      |`m365agents.local.yml` | Overrides m365agents.yml with actions that enable local execution and debugging.|
       |`aad.manifest.json` | Defines the configuration of Microsoft Entra app. This template only provisions a single tenant Microsoft Entra app.|
 
    1. Based on the options selected in **step a**, follow these steps:
@@ -738,19 +738,19 @@ To build an API-based message extension using Agents Toolkit for Visual Studio C
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-sbs-result.png" alt-text="Screenshot shows the Adaptive Card with the search results in the chat message in Teams.":::
 
-# [Agents Toolkit CLI](#tab/teams-toolkit-cli)
+# [Microsoft 365 Agents Toolkit CLI](#tab/teams-toolkit-cli)
 
-To create an API-based message extension using Agents Toolkit CLI, follow these steps:
+To create an API-based message extension using Microsoft 365 Agents Toolkit CLI (previously known as Teams Toolkit CLI), follow these steps:
 
 1. Go to **Command Prompt**.
 
 1. Enter the following command:
 
    ```
-   npm install -g @microsoft/teamsapp-cli
+   npm install -g @microsoft/atk-cli
    ```
 
-1. Type `teamsapp new` in the terminal
+1. Type `atk new` in the terminal
 
 1. Select **Message Extension**.
 
@@ -774,7 +774,7 @@ To create an API-based message extension using Agents Toolkit CLI, follow these 
 
 1. Go to the folder path where your project is created and enter the following command to provision your app in Azure:
 
-   ```teamsapp provision --env dev```
+   ```atk provision --env dev```
 
    Agents Toolkit CLI opens a browser window and requests you to sign in to your Microsoft Account.
 
@@ -784,7 +784,7 @@ To create an API-based message extension using Agents Toolkit CLI, follow these 
 
 1. In the command prompt window, enter the following command to preview your app in Teams:
 
-   ```teamsapp preview --env dev```
+   ```atk preview --env dev```
 
    A new browser window with Teams web client opens. You can add your app to Teams.
 
@@ -830,8 +830,8 @@ To create an API-based message extension using Agents Toolkit for Visual Studio,
       |`appPackage/apiSpecificationFile/repair.yml` |  A file that describes the structure and behavior of the repair API.|
       |`appPackage/responseTemplates/repair.json` |  A generated Adaptive Card that used to render API response.|
       |`appPackage/responseTemplates/repair.data.json` | The data source for the repair API.|
-      | `teamsapp.yml` | The main Agents Toolkit project file. The project file defines two primary things: Properties and configuration Stage definitions.|
-      |`teamsapp.local.yml` | Overrides teamsapp.yml with actions that enable local execution and debugging.|
+      | `m365agents.yml` | The main Agents Toolkit project file. The project file defines two primary things: Properties and configuration Stage definitions.|
+      |`m365agents.local.yml` | Overrides m365agents.yml with actions that enable local execution and debugging.|
 
    1. After you've updated the source code, in the debug dropdown menu, select **Dev Tunnels (no active tunnel)** > **Create a Tunnel...**.
 
@@ -1108,7 +1108,7 @@ To build an API-based message extension with multiple parameters using Agents To
 1. Select **Create a New App**.
 1. Select **Message Extension**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/create-new-app1.png" alt-text="Screenshot shows the message extension option in Agents Toolkit.":::
+   :::image type="content" source="../assets/images/toolkit-v2/first-msgext/create-new-app1.png" alt-text="Screenshot shows the message extension option in Agents Toolkit.":::
 
 1. Select **Custom Search Results**.
 
