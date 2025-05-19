@@ -14,7 +14,7 @@ In this section, you can learn how to create a new Microsoft Teams project using
 
 ## Create a new Teams project using Visual Studio Code
 
-You can build a new Teams project by selecting **Create a New App** in Microsoft 365 Agents Toolkit (previously known as Teams Toolkit). You can start from built-in Teams app templates or start from official Teams app samples in Agents Toolkit. What's more, Agents Toolkit  supports to start with Outlook Add-in templates to build your own Outlook Add-ins.
+You can build a new Teams project by selecting **Create a New Agent/App** in Microsoft 365 Agents Toolkit (previously known as Teams Toolkit). You can start from built-in Teams app templates or start from official Teams app samples in Agents Toolkit. What's more, Agents Toolkit  supports to start with Outlook Add-in templates to build your own Outlook Add-ins.
 
 :::image type="content" source="../assets/images/toolkit-v2/first-tab/select-capabilities-tabapp_1.png" alt-text="Screenshot shows the App Capability options.":::
 
@@ -34,7 +34,7 @@ To create a basic Teams app:
 
 1. Open **Visual Studio Code**.
 
-1. Select the **Microsoft 365 Agents Toolkit** > **Create a New App**.
+1. Select the **Microsoft 365 Agents Toolkit** > **Create a New Agent/App** > select **Teams App**.
 
     :::image type="content" source="../assets/images/toolkit-v2/first-tab/create-project.png" alt-text="Screenshot shows the Create New Project button in the Agents Toolkit sidebar.":::
 

@@ -28,7 +28,7 @@ The AI chatbot template showcases a bot app, similar to ChatGPT, that responds t
  
 1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="~/assets/images/toolkit-v2/toolkit-sidebar-icon.PNG" border="false"::: icon in the Visual Studio Code **Activity Bar**
 
-1. Select **Create a New App**.
+1. Select **Create a New Agent/App**.
 
    :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/create-new-app.png" alt-text="Screenshot shows the location of the Create New Project link in the Agents Toolkit sidebar.":::
 
@@ -80,11 +80,11 @@ The AI chatbot template showcases a bot app, similar to ChatGPT, that responds t
 
    :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/env-testtool-user.png" alt-text="Screenshot shows the details updated in the env file.":::
 
-1. To debug your app, select the **F5** key or from the left pane, select **Run and Debug (Ctrl+Shift+D)** and then select **Debug in Test Tool (Preview)** from the dropdown list.
+1. To debug your app, select the **F5** key or from the left pane, select **Run and Debug (Ctrl+Shift+D)** and then select **Debug in Microsoft 365 Agents Playground (Preview)** (previously known as Teams App Test Tool) from the dropdown list.
 
    :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/debug-test-tool.png" alt-text="Screenshot shows the selection of debugging option from the list of options.":::
 
-Test Tool opens the bot in a webpage.
+Agents Playground opens the bot in a webpage.
 
    :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/basic-ai-chatbot-final-output.png" alt-text="Screenshot shows the bot response with basic AI chatbot." lightbox="../assets/images/toolkit-v2/custom-copilot/chat-bot-output.png":::
 
@@ -101,7 +101,7 @@ Test Tool opens the bot in a webpage.
 | `src`        | The source code for the application.                |
 |`m365agents.yml`| This is the main Agents Toolkit project file. The project file defines two primary things:  Properties and configuration Stage definitions. |
 |`m365agents.local.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging.|
-|`m365agents.testtool.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
+|`m365agents.playground.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
 |`src/index.js`| Sets up the bot app server.|
 |`src/adapter.js`| Sets up the bot adapter.|
 |`src/config.js`| Defines the environment variables.|
@@ -120,7 +120,7 @@ Test Tool opens the bot in a webpage.
 | `src`        | The source code for the application.                 |
 |`m365agents.yml`| This is the main Agents Toolkit project file. The project file defines two primary things:  Properties and configuration Stage definitions. |
 |`m365agents.local.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging.|
-|`m365agents.playground.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
+|`m365agents.playground.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging in Agents Playground.|
 |`src/app.py`| Hosts an aiohttp API server and exports an app module.|
 |`src/bot.py`| Handles business logics for the basic AI chatbot.|
 |`src/config.py`| Defines the environment variables.|

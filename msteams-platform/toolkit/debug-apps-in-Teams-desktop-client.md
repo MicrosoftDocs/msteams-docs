@@ -1,7 +1,7 @@
 ---
 title: Debug your apps in Teams Desktop Client
 author: surbhigupta
-description: Learn how to debug your bot, agent, custom engine agent, message extension apps in Teams desktop client using Teams Toolkit.
+description: Learn how to debug your bot, agent, custom engine agent, and message extension apps in Teams desktop client using Microsoft 365 Agents Toolkit.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
@@ -10,7 +10,7 @@ ms.date: 10/22/2024
 
 # Debug in Teams desktop client
 
-Microsoft Teams Toolkit helps you to debug and preview your Microsoft Teams app in desktop client. During the debug process, Teams Toolkit automatically starts app services, opens debuggers, and uploads Teams app. You can preview your Teams app in Teams desktop client after debugging.
+Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) helps you to debug and preview your Microsoft Teams app in desktop client. During the debug process, Agents Toolkit automatically starts app services, opens debuggers, and uploads Teams app. You can preview your Teams app in Teams desktop client after debugging.
 
 The following are the advantages of Teams desktop client:
 
@@ -20,7 +20,7 @@ The following are the advantages of Teams desktop client:
 
 ## Capabilities of Teams desktop client
 
-Teams desktop client incorporates debugging capabilities in the following app templates scaffolded by the Teams Toolkit:
+Teams desktop client incorporates debugging capabilities in the following app templates scaffolded by Agents Toolkit:
 
 * Bot.
 * Agent.
@@ -33,7 +33,7 @@ Ensure you install the following tools for building and deploying your app in Te
 
 | &nbsp; | Install | For using... |
 | --- | --- | --- |
-| &nbsp; | [Teams Toolkit](install-Agents-Toolkit.md) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest prerelease version. |
+| &nbsp; | [Microsoft 365 Agents Toolkit](install-Agents-Toolkit.md) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest prerelease version. |
 | &nbsp; | [Node.js](https://nodejs.org/en/download) | Back-end JavaScript runtime environment. For more information, see [node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type). |
 | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
 | &nbsp; | [Microsoft 365 developer account](../concepts/build-and-test/prepare-your-o365-tenant.md)| Access to Teams account with the appropriate permissions to install an app. |
@@ -42,9 +42,9 @@ Ensure you install the following tools for building and deploying your app in Te
 
 **To debug your custom engine agent app in Teams desktop client**
 
-1. Open Visual Studio Code (VS Code) and log into your Microsoft 365 account through Teams Toolkit.
+1. Open Visual Studio Code (VS Code) and log into your Microsoft 365 account through Agents Toolkit.
 
-1. Select the Teams Toolkit :::image type="icon" source="../assets/images/toolkit-v2/toolkit-sidebar-icon.PNG" border="false"::: icon in the VS Code **Activity Bar** and then select **Create a New App**.
+1. Select the Agents Toolkit :::image type="icon" source="../assets/images/toolkit-v2/toolkit-sidebar-icon.PNG" border="false"::: icon in the VS Code **Activity Bar** and then select **Create a New Agent/App**.
 
     :::image type="content" source="../assets/images/toolkit-v2/debug-apps-in-teams-desktop-client/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
 
@@ -52,7 +52,7 @@ Ensure you install the following tools for building and deploying your app in Te
 
     :::image type="content" source="../assets/images/toolkit-v2/debug-apps-in-teams-desktop-client/custom-engine-copilot.png" alt-text="Screenshot shows the Teams Toolkit app templates.":::
 
-1. Select **Basic AI Chatbot**.
+1. Select **Basic Custom Engine Agent**.
 
     :::image type="content" source="../assets/images/toolkit-v2/debug-apps-in-teams-desktop-client/app-feature.png" alt-text="Screenshot shows the app capabilities to add to your new app.":::
 
@@ -67,6 +67,10 @@ Ensure you install the following tools for building and deploying your app in Te
 1. Enter the OpenAI service key.
 
     :::image type="content" source="../assets/images/toolkit-v2/debug-apps-in-teams-desktop-client/openai-key.png" alt-text="Screenshot shows to enter openai service key in Visual Studio Code.":::
+
+1. Select **JavaScript**.
+
+    :::image type="content" source="../assets/images/toolkit-v2/first-bot/select-language-tab.png" alt-text="Screenshot shows the option to select the programming language.":::
 
 1. Select **Default folder**.
 
@@ -91,7 +95,7 @@ Ensure you install the following tools for building and deploying your app in Te
 
     :::image type="content" source="../assets/images/toolkit-v2/debug-apps-in-teams-desktop-client/debug-in-teams-desktop.png" alt-text="Screenshot shows the option to select debug in Teams (Desktop).":::
 
-1. Ensure your Teams desktop login matches your Microsoft 365 account used in Teams Toolkit and then select **Continue**.
+1. Ensure your Teams desktop login matches your Microsoft 365 account used in Agents Toolkit and then select **Continue**.
 
     :::image type="content" source="../assets/images/toolkit-v2/debug-apps-in-teams-desktop-client/desktop-login-matches.png" alt-text="Screenshot shows the desktop login.":::
 
@@ -109,7 +113,7 @@ Ensure you install the following tools for building and deploying your app in Te
 
     > [!NOTE]
     >
-    > The system level notification for account matching appears only once per project. In subsequent debug sessions, Teams Toolkit sends reminders about the account through VS Code notifications.
+    > The system level notification for account matching appears only once per project. In subsequent debug sessions, Agents Toolkit sends reminders about the account through VS Code notifications.
     >
     > :::image type="content" source="../assets/images/toolkit-v2/debug-apps-in-teams-desktop-client/subsequent-desktop-login.png" alt-text="Screenshot shows the subsequent desktop login notification in vs code.":::
 
@@ -123,5 +127,5 @@ You can continue to debug your custom engine agent app in Teams desktop client.
 
 ## See also
 
-* [Teams Toolkit Overview](agents-toolkit-fundamentals.md)
+* [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals.md)
 * [Debug for mobile](debug-mobile.md)

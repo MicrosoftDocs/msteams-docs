@@ -15,7 +15,7 @@ TeamsFx integrates with Azure and the Microsoft 365 cloud, which allows to place
 ## Sign in to your Azure account
 
 1. Open **Visual Studio**.
-1. Open the **Microsoft Teams App project**.
+1. Open **Microsoft 365 Agents**.
 1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Provision in the Cloud**.
 
    :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/toolkit-vs-provision-in-cloud.png" alt-text="Screenshot shows sign in to Azure account.":::

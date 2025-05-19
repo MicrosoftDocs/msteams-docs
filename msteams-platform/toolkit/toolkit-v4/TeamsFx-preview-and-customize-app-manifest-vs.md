@@ -45,7 +45,7 @@ You can preview the app manifest file either **For Local** or **For Azure**. To 
 
         :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/zip-app-package.png" alt-text="Screenshot shows the zip app package for local or Azure.":::
 
-    1. From **Solution Explorer**, right-click on **MyTeamsApp14** (in this scenario the project name is MyTeamsApp14). Go to **Microsoft 365 Agents Toolkit** > **Zip App Package** and then select either **For Local** or **For Azure**.
+    1. From **Solution Explorer**, right-click on **M365Agent** (in this scenario the project name is M365Agent). Go to **Microsoft 365 Agents Toolkit** > **Zip App Package** and then select either **For Local** or **For Azure**.
 
         :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/solution-zip.png" alt-text="Screenshot shows the solution zip app package for local or Azure.":::
 

@@ -616,7 +616,7 @@ To build an API-based message extension using Agents Toolkit for Visual Studio C
 
 1. Open **Visual Studio Code**.
 1. From the left pane, select **Microsoft 365 Agents Toolkit**.
-1. Select **Create a New Agent/App**.
+1. Select **Create a New Agent/App** > **Teams App**.
 1. Select **Message Extension**.
 
    :::image type="content" source="../assets/images/toolkit-v2/first-msgext/create-me.png" alt-text="Screenshot shows the message extension option in Agents Toolkit.":::
@@ -797,7 +797,7 @@ To create an API-based message extension using Agents Toolkit for Visual Studio,
 1. Open **Visual Studio**.
 1. Go to **File** > **New** > **Project...** or **New Project**.
 
-1. Search for **Teams** and select **Microsoft Teams App**.
+1. Search for **Microsoft** and select **Microsoft 365 Agents**.
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-vs-teams.png" alt-text="Screenshot shows the Microsoft Teams app option in Visual Studio.":::
 
@@ -1105,7 +1105,7 @@ To build an API-based message extension with multiple parameters using Agents To
 
 1. Open **Visual Studio Code**.
 1. From the left pane, select **Microsoft 365 Agents Toolkit**.
-1. Select **Create a New App**.
+1. Select **Create a New Agent/App** > **Teams App**.
 1. Select **Message Extension**.
 
    :::image type="content" source="../assets/images/toolkit-v2/first-msgext/create-new-app1.png" alt-text="Screenshot shows the message extension option in Agents Toolkit.":::
