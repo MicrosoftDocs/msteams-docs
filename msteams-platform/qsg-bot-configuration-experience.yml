@@ -2,7 +2,7 @@
 title: Bot configuration experience quick start guide
 metadata:
   title: Guide to Create Configurable Bot
-  description: In this module, learn how to build and run the configurable bot for Teams using Teams Toolkit in Visual Studio Code and reconfigure the bot.
+  description: Learn how to build and run the configurable bot for Teams using Microsoft 365 Agents Toolkit in Visual Studio Code and reconfigure the bot.
   audience: Developer
   level: Beginner
   ms.date: 12/11/2024
@@ -21,7 +21,7 @@ items:
     Start Microsoft Teams app development with your first Teams app. 
     You can create a bot app with Teams using Javascript. 
 
-    This quick start guide helps you to build configurable bot with Teams Toolkit. You'll see the following output after you've completed this guide:
+    This quick start guide helps you to build configurable bot with Microsoft 365 Agents Toolkit (previously known as Teams Toolkit). You'll see the following output after you've completed this guide:
     
     :::image type="content" source="~/assets/images/bots/configurationbot.gif" alt-text="Screenshot shows the configuration option for the bot in a Teams group chat.":::
 

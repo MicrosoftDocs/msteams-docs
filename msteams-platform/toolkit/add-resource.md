@@ -1,7 +1,7 @@
 ---
 title: Add Resources and API Connection
 author: MuyangAmigo
-description: Learn how to add cloud resources such as Azure Functions, Azure API Management and integrate API connections using Teams Toolkit in Visual Studio Code.
+description: Learn how to add cloud resources such as Azure Functions, Azure API Management and integrate API connections using Agents Toolkit in Visual Studio Code.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
@@ -10,7 +10,7 @@ ms.date: 11/29/2024
 
 # Add cloud resources and API connection
 
-Microsoft Teams Toolkit enables you to provision cloud resources for hosting your app, tailored to your development needs. By adding more cloud resources in TeamsFx, you can autogenerate all configuration files and seamlessly connect to the Microsoft Teams app using Teams Toolkit. Additionally, Teams Toolkit allows you to access and use existing APIs, whether developed by your organization or a third party, for building Teams apps.
+Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) enables you to provision cloud resources for hosting your app, tailored to your development needs. By adding more cloud resources in TeamsFx, you can autogenerate all configuration files and seamlessly connect to the Teams app using Agents Toolkit. Additionally, Agents Toolkit allows you to access and use existing APIs, whether developed by your organization or a third party, for building Teams apps.
 
 > [!NOTE]
 > If you've created SharePoint Framework (SPFx) based tab project, you can't add Azure cloud resources.
@@ -19,7 +19,7 @@ Microsoft Teams Toolkit enables you to provision cloud resources for hosting you
 
 You can add cloud resources in the following ways:
 
-### To add cloud resources using Teams Toolkit
+### To add cloud resources using Agents Toolkit
 
    1. Open your Teams app project in **Visual Studio Code**.
    1. Select **Microsoft 365 Agents Toolkit** from the Visual Studio Code activity bar.
@@ -81,8 +81,8 @@ Add a connection to an existing API, developed by your organization or a third p
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Microsoft 365 Agents Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Provision cloud resources](provision.md)
 * [Create a new Teams app](create-new-project.md)
 * [Deploy to the cloud](deploy.md)
-* [Publish Teams apps using Teams Toolkit](publish.md)
+* [Publish Teams apps using Microsoft 365 Agents Toolkit](publish.md)

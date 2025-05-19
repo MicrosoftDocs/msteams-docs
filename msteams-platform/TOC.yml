@@ -157,17 +157,20 @@
     displayName: Tools and SDKs
   - name: Tools 
     items:
-    - name: Teams Toolkit for Visual Studio Code
+    - name: Microsoft 365 Agents Toolkit
+      href: /microsoft-365/developer/overview-m365-agents-toolkit?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+      displayName: ATK, M365, Microsoft 365, Agents Toolkit
+    - name: Agents Toolkit for VSC
       items:
-      - name: Teams Toolkit overview
+      - name: Agents Toolkit overview
         href: toolkit/teams-toolkit-fundamentals.md
-        displayName: TTK, version, Developer Portal, debug, Teams App Test Tool, dev tunnel
-      - name: Install Teams Toolkit
+        displayName: TTK, version, Developer Portal, debug, Microsoft 365 Agents Playground, dev tunnel
+      - name: Install Agents Toolkit
         href: toolkit/install-Teams-Toolkit.md
         displayName: download
-      - name: Explore Teams Toolkit
+      - name: Explore Agents Toolkit
         href: toolkit/explore-Teams-Toolkit.md
-      - name: Build apps using Teams Toolkit 
+      - name: Build apps using Agents Toolkit 
         href: toolkit/build-environments.md
         items:
         - name: Prerequisites to create Teams app
@@ -203,16 +206,16 @@
         items:
          - name: App debug overview
            href: toolkit/debug-overview.md
-         - name: Debug using Teams App Test Tool
+         - name: Debug using Agents Playground
            href: toolkit/debug-your-teams-app-test-tool.md
            displayName: Mock activity, custom activity, predefined activity
-         - name: Debug message extension app in Test Tool
+         - name: Debug message extension app in Agents Playground
            href: toolkit/debug-message-extension-app-in-test-tool.md          
          - name: Debug your app locally
            href: toolkit/debug-local.md
          - name: Debug in Teams desktop client
            href: toolkit/debug-apps-in-teams-desktop-client.md
-           displayName: debug, desktop client, bots, Copilot agent, Custom engine agent, message extension, Teams Toolkit, Visual Studio Code, plugins       
+           displayName: debug, desktop client, bots, Copilot agent, Custom engine agent, message extension, Microsoft 365 Agents Toolkit, Visual Studio Code, plugins       
          - name: Debug background process
            href: toolkit/debug-background-process.md
          - name: Debug for mobile
@@ -236,7 +239,7 @@
           href: toolkit/test-app-behavior.md
       - name: Publish your Teams app
         items:
-        - name: Publish Teams apps using Teams Toolkit 
+        - name: Publish Teams apps using Agents Toolkit 
           href: toolkit/publish.md
           displayName: license
         - name: Publish Teams apps using Developer Portal 
@@ -246,17 +249,17 @@
           displayName: Microsoft Teams samples
         - name: FAQ
           href: toolkit/faq.md
-    - name: Teams Toolkit for Visual Studio
+    - name: Agents Toolkit for VS
       items:
       - name: Overview
         href: toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md
         displayName: TTK, version, 17.7
-      - name: Install Teams Toolkit
+      - name: Install Agents Toolkit
         href: toolkit/toolkit-v4/install-Teams-Toolkit-vs.md
         displayName: download
-      - name: Explore Teams Toolkit
+      - name: Explore Agents Toolkit
         href: toolkit/toolkit-v4/explore-Teams-Toolkit-vs.md
-      - name: Prepare to build apps using Teams Toolkit
+      - name: Prepare to build apps using Agents Toolkit
         href: toolkit/toolkit-v4/build-environments-vs.md
         items:
         - name: Prerequisites to create Teams app
@@ -273,7 +276,7 @@
         items: 
          - name: Debug overview
            href: toolkit/toolkit-v4/debug-overview-vs.md
-         - name: Debug with Teams App Test Tool
+         - name: Debug with Agents Playground
            href: toolkit/toolkit-v4/debug-your-Teams-app-test-tool-vs.md
          - name: Debug Teams app locally
            href: toolkit/toolkit-v4/debug-local-vs.md
@@ -290,6 +293,8 @@
       - name: Migrate project from 17.9 to 17.10+
         href: toolkit/teams-toolkit-migration-guide.md
         displayName: migrate Teams toolkit, new project structure, YAML configuration
+    - name: Microsoft 365 Agents Toolkit CLI
+      href: toolkit/Microsoft-365-Agents-Toolkit-CLI.md
     - name: Teams Toolkit CLI
       href: toolkit/Teams-Toolkit-CLI.md
     - name: Developer Portal for Teams
@@ -300,7 +305,7 @@
       - name: Manage your apps in Developer Portal
         href: concepts/build-and-test/manage-your-apps-in-developer-portal.md
         displayName: AppID, app validation, validate your app, Microsoft's test cases, add owners to bot
-      - name: Develop your apps with Teams Toolkit
+      - name: Develop your apps with Agents Toolkit
         href: concepts/build-and-test/develop-your-apps-with-teams-toolkit.md
         displayName: visual studio code, visual studio, teams toolkit, react web app, publish react app, debug
       - name: Analyze app and agent usage in Developer Portal
@@ -434,7 +439,7 @@
     displayName: AI bot, bot capability, command bot, workflow bot, custom engine agent, agent, conversational bot, activity handler, bot logic, notification bot
   - name: Bots and agents in Teams
     href: bots/build-a-bot.md
-    displayName: Bot samples, Code sample, Teams AI library, Microsoft Bot Framework SDK, build a bot, build AI bot, command bot, workflow bot, custom engine agent, agent, conversational bot, notification bot, tools, platforms, Azure OpenAI, Teams Toolkit, Azure AI Foundry
+    displayName: Bot samples, Code sample, Teams AI library, Microsoft Bot Framework SDK, build a bot, build AI bot, command bot, workflow bot, custom engine agent, agent, conversational bot, notification bot, tools, platforms, Azure OpenAI, Microsoft 365 Agents Toolkit, Azure AI Foundry
   - name: Custom engine agent overview
     href: /microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     displayName: AI bot, Teams AI library, custom agent
@@ -449,14 +454,14 @@
       displayName: OpenAI, Azure OpenAI, LLM, ChatGPT, prompt, Math tutor, Assistants API, AI bot, custom engine agent, RAG, Intents to actions, AI, Teams AI library, custom engine agent, AI bot, responsible AI, prompts, augmentation, Function calls using AI SDK, AI SDK
     - name: Quick start guide
       href: bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md
-      displayName: custom engine agent, AI bot, JavaScript, Python, C#, code sample, Teams Toolkit
+      displayName: custom engine agent, AI bot, JavaScript, Python, C#, code sample, Microsoft 365 Agents Toolkit
     - name: Build with Teams AI library
       href: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md
       displayName: custom engine agent, AI bot, Teams AI library, prompt manager, Action planner, action handler, feedback loop, custom engine agent, AI library
     - name: Understand Teams AI library
       href: bots/how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md
       displayName: AI activity handlers, Adaptive Card for AI bot, Teams AI library, AI library, Teams AI library, bot logic, OpenAI, Azure OpenAI, custom engine agent
-    - name: Build custom engine agent using Teams Toolkit
+    - name: Build custom engine agent using Microsoft 365 Agents Toolkit
       href: Teams-AI-library-tutorial.yml
   - name: Bot user experience
     items:
@@ -554,7 +559,7 @@
       displayName: OpenAPI Description, Search, single parameter, search based message extension
     - name: Create API-based message extensions
       href: messaging-extensions/create-api-message-extension.md
-      displayName: API-based, Teams Toolkit CLI, Developer Portal, Visual Studio Code, Visual Studio
+      displayName: API-based, Microsoft 365 Agents Toolkit CLI, Developer Portal, Visual Studio Code, Visual Studio
   - name: Build message extensions using Bot Framework  
     items:
     - name: Bot-based message extensions

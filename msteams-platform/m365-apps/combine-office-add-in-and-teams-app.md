@@ -37,7 +37,7 @@ Before you start, ensure that you meet the following requirements:
 - A Microsoft 365 account that includes Teams to test the application. Alternatively, you can have separate subscriptions to both Microsoft 365 and Teams. For example, a test account with *.onmicrosoft.com through the [Microsoft 365 Developer Program](/office/developer-program/microsoft-365-developer-program). 
 - Your Microsoft 365 account is added as an account in desktop Outlook. For more information, see [add an email account to Outlook](https://support.microsoft.com/office/add-an-email-account-to-outlook-e9da47c4-9b89-4b49-b945-a204aeea6726).
  - An Azure account with active subscription to deploy the Teams app to Azure. If you don't have one, you can create your [free Azure account](https://azure.microsoft.com/free/).
- - A Teams app created using the latest version of Teams Toolkit.
+ - A Teams app created using the latest version of Microsoft 365 Agents Toolkit (previously known as Teams Toolkit).
 
 ## Add an Outlook Add-in to a Teams app
 
@@ -53,7 +53,7 @@ To add an Outlook Add-in to a Teams app:
 
 ### Prepare the Teams app project
 
-Begin by separating the source code for the tab (or bot) into its own subfolder. These instructions assume that the project initially has the following structure. To create a Teams app project with this structure, use the latest Teams Toolkit version. 
+Begin by separating the source code for the tab (or bot) into its own subfolder. These instructions assume that the project initially has the following structure. To create a Teams app project with this structure, use the latest Agents Toolkit version. 
 
 ```
 |-- .vscode/
@@ -68,8 +68,8 @@ Begin by separating the source code for the tab (or bot) into its own subfolder.
 |-- .webappignore
 |-- package-lock.json
 |-- package.json
-|-- teamsapp.local.yml
-|-- teamsapp.yml
+|-- m365agents.local.yml
+|-- m365agents.yml
 |-- tsconfig.json
 |-- web.config
 ```
@@ -105,8 +105,8 @@ To separate the source code for the tab or bot, perform the following steps:
     |-- |-- web.config
     |-- .gitignore
     |-- .localConfigs
-    |-- teamsapp.local.yml
-    |-- teamsapp.yml
+    |-- m365agents.local.yml
+    |-- m365agents.yml
     ```
 
 1. In the `package.json` that you just moved to the tab folder, delete the script named `dev:teamsfx` from the `scripts` object. This script is added to a new `package.json` in the next step.
@@ -135,13 +135,13 @@ To separate the source code for the tab or bot, perform the following steps:
     ```
 
 1. Change the `name`, `version`, and `author` properties, as needed.
-1. Open the `teamsapp.yml` file in the root of the project, find the line `ignoreFile: .webappignore`, and change it to `ignoreFile: ./tab/.webappignore`.
-1. Open the `teamsapp.local.yml` file in the root of the project, find the line `args: install --no-audit`, and change this to `args: run install:tab --no-audit`.
+1. Open the `m365agents.yml` file in the root of the project, find the line `ignoreFile: .webappignore`, and change it to `ignoreFile: ./tab/.webappignore`.
+1. Open the `m365agents.local.yml` file in the root of the project, find the line `args: install --no-audit`, and change this to `args: run install:tab --no-audit`.
 1. Open **TERMINAL** in Visual Studio Code. Navigate to the root of the project and run `npm install`. A new `node_modules` folder and a new `package.lock.json` file are created in the project root. 
 1. Next run `npm run install:tab`. A new `node_modules` folder and a new `package.lock.json` file are created in the tab folder, if they aren't there already. 
 1. Verify that you can sideload the tab with the following steps:
 
-    1. Open Teams Toolkit. 
+    1. Open Agents Toolkit. 
     1. In the **ACCOUNTS** section, verify that you're signed in to Microsoft 365 account.
     1. Select **View** > **Run** in Visual Studio Code.
     1. In the **RUN AND DEBUG** dropdown menu, select **Debug in Teams (Edge)** and press F5. 
@@ -160,19 +160,19 @@ To separate the source code for the tab or bot, perform the following steps:
 ### Create an Outlook Add-in project
 
 1. Open a second instance of Visual Studio Code.
-1. Select Teams Toolkit from the **Activity Bar**.
+1. Select the **Microsoft 365 Agents Toolkit** icon from the **Activity Bar**.
 1. Select **Create a New Agent/App**.
 1. In the **Select an option** dropdown menu, select **Outlook add-in** > **Taskpane**.
 1. Select the folder where you want to create the add-in.
 1. Give a name (with no spaces) to the project when prompted.
 
-    Teams Toolkit creates the project with basic files and scaffolding and opens it in a new Visual Studio Code window. You'll use this project as a source for files and markup that you add to the Teams project.
+    Agents Toolkit creates the project with basic files and scaffolding and opens it in a new Visual Studio Code window. You'll use this project as a source for files and markup that you add to the Teams project.
     
 1. Although you won't be developing this project, perform the following steps to verify that it can be sideloaded from Visual Studio Code before you continue:
 
     1. Ensure the Outlook desktop is closed.
     1. Open Visual Studio Code.
-    1. Select Teams Toolkit from the **Activity Bar**.
+    1. Select **Microsoft 365 Agents Toolkit** from the **Activity Bar**.
     1. In the **ACCOUNTS** section, verify that you're signed into Microsoft 365.
     1. Select **View** > **Run** in Visual Studio Code. 
     1. In the **RUN AND DEBUG** dropdown menu, select **Outlook Desktop (Edge Chromium)** and press F5. 
@@ -222,7 +222,7 @@ Unless specified otherwise, the file you change is `\appPackage\manifest.json`.
     > - It's the label under the launch button of the Teams tab.
     > - It is content of the title bar of the add-in's task pane.
 
-1. If you changed the "name.short" value from its default (which is the name of the project followed by the `${{TEAMSFX_ENV}}` variable), make exactly the same change in all places where the project name appears in the following two files in the root of the project: teamsapp.yml and teamsapp.local.yml.
+1. If you changed the "name.short" value from its default (which is the name of the project followed by the `${{TEAMSFX_ENV}}` variable), make exactly the same change in all places where the project name appears in the following two files in the root of the project: m365agents.yml and m365agents.local.yml.
 1. If there's no "authorization.permissions.resourceSpecific" array in the Teams manifest template, copy it from the add-in manifest as a top-level property. If there's already one in the Teams template, copy any objects from the array in the add-in manifest to the array in the Teams template. The following JSON is an example:
 
     ```json
@@ -251,7 +251,7 @@ Unless specified otherwise, the file you change is `\appPackage\manifest.json`.
     ADDIN_ENDPOINT=
     ```
 
-1. In the Teams manifest template, add the placeholder `"${{ADDIN_DOMAIN}}",` to the top of the `"validDomains"` array. The Teams Toolkit replaces this with a localhost domain when you're developing locally. When you deploy the finished combined app to staging or production as described in [Move the application to Azure](#move-the-application-to-azure), Teams Toolkit replaces the placeholder with the staging/production URI. The following JSON is an example:
+1. In the Teams manifest template, add the placeholder `"${{ADDIN_DOMAIN}}",` to the top of the `"validDomains"` array. Agents Toolkit replaces this with a localhost domain when you're developing locally. When you deploy the finished combined app to staging or production as described in [Move the application to Azure](#move-the-application-to-azure), Agents Toolkit replaces the placeholder with the staging/production URI. The following JSON is an example:
 
     ```json
     "validDomains": [
@@ -311,8 +311,8 @@ Unless specified otherwise, the file you change is `\appPackage\manifest.json`.
     |-- .gitignore
     |-- .localConfigs
     |-- package.json
-    |-- teamsapp.local.yml
-    |-- teamsapp.yml
+    |-- m365agents.local.yml
+    |-- m365agents.yml
     ```
 
 ### Edit the tooling configuration files
@@ -354,7 +354,7 @@ Unless specified otherwise, the file you change is `\appPackage\manifest.json`.
 1. Navigate to the **add-in** folder and run the command `npm install`. 
 1. In the **add-in** folder, open the `webpack.config.js` file. 
 1. Change the line `from: "appPackage/manifest*.json",` to `from: "../appPackage/build/manifest*.json",`.
-1. In the root of the project, open the `teamsapp.local.yml` file and find the `provision` section. Use the `#` character to comment out the lines that validate the manifest template. This is necessary because the Teams manifest validation system isn't yet compatible with the changes you made to the manifest template. When you're done, the lines should look like the following code:
+1. In the root of the project, open the `m365agents.local.yml` file and find the `provision` section. Use the `#` character to comment out the lines that validate the manifest template. This is necessary because the Teams manifest validation system isn't yet compatible with the changes you made to the manifest template. When you're done, the lines should look like the following code:
 
     ```
     # - uses: teamsApp/validateManifest
@@ -365,7 +365,7 @@ Unless specified otherwise, the file you change is `\appPackage\manifest.json`.
 
     Ensure that you comment out only the `teamsApp/validateManifest` section. Don't comment out the `teamsManifest/validateAppPackage` section.
 
-1. Repeat the preceding step for the `teamsapp.yml` file. The three lines are found in both the `provision` and the `publish` sections. Comment them out in both places.
+1. Repeat the preceding step for the `m365agents.yml` file. The three lines are found in both the `provision` and the `publish` sections. Comment them out in both places.
 1. Open the `.vscode\tasks.json` file in the **add-in** project and copy all the tasks in the `tasks` array. Add them to `tasks` array of the same file in the Teams project. Don't remove any of the tasks that are already there. Be sure all tasks are separated by commas. 
 1. In each of the task objects that you just copied, add the following `options` property to ensure that these tasks run in the **add-in** folder.
 
@@ -407,7 +407,7 @@ Unless specified otherwise, the file you change is `\appPackage\manifest.json`.
         "type": "teamsfx",
         "command": "provision",
         "args": {
-            "template": "${workspaceFolder}/teamsapp.local.yml",
+            "template": "${workspaceFolder}/m365agents.local.yml",
             "env": "local"
         }
     },
@@ -470,7 +470,7 @@ Unless specified otherwise, the file you change is `\appPackage\manifest.json`.
 
       1. Ensure the Outlook desktop is closed.
       1. Open Visual Studio Code.
-      1. Select Teams Toolkit from the **Activity Bar**.
+      1. Select **Microsoft 365 Agents Toolkit** from the **Activity Bar**.
       1. In the **ACCOUNTS** section, verify that you're signed into Microsoft 365.
       1. Select **View** > **Run** in Visual Studio Code. 
       1. In the **RUN AND DEBUG** dropdown menu, select **Launch Add-in Outlook Desktop (Edge Chromium)** and press F5. 
@@ -500,7 +500,7 @@ To see both the app and the add-in running at the same time, take the following 
 
 1. Ensure the Outlook desktop is closed.
 1. Open Visual Studio Code.
-1. Select Teams Toolkit from the **Activity Bar**.
+1. Select **Microsoft 365 Agents Toolkit** from the **Activity Bar**.
 1. In the **ACCOUNTS** section, verify that you're signed into Microsoft 365.
 1. Select **View** > **Run** in Visual Studio Code. 
 1. In the **RUN AND DEBUG** dropdown menu, select **Launch App and Add-in Outlook Desktop (Edge Chromium)** and press F5. 
@@ -526,7 +526,7 @@ To see both the app and the add-in running at the same time, take the following 
 
 ### Move the application to Azure
 
-1. Open the `teamsapp.yml` file in the root of the project and find the line `deploymentName: Create-resources-for-tab`. Change it to `deploymentName: Create-resources-for-tab-and-addin`.
+1. Open the `m365agents.yml` file in the root of the project and find the line `deploymentName: Create-resources-for-tab`. Change it to `deploymentName: Create-resources-for-tab-and-addin`.
 
 1. In the same file, add the following code to the end of the `provision:` section. 
     > [!NOTE]
@@ -643,10 +643,10 @@ To see both the app and the add-in running at the same time, take the following 
     output ADDIN_ENDPOINT string = addinModule.outputs.ADDIN_ENDPOINT
     ```
 
-1. In Visual Studio Code, open Teams Toolkit.
+1. In Visual Studio Code, open Agents Toolkit.
 1. In the **ACCOUNTS** section, be sure you're signed into your Azure account (in addition to being signed into your Microsoft 365 account). 
-   For more information about signing in, open [Exercise - Create Azure resources to host a Teams tab app](/training/modules/teams-toolkit-vsc-deploy-apps/03-create-azure-resources-exercise) and scroll to the **Sign in to Azure in Teams Toolkit** section.
-1. In the **LIFECYCLE** section of Teams Toolkit, select **Provision**. 
+   For more information about signing in, open [Exercise - Create Azure resources to host a Teams tab app](/training/modules/teams-toolkit-vsc-deploy-apps/03-create-azure-resources-exercise) and scroll to the **Sign in to Azure in Microsoft 365 Agents Toolkit** section.
+1. In the **LIFECYCLE** section of Agents Toolkit, select **Provision**. 
     It can take several minutes. You might be prompted to select one of your Azure resource groups.
 1. When provisioning completes, select **Deploy** to deploy your app code to Azure.
 

@@ -22,7 +22,7 @@ items:
     :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app.png" alt-text="Screenshot of the Blazor app displaying the tab, Bot, and Message Extension output after you've successfully completed the step-by-step guide.":::
 
     > [!NOTE]
-    > Teams Toolkit doesn't support the message extension capability.
+    > Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) doesn't support the message extension capability.
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -39,9 +39,9 @@ items:
 
     After you've installed the required tools, set up the development environment.
 
-    ### Install Microsoft Teams Toolkit
+    ### Install Microsoft Microsoft 365 Agents Toolkit
 
-    The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Microsoft Teams Store, and more.<br>
+    Agents Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Microsoft Teams Store, and more.<br>
     You can use the toolkit with Visual Studio, or CLI (command-line interface) called `teamsfx`. 
     
     # [Visual Studio](#tab/vs)
@@ -67,7 +67,7 @@ items:
 
     # [Command line](#tab/cli)
 
-    To install the TeamsFx CLI, use the `npm` package manager:
+    To install Microsoft 365 Agents Toolkit CLI (previously known as TeamsFx CLI), use the `npm` package manager:
 
     ``` bash
     npm install -g @microsoft/teamsfx-cli
@@ -83,7 +83,7 @@ items:
 
     Ensure you add the npm global cache to your PATH. This step is normally done as part of the Node.js installer.  
 
-    You can use the CLI with the `teamsfx` command. Verify that the command is working by running `teamsfx -h`.
+    You can use the CLI with the `atk' command. Verify that the command is working by running `atk -h`.
 
     > [!CAUTION]
     > Before you can run TeamsFx in PowerShell terminals, you must enable the remote signed execution policy for PowerShell.
@@ -181,7 +181,7 @@ items:
 
     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/blazor-app-solution-explorer_1.png" alt-text="Screenshot of Solution explorer displaying the components to build a basic personal app.":::
 
-    Teams Toolkit creates a scaffolding for your project based on the capabilities you selected. Among other files, Teams Toolkit maintains:
+    Agents Toolkit creates a scaffolding for your project based on the capabilities you selected. Among other files, Agents Toolkit maintains:
 
     | Folder name | Contents |
     | --- | --- |
@@ -199,13 +199,13 @@ items:
 - title: Build and run your first Teams tab app
   durationInMinutes: 1
   content: |
-    After you set up your project workspace with Teams Toolkit, build your tab project.
+    After you set up your project workspace with Agents Toolkit, build your tab project.
 
     To build and run your app:
 
-    1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Prepare Teams App Dependencies**.
+    1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Select Microsoft 365 Account**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png" alt-text="Screenshot of Visual Studio with Project, Teams Toolkit, and Prepare Teams App Dependencies options are highlighted in red." lightbox="../msteams-platform\assets\images\teams-toolkit-v2\blazor-vs-preview2\configure-msteamsapp_2.png":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png" alt-text="Screenshot of Visual Studio with Project, Agents Toolkit, and Select Microsoft 365 Account options are highlighted in red." lightbox="../msteams-platform\assets\images\teams-toolkit-v2\blazor-vs-preview2\configure-msteamsapp_2.png":::
 
     1. Sign in to your **Microsoft 365 account** and then select **Continue**.
 
@@ -256,13 +256,13 @@ items:
 
     You've learned to create, build, and run Teams app with tab capability. The following final steps are to deploy your app on Azure and Preview in Teams:
 
-    Let's deploy the first app with tab capability on Microsoft Azure using Teams Toolkit.
+    Let's deploy the first app with tab capability on Microsoft Azure using Agents Toolkit.
 
     #### **To provision your tab app in Azure**
     
     1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Provision in the Cloud**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-provision_1.png" alt-text="Screenshot of Visual Studio with Project, Teams Toolkit, and Provision in the Cloud options are highlighted in red." lightbox="../msteams-platform\assets\images\teams-toolkit-v2\blazor-vs-preview2\vs-build-provision_2.png":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-provision_1.png" alt-text="Screenshot of Visual Studio with Project, Agents Toolkit, and Provision in the Cloud options are highlighted in red." lightbox="../msteams-platform\assets\images\teams-toolkit-v2\blazor-vs-preview2\vs-build-provision_2.png":::
 
     1. Enter the subscription and resource group details in the **Provision** dialog:
 
@@ -277,17 +277,17 @@ items:
 
     1. Select **Provision**.
     
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/provision-warning.png" alt-text="Screenshot of Teams Toolkit with Provision highlighted in red.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/provision-warning.png" alt-text="Screenshot of Agents Toolkit with Provision highlighted in red.":::
 
         It takes a few minutes for your resource group to provision in the cloud. 
         
     1. Select **OK**. 
 
-         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/provision-complete.png" alt-text="Screenshot of Teams Toolkit with OK option highlighted in red.":::
+         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/provision-complete.png" alt-text="Screenshot of Agents Toolkit with OK option highlighted in red.":::
 
     1. Select **View Provisioned Resources** to view on Azure portal. 
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/view-resource.png" alt-text="Screenshot of Teams Toolkit with View Provisioned Resources highlighted in red.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/view-resource.png" alt-text="Screenshot of Agents Toolkit with View Provisioned Resources highlighted in red.":::
 
     1. Sign in to your Azure portal. 
 
@@ -304,11 +304,11 @@ items:
 
     1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Deploy to the Cloud...**.
 
-         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-deploytocloud_1.png" alt-text="Screenshot of Visual Studio with Project, Teams Toolkit, and Deploy to the Cloud options highlighted in red." lightbox="../msteams-platform\assets\images\teams-toolkit-v2\blazor-vs-preview2\vs-build-deploytocloud_2.png":::
+         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-deploytocloud_1.png" alt-text="Screenshot of Visual Studio with Project, Agents Toolkit, and Deploy to the Cloud options highlighted in red." lightbox="../msteams-platform\assets\images\teams-toolkit-v2\blazor-vs-preview2\vs-build-deploytocloud_2.png":::
 
     1. Select **OK**. 
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/deploy-success.png" alt-text="Screenshot shows Teams Toolkit with OK option.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/deploy-success.png" alt-text="Screenshot shows Agents Toolkit with OK option.":::
 
         Your tab app is successfully deployed to the cloud!
 
@@ -319,7 +319,7 @@ items:
 
     1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Preview in Teams**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-preview_1.png" alt-text="Screenshot shows Visual Studio with Project, Teams Toolkit, and Preview in Teams options." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-preview_1.png":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-preview_1.png" alt-text="Screenshot shows Visual Studio with Project, Agents Toolkit, and Preview in Teams options." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-preview_1.png":::
 
     1. Select **Add**.
 
@@ -385,7 +385,7 @@ items:
 
         Your Teams bot app is created in a few seconds.
         
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-bot-app-team_1.png" alt-text="Screenshot of Visual Studio displaying the information of getting started with Teams Toolkit." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-bot-app-team_1.png":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-bot-app-team_1.png" alt-text="Screenshot of Visual Studio displaying the information of getting started with Agents Toolkit." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-bot-app-team_1.png":::
         
 
     <details>
@@ -400,7 +400,7 @@ items:
 
     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/blazor-appbot-solution-explorer_1.png" alt-text="Screenshot of Solution Explorer with BlazorApp highlighted.":::
 
-    Teams Toolkit creates a scaffolding for your project based on the capabilities you selected. Among other files, Teams Toolkit maintains:
+    Agents Toolkit creates a scaffolding for your project based on the capabilities you selected. Among other files, Agents Toolkit maintains:
 
     | Folder name | Contents |
     | --- | --- |
@@ -438,9 +438,9 @@ items:
 
       ---     
 
-    1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Prepare Teams App Dependencies**.
+    1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Select Microsoft 365 Account**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png" alt-text="Screenshot of Visual Studio with project, Teams Toolkit, and Prepare Teams App Dependencies options highlighted in red." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_2.png":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png" alt-text="Screenshot of Visual Studio with project, Agents Toolkit, and Select Microsoft 365 Account options highlighted in red." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_2.png":::
 
     1. Sign in to your **Microsoft 365 account** and then select **Continue**.
 
@@ -485,7 +485,7 @@ items:
     
     1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Provision in the Cloud**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/azure-app_1.png" alt-text="Screenshot of Visual Studio with project, Teams Toolkit, and Provision in the Cloud options highlighted in red." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/azure-app_2.png":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/azure-app_1.png" alt-text="Screenshot of Visual Studio with project, Agents Toolkit, and Provision in the Cloud options highlighted in red." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/azure-app_2.png":::
 
     1. Enter the subscription and resource group details in the **Provision** dialog:
 
@@ -500,17 +500,17 @@ items:
 
     1. Select **Provision**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/permission-azure.png" alt-text="Screenshot of Teams Toolkit with Provision highlighted in red.":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/permission-azure.png" alt-text="Screenshot of Agents Toolkit with Provision highlighted in red.":::
 
        It takes a few minutes for your resource group to provision in the cloud.
         
     1. After the provision is complete, select **OK**. 
   
-          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/apppackage1-azure.png" alt-text="Screenshot of Teams Toolkit with OK option highlighted in red.":::
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/apppackage1-azure.png" alt-text="Screenshot of Agents Toolkit with OK option highlighted in red.":::
 
     1. Select **View Provisioned Resources** to view on Azure portal. 
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/view-resource-azure.png" alt-text="Screenshot of Teams Toolkit with View Provisioned Resources highlighted in red.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/view-resource-azure.png" alt-text="Screenshot of Agents Toolkit with View Provisioned Resources highlighted in red.":::
 
     1. Sign in to your Azure portal. 
 
@@ -527,11 +527,11 @@ items:
 
      1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Deploy to the Cloud**.
 
-          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/deploy-to-cloud-azure_1.png" alt-text="Screenshot shows Visual Studio with Project, Teams Toolkit, and Deploy to the Cloud options highlighted in red." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/deploy-to-cloud-azure_2.png":::
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/deploy-to-cloud-azure_1.png" alt-text="Screenshot shows Visual Studio with Project, Agents Toolkit, and Deploy to the Cloud options highlighted in red." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/deploy-to-cloud-azure_2.png":::
 
      1. Select **OK**. 
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/deploy-success.png" alt-text="Screenshot shows Teams Toolkit with OK option highlighted in red.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/deploy-success.png" alt-text="Screenshot shows Agents Toolkit with OK option highlighted in red.":::
 
         Your bot app is successfully deployed to the cloud!
 
@@ -542,7 +542,7 @@ items:
 
      1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Preview in Teams**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/preview-azure_1.png" alt-text="Screenshot shows Visual Studio with Project, Teams Toolkit, and Preview in Teams options." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/preview-azure_2.png":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/preview-azure_1.png" alt-text="Screenshot shows Visual Studio with Project, Agents Toolkit, and Preview in Teams options." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/preview-azure_2.png":::
 
      1. Select **Add**.
 
