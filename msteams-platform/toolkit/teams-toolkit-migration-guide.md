@@ -5,7 +5,7 @@ description: This guide provides the steps to migrate from scaffolded template t
 ms.author: v-preethah
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 06/05/2024
+ms.date: 05/19/2025
 ---
 
 # Migrate Teams Toolkit project from 17.9 to 17.10+ version
