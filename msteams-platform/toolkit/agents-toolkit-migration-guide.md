@@ -1,20 +1,20 @@
 ---
-title: Migrate Teams Toolkit project from 17.9 to 17.10+ version
+title: Migrate toolkit project from 17.9 to 17.10+ version
 author: v-preethah
-description: This guide provides the steps to migrate from scaffolded template to the new project structure in Microsoft Teams using Teams Toolkit.
+description: This guide provides the steps to migrate from scaffolded template to the new project structure in Microsoft Teams using Microsoft 365 Agents Toolkit.
 ms.author: v-preethah
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 06/05/2024
 ---
 
-# Migrate Teams Toolkit project from 17.9 to 17.10+ version
+# Migrate Microsoft 365 Agents Toolkit project from 17.9 to 17.10+ version
 
 This guide details the process of migrating from the traditional, scaffolded template to the new project structure in Microsoft Teams. The transition is essential to use the latest features and improve project maintainability. The new project structure introduces a more streamlined and efficient way of managing your Teams applications through `.ttkproj` file to represent the new project type.
 
-In the new Teams Toolkit version 17.10, a Teams solution contains two projects, Teams project and your source code. 
+In the new Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) version 17.10, a Teams solution contains two projects, Teams project and your source code. 
 
-- **Teams project**: Teams project contains the Teams app package and Teams Toolkit configuration files. 
+- **Teams project**: Teams project contains the Teams app package and Agents Toolkit configuration files. 
 - **Source code**: Your source code project is the business logic for your tab, bot, or others. 
 
 The separation of Teams project and source code allows the integration of existing web or bot solutions into Teams. This approach simplifies the process of integrating any existing project or solution with Teams.
@@ -23,7 +23,7 @@ The separation of Teams project and source code allows the integration of existi
 
 Before starting the migration process, ensure that you have the following:
 
-* A Teams project that is created using Teams Toolkit for Visual Studio 17.9 or earlier version.
+* A Teams project that is created using Agents Toolkit for Visual Studio 17.9 or earlier version.
 * Visual Studio version 17.10 Preview 3 or later.
 * Multiple startups feature. To enable multiple startups, go to **Tools** > **Options** > **Preview Feature** > **Enable Multi-Project Launch Profiles**.
 
@@ -47,7 +47,7 @@ Perform the following steps to migrate to the new project structure:
 1. Remove the following configuration folders and files from your project folder and add them in the **TeamsApp** folder.
 
     * Folders: `appPackage`, `env`, `infra`
-    * Files: `teamsapp.yml`, `teamsapp.local.yml`, `aad.manifest.json`
+    * Files: `m365agents.yml`, `m365agents.local.yml`, `aad.manifest.json`
 
     > [!NOTE]
     > Once the folders and files are moved, they are automatically included in your **TeamsApp.ttkproj** file and you don't need to add them to the **TeamsApp.ttkproj** manually.
@@ -56,7 +56,7 @@ Perform the following steps to migrate to the new project structure:
 
     * Create a `launchSettings.json` file in the **TeamsApp** folder. Add the contents of the file `launchSettings.json` of your project folder to the newly created `launchSettings.json` in the **TeamsApp** folder.
     * In the newly created `launchSettings.json` of the **TeamsApp** folder, delete the `dotnetRunMessages`, `launchBrowser`, `applicationUrl`, `environmentVariables`, and `hotReloadProfile` fields.
-    * In the `launchSettings.json` of your project folder, delete the `launchBrowser`, `launchTestTool`, and `launchUrl` fields and duplicated profiles.
+    * In the `launchSettings.json` of your project folder, delete the `launchBrowser`, `launchPlayground`, and `launchUrl` fields and duplicated profiles.
 
     > [!NOTE]
     >
@@ -105,12 +105,12 @@ Perform the following steps to migrate to the new project structure:
 
     ---
 
-1. Modify the `teamsapp.local.yml` and `teamsapp.yml` files in the **TeamsApp** folder.
+1. Modify the `m365agents.local.yml` and `m365agents.yml` files in the **TeamsApp** folder.
 1. Every action that changes your project must be updated because the path is updated. Focus on the following actions:
 
     * `uses: file/createOrUpdateJsonFile`: This action might change the `appSettings.json` file of your project to configure runtime environments. Update the `target` field to the correct path.
         > [!IMPORTANT]
-        > You don't need to modify `launchSettings.json` using `file/createOrUpdateJsonFile`. If present in `teamsapp.local.yml`, remove it.
+        > You don't need to modify `launchSettings.json` using `file/createOrUpdateJsonFile`. If present in `m365agents.local.yml`, remove it.
     * `uses: cli/runDotnetCommand`: This action executes a `.NET` command within your project to package it. Adjust the `workingDirectory` field to the new path and update the command string with the correct `.csproj` path.
     * `uses: azureAppService/zipDeploy`: This action deploys the packaged file remotely. Update the `workingDirectory` field to the correct path.
 
@@ -160,7 +160,7 @@ Perform the following steps to migrate to the new project structure:
 You've successfully migrated your project and your folder structure is updated as follows:
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Migration+process&&author=%40v-preethah&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fteams-toolkit-migration-guide%3Ftabs%3Dchannel-meeting%252Cnew%23migration-process&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fagents-toolkit-migration-guide.md&documentVersionIndependentId=0e6d94db-f134-055f-aec4-3f992c8faa18&platformId=a10ef4e6-085d-ae74-f8e8-654e7731ba51&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Migration+process&&author=%40v-preethah&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fagents-toolkit-migration-guide%3Ftabs%3Dchannel-meeting%252Cnew%23migration-process&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fagents-toolkit-migration-guide.md&documentVersionIndependentId=0e6d94db-f134-055f-aec4-3f992c8faa18&platformId=a10ef4e6-085d-ae74-f8e8-654e7731ba51&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ##### Folder Structure
 

@@ -118,7 +118,7 @@ You can have multiple channels or group tabs, and up to 16 static tabs per app.
 
 ## Build a tab app
 
-You can build a personal tab app or a configurable tab app using Teams Toolkit or Codespaces.
+You can build a personal tab app or a configurable tab app using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) or Codespaces.
 
 For more information, see [build your basic tab app](../get-started/build-basic-tab-app.md).
 
@@ -159,5 +159,5 @@ Now let's build your tab. But first select your choice of tab to build:
 * [Extend tab app with Microsoft Graph permissions and scopes](how-to/authentication/tab-sso-graph-api.md)
 * [Microsoft Teams updates](../resources/teams-updates.md)
 * [Grant tab device permission in Teams](~/sbs-tab-device-permissions.yml)
-* [Teams Toolkit for Visual Studio Code](../toolkit/agents-toolkit-fundamentals.md)
-* [Teams Toolkit for Visual Studio](../toolkit/visual-studio-overview.md)
+* [Agents Toolkit for Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md)
+* [Agents Toolkit for Visual Studio](../toolkit/visual-studio-overview.md)

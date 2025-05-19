@@ -22,7 +22,7 @@ Ensure that the following tools are installed on the device where you’ll creat
 | &nbsp; | Tools | Purpose | For environment type |
 | --- | --- | --- | --- |
 | **Required** | &nbsp; | &nbsp; | &nbsp; |
-| &nbsp; | Teams Toolkit| A Microsoft Visual Studio extension that creates a project scaffolding for your app. Use the latest version. | C# and Blazor |
+| &nbsp; | Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) | A Microsoft Visual Studio extension that creates a project scaffolding for your app. Use the latest version. | C# and Blazor |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Collaborate with everyone you work with through apps for chat, meetings, and call - all in one place.| C# and Blazor |
 | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. | C# and Blazor |
 | **Optional** | &nbsp; | &nbsp; | &nbsp; |
@@ -100,13 +100,13 @@ To create a free Microsoft 365 developer account:
 
 ### Azure account
 
-An Azure account allows you to host a Teams app or the back-end resources for your Teams app to Azure. You can do this using Teams Toolkit in Visual Studio. You must have an Azure subscription in the following scenarios:
+An Azure account allows you to host a Teams app or the back-end resources for your Teams app to Azure. You can do this using Agents Toolkit in Visual Studio. You must have an Azure subscription in the following scenarios:
 
 * If you already have an existing app on a different cloud provider other than Azure, and you want to integrate the app on Teams platform.
 * If you want to host the back-end resources for your app using another cloud provider, or on your own servers if they're available in the public domain.
 
 > [!NOTE]
-> You can use Azure account to provision Azure resource to host your Teams app. You can [create a free account](https://azure.microsoft.com/free/) in case you don't have any. If you don't use Teams Toolkit to provision and deploy, Azure account isn't required.
+> You can use Azure account to provision Azure resource to host your Teams app. You can [create a free account](https://azure.microsoft.com/free/) in case you don't have any. If you don't use Agents Toolkit to provision and deploy, Azure account isn't required.
 
 ## Verify custom app upload permission
 
@@ -129,7 +129,7 @@ You can verify if the custom app upload permission is enabled using Teams client
 
 ### Enable custom app upload using admin center
 
-If custom app upload option isn’t visible in Teams Toolkit extension in Visual Studio Code or if the option to upload a custom app isn’t available in Teams, it indicates that you don't have the required permission for custom app upload.
+If custom app upload option isn’t visible in Agents Toolkit extension in Visual Studio Code or if the option to upload a custom app isn’t available in Teams, it indicates that you don't have the required permission for custom app upload.
 
 You must enable custom app upload for your app in Teams:
 
@@ -171,7 +171,7 @@ If you have admin rights, you can enable custom app upload:
 
 ## See also
 
-* [Teams Toolkit Visual Studio Overview](agents-toolkit-fundamentals-vs.md)
+* [Agents Toolkit for Visual Studio](teams-toolkit-fundamentals-vs.md)
 * [Manage custom app policies and settings in Teams](/microsoftteams/teams-custom-app-policies-and-settings)
 * [Manage app setup policies in Teams](/microsoftteams/teams-app-setup-policies)
 * [Provision cloud resources in Visual Studio](provision-vs.md)

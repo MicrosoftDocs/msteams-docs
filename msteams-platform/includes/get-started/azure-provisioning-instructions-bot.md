@@ -12,11 +12,11 @@ The <b>Provision</b> step creates resources in Azure and Microsoft 365 for your 
 
 # [Visual Studio Code](#tab/vscode)
 
-Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
+Select the Microsoft 365 Agents Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
 1. Select **Provision**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot shows the selection of provision in the cloud under Teams toolkit.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot shows the selection of provision in the cloud under Agents toolkit.":::
 
 1. Select a subscription to use for the Azure resources.
 
@@ -52,20 +52,20 @@ Now, you can use the same process to deploy your Bot and Message Extension apps 
 
 In your terminal window:
 
-1. Run `teamsfx provision`.
+1. Run `atk provision`.
 
    ``` bash
-   teamsfx provision
+   atk provision
    ```
 
    When prompted, select an Azure subscription to use Azure resources.
 
    Your app is hosted using Azure resources.
 
-1. Run `teamsfx deploy`.
+1. Run `atk deploy`.
 
    ``` bash
-   teamsfx deploy
+   atk deploy
    ```
 
 ---
