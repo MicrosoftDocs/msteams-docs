@@ -46,7 +46,7 @@ You can add cloud resources in the following ways:
 
       :::image type="content" source="~/assets/images/toolkit-v2/manual/cloud/Teams-add-features_1.png" alt-text="Screenshot shows the Command Palette option under View.":::
 
-   1. Enter **How-to Guides** and select **Teams:View How-to Guides** from the list.
+   1. Enter **How-to Guides** and select **Microsoft 365 Agents: View How-to Guides** from the list.
 
         :::image type="content" source="../assets/images/toolkit-v2/manual/how-to-guides.png" alt-text="Screenshot shows the selection of View how-to guides from the list.":::
 

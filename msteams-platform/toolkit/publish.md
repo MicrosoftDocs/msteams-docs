@@ -75,9 +75,9 @@ The following steps help you to publish the app from Agents Toolkit:
 
 1. You can publish your Teams app in one of the following ways:
      * Select **Publish** under **LIFECYCLE**.
-     * Select **View** > **Command Palette...** > **Teams: Publish**.
+     * Select **View** > **Command Palette...** > **Teams: Publish to Organization**.
 
-       :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/select-publish_1.png" alt-text="Screenshot shows the Publish option highlighted.":::
+       :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/select-publish_1.png" alt-text="Screenshot shows the Publish option highlighted." lightbox="../assets/images/toolkit-v2/toolkit-fundamentals/select-publish_1.png":::
 
 1. Select your environment, Agents Toolkit runs the `publish` lifecycle defined in `m365agents.yml`.
 

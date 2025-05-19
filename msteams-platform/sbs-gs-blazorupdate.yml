@@ -273,7 +273,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/toolkit-v2/blazor-vs-preview2/select-subscription.png" alt-text="Screenshot of Provision with New and Provision highlighted in red.":::
 
-        A **Agents Toolkit** warning dialog appears. 
+        A **Microsoft 365 Agents Toolkit** warning dialog appears. 
 
     1. Select **Provision**.
     
@@ -496,7 +496,7 @@ items:
 
            :::image type="content" source="../msteams-platform/assets/images/toolkit-v2/blazor-vs-preview2/provision-azure_1.png" alt-text="Screenshot of Provision with provision option highlighted in red. ":::
 
-           A **Agents Toolkit** warning dialog appears. 
+           A **Microsoft 365 Agents Toolkit** warning dialog appears. 
 
     1. Select **Provision**.
 
