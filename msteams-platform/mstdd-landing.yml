@@ -44,6 +44,8 @@ landingContent:
       links:
       - text: Custom engine agents overview
         url: /microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+      - text: Teams AI library v2 (preview)
+        url: /microsoftteams/platform/teams-ai-library/welcome/overview
       - text: Teams AI library v1
         url: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md
       - text: Build custom engine agents using Agents Toolkit
