@@ -1,46 +1,46 @@
 ---
-title: Debug bot using Teams App Test Tool
+title: Debug bot using Agents Playground
 author: surbhigupta 
-description: Learn about Teams App Test Tool in Microsoft 365 Agents Toolkit and debug existing app, advantages, activity triggers, and customize Teams context.
+description: Learn about Microsoft 365 Agents Playground in Teams Toolkit and debug existing app, advantages, activity triggers, and customize Teams context.
 ms.author: surbhigupta 
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 11/16/2023
 ---
 
-# Teams App Test Tool
+# Microsoft 365 Agents Playground 
 
 > [!NOTE]
 >
-> Teams App Test Tool is available in the latest prerelease version of the Microsoft 365 Agents Toolkit (previously known as Teams Toolkit). Ensure that you install the [latest prerelease version](install-Teams-Toolkit.md#install-a-prerelease-version) of Agents Toolkit.
+> Microsoft 365 Agents Playground (previously known as Teams App Test Tool) is available in the latest prerelease version of Microsoft 365 Agents Toolkit (previously known as Teams Toolkit). Ensure that you install the [latest prerelease version](install-Teams-Toolkit.md#install-a-prerelease-version) of Agents Toolkit.
 
-Teams App Test Tool (Test Tool) makes debugging bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Microsoft Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Test Tool.
+Agents Playground makes debugging bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Microsoft Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Agents Playground.
 
-The following image shows a sample app displaying an Adaptive Card with a list of commands in Test Tool. It also provides a description of the commands so that you can test your app without manually searching your code:
+The following image shows a sample app displaying an Adaptive Card with a list of commands in Agents Playground. It also provides a description of the commands so that you can test your app without manually searching your code:
 
-   :::image type="content" source="../assets/images/toolkit-v2/debug/sample-app-output.png" alt-text="Screenshot shows Teams App Test Tool Adaptive Card.":::
+   :::image type="content" source="../assets/images/toolkit-v2/debug/sample-app-output.png" alt-text="Screenshot shows Agents Playground Adaptive Card.":::
 
-The following are the advantages of Test Tool:
+The following are the advantages of Agents Playground:
 
-* **Sandbox environment**: The sandbox environment of Test Tool emulates the behavior, look, and user experience of Teams.
+* **Sandbox environment**: The sandbox environment of Agents Playground emulates the behavior, look, and user experience of Teams.
 
-* **Tunneling**: An external tunnel service isn't necessary as Test Tool runs on a local server that your bot can communicate with.
+* **Tunneling**: An external tunnel service isn't necessary as Agents Playground runs on a local server that your bot can communicate with.
 
 * **Reduce account dependencies**: Microsoft 365 Developer tenant and the app uploading permissions aren't necessary to debug the bot.
 
 * **Rapid inner-loop iterations**: Optimizes the process of making changes to the app design and bot logic without having to redeploy the bot to the cloud.
 
-* **Mock data and activities**: Test Tool makes it easy to test complex scenarios such as, sending a welcome message when a new member joins the channel, using mock data and activity triggers.
+* **Mock data and activities**: Agents Playground makes it easy to test complex scenarios such as, sending a welcome message when a new member joins the channel, using mock data and activity triggers.
 
-* **Reliable**: Test Tool is reliable as the bot's Adaptive Card utilizes the same rendering technology as in Teams.
+* **Reliable**: Agents Playground is reliable as the bot's Adaptive Card utilizes the same rendering technology as in Teams.
 
-* **Integration with existing Teams bot applications**: Test Tool integrates effortlessly with existing Teams bot applications built with Bot Framework SDK.
+* **Integration with existing Teams bot applications**:  Agents Playground integrates effortlessly with existing Teams bot applications built with Bot Framework SDK.
 
-* **Support for different scopes**: Test Tool supports testing in personal, team, and group chat scopes.
+* **Support for different scopes**: Agents Playground supports testing in personal, team, and group chat scopes.
 
 ## Prerequisites
 
-Ensure you install the following tools for building and deploying your bots in Test Tool:
+Ensure you install the following tools for building and deploying your bots in Agents Playground:
 
 | &nbsp; | Install | For using... |
 | --- | --- | --- |
@@ -48,18 +48,18 @@ Ensure you install the following tools for building and deploying your bots in T
 | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type). |
 | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
 
-## Understand Test Tool
+## Understand Agents Playground
 
-Test Tool is an npm package that has a CLI command called `teamsapptester`. When you run `teamsapptester start`, it opens a web app on your local machine that emulates the Teams web client and Bot Framework service. This web app doesn't need any cloud resources as it uses mock data to simulate the contextual information of Teams.
+Agents Playground is an npm package that has a CLI command called `teamsapptester`. When you run `teamsapptester start`, it opens a web app on your local machine that emulates the Teams web client and Bot Framework service. This web app doesn't need any cloud resources as it uses mock data to simulate the contextual information of Teams.
 
-To use a Teams bot on Test Tool, you need to provide:
+To use a Teams bot on Agents Playground, you need to provide:
 
-* Message endpoint: A bot message endpoint is the URL that links Test Tool and your bot. You can update the endpoint with the `BOT_ENDPOINT` environment variable or use the default value of `http://localhost:3978/api/messages`.
-* Configuration file (Optional): A configuration file informs Test Tool about your customized contextual information in Teams. The file is named **.m365agentsplayground.yml** in the project's root folder. If Teams can't find this file, it uses the default configuration. For more information, see [customize Teams context](#customize-teams-context).
+* Message endpoint: A bot message endpoint is the URL that links Agents Playground and your bot. You can update the endpoint with the `BOT_ENDPOINT` environment variable or use the default value of `http://localhost:3978/api/messages`.
+* Configuration file (Optional): A configuration file informs Agents Playground about your customized contextual information in Teams. The file is named **.m365agentsplayground.yml** in the project's root folder. If Teams can't find this file, it uses the default configuration. For more information, see [customize Teams context](#customize-teams-context).
 
-## Test Tool experience in Agents Toolkit
+## Agents Playground experience in Agents Toolkit
 
-Test Tool offers a faster debug experience for bot applications when compared to the Teams client.
+Agents Playground offers a faster debug experience for bot applications when compared to the Teams client.
 
 # [Visual Studio Code](#tab/vscode)
 
@@ -67,7 +67,7 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
 1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="../assets/images/toolkit-v2/toolkit-sidebar-icon.PNG" border="false"::: icon in the Visual Studio Code **Activity Bar**.
 
-1. Select **Create a New App**.
+1. Select **Create a New Agent/App** > **Teams App**.
 
     :::image type="content" source="../assets/images/toolkit-v2/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Agents Toolkit sidebar.":::
 
@@ -106,24 +106,24 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
     :::image type="content" source="../assets/images/toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder.":::
 
-1. From the left pane, select **Run and Debug** (`Ctrl+Shift+D`) and select **Debug in Test Tool (Preview)** in dropdown list.
+1. From the left pane, select **Run and Debug** (`Ctrl+Shift+D`) and select **Debug in Microsoft 365 Agents Playground (Preview)** in dropdown list.
 
    :::image type="content" source="../assets/images/toolkit-v2/debug/select-debug-in-test-tool.png" alt-text="Screenshot shows the option to select debug in test tool.":::
 
-1. Test Tool opens the bot in a webpage.
+1. Agents Playground opens the bot in a webpage.
 
-   :::image type="content" source="../assets/images/toolkit-v2/debug/test-tool.png" lightbox="../assets/images/toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
+   :::image type="content" source="../assets/images/toolkit-v2/debug/test-tool.png" lightbox="../assets/images/toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Agents Playground.":::
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Test%20Tool%20experience%20in%20Agents%20Toolkit%20in%20Visual%20Studio%20Code&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdebug-your-teams-app-test-tool%3Ftabs%3Dvscode%252Cclijs%23test-tool-experience-in-teams-toolkit&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdebug-your-Teams-app-test-tool.md&documentVersionIndependentId=6fa9130b-1aa5-b068-4211-a5a4cc32effa&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 # [Command line](#tab/cli)
 
-1. You can use command line for JavaScript and TypeScript or C# to debug your app in Test Tool. To get started select the following language:
+1. You can use command line for JavaScript and TypeScript or C# to debug your app in Agents Playground. To get started select the following language:
 
    # [JavaScript/TypeScript](#tab/clijs)
 
-   1. Run the following command to install Teams app Test Tool CLI from `npm`:
+   1. Run the following command to install Agents Playground CLI from `npm`:
 
       ```cmd
       npm install -g @microsoft/teams-app-test-tool
@@ -155,7 +155,7 @@ Test Tool offers a faster debug experience for bot applications when compared to
       npm run dev:atk:playground
       ```
 
-   1. Run the following command in a separate terminal to launch Teams App Test Tool:
+   1. Run the following command in a separate terminal to launch Agents Playground:
 
       ```cmd
       npm run dev:atk:launch-playground
@@ -165,7 +165,7 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
    1. [Create a new Teams app](toolkit-v4/create-new-project-vs.md).
 
-   1. Download Teams App Test Tool CLI from the [GitHub](https://github.com/OfficeDev/TeamsFx/releases?q=teams-app-test-tool&expanded=true) release.
+   1. Download Agents Playground CLI from the [GitHub](https://github.com/OfficeDev/TeamsFx/releases?q=teams-app-test-tool&expanded=true) release.
 
    1. Unzip the downloaded package to a folder. You'll find an executable binary file `teamsapptester.exe`.
 
@@ -176,7 +176,7 @@ Test Tool offers a faster debug experience for bot applications when compared to
    1. Run the following command to launch profile:
 
       ```cmd
-      dotnet run --launch-profile "Teams App Test Tool (browser)"
+      dotnet run --launch-profile "Agents Playground (browser)"
       ```
 
    1. Run the following command in a separate terminal to define your bot message endpoint:
@@ -193,7 +193,7 @@ Test Tool offers a faster debug experience for bot applications when compared to
             $env:BOT_ENDPOINT = "http://127.0.0.1:5130/api/messages"
          ```
 
-   1. Run the following command to initiate Teams App Test Tool:
+   1. Run the following command to initiate Agents Playground:
 
       1. For Command Prompt:
 
@@ -207,11 +207,11 @@ Test Tool offers a faster debug experience for bot applications when compared to
             teamsapptester.exe start
          ```
 
-      If the Test Tool for C# doesn't initiate because of a port conflict, alter the Test Tool's port number in the `TEAMSAPPTESTER_PORT` environment variable where you run `teamsapptester.exe start`.
+      If the Agents Playground for C# doesn't initiate because of a port conflict, alter the Agents Playground's port number in the `TEAMSAPPTESTER_PORT` environment variable where you run `teamsapptester.exe start`.
      ---
-   1. Test Tool opens the bot in a webpage.
+   1. Agents Playground opens the bot in a webpage.
 
-    :::image type="content" source="../assets/images/toolkit-v2/debug/test-tool.png" lightbox="../assets/images/toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool."
+    :::image type="content" source="../assets/images/toolkit-v2/debug/test-tool.png" lightbox="../assets/images/toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Agents Playground."
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Test%20Tool%20experience%20in%20Agents%20Toolkit%20in%20Command%20line&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdebug-your-teams-app-test-tool%3Ftabs%3Dcli%252Cclijs%23test-tool-experience-in-teams-toolkit&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdebug-your-Teams-app-test-tool.md&documentVersionIndependentId=6fa9130b-1aa5-b068-4211-a5a4cc32effa&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
@@ -220,14 +220,14 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
 ## Activity triggers
 
-You can mock an activity in Test Tool using activity triggers. There are two types of activity triggers:
+You can mock an activity in Agents Playground using activity triggers. There are two types of activity triggers:
 
 1. [Predefined activity triggers](#predefined-activity-triggers)
 1. [Custom activity triggers](#custom-activity-triggers)
 
 ### Predefined activity triggers
 
-Test Tool provides predefined activity triggers to test the functionalities of your bot.
+Agents Playground provides predefined activity triggers to test the functionalities of your bot.
 
 | Category | Activity | Handler |
 | --- | --- | --- |
@@ -239,11 +239,11 @@ Test Tool provides predefined activity triggers to test the functionalities of y
 > [!NOTE]
 > All types of activities aren't available in all scopes. For example, you can't add or remove a channel in a personal chat or a group chat.
 
-Predefined activity triggers are available in the **Mock an Activity** menu in Test Tool.
+Predefined activity triggers are available in the **Mock an Activity** menu in Agents Playground.
 
 To mock an **Add user** activity, follow these steps:
 
-1. In Test Tool, go to **Mock an Activity** and select **Add user**.
+1. In Agents Playground, go to **Mock an Activity** and select **Add user**.
 
    :::image type="content" source="../assets/images/toolkit-v2/debug/add-user.png" alt-text="Screenshot shows the add user option under mock an activity.":::
 
@@ -259,7 +259,7 @@ To mock an **Add user** activity, follow these steps:
 
 ### Custom activity triggers
 
-You can use **Custom activity** to customize activity triggers such as, `reactionsAdded`, to fit the requirements of your bot app. Test Tool automatically populates the required properties of the activity. You can also modify the activity type and add more properties.
+You can use **Custom activity** to customize activity triggers such as, `reactionsAdded`, to fit the requirements of your bot app. Agents Playground automatically populates the required properties of the activity. You can also modify the activity type and add more properties.
 
 1. Select **Mock an Activity** > **Custom activity**.
 
@@ -293,7 +293,7 @@ The configuration file in the project's root folder allows you to customize Team
 
 ### Default configuration
 
-<details><summary>Test Tool contains a built-in configuration file in the project's root folder.</summary>
+<details><summary>Agents Playground contains a built-in configuration file in the project's root folder.</summary>
 
 ```yaml
 # yaml-language-server: $schema=https://aka.ms/teams-app-test-tool-config/0.1.0/config.schema.json
@@ -371,7 +371,7 @@ team:
 
 If your bot code uses Bot Framework APIs, you can modify the configuration file to alter the API response. Let us consider an Azure DevOps notification bot installed in a team that fetches inactive bugs from Azure DevOps. It identifies the owners of the inactive bug, fetches their email addresses, and sends notifications to their personal chats on a daily basis.
 
-To comprehensively test this bot in Test Tool, it's crucial to update the configuration file to use the correct email addresses of the owners of the inactive bugs.
+To comprehensively test this bot in Agents Playground, it's crucial to update the configuration file to use the correct email addresses of the owners of the inactive bugs.
 
 1. Go to the `.m365agentsplayground.yml` file in the project's root folder.
 
@@ -388,7 +388,7 @@ To comprehensively test this bot in Test Tool, it's crucial to update the config
           email: some-real-user@real-domain.onmicrosoft.com
     ```
 
-1. Save the file and select **F5** to debug in Test Tool.
+1. Save the file and select **F5** to debug in Agents Playground.
 
 > [!NOTE]
 > When you edit the configuration file in Visual Studio Code, Intellisense automatically updates the property names and warns you if you enter invalid values.
@@ -397,29 +397,29 @@ It's vital to recognize that updating the configuration file has three major imp
 
 * It influences the responses obtained from Bot Framework Connector APIs, for example, `TeamsInfo.getPagedMembers()`.
 * It shapes the details in the activity payload, for example, `activity.recipient`.
-* It impacts the user interface in Test Tool, for example, group chat names.
+* It impacts the user interface in Agents Playground, for example, group chat names.
 
 ## Limitations
 
-* Bot features enabled through the Teams app manifest aren't available as Test Tool doesn't process it.
+* Bot features enabled through the Teams app manifest aren't available as Agents Playground doesn't process it.
 
-* Test Tool doesn't support all types of cards except Adaptive Cards.
+* Agents Playground doesn't support all types of cards except Adaptive Cards.
 
-* Test Tool doesn't support the following Adaptive Card features:
+* Agents Playground doesn't support the following Adaptive Card features:
 
   * [Typeahead search](../task-modules-and-cards/cards/dynamic-search.md)
   * [User mention](../task-modules-and-cards/cards/cards-format.md#microsoft-azure-active-directory-azure-ad-object-id-and-upn-in-user-mention)
   * [Stageview](../task-modules-and-cards/cards/cards-format.md#stageview-for-images-in-adaptive-cards)
   * [Full width](../task-modules-and-cards/cards/cards-format.md#full-width-adaptive-card)
 
-* Test Tool doesn't support the following experiences:
+* Agents Playground doesn't support the following experiences:
 
   * Mobile
   * Meeting
 
-* Test Tool can emulate the following experiences:
+* Agents Playground can emulate the following experiences:
 
-   | Features | Debug in Test Tool | [Debug your Teams app locally](debug-local.md) |
+   | Features | Debug in Agents Playground | [Debug your Teams app locally](debug-local.md) |
    | --- | --- | --- |
    | Basic sending / receiving messages | Available | Available |
    | Bot Framework APIs (TeamsInfo.getPagedMembers()...) |Available (respond with mocked data) | Available |
@@ -427,9 +427,9 @@ It's vital to recognize that updating the configuration file has three major imp
    | Typing indicator | Not Available | Available |
    | Tab, Message extension, Dialogs (referred as task modules in TeamsJS v1.x), Single sign-on (SSO), and non-Adaptive Cards | Not Available | Available |
 
-## Debug an existing app with Test Tool
+## Debug an existing app with Agents Playground
 
-Ensure you have an existing bot created using Agents Toolkit. To debug your bot with Test Tool, follow these steps:
+Ensure you have an existing bot created using Agents Toolkit. To debug your bot with Agents Playground, follow these steps:
 
 1. Open the existing bot's project folder in Agents Toolkit.
 
@@ -546,11 +546,11 @@ Ensure you have an existing bot created using Agents Toolkit. To debug your bot 
     },
     ```
 
-1. From the left pane, select **Run and Debug** (`Ctrl+Shift+D`) and select **Debug in Test Tool** in dropdown list.
+1. From the left pane, select **Run and Debug** (`Ctrl+Shift+D`) and select **Debug in Microsoft 365 Agents Playground** in dropdown list.
 
    :::image type="content" source="../assets/images/toolkit-v2/debug/select-debug-in-test-tool.png" alt-text="Screenshot shows the option to select debug in test tool.":::
 
-Test Tool successfully debugs your existing bot.
+Agents Playground successfully debugs your existing bot.
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Debug%20an%20existing%20app%20with%20Test%20Tool&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdebug-your-teams-app-test-tool%3Ftabs%3Dvscode%252Cclijs%23debug-an-existing-app-with-test-tool&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdebug-your-agents-playground.md&documentVersionIndependentId=6fa9130b-1aa5-b068-4211-a5a4cc32effa&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
@@ -558,23 +558,23 @@ Test Tool successfully debugs your existing bot.
 ## FAQ
 
 <details>
-<summary>How can I test my bot if Test Tool doesn't support its features?</summary>
+<summary>How can I test my bot if Agents Playground doesn't support its features?</summary>
 
-You can always use the Teams client to test the features that Test Tool doesn't support. Select the option **Debug in Teams (Edge)** or **Debug in Teams (Chrome)** to test your application in the Teams client.
+You can always use the Teams client to test the features that Agents Playground doesn't support. Select the option **Debug in Teams (Edge)** or **Debug in Teams (Chrome)** to test your application in the Teams client.
 <br>
 &nbsp;
 </details>
 <details>
-<summary>How would I know if Test Tool doesn't support features in my bot?</summary>
+<summary>How would I know if Agents Playground doesn't support features in my bot?</summary>
 
-Test Tool shows a warning message in conversation and log panel when it detects unsupported features.
+Agents Playground shows a warning message in conversation and log panel when it detects unsupported features.
 
 :::image type="content" source="../assets/images/toolkit-v2/debug/features-not-supported.png" alt-text="Screenshot shows the warning message of an unsupported feature.":::
 <br>
 &nbsp;
 </details>
 <details>
-<summary>Does Microsoft recommend using only Test Tool for testing bot applications?</summary>
+<summary>Does Microsoft recommend using only Agents Playground for testing bot applications?</summary>
 
 No. We always recommend users to test their bot application in the Teams client before moving the application to the production environment.
 <br>
@@ -585,11 +585,11 @@ No. We always recommend users to test their bot application in the Teams client 
 
 |Sample name | Description | Node.js |
 |----------------|-----------------|--------------|
-| Test Tool Sample App | A sample bot app to explore Test Tool. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v3/test-tool-sample-app) |
+| Agents Playground Sample App | A sample bot app to explore Agents Playground. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v3/test-tool-sample-app) |
 
 ## Step-by-step guide
 
-Follow the [step-by-step guide](../sbs-teams-app-test-tool.yml) to debug an AI chat bot using Teams App Test Tool.
+Follow the [step-by-step guide](../sbs-teams-app-test-tool.yml) to debug an AI chat bot using Agents Playground.
 
 ## See also
 

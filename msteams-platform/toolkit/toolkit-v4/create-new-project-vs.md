@@ -41,7 +41,7 @@ To create a new Teams app, follow the steps:
 
       The **Create a new project** window appears.  
 
-1. Enter **Teams** in the search box and from search results, select **Microsoft Teams App**.
+1. Enter **Microsoft 365 Agents** in the search box and from search results, select **Microsoft 365 Agents**.
 
 1. Select **Next**.
 
@@ -61,7 +61,7 @@ To create a new Teams app, follow the steps:
 
         :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/teams-app-project-name.png" alt-text="Screenshot shows the configure the project name of your application.":::
 
-   The **Create a new Teams application** window appears.
+   The **Create a new Microsoft 365 Agent** window appears.
 
 1. Ensure **Tab** is selected, then select **Create**.
 
@@ -72,7 +72,7 @@ To create a new Teams app, follow the steps:
 
    :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/create-new-app-vs.png" alt-text="Screenshot shows the selection of teams app type." lightbox="../../assets/images/toolkit-v2/toolkit-vs/create-new-app-vs.png":::
 
-   The **GettingStarted .txt** tab appears. You can see the instructions in **GettingStarted** window and check out the different features in Teams Toolkit.
+   The **README.md** tab appears. You can see the instructions in **README** window and check out the different features in Teams Toolkit.
 
    :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/get-started-vs.png" alt-text="Screenshot shows the Getting Started teams toolkit page." lightbox="../../assets/images/toolkit-v2/toolkit-vs/get-started-tab-vs.png":::
 
