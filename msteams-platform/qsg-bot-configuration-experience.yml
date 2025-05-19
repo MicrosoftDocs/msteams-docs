@@ -2,7 +2,7 @@
 title: Bot configuration experience quick start guide
 metadata:
   title: Guide to Create Configurable Bot
-  description: In this module, learn how to build and run the configurable bot for Teams using Teams Toolkit in Visual Studio Code and reconfigure the bot.
+  description: Learn how to build and run the configurable bot for Teams using Microsoft 365 Agents Toolkit in Visual Studio Code and reconfigure the bot.
   audience: Developer
   level: Beginner
   ms.date: 12/11/2024
@@ -21,7 +21,7 @@ items:
     Start Microsoft Teams app development with your first Teams app. 
     You can create a bot app with Teams using Javascript. 
 
-    This quick start guide helps you to build configurable bot with Teams Toolkit. You'll see the following output after you've completed this guide:
+    This quick start guide helps you to build configurable bot with Microsoft 365 Agents Toolkit (previously known as Teams Toolkit). You'll see the following output after you've completed this guide:
     
     :::image type="content" source="~/assets/images/bots/configurationbot.gif" alt-text="Screenshot shows the configuration option for the bot in a Teams group chat.":::
 
@@ -32,7 +32,7 @@ items:
 
    | &nbsp; | Install | For using... |
    | --- | --- | --- |
-   | &nbsp; | [Teams Toolkit](~/toolkit/install-Teams-Toolkit.md) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
+   | &nbsp; | [Microsoft 365 Agents Toolkit](~/toolkit/install-Teams-Toolkit.md) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call all in one place.|
    | &nbsp; | [Node.js and NPM](https://nodejs.org/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
    | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge/) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
@@ -74,7 +74,7 @@ items:
 
      1. Select **Open a folder**, go to **Microsoft-Teams-Samples** > **samples** > **bot-configuration-app** and then select **Select folder**.
 
-     1. From the left pane, select **Teams Toolkit**.
+     1. From the left pane, select **Microsoft 365 Agents Toolkit**.
 
      1. Under **ACCOUNTS**, sign in to the following:
         * **Microsoft 365 account**

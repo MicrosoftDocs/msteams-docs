@@ -68,7 +68,7 @@ Azure Functions integrates with an array of [cloud services](add-resource.md) to
 
 ## Node.js version compatibility table for project type
 
-| Agents Toolkit version | Project Type | Supported Node.js Versions  |
+| Agents Toolkit version | Project Type | Supported Node.js versions  |
 |---|---|---|
 | 5.0.0 | Notify with http or timer trigger <br> Azure functions <br> SPFx <br> Non-SPFx | 16, 18 <br> 16, 18 <br> 16 <br> 16, 18 |
 | 4.2.2 | Notify with http or timer trigger <br> Azure functions <br> SPFx | 14, 16, 18 (Preview) <br> 14, 16, 18 (Preview) <br> 16 <br> 14, 16, 18 |
