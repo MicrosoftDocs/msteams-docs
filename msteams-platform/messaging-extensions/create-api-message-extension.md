@@ -797,7 +797,7 @@ To create an API-based message extension using Agents Toolkit for Visual Studio,
 1. Open **Visual Studio**.
 1. Go to **File** > **New** > **Project...** or **New Project**.
 
-1. Search for **Teams** and select **Microsoft Teams App**.
+1. Search for **Microsoft** and select **Microsoft 365 Agents**.
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-vs-teams.png" alt-text="Screenshot shows the Microsoft Teams app option in Visual Studio.":::
 

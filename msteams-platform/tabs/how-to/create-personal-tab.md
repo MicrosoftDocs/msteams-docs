@@ -662,7 +662,7 @@ To install the Agents Toolkit extension:
 
 1. Under **Workloads**, select **ASP.NET and web development**.
 
-1. Under **Installation details**, select **Microsoft Teams development tools**.
+1. Under **Installation details**, select **Microsoft 365 Agents Toolkit**.
 
 1. Select **Install**.
 
@@ -774,9 +774,9 @@ Use Agents Toolkit to create your first tab project. The toolkit takes you throu
 
 1. Select the project type and details:
 
-   1. Search for **Microsoft Teams** from templates dropdown list.  
+   1. Search for **Microsoft 365** from templates dropdown list.  
 
-   1. Select **Microsoft Teams App** as the template.
+   1. Select **Microsoft 365 Agents** as the template.
 
    1. Select **Next**.
 

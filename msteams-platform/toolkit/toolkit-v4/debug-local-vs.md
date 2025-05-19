@@ -37,7 +37,7 @@ To debug your app after you create a project, perform the following steps:
    :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/vs-localdebug-teamsappdependencies.png" alt-text="Screenshot shows the local debug teams app dependencies.":::
 
    > [!NOTE]
-   > In this scenario the project name is MyTeamsApp1.
+   > In this scenario the project name is MyM365Agent2.
 
    Your Microsoft 365 account needs to have the custom app upload permission before you sign in. Ensure that your Teams app can be uploaded to the tenant, otherwise your Teams app can fail to run in Teams Client.
 
