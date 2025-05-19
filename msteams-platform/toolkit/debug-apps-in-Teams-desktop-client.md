@@ -44,7 +44,7 @@ Ensure you install the following tools for building and deploying your app in Te
 
 1. Open Visual Studio Code (VS Code) and log into your Microsoft 365 account through Teams Toolkit.
 
-1. Select the Agents Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="false"::: icon in the VS Code **Activity Bar** and then select **Create a New Agent/App**.
+1. Select the Agents Toolkit :::image type="icon" source="../assets/images/toolkit-v2/toolkit-sidebar-icon.PNG" border="false"::: icon in the VS Code **Activity Bar** and then select **Create a New Agent/App**.
 
     :::image type="content" source="../assets/images/toolkit-v2/debug-apps-in-teams-desktop-client/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
 
@@ -70,7 +70,7 @@ Ensure you install the following tools for building and deploying your app in Te
 
 1. Select **JavaScript**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/select-language-tab.png" alt-text="Screenshot shows the option to select the programming language.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-bot/select-language-tab.png" alt-text="Screenshot shows the option to select the programming language.":::
 
 1. Select **Default folder**.
 
