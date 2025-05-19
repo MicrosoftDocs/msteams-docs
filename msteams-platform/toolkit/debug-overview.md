@@ -1,7 +1,7 @@
 ---
 title: Debug Teams App using Agents Toolkit
 author: surbhigupta 
-description: Learn how to prepare and debug Teams app locally and in Teams App Test tool, customize debug settings in Microsoft 365 Agents Toolkit, and its key features.
+description: Learn how to prepare and debug Teams app locally and in Microsoft 365 Agents Playground, customize debug settings in Microsoft 365 Agents Toolkit, and its key features.
 ms.author: surbhigupta 
 ms.localizationpriority: high
 ms.topic: overview
@@ -33,7 +33,7 @@ Agents Toolkit supports the following debug features:
 * [Toggle breakpoints](#toggle-breakpoints)
 * [Hot reload](#hot-reload)
 * [Stop debugging](#stop-debugging)
-* [Teams App Test Tool](#teams-app-test-tool)
+* [Microsoft 365 Agents Playground](#microsoft-365-agents-playground) (previously known as Teams App Test Tool)
 * [Debug apps in Teams desktop client](#debug-apps-in-teams-desktop-client)
 
 Agents Toolkit performs background functions during debug process, which include verifying the prerequisites required for debug. You can see the progress of the verification process in the output channel of Agents Toolkit. In the setup process you can register and configure your Teams app.
@@ -64,9 +64,9 @@ When you complete local debug, you can select **Stop (Shift+F5)** or **[Alt] Dis
 
    :::image type="content" source="../assets/images/toolkit-v2/debug/stop-debug.png" alt-text="Screenshot shows the stop debugging option.":::
 
-### Teams App Test Tool
+### Microsoft 365 Agents Playground 
 
-The Teams App Test Tool makes debugging your bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use the Test Tool. For more information, see [Teams App Test Tool](debug-your-agents-playground.md).
+Agents Playground makes debugging your bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Agents Playground. For more information, see [Agents Playground](debug-your-agents-playground.md).
 
 ### Debug apps in Teams desktop client
 

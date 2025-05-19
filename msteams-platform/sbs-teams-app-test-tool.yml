@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
-title: Debug your AI chat bot using Teams App Test Tool
+title: Debug your AI chat bot using Microsoft 365 Agents Playground
 metadata:
-  title: Teams App Test Tool to Debug AI Chatbot
-  description: Learn how to create project workspace, build, run, and debug AI chat bot using Teams App Test Tool and about activity triggers.
+  title: Microsoft 365 Agents Playground to Debug AI Chatbot
+  description: Learn how to create project workspace, build, run, and debug AI chat bot using Microsoft 365 Agents Playground and about activity triggers.
   audience: Developer
   level: Advanced
   ms.date: 10/21/2021
@@ -14,14 +14,14 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Start Microsoft Teams app development with your Teams AI chat bot app and debug with the Teams App Test Tool (Test Tool). Test Tool makes debugging bot-based apps effortless. You don't need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Test Tool.
+    Start Microsoft Teams app development with your Teams AI chat bot app and debug with Microsoft 365 Agents Playground (previously known as Teams App Test Tool). Agents Playground makes debugging bot-based apps effortless. You don't need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Agents Playground.
     
-    You can chat with your bot and view the messages and Adaptive Cards as they appear in Teams. You can also mock an activity in Test Tool using activity triggers.
+    You can chat with your bot and view the messages and Adaptive Cards as they appear in Teams. You can also mock an activity in Agents Playground using activity triggers.
 
     > [!NOTE]
     >
-    > * Teams App Test Tool is available only in v5.4.0 of Microsoft 365 Agents Toolkit (previously known as Teams Toolkit).
-    > * Teams App Test Tool is supported only for desktop and web clients.
+    > * Agents Playground is available only in v5.4.0 of Microsoft 365 Agents Toolkit (previously known as Teams Toolkit).
+    > * Agents Playground is supported only for desktop and web clients.
 
     This step-by-step guide helps you to build an AI chat bot using Agents Toolkit and debug with the Test Tool. You'll see the following output after you've completed this guide, where the user can access and use the AI chat bot:
 
@@ -238,11 +238,11 @@ items:
     
     ## Debug and run your AI chat bot app
 
-    1. From the left pane, select **RUN and DEBUG** (Ctrl+Shift+D) and select **Debug in Test Tool (Preview)** from the dropdown list.
+    1. From the left pane, select **RUN and DEBUG** (Ctrl+Shift+D), and then select **Debug in Agents Playground** from the dropdown list.
 
        :::image type="content" source="~/assets/images/toolkit-v2/debug/select-debug-in-test-tool.png" lightbox="~/assets/images/toolkit-v2/debug/select-debug-in-test-tool.png" alt-text="Screenshot shows the option to select debug in test tool.":::
  
-    1. The Test Tool opens your AI chat bot in a webpage.
+    1. Agents Playground opens your AI chat bot in a webpage.
 
        :::image type="content" source="~/assets/images/toolkit-v2/debug/test-tool.png" lightbox="~/assets/images/toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
 
@@ -253,14 +253,14 @@ items:
   durationInMinutes: 1
   content: |
 
-    You can mock an activity in Test Tool using activity triggers. There are two types of activity triggers:
+    You can mock an activity in Agents Playground using activity triggers. There are two types of activity triggers:
 
     1. [Predefined activity triggers](#predefined-activity-triggers)
     1. [Custom activity triggers](#custom-activity-triggers)
 
     ### Predefined activity triggers
 
-    Test Tool provides predefined activity triggers to test the functionalities of your bot.
+    Agents Playground provides predefined activity triggers to test the functionalities of your bot.
 
       | Category | Activity | Handler |
       | --- | --- | --- |
@@ -272,11 +272,11 @@ items:
     > [!NOTE]
     > All types of activities aren't available in all scopes. For example, you can't add or remove a channel in a personal chat or a group chat.
 
-    Predefined activity triggers are available in the **Mock an Activity** menu in Test Tool.
+    Predefined activity triggers are available in the **Mock an Activity** menu in Agents Playground.
 
     To mock an **Add user** activity, follow these steps:
 
-    1. In Test Tool, go to **Mock an Activity** > **Add user**.
+    1. In Agents Playground, go to **Mock an Activity** > **Add user**.
 
         :::image type="content" source="~/assets/images/toolkit-v2/debug/add-user.png" alt-text="Screenshot shows the add user option under mock an activity.":::
 
@@ -295,7 +295,7 @@ items:
 
     ### Custom activity triggers
 
-    You can use **Custom activity** to customize activity triggers, for example, `reactionsAdded` to meet the requirements of your bot app. The Test Tool automatically populates the required properties of the activity. You can also modify the activity type and add more properties.
+    You can use **Custom activity** to customize activity triggers, for example, `reactionsAdded` to meet the requirements of your bot app. Agents Playground automatically populates the required properties of the activity. You can also modify the activity type and add more properties.
 
     1. Select **Mock an Activity** > **Custom activity**.
 
@@ -336,4 +336,4 @@ items:
 - title: Congratulations!
   durationInMinutes: 1
   content: |
-    You've successfully created an AI chat bot app. Now, you've learned to debug your AI chat bot app in Teams App Test Tool.
+    You've successfully created an AI chat bot app. Now, you've learned to debug your AI chat bot app in Agents Playground.
