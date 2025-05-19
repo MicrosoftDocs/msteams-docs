@@ -204,7 +204,7 @@ The schema for Bot Framework card actions is different from Adaptive Card `Actio
 
 |Sample name | Description | .NET | Node.js | Manifest|
 |----------------|-----------------|--------------|----------------|----------------|
-|Dialog sample bots-V4 | This sample shows how to create dialogs using Bot Framework v4 and Teams tab. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp/demo-manifest/bot-task-module.zip)
+|Dialog sample bots-V4 | This sample app demonstrate how to use Dialogs (referred as task modules in TeamsJS v1.x) using Bot Framework v4. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp/demo-manifest/bot-task-module.zip)
 
 ## Step-by-step guide
 
