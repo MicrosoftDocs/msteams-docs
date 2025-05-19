@@ -33,12 +33,14 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 :::column span="2":::
 
 Teams platform features that are available to all app developers.
-
+<!--
 **2025 May**
 
 * ***May 19, 2025***: [Introducing Microsoft 365 admin center permission to view custom app analytics and the agent usage analytics for custom apps in Developer Portal.](/microsoftteams/platform/concepts/build-and-test/analyze-your-apps-usage-in-developer-portal?tabs=custom-apps-built-for-your-org).
 * ***May 19, 2025***: </br> Branding update: </br> • Teams Toolkit is now referred to as Microsoft 365 Agents Toolkit. </br> • Teams App Test Tool is now referred to as Microsoft 365 Agents Playground. </br> • Teams App CLI, TeamFx CLI, and Teams Toolkit CLI are now referred as Microsoft 365 Agents Toolkit CLI. </br> • `teamsapp` CLI signature is now referred as `atk`.
 * ***May 16, 2025***: [Use Meeting AI Insights API to fetch conversation summaries, action items, and mentions directly from Teams meetings.](graph-api/meeting-transcripts/meeting-insights.md)
+* ***May 13, 2025***: [Introducing agent usage analytics for third-party apps in Developer Portal](/microsoftteams/platform/concepts/build-and-test/analyze-your-apps-usage-in-developer-portal?tabs=thirdpartyapps).
+-->
 
 :::column-end:::
 :::row-end:::
@@ -476,7 +478,13 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 :::column span="2":::
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
+<!--
+**2025 May**
 
+* ***May 16, 2025***: [Increase app engagement with custom activity icons in activity feed notifications](/graph/teams-send-activityfeednotifications?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json&tabs=desktop%2Chttp#custom-activity-icons-in-activity-feed-notifications).
+
+* ***May 06, 2025***: [Introducing Teams AI library v2. This new library consolidates all the SDKs needed to create collaborative agents for Microsoft Teams](/microsoftteams/platform/teams-ai-library/welcome/overview).
+-->
 <br/>
 
 <details>
