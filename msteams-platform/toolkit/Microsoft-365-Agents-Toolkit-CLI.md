@@ -54,7 +54,7 @@ The following table lists the supported commands to help developers build and ma
 | [`atk validate`](#atk-validate)         | Validate the Microsoft 365 App using manifest schema, validation rules, or test cases.                             |
 | [`atk publish`](#atk-publish)           | Run the publish stage in `m365agents.yml`.                                                                         |
 | [`atk preview`](#atk-preview)           | Preview the current application.                                                                                   |
-| [`atk update`](#atk-update)             | Update the Microsoft 365 App manifest to Teams Developer Portal.                                                   |
+| [`atk update`](#atk-update)             | Update the Microsoft 365 App manifest to Developer Portal.                                                   |
 | [`atk upgrade`](#atk-upgrade)           | Upgrade the project to work with the latest version of Microsoft 365 Agents Toolkit.                               |
 | [`atk collaborator`](#atk-collaborator) | Check, grant and list permissions for who can access and manage Microsoft 365 App and Microsoft Entra application. |
 | [`atk uninstall`](#atk-uninstall)       | Clean up resources associated with Manifest ID, Title ID, or an environment.                                       |
@@ -368,7 +368,7 @@ The following table lists the parameters available for `atk preview`:
 | :--------------------- | :------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `--m365-host -m`       | No       | Preview the application in Teams, Outlook, or the Microsoft 365 app. The available options are `teams`, `outlook`, and `office`. The default value is `teams`.                                                                                           |
 | `--manifest-file`      | No       | Specifies the app manifest file path. The default value is `./appPackage/manifest.json`.                                                                                                                                                                 |
-| `--run-command -c`     | No       | The command starts the service and works only in local environment. If undefined, it auto-detects the appropriate command from project type (`npm run dev:teamsapp`, `dotnet run`, or `func start`). If empty, it skips starting the local service.      |
+| `--run-command -c`     | No       | The command starts the service and works only in local environment. If undefined, it auto-detects the appropriate command from project type (`npm run dev:teamsfx`, `dotnet run`, or `func start`). If empty, it skips starting the local service.      |
 | `--running-pattern -p` | No       | The ready signal output that service is launched. Works for `local` environment only. If undefined, the command The default value is (started\|successfully\|finished\|crashed\|failed\|listening\|ready). If empty, the process starts as ready signal. |
 | `--open-only -o`       | No       | Works for `local` environment only. If true, directly open web client without launching local service. The default value is `false`.                                                                                                                     |
 | `--browser -b`         | No       | Select browser to open Microsoft Teams web client. The available options are `chrome`, `edge`, and `default`. The default value is `default`.                                                                                                            |
@@ -478,7 +478,7 @@ atk collaborator grant -i false --manifest-file ./appPackage/manifest.json --env
 
 ## `atk uninstall`
 
-Clean up resources associated with manifest ID, title ID, or an environment in Microsoft 365 Agents Toolkit generated project. Resources include app registration in Teams Developer Portal, bot registration in Bot Framework Portal, and uploaded custom apps in Microsoft 365 apps.
+Clean up resources associated with manifest ID, title ID, or an environment in Microsoft 365 Agents Toolkit generated project. Resources include app registration in Developer Portal, bot registration in Bot Framework Portal, and uploaded custom apps in Microsoft 365 apps.
 
 ### `atk uninstall` parameters
 
