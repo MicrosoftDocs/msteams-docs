@@ -148,7 +148,7 @@ items:
 
         The **Create a new project** page appears.
 
-    1. In the search box, enter **Microsoft Teams**. From the search results, select **Microsoft Teams App**.
+    1. In the search box, enter **Microsoft Teams**. From the search results, select **Microsoft 365 Agents**.
 
     1. Select **Next**.
  
@@ -275,11 +275,6 @@ items:
 
         A **Microsoft 365 Agents Toolkit** warning dialog appears. 
 
-    1. Select **Provision**.
-    
-        :::image type="content" source="../msteams-platform/assets/images/toolkit-v2/blazor-vs-preview2/provision-warning.png" alt-text="Screenshot of Agents Toolkit with Provision highlighted in red.":::
-
-        It takes a few minutes for your resource group to provision in the cloud. 
         
     1. Select **OK**. 
 
@@ -361,7 +356,7 @@ items:
 
         The **Create a new project** page appears.
 
-    1. In the search box, enter **Microsoft Teams**. From the search results, select **Microsoft Teams App**.
+    1. In the dropdown, select **Microsoft 365**. From the search results, select **Microsoft 365 Agents**.
 
     1. Select **Next**.
 
@@ -373,11 +368,11 @@ items:
         
          :::image type="content" source="../msteams-platform/assets/images/toolkit-v2/blazor-vs-preview2/configure-new-project-bot.png" alt-text="Screenshot of Configure your new project with Create option highlighted in red.":::
 
-          The **Create a new Teams application** window appears.  
+          The **Create a Microsoft 365 Agents** window appears.  
 
-    1. Select Teams app feature. 
+    1. Select Teams Bot feature. 
 
-    1. Select the **Command Bot** app as the capability for your app.
+    1. Select the **Chat Command** app as the capability for your app.
 
     1. Select **Create**.     
 
@@ -496,7 +491,7 @@ items:
 
            :::image type="content" source="../msteams-platform/assets/images/toolkit-v2/blazor-vs-preview2/provision-azure_1.png" alt-text="Screenshot of Provision with provision option highlighted in red. ":::
 
-           A **Microsoft 365 Agents Toolkit** warning dialog appears. 
+           A **Microsoft 365 Agents Toolkit** warning dialog appears.
 
     1. Select **Provision**.
 
