@@ -59,18 +59,18 @@ The <b>Provision</b> step creates resources in Azure and Microsoft 365 for your 
 
    In your terminal window:
 
-   1. Run `teamsfx provision`.
+   1. Run `atk provision`.
 
       ``` bash
-      teamsfx provision
+      atk provision
       ```
 
       When prompted, select an Azure subscription to use Azure resources.
 
-   1. Run `teamsfx deploy`.
+   1. Run `atk deploy`.
 
       ``` bash
-      teamsfx deploy
+      atk deploy
       ```
 
 ---

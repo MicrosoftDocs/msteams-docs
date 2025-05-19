@@ -45,7 +45,7 @@ You can also trigger **Zip Teams App Package** from tree view or **Teams: Zip Te
 
 During local debug or provision, Agents Toolkit loads app manifest from `appPackage/manifest.json` and resolves app manifest by environment variables defined in `env/.env.xx`, then creates or updates Teams app in [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
 
-1. You can define your own manifest.json file in `teamsapp.yml` and `teamsapp.local.yml`.
+1. You can define your own manifest.json file in `m365agents.yml` and `m365agents.local.yml`.
 For example, you can put your manifest.json file in `test/test.json`, and update the `manifestPath` parameters in yaml files.
 
     ```text
@@ -137,7 +137,7 @@ This option renders `appPackage/manifest.json` with environment variables, and t
 Alternatively, use the following Agents Toolkit command line interface (Agents Toolkit CLI) command:
 
 ```bash
-teamsfx validate --manifest-path <YOUR-PATH-TO-MANIFEST>
+atk validate --manifest-path <YOUR-PATH-TO-MANIFEST>
 ```
 
 If you meet `MissingEnvironmentVariablesError`, it means that Agents Toolkit can't find corresponding environment variables defined in manifest.json. You may need to run **Provision** or select F5 to generate environment variables, or manually update `.env.xx` file to fulfill the value.
@@ -153,7 +153,7 @@ This option validates the zipped app package with validation rules.
 Alternatively, use the following Agents Toolkit CLI command:
 
 ```bash
-teamsfx validate --app-package-file-path <YOUR-PATH-TO-APP-PACKAGE>
+atk validate --app-package-file-path <YOUR-PATH-TO-APP-PACKAGE>
 ```
 
 It has other validation rules than the app manifest schema. For example, if static tab section has entityId `conversations` and name, the following error appears:
@@ -169,7 +169,7 @@ After you've previewed and validated the app manifest file, you can sync your lo
 Alternatively, use the following Agents Toolkit CLI command:
 
 ```bash
-teamsfx update teams-app
+atk update teams-app
 ```
 
 > [!NOTE]

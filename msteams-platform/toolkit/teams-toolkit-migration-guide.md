@@ -47,7 +47,7 @@ Perform the following steps to migrate to the new project structure:
 1. Remove the following configuration folders and files from your project folder and add them in the **TeamsApp** folder.
 
     * Folders: `appPackage`, `env`, `infra`
-    * Files: `teamsapp.yml`, `teamsapp.local.yml`, `aad.manifest.json`
+    * Files: `m365agents.yml`, `m365agents.local.yml`, `aad.manifest.json`
 
     > [!NOTE]
     > Once the folders and files are moved, they are automatically included in your **TeamsApp.ttkproj** file and you don't need to add them to the **TeamsApp.ttkproj** manually.
@@ -56,7 +56,7 @@ Perform the following steps to migrate to the new project structure:
 
     * Create a `launchSettings.json` file in the **TeamsApp** folder. Add the contents of the file `launchSettings.json` of your project folder to the newly created `launchSettings.json` in the **TeamsApp** folder.
     * In the newly created `launchSettings.json` of the **TeamsApp** folder, delete the `dotnetRunMessages`, `launchBrowser`, `applicationUrl`, `environmentVariables`, and `hotReloadProfile` fields.
-    * In the `launchSettings.json` of your project folder, delete the `launchBrowser`, `launchTestTool`, and `launchUrl` fields and duplicated profiles.
+    * In the `launchSettings.json` of your project folder, delete the `launchBrowser`, `launchPlayground`, and `launchUrl` fields and duplicated profiles.
 
     > [!NOTE]
     >
@@ -105,12 +105,12 @@ Perform the following steps to migrate to the new project structure:
 
     ---
 
-1. Modify the `teamsapp.local.yml` and `teamsapp.yml` files in the **TeamsApp** folder.
+1. Modify the `m365agents.local.yml` and `m365agents.yml` files in the **TeamsApp** folder.
 1. Every action that changes your project must be updated because the path is updated. Focus on the following actions:
 
     * `uses: file/createOrUpdateJsonFile`: This action might change the `appSettings.json` file of your project to configure runtime environments. Update the `target` field to the correct path.
         > [!IMPORTANT]
-        > You don't need to modify `launchSettings.json` using `file/createOrUpdateJsonFile`. If present in `teamsapp.local.yml`, remove it.
+        > You don't need to modify `launchSettings.json` using `file/createOrUpdateJsonFile`. If present in `m365agents.local.yml`, remove it.
     * `uses: cli/runDotnetCommand`: This action executes a `.NET` command within your project to package it. Adjust the `workingDirectory` field to the new path and update the command string with the correct `.csproj` path.
     * `uses: azureAppService/zipDeploy`: This action deploys the packaged file remotely. Update the `workingDirectory` field to the correct path.
 

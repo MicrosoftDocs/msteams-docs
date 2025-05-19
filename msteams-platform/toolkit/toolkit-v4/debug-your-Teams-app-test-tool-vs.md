@@ -74,17 +74,17 @@ Agents Playground offers a faster debug experience for bot applications when com
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/project-get-started-vs.png" alt-text="Screenshot shows the get started page of the application in Visual Studio." lightbox="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/project-get-started-vs.png":::
 
-1. The `appsettings.TestTool.json` file helps to configure Agents Playground by updating few parameters. To update `appsettings.TestTool.json` file, follow either OpenAI or Azure OpenAI steps:
+1. The `appsettings.Playground.json` file helps to configure Agents Playground by updating few parameters. To update `appsettings.Playground.json` file, follow either OpenAI or Azure OpenAI steps:
 
     # [OpenAI](#tab/openai)
     
-    Update OpenAI `ApiKey` in the `appsettings.TestTool.json` file.
+    Update OpenAI `ApiKey` in the `appsettings.Playground.json` file.
     
     :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/app-seetings-test-tool.png" alt-text="Screenshot displays the updated OpenAI key.":::
     
     # [Azure OpenAI](#tab/azureopenai)
     
-    1. Update Azure `OpenAIApiKey` and `OpenAIEndpoint` in the `appsettings.TestTool.json` file.
+    1. Update Azure `OpenAIApiKey` and `OpenAIEndpoint` in the `appsettings.Playground.json` file.
 
         :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/app-seetings-test-tool-azureAI.png" alt-text="Screenshot displays the updated OpenAI key and endpoint for Azure.":::
     

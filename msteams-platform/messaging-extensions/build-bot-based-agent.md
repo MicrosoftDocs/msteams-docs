@@ -231,10 +231,10 @@ To create a bot-based search message extension agent using Agents Toolkit CLI, f
 1. Enter the following command:
 
    ```
-   npm install -g @microsoft/teamsapp-cli
+   npm install -g @microsoft/atk-cli
    ```
 
-1. Enter `teamsapp new` in the terminal.
+1. Enter `atk new` in the terminal.
 
 1. Select **Message Extension**. Use the arrow keys to switch between options.
 

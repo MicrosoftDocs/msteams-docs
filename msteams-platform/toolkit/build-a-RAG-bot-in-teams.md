@@ -80,7 +80,7 @@ Microsoft Teams enables you to build a conversational bot with RAG to create an 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/rag-project-output.png" alt-text="Screenshot shows the ai chatbot created and readme file is available.":::
 
-1. Under **EXPLORER**, go to the **env** > **.env.testtool.user** file.
+1. Under **EXPLORER**, go to the **env** > **.env.playground.user** file.
 
 1. Update the following values:
 
@@ -115,9 +115,9 @@ Test Tool opens the bot in a webpage.
 |`src/app/app.js`| Handles business logics for the RAG bot.|
 |`src/app/myDataSource.js`| Defines the data source.|
 |`src/data/*.md`| Raw text data sources.|
-|`teamsapp.yml`| This is the main Agents Toolkit project file. The project file defines the properties and configuration stage definitions. |
-|`teamsapp.local.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging.|
-|`teamsapp.testtool.yml`| This overrides `teamsapp.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
+|`m365agents.yml`| This is the main Agents Toolkit project file. The project file defines the properties and configuration stage definitions. |
+|`m365agents.local.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging.|
+|`m365agents.playground.yml`| This overrides `m365agents.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
 
 ## RAG scenarios for Teams AI
 

@@ -55,7 +55,7 @@ Test Tool is an npm package that has a CLI command called `teamsapptester`. When
 To use a Teams bot on Test Tool, you need to provide:
 
 * Message endpoint: A bot message endpoint is the URL that links Test Tool and your bot. You can update the endpoint with the `BOT_ENDPOINT` environment variable or use the default value of `http://localhost:3978/api/messages`.
-* Configuration file (Optional): A configuration file informs Test Tool about your customized contextual information in Teams. The file is named **.teamsapptesttool.yml** in the project's root folder. If Teams can't find this file, it uses the default configuration. For more information, see [customize Teams context](#customize-teams-context).
+* Configuration file (Optional): A configuration file informs Test Tool about your customized contextual information in Teams. The file is named **.m365agentsplayground.yml** in the project's root folder. If Teams can't find this file, it uses the default configuration. For more information, see [customize Teams context](#customize-teams-context).
 
 ## Test Tool experience in Agents Toolkit
 
@@ -131,7 +131,7 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
         :::image type="content" source="../assets/images/teams-toolkit-v2/debug/npm-teams-app-test-tool.png" alt-text="Screenshot shows install teams app test tool cli.":::
 
-   1. Use the `teamsapp` command from [Agents Toolkit CLI](Teams-Toolkit-CLI.md) to create your first project. Start from the folder where you want to create the project folder.
+   1. Use the `atk` command from [Agents Toolkit CLI](Teams-Toolkit-CLI.md) to create your first project. Start from the folder where you want to create the project folder.
 
       ```cmd
       teamsapp new   
@@ -144,7 +144,7 @@ Test Tool offers a faster debug experience for bot applications when compared to
    1. Run the following command to deploy your app and install the required dependencies and npm packages:
 
       ```cmd
-      teamsapp deploy --env=testtool
+      teamsapp deploy --env=playground
       ```
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/debug/teamsapp-deploy-env-testtool.png" alt-text="Screenshot shows the process of installing the required dependencies and npm packages.":::
@@ -152,13 +152,13 @@ Test Tool offers a faster debug experience for bot applications when compared to
    1. Run the following command to start your bot app:
 
       ```cmd
-      npm run dev:teamsapp:testtool
+      npm run dev:atk:playground
       ```
 
    1. Run the following command in a separate terminal to launch Teams App Test Tool:
 
       ```cmd
-      npm run dev:teamsapp:launch-testtool
+      npm run dev:atk:launch-playground
       ```
 
    # [C#](#tab/clicsharp)
@@ -373,7 +373,7 @@ If your bot code uses Bot Framework APIs, you can modify the configuration file 
 
 To comprehensively test this bot in Test Tool, it's crucial to update the configuration file to use the correct email addresses of the owners of the inactive bugs.
 
-1. Go to the `.teamsapptesttool.yml` file in the project's root folder.
+1. Go to the `.m365agentsplayground.yml` file in the project's root folder.
 
 1. Go to the `users` section and update the `name`, `userPrincipleName`, and `email` of the required user.
 
@@ -465,7 +465,7 @@ Ensure you have an existing bot created using Agents Toolkit. To debug your bot 
         { 
           "label": "Start Test Tool", 
           "type": "shell", 
-          "command": "npm run dev:teamsfx:launch-testtool", 
+          "command": "npm run dev:teamsfx:launch-playground", 
           "isBackground": true, 
           "options": { 
             "env": { 
@@ -503,31 +503,31 @@ Ensure you have an existing bot created using Agents Toolkit. To debug your bot 
     }
     ```
 
-1. Under **EXPLORER**, create a **.localConfigs.testtool** file and add the following code:
+1. Under **EXPLORER**, create a **.localConfigs.playground** file and add the following code:
 
     ```json
-    // .localConfigs.testTool
+    // .localConfigs.playground
     # A gitignored place holder file for local runtime configurations when debug in test tool
     BOT_ID=
     BOT_PASSWORD=
-    TEAMSFX_NOTIFICATION_STORE_FILENAME=.notification.testtoolstore.json
+    TEAMSFX_NOTIFICATION_STORE_FILENAME=.notification.playgroundstore.json
     ```
 
 1. Go to **EXPLORER** > **env**.
-1. Create a **.env.testtool** file and add the following code:
+1. Create a **.env.playground** file and add the following code:
 
     ```json
-    // .env.testtool
+    // .env.playground
     # This file includes environment variables that can be committed to git. It's gitignored by default because it represents your local development environment
     # Built-in environment variables
-    TEAMSFX_ENV=testtool
+    TEAMSFX_ENV=playground
     # Environment variables used by test tool
     TEAMSAPPTESTER_PORT=56150
     ```
 
-1. If you have custom environment variables, set their values in **.env.testtool** or **.env.testtool.user**.
+1. If you have custom environment variables, set their values in **.env.playground** or **.env.playground.user**.
 
-1. Add either an OpenAI key or Azure OpenAI key and endpoint in **.env.testtool.user**.
+1. Add either an OpenAI key or Azure OpenAI key and endpoint in **.env.playground.user**.
 
     ```json
     # SECRET_OPENAI_API_KEY=***********
@@ -540,8 +540,8 @@ Ensure you have an existing bot created using Agents Toolkit. To debug your bot 
     ```json
     "scripts": {
         ... 
-        "dev:teamsfx:testtool": "env-cmd --silent -f .localConfigs.testTool npm run dev", 
-        "dev:teamsfx:launch-testtool": "env-cmd --silent -f env/.env.testtool teamsapptester start", 
+        "dev:teamsfx:playground": "env-cmd --silent -f .localConfigs.playgroundnd npm run dev", 
+        "dev:teamsfx:launch-playground": "env-cmd --silent -f env/.env.playground teamsapptester start", 
         ... 
     },
     ```
