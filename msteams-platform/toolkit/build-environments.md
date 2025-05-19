@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Prepare to build apps using Microsoft 365 Agents Toolkit
 
-Agents Toolkit (previously known as Teams Toolkit) supports different build environments for creating apps. It helps to integrate Azure Functions capabilities and cloud services in the Microsoft Teams app that you've built.
+Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) supports different build environments for creating apps. It helps to integrate Azure Functions capabilities and cloud services in the Microsoft Teams app that you've built.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/build-apps-ttk-vsc.png" alt-text="Illustration shows the steps to prepare to build apps using Agents Toolkit." lightbox="../assets/images/teams-toolkit-v2/build-apps-ttk-vsc.png":::
 
@@ -68,7 +68,7 @@ Azure Functions integrates with an array of [cloud services](add-resource.md) to
 
 ## Node.js version compatibility table for project type
 
-| Agents Toolkit Version | Project Type | Supported Node.js Versions  |
+| Agents Toolkit version | Project Type | Supported Node.js versions  |
 |---|---|---|
 | 5.0.0 | Notify with http or timer trigger <br> Azure functions <br> SPFx <br> Non-SPFx | 16, 18 <br> 16, 18 <br> 16 <br> 16, 18 |
 | 4.2.2 | Notify with http or timer trigger <br> Azure functions <br> SPFx | 14, 16, 18 (Preview) <br> 14, 16, 18 (Preview) <br> 16 <br> 14, 16, 18 |
