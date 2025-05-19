@@ -50,7 +50,7 @@ Ensure you install the following tools for building and deploying your bots in T
 
 ## Understand Test Tool
 
-Test Tool is an npm package that has a CLI command called `atktester`. When you run `atktester start`, it opens a web app on your local machine that emulates the Teams web client and Bot Framework service. This web app doesn't need any cloud resources as it uses mock data to simulate the contextual information of Teams.
+Test Tool is an npm package that has a CLI command called `teamsapptester`. When you run `teamsapptester start`, it opens a web app on your local machine that emulates the Teams web client and Bot Framework service. This web app doesn't need any cloud resources as it uses mock data to simulate the contextual information of Teams.
 
 To use a Teams bot on Test Tool, you need to provide:
 
