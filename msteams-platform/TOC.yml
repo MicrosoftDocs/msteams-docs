@@ -291,6 +291,8 @@
         href: toolkit/teams-toolkit-migration-guide.md
         displayName: migrate Teams toolkit, new project structure, YAML configuration
     - name: Microsoft 365 Agents Toolkit CLI
+      href: toolkit/Microsoft-365-Agents-Toolkit-CLI.md
+    - name: Teams Toolkit CLI
       href: toolkit/Teams-Toolkit-CLI.md
     - name: Developer Portal for Teams
       items:
