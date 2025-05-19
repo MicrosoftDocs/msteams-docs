@@ -1,14 +1,14 @@
 ---
-title: Migrate project from 17.10-17.13 to 17.14+
+title: Migrate project from 17.9 to 17.10+
 author: huihuiwu
-description: This guide provides the steps to migrate scaffolded project from Microsoft Teams template using Teams Toolkit in VS 17.13 or lower version to Microsoft 365 Agents template using Microsoft 365 Agents Toolkit in VS 17.14 or higher version."
+description: "This guide provides the steps to migrate scaffolded project from Microsoft Teams template using Teams Toolkit in VS 17.13 or lower version to Microsoft 365 Agents template using Microsoft 365 Agents Toolkit in VS 17.14 or higher version."
 ms.author: huihuiwu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/19/2025
 ---
 
-# Migrate projects from VS 17.13 or lower version to VS 17.14+ version
+# Migrate Teams Toolkit projects from VS 17.13 or lower version VS 17.14+ version
 
 Teams Toolkit has significant [updates in VS 17.14](/visualstudio/releases/2022/release-notes). If you are working on VS versions from 17.10 to 17.13, and now you want to upgrade to 17.14, you may want to migrate your projects to make it compatible with VS 17.14. The key updates that have impacted this migration are:
 
@@ -30,7 +30,7 @@ To enhance the debugging experience and make it easier and quicker, we have remo
 
 Before starting the migration process, ensure that you have the following:
 
-* A Teams project with new project structure that is created using Teams Toolkit for Visual Studio 17.13 or earlier version.
+* A Teams project with new project structure that is created using Agents Toolkit for Visual Studio 17.13 or earlier version.
 * Visual Studio version 17.14 or later with Microsoft 365 Agents Toolkit installed.
 
 ## Migration process
@@ -39,7 +39,7 @@ Perform the following steps to migrate to one-click F5 experience:
 
 1. Open `Configuration Manager` window by clicking **Build** > **Configuration Manager...** in VS.
 
-2. In `Configuration Manager` window, check the `deploy` stage for M365Agent/TeamsApp project so prepare Teams App dependencies will be executed when deploying.
+2. In `Configuration Manager` window, check the `deploy` stage for M365Agent/TeamsApp project for prepare Teams App dependencies to be executed when deploying.
 
      :::image type="content" source="../assets/images/teams-toolkit-overview/debug_check_deploy.png" alt-text="Screenshot shows the configuration manager window.":::
 
@@ -54,7 +54,7 @@ Perform the following steps to migrate to one-click F5 experience:
         "launchUrl": "https://teams.microsoft.com/l/app/${{TEAMS_APP_ID}}?installAppPackage=true&webjoin=true&appTenantId=${{TEAMS_APP_TENANT_ID}}&login_hint=${{TEAMSFX_M365_USER_NAME}}"
     },
    ```
-   In `{{solutionName}}.slnLaunch.user` file at the same level as the solution file, add the content according to the files of `launchSettings.json`:
+   In `{{solutionName}}.slnLaunch.user` file at the same level as the solution file, add the content according to the files of `launchSettings.json`.
 
    ```json
     [
@@ -78,7 +78,7 @@ Perform the following steps to migrate to one-click F5 experience:
     ]
    ```
 
-4.  If your project contains debug profile for Microsoft 365 Agents Playground (previously known as Teams App Test Tool), you'll need to add following environment variable in `launchSettings.json` under M365Agents/TeamsApp project:
+4. If your project contains debug profile for Microsoft 365 Agents Playground (previously known as Teams App Test Tool), you'll need to add following environment variable in `launchSettings.json` under M365Agents/TeamsApp project:
 
      ```json
      "UPDATE_TEAMS_APP": "false"
