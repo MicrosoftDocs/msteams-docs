@@ -1,7 +1,7 @@
 ---
 title: Publish App using Developer Portal
 author: zyxiaoyuer
-description: Learn how to publish the app using Developer Portal in Teams Toolkit from Visual Studio Code, update app manifest, and publish manually.
+description: Learn how to publish the app using Developer Portal in Microsoft 365 Agents Toolkit for Visual Studio Code, update app manifest, and publish manually.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
@@ -10,7 +10,7 @@ ms.date: 02/06/2025
 
 # Publish Teams app with Developer Portal
 
-You can configure and manage your app in Developer Portal within Microsoft Teams Toolkit.
+You can configure and manage your app in Developer Portal within Microsoft 365 Agents Toolkit (previously known as Teams Toolkit).
 
 ## To publish app using Developer Portal
 
@@ -20,17 +20,17 @@ The following steps help to publish your app in Developer Portal:
 
 1. Select **Open Developer Portal to Publish** for Microsoft Teams under **UTILITY**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/open-developer-portal-to-publish.png" alt-text="Screenshot showing the selection of open Developer Portal to publish.":::
+   :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/open-developer-portal-to-publish.png" alt-text="Screenshot showing the selection of open Developer Portal to publish.":::
 
 1. Select the Teams app package you'd like to publish.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-your-teams-app-package.png" alt-text="Screenshot showing the selection of zip Teams app package.":::
+   :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/select-your-teams-app-package.png" alt-text="Screenshot showing the selection of zip Teams app package.":::
 
 1. Sign in to [Developer Portal for Teams](https://dev.teams.microsoft.com/home) using the corresponding account.
-1. Teams Toolkit opens your selected Teams app's page and navigate to the **Publish** > **Publish to store** page.
+1. Agents Toolkit opens your selected Teams app's page and navigate to the **Publish** > **Publish to store** page.
 1. Select **Publish** > **Publish to your org**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/publish-to-your-org.png" alt-text="Screenshot showing the selection of publish to your org.":::
+   :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/publish-to-your-org.png" alt-text="Screenshot showing the selection of publish to your org.":::
 
 ## To update Manifest file and app package
 
@@ -60,7 +60,7 @@ You can do the following configuration for your app in the Developer Portal:
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Microsoft 365 Agents Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md)
 * [Manage your apps in Developer Portal](../concepts/build-and-test/manage-your-apps-in-developer-portal.md)
-* [Develop your apps with Teams Toolkit](../concepts/build-and-test/develop-your-apps-with-teams-toolkit.md)
+* [Develop your apps with Microsoft 365 Agents Toolkit](../concepts/build-and-test/develop-your-apps-with-teams-toolkit.md)
