@@ -205,7 +205,7 @@ items:
 
     1. Select **Project** > **Microsoft 365 Agents Toolkits** > **Select Microsoft 365 Account**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png" alt-text="Screenshot of Visual Studio with Project, Teams Toolkit, and Prepare Teams App Dependencies options are highlighted in red." lightbox="../msteams-platform\assets\images\teams-toolkit-v2\blazor-vs-preview2\configure-msteamsapp_2.png":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png" alt-text="Screenshot of Visual Studio with Project, Teams Toolkit, and Select Microsoft 365 Account options are highlighted in red." lightbox="../msteams-platform\assets\images\teams-toolkit-v2\blazor-vs-preview2\configure-msteamsapp_2.png":::
 
     1. Sign in to your **Microsoft 365 account** and then select **Continue**.
 
@@ -438,7 +438,7 @@ items:
 
       ---     
 
-    1. Select **Project** > **Microsoft 365 Agents Toolkit**  > **Prepare Teams App Dependencies**.
+    1. Select **Project** > **Microsoft 365 Agents Toolkit**  > **Select Microsoft 365 Account**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png" alt-text="Screenshot of Visual Studio with project, Teams Toolkit, and Prepare Teams App Dependencies options highlighted in red." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_2.png":::
 
