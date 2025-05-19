@@ -25,7 +25,7 @@ items:
 
     This step-by-step guide helps you to build an AI chat bot using Agents Toolkit and debug with the Test Tool. You'll see the following output after you've completed this guide, where the user can access and use the AI chat bot:
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="~/assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
+    :::image type="content" source="~/assets/images/toolkit-v2/debug/test-tool.png" lightbox="~/assets/images/toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
     
 - title: Prerequisites
   durationInMinutes: 1
@@ -48,7 +48,7 @@ items:
     
     The bot capability of a Teams app creates a chatbot or a conversational bot. It communicates with a web service, facilitating the use of its services. The bot can execute simple, automated tasks such as delivering customer service. You can get weather forecast, make reservations, or any other service offered using a conversational bot.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/your-helloworld-app-bot.png" alt-text="Screenshot shows you the app with three features. Bot is highlighted.":::
+    :::image type="content" source="~/assets/images/toolkit-v2/first-bot/your-helloworld-app-bot.png" alt-text="Screenshot shows you the app with three features. Bot is highlighted.":::
     
     As you've already prepared for creating these apps, you can set up a new Teams project for creating the AI chat bot app.
     In this tutorial, you'll learn:
@@ -61,19 +61,19 @@ items:
 
     1. Open **Visual Studio Code**.
 
-    1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="false"::: icon in the Visual Studio Code **Activity Bar**.
+    1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="~/assets/images/toolkit-v2/toolkit-sidebar-icon.PNG" border="false"::: icon in the Visual Studio Code **Activity Bar**.
 
     1. Select **Create a new app**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Agents Toolkit sidebar.":::
+        :::image type="content" source="~/assets/images/toolkit-v2/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Agents Toolkit sidebar.":::
 
     1. Select **Bot**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/create-newapp.png" alt-text="Screenshot shows the Agents Toolkit app templates.":::
+        :::image type="content" source="~/assets/images/toolkit-v2/first-bot/create-newapp.png" alt-text="Screenshot shows the Agents Toolkit app templates.":::
 
     1. Select **AI Chat Bot**. If you need a different functionality for your bot, select the required option.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/ai-chat-bot.png" alt-text="Screenshot shows the app feature to add to your new app.":::
+        :::image type="content" source="~/assets/images/toolkit-v2/debug/ai-chat-bot.png" alt-text="Screenshot shows the app feature to add to your new app.":::
 
     1. Select **JavaScript**.
 
@@ -81,26 +81,26 @@ items:
 
     1. Select **Default folder**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/select-default-location.png" alt-text="Screenshot shows the selection of default location.":::
+        :::image type="content" source="~/assets/images/toolkit-v2/first-bot/select-default-location.png" alt-text="Screenshot shows the selection of default location.":::
 
         To change the default location, follow these steps:
 
         1. Select **Browse**.
 
-            :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/select-browse.png" alt-text="Screenshot shows the selection of browse location option.":::
+            :::image type="content" source="~/assets/images/toolkit-v2/first-bot/select-browse.png" alt-text="Screenshot shows the selection of browse location option.":::
 
         1. Select the location for the project workspace.
         1. Select **Select Folder**.
 
-            :::image type="content" source="~/assets/images/teams-toolkit-v2/select-folder.png" alt-text="Screenshot shows the folder to select.":::
+            :::image type="content" source="~/assets/images/toolkit-v2/select-folder.png" alt-text="Screenshot shows the folder to select.":::
 
         1. Enter a suitable name for your app and then select the **Enter** key.
 
-            :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/hello-bot.png" alt-text="Screenshot shows where to enter the app name.":::
+            :::image type="content" source="~/assets/images/toolkit-v2/first-bot/hello-bot.png" alt-text="Screenshot shows where to enter the app name.":::
 
             A dialog appears, where you need to choose yes or no to trust the authors of the files in this folder.
 
-            :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder.":::
+            :::image type="content" source="~/assets/images/toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder.":::
 
             Now, you've successfully created your AI chat bot project workspace.
 
@@ -240,11 +240,11 @@ items:
 
     1. From the left pane, select **RUN and DEBUG** (Ctrl+Shift+D) and select **Debug in Test Tool (Preview)** from the dropdown list.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/select-debug-in-test-tool.png" lightbox="~/assets/images/teams-toolkit-v2/debug/select-debug-in-test-tool.png" alt-text="Screenshot shows the option to select debug in test tool.":::
+       :::image type="content" source="~/assets/images/toolkit-v2/debug/select-debug-in-test-tool.png" lightbox="~/assets/images/toolkit-v2/debug/select-debug-in-test-tool.png" alt-text="Screenshot shows the option to select debug in test tool.":::
  
     1. The Test Tool opens your AI chat bot in a webpage.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="~/assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
+       :::image type="content" source="~/assets/images/toolkit-v2/debug/test-tool.png" lightbox="~/assets/images/toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
 
     > [!div class="nextstepaction"]
     > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Debug+and+run+your+AI+chat+bot+app&author=surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-app-test-tool%3Ftutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-teams-app-test-tool.yml%23&documentVersionIndependentId=c3a2f604-cd95-7c37-210d-699e7cccec5e&platformId=ff9aea10-b1b0-f61e-abba-675eaefa2144&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams)
@@ -278,17 +278,17 @@ items:
 
     1. In Test Tool, go to **Mock an Activity** > **Add user**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/add-user.png" alt-text="Screenshot shows the add user option under mock an activity.":::
+        :::image type="content" source="~/assets/images/toolkit-v2/debug/add-user.png" alt-text="Screenshot shows the add user option under mock an activity.":::
 
         A dialog appears to preview the activity handler.
 
     1. Select **Send activity**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/add-a-user-request.png" alt-text="Screenshot shows the option to send activity for predefined mock activity add user.":::
+        :::image type="content" source="~/assets/images/toolkit-v2/debug/add-a-user-request.png" alt-text="Screenshot shows the option to send activity for predefined mock activity add user.":::
 
         Bot sends the following response:
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/add-a-user-response.png" alt-text="Screenshot shows the response of predefined mock activity add user.":::
+        :::image type="content" source="~/assets/images/toolkit-v2/debug/add-a-user-response.png" alt-text="Screenshot shows the response of predefined mock activity add user.":::
 
     > [!div class="nextstepaction"]
     > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Predefined+activity+triggers&author=surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-app-test-tool%3Ftutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-teams-app-test-tool.yml&documentVersionIndependentId=c3a2f604-cd95-7c37-210d-699e7cccec5e&platformId=ff9aea10-b1b0-f61e-abba-675eaefa2144&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams)
@@ -299,7 +299,7 @@ items:
 
     1. Select **Mock an Activity** > **Custom activity**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/debug/mock-activity.png" alt-text="Screenshot shows the list of option under mock an activity.":::
+        :::image type="content" source="../msteams-platform/assets/images/toolkit-v2/debug/mock-activity.png" alt-text="Screenshot shows the list of option under mock an activity.":::
 
     1. Add `messageReaction` to customize the activity under the `type` property:
 
@@ -317,11 +317,11 @@ items:
 
     1. Select **Send activity**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/custom-activity-request.png" alt-text="Screenshot shows the option to send activity after customization on mock activity.":::
+        :::image type="content" source="~/assets/images/toolkit-v2/debug/custom-activity-request.png" alt-text="Screenshot shows the option to send activity after customization on mock activity.":::
 
         Bot sends an `onReactionsAdded` handler in response.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/debug/custom-activity-response.png" alt-text="Screenshot shows the response of custom mock activity.":::
+        :::image type="content" source="../msteams-platform/assets/images/toolkit-v2/debug/custom-activity-response.png" alt-text="Screenshot shows the response of custom mock activity.":::
 
     > [!div class="nextstepaction"]
     > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Custom+activity+triggers&author=surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-app-test-tool%3Ftutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-teams-app-test-tool.yml&documentVersionIndependentId=c3a2f604-cd95-7c37-210d-699e7cccec5e&platformId=ff9aea10-b1b0-f61e-abba-675eaefa2144&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams)
@@ -331,7 +331,7 @@ items:
   content: |
     Did you come up with output like this?
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="~/assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
+    :::image type="content" source="~/assets/images/toolkit-v2/debug/test-tool.png" lightbox="~/assets/images/toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
 
 - title: Congratulations!
   durationInMinutes: 1

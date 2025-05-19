@@ -51,7 +51,7 @@ items:
   content: |
     To build workflow bot using Visual Studio Code, perform the following steps:
     1. Open Visual Studio Code.
-    1. Select the **Microsoft 365 Agents Toolkit** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
+    1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="../msteams-platform/assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
     1. Select **Create a New App**.
       
         :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-create.png" alt-text="Screenshots shows the creation of new teams app in side panel.":::
@@ -84,7 +84,7 @@ items:
         
         :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-scaffolding1.png" alt-text="Screenshot shows your app is created with the scaffolding visible in the side panel.":::
     
-    1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code **Activity Bar**.
+    1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code **Activity Bar**.
     
     1. Select **Debug in Teams (Edge)** or **Debug in Teams (Chrome)** from the dropdown list.
     

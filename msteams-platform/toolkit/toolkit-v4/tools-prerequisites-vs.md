@@ -119,11 +119,11 @@ You can verify if the custom app upload permission is enabled using Teams client
 
 1. In the Teams client, select **Apps** > **Manage your apps** > **Upload an app**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/upload-app.png" alt-text="Screenshot shows the option to select upload an app in Teams manage your apps.":::
+    :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/upload-app.png" alt-text="Screenshot shows the option to select upload an app in Teams manage your apps.":::
 
 1. Check if you can see the option **Upload a custom app** as you can see in the following image:
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/upload-custom-app.png" alt-text="Screenshot shows the option to select upload a custom apps.":::
+    :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/upload-custom-app.png" alt-text="Screenshot shows the option to select upload a custom apps.":::
 
 </details>
 
@@ -142,7 +142,7 @@ If you have admin rights, you can enable custom app upload:
 
   1. Select the :::image type="icon" source="images/showall icon-v4.png" border="false":::icon > **Teams**.
 
-       :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/m365-admin-center.png" alt-text="Screenshot shows the option to select Teams under Admin centers.":::
+       :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/m365-admin-center.png" alt-text="Screenshot shows the option to select Teams under Admin centers.":::
 
      > [!Note]
      > It can take up to 24 hours for the Teams option to appear. You can [upload your custom app to a Teams environment](/microsoftteams/upload-custom-apps) for testing and validation.
@@ -150,7 +150,7 @@ If you have admin rights, you can enable custom app upload:
   1. Sign in to Microsoft Teams admin center with your admin credentials.
   1. Select the :::image type="icon" source="images/showall icon-v4.png" border="false"::: icon > **Teams apps** > **Setup policies**.
 
-     :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/m365-admin-setup-policies.png" alt-text="Screenshot shows the option to select setup policies.":::
+     :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/m365-admin-setup-policies.png" alt-text="Screenshot shows the option to select setup policies.":::
 
   1. Select **Global (Org-wide default)**.
 

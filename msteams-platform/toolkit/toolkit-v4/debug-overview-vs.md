@@ -35,28 +35,28 @@ Agents Toolkit automates the local debugging process for the following key featu
 
   The following image shows the toggle breakpoints:
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-localdebug-toggle-breakpoint.png" alt-text="Screenshot shows the local debug toggle breakpoints." lightbox="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-localdebug-toggle-breakpoint.png":::
+    :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/vs-localdebug-toggle-breakpoint.png" alt-text="Screenshot shows the local debug toggle breakpoints." lightbox="../../assets/images/toolkit-v2/toolkit-vs/vs-localdebug-toggle-breakpoint.png":::
 
 * Hot Reload: Select **Hot Reload** to apply your changes in your Teams app when you want to update and save the source code during debugging.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-localdebug-hot-reload.png" alt-text="Screenshot shows the select hot reload icon.":::
+    :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/vs-localdebug-hot-reload.png" alt-text="Screenshot shows the select hot reload icon.":::
 
     To enable auto Hot Reload, select **Hot Reload on File Save** from the dropdown.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-localdebug-hot-reload-filesave.png" alt-text="Screenshot shows the select hot reload on file save.":::
+    :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/vs-localdebug-hot-reload-filesave.png" alt-text="Screenshot shows the select hot reload on file save.":::
   
    > [!Tip]
    > To learn more about the Hot Reload function, see [.NET Hot Reload experience](https://devblogs.microsoft.com/dotnet/introducing-net-hot-reload/).
 
 * Stop debugging: Select **Stop Debugging (Shift+F5)** when the local debug is complete.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-localdebug-Stopdebug.png" alt-text="Screenshot shows the select stop debug icon.":::
+    :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/vs-localdebug-Stopdebug.png" alt-text="Screenshot shows the select stop debug icon.":::
 
 ### Add environment variables
 
 You can add the `environmentVariables` to the `launchSettings.json` file.
 
-:::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-localdebug-environment-variables.png" alt-text="Screenshot shows the add custom environment variables.":::
+:::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/vs-localdebug-environment-variables.png" alt-text="Screenshot shows the add custom environment variables.":::
 
 ### Launch Teams app as a web app
 
@@ -66,11 +66,11 @@ You can launch Teams app as a web app instead of running the app in Teams client
 
 1. Remove the `launchUrl` property.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-localdebug-launch-teamsapp-webapp.png" alt-text="Screenshot shows the launch teams as a web app by removing launchurl." lightbox="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-localdebug-launch-teamsapp-webapp.png":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/vs-localdebug-launch-teamsapp-webapp.png" alt-text="Screenshot shows the launch teams as a web app by removing launchurl." lightbox="../../assets/images/toolkit-v2/toolkit-vs/vs-localdebug-launch-teamsapp-webapp.png":::
 
 1. Right-click on **Solution** (in this scenario the project name is MyTeamsApp1) and select **Properties**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-localdebug-solution-properties.png" alt-text="Screenshot shows the right click solution and select properties." lightbox="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-localdebug-solution-properties.png":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/vs-localdebug-solution-properties.png" alt-text="Screenshot shows the right click solution and select properties." lightbox="../../assets/images/toolkit-v2/toolkit-vs/vs-localdebug-solution-properties.png":::
 
    A solution property pages dialog box appears.
 
@@ -78,7 +78,7 @@ You can launch Teams app as a web app instead of running the app in Teams client
 1. Clear the **Deploy** checkbox.
 1. Select **OK**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-localdebug-disable-deploy.png" alt-text="Screenshot shows the uncheck deploy in configuration properties." lightbox="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-localdebug-disable-deploy.png":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/vs-localdebug-disable-deploy.png" alt-text="Screenshot shows the uncheck deploy in configuration properties." lightbox="../../assets/images/toolkit-v2/toolkit-vs/vs-localdebug-disable-deploy.png":::
 
 ## Next
 

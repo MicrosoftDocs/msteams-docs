@@ -56,7 +56,7 @@ items:
 
     1. Open Visual Studio Code.
     
-    1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
+    1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="../msteams-platform/assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
 
     1. Select **Create a New App**.
 
@@ -107,7 +107,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/my-notification-bot.png" alt-text="Screenshot showing the app created.":::
   
-    1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code **Activity Bar**.
+    1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code **Activity Bar**.
 
     1. Select **Debug in Teams (Edge)** or **Debug in Teams (Chrome)** from the dropdown list.
 
@@ -234,7 +234,7 @@ items:
             > [!NOTE]
             > It's required to use your own storage for production environment. If storage isn't provided, default local file storage is considered.
 
-    1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code sidebar.
+    1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code sidebar.
 
     1. Select **Debug in Teams (Edge)** or **Debug in Teams (Chrome)** from the dropdown list.
 
@@ -288,7 +288,7 @@ items:
 
     1. Open Visual Studio Code.
     1. Open the project folder where you created the notification bot app.
-    1. Select the Microsoft 365 Agents Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
+    1. Select the Microsoft 365 Agents Toolkit  :::image type="icon" source="../msteams-platform/assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the sidebar.
     1. Select **Sign in to Azure** using your credentials.
 
         > [!TIP]
@@ -309,7 +309,7 @@ items:
 
     # [Visual Studio Code](#tab/vscode)
 
-    1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
+    1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="~/assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
     1. Select **Provision** under **LIFECYCLE**.
 

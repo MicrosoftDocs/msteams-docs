@@ -688,7 +688,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
 Blazor lets you build interactive web UIs using C#, instead of JavaScript. You can create a tab app and a bot app  with Blazor and the latest version of Visual Studio.
 
-:::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app.png" alt-text="Screenshot of the Blazor app displaying the tab, Bot, and Message Extension output after the step-by-step Blazor guide is successfully completed.":::
+:::image type="content" source="~/assets/images/toolkit-v2/blazor/your-blazor-helloworld-app.png" alt-text="Screenshot of the Blazor app displaying the tab, Bot, and Message Extension output after the step-by-step Blazor guide is successfully completed.":::
 
 > [!NOTE]
 > Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) doesn't support the message extension capability.
@@ -720,7 +720,7 @@ To install the Agents Toolkit extension:
 1. Open VisualStudioSetup file (`.exe`) from your download folder.
 1. Select **Continue** in the **Visual Studio Installer** page to configure your installation.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/visual-studio-installer.PNG" alt-text="Screenshot of Visual Studio Installer with continue options highlighted in red.":::
+    :::image type="content" source="../../assets/images/toolkit-v2/blazor/visual-studio-installer.PNG" alt-text="Screenshot of Visual Studio Installer with continue options highlighted in red.":::
 
 1. Select **ASP.NET and web development** under **Workloads**.
 
@@ -728,7 +728,7 @@ To install the Agents Toolkit extension:
 
 1. Select **Install**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs.install.PNG" alt-text="Screenshot of Visual Studio Enterprise Preview with the option Asp.NET, web development, and Microsoft Teams development tools under installation details and install highlighted in red.":::
+    :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/vs.install.PNG" alt-text="Screenshot of Visual Studio Enterprise Preview with the option Asp.NET, web development, and Microsoft Teams development tools under installation details and install highlighted in red.":::
 
 Your Visual Studio is installed in a few minutes.
 
@@ -779,7 +779,7 @@ Verify if you can upload a custom app in Teams:
 1. Select **Manage your apps**.
 1. Select **Upload a custom app**. If you see Upload a custom app option, custom app upload is enabled.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/upload-custom-app.PNG" alt-text="Screenshot shows the option to upload a custom app in Teams.":::
+    :::image type="content" source="../../assets/images/toolkit-v2/blazor/upload-custom-app.PNG" alt-text="Screenshot shows the option to upload a custom app in Teams.":::
 
     > [!NOTE]
     > Contact your Teams administrator, if you don't find the option to upload a custom app.
@@ -813,7 +813,7 @@ Now you've got all tools and set up your accounts. Next, let's set up your devel
 
 Start Teams app development by creating your first app. This app uses the tab capability.
 
-:::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/your-blazor-helloworld-app1.png" alt-text="Screenshot of Blazor app displaying the final output of tab app after the step-by-step guide is successfully completed.":::
+:::image type="content" source="~/assets/images/toolkit-v2/blazor/your-blazor-helloworld-app1.png" alt-text="Screenshot of Blazor app displaying the final output of tab app after the step-by-step guide is successfully completed.":::
 
 This tutorial walks you through the steps to create, run, and deploy your first Teams app using .NET/Blazor.
 
@@ -836,7 +836,7 @@ Use Agents Toolkit to create your first tab project. The toolkit takes you throu
 
 1. Select **Create a new project**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/vs-select-project.png" alt-text="Screenshot of Visual Studio with Create a new project option highlighted in red for Blazor app.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/blazor/vs-select-project.png" alt-text="Screenshot of Visual Studio with Create a new project option highlighted in red for Blazor app.":::
 
    The **Create a new project** page appears.
 
@@ -850,7 +850,7 @@ Use Agents Toolkit to create your first tab project. The toolkit takes you throu
 
    1. Select **Next**.
 
-      :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/vs-select-teams-app.png" alt-text="Screenshot of Create a new project with Next option highlighted in red for Blazor app creation." lightbox="../../assets/images/teams-toolkit-v2/blazor/vs-select-teams-app.png":::
+      :::image type="content" source="../../assets/images/toolkit-v2/blazor/vs-select-teams-app.png" alt-text="Screenshot of Create a new project with Next option highlighted in red for Blazor app creation." lightbox="../../assets/images/toolkit-v2/blazor/vs-select-teams-app.png":::
 
       The **Configure your new project** page appears.
 
@@ -871,7 +871,7 @@ Use Agents Toolkit to create your first tab project. The toolkit takes you throu
 
    1. Select **Create**.
 
-      :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-new-project.PNG" alt-text="Screenshot shows the screen to configure your new project in visual studio."lightbox="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-new-project.PNG":::
+      :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/configure-new-project.PNG" alt-text="Screenshot shows the screen to configure your new project in visual studio."lightbox="../../assets/images/toolkit-v2/blazor-vs-preview2/configure-new-project.PNG":::
 
       The **Create a new Teams application** page appears.
 
@@ -883,11 +883,11 @@ Use Agents Toolkit to create your first tab project. The toolkit takes you throu
 
    1. Select **Create**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/first-tab/create-tab.png" alt-text="Screenshot shows the page to create a new Teams tab application.":::
+    :::image type="content" source="../../assets/images/toolkit-v2/first-tab/create-tab.png" alt-text="Screenshot shows the page to create a new Teams tab application.":::
 
 Your Teams tab app is created in few seconds.
 
-:::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/vs-tab-app.png" alt-text="Screenshot shows tips to get started while building your app in visual studio."lightbox="../../assets/images/teams-toolkit-v2/blazor/vs-tab-app.png":::
+:::image type="content" source="../../assets/images/toolkit-v2/blazor/vs-tab-app.png" alt-text="Screenshot shows tips to get started while building your app in visual studio."lightbox="../../assets/images/toolkit-v2/blazor/vs-tab-app.png":::
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+your+tab+project&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-channel-group-tab%3Ftabs%3Dvs%26pivots%3Dblazor-app%23create-your-tab-project&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-channel-group-tab.md&documentVersionIndependentId=ee36a237-40e1-cf4e-ebde-229c06854171&platformId=08d6a9b2-2d15-57d5-557c-cded5d0fa303&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
@@ -903,7 +903,7 @@ Watch this short recap for creating a Teams tab app.
 
 After project creation, you've the components to build a basic personal app. You can view the project directory structure in the **Solution Explorer** pane of the Visual Studio.
 
-:::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/blazor-app-solution-explorer_1.png" alt-text="Screenshot shows the solution explorer displaying the components to build a basic personal app in visual studio.":::
+:::image type="content" source="../../assets/images/toolkit-v2/blazor/blazor-app-solution-explorer_1.png" alt-text="Screenshot shows the solution explorer displaying the components to build a basic personal app in visual studio.":::
 
 Agents Toolkit creates a scaffolding for your project based on the capabilities you selected. Among other files, Agents Toolkit maintains:
 
@@ -926,11 +926,11 @@ To build and run your app:
 
 1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Select Microsoft 365 Account**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png" alt-text="Screenshot shows how to select the option to Select Microsoft 365 Account for your project in visual studio."lightbox="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png":::
+    :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png" alt-text="Screenshot shows how to select the option to Select Microsoft 365 Account for your project in visual studio."lightbox="../../assets/images/toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png":::
 
 1. Select your Microsoft 365 account or **Add an account** to sign in.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/M365-account_1.png" alt-text="Screenshot shows the option to select Microsoft 365 account.":::
+    :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/M365-account_1.png" alt-text="Screenshot shows the option to select Microsoft 365 account.":::
 
 1. Select **Debug** > **Start Debugging** or select **F5** to run your app in debug mode.
     <!-- markdownlint-disable MD033 -->
@@ -949,21 +949,21 @@ To build and run your app:
 
 1. Install the self-signed SSL certificate for local debugging, if requested.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot shows the option to select yes for a prompted security warning.":::
+    :::image type="content" source="../../assets/images/toolkit-v2/ssl-prompt.png" alt-text="Screenshot shows the option to select yes for a prompted security warning.":::
 
     Teams is loaded in a web browser.
 
 1. Select **Add** to install the app to Teams.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-add-app_2.png" alt-text="Screenshot of Blazor app installation with the Add option highlighted.":::
+    :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/blazor-add-app_2.png" alt-text="Screenshot of Blazor app installation with the Add option highlighted.":::
 
 1. Search and select the required scope or select a channel or chat from the list, and move through the dialog to select **Go**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-add-scope.png" alt-text="Screenshot of Blazor app with shared scope options.":::
+    :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/blazor-add-scope.png" alt-text="Screenshot of Blazor app with shared scope options.":::
 
     Congratulations, your first tab app is running in your local environment!
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/app-local-run.png" alt-text="Screenshot shows your tab app is running in your local environment.":::
+    :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/app-local-run.png" alt-text="Screenshot shows your tab app is running in your local environment.":::
 
 1. Move through the page to view the user details.
 
@@ -971,15 +971,15 @@ To build and run your app:
 
     The app requests permission to grant access for displaying user details.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/authorize-user-info_1.png" alt-text="Screenshot shows the option to authorize user details in your tab app.":::
+    :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/authorize-user-info_1.png" alt-text="Screenshot shows the option to authorize user details in your tab app.":::
 
 1. Select **Accept** to let your app access user details.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/ms-graph-permission_1.png" alt-text="Screenshot shows the option to accept the permission requested.":::
+    :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/ms-graph-permission_1.png" alt-text="Screenshot shows the option to accept the permission requested.":::
 
     Your photograph and details appear in your channel tab.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/tab-user-info_1.png" alt-text="Screenshot of your channel Tab displaying basic information":::
+    :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/tab-user-info_1.png" alt-text="Screenshot of your channel Tab displaying basic information":::
 
     You can do normal debugging activities, such as setting breakpoints, as if it were any other web application. The app supports hot reloading. If you change any file within the project, the page is reloaded.
 
@@ -1010,7 +1010,7 @@ You've learned to create, build, and run Teams app with tab capability. The foll
 
 1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Provision in the Cloud**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-provision_1.png" alt-text="Screenshot shows how to select provision in the cloud options for the project in visual studio."lightbox="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-provision_1.png":::
+    :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/vs-build-provision_1.png" alt-text="Screenshot shows how to select provision in the cloud options for the project in visual studio."lightbox="../../assets/images/toolkit-v2/blazor-vs-preview2/vs-build-provision_1.png":::
 
 1. Enter the subscription and resource group details in the **Provision** dialog:
    1. Select the subscription name from  **Subscription name** dropdown list.
@@ -1018,29 +1018,29 @@ You've learned to create, build, and run Teams app with tab capability. The foll
    1. Select your **Region**, if new resource group is created.
    1. Select **Provision**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/select-subscription.PNG" alt-text="Screenshot shows the provision dialog to select the subscription, Azure account, and resource group."lightbox="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/select-subscription.PNG":::
+    :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/select-subscription.PNG" alt-text="Screenshot shows the provision dialog to select the subscription, Azure account, and resource group."lightbox="../../assets/images/toolkit-v2/blazor-vs-preview2/select-subscription.PNG":::
 
    Provision warning displays.
 
 1. Select **Provision**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/provision-warning.PNG" alt-text="Screenshot shows the option to select provision in the prompted Agents Toolkit warning.":::
+    :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/provision-warning.PNG" alt-text="Screenshot shows the option to select provision in the prompted Agents Toolkit warning.":::
 
    It takes a few minutes for your resource group to provision in the cloud.
 
 1. After the provision is complete, select **OK**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/provision-complete.png" alt-text="Screenshot shows that your app is successfully provisioned in the cloud.":::
+    :::image type="content" source="../../assets/images/toolkit-v2/provision-complete.png" alt-text="Screenshot shows that your app is successfully provisioned in the cloud.":::
 
 1. Select **View Provisioned Resources** to view on Azure portal.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/view-resource.PNG" alt-text="Screenshot shows the option to select view provisioned resources in Agents Toolkit info dialog box.":::
+    :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/view-resource.PNG" alt-text="Screenshot shows the option to select view provisioned resources in Agents Toolkit info dialog box.":::
 
 1. Sign in to your Azure portal account on sign-in prompt.
 
     Your app-dev-rg appears.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/app-dev-rg-azure.PNG" alt-text="Screenshot shows your Blazor app displaying the resources provisioned in the Azure portal.":::
+    :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/app-dev-rg-azure.PNG" alt-text="Screenshot shows your Blazor app displaying the resources provisioned in the Azure portal.":::
 
     Your resources are provisioned in the Azure portal!
 
@@ -1051,11 +1051,11 @@ You've learned to create, build, and run Teams app with tab capability. The foll
 
 1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Deploy to the Cloud**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-deploytocloud_1.png" alt-text="Screenshot shows how to select the option to deploy to the cloud for your project in visual studio. "lightbox="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-deploytocloud_1.png":::
+    :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/vs-build-deploytocloud_1.png" alt-text="Screenshot shows how to select the option to deploy to the cloud for your project in visual studio. "lightbox="../../assets/images/toolkit-v2/blazor-vs-preview2/vs-build-deploytocloud_1.png":::
 
 1. Select **OK**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/deploy-success.PNG" alt-text="Screenshot shows OK option to select when your Blazor app is successfully deployed to the cloud.":::
+    :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/deploy-success.PNG" alt-text="Screenshot shows OK option to select when your Blazor app is successfully deployed to the cloud.":::
 
     Your tab app is successfully deployed to the cloud!
 
@@ -1063,35 +1063,35 @@ You've learned to create, build, and run Teams app with tab capability. The foll
 
 1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Preview in Teams**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-preview_1.png" alt-text="Screenshot shows how to select preview in Teams options for your project in visual studio."lightbox="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-preview_1.png":::
+    :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/vs-build-preview_1.png" alt-text="Screenshot shows how to select preview in Teams options for your project in visual studio."lightbox="../../assets/images/toolkit-v2/blazor-vs-preview2/vs-build-preview_1.png":::
 
 1. Select **Add** to install the app to Teams.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-add-app_2.png" alt-text="Screenshot of the Blazor app installation with the Add option highlighted.":::
+    :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/blazor-add-app_2.png" alt-text="Screenshot of the Blazor app installation with the Add option highlighted.":::
 
 1. Search and select the required scope or select a channel or chat from the list, and move through the dialog to select **Go**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-add-scope.png" alt-text="Screenshot of the Blazor app with chat or channel scope options.":::
+    :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/blazor-add-scope.png" alt-text="Screenshot of the Blazor app with chat or channel scope options.":::
 
     Congratulations, your first tab app is running in your Azure environment!
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-tab-app-azure.PNG" alt-text="Screenshot shows that your app is running in your Azure environment.":::
+    :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/blazor-tab-app-azure.PNG" alt-text="Screenshot shows that your app is running in your Azure environment.":::
 
 1. Move through the page to view the user details.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/authorize-user-info.png" alt-text="Screenshot shows the authorize option for user's profile photo under personal tab.":::
+    :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/authorize-user-info.png" alt-text="Screenshot shows the authorize option for user's profile photo under personal tab.":::
 
 1. Select **Authorize** to let your app retrieve user details using Microsoft Graph.
 
     The app requests permission to grant access for displaying user details.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/ms-graph-permission_1.png" alt-text="Screenshot shows the accept option for permissions requested.":::
+    :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/ms-graph-permission_1.png" alt-text="Screenshot shows the accept option for permissions requested.":::
 
 1. Select **Accept** to let your app access user details.
 
     Your photograph and details appear in your **Personal Tab**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/azure-user-info.png" alt-text="Screenshot shows your personal tab displaying basic information.":::
+    :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/azure-user-info.png" alt-text="Screenshot shows your personal tab displaying basic information.":::
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+preview+your+tab+app+in+Teams&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-channel-group-tab%3Ftabs%3Dvs%26pivots%3Dblazor-app%23to-preview-your-tab-app-in-teams&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-channel-group-tab.md&documentVersionIndependentId=ee36a237-40e1-cf4e-ebde-229c06854171&platformId=08d6a9b2-2d15-57d5-557c-cded5d0fa303&platformId=08d6a9b2-2d15-57d5-557c-cded5d0fa303&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
