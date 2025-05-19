@@ -5,6 +5,7 @@ description: Learn to add link unfurling with Developer Portal and messaging ext
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
+ms.owner: slamba
 ms.date: 11/06/2024
 ---
 # Link unfurling

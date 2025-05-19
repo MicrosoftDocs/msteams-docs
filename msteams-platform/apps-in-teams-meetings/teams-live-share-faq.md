@@ -5,6 +5,7 @@ description: Learn more about Live Share SDK frequently asked questions related 
 ms.topic: overview
 ms.localizationpriority: high
 ms.author: surbhigupta
+ms.owner: ryanbliss
 ms.date: 01/23/2025
 ---
 

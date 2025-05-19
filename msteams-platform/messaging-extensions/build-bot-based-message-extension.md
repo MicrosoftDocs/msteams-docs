@@ -5,6 +5,7 @@ description: Learn about Bot-based message extension using Bot Framework to inte
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
+ms.owner: slamba
 ms.date: 09/16/2024
 ---
 

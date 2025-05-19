@@ -13,6 +13,7 @@ An app package is a file format that has the required resources to install and r
 
 * **[App manifest](#app-manifest)**: Describes how your app is configured, including its capabilities, required resources, and other important attributes.
 * **[App icons](#app-icons)**: Each package requires a color and outline icon for your app.
+* **[Custom activity icons](/graph/teams-send-activityfeednotifications?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json&tabs=desktop%2Chttp#custom-activity-icons-in-activity-feed-notifications)**: Tailor-made icons that you can use in activity feed notifications.
 
 To publish your Microsoft Teams app, you need to zip the files in the app package folder and provide a suitable name.
 
@@ -58,9 +59,6 @@ For your app to pass Teams Store review, these icons must meet the following siz
 
 * **Outlook and Microsoft 365 (Preview)**: You can specify a [32x32 color icon](~/resources/schema/manifest-schema-dev-preview.md#icons) with a transparent background to ensure a consistent appearance when your app runs in Outlook and Microsoft 365. If not specified, a scaled down [color icon](#color-icon) with rounded corners (and in some cases, opaque background) is used, which may not share the same look and feel of the host environment.
 
-  > [!NOTE]
-  > 32x32 color icon is available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
-
   :::image type="content" source="../../assets/images/icons/design-outline-icon.png" alt-text="Screenshot shows the design guidance of an outline and 32x32 color icon.":::
 
 |Microsoft 365 host application |Scenario  | Required|
@@ -77,9 +75,12 @@ An outline icon displays in two scenarios:
 
   Follow these specifications for the outline icon design:
 
-   * Ensure that the outline icon size is 32x32 pixels.
-   * The icon must be either white with a transparent background or transparent with a white background. No other colors are allowed.
-   * The outline icon mustn't contain any additional padding around the symbol.
+  * The size of icon must be 32x32 pixels.
+  * The icon must be enterprise-safe.
+  * The icon must be either white with a transparent background or transparent with a white background. No other colors are allowed.
+  * The outline icon mustn't contain any additional padding around the symbol.
+  * The icon can't be random or irrelevant and needs to match the information in the notification.
+  * The icon must be designed with good accessibility.
 
 ### Best practices
 

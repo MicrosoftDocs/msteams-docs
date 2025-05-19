@@ -4,6 +4,7 @@ description: Learn about sending notifications using a bot app
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
+ms.owner: angovil
 ms.date: 10/03/2024
 ---
 
@@ -22,7 +23,7 @@ By integrating notification capabilities, bots can effectively communicate with 
 
 ## Interactive notifications
 
-Microsoft Teams Toolkit enables you to build applications that capture events and send them as interactive notifications to a personal, group chat, or a channel in Microsoft Teams. You can send notifications as plain text or [Adaptive Cards](../task-modules-and-cards/cards/cards-reference.md). The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by HTTP post request.
+Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) enables you to build applications that capture events and send them as interactive notifications to a personal, group chat, or a channel in Microsoft Teams. You can send notifications as plain text or [Adaptive Cards](../task-modules-and-cards/cards/cards-reference.md). The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by HTTP post request.
 
 The app template is built using the TeamsFx SDK, which provides a simple set of functions over Microsoft Bot Framework to implement your requirement. For example, a travel agency builds an app in Teams for their users to keep them up to date with the weather forecast. In the following flowchart, a Teams app notifies about the weather forecast to the users using an Adaptive Card:
 
@@ -137,7 +138,7 @@ You can customize the following triggers:
     - Add timer trigger(s) from widely used npm packages, such as [cron](https://www.npmjs.com/package/cron), [node-schedule](https://www.npmjs.com/package/node-schedule), or from other packages.
 
     > [!NOTE]
-    > By default Teams Toolkit scaffolds a single `restify` entry point in `src/index.js`.
+    > By default Agents Toolkit scaffolds a single `restify` entry point in `src/index.js`.
 
 - Azure Functions based notification:
 
@@ -484,7 +485,7 @@ There can be more authentication or authorization solutions for an API, you can 
 
 ### Connect to existing APIs
 
-If you don't have the required SDK and want to invoke external APIs in your code, the **Teams: Connect to an API** command in Microsoft Visual Studio Code Teams Toolkit extension, or the  **teamsfx add api-connection** command in TeamsFx CLI can be used to bootstrap code to call target APIs. For more information, see [integrate existing third-party APIs](../toolkit/add-API-connection.md).
+If you don't have the required SDK and want to invoke external APIs in your code, the **Microsoft 365 Agents: Connect to an API** command in Agents Toolkit extension for Visual Studio Code, or the  **atk add api-connection** command in Microsoft 365 Agents Toolkit CLI (previously known as TeamsFx CLI) can be used to bootstrap code to call target APIs. For more information, see [integrate existing third-party APIs](../toolkit/add-API-connection.md).
 
 #### Teams bot application or Teams Incoming Webhook
 

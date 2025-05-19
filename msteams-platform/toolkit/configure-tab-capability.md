@@ -2,7 +2,7 @@
 title: Configure Tab Capability
 author: surbhigupta
 description: Learn how to configure the tab capability within a Teams app with the Teams Toolkit for Visual Studio Code.
-ms.author: v-bvishnu
+ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 12/17/2024
@@ -79,7 +79,7 @@ For more information, see [sample app](https://github.com/OfficeDev/TeamsFx-Samp
        |   |-- package.json
        |-- index.ts        <!--your current source code-->
        |-- package.json
-       |-- teamsapp.yml
+       |-- m365agents.yml
    ```
 
 1. Reorganize the folder structure as follows:
@@ -94,10 +94,10 @@ For more information, see [sample app](https://github.com/OfficeDev/TeamsFx-Samp
        |-- bot/            <!--move your current source code to a new sub folder-->
        |   |-- index.ts
        |   |-- package.json
-       |-- teamsapp.yml
+       |-- m365agents.yml
    ```
 
-1. Update the following code in `teamsapp.yml` and `teamsapp.local.yml` files to align with the folder structure:
+1. Update the following code in `m365agents.yml` and `m365agents.local.yml` files to align with the folder structure:
 
    ```yaml
        deploy:
@@ -107,6 +107,7 @@ For more information, see [sample app](https://github.com/OfficeDev/TeamsFx-Samp
              args: install --no-audit
              workingDirectory: ./bot
    ```
+
 1. To configure the debug profile for your tab project, add the following code to the `tasks.json` file:
 
    ```json
@@ -167,7 +168,7 @@ For more information, see [sample app](https://github.com/OfficeDev/TeamsFx-Samp
 
    For more information on how to configure the debug profile, see [sample app](https://github.com/OfficeDev/teams-toolkit-samples/tree/dev/hello-world-bot-with-tab/.vscode).
 
-1. To enable your tab project to work with Teams Toolkit, add the following actions to the `teamsapp.local.yml` file:
+1. To enable your tab project to work with Teams Toolkit, add the following actions to the `m365agents.local.yml` file:
 
    ```yaml
    provision:
@@ -252,7 +253,7 @@ To create a server-side tab app, you don't need to update your bicep files or Az
    }
    ```
 
-1. To host your tab app in Azure Static Web Apps, define the `azureStaticWebApps/getDeploymentToken` action in your `teamsapp.yml` file. The action relies on the `AZURE_STATIC_WEB_APPS_RESOURCE_ID`, an output of the bicep deployments. Add the following code after the `arm/deploy` action:
+1. To host your tab app in Azure Static Web Apps, define the `azureStaticWebApps/getDeploymentToken` action in your `m365agents.yml` file. The action relies on the `AZURE_STATIC_WEB_APPS_RESOURCE_ID`, an output of the bicep deployments. Add the following code after the `arm/deploy` action:
 
    ```yaml
     provision:
@@ -272,7 +273,7 @@ To create a server-side tab app, you don't need to update your bicep files or Az
 
 1. Enter `Teams: Provision` command to apply the bicep to Azure.
 
-1. To automate the build and deployment of your tab app, add the following `build` and `deploy` actions to your `teamsapp.yml` file:
+1. To automate the build and deployment of your tab app, add the following `build` and `deploy` actions to your `m365agents.yml` file:
 
    ```yaml
      - uses: cli/runNpmCommand # Run npm command
