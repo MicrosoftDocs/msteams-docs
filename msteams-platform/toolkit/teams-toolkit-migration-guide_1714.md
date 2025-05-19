@@ -1,28 +1,37 @@
 ---
-title: Migrate Teams Toolkit project to 17.14+ version
+title: Migrate project from 17.10-17.13 to 17.14+
 author: huihuiwu
-description: This guide provides the steps to migrate from scaffolded template to the new project structure in Microsoft Teams using Teams Toolkit.
+description: This guide provides the steps to migrate scaffolded project from Microsoft Teams template using Teams Toolkit in VS 17.13 or lower version to Microsoft 365 Agents template using Microsoft 365 Agents Toolkit in VS 17.14 or higher version."
 ms.author: huihuiwu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 13/05/2025
 ---
 
-# Migrate Teams Toolkit project from to 17.14+ version
+# Migrate projects from VS 17.13 or lower version to VS 17.14+ version
 
-One-click F5 has been implemented in Teams Toolkit for Visual Studio v17.14 to enhance local debug experience and reduce F5 failure rate. The new debug experience introduces two debug profile types.
+Teams Toolkit has significant [updates in VS 17.14](https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-notes#:~:text=Microsoft%20365%20Agents-,Toolkit,-Preserve%20font%20preferences). If you are working on VS versions from 17.10 to 17.13, and now you want to upgrade to 17.14, you may want to migrate your projects to make it compatible with VS 17.14. The key updates that have impacted this migration are:
 
-- **Microsoft Teams (browser)**: Default debug profile which will run prepare Teams App dependencies step to update if there're any changes before launching Teams
-- **Microsoft Teams (browser) (skip update app)**: A quick-to-launch debug profile which will skip prepare Teams App dependencies step and launch Teams directly
+### Teams Toolkit evolves to Microsoft 365 Agents Toolkit
 
-If you're debugging your project for the first time or after making some modifications, you should choose the `Microsoft Teams (browser)` debug profile. If you have prepared Teams App dependencies before and want a quick launch without changes, you should choose the `Microsoft Teams (browser) (skip update app)` debug profile.
+Teams Toolkit changes it's name to Microsoft 365 Agents Toolkit, reflecting our broader commitment to support development across Microsoft 365 Copilot, Microsoft Teams, and Microsoft 365 apps. This new name better represents our expanded capabilities and focus on enabling developers to build intelligent agents and apps across the Microsoft 365 ecosystem.
+
+### Enable one-click debug experience
+
+In previous versions of Teams Toolkit, when users debug any solution generated, they needed to use the command `Prepare Teams app dependency` before debugging the project. This command triggers the toolkit to create essential resources for debugging, such as registering required app ID or updating the app manifest.
+
+To enhance the debugging experience and make it easier and quicker, we have removed this step and enabled one-click debugging experience. Now, you can directly click the debug button without any preparation steps. However, if you have made edits to your app manifest between two debug events and need to update your app, there remains an option to do that. The new debug experience introduces two debug types, offered by selecting from different debug profiles:
+
+- **Debug with updating app**: Select the default profile `[Your Target Launch Platform] (browser)` that will run prepare Teams App dependencies step in debugging. This is usually used when you are in the first time to run the project or you have made edits to your app manifest before launching app again.
+  
+- **Debug without updating app**: Choose the second profile `[Your Target Launch Platform] (browser) (skip update app)` to skip prepare Teams App dependencies step, make a quick launch to your target platform directly. This is usually used for a second time to launch the project, when you only made edits to your application but not edit your app manifest.
 
 ## Prerequisites
 
 Before starting the migration process, ensure that you have the following:
 
 * A Teams project with new project structure that is created using Teams Toolkit for Visual Studio 17.13 or earlier version.
-* Visual Studio version 17.14 or later.
+* Visual Studio version 17.14 or later with Microsoft 365 Agents Toolkit installed.
 
 ## Migration process
 
@@ -32,9 +41,9 @@ Perform the following steps to migrate to one-click F5 experience:
 
 2. In `Configuration Manager` window, check the `deploy` stage for M365Agent/TeamsApp project so prepare Teams App dependencies will be executed when deploying.
 
-  :::image type="content" source="../assets/images/teams-toolkit-overview/debug_check_deploy.png" alt-text="Screenshot shows the configuration manager window.":::
+     :::image type="content" source="../assets/images/teams-toolkit-overview/debug_check_deploy.png" alt-text="Screenshot shows the configuration manager window.":::
 
-3. (Optional) Create **Microsoft Teams (browser) (skip update app)** debug profile. You could follow **Microsoft Teams (browser)** debug profile to add following contents:
+3. (Optional) Create **Microsoft Teams (browser) (skip update app)** debug profile. Follow **Microsoft Teams (browser)** debug profile to add following contents:
 
    In `launchSettings.json` under M365Agent/TeamsApp project, add following contents:
 
@@ -45,7 +54,7 @@ Perform the following steps to migrate to one-click F5 experience:
         "launchUrl": "https://teams.microsoft.com/l/app/${{TEAMS_APP_ID}}?installAppPackage=true&webjoin=true&appTenantId=${{TEAMS_APP_TENANT_ID}}&login_hint=${{TEAMSFX_M365_USER_NAME}}"
     },
    ```
-   In `{{solutionName}}.slnLaunch.user` file at the same level as the solution file, add the content according to the files of `launchSettings.json`.
+   In `{{solutionName}}.slnLaunch.user` file at the same level as the solution file, add the content according to the files of `launchSettings.json`:
 
    ```json
     [
@@ -69,18 +78,18 @@ Perform the following steps to migrate to one-click F5 experience:
     ]
    ```
 
-4.  If your project contains debug profile for Microsoft 365 Agents Playground, you'll need to add following environment variable in `launchSettings.json` under M365Agents/TeamsApp project:
+4.  If your project contains debug profile for Microsoft 365 Agents Playground (previously known as Teams App Test Tool), you'll need to add following environment variable in `launchSettings.json` under M365Agents/TeamsApp project:
 
-   ```json
-   "UPDATE_TEAMS_APP": "false"
-   ```
-  An example after updating could be:
-
-   ```json
-    "Microsoft 365 Agents Playground (browser)": {
-      "commandName": "Project",
-      "environmentVariables": { "UPDATE_TEAMS_APP": "false", "DEFAULT_CHANNEL_ID": "emulator" },
-      "launchTestTool": true,
-      "launchUrl": "http://localhost:56150",
-    }
-   ```
+     ```json
+     "UPDATE_TEAMS_APP": "false"
+     ```
+    An example after updating could be:
+  
+     ```json
+      "Microsoft 365 Agents Playground (browser)": {
+        "commandName": "Project",
+        "environmentVariables": { "UPDATE_TEAMS_APP": "false", "DEFAULT_CHANNEL_ID": "emulator" },
+        "launchTestTool": true,
+        "launchUrl": "http://localhost:56150",
+      }
+     ```
