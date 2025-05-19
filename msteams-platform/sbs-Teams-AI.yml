@@ -88,7 +88,7 @@ items:
    You can use the CLI with the `teamsapp` command. Verify that the command is working by running `teamsapp -h`.
 
    > [!div class="nextstepaction"]
-   > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Install%20the%20Teams%20Toolkit%20using%20Command%20line&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-ai%3Ftabs%3Dvscode%252Cviscode%26tutorial-step%3D1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-Teams-AI.yml&documentVersionIndependentId=a4b04961-4df7-4795-362d-03a3a93fdae0&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams%2A%2A)
+   > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Install%20the%20Teams%20Toolkit%20using%20Command%20line&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-ai%3Ftabs%3Dvscode%252Cviscode%26tutorial-step%3D1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-Teams-AI.yml&documentVersionIndependentId=a4b04961-4df7-4795-362d-03a3a93fdae0&platformId=d3049873-be3a-3670-c7fb-d8e2a74fc339&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams%2A%2A)
 
    > [!CAUTION]
    > Before you can run Teamsapp in PowerShell terminals, you must enable the 'remote signed' execution policy for PowerShell.
@@ -134,7 +134,7 @@ items:
    1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
 
    > [!div class="nextstepaction"]
-   > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20a%20free%20Teams%20developer%20tenant%20%28optional%29&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-ai%3Ftabs%3Dvscode%252Cviscode%26tutorial-step%3D1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-Teams-AI.yml&documentVersionIndependentId=a4b04961-4df7-4795-362d-03a3a93fdae0&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams%2A%2A)
+   > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20a%20free%20Teams%20developer%20tenant%20%28optional%29&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-ai%3Ftabs%3Dvscode%252Cviscode%26tutorial-step%3D1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-Teams-AI.yml&documentVersionIndependentId=a4b04961-4df7-4795-362d-03a3a93fdae0&platformId=d3049873-be3a-3670-c7fb-d8e2a74fc339&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams%2A%2A)
    
    ## Get a free Azure account
 
@@ -222,7 +222,7 @@ items:
     
 
     > [!div class="nextstepaction"]
-    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20your%20custom%20engine%20agent%20project%20workspace%20using%20Visual%20Studio%20Code&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-ai%3Ftabs%3Dvscode%252Cviscode%26tutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-Teams-AI.yml&documentVersionIndependentId=a4b04961-4df7-4795-362d-03a3a93fdae0&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams%2A%2A)
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20your%20custom%20engine%20agent%20project%20workspace%20using%20Visual%20Studio%20Code&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-ai%3Ftabs%3Dvscode%252Cviscode%26tutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-Teams-AI.yml&documentVersionIndependentId=a4b04961-4df7-4795-362d-03a3a93fdae0&platformId=d3049873-be3a-3670-c7fb-d8e2a74fc339&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams%2A%2A)
 
        
     <details>
@@ -253,7 +253,7 @@ items:
     After you've answered all questions, your project is created.
 
     > [!div class="nextstepaction"]
-    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20your%20custom%20engine%20agent%20project%20workspace%20using%20Command%20line&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-ai%3Ftabs%3Dvscode%252Cviscode%26tutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-Teams-AI.yml&documentVersionIndependentId=a4b04961-4df7-4795-362d-03a3a93fdae0&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams%2A%2A)
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20your%20custom%20engine%20agent%20project%20workspace%20using%20Command%20line&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-ai%3Ftabs%3Dvscode%252Cviscode%26tutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-Teams-AI.yml&documentVersionIndependentId=a4b04961-4df7-4795-362d-03a3a93fdae0&platformId=d3049873-be3a-3670-c7fb-d8e2a74fc339&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams%2A%2A)
     
     ---
   
@@ -327,7 +327,7 @@ items:
         Now that the development environment is configured, you can create, build, and deploy your first Teams app.
 
     > [!div class="nextstepaction"]
-    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Sign%20in%20to%20your%20Microsoft%20365%20account%20using%20Command%20line&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-ai%3Ftabs%3Dvscode%252Cviscode%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-Teams-AI.yml&documentVersionIndependentId=a4b04961-4df7-4795-362d-03a3a93fdae0&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams%2A%2A)
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Sign%20in%20to%20your%20Microsoft%20365%20account%20using%20Command%20line&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-ai%3Ftabs%3Dvscode%252Cviscode%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-Teams-AI.yml&documentVersionIndependentId=a4b04961-4df7-4795-362d-03a3a93fdae0&platformId=d3049873-be3a-3670-c7fb-d8e2a74fc339&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams%2A%2A)
       
     ---
 
@@ -552,7 +552,7 @@ items:
     This sample uses OpenAI or Azure OpenAI for all its natural language modeling, the user can talk to the custom engine agent in any language of their choosing. The custom engine agent understands and responds appropriately without extra code.
 
     > [!div class="nextstepaction"]
-    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Update%20your%20custom%20engine%20agent%20with%20Teams%20AI%20library%20capabilities&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-ai%3Ftabs%3Dvscode%252Cviscode%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-Teams-AI.yml&documentVersionIndependentId=a4b04961-4df7-4795-362d-03a3a93fdae0&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams%2A%2A)
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Update%20your%20custom%20engine%20agent%20with%20Teams%20AI%20library%20capabilities&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-ai%3Ftabs%3Dvscode%252Cviscode%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-Teams-AI.yml&documentVersionIndependentId=a4b04961-4df7-4795-362d-03a3a93fdae0&platformId=d3049873-be3a-3670-c7fb-d8e2a74fc339&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams%2A%2A)
  
     
     ## Build and run your custom engine agent locally
@@ -608,7 +608,7 @@ items:
         You can type `LightsOn` to start interacting with the custom engine agent.
 
     > [!div class="nextstepaction"]
-    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Build%20and%20run%20your%20custom%20engine%20agent%20locally&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-ai%3Ftabs%3Dvscode%252Cviscode%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-Teams-AI.yml&documentVersionIndependentId=a4b04961-4df7-4795-362d-03a3a93fdae0&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams%2A%2A)
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Build%20and%20run%20your%20custom%20engine%20agent%20locally&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-ai%3Ftabs%3Dvscode%252Cviscode%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-Teams-AI.yml&documentVersionIndependentId=a4b04961-4df7-4795-362d-03a3a93fdae0&platformId=d3049873-be3a-3670-c7fb-d8e2a74fc339&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams%2A%2A)
     
       <!-- markdownlint-disable MD033 -->
       <details>
@@ -730,7 +730,7 @@ items:
         Now, you can use the same process to deploy your custom engine agent to Azure.
 
     > [!div class="nextstepaction"]
-    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Deploy%20your%20app%20to%20Azure%20using%20Visual%20Studio%20Code&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-ai%3Ftabs%3Dvscode%252Cviscode%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-Teams-AI.yml&documentVersionIndependentId=a4b04961-4df7-4795-362d-03a3a93fdae0&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams%2A%2A)
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Deploy%20your%20app%20to%20Azure%20using%20Visual%20Studio%20Code&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-ai%3Ftabs%3Dvscode%252Cviscode%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-Teams-AI.yml&documentVersionIndependentId=a4b04961-4df7-4795-362d-03a3a93fdae0&platformId=d3049873-be3a-3670-c7fb-d8e2a74fc339&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams%2A%2A)
     
     # [Command Line](#tab/cli)
 
@@ -753,7 +753,7 @@ items:
         ```
 
     > [!div class="nextstepaction"]
-    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Deploy%20your%20app%20to%20Azure%20using%20Command%20Line&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-ai%3Ftabs%3Dvscode%252Cviscode%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-Teams-AI.yml&documentVersionIndependentId=a4b04961-4df7-4795-362d-03a3a93fdae0&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams%2A%2A)
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Deploy%20your%20app%20to%20Azure%20using%20Command%20Line&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-ai%3Ftabs%3Dvscode%252Cviscode%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-Teams-AI.yml&documentVersionIndependentId=a4b04961-4df7-4795-362d-03a3a93fdae0&platformId=d3049873-be3a-3670-c7fb-d8e2a74fc339&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams%2A%2A)
 
     ---
 
@@ -778,7 +778,7 @@ items:
         :::image type="content" source="assets/images/bots/ai-concepts-lightbot.png" alt-text="Screenshot shows an example of the chat window in the local machine.":::
 
     > [!div class="nextstepaction"]
-    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Run%20the%20deployed%20app&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-ai%3Ftabs%3Dvscode%252Cviscode%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-Teams-AI.yml&documentVersionIndependentId=a4b04961-4df7-4795-362d-03a3a93fdae0&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams%2A%2A)
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Run%20the%20deployed%20app&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-ai%3Ftabs%3Dvscode%252Cviscode%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-Teams-AI.yml&documentVersionIndependentId=a4b04961-4df7-4795-362d-03a3a93fdae0&platformId=d3049873-be3a-3670-c7fb-d8e2a74fc339&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams%2A%2A)
         
     <!-- markdownlint-disable MD033 -->
     <details>
