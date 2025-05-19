@@ -131,7 +131,7 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
         :::image type="content" source="../assets/images/teams-toolkit-v2/debug/npm-teams-app-test-tool.png" alt-text="Screenshot shows install teams app test tool cli.":::
 
-   1. Use the `teamsapp` command from [Teams Toolkit CLI](Teams-Toolkit-CLI.md) to create your first project. Start from the folder where you want to create the project folder.
+   1. Use the `atk` command from [Teams Toolkit CLI](Teams-Toolkit-CLI.md) to create your first project. Start from the folder where you want to create the project folder.
 
       ```cmd
       teamsapp new   
@@ -152,13 +152,13 @@ Test Tool offers a faster debug experience for bot applications when compared to
    1. Run the following command to start your bot app:
 
       ```cmd
-      npm run dev:teamsapp:playground
+      npm run dev:atk:playground
       ```
 
    1. Run the following command in a separate terminal to launch Teams App Test Tool:
 
       ```cmd
-      npm run dev:teamsapp:launch-playground
+      npm run dev:atk:launch-playground
       ```
 
    # [C#](#tab/clicsharp)

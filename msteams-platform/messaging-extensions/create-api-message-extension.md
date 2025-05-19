@@ -747,10 +747,10 @@ To create an API-based message extension using Teams Toolkit CLI, follow these s
 1. Enter the following command:
 
    ```
-   npm install -g @microsoft/teamsapp-cli
+   npm install -g @microsoft/atk-cli
    ```
 
-1. Type `teamsapp new` in the terminal
+1. Type `atk new` in the terminal
 
 1. Select **Message Extension**.
 
@@ -774,7 +774,7 @@ To create an API-based message extension using Teams Toolkit CLI, follow these s
 
 1. Go to the folder path where your project is created and enter the following command to provision your app in Azure:
 
-   ```teamsapp provision --env dev```
+   ```atk provision --env dev```
 
    Teams Toolkit CLI opens a browser window and requests you to sign in to your Microsoft Account.
 
@@ -784,7 +784,7 @@ To create an API-based message extension using Teams Toolkit CLI, follow these s
 
 1. In the command prompt window, enter the following command to preview your app in Teams:
 
-   ```teamsapp preview --env dev```
+   ```atk preview --env dev```
 
    A new browser window with Teams web client opens. You can add your app to Teams.
 
