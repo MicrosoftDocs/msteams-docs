@@ -1,7 +1,7 @@
 ---
 title: Debug background processes
 author: surbhigupta
-description: In this module, learn how Visual Studio Code and Microsoft 365 Agents Toolkit work during debugging process. Also, learn how to register and configure your Teams app.
+description: Learn how Visual Studio Code and Microsoft 365 Agents Toolkit work during debugging process. Also learn how to register and configure your Teams app.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
@@ -24,9 +24,9 @@ The debugging process workflow is as follows:
 
 ## Validate prerequisites
 
-Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) checks the following prerequisites during the debugging process:
+Microsoft  checks the following prerequisites during the debugging process:
 
-* Agents Toolkit checks if Node.js is installed. If Node.js isn't installed, the debugging terminates.
+* Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) checks if Node.js is installed. If Node.js isn't installed, the debugging terminates.
 * Agents Toolkit checks if Node.js version matches the versions defined in `package.json` file. If the version doesn't match, Agents Toolkit displays a warning message in output channel.
 * Agents Toolkit prompts you to sign in to Microsoft 365 account, if you haven't signed in with your valid credentials.
 * Custom app upload for your developer tenant is turned on to prevent local debug termination.
@@ -69,7 +69,7 @@ Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) checks the foll
 |Tab with Azure functions | Node.js LTS versions 10, 12, **14 (recommended)** |The local debug terminates, if Node.js isn't installed or the version doesn't match the requirement.|
 |Bot | Node.js LTS versions 10, 12, **14 (recommended)**, 16|The local debug terminates, if Node.js isn't installed or the version doesn't match the requirement.|
 |Message extension | Node.js LTS versions 10, 12, **14 (recommended)**, 16 |The local debug terminates, if Node.js isn't installed or the version doesn't match the requirement.|
-|Sign-in to Microsoft 365 account | Microsoft 365 credentials |Agents Toolkit prompts you to sign-in to Microsoft 365 account, if you haven't signed in. |
+|Sign-in to Microsoft 365 account | Microsoft 365 credentials | Agents Toolkit prompts you to sign-in to Microsoft 365 account, if you haven't signed in. |
 |Bot, message extension | Ngrok version 2.3| • If Ngrok isn't installed or the version doesn't match the requirement, Agents Toolkit installs Ngrok NPM package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. </br> • The Ngrok binary is managed by Ngrok NPM package in `/.fx/bin/ngrok/node modules/ngrok/bin`.|
 |Azure functions | Azure Functions Core Tools version 3| • If Azure Functions Core Tools isn't installed or the version doesn't match the requirement, Agents Toolkit installs Azure Functions Core Tools NPM package, azure-functions-core-tools@3 for **Windows** and for **macOs** in  `~/.fx/bin/func`. </br> • The Azure Functions Core Tools NPM package in `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.|
 |Azure functions |.NET Core SDK version|• If .NET Core SDK isn't installed or the version  doesn't match the requirement, the Toolkit installs .NET Core SDK for Windows and macOS in `~/.fx/bin/dotnet`.</br> • For Linux, the local debug terminates.|
@@ -92,7 +92,7 @@ Use the following .NET Core versions:
 
 When you select **Start Debugging (F5)**, Agents Toolkit output channel displays the progress and result after checking the prerequisites.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug/prerequisites-debugcheck.png" alt-text="Screenshot shows the prerequisites check summary.":::
+:::image type="content" source="../assets/images/toolkit-v2/debug/prerequisites-debugcheck.png" alt-text="Screenshot shows the prerequisites check summary.":::
 
 For more information, see [validate prerequisites task](https://aka.ms/teamsfx-tasks/check-prerequisites).
 
@@ -102,11 +102,11 @@ For bot and message extension, Agents Toolkit starts a local tunnel service to m
 
 ## Create the debug resources
 
-Agents Toolkit executes lifecycle `provision` defined in `teamsapp.local.yml` to create Teams app related resources required for debugging. For more information, see [Provision task](https://aka.ms/teamsfx-tasks/provision) and [available actions](https://aka.ms/teamsfx-actions).
+Agents Toolkit executes lifecycle `provision` defined in `m365agents.local.yml` to create Teams app related resources required for debugging. For more information, see [Provision task](https://aka.ms/teamsfx-tasks/provision) and [available actions](https://aka.ms/teamsfx-actions).
 
 ## Build project
 
-Agents Toolkit executes lifecycle `deploy` defined in `teamsapp.local.yml` to build the project. For more information, see [Deploy task](https://aka.ms/teamsfx-tasks/deploy) and [available actions](https://aka.ms/teamsfx-actions).
+Agents Toolkit executes lifecycle `deploy` defined in `m365agents.local.yml` to build the project. For more information, see [Deploy task](https://aka.ms/teamsfx-tasks/deploy) and [available actions](https://aka.ms/teamsfx-actions).
 
 ## Take a tour of your app source code
 
@@ -114,7 +114,7 @@ You can view the project folders and files under **Explorer** in Visual Studio C
 
 | Folder name| Contents| Debug configuration type |
 | --- | --- | --- |
-|  `teamsapp.local.yml` | The main Agents Toolkit project file for debugging. | This file defines the life cycles and actions required for debugging. |
+|  `m365agents.local.yml` | The main Agents Toolkit project file for debugging. | This file defines the life cycles and actions required for debugging. |
 |  `env/.env.local` | Environment variables file for Agents Toolkit project. | The values of each environment variable are consumed or generated during debugging. |
 | `.localConfigs` | Environment variables file for the app code. | The values of each environment variable are generated during debugging. |
 
