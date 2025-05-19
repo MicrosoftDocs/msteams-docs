@@ -270,11 +270,11 @@ The `script` action executes a user-defined script.
 
 ### Customize resource provision
 
-The provision steps are defined in the `teamsapp.yml` file, under the `provision` property. You can add, remove, or update actions to the `provision` property to define the expected actions you want to do during provision.
+The provision steps are defined in the `m365agents.yml` file, under the `provision` property. You can add, remove, or update actions to the `provision` property to define the expected actions you want to do during provision.
 
 #### Reference environment variables in parameter files
 
-Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) supports referencing the values from environment variables in the `teamsapp.yml` file, Teams app manifest, Microsoft Entra app manifest, and Azure parameter files. You can use the syntax `${{ENV_VARIABLE_NAME}}` to reference environment variables.
+Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) supports referencing the values from environment variables in the `m365agents.yml` file, Teams app manifest, Microsoft Entra app manifest, and Azure parameter files. You can use the syntax `${{ENV_VARIABLE_NAME}}` to reference environment variables.
 
 The following example sets the value of environment variable `MY_AZURE_SUBSCRIPTION_ID` to `subscriptionId`:
 
@@ -320,7 +320,7 @@ You can customize your bot or the Teams app by adding environment variables to u
 
 To use a Microsoft Entra app created for your Teams app and to add environment variables to the .env files, follow these steps.
 
-1. Open the `teamsapp.yml` file and find the `aadApp/create` action.
+1. Open the `m365agents.yml` file and find the `aadApp/create` action.
 
 1. Find the environment variable names that store information for Microsoft Entra app in the `writeToEnvironmentFile` property. If you create projects using Agents Toolkit the default  `writeToenvironmentFile` property definition is as follows:
 
@@ -367,7 +367,7 @@ If you don't have a Microsoft Entra app yet or you've one but don't know where t
 
 You can follow the steps to add environment variables to the .env files to use a Microsoft Entra app created for your Teams app.
 
-1. Open the `teamsapp.yml` file and find the `botAadApp/create` action.
+1. Open the `m365agents.yml` file and find the `botAadApp/create` action.
 
 1. Find the environment variable names that store information for Microsoft Entra app in the `writeToEnvironmentFile` property. The default `writeToEnvironmentFile` definition if you create projects using Agents Toolkit is as follows:
 

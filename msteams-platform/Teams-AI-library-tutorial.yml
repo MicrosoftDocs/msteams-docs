@@ -119,7 +119,7 @@ items:
      | --- | --- |
      | `.vscode` | VS Code files for debugging. |
      | `appPackage` | Templates for the Teams application manifest. |
-     | `env` | Name or value pairs are stored in environment files and used by teamsapp.yml to customize the provisioning and deployment rules. |
+     | `env` | Name or value pairs are stored in environment files and used by m365agents.yml to customize the provisioning and deployment rules. |
      | `infra` | Templates for provisioning Azure resources. |
      | `src/`| The source code for the notification Teams application. |
      | `src/index.js`| Sets up the bot app server. |     
@@ -128,9 +128,9 @@ items:
      | `src/prompts/chat/skprompt.txt`| Defines the prompt. |
      | `src/prompts/chat/config.json`| Configures the prompt. |
      | `src/app/app.js`| Handles business logics for the Basic AI Chatbot. |
-     | `teamsapp.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
-     | `teamsapp.local.yml` | This override `teamsapp.yml` with actions that enable local execution and debugging. |
-     | `teamsapp.testtool.yml` | This override `teamsapp.yml` with actions that enable local execution and debugging in Microsoft 365 Agents Playground (previously known as Teams App Test Tool).|
+     | `m365agents.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
+     | `m365agents.local.yml` | This override `m365agents.yml` with actions that enable local execution and debugging. |
+     | `m365agents.playground.yml` | This override `m365agents.yml` with actions that enable local execution and debugging in Microsoft 365 Agents Playground (previously known as Teams App Test Tool).|
 
 - title: Configure your custom engine agent
   durationInMinutes: 1

@@ -70,7 +70,7 @@ The AI chatbot template showcases a bot app, similar to ChatGPT, that responds t
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/ai-chatbot-project-output.png" alt-text="Screenshot shows the ai chatbot created and readme file is available.":::
 
-1. Under **EXPLORER**, go to the **env** > **.env.testtool.user** file.
+1. Under **EXPLORER**, go to the **env** > **.env.playground.user** file.
 
 1. Update the following details:
 
@@ -99,9 +99,9 @@ Test Tool opens the bot in a webpage.
 | `env`        | Environment files.                                   |
 | `infra`      | Templates for provisioning Azure resources.          |
 | `src`        | The source code for the application.                |
-|`teamsapp.yml`| This is the main Agents Toolkit project file. The project file defines two primary things:  Properties and configuration Stage definitions. |
-|`teamsapp.local.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging.|
-|`teamsapp.testtool.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
+|`m365agents.yml`| This is the main Agents Toolkit project file. The project file defines two primary things:  Properties and configuration Stage definitions. |
+|`m365agents.local.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging.|
+|`m365agents.testtool.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
 |`src/index.js`| Sets up the bot app server.|
 |`src/adapter.js`| Sets up the bot adapter.|
 |`src/config.js`| Defines the environment variables.|
@@ -118,9 +118,9 @@ Test Tool opens the bot in a webpage.
 | `env`        | Environment files.                                   |
 | `infra`      | Templates for provisioning Azure resources.          |
 | `src`        | The source code for the application.                 |
-|`teamsapp.yml`| This is the main Agents Toolkit project file. The project file defines two primary things:  Properties and configuration Stage definitions. |
-|`teamsapp.local.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging.|
-|`teamsapp.testtool.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
+|`m365agents.yml`| This is the main Agents Toolkit project file. The project file defines two primary things:  Properties and configuration Stage definitions. |
+|`m365agents.local.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging.|
+|`m365agents.playground.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
 |`src/app.py`| Hosts an aiohttp API server and exports an app module.|
 |`src/bot.py`| Handles business logics for the basic AI chatbot.|
 |`src/config.py`| Defines the environment variables.|

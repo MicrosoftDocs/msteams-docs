@@ -148,10 +148,10 @@ items:
 
     # [Command line](#tab/cli)
 
-    Use the `teamsfx` CLI to create your first project. Start from the folder where you want to create the project folder.
+    Use the `atk' CLI to create your first project. Start from the folder where you want to create the project folder.
 
     ``` bash
-    teamsfx new
+    atk new
     ```
     You can use the CLI to create a new Teams app. The CLI leads you through a series of questions. Every question includes an instruction on answering it.
 
@@ -186,14 +186,14 @@ items:
     | --- | --- |
     | `.vscode` | VSCode files for debugging. |
     | `appPackage` | Templates for the Teams application manifest. |
-    | `env` | Name / value pairs are stored in environment files and used by teamsapp.yml to customize the provisioning and deployment rules. |
+    | `env` | Name / value pairs are stored in environment files and used by m365agents.yml to customize the provisioning and deployment rules. |
     | `infra` | Templates for provisioning Azure resources. |
     | `src/`| The source code for the notification Teams application. |
     | `src/app.js` | Application entry point and `express` handlers for website. |
     | `src/views/hello.html`| A HTML template that is bind to the tab endpoint. |
     | `src/static` | The static assets like CSS and JavaScript files that can be served by the web server. |
-    | `teamsapp.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
-    | `teamsapp.local.yml` | This overrides `teamsapp.yml` with actions that enable local execution and debugging. |
+    | `m365agents.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
+    | `m365agents.local.yml` | This overrides `m365agents.yml` with actions that enable local execution and debugging. |
 
 
 - title: Build and run your first tab app
@@ -232,7 +232,7 @@ items:
     1. Sign in to Microsoft 365 with Microsoft 365 Agents Toolkit CLI (previously known as TeamsFx CLI):
 
         ``` bash
-        teamsfx account login m365
+        atk account login m365
         ```
 
         Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
@@ -240,7 +240,7 @@ items:
     2. Sign in to Azure with Agents Toolkit CLI:
 
         ``` bash
-        teamsfx account login azure
+        atk account login azure
         ```
 
         Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
@@ -372,7 +372,7 @@ items:
     1. Sign in to Microsoft 365 with Agents Toolkit CLI:
 
         ``` bash
-        teamsfx account login m365
+        atk account login m365
         ```
 
         Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
@@ -380,7 +380,7 @@ items:
     2. Sign in to Azure with Agents Toolkit CLI:
 
         ``` bash
-        teamsfx account login azure
+        atk account login azure
         ```
 
         Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.

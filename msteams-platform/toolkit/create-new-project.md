@@ -99,8 +99,8 @@ The following example shows a basic Teams tab app directory structure:
 | `src/app.js` | Application entry point and `express` handlers for website. |
 | `src/views/hello.html`| An HTML template that is bind to the tab endpoint. |
 | `src/static` | The web server can serve static assets such as CSS and JavaScript files. |
-| `teamsapp.yml` | This configuration file defines the Agents Toolkit behavior for provision, deploy, and publish lifecycle. You can customize this file to change the behavior of Agents Toolkit in each lifecycle. |
-| `teamsapp.local.yml` | This overrides teamsapp.yml with actions that enable local execution and debugging. |
+| `m365agents.yml` | This configuration file defines the Agents Toolkit behavior for provision, deploy, and publish lifecycle. You can customize this file to change the behavior of Agents Toolkit in each lifecycle. |
+| `m365agents.local.yml` | This overrides m365agents.yml with actions that enable local execution and debugging. |
 
 > [!NOTE]
 > If you have a bot or message extension app, relevant folders are added to the directory structure.
@@ -128,8 +128,8 @@ The new project folder contains the following content:
 | `appPackage` | The app manifest file and icon files that Teams used to recognize your Teams app. |
 | `env` | Stores different environment parameters. |
 | `infra` | Azure `bicep` template files. Used for deploy your Teams app to Azure. |
-| `teamsapp.yml` | This configuration file defines the Agents Toolkit behavior for provision, deploy, and publish lifecycle. You can customize this file to change the behavior of Agents Toolkit in each lifecycle. |
-| `teamsapp.local.yml` | This overrides teamsapp.yml with actions that enable local execution and debugging. |
+| `m365agents.yml` | This configuration file defines the Agents Toolkit behavior for provision, deploy, and publish lifecycle. You can customize this file to change the behavior of Agents Toolkit in each lifecycle. |
+| `m365agents.local.yml` | This overrides m365agents.yml with actions that enable local execution and debugging. |
 
 The core notification implementation is stored in the **src** folder and it contains:
 

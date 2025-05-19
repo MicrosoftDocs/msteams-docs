@@ -139,10 +139,10 @@ items:
     
     # [Command line](#tab/cli)
 
-    Use the `teamsfx` CLI to create your first project.  Start from the folder where you want to create the project folder.
+    Use the `atk' CLI to create your first project.  Start from the folder where you want to create the project folder.
 
     ``` bash
-    teamsfx new
+    atk new
     ```
 
     The CLI walks through some questions to create the project. Every question includes an instruction on answering it, for example, Use arrow keys to select an option. When you've answered the question, select **Enter** to confirm it.
@@ -218,7 +218,7 @@ items:
        Sign in to Microsoft 365 with Microsoft 365 Agents Toolkit CLI (previously known as TeamsFx CLI).
 
     ``` bash
-        teamsfx account login m365
+        atk account login m365
     ```
 
 
@@ -422,16 +422,16 @@ items:
 
     In your terminal window:
 
-    1. Run `teamsfx provision`.
+    1. Run `atk provision`.
 
       ``` bash
-      teamsfx provision
+      atk provision
       ```
 
-    1. Run `teamsfx deploy`.
+    1. Run `atk deploy`.
 
       ``` bash
-      teamsfx deploy
+      atk deploy
       ```
 
     1. When prompted, select **Build SharePoint Package**.

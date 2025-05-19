@@ -37,7 +37,7 @@ items:
    | &nbsp; | Install | For using... |
    | --- | --- | --- |
    | **Required** | &nbsp; | &nbsp; |
-   | &nbsp; | [Microsoft 365 Agents Toolkit](#install-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
+   | &nbsp; | [Microsoft 365 Agents Toolkit](#install-microsoft-365-agents-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call all in one place.|
    | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
    | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
@@ -156,10 +156,10 @@ items:
 
     # [Command line](#tab/cli)
 
-    Use the `teamsfx` CLI to create your first project.  Start from the folder where you want to create the project folder.
+    Use the `atk' CLI to create your first project.  Start from the folder where you want to create the project folder.
 
     ``` bash
-    teamsfx new
+    atk new
     ```
 
     You can use the CLI to create a new Teams app. The CLI leads you through a series of questions. Every question includes an instruction on answering it.
@@ -187,8 +187,8 @@ items:
 
     | Folder / File | Contents |
     | --- | --- |
-    | `teamsapp.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
-    | `teamsapp.local.yml` | This overrides `teamsapp.yml` with actions that enable local execution and debugging. |
+    | `m365agents.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
+    | `m365agents.local.yml` | This overrides `m365agents.yml` with actions that enable local execution and debugging. |
     | `.vscode/` | VSCode files for local debug. |
     | `appPackage/` | Templates for the Teams application manifest. |
     | `adaptiveCards/` | Adaptive Cards sent back by the bot. |
@@ -235,7 +235,7 @@ items:
     1. Sign in to Microsoft 365 with Microsoft 365 Agents Toolkit CLI (previously known as TeamsFx CLI):
 
         ``` bash
-        teamsfx account login m365
+        atk account login m365
         ```
 
         Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
@@ -243,7 +243,7 @@ items:
     2. Sign in to Azure with Agents Toolkit CLI:
 
         ``` bash
-        teamsfx account login azure
+        atk account login azure
         ```
 
         Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
@@ -373,7 +373,7 @@ items:
     1. Sign in to Microsoft 365 with Agents Toolkit CLI:
 
         ``` bash
-        teamsfx account login m365
+        atk account login m365
         ```
 
         Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
@@ -381,7 +381,7 @@ items:
     2. Sign in to Azure with Agents Toolkit CLI:
 
         ``` bash
-        teamsfx account login azure
+        atk account login azure
         ```
 
         Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
