@@ -35,7 +35,7 @@ landingContent:
         url: /microsoftteams/platform/concepts/build-and-test/analyze-your-apps-usage-in-developer-portal?tabs=thirdpartyapps
       - text: AI-generated meeting summary
         url: graph-api/meeting-transcripts/meeting-insights.md
-      - text: Custom activity icons
+      - text: Custom activity icons (preview)
         url: /graph/teams-send-activityfeednotifications?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json&tabs=desktop%2Chttp#custom-activity-icons-in-activity-feed-notifications
 
 - title: Build custom engine agents
