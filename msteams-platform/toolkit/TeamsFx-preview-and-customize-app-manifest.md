@@ -1,5 +1,5 @@
 ---
-title: Customize app manifest in Teams Toolkit
+title: Customize app manifest in Agents Toolkit
 author: surbhigupta
 description: Learn how to edit and preview app manifest in local and remote environments, customize app manifest in Visual Studio Code, and ways to validate and update app.
 ms.author: surbhigupta
@@ -10,9 +10,9 @@ ms.date: 05/13/2022
 
 # Customize app manifest
 
-App manifest (previously called Teams app manifest) describes how your app integrates into Microsoft Teams. After scaffolding, the default app manifest file is available at `appPackage/manifest.json`. The app manifest file contains some environment variables with format of `${{XX_XX}}`, and the actual values are resolved using Microsoft Teams Toolkit with env files such as `env/.env.dev` and `env/.env.local`.
+App manifest (previously called Teams app manifest) describes how your app integrates into Microsoft Teams. After scaffolding, the default app manifest file is available at `appPackage/manifest.json`. The app manifest file contains some environment variables with format of `${{XX_XX}}`, and the actual values are resolved using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) with env files such as `env/.env.dev` and `env/.env.local`.
 
-To preview app manifest with actual content, Teams Toolkit generates the preview app manifest files under `appPackage/build` folder as shown in the following folder structure:
+To preview app manifest with actual content, Agents Toolkit generates the preview app manifest files under `appPackage/build` folder as shown in the following folder structure:
 
 ```text
 └───appPackage
@@ -43,7 +43,7 @@ You can also trigger **Zip Teams App Package** from tree view or **Teams: Zip Te
 
 ## Customize app manifest in Visual Studio Code
 
-During local debug or provision, Teams Toolkit loads app manifest from `appPackage/manifest.json` and resolves app manifest by environment variables defined in `env/.env.xx`, then creates or updates Teams app in [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
+During local debug or provision, Agents Toolkit loads app manifest from `appPackage/manifest.json` and resolves app manifest by environment variables defined in `env/.env.xx`, then creates or updates Teams app in [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
 
 1. You can define your own manifest.json file in `teamsapp.yml` and `teamsapp.local.yml`.
 For example, you can put your manifest.json file in `test/test.json`, and update the `manifestPath` parameters in yaml files.
@@ -77,7 +77,7 @@ For example, you can customize app description by defining a new environment var
     }
    ```
 
-1. Starting with Teams Toolkit 5.10, using the `file` function you can store the value of a field, such as a lengthy or multiline app description, in a separate text file. For example, create a `description.txt` file in the parent folder of `manifest.json` to store your app's complete description. Then, set the value of `description.full` in `manifest.json` as `$[file('description.txt')]`. Teams Toolkit reads the content from the text file and uses it as full description when building an app package.
+1. Starting with Agents Toolkit 5.10, using the `file` function you can store the value of a field, such as a lengthy or multiline app description, in a separate text file. For example, create a `description.txt` file in the parent folder of `manifest.json` to store your app's complete description. Then, set the value of `description.full` in `manifest.json` as `$[file('description.txt')]`. Agents Toolkit reads the content from the text file and uses it as full description when building an app package.
 
    `description.txt`
 
@@ -140,7 +140,7 @@ Alternatively, use the following Microsoft 365 Agents Toolkit command line inter
 teamsfx validate --manifest-path <YOUR-PATH-TO-MANIFEST>
 ```
 
-If you meet `MissingEnvironmentVariablesError`, it means that Teams Toolkit can't find corresponding environment variables defined in manifest.json. You may need to run **Provision** or select F5 to generate environment variables, or manually update `.env.xx` file to fulfill the value.
+If you meet `MissingEnvironmentVariablesError`, it means that Agents Toolkit can't find corresponding environment variables defined in manifest.json. You may need to run **Provision** or select F5 to generate environment variables, or manually update `.env.xx` file to fulfill the value.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/missing-env.png" alt-text="Screenshot shows the missing environment variables error.":::
 
@@ -202,7 +202,7 @@ To preview values for all the environments, you can hover over the placeholder. 
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Microsoft 365 Agents Toolkit Overview](teams-toolkit-fundamentals.md)
 * [App manifest schema](../resources/schema/manifest-schema.md)
 * [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md)
 * [Manage multiple environments](TeamsFx-multi-env.md)

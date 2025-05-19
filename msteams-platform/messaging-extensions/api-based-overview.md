@@ -1,7 +1,7 @@
 ---
 title: Create API-based Message Extension
 author: surbhigupta
-description: Learn to build a message extension from OpenAPI description document (OAD) with Developer Portal for Teams, Visual Studio Code, toolkit CLI, or Visual Studio.
+description: Learn to build a message extension from OpenAPI description document (OAD) with Developer Portal for Teams, Visual Studio Code, Agents Toolkit CLI, or Visual Studio.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
@@ -21,7 +21,7 @@ Message extensions built using API (API-based) use a web service to manage user 
 * Retrieve real-time information, such as latest news coverage on a product launch.
 * Retrieve knowledge-based information, for example, my team’s design files in Figma.
 
-See the video to learn more about building an API-based message extension using Teams Toolkit:
+See the video to learn more about building an API-based message extension using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit):
 </br>
 </br>
 
