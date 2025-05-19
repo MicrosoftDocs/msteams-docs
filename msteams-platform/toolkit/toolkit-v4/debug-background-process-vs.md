@@ -20,11 +20,11 @@ For bot and message extension, you can use Dev Tunnel. It starts a local tunnel 
 
 In the debug dropdown, select **Dev Tunnels (no active tunnel)** > **Create a Tunnel** or select an existing public dev tunnel.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-create-devtunnel.png" alt-text="Screenshot shows the steps to create a tunnel.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/vs-create-devtunnel.png" alt-text="Screenshot shows the steps to create a tunnel.":::
 
 The tunnel creation dialog opens.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-create-devtunnel-detail.png" alt-text="Screenshot shows how to create a dev tunnel.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/vs-create-devtunnel-detail.png" alt-text="Screenshot shows how to create a dev tunnel.":::
 
 * Select the **Account** to use to create the tunnel. Azure, Microsoft Account (MSA), and GitHub are the account types that are supported.
 * Enter a **Name** for the tunnel.
@@ -34,7 +34,7 @@ The tunnel creation dialog opens.
 
 The tunnel you create is under **Dev Tunnels(MyPublicDevTunnel)** > **MyPublicDevTunnel**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-select-devtunnel.png" alt-text="Screenshot shows how to select dev tunnel.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/vs-select-devtunnel.png" alt-text="Screenshot shows how to select dev tunnel.":::
 
 ## Create the debug resources
 
@@ -52,7 +52,7 @@ You can view the project folders and files under **Explorer** in Visual Studio a
 
 ## See also
 
-* [Teams Toolkit Visual Studio Overview](teams-toolkit-fundamentals-vs.md)
+* [Teams Toolkit Visual Studio Overview](agents-toolkit-fundamentals-vs.md)
 * [Debug your Teams app locally using Visual Studio](debug-local-vs.md)
 * [Provision cloud resources in Visual Studio](provision-vs.md)
 * [Deploy Teams app to the cloud VS](deploy-vs.md)

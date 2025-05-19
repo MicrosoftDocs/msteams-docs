@@ -33,11 +33,11 @@ To create a new Teams app, follow the steps:
 
     * Select **New project** under **Quick actions** to select a project template.
 
-      :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/new-project-vs.png" alt-text="Screenshot shows the selection of new project from quick actions.":::
+      :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/new-project-vs.png" alt-text="Screenshot shows the selection of new project from quick actions.":::
 
     * Select **File > New > Project**.
 
-       :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/file-new-project.png" alt-text="Screenshot shows the selection of new project from file menu.":::
+       :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/file-new-project.png" alt-text="Screenshot shows the selection of new project from file menu.":::
 
       The **Create a new project** window appears.  
 
@@ -45,7 +45,7 @@ To create a new Teams app, follow the steps:
 
 1. Select **Next**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/new-project-template-vs.png" alt-text="Screenshot shows the search and select Microsoft Teams app." lightbox="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/new-project-template-vs.png":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/new-project-template-vs.png" alt-text="Screenshot shows the search and select Microsoft Teams app." lightbox="../../assets/images/toolkit-v2/toolkit-vs/new-project-template-vs.png":::
 
    The **Configure your new project** window appears.
 
@@ -59,7 +59,7 @@ To create a new Teams app, follow the steps:
     1. Select the folder location where you want to create the project workspace.
     1. Select **Create**.
 
-        :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-app-project-name.png" alt-text="Screenshot shows the configure the project name of your application.":::
+        :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/teams-app-project-name.png" alt-text="Screenshot shows the configure the project name of your application.":::
 
    The **Create a new Teams application** window appears.
 
@@ -70,11 +70,11 @@ To create a new Teams app, follow the steps:
    > [!NOTE]
    > If you want to add single sign-on (SSO) capability to your Teams app, select the **Configure with single sign-on** checkbox. For more information, see [how to add single sign-on to your Teams apps](/microsoftteams/platform/toolkit/add-single-sign-on?pivots=visual-studio).
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/create-new-app-vs.png" alt-text="Screenshot shows the selection of teams app type." lightbox="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/create-new-app-vs.png":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/create-new-app-vs.png" alt-text="Screenshot shows the selection of teams app type." lightbox="../../assets/images/toolkit-v2/toolkit-vs/create-new-app-vs.png":::
 
    The **GettingStarted .txt** tab appears. You can see the instructions in **GettingStarted** window and check out the different features in Teams Toolkit.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/get-started-vs.png" alt-text="Screenshot shows the Getting Started teams toolkit page." lightbox="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/get-started-tab-vs.png":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/get-started-vs.png" alt-text="Screenshot shows the Getting Started teams toolkit page." lightbox="../../assets/images/toolkit-v2/toolkit-vs/get-started-tab-vs.png":::
 
 You have created the app project scaffolding for your Teams app using Teams Toolkit template.
 
@@ -86,11 +86,11 @@ Teams Toolkit provides all components for building an app. After you're created 
 
 * Directory structure for a basic Teams app
 
-  :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/basic-app-directory.png" alt-text="Screenshot shows the tab Solution Explorer teams toolkit for basic tab.":::
+  :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/basic-app-directory.png" alt-text="Screenshot shows the tab Solution Explorer teams toolkit for basic tab.":::
 
 * Directory structure for a scenario-based Teams app
 
-  :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/scenario-based-directory.png" alt-text="Screenshot shows the scenario based Solution Explorer teams toolkit.":::
+  :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/scenario-based-directory.png" alt-text="Screenshot shows the scenario based Solution Explorer teams toolkit.":::
 
 ## Teams app templates in Teams Toolkit
 
@@ -106,7 +106,7 @@ You can see Teams app templates already populated in Teams Toolkit for various T
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals-vs.md)
+* [Teams Toolkit Overview](agents-toolkit-fundamentals-vs.md)
 * [Build a Teams app with Blazor](~/sbs-gs-blazorupdate.yml)
 * [Build a Teams app with C# or .NET](~/sbs-gs-csharp.yml)
 * [Prerequisites for all types of environment and create your Teams app](tools-prerequisites-vs.md)

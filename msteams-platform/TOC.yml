@@ -252,7 +252,7 @@
     - name: Agents Toolkit for VS
       items:
       - name: Overview
-        href: toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md
+        href: toolkit/toolkit-v4/agents-toolkit-fundamentals-vs.md
         displayName: TTK, version, 17.7
       - name: Install Agents Toolkit
         href: toolkit/toolkit-v4/install-Teams-Toolkit-vs.md
@@ -291,7 +291,7 @@
          - name: Deploy to cloud using VS
            href: toolkit/toolkit-v4/deploy-vs.md
       - name: Migrate project from 17.9 to 17.10+
-        href: toolkit/teams-toolkit-migration-guide.md
+        href: toolkit/agents-toolkit-migration-guide.md
         displayName: migrate Teams toolkit, new project structure, YAML configuration
     - name: Microsoft 365 Agents Toolkit CLI
       href: toolkit/Microsoft-365-Agents-Toolkit-CLI.md

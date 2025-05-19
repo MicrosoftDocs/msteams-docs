@@ -25,11 +25,11 @@ You can add cloud resources in the following ways:
    1. Select **Microsoft 365 Agents Toolkit** from the Visual Studio Code activity bar.
    1. Select **View How-to Guides** in the **DEVELOPMENT** section.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-view-how-to-guides.png" alt-text="Screenshot shows the option to select View How-to Guides under Development.":::
+        :::image type="content" source="~/assets/images/toolkit-v2/manual/select-view-how-to-guides.png" alt-text="Screenshot shows the option to select View How-to Guides under Development.":::
 
    1. From the dropdown list that appears, select the cloud service integration you want to add to your app. You're redirected to the respective How-to Guide.
 
-        :::image type="content" source="../assets/images/teams-toolkit-v2/manual/cloud-service-integration.png" alt-text="Screenshot shows the Cloud service integration options in View How-to Guides.":::
+        :::image type="content" source="../assets/images/toolkit-v2/manual/cloud-service-integration.png" alt-text="Screenshot shows the Cloud service integration options in View How-to Guides.":::
 
       |**Cloud service integration** | **How-to Guide** |
       |----------|----------|
@@ -44,15 +44,15 @@ You can add cloud resources in the following ways:
 
    1. Select **View** > **Command Palette...** or **Ctrl+Shift+P**.
 
-      :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/cloud/Teams-add-features_1.png" alt-text="Screenshot shows the Command Palette option under View.":::
+      :::image type="content" source="~/assets/images/toolkit-v2/manual/cloud/Teams-add-features_1.png" alt-text="Screenshot shows the Command Palette option under View.":::
 
    1. Enter **How-to Guides** and select **Microsoft 365 Agents: View How-to Guides** from the list.
 
-        :::image type="content" source="../assets/images/teams-toolkit-v2/manual/how-to-guides.png" alt-text="Screenshot shows the selection of View how-to guides from the list.":::
+        :::image type="content" source="../assets/images/toolkit-v2/manual/how-to-guides.png" alt-text="Screenshot shows the selection of View how-to guides from the list.":::
 
    1. From the dropdown list that appears, select the capability you want to add to your app. You're redirected to the respective How-to Guide.
 
-        :::image type="content" source="../assets/images/teams-toolkit-v2/manual/cloud-service-integration.png" alt-text="Screenshot shows the capabilities in View How-to Guides list.":::
+        :::image type="content" source="../assets/images/toolkit-v2/manual/cloud-service-integration.png" alt-text="Screenshot shows the capabilities in View How-to Guides list.":::
 
       |**Cloud service integration** | **How-to Guide** |
       |----------|----------|
@@ -69,11 +69,11 @@ Add a connection to an existing API, developed by your organization or a third p
 1. Select **Microsoft 365 Agents Toolkit** from the Visual Studio Code activity bar.
 1. Select **View How-to Guides** in the **DEVELOPMENT** section.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-view-how-to-guides.png" alt-text="Screenshot shows the option to select View How-to Guides under Development.":::
+    :::image type="content" source="~/assets/images/toolkit-v2/manual/select-view-how-to-guides.png" alt-text="Screenshot shows the option to select View How-to Guides under Development.":::
 
 1. From the dropdown list that appears, select **Connect to an API**. You're redirected to the respective How-to Guide.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-select-features_1.png" alt-text="Screenshot shows the selection of Connect to an API option in the View How-to Guides list.":::
+    :::image type="content" source="../assets/images/toolkit-v2/add-API/api-select-features_1.png" alt-text="Screenshot shows the selection of Connect to an API option in the View How-to Guides list.":::
 
       |**Development** | **How-to Guide** |
       |----------|----------|
