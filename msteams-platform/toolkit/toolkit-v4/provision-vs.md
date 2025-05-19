@@ -18,11 +18,11 @@ TeamsFx integrates with Azure and the Microsoft 365 cloud, which allows to place
 1. Open the **Microsoft Teams App project**.
 1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Provision in the Cloud**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-vs-provision-in-cloud.png" alt-text="Screenshot shows sign in to Azure account.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/toolkit-vs-provision-in-cloud.png" alt-text="Screenshot shows sign in to Azure account.":::
 
 1. Select **Sign in...**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-vs-provision-start.png" alt-text="Screenshot shows the sign in to Azure account.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/toolkit-vs-provision-start.png" alt-text="Screenshot shows the sign in to Azure account.":::
 
    > [!NOTE]
    > If you're already signed in, your username is displayed, or you've an option to **Add an account**.
@@ -35,7 +35,7 @@ After you open your project in Visual Studio, to provision cloud resources follo
 
 1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Provision in the Cloud...**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-vs-provision-in-cloud.png" alt-text="Screenshot shows how to provision in cloud.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/toolkit-vs-provision-in-cloud.png" alt-text="Screenshot shows how to provision in cloud.":::
 
    The **Provision** window appears.
 
@@ -46,17 +46,17 @@ After you open your project in Visual Studio, to provision cloud resources follo
    1. Select your **Region** from the dropdown menu.
    1. Select **Provision**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-vs-provision-select-subscription.png" alt-text="Screenshot shows the selection of resource group." lightbox="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-vs-provision-select-subscription.png":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/toolkit-vs-provision-select-subscription.png" alt-text="Screenshot shows the selection of resource group." lightbox="../../assets/images/toolkit-v2/toolkit-vs/toolkit-vs-provision-select-subscription.png":::
 
 1. In the pop-up window that appears, select **Provision**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-vs-provision-warning.png" alt-text="Screenshot shows the provision warning.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/toolkit-vs-provision-warning.png" alt-text="Screenshot shows the provision warning.":::
 
    The provisioning process creates resources in the Azure cloud. You can monitor the progress by observing the Microsoft 365 Agents Toolkit output window.
 
 1. In the pop-up window that appears, to view all the resources that are provisioned, select **View provisioned resources**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-vs-provision-provision-success-info.png" alt-text="Screenshot shows the provisioned resources.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/toolkit-vs-provision-provision-success-info.png" alt-text="Screenshot shows the provisioned resources.":::
 
 ## Provision actions
 
