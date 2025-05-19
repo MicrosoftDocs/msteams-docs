@@ -2,10 +2,10 @@
 title: Build your first message extension app using JavaScript
 metadata:
   title: Hello World with JavaScript
-  description: In this tutorial, you'll learn to build and deploy a Teams message extension app with JavaScript by setting up a new project with Teams Toolkit.
+  description: Learn how to build and deploy a Teams message extension app with JavaScript by setting up a new project with Microsoft 365 Agents Toolkit.
   audience: Developer
   level: Beginner
-  ms.date: 05/26/2022
+  ms.date: 05/19/2025
   ms.topic: interactive-tutorial
   nextTutorialHref: ~/get-started/get-started-overview.md
   nextTutorialTitle: Get started - Overview
@@ -19,11 +19,11 @@ items:
 
    In this tutorial, you'll learn:
 
-   - How to set up a new project with Teams Toolkit.
+   - How to set up a new project with Microsoft 365 Agents Toolkit (previously known as Teams Toolkit).
    - How to build a message extension app.
    - How to deploy your app.
    
-   This step-by-step guide helps you to build a message extension Teams app with Teams Toolkit in Visual Studio Code. You'll see the following output after you complete this guide:
+   This step-by-step guide helps you to build a message extension Teams app with Agents Toolkit in Visual Studio Code. You'll see the following output after you complete this guide:
 
    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/app-added-mex-local-debug.png" alt-text="Screenshot shows the final output of the message extension app in Teams." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/app-added-mex-local-debug.png":::
 
@@ -37,7 +37,7 @@ items:
    | --- | --- | --- |
    | **Required** | &nbsp; | &nbsp; |
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript or TypeScript build environments. Use the latest version. |
-   | &nbsp; | [Teams Toolkit](#install-microsoft-365-agents-toolkit) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
+   | &nbsp; | [Microsoft 365 Agents Toolkit](#install-microsoft-365-agents-toolkit) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
    | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Backend JavaScript runtime environment. For more information, see [Node.js version compatibility table](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Collaborate with people you work with through apps for chats, meetings, and calls in one place.|
    | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools essential for debugging and testing. |
@@ -75,7 +75,7 @@ items:
 
    In this tutorial, you'll learn:
 
-   1. [How to set up a new message extension project with Teams Toolkit.](#create-your-message-extension-project-workspace)
+   1. [How to set up a new message extension project with Agents Toolkit.](#create-your-message-extension-project-workspace)
    1. [About the directory structure of your app project.](#take-a-tour-of-the-message-extension-app-source-code)
 
    ## Create your message extension project workspace
@@ -89,11 +89,11 @@ items:
 
    1. Open Visual Studio Code.
     
-   1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code activity bar.
+   1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code activity bar.
 
    1. Select **Create a New App**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/create-project.png" alt-text="Screenshot shows the option to create a new app from the Teams Toolkit sidebar.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/create-project.png" alt-text="Screenshot shows the option to create a new app from the Agents Toolkit sidebar.":::
 
    1. Select **Message Extension**.
 
@@ -131,11 +131,11 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/enter-project-name.png" alt-text="Screenshot shows the option to enter the app name.":::
 
-        Teams Toolkit creates the app in a few seconds.
+        Agents Toolkit creates the app in a few seconds.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/app-created-mex.png" alt-text="Screenshot shows the newly created message extension app." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/app-created-mex.png":::
 
-        After your app is created, Teams Toolkit displays the following message: 
+        After your app is created, Agents Toolkit displays the following message: 
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/preview-project-msg.png" alt-text="Screenshot shows a dialog saying that the message extension app is created.":::
 
@@ -192,7 +192,7 @@ items:
   durationInMinutes: 1
   content: |
 
-   After you set up your project workspace with Teams Toolkit, it's time to build your project. You need to sign in to your Microsoft 365 account.
+   After you set up your project workspace with Agents Toolkit, it's time to build your project. You need to sign in to your Microsoft 365 account.
 
    ## Sign in to your Microsoft 365 account
 
@@ -202,7 +202,7 @@ items:
 
    1. Open Visual Studio Code.
     
-   1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the activity bar.
+   1. Select the Microsoft 365 Agents Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the activity bar.
  
    1. Select **Sign in to Microsoft 365** using your credentials. Your default web browser opens to let you sign in.
 
@@ -210,9 +210,9 @@ items:
 
    1. Close the browser after signing in using your credentials.
 
-   1. Return to Teams Toolkit within Visual Studio Code.
+   1. Return to Agents Toolkit within Visual Studio Code.
 
-   The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name. If custom app upload is enabled for your Microsoft 365 account, Teams Toolkit displays **Sideloading enabled**.
+   The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name. If custom app upload is enabled for your Microsoft 365 account, Agents Toolkit displays **Sideloading enabled**.
 
    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled-msg.png" alt-text="Screenshot shows the user signed in to Microsoft 365 and the sideloading enabled message.":::
 
@@ -247,13 +247,13 @@ items:
    1. Select the **F5** key in Visual Studio Code to run your application in debug mode.
 
         > [!NOTE]
-        > If Teams Toolkit is unable to verify a particular prerequisite, it prompts you to check.
+        > If Agents Toolkit is unable to verify a particular prerequisite, it prompts you to check.
 
         <br>
         <details>
         <summary>Learn what happens when you run your app locally in the debugger.</summary>
 
-        When you select **F5**, the Teams Toolkit performs the following functions:
+        When you select **F5**, Agents Toolkit performs the following functions:
 
         1. Checks the following prerequisites:
 
@@ -406,7 +406,7 @@ items:
   durationInMinutes: 1
   content: |
 
-   Let's deploy your first message extension app on Azure using Teams Toolkit.
+   Let's deploy your first message extension app on Azure using Agents Toolkit.
 
    ## Sign in to your Azure account
 
@@ -418,7 +418,7 @@ items:
  
    1. Open the project folder in which you created the message extension app.
 
-   1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the activity bar.
+   1. Select the Microsoft 365 Agents Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the activity bar.
 
    1. Select **Sign in to Azure** using your credentials. Your default web browser opens to let you sign in.
 
@@ -444,7 +444,7 @@ items:
 
    1. Your default web browser opens to let you sign in. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
 
-   Now, let's learn how to deploy the app to Azure using the Teams Toolkit.
+   Now, let's learn how to deploy the app to Azure using Agents Toolkit.
 
    > [!div class="nextstepaction"]
    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Sign+in+to+your+Azure+account+using+Command+Line&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-msgext%3Ftabs%3Dvscode%252Cvsc1%252Ccli2%252Cmsgext%252Cvsc3%252Cvsc4%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-msgext.yml&documentVersionIndependentId=d0c82a43-2f4a-ad2e-251e-922e2e357806&platformId=e2feec5c-06f2-6065-f4a5-2e2947f00b97&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
