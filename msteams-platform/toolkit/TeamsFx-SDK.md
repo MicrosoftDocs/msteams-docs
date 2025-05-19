@@ -42,7 +42,7 @@ You must have working knowledge of:
 
 ## Get started
 
-TeamsFx SDK is pre-configured in the scaffolded project using Agents Toolkit or CLI.
+TeamsFx SDK is pre-configured in the scaffolded project using Microsoft 365 Agents Toolkit CLI (previously known as TeamsFx Toolkit or CLI).
 For more information, see [Teams app project](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md).
 
  > [!Tip]

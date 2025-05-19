@@ -215,7 +215,7 @@ items:
 
     # [Command line](#tab/cline)
 
-       Sign in to Microsoft 365 with the TeamsFx CLI.
+       Sign in to Microsoft 365 with Microsoft 365 Agents Toolkit CLI (previously known as TeamsFx CLI).
 
     ``` bash
         atk account login m365
@@ -224,7 +224,7 @@ items:
 
     Your default web browser opens to let you sign in to the account. Sign in to your account using your credentials. Close the browser when you're prompted.
  
-    The account logins are shared between Visual Studio Code and the TeamsFx CLI.
+    The account logins are shared between Visual Studio Code and Agents Toolkit CLI.
 
     Now that the development environment is configured, you can create, build, and deploy your first Teams app.
 

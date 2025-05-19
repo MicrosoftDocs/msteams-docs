@@ -6,7 +6,7 @@ After you install the required tools, set up the development environment.
 
 Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) helps simplify the development process with tools to provision and deploy cloud resources for your app and publish to the Teams Store.
 
-You can use Agents Toolkit with Visual Studio Code or a command-line interface called Agents Toolkit CLI.
+You can use Agents Toolkit with Visual Studio Code or a command-line interface called Microsoft 365 Agents Toolkit CLI (previously known as TeamsFx CLI).
 
 # [Visual Studio Code](#tab/vscode)
 
@@ -22,7 +22,7 @@ You can also install Agents Toolkit from the [Visual Studio Code Marketplace](ht
 
 # [Command Line](#tab/cli)
 
-To install the TeamsFx CLI, use the `npm` package manager and enter the following command in Command prompt:
+To install Agents Toolkit CLI, use the `npm` package manager and enter the following command in Command prompt:
 
 ``` bash
 npm install -g @microsoft/teamsfx-cli

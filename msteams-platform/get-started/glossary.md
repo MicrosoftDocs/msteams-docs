@@ -172,6 +172,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Microsoft 365 Agents Toolkit](../toolkit/teams-toolkit-fundamentals.md) | Agents Toolkit enables you to create custom Teams apps directly within the Visual Studio Code environment. |
 | [Microsoft 365 Agents Toolkit CLI](../toolkit/Teams-Toolkit-CLI.md) | Agents Toolkit CLI is a text-based command line interface that accelerates Teams application development. It was previously known as Teams Toolkit CLI or TeamsFx CLI or Teams App CLI. |
 | Microsoft 365 client ID | See [Client ID](#c) |
+| [Microsoft 365 Agents Toolkit CLI](../toolkit/Teams-Toolkit-CLI.md) | Agents Toolkit CLI is a text-based command line interface that accelerates Teams application development. It was previously known as Teams Toolkit CLI or TeamsFx CLI or Teams App CLI. |
 | [Add Microsoft 365 channel for your bot](../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app) | A feature of Teams message extension app that lets the users interact with it from Microsoft 365. |
 | [Microsoft 365 developer program](../toolkit/tools-prerequisites.md)| The Microsoft 365 Developer Program helps you build apps that extend Microsoft 365. |
 | Microsoft App Password | A secret string that the application uses to prove its identity when requesting a token. Also, it can be referred to as application password. <br> **See also**: [Client secret](#c) |

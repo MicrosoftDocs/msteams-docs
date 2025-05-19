@@ -69,7 +69,7 @@ items:
 
    # [Command line](#tab/cli)
 
-   To install the Teamsapp CLI, use the `npm` package manager:
+   To install Microsoft 365 Agents Toolkit CLI (previously known as Teamsapp CLI), use the `npm` package manager:
 
    ``` bash
    npm install -g @microsoft/atk-cli
@@ -306,7 +306,7 @@ items:
     
     # [Command line](#tab/cline)
 
-    1. Sign in to Microsoft 365 with the Teamsapp CLI:
+    1. Sign in to Microsoft 365 with Agents Toolkit CLI:
 
         ``` bash
         atk account login m365
@@ -314,7 +314,7 @@ items:
 
         Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
 
-    2. Sign in to Azure with the Teamsapp CLI:
+    2. Sign in to Azure with Agents Toolkit CLI:
 
         ``` bash
         atk account login azure
@@ -322,7 +322,7 @@ items:
 
         Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
 
-        The account logins are shared between Visual Studio Code and the Teamsapp CLI.
+        The account logins are shared between Visual Studio Code and Agents Toolkit CLI.
 
         Now that the development environment is configured, you can create, build, and deploy your first Teams app.
 
@@ -657,7 +657,7 @@ items:
 
     # [Command line](#tab/cline)
 
-    1. Sign in to Microsoft 365 with the Teamsapp CLI:
+    1. Sign in to Microsoft 365 with Agents Toolkit CLI:
 
         ``` bash
         atk account login m365
@@ -665,7 +665,7 @@ items:
 
         Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
 
-    2. Sign in to Azure with the Teamsapp CLI:
+    2. Sign in to Azure with Agents Toolkit CLI:
 
         ``` bash
         atk account login azure
@@ -673,7 +673,7 @@ items:
 
         Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
 
-        The account logins are shared between Visual Studio Code and the Teamsapp CLI.
+        The account logins are shared between Visual Studio Code and Agents Toolkit CLI.
 
         Congratulations, you've signed in your Azure account!
 

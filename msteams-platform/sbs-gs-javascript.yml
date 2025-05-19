@@ -229,7 +229,7 @@ items:
 
     # [Command line](#tab/cline)
 
-    1. Sign in to Microsoft 365 with the TeamsFx CLI:
+    1. Sign in to Microsoft 365 with Microsoft 365 Agents Toolkit CLI (previously known as TeamsFx CLI):
 
         ``` bash
         atk account login m365
@@ -237,7 +237,7 @@ items:
 
         Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
 
-    2. Sign in to Azure with the TeamsFx CLI:
+    2. Sign in to Azure with Agents Toolkit CLI:
 
         ``` bash
         atk account login azure
@@ -245,7 +245,7 @@ items:
 
         Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
 
-        The account logins are shared between Visual Studio Code and the TeamsFx CLI.
+        The account logins are shared between Visual Studio Code and Agents Toolkit CLI.
 
         Now that the development environment is configured, you. can create, build, and deploy your first Teams app.
     
@@ -369,7 +369,7 @@ items:
 
     # [Command line](#tab/cline)
 
-    1. Sign in to Microsoft 365 with the TeamsFx CLI:
+    1. Sign in to Microsoft 365 with Agents Toolkit CLI:
 
         ``` bash
         atk account login m365
@@ -377,7 +377,7 @@ items:
 
         Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
 
-    2. Sign in to Azure with the TeamsFx CLI:
+    2. Sign in to Azure with Agents Toolkit CLI:
 
         ``` bash
         atk account login azure
@@ -385,7 +385,7 @@ items:
 
         Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
 
-        The account logins are shared between Visual Studio Code and the TeamsFx CLI.
+        The account logins are shared between Visual Studio Code and Agents Toolkit CLI.
 
         Congratulations, you've created a Teams app! 
         Now let's go ahead and learn how to deploy one of the apps to Azure using Agents Toolkit.

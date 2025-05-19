@@ -738,9 +738,9 @@ To build an API-based message extension using Agents Toolkit for Visual Studio C
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-sbs-result.png" alt-text="Screenshot shows the Adaptive Card with the search results in the chat message in Teams.":::
 
-# [Agents Toolkit CLI](#tab/teams-toolkit-cli)
+# [Microsoft 365 Agents Toolkit CLI](#tab/teams-toolkit-cli)
 
-To create an API-based message extension using Agents Toolkit CLI, follow these steps:
+To create an API-based message extension using Microsoft 365 Agents Toolkit CLI (previously known as Teams Toolkit CLI), follow these steps:
 
 1. Go to **Command Prompt**.
 

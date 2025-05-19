@@ -14,7 +14,7 @@ TeamsFx integrates with Azure and the Microsoft 365 cloud, which allows to place
 
 ## Provision using Microsoft 365 Agents Toolkit in Visual Studio Code
 
-You can trigger the provision command in Agents Toolkit (previously known as Teams Toolkit) or TeamsFx CLI to create or update resources for your application. The steps of the provision command are defined in the `m365agents.yml` file, under `provision` property. You can view the file to understand what resources are created.
+You can trigger the provision command in Agents Toolkit (previously known as Teams Toolkit) or Microsoft 365 Agents Toolkit CLI (previously known as TeamsFx CLI) to create or update resources for your application. The steps of the provision command are defined in the `m365agents.yml` file, under `provision` property. You can view the file to understand what resources are created.
 
 > [!NOTE]
 > Azure services incur costs in your subscription. For more information on cost estimation, see [pricing calculator](https://azure.microsoft.com/pricing/calculator/).

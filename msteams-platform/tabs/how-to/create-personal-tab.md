@@ -675,7 +675,7 @@ To install the Agents Toolkit extension:
 
 # [Command line](#tab/cli)
 
-To install the TeamsFx CLI, use the `npm` package manager:
+To install Microsoft 365 Agents Toolkit CLI (previously known as TeamsFx CLI), use the `npm` package manager:
 
 ``` bash
 npm install -g @microsoft/teamsfx-cli

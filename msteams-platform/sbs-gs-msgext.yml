@@ -225,7 +225,7 @@ items:
 
    1. Go to the project folder of your message extension app and open Command Prompt.
 
-   1. Sign in to Microsoft 365 with the following TeamsFx CLI command:
+   1. Sign in to Microsoft 365 with Microsoft 365 Agents Toolkit CLI (previously known as TeamsFx CLI) command:
 
         ``` bash
         atk account login m365
@@ -436,7 +436,7 @@ items:
 
    1. Go to the project folder of your message extension app and open Command Prompt.
 
-   1. Sign in to Azure with the following TeamsFx CLI command:
+   1. Sign in to Azure with Agents Toolkit CLI command:
 
         ``` bash
         atk account login azure
