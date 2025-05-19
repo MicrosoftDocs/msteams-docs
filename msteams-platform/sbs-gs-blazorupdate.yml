@@ -302,7 +302,7 @@ items:
 
     #### **To deploy your tab app to cloud**
 
-    1. Select **Project** > **Teams Toolkit** > **Deploy to the Cloud...**.
+    1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Teams App** > **Deploy to the Cloud...**.
 
          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-deploytocloud_1.png" alt-text="Screenshot of Visual Studio with Project, Teams Toolkit, and Deploy to the Cloud options highlighted in red." lightbox="../msteams-platform\assets\images\teams-toolkit-v2\blazor-vs-preview2\vs-build-deploytocloud_2.png":::
 
@@ -317,7 +317,7 @@ items:
 
     #### **To preview your tab app in Teams**    
 
-    1. Select **Project** > **Teams Toolkit** > **Preview in Teams**.
+    1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Teams App** > **Preview in Teams**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-preview_1.png" alt-text="Screenshot shows Visual Studio with Project, Teams Toolkit, and Preview in Teams options." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-preview_1.png":::
 
@@ -438,7 +438,7 @@ items:
 
       ---     
 
-    1. Select **Project** > **Teams Toolkit** > **Prepare Teams App Dependencies**.
+    1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Teams App** > **Prepare Teams App Dependencies**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png" alt-text="Screenshot of Visual Studio with project, Teams Toolkit, and Prepare Teams App Dependencies options highlighted in red." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/configure-msteamsapp_2.png":::
 
@@ -483,7 +483,7 @@ items:
 
     #### **To provision your bot app in Azure**
     
-    1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.
+    1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Teams App** > **Provision in the Cloud**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/azure-app_1.png" alt-text="Screenshot of Visual Studio with project, Teams Toolkit, and Provision in the Cloud options highlighted in red." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/azure-app_2.png":::
 
@@ -496,7 +496,7 @@ items:
 
            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/provision-azure_1.png" alt-text="Screenshot of Provision with provision option highlighted in red. ":::
 
-           A **Teams Toolkit** warning dialog appears. 
+           A **Microsoft 365 Agents Toolkit** > **Teams App** warning dialog appears. 
 
     1. Select **Provision**.
 
@@ -525,7 +525,7 @@ items:
 
     #### **To deploy your bot app to cloud**
 
-     1. Select **Project** > **Teams Toolkit** > **Deploy to the Cloud**.
+     1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Teams App** > **Deploy to the Cloud**.
 
           :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/deploy-to-cloud-azure_1.png" alt-text="Screenshot shows Visual Studio with Project, Teams Toolkit, and Deploy to the Cloud options highlighted in red." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/deploy-to-cloud-azure_2.png":::
 
@@ -540,7 +540,7 @@ items:
 
     #### **To preview your bot app in Teams** 
 
-     1. Select **Project** > **Teams Toolkit** > **Preview in Teams**.
+     1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Teams App** > **Preview in Teams**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/preview-azure_1.png" alt-text="Screenshot shows Visual Studio with Project, Teams Toolkit, and Preview in Teams options." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/preview-azure_2.png":::
 
