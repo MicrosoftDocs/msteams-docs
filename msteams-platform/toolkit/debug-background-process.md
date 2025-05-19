@@ -88,7 +88,7 @@ Use the following .NET Core versions:
 |macOs (arm64) |6.0 |
 
 > [!NOTE]
-> If the development certificate for localhost isn't installed for tab in Windows or MacOS, the Agents Toolkit prompts you to install it.</br> -->
+> If the development certificate for localhost isn't installed for tab in Windows or MacOS, Agents Toolkit prompts you to install it.</br> -->
 
 When you select **Start Debugging (F5)**, Agents Toolkit output channel displays the progress and result after checking the prerequisites.
 
