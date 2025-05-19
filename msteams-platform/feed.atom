@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>Microsoft Teams Platform</title>
-	<updated>2025-05-07T04:15:01+05:30</updated>
+	<updated>2025-05-16T04:15:01+05:30</updated>
 	<generator>https://github.com/jpmonette/feed</generator>
 	<subtitle>Updated articles for Microsoft Teams Platform</subtitle>
 	<rights>https://learn.microsoft.com/legal/termsofuse</rights>
 	<category term="new"/>
 	<category term="updated"/>
+	<entry>
+		<title type="html"><![CDATA[Platform update: Introducing Custom Activity Icons in Microsoft Teams]]></title>
+		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/12874</id>
+		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12874?referrer=whats.new.rssfeed"/>
+		<updated>2025-05-016T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[Introducing Custom Activity Icons in Microsoft Teams. This is in developer preview. You can now use custom icons for user-triggered notifications in the activity feed in Microsoft Teams.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12874?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<category label="new" term="new"/>
+	</entry>
+	<entry>
+		<title type="html"><![CDATA[Platform update: Introducing agents usage analytics for third-party apps in Developer Portal]]></title>
+		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/12858</id>
+		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12858?referrer=whats.new.rssfeed"/>
+		<updated>2025-05-015T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[You can now view the Analytics of Microsoft 365 Copilot agent usage for your third-party apps. Explore new Microsoft 365 dimensions in host product and capabilities within Developer Portal for Teams.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12858?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<category label="new" term="new"/>
+	</entry>
 	<entry>
 		<title type="html"><![CDATA[Platform update: Teams AI library v2 (Developer Preview)]]></title>
 		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/12799</id>
@@ -109,22 +125,6 @@
 		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/11611?referrer=whats.new.rssfeed"/>
 		<updated>2024-10-01T11:04:01+05:30</updated>
 		<summary type="html"><![CDATA[We’ve introduced comprehensive validation guidelines to help publish your Copilot agents swiftly. By following these guidelines, developers can significantly improve their chances of getting their agents approved and published to the Store faster. Be sure to refer to the updated page for all the details.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/11611?referrer=whats.new.rssfeed">here</a>!]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[App validation update: Announcing the launch of the enhanced App validation tool in Developer Portal!]]></title>
-		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/11459</id>
-		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/11459?referrer=whats.new.rssfeed"/>
-		<updated>2024-07-31T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[If you're an ISV developer, our updated App validation tool lets you evaluate your app packages using the same test cases Microsoft uses for reviews. It identifies errors or warnings in app manifests, basic info, and bot capabilities, providing clear guidelines for resolution. Developers now get detailed success, error, and warning statuses based on new bot capability scenarios, helping them fix issues before submission.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/11459?referrer=whats.new.rssfeed">here</a>!]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[App validation update: Common reasons for app validation failure]]></title>
-		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/10819</id>
-		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/10819?referrer=whats.new.rssfeed"/>
-		<updated>2024-04-14T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[We've highlighted some of the most common reasons for app validation failure in this article to help you better prepare before you submit your app. This checklist consists of over 70% of bugs reported during validation. By avoiding these common reasons, you can boost your app's chances of passing the Microsoft Teams Store submission process.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/10819?referrer=whats.new.rssfeed">here</a>!]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 </feed>

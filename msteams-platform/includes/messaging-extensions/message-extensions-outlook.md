@@ -11,7 +11,7 @@
 
    You can also download the sample code from the left pane, under **DEVELOPMENT**, select **View Samples**. A **Samples** tab appears, in the search field enter **NPM Search Connector**.
 
-   :::image type="content" source="../../m365-apps/images/toolkit-search-sample.png" alt-text="Screenshot shows the NPM Search Connector sample in Teams Toolkit Samples gallery.":::
+   :::image type="content" source="../../m365-apps/images/toolkit-search-sample.png" alt-text="Screenshot shows the NPM Search Connector sample in Microsoft 365 Agents Toolkit Samples gallery.":::
 
 1. Select a preferred programming language.
 1. Select a location on your local machine for the workspace folder and enter your application name.
