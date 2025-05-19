@@ -461,7 +461,7 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-| May 19, 2025 | Introducing Teams AI library v2. This new library consolidates all the SDKs needed to create collaborative agents for Microsoft Teams | [Teams AI library v2 (preview)](/microsoftteams/platform/teams-ai-library/welcome) |
+| May 19, 2025 | Introducing Teams AI library v2. This new library consolidates all the SDKs needed to create collaborative agents for Microsoft Teams | [Teams AI library v2 (preview)](/microsoftteams/platform/teams-ai-library/welcome.md) |
 | May 16, 2025 | Increase app engagement with custom activity icons in activity feed notifications | Build tabs > Tab features > Send activity feed notifications > [Custom activity icons in activity feed notifications](/graph/teams-send-activityfeednotifications?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json&tabs=desktop%2Chttp#custom-activity-icons-in-activity-feed-notifications) |
 
 ## Developer preview
