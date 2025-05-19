@@ -63,7 +63,7 @@ Perform the following steps to upload app package:
 
 When the app is ready for use in production, you can submit the app using the Teams app submission API, called from Microsoft Graph API. Teams app submission API is an integrated development environment (IDE) such as Microsoft Visual Studio Code installed with Agents Toolkit (previously known as Teams Toolkit). The following steps help you to publish the app to your organization:
 
-* [Publish from Agents Toolkit](#publish-from-teams-toolkit)
+* [Publish from Agents Toolkit](#publish-from-agents-toolkit)
 * [Approve on admin center](#approve-on-admin-center)
 
 ### Publish from Agents Toolkit
