@@ -5,12 +5,12 @@ description: This guide provides the steps to migrate scaffolded project from Mi
 ms.author: huihuiwu
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 13/05/2025
+ms.date: 15/19/2025
 ---
 
 # Migrate projects from VS 17.13 or lower version to VS 17.14+ version
 
-Teams Toolkit has significant [updates in VS 17.14](https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-notes#:~:text=Microsoft%20365%20Agents-,Toolkit,-Preserve%20font%20preferences). If you are working on VS versions from 17.10 to 17.13, and now you want to upgrade to 17.14, you may want to migrate your projects to make it compatible with VS 17.14. The key updates that have impacted this migration are:
+Teams Toolkit has significant [updates in VS 17.14](/visualstudio/releases/2022/release-notes). If you are working on VS versions from 17.10 to 17.13, and now you want to upgrade to 17.14, you may want to migrate your projects to make it compatible with VS 17.14. The key updates that have impacted this migration are:
 
 ### Teams Toolkit evolves to Microsoft 365 Agents Toolkit
 
