@@ -1,7 +1,7 @@
 ---
-title: Debug Teams App using Teams Toolkit
+title: Debug Teams App using Agents Toolkit
 author: surbhigupta 
-description: Learn how to prepare and debug Teams app locally and in Teams App Test tool, customize debug settings in Teams Toolkit, and its key features.
+description: Learn how to prepare and debug Teams app locally and in Microsoft 365 Agents Playground, customize debug settings in Microsoft 365 Agents Toolkit, and its key features.
 ms.author: surbhigupta 
 ms.localizationpriority: high
 ms.topic: overview
@@ -10,41 +10,41 @@ ms.date: 03/21/2022
 
 # Debug your Teams app
 
-Microsoft Teams Toolkit helps you to debug and preview your Microsoft Teams app. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully in Teams.
+Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) helps you to debug and preview your Microsoft Teams app. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully in Teams.
 
 ## Debug your Teams app for Visual Studio Code
 
-Teams Toolkit in Microsoft Visual Studio Code automates the debug process. You can detect errors and fix them as well as preview the teams app. You can also customize debug settings to create your tab or bot.
+Agents Toolkit in Microsoft Visual Studio Code automates the debug process. You can detect errors and fix them as well as preview the teams app. You can also customize debug settings to create your tab or bot.
 
 During the debug process:
 
-* Teams Toolkit automatically starts app services, launches debuggers, and uploads the Teams app.
-* Teams Toolkit checks the prerequisites during the debug background process.
+* Agents Toolkit automatically starts app services, launches debuggers, and uploads the Teams app.
+* Agents Toolkit checks the prerequisites during the debug background process.
 * Your Teams app is available for preview in Teams web client locally after debugging.
 * You can also customize debug settings to use your bot endpoints, development certificate, or debug partial component to load your configured app.
 * Visual Studio Code allows you to debug tab, bot, message extension, and Azure Functions.
 
-## Key debug features of Teams Toolkit
+## Key debug features of Agents Toolkit
 
-Teams Toolkit supports the following debug features:
+Agents Toolkit supports the following debug features:
 
 * [Start debugging](#start-debugging)
 * [Multi-target debugging](#multi-target-debugging)
 * [Toggle breakpoints](#toggle-breakpoints)
 * [Hot reload](#hot-reload)
 * [Stop debugging](#stop-debugging)
-* [Teams App Test Tool](#teams-app-test-tool)
+* [Microsoft 365 Agents Playground](#microsoft-365-agents-playground) (previously known as Teams App Test Tool)
 * [Debug apps in Teams desktop client](#debug-apps-in-teams-desktop-client)
 
-Teams Toolkit performs background functions during debug process, which include verifying the prerequisites required for debug. You can see the progress of the verification process in the output channel of Teams Toolkit. In the setup process you can register and configure your Teams app.
+Agents Toolkit performs background functions during debug process, which include verifying the prerequisites required for debug. You can see the progress of the verification process in the output channel of Agents Toolkit. In the setup process you can register and configure your Teams app.
 
 ### Start debugging
 
-You can press **F5** as a single operation to start debugging. Teams Toolkit starts to check prerequisites, registers Microsoft Entra app, Teams app, and registers bot, starts services, and launches browser.
+You can press **F5** as a single operation to start debugging. Agents Toolkit starts to check prerequisites, registers Microsoft Entra app, Teams app, and registers bot, starts services, and launches browser.
 
 ### Multi-target debugging
 
-Teams Toolkit utilizes multi-target debugging feature to debug tab, bot, message extension, and Azure Functions at the same time.
+Agents Toolkit utilizes multi-target debugging feature to debug tab, bot, message extension, and Azure Functions at the same time.
 
 ### Toggle breakpoints
 
@@ -64,13 +64,13 @@ When you complete local debug, you can select **Stop (Shift+F5)** or **[Alt] Dis
 
    :::image type="content" source="../assets/images/toolkit-v2/debug/stop-debug.png" alt-text="Screenshot shows the stop debugging option.":::
 
-### Teams App Test Tool
+### Microsoft 365 Agents Playground 
 
-The Teams App Test Tool makes debugging your bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use the Test Tool. For more information, see [Teams App Test Tool](debug-your-agents-playground.md).
+Agents Playground makes debugging your bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Agents Playground. For more information, see [Agents Playground](debug-your-agents-playground.md).
 
 ### Debug apps in Teams desktop client
 
-Microsoft Teams Toolkit helps you to debug and preview your Microsoft Teams app in desktop client. For more information, see [debug apps in Teams desktop client](debug-apps-in-Teams-desktop-client.md).
+Agents Toolkit helps you to debug and preview your Microsoft Teams app in desktop client. For more information, see [debug apps in Teams desktop client](debug-apps-in-Teams-desktop-client.md).
 
 ## Prepare for debug
 
@@ -86,7 +86,7 @@ Ensure that you can toggle breakpoints on the source codes of tabs, bots, messag
 
 ## Customize debug settings
 
-Teams Toolkit allows you to customize the debug settings to create your tab or bot. For more information on the full list of customizable options, see [debug settings doc](https://github.com/OfficeDev/TeamsFx/wiki/Teams-Toolkit-Visual-Studio-Code-v5.0-Prerelease-Guide#debug-f5-in-visual-studio-code).
+Agents Toolkit allows you to customize the debug settings to create your tab or bot. For more information on the full list of customizable options, see [debug settings doc](https://github.com/OfficeDev/TeamsFx/wiki/Teams-Toolkit-Visual-Studio-Code-v5.0-Prerelease-Guide#debug-f5-in-visual-studio-code).
 
 You can also customize debug settings for your existing bot app.
 <br>
@@ -95,7 +95,7 @@ You can also customize debug settings for your existing bot app.
 
 <summary><b>Learn how to use an existing bot for debugging</b></summary>
 
-Teams Toolkit creates Microsoft Entra apps for projects with bot by default using  [`botAadApp/create`](https://github.com/OfficeDev/TeamsFx/wiki/Available-actions-in-Teams-Toolkit#botaadappcreate) action.
+Agents Toolkit creates Microsoft Entra apps for projects with bot by default using  [`botAadApp/create`](https://github.com/OfficeDev/TeamsFx/wiki/Available-actions-in-Teams-Toolkit#botaadappcreate) action.
 
 To use an existing bot, you can set `BOT_ID` and `SECRET_BOT_PASSWORD` in `env/.env.local` with your own values.
 
@@ -196,7 +196,7 @@ In `m365agents.local.yml`, edit `args` of `cli/runNpmCommand` action.
 <details>
 <summary><b>Use your own app package</b></summary>
 
-Teams Toolkit by default creates a set of `teamsApp` actions to manage app package. You can update those in `m365agents.local.yml` to use your own app package.
+Agents Toolkit by default creates a set of `teamsApp` actions to manage app package. You can update those in `m365agents.local.yml` to use your own app package.
 
 ```yml
 # m365agents.local.yml
@@ -251,7 +251,7 @@ BOT_ENDPOINT={YOUR_OWN_TUNNEL_URL}
 
 <summary><b>Add environment variables</b></summary>
 
-You can add environment variables to `.localConfigs` file for tab, bot, message extension, and Azure Functions. Teams Toolkit loads the environment variables you added to start services during local debug.
+You can add environment variables to `.localConfigs` file for tab, bot, message extension, and Azure Functions. Agents Toolkit loads the environment variables you added to start services during local debug.
 
  > [!NOTE]
  > Ensure to start a new local debug after you add new environment variables, as the environment variables don't support hot reload.
@@ -261,7 +261,7 @@ You can add environment variables to `.localConfigs` file for tab, bot, message 
 <details>
 <summary><b>Debug partial component</b></summary>
 
-Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, bot, message extension, and Azure Functions at the same time. You can update `.vscode/launch.json` and `.vscode/tasks.json` to debug partial component. If you want to debug tab only in a tab plus bot with Azure Functions project, use the following steps:
+Agents Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, bot, message extension, and Azure Functions at the same time. You can update `.vscode/launch.json` and `.vscode/tasks.json` to debug partial component. If you want to debug tab only in a tab plus bot with Azure Functions project, use the following steps:
 
 1. Update `"Attach to Bot"` and `"Attach to Backend"` from debug compound in `.vscode/launch.json`.
 
@@ -348,8 +348,8 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 
 ## See also
 
-* [Teams Toolkit Overview](agents-toolkit-fundamentals.md)
+* [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals.md)
 * [Debug background process](debug-background-process.md)
-* [Use Teams Toolkit to provision cloud resources](provision.md)
+* [Use Agents Toolkit to provision cloud resources](provision.md)
 * [Deploy to the cloud](deploy.md)
 * [Preview and customize app manifest](TeamsFx-preview-and-customize-app-manifest.md)
