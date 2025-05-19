@@ -13,10 +13,10 @@ zone_pivot_groups: toolkit-cli
 
 > [!IMPORTANT]
 >
-> * We recommend that you use Microsoft 365 Agents Toolkit CLI (previously known as TeamsFx CLI) to build your Teams app.
-> * Teams Toolkit CLI v1 and v2 aren't supported.
+> * We recommend that you use Microsoft 365 Agents Toolkit CLI (previously known as Teams Toolkit CLI) to build your Teams app.
+> * TeamsFx CLI v1 and v2 aren't supported.
 
-Teams Toolkit command line interface (also previously known as Teams Toolkit CLI) is a text-based command line interface that accelerates Microsoft Teams application development. It aims to provide keyboard centric experience while building Teams applications. For more information, see [source code](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli) and [npm package](https://www.npmjs.com/package/@microsoft/teamsfx-cli).
+Microsoft Teams Toolkit command line interface (Teams Toolkit CLI) is a text-based command line interface that accelerates Microsoft Teams application development. It aims to provide keyboard centric experience while building Teams applications. For more information, see [source code](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli) and [npm package](https://www.npmjs.com/package/@microsoft/teamsfx-cli).
 
 ::: zone pivot="version-three"
 
