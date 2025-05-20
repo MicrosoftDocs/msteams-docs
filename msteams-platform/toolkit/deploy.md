@@ -1,7 +1,7 @@
 ---
 title: Deploy to the cloud
 author: MuyangAmigo
-description: Learn how to deploy and customize Teams app to cloud resources such as Azure App Services, Azure Storage, or SharePoint using Teams Toolkit in Visual Studio Code.
+description: Learn how to deploy and customize Teams app to cloud resources such as Azure App Services, Azure Storage, or SharePoint using Agents Toolkit in Visual Studio Code.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Deploy Microsoft Teams app to the cloud using Microsoft Visual Studio Code
 
-Microsoft Teams Toolkit helps to deploy or upload the front-end and back-end code in your app to your provisioned cloud resources in Azure.
+Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) helps to deploy or upload the front-end and back-end code in your app to your provisioned cloud resources in Azure.
 
 You can deploy to the following types of cloud resources:
 
@@ -22,9 +22,9 @@ You can deploy to the following types of cloud resources:
 > [!NOTE]
 > Before you deploy app code to Azure cloud, you need to successfully complete the [provisioning of cloud resources](provision.md).
 
-## Deploy Teams apps using Teams Toolkit
+## Deploy Teams apps using Agents Toolkit
 
-The Get started guide helps to deploy using Teams Toolkit. You can use the following to deploy your Teams app:
+The Get started guide helps to deploy using Agents Toolkit. You can use the following to deploy your Teams app:
 
 ### Sign in to your Azure account
 
@@ -32,7 +32,7 @@ Use this account to access the Microsoft Azure portal and to provision new cloud
 
 1. Open Visual Studio Code.
 1. Open the project folder in which you created app.
-1. Select the Teams Toolkit icon in the sidebar.
+1. Select the Microsoft 365 Agents Toolkit icon in the sidebar.
 1. Select **Sign in to Azure**.
 
     > [!TIP]
@@ -47,24 +47,24 @@ The ACCOUNTS section of the sidebar shows the two accounts separately. It also l
 
 Now you're ready to deploy your app to Azure!
 
-Congratulations, you've created a Teams app! Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.
+Congratulations, you've created a Teams app! Now let's go ahead and learn how to deploy one of the apps to Azure using Agents Toolkit.
 
 ## Deploy to Azure
 
 1. Select **Deploy** from the **LIFECYCLE** section in the left pane.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/deploy_to_the_cloud_button.png" alt-text="Screenshot showing the selection of Deploy.":::
+   :::image type="content" source="../assets/images/toolkit-v2/deploy_to_the_cloud_button.png" alt-text="Screenshot showing the selection of Deploy.":::
 
 1. Select an environment. (If there's only one environment, this step is skipped.)
 1. Select **Deploy**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/click_deploy.png" alt-text="Screenshot showing the selection of Deploy under Visual Studio Code.":::
+   :::image type="content" source="../assets/images/toolkit-v2/click_deploy.png" alt-text="Screenshot showing the selection of Deploy under Visual Studio Code.":::
 
-1. Select the Teams Toolkit icon in the sidebar.
+1. Select the Microsoft 365 Agents Toolkit icon in the sidebar.
 
 ### Customize deploy lifecycle in Teams
 
-To customize the deployment process, you can edit the deploy sections in 'teamsapp.yml'.
+To customize the deployment process, you can edit the deploy sections in 'm365agents.yml'.
 
 #### cli/runNpmCommand
 
@@ -250,7 +250,7 @@ This action upload and deploys generated sppkg to SharePoint app catalog. You ca
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Microsoft 365 Agents Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Create and deploy an Azure cloud service](/azure/cloud-services/cloud-services-how-to-create-deploy-portal)
 * [Add How-to guides to Teams app](add-how-to-guides-vsc.md)
 * [Add cloud resources to Teams app](add-resource.md)
