@@ -829,6 +829,6 @@ If you're using the version of SDK that has `loadConfiguration()`, you can perfo
 ## See also
 
 * [Microsoft 365 Agents Toolkit Overview](teams-toolkit-fundamentals.md)
-* [Microsoft 365 Agents Toolkit CLI](Teams-Toolkit-CLI.md)
+* [Microsoft 365 Agents Toolkit CLI](microsoft-365-agents-toolkit-CLI.md)
 * [Microsoft TeamsFx sample gallery](https://github.com/OfficeDev/TeamsFx-Samples).
 * [Add single sign-on to Teams app](add-single-sign-on.md)
