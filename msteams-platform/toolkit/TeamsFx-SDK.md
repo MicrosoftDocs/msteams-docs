@@ -48,12 +48,12 @@ For more information, see [Teams app project](https://github.com/OfficeDev/Teams
  > [!Tip]
  > The code snippets are updated for the latest TeamsFx SDK version 2.
 
-### Install the `@microsoft/teamsfx` package
+### Install the `@microsoft/atk` package
 
 Install the TeamsFx SDK for TypeScript or JavaScript with `npm`:
 
 ```bash
-npm install @microsoft/teamsfx
+npm install @microsoft/atk
 ```
 
 ## TeamsFx core functionalities

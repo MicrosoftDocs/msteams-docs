@@ -39,7 +39,7 @@ Teams platform brings you different tools to build and develop your Teams apps. 
 | Add SSO | Provide SSO-enabled samples and how-to guides to add SSO. |
 | Bot or Message extension Registration | Automatically create when debugging or provisioning the project. User can also specify their own Bot ID. |
 | Expose Node.js app | Tab: localhost + HTTPS and Others: Dev Tunnel |
-| Run Node.js app | npm run teamsfx:dev |
+| Run Node.js app | npm run atk:dev |
 | One-click debug | F5 or debug in Visual Studio Code and Visual Studio |
 
 </details>
