@@ -19,13 +19,13 @@ When a user selects a button, it remains visible and accessible on the rich card
 >
 > `SuggestedActions` aren't supported for chat bots with attachments for any conversation type.
 
-Here are some examples to implement and experience suggested actions using `imBack` and `Action.Compose`:
+Here are some examples that show how to implement and experience suggested actions using `imBack` and `Action.Compose`:
 
 # [`imBack`](#tab/iamback)
 
 To add suggested actions to a message, specify a list of [card action](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) objects that represent the buttons to be displayed to the user for the [`suggestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions) property of the [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) object.
 
-The following is an example to implement and experience suggested actions:
+The following is an example to implement suggested actions using `imBack`:
 
 ``` json
 {
