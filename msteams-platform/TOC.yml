@@ -245,7 +245,7 @@
         - name: Publish Teams apps using Developer Portal 
           href: toolkit/publish-your-teams-apps-using-developer-portal.md
         - name: Teams app tutorials and code samples
-          href: toolkit/teams-toolkit-tutorial.md
+          href: toolkit/agents-toolkit-tutorial.md
           displayName: Microsoft Teams samples
         - name: FAQ
           href: toolkit/faq.md
