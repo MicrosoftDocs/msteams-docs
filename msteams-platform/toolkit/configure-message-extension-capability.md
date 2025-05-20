@@ -1,7 +1,7 @@
 ---
 title: Configure Message Extension Capability
 author: surbhigupta
-description: Learn how to configure the message extension capability within a Teams app with Microsoft Teams Toolkit for Visual Studio Code.
+description: Learn how to configure the message extension capability within a Teams app with Microsoft 365 Agents Toolkit for Visual Studio Code.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
@@ -28,15 +28,15 @@ To configure the message extension capability in your app, ensure the following 
 
 To add a message extension to a tab app, follow these steps:
 
-1. [Create message extension app using Microsoft Teams Toolkit](#create-message-extension-app-using-microsoft-teams-toolkit)
+1. [Create message extension app using Agents Toolkit](#create-message-extension-app-using-agents-toolkit)
 1. [Configure message extension in app manifest](#configure-message-extension-in-app-manifest)
 1. [Add message extension code to your project](#add-message-extension-code-to-your-project)
 1. [Setup local debug environment](#setup-local-debug-environment)
 1. [Provision your app to Azure](#provision-your-app-to-azure)
 
-### Create message extension app using Microsoft Teams Toolkit
+### Create message extension app using Agents Toolkit
 
-To create a message extension app with Teams Toolkit, see [create a message extension app with Teams Toolkit](create-new-project.md).
+To create a message extension app with Agents Toolkit (previously known as Teams Toolkit), see [create a message extension app with Agents Toolkit](create-new-project.md).
 
 ### Configure message extension in app manifest
 
@@ -152,8 +152,8 @@ The following code snippet is an example:
    |   |--views/
    |--package.json
    |--tsconfig.json
-   |--teamsapp.local.yml
-   |--teamsapp.yml
+   |--m365agents.local.yml
+   |--m365agents.yml
    ```
 
 1. Reorganize the folder structure as follows:
@@ -182,8 +182,8 @@ The following code snippet is an example:
    |   |--package.json
    |   |--tsconfig.json
    |--package.json <!--root package.json-->
-   |--teamsapp.local.yml
-   |--teamsapp.yml
+   |--m365agents.local.yml
+   |--m365agents.yml
    ```
 
 1. Add the following code to your root `package.json`:
@@ -309,7 +309,7 @@ The following code snippet is an example:
    ]
    ```
 
-1. Under the `teamsapp.local.yml` file:
+1. Under the `m365agents.local.yml` file:
    1. Under `provision`, add the `botAadApp/create` and `botFramework/create` actions.
    1. Under `deploy`, update the code of the `file/createOrUpdateEnvironmentFile` action.
 
@@ -353,7 +353,7 @@ The following code snippet is an example:
            BOT_PASSWORD: ${{SECRET_BOT_PASSWORD}}
    ```
 
-   For more information, see [sample app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab/teamsapp.local.yml).
+   For more information, see [sample app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab/m365agents.local.yml).
 
 1. Under the **Run and Debug**, select **Debug (Edge)** or **Debug (Chrome)**.
 
@@ -453,8 +453,8 @@ The following code snippet is an example:
    }
    ```
 
-1. Under the `teamsapp.yml` file:
-   1. Under `provision`, add the `botAadApp/create` action. For more information, see [sample app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab/teamsapp.yml).
+1. Under the `m365agents.yml` file:
+   1. Under `provision`, add the `botAadApp/create` action. For more information, see [sample app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab/m365agents.yml).
    1. Under the `deploy` section, add the following code:
 
    ```yaml
@@ -508,13 +508,13 @@ You can add the message extension capability to a bot app easily as message exte
 
 To add a message extension to a bot app, follow these steps:
 
-1. [Create a message extension app using Teams Toolkit](#create-a-message-extension-using-teams-toolkit)
+1. [Create a message extension app using Agents Toolkit](#create-a-message-extension-using-agents-toolkit)
 1. [Configure message extension in app manifest](#configure-message-extension-in-app-manifest)
 1. [Add message extension code to project](#add-message-extension-code-to-project)
 
-### Create a message extension using Teams Toolkit
+### Create a message extension using Agents Toolkit
 
-To create a message extension app, see [create a message extension app with Teams Toolkit](create-new-project.md).
+To create a message extension app, see [create a message extension app with Agents Toolkit](create-new-project.md).
 
 ### Configure message extension in app manifest
 
@@ -608,7 +608,7 @@ The following code snippet is an example:
 
 ### Add message extension code to project
 
-1. Your bot app contains a class that extends `TeamsActivityHandler`. Copy your message extension functions from the message extension app into this class in Visual Studio Code. The following code is an example of a bot that contains functions from a message extension app created in Teams Toolkit:
+1. Your bot app contains a class that extends `TeamsActivityHandler`. Copy your message extension functions from the message extension app into this class in Visual Studio Code. The following code is an example of a bot that contains functions from a message extension app created in Agents Toolkit:
 
    ```javascript
      class YourHandler extends TeamsActivityHandler {

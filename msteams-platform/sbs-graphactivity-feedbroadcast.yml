@@ -74,7 +74,7 @@ items:
       1. Select **Upload an app**.
       1. Look for the option to **Upload a custom app**.
 
-         :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-app.png" alt-text="Screenshot shows the custom upload app in Teams.":::
+         :::image type="content" source="~/assets/images/toolkit-v2/prerequisites/upload-app.png" alt-text="Screenshot shows the custom upload app in Teams.":::
 
          > [!NOTE]
          > Contact Teams administrator, if you can't upload a custom app.
@@ -91,7 +91,7 @@ items:
     1. Select **Set-up E5 subscription** from the welcome screen.
     1. Set up an administrator account. After you finish, the following screen displays.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Microsoft" border="true":::
+       :::image type="content" source="~/assets/images/toolkit-v2/prerequisites/microsoft-365.png" alt-text="Microsoft" border="true":::
 
     1. Sign in to Teams using the new administrator account. Now you can select **Upload a custom app**.
 
