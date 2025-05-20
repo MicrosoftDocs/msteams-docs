@@ -1250,15 +1250,11 @@
       },
       {
         "source_path": "msteams-platform/toolkit/explore-Teams-Toolkit.md",
-        "redirect_url": "/microsoftteams/platform/toolkit/explore-Agents-Toolkit"
+        "redirect_url": "/microsoftteams/platform/toolkit/explore-agents-toolkit"
       },
       {
         "source_path": "msteams-platform/toolkit/install-Teams-Toolkit.md",
-        "redirect_url": "/microsoftteams/platform/toolkit/install-Agents-Toolkit"
-      },
-      {
-        "source_path": "msteams-platform/toolkit/Teams-Toolkit-CLI.md",
-        "redirect_url": "/microsoftteams/platform/toolkit/Agents-Toolkit-CLI"
+        "redirect_url": "/microsoftteams/platform/toolkit/install-agents-toolkit"
       },
       {
         "source_path": "msteams-platform/toolkit/teams-toolkit-fundamentals.md",
@@ -1278,15 +1274,19 @@
       },
       {
         "source_path": "msteams-platform/toolkit/toolkit-v4/explore-Teams-Toolkit-vs.md",
-        "redirect_url": "/microsoftteams/platform/toolkit/toolkit-v4/explore-Agents-Toolkit-vs"
+        "redirect_url": "/microsoftteams/platform/toolkit/toolkit-v4/explore-agents-toolkit-vs"
       },
       {
         "source_path": "msteams-platform/toolkit/toolkit-v4/install-Teams-Toolkit-vs.md",
-        "redirect_url": "/microsoftteams/platform/toolkit/toolkit-v4/install-Agents-Toolkit-vs"
+        "redirect_url": "/microsoftteams/platform/toolkit/toolkit-v4/install-agents-toolkit-vs"
       },
       {
         "source_path": "msteams-platform/toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md",
         "redirect_url": "/microsoftteams/platform/toolkit/toolkit-v4/agents-toolkit-fundamentals-vs"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/Agents-Toolkit-CLI.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/teams-toolkit-CLI"
       }
     ]
 }

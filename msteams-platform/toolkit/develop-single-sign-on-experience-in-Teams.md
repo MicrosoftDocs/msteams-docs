@@ -422,7 +422,7 @@ To use the `teamsFx` tab or bot template, follow these steps:
    1. Run the following commands under `./` folder:
 
       ```bash
-      npm install @microsoft/teamsfx
+      npm install @microsoft/atk
       ```
 
       ```bash
