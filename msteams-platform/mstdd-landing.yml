@@ -21,19 +21,34 @@ landingContent:
 # Cards and links should be based on top customer tasks or top subjects
 # Start card title with a verb
 
-
+- title: Microsoft Build 2025
+  linkLists:
+    - linkListType: concept
+      links:
+      - text: Teams AI library v2 (preview)
+        url: /microsoftteams/platform/teams-ai-library/welcome
+      - text: Teams Toolkit renamed to Microsoft 365 Agents Toolkit
+        url: /microsoft-365/developer/overview-m365-agents-toolkit?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json
+      - text: Custom app analytics and agent usage analytics for custom apps in Developer Portal
+        url: /microsoftteams/platform/concepts/build-and-test/analyze-your-apps-usage-in-developer-portal?tabs=custom-apps-built-for-your-org
+      - text: Agent usage analytics for third-party apps in Developer Portal
+        url: /microsoftteams/platform/concepts/build-and-test/analyze-your-apps-usage-in-developer-portal?tabs=thirdpartyapps
+      - text: AI-generated meeting summary
+        url: graph-api/meeting-transcripts/meeting-insights.md
+      - text: Custom activity icons (preview)
+        url: /graph/teams-send-activityfeednotifications?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json&tabs=desktop%2Chttp#custom-activity-icons-in-activity-feed-notifications
 
 - title: Build custom engine agents
   linkLists:
     - linkListType: concept
       links:
-      - text: Teams AI library v2 (preview)
-        url: /microsoftteams/platform/teams-ai-library/welcome/overview
       - text: Custom engine agents overview
         url: /microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+      - text: Teams AI library v2 (preview)
+        url: /microsoftteams/platform/teams-ai-library/welcome
       - text: Teams AI library v1
         url: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md
-      - text: Build custom engine agents using Teams Toolkit
+      - text: Build custom engine agents using Agents Toolkit
         url: Teams-AI-library-tutorial.yml
       - text: Custom engine agent user experience
         url: bots/how-to/teams-conversational-ai/ai-ux.md
@@ -98,7 +113,7 @@ landingContent:
         url: sbs-gs-workflow-bot.yml   
     - linkListType: tutorial
       links:
-        - text: Debug your AI chat bot using Teams App Test Tool
+        - text: Debug your AI chat bot using Agents Playground
           url: ~/sbs-teams-app-test-tool.yml
         - text: Bot configuration experience
           url: ~/qsg-bot-configuration-experience.yml
