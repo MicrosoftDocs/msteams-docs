@@ -58,7 +58,7 @@ Choose one of the following next steps:
 >
 >[!div class="nextstepaction"]
 > If you want to learn more about Teams AI library v2, select the following: <br>
-> [Teams AI library v2](/microsoftteams/platform/teams-ai-library/getting-started/overview)
+> [Teams AI library v2](/microsoftteams/platform/teams-ai-library/)
 >
 > [!div class="nextstepaction"]
 > If you want to learn about the core capabilities of Teams AI library, select the following: <br>
