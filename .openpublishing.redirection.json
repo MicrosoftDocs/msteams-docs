@@ -1283,6 +1283,10 @@
       {
         "source_path": "msteams-platform/toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md",
         "redirect_url": "/microsoftteams/platform/toolkit/toolkit-v4/agents-toolkit-fundamentals-vs"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/Agents-Toolkit-CLI.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/teams-toolkit-CLI"
       }
     ]
 }
