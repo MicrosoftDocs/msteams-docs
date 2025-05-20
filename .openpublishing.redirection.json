@@ -1287,10 +1287,6 @@
       {
         "source_path": "msteams-platform/toolkit/Agents-Toolkit-CLI.md",
         "redirect_url": "/microsoftteams/platform/toolkit/teams-toolkit-CLI"
-      },
-      {
-        "source_path": "msteams-platform/toolkit/teams-toolkit-tutorial.md",
-        "redirect_url": "/microsoftteams/platform/toolkit/agents-toolkit-tutorial"
       }
     ]
 }
