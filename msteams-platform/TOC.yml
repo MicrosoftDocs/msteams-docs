@@ -327,7 +327,7 @@
   - name: SDKs
     items:
     - name: Teams AI library v2 (preview)
-      href: /microsoftteams/platform/teams-ai-library/welcome/overview
+      href: /microsoftteams/platform/teams-ai-library/welcome
     - name: TeamsFx SDK
       href: toolkit/TeamsFx-SDK.md
       displayName: getUserinfo
@@ -402,7 +402,7 @@
   - name: Teams AI library v2 (preview)
     items:
       - name: Get started
-        href: /microsoftteams/platform/teams-ai-library/welcome/overview
+        href: /microsoftteams/platform/teams-ai-library/welcome
   - name: Teams AI library v1
     items:
     - name: What is Teams AI library?
