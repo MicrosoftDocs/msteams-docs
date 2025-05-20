@@ -59,6 +59,8 @@ The following flow diagram explains the different SDKs, libraries, and its relat
 
 ### Teams Developer Platform SDKs & libraries
 
+[!INCLUDE [teams-ai-lib-v2-rec](../../includes/teams-ai-lib-v2-rec.md)]
+
 | SDKs and libraries | Why do you need? | Related SDKs and libraries |
 | ----------------- | -------------- | ----------------------- |
 | [TeamsFx SDK](~/toolkit/teamsfx-sdk.md) | TeamsFx simplifies your tasks by using Teams single sign-on (SSO) and accessing cloud resources into single-line statements with zero configuration. | :::image type="icon" source="../../assets/icons/blue-dot.png" border="false"::: Depends on **Bot Framework SDK**, **Teams JavaScript client library**, and **Microsoft Graph SDK**. </br> :::image type="icon" source="../../assets/icons/yellow-dot.png" border="false"::: You can use it with **Teams AI Library** and **Adaptive Cards**. |
