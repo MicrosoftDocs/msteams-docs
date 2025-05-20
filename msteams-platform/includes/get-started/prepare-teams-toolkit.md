@@ -25,13 +25,13 @@ You can also install Agents Toolkit from the [Visual Studio Code Marketplace](ht
 To install Agents Toolkit CLI, use the `npm` package manager and enter the following command in Command prompt:
 
 ``` bash
-npm install -g @microsoft/teamsfx-cli
+npm install -g @microsoft/atk-cli
 ```
 
 Depending on your configuration, you might need to use `sudo` to install the CLI:
 
 ``` bash
-sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
+sudo npm install -g --unsafe-perm @microsoft/atk-cli
 ```
 
 This condition is more common on Linux and macOS systems.
