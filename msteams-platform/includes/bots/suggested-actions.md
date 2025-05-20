@@ -7,11 +7,11 @@ When a user selects a button, it remains visible and accessible on the rich card
 
 # [Group chat](#tab/gc)
 
-:::image type="content" source="../../assets/images/bots/suggested-action-gc.png" alt-text="Image shows suggested actions in a group chat.":::
+:::image type="content" source="../../assets/images/bots/suggested-action-gc.png" alt-text="Image shows suggested actions in a group chat." border="false" lightbox="../../assets/images/bots/suggested-action-gc.png":::
 
 # [Channel](#tab/channel)
 
-:::image type="content" source="../../assets/images/bots/suggested-action-channel.png" alt-text="Image shows suggested actions in a channel.":::
+:::image type="content" source="../../assets/images/bots/suggested-action-channel.png" alt-text="Image shows suggested actions in a channel." border="false" lightbox="../../assets/images/bots/suggested-action-channel.png":::
 
 ---
 
