@@ -5,10 +5,6 @@ When a user selects a button, it remains visible and accessible on the rich card
 - `personal`: In one-on-one chats, actions are shown as smart replies, so only the actions from the last message appear.
 - `team` and `groupChat`: In group chats and channels, actions are always saved with the message.
 
-> [!NOTE]
->
-> `SuggestedActions` aren't supported for chat bots with attachments for any conversation type.
-
 # [Group chat](#tab/gc)
 
 :::image type="content" source="../../assets/images/bots/suggested-action-gc.png" alt-text="Image shows suggested actions in a group chat.":::
@@ -18,6 +14,12 @@ When a user selects a button, it remains visible and accessible on the rich card
 :::image type="content" source="../../assets/images/bots/suggested-action-channel.png" alt-text="Image shows suggested actions in a channel.":::
 
 ---
+
+> [!NOTE]
+>
+> `SuggestedActions` aren't supported for chat bots with attachments for any conversation type.
+
+Here are some examples to implement and experience suggested actions using `imBack` and `Action.Compose`:
 
 # [`imBack`](#tab/iamback)
 
