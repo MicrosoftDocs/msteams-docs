@@ -402,7 +402,7 @@
   - name: Teams AI library v2 (preview)
     items:
       - name: Get started
-        href: /microsoftteams/platform/teams-ai-library/welcome
+        href: /microsoftteams/platform/teams-ai-library/welcome.md
   - name: Teams AI library v1
     items:
     - name: What is Teams AI library?
