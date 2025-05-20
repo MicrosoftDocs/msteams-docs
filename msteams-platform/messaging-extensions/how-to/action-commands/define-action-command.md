@@ -64,7 +64,7 @@ If the message extension is invoked from the compose box or directly from a mess
 
 ### Create action command using Developer Portal
 
-You can create an action command using **Microsoft 365 Agents Toolkit** (previously known as Teams Toolkit) and **Developer Portal for Teams**.
+You can create an action command using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) and Developer Portal for Teams.
 
 # [Microsoft 365 Agents Toolkit](#tab/Teams-toolkit)
 
