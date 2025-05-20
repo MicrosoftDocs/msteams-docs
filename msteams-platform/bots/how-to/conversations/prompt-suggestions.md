@@ -209,9 +209,10 @@ modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
 
 ## Code sample
 
-| **Sample name** | **Description** |**.NET** |**Node.js** |
-|-----------------|-----------------|----------------|
+| **Sample name** | **Description** |**.NET** |**Node.js** | **Python** |
+|-----------------|-----------------|----------------|------|
 | Prompt starters bot | This sample code describes the implementation of prompt starters for bot through `commands` property in your bot's app manifest. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-commands-menu/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-commands-menu/nodejs) |
+| Send suggested actions | This sample code demonstrates the feature where user can send suggested actions using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-suggested-actions/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-suggested-actions/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-suggested-actions/python) |
 
 ## See also
 

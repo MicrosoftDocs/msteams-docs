@@ -9,13 +9,13 @@ When a user selects a button, it remains visible and accessible on the rich card
 >
 > `SuggestedActions` aren't supported for chat bots with attachments for any conversation type.
 
-# [Desktop](#tab/desktop)
+# [Group chat](#tab/gc)
 
-Add group/channel screenshot for suggested actions for desktop client
+:::image type="content" source="../../assets/images/bots/suggested-action-gc.png" alt-text="Image shows suggested actions in a group chat.":::
 
-# [Mobile](#tab/mobile)
+# [Channel](#tab/channel)
 
-Add group/channel screenshot for suggested actions for mobile client
+:::image type="content" source="../../assets/images/bots/suggested-action-channel.png" alt-text="Image shows suggested actions in a channel.":::
 
 ---
 
