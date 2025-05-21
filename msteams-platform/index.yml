@@ -217,7 +217,7 @@ tools:
     - title: Microsoft 365 Agents Toolkit extension for Visual Studio
       # imageSrc should be square in ratio with no whitespace
       imageSrc: /media/logos/logo_vs-ide.svg
-      url: /microsoftteams/platform/toolkit/agents-toolkit-fundamentals-vs
+      url: /microsoftteams/platform/toolkit/toolkit-v4/agents-toolkit-fundamentals-vs
     # Card
     - title: Developer Portal
     # imageSrc should be square in ratio with no whitespace
