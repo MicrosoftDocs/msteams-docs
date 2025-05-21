@@ -20,8 +20,8 @@ Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) scaffolds the n
 
 In Developer Portal, you can open and launch your project (React app) in Visual Studio Code.
 
-    > [!NOTE]
-    > To enable your app to open, install the latest version of [Agents Toolkit for Visual Studio Code](../../toolkit/install-Teams-Toolkit.md).
+> [!NOTE]
+> To enable your app to open, install the latest version of [Agents Toolkit for Visual Studio Code](../../toolkit/install-Teams-Toolkit.md).
 
 Following are the steps to open your app in Visual Studio Code:
 
