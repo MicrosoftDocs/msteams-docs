@@ -73,7 +73,7 @@ There are two significant changes between TeamsJS 1.x.x versions and v.2.0.0 and
 * [**APIs are now organized into *capabilities*.**](#apis-organized-into-capabilities) You can think of capabilities as logical groupings of APIs that provide similar functionality, such as `authentication`, `dialog`, `chat`, and `calendar`. Each namespace represents a separate capability.
 
 > [!TIP]
-> You can use the [Microsoft 365 Agents Toolkit extension](https://aka.ms/teams-toolkit) for Microsoft Visual Studio Code to simplify the [TeamsJS v.2.0 update process](#updating-to-teamsjs-version-20) for an existing Teams app.
+> You can use the [Microsoft 365 Agents Toolkit](https://aka.ms/teams-toolkit) (previously known as Teams Toolkit) extension for Microsoft Visual Studio Code to simplify the [TeamsJS v.2.0 update process](#updating-to-teamsjs-version-20) for an existing Teams app.
 
 ### Backwards compatibility
 
