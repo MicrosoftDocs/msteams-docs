@@ -1,5 +1,8 @@
 Suggested actions help users with ideas of what to ask next, based on the previous response or conversation. Your bot should offer context-specific suggestions to the user, rather than generic or fixed ones. You can use your bot’s large language model (LLM) to generate up to three suggestions along with its responses. Then, you can extract these suggestions and present them as options for the user to choose.
 
+> [!IMPORTANT]
+> The bot can parse up to three actions. Even if you include more than three actions, Teams displays only the first three actions.
+
 When a user selects a button, it remains visible and accessible on the rich cards. Suggested actions are supported in all scopes:
 
 - `personal`: In one-on-one chats, actions are shown as smart replies, so only the actions from the last message appear.
@@ -72,22 +75,16 @@ The following code snippet shows an example of implementing `Action.Compose`:
 { 
    Type: “Action.Compose”, 
    Title: “button title”, 
-   Value: <chatMessage> 
-} 
-```
-
-The value object must follow the [`chatMessage`](/graph/api/resources/chatmessage?view=graph-rest-1.0&preserve-view=true) object in the Graph API. A modified version for other hubs can be shown as this example:
-
-```json
-{ 
-   Type: “Action.Compose”, 
-   Title: “button title”, 
    Value: { 
       type: “Teams.chatMessage”, 
       data: <GraphAPI Chat Message Object> 
    } 
 }
 ```
+
+The value object must follow the [`chatMessage`](/graph/api/resources/chatmessage?view=graph-rest-1.0&preserve-view=true) object in the Graph API.
+
+For more information, see [code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/4315177d4b81a9f601656c09b40ad769ccd7720e/samples/bot-suggested-actions/csharp/SuggestedActions/Bots/SuggestedActionsBot.cs#L102).
 
 > [!NOTE]
 > If the message is received in a hub that doesn't support it, the app shows an error message. The bots are aware of the channel to which its posting.
