@@ -71,11 +71,11 @@ Agents Playground offers a faster debug experience for bot applications when com
 
     :::image type="content" source="../assets/images/toolkit-v2/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Agents Toolkit sidebar.":::
 
-1. Select **Bot**.
+1. Select **Agent for Teams**.
 
     :::image type="content" source="../assets/images/toolkit-v2/first-bot/create-new-app1.png" alt-text="Screenshot shows the Teams Toolkit app templates.":::
 
-1. Select **AI Chat Bot**. If you need a different functionality for your bot, pick a different option.
+1. Select **Basic Agent for Teams**. If you need a different functionality for your bot, pick a different option.
 
     :::image type="content" source="../assets/images/toolkit-v2/debug/ai-chat-bot.png" alt-text="Screenshot shows the app feature to add to your new app.":::
 
@@ -126,7 +126,7 @@ Agents Playground offers a faster debug experience for bot applications when com
    1. Run the following command to install Agents Playground CLI from `npm`:
 
       ```cmd
-      npm install -g @microsoft/teams-app-test-tool
+      npm install -g @microsoft/microsoft-365-agents-playground
       ```
 
         :::image type="content" source="../assets/images/toolkit-v2/debug/npm-teams-app-test-tool.png" alt-text="Screenshot shows install agents playground cli.":::
@@ -134,7 +134,7 @@ Agents Playground offers a faster debug experience for bot applications when com
    1. Use the `atk` command from [Microsoft 365 Agents Toolkit CLI](Teams-Toolkit-CLI.md) (previously known as Teams Toolkit CLI) to create your first project. Start from the folder where you want to create the project folder.
 
       ```cmd
-      teamsapp new   
+      atk new   
       ```
 
       You can use the CLI to create a new Teams app. The CLI leads you through a series of questions. Use the arrow keys to select an option. After you make a choice, select **Enter** to confirm. After you enter a suitable name for your app, your project is created.
@@ -144,7 +144,7 @@ Agents Playground offers a faster debug experience for bot applications when com
    1. Run the following command to deploy your app and install the required dependencies and npm packages:
 
       ```cmd
-      teamsapp deploy --env=playground
+      atk deploy --env=playground
       ```
 
        :::image type="content" source="../assets/images/toolkit-v2/debug/teamsapp-deploy-env-testtool.png" alt-text="Screenshot shows the process of installing the required dependencies and npm packages.":::

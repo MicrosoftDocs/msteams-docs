@@ -29,12 +29,12 @@ Ensure that you install the following tools to build and deploy your bot in Agen
 
 ## Build and run the sample app
 
-1. Go to the [sample](https://github.com/OfficeDev/TeamsFx-Samples).
+1. Go to the [sample](https://github.com/OfficeDev/microsoft-365-agents-toolkit-samples).
 
 1. Clone the repository to test the sample app.
 
    ```
-   git clone https://github.com/OfficeDev/TeamsFx-Samples.git
+   git clone https://github.com/OfficeDev/microsoft-365-agents-toolkit-samples.git
    ```
 
 1. Go to **Visual Studio Code**.
