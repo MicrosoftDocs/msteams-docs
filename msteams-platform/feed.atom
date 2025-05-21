@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>Microsoft Teams Platform</title>
-	<updated>2025-05-15T04:15:01+05:30</updated>
+	<updated>2025-05-20T04:15:01+05:30</updated>
 	<generator>https://github.com/jpmonette/feed</generator>
 	<subtitle>Updated articles for Microsoft Teams Platform</subtitle>
 	<rights>https://learn.microsoft.com/legal/termsofuse</rights>
 	<category term="new"/>
 	<category term="updated"/>
+	<entry>
+		<title type="html"><![CDATA[Platform update: Get Teams meeting insights with Meeting AI Insights]]></title>
+		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/12914</id>
+		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12914?referrer=whats.new.rssfeed"/>
+		<updated>2025-05-20T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[We're thrilled to announce the launch of the Meeting AI Insights API in Microsoft Graph, now available in beta! This powerful API enables you to programmatically access structured AI-generated insights from transcribed Microsoft Teams meetings.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12914?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<category label="new" term="new"/>
+	</entry>
+	<entry>
+		<title type="html"><![CDATA[Platform update: Introducing Custom Activity Icons in Microsoft Teams]]></title>
+		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/12874</id>
+		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12874?referrer=whats.new.rssfeed"/>
+		<updated>2025-05-016T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[Introducing Custom Activity Icons in Microsoft Teams. This is in developer preview. You can now use custom icons for user-triggered notifications in the activity feed in Microsoft Teams.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12874?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<category label="new" term="new"/>
+	</entry>
 	<entry>
 		<title type="html"><![CDATA[Platform update: Introducing agents usage analytics for third-party apps in Developer Portal]]></title>
 		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/12858</id>
@@ -109,22 +125,6 @@
 		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/11610?referrer=whats.new.rssfeed"/>
 		<updated>2024-10-01T11:04:01+05:30</updated>
 		<summary type="html"><![CDATA[If you're an ISV developer, you now have the capability to access and analyze your app's usage metrics, including monthly, daily, and weekly data, through the Developer Portal. Additionally, you can import your existing or published apps to the Developer Portal to view detailed usage data, such as trends over time, usage by region or country, app usage across different host products and Microsoft 365 (M365) workloads, and the usage of various app capabilities. This enhancement aims to provide full visibility and explore app usage metrics to build better apps and to provide detailed insights into your app performance.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/11610?referrer=whats.new.rssfeed">here</a>!]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[App validation update: Be proactive in following validation guidelines for your Copilot agent and publish it swiftly!]]></title>
-		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/11611</id>
-		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/11611?referrer=whats.new.rssfeed"/>
-		<updated>2024-10-01T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[We’ve introduced comprehensive validation guidelines to help publish your Copilot agents swiftly. By following these guidelines, developers can significantly improve their chances of getting their agents approved and published to the Store faster. Be sure to refer to the updated page for all the details.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/11611?referrer=whats.new.rssfeed">here</a>!]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[App validation update: Announcing the launch of the enhanced App validation tool in Developer Portal!]]></title>
-		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/11459</id>
-		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/11459?referrer=whats.new.rssfeed"/>
-		<updated>2024-07-31T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[If you're an ISV developer, our updated App validation tool lets you evaluate your app packages using the same test cases Microsoft uses for reviews. It identifies errors or warnings in app manifests, basic info, and bot capabilities, providing clear guidelines for resolution. Developers now get detailed success, error, and warning statuses based on new bot capability scenarios, helping them fix issues before submission.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/11459?referrer=whats.new.rssfeed">here</a>!]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 </feed>

@@ -60,6 +60,8 @@ In addition, you'll also learn how to [stop streaming bot response](#stop-stream
 
 ## Stream message through Teams AI library
 
+[!INCLUDE [teams-ai-lib-v2-rec](../includes/teams-ai-lib-v2-rec.md)]
+
 Teams AI library provides the capability to stream messages for AI-powered bots. Streaming bot messages helps to ease the response time lag while the Large Language Model (LLM) generates the complete response. The primary factors contributing to slow response time include multiple preprocessing steps, such as Retrieval-Augmented Generation (RAG) or function calls, and the time required by the LLM to generate a full response.
 
 > [!NOTE]
