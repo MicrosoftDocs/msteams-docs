@@ -212,12 +212,12 @@ tools:
     - title: Microsoft 365 Agents Toolkit extension for Visual Studio Code
       # imageSrc should be square in ratio with no whitespace
       imageSrc: /media/logos/logo_vs-code.svg
-      url: /microsoftteams/platform/toolkit/teams-toolkit-fundamentals
+      url: /microsoftteams/platform/toolkit/agents-toolkit-fundamentals
   # Card
     - title: Microsoft 365 Agents Toolkit extension for Visual Studio
       # imageSrc should be square in ratio with no whitespace
       imageSrc: /media/logos/logo_vs-ide.svg
-      url: /microsoftteams/platform/toolkit/teams-toolkit-overview-visual-studio
+      url: /microsoftteams/platform/toolkit/agents-toolkit-overview-visual-studio
     # Card
     - title: Developer Portal
     # imageSrc should be square in ratio with no whitespace

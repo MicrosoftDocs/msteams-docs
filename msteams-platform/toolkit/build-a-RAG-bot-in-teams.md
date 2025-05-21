@@ -38,9 +38,9 @@ Microsoft Teams enables you to build a conversational bot with RAG to create an 
 
    :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/create-new-app.png" alt-text="Screenshot shows the location of the Create New Project link in the Agents Toolkit sidebar.":::
 
-1. Select **Custom Engine Agent**.
+1. Select **Agent for Teams**.
 
-   :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/custom-copilot.png" alt-text="Screenshot shows the option to select custom engine agent as the new project to create.":::
+   :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/agent-for-teams.png" alt-text="Screenshot shows the option to select custom engine agent as the new project to create.":::
 
 1. Select **Chat With Your Data**.
 
@@ -50,17 +50,21 @@ Microsoft Teams enables you to build a conversational bot with RAG to create an 
 
    :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/chat-with-data-customize.png" alt-text="Screenshot shows the option to select the data customization for loading.":::
 
-1. Select **JavaScript**.
-
-   :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/language-javascript.png" alt-text="Screenshot shows the option to select the programming language.":::
-
 1. Select **Azure OpenAI** or **OpenAI**.
 
    :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/azure-openai.png" alt-text="Screenshot shows the option to select the LLM.":::
 
-1. Enter your **Azure OpenAI** or **OpenAI** credentials based on the service you select. Select **Enter**.
+1. Enter your **Azure OpenAI Key** and **Azure OpenAI Endpoint** based on the service you select.
 
    :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/azure-open-api-key-optional.png" alt-text="Screenshot shows the location to enter Azure open API key.":::
+
+1. Enter your **Azure OpenAI Deployment Name**.
+
+    :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/openai-deployment-name.png" alt-text="Screenshot to enter Azure open API deployment name.":::
+
+1. Select **JavaScript**.
+
+   :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/language-javascript.png" alt-text="Screenshot shows the option to select the programming language.":::
 
 1. Select **Default folder**.
 

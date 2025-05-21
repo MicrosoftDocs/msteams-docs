@@ -36,21 +36,25 @@ The AI chatbot template showcases a bot app, similar to ChatGPT, that responds t
 
    :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/custom-copilot.png" alt-text="Screenshot shows the option to select custom engine agent as the new project to create.":::
 
-1. Select **Basic AI Chatbot**.
+1. Select **Basic Custom Engine Agent**.
 
    :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/basic-ai-chatbot.png" alt-text="Screenshot shows the option to select app features using AI library list.":::
-
-1. Select **JavaScript**.
-
-   :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/language-javascript.png" alt-text="Screenshot shows the option to select the programming language.":::
 
 1. Select **Azure OpenAI**.
 
    :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/azure-openai.png" alt-text="Screenshot shows the option to select the LLM.":::
 
-1. Enter your **OpenAI** or **Azure OpenAI** credentials based on the service you select. Select **Enter**.
+1. Enter your **Azure OpenAI Key** and **Azure OpenAI Endpoint** based on the service you select.
 
    :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/azure-open-api-key-optional.png" alt-text="Screenshot shows the location to enter Azure open API key.":::
+
+1. Enter your **Azure OpenAI Deployment Name**.
+
+    :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/openai-deployment-name.png" alt-text="Screenshot to enter Azure open API deployment name.":::
+
+1. Select **JavaScript**.
+
+   :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/language-javascript.png" alt-text="Screenshot shows the option to select the programming language.":::
 
 1. Select **Default folder**.
 
