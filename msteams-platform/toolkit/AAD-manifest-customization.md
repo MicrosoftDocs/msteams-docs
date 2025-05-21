@@ -287,7 +287,7 @@ You need to interact with Microsoft Entra application during various stages of y
 
 ## See also
 
-- [Microsoft 365 Agents Toolkit Overview](teams-toolkit-fundamentals.md)
+- [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals.md)
 - [Microsoft Entra manifest](/azure/active-directory/develop/reference-app-manifest)
 - [Preview and Customize app manifest in Toolkit](TeamsFx-preview-and-customize-app-manifest.md)
 - [Debug your Teams app](debug-overview.md)

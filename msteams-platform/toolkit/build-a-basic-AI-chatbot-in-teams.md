@@ -105,7 +105,7 @@ Agents Playground opens the bot in a webpage.
 | `src`        | The source code for the application.                |
 |`m365agents.yml`| This is the main Agents Toolkit project file. The project file defines two primary things:  Properties and configuration Stage definitions. |
 |`m365agents.local.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging.|
-|`m365agents.playground.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
+|`m365agents.playground.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging in Agents Playground.|
 |`src/index.js`| Sets up the bot app server.|
 |`src/adapter.js`| Sets up the bot adapter.|
 |`src/config.js`| Defines the environment variables.|

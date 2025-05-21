@@ -39,7 +39,7 @@ The Visual Studio 2022 window appears.
 
 ## See also
 
-* [Agents Toolkit for Visual Studio](teams-toolkit-fundamentals-vs.md)
+* [Agents Toolkit for Visual Studio](agents-toolkit-fundamentals-vs.md)
 * [Prepare to build apps](build-environments-vs.md)
 * [Provision cloud resources](provision-vs.md)
 * [Deploy Teams app to the cloud](deploy-vs.md)

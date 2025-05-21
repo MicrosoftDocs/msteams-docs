@@ -24,7 +24,7 @@ Following are the steps to open your app in Visual Studio Code:
 
 1. Select **Develop** > **Open in Microsoft 365 Agents Toolkit** > **Open in Visual Studio Code (JS/TS)**.
 
-    :::image type="content" source="../../assets/images/tdp/open-in-teams-toolkit.png" alt-text="Screenshot shows the Developer Portal with Open in Agents Toolkit highlighted in red." lightbox="../../assets/images/tdp/open-in-teams-toolkit.png":::
+    :::image type="content" source="../../assets/images/tdp/open-in-toolkit.png" alt-text="Screenshot shows the Developer Portal with Open in Agents Toolkit highlighted in red." lightbox="../../assets/images/tdp/open-in-toolkit.png":::
 
     A dialog is displayed.
 
@@ -73,7 +73,7 @@ Following are the steps to open your app in Visual Studio:
 
 1. Select **Develop** > **Open in Microsoft 365 Agents Toolkit** > **Open in Visual Studio (.NET) (Preview)**.
 
-    :::image type="content" source="../../assets/images/tdp/tdp-teams-toolkit-vs.png" alt-text="Screenshot shows the Developer Portal with Open in Agents Toolkit." lightbox="../../assets/images/tdp/tdp-teams-toolkit-vs.png":::
+    :::image type="content" source="../../assets/images/tdp/tdp-toolkit-vs.png" alt-text="Screenshot shows the Developer Portal with Open in Agents Toolkit." lightbox="../../assets/images/tdp/tdp-toolkit-vs.png":::
 
 1. Select **Open** to scaffold your project.
 
