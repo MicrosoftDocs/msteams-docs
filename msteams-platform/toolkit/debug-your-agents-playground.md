@@ -642,6 +642,6 @@ Follow the [step-by-step guide](../sbs-teams-app-test-tool.yml) to debug an AI c
 * [Microsoft 365 Agents Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Install Microsoft 365 Agents Toolkit](install-Teams-Toolkit.md)
 * [Build bots for Teams](../bots/what-are-bots.md)
+* [Teams AI library](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md)
 * [Adaptive Card](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 * [Agents SDK](https://microsoft.github.io/Agents/)
-* [Teams AI library](https://learn.microsoft.com/microsoftteams/platform/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview)
