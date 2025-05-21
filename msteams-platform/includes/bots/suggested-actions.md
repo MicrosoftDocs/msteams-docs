@@ -12,11 +12,11 @@ When a user selects a button, it remains visible and accessible on the rich card
 
 **Desktop**:
 
-:::image type="content" source="../../assets/images/bots/suggested-action-gc.png" alt-text="Image shows suggested actions in a group chat in a desktop client." border="false" lightbox="../../assets/images/bots/suggested-action-gc-mobile-large.png":::
+:::image type="content" source="../../assets/images/bots/suggested-action-gc.png" alt-text="Image shows suggested actions in a group chat in a desktop client." border="false" lightbox="../../assets/images/bots/suggested-action-gc.png":::
 
 **Mobile**:
 
-:::image type="content" source="../../assets/images/bots/suggested-action-gc-mobile-small.png" alt-text="Image shows suggested actions in a group chat in a mobile client." lightbox="../../assets/images/bots/suggested-action-gc-mobile.png":::
+:::image type="content" source="../../assets/images/bots/suggested-action-gc-mobile-small.png" alt-text="Image shows suggested actions in a group chat in a mobile client." lightbox="../../assets/images/bots/suggested-action-gc-mobile-large.png":::
 
 # [Channel](#tab/channel)
 
