@@ -96,7 +96,7 @@ The following code snippet shows an example of implementing `Action.Compose`:
 
 The value object must follow the [`chatMessage`](/graph/api/resources/chatmessage?view=graph-rest-1.0&preserve-view=true) object in the Graph API.
 
-For more information, see [code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/4315177d4b81a9f601656c09b40ad769ccd7720e/samples/bot-suggested-actions/csharp/SuggestedActions/Bots/SuggestedActionsBot.cs#L102).
+For more information, see [code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/35c8a5bab588974c1f082225bccd67b13a31741d/samples/bot-suggested-actions/nodejs/bots/suggestedActionsBot.js#L61).
 
 > [!NOTE]
 > If the message is received in a hub that doesn't support it, the app shows an error message. The bots are aware of the channel to which its posting.
