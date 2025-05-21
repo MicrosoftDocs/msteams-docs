@@ -4,10 +4,11 @@ description: Learn about Single sign-on (SSO) authentication in Microsoft Teams 
 ms.topic: conceptual
 ms.date: 11/12/2024
 ms.localizationpriority: high
+ms.owner: ryanbliss
 ---
 # Enable SSO for your app
 
-With Single sign-on (SSO) in Teams, app users have the advantage of using Teams to access bot or message extension apps. After logging into Teams using Microsoft or Microsoft 365 account, app users can use your app without needing to sign in again. Your app is available to app users on any device with access granted through Microsoft Entra ID.
+With single sign-on (SSO) in Microsoft Teams, app users can sign in to Teams using either a Microsoft or Microsoft 365 account and use bot and message extension apps without needing to sign in again. Your app is available to app users on any device with access granted through Microsoft Entra ID.
 
 > [!NOTE]
 > SSO for a bot app in Teams is supported only in one-on-one chat.

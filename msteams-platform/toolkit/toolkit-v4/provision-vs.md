@@ -1,7 +1,7 @@
 ---
 title: Cloud Provisioning using Visual Studio
 author: MuyangAmigo
-description: Learn how to do provision cloud resources using Teams Toolkit v4 in Visual Studio Code and Visual Studio, resource creation and customize resource provision.
+description: Learn how to do provision cloud resources using Agents Toolkit v4 in Visual Studio Code and Visual Studio, resource creation and customize resource provision.
 ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
@@ -15,14 +15,14 @@ TeamsFx integrates with Azure and the Microsoft 365 cloud, which allows to place
 ## Sign in to your Azure account
 
 1. Open **Visual Studio**.
-1. Open the **Microsoft Teams App project**.
-1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud**.
+1. Open **Microsoft 365 Agents**.
+1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Provision in the Cloud**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-vs-provision-in-cloud.png" alt-text="Screenshot shows sign in to Azure account.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/toolkit-vs-provision-in-cloud.png" alt-text="Screenshot shows sign in to Azure account.":::
 
 1. Select **Sign in...**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-vs-provision-start.png" alt-text="Screenshot shows the sign in to Azure account.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/toolkit-vs-provision-start.png" alt-text="Screenshot shows the sign in to Azure account.":::
 
    > [!NOTE]
    > If you're already signed in, your username is displayed, or you've an option to **Add an account**.
@@ -33,9 +33,9 @@ TeamsFx integrates with Azure and the Microsoft 365 cloud, which allows to place
 
 After you open your project in Visual Studio, to provision cloud resources follow these steps:
 
-1. Select **Project** > **Teams Toolkit** > **Provision in the Cloud...**.
+1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Provision in the Cloud...**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-vs-provision-in-cloud.png" alt-text="Screenshot shows how to provision in cloud.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/toolkit-vs-provision-in-cloud.png" alt-text="Screenshot shows how to provision in cloud.":::
 
    The **Provision** window appears.
 
@@ -46,17 +46,17 @@ After you open your project in Visual Studio, to provision cloud resources follo
    1. Select your **Region** from the dropdown menu.
    1. Select **Provision**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-vs-provision-select-subscription.png" alt-text="Screenshot shows the selection of resource group." lightbox="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-vs-provision-select-subscription.png":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/toolkit-vs-provision-select-subscription.png" alt-text="Screenshot shows the selection of resource group." lightbox="../../assets/images/toolkit-v2/toolkit-vs/toolkit-vs-provision-select-subscription.png":::
 
 1. In the pop-up window that appears, select **Provision**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-vs-provision-warning.png" alt-text="Screenshot shows the provision warning.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/toolkit-vs-provision-warning.png" alt-text="Screenshot shows the provision warning.":::
 
-   The provisioning process creates resources in the Azure cloud. You can monitor the progress by observing the Microsoft Teams Toolkit output window.
+   The provisioning process creates resources in the Azure cloud. You can monitor the progress by observing the Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) output window.
 
 1. In the pop-up window that appears, to view all the resources that are provisioned, select **View provisioned resources**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-vs-provision-provision-success-info.png" alt-text="Screenshot shows the provisioned resources.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/toolkit-vs-provision-provision-success-info.png" alt-text="Screenshot shows the provisioned resources.":::
 
 ## Provision actions
 
@@ -207,7 +207,7 @@ The `botAadApp/create` action creates a new or reuses an existing Microsoft Entr
     writeToEnvironmentFile:
       # The Microsoft Entra app's client id created for bot.
       botId: <your-preferred-env-var-name>
-      # The The Microsoft Entra app's client secret created for bot. 
+      # The Microsoft Entra app's client secret created for bot. 
       botPassword: <your-preferred-env-var-name>
 ```
 
@@ -230,7 +230,7 @@ The `arm/deploy` action deploys given ARM templates in parallel. It operates on 
         parameters: <path-to-arm-template-parameter>
         # Required. Name of the ARM template deployment.
         deploymentName: <arm-deployment-name>
-      # Optional. Teams Toolkit will download this bicep CLI version from github for you, will use bicep CLI in PATH if you remove this config.
+      # Optional. Microsoft 365 Agents Toolkit will download this bicep CLI version from github for you, will use bicep CLI in PATH if you remove this config.
       bicepCliVersion: v0.9.1
 ```
 
@@ -270,11 +270,11 @@ The `script` action executes a user-defined script.
 
 ### Customize resource provision
 
-The provision steps are defined in the `teamsapp.yml` file, under the `provision` property. You can add, remove, or update actions to the `provision` property to define the expected actions you want to do during provision.
+The provision steps are defined in the `m365agents.yml` file, under the `provision` property. You can add, remove, or update actions to the `provision` property to define the expected actions you want to do during provision.
 
 #### Reference environment variables in parameter files
 
-Teams Toolkit supports referencing the values from environment variables in the `teamsapp.yml` file, Teams app manifest, Microsoft Entra app manifest, and Azure parameter files. You can use the syntax `${{ENV_VARIABLE_NAME}}` to reference environment variables.
+Agents Toolkit supports referencing the values from environment variables in the `m365agents.yml` file, Teams app manifest, Microsoft Entra app manifest, and Azure parameter files. You can use the syntax `${{ENV_VARIABLE_NAME}}` to reference environment variables.
 
 The following example sets the value of environment variable `MY_AZURE_SUBSCRIPTION_ID` to `subscriptionId`:
 
@@ -302,7 +302,7 @@ The `arm/deploy` action support ARM templates that are written in bicep and json
 
 ### Manage your resources
 
-You can sign in to [Azure portal](https://portal.azure.com/) and manage all resources created using Teams Toolkit.
+You can sign in to [Azure portal](https://portal.azure.com/) and manage all resources created using Agents Toolkit.
 
 * You can select a resource group from the existing list or the new resource group that you've created.
 * You can see the details of the resource group you've selected in the overview section of the table of contents.
@@ -320,9 +320,9 @@ You can customize your bot or the Teams app by adding environment variables to u
 
 To use a Microsoft Entra app created for your Teams app and to add environment variables to the .env files, follow these steps.
 
-1. Open the `teamsapp.yml` file and find the `aadApp/create` action.
+1. Open the `m365agents.yml` file and find the `aadApp/create` action.
 
-1. Find the environment variable names that store information for Microsoft Entra app in the `writeToEnvironmentFile` property. If you create projects using Teams Toolkit the default  `writeToenvironmentFile` property definition is as follows:
+1. Find the environment variable names that store information for Microsoft Entra app in the `writeToEnvironmentFile` property. If you create projects using Agents Toolkit the default  `writeToenvironmentFile` property definition is as follows:
 
      ```yml
       writeToEnvironmentFile:
@@ -367,9 +367,9 @@ If you don't have a Microsoft Entra app yet or you've one but don't know where t
 
 You can follow the steps to add environment variables to the .env files to use a Microsoft Entra app created for your Teams app.
 
-1. Open the `teamsapp.yml` file and find the `botAadApp/create` action.
+1. Open the `m365agents.yml` file and find the `botAadApp/create` action.
 
-1. Find the environment variable names that store information for Microsoft Entra app in the `writeToEnvironmentFile` property. The default `writeToEnvironmentFile` definition if you create projects using Teams Toolkit is as follows:
+1. Find the environment variable names that store information for Microsoft Entra app in the `writeToEnvironmentFile` property. The default `writeToEnvironmentFile` definition if you create projects using Agents Toolkit is as follows:
 
     ```yml
      writeToEnvironmentFile:
@@ -401,6 +401,6 @@ If you don't have a Microsoft Entra app for your bot yet or you've one but don't
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals-vs.md)
+* [Microsoft 365 Agents Toolkit Overview](teams-toolkit-fundamentals-vs.md)
 * [Deploy Teams app to the cloud](deploy-vs.md)
 * [Edit Teams app manifest using Visual Studio](TeamsFx-preview-and-customize-app-manifest-vs.md)

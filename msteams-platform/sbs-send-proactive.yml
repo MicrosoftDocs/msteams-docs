@@ -32,7 +32,7 @@ items:
     | &nbsp; | Install | For using |
     | --- | --- | --- |
     | &nbsp; | [Microsoft Visual Studio Code](https://code.visualstudio.com/download) | JavaScript or TypeScript, build environments. Use the latest version. |
-    | &nbsp; | [Microsoft Teams Toolkit](#install-teams-toolkit) | Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
+    | &nbsp; | [Microsoft 365 Agents Toolkit](#install-microsoft-365-agents-toolkit) (previously known as Teams Toolkit) | Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
     | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
     | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge/) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
@@ -41,7 +41,7 @@ items:
     [!INCLUDE [Set up prerequisites](includes/get-started/prepare-teams-toolkit.md)]
 
     > [!div class="nextstepaction"]
-    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Prepare%20development%20environment&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-send-proactive%3Ftabs%3Dvscode%26tutorial-step%3D1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-send-proactive.yml&documentVersionIndependentId=d7374135-ac5f-b2f3-0340-d1585d4cb3be&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Prepare%20development%20environment&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-send-proactive%3Ftabs%3Dvscode%26tutorial-step%3D1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-send-proactive.yml&documentVersionIndependentId=d7374135-ac5f-b2f3-0340-d1585d4cb3be&platformId=32dd2454-098d-ea3f-209e-dcb0bc62e520&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 - title: Build Proactive Message bot
   durationInMinutes: 3
@@ -51,7 +51,7 @@ items:
 
     1. Open Visual Studio Code.
     
-    1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code Activity Bar.
+    1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="../msteams-platform/assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code Activity Bar.
 
     1. In the left pane, select **View Samples**.
 
@@ -114,11 +114,11 @@ items:
         :::image type="content" source="~/assets/images/proactive-scenario/pro-msg-response.png" alt-text="Screenshot shows the bot response on the chat.":::
 
     > [!div class="nextstepaction"]
-    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Build%20Proactive%20Message%20bot&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-send-proactive%3Ftabs%3Dvscode%26tutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-send-proactive.yml&documentVersionIndependentId=d7374135-ac5f-b2f3-0340-d1585d4cb3be&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Build%20Proactive%20Message%20bot&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-send-proactive%3Ftabs%3Dvscode%26tutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-send-proactive.yml&documentVersionIndependentId=d7374135-ac5f-b2f3-0340-d1585d4cb3be&platformId=32dd2454-098d-ea3f-209e-dcb0bc62e520&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
     ## Take a tour of the source code
 
-    Teams Toolkit provides components for building an app. After creating the project, you can view the project folders and files in the **EXPLORER** area of Visual Studio Code.
+    Agents Toolkit provides components for building an app. After creating the project, you can view the project folders and files in the **EXPLORER** area of Visual Studio Code.
 
     :::image type="content" source="~/assets/images/proactive-scenario/file-structure.png" alt-text="Screenshot shows the structure tab.":::
 
@@ -128,16 +128,16 @@ items:
     | - | - |
     | `.vscode/` | Visual Studio Code files for debugging. |
     | `appManifest/` | Templates for the app manifest (previously called Teams app manifest). |
-    | `env/`| Name / value pairs are stored in environment files and used by `teamsapp.yml` to customize the provisioning and deployment rules. |
+    | `env/`| Name / value pairs are stored in environment files and used by `m365agents.yml` to customize the provisioning and deployment rules. |
     | `manifest.json` | App manifest for publishing through the Developer Portal for Teams is stored in `Properties/manifest.json`. |
-    | `teamsapp.yml` | Main project file describes your app configuration and defines the set of actions to run in each lifecycle stage. |
-    | `teamsapp.local.yml`| This overrides `teamsapp.yml` with actions that enable local execution and debugging. |    
+    | `m365agents.yml` | Main project file describes your app configuration and defines the set of actions to run in each lifecycle stage. |
+    | `m365agents.local.yml`| This overrides `m365agents.yml` with actions that enable local execution and debugging. |    
 
 - title: Deploy your Proactive message bot
   durationInMinutes: 1
   content: |
 
-    You've learnt to build and run Teams app with proactive message bot capability. Let's deploy the first app with proactive message bot capability on Azure using Teams Toolkit.
+    You've learnt to build and run Teams app with proactive message bot capability. Let's deploy the first app with proactive message bot capability on Azure using Agents Toolkit.
 
     ## Sign in to your Azure account
 
@@ -145,7 +145,7 @@ items:
 
     1. Open Visual Studio Code.
     1. Open the project folder where you created the proactive message bot app.
-    1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code Activity Bar.
+    1. Select the Microsoft 365 Agents Toolkit  :::image type="icon" source="../msteams-platform/assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code Activity Bar.
     1. Select **Sign in to Azure** using your credentials.
 
         > [!TIP]
@@ -171,7 +171,7 @@ items:
 
     # [Visual Studio Code](#tab/vscode)
    
-    1. Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code Activity Bar.
+    1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="~/assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code Activity Bar.
 
     1. Select **Provision** under **LIFECYCLE**.
 
@@ -237,38 +237,38 @@ items:
         :::image type="content" source="~/assets/images/proactive-scenario/pro-msg-response.png" alt-text="Screenshot shows the bot response on the chat.":::
 
     > [!div class="nextstepaction"]
-    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Deploy+your+app+to+Azure+-+Visual+Studio+Code&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-send-proactive%3Ftabs%3Dvscode%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-send-proactive.yml&documentVersionIndependentId=d7374135-ac5f-b2f3-0340-d1585d4cb3be&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Deploy+your+app+to+Azure+-+Visual+Studio+Code&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-send-proactive%3Ftabs%3Dvscode%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-send-proactive.yml&documentVersionIndependentId=d7374135-ac5f-b2f3-0340-d1585d4cb3be&platformId=32dd2454-098d-ea3f-209e-dcb0bc62e520&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
     # [Command Line](#tab/cli)
 
     In your terminal window:
 
-    1. Run `teamsfx new` to create new project.
+    1. Run `atk new` to create new project.
 
        ``` bash
-       teamsfx new
+       atk new
        ```
 
-    1. Run `teamsfx provision` to create azure resource.
+    1. Run `atk provision` to create azure resource.
 
        ``` bash
-       teamsfx provision
+       atk provision
        ```
 
-    1. Run `teamsfx deploy` to deploy the app.
+    1. Run `atk deploy` to deploy the app.
 
        ``` bash
-       teamsfx deploy
+       atk deploy
        ```
 
-    1. Run `teamsfx preview` to run the app.
+    1. Run `atk preview` to run the app.
 
        ``` bash
-       teamsfx preview
+       atk preview
        ```
 
     > [!div class="nextstepaction"]
-    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Deploy+your+app+to+Azure+-+Command+line&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-send-proactive%3Ftabs%3Dcli%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-send-proactive.yml&documentVersionIndependentId=d7374135-ac5f-b2f3-0340-d1585d4cb3be&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+    > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Deploy+your+app+to+Azure+-+Command+line&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-send-proactive%3Ftabs%3Dcli%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-send-proactive.yml&documentVersionIndependentId=d7374135-ac5f-b2f3-0340-d1585d4cb3be&platformId=32dd2454-098d-ea3f-209e-dcb0bc62e520&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
     ---
   

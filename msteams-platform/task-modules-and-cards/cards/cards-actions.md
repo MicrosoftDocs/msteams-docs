@@ -8,6 +8,8 @@ ms.date: 11/07/2024
 
 # Card actions
 
+[!INCLUDE [adaptive-card-redirect](../../includes/adaptive-card-redirect.md)]
+
 Cards used by bots and message extensions in Microsoft Teams support the following activity [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) types:
 
 > [!NOTE]
@@ -417,6 +419,9 @@ CardFactory.actions([
 
 ## Adaptive Cards actions
 
+> [!IMPORTANT]
+> This documentation is considered legacy. For comprehensive information and resources related to Adaptive Cards, visit the [Adaptive Cards documentation hub](https://adaptivecards.microsoft.com/).
+
 Adaptive Cards support the following six action types:
 
 * [Action.OpenUrl](https://adaptivecards.microsoft.com/?topic=Action.OpenUrl): Opens the specified url.
@@ -435,7 +440,7 @@ In the Adaptive Card schema, the `data` property for Action.Submit is either a `
 * `string`: A string submit action automatically sends a message from the user to the bot and is visible in the conversation history.
 * `object`: An object submit action automatically sends an invisible message from the user to the bot that contains hidden data. An object submit action populates the activity’s value property while the text property is empty.
 
-Action.Submit is equivalent to the Bot Framework actions. You can also modify the Adaptive Card `Action.Submit` payload to support existing Bot Framework actions using an `msteams` property in the `data` object of `Action.Submit`. When you define the `msteams` property under `data`, the Teams client defines the behavior of `Action.Submit`. If the `msteams` property isn't defined in the schema, `Action.Submit` works like a regular Bot Framework invoke action, where; the submit action triggers an invoke call to the bot and the bot receives the payload with all the input values defined in the input fields.
+Action.Submit is equivalent to the Bot Framework actions. You can also modify the Adaptive Card `Action.Submit` payload to support existing Bot Framework actions using a `msteams` property in the `data` object of `Action.Submit`. When you define the `msteams` property under `data`, the Teams client defines the behavior of `Action.Submit`. If the `msteams` property isn't defined in the schema, `Action.Submit` works like a regular Bot Framework invoke action, where; the submit action triggers an invoke call to the bot and the bot receives the payload with all the input values defined in the input fields.
 
 > [!NOTE]
 >

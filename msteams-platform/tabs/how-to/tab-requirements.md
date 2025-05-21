@@ -4,6 +4,7 @@ description: Learn about the permissions, compatibility, and other prerequisites
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.date: 02/06/2025
+ms.owner: ryanbliss
 ---
 
 # Prerequisites

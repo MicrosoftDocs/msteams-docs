@@ -4,6 +4,7 @@ description: Learn how to invoke dialogs (task modules) from Teams tabs and subm
 ms.localizationpriority: medium
 ms.topic: how-to
 ms.date: 02/22/2023
+ms.owner: ryanbliss
 ---
 
 # Use dialogs in tabs
@@ -105,7 +106,7 @@ let urlDialogInfo = {
     fallbackUrl: null,
 };
 
-urlDialogInfo.url = "https://contoso.com/teamsapp/customform";
+urlDialogInfo.url = "https://contoso.com/atk/customform";
 urlDialogInfo.title = "Custom Form";
 urlDialogInfo.height = 510;
 urlDialogInfo.width = 430;
@@ -130,7 +131,7 @@ let taskInfo = {
     completionBotId: null,
 };
 
-taskInfo.url = "https://contoso.com/teamsapp/customform";
+taskInfo.url = "https://contoso.com/atk/customform";
 taskInfo.title = "Custom Form";
 taskInfo.height = 510;
 taskInfo.width = 430;

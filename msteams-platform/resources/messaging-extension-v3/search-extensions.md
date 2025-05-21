@@ -4,6 +4,7 @@ description: Learn how to create search based message extensions for Microsoft T
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 04/02/2023
+ms.owner: slamba
 ---
 # Search with message extensions
 

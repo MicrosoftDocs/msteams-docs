@@ -4,6 +4,7 @@ description: Learn about third-party OAuth IdP authentication, navigation and au
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 12/13/2022
+ms.owner: ryanbliss
 ---
 # Configure third party OAuth IdP authentication
 
@@ -240,7 +241,7 @@ Sample code showing the tab authentication process using Microsoft Entra ID:
 
 | Sample name | Description | .NET| Node.js | Manifest |
 |---------------|---------------|------|--------------|--------------|
-| Tab SSO |This sample app shows Microsoft Entra SSO for tabs in Teams.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)| NA |
+| Tab SSO |This sample app shows Microsoft Entra SSO for tabs in Teams.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Microsoft 365 Agents Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)| NA |
 | Tab, Bot, and Message Extension (ME) SSO | This sample shows SSO for Tab, Bot, and ME- search, action, link unfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp/demo-manifest)|
 
 ## See also

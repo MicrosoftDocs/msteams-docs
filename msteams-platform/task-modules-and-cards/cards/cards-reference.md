@@ -85,7 +85,7 @@ The card can contain an inline image by including a link to the publicly availab
 
 Images are scaled up or down in size to maintain the aspect ratio for covering the image area. Images are then cropped from center to achieve the appropriate aspect ratio for the card.
 
-Images must be at most 1024 × 1024 and in PNG, JPEG, or GIF format. Animated GIF isn't supported.
+Images must be at most 1024 × 1024 pixels and in PNG, JPEG, or GIF format. Animated GIF and SVG formats aren't supported.
 
 The following table provides the properties of inline card images:
 
@@ -110,6 +110,8 @@ For more information on text formatting in cards, see [card formatting](~/task-m
 After identifying the common properties for all cards, you can now work with Adaptive Cards, which help you increase engagement and efficiency by adding your actionable content directly into the apps you use.
 
 ## Adaptive Card
+
+[!INCLUDE [adaptive-card-redirect](../../includes/adaptive-card-redirect.md)]
 
 An Adaptive Card is a customizable card that can contain any combination of text, speech, images, buttons, and input fields. For more information, see [Adaptive Cards](https://github.com/microsoft/AdaptiveCards/releases/tag/2020.07).
 
