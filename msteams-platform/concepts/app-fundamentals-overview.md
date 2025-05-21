@@ -9,6 +9,8 @@ ms.date: 02/06/2025
 
 # Plan your app with Teams features
 
+[!INCLUDE [agent-information](../includes/agent-information.md)]
+
 Building an awesome Teams app is all about finding the right combination of features to meet your user's needs. The design, features, and capabilities of an app stem from this purpose.
 
 Teams is a collaboration platform. It's also a social platform and is natively cross-platform that sits at the heart of Microsoft 365 and offers a personal canvas for you to create apps.

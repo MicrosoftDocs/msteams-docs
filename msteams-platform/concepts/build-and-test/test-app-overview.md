@@ -8,6 +8,8 @@ ms.date: 12/30/2022
 
 # Test your app
 
+[!INCLUDE [agent-information](../../includes/agent-information.md)]
+
 After integrating your app with Microsoft Teams, you must test your app before publishing it. The ultimate goal is to get as many users for your app, therefore, ensure to test the app on multiple devices that users could use. For testing your app:
 
 * Prepare your Microsoft 365 tenant.
