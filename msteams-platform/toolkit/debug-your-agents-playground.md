@@ -14,7 +14,7 @@ ms.date: 11/16/2023
 >
 > Microsoft 365 Agents Playground (previously known as Teams App Test Tool) is available in the latest prerelease version of Microsoft 365 Agents Toolkit (previously known as Teams Toolkit). Ensure that you install the [latest prerelease version](install-Teams-Toolkit.md#install-a-prerelease-version) of Agents Toolkit.
 
-Agents Playground makes debugging bot/agent-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in different channels. You don’t need a Microsoft 365 developer account, tunneling, or real client app and bot/agent registration to use Agents Playground.
+Agents Playground makes debugging bot/agent-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in different channels. You don’t need a Microsoft 365 developer account, tunneling, or real client app and application registration to use Agents Playground.
 
 The following image shows a sample app displaying an Adaptive Card with a list of commands in Agents Playground. It also provides a description of the commands so that you can test your app without manually searching your code:
 
@@ -28,7 +28,7 @@ The following are the advantages of Agents Playground:
 
 * **Reduce account dependencies**: Microsoft 365 Developer tenant and the app uploading permissions aren't necessary to debug the application.
 
-* **Rapid inner-loop iterations**: Optimizes the process of making changes to the app design and bot/agent logic without having to redeploy the application to the cloud.
+* **Rapid inner-loop iterations**: Optimizes the process of making changes to the app design and application logic without having to redeploy the application to the cloud.
 
 * **Mock data and activities**: Agents Playground makes it easy to test complex scenarios such as, sending a welcome message when a new member joins the channel, using mock data and activity triggers.
 
