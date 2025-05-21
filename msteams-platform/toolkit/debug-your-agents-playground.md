@@ -54,7 +54,7 @@ Agents Playground is an npm package that has a CLI command called `teamsappteste
 
 To use an application on Agents Playground, you need to provide:
 
-* Message endpoint: A message endpoint is the URL that links Agents Playground and your application. You can update the endpoint with the `BOT_ENDPOINT` environment variable or use the default value of `http://localhost:3978/api/messages`.
+* Message endpoint: A message endpoint is the URL that links Agents Playground and your application. You can update the endpoint with the `BOT_ENDPOINT` environment variable, start Agents Playground with option `--app-endpoint`, or just use the default value of `http://localhost:3978/api/messages`.
 * Configuration file (Optional): A configuration file informs Agents Playground about your customized contextual information in Teams. The file is named **.m365agentsplayground.yml** in the project's root folder. If Teams can't find this file, it uses the default configuration. For more information, see [customize Teams context](#customize-teams-context).
 
 ## Agents Playground experience in Agents Toolkit
@@ -290,6 +290,44 @@ You can use **Custom activity** to customize activity triggers such as, `reactio
    Bot sends an `onReactionsAdded` handler in response.
 
    :::image type="content" source="../assets/images/toolkit-v2/debug/custom-activity-response.png" alt-text="Screenshot shows the response of custom mock activity.":::
+
+## Configure Agents Playground for authentication
+
+When debug an application requires authentication, you can configure the Microsoft Entra client ID and client secret, with optional tenant id. If you created your bot with the Azure AI Bot Service, the credentials are available on the bot's App Service, under the Settings -> Configuration section. If you don't know the values, you can remove those from the locally running application's configuration file, then run the application in the Agents Playground. If the application isn't running with these settings, you don't need to configure these settings either.
+
+### Environment variable / Command line
+
+Before starting Agents Playground, you can set environment variables: `AUTH_CLIENT_ID`, `AUTH_CLIENT_SECRET`, `AUTH_TENANT_ID`, these values will be used for the default authentication configuration.
+
+Also, when running Agents Playground by command line, you can use options: `--client-id`, `--client-secret`, `--tenant-id`, which will override the default environment variable settings above.
+
+### Client side interface
+
+After Agents Playground is started, you can still configure authentication via client interface as following:
+
+1. Select **Configure Authentication**.
+
+   :::image type="content" source="../assets/images/toolkit-v2/debug/configure-authentication.png" alt-text="Screenshot shows the option to configure authentication on agents playground menu bar.":::
+
+1. Fill in fields in the form and click **Save**.
+
+   :::image type="content" source="../assets/images/toolkit-v2/debug/authentication-form.png" alt-text="Screenshot shows the form of authentication parameters and the save button.":::
+
+The log panel will show message if the configuration is successfully set.
+
+:::image type="content" source="../assets/images/toolkit-v2/debug/authentication-enabled.png" alt-text="Screenshot shows the log panel message of successfully configure authentication settings.":::
+
+### Authentication logic
+
+Agents Playground will acquire a JWT token using the provided authentication settings and include it in the Authorization header during the communicating process with application. The JWT token in application's response header will also be validated by Agents Playground. For more details about authentication process, read [Authentication with the Bot Connector API](https://learn.microsoft.com/azure/bot-service/rest-api/bot-framework-rest-connector-authentication).
+
+## Multiple channel support
+
+Teams is the default channel used for debugging your application, but other channels are also supported. The channel can be changed by setting environment variable `DEFAULT_CHANNEL_ID` or use option `--channel-id` when start Agents Playground via command line.
+
+Currently the accepted channel ids are: `msteams`, `directline`, `webchat` and `emulator`. By setting channel id, properties of messages sent to application will be changed accordingly for simulating real environment. For `directline` and `webchat` channel, following client will be displayed and cards rendering will be different compared with Teams channel.
+
+:::image type="content" source="../assets/images/toolkit-v2/debug/webchat-ui.png" alt-text="Screenshot shows the card rendering result when using different channel.":::
 
 ## Customize Teams context
 
@@ -558,6 +596,10 @@ Agents Playground successfully debugs your existing bot.
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Debug%20an%20existing%20app%20with%20Test%20Tool&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdebug-your-teams-app-test-tool%3Ftabs%3Dvscode%252Cclijs%23debug-an-existing-app-with-test-tool&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdebug-your-agents-playground.md&documentVersionIndependentId=6fa9130b-1aa5-b068-4211-a5a4cc32effa&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
+
+## Disabling data collection
+
+If you decide that you do not want to allow Agents Playground to collect usage data, you can easily disable data collection by adding option `--disable-telemetry` when start Agents Playground via command line.
 
 ## FAQ
 
