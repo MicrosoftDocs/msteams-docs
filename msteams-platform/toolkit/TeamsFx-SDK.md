@@ -23,7 +23,7 @@ You need to install the following tools and set up your development environment:
 | &nbsp; | Install | For using... |
    | --- | --- | --- |
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
-   | &nbsp; | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)| A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use 4.0.0 version. |
+   | &nbsp; | [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) (previously known as Teams Toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use 4.0.0 version. |
    | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type). |
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge/) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
@@ -42,18 +42,18 @@ You must have working knowledge of:
 
 ## Get started
 
-TeamsFx SDK is pre-configured in the scaffolded project using TeamsFx Toolkit or CLI.
+TeamsFx SDK is pre-configured in the scaffolded project using Microsoft 365 Agents Toolkit CLI (previously known as TeamsFx Toolkit or CLI).
 For more information, see [Teams app project](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md).
 
  > [!Tip]
  > The code snippets are updated for the latest TeamsFx SDK version 2.
 
-### Install the `@microsoft/teamsfx` package
+### Install the `@microsoft/atk` package
 
 Install the TeamsFx SDK for TypeScript or JavaScript with `npm`:
 
 ```bash
-npm install @microsoft/teamsfx
+npm install @microsoft/atk
 ```
 
 ## TeamsFx core functionalities
@@ -266,7 +266,7 @@ Basic type of API error response is `ErrorWithCode`, which contains error code a
 
 ```typescript
 try {
-  const teamsfx = new TeamsFx();
+  const atk = new TeamsFx();
   await teamsfx.login("User.Read");
 } catch (err: unknown) {
   if (err instanceof ErrorWithCode && err.code !== ErrorCode.ConsentFailed) {
@@ -379,7 +379,7 @@ This section provides several code snippets for common scenarios that are relate
        import {TeamsUserCredential} from "@microsoft/teamsfx";
 
        const scope = ["User.Read"];
-       const teamsfx = new TeamsFx();
+       const atk = new TeamsFx();
        const provider = new TeamsFxProvider(teamsfx, scope);
        Providers.globalProvider = provider;   
        ```
@@ -743,7 +743,7 @@ This section provides several code snippets for other scenarios that are related
      //    sqlUsername: process.env.SQL_USER_NAME,
      //    sqlPassword: process.env.SQL_PASSWORD,
      // });
-     const teamsfx = new TeamsFx();
+     const atk = new TeamsFx();
      // If there's only one SQL database
      const config = await getTediousConnectionConfig(teamsfx);
      // If there are multiple SQL databases
@@ -828,7 +828,7 @@ If you're using the version of SDK that has `loadConfiguration()`, you can perfo
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
-* [Teams Toolkit CLI](Teams-Toolkit-CLI.md)
+* [Microsoft 365 Agents Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Microsoft 365 Agents Toolkit CLI](microsoft-365-agents-toolkit-CLI.md)
 * [Microsoft TeamsFx sample gallery](https://github.com/OfficeDev/TeamsFx-Samples).
 * [Add single sign-on to Teams app](add-single-sign-on.md)

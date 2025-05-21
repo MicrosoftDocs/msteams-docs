@@ -1,7 +1,7 @@
 ---
 title: Configure Bot Capability
 author: surbhigupta
-description: Learn how to configure the bot capability within a Teams app with Microsoft Teams Toolkit for Visual Studio Code.
+description: Learn how to configure the bot capability within a Teams app with Microsoft 365 Agents Toolkit for Visual Studio Code.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
@@ -24,15 +24,15 @@ To configure bot as an additional capability, ensure the following prerequisites
 
 The following steps help you to add bot to a tab app:
 
-* [Create bot app using Microsoft Teams Toolkit](#create-bot-app-using-microsoft-teams-toolkit)
+* [Create bot app using Microsoft 365 Agents Toolkit](#create-bot-app-using-agents-toolkit)
 * [Configure bot capability in app manifest](#configure-bot-capability-in-app-manifest)
 * [Add bot code to your project](#add-bot-code-to-your-project)
 * [Setup local debug environment](#setup-local-debug-environment)
 * [Provision the app to Azure](#provision-the-app-to-azure)
 
-## Create bot app using Microsoft Teams Toolkit
+## Create bot app using Agents Toolkit
 
-To create a bot app using Teams Toolkit, see [create a bot app with Teams Toolkit](create-new-project.md).
+To create a bot app using Agents Toolkit (previously known as Teams Toolkit), see [create a bot app with Agents Toolkit](create-new-project.md).
 
 ## Configure bot capability in app manifest
 
@@ -99,8 +99,8 @@ The following code snippet is an example:
        |   |-- views/
        |-- package.json
        |-- tsconfig.json
-       |-- teamsapp.local.yml
-       |-- teamsapp.yml
+       |-- m365agents.local.yml
+       |-- m365agents.yml
    ```
 
 1. Reorganize the folder structure as follows:
@@ -130,8 +130,8 @@ The following code snippet is an example:
        |   |-- package.json
        |   |-- tsconfig.json
        |-- package.json <!--root package.json-->
-       |-- teamsapp.local.yml
-       |-- teamsapp.yml
+       |-- m365agents.local.yml
+       |-- m365agents.yml
    ```
 
 1. Add the following code to your root `package.json`:
@@ -257,7 +257,7 @@ The following code snippet is an example:
        ]
    ```
 
-1. Under the `teamsapp.local.yml` file:
+1. Under the `m365agents.local.yml` file:
    1. Under `provision`, add the `botAadApp/create` and `botFramework/create` actions.
    1. Under `deploy`, update the code of the `file/createOrUpdateEnvironmentFile` action.
 
@@ -301,7 +301,7 @@ The following code snippet is an example:
             BOT_PASSWORD: ${{SECRET_BOT_PASSWORD}}
    ```
 
-   For more information, see [sample app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab/teamsapp.local.yml).
+   For more information, see [sample app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab/m365agents.local.yml).
 
 1. Under the **Run and Debug**, select **Debug (Edge)** or **Debug (Chrome)**.
 
@@ -405,8 +405,8 @@ The following code snippet is an example:
     }
    ```
 
-1. Under the `teamsapp.yml` file:
-   1. Under `provision`, add the `botAadApp/create` action. For more information, see [sample app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab/teamsapp.yml).
+1. Under the `m365agents.yml` file:
+   1. Under `provision`, add the `botAadApp/create` action. For more information, see [sample app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab/m365agents.yml).
    1. Under the `deploy` section, add the following code:
 
    ```yaml
@@ -460,13 +460,13 @@ You can add the bot capability to a message extension app easily as message exte
 
 The following steps help you to add the bot capability to a message extension app:
 
-* [Create bot app using Teams Toolkit](#create-bot-app-using-teams-toolkit)
+* [Create bot app using Agents Toolkit](#create-bot-app-using-agents-toolkit)
 * [Update manifest file](#update-manifest-file)
 * [Add bot code to project](#add-bot-code-to-project)
 
-## Create bot app using Teams Toolkit
+## Create bot app using Agents Toolkit
 
-To create a bot app with Teams Toolkit, see [create a new Teams bot app](create-new-project.md).
+To create a bot app with Agents Toolkit, see [create a new Teams bot app](create-new-project.md).
 
 ## Update manifest file
 
@@ -510,7 +510,7 @@ The following code snippet is an example:
 
 ## Add bot code to project
 
-1. Your message extension app contains a class that extends `TeamsActivityHandler`. Copy your configured bot code from the bot app into this class in Visual Studio Code. The following code is an example of a message extension that contains functions from a bot app created in Teams Toolkit:
+1. Your message extension app contains a class that extends `TeamsActivityHandler`. Copy your configured bot code from the bot app into this class in Visual Studio Code. The following code is an example of a message extension that contains functions from a bot app created in Agents Toolkit:
 
    ```javascript
       public class YourHandler extends TeamsActivityHandler{
