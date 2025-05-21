@@ -10,11 +10,23 @@ When a user selects a button, it remains visible and accessible on the rich card
 
 # [Group chat](#tab/gc)
 
-:::image type="content" source="../../assets/images/bots/suggested-action-gc.png" alt-text="Image shows suggested actions in a group chat." border="false" lightbox="../../assets/images/bots/suggested-action-gc.png":::
+**Desktop**:
+
+:::image type="content" source="../../assets/images/bots/suggested-action-gc.png" alt-text="Image shows suggested actions in a group chat in a desktop client." border="false" lightbox="../../assets/images/bots/suggested-action-gc.png":::
+
+**Mobile**:
+
+:::image type="content" source="../../assets/images/bots/suggested-action-gc-mobile.png" alt-text="Image shows suggested actions in a group chat in a mobile client." lightbox="../../assets/images/bots/suggested-action-gc-mobile.png":::
 
 # [Channel](#tab/channel)
 
-:::image type="content" source="../../assets/images/bots/suggested-action-channel.png" alt-text="Image shows suggested actions in a channel." border="false" lightbox="../../assets/images/bots/suggested-action-channel.png":::
+**Desktop**:
+
+:::image type="content" source="../../assets/images/bots/suggested-action-channel.png" alt-text="Image shows suggested actions in a channel in a desktop client." border="false" lightbox="../../assets/images/bots/suggested-action-channel.png":::
+
+**Mobile**:
+
+:::image type="content" source="../../assets/images/bots/suggested-action-channel-mobile.png" alt-text="Image shows suggested actions in a channel in a mobile client." lightbox=../../assets/images/bots/suggested-action-channel-mobile.png":::
 
 ---
 
