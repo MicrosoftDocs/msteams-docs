@@ -52,7 +52,7 @@ Perform the following steps to migrate to the new project structure:
     > [!NOTE]
     > Once the folders and files are moved, they are automatically included in your **TeamsApp.ttkproj** file and you don't need to add them to the **TeamsApp.ttkproj** manually.
 
-1. According to your `launchSettings.json`, move the launching browser or test tool capability to `launchSettings.json` of the **TeamsApp** folder.
+1. According to your `launchSettings.json`, move the launching browser or Agents Playground capability to `launchSettings.json` of the **TeamsApp** folder.
 
     * Create a `launchSettings.json` file in the **TeamsApp** folder. Add the contents of the file `launchSettings.json` of your project folder to the newly created `launchSettings.json` in the **TeamsApp** folder.
     * In the newly created `launchSettings.json` of the **TeamsApp** folder, delete the `dotnetRunMessages`, `launchBrowser`, `applicationUrl`, `environmentVariables`, and `hotReloadProfile` fields.
@@ -61,7 +61,7 @@ Perform the following steps to migrate to the new project structure:
     > [!NOTE]
     >
     > * The `launchSettings.json` of your project must start by itself.
-    > * The `launchSettings.json` of the **TeamsApp** folder is configured to launch the browser or the test tool app that communicates with your project.
+    > * The `launchSettings.json` of the **TeamsApp** folder is configured to launch the browser or the Agents Playground app that communicates with your project.
 
 1. Open the solution file using Visual Studio version 17.10 Preview 3 or later and add the new project `TeamsApp.ttkproj` from **TeamsApp** folder to the solution file in Visual Studio.
 

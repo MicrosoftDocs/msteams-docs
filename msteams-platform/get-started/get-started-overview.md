@@ -64,4 +64,4 @@ If you want to build a declarative agent, select the following:
 
 * [Microsoft Teams samples](https://github.com/OfficeDev/Microsoft-Teams-Samples#microsoft-teams-samples)
 * [Git and GitHub resources](/contribute/additional-resources)
-* [Teams app tutorials and code samples](teams-toolkit-tutorial.md)
+* [Teams app tutorials and code samples](tool-options-and-code-samples.md)

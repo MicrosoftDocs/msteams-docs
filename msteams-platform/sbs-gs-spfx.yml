@@ -7,7 +7,7 @@ metadata:
   level: Beginner
   ms.date: 02/24/2025
   ms.topic: interactive-tutorial
-  nextTutorialHref: toolkit/teams-toolkit-tutorial.md
+  nextTutorialHref: get-started/tool-options-and-code-samples.md
   nextTutorialTitle: Teams app tutorials
   ms.custom: mvc
   ms.localizationpriority: high
@@ -46,7 +46,7 @@ items:
     > If you work with Microsoft Graph data, you should learn about and bookmark the Microsoft Graph Explorer. This browser-based tool allows you to query Microsoft Graph outside of an app.
     </details>
 
-    [!INCLUDE [Set up prerequisites](includes/get-started/prepare-teams-toolkit.md)]
+    [!INCLUDE [Set up prerequisites](includes/get-started/prepare-toolkit.md)]
    
     > [!div class="nextstepaction"]
     > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Prepare+development+environment&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-spfx%3Ftabs%3Dvscode%252Cviscode%26tutorial-step%3D1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-spfx.yml&documentVersionIndependentId=4cf95fd6-0fdb-0e9d-247e-4452909bfab6&platformId=6d3eb74a-f8a0-0ec0-28a8-6a2b40440d97&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)

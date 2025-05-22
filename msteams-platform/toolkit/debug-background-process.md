@@ -118,11 +118,11 @@ You can view the project folders and files under **Explorer** in Visual Studio C
 |  `env/.env.local` | Environment variables file for Agents Toolkit project. | The values of each environment variable are consumed or generated during debugging. |
 | `.localConfigs` | Environment variables file for the app code. | The values of each environment variable are generated during debugging. |
 
-For more information on the project folder structure, see [Agents Toolkit project](https://aka.ms/teamsfx-v5.0-guide#teams-toolkit-project).
+For more information on the project folder structure, see [Agents Toolkit project](https://github.com/OfficeDev/microsoft-365-agents-toolkit/wiki/Teams-Toolkit-Visual-Studio-Code-v5-Guide#teams-toolkit-project).
 
 ## See also
 
-* [Microsoft 365 Agents Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals.md)
 * [Debug your Teams app using Agents Toolkit](debug-local.md)
 * [Use Agents Toolkit to provision cloud resources](provision.md)
 * [Deploy to the cloud](deploy.md)
