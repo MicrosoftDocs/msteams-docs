@@ -78,7 +78,7 @@ To host your development and production code and their HTTPS endpoints, you need
 
 ## See also
 
-* [Microsoft 365 Agents Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals.md)
 * [Debug your Microsoft Teams app locally](debug-local.md)
 * [Debug background process](debug-background-process.md)
 * [Use Agents Toolkit to provision cloud resources](provision.md)

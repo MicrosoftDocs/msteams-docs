@@ -1287,6 +1287,18 @@
       {
         "source_path": "msteams-platform/toolkit/Agents-Toolkit-CLI.md",
         "redirect_url": "/microsoftteams/platform/toolkit/teams-toolkit-CLI"
+      },
+      {
+        "source_path": "msteams-platform/get-started/teams-toolkit-tutorial.md",
+        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+      },
+      {
+        "source_path": "msteams-platform/includes/get-started/prepare-teams-toolkit.md",
+        "redirect_url": "/microsoftteams/platform/includes/get-started/prepare-toolkit"
+      },
+      {
+        "source_path": "msteams-platform/concepts/build-and-test/develop-your-apps-with-teams-toolkit.md",
+        "redirect_url": "/microsoftteams/platform/concepts/build-and-test/develop-your-apps-with-toolkit"
       }
     ]
 }

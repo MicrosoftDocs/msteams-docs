@@ -52,7 +52,7 @@ To debug your app after you create a project, perform the following steps:
 
    :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/vs-localdebug-Startdebug.png" alt-text="Screenshot shows start debugging.":::
 
-   Visual Studio launches the Teams app inside Microsoft Teams client in your browser. For more information, see [Microsoft 365 Agents Toolkit Overview](teams-toolkit-fundamentals-vs.md).
+   Visual Studio launches the Teams app inside Microsoft Teams client in your browser. For more information, see [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals-vs.md).
 
 1. Select **Add** to install your app in Teams.
 
@@ -78,7 +78,7 @@ To debug your app after you create a project, perform the following steps:
 
 ## See also
 
-* [Microsoft 365 Agents Toolkit Overview](teams-toolkit-fundamentals-vs.md)
+* [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals-vs.md)
 * [Introduction to Azure Functions](/azure/azure-functions/functions-overview)
 * [Use Agents Toolkit to provision cloud resources](provision-vs.md)
 * [Deploy to the cloud](deploy-vs.md)
