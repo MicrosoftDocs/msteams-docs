@@ -61,6 +61,9 @@ Here's an example for updating the app manifest. You must add the `botID` proper
 
 </details>
 
+> [!NOTE]
+> The `customEngineAgents` node is available only in [public developer preview app manifest](../../../resources/schema/manifest-schema-dev-preview.md#customengineagents).
+
 ### Stream the custom engine agent response to the user
 
 A custom engine agent uses LLM for complex user requests, which may delay responses. To prevent noticeable delays, the agent streams its responses, making them appear fast.
