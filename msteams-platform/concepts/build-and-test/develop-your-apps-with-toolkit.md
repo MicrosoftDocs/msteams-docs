@@ -23,8 +23,9 @@ In Developer Portal, you can open and launch your project (React app) in Visual 
 > [!NOTE]
 > To enable your app to open, install the latest version of [Agents Toolkit for Visual Studio Code](../../toolkit/install-Teams-Toolkit.md).
 
-Following are the steps to open your app in Visual Studio Code:
+Following are the steps to open your app in Visual Studio Code from Developer Portal:
 
+1. Sign in to [Developer Portal](https://dev.teams.microsoft.com) and select **Apps** from the left pane.
 1. Select **Develop** > **Open in Microsoft 365 Agents Toolkit** > **Open in Visual Studio Code (JS/TS)**.
 
     :::image type="content" source="../../assets/images/tdp/open-in-toolkit.png" alt-text="Screenshot shows the Developer Portal with Open in Agents Toolkit highlighted in red." lightbox="../../assets/images/tdp/open-in-toolkit.png":::
@@ -69,8 +70,9 @@ Following are the steps to open your app in Visual Studio Code:
 
 You can open your project in Visual Studio and scaffold your project in Visual Studio with Agents Toolkit. Ensure that you installed [Visual Studio 2022 version 17.6 Preview 2](/visualstudio/releases/2022/release-notes-preview#17.6.0-pre.2.0).
 
-Following are the steps to open your app in Visual Studio:
+Following are the steps to open your app in Visual Studio from Developer Portal:
 
+1. Sign in to [Developer Portal](https://dev.teams.microsoft.com) and select **Apps** from the left pane.
 1. Select **Develop** > **Open in Microsoft 365 Agents Toolkit** > **Open in Visual Studio (.NET)**.
 
     :::image type="content" source="../../assets/images/tdp/tdp-toolkit-vs.png" alt-text="Screenshot shows the Developer Portal with Open in Agents Toolkit." lightbox="../../assets/images/tdp/tdp-toolkit-vs.png":::
