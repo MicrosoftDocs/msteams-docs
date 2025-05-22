@@ -52,7 +52,7 @@ After you open your project in Visual Studio, to provision cloud resources follo
 
    :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/toolkit-vs-provision-warning.png" alt-text="Screenshot shows the provision warning.":::
 
-   The provisioning process creates resources in the Azure cloud. You can monitor the progress by observing the Microsoft 365 Agents Toolkit output window.
+   The provisioning process creates resources in the Azure cloud. You can monitor the progress by observing the Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) output window.
 
 1. In the pop-up window that appears, to view all the resources that are provisioned, select **View provisioned resources**.
 
@@ -274,7 +274,7 @@ The provision steps are defined in the `m365agents.yml` file, under the `provisi
 
 #### Reference environment variables in parameter files
 
-Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) supports referencing the values from environment variables in the `m365agents.yml` file, Teams app manifest, Microsoft Entra app manifest, and Azure parameter files. You can use the syntax `${{ENV_VARIABLE_NAME}}` to reference environment variables.
+Agents Toolkit supports referencing the values from environment variables in the `m365agents.yml` file, Teams app manifest, Microsoft Entra app manifest, and Azure parameter files. You can use the syntax `${{ENV_VARIABLE_NAME}}` to reference environment variables.
 
 The following example sets the value of environment variable `MY_AZURE_SUBSCRIPTION_ID` to `subscriptionId`:
 
@@ -401,6 +401,6 @@ If you don't have a Microsoft Entra app for your bot yet or you've one but don't
 
 ## See also
 
-* [Microsoft 365 Agents Toolkit Overview](teams-toolkit-fundamentals-vs.md)
+* [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals-vs.md)
 * [Deploy Teams app to the cloud](deploy-vs.md)
 * [Edit Teams app manifest using Visual Studio](TeamsFx-preview-and-customize-app-manifest-vs.md)

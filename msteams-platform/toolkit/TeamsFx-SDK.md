@@ -48,12 +48,12 @@ For more information, see [Teams app project](https://github.com/OfficeDev/Teams
  > [!Tip]
  > The code snippets are updated for the latest TeamsFx SDK version 2.
 
-### Install the `@microsoft/teamsfx` package
+### Install the `@microsoft/atk` package
 
 Install the TeamsFx SDK for TypeScript or JavaScript with `npm`:
 
 ```bash
-npm install @microsoft/teamsfx
+npm install @microsoft/atk
 ```
 
 ## TeamsFx core functionalities
@@ -496,7 +496,7 @@ This section provides several code snippets for common scenarios that are relate
      }    
     ```
 
-    For more information on sample to use graph API in message extension, see [message-extension-sso-sample](https://github.com/OfficeDev/teams-toolkit-samples/tree/dev/query-org-user-with-message-extension-sso).
+    For more information on sample to use graph API in message extension, see [message-extension-sso-sample](https://github.com/OfficeDev/microsoft-365-agents-toolkit-samples/tree/dev/query-org-user-with-message-extension-sso).
     </details>
 
     <details>
@@ -828,7 +828,7 @@ If you're using the version of SDK that has `loadConfiguration()`, you can perfo
 
 ## See also
 
-* [Microsoft 365 Agents Toolkit Overview](teams-toolkit-fundamentals.md)
-* [Microsoft 365 Agents Toolkit CLI](Teams-Toolkit-CLI.md)
+* [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals.md)
+* [Microsoft 365 Agents Toolkit CLI](microsoft-365-agents-toolkit-CLI.md)
 * [Microsoft TeamsFx sample gallery](https://github.com/OfficeDev/TeamsFx-Samples).
 * [Add single sign-on to Teams app](add-single-sign-on.md)

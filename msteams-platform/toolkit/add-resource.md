@@ -81,7 +81,7 @@ Add a connection to an existing API, developed by your organization or a third p
 
 ## See also
 
-* [Microsoft 365 Agents Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals.md)
 * [Provision cloud resources](provision.md)
 * [Create a new Teams app](create-new-project.md)
 * [Deploy to the cloud](deploy.md)

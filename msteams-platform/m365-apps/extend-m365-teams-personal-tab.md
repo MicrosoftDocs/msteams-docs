@@ -32,7 +32,7 @@ To complete this tutorial, you need:
 * A machine with Microsoft 365 apps installed from the Microsoft 365 Apps *Current Channel*.
 * (Optional) Your sandbox tenant enrolled in Microsoft 365 Targeted Releases.
 * (Optional) An Android device or emulator with Microsoft 365 for Android app installed.
-* (Optional) [Microsoft 365 Agents Toolkit](https://aka.ms/teams-toolkit) extension for Microsoft Visual Studio Code to help update your code.
+* (Optional) [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) extension for Microsoft Visual Studio Code to help update your code.
 
 > [!div class="nextstepaction"]
 > [Install prerequisites](prerequisites.md)
@@ -72,7 +72,7 @@ Use the Agents Toolkit extension for Visual Studio Code to start with a personal
 From here, you can skip ahead to [upload your custom app in Teams](#upload-your-custom-app-in-teams) and preview your app in Outlook and the Microsoft 365 app. The app manifest and TeamsJS API calls are already updated for Microsoft 365 app.
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Quickstart&&author=%40erikadoyle&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-teams-toolkit%23quickstart&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Quickstart&&author=%40erikadoyle&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-toolkit%23quickstart&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ### SharePoint Framework (SPFx) apps
 
@@ -90,7 +90,7 @@ Starting with version 1.16 of [SharePoint Framework](/sharepoint/dev/spfx/integr
 After you update TeamsJS references, [upload your app in Teams](#upload-your-custom-app-in-teams) to preview your SPFx personal tab app running in Outlook and Microsoft 365 app. For more information, see [Extend Outlook and Microsoft 365 app with the SharePoint Framework](/sharepoint/dev/spfx/office/overview).
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+SharePoint+Framework+%28SPFx%29+apps&&author=%40erikadoyle&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-teams-toolkit%23sharepoint-framework-spfx-apps&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+SharePoint+Framework+%28SPFx%29+apps&&author=%40erikadoyle&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-toolkit%23sharepoint-framework-spfx-apps&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Update the app manifest
 
@@ -98,7 +98,7 @@ You need to use the app manifest schema version `1.13` (or later) to enable your
 
 You have two options for updating your app manifest:
 
-# [Agents Toolkit](#tab/manifest-teams-toolkit)
+# [Agents Toolkit](#tab/manifest-toolkit)
 
 1. Open the command palette: `Ctrl+Shift+P`.
 1. Run the `Microsoft 365 Agents: Upgrade Teams manifest` command and select your app manifest file. Changes are made in place.
@@ -119,7 +119,7 @@ Open your app manifest and update the `$schema` and `manifestVersion` manually w
 You can use Agents Toolkit to [validate your app manifest](../toolkit/TeamsFx-preview-and-customize-app-manifest.md#validate-your-app) and identify any errors.
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Update+the+app+manifest&&author=%40erikadoyle&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-teams-toolkit%23update-the-app-manifest&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Update+the+app+manifest&&author=%40erikadoyle&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-toolkit%23update-the-app-manifest&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 [!INCLUDE [requirements-targeting](../includes/requirements-targeting.md)]
 
@@ -145,7 +145,7 @@ Upon completion, your *package.json* file references `@microsoft/teams-js@2.0.0`
 > Code inside *.html* files is not supported by the upgrade tooling and require manual changes.
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Update+TeamsJS+references&&author=%40erikadoyle&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-teams-toolkit%23update-teamsjs-references&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=6d43a761-19e0-541e-ba06-170099411ac1&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Update+TeamsJS+references&&author=%40erikadoyle&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-toolkit%23update-teamsjs-references&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Configure Content Security Policy headers
 
@@ -174,7 +174,7 @@ If your app makes use of [Content Security Policy](https://developer.mozilla.org
     [!INCLUDE [Microsoft 365 client application IDs](~/includes/tabs/microsoft-365-client-application-ids.md)]
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Update+Microsoft+Entra+app+registration+for+SSO&&author=%40erikadoyle&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-teams-toolkit%23update-microsoft-entra-app-registration-for-sso&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Update+Microsoft+Entra+app+registration+for+SSO&&author=%40erikadoyle&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-toolkit%23update-microsoft-entra-app-registration-for-sso&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Upload your custom app in Teams
 
@@ -199,7 +199,7 @@ After it's uploaded to Teams, your personal tab is available in Outlook and Micr
 You can pin the app for quick access, or you can find your app in the ellipses (**...**) flyout among recent applications in the sidebar on the left. Be aware, that pinning an app in Teams doesn't pin it as an app in Microsoft 365 app or Outlook.
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Upload+your+custom+app+in+Teams&&author=%40erikadoyle&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-teams-toolkit%23upload-your-custom-app-in-teams&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Upload+your+custom+app+in+Teams&&author=%40erikadoyle&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-toolkit%23upload-your-custom-app-in-teams&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Preview your personal tab in other Microsoft 365 experiences
 
@@ -221,7 +221,7 @@ To view your app running in Outlook on Windows desktop:
     :::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Screenshot shows the More apps option on the side bar of Outlook desktop client to see your installed tab app.":::
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Outlook+on+Windows&&author=%40erikadoyle&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-teams-toolkit%23outlook-on-windows&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Outlook+on+Windows&&author=%40erikadoyle&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-toolkit%23outlook-on-windows&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ### Outlook on the web
 
@@ -234,7 +234,7 @@ To view your app in Outlook on the web:
     :::image type="content" source="images/outlook-web-more-apps.png" alt-text="Screenshot shows the Apps option on the side bar of outlook.com to see your installed tab app.":::
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Outlook+on+the+web&&author=%40erikadoyle&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-teams-toolkit%23outlook-on-the-web&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Outlook+on+the+web&&author=%40erikadoyle&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-toolkit%23outlook-on-the-web&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ### Outlook for Android app
 
@@ -247,7 +247,7 @@ To view your app running in Outlook for Android app:
     :::image type="content" source="images/outlook-mobile-android-more.png" alt-text="Screenshot shows the Apps option of the Outlook app on Android.":::
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Outlook+for+Android+app&&author=%40erikadoyle&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-teams-toolkit%23outlook-for-android-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Outlook+for+Android+app&&author=%40erikadoyle&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-toolkit%23outlook-for-android-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ### Outlook app for iOS
 
@@ -260,7 +260,7 @@ To view your app running in Outlook app for iOS:
     :::image type="content" source="images/outlook-ios-mobile-more.png" alt-text="Screenshot shows the More option of the Outlook app on iOS.":::
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Outlook+app+for+iOS&&author=%40erikadoyle&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-teams-toolkit%23outlook-app-for-ios&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Outlook+app+for+iOS&&author=%40erikadoyle&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-toolkit%23outlook-app-for-ios&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ### Microsoft 365 on Windows
 
@@ -273,7 +273,7 @@ To view your app running in Microsoft 365 on Windows desktop:
     :::image type="content" source="images/office-desktop-more-apps.png" alt-text="Screenshot shows the Apps option on the side bar of Microsoft 365 desktop client to see your installed tab app.":::
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Microsoft+365+on+Windows&&author=%40erikadoyle&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-teams-toolkit%23microsoft-365-on-windows&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Microsoft+365+on+Windows&&author=%40erikadoyle&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-toolkit%23microsoft-365-on-windows&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ### Microsoft 365 on the web
 
@@ -286,7 +286,7 @@ To preview your app running in Microsoft 365 on the web:
     :::image type="content" source="images/office-web-more-apps.png" alt-text="Screenshot shows the Apps option on the side bar of microsoft365.com to see your installed tab app.":::
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Microsoft+365+on+the+web&&author=%40erikadoyle&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-teams-toolkit%23microsoft-365-on-the-web&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Microsoft+365+on+the+web&&author=%40erikadoyle&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-toolkit%23microsoft-365-on-the-web&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ### Microsoft 365 for Android app
 
@@ -299,7 +299,7 @@ To view your app running in Microsoft 365 for Android app:
     :::image type="content" source="images/m365-android-more-apps.png" alt-text="Screenshot shows the Apps option on the side bar of the Microsoft 365 app to see your installed personal tabs on Microsoft 365 for Android app.":::
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Microsoft+365+for+Android+app&&author=%40erikadoyle&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-teams-toolkit%23microsoft-365-for-android-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Microsoft+365+for+Android+app&&author=%40erikadoyle&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-toolkit%23microsoft-365-for-android-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ### Microsoft 365 for iOS
 
@@ -312,7 +312,7 @@ To view your app running in Microsoft 365 for iOS:
     :::image type="content" source="images/m365-ios-more-apps.png" alt-text="Screenshot shows the Apps option on the side bar of the Microsoft 365 app to see your installed personal tabs on Microsoft 365 for iOS.":::
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Microsoft+365+for+iOS&&author=%40erikadoyle&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-teams-toolkit%23microsoft-365-for-ios&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Microsoft+365+for+iOS&&author=%40erikadoyle&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-toolkit%23microsoft-365-for-ios&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Troubleshooting
 
@@ -332,7 +332,7 @@ You can debug your tab application running in Teams, Microsoft 365 app, and Outl
 
 Choose the desired debug method and select the **F5** key. Upon the first run of the local debug, Agents Toolkit prompts you to sign in to your Microsoft 365 tenant account.
 
-Provide feedback and report any issues with Agents Toolkit debugging experience at [Microsoft 365 Agents Toolkit GitHub Repo](https://github.com/OfficeDev/teams-toolkit/issues).
+Provide feedback and report any issues with Agents Toolkit debugging experience at [Microsoft 365 Agents Toolkit GitHub Repo](https://github.com/OfficeDev/microsoft-365-agents-toolkit/issues).
 
 #### Mobile debugging
 
@@ -349,7 +349,7 @@ To debug your app in Outlook for Android:
 1. Debug your tab app within the Android WebView in the same way that you [remotely debug](/microsoft-edge/devtools-guide-chromium/remote-debugging) a regular website on an Android device.
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Debugging+Outlook+for+Android&&author=%40erikadoyle&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-teams-toolkit%23debugging-outlook-for-android&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Debugging+Outlook+for+Android&&author=%40erikadoyle&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-toolkit%23debugging-outlook-for-android&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ##### Debugging Microsoft 365 for Android
 
@@ -372,7 +372,7 @@ Agents Toolkit (`F5`) doesn't support debugging Android apps in Microsoft 365. H
 9. Debug your tab app within the Android WebView in the same way that you [remotely debug](/microsoft-edge/devtools-guide-chromium/remote-debugging) a regular website on an Android device.
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Debugging+Microsoft+365+for+Android&&author=%40erikadoyle&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-teams-toolkit%23debugging-microsoft-365-for-android&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Debugging+Microsoft+365+for+Android&&author=%40erikadoyle&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-personal-tab%3Ftabs%3Dmanifest-toolkit%23debugging-microsoft-365-for-android&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-personal-tab.md&documentVersionIndependentId=b2cf31a5-621a-eeac-26c9-89ada49466c0&platformId=59760ef9-b9b9-09a3-173f-1d97d0420bbc&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Code sample
 
