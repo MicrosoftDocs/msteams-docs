@@ -324,15 +324,15 @@ Agents Playground will acquire a JWT token using the provided authentication set
 
 ## Multiple channel support
 
-Teams is the default channel used for debugging your application, but other channels are also supported. The channel can be changed by setting environment variable `DEFAULT_CHANNEL_ID` or use option `--channel-id` when start Agents Playground via command line.
+Teams is the default channel used for debugging your application, but other channels are also supported. You can change the channel by setting the `DEFAULT_CHANNEL_ID` environment variable or by using the `--channel-id` option when starting Agents Playground from the command line.
 
-Currently the accepted channel ids are: `msteams`, `directline`, `webchat` and `emulator`. By setting channel id, properties of messages sent to application will be changed accordingly for simulating real environment. For `directline` and `webchat` channel, following client will be displayed and cards rendering will be different compared with Teams channel.
+Currently, the accepted channel IDs are: `msteams`, `directline`, `webchat`, and `emulator`. When you set a channel ID, the properties of the messages sent to the application will change accordingly to simulate a real environment. For the `directline` and `webchat` channels, a corresponding client will be displayed, and card rendering will differ from that of the Teams channel.
 
 :::image type="content" source="../assets/images/toolkit-v2/debug/webchat-ui.png" alt-text="Screenshot shows the card rendering result when using different channel.":::
 
 ## Customize Teams context
 
-The configuration file in the project's root folder allows you to customize Teams context information such as chats, teams, and users. The file provides mock data for testing Bot Framework APIs or Agent SDK/Teams AI library methods such as `TeamsInfo.getTeamMembers`.
+The configuration file in the project's root folder allows you to customize Teams context information such as chats, teams, and users. It provides mock data for testing Bot Framework APIs or methods from the Agent SDK or Teams AI Library, such as `TeamsInfo.getTeamMembers`.
 
 ### Default configuration
 
@@ -412,9 +412,9 @@ team:
 
 ### Update the configuration file
 
-If your bot code uses Bot Framework APIs, you can modify the configuration file to alter the API response. Let us consider an Azure DevOps notification bot installed in a team that fetches inactive bugs from Azure DevOps. It identifies the owners of the inactive bug, fetches their email addresses, and sends notifications to their personal chats on a daily basis.
+If your bot code uses Bot Framework APIs, you can modify the configuration file to customize the API responses. For example, consider an Azure DevOps notification bot installed in a team that fetches inactive bugs from Azure DevOps. It identifies the owners of the inactive bugs, retrieves their email addresses, and sends daily notifications to their personal chats.
 
-To comprehensively test this bot in Agents Playground, it's crucial to update the configuration file to use the correct email addresses of the owners of the inactive bugs.
+To comprehensively test this bot in Agents Playground, ensure to update the configuration file with the correct email addresses of the inactive bug owners.
 
 1. Go to the `.m365agentsplayground.yml` file in the project's root folder.
 
@@ -436,11 +436,11 @@ To comprehensively test this bot in Agents Playground, it's crucial to update th
 > [!NOTE]
 > When you edit the configuration file in Visual Studio Code, Intellisense automatically updates the property names and warns you if you enter invalid values.
 
-It's vital to recognize that updating the configuration file has three major impacts:
+It's important to understand that updating the configuration file has three major impacts:
 
-* It influences the responses obtained from Bot Framework Connector APIs, for example, `TeamsInfo.getPagedMembers()`.
-* It shapes the details in the activity payload, for example, `activity.recipient`.
-* It impacts the user interface in Agents Playground, for example, group chat names.
+* It affects the responses returned by Bot Framework Connector APIs. For example, `TeamsInfo.getPagedMembers()`.
+* It modifies the details in the activity payload. For example, `activity.recipient`.
+* It influences the user interface in Agents Playground. For example, group chat names.
 
 ## Limitations
 
