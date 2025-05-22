@@ -694,7 +694,7 @@ items:
         The **Add** page appears for your app.
     1. Select **Add** to load the app on Teams.
 
-        :::image type="content" source="../msteams-platform/assets/images/toolkit-v2/add-nodejs-app-sideload.png" alt-text="Screenshot of image showing Add app dialog.":::
+        :::image type="content" source="../msteams-platform/assets/images/toolkit-v2/add-nodejs-app-upload.png" alt-text="Screenshot of image showing Add app dialog.":::
 
         Your app is now available in Teams. You can view all the tabs and test the capabilities:
 

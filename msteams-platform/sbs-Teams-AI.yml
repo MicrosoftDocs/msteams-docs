@@ -299,7 +299,7 @@ items:
 
         Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
 
-        :::image type="content" source="../msteams-platform/assets/images/toolkit-v2/first-tab/m365-sideloading-enabled.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure.":::
+        :::image type="content" source="../msteams-platform/assets/images/toolkit-v2/first-tab/m365-uploading-enabled.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure.":::
 
         Now you're ready to build the app and run it locally!
 
@@ -462,7 +462,7 @@ items:
 
             ```typescript
             console.log('\nGet Bot Framework Emulator: https://aka.ms/botframework-emulator');
-            console.log('\nTo test your bot in Teams, sideload the app manifest.json within Teams Apps.');
+            console.log('\nTo test your bot in Teams, upload the app manifest.json within Teams Apps.');
             ```
    
     1. In the root folder, create new folder structure: **prompts** > **sequence**.
