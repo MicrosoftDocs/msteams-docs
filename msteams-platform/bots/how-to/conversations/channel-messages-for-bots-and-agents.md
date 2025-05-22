@@ -233,7 +233,7 @@ The following steps guide you to upload and validate a bot that receives all cha
 1. Select the app package from the **Open** dialog box.
 1. Select **Open**.
 
-   :::image type="content" source="../../../assets/images/bots/Chats_Sideload_App_FilePicker.png" alt-text= "Screenshot shows the window where the app package is selected.":::
+   :::image type="content" source="../../../assets/images/bots/Chats_upload_App_FilePicker.png" alt-text= "Screenshot shows the window where the app package is selected.":::
 
 1. Select **Add** from the app details pop-up to add the bot to your selected group chat.
 
