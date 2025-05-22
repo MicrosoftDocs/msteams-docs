@@ -41,7 +41,7 @@ You also need to enable custom app upload for your tenant:
 
  1. Under **Custom apps**, turn on the **Let users interact with custom apps in preview** toggle and select **Save**.
 
-    :::image type="content" source="images/teams-admin-enable-uploading.png" alt-text="Screenshot shows how to enable custom app upload option from Teams admin center.":::
+    :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="Screenshot shows how to enable custom app upload option from Teams admin center.":::
 
     Apart from Org-wide app settings, custom app policy settings also allow users to upload custom apps to Teams. For more information, see [manage custom app policies and settings](/microsoftteams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings).
 
