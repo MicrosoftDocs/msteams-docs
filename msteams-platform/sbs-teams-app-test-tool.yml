@@ -63,11 +63,11 @@ items:
 
     1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="~/assets/images/toolkit-v2/toolkit-sidebar-icon.PNG" border="false"::: icon in the Visual Studio Code **Activity Bar**.
 
-    1. Select **Create a New Agent/App**.
+    1. Select **Create a New Agent/App**. 
 
         :::image type="content" source="~/assets/images/toolkit-v2/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Agents Toolkit sidebar.":::
 
-    1. Select **Agents for Teams** 
+    1. Select **Agents for Teams** > **Azure OpenAI** > enter an input in **Input Azure API service key now**
 
         :::image type="content" source="~/assets/images/toolkit-v2/first-bot/create-newapp.png" alt-text="Screenshot shows the Agents Toolkit app templates.":::
 
@@ -75,7 +75,7 @@ items:
 
         :::image type="content" source="~/assets/images/toolkit-v2/debug/ai-chat-bot.png" alt-text="Screenshot shows the app feature to add to your new app.":::
 
-    1. Select **Azure OpenAI** > **Input Azure API service key now**. **JavaScript**.
+    1. Select the programming language as **JavaScript**.
 
         :::image type="content" source="~/assets/images/agents-playground/select-language-bot.png" alt-text="Screenshot shows the option to select the programming language.":::
 
