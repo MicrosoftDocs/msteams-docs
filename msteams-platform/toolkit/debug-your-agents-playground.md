@@ -298,19 +298,19 @@ If you're unsure of the values, you can remove them from the configuration file 
 
 ### Environment variable / Command line
 
-Before starting Agents Playground, you can set environment variables: `AUTH_CLIENT_ID`, `AUTH_CLIENT_SECRET`, `AUTH_TENANT_ID`, these values will be used for the default authentication configuration.
+Before starting Agents Playground, you can set the following environment variables: `AUTH_CLIENT_ID`, `AUTH_CLIENT_SECRET`, and `AUTH_TENANT_ID`. These values will be used for the default authentication configuration.
 
-Also, when running Agents Playground by command line, you can use options: `--client-id`, `--client-secret`, `--tenant-id`, which will override the default environment variable settings above.
+When running Agents Playground from the command line, you can also use the options: `--client-id`, `--client-secret`, and `--tenant-id`.These options override the default environment variable settings.
 
 ### Client side interface
 
-After Agents Playground is started, you can still configure authentication via client interface as following:
+After Agents Playground has started, you can still configure authentication through the client interface as follows:
 
 1. Select **Configure Authentication**.
 
    :::image type="content" source="../assets/images/toolkit-v2/debug/configure-authentication.png" alt-text="Screenshot shows the option to configure authentication on agents playground menu bar.":::
 
-1. Fill in fields in the form and click **Save**.
+1. Fill in fields in the form and select **Save**.
 
    :::image type="content" source="../assets/images/toolkit-v2/debug/authentication-form.png" alt-text="Screenshot shows the form of authentication parameters and the save button.":::
 
@@ -320,7 +320,7 @@ The log panel will show message if the configuration is successfully set.
 
 ### Authentication logic
 
-Agents Playground will acquire a JWT token using the provided authentication settings and include it in the Authorization header during the communicating process with application. The JWT token in application's response header will also be validated by Agents Playground. For more details about authentication process, read [Authentication with the Bot Connector API](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication).
+Agents Playground will acquire a JWT token using the provided authentication settings and include it in the **Authorization** header when communicating with the application. The JWT token in the application's response header will also be validated by Agents Playground. For more details about the authentication process, see [Authentication with the Bot Connector API](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication).
 
 ## Multiple channel support
 
