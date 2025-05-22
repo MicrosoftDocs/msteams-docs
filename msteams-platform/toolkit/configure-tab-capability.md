@@ -1,8 +1,8 @@
 ---
 title: Configure Tab Capability
 author: surbhigupta
-description: Learn how to configure the tab capability within a Teams app with the Teams Toolkit for Visual Studio Code.
-ms.author: v-bvishnu
+description: Learn how to configure the tab capability within a Teams app with Microsoft 365 Agents Toolkit for Visual Studio Code.
+ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 12/17/2024
@@ -12,7 +12,7 @@ ms.date: 12/17/2024
 
 Tabs are webpages embedded in Microsoft Teams. Tabs function as simple HTML `iframe` tags that point to domains declared in app manifest (previously called Teams app manifest). You can add tab as a capability to a Teams app in a channel within a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. For more information, see [build tabs for Teams](../tabs/what-are-tabs.md).
 
-Before you start, we recommend that you create and go through a tab app. For more information, see [create tab app with Teams Toolkit](create-new-project.md).
+Before you start, we recommend that you create and go through a tab app. For more information, see [create tab app with Microsoft 365 Agents Toolkit](create-new-project.md).
 
 ## Prerequisites
 
@@ -31,7 +31,7 @@ The following steps help you to configure the tab capability in a Teams app:
 1. [Provision app to Azure](#provision-app-to-azure)
 
 > [!TIP]
-> If you develop a server-side tab app, you don't need to update the folder structure, debug profile, or bicep infrastructure. Add new routes to the tab in your bot service and update the app manifest in Teams Toolkit.
+> If you develop a server-side tab app, you don't need to update the folder structure, debug profile, or bicep infrastructure. Add new routes to the tab in your bot service and update the app manifest in Agents Toolkit (previously known as Teams Toolkit).
 For more information, see [sample app](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/hello-world-bot-with-tab).
 
 ### Update app manifest
@@ -63,11 +63,11 @@ For more information, see [sample app](https://github.com/OfficeDev/TeamsFx-Samp
    ```
 
    > [!NOTE]
-   > `TAB_ENDPOINT` and `TAB_DOMAIN` are built-in variables of Teams Toolkit. They're replaced with the true endpoint during runtime based on your current environment.
+   > `TAB_ENDPOINT` and `TAB_DOMAIN` are built-in variables of Agents Toolkit. They're replaced with the true endpoint during runtime based on your current environment.
 
 ### Setup local debug environment
 
-1. Bring your tab app code into your project in Visual Studio Code. If you don't have one, you can [create a new tab app with Teams Toolkit](create-new-project.md) and copy the source code into your current project. By default, your tab app's folder structure looks as follows:
+1. Bring your tab app code into your project in Visual Studio Code. If you don't have one, you can [create a new tab app with Agents Toolkit](create-new-project.md) and copy the source code into your current project. By default, your tab app's folder structure looks as follows:
 
    ```
        |-- appPackage/
@@ -79,7 +79,7 @@ For more information, see [sample app](https://github.com/OfficeDev/TeamsFx-Samp
        |   |-- package.json
        |-- index.ts        <!--your current source code-->
        |-- package.json
-       |-- teamsapp.yml
+       |-- m365agents.yml
    ```
 
 1. Reorganize the folder structure as follows:
@@ -94,10 +94,10 @@ For more information, see [sample app](https://github.com/OfficeDev/TeamsFx-Samp
        |-- bot/            <!--move your current source code to a new sub folder-->
        |   |-- index.ts
        |   |-- package.json
-       |-- teamsapp.yml
+       |-- m365agents.yml
    ```
 
-1. Update the following code in `teamsapp.yml` and `teamsapp.local.yml` files to align with the folder structure:
+1. Update the following code in `m365agents.yml` and `m365agents.local.yml` files to align with the folder structure:
 
    ```yaml
        deploy:
@@ -107,6 +107,7 @@ For more information, see [sample app](https://github.com/OfficeDev/TeamsFx-Samp
              args: install --no-audit
              workingDirectory: ./bot
    ```
+
 1. To configure the debug profile for your tab project, add the following code to the `tasks.json` file:
 
    ```json
@@ -167,7 +168,7 @@ For more information, see [sample app](https://github.com/OfficeDev/TeamsFx-Samp
 
    For more information on how to configure the debug profile, see [sample app](https://github.com/OfficeDev/teams-toolkit-samples/tree/dev/hello-world-bot-with-tab/.vscode).
 
-1. To enable your tab project to work with Teams Toolkit, add the following actions to the `teamsapp.local.yml` file:
+1. To enable your tab project to work with Agents Toolkit, add the following actions to the `m365agents.local.yml` file:
 
    ```yaml
    provision:
@@ -252,7 +253,7 @@ To create a server-side tab app, you don't need to update your bicep files or Az
    }
    ```
 
-1. To host your tab app in Azure Static Web Apps, define the `azureStaticWebApps/getDeploymentToken` action in your `teamsapp.yml` file. The action relies on the `AZURE_STATIC_WEB_APPS_RESOURCE_ID`, an output of the bicep deployments. Add the following code after the `arm/deploy` action:
+1. To host your tab app in Azure Static Web Apps, define the `azureStaticWebApps/getDeploymentToken` action in your `m365agents.yml` file. The action relies on the `AZURE_STATIC_WEB_APPS_RESOURCE_ID`, an output of the bicep deployments. Add the following code after the `arm/deploy` action:
 
    ```yaml
     provision:
@@ -272,7 +273,7 @@ To create a server-side tab app, you don't need to update your bicep files or Az
 
 1. Enter `Teams: Provision` command to apply the bicep to Azure.
 
-1. To automate the build and deployment of your tab app, add the following `build` and `deploy` actions to your `teamsapp.yml` file:
+1. To automate the build and deployment of your tab app, add the following `build` and `deploy` actions to your `m365agents.yml` file:
 
    ```yaml
      - uses: cli/runNpmCommand # Run npm command
