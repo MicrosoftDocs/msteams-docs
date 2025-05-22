@@ -293,7 +293,8 @@ You can use **Custom activity** to customize activity triggers such as, `reactio
 
 ## Configure Agents Playground for authentication
 
-When debug an application requires authentication, you can configure the Microsoft Entra client ID and client secret, with optional tenant id. If you created your bot with the Azure AI Bot Service, the credentials are available on the bot's App Service, under the Settings -> Configuration section. If you don't know the values, you can remove those from the locally running application's configuration file, then run the application in the Agents Playground. If the application isn't running with these settings, you don't need to configure these settings either.
+When debugging an application that requires authentication, you can configure the Microsoft Entra client ID and client secret, with an optional tenant ID. If you created your bot using the Azure AI Bot Service, the credentials are available in the bot's App Service under **Settings** > **Configuration**.
+If you're unsure of the values, you can remove them from the configuration file of the locally running application and then run the application in the Agents Playground. If the application doesn't require these settings to run, you don't need to configure them.
 
 ### Environment variable / Command line
 
