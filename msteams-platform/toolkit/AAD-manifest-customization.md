@@ -1,7 +1,7 @@
 ---
 title: Customize Microsoft Entra Manifest
 author: zyxiaoyuer
-description: Learn how to edit, customize, preview, and manage Microsoft Entra manifest with CodeLens in Teams Toolkit, app development lifecycle, and view app in Azure portal.
+description: Learn how to edit, customize, preview, and manage Microsoft Entra manifest with CodeLens in Agents Toolkit, app development lifecycle, and view app in Azure portal.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
@@ -10,7 +10,7 @@ ms.date: 02/06/2025
 
 # Edit Microsoft Entra manifest
 
-Microsoft Teams Toolkit now manages Microsoft Entra application with the app manifest file as the source of truth during your Microsoft Teams application development lifecycle.
+Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) now manages Microsoft Entra application with the app manifest file as the source of truth during your Microsoft Teams application development lifecycle.
 
 <a name='customize-azure-ad-manifest-template'></a>
 
@@ -20,7 +20,7 @@ You can customize Microsoft Entra manifest template to update Microsoft Entra ap
 
 1. Open `aad.template.json` in your project.
   
-     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add template.png" alt-text="Screenshot shows the template.":::
+     :::image type="content" source="../assets/images/toolkit-v2/manual/add template.png" alt-text="Screenshot shows the template.":::
 
 2. Update the template directly or [reference values from another file](https://github.com/OfficeDev/TeamsFx/wiki/Manage-AAD-application-in-Teams-Toolkit#Placeholders-in-AAD-manifest-template). Following are the customization scenarios:
   
@@ -119,20 +119,20 @@ You can customize Microsoft Entra manifest template to update Microsoft Entra ap
 
    1. Select `Preview` CodeLens in `aad.template.json`.
   
-      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy1.png" alt-text="Screenshot shows the preview.":::
+      :::image type="content" source="../assets/images/toolkit-v2/manual/add deploy1.png" alt-text="Screenshot shows the preview.":::
 
    1. Select **local** or **dev** environment.
   
-      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy2.png" alt-text="Screenshot shows the environment list.":::
+      :::image type="content" source="../assets/images/toolkit-v2/manual/add deploy2.png" alt-text="Screenshot shows the environment list.":::
 
    1. Select `Deploy Azure AD Manifest` CodeLens in `aad.local.json` or `aad.dev.json`.
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy3.png" alt-text="Screenshot shows the deploy option highlighted." lightbox="../assets/images/teams-toolkit-v2/manual/add deploy3.png":::
+      :::image type="content" source="../assets/images/toolkit-v2/manual/add deploy3.png" alt-text="Screenshot shows the deploy option highlighted." lightbox="../assets/images/toolkit-v2/manual/add deploy3.png":::
 
    1. The changes for Microsoft Entra application used in local or dev environment are deployed.
 
    1. Additionally, you can open the command palette and select **Teams: Update Microsoft Entra App** to update Microsoft Entra app.
-      :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add deploy4.PNG" alt-text="Screenshot shows the Command Palette option.":::
+      :::image type="content" source="../assets/images/toolkit-v2/manual/add deploy4.PNG" alt-text="Screenshot shows the Command Palette option.":::
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Customize%20Microsoft%20Entra%20manifest%20template&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Faad-manifest-customization&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2FAAD-manifest-customization.md&documentVersionIndependentId=70b95cac-24c1-4279-8656-cd3c5d0b5235&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
@@ -161,19 +161,19 @@ Microsoft Entra manifest template file has CodeLens to review and edit the code.
 
 There's a preview CodeLens at the beginning of the Microsoft Entra manifest template file. Select the CodeLens to generate a Microsoft Entra manifest based as per your environment.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/manual/add codelens.png" alt-text="Screenshot shows the preview of add codelens.":::
+:::image type="content" source="../assets/images/toolkit-v2/manual/add codelens.png" alt-text="Screenshot shows the preview of add codelens.":::
 
 ### Placeholder argument CodeLens
 
 Placeholder argument CodeLens helps you to see the values for local debug and develop your environment. If you hover the mouse on the placeholder argument, it shows tooltip box for the values of all the environments.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/manual/add arguments.png" alt-text="Screenshot shows the add arguments.":::
+:::image type="content" source="../assets/images/toolkit-v2/manual/add arguments.png" alt-text="Screenshot shows the add arguments.":::
 
 ### Required resource access CodeLens
 
-Microsoft Entra manifest template in Teams Toolkit also supports user readable strings for `Microsoft Graph` and `Office 365 SharePoint Online` permissions. The official [Microsoft Entra manifest schema](/azure/active-directory/develop/reference-app-manifest), which is the `resourceAppId` and `resourceAccess` in `requiredResourceAccess` property supports only the UUID. If you enter UUID, the CodeLens shows user readable strings, otherwise it shows the UUID.
+Microsoft Entra manifest template in Agents Toolkit also supports user readable strings for `Microsoft Graph` and `Office 365 SharePoint Online` permissions. The official [Microsoft Entra manifest schema](/azure/active-directory/develop/reference-app-manifest), which is the `resourceAppId` and `resourceAccess` in `requiredResourceAccess` property supports only the UUID. If you enter UUID, the CodeLens shows user readable strings, otherwise it shows the UUID.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/manual/add resource.png" alt-text="Screenshot shows the add resource to required resource access.":::
+:::image type="content" source="../assets/images/toolkit-v2/manual/add resource.png" alt-text="Screenshot shows the add resource to required resource access.":::
 
 ### Preauthorized applications CodeLens
 
@@ -185,7 +185,7 @@ CodeLens shows the application name for the preauthorized application ID for the
 
 1. Copy the Microsoft Entra application client ID from `.env.xxx` () file in the `AAD_APP_CLIENT_ID` property.
   
-     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add view1.png" alt-text="Screenshot shows the client ID." lightbox="../assets/images/teams-toolkit-v2/manual/add view1.png":::
+     :::image type="content" source="../assets/images/toolkit-v2/manual/add view1.png" alt-text="Screenshot shows the client ID." lightbox="../assets/images/toolkit-v2/manual/add view1.png":::
 
    > [!NOTE]
    > xxx in the client ID indicates the environment name where you have deployed the Microsoft Entra application.
@@ -197,13 +197,13 @@ CodeLens shows the application name for the preauthorized application ID for the
 
 1. Open [App Registrations page](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) and search the Microsoft Entra application using client ID that you copied before.
   
-     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add-view-app-registrations.png" alt-text="Screenshot shows the client ID under All applications tab.":::
+     :::image type="content" source="../assets/images/toolkit-v2/manual/add-view-app-registrations.png" alt-text="Screenshot shows the client ID under All applications tab.":::
 
 1. Select Microsoft Entra application from search result to view the detailed information.
   
 1. In Microsoft Entra app information page, select the **Manifest** menu to view manifest of this application. The schema of the manifest is same as the one in `aad.template.json` file. For more information about manifest, see [Microsoft Entra app manifest](/azure/active-directory/develop/reference-app-manifest).
   
-     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add view3.png" alt-text="Screenshot shows the Manifest screen.":::
+     :::image type="content" source="../assets/images/toolkit-v2/manual/add view3.png" alt-text="Screenshot shows the Manifest screen.":::
 
 1. You can select **Other Menu** to view or configure Microsoft Entra application through its portal.
   
@@ -224,19 +224,19 @@ You need to interact with Microsoft Entra application during various stages of y
 
 1. **To create Project**
 
-      You can create a project with Teams Toolkit that comes with single sign-on (SSO) support by default such as `SSO-enabled tab`. For more information on how to create a new app, see [create new Teams application using Teams Toolkit](create-new-project.md). A Microsoft Entra manifest file is automatically created for you in `aad.template.json`. Teams Toolkit creates or updates the Microsoft Entra application during local development or while you move the application to the cloud.
+      You can create a project with Agents Toolkit that comes with single sign-on (SSO) support by default such as `SSO-enabled tab`. For more information on how to create a new app, see [create new Teams application using Agents Toolkit](create-new-project.md). A Microsoft Entra manifest file is automatically created for you in `aad.template.json`. Agents Toolkit creates or updates the Microsoft Entra application during local development or while you move the application to the cloud.
 
 1. **To add SSO to your bot or tab**
 
-      After you create a Teams application without built-in SSO, Teams Toolkit progressively helps you to add SSO for the project. As a result, a Microsoft Entra manifest file is automatically created for you in `aad.template.json`.
+      After you create a Teams application without built-in SSO, Agents Toolkit progressively helps you to add SSO for the project. As a result, a Microsoft Entra manifest file is automatically created for you in `aad.template.json`.
 
-      Teams Toolkit creates or updates the Microsoft Entra application during next local development session or while you move the application to the cloud.
+      Agents Toolkit creates or updates the Microsoft Entra application during next local development session or while you move the application to the cloud.
 
 1. **To build locally**
 
-    Teams Toolkit performs the following functions during local development:
+    Agents Toolkit performs the following functions during local development:
 
-    - Read the `.env.local` file to find an existing Microsoft Entra application. If a Microsoft Entra application already exists, Teams Toolkit reuses the existing Microsoft Entra application. Otherwise, you need to create a new application using the `aad.template.json` file.
+    - Read the `.env.local` file to find an existing Microsoft Entra application. If a Microsoft Entra application already exists, Agents Toolkit reuses the existing Microsoft Entra application. Otherwise, you need to create a new application using the `aad.template.json` file.
 
     - Initially ignores some properties in the manifest file that requires more context, such as `replyUrls` property that requires a local development endpoint during the creation of a new Microsoft Entra application with the manifest file.
 
@@ -246,9 +246,9 @@ You need to interact with Microsoft Entra application during various stages of y
 
 1. **To provision for cloud resources**
 
-      You need to provision cloud resources and deploy your application while moving your application to the cloud. At stages, such as local debug, Teams Toolkit:
+      You need to provision cloud resources and deploy your application while moving your application to the cloud. At stages, such as local debug, Agents Toolkit:
 
-      - Reads the `.env.{env}` file to find an existing Microsoft Entra application. If a Microsoft Entra application already exists, Teams Toolkit reuses the existing Microsoft Entra application. Otherwise, you need to create a new application using the `aad.template.json` file.
+      - Reads the `.env.{env}` file to find an existing Microsoft Entra application. If a Microsoft Entra application already exists, Agents Toolkit reuses the existing Microsoft Entra application. Otherwise, you need to create a new application using the `aad.template.json` file.
 
       - Ignores some properties in the manifest file initially that requires more context such as `replyUrls` property. This property requires frontend or bot endpoint during the creation of a new Microsoft Entra application with the manifest file.
 
@@ -258,13 +258,13 @@ You need to interact with Microsoft Entra application during various stages of y
 
     - The cloud command deploys your application to the provisioned resources. It doesn't include deploying Microsoft Entra application changes you've made.
 
-    - Teams Toolkit updates the Microsoft Entra application according to the Microsoft Entra manifest template file.
+    - Agents Toolkit updates the Microsoft Entra application according to the Microsoft Entra manifest template file.
 
 ## Limitations
 
-1. Teams Toolkit extension doesn't support all the properties listed in Microsoft Entra manifest schema.
+1. Agents Toolkit extension doesn't support all the properties listed in Microsoft Entra manifest schema.
   
-      The following table lists the properties that aren't supported in Teams Toolkit extension:
+      The following table lists the properties that aren't supported in Agents Toolkit extension:
 
       |**Not supported properties**|**Reason**|
       |-----------|----------|
@@ -287,7 +287,7 @@ You need to interact with Microsoft Entra application during various stages of y
 
 ## See also
 
-- [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
+- [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals.md)
 - [Microsoft Entra manifest](/azure/active-directory/develop/reference-app-manifest)
 - [Preview and Customize app manifest in Toolkit](TeamsFx-preview-and-customize-app-manifest.md)
 - [Debug your Teams app](debug-overview.md)

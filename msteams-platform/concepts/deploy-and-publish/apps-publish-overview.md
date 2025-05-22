@@ -2,7 +2,6 @@
 title: Overview - Publish your app
 description: Learn to publish app to Teams Store or to your org. Understand how app's endpoints comply with your Government Community Cloud (GCC) organization's requirements.
 ms.topic: conceptual
-author: v-rpatkur
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 01/23/2025

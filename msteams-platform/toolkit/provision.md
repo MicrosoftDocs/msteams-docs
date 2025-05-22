@@ -1,7 +1,7 @@
 ---
 title: Provision Cloud Resources
 author: MuyangAmigo
-description: Learn how to do provision cloud resources using Teams Toolkit in Visual Studio Code, resource creation and customize resource provision.
+description: Learn how to do provision cloud resources using Microsoft 365 Agents Toolkit in Visual Studio Code, resource creation and customize resource provision.
 ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
@@ -12,9 +12,9 @@ ms.date: 11/29/2021
 
 TeamsFx integrates with Azure and the Microsoft 365 cloud, which allows to place your app in Azure with a single command. TeamsFx integrates with Azure Resource Manager (ARM), which enables to provision Azure resources that your application needs for code approach.
 
-## Provision using Microsoft Teams Toolkit in Microsoft Visual Studio Code
+## Provision using Microsoft 365 Agents Toolkit in Visual Studio Code
 
-You can trigger the provision command in Teams Toolkit or TeamsFx CLI to create or update resources for your application. The steps of the provision command are defined in the `teamsapp.yml` file, under `provision` property. You can view the file to understand what resources are created.
+You can trigger the provision command in Agents Toolkit (previously known as Teams Toolkit) or Microsoft 365 Agents Toolkit CLI (previously known as TeamsFx CLI) to create or update resources for your application. The steps of the provision command are defined in the `m365agents.yml` file, under `provision` property. You can view the file to understand what resources are created.
 
 > [!NOTE]
 > Azure services incur costs in your subscription. For more information on cost estimation, see [pricing calculator](https://azure.microsoft.com/pricing/calculator/).
@@ -258,7 +258,7 @@ Azure subscription.
         parameters: <path-to-arm-template-parameter>
         # Required. Name of the ARM template deployment.
         deploymentName: <arm-deployment-name>
-      # Optional. Teams Toolkit will download this bicep CLI version from github for you, will use bicep CLI in PATH if you remove this config.
+      # Optional. Agents Toolkit will download this bicep CLI version from github for you, will use bicep CLI in PATH if you remove this config.
       bicepCliVersion: v0.9.1
 ```
 
@@ -338,11 +338,11 @@ N/A
 
 ### Customize resource provision
 
-The provision steps are defined in `teamsapp.yml` file, under `provision` property. You can add, remove, or update actions to the `provision` property to define the expected actions you want to do during provision.
+The provision steps are defined in `m365agents.yml` file, under `provision` property. You can add, remove, or update actions to the `provision` property to define the expected actions you want to do during provision.
 
 #### Reference environment variables in parameter files
 
-Teams Toolkit supports referencing the values from environment variables in `teamsapp.yml`, app manifest, Microsoft Entra app manifest, and Azure parameter files. You can use syntax `${{ENV_VARIABLE_NAME}}` to reference environment variables.
+Agents Toolkit supports referencing the values from environment variables in `m365agents.yml`, app manifest, Microsoft Entra app manifest, and Azure parameter files. You can use syntax `${{ENV_VARIABLE_NAME}}` to reference environment variables.
 
 The following example sets the value of environment variable `MY_AZURE_SUBSCRIPTION_ID` to `subscriptionId`:
 
@@ -381,9 +381,9 @@ You can customize your bot or the Teams app by adding environment variables to u
 
 You can follow the steps to add environment variables to the .env files to use a Microsoft Entra app created for your Teams app. If you don't have a Microsoft Entra app yet or you already have one but don't know where to find the correct value, see [how to use existing Microsoft Entra app in TeamsFx project](use-existing-aad-app.md).
 
-1. Open `teamsapp.yml` and find the `aadApp/create` action.
+1. Open `m365agents.yml` and find the `aadApp/create` action.
 
-1. Find the environment variable names that store information for Microsoft Entra app in the `writeToEnvironmentFile` property. The default `writeToenvironmentFile` definition if you create projects using Teams Toolkit is as follows:
+1. Find the environment variable names that store information for Microsoft Entra app in the `writeToEnvironmentFile` property. The default `writeToenvironmentFile` definition if you create projects using Agents Toolkit is as follows:
 
      ```yml
       writeToEnvironmentFile:
@@ -426,9 +426,9 @@ You can follow the steps to add environment variables to the .env files to use a
 
 You can follow the steps to add environment variables to the .env files to use a Microsoft Entra app created for your Teams app. If you don't have a Microsoft Entra app for your bot yet or you already have one but don't know where to find the correct values, see [Use existing Microsoft Entra app in TeamsFx project](use-existing-aad-app.md).
 
-1. Open `teamsapp.yml` and find the `botAadApp/create` action.
+1. Open `m365agents.yml` and find the `botAadApp/create` action.
 
-1. Find the environment variable names that store information for Microsoft Entra app in the `writeToEnvironmentFile` property. The default `writeToEnvironmentFile` definition if you create projects using Teams Toolkit is as follows:
+1. Find the environment variable names that store information for Microsoft Entra app in the `writeToEnvironmentFile` property. The default `writeToEnvironmentFile` definition if you create projects using Agents Toolkit is as follows:
 
     ```yml
      writeToEnvironmentFile:
