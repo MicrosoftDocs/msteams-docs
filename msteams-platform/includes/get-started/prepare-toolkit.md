@@ -16,7 +16,7 @@ You can use Agents Toolkit with Visual Studio Code or a command-line interface c
 
    :::image type="content" source="../../assets/images/include-files/install-toolkit-vs.png" alt-text="Screenshot shows the Agents Toolkit extension installation.":::
 
-   The Microsoft 365 Agents Toolkit :::image type="icon" source="../../assets/images/include-files/teams-toolkit-sidebar-icon.PNG"::: icon appears in the Visual Studio Code Activity Bar.
+   The Microsoft 365 Agents Toolkit :::image type="icon" source="../../assets/images/include-files/toolkit-sidebar-icon.PNG"::: icon appears in the Visual Studio Code Activity Bar.
 
 You can also install Agents Toolkit from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
@@ -25,13 +25,13 @@ You can also install Agents Toolkit from the [Visual Studio Code Marketplace](ht
 To install Agents Toolkit CLI, use the `npm` package manager and enter the following command in Command prompt:
 
 ``` bash
-npm install -g @microsoft/teamsfx-cli
+npm install -g @microsoft/atk-cli
 ```
 
 Depending on your configuration, you might need to use `sudo` to install the CLI:
 
 ``` bash
-sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
+sudo npm install -g --unsafe-perm @microsoft/atk-cli
 ```
 
 This condition is more common on Linux and macOS systems.

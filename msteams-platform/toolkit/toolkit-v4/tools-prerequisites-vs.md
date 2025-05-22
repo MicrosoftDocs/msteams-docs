@@ -171,7 +171,7 @@ If you have admin rights, you can enable custom app upload:
 
 ## See also
 
-* [Agents Toolkit for Visual Studio](teams-toolkit-fundamentals-vs.md)
+* [Agents Toolkit for Visual Studio](agents-toolkit-fundamentals-vs.md)
 * [Manage custom app policies and settings in Teams](/microsoftteams/teams-custom-app-policies-and-settings)
 * [Manage app setup policies in Teams](/microsoftteams/teams-app-setup-policies)
 * [Provision cloud resources in Visual Studio](provision-vs.md)

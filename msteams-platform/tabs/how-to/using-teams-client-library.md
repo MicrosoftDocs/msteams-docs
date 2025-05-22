@@ -73,7 +73,7 @@ There are two significant changes between TeamsJS 1.x.x versions and v.2.0.0 and
 * [**APIs are now organized into *capabilities*.**](#apis-organized-into-capabilities) You can think of capabilities as logical groupings of APIs that provide similar functionality, such as `authentication`, `dialog`, `chat`, and `calendar`. Each namespace represents a separate capability.
 
 > [!TIP]
-> You can use the [Microsoft 365 Agents Toolkit extension](https://aka.ms/teams-toolkit) for Microsoft Visual Studio Code to simplify the [TeamsJS v.2.0 update process](#updating-to-teamsjs-version-20) for an existing Teams app.
+> You can use the [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) (previously known as Teams Toolkit) extension for Microsoft Visual Studio Code to simplify the [TeamsJS v.2.0 update process](#updating-to-teamsjs-version-20) for an existing Teams app.
 
 ### Backwards compatibility
 
@@ -389,7 +389,7 @@ You can also visualize the changes by reviewing the `transformLegacyContextToApp
 
 ## Updating to TeamsJS version 2.0
 
-The easiest way to update your Teams app with TeamsJS version 2.0.x is to use the [Agents Toolkit extension](https://aka.ms/teams-toolkit) for Visual Studio Code. This section walks you through the steps to do that. If you prefer to manually update your code, see the [Callbacks converted to promises](#callbacks-converted-to-promises) and [APIs organized into capabilities](#apis-organized-into-capabilities) sections for more information on required API changes.
+The easiest way to update your Teams app with TeamsJS version 2.0.x is to use the [Agents Toolkit extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) for Visual Studio Code. This section walks you through the steps to do that. If you prefer to manually update your code, see the [Callbacks converted to promises](#callbacks-converted-to-promises) and [APIs organized into capabilities](#apis-organized-into-capabilities) sections for more information on required API changes.
 
 ### 1. Install the latest Agents Toolkit Visual Studio Code extension
 
@@ -399,7 +399,7 @@ In the *Visual Studio Code Extensions Marketplace*, search for **Microsoft 365 A
 
 To run in Outlook and Microsoft 365 app, your app needs to depend on the [npm package](https://www.npmjs.com/package/@microsoft/teams-js/v/2.0.0) `@microsoft/teams-js@2.0.0` (or later). To perform these steps manually, and for more information on the API changes, see the following sections on [Callbacks converted to promises](#callbacks-converted-to-promises) and [APIs organized into capabilities](#apis-organized-into-capabilities).
 
-1. Ensure you have the latest [Agents Toolkit](https://aka.ms/teams-toolkit) (version 2.10.0 or later)
+1. Ensure you have the latest [Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) (version 2.10.0 or later)
 1. Open the *Command palette*: `Ctrl+Shift+P`
 1. Run the command `Teams: Upgrade Teams JS SDK references to support Outlook and Microsoft 365 apps`
 
@@ -420,7 +420,7 @@ After completion, the utility updates your `package.json` file with the TeamsJS 
 
 If you're updating a Teams app to run in Microsoft 365 app and Outlook, you also need to update the app manifest to version 1.13 or later. You can do this easily with Agents Toolkit, or manually.
 
-# [Agents Toolkit](#tab/manifest-teams-toolkit)
+# [Agents Toolkit](#tab/manifest-toolkit)
 
 1. Open the *Command palette*: `Ctrl+Shift+P`
 1. Run **Teams: Upgrade Teams manifest to support Outlook and Microsoft 365 apps** command and select your app manifest file. Changes are made in place.
