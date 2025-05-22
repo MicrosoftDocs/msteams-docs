@@ -319,7 +319,7 @@ The log panel will show message if the configuration is successfully set.
 
 ### Authentication logic
 
-Agents Playground will acquire a JWT token using the provided authentication settings and include it in the Authorization header during the communicating process with application. The JWT token in application's response header will also be validated by Agents Playground. For more details about authentication process, read [Authentication with the Bot Connector API](https://learn.microsoft.com/azure/bot-service/rest-api/bot-framework-rest-connector-authentication).
+Agents Playground will acquire a JWT token using the provided authentication settings and include it in the Authorization header during the communicating process with application. The JWT token in application's response header will also be validated by Agents Playground. For more details about authentication process, read [Authentication with the Bot Connector API](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication).
 
 ## Multiple channel support
 
