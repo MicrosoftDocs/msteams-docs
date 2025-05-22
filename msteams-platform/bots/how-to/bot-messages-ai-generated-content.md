@@ -9,6 +9,8 @@ ms.date: 01/23/2025
 
 # Enhance AI-generated bot messages
 
+[!INCLUDE [teams-ai-lib-v2-rec](../../includes/teams-ai-lib-v2-rec.md)]
+
 AI label, citation, feedback buttons, and sensitivity label in your bot’s messages improve user engagement and foster transparency and trust.
 
 * [AI label](#ai-label) enables users to identify that the message was generated using AI.

@@ -12,15 +12,15 @@ The <b>Provision</b> step creates resources in Azure and Microsoft 365 for your 
 
 # [Visual Studio Code](#tab/vscode)
 
-Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
+Select the Microsoft 365 Agents Toolkit :::image type="icon" source="~/assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
 1. Select **Provision**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot shows the selection of provision in the cloud under Teams toolkit.":::
+   :::image type="content" source="~/assets/images/toolkit-v2/provisioning-commands.png" alt-text="Screenshot shows the selection of provision in the cloud under Agents toolkit.":::
 
 1. Select a subscription to use for the Azure resources.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot shows the subscription to use for the Azure resources.":::
+    :::image type="content" source="~/assets/images/toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot shows the subscription to use for the Azure resources.":::
 
    Your app is hosted using Azure resources.
 
@@ -28,21 +28,21 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
 1. Select **Provision**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Screenshot shows a dialog box that costs may be incurred when running resources in Azure.":::
+   :::image type="content" source="~/assets/images/toolkit-v2/deploy-azure/provision-warning.png" alt-text="Screenshot shows a dialog box that costs may be incurred when running resources in Azure.":::
 
    The provisioning process creates resources in the Azure cloud. It may take some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Screenshot shows a notice, which displays hellomsg successfully provisioned in the cloud.":::
+   :::image type="content" source="~/assets/images/toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Screenshot shows a notice, which displays hellomsg successfully provisioned in the cloud.":::
 
     If you want, you can view the provisioned resources. For this tutorial, you don't need to view resources.
 
     The provisioned resource appears in the **ENVIRONMENT** section.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="Screenshot shows the resource being provisioned in the environment section.":::
+    :::image type="content" source="~/assets/images/toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="Screenshot shows the resource being provisioned in the environment section.":::
 
 1. Select **Deploy** from the **LIFECYCLE** panel after provisioning is complete.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="Screenshot shows deploy to cloud highlighted in red.":::
+   :::image type="content" source="~/assets/images/toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="Screenshot shows deploy to cloud highlighted in red.":::
 
    As with provisioning, deployment takes some time. You can monitor the process by watching the dialogs in the bottom-right corner. After a few minutes, you see a completion notice.
 
@@ -52,20 +52,20 @@ Now, you can use the same process to deploy your Bot and Message Extension apps 
 
 In your terminal window:
 
-1. Run `teamsfx provision`.
+1. Run `atk provision`.
 
    ``` bash
-   teamsfx provision
+   atk provision
    ```
 
    When prompted, select an Azure subscription to use Azure resources.
 
    Your app is hosted using Azure resources.
 
-1. Run `teamsfx deploy`.
+1. Run `atk deploy`.
 
    ``` bash
-   teamsfx deploy
+   atk deploy
    ```
 
 ---
@@ -78,18 +78,18 @@ Once the provisioning and deployment steps are complete:
 1. Select **Launch Remote (Edge)** from the launch configuration dropdown.
 1. Select the **Start debugging (F5)**. You're prompted to upload the custom bot app onto Teams.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot shows the debug and launch app remotely.":::
+   :::image type="content" source="~/assets/images/toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot shows the debug and launch app remotely.":::
 
 1. Select **Add**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-mex-app.png" alt-text="Screenshot of the app details dialog to add the app to Teams.":::
+   :::image type="content" source="~/assets/images/toolkit-v2/deploy-azure/add-mex-app.png" alt-text="Screenshot of the app details dialog to add the app to Teams.":::
 
 1. Select **Open** to open the app in personal scope.
 
    Alternatively, you can either search and select the required scope or select a channel, chat, or meeting from the list, and move through the dialog to select **Go**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
+   :::image type="content" source="~/assets/images/toolkit-v2/deploy-azure/add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
    You successfully added your bot app to the Teams client.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/bot-app-learn-local-debug.png" alt-text="Screenshot shows the learn card in the bot on Teams client.":::  
+    :::image type="content" source="~/assets/images/toolkit-v2/first-bot/bot-app-learn-local-debug.png" alt-text="Screenshot shows the learn card in the bot on Teams client.":::  
