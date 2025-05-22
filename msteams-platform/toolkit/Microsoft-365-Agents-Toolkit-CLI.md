@@ -10,7 +10,7 @@ ms.date: 05/16/2025
 
 # Microsoft 365 Agents Toolkit command line interface
 
-Microsoft 365 Agents Toolkit command line interface (Agents Toolkit CLI) is a text-based command line interface that can help scaffold, validate, and deploy applications for Microsoft 365 from the terminal or a CI/CD process. For more information, see [source code](https://github.com/OfficeDev/teams-toolkit/tree/dev/packages/cli) and [npm package](https://www.npmjs.com/package/@microsoft/m365agentstoolkit-cli).
+Microsoft 365 Agents Toolkit command line interface (Agents Toolkit CLI) is a text-based command line interface that can help scaffold, validate, and deploy applications for Microsoft 365 from the terminal or a CI/CD process. For more information, see [source code](https://github.com/OfficeDev/microsoft-365-agents-toolkit/tree/dev/packages/cli) and [npm package](https://www.npmjs.com/package/@microsoft/m365agentstoolkit-cli).
 
 Whether you prefer keyboard-centric developer operations, or you are automating your CI/CD pipeline, Agents Toolkit CLI offers the same features as the IDE extensions. It provides the following features to facilitate the development of agents or apps for Microsoft 365 Copilot, Microsoft Teams, and Microsoft 365:
 

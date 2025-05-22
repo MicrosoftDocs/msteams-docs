@@ -169,7 +169,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Meeting extension](../apps-in-teams-meetings/design/designing-apps-in-meetings.md) | An app designed to be used during the meeting lifecycle to make it more productive, such as whiteboard, dashboard, and more. |
 | [Meeting surfaces](../resources/schema/manifest-schema.md#configurabletabs) | The set of `meetingSurfaceItem` scopes where a tab is supported. <br>**See also**: [Configurable tab](#c)|
 | [Microsoft 365 account](../toolkit/accounts.md#microsoft-365-developer-account-types) | Microsoft 365 account includes 25 user licenses, including the administrator, for development purposes only. |
-| [Microsoft 365 Agents Toolkit](../toolkit/teams-toolkit-fundamentals.md) | Agents Toolkit (previously knows as Teams Toolkit) enables you to create custom Teams apps directly within the Visual Studio Code environment. |
+| [Microsoft 365 Agents Toolkit](../toolkit/agents-toolkit-fundamentals.md) | Agents Toolkit (previously knows as Teams Toolkit) enables you to create custom Teams apps directly within the Visual Studio Code environment. |
 | [Microsoft 365 Agents Toolkit CLI](../toolkit/Teams-Toolkit-CLI.md) | Agents Toolkit CLI is a text-based command line interface that accelerates Teams application development. It was previously known as Teams Toolkit CLI or TeamsFx CLI or Teams App CLI. |
 | Microsoft 365 client ID | See [Client ID](#c) |
 | [Microsoft 365 Agents SDK](../toolkit/teamsfx-sdk.md) | Microsoft 365 Agents SDK is pre-configured in a scaffolded project using TeamsFx toolkit or CLI. |

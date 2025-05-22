@@ -64,7 +64,7 @@ You can save time and let the toolkit automatically register the app in Teams De
 
 Agents Toolkit provides developers with lifecycle actions and grants access to configuration definitions within the m365agents.yml file. You can now preview and trigger these predefined lifecycle actions using the CodeLens feature directly within the teamsapp.yml file. This streamlined process enhances the development workflow.
 
-   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/codelens-trigger-teams-toolkit.png" alt-text="Screenshot shows the lifecycle access and access through CodeLens in m365agents.yml file.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/codelens-trigger-toolkit.png" alt-text="Screenshot shows the lifecycle access and access through CodeLens in m365agents.yml file.":::
 
 ### Agents Toolkit documentation
 
