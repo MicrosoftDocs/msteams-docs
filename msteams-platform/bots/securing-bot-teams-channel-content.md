@@ -90,7 +90,7 @@ It's a common practice to deploy web apps, API apps, and mobile apps to an Azure
 
 ### Security
 
-[Azure DDoS Protection](/azure/ddos-protection/ddos-protection-overview), combined with application-design best practices, provides enhanced DDoS mitigation features to provide more defense against DDoS attacks. You should enable [Azure DDOS Protection](/azure/ddos-protection/ddos-protection-overview) on any perimeter virtual network.
+[Azure DDoS Protection](/azure/ddos-protection/ddos-protection-overview), combined with application-design best practices, provides enhanced DDoS mitigation features to provide better defense against DDoS attacks. You should enable [Azure DDOS Protection](/azure/ddos-protection/ddos-protection-overview) on any perimeter virtual network.
 
 ## Deploy this scenario
 
@@ -258,7 +258,7 @@ You must have an existing Azure account. If you don't have an Azure subscription
      --subnet ${SUBNET_INT_NAME}
    ```
 
-    After you've run these commands, you should see the following resources in your resource group:
+    After you run these commands, verify if the following resources are in your resource group:
 
     ![Screenshot showing a list of resources in a resource group.](media/securing-bot-image-004.png)
 
@@ -300,7 +300,7 @@ You must have an existing Azure account. If you don't have an Azure subscription
 
     ![Screenshot of the rt-SecureBotRouteTable pane.](media/securing-bot-image-009.png)
 
-    After you've created the route table, you add rules to your firewall to deliver traffic from the public IP to the bot app service, and to restrict traffic from any endpoint other than Microsoft Teams. In addition, you'll allow traffic between the virtual network and Azure Bot Services or Microsoft Entra ID by using service tags.
+    After you've created the route table, you add rules to your firewall to deliver traffic from the public IP to the bot app service, and to restrict traffic from any endpoint other than Microsoft Teams. In addition, allow traffic between the virtual network and Azure Bot Services or Microsoft Entra ID by using service tags.
 
 1. Run the following commands:
 
