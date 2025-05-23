@@ -29,12 +29,12 @@ There can be no algorithmic procedure for merging an add-in and a Teams app for 
 > - **IIS/.NET**:
 >
 >   - Add-in projects can be created in Visual Studio with the [Office Developer Tools](https://visualstudio.microsoft.com/vs/features/office-tools/), in which case the web application portion is built on ASP.NET and Internet Information Server (IIS).
->   - Teams app projects can be created in Visual Studio with the [Teams Toolkit for Visual Studio](/microsoftteams/platform/toolkit/toolkit-v4/install-teams-toolkit-vs), in which case the web application portion is a Blazor/C# application.
+>   - Teams app projects can be created in Visual Studio with the [Microsoft 365 Agents Toolkit](/microsoftteams/platform/toolkit/toolkit-v4/install-agents-toolkit-vs) (previously known as Teams Toolkit), in which case the web application portion is a Blazor/C# application.
 >
 > - **Node.js server/JavaScript or TypeScript**:
 >
->   - Add-in projects can be created using [Teams Toolkit for Visual Studio Code](/microsoftteams/platform/toolkit/install-teams-toolkit?tabs=vscode#install-teams-toolkit-for-visual-studio-code). In either case, the web application is Node.js-based and written in TypeScript or JavaScript.
->   - Teams app projects can be created in Visual Studio Code with [Teams Toolkit for Visual Studio Code](/microsoftteams/platform/toolkit/install-teams-toolkit?tabs=vscode#install-teams-toolkit-for-visual-studio-code), in which case the web application is Node.js-based and written in TypeScript or JavaScript.
+>   - Add-in projects can be created using [Agents Toolkit for Visual Studio Code](/microsoftteams/platform/toolkit/install-agents-toolkit?tabs=vscode#install-agents-toolkit-for-visual-studio-code). In either case, the web application is Node.js-based and written in TypeScript or JavaScript.
+>   - Teams app projects can be created in Visual Studio Code with [Agents Toolkit for Visual Studio Code](/microsoftteams/platform/toolkit/install-agents-toolkit?tabs=vscode#install-agents-toolkit-for-visual-studio-code), in which case the web application is Node.js-based and written in TypeScript or JavaScript.
 >
 > Visual Studio doesn't currently support the unified manifest in add-in projects, so this article assumes that both the add-in and Teams apps projects are Node.js-based and *not* created with Visual Studio.
 
@@ -42,7 +42,7 @@ However, we can make some general recommendations about combining an add-in with
 
 ## Learn about the manifest and structure of a combined Teams app and Office add-in
 
-Before you start work merging your two existing extensions, get a sense of how to merge the two types of extensions by creating a new Teams app and a new add-in in Teams toolkit and then following the instructions in [Add an Outlook Add-in to a Teams app](combine-office-add-in-and-teams-app.md) to combine them. Pay close attention to the following:
+Before you start work merging your two existing extensions, get a sense of how to merge the two types of extensions by creating a new Teams app and a new add-in in Agents Toolkit and then following the instructions in [Add an Outlook Add-in to a Teams app](combine-office-add-in-and-teams-app.md) to combine them. Pay close attention to the following:
 
 - How the single unified manifest is created.
 - The differences in how the add-in and the Teams app are sideloaded and debugged.

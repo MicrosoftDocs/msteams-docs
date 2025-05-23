@@ -107,9 +107,9 @@ This section provides information for using existing Microsoft Entra app or manu
 > [!NOTE]
 > If you don't use `aadApp/create` action to create Microsoft Entra application, you can add required environment variables with your preferred name without following the below steps.
 
-1. Open `teamsapp.yml` and find the `aadApp/create` action.
+1. Open `m365agents.yml` and find the `aadApp/create` action.
 
-1. Find the environment variable names that store information for Microsoft Entra app in the `writeToEnvironmentFile` property. Below are the default `writeToenvironmentFile` definition if you create projects using Teams Toolkit:
+1. Find the environment variable names that store information for Microsoft Entra app in the `writeToEnvironmentFile` property. Below are the default `writeToenvironmentFile` definition if you create projects using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit):
 
    ``` yaml
     writeToEnvironmentFile:
@@ -145,7 +145,7 @@ This section provides information for using existing Microsoft Entra app or manu
       > [!NOTE]
       > Remember to update the environment variable names in the examples if you use different names in `writeToEnvironmentFile`.
 
-1. Open Teams Toolkit extension and select **Provision in the cloud**. Wait until your project is successfully provisioned.
+1. Open Agents Toolkit extension and select **Provision in the cloud**. Wait until your project is successfully provisioned.
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Set%20necessary%20info%20in%20TeamsFx%20project&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fuse-existing-aad-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fuse-existing-aad-app.md&documentVersionIndependentId=77f06929-b242-9b97-eb5b-2f1e713b693a&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
@@ -154,7 +154,7 @@ This section provides information for using existing Microsoft Entra app or manu
 
 ## Upload Microsoft Entra app manifest to Azure portal
 
-If Teams Toolkit fails to update Microsoft Entra app, an error message appears:
+If Agents Toolkit fails to update Microsoft Entra app, an error message appears:
 
 ```yml
 Insufficient privileges to complete the operation.
