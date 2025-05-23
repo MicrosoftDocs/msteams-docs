@@ -18,7 +18,7 @@ To secure a *bot behind a firewall* implies that the bot's network connectivity 
 
 The bot runs in a Virtual Network (VNET) that limits traffic to specific IP addresses for Microsoft Teams and Azure Bot Service (ABS):
 
-- [The firewall controls *outgoing* traffic.](#restrict-outgoing-traffic)
+- [The firewall controls *outgoing* traffic.](#manage-outgoing-traffic)
 - [The Network Security Group (NSG) rules of the App Gateway manage *incoming* traffic.](#restrict-incoming-traffic)
 
 ## Manage outgoing traffic
@@ -35,10 +35,10 @@ To control outgoing traffic from your bot app:
 
     1. Add the following rules for IP address and fully qualified domain names (FQDN) in a Network Rule Collection:
 
-        - **IP Address rule**: Allow traffic from the subnet of the ASE to in the range [52.112.0.0/14, 52.122.0.0/15](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide).
+        - **IP Address rule**: Allow traffic from the subnet of the ASE to in the range [52.112.0.0/14, 52.122.0.0/15](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide#microsoft-teamspreserve-view=true).
 
-            > [!NOTE] Endpoints data is updated as needed at the beginning of each month with new IP Addresses and URLs published 30 days in advance of being active. This cadence allows for customers who don't yet have automated updates to complete their processes before new connectivity is required. Endpoints may also be updated during the month if needed to address support escalations, security incidents, or other immediate operational requirements. The data shown on this page below is all generated from the REST-based web services.
-            > If you're using a script or a network device to access this data, you must go to the [Web service](/microsoft-365/enterprise/microsoft-365-ip-web-service?view=o365-worldwide) directly.
+          > [!NOTE] Endpoints data is updated as needed at the beginning of each month with new IP Addresses and URLs published 30 days in advance of being active. This cadence allows for customers who don't yet have automated updates to complete their processes before new connectivity is required. Endpoints may also be updated during the month if needed to address support escalations, security incidents, or other immediate operational requirements. The data shown on this page below is all generated from the REST-based web services.
+          > If you're using a script or a network device to access this data, you must go to the [Web service](/microsoft-365/enterprise/microsoft-365-ip-web-service?view=o365-worldwide&preserve-view=true) directly.
 
         - **FQDN rule**: Allow traffic from the subnet of the ASE to login.microsoftonline.com.
         - **FQDN rule**: Allow traffic from the subnet of the ASE to login.botframework.com
