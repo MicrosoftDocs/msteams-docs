@@ -2,7 +2,7 @@
 title: Secure Bot Teams Channel Content
 description: Learn how to secure the connection to a Microsoft Teams channel bot's web app by using Azure Private Link and Azure Private Endpoint. 
 ms.date: 05/23/2025
-ms.topic: conceptual
+ms.topic: how-to
 author: surbhigupta12
 ms.author: surbhigupta
 ms.localizationpriority: high
@@ -52,3 +52,5 @@ To control incoming traffic:
     :::image type="content" source="../assets/images/bots/restrict-ingress-rules.png" alt-text="Image shows how to add an inbound security rule." lightbox="../assets/images/bots/restrict-ingress-rules.png":::
 
     - Allow inbound traffic from only [52.112.0.0/14, 52.122.0.0/15](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide#microsoft-teams&preserve-view=true) to the subnet of the ASE.
+
+You've successfully configured firewall security for your bot app to control and manage communication within Teams.
