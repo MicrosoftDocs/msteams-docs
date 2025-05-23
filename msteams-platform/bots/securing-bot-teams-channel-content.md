@@ -70,7 +70,7 @@ Organizations can utilize bots for mobile and desktop users. Some examples inclu
 
 - Simple queries: Bots can deliver an exact match to a query or a group of related matches to help with disambiguation.
 - Multi-turn interactions: By helping anticipate possible next steps, bots make it much easier for people to a complete task flow.
-- Reaching out to users: Bots can send a message when something has changed in a document or a work item is closed.
+- Reaching out to users: Bots can send a message when something changes in a document or a work item is closed.
 
 ## Considerations
 
@@ -360,7 +360,7 @@ You must have an existing Azure account. If you don't have an Azure subscription
      --protocols TCP
    ```
 
-    After you've run the commands, your firewall rules will look something like this:
+    After you run the commands, your firewall rules looks something like this:
 
     ![Screenshot of the "Edit NAT rule collection" pane.](media/securing-bot-image-010.png)
 
