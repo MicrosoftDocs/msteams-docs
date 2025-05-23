@@ -29,7 +29,7 @@ The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create 
 
 ## Copilot agents
 
-Agents are scoped versions of Microsoft 365 Copilot that act as AI assistants to automate and run business processes. Agents enable you to bring custom knowledge, skills, and process automation into Microsoft 365 Copilot for your organizational needs. You can optimize agents for specific tasks, such as summarize meetings, list action items, and take actions such as updating records. Declarative agents and custom engine agents are supported in Teams meetings. For more information, see [your extensibility options for Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/decision-guide).
+Agents are scoped versions of Microsoft 365 Copilot that act as AI assistants to automate and run business processes. Agents enable you to bring custom knowledge, skills, and process automation into Microsoft 365 Copilot for your organizational needs. You can optimize agents for specific tasks, such as summarize meetings, list action items, and take actions such as updating records. Declarative agents, custom engine agents, plugin promoted declarative agents and all other store copilot agents are supported in Teams meetings. For more information, see [your extensibility options for Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/decision-guide).
 
 ## Message extensions
 
