@@ -1,6 +1,6 @@
 ---
-title: Secure Bot Teams Channel Content
-description: Learn how to secure the connection to a Microsoft Teams channel bot's web app by using Azure Private Link and Azure Private Endpoint. 
+title: Secure Bot Teams Channel Content - example scenario
+description: Learn how to secure the connection to a Microsoft Teams channel bot's web app by using Azure Private Link and Azure Private Endpoint using the example scenario. 
 ms.date: 04/23/2025
 ms.topic: conceptual
 author: surbhigupta12
@@ -8,7 +8,7 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ---
 
-# Secure bot Teams channel content
+# Secure bot Teams channel content - example scenario
 
 This example scenario helps secure the connection to a Microsoft Teams channel bot's web app by using Azure Private Link and Azure Private Endpoint. At the same time, it enables channels in the Teams client to communicate with the bot through an IP that's exposed through an Azure Firewall instance.
 
