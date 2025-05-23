@@ -15,3 +15,5 @@ Secure and efficient communication between applications and users is crucial. Th
 Your bot runs in a Virtual Network (VNET) that limits traffic to specific IP addresses for Microsoft Teams and Azure Bot Service (ABS). The firewall controls outgoing traffic, while the Network Security Group (NSG) rules of the Application Gateway manage incoming traffic.
 
 The following network architecture shows an example of how you you can secure a bot within a virtual network that allows only necessary traffic:
+
+:::image type="content" source="../assets/images/bots/nw-architecture-secure-bot.png" alt-text="Image shows an example of network architecture of managing traffic for a bot secured behind a firewall." lightbox="../assets/images/bots/nw-architecture-secure-bot.png":::

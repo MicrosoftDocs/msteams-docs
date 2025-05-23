@@ -68,9 +68,9 @@ InfoSec policy commonly requires that all incoming traffic to web apps go throug
 
 Organizations can utilize bots for mobile and desktop users. Some examples include:
 
-- Simple queries. Bots can deliver an exact match to a query or a group of related matches to help with disambiguation.
-- Multi-turn interactions. By helping anticipate possible next steps, bots make it much easier for people to a complete task flow.
-- Reaching out to users. Bots can send a message when something has changed in a document or a work item is closed.
+- Simple queries: Bots can deliver an exact match to a query or a group of related matches to help with disambiguation.
+- Multi-turn interactions: By helping anticipate possible next steps, bots make it much easier for people to a complete task flow.
+- Reaching out to users: Bots can send a message when something has changed in a document or a work item is closed.
 
 ## Considerations
 
@@ -206,7 +206,7 @@ You must have an existing Azure account. If you don't have an Azure subscription
     You should now have a fully functional bot that you can add to a channel in Teams or test through Web Chat by using the directions found in the [Bot Framework SDK documentation](/azure/bot-service/bot-builder-deploy-az-cli#test-in-web-chat).
 
     > [!NOTE]
-    > At this point the bot's app service is still publicly accessible over both the `azurewebsites.net` URL and over the custom URL you configured. In the next steps, you'll use private endpoints to disable public access. You'll also configure the firewall to allow the bot service to communicate only with Teams clients.
+    > At this point, the bot's app service is still publicly accessible over both the `azurewebsites.net` URL and over the custom URL you configured. In the next steps, you'll use private endpoints to disable public access. You'll also configure the firewall to allow the bot service to communicate only with Teams clients.
 
 1. Run the following Azure CLI script to [deploy and configure the private endpoint](/azure/app-service/scripts/cli-deploy-privateendpoint). This step also implements virtual network integration for the bot's app service, which connects it to your virtual network's integration subnet.
 
