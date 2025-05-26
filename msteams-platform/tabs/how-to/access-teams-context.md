@@ -110,9 +110,9 @@ You can also retrieve the context information using the [Microsoft Teams JavaScr
     "subPageId": "The developer-defined unique ID for the sub-entity this content points to"  },
   "sharepoint": "The SharePoint context is available only when hosted in SharePoint",
   "sharepointSite": {
-    "domain": "The domain of the root SharePoint site associated with the team",
-    "path": "The relative path to the SharePoint site associated with the team",
-    "url": "The root SharePoint site associated with the team"  },
+    "teamSiteDomain": "The domain of the root SharePoint site associated with the team",
+    "teamSitePath": "The relative path to the SharePoint site associated with the team",
+    "teamSiteUrl": "The root SharePoint site associated with the team"  },
   "team": {
     "displayName": "The name of the current team",
     "groupId": "Guid identifying the current Office 365 Group ID",
