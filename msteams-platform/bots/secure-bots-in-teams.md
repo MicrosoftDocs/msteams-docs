@@ -12,7 +12,7 @@ ms.localizationpriority: high
 
 Managing secure and efficient bot interaction is crucial. This article shows you how to host a bot behind a firewall and still have conversations with it using Microsoft Teams.
 
-To secure a *bot behind a firewall* implies that the bot's network connectivity is restricted to only the necessary machines (IP addresses). The following network architecture shows an example of how you you can secure a bot within a virtual network that allows only necessary traffic:
+To secure a *bot behind a firewall* implies that the bot's network connectivity is restricted to only the necessary machines (IP addresses). The following network architecture shows an example of how you can secure a bot within a virtual network that allows only necessary traffic:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:::image type="content" source="../assets/images/bots/nw-architecture-secure-bot.png" alt-text="Image shows an example of network architecture of managing traffic for a bot secured behind a firewall." border="false" lightbox="../assets/images/bots/nw-architecture-secure-bot.png":::
 
