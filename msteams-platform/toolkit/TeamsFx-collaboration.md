@@ -23,7 +23,7 @@ The following sections guide us to understand the collaboration process as proje
 
   1. Select **Microsoft 365 Agents Toolkit** in the activity bar.
   
-     :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/select-teams-toolkit.png" alt-text="Screenshot shows the select Agents Toolkit from activity bar.":::
+     :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/select-toolkit.png" alt-text="Screenshot shows the select Agents Toolkit from activity bar.":::
 
   1. In **ENVIRONMENT** section, select Manage Collaborators button as shown in the following image:
 
@@ -93,7 +93,7 @@ Removing collaborators requires the following manual steps:
 
 ## See also
 
-* [Microsoft 365 Agents Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals.md)
 * [Provision cloud resources](provision.md)
 * [Deploy Teams app to the cloud](deploy.md)
 * [Manage multiple environments](TeamsFx-multi-env.md)

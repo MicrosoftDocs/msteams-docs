@@ -1,7 +1,7 @@
 ---
 title: Debug Teams App
 author: surbhigupta 
-description: In this module, learn how to debug Teams app both locally and using Teams App Test tool, launch Teams app as web app, and about key features of Agents Toolkit.
+description: In this module, learn how to debug Teams app both locally and using Agents Playground, launch Teams app as web app, and about key features of Agents Toolkit.
 ms.author: surbhigupta 
 ms.localizationpriority: high
 ms.topic: overview
@@ -85,7 +85,7 @@ You can launch Teams app as a web app instead of running the app in Teams client
 
 ## See also
 
-* [Microsoft 365 Agents Toolkit Overview](teams-toolkit-fundamentals-vs.md)
+* [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals-vs.md)
 * [Debug background process](debug-background-process-vs.md)
 * [Use Microsoft 365 Agents Toolkit to provision cloud resources](provision-vs.md)
 * [Deploy to the cloud](deploy-vs.md)
