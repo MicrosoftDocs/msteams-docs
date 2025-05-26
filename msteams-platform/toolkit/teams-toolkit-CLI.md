@@ -359,7 +359,7 @@ The following table lists the parameters available for `teamsapp publish`:
 
 ## `teamsapp share`
 
-The `teamsapp share` command the share stage in `teamsapp.yml`.
+The `teamsapp share` command run the share stage in `teamsapp.yml`.
 
 ### `teamsapp share` parameters
 
