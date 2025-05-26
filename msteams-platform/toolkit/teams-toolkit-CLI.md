@@ -63,10 +63,10 @@ The following table lists the supported commands to help developers build and ma
 | [`teamsapp publish`](#teamsapp-publish) | Publish the app to Teams.|
 | [`teamsapp share`](#teamsapp-share) | Run the share stage in `teamsapp.yml`|
 | [`teamsapp preview`](#teamsapp-preview) | Preview the current application. |
-| [`teamsapp update`](#teamsapp-update) |  Update the app manifest (previously called Teams app manifest) to Teams Developer Portal. |
-| [`teamsapp upgrade`](#teamsapp-upgrade) | Upgrade the project to work with the latest version of Microsoft Teams Toolkit. |
+| [`teamsapp update`](#teamsapp-update) |  Update the app manifest (previously called Teams app manifest) to Teams Developer Portal.|
+| [`teamsapp upgrade`](#teamsapp-upgrade) | Upgrade the project to work with the latest version of Microsoft Teams Toolkit.|
 | [`teamsapp collaborator`](#teamsapp-collaborator)| Collaborate with other developers in the same project.|
-| [`teamsapp uninstall`](#teamsapp-uninstall) | Remove an acquired Microsoft 365 App. |
+| [`teamsapp uninstall`](#teamsapp-uninstall) | Remove an acquired Microsoft 365 App.|
 
 :::image type="content" source="../assets/images/toolkit-cli/list-of-commands.png" alt-text="Screenshot shows the list of available commands.":::
 
@@ -356,6 +356,20 @@ The following table lists the parameters available for `teamsapp publish`:
 |`--output-folder` | No | Specifies the output folder containing the manifest(s) file. Defaults to `./appPackage/build.`|
 |`--manifest-file` | No | Specifies the Microsoft Teams app file path. Defaults to `./appPackage/manifest.json`. |
 | `--folder -f` | No |Project folder. Defaults to `./`. |
+
+## `teamsapp share`
+
+The `teamsapp share` command the share stage in `teamsapp.yml`.
+
+### `teamsapp share` parameters
+
+The following table lists the parameters available for `teamsapp share`:
+
+| Parameter | Required | Description |
+|:----------------  |:-------------|:-------------|
+| `--env` | No | Specifies the environment name for the project scaffolded by Microsoft Teams Toolkit. |
+| `--folder -f` | No |Project folder. Defaults to `./`. |
+| `--ignore-env-file` | No | Whether to skip loading .env file when `--env` is not specified.|
 
 ## `teamsapp preview`
 
