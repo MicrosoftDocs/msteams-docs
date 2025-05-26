@@ -61,7 +61,7 @@ The following table lists the supported commands to help developers build and ma
 | [`teamsapp package`](#teamsapp-package) | Build your Teams app into package for publishing.|
 | [`teamsapp validate`](#teamsapp-validate) | Validate the current application.|
 | [`teamsapp publish`](#teamsapp-publish) | Publish the app to Teams.|
-| [`teamsapp share`](#teamsapp-publish) | Run the share stage in `teamsapp.yml`|
+| [`teamsapp share`](#teamsapp-share) | Run the share stage in `teamsapp.yml`|
 | [`teamsapp preview`](#teamsapp-preview) | Preview the current application. |
 | [`teamsapp update`](#teamsapp-update) |  Update the app manifest (previously called Teams app manifest) to Teams Developer Portal. |
 | [`teamsapp upgrade`](#teamsapp-upgrade) | Upgrade the project to work with the latest version of Microsoft Teams Toolkit. |
@@ -348,12 +348,12 @@ The following table lists the parameters available for `teamsapp publish`:
 
 | Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
-| `--env` | No | Specifies the name environment for the project scaffolded by Microsoft Teams Toolkit. |
+| `--env` | No | Specifies the environment name for the project scaffolded by Microsoft Teams Toolkit. |
 | `--env-file` | No | Specifies the .env file that defines the variables to replace in the Teams app manifest template file.|
 | `--teams-manifest-file` | No | Select the path for the input app manifest file. Defaults to `${folder}/appPackage/manifest.json`.|
 |`--package-file` | No | Specifies the zipped Microsoft Teams app package file path.|
 |`--output-package-file` | No | Specifies the output zipped Microsoft Teams app package file path. Defaults to `./appPackage/build/appPackage.${env}.zip`.|
-|`--output-folder` | No | Specifies the output folder ontaining the manifest(s) file. Defaults to `./appPackage/build.`|
+|`--output-folder` | No | Specifies the output folder containing the manifest(s) file. Defaults to `./appPackage/build.`|
 |`--manifest-file` | No | Specifies the Microsoft Teams app file path. Defaults to `./appPackage/manifest.json`. |
 | `--folder -f` | No |Project folder. Defaults to `./`. |
 
