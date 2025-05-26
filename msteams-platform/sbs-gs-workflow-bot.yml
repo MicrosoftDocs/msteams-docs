@@ -7,7 +7,7 @@ metadata:
   level: Beginner
   ms.date: 12/11/2024
   ms.topic: interactive-tutorial
-  nextTutorialHref: toolkit/teams-toolkit-tutorial.md
+  nextTutorialHref: get-started/tool-options-and-code-samples.md
   nextTutorialTitle: Teams app tutorials
   ms.custom: mvc
   ms.localizationpriority: medium
@@ -17,7 +17,7 @@ items:
     The workflow bot allows users to interact with an Adaptive Card enabled by the Adaptive Card action handler feature in the workflow bot app. When you respond to the triggered Adaptive Card action, then a sequential workflow is completed.
     When you get an Adaptive Card, it provides one or more buttons in the card for your input. You can also call an API, and then send another Adaptive Card in your conversation in response to the card action.
     In this tutorial, you'll learn:
-      * How to build workflow bot with Teams Toolkit.
+      * How to build workflow bot with Microsoft 365 Agents Toolkit (previously known as Teams Toolkit).
       * About the directory structure of your app.
     
     You can see the following output:
@@ -32,15 +32,15 @@ items:
     | --- | --- | --- |
     | **Required** | &nbsp; | &nbsp; |
     | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript or TypeScript, build environments. Use the latest version. |
-    | &nbsp; | [Teams Toolkit](#install-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
+    | &nbsp; | [Microsoft 365 Agents Toolkit](#install-microsoft-365-agents-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
     | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
     | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge/) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
     | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
     > [!NOTE]
-    > The guide is tested on Teams Toolkit latest version and Nodejs version 18 and 20. The steps in this guide may work with other versions, but that hasn't been tested.
+    > The guide is tested on Agents Toolkit latest version and Nodejs version 18 and 20. The steps in this guide may work with other versions, but that hasn't been tested.
     
-    [!INCLUDE [Set up prerequisites](includes/get-started/prepare-teams-toolkit.md)]
+    [!INCLUDE [Set up prerequisites](includes/get-started/prepare-toolkit.md)]
 
      > [!div class="nextstepaction"]
      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+free+Teams+developer+tenant+%28optional%29&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-workflow-bot%3Ftabs%3Dvscode%26tutorial-step%3D1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-workflow-bot.yml&platformId=850b718b-a2eb-2fd5-a491-6c3f273d4517&documentVersionIndependentId=6589b1c3-499b-72f9-13fe-eb899a92d050&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
@@ -51,7 +51,7 @@ items:
   content: |
     To build workflow bot using Visual Studio Code, perform the following steps:
     1. Open Visual Studio Code.
-    1. Select the **Teams Toolkit** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
+    1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="../msteams-platform/assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
     1. Select **Create a New App**.
       
         :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-create.png" alt-text="Screenshots shows the creation of new teams app in side panel.":::
@@ -84,7 +84,7 @@ items:
         
         :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-scaffolding1.png" alt-text="Screenshot shows your app is created with the scaffolding visible in the side panel.":::
     
-    1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code **Activity Bar**.
+    1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code **Activity Bar**.
     
     1. Select **Debug in Teams (Edge)** or **Debug in Teams (Chrome)** from the dropdown list.
     
@@ -106,7 +106,7 @@ items:
      > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Build+workflow+bot&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-workflow-bot%3Ftabs%3Dvscode%26tutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-workflow-bot.yml&platformId=850b718b-a2eb-2fd5-a491-6c3f273d4517&documentVersionIndependentId=6589b1c3-499b-72f9-13fe-eb899a92d050&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
     ### Take tour of source code
-    Teams Toolkit provides components for building an app. After creating the project, you can view the project folders and files in the Explorer area of Visual Studio Code for JavaScript/TypeScript. 
+    Agents Toolkit provides components for building an app. After creating the project, you can view the project folders and files in the Explorer area of Visual Studio Code for JavaScript/TypeScript. 
     
     :::image type="content" source="./assets/images/sbs-workflow-bot/sbs-workflow-bot-scaffolding2.png" alt-text="Screenshot shows the selection to add your workflow bot app.":::
     
@@ -115,9 +115,9 @@ items:
     
     | Folder / File | Contents |
     | - | - |
-    | `teamsapp.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
-    | `teamsapp.local.yml`| This overrides `teamsapp.yml` with actions that enable local execution and debugging. |
-    | `env/`| Name / value pairs are stored in environment files and used by `teamsapp.yml` to customize the provisioning and deployment rules. |
+    | `m365agents.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
+    | `m365agents.local.yml`| This overrides `m365agents.yml` with actions that enable local execution and debugging. |
+    | `env/`| Name / value pairs are stored in environment files and used by `m365agents.yml` to customize the provisioning and deployment rules. |
     | `.vscode/` | VSCode files for debugging. |
     | `appPackage/` | Templates for the Teams application manifest. |
     | `infra/` | Templates for provisioning Azure resources. |

@@ -157,17 +157,20 @@
     displayName: Tools and SDKs
   - name: Tools 
     items:
-    - name: Teams Toolkit for Visual Studio Code
+    - name: Microsoft 365 Agents Toolkit
+      href: /microsoft-365/developer/overview-m365-agents-toolkit?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+      displayName: ATK, M365, Microsoft 365, Agents Toolkit
+    - name: Agents Toolkit for VSC
       items:
-      - name: Teams Toolkit overview
-        href: toolkit/teams-toolkit-fundamentals.md
-        displayName: TTK, version, Developer Portal, debug, Teams App Test Tool, dev tunnel
-      - name: Install Teams Toolkit
-        href: toolkit/install-Teams-Toolkit.md
+      - name: Agents Toolkit overview
+        href: toolkit/agents-toolkit-fundamentals.md
+        displayName: TTK, version, Developer Portal, debug, Microsoft 365 Agents Playground, dev tunnel
+      - name: Install Agents Toolkit
+        href: toolkit/install-agents-toolkit.md
         displayName: download
-      - name: Explore Teams Toolkit
-        href: toolkit/explore-Teams-Toolkit.md
-      - name: Build apps using Teams Toolkit 
+      - name: Explore Agents Toolkit
+        href: toolkit/explore-agents-toolkit.md
+      - name: Build apps using Agents Toolkit 
         href: toolkit/build-environments.md
         items:
         - name: Prerequisites to create Teams app
@@ -203,16 +206,16 @@
         items:
          - name: App debug overview
            href: toolkit/debug-overview.md
-         - name: Debug using Teams App Test Tool
-           href: toolkit/debug-your-teams-app-test-tool.md
+         - name: Debug using Agents Playground
+           href: toolkit/debug-your-agents-playground.md
            displayName: Mock activity, custom activity, predefined activity
-         - name: Debug message extension app in Test Tool
+         - name: Debug message extension app in Agents Playground
            href: toolkit/debug-message-extension-app-in-test-tool.md          
          - name: Debug your app locally
            href: toolkit/debug-local.md
          - name: Debug in Teams desktop client
            href: toolkit/debug-apps-in-teams-desktop-client.md
-           displayName: debug, desktop client, bots, Copilot agent, Custom engine agent, message extension, Teams Toolkit, Visual Studio Code, plugins       
+           displayName: debug, desktop client, bots, Copilot agent, Custom engine agent, message extension, Microsoft 365 Agents Toolkit, Visual Studio Code, plugins       
          - name: Debug background process
            href: toolkit/debug-background-process.md
          - name: Debug for mobile
@@ -236,27 +239,24 @@
           href: toolkit/test-app-behavior.md
       - name: Publish your Teams app
         items:
-        - name: Publish Teams apps using Teams Toolkit 
+        - name: Publish Teams apps using Agents Toolkit 
           href: toolkit/publish.md
           displayName: license
         - name: Publish Teams apps using Developer Portal 
           href: toolkit/publish-your-teams-apps-using-developer-portal.md
-        - name: Teams app tutorials and code samples
-          href: toolkit/teams-toolkit-tutorial.md
-          displayName: Microsoft Teams samples
         - name: FAQ
           href: toolkit/faq.md
-    - name: Teams Toolkit for Visual Studio
+    - name: Agents Toolkit for VS
       items:
       - name: Overview
-        href: toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md
+        href: toolkit/toolkit-v4/agents-toolkit-fundamentals-vs.md
         displayName: TTK, version, 17.7
-      - name: Install Teams Toolkit
-        href: toolkit/toolkit-v4/install-Teams-Toolkit-vs.md
+      - name: Install Agents Toolkit
+        href: toolkit/toolkit-v4/install-agents-toolkit-vs.md
         displayName: download
-      - name: Explore Teams Toolkit
-        href: toolkit/toolkit-v4/explore-Teams-Toolkit-vs.md
-      - name: Prepare to build apps using Teams Toolkit
+      - name: Explore Agents Toolkit
+        href: toolkit/toolkit-v4/explore-agents-toolkit-vs.md
+      - name: Prepare to build apps using Agents Toolkit
         href: toolkit/toolkit-v4/build-environments-vs.md
         items:
         - name: Prerequisites to create Teams app
@@ -273,8 +273,8 @@
         items: 
          - name: Debug overview
            href: toolkit/toolkit-v4/debug-overview-vs.md
-         - name: Debug with Teams App Test Tool
-           href: toolkit/toolkit-v4/debug-your-Teams-app-test-tool-vs.md
+         - name: Debug with Agents Playground
+           href: toolkit/toolkit-v4/debug-your-agents-playground-vs.md
          - name: Debug Teams app locally
            href: toolkit/toolkit-v4/debug-local-vs.md
            displayName: DevTunnel
@@ -287,11 +287,15 @@
            href: toolkit/toolkit-v4/provision-vs.md
          - name: Deploy to cloud using VS
            href: toolkit/toolkit-v4/deploy-vs.md
+      - name: Migrate project from 17.13 to 17.14+
+        href: toolkit/teams-toolkit-migration-guide_1714.md
       - name: Migrate project from 17.9 to 17.10+
         href: toolkit/teams-toolkit-migration-guide.md
         displayName: migrate Teams toolkit, new project structure, YAML configuration
+    - name: Microsoft 365 Agents Toolkit CLI
+      href: toolkit/microsoft-365-agents-toolkit-CLI.md
     - name: Teams Toolkit CLI
-      href: toolkit/Teams-Toolkit-CLI.md
+      href: toolkit/teams-toolkit-CLI.md
     - name: Developer Portal for Teams
       items:
       - name: Overview
@@ -300,9 +304,9 @@
       - name: Manage your apps in Developer Portal
         href: concepts/build-and-test/manage-your-apps-in-developer-portal.md
         displayName: AppID, app validation, validate your app, Microsoft's test cases, add owners to bot
-      - name: Develop your apps with Teams Toolkit
-        href: concepts/build-and-test/develop-your-apps-with-teams-toolkit.md
-        displayName: visual studio code, visual studio, teams toolkit, react web app, publish react app, debug
+      - name: Develop your apps with Agents Toolkit
+        href: concepts/build-and-test/develop-your-apps-with-toolkit.md
+        displayName: visual studio code, visual studio, agents toolkit, react web app, publish react app, debug
       - name: Analyze app and agent usage in Developer Portal
         href: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md  
         displayName: App usage, metrics, usage, analytics, insights, telemetry, Import an existing app, agent usage
@@ -320,7 +324,7 @@
   - name: SDKs
     items:
     - name: Teams AI library v2 (preview)
-      href: /microsoftteams/platform/teams-ai-library/welcome/overview
+      href: /microsoftteams/platform/teams-ai-library/welcome
     - name: TeamsFx SDK
       href: toolkit/TeamsFx-SDK.md
       displayName: getUserinfo
@@ -380,52 +384,6 @@
           displayName: loop
         - name: Action extensions
           href: resources/messaging-extension-v3/create-extensions.md
-- name: Build tabs
-  items:
-  - name: Tabs overview
-    href: tabs/what-are-tabs.md
-    displayName: Webpages embedded in Teams, declare custom tab in app manifest, contentUrl, web apps, device permissions for tabs
-  - name: Prerequisites
-    href: tabs/how-to/tab-requirements.md
-    displayName: clickjacking, device permissions for tabs
-  - name: Create a tab
-    href: tabs/how-to/create-personal-tab.md
-    displayName: App generator, Reorder static personal tabs, channel, or group custom tab, offline tab
-  - name: Get context for your tab
-    href: tabs/how-to/access-teams-context.md
-    displayName: getContext, entityId, groupId, User context, authentication flow from Microsoft Entra ID, retrieve context, theme changes
-  - name: Tab features
-    items:
-    - name: Open content in multi-window
-      href: tabs/open-content-in-stageview.md
-      displayName: Tab in Stageview, Collaborative Stageview, Stageview Multi-window, Stageview Modal, Teams multiwindow
-    - name: Create a configurable tab
-      href: tabs/how-to/create-channel-group-tab.md
-      displayName: create a channel tab or group tab, create a custom channel or group tab with ASP.NET Core, build app using Blazor
-    - name: Create a content page
-      href: tabs/how-to/create-tab-pages/content-page.md
-      displayName: Loading indicator, showLoadingIndicator, personal-scoped custom tab, channel or group custom tab
-    - name: Create a configuration page
-      href: tabs/how-to/create-tab-pages/configuration-page.md
-      displayName: configurationUrl
-    - name: Create a removal page
-      href: tabs/how-to/create-tab-pages/removal-page.md
-      displayName: Reconfigure tab, register remove handler
-    - name: Tabs on mobile
-      href: tabs/design/tabs-mobile.md
-      displayName: Teams Store apps approved by Microsoft for mobile
-    - name: Apps for shared channels
-      href: concepts/build-and-test/shared-channels.md
-      displayName: Cross-tenant notifications, context for shared channel, apps and permissions in shared channels
-    - name: Send activity feed notifications
-      href: /graph/teams-send-activityfeednotifications?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-      displayName: activity feed, notification, customize notification
-    - name: App caching for your tab app
-      href: tabs/how-to/app-caching.md
-      displayName: App caching, caching, launch time, cache
-    - name: Build a dashboard tab app
-      href: tabs/how-to/Build-a-dashboard-tab-app.md
-      displayName: Dashboard, widget, Graph API call
 - name: Build bots and agents
   expand: true
   items:
@@ -434,14 +392,14 @@
     displayName: AI bot, bot capability, command bot, workflow bot, custom engine agent, agent, conversational bot, activity handler, bot logic, notification bot
   - name: Bots and agents in Teams
     href: bots/build-a-bot.md
-    displayName: Bot samples, Code sample, Teams AI library, Microsoft Bot Framework SDK, build a bot, build AI bot, command bot, workflow bot, custom engine agent, agent, conversational bot, notification bot, tools, platforms, Azure OpenAI, Teams Toolkit, Azure AI Foundry
+    displayName: Bot samples, Code sample, Teams AI library, Microsoft Bot Framework SDK, build a bot, build AI bot, command bot, workflow bot, custom engine agent, agent, conversational bot, notification bot, tools, platforms, Azure OpenAI, Microsoft 365 Agents Toolkit, Azure AI Foundry
   - name: Custom engine agent overview
     href: /microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     displayName: AI bot, Teams AI library, custom agent
   - name: Teams AI library v2 (preview)
     items:
       - name: Get started
-        href: /microsoftteams/platform/teams-ai-library/welcome/overview
+        href: /microsoftteams/platform/teams-ai-library/welcome
   - name: Teams AI library v1
     items:
     - name: What is Teams AI library?
@@ -449,14 +407,14 @@
       displayName: OpenAI, Azure OpenAI, LLM, ChatGPT, prompt, Math tutor, Assistants API, AI bot, custom engine agent, RAG, Intents to actions, AI, Teams AI library, custom engine agent, AI bot, responsible AI, prompts, augmentation, Function calls using AI SDK, AI SDK
     - name: Quick start guide
       href: bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md
-      displayName: custom engine agent, AI bot, JavaScript, Python, C#, code sample, Teams Toolkit
+      displayName: custom engine agent, AI bot, JavaScript, Python, C#, code sample, Microsoft 365 Agents Toolkit
     - name: Build with Teams AI library
       href: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md
       displayName: custom engine agent, AI bot, Teams AI library, prompt manager, Action planner, action handler, feedback loop, custom engine agent, AI library
     - name: Understand Teams AI library
       href: bots/how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md
       displayName: AI activity handlers, Adaptive Card for AI bot, Teams AI library, AI library, Teams AI library, bot logic, OpenAI, Azure OpenAI, custom engine agent
-    - name: Build custom engine agent using Teams Toolkit
+    - name: Build custom engine agent using Microsoft 365 Agents Toolkit
       href: Teams-AI-library-tutorial.yml
   - name: Bot user experience
     items:
@@ -541,6 +499,52 @@
       - name: Application-hosted media bots
         href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
         displayName: Service Fabric with Virtual Machine Scale Sets, instance-level public 
+- name: Build tabs
+  items:
+  - name: Tabs overview
+    href: tabs/what-are-tabs.md
+    displayName: Webpages embedded in Teams, declare custom tab in app manifest, contentUrl, web apps, device permissions for tabs
+  - name: Prerequisites
+    href: tabs/how-to/tab-requirements.md
+    displayName: clickjacking, device permissions for tabs
+  - name: Create a tab
+    href: tabs/how-to/create-personal-tab.md
+    displayName: App generator, Reorder static personal tabs, channel, or group custom tab, offline tab
+  - name: Get context for your tab
+    href: tabs/how-to/access-teams-context.md
+    displayName: getContext, entityId, groupId, User context, authentication flow from Microsoft Entra ID, retrieve context, theme changes
+  - name: Tab features
+    items:
+    - name: Open content in multi-window
+      href: tabs/open-content-in-stageview.md
+      displayName: Tab in Stageview, Collaborative Stageview, Stageview Multi-window, Stageview Modal, Teams multiwindow
+    - name: Create a configurable tab
+      href: tabs/how-to/create-channel-group-tab.md
+      displayName: create a channel tab or group tab, create a custom channel or group tab with ASP.NET Core, build app using Blazor
+    - name: Create a content page
+      href: tabs/how-to/create-tab-pages/content-page.md
+      displayName: Loading indicator, showLoadingIndicator, personal-scoped custom tab, channel or group custom tab
+    - name: Create a configuration page
+      href: tabs/how-to/create-tab-pages/configuration-page.md
+      displayName: configurationUrl
+    - name: Create a removal page
+      href: tabs/how-to/create-tab-pages/removal-page.md
+      displayName: Reconfigure tab, register remove handler
+    - name: Tabs on mobile
+      href: tabs/design/tabs-mobile.md
+      displayName: Teams Store apps approved by Microsoft for mobile
+    - name: Apps for shared channels
+      href: concepts/build-and-test/shared-channels.md
+      displayName: Cross-tenant notifications, context for shared channel, apps and permissions in shared channels
+    - name: Send activity feed notifications
+      href: /graph/teams-send-activityfeednotifications?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+      displayName: activity feed, notification, customize notification
+    - name: App caching for your tab app
+      href: tabs/how-to/app-caching.md
+      displayName: App caching, caching, launch time, cache
+    - name: Build a dashboard tab app
+      href: tabs/how-to/Build-a-dashboard-tab-app.md
+      displayName: Dashboard, widget, Graph API call
 - name: Build message extensions
   items:
   - name: What are message extensions?
@@ -554,7 +558,7 @@
       displayName: OpenAPI Description, Search, single parameter, search based message extension
     - name: Create API-based message extensions
       href: messaging-extensions/create-api-message-extension.md
-      displayName: API-based, Teams Toolkit CLI, Developer Portal, Visual Studio Code, Visual Studio
+      displayName: API-based, Microsoft 365 Agents Toolkit CLI, Developer Portal, Visual Studio Code, Visual Studio
   - name: Build message extensions using Bot Framework  
     items:
     - name: Bot-based message extensions
