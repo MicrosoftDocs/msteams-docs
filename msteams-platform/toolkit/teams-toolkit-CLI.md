@@ -13,7 +13,7 @@ zone_pivot_groups: toolkit-cli
 
 > [!IMPORTANT]
 >
-> * While Teams Toolkit CLI is still supported to build your Teams app, we recommend that you use Microsoft 365 Agents Toolkit CLI.
+> * While Teams Toolkit CLI is still supported to build your Teams app, we recommend that you use [Microsoft 365 Agents Toolkit CLI](microsoft-365-agents-toolkit-CLI.md).
 > * TeamsFx CLI v2 and v1 aren't supported.
 
 Microsoft Teams Toolkit command line interface (Teams Toolkit CLI) is a text-based command line interface that accelerates Microsoft Teams application development. It aims to provide keyboard centric experience while building Teams applications. For more information, see [source code](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli) and [npm package](https://www.npmjs.com/package/@microsoft/teamsfx-cli).
@@ -61,11 +61,12 @@ The following table lists the supported commands to help developers build and ma
 | [`teamsapp package`](#teamsapp-package) | Build your Teams app into package for publishing.|
 | [`teamsapp validate`](#teamsapp-validate) | Validate the current application.|
 | [`teamsapp publish`](#teamsapp-publish) | Publish the app to Teams.|
+| [`teamsapp share`](#teamsapp-share) | Run the share stage in `teamsapp.yml`|
 | [`teamsapp preview`](#teamsapp-preview) | Preview the current application. |
-| [`teamsapp update`](#teamsapp-update) |  Update the app manifest (previously called Teams app manifest) to Teams Developer Portal. |
-| [`teamsapp upgrade`](#teamsapp-upgrade) | Upgrade the project to work with the latest version of Microsoft Teams Toolkit. |
+| [`teamsapp update`](#teamsapp-update) |  Update the app manifest (previously called Teams app manifest) to Teams Developer Portal.|
+| [`teamsapp upgrade`](#teamsapp-upgrade) | Upgrade the project to work with the latest version of Microsoft Teams Toolkit.|
 | [`teamsapp collaborator`](#teamsapp-collaborator)| Collaborate with other developers in the same project.|
-| [`teamsapp uninstall`](#teamsapp-uninstall) | Remove an acquired Microsoft 365 App. |
+| [`teamsapp uninstall`](#teamsapp-uninstall) | Remove an acquired Microsoft 365 App.|
 
 :::image type="content" source="../assets/images/toolkit-cli/list-of-commands.png" alt-text="Screenshot shows the list of available commands.":::
 
@@ -310,12 +311,12 @@ The following table lists the parameters available for `teamsapp package`:
 
 |Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
-| `--env` | No | Select an existing environment for the project. |
-| `--env-file` | No | Select an .env file that defines the variables to replace in the manifest template file. |
-| `--teams-manifest-file` | No | Select the manifest file path. Defaults to `${folder}/appPackage/manifest.json`. |
-| `--output-package-file` | No | Select the output path for the zipped app package. Defaults to `${folder}/appPackage/build/appPackage.${env}.zip`. |
-| `--output-manifest-file` | No | Select the output path for the app manifest file. Defaults to `${folder}/appPackage/build/manifest.${env}.json`. |
-| `--folder -f` | No | Select the root folder of the project. Defaults to `./`. |
+| `--env` | No | Specifies the environment name for the project scaffolded by Microsoft Teams Toolkit. |
+| `--env-file` | No | Specifies an .env file that defines the variables to replace in the Teams app manifest template file. |
+| `--manifest-file` | No | Specifies the Microsoft Teams app manifest file path. Defaults to `./appPackage/manifest.json`. |
+| `--output-package-file` | No | Specifies the output zipped Microsoft Teams app package file path. Defaults to `./appPackage/build/appPackage.${env}.zip`. |
+| `--output-folder` | No | Specifies the output folder containing the manifest(s) file. Defaults to `./appPackage/build.`|
+| `--folder -f` | No | Project folder. Defaults to `./`. |
 
 ## `teamsapp validate`
 
@@ -327,13 +328,15 @@ The following table lists the parameters available for `teamsapp validate`:
 
 | Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
-| `--env` | No | Select an existing environment for the project. |
-| `--env-file` | No | Select an .env file that defines the variables to replace in the app manifest template file. |
+| `--env` | No | Specifies the environment name for the project scaffolded by Microsoft Teams Toolkit. |
+| `--env-file` | No | Specifies the .env file that defines the variables to replace in the Teams app manifest template file. |
 | `--teams-manifest-file` | No | Select the input app manifest file path. Defaults to `${folder}/appPackage/manifest.json`. |
-|`--package-file` | No | Select the path for the zipped Teams app package file.|
-|`--output-package-file` | No | Select the path for the output zipped Teams app package file. Defaults to `${folder}/appPackage/build/appPackage.${env}.zip`.|
-|`--output-manifest-file` | No | Select the path for the output app manifest file. Defaults to `${folder}/appPackage/build/manifest.${env}.json`. |
-| `--folder -f` | No | Select root folder of the project. Defaults to `./`. |
+|`--package-file` | No | Specifies the zipped Microsoft Teams app package file path.|
+|`--output-package-file` | No | Specifies the output zipped Microsoft Teams app package file. Defaults to `./appPackage/build/appPackage.${env}.zip`.|
+| `--output-folder` | No | Specifies the output folder containing the manifest(s) file. Defaults to `./appPackage/build.`|
+|`--manifest-file` | No | Specifies the Microsoft Teams app manifest file path. Defaults to `./appPackage/manifest.json`. |
+| `--folder -f` | No | Project folder. Defaults to `./`. |
+| `--validate-method -m` | No | Specifies validation method. Allowed values [`validation-rules`, `test-cases`.] |
 
 ## `teamsapp publish`
 
@@ -345,13 +348,28 @@ The following table lists the parameters available for `teamsapp publish`:
 
 | Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
-| `--env` | No | Select an environment for the project. |
-| `--env-file` | No | Select an .env file that defines the variables for the app manifest template file.|
+| `--env` | No | Specifies the environment name for the project scaffolded by Microsoft Teams Toolkit. |
+| `--env-file` | No | Specifies the .env file that defines the variables to replace in the Teams app manifest template file.|
 | `--teams-manifest-file` | No | Select the path for the input app manifest file. Defaults to `${folder}/appPackage/manifest.json`.|
-|`--package-file` | No | Select the path for the Teams app package zip file.|
-|`--output-package-file` | No | Select the path for the output Teams app package zip file. Defaults to `${folder}/appPackage/build/appPackage.${env}.zip`.|
-|`--output-manifest-file` | No | Select the path for the output in the app manifest file. Defaults to `${folder}/appPackage/build/manifest.${env}.json`. |
-| `--folder -f` | No |Select the root folder of the project. Defaults to `./`. |
+|`--package-file` | No | Specifies the zipped Microsoft Teams app package file path.|
+|`--output-package-file` | No | Specifies the output zipped Microsoft Teams app package file path. Defaults to `./appPackage/build/appPackage.${env}.zip`.|
+|`--output-folder` | No | Specifies the output folder containing the manifest(s) file. Defaults to `./appPackage/build.`|
+|`--manifest-file` | No | Specifies the Microsoft Teams app file path. Defaults to `./appPackage/manifest.json`. |
+| `--folder -f` | No |Project folder. Defaults to `./`. |
+
+## `teamsapp share`
+
+The `teamsapp share` command runs the share stage in `teamsapp.yml`.
+
+### `teamsapp share` parameters
+
+The following table lists the parameters available for `teamsapp share`:
+
+| Parameter | Required | Description |
+|:----------------  |:-------------|:-------------|
+| `--env` | No | Specifies the environment name for the project scaffolded by Microsoft Teams Toolkit. |
+| `--folder -f` | No |Project folder. Defaults to `./`. |
+| `--ignore-env-file` | No | Whether to skip loading .env file when `--env` is not specified.|
 
 ## `teamsapp preview`
 
@@ -562,7 +580,7 @@ Install `teamsfx-cli` from `npm` and run `teamsfx -h` to check all available com
 
 ## Interactive mode
 
-`teamsfx' command runs in interactive mode by default. You can work in non-interactive mode by setting `--interactive` flag to `false`.
+`teamsfx' command runs in interactive mode by default. You can work in non-interactive mode by setting` --interactive` flag to `false`.
 
 ## `teamsfx new`
 
@@ -720,8 +738,8 @@ Preview the current application.
 | `--folder` | No | Select root folder of the project. Defaults to `./`. |
 | `--env` | No | Select an existing env for the project. Defaults to `local`. |
 | `--teams-manifest-file` | No | Select the Teams app `manifest file path`, defaults to `${folder}/appPackage/manifest.json`. |
-| `--run-command` | No | The command to start local service. Work for `local` environment only. If undefined, `teamsfx' uses the auto detected one from project type (`npm run dev:teamsfx` or `dotnet run` or `func start`). If empty, `teamsfx' skips starting local service. |
-| `--running-pattern` | No | The ready signal output that service is launched. Work for `local` environment only. If undefined, `teamsfx' uses the default common pattern ("started/successfully/finished/crashed/failed"). If empty, `teamsfx' treats process start as ready signal. |
+| `--run-command` | No | The command to start local service and work for `local` environment only. If undefined, `teamsfx' uses the auto detected one from project type (`npm run dev:teamsfx` or `dotnet run` or `func start`). If empty,`teamsfx' skips starting local service. |
+| `--running-pattern` | No | The ready signal output that service is launched and work for `local` environment only. If undefined, `teamsfx' uses the default common pattern ("started/successfully/finished/crashed/failed"). If empty,`teamsfx' treats process start as ready signal. |
 | `--open-only` | No | Work for `local` environment only. If true, directly open web client without launching local service. Defaults to `false`. |
 | `--m365-host` | No | Preview the application in Teams, Outlook, or the Microsoft 365 app [string] [choices: `teams`, `outlook`, `office`]. Defaults to `teams`. |
 | `--browser` | No | Select browser to open Teams web client [string] [choices: `chrome`, `edge`, `default`]. Defaults to `default`. |

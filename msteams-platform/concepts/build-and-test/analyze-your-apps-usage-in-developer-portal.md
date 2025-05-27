@@ -446,5 +446,5 @@ The **Capability** tab shows the usage of individual app and agent capabilities 
 
 ## See also
 
-* [Microsoft 365 Agents Toolkit Overview](../../toolkit/teams-toolkit-fundamentals.md#quick-access-to-teams-developer-portal)
+* [Microsoft 365 Agents Toolkit overview](../../toolkit/agents-toolkit-fundamentals.md#quick-access-to-teams-developer-portal)
 * [Include a SaaS offer with your Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)

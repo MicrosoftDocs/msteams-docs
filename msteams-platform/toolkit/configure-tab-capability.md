@@ -166,7 +166,7 @@ For more information, see [sample app](https://github.com/OfficeDev/TeamsFx-Samp
    }
    ```
 
-   For more information on how to configure the debug profile, see [sample app](https://github.com/OfficeDev/teams-toolkit-samples/tree/dev/hello-world-bot-with-tab/.vscode).
+   For more information on how to configure the debug profile, see [sample app](https://github.com/OfficeDev/microsoft-365-agents-toolkit-samples/tree/dev/hello-world-bot-with-tab/.vscode).
 
 1. To enable your tab project to work with Agents Toolkit, add the following actions to the `m365agents.local.yml` file:
 

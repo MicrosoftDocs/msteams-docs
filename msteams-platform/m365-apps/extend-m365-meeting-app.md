@@ -35,7 +35,7 @@ To preview your Teams meeting app in Outlook, ensure the following:
 * A [Microsoft 365 developer sandbox](./prerequisites.md#prepare-a-developer-tenant-for-testing) tenant with uploading enabled.
 * A test environment with Outlook for Windows desktop installed from the [Microsoft 365 Apps *Current Channel*](./prerequisites.md#install-microsoft-365-apps-in-your-test-environment).
 * [NodeJS](https://nodejs.org/download) (with npm) installed.
-* [Microsoft 365 Agents Toolkit CLI v2](~/toolkit/teams-toolkit-cli.md) (previously known as TeamsFx CLI) library installed from npm.
+* [Teams Toolkit CLI v2](~/toolkit/teams-toolkit-cli.md) library installed from npm.
 * [Visual Studio Code](https://code.visualstudio.com/) installed to your development environment.
 * [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) extension for Visual Studio Code.
 

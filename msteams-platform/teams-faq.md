@@ -1197,7 +1197,7 @@ Teams AI library works alongside the existing Bot Framework SDK and isn't a repl
 
 ## Microsoft 365 Agents Toolkit
 
-FAQ for [Provision cloud resources](toolkit/provision.md) using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit).
+FAQ for [Provision cloud resources](toolkit/provision.md) using Agents Toolkit.
 <br>
 
 <details>

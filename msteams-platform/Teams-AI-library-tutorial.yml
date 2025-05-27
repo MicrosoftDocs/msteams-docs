@@ -160,7 +160,7 @@ items:
      
     1. Select the **F5** key.   
 
-        :::image type="content" source="../msteams-platform/assets/images/bots/debug-in-test-tool.png" alt-text="Screenshot shows the debug in test tool.":::
+        :::image type="content" source="../msteams-platform/assets/images/bots/debug-in-test-tool.png" alt-text="Screenshot shows the debug in Agents Playground.":::
 
     1. Custom engine agent runs within Agents Playground, which opens in your browser.
 
