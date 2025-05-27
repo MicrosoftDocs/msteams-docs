@@ -80,7 +80,7 @@ The following JSON is shortened to highlight the most relevant sections.
 
 ## Respond to user requests
 
-When the user performs a query, Microsoft Teams issues a synchronous HTTP request to your service. At that point, your code has `5` seconds to provide an HTTP response to the request. During this time, your service can perform more lookup, or any other business logic needed to serve the request.
+When the user performs a query, Microsoft Teams issues a synchronous HTTP request to your service. At that point, your code has five seconds to provide an HTTP response to the request. During this time, your service can perform more lookups, or any other business logic needed to serve the request.
 
 Your service must respond with the results matching the user query. The response must indicate an HTTP status code of `200 OK` and a valid application or JSON object with the following properties:
 
@@ -93,11 +93,11 @@ Your service must respond with the results matching the user query. The response
 |`composeExtension.suggestedActions`|Suggested actions. Used for responses of type `auth` or `config`. |
 |`composeExtension.text`|Message to display. Used for responses of type `message`. |
 
-### `config` response type
+### config response
 
-The `config` response is the data returned by the server or the app to configure and enable the message extension within the messaging platform. When a user configures the message extension for the first time, a `config` response is used to prompt the user to set up the message extension and provide the necessary configuration.
+The `config` response is the data returned by the server or the app to configure and enable the message extension within the messaging platform. When a user configures the message extension for the first time, a `config` response is used to prompt the user to set up the message extension and provide any necessary configuration.
 
-The following JSON response is an example of a `config` response received from the app:
+The following code snippet shows the `config` response that appears when the user interacts with the message extension:
 
 ```json
 {
@@ -119,13 +119,36 @@ The following JSON response is an example of a `config` response received from t
 
 The `config` response includes:
 
-* `value`: Specifies the URL that opens the configuration page in a Teams dialog, which allows users to input necessary details and submit the configuration. `<your-tunnel-url>` can be one of the following:
-    *abc123.ngrok-free.app
-    *ct3h34ng-7130.inc1.devtunnels.ms
-* `type`: Indicates the nature of this response as a configuration. The field is within `composeExtension` and is set to `config`. 
-* `responseType`: Identifies this response is for the app's `composeExtension`.
+* The `value` property that contains a URL to open a configuration page in a Teams dialog, which allows users to input necessary details and submit the configuration. Few examples of the `value` property are:
+  * `https://<your-subdomain>.ngrok-free.app/searchSettings.html`
+  * `https://<your-subdomain>.devtunnels.ms/searchSettings.html`.
+* The `type` field within `composeExtension` set to `config`, indicating the nature of this response as a configuration.
+* The `responseType` that identifies this response is for the `composeExtension` of the app.
 
-:::image type="content" source="~/assets/images/configuration-response-me.png" alt-text="Screenshot shows the configuration response for message extension.":::
+:::image type="content" source="../../../assets/images/configuration-response-me.png" alt-text="The screenshot shows the configuration response for message extension.":::
+
+Initialize the Teams SDK on the configuration page and use `authentication.notifySuccess()` to send the collected configuration data back to Teams. `submitConfig()` function demonstrates how to structure and return configuration values after the user completes the setup process.
+
+To complete the message extension configuration flow:
+
+1. The URL provided in the `value` property must host a webpage that opens the URL as a Teams dialog when the message extension configuration is triggered.
+2. If authentication is required, the page must use Teams authentication and call `authentication.notifySuccess()` upon successful sign-in.
+3. After collecting user input, the page must notify Teams of the successful setup by calling `notifySuccess(configData)` that sends the configuration values back to Teams:
+
+      ```javascript
+        microsoftTeams.app.initialize();
+        
+        function submitConfig() {
+            const configData = {
+                setting1: "User-selected value",
+                setting2: "Another value"
+            };
+        
+            microsoftTeams.authentication.notifySuccess(configData);
+        }
+      ```
+
+4. Once `notifySuccess()` is executed, the configuration window automatically closes and the message extension is set up successfully.
 
 ### `auth` response type
 
@@ -156,7 +179,7 @@ return new MessagingExtensionResponse
 
 The result list is displayed in the Microsoft Teams UI with a preview of each item. The preview is generated in one of the two ways:
 
-* Using the `preview` property within the `attachment` object. The `preview` attachment can only be a hero or a thumbnail card.
+* Using the `preview` property within the `attachment` object. The `preview` attachment can only be a Hero or a Thumbnail card.
 * Extracting from the basic `title`, `text`, and `image` properties of the `attachment` object. The basic properties are used only if the `preview` property isn't specified.
 
 > [!NOTE]
@@ -476,8 +499,8 @@ The default query has the same structure as any regular user query, except it ha
 
 | Sample name | Description | .NET | Node.js | Manifest |
 |:---------------------|:--------------|:---------|:--------|:--------|
-| Teams message extension search | This sample shows how to build a search-based message extension. It searches NuGet packages and displays the results in search-based message extension.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
-|Teams message extension auth and config | This sample shows a message extension that has a configuration page, accepts search requests, and returns results after the user signs in. It also showcases zero app install link unfurling along with normal link unfurling |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-sso-config/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp/demo-manifest/msgext-search-auth-config.zip)
+| Teams message extension search | This sample shows how to build a search-based message extension. It searches NuGet packages and displays the result as an Adaptive Card.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
+|Teams message extension auth and config | This sample shows a message extension that has a configuration page, accepts search requests, and returns results after the user signs in. It also showcases zero app install link unfurling along with normal link unfurling. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-sso-config/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp/demo-manifest/msgext-search-auth-config.zip)
 
 ## Next step
 
