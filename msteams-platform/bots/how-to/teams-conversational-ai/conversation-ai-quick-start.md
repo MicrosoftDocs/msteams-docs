@@ -7,7 +7,7 @@ ms.localizationpriority: high
 zone_pivot_groups: ai-library-quick-start
 ms.author: surbhigupta
 ms.owner: angovil
-ms.date: 27/05/2025
+ms.date: 05/27/2025
 ---
 
 # Teams AI library quick start guide
