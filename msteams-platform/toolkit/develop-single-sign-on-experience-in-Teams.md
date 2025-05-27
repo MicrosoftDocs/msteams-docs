@@ -27,7 +27,7 @@ To enable SSO, configure your Teams app as follows:
 
 ## Create Microsoft Entra app manifest
 
-1. Download the Microsoft Entra app manifest [template](https://github.com/OfficeDev/teams-toolkit/blob/dev/packages/fx-core/templates/plugins/resource/aad/manifest/tab/aad.manifest.template.json).
+1. Download the Microsoft Entra app manifest [template](https://github.com/OfficeDev/microsoft-365-agents-toolkit/blob/dev/packages/fx-core/templates/plugins/resource/aad/manifest/tab/aad.manifest.template.json).
 
 1. Add the downloaded app manifest template code to `./aad.manifest.json` file. This allows you to customize different aspects of your app registration and update the manifest as required. For more information, see [app manifest](/entra/identity-platform/reference-app-manifest).
 
@@ -70,7 +70,7 @@ In the `./appPackages/manifest.json` file, add the following code:
     > [!NOTE]
     > Replace the `name` value with the desired name for your Teams app.
 
-    For more information, see [`aadApp/create`.](https://github.com/OfficeDev/teams-toolkit/wiki/Available-actions-in-Teams-Toolkit#aadappcreate)
+    For more information, see [`aadApp/create`.](https://github.com/OfficeDev/microsoft-365-agents-toolkit/wiki/Available-actions-in-Teams-Toolkit#aadappcreate)
 
 1. Add the `aadApp/update` action under `provision` in `./m365agents.yml` and `./m365agents.local.yml` to update your Microsoft Entra app:
 
@@ -85,7 +85,7 @@ In the `./appPackages/manifest.json` file, add the following code:
     > * Update the `manifestPath` value to the relative path of the Microsoft Entra app manifest template `aad.manifest.json`, if you've changed the file's path.
     > * In a local setup, position the `aad/update` after the `file/createOrUpdateEnvironmentFile` action. This is required because `aad/update` uses the output from `file/createOrUpdateEnvironmentFile`.
 
-    For more information, see [`aadApp/update`](https://github.com/OfficeDev/teams-toolkit/wiki/Available-actions-in-Teams-Toolkit#aadappupdate)
+    For more information, see [`aadApp/update`](https://github.com/OfficeDev/microsoft-365-agents-toolkit/wiki/Available-actions-in-Teams-Toolkit#aadappupdate)
 
 1. For a React project, update `cli/runNpmCommand` under `deploy`.
 
@@ -136,9 +136,9 @@ function getBasicUserInfo() {
 
 For React projects, ensure the following environment variables are set in your deployment process:
 
-* For a JavaScript project, see [tab JavaScript sample.](https://github.com/OfficeDev/teams-toolkit/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/js)
+* For a JavaScript project, see [tab JavaScript sample.](https://github.com/OfficeDev/microsoft-365-agents-toolkit/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/js)
 
-* For a TypeScript project, see [tab TypeScript sample.](https://github.com/OfficeDev/teams-toolkit/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts)
+* For a TypeScript project, see [tab TypeScript sample.](https://github.com/OfficeDev/microsoft-365-agents-toolkit/tree/main/packages/fx-core/templates/plugins/resource/aad/auth/tab/ts)
 
 To update your source code, follow these steps:
 
@@ -151,13 +151,13 @@ To update your source code, follow these steps:
 
 1. Import and add `InitTeamsFx` in `Welcome.*`.
 
-For more information, see [SSO enabled tab app.](https://github.com/OfficeDev/teams-toolkit-samples/tree/dev/hello-world-tab-with-backend)
+For more information, see [SSO enabled tab app.](https://github.com/OfficeDev/microsoft-365-agents-toolkit-samples/tree/dev/hello-world-tab-with-backend)
 
 # [Bot/message extension app](#tab/message-extension-app)
 
 ## Create Microsoft Entra app manifest
 
-1. Download the Microsoft Entra app manifest [template](https://github.com/OfficeDev/teams-toolkit/blob/dev/packages/fx-core/templates/plugins/resource/aad/manifest/bot/aad.manifest.template.json).
+1. Download the Microsoft Entra app manifest [template](https://github.com/OfficeDev/microsoft-365-agents-toolkit/blob/dev/packages/fx-core/templates/plugins/resource/aad/manifest/bot/aad.manifest.template.json).
 
 1. Add the downloaded app manifest template code to `./aad.manifest.json` file. This allows you to customize different aspects of your app registration and update the manifest as required. For more information, see [app manifest](/entra/identity-platform/reference-app-manifest).
 
@@ -220,7 +220,7 @@ For more information, see [SSO enabled tab app.](https://github.com/OfficeDev/te
     > [!NOTE]
     > Replace the `name` value with the desired name for your Microsoft Teams app.
 
-    For more information, see [`aadApp/create`.](https://github.com/OfficeDev/teams-toolkit/wiki/Available-actions-in-Teams-Toolkit#aadappcreate)
+    For more information, see [`aadApp/create`.](https://github.com/OfficeDev/microsoft-365-agents-toolkit/wiki/Available-actions-in-Teams-Toolkit#aadappcreate)
 
 1. Add the following code `aadApp/update` under `provision` in `./m365agents.yml` and `./m365agents.local.yml` to update your Microsoft Entra app:
 
@@ -234,7 +234,7 @@ For more information, see [SSO enabled tab app.](https://github.com/OfficeDev/te
     > [!NOTE]
     > Update the `manifestPath` value to the relative path of the Microsoft Entra app manifest template `aad.manifest.json`, if you've changed the file's path.
 
-    For more information, see [`aadApp/update`](https://github.com/OfficeDev/teams-toolkit/wiki/Available-actions-in-Teams-Toolkit#aadappupdate)
+    For more information, see [`aadApp/update`](https://github.com/OfficeDev/microsoft-365-agents-toolkit/wiki/Available-actions-in-Teams-Toolkit#aadappupdate)
 
 1. Locate the `createOrUpdateEnvironmentFile` action in `m365agents.local.yml` file and add the following environment variables:
 
@@ -390,7 +390,7 @@ To use the `teamsFx` tab or bot template, follow these steps:
 
    # [Message extension](#tab/messaging-extension)
 
-   1. Implement the API key `handleMessageExtensionQueryWithSSO` in `TeamsActivityHandler.handleTeamsMessagingExtensionQuery`. For more information, see [SSO for message extensions.](https://github.com/OfficeDev/teams-toolkit/wiki/SSO-for-Message-Extension)
+   1. Implement the API key `handleMessageExtensionQueryWithSSO` in `TeamsActivityHandler.handleTeamsMessagingExtensionQuery`. For more information, see [SSO for message extensions](https://github.com/OfficeDev/microsoft-365-agents-toolkit/wiki/SSO-for-Message-Extension).
 
    1. Move the `auth/public` folder to `src/public`. This folder contains HTML pages for the bot app. On initiating SSO flows with Microsoft Entra, the user is redirected to these pages.
 

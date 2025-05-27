@@ -268,7 +268,7 @@ For an agent to be validated, invoked, and to work seamlessly, ensure that it me
 | Zero regressions | If you need to resubmit your agent for validation, the existing message extension functionality that was working earlier mustn't break. [*Must fix*] |
 | Microsoft 365 channel | For users to interact with your message extension from Outlook, you need to add Microsoft 365 channel to your bot. For more information, see [add Microsoft 365 channel for your app](../../../../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app). [*Must fix*]|
 | Single sign-on (SSO) | If applicable, update your Microsoft Entra app registration for SSO. [*Must fix*] |
-| Content Security Policy (CSP) | If applicable, modify your CSP headers and X-Frame-Options in accordance with [configure Content Security Policy headers](/microsoftteams/platform/m365-apps/extend-m365-teams-personal-tab?tabs=manifest-teams-toolkit#configure-content-security-policy-headers). [*Must fix*] |
+| Content Security Policy (CSP) | If applicable, modify your CSP headers and X-Frame-Options in accordance with [configure Content Security Policy headers](/microsoftteams/platform/m365-apps/extend-m365-teams-personal-tab?tabs=manifest-toolkit#configure-content-security-policy-headers). [*Must fix*] |
 
 [Back to top](#validation-guidelines-for-agents)
 

@@ -60,7 +60,7 @@ You can do the following configuration for your app in the Developer Portal:
 
 ## See also
 
-* [Microsoft 365 Agents Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals.md)
 * [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md)
 * [Manage your apps in Developer Portal](../concepts/build-and-test/manage-your-apps-in-developer-portal.md)
-* [Develop your apps with Microsoft 365 Agents Toolkit](../concepts/build-and-test/develop-your-apps-with-teams-toolkit.md)
+* [Develop your apps with Microsoft 365 Agents Toolkit](../concepts/build-and-test/develop-your-apps-with-toolkit.md)

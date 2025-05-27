@@ -29,12 +29,12 @@ Ensure that you install the following tools to build and deploy your bot in Agen
 
 ## Build and run the sample app
 
-1. Go to the [sample](https://github.com/OfficeDev/TeamsFx-Samples).
+1. Go to the [sample](https://github.com/OfficeDev/microsoft-365-agents-toolkit-samples).
 
 1. Clone the repository to test the sample app.
 
    ```
-   git clone https://github.com/OfficeDev/TeamsFx-Samples.git
+   git clone https://github.com/OfficeDev/microsoft-365-agents-toolkit-samples.git
    ```
 
 1. Go to **Visual Studio Code**.
@@ -45,7 +45,7 @@ Ensure that you install the following tools to build and deploy your bot in Agen
 
 1. Select **Select Folder**.
 
-   :::image type="content" source="../assets/images/toolkit-v2/teams-app-select-folder.png" alt-text="Screenshot shows the test tool sample app folder.":::
+   :::image type="content" source="../assets/images/toolkit-v2/teams-app-select-folder.png" alt-text="Screenshot shows the Agents Playground sample app folder.":::
 
 1. From the left pane, select **Microsoft 365 Agents Toolkit**.
 
@@ -53,11 +53,11 @@ Ensure that you install the following tools to build and deploy your bot in Agen
 
 1. Agents Playground opens the bot in a webpage.
 
-   :::image type="content" source="../assets/images/toolkit-v2/test-tool-in-browser-window.png" alt-text="Screenshot shows the test tool opens in a webpage.":::
+   :::image type="content" source="../assets/images/toolkit-v2/test-tool-in-browser-window.png" alt-text="Screenshot shows the Agents Playground opens in a webpage.":::
 
 1. In the message compose area, type `help`. Agents Playground displays all the message extension commands in the sample app.
 
-   :::image type="content" source="../assets/images/toolkit-v2/help-in-teams-app-test-tool.png" alt-text="Screenshot shows the help in the message compose area of test tool.":::
+   :::image type="content" source="../assets/images/toolkit-v2/help-in-teams-app-test-tool.png" alt-text="Screenshot shows the help in the message compose area of Agents Playground.":::
 
 1. Select the **+** icon to display the type of message extension:
 
@@ -169,7 +169,7 @@ The following code is a sample of the static list of parameters in JSON format:
    }]
    ```
 
-:::image type="content" source="../assets/images/toolkit-v2/static-list-of-parameters-in-teams-app-test-tool.png" alt-text="Screenshot shows how to create a static list of parameters in teams app test tool.":::
+:::image type="content" source="../assets/images/toolkit-v2/static-list-of-parameters-in-teams-app-test-tool.png" alt-text="Screenshot shows how to create a static list of parameters in agents playground.":::
 
 Static list of parameters are available under the `composeExtensions` property in app manifest. For example, see [manifest.json](https://github.com/OfficeDev/TeamsFx/blob/main/templates/ts/message-extension-action/appPackage/manifest.json.tpl#L41-L59).
 
@@ -196,7 +196,7 @@ To test an **Link Unfurling** in Agents Playground, follow these steps:
 
 1. Select **Link Unfurling**.
 
-   :::image type="content" source="../assets/images/toolkit-v2/link-unfurling.png" alt-text="Screenshot shows how to create a link unfurling in teams app test tool.":::
+   :::image type="content" source="../assets/images/toolkit-v2/link-unfurling.png" alt-text="Screenshot shows how to create a link unfurling in agents playground.":::
 
    A **Enter a URL** dialog appears.
 
@@ -204,7 +204,7 @@ To test an **Link Unfurling** in Agents Playground, follow these steps:
 
 1. Select **Send to Conversation**.
 
-   :::image type="content" source="../assets/images/toolkit-v2/link-unfurling-card.png" alt-text="Screenshot shows how to create link unfurling in teams app test tool.":::
+   :::image type="content" source="../assets/images/toolkit-v2/link-unfurling-card.png" alt-text="Screenshot shows how to create link unfurling in agents playground.":::
 
    Agents Playground triggers a `composeExtension/queryLink` invoke request with the URL to the message extension. You can review the Adaptive Card that Agents Playground renders based on the invoke response from the app.
 
