@@ -261,6 +261,9 @@ items:
 
        A webpage opens with a message **Your bot is ready!**.
 
+       > [!NOTE]
+       > This page appears only when you navigate to the localhost URL.
+
         :::image type="content" source="~/assets/images/bots/yourbot.png" alt-text="Screenshot of the webpage that displays Your bot is ready.":::
         
         <br>
