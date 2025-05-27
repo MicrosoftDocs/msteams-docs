@@ -83,14 +83,14 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | Customer-owned apps | An app created by you or your organization that is meant for use by other Teams app users outside the organization. It can be made available on Microsoft Teams Store. <br> **See also**: [Teams Store validation guidelines](#s); [Microsoft Store](#s); [LOB apps](#l); [Personal tab](#p); [Shared apps](#s) |
 | Custom app built for your org (LOB app) | An app created only for Teams by you or your organization.  |
 | [Custom app upload](../toolkit/publish.md#publish-to-individual-scope-or-custom-app-upload-permission) | A process where a Teams app is loaded to the Teams client to test it in the Teams environment before distributing it. |
-| Custom engine agent | |
+| Custom engine agent | Custom engine agents are fully customized AI assistants designed for scenarios that require complex workflows, orchestration, or specific language models. |
 | [Custom Together Mode](../apps-in-teams-meetings/teams-together-mode.md)| Custom Together Mode scenes in Teams provide an immersive and engaging meeting environment. <br>**See also**: [Developer Portal for Teams](#d) |
 
 ## D
 
 | Term | Definition |
 | --- | --- |
-| [Declarative agent](/microsoft-365-copilot/extensibility/agents-overview) | Declarative agents are AI-powered tools that allow you to configure Copilot for specific scenarios by adding custom instructions, additional knowledge, and actions to automate business processes. <br> **See also**: [Agents](#a); [Custom engine agent](#c) |
+| [Declarative agent](/microsoft-365-copilot/extensibility/agents-overview) | Declarative agents are AI-powered tools that allow you to configure Copilot for specific scenarios by adding custom instructions, additional knowledge, and actions to automate business processes. <br> **See also**: [Agents](#a); [Custom engine agent](#c); [Declarative agent](#d) |
 | [Deep linking](../concepts/build-and-test/deep-links.md) | In a Teams app, you can create deep links to information and features within Teams or to help the user navigate to content in your app. |
 | [Default install scope](../concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-install-scope)| An app manifest property (`defaultInstallScope`) that specifies the install scope defined for the app by default. <br> **See also**: [App manifest](#a); [App scope](#a)|
 | [Delegated permission](../tabs/how-to/authentication/tab-sso-graph-api.md) | They're used by apps that have a signed-in user present. For these apps, either the user or an administrator consents to the permissions that the app requests and the app can act as the signed-in user when making calls to Microsoft Graph.  <br> **See also**: [SSO](#s); [Permission](#p); [Scope](#s) |
