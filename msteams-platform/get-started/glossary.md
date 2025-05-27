@@ -90,6 +90,8 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 
 | Term | Definition |
 | --- | --- |
+
+| [Declarative agent](/microsoft-365-copilot/extensibility/agents-overview) | Declarative agents are AI-powered tools that allow you to configure Copilot for specific scenarios by adding custom instructions, additional knowledge, and actions to automate business processes. <br> **See also**: [Agents](#a); [Custom engine agent](#c) |
 | [Deep linking](../concepts/build-and-test/deep-links.md) | In a Teams app, you can create deep links to information and features within Teams or to help the user navigate to content in your app. |
 | [Default install scope](../concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-install-scope)| An app manifest property (`defaultInstallScope`) that specifies the install scope defined for the app by default. <br> **See also**: [App manifest](#a); [App scope](#a)|
 | [Delegated permission](../tabs/how-to/authentication/tab-sso-graph-api.md) | They're used by apps that have a signed-in user present. For these apps, either the user or an administrator consents to the permissions that the app requests and the app can act as the signed-in user when making calls to Microsoft Graph.  <br> **See also**: [SSO](#s); [Permission](#p); [Scope](#s) |
