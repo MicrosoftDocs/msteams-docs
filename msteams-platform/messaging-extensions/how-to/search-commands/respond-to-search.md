@@ -15,7 +15,7 @@ ms.date: 03/11/2025
 After the user submits the search command, your web service receives a `composeExtension/query` invoke message that contains a `value` object with the search parameters. The invoke is triggered by the following conditions:
 
 * As characters are entered into the search box.
-* `initialRun` is set to true in your [app manifest](../../../resources/schema/manifest-schema.md#composeextensions), and you receive the invoke message as soon as the search command is invoked. For more information, see [default query](#default-query).
+* `initialRun` is set to true in your [app manifest](../../../resources/schema/manifest-schema.md#composeextensions). For more information, see [default query](#default-query).
 
 This document guides you on how to respond to user requests in the form of cards and previews and the conditions under which Microsoft Teams issues a default query.
 
@@ -125,7 +125,7 @@ The `config` response includes:
 * The `type` field within `composeExtension` set to `config`, indicating the nature of this response as a configuration.
 * The `responseType` that identifies this response is for the `composeExtension` of the app.
 
-:::image type="content" source="../../../assets/images/configuration-response-me.png" alt-text="The screenshot shows the configuration response for message extension.":::
+:::image type="content" source="../../../assets/images/configuration-response-me.png" alt-text="The screenshot shows the configuration response for message extension." lightbox="../../../assets/images/config-response-me-lightbox.png":::
 
 Initialize the Teams SDK on the configuration page and use `authentication.notifySuccess()` to send the collected configuration data back to Teams. `submitConfig()` function demonstrates how to structure and return configuration values after the user completes the setup process.
 
@@ -398,6 +398,8 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 * * *
 
 ### Enable and handle tap actions
+
+When a user selects a result from the message extension search query, the preview card displays the description and the Tap actions that were defined. The Tap action must have the required value property assigned that displays as a Tap button in the card sent.
 
 # [C#/.NET](#tab/dotnet)
 
