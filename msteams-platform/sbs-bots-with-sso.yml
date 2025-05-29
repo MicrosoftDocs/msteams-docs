@@ -261,6 +261,9 @@ items:
 
        A webpage opens with a message **Your bot is ready!**.
 
+       > [!NOTE]
+       > This page appears only when you navigate to the localhost URL.
+
         :::image type="content" source="~/assets/images/bots/yourbot.png" alt-text="Screenshot of the webpage that displays Your bot is ready.":::
         
         <br>
@@ -287,7 +290,7 @@ items:
 - title: Upload the bot in Teams
   durationInMinutes: 2
   content: |
-     1. In your cloned repository, go to **Microsoft-Teams-Samples** > **samples** > **bot-conversation-sso-quickstart** > **csharp_dotnetcore** > **BotConversationSsoQuickstart**. 
+     1. In your cloned repository, go to **Microsoft-Teams-Samples** > **samples** > **bot-conversation-sso-quickstart** > **csharp_dotnetcore** > **TeamsApp** > **appPackage**. 
      1. Create a .zip file with the following files that are present in the **appPackage** folder: 
 
         * manifest.json
