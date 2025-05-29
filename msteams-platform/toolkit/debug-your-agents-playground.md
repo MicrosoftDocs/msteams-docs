@@ -14,7 +14,7 @@ ms.date: 11/16/2023
 >
 > Microsoft 365 Agents Playground (previously known as Teams App Test Tool) is available in the latest prerelease version of Microsoft 365 Agents Toolkit (previously known as Teams Toolkit). Ensure that you install the [latest prerelease version](install-Teams-Toolkit.md#install-a-prerelease-version) of Agents Toolkit.
 
-Agents Playground makes debugging bot/agent-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in different channels. You don’t need a Microsoft 365 developer account, tunneling, or real client app and application registration to use Agents Playground.
+Agents Playground makes debugging bot or agent-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in different channels. You don’t need a Microsoft 365 developer account, tunneling, or real client app and application registration to use Agents Playground.
 
 The following image shows a sample app displaying an Adaptive Card with a list of commands in Agents Playground. It also provides a description of the commands so that you can test your app without manually searching your code:
 
@@ -32,9 +32,9 @@ The following are the advantages of Agents Playground:
 
 * **Mock data and activities**: Agents Playground makes it easy to test complex scenarios such as, sending a welcome message when a new member joins the channel, using mock data and activity triggers.
 
-* **Reliable**: Agents Playground is reliable as the application's Adaptive Card utilizes the same rendering technology as in Teams/WebChat.
+* **Reliable**: Agents Playground is reliable as the application's Adaptive Card utilizes the same rendering technology as in Teams or WebChat.
 
-* **Integration with existing applications**:  Agents Playground integrates effortlessly with existing applications built with Agent SDK/Teams AI library.
+* **Integration with existing applications**:  Agents Playground integrates effortlessly with existing applications built with Agent SDK or Teams AI library.
 
 * **Support for different scopes**: Agents Playground supports testing in personal, team, and group chat scopes.
 
@@ -50,7 +50,7 @@ Ensure you install the following tools for building and deploying your applicati
 
 ## Understand Agents Playground
 
-Agents Playground is an npm package that has a CLI command called `teamsapptester`. When you run `teamsapptester start`, it opens a web app on your local machine that emulates the Teams/WebChat client and Bot Framework service. This web app doesn't need any cloud resources as it uses mock data to simulate the contextual information.
+Agents Playground is an npm package that has a CLI command called `teamsapptester`. When you run `teamsapptester start`, it opens a web app on your local machine that emulates the Teams or WebChat client and Bot Framework service. This web app doesn't need any cloud resources as it uses mock data to simulate the contextual information.
 
 To use an application on Agents Playground, you need to provide:
 
@@ -293,12 +293,12 @@ You can use **Custom activity** to customize activity triggers such as, `reactio
 
 ## Configure Agents Playground for authentication
 
-When debugging an application that requires authentication, you can configure the Microsoft Entra client ID and client secret, with an optional tenant ID. If you created your bot using the Azure AI Bot Service, the credentials are available in the bot's App Service under **Settings** > **Configuration**.
+When debugging an application that requires authentication, you can configure the Microsoft Entra client ID and client secret, with an optional tenant ID. If you've created your bot using the Azure AI Bot Service, the credentials are available in the bot's App Service under **Settings** > **Configuration**.
 If you're unsure of the values, you can remove them from the configuration file of the locally running application and then run the application in the Agents Playground. If the application doesn't require these settings to run, you don't need to configure them.
 
 ### Environment variable / Command line
 
-Before starting Agents Playground, you can set the following environment variables: `AUTH_CLIENT_ID`, `AUTH_CLIENT_SECRET`, and `AUTH_TENANT_ID`. These values will be used for the default authentication configuration.
+Before starting Agents Playground, you can set the following environment variables: `AUTH_CLIENT_ID`, `AUTH_CLIENT_SECRET`, and `AUTH_TENANT_ID`. These values are used for the default authentication configuration.
 
 When running Agents Playground from the command line, you can also use the options: `--client-id`, `--client-secret`, and `--tenant-id`.These options override the default environment variable settings.
 
@@ -314,19 +314,19 @@ After Agents Playground has started, you can still configure authentication thro
 
    :::image type="content" source="../assets/images/toolkit-v2/debug/authentication-form.png" alt-text="Screenshot shows the form of authentication parameters and the save button.":::
 
-The log panel will show message if the configuration is successfully set.
+The log panel shows the message if the configuration is successfully set.
 
 :::image type="content" source="../assets/images/toolkit-v2/debug/authentication-enabled.png" alt-text="Screenshot shows the log panel message of successfully configure authentication settings.":::
 
 ### Authentication logic
 
-Agents Playground will acquire a JWT token using the provided authentication settings and include it in the **Authorization** header when communicating with the application. The JWT token in the application's response header will also be validated by Agents Playground. For more details about the authentication process, see [Authentication with the Bot Connector API](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication).
+Agents Playground acquires a JWT token using the provided authentication settings and includes it in the **Authorization** header when communicating with the application. The JWT token in the application's response header also is validated by Agents Playground. For more details about the authentication process, see [Authentication with the Bot Connector API](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication).
 
 ## Multiple channel support
 
 Teams is the default channel used for debugging your application, but other channels are also supported. You can change the channel by setting the `DEFAULT_CHANNEL_ID` environment variable or by using the `--channel-id` option when starting Agents Playground from the command line.
 
-Currently, the accepted channel IDs are: `msteams`, `directline`, `webchat`, and `emulator`. When you set a channel ID, the properties of the messages sent to the application will change accordingly to simulate a real environment. For the `directline` and `webchat` channels, a corresponding client will be displayed, and card rendering will differ from that of the Teams channel.
+Currently, the accepted channel IDs are: `msteams`, `directline`, `webchat`, and `emulator`. When you set a channel ID, the properties of the messages sent to the application changes accordingly to simulate a real environment. For the `directline` and `webchat` channels, a corresponding client is displayed, and card rendering differs from that of the Teams channel.
 
 :::image type="content" source="../assets/images/toolkit-v2/debug/webchat-ui.png" alt-text="Screenshot shows the card rendering result when using different channel.":::
 
@@ -444,7 +444,7 @@ It's important to understand that updating the configuration file has three majo
 
 ## Limitations
 
-* Bot/agent features enabled through the Teams app manifest aren't available as Agents Playground doesn't process it.
+* Bot or agent features enabled through the Teams app manifest aren't available as Agents Playground doesn't process it.
 
 * Agents Playground doesn't support all types of cards except Adaptive Cards.
 
@@ -600,7 +600,7 @@ Agents Playground successfully debugs your existing bot.
 
 ## Disabling data collection
 
-If you decide that you do not want to allow Agents Playground to collect usage data, you can easily disable data collection by adding option `--disable-telemetry` when start Agents Playground via command line.
+If you decide that you don't want to allow Agents Playground to collect usage data, you can easily disable data collection by adding option `--disable-telemetry` when start Agents Playground via command line.
 
 ## FAQ
 
