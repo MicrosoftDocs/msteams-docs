@@ -69,7 +69,7 @@ Meetings enable collaboration, partnership, informed communication, and shared f
 :::row-end:::
 
 <br>
-You can use Copilot agents in meetings, create scenes, provide notifications to users, populate in-meeting dialogs, and more with meeting app extensibility.
+You can use agents in calls, create scenes, provide notifications to users, populate in-meeting dialogs, and more with meeting app extensibility.
 
 > [!IMPORTANT]
 >

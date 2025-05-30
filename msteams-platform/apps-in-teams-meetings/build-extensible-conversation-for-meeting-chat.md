@@ -10,7 +10,7 @@ ms.owner: ginobuzz
 
 # Build extensible conversation for meeting chat
 
-You can make conversations extensible in Microsoft Teams meetings. Bots, Copilot agents, message extensions, cards and dialogs (referred as task modules in TeamsJS v1.x) can be combined to deliver an intuitive experience.
+You can make conversations extensible in Microsoft Teams meetings. Bots, agents, message extensions, cards and dialogs (referred as task modules in TeamsJS v1.x) can be combined to deliver an intuitive experience.
 
 ## Bots
 
@@ -27,9 +27,9 @@ The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create 
 | Teams conversation bot | This sample app shows how to use different bot conversation events available in bot framework v4. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/java) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp/demo-manifest/bot-conversation.zip)
 |Bot samples | Set of bot framework v4 samples  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) |
 
-## Copilot agents
+## Agents for Microsoft 365 Copilot
 
-Agents are scoped versions of Microsoft 365 Copilot that act as AI assistants to automate and run business processes. Agents enable you to bring custom knowledge, skills, and process automation into Microsoft 365 Copilot for your organizational needs. You can optimize agents for specific tasks, such as summarize meetings, list action items, and take actions such as updating records. Declarative agents, custom engine agents, plugin promoted declarative agents and all other store copilot agents are supported in Teams meetings. For more information, see [your extensibility options for Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/decision-guide).
+Agents are scoped versions of Microsoft 365 Copilot that act as AI assistants to automate and run business processes. Agents enable you to bring custom knowledge, skills, and process automation into Microsoft 365 Copilot for your organizational needs. Declarative agents, custom engine agents, plugin promoted declarative agents and all other store copilot agents are supported in Teams calls. For more information, see [your extensibility options for Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/decision-guide).
 
 ## Message extensions
 
