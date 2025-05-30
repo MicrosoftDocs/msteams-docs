@@ -10,7 +10,7 @@ ms.owner: ginobuzz
 
 # Build extensible conversation for meeting chat
 
-You can make conversations extensible in Microsoft Teams meetings. Bots, message extensions, cards, and dialogs (referred as task modules in TeamsJS v1.x) can be combined to deliver an intuitive experience.
+You can make conversations extensible in Microsoft Teams meetings. Bots, agents, message extensions, cards and dialogs (referred as task modules in TeamsJS v1.x) can be combined to deliver an intuitive experience.
 
 ## Bots
 
@@ -27,6 +27,10 @@ The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create 
 | Teams conversation bot | This sample app shows how to use different bot conversation events available in bot framework v4. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/java) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp/demo-manifest/bot-conversation.zip)
 |Bot samples | Set of bot framework v4 samples  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) |
 
+## Agents for Microsoft 365 Copilot
+
+Agents are scoped versions of Microsoft 365 Copilot that act as AI assistants to automate and run business processes. Agents enable you to bring custom knowledge, skills, and process automation into Microsoft 365 Copilot for your organizational needs. Declarative agents, custom engine agents, plugin promoted declarative agents and all other store copilot agents are supported in Teams calls. For more information, see [your extensibility options for Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/decision-guide).
+
 ## Message extensions
 
 Message extensions allow the users to interact with your web service through buttons and forms in the Teams client. Users can search or initiate actions in an external system from the compose message area, the command box, or directly from a message. You can send back the results of that interaction to the Teams client in the form of a richly formatted card. Implementing message extensions for meeting chats is no different than regular chats. To implement message extension, start with [message extensions](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions?tabs=dotnet).
@@ -39,12 +43,12 @@ Cards provide users with various visual, audio, and selectable messages and help
 
 The following table provides the user types and lists the features that each user can access in meetings:
 
-| User type | Bots | Message extensions | Adaptive Cards | Dialogs |
+| User type | Bots and Copilot agents | Message extensions | Adaptive Cards | Dialogs |
 | :-- | :-- | :-- | :-- | :-- |
-| In-tenant | Can view messages, interact with the content, and invoke the bot. | Available | Available | Available |
-| Guest, part of the tenant Microsoft Entra ID | Can view messages, interact with the content, and invoke the bot. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
-| Federated, for more information, see [non-standard users](/microsoftteams/non-standard-users). |Can view messages, interact with the content, and invoke the bot. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
-| Anonymous |  Can view and interact with the messages sent by the bot. Can't invoke the bot. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
+| In-tenant | Can view messages, interact with the content, and invoke the bot and agent. | Available | Available | Available |
+| Guest, part of the tenant Microsoft Entra ID | Can view messages, interact with the content, and invoke the bot and agent. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
+| Federated, for more information, see [non-standard users](/microsoftteams/non-standard-users). |Can view messages, interact with the content, and invoke the bot and agent. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
+| Anonymous |  Can view and interact with the messages sent by the bot. Can't invoke the bot and agent. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
 
 > [!Note]
 >
