@@ -106,7 +106,7 @@ If you're not re-uploading an updated package, ensure that the ID is unique.
 
 * If you get a **Manifest parsing has failed** error message when uploading the app to teams, use [Teams app validator](https://dev.teams.microsoft.com/validation) to validate the app package, including the app manifest and OpenAPI spec file. Review the [app manifest](../messaging-extensions/api-based-overview.md#app-manifest) and the [OpenAPI Description (OAD)](../messaging-extensions/api-based-overview.md#openapi-description-oad) requirements to resolve errors or warnings and try uploading your app.
 
-   :::image type="content" source="../assets/images/Copilot/api-me-troubleshoot-sideload.png" alt-text="Screenshot shows the error message when uploading an app to Teams along with the option to copy the error details to clipboard.":::
+   :::image type="content" source="../assets/images/Copilot/api-me-troubleshoot-upload.png" alt-text="Screenshot shows the error message when uploading an app to Teams along with the option to copy the error details to clipboard.":::
 
 * If you encounter any issues while running your app in Teams, use the following troubleshooting steps to identify and resolve your issue:
 

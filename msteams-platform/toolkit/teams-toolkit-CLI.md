@@ -204,7 +204,7 @@ The `teamsapp help` command displays all the commands available for Teams Toolki
 
 ## `teamsapp install`
 
-Sideload an application package into Teams.
+Upload an application package into Teams.
 
 ### `teamsapp install` parameters
 
@@ -217,13 +217,13 @@ The following table lists the parameters available for `teamsapp install`:
 
 ### `teamsapp install` scenarios
 
-Sideload the application package with json based app manifest to Teams, Outlook, and the Microsoft 365 app.
+Upload the application package with json based app manifest to Teams, Outlook, and the Microsoft 365 app.
 
 ```bash
 teamsapp install --file-path appPackage.zip
 ```
 
-Sideload the Outlook add-in application package with XML based manifest to Outlook.
+Upload the Outlook add-in application package with XML based manifest to Outlook.
 
 ```bash
 teamsapp install --xml-path manifest.xml
@@ -783,7 +783,7 @@ Manage Microsoft 365 app.
 
 | Command | Description |
 |:----------------  |:-------------|
-| `sideloading [options]` | Sideloading a Microsoft 365 App with corresponding information specified in the given app manifest package. |
+| `uploading [options]` | Uploading a Microsoft 365 App with corresponding information specified in the given app manifest package. |
 | `unacquire [options]` | Remove an acquired Microsoft 365 App. |
 | `launchinfo [options]` | Get launch information of an acquired Microsoft 365 App. |
 

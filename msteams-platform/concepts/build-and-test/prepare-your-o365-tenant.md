@@ -47,7 +47,7 @@ To turn on the custom app uploading for your developer tenant:
 
 2. Go to **Teams apps** > **Setup Policies** > **Global**.
 
-    :::image type="content" source="../../assets/images/prepare-test-tenant/turn-on-sideload.png" alt-text="Screenshot shows the turn on custom app upload view.":::
+    :::image type="content" source="../../assets/images/prepare-test-tenant/turn-on-upload.png" alt-text="Screenshot shows the turn on custom app upload view.":::
 
 3. Toggle **Upload custom apps** to the **On** position.
 

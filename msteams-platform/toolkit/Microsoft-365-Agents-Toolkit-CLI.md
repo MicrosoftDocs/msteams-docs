@@ -45,7 +45,7 @@ The following table lists the supported commands to help developers build and ma
 | [`atk entra-app`](#atk-install)         | Manage the Microsoft Entra app in the current application.                                                         |
 | [`atk env`](#atk-env)                   | Manage environments.                                                                                               |
 | [`atk help`](#atk-help)                 | Show Microsoft 365 Agents Toolkit CLI help.                                                                        |
-| [`atk install`](#atk-install)           | Sideload a given application package across Microsoft 365.                                                         |
+| [`atk install`](#atk-install)           | Upload a given application package across Microsoft 365.                                                         |
 | [`atk launchinfo`](#atk-launchinfo)     | Get launch information of an acquired Microsoft 365 App.                                                           |
 | [`atk list`](#atk-list)                 | List available Microsoft 365 App templates and samples.                                                            |
 | [`atk provision`](#atk-provision)       | Run the provision stage in `m365agents.yml` or `m365agents.local.yml`.                                             |
@@ -195,7 +195,7 @@ The `atk help` command displays all the commands available for Microsoft 365 Age
 
 ## `atk install`
 
-Sideload a given application package across Microsoft 365.
+Upload a given application package across Microsoft 365.
 
 ### `atk install` parameters
 
@@ -209,19 +209,19 @@ The following table lists the parameters available for `atk install`:
 
 ### `atk install` scenarios
 
-Sideload the application package with JSON-based manifest to Teams, Outlook, and the Microsoft 365 app.
+Upload the application package with JSON-based manifest to Teams, Outlook, and the Microsoft 365 app.
 
 ```bash
 atk install --file-path appPackage.zip
 ```
 
-Sideload the application package in Shared scope with JSON-based manifest to Teams, Outlook, and the Microsoft 365 app.
+Upload the application package in Shared scope with JSON-based manifest to Teams, Outlook, and the Microsoft 365 app.
 
 ```bash
 atk install --file-path appPackage.zip --scope Shared
 ```
 
-Sideload the Outlook add-in application package with XML-based manifest to Outlook.
+Upload the Outlook add-in application package with XML-based manifest to Outlook.
 
 ```bash
 atk install --xml-path manifest.xml
