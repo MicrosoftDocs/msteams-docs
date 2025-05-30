@@ -35,6 +35,7 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 Teams platform features that are available to all app developers.</br>
 **2025 May**
 
+* ***June 01, 2025***: [Introducing agents support in Microsoft Teams calls](/microsoftteams/platform/apps-in-teams-meetings/build-extensible-conversation-for-meeting-chat.md).
 * ***May 19, 2025***: [Introducing Microsoft 365 admin center permission to view custom app analytics and the agent usage analytics for custom apps in Developer Portal.](/microsoftteams/platform/concepts/build-and-test/analyze-your-apps-usage-in-developer-portal?tabs=custom-apps-built-for-your-org).
 * ***May 19, 2025***: </br> Branding updates: </br> • Teams Toolkit is now Microsoft 365 Agents Toolkit. </br> • Teams App Test Tool is now Microsoft 365 Agents Playground. </br> • Teams App CLI, TeamFx CLI, and Teams Toolkit CLI are now Microsoft 365 Agents Toolkit CLI. </br> • `teamsapp` CLI signature is now referred as `atk`.
 * ***May 16, 2025***: [Use Meeting AI Insights API to fetch conversation summaries, action items, and mentions directly from Teams meetings.](graph-api/meeting-transcripts/meeting-insights.md)
@@ -52,7 +53,6 @@ Teams platform features that are available to all app developers.</br>
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-| 01/06/2025 | Introducing agents support in Microsoft Teams calls. | Build extensible conversation for meeting chat > [Agents for Microsoft 365 Copilot](apps-in-teams-meetings/build-extensible-conversation-for-meeting-chat.md).|
 | 30/04/2025 | Introducing streaming messages for bot apps. | Build bots and agents > Bot user experience > [Stream bot messages](bots/streaming-ux.md) |
 | 21/04/2025 | Precache your tab app to optimize its initial load time. | Build tabs > Tab features > App caching for your tab app > [Debug tool for cached apps](tabs/how-to/app-caching.md#precaching-tab-apps) |
 | 21/04/2025 | You can specify a 32x32 color icon with a transparent background to ensure a consistent appearance when your app runs in Outlook and Microsoft 365. | Publish your app or agent > Create Teams app package > [Color icon](concepts/build-and-test/apps-package.md#color-icon) |
