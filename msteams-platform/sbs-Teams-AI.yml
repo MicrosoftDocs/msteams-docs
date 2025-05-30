@@ -462,7 +462,7 @@ items:
 
             ```typescript
             console.log('\nGet Bot Framework Emulator: https://aka.ms/botframework-emulator');
-            console.log('\nTo test your bot in Teams, upload the app manifest.json within Teams Apps.');
+            console.log('\nTo test your bot in Teams, upload the app manifest within Teams Apps.');
             ```
    
     1. In the root folder, create new folder structure: **prompts** > **sequence**.
