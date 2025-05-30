@@ -39,7 +39,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | Term | Definition |
 | --- | --- |
 | [Blazor](../get-started/get-started-overview.md) | A free and open-source web framework that enables developers to create web apps using C# and HTML. It's being developed by Microsoft. |
-| [Bicep](../toolkit/provision.md) | A declarative language, which means the elements can appear in any order. Unlike imperative languages, the order of elements doesn't affect how deployment is processed. |
+| [Bicep](../toolkit/provision.md) | Bicep is a domain-specific language designed to simplify the process of deploying Azure resources using declarative syntax. |
 | [Bot](../bots/what-are-bots.md) | A bot is an app or service that executes programmed repetitive tasks. <br> **See also**: [Conversational bot](#c); [Chat bot](#c) |
 | Bot Builder SDK | It's an open-source SDK hosted on GitHub to help build dialogs within your Node.js- or C#-based bot. |
 | [Bot Emulator](../bots/how-to/debug/locally-with-an-ide.md#use-the-bot-emulator) | A desktop application that lets you test and debug bots, either locally or remotely. |
@@ -79,7 +79,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Conversational bot](../bots/how-to/conversations/conversation-messages.md) |  It lets a user interact with your web service using text, interactive cards, and dialogs. <br>**See also** [Chat bot](#c); [Standalone app](#s) |
 | [Copilot](../messaging-extensions/build-bot-based-agent.md)|Microsoft 365 Copilot is powered by an advanced processing and orchestration engine that seamlessly integrates Microsoft 365 apps, Microsoft Graph, and Large Language Models (LLMs) to turn your words into the most powerful productivity tool. |
 | [Copilot handoff](../bots/how-to/conversations/bot-copilot-handoff.md) | Copilot handoffs are plugin-provided deep links that carry over chat context, enabling users to seamlessly transition their chat with Microsoft 365 Copilot to your bot service. |
-| Custom app built for your org (LOB app) | An app created only for Teams by you or your organization.  |
+| Custom app built for your org (LOB app) | An app created only for Teams by you or your organization. |
 | [Custom app upload](../toolkit/publish.md#publish-to-individual-scope-or-custom-app-upload-permission) | A process where a Teams app is loaded to the Teams client to test it in the Teams environment before distributing it. |
 | [Custom engine agent](/microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json) | Custom engine agents are fully customized AI assistants designed for scenarios that require complex workflows, orchestration, or specific language models. <br>For more information, see [Custom engine agent](/microsoft-365-copilot/extensibility/agents-overview#custom-engine-agents)  <br> **See also**: [Agents](#a); [Declarative agent](#d) |
 | [Custom Together Mode](../apps-in-teams-meetings/teams-together-mode.md)| Custom Together Mode scenes in Teams provide an immersive and engaging meeting environment. <br>**See also**: [Developer Portal for Teams](#d) |
@@ -89,7 +89,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 
 | Term | Definition |
 | --- | --- |
-| [Declarative agent](/microsoft-365-copilot/extensibility/agents-overview) | Declarative agents are AI-powered tools that allow you to configure Copilot for specific scenarios by adding custom instructions, additional knowledge, and actions to automate business processes. <br> **See also**: [Agents](#a); [Custom engine agent](#c); [Declarative agent](#d) |
+| [Declarative agent](/microsoft-365-copilot/extensibility/agents-overview) | Declarative agents are AI-powered tools that allow you to configure Copilot for specific scenarios by adding custom instructions, additional knowledge, and actions to automate business processes. <br> **See also**: [Agents](#a); [Custom engine agent](#c) |
 | [Deep linking](../concepts/build-and-test/deep-links.md) | In a Teams app, you can create deep links to information and features within Teams or to help the user navigate to content in your app. |
 | [Default install scope](../concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-install-scope)| An app manifest property (`defaultInstallScope`) that specifies the install scope defined for the app by default. <br> **See also**: [App manifest](#a); [App scope](#a)|
 | [Delegated permission](../tabs/how-to/authentication/tab-sso-graph-api.md) | They're used by apps that have a signed-in user present. For these apps, either the user or an administrator consents to the permissions that the app requests and the app can act as the signed-in user when making calls to Microsoft Graph.  <br> **See also**: [SSO](#s); [Permission](#p); [Scope](#s) |
@@ -119,7 +119,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | --- | --- |
 |[Federated or external](../apps-in-teams-meetings/teams-apps-in-meetings.md#user-types-in-teams)|A federated or an external user is a Teams user from another organization who has been invited to join a meeting. Federated users have valid credentials with federated partners and are authorized by Teams. <br>**See also**: [Anonymous](#a); [In-tenant](#i); [Guest](#g) |
 | [First-run Experience](../concepts/design/design-teams-app-ui-templates.md)|A First-run Experience (FRE) is a user's introduction to your product. The FRE helps users to get started with the functions, features, and benefits of the product and influences users to come back and continue using your product such as tab or bot.|
-| [Fluent UI](../concepts/design/design-teams-app-basic-ui-components.md)| Design and build your Teams app from scratch with the basic Fluent UI components. These components can work across different use cases, themes, and screen sizes. <br>**See also**: [Fluent UI React Components](https://react.fluentui.dev/?path=/docs/concepts-introduction--page)|
+| [Fluent UI](../concepts/design/design-teams-app-basic-ui-components.md)| Fluent UI is a front-end framework for building consistent, accessible, and visually cohesive user interfaces across Teams applications and beyond. <br> **See also**: [Fluent UI React Components](https://react.fluentui.dev/?path=/docs/concepts-introduction--page)|
 | [Fully qualified domain name (FQDN)](../tabs/how-to/authentication/tab-sso-register-aad.md) | A fully qualified domain name (FQDN) represents a domain name of a host or IP address(es). |
 
 ## G
@@ -140,7 +140,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | --- | --- |
 | [Identity provider](../concepts/authentication/authentication.md) | Identity provide (IDP) is an entity that stores and provides credentials to the user. It also allows users to register themselves.  <br>**See also**: [Authentication](#a) |
 | [Identity token](../tabs/how-to/authentication/tab-sso-overview.md) | An identity token is used for authenticating app users. It's used by an application to verify if the app user is as per the declared identity. <br> **See also**: [Access token](#a) <br> For more information, see [ID tokens](/azure/active-directory/develop/id-tokens).|
-| [Incoming Webhook](../webhooks-and-connectors/how-to/add-incoming-webhook.md) | It lets an external app share content in Teams channels. These webhooks are used as tracking and notifying tools. <br>**See also**: [Webhook](#w); [Outgoing Webhook](#o) |
+| [Incoming Webhook](../webhooks-and-connectors/how-to/add-incoming-webhook.md) | A way to allow external applications or services to send messages from external systems into a Teams channel. These webhooks are used as tracking and notifying tools. <br>**See also**: [Webhook](#w); [Outgoing Webhook](#o) |
 | [In-meeting app experience](../apps-in-teams-meetings/teams-apps-in-meetings.md) | A stage of Teams meeting lifecycle. With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. <br>**See also**: [Meeting lifecycle](#m) |
 | [In-tenant](../apps-in-teams-meetings/teams-apps-in-meetings.md#user-types-in-teams) | In-tenant users belong to the organization and have credentials in Microsoft Entra ID for the tenant. They're full-time, onsite, or remote employees and can be an organizer, presenter, or attendee. <br>**See also**: [Anonymous](#a); [Federated or external](#f); [Guest](#g) |
 
@@ -174,7 +174,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Microsoft 365 Agents Toolkit](../toolkit/agents-toolkit-fundamentals.md) | Agents Toolkit (previously knows as Teams Toolkit) enables you to create custom Teams apps directly within the Visual Studio Code environment. |
 | [Microsoft 365 Agents Toolkit CLI](../toolkit/Teams-Toolkit-CLI.md) | Agents Toolkit CLI is a text-based command line interface that accelerates Teams application development. It was previously known as Teams Toolkit CLI or TeamsFx CLI or Teams App CLI. |
 | Microsoft 365 client ID | See [Client ID](#c) |
-| [Microsoft 365 Agents SDK](../toolkit/teamsfx-sdk.md) | Microsoft 365 Agents SDK is pre-configured in a scaffolded project using TeamsFx toolkit or CLI. |
+| [Microsoft 365 Agents SDK](../toolkit/teamsfx-sdk.md) | A framework designed to help you build, deploy, and manage agents that work across Microsoft 365 platforms including Copilot and Teams. |
 | [Add Microsoft 365 channel for your bot](../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app) | A feature of Teams message extension app that lets the users interact with it from Microsoft 365. |
 | [Microsoft 365 developer program](../toolkit/tools-prerequisites.md)| The Microsoft 365 Developer Program helps you build apps that extend Microsoft 365. |
 | Microsoft App Password | A secret string that the application uses to prove its identity when requesting a token. Also, it can be referred to as application password. <br> **See also**: [Client secret](#c) |
