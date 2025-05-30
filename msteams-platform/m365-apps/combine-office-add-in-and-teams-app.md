@@ -194,7 +194,7 @@ To separate the source code for the tab or bot, perform the following steps:
 
 ### Merge the manifest
 
-The Teams app's manifest is generated at debug-and-sideload time (or build time) from the `manifest.json` file in the **\appPackage** folder of the Teams project. This file is a **template** for a manifest. In this article, it's referred to as the *template* or *manifest template*. Most of the markup is hardcoded into the template, but there are also some configuration files that contain data that gets added to the final generated manifest. In this procedure, perform the following tasks:
+The Teams app's manifest is generated at debug-and-upload time (or build time) from the `manifest.json` file in the **\appPackage** folder of the Teams project. This file is a **template** for a manifest. In this article, it's referred to as the *template* or *manifest template*. Most of the markup is hardcoded into the template, but there are also some configuration files that contain data that gets added to the final generated manifest. In this procedure, perform the following tasks:
 
 - Copy markup from the add-in's manifest to the Teams app's manifest template.
 - Edit the configuration files. 
@@ -666,7 +666,7 @@ To see both the app and the add-in running at the same time, take the following 
 1. In the Visual Studio Code **TERMINAL**, navigate to the root of the project and then run `npm run build:add-in`.
 1. Copy the file `\add-in\dist\manifest.dev.json` to the `\appPackage` folder.
 1. Rename the copy in the `\appPackage` folder to `manifest.addinPreview.json`.
-1. In the **TERMINAL**, run `npx office-addin-dev-settings sideload .\appPackage\manifest.addinPreview.json`. This process can take a couple of minutes and opens the Outlook desktop. (If you're prompted to install `office-addin-dev-settings`, respond **yes**.)
+1. In the **TERMINAL**, run `npx office-addin-dev-settings upload .\appPackage\manifest.addinPreview.json`. This process can take a couple of minutes and opens the Outlook desktop. (If you're prompted to install `office-addin-dev-settings`, respond **yes**.)
 1. Go to Outlook.
 1. Open the **Inbox** of your Microsoft 365 account identity.
 1. Open any message. 
