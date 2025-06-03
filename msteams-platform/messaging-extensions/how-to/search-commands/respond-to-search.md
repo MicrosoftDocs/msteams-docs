@@ -125,7 +125,7 @@ The `config` response includes:
 * The `type` field within `composeExtension` set to `config`, indicating the nature of this response as a configuration.
 * The `responseType` that identifies this response is for the `composeExtension` of the app.
 
-:::image type="content" source="../../../assets/images/configuration-response-me.png" alt-text="The screenshot shows the configuration response for message extension." lightbox="../../../assets/images/config-response-me-lightbox.png":::
+:::image type="content" source="../../../assets/images/configuration-response-me.png" alt-text="The screenshot shows the configuration response for message extension.":::
 
 Initialize the Teams SDK on the configuration page and use `authentication.notifySuccess()` to send the collected configuration data back to Teams. `submitConfig()` function demonstrates how to structure and return configuration values after the user completes the setup process.
 
