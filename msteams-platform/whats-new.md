@@ -35,7 +35,7 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 Teams platform features that are available to all app developers.</br>
 **2025 May**
 
-***June 01, 2025***: [Introducing agents support in Microsoft Teams calls](/microsoftteams/platform/apps-in-teams-meetings/build-extensible-conversation-for-meeting-chat).
+***June 01, 2025***: [Introducing agents support in Microsoft Teams calls.](/microsoftteams/platform/apps-in-teams-meetings/build-extensible-conversation-for-meeting-chat)
 
 :::column-end:::
 :::row-end:::
