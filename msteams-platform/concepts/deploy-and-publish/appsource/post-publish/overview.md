@@ -125,7 +125,7 @@ You must maintain your app's user experience as at the initial app review. If yo
 
 To discontinue your app:
 
-* To remove your app from Microsoft AppSource, in your Microsoft Partner Center account, go the **Product Overview** page and select **Stop Selling**. This action removes the app from all marketplace listings and user interfaces. The app is no longer discoverable, installable, or available for acquisition. However, any content previously posted by the app—for example, messages from a bot—remains visible in user history.
+* To remove your app from Microsoft AppSource, in your Microsoft Partner Center account, go the **Product Overview** page and select **Stop Selling**. This action removes the app from all marketplace listings and user interfaces. The app is no longer discoverable, installable, or available for acquisition. Any content previously posted by the app, messages from a bot will be visible in user history.
 
 * Contact the Microsoft Teams App Health evaluation team at [apphealthevaluation@microsoft.com](mailto:apphealthevaluation@microsoft.com) or [teams-sas@microsoft.com](mailto:teams-sas@microsoft.com) to remove your app from the Teams Store.
 
