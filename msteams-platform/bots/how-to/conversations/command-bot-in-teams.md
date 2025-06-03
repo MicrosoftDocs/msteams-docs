@@ -4,17 +4,18 @@ author: surbhigupta
 description: Learn about command bot, installation, customize initialization, add command and responses, and customize trigger pattern.
 ms.topic: conceptual
 ms.author: surbhigupta
+ms.owner: angovil
 ms.localizationpriority: high
 ms.date: 12/11/2024
 ---
 
 # Command bot in Teams
 
-Microsoft Teams allows you to automate simple and repetitive tasks in a conversation. You can build a command bot that can respond to simple commands sent in chats with Adaptive Cards. You can create a command bot template in Teams Toolkit that responds to chat commands by displaying UI using an Adaptive Card. This enables users to send messages in Teams and your app can provide a response as required.
+Microsoft Teams allows you to automate simple and repetitive tasks in a conversation. You can build a command bot that can respond to simple commands sent in chats with Adaptive Cards. You can create a command bot template in Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) that responds to chat commands by displaying UI using an Adaptive Card. This enables users to send messages in Teams and your app can provide a response as required.
 
 The command bot template is built using the TeamsFx SDK, which provides a simple set of functions over the Microsoft Bot Framework. Command bot can be used in different scenarios such as checking ticket status and retrieving help information.
 
-:::image type="content" source="../../../assets/images/command-bot-teams/commandbot-flowchart1.png" alt-text="Screenshot of creating command bot app with adaptive card flow chart." lightbox="../../../assets/images/command-bot-teams/commandbot-flowchart1.png":::
+:::image type="content" source="../../../assets/images/command-bot-teams/commandbot-flowchart1.png" alt-text="Screenshot of creating command bot app with Adaptive Card flow chart." lightbox="../../../assets/images/command-bot-teams/commandbot-flowchart1.png":::
 
 **Advantages**
 
@@ -169,7 +170,7 @@ Add the following JSON code to `doSomethingCommandResponse.json` and `DoSomethin
       }
   ```
 
-Respond with plain text, or with an Adaptive Card. You can use the [Adaptive Card Designer](https://adaptivecards.io/designer/) to help visually design your Adaptive Card UI. For more information on how to send an Adaptive card with dynamic data, see [build command and response using Adaptive card](https://github.com/OfficeDev/TeamsFx/wiki/Respond-to-chat-commands-in-Teams#how-to-build-command-response-using-adaptive-card-with-dynamic-content).
+Respond with plain text, or with an Adaptive Card. You can use the [Adaptive Card Designer](https://adaptivecards.microsoft.com/designer.html) to help visually design your Adaptive Card UI. For more information on how to send an Adaptive Card with dynamic data, see [build command and response using Adaptive Card](https://github.com/OfficeDev/TeamsFx/wiki/Respond-to-chat-commands-in-Teams#how-to-build-command-response-using-adaptive-card-with-dynamic-content).
 
 <br>
 
@@ -290,10 +291,10 @@ namespace MyCommandApp.Commands
         {
             _logger?.LogInformation($"App received message: {message.Text}");
 
-            // Read adaptive card template
+            // Read Adaptive Card template
             var cardTemplate = await File.ReadAllTextAsync(_adaptiveCardFilePath, cancellationToken);
 
-            // Render adaptive card content
+            // Render Adaptive Card content
             var cardContent = new AdaptiveCardTemplate(cardTemplate).Expand
             (
                 new HelloWorldModel
@@ -352,7 +353,7 @@ const commandApp = new ConversationBot({
 ```csharp
 /** Update ConversationBot in Program.cs **/
 builder.Services.AddSingleton<HelloWorldCommandHandler>();
-builder.Services.AddSingleton<DoSomethingCommandHandler>(); // Add doSomething command handler to serrvice container
+builder.Services.AddSingleton<DoSomethingCommandHandler>(); // Add doSomething command handler to service container
 builder.Services.AddSingleton(sp =>
 {
     var options = new ConversationOptions()
@@ -385,14 +386,14 @@ The default pattern to trigger a command is through a defined keyword. You can a
 
 You can find any capture group in `message.matches`, when using regular expressions. For example if user inputs `reboot myMachine`, `message.matches[1]`, it captures `myMachine`. The following example uses regular expression to capture strings after `reboot`:
 
-```
+```javascript
 class HelloWorldCommandHandler {
   triggerPatterns = /^reboot (.*?)$/i; //"reboot myDevMachine";
   async handleCommandReceived(context, message) {
     console.log(`Bot received message: ${message.text}`);
     const machineName = message.matches[1];
     console.log(machineName);
-    // Render your adaptive card for reply message
+    // Render your Adaptive Card for reply message
     const cardData = {
       title: "Your Hello World Bot is Running",
       body: "Congratulations! Your hello world bot is running. Click the button below to trigger an action.",
@@ -405,7 +406,7 @@ class HelloWorldCommandHandler {
 
 ### Build command and response using Adaptive Card with dynamic content
 
-Adaptive Card provides [template language](/adaptive-cards/templating/) to allow users to render dynamic content with the same layout (the template). For example, use the adaptive card to render a list of items, such as to-do items or assign bugs that varies between different users.
+Adaptive Card provides [template language](/adaptive-cards/templating/) to allow users to render dynamic content with the same layout (the template). For example, use an Adaptive Card to render a list of items, such as to-do items or assign bugs that varies between different users.
 
 You can perform the following steps to build command and response using Adaptive Card with dynamic content:
 
@@ -418,11 +419,11 @@ If needed, you can add new cards for your application. For more information on h
 
 ### Access Microsoft Graph
 
-If you're responding to a command that needs to access Microsoft Graph data of an already signed in Teams user, you can do so by single sign-on (SSO) with their Teams user token. Read more about how Teams Toolkit can help you to add [single sign-on to Teams app](../../../toolkit/add-single-sign-on.md).
+If you're responding to a command that needs to access Microsoft Graph data of an already signed in Teams user, you can do so by single sign-on (SSO) with their Teams user token. Read more about how Agents Toolkit can help you to add [single sign-on to Teams app](../../../toolkit/add-single-sign-on.md).
 
 ### Connect to existing APIs
 
-If you don't have the required SDK and need to invoke external APIs in your code, the **Teams: Connect to an API** command in Microsoft Visual Studio Code (VS Code) Teams Toolkit extension, or the **teamsfx add api-connection** command in TeamsFx CLI can be used to bootstrap code to call target APIs. For more information, see [configure API connection](../../../toolkit/add-API-connection.md#).
+If you don't have the required SDK and need to invoke external APIs in your code, the **Microsoft 365 Agents: Connect to an API** command in Microsoft Visual Studio Code (VS Code) Agents Toolkit extension, or the **atk add api-connection** command in Microsoft 365 Agents Toolkit CLI (previously known as TeamsFx CLI) can be used to bootstrap code to call target APIs. For more information, see [configure API connection](../../../toolkit/add-API-connection.md#).
 
 ## FAQ
 

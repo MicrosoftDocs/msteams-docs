@@ -46,7 +46,7 @@ To use a certificate for bot authentication:
 
 1. Under **Certificates**, select **Upload certificate**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/certificates-secrets.png" alt-text="Screenshot shows the certificates and secrets option.":::
+    :::image type="content" source="../assets/images/toolkit-v2/certificates-secrets.png" alt-text="Screenshot shows the certificates and secrets option.":::
 
     The **Upload a certificate** window appears.
 
@@ -59,7 +59,7 @@ To use a certificate for bot authentication:
 
 1. Select **Add**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/upload-certificate.png" alt-text="Screenshot shows the upload certificate option.":::
+    :::image type="content" source="../assets/images/toolkit-v2/upload-certificate.png" alt-text="Screenshot shows the upload certificate option.":::
 
 ## Update the bot app code
 
@@ -112,9 +112,12 @@ To delete the bot secret:
 1. In the left pane, under **Manage**, select **Certificates & secrets**.
 1. Delete the secrets from Entra.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/delete-client-secret-value.png" alt-text="Screenshot shows the delete client secret value.":::
+    :::image type="content" source="../assets/images/toolkit-v2/delete-client-secret-value.png" alt-text="Screenshot shows the delete client secret value.":::
 
 Your bot app now uses the certificate for authentication.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Update%20to%20certificate-based%20Authentication&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fupdate-bot-me-app-to-use-certificate-or-msi-for-authentication%3Ftabs%3Dcertificate%252Cjs1%252Cjs2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fupdate-bot-me-app-to-use-certificate-or-msi-for-authentication.md&documentVersionIndependentId=fb0fc1e4-02c4-5de2-bed1-da3c33971117&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 # [Update to MSI-based authentication](#tab/msi)
 
@@ -159,7 +162,7 @@ To create a new **Azure Bot** service with MSI type, follow these steps:
 
 1. From the **Creation type**, select **Create new Microsoft App ID**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/microsoft-app-id.png" alt-text="Screenshot shows the microsoft app ID option.":::
+    :::image type="content" source="../assets/images/toolkit-v2/microsoft-app-id.png" alt-text="Screenshot shows the microsoft app ID option.":::
 
     OR
 
@@ -228,9 +231,12 @@ To delete the bot secret:
 1. In the left pane, under **Manage**, select **Certificates & secrets**.
 1. Delete the secrets from Entra.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/delete-client-secret-value.png" alt-text="Screenshot shows the delete client secret value.":::
+    :::image type="content" source="../assets/images/toolkit-v2/delete-client-secret-value.png" alt-text="Screenshot shows the delete client secret value.":::
 
 Your bot app now uses MSI for authentication.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Update%20to%20MSI-based%20authentication&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fupdate-bot-me-app-to-use-certificate-or-msi-for-authentication%3Ftabs%3Dmsi%252Cjs1%252Cjs2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fupdate-bot-me-app-to-use-certificate-or-msi-for-authentication.md&documentVersionIndependentId=fb0fc1e4-02c4-5de2-bed1-da3c33971117&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 ---
 

@@ -1,10 +1,11 @@
 ---
 title: Authentication for API-based Message Extension
-author: v-ypalikila
+author: surbhigupta
 description: Learn about the requirements and troubleshooting guidelines for an API-based message extension, authentication, register an API key, and schema mapping.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
+ms.owner: slamba
 ms.date: 10/19/2023
 ---
 
@@ -30,6 +31,10 @@ You can implement authentication in API-based message extensions to provide secu
 
     For more information, see [configure your app in Microsoft Entra ID](api-based-microsoft-entra.md).
 
+* **OAuth authentication**: OAuth 2.0 in your Teams app is a great way to securely access user data from third-party applications without having to expose user credentials. You can choose to grant access only to the specific data you need, and the user must give their consent before your app can access their data.
+
+  For more information, see [enable OAuth authentication for API based message extension](api-based-oauth.md).
+
 * **None**: Update `none` as a value for `authorization` in an API-based message extension when the API doesn't require any authentication for the user. When Teams service sends a request to the API, it doesn't supply any authentication information.
 
     ```json
@@ -42,3 +47,4 @@ You can implement authentication in API-based message extensions to provide secu
 
 * [Create API-based message extension](create-api-message-extension.md)
 * [Authenticate users in Microsoft Teams](../concepts/authentication/authentication.md)
+* [Enable OAuth authentication for API based message extension](api-based-oauth.md)

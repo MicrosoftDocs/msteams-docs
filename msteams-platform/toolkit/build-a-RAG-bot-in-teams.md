@@ -1,7 +1,7 @@
 ---
 title: Create a Teams AI Bot with RAG
 author: surbhigupta
-description: Learn how to build basic AI chatbot using Teams AI library in Teams Toolkit, RAG scenarios, data integration, Azure AI Search, and Microsoft 365 as data sources.
+description: Learn how to build basic AI chatbot using Teams AI library in Microsoft 365 Agents Toolkit, RAG scenarios, data integration, Azure AI Search, and Microsoft 365 as data sources.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
@@ -16,14 +16,14 @@ The advanced Q&A chatbots are powerful apps built with the help of Large Languag
 
 * **Retrieval and generation**: The RAG chain, which takes the user query at run time and retrieves the relevant data from the index, then passes it to the model.
 
-Microsoft Teams enables you to build a conversational bot with RAG to create an enhanced experience to maximize  productivity. Teams Toolkit provides a series of ready to use app templates in the **Chat With Your Data** category that combines the functionalities of Azure AI search, Microsoft 365 SharePoint, and custom API as different data source and LLMs to create a conversational search experience in Teams.
+Microsoft Teams enables you to build a conversational bot with RAG to create an enhanced experience to maximize  productivity. Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) provides a series of ready to use app templates in the **Chat With Your Data** category that combines the functionalities of Azure AI search, Microsoft 365 SharePoint, and custom API as different data source and LLMs to create a conversational search experience in Teams.
 
 ## Prerequisites
 
 | Install | For using... |
 | --- | --- |
 | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or Python build environments. Use the latest version. |
-| [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
+| [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
 | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
 | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and calls all in one place.|
 | [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's Generative Pretrained Transformer (GPT). If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
@@ -32,39 +32,43 @@ Microsoft Teams enables you to build a conversational bot with RAG to create an 
 
 1. Open **Visual Studio Code**.
 
-1. Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="false"::: icon in the Visual Studio Code **Activity Bar**.
+1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="~/assets/images/toolkit-v2/toolkit-sidebar-icon.PNG" border="false"::: icon in the Visual Studio Code **Activity Bar**.
 
-1. Select **Create a New App**.
+1. Select **Create a New Agent/App**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/create-new-app.png" alt-text="Screenshot shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
+   :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/create-new-app.png" alt-text="Screenshot shows the location of the Create New Project link in the Agents Toolkit sidebar.":::
 
-1. Select **Custom Engine Agent**.
+1. Select **Agent for Teams**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/custom-copilot.png" alt-text="Screenshot shows the option to select custom engine agent as the new project to create.":::
+   :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/agent-for-teams.png" alt-text="Screenshot shows the option to select custom engine agent as the new project to create.":::
 
 1. Select **Chat With Your Data**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/chat-with-your-data.png" alt-text="Screenshot shows the option to select app features using AI library list.":::
+   :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/chat-with-your-data.png" alt-text="Screenshot shows the option to select app features using AI library list.":::
 
 1. Select **Customize**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/chat-with-data-customize.png" alt-text="Screenshot shows the option to select the data customization for loading.":::
-
-1. Select **JavaScript**.
-
-   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/language-javascript.png" alt-text="Screenshot shows the option to select the programming language.":::
+   :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/chat-with-data-customize.png" alt-text="Screenshot shows the option to select the data customization for loading.":::
 
 1. Select **Azure OpenAI** or **OpenAI**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/azure-openai.png" alt-text="Screenshot shows the option to select the LLM.":::
+   :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/azure-openai.png" alt-text="Screenshot shows the option to select the LLM.":::
 
-1. Enter your **Azure OpenAI** or **OpenAI** credentials based on the service you select. Select **Enter**.
+1. Enter your **Azure OpenAI Key** and **Azure OpenAI Endpoint** based on the service you select.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/azure-open-api-key-optional.png" alt-text="Screenshot shows the location to enter Azure open API key.":::
+   :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/azure-open-api-key-optional.png" alt-text="Screenshot shows the location to enter Azure open API key.":::
+
+1. Enter your **Azure OpenAI Deployment Name**.
+
+    :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/openai-deployment-name.png" alt-text="Screenshot to enter Azure open API deployment name.":::
+
+1. Select **JavaScript**.
+
+   :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/language-javascript.png" alt-text="Screenshot shows the option to select the programming language.":::
 
 1. Select **Default folder**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/default-folder.png" alt-text="Screenshot shows the location app folder to save.":::
+   :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/default-folder.png" alt-text="Screenshot shows the location app folder to save.":::
 
     To change the default location, follow these steps:
 
@@ -74,13 +78,13 @@ Microsoft Teams enables you to build a conversational bot with RAG to create an 
 
 1. Enter an app name for your app and then select the **Enter** key.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/application-name.png" alt-text="Screenshot shows the option to enter the suitable name.":::
+   :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/application-name.png" alt-text="Screenshot shows the option to enter the suitable name.":::
 
    You've successfully created your **Chat With Your Data** project workspace.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/rag-project-output.png" alt-text="Screenshot shows the ai chatbot created and readme file is available.":::
+   :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/rag-project-output.png" alt-text="Screenshot shows the ai chatbot created and readme file is available.":::
 
-1. Under **EXPLORER**, go to the **env** > **.env.testtool.user** file.
+1. Under **EXPLORER**, go to the **env** > **.env.playground.user** file.
 
 1. Update the following values:
 
@@ -88,15 +92,15 @@ Microsoft Teams enables you to build a conversational bot with RAG to create an 
     * `AZURE_OPENAI_ENDPOINT=<your-endpoint>`
     * `AZURE_OPENAI_DEPLOYMENT_NAME=<your-deployment>`
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/env-testtool-user.png" alt-text="Screenshot shows the details updated in the env file.":::
+   :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/env-testtool-user.png" alt-text="Screenshot shows the details updated in the env file.":::
 
-1. To debug your app, select the **F5** key or from the left pane, select **Run and Debug (Ctrl+Shift+D)** and then select **Debug in Test Tool (Preview)** from the dropdown list.
+1. To debug your app, select the **F5** key or from the left pane, select **Run and Debug (Ctrl+Shift+D)** and then select **Debug in Microsoft 365 Agents Playground (Preview)** (previously known as Teams App Test Tool) from the dropdown list.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/debug-test-tool.png" alt-text="Screenshot shows the selection of debugging option from the list of options.":::
+   :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/debug-test-tool.png" alt-text="Screenshot shows the selection of debugging option from the list of options.":::
 
-Test Tool opens the bot in a webpage.
+Agents Playground opens the bot in a webpage.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/rag-final-output.png" alt-text="Screenshows the chat with your data final output." lightbox="../assets/images/teams-toolkit-v2/custom-copilot/rag-output.png":::
+   :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/rag-final-output.png" alt-text="Screenshows the chat with your data final output." lightbox="../assets/images/toolkit-v2/custom-copilot/rag-output.png":::
 
 ## Take a tour of the bot app source code
 
@@ -115,9 +119,9 @@ Test Tool opens the bot in a webpage.
 |`src/app/app.js`| Handles business logics for the RAG bot.|
 |`src/app/myDataSource.js`| Defines the data source.|
 |`src/data/*.md`| Raw text data sources.|
-|`teamsapp.yml`|This is the main Teams Toolkit project file. The project file defines the properties and configuration stage definitions. |
-|`teamsapp.local.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging.|
-|`teamsapp.testtool.yml`| This overrides `teamsapp.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
+|`m365agents.yml`| This is the main Agents Toolkit project file. The project file defines the properties and configuration stage definitions. |
+|`m365agents.local.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging.|
+|`m365agents.playground.yml`| This overrides `m365agents.yml` with actions that enable local execution and debugging in Agents Playground.|
 
 ## RAG scenarios for Teams AI
 
@@ -154,7 +158,7 @@ embeddings = await model.create_embeddings(inputs)
 
 The following diagram shows how Teams AI library provides functionalities to ease each step of the retrieval and generation process:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/teams-ai-rag-scenario.png" alt-text="Screenshot shows the RAG scenario.":::
+:::image type="content" source="../assets/images/toolkit-v2/custom-copilot/teams-ai-rag-scenario.png" alt-text="Screenshot shows the RAG scenario.":::
 
 1. **Handle input**: The most straight forward way is to pass the user’s input to the retrieval without any change. However, if you'd like to customize the input before retrieval, you can add an [activity handler](https://github.com/OfficeDev/TeamsFx/wiki/How-to-configure-Bot-capability-within-your-Teams-app#bring-bot-code-to-your-project) to certain incoming activities.
 
@@ -307,7 +311,7 @@ Here's a minimal set of implementations to add RAG to your app. In general, it i
 
 ## Select data sources
 
-In the **Chat With Your Data** or RAG scenarios, Teams Toolkit provides the following types of data sources:
+In the **Chat With Your Data** or RAG scenarios, Agents Toolkit provides the following types of data sources:
 
 * **Customize**: Allows you to fully control the data ingestion to build your own vector index and use it as data source. For more information, see [build your own data ingestion](#build-your-own-data-ingestion).
 
@@ -323,7 +327,7 @@ In the **Chat With Your Data** or RAG scenarios, Teams Toolkit provides the foll
 
 To build your data ingestion, follow these steps:
 
-1. **Load your source documents**: Ensure that your document has a meaningful text as the embedding model takes only text as a input.
+1. **Load your source documents**: Ensure that your document has meaningful text as the embedding model takes only text as input.
 
 1. **Split into chunks**: Ensure you split the document to avoid API call failures as the embedding model has an input token limitation.
 
@@ -672,13 +676,13 @@ You can ingest your knowledge documents to Azure AI Search Service and create a 
 
 1. Prepare your data in Azure Blob Storage.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/assistant-set-up.png" alt-text="Screenshot shows to do assistant setup in Azure OpenAI Studio.":::
+   :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/assistant-set-up.png" alt-text="Screenshot shows to do assistant setup in Azure OpenAI Studio.":::
 
 1. In Azure OpenAI Studio, select **Add a data source**.
 
 1. Update the required fields.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/add-data.png" alt-text="Screenshot shows the option to add data source.":::
+   :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/add-data.png" alt-text="Screenshot shows the option to add data source.":::
 
 1. Select **Next**.
 
@@ -688,15 +692,15 @@ You can ingest your knowledge documents to Azure AI Search Service and create a 
 
 1. Select **Next**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/select-add-data-source.png" alt-text="Screenshot shows the option to select add data source.":::
+   :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/select-add-data-source.png" alt-text="Screenshot shows the option to select add data source.":::
 
 1. Update the required fields. Select **Next**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/data-management.png" alt-text="Screenshot shows the option to add data management.":::
+   :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/data-management.png" alt-text="Screenshot shows the option to add data management.":::
 
 1. Select **Save and close**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/review-and-finish.png" alt-text="Screenshot shows the option to review and finish.":::
+   :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/review-and-finish.png" alt-text="Screenshot shows the option to review and finish.":::
 
 ### Use Azure AI Search index data source
 
@@ -881,7 +885,7 @@ class MyDataSource(DataSource):
 
 ---
 
-## Add more API for Custom API as data source
+## Add more APIs for Custom API as data source
 
 Follow these steps to extend the custom engine agent from Custom API template with more APIs.
 

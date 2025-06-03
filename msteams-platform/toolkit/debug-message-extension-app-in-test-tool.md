@@ -1,40 +1,40 @@
 ---
-title: Debug message extension app in Test Tool
+title: Debug message extension app in Microsoft 365 Agents Playground
 author: surbhigupta 
-description: Learn how to emulate the Teams experience for your message extension app in Teams App Test Tool.
+description: Learn how to emulate the Teams experience for your message extension app in Microsoft 365 Agents Playground.
 ms.author: surbhigupta 
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 04/25/2024
 ---
 
-# Debug message extension app in Test Tool
+# Debug message extension app in Microsoft 365 Agents Playground
 
-You can debug bot-based message extension capabilities such as search commands, action commands, and link unfurling using Teams App Test Tool (Test Tool) within a simulated environment. Test tool helps you to identify and resolve issues before deploying the extension to a live environment.
+You can debug bot-based message extension capabilities such as search commands, action commands, and link unfurling using Agents Playground (previously known as Teams App Test Tool) within a simulated environment. Test tool helps you to identify and resolve issues before deploying the extension to a live environment.
 
-Test Tool enhances the functionality of bot-based message extensions, which are built on top of Bot Framework. When a message extension is activated, the Test Tool sends an invoke request to the app. The app then processes this request and returns an invoke response, which the Test Tool renders and displays.
+Agents Playground enhances the functionality of bot-based message extensions, which are built on top of Bot Framework. When a message extension is activated, Agents Playground sends an invoke request to the app. The app then processes this request and returns an invoke response, which Agents Playground renders and displays.
 
 > [!NOTE]
-> The user experience to trigger message extension in Test Tool is different from Teams, as the goal of Test Tool is to test and debug the app logic and make the flow simple.
+> The user experience to trigger message extension in Agents Playground is different from Teams, as the goal of Agents Playground is to test and debug the app logic and make the flow simple.
 
 ## Prerequisites
 
-Ensure that you install the following tools to build and deploy your bot in Test Tool:
+Ensure that you install the following tools to build and deploy your bot in Agents Playground:
 
 | &nbsp; | Install | For using... |
 | --- | --- | --- |
-| &nbsp; | [Teams Toolkit](install-Teams-Toolkit.md) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest release version. |
+| &nbsp; | [Microsoft 365 Agents Toolkit](install-Agents-Toolkit.md) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest release version. |
 | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type). |
 | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
 
 ## Build and run the sample app
 
-1. Go to the [sample](https://github.com/OfficeDev/TeamsFx-Samples).
+1. Go to the [sample](https://github.com/OfficeDev/microsoft-365-agents-toolkit-samples).
 
 1. Clone the repository to test the sample app.
 
    ```
-   git clone https://github.com/OfficeDev/TeamsFx-Samples.git
+   git clone https://github.com/OfficeDev/microsoft-365-agents-toolkit-samples.git
    ```
 
 1. Go to **Visual Studio Code**.
@@ -45,19 +45,19 @@ Ensure that you install the following tools to build and deploy your bot in Test
 
 1. Select **Select Folder**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams-app-select-folder.png" alt-text="Screenshot shows the test tool sample app folder.":::
+   :::image type="content" source="../assets/images/toolkit-v2/teams-app-select-folder.png" alt-text="Screenshot shows the Agents Playground sample app folder.":::
 
-1. From the left pane, select **Teams Toolkit**.
+1. From the left pane, select **Microsoft 365 Agents Toolkit**.
 
-1. From the left pane, select **Run and Debug (Ctrl+Shift+D)** and select **Debug in Test Tool (Preview)** in dropdown list.
+1. From the left pane, select **Run and Debug (Ctrl+Shift+D)** and select **Debug in Microsoft 365 Agents Playground (Preview)** in dropdown list.
 
-1. Test Tool opens the bot in a webpage.
+1. Agents Playground opens the bot in a webpage.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/test-tool-in-browser-window.png" alt-text="Screenshot shows the test tool opens in a webpage.":::
+   :::image type="content" source="../assets/images/toolkit-v2/test-tool-in-browser-window.png" alt-text="Screenshot shows the Agents Playground opens in a webpage.":::
 
-1. In the message compose area, type `help`. Test Tool displays all the message extension commands in the sample app.
+1. In the message compose area, type `help`. Agents Playground displays all the message extension commands in the sample app.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/help-in-teams-app-test-tool.png" alt-text="Screenshot shows the help in the message compose area of test tool.":::
+   :::image type="content" source="../assets/images/toolkit-v2/help-in-teams-app-test-tool.png" alt-text="Screenshot shows the help in the message compose area of Agents Playground.":::
 
 1. Select the **+** icon to display the type of message extension:
 
@@ -67,21 +67,21 @@ Ensure that you install the following tools to build and deploy your bot in Test
 
    * Link Unfurling
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/list-of-message-extension.png" alt-text="Screenshot shows the list of message extension.":::
+   :::image type="content" source="../assets/images/toolkit-v2/list-of-message-extension.png" alt-text="Screenshot shows the list of message extension.":::
 
 1. Select the type of message extension you want to debug.
 
 1. Based on the option selected in the earlier step, select the following tab:
 
-    ## Search Command
+   ## Search Command
 
-    To test a **Search Command** in the Test Tool, follow these steps:
+    To test a **Search Command** in Agents Playground, follow these steps:
 
     1. Enter the keywords you wish to search for into the message extension.
 
-    1. The Test Tool sends a `composeExtension/query` invoke request.
+    1. Agents Playground sends a `composeExtension/query` invoke request.
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/search-command-invoke.png" alt-text="Screenshot shows the search commands invoke.":::
+       :::image type="content" source="../assets/images/toolkit-v2/search-command-invoke.png" alt-text="Screenshot shows the search commands invoke.":::
 
     1. Search results are displayed.
 
@@ -97,7 +97,7 @@ Ensure that you install the following tools to build and deploy your bot in Test
 
     1. Update the values for **Command ID** and **Parameter name**.
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/advanced-configurations.png" alt-text="Screenshot shows the search command for advanced configurations.":::
+       :::image type="content" source="../assets/images/toolkit-v2/advanced-configurations.png" alt-text="Screenshot shows the search command for advanced configurations.":::
 
     1. When the message extension is triggered, it retrieves these predefined values from the context.
 
@@ -106,42 +106,45 @@ Ensure that you install the following tools to build and deploy your bot in Test
 
    ## Action Command
 
-   You can test an **Action Command** in the Test Tool in the following ways:
+   You can test an **Action Command** in Agents Playground in the following ways:
 
-      # [**+** icon](#tab/action-commands)
+   # [**+** icon](#tab/action-commands)
 
       1. Select the **+** icon in the message compose area.
 
       1. Select **Action Command**.
 
-         :::image type="content" source="../assets/images/teams-toolkit-v2/action-commands.png" alt-text="Screenshot shows the action command.":::
+         :::image type="content" source="../assets/images/toolkit-v2/action-commands.png" alt-text="Screenshot shows the action command.":::
 
-      # [**...** icon](#tab/action-commands1)
+   # [**...** icon](#tab/action-commands1)
 
       1. Above the message, select the **...** option.
 
       1. Select **Action Command**.
 
-         :::image type="content" source="../assets/images/teams-toolkit-v2/message-action-command.png" alt-text="Screenshot shows the message in action command.":::
+         :::image type="content" source="../assets/images/toolkit-v2/message-action-command.png" alt-text="Screenshot shows the message in action command.":::
 
     ---
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Build%20and%20run%20the%20sample%20app&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdebug-message-extension-app-in-test-tool%3Ftabs%3Daction-commands&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdebug-message-extension-app-in-test-tool.md&documentVersionIndependentId=5a31f804-1b50-c555-7f8d-ac9c4ecdf419&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 You can create a dialog with an Action Command in two ways:
 
 * [Adaptive Cards](#create-dialog-with-adaptive-cards)
 * [Static list of parameters](#create-dialog-with-static-list-of-parameters)
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/list-of-action-commands.png" alt-text="Screenshot shows the list of action commands.":::
+   :::image type="content" source="../assets/images/toolkit-v2/list-of-action-commands.png" alt-text="Screenshot shows the list of action commands.":::
 
 #### Create dialog with Adaptive Cards
 
-In the action-based message extension dialog, select **Adaptive Cards**. Test Tool dynamically retrieves the dialog from the message extension. It sends a `composeExtension/fetchTask` invoke request and then displays the Adaptive Card based on the response received from the app.
+In the action-based message extension dialog, select **Adaptive Cards**. Agents Playground dynamically retrieves the dialog from the message extension. It sends a `composeExtension/fetchTask` invoke request and then displays the Adaptive Card based on the response received from the app.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/create-dialog-with-adaptive-cards.png" alt-text="Screenshot shows to how create dialog with Adaptive Cards.":::
+   :::image type="content" source="../assets/images/toolkit-v2/create-dialog-with-adaptive-cards.png" alt-text="Screenshot shows to how create dialog with Adaptive Cards.":::
 
 #### Create dialog with static list of parameters
 
-In the action-based message extension dialog, select **Static list of parameters**. Test Tool renders the parameters you provided into a dialog. For more information on parameters, see [composeExtensions.commands](../resources/schema/manifest-schema.md#composeextensionscommands).
+In the action-based message extension dialog, select **Static list of parameters**. Agents Playground renders the parameters you provided into a dialog. For more information on parameters, see [composeExtensions.commands](../resources/schema/manifest-schema.md#composeextensionscommands).
 
 The following code is a sample of the static list of parameters in JSON format:
 
@@ -166,15 +169,15 @@ The following code is a sample of the static list of parameters in JSON format:
    }]
    ```
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/static-list-of-parameters-in-teams-app-test-tool.png" alt-text="Screenshot shows how to create a static list of parameters in teams app test tool.":::
+:::image type="content" source="../assets/images/toolkit-v2/static-list-of-parameters-in-teams-app-test-tool.png" alt-text="Screenshot shows how to create a static list of parameters in agents playground.":::
 
 Static list of parameters are available under the `composeExtensions` property in app manifest. For example, see [manifest.json](https://github.com/OfficeDev/TeamsFx/blob/main/templates/ts/message-extension-action/appPackage/manifest.json.tpl#L41-L59).
 
 ### Submit form inside the dialog
 
-After you've created a dialog using Adaptive Cards or a static list of parameters and select submit, Test Tool sends an invoke request with name of `composeExtension/submitAction`.
+After you've created a dialog using Adaptive Cards or a static list of parameters and select submit, Agents Playground sends an invoke request with name of `composeExtension/submitAction`.
 
-Based on the invoke response from the message extension, the Test Tool performs one of the following actions:
+Based on the invoke response from the message extension, Agents Playground performs one of the following actions:
 
 * Renders an Adaptive Card from the invoke response and inserts it into the message compose area.
 
@@ -187,13 +190,13 @@ Based on the invoke response from the message extension, the Test Tool performs 
 
 ## Link Unfurling
 
-To test an **Link Unfurling** in the Test Tool, follow these steps:
+To test an **Link Unfurling** in Agents Playground, follow these steps:
 
 1. Select the **+** icon in the message compose area.
 
 1. Select **Link Unfurling**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/link-unfurling.png" alt-text="Screenshot shows how to create a link unfurling in teams app test tool.":::
+   :::image type="content" source="../assets/images/toolkit-v2/link-unfurling.png" alt-text="Screenshot shows how to create a link unfurling in agents playground.":::
 
    A **Enter a URL** dialog appears.
 
@@ -201,12 +204,15 @@ To test an **Link Unfurling** in the Test Tool, follow these steps:
 
 1. Select **Send to Conversation**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/link-unfurling-card.png" alt-text="Screenshot shows how to create link unfurling in teams app test tool.":::
+   :::image type="content" source="../assets/images/toolkit-v2/link-unfurling-card.png" alt-text="Screenshot shows how to create link unfurling in agents playground.":::
 
-   The Test Tool triggers a `composeExtension/queryLink` invoke request with the URL to the message extension. You can review the Adaptive Card that the Test Tool renders based on the invoke response from the app.
+   Agents Playground triggers a `composeExtension/queryLink` invoke request with the URL to the message extension. You can review the Adaptive Card that Agents Playground renders based on the invoke response from the app.
 
 > [!Note]
-> The user experience for testing link unfurling in the Test Tool differs from that in Teams, however you can still test or debug the app logic with Test Tool in a simple way.
+> The user experience for testing link unfurling in Agents Playground differs from that in Teams, however you can still test or debug the app logic with Agents Playground in a simple way.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Link%20Unfurling&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdebug-message-extension-app-in-test-tool%3Ftabs%3Daction-commands&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdebug-message-extension-app-in-test-tool.md&documentVersionIndependentId=5a31f804-1b50-c555-7f8d-ac9c4ecdf419&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 ## Limitations
 
@@ -218,50 +224,49 @@ The following table lists the features for each message extension type that aren
 | **Action Command** | Triggering from command box. <br> Creating a dialog with embedded web view. <br> Rendering the [botMessagePreview](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#the-botmessagepreview-send-and-edit-events) invoke activity.|
 | **Link Unfurling** | Rendering the preview card from the invoke response. <br> Sending invoke activity of `composeExtension/anonymousQueryLink` for zero install case. |
 
-## Message extension Test Tool FAQ
+## Message extension Agents Playground FAQ
 
 <br>
 <details>
-<summary>How can I use `commandId` or `parameters.name` properties for a Search Command in Teams app Test Tool?</summary>
+<summary>How can I use `commandId` or `parameters.name` properties for a Search Command in Agents Playground?</summary>
 
 When you use the search box in a search-based message extension in Teams, your app receives an invoke activity that includes two parameters. Sometimes, your app might need to use `activity.value.commandId` or `activity.value.parameters[0].name` to manage different search command behaviors in the activity handler for the `composeExtension/query` invoke activity, such as the `handleTeamsMessagingExtensionQuery` method in the Bot Framework SDK for JavaScript. However, your app doesn't need it because [Teams only supports a single search command](../resources/schema/manifest-schema.md#composeextensionscommands) and you can leave them empty.
 
-If your app uses these two parameters, you can provide additional inputs by selecting `Specify Command ID or Parameter` and updating the required values. Test Tool includes these parameters in the invoke activity payload during a search. If you don't specify them, the payload avoids these parameters.
+If your app uses these two parameters, you can provide additional inputs by selecting `Specify Command ID or Parameter` and updating the required values. Agents Playground includes these parameters in the invoke activity payload during a search. If you don't specify them, the payload avoids these parameters.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/specify-command-parameter.png" alt-text="Screenshot shows the specify command ID or Parameter.":::
+:::image type="content" source="../assets/images/toolkit-v2/specify-command-parameter.png" alt-text="Screenshot shows the specify command ID or Parameter.":::
 
-In Teams, the parameters are available in the app manifest. Since the Test Tool doesn't process the manifest, you need to input the parameters manually.
+In Teams, the parameters are available in the app manifest. Since Agents Playground doesn't process the manifest, you need to input the parameters manually.
 
 <br>
 </details>
 </br>
 
 <details>
-<summary>How can I use `commandId` property for an Action Command in Teams app Test Tool?</summary>
+<summary>How can I use `commandId` property for an Action Command in Agents Playground?</summary>
 
 In Teams, dialogs are triggered from action commands and your app receives a `composeExtension/fetchTask` or `composeExtension/submitAction` invoke activity. This activity includes the `activity.value.commandId` parameter. However, your app uses this parameter to differentiate between commands within the activity handler for these invoke activities, such as the `handleTeamsMessagingExtensionFetchTask` or `handleTeamsMessagingExtensionSubmitAction` methods in the Bot Framework SDK for JavaScript.
 
 To test various action commands, you must enter the `Command ID` in the respective field. If you don't update, the command IDs aren't included in the activity payload.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/command-parameter.png" alt-text="Screenshot shows the command ID parameter in Action Command.":::
+:::image type="content" source="../assets/images/toolkit-v2/command-parameter.png" alt-text="Screenshot shows the command ID parameter in Action Command.":::
 
-In Teams, commands are available in the app manifest. Since the Test Tool doesn't process the manifest, you need to input the commands manually.
+In Teams, commands are available in the app manifest. Since Agents Playground doesn't process the manifest, you need to input the commands manually.
 
 <br>
 </details>
 </br>
 
 <details>
-<summary>How to do Static list of parameters work in Teams app Test Tool?</summary>
+<summary>How does a static list of parameters work in Agents Playground?</summary>
 
 The static list of parameters is the simple method to create dialogs for action commands, however you can't format the static list.
 
 When you create a dialog using a static list of parameters, the message extension receives a `composeExtension/submitAction` invoke activity upon the user’s submission of the dialog.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/static-list-of-parameters.png" alt-text="Screenshot shows the static list of parameter in Action Command.":::
+:::image type="content" source="../assets/images/toolkit-v2/static-list-of-parameters.png" alt-text="Screenshot shows the static list of parameter in Action Command.":::
 
-In Teams, the parameters are available in the app manifest. Since the Test Tool doesn't process the manifest, you need to input the parameters manually.
-
+In Teams, the parameters are available in the app manifest. Since Agents Playground doesn't process the manifest, you need to input the parameters manually.
 
 <br>
 </details>

@@ -9,6 +9,8 @@ ms.date: 01/23/2025
 
 # Enhance AI-generated bot messages
 
+[!INCLUDE [teams-ai-lib-v2-rec](../../includes/teams-ai-lib-v2-rec.md)]
+
 AI label, citation, feedback buttons, and sensitivity label in your bot’s messages improve user engagement and foster transparency and trust.
 
 * [AI label](#ai-label) enables users to identify that the message was generated using AI.
@@ -165,6 +167,8 @@ If you're using **Teams AI library** to build your bot, citations are added to a
 
 If you're using **Bot Framework SDK** to build your bot, include `citation` under the `entities` array. Following is an example code snippet:
 
+# [JavaScript](#tab/js)
+
 ```javascript
 await context.sendActivity({
   type: ActivityTypes.Message,
@@ -198,11 +202,82 @@ await context.sendActivity({
 })
 ```
 
+# [Python](#tab/python)
+
+```python
+@app.message("citation")
+async def on_message(context: TurnContext, state: TurnState):
+    appearance = Appearance(
+        name="Understanding AI Citations in Python",
+        abstract=snippet("A brief extract demonstrating the integration of AI Citations in Python.", 477),
+        url="https://example.com/py-ai-citations",
+        keywords=["Python", "Citations"],
+        image=AppearanceImage(name="Microsoft Excel"),
+        usage_info=SensitivityUsageInfo(
+            name="Creative Work",
+            description="Sensitive content information for Python AI citation.",
+            position=1,
+            pattern= Pattern(
+                in_defined_term_set= "ColorSet",
+                name= "Red",
+                term_code= "#FF0000")
+        )
+    )
+
+    # Create the client citation with a specific position and the defined appearance.
+    citation = ClientCitation(
+        position=1,
+        appearance=appearance
+    )
+
+    # Create the AIEntity, including the citation and overall sensitivity usage information.
+    ai_entity = AIEntity(
+        additional_type=["AIGeneratedContent"],
+        citation=[citation],
+        usage_info=SensitivityUsageInfo(
+            name="Creative Work",
+            description="Overall message sensitivity information for AI citations.",
+            position=1,
+            pattern=Pattern(
+                in_defined_term_set="ColorSet",
+                name= "Red",
+                term_code="#FF0000",
+            )
+        )
+    )
+
+    # Use the helper function to format citation tags within a sample message.
+    sample_text = "This is an AI-generated message with citation [doc1]."
+    formatted_text = format_citations_response(sample_text)
+    print("Formatted Text:", formatted_text)
+
+    # Retrieve citations used in the formatted text.
+    used_citations = get_used_citations(formatted_text, [citation])
+    print("Used Citations:", used_citations)
+    print("AI Entity:", ai_entity)
+    await context.send_activity(
+            Activity(
+                type=ActivityTypes.message,
+                text=formatted_text,
+                entities=[
+                    AIEntity(
+                        citation=(list(used_citations) if used_citations else []),
+                        additional_type=["AIGeneratedContent"],
+                    ),
+                ],
+            )
+        )
+
+    return True
+ ```
+
+---
+
 | Property | Type | Required | Description |
 |--|--|--|--|
 | `citation` | Object | ✔️ | Details of the citation. |
 | `citation.@type` | String | ✔️ | Object of the citation.<br>Allowed value: `Claim` |
-| `citation.position` | Integer | ✔️ | Displays the citation number. |
+| `citation.position` | Integer | ✔️ | Displays the citation number. This value must be unique for every citation. |
 | `citation.appearance` | Object | ✔️ | Information about the appearance of the citation. |
 | `citation.appearance.@type` | String | ✔️ | Object of the citation appearance.<br>Allowed value: `DigitalDocument` |
 | `citation.appearance.name` | String | ✔️ | Title of the referenced content. Maximum characters: 80 |

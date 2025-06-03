@@ -1,7 +1,7 @@
 ---
 title: Enable Device Permissions in Teams Apps
 description: App that requires device permissions, such as camera or microphone access, now require users to manually grant permission at a per app level in the web browser.
-localization_priority: medium
+ms.localizationpriority: medium
 ms.topic: how-to
 ms.date: 03/21/2023
 ---

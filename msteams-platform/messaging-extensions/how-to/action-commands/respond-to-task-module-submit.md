@@ -5,6 +5,8 @@ description: Learn to respond to message extension action commands with Proactiv
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
+ms.owner: ginobuzz
+ms.date: 03/11/2025
 ---
 
 # Respond to the dialog submit action
@@ -21,7 +23,7 @@ You have the following options to respond:
 * [Card response](#respond-with-a-card-inserted-into-the-compose-message-area): You can respond with a card that the user can interact with or insert into a message.
 * [Adaptive Card from bot](#bot-response-with-adaptive-card): Insert an Adaptive Card directly into the conversation.
 * [Request the user to authenticate](/microsoftteams/platform/messaging-extensions/how-to/add-authentication).
-* [Request the user to provide additional configuration](../search-commands/respond-to-search.md#configuration-response).
+* [Request the user to provide additional configuration](../search-commands/respond-to-search.md#config-response).
 
 If the app doesn't respond within five seconds, the Teams client retries the request twice before it sends an error message **Unable to reach the app**. If the bot replies after the timeout, the response is ignored.
 

@@ -1,10 +1,11 @@
 ---
 title: Create API-based Message Extension
-author: v-ypalikila
-description: Learn to build a message extension from OpenAPI description document (OAD) with Developer Portal for Teams, Visual Studio Code, Teams Toolkit CLI, or Visual Studio.
+author: surbhigupta
+description: Learn to build a message extension from OpenAPI description document (OAD) with Developer Portal for Teams, Visual Studio Code, Agents Toolkit CLI, or Visual Studio.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
+ms.owner: slamba
 ms.date: 02/26/2025
 ---
 
@@ -20,7 +21,7 @@ Message extensions built using API (API-based) use a web service to manage user 
 * Retrieve real-time information, such as latest news coverage on a product launch.
 * Retrieve knowledge-based information, for example, my team’s design files in Figma.
 
-See the video to learn more about building an API-based message extension using Teams Toolkit:
+See the video to learn more about building an API-based message extension using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit):
 </br>
 </br>
 
@@ -429,7 +430,7 @@ Let's say you have the following JSON for a list of products and you want to cre
 
 As you can see, the array of results is under "products", which is nested under "warehouse", so the JSON path would be "warehouse.products".
 
-Use <https://adaptivecards.io/designer/> to preview an Adaptive Card by inserting the template into Card Payload Editor. Take a sample response entry from your array or for your object and insert it into Sample Data Editor. Ensure that the card renders properly and is to your liking.
+Use [Adaptive Card Designer](https://adaptivecards.microsoft.com/designer.html) to preview an Adaptive Card by inserting the template into Card Payload Editor. Take a sample response entry from your array or for your object and insert it into Sample Data Editor. Ensure that the card renders properly and is to your liking.
 
 ## OpenAPI schema conversion
 

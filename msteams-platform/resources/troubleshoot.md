@@ -93,6 +93,9 @@ Common reasons for manifest read errors:
 * Encoding issues. Use UTF-8 for the *manifest.json* file. Other encodings, specifically with the BOM, may not be readable.
 * Malformed .zip package. The *manifest.json* file must be at the top level of the .zip file. Note that default Mac file compression might place the *manifest.json* in a subdirectory, which won't properly load in Microsoft Teams.
 
+> [!NOTE]
+> If the app manifest updates aren't reflecting, sign out and sign in to clear the cache and apply changes.
+
 ### Another extension with same ID exists
 
 If you're attempting to upload an updated package with the same ID again, choose the **Replace** icon at the end of the tab's table row rather than the **Upload** button.
@@ -136,4 +139,4 @@ If you’re unable to resolve the errors, we recommend contacting [Microsoft Tea
 * [Build tabs for meeting](../apps-in-teams-meetings/build-tabs-for-meeting.md)
 * [Build bots for Teams](../bots/what-are-bots.md)
 * [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
-* [Receive all conversation messages with RSC](../bots/how-to/conversations/channel-messages-with-rsc.md)
+* [Receive all channel messages for bots and agents](../bots/how-to/conversations/channel-messages-for-bots-and-agents.md)

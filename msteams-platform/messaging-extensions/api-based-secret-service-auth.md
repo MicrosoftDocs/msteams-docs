@@ -1,6 +1,6 @@
 ---
 title: API secret service auth
-author: v-ypalikila
+author: surbhigupta
 description: Learn how to enable API key authentication and register an API key for API_based message extensions.
 ms.localizationpriority: medium
 ms.topic: concept-article
@@ -137,3 +137,4 @@ Add an `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistration
 * [Create API-based message extension](create-api-message-extension.md)
 * [Configure your API based message extension in Microsoft Entra ID](api-based-microsoft-entra.md)
 * [Authenticate users in Microsoft Teams](../concepts/authentication/authentication.md)
+* [Enable OAuth authentication for API based message extension](api-based-oauth.md)

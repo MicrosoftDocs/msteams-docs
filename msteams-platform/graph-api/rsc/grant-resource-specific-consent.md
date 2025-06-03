@@ -378,6 +378,10 @@ The following are the available states for the PowerShell settings and each sect
 | EnabledForAllApps | Any app requesting RSC permissions can be consented to by users (resource owners) in your tenant. |
 | DisabledForAllApps | No RSC permissions can be consented to by users. |
 
+> [!NOTE]
+>
+> We recommend that you leave your RSC consent settings in the default `ManagedByMicrosoft` state unless your organization requires a customized consent policy for RSC-enabled applications.
+
 <br>
 <details>
 

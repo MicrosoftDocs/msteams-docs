@@ -4,6 +4,7 @@ description: Learn about single sign-on (SSO) authentication and user experience
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.date: 01/17/2023
+ms.owner: ryanbliss
 ---
 # Enable SSO for tab app
 

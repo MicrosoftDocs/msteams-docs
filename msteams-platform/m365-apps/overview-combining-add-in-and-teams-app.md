@@ -29,12 +29,12 @@ There can be no algorithmic procedure for merging an add-in and a Teams app for 
 > - **IIS/.NET**:
 >
 >   - Add-in projects can be created in Visual Studio with the [Office Developer Tools](https://visualstudio.microsoft.com/vs/features/office-tools/), in which case the web application portion is built on ASP.NET and Internet Information Server (IIS).
->   - Teams app projects can be created in Visual Studio with the [Teams Toolkit for Visual Studio](/microsoftteams/platform/toolkit/toolkit-v4/install-teams-toolkit-vs), in which case the web application portion is a Blazor/C# application.
+>   - Teams app projects can be created in Visual Studio with the [Microsoft 365 Agents Toolkit](/microsoftteams/platform/toolkit/toolkit-v4/install-agents-toolkit-vs) (previously known as Teams Toolkit), in which case the web application portion is a Blazor/C# application.
 >
 > - **Node.js server/JavaScript or TypeScript**:
 >
->   - Add-in projects can be created using [Teams Toolkit for Visual Studio Code](/microsoftteams/platform/toolkit/install-teams-toolkit?tabs=vscode#install-teams-toolkit-for-visual-studio-code). In either case, the web application is Node.js-based and written in TypeScript or JavaScript.
->   - Teams app projects can be created in Visual Studio Code with [Teams Toolkit for Visual Studio Code](/microsoftteams/platform/toolkit/install-teams-toolkit?tabs=vscode#install-teams-toolkit-for-visual-studio-code), in which case the web application is Node.js-based and written in TypeScript or JavaScript.
+>   - Add-in projects can be created using [Agents Toolkit for Visual Studio Code](/microsoftteams/platform/toolkit/install-agents-toolkit?tabs=vscode#install-agents-toolkit-for-visual-studio-code). In either case, the web application is Node.js-based and written in TypeScript or JavaScript.
+>   - Teams app projects can be created in Visual Studio Code with [Agents Toolkit for Visual Studio Code](/microsoftteams/platform/toolkit/install-agents-toolkit?tabs=vscode#install-agents-toolkit-for-visual-studio-code), in which case the web application is Node.js-based and written in TypeScript or JavaScript.
 >
 > Visual Studio doesn't currently support the unified manifest in add-in projects, so this article assumes that both the add-in and Teams apps projects are Node.js-based and *not* created with Visual Studio.
 
@@ -42,10 +42,13 @@ However, we can make some general recommendations about combining an add-in with
 
 ## Learn about the manifest and structure of a combined Teams app and Office add-in
 
-Before you start work merging your two existing extensions, get a sense of how to merge the two types of extensions by creating a new Teams app and a new add-in in Teams toolkit and then following the instructions in [Add an Outlook Add-in to a Teams app](combine-office-add-in-and-teams-app.md) to combine them. Pay close attention to the following:
+Before you start work merging your two existing extensions, get a sense of how to merge the two types of extensions by creating a new Teams app and a new add-in in Agents Toolkit and then following the instructions in [Add an Outlook Add-in to a Teams app](combine-office-add-in-and-teams-app.md) to combine them. Pay close attention to the following:
 
 - How the single unified manifest is created.
 - The differences in how the add-in and the Teams app are sideloaded and debugged.
+
+> [!NOTE]
+> Although the article uses an Outlook add-in, the general process of combining an add-in with a Teams app also applies to Excel, PowerPoint, and Word add-ins.
 
 ## Follow proper principles for combining Teams apps and add-ins
 
@@ -56,7 +59,7 @@ When you're ready to merge your existing add-in and Teams app, follow these prin
 - Keep configuration files that are applicable to both the add-in and Teams app in the root of the project.
 - Move source files and configuration files that are only applicable to the Teams app into a subfolder off the root of the project. Similarly, copy source and configuration files that are only used by the add-in from the existing add-in to a different subfolder off the root of the combined project.
 - Use the same base domain for the built files of both the add-in and Teams app; for example, contoso.com.
-- Merge the two manifests into a single manifest. Use the process you went through in step 1 as a guide.
+- Merge the two manifests into a single manifest. Use the process you went through in [add an Outlook add-in to a Teams app](combine-office-add-in-and-teams-app.md) as a guide.
 - The [id](../resources/schema/manifest-schema.md#id) property in the new manifest should be the same value as the "id" property in the original Teams app manifest.
 - Raise the value of the [version](../resources/schema/manifest-schema.md#version) property; for example, raise "1.0.0" to "1.1.0".
 - Add an [extensions.alternates](../resources/schema/manifest-schema.md#extensionsalternates) property to the manifest and configure it to hide the original Office add-in in versions of Office that support combining an add-in and a Teams app. For more information, see [Manage new and old versions of an add-in](/office/dev/add-ins/concepts/duplicate-legacy-metaos-add-ins).

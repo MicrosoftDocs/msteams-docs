@@ -398,6 +398,12 @@ A good parameter description explains the requirements of the system in a natura
 
 ---
 
+Here are the best practices you can adapt when defining the parameters:
+
+* Parameters must be clearly defined to ensure accurate responses from agents. Copilot uses these descriptions to select the best command and predict parameter values based on the user query.
+* Parameter description must not contain grammar and punctuation errors.
+* Parameters defined in the manifest must not be identical.
+
 ## Enhance message extension to retrieve information through compound utterances
 
 [*Must fix*]
@@ -410,7 +416,7 @@ For Microsoft 365 Copilot, a search-based message extension must support more th
 * Update your web service to support search based on multiple parameters. For more information on how to respond to user requests, see [respond to search command](how-to/search-commands/respond-to-search.md).
 * Microsoft 365 Copilot might pass an empty string or null value for parameters, which aren't part of user utterance. Update your web service to handle the parameters.
 
-* A message extension supports upto 10 commands (9 usable) and each command has a corresponding `parameters` property, which supports up to five parameters.
+* A message extension supports up to 10 commands (9 usable) and each command has a corresponding `parameters` property, which supports up to five parameters.
 
 <br>
 <details><summary>The following code is an example of multiple parameters defined in app manifest:</summary>
@@ -680,15 +686,13 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
   :::image type="content" source="../assets/images/Copilot/ailib-copilot-action-buttons.png" alt-text="Graphic shows an example of the Update Stock, restock, and Cancel restock action buttons in an Adaptive Card response in Microsoft 365 Copilot.":::
 
 * If a user can change information on the card through a dialog, Stageview, or directly from the card, we recommend that Adaptive Card support universal actions and automatic refresh. [*Recommended*]
-* Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.io/explorer/Metadata.html), which allows cards to be easily copied from one hub to another. [*Recommended*]
+* Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.microsoft.com/?topic=CardMetadata), which allows cards to be easily copied from one hub to another. [*Recommended*]
 * Apart from thumbnails, any image in an Adaptive Card must have an alt-text. [*Recommended*]
 
 ## Message extension agents in Microsoft 365 Copilot apps
 
 [*Must fix*]
 
-> [!IMPORTANT]
-> Message extension agents in Microsoft 365 Copilot apps are in limited private preview for Word and PowerPoint. More details to be published after a public preview is announced.
 
 Agents customize and extend the Microsoft 365 Copilot experience by bringing more skills and knowledge to Microsoft 365 Copilot for a personalized user experience. By using agents, which are a subset of agents, users can integrate additional capabilities into Microsoft 365 Copilot by interacting with third-party applications, whether for retrieving or modifying information within those apps. For instance, message extension agents facilitate searching for data in other applications so that Microsoft 365 Copilot can present it upon request when the agent is activated.
 

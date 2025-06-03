@@ -5,6 +5,8 @@ description: Learn how to create and handle a command menu for your Microsoft Te
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
+ms.owner: ginobuzz
+ms.date: 03/11/2025
 ---
 
 # Create a commands menu
@@ -27,7 +29,7 @@ To define a set of core commands that your bot can respond to, you can add a com
 ## Create a command menu for your bot
 
 > [!NOTE]
-> It's recommended that you'd create a command bot by following the step-by-step guide to [build command bot with JavaScript](../../sbs-gs-commandbot.yml) using the new generation development tool for Teams. For more information about Teams Toolkit, see [Teams Toolkit Overview for Visual Studio Code](../../toolkit/teams-toolkit-fundamentals.md) and [Teams Toolkit overview for Visual Studio](../../toolkit/teams-toolkit-overview-visual-studio.md).
+> It's recommended that you'd create a command bot by following the step-by-step guide to [build command bot with JavaScript](../../sbs-gs-commandbot.yml) using the new generation development tool for Teams. For more information about Microsoft 365 Agents Toolkit (previously known as Teams Toolkit), see [Agents Toolkit overview for Visual Studio Code](../../toolkit/agents-toolkit-fundamentals.md) and [Agents Toolkit overview for Visual Studio](../../toolkit/toolkit-v4/agents-toolkit-fundamentals-vs.md).
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
