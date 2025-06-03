@@ -189,6 +189,8 @@
         - name: Add cloud resources and API connection
           href: toolkit/add-resource.md  
           displayName: application, endpoint
+        - name: Enable SSO for Teams app
+          href: toolkit/develop-single-sign-on-experience-in-teams.md
         - name: Add SSO to Teams app
           href: toolkit/add-single-sign-on.md
         - name: Use Microsoft Entra app in TeamsFx
