@@ -2,7 +2,7 @@
 title: What's New for Developers in Teams
 description: Learn about new Microsoft Teams developer features and updates to existing features, deprecation notes, and changes. Subscribe to the RSS feed for latest updates.
 ms.topic: reference
-ms.date: 05/16/2025
+ms.date: 05/29/2025
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
 ---
@@ -32,15 +32,14 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 :::column-end:::
 :::column span="2":::
 
-Teams platform features that are available to all app developers.
-<!--
+Teams platform features that are available to all app developers.</br>
 **2025 May**
 
-* ***May 19, 2025***: [Introducing Microsoft 365 admin center permission to view custom app analytics and the agent usage analytics for custom apps in Developer Portal.](/microsoftteams/platform/concepts/build-and-test/analyze-your-apps-usage-in-developer-portal?tabs=custom-apps-built-for-your-org).
+* ***May 29, 2025***: [Introducing app manifest v1.22 with support for custom activity icons and prefetch of nested app authentication tokens.](/microsoft-365/extensibility/schema/?view=m365-app-1.22&preserve-view=true)
+* ***May 19, 2025***: [Introducing Microsoft 365 admin center permission to view custom app analytics and the agent usage analytics for custom apps in Developer Portal.](/microsoftteams/platform/concepts/build-and-test/analyze-your-apps-usage-in-developer-portal?tabs=custom-apps-built-for-your-org)
 * ***May 19, 2025***: </br> Branding updates: </br> • Teams Toolkit is now Microsoft 365 Agents Toolkit. </br> • Teams App Test Tool is now Microsoft 365 Agents Playground. </br> • Teams App CLI, TeamFx CLI, and Teams Toolkit CLI are now Microsoft 365 Agents Toolkit CLI. </br> • `teamsapp` CLI signature is now referred as `atk`.
 * ***May 16, 2025***: [Use Meeting AI Insights API to fetch conversation summaries, action items, and mentions directly from Teams meetings.](graph-api/meeting-transcripts/meeting-insights.md)
 * ***May 13, 2025***: [Introducing agent usage analytics for third-party apps in Developer Portal](/microsoftteams/platform/concepts/build-and-test/analyze-your-apps-usage-in-developer-portal?tabs=thirdpartyapps).
--->
 
 :::column-end:::
 :::row-end:::
@@ -189,7 +188,7 @@ Teams platform features that are available to all app developers.
 |17/05/2023 | Cater your app to a specific audience from the available list of countries or regions. | Publish your app > Publish to the Teams Store > Prepare your Teams Store submission > [Publish your app to specific countries or regions](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#publish-your-app-to-specific-countries-or-regions)|
 | 17/05/2023 | Use the Teams Toolkit v5 extension with many new app development features to get started with app development for Teams using Visual Studio Code. | Tools and SDKs > Teams Toolkit > [Teams Toolkit Overview](toolkit/agents-toolkit-fundamentals.md)|
 | 17/05/2023 | Updated Get started module with GitHub Codespaces and step-by-step guides aligned with Teams Toolkit v5. It also includes details for extending Teams app over Microsoft 365 and Outlook. | [Get started](get-started/get-started-overview.md)|
-| 24/04/2023 | Develop your apps with a seamless transition between Teams Developer Portal and Teams Toolkit. | Tools and SDKs > Developer Portal for Teams > [Develop your apps with Teams Toolkit](concepts/build-and-test/develop-your-apps-with-teams-toolkit.md) |
+| 24/04/2023 | Develop your apps with a seamless transition between Teams Developer Portal and Teams Toolkit. | Tools and SDKs > Developer Portal for Teams > [Develop your apps with Teams Toolkit](concepts/build-and-test/develop-your-apps-with-toolkit.md) |
 | 14/04/2023 | App update in any one context where the app is installed automatically updates the app in all the related contexts (chats, channels, and meetings). | Publish your app > [Upload your app in Teams](concepts/deploy-and-publish/apps-upload.md#update-your-app) |
 | 06/04/2023 | Set up Microsoft license management for third-party SaaS apps in Partner Center as part of the offer publishing that allows easy management and tracking of licenses for third-party app subscriptions within Teams. | Monetize your app > [Set up Microsoft license management](~/concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md) |
 | 04/04/2023 | Tab apps in shared channels are available in Department of Defense (DoD) environment. | Build tabs > [Build apps for shared channels](~/concepts/build-and-test/shared-channels.md) |
@@ -235,7 +234,7 @@ Teams platform features that are available to all app developers.
 | 09/29/2022|Teams mobile app now supports file downloads to local devices.|Integrate device capabilities > Integrate media capabilities > [File download on Teams mobile](concepts/device-capabilities/media-capabilities.md#file-download-on-teams-mobile)|
 | 09/16/2022|Adaptive Cards in search based message extensions now support Universal Actions.|Build message extensions > Search commands > [Universal Actions for search based message extensions](messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md)|
 | 09/06/2022|Introduced code snippets for capturing videos using camera through `selectMedia` API.| Integrate device capabilities > Integrate media capabilities > [Code snippets](concepts/device-capabilities/media-capabilities.md#code-snippets)|
-| 08/09/2022 | Introduced Teams Toolkit for Visual Studio 2022 | Tools and SDK > Teams Toolkit for Visual Studio > [Teams Toolkit overview for Visual Studio](toolkit/teams-toolkit-overview-visual-studio.md) |
+| 08/09/2022 | Introduced Teams Toolkit for Visual Studio 2022 | Tools and SDK > Teams Toolkit for Visual Studio > [Teams Toolkit overview for Visual Studio](toolkit/agents-toolkit-fundamentals.md) |
 | 08/03/2022 | Share to Teams from personal app or tab | Integrate with Teams > Share to Teams > [Share to Teams from personal app or tab](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md) |
 | 08/03/2022 | Added feature for retrieving meeting transcripts in the post-meeting scenario. | Build apps for Teams meetings and calls > Get meeting transcripts using Graph APIs > [Overview](graph-api/meeting-transcripts/overview-transcripts.md) |
 | 08/03/2022 | Link unfurling for share to teams from web apps | Integrate with Teams > Share to Teams > [Share to Teams from web apps](concepts/build-and-test/share-to-teams-from-web-apps.md) |

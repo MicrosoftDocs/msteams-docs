@@ -95,11 +95,11 @@ Agents Playground offers a faster debug experience for bot applications when com
 
 1. In the debug dropdown list, select **Microsoft 365 Agents Playground (browser)**.
 
-   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/app-test-tool.png" alt-text="Screenshot shows the option to select the Teams app test tool from the dropdown list.":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/app-test-tool.png" alt-text="Screenshot shows the option to select the Agents Playground from the dropdown list.":::
 
    Agents Playground opens the bot in a webpage.
 
-   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/test-tool.png" alt-text="Screenshot shows the bot opens the test tool in web page." lightbox="../../assets/images/toolkit-v2/toolkit-vs/debug-test-tool-vs.png":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/test-tool.png" alt-text="Screenshot shows the bot opens the Agents Playground in web page." lightbox="../../assets/images/toolkit-v2/toolkit-vs/debug-test-tool-vs.png":::
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Test+Tool+experience+in+Visual+Studio&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Ftoolkit-v4%2Fdebug-your-teams-app-test-tool-vs%3Ftabs%3Dopenai%23test-tool-experience-in-visual-studio&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Ftoolkit-v4%2Fdebug-your-agents-playground-vs.md&documentVersionIndependentId=5f102ce2-7c72-b348-78aa-27881c4b18af&platformId=b9d3de6f-bea0-0124-0e30-0a5db1d1c05f&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
@@ -232,7 +232,7 @@ You can use **Custom activity** to customize activity trigger `reactionsAdded`, 
 
 ## See also
 
-* [Microsoft 365 Agents Toolkit Overview](../teams-toolkit-fundamentals.md)
+* [Microsoft 365 Agents Toolkit Overview](../agents-toolkit-fundamentals.md)
 * [Build bots for Teams](../../bots/what-are-bots.md)
 * [Adaptive Card](../../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 * [Bot Framework SDK](https://dev.botframework.com/)

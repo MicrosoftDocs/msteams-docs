@@ -80,6 +80,6 @@ Azure Functions integrates with an array of [cloud services](add-resource.md) to
 
 ## See also
 
-* [Microsoft 365 Agents Toolkit Overview](~/toolkit/teams-toolkit-fundamentals.md)
+* [Microsoft 365 Agents Toolkit Overview](~/toolkit/agents-toolkit-fundamentals.md)
 * [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md)
 * [Create a new Teams project](create-new-project.md)
