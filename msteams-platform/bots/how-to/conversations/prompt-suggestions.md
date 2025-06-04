@@ -42,6 +42,7 @@ Suggested actions help users continue conversations with your bot.
 ## Prompt starters
 
 >[!NOTE]
+>
 > * Your bot can either use a prompt starter or a welcome message. If your bot uses prompt starters, ensure that your bot doesn’t send a welcome message.
 >
 > * Prompt starters are only supported for one-on-one chat bots.
@@ -65,11 +66,11 @@ To create prompt starters using Developer Portal:
    :::image type="content" source="~/assets/images/tdp/add-a-bot-command.png" alt-text="Screenshot shows how to add a command for your bot in Developer Portal.":::
 
 1. Enter the values for the following fields:
-    
+
     * **Command**: Appears as the prompt for your bot.
     * **Description**: A brief explanation of the purpose of the command.
 
-1. Select the personal scope and then select **Add**. This defines where the command menu must appear. 
+1. Select the personal scope and then select **Add**. This defines where the command menu must appear.
 
    :::image type="content" source="~/assets/images/tdp/bot-command.png" alt-text="Screenshot shows how to add a command, description, and scopes for your bot.":::
 
@@ -218,4 +219,3 @@ modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
 * [App manifest schema for Teams](~/resources/schema/manifest-schema.md)
 * [Messages in bot conversations](~/bots/how-to/conversations/conversation-messages.md)
 * [Adaptive Cards for bot developers](/adaptive-cards/getting-started/bots)
-

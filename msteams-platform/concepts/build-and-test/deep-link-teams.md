@@ -69,7 +69,7 @@ Example: `https://teams.microsoft.com/l/chat/19:c6d70e392a384916c3262b15406d763e
 
 You can use the following deep link format to go to a particular conversation within channel thread:
 
-`https://teams.microsoft.com/l/message/<channelId>/<parentMessageId>?tenantId=<tenantId>&groupId=<groupId>&parentMessageId=<parentMessageId>&teamName=<teamName>&channelName=<channelName>&createdTime=<createdTime>`
+`https://teams.microsoft.com/l/message/<channelId>/<messageId>?tenantId=<tenantId>&groupId=<groupId>&parentMessageId=<parentMessageId>&teamName=<teamName>&channelName=<channelName>&createdTime=<createdTime>`
 
 The query parameters are:
 
