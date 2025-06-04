@@ -554,9 +554,7 @@ Defines one or more agents to Microsoft 365 Copilot. [Declarative agents](/micro
 |`customEngineAgents`|Array of objects| 1 || Array of objects that each define a custom engine agent.|
 
 > [!NOTE]
->
 > The copilotAgents object must contain either `declarativeAgents` or `customEngineAgents`, but not both agents at the same time.
->
 
 ### declarativeAgents
 
