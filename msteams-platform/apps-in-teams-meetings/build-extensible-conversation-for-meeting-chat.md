@@ -43,7 +43,7 @@ Cards provide users with various visual, audio, and selectable messages and help
 
 The following table provides the user types and lists the features that each user can access in meetings:
 
-| User type | Bots and Copilot agents | Message extensions | Adaptive Cards | Dialogs |
+| User type | Bots and Agents | Message extensions | Adaptive Cards | Dialogs |
 | :-- | :-- | :-- | :-- | :-- |
 | In-tenant | Can view messages, interact with the content, and invoke the bot and agent. | Available | Available | Available |
 | Guest, part of the tenant Microsoft Entra ID | Can view messages, interact with the content, and invoke the bot and agent. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
