@@ -6,6 +6,7 @@ ms.localizationpriority: medium
 ms.topic: reference
 ms.author: surbhigupta
 ms.date: 02/26/2025
+ms.owner: angovil
 ---
 
 # Teams bot API changes to fetch team or chat members

@@ -14,10 +14,10 @@ For an interactive notification, a bot sends messages in a Teams channel, group 
 
 In this tutorial, learn about an interactive notification bot app in one of the following ways.
 
-* **GitHub Codespaces**: The codespace instance allows you to experience a Teams app instantaneously. It opens Visual Studio Code (VS Code) where the Teams Toolkit extension, the app source code, and all the dependencies are pre-packaged for you.
+* **GitHub Codespaces**: The codespace instance allows you to experience a Teams app instantaneously. It opens Visual Studio Code (VS Code) where the Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) extension, the app source code, and all the dependencies are pre-packaged for you.
 * **Step-by-step guide**: Allows you to set up your development environment and build a Teams app from the start.
 
-# [GitHub Codespaces](#tab/teamstoolkitcodespaces)
+# [GitHub Codespaces](#tab/agentstoolkitcodespaces)
 
 Before you create your codespace, ensure that you have the following prerequisites:
 
@@ -45,11 +45,11 @@ To create an interactive Teams notification bot with GitHub Codespaces, follow t
 
    :::image type="content" source="../assets/images/get-started/building-codespace.png" alt-text="Screenshot shows you the codespace building your notification bot.":::
 
-   Teams Toolkit prepares an interactive notification bot project for you and opens it in VS Code in the browser. The Teams Toolkit icon appears in the activity bar of VS Code.
+   Agents Toolkit prepares an interactive notification bot project for you and opens it in VS Code in the browser. The Microsoft 365 Agents Toolkit icon appears in the activity bar of VS Code.
 
 1. Select **Sign in to your Microsoft 365** and **Sign in to Azure** to sign in with your Microsoft 365 account.
 
-   :::image type="content" source="../assets/images/get-started/toolkit-in-browser-sign-in.png" alt-text="Screenshot shows you the Teams Toolkit window in browser to sign in."lightbox="../assets/images/get-started/add-tab-in-teams.png":::
+   :::image type="content" source="../assets/images/get-started/toolkit-in-browser-sign-in.png" alt-text="Screenshot shows you the Agents Toolkit window in browser to sign in."lightbox="../assets/images/get-started/add-tab-in-teams.png":::
 
     > [!NOTE]
     >
@@ -57,7 +57,7 @@ To create an interactive Teams notification bot with GitHub Codespaces, follow t
 
 1. Select **Preview your Teams App (F5)**.
 
-      :::image type="content" source="../assets/images/get-started/toolkit-in-browser.png" alt-text="Screenshot shows you the Teams Toolkit window in browser with your notification bot."lightbox="../assets/images/get-started/toolkit-in-browser.png":::
+      :::image type="content" source="../assets/images/get-started/toolkit-in-browser.png" alt-text="Screenshot shows you the Agents Toolkit window in browser with your notification bot."lightbox="../assets/images/get-started/toolkit-in-browser.png":::
 
    GitHub Codespaces builds your interactive notification bot app, loads it to Teams client, and opens it in a separate browser tab.
 
@@ -89,9 +89,12 @@ To create an interactive Teams notification bot with GitHub Codespaces, follow t
 
    You've now successfully created an interactive notification bot and loaded it in the Teams client.
 
+ > [!div class="nextstepaction"]
+ > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Build+an+interactive+notification+bot+app+using+GitHub+Codespaces&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fget-started%2Fbuild-interactive-notification-bot%3Ftabs%3Dagentstoolkitcodespaces&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fget-started%2Fbuild-interactive-notification-bot.md&documentVersionIndependentId=e5653869-a83d-3558-0896-b88c45816a22&platformId=eee097dd-e3f6-d51e-48d6-fc448f59cf0d&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 # [Step-by-step guide](#tab/step-by-step-guide)
 
-If you want to learn how to start a project with Teams Toolkit from the beginning, you need to set up your development environment. Select the following button to start building your interactive notification bot.
+If you want to learn how to start a project with Agents Toolkit from the beginning, you need to set up your development environment. Select the following button to start building your interactive notification bot.
 
 > [!div class="nextstepaction"]
 > [Start building an interactive notification bot](../sbs-gs-notificationbot.yml)

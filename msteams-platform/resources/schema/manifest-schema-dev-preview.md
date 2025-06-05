@@ -3,7 +3,7 @@ title: Developer Preview App Manifest
 description: Learn about public developer preview manifest schema for Microsoft Teams, sample app manifest, schema properties, and how to enable developer preview.
 ms.topic: reference
 ms.localizationpriority: medium
-ms.date: 03/13/2025
+ms.date: 03/26/2025
 ---
 # Public developer preview app manifest
 
@@ -726,6 +726,8 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 |`authorization.microsoftEntraConfiguration.supportsSingleSignOn`|Boolean|||A value indicating whether single sign-on is configured for the app.|
 |`authorization.apiSecretServiceAuthConfiguration`|Object|||Object capturing details needed to do service auth. Applicable only when auth type is `apiSecretServiceAuth`.|
 |`authorization.apiSecretServiceAuthConfiguration.apiSecretRegistrationId`|String|128 characters||Registration ID returned when developer submits the API key through Developer Portal.|
+|`authorization.oAuthConfiguration`||Object|||
+|`authorization.oAuthConfiguration.oAuthConfigurationId`|String|128 characters|||
 |`apiSpecificationFile`|String|2048 characters||A relative file path to the api specification file in the manifest package.|
 |`canUpdateConfiguration`|Boolean|||A value indicating whether the configuration of a message extension can be updated by the user. <br>Default value: `true`|
 |`commands`|Array of objects|10||Array of commands the message extension supports.|
@@ -888,52 +890,72 @@ Define the properties your app uses to post a user activity feed.
 |`type`|String|32 characters|✔️|The notification type.|
 |`description`|String|128 characters|✔️|A brief description of the notification.|
 |`templateText`|String|128 characters|✔️|Ex: "{actor} created task {taskId} for you"|
+|`allowedIconIds`|Array of strings|50| |A list of custom icon IDs valid for that activity.|
+
+### activities.activityIcons
+
+**Optional** &ndash; Array of objects
+
+Defines the icons of activity types that your app can post to a user's activity feed. You can define up to 50 icons per activity type.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`id`|String|64 characters|✔️|Defines the unique icon ID.|
+|`iconFile`|String|128 characters|✔️|Represents the icon image mapped to the unique icon ID. The value must match the name of the custom icon you add in the Teams app package.|
 
 ```json
 {
-   "activities":{
-      "activityTypes":[
-         {
-            "type":"taskCreated",
-            "description":"Task Created Activity",
-            "templateText":"{actor} created task {taskId} for you"
-         },
-         {
-            "type":"teamMention",
-            "description":"Team Mention Activity",
-            "templateText":"{actor} mentioned team"
-         },
-         {
-            "type":"channelMention",
-            "description":"Channel Mention Activity",
-            "templateText":"{actor} mentioned channel"
-         },
-         {
-            "type":"userMention",
-            "description":"Personal Mention Activity",
-            "templateText":"{actor} mentioned user"
-         },
-         {
-            "type":"calendarForward",
-            "description":"Forwarding a Calendar Event",
-            "templateText":"{actor} sent user an invite on behalf of {eventOwner}"
-         },
-         {
-            "type":"calendarForward",
-            "description":"Forwarding a Calendar Event",
-            "templateText":"{actor} sent user an invite on behalf of {eventOwner}"
-         },
-         {
-            "type":"creatorTaskCreated",
-            "description":"Created Task Created",
-            "templateText":"The Creator created task {taskId} for you"
-         }
-      ]
-   }
+    "activities": {  
+        "activityTypes": [
+           {
+                "type": "leadershipAnnouncements",
+                "description": "leadership Announcements",
+                "templateText": "Kayo Miwa shared an announcement",
+                "allowedIconIds" : [
+                    "announcementCreated"
+                ]
+              },
+           {
+                "type": "announcementCreated",
+                "description": "Announcements",
+                "templateText": "Megan Bowen posted an announcement",
+                "allowedIconIds" : [
+                    "announcementCreated"
+                ]
+              },
+              {
+                "type": "reaction",
+                "description": "reaction Activity",
+                "templateText": "Adele Vance reacted to your post in channel",
+                "allowedIconIds" : [
+                    "likeReaction",
+                    "smileReaction"
+                ]
+              },
+              {
+                "type": "taskCreated",
+                "description": "task created activity",
+                "templateText": "Pradeep Gupta created a new task item for you.",  
+                // No icons are associated with this activity type. When you send a notification using this activity type, Teams shows the app icon.
+              }
+            ],
+        "activityIcons" :[
+            {
+            "id": "likeReaction",
+            "iconFile": "likeReaction.png"
+            },
+            {
+            "id": "smileReaction",
+            "iconFile": "smileReaction.png"
+            },
+            {
+            "id": "announcementCreated",
+            "iconFile": "announcementCreated.png"
+            }
+           ]
+        }
 }
 ```
-
-***
 
 ## configurableProperties
 
@@ -1258,6 +1280,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups`| Array | 10 | | Defines groups of controls on a ribbon tab on a non-mobile device. For mobile devices, see `tabs.customMobileRibbonGroups` below.|
 |`tabs.groups.id`| String |64 characters | | Specifies the ID for the tab group within the app. It must be different from any built-in group ID in the Microsoft 365 application and any other custom group.|
 |`tabs.groups.label`| String | 64 characters | | Specifies the text displayed for the group. Despite the maximum length of 64 characters, to correctly align the tab in the ribbon, we recommend you limit the label to 16 characters.|
+|`tabs.groups.overriddenByRibbonApi`| Boolean | | | Specifies whether the group is hidden on application and platform combinations which support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))). This API installs custom contextual tabs on the ribbon. <br>Default value: `false`|
 |`tabs.groups.icons`| Array | 3 | | Specifies the icons displayed for the group. |
 |`tabs.groups.icons.size`| Number | |✔️| Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image sizes: `16`, `32`, `80`. |
 |`tabs.groups.icons.url`| String | 2048 characters | ✔️ | Specifies the absolute URL of the icon. <br>Default value: The string must start with `https://`|
