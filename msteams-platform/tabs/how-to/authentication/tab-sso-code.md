@@ -137,7 +137,7 @@ The access token returned from `getAuthToken()` can be used to establish the app
 Teams can cache this information associated with the app user's identity, such as the user's preferences.
 
 > [!NOTE]
-> If you need to construct a unique ID to represent the app user in your system, see [Using claims to reliably identify a user](/azure/active-directory/develop/id-tokens#using-claims-to-reliably-identify-a-user-subject-and-object-id).
+> If you need to construct a unique ID to represent the app user in your system, see [Using claims to reliably identify a user](/entra/identity-platform/claims-validation#validate-the-subject).
 
 ## Pass the access token to server-side code
 
@@ -227,7 +227,7 @@ The following code is a typical decoded payload of an access token:
 
 | Sample name | Description | .NET| Node.js | Manifest |
 |---------------|---------------|------|--------------|-----|
-| Tab SSO |Microsoft Teams sample app for tabs Microsoft Entra SSO| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|NA|
+| Tab SSO |Microsoft Teams sample app for tabs Microsoft Entra SSO| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs) |NA|
 | Tab, bot, and message extension (ME) SSO | This sample shows SSO for tab, bot, and ME - search, action, and link unfurling. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-sso/csharp/demo-manifest/App-SSO.zip) |
 
 ## Next step

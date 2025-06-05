@@ -106,7 +106,7 @@ If you're not re-uploading an updated package, ensure that the ID is unique.
 
 * If you get a **Manifest parsing has failed** error message when uploading the app to teams, use [Teams app validator](https://dev.teams.microsoft.com/validation) to validate the app package, including the app manifest and OpenAPI spec file. Review the [app manifest](../messaging-extensions/api-based-overview.md#app-manifest) and the [OpenAPI Description (OAD)](../messaging-extensions/api-based-overview.md#openapi-description-oad) requirements to resolve errors or warnings and try uploading your app.
 
-   :::image type="content" source="../assets/images/Copilot/api-me-troubleshoot-sideload.png" alt-text="Screenshot shows the error message when uploading an app to Teams along with the option to copy the error details to clipboard.":::
+   :::image type="content" source="../assets/images/Copilot/api-me-troubleshoot-upload.png" alt-text="Screenshot shows the error message when uploading an app to Teams along with the option to copy the error details to clipboard.":::
 
 * If you encounter any issues while running your app in Teams, use the following troubleshooting steps to identify and resolve your issue:
 
@@ -139,4 +139,4 @@ If you’re unable to resolve the errors, we recommend contacting [Microsoft Tea
 * [Build tabs for meeting](../apps-in-teams-meetings/build-tabs-for-meeting.md)
 * [Build bots for Teams](../bots/what-are-bots.md)
 * [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
-* [Receive all conversation messages with RSC](../bots/how-to/conversations/channel-messages-with-rsc.md)
+* [Receive all channel messages for bots and agents](../bots/how-to/conversations/channel-messages-for-bots-and-agents.md)

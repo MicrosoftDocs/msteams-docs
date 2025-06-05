@@ -790,8 +790,7 @@ If you already have a bot on Teams, you can upgrade your existing bots to custom
 
 > [!NOTE]
 >
-> * Custom engine agent support for Microsoft 365 Copilot Chat is available only in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
-> * Custom engine agent isn't supported in Python.
+> Custom engine agent isn't supported in Python.
 
 Here is the required to-do list to upgrade your bot to custom engine agent:
 
@@ -804,7 +803,7 @@ Here is the required to-do list to upgrade your bot to custom engine agent:
 
 ## Add support for Microsoft 365 Copilot Chat
 
-You can now add support for custom engine agents in Microsoft 365 Copilot Chat, which is currently in public developer preview. Additionally, you can preview support for asynchronous patterns, including follow-up messages and long-running tasks. For more information, see [asynchronous patterns](/microsoft-365-copilot/extensibility/ux-custom-engine-agent).
+You can now add support for custom engine agents in Microsoft 365 Copilot Chat. Additionally, you can preview support for asynchronous patterns, including follow-up messages and long-running tasks. For more information, see [asynchronous patterns](/microsoft-365-copilot/extensibility/ux-custom-engine-agent).
 
 If you want your custom engine agent to support Microsoft 365 Copilot Chat, add the following into your app manifest:
 
@@ -861,7 +860,7 @@ If you want your custom engine agent to support Microsoft 365 Copilot Chat, add 
 > [!NOTE]
 >
 > * Microsoft 365 Copilot Chat adds an AI-generated label to every response that the custom engine agent sends.
-> * If you have built your conventional bot using Teams Toolkit and you want to add support for Microsoft 365 Copilot Chat, follow the [step-by-step guide](../../../Teams-AI-library-tutorial.yml).
+> * If you have built your conventional bot using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) and you want to add support for Microsoft 365 Copilot Chat, follow the [step-by-step guide](../../../Teams-AI-library-tutorial.yml).
 > * If you want to add single-sign on (SSO) authentication for your custom engine agent, see [update Microsoft Entra app registration for SSO](../../../m365-apps/extend-m365-teams-personal-tab.md#update-microsoft-entra-app-registration-for-sso). However, SSO authentication for custom engine agent isn't supported for Outlook client.
 
 ## Elevate your conventional bot to use AI
@@ -982,7 +981,7 @@ Use one of the following to migrate your bot app to use Teams AI library:
 Choose one of the following as a next step:
 
 > [!div class="nextstepaction"]
-> If you want to try creating a scenario based custom engine agent using Teams Toolkit and Teams AI library, select the following: <br>
+> If you want to try creating a scenario based custom engine agent using Agents Toolkit and Teams AI library, select the following: <br>
 > [Advanced step-by-step guide](../../../sbs-Teams-AI.yml)
 >
 > [!div class="nextstepaction"]
