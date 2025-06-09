@@ -4,6 +4,7 @@ description: In this module, learn what notification-only bots are in Microsoft 
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 04/02/2023
+ms.owner: angovil
 ---
 # Notification-only bots in Microsoft Teams
 
