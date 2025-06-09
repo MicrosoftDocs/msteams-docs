@@ -108,37 +108,36 @@ Subscription allows apps to monitor membership changes in shared channel and its
 
 You can manage the indirect membership using the following APIs:
 
-To get all current channel members:
+* To get all current channel members:
 
     ```http
     GET /teams/{team-id}/channels/{channel-id}/allMembers
     ```
 
-To get details of associated teams:
+* To get details of associated teams:
 
     ```http
     GET /teams/{team-id}/channels/{channel-id}/sharedWithTeams
     ```
-To get details of the allowed members from a team:
+
+* To get details of allowed members from a team:
 
     ```http
-    GET /teams/{team-id}/channels/{channel-id}/sharedWithTeams/{sharewithteamsId}/ allowedMembers  
+    GET /teams/{team-id}/channels/{channel-id}/sharedWithTeams/{sharewithteamsId}/ allowedMembers
     ```
 
 > [!NOTE]
-> `allowedMembers` provided details of newly associated users. This is not applicable for unshared events.
+> The `allowedMembers` provided details of newly associated users. This is not applicable for unshared events.
 
 ### Validate user access
 
-When an app receives a notification for an indirect membership update, the app may need to validate user's access to the shared channel.
-
-For example, this occures when a user is removed from an associated team.
+When an app receives a notification for an indirect membership update, the app needs to validate user's access to the shared channel. For example, this occurs when a user is removed from an associated team.
 
 Use the following API for validation:
 
-    ```http
-    GET /DoesUserHaveAccessAsync
-    ```
+```http
+GET /DoesUserHaveAccessAsync
+```
 
 The API verifies whether the user still has access through another team or direct membership.
 
