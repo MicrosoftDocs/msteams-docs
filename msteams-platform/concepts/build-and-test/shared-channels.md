@@ -79,6 +79,41 @@ You can get direct shared channel membership by using the `hostTeamGroupID` from
     GET /teams/{host-team-group-id}/channels/{channel-id}/sharedWithTeams/{teamX}/members
     ```
 
+## Receive notifications for indirect membership changes
+
+A shared channel in Teams can be associated with multiple teams. Users can access a shared channel either directly (added to the channel) or indirectly (members of a team with which the channel is shared).
+
+When a user joins or leaves an associated team, their access to the shared channel updates accordingly. These are indirect membership changes.
+
+Apps installed in shared channels can receive notifications when users gain or lose access through associated teams. This allows apps to maintain accurate access control and track user status in real time.
+
+### Notification behaviour
+
+Notifications are sent when user access changes indirectly. To receive these notifications:
+
+* Ensure the app is installed in the host team and enabled for the shared channel.
+* Create a valid Microsoft Graph change notification subscription to monitor associated team membership changes and shared or unshared events using supported APIs.
+
+If either condition is not met, notifications are not delivered.
+
+### Subscription setup
+
+To subscribe to indirect membership updates, use the following resource URL in your Microsoft Graph subscription:
+
+`/teams/{team-id}/channels/getAllMembers?notifyOnIndirectMembershipUpdate=true&suppressWhenSharedUnsharedWithTeam=true`
+
+Subscription allows apps to monitor membership changes in shared channel and its host team.
+
+### Validate user access
+
+When a notification indicates an indirect membership update, for example, a user removed from an associated team, the app may need to validate whether the user still has access to the shared channel.
+
+Use the following API for validation:
+
+    ```http
+    GET /DoesUserHaveAccessAsync
+    ```
+
 ## Classify members in the shared channel as in-tenant or out-tenant
 
 You can classify members as in-tenant or out-tenant by comparing `tenantID` of the member or team with `hostTeamTenantID` as follows:
