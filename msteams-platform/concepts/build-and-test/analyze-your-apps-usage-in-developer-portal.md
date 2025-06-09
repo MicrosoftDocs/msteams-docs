@@ -14,10 +14,14 @@ Developer Portal provides a comprehensive suite of tools to help you analyze and
 
 Whether you’re tracking active users, retention rates, or usage patterns across different platforms, Developer Portal helps you with the information you need to optimize your app and ensure its success. Custom apps built for your org (LOB apps) can access app usage data only for Teams. However, for third-party apps you can explore new Microsoft 365 dimensions, such as host product and capabilities.
 
+<<<<<<< HEAD
 <!-- The app usage for a given day is reflected within 24 to 48 hours, and usage data for the new apps
 can take up to three to five days to reflect in the charts. -->
 
 Usage data for new apps typically becomes available within 3-5 days. As the app usage increases, data updates occur more frequently, usually within 24 to 48 hours.
+=======
+The app and agent usage for a given day is reflected within 24 to 48 hours, and usage data for the new apps or agents can take up to three to five days to reflect in the charts.
+>>>>>>> 40bbc578fdb3be3d1d4f3ba0ca6b9e2500578172
 
 # [Custom apps built for your org (LOB apps)](#tab/custom-apps-built-for-your-org)
 
@@ -80,6 +84,7 @@ After you have selected your desired filters, you can explore the following indi
 
    :::image type="content" source="../../assets/images/tdp/usage-by-retention-state.png" alt-text="Screenshot shows you the usage by retention state chart for your published app.":::
 
+<<<<<<< HEAD
    | Metric | Definition |
    | :-----------------------| :------------------------------------------------------------------------------------------------------|
    | New users | Active users who are new and haven't used your app. |
@@ -89,6 +94,14 @@ After you have selected your desired filters, you can explore the following indi
 
    > [!NOTE]
    > All user’s data are counted separately and tenant can have multiple users using the app.
+=======
+| Metric | Definition |
+| :-----------------------| :------------------------------------------------------------------------------------------------------|
+| New users or tenants | Active users or tenants who are new and haven't used your app. |
+| Returning users or tenants | Active users or tenants who used your app during a given R30 (Rolling 30 days) time period and the immediately preceding R30 time period. |
+| Resurrected users or tenants | Active users or tenants who used your app one or more times before but not in the immediately preceding R30 time period. |
+| Lapsed users or tenants | Active users or tenants who weren't seen during a given R30 time period but were seen during the immediately preceding R30 time period. |
+>>>>>>> 40bbc578fdb3be3d1d4f3ba0ca6b9e2500578172
 
 ### Usage intensity
 
