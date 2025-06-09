@@ -73,7 +73,7 @@ Following is an example for localization .json:
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.Localization.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.22/MicrosoftTeams.Localization.schema.json",
   "manifestVersion": "1.5",
   "name.short": "Localización",
   "name.full": "Aplicación de localización",
