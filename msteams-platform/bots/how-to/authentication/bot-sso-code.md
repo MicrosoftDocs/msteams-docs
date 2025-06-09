@@ -1,10 +1,11 @@
 ---
 title: Update App Manifest to Enable SSO
-description: Learn how to add code configuration, handle an access token, receive token, and handle app user log out for enabling in Teams bots. Sample (C#, Node.js).
+description: Learn how to add code configuration, handle an access token, receive token, and handle app user sign out for enabling SSO in Teams bots.
 ms.topic: how-to
 ms.localizationpriority: high
 zone_pivot_groups: enable-sso
 ms.date: 11/13/2024
+ms.owner: ryanbliss
 ---
 # Add code to enable SSO in your bot app
 
@@ -16,7 +17,7 @@ Before you add code to enable single sign-on (SSO), ensure that you've configure
 You need to configure your app's code to obtain an access token from Microsoft Entra ID. The access token is issued on behalf of the bot app.
 
 > [!NOTE]
-> If you've built your Teams app using Microsoft Teams Toolkit, you can enable SSO for your app using the instructions in the Tools and SDKs module. For more information, see [Add single sign-on to Teams app](../../../toolkit/add-single-sign-on.md). Teams Toolkit supports SSO for JavaScript and TypeScript apps in Visual Studio Code, and in Teams Toolkit 17.4 preview 3 for C# apps.
+> If you've built your Teams app using Microsoft Teams Toolkit, you can enable SSO for your app using the instructions in the Tools and SDKs module. For more information, see [add single sign-on to Teams app](../../../toolkit/add-single-sign-on.md). Teams Toolkit supports SSO for JavaScript, TypeScript, and C# apps in Visual Studio Code.
 
 ::: zone pivot="bot-app"
 
@@ -25,7 +26,7 @@ This section covers:
 1. [Update development environment variables](#update-development-environment-variables)
 1. [Add code to handle an access token](#add-code-to-handle-an-access-token)
 1. [Add code to receive the token](#add-code-to-receive-the-token)
-1. [Handle app user log out](#handle-app-user-log-out)
+1. [Handle app user sign out](#handle-app-user-sign-out)
 
 ## Update development environment variables
 
@@ -42,9 +43,15 @@ To update the development environment variables:
     - For `ConnectionName`, update the name of the OAuth connection you configured in Microsoft Entra ID.
     - For `MicrosoftAppTenantId`, update the tenant ID.
 
+    > [!NOTE]
+    > You can customize the OAuth redirect URL for your bot and identity provider based on your data residency requirements, whether your bot is in the public cloud, Microsoft Azure Government cloud, or Microsoft Azure operated by 21Vianet. For OAuth URLs and data residency list, see [OAuth URL support in Azure AI Bot Service](/azure/bot-service/ref-oauth-redirect-urls?view=azure-bot-service-4.0&preserve-view=true).
+
 1. Save the file.
 
 You've now configured the required environment variables for your bot app and SSO. Next, add the code for handling bot tokens.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Update+development+environment+variables&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code%3Ftabs%3Dcs1%252Ccs2%252Ccs3%252Ccs4%252Ccs5%26pivots%3Dbot-app%23update-development-environment-variables&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code.md&documentVersionIndependentId=039ff5cc-7243-ce4b-527e-c152755eeb72&platformId=915789b2-9617-01bb-fb21-d6789a634ed8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Add code to handle an access token
 
@@ -116,7 +123,7 @@ To update your app's code:
                         try
                         {
                             // Delete the conversationState for the current conversation to prevent the
-                            // bot from getting stuck in a error-loop caused by being in a bad state.
+                            // bot from getting stuck in an error-loop caused by being in a bad state.
                             // conversationState must be thought of as similar to "cookie-state" in a Web pages.
                             await conversationState.DeleteAsync(turnContext);
                         }
@@ -234,7 +241,8 @@ To update your app's code:
         });
     ```
 
----
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+code+to+handle+an+access+token&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code%3Ftabs%3Dcs1%252Ccs2%252Ccs3%252Ccs4%252Ccs5%26pivots%3Dbot-app%23add-code-to-handle-an-access-token&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code.md&documentVersionIndependentId=039ff5cc-7243-ce4b-527e-c152755eeb72&platformId=915789b2-9617-01bb-fb21-d6789a634ed8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ### Consent dialog for getting access token
 
@@ -251,10 +259,10 @@ When the user selects **Continue**, one of the following events occurs:
 The consent dialog that appears is for open-id scopes defined in Microsoft Entra ID. The app user must give consent only once. After consenting, the app user can access and use your bot app for the granted permissions and scopes.
 
 > [!NOTE]
-> After the app user consents, they're not required to consent again for any other permissions. If the permissions defined in Microsoft Entra scope are modified, then the app user may need to consent again. If, however, the consent prompt fails to let the app user access, the bot app falls back to sign-in card.
+> After the app user consents, they're not required to consent again for any other permissions. If the permissions defined in Microsoft Entra scope are modified, then the app user might need to consent again. If, however, the consent prompt fails to let the app user access, the bot app falls back to sign-in card.
 
 > [!IMPORTANT]
-> Scenarios where consent dialogs are not needed:
+> Scenarios where consent dialogs aren't needed:
 >
 > - If the admin has granted consent on behalf of the tenant, app users don't need to be prompted for consent at all. This means that the app users don't see the consent dialogs and can access the app seamlessly.
 > - If your Microsoft Entra app is registered in the same tenant from which you're requesting an authentication in Teams, the app user can't be asked to consent, and is granted an access token right away. App users consent to these permissions only if the Microsoft Entra app is registered in a different tenant.
@@ -371,6 +379,9 @@ async loginStep(stepContext) {
 > [!NOTE]
 > The code snippets use the Waterfall Dialog. For more information, see [About component and waterfall dialogs](/azure/bot-service/bot-builder-concept-waterfall-dialogs?view=azure-bot-service-4.0&preserve-view=true).
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+code+to+receive+the+token&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code%3Ftabs%3Dcs1%252Ccs2%252Ccs3%252Ccs4%252Ccs5%26pivots%3Dbot-app%23add-code-to-receive-the-token&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code.md&documentVersionIndependentId=039ff5cc-7243-ce4b-527e-c152755eeb72&platformId=915789b2-9617-01bb-fb21-d6789a634ed8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ### Validate the access token
 
 Web APIs on your server must decode the access token and verify if it's sent from the client.
@@ -380,12 +391,11 @@ Web APIs on your server must decode the access token and verify if it's sent fro
 
 For more information about validating access token, see [Validate tokens](/azure/active-directory/develop/access-tokens#validate-tokens).
 
-There are a number of libraries available that can handle JWT validation. Basic validation includes:
+There are many libraries available that can handle JWT validation. Basic validation includes:
 
 - Checking that the token is well-formed.
 - Checking that the token was issued by the intended authority.
 - Checking that the token is targeted to the web API.
-
 Keep in mind the following guidelines when validating the token:
 
 - Valid SSO tokens are issued by Microsoft Entra ID. The `iss` claim in the token must start with this value.
@@ -418,9 +428,9 @@ The following code snippet is a typical decoded payload of an access token:
 }
 ```
 
-## Handle app user log out
+## Handle app user sign out
 
-Use the following code snippet to handle the access token in case the app user logs out:
+Use the following code snippet to handle the access token in case the app user signs out:
 
 # [C#](#tab/cs4)
 
@@ -473,6 +483,9 @@ Use the following code snippet to handle the access token in case the app user l
 ```
 
 ---
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Handle+app+user+sign+out&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code%3Ftabs%3Dcs1%252Ccs2%252Ccs3%252Ccs4%252Ccs5%26pivots%3Dmex-app%23handle-app-user-sign-out&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code.md&documentVersionIndependentId=039ff5cc-7243-ce4b-527e-c152755eeb72&platformId=915789b2-9617-01bb-fb21-d6789a634ed8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Code sample
 

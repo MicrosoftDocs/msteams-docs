@@ -4,6 +4,7 @@ description: In this article, check FAQS on Adaptive Card Previewer, bots, Live 
 ms.topic: reference
 ms.date: 01/23/2025
 ms.localizationpriority: high
+ms.owner: angovil
 ---
 
 # Frequently asked questions
@@ -13,9 +14,9 @@ This section contains the frequently asked questions and the answers.
 ## Adaptive Card Previewer
 
 <details>
-<summary>Why do we have to use a new extension in Visual Studio Code? Can’t this extension be integrated into Teams Toolkit for Visual Studio Code?</summary>
+<summary>Why do we have to use a new extension in Visual Studio Code? Can’t this extension be integrated into Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) for Visual Studio Code?</summary>
 
-Adaptive Card Previewer is a standalone extension because it uses a closed-source package to render the Adaptive Cards to ensure consistent rendering logic with the Teams platform. Teams Toolkit is an open-source project and doesn't include dependencies on packages that third-party developers can't access.
+Adaptive Card Previewer is a standalone extension because it uses a closed-source package to render the Adaptive Cards to ensure consistent rendering logic with the Teams platform. Agents Toolkit is an open-source project and doesn't include dependencies on packages that third-party developers can't access.
 <br>
 &nbsp;
 </details>
@@ -85,7 +86,7 @@ Use Delete messages-Bot framework's `DeleteActivity` method: [Update and delete
 <details>
 <summary>How can I test the validity of the card schema via code?</summary>
 
-You can test or validate the Adaptive Card schema using the **Adaptive cards editor (preview)** option in [Developer Portal > Tools](https://dev.teams.microsoft.com/tools).
+You can test or validate the Adaptive Card schema using the **Adaptive Cards editor (Preview)** option in [Developer Portal > Tools](https://dev.teams.microsoft.com/tools).
 </details>
 <details>
 <summary>Why am I unable to create a bot in Developer Portal?</summary>
@@ -101,6 +102,13 @@ App registration is disabled for the user or the user doesn't have enough permis
 * Ensure that the `joinParams` being passed to the `AddAsync` method are correct and contain the required information.
 * Ensure the values for `JoinUrl`, `MeetingId`, and other parameters are correct.
 * Ensure that the `scenarioId` is unique for each call. Reusing scenario IDs can sometimes cause issues.
+
+</details>
+
+<details>
+<summary>After registering my bot in the Azure portal, I get the error <b>You do not have permission to use this app here</b> when opening it in Teams. How can I resolve this?</summary>
+
+To use your app within Teams, you must upload it into Teams. For more information, see [upload your app to Teams](toolkit/test-app-behavior.md#upload-your-app-to-teams).
 
 </details>
 
@@ -432,9 +440,9 @@ You can use the following Graph API [Get user mailbox settings](/graph/api/user-
 
 </details>
 <details>
-<summary>How can I deploy the code in Azure using Teams Toolkit, and use Graph API to get a user profile photo?</summary>
+<summary>How can I deploy the code in Azure using Microsoft 365 Agents Toolkit, and use Graph API to get a user profile photo?</summary>
 
-For more information on Teams Toolkit, see [Create a new Teams project](toolkit/create-new-project.md) and [Teams Toolkit CLI](toolkit/Teams-Toolkit-CLI.md).
+For more information on Agents Toolkit, see [Create a new Teams project](toolkit/create-new-project.md) and [Microsoft 365 Agents Toolkit CLI](toolkit/Teams-Toolkit-CLI.md) (previously known as Teams Toolkit CLI).
 
 <br>
 &nbsp;
@@ -1025,7 +1033,7 @@ Configure the application you're using to only execute HTML encoding of the scop
 <details>
 <summary>How can I implement Bot SSO using React?</summary>
 
-If you use Teams Toolkit to build your app, see [Add single sign-on to Teams app](toolkit/add-single-sign-on.md) for more information.
+If you use Agents Toolkit to build your app, see [Add single sign-on to Teams app](toolkit/add-single-sign-on.md) for more information.
 
 For more information about Node js code sample, see [Bot SSO quick-start](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js).
 <br>
@@ -1117,6 +1125,14 @@ If you have both configurable tab and static tab defined in your app manifest fo
 
 Pre-existing pinned configurable tab instances of your app continue to work the same. You don't have the option to pin new instances of these configurable tabs. When you select to pin your tab, then Teams pins the static tab of your app.
 <br>
+&nbsp;
+</details>
+<details>
+<summary>How do I optimize my tab webpages to perform better on mobile devices?</summary>
+
+To optimize your tab app performance on Teams mobile, use service workers to cache static assets and minimize web page size. You can also conduct performance audits using dev tools to identify bottlenecks. For more information, see [best practices for Teams mobile apps](resources/teams-mobile-best-practices.md).
+<br>
+&nbsp;
 </details>
 </details>
 
@@ -1179,16 +1195,17 @@ Teams AI library works alongside the existing Bot Framework SDK and isn't a repl
 <br>
 </details>
 
-## Teams toolkit
+## Microsoft 365 Agents Toolkit
 
-FAQ for [Provision cloud resources](toolkit/provision.md) using Teams Toolkit.
+FAQ for [Provision cloud resources](toolkit/provision.md) using Agents Toolkit.
 <br>
 
 <details>
 <summary>How to troubleshoot?</summary>
 
-If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document.
+If you get errors with Agents Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document. If you're using Agents Toolkit CLI, there'll be a hyperlink at the end of error message that points to the help doc.
 <br>
+
 &nbsp;
 </details>
 <details>
@@ -1212,21 +1229,17 @@ Before provision, the toolkit asks you if you want to create a new resource grou
 <details>
 <summary>How can I provision a SharePoint-based app?</summary>
 
-You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4).
-
-> [!NOTE]
-> Building a Teams app using SharePoint Framework with Teams Toolkit doesn't have direct integration with Microsoft Entra admin center. The content in the document doesn't apply to SPFx-based apps.
-
+You can do so by following [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4).
 <br>
 &nbsp;
 </details>
 <details>
-<summary>How can I deploy the code in Microsoft Entra ID using Teams Toolkit, and use Graph API to get the app user's profile photo?</summary>
+<summary>How can I deploy the code in Microsoft Entra ID using Microsoft 365 Agents Toolkit, and use Graph API to get the app user's profile photo?</summary>
 
 Shared references to deploy the code using toolkit:
 
-* [Create a new Teams app using Teams Toolkit](toolkit/create-new-project.md)
-* [Teams Toolkit CLI](toolkit/Teams-Toolkit-CLI.md)
+* [Create a new Teams app using Agents Toolkit](toolkit/create-new-project.md)
+* [Agents Toolkit CLI](toolkit/Teams-Toolkit-CLI.md)
 
 You can call Graph API to get the app user's profile photo.
 

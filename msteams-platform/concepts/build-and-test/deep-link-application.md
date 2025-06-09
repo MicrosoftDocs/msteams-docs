@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 11/12/2024
+ms.owner: ryanbliss
 ---
 
 # Deep link to an application

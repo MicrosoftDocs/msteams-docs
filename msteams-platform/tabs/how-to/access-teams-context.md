@@ -3,7 +3,8 @@ title: Get Contextual Information for Tabs
 description: Learn to get context for your tab, context of user, team, or company, access information, retrieve context in private or shared channels, and handle theme change.
 ms.localizationpriority: high
 ms.topic: how-to
-ms.date: 02/06/2025
+ms.date: 03/19/2025
+ms.owner: ryanbliss
 ---
 
 # Get context for your tab
@@ -42,14 +43,15 @@ Use placeholders in your configuration or content URLs. Microsoft Teams replaces
 * [{user.loginHint}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-loginhint): A value suitable as a sign in hint for Microsoft Entra ID. This is usually the sign in name of the current user in their home tenant. (Known as `{loginHint}` before TeamsJS v2.0.0).
 * [{user.userPrincipalName}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-userprincipalname): The User Principal Name of the current user in the current tenant. (Known as `{userPrincipalName}` before TeamsJS v2.0.0).
 * [{user.id}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-id): The Microsoft Entra object ID of the current user in the current tenant. (Known as `{userObjectId}` before TeamsJS v2.0.0).
-* [{app.theme}](/javascript/api/@microsoft/teams-js/app.appinfo#@microsoft-teams-js-app-appinfo-theme): The current user interface (UI) theme such as `default`, `dark`, or `contrast`. (Known as `{theme}` before TeamsJS v2.0.0).
+* [{app.theme}](/javascript/api/@microsoft/teams-js/app.appinfo#@microsoft-teams-js-app-appinfo-theme): The current user interface (UI) theme such as `default`, `dark`, or `glass`, `contrast`. (Known as `{theme}` before TeamsJS v2.0.0).
 * [{team.groupId}](/javascript/api/@microsoft/teams-js/app.teaminfo#@microsoft-teams-js-app-teaminfo-groupid): The ID of the Microsoft 365 group in which the tab resides. (Known as `{groupId}` before TeamsJS v2.0.0)
 * [{user.tenant.id}](/javascript/api/@microsoft/teams-js/app.tenantinfo#@microsoft-teams-js-app-tenantinfo-id): The Microsoft Entra tenant ID of the current user. (Known as `{tid}` before TeamsJS v2.0.0).
 * [{app.locale}](/javascript/api/@microsoft/teams-js/app.appinfo#@microsoft-teams-js-app-appinfo-locale): The current locale of the user formatted as *languageId-countryId*, for example `en-us`. (Known as `{locale}` before TeamsJS v2.0.0).
 
 > [!NOTE]
-> - The previous `{upn}` placeholder is now deprecated. For backward compatibility, it's a synonym for `{user.loginHint}`.
-> - Mobile (Android and iOS) versions of Microsoft Teams support only TeamsJS v1.x.x placeholders.
+>
+> * The previous `{upn}` placeholder is now deprecated. For backward compatibility, it's a synonym for `{user.loginHint}`.
+> * Mobile (Android and iOS) versions of Microsoft Teams support only TeamsJS v1.x.x placeholders.
 
 For example, in your app manifest if you set your tab *configurationUrl* attribute to `"https://www.contoso.com/config?name={user.loginHint}&tenant={user.tenant.id}&group={team.groupId}&theme={app.theme}"` and the signed-in user has the following attributes:
 
@@ -85,7 +87,7 @@ You can also retrieve the context information using the [Microsoft Teams JavaScr
     "osLocaleInfo": "",
     "parentMessageId": "The parent message ID from which this dialog is launched",
     "sessionId": "The unique ID for the current session used for correlating telemetry data",
-    "theme": "The current UI theme: default | dark | contrast",
+    "theme": "The current UI theme: default | dark | glass | contrast",
     "userClickTime": "",
     "userFileOpenPreference": ""  },
   "channel": {
@@ -108,9 +110,9 @@ You can also retrieve the context information using the [Microsoft Teams JavaScr
     "subPageId": "The developer-defined unique ID for the sub-entity this content points to"  },
   "sharepoint": "The SharePoint context is available only when hosted in SharePoint",
   "sharepointSite": {
-    "domain": "The domain of the root SharePoint site associated with the team",
-    "path": "The relative path to the SharePoint site associated with the team",
-    "url": "The root SharePoint site associated with the team"  },
+    "teamSiteDomain": "The domain of the root SharePoint site associated with the team",
+    "teamSitePath": "The relative path to the SharePoint site associated with the team",
+    "teamSiteUrl": "The root SharePoint site associated with the team"  },
   "team": {
     "displayName": "The name of the current team",
     "groupId": "Guid identifying the current Office 365 Group ID",
@@ -225,6 +227,7 @@ async function example() {
   /*...*/
 }
 ```
+
 # [TeamsJS v1.x.x](#tab/teamsjs-v1)
 
 ## TypeScript
@@ -252,7 +255,7 @@ microsoftTeams.getContext((context) => {
 The following table lists commonly used context properties of the *context* object:
 
 | TeamsJS v2 name | TeamsJS v1 name |
-|---|---|
+| --- | --- |
 | team.internalId | teamId |
 | team.displayName | teamName |
 | channel.id | channelId |
@@ -304,9 +307,9 @@ The following fields are changed when your content page is in a private channel:
 * `team.groupId`: Undefined for private channels
 * `team.internalId`: Set to the threadId of the private channel
 * `team.displayName`: Set to the name of the private channel
-* `sharepointSite.url`: Set to the URL of a distinct, unique SharePoint site for the private channel
-* `sharepointSite.path`: Set to the path of a distinct, unique SharePoint site for the private channel
-* `sharepointSite.domain`: Set to the domain of a distinct, unique SharePoint site domain for the private channel
+* `sharepointSite.teamSiteUrl`: Set to the URL of a distinct, unique SharePoint site for the private channel
+* `sharepointSite.teamSitePath`: Set to the path of a distinct, unique SharePoint site for the private channel
+* `sharepointSite.teamSiteDomain`: Set to the domain of a distinct, unique SharePoint site domain for the private channel
 * `channel.ownerGroupId`: Set to the host team groupId of the private channel
 
 If your page makes use of any of these values, the value of `channel.membershipType` field must be `Private` to determine if your page is loaded in a private channel and can respond appropriately.
@@ -352,7 +355,7 @@ For more information on shared channels, see [shared channels](~/concepts/build-
 
 You can register your app to be informed if the theme changes by calling `microsoftTeams.app.registerOnThemeChangeHandler(function(theme) { /* ... */ })`.
 
-The `theme` argument in the function is a string with a value of `default`, `dark`, or `contrast`.
+The `theme` argument in the function is a string with a value of `default`, `dark`, `glass`, or `contrast`. The [AppInfo](/javascript/api/%40microsoft/teams-js/app.appinfo?branch=main&view=msteams-client-js-latest#@microsoft-teams-js-app-appinfo-theme&preserve-view=true) property in the getContext API supports the `glass` theme for Teams running on Apple Vision Pro devices.
 
 # [Default](#tab/default)
 

@@ -398,6 +398,12 @@ A good parameter description explains the requirements of the system in a natura
 
 ---
 
+Here are the best practices you can adapt when defining the parameters:
+
+* Parameters must be clearly defined to ensure accurate responses from agents. Copilot uses these descriptions to select the best command and predict parameter values based on the user query.
+* Parameter description must not contain grammar and punctuation errors.
+* Parameters defined in the manifest must not be identical.
+
 ## Enhance message extension to retrieve information through compound utterances
 
 [*Must fix*]
@@ -687,8 +693,6 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 
 [*Must fix*]
 
-> [!IMPORTANT]
-> Message extension agents in Microsoft 365 Copilot apps are in limited private preview for Word and PowerPoint. More details to be published after a public preview is announced.
 
 Agents customize and extend the Microsoft 365 Copilot experience by bringing more skills and knowledge to Microsoft 365 Copilot for a personalized user experience. By using agents, which are a subset of agents, users can integrate additional capabilities into Microsoft 365 Copilot by interacting with third-party applications, whether for retrieving or modifying information within those apps. For instance, message extension agents facilitate searching for data in other applications so that Microsoft 365 Copilot can present it upon request when the agent is activated.
 
