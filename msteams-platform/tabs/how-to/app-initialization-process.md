@@ -56,7 +56,7 @@ For apps that don't require time for loading the process is straight forward, th
 
 #### App caching considerations for immediate apps
 
-Within TeamsJS, there are also APIs that support the caching of resources to improve the subsequent launch times of apps. These APIs allow developers to keep some resources and assets in memory so that they can be use when rehydrating their apps. For more information about caching, see [App caching for your tab app](app-caching.md).
+Within TeamsJS, there are also APIs that support the caching of resources to improve the subsequent launch times of apps. These APIs allow developers to keep some resources and assets in memory so that they can be used when rehydrating their apps. For more information about caching, see [App caching for your tab app](app-caching.md).
 
 It's important to be aware that if the app uses caching, it enters a *cached/suspended* state, where API calls don't impact it until it resumes. When an app resumes from cache, its state is set to **Loading** because the platform is waiting for it to call `app.notifySuccess()` to complete the loading sequence. Upon resume the app must call `app.notifySuccess()` to complete loading.
 
