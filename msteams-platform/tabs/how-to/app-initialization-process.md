@@ -77,7 +77,7 @@ For apps that need time to load the most common path is to call `app.initialize(
 
 #### App caching considerations for loading apps
 
-Within TeamsJS there are also APIs that support the caching of resources to improve the subsequent launch times of apps. These APIs allow developers to keep some resources and assets in memory so that they can be use when rehydrating their apps. For more information about caching, see [App caching for your tab app](app-caching.md).
+Within TeamsJS there are also APIs that support the caching of resources to improve the subsequent launch times of apps. These APIs allow developers to keep some resources and assets in memory so that they can be used when rehydrating their apps. For more information about caching, see [App caching for your tab app](app-caching.md).
 
 The following state diagram illustrates the initialization behavior when an app makes use of caching.
 
