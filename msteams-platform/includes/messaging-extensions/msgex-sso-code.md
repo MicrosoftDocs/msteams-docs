@@ -251,7 +251,7 @@ sign in/tokenExchange, and the **value** field. The **value** field contains the
 
 Use the following code snippet example to invoke response:
 
-   # [C#](#tab/cs3)
+# [C#](#tab/cs3)
 
 ```csharp
 public MainDialog(IConfiguration configuration, ILogger<MainDialog> logger)
@@ -305,7 +305,7 @@ private async Task<DialogTurnResult> LoginStepAsync(WaterfallStepContext stepCon
         }
 ```
 
-   # [JavaScript](#tab/js3)
+# [JavaScript](#tab/js3)
 
    ```JavaScript
     class MainDialog {
@@ -421,7 +421,7 @@ If you're using the OAuth connection, you must update or add the token in the Bo
 > [!NOTE]
 > You can find the sample `TeamsMessagingExtensionsSearchAuthConfigBot.cs` in [Tab, Bot, and Message Extension (ME) SSO](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp/App%20SSO%20Sample/Bots).
 
-   # [C#](#tab/cs4)
+# [C#](#tab/cs4)
 
 ```csharp
 protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
@@ -482,7 +482,7 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
      }
 ```
 
-   # [JavaScript](#tab/js4)
+# [JavaScript](#tab/js4)
 
 ```JavaScript
 
@@ -535,7 +535,7 @@ async tokenIsExchangeable(context) {
 
 Use the following code snippet to handle the access token in case the app user logs out:
 
-   # [C#](#tab/cs5)
+# [C#](#tab/cs5)
 
 ```csharp
     private async Task<DialogTurnResult> InterruptAsync(DialogContext innerDc, 
@@ -566,7 +566,7 @@ Use the following code snippet to handle the access token in case the app user l
         }
 ```
 
-   # [JavaScript](#tab/js5)
+# [JavaScript](#tab/js5)
 
 ```JavaScript
     async interrupt(innerDc) {
@@ -595,6 +595,6 @@ This section provides bot authentication v3 SDK sample.
 
 | **Sample name** | **Description** | **.NET** | **Node.js** | **Python** | **Manifest** |
 |---------------|------------|------------|-------------|---------------|---------------|
-| Bot authentication | This sample shows how to get started with authentication in a bot for Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/csharp/demo-manifest/bot-teams-authentication.zip)|
-| Tab, bot, and Message extension (ME) SSO | This sample shows SSO for tab, bot, and message extension - search, action, link unfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp/demo-manifest/App-SSO.zip)|
-|Tab, bot, and Message extension | This sample shows how to check authentication in bot, tab, and message extension with SSO | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/nodejs) | NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp/demo-manifest/App-Complete-Auth.zip)|
+| Bot authentication | This sample app demonstrate how an Bot can use Teams authentication. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/csharp/demo-manifest/bot-teams-authentication.zip)|
+| Tab, bot, and Message extension (ME) SSO | This sample app demonstrates Teams SSO integration for Tab, Bot, and Messaging Extension, using C# and Microsoft Entra ID for secure authentication. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp/demo-manifest/App-SSO.zip)|
+|Tab, bot, and Message extension | This sample showcases Microsoft Entra ID and Facebook authentication across bots, tabs, and messaging extensions in Microsoft Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/nodejs) | NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp/demo-manifest/App-Complete-Auth.zip)|
