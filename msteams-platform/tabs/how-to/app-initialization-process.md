@@ -5,7 +5,7 @@ author: JoshuaPartlow
 ms.author: joshuapa
 ms.service: msteams
 ms.topic: concept-article #Required; leave this attribute/value as-is.
-ms.date: 04/11/2025
+ms.date: 06/10/2025
 
 #CustomerIntent: As a developer, I want to understand how the app initialization process works TeamsJS so that my app can make the appropriate API calls and work as recommended.
 ---
