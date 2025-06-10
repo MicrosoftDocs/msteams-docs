@@ -121,7 +121,7 @@ You can manage indirect membership using the following APIs:
 * Get allowed members of each shared team with GET `allowedMembers` API.
 
     ```http
-    GET /teams/{team-id}/channels/{channel-id}/sharedWithTeams/{sharewithteamsId}/ allowedMembers
+    GET /teams/{team-id}/channels/{channel-id}/sharedWithTeams/{sharewithteamsId}/allowedMembers
     ```
 
 > [!NOTE]
