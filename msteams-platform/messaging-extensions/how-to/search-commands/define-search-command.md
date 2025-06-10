@@ -252,7 +252,7 @@ async def on_teams_messaging_extension_query(self, context, query):
 
 | Sample name           | Description | .NET    | Node.js   | Manifest|
 |:---------------------|:--------------|:---------|:--------|:--------------|
-|Teams message extension search   |  This sample shows how to build a search-based message extension. It searches NuGet packages and displays the results in search-based messaging extension.        |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
+|Teams message extension search   |  This sample demonstrates how to create a Messaging Extension in Microsoft Teams that allows users to perform searches and retrieve results.        |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
 
 ## Step-by-step guide
 

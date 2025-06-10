@@ -117,23 +117,23 @@ For creating a deep link in a bot, connector, or message extension card, use the
 Here are the examples to create deep link to browse within your app:
 
 * Deep link to a personal tab:
-        
+
     >`https://teams.microsoft.com/l/entity/fxxxxxxx-0xxx-4xxx-8xxx-cxxxxxxxxxxx/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123`
-    
+
 * Deep link to a task item within the personal tab:
-        
+
     >`https://teams.microsoft.com/l/entity/fxxxxxxx-0xxx-4xxx-8xxx-cxxxxxxxxxxx/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456"}`
-    
+
 * Deep link to a configurable tab:
-        
+
     >`https://teams.microsoft.com/l/entity/fxxxxxxx-0xxx-4xxx-8xxx-cxxxxxxxxxxx/tasklist123?webUrl=https://tasklist.example.com/123&label=Task List 123&context={"channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
-    
+
 * Deep link to a task item within the configurable tab:
-        
+
     >`https://teams.microsoft.com/l/entity/fxxxxxxx-0xxx-4xxx-8xxx-cxxxxxxxxxxx/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456&context={"subEntityId": "task456","channelId": "19:cbe3683f25094106b826c9cada3afbe0@thread.skype"}`
-    
+
 * Deep link to a tab app added to a meeting or group chat:
-        
+
     >`https://teams.microsoft.com/l/entity/fxxxxxxx-0xxx-4xxx-8xxx-cxxxxxxxxxxx/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456?context={"chatId": "17:b42de192376346a7906a7dd5cb84b673@thread.v2","contextType":"chat"}`
 
 ---
@@ -406,7 +406,7 @@ For deep links to share content to stage, see [deep link to share content to sta
 
 ## Deep link to meeting side panel
 
-You can generate a deep link to the [meeting side panel](~/apps-in-teams-meetings/build-tabs-for-meeting.md#deep-link-to-meeting-side-panel) in a meeting. 
+You can generate a deep link to the [meeting side panel](~/apps-in-teams-meetings/build-tabs-for-meeting.md#deep-link-to-meeting-side-panel) in a meeting.
 
 # [Deep link format](#tab/format5)
 
@@ -441,14 +441,14 @@ You can invoke Stageview through a deep link from your tab by wrapping the deep 
 ## Best practices
 
 * Deep links work properly only if the tab was configured using the library v0.4 or later, as it has an entity ID. Deep links to tabs without entity IDs still go to the tab but can't provide the sub`EntityId to the tab.
-* In Microsoft Windows, Teams can't handle deep links exceeding 2048 characters due to the `INTERNET_MAX_URL_LENGTH` limit in Windows ShellExecuteEx API. 
-* When creating a deep link, ensure that the path to the Teams client and other metadata fit within this limit. 
+* In Microsoft Windows, Teams can't handle deep links exceeding 2048 characters due to the `INTERNET_MAX_URL_LENGTH` limit in Windows ShellExecuteEx API.
+* When creating a deep link, ensure that the path to the Teams client and other metadata fit within this limit.
 * If your deep link contains large data, include a unique identifier in the link that your app can use to fetch the necessary data from your backend service.
 
 ## Code sample
 
 | Sample name | Description | .NET |Node.js| TypeScript|
 |-------------|-------------|------|----|
-| Deep link consuming `subEntityId` | This sample shows how to use a deep link from a bot chat to a tab consuming the `subEntityId`. It also shows deep links for:<br>- Navigating to an app<br>- Navigating to a chat<br>- Open a profile dialog<br>- Open a scheduling dialog |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs) | NA|
-| Tab app navigation | This sample shows how to navigate between tabs within the app. | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-navigation/nodejs) | NA|
-| Tab deep link pass values | This sample shows how to use a dynamic deep links for transmitting values to both tab and standalone web apps. | NA | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink-pass-values/ts)|
+| Deep link consuming `subEntityId` | This Teams sample application highlights deeplinks for various functionalities, such as initiating calls, chats, and navigating within tabs and apps. It features a comprehensive setup guide and supports interactions with both bots and tabs for enhanced user engagement. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs) | NA|
+| Tab app navigation | This sample illustrates the tab navigation feature in a Microsoft Teams application, enabling smooth transitions between different tabs. Designed for use with Node.js, it highlights how users can effectively navigate within the app for an enhanced experience. | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-navigation/nodejs) | NA|
+| Tab deep link pass values | This sample app for Microsoft Teams illustrates the creation and usage of dynamic deep links to pass contextual values to tab and standalone web applications. It highlights the differences in link formatting and consumption based on the user's access environment, enhancing navigation and data display capabilities. | NA | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink-pass-values/ts)|
