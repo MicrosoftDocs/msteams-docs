@@ -121,7 +121,7 @@ Microsoft 365 agents provide integration with various Microsoft 365 products, su
 
 The following code provides an example of search-based for message extensions:
 
-# [C#](#tab/dotnet)
+# [.NET](#tab/dotnet)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmessagingextensionqueryasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/Microsoft.Teams.Samples.HelloWorld.Web/Bots/MessageExtension.cs#L26-L59)
@@ -197,13 +197,62 @@ async handleTeamsMessagingExtensionQuery(context, query) {
         }
 ```
 
+# [Python](#tab/python)
+
+```python
+async def on_teams_messaging_extension_query(self, context, query):
+    """
+    Handles Messaging Extension queries in Teams.
+ 
+    This method generates a list of thumbnail cards containing random text and images when the "getRandomText" command is triggered. It creates preview cards with tap actions and returns them as a Messaging Extension response.
+    """
+    faker = Faker()
+    title = query.command_id
+    random_image_url = "https://loremflickr.com/200/200"
+
+    if query.command_id == "getRandomText":
+        attachments = []
+        # Generate 5 results with fake text and fake images
+        for i in range(5):
+            text = faker.paragraph()
+            images = [f"{random_image_url}?random={i}"]
+
+            # Create a thumbnail card using ThumbnailCard
+            thumbnail_card = self.create_thumbnail_card(title, text, images)
+
+            # Create a preview card and add the tap action
+            preview_card = self.create_thumbnail_card(title, text, images)
+            tap_action = CardAction(
+                type="invoke",
+                value={"title": title, "text": text, "images": images},
+            )
+            preview_attachment = CardFactory.thumbnail_card(preview_card)
+            preview_attachment.content.tap = tap_action
+
+            # Combine the thumbnail card and the preview
+            attachment = MessagingExtensionAttachment(
+                content = thumbnail_card,
+                content_type=CardFactory.content_types.thumbnail_card,
+                preview=preview_attachment,
+            )
+            attachments.append(attachment)
+
+        return MessagingExtensionResponse(
+            compose_extension=MessagingExtensionResult(
+                type="result",
+                attachment_layout="list",
+                attachments=attachments,
+            )
+        )
+```
+
 ---
 
 ## Code sample
 
 | Sample name           | Description | .NET    | Node.js   | Manifest|
 |:---------------------|:--------------|:---------|:--------|:--------------|
-|Teams message extension search   |  This sample shows how to build a search-based message extension. It searches NuGet packages and displays the results in search-based messaging extension.        |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
+|Teams message extension search   |  This sample demonstrates how to create a Messaging Extension in Microsoft Teams that allows users to perform searches and retrieve results.        |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
 
 ## Step-by-step guide
 
