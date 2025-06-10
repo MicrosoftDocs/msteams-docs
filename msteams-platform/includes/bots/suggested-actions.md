@@ -8,6 +8,16 @@ When a user selects a button, it remains visible and accessible on the rich card
 - `personal`: In one-on-one chats, actions are shown as smart replies, so only the actions from the last message appear.
 - `team` and `groupChat`: In group chats and channels, actions are always saved with the message.
 
+# [Personal chat](#tab/pc)
+
+**Desktop**:
+
+:::image type="content" source="../../assets/images/bots/suggested-action-personal-chat.png" alt-text="Image shows suggested actions in a group chat in a desktop client." border="false" lightbox="../../assets/images/bots/suggested-action-personal-chat.png":::
+
+**Mobile**:
+
+:::image type="content" source="../../assets/images/bots/suggested-action-personal-chat-mobile.png" alt-text="Image shows suggested actions in a group chat in a mobile client." lightbox="../../assets/images/bots/suggested-action-personal-chat-mobile-lightbox.png":::
+
 # [Group chat](#tab/gc)
 
 **Desktop**:
