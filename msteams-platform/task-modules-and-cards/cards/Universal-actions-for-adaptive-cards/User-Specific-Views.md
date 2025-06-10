@@ -182,7 +182,7 @@ The following code provides an example of an adaptiveCard/action invoke response
 
 The following code provides an example of an invoke response to return Adaptive Cards:
 
-### [C#](#tab/C)
+### [.NET](#tab/C)
 
 ```csharp
 string cardJson = "<adaptive card json>";
@@ -214,9 +214,29 @@ const cardRes = {
 
 ```
 
-***
+### [Python](#tab/python)
 
-The following list provides card design guidelines for User Specific Views:
+```python
+card = "<adaptive card json>"
+
+card_body = {
+    "statusCode": 200,
+    "type": "application/vnd.microsoft.card.adaptive",
+    "value": card
+}
+
+result = {
+    "status": 200,
+    "body": card_body
+}
+
+return result
+
+```
+
+---
+
+The following list provides card design guidelines for User Specific Views: 
 
 * Refresh behavior: You can create a maximum of 60 User Specific Views for a particular card sent to a conversation by specifying their `userIds` in the `Refresh` property.
 
@@ -234,10 +254,10 @@ The following list provides card design guidelines for User Specific Views:
 
 * For scenarios with larger groups where users switch to a view on action, which needs dynamic updates for responders, you can keep adding up to 60 users to the `userIds` list. You can remove the first responder from the list when the 61st user responds. For the users who get removed from the `userIds` list, you can provide a manual **Refresh** to get the latest result.
 
-* Give prompt to the users to get a User Specific View, where they see only a particular view of the card or some actions.
+* Give prompt to the users to get a User Specific View, where they see only a particular view of the card or some actions. 
 
 > [!NOTE]
-> The User Specific Card returned by the bot is sent only to the specific client that requested for it. For example, if a user switches to a different client, such as from desktop to mobile, then another invoke event is triggered to fetch the refreshed card.
+> The User Specific Card returned by the bot is sent only to the specific client that requested for it. For example, if a user switches to a different client, such as from desktop to mobile, then another invoke event is triggered to fetch the refreshed card. 
 
 ## Code sample
 
@@ -245,7 +265,7 @@ The following list provides card design guidelines for User Specific Views:
 |----------------|-----------------|--------------|--------------|--------------|
 | Sequential Workflows Adaptive Cards | This sample demonstrates the implementation of Sequential Workflows, User Specific Views, and current Adaptive Cards in bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-sequential-flow-adaptive-cards/csharp/demo-manifest/bot-sequential-flow-adaptive-cards.zip) |
 
-## See also
+## See also:
 
 * [Cards and dialogs](../../cards-and-task-modules.md)
 * [Work with Universal Actions for Adaptive Cards](Work-with-Universal-Actions-for-Adaptive-Cards.md)
