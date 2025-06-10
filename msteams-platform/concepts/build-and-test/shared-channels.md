@@ -81,20 +81,18 @@ You can get direct shared channel membership by using the `hostTeamGroupID` from
 
 ## Receive notifications for indirect membership changes
 
-A shared channel in Teams can be associated with multiple teams. Users can access a shared channel either directly (added to the channel) or indirectly (members of a team with which the channel is shared).
+Shared channel in Teams can be associated with multiple teams. Users can access a shared channel either directly (added to the channel) or indirectly (members of a team with which the channel is shared). When a user joins or leaves an associated team, access to the shared channel updates accordingly. These updates are referred to as indirect membership changes.
 
-When a user joins or leaves an associated team, their access to the shared channel updates accordingly. These changes are referred as indirect membership changes.
-
-Apps installed in shared channels can receive notifications when users gain or lose access through associated teams. It helps apps to maintain accurate access control and track user status in real time.
+Apps installed in shared channels can receive notifications when users gain or lose access through associated teams. Receiving notifications enables apps to maintain accurate access control and track user status in real time.
 
 ### Indirect membership notification
 
-Notifications are sent when user access changes indirectly. To receive these notifications:
+Notifications are sent when user's access to shared channel changes indirectly. To receive these notifications:
 
-* Ensure the app is installed in the host team and enabled for the shared channel.
+* Install the app in the host team and enable it for the shared channel.
 * Create a valid Microsoft Graph change notification subscription to monitor associated team membership changes and shared or unshared events using supported APIs.
 
-If either condition is not met, notifications are not delivered.
+The app doesn't receive notifications unless both requirements are met.
 
 ### Subscription setup
 
@@ -102,11 +100,11 @@ To subscribe to indirect membership updates, use the following resource URL in y
 
 `/teams/{team-id}/channels/getAllMembers?notifyOnIndirectMembershipUpdate=true&suppressWhenSharedUnsharedWithTeam=true`
 
-Subscription allows apps to monitor membership changes in shared channel and its host team.
+This subscription allows apps to monitor membership changes in a shared channel and its associated teams.
 
 ### API usage for membership management
 
-You can manage the indirect membership using the following APIs:
+You can manage indirect membership using the following APIs:
 
 * Get all current channel members with GET `allMembers` API.
 
@@ -127,30 +125,28 @@ You can manage the indirect membership using the following APIs:
     ```
 
 > [!NOTE]
-> The `allowedMembers` provides details of newly associated users. It is not applicable for unshared events.
+> The `allowedMembers` API returns only newly associated users and isn't applicable for unshared events.
 
 ### Validate user access
 
-When an app receives a notification for an indirect membership update, the app needs to validate user's access to the shared channel. For example, validation occurs when a user is removed from an associated team.
-
-Use the following API for validation:
+When an app receives a notification for an indirect membership update, it must validate user access to a shared channel. For example, if a user is removed from a team associated with a shared channel, use the following API to determine whether the user still has access through another team or direct membership.
 
 ```http
 GET /DoesUserHaveAccessAsync
 ```
 
-The API verifies whether the user still has access through another team or direct membership.
+The API verifies whether the user retains access to the shared chhanel.
 
 ### Handle bulk membership changes
 
-In large-scale scenarios, such as sharing a channel with a large team or removing multiple users, Microsoft Teams suppress individual notifications.
+In large-scale scenarios, such as sharing a channel with a large team or removing multiple users, Teams suppresses individual notifications to reduce volume.
 
 To handle bulk membership changes:
 
-* Use `allMembers` to retrieve the complete updated list
-* Use `allowedMembers` for delta changes (only during share operations)
-* Avoid using `DoesUserHaveAccessAsync` for every user unless required
-* Subscribe to shared/unshared events using supported APIs
+* Use `allMembers` to retrieve the complete updated list of current members.
+* Use `allowedMembers` to retrieve only newly added members during shared events.
+* Avoid using `DoesUserHaveAccessAsync` for every user unless necessary.
+* Subscribe to shared and unshared events using supported Microsoft Graph APIs.
 
 > [!NOTE]
 > Apps using resource-specific consent (RSC) must request extended scopes to support both direct and indirect membership updates. These permissions are necessary to query membership data and respond to notifications.
