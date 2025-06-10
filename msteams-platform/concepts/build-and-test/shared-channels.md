@@ -135,7 +135,7 @@ When an app receives a notification for an indirect membership update, it must v
 GET /DoesUserHaveAccessAsync
 ```
 
-The API verifies whether the user retains access to the shared chhanel.
+The API verifies whether the user retains access to the shared channel.
 
 ### Handle bulk membership changes
 
