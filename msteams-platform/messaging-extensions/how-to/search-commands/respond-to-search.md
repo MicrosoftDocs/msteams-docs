@@ -4,9 +4,8 @@ author: surbhigupta
 description: Learn how to respond to the search command from a message extension in a Microsoft Teams app. Understand how to respond to the user request.
 ms.topic: conceptual
 ms.author: anclear
+ms.date: 03/06/2025
 ms.localizationpriority: medium
-ms.owner: slamba
-ms.date: 03/11/2025
 ---
 # Respond to search command
 
@@ -27,7 +26,7 @@ The request parameters are found in the `value` object in the request, which inc
 | `parameters` | Array of parameters. Each parameter object contains the parameter name, along with the parameter value provided by the user. |
 | `queryOptions` | Pagination parameters: <br>`skip`: Skip count for this query <br>`count`: Number of elements to return. |
 
-# [C#/.NET](#tab/dotnet)
+# [C#/.NET](#tab/dotnet1)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmessagingextensionqueryasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-link-unfurling/csharp/Bots/LinkUnfurlingBot.cs#L32)
@@ -177,7 +176,7 @@ To send an Adaptive Card or connector card for Microsoft 365 Groups, you must in
 
 ### Response example
 
-# [C#/.NET](#tab/dotnet)
+# [.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtensionQueryAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionQuery query, CancellationToken cancellationToken) 
@@ -211,7 +210,7 @@ protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtens
 }
 ```
 
-# [TypeScript/Node.js](#tab/typescript)
+# [TypeScript/Node.js](#tab/typescript2)
 
 [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search-quickstart/js/botActivityHandler.js#L35)
 
@@ -240,7 +239,7 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 }
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json2)
 
 ```json
 {
@@ -372,11 +371,85 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 }
 ```
 
+# [Python](#tab/python1)
+
+```python
+async def on_teams_messaging_extension_query(self, context, query):
+   """
+   Handles a Messaging Extension query for searching NPM packages.
+ 
+    This method takes a search query from Teams, fetches matching NPM packages using 
+    the NPM registry API, and returns a list of thumbnail cards displaying package 
+    details with action buttons.
+    """
+    search_query = query.parameters[0].value
+
+    response = requests.get(
+        "http://registry.npmjs.com/-/v1/search",
+        params={"text": search_query, "size": 8},  # Limit results to top 8
+    )
+    response.raise_for_status()  # Raise an error if the API call fails
+    data = response.json()  # Parse the JSON response from the API
+
+    attachments = []
+    for obj in data["objects"][:8]:  # Iterate through the first 5 search results
+        package = obj.get("package", {})
+        package_name = package.get("name", "Unknown Package")  # Fallback if name is missing
+        description = package.get("description", "No description available")  # Fallback for missing description
+        homepage = package.get("links", {}).get("homepage", "https://www.npmjs.com")  # Default link
+
+        thumbnail_card = ThumbnailCard(
+            title = package_name,  # Package name as card title
+            text = description,  # Package description
+            buttons=[
+                # Button to view the package on NPM
+                CardAction(
+                    type="openUrl",
+                    title="View on NPM",
+                    value=f"https://www.npmjs.com/package/{package_name}",
+                ),
+                # Button to visit the package's homepage
+                CardAction(
+                    type="openUrl",
+                    title="Homepage",
+                    value=homepage,
+                ),
+            ],
+        )
+
+        preview_card = ThumbnailCard(
+            title=package_name,
+            text = description,
+        )
+        preview_attachment = CardFactory.thumbnail_card(preview_card)
+
+        preview_attachment.content.tap = CardAction(
+            type="invoke",  # Invoke action triggers a bot command
+            value={"title": package_name, "description": description},
+        )
+
+        attachment = MessagingExtensionAttachment(
+            content=thumbnail_card,
+            content_type=CardFactory.content_types.thumbnail_card,
+            preview=preview_attachment,
+        )
+
+        attachments.append(attachment)
+
+    return MessagingExtensionResponse(
+        compose_extension=MessagingExtensionResult(
+            type="result",  # Indicates this is a list of results
+            attachment_layout="list",  # Layout style for results
+            attachments=attachments,
+        )
+    )
+```
+
 * * *
 
 ### Enable and handle tap actions
 
-# [C#/.NET](#tab/dotnet)
+# [.NET](#tab/csharp3)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search/csharp/Bots/TeamsMessagingExtensionsSearchBot.cs#L80)
 
@@ -410,7 +483,7 @@ protected override Task<MessagingExtensionResponse> OnTeamsMessagingExtensionSel
 }
 ```
 
-# [TypeScript/Node.js](#tab/typescript)
+# [TypeScript/Node.js](#tab/typescript3)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search/nodejs/bots/teamsMessagingExtensionsSearchBot.js#L115)
 
@@ -426,7 +499,7 @@ async handleTeamsMessagingExtensionSelectItem(context, obj) {
     } 
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json3)
 
 ```json
 {
@@ -441,6 +514,32 @@ async handleTeamsMessagingExtensionSelectItem(context, obj) {
     .
     .
 }
+```
+
+# [Python](#tab/python3)
+
+```python
+async def on_teams_messaging_extension_select_item(
+    self, turn_context: TurnContext, query
+) -> MessagingExtensionResponse:
+    
+    thumbnail_card = ThumbnailCard(
+        title = query.get("title") # Extract title from the query
+        text = query.get("description"),  # Extract description from the query
+    )
+
+    attachment = MessagingExtensionAttachment(
+        content_type=CardFactory.content_types.thumbnail_card,
+        content=thumbnail_card,
+    )
+
+    return MessagingExtensionResponse(
+        compose_extension=MessagingExtensionResult(
+            type="result",  # Indicates this is a single result
+            attachment_layout="list",  # Use list layout
+            attachments=[attachment],  # Include the single attachment
+        )
+    )
 ```
 
 * * *

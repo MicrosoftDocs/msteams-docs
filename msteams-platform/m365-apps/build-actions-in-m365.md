@@ -108,7 +108,7 @@ After obtaining the `itemId` of the triggering content, you can use the [Graph A
 GET /users/{user-id}/drive/items/{item-id}
 ```
 
-## Sideload your app using Microsoft 365 Agents Toolkit
+## Upload your custom app using Microsoft 365 Agents Toolkit
 
 After you update the app package with the required information, you're ready to test your Actions in the Microsoft 365 Agents Toolkit (previously known as Teams Toolkit). To initiate debugging, select the **F5** key.
 
