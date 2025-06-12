@@ -153,6 +153,8 @@ The following table provides RSC permissions for a chat or meeting and their app
 | `OnlineMeetingAudioVideo.Stream.Chat` | Stream audio-video content of meetings associated with this chat. |Supported |NA |
 | `OnlineMeetingParticipant.Read.Chat` | Read participant information, including name, role, ID, joined and left times, of meetings associated with this chat.|Supported |Supported |
 | `OnlineMeetingParticipant.ToggleIncomingAudio.Chat` | Toggle incoming audio for participants in meetings associated with this chat. |Supported |NA |
+| `ChannelMember.ReadWrite.Group` | Read and write the members of channels of a team, without a signed-in user.| | |
+| `ChannelMember.Read.Group` | Read the members of channels of a team, without a signed-in user. | | |
 
 For more information, see [chat resource-specific consent permissions](/graph/permissions-reference#chat-resource-specific-consent-permissions).
 
