@@ -119,7 +119,7 @@ You can manage indirect membership in shared channels using the following Micros
 
 ### Validate user access
 
-When an app receives a notification for an indirect membership update, it must validate user acess to the shared channel. For example, if a user is removed from a team associated with a shared channel, use the following API to determine whether the user still has access to the shared channel.
+When an app receives a notification for an indirect membership update, it must validate user access to the shared channel. For example, if a user is removed from a team associated with a shared channel, use the following API to determine whether the user still has access to the shared channel.
 
 ```http
 GET /DoesUserHaveAccessAsync
