@@ -471,7 +471,7 @@ To include additional API permissions to access your desired APIs, see [edit Mic
 
 To view your Microsoft Entra app in Azure portal, see [edit Microsoft Entra manifest](AAD-manifest-customization.md).
 
-## Next step
+## See also
 
-> [!div class="nextstepaction"]
-> [Add single sign-on to Teams app](add-single-sign-on.md)
+* [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
+* [Enable SSO for your bot and message extension](../bots/how-to/authentication/bot-sso-overview.md)

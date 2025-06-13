@@ -276,6 +276,9 @@ The scope and permissions are now configured. Next, you must configure the autho
     >
     > * The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams, Microsoft 365 app, and Outlook are the actual IDs that you must add.
     > * If your app has a tab app, you'll need either web or SPA, as you can't have a mobile or desktop client application in Teams.
+    > * While it's recommended to use same App ID, you can use a different App Registration ID in the webApplicationInfo section of your Teams app manifest that's not same as the Azure bot App ID. This is a valid and supported configuration.
+    >    * The `botId` in the bots section refers to the Azure Bot registration used for messaging and interaction.
+    >    * The `webApplicationInfo.id` refers to the Microsoft Entra App Registration used for authentication such as SSO, token acquisition, Graph API access.
 
 1. Select one of the following client IDs:
 
@@ -660,6 +663,9 @@ The scope and permissions are now configured. Next, you must configure the autho
     >
     > * The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams, Microsoft 365 app, and Outlook are the actual IDs that you must add.
     > * If your app has a tab app, you'll need either web or SPA, as you can't have a mobile or desktop client application in Teams.
+    > * While it's recommended to use same App ID, you can use a different App Registration ID in the webApplicationInfo section of your Teams app manifest that's not same as the Azure bot App ID. This is a valid and supported configuration.
+    >    * The `botId` in the bots section refers to the Azure Bot registration used for messaging and interaction.
+    >    * The `webApplicationInfo.id` refers to the Microsoft Entra App Registration used for authentication such as SSO, token acquisition, Graph API access.
 
 1. Select one of the following client IDs:
 
