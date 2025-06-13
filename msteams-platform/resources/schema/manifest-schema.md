@@ -442,7 +442,7 @@ The name of your app experience, displayed to users in the Teams experience. For
 
 |Name|Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`short`|String|30 characters|✔️|The short display name for the app. Use `short` property where the space is limited, such as the app header.|
+|`short`|String|30 characters| |The short display name for the app. Use `short` property where the space is limited, such as the app header.|
 |`full`|String|100 characters|✔️|The full name of the app, used if the full app name exceeds 30 characters. Use `full` property where there's more space, such as the app catalog or the app details page.|
 
 > [!NOTE]
@@ -493,6 +493,7 @@ Icons used within the Teams app. The icon files must be included as part of the 
 |---|---|---|---|---|
 |`outline`|String|32 x 32 pixels|✔️|A relative file path to a transparent 32x32 PNG outline icon. The border color must be white.|
 |`color`|String|192 x 192 pixels|✔️|A relative file path to a full color 192x192 PNG icon.|
+|`color 32x32`|String|32 x 32 pixels|✔️|A relative file path to a full color PNG icon with transparent background. Size 32x32.|
 
 ## accentColor
 
