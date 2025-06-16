@@ -83,12 +83,12 @@ To manually remove collaborators, follow one of the steps below:
 
   * Go to [Microsoft Entra ID](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), select **App registrations** from left panel, and find your app.
   * Select **Owners** from left panel in Microsoft Entra app management page.
-  * Select and remove owner.
+  * Select and remove the owner.
 
     > [!NOTE]
     >
     > * Collaborator added to your project doesn't receive any notification. Project owner needs to notify collaborator offline.
-    > * Azure related permissions must be set manually by Azure subscription administrator on Azure portal. To manually remove the permissions, refer to [Revoke granted consent to permissions](/microsoftteams/manage-consent-app-permissions).
+    > * Azure related permissions must be set manually by Azure subscription administrator on Azure portal. To manually remove the permissions, refer to [Revoke granted consent to permissions](/microsoftteams/manage-consent-app-permissions). [Link](/microsoftteams/manage-consent-app-permissions#revoke-granted-consent-to-permissions)
     > * Azure account must have [contributor role](/azure/role-based-access-control/built-in-roles) for the subscription so that developers can work together to provision and deploy TeamsFx project.
 
 ## See also
