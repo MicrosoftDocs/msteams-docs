@@ -67,7 +67,7 @@ You can find the following [sample test instructions](https://github.com/Microso
 
 * Sample 1: Educational app
 * Sample 2: ERP Data transfer
-* Sample 3: Collaborative app
+* Sample 3: Collaborative app.
 
 ## Create your Teams Store listing details
 
