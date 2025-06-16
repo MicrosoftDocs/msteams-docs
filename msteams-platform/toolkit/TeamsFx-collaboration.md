@@ -71,7 +71,7 @@ The following sections guide us to understand the collaboration process as proje
 
 ## Remove Collaborator
 
-To manually remove collaborators, follow one of the steps below:
+To manually remove collaborators, do one of the following procedures:
 
 * Using Developer Portal
 
@@ -88,7 +88,7 @@ To manually remove collaborators, follow one of the steps below:
     > [!NOTE]
     >
     > * Collaborator added to your project doesn't receive any notification. Project owner needs to notify collaborator offline.
-    > * Azure related permissions must be set manually by Azure subscription administrator on Azure portal. To manually remove the permissions, refer to [Revoke granted consent to permissions](/microsoftteams/manage-consent-app-permissions#revoke-granted-consent-to-permissions).
+    > * Azure related permissions must be set manually by Azure subscription administrator on Azure portal. To manually remove the permissions, see [revoke granted consent to permissions](/microsoftteams/manage-consent-app-permissions#revoke-granted-consent-to-permissions).
     > * Azure account must have [contributor role](/azure/role-based-access-control/built-in-roles#contributor) for the subscription so that developers can work together to provision and deploy TeamsFx project.
 
 ## See also
