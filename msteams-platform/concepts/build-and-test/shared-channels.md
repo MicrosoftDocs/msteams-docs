@@ -86,7 +86,7 @@ Apps installed in shared channels can receive notifications when users are added
 * Install the app in a host team and enable it for the shared channel.
 * Create a valid Microsoft Graph change notification subscription to monitor associated team membership changes and shared or unshared events using supported APIs.
 
-To subscribe to indirect membership updates, use the following resource URL in your Microsoft Graph subscription:
+To subscribe to indirect membership updates, use the following Microsoft Graph resource URL:
 
 `/teams/{team-id}/channels/getAllMembers?notifyOnIndirectMembershipUpdate=true&suppressWhenSharedUnsharedWithTeam=true`
 
