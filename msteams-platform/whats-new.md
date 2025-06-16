@@ -35,7 +35,7 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 Teams platform features that are available to all app developers.</br>
 **2025 June**
 
-***June 27, 2025***: [Apps installed in shared channels can receive notifications when users are added to or removed from an associated team with which the channel is shared. Supports indirect membership notification updates via a new subscription resource URL, APIs for retrieving, and validating user access](/microsoftteams/platform/concepts/build-and-test/shared-channels)
+***June 27, 2025***: [Apps installed in shared channels can receive notifications when users are added to or removed from an associated team with which the channel is shared. Supports indirect membership notification updates via a new subscription resource URL, APIs for retrieving, and validating user access.](/microsoftteams/platform/concepts/build-and-test/shared-channels)
 
 :::column-end:::
 :::row-end:::
