@@ -1,7 +1,7 @@
 ---
 title: SSO authentication for nested apps
 description: Learn how to implement, configure nested app authentication in Microsoft Teams app. Learn about the use case scenarios for nested app authentication.
-ms.date: 03/11/2025
+ms.date: 06/10/2025
 ms.topic: conceptual
 author: surbhigupta
 ms.author: surbhigupta
@@ -47,11 +47,6 @@ The NAA model provides several advantages over the On-Behalf-Of (OBO) flow:
 | **Errors** | Tom faces a sign-in error with Contoso due to an issue retrieving account information. Tom encounters a retry button that prompts for reauthentication. However, they discover that the system administrator has restricted access to Contoso. |
 
 ## Configure NAA
-
-> [!NOTE]
->
-> * NAA isn't supported by all host environments (specialized government clouds or iOS Mac device), ensure to check the support status using the [isNAAChannelRecommended()](/javascript/api/@microsoft/teams-js/nestedappauth?) function and provide a fallback experience for unsupported environments.
-> * If the API returns the value as `true`, then call Microsoft Authentication Library (MSAL) for the NAA flow. If it returns `false`, continue to use your existing token retrieval method.
 
 To configure nested authentication, follow these steps:
 
