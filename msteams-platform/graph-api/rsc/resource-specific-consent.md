@@ -112,6 +112,8 @@ The following table provides RSC application permissions for a team and their ap
 |`InAppPurchase.Allow.Group`|Show and complete in-app purchases for users in this team.| Supported | NA |
 |`LiveShareSession.ReadWrite.Group`| Allows the app to create and synchronize Live Share sessions for the team and get access related information, such as name and role, about the team's roster and any associated meetings. | Supported | NA |
 |`MeetingParticipantReaction.Read.Group`| Read reactions of participants in channel meetings associated with this team.| Supported | NA |
+| `ChannelMember.ReadWrite.Group` | Read and write the members of the team's channels without a signed-in user.|NA |NA |
+| `ChannelMember.Read.Group` | Read the members of the team's channels without a signed-in user. |NA |NA |
 
 For more information, see [team resource-specific consent permissions](/graph/permissions-reference#team-resource-specific-consent-permissions).
 
@@ -153,8 +155,6 @@ The following table provides RSC permissions for a chat or meeting and their app
 | `OnlineMeetingAudioVideo.Stream.Chat` | Stream audio-video content of meetings associated with this chat. |Supported |NA |
 | `OnlineMeetingParticipant.Read.Chat` | Read participant information, including name, role, ID, joined and left times, of meetings associated with this chat.|Supported |Supported |
 | `OnlineMeetingParticipant.ToggleIncomingAudio.Chat` | Toggle incoming audio for participants in meetings associated with this chat. |Supported |NA |
-| `ChannelMember.ReadWrite.Group` | Read and write the members of channels of a team, without a signed-in user.|NA |NA |
-| `ChannelMember.Read.Group` | Read the members of channels of a team, without a signed-in user. |NA |NA |
 
 For more information, see [chat resource-specific consent permissions](/graph/permissions-reference#chat-resource-specific-consent-permissions).
 
