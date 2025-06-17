@@ -96,19 +96,19 @@ This subscription enables apps to monitor membership changes in shared channels 
 
 You can manage indirect membership in shared channels using the following Microsoft Graph APIs:
 
-* Use `allMembers` API to retrieve all users who are members of a specific channel.
+* Use [allMembers](/graph/api/channel-list-allmembers?view=graph-rest-1.0&tabs=http) API to retrieve all users who are members of a specific channel.
 
     ```http
     GET /teams/{team-id}/channels/{channel-id}/allMembers
     ```
 
-* Use `sharedWithTeams` API to list all teams a channel is shared with.
+* Use [sharedWithTeams](/graph/api/sharedwithchannelteaminfo-list?view=graph-rest-1.0&tabs=http) API to list all teams a channel is shared with.
 
     ```http
     GET /teams/{team-id}/channels/{channel-id}/sharedWithTeams
     ```
 
-* Use the `allowedMembers` API to retrieve users from a shared team who can access a shared channel.
+* Use the [allowedMembers](/graph/api/sharedwithchannelteaminfo-list-allowedmembers?view=graph-rest-1.0&tabs=http) API to retrieve users from a shared team who can access a shared channel.
 
     ```http
     GET /teams/{team-id}/channels/{channel-id}/sharedWithTeams/{sharewithteamsId}/allowedMembers
@@ -119,13 +119,11 @@ You can manage indirect membership in shared channels using the following Micros
 
 ### Validate user access
 
-When an app receives a notification for an indirect membership update, it must validate user access to the shared channel. For example, if a user is removed from a team associated with a shared channel, use the following API to determine whether the user still has access to the shared channel.
+When an app receives a notification for an indirect membership update, it must validate user access to the shared channel. For example, if a user is removed from a team associated with a shared channel, use the following API to determine whether the user still has access to the shared channel. The API verifies whether the user still has access to the shared channel.
 
 ```http
 GET /DoesUserHaveAccessAsync
 ```
-
-The API verifies whether the user still has access to the shared channel.
 
 ### Handle bulk membership changes
 
