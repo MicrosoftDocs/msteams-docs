@@ -96,19 +96,19 @@ This subscription enables apps to monitor membership changes in shared channels 
 
 You can manage indirect membership in shared channels using the following Microsoft Graph APIs:
 
-* Use `allMembers` API to retrieve all users who are members of a specific channel.
+* Use [allMembers](/graph/api/channel-list-allmembers?view=graph-rest-1.0&tabs=http&preserve-view=true) API to retrieve all users who are members of a specific channel.
 
     ```http
     GET /teams/{team-id}/channels/{channel-id}/allMembers
     ```
 
-* Use `sharedWithTeams` API to list all teams a channel is shared with.
+* Use [sharedWithTeams](/graph/api/sharedwithchannelteaminfo-list?view=graph-rest-1.0&tabs=http&preserve-view=true) API to list all teams a channel is shared with.
 
     ```http
     GET /teams/{team-id}/channels/{channel-id}/sharedWithTeams
     ```
 
-* Use the `allowedMembers` API to retrieve users from a shared team who can access a shared channel.
+* Use the [allowedMembers](/graph/api/sharedwithchannelteaminfo-list-allowedmembers?view=graph-rest-1.0&tabs=http&preserve-view=true) API to retrieve users from a shared team who can access a shared channel.
 
     ```http
     GET /teams/{team-id}/channels/{channel-id}/sharedWithTeams/{sharewithteamsId}/allowedMembers
