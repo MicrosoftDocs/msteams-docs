@@ -2,7 +2,7 @@
 title: What's New for Developers in Teams
 description: Learn about new Microsoft Teams developer features and updates to existing features, deprecation notes, and changes. Subscribe to the RSS feed for latest updates.
 ms.topic: reference
-ms.date: 05/16/2025
+ms.date: 05/29/2025
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
 ---
@@ -35,7 +35,8 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 Teams platform features that are available to all app developers.</br>
 **2025 May**
 
-* ***May 19, 2025***: [Introducing Microsoft 365 admin center permission to view custom app analytics and the agent usage analytics for custom apps in Developer Portal.](/microsoftteams/platform/concepts/build-and-test/analyze-your-apps-usage-in-developer-portal?tabs=custom-apps-built-for-your-org).
+* ***May 29, 2025***: [Introducing app manifest v1.22 with support for custom activity icons and prefetch of nested app authentication tokens.](/microsoft-365/extensibility/schema/?view=m365-app-1.22&preserve-view=true)
+* ***May 19, 2025***: [Introducing Microsoft 365 admin center permission to view custom app analytics and the agent usage analytics for custom apps in Developer Portal.](/microsoftteams/platform/concepts/build-and-test/analyze-your-apps-usage-in-developer-portal?tabs=custom-apps-built-for-your-org)
 * ***May 19, 2025***: </br> Branding updates: </br> • Teams Toolkit is now Microsoft 365 Agents Toolkit. </br> • Teams App Test Tool is now Microsoft 365 Agents Playground. </br> • Teams App CLI, TeamFx CLI, and Teams Toolkit CLI are now Microsoft 365 Agents Toolkit CLI. </br> • `teamsapp` CLI signature is now referred as `atk`.
 * ***May 16, 2025***: [Use Meeting AI Insights API to fetch conversation summaries, action items, and mentions directly from Teams meetings.](graph-api/meeting-transcripts/meeting-insights.md)
 * ***May 13, 2025***: [Introducing agent usage analytics for third-party apps in Developer Portal](/microsoftteams/platform/concepts/build-and-test/analyze-your-apps-usage-in-developer-portal?tabs=thirdpartyapps).

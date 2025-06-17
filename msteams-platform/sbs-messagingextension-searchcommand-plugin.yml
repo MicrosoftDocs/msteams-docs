@@ -263,9 +263,9 @@ items:
     1. Close the browser when prompted and return to Visual Studio Code.
     1. Return to Agents Toolkit within Visual Studio Code.
 
-        The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name. Agents Toolkit displays **Sideloading enabled** if custom app upload is enabled for your Microsoft 365 account.
+        The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name. Agents Toolkit displays **Custom App Upload Enabled** if custom app upload is enabled for your Microsoft 365 account.
 
-        :::image type="content" source="assets/images/toolkit-v2/first-tab/m365-sideloading-enabled-msg.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure.":::
+        :::image type="content" source="assets/images/toolkit-v2/first-tab/m365-uploading-enabled-msg.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure.":::
 
         Now you're ready to build the app and run it locally!
     > [!div class="nextstepaction"]

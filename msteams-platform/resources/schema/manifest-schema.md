@@ -3,12 +3,12 @@ title: App Manifest Reference
 description: In this article, you'll have the latest version of the public manifest schema for Microsoft Teams reference, schema, and sample full manifest.
 ms.topic: reference
 ms.localizationpriority: high
-ms.date: 1/30/2025
+ms.date: 5/29/2025
 --- 
 
 # App manifest
 
-The app manifest (previously called Teams app manifest) describes how your app integrates into the Microsoft Teams product. Your app manifest must conform to the schema hosted at [https://developer.microsoft.com/json-schemas/teams/v1.21/MicrosoftTeams.schema.json](https://developer.microsoft.com/json-schemas/teams/v1.21/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,...,1.20, and the current version is 1.21 are each supported (using "v1.x" in the URL). Version 1.18 is not available.
+The app manifest (previously called Teams app manifest) describes how your app integrates into the Microsoft Teams product. Your app manifest must conform to the schema hosted at [https://developer.microsoft.com/json-schemas/teams/v1.22/MicrosoftTeams.schema.json](https://developer.microsoft.com/json-schemas/teams/v1.22/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,...,1.21, and the current version is 1.22 are each supported (using "v1.x" in the URL). Version 1.18 is not available.
 For more information on the changes made in each version, see [app manifest change log](https://github.com/OfficeDev/microsoft-teams-app-schema/releases) and for previous versions, see [app manifest versions](https://github.com/microsoft/json-schemas/tree/main/teams).
 
 The following table lists TeamsJS version and app manifest versions as per different app scenarios:
@@ -24,8 +24,8 @@ The following is the sample app manifest schema:
 
 ```json
 {
-    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.schema.json",
-    "manifestVersion": "1.20",
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.22/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.22",
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
     "localizationInfo": {
@@ -552,6 +552,9 @@ Defines one or more agents to Microsoft 365 Copilot. [Declarative agents](/micro
 |---|---|---|---|---|
 |`declarativeAgents`|Array of objects| 1 || Array of objects that each define a declarative agent. |
 |`customEngineAgents`|Array of objects| 1 || Array of objects that each define a custom engine agent.|
+
+> [!NOTE]
+> The `copilotAgents` object must contain either `declarativeAgents` or `customEngineAgents`, but not both agents at the same time.
 
 ### declarativeAgents
 
