@@ -693,16 +693,9 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 
 [*Must fix*]
 
-
 Agents customize and extend the Microsoft 365 Copilot experience by bringing more skills and knowledge to Microsoft 365 Copilot for a personalized user experience. By using agents, which are a subset of agents, users can integrate additional capabilities into Microsoft 365 Copilot by interacting with third-party applications, whether for retrieving or modifying information within those apps. For instance, message extension agents facilitate searching for data in other applications so that Microsoft 365 Copilot can present it upon request when the agent is activated.
 
  If you've developed an agent for Microsoft 365 Copilot in Teams or [copilot.microsoft.com](https://copilot.microsoft.com/#/), you're already aware of the benefits it offers to users within their workflow.
-
-## Code samples
-
-| Sample name | Description | TypeScript |
-|----------------|-----------------|--------------|
-| Northwind inventory message extension | This sample implements a Teams message extension that can be used as a plugin for Microsoft 365 Copilot. The message extension allows users to query the Northwind Database. | [View](https://github.com/OfficeDev/Copilot-for-M365-Plugins-Samples/tree/main/samples/msgext-northwind-inventory-ts) |
 
 ## See also
 
