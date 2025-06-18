@@ -442,8 +442,8 @@ The name of your app experience, displayed to users in the Teams experience. For
 
 |Name|Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`short`|String|30 characters| |The short display name for the app. Use `short` property where the space is limited, such as the app header.|
-|`full`|String|100 characters|✔️|The full name of the app, used if the full app name exceeds 30 characters. Use `full` property where there's more space, such as the app catalog or the app details page.|
+|`short`|String|30 characters|✔️|The short display name for the app. Use `short` property where the space is limited, such as the app header.|
+|`full`|String|100 characters||The full name of the app, used if the full app name exceeds 30 characters. Use `full` property where there's more space, such as the app catalog or the app details page.|
 
 > [!NOTE]
 >
