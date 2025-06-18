@@ -697,6 +697,12 @@ Agents customize and extend the Microsoft 365 Copilot experience by bringing mor
 
  If you've developed an agent for Microsoft 365 Copilot in Teams or [copilot.microsoft.com](https://copilot.microsoft.com/#/), you're already aware of the benefits it offers to users within their workflow.
 
+## Code samples
+
+| Sample name | Description | TypeScript |
+|----------------|-----------------|--------------|
+| Northwind inventory message extension | This sample implements a Teams message extension that can be used as a plugin for Microsoft 365 Copilot. The message extension allows users to query the Northwind Database. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-copilot-handoff/ts) |
+
 ## See also
 
 * [Extend bot-based message extension as agent](build-bot-based-agent.md)
