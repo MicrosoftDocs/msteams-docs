@@ -42,7 +42,7 @@ You can view your custom app's usage and other insights from the **Analytics** p
 :::image type="content" source="../../assets/images/tdp/analy-dev-portal.png" alt-text="Screenshot shows the analytics page of your app and agent in Developer Portal." lightbox="../../assets/images/tdp/analy-dev-portal.png":::
 
 > [!NOTE]
-> You can also access the **Active Users (Preview)** card directly from the **Dashboard**.
+> You can also access the **Active Users** card directly from the **Dashboard**.
 
 ## Metric definitions
 
