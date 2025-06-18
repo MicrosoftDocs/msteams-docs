@@ -83,32 +83,32 @@ You can get direct shared channel membership by using the `hostTeamGroupID` from
 
 Users can access a shared channel either directly (added to the channel) or indirectly (members of a team with which the channel is shared). Apps installed in shared channels can receive notifications when users are added to or removed from an associated team with which the channel is shared. To receive these notifications, you must:
 
-* [Install the app](../..//concepts/deploy-and-publish/apps-upload) in a host team and enable it for the shared channel.
+* [Install the app](../deploy-and-publish/apps-upload.md) in a host team and enable it for the shared channel.
 * Create a valid Microsoft Graph change notification subscription to monitor associated team membership changes and shared or unshared events using supported APIs.
 
 To subscribe to indirect membership updates, use the following Microsoft Graph resource URL:
 
 `/teams/{team-id}/channels/getAllMembers?notifyOnIndirectMembershipUpdate=true&suppressWhenSharedUnsharedWithTeam=true`
 
-This subscription enables apps to monitor membership changes in shared channels and its associated teams. For more information on how to create a Microsoft Graph change notification subscription, see [Create a subscription](/graph/teams-changenotifications-teammembership&preserve-view=true)
+This subscription enables apps to monitor membership changes in shared channels and its associated teams. For more information on how to create a Microsoft Graph change notification subscription, see [Create a subscription](/graph/teams-changenotifications-teammembership)
 
 ### Manage indirect membership in shared channels
 
 You can manage indirect membership in shared channels using the following Microsoft Graph APIs:
 
-* Use [allMembers](/graph/api/channel-list-allmembers?view=graph-rest-1.0&tabs=http&preserve-view=true) API to retrieve all users who are members of a specific channel.
+* Use [allMembers](/graph/api/channel-list-allmembers?branch=main&branchFallbackFrom=pr-en-us-13010&view=graph-rest-1.0&tabs=http&preserve-view=true) API to retrieve all users who are members of a specific channel.
 
     ```http
     GET /teams/{team-id}/channels/{channel-id}/allMembers
     ```
 
-* Use [sharedWithTeams](/graph/api/sharedwithchannelteaminfo-list?view=graph-rest-1.0&tabs=http&preserve-view=true) API to list all teams a channel is shared with.
+* Use [sharedWithTeams](/graph/api/sharedwithchannelteaminfo-list?branch=main&branchFallbackFrom=pr-en-us-13010&view=graph-rest-1.0&tabs=http&preserve-view=true) API to list all teams a channel is shared with.
 
     ```http
     GET /teams/{team-id}/channels/{channel-id}/sharedWithTeams
     ```
 
-* Use the [allowedMembers](/graph/api/sharedwithchannelteaminfo-list-allowedmembers?view=graph-rest-1.0&tabs=http&preserve-view=true) API to retrieve users from a shared team who can access a shared channel.
+* Use the [allowedMembers](/graph/api/sharedwithchannelteaminfo-list-allowedmembers?branch=main&branchFallbackFrom=pr-en-us-13010&view=graph-rest-1.0&tabs=http&preserve-view=true) API to retrieve users from a shared team who can access a shared channel.
 
     ```http
     GET /teams/{team-id}/channels/{channel-id}/sharedWithTeams/{sharewithteamsId}/allowedMembers
