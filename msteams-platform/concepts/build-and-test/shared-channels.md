@@ -81,16 +81,16 @@ You can get direct shared channel membership by using the `hostTeamGroupID` from
 
 ## Get notifications for indirect membership changes
 
-Apps installed in shared channels can receive notifications when users are added to or removed from an associated team with which the channel is shared. To receive these notifications:
+Users can access a shared channel either directly (added to the channel) or indirectly (members of a team with which the channel is shared). Apps installed in shared channels can receive notifications when users are added to or removed from an associated team with which the channel is shared. To receive these notifications, you must:
 
-* Install the app in a host team and enable it for the shared channel.
+* [Install the app](../..//concepts/deploy-and-publish/apps-upload) in a host team and enable it for the shared channel.
 * Create a valid Microsoft Graph change notification subscription to monitor associated team membership changes and shared or unshared events using supported APIs.
 
 To subscribe to indirect membership updates, use the following Microsoft Graph resource URL:
 
 `/teams/{team-id}/channels/getAllMembers?notifyOnIndirectMembershipUpdate=true&suppressWhenSharedUnsharedWithTeam=true`
 
-This subscription enables apps to monitor membership changes in shared channels and its associated teams.
+This subscription enables apps to monitor membership changes in shared channels and its associated teams. For more information on how to create a Microsoft Graph change notification subscription, see [Create a subscription](/graph/teams-changenotifications-teammembership&preserve-view=true)
 
 ### Manage indirect membership in shared channels
 
