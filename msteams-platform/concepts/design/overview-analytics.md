@@ -25,7 +25,7 @@ This information helps you analyze the data against your business goals, take co
 
 **But Teams app usage report must suffice, isn’t it?**
 
-As the app’s developer, you can track your app’s usage in the [Teams app usage report] (/office/dev/store/teams-apps-usage) in Partner Center within a week after publishing your app on the Microsoft Teams Store. Custom app developers can find [usage analytics for their custom apps](../build-and-test/analyze-your-apps-usage-in-developer-portal.md) in the Developer Portal for Teams. Partner Center's usage report provides standard metrics that enable you to track user demand, user churn, and frequency of usage for your app. These reports are available at an aggregate level, such as:
+As the app’s developer, you can track your app’s usage in the [Teams app usage report](../office/dev/store/teams-apps-usage) in Partner Center within a week after publishing your app on the Microsoft Teams Store. Custom app developers can find [usage analytics for their custom apps](../build-and-test/analyze-your-apps-usage-in-developer-portal.md) in the Developer Portal for Teams. Partner Center's usage report provides standard metrics that enable you to track user demand, user churn, and frequency of usage for your app. These reports are available at an aggregate level, such as:
 
 - Monthly, daily, and weekly active users.
 - Retention and intensity charts.
