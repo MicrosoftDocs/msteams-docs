@@ -28,6 +28,8 @@ The following video demonstrates how a bot simplifies the process of sending and
 
 > [!VIDEO https://www.youtube.com/embed/-UeDi5X3qWk]
 
+> [!VIDEO https://www.youtube.com/embed/-8RWctZ2XPqg]
+
 ## Use the Graph APIs
 
 Post messages with card attachments that refer to existing SharePoint files, using the Graph APIs for [OneDrive and SharePoint](/onedrive/developer/rest-api/). To use the Graph APIs, obtain access to either of the following through the standard OAuth 2.0 authorization flow:
