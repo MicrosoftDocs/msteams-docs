@@ -26,8 +26,6 @@ The following video demonstrates how a bot simplifies the process of sending and
 
 <br>
 
-> [!VIDEO https://www.youtube.com/embed/-UeDi5X3qWk]
-
 > [!VIDEO https://www.youtube.com/embed/8RWctZ2XPqg]
 
 ## Use the Graph APIs
