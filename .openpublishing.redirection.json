@@ -1299,6 +1299,42 @@
       {
         "source_path": "msteams-platform/concepts/build-and-test/develop-your-apps-with-teams-toolkit.md",
         "redirect_url": "/microsoftteams/platform/concepts/build-and-test/develop-your-apps-with-toolkit"
-      }
+      },
+      {
+        "source_path": "msteams-platform/qsg-bot-configuration-experience",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/bot-configuration-experience.md"
+      },
+      {
+        "source_path": "msteams-platform/sbs-botbuilder-linkunfurling",
+        "redirect_url": "/microsoftteams/platform/messaging-extensions/how-to/link-unfurling.md"
+      },
+      {
+        "source_path": "msteams-platform/sbs-botbuilder-taskmodule",
+        "redirect_url": "/microsoftteams/platform/task-modules-and-cards/task-modules/task-modules-bots.md"
+      },
+      {
+        "source_path": "msteams-platform/sbs-calling-and-meeting",
+        "redirect_url": "/microsoftteams/platform/bots/calls-and-meetings/registering-calling-bot.md"
+      },
+      {
+        "source_path": "msteams-platform/sbs-create-dashboard-widget-graph-api-call-in-Teams-toolkit",
+        "redirect_url": "/microsoftteams/platform/tabs/how-to/build-a-dashboard-tab-app.md"
+      },
+      {
+        "source_path": "msteams-platform/sbs-file-handling-in-bot",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/bots-filesv4.md"
+      },
+      {
+        "source_path": "msteams-platform/sbs-graphactivity-feedbroadcast",
+        "redirect_url": "/microsoftteams/platform/concepts/design/activity-feed-notifications.md"
+      },
+      {
+        "source_path": "msteams-platform/sbs-inmeeting-document-signing",
+        "redirect_url": "/microsoftteams/platform/apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md"
+      },
+      {
+        "source_path": "msteams-platform/sbs-inmeeting-document-signing",
+        "redirect_url": "/microsoftteams/platform/apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md"
+      },
     ]
 }
