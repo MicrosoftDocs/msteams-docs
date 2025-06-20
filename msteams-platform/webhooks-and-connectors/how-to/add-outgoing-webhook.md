@@ -313,10 +313,6 @@ response_msg = json.dumps({
 |----------------|------------------|--------|----------------|
 | Outgoing Webhooks | This sample demonstrates how to implement a straightforward Outgoing Webhook for Microsoft Teams, allowing users to send messages to external services without the complexity of creating a full bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
 
-## Step-by-step guide
-
-Follow the [step-by-step guide](../../sbs-outgoing-webhooks.yml) to create Outgoing Webhooks in Teams.
-
 ## See also
 
 * [Webhooks and connectors](../what-are-webhooks-and-connectors.md)

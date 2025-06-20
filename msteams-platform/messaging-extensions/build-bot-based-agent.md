@@ -362,10 +362,6 @@ To test your bot-based message extension created in the Developer Portal for Tea
 
 For more information on testing your agent in Microsoft 365 Copilot, see [debugging agent selection](/microsoft-365-copilot/extensibility/debugging-copilot-plugin).
 
-## Step-by-step guide
-
-Follow the [step-by-step guide](../sbs-messagingextension-searchcommand-plugin.yml) to build a bot-based search message extension agent for Microsoft 365 Copilot.
-
 ## See also
 
 * [Build message extensions using API](api-based-overview.md)

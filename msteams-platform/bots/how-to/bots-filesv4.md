@@ -455,10 +455,6 @@ The following code sample demonstrates how to obtain file consent and upload fil
 |----------------|-----------------|--------------|----------------|-----------|-----------|
 | File upload | This bot sample for Teams demonstrates file upload capabilities using Bot Framework v4, enabling users to upload files and view inline images within chats. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-file-upload/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-file-upload/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-file-upload/python) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-file-upload/csharp/demo-manifest/bot-file-upload.zip)
 
-## Step-by-step guide
-
-Follow the [step-by-step guide](../../sbs-file-handling-in-bot.yml) to upload file in Teams using bot.
-
 ## Next step
 
 > [!div class="nextstepaction"]

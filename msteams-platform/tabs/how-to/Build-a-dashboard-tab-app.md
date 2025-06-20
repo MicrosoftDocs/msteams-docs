@@ -986,10 +986,6 @@ For more information, see:
 
 To embed Power BI to the dashboard, see [Power BI client react](/javascript/api/overview/powerbi/powerbi-client-react).
 
-## Step-by-step guide
-
-Follow the [step-by-step](~/sbs-create-dashboard-widget-graph-api-call-in-Teams-toolkit.yml) guide to build a dashboard, and learn to add a widget and Graph API call to the dashboard.
-
 ## See also
 
 * [What are Teams tabs](../what-are-tabs.md)
