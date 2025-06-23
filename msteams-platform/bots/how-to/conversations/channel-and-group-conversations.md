@@ -438,13 +438,9 @@ Don't send a message in the following cases:
 * When the team is large, for example, larger than 100 members. Your bot can be seen as spam and the person who added it can get complaints. You must clearly communicate your bot's value proposition to everyone who sees the welcome message.
 * Your bot is first mentioned in a group or channel instead of being first added to a team.
 * A group or channel is renamed.
-* A team member is added to a group or channel. Yes, removed
+* A team member is added to a group or channel.
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
-
-## Step-by-step guide
-
-Follow the [step-by-step guide](../../../sbs-teams-conversation-bot.yml), create Teams conversation bot.
 
 ## Next step
 
