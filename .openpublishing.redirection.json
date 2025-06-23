@@ -1375,6 +1375,6 @@
       {
         "source_path": "msteams-platform/sbs-teams-live-share.yml",
         "redirect_url": "/microsoftteams/platform/apps-in-teams-meetings/teams-live-share-capabilities.md"
-      },
+      }
     ]
 }
