@@ -110,8 +110,6 @@ The `onQuerySettingsUrl` and `onSettingsUpdate` events work together to enable t
 
 The [`onQuerySettingsUrl`](/dotnet/api/microsoft.teams.ai.messageextensions-1.onquery) handler returns the URL for the configuration page when a user clicks on the settings button. After the configuration page is closed, the `onSettingsUpdate` method is called to accept and save the returned state. The `onQuery` handler then retrieves the updated settings and uses them to update the behavior of the message extension. This is the one case in which `onQuery` *doesn't* receive the response from the configuration page.
 
-If a message extension uses a configuration page, the `onQuery` handler should first verify for any stored configuration data. If the message extension isn't configured, a `config` response must be returned, which includes a link to your configuration.
-
 The following image shows the `config` command workflow:
 
 :::image type="content" source="~/assets/images/messaging-extension/respond-to-search.png" alt-text="Screenshot shows the config command workflow and how it works.":::
