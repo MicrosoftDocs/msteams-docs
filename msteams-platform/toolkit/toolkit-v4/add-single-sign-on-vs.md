@@ -558,6 +558,7 @@ Agents Toolkit helps you generate the authentication files in **TeamsFx-Auth** f
    Update the code as:
 
    ```
+   param location string = resourceGroup().location
    param m365ClientId string
    param m365TenantId string
    param m365OauthAuthorityHost string
