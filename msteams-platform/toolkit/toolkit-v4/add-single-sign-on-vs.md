@@ -104,6 +104,9 @@ Agents Toolkit helps you generate the authentication files in **TeamsFx-Auth** f
 
     * Add `aadApp/create` under `provision`: Create new Microsoft Entra apps used for SSO. For more information, see [aadApp/create](https://github.com/OfficeDev/TeamsFx/wiki/Available-actions-in-Teams-Toolkit#aadappcreate).
 
+        > [!NOTE]
+        > You can add any missing parameters under `writeToEnvironmentFile` directly in your .yml file.
+
     * Add `aadApp/update` under `provision`: Update your Microsoft Entra app with Microsoft Entra app manifest in step 1. For more information, see [aadApp/update](https://aka.ms/teamsfx-actions/aadapp-update).
 
     * Update `file/createOrUpdateJsonFile`:
