@@ -17,7 +17,7 @@ You can test your Microsoft Teams app with sample data with a Microsoft 365 deve
 2. [Set up a Microsoft 365 Developer Subscription](/office/developer-program/office-365-developer-program-get-started).
 3. [Use sample data packs with your Microsoft 365 developer subscription to install the Users content pack](/office/developer-program/install-sample-packs).
 4. [Install the Teams PowerShell module](https://www.powershellgallery.com/packages/microsoftteams/1.0.2).
-5. [Install the Microsoft Graph PowerShell module](/powershell/microsoftgraph/installation?view=graph-powershell-1.0).
+5. [Install the Microsoft Graph PowerShell module](/powershell/microsoftgraph/installation?view=graph-powershell-1.0&viewFallbackFrom=graph-powershell).
 
 > [!NOTE]
 > You must have Global Administrator permissions in the tenant to run the scripts.
@@ -151,39 +151,39 @@ By default, only Global Administrator or Teams service admins can upload the cus
     Param(
     [Parameter(Mandatory = $true)]
 
-# This specifies the location of your configuration XML
+    # This specifies the location of your configuration XML
 
-[string] $teamsFilePath
-)
+    [string] $teamsFilePath
+    )
 
-[xml]$XmlDocument = Get-Content -Path $teamsFilePath.ToString()
+    [xml]$XmlDocument = Get-Content -Path $teamsFilePath.ToString()
 
-if ($XmlDocument.Teams.Team.Count -gt 0) {
+    if ($XmlDocument.Teams.Team.Count -gt 0) {
 
-try {
+        try {
 
-# Connecting to Microsft Graph PowerShell
+            # 1. Connecting to Microsft Graph PowerShell.
 
-Connect-MgGraph -Scopes "Group.ReadWrite.All", "User.ReadWrite.All", "Channel.Create", "Team.Create" -ErrorAction Stop
+            Connect-MgGraph -Scopes "Group.ReadWrite.All", "User.ReadWrite.All", "Channel.Create", "Team.Create" -ErrorAction Stop
 
-# Connect to Microsoft Teams PowerShell
+            # Connect to Microsoft Teams PowerShell.
 
-Connect-MicrosoftTeams
+            Connect-MicrosoftTeams
 
-Write-Host "Connected to Microsoft 365 and configuring your organization with test teams and channels"
+            Write-Host "Connected to Microsoft 365 and configuring your organization with test teams and channels"
 
-# 2. Create the teams as specified in the XML
+            # 2. Create the teams as specified in the XML
 
-foreach ($team in $XmlDocument.Teams.Team ) {
-            try {
-                $group = New-Team -DisplayName $team.Name -Description $team.description -visibility public
-                Write-Host "Successfully created team: " $group.DisplayName
-            }
-            catch {
-                Write-Host "Unable to create team: $_"
-            }
+            foreach ($team in $XmlDocument.Teams.Team ) {
+                try {
+                    $group = New-Team -DisplayName $team.Name -Description $team.description -visibility public
+                    Write-Host "Successfully created team: " $group.DisplayName
+                }
+                catch {
+                    Write-Host "Unable to create team: $_"
+                }
 
-# 3. Add users to the newly created teams
+            # 3. Add users to the newly created teams
 
             foreach ($user in $team.Members.Member) {
                 try {
@@ -198,15 +198,15 @@ foreach ($team in $XmlDocument.Teams.Team ) {
                         Add-TeamUser -GroupId $group.GroupId -User $newUserPrincipalName | Out-Null
                     }
 
-Write-Host "Successfully added user : " $user.UserName
+                    Write-Host "Successfully added user : " $user.UserName
                 }
                 catch {
                     Write-Host "Unable to add team user: $_"
                 }
 
-}
+            }
 
-# 4. Add a set of channels to each newly created team
+            # 4. Add a set of channels to each newly created team
 
             foreach ($channel in $team.Channels.Channel) {
                 try {
@@ -220,19 +220,19 @@ Write-Host "Successfully added user : " $user.UserName
             }
         }
 
-# 5. Disconnect from all PowerShell sessions
+            # 5. Disconnect from all PowerShell sessions
 
-Write-Host "Completed execution and disconnecting from Microsoft 365 PowerShell sessions."
-        Disconnect-MicrosoftTeams
-        Disconnect-MgGraph
+            Write-Host "Completed execution and disconnecting from Microsoft 365 PowerShell sessions."
+            Disconnect-MicrosoftTeams
+            Disconnect-MgGraph
+        }
+        catch {
+            Write-Host "Unable to complete the operation: $_"
+        }
     }
-    catch {
-        Write-Host "Unable to complete the operation: $_"
+    else {
+        Write-Host "Content file has invalid data."
     }
-}
-else {
-    Write-Host "Content file has invalid data."
-}
     ```
 
 3. Open a Windows PowerShell session in Administrator mode, and run the script that you saved.
