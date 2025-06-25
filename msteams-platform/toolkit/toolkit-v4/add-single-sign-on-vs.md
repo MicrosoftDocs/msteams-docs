@@ -558,6 +558,7 @@ Agents Toolkit helps you generate the authentication files in **TeamsFx-Auth** f
    Update the code as:
 
    ```
+   param location string = resourceGroup().location
    param m365ClientId string
    param m365TenantId string
    param m365OauthAuthorityHost string
@@ -633,7 +634,7 @@ Agents Toolkit helps you generate the authentication files in **TeamsFx-Auth** f
 
    Example for TeamsFx Bot template:
 
-   * Open `Config.cs` and replace the code:
+   * Open `Config.cs` and add following classes to the namespace:
 
     ```
     using Microsoft.TeamsFx.Configuration;
