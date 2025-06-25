@@ -509,18 +509,22 @@ Agents Toolkit helps you generate the authentication files in **TeamsFx-Auth** f
         ```json
         - uses: file/createOrUpdateJsonFile
                 with:
-                  target: ./appsettings.Development.json
-                  appsettings:
-                    BOT_ID: ${{BOT_ID}}
-                    BOT_PASSWORD: ${{SECRET_BOT_PASSWORD}}
-                    TeamsFx:
-                      Authentication:
-                        ClientId: ${{AAD_APP_CLIENT_ID}}
-                        ClientSecret: ${{SECRET_AAD_APP_CLIENT_SECRET}}
-                        OAuthAuthority: ${{AAD_APP_OAUTH_AUTHORITY}}/${{AAD_APP_TENANT_ID}}
-                        ApplicationIdUri: api://botid-${{BOT_ID}}
-                        Bot:
-                          InitiateLoginEndpoint: https://${{BOT_DOMAIN}}/bot-auth-start
+                  target: ../ProjecName/appsettings.Development.json
+                  content:
+                    TokenValidation:
+                      Audiences:
+                        ClientId: ${{BOT_ID}}
+                    Connections:
+                      BotServiceConnection:
+                        Settings:
+                          AuthType: "ClientSecret"
+                          AuthorityEndpoint: "https://login.microsoftonline.com/botframework.com"
+                          ClientId: ${{BOT_ID}}
+                          ClientSecret: ${{SECRET_BOT_PASSWORD}}
+                    Azure:
+                      OpenAIApiKey: ${{SECRET_AZURE_OPENAI_API_KEY}}
+                      OpenAIEndpoint: ${{AZURE_OPENAI_ENDPOINT}}
+                      OpenAIDeploymentName: ${{AZURE_OPENAI_DEPLOYMENT_NAME}}
         ```
 
 1. Update Infra Microsoft Entra related configs to configure remote service. The following example shows the configs on Azure Webapp.
