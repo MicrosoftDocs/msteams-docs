@@ -499,7 +499,7 @@ Agents Toolkit helps you generate the authentication files in **TeamsFx-Auth** f
         ```json
         - uses: file/createOrUpdateJsonFile
                 with:
-                  target: ./appsettings.Development.json
+                  target: ../ProjecName/appsettings.Development.json
                   appsettings:
                     BOT_ID: ${{BOT_ID}}
                     BOT_PASSWORD: ${{SECRET_BOT_PASSWORD}}
