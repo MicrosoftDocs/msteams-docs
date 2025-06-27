@@ -525,11 +525,6 @@ The following JSON payload example for `suggestedActions` property:
             ]
         },
 ```
-
-## Step-by-step guide
-
-Follow the [step-by-step guide](../../sbs-botbuilder-linkunfurling.yml) to unfurl links in Teams using bot.
-
 ## Code sample
 
 |**Sample name** | **Description** | **.NET** | **Node.js**| **Manifest**
