@@ -148,6 +148,9 @@ Agents Toolkit helps you generate the authentication files in **TeamsFx-Auth** f
     In the `m365agents.local.yml` file:
     * Add the following code under `provision` to add Microsoft Entra related configs to local debug service.
 
+        > [!NOTE]
+        > If the `file/createOrUpdateJsonFile` section is configured in `m365agents.local.yml`, then you can skip the following step.
+
          ```json
             - uses: file/createOrUpdateJsonFile
               with:
@@ -495,6 +498,9 @@ Agents Toolkit helps you generate the authentication files in **TeamsFx-Auth** f
 
    In the `m365agents.local.yml` file:
     * Update `file/createOrUpdateJsonFile` under `provision` to add Microsoft Entra related configs to local debug service.
+
+        > [!NOTE]
+        > If the `file/createOrUpdateJsonFile` section is configured in `m365agents.local.yml`, then you can skip the following step.
 
         ```json
         - uses: file/createOrUpdateJsonFile
