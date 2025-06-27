@@ -28,7 +28,7 @@ Within Teams, app suspension is supported for the following scopes and clients:
 
 To enable app suspension, follow the steps:
 
-1. Call [app.lifeCycle.registerBeforeSuspendOrTerminate](/javascript/api/@microsoft/teams-js/app.lifecycle#@microsoft-teams-js-app-lifecycle-registerbeforesuspendorterminatehandler) and [app.lifeCycle.registerOnResumeHandler](/javascript/api/@microsoft/teams-js/app.lifecycle#@microsoft-teams-js-app-lifecycle-registeronresumehandler) APIs. These handlers are required to enable app suspension. Additional information about the [lifecycle module](/javascript/api/@microsoft/teams-js/app.lifecycle) is available in the TeamsJS reference.
+1. Call [app.lifeCycle.registerBeforeSuspendOrTerminate](/javascript/api/@microsoft/teams-js/app.lifecycle#@microsoft-teams-js-app-lifecycle-registerbeforesuspendorterminatehandler) and [app.lifeCycle.registerOnResumeHandler](/javascript/api/@microsoft/teams-js/app.lifecycle#@microsoft-teams-js-app-lifecycle-registeronresumehandler) APIs. These handlers are required to enable app suspension. For more information, see the [lifecycle module](/javascript/api/@microsoft/teams-js/app.lifecycle) available in the TeamsJS reference.
 
    The `app.lifecycle.registerBeforeSuspendOrTerminate` handler gives you an opportunity to perform some tasks before your app is suspended or terminated, while the `app.lifecycle.registerOnResumeHandler` is called when a user navigates back to your app.
 
@@ -98,7 +98,7 @@ MicrosoftTeams.app.lifecycle.registerBeforeSuspendOrTerminateHandler(() => {
 ```
 
 > [!NOTE]
-> Previously APIs in the `teamsCore` module were used to enable app caching. If an app registers for both `app.lifecycle` and `teamsCore` pairs of handlers, the `app.lifecycle` handlers overwrite the `teamsCore` handlers.
+> Previously, APIs in the `teamsCore` module were used to enable app caching. If an app registers for both `app.lifecycle` and `teamsCore` pairs of handlers, the `app.lifecycle` handlers overwrite the `teamsCore` handlers.
 
 ## Debug tool for cached apps
 
@@ -197,7 +197,7 @@ The following are general limitations for app suspension:
 
 * Apps are cached on a per-window basis. App caching happens on a per app (not on a per tab) basis within the same window.
 
-* The table in the introductory section, [App suspension for your tab app](#app-suspension-for-your-tab-app), provides information about what `frameContext` Teams supports for caching. For non-Teams hubs, only `FrameContext.Content` is cached. That means, `FrameContext.Task`, which is inside `Dialog` isn't supported.
+* The table in the introductory section, [App suspension for your tab app](#app-suspension-for-your-tab-app), provides information about what `frameContext` Teams supports for caching. For non-Teams hubs, only `FrameContext.Content` is cached, which means, `FrameContext.Task` that's inside `Dialog` isn't supported.
 
 * Register only the `beforeSuspendOrTerminate` handler if your app doesn't require app suspension but needs time to safely save state (as leaving the app can cause the app content to be abruptly removed from the Document Object Model (DOM)). If the app hasn't registered for the `resume` event, it's removed from the DOM after the `suspendOrTerminate` flow completes.
 
