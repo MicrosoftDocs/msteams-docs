@@ -73,11 +73,71 @@ You can get direct shared channel membership by using the `hostTeamGroupID` from
     GET /teams/{host-team-group-id}/channels/{channel-id}/sharedWithTeams
     ```
 
-3. Use GET members of each shared team (Team X) with GET `sharedWithTeams` API.
+3. Use GET members of each shared team (sharewithteamsId) with GET `sharedWithTeams` API.
 
     ```http
-    GET /teams/{host-team-group-id}/channels/{channel-id}/sharedWithTeams/{teamX}/members
+    GET /teams/{host-team-group-id}/channels/{channel-id}/sharedWithTeams/{sharewithteamsId}/allowedMembers
     ```
+
+## Get notifications for indirect membership changes
+
+Users can access a shared channel either directly (added to the channel) or indirectly (members of a team with which the channel is shared). Apps installed in shared channels can receive notifications when users are added to or removed from an associated team with which the channel is shared. To receive these notifications, you must:
+
+* [Install the app](../deploy-and-publish/apps-upload.md) in a host team and enable it for the shared channel.
+* Create a valid Microsoft Graph change notification subscription to monitor associated team membership changes and shared or unshared events using supported APIs.
+
+To subscribe to indirect membership updates, use the following Microsoft Graph resource URL:
+
+`/teams/{team-id}/channels/getAllMembers?notifyOnIndirectMembershipUpdate=true&suppressWhenSharedUnsharedWithTeam=true`
+
+This subscription enables apps to monitor membership changes in shared channels and its associated teams. For more information on how to create a Microsoft Graph change notification subscription, see [Create a subscription.](/graph/teams-changenotifications-teammembership)
+
+### Manage indirect membership in shared channels
+
+You can manage indirect membership in shared channels using the following Microsoft Graph APIs:
+
+* Use [allMembers](/graph/api/channel-list-allmembers?branch=main&branchFallbackFrom=pr-en-us-13010&view=graph-rest-1.0&tabs=http&preserve-view=true) API to retrieve all users who are members of a specific channel.
+
+    ```http
+    GET /teams/{team-id}/channels/{channel-id}/allMembers
+    ```
+
+* Use [sharedWithTeams](/graph/api/sharedwithchannelteaminfo-list?branch=main&branchFallbackFrom=pr-en-us-13010&view=graph-rest-1.0&tabs=http&preserve-view=true) API to list all teams a channel is shared with.
+
+    ```http
+    GET /teams/{team-id}/channels/{channel-id}/sharedWithTeams
+    ```
+
+* Use the [allowedMembers](/graph/api/sharedwithchannelteaminfo-list-allowedmembers?branch=main&branchFallbackFrom=pr-en-us-13010&view=graph-rest-1.0&tabs=http&preserve-view=true) API to retrieve users from a shared team who can access a shared channel.
+
+    ```http
+    GET /teams/{team-id}/channels/{channel-id}/sharedWithTeams/{sharewithteamsId}/allowedMembers
+    ```
+
+> [!NOTE]
+> `allowedMembers` API returns only newly associated users and doesn't apply to unshared events.
+
+### Validate user access
+
+When an app receives a notification for an indirect membership update, it must validate user access to the shared channel. For example, if a user is removed from a team associated with a shared channel, use the following API to determine whether the user still has access to the shared channel. The API verifies whether the user still has access to the shared channel.
+
+```http
+GET /DoesUserHaveAccessAsync
+```
+
+### Handle bulk membership changes
+
+In large-scale scenarios, such as sharing a channel with a large team or removing multiple users, Teams suppresses individual notifications to reduce volume.
+
+To handle bulk membership changes:
+
+* Use `allMembers` API to retrieve the complete updated list of current members.
+* Use `allowedMembers` to retrieve only newly added members during shared events.
+* Avoid using `DoesUserHaveAccessAsync` for every user unless necessary.
+* Subscribe to shared and unshared events using supported Microsoft Graph APIs.
+
+> [!NOTE]
+> Apps using resource-specific consent (RSC) must request extended permissions to support both direct and indirect membership updates. These permissions are required to query membership data and respond to notifications.
 
 ## Classify members in the shared channel as in-tenant or out-tenant
 
