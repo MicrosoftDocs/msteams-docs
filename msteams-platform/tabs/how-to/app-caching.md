@@ -5,12 +5,12 @@ description: Learn how to enable app suspension for tab app in Teams, improve ap
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.date: 05/13/2025
+ms.date: 06/27/2025
 ---
 
 # App suspension for your tab app
 
-When a user navigates away from an app, the app can either be suspended or terminated. Suspension means that the app is sitting in the background and isn't visible to the user. Termination means that the app is completely closed and removed from memory. Suspending an app improves subsequent launch time of the apps within Teams, or other Microsoft 365 products, by allowing you to keep some resources and assets in memory that you can use when you rehydrate your app.
+When a user navigates away from an app, the app can either be suspended or terminated. Suspension means the app is in the background and isn't visible to the user. Termination means the app is completely closed and removed from memory. Suspending an app improves subsequent launch time of the apps within Teams, or other Microsoft 365 products, by allowing you to keep some resources and assets in memory that you can use when you rehydrate your app.
 
 Previously, app suspension was referred to as a cached app and was supported only in Teams, but it's now supported for Teams apps extended to run across other Microsoft 365 applications as well.
 
@@ -150,8 +150,7 @@ To enable precaching for your tab app, follow these steps:
         }
         ```
 
-        > [!
-        ]
+        > [!NOTE]
         > * The `contentUrl` can't contain context-specific parameters, such as team site URL or thread ID, as Teams loads apps with no prior context during launch.
         > * The `contentUrl` must be generic enough to load in the background without any user interaction.
 
@@ -185,7 +184,7 @@ The following are general limitations for app suspension:
 
 * An app is suspended only when the user navigates away from the app. If an app has multiple static tabs, when the user switches between tabs, the tab won’t be suspended. The handler, `app.lifecycle.onBeforeSuspendOrTerminate`, will still be called.
 
-* The suspended app can be used within the same window. The app that is suspended in a pop out window can't be reused in the Main window.
+* The suspended app can be used within the same window. The app that's suspended in a pop out window can't be reused in the Main window.
 
 * When an app is suspended, all the registered handlers are deleted. When the app is resumed all the handlers, such as `themeChange` or `focusEnter`, need to be reregistered. No notifications are sent to the app when suspended. If your app requires notifications even when suspended, suspension might not be the right solution.
 
