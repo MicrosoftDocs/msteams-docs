@@ -17,7 +17,7 @@ You can test your Microsoft Teams app with sample data with a Microsoft 365 deve
 2. [Set up a Microsoft 365 Developer Subscription](/office/developer-program/office-365-developer-program-get-started).
 3. [Use sample data packs with your Microsoft 365 developer subscription to install the Users content pack](/office/developer-program/install-sample-packs).
 4. [Install the Teams PowerShell module](https://www.powershellgallery.com/packages/microsoftteams/1.0.2).
-5. [Install the Azure AD PowerShell module](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0&preserve-view=true#installing-the-azure-ad-module).
+5. [Install the Microsoft Graph PowerShell module](/powershell/microsoftgraph/installation?view=graph-powershell-1.0&viewFallbackFrom=graph-powershell).
 
 > [!NOTE]
 > You must have Global Administrator permissions in the tenant to run the scripts.
@@ -149,11 +149,11 @@ By default, only Global Administrator or Teams service admins can upload the cus
 
     ```powershell
     Param(
-        [Parameter(Mandatory = $true)]
+    [Parameter(Mandatory = $true)]
 
-        # This specifies the location of your configuration XML.
+    # This specifies the location of your configuration XML
 
-        [string] $teamsFilePath 
+    [string] $teamsFilePath
     )
 
     [xml]$XmlDocument = Get-Content -Path $teamsFilePath.ToString()
@@ -162,70 +162,69 @@ By default, only Global Administrator or Teams service admins can upload the cus
 
         try {
 
-            # 1. Login with the Global Administrator account for your Microsoft 365 Developer Program tenant. This script uses these credentials to connect to the PowerShell modules for Azure Active Directory and Microsoft Teams
+            # 1. Connecting to Microsft Graph PowerShell.
 
-            $creds = Get-Credential
+            Connect-MgGraph -Scopes "Group.ReadWrite.All", "User.ReadWrite.All", "Channel.Create", "Team.Create" -ErrorAction Stop
 
-            # Connecting to Azure AD PowerShell
-            Connect-AzureAD -Credential $creds | Out-Null
+            # Connect to Microsoft Teams PowerShell.
 
-            # Connect to Microsoft Teams PowerShell
-            Connect-MicrosoftTeams -Credential $creds | Out-Null
+            Connect-MicrosoftTeams
 
             Write-Host "Connected to Microsoft 365 and configuring your organization with test teams and channels"
 
-            # 2. Create the teams as specified in the XML.
+            # 2. Create the teams as specified in the XML
 
             foreach ($team in $XmlDocument.Teams.Team ) {
                 try {
-                    $group = New-Team -DisplayName $team.Name -Description $team.description -visibility public 
+                    $group = New-Team -DisplayName $team.Name -Description $team.description -visibility public
                     Write-Host "Successfully created team: " $group.DisplayName
                 }
                 catch {
                     Write-Host "Unable to create team: $_"
                 }
 
-                # 3. Add users to the newly created teams.
-                foreach ($user in $team.Members.Member) {
-                    try {
-                        $newUserPrincipalName = (Get-AzureADUser -SearchString $user.UserName).UserPrincipalName
+            # 3. Add users to the newly created teams
 
-                        if($user.IsOwner -eq $true){
-                            Add-TeamUser -GroupId $group.GroupId -User $newUserPrincipalName -Role Owner | Out-Null
-                        }else{
-                            Add-TeamUser -GroupId $group.GroupId -User $newUserPrincipalName | Out-Null
-                        }
+            foreach ($user in $team.Members.Member) {
+                try {
+                    # Lookup user by exact userPrincipalName
+                    $username = if ($user.UserName -match '@') { $user.UserName.ToLower() } else { "$($user.UserName.ToLower())@M365x15856998.onmicrosoft.com" }
+                    $userObject = Get-MgUser -Filter "userPrincipalName eq '$username'" -ConsistencyLevel eventual
+                    $newUserPrincipalName = $userObject.UserPrincipalName
 
-                        Write-Host "Successfully added user : " $user.UserName
-                    }
-                    catch {
-                        Write-Host "Unable to add team user: $_"
+                    if ($user.IsOwner -eq $true) {
+                        Add-TeamUser -GroupId $group.GroupId -User $newUserPrincipalName -Role Owner | Out-Null
+                    } else {
+                        Add-TeamUser -GroupId $group.GroupId -User $newUserPrincipalName | Out-Null
                     }
 
+                    Write-Host "Successfully added user : " $user.UserName
+                }
+                catch {
+                    Write-Host "Unable to add team user: $_"
                 }
 
-                # 4. Add a set of channels to each newly created team
-                foreach ($channel in $team.Channels.Channel) {
-                    try {
-                        # Adding each team channel
-                        New-TeamChannel -GroupId $group.GroupId -DisplayName $channel.Name -Description $channel.Description | Out-Null
-                        Write-Host "Successfully created channel: " $channel.Name
-                    }
-                    catch {
-                        Write-Host "Unable to add new Team Channel: $_"
-                    }   
-                }
-
-                Clear-Variable -Name group
             }
 
-            Clear-Variable -Name creds
+            # 4. Add a set of channels to each newly created team
+
+            foreach ($channel in $team.Channels.Channel) {
+                try {
+                    # Adding each team channel
+                    New-TeamChannel -GroupId $group.GroupId -DisplayName $channel.Name -Description $channel.Description | Out-Null
+                    Write-Host "Successfully created channel: " $channel.Name
+                }
+                catch {
+                    Write-Host "Unable to add new Team Channel: $_"
+                }   
+            }
+        }
 
             # 5. Disconnect from all PowerShell sessions
 
             Write-Host "Completed execution and disconnecting from Microsoft 365 PowerShell sessions."
             Disconnect-MicrosoftTeams
-            Disconnect-AzureAD
+            Disconnect-MgGraph
         }
         catch {
             Write-Host "Unable to complete the operation: $_"

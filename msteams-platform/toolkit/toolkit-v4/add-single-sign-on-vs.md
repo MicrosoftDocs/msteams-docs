@@ -44,35 +44,31 @@ Agents Toolkit helps you generate the authentication files in **TeamsFx-Auth** f
             ]
         ```
 
-    * `replyUrlsWithType`: It lists registered redirect_uri values that Microsoft Entra ID accepts as destinations when returning tokens. Set necessary redirect URIs into `replyUrlsWithType` to successfully return token. For more information, see [replyUrlsWithType attribute](/azure/active-directory/develop/reference-app-manifest#replyurlswithtype-attribute).
+    * `redirectUris`: It lists registered redirect_uri values that Microsoft Entra ID accepts as destinations when returning tokens. Set necessary redirect URIs into `redirectUris` to successfully return token. For more information, see [redirectUris attribute](/entra/identity-platform/reference-microsoft-graph-app-manifest#web-attribute).
 
         ```json
-            "replyUrlsWithType":[
-          {
-            "url": "${{TAB_ENDPOINT}}/auth-end.html",
-            "type": "Web"
-          }
-        ]    
+            "web": {
+            "redirectUris": [
+             "${{TAB_ENDPOINT}}/auth-end.html"
+            ]
+            }
         ```
 
         > [!NOTE]
         > Use `${{ENV_NAME}}` to reference variables in `env/.env.{TEAMSFX_ENV}`.
 
         ```json
-            "replyUrlsWithType":[
-          {
-            "url": "${{TAB_ENDPOINT}}/auth-end.html",
-            "type": "Web"
-          },
-          {
-            "url": "${{TAB_ENDPOINT}}/auth-end.html?clientId=${{AAD_APP_CLIENT_ID}}",
-            "type": "Spa"
-          },
-          {
-            "url": "${{TAB_ENDPOINT}}/blank-auth-end.html",
-            "type": "Spa"
-          }
-        ]
+            "web": {
+             "redirectUris": [
+              "${{TAB_ENDPOINT}}/auth-end.html"
+             ]
+            },
+            "spa": {
+             "redirectUris": [
+              "${{TAB_ENDPOINT}}/auth-end.html?clientId=${{AAD_APP_CLIENT_ID}}",
+              "${{TAB_ENDPOINT}}/blank-auth-end.html"
+             ]
+            }
         ```
 
     * "name": It replaces the value with your expected Microsoft Entra app name.
@@ -374,31 +370,16 @@ Agents Toolkit helps you generate the authentication files in **TeamsFx-Auth** f
     > [!NOTE]
     > You can use `${{ENV_NAME}}` to reference variables in the `env/.env.{TEAMSFX_ENV}` file.
 
-   * `replyUrlsWithType`: It lists registered redirect_uri values that Microsoft Entra ID accepts as destinations when returning tokens. You need to set necessary Redirect URIs into "replyUrlsWithType" for successfully returning token. For more information, see [replyUrlsWithType attribute](/azure/active-directory/develop/reference-app-manifest#replyurlswithtype-attribute).
+   * `redirectUris`: It lists registered redirect_uri values that Microsoft Entra ID accepts as destinations when returning tokens. You need to set necessary Redirect URIs into "redirectUris" for successfully returning token. For more information, see [redirectUris attribute](/entra/identity-platform/reference-microsoft-graph-app-manifest#web-attribute).
 
     Example:
 
     ```
-    "replyUrlsWithType":[
-      {
-        "url": "https://${{BOT_DOMAIN}}/bot-auth-end.html",
-        "type": "Web"
-      }
-    ]
-    ```
-
-    > [!NOTE]
-    > You can use use `${{ENV_NAME}}` to reference envs in the `env/.env.{TEAMSFX_ENV}` file.
-
-    Example:
-
-    ```
-    "replyUrlsWithType":[
-      {
-      "url": "https://${{BOT_DOMAIN}}/bot-auth-end.html",
-      "type": "Web"
-      }
-    ]
+    "web": {
+     "redirectUris": [
+      "https://${{BOT_DOMAIN}}/bot-auth-end.html"
+     ]
+    }
     ```
 
    * "name": Replace the value with your expected Microsoft Entra app name.
@@ -518,7 +499,7 @@ Agents Toolkit helps you generate the authentication files in **TeamsFx-Auth** f
         ```json
         - uses: file/createOrUpdateJsonFile
                 with:
-                  target: ./appsettings.Development.json
+                  target: ../ProjecName/appsettings.Development.json
                   appsettings:
                     BOT_ID: ${{BOT_ID}}
                     BOT_PASSWORD: ${{SECRET_BOT_PASSWORD}}
