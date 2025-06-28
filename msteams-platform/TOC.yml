@@ -959,16 +959,12 @@
   href: teams-faq.md
 - name: App manifest
   items:
-    - name: App manifest
-      href: resources/schema/manifest-schema.md
-      displayName: version, validDomain, valid domain, validdomain, properties, meetingExtensionDefinition
     - name: Public developer preview
-      items:
-        - name: Overview
-          href: resources/dev-preview/developer-preview-intro.md          
-        - name: Public developer preview app manifest
-          href: resources/schema/manifest-schema-dev-preview.md
-          displayName: properties
+      href: resources/dev-preview/developer-preview-intro.md
+      displayName: dev preview, public preview, manifest schema, app manifest, app package
+    - name: Manifest schema reference
+      href: /microsoft-365/extensibility/schema/
+      displayName: manifest schema, app manifest, app package
 - name: Test your app or agent
   items:
   - name: Overview
