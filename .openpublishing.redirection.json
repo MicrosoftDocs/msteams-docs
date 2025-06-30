@@ -1379,6 +1379,14 @@
       {
         "source_path": "msteams-platform/sbs-meetings-sidepanel.yml",
         "redirect_url": "/microsoftteams/platform/apps-in-teams-meetings/build-tabs-for-meeting.md"
+      },
+      {
+        "source_path": "msteams-platform/resources/schema/manifest-schema.md",
+        "redirect_url": "/microsoft-365/extensibility/schema"
+      },
+      {
+        "source_path": "msteams-platform/resources/schema/manifest-schema-dev-preview.md",
+        "redirect_url": "/microsoft-365/extensibility/schema/?view=m365-app-prev"
       }
     ]
 }
