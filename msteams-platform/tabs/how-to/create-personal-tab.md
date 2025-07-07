@@ -220,8 +220,9 @@ Create a content page and update existing files for the tab application:
 ### Create your app package
 
 Developers must create an app package to build and run the application in Teams. The app package is generated through a gulp task that validates the `manifest.json` file and creates a zip folder in the `./package` directory. At the command prompt, run:
-
+```cmd
     gulp manifest
+```
 
 ### Build and run your application
 
@@ -689,8 +690,9 @@ sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
 Ensure the npm global cache is added to the PATH. This step normally occurs with the Node.js installer.
 
 Developers use the CLI via the `atk` command. Verify functionality by running:
-
+```cmd
     atk -h
+```
 
 > [!CAUTION]
 > Before running TeamsFx in PowerShell terminals, enable the remote signed execution policy for PowerShell.
