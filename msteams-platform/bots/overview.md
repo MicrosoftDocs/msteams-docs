@@ -58,7 +58,7 @@ You can choose one or more of the following capabilities for your bot app. Use e
   * **Conversational bot**:
     A conversational bot simulates interactions with users, allowing them to engage with a web service through text, interactive cards, and dialogs. It understands user input and responds accordingly, making it useful for virtual assistance, customer service, and more.
 
-    For more information, see [how to create Teams conversation bot](../sbs-teams-conversation-bot.yml).
+    For more information, see [how to create Teams conversation bot](../bots/how-to/conversations/channel-and-group-conversations.md).
 
   * **Notification bot**:
     A notification bot is an automated tool that sends alerts to users in Teams channels, group chats, or personal chats. Use a notification bot for sending reminders, alerts, or updates. Users can also interact with the bot by responding to options or links within the notification or by providing feedback.
