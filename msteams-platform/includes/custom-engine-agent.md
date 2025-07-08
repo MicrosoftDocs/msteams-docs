@@ -25,20 +25,20 @@
    >      
    >        ```
 >
-   >     * Ensure that the `scopes` is set as `personal` for `bots` and `commandLists`:
+   >     * Ensure that the `scopes` is set as `copilot` for `bots` and `commandLists`:
    >
    >        ```json
    >        "bots": [ 
    >           { 
    >              "botId": "<Bot-Id-Guid>", 
    >              "scopes": [
-   >                  "personal",
+   >                  "copilot",
    >                  "team",
    >                  "groupChat"
    >              ],
    >              "commandLists": [ 
    >                 { 
-   >                 "scopes": ["personal"], 
+   >                 "scopes": ["copilot"], 
    >                 "commands": [ 
    >                    { 
    >                       "title": "Sample prompt title", 
@@ -47,7 +47,7 @@
    >                 ] 
    >                 }, 
    >                 { 
-   >                 "scopes": ["personal"], 
+   >                 "scopes": ["copilot"], 
    >                 "commands": [ 
    >                    { 
    >                       "title": "Sample prompt title", 

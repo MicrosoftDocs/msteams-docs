@@ -846,20 +846,20 @@ To support Microsoft 365 Copilot Chat, update your app manifest:
       }
     ```
     
-2. Set the `scopes` to `personal` for `bots` and `commandLists` in your app manifest:
+2. Set the `scopes` to `copilot` for `bots` and `commandLists` in your app manifest:
 
     ```json
     "bots": [ 
         { 
           "botId": "<Bot-Id-Guid>", 
           "scopes": [
-              "personal",
+              "copilot",
               "team",
               "groupChat"
           ], 
           "commandLists": [ 
             { 
-              "scopes": ["personal"], 
+              "scopes": ["copilot"], 
               "commands": [ 
                 { 
                   "title": "Sample prompt title", 
@@ -868,7 +868,7 @@ To support Microsoft 365 Copilot Chat, update your app manifest:
               ] 
             }, 
             { 
-              "scopes": ["personal"], 
+              "scopes": ["copilot"], 
               "commands": [ 
                 { 
                   "title": "Sample prompt title", 
