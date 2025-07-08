@@ -145,6 +145,7 @@ The following is the sample app manifest schema:
                 "team",
                 "personal",
                 "groupChat"
+                "copilot"
             ],
             "needsChannelSelector": false,
             "isNotificationOnly": false,
@@ -156,6 +157,7 @@ The following is the sample app manifest schema:
                     "scopes": [
                         "team",
                         "groupChat"
+                        "copilot"
                     ],
                     "commands": [
                         {
@@ -172,6 +174,7 @@ The following is the sample app manifest schema:
                     "scopes": [
                         "personal",
                         "groupChat"
+                        "copilot"
                     ],
                     "commands": [
                         {
@@ -642,7 +645,8 @@ The item is an array (maximum of only one element&mdash; only one bot is allowed
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`botId`|String||✔️|The unique Microsoft app ID for the bot as registered with the Bot Framework. The ID can be the same as the overall [app ID](#id).|
-|`scopes`|Array of enums|3|✔️|Specifies whether the bot offers an experience in the context of a channel in a `team`, in a group chat (`groupChat`), or an experience scoped to an individual user alone (`personal`). These options are non-exclusive.|
+|`scopes`|Array of enums|3|✔️|Specifies whether the bot offers an experience in the context of a channel in a `team`, in a group chat (`groupChat`), or an experience scoped to an individual user alone (`personal`). These options are non-exclusive.
+Copilot agents are specialized AI entities integrated into Microsoft 365 Copilot to perform targeted tasks. They range from simple prompt-response bots to advanced autonomous agents that can interact with external systems. These agents are built using Copilot Studio, either through a lightweight builder (e.g., BizChat or SharePoint) or the full Studio experience.|
 |`needsChannelSelector`|Boolean|||Describes whether or not the bot uses a user hint to add the bot to a specific channel. <br>Default value: `false` |
 |`isNotificationOnly`|Boolean|||Indicates whether a bot is a one-way, notification-only bot, as opposed to a conversational bot. <br>Default value: `false` |
 |`supportsFiles`|Boolean|||Indicates whether the bot supports the ability to upload/download files in personal chat. <br>Default value: `false`|
