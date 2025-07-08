@@ -74,7 +74,7 @@ Microsoft Graph SDK, Microsoft Bot Framework SDK, and Microsoft TeamsJS client l
 The following list provides all the RSC permissions categorized based on resource type. Each table also states which data access modes are available for each permission.
 
 * [RSC permissions for a team](#rsc-permissions-for-a-team): Includes the channels within a team.
-* [RSC permissions for a chat or meeting](#rsc-permissions-for-a-chat-or-meeting): Includes the meetings associated with this chats.
+* [RSC permissions for a chat or meeting](#rsc-permissions-for-a-chat-or-meeting): Includes the meetings associated with the chats.
 * [RSC permissions for user access](#rsc-permissions-for-user-access): Includes permission for users to access different resources.
 
 > [!NOTE]
