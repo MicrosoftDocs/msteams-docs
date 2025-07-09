@@ -3,7 +3,7 @@ title: App Manifest Reference
 description: In this article, you'll have the latest version of the public manifest schema for Microsoft Teams reference, schema, and sample full manifest.
 ms.topic: reference
 ms.localizationpriority: high
-ms.date: 5/29/2025
+ms.date: 07/09/2025
 --- 
 
 # App manifest
@@ -144,7 +144,7 @@ The following is the sample app manifest schema:
             "scopes": [
                 "team",
                 "personal",
-                "groupChat"
+                "groupChat",
                 "copilot"
             ],
             "needsChannelSelector": false,
@@ -156,7 +156,7 @@ The following is the sample app manifest schema:
                 {
                     "scopes": [
                         "team",
-                        "groupChat"
+                        "groupChat",
                         "copilot"
                     ],
                     "commands": [
@@ -173,7 +173,7 @@ The following is the sample app manifest schema:
                 {
                     "scopes": [
                         "personal",
-                        "groupChat"
+                        "groupChat",
                         "copilot"
                     ],
                     "commands": [
@@ -645,8 +645,7 @@ The item is an array (maximum of only one element&mdash; only one bot is allowed
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`botId`|String||✔️|The unique Microsoft app ID for the bot as registered with the Bot Framework. The ID can be the same as the overall [app ID](#id).|
-|`scopes`|Array of enums|3|✔️|Specifies whether the bot offers an experience in the context of a channel in a `team`, in a group chat (`groupChat`), or an experience scoped to an individual user alone (`personal`). These options are non-exclusive.
-Copilot agents are specialized AI entities integrated into Microsoft 365 Copilot to perform targeted tasks. They range from simple prompt-response bots to advanced autonomous agents that can interact with external systems. These agents are built using Copilot Studio, either through a lightweight builder (e.g., BizChat or SharePoint) or the full Studio experience.|
+|`scopes`|Array of enums|4|✔️|Specifies whether the bot offers an experience in the context of a channel in a team, in a group chat (groupChat), in a M365 copilot chat (copilot) or an experience scoped to an individual user alone (personal).|
 |`needsChannelSelector`|Boolean|||Describes whether or not the bot uses a user hint to add the bot to a specific channel. <br>Default value: `false` |
 |`isNotificationOnly`|Boolean|||Indicates whether a bot is a one-way, notification-only bot, as opposed to a conversational bot. <br>Default value: `false` |
 |`supportsFiles`|Boolean|||Indicates whether the bot supports the ability to upload/download files in personal chat. <br>Default value: `false`|

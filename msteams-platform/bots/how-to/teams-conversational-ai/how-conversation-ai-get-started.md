@@ -4,7 +4,7 @@ description: Learn how to create an app using Teams AI library with AI component
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.date: 02/06/2025
+ms.date: 07/09/2025
 ms.owner: angovil
 ---
 
@@ -853,13 +853,14 @@ To support Microsoft 365 Copilot Chat, update your app manifest:
         { 
           "botId": "<Bot-Id-Guid>", 
           "scopes": [
+              "personal",
               "copilot",
               "team",
               "groupChat"
           ], 
           "commandLists": [ 
             { 
-              "scopes": ["copilot"], 
+              "scopes":  ["personal","copilot"], 
               "commands": [ 
                 { 
                   "title": "Sample prompt title", 
@@ -868,7 +869,7 @@ To support Microsoft 365 Copilot Chat, update your app manifest:
               ] 
             }, 
             { 
-              "scopes": ["copilot"], 
+              "scopes": ["personal","copilot"], 
               "commands": [ 
                 { 
                   "title": "Sample prompt title", 
