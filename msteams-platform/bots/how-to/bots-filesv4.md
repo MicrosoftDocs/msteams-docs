@@ -65,7 +65,7 @@ Graph APIs work in all Teams scopes. For more information, see [send chat messag
 4. Replace <ACCESS_TOKEN> with a valid OAuth 2.0 bearer token.
 5. Replace file_example.txt with the display name for the file reference in Teams.
 
-Tip: To get {item-id} for a given file, use [List children](/graph/api/driveitem-list-children?view=graph-rest-1.0&tabs=http) or [Search](/graph/api/driveitem-search?view=graph-rest-1.0&tabs=http).
+Tip: To get {item-id} for a given file, use [List children](/graph/api/driveitem-list-children?view=graph-rest-1.0&tabs=http&preserve-view=true) or [Search](/graph/api/driveitem-search?view=graph-rest-1.0&tabs=http&preserve-view=true).
 
 **Send a Teams channel message with a file reference attachment (SharePoint file) via Microsoft Graph API:**
 
