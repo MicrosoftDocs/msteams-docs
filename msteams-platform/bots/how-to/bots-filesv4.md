@@ -37,6 +37,66 @@ Post messages with card attachments that refer to existing SharePoint files, usi
 
 Graph APIs work in all Teams scopes. For more information, see [send chat message file attachments](/graph/api/chatmessage-post?view=graph-rest-beta&preserve-view=true&tabs=http#example-4-file-attachments).
 
+**Send a Teams chat message with a file reference attachment via Microsoft Graph API**
+
+   ```bash
+   curl -X POST "https://graph.microsoft.com/v1.0/chats/{chat-id}/messages" \
+  -H "Authorization: Bearer <ACCESS_TOKEN>" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "body": {
+      "contentType": "html",
+      "content": "Here is your document."
+    },
+    "attachments": [
+      {
+        "id": "1",
+        "contentType": "reference",
+        "contentUrl": "https://graph.microsoft.com/v1.0/users/{user-id}/drive/items/{item-id}",
+        "name": "file_example.txt"
+      }
+    ]
+  }'
+   ```
+
+1. Replace {chat-id} with the Teams chat's unique ID (for channel threads, use the thread's chat ID).
+2. Replace {user-id} with the user/owner of the file (or drive owner, could be group/team ID for shared files).
+3. Replace {item-id} with the OneDrive or SharePoint file ID.
+4. Replace <ACCESS_TOKEN> with a valid OAuth 2.0 bearer token.
+5. Replace file_example.txt with the display name for the file reference in Teams.
+
+Tip: To get {item-id} for a given file, use [List children](https://learn.microsoft.com/en-us/graph/api/driveitem-list-children?view=graph-rest-1.0&tabs=http) or [Search](https://learn.microsoft.com/en-us/graph/api/driveitem-search?view=graph-rest-1.0&tabs=http).
+
+**Send a Teams channel message with a file reference attachment (SharePoint file) via Microsoft Graph API:**
+
+```bash
+   curl -X POST "https://graph.microsoft.com/v1.0/teams/{team-id}/channels/{channel-id}/messages" \
+  -H "Authorization: Bearer <ACCESS_TOKEN>" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "body": {
+      "contentType": "html",
+      "content": "Here is your shared channel document."
+    },
+    "attachments": [
+      {
+        "id": "1",
+        "contentType": "reference",
+        "contentUrl": "https://graph.microsoft.com/v1.0/sites/{site-id}/drives/{drive-id}/items/{item-id}",
+        "name": "file_channel_example.txt"
+      }
+    ]
+  }'
+   ```
+
+1. Replace {team-id} with the Microsoft Teams team's unique ID.
+2. Replace {channel-id} with the Teams channel's unique ID.
+3. Replace <ACCESS_TOKEN> with a valid OAuth 2.0 bearer token.
+4. Replace {site-id} with the SharePoint Site ID for the team.
+5. Replace {drive-id} with the ID of the drive (document library) containing the file.
+6. Replace {item-id} with the unique ID of the file in SharePoint/OneDrive.
+7. Replace file_channel_example.txt with the display name for the file reference in Teams.
+
 Alternately, you can send files to and receive files from a bot using the Teams bot APIs.
 
 ## Use the Teams bot APIs
@@ -86,6 +146,16 @@ The following table describes the content properties of the attachment:
 | `fileType` | Type of file, such as .pdf or .docx. |
 
 As a best practice, acknowledge the file upload by sending a message back to the user.
+
+You can download the file using cURL command:
+   ```bash
+   curl -L "{downloadUrl}" \
+   -H "Authorization: Bearer <BOT_ACCESS_TOKEN>" \
+   -o file_example.txt
+   ```
+
+1. Replace {downloadUrl} with the actual URL from the downloadUrl field in the attachment.
+2. Replace <BOT_ACCESS_TOKEN> with your bot's access token.
 
 ### Upload files to personal chat
 
