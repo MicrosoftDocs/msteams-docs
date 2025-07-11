@@ -1,0 +1,60 @@
+# How to send and receive files in Microsoft Teams bots via Graph API
+
+## Send a Teams chat message with a file reference attachment
+curl -X POST "https://graph.microsoft.com/v1.0/chats/{chat-id}/messages" \
+  -H "Authorization: Bearer <ACCESS_TOKEN>" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "body": {"contentType": "html", "content": "Here is your document."},
+    "attachments": [{
+      "id": "1",
+      "contentType": "reference",
+      "contentUrl": "https://graph.microsoft.com/v1.0/users/{user-id}/drive/items/{item-id}",
+      "name": "file_example.txt"
+    }]
+  }'
+
+# Param substitutions:
+# {chat-id}: Teams chat's unique ID (for channel threads, use thread's chat id)
+# {user-id}: The OneDrive file owner
+# {item-id}: The OneDrive or SharePoint file id
+# <ACCESS_TOKEN>: OAuth 2.0 bearer token
+# file_example.txt: Display name for file in Teams
+
+## Send a Teams channel message with a file reference attachment (SharePoint)
+curl -X POST "https://graph.microsoft.com/v1.0/teams/{team-id}/channels/{channel-id}/messages" \
+  -H "Authorization: Bearer <ACCESS_TOKEN>" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "body": {"contentType": "html", "content": "Here is your shared channel document."},
+    "attachments": [{
+      "id": "1",
+      "contentType": "reference",
+      "contentUrl": "https://graph.microsoft.com/v1.0/sites/{site-id}/drives/{drive-id}/items/{item-id}",
+      "name": "file_channel_example.txt"
+    }]
+  }'
+
+# Params:
+# {team-id}: Team's unique ID
+# {channel-id}: Channel's unique ID
+# <ACCESS_TOKEN>: OAuth token
+# {site-id}: SharePoint site ID for the team
+# {drive-id}: Drive (doclib) ID
+# {item-id}: File id
+# file_channel_example.txt: Display name in Teams
+
+## Download a file the bot receives as an attachment
+curl -L "{downloadUrl}" -H "Authorization: Bearer <BOT_ACCESS_TOKEN>" -o file_example.txt
+
+# Params:
+# {downloadUrl}: The value of the downloadUrl property in the received attachment
+# <BOT_ACCESS_TOKEN>: The bot's access token
+
+## Upload a file to a user after FileConsentCard is accepted
+curl -X PUT "{uploadUrl}" -H "Authorization: Bearer <BOT_ACCESS_TOKEN>" --data-binary @file_example.txt
+
+# Params:
+# {uploadUrl}: The value provided in the invoke activity's uploadInfo; usually a /drive/items/{item-id}/content endpoint
+# <BOT_ACCESS_TOKEN>: The bot's access token
+# file_example.txt: Local file to upload
