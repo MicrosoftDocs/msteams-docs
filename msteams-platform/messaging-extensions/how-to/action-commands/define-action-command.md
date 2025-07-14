@@ -225,14 +225,44 @@ protected override Task<MessagingExtensionActionResponse> OnTeamsMessagingExtens
     }
 ```
 
+# [Python](#tab/python)
+
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/85a455e417b6fba90b9806cdf4d1e3ad10f62944/samples/msgext-action-preview/python/bots/messaging_extension_action_preview_bot.py#L43)
+
+```python
+# Invoked when a Messaging Extension Fetch activity is received from the connector.
+async def on_teams_messaging_extension_fetch_task(self, context, action):
+    """
+    Invoked when a Messaging Extension Fetch activity is received from the connector.
+    """
+    if action.command_id == 'Static HTML':
+        return self.static_html_page()
+
+def static_html_page(self):
+    """
+    Returns a static HTML page task module response.
+    """
+    return {
+        'task': {
+            'type': 'continue',
+            'value': {
+                'width': 450,
+                'height': 125,
+                'title': 'Dialog Static HTML',
+                'url': f'{self.base_url}/StaticPage.html'
+            }
+        }
+    }
+```
+
 ---
 
 ## Code sample
 
-| Sample name           | Description | .NET    | Node.js   | Manifest|
-|:---------------------|:--------------|:---------|:--------|:--------------|
-|Teams message extension action| This sample demonstrates how to create action-based message extensions for Microsoft Teams, enabling users to interactively generate content. It features bots, message extensions, and seamless integration with user inputs for enhanced functionality.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp/demo-manifest/msgext-action.zip) |
-|Message extension action preview| This sample app illustrates how to utilize action previews in Teams message extensions, allowing users to create cards from input in a dialog. It showcases bot interactions that enhance user engagement by attributing messages to users. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp/demo-manifest/msgext-action-preview.zip) |
+| Sample name           | Description | .NET    | Node.js   | Python | Manifest|
+|:---------------------|:--------------|:---------|:--------|:--------------|:--------|
+|Teams message extension action| This sample demonstrates how to create action-based message extensions for Microsoft Teams, enabling users to interactively generate content. It features bots, message extensions, and seamless integration with user inputs for enhanced functionality.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp/demo-manifest/msgext-action.zip) |
+|Message extension action preview| This sample app illustrates how to utilize action previews in Teams message extensions, allowing users to create cards from input in a dialog. It showcases bot interactions that enhance user engagement by attributing messages to users. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp/demo-manifest/msgext-action-preview.zip) |
 
 ## Step-by-step guide
 

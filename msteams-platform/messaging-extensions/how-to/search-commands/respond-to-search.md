@@ -50,6 +50,19 @@ class TeamsMessagingExtensionsSearch extends TeamsActivityHandler {
 }
 ```
 
+# [Python](#tab/python)
+
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-messaging-extension-query)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/5e1d0e4c28a8b2c2205aaa8004e40a99f6bdbd58/samples/msgext-search/python/bots/search_based_messaging_extension.py#L18)
+
+```python
+class SearchBasedMessagingExtension(TeamsActivityHandler):
+    async def on_teams_messaging_extension_query(
+        self, turn_context: TurnContext, query: MessagingExtensionQuery
+    ):
+    // Code to handle the query.
+```
+
 # [JSON](#tab/json)
 
 The following JSON is shortened to highlight the most relevant sections.
@@ -573,10 +586,10 @@ The default query has the same structure as any regular user query, with the `na
 
 ## Code sample
 
-| Sample name           | Description | .NET    | Node.js   | Manifest|
-|:---------------------|:--------------|:---------|:--------|:--------|
-| Teams message extension search | This sample demonstrates how to create a message extension in Teams that allows users searches for NuGet packages and retrieve the results as a card. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
-|Teams message extension auth and config | This sample demonstrates how to implement authentication in a message extension for Teams, enabling secure access and user-specific interactions. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-sso-config/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp/demo-manifest/msgext-search-auth-config.zip)
+| Sample name           | Description | .NET    | Node.js   | Python| Manifest|
+|:---------------------|:--------------|:---------|:--------|:--------|:--------|
+| Teams message extension search | This sample demonstrates how to create a message extension in Teams that allows users searches for NuGet packages and retrieve the results as a card. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/python)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)|
+|Teams message extension auth and config | This sample demonstrates how to implement authentication in a message extension for Teams, enabling secure access and user-specific interactions. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-sso-config/nodejs)|NA|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp/demo-manifest/msgext-search-auth-config.zip)|
 
 ## Next step
 
