@@ -74,6 +74,16 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
+# [Python](#tab/python)
+
+```python
+async def on_teams_messaging_extension_submit_action(
+        self, turn_context: TurnContext, action: MessagingExtensionAction,
+    ) -> MessagingExtensionActionResponse:
+
+    #code to handle the submit action
+```
+
 # [JSON](#tab/json)
 
 The following example is a JSON object that you receive. The `commandContext` parameter indicates where your message extension was triggered from. The `data` object contains the fields on the form as parameters, and the values the user submitted. The JSON object highlights the most relevant fields:
@@ -162,6 +172,27 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
     }
   }
 }
+```
+
+# [Python](#tab/python)
+
+```python
+async def on_teams_messaging_extension_submit_action(  # pylint: disable=unused-argument
+        self, turn_context: TurnContext, action: MessagingExtensionAction
+    ) -> MessagingExtensionActionResponse:
+        preview_card = create_adaptive_card_preview(
+            user_text=action.data["Question"],
+            is_multi_select=action.data["MultiSelect"],
+            option1=action.data["Option1"],
+            option2=action.data["Option2"],
+            option3=action.data["Option3"],
+        )
+
+        extension_result = MessagingExtensionResult(
+            type="botMessagePreview",
+            activity_preview=MessageFactory.attachment(preview_card),
+        )
+        return MessagingExtensionActionResponse(compose_extension=extension_result)
 ```
 
 # [JSON](#tab/json)
@@ -315,6 +346,28 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
+# [Python](#tab/python)
+
+```python
+class TeamsMessagingExtensionsActionPreviewBot(TeamsActivityHandler):
+    async def on_teams_messaging_extension_submit_action(  # pylint: disable=unused-argument
+        self, turn_context: TurnContext, action: MessagingExtensionAction
+    ) -> MessagingExtensionActionResponse:
+        preview_card = create_adaptive_card_preview(
+            user_text=action.data["Question"],
+            is_multi_select=action.data["MultiSelect"],
+            option1=action.data["Option1"],
+            option2=action.data["Option2"],
+            option3=action.data["Option3"],
+        )
+
+        extension_result = MessagingExtensionResult(
+            type="botMessagePreview",
+            activity_preview=MessageFactory.attachment(preview_card),
+        )
+        return MessagingExtensionActionResponse(compose_extension=extension_result)
+```
+
 # [JSON](#tab/json)
 
 > [!NOTE]
@@ -377,6 +430,19 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 
 ```
+
+# [python](#tab/python)
+
+```python
+class TeamsMessagingExtensionsActionPreviewBot(TeamsActivityHandler):
+    async on_teams_messaging_extension_bot_message_preview_edit(turn_context: TurnContext, action:        MessagingExtensionAction) -> MessagingExtensionActionResponse:
+      # handle the event
+
+    async on_teams_messaging_extension_bot_message_preview_send(turn_context: TurnContext, action: MessagingExtensionAction) -> MessagingExtensionActionResponse:
+      # handle the event
+
+```
+
 
 # [JSON](#tab/json)
 
@@ -514,6 +580,27 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 }
 ```
 
+# [Python](#tab/python)
+
+```python
+class TeamsMessagingExtensionsActionPreviewBot(TeamsActivityHandler):
+    async def on_teams_messaging_extension_bot_message_preview_send(  # pylint: disable=unused-argument
+        self, turn_context: TurnContext, action: MessagingExtensionAction
+    ) -> MessagingExtensionActionResponse:
+        activity_preview = action.bot_activity_preview[0]
+        content = activity_preview.attachments[0].content
+        data = self._get_example_data(content)
+        card = create_adaptive_card_preview(
+            data.question,
+            data.is_multi_select,
+            data.option1,
+            data.option2,
+            data.option3,
+        )
+        message = MessageFactory.attachment(card)
+        await turn_context.send_activity(message)
+```
+
 # [JSON](#tab/json)
 
 You receive a new `composeExtensions/submitAction` message similar to the following json:
@@ -623,11 +710,11 @@ The following section is a description of the entities in the `OnBehalfOf` Array
   
 ## Code sample
 
-| Sample name           | Description | .NET    | Node.js   | Manifest|
-|:---------------------|:--------------|:---------|:--------|:--------|
-|Teams message extension action| This sample demonstrates how to create action-based message extensions for Microsoft Teams, enabling users to interactively generate content. It features bots, message extensions, and seamless integration with user inputs for enhanced functionality. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp/demo-manifest/msgext-action.zip)
-|Message extension action preview| This sample app illustrates how to utilize action previews in Teams message extensions, allowing users to create cards from input in a Task Module. It showcases bot interactions that enhance user engagement by attributing messages to users. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp/demo-manifest/msgext-action-preview.zip) |
-|Teams message extension search | This sample demonstrates how to create a message extension in Microsoft Teams that allows users to perform searches and retrieve results.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
+| Sample name           | Description | .NET    | Node.js  | Python | Manifest|
+|:---------------------|:--------------|:---------|:--------|:--------|:--------|
+|Teams message extension action| This sample demonstrates how to create action-based message extensions for Microsoft Teams, enabling users to interactively generate content. It features bots, message extensions, and seamless integration with user inputs for enhanced functionality. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp/demo-manifest/msgext-action.zip)|
+|Message extension action preview| This sample app illustrates how to utilize action previews in Teams message extensions, allowing users to create cards from input in a Task Module. It showcases bot interactions that enhance user engagement by attributing messages to users. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp/demo-manifest/msgext-action-preview.zip)|
+|Teams message extension search | This sample demonstrates how to create a message extension in Microsoft Teams that allows users to perform searches and retrieve results.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)|
 
 ## Next Step
 

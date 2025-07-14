@@ -188,6 +188,32 @@ The following table lists the response type associated with the invoke requests:
    }
    ```
 
+  # [Python](#tab/python)
+
+   [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/85a455e417b6fba90b9806cdf4d1e3ad10f62944/samples/bot-configuration-app-auth/python/bots/bot_configuration_auth.py#L72)
+
+   ```python
+   async def handle_teams_config_fetch(self, turn_context):
+        """
+        Handles the configuration fetch request.
+        """
+        response = {
+            "config": {
+                "type": "auth",
+                "suggestedActions": {
+                    "actions": [
+                        {
+                            "type": "openUrl",
+                            "value": "https://example.com/auth",
+                            "title": "Sign in to this app"
+                        }
+                    ]
+                },
+            },
+        }
+        return InvokeResponse(status=HTTPStatus.OK, body=response)
+   ```
+
 ---
 
 * `type="message"`: When the type is set to message, it indicates that the bot is sending a simple message back to the user, indicating the end of the interaction or providing information without requiring further input.
@@ -228,6 +254,24 @@ The following table lists the response type associated with the invoke requests:
    }
    ```
 
+# [Python](#tab/python2)
+
+   [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/85a455e417b6fba90b9806cdf4d1e3ad10f62944/samples/bot-configuration-app-auth/python/bots/bot_configuration_auth.py#L92C1-L102C67)
+
+   ```python
+       async def handle_teams_config_submit(self, turn_context):
+        """
+        Handles the configuration submit request.
+        """
+        response = {
+            "config": {
+                "type": "message",
+                "value": "You have chosen to finish setting up bot",
+            },
+        }
+        return InvokeResponse(status=HTTPStatus.OK, body=response)
+   ```
+
 ---
 
 When a user reconfigures the bot, the `fetchTask` property in the app manifest file initiates `config/fetch` in the bot logic. The user can reconfigure the bot settings post-installation in two ways:
@@ -253,10 +297,10 @@ When a user reconfigures the bot, the `fetchTask` property in the app manifest f
 
 ## Code sample
 
-| **Sample name** | **Description** |**.NET** |**Node.js** |**Manifest**|
+| **Sample name** | **Description** |**.NET** |**Node.js** | **Python** |**Manifest**|
 |----------------|-----------------|--------------|--------------|--------------|
-| Bot configuration app | This sample demonstrates a bot for configuring and reconfiguring Adaptive Cards in teams and group chats. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp/demo-manifest)|
-| Bot configuration app with auth | This Teams bot enables configuration and reconfiguration with dynamic search capabilities on Adaptive Cards. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/csharp/demo-manifest)|
+| Bot configuration app | This sample demonstrates a bot for configuring and reconfiguring Adaptive Cards in teams and group chats. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/nodejs)| NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp/demo-manifest)|
+| Bot configuration app with auth | This Teams bot enables configuration and reconfiguration with dynamic search capabilities on Adaptive Cards. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/nodejs)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/csharp/demo-manifest)|
 
 ## See also
 
