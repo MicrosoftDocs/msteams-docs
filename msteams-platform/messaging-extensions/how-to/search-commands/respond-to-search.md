@@ -52,7 +52,7 @@ class TeamsMessagingExtensionsSearch extends TeamsActivityHandler {
 
 # [Python](#tab/python)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-messaging-extension-query)
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-messaging-extension-query&preserve-view=true)
 [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/5e1d0e4c28a8b2c2205aaa8004e40a99f6bdbd58/samples/msgext-search/python/bots/search_based_messaging_extension.py#L18)
 
 ```python

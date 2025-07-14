@@ -240,7 +240,7 @@ server.get('/api/notify', async (req, res) => {
 
 # [Python](#tab/python)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.cloudadapterbase?view=botbuilder-py-latest#botbuilder-core-cloudadapterbase-continue-conversation)
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.cloudadapterbase?view=botbuilder-py-latest#botbuilder-core-cloudadapterbase-continue-conversation&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/5e1d0e4c28a8b2c2205aaa8004e40a99f6bdbd58/samples/bot-conversation/python/bots/teams_conversation_bot.py#L172)
 
 ```python
