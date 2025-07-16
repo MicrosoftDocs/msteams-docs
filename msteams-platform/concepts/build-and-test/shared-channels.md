@@ -140,9 +140,11 @@ To handle bulk membership changes:
 > Apps using resource-specific consent (RSC) must request extended permissions to support both direct and indirect membership updates. These permissions are required to query membership data and respond to notifications.
 
 **New Subscription Resource** 
+
 /teams/{team-id}/channels/{channel-id}/sharedWithTeams (user and application context)
 
 **Purpose**
+
 Notifies subscribers when a shared channel is shared or unshared with a team—reducing per-user notifications for large teams.
 
 ## Classify members in the shared channel as in-tenant or out-tenant
