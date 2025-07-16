@@ -139,6 +139,12 @@ To handle bulk membership changes:
 > [!NOTE]
 > Apps using resource-specific consent (RSC) must request extended permissions to support both direct and indirect membership updates. These permissions are required to query membership data and respond to notifications.
 
+**New Subscription Resource** 
+/teams/{team-id}/channels/{channel-id}/sharedWithTeams (user and application context)
+
+**Purpose**
+Notifies subscribers when a shared channel is shared or unshared with a team—reducing per-user notifications for large teams.
+
 ## Classify members in the shared channel as in-tenant or out-tenant
 
 You can classify members as in-tenant or out-tenant by comparing `tenantID` of the member or team with `hostTeamTenantID` as follows:
@@ -181,9 +187,10 @@ If you're developing an app for use in federated group chats with external users
 
 ## Code sample
 
-| Sample name | Description | Node.js |
-|-------------|-------------|------|----|
-| Teams Conversation Bot | This sample app displays the names of the members in a federated group chat with external users. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-feed-members/nodejs/)|
+| Sample name | Description | .NET | Node.js | Python |
+|-------------|-------------|------|----|------|----|
+| Teams Conversation Bot | This sample app displays the names of the members in a federated group chat with external users.| NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-feed-members/nodejs/) | NA |
+| Membership change notification | This sample application demonstrates how to send notifications for shared channel events in Microsoft Teams, such as users being added, removed, or having their membership updated and when channel is shared/unshared with a team. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/membershipChangeNotificationNodejs/samples/graph-membership-change-notification/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/membershipChangeNotificationNodejs/samples/graph-membership-change-notification/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/membershipChangeNotificationNodejs/samples/graph-membership-change-notification/python) |
 
 ## See also
 
