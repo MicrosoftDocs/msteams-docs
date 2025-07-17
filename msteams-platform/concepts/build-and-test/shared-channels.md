@@ -143,7 +143,7 @@ To handle bulk membership changes:
 
 To reduce notification overload during large-scale membership updates, such as when a shared channel is added to or removed from a team with thousands of members, use the new SharedWithTeams subscription resource:
 
-/teams/{team-id}/channels/{channel-id}/sharedWithTeams 
+`/teams/{team-id}/channels/{channel-id}/sharedWithTeams`
 
 This subscription sends a single notification when a channel is shared or unshared with a team, avoiding thousands of per-user notifications and improving performance for apps that monitor membership changes.
 
