@@ -139,7 +139,7 @@ To handle bulk membership changes:
 > [!NOTE]
 > Apps using resource-specific consent (RSC) must request extended permissions to support both direct and indirect membership updates. These permissions are required to query membership data and respond to notifications.
 
-## Manage sharedWithTeams Notifications for Large Membership Changes
+#### Manage sharedWithTeams Notifications for Large Membership Changes
 
 To reduce notification overload during large-scale membership updates, such as when a shared channel is added to or removed from a team with thousands of members, use the new SharedWithTeams subscription resource:
 
