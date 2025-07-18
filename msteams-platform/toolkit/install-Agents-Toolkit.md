@@ -112,8 +112,8 @@ Agents Toolkit for Visual Studio Code extension is available in a prerelease ver
 1. Select **Extensions** :::image type="icon" source="../assets/images/toolkit-v2/toolkit-fundamentals/extension icon.png" border="false" alt-text="Screenshot shows the extension icon."::: from the Visual Studio Code activity bar.
 1. Enter **Microsoft 365 Agents Toolkit** in the search box.
 1. Click the dropdown arrow next to **Install**.
- * If you're already on the **pre-release track**, choose **Install Specific Version...**. You will see a list of available **pre-release versions**.
- * If you're on the **stable track**, the **Install Specific Version...** option will only show **stable versions**.
+   * If you're already on the **pre-release track**, choose **Install Specific Version...**. You will see a list of available **pre-release versions**.
+   * If you're on the **stable track**, the **Install Specific Version...** option will only show **stable versions**.
 
 > [!NOTE]
 > The option **Install Pre-Release Version** may not appear depending on your current track. Use **Install Specific Version...** to manually select a version.
