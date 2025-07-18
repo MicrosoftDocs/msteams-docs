@@ -34,6 +34,8 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.</br>
 **2025 July**
+
+* ***July 21, 2025***: [Teams now supports token prefetching for apps using Nested App Authentication (NAA). This enhancement allows the host to proactively acquire authentication tokens before the app is launched, improving app startup performance and reducing latency.](/concepts/authentication/nested-authentication#token-prefetching-for-nested-app-authentication)
 * ***July 10, 2025***: [Custom icons for Teams notifications help your app stand out and increase engagement through more personalized activity feed updates.](/graph/teams-send-activityfeednotifications#custom-activity-icons-in-activity-feed-notifications)</br>
 
 **2025 May**
