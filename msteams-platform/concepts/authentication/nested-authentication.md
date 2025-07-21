@@ -245,7 +245,7 @@ To enable token prefetching, update your Teams app manifest to version 1.22 or l
 
 When token prefetching is enabled, the host environment attempts to acquire and cache the required tokens before the app is rendered. These tokens are stored in memory and made available to the app immediately upon launch.
 
-This behavior is similar to the prefetch capability in the legacy Teams SSO model, where the `getAuthToken` API was automatically triggered during tab load. With Nested App Authentication (NAA), this functionality is reintroduced through manifest configuration, improving performance without requiring a backend token exchange.
+This behavior is similar to the prefetch capability in the legacy Teams SSO model, where the `getAuthToken` API was automatically triggered during tab load. With Nested App Authentication (NAA), this functionality is introduced through manifest configuration, improving performance without requiring a backend token exchange.
 
 ### Benefits of Token Prefetching in NAA
 
