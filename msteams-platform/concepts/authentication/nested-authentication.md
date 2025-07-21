@@ -211,43 +211,33 @@ fetch(graphEndpoint, options)
 
 To improve performance and reduce authentication latency, nested app authentication (NAA) supports token prefetching. This feature enables the host to proactively acquire authentication tokens before the app launches, allowing faster access to protected resources.
 
-### How to Enable Token Prefetching
+#### How to Enable Token Prefetching
 
-To enable token prefetching, update your Teams app manifest to version 1.22 or later and include the `nestedAppAuthInfo` section inside `webApplicationInfo`.
+To enable token prefetching, update your [Teams app manifest](resources/schema/manifest-schema.md) to version 1.22 or later and include the `nestedAppAuthInfo` section inside `webApplicationInfo`.
 
  ```json
-"webApplicationInfo": {
-
-   "id": "33333ddd-0000-0000-0000-88888757bbbb",
-
-   "resource": "api://app.com/botid-33333ddd-0000-0000-0000-88888757bbbb",
-
-   "nestedAppAuthInfo": [{
-
-                "redirectUri": "brk-multihub://app.com",
-
-                "scopes": ["openid", "profile", "offline_access"],
-
-                "claims": "{\"access_token\":{\"xms_cc\":{\"values\":[\"CP1\"]}}}"
-   }]}
+{
+  "webApplicationInfo": {
+    "id": "33333ddd-0000-0000-0000-88888757bbbb",
+    "resource": "api://app.com/botid-33333ddd-0000-0000-0000-88888757bbbb",
+    "nestedAppAuthInfo": [
+      {
+        "redirectUri": "brk-multihub://app.com",
+        "scopes": ["openid", "profile", "offline_access"],
+        "claims": "{\"access_token\":{\"xms_cc\":{\"values\":[\"CP1\"]}}}"
+      }
+    ]
+  }
+}
  ```
 
-### WebApplicationInfo
-
-| Name | Type | Maximum Size | Required | Description |
-|----------|------|-----------|----------|-------------|
-| `nestedAppAuthInfo` | Array | 5 |  | An NAA token based on its contents will be prefetched when the tab is loaded. |
-| `nestedAppAuthInfo.redirectUri` | String |  | ✔️ | Represents the nested app's valid redirect URI (always a base origin). |
-| `nestedAppAuthInfo.scopes` | Array | 20 | ✔️ | Represents the stringified list of scopes the access token requested requires. Order must match that of the proceeding NAA request in the app. |
-| `nestedAppAuthInfo.claims` | String |  |  | An optional JSON formatted object of client capabilities that represents if the resource server is CAE capable. Do not use an empty string for this value. If unsupported, keep the field as an empty object "{}". |
-
-### How it works
+#### How it works
 
 When token prefetching is enabled, the host environment attempts to acquire and cache the required tokens before the app is rendered. These tokens are stored in memory and made available to the app immediately upon launch.
 
 This behavior is similar to the prefetch capability in the legacy Teams SSO model, where the `getAuthToken` API was automatically triggered during tab load. With Nested App Authentication (NAA), this functionality is introduced through manifest configuration, improving performance without requiring a backend token exchange.
 
-### Benefits of Token Prefetching in NAA
+#### Benefits of Token Prefetching in NAA
 
 - Improve performance by reducing authentication delays during app startup
 - Enable single sign-on (SSO) across nested apps without repeated sign-ins
