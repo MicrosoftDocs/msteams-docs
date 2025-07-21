@@ -213,7 +213,7 @@ To improve performance and reduce authentication latency, nested app authenticat
 
 ### How to Enable Token Prefetching
 
-To enable token prefetching, update your Teams app manifest to version 1.22 and include the `nestedAppAuthInfo` section inside `webApplicationInfo`.
+To enable token prefetching, update your Teams app manifest to version 1.22 or later and include the `nestedAppAuthInfo` section inside `webApplicationInfo`.
 
  ```json
 "webApplicationInfo": {
@@ -239,7 +239,7 @@ To enable token prefetching, update your Teams app manifest to version 1.22 and 
 | `nestedAppAuthInfo` | Array | 5 |  | An NAA token based on its contents will be prefetched when the tab is loaded. |
 | `nestedAppAuthInfo.redirectUri` | String |  | ✔️ | Represents the nested app's valid redirect URI (always a base origin). |
 | `nestedAppAuthInfo.scopes` | Array | 20 | ✔️ | Represents the stringified list of scopes the access token requested requires. Order must match that of the proceeding NAA request in the app. |
-| `nestedAppAuthInfo.claims` | String |  |  | An optional JSON formatted object of client capabilities that represents if the resource server is CAE capable. Do not use an empty string for this value. If unsupported, keep the field as empty object "{}". |
+| `nestedAppAuthInfo.claims` | String |  |  | An optional JSON formatted object of client capabilities that represents if the resource server is CAE capable. Do not use an empty string for this value. If unsupported, keep the field as an empty object "{}". |
 
 ### How it works
 
@@ -247,14 +247,10 @@ When token prefetching is enabled, the host environment attempts to acquire and 
 
 This behavior is similar to the prefetch capability in the legacy Teams SSO model, where the `getAuthToken` API was automatically triggered during tab load. With Nested App Authentication (NAA), this functionality is reintroduced through manifest configuration, improving performance without requiring a backend token exchange.
 
-> [!NOTE]
-> This feature isn't currently supported on mobile clients.
-
 ### Benefits of Token Prefetching in NAA
 
-- Faster app load times
-- Seamless SSO experience
-
+- Improve performance by reducing authentication delays during app startup
+- Enable single sign-on (SSO) across nested apps without repeated sign-ins
 
 ### Best practices
 
