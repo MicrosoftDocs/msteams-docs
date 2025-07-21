@@ -213,7 +213,7 @@ To improve performance and reduce authentication latency, nested app authenticat
 
 #### How to Enable Token Prefetching
 
-To enable token prefetching, update your [Teams app manifest](../resources/schema/manifest-schema.md) to version 1.22 or later and include the `nestedAppAuthInfo` section inside `webApplicationInfo`.
+To enable token prefetching, update your [Teams app manifest](../resources/schema/manifest-schema) to version 1.22 or later and include the `nestedAppAuthInfo` section inside `webApplicationInfo`.
 
  ```json
 {
