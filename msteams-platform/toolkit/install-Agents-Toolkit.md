@@ -111,12 +111,12 @@ Agents Toolkit for Visual Studio Code extension is available in a prerelease ver
 1. Open **Visual Studio Code**.
 1. Select **Extensions** :::image type="icon" source="../assets/images/toolkit-v2/toolkit-fundamentals/extension icon.png" border="false" alt-text="Screenshot shows the extension icon."::: from the Visual Studio Code activity bar.
 1. Enter **Microsoft 365 Agents Toolkit** in the search box.
-1. Click the dropdown arrow next to **Install**.
+1. Click the dropdown arrow next to **Uninstall**.
    * If you're already on the **pre-release track**, choose **Install Specific Version...**. You will see a list of available **pre-release versions**.
    * If you're on the **stable track**, the **Install Specific Version...** option will only show **stable versions**.
 
 > [!NOTE]
-> The option **Install Pre-Release Version** may not appear depending on your current track. Use **Install Specific Version...** to manually select a version.
+> The **Install Pre-Release Version** option may not appear depending on the update track of your currently installed **Microsoft 365 Agents Toolkit** extension. Use **Install Specific Version...** to manually select a version.
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Install+a+prerelease+version&&author=%40zyxiaoyuer&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Finstall-agents-toolkit%3Ftabs%3Dvscode%23install-a-prerelease-version&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Finstall-Agents-Toolkit.md&documentVersionIndependentId=8402fe47-1338-4cb0-9cc0-c35f06dc6ca5&platformId=857dcef4-57f6-1b0a-65f7-221c9f49c1c7&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
