@@ -233,8 +233,8 @@ To enable token prefetching, update your [Teams app manifest](../../resources/sc
 
 > [!important]
 > * The value of webApplicationInfo.id must match the client ID of the app's Microsoft Entra ID registration. This is the same client ID the app uses when making actual NAA token requests. The host uses this ID to initiate the token prefetch process.
-> * The values in webApplicationInfo.id and all fields inside nestedAppAuthInfo must exactly match the parameters used in the app’s runtime NAA token request. Any mismatch—such as differences in scopes, redirect URIs, or claims—will prevent the host from serving the token from cache.
-> * Prefetched tokens are stored in memory for a short duration and are intended for use only during the app’s initial load. If the app attempts to fetch a token later—such as in response to a user action—the prefetched token may no longer be available. In such cases, the app must initiate a new token request using standard authentication flows.
+> * The values in webApplicationInfo.id and all fields inside nestedAppAuthInfo must exactly match the parameters used in the app’s runtime NAA token request. Any mismatch, such as differences in scopes, redirect URIs, or claims, will prevent the host from serving the token from cache.
+> * Prefetched tokens are stored in memory for a short duration and are intended for use only during the app’s initial load. If the app attempts to fetch a token later, such as in response to a user action, the prefetched token may no longer be available. In such cases, the app must initiate a new token request using standard authentication flows.
 
 #### How it works
 
