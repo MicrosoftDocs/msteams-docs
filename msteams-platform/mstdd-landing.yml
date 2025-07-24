@@ -24,7 +24,7 @@ landingContent:
 - title: Microsoft Build 2025
   linkLists:
     - linkListType: concept
-      links:
+      links: 
       - text: Teams AI library v2 (preview)
         url: /microsoftteams/platform/teams-ai-library/welcome
       - text: Teams Toolkit renamed to Microsoft 365 Agents Toolkit
