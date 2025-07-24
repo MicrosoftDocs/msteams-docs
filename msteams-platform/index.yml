@@ -64,7 +64,7 @@ conceptualContent:
         - url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md
           itemType: learn
           text: Set up your workspace
-        - url: bots/how-to/teams-conversational-ai/how-conversation-ai-quick-start.md
+        - url: bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md
           itemType: learn
           text: Add intelligence to your agent
         - url: bots/how-to/teams-conversational-ai/ai-ux.md
