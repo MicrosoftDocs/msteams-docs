@@ -51,7 +51,7 @@ conceptualContent:
    items:
 
   # Card
-- title: Build for Teams
+    - title: Build for Teams
       links:
         - url: overview.md
           itemType: learn
