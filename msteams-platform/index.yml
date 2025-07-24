@@ -67,6 +67,10 @@ conceptualContent:
         - url: bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md
           itemType: learn
           text: Add intelligence to your agent
+        - url: bots/how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md
+          itemType: learn
+          text: Understand agent core concepts
+    - title: Improve user experience  
         - url: bots/how-to/teams-conversational-ai/ai-ux.md
           itemType: concept
           text: Build custom engine agent user experience 
