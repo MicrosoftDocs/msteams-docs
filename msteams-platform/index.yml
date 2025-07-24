@@ -74,7 +74,13 @@ conceptualContent:
       links:
         - url: bots/how-to/teams-conversational-ai/ai-ux.md
           itemType: concept
-          text: Build custom engine agent user experience 
+          text: Build custom engine agent user experience
+        - url: bots/how-to/conversations/prompt-suggestions.md
+          itemType: concept
+          text: Add prompts to agents
+        - url: https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.c.actionMapping.lightBot
+          itemType: concept
+          text: Code sample - Connect data and APIs
 
 # tools section
 tools:
