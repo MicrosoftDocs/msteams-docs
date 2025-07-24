@@ -31,18 +31,18 @@ highlightedContent:
     - title: Design your app or agent
       itemType: overview
       url: /microsoftteams/platform/concepts/design/design-teams-app-overview
-    - title: Build your app or agent
-      itemType: how-to-guide
-      url: /microsoftteams/platform/overview#start-building
-    - title: Enhance your app or agent with Microsoft Graph
-      itemType: how-to-guide
-      url:  /graph/teams-concept-overview
-    - title: Publish your app or agent to the Microsoft Teams Store
-      itemType: deploy
-      url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/publish
-    - title: Code samples
-      itemType: sample
-      url: https://github.com/OfficeDev/Microsoft-Teams-Samples
+    #- title: Build your app or agent
+    #  itemType: how-to-guide
+    #  url: /microsoftteams/platform/overview#start-building
+    #- title: Enhance your app or agent with Microsoft Graph
+    #  itemType: how-to-guide
+    #  url:  /graph/teams-concept-overview
+    #- title: Publish your app or agent to the Microsoft Teams Store
+    #  itemType: deploy
+    #  url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/publish
+    #- title: Code samples
+    #  itemType: sample
+    #  url: https://github.com/OfficeDev/Microsoft-Teams-Samples
    
 # conceptualContent section
 conceptualContent:
@@ -100,7 +100,10 @@ conceptualContent:
         - url: concepts/build-and-test/tool-sdk-overview.md
           itemType: concept
           text: Tools and SDKs
-        
+        - url: https://github.com/OfficeDev/Microsoft-Teams-Samples
+          itemType: sample
+          text: Microsoft Teams samples
+
 # tools section
 tools:
   title: Tools and SDKs # < 60 chars (optional)
