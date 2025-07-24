@@ -70,6 +70,9 @@ conceptualContent:
         - url: bots/how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md
           itemType: learn
           text: Understand agent core concepts
+        - url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#migrate-your-bot-to-use-teams-ai-library
+          itemType: learn
+          text: Migrate your bot to AI-powered bot
     - title: Improve user experience
       links:
         - url: bots/how-to/teams-conversational-ai/ai-ux.md
@@ -91,7 +94,13 @@ conceptualContent:
           text: Validate your agent
         - url: concepts/deploy-and-publish/appsource/publish.md
           itemType: concept
-          text: Publish your agent                
+          text: Publish your agent
+    - title: Developer tools and samples
+      links:
+        - url: concepts/build-and-test/tool-sdk-overview.md
+          itemType: concept
+          text: Tools and SDKs
+        
 # tools section
 tools:
   title: Tools and SDKs # < 60 chars (optional)
