@@ -109,7 +109,7 @@ conceptualContent:
         - url: /microsoftteams/platform/teams-ai-library/welcome.md
           itemType: concept
           text: Microsoft Teams AI library v2
-        - url: /microsoftteams/platform/teams-ai-library/welcome
+        - url: /microsoft-365/agents-sdk/agents-sdk-overview.md
           itemType: concept
           text: Microsoft 365 Agents SDK
         - url: https://github.com/OfficeDev/Microsoft-Teams-Samples
