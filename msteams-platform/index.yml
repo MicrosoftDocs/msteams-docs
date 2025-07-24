@@ -106,10 +106,10 @@ conceptualContent:
         - url: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md
           itemType: concept
           text: Microsoft Teams AI library
-        - url: /microsoftteams/platform/teams-ai-library/welcome.md
+        - url: /microsoftteams/platform/teams-ai-library/welcome?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
           itemType: concept
           text: Microsoft Teams AI library v2
-        - url: /microsoft-365/agents-sdk/agents-sdk-overview.md
+        - url: /microsoft-365/agents-sdk/agents-sdk-overview?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
           itemType: concept
           text: Microsoft 365 Agents SDK
         - url: https://github.com/OfficeDev/Microsoft-Teams-Samples
