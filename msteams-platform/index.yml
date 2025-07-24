@@ -81,7 +81,17 @@ conceptualContent:
         - url: https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.c.actionMapping.lightBot
           itemType: concept
           text: Code sample - Connect data and APIs
-
+    - title: Validate and publish your agent
+      links:
+        - url: bots/how-to/bot-messages-ai-generated-content.md
+          itemType: concept
+          text: Learn about responsible AI
+        - url: concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md
+          itemType: concept
+          text: Validate your agent
+        - url: concepts/deploy-and-publish/appsource/publish.md
+          itemType: concept
+          text: Publish your agent                
 # tools section
 tools:
   title: Tools and SDKs # < 60 chars (optional)
