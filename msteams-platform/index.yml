@@ -58,7 +58,18 @@ conceptualContent:
           text: Know your options - agent or app
         - url: bots/build-a-bot.md
           itemType: learn
-          text: Buid an agent or app          
+          text: Buid an agent or app
+    - title: Agents - developer's journey
+      links:
+        - url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md
+          itemType: learn
+          text: Set up your workspace
+        - url: bots/how-to/teams-conversational-ai/how-conversation-ai-quick-start.md
+          itemType: learn
+          text: Add intelligence to your agent
+        - url: bots/how-to/teams-conversational-ai/ai-ux.md
+          itemType: concept
+          text: Build custom engine agent user experience 
     - title: Learn
       links:
         - url: /training/modules/copilot-custom-engine-agents-intro/
