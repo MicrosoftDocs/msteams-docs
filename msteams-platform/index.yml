@@ -55,7 +55,7 @@ conceptualContent:
       links:
         - url: overview.md
           itemType: learn
-          text: Know your options: agent or app
+          text: Know your options - agent or app
         - url: bots/build-a-bot.md
           itemType: learn
           text: Buid an agent or app          
