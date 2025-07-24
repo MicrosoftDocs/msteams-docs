@@ -51,6 +51,11 @@ conceptualContent:
    items:
 
   # Card
+- title: Build for Teams
+      links:
+        - url: bots/build-a-bot.md
+          itemType: learn
+          text: Know your options: agent or app
     - title: Learn
       links:
         - url: /training/modules/copilot-custom-engine-agents-intro/
