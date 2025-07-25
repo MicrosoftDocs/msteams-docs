@@ -70,9 +70,18 @@ conceptualContent:
         - url: /microsoft-365/developer/overview-m365-agents-toolkit?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
           itemType: learn
           text: Build and test in Teams
+        - url: m365-apps/overview.md
+          itemType: learn
+          text: Extend solution with data and intelligence
         - url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#migrate-your-bot-to-use-teams-ai-library
           itemType: learn
           text: Migrate your bot to AI-powered bot
+        - url: concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md
+          itemType: concept
+          text: Validate your agent
+        - url: concepts/deploy-and-publish/appsource/publish.md
+          itemType: concept
+          text: Publish your agent
     - title: Improve user experience
       links:
         - url: bots/how-to/teams-conversational-ai/ai-ux.md
