@@ -23,8 +23,7 @@ Choose to add authentication for your app in one of the following ways:
   With the network access account, you can use MSAL.js to obtain tokens for your Teams tab or Office Add-in apps. NAA leverages the capabilities of the Microsoft host to facilitate conditional access and Intune policies, such as registered device policy. These policies might not be supported when hosted within the native webviews.
 
   > [!NOTE]
-  > * NAA is available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
-  > * NAA is supported in MSAL.js v3.15 and higher. For the latest updates, see [changelog entries](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/CHANGELOG.md).
+  > NAA is supported in MSAL.js v3.15 and higher. For the latest updates, see [changelog entries](https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/CHANGELOG.md).
 
 * **Enable authentication for your API based message extensions**:
 
