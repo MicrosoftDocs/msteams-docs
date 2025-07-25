@@ -258,10 +258,6 @@ When a user reconfigures the bot, the `fetchTask` property in the app manifest f
 | Bot configuration app | This sample demonstrates a bot for configuring and reconfiguring Adaptive Cards in teams and group chats. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp/demo-manifest)|
 | Bot configuration app with auth | This Teams bot enables configuration and reconfiguration with dynamic search capabilities on Adaptive Cards. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/csharp/demo-manifest)|
 
-## Step-by-step guide
-
-Follow the [step-by-step guide](../../qsg-bot-configuration-experience.yml) to configure your bot during installation or after installation from the team or group chat where the bot is installed.
-
 ## See also
 
 * [Build bots for Teams](../what-are-bots.md)

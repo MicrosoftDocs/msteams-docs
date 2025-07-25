@@ -94,6 +94,7 @@ The following table provides RSC application permissions for a team and their ap
 |`ChannelMeetingTranscript.Read.Group`|Read the transcripts of all channel meetings associated with this team.| NA | Supported |
 |`ChannelMeetingNotification.Send.Group`|Send notifications in all the channel meetings associated with this team.| NA | Supported |
 |`ChannelMessage.Read.Group`|Read this team's channel messages. | NA | Supported |
+|`ChannelMessage.Send.Group`|Send messages to this team's channels. | NA | Supported |
 |`ChannelSettings.Read.Group`| Read the names, descriptions, and settings of this team's channels​.| NA | Supported |
 |`ChannelSettings.ReadWrite.Group`|Update the names, descriptions, and settings of this team's channels.​| NA | Supported |
 |`TeamsActivity.Send.Group`|Send activity feed notifications to users in this team. | NA | Supported |
