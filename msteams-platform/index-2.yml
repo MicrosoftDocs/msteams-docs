@@ -93,11 +93,11 @@ conceptualContent:
         - url: /graph/teams-concept-overview?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
           itemType: concept
           text: Integrate with tools and services
-    - title: Validate and publish your agent
+    - title: Explore by tasks
       links:
-        - url: bots/how-to/bot-messages-ai-generated-content.md
+        - url: get-started/get-started-overview.md
           itemType: concept
-          text: Learn about responsible AI
+          text: Start a new project
         - url: concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md
           itemType: concept
           text: Validate your agent
