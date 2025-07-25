@@ -84,7 +84,7 @@ conceptualContent:
           text: Publish your agent
     - title: Developer persona - Choose a path
       links:
-        - url: concepts/design/understand-use-cases
+        - url: concepts/design/understand-use-cases.md
           itemType: concept
           text: New to Teams - Understand use cases
         - url: bots/build-a-bot.md
