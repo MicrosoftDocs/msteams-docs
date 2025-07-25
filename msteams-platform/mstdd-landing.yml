@@ -34,3 +34,16 @@ landingContent:
       - text: Agent for intelligent data access and automation
         url: bots/how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md
 
+- title: I want to build an interactive app for Microsoft Teams -
+  linkLists:
+    - linkListType: concept
+      links:
+      - text: Build a Teams app
+        url: get-started/get-started-overview.md
+      - text: Use tabs, bots, or message extensions
+        url: toolkit/create-new-project.md
+      - text: App for structured flows and user input
+        url: task-modules-and-cards/cards-and-task-modules.md
+      - text: Build your first Teams app
+        url: get-started/get-started-overview.md#build-your-first-teams-app
+
