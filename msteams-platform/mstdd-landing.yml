@@ -21,16 +21,16 @@ landingContent:
 # Cards and links should be based on top customer tasks or top subjects
 # Start card title with a verb
 
-- title: I want to build an assistant that understands natural language
+- title: I want to build an assistant that understands natural language -
   linkLists:
     - linkListType: concept
       links:
       - text: Start with building an agent
         url: teams-ai-library-tutorial.yml
-      - text: Works across Microsoft 365
+      - text: Agent works across Microsoft 365
         url: /microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-      - text: Uses memory, tools, and prompt planning
+      - text: Agent uses memory, tools, and prompt planning
         url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md
-      - text: Great for intelligent data access and automation
+      - text: Agent for intelligent data access and automation
         url: bots/how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md
 
