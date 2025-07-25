@@ -348,9 +348,9 @@ The following are the launcher.js definitions:
 
 ## Code sample
 
-| **Sample name** | **Description** | **Node.js** |
-|-----------------|-----------------|----------------|
-| Share to Teams | This Teams sample application illustrates how to use deeplinks for initiating calls, video chats, and navigating within various app tabs. It includes detailed setup instructions and supports interactions with bots and tabs to enhance user experience. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs) |
+| **Sample name** | **Description** | **.Net** | **Node.js** | **Python** |
+|-----------------|-----------------|----------------|----------------|----------------|
+| Share to Teams | This Teams sample application illustrates how to use deeplinks for initiating calls, video chats, and navigating within various app tabs. It includes detailed setup instructions and supports interactions with bots and tabs to enhance user experience. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/python) |
 
 ## See also
 
