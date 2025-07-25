@@ -59,42 +59,57 @@ conceptualContent:
         - url: bots/build-a-bot.md
           itemType: learn
           text: Buid an agent or app
-    - title: Agents - developer's journey
-      links:
-        - url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md
-          itemType: learn
-          text: Set up your workspace
-        - url: bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md
-          itemType: learn
-          text: Add intelligence to your agent
-        - url: bots/how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md
-          itemType: learn
-          text: Understand agent core concepts
         - url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#migrate-your-bot-to-use-teams-ai-library
           itemType: learn
-          text: Migrate your bot to AI-powered bot
-    - title: Improve user experience
+          text: Migrate your bot to AI-powered bot          
+    - title: Developer's journey
       links:
-        - url: bots/how-to/teams-conversational-ai/ai-ux.md
-          itemType: concept
-          text: Build custom engine agent user experience
-        - url: bots/how-to/conversations/prompt-suggestions.md
-          itemType: concept
-          text: Add prompts to agents
-        - url: https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.c.actionMapping.lightBot
-          itemType: concept
-          text: Code sample - Connect data and APIs
-    - title: Validate and publish your agent
-      links:
-        - url: bots/how-to/bot-messages-ai-generated-content.md
-          itemType: concept
-          text: Learn about responsible AI
+        - url: concepts/app-fundamentals-overview.md
+          itemType: learn
+          text: Plan your solution
+        - url: concepts/build-and-test/tool-sdk-overview.md
+          itemType: learn
+          text: Set up tools
+        - url: /microsoft-365/developer/overview-m365-agents-toolkit?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+          itemType: learn
+          text: Build and test in Teams
+        - url: m365-apps/overview.md
+          itemType: learn
+          text: Extend solution with data and intelligence
         - url: concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md
           itemType: concept
           text: Validate your agent
         - url: concepts/deploy-and-publish/appsource/publish.md
           itemType: concept
           text: Publish your agent
+    - title: Developer persona - Choose a path
+      links:
+        - url: concepts/design/understand-use-cases.md
+          itemType: concept
+          text: New to Teams - Understand use cases
+        - url: bots/build-a-bot.md
+          itemType: concept
+          text: AI agent builder - create and publish agents
+        - url: /graph/teams-concept-overview?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+          itemType: concept
+          text: Integrate with tools and services
+    - title: Explore by tasks
+      links:
+        - url: get-started/get-started-overview.md
+          itemType: concept
+          text: Start a new project
+        - url: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md#how-do-teams-ai-library-features-benefit-me
+          itemType: concept
+          text: Add features to an agent
+        - url: toolkit/add-resource.md#add-api-connection
+          itemType: concept
+          text: Call an external API
+        - url: /office/dev/store/add-in-submission-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+          itemType: how-to-guide
+          text: Submit agent to Teams Store
+        - url: get-started/get-started-overview.md
+          itemType: concept
+          text: Add a tab or message extension
     - title: Developer tools and samples
       links:
         - url: concepts/build-and-test/tool-sdk-overview.md
