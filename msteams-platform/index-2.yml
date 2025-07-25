@@ -59,17 +59,17 @@ conceptualContent:
         - url: bots/build-a-bot.md
           itemType: learn
           text: Buid an agent or app
-    - title: Agents - developer's journey
+    - title: Developer's journey
       links:
-        - url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md
+        - url: concepts/app-fundamentals-overview.md
           itemType: learn
-          text: Set up your workspace
-        - url: bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md
+          text: Plan your solution
+        - url: concepts/build-and-test/tool-sdk-overview.md
           itemType: learn
-          text: Add intelligence to your agent
-        - url: bots/how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md
+          text: Set up tools
+        - url: /microsoft-365/developer/overview-m365-agents-toolkit?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
           itemType: learn
-          text: Understand agent core concepts
+          text: Build and test in Teams
         - url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#migrate-your-bot-to-use-teams-ai-library
           itemType: learn
           text: Migrate your bot to AI-powered bot
