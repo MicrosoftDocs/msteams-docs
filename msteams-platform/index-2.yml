@@ -98,9 +98,9 @@ conceptualContent:
         - url: get-started/get-started-overview.md
           itemType: concept
           text: Start a new project
-        - url: concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md
+        - url: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md#how-do-teams-ai-library-features-benefit-me
           itemType: concept
-          text: Validate your agent
+          text: Add features to an agent
         - url: concepts/deploy-and-publish/appsource/publish.md
           itemType: concept
           text: Publish your agent
