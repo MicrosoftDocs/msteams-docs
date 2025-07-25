@@ -59,6 +59,9 @@ conceptualContent:
         - url: bots/build-a-bot.md
           itemType: learn
           text: Buid an agent or app
+        - url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#migrate-your-bot-to-use-teams-ai-library
+          itemType: learn
+          text: Migrate your bot to AI-powered bot          
     - title: Developer's journey
       links:
         - url: concepts/app-fundamentals-overview.md
@@ -73,26 +76,23 @@ conceptualContent:
         - url: m365-apps/overview.md
           itemType: learn
           text: Extend solution with data and intelligence
-        - url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#migrate-your-bot-to-use-teams-ai-library
-          itemType: learn
-          text: Migrate your bot to AI-powered bot
         - url: concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md
           itemType: concept
           text: Validate your agent
         - url: concepts/deploy-and-publish/appsource/publish.md
           itemType: concept
           text: Publish your agent
-    - title: Improve user experience
+    - title: Developer persona - Choose a path
       links:
-        - url: bots/how-to/teams-conversational-ai/ai-ux.md
+        - url: concepts/design/understand-use-cases
           itemType: concept
-          text: Build custom engine agent user experience
-        - url: bots/how-to/conversations/prompt-suggestions.md
+          text: New to Teams - Understand use cases
+        - url: bots/build-a-bot.md
           itemType: concept
-          text: Add prompts to agents
-        - url: https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.c.actionMapping.lightBot
+          text: AI agent builder - create and publish agents
+        - url: /graph/teams-concept-overview?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
           itemType: concept
-          text: Code sample - Connect data and APIs
+          text: Integrate with tools and services
     - title: Validate and publish your agent
       links:
         - url: bots/how-to/bot-messages-ai-generated-content.md
