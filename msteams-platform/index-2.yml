@@ -104,7 +104,7 @@ conceptualContent:
         - url: toolkit/add-resource.md#add-api-connection
           itemType: concept
           text: Call an external API
-        - url: partner-center/marketplace-offers/add-in-submission-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+        - url: partner-center/marketplace-offers/add-in-submission-guide.md
           itemType: how-to-guide
           text: Submit agent to Teams Store
         - url: get-started/get-started-overview.md
