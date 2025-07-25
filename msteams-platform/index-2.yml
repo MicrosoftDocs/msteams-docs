@@ -101,9 +101,15 @@ conceptualContent:
         - url: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md#how-do-teams-ai-library-features-benefit-me
           itemType: concept
           text: Add features to an agent
-        - url: concepts/deploy-and-publish/appsource/publish.md
+        - url: toolkit/add-resource.md#add-api-connection
           itemType: concept
-          text: Publish your agent
+          text: Call an external API
+        - url: partner-center/marketplace-offers/add-in-submission-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+          itemType: how-to-guide
+          text: Submit agent to Teams Store
+        - url: get-started/get-started-overview.md
+          itemType: concept
+          text: Add a tab or message extension
     - title: Developer tools and samples
       links:
         - url: concepts/build-and-test/tool-sdk-overview.md
