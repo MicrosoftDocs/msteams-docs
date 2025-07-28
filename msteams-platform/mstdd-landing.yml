@@ -27,9 +27,9 @@ landingContent:
       links:
       - text: Start with building an agent
         url: teams-ai-library-tutorial.yml
-      - text: Agent works across Microsoft 365
+      - text: &nbsp;&nbsp; • Agent works across Microsoft 365
         url: /microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-      - text: Agent uses memory, tools, and prompt planning
+      - text: &nbsp;&nbsp; • Agent uses memory, tools, and prompt planning
         url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md
       - text: Agent for intelligent data access and automation
         url: bots/how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md
@@ -57,3 +57,4 @@ landingContent:
         url: toolkit/create-new-project.md
       - text: For structured forms or UI, use Teams app
         url: task-modules-and-cards/cards-and-task-modules.md
+
