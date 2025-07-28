@@ -21,7 +21,7 @@ landingContent:
 # Cards and links should be based on top customer tasks or top subjects
 # Start card title with a verb
 
-- title: I want to build an assistant that understands natural language -
+- title: <b>I want to build an assistant that understands natural language</b>
   linkLists:
     - linkListType: concept
       links:
@@ -42,19 +42,30 @@ landingContent:
         url: get-started/get-started-overview.md
       - text: &nbsp;&nbsp; • Use tabs, bots, or message extensions
         url: toolkit/create-new-project.md
-      - text: &nbsp;&nbsp; • Build app for structured flows and user input
+      - text: &nbsp;&nbsp; • Build structured flows and user input
         url: task-modules-and-cards/cards-and-task-modules.md
       - text: Build your first Teams app
         url: get-started/get-started-overview.md#build-your-first-teams-app
 
-- title: I want to fetch or manipulate external business data -
+- title: I want to fetch or work with external business data -
   linkLists:
     - linkListType: concept
       links:
       - text: Build a Teams agent or app, depending on interaction required
         url: get-started/get-started-overview.md
       - text: &nbsp;&nbsp; • Build agent For smart queries or language prompts
-        url: toolkit/create-new-project.md
+        url: bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md
       - text: &nbsp;&nbsp; • For structured forms or UI, use Teams app
         url: task-modules-and-cards/cards-and-task-modules.md
+
+- title: I want to build intelligent lookup agent -
+  linkLists:
+    - linkListType: concept
+      links:
+      - text: Build a custom engine agent
+        url: teams-ai-library-tutorial.yml
+      - text: &nbsp;&nbsp; • Connect to external data and APIs
+        url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md
+      - text: &nbsp;&nbsp; • Test in agents playground
+        url: teams-ai-library-tutorial.yml#configure-and-debug-your-custom-engine-agent
 
