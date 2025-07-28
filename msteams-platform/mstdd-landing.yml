@@ -21,7 +21,7 @@ landingContent:
 # Cards and links should be based on top customer tasks or top subjects
 # Start card title with a verb
 
-- title: <b>I want to build an assistant that understands natural language</b>
+- title: I want to build an assistant that understands natural language
   linkLists:
     - linkListType: concept
       links:
@@ -68,4 +68,15 @@ landingContent:
         url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md
       - text: &nbsp;&nbsp; • Test in agents playground
         url: teams-ai-library-tutorial.yml#configure-and-debug-your-custom-engine-agent
+
+- title: I want to build agent with automated workflow that trigger tools and automate tasks
+  linkLists:
+    - linkListType: concept
+      links:
+      - text: Build a custom engine agent
+        url: teams-ai-library-tutorial.yml
+      - text: &nbsp;&nbsp; • Define tools and planner logic
+        url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#create-ai-components
+      - text: &nbsp;&nbsp; • Integrated with Teams AI library
+        url: bots/how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md#import-teams-ai-library
 
