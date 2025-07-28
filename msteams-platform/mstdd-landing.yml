@@ -40,9 +40,9 @@ landingContent:
       links:
       - text: Build a Teams app
         url: get-started/get-started-overview.md
-      - text: Use tabs, bots, or message extensions
+      - text: &nbsp;&nbsp; • Use tabs, bots, or message extensions
         url: toolkit/create-new-project.md
-      - text: App for structured flows and user input
+      - text: &nbsp;&nbsp; • Build Teams app for structured flows and user input
         url: task-modules-and-cards/cards-and-task-modules.md
       - text: Build your first Teams app
         url: get-started/get-started-overview.md#build-your-first-teams-app
@@ -53,8 +53,8 @@ landingContent:
       links:
       - text: Build a Teams agent or app, depending on interaction required
         url: get-started/get-started-overview.md
-      - text: Build agent For smart queries or language prompts, use agents with tools
+      - text: &nbsp;&nbsp; • Build agent For smart queries or language prompts, use agents with tools
         url: toolkit/create-new-project.md
-      - text: For structured forms or UI, use Teams app
+      - text: &nbsp;&nbsp; • For structured forms or UI, use Teams app
         url: task-modules-and-cards/cards-and-task-modules.md
 
