@@ -47,3 +47,13 @@ landingContent:
       - text: Build your first Teams app
         url: get-started/get-started-overview.md#build-your-first-teams-app
 
+- title: I want to fetch or manipulate external business data -
+  linkLists:
+    - linkListType: concept
+      links:
+      - text: Build a Teams agent or app, depending on interaction required
+        url: get-started/get-started-overview.md
+      - text: Build agent For smart queries or language prompts, use agents with tools
+        url: toolkit/create-new-project.md
+      - text: For structured forms or UI, use Teams app
+        url: task-modules-and-cards/cards-and-task-modules.md
