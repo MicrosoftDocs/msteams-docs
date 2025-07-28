@@ -78,7 +78,7 @@ landingContent:
       - text: &nbsp;&nbsp; • Define tools and planner logic
         url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#create-ai-components
       - text: &nbsp;&nbsp; • Integrated with Teams AI library
-        url: bots/how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md#import-teams-ai-library
+        url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#import-teams-ai-library
 
 - title: I want to build an agent or app that collates data from multiple sources and provide summary
   linkLists:
