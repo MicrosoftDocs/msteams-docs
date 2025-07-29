@@ -69,7 +69,7 @@ landingContent:
       - text: &nbsp;&nbsp; • Test in agents playground
         url: teams-ai-library-tutorial.yml#configure-and-debug-your-custom-engine-agent
 
-- title: I want to build agent with automated workflow that trigger tools and automate tasks
+- title: I want to build agent with automated workflow that trigger tools and automate tasks - 
   linkLists:
     - linkListType: concept
       links:
@@ -80,7 +80,7 @@ landingContent:
       - text: &nbsp;&nbsp; • Integrated with Teams AI library
         url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#import-teams-ai-library
 
-- title: I want to build an agent or app that collates data from multiple sources and provide summary
+- title: I want to build an agent or app that collates data from multiple sources and provide summary - 
   linkLists:
     - linkListType: concept
       links:
