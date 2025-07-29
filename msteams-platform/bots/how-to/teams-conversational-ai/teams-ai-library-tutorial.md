@@ -40,7 +40,7 @@ Ensure you install the following tools for building and deploying your apps:
 
 1. Go to **Visual Studio Code**.
 
-1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="../../../assets/images/toolkit-v2/toolkit-sidebar-icon.PNG" border="false" border="false"::: icon in the Visual Studio Code Activity Bar.
+1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="../../../assets/images/toolkit-v2/toolkit-sidebar-icon.png" border="false"::: icon in the Visual Studio Code Activity Bar.
 
 1. Select **Create a New App**.
 
