@@ -52,11 +52,13 @@ Ensure you install the following tools for building and deploying your apps:
 
 1. Select **Basic AI Chatbot**.
 
-    :::image type="content" source="../msteams-platform/assets/images/bots/basic-ai-chatbot.png" alt-text="Screenshot shows basic ai chatbot in Visual Studio Code.":::
+    :::image type="content" source="../../../assets/images/bots/basic-ai-chatbot.png" alt-text="Screenshot shows basic ai chatbot in Visual Studio Code.":::
 
 1. Select **JavaScript** as the programming language.
 
     :::image type="content" source="../msteams-platform/assets/images/bots/programming-language.png" alt-text="Screenshot shows programming language in Visual Studio Code.":::
+
+:::image type="content" source="../../../assets/images/bots/programming-language.png" alt-text="Screenshot...":::
 
 1. Select **OpenAI**.
 
