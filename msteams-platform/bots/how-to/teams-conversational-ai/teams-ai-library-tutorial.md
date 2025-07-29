@@ -44,11 +44,11 @@ Ensure you install the following tools for building and deploying your apps:
 
 1. Select **Create a New App**.
 
-    :::image type="content" source="../msteams-platform/assets/images/bots/create-a-new-app.png" alt-text="Screenshot shows how to create a new app in Visual Studio Code.":::
+    :::image type="content" source="../../../assets/images/bots/create-a-new-app.png" alt-text="Screenshot shows how to create a new app in Visual Studio Code.":::
 
 1. Select **Custom Engine Agent**.
 
-    :::image type="content" source="../msteams-platform/assets/images/bots/custom-copilot.png" alt-text="Screenshot shows custom engine agent option in Visual Studio Code.":::
+    :::image type="content" source="../../../assets/images/bots/custom-copilot.png" alt-text="Screenshot shows custom engine agent option in Visual Studio Code.":::
 
 1. Select **Basic AI Chatbot**.
 
