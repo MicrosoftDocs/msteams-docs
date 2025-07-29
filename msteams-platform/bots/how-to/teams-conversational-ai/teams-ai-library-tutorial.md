@@ -37,9 +37,14 @@ In this tutorial, you'll learn:
 
 [!INCLUDE [custom-engine-agent](../../../includes/custom-engine-agent.md)]
 
+[Back to top](#build-a-custom-engine-agent)
+
 </details>
 
 ## Create your custom engine agent using Agents Toolkit
+
+<details>
+<summary><b>Use Agents Toolkit to create a new custom engine agent</b></summary>
 
 1. Go to **Visual Studio Code**.
 
@@ -101,6 +106,10 @@ After your app is created, Agents Toolkit displays the following message:
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20your%20custom%20engine%20agent&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fteams-ai-library-tutorial%3Ftutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2FTeams-AI-library-tutorial.yml&documentVersionIndependentId=fe0b5835-9bcb-a24b-8bad-78793026a79e&platformId=11f075eb-fd32-b7d3-211f-f629d62cb5b0&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams%2A%2A)
+
+[Back to top](#build-a-custom-engine-agent)
+
+</details>
 
 ### Take a tour of the source code
 
