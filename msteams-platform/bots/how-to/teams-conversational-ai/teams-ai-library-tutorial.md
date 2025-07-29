@@ -34,4 +34,4 @@ Ensure you install the following tools for building and deploying your apps:
 | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
 | &nbsp; |[OpenAI](https://platform.openai.com/docs/quickstart/build-your-application) |First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Microsoft Azure, you must create an [Azure OpenAI service](/azure/ai-services/openai/how-to/create-resource?pivots=web-portal) before you begin.|
 
-[!INCLUDE [Set up prerequisites](includes/custom-engine-agent.md)]
+[!INCLUDE [custom-engine-agent](../../../includes/custom-engine-agent.md)]
