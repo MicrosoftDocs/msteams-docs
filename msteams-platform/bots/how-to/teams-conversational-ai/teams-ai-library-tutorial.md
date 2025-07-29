@@ -26,13 +26,13 @@ In this tutorial, you'll learn:
 
 Ensure you install the following tools for building and deploying your apps:
 
-| &nbsp; | Install | For using... |
-| --- | --- | --- |
-| &nbsp; | [Agents Toolkit](~/toolkit/install-Teams-Toolkit.md) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
-| &nbsp; | [Node.js and NPM](https://nodejs.org/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
-| &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
-| &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
-| &nbsp; |[OpenAI](https://platform.openai.com/docs/quickstart/build-your-application) |First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Microsoft Azure, you must create an [Azure OpenAI service](/azure/ai-services/openai/how-to/create-resource?pivots=web-portal) before you begin.|
+| Install | For using... |
+| --- | --- |
+| [Agents Toolkit](~/toolkit/install-Teams-Toolkit.md) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
+| [Node.js and NPM](https://nodejs.org/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
+| [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+| [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
+| [OpenAI](https://platform.openai.com/docs/quickstart/build-your-application) |First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Microsoft Azure, you must create an [Azure OpenAI service](/azure/ai-services/openai/how-to/create-resource?pivots=web-portal) before you begin. |
 
 [!INCLUDE [custom-engine-agent](../../../includes/custom-engine-agent.md)]
 
@@ -56,47 +56,45 @@ Ensure you install the following tools for building and deploying your apps:
 
 1. Select **JavaScript** as the programming language.
 
-    :::image type="content" source="../msteams-platform/assets/images/bots/programming-language.png" alt-text="Screenshot shows programming language in Visual Studio Code.":::
-
-:::image type="content" source="../../../assets/images/bots/programming-language.png" alt-text="Screenshot...":::
+    :::image type="content" source="../../../assets/images/bots/programming-language.png" alt-text="Screenshot shows programming language in Visual Studio Code.":::
 
 1. Select **OpenAI**.
 
-    :::image type="content" source="assets/images/bots/service-for-llm.png" alt-text="Screenshot shows the TypeScript option for programming language in Agents Toolkit.":::
+    :::image type="content" source="../../../assets/images/bots/service-for-llm.png" alt-text="Screenshot shows the TypeScript option for programming language in Agents Toolkit.":::
 
 1. Enter **OpenAI Key**.
 
 1. Select **Default folder** to store your project root folder in default location.
 
-    :::image type="content" source="../msteams-platform/assets/images/toolkit-v2/first-bot/select-default-location.png" alt-text="Screenshot shows the selection of default location.":::
+    :::image type="content" source="../../../assets/images/sbs-command-bot/select-default-location.png" alt-text="Screenshot shows the selection of default location.":::
 
     You can also change the default location by the following steps:
 
 1. Select **Browse**.
 
-    :::image type="content" source="../msteams-platform/assets/images/toolkit-v2/first-bot/select-browse.png" alt-text="Screenshot shows the selection of browse location option.":::
+    :::image type="content" source="../../../assets/images/toolkit-v2/first-bot/select-browse.png" alt-text="Screenshot shows the selection of browse location option.":::
 
 1. Select the location for project workspace.
 
 1. Select the **Select Folder**.
 
-    :::image type="content" source="../msteams-platform/assets/images/toolkit-v2/select-folder.png" alt-text="Screenshot shows the folder to select.":::
+    :::image type="content" source="../../../assets/images/toolkit-v2/select-folder.png" alt-text="Screenshot shows the folder to select.":::
 
 1. Enter a suitable name for your app and then select **Enter**.
 
-    :::image type="content" source="../msteams-platform/assets/images/toolkit-v2/first-bot/hello-bot.png" alt-text="Screenshot shows where to enter the app name.":::
+    :::image type="content" source="../../../assets/images/toolkit-v2/first-bot/hello-bot.png" alt-text="Screenshot shows where to enter the app name.":::
 
     A dialog appears. Select **Yes, I trust the authors** or **No, I don’t trust the authors** based on your requirement.
 
-    :::image type="content" source="../msteams-platform/assets/images/toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder." lightbox="../msteams-platform/assets/images/toolkit-v2/first-bot/vsc-trust-authors.png":::
+    :::image type="content" source="../../../assets/images/toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder." lightbox="../msteams-platform/assets/images/toolkit-v2/first-bot/vsc-trust-authors.png":::
 
 Your custom engine agent is created in a few seconds.
 
-    :::image type="content" source="../msteams-platform/assets/images/toolkit-v2/first-bot/app-created-bot.png" alt-text="Screenshot shows the app created." lightbox="../msteams-platform/assets/images/toolkit-v2/first-bot/app-created-bot.png":::
+    :::image type="content" source="../../../assets/images/toolkit-v2/first-bot/app-created-bot.png" alt-text="Screenshot shows the app created." lightbox="../msteams-platform/assets/images/toolkit-v2/first-bot/app-created-bot.png":::
 
 After your app is created, Agents Toolkit displays the following message:
 
-    :::image type="content" source="../msteams-platform/assets/images/toolkit-v2/first-bot/preview-project.png" alt-text="Screenshot shows the message that the feature is successfully created.":::
+    :::image type="content" source="../../../assets/images/toolkit-v2/first-bot/preview-project.png" alt-text="Screenshot shows the message that the feature is successfully created.":::
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20your%20custom%20engine%20agent&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fteams-ai-library-tutorial%3Ftutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2FTeams-AI-library-tutorial.yml&documentVersionIndependentId=fe0b5835-9bcb-a24b-8bad-78793026a79e&platformId=11f075eb-fd32-b7d3-211f-f629d62cb5b0&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams%2A%2A)
