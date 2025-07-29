@@ -24,7 +24,8 @@ In this tutorial, you'll learn:
 
 ## Prerequisites
 
-Ensure you install the following tools for building and deploying your apps:
+<details>
+<summary><b>Ensure you install the following tools for building and deploying your apps:</b></summary>
 
 | Install | For using... |
 | --- | --- |
@@ -35,6 +36,8 @@ Ensure you install the following tools for building and deploying your apps:
 | [OpenAI](https://platform.openai.com/docs/quickstart/build-your-application) |First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Microsoft Azure, you must create an [Azure OpenAI service](/azure/ai-services/openai/how-to/create-resource?pivots=web-portal) before you begin. |
 
 [!INCLUDE [custom-engine-agent](../../../includes/custom-engine-agent.md)]
+
+</details>
 
 ## Create your custom engine agent using Agents Toolkit
 
