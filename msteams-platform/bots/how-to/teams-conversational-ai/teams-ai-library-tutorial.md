@@ -119,3 +119,32 @@ Have a look at what's inside this custom engine agent > Basic AI Chatbot templat
 | `m365agents.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
 | `m365agents.local.yml` | This override `m365agents.yml` with actions that enable local execution and debugging. |
 | `m365agents.playground.yml` | This override `m365agents.yml` with actions that enable local execution and debugging in Microsoft 365 Agents Playground (previously known as Teams App Test Tool).|
+
+## Configure and debug your custom engine agent
+
+After you create your custom engine agent, you must configure it. Let's customize the prompt for your custom engine agent.
+
+1. Go to `src/prompts/chat/skprompt.txt` and update the following code in `skprompt.txt` file:
+
+    ```skprompt.txt
+    The following is a conversation with an AI assistant, who is an expert on answering questions over the given context.
+    Responses should be in a short journalistic style with no more than 80 words. 
+    ```
+
+    :::image type="content" source="../msteams-platform/assets/images/bots/prompts-chat.png" alt-text="Screenshot shows skprompt in explorer in Visual Studio Code.":::
+
+1. From the left pane, select **Run and Debug (Ctrl+Shift+D)**.
+
+1. Select **Debug in Microsoft 365 Agents Playground**.
+
+    > [!NOTE]
+    > If you want to debug in either Teams or Copilot, select **"Debug in Teams** or **Debug in Copilot**.
+
+1. Select the **F5** key.
+
+    :::image type="content" source="../msteams-platform/assets/images/bots/debug-in-test-tool.png" alt-text="Screenshot shows the debug in Agents Playground.":::
+
+1. Custom engine agent runs within Agents Playground, which opens in your browser.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Configure%20your%20custom%20engine%20agent&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fteams-ai-library-tutorial%3Ftutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2FTeams-AI-library-tutorial.yml&documentVersionIndependentId=fe0b5835-9bcb-a24b-8bad-78793026a79e&platformId=11f075eb-fd32-b7d3-211f-f629d62cb5b0&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams%2A%2A)
