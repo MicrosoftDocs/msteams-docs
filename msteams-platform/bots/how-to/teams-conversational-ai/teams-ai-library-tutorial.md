@@ -148,3 +148,11 @@ After you create your custom engine agent, you must configure it. Let's customiz
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Configure%20your%20custom%20engine%20agent&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fteams-ai-library-tutorial%3Ftutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2FTeams-AI-library-tutorial.yml&documentVersionIndependentId=fe0b5835-9bcb-a24b-8bad-78793026a79e&platformId=11f075eb-fd32-b7d3-211f-f629d62cb5b0&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams%2A%2A)
+
+## Complete challenge
+
+In Agents Playground, ask questions related to your document and chat with your custom engine agent to learn more about your data.
+
+:::image type="content" source="../../../assets/images/bots/teams-app-test-tool.png" alt-text="Screenshot shows the Agents Playground.":::
+
+Congratulations, you completed this tutorial!
