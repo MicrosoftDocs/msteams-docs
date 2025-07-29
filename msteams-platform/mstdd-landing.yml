@@ -86,7 +86,7 @@ landingContent:
       links:
       - text: Build an app or agent
         url: get-started/get-started-overview.md
-      - text: &nbsp;&nbsp; • Use Microsoft Graph APIs
+      - text: &nbsp;&nbsp; • Use Microsoft Graph APIs for Teams app
         url: /graph/teams-concept-overview?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
       - text: &nbsp;&nbsp; • Extend across Microsoft 365 
         url: /microsoft-365/developer/overview-m365-agents-toolkit?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json 
