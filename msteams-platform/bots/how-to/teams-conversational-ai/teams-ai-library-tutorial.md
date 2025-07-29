@@ -131,7 +131,7 @@ After you create your custom engine agent, you must configure it. Let's customiz
     Responses should be in a short journalistic style with no more than 80 words. 
     ```
 
-    :::image type="content" source="../msteams-platform/assets/images/bots/prompts-chat.png" alt-text="Screenshot shows skprompt in explorer in Visual Studio Code.":::
+    :::image type="content" source="../../../assets/images/bots/prompts-chat.png" alt-text="Screenshot shows skprompt in explorer in Visual Studio Code.a":::
 
 1. From the left pane, select **Run and Debug (Ctrl+Shift+D)**.
 
@@ -142,7 +142,7 @@ After you create your custom engine agent, you must configure it. Let's customiz
 
 1. Select the **F5** key.
 
-    :::image type="content" source="../msteams-platform/assets/images/bots/debug-in-test-tool.png" alt-text="Screenshot shows the debug in Agents Playground.":::
+    :::image type="content" source="../../../assets/images/bots/debug-in-test-tool.png" alt-text="Screenshot shows the debug in Agents Playground.":::
 
 1. Custom engine agent runs within Agents Playground, which opens in your browser.
 
