@@ -107,10 +107,6 @@ After your app is created, Agents Toolkit displays the following message:
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20your%20custom%20engine%20agent&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fteams-ai-library-tutorial%3Ftutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2FTeams-AI-library-tutorial.yml&documentVersionIndependentId=fe0b5835-9bcb-a24b-8bad-78793026a79e&platformId=11f075eb-fd32-b7d3-211f-f629d62cb5b0&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams%2A%2A)
 
-[Back to top](#build-a-custom-engine-agent)
-
-</details>
-
 ### Take a tour of the source code
 
 Have a look at what's inside this custom engine agent > Basic AI Chatbot template.
@@ -132,9 +128,17 @@ Have a look at what's inside this custom engine agent > Basic AI Chatbot templat
 | `m365agents.local.yml` | This override `m365agents.yml` with actions that enable local execution and debugging. |
 | `m365agents.playground.yml` | This override `m365agents.yml` with actions that enable local execution and debugging in Microsoft 365 Agents Playground (previously known as Teams App Test Tool).|
 
+[Back to top](#build-a-custom-engine-agent)
+
+</details>
+
 ## Configure and debug your custom engine agent
 
-After you create your custom engine agent, you must configure it. Let's customize the prompt for your custom engine agent.
+<details>
+
+<summary><b>Customize the prompt for your custom engine agent.</b></summary>
+
+After you create your custom engine agent, let's configure it.
 
 1. Go to `src/prompts/chat/skprompt.txt` and update the following code in `skprompt.txt` file:
 
@@ -161,10 +165,21 @@ After you create your custom engine agent, you must configure it. Let's customiz
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Configure%20your%20custom%20engine%20agent&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fteams-ai-library-tutorial%3Ftutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2FTeams-AI-library-tutorial.yml&documentVersionIndependentId=fe0b5835-9bcb-a24b-8bad-78793026a79e&platformId=11f075eb-fd32-b7d3-211f-f629d62cb5b0&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams%2A%2A)
 
+[Back to top](#build-a-custom-engine-agent)
+
+</details>
+
 ## Complete challenge
+
+<details>
+<summary><b>Test your custom engine agent</b></summary>
 
 In Agents Playground, ask questions related to your document and chat with your custom engine agent to learn more about your data.
 
 :::image type="content" source="../../../assets/images/bots/teams-app-test-tool.png" alt-text="Screenshot shows the Agents Playground.":::
 
 Congratulations, you completed this tutorial!
+
+[Back to top](#build-a-custom-engine-agent)
+
+</details>
