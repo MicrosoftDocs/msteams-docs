@@ -256,6 +256,8 @@ You've successfully created key and endpoint for your AI chat bot.
 
 [Back to top](#debug-your-ai-chat-bot-using-microsoft-365-agents-playground)
 
+</details>
+
 ## Activity triggers
 
 <details>
