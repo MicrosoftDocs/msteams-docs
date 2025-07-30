@@ -143,11 +143,11 @@ After you set up your project workspace with Agents Toolkit, build your AI chat 
 
 1. Fill the required details and select **Next**.
 
-    :::image type="content" source="~/assets/images/agents-playground/azure-open-ai-tags.png" alt-text="Screenshot shows the Azure open AI tags details.":::
+    :::image type="content" source="../assets/images/agents-playground/azure-open-ai-tags.png" alt-text="Screenshot shows the Azure open AI tags details.":::
 
 1. Select **Create**.
 
-    :::image type="content" source="~/assets/images/agents-playground/review-create.png" lightbox="~/assets/images/agents-playground/review-create.png" alt-text="Screenshot shows you to preview and create Azure open AI.":::
+    :::image type="content" source="../assets/images/agents-playground/review-create.png" alt-text="Screenshot shows you to preview and create Azure open AI.":::
 
 You've successfully created key and endpoint for your AI chat bot.
 
@@ -163,7 +163,7 @@ You've successfully created key and endpoint for your AI chat bot.
 
 1. Select **Go to resources**.
 
-    :::image type="content" source="~/assets/images/agents-playground/deployment-azure.png" alt-text="Screenshot shows you the deployment of the Azure open AI.":::
+    :::image type="content" source="../assets/images/agents-playground/deployment-azure.png" alt-text="Screenshot shows you the deployment of the Azure open AI.":::
 
 1. Select **Keys and Endpoint** from the left pane and copy the **KEY** and **Endpoint**. You can copy either **KEY 1** or **KEY 2**.
 
