@@ -91,11 +91,11 @@ To change the default location, follow these steps:
 
 1. Enter a suitable name for your app and then select the **Enter** key.
 
-    :::image type="content" source="~/assets/images/toolkit-v2/first-bot/hello-bot.png" alt-text="Screenshot shows where to enter the app name.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-bot/hello-bot.png" alt-text="Screenshot shows where to enter the app name.":::
 
     A dialog appears, where you need to choose yes or no to trust the authors of the files in this folder.
 
-    :::image type="content" source="~/assets/images/toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder.":::
 
 Now, you've successfully created your AI chat bot project workspace.
 
@@ -272,13 +272,13 @@ To mock an **Add user** activity, follow these steps:
 
 1. In Agents Playground, go to **Mock an Activity** > **Add user**.
 
-    :::image type="content" source="~/assets/images/toolkit-v2/debug/add-user.png" alt-text="Screenshot shows the add user option under mock an activity.":::
+    :::image type="content" source="../assets/images/toolkit-v2/debug/add-user.png" alt-text="Screenshot shows the add user option under mock an activity.":::
 
     A dialog appears to preview the activity handler.
 
 1. Select **Send activity**.
 
-    :::image type="content" source="~/assets/images/toolkit-v2/debug/add-a-user-request.png" alt-text="Screenshot shows the option to send activity for predefined mock activity add user.":::
+    :::image type="content" source="../assets/images/toolkit-v2/debug/add-a-user-request.png" alt-text="Screenshot shows the option to send activity for predefined mock activity add user.":::
 
     Bot sends the following response:
 
