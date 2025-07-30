@@ -99,5 +99,22 @@ To change the default location, follow these steps:
 
 Now, you've successfully created your AI chat bot project workspace.
 
+#### Take a tour of the bot app source code
+
+After you finish scaffolding, explore the project directories and files in the **EXPLORER** section of the Visual Studio Code.
+
+:::image type="content" source="../msteams-platform/assets/images/agents-playground/source-code.png" alt-text="Screenshot shows the Teams Toolkit sample bot folder Structure.":::
+
+| Folder or file name | Contents |
+| --- | --- |
+| `env/.env.playground` | The configuration file with environment variables that can be committed to Git.  |
+| `env/.env.playground.user` |The configuration file with environment variables, including credentials, which aren't committed to Git by default.  |
+| `appPackage` | App manifest template files and app icons (color.png and outline.png). |
+| `appPackage/manifest.json` | App manifest for running the app in local and remote environment.  |
+|`src/app.js`| Handles business logics for the AI chat bot.|
+|`m365agents.yml`| This is the main Agents Toolkit project file. The project file defines two primary things:  Properties and configuration and stage definitions. |
+|`m365agents.local.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging.|
+|`m365agents.playground.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging in Test Tool.|
+
 > [!div class="nextstepaction"]
 > [Back to Microsoft 365 Agents Playground](debug-your-agents-playground.md)
