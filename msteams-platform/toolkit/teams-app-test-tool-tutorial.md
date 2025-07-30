@@ -99,6 +99,9 @@ To change the default location, follow these steps:
 
 Now, you've successfully created your AI chat bot project workspace.
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+your+bot+project+workspace&author=surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-app-test-tool%3Ftutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-teams-app-test-tool.yml%23&documentVersionIndependentId=c3a2f604-cd95-7c37-210d-699e7cccec5e&platformId=ff9aea10-b1b0-f61e-abba-675eaefa2144&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams)
+
 #### Take a tour of the bot app source code
 
 After you finish scaffolding, explore the project directories and files in the **EXPLORER** section of the Visual Studio Code.
@@ -115,6 +118,46 @@ After you finish scaffolding, explore the project directories and files in the *
 |`m365agents.yml`| This is the main Agents Toolkit project file. The project file defines two primary things:  Properties and configuration and stage definitions. |
 |`m365agents.local.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging.|
 |`m365agents.playground.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging in Test Tool.|
+
+## Build and run your AI chat bot app
+
+After you set up your project workspace with Agents Toolkit, build your AI chat bot project.
+
+### Create Open AI key and endpoint for your AI chat bot
+
+1. Go to [Azure portal](https://ms.portal.azure.com/).
+
+1. Select **Create a resource** and search for Azure Open AI.
+
+1. Select **Azure Open AI** and select **Create**.
+
+    :::image type="content" source="~/assets/images/agents-playground/azure-open-ai.png" alt-text="Screenshot shows the Azure open AI in Azure portal.":::
+
+1. Fill the required details and select **Next**.
+
+    :::image type="content" source="~/assets/images/agents-playground/azure-open-ai-resource.png" alt-text="Screenshot shows you the Azure open AI subscription and resource group.":::
+
+1. Select **All networks, including the internet, can access this resource** and then select **Next**.
+
+    :::image type="content" source="~/assets/images/agents-playground/azure-open-ai-network.png" alt-text="Screenshot shows the Azure open AI network details.":::
+
+1. Fill the required details and select **Next**.
+
+    :::image type="content" source="~/assets/images/agents-playground/azure-open-ai-tags.png" alt-text="Screenshot shows the Azure open AI tags details.":::
+
+1. Select **Create**.
+
+    :::image type="content" source="~/assets/images/agents-playground/review-create.png" lightbox="~/assets/images/agents-playground/review-create.png" alt-text="Screenshot shows you to preview and create Azure open AI.":::
+
+You've successfully created key and endpoint for your AI chat bot.
+
+:::image type="content" source="~/assets/images/agents-playground/deployment.png" alt-text="Screenshot shows you the deployment of the Azure open AI.":::
+
+    >[!NOTE]
+    > You can also get OpenAI API key to debug your AI chat bot. For more information, see [setup your API key](https://platform.openai.com/docs/quickstart/step-2-setup-your-api-key).
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+Open+AI+key+and+endpoint+for+your+AI+chat+bot&author=surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-app-test-tool%3Ftutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-teams-app-test-tool.yml%23&documentVersionIndependentId=c3a2f604-cd95-7c37-210d-699e7cccec5e&platformId=ff9aea10-b1b0-f61e-abba-675eaefa2144&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams)
 
 > [!div class="nextstepaction"]
 > [Back to Microsoft 365 Agents Playground](debug-your-agents-playground.md)
