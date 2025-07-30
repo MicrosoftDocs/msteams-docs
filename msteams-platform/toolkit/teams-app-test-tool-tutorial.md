@@ -5,7 +5,7 @@ description: Learn how to create project workspace, build, run, and debug AI cha
 ms.author: surbhigupta 
 ms.localizationpriority: high
 ms.topic: overview
-ms.date: 30/07/2025
+ms.date: 07/30/2025
 ---
 
 # Debug your AI chat bot using Microsoft 365 Agents Playground
