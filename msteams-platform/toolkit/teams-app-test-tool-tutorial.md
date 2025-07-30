@@ -151,7 +151,7 @@ After you set up your project workspace with Agents Toolkit, build your AI chat 
 
 You've successfully created key and endpoint for your AI chat bot.
 
-:::image type="content" source="~/assets/images/agents-playground/deployment.png" alt-text="Screenshot shows you the deployment of the Azure open AI.":::
+:::image type="content" source="~/assets/images/agents-playground/deployment.png" alt-text="Screenshot shows the deployment of the Azure open AI.":::
 
 >[!NOTE]
 > You can also get OpenAI API key to debug your AI chat bot. For more information, see [setup your API key](https://platform.openai.com/docs/quickstart/step-2-setup-your-api-key).
@@ -173,7 +173,7 @@ You've successfully created key and endpoint for your AI chat bot.
 
 1. Select **Model deployments** from the left pane and select **Manage Deployments**.
 
-    :::image type="content" source="~/assets/images/agents-playground/model-deployments.png" lightbox="~/assets/images/agents-playground/model-deployments.png" alt-text="Screenshot shows the model deployments for Azure open AI.":::
+    :::image type="content" source="~/assets/images/agents-playground/model-deployments.png" lightbox="~/assets/images/agents-playground/model-deployments.png" alt-text="Screenshot shows the model deployment for Azure open AI.":::
 
     The Azure Open AI Studio window appears.
 
@@ -245,85 +245,88 @@ You've successfully created key and endpoint for your AI chat bot.
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Debug+and+run+your+AI+chat+bot+app&author=surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-app-test-tool%3Ftutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-teams-app-test-tool.yml%23&documentVersionIndependentId=c3a2f604-cd95-7c37-210d-699e7cccec5e&platformId=ff9aea10-b1b0-f61e-abba-675eaefa2144&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams)
 
-## Build and run your AI chat bot app
+## Activity triggers
 
-After you set up your project workspace with Agents Toolkit, build your AI chat bot project.
+You can mock an activity in Agents Playground using activity triggers. There are two types of activity triggers:
 
-### Create Open AI key and endpoint for your AI chat bot
+1. [Predefined activity triggers](#predefined-activity-triggers)
+1. [Custom activity triggers](#custom-activity-triggers)
 
-1. Go to [Azure portal](https://ms.portal.azure.com/).
+### Predefined activity triggers
 
-1. Select **Create a resource** and search for Azure Open AI.
+Agents Playground provides predefined activity triggers to test the functionalities of your bot.
 
-1. Select **Azure Open AI** and select **Create**.
+| Category | Activity | Handler |
+| --- | --- | --- |
+| | Trigger Installation Update Activity | Install bot <br><br><br> Uninstall bot | `onInstallationUpdate` <br> `onInstallationUpdateAdded` <br><br> `onInstallationUpdate` <br> `onInstallationUpdateRemove`|
+| | Trigger Conversation Update Activity | Add user <br><br><br> Add bot <br><br><br> Add channel | `onMembersAdded` <br> `onTeamsMembersAddedEvent` <br><br> `onMembersAdded` <br> `onTeamsMembersAddedEvent` <br><br> `onTeamsChannelCreatedEvent` |
+| | Remove user <br><br><br> Remove bot <br><br><br> Remove channel <br><br> Remove team | `onMembersRemoved` <br> `onTeamsMembersRemovedEvent` <br><br> `onMembersRemoved` <br> `onTeamsMembersRemovedEvent` <br><br> `onTeamsChannelDeletedEvent` <br><br> `onTeamsTeamDeletedEvent` |
+| | Rename channel <br><br> Rename team | `onTeamsChannelRenamedEvent` <br><br> `onTeamsTeamRenamedEvent` |
 
-    :::image type="content" source="~/assets/images/agents-playground/azure-open-ai.png" alt-text="Screenshot shows the Azure open AI in Azure portal.":::
+> [!NOTE]
+> All types of activities aren't available in all scopes. For example, you can't add or remove a channel in a personal chat or a group chat.
 
-1. Fill the required details and select **Next**.
+Predefined activity triggers are available in the **Mock an Activity** menu in Agents Playground.
 
-    :::image type="content" source="~/assets/images/agents-playground/azure-open-ai-resource.png" alt-text="Screenshot shows you the Azure open AI subscription and resource group.":::
+To mock an **Add user** activity, follow these steps:
 
-1. Select **All networks, including the internet, can access this resource** and then select **Next**.
+1. In Agents Playground, go to **Mock an Activity** > **Add user**.
 
-    :::image type="content" source="~/assets/images/agents-playground/azure-open-ai-network.png" alt-text="Screenshot shows the Azure open AI network details.":::
+    :::image type="content" source="~/assets/images/toolkit-v2/debug/add-user.png" alt-text="Screenshot shows the add user option under mock an activity.":::
 
-1. Fill the required details and select **Next**.
+    A dialog appears to preview the activity handler.
 
-    :::image type="content" source="~/assets/images/agents-playground/azure-open-ai-tags.png" alt-text="Screenshot shows the Azure open AI tags details.":::
+1. Select **Send activity**.
 
-1. Select **Create**.
+    :::image type="content" source="~/assets/images/toolkit-v2/debug/add-a-user-request.png" alt-text="Screenshot shows the option to send activity for predefined mock activity add user.":::
 
-    :::image type="content" source="~/assets/images/agents-playground/review-create.png" lightbox="~/assets/images/agents-playground/review-create.png" alt-text="Screenshot shows you to preview and create Azure open AI.":::
+    Bot sends the following response:
 
-You've successfully created key and endpoint for your AI chat bot.
-
-    :::image type="content" source="~/assets/images/agents-playground/deployment.png" alt-text="Screenshot shows you the deployment of the Azure open AI.":::
-
->[!NOTE]
-> You can also get OpenAI API key to debug your AI chat bot. For more information, see [setup your API key](https://platform.openai.com/docs/quickstart/step-2-setup-your-api-key).
-
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+Open+AI+key+and+endpoint+for+your+AI+chat+bot&author=surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-app-test-tool%3Ftutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-teams-app-test-tool.yml%23&documentVersionIndependentId=c3a2f604-cd95-7c37-210d-699e7cccec5e&platformId=ff9aea10-b1b0-f61e-abba-675eaefa2144&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams)
-
-#### Get Azure Open AI keys and endpoint
-
-1. Select **Go to resources**.
-
-    :::image type="content" source="~/assets/images/agents-playground/deployment-azure.png" alt-text="Screenshot shows you the deployment of the Azure open AI.":::
-
-1. Select **Keys and Endpoint** from the left pane and copy the **KEY** and **Endpoint**. You can copy either **KEY 1** or **KEY 2**.
-
-    :::image type="content" source="~/assets/images/agents-playground/key-endpoints.png" lightbox="~/assets/images/agents-playground/key-endpoints.png" alt-text="Screenshot shows the keys and endpoints.":::
-
-    Save the **KEY** and **Endpoint** for further use.
-
-1. Select **Model deployments** from the left pane and select **Manage Deployments**.
-
-    :::image type="content" source="~/assets/images/agents-playground/model-deployments.png" lightbox="~/assets/images/agents-playground/model-deployments.png" alt-text="Screenshot shows the model deployments for Azure open AI.":::
-
-    The Azure Open AI Studio window appears.
-
-1. Select **Deployments** from the left pane and select **+ Create new deployments**.
-
-    :::image type="content" source="~/assets/images/agents-playground/ai-studio.png" lightbox="~/assets/images/agents-playground/ai-studio.png" alt-text="Screenshot shows the model deployments for Azure open AI.":::
-
-1. Select the following details:
-
-    1. Select **gpt-35-turbo** from the **Select a model** dropdown list.
-
-        > [!NOTE]
-        > Only **gpt-35-turbo** model is supported for the AI chat bot.
-    1. Select **0301 (Default)** from the **Model version** dropdown list.
-    1. Enter **Deployment name** and select **Create**.
-
-    :::image type="content" source="~/assets/images/agents-playground/model-version.png" lightbox="~/assets/images/agents-playground/model-version.png" alt-text="Screenshot shows the model and version for Azure open AI deployment.":::
-
-1. Copy and save the **Deployment name** for further use.
-
-    :::image type="content" source="~/assets/images/agents-playground/copy-deployment.png" lightbox="~/assets/images/agents-playground/copy-deployment.png" alt-text="Screenshot shows the deployment name for Azure open AI deployment.":::
+    :::image type="content" source="~/assets/images/toolkit-v2/debug/add-a-user-response.png" alt-text="Screenshot shows the response of predefined mock activity add user.":::
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Get+Azure+Open+AI+keys+and+endpoint&author=surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-app-test-tool%3Ftutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-teams-app-test-tool.yml%23&documentVersionIndependentId=c3a2f604-cd95-7c37-210d-699e7cccec5e&platformId=ff9aea10-b1b0-f61e-abba-675eaefa2144&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Predefined+activity+triggers&author=surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-app-test-tool%3Ftutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-teams-app-test-tool.yml&documentVersionIndependentId=c3a2f604-cd95-7c37-210d-699e7cccec5e&platformId=ff9aea10-b1b0-f61e-abba-675eaefa2144&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams)
+
+### Custom activity triggers
+
+You can use **Custom activity** to customize activity triggers, for example, `reactionsAdded` to meet the requirements of your bot app. Agents Playground automatically populates the required properties of the activity. You can also modify the activity type and add more properties.
+
+1. Select **Mock an Activity** > **Custom activity**.
+
+    :::image type="content" source="../msteams-platform/assets/images/toolkit-v2/debug/mock-activity.png" alt-text="Screenshot shows the list of option under mock an activity.":::
+
+1. Add `messageReaction` to customize the activity under the `type` property:
+
+    ```json
+    {
+        "type": "messageReaction",
+        "reactionsAdded": [
+        {
+            "type": "like"
+        }
+        ],
+        "replyToId": "d60fd1cb-3e8f-44ef-849c-404806ba1b47"
+    }
+    ```
+
+1. Select **Send activity**.
+
+    :::image type="content" source="~/assets/images/toolkit-v2/debug/custom-activity-request.png" alt-text="Screenshot shows the option to send activity after customization on mock activity.":::
+
+    Bot sends an `onReactionsAdded` handler in response.
+
+    :::image type="content" source="../msteams-platform/assets/images/toolkit-v2/debug/custom-activity-response.png" alt-text="Screenshot shows the response of custom mock activity.":::
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Custom+activity+triggers&author=surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-app-test-tool%3Ftutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-teams-app-test-tool.yml&documentVersionIndependentId=c3a2f604-cd95-7c37-210d-699e7cccec5e&platformId=ff9aea10-b1b0-f61e-abba-675eaefa2144&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams)
+
+## Complete challenge
+
+Did you come up with output like this?
+
+:::image type="content" source="~/assets/images/toolkit-v2/debug/test-tool.png" lightbox="~/assets/images/toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
+
+Congratulations! You've successfully created an AI chat bot app. Now, you've learned to debug your AI chat bot app in Agents Playground.
 
 > [!div class="nextstepaction"]
 > [Back to Microsoft 365 Agents Playground](debug-your-agents-playground.md)
