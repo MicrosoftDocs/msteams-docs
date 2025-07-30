@@ -249,7 +249,7 @@ This behavior is similar to the prefetch capability in the legacy Teams SSO mode
 * Enable single sign-on (SSO) across nested apps without repeated sign-ins
 
 > [!NOTE]
-> Token prefetching is currently supported only in the Microsoft Teams client.
+> Token prefetching is currently supported only in the Microsoft Teams web and desktop clients.
 
 ### Best practices
 
