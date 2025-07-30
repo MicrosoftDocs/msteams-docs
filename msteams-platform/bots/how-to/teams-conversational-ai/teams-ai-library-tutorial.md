@@ -25,7 +25,7 @@ In this tutorial, you'll learn:
 ## Prerequisites
 
 <details>
-<summary><b>Ensure you install the following tools for building and deploying your apps:</b></summary>
+<summary><b>Ensure you install the following tools for building and deploying your apps.</b></summary>
 
 | Install | For using... |
 | --- | --- |
@@ -41,10 +41,10 @@ In this tutorial, you'll learn:
 
 </details>
 
-## Create your custom engine agent using Agents Toolkit
+## Create your custom engine agent
 
 <details>
-<summary><b>Use Agents Toolkit to create a new custom engine agent</b></summary>
+<summary><b>Use Agents Toolkit to create a new custom engine agent.</b></summary>
 
 1. Go to **Visual Studio Code**.
 
@@ -172,7 +172,7 @@ After you create your custom engine agent, let's configure it.
 ## Complete challenge
 
 <details>
-<summary><b>Test your custom engine agent</b></summary>
+<summary><b>Test your custom engine agent.</b></summary>
 
 In Agents Playground, ask questions related to your document and chat with your custom engine agent to learn more about your data.
 
