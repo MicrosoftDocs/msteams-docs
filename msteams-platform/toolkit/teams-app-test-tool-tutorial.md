@@ -125,6 +125,8 @@ After you finish scaffolding, explore the project directories and files in the *
 
 [Back to top](#debug-your-ai-chat-bot-using-microsoft-365-agents-playground)
 
+</details>
+
 ## Build and run your AI chat bot app
 
 <details>
