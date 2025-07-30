@@ -25,7 +25,8 @@ This step-by-step guide helps you to build an AI chat bot using Agents Toolkit a
 
 ## Prerequisites
 
-Ensure you install the following tools for building and deploying your apps.
+<details>
+<summary><b>Ensure you install the following tools for building and deploying your apps.</b></summary>
 
 | Install | For using... |
 | --- | --- |
@@ -35,9 +36,12 @@ Ensure you install the following tools for building and deploying your apps.
 | [OpenAI](https://openai.com/api/) or  [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
 | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 
+</details>
+
 ## Create project workspace for your AI chat bot app
 
-Let's create your AI chat bot app.
+<details>
+<summary><b>Let's create your AI chat bot app.</b></summary>
 
 The bot capability of a Teams app creates a chatbot or a conversational bot. It communicates with a web service, facilitating the use of its services. The bot can execute simple, automated tasks such as delivering customer service. You can get weather forecast, make reservations, or any other service offered using a conversational bot.
 
@@ -119,9 +123,12 @@ After you finish scaffolding, explore the project directories and files in the *
 |`m365agents.local.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging.|
 |`m365agents.playground.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging in Test Tool.|
 
+[Back to top](#debug-your-ai-chat-bot-using-microsoft-365-agents-playground)
+
 ## Build and run your AI chat bot app
 
-After you set up your project workspace with Agents Toolkit, build your AI chat bot project.
+<details>
+<summary><b>After you set up your project workspace with Agents Toolkit, build your AI chat bot project.</b></summary>
 
 ### Create Open AI key and endpoint for your AI chat bot
 
@@ -245,9 +252,14 @@ You've successfully created key and endpoint for your AI chat bot.
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+Open+AI+key+and+endpoint+for+your+AI+chat+bot&author=surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fteams-app-test-tool-tutorial%23debug-and-run-your-ai-chat-bot-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fsbs-teams-test-app-tool-debug-ai-chatbot%2Fmsteams-platform%2Ftoolkit%2Fteams-app-test-tool-tutorial.md&documentVersionIndependentId=f9d53e1b-f03a-4ec3-07b7-f79b8ec9cc40&platformId=6855fa3b-30da-5749-8371-2461b1c0ec29&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams)
 
+[Back to top](#debug-your-ai-chat-bot-using-microsoft-365-agents-playground)
+
 ## Activity triggers
 
-You can mock an activity in Agents Playground using activity triggers. There are two types of activity triggers:
+<details>
+<summary><b>You can mock an activity in Agents Playground using activity triggers.</b></summary>
+
+There are two types of activity triggers:
 
 1. [Predefined activity triggers](#predefined-activity-triggers)
 1. [Custom activity triggers](#custom-activity-triggers)
@@ -320,13 +332,19 @@ You can use **Custom activity** to customize activity triggers, for example, `re
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+Open+AI+key+and+endpoint+for+your+AI+chat+bot&author=surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fteams-app-test-tool-tutorial%23custom-activity-triggers&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fsbs-teams-test-app-tool-debug-ai-chatbot%2Fmsteams-platform%2Ftoolkit%2Fteams-app-test-tool-tutorial.md&documentVersionIndependentId=f9d53e1b-f03a-4ec3-07b7-f79b8ec9cc40&platformId=6855fa3b-30da-5749-8371-2461b1c0ec29&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams)
 
+[Back to top](#debug-your-ai-chat-bot-using-microsoft-365-agents-playground)
+
 ## Complete challenge
 
+<details>
+<summary><b>Test your app</b></summary>
 Did you come up with output like this?
 
 :::image type="content" source="~/assets/images/toolkit-v2/debug/test-tool.png" lightbox="~/assets/images/toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
 
 Congratulations! You've successfully created an AI chat bot app. Now, you've learned to debug your AI chat bot app in Agents Playground.
+
+</details>
 
 > [!div class="nextstepaction"]
 > [Back to Microsoft 365 Agents Playground](debug-your-agents-playground.md)
