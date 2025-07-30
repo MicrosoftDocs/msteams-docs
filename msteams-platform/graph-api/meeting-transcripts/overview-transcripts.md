@@ -55,7 +55,7 @@ For more information about the meeting-specific RSC permissions, see [RSC permis
 
 ### Get notified when a transcript or recording is available
 
-After you configure the permissions, configure your app to receive [change notifications](/graph/teams-changenotifications-callrecording-and-calltranscript) for transcripts and recordings when available or all relevant meeting events. These meetings can either be pre-scheduled meetings (see [online meetings](https://learn.microsoft.com/en-us/graph/api/resources/onlinemeeting?view=graph-rest-1.0)), or spontaneous meetings and one-on-one calls (see [ad-hoc calls](https://review.learn.microsoft.com/en-us/graph/api/resources/adhoccall?view=graph-rest-beta&branch=pr-en-us-26954)). <br>
+After you configure the permissions, configure your app to receive [change notifications](/graph/teams-changenotifications-callrecording-and-calltranscript) for transcripts and recordings when available or all relevant meeting events. These meetings can either be pre-scheduled meetings (see [online meetings](https://learn.microsoft.com/en-us/graph/api/resources/onlinemeeting?view=graph-rest-1.0)), or spontaneous meetings and one-on-one calls (see [ad-hoc calls](/graph/api/resources/adhoccall)). <br>
  Notifications contain meeting ID and organizer ID that help in accessing transcript content and recording. Your app can fetch the transcript and recording for a meeting when it's generated after it ends. The content of the transcript is available as `.vtt` file. The recording of the meeting is available as an `.mp4` file.
 
 You can use the following types of change notification for your app:
