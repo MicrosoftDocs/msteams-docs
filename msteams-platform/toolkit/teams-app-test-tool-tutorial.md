@@ -159,5 +159,91 @@ You've successfully created key and endpoint for your AI chat bot.
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+Open+AI+key+and+endpoint+for+your+AI+chat+bot&author=surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-app-test-tool%3Ftutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-teams-app-test-tool.yml%23&documentVersionIndependentId=c3a2f604-cd95-7c37-210d-699e7cccec5e&platformId=ff9aea10-b1b0-f61e-abba-675eaefa2144&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams)
 
+#### Get Azure Open AI keys and endpoint
+
+1. Select **Go to resources**.
+
+    :::image type="content" source="~/assets/images/agents-playground/deployment-azure.png" alt-text="Screenshot shows you the deployment of the Azure open AI.":::
+
+1. Select **Keys and Endpoint** from the left pane and copy the **KEY** and **Endpoint**. You can copy either **KEY 1** or **KEY 2**.
+
+    :::image type="content" source="~/assets/images/agents-playground/key-endpoints.png" lightbox="~/assets/images/agents-playground/key-endpoints.png" alt-text="Screenshot shows the keys and endpoints.":::
+
+    Save the **KEY** and **Endpoint** for further use.
+
+1. Select **Model deployments** from the left pane and select **Manage Deployments**.
+
+    :::image type="content" source="~/assets/images/agents-playground/model-deployments.png" lightbox="~/assets/images/agents-playground/model-deployments.png" alt-text="Screenshot shows the model deployments for Azure open AI.":::
+
+    The Azure Open AI Studio window appears.
+
+1. Select **Deployments** from the left pane and select **+ Create new deployments**.
+
+    :::image type="content" source="~/assets/images/agents-playground/ai-studio.png" lightbox="~/assets/images/agents-playground/ai-studio.png" alt-text="Screenshot shows the model deployments for Azure open AI.":::
+
+1. Select the following details:
+
+1. Select **gpt-35-turbo** from the **Select a model** dropdown list.
+
+    > [!NOTE]
+    > Only **gpt-35-turbo** model is supported for the AI chat bot.
+
+1. Select **0301 (Default)** from the **Model version** dropdown list.
+1. Enter **Deployment name** and select **Create**.
+
+    :::image type="content" source="~/assets/images/agents-playground/model-version.png" lightbox="~/assets/images/agents-playground/model-version.png" alt-text="Screenshot shows the model and version for Azure open AI deployment.":::
+
+1. Copy and save the **Deployment name** for further use.
+
+    :::image type="content" source="~/assets/images/agents-playground/copy-deployment.png" lightbox="~/assets/images/agents-playground/copy-deployment.png" alt-text="Screenshot shows the deployment name for Azure open AI deployment.":::
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Get+Azure+Open+AI+keys+and+endpoint&author=surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-app-test-tool%3Ftutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-teams-app-test-tool.yml%23&documentVersionIndependentId=c3a2f604-cd95-7c37-210d-699e7cccec5e&platformId=ff9aea10-b1b0-f61e-abba-675eaefa2144&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams)
+
+### Update Azure Open AI key and endpoints
+
+1. Open your project in Visual Studio Code.
+
+1. Under **EXPLORER**, go to **env** > **.env.playground.user** file.
+
+1. Enter your **SECRET_AZURE_OPENAI_API_KEY** and **SECRET_AZURE_OPENAI_ENDPOINT**.
+
+    ```text
+    ...
+    SECRET_AZURE_OPENAI_API_KEY=<azure-openai-api-key>
+    SECRET_AZURE_OPENAI_ENDPOINT=<azure-openai-endpoint>
+    ```
+
+1. Go to **src** > **app.js** file.
+
+1. Comment the `OpenAI` code and uncomment the `Azure OpenAI` code.
+
+1. Enter your Azure Open AI deployment name in `azureDefaultDeployment`.
+
+    ```JavaScript
+    ...
+    // Use OpenAI
+    // apiKey: config.openAIKey,
+    // defaultModel: "gpt-3.5-turbo",
+
+    azureApiKey: config.azureOpenAIKey,
+    azureDefaultDeployment: "gpt-35-turbo",
+    azureEndpoint: config.azureOpenAIEndpoint,
+    ...
+    ```
+
+### Debug and run your AI chat bot app
+
+1. From the left pane, select **RUN and DEBUG** (Ctrl+Shift+D), and then select **Debug in Agents Playground** from the dropdown list.
+
+    :::image type="content" source="~/assets/images/toolkit-v2/debug/select-debug-in-test-tool.png" lightbox="~/assets/images/toolkit-v2/debug/select-debug-in-test-tool.png" alt-text="Screenshot shows the option to select debug in Agents Playground.":::
+
+1. Agents Playground opens your AI chat bot in a webpage.
+
+    :::image type="content" source="~/assets/images/toolkit-v2/debug/test-tool.png" lightbox="~/assets/images/toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Debug+and+run+your+AI+chat+bot+app&author=surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-teams-app-test-tool%3Ftutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-teams-app-test-tool.yml%23&documentVersionIndependentId=c3a2f604-cd95-7c37-210d-699e7cccec5e&platformId=ff9aea10-b1b0-f61e-abba-675eaefa2144&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2Amsteams)
+
 > [!div class="nextstepaction"]
 > [Back to Microsoft 365 Agents Playground](debug-your-agents-playground.md)
