@@ -103,7 +103,7 @@ Now, you've successfully created your AI chat bot project workspace.
 
 After you finish scaffolding, explore the project directories and files in the **EXPLORER** section of the Visual Studio Code.
 
-:::image type="content" source="../msteams-platform/assets/images/agents-playground/source-code.png" alt-text="Screenshot shows the Teams Toolkit sample bot folder Structure.":::
+:::image type="content" source="../assets/images/agents-playground/source-code.png" alt-text="Screenshot shows the Teams Toolkit sample bot folder Structure.":::
 
 | Folder or file name | Contents |
 | --- | --- |
