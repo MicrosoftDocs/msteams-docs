@@ -11,11 +11,12 @@ ms.author: surbhigupta
 
 This tutorial shows how to create a custom engine agent using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) with OpenAI.
 
-In this tutorial, you'll learn:
+In this tutorial, learn:
 
 * How to create a new custom engine agent with Agents Toolkit.
-* How to interact with your LLMs and data.
-* The directory structure of your custom engine agent.
+* How to interact with your Large Language Models (LLMs) and data.
+* How the project workspace of your custom engine agent is structured.
+* How to configure your custom engine agent and test it in Agent Playground
 
 > [!NOTE]
 >
@@ -30,10 +31,10 @@ In this tutorial, you'll learn:
 | Install | For using... |
 | --- | --- |
 | [Agents Toolkit](~/toolkit/install-Teams-Toolkit.md) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
-| [Node.js and NPM](https://nodejs.org/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
+| [Node.js and Node Package Manager (NPM)](https://nodejs.org/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
 | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
-| [OpenAI](https://platform.openai.com/docs/quickstart/build-your-application) |First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Microsoft Azure, you must create an [Azure OpenAI service](/azure/ai-services/openai/how-to/create-resource?pivots=web-portal) before you begin. |
+| [OpenAI](https://platform.openai.com/docs/quickstart/build-your-application) |First create your OpenAI API key to use OpenAI's  Generative Pre-trained Transformer (GPT). If you want to host your app or access resources in Microsoft Azure, you must create an [Azure OpenAI service](/azure/ai-services/openai/how-to/create-resource?pivots=web-portal) before you begin. |
 
 [!INCLUDE [custom-engine-agent](../../../includes/custom-engine-agent.md)]
 
@@ -113,7 +114,7 @@ Have a look at what's inside this custom engine agent > Basic AI Chatbot templat
 
 | Folder name | Contents |
 | --- | --- |
-| `.vscode` | VS Code files for debugging. |
+| `.vscode` | Visual Studio Code files for debugging. |
 | `appPackage` | Templates for the Teams application manifest. |
 | `env` | Name or value pairs are stored in environment files and used by m365agents.yml to customize the provisioning and deployment rules. |
 | `infra` | Templates for provisioning Azure resources. |
