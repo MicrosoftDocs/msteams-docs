@@ -338,6 +338,8 @@ You can use **Custom activity** to customize activity triggers, for example, `re
 
 [Back to top](#debug-your-ai-chat-bot-using-microsoft-365-agents-playground)
 
+</details>
+
 ## Complete challenge
 
 <details>
