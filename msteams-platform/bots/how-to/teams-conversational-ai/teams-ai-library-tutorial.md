@@ -106,7 +106,7 @@ After your app is created, Agents Toolkit displays the following message:
 :::image type="content" source="../../../assets/images/toolkit-v2/first-bot/preview-project.png" alt-text="Screenshot shows the message that the feature is successfully created.":::
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20your%20custom%20engine%20agent&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fteams-conversational-ai%2Fteams-ai-library-tutorial%23create-your-custom-engine-agent&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fsbs-custom-engine-agent%2Fmsteams-platform%2Fbots%2Fhow-to%2Fteams-conversational-ai%2Fteams-ai-library-tutorial.md&documentVersionIndependentId=fe0b5835-9bcb-a24b-8bad-78793026a79e&platformId=11f075eb-fd32-b7d3-211f-f629d62cb5b0)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20your%20custom%20engine%20agent&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fteams-conversational-ai%2Fteams-ai-library-tutorial%23create-your-custom-engine-agent&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fsbs-custom-engine-agent%2Fmsteams-platform%2Fbots%2Fhow-to%2Fteams-conversational-ai%2Fteams-ai-library-tutorial.md&documentVersionIndependentId=30520f47-60d6-893d-3020-e23a933334b2&platformId=f32e246a-131e-6b79-26c8-fd7f79709de2)
 
 ### Take a tour of the source code
 
@@ -164,7 +164,7 @@ After you create your custom engine agent, let's configure it.
 1. Custom engine agent runs within Agents Playground, which opens in your browser.
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20your%20custom%20engine%20agent&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fteams-conversational-ai%2Fteams-ai-library-tutorial%23configure-and-debug-your-custom-engine-agent&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fsbs-custom-engine-agent%2Fmsteams-platform%2Fbots%2Fhow-to%2Fteams-conversational-ai%2Fteams-ai-library-tutorial.md&documentVersionIndependentId=fe0b5835-9bcb-a24b-8bad-78793026a79e&platformId=11f075eb-fd32-b7d3-211f-f629d62cb5b0)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20your%20custom%20engine%20agent&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fteams-conversational-ai%2Fteams-ai-library-tutorial%23configure-and-debug-your-custom-engine-agent&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fsbs-custom-engine-agent%2Fmsteams-platform%2Fbots%2Fhow-to%2Fteams-conversational-ai%2Fteams-ai-library-tutorial.md&documentVersionIndependentId=30520f47-60d6-893d-3020-e23a933334b2&platformId=f32e246a-131e-6b79-26c8-fd7f79709de2)
 
 [Back to top](#build-a-custom-engine-agent)
 
