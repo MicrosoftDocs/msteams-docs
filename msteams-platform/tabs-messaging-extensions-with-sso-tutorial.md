@@ -3,18 +3,16 @@ description: Tutorial for enabling SSO for Microsoft Teams Tabs and Message Exte
 
 # SSO for Tabs and Message Extension
 
-The  Microsoft Entra single sign-on (Microsoft Entra SSO) helps to authenticate users in Teams. 
+The  Microsoft Entra single sign-on (Microsoft Entra SSO) helps to authenticate users in Teams.
 **Key aspects of Microsoft Entra SSO**:
 
-
 * Allows the user to sign in automatically after the first sign in.
-    * Allows the user to sign in to other devices without entering credentials again.
-    * Obtains token for the signed in user.
+  * Allows the user to sign in to other devices without entering credentials again.
+  * Obtains token for the signed in user.
 
    This step-by-step guide helps you to create tabs and message extensions enabling Microsoft Entra SSO authentication. You'll see the following output:
 
 ![Screenshot of the tab and message extension with SSO authentication output after you have successfully completed the step-by-step guide](.msteams-platforms/assets/images/Tab-ME-SSO/hello-megan-profile245-1.png)
-
 
 ## Prerequisites
 
@@ -34,18 +32,18 @@ The  Microsoft Entra single sign-on (Microsoft Entra SSO) helps to authenticate 
 2. Select **Code**.
 3. From the dropdown menu, select Open with GitHub Desktop.
 screenshot
-4. Select Clone.                                                           
+4. Select Clone.
 [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Set+up+local+environment)
 
 ## Register Microsoft Entra App
 
 The following steps help you to create and register your bot in Azure portal:
 
-- Create and register your Azure app.
-- Create client secret to enable SSO authentication of the bot.
-- Add Teams channel to deploy the bot.
-- Create a tunnel to your web server's endpoints using dev tunnel (recommended) or ngrok.
-- Add messaging endpoint to the dev tunnel that you created.
+* Create and register your Azure app.
+* Create client secret to enable SSO authentication of the bot.
+* Add Teams channel to deploy the bot.
+* Create a tunnel to your web server's endpoints using dev tunnel (recommended) or ngrok.
+* Add messaging endpoint to the dev tunnel that you created.
 
 > [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
 
@@ -81,9 +79,7 @@ Your app is registered in Microsoft Entra ID. The app overview page appears.
 
 ![Screenshot shows the app registration overview page](../../assets/images/include-files/app-registration-overview.png)
 
-
  **Note:** Save the app ID from **Application (client) ID** and **Directory (tenant) ID** for further use.
-
 
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+App+registration)
 
@@ -92,13 +88,13 @@ Your app is registered in Microsoft Entra ID. The app overview page appears.
 #### [Dev Tunnel](#tab/dev)
 
 [!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
-      
+
 > [!div class="nextstepaction"]
-> 
+>
 [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+tunnel+using+dev+tunnel)
 
 #### [Ngrok](#tab/ngrok)
-      
+
 [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
 
 > [!div class="nextstepaction"]
@@ -127,8 +123,9 @@ Your app is registered in Microsoft Entra ID. The app overview page appears.
    ![Screenshot show the option to select permissions.](../msteams-platform/assets/images/teams-file-upload-bot/select-api-permission.png)
 
 > **Note:**
-> - If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
-> - Users need to consent to the API permissions only if the Microsoft Entra app is registered in a different tenant.
+>
+> * If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
+> * Users need to consent to the API permissions only if the Microsoft Entra app is registered in a different tenant.
 
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+API+permissions)
 
@@ -181,14 +178,14 @@ Your app is registered in Microsoft Entra ID. The app overview page appears.
 2. Open the **appsettings.json** file in Visual Studio.
 
 3. Update the following information:
-   - Replace `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
-   - Replace `"MicrosoftAppPassword"` to your bot's client secrets **Value**.
-   - Replace `"SiteUrl"` to your ngrok URL.
-   - Replace `"ConnectionName"` to the name of OAuth connection setting.
-   - Replace `"TenantId"` to the tenant ID of the tenant where the app is used.
-   - Replace `"ClientId"` to your bot's **Microsoft App ID**.
-   - Replace `"AppSecret"` to your bot's client secrets **Value**.
-   - Replace `"ApplicationIdURI"` in the form of `api://*******.ngrok.io/botid-{AppID}`.
+   * Replace `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
+   * Replace `"MicrosoftAppPassword"` to your bot's client secrets **Value**.
+   * Replace `"SiteUrl"` to your ngrok URL.
+   * Replace `"ConnectionName"` to the name of OAuth connection setting.
+   * Replace `"TenantId"` to the tenant ID of the tenant where the app is used.
+   * Replace `"ClientId"` to your bot's **Microsoft App ID**.
+   * Replace `"AppSecret"` to your bot's client secrets **Value**.
+   * Replace `"ApplicationIdURI"` in the form of `api://*******.ngrok.io/botid-{AppID}`.
 
    ![Screenshot of the appsettings.json file with the values entered highlighted in red.](./assets/images/Tab-ME-SSO/app-setting.png)
 
@@ -201,12 +198,12 @@ Your app is registered in Microsoft Entra ID. The app overview page appears.
    ![Screenshot of Manifest folder with the manifest file highlighted in red.](./assets/images/Tab-ME-SSO/folder-manifest-1.png)
 
 2. Open the **manifest.json** file in Visual Studio and make the following changes:
-   - Replace `DOMAIN-NAME` with your ngrok URL.
-   - Replace `YOUR-MICROSOFT-APP-ID` with your bot's **Microsoft App ID**.
+   * Replace `DOMAIN-NAME` with your ngrok URL.
+   * Replace `YOUR-MICROSOFT-APP-ID` with your bot's **Microsoft App ID**.
 
      > **Note:** Depending on the scenario `[YOUR-MICROSOFT-APP-ID]` and `[DOMAIN-NAME]` may occur multiple times.
 
-   - Replace `resource` as `api://*******.ngrok.io/botid-{AppID}`.
+   * Replace `resource` as `api://*******.ngrok.io/botid-{AppID}`.
 
    ![Screenshot of the manifest.json file with the values entered highlighted in red.](~/assets/images/Tab-ME-SSO/vs-manifest.png)
 
@@ -257,9 +254,9 @@ dotnet run
 
 1. In your cloned repository, go to **csharp** > **App SSO Sample** > **TeamsAppManifest**.
 2. Create a .zip file with the following files that are present in the **Manifest** folder:
-   - manifest.json
-   - icon-outline.png
-   - icon-color.png
+   * manifest.json
+   * icon-outline.png
+   * icon-color.png
 
    ![Screenshot of Manifest folder with tab manifest zip folder highlighted in red.](./assets/images/Tab-ME-SSO/upload-tab-me-sso-1.png)
 
@@ -338,12 +335,12 @@ You've completed the tutorial to get started with SSO for tab and message extens
 
 ### Set up Manifest File
 
-- Replace `DOMAIN-NAME` with your ngrok URL.
-- Replace `YOUR-MICROSOFT-APP-ID` with your bot's **Microsoft App ID**.
+* Replace `DOMAIN-NAME` with your ngrok URL.
+* Replace `YOUR-MICROSOFT-APP-ID` with your bot's **Microsoft App ID**.
 
 > **Note:** Depending on the scenario `[YOUR-MICROSOFT-APP-ID]` and `[DOMAIN-NAME]` may occur multiple times.
 
-- Replace `resource` as `api://*******.ngrok.io/botid-{AppID}`.
+* Replace `resource` as `api://*******.ngrok.io/botid-{AppID}`.
 
 ![Screenshot of the manifest.json file with the values entered highlighted in red.](~/assets/images/Tab-ME-SSO/vs-manifest.png)
 
@@ -396,9 +393,9 @@ dotnet run
 
 1. In your cloned repository, go to **csharp** > **App SSO Sample** > **TeamsAppManifest**.
 2. Create a .zip file with the following files that are present in the **Manifest** folder:
-   - manifest.json
-   - icon-outline.png
-   - icon-color.png
+   * manifest.json
+   * icon-outline.png
+   * icon-color.png
 
    ![Screenshot of Manifest folder with tab manifest zip folder highlighted in red.](./assets/images/Tab-ME-SSO/upload-tab-me-sso-1.png)
 
