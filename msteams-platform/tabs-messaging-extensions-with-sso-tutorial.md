@@ -1,4 +1,5 @@
-ms.date: 07/31/2025
+# ms.date: 07/31/2025
+
 description: Tutorial for enabling SSO for Microsoft Teams Tabs and Message Extensions
 
 # SSO for Tabs and Message Extension
