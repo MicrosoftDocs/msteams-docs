@@ -1,4 +1,3 @@
----
 title: Add SSO to Tab & Message Extension App
 description: In this module, learn how to set up Microsoft Entra single sign-on (SSO) authentication for tabs and message extensions.
 ms.topic: conceptual
@@ -6,6 +5,7 @@ ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.owner: angovil
 ms.date:30/03/72025
+
 ---
 # SSO for Tabs and Message Extension
 
