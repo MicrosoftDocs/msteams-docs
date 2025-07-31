@@ -337,13 +337,21 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
 * Your agent must have nodes defined as actions in the app manifest. All agents must have a core use case that's served through API actions. [*Must fix*]
 
-* For capabilities such as Websearch, Graphic Art, or Code Interpreter, the `Instruction` field must include details on how to use the capabilities within the context of the agent. [*Must fix*]
+* For capabilities such as websearch, graphic art, or code interpreter, the `Instruction` field must include details on how to use the capabilities within the context of the agent. [*Must fix*]
 
-* Leave the nodes for Email, Teams Messages, Teams Meeting, ODSP, and Graph connector capabilities empty in the Declarative Agent manifest [Must-fix].
+* To grant multi-tenant agent access to all tenant data for email, Teams messages, Teams Meeting, ODSP, and Graph connector capabilities, leave the nodes for them empty in the declarative agent. [*Must fix*]
 
-  * This grants the multi-tenant agent access to all tenant data for these capabilities.
+* The Dataverse, file embedding, sensitivity label, and scenario model capabilities are restricted to be used in the LOB scenario only. [*Must fix*]
 
-* The ‘Dataverse’, ‘File Embedding’, ‘Sensitivity Label’ and ‘Scenario Model’ capabilities are restricted to be used in LOB scenario only [Must-fix].
+* Adhere to these guidelines when using the `action.insertImage` custom action or action set [*Must fix*]:
+
+  * The button's title should indicate that an image will be inserted into the canvas.
+
+  * Ensure that the intended image gets inserted on clicking the button
+
+  * Ensure the fallback is set to ‘Drop’ to guarantee that the Adaptive card functions in all compatible clients.
+
+d) Support insertion for all images in the Adaptive card.
 
 <!--
 * Nodes for Graph connector in the declarative agent manifest must be left blank to ground the agent in all available Graph connectors of a tenant. [*Must fix*]
@@ -358,6 +366,8 @@ A custom engine agent is a conversational Teams bot that must meet the following
 -->
 
 [Back to top](#validation-guidelines-for-agents)
+
+## Duplicate agents
 
 ## Graceful error handling
 
