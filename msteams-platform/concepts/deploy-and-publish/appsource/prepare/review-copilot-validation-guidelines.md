@@ -333,12 +333,19 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
 [Back to top](#validation-guidelines-for-agents)
 
-## Agent must have Action or knowledge source
+## Action or knowledge source
 
 * Your agent must have nodes defined as actions in the app manifest. All agents must have a core use case that's served through API actions. [*Must fix*]
 
 * For capabilities such as Websearch, Graphic Art, or Code Interpreter, the `Instruction` field must include details on how to use the capabilities within the context of the agent. [*Must fix*]
 
+* Leave the nodes for Email, Teams Messages, Teams Meeting, ODSP, and Graph connector capabilities empty in the Declarative Agent manifest [Must-fix].
+
+  * This grants the multi-tenant agent access to all tenant data for these capabilities.
+
+* The ‘Dataverse’, ‘File Embedding’, ‘Sensitivity Label’ and ‘Scenario Model’ capabilities are restricted to be used in LOB scenario only [Must-fix].
+
+<!--
 * Nodes for Graph connector in the declarative agent manifest must be left blank to ground the agent in all available Graph connectors of a tenant. [*Must fix*]
 
    **Pass example**: The Graph connector node is empty. <br>
@@ -348,6 +355,7 @@ A custom engine agent is a conversational Teams bot that must meet the following
     **Fail example**: The Graph connector node isn't empty and has connections hardcoded. <br>
 
     :::image type="content" source="../../../../assets/images/Copilot/da-fail-scenario-graph-connector.png" alt-text="Screenshot of the fail scenario.":::
+-->
 
 [Back to top](#validation-guidelines-for-agents)
 
