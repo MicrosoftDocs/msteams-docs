@@ -6,7 +6,7 @@ author: v-preethah
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.owner: ginobuzz
-ms.date: 02/25/2025
+ms.date: 07/31/2025
 ms.collection: ce-skilling-ai-copilot
 ---
 
