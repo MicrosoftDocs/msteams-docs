@@ -306,9 +306,9 @@ For action scenarios, agents must share user disclosure and seek user confirmati
 
    | Command description | Consequential function? | Expected value for `isConsequential` flag |
    | --- | --- | --- |
-   | Returns a list of quest recommendations based on the user's interest. If there is no quote recommendations, then create a new one. | Yes | True |
+   | Returns a list of quest recommendations based on the user's interest. If there are no quote recommendations, then create a new one. | Yes | True |
    | Returns a list of meditation recommendations based on the user's preferences. | No | False or True |
-   | Returns a list of quest recommendations based on the user's interest. If there is no quote recommendations, then create a new one. | Yes | True |
+   | Returns a list of quest recommendations based on the user's interest. If there are no quote recommendations, then create a new one. | Yes | True |
 
 [Back to top](#validation-guidelines-for-agents)
 
@@ -325,7 +325,7 @@ A custom engine agent is a conversational Teams bot that must meet the following
    1. A [feedback button](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=after%2Cbotmessage#feedback-buttons) that enables a user to provide positive or negative feedback to the agent's messages. [*Must fix*]
    1. A [citation](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=after%2Cbotmessage#citations) that enables a user to refer to the source of the bot message through in-text citations and references. [*Must fix*]
    1. A [sensitivity label](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=after%2Cbotmessage#sensitivity-label) that enables a user to understand the confidentiality of the bot message. [*Good-to-fix*]
-   1. An agent must stream it’s responses to the user. [*Must fix*]
+   1. An agent must stream its responses to the user. [*Must fix*]
    1. An agent must include at least three prompt starters or a welcome message. [*Must fix*]
 
       For more information, see [bot welcome messages](teams-store-validation-guidelines.md#bots-1).
@@ -337,7 +337,7 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
 * Your agent must have nodes defined as actions in the app manifest. All agents must have a core use case that's served through API actions. [*Must fix*]
 
-* For capabilities such as websearch, graphic art, or code interpreter, the `Instruction` field must include details on how to use the capabilities within the context of the agent. [*Must fix*]
+* For capabilities such as web search, graphic art, or code interpreter, the `Instruction` field must include details on how to use the capabilities within the context of the agent. [*Must fix*]
 
 * To grant multi-tenant agent access to all tenant data for email, Teams messages, Teams Meeting, ODSP, and Graph connector capabilities, leave the nodes for them empty in the declarative agent. [*Must fix*]
 
