@@ -250,7 +250,7 @@ dotnet run
 
 ---
 
-## Upload SSO App to Teams
+## Upload SSO App to Teams (Manual Steps)
 
 1. In your cloned repository, go to **csharp** > **App SSO Sample** > **TeamsAppManifest**.
 2. Create a .zip file with the following files that are present in the **Manifest** folder:
@@ -323,7 +323,7 @@ dotnet run
 
 ---
 
-## Complete Challenge
+## Complete Challenge (Final Step)
 
 Did you come up with output like this?
 
@@ -346,7 +346,7 @@ You've completed the tutorial to get started with SSO for tab and message extens
 
 ---
 
-## Build and Run the Service
+## Build and Run the Service Using Visual Studio
 
 To build and run the service, use Visual Studio or Command line.
 
