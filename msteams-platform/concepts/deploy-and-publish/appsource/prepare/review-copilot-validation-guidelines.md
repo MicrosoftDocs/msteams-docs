@@ -343,15 +343,15 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
 * The Dataverse, file embedding, sensitivity label, and scenario model capabilities are restricted to be used in the LOB scenario only. [*Must fix*]
 
-* Adhere to these guidelines when using the `action.insertImage` custom action or action set [*Must fix*]:
+* Adhere to the following guidelines when using the `action.insertImage` custom action or action set [*Must fix*]:
 
-  * The button's title should indicate that an image will be inserted into the canvas.
+  * The button's title must indicate that an image will be inserted into the canvas.
 
   * Ensure that the intended image gets inserted on clicking the button
 
-  * Ensure the fallback is set to ‘Drop’ to guarantee that the Adaptive card functions in all compatible clients.
+  * Ensure the fallback is set to **Drop** to guarantee that the Adaptive Card functions in all compatible clients.
 
-d) Support insertion for all images in the Adaptive card.
+  * Support insertion for all images in the Adaptive Card.
 
 <!--
 * Nodes for Graph connector in the declarative agent manifest must be left blank to ground the agent in all available Graph connectors of a tenant. [*Must fix*]
@@ -368,6 +368,16 @@ d) Support insertion for all images in the Adaptive card.
 [Back to top](#validation-guidelines-for-agents)
 
 ## Duplicate agents
+
+1. Multiple agents for the same product can be published separately but should have different functionality
+
+2. An agent can be published separately from the main app but should have a clear justification for the same.
+
+3. To avoid confusion and ensure clarity for end users:
+
+a) The Name, Short Description, and Long Description must differ meaningfully from those of any existing apps.
+
+b) The Short Description and Long Description must clearly communicate the app’s unique value proposition and how it differs from related submissions.
 
 ## Graceful error handling
 
