@@ -369,15 +369,15 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
 ## Duplicate agents
 
-1. Multiple agents for the same product can be published separately but should have different functionality
+* Multiple agents for the same product can be published separately but should have different functionality
 
-2. An agent can be published separately from the main app but should have a clear justification for the same.
+* An agent can be published separately from the main app but should have a clear justification for the same.
 
-3. To avoid confusion and ensure clarity for end users:
+* To avoid confusion and ensure clarity for end users:
 
-a) The Name, Short Description, and Long Description must differ meaningfully from those of any existing apps.
+  * The Name, Short Description, and Long Description must differ meaningfully from those of any existing apps.
 
-b) The Short Description and Long Description must clearly communicate the app’s unique value proposition and how it differs from related submissions.
+  * The Short Description and Long Description must clearly communicate the app’s unique value proposition and how it differs from related submissions.
 
 ## Graceful error handling
 
