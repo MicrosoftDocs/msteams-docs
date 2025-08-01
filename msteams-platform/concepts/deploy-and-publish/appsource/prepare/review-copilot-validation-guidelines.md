@@ -381,7 +381,7 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
 ## Agent response
 
-1. The Declarative agent must me functional and provide accurate responses to the users. To ensure the same, atleast one corresponding prompt in one of the below fields must be present for each and every function of the declarative agent: [Must fix]
+1. The Declarative agent must be functional and provide accurate responses to the users. To ensure the same, atleast one corresponding prompt in one of the below fields must be present for each and every function of the declarative agent: [Must fix]
     1. Sample prompts/conversation starters
     2. Instructions field in manifest
     3. Test notes
