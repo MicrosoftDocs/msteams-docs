@@ -70,7 +70,7 @@ Apps must be consistent with responsible [AI checks](teams-store-validation-guid
       :::image type="icon" source="../../../../assets/icons/action-knowledge-source.png" link="#action-or-knowledge-source" border="false":::
    :::column-end:::
    :::column span="":::
-      :::image type="icon" source="../../../../assets/icons/duplicate-agents.png" link="#action-or-knowledge-source" border="false":::
+      :::image type="icon" source="../../../../assets/icons/duplicate-agents.png" link="#duplicate-agents" border="false":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/graceful-error-handling.png" link="#graceful-error-handling" border="false":::
