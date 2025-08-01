@@ -381,22 +381,19 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
 ## Agent response
 
-1. The declarative agent must be functional and provide accurate responses to the users. To ensure the same, atleast one corresponding prompt in one of the below fields must be present for each and every function of the declarative agent: [*Must fix*]
+* The declarative agent must be functional and provide accurate responses to the users. To ensure the same, atleast one corresponding prompt in one of the below fields must be present for each and every function of the declarative agent: [*Must fix*]
 
-    1. Sample prompts or conversation starters
-    2. Instructions field in manifest
-    3. Test notes
+  * Sample prompts or conversation starters
+  * Instructions field in manifest
+  * Test notes
 
-2. All search results in the Message Extension capability must include a relevant Title and Subtitle, which will also appear in citations of your agent [*Must fix*].
+* All search results in the message extension capability must include a relevant title and subtitle, which will also appear in citations of your agent [*Must fix*].
 
-    * When the agent is provided with the tracking ID, it must return the details of the performed action or the item details on which the action has been executed. [*Must fix*]
+  * When the agent is provided with the tracking ID, it must return details of the performed action or the item details on which the action has been executed. [*Must fix*]
 
-3. A confirmation of the completion of the action must be shared by the agent, which should include the details of
-the action, way forward, and should have a source link or a tracking id for user to verify the action [*Must fix*]
+* A confirmation of the completion of the action must be shared by the agent, which should include the details of the action, way forward, and should have a source link or a tracking ID for the user to verify the action [*Must fix*]
 
-All search results in the Message Extension capability must include a relevant Title and Subtitle, which will also appear in citations of your agent [*Must fix*].
-
-4. Agents sending multiple messages must make sure that the messages are not repetitive or redundant in nature
+4. Agents sending multiple messages must make sure that messages are not repetitive or redundant in nature.
 
 ## Graceful error handling
 
