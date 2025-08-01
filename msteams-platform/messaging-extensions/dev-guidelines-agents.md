@@ -404,6 +404,7 @@ Here are the best practices you can adapt when defining the parameters:
 * Parameter description must not contain grammar and punctuation errors.
 * Parameters defined in the manifest must not be identical.
 
+<!--
 ## Enhance message extension to retrieve information through compound utterances
 
 [*Must fix*]
@@ -510,6 +511,7 @@ For Microsoft 365 Copilot, a search-based message extension must support more th
 :::image type="content" source="../assets/images/Copilot/high-quaity-me-pass-multi-parameters.png" alt-text="Screenshot shows an example of a pass scenario where the Northwind app returns a response for a seafood and in stock parameters.":::
 
 The search parameters must have good descriptions with acceptable parameters, enums, acronyms, and output format. For more information and examples, see [parameter description](#parameter-description).
+-->
 
 ## Define sample prompts
 
