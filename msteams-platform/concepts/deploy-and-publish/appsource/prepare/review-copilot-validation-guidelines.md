@@ -14,7 +14,7 @@ ms.collection: ce-skilling-ai-copilot
 
 > [!IMPORTANT]
 >
-> * These guidelines are applicable for ISVs who want to publish their agent on the store.
+> * These guidelines are applicable for Independent Software Vendors (ISV) who want to publish their agent on the store.
 > * Message extensions agents in Microsoft 365 Copilot are in public preview for Microsoft Word and Microsoft PowerPoint.
 > * Support for Excel and OneNote client applications to be available soon.
 > * Ensure that Microsoft 365 Copilot is available for your organization. You have two ways to get a developer environment for Microsoft 365 Copilot:
@@ -93,10 +93,10 @@ You must ensure to meet the following guidelines for agents:
   * URLs, emojis, or hidden characters such as hexadecimal, binary, or unconventional symbols. [*Must fix*]
   * Grammar and punctuation errors. [*Must fix*]
   * Overly verbose, flowery, or marketing language. [*Good-to-fix*]
-  * Superlative claims such as “#1,” “amazing,” or “best”. [*Good-to-fix*]
+  * Superlative claims such as '#1', 'amazing', or 'best'. [*Good-to-fix*]
 
   > [!NOTE]
-  > * In case of declarative agents, the short description guidelines apply to the `instructions` and `conversation_starters` fields also.
+  > * For declarative agents, the short description guidelines apply to the `instructions` and `conversation_starters` fields also.
   > * For API based plugins, these guidelines apply to `description_for_human`, `description_for_model`, `capabilities`, `conversation_starters` (both the title and text), `states\reasoning\description` in `functions` fields, if provided. [*Must fix*]
   > * When utilizing Swagger or OpenAPI file formats, adhere to these guidelines for the `path` content associated with keys and the `description` field for GET, POST, PUT, or DELETE APIs. [*Must fix*]
 
@@ -145,7 +145,7 @@ You must ensure the following guidelines for sample prompts and prompt starters:
 
 ### Sample prompts
 
-In case of message extension based declarative agent, the [`samplePrompts`](../../../../resources/schema/manifest-schema.md#composeextensionscommands) property provides guidance to users on utilizing the agents in Microsoft 365 Copilot
+For message extension based declarative agent, the [`samplePrompts`](../../../../resources/schema/manifest-schema.md#composeextensionscommands) property provides guidance to users on utilizing the agents in Microsoft 365 Copilot
 
 :::image type="content" source="../../../../assets/images/Copilot/bot-based-sample-prompts.png" alt-text="Screenshot shows the sample prompts displayed when the message extension agent is enabled in Microsoft 365 Copilot.":::
 
@@ -289,9 +289,9 @@ For action scenarios, agents must share user disclosure and seek user confirmati
 
    | Pass example | Fail example |
    | --- | --- |
-   | For a function which searches tickets - "Do you want to allow searching in Contoso?" "Do you want to allow searching for tickets?" | Do you want to proceed?" --> Does not indicate what the function does. |
-   | For a function which creates a new order "Do you want to proceed with creating a new order?" | Searches tickets" --> Does not seek permission |
-   | For a function which creates a new ticket: "Do you want to proceed with creating a new ticket?" | "Creates tickets" --> Does not seek permission |
+   | For a function that searches tickets - "Do you want to allow searching in Contoso?" "Do you want to allow searching for tickets?" | Do you want to proceed?" --> Doesnt indicate what the function does. |
+   | For a function that creates a new order "Do you want to proceed with creating a new order?" | Searches tickets" --> Doesn't seek permission |
+   | For a function that creates a new ticket: "Do you want to proceed with creating a new ticket?" | "Creates tickets" --> Doesn't seek permission |
 
 * For declarative agents, any action with consequences on the external system mustn't have `isConsequential` flag set as ‘False’. [*Must fix*]
 
