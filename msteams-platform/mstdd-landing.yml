@@ -114,7 +114,7 @@ landingContent:
     - linkListType: tutorial
       links:
         - text: Debug your AI chat bot using Agents Playground
-          url: ~/sbs-teams-app-test-tool.yml
+          url: ~/toolkit/teams-app-test-tool-tutorial.md
         - text: Bot configuration experience
           url: ~/qsg-bot-configuration-experience.yml
         - text: Create Teams conversation bot
