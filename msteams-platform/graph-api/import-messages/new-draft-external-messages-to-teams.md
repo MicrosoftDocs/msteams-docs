@@ -1,6 +1,15 @@
 
-# Use Microsoft Graph to Import Messages from External Platforms to Teams
+---
+title: Import External Platform Messages Using Microsoft Graph
+description: Learn how to use Microsoft Graph APIs to import historical messages and data from an third-party platform to Teams.
+ms.localizationpriority: high
+author: "akjo"
+ms.topic: overview
+ms.owner: 
+ms.date: 01/08/2025
+---
 
+# Use Microsoft Graph to Import Messages from External Platforms to Teams
 You can use Microsoft Graph to migrate users' existing message history and data from an external system into a Teams channel. This feature enables users to continue conversations without interruption by recreating the messaging hierarchy from a third-party platform directly within Teams.
 
 > [!NOTE]
@@ -26,7 +35,7 @@ The startMigration API enables migration mode on existing Teams channels, allowi
 ```http
 POST  /teams/{team-id}/channels/{channel-id}/startMigration
 {
-  INSERT ACTUAL CODE
+   ACTUAL CODE
 }
 ```
 > [!NOTE]
