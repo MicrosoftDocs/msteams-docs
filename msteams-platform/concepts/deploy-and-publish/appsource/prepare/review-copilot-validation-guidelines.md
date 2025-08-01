@@ -35,9 +35,11 @@ Apps must be consistent with responsible [AI checks](teams-store-validation-guid
    :::column span="":::
      :::image type="icon" source="../../../../assets/icons/agent-name.png" link="#agent-name" border="false":::
    :::column-end:::
+<!--
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/compound-utterances.png" link="#compound-utterances" border="false":::
    :::column-end:::
+-->
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/prompts.png" link="#prompts" border="false":::
    :::column-end:::
@@ -131,6 +133,7 @@ You must ensure to meet the following guidelines for agents:
 
 [Back to top](#validation-guidelines-for-agents)
 
+<!--
 ## Compound utterances
 
 Agents must support at least three unique compound utterances by handling three or more parameters. Guidelines for agents provide detailed information on [parameter description](../../../../messaging-extensions/dev-guidelines-agents.md#parameter-description) and ways to [enhance message extension to retrieve information through compound utterances](../../../../messaging-extensions/dev-guidelines-agents.md#enhance-message-extension-to-retrieve-information-through-compound-utterances).
@@ -138,6 +141,7 @@ Agents must support at least three unique compound utterances by handling three 
 :::image type="content" source="../../../../assets/images/Copilot/high-quaity-me-pass-multi-parameters.png" alt-text="Screenshot shows an example of a pass scenario where the Northwind app returns a response for a seafood and in stock parameters.":::
 
 [Back to top](#validation-guidelines-for-agents)
+-->
 
 ## Prompts
 
@@ -330,6 +334,7 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
       For more information, see [bot welcome messages](teams-store-validation-guidelines.md#bots-1).
    1. A bot should offer at least two context-specific suggestions or prompts to the user, rather than generic or fixed ones. [*Must fix*]
+1. The scopes defined in `bot.scopes` and `bot.commandList.scopes` nodes of the manifest must match to maintain good user experience.
 
 [Back to top](#validation-guidelines-for-agents)
 
