@@ -342,7 +342,9 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
 * Your agent must have nodes defined as actions in the app manifest. All agents must have a core use case that's served through API actions. [*Must fix*]
 
+<!--
 * For capabilities such as web search, graphic art, or code interpreter, the `Instruction` field must include details on how to use the capabilities within the context of the agent. [*Must fix*]
+-->
 
 * To grant multi-tenant agent access to all tenant data for email, Teams messages, Teams Meeting, ODSP, and Graph connector capabilities, leave the nodes for them empty in the declarative agent. [*Must fix*]
 
@@ -380,9 +382,9 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
 * To avoid confusion and ensure clarity for end users:
 
-  * The Name, Short Description, and Long Description must differ meaningfully from those of any existing apps.
+  * The name, short description, and long description must differ meaningfully from those of any existing apps.
 
-  * The Short Description and Long Description must clearly communicate the app’s unique value proposition and how it differs from related submissions.
+  * The short description and long description must clearly communicate the app’s unique value proposition and how it differs from related submissions.
 
 ## Agent response
 
