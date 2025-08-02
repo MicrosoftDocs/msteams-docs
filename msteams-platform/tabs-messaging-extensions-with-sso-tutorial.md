@@ -6,6 +6,7 @@ ms.date: 07/31/2025
 ms.topic: tutorial
 
 description: Tutorial for enabling SSO for Microsoft Teams Tabs and Message Extensions
+
 ---
 # SSO for Tabs and Message Extension
 
@@ -53,7 +54,7 @@ The following steps help you to create and register your bot in Azure portal:
 
 > [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
 
-**Add App Registration**
+## Add App Registration
 
 1. Go to [Azure portal](https://ms.portal.azure.com/).
 
@@ -75,13 +76,9 @@ The following steps help you to create and register your bot in Azure portal:
 
 6. Select **Register**.
 
-:::image type="content" source="../../assets/images/include-files/app-register.png" alt-text="Screenshot shows the option to register the bot in Microsoft Entra admin center.":::
-
-![Screenshot shows the option to register the bot in Microsoft Entra admin center](../../assets/images/include-files/app-register.png)
+![Screenshot of the Microsoft Entra admin center showing the interface for registering a bot application.](../../assets/images/include-files/app-register.png)
 
 Your app is registered in Microsoft Entra ID. The app overview page appears.
-
-:::image type="content" source="../../assets/images/include-files/app-registration-overview.png" alt-text="Screenshot shows the app registration overview page.":::
 
 ![Screenshot shows the app registration overview page](../../assets/images/include-files/app-registration-overview.png)
 
@@ -224,7 +221,7 @@ To build and run the service, use Visual Studio or Command line.
 1. Open Visual Studio.
 2. Select **File** > **Open** > **Project/Solution...**.
 
-   ![Screenshot of Visual Studio file menu. The menu entries titled Open under File menu and Project/Solution under Open are highlighted in red.](~/assets/images/Tab-ME-SSO/open-project1.png)
+   ![Screenshot of Visual showing the File menu with 'Open' and 'Project/Solution' options highlighted in red.](~/assets/images/Tab-ME-SSO/open-project1.png)
 
 3. In the **csharp** folder, select **App SSO Sample.csproj** file.
 
