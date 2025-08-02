@@ -1,8 +1,12 @@
-# ms.date: 07/31/2025
+---
+title: Enable Single Sign-On (SSO) for Microsoft Teams Tabs and Message Extensions
 
-# ms.topic: Tutorial
+ms.date: 07/31/2025
+
+ms.topic: tutorial
 
 description: Tutorial for enabling SSO for Microsoft Teams Tabs and Message Extensions
+---
 
 # SSO for Tabs and Message Extension
 
