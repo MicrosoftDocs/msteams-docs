@@ -60,13 +60,9 @@ The following steps help you to create and register your bot in Azure portal:
 
 2. Select **App registrations**.
 
-:::image type="content" source="../../assets/images/include-files/azure-app-registration.png" alt-text="Screenshot shows the Azure services to select App registrations.":::
-
 ![Screenshot shows the Azure services to select App registrations](../../assets/images/include-files/azure-app-registration.png)
 
 3. Select **+ New registration**.
-
-:::image type="content" source="../../assets/images/include-files/new-registration.png" alt-text="Screenshot shows the New registration page on Microsoft Entra admin center.":::
 
 ![Screenshot shows the New registration page on Microsoft Entra admin center](../../assets/images/include-files/new-registration.png)
 
