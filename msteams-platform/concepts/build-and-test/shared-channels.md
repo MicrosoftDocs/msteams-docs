@@ -121,9 +121,9 @@ If you're developing an app for use in federated group chats with external users
 
 ## Code sample
 
-| Sample name | Description | Node.js |
+| Sample name | Description | Node.js | Python |
 |-------------|-------------|------|----|
-| Teams Conversation Bot | This sample app displays the names of the members in a federated group chat with external users. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-feed-members/nodejs/)|
+| Teams Conversation Bot | This sample app displays the names of the members in a federated group chat with external users. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-feed-members/nodejs)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-feed-members/python) |
 
 ## See also
 
