@@ -14,7 +14,7 @@ Developer Preview is a public program for developers, which provides early acces
 
 ## Developer preview app manifest
 
-Many features enabled in developer preview require alterations to your app manifest (previously called Teams app manifest) JSON file. To do so, you need to use the [developer preview app manifest schema](~/resources/schema/manifest-schema-dev-preview.md). If you use this schema, you can't use [Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md) to make these changes or upload your app for testing. To upload your app in Teams, select **Apps** > **Manage your apps** > **Upload an app**. Using this method, you can only upload a zipped version of your app package.
+Many features enabled in developer preview require alterations to your app manifest (previously called Teams app manifest) JSON file. To do so, you need to use the [developer preview app manifest schema](/microsoft-365/extensibility/schema/?view=m365-app-prev). If you use this schema, you can't use [Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md) to make these changes or upload your app for testing. To upload your app in Teams, select **Apps** > **Manage your apps** > **Upload an app**. Using this method, you can only upload a zipped version of your app package.
 
 You might find it useful to use Developer Portal to create the non-developer preview portions of your app package, then export that package and manually edit the `manifest.json` file to add the developer preview features you wish to use. After you added the developer preview features to the `manifest.json` file, you can't reimport the package into Developer Portal.
 
@@ -73,4 +73,5 @@ Use the same menu item under About → Developer preview and select it to turn i
 
 ## See also
 
+[App manifest developer public preview schema reference](/microsoft-365/extensibility/schema/?view=m365-app-prev)
 [Test and debug your Microsoft Teams app](~/concepts/build-and-test/debug.md)
