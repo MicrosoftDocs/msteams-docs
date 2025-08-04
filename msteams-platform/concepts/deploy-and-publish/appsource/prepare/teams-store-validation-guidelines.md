@@ -256,6 +256,14 @@ If your app authenticates users with an external service, follow these guideline
   
 * **Content sharing experiences**: Apps that require authentication with an external service to share content in Teams channels must clearly state in the help documentation (or similar resources) on how to disconnect or unshare content if that feature is supported on the external service. This doesn't mean the ability to unshare content must be present in your Teams app.
 
+* **Token prefetching in nested authentication**: Apps using nested authentication and token prefetching must:
+
+  * Prefix redirectURI domains with `brk-multihub://`.
+  * Avoid sub-paths in `redirectURI` domains.
+  * `RedirectURI` domain should match the app domain used in the `validDomains` field of the manifest.
+
+   :::image type="content" source="../../../../assets/images/valid-domains.png" alt-text="Image shows how to add valid domains.":::
+
 </details>
 
 ### Audio
@@ -1101,6 +1109,8 @@ If your app includes a bot, ensure that it adheres to these guidelines.
 
 * Any broken links, responses, or workflows in your app must be fixed. [*Must fix*]
 
+* The scopes defined in `bot.scopes` and `bot.commandList.scopes` nodes of the manifest must match to maintain good user experience.
+
 </details>
 
 </br>
@@ -1274,11 +1284,11 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 <details><summary><a id="botmessagespamming">Bot message spamming</a></summary>
 
-Bots sending multiple messages must make sure that the messages are not repetitive or redundant in nature.
+* Bots sending multiple messages must ensure that the messages are not repetitive or redundant in nature.
 
-4. Bot messages triggered from user interactions must contain user attribution depicting the name of the user performing the action [Must fix]
+* Bot messages triggered from user interactions must contain user attribution depicting the name of the user performing the action. [*Must fix*]
 
-5. In channel scope, the welcome message must be sent only to the channel where the user has initiated the bot install action.
+* In the channel scope, the welcome message must be sent only to the channel where the user has initiated the bot install action.
 
 * **Bot messages in channels and chats**: Don't spam users by creating separate posts. Create a single post with replies in the same thread. [*Must fix*]
 
