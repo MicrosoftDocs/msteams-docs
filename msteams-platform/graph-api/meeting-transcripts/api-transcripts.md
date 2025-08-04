@@ -20,11 +20,18 @@ The following APIs are used for fetching transcripts:
 
 This API is used to get a list of all `callTranscript` objects based on the user ID and meeting ID. It returns the metadata of the transcripts of the meeting, which contains the transcript ID and the created date and time of that transcript.
 
-**HTTP request**
+**HTTP request for online meetings**
 
 ```http
 GET /me/onlineMeetings('{meetingId}')/transcripts
 GET /users('{userId}')/onlineMeetings('{meetingId}')/transcripts
+```
+
+**HTTP request for adhoc calls**
+
+```http
+GET /me/adhocCalls/{id}/transcripts
+GET /users('{userId}')/adhocCalls('{id}')/transcripts
 ```
 
 **Optional query parameters**
@@ -59,8 +66,16 @@ If successful, this method returns a `200 OK` response code and a collection of 
 <b>Request</b>
 <br>
 
+For online meetings:
+
 ```http
 GET https://graph.microsoft.com/beta/users/ba321e0d-79ee-478d-8e28-85a19507f456/onlineMeetings/MSo1N2Y5ZGFjYy03MWJmLTQ3NDMtYjQxMy01M2EdFGkdRWHJlQ/transcripts
+```
+
+For adhoc calls:
+
+``` http
+GET https://graph.microsoft.com/beta/users/ba321e0d-79ee-478d-8e28-85a19507f456/adhocCalls/6e91b13b-5171-477f-8dc6-0fd43867f1de/transcripts/MSMjMCMjNzU3ODc2ZDYtOTcwMi00MDhkLWFkNDItOTE2ZDNmZjkwZGY4
 ```
 
 <br>
@@ -69,6 +84,8 @@ GET https://graph.microsoft.com/beta/users/ba321e0d-79ee-478d-8e28-85a19507f456/
 
 > [!NOTE]
 > The response object shown here might be shortened for readability.
+
+For online meetings:
 
 ```http
 HTTP/1.1 200 OK
@@ -95,6 +112,22 @@ Content-Type: application/json
 }
 ```
 
+For adhoc calls:
+
+``` http
+HTTP/1.1 200 OK
+Content-type: application/json
+
+{
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#users('ba321e0d-79ee-478d-8e28-85a19507f456')/adhocCalls('6e91b13b-5171-477f-8dc6-0fd43867f1de')/transcripts/$entity",
+    "id": "MSMjMCMjNzU3ODc2ZDYtOTcwMi00MDhkLWFkNDItOTE2ZDNmZjkwZGY4",
+    "createdDateTime": "2021-09-17T06:09:24.8968037Z",
+    "endDateTime": "2021-09-17T06:27:25.2346000Z",
+    "contentCorrelationId": "bc8...",
+    "transcriptContentUrl": "https://graph.microsoft.com/beta/$metadata#users('ba321e0d-79ee-478d-8e28-85a19507f456')/adhocCalls('6e91b13b-5171-477f-8dc6-0fd43867f1de')/transcripts/('MSMjMCMjNzU3ODc2ZDYtOTcwMi00MDhkLWFkNDItOTE2ZDNmZjkwZGY4')/content"
+}
+```
+
 </details>
 
 ### Get callTranscript
@@ -103,9 +136,18 @@ Your app parses through the list of transcript IDs, received as the response of 
 
 **HTTP request**
 
+For online meetings:
+
 ```http
 GET me/onlineMeetings('{meetingId}')/transcripts('{transcriptId}')
 GET users('{userId}')/onlineMeetings('{meetingId}')/transcripts('{transcriptId}')
+```
+
+For adhoc calls:
+
+```http
+GET /me/adhocCalls/{id}/transcripts/{id}  
+GET /users/{userid}/adhocCalls/{callid}/transcripts/{id}
 ```
 
 **Request headers**
@@ -129,8 +171,16 @@ If successful, this method returns a `200 OK` response code and a `callTranscrip
 <b>Request</b>
 <br>
 
+For online meetings:
+
 ```http
 GET https://graph.microsoft.com/beta/users/ba321e0d-79ee-478d-8e28-85a19507f456/onlineMeetings/MSo1N2Y5ZGFjYy03MWJmLTQ3NDMtYjQxMy01M2EdFGkdRWHJlQ/transcripts/MSMjMCMjNzU3ODc2ZDYtOTcwMi00MDhkLWFkNDItOTE2ZDNmZjkwZGY4
+```
+
+For ad hoc calls:
+
+```http
+GET https://graph.microsoft.com/beta/users/ba321e0d-79ee-478d-8e28-85a19507f456/adhocCalls/6e91b13b-5171-477f-8dc6-0fd43867f1de/transcripts/MSMjMCMjNzU3ODc2ZDYtOTcwMi00MDhkLWFkNDItOTE2ZDNmZjkwZGY4
 ```
 
 <br>
@@ -140,12 +190,27 @@ GET https://graph.microsoft.com/beta/users/ba321e0d-79ee-478d-8e28-85a19507f456/
 > [!NOTE]
 > The response object shown here might be shortened for readability.
 
+For online meetings:
+
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
 
 {
     "@odata.context": "https://graph.microsoft.com/beta/$metadata#users('ba321e0d-79ee-478d-8e28-85a19507f456')/onlineMeetings('MSo1N2Y5ZGFjYy03MWJmLTQ3NDMtYjQxMy01M2EdFGkdRWHJlQ')/transcripts/$entity",
+    "id": "MSMjMCMjNzU3ODc2ZDYtOTcwMi00MDhkLWFkNDItOTE2ZDNmZjkwZGY4",
+    "createdDateTime": "2021-09-17T06:09:24.8968037Z"
+}
+```
+
+For adhoc calls:
+
+```http
+HTTP/1.1 200 OK
+Content-type: application/json
+
+{
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#users('ba321e0d-79ee-478d-8e28-85a19507f456')/adhocCalls('6e91b13b-5171-477f-8dc6-0fd43867f1de')/transcripts/$entity",
     "id": "MSMjMCMjNzU3ODc2ZDYtOTcwMi00MDhkLWFkNDItOTE2ZDNmZjkwZGY4",
     "createdDateTime": "2021-09-17T06:09:24.8968037Z"
 }
@@ -159,9 +224,18 @@ This API is used to get the transcript of the selected transcript ID that was ob
 
 **HTTP request**
 
+For online meetings:
+
 ```http
 GET me/onlineMeetings('{meetingId}')/transcripts('{transcriptId}')/content
 GET users('{userId}')/onlineMeetings('{meetingId}')/transcripts('{transcriptId}')/content
+```
+
+For adhoc calls:
+
+```http
+GET me/adhocCalls('{callId}')/transcripts('{transcriptId}')/content
+GET users('{userId}')/adhocCalls('{callId}')/transcripts('{transcriptId}')/content
 ```
 
 **Optional query parameters**
@@ -193,9 +267,14 @@ If successful, this method returns a `200 OK` response code and contains bytes f
 <b>Request</b>
 <br>
 
+For online meetings:
+
 ```http
 GET https://graph.microsoft.com/beta/users/ba321e0d-79ee-478d-8e28-85a19507f456/onlineMeetings/MSo1N2Y5ZGFjYy03MWJmLTQ3NDMtYjQxMy01M2EdFGkdRWHJlQ/transcripts/MSMjMCMjNzU3ODc2ZDYtOTcwMi00MDhkLWFkNDItOTE2ZDNmZjkwZGY4/content
-```
+`
+For adhoc calls:
+```http
+GET https://graph.microsoft.com/beta/users/ba321e0d-79ee-478d-8e28-85a19507f456/adhocCalls/MSo1N2Y5ZGFjYy03MWJmLTQ3NDMtYjQxMy01M2EdFGkdRWHJlQ/transcripts/MSMjMCMjNzU3ODc2ZDYtOTcwMi00MDhkLWFkNDItOTE2ZDNmZjkwZGY4/content``
 
 <br>
 <b>Response</b>
