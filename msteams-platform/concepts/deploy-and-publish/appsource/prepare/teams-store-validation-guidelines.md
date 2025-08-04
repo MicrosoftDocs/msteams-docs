@@ -1274,7 +1274,11 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 <details><summary><a id="botmessagespamming">Bot message spamming</a></summary>
 
-Bots mustn't spam users by sending multiple messages in short duration.
+Bots sending multiple messages must make sure that the messages are not repetitive or redundant in nature.
+
+4. Bot messages triggered from user interactions must contain user attribution depicting the name of the user performing the action [Must fix]
+
+5. In channel scope, the welcome message must be sent only to the channel where the user has initiated the bot install action.
 
 * **Bot messages in channels and chats**: Don't spam users by creating separate posts. Create a single post with replies in the same thread. [*Must fix*]
 
@@ -1288,6 +1292,7 @@ Bots mustn't spam users by sending multiple messages in short duration.
     :::image type="content" source="../../../../assets/images/submission/validation-bot-messages-multiple-message-quick-succession.png" alt-text="Graphic shows an example of a bot sending multiple messages in quick succession.":::
 
   * Send one message with complete information. [*Must fix*]-->
+
 * **Bot messages in personal apps**:
 
   * Avoid multi-turn conversations to complete a single repetitive workflow. [*Must fix*]
