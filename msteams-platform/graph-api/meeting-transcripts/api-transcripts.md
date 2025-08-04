@@ -4,7 +4,7 @@ description: Learn about the Microsoft Graph APIs to fetch meeting transcripts b
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.owner: vichug
-ms.date: 08/03/2022
+ms.date: 08/04/2025
 ---
 # Use Graph APIs to fetch transcript
 
