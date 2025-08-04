@@ -1282,12 +1282,14 @@ Bots mustn't spam users by sending multiple messages in short duration.
 
     :::image type="content" source="../../../../assets/images/submission/validation-bot-message-spamming-multiple-messages.png" alt-text="validation-bot-message-spam-multiple-message":::
 
-* **Bot messages in personal apps**:
+<!--
   * Don't send multiple messages in quick succession. [*Must fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-bot-messages-multiple-message-quick-succession.png" alt-text="Graphic shows an example of a bot sending multiple messages in quick succession.":::
 
-  * Send one message with complete information. [*Must fix*]
+  * Send one message with complete information. [*Must fix*]-->
+* **Bot messages in personal apps**:
+
   * Avoid multi-turn conversations to complete a single repetitive workflow. [*Must fix*]
   * Use a form (or dialog) to collect all inputs from a user at one time. [*Must fix*]
   * NLP based conversational chatbots can use multi turn conversation to make the discussion more engaging and complete a workflow.
