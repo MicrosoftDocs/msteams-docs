@@ -457,7 +457,6 @@ Explore resources designed to help you with responsible Artificial Intelligence 
 * App must clearly describe AI functionality before the customer acquires the offer consistent with policy [100.1.3](/legal/marketplace/certification-policies#10013-description) and prompt user to review the info as a part of in-app functionality. The AI disclaimer must be clearly visible in the UI where users interact with generative AI content. [*Must fix*].
 
    Here are some ways to achieve this:
-
   * Fixed disclaimer shown in the UI where AI content is generated
 
   * Include disclaimers in every content generated through AI.
@@ -1699,7 +1698,11 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/tea
 
 <details><summary>Avatars</summary>
 
-* The notification avatar must match your app's color icon. [*Must fix*]
+* The notification avatar must match your app's color icon. Alternatively, if you are using custom activity icons for your app/agent, icons must follow these guidelines [*Must fix*]:
+  * Activity icons must be 32 * 32 pixels in size and have a .png file extension.
+  * These activity icons should not be inappropriate, harmful, or offensive content.
+  * The @mention icon should exclusively be used for indicating user/group tagging, similar to its usage in Microsoft Teams.
+
 * Notifications triggered by a user must include the user's avatar. [*Must fix*]
 
 </details>
