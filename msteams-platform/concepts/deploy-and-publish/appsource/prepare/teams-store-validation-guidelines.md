@@ -262,7 +262,7 @@ If your app authenticates users with an external service, follow these guideline
   * Avoid sub-paths in `redirectURI` domains.
   * `RedirectURI` domain should match the app domain used in the `validDomains` field of the manifest.
 
-   :::image type="content" source="../../../../assets/images/valid-domains.png" alt-text="Image shows how to add valid domains.":::
+      :::image type="content" source="../../../../assets/images/valid-domains.png" alt-text="Image shows how to add valid domains.":::
 
 </details>
 
@@ -454,7 +454,15 @@ Explore resources designed to help you with responsible Artificial Intelligence 
   * In app mechanism to log issue along with specific reference to the inappropriate content.
 
 * You must take timely action on reported concerns. [*Must fix*]
-* App must clearly describe AI functionality before the customer acquires the offer consistent with policy [100.1.3](/legal/marketplace/certification-policies#10013-description) and prompt user to review the info as a part of in-app functionality. [*Must fix*].
+* App must clearly describe AI functionality before the customer acquires the offer consistent with policy [100.1.3](/legal/marketplace/certification-policies#10013-description) and prompt user to review the info as a part of in-app functionality. The AI disclaimer must be clearly visible in the UI where users interact with generative AI content. [*Must fix*].
+
+   Here are some ways to achieve this:
+
+  * Fixed disclaimer shown in the UI where AI content is generated
+
+  * Include disclaimers in every content generated through AI.
+
+  * Disclaimers that are shown as part of first run experience only and may not be visible at all times.
 
    :::image type="content" source="../../../../assets/images/submission/teams-ai-library-description-guideline.png" alt-text="Screenshot shows the description for Ai functionality.":::
 
