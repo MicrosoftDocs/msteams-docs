@@ -376,9 +376,9 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
 ## Duplicate agents
 
-* Multiple agents for the same product can be published separately but should have different functionality
+* Multiple agents for the same product can be published separately but each must have different functionality
 
-* An agent can be published separately from the main app but should have a clear justification for the same.
+* An agent can be published separately from the main app but it must have a clear justification for the same.
 
 * To avoid confusion and ensure clarity for end users:
 
@@ -388,7 +388,7 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
 ## Agent response
 
-* The declarative agent must be functional and provide accurate responses to the users. To ensure the same, atleast one corresponding prompt in one of the below fields must be present for each and every function of the declarative agent: [*Must fix*]
+* The declarative agent must be functional and must provide accurate responses to the users. To ensure the same, atleast one corresponding prompt in one of the following fields must be present for each and every function of the declarative agent: [*Must fix*]
 
   * Sample prompts or conversation starters
   * Instructions field in manifest
@@ -400,7 +400,7 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
 * A confirmation of the completion of the action must be shared by the agent, which should include the details of the action, way forward, and should have a source link or a tracking ID for the user to verify the action [*Must fix*]
 
-4. Agents sending multiple messages must make sure that messages are not repetitive or redundant in nature.
+4. An agent sending multiple messages must make sure that messages are not repetitive or redundant in nature.
 
 ## Graceful error handling
 
