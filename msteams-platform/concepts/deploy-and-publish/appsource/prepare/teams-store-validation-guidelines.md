@@ -459,11 +459,11 @@ Explore resources designed to help you with responsible Artificial Intelligence 
    Here are some ways to achieve this:
   * Fixed disclaimer shown in the UI where AI content is generated
 
-  * Include disclaimers in every content generated through AI.
+  * Include disclaimers in the content generated through AI.
 
-  * Disclaimers that are shown as part of first run experience only and may not be visible at all times.
+  * Disclaimers that are shown as part of first-run experience only and may not be visible at all times.
 
-   :::image type="content" source="../../../../assets/images/submission/teams-ai-library-description-guideline.png" alt-text="Screenshot shows the description for Ai functionality.":::
+   :::image type="content" source="../../../../assets/images/submission/teams-ai-library-description-guideline.png" alt-text="Screenshot shows the description for AI functionality.":::
 
 #### Apps using facial recognition capabilities
 
@@ -1698,10 +1698,10 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/tea
 
 <details><summary>Avatars</summary>
 
-* The notification avatar must match your app's color icon. Alternatively, if you are using custom activity icons for your app/agent, icons must follow these guidelines [*Must fix*]:
+* The notification avatar must match your app's color icon. Alternatively, if you're using custom activity icons for your app or agent, icons must be as per the following guidelines [*Must fix*]:
   * Activity icons must be 32 * 32 pixels in size and have a .png file extension.
-  * These activity icons should not be inappropriate, harmful, or offensive content.
-  * The @mention icon should exclusively be used for indicating user/group tagging, similar to its usage in Microsoft Teams.
+  * These activity icons mustn't be inappropriate, harmful, or have offensive content.
+  * The @mention icon must be used exclusively for indicating user or group tagging, similar to its usage in Microsoft Teams.
 
 * Notifications triggered by a user must include the user's avatar. [*Must fix*]
 
