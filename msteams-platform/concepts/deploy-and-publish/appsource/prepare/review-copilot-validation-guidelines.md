@@ -333,7 +333,7 @@ A custom engine agent is a conversational Teams bot that must meet the following
    1. An agent must include at least three prompt starters or a welcome message. [*Must fix*]
 
       For more information, see [bot welcome messages](teams-store-validation-guidelines.md#bots-1).
-   1. A bot should offer at least two context-specific suggestions or prompts to the user, rather than generic or fixed ones. [*Must fix*]
+   1. A bot must offer at least two context-specific suggestions or prompts to the user, rather than generic or fixed ones. [*Must fix*]
 1. The scopes defined in `bot.scopes` and `bot.commandList.scopes` nodes of the manifest must match to maintain good user experience.
 
 [Back to top](#validation-guidelines-for-agents)
@@ -398,7 +398,7 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
   * When the agent is provided with the tracking ID, it must return details of the performed action or the item details on which the action has been executed. [*Must fix*]
 
-* A confirmation of the completion of the action must be shared by the agent, which should include the details of the action, way forward, and should have a source link or a tracking ID for the user to verify the action [*Must fix*]
+* A confirmation of the completion of the action must be shared by the agent, which should include the details of the action, way forward, and must have a source link or a tracking ID for the user to verify the action [*Must fix*]
 
 4. An agent sending multiple messages must make sure that messages are not repetitive or redundant in nature.
 
