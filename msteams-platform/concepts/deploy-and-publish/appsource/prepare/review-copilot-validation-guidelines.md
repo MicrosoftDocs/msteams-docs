@@ -43,13 +43,11 @@ Apps must be consistent with responsible [AI checks](teams-store-validation-guid
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/prompts.png" link="#prompts" border="false":::
    :::column-end:::
-:::row-end:::
-
-:::row:::
-
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/adaptive-card-response.png" link="#adaptive-card-response" border="false":::
    :::column-end:::
+:::row-end:::
+:::row:::
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/compatibility.png" link="#compatibility" border="false":::
    :::column-end:::
@@ -62,13 +60,12 @@ Apps must be consistent with responsible [AI checks](teams-store-validation-guid
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/bot-requirement-agent.png" link="#bot-requirements-for-custom-engine-agents" border="false":::
    :::column-end:::
-:::row-end:::
-
-:::row:::
-
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/action-knowledge-source.png" link="#action-or-knowledge-source" border="false":::
    :::column-end:::
+:::row-end:::
+
+:::row:::
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/duplicate-agents.png" link="#duplicate-agents" border="false":::
    :::column-end:::
