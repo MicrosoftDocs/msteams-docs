@@ -192,11 +192,19 @@ An app's name plays a critical role in how users discover it in the Teams Store.
 
 * Apps from the same developer offering the same functionality must share an app listing unless privacy compliance requirements mandate separate app listings or separate app listing are required to support government cloud. You must build into your business logic and publish only one listing. [*Must fix*]
 
-  * To fulfill multiple regions support requirement, you must build into your business logic and publish only one listing.
+* Multiple apps may be published separately only if they represent distinct product lines (i.e., marketed and positioned differently), or if separate publication is required to meet regulatory, compliance (e.g., GDPR, Gov. cloud), or installation requirements (e.g., on-prem installation) [Must-fix].
+
+* To avoid confusion and ensure clarity for end users:
+
+a) The Name, Short Description, and Long Description must differ meaningfully from those of any existing apps.
+
+b) The Short Description and Long Description must clearly communicate the app’s unique value proposition
+
+* To fulfill multiple regions support requirement, you must build into your business logic and publish only one listing.
 
    :::image type="content" source="../../../../assets/images/submission/validation-guidelines-pass-region-app-manifest.png" alt-text="Screenshot shows the passed scenario of region requirement done with logic.":::
 
-  * To fulfill multiple end-point requirements for on-premises and on-cloud deployment, you must build into your business logic and publish only one listing.
+* To fulfill multiple end-point requirements for on-premises and on-cloud deployment, you must build into your business logic and publish only one listing.
 
 ### Suitable for workplace consumption
 
