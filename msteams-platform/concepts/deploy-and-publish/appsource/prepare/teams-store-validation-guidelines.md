@@ -259,7 +259,7 @@ If your app authenticates users with an external service, follow these guideline
 
   * Prefix `redirectURI` domains with `brk-multihub://`.
   * Avoid sub-paths in `redirectURI` domains.
-  * Ensure that the `RedirectURI` domain matches the app domain used in the `validDomains` field in the app manifest.
+  * Ensure that the `redirectURI` domain matches the app domain used in the `validDomains` field in the app manifest.
 
       :::image type="content" source="../../../../assets/images/valid-domains.png" alt-text="Image shows how to add valid domains.":::
 
@@ -1523,6 +1523,7 @@ For more information, see [Teams dialog design guidelines](~\task-modules-and-ca
 <details><summary>Meeting extension design guidelines</summary>
 
 * Your Teams apps must follow [meeting extension design guidelines](../../../../apps-in-teams-meetings/design/designing-apps-in-meetings.md) and [calling extension design guidelines](../../../../apps-in-teams-meetings/build-tabs-for-calling.md).
+
 * With the in-meeting app experience, you can engage participants during the meeting by using in-meeting tabs, dialog box, and the in-meeting share to stage feature. If your app supports Teams meeting extension, you must provide a responsive in-meeting experience aligned with the Teams meeting experience. [*Must fix*]
 
 * Meeting extensibility apps must offer a responsive in-meeting experience aligned to the Teams meeting experience. In-meeting experience is mandatory for a Teams app that supports meeting extensibility but, pre- and post-meeting experiences aren't mandatory. [*Must fix*]
@@ -1539,7 +1540,7 @@ For more information, see [Teams dialog design guidelines](~\task-modules-and-ca
 
 * You must declare `groupChat` as a scope under `configurableTabs` and `meetingDetailsTab`, `meetingChatTab`, and `meetingSidePanel` as a context property in the app manifest to enable your app for meetings on Teams mobile. [*Must fix*]
 
-* Meeting and calling canvases mustn't dead-end an attendee. Meeting canvases must show a graceful failure message for app limitations such as, region specific dependency. [*Must fix*]
+* Meeting and calling canvases mustn't dead-end an attendee. Meeting and calling canvases must show a graceful failure message for app limitations such as, region specific dependency. [*Must fix*]
 
 * The meeting and calling canvas’ header must display the correct app name to avoid confusing the meeting attendee. [*Must fix*]
 
@@ -1577,14 +1578,14 @@ For more information, see [Teams dialog design guidelines](~\task-modules-and-ca
 </details>
 
 </br>
-<details><summary>In-meeting calling experience</summary>
+<details><summary>In-meeting and calling experience</summary>
 
-* Apps must only use a dark theme during meetings. For more information, see [Teams design guidelines](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#theming). [*Must fix*]
-* A tooltip must display the app name when hovering over the app icon during meetings. [*Must fix*]
+* Apps must only use a dark theme during meetings and calling. For more information, see [Teams design guidelines](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#theming). [*Must fix*]
+* A tooltip must display the app name when hovering over the app icon during meetings and calling. [*Must fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-exp-display-app-name.png" alt-text="validation-in-meeting-exp-display-app-names":::
 
-* Message extensions must function the same during meetings as they do outside meetings. [*Must fix*]
+* Message extensions must function the same during meetings and calling as they do outside meetings or calling. [*Must fix*]
 
 </details>
 
