@@ -59,7 +59,7 @@ You can collaborate with external members outside of your organization using sha
 
 ## Get shared channel membership
 
-Use the [List allMembers API]([https://learn.microsoft.com/en-us/graph/api/channel-list-allmembers?view=graph-rest-beta&tabs=http](/graph/api/channel-list-allmembers?view=graph-rest-beta&tabs=http)) to retrieve all members (**direct** and **indirect**) of a shared channel.
+Use the [List allMembers API](/graph/api/channel-list-allmembers?view=graph-rest-beta&tabs=http) to retrieve all members (**direct** and **indirect**) of a shared channel.
 
 ### Identify Direct vs. Indirect Members
 
@@ -70,6 +70,15 @@ This property identifies the source of a member’s access to a shared channel, 
 |---------|---------|---------|
 |Direct Member  |  **No**      |  The user is added directly to the shared channel.  |
 |Indirect Member|  **Yes**     | The user accesses the shared channel through another team. The annotation includes a URL that points to the source team.     |
+
+> [!NOTE]
+> You might receive duplicate notifications when a member is added to a shared channel. This can happen if the member is already part of the shared channel directly or through another linked team.
+>
+> To avoid duplicate notifications:
+>
+> * Cache the **/allMembers** list for the shared channel.
+> * Compare incoming indirect membership notifications against the cached list.
+> * Ignore the notification if the member already exists; either directly or indirectly.
 
 You can get direct shared channel membership by using the `hostTeamGroupID` from `getContext` and following these steps:
 
