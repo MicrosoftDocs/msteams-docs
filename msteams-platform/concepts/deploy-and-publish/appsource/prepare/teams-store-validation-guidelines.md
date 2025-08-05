@@ -1515,9 +1515,10 @@ For more information, see [Teams dialog design guidelines](~\task-modules-and-ca
 
 [Back to top](#teams-store-validation-guidelines)
 
-## Meeting extensions
+## Meeting and calling extensions
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: This section is in line with [Microsoft commercial marketplace policy number 1140.4.6](/legal/marketplace/certification-policies#114046-meeting-extensions).
+
 > [!TIP]
 > For more information on creating a high-quality app experience, see the [Teams meeting extension design guidelines](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md).
 
@@ -1580,7 +1581,7 @@ For more information, see [Teams dialog design guidelines](~\task-modules-and-ca
 </details>
 
 </br>
-<details><summary>In-meeting experience</summary>
+<details><summary>In-meeting calling experience</summary>
 
 * Apps must only use a dark theme during meetings. For more information, see [Teams design guidelines](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#theming). [*Must fix*]
 * A tooltip must display the app name when hovering over the app icon during meetings. [*Must fix*]
@@ -1592,7 +1593,7 @@ For more information, see [Teams dialog design guidelines](~\task-modules-and-ca
 </details>
 
 </br>
-<details><summary>In-meeting tabs</summary>
+<details><summary>In-meeting and calling tabs</summary>
 
 * Must be responsive. [*Must fix*]
 * Must maintain padding and component sizes. [*Must fix*]
@@ -1612,7 +1613,7 @@ For more information, see [Teams dialog design guidelines](~\task-modules-and-ca
 </details>
 
 </br>
-<details><summary>In-meeting dialogs</summary>
+<details><summary>In-meeting and calling dialogs</summary>
 
 * Must be used sparingly and for scenarios that are light and task oriented. [*Must fix*]
 * Must display content in a single column and not have multiple navigation levels. [*Must fix*]
