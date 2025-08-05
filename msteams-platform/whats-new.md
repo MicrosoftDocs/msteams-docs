@@ -17,6 +17,7 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| August 5, 2025 | Adhoc calls—spontaneous, unscheduled meetings—are now receiving enhanced support across Microsoft Teams and Graph APIs. Teams Premium and Copilot users can now access Intelligent Recap for adhoc scenarios-Meet Now, 1:1 calls, and Graph API-created meetings. | [Get meeting transcripts and recordings using Graph APIs](https://learn.microsoft.com/en-us/microsoftteams/platform/graph-api/meeting-transcripts/overview-transcripts)|
 | May 19, 2025 | Branding updates: </br> • Teams Toolkit is now Microsoft 365 Agents Toolkit </br> • Teams App Test Tool is now Microsoft 365 Agents Playground </br> • Teams App CLI, TeamFx CLI, and Teams Toolkit CLI are now Microsoft 365 Agents Toolkit CLI </br> • `teamsapp` CLI signature is now `atk` | [Microsoft 365 Agent Toolkit](/microsoft-365/developer/overview-m365-agents-toolkit?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json) |
 | May 19, 2025 | Introducing Microsoft 365 admin center permission to view custom app analytics and the agent usage analytics for custom apps in Developer Portal | Tools and SDKs > Tools > Developer Portal for Teams > [Analyze app and agent usage in Developer Portal](/microsoftteams/platform/concepts/build-and-test/analyze-your-apps-usage-in-developer-portal?tabs=custom-apps-built-for-your-org) |
 | May 16, 2025 | Use Meeting AI Insights API to fetch conversation summaries, action items, and mentions directly from Teams meetings | Build apps for Teams meetings and calls > Get meeting transcripts, recordings, and AI summaries > [Get AI-generated meeting summaries](graph-api/meeting-transcripts/meeting-insights.md) |
@@ -34,6 +35,7 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.</br>
 **2025 July**
+
 * ***July 10, 2025***: [Custom icons for Teams notifications help your app stand out and increase engagement through more personalized activity feed updates.](/graph/teams-send-activityfeednotifications#custom-activity-icons-in-activity-feed-notifications)</br>
 
 **2025 May**
