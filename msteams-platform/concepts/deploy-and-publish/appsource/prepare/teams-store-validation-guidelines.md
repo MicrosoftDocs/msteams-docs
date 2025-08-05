@@ -87,9 +87,6 @@ Following these guidelines increases the chances of your app to pass the Microso
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/white-bg.png" border="false":::
    :::column-end:::
-   :::column span="":::
-      :::image type="icon" source="../../../../assets/icons/white-bg.png" border="false":::
-   :::column-end:::
 :::row-end:::
 
 ## Value proposition
