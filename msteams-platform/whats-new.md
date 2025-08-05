@@ -34,11 +34,10 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.</br>
 **2025 July**
+
 * ***July 10, 2025***: [Custom icons for Teams notifications help your app stand out and increase engagement through more personalized activity feed updates.](/graph/teams-send-activityfeednotifications#custom-activity-icons-in-activity-feed-notifications)</br>
 
-**2025 June**
-
-***June 27, 2025***: [Apps can now recieve notificarions when users are added to or removed from a shared channel through assoicated teams, helping developers maintain accurate access control](/microsoftteams/platform/concepts/build-and-test/shared-channels)
+***Aug 15, 2025***: [Apps can now recieve notifications when users are added to or removed from a shared channel through assoicated teams, helping developers maintain accurate access control](/microsoftteams/platform/concepts/build-and-test/shared-channels)
 
 :::column-end:::
 :::row-end:::
