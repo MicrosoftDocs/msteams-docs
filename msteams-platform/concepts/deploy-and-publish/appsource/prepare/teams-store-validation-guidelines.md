@@ -1519,8 +1519,6 @@ For more information, see [Teams dialog design guidelines](~\task-modules-and-ca
 > [!TIP]
 > For more information on creating a high-quality app experience, see the [Teams meeting extension design guidelines](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md).
 
-You must declare personal as a scope and `meetingSidePanel` as a context property under `staticTabs` node of the app manifest to enable your app for 1:1 Teams calling [*Must fix*].
-
 </br>
 <details><summary>Meeting extension design guidelines</summary>
 
@@ -1638,6 +1636,8 @@ You must declare personal as a scope and `meetingSidePanel` as a context propert
 
 </br>
 <details><summary>Shared Meeting Stage</summary>
+
+You must declare personal as a scope and `meetingSidePanel` as a context property under `staticTabs` node of the app manifest to enable your app for 1:1 Teams calling [*Must fix*].
 
 To use the **shareAppContentToStage** API, you must declare the correct RSC permissions. In the app manifest, you must configure the `authorization` property. Update the `name` property as `MeetingStage.Write.Chat` and `type` property as `Delegated` in the `resourceSpecific` field. [*Must fix*]
 
