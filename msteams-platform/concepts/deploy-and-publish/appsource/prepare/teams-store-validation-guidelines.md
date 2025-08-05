@@ -56,7 +56,7 @@ Following these guidelines increases the chances of your app to pass the Microso
 
 :::row:::
      :::column span="":::
-      :::image type="icon" source="../../../../assets/icons/meeting.png" link="#meeting-extensions" border="false":::
+      :::image type="icon" source="../../../../assets/icons/meeting.png" link="#meeting-and-calling-extensions" border="false":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/notifications.png" link="#notifications" border="false":::
