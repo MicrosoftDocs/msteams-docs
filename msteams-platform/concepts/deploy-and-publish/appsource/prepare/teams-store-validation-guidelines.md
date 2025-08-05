@@ -187,13 +187,15 @@ An app's name plays a critical role in how users discover it in the Teams Store.
 
 ### Duplicate App
 
-* Multiple apps may be published separately only if they represent distinct product lines (that is, marketed and positioned differently), or if separate publication is required to meet regulatory, compliance (for example, GDPR, Gov. cloud), or installation requirements (for example, on-prem installation) [*Must fix*].
+* Multiple apps may be published separately only if the apps: [*Must fix*]
+
+  * Represent distinct product lines (that is, marketed and positioned differently).
+  * Require separate publication to meet regulatory compliance (for example, GDPR, government cloud), or installation requirements (for example, on-premises installation).
 
 * To avoid confusion and ensure clarity for end users:
 
-a) The name, short description, and long description must differ meaningfully from those of any existing apps.
-
-b) The short description and long description must clearly communicate the app’s unique value proposition
+  * The name, short description, and long description must differ meaningfully from those of any existing apps.
+  * The short description and long description must clearly communicate the app’s unique value proposition
 
 * To fulfill multiple regions support requirement, you must build into your business logic and publish only one listing.
 
@@ -255,9 +257,9 @@ If your app authenticates users with an external service, follow these guideline
 
 * **Token prefetching in nested authentication**: Apps using nested authentication and token prefetching must:
 
-  * Prefix redirectURI domains with `brk-multihub://`.
+  * Prefix `redirectURI` domains with `brk-multihub://`.
   * Avoid sub-paths in `redirectURI` domains.
-  * `RedirectURI` domain must match the app domain used in the `validDomains` field of the manifest.
+  * Ensure that the `RedirectURI` domain matches the app domain used in the `validDomains` field in the app manifest.
 
       :::image type="content" source="../../../../assets/images/valid-domains.png" alt-text="Image shows how to add valid domains.":::
 
@@ -451,14 +453,12 @@ Explore resources designed to help you with responsible Artificial Intelligence 
   * In app mechanism to log issue along with specific reference to the inappropriate content.
 
 * You must take timely action on reported concerns. [*Must fix*]
-* App must clearly describe AI functionality before the customer acquires the offer consistent with policy [100.1.3](/legal/marketplace/certification-policies#10013-description) and prompt user to review the info as a part of in-app functionality. The AI disclaimer must be clearly visible in the UI where users interact with generative AI content. [*Must fix*].
+* App must clearly describe AI functionality before the customer acquires the offer consistent with policy [100.1.3](/legal/marketplace/certification-policies#10013-description) and prompt the user to review the information as a part of in-app functionality. The AI disclaimer must be clearly visible in the UI where users interact with generative AI content. [*Must fix*].
 
    Here are some ways to achieve this:
-  * Fixed disclaimer shown in the UI where AI content is generated
-
+  * Include fixed disclaimer shown in the UI where AI content is generated
   * Include disclaimers in the content generated through AI.
-
-  * Disclaimers that are shown as part of first-run experience only and may not be visible at all times.
+  * Include disclaimers that're shown as part of first-run experience only and aren't visible at all times.
 
    :::image type="content" source="../../../../assets/images/submission/teams-ai-library-description-guideline.png" alt-text="Screenshot shows the description for AI functionality.":::
 
@@ -1396,7 +1396,7 @@ If your app includes a message extension, ensure that it adheres to these guidel
 
 <details><summary>Messaging extensions design guidelines</summary>
 
-* If your Teams app uses the messaging extension capability, your app must follow the [Messaging extension design guidelines](../../../../messaging-extensions/design/messaging-extension-design.md).
+* If your Teams app uses the messaging extension capability, your app must follow the [messaging extension design guidelines](../../../../messaging-extensions/design/messaging-extension-design.md).
 
    :::image type="content" source="../../../../assets/images/submission/validation-messaging-extension-design-guidelines-fail.png" alt-text="Graphic shows an example of an app not meeting extension guidelines.":::
 
@@ -1522,7 +1522,7 @@ For more information, see [Teams dialog design guidelines](~\task-modules-and-ca
 </br>
 <details><summary>Meeting extension design guidelines</summary>
 
-* Your Teams apps must follow [Meeting extension design guidelines](../../../../apps-in-teams-meetings/design/designing-apps-in-meetings.md) and [calling extension design guidelines](../../../../apps-in-teams-meetings/build-tabs-for-calling.md).
+* Your Teams apps must follow [meeting extension design guidelines](../../../../apps-in-teams-meetings/design/designing-apps-in-meetings.md) and [calling extension design guidelines](../../../../apps-in-teams-meetings/build-tabs-for-calling.md).
 * With the in-meeting app experience, you can engage participants during the meeting by using in-meeting tabs, dialog box, and the in-meeting share to stage feature. If your app supports Teams meeting extension, you must provide a responsive in-meeting experience aligned with the Teams meeting experience. [*Must fix*]
 
 * Meeting extensibility apps must offer a responsive in-meeting experience aligned to the Teams meeting experience. In-meeting experience is mandatory for a Teams app that supports meeting extensibility but, pre- and post-meeting experiences aren't mandatory. [*Must fix*]
@@ -1697,9 +1697,9 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/tea
 
 <details><summary>Avatars</summary>
 
-* The notification avatar must match your app's color icon. Alternatively, if you're using custom activity icons for your app or agent, icons must be as per the following guidelines [*Must fix*]:
+* The notification avatar must match your app's color icon. Alternatively, if you're using custom activity icons for your app or agent, icons must be as per the following guidelines: [*Must fix*]
   * Activity icons must be 32 * 32 pixels in size and have a .png file extension.
-  * These activity icons mustn't be inappropriate, harmful, or have offensive content.
+  * Activity icons mustn't be inappropriate, harmful, or have offensive content.
   * The @mention icon must be used exclusively for indicating user or group tagging, similar to its usage in Microsoft Teams.
 
 * Notifications triggered by a user must include the user's avatar. [*Must fix*]
