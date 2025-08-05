@@ -1522,11 +1522,12 @@ For more information, see [Teams dialog design guidelines](~\task-modules-and-ca
 > [!TIP]
 > For more information on creating a high-quality app experience, see the [Teams meeting extension design guidelines](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md).
 
+You must declare personal as a scope and `meetingSidePanel` as a context property under `staticTabs` node of the app manifest to enable your app for 1:1 Teams calling [*Must fix*].
+
 </br>
 <details><summary>Meeting extension design guidelines</summary>
 
-* Your Teams apps must follow [Meeting extension design guidelines](../../../../apps-in-teams-meetings/design/designing-apps-in-meetings.md).
-
+* Your Teams apps must follow [Meeting extension design guidelines](../../../../apps-in-teams-meetings/design/designing-apps-in-meetings.md) and [calling extension design guidelines](../../../../apps-in-teams-meetings/build-tabs-for-calling.md).
 * With the in-meeting app experience, you can engage participants during the meeting by using in-meeting tabs, dialog box, and the in-meeting share to stage feature. If your app supports Teams meeting extension, you must provide a responsive in-meeting experience aligned with the Teams meeting experience. [*Must fix*]
 
 * Meeting extensibility apps must offer a responsive in-meeting experience aligned to the Teams meeting experience. In-meeting experience is mandatory for a Teams app that supports meeting extensibility but, pre- and post-meeting experiences aren't mandatory. [*Must fix*]
@@ -1543,17 +1544,17 @@ For more information, see [Teams dialog design guidelines](~\task-modules-and-ca
 
 * You must declare `groupChat` as a scope under `configurableTabs` and `meetingDetailsTab`, `meetingChatTab`, and `meetingSidePanel` as a context property in the app manifest to enable your app for meetings on Teams mobile. [*Must fix*]
 
-* Meeting canvases mustn't dead-end a meeting attendee. Meeting canvases must show a graceful failure message for app limitations such as, region specific dependency. [*Must fix*]
+* Meeting and calling canvases mustn't dead-end an attendee. Meeting canvases must show a graceful failure message for app limitations such as, region specific dependency. [*Must fix*]
 
-* The meeting canvas’ header must display the correct app name to avoid confusing the meeting attendee. [*Must fix*]
+* The meeting and calling canvas’ header must display the correct app name to avoid confusing the meeting attendee. [*Must fix*]
 
-* You must include an option for the user to sign out or log out from the meeting extension. [*Must fix*]
+* You must include an option for the user to sign out or log out from the meeting and calling extension. [*Must fix*]
 
 * Meeting tabs on mobile platforms must include relevant workflows. Blank pages mustn't be present in a meeting tab. [*Must fix*]
 
 * Meeting stage is a focused, intuitive, and collaborative participation canvas. Meeting stage mustn't embed the complete website experience. [*Must fix*]
 
-* App mustn't show continuous loading screen, error, or broken functionality that dead-ends the user or blocks completion of a workflow in a meeting scenario. [*Must fix*]
+* App mustn't show continuous loading screen, error, or broken functionality that dead-ends the user or blocks completion of a workflow in a meeting and calling scenario. [*Must fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-app-shows-continous-loading-screen.png" alt-text="Graphic shows an example of continuous loading screen in an app.":::
 
