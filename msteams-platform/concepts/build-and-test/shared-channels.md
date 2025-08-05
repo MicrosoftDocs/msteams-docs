@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.date: 04/09/2025
 ---
 
-# Microsoft Teams Connect shared channels
+# Microsoft Teams Connects shared channels
 
 Microsoft Teams Connect shared channels allow members of a channel to collaborate with users across other teams and organizations. You can create and share a shared channel with:
 
@@ -58,6 +58,18 @@ You can collaborate with external members outside of your organization using sha
 > The [activity feed notification API](/graph/teams-send-activityfeednotifications) doesn't support cross-tenant notifications for apps in a shared channel.
 
 ## Get shared channel membership
+
+Use the [List allMembers API]([https://learn.microsoft.com/en-us/graph/api/channel-list-allmembers?view=graph-rest-beta&tabs=http](/graph/api/channel-list-allmembers?view=graph-rest-beta&tabs=http)) to retrieve all members (**direct** and **indirect**) of a shared channel.
+
+### Identify Direct vs. Indirect Members
+
+You can identify whether a member of a shared channel is direct or indirect by checking the **@microsoft.graph.originalSourceMembershipUrl** annotation.
+This property identifies the source of a member’s access to a shared channel, as shown in the following table.
+
+|Member Type |Annotation Present?  |Description  |
+|---------|---------|---------|
+|Direct Member  |  **No**      |  The user is added directly to the shared channel.  |
+|Indirect Member|  **Yes**     | The user accesses the shared channel through another team. The annotation includes a URL that points to the source team.     |
 
 You can get direct shared channel membership by using the `hostTeamGroupID` from `getContext` and following these steps:
 
