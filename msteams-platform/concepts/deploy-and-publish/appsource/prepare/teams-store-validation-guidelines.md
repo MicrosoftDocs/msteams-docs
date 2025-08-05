@@ -13,7 +13,7 @@ Following these guidelines increases the chances of your app to pass the Microso
 
 > [!NOTE]
 >
-> * If you want to build a high quality app or agent, these guidelines are applicable for you. However, some guidelines may not be applicable. For example, if your app doesn't include a bot, you can ignore bot-related guidelines.
+> * If you want to build a high quality app or agent, these guidelines are applicable for you. However, some guidelines might not be applicable. For example, if your app doesn't include a bot, you can ignore bot-related guidelines.
 > * We've cross-referenced these guidelines to the Microsoft commercial certification policies and added Do’s and Don’ts with examples from pass or fail scenarios encountered in our validation process.
 > * Certain guidelines are marked as *Must fix*. If your app submission doesn't meet these mandatory guidelines, you'll receive a failure report from us with steps to mitigate. Your app submission passes Teams Store validation only after you've fixed the issues.
 > * Other guidelines are marked as *Good-to-fix*. For an ideal user experience, we recommend that you fix the issues, however, your app submission isn't blocked from publishing on the Teams Store, if you choose not to fix the issues.
@@ -187,13 +187,13 @@ An app's name plays a critical role in how users discover it in the Teams Store.
 
 ### Duplicate App
 
-* Multiple apps may be published separately only if they represent distinct product lines (i.e., marketed and positioned differently), or if separate publication is required to meet regulatory, compliance (e.g., GDPR, Gov. cloud), or installation requirements (e.g., on-prem installation) [*Must fix*].
+* Multiple apps may be published separately only if they represent distinct product lines (that is, marketed and positioned differently), or if separate publication is required to meet regulatory, compliance (for example, GDPR, Gov. cloud), or installation requirements (for example, on-prem installation) [*Must fix*].
 
 * To avoid confusion and ensure clarity for end users:
 
-a) The Name, Short Description, and Long Description must differ meaningfully from those of any existing apps.
+a) The name, short description, and long description must differ meaningfully from those of any existing apps.
 
-b) The Short Description and Long Description must clearly communicate the app’s unique value proposition
+b) The short description and long description must clearly communicate the app’s unique value proposition
 
 * To fulfill multiple regions support requirement, you must build into your business logic and publish only one listing.
 
@@ -257,7 +257,7 @@ If your app authenticates users with an external service, follow these guideline
 
   * Prefix redirectURI domains with `brk-multihub://`.
   * Avoid sub-paths in `redirectURI` domains.
-  * `RedirectURI` domain should match the app domain used in the `validDomains` field of the manifest.
+  * `RedirectURI` domain must match the app domain used in the `validDomains` field of the manifest.
 
       :::image type="content" source="../../../../assets/images/valid-domains.png" alt-text="Image shows how to add valid domains.":::
 
@@ -957,7 +957,7 @@ If your app includes a tab, ensure that it adheres to these guidelines.
 
     :::image type="content" source="../../../../assets/images/submission/validation-views-multiple-tabs.png" alt-text="val-views-multiple-tabs":::
 
-* Tabs shouldn't have a duplicate header. Remove duplicate logos from the I-frame since the tab framework already displays the app icon and name. [*Good-to-fix*]
+* Tabs mustn't have a duplicate header. Remove duplicate logos from the I-frame since the tab framework already displays the app icon and name. [*Good-to-fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-views-no-duplicate-header-logo.png" alt-text="Graphic shows an example of a tab without duplicate headers and logos.":::
 
@@ -1637,7 +1637,7 @@ For more information, see [Teams dialog design guidelines](~\task-modules-and-ca
 </br>
 <details><summary>Shared Meeting Stage</summary>
 
-You must declare personal as a scope and `meetingSidePanel` as a context property under `staticTabs` node of the app manifest to enable your app for 1:1 Teams calling [*Must fix*].
+You must declare personal as a scope and `meetingSidePanel` as a context property under `staticTabs` node of the app manifest to enable your app for 1:1 Teams calling. [*Must fix*]
 
 To use the **shareAppContentToStage** API, you must declare the correct RSC permissions. In the app manifest, you must configure the `authorization` property. Update the `name` property as `MeetingStage.Write.Chat` and `type` property as `Delegated` in the `resourceSpecific` field. [*Must fix*]
 
