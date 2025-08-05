@@ -10,7 +10,7 @@ ms.date: 04/09/2025
 
 # Microsoft Teams Connects shared channels
 
-Microsoft Teams Connect shared channels allow members of a channel to collaborate with users across other teams and organizations. You can create and share a shared channel with:
+Microsoft Teams Connects shared channels allow members of a channel to collaborate with users across other teams and organizations. You can create and share a shared channel with:
 
 * Members of another team within the same organization.
 * Individuals within the same organization.
@@ -38,8 +38,11 @@ SupportedChannelTypes is an optional property that enables your app in non-stand
 
 > [!NOTE]
 >
-> * If your app supports the team scope, it functions in standard channels, regardless of what values are defined in this property.
-> * Your app might need to account for the unique properties of each of these channel types in order to function properly.
+> Your app must account for the unique properties of each channel type to function properly:
+>
+> * Standard channels: Available to all team members and support most app capabilities.
+> * Private channels: Restricted to a subset of team members and might limit app access.
+> * Shared channels: Allow cross-team collaboration and introduce indirect membership scenarios.
 
 ## Get context for shared channels
 
@@ -63,8 +66,7 @@ Use the [List allMembers API](/graph/api/channel-list-allmembers?view=graph-rest
 
 ### Identify Direct vs. Indirect Members
 
-You can identify whether a member of a shared channel is direct or indirect by checking the **@microsoft.graph.originalSourceMembershipUrl** annotation.
-This property identifies the source of a member’s access to a shared channel, as shown in the following table.
+You can identify whether a member of a shared channel is direct or indirect by checking the **@microsoft.graph.originalSourceMembershipUrl** annotation. This property identifies the source of a member’s access to a shared channel, as shown in the following table.
 
 |Member Type |Annotation Present?  |Description  |
 |---------|---------|---------|
@@ -72,7 +74,7 @@ This property identifies the source of a member’s access to a shared channel, 
 |Indirect Member|  **Yes**     | The user accesses the shared channel through another team. The annotation includes a URL that points to the source team.     |
 
 > [!NOTE]
-> You might receive duplicate notifications when a member is added to a shared channel. This can happen if the member is already part of the shared channel directly or through another linked team.
+> You might receive duplicate notifications when a member is added to a shared channel. This scenario can happen if the member is already part of the shared channel directly or through another linked team.
 >
 > To avoid duplicate notifications:
 >
@@ -107,7 +109,7 @@ Users become part of a shared channel either directly, by being added to the cha
 * [Install the app](../deploy-and-publish/apps-upload.md) in a host team and enable it for the shared channel.
 * Create a valid Microsoft Graph change notification subscription to monitor associated team membership changes and shared or unshared events using supported APIs.
 
-To receive both direct and indirect member update notifications, you must include both the query string parameters when creating a subscription. If the query strings are not provided, the subscription only delivers notifications for direct member updates.
+To receive both direct and indirect member update notifications, you must include both the query string parameters when creating a subscription. If the query strings aren't provided, the subscription only delivers notifications for direct member updates.
 
 `/teams/{team-id}/channels/getAllMembers?notifyOnIndirectMembershipUpdate=true&suppressNotificationWhenSharedUnsharedWithTeam=true`
 
@@ -138,17 +140,19 @@ You can manage indirect membership in shared channels using the following Micros
 > [!NOTE]
 > `allowedMembers` API returns only newly associated users and doesn't apply to unshared events.
 
-### Validate user access
+### Validate user access for membership updates
 
-When an app receives a notification for an indirect membership update, it must validate user access to the shared channel. For example, if a user is removed from a team associated with a shared channel, use the following API to determine whether the user still has access to the shared channel. The API verifies whether the user still has access to the shared channel.
+When an app receives a notification for an indirect membership update, it’s important to verify whether the user still has access to the shared channel as the same user might have both direct and indirect membership. For example, if a user is removed from a team that shares a channel, the app should confirm whether the user's access is truly lost. Use the **doesUserHaveAccess** API to determine whether the user still has access to the shared channel.
 
 ```http
-GET /DoesUserHaveAccessAsync
+GET /doesUserHaveAccessAsync
 ```
+
+Refer to [doesUserHaveAccess API](/graph/api/channel-doesuserhaveaccess?view=graph-rest-beta&tabs=http) to learn more about user accessed and relevant permissions.
 
 ### Handle bulk membership changes
 
-Teams suppresses individual notifications when a channel is shared with a team or when multiple users are removed. This helps reduce notification volume and improve performance.
+Teams suppresses individual notifications when a channel is shared with a team or when multiple users are removed. This feature reduces notification volume and improves performance.
 
 #### Use sharedWithTeams Subscription for Bulk Membership Changes
 
@@ -156,7 +160,7 @@ To reduce notification overload during membership updates, such as when a shared
 
 `/teams/{team-id}/channels/{channel-id}/sharedWithTeams`
 
-The sharedWithTeams subscription sends a single notification when a channel is shared or unshared with a team, avoiding thousands of per-user notifications and improving performance for apps that monitor membership changes.
+The sharedWithTeams subscription sends a single notification when a channel is shared or unshared with a team. It avoids thousands of per-user notifications and improves performance for apps that monitor membership changes.
 
 > [!NOTE]
 > Apps using resource-specific consent (RSC) must request extended permissions to support both direct and indirect membership updates. These permissions are required to query membership data and respond to notifications.
