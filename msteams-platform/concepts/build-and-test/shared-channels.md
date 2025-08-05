@@ -148,25 +148,18 @@ GET /DoesUserHaveAccessAsync
 
 ### Handle bulk membership changes
 
-In large-scale scenarios, such as sharing a channel with a large team or removing multiple users, Teams suppresses individual notifications to reduce volume.
+Teams suppresses individual notifications when a channel is shared with a team or when multiple users are removed. This helps reduce notification volume and improve performance.
 
-To handle bulk membership changes:
+#### Use sharedWithTeams Subscription for Bulk Membership Changes
 
-* Use `allMembers` API to retrieve the complete updated list of current members.
-* Use `allowedMembers` to retrieve only newly added members during shared events.
-* Avoid using `DoesUserHaveAccessAsync` for every user unless necessary.
-* Subscribe to shared and unshared events using supported Microsoft Graph APIs.
-
-> [!NOTE]
-> Apps using resource-specific consent (RSC) must request extended permissions to support both direct and indirect membership updates. These permissions are required to query membership data and respond to notifications.
-
-#### Manage sharedWithTeams Notifications for Large Membership Changes
-
-To reduce notification overload during large-scale membership updates, such as when a shared channel is added to or removed from a team with thousands of members, use the new SharedWithTeams subscription resource:
+To reduce notification overload during membership updates, such as when a shared channel is added to or removed from a team with thousands of members, use the new SharedWithTeams subscription resource:
 
 `/teams/{team-id}/channels/{channel-id}/sharedWithTeams`
 
-This subscription sends a single notification when a channel is shared or unshared with a team, avoiding thousands of per-user notifications and improving performance for apps that monitor membership changes.
+The sharedWithTeams subscription sends a single notification when a channel is shared or unshared with a team, avoiding thousands of per-user notifications and improving performance for apps that monitor membership changes.
+
+> [!NOTE]
+> Apps using resource-specific consent (RSC) must request extended permissions to support both direct and indirect membership updates. These permissions are required to query membership data and respond to notifications.
 
 ## Classify members in the shared channel as in-tenant or out-tenant
 
