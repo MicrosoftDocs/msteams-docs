@@ -223,7 +223,7 @@ Your bot receives a `conversationUpdate` with `membersAdded` when a user adds it
 The `conversationUpdate` event with the `membersRemoved` object in the payload is sent when either your bot is removed from a team, or a user is removed from a team where a bot has been added. Teams also adds `eventType.teamMemberRemoved` in the `channelData` object. As with the `membersAdded` object, you should parse the `membersRemoved` object for your bot's App ID to determine who was removed.
 
 > [!NOTE]
-> If a bot app is added to a team and later blocked for the team owner, it will not receive conversation update events when the team owner removes a user from the team.
+> If a bot is added to a team and later blocked for the team owner, it won't receive conversation update events when the team owner removes a user from the team.
 
 ### Schema example: Team member removed
 
