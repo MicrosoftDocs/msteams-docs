@@ -100,16 +100,16 @@ You can get direct shared channel membership by using the `hostTeamGroupID` from
     GET /teams/{host-team-group-id}/channels/{channel-id}/sharedWithTeams/{sharewithteamsId}/allowedMembers
     ```
 
-## Get notifications for indirect membership changes
+## Get App notifications for direct and indirect membership changes
 
-Users can access a shared channel either directly (added to the channel) or indirectly (members of a team with which the channel is shared). Apps installed in shared channels can receive notifications when users are added to or removed from an associated team with which the channel is shared. To receive these notifications, you must:
+Users become part of a shared channel either directly, by being added to the channel, or indirectly, through membership in a team that the channel is shared with. Apps installed in shared channels receive notifications when users are added to or removed from a team that shares the channel. To receive these notifications, you must:
 
 * [Install the app](../deploy-and-publish/apps-upload.md) in a host team and enable it for the shared channel.
 * Create a valid Microsoft Graph change notification subscription to monitor associated team membership changes and shared or unshared events using supported APIs.
 
-To subscribe to indirect membership updates, use the following Microsoft Graph resource URL:
+To receive both direct and indirect member update notifications, you must include both the query string parameters when creating a subscription. If the query strings are not provided, the subscription only delivers notifications for direct member updates.
 
-`/teams/{team-id}/channels/getAllMembers?notifyOnIndirectMembershipUpdate=true&suppressWhenSharedUnsharedWithTeam=true`
+`/teams/{team-id}/channels/getAllMembers?notifyOnIndirectMembershipUpdate=true&suppressNotificationWhenSharedUnsharedWithTeam=true`
 
 This subscription enables apps to monitor membership changes in shared channels and its associated teams. For more information on how to create a Microsoft Graph change notification subscription, see [Create a subscription.](/graph/teams-changenotifications-teammembership)
 
