@@ -148,11 +148,11 @@ When an app receives a notification for an indirect membership update, it’s im
 GET /doesUserHaveAccessAsync
 ```
 
-Refer to [doesUserHaveAccess API](/graph/api/channel-doesuserhaveaccess?view=graph-rest-beta&tabs=http) to learn more about user accessed and relevant permissions.
+Refer to [doesUserHaveAccess API](/graph/api/channel-doesuserhaveaccess?view=graph-rest-beta&tabs=http) to learn more about user accesses and relevant permissions.
 
 ### Handle bulk membership changes
 
-Teams suppresses individual notifications when a channel is shared with a team or when multiple users are removed. This feature reduces notification volume and improves performance.
+Teams supresses individual notifications when a channel is shared with a team or when multiple users are removed. This feature reduces notification volume and improves performance.
 
 #### Use sharedWithTeams Subscription for Bulk Membership Changes
 
