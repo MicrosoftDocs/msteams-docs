@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 11/16/2023
 ---
 
-# Microsoft 365 Agents Playground 
+# Microsoft 365 Agents Playground
 
 > [!NOTE]
 >
@@ -130,7 +130,7 @@ Agents Playground offers a faster debug experience for applications when compare
    1. Run the following command to install Agents Playground CLI from `npm`:
 
       ```cmd
-      npm install -g @microsoft/microsoft-365-agents-playground
+      npm install -g @microsoft/teams-app-test-tool
       ```
 
         :::image type="content" source="../assets/images/toolkit-v2/debug/npm-teams-app-test-tool.png" alt-text="Screenshot shows install agents playground cli.":::
