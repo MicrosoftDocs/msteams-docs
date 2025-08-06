@@ -23,12 +23,16 @@ Use the step-by-step migration flow to ensure a seamless transition of historica
 
 ### Step 1: Create or select a channel/chat
 
+Namespace: microsoft.graph
+
 You can either create a new channel or chat in a Team or use an existing channel or chat.
 
 > [!NOTE]
 > All APIs listed in the following sections require the `Teamswork.Migrate.All` permission in the application context. Delegated authentication isn't supported.
 
-### Step 2: Use startMigration API to start channel migration
+### Step 2: Use startMigration API to start channel and chat migration
+
+#### Channel Migration
 
 * You can use the startMigration API, which enables migration mode on existing Teams channels, allowing import of historical messages. Previously, import operations were restricted to newly created standard channels in an empty state. Refer [Import third-party platform messages to Teams using Microsoft Graph](import-external-messages-to-teams.md)
 
@@ -40,13 +44,15 @@ You can either create a new channel or chat in a Team or use an existing channel
 POST  /teams/{team-id}/channels/{channel-id}/startMigration
 {
    ACTUAL CODE
+"conversationCreationDateTime": "2024-01-01T00:00:00Z"
 }
 ```
 
 > [!NOTE]
 >
-> * You can optionally provide a request body to specify the minimum timestamp for the messages to be migrated.
 > * If no request body is provided, the API uses the current date and time as the minimum timestamp.
-> * `ConversationCreationDateTime` must be:
+> * `conversationCreationDateTime` must be:
 >   * Greater than the minimum value for `DateTimeOffset`.
 >   * Less than the current value of the channel's `CreatedDateTime`.
+
+#### Chat Migration
