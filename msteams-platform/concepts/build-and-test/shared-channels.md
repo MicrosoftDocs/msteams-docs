@@ -10,8 +10,6 @@ ms.date: 04/09/2025
 
 # Adapting Microsoft Teams App for Shared and Private Channels
 
-Microsoft Teams apps need to adapt to Shared and Private channels, which bring new collaboration patterns. This guide helps developers understand the changes required so their apps work smoothly across all channel types.
-
 Microsoft Teams Connect Shared and Private channels allow members of a channel to collaborate with users across other teams and organizations. You can create and share a Shared channel with:
 
 * Members of another team within the same organization.
