@@ -98,13 +98,9 @@ With an enhanced understanding of how users interact in shared and private chann
 
 When your app runs inside Microsoft Teams, it needs to know what kind of channel it’s operating in. This check helps the app adjust its functionality accordingly.
 
-| Tabs| Bots|
+|Tabs| Bots|
 |--------------------------------------|----------------------------------------|
-|When content UX is loaded in a Shared channel, use data received from [getContext](../../tabs/how-to/access-teams-context.md) call <br> For Shared channel, channel.membershipType == “Shared,”<br> For private channel channel.membershipType =="Private,"|To know where your bot was used in Microsoft Teams, you can check the channel.type property from the bot's activity data. check is found at turnContext.activity.channelData.channel.type.
-If the value is "shared," it means the bot was used in a Shared channel.
-If the value is "private," it means the bot was used in a Private channel.
-This check helps your bot understand the context of the message and respond accordingly.
-You can learn more from [(Bot activity handlers - Teams  Microsoft Learn)](../../bots/bot-concepts.md)
+|When content UX is loaded in a Shared channel, use data received from [getContext](../../tabs/how-to/access-teams-context.md) call <br> For Shared channel, channel.membershipType == “Shared,”<br> For private channel channel.membershipType =="Private,"|Use turnContext.activity.channelData.channel.type type property from any of the bot activity handlers event generated for shared channel activities, to get context of where bot was invoked or bot activity originated from.<br> For Shared Channel  turnContext.activity.channelData.channel.type == “shared”<br>  For Private ChannelturnContext.activity.channelData.channel.type == “private” You can learn more from [(Bot activity handlers - Teams  Microsoft Learn)](../../bots/bot-concepts.md)
 
 SupportedChannelTypes is an optional property that enables your app in nonstandard channels. If your app supports the team scope and you define the property, Teams enables your app in each channel type accordingly. The apps support private and shared channels. For more information, see [supportedChannelTypes](../../resources/schema/manifest-schema.md#supportedchanneltypes).
 
@@ -155,7 +151,7 @@ Pass the teamID and channelID fetched above in GET teams/{team-ID}/channels/{cha
 
 If you are using Bots SDK
 
-Pass the channel ID you received above in [getConversationMembers](https://learn.microsoft.com/en-us/microsoftteams/platform/resources/team-chat-member-api-changes) API to get all members of a Shared or private channel.  
+Pass the channel ID you received above in [getConversationMembers](../../resources/team-chat-member-api-changes.md) API to get all members of a Shared or private channel.  
 
 Note: Use the following APIs only if your app needs to create specific permissions or experiences based on the member type in a shared channel. Otherwise, you can skip them.
 
@@ -228,7 +224,7 @@ To do this, get tenant ID of the channel in which your app is operating inside.
 
 |Tabs|Bots|
 |--------------------------------------|----------------------------------------|
-|You can use below mentioned parameters received in [getContext](https://learn.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/access-teams-context?tabs=Json-v2%2Cteamsjs-v2%2Cdefault) call to get host team ID and channel ID required for any Graph calls <br>•JSv1: hostTeamGroupID and channelId <br>•JSv2: channel.ownerGroupId and channel.id  | For any event payload or action payload received for a bot,<br>•Get host team group ID from turnContext.Activity.TeamsGetTeamInfo().AadGroupId received in event payloads.<br>•Get channel ID from turnContext.Activity.TeamsGetChannelId() or turnContext.Activity.ChannelId received in event payloads.
+|You can use below mentioned parameters received in [getContext](../../tabs/how-to/access-teams-context.md) call to get host team ID and channel ID required for any Graph calls <br>•JSv1: hostTeamGroupID and channelId <br>•JSv2: channel.ownerGroupId and channel.id  | For any event payload or action payload received for a bot,<br>•Get host team group ID from turnContext.Activity.TeamsGetTeamInfo().AadGroupId received in event payloads.<br>•Get channel ID from turnContext.Activity.TeamsGetChannelId() or turnContext.Activity.ChannelId received in event payloads.
  
 Then, identify external users from direct members list you received for Shared channel.
 
@@ -264,9 +260,9 @@ Apps must function cross-tenants in installation and usage. The following table 
 
 ## Access SharePoint Data in Shared and Private Channels
 
-If you're building an app using [SharePoint](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/integrate-with-teams-introduction) Framework, you need to use the SharePoint Online (SPO) site linked to the Shared channel—not the one linked to the host team group. Each private channel has its own SPO site that is only accessible to members of that specific Shared or private channel.
+If you're building an app using [SharePoint](../../integrate-with-teams-introduction.md) Framework, you need to use the SharePoint Online (SPO) site linked to the Shared channel—not the one linked to the host team group. Each private channel has its own SPO site that is only accessible to members of that specific Shared or private channel.
 
-Use the Graph API to access the document library of the SharePoint Online (SPO) site linked to a Shared or private channel. Ensure you pass the Team ID and Channel ID received from the [Get Host Team Group ID & Channel ID](#get-host-team-group-id--channel-id) and pass in [Get filesFolder - Microsoft Graph v1.0 | Microsoft Learn](https://learn.microsoft.com/en-us/graph/api/channel-get-filesfolder?view=graph-rest-1.0&tabs=http).
+Use the Graph API to access the document library of the SharePoint Online (SPO) site linked to a Shared or private channel. Ensure you pass the Team ID and Channel ID received from the [Get Host Team Group ID & Channel ID](#get-host-team-group-id--channel-id) and pass in [Get filesFolder - Microsoft Graph v1.0 | Microsoft Learn](../../channel-get-filesfolder.md).
 
 ## Declare your App Works in Shared and Private Channels
 
@@ -278,11 +274,13 @@ supportsChannelFeatures is an optional property that enables your app in nonstan
 
 Put supportsChannelFeatures as “level2” For more information, see <Link to manifest’s public documentation section>.
 
-JSONCopy
+Json
+{
+  "supportsChannelFeatures": [
+    "Tier1"
+  ]
+}
 
-"supportsChannelFeatures": [
-
-        "Tier1"]
 
 Note: If your app supports team scope, it functions in standard channels, regardless of what values are defined in this property.
 
