@@ -10,11 +10,12 @@ ms.date: 04/09/2025
 
 # Adapting Microsoft Teams App for Shared and Private Channels
 
-Microsoft Teams Connect Shared and Private channels allow members of a channel to collaborate with users across other teams and organizations. You can create and share a Shared channel with:
+Microsoft Teams apps need to adapt to shared and private channels, which bring new collaboration patterns. This guide helps developers in understanding the changes required so that their apps work smoothly across all channel types.
+
+Microsoft Teams Connects shared and private channels allow members of a channel to collaborate with users across other teams and organizations. You can create and share a shared channel with:
 
 * Members of another team within the same organization.
-* Individuals within the same organization.
-* Individuals and other teams of other organizations.
+* Members of teams of other organizations.
 
 > [!NOTE]
 >
@@ -29,11 +30,11 @@ Teams Connect Shared channels facilitate secure collaboration seamlessly. Allow 
 
 ### Shared Channel
 
-Shared channels in Microsoft Teams let you collaborate with people who aren’t part of your team. Only those who are added as owners or members of the Shared channel can access it. Regular guest accounts (via Microsoft Entra) can’t be added to Shared channels. However, you can still invite people from outside your organization using Microsoft Entra B2B direct connect, which allows secure external collaboration without needing to add them as guests. More details [here](https://learn.microsoft.com/en-us/microsoftteams/shared-channels).
+Shared channels in Microsoft Teams let you collaborate with people who aren’t part of your team. Only users added as owners or members can access the shared channel. You can’t add regular guest accounts (via Microsoft Entra) to shared channels. However, you can still invite people from outside your organization through Microsoft Entra B2B direct connect, which enables secure external collaboration with no need to add them as guests. More details [here](https://learn.microsoft.com/en-us/microsoftteams/shared-channels).
 
 ### Private Channel
 
-Private channels in Microsoft Teams are special spaces for focused collaboration within a team. Only the people who are added as owners or members of the private channel can access it. You can include guests (users with Microsoft Entra guest accounts) in a private channel, but only if they are already part of the host team.
+Private channels in Microsoft Teams are special spaces for focused collaboration within a team. The system allows only people added as owners or members of the private channel to access it. You can include guests (users with Microsoft Entra guest accounts) in a private channel, but only if they are already part of the host team.
 
 ### Feature Differences between Shared and Private Channels
 
@@ -47,53 +48,51 @@ Private channels in Microsoft Teams are special spaces for focused collaboration
 |External participants (Direct Connect) can participate in channel       |No            | Yes                 | No                    |
 |Each channel has a dedicated SharePoint site       |No           | Yes                   | Yes                    |
 
-Standard and private channels help team members collaborate within their own group. Shared channels, however, allow collaboration with people outside the team without needing to add them to the team. This opens up new ways of working but also requires apps to work differently in these shared spaces.
-
 ## Reimagining App's Functionality for Shared and Private Channels
 
-As an app developer, it's important to rethink how your app works within Shared and Private channels in Microsoft Teams. These channels offer new ways for users to collaborate, so your app should be adapted to support their unique features. By making the right changes, you can improve both the app’s functionality and the user experience.
+As an app developer, it’s important to rethink how your app works within shared and private channels in Microsoft Teams. Since these channels provide new way for users to collaborate, your app must adapt to support their unique features.
 
 ## Why you should Adapt Apps to Shared and Private Channels
 
-As a developer, it's important to rethink how your app works in Microsoft Teams' Shared and Private channels. These channels offer new ways for users to collaborate—across teams and even across organizations—so your app needs to be flexible and aware of these environments.
+As a developer, it's important to rethink how your app works in Microsoft Teams' shared and private channels. These channels offer new ways for users to collaborate—across teams and even across organizations—so your app needs to be flexible and aware of these environments.
 
 Why Adapting Your App Matters:
 
-1. Beyond Standard Channels: Without updates, your app won’t appear or function in Shared or Private channels. Some changes are mandatory for compatibility.
+1. Beyond Standard Channels: Without updates, your app does not appear or function in shared or private channels. Some changes are mandatory for compatibility.
 2. Wider Collaboration: Shared channels allow external users to join via Microsoft Entra B2B Direct Connect. Your app can support broader collaboration if properly configured.
 3. Tailored Functionalities: You can highlight or build features that support cross-team workflows, like role-based permissions or scoped notifications.
 4. Future-Proofing: These channels are the future of collaboration in Teams. Updating your app now ensures it remains relevant and competitive.
 
 ## A Strategic Approach to Change
 
-Microsoft Teams is evolving with Shared and Private channels, and that means apps need to evolve too. To keep your app working smoothly across all channel types—standard, Shared, and Private—you need a clear strategy. 
+Microsoft Teams is developing with shared and private channels, and that means apps need to develop too. To keep your app working smoothly across all channel types—standard, shared, and private—you need a logical strategy.
 
 ### Mandatory Changes
 
-If the app isn’t updated to support Shared and Private channels in Microsoft Teams, it might not work properly in those spaces. These changes are essential to avoid broken experiences for users.  
+If you don’t update the app to support shared and private channels in Microsoft Teams, it might not work properly in those spaces.  
 
-Note: Assess your app first and if it doesn’t depend on any of the following requirement, you can Mark your app is supported in Shared and Private channels in the app manifest and do functional changes later.  
+Note: First assess your app, and if it does not depend on any of the following requirements, you can mark that shared and private channels support your app in the app manifest and do functional changes later.
 
-| Requirement       | Description                                 | Examples                                 |
+|Requirement|Description|Examples|
 |------------------------|-----------------------------------------------------|--------------------------------------------------|
-| Getting members of channel in which app will function         | All members of team are also part of standard channels. But in Shared or Private channels it is flexible depending on the channel owner's choice. So make sure you use channel specific members APIs rather than using team members APIs, else your app can work unexpectedly for members outside the channel and leak content.          | In a project management app that assigns tasks to members in a group, when working inside a Shared channel, you would need to get all members of the channel instead of members of team to correctly address the target users.     |
-|Accessing and storing data in Shared & Private channels    | All standard channels share the same SharePoint site. But each Shared and private channel has its own SharePoint site for storing files or app content.  So, make sure you use APIs available to access channel’s sharepoint site vs Team’s sharepoint site, else your app will break and can leak data across channels.     | For an app like a document management system that typically stores documents in team’s SharePoint site when working in standard channels, it will make changes to save and retrieve documents from the SharePoint sites dedicatedly linked to Shared or Private channels and not access team’s SharePoint site when working inside these channels.          |
-|Limit content access based on channels     | As Shared and Private channels can have sensitive or restricted content not to be Shared outside channel, so ensure you do not cross-post or cross-access data across channels and think carefully on your app scenarios     | A summarization app can summarize non-confidential chats/messages from all channels inside a team and post in a standard channel or to a group of team members. This app makes changes to not access private or Shared channel messages for this scenario and only get messages from standard channels.                                       |
-|Make your app available for Teams users in Shared and Private channels       | After you make necessary changes to your app, you must mark in App manifest that your app now is also supported in Shared and private channels. Else, your app will not be discoverable in these channels anymore.  **This is a Must-Do step for all apps.** 
+| Getting members of channel in which app will function|All members of team are also part of standard channels. But in Shared or Private channels it is flexible depending on the channel owner's choice. So make sure you use channel specific members APIs rather than using team members APIs, else your app can work unexpectedly for members outside the channel and leak content.| In a project management app that assigns tasks to members in a group, when working inside a Shared channel, you would need to get all members of the channel instead of members of team to correctly address the target users.|
+|Accessing and storing data in Shared & Private channels|All standard channels share the same SharePoint site. But each Shared and private channel has its own SharePoint site for storing files or app content.  So, make sure you use APIs available to access channel’s sharepoint site vs Team’s sharepoint site, else your app will break and can leak data across channels.|For an app like a document management system that typically stores documents in team’s SharePoint site when working in standard channels, it will make changes to save and retrieve documents from the SharePoint sites dedicatedly linked to Shared or Private channels and not access team’s SharePoint site when working inside these channels.|
+|Limit content access based on channels|As Shared and Private channels can have sensitive or restricted content not to be Shared outside channel, so ensure you do not cross-post or cross-access data across channels and think carefully on your app scenarios.|A summarization app can summarize non-confidential chats/messages from all channels inside a team and post in a standard channel or to a group of team members. This app makes changes to not access private or Shared channel messages for this scenario and only get messages from standard channels.|
+|Make your app available for Teams users in Shared and Private channels|After you make necessary changes to your app, you must mark in App manifest that your app now is also supported in Shared and private channels. Else, your app will not be discoverable in these channels anymore.  **This is a Must-Do step for all apps.**
 
 ### Optional Enhancements to Improve User Experience
 
-These updates are not required, but they can make your app work better in Shared and Private channels:
+These updates are not required, but they can make your app work better in shared and private channels:
 
-| Requirement       | Description                                 | Examples                                 |
+|Requirement|Description|Examples|
 |------------------------|-----------------------------------------------------|--------------------------------------------------|
-| Privacy & Access Controls for app features         | Implement conditional privacy & access controls within your app modules to cater to mix of internal and external users, protecting sensitive information as warranted for your app use-case.         | For app which is used to conduct polls/surveys, while internal members might have the ability to create and analyse polls, external members in Shared channels or guests in private channels can be limited to have a 'respond-only' level of interaction and not allowed to create polls or view results of past polls.|
-|Collaboration    | Enhance features that facilitate smooth collaboration among diverse set of membership, like Shared task lists that provide clear visibility & editing permissions based on whether user is from host team, other team, or external to organization or is an in-tenant guest.      | Whiteboarding apps could introduce a feature that allows external users in Shared channels or guests in private channels to add to the canvas, but these users cannot erase or edit internal members' contributions to the whiteboard.    |
-|Notification / Nudges   | Refine your app's notification systems to avoid overloading users with irrelevant updates, possibly segmenting alerts by user group or channel type.     | Helpdesk app used in a Shared channel, internal IT staff might receive immediate alerts for high-priority tickets or infrastructure issues, whereas external vendors might only receive notifications for tickets assigned to them or for maintenance schedules affecting their services.    |
+|Privacy & Access Controls for app features| Implement conditional privacy & access controls within your app modules to cater to mix of internal and external users, protecting sensitive information as warranted for your app use-case.| For app which is used to conduct polls/surveys, while internal members might have the ability to create and analyse polls, external members in Shared channels or guests in private channels can be limited to have a 'respond-only' level of interaction and not allowed to create polls or view results of past polls.|
+|Collaboration| Enhance features that facilitate smooth collaboration among diverse set of membership, like Shared task lists that provide clear visibility & editing permissions based on whether user is from host team, other team, or external to organization or is an in-tenant guest.| Whiteboarding apps could introduce a feature that allows external users in Shared channels or guests in private channels to add to the canvas, but these users cannot erase or edit internal members' contributions to the whiteboard.|
+|Notification / Nudges| Refine your app's notification systems to avoid overloading users with irrelevant updates, possibly segmenting alerts by user group or channel type.| Helpdesk app used in a Shared channel, internal IT staff might receive immediate alerts for high-priority tickets or infrastructure issues, whereas external vendors might only receive notifications for tickets assigned to them or for maintenance schedules affecting their services.|
 
 ## Technical Changes for App Compatibility with Shared and Private Channels
 
-With an enhanced understanding of of how users interact in Shared and Private channels, you can now focus on the technical steps to update your app. Microsoft Teams offers APIs specifically designed to work with these channels.
+With an enhanced understanding of how users interact in shared and private channels, you can now focus on the technical steps to update your app. Microsoft Teams offers APIs specifically designed to work with these channels.
 
 ### Identify Channels
 
