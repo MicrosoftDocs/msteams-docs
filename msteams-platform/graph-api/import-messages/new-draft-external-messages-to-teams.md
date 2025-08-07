@@ -36,11 +36,11 @@ You can either create a new channel or chat in a Team or use an existing channel
 
 * Define a minimum timestamp for messages to be migrated. The provided timestamp must be older than the channel or chat’s current createdDateTime and replaces it during migration.
 
-#### Channel Migration
+#### Channel migration
 
 * The supported channels are all the existing Shared, Private, and Public channels. You can optionally provide a request body to specify the minimum timestamp for the messages to be migrated.
 
-#### Channel Request
+#### Channel request
 
 ```HTTP
 POST  /teams/{team-id}/channels/{channel-id}/startMigration
@@ -50,12 +50,12 @@ POST  /teams/{team-id}/channels/{channel-id}/startMigration
 }
 ```
 
-#### Chat Migration
+#### Chat migration
 
 * The supported chat types include Group chats and One-on-one (1:1) chats. **Meeting chats are not supported. External members are supported in all applicable chat types.**
 * The startMigration API initiates the message migration process by setting the migrationMode property to **inProgress** for a specified chat.
 
-#### Chat Request
+#### Chat request
 
 ```HTTP
 POST   /chats/{chat-id}/startMigration 
@@ -65,7 +65,7 @@ POST   /chats/{chat-id}/startMigration
 }
 ```
 
-#### Channel and Chat Response
+#### Channel and Chat response
 
 For both channels and chats, if the request is successful, the method returns a **204 No Content** status code. The response body is empty.
 
@@ -94,3 +94,57 @@ Response of the request:
 4. ### Import messages using POST API
 
 Go to [Import third-party platform messages to Teams using Microsoft Graph](import-external-messages-to-teams.md) and use the POST API, to begin sending back-in-time messages.
+
+5. ### Complete channel and chat migration
+
+Namespace: microsoft.graph
+
+Use the **completeMigration** API to finish the migration process for both new and existing channels and chats. Previously, this operation was limited to newly created Standard channels and chats initiated for the initial migration flow.
+
+#### Complete Channel Migration
+
+* When a channel is created in migration mode for the initial import flow, calling the **completeMigration** API updates the migrationMode property to completed. **This change is permanent and marks the channel as fully migrated.**
+* After calling completeMigration, you can still import extra messages by using the startMigration API.
+
+#### Request for Completing Channel Migration
+
+```HTTP
+POST /teams/{team-id}/channels/{channel-id}/completeMigration 
+```
+
+#### Complete Chat Migration
+
+* For existing chats already in migration mode, call the **completeMigration** API to update the migrationMode property to completed. **This marks the chat as fully migrated.**
+* After calling completeMigration on a new or existing chat, you can continue importing messages by using the startMigration API.
+
+#### Request for Completing Chat Migration
+
+```HTTP
+POST /chats/{chat-id}/completeMigration 
+```
+
+> [!IMPORTANT]
+> Don't include a request body when calling this method for channels or chats. If the request is successful, the method returns a 204 No Content status code. The response body is empty.
+>
+> [!NOTE]
+>
+> In Migration Mode:
+>
+> * Certain operations such as sending messages and adding members are restricted.
+> * Calling the completeMigration API means that channel or chat migration is complete and normal operations can resume.
+
+#### Supported channel or chat types
+
+|Entity Type |Sub Type  |Migration Mode Support |Notes|
+|---------|---------|---------|---------|
+|**Channels**   |  General, Standard, Private, Shared   | New and existing  |  Must be created or already in migration mode    |
+|**Chats**    |   Group, One-on-one (1:1)   | New and existing  | Meeting chats not supported; external members supported        |
+
+6. Call the GET /channel/chat API to verify that the migrationMode property is marked as **completed**.
+
+## See also
+
+* [Microsoft Graph and Teams integration](/graph/teams-concept-overview)
+* [Export content with the Microsoft Teams Export APIs](/microsoftteams/export-teams-content)
+* [Microsoft Teams service limits](/graph/throttling-limits#microsoft-teams-service-limits)
+* [Licensing and payment requirements for the Microsoft Teams API](/graph/teams-licenses)
