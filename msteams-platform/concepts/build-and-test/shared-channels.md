@@ -77,17 +77,17 @@ Note- Assess whether your app relies on specific requirements. If it doesn't, en
 |------------------------|-----------------------------------------------------|--------------------------------------------------|
 | Getting members of channel in which app functions|All members of team are also part of standard channels. But in Shared or private channels it's flexible depending on the channel owner's choice. So make sure you use channel specific members APIs rather than using team members APIs, else your app can work unexpectedly for members outside the channel and leak content.| In a project management app, assigning tasks in a Shared channel means targeting channel members—not the full team.|
 |Accessing and storing data in Shared & private channels|All standard channels share the same SharePoint site. But each Shared and private channel has its own SharePoint site for storing files or app content.  So, make sure you use APIs available to access channel’s sharepoint site vs Team’s sharepoint site, else your app breaks and can leak data across channels.|A document management app typically stores files on the team’s SharePoint site when working in standard channels. Shared and private channels have their own dedicated SharePoint sites, which are separate from the team’s site. The app saves and retrieves files from the SharePoint site that is linked to the specific channel, rather than using the team’s SharePoint site when operating within Shared or private channels.|
-|Limit content access based on channels|As Shared and private channels can have sensitive or restricted content not to be Shared outside channel, so ensure you don't cross-post or cross-access data across channels and think carefully on your app scenarios.|A summarization app can summarize non-confidential chats/messages from all channels inside a team and post in a standard channel or to a group of team members. This app makes changes to not access private or Shared channel messages for this scenario and only get messages from standard channels.|
-|Make your app available for Teams users in Shared and private channels|After you make necessary changes to your app, you must mark in App manifest that your app now is also supported in Shared and private channels. Else, your app isn't discoverable in these channels anymore.  **This is a Must-Do step for all apps.**
+|Limit content access based on channels|As Shared and private channels can have sensitive or restricted content not to be Shared outside channel, so ensure you don't cross-post or cross-access data across channels and think carefully on your app scenarios.|A summarization app can summarize nonconfidential chats/messages from all channels inside a team and post in a standard channel or to a group of team members. This app makes changes to not access private or Shared channel messages for this scenario and only get messages from standard channels.|
+|Make your app available for Teams users in Shared and private channels|After you make necessary changes to your app, you must mark in App manifest that your app now is also supported in Shared and private channels. Else, your app isn't discoverable in these channels anymore. **This is a Must-Do step for all apps.**
 
 ### Optional Enhancements to Improve User Experience
 
-These updates are'nt required, but they can make your app work better in shared and private channels:
+These updates aren't required, but they can make your app work better in shared and private channels:
 
 |Requirement|Description|Examples|
 |------------------------|-----------------------------------------------------|--------------------------------------------------|
 |Privacy & Access Controls for app features| Implement conditional privacy & access controls within your app modules to cater to mix of internal and external users, protecting sensitive information as warranted for your app use-case.|In a poll or survey app, internal members create polls and view results. External members in Shared channels and guests in Private channels only respond to polls. They can't create polls or see past results.|
-|Collaboration| Make it easier for people to work together in Shared channels. Add task lists that everyone can see. If they are from the host team, they can add and change tasks. If they are from another team, they may have fewer rights. Guests inside the company and people from outside can see tasks, but can't change them..| Whiteboarding apps introduce a feature that lets external users in shared channels or guests in private channels add to the canvas. These users don't erase or edit contributions made by internal members.|
+|Collaboration| Make it easier for people to work together in Shared channels. Add task lists that everyone can see. If they are from the host team, they can add and change tasks. If they are from another team, they may have fewer rights. Guests inside the company and people from outside can see tasks, but can't change them.| Whiteboarding apps introduce a feature that lets external users in shared channels or guests in private channels add to the canvas. These users don't erase or edit contributions made by internal members.|
 |Notification / Nudges| Refine your app's notification systems to avoid overloading users with irrelevant updates, possibly segmenting alerts by user group or channel type.| Helpdesk app used in a Shared channel, internal IT staff might receive immediate alerts for high-priority tickets or infrastructure issues, whereas external vendors might only receive notifications for tickets assigned to them or for maintenance schedules affecting their services.|
 
 ## Technical Changes for App Compatibility with Shared and Private Channels
@@ -100,13 +100,13 @@ When your app runs inside Microsoft Teams, it needs to know what kind of channel
 
 | Tabs| Bots|
 |--------------------------------------|----------------------------------------|
-|When content UX is loaded in a Shared channel, use data received from [getContext](https://learn.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/access-teams-context?tabs=Json-v2%2Cteamsjs-v2%2Cdefault) call <br> For Shared channel, channel.membershipType == “Shared”,<br> For private channel channel.membershipType =="Private",|To know where your bot was used in Microsoft Teams, you can check the channel.type property from the bot's activity data.  check is found at turnContext.activity.channelData.channel.type.
-If the value is "shared", it means the bot was used in a Shared channel.
-If the value is "private", it means the bot was used in a Private channel.
+|When content UX is loaded in a Shared channel, use data received from [getContext](https://learn.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/access-teams-context?tabs=Json-v2%2Cteamsjs-v2%2Cdefault) call <br> For Shared channel, channel.membershipType == “Shared”,<br> For private channel channel.membershipType =="Private,"|To know where your bot was used in Microsoft Teams, you can check the channel.type property from the bot's activity data. check is found at turnContext.activity.channelData.channel.type.
+If the value is "shared," it means the bot was used in a Shared channel.
+If the value is "private," it means the bot was used in a Private channel.
 This check helps your bot understand the context of the message and respond accordingly.
 You can learn more from [(Bot activity handlers - Teams  Microsoft Learn)](https://learn.microsoft.com/en-us/microsoftteams/platform/bots/bot-concepts?tabs=csharp%2Cdotnet)|
 
-SupportedChannelTypes is an optional property that enables your app in non-standard channels. If your app supports the team scope and you define the property, Teams enables your app in each channel type accordingly. The apps support private and shared channels. For more information, see [supportedChannelTypes](../../resources/schema/manifest-schema.md#supportedchanneltypes).
+SupportedChannelTypes is an optional property that enables your app in nonstandard channels. If your app supports the team scope and you define the property, Teams enables your app in each channel type accordingly. The apps support private and shared channels. For more information, see [supportedChannelTypes](../../resources/schema/manifest-schema.md#supportedchanneltypes).
 
 ```JSON
     "supportedChannelTypes": [
@@ -118,7 +118,7 @@ SupportedChannelTypes is an optional property that enables your app in non-stand
 > [!NOTE]
 >
 > * If your app supports the team scope, it functions in standard channels, regardless of what this property defines.
-> * Your app might need to account for the unique properties of each of these channel types in order to function properly.
+> * To work well in all channel types, your app should handle the special rules and settings of each one.
 
 ### Get Context for Shared Channels
 
@@ -274,7 +274,7 @@ After making all the preceding changes, you need to declare your app’s manifes
 
 This declaration will make your app visible to users in Shared and Private channels. Else, your app won't be discoverable to users in those channels. This is a mandatory update.
 
-supportsChannelFeatures is an optional property that enables your app in non-standard channels along with standard channels.  
+supportsChannelFeatures is an optional property that enables your app in nonstandard channels along with standard channels.  
 
 Put supportsChannelFeatures as “level2” For more information, see <Link to manifest’s public documentation section>.
 
