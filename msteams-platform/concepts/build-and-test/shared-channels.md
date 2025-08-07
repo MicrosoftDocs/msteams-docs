@@ -76,7 +76,7 @@ Note- Assess whether your app relies on specific requirements. If it doesn't, en
 |Requirement|Description|Examples|
 |------------------------|-----------------------------------------------------|--------------------------------------------------|
 | Getting members of channel in which app functions|All members of team are also part of standard channels. But in Shared or private channels it's flexible depending on the channel owner's choice. So make sure you use channel specific members APIs rather than using team members APIs, else your app can work unexpectedly for members outside the channel and leak content.| In a project management app, assigning tasks in a Shared channel means targeting channel members—not the full team.|
-|Accessing and storing data in Shared & private channels|All standard channels share the same SharePoint site. But each Shared and private channel has its own SharePoint site for storing files or app content.  So, make sure you use APIs available to access channel’s sharepoint site vs Team’s sharepoint site, else your app breaks and can leak data across channels.|A document management app typically stores files on the team’s SharePoint site when working in standard channels. Shared and private channels have their own dedicated SharePoint sites, which are separate from the team’s site. The app saves and retrieves files from the SharePoint site that is linked to the specific channel, rather than using the team’s SharePoint site when operating within Shared or private channels.|
+|Accessing and storing data in Shared & private channels|All standard channels share the same SharePoint site. But each Shared and private channel has its own SharePoint site for storing files or app content. So, make sure you use APIs available to access channel’s sharepoint site vs Team’s sharepoint site, else your app breaks and can leak data across channels.|A document management app typically stores files on the team’s SharePoint site when working in standard channels. Shared and private channels have their own dedicated SharePoint sites, which are separate from the team’s site. The app saves and retrieves files from the SharePoint site that is linked to the specific channel, rather than using the team’s SharePoint site when operating within Shared or private channels.|
 |Limit content access based on channels|As Shared and private channels can have sensitive or restricted content not to be Shared outside channel, so ensure you don't cross-post or cross-access data across channels and think carefully on your app scenarios.|A summarization app can summarize nonconfidential chats/messages from all channels inside a team and post in a standard channel or to a group of team members. This app makes changes to not access private or Shared channel messages for this scenario and only get messages from standard channels.|
 |Make your app available for Teams users in Shared and private channels|After you make necessary changes to your app, you must mark in App manifest that your app now is also supported in Shared and private channels. Else, your app isn't discoverable in these channels anymore. **This is a Must-Do step for all apps.**
 
@@ -100,11 +100,11 @@ When your app runs inside Microsoft Teams, it needs to know what kind of channel
 
 | Tabs| Bots|
 |--------------------------------------|----------------------------------------|
-|When content UX is loaded in a Shared channel, use data received from [getContext](https://learn.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/access-teams-context?tabs=Json-v2%2Cteamsjs-v2%2Cdefault) call <br> For Shared channel, channel.membershipType == “Shared”,<br> For private channel channel.membershipType =="Private,"|To know where your bot was used in Microsoft Teams, you can check the channel.type property from the bot's activity data. check is found at turnContext.activity.channelData.channel.type.
+|When content UX is loaded in a Shared channel, use data received from [getContext](../../tabs/how-to/access-teams-context.md) call <br> For Shared channel, channel.membershipType == “Shared,”<br> For private channel channel.membershipType =="Private,"|To know where your bot was used in Microsoft Teams, you can check the channel.type property from the bot's activity data. check is found at turnContext.activity.channelData.channel.type.
 If the value is "shared," it means the bot was used in a Shared channel.
 If the value is "private," it means the bot was used in a Private channel.
 This check helps your bot understand the context of the message and respond accordingly.
-You can learn more from [(Bot activity handlers - Teams  Microsoft Learn)](https://learn.microsoft.com/en-us/microsoftteams/platform/bots/bot-concepts?tabs=csharp%2Cdotnet)|
+You can learn more from [(Bot activity handlers - Teams  Microsoft Learn)](../../bots/bot-concepts.md)
 
 SupportedChannelTypes is an optional property that enables your app in nonstandard channels. If your app supports the team scope and you define the property, Teams enables your app in each channel type accordingly. The apps support private and shared channels. For more information, see [supportedChannelTypes](../../resources/schema/manifest-schema.md#supportedchanneltypes).
 
@@ -226,22 +226,22 @@ For this, perform the following steps:
 Step 1: Identify External Users
 To do this, get tenant ID of the channel in which your app is operating inside.
 
-| Tabs                                | Bots                                  |
+|Tabs|Bots|
 |--------------------------------------|----------------------------------------|
 |You can use below mentioned parameters received in [getContext](https://learn.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/access-teams-context?tabs=Json-v2%2Cteamsjs-v2%2Cdefault) call to get host team ID and channel ID required for any Graph calls <br>•JSv1: hostTeamGroupID and channelId <br>•JSv2: channel.ownerGroupId and channel.id  | For any event payload or action payload received for a bot,<br>•Get host team group ID from turnContext.Activity.TeamsGetTeamInfo().AadGroupId received in event payloads.<br>•Get channel ID from turnContext.Activity.TeamsGetChannelId() or turnContext.Activity.ChannelId received in event payloads.
  
 Then, identify external users from direct members list you received for Shared channel.
 
-Get members of a Shared or a Private channel.  
+Get members of a shared or a private channel.  
 GET /teams/{host-team-group-id}/channels/{channel-id}/members
 
 Compare tenantID of each member with the hostTenantID property from above to classify member as out-of-tenant if TenantIds don’t match.
 
 ## Authenticate External Users to Access your App Content in SharePoint
 
-Note: This step is only required when requesting the SharePoint token, that is your app stores content in SharePoint service of the tenant in which channel is hosted.  
+Note: This step is only required when requesting the SharePoint token that is your app stores content in SharePoint service of the tenant in which channel is hosted.  
 
- | Tabs                                | Bots                                  |
+ |Tabs|Bots|
 |--------------------------------------|----------------------------------------|
 |Save host tenant ID of Shared channel where tab is configured. You can get host tenant ID from channel.ownerTenantId for JSv2 or hostTenantId for JSv1 received under getContext call. | For any event payload or action payload received for a bot, use Get hostTenant ID, from turnContext.activity.conversation.tenantId|
 
@@ -264,15 +264,15 @@ Apps must function cross-tenants in installation and usage. The following table 
 
 ## Access SharePoint Data in Shared and Private Channels
 
-If you're building an app using [SharePoint](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/integrate-with-teams-introduction) Framework, you need to use the SharePoint Online (SPO) site linked to the Shared channel—not the one linked to the host team group. Each Private channel has its own SPO site that is only accessible to members of that specific Shared or Private channel.
+If you're building an app using [SharePoint](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/integrate-with-teams-introduction) Framework, you need to use the SharePoint Online (SPO) site linked to the Shared channel—not the one linked to the host team group. Each private channel has its own SPO site that is only accessible to members of that specific Shared or private channel.
 
-Use the Graph API to access the document library of the SharePoint Online (SPO) site linked to a Shared or Private channel. Ensure you pass the Team ID and Channel ID received from the [Get Host Team Group ID & Channel ID](#get-host-team-group-id--channel-id) and pass in [Get filesFolder - Microsoft Graph v1.0 | Microsoft Learn](https://learn.microsoft.com/en-us/graph/api/channel-get-filesfolder?view=graph-rest-1.0&tabs=http).
+Use the Graph API to access the document library of the SharePoint Online (SPO) site linked to a Shared or private channel. Ensure you pass the Team ID and Channel ID received from the [Get Host Team Group ID & Channel ID](#get-host-team-group-id--channel-id) and pass in [Get filesFolder - Microsoft Graph v1.0 | Microsoft Learn](https://learn.microsoft.com/en-us/graph/api/channel-get-filesfolder?view=graph-rest-1.0&tabs=http).
 
 ## Declare your App Works in Shared and Private Channels
 
-After making all the preceding changes, you need to declare your app’s manifest to declare that your app works in Shared and Private channels.
+After making all the preceding changes, you need to declare your app’s manifest to declare that your app works in Shared and private channels.
 
-This declaration will make your app visible to users in Shared and Private channels. Else, your app won't be discoverable to users in those channels. This is a mandatory update.
+This declaration will make your app visible to users in Shared and private channels. Else, your app won't be discoverable to users in those channels. This is a mandatory update.
 
 supportsChannelFeatures is an optional property that enables your app in nonstandard channels along with standard channels.  
 
@@ -302,7 +302,7 @@ Note:
 - Do not assume that a channel’s storage location is the same as its parent team’s SharePoint site.
   - Instead, always use the Microsoft Graph API endpoint:
 GET /teams/{team-id}/channels/{channel-id}/filesFolder
-  - This API call returns the current and correct SharePoint document library location for the specified channel—especially important for Shared and Private channels, which have their own dedicated SharePoint sites.
+  - This API call returns the current and correct SharePoint document library location for the specified channel—especially important for shared and private channels, which have their own dedicated SharePoint sites.
 
 ## Apps in Federated Group Chats with External Users
 
@@ -323,9 +323,9 @@ If you're developing an app for use in federated group chats with external users
 
 ## Code sample
 
-| Sample name | Description | Node.js |
+|Sample name|Description|Node.js|
 |-------------|-------------|------|
-| Teams Conversation Bot | This sample app displays the names of the members in a federated group chat with external users. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-feed-members/nodejs/)|
+|Teams Conversation Bot|This sample app displays the names of the members in a federated group chat with external users.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-feed-members/nodejs/)|
 
 ## See also
 
@@ -336,4 +336,3 @@ If you're developing an app for use in federated group chats with external users
 * [Retention policy for Teams locations](/microsoft-365/compliance/create-retention-policies)
 * [Use guest access and external access to collaborate with people outside your organization](/microsoftteams/communicate-with-users-from-other-organizations)
 * [Manage external meetings and chat with people and organizations using Microsoft identities](/microsoftteams/trusted-organizations-external-meetings-chat?tabs=organization-settings)
-
