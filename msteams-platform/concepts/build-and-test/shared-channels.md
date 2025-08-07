@@ -30,7 +30,7 @@ Teams Connect Shared channels facilitate secure collaboration seamlessly. Allow 
 
 ### Shared Channel
 
-Shared channels in Microsoft Teams let you collaborate with people who aren’t part of your team. Only users added as owners or members can access the shared channel. You can’t add regular guest accounts (via Microsoft Entra) to shared channels. However, you can still invite people from outside your organization through Microsoft Entra B2B direct connect, which enables secure external collaboration with no need to add them as guests. More details [here](https://learn.microsoft.com/en-us/microsoftteams/shared-channels).
+Shared channels in Microsoft Teams let you collaborate with people who aren’t part of your team. Only users added as owners or members can access the shared channel. You can’t add regular guest accounts (via Microsoft Entra) to shared channels. However, you can still invite people from outside your organization through Microsoft Entra B2B direct connect, which enables secure external collaboration with no need to add them as guests.
 
 ### Private Channel
 
@@ -96,13 +96,13 @@ With an enhanced understanding of how users interact in shared and private chann
 
 ### Identify Channels
 
-When your app runs inside Microsoft Teams, it needs to know what kind of channel it’s operating in. This helps the app adjust its functionality accordingly:
+When your app runs inside Microsoft Teams, it needs to know what kind of channel it’s operating in. This helps the app adjust its functionality accordingly.
 
-| Tabs                                | Bots                                  |
+| Tabs| Bots|
 |--------------------------------------|----------------------------------------|
-|When content UX is loaded in a Shared channel, use data received from [getContext](https://learn.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/access-teams-context?tabs=Json-v2%2Cteamsjs-v2%2Cdefault) call <br> For Shared channel, channel.membershipType == “Shared”,<br> For private channel channel.membershipType == “Private”, | Use turnContext.activity.channelData.channel.type type property from any of the bot activity handlers event generated for Shared channel activities [(Bot activity handlers - Teams  Microsoft Learn)](https://learn.microsoft.com/en-us/microsoftteams/platform/bots/bot-concepts?tabs=csharp%2Cdotnet),  to get context of where bot was invoked or bot activity originated from.<br>  For Shared Channel turnContext.activity.channelData.channel.type == “shared” <br> For Private Channel  turnContext.activity.channelData.channel.type == “private” |
+|When content UX is loaded in a Shared channel, use data received from [getContext](https://learn.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/access-teams-context?tabs=Json-v2%2Cteamsjs-v2%2Cdefault) call <br> For Shared channel, channel.membershipType == “Shared”,<br> For private channel channel.membershipType == “Private”,|Use turnContext.activity.channelData.channel.type type property from any of the bot activity handlers event generated for Shared channel activities [(Bot activity handlers - Teams  Microsoft Learn)](https://learn.microsoft.com/en-us/microsoftteams/platform/bots/bot-concepts?tabs=csharp%2Cdotnet),  to get context of where bot was invoked or bot activity originated from.<br>  For Shared Channel turnContext.activity.channelData.channel.type == “shared” <br> For Private Channel  turnContext.activity.channelData.channel.type == “private”|
 
-SupportedChannelTypes is an optional property that enables your app in non-standard channels. If your app supports the team scope and the property is defined, Teams enables your app in each channel type accordingly. Private and Shared channels are supported. For more information, see [supportedChannelTypes](../../resources/schema/manifest-schema.md#supportedchanneltypes).
+SupportedChannelTypes is an optional property that enables your app in non-standard channels. If your app supports the team scope and you define the property, Teams enables your app in each channel type accordingly. The apps support private and shared channels. For more information, see [supportedChannelTypes](../../resources/schema/manifest-schema.md#supportedchanneltypes).
 
 ```JSON
     "supportedChannelTypes": [
@@ -113,27 +113,25 @@ SupportedChannelTypes is an optional property that enables your app in non-stand
 
 > [!NOTE]
 >
-> * If your app supports the team scope, it functions in standard channels, regardless of what values are defined in this property.
+> * If your app supports the team scope, it functions in standard channels, regardless of what this property defines.
 > * Your app might need to account for the unique properties of each of these channel types in order to function properly.
 
 ### Get Context for Shared Channels
 
-When the content UX is loaded in a Shared or private channel, use the data received from `getContext` call for  Shared or private channel changes. `getContext` call publishes two new properties, `hostTeamGroupID` and `hostTenantID`, which are used to retrieve channel membership using Microsoft Graph APIs. `hostTeam` is the team that creates the Shared channel.
+When loading the content UX in a shared or private channel, use the data received from `getContext` call for shared or private channel changes. `getContext` call publishes two new properties, `hostTeamGroupID` and `hostTenantID`, which are used to retrieve channel membership using Microsoft Graph APIs. `hostTeam` is the team that creates the shared channel.
 
 For more information to enable your tab, see:
 
-* [Get context for your tab for Private channels](../../tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels)
+* [Get context for your tab for private channels](../../tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels)
 * [Get context in shared channels](../../tabs/how-to/access-teams-context.md#get-context-in-shared-channels)
 
 ### Managing Channel Members and Permissions in Microsoft Teams Apps
 
-To ensure your app functions correctly in Shared and Private Channels, you must use channel-specific APIs to gather accurate member information. This is important because:
+To ensure your app functions correctly in shared and private channels, you must use channel-specific APIs to gather accurate member information. This is important because:
 
-Team membership APIs is not equal to Shared or Private Channel membership
-Shared and Private Channels have their own membership models, which are not the same as the parent team’s membership.
+TTeam membership APIs are not equal to shared or private Channel membershipShared and private channels have their own membership models, which are not the same as the parent team’s membership.
 
-Each channel has its own SharePoint site and permissions
-Apps must respect these boundaries to avoid data leakage or access errors.
+Each channel has its own SharePointsite and permissionsApps must respect these boundaries to avoid data leakage or access errors.
 
 ### Get Host Team Group ID & Channel ID
 
@@ -141,9 +139,9 @@ Apps must respect these boundaries to avoid data leakage or access errors.
 |--------------------------------------|----------------------------------------|
 |You can use below mentioned parameters received in getContext call to get host team ID and channel ID required for any Graph calls <br> 1. JSv1 : hostTeamGroupID and channelId <br> 2. JSv2: channel.ownerGroupId and channel.id  | For any event payload or action payload received for a bot, <br>Get host team group Id from: turnContext.Activity.TeamsGetTeamInfo().AadGroupId received in event payloads. <br> Get channel Id from: turnContext.Activity.TeamsGetChannelId() or turnContext.Activity.ChannelId received in event payloads.
 
-Note: Do not store these parameters, as these values can change when host team of a Shared channel is modified by the channel owner. Recommended to always fetch these dynamically when needed.
+Note: Do not store these parameters, because the channel owner can change the host team of a shared channel, which updates the values. Recommended to always fetch these dynamically when needed.
 
-Then, call respective APIs listed below based on your app requirements:
+Then, call APIs listed below based on your app requirements:
 
 ### Get All Members of a Private or Shared Channel
 
@@ -155,7 +153,7 @@ If you are using Bots SDK
 
 Pass the channel ID you received above in [getConversationMembers](https://learn.microsoft.com/en-us/microsoftteams/platform/resources/team-chat-member-api-changes) API to get all members of a Shared or private channel.  
 
-Note: Next set of APIs are only required if you need to create any specific permissions or app experience based on type of member of a Shared channel, else you can skip these 
+Note: Use the following APIs only if your app needs to create specific permissions or experiences based on the member type in a shared channel. Otherwise, you can skip them.
 
 ## Apps and permissions in Shared Channels
 
