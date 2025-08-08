@@ -720,6 +720,17 @@ A list of commands that your bot can recommend to users. The object is an array 
 |---|---|---|---|---|
 | `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| Specifies one or more runtime capabilities the bot requires to function properly. Supported values: `dialogUrl`, `dialogUrlBot`, `dialogAdaptiveCard`, `dialogAdaptiveCardBot`. For more information, see [how to specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md). |
 
+## registrationInfo
+
+**Optional** &ndash; Object
+
+System‑generated metadata. This information is maintained by Microsoft services and must not be modified manually.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| source | string | | ✔️ | The partner source through which the bot is registered. System‑generated metadata. This information is maintained by Microsoft services and must not be modified manually. |
+| environment | string | 128 | | A Power Platform environment that serves as a container for building apps under a Microsoft 365 tenant and can only be accessed by users within that tenant. System‑generated metadata. This information is maintained by Microsoft services and must not be modified manually. |
+
 ## connectors
 
 **Optional** &ndash; Array
