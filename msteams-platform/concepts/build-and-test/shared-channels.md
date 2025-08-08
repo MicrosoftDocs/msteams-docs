@@ -100,7 +100,7 @@ When your app runs inside Microsoft Teams, it needs to know what kind of channel
 
 |Tabs| Bots|
 |--------------------------------------|----------------------------------------|
-|When content UX is loaded in a Shared channel, use data received from [getContext](../../tabs/how-to/access-teams-context.md) call <br> For Shared channel, channel.membershipType == “Shared,”<br> For private channel channel.membershipType =="Private,"|Use turnContext.activity.channelData.channel.type type property from any of the bot activity handlers event generated for shared channel activities, to get context of where bot was invoked or bot activity originated from.<br> For Shared Channel  turnContext.activity.channelData.channel.type == “shared”<br>  For Private ChannelturnContext.activity.channelData.channel.type == “private” You can learn more from [(Bot activity handlers - Teams  Microsoft Learn)](../../bots/bot-concepts.md)
+|When content UX is loaded in a Shared channel, use data received from [getContext](../../tabs/how-to/access-teams-context.md) call <br> For Shared channel, channel.membershipType == “Shared,”<br> For private channel channel.membershipType =="Private,"|Use turnContext.activity.channelData.channel.type type property from any of the bot activity handlers event generated for shared channel activities, to get context of where bot was invoked or bot activity originated from.<br> For Shared Channel  turnContext.activity.channelData.channel.type == “shared”<br> For Private ChannelturnContext.activity.channelData.channel.type == “private” You can learn more from [(Bot activity handlers - Teams  Microsoft Learn)](../../bots/bot-concepts.md)
 
 SupportedChannelTypes is an optional property that enables your app in nonstandard channels. If your app supports the team scope and you define the property, Teams enables your app in each channel type accordingly. The apps support private and shared channels. For more information, see [supportedChannelTypes](../../resources/schema/manifest-schema.md#supportedchanneltypes).
 
@@ -245,7 +245,7 @@ Now, send saved host tenant ID inside tenantId parameter of getAuthToken call to
 
 ## Identify Guest Users (B2B Guests) in Private Channels
 
-You can identify if a member of private channel is guest user, invited to your tenant from external organization, using 'roles' property received for each [conversationMember](https://learn.microsoft.com/en-us/graph/api/resources/conversationmember?view=graph-rest-1.0) object in [List members of a channel - Microsoft Graph v1.0 | Microsoft Learn](https://learn.microsoft.com/en-us/graph/api/channel-list-members?view=graph-rest-1.0&tabs=http) response.  
+You can identify if a member of private channel is guest user, invited to your tenant from external organization, using 'roles' property received for each [conversationMember](https://learn.microsoft.com/graph/api/resources/conversationmember?view=graph-rest-1.0) object in [List members of a channel - Microsoft Graph v1.0 | Microsoft Learn](https://learn.microsoft.com/graph/api/channel-list-members?view=graph-rest-1.0&tabs=http) response.  
 
 For guests, “roles” = “guest”
 
@@ -260,7 +260,7 @@ Apps must function cross-tenants in installation and usage. The following table 
 
 ## Access SharePoint Data in Shared and Private Channels
 
-If you're building an app using [SharePoint](../../integrate-with-teams-introduction.md) Framework, you need to use the SharePoint Online (SPO) site linked to the Shared channel—not the one linked to the host team group. Each private channel has its own SPO site that is only accessible to members of that specific Shared or private channel.
+If you're building an app using [SharePoint](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/integrate-with-teams-introduction) Framework, you need to use the SharePoint Online (SPO) site linked to the Shared channel—not the one linked to the host team group. Each private channel has its own SPO site that is only accessible to members of that specific Shared or private channel.
 
 Use the Graph API to access the document library of the SharePoint Online (SPO) site linked to a Shared or private channel. Ensure you pass the Team ID and Channel ID received from the [Get Host Team Group ID & Channel ID](#get-host-team-group-id--channel-id) and pass in [Get filesFolder - Microsoft Graph v1.0 | Microsoft Learn](../../channel-get-filesfolder.md).
 
