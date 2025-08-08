@@ -33,7 +33,13 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 :::column span="2":::
 
 Teams platform features that are available to all app developers.</br>
+
+**2025 August**
+
+* ***August 08, 2025***: [Introducing app manifest v1.23 with support for custom contextual tabs and system-generated metadata for agents.](/microsoft-365/extensibility/schema/?view=m365-app-1.23&preserve-view=true)
+
 **2025 July**
+
 * ***July 10, 2025***: [Custom icons for Teams notifications help your app stand out and increase engagement through more personalized activity feed updates.](/graph/teams-send-activityfeednotifications#custom-activity-icons-in-activity-feed-notifications)</br>
 
 **2025 May**
