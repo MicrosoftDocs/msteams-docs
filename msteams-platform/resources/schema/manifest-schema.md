@@ -594,7 +594,7 @@ Represents a conversational Teams bot that uses custom AI language models and or
 |---|---|---|---|---|
 |`id`|String| |✔️| Unique (bot) identifier for the custom engine agent. Must match the `id` specified in the `bots` section of the manifest and be of `personal` scope. |
 |`type`|String| |✔️| Type of the custom engine agent. Supported value: `bot` |
-|`disclaimer.text`|String|500|✔️| The message shown to users before they interact with this application.
+|`disclaimer.text`|String|500|✔️| The message shown to users before they interact with this application. |
 
 ## configurableTabs
 
@@ -1190,6 +1190,10 @@ The `extensions` property specifies Outlook Add-ins within an app manifest and s
 |`autoRunEvents`| Array | 10 | | Defines the event-based activation extension point. |
 |`alternates`| Array | | 10 | Specifies the relationship to alternate existing Microsoft 365 solutions. It's used to hide or prioritize add-ins from the same publisher with overlapping functionality. |
 |`audienceClaimUrl`| String | 2048 characters | | Specifies the URL for your extension and is used to validate Exchange user identity tokens. For more information, see [inside the Exchange identity token](/office/dev/add-ins/outlook/inside-the-identity-token)|
+| `contentRuntimes` | Array of extensionContentRuntimeArray | Minimum array items: 1 | | Configures a page of content that is embedded in an Excel or PowerPoint document. |
+| `getStartedMessages` | Array of extensionGetStartedMessageArray | Minimum array items: 1 <br> Maximum array items: 3 | | Provides information used by the callout that appears when the add-in is installed. |
+| `contextMenus` | Array of extensionContextMenuArray | Minimum array items: 1 | | Specifies the context menus for your extension. A context menu is a shortcut menu that appears when a user right-clicks (selects and holds) in the Office UI. Min size 1.|
+| `keyboardShortcuts` | Array of extensionKeyboardShortcut | Minimum array items: 1 <br> Maximum array items: 10 | | Keyboard shortcuts, also known as key combinations, enable your add-in's users to work more efficiently. Keyboard shortcuts also improve the add-in's accessibility for users with disabilities by providing an alternative to the mouse. |
 
 For more information, see [Office Add-ins manifest for Microsoft 365](/office/dev/add-ins/develop/unified-manifest-overview).
 
