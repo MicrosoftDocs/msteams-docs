@@ -549,6 +549,10 @@ Describes a set of mutual dependencies between two or more app capabilities. A M
 
 Optional property containing background loading configuration. By opting in to this performance enhancement, your app is eligible to be loaded in the background in any Microsoft 365 application host that supports this feature.
 
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| `tabConfiguration` | Array of objects | 1 | Array of objects containing tab settings for background loading. |
+
 ### backgroundLoadConfiguration.tabConfiguration
 
 **Optional** &ndash; Object
