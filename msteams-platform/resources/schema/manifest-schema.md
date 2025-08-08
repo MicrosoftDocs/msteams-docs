@@ -543,6 +543,22 @@ Describes the unidirectional dependency of one app capability (X) to another (Y)
 
 Describes a set of mutual dependencies between two or more app capabilities. A Microsoft 365 runtime host must support all required capabilities for any of those capabilities to be available for users in that host.
 
+## backgroundLoadConfiguration
+
+**Optional** &ndash; Object
+
+Optional property containing background loading configuration. By opting in to this performance enhancement, your app is eligible to be loaded in the background in any Microsoft 365 application host that supports this feature.
+
+### backgroundLoadConfiguration.tabConfiguration
+
+**Optional** &ndash; Object
+
+Optional property within backgroundLoadConfiguration containing tab settings for background loading.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| `contentUrl` | string | 2048 | | Required URL for background loading. This can be the same `contentUrl` from the staticTabs section or an alternative endpoint used for background loading.|
+
 ## copilotAgents
 
 **Optional** &ndash; Object
