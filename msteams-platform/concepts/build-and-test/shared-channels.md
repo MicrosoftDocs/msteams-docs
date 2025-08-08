@@ -8,9 +8,9 @@ ms.topic: conceptual
 ms.date: 04/09/2025
 ---
 
-# Microsoft Teams Connect shared channels
+# Microsoft Teams Connects shared channels
 
-Microsoft Teams Connect shared channels allow members of a channel to collaborate with users across other teams and organizations. You can create and share a shared channel with:
+Microsoft Teams Connects shared channels allow members of a channel to collaborate with users across other teams and organizations. You can create and share a shared channel with:
 
 * Members of another team within the same organization.
 * Individuals within the same organization.
@@ -38,8 +38,11 @@ SupportedChannelTypes is an optional property that enables your app in non-stand
 
 > [!NOTE]
 >
-> * If your app supports the team scope, it functions in standard channels, regardless of what values are defined in this property.
-> * Your app might need to account for the unique properties of each of these channel types in order to function properly.
+> Your app must account for the unique properties of each channel type to function properly:
+>
+> * Standard channels: Available to all team members and support most app capabilities.
+> * Private channels: Restricted to a subset of team members and might limit app access.
+> * Shared channels: Allow cross-team collaboration and introduce indirect membership scenarios.
 
 ## Get context for shared channels
 
@@ -59,6 +62,26 @@ You can collaborate with external members outside of your organization using sha
 
 ## Get shared channel membership
 
+Use the [List allMembers API](/graph/api/channel-list-allmembers?view=graph-rest-beta&tabs=http) to retrieve all members (**direct** and **indirect**) of a shared channel.
+
+### Identify Direct vs. Indirect Members
+
+You can identify whether a member of a shared channel is direct or indirect by checking the **@microsoft.graph.originalSourceMembershipUrl** annotation. This property identifies the source of a member’s access to a shared channel, as shown in the following table.
+
+|Member Type |Annotation Present?  |Description  |
+|---------|---------|---------|
+|Direct Member  |  **No**      |  The user is added directly to the shared channel.  |
+|Indirect Member|  **Yes**     | The user accesses the shared channel through another team. The annotation includes a URL that points to the source team.     |
+
+> [!NOTE]
+> You might receive duplicate notifications when a member is added to a shared channel. This scenario can happen if the member is already part of the shared channel directly or through another linked team.
+>
+> To avoid duplicate notifications:
+>
+> * Cache the **/allMembers** list for the shared channel.
+> * Compare incoming indirect membership notifications against the cached list.
+> * Ignore the notification if the member already exists; either directly or indirectly.
+
 You can get direct shared channel membership by using the `hostTeamGroupID` from `getContext` and following these steps:
 
 1. Get direct members with [GET channel members API](/graph/api/channel-list-members?view=graph-rest-beta&tabs=http&preserve-view=true) API.
@@ -73,11 +96,74 @@ You can get direct shared channel membership by using the `hostTeamGroupID` from
     GET /teams/{host-team-group-id}/channels/{channel-id}/sharedWithTeams
     ```
 
-3. Use GET members of each shared team (Team X) with GET `sharedWithTeams` API.
+3. Use GET members of each shared team (sharewithteamsId) with GET `sharedWithTeams` API.
 
     ```http
-    GET /teams/{host-team-group-id}/channels/{channel-id}/sharedWithTeams/{teamX}/members
+    GET /teams/{host-team-group-id}/channels/{channel-id}/sharedWithTeams/{sharewithteamsId}/allowedMembers
     ```
+
+## Get App notifications for direct and indirect membership changes
+
+Users become part of a shared channel either directly, by being added to the channel, or indirectly, through membership in a team that the channel is shared with. Apps installed in shared channels receive notifications when users are added to or removed from a team that shares the channel. To receive these notifications, you must:
+
+* [Install the app](../deploy-and-publish/apps-upload.md) in a host team and enable it for the shared channel.
+* Create a valid Microsoft Graph change notification subscription to monitor associated team membership changes and shared or unshared events using supported APIs.
+
+To receive both direct and indirect member update notifications, you must include both the query string parameters when creating a subscription. If the query strings aren't provided, the subscription only delivers notifications for direct member updates.
+
+`/teams/{team-id}/channels/getAllMembers?notifyOnIndirectMembershipUpdate=true&suppressNotificationWhenSharedUnsharedWithTeam=true`
+
+This subscription enables apps to monitor membership changes in shared channels and its associated teams. For more information on how to create a Microsoft Graph change notification subscription, see [Create a subscription.](/graph/teams-changenotifications-teammembership)
+
+### Manage indirect membership in shared channels
+
+You can manage indirect membership in shared channels using the following Microsoft Graph APIs:
+
+* Use [allMembers](/graph/api/channel-list-allmembers?branch=main&branchFallbackFrom=pr-en-us-13010&view=graph-rest-1.0&tabs=http&preserve-view=true) API to retrieve all users who are members of a specific channel.
+
+    ```http
+    GET /teams/{team-id}/channels/{channel-id}/allMembers
+    ```
+
+* Use [sharedWithTeams](/graph/api/sharedwithchannelteaminfo-list?branch=main&branchFallbackFrom=pr-en-us-13010&view=graph-rest-1.0&tabs=http&preserve-view=true) API to list all teams a channel is shared with.
+
+    ```http
+    GET /teams/{team-id}/channels/{channel-id}/sharedWithTeams
+    ```
+
+* Use the [allowedMembers](/graph/api/sharedwithchannelteaminfo-list-allowedmembers?branch=main&branchFallbackFrom=pr-en-us-13010&view=graph-rest-1.0&tabs=http&preserve-view=true) API to retrieve users from a shared team who can access a shared channel.
+
+    ```http
+    GET /teams/{team-id}/channels/{channel-id}/sharedWithTeams/{sharewithteamsId}/allowedMembers
+    ```
+
+> [!NOTE]
+> `allowedMembers` API returns only newly associated users and doesn't apply to unshared events.
+
+### Validate user access for membership updates
+
+When an app receives a notification for an indirect membership update, it’s important to verify whether the user still has access to the shared channel as the same user might have both direct and indirect membership. For example, if a user is removed from a team that shares a channel, the app should confirm whether the user's access is truly lost. Use the **doesUserHaveAccess** API to determine whether the user still has access to the shared channel.
+
+```http
+GET /doesUserHaveAccessAsync
+```
+
+Refer to [doesUserHaveAccess API](/graph/api/channel-doesuserhaveaccess?view=graph-rest-beta&tabs=http) to learn more about user accesses and relevant permissions.
+
+### Handle bulk membership changes
+
+Teams supresses individual notifications when a channel is shared with a team or when multiple users are removed. This feature reduces notification volume and improves performance.
+
+#### Use sharedWithTeams Subscription for Bulk Membership Changes
+
+To reduce notification overload during membership updates, such as when a shared channel is added to or removed from a team with thousands of members, use the new SharedWithTeams subscription resource:
+
+`/teams/{team-id}/channels/{channel-id}/sharedWithTeams`
+
+The sharedWithTeams subscription sends a single notification when a channel is shared or unshared with a team. It avoids thousands of per-user notifications and improves performance for apps that monitor membership changes.
+
+> [!NOTE]
+> Apps using resource-specific consent (RSC) must request extended permissions to support both direct and indirect membership updates. These permissions are required to query membership data and respond to notifications.
 
 ## Classify members in the shared channel as in-tenant or out-tenant
 
@@ -121,9 +207,10 @@ If you're developing an app for use in federated group chats with external users
 
 ## Code sample
 
-| Sample name | Description | Node.js |
-|-------------|-------------|------|----|
-| Teams Conversation Bot | This sample app displays the names of the members in a federated group chat with external users. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-feed-members/nodejs/)|
+| Sample name | Description | .NET | Node.js | Python |
+|-------------|-------------|------|----|------|----|
+| Teams Conversation Bot | This sample app displays the names of the members in a federated group chat with external users.| NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-feed-members/nodejs/) | NA |
+| Membership change notification | This sample application demonstrates how to send notifications for shared channel events in Microsoft Teams, such as users being added, removed, or having their membership updated and when channel is shared/unshared with a team. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/membershipChangeNotificationNodejs/samples/graph-membership-change-notification/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/membershipChangeNotificationNodejs/samples/graph-membership-change-notification/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/membershipChangeNotificationNodejs/samples/graph-membership-change-notification/python) |
 
 ## See also
 
