@@ -551,17 +551,17 @@ Optional property containing background loading configuration. By opting in to t
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-| `tabConfiguration` | Array of objects | 1 | Array of objects containing tab settings for background loading. |
+| `tabConfiguration` | Array of objects | 1 |  | Array of objects containing tab settings for background loading. |
 
-### backgroundLoadConfiguration.tabConfiguration
+### tabConfiguration
 
 **Optional** &ndash; Object
 
-Optional property within backgroundLoadConfiguration containing tab settings for background loading.
+Optional property within `backgroundLoadConfiguration` containing tab settings for background loading.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-| `contentUrl` | string | 2048 | | Required URL for background loading. This can be the same `contentUrl` from the staticTabs section or an alternative endpoint used for background loading.|
+| `contentUrl` | string | 2048 | ✔️ | Required URL for background loading. This can be the same `contentUrl` from the staticTabs section or an alternative endpoint used for background loading.|
 
 ## copilotAgents
 
@@ -730,6 +730,8 @@ System‑generated metadata. This information is maintained by Microsoft service
 |---|---|---|---|---|
 | source | string | | ✔️ | The partner source through which the bot is registered. System‑generated metadata. This information is maintained by Microsoft services and must not be modified manually. |
 | environment | string | 128 | | A Power Platform environment that serves as a container for building apps under a Microsoft 365 tenant and can only be accessed by users within that tenant. System‑generated metadata. This information is maintained by Microsoft services and must not be modified manually. |
+| schemaName | string | 128 | | The Copilot Studio copilot schema name. System‑generated metadata. This information is maintained by Microsoft services and must not be modified manually. |
+| clusterCategory | string | 128 | | The core services cluster category for Copilot Studio copilots. System‑generated metadata. This information is maintained by Microsoft services and must not be modified manually. |
 
 ## connectors
 
