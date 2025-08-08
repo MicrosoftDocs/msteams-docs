@@ -884,6 +884,15 @@ Provide your Microsoft Entra App ID and Microsoft Graph information to help user
 |`nestedAppAuthInfo.scopes`|Array|20|✔️| Represents the stringified list of scopes the access token requested requires. Order must match that of the proceeding NAA request in the app.|
 |`nestedAppAuthInfo.claims`|String|||An optional JSON formatted object of client capabilities that represents if the resource server is CAE capable. Do not use an empty string for this value. If unsupported, keep the field undefined.|
 
+### nestedAppAuthInfo
+
+By including this property, an NAA token based on its contents will be prefetched when the tab is loaded.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| redirectUri | string | | ✔️ | Represents the nested app's valid redirect URI (always a base origin). |
+|
+
 ## graphConnector
 
 **Optional** &ndash; Object
