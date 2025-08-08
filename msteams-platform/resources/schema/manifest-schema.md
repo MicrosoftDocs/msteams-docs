@@ -543,6 +543,26 @@ Describes the unidirectional dependency of one app capability (X) to another (Y)
 
 Describes a set of mutual dependencies between two or more app capabilities. A Microsoft 365 runtime host must support all required capabilities for any of those capabilities to be available for users in that host.
 
+## backgroundLoadConfiguration
+
+**Optional** &ndash; Object
+
+Optional property containing background loading configuration. By opting in to this performance enhancement, your app is eligible to be loaded in the background in any Microsoft 365 application host that supports this feature.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| `tabConfiguration` | Array of objects | 1 |  | Array of objects containing tab settings for background loading. |
+
+### tabConfiguration
+
+**Optional** &ndash; Object
+
+Optional property within `backgroundLoadConfiguration` containing tab settings for background loading.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| `contentUrl` | string | 2048 | ✔️ | Required URL for background loading. This can be the same `contentUrl` from the staticTabs section or an alternative endpoint used for background loading.|
+
 ## copilotAgents
 
 **Optional** &ndash; Object
@@ -574,7 +594,7 @@ Represents a conversational Teams bot that uses custom AI language models and or
 |---|---|---|---|---|
 |`id`|String| |✔️| Unique (bot) identifier for the custom engine agent. Must match the `id` specified in the `bots` section of the manifest and be of `personal` scope. |
 |`type`|String| |✔️| Type of the custom engine agent. Supported value: `bot` |
-|`disclaimer.text`|String|500|✔️| The message shown to users before they interact with this application.
+|`disclaimer.text`|String|500|✔️| The message shown to users before they interact with this application. |
 
 ## configurableTabs
 
@@ -642,7 +662,7 @@ The item is an array (maximum of only one element&mdash; only one bot is allowed
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`botId`|String||✔️|The unique Microsoft app ID for the bot as registered with the Bot Framework. The ID can be the same as the overall [app ID](#id).|
-|`scopes`|Array of enums|3|✔️|Specifies whether the bot offers an experience in the context of a channel in a `team`, in a group chat (`groupChat`), or an experience scoped to an individual user alone (`personal`). These options are non-exclusive.|
+|`scopes`|Array of enums|4|✔️|Specifies whether the bot offers an experience in the context of a channel in a team, in a group chat (`groupChat`), an experience scoped to an individual user alone (`personal`) or within Copilot surfaces. These options are non-exclusive. |
 |`needsChannelSelector`|Boolean|||Describes whether or not the bot uses a user hint to add the bot to a specific channel. <br>Default value: `false` |
 |`isNotificationOnly`|Boolean|||Indicates whether a bot is a one-way, notification-only bot, as opposed to a conversational bot. <br>Default value: `false` |
 |`supportsFiles`|Boolean|||Indicates whether the bot supports the ability to upload/download files in personal chat. <br>Default value: `false`|
@@ -699,6 +719,19 @@ A list of commands that your bot can recommend to users. The object is an array 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 | `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| Specifies one or more runtime capabilities the bot requires to function properly. Supported values: `dialogUrl`, `dialogUrlBot`, `dialogAdaptiveCard`, `dialogAdaptiveCardBot`. For more information, see [how to specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md). |
+
+## registrationInfo
+
+**Optional** &ndash; Object
+
+System‑generated metadata. This information is maintained by Microsoft services and must not be modified manually.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| source | string | | ✔️ | The partner source through which the bot is registered. System‑generated metadata. This information is maintained by Microsoft services and must not be modified manually. |
+| environment | string | 128 | | A Power Platform environment that serves as a container for building apps under a Microsoft 365 tenant and can only be accessed by users within that tenant. System‑generated metadata. This information is maintained by Microsoft services and must not be modified manually. |
+| schemaName | string | 128 | | The Copilot Studio copilot schema name. System‑generated metadata. This information is maintained by Microsoft services and must not be modified manually. |
+| clusterCategory | string | 128 | | The core services cluster category for Copilot Studio copilots. System‑generated metadata. This information is maintained by Microsoft services and must not be modified manually. |
 
 ## connectors
 
@@ -850,6 +883,16 @@ Provide your Microsoft Entra App ID and Microsoft Graph information to help user
 |`nestedAppAuthInfo.redirectUri`|String||✔️| Represents the nested app's valid redirect URI (always a base origin).|
 |`nestedAppAuthInfo.scopes`|Array|20|✔️| Represents the stringified list of scopes the access token requested requires. Order must match that of the proceeding NAA request in the app.|
 |`nestedAppAuthInfo.claims`|String|||An optional JSON formatted object of client capabilities that represents if the resource server is CAE capable. Do not use an empty string for this value. If unsupported, keep the field undefined.|
+
+### nestedAppAuthInfo
+
+By including this property, an NAA token based on its contents will be prefetched when the tab is loaded.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| `redirectUri` | string | | ✔️ | Represents the nested app's valid redirect URI (always a base origin). |
+| scopes | Array of string | 20 | ✔️ | Represents the stringified list of scopes the access token requested requires. Order must match that of the proceeding NAA request in the app. |
+| claims | string | 1 | | An optional JSON formatted object of client capabilities that represents if the resource server is CAE capable. Do not use an empty string for this value. If unsupported, keep the field undefined. If supported, use the following string exactly: {"access_token":{"xms_cc":{"values":["CP1"]}}}. For more information on client capabilities, see [How to communicate client capabilities to Microsoft Entra ID](/entra/identity-platform/claims-challenge?tabs=dotnet#how-to-communicate-client-capabilities-to-microsoft-entra-id).
 
 ## graphConnector
 
@@ -1147,6 +1190,10 @@ The `extensions` property specifies Outlook Add-ins within an app manifest and s
 |`autoRunEvents`| Array | 10 | | Defines the event-based activation extension point. |
 |`alternates`| Array | | 10 | Specifies the relationship to alternate existing Microsoft 365 solutions. It's used to hide or prioritize add-ins from the same publisher with overlapping functionality. |
 |`audienceClaimUrl`| String | 2048 characters | | Specifies the URL for your extension and is used to validate Exchange user identity tokens. For more information, see [inside the Exchange identity token](/office/dev/add-ins/outlook/inside-the-identity-token)|
+| `contentRuntimes` | Array of extensionContentRuntimeArray | Minimum array items: 1 | | Configures a page of content that is embedded in an Excel or PowerPoint document. |
+| `getStartedMessages` | Array of extensionGetStartedMessageArray | Minimum array items: 1 <br> Maximum array items: 3 | | Provides information used by the callout that appears when the add-in is installed. |
+| `contextMenus` | Array of extensionContextMenuArray | Minimum array items: 1 | | Specifies the context menus for your extension. A context menu is a shortcut menu that appears when a user right-clicks (selects and holds) in the Office UI. Min size 1.|
+| `keyboardShortcuts` | Array of extensionKeyboardShortcut | Minimum array items: 1 <br> Maximum array items: 10 | | Keyboard shortcuts, also known as key combinations, enable your add-in's users to work more efficiently. Keyboard shortcuts also improve the add-in's accessibility for users with disabilities by providing an alternative to the mouse. |
 
 For more information, see [Office Add-ins manifest for Microsoft 365](/office/dev/add-ins/develop/unified-manifest-overview).
 
