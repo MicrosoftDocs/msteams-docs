@@ -12,7 +12,7 @@ ms.date: 04/09/2025
 
 Microsoft Teams apps need to adapt to shared and private channels, which bring new collaboration patterns. This guide helps developers in understanding the changes required so that their apps work smoothly across all channel types.
 
-Microsoft Teams Connect shared and private channels allow members of a channel to collaborate with users across other teams and organizations. You can create and share a shared channel with:
+Microsoft Teams Connects shared and private channels allow members of a channel to collaborate with users across other teams and organizations. You can create and share a shared channel with:
 
 * Members of another team within the same organization.
 * Members of teams of other organizations.
@@ -100,7 +100,7 @@ When your app runs inside Microsoft Teams, it needs to know what kind of channel
 
 |Tabs| Bots|
 |--------------------------------------|----------------------------------------|
-|When content UX is loaded in a Shared channel, use data received from [getContext](../../tabs/how-to/access-teams-context.md) call <br> For Shared channel, channel.membershipType == “Shared,”<br> For private channel channel.membershipType =="Private,"|Use turnContext.activity.channelData.channel.type type property from any of the bot activity handlers event generated for shared channel activities, to get context of where bot was invoked or bot activity originated from.<br> For Shared Channel  turnContext.activity.channelData.channel.type == “shared”<br> For Private ChannelturnContext.activity.channelData.channel.type == “private” You can learn more from [(Bot activity handlers - Teams  Microsoft Learn)](../../bots/bot-concepts.md)
+|When content UX is loaded in a Shared channel, use data received from [getContext](../../tabs/how-to/access-teams-context.md) call <br> For Shared channel, channel.membershipType == "Shared,"<br> For private channel channel.membershipType =="Private,"|Use turnContext.activity.channelData.channel.type type property from any of the bot activity handlers event generated for shared channel activities, to get context of where bot was invoked or bot activity originated from.<br> For Shared Channel  turnContext.activity.channelData.channel.type == “shared”<br> For Private ChannelturnContext.activity.channelData.channel.type == “private” You can learn more from [(Bot activity handlers - Teams  Microsoft Learn)](../../bots/bot-concepts.md)
 
 SupportedChannelTypes is an optional property that enables your app in nonstandard channels. If your app supports the team scope and you define the property, Teams enables your app in each channel type accordingly. The apps support private and shared channels. For more information, see [supportedChannelTypes](../../resources/schema/manifest-schema.md#supportedchanneltypes).
 
@@ -292,7 +292,7 @@ Note:
   - This is the only API that returns everyone who can access the channel. Check the official documentation for more details.
 
 - Don't assume the type of users (e.g., guest, external, internal) in a channel’s roster.
-  - a. When using the GET/teams/{team-id}/channels/{channel-id}/allMembers API:
+   a. When using the GET/teams/{team-id}/channels/{channel-id}/allMembers API:
     - Check the "roles" property to identify if the user is a guest.
     - Check the "tenantId" property to determine if the user is:<br>*From the same tenant (intra-tenant), or<br>*From a different tenant (cross-tenant).
  - This API returns both direct and transitive members—ensuring a complete view of channel access.
