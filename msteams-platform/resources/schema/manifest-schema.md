@@ -890,8 +890,9 @@ By including this property, an NAA token based on its contents will be prefetche
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-| redirectUri | string | | ✔️ | Represents the nested app's valid redirect URI (always a base origin). |
-|
+| `redirectUri` | string | | ✔️ | Represents the nested app's valid redirect URI (always a base origin). |
+| scopes | Array of string | 20 | ✔️ | Represents the stringified list of scopes the access token requested requires. Order must match that of the proceeding NAA request in the app. |
+| claims | string | | 1 | An optional JSON formatted object of client capabilities that represents if the resource server is CAE capable. Do not use an empty string for this value. If unsupported, keep the field undefined. If supported, use the following string exactly: {"access_token":{"xms_cc":{"values":["CP1"]}}}. For more information on client capabilities, see [How to communicate client capabilities to Microsoft Entra ID](/entra/identity-platform/claims-challenge?tabs=dotnet#how-to-communicate-client-capabilities-to-microsoft-entra-id).
 
 ## graphConnector
 
