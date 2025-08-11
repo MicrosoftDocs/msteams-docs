@@ -245,7 +245,7 @@ Now, send saved host tenant ID inside tenantId parameter of getAuthToken call to
 
 ## Identify Guest Users (B2B Guests) in Private Channels
 
-You can identify if a member of private channel is guest user, invited to your tenant from external organization, using 'roles' property received for each [conversationMember](/graph/api/resources/conversationmember?view=graph-rest-1.0) object in [List members of a channel - Microsoft Graph v1.0 | Microsoft Learn](/graph/api/channel-list-members?view=graph-rest-1.0&tabs=http) response.  
+You can identify if a member of private channel is guest user, invited to your tenant from external organization, using 'roles' property received for each [conversationMember](/graph/api/resources/conversationmember) object in [List members of a channel - Microsoft Graph v1.0 | Microsoft Learn](/graph/api/channel-list-members?view=graph-rest-1.0&tabs=http) response.  
 
 For guests, “roles” = “guest”
 
