@@ -1,5 +1,5 @@
 ---
-title: Teams Connects Shared Channels
+title: Teams Connect Shared Channels
 author: surbhigupta
 description: Learn about Teams Connect shared channels to securely collaborate with internal and external users in a shared space without switching tenants.
 ms.author: surbhigupta
@@ -12,7 +12,7 @@ ms.date: 04/09/2025
 
 Microsoft Teams apps need to adapt to shared and private channels, which bring new collaboration patterns. This guide helps developers in understanding the changes required so that their apps work smoothly across all channel types.
 
-Microsoft Teams Connects shared and private channels allow members of a channel to collaborate with users across other teams and organizations. You can create and share a shared channel with:
+Microsoft Teams Connect shared and private channels allow members of a channel to collaborate with users across other teams and organizations. You can create and share a shared channel with:
 
 * Members of another team within the same organization.
 * Members of teams of other organizations.
@@ -129,7 +129,7 @@ For more information to enable your tab, see:
 
 To ensure your app functions correctly in shared and private channels, you must use channel-specific APIs to gather accurate member information. Usage of channel-specific APIS is important because:
 
-Team membership APIs aren't equal to shared or private Channel membershipShared and private channels have their own membership models, which aren't the same as the parent team’s membership.
+Team membership APIs aren't equal to shared or private Channel membership Shared and private channels have their own membership models, which aren't the same as the parent team’s membership.
 
 Each channel has its own SharePoint site with its own permissions. Apps must follow these rules to prevent data leaks or access problems.
 
