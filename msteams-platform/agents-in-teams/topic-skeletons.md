@@ -5,7 +5,7 @@ ms.topic: concept
 ms.date: 07/02/2025  
 ---
 
-# Concept / Overview Skeleton
+# Concept - Overview Skeleton
 
 Below are five reusable outline “skeletons.” Every new article can be produced by filling-in one of these skeletons with topic-specific headings/content. Each skeleton already follows your OUTPUT_TEMPLATE requirements (YAML header, word-count rules, mandatory “Next step” and “See also” sections, etc.).  
 
