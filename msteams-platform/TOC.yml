@@ -1,24 +1,18 @@
 - name: Microsoft Teams Developer documentation
   href: mstdd-landing.yml
-- name: What's new?
-  href: whats-new.md
-  displayName: Teams platform features, latest updates, RSS feed, deprecated, announcement, preview 
-- name: Glossary
-  href: get-started/glossary.md
-  displayName: App tray, terminologies, definitions, welcome, new word, meaning
-- name: Overview
+- name: Overview 
   expanded: false 
   items:
-  - name: Teams app that fits
-    href: overview.md
+  - name: Teams developer platform
+    href: agents-in-teams/overview/overview-of-teams-developer-platform-outline.md
     displayName: why build apps with Microsoft Teams platform
-  - name: From ideas to Teams app
-    href: overview-story.md
+  - name: Why build on Teams?
+    href: agents-in-teams/overview/why-build-on-microsoft-teams-outline.md
     displayName: Teams app user experience, user scenario
-  - name: Explore Teams platform features
+  - name: What's new for developers?
     href: overview-explore.md
-  - name: The Teams solution
-    href: overview-solution.md
+  - name: Teams developer glossary
+    href: concepts/glossary.md
     displayName: develop Teams app, app development, tools used
 - name: Get started
   expanded: false
