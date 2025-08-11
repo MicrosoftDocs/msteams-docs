@@ -163,7 +163,7 @@ Your app is registered in Microsoft Entra ID. The app overview page appears.
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+add+a+messaging+endpoint)
 
-    [!INCLUDE [Service connection](includes/get-started/oauth-connection-settings.md)]
+[!INCLUDE [Service connection](includes/get-started/oauth-connection-settings.md)]
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+an+OAuth+connection+settings)
