@@ -1,8 +1,9 @@
-title: [Concept title – sentence case]  
+---
+title: Concept title – sentence case
 description: [1–2 sentence summary of what this concept is and why it matters]  
 ms.localizationpriority: medium  
-ms.topic: concept  
-ms.date: 07/02/2025  
+ms.topic: concept
+ms.date: 07/02/2025
 ---
 
 # Concept - Overview Skeleton
