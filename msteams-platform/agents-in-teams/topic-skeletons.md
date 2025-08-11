@@ -23,16 +23,14 @@ SOURCES:
 - [mapped legacy files here, if any]
 
 OUTLINE
----
 
 title: [Concept title – sentence case]  
 description: [1–2 sentence summary of what this concept is and why it matters]  
 ms.localizationpriority: medium  
 ms.topic: concept  
 ms.date: 07/02/2025  
----
 
-# [Concept title]  
+## [Concept title]  
 
 [Summarize the concept in 3-4 sentences. < 100 words]
 
@@ -56,11 +54,11 @@ ms.date: 07/02/2025
 
 ## Next step  
 
-[Link to the most logical how-to or deeper concept.]
+Link to the most logical how-to or deeper concept.
 
 ## See also  
 
-[1–3 related articles.]
+1–3 related articles.
 
 --------------------------------------------------------------------
 
@@ -73,22 +71,20 @@ SOURCES:
 - [legacy sources]
 
 OUTLINE
----
 
 title: [How-to title – imperative verb]  
 description: [Brief task description]  
 ms.localizationpriority: medium  
 ms.topic: how-to  
 ms.date: 07/02/2025  
----
 
-# [Task title]  
+## [Task title]  
 
 [1-sentence goal statement.]
 
 ## Prerequisites  
 
-[≤ 4 bullets with links.]
+- 4 bullets with links.
 
 ## Step 1 – [verb + object]  
 
@@ -125,16 +121,14 @@ SOURCES:
 - [legacy spec files]
 
 OUTLINE
----
 
 title: [Reference title]  
 description: [What is documented here]  
 ms.localizationpriority: medium  
 ms.topic: reference  
 ms.date: 07/02/2025  
----
 
-# [Reference title]  
+## [Reference title]  
 
 ## Namespace / endpoint  
 
@@ -188,16 +182,14 @@ SOURCES:
 - [design docs]
 
 OUTLINE
----
 
 title: [Design title]  
 description: [Short design-focus description]  
 ms.localizationpriority: medium  
 ms.topic: design  
 ms.date: 07/02/2025  
----
 
-# [Design topic]  
+## [Design topic]  
 
 [Context intro – 2-3 sentences.]
 
@@ -251,7 +243,7 @@ ms.topic: troubleshooting
 ms.date: 07/02/2025  
 ---
 
-# Frequently asked questions – [Topic]  
+## Frequently asked questions – [Topic]  
 
 ## Q1. [Question]  
 
