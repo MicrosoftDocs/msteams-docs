@@ -1,6 +1,6 @@
 - name: Microsoft Teams Developer documentation
   href: mstdd-landing.yml
-  
+
 - name: Overview 
   expanded: false 
   items:
@@ -79,10 +79,10 @@
   - name:  Monetize your agent
     href: agents-in-teams/publish/monetize-your-agent-outline.md
 
-- name: Conventional app Overview
+- name: Additional capabilities
   expanded: false
   items:
-  - name: Build a traditional Teams app
+  - name: Build a conventional Teams app
     href: agents-in-teams/classic/build-a-traditional-teams-app-outline.md
   - name: Tabs, bots & message extensions
     href: agents-in-teams/classic/tabs-bots-message-extensions-outline.md
