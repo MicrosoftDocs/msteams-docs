@@ -48,17 +48,7 @@
     href: agents-in-teams/build/app-manifest-for-agents-outline.md
   - name: Build bots, message extensions, tabs, and cards
     href: agents-in-teams/build/build-bots-message-extensions-tabs-cards-outline.md
-
-- name: Integrate your agents
-  expanded: false
-  items:
-  - name: Authentication and single sign-on
-    href: agents-in-teams/integrate/authentication-and-single-sign-on-outline.md
-  - name: Microsoft Graph integration
-    href: agents-in-teams/integrate/microsoft-graph-integration-outline.md
-  - name: Extend agents across Microsoft 365
-    href: agents-in-teams/integrate/extend-agents-across-microsoft-365-outline.md
-  
+ 
 - name: Test your agent
   expanded: false
   items:
@@ -78,6 +68,16 @@
     href: agents-in-teams/publish/grow-adoption-and-track-usage-outline.md
   - name:  Monetize your agent
     href: agents-in-teams/publish/monetize-your-agent-outline.md
+
+- name: Integrate your agents
+  expanded: false
+  items:
+  - name: Authentication and single sign-on
+    href: agents-in-teams/integrate/authentication-and-single-sign-on-outline.md
+  - name: Microsoft Graph integration
+    href: agents-in-teams/integrate/microsoft-graph-integration-outline.md
+  - name: Extend agents across Microsoft 365
+    href: agents-in-teams/integrate/extend-agents-across-microsoft-365-outline.md
 
 - name: Additional capabilities
   expanded: false
