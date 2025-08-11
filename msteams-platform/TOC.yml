@@ -1,5 +1,6 @@
 - name: Microsoft Teams Developer documentation
   href: mstdd-landing.yml
+  
 - name: Overview 
   expanded: false 
   items:
@@ -12,7 +13,7 @@
   - name: What's new for developers?
     href: whats-new.md
   - name: Teams developer glossary
-    href: concepts/glossary.md
+    href: get-started/glossary.md
     displayName: develop Teams app, app development, tools used
 
 - name: Get started
@@ -27,6 +28,89 @@
   - name: Quick-start guide - build your first agent
     href: agents-in-teams/get-started/quick-start-build-your-first-agent-outline.md
 
-- name: Support and feedback
-  href: feedback.md
-  displayName: Developer community help, questions, suggestions, contact, issues
+- name: Plan you agent
+  expanded: false
+  items:
+  - name: Choose your agent use-case
+    href: agents-in-teams/plan/choose-your-agent=use-case-outline.md
+  - name: Agent types and capabilities
+    href: agents-in-teams/plan/agent-types-and-capabilities-outline.md
+    displayName: agent design, user experience, user interface, user interaction  
+  - name: Design best practices for agents
+    href: agents-in-teams/plan/design-best-practices-for-agents-outline.md
+
+- name: Build your agent
+  expanded: false
+  items:
+  - name: Tools and SDKs for building agents
+    href: agents-in-teams/build/tools-sdk-for-agents-outline.md
+  - name: App manifest for agents
+    href: agents-in-teams/build/app-manifest-for-agents-outline.md
+  - name: Build bots, message extensions, tabs, and cards
+    href: agents-in-teams/build/build-bots-message-extensions-tabs-cards-outline.md
+
+- name: Integrate your agents
+  expanded: false
+  items:
+  - name: Authentication and single sign-on
+    href: agents-in-teams/integrate/authentication-and-single-sign-on-outline.md
+  - name: Microsoft Graph integration
+    href: agents-in-teams/integrate/microsoft-graph-integration-outline.md
+  - name: Extend agents across Microsoft 365
+    href: agents-in-teams/integrate/extend-agents-across-microsoft-365-outline.md
+  
+- name: Test your agent
+  expanded: false
+  items:
+  - name: Local testing your agent 
+    href: agents-in-teams/test/local-testing-your-agent-outline.md
+  - name:  Manifest validation workflow
+    href: agents-in-teams/test/manifest-validation-workflow-outline.md
+  - name: Troubleshooting tips
+    href: agents-in-teams/test/troubleshooting-tips-outline.md
+
+- name: Publish your agent
+  expanded: false
+  items:
+  - name:  Publish your agent to the Teams Store
+    href: agents-in-teams/publish/publish-your-agent-to-teams-store-outline.md
+  - name: Grow adoption and track usage
+    href: agents-in-teams/publish/grow-adoption-and-track-usage-outline.md
+  - name:  Monetize your agent
+    href: agents-in-teams/publish/monetize-your-agent-outline.md
+
+- name: Conventional app Overview
+  expanded: false
+  items:
+  - name: Build a traditional Teams app
+    href: agents-in-teams/classic/build-a-traditional-teams-app-outline.md
+  - name: Tabs, bots & message extensions
+    href: agents-in-teams/classic/tabs-bots-message-extensions-outline.md
+  - name: Meeting apps and collaborative features
+    href: agents-in-teams/classic/meeting-apps-collaborative-features-outline.md
+
+- name: Extend your agent
+  expanded: false
+  items:
+  - name: Cross-platform capabilities
+    href: agents-in-teams/extend/cross-platform-capabilities-outlook-outline.md
+  - name: Device capabilities
+    href: agents-in-teams/extend/device-capabilities-outline.md
+  - name: Notifications and webhooks
+    href: agents-in-teams/extend/notifications-and-webhooks-outline.md
+
+- name: Resources
+  expanded: false
+  items:
+  - name: Frequently asked questions
+    href: agents-in-teams/resources/frequently-asked-questions-outline.md
+  - name:  Templates and sample apps
+    href: agents-in-teams/resources/templates-and-sample-apps-outline.md
+  - name: Support and feedback channels
+    href: agents-in-teams/resources/support-and-feedback-chanels-outline.md
+
+- name: Reference
+  expanded: false
+  items:
+  - name: SDK & API reference hub 
+    href: agents-in-teams/reference/sdk-and-api-reference-hub-outline.md
