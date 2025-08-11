@@ -557,7 +557,7 @@
     items:
     - name: API-based message extensions
       href: messaging-extensions/api-based-overview.md
-      displayName: OpenAPI Description, Search, single parameter, search based message extension
+      displayName: OpenAPI description, Search, single parameter, search based message extension
     - name: Create API-based message extensions
       href: messaging-extensions/create-api-message-extension.md
       displayName: API-based, Microsoft 365 Agents Toolkit CLI, Developer Portal, Visual Studio Code, Visual Studio
