@@ -1,9 +1,9 @@
 ---
 title: Canonical Topic Map
-description: [1–2 sentence summary of what this concept is and why it matters]  
-ms.localizationpriority: medium  
-ms.topic: concept  
-ms.date: 07/02/2025  
+description: Topic Map
+ms.localizationpriority: medium
+ms.topic: conceptual
+ms.date: 07/02/2025
 ---
 
 # Canonical Topic Map (v 0.1 draft)

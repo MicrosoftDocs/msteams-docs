@@ -1,9 +1,9 @@
 ---
 title: Source to Target Mappings
-description: [1–2 sentence summary of what this concept is and why it matters]  
-ms.localizationpriority: medium  
-ms.topic: concept  
-ms.date: 07/02/2025  
+description: Core content for topics
+ms.localizationpriority: medium
+ms.topic: conceptual
+ms.date: 07/02/2025
 ---
 
 # Source to Target Mappings
