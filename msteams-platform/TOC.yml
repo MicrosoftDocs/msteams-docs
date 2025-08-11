@@ -27,31 +27,6 @@
   - name: Quick-start guide - build your first agent
     href: agents-in-teams/get-started/quick-start-build-your-first-agent-outline.md
 
-- name: Localization
-    items:
-    - name: Localize your app
-      href: concepts/build-and-test/apps-localization.md
-      displayname: localizationInfo, Marketplace listings, Partner Center, AppSource
-    - name: Localize JSON schema reference
-      href: resources/schema/localization-schema.md
-      displayname: meetingExtensionDefinition
-  - name: Cookies and local storage
-    href: resources/samesite-cookie-update.md
-    displayName: Cookies, third-party cookies, SameSite, Lax, Strict, None, Secure, SameSite=None, SameSite=Lax, SameSite=Strict
-  - name: Best practices for Teams mobile app
-    href: resources/teams-mobile-best-practices.md
-    displayName: Teams mobile app, best practices, service worker, lighthouse, performance audit
-  - name: Contribute to Teams documentation
-    href: resources/teams-contributor-reference.md
-  - name: Troubleshoot your Microsoft Teams app
-    href: resources/troubleshoot.md
-    displayName:  DevTools, Cache-Control, authentication issues, app uploading error
-  - name: Know about New Microsoft Teams client
-    href: resources/teams-updates.md
-    displayName: Classic Teams, new Teams client, Teams 2.1
-  - name: Extend Microsoft 365 Copilot
-    href: messaging-extensions/how-to-extend-copilot.md
-    displayName: message extension, plugin, Copilot, Microsoft 365 Copilot
 - name: Support and feedback
   href: feedback.md
   displayName: Developer community help, questions, suggestions, contact, issues
