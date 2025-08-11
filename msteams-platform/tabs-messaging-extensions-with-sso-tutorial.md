@@ -60,11 +60,11 @@ The following steps help you to create and register your bot in Azure portal:
 
 2. Select **App registrations**.
 
-![Screenshot shows the Azure services to select App registrations](../../assets/images/include-files/azure-app-registration.png)
+![Screenshot shows the Azure services to select App registrations](assets/images/include-files/azure-app-registration.png)
 
 3. Select **+ New registration**.
 
-![Screenshot shows the New registration page on Microsoft Entra admin center](../../assets/images/include-files/new-registration.png)
+![Screenshot shows the New registration page on Microsoft Entra admin center](assets/images/include-files/new-registration.png)
 
 4. Enter the name of your app.
 
@@ -72,11 +72,11 @@ The following steps help you to create and register your bot in Azure portal:
 
 6. Select **Register**.
 
-![Screenshot of the Microsoft Entra admin center showing the interface for registering a bot application.](../../assets/images/include-files/app-register.png)
+![Screenshot of the Microsoft Entra admin center showing the interface for registering a bot application.](assets/images/Teams-task-module/app-register.png)
 
 Your app is registered in Microsoft Entra ID. The app overview page appears.
 
-![Screenshot shows the app registration overview page](../../assets/images/include-files/app-registration-overview.png)
+![Screenshot shows the app registration overview page](assets/images/include-files/app-registration-overview.png)
 
  **Note:** Save the app ID from **Application (client) ID** and **Directory (tenant) ID** for further use.
 
