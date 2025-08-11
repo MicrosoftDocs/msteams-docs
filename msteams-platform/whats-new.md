@@ -33,10 +33,13 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 :::column span="2":::
 
 Teams platform features that are available to all app developers.</br>
+
 **2025 August**
 
-* ***August 07, 2025***: [Teams now supports token prefetching for apps that use nested app authentication (NAA).
+* ***August 11, 2025***: [Teams now supports token prefetching for apps that use nested app authentication (NAA).
 This enhancement enables the host to acquire authentication tokens proactively before the app launches, improving startup performance and reducing latency.](concepts/authentication/nested-authentication.md#token-prefetching-for-nested-app-authentication-naa)</br>
+
+* ***August 08, 2025***: [Introducing app manifest v1.23 with support for custom contextual tabs and system-generated metadata for agents.](/microsoft-365/extensibility/schema/?view=m365-app-1.23&preserve-view=true)
 
 **2025 July**
 
