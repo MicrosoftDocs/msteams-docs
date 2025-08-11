@@ -2,7 +2,7 @@
 title: Extend your Teams agents across Microsoft 365  
 description: Learn how a single app manifest lets AI-powered agents light up in Outlook, Microsoft 365 app, and other hosts while reusing the same code base.  
 ms.localizationpriority: medium  
-ms.topic: concept  
+ms.topic: conceptual
 ms.date: 07/02/2025  
 ---
 # Extend agents across Microsoft 365  

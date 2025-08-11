@@ -2,7 +2,7 @@
 title: Why build on Microsoft Teams?  
 description: Key business, user, and developer benefits of delivering AI-powered solutions on the Teams platform.  
 ms.localizationpriority: medium  
-ms.topic: concept  
+ms.topic: conceptual
 ms.date: 07/02/2025  
 ---
 # Why build on Microsoft Teams?  

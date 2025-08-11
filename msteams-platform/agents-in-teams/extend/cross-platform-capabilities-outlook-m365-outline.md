@@ -2,7 +2,7 @@
 title: Cross-platform capabilities for Outlook and Microsoft 365  
 description: Understand host support, manifest settings, and coding patterns that let your Teams apps and agents run seamlessly in Outlook and the Microsoft 365 app.  
 ms.localizationpriority: medium  
-ms.topic: concept  
+ms.topic: conceptual
 ms.date: 07/02/2025  
 ---
 # Run your Teams solution across Microsoft 365  

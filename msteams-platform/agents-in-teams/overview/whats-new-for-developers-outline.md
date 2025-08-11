@@ -2,7 +2,7 @@
 title: What’s new for Microsoft Teams developers  
 description: Monthly summary of major platform updates, SDK releases, and preview features with an emphasis on AI-powered agents.  
 ms.localizationpriority: medium  
-ms.topic: concept  
+ms.topic: conceptual
 ms.date: 07/02/2025  
 ---
 # What’s new for Microsoft Teams developers  

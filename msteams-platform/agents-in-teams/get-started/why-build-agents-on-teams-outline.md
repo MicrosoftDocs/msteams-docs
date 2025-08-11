@@ -2,7 +2,7 @@
 title: Why build AI-powered agents on Microsoft Teams?  
 description: Discover the strategic, user-experience, and developer advantages of hosting your AI agents on the Teams platform and Microsoft 365 Copilot.  
 ms.localizationpriority: medium  
-ms.topic: concept  
+ms.topic: conceptual
 ms.date: 07/02/2025  
 ---
 # Why build agents on Microsoft Teams?  

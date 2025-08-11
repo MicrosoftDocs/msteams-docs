@@ -2,7 +2,7 @@
 title: Agent types and capabilities  
 description: Compare declarative plug-ins, custom engine agents, and hybrid approaches, and learn which capabilities each model supports across Microsoft Teams and Microsoft 365 Copilot.  
 ms.localizationpriority: medium  
-ms.topic: concept  
+ms.topic: conceptual
 ms.date: 07/02/2025  
 ---
 # Agent types and capabilities  

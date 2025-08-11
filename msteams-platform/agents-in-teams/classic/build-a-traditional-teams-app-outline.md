@@ -2,7 +2,7 @@
 title: Build a traditional Microsoft Teams app  
 description: Learn the core surfaces—tabs, bots, message extensions, webhooks, and connectors—used to create classic Teams apps that don’t integrate with Copilot or the new agent runtime.  
 ms.localizationpriority: medium  
-ms.topic: concept  
+ms.topic: conceptual
 ms.date: 07/02/2025  
 ---
 # Build a traditional Microsoft Teams app  

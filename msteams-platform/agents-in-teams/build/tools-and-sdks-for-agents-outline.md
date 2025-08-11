@@ -2,7 +2,7 @@
 title: Tools and SDKs for building AI-powered agents  
 description: Set up your environment with the Microsoft 365 Agents Toolkit, Teams AI Library, TeamsJS, and other SDKs used to create, debug, and deploy agents.  
 ms.localizationpriority: medium  
-ms.topic: concept  
+ms.topic: conceptual
 ms.date: 07/02/2025  
 ---
 # Tools & SDKs for building agents  

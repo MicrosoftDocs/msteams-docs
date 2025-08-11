@@ -2,7 +2,7 @@
 title: Device capabilities for Teams apps and agents  
 description: Learn how to access camera, microphone, location, barcode scanner, and People Picker APIs in Microsoft Teams, Outlook, and Microsoft 365.  
 ms.localizationpriority: medium  
-ms.topic: concept  
+ms.topic: conceptual
 ms.date: 07/02/2025  
 ---
 # Use native device capabilities  

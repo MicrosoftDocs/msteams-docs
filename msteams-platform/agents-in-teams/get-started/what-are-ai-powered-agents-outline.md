@@ -2,7 +2,7 @@
 title: What are AI-powered agents in Microsoft Teams?  
 description: Learn how agents combine conversational interfaces, orchestration logic, and Microsoft 365 data to extend Copilot and Teams experiences.  
 ms.localizationpriority: medium  
-ms.topic: concept  
+ms.topic: conceptual
 ms.date: 07/02/2025  
 ---
 # What are AI-powered agents?  

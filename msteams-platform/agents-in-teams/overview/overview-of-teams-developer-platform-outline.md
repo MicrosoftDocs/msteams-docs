@@ -2,7 +2,7 @@
 title: Overview of the Microsoft Teams developer platform  
 description: End-to-end view of what you can build, where solutions run, and how AI-powered agents fit into the platform.  
 ms.localizationpriority: medium  
-ms.topic: concept  
+ms.topic: conceptual
 ms.date: 07/02/2025  
 ---
 # Overview of the Microsoft Teams developer platform  

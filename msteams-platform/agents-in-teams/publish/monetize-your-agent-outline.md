@@ -2,7 +2,7 @@
 title: Monetize your Teams agent  
 description: Explore pricing models, SaaS offers, and in-app purchase options to generate revenue from your Microsoft Teams AI-powered agent.  
 ms.localizationpriority: medium  
-ms.topic: concept  
+ms.topic: conceptual
 ms.date: 07/02/2025  
 ---
 # Monetize your Teams agent  

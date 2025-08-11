@@ -2,7 +2,7 @@
 title: Grow adoption and track usage of your Teams agent  
 description: Strategies, in-product levers, and analytics tools that help you drive installs, engagement, and retention for your AI-powered agent.  
 ms.localizationpriority: medium  
-ms.topic: concept  
+ms.topic: conceptual
 ms.date: 07/02/2025  
 ---
 # Grow adoption & track usage  

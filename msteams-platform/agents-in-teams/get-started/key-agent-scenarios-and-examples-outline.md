@@ -2,7 +2,7 @@
 title: Key agent scenarios and examples  
 description: Explore high-impact business and productivity use-cases for AI-powered agents and see how each maps to Teams capabilities.  
 ms.localizationpriority: medium  
-ms.topic: concept  
+ms.topic: conceptual
 ms.date: 07/02/2025  
 ---
 # Key agent scenarios & examples  

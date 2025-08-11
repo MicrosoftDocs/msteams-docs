@@ -2,7 +2,7 @@
 title: Choose your agent use-case  
 description: A framework to identify high-value scenarios, required data, and success metrics before you start building an AI-powered agent for Microsoft Teams.  
 ms.localizationpriority: medium  
-ms.topic: concept  
+ms.topic: conceptual
 ms.date: 07/02/2025  
 ---
 # Choose your agent use-case  

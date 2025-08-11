@@ -2,7 +2,7 @@
 title: Notifications and webhooks in Microsoft Teams  
 description: Learn how to send activity-feed notifications, push proactive bot messages, and integrate incoming or outgoing webhooks to keep users informed in Microsoft Teams and across Microsoft 365.  
 ms.localizationpriority: medium  
-ms.topic: concept  
+ms.topic: conceptual
 ms.date: 07/02/2025  
 ---
 # Keep users informed with notifications & webhooks  

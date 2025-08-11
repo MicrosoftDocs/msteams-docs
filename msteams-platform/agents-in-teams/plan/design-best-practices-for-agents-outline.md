@@ -2,7 +2,7 @@
 title: Design best practices for AI-powered agents  
 description: Guidelines for conversation flow, prompt engineering, UI surfaces, accessibility, and analytics to deliver high-quality agents in Microsoft Teams and Copilot.  
 ms.localizationpriority: medium  
-ms.topic: design  
+ms.topic: reference
 ms.date: 07/02/2025  
 ---
 # Design best practices for AI-powered agents  
