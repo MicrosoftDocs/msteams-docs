@@ -7,11 +7,11 @@ ms.date: 07/02/2025
 ---
 # Add meeting apps and collaborative features  
 
-[template instruction → Open with a 50-70-word paragraph that explains why meeting extensions matter (contextual collaboration, shared stage, real-time data) and clarifies that this guide targets *classic* Teams apps using manifest schema ≤ v1.21.]
+[Template instruction → Open with a 50-70-word paragraph that explains why meeting extensions matter (contextual collaboration, shared stage, real-time data) and clarifies that this guide targets *classic* Teams apps using manifest schema ≤ v1.21.]
 
 ## Prerequisites  
 
-[template instruction → List only must-have items.]  
+[Template instruction → List only must-have items.]  
 
 - Classic Teams app project created with **Teams Toolkit** (schema 1.21).  
 - Dev tunnel or ngrok for HTTPS callbacks.  
@@ -29,7 +29,7 @@ ms.date: 07/02/2025
 }
 ```  
 
-[template instruction → Explain each property in ≤ 2 sentences.]
+[Template instruction → Explain each property in ≤ 2 sentences.]
 
 ### Implement the tab content  
 
@@ -42,7 +42,7 @@ import { pages } from "@microsoft/teams-js";
 
 ### Add a share-to-stage command  
 
-[template instruction → Show manifest snippet with `shareToStage` capability.]  
+[Template instruction → Show manifest snippet with `shareToStage` capability.]  
 
 ### Invoke share action from side panel  
 
@@ -58,7 +58,7 @@ await meeting.shareAppContentToStage({ appId, threadId });
 
 ## 3 – Integrate Live Share for real-time collaboration  
 
-[template instruction → 80-word overview then hands-on steps.]
+[Template instruction → 80-word overview then hands-on steps.]
 
 ### Join a Live Share session  
 
@@ -68,7 +68,7 @@ const liveShare = await LiveShareClient.joinContainer(containerId);
 
 ### Sync cursors or media  
 
-[template instruction → Short code block or bullet list.]
+[Template instruction → Short code block or bullet list.]
 
 ## 4 – Send in-meeting notifications  
 
@@ -88,7 +88,7 @@ await adapter.sendInMeetingNotification(meetingId, users, cardJson);
 
 ## 5 – Use dialogs inside meetings  
 
-[template instruction → Mention `dialog.url` or Adaptive Card dialogs for quick forms.]
+[Template instruction → Mention `dialog.url` or Adaptive Card dialogs for quick forms.]
 
 ## 6 – Testing tips  
 
@@ -106,10 +106,10 @@ await adapter.sendInMeetingNotification(meetingId, users, cardJson);
 
 ## Next step  
 
-[template instruction → Provide logical link.]  
+[Template instruction → Provide logical link.]  
 Learn how to “**Send activity feed notifications**” to keep attendees engaged after the meeting.
 
 ## See also  
 
 - [Build a traditional Teams app](build-a-traditional-teams-app.md)  
-- [Share to stage API reference](link to api)
+- [Share to stage API reference](link to API)

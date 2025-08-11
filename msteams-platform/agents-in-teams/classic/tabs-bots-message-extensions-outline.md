@@ -7,11 +7,11 @@ ms.date: 07/02/2025
 ---
 # Add tabs, bots, and message extensions  
 
-[template instruction → Open with a 40–60-word paragraph explaining that these are the three most-used capabilities for classic Teams solutions and can be mixed in a single app package.]
+[Template instruction → Open with a 40–60-word paragraph explaining that these are the three most-used capabilities for classic Teams solutions and can be mixed in a single app package.]
 
 ## Prerequisites  
 
-[template instruction → 3–5 bullets only (e.g., Node/.NET runtime, Teams Toolkit installed, dev tenant with custom app upload).]
+[Template instruction → 3–5 bullets only (for example, Node/.NET runtime, Teams Toolkit installed, dev tenant with custom app upload).]
 
 ## 1 – Create or open a classic Teams project  
 
@@ -37,7 +37,7 @@ teamsapp new --name contoso-classic --capabilities tab bot me
 import { app } from "@microsoft/teams-js";
 ```
 
-[template instruction → Show minimal React or vanilla snippet that reads Teams context and renders UI.]
+[Template instruction → Show minimal React or vanilla snippet that reads Teams context and renders UI.]
 
 ### Update manifest  
 
@@ -61,11 +61,11 @@ const app = new TeamsActivityHandler();
 
 ### Enable SSO *(optional)*  
 
-[template instruction → Link to bot SSO guide.]
+[Template instruction → Link to bot SSO guide.]
 
 ### Test locally  
 
-[template instruction → Explain F5 debug + dev tunnel.]
+[Template instruction → Explain F5 debug + dev tunnel.]
 
 ## 4 – Expose commands with a message extension  
 
@@ -94,7 +94,7 @@ teamsapp package
 teamsapp preview --env local
 ```
 
-[template instruction → Mention that Toolkit auto-creates `teamsApp.zip` and launches debug Teams client.]
+[Template instruction → Mention that Toolkit auto-creates `teamsApp.zip` and launches debug Teams client.]
 
 ## Best practices  
 

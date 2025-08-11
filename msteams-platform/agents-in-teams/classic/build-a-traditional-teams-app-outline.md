@@ -7,15 +7,15 @@ ms.date: 07/02/2025
 ---
 # Build a traditional Microsoft Teams app  
 
-[template instruction → Introduce in 3-4 sentences (< 100 words) what a “classic” Teams app is, why it’s still supported, and when you might choose it over an AI-powered agent.]
+[Template instruction → Introduce in 3-4 sentences (< 100 words) what a **classic** Teams app is, why it’s still supported, and when you might choose it over an AI-powered agent.]
 
 ## Why build a classic app  
 
-[template instruction → Provide 2–3 bullets focusing on scenarios such as highly customized UI, legacy tenant environments, or meeting-stage media that isn’t yet agent-enabled.]
+[Template instruction → Provide 2–3 bullets focusing on scenarios such as highly customized UI, legacy tenant environments, or meeting-stage media that isn’t yet agent-enabled.]
 
 ## Core extensibility pillars  
 
-[template instruction → List each pillar with one-line description.]  
+[Template instruction → List each pillar with one-line description.]  
 
 - Tabs (personal, channel, meeting)  
 - Bots (conversational experiences via Bot Framework)  
@@ -25,7 +25,7 @@ ms.date: 07/02/2025
 
 ## Architecture snapshot  
 
-[template instruction → Include simple diagram placeholder + 3-5 callouts showing Teams client, service-hosted web content, Bot Framework endpoint, and optional Azure Functions.]
+[Template instruction → Include simple diagram placeholder + 3-5 callouts showing Teams client, service-hosted web content, Bot Framework endpoint, and optional Azure Functions.]
 
 ## Development lifecycle at a glance  
 
@@ -34,15 +34,15 @@ ms.date: 07/02/2025
 3. Test locally with dev tunnels  
 4. Validate manifest (`manifestVersion` ≤ 1.21)  
 5. Publish to Tenant or Teams Store  
-[template instruction → Add one short sentence under each bullet.]
+[Template instruction → Add one short sentence under each bullet.]
 
 ## Relationship to AI-powered agents  
 
-[template instruction → Explain in ≤ 70 words that classic apps can coexist with agents; you can migrate later by adding a `copilotAgents` block or keep both models side-by-side.]
+[Template instruction → Explain in ≤ 70 words that classic apps can coexist with agents; you can migrate later by adding a `copilotAgents` block or keep both models side-by-side.]
 
 ## Limitations  
 
-[template instruction → Note that classic apps won’t appear in Copilot skill list and cross-host runtime may require additional manifest work.]
+[Template instruction → Note that classic apps won’t appear in Copilot skill list and cross-host runtime may require additional manifest work.]
 
 ## Next step  
 
