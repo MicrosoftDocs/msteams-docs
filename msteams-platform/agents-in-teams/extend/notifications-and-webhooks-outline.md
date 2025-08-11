@@ -7,7 +7,7 @@ ms.date: 07/02/2025
 ---
 # Keep users informed with notifications & webhooks  
 
-[template instruction → 70-word intro that positions notifications as the primary re-engagement mechanism and explains that webhooks provide simple, no-code endpoints for external systems.]
+[Template instruction → 70-word intro that positions notifications as the primary re-engagement mechanism and explains that webhooks provide simple, no-code endpoints for external systems.]
 
 ## 1. Notification options at a glance  
 
@@ -30,7 +30,7 @@ ms.date: 07/02/2025
 }
 ```  
 
-[template instruction → Explain `activities.activityTypes` in ≤ 2 sentences.]
+[Template instruction → Explain `activities.activityTypes` in ≤ 2 sentences.]
 
 ### Send a notification  
 
@@ -45,11 +45,11 @@ Content-Type: application/json
 }
 ```  
 
-[template instruction → Note 429 throttling and retry headers.]
+[Template instruction → Note 429 throttling and retry headers.]
 
 ## 3. Proactive bot messages  
 
-[template instruction → 80-word overview.]
+[Template instruction → 80-word overview.]
 
 ### Acquire a conversation reference  
 
@@ -83,13 +83,13 @@ curl -H "Content-Type: application/json" -d @card.json <webhook-url>
 
 ### Secure with IP allow-list *(optional)*  
 
-[template instruction → 1 sentence.]
+[Template instruction → 1 sentence.]
 
 ## 5. Outgoing webhooks  
 
 ### Register  
 
-[template instruction → Numbered steps ≤ 90 words.]
+[Template instruction → Numbered steps ≤ 90 words.]
 
 ### Verify HMAC  
 
@@ -124,7 +124,7 @@ if(!VerifyHmac(body, signature)) return Unauthorized();
 
 ## 8. Cross-platform considerations  
 
-[template instruction → 2-3 bullets about Outlook: activity feed stays in Teams; proactive bot messages appear in Outlook chat; webhooks are Teams-only.]
+[Template instruction → 2-3 bullets about Outlook: activity feed stays in Teams; proactive bot messages appear in Outlook chat; webhooks are Teams-only.]
 
 ## Next step  
 

@@ -7,11 +7,11 @@ ms.date: 07/02/2025
 ---
 # What’s new for Microsoft Teams developers  
 
-[template instruction → Intro sentence (< 40 words) explaining that this page aggregates the latest capabilities and links to deep-dive articles.]
+[Template instruction → Intro sentence (< 40 words) explaining that this page aggregates the latest capabilities and links to deep-dive articles.]
 
 ## June 2025 highlights  
 
-[template instruction → Use this pattern for each month; limit to top 5 items.]  
+[Template instruction → Use this pattern for each month; limit to top 5 items.]  
 
 | Feature | Category | Status | Quick link |  
 |---------|----------|--------|------------|  
@@ -23,22 +23,22 @@ ms.date: 07/02/2025
 
 ## Roadmap at a glance  
 
-[template instruction → Table with feature, target quarter, and preview sign-up link.]
+[Template instruction → Table with feature, target quarter, and preview sign-up link.]
 
 ## Deprecations & breaking changes  
 
-[template instruction → Bullet list; each item must include action required and deadline.]
+[Template instruction → Bullet list; each item must include action required and deadline.]
 
 ## Release channels  
 
 - Public release (GA)  
 - Developer preview *(opt-in)*  
 - Experimental / Private preview  
-[template instruction → Describe how to enable each channel in ≤ 30 words.]
+[Template instruction → Describe how to enable each channel in ≤ 30 words.]
 
 ## How to stay informed  
 
-[template instruction → Provide RSS, GitHub discussions, Tech Community blog links.]
+[Template instruction → Provide RSS, GitHub discussions, Tech Community blog links.]
 
 ## Next step  
 

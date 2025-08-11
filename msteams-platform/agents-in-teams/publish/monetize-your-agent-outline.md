@@ -7,7 +7,7 @@ ms.date: 07/02/2025
 ---
 # Monetize your Teams agent  
 
-[template instruction → Open with 70–90 words on why monetization matters—turn usage into ROI, align with customer value, and leverage Microsoft commercial marketplace.]
+[Template instruction → Open with 70–90 words on why monetization matters—turn usage into ROI, align with customer value, and leverage Microsoft commercial marketplace.]
 
 ## 1. Marketplace monetization models  
 
@@ -18,11 +18,11 @@ ms.date: 07/02/2025
 | In-app purchase (IAP) | Unlock premium features | Microsoft commerce engine | User triggers paywall → Teams dialog |  
 | License BYO (bring your own) | Existing customer contracts | Your backend | Manual account linking |
 
-[template instruction → Keep each cell concise (< 12 words).]
+[Template instruction → Keep each cell concise (< 12 words).]
 
 ## 2. Create a SaaS offer in Partner Center  
 
-1. [template instruction → Bullet-form numbered list; ≤ 150 words total.]  
+1. [Template instruction → Bullet-form numbered list; ≤ 150 words total.]  
 2. Define pricing plans (monthly, annual, private plans).  
 3. Specify metered dimensions *(optional)* for usage-based billing.  
 4. Connect the offer to your Teams app via **Product ID**.  
@@ -42,7 +42,7 @@ ms.date: 07/02/2025
 }
 ```  
 
-[template instruction → Explain each property in 1–2 sentences.]
+[Template instruction → Explain each property in 1–2 sentences.]
 
 ### Payment flow  
 
@@ -53,7 +53,7 @@ ms.date: 07/02/2025
 
 ### Service-to-service validation  
 
-[template instruction → Code block (pseudo) showing REST call to `https://marketplaceapi.microsoft.com/api/saas/subscriptions/{id}`.]
+[Template instruction → Code block (pseudo) showing REST call to `https://marketplaceapi.microsoft.com/api/saas/subscriptions/{id}`.]
 
 ## 4. Handle licensing in code  
 
@@ -74,7 +74,7 @@ ms.date: 07/02/2025
 
 ### Do  
 
-- Tier plans by tangible ROI (e.g., tickets solved).  
+- Tier plans by tangible ROI (for example, tickets solved).  
 - Offer a 14-day trial with limited actions.  
 
 ### Don’t  
@@ -83,7 +83,7 @@ ms.date: 07/02/2025
 
 ## 7. Compliance & tax considerations  
 
-[template instruction → 2–3 sentences noting Microsoft handles global tax, but you must submit payout and tax forms in Partner Center.]
+[Template instruction → 2–3 sentences noting Microsoft handles global tax, but you must submit payout and tax forms in Partner Center.]
 
 ## 8. Testing your monetized agent  
 
@@ -93,7 +93,7 @@ ms.date: 07/02/2025
 
 ## Limitations  
 
-[template instruction → ≤ 2 sentences about GCC and EDU marketplace restrictions.]
+[Template instruction → ≤ 2 sentences about GCC and EDU marketplace restrictions.]
 
 ## Next step  
 

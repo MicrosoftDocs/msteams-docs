@@ -7,11 +7,11 @@ ms.date: 07/02/2025
 ---
 # Grow adoption & track usage  
 
-[template instruction → Open with a 60–80 word paragraph summarizing why post-publish effort matters: the Store listing alone doesn’t guarantee success; you need promotion, onboarding guidance, and data-driven iteration.]
+[Template instruction → Open with a 60–80 word paragraph summarizing why post-publish effort matters: the Store listing alone doesn’t guarantee success; you need promotion, onboarding guidance, and data-driven iteration.]
 
 ## 1. Define success metrics before launch  
 
-[template instruction → Bullet the 3–4 KPIs you’ll watch—installs, weekly active users, task-completion rate, CSAT.]  
+[Template instruction → Bullet the 3–4 KPIs you’ll watch—installs, weekly active users, task-completion rate, CSAT.]  
 
 ## 2. Optimize your Teams Store listing  
 
@@ -52,11 +52,11 @@ ms.date: 07/02/2025
 
 ### In-product telemetry  
 
-[template instruction → Describe adding Application Insights or `@microsoft/teams-ai` telemetry hook.]  
+[Template instruction → Describe adding Application Insights or `@microsoft/teams-ai` telemetry hook.]  
 
 ### Teams admin analytics  
 
-[template instruction → Note that tenant admins can view usage by app—provide screenshot placeholder.]
+[Template instruction → Note that tenant admins can view usage by app—provide screenshot placeholder.]
 
 ### Partner Center analytics (Store)  
 
@@ -66,10 +66,10 @@ ms.date: 07/02/2025
 
 ## 7. Iterate based on data  
 
-1. Identify drop-off step (e.g., users never click “Connect data”).  
+1. Identify drop-off step (for example, users never click “Connect data”).  
 2. Ship a targeted improvement (auto-detect data source).  
 3. Announce update via release notes card.  
-[template instruction → Numbered list ≤ 3–4 steps.]
+[Template instruction → Numbered list ≤ 3–4 steps.]
 
 ## 8. Common growth pitfalls  
 
@@ -81,7 +81,7 @@ ms.date: 07/02/2025
 
 ## Next step  
 
-[template instruction → Link to monetization guide.]  
+[Template instruction → Link to monetization guide.]  
 Learn how to “[Monetize your agent](monetize-your-agent.md)” with SaaS offers or in-app purchases.
 
 ## See also  

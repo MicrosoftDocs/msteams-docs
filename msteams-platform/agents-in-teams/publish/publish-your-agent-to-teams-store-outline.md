@@ -7,11 +7,11 @@ ms.date: 07/02/2025
 ---
 # Publish your agent to the Teams Store  
 
-[template instruction → Open with one sentence summarizing the goal: “You’ll learn how to turn your local agent project into a production-ready package and submit it for Store approval.”]
+[Template instruction → Open with one sentence summarizing the goal: “You’ll learn how to turn your local agent project into a production-ready package and submit it for Store approval.”]
 
 ## Prerequisites  
 
-[template instruction → List 3-5 bullets only.]  
+[Template instruction → List 3-5 bullets only.]  
 
 - Agent has passed **local validation** (`atk validate`) with no errors.  
 - Icons, screenshots, and marketing text prepared per Store guidelines.  
@@ -20,7 +20,7 @@ ms.date: 07/02/2025
 
 ## Step 1 – Build the app package  
 
-[template instruction → ≤ 150 words describing the Toolkit command.]  
+[Template instruction → ≤ 150 words describing the Toolkit command.]  
 
 ```bash
 atk package --env prod
@@ -38,21 +38,21 @@ Outputs `teamsApp.zip` containing `manifest.json + icons`.
 
 ## Step 2 – Validate with Store rules  
 
-[template instruction → Emphasize additional policy checks.]  
+[Template instruction → Emphasize additional policy checks.]  
 
 ```bash
 atk validate --rules store
 ```  
 
-Fix any *error* or *critical* warnings (e.g., unsuitable descriptions, missing privacy URL).
+Fix any *error* or *critical* warnings (for example, unsuitable descriptions, missing privacy URL).
 
 ## Step 3 – Upload in Partner Center  
 
-1. [template instruction → Use numbered list.] Sign in to **Partner Center › Teams Store › New submission**.  
+1. [Template instruction → Use numbered list.] Sign in to **Partner Center › Teams Store › New submission**.  
 2. Upload `teamsApp.zip`.  
 3. Fill in Store listing details:  
    - **Short description** (≤ 80 chars)  
-   - **Long description** (≤ 4 000 chars, supports Markdown)  
+   - **Long description** (≤ 4,000 chars, supports Markdown)  
    - Category, search keywords, pricing.  
 4. Add **screenshots** (1366 × 768) + **video** (optional).  
 5. Specify regional availability and languages.  
@@ -60,7 +60,7 @@ Fix any *error* or *critical* warnings (e.g., unsuitable descriptions, missing p
 
 ## Step 4 – Configure SaaS or in-app purchase *(optional)*  
 
-[template instruction → 2-3 sentences with link to monetization guide.]
+[Template instruction → 2-3 sentences with link to monetization guide.]
 
 ## Step 5 – Submit for review  
 
@@ -70,7 +70,7 @@ Fix any *error* or *critical* warnings (e.g., unsuitable descriptions, missing p
 
 ## Step 6 – Respond to validation feedback  
 
-[template instruction → Use callout >NOTE.]  
+[Template instruction → Use callout >NOTE.]  
 > If the app is rejected, open the review report, fix highlighted issues (e.g., missing consent flow), increment `version`, rebuild `teamsApp.zip`, and **Resubmit**.
 
 ## Post-publish actions  
@@ -89,7 +89,7 @@ Fix any *error* or *critical* warnings (e.g., unsuitable descriptions, missing p
 
 ## Next step  
 
-[template instruction → Link to adoption article.]  
+[Template instruction → Link to adoption article.]  
 Proceed to “[Grow adoption & track usage](grow-adoption-and-track-usage.md)” to maximize your agent’s reach.
 
 ## See also  

@@ -7,7 +7,7 @@ ms.date: 07/02/2025
 ---
 # Support & feedback for Teams developers  
 
-[template instruction → Begin with a short paragraph (< 60 words) explaining why engaging with the community and Microsoft channels speeds up development and improves product quality.]
+[Template instruction → Begin with a short paragraph (< 60 words) explaining why engaging with the community and Microsoft channels speeds up development and improves product quality.]
 
 ## 1. Self-help resources  
 
@@ -24,11 +24,11 @@ ms.date: 07/02/2025
 | GitHub Discussions (teams-samples) | Issues with official samples | `https://github.com/OfficeDev/TeamsFx/discussions` |  
 | Tech Community Blogs & AMAs | Early previews, best practices | `https://aka.ms/teams-tech-community` |
 
-[template instruction → Keep table concise; link text must be full URL.]
+[Template instruction → Keep table concise; link text must be full URL.]
 
 ## 3. Report documentation issues  
 
-[template instruction → 3-step numbered list ≤ 70 words.]  
+[Template instruction → 3-step numbered list ≤ 70 words.]  
 
 1. At the top of any doc page click **Feedback** → **This page**.  
 2. Choose **GitHub Issues**; sign in if prompted.  
@@ -45,7 +45,7 @@ ms.date: 07/02/2025
 
 1. Go to **Microsoft 365 admin center › Support › New service request**.  
 2. Select **Teams platform** and provide tenant & app IDs.  
-3. [template instruction → Mention SLA: “response within 24 business hours for paid support plans.”]
+3. [Template instruction → Mention SLA: “response within 24 business hours for paid support plans.”]
 
 ## 5. Request new features  
 
@@ -60,7 +60,7 @@ ms.date: 07/02/2025
 
 ## 7. Escalation path  
 
-[template instruction → Bullet list ≤ 3 items.]  
+[Template instruction → Bullet list ≤ 3 items.]  
 
 - If a support ticket is blocked > 5 days, reply in-thread to escalate.  
 - For security vulnerabilities, email `secure@microsoft.com` with “MSRC” in the subject.  
