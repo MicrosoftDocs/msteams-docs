@@ -6,7 +6,7 @@ author: v-preethah
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.owner: ginobuzz
-ms.date: 02/25/2025
+ms.date: 07/31/2025
 ms.collection: ce-skilling-ai-copilot
 ---
 
@@ -14,7 +14,7 @@ ms.collection: ce-skilling-ai-copilot
 
 > [!IMPORTANT]
 >
-> * These guidelines are applicable for ISVs who want to publish their agent on the store.
+> * These guidelines are applicable for Independent Software Vendors (ISV) who want to publish their agent on the store.
 > * Message extensions agents in Microsoft 365 Copilot are in public preview for Microsoft Word and Microsoft PowerPoint.
 > * Support for Excel and OneNote client applications to be available soon.
 > * Ensure that Microsoft 365 Copilot is available for your organization. You have two ways to get a developer environment for Microsoft 365 Copilot:
@@ -35,19 +35,19 @@ Apps must be consistent with responsible [AI checks](teams-store-validation-guid
    :::column span="":::
      :::image type="icon" source="../../../../assets/icons/agent-name.png" link="#agent-name" border="false":::
    :::column-end:::
+<!--
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/compound-utterances.png" link="#compound-utterances" border="false":::
    :::column-end:::
+-->
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/prompts.png" link="#prompts" border="false":::
    :::column-end:::
-:::row-end:::
-
-:::row:::
-
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/adaptive-card-response.png" link="#adaptive-card-response" border="false":::
    :::column-end:::
+:::row-end:::
+:::row:::
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/compatibility.png" link="#compatibility" border="false":::
    :::column-end:::
@@ -60,12 +60,17 @@ Apps must be consistent with responsible [AI checks](teams-store-validation-guid
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/bot-requirement-agent.png" link="#bot-requirements-for-custom-engine-agents" border="false":::
    :::column-end:::
+   :::column span="":::
+      :::image type="icon" source="../../../../assets/icons/action-knowledge-source.png" link="#action-or-knowledge-source" border="false":::
+   :::column-end:::
 :::row-end:::
 
 :::row:::
-
    :::column span="":::
-      :::image type="icon" source="../../../../assets/icons/action-knowledge-source.png" link="#agent-must-have-action-or-knowledge-source" border="false":::
+      :::image type="icon" source="../../../../assets/icons/duplicate-agents.png" link="#duplicate-agents" border="false":::
+   :::column-end:::
+  :::column span="":::
+      :::image type="icon" source="../../../../assets/icons/agent-response.png" link="#agent-response" border="false":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/graceful-error-handling.png" link="#graceful-error-handling" border="false":::
@@ -76,9 +81,6 @@ Apps must be consistent with responsible [AI checks](teams-store-validation-guid
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/white-bg.png" border="false":::
       :::column-end:::
-   :::column span="":::
-      :::image type="icon" source="../../../../assets/icons/white-bg.png" border="false":::
-   :::column-end:::
 :::row-end:::
 
 ## Description
@@ -93,10 +95,10 @@ You must ensure to meet the following guidelines for agents:
   * URLs, emojis, or hidden characters such as hexadecimal, binary, or unconventional symbols. [*Must fix*]
   * Grammar and punctuation errors. [*Must fix*]
   * Overly verbose, flowery, or marketing language. [*Good-to-fix*]
-  * Superlative claims such as “#1,” “amazing,” or “best”. [*Good-to-fix*]
+  * Superlative claims such as '#1', 'amazing', or 'best'. [*Good-to-fix*]
 
   > [!NOTE]
-  > * In case of declarative agents, the short description guidelines apply to the `instructions` and `conversation_starters` fields also.
+  > * For declarative agents, the short description guidelines apply to the `instructions` and `conversation_starters` fields also.
   > * For API based plugins, these guidelines apply to `description_for_human`, `description_for_model`, `capabilities`, `conversation_starters` (both the title and text), `states\reasoning\description` in `functions` fields, if provided. [*Must fix*]
   > * When utilizing Swagger or OpenAPI file formats, adhere to these guidelines for the `path` content associated with keys and the `description` field for GET, POST, PUT, or DELETE APIs. [*Must fix*]
 
@@ -131,21 +133,13 @@ You must ensure to meet the following guidelines for agents:
 
 [Back to top](#validation-guidelines-for-agents)
 
-## Compound utterances
-
-Agents must support at least three unique compound utterances by handling three or more parameters. Guidelines for agents provide detailed information on [parameter description](../../../../messaging-extensions/dev-guidelines-agents.md#parameter-description) and ways to [enhance message extension to retrieve information through compound utterances](../../../../messaging-extensions/dev-guidelines-agents.md#enhance-message-extension-to-retrieve-information-through-compound-utterances).
-
-:::image type="content" source="../../../../assets/images/Copilot/high-quaity-me-pass-multi-parameters.png" alt-text="Screenshot shows an example of a pass scenario where the Northwind app returns a response for a seafood and in stock parameters.":::
-
-[Back to top](#validation-guidelines-for-agents)
-
 ## Prompts
 
 You must ensure the following guidelines for sample prompts and prompt starters:
 
 ### Sample prompts
 
-In case of message extension based declarative agent, the [`samplePrompts`](../../../../resources/schema/manifest-schema.md#composeextensionscommands) property provides guidance to users on utilizing the agents in Microsoft 365 Copilot
+For message extension based declarative agent, the [`samplePrompts`](../../../../resources/schema/manifest-schema.md#composeextensionscommands) property provides guidance to users on utilizing the agents in Microsoft 365 Copilot
 
 :::image type="content" source="../../../../assets/images/Copilot/bot-based-sample-prompts.png" alt-text="Screenshot shows the sample prompts displayed when the message extension agent is enabled in Microsoft 365 Copilot.":::
 
@@ -289,9 +283,9 @@ For action scenarios, agents must share user disclosure and seek user confirmati
 
    | Pass example | Fail example |
    | --- | --- |
-   | For a function which searches tickets - "Do you want to allow searching in Contoso?" "Do you want to allow searching for tickets?" | Do you want to proceed?" --> Does not indicate what the function does. |
-   | For a function which creates a new order "Do you want to proceed with creating a new order?" | Searches tickets" --> Does not seek permission |
-   | For a function which creates a new ticket: "Do you want to proceed with creating a new ticket?" | "Creates tickets" --> Does not seek permission |
+   | For a function that searches tickets - "Do you want to allow searching in Contoso?" "Do you want to allow searching for tickets?" | Do you want to proceed?" --> Doesnt indicate what the function does. |
+   | For a function that creates a new order "Do you want to proceed with creating a new order?" | Searches tickets" --> Doesn't seek permission |
+   | For a function that creates a new ticket: "Do you want to proceed with creating a new ticket?" | "Creates tickets" --> Doesn't seek permission |
 
 * For declarative agents, any action with consequences on the external system mustn't have `isConsequential` flag set as ‘False’. [*Must fix*]
 
@@ -306,9 +300,9 @@ For action scenarios, agents must share user disclosure and seek user confirmati
 
    | Command description | Consequential function? | Expected value for `isConsequential` flag |
    | --- | --- | --- |
-   | Returns a list of quest recommendations based on the user's interest. If there is no quote recommendations, then create a new one. | Yes | True |
+   | Returns a list of quest recommendations based on the user's interest. If there are no quote recommendations, then create a new one. | Yes | True |
    | Returns a list of meditation recommendations based on the user's preferences. | No | False or True |
-   | Returns a list of quest recommendations based on the user's interest. If there is no quote recommendations, then create a new one. | Yes | True |
+   | Returns a list of quest recommendations based on the user's interest. If there are no quote recommendations, then create a new one. | Yes | True |
 
 [Back to top](#validation-guidelines-for-agents)
 
@@ -325,20 +319,38 @@ A custom engine agent is a conversational Teams bot that must meet the following
    1. A [feedback button](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=after%2Cbotmessage#feedback-buttons) that enables a user to provide positive or negative feedback to the agent's messages. [*Must fix*]
    1. A [citation](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=after%2Cbotmessage#citations) that enables a user to refer to the source of the bot message through in-text citations and references. [*Must fix*]
    1. A [sensitivity label](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=after%2Cbotmessage#sensitivity-label) that enables a user to understand the confidentiality of the bot message. [*Good-to-fix*]
-   1. An agent must stream it’s responses to the user. [*Must fix*]
+   1. An agent must stream its responses to the user. [*Must fix*]
    1. An agent must include at least three prompt starters or a welcome message. [*Must fix*]
 
       For more information, see [bot welcome messages](teams-store-validation-guidelines.md#bots-1).
-   1. A bot should offer at least two context-specific suggestions or prompts to the user, rather than generic or fixed ones. [*Must fix*]
+   1. A bot must offer at least two context-specific suggestions or prompts to the user, rather than generic or fixed ones. [*Must fix*]
+1. The scopes defined in `bot.scopes` and `bot.commandList.scopes` nodes of the manifest must match to maintain good user experience.
 
 [Back to top](#validation-guidelines-for-agents)
 
-## Agent must have Action or knowledge source
+## Action or knowledge source
 
 * Your agent must have nodes defined as actions in the app manifest. All agents must have a core use case that's served through API actions. [*Must fix*]
 
-* For capabilities such as Websearch, Graphic Art, or Code Interpreter, the `Instruction` field must include details on how to use the capabilities within the context of the agent. [*Must fix*]
+<!--
+* For capabilities such as web search, graphic art, or code interpreter, the `Instruction` field must include details on how to use the capabilities within the context of the agent. [*Must fix*]
+-->
 
+* To grant multi-tenant agent access to all tenant data for email, Teams messages, Teams Meeting, ODSP, and Graph connector capabilities, leave the nodes for them empty in the declarative agent. [*Must fix*]
+
+* The Dataverse, file embedding, sensitivity label, and scenario model capabilities are restricted to be used in the LOB scenario only. [*Must fix*]
+
+* Adhere to the following guidelines when using the `action.insertImage` custom action or action set [*Must fix*]:
+
+  * The button's title must indicate that an image will be inserted into the canvas.
+
+  * Ensure that the intended image gets inserted on clicking the button
+
+  * Ensure the fallback is set to **Drop** to guarantee that the Adaptive Card functions in all compatible clients.
+
+  * Support insertion for all images in the Adaptive Card.
+
+<!--
 * Nodes for Graph connector in the declarative agent manifest must be left blank to ground the agent in all available Graph connectors of a tenant. [*Must fix*]
 
    **Pass example**: The Graph connector node is empty. <br>
@@ -348,8 +360,37 @@ A custom engine agent is a conversational Teams bot that must meet the following
     **Fail example**: The Graph connector node isn't empty and has connections hardcoded. <br>
 
     :::image type="content" source="../../../../assets/images/Copilot/da-fail-scenario-graph-connector.png" alt-text="Screenshot of the fail scenario.":::
+-->
 
 [Back to top](#validation-guidelines-for-agents)
+
+## Duplicate agents
+
+* Multiple agents for the same product can be published separately but each must have different functionality
+
+* An agent can be published separately from the main app but it must have a clear justification for the same.
+
+* To avoid confusion and ensure clarity for end users:
+
+  * The name, short description, and long description must differ meaningfully from those of any existing apps.
+
+  * The short description and long description must clearly communicate the app’s unique value proposition and how it differs from related submissions.
+
+## Agent response
+
+* The declarative agent must be functional and must provide accurate responses to the users. To ensure the same, atleast one corresponding prompt in one of the following fields must be present for each and every function of the declarative agent: [*Must fix*]
+
+  * Sample prompts or conversation starters
+  * Instructions field in manifest
+  * Test notes
+
+* All search results in the message extension capability must include a relevant title and subtitle, which will also appear in citations of your agent [*Must fix*].
+
+* A confirmation of the completion of the action must be shared by the agent, which should include the details of the action, way forward, and must have a source link or a tracking ID for the user to verify the action [*Must fix*]
+
+  * When the agent is provided with the tracking ID, it must return details of the performed action or the item details on which the action has been executed. [*Must fix*]
+
+* An agent sending multiple messages must make sure that messages are not repetitive or redundant in nature.
 
 ## Graceful error handling
 

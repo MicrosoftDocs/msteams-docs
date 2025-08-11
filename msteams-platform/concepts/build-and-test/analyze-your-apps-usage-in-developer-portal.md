@@ -38,8 +38,11 @@ You can view your custom app's usage and other insights from the **Analytics** p
 1. Select **Apps** from the left pane.
 1. Select the required app from the **Apps** page.
 1. Select **Analytics** under the **Overview** section.
- 
+
 :::image type="content" source="../../assets/images/tdp/analy-dev-portal.png" alt-text="Screenshot shows the analytics page of your app and agent in Developer Portal." lightbox="../../assets/images/tdp/analy-dev-portal.png":::
+
+> [!NOTE]
+> You can also access the **Active Users** card directly from the **Dashboard**.
 
 ## Metric definitions
 
@@ -97,10 +100,10 @@ The **Usage by retention state** chart allows you to track four key retention or
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
-| New users or tenants | Active users or tenants who used your app and agent for the first time in the current time period. |
-| Returning users or tenants | Active users or tenants who used your app and agent during the current period and in the immediately preceding period. |
-| Resurrected users or tenants | Active users or tenants who started using your app and agent again in the current period, after a previous period of inactivity. |
-| Lapsed users or tenants | Active users or tenants who stopped using your app and agent in the current period, after a previous period of activity. |
+| New users| Active users who used your app and agent for the first time in the current time period. |
+| Returning users | Active users who used your app and agent during the current period and in the immediately preceding period. |
+| Resurrected users | Active users who started using your app and agent again in the current period, after a previous period of inactivity. |
+| Lapsed users | Active users who stopped using your app and agent in the current period, after a previous period of activity. |
 
 #### Usage by country or region
 
@@ -168,13 +171,13 @@ The **Usage by operating system** chart shows your app's or agent's active usage
 
 The **Capability** tab shows the usage of individual app and agent capabilities that you've configured within your app. This page summarizes the overall usage of the following app and agent capabilities in different host products.
 
-   * Microsoft 365 Copilot Agent
-   * Bots
-   * Tabs
-   * Message extension
-   * Personal app
-   * Connector
-   * Personal tab
+* Microsoft 365 Copilot Agent
+* Bots
+* Tabs
+* Message extension
+* Personal app
+* Connector
+* Personal tab
 
    :::image type="content" source="../../assets/images/tdp/tdp-app-capability.png" alt-text="Screenshot shows app and agent capability usage in different host products of your published app in Developer Portal." lightbox="../../assets/images/tdp/tdp-app-capability.png":::
 

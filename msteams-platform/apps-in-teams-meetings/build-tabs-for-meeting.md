@@ -286,12 +286,6 @@ The following table provides the user types and lists the features that each use
 > * Meeting apps (side panel and meeting stage) are supported in Teams desktop client.
 > * Meeting apps (side panel and meeting stage) in Teams web client is supported only when the [developer preview is enabled](/microsoftteams/platform/resources/dev-preview/developer-preview-intro#enable-developer-preview).
 
-## Step-by-step guides
-
-* Follow the [step-by-step guide](../sbs-meeting-token-generator.yml) to generate meeting token in your Teams meeting.
-* Follow the [step-by-step guide](../sbs-meetings-sidepanel.yml) to generate meeting side panel in your Teams meeting.
-* Follow the [step-by-step guide](../sbs-meetings-stage-view.yml) to share meeting Stageview in your Teams meeting.
-* Follow the [step-by-step guide](../sbs-meeting-content-bubble.yml) to generate in-meeting notification in your Teams meeting.
 
 ## See also
 
