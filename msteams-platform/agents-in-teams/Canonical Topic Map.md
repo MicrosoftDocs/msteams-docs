@@ -1,4 +1,14 @@
+title: Canonical Topic Map
+description: [1–2 sentence summary of what this concept is and why it matters]  
+ms.localizationpriority: medium  
+ms.topic: concept  
+ms.date: 07/02/2025  
+---
+
+# Canonical Topic Map (v 0.1 draft)
+
 Canonical Topic Map (v 0.1 draft)
+
 | ID | Working title | Audience | Lifecycle stage | Tags* |
 |----|---------------|----------|-----------------|-------|
 | TP-OV-01 | Overview of the Teams Developer Platform | Beginner | Overview | overview, ai-agent-core |
