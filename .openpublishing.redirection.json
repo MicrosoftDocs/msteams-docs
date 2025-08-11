@@ -1379,6 +1379,10 @@
       {
         "source_path": "msteams-platform/sbs-meetings-sidepanel.yml",
         "redirect_url": "/microsoftteams/platform/apps-in-teams-meetings/build-tabs-for-meeting.md"
+      },
+      {
+        "source_path": "msteams-platform/sbs-teams-app-test-tool.yml",
+        "redirect_url": "/microsoftteams/platform/toolkit/teams-app-test-tool-tutorial.md"
       }
     ]
 }
