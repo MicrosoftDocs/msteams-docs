@@ -27,7 +27,7 @@
   - name: Quick-start guide - build your first agent
     href: agents-in-teams/get-started/quick-start-build-your-first-agent-outline.md
 
- name: Localization
+- name: Localization
     items:
     - name: Localize your app
       href: concepts/build-and-test/apps-localization.md
