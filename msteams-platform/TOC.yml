@@ -10,28 +10,23 @@
     href: agents-in-teams/overview/why-build-on-microsoft-teams-outline.md
     displayName: Teams app user experience, user scenario
   - name: What's new for developers?
-    href: overview-explore.md
+    href: whats-new.md
   - name: Teams developer glossary
     href: concepts/glossary.md
     displayName: develop Teams app, app development, tools used
+
 - name: Get started
   expanded: false
   items:
-  - name: Build your Teams app
-    href: get-started/get-started-overview.md
-    displayName: build Teams app, new Teams app, GitHub Codespaces, tutorials
-  - name: Build a tab app
-    href: get-started/build-basic-tab-app.md
-    displayName: build Teams tab app
-  - name: Build an interactive notification bot app
-    href: get-started/build-interactive-notification-bot.md
-    displayName: build Teams bot app, build interactive bot
-  - name: Build a message extension app
-    href: get-started/build-message-extension.md
-    displayName: search based message extension app
-  - name: Tool options and code samples
-    href: get-started/tool-options-and-code-samples.md
-    displayName: Teams app samples, tools to build Teams app
+  - name: What are AI-powered agents?
+    href: agents-in-teams/get-started/what-are-ai-powered-agents-outline.md
+  - name: Why build on Teams?
+    href: agents-in-teams/get-started/why-build-agents-on-teams-outline.md
+  - name: Key agent scenarios and examples
+    href: agents-in-teams/get-started/key-agent-scenarios-and-examples-outline.md
+  - name: Quick-start guide - build your first agent
+    href: agents-in-teams/get-started/quick-start-build-your-first-agent-outline.md
+
 - name: Plan your app or agent
   items:
   - name: Overview
