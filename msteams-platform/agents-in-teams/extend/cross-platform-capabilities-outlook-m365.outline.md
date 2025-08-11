@@ -1,11 +1,3 @@
-FILE: teams-platform/extend/cross-platform-capabilities-outlook-m365.md  
-SOURCES:  
-- m365-apps/overview.md  
-- m365-apps/teamsjs-support-m365.md  
-- m365-apps/extend-m365-teams-personal-tab.md  
-- m365-apps/extend-m365-teams-message-extension.md  
-
-OUTLINE:
 ---
 title: Cross-platform capabilities for Outlook and Microsoft 365  
 description: Understand host support, manifest settings, and coding patterns that let your Teams apps and agents run seamlessly in Outlook and the Microsoft 365 app.  
@@ -14,9 +6,11 @@ ms.topic: concept
 ms.date: 07/02/2025  
 ---
 # Run your Teams solution across Microsoft 365  
+
 [template instruction → 60-word intro explaining that a single package can now light up in Teams, Outlook, and the Microsoft 365 hub when you target the cross-platform runtime.]
 
 ## 1. Host coverage matrix  
+
 | Host | Supported surfaces | Minimum client version | Availability |  
 |------|--------------------|------------------------|--------------|  
 | Teams | Chat, tabs, Copilot, meetings | 2.5.0 | GA |  
@@ -26,7 +20,9 @@ ms.date: 07/02/2025
 [template instruction → Add/adjust rows as new hosts gain support.]
 
 ## 2. Manifest requirements  
+
 ### `extensions.requirements` block  
+
 ```json
 "extensions": {
   "requirements": [
@@ -36,12 +32,15 @@ ms.date: 07/02/2025
   ]
 }
 ```  
+
 [template instruction → Explain that this declares the minimum runtime version for each host.]
 
 ### `elementRelationshipSet`  
+
 [template instruction → Briefly describe one-way vs mutual dependencies to manage host-specific capabilities.]
 
 ### Host-specific capability rules  
+
 | Capability | Teams | Outlook | M365 app | Notes |  
 |------------|-------|---------|----------|-------|  
 | `copilotAgents` | ✔ | ✔ | ✔ | Same actions list works everywhere. |  
@@ -50,44 +49,57 @@ ms.date: 07/02/2025
 | Meeting extensions | ✔ | — | — | Still Teams-only. |
 
 ## 3. Coding guidelines  
+
 ### Detect host context  
+
 ```ts
 import { app } from "@microsoft/teams-js";
 const context = await app.getHostContext(); // returns 'teams', 'outlook', or 'office'
 ```
+
 [template instruction → Show how to branch UI/logic based on host.]
 
 ### Handle theme variations  
+
 [template instruction → Note that Outlook uses its own theme tokens; rely on Fluent UI tokens instead of hard-coded colors.]
 
 ### Authentication parity  
+
 [template instruction → Explain that `authentication.getAuthToken()` works unchanged in Outlook/M365 as long as redirect URIs are whitelisted.]
 
 ## 4. UX considerations  
+
 - Personal tab width in Outlook web is narrower—design responsive layouts.  
 - Outlook mobile launches tabs modally; avoid opening additional dialogs.  
 - Copilot answers appear in different panes; keep Adaptive Card width ≤ 600 px.
 
 ## 5. Testing across hosts  
+
 ### Using Agents Toolkit  
+
 ```bash
 atk preview --host outlook   # sideloads into Outlook on the web
 atk preview --host office    # sideloads into M365 hub preview
 ```  
+
 [template instruction → Mention that Toolkit automatically swaps manifest requirement sets and opens the correct client.]
 
 ### Manual sideload  
+
 [template instruction → Provide link to Developer Portal sideload steps.]
 
 ## 6. Limitations (July 2025)  
+
 - Message extension **link unfurling** not yet supported in Outlook mobile.  
 - Live Share canvas only available in Teams meeting stage.  
 - GCC rollout planned H2 2025.
 
 ## Next step  
+
 [template instruction → Point to Extend agents article created earlier.]  
 Deep-dive into “[Extend agents across Microsoft 365](../integrate/extend-agents-across-microsoft-365.md)” for agent-specific guidance.
 
 ## See also  
+
 - [Teams JavaScript SDK capability support](../reference/sdk-and-api-reference-hub.md#platform-sdks)  
 - [Authentication & single sign-on](../integrate/authentication-and-sso.md)

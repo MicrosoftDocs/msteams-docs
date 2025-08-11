@@ -1,10 +1,3 @@
-FILE: teams-platform/plan/agent-types-and-capabilities.md  
-SOURCES:  
-- concepts/design/map-use-cases.md  
-- messaging-extensions/build-bot-based-agent.md  
-- bots/how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md  
-
-OUTLINE:
 ---
 title: Agent types and capabilities  
 description: Compare declarative plug-ins, custom engine agents, and hybrid approaches, and learn which capabilities each model supports across Microsoft Teams and Microsoft 365 Copilot.  
@@ -13,6 +6,7 @@ ms.topic: concept
 ms.date: 07/02/2025  
 ---
 # Agent types and capabilities  
+
 [Opening paragraph – ≤ 90 words explaining that the Teams platform offers multiple agent archetypes so developers can balance speed-to-market, control, and complexity.]
 
 ## 1. Agent archetypes  
@@ -24,6 +18,7 @@ ms.date: 07/02/2025
 | **Hybrid classic + agent** | Existing bot / tab augmented with `copilotAgents` block | Mix of legacy app and agent logic | Modernizing current Teams apps | Teams AI Library + manifest update |
 
 ### Decision matrix  
+
 [Bullet checklist—choose declarative if you have REST endpoints and no custom logic; choose custom engine if you need orchestration, memory, or external calls.]
 
 ## 2. Capability catalogue  
@@ -53,21 +48,26 @@ ms.date: 07/02/2025
 | Meeting side panel / stage | — | ✔ | Live Share, `meeting` APIs |
 
 ## 4. Security & permission considerations  
+
 - Declarative agents inherit user context; rely on Graph delegated scopes.  
 - Custom engine agents can also use application permissions but must apply RSC.  
 - Admin consent flow differs—highlight policy settings.
 
 ## 5. Migration paths  
+
 1. **Classic bot ➜ Hybrid agent:** add `copilotAgents.customEngineAgents` and expose existing commands as functions.  
 2. **Declarative ➜ Custom engine:** start simple, then add orchestration code when requirements grow.
 
 ## Limitations (preview)  
+
 [≤ 2 sentences on current schema version (1.22 preview) and GCC availability.]
 
 ## Next step  
+
 Proceed to “[Design best practices for agents](design-best-practices-for-agents.md)” to plan UX, prompts, and governance for your chosen agent type.
 
 ## See also  
+
 - [Choose your agent use-case](choose-your-agent-use-case.md)  
 - [App manifest for agents](../build/app-manifest-for-agents.md)  
 - [Tools & SDKs for building agents](tools-and-sdks-for-agents.md)

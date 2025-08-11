@@ -1,12 +1,3 @@
-FILE: teams-platform/integrate/authentication-and-sso.md  
-SOURCES:  
-- concepts/authentication/authentication.md  
-- tabs/how-to/authentication/tab-sso-overview.md  
-- bots/how-to/authentication/bot-sso-overview.md  
-- tabs/how-to/authentication/tab-sso-code.md  
-- bots/how-to/authentication/bot-sso-code.md  
-
-OUTLINE:
 ---
 title: Authentication and single sign-on for AI-powered agents  
 description: Configure Microsoft Entra ID, update your agent manifest, and add code to enable seamless single sign-on (SSO) across chat, Copilot, tabs, and message extensions.  
@@ -15,15 +6,18 @@ ms.topic: how-to
 ms.date: 07/02/2025  
 ---
 # Enable authentication and single sign-on  
+
 This guide shows how to let your agent silently obtain a Microsoft Graph access token on behalf of the signed-in Teams user—no extra prompts, no OAuth pop-ups.
 
 ## Prerequisites  
+
 - Microsoft 365 developer tenant with admin rights  
 - Azure subscription  
 - Agents Toolkit CLI ≥ v1.1 or VS Code extension ≥ v1.1  
 - Node 18 / .NET 8 / Python 3.10 project scaffolded via `atk new`  
 
 ## 1 – Register (or reuse) a Microsoft Entra application  
+
 1. Open **Entra Admin Center** → **App registrations** → **New registration**.  
 2. Name: `ContosoAgentApp`, Supported accounts: *Single tenant*.  
 3. Record **Application (client) ID** and **Tenant ID**.  
@@ -38,14 +32,18 @@ This guide shows how to let your agent silently obtain a Microsoft Graph access 
 > Use `atk entra-app upload` to automate steps 1-5.
 
 ## 2 – Update the agent manifest  
+
 ### `webApplicationInfo` block  
+
 ```json
 "webApplicationInfo": {
   "id": "<CLIENT_ID>",
   "resource": "api://<CLIENT_ID>"
 }
 ```  
+
 ### RSC scopes (if needed)  
+
 ```json
 "authorization": {
   "permissions": {
@@ -61,6 +59,7 @@ This guide shows how to let your agent silently obtain a Microsoft Graph access 
 ```
 
 ## 3 – Add client-side code (tabs / message extensions)  
+
 ```ts
 import { authentication } from "@microsoft/teams-js";
 
@@ -69,10 +68,13 @@ const graphData = await fetch("https://graph.microsoft.com/v1.0/me", {
   headers: { Authorization: `Bearer ${token}` }
 }).then(r => r.json());
 ```
+
 *Handle `error:needsConsent` by calling `authentication.requestAuthToken()` once.*
 
 ## 4 – Add server-side code (bots / custom engine)  
+
 ### JavaScript  
+
 ```ts
 import { TeamsActivityHandler, createMicrosoftGraphClient } from "@microsoft/teams-ai";
 
@@ -88,7 +90,9 @@ bot.onMessage(async (context, state) => {
   await context.sendActivity(`Hello ${profile.displayName}!`);
 });
 ```
+
 ### .NET (snippet)  
+
 ```csharp
 var result = await userTokenClient.GetUserTokenAsync(turnContext, "graph", scopes);
 graphClient = new GraphServiceClient(new DelegateAuthenticationProvider(
@@ -96,11 +100,13 @@ graphClient = new GraphServiceClient(new DelegateAuthenticationProvider(
 ```
 
 ## 5 – Test the flow locally  
+
 1. Run `atk preview --env local`.  
 2. Toolkit sideloads the app and launches Teams in a debug browser.  
 3. First Graph call triggers silent token acquisition; if consent required, admin prompt appears once.
 
 ## Troubleshooting  
+
 | Symptom | Resolution |  
 |---------|------------|  
 | `invalid_grant` after 1 hour | Ensure `oauthTokenProvider` caches refresh tokens for subsequent calls. |  
@@ -108,8 +114,10 @@ graphClient = new GraphServiceClient(new DelegateAuthenticationProvider(
 | `AADSTS65001` (consent required) | Grant tenant-wide admin consent in Entra or use RSC scopes only. |
 
 ## Next step  
+
 Integrate Graph calls in your agent’s skills—see “[Microsoft Graph integration](microsoft-graph-integration.md)”.
 
 ## See also  
+
 - [App manifest for agents](../build/app-manifest-for-agents.md)  
 - [Resource-specific consent for agents](../graph-api/rsc/resource-specific-consent.md)

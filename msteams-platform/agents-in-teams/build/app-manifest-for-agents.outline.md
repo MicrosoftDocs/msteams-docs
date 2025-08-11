@@ -1,10 +1,3 @@
-FILE: teams-platform/build/app-manifest-for-agents.md  
-SOURCES:  
-- resources/schema/manifest-schema-dev-preview.md  
-- resources/schema/manifest-schema.md  
-- toolkit/TeamsFx-preview-and-customize-app-manifest.md  
-
-OUTLINE:
 ---
 title: App manifest for AI-powered agents  
 description: Reference guide to the JSON manifest that defines skills, permissions, and runtime requirements for Microsoft Teams agents and Copilot plug-ins.  
@@ -13,15 +6,18 @@ ms.topic: reference
 ms.date: 07/02/2025  
 ---
 # App manifest for AI-powered agents  
+
 [Brief intro – ≤ 75 words about the role of the manifest, where it lives, and how it powers both Teams and Copilot surfaces.]
 
 ## Manifest versions and $schema URLs  
+
 | Version | Use-case | $schema URL | Notes |
 |---------|----------|-------------|-------|
 | `v1.22` | AI agents & Copilot plug-ins (preview) | `https://developer.microsoft.com/json-schemas/teams/v1.22/MicrosoftTeams.schema.json` | Adds `copilotAgents`, `actions`, `elementRelationshipSet`. |
 | `v1.16–1.21` | Classic Teams apps |  | Still supported; agents require 1.22+. |
 
 ## Minimum file structure  
+
 ```json
 {
   "$schema": ".../v1.22/MicrosoftTeams.schema.json",
@@ -41,12 +37,14 @@ ms.date: 07/02/2025
 ## Key manifest sections for agents  
 
 ### `copilotAgents`  
+
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
 | `declarativeAgents` | array | Optional | Plug-in style agents powered by OpenAPI + declarative prompts. |
 | `customEngineAgents` | array | Optional | Agents that run custom orchestration logic. |
 
 #### Declarative agent example  
+
 ```json
 {
   "copilotAgents": {
@@ -64,7 +62,9 @@ ms.date: 07/02/2025
 ```
 
 ### `actions`  
+
 Defines function-calling surface for Copilot.  
+
 ```json
 "actions": [
   {
@@ -78,24 +78,30 @@ Defines function-calling surface for Copilot.
 ```
 
 ### `elementRelationshipSet` *(cross-host runtime)*  
+
 - `oneWayDependency` – e.g., message extension depends on bot.  
 - `mutualDependencies` – e.g., tab & agent must deploy together.  
 
 ### `authorization.permissions.resourceSpecific`  
+
 Explain how to request RSC scopes so Copilot can call the agent on behalf of the user.
 
 ### `webApplicationInfo`  
+
 Reference to Microsoft Entra app; required for SSO and Graph calls.
 
 ### `validDomains`  
+
 List all service endpoints—including dev tunnels—your agent will call.
 
 ## Tooling tips  
+
 - **Agents Toolkit** auto-generates and updates manifest during scaffold, debug, and deploy.  
 - **Developer Portal** offers a form-based manifest editor with agent-specific fields.  
 - Use `atk package` or `atk preview` to validate against the schema and perform static checks.
 
 ## Common validation errors  
+
 | Error message | Fix |
 |---------------|-----|
 | `manifestVersion must be 1.22` | Upgrade `$schema` and `manifestVersion`. |
@@ -103,12 +109,15 @@ List all service endpoints—including dev tunnels—your agent will call.
 | `id not unique` | Generate a new GUID for each agent. |
 
 ## Samples  
+
 - **Declarative plug-in manifest:** `teams-samples/agents/declarative-plugin/manifest.json`  
 - **Custom engine agent manifest:** `teams-samples/agents/custom-engine/manifest.json`
 
 ## Next step  
+
 Learn how to “[Build bots, message extensions, tabs & cards](build-bots-message-extensions-tabs-and-cards.md)” that implement the skills declared in your manifest.
 
 ## See also  
+
 - [Tools & SDKs for building agents](tools-and-sdks-for-agents.md)  
 - [Resource-specific consent for agents](../graph-api/rsc/resource-specific-consent.md)
