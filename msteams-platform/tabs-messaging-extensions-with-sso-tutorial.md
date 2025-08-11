@@ -19,7 +19,7 @@ The  Microsoft Entra single sign-on (Microsoft Entra SSO) helps to authenticate 
 
    This step-by-step guide helps you to create tabs and message extensions enabling Microsoft Entra SSO authentication. You'll see the following output:
 
-![Screenshot of the tab and message extension with SSO authentication output after you have successfully completed the step-by-step guide](.msteams-platforms/assets/images/Tab-ME-SSO/hello-megan-profile245-1.png)
+![Screenshot of the tab and message extension with SSO authentication output after you have successfully completed the step-by-step guide]:::image type="content" source="assets/images/Tab-ME-SSO/hello-megan-profile245-1.png"
 
 ## Prerequisites
 
