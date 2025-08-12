@@ -118,4 +118,4 @@ Enhance user experiences with [Device capabilities](../extend/device-capabilitie
 ## See also  
 
 - [Authentication & single sign-on](authentication-sso-outline.md)  
-- [Microsoft Graph API reference](/graph/api/overview?view=graph-rest-1.0)
+- [Microsoft Graph API reference](/graph/api/overview?view=graph-rest-1.0&preserve-view=true)
