@@ -1,7 +1,7 @@
 - name: Microsoft Teams Developer documentation
   href: mstdd-landing.yml
 
-- name: Overview 
+- name: Microsoft Teams Developer Platform
   expanded: false 
   items:
   - name: Teams developer platform
@@ -84,34 +84,32 @@
   items:
   - name: Local testing your agent 
     href: agents-in-teams/test/local-testing-your-agent-outline.md
-  - name:  Manifest validation workflow
+  - name: Manifest validation workflow
     href: agents-in-teams/test/manifest-validation-workflow-outline.md
   - name: Troubleshooting tips
     href: agents-in-teams/test/troubleshooting-tips-outline.md
 
-- name: Publish your agent
+- name: Publish your agent to the Teams Store
+  href: agents-in-teams/publish/publish-your-agent-to-teams-store-outline.md
+
+- name: Update your agent
   expanded: false
   items:
-  - name: Publish your agent to the Teams Store
-    href: agents-in-teams/publish/publish-your-agent-to-teams-store-outline.md
   - name: Grow adoption and track usage
     href: agents-in-teams/publish/grow-adoption-track-usage-outline.md
   - name:  Monetize your agent
     href: agents-in-teams/publish/monetize-your-agent-outline.md
 
-- name: Resources
-  expanded: false
-  items:
-  - name: Frequently asked questions
-    href: agents-in-teams/resources/frequently-asked-questions-outline.md
-  - name: Templates and sample apps
-    href: agents-in-teams/resources/templates-and-sample-apps-outline.md
+- name: Frequently asked questions
+  href: agents-in-teams/resources/frequently-asked-questions-outline.md
+- name: Templates and sample apps
+  href: agents-in-teams/resources/templates-and-sample-apps-outline.md
 
-- name: Reference
-  expanded: false
-  items:
-  - name: SDK & API reference hub 
-    href: agents-in-teams/reference/sdk-and-api-reference-hub-outline.md
+# - name: Reference
+#  expanded: false
+#  items:
+#  - name: SDK & API reference hub 
+#    href: agents-in-teams/reference/sdk-and-api-reference-hub-outline.md
 
 - name: Support and feedback channels
   href: agents-in-teams/resources/support-and-feedback-channels-outline.md    
