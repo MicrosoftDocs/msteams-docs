@@ -46,24 +46,8 @@
     href: agents-in-teams/build/tools-sdk-for-agents-outline.md
   - name: App manifest for agents
     href: agents-in-teams/build/app-manifest-for-agents-outline.md
-  - name: Build bots, message extensions, tabs, and cards
+  - name: Add tabs, message extensions, and cards to your agent
     href: agents-in-teams/build/build-bots-message-extensions-tabs-cards-outline.md
- 
-- name: Test your agent
-  expanded: false
-  items:
-  - name: Local testing your agent 
-    href: agents-in-teams/test/local-testing-your-agent-outline.md
-  - name: Troubleshooting tips
-    href: agents-in-teams/test/troubleshooting-tips-outline.md
-
-- name: Publish your agent
-  expanded: false
-  items:
-  - name: Publish your agent to the Teams Store
-    href: agents-in-teams/publish/publish-your-agent-to-teams-store-outline.md
-  - name: Grow adoption and track usage
-    href: agents-in-teams/publish/grow-adoption-and-track-usage-outline.md
 
 - name: Integrate your agents
   expanded: false
@@ -95,10 +79,26 @@
   - name: Notifications and webhooks
     href: agents-in-teams/extend/notifications-and-webhooks-outline.md
 
+- name: Test your agent
+  expanded: false
+  items:
+  - name: Local testing your agent 
+    href: agents-in-teams/test/local-testing-your-agent-outline.md
+  - name: Troubleshooting tips
+    href: agents-in-teams/test/troubleshooting-tips-outline.md
+
+- name: Publish your agent
+  expanded: false
+  items:
+  - name: Publish your agent to the Teams Store
+    href: agents-in-teams/publish/publish-your-agent-to-teams-store-outline.md
+  - name: Grow adoption and track usage
+    href: agents-in-teams/publish/grow-adoption-and-track-usage-outline.md
+
 - name: Resources
   expanded: false
   items:
-  - name:  Templates and sample apps
+  - name: Templates and sample apps
     href: agents-in-teams/resources/templates-and-sample-apps-outline.md
   - name: Support and feedback channels
     href: agents-in-teams/resources/support-and-feedback-chanels-outline.md
