@@ -78,9 +78,9 @@ Full project on GitHub: `microsoft/teams-samples/js/hello-agent`.
 
 ## Next step  
 
-Deep-dive into “[Tools & SDKs for building agents](../build/tools-and-sdks-for-agents.md)” to extend this starter with real data and actions.
+Deep-dive into [Tools and SDKs for building agents](../build/tools-sdk-for-agents-outline.md) to extend this starter with real data and actions.
 
 ## See also  
 
-- [What are AI-powered agents?](what-are-ai-powered-agents.md)  
-- [Key agent scenarios & examples](key-agent-scenarios-and-examples.md)
+- [What are AI-powered agents?](what-are-ai-powered-agents-outline.md)  
+- [Key agent scenarios & examples](key-agent-scenarios-examples-outline.md)

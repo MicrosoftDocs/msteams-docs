@@ -7,7 +7,7 @@ ms.date: 07/02/2025
 ---
 # Build bots, message extensions, tabs, and cards  
 
-[template instruction → One-sentence overview: “This guide shows how to wire up core Teams capabilities—bots, message extensions, tabs, and Adaptive Cards—around your agent’s AI logic.”]
+[Template instruction → One-sentence overview: “This guide shows how to wire up core Teams capabilities—bots, message extensions, tabs, and Adaptive Cards—around your agent’s AI logic.”]
 
 ## Prerequisites  
 
@@ -23,7 +23,7 @@ ms.date: 07/02/2025
 atk add bot --name HelpDeskBot
 ```  
 
-[template instruction → Explain generated folders and Bot Framework adapter integration.]  
+[Template instruction → Explain generated folders and Bot Framework adapter integration.]  
 
 ### Register handlers with Teams AI library  
 
@@ -34,11 +34,11 @@ app.message(/.*/, async (context, state) => {
 });
 ```  
 
-[template instruction → ≤ 100 words explanation.]
+[Template instruction → ≤ 100 words explanation.]
 
 ### Enable SSO & user context  
 
-[template instruction → One code block `authentication.getAuthToken` + explanation.]
+[Template instruction → One code block `authentication.getAuthToken` + explanation.]
 
 ## 2. Expose actions through message extensions  
 
@@ -58,7 +58,7 @@ app.message(/.*/, async (context, state) => {
 
 ### Handle `invoke` in code  
 
-[template instruction → JS/TS snippet that returns Adaptive Card dialog.]
+[Template instruction → JS/TS snippet that returns Adaptive Card dialog.]
 
 ## 3. Surface information with tabs  
 
@@ -68,11 +68,11 @@ app.message(/.*/, async (context, state) => {
 atk add tab --name Dashboard --personal
 ```  
 
-[template instruction → Link to TeamsJS pages.tabs API for navigation.]  
+[Template instruction → Link to TeamsJS pages.tabs API for navigation.]  
 
 ### Embed Live Share canvas (optional)  
 
-[template instruction → bullet with link.]
+[Template instruction → bullet with link.]
 
 ## 4. Craft engaging Adaptive Cards  
 
@@ -92,7 +92,7 @@ atk add tab --name Dashboard --personal
 }
 ```  
 
-[template instruction → Show how to bind `${answer}` from LLM output.]
+[Template instruction → Show how to bind `${answer}` from LLM output.]
 
 ### Universal Actions for up-to-date views  
 
@@ -100,7 +100,7 @@ atk add tab --name Dashboard --personal
 
 ## 5. Connect everything through the planner  
 
-[template instruction → Describe calling bot functions from cards via `Action.Execute`, storing state, and triggering planner steps.]
+[Template instruction → Describe calling bot functions from cards via `Action.Execute`, storing state, and triggering planner steps.]
 
 ## Testing checklist  
 

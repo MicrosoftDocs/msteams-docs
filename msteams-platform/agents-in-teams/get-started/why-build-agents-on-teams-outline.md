@@ -56,9 +56,11 @@ ms.date: 07/02/2025
 
 ## Next step  
 
-Jump to “[Key agent scenarios & examples](key-agent-scenarios-and-examples.md)” to see what you can build today.
+Jump to [Key agent scenarios & examples](key-agent-scenarios-and-examples.md) to see what you can build today.
+
+[What are AI-powered agents?]
 
 ## See also  
 
-- [What are AI-powered agents?](what-are-ai-powered-agents.md)  
-- [Tools & SDKs for building agents](../build/tools-and-sdks-for-agents.md)
+- [What are AI-powered agents?](what-are-ai-powered-agents-outline.md)  
+- [Tools & SDKs for building agents](../build/tools-sdk-for-agents-outline.md)

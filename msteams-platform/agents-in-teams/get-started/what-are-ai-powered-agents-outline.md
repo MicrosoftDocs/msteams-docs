@@ -48,9 +48,9 @@ ms.date: 07/02/2025
 
 ## Next step  
 
-Read “[Why build agents on Teams?](why-build-agents-on-teams.md)” to understand the business impact and hosting advantages.
+Read [Why build agents on Teams?](why-build-agents-on-teams-outline.md) to understand the business impact and hosting advantages.
 
 ## See also  
 
-- [Key agent scenarios & examples](key-agent-scenarios-and-examples.md)  
-- [Quick-start guide: build your first agent](quick-start-guide-build-your-first-agent.md)
+- [Key agent scenarios & examples](key-agent-scenarios-examples-outline.md)  
+- [Quick-start guide: build your first agent](quick-start-build-your-first-agent-outline.md)
