@@ -81,9 +81,9 @@ Includes legal text scan, mandatory privacy-policy URL, and localization file pr
 
 ## Next step  
 
-After a clean validation report, you’re ready to “[Publish your agent to the Teams Store](../publish/publish-your-agent-to-teams-store.md)”.
+After a clean validation report, you’re ready to [Publish your agent to the Teams Store](../publish/publish-your-agent-to-teams-store-outline.md).
 
 ## See also  
 
-- [App manifest for agents](../build/app-manifest-for-agents.md)  
+- [App manifest for agents](../build/app-manifest-for-agents-outline.md)  
 - [Agents Toolkit CLI reference](toolkit link)

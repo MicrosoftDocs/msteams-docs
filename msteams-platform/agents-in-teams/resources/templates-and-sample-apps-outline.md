@@ -65,9 +65,9 @@ ms.date: 07/02/2025
 
 ## Next step  
 
-Try the **Hello Agent** template via the Agents Toolkit and complete the “[Quick-start guide](../get-started/quick-start-build-your-first-agent.md).”
+Try the **Hello Agent** template via the Agents Toolkit and complete the [Quick-start guide](../get-started/quick-start-build-your-first-agent-outline.md).
 
 ## See also  
 
-- [SDK & API reference hub](../reference/sdk-and-api-reference-hub.md)  
-- [Grow adoption & track usage](../publish/grow-adoption-and-track-usage.md)
+- [SDK & API reference hub](../reference/sdk-and-api-reference-hub-outline.md)  
+- [Grow adoption & track usage](../publish/grow-adoption-track-usage-outline.md)

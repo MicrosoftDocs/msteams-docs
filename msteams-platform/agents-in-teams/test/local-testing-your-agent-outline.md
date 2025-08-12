@@ -79,9 +79,9 @@ atk preview --ci --test   # Headless sideload + mocha tests
 
 ## Next step  
 
-Validate your manifest with “[Manifest validation workflow](manifest-validation-workflow.md)” and then deploy to a dev Azure environment.
+Validate your manifest with [Manifest validation workflow](manifest-validation-workflow-outline.md) and then deploy to a dev Azure environment.
 
 ## See also  
 
-- [Microsoft 365 Agents Playground](debug-your-agents-playground.md)  
+- [Microsoft 365 Agents Playground](../../toolkit/debug-your-agents-playground.md)  
 - [Agents Toolkit CLI reference](toolkit link)

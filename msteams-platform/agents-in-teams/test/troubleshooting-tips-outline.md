@@ -64,6 +64,6 @@ A. App IDs must be globally unique in the Teams Store. Increment the `id` GUID a
 
 ## See also  
 
-- [Local testing your agent](local-testing-your-agent.md)  
-- [Manifest validation workflow](manifest-validation-workflow.md)  
+- [Local testing your agent](local-testing-your-agent-outline.md)  
+- [Manifest validation workflow](manifest-validation-workflow-outline.md)  
 - [Agents Toolkit CLI reference](toolkit link)

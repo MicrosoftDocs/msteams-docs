@@ -24,7 +24,7 @@
   - name: Why build on Teams?
     href: agents-in-teams/get-started/why-build-agents-on-teams-outline.md
   - name: Key agent scenarios and examples
-    href: agents-in-teams/get-started/key-agent-scenarios-and-examples-outline.md
+    href: agents-in-teams/get-started/key-agent-scenarios-examples-outline.md
   - name: Quick-start guide - build your first agent
     href: agents-in-teams/get-started/quick-start-build-your-first-agent-outline.md
 
@@ -32,9 +32,9 @@
   expanded: false
   items:
   - name: Choose your agent use-case
-    href: agents-in-teams/plan/choose-your-agent=use-case-outline.md
+    href: agents-in-teams/plan/choose-your-agent-use-case-outline.md
   - name: Agent types and capabilities
-    href: agents-in-teams/plan/agent-types-and-capabilities-outline.md
+    href: agents-in-teams/plan/agent-types-capabilities-outline.md
     displayName: agent design, user experience, user interface, user interaction  
   - name: Design best practices for agents
     href: agents-in-teams/plan/design-best-practices-for-agents-outline.md
@@ -53,7 +53,7 @@
   expanded: false
   items:
   - name: Authentication and single sign-on
-    href: agents-in-teams/integrate/authentication-and-single-sign-on-outline.md
+    href: agents-in-teams/integrate/authentication-sso-outline.md
   - name: Microsoft Graph integration
     href: agents-in-teams/integrate/microsoft-graph-integration-outline.md
   - name: Extend agents across Microsoft 365
@@ -67,7 +67,7 @@
   - name: Device capabilities
     href: agents-in-teams/extend/device-capabilities-outline.md
   - name: Notifications and webhooks
-    href: agents-in-teams/extend/notifications-and-webhooks-outline.md
+    href: agents-in-teams/extend/notifications-webhooks-outline.md
 
 - name: Additional capabilities
   expanded: false
@@ -95,7 +95,7 @@
   - name: Publish your agent to the Teams Store
     href: agents-in-teams/publish/publish-your-agent-to-teams-store-outline.md
   - name: Grow adoption and track usage
-    href: agents-in-teams/publish/grow-adoption-and-track-usage-outline.md
+    href: agents-in-teams/publish/grow-adoption-track-usage-outline.md
   - name:  Monetize your agent
     href: agents-in-teams/publish/monetize-your-agent-outline.md
 
@@ -114,4 +114,4 @@
     href: agents-in-teams/reference/sdk-and-api-reference-hub-outline.md
 
 - name: Support and feedback channels
-  href: agents-in-teams/resources/support-and-feedback-chanels-outline.md    
+  href: agents-in-teams/resources/support-and-feedback-channels-outline.md    

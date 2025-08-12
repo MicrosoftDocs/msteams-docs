@@ -12,8 +12,8 @@ ms.date: 07/02/2025
 ## 1. Self-help resources  
 
 - **Documentation** – Start with this docs site; use the search bar for API or error codes.  
-- **Samples gallery** – Review working code in the [templates & samples](templates-and-sample-apps.md) page.  
-- **Troubleshooting guides** – Check “[Troubleshooting tips](../test/troubleshooting-tips.md)” for common fixes.  
+- **Samples gallery** – Review working code in the [templates & samples](templates-and-sample-apps-outline.md) page.  
+- **Troubleshooting guides** – Check [Troubleshooting tips](../test/troubleshooting-tips-outline.md) for common fixes.  
 
 ## 2. Community Q&A  
 
@@ -55,7 +55,7 @@ ms.date: 07/02/2025
 ## 6. Stay updated  
 
 - **Twitter / X:** `@Microsoft365Dev` for announcements.  
-- **RSS feed** for “[What’s new](../overview/whats-new-for-developers.md)”.  
+- **RSS feed** for [What’s new](../overview/whats-new-for-developers-outline.md).  
 - **Monthly community call** – Register at `https://aka.ms/teams-community-call`.
 
 ## 7. Escalation path  
@@ -68,9 +68,9 @@ ms.date: 07/02/2025
 
 ## Next step  
 
-Review “[Manifest validation workflow](../test/manifest-validation-workflow.md)” to pre-empt common submission errors before opening a support ticket.
+Review [Manifest validation workflow](../test/manifest-validation-workflow-outline.md) to pre-empt common submission errors before opening a support ticket.
 
 ## See also  
 
-- [Frequently asked questions](frequently-asked-questions.md)  
-- [Templates & sample apps](templates-and-sample-apps.md)
+- [Frequently asked questions](frequently-asked-questions-outline.md)  
+- [Templates & sample apps](templates-and-sample-apps-outline.md)
