@@ -61,11 +61,11 @@ const context = await app.getHostContext(); // returns 'teams', 'outlook', or 'o
 
 ### Handle theme variations  
 
-[template instruction → Note that Outlook uses its own theme tokens; rely on Fluent UI tokens instead of hard-coded colors.]
+[Template instruction → Note that Outlook uses its own theme tokens; rely on Fluent UI tokens instead of hard-coded colors.]
 
 ### Authentication parity  
 
-[Template instruction → Explain that `authentication.getAuthToken()` works unchanged in Outlook/M365 as long as redirect URIs are white listed.]
+[Template instruction → Explain that `authentication.getAuthToken()` works unchanged in Outlook/M365 as long as redirect URIs are valid.]
 
 ## 4. UX considerations  
 

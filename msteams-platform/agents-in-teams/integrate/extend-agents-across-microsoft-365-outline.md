@@ -82,8 +82,8 @@ Explain how to specify host-specific runtime needs:
 
 ## Next step  
 
-Return to “[Local testing your agent](../test/local-testing-your-agent.md)” to validate cross-host behavior before publishing.
+Return to [Local testing your agent](../test/local-testing-your-agent-outline.md) to validate cross-host behavior before publishing.
 
 ## See also  
 
-- [App manifest for agents](../build/app-manifest-for-agents.md)
+- [App manifest for agents](../build/app-manifest-for-agents-outline.md)

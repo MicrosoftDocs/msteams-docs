@@ -115,9 +115,9 @@ graphClient = new GraphServiceClient(new DelegateAuthenticationProvider(
 
 ## Next step  
 
-Integrate Graph calls in your agent’s skills—see “[Microsoft Graph integration](microsoft-graph-integration.md)”.
+Integrate Graph calls in your agent’s skills—see [Microsoft Graph integration](microsoft-graph-integration-outline.md).
 
 ## See also  
 
-- [App manifest for agents](../build/app-manifest-for-agents.md)  
-- [Resource-specific consent for agents](../graph-api/rsc/resource-specific-consent.md)
+- [App manifest for agents](../build/app-manifest-for-agents-outline.md)
+- [Resource-specific consent for agents](../../graph-api/rsc/resource-specific-consent.md)
