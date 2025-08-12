@@ -112,9 +112,9 @@ teamsapp preview --env local
 ## Next step  
 
 [template instruction → Point to classic meeting apps or agent modernization article.]  
-Move on to “[Meeting apps & collaborative features](meeting-apps-and-collaborative-features.md)” or learn how to modernize this classic app into an AI-powered agent.
+Move on to [Meeting apps & collaborative features](meeting-apps-collaborative-features-outline.md) or learn how to modernize this classic app into an AI-powered agent.
 
 ## See also  
 
-- [Build a traditional Teams app](build-a-traditional-teams-app.md)  
-- [App manifest schema (v1.21)](../reference/sdk-and-api-reference-hub.md#schemas)
+- [Build a traditional Teams app](build-a-traditional-teams-app-outline.md)  
+- [App manifest schema (v1.21)](../reference/sdk-and-api-reference-hub-outline.md#schemas)

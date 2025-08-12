@@ -46,9 +46,9 @@ ms.date: 07/02/2025
 
 ## Next step  
 
-See “[Tabs, bots & message extensions](tabs-bots-and-message-extensions.md)” for hands-on guides to each classic capability.
+See [Tabs, bots & message extensions](tabs-bots-message-extensions-outline.md) for hands-on guides to each classic capability.
 
 ## See also  
 
-- [Overview of the Teams developer platform](../overview/overview-of-teams-developer-platform.md)  
-- [App manifest schema (v1.21)](../reference/sdk-and-api-reference-hub.md#schemas)
+- [Overview of the Teams developer platform](../overview/overview-of-teams-developer-platform-outline.md)  
+- [App manifest schema (v1.21)](../reference/sdk-and-api-reference-hub-outline.md)

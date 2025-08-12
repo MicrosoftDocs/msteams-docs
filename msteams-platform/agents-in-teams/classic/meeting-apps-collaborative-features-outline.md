@@ -111,5 +111,5 @@ Learn how to “**Send activity feed notifications**” to keep attendees engage
 
 ## See also  
 
-- [Build a traditional Teams app](build-a-traditional-teams-app.md)  
+- [Build a traditional Teams app](build-a-traditional-teams-app-outline.md)
 - [Share to stage API reference](link to API)
