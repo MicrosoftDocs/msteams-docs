@@ -59,16 +59,6 @@
   - name: Extend agents across Microsoft 365
     href: agents-in-teams/integrate/extend-agents-across-microsoft-365-outline.md
 
-- name: Additional capabilities
-  expanded: false
-  items:
-  - name: Build a conventional Teams app
-    href: agents-in-teams/classic/build-a-traditional-teams-app-outline.md
-  - name: Build tabs, bots & message extensions
-    href: agents-in-teams/classic/tabs-bots-message-extensions-outline.md
-  - name: Meeting apps and collaborative features
-    href: agents-in-teams/classic/meeting-apps-collaborative-features-outline.md
-
 - name: Extend your agent
   expanded: false
   items:
@@ -78,6 +68,16 @@
     href: agents-in-teams/extend/device-capabilities-outline.md
   - name: Notifications and webhooks
     href: agents-in-teams/extend/notifications-and-webhooks-outline.md
+
+- name: Additional capabilities
+  expanded: false
+  items:
+  - name: Build a conventional Teams app
+    href: agents-in-teams/classic/build-a-traditional-teams-app-outline.md
+  - name: Build tabs, bots & message extensions
+    href: agents-in-teams/classic/tabs-bots-message-extensions-outline.md
+  - name: Meeting apps and collaborative features
+    href: agents-in-teams/classic/meeting-apps-collaborative-features-outline.md
 
 - name: Test your agent
   expanded: false
