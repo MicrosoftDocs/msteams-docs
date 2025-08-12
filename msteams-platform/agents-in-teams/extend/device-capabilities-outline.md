@@ -105,5 +105,5 @@ See “Integrate media capabilities” for step-by-step code samples.
 
 ## See also  
 
-- [Authentication & single sign-on](../integrate/authentication-and-sso.md)  
-- [Teams JavaScript SDK reference](../reference/sdk-and-api-reference-hub.md#platform-sdks)
+- [Authentication & single sign-on](../integrate/authentication-and-sso-outline.md)  
+- [Teams JavaScript SDK reference](../reference/sdk-and-api-reference-hub-outline.md#platform-sdks)

@@ -128,10 +128,10 @@ if(!VerifyHmac(body, signature)) return Unauthorized();
 
 ## Next step  
 
-Implement “[Authentication & single sign-on](../integrate/authentication-and-sso.md)” so your notifications include personalized data securely.
+Implement [Authentication & single sign-on](../integrate/authentication-and-sso-outline.md) so your notifications include personalized data securely.
 
 ## See also  
 
-- [App manifest for agents](../build/app-manifest-for-agents.md)  
-- [Microsoft Graph sendActivityNotification API](https://learn.microsoft.com/graph/api/resources/sendactivitynotification)  
-- [Adaptive Card actions guide](link to guide)
+- [App manifest for agents](../build/app-manifest-for-agents-outline.md)  
+- [Microsoft Graph sendActivityNotification API](/graph/teams-send-activityfeednotifications)
+- [Adaptive Card actions guide](https://adaptivecards.microsoft.com/)

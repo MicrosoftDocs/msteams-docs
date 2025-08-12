@@ -84,22 +84,22 @@ atk preview --host office    # sideloads into M365 hub preview
 
 [Template instruction → Mention that Toolkit automatically swaps manifest requirement sets and opens the correct client.]
 
-### Manual sideload  
+### Manual sideload
 
 [Template instruction → Provide link to Developer Portal sideload steps.]
 
 ## 6. Limitations (July 2025)  
 
-- Message extension **link unfurling** not yet supported in Outlook mobile.  
-- Live Share canvas only available in Teams meeting stage.  
+- Message extension **link unfurling** not yet supported in Outlook mobile.
+- Live Share canvas only available in Teams meeting stage.
 - GCC rollout planned H2 2025.
 
 ## Next step  
 
 [Template instruction → Point to Extend agents article created earlier.]  
-Deep-dive into “[Extend agents across Microsoft 365](../integrate/extend-agents-across-microsoft-365.md)” for agent-specific guidance.
+Deep-dive into [Extend agents across Microsoft 365](../integrate/extend-agents-across-microsoft-365-outline.md) for agent-specific guidance.
 
 ## See also  
 
-- [Teams JavaScript SDK capability support](../reference/sdk-and-api-reference-hub.md#platform-sdks)  
-- [Authentication & single sign-on](../integrate/authentication-and-sso.md)
+- [Teams JavaScript SDK capability support](../reference/sdk-and-api-reference-hub-outline.md)  
+- [Authentication & single sign-on](../integrate/authentication-and-sso-outline.md)

@@ -43,7 +43,7 @@ ms.date: 07/02/2025
 
 [Short subsection maps scenario patterns to capabilities.]
 
-| Pattern | Recommended surface | Key SDK / API |  
+| Pattern | Recommended surface | Key SDK or API |  
 |---------|--------------------|---------------|  
 | FAQ retrieval | Chat bot + Copilot plug-in | Index data → search function |  
 | Action execution | Message extension command | OpenAPI + function call |  
