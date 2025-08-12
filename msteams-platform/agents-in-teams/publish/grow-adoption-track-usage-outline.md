@@ -82,9 +82,9 @@ ms.date: 07/02/2025
 ## Next step  
 
 [Template instruction → Link to monetization guide.]  
-Learn how to “[Monetize your agent](monetize-your-agent.md)” with SaaS offers or in-app purchases.
+Learn how to [Monetize your agent](monetize-your-agent-outline.md) with SaaS offers or in-app purchases.
 
 ## See also  
 
-- [Publish your agent to the Teams Store](publish-your-agent-to-teams-store.md)  
-- [Local testing your agent](../test/local-testing-your-agent.md)
+- [Publish your agent to the Teams Store](publish-your-agent-to-teams-store-outline.md)  
+- [Local testing your agent](../test/local-testing-your-agent-outline.md)

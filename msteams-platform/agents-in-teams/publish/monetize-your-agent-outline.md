@@ -97,9 +97,9 @@ ms.date: 07/02/2025
 
 ## Next step  
 
-Return to “[Publish your agent to the Teams Store](publish-your-agent-to-teams-store.md)” to submit your monetized package.
+Return to [Publish your agent to the Teams Store](publish-your-agent-to-teams-store-outline.md) to submit your monetized package.
 
 ## See also  
 
-- [Grow adoption & track usage](grow-adoption-and-track-usage.md)  
-- [In-app purchase API reference](https://learn.microsoft.com/commerce/in-app-purchase)
+- [Grow adoption & track usage](grow-adoption-track-usage-outline.md)  
+- [In-app purchase API reference](/windows/uwp/monetize/in-app-purchases-and-trials)

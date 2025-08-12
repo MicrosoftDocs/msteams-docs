@@ -68,6 +68,6 @@ Proceed to [Design best practices for agents](design-best-practices-for-agents-o
 
 ## See also  
 
-- [Choose your agent use-case](choose-your-agent-use-case.md)  
-- [App manifest for agents](../build/app-manifest-for-agents.md)  
-- [Tools & SDKs for building agents](tools-and-sdks-for-agents.md)
+- [Choose your agent use-case](choose-your-agent-use-case-outline.md)  
+- [App manifest for agents](../build/app-manifest-for-agents-outline.md)  
+- [Tools & SDKs for building agents](../build/tools-sdk-for-agents-outline.md)

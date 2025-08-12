@@ -71,9 +71,9 @@ Checklist:
 
 ## Next step  
 
-Proceed to “[Agent types & capabilities](agent-types-and-capabilities.md)” to match your chosen scenario with the right technical pattern.
+Proceed to [Agent types & capabilities](agent-types-capabilities-outline.md) to match your chosen scenario with the right technical pattern.
 
 ## See also  
 
-- [Key agent scenarios & examples](../get-started/key-agent-scenarios-and-examples.md)  
-- [Design best practices for agents](design-best-practices-for-agents.md)
+- [Key agent scenarios & examples](../get-started/key-agent-scenarios-examples-outline.md)  
+- [Design best practices for agents](design-best-practices-for-agents-outline.md)

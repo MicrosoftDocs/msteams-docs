@@ -83,10 +83,10 @@ ms.date: 07/02/2025
 
 ## Next step  
 
-Move on to “[Authentication & single sign-on](../integrate/authentication-and-sso.md)” to secure your agent.
+Move on to [Authentication & single sign-on](../integrate/authentication-sso-outline.md) to secure your agent.
 
 ## See also  
 
-- [Choose your agent use-case](choose-your-agent-use-case.md)  
-- [Agent types & capabilities](agent-types-and-capabilities.md)  
-- [Tools & SDKs for building agents](../build/tools-and-sdks-for-agents.md)
+- [Choose your agent use-case](choose-your-agent-use-case-outline.md)  
+- [Agent types & capabilities](agent-types-capabilities-outline.md)  
+- [Tools & SDKs for building agents](../build/tools-sdk-for-agents-outline.md)
