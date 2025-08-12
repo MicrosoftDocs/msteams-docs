@@ -102,13 +102,14 @@ The following alphabetical glossary helps you quickly understand the terminology
 
 * Webhooks (Outgoing) – Endpoint that lets Teams POST chat content to an external service and receive a JSON reply.  
 
-*(Add new terms as the platform evolves; keep each definition ≤ 30 words.)*
+* (Add new terms as the platform evolves; keep each definition ≤ 30 words.)*
 
 ## Next step  
 
-Review “[Tools & SDKs for building agents](../build/tools-and-sdks-for-agents.md)” to see how these concepts map to code.
+Review [Tools & SDKs for building agents](../build/tools-sdk-for-agents-outline.md) to see how these concepts map to code.
 
 ## See also  
 
-- [Overview of the Teams developer platform](overview-of-teams-developer-platform.md)  
-* [App manifest for agents](../build/app-manifest-for-agents.md)
+* [Overview of the Teams developer platform](overview-of-teams-developer-platform-outline.md)  
+
+* [App manifest for agents](../build/app-manifest-for-agents-outline.md)

@@ -7,7 +7,7 @@ ms.date: 07/02/2025
 ---
 # Overview of the Microsoft Teams developer platform  
 
-[Template instruction → In 3-4 sentences (< 100 words) explain that Teams is now an AI-first collaboration canvas, list the primary extensibility points (agents, classic apps, cross-M365 surfaces), and set the expectation that readers will dive deeper in subsequent articles.]
+[Template instruction → In 3-4 sentences (< 100 words) explain that Teams is now an AI-first collaboration canvas, list the primary extensibility points (agents, classic apps, cross-M365 surfaces), and set the expectation that readers dive deeper in subsequent articles.]
 
 ## Why build on Teams  
 
@@ -48,5 +48,5 @@ See [What are AI-powered agents?](../get-started/what-are-ai-powered-agents-outl
 ## See also  
 
 - [Why build agents on Teams?](../get-started/why-build-agents-on-teams-outline.md)  
-- [Tools & SDKs for building agents](../build/tools-and-sdks-for-agents.md)  
-- [App manifest for agents](../build/app-manifest-for-agents.md)
+- [Tools & SDKs for building agents](../build/tools-sdk-for-agents-outline.md)  
+- [App manifest for agents](../build/app-manifest-for-agents-outline.md)
