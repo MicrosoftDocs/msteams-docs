@@ -92,13 +92,10 @@
 - name: Publish your agent to the Teams Store
   href: agents-in-teams/publish/publish-your-agent-to-teams-store-outline.md
 
-- name: Update your agent
-  expanded: false
-  items:
-  - name: Grow adoption and track usage
-    href: agents-in-teams/publish/grow-adoption-track-usage-outline.md
-  - name:  Monetize your agent
-    href: agents-in-teams/publish/monetize-your-agent-outline.md
+- name: Grow adoption and track usage
+  href: agents-in-teams/publish/grow-adoption-track-usage-outline.md
+- name:  Monetize your agent
+  href: agents-in-teams/publish/monetize-your-agent-outline.md
 
 - name: Frequently asked questions
   href: agents-in-teams/resources/frequently-asked-questions-outline.md
