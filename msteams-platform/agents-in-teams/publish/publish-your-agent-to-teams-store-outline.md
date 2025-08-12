@@ -90,9 +90,9 @@ Fix any *error* or *critical* warnings (for example, unsuitable descriptions, mi
 ## Next step  
 
 [Template instruction → Link to adoption article.]  
-Proceed to “[Grow adoption & track usage](grow-adoption-and-track-usage.md)” to maximize your agent’s reach.
+Proceed to [Grow adoption & track usage](grow-adoption-track-usage-outline.md) to maximize your agent’s reach.
 
 ## See also  
 
-- [Manifest validation workflow](../test/manifest-validation-workflow.md)  
-- [Monetize your agent](monetize-your-agent.md)
+- [Manifest validation workflow](../test/manifest-validation-workflow-outline.md)  
+- [Monetize your agent](monetize-your-agent-outline.md)

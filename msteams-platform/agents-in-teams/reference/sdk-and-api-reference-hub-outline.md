@@ -34,12 +34,13 @@ ms.date: 07/02/2025
 
 | Tool | Docs | Latest version |  
 |------|------|----------------|  
-| Agents Toolkit CLI (`atk`) | [CLI reference](../toolkit/microsoft-365-agents-toolkit-cli.md) | 1.1 |  
-| Teams Toolkit CLI (`teamsapp`) *(classic)* | [Reference](../toolkit/teams-toolkit-cli.md) | 5.x |  
+| Agents Toolkit CLI (`atk`) | [CLI reference](../../toolkit/Microsoft-365-Agents-Toolkit-CLI.md) | 1.1 |  
+| Teams Toolkit CLI (`teamsapp`) *(classic)* | [Reference](../../toolkit/teams-toolkit-CLI.md) | 5.x |  
 
 ## REST & Graph APIs  
 
-* Microsoft Graph – Teams, chat, channel, presence, meeting transcripts  
+- Microsoft Graph – Teams, chat, channel, presence, meeting transcripts  
+
 - Agent marketplace & commerce APIs  
 - Resource-specific consent endpoints  
 
@@ -69,9 +70,9 @@ ms.date: 07/02/2025
 
 ## Next step  
 
-Jump to “[Tools & SDKs for building agents](../build/tools-and-sdks-for-agents.md)” to install the libraries referenced here.
+Jump to [Tools & SDKs for building agents](../build/tools-sdk-for-agents-outline.md) to install the libraries referenced here.
 
 ## See also  
 
-- [App manifest for agents](../build/app-manifest-for-agents.md)  
-- [Authentication & single sign-on](../integrate/authentication-and-sso.md)
+- [App manifest for agents](../build/app-manifest-for-agents-outline.md)  
+- [Authentication & single sign-on](../integrate/authentication-sso-outline.md)

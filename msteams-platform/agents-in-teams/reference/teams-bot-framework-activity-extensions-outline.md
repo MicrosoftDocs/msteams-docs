@@ -129,9 +129,9 @@ ms.date: 07/02/2025
 
 ## Next step  
 
-Consult “[Build bots, message extensions, tabs & cards](../build/build-bots-message-extensions-tabs-cards.md)” to see these activity extensions in action.
+Consult [Build bots, message extensions, tabs & cards](../build/build-bots-message-extensions-tabs-cards-outline.md) to see these activity extensions in action.
 
 ## See also  
 
 - [Bot Framework Activity schema](https://aka.ms/bf-activity-schema)  
-- [Authentication & single sign-on](../integrate/authentication-and-sso.md)
+- [Authentication & single sign-on](../integrate/authentication-sso-outline.md)

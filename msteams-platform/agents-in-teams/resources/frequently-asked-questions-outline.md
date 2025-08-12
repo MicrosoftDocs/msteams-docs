@@ -103,6 +103,6 @@ ms.date: 07/02/2025
 
 ## See also  
 
-- [Troubleshooting tips](../test/troubleshooting-tips.md)  
-- [SDK & API reference hub](../reference/sdk-and-api-reference-hub.md)  
-- [Authentication and single sign-on](../integrate/authentication-and-sso.md)
+- [Troubleshooting tips](../test/troubleshooting-tips-outline.md)  
+- [SDK & API reference hub](../reference/sdk-and-api-reference-hub-outline.md)  
+- [Authentication and single sign-on](../integrate/authentication-sso-outline.md)
