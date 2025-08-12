@@ -1,7 +1,7 @@
 - name: Microsoft Teams Developer documentation
   href: mstdd-landing.yml
 
-- name: Microsoft Teams Developer Platform
+- name: Overview
   expanded: false 
   items:
   - name: Teams developer platform
