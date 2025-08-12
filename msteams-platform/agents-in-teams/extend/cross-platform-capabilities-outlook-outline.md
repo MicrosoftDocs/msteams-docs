@@ -65,7 +65,7 @@ const context = await app.getHostContext(); // returns 'teams', 'outlook', or 'o
 
 ### Authentication parity  
 
-[Template instruction → Explain that `authentication.getAuthToken()` works unchanged in Outlook/M365 as long as redirect URIs are whitelisted.]
+[Template instruction → Explain that `authentication.getAuthToken()` works unchanged in Outlook/M365 as long as redirect URIs are white listed.]
 
 ## 4. UX considerations  
 

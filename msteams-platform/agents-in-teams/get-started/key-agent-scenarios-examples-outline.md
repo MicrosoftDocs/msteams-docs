@@ -15,12 +15,12 @@ ms.date: 07/02/2025
 
 | # | Domain | Agent goal | Primary capabilities | Quick demo link |
 |---|--------|-----------|----------------------|-----------------|
-| 1 | Sales & CRM | Summarize opportunities, draft emails, log notes | Message extension + Graph + Copilot function calls | [Demo](#sales-demo) |
-| 2 | IT Help-desk | Triage tickets, auto-answer FAQs, escalate | Chat bot + Adaptive Cards + sequential workflow | [Demo](#helpdesk-demo) |
-| 3 | HR & Onboarding | Answer policy questions, schedule training | Declarative plug-in + Meetings tab | [Demo](#hr-demo) |
-| 4 | Project Management | Generate status reports, assign tasks | Custom engine agent + Planner API | [Demo](#pm-demo) |
-| 5 | Compliance & Legal | Summarize chat threads, flag sensitive content | Notification feed + Live Share canvas | [Demo](#compliance-demo) |
-| 6 | Data Insights | Deliver real-time dashboards & “explain this chart” chat | Tab + Live Share media + Copilot citations | [Demo](#data-demo) |
+| 1 | Sales & CRM | Summarize opportunities, draft emails, log notes | Message extension + Graph + Copilot function calls | [Demo](sales-demo) |
+| 2 | IT Help-desk | Triage tickets, auto-answer FAQs, escalate | Chat bot + Adaptive Cards + sequential workflow | [Demo](helpdesk-demo) |
+| 3 | HR & Onboarding | Answer policy questions, schedule training | Declarative plug-in + Meetings tab | [Demo](hr-demo) |
+| 4 | Project Management | Generate status reports, assign tasks | Custom engine agent + Planner API | [Demo](pm-demo) |
+| 5 | Compliance & Legal | Summarize chat threads, flag sensitive content | Notification feed + Live Share canvas | [Demo](compliance-demo) |
+| 6 | Data Insights | Deliver real-time dashboards & “explain this chart” chat | Tab + Live Share media + Copilot citations | [Demo](data-demo) |
 
 ## End-to-end example: Sales Deal Coach *(Spotlight)*  
 
@@ -66,9 +66,9 @@ ms.date: 07/02/2025
 
 ## Next step  
 
-Follow the “[Quick-start guide: build your first agent](quick-start-guide-build-your-first-agent.md)” to implement one of these scenarios today.
+Follow the [Quick-start guide: build your first agent](quick-start-build-your-first-agent-outline.md) to implement one of these scenarios today.
 
 ## See also  
 
-- [Why build agents on Teams?](why-build-agents-on-teams.md)  
-- [Tools & SDKs for building agents](../build/tools-and-sdks-for-agents.md)
+- [Why build agents on Teams?](why-build-agents-on-teams-outline.md)  
+- [Tools & SDKs for building agents](../build/tools-sdk-for-agents-outline.md)
