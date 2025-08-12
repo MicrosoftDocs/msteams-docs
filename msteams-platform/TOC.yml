@@ -102,13 +102,10 @@
 - name: Resources
   expanded: false
   items:
+  - name: Frequently asked questions
+    href: agents-in-teams/resources/frequently-asked-questions-outline.md
   - name: Templates and sample apps
     href: agents-in-teams/resources/templates-and-sample-apps-outline.md
-
-- name: Frequently asked questions
-  href: agents-in-teams/resources/frequently-asked-questions-outline.md
-
-
 
 - name: Reference
   expanded: false
