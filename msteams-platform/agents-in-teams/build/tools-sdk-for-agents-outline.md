@@ -74,10 +74,10 @@ atk provision && atk deploy
 
 ## Next step  
 
-Go to “[App manifest for agents](app-manifest-for-agents.md)” to learn how to declare your agent’s skills and permissions.
+Go to [App manifest for agents](app-manifest-for-agents-outline.md) to learn how to declare your agent’s skills and permissions.
 
 ## See also  
 
-- [Quick-start: build your first agent](../agents/get-started/quick-start-build-your-first-agent.md)  
+- [Quick-start: build your first agent](../get-started/quick-start-build-your-first-agent-outline.md)  
 - [Teams AI Library reference](https://aka.ms/teams-ai-lib)  
-- [Agents Toolkit CLI reference](../toolkit/microsoft-365-agents-toolkit-cli.md)
+- [Agents Toolkit CLI reference](../../toolkit/Microsoft-365-Agents-Toolkit-CLI.md)

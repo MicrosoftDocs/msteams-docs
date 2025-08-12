@@ -11,7 +11,7 @@ ms.date: 07/02/2025
 
 ## Prerequisites  
 
-- Completed “[Quick-start guide](../get-started/quick-start-guide.md)”  
+- Completed [Quick-start guide](../get-started/quick-start-build-your-first-agent-outline.md)
 - Agents Toolkit CLI or IDE extension installed  
 - Teams AI library configured in your project  
 
@@ -111,9 +111,9 @@ atk add tab --name Dashboard --personal
 
 ## Next step  
 
-Move on to “[Local testing your agent](../test/local-testing-your-agent.md)” to validate these capabilities end-to-end.
+Move on to [Local testing your agent](../test/local-testing-your-agent-outline.md) to validate these capabilities end-to-end.
 
 ## See also  
 
-- [Tools & SDKs for building agents](tools-and-sdks-for-agents.md)  
-- [Design best practices for agents](../plan/design-best-practices-for-agents.md)
+- [Tools & SDKs for building agents](tools-sdk-for-agents-outline.md)
+- [Design best practices for agents](../plan/design-best-practices-for-agents-outline.md)
