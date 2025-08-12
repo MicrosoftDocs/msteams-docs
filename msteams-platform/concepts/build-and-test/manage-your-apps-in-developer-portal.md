@@ -22,7 +22,6 @@ In the **Overview** section, you can see the following components to manage your
     * **Announcement**: Latest updates of your apps on Developer Portal.
     * **Active users (Preview)**: Shows you the active user count.
     * **Basic information**: Shows you the **App ID**, **Version**, **Manifest version**, and other basic information.
-    * **Upgrade to 1.17 or later**: Upgrade your app manifest to the latest version, which enables support for extending Teams apps to Outlook and Office.
 
     :::image type="content" source="../../assets/images/tdp/dashboard-page_1.png" alt-text="The screenshot is an example that shows the Overview page of the app you created in Developer Portal." lightbox="../../assets/images/tdp/dashboard-page_1.PNG":::
 
