@@ -11,8 +11,8 @@ This guide walks through acquiring tokens, calling Graph from both client-side a
 
 ## Prerequisites  
 
-- Single-sign-on configured as described in “[Authentication & SSO](authentication-and-sso.md)”.  
-- Microsoft Graph permissions added to your Entra app (for example `Chat.Read`, `Calendars.Read`).  
+- Single-sign-on configured as described in [Authentication and SSO](authentication-sso-outline.md).  
+- Microsoft Graph permissions added to your Entra app (for example, `Chat.Read`, `Calendars.Read`).
 - Agents Toolkit project (JavaScript/TypeScript, .NET, or Python).
 
 ## 1 – Decide on permission model  
@@ -113,9 +113,9 @@ Brief overview (link to Graph docs) on subscribing to chatMessage, event, or dri
 
 ## Next step  
 
-Enhance user experiences with “[Device capabilities](../extend/device-capabilities.md)” or continue to “[Extend agents across Microsoft 365](extend-agents-across-microsoft-365.md)”.
+Enhance user experiences with [Device capabilities](../extend/device-capabilities-outline.md) or continue to [Extend agents across Microsoft 365](extend-agents-across-microsoft-365-outline.md).
 
 ## See also  
 
-- [Authentication & single sign-on](authentication-and-sso.md)  
-- [Microsoft Graph API reference](https://learn.microsoft.com/graph/api/overview)
+- [Authentication & single sign-on](authentication-sso-outline.md)  
+- [Microsoft Graph API reference](/graph/api/overview?view=graph-rest-1.0)

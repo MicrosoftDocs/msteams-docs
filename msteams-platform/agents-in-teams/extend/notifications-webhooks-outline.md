@@ -128,7 +128,7 @@ if(!VerifyHmac(body, signature)) return Unauthorized();
 
 ## Next step  
 
-Implement [Authentication & single sign-on](../integrate/authentication-and-sso-outline.md) so your notifications include personalized data securely.
+Implement [Authentication and single sign-on](../integrate/authentication-sso-outline.md) so your notifications include personalized data securely.
 
 ## See also  
 
