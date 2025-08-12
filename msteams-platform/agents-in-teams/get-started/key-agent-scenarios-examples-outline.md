@@ -58,7 +58,19 @@ ms.date: 07/02/2025
 
 ## Choosing a scenario  
 
-[2-bullet checklist: align with business metric & evaluate data accessibility.]
+[2-bullet checklist: align with business metric and evaluate data accessibility.]
+
+### Sales demo
+
+### Helpdesk demo
+
+### HR demo
+
+### PM demo
+
+### Compliance demo
+
+### Data demo
 
 ## Limitations  
 
