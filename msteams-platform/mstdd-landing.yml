@@ -45,7 +45,7 @@ landingContent:
       - text:   • Test in agents playground
         url: teams-ai-library-tutorial.yml#configure-and-debug-your-custom-engine-agent
 
-- title: I want to build agent with automated workflow that trigger tools and automate tasks 
+- title: I want to build agent with automated workflows that trigger tools and automate tasks 
   linkLists:
     - linkListType: concept
       links:
