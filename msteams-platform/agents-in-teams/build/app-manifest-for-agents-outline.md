@@ -115,9 +115,9 @@ List all service endpoints—including dev tunnels—your agent will call.
 
 ## Next step  
 
-Learn how to “[Build bots, message extensions, tabs & cards](build-bots-message-extensions-tabs-and-cards.md)” that implement the skills declared in your manifest.
+Learn how to [Build bots, message extensions, tabs, and cards](build-bots-message-extensions-tabs-cards-outline.md) that implement the skills declared in your manifest.
 
 ## See also  
 
-- [Tools & SDKs for building agents](tools-and-sdks-for-agents.md)  
-- [Resource-specific consent for agents](../graph-api/rsc/resource-specific-consent.md)
+- [Tools & SDKs for building agents](tools-sdk-for-agents-outline.md)
+- [Resource-specific consent for agents](../../graph-api/rsc/resource-specific-consent.md)
