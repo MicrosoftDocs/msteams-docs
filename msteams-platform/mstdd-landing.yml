@@ -27,9 +27,9 @@ landingContent:
       links:
       - text: Start with building an agent
         url: teams-ai-library-tutorial.yml
-      - text: &nbsp;&nbsp; • Work across Microsoft 365
+      - text:   • Work across Microsoft 365
         url: /microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-      - text: &nbsp;&nbsp; • Use memory, tools, and prompt planning
+      - text:   • Use memory, tools, and prompt planning
         url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md
       - text: Agent for intelligent data access and automation
         url: bots/how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md
@@ -40,9 +40,9 @@ landingContent:
       links:
       - text: Build a Teams app
         url: get-started/get-started-overview.md
-      - text: &nbsp;&nbsp; • Use tabs, bots, or message extensions
+      - text:   • Use tabs, bots, or message extensions
         url: toolkit/create-new-project.md
-      - text: &nbsp;&nbsp; • Build structured flows and user input
+      - text:   • Build structured flows and user input
         url: task-modules-and-cards/cards-and-task-modules.md
       - text: Build your first Teams app
         url: get-started/get-started-overview.md#build-your-first-teams-app
@@ -53,9 +53,9 @@ landingContent:
       links:
       - text: Build a Teams agent or app, depending on interaction required
         url: get-started/get-started-overview.md
-      - text: &nbsp;&nbsp; • Build agent for smart queries or language prompts
+      - text:   • Build agent for smart queries or language prompts
         url: bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md
-      - text: &nbsp;&nbsp; • For structured forms or UI, use Teams app
+      - text:   • For structured forms or UI, use Teams app
         url: task-modules-and-cards/cards-and-task-modules.md
 
 - title: I want to build intelligent lookup agent -
@@ -64,9 +64,9 @@ landingContent:
       links:
       - text: Build a custom engine agent
         url: teams-ai-library-tutorial.yml
-      - text: &nbsp;&nbsp; • Connect to external data and APIs
+      - text:   • Connect to external data and APIs
         url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md
-      - text: &nbsp;&nbsp; • Test in agents playground
+      - text:   • Test in agents playground
         url: teams-ai-library-tutorial.yml#configure-and-debug-your-custom-engine-agent
 
 - title: I want to build agent with automated workflow that trigger tools and automate tasks - 
@@ -75,9 +75,9 @@ landingContent:
       links:
       - text: Build a custom engine agent
         url: teams-ai-library-tutorial.yml
-      - text: &nbsp;&nbsp; • Define tools and planner logic
+      - text:   • Define tools and planner logic
         url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#create-ai-components
-      - text: &nbsp;&nbsp; • Integrated with Teams AI library
+      - text:   • Integrated with Teams AI library
         url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#import-teams-ai-library
 
 - title: I want to build an agent or app that collates data from multiple sources and provide summary - 
@@ -86,7 +86,7 @@ landingContent:
       links:
       - text: Build an app or agent
         url: get-started/get-started-overview.md
-      - text: &nbsp;&nbsp; • Use Microsoft Graph APIs for Teams app
+      - text:   • Use Microsoft Graph APIs for Teams app
         url: /graph/teams-concept-overview?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-      - text: &nbsp;&nbsp; • Extend across Microsoft 365 
+      - text:   • Extend across Microsoft 365 
         url: /microsoft-365/developer/overview-m365-agents-toolkit?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json 
