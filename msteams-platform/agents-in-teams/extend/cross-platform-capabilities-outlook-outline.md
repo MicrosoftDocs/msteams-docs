@@ -102,4 +102,4 @@ Deep-dive into [Extend agents across Microsoft 365](../integrate/extend-agents-a
 ## See also  
 
 - [Teams JavaScript SDK capability support](../reference/sdk-and-api-reference-hub-outline.md)  
-- [Authentication & single sign-on](../integrate/authentication-and-sso-outline.md)
+- [Authentication and single sign-on](../integrate/authentication-sso-outline.md)

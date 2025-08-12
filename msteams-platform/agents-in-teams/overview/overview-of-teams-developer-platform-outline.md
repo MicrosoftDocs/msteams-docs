@@ -43,10 +43,10 @@ ms.date: 07/02/2025
 
 ## Next step  
 
-See “[What are AI-powered agents?](../get-started/what-are-agents.md)” to learn how agents transform the developer story.
+See [What are AI-powered agents?](../get-started/what-are-ai-powered-agents-outline.md) to learn how agents transform the developer story.
 
 ## See also  
 
-- [Why build agents on Teams?](../get-started/why-build-agents-on-teams.md)  
+- [Why build agents on Teams?](../get-started/why-build-agents-on-teams-outline.md)  
 - [Tools & SDKs for building agents](../build/tools-and-sdks-for-agents.md)  
 - [App manifest for agents](../build/app-manifest-for-agents.md)
