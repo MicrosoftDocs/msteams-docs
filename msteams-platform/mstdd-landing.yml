@@ -34,7 +34,7 @@ landingContent:
       - text: Agent for intelligent data access and automation
         url: bots/how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md
 
-- title: I want to build intelligent lookup agent -
+- title: I want to build intelligent lookup agent
   linkLists:
     - linkListType: concept
       links:
