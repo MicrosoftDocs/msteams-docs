@@ -34,7 +34,40 @@ landingContent:
       - text: Agent for intelligent data access and automation
         url: bots/how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md
 
-- title: I want to build an interactive app for Microsoft Teams -
+- title: I want to build intelligent lookup agent -
+  linkLists:
+    - linkListType: concept
+      links:
+      - text: Build a custom engine agent
+        url: teams-ai-library-tutorial.yml
+      - text:   • Connect to external data and APIs
+        url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md
+      - text:   • Test in agents playground
+        url: teams-ai-library-tutorial.yml#configure-and-debug-your-custom-engine-agent
+
+- title: I want to build agent with automated workflow that trigger tools and automate tasks 
+  linkLists:
+    - linkListType: concept
+      links:
+      - text: Build a custom engine agent
+        url: teams-ai-library-tutorial.yml
+      - text:   • Define tools and planner logic
+        url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#create-ai-components
+      - text:   • Integrated with Teams AI library
+        url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#import-teams-ai-library
+
+- title: I want to build an agent or app that collates data from multiple sources and provide summary
+  linkLists:
+    - linkListType: concept
+      links:
+      - text: Build an app or agent
+        url: get-started/get-started-overview.md
+      - text:   • Use Microsoft Graph APIs for Teams app
+        url: /graph/teams-concept-overview?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+      - text:   • Extend across Microsoft 365 
+        url: /microsoft-365/developer/overview-m365-agents-toolkit?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json 
+
+- title: I want to build an interactive app for Microsoft Teams
   linkLists:
     - linkListType: concept
       links:
@@ -47,7 +80,7 @@ landingContent:
       - text: Build your first Teams app
         url: get-started/get-started-overview.md#build-your-first-teams-app
 
-- title: I want to fetch or work with external business data -
+- title: I want to fetch or work with external business data
   linkLists:
     - linkListType: concept
       links:
@@ -58,35 +91,3 @@ landingContent:
       - text:   • For structured forms or UI, use Teams app
         url: task-modules-and-cards/cards-and-task-modules.md
 
-- title: I want to build intelligent lookup agent -
-  linkLists:
-    - linkListType: concept
-      links:
-      - text: Build a custom engine agent
-        url: teams-ai-library-tutorial.yml
-      - text:   • Connect to external data and APIs
-        url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md
-      - text:   • Test in agents playground
-        url: teams-ai-library-tutorial.yml#configure-and-debug-your-custom-engine-agent
-
-- title: I want to build agent with automated workflow that trigger tools and automate tasks - 
-  linkLists:
-    - linkListType: concept
-      links:
-      - text: Build a custom engine agent
-        url: teams-ai-library-tutorial.yml
-      - text:   • Define tools and planner logic
-        url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#create-ai-components
-      - text:   • Integrated with Teams AI library
-        url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#import-teams-ai-library
-
-- title: I want to build an agent or app that collates data from multiple sources and provide summary - 
-  linkLists:
-    - linkListType: concept
-      links:
-      - text: Build an app or agent
-        url: get-started/get-started-overview.md
-      - text:   • Use Microsoft Graph APIs for Teams app
-        url: /graph/teams-concept-overview?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-      - text:   • Extend across Microsoft 365 
-        url: /microsoft-365/developer/overview-m365-agents-toolkit?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json 
