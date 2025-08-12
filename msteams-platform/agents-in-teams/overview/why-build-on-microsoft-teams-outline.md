@@ -60,5 +60,5 @@ Learn “Key agent scenarios & examples” to see practical implementations.
 
 ## See also  
 
-- [Overview of the Teams developer platform](overview-of-teams-developer-platform.md)  
-- [Tools & SDKs for building agents](../build/tools-and-sdks-for-agents.md)  
+- [Overview of the Teams developer platform](overview-of-teams-developer-platform-outline.md)  
+- [Tools & SDKs for building agents](../build/tools-sdk-for-agents-outline.md)  

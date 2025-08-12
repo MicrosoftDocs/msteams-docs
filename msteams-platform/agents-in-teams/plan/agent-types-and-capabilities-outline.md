@@ -64,7 +64,7 @@ ms.date: 07/02/2025
 
 ## Next step  
 
-Proceed to “[Design best practices for agents](design-best-practices-for-agents.md)” to plan UX, prompts, and governance for your chosen agent type.
+Proceed to [Design best practices for agents](design-best-practices-for-agents-outline.md) to plan UX, prompts, and governance for your chosen agent type.
 
 ## See also  
 
