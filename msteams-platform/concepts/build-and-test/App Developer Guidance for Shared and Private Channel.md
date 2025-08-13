@@ -24,7 +24,7 @@ As Microsoft Teams evolves, shared and private channels introduce new collaborat
 
 This guide helps you understand the updates needed to make your Teams app work seamlessly across Standard, private, and Shared channels.
 
-What This Guide Covers
+What This Guide Covers?
 
 - key concepts (membership, access, installation, storage)
 - Implementation steps
@@ -66,3 +66,10 @@ What This Guide Covers
 | **App Model** | App must be installed in the host team                                        | Yes                  | Yes                 | Yes                 |
 |              | App installed to host team automatically available in channel                 | Yes                  | No                  | No                  |
 |              | App must be added to each channel                                              | No                   | Yes                 | Yes                 |
+
+> **Note:**  
+
+> - Currently, only apps that include tabs are supported in private and shared channels in Microsoft Teams.  
+> - Tab apps in shared channels are available in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](../cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](../sovereign-cloud.md) environments.  
+> - SharePoint and the SharePoint pages apps aren't supported for shared channels in GCC, GCC High, DoD, and Teams operated by 21Vianet environments.  
+> - Bots and message extensions are not supported in shared channels.
