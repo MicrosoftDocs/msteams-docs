@@ -51,7 +51,7 @@ What This Guide Covers?
 
 ## Shared Channel Capabilities
 
-## Teams Channel Models – Capabilities Comparison
+### Teams Channel Models – Capabilities Comparison
 
 | **Category** | **Capability**                                                                 | **Standard Channel** | **Private Channel** | **Shared Channel** |
 |--------------|----------------------------------------------------------------------------------|----------------------|---------------------|---------------------|
