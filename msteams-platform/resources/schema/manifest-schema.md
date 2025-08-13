@@ -575,7 +575,7 @@ Represents a conversational Teams bot that uses custom AI language models and or
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`id`|String| |✔️| Unique (bot) identifier for the custom engine agent. Must match the `id` specified in the `bots` section of the manifest and be of `personal` scope. |
+|`id`|String| |✔️| Unique (bot) identifier for the custom engine agent. Must match the `id` specified in the `bots` section of the manifest and be of `copilot` scope. |
 |`type`|String| |✔️| Type of the custom engine agent. Supported value: `bot` |
 |`disclaimer.text`|String|500|✔️| The message shown to users before they interact with this application.
 
@@ -680,8 +680,8 @@ A list of commands that your bot can recommend to users. The object is an array 
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`scopes`|Array of enums|3|✔️|Specifies the scope for which the command list is valid. Options are `team`, `personal`, and `groupChat`.|
-|`commands`|Array of objects|10|✔️|An array of commands the bot supports.|
+|`scopes`|Array of enums|4|✔️|Specifies the scope for which the command list is valid. Options are `team`, `personal`, `groupChat`, and `copilot`.|
+|`commands`|Array of objects|10|✔️|An array of commands that power the Copilot experience by enabling rich interactions and functionalities supported by the bot.|
 
 > [!NOTE]
 > Teams mobile client doesn't support the bot app when there is no value in the `commandLists` property.
