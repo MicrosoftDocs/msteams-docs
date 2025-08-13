@@ -48,3 +48,21 @@ What This Guide Covers
 - Including external and nonhost team members
 - Sharing with individuals or teams across organizations
 - Storing files in the channel’s dedicated SharePoint sit
+
+## Shared Channel Capabilities
+
+## Teams Channel Models – Capabilities Comparison
+
+| **Category** | **Capability**                                                                 | **Standard Channel** | **Private Channel** | **Shared Channel** |
+|--------------|----------------------------------------------------------------------------------|----------------------|---------------------|---------------------|
+| **Membership** | Can add people to the channel without adding to the host team                 | No                   | No                  | Yes                 |
+|              | Channel membership can be limited to a subset of the host team                 | No                   | Yes                 | Yes                 |
+|              | Channel can be shared with other teams to inherit members from the team        | No                   | No                  | Yes                 |
+|              | Channel can be shared directly with its parent team to inherit members         | N/A                  | No                  | Yes                 |
+|              | Guests (B2B Guests) can participate in the channel                             | Yes                  | Yes                 | No                  |
+|              | External participants (B2B Direct Connect) can participate in the channel      | No                   | No                  | Yes                 |
+|              | Channel is hosted under a host team                                            | Yes                  | Yes                 | Yes                 |
+| **Storage**   | Each channel has a dedicated SharePoint site                                  | No (inherits team site) | Yes              | Yes                 |
+| **App Model** | App must be installed in the host team                                        | Yes                  | Yes                 | Yes                 |
+|              | App installed to host team automatically available in channel                 | Yes                  | No                  | No                  |
+|              | App must be added to each channel                                              | No                   | Yes                 | Yes                 |
