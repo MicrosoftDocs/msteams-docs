@@ -163,18 +163,19 @@ Each Private or Shared channel has its own SharePoint site, separate from the ho
 
 ### Key Considerations
 
-- When your app uploads or retrieves files, or interacts with SharePoint lists/pages, make sure you're targeting the channel’s site, not the team’s root site.
-- To share files or links:
-- Use “people with existing access” links to respect channel permissions.
-- Or use the Microsoft Graph invite API to explicitly grant access—especially important for external users in shared channels.
+- Ensure you're targeting the channel’s site—not the team’s root site—when uploading or retrieving files, or interacting with SharePoint lists/pages.
+- Use 'people with existing access' links to respect channel-level permissions when sharing files or links.
+- Call the Microsoft Graph invite API to explicitly grant access, especially for external users in shared channels.
 
 ## App Installation in Private and Shared Channels
 
-To make your app available in Private or Shared channels, you need to explicitly declare support in the app manifest. Unlike Standard channels, where installing the app at the team level is sufficient, Private and Shared channels require an additional step.
+To make your app available in Private or Shared channels, you need to explicitly declare support in the app manifest. Unlike Standard channels, where installing the app at the team level is sufficient, Private and Shared channels require an extra step.
 
 ### Installation Workflow
 
 - Install the app at the team level.
-- Add the app to the specific channel. A channel owner or member must add the app to each Private or Shared channel where it’s needed.
+- Add the app to the specific channel. A channel owner or member adds the app to each Private or Shared channel as needed.
 
- Note: Without this step, your app won’t appear or function in those channels—even if it’s installed at the team level.
+ Note: Without this step, your app doesn’t appear or function in those channels—even if it's installed at the team level.
+
+Now that we understand the concepts, let’s look at how to make the required changes in your app.
