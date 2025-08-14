@@ -153,3 +153,28 @@ Understanding user types helps you tailor app behavior:
 - Always fetch channel members, not team members—channel membership is what matters.
 - Use user roles to adjust app behavior:
     For example, limit actions for external users to protect sensitive features.
+
+## SharePoint Storage for Private and Shared Channels
+
+Each Private or Shared channel has its own SharePoint site, separate from the host team's site. This site includes:
+
+- A dedicated document library
+- Channel-specific folders, lists, and pages
+
+### Key Considerations
+
+- When your app uploads or retrieves files, or interacts with SharePoint lists/pages, make sure you're targeting the channel’s site, not the team’s root site.
+- To share files or links:
+- Use “people with existing access” links to respect channel permissions.
+- Or use the Microsoft Graph invite API to explicitly grant access—especially important for external users in shared channels.
+
+## App Installation in Private and Shared Channels
+
+To make your app available in Private or Shared channels, you need to explicitly declare support in the app manifest. Unlike Standard channels, where installing the app at the team level is sufficient, Private and Shared channels require an additional step.
+
+### Installation Workflow
+
+- Install the app at the team level.
+- Add the app to the specific channel. A channel owner or member must add the app to each Private or Shared channel where it’s needed.
+
+ Note: Without this step, your app won’t appear or function in those channels—even if it’s installed at the team level.
