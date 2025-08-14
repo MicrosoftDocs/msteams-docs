@@ -15,7 +15,7 @@ As Microsoft Teams evolves, shared and private channels introduce new collaborat
 - Storage architecture
 - Privacy boundaries
 
-This guide helps you understand the updates, best practices, and testing steps needed to adapt your app for priavte and shared channels.
+This guide helps you understand the updates, best practices, and testing steps needed to adapt your app for private and shared channels.
 
 ## Updating Your App Ensures
 
@@ -179,3 +179,30 @@ To make your app available in Private or Shared channels, you need to explicitly
  Note: Without this step, your app doesn’t appear or function in those channels—even if it's installed at the team level.
 
 Now that we understand the concepts, let’s look at how to make the required changes in your app.
+
+## Step-by-step Guide for Updating Your App
+
+### Design Principle
+
+Don’t rely on the channel type (Standard, Private, Shared) to decide how your app behaves. Instead, base behavior on:
+
+- Channel membership
+- User permissions
+- App installation status in the channel
+  
+This approach makes your app work reliably across all channel types.
+
+### Preliminary Configuration Requirements
+
+1. Update Your App Manifest
+
+- Add "supportsChannelFeatures": "tier1" to your manifest. This step lets your app be added to Shared and Private channels. [More details here]
+
+2. Install the App Properly
+
+- Install the app to the team.
+- Ensure users add the app to each channel (Shared or Private) where they want to use it
+- If the app isn’t added to a channel, most RSC-based APIs will fail with a 403 error like:
+'Caller is not enabled for requesting the lwg channel of Shared channel type…'
+
+- There is no direct way to check app presence in a channel. You won’t get a clear API response saying 'app not added'. But if you see a 403 error or partial API results, it usually means the app hasn’t been added to that channel by users
