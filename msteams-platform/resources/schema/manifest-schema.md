@@ -1176,7 +1176,7 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
     |`MicrophoneStream.Read.User`| Allows the app to read user's microphone stream.|
     |`MeetingParticipantReaction.Read.User`| Allows the app to read user's reactions while participating in a meeting.|
 
-## extensions
+## elementExtensions
 
 **Optional** &ndash; Object
 
@@ -1197,9 +1197,11 @@ The `extensions` property specifies Outlook Add-ins within an app manifest and s
 
 For more information, see [Office Add-ins manifest for Microsoft 365](/office/dev/add-ins/develop/unified-manifest-overview).
 
-### extensions.requirements
+### elementExtensions.requirements
 
 The `extensions.requirements` object specifies the scopes, form factors, and Office JavaScript library requirement sets that must be supported on the Office client in order for the add-in to be installed. Requirements are also supported on the `ribbon`, `runtime`, `alternates`, and `autoRunEvents` child properties to selectively filter out some features of the add-in. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).
+
+It specifies limitations on which clients the add-in can be installed on, including limitations on the Office host application, the form factors, and the requirement sets that the client must support.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -1207,7 +1209,7 @@ The `extensions.requirements` object specifies the scopes, form factors, and Off
 |`capabilities.name`| String |128| ✔️ | Identifies the name of the requirement set. |
 |`capabilities.minVersion`| String | | | Identifies the minimum version for the requirement set. |
 |`capabilities.maxVersion`| String | | | Identifies the maximum version for the requirement set. |
-|`scopes`| Array of enums | 4 | | Identifies the scopes in which the add-in can run and defines the Microsoft 365 applications in which the extension can run. For example, `mail` (Outlook). <br>Supported value: `mail` |
+|`scopes`| Array of enums | 4 | | Identifies the scopes in which the add-in can run. Supported values: 'mail', 'workbook', 'document', 'presentation'. |
 |`formFactors`| Array of enums | 2| | Identifies the form factors that support the add-in. <br>Supported values: `mobile`, `desktop`|
 
 ### extensions.runtimes
