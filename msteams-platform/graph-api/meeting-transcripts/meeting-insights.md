@@ -24,7 +24,7 @@ The Meeting AI Insights API enables you to programmatically access structured AI
 The API empowers you to deliver intelligent meeting experiences, such as surfacing key takeaways or generating follow-ups, without the need to build or maintain your own AI infrastructure. Insights are generated after the meeting concludes and are accessible through Microsoft Graph API endpoints.
 
 > [!NOTE]
-> This API provides AI Insights for all meetings and calls for which a recap is available. This includes scheduled private and channel meetings, one-on-one and group VOIP calls,, webinars and ad-hoc meetings.
+
 > This extension to the current API offering supports list (with pagination) and get individual items as they are doing for online meetings except these will be for calls where the online meeting id is not available.
 
 ## Use cases
