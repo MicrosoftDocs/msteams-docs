@@ -33,17 +33,17 @@ What This Guide Covers?
 
 ## Channel Models in Microsoft Teams
 
-**Standard Channels**
+### Standard Channels
 
 - Visible to the entire team
 - All team members have access to the channel by default
 
-**Private Channels**
+### Private Channels
 
 - Access limited to invited team members only
 - Files are stored in the channel’s dedicated SharePoint site
 
-**Shared Channels**
+### Shared Channels
 
 - Including external and nonhost team members
 - Sharing with individuals or teams across organizations
@@ -73,3 +73,38 @@ What This Guide Covers?
 > - Tab apps in shared channels are available in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](../cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](../sovereign-cloud.md) environments.  
 > - SharePoint and the SharePoint pages apps aren't supported for shared channels in GCC, GCC High, DoD, and Teams operated by 21Vianet environments.  
 > - Bots and message extensions are not supported in shared channels.
+
+## Understanding How Your Teams App Works in Private and Shared Channels
+
+Microsoft Teams supports different types of channels—Standard, Private, and Shared. Each has unique rules for membership, storage, and access. To ensure your app works reliably and securely, it’s important to understand these differences.
+
+### Channel Membership Considerations
+
+- Private and Shared channels include only selected members; team membership isn't automatic.
+- Private and Shared channels deliver app messages or notifications exclusively to users who are members of that specific channel.
+- Private and Shared channels require the use of channel-designated tools to view or manage membership accurately.
+
+### External and Guest Users
+
+- Shared channels might include users from outside your organization or tenant.
+- These users might have limited permissions depending on their role.
+- Tip: Always check user roles before assigning tasks or granting access through the app.
+
+### File Storage Behaviours in Private and Shared Channels
+
+- Private and Shared channels use dedicated SharePoint sites for storing files.
+- Private and Shared channels require apps to access or save documents using the correct site linked to the channel.
+- Private and Shared channels work best when your app is configured to locate and use the associated SharePoint site.
+
+### Data Privacy and Scope
+
+- Apps that collect or display data (like analytics or reports) should only show information from the current channel.
+- Aggregating data across channels can expose private content to unintended users.
+- Tip: Keep data scoped to the channel unless broader sharing is explicitly allowed.
+
+### Implementation Guidelines for Developers
+
+- Confirm your app is installed in the correct channel type.
+- Check membership lists before sending messages or assigning tasks.
+- Use approved SharePoint sites for file access.
+- Be cautious when sharing or aggregating data across channels.
