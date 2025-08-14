@@ -184,7 +184,7 @@ Now that we understand the concepts, let’s look at how to make the required ch
 
 ### Design Principle
 
-Don’t rely on the channel type (Standard, Private, Shared) to decide how your app behaves. Instead, base behavior on:
+Avoid using the channel type (Standard, Private, Shared) as the basis for determining your app’s behavior. Instead, base behavior on:
 
 - Channel membership
 - User permissions
@@ -200,9 +200,7 @@ This approach makes your app work reliably across all channel types.
 
 2. Install the App Properly
 
-- Install the app to the team.
-- Ensure users add the app to each channel (Shared or Private) where they want to use it
-- If the app isn’t added to a channel, most RSC-based APIs will fail with a 403 error like:
-'Caller is not enabled for requesting the lwg channel of Shared channel type…'
-
-- There is no direct way to check app presence in a channel. You won’t get a clear API response saying 'app not added'. But if you see a 403 error or partial API results, it usually means the app hasn’t been added to that channel by users
+- Install the app at the team level.
+- Add the app manually in each Shared or Private channel where it's required.
+if the app isn't added to the channel, most APIs that depend on RSC will fail with a 403 error message 'Caller isn't enabled for requesting the lwg channel of Shared channel type…'
+- When a 403 error with the specified message occurs or API responses return incomplete data,assume the app is not added to the channel. This typically means channel members have not added it.
