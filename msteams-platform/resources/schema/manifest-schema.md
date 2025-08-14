@@ -1255,6 +1255,15 @@ Custom function enable developers to add new functions to Excel by defining thos
 | namespace | Array of `extensionCustomFunctionsNamespace` | | ✔️ | Defines the namespace for your custom functions. |
 | allowCustomDataForDataTypeAny | boolean | | | Allows a custom function to accept Excel data types as parameters and return values. Default value: `False`. |
 
+### extensionCustomFunctionsNamespace
+
+Defines the namespace for your custom functions. A namespace prepends itself to your custom functions to help customers identify your functions as part of your add-in.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| id | string | Minimum string length: 1. Maximum string length: 32. | ✔️ | Non-localizeable version of the namespace. The string value must start with a letter and can contain only letters, numbers, periods, and underscores.|
+| name | string | Minimum string length: 1. Maximum string length: 32. | ✔️ | Localizeable version of the namespace. The string value must start with a letter and can contain only letters, numbers, periods, and underscores. |
+
 ### extensions.ribbons
 
 **Optional** &ndash; Array
