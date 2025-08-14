@@ -202,5 +202,5 @@ This approach makes your app work reliably across all channel types.
 
 - Install the app at the team level.
 - Add the app manually in each Shared or Private channel where it's required.
-if the app isn't added to the channel, most APIs that depend on RSC will fail with a 403 error message 'Caller isn't enabled for requesting the lwg channel of Shared channel type…'
+if the app isn't added to the channel, most APIs that rely on resource-specific consent fails with a 403 error message 'Caller isn't enabled for requesting the lwg channel of Shared channel type…'
 - When a 403 error with the specified message occurs or API responses return incomplete data,assume the app is not added to the channel. This typically means channel members have not added it.
