@@ -90,7 +90,7 @@ Microsoft Teams supports different types of channels—Standard, Private, and Sh
 - These users might have limited permissions depending on their role.
 - Tip: Always check user roles before assigning tasks or granting access through the app.
 
-### File Storage Behaviours in Private and Shared Channels
+### File Storage Behavior in Private and Shared Channels
 
 - Private and Shared channels use dedicated SharePoint sites for storing files.
 - Private and Shared channels require apps to access or save documents using the correct site linked to the channel.
@@ -108,3 +108,48 @@ Microsoft Teams supports different types of channels—Standard, Private, and Sh
 - Check membership lists before sending messages or assigning tasks.
 - Use approved SharePoint sites for file access.
 - Be cautious when sharing or aggregating data across channels.
+
+## Core Implementation Concepts for Shared and Private Channels
+
+![This diagram shows how membership works in shared channels across organizations.](../../assets/images/membership-types-shared-channels.png)
+
+![This diagram shows how direct membership works in a private channel.](../../assets/images/membership-types-private-channels.png)
+
+## Channel Membership Basics
+
+Every channel—whether Standard, Private, or Shared—lives inside a host team. Understanding how users are added to these channels helps you build apps that behave correctly for different member types.
+
+### Direct vs. Indirect Membership
+
+Private Channels
+
+- Only members of the host team can be added directly.
+
+Shared Channels
+
+- Can include direct members from:
+  - The host team
+  - Other users within the same organization
+  - Users from external organizations (via B2B Direct Connect)
+
+Indirect Members (Shared Channels Only)
+
+- A shared channel can be linked to other teams (inside or outside your org).
+- Members of those teams get indirect access to the channel.
+
+### Types of Users in Channels
+
+Understanding user types helps you tailor app behavior:
+
+| **User Type**        | **Description**                                                      | **Channel Access**                        |
+|----------------------|----------------------------------------------------------------------|-------------------------------------------|
+| Host Team Users      | Members of the team where the channel was created                   | Standard, Private, Shared                 |
+| In-Tenant Users      | Users from your organization, not necessarily in the host team      | Shared channels only                      |
+| Guest Users          | External users added as B2B guests in your organization             | Standard and Private channels only        |
+| External Users       | Users from other organizations via B2B Direct Connect               | Shared channels only                      |
+
+### Developer Tips
+
+- Always fetch channel members, not team members—channel membership is what matters.
+- Use user roles to adjust app behavior:
+    For example, limit actions for external users to protect sensitive features.
