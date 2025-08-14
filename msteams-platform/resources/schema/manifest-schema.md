@@ -1227,6 +1227,7 @@ The `extensions.runtimes` array configures the sets of runtimes and actions that
 |`code.script`| String | 2048 characters | | Specifies the URL of the JavaScript file to be loaded in [JavaScript-only runtime](/office/dev/add-ins/testing/runtimes#javascript-only-runtime). |
 |`lifetime`| String enum | | | Specifies the lifetime of the runtime. Runtimes with a `short` lifetime don’t preserve state across executions while runtimes with a `long` lifetime do. For more information, see [Runtimes in Office Add-ins](/office/dev/add-ins/testing/runtimes). <br>Default value: `short` |
 |`actions`| Array | 20 | | Specifies the set of actions supported by the runtime. An action is either running a JavaScript function or opening a view such as a task pane.|
+| customFunctions | Array | | | Enable developers to add new functions to Excel by defining those functions in JavaScript as part of an add-in.|
 |`actions.id`| String | 64 characters | ✔️ | Specifies the ID for the action, which is passed to the code file. |
 |`actions.type`| String | | ✔️ | Specifies the type of action. The `executeFunction` type runs a JavaScript function without waiting for it to finish and the `openPage` type opens a page in a given view. |
 |`actions.displayName`| String | 64 characters | | Specifies the display name of the action and it isn't the label of a button or a menu item that invokes the action (which is configured with `tabs.groups.controls.label`).|
@@ -1243,6 +1244,16 @@ The `extensions.runtimes` array configures the sets of runtimes and actions that
 |`requirements.formFactors`| Array of enums |2 | | Identifies the form factors that support the add-in. <br>Supported values: `mobile`, `desktop`|
 
 To use `extensions.runtimes`, see [create add-in commands](/office/dev/add-ins/develop/create-addin-commands-unified-manifest), [configure the runtime for a task pane](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-runtime-for-the-task-pane-command), and [configure the runtime for the function command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-runtime-for-the-function-command).
+
+### extensionCustomFunctions
+
+Custom function enable developers to add new functions to Excel by defining those functions in JavaScript as part of an add-in. Users within Excel can access custom functions just as they would any native function in Excel, such as SUM().
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| functions | Array of `extensionFunction` | | ✔️ | Array of function object which defines function metadata. |
+| namespace | Array of `extensionCustomFunctionsNamespace` | | ✔️ | Defines the namespace for your custom functions. |
+| allowCustomDataForDataTypeAny | boolean | | | Allows a custom function to accept Excel data types as parameters and return values. Default value: `False`. |
 
 ### extensions.ribbons
 
