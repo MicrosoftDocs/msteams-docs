@@ -201,7 +201,7 @@ This approach makes your app work reliably across all channel types.
 2. Install the App Properly
 
 - Install the app at the team level.
-- Add the app manually in each Shared or Private channel where it's required.
+- Manually add the app to each Shared or Private channel where it is required.
 if the app isn't added to the channel, most APIs that rely on resource-specific consent fails with a 403 error message 'Caller isn't enabled for requesting the lwg channel of Shared channel type…'
 - When a 403 error with the specified message occurs or API responses return incomplete data, assume the app isn't added to the channel. This error typically means channel members didn't add the app to the channel.
 
@@ -315,7 +315,7 @@ Required Permissions
 
 ## Detecting If Your App Is Added to a Channel
 
-As you build your app, consider the following:
+As you build your app, consider the following guidelines:
 
 - No direct API exists to check whether your app is installed in a specific channel.
   
@@ -329,10 +329,41 @@ As you build your app, consider the following:
 Note: You can list apps installed at the team level using GET /teams/{team-id}/installedApps, but there's no equivalent API for channel-level installations.
 Don't assume that a team-level install means the app is present in all its channels.
 
+## Identifying External Users and Guests in Channel
 
+As a developer, it's important to differentiate between internal users, guests, and external (cross-tenant) users in channels to:
 
+- Limit sensitive actions to internal users only
+- Show or hide certain features based on user type
+- Set up the right sign-in process for external users in tabs or bots
 
+### Detecting User Type at Runtime (Tabs & Bots)
 
+For Tabs (using Teams JS SDK):
 
+- Call microsoftTeams.getContext() when the tab loads.
+- Check context.user.userRole or context.team.userRole: if it's 'guest,' the user is a guest.
+- Compare context.user.tenant.id with context.channel.ownerTenantId (or context.team.groupTenantId): if they differ, the user is external (via B2B Direct Connect).
 
+For Bots:
 
+- To detect guests:
+Use TeamsInfo.getMemberAsync or TeamsInfo.getPagedMembersAsync and check if userRole === 'guest.'
+- To detect external users:
+Each incoming activity includes conversation.tenantId and from.aadObjectId.
+
+Compare the member’s tenantId with the channel’s host tenant (from Graph channel metadata). (Note: This part might need further clarification.)
+
+### Detecting User Type from Roster (Graph API or Bot SDK)
+
+Using Microsoft Graph:
+
+- Call GET /teams/{team-id}/channels/{channel-id}/allMembers to retrieve the channel roster.
+- Check the roles field: if it includes "guest," the user is a guest.
+- Compare member.tenantId with channel.hostTenantId: if they’re different, the user is external.
+
+Using Bot SDK:
+
+- Use TeamsInfo.GetPagedMembersAsync to get channel members.
+- Check TeamsChannelAccount.UserRole: "guest" indicates a guest user.
+- Compare TeamsChannelAccount.TenantId with the channel’s host tenant ID (which can be fetched via Graph if needed). (Note: Host tenant ID retrieval might need clarification.)
