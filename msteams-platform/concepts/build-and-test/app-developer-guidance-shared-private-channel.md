@@ -313,6 +313,26 @@ Required Permissions
 
 - Manifest requirement: To receive and process these membership events, include the RSC permission ChannelMember.Read.Group in your app manifest.
 
+## Detecting If Your App Is Added to a Channel
+
+As you build your app, consider the following:
+
+- No direct API exists to check whether your app is installed in a specific channel.
+  
+- Bot installation is confirmed when your bot receives a channelMemberAdded event in the conversationUpdate activity for itself.
+  - This event signals the start of your channel-specific logic—such as sending a welcome message, fetching the roster, configuring tabs, or scheduling background jobs.
+  - Bot events begin flowing only after the app is added to the channel
+
+- Channel API access is blocked with a 403 error and the message:
+'Caller isn't enabled for requesting the lwg channel of Shared channel type.' To access channel data app has to be enabled in the requesting channel. if the app isn't yet added to the channel. Wait until installation is complete before accessing channel data via Graph or the Bot SDK.
+
+Note: You can list apps installed at the team level using GET /teams/{team-id}/installedApps, but there's no equivalent API for channel-level installations.
+Don't assume that a team-level install means the app is present in all its channels.
+
+
+
+
+
 
 
 
