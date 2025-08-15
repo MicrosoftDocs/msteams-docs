@@ -203,4 +203,53 @@ This approach makes your app work reliably across all channel types.
 - Install the app at the team level.
 - Add the app manually in each Shared or Private channel where it's required.
 if the app isn't added to the channel, most APIs that rely on resource-specific consent fails with a 403 error message 'Caller isn't enabled for requesting the lwg channel of Shared channel type…'
-- When a 403 error with the specified message occurs or API responses return incomplete data,assume the app is not added to the channel. This typically means channel members have not added it.
+- When a 403 error with the specified message occurs or API responses return incomplete data, assume the app isn't added to the channel. This error typically means channel members didn't add the app to the channel.
+
+## Getting Accurate Channel Membership in Microsoft Teams
+
+### Why It Matters
+
+When sending messages, assigning tasks, or managing permissions, check who is in the channel, not just who is in the team. Shared channels and cross-tenant access often cause team and channel member lists to differ.
+
+### Use Microsoft Graph to Get Channel Members
+
+Get Full Roster for Any Channel Type
+
+- Endpoint GET /teams/{team-id}/members returns only team membership, applicable to standard channels.
+- Endpoint GET /teams/{team-id}/channels/{channel-id}/allMembers provides accurate channel membership for Standard, Shared, and Private channels.
+- Response from this endpoint includes only eligible members.
+- Support for Resource-Specific Consent (RSC) isn't available on these endpoints yet.
+
+### Understand Indirect Membership in Shared Channels
+
+Use these endpoints to identify which teams provide access and which users from those teams can access the shared channel:
+
+- Get contributing teams:
+GET /teams/{team-id}/channels/{channel-id}/sharedWithTeams
+
+Returns each team’s ID, displayName, and isHostTeam.
+
+Get allowed members from a contributing team:
+GET /teams/{team-id}/channels/{channel-id}/sharedWithTeams/{id}/allowedMembers
+
+- Returns only eligible members.
+- These endpoints don't support RSC yet.
+
+### Identify Direct vs Indirect Members
+
+- Property @microsoft.graph.originalSourceMembershipUrl on allMembers (beta) indicates indirect membership.
+- Property absence signifies that the member is direct.
+- Property usage is recommended only as a hint—avoid parsing it directly and prefer supported endpoints instead.
+
+### Check User Access Before Sensitive Actions
+
+Use: doesUserHaveAccess(userId, tenantId, upn)
+
+- Function result returns a Boolean.
+- Function purpose is to determine whether to show sensitive actions or target users outside the host tenant.
+- Function scope is limited to shared channels only.
+- Function roadmap includes broader support, but it's not available yet.
+
+
+
+
