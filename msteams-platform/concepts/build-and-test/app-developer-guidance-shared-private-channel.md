@@ -293,5 +293,26 @@ When you receive a membership, share, or unshare notification:
   - call sharedWithTeams to identify which teams have access to the shared channel.
   - Call allowedMembers to efficiently retrieve indirect members added through shared teams.
 
+### Handling Membership Changes in Bot Framework (Bot SDK)
+
+In the Bot Framework SDK, monitor the conversationUpdate activity to track channel membership changes.
+
+Key Events to Handle
+
+- channelShared / channelUnshared
+Triggered when a channel is shared or unshared with a team.
+  - Expect changes in indirect membership.
+  - Refresh your channel topology and member roster.
+  - To update your member list, use the member APIs described earlier.
+- channelMemberAdded / channelMemberRemoved
+Triggered when a user is added or removed from the channel.
+  - Also fires when the app itself is added or removed.
+  - Update your member list accordingly when this event occurs.
+
+Required Permissions
+
+- Manifest requirement: To receive and process these membership events, include the RSC permission ChannelMember.Read.Group in your app manifest.
+
+
 
 
