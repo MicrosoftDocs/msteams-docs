@@ -273,3 +273,25 @@ Be aware of the following common issues when accessing channel rosters:
   Cause: App is disabled or not added to the channel.
   
   Resolution: Treat the response as a partial roster. Instruct the user to add the app to the channel, then refetch the roster after successful addition.
+
+## Handling Channel Membership Changes
+
+Channel membership is fluid—users might join or leave, and channels can be shared or unshared with other teams. Your integration should be designed to respond to these changes dynamically.
+
+### Using Microsoft Graph
+
+To track membership updates:
+
+- Subscribe to changes
+Set up a Microsoft Graph subscription on:
+/teams/{team-id}/channels/getAllMembers
+This notifies your app whenever there are changes to channel membership.
+
+- Respond to notifications
+When you receive a membership, share, or unshare notification:
+- Refresh the allMembers list to get the current state of channel members. If the channel is shared:
+  - call sharedWithTeams to identify which teams have access to the shared channel.
+  - Call allowedMembers to efficiently retrieve indirect members added through shared teams.
+
+
+
