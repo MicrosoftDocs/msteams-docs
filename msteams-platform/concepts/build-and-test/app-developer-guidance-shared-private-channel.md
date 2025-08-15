@@ -250,6 +250,26 @@ Use: doesUserHaveAccess(userId, tenantId, upn)
 - Function scope is limited to shared channels only.
 - Function roadmap includes broader support, but it's not available yet.
 
+## Retrieving Full Channel Roster Using Bot Framework SDK
 
+When working with the Bot Framework SDK (C#, JavaScript, etc.), you can retrieve the full roster from any channel as follows:
 
+- Use paginated access: Call TeamsInfo.GetPagedMembersAsync(turnContext, pageSize, continuationToken) and continue paging until all members are retrieved.
+  
+- Set required permissions: Make sure your app manifest includes the RSC permission ChannelMember.Read.Group. Without this permission, roster access fails within channels.
 
+## Handling Known Failure Patterns
+
+Be aware of the following common issues when accessing channel rosters:
+
+- Error 403 on Graph calls under RSC
+  
+  Cause: The app isn't added to the channel.
+  
+  Resolution: Prompt the user to add the app to the channel and retry the request.
+
+- Partial results (owners only) in Shared channels
+  
+  Cause: App is disabled or not added to the channel.
+  
+  Resolution: Treat the response as a partial roster. Instruct the user to add the app to the channel, then refetch the roster after successful addition.
