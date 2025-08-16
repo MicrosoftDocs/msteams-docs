@@ -196,9 +196,9 @@ This approach makes your app work reliably across all channel types.
 
 1. Update Your App Manifest
 
-- Add "supportsChannelFeatures": "tier1" to your manifest. This step lets your app be added to Shared and Private channels. [More details here]
+- Add "supportsChannelFeatures": "tier1" to your manifest. This step makes your app available in Shared and Private channels.[More details here]
 
-2. Install the App Properly
+1. Install the App Properly
 
 - Install the app at the team level.
 - Manually add the app in each Shared or Private channel where required.
@@ -211,7 +211,7 @@ if the app isn't added to the channel, most APIs that rely on resource-specific 
 
 When sending messages, assigning tasks, or managing permissions, check who is in the channel, not just who is in the team. Shared channels and cross-tenant access often cause team and channel member lists to differ.
 
-### Use Microsoft Graph to Get Channel Members
+### To Get Channel Members Use Microsoft Graph
 
 Get Full Roster for Any Channel Type
 
@@ -525,3 +525,45 @@ To make sure your app works smoothly in shared, private, and standard channels, 
 | **Privacy & Access Controls** | Add logic to limit features for guests/external users | Keeps sensitive data safe and follows company policies | **Poll app**: Guests can vote, but only members can create polls or see results |
 | **Collaboration Features** | Adjust tools based on channel roles and members | Prevents confusion and accidental changes by guests | **Whiteboard app**: Guests can draw, but not erase others’ work |
 | **Smart Notifications** | Customize alerts by channel type and user role | Cuts down noise and makes alerts more useful | **Helpdesk app**: IT gets all alerts. vendors only see their tickets |
+
+### Context & Event Payloads
+
+- Use teamId for the host team and channelId for the shared channel in context and event payloads.
+- Apply hostTeamId and hostTenantId when handling cross-tenant scenarios.
+- Detect external users by comparing a user’s tenantId with hostTenantId.
+- Listen for events like channelShared, channelUnshared, channelMemberAdded, and channelMemberRemoved to track changes in shared channels.
+- Ensure your app is present in the channel so it receives these events.
+
+### API Changes
+
+- Review the API Change Table in the Appendix for updates to Graph and Activity Payload Extensions (APX) APIs.
+- Switch to the latest APIs that support shared and private channels.
+
+### Handling External Users
+
+- Identify B2B Guests using role = guest in Graph or user role = guest in APX.
+- Detect B2B Native users by comparing their tenantId with the hostTenantId from getContext().
+- Fetch members using /teams/{teamId}/channels/{channelId}/allmembers for tabs.
+- Use channelMemberAdded and /v3/conversations/{conversationId}/pagedMembers to get members in bots.
+- Classify users as external if their tenantId doesn’t match the host tenant.
+
+### Manifest and Permissions
+
+- Include supportsChannelFeatures = "tier1" in your app manifest so it supports shared and private channels.
+- Omit this setting, and your app doesn't appear in shared or private channels.
+- Remove this setting later, and your app stops showing up in those channels.
+- Update your manifest with Resource Specific Consent (RSC) permissions, as many APIs now require them for shared/private channel functionality.
+- Check the API documentation and confirm the RSC permissions required for your app.
+
+### Privacy, Access & Security
+
+- Use channel-specific APIs—don’t assume team members are also channel members.
+- Access storage through channel-specific APIs and avoid cross-posting unless allowed.
+- Respect privacy boundaries, and avoid leaking data between channels or user types.
+- Handle internal users, B2B Guests, and B2B Direct Connect users correctly.
+- Test all scenarios, including edge cases—not just the happy path.
+
+
+
+
+
