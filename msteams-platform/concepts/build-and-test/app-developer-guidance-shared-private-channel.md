@@ -507,6 +507,21 @@ To make sure your app works smoothly in shared, private, and standard channels, 
 - Test your app with all kinds of users—owners, members, guests, and external users—across every channel type and confirm everything works as expected.
 - Watch for updates in Microsoft Teams documentation and changelogs. For example, keep your app updated when APIs, permissions, or channel features change.
 
+## Appendix: Developer Guidance with Examples for Updating Teams Apps in Shared & Private Channels
 
+### Mandatory Updates for Teams Apps in Shared & Private Channels
 
+| Change Type | What to Do | Why It Matters | Example |
+|-------------|------------|----------------|---------|
+| **Mandatory** | Use the Channel Members API | Shared/Private channels have different members than the team. Using the wrong API can miss users or cause data leaks. | **Task app**: Assign tasks only to channel members, not all team members. |
+| **Mandatory** | Access the Channel's SharePoint Site | Each channel has its own SharePoint. Using the team site can break file access or expose data. | **Document app**: Store and retrieve files from the channel’s SharePoint site. |
+| **Mandatory** | Respect Channel Boundaries | Don’t access or post across channels unless the user allows it. | **Summary app**: Only summarize messages from channels the user opts into. |
+| **Mandatory** | Update the App Manifest | Declare support for Shared/Private channels so your app shows up there. | **Any app**: Add `"supportsChannelFeatures": "level2"` to your manifest. |
 
+### Optional UX Improvements for Shared & Private Channels
+
+| Area | What to Do | Why It Helps | Example |
+|------|------------|--------------|---------|
+| **Privacy & Access Controls** | Add logic to limit features for guests/external users | Keeps sensitive data safe and follows company policies | **Poll app**: Guests can vote, but only members can create polls or see results |
+| **Collaboration Features** | Adjust tools based on channel roles and members | Prevents confusion and accidental changes by guests | **Whiteboard app**: Guests can draw, but not erase others’ work |
+| **Smart Notifications** | Customize alerts by channel type and user role | Cuts down noise and makes alerts more useful | **Helpdesk app**: IT gets all alerts. vendors only see their tickets |
