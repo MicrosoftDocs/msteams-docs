@@ -494,4 +494,19 @@ Final Step
 
 - To make sure all required changes are complete, review your test results and check the full documentation.
 
+## Best Practices for Supporting All Channel Types
+
+To make sure your app works smoothly in shared, private, and standard channels, follow these best practices:
+
+- Fetch the latest member list and roles before doing anything. For example, when sending a message or assigning a task, use the actual channel members—not the full team list.
+- Adjust features based on user roles. For example, allow sensitive actions only for owners or internal users, and show limited options to guests or external users.
+- Protect user data and respect privacy. For example, don’t include private channel data in public reports unless you have clear permission.
+- Authenticate users based on their type (internal, guest, external). For example, make sure external users are authenticated in their own tenant, especially when accessing files.
+- Update your help guides and tooltips with explanations of how your app behaves in different channels, including any limits for guests or external users.
+- Improve performance by caching large member lists. For example, update the cache only when you get a membership change event, instead of calling the API too often.
+- Test your app with all kinds of users—owners, members, guests, and external users—across every channel type and confirm everything works as expected.
+- Watch for updates in Microsoft Teams documentation and changelogs. For example, keep your app updated when APIs, permissions, or channel features change.
+
+
+
 
