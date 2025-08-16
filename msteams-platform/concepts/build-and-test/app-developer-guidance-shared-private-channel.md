@@ -461,3 +461,37 @@ Benefits of Declaring Tier1 Support:
 - Enable identification of external users in shared channels and guest users in private channels.
 
 As Microsoft Teams evolves, other channel capabilities might be introduced. To take advantage of future features, further updates to your app might be required.
+
+## Test Your App Thoroughly Before Shipping
+
+Make sure to test your app in real scenarios before releasing changes. Here's how to validate it across different channel types.
+
+### In a standard channel
+
+- Check that everything still works after your changes.
+
+### In a private channel (for example, Channel P in Team A)
+
+- Add the app to Team A, then to private channel P.
+- Check if your tab loads properly.
+- Check if your bot responds when a member sends a message—test with both in-tenant and guest users.
+- Check any feature that lists members or assigns tasks—make sure it only uses channel members.
+- Add a new member to the private channel—see if your bot gets an event or if your membership API shows the new member.
+
+### In a shared channel within the same tenant (for example, Channel X in Team A shared with Team B)
+
+- Add the app to Team A, then to Channel X.
+- Test with a Team B member—make sure they can see the tab and interact with the bot.
+- Unshare the channel from Team B—check if your bot receives a channelUnshared event.
+
+### In a shared channel with an external tenant (for example, using Teams Connect)
+
+- Send a message from an external user to the bot—check if the bot receives it.
+- Trigger a tab or task module from the external user—check if authentication works. If using single sign-On (SSO), you might need to handle it with getAuthToken using the user’s home tenant ID.
+- Avoid sending direct messages from your bot to external users—direct messaging functionality doesn't work unless they’re in the same tenant. But bot messages inside the shared channel should work fine.
+
+Final Step
+
+- To make sure all required changes are complete, review your test results and check the full documentation.
+
+
