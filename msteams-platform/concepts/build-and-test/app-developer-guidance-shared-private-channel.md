@@ -1,5 +1,5 @@
 ---
-title: Teams Connect Shared and Private Channels
+title: Teams Connects Shared and Private Channels
 author: surbhigupta
 description: Explore Teams Connect shared channels to collaborate securely with both internal and external users in one shared space.
 ms.author: surbhigupta
@@ -201,7 +201,7 @@ This approach makes your app work reliably across all channel types.
 2. Install the App Properly
 
 - Install the app at the team level.
-- Manually add the app to each Shared or Private channel where it is required.
+- Manually add the app in each Shared or Private channel where required.
 if the app isn't added to the channel, most APIs that rely on resource-specific consent fails with a 403 error message 'Caller isn't enabled for requesting the lwg channel of Shared channel type…'
 - When a 403 error with the specified message occurs or API responses return incomplete data, assume the app isn't added to the channel. This error typically means channel members didn't add the app to the channel.
 
@@ -324,7 +324,7 @@ As you build your app, consider the following guidelines:
   - Bot events begin flowing only after the app is added to the channel
 
 - Channel API access is blocked with a 403 error and the message:
-'Caller isn't enabled for requesting the lwg channel of Shared channel type.' To access channel data app has to be enabled in the requesting channel. if the app isn't yet added to the channel. Wait until installation is complete before accessing channel data via Graph or the Bot SDK.
+'Caller isn't enabled for requesting the lwg channel of Shared channel type.' To access channel data, app has to be enabled in the requesting channel. if the app isn't yet added to the channel. Wait until installation is complete before accessing channel data via Graph or the Bot SDK.
 
 Note: You can list apps installed at the team level using GET /teams/{team-id}/installedApps, but there's no equivalent API for channel-level installations.
 Don't assume that a team-level install means the app is present in all its channels.
@@ -367,3 +367,97 @@ Using Bot SDK:
 - Use TeamsInfo.GetPagedMembersAsync to get channel members.
 - Check TeamsChannelAccount.UserRole: "guest" indicates a guest user.
 - Compare TeamsChannelAccount.TenantId with the channel’s host tenant ID (which can be fetched via Graph if needed). (Note: Host tenant ID retrieval might need clarification.)
+
+## Working with Files Across Channel Types
+
+When handling files in channels—whether it's file tabs, document libraries, or uploading and retrieving files, you need to account for the distinct SharePoint sites that support private and shared channels, along with their respective storage locations. Relying on the Team’s main site to access channel files or folders doesn’t work.
+
+### Resolving Storage Correctly
+
+- Call GET /teams/{teamId}/channels/{channelId}/filesFolder
+→ Returns a DriveItem representing the root folder for the channel’s files.
+- Use the following details from the response for all subsequent file operations:
+  - parentReference.driveId: the SharePoint drive linked to the channel’s site
+  - ID: the folder ID
+- Standard channels
+  - The driveId typically points to the team’s main SharePoint site.
+- Private and shared channels
+  - Expect a different driveId, as these channels have their own dedicated SharePoint sites.
+  
+Best practice
+
+- Store and reuse the exact driveId and itemId from the filesFolder API.
+- Avoid hardcoding library names or URLs assuming the team site applies to all channels.
+
+Note: This API works consistently across all channel types.
+
+### File Access Management for External and Guest Users
+
+External Users (Cross-Tenant)
+
+- Ensure external users remain in their home tenant while accessing the host channel’s SharePoint site.
+- Ensure cross-tenant access is properly configured on both the source and target tenants.
+- Ensure your app is multitenant, with consent granted in the host tenant for correct functionality.
+  
+Guest Users (Within Tenant)
+
+- The channel’s SharePoint site automatically grants channel members access, including guest users from the same tenant.
+
+### You can take the following actions
+
+Avoid relying on “Org-wide” sharing links.
+
+- Use sharing methods that typically exclude users from outside the organization.
+- Use specific-people sharing or membership-based direct permissions instead of broad access links.
+- Use tenant or site policies to determine whether anonymous or org-wide links are permitted.
+
+Use the Invite API for precise access control.
+
+- POST /drives/{driveId}/items/{itemId}/invite
+- This method is the most reliable way, to programmatically grant access to specific users or groups.
+
+### Authenticating External Users in Tabs or Task Modules
+
+When creating a tab or task module that needs to access SharePoint files from the channel’s tenant, ensure external users are authenticated correctly—especially in private or shared channels.
+
+- Use getContext() when the content page loads for retrieving the full channel context in which the tab is running.
+- Use user.tenant.id and compare it with channel.ownerTenantId or hostTenantId for identifying if the user is external.
+- Use getAuthToken with user.tenant.id (or tid) for ensuring the token is issued from the user’s home tenant instead of the host.
+
+## Messaging in Channels
+
+### Microsoft Graph
+
+- Use GET /teams/{team-id}/channels/{channel-id}/messages and .../messages/delta only when the app is added in Shared or Private channels; otherwise, a 403 error occurs with an "app not added to channel" message.
+- Use change notifications on /channels/{id}/messages for Shared or Private channels only if RSC permissions are set up correctly. If not, the request fails with a 403 error.
+- Use on-demand message reads after the app is added to the channel for reliable access.
+
+### Bots SDK
+
+- Use normal v3 conversation routes to send, edit, or delete messages; refer to the documentation for details.
+- Use the channel roster to fetch recipients—never rely on team membership.
+
+## Update the App Manifest to Declare Support for Shared and Private Channels
+
+Declare support for shared and private channels by adding a new property in your app manifest. This change is mandatory.
+
+"supportsChannelFeatures": {
+  "type": "string,"
+  "enum": [
+    "tier1,"
+    "tier2,"
+    null
+  ]
+  "description": "A property in the app manifest that declares support for all channel features, categorized by tiers."
+}
+
+To support shared and private channels, set supportsChannelFeatures = tier1.
+
+Benefits of Declaring Tier1 Support:
+
+- Enable your app to appear in shared and private channels.
+- Enable support for the membership model used in shared and private channels.
+- Enable access to channel-based SharePoint storage, if your app interacts with files.
+- Enable identification of external users in shared channels and guest users in private channels.
+
+As Microsoft Teams evolves, other channel capabilities might be introduced. To take advantage of future features, further updates to your app might be required.
