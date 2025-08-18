@@ -1285,6 +1285,15 @@ Array of function object which defines function metadata.
 | `requiresAddress` | boolean | | | If true, your custom function can access the address of the cell that invoked it. The address property of the invocation parameter contains the address of the cell that invoked your custom function. A function can't use both the stream and requiresAddress properties. <br> Default value: `False`. |
 | `requiresParameterAddress` | boolean | | | If true, your custom function can access the addresses of the function's input parameters. This property must be used in combination with the dimensionality property of the result object, and dimensionality must be set to matrix. <br> Default value: `False`. |
 
+### extensionFunctionParameter
+
+Array that defines the input parameters for the function.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| name | string | Minimum string length: 1. <br> Maximum string length: 64. | ✔️ | The name of the parameter. This name is displayed in Excel's IntelliSense. |
+| description | string | Minimum string length: 1. <br> Maximum string length: 128. | | A description of the parameter. This is displayed in Excel's IntelliSense. |
+
 ### extensions.ribbons
 
 **Optional** &ndash; Array
