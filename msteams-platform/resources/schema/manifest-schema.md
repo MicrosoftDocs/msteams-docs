@@ -1273,9 +1273,12 @@ Array of function object which defines function metadata.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-| id | string | Minimum string length: 3. Maximum string length: 64. | ✔️ | A unique ID for the function. <br> The string value must start with a letter and can contain only letters, numbers, periods, and underscores. |
-| name | string | Minimum string length: 3. Maximum string length: 64. | ✔️ | The name of the function that end users see in Excel. In Excel, this function name is prefixed by the custom functions namespace that's specified in the manifest file. <br> The string value must start with a letter and can contain only letters, numbers, periods, and underscores. |
-|
+| id | string | Minimum string length: 3. <br> Maximum string length: 64. | ✔️ | A unique ID for the function. <br> The string value must start with a letter and can contain only letters, numbers, periods, and underscores. |
+| name | string | Minimum string length: 3. <br> Maximum string length: 64. | ✔️ | The name of the function that end users see in Excel. In Excel, this function name is prefixed by the custom functions namespace that's specified in the manifest file. <br> The string value must start with a letter and can contain only letters, numbers, periods, and underscores. |
+|description | string | Minimum string length: 1. <br> Maximum string length: 128. | | The description of the function that end users see in Excel. |
+| helpUrl | string | Minimum string length: 1. <br> Maximum string length: 2048. | | URL that provides information about the function. (It is displayed in a task pane.) |
+| parameters | Array of `extensionFunctionParameter` | Maximum array items: 128 | ✔️ | Array that defines the input parameters for the function. |
+| result | Array of `extensionResult` | | ✔️ | Object that defines the type of information that is returned by the function. |
 
 ### extensions.ribbons
 
