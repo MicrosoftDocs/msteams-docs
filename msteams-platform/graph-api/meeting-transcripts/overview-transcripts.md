@@ -13,7 +13,7 @@ ms.date: 08/18/2025
 > [!NOTE]
 > The APIs to fetch meeting transcripts and recordings are metered APIs. For more information, see [payment models for meeting APIs](/graph/teams-licenses#payment-models-for-meeting-apis).
 
-You can now configure your app to fetch Microsoft Teams meeting transcripts and recordings in the post-meeting scenario. Your app can use Microsoft Graph REST APIs to access and fetch transcripts and recordings generated for a scheduled Teams meeting or ad hoc calls.
+You can now configure your app to fetch Microsoft Teams transcripts and recordings after the meeting or call ends. Your app can use Microsoft Graph REST APIs to access and fetch transcripts and recordings generated for a scheduled Teams meeting or ad hoc and PSTN calls.
 
 ## Use cases
 
