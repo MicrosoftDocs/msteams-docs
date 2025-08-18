@@ -194,11 +194,11 @@ This approach makes your app work reliably across all channel types.
 
 ### Preliminary Configuration Requirements
 
-1. Update Your App Manifest
+Update Your App Manifest
 
 - Add "supportsChannelFeatures": "tier1" to your manifest. This step makes your app available in Shared and Private channels.[More details here]
 
-1. Install the App Properly
+Install the App Properly
 
 - Install the app at the team level.
 - Manually add the app in each Shared or Private channel where required.
@@ -507,7 +507,7 @@ To make sure your app works smoothly in shared, private, and standard channels, 
 - Test your app with all kinds of users—owners, members, guests, and external users—across every channel type and confirm everything works as expected.
 - Watch for updates in Microsoft Teams documentation and changelogs. For example, keep your app updated when APIs, permissions, or channel features change.
 
-## Appendix: Developer Guidance with Examples for Updating Teams Apps in Shared & Private Channels
+## Technical Appendix: Teams App Update Guide for Shared & Private Channel Support
 
 ### Mandatory Updates for Teams Apps in Shared & Private Channels
 
@@ -561,7 +561,61 @@ To make sure your app works smoothly in shared, private, and standard channels, 
 - Access storage through channel-specific APIs and avoid cross-posting unless allowed.
 - Respect privacy boundaries, and avoid leaking data between channels or user types.
 - Handle internal users, B2B Guests, and B2B Direct Connect users correctly.
-- Test all scenarios, including edge cases—not just the happy path.
+- Test all scenarios, including edge cases.
+  
+## FAQ Highlights
+
+General Questions
+
+Q1: Can I be part of a shared channel without being in the parent team?
+A: Yes, shared channels let people outside the team join, as long as they’re invited and have the right permissions.
+
+Q2: Who has the ability to create shared or private channels?
+A: Typically, only team owners or users with specific permissions can create these channels. However, admins might restrict this capability through policy settings.
+
+Access & Permissions
+
+Q1: Why can’t I see a private channel I was added to?
+A: To view a private channel, you must be a member of both the parent team and the private channel. If you're removed from the team, you lose access to its private channels.
+
+Q2: Can guests or external users access shared channels?
+A: Yes. To allow access, both organizations must enable external access, and the user must be explicitly invited to the shared channel to gain access.
+
+Q3: How do I know if a channel is private or shared?
+A: Check the icon next to the channel name.
+
+- A lock icon indicates private channel
+- A link icon indicates shared channel
+
+Functionality & Limitations
+
+Q1: Can I add apps or tabs to a private channel?
+A: Yes, you can add apps and tabs to a private channel. However, some apps might not be supported due to permission limitations or compatibility issues. Always check app compatibility before adding it to the private channel.
+
+Q2: Are files in private channels stored differently?
+A: Yes, in platforms like Microsoft Teams, files shared in a Private Channel files are stored in a separate SharePoint site with restricted access. The site is accessible exclusively to Private Channel members, ensuring secure and controlled data sharing.
+
+Q3: Can I convert a private channel to a shared channel (or vice versa)?
+A: No, channel types are permanent once created. If you want to change the type, you need to create a new channel with the preferred settings and migrate content manually.
+
+Q4: Why am I seeing an 'Access Denied' error when trying to join a shared channel?
+A: This issue can happen due to several reasons:
+
+- You might not be invited correctly
+- External access might be disabled for your organization
+- You could be signed in with wrong account or tenant
+
+Q5: What should I do if files or tabs aren’t loading in a channel?
+A: Try refreshing the app or browser. If that doesn't help, clear your cache, or try accessing the channel from another device. Also verify that you have the necessary permissions.
+
+Q6: How do I report issues with shared or private Channels?
+A: Contact your IT admin or support team with:
+
+- Channel name
+- Type (shared or private)
+- Error message or screenshot
+
+
 
 
 
