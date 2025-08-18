@@ -1299,6 +1299,15 @@ Array that defines the input parameters for the function.
 | optional | boolean - null | | | If true, the parameter is optional. |
 | repeating | boolean | | | If true, parameters populate from a specified array. Note that functions all repeating parameters are considered optional parameters by definition. <br> Default value: `False`.|
 
+### extensionRuntimesActionsItem
+
+Specifies the set of actions supported by this runtime. An action is either running a JavaScript function or opening a view such as a task pane.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| id | string | Maximum string length: 64. | ✔️ | Specifies the ID for the action. |
+| type | string | | ✔️ | Specifies the type of action. The following are the possible values. <br> `openPage`: Opens a page in a task pane. <br> `executeFunction`: Runs a JavaScript function, usually invoked by a button, menu item, or keyboard shortcut. For more information, see [Create add-in commands](/office/dev/add-ins/develop/create-addin-commands-unified-manifest). <br> executeDataFunction: Runs a JavaScript function that is invoked by a Copilot agent. <br> Allowed values: `executeFunction`, `openPage`. |
+
 ### extensions.ribbons
 
 **Optional** &ndash; Array
