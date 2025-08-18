@@ -1381,6 +1381,14 @@
         "redirect_url": "/microsoftteams/platform/apps-in-teams-meetings/build-tabs-for-meeting.md"
       },
       {
+        "source_path": "msteams-platform/graph-api/meeting-transcripts/fetch-id.md",
+        "redirect_url": "/graph/teams-changenotifications-callrecording-and-calltranscript?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json"
+      },
+      {
+        "source_path": "msteams-platform/graph-api/meeting-transcripts/api-transcripts.md",
+        "redirect_url": "/graph/api/resources/calltranscript?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json"
+      },
+      {
         "source_path": "msteams-platform/sbs-teams-app-test-tool.yml",
         "redirect_url": "/microsoftteams/platform/toolkit/teams-app-test-tool-tutorial.md"
       },
