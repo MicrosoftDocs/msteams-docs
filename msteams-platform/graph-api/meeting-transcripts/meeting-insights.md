@@ -25,6 +25,7 @@ The API empowers you to deliver intelligent meeting experiences, such as surfaci
 
 > [!NOTE]
 
+> Meeting AI Insights API provides insights only for private scheduled meetings.
 > This extension to the current API offering supports list (with pagination) and get individual items as they are doing for online meetings except these will be for calls where the online meeting id is not available.
 
 ## Use cases
