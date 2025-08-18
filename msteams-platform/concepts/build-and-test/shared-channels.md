@@ -8,9 +8,9 @@ ms.topic: conceptual
 ms.date: 04/09/2025
 ---
 
-# Microsoft Teams Connects shared channels
+# Microsoft Teams connects shared channels
 
-Microsoft Teams Connects shared channels allow members of a channel to collaborate with users across other teams and organizations. You can create and share a shared channel with:
+Microsoft Teams connects shared channels, which allow members of a channel to collaborate with users across other teams and organizations. You can create and share a shared channel with:
 
 * Members of another team within the same organization.
 * Individuals within the same organization.
@@ -27,7 +27,7 @@ Teams Connect shared channels facilitate secure collaboration seamlessly. Allow 
 
 ## Enable your app for shared channels
 
-SupportedChannelTypes is an optional property that enables your app in non-standard channels. If your app supports the team scope and the property is defined, Teams enables your app in each channel type accordingly. Private and shared channels are supported. For more information, see [supportedChannelTypes](../../resources/schema/manifest-schema.md#supportedchanneltypes).
+SupportedChannelTypes is an optional property that enables your app in nonstandard channels. If your app supports the team scope and the property is defined, Teams enables your app in each channel type accordingly. Private and shared channels are supported. For more information, see [supportedChannelTypes](../../resources/schema/manifest-schema.md#supportedchanneltypes).
 
 ```JSON
     "supportedChannelTypes": [
@@ -66,12 +66,16 @@ Use the [List allMembers API](/graph/api/channel-list-allmembers?view=graph-rest
 
 ### Identify Direct vs. Indirect Members
 
-You can identify whether a member of a shared channel is direct or indirect by checking the **@microsoft.graph.originalSourceMembershipUrl** annotation. This property identifies the source of a member’s access to a shared channel, as shown in the following table.
+* **Direct Members**: Users who are added directly to the channel, including users from other tenants (cross-tenants).
+
+* **Indirect Members**: Users who are members of the team, with which the channel is shared, including teams in the same tenant or in a cross-tenant.
+
+Additionally, you can identify whether a member of a shared channel is direct or indirect by checking the **@microsoft.graph.originalSourceMembershipUrl** annotation. This property (available only in indirect membership) identifies the source of a member’s access to a shared channel, as shown in the following table.
 
 |Member Type |Annotation Present?  |Description  |
 |---------|---------|---------|
 |Direct Member  |  **No**      |  The user is added directly to the shared channel.  |
-|Indirect Member|  **Yes**     | The user accesses the shared channel through another team. The annotation includes a URL that points to the source team.     |
+|Indirect Member|  **Yes**     | The user accesses the shared channel through another team. The  **@microsoft.graph.originalSourceMembershipUrl** property includes a URL that points to the source team and indicates that the user is an indirect member of the shared channel.    |
 
 > [!NOTE]
 > You might receive duplicate notifications when a member is added to a shared channel. This scenario can happen if the member is already part of the shared channel directly or through another linked team.
