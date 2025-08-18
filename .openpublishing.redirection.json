@@ -1387,7 +1387,8 @@
       {
         "source_path": "msteams-platform/graph-api/meeting-transcripts/api-transcripts.md",
         "redirect_url": "/graph/api/resources/calltranscript?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json"
-      }
+      },
+      {
         "source_path": "msteams-platform/Teams-AI-library-tutorial.yml",
         "redirect_url": "/microsoftteams/platform/teams-ai-library-tutorial.md"
       }      
