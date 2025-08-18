@@ -449,4 +449,3 @@ Choose one of the following as a next step:
 > [!div class="nextstepaction"]
 > If you want to build a a custom engine agent using Microsoft 365 Agents Toolkit, select the following:<br>
 > [Build a custom engine agent](teams-ai-library-tutorial.md)
-> [Build a custom engine agent](teams-ai-library-tutorial.md)
