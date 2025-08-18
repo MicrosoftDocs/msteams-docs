@@ -1408,6 +1408,19 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 
 To use `extensions.ribbons`, see [create add-in commands](/office/dev/add-ins/develop/create-addin-commands-unified-manifest), [configure the UI for the task pane command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-ui-for-the-task-pane-command), and [configure the UI for the function command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-ui-for-the-function-command).
 
+#### extensionRibbonsArrayTabsItem
+
+Configures a custom tab, or customized built-in tab, on the Office application ribbon. You can include custom and built-in control groups on the tab.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| id | string | Maximum string length: 64. | | Specifies the ID for a custom tab.|
+| label | string | Maximum string length: 64. | | Specifies the text displayed for a custom tab. Despite the maximum length of 64 characters, to correctly align the tab in the ribbon, we recommend you limit the label to 16 characters. <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23). |
+| position | Array of extensionRibbonsArrayTabsItem.position | | | Configures the position of the custom tab relative to other tabs on the ribbon. |
+| builtInTabId | string | Maximum string length: 64. | | Specifies the ID of a built-in Office ribbon tab. For more information on possible values, see [Find the IDs of built-in Office ribbon tabs](/office/dev/add-ins/develop/built-in-ui-ids). |
+| groups | Array of extensionRibbonsCustomTabGroupsItem | Minimum array items: 1. <br> Maximum array items: 10. | | Defines groups of controls on a ribbon tab on a non-mobile device. For mobile devices, see `tabs.customMobileRibbonGroups`. |
+| customMobileRibbonGroups | Array of extensionRibbonsCustomMobileGroupItem | Minimum array items: 1. <br> Maximum array items: 10. | | Defines groups of controls on the default tab of the ribbon on a mobile device. This array property can only be present on tab objects that have a `tabs.builtInTabI`d property that is set to `DefaultTab`. For non-mobile devices, see `tabs.group`s above. |
+
 ### extensions.autoRunEvents
 
 **Optional** &ndash; Array
