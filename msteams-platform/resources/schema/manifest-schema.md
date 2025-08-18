@@ -1294,7 +1294,10 @@ Array that defines the input parameters for the function.
 | name | string | Minimum string length: 1. <br> Maximum string length: 64. | ✔️ | The name of the parameter. This name is displayed in Excel's IntelliSense. |
 | description | string | Minimum string length: 1. <br> Maximum string length: 128. | | A description of the parameter. This is displayed in Excel's IntelliSense. |
 | type | string | Minimum string length: 1. <br> Maximum string length: 128. | | The data type of the parameter. It can only be boolean, number, string, any, CustomFunctions.Invocation, CustomFunctions.StreamingInvocation or CustomFunctions.CancelableInvocation, any allows you to use any of other types. |
-| cellValueType | string | | | A subfield of the type property. Specifies the Excel data types accepted by the custom function. <br> Allowed values: <br> `cellvalue` <br> `booleancellvalue` <br> `doublecellvalue` <br> `entitycellvalue` <br> `errorcellvalue` <br> `formattednumbercellvalue` <br> `linkedentitycellvalue` <br> `localimagecellvalue` <br> `stringcellvalue` <br> `webimagecellvalue`. |
+| cellValueType | string | | | A subfield of the type property. Specifies the Excel data types accepted by the custom function. <br> Allowed values: <br> `cellvalue`, `booleancellvalue`, `doublecellvalue`, `entitycellvalue`, `errorcellvalue`, `formattednumbercellvalue`, `linkedentitycellvalue`, `localimagecellvalue`, `stringcellvalue`, `webimagecellvalue`. |
+| dimensionality | string | | | Must be either scalar (a non-array value) or matrix (a 2-dimensional array). <br> Allowed values: `scalar`, `matrix`.|
+| optional | boolean - null | | | If true, the parameter is optional. |
+| repeating | boolean | | | If true, parameters populate from a specified array. Note that functions all repeating parameters are considered optional parameters by definition. <br> Default value: `False`.|
 
 ### extensions.ribbons
 
