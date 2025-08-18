@@ -1293,6 +1293,8 @@ Array that defines the input parameters for the function.
 |---|---|---|---|---|
 | name | string | Minimum string length: 1. <br> Maximum string length: 64. | ✔️ | The name of the parameter. This name is displayed in Excel's IntelliSense. |
 | description | string | Minimum string length: 1. <br> Maximum string length: 128. | | A description of the parameter. This is displayed in Excel's IntelliSense. |
+| type | string | Minimum string length: 1. <br> Maximum string length: 128. | | The data type of the parameter. It can only be boolean, number, string, any, CustomFunctions.Invocation, CustomFunctions.StreamingInvocation or CustomFunctions.CancelableInvocation, any allows you to use any of other types. |
+| cellValueType | string | | | A subfield of the type property. Specifies the Excel data types accepted by the custom function. <br> Allowed values: <br> `cellvalue` <br> `booleancellvalue` <br> `doublecellvalue` <br> `entitycellvalue` <br> `errorcellvalue` <br> `formattednumbercellvalue` <br> `linkedentitycellvalue` <br> `localimagecellvalue` <br> `stringcellvalue` <br> `webimagecellvalue`. |
 
 ### extensions.ribbons
 
