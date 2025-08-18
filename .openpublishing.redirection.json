@@ -1383,6 +1383,10 @@
       {
         "source_path": "msteams-platform/sbs-teams-app-test-tool.yml",
         "redirect_url": "/microsoftteams/platform/toolkit/teams-app-test-tool-tutorial.md"
-      }
+      },
+      {
+        "source_path": "msteams-platform/Teams-AI-library-tutorial.yml",
+        "redirect_url": "/microsoftteams/platform/teams-ai-library-tutorial.md"
+      }      
     ]
 }

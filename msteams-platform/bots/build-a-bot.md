@@ -43,7 +43,7 @@ You can build a new custom engine agent or elevate your existing conventional bo
 | # | I want to ... | Here's how... |
 | --- | --- | --- |
 | 1. | Build a custom engine agent with Teams AI library v2 (preview) | [Build using Teams AI library v2](/microsoftteams/platform/teams-ai-library) |
-| 1. | Build a custom engine agent with Teams AI library v1 and Agents Toolkit | [Build a custom engine agent](../Teams-AI-library-tutorial.yml) |
+| 1. | Build a custom engine agent with Teams AI library v1 and Agents Toolkit | [Build a custom engine agent](how-to/teams-conversational-ai/teams-ai-library-tutorial.md) |
 | 2. | Upgrade a conventional bot to custom engine agent | [Upgrade bot to Custom engine agent](how-to/teams-conversational-ai/how-conversation-ai-get-started.md#upgrade-your-conventional-bot-to-custom-engine-agent) |
 | 3. | Elevate a conventional bot built with Bot framework adapter to use AI | [Elevate your conventional bot to use AI](how-to/teams-conversational-ai/how-conversation-ai-get-started.md#elevate-your-conventional-bot-to-use-ai) |
 | 4. | Migrate a bot built with Bot framework to use Teams AI Library | [Migrate your bot to use Teams AI library](how-to/teams-conversational-ai/how-conversation-ai-get-started.md#migrate-your-bot-to-use-teams-ai-library) |
