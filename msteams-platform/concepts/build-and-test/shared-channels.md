@@ -78,37 +78,12 @@ Additionally, you can identify whether a member of a shared channel is direct or
 |Indirect Member|  **Yes**     | The user accesses the shared channel through another team. The  **@microsoft.graph.originalSourceMembershipUrl** property includes a URL that points to the source team and indicates that the user is an indirect member of the shared channel.    |
 
 > [!NOTE]
-> You might receive duplicate notifications when a member is added to a shared channel. This scenario can happen if the member is already part of the shared channel directly or through another linked team.
->
-> To avoid duplicate notifications:
->
-> * Cache the **/allMembers** list for the shared channel.
-> * Compare incoming indirect membership notifications against the cached list.
-> * Ignore the notification if the member already exists; either directly or indirectly.
-
-You can get direct shared channel membership by using the `hostTeamGroupID` from `getContext` and following these steps:
-
-1. Get direct members with [GET channel members API](/graph/api/channel-list-members?view=graph-rest-beta&tabs=http&preserve-view=true) API.
-
-    ```http
-    GET /teams/{host-team-group-id}/channels/{channel-id}/members
-    ```
-
-2. Get each shared team with GET `sharedWithTeams` API.
-
-    ```http
-    GET /teams/{host-team-group-id}/channels/{channel-id}/sharedWithTeams
-    ```
-
-3. Use GET members of each shared team (sharewithteamsId) with GET `sharedWithTeams` API.
-
-    ```http
-    GET /teams/{host-team-group-id}/channels/{channel-id}/sharedWithTeams/{sharewithteamsId}/allowedMembers
-    ```
+> You might receive duplicate notifications when a member is added to a shared channel. This scenario can happen if the member is already part of the shared channel directly or through another linked team. Use the **List allMembers API** to view all the direct and indirect members.
+> Ignore the notification if the member already exists; either directly or indirectly.
 
 ## Get App notifications for direct and indirect membership changes
 
-Users become part of a shared channel either directly, by being added to the channel, or indirectly, through membership in a team that the channel is shared with. Apps installed in shared channels receive notifications when users are added to or removed from a team that shares the channel. To receive these notifications, you must:
+ Apps installed in shared channels receive notifications when users are added to or removed from a team that shares the channel. To receive these notifications, you must:
 
 * [Install the app](../deploy-and-publish/apps-upload.md) in a host team and enable it for the shared channel.
 * Create a valid Microsoft Graph change notification subscription to monitor associated team membership changes and shared or unshared events using supported APIs.
@@ -149,14 +124,14 @@ You can manage indirect membership in shared channels using the following Micros
 When an app receives a notification for an indirect membership update, it’s important to verify whether the user still has access to the shared channel as the same user might have both direct and indirect membership. For example, if a user is removed from a team that shares a channel, the app should confirm whether the user's access is truly lost. Use the **doesUserHaveAccess** API to determine whether the user still has access to the shared channel.
 
 ```http
-GET /doesUserHaveAccessAsync
+GET /teams/{team-id}/channels/{channel-id}/doesUserHaveAccess(userId='@userid',tenantId='@TenantID',userPrincipalName='@UserPrincipalName')
 ```
 
 Refer to [doesUserHaveAccess API](/graph/api/channel-doesuserhaveaccess?view=graph-rest-beta&tabs=http) to learn more about user accesses and relevant permissions.
 
 ### Handle bulk membership changes
 
-Teams supresses individual notifications when a channel is shared with a team or when multiple users are removed. This feature reduces notification volume and improves performance.
+Teams supresses individual notifications when a channel is shared or unshared with a team. This feature reduces notification volume and improves performance.
 
 #### Use sharedWithTeams Subscription for Bulk Membership Changes
 
@@ -164,10 +139,14 @@ To reduce notification overload during membership updates, such as when a shared
 
 `/teams/{team-id}/channels/{channel-id}/sharedWithTeams`
 
-The sharedWithTeams subscription sends a single notification when a channel is shared or unshared with a team. It avoids thousands of per-user notifications and improves performance for apps that monitor membership changes.
+The sharedWithTeams subscription sends a single notification when a channel is shared or unshared with a team. It avoids thousands of per-user notifications and improves performance for apps that monitor membership changes. Ensure that you update the shared channel member list using the /allMembers API after receiving a "shared with" or "unshared from" team notification.
 
 > [!NOTE]
-> Apps using resource-specific consent (RSC) must request extended permissions to support both direct and indirect membership updates. These permissions are required to query membership data and respond to notifications.
+> To support membership updates in shared channels, apps using resource-specific consent (RSC) must request extended permissions.
+> These permissions let the app:
+>
+> * Access membership data (both direct and indirect members).
+> * Receive and respond to membership change notifications.
 
 ## Classify members in the shared channel as in-tenant or out-tenant
 
