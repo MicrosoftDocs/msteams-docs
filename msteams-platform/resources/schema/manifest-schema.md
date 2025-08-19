@@ -1299,6 +1299,15 @@ Array that defines the input parameters for the function.
 | optional | boolean - null | | | If true, the parameter is optional. |
 | repeating | boolean | | | If true, parameters populate from a specified array. Note that functions all repeating parameters are considered optional parameters by definition. <br> Default value: `False`.|
 
+### extensionRuntimesArray
+
+The extensions.runtimes array configures the sets of runtimes and actions that an Office add-in or Copilot agent can use. For information about runtimes in Office Add-ins, see Runtimes in Office Add-ins.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| requirements | Array of `requirementsExtensionElement` | | Specifies the scopes, formFactors, and Office JavaScript library requirement sets that must be supported on the Office client in order for the runtime to be included in the add-in. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).|
+|
+
 ### extensionRuntimesActionsItem
 
 Specifies the set of actions supported by this runtime. An action is either running a JavaScript function or opening a view such as a task pane.
