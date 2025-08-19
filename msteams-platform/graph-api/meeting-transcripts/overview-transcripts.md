@@ -28,7 +28,7 @@ Here are some use cases for fetching meeting transcripts and recordings using Gr
 
 ## Get meeting and call transcripts and recordings
 
-To fetch the transcript and recording for a particular meeting:
+To fetch the transcript and recording for a particular meeting or call:
 
 1. [Configure permissions on Microsoft Entra ID to access transcript and recording](#configure-permissions-on-azure-ad-to-access-transcript-and-recording)
 1. [Get notified when the meeting transcripts and recordings are available](/graph/teams-changenotifications-callrecording-and-calltranscript)
