@@ -410,7 +410,7 @@ Event Summary
 
 The payload includes:
 
-type:"conversationUpdate"
+Type:"conversationUpdate"
 channelData.eventType:"channelMemberRemoved"
 channelData.channel.type:"Shared"
 channelData.channel.name: The name of the shared channel
@@ -419,7 +419,7 @@ channelData.team.id: The ID of the team associated with the shared channel
 channelData.tenant.id: The tenant where the event occurred
 membersRemoved:
 ID: The Teams user ID of the removed member
-aadObjectId: The Azure AD object ID of the removed member
+aadObjectId: The Microsoft Entra ID object ID of the removed member
 membershipSource: Details about how the user was removed, including:
 sourceType: The source of membership (for example, team)
 ID: The source ID
@@ -457,7 +457,7 @@ The payload includes:
 - channelData.tenant.id: Tenant where the event occurred
 - membersAdded: Array of added members with:
 - ID: Teams user ID
-- aadObjectId: Azure AD object ID
+- aadObjectId: Microsoft Entra ID object ID
 - membershipSource: Details on how the user was added:
 - - sourceType: for example, "team"
 - - membershipType: "direct" or "transitive"
