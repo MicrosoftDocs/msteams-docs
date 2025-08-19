@@ -1421,6 +1421,19 @@ Configures a custom tab, or customized built-in tab, on the Office application r
 | groups | Array of extensionRibbonsCustomTabGroupsItem | Minimum array items: 1. <br> Maximum array items: 10. | | Defines groups of controls on a ribbon tab on a non-mobile device. For mobile devices, see `tabs.customMobileRibbonGroups`. |
 | customMobileRibbonGroups | Array of extensionRibbonsCustomMobileGroupItem | Minimum array items: 1. <br> Maximum array items: 10. | | Defines groups of controls on the default tab of the ribbon on a mobile device. This array property can only be present on tab objects that have a `tabs.builtInTabI`d property that is set to `DefaultTab`. For non-mobile devices, see `tabs.group`s above. |
 
+### extensionRibbonsCustomTabGroupsItem
+
+Defines groups of controls on a ribbon tab on a non-mobile device. For mobile devices, see `tabs.customMobileRibbonGroups`.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| id | string | Maximum string length: 64. | | Specifies the ID for the tab group within the app. It must be different from any built-in group ID in the Microsoft 365 application and any other custom group. |
+| label | string | Maximum string length: 64. | | Specifies the text displayed for the group. Despite the maximum length of 64 characters, to correctly align the tab in the ribbon, we recommend you limit the label to 16 characters. <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23). |
+| icons | Array of `extensionCommonIcon` | Minimum array items: 1. <br> Maximum array items: 3. | | Specifies the icons displayed for the group. |
+| controls | Array of `extensionCommonCustomGroupControlsItem` | Minimum array items: 1. <br> Maximum array items: 20. | Configures the buttons and menus in the group. |
+| builtInGroupId | string | Maximum string length: 64. | | Specifies the ID of a built-in group. For more information, see [Find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration). |
+| overriddenByRibbonApi | boolean | | | Specifies whether a group is hidden on application and platform combinations that support the API (Office.ribbon.requestCreateControls). This API installs custom contextual tabs on the ribbon. <br> Default value: `False`.|
+
 ### extensions.autoRunEvents
 
 **Optional** &ndash; Array
