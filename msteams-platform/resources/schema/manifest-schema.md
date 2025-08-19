@@ -834,9 +834,9 @@ Changing these permissions during app update, causes your users to repeat the co
 
 ## devicePermissions
 
-**Optional** &ndash; Array of strings
+**Optional** &ndash; Array of enum
 
-Provides the native features on a user's device that your app requests access to. Options are:
+Allows a maximum 5 array items. Provides the native features on a user's device that your app requests access to. Options are:
 
 * `geolocation`
 * `media`
