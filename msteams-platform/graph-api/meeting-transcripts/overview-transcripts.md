@@ -86,7 +86,7 @@ For more information about how your app can know when the meetings ends, see [su
 > - These APIs support private chat meetings, channel meetings and ad hoc calls only in beta.
 > - For ad hoc calls:
 >   - Subscribe to [notifications](/graph/teams-changenotifications-callrecording-and-calltranscript) to get access to the call id.
->   - To obtain the call id while the call is still ongoing, have the app get called through [App-hosted/service-hosted Calls](graph/api/resources/call) and use the `callChainId`.
+>   - To obtain the call id while the call is still ongoing, have the app get called through [App-hosted/service-hosted Calls](/graph/api/resources/call?view=graph-rest-1.0) and use the `callChainId`.
 
 ## Get AI-generated meeting summaries for online meeting instances
 
