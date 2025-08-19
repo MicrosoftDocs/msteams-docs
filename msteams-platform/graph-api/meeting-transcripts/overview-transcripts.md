@@ -80,8 +80,13 @@ For more information about how your app can know when a transcript or recording 
 
 For more information about how your app can know when the meetings ends, see [subscribe to change notifications](fetch-id.md#subscribe-to-change-notifications) and [use Bot Framework to get meeting ID and organizer ID](fetch-id.md#use-bot-framework-to-get-meeting-id-and-organizer-id).
 
-> [!NOTE]
-> The process for calling Graph APIs to access and retrieve transcripts and recordings remains the same for both meeting-specific RSC application permissions and organization-wide application permissions. These APIs support private chat meetings and channel meetings only in beta.
+> [!IMPORTANT]
+>
+> - The process for calling Graph APIs to access and retrieve transcripts and recordings remains the same for both meeting-specific RSC application permissions and organization-wide application permissions.
+> - These APIs support private chat meetings, channel meetings and ad hoc calls only in beta.
+> - For ad hoc calls:
+>   - Subscribe to [notifications](/graph/teams-changenotifications-callrecording-and-calltranscript) to get access to the call id.
+>   - To obtain the call id while the call is still ongoing, have the app get called through [App-hosted/service-hosted Calls](/graph/api/resources/call?view=graph-rest-1.0) and use the `callChainId`.
 
 ## Get AI-generated meeting summaries for online meeting instances
 
