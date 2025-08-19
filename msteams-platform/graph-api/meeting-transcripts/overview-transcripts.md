@@ -5,7 +5,7 @@ ms.localizationpriority: high
 ms.topic: conceptual
 ms.owner: vichug
 ms.author: surbhigupta
-ms.date: 08/18/2025
+ms.date: 08/19/2025
 ---
 
 # Get meeting transcripts and recordings using Graph APIs
@@ -25,6 +25,7 @@ Here are some use cases for fetching meeting transcripts and recordings using Gr
 | **Scheduled instances**: <br> As an HR initiative, you're holding a brainstorming session to understand and improve employee health and productivity. Having to continually take notes to provide a post-meeting summary can impede the flow of thoughts, and you might not capture all valuable suggestions. After the session, you'd need to analyze the discussion to gather data points for planning improvements. | Using Graph APIs in your app to fetch transcripts and recordings post-meeting frees you and the participants to fully focus on the discussion. The content of the meeting transcript and recording is available for: <br> • Engagement and sentiment analysis <br> • Listing tasks or issues <br> • Follow-up meetings and notifications |
 | **Scheduled instances**: <br> A salesperson at a leading tech company must connect with clients and close deals. With numerous meetings scheduled through Teams and Outlook calendar, it's crucial to attend all calls and stay updated on discussions and latest updates. | Create an app with the following capabilities:<br> • Notify you when a meeting is scheduled using Teams or Outlook calendar. <br> • Enable your app to set `AutoRecording=true` for these meetings. <br> • Add a bot as a meeting participant to display a banner indicating that the meeting is being recorded and that the content is used by your app for analysis.<br> • Allow your app to access meeting recordings and transcripts.<br> • Allow your app without requiring admin approval for the `OnlineMeetingRecording.Read.All` permissions, as obtaining admin approval for these permissions can be time consuming. <br> Here's a [sample app](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-meeting-auto-recording/csharp) that showcases this use case scenario. |
 | **Ad hoc instances**: <br> You are a PM and your role requires you to make spontaneous group or one-on-one calls which cannot be scheduled beforehand. Without a meeting invite, meeting IDs are not generated, and hence transcripts and recordings cannot be accessed. Taking down copious notes leaves much room to miss critical action items. | Using Graph APIs in your app to fetch transcripts and recordings post-meeting frees you and the participants to fully focus on the discussion. By using permissions `CallTranscripts.Read.All` and `CallRecordings.Read.All`, the call transcript is available for: <br> • Capturing important action items <br> • Listing to-dos or issues <br> • Follow-up meetings and notifications |
+|**PSTN Calls**: <br> You have a call center where human assistants provide customer support using incoming or outgoing PSTN calls using Microsoft Teams. The assistants need to manually update external systems of record with notes from each call after the call ends.| Using Graph APIs in your app to fetch transcript and recordings post-call reduces the manual work required by each assistant to update records. Also it allows your app to trigger automations using call transcript. |
 
 ## Get meeting and call transcripts and recordings
 
@@ -44,12 +45,11 @@ Your app must have the required permissions for fetching transcripts and recordi
 > [!NOTE]
 >
 > - New permissions for `adhocCalls` (parallel to `OnlineMeetings`) are required for the above resources.
-> - Enumeration is not available on ad hoc calls.<br>
 > - Subscribe to two appropriately scoped, separate resources (one for `onlineMeetings` and other for `adhocCalls`). These will supply the URLs to use for fetching the data.
 
 #### Use organization-wide application permissions
 
-For online meetings, you can configure your app to access meeting transcripts and recordings across the tenant. In this case, the meeting organizer doesn't need to install your app in the Teams meeting chat. When the admin authorizes the organization-wide application permissions, your app can read and access transcripts and recordings for all meetings in the tenant.
+For online meetings and calls, you can configure your app to access meeting transcripts and recordings across the tenant. In this case, the meeting organizer doesn't need to install your app in the Teams meeting chat. When the admin authorizes the organization-wide application permissions, your app can read and access transcripts and recordings for all meetings in the tenant.
 
 For more information about the organization-wide application permissions that can be granted to your app, see [online meeting permissions](/graph/permissions-reference#online-meetings-permissions).
 
@@ -61,7 +61,7 @@ For more information about the meeting-specific RSC permissions, see [RSC permis
 
 > [!NOTE]
 >
-> - New permissions for `adhocCalls` (parallel to `OnlineMeetings`) are required. RSC based permissions (on chats) are not enabled.
+> RSC based permissions for ad hoc calls are not enabled.
 
 ### Get notified when a transcript or recording is available
 
