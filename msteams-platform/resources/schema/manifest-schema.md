@@ -1434,6 +1434,23 @@ Defines groups of controls on a ribbon tab on a non-mobile device. For mobile de
 | builtInGroupId | string | Maximum string length: 64. | | Specifies the ID of a built-in group. For more information, see [Find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration). |
 | overriddenByRibbonApi | boolean | | | Specifies whether a group is hidden on application and platform combinations that support the API (Office.ribbon.requestCreateControls). This API installs custom contextual tabs on the ribbon. <br> Default value: `False`.|
 
+### extensionCommonCustomGroupControlsItem
+
+Configures the buttons and menus in the group.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| id | string | Maximum string length: 64. | ✔️ | Specifies the ID for the control within the app. It must be different from any other custom control and any built-in control ID in the Microsoft 365 application. |
+| type | string | | ✔️ | Defines the control type. |
+| builtInControlId | string | Maximum string length: 64. | | Specifies the ID of an existing Microsoft 365 control. For more information, see [Find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration). |
+| label | string | Maximum string length: 64. | ✔️ | Specifies the text displayed for the control. Despite the maximum length of 64 characters, to correctly align the tab in the ribbon, we recommend you limit the label to 16 characters. <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23).|
+| icons | Array of `extensionCommonIcon` | Minimum array items: 1. <br> Maximum array items: 3.| ✔️ | Defines the icons for the control. There must be at least three child objects; one each with size properties of 16, 32, and 80 pixels. |
+| supertip | Array of `extensionCommonSuperToolTip` | | ✔️ | Configures a supertip for the control. A supertip is a UI feature that displays a brief box of help information about a control when the cursor hovers over it. The box may contain multiple lines of text. |
+| actionId | string | Maximum string length: 64. | | Required if the control type is `button`. Don't use if the control type is `menu`. Specifies the ID of the action that is taken when a user selects the control. The `actionId` must match the `runtime.actions.id` property of an action in the `runtimes` object.|
+| overriddenByRibbonApi | boolean | | | Specifies whether the control is hidden on application and platform combinations which support the API (`Office.ribbon.requestCreateControls`). This API installs custom contextual tabs on the ribbon. Default value: `false`.|
+|enabled| boolean | | | Indicates whether the control is initially enabled. For more information, see [Change the availability of add-in commands](/office/dev/add-ins/design/disable-add-in-commands). Default value: `True`.|
+| items| Array of extensionCommonCustomControlMenuItem | Minimum array items: 1. <br> Maximum array items: 20.| | Configures the items for a menu control.|
+
 ### extensions.autoRunEvents
 
 **Optional** &ndash; Array
