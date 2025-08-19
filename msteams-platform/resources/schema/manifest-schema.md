@@ -1306,7 +1306,12 @@ The extensions.runtimes array configures the sets of runtimes and actions that a
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 | requirements | Array of `requirementsExtensionElement` | | Specifies the scopes, formFactors, and Office JavaScript library requirement sets that must be supported on the Office client in order for the runtime to be included in the add-in. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).|
-|
+| id | string | Maximum string length: 64. | ✔️ | Specifies the ID for runtime. |
+| type | string | | | Specifies the type of runtime. The supported enum value for browser-based runtime is general. |
+| code | Array of `extensionRuntimeCode` | | ✔️ | Specifies the location of code for the runtime. Based on `runtime.type`, add-ins can use either a JavaScript file or an HTML page with an embedded `script` tag that specifies the URL of a JavaScript file. Both URLs are necessary in situations where the `runtime.type` is uncertain.|
+| lifetime | string | | | Specifies the lifetime of the runtime. The possible values are the following: <br> `short` (default): Doesn't preserve state across executions. It enables an [Outlook add-in to process unsolicited messages](/microsoft-365/extensibility/schema/extension-ribbons-spam-pre-processing-dialog?view=m365-app-1.23). <br> `long` : Preserves the state across executions, allowing the add-in to run indefinitely. For example, task pane code will continue running even when the user closes the task pane. It can also be shared across different features of your add-in. See [Configure your Office Add-in to use a shared JavaScript runtime](/office/dev/add-ins/develop/configure-your-add-in-to-use-a-shared-runtime) for details.|
+| actions | Array of `extensionRuntimesActionsItem` | Minimum array items: 1. <br> Maximum array items: 20.| | Specifies the set of actions supported by the runtime. An action is either running a JavaScript function or opening a view such as a task pane. |
+| customFunctions | Array of `extensionCustomFunctions` | | | Custom function enable developers to add new functions to Excel by defining those functions in JavaScript as part of an add-in. Users within Excel can access custom functions just as they would any native function in Excel, such as SUM().|
 
 ### extensionRuntimesActionsItem
 
