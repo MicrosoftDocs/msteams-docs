@@ -1538,6 +1538,19 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 |`alternateIcons.highResolutionIcon.size`| Number enum | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image sizes: `16`, `32`, `80`. |
 |`alternateIcons.highResolutionIcon.url`| String | 2048 characters | ✔️ | Specifies the full, absolute URL of the image file that is used to represent the add-in on high DPI screens. Icon image must be 128 x 128 pixels and use one of the following file formats: GIF, JPG, PNG, EXIF, BMP, TIFF.|
 
+### extensionRibbonsSpamPreProcessingDialog
+
+Configures the preprocessing dialog of an integrated spam-reporting add-in in Outlook.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| title | string | 128 | ✔️ | Specifies the custom title of the preprocessing dialog of a spam-reporting add-in. <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true).|
+| description | string | 250 | ✔️ | Specifies the custom text that appears in the preprocessing dialog of a spam-reporting add-in. <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true).|
+|spamNeverShowAgainOption| boolean | | | Indicating if the developer will allow the user to permanently bypass the PreProcessing Dialog for this add-in. <br> Default value: "false". <br>  To learn more, see Suppress the preprocessing dialog.|
+|spamReportingOptions| Array | | | Specifies up to five options that a user can select from the preprocessing dialog to provide a reason for reporting a message.|
+|spamFreeTextSectionTitle| string | 128 | | Adds a text box to the preprocessing dialog for users to provide additional information on the message they're reporting. The string provided in this property appears above the text box. <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true).|
+| spamMoreInfo| Array| | | Configures a link to provide informational resources to a user. In the preprocessing dialog, the link appears below the text provided in `spamPreProcessingDialog.description`.|
+
 ### spamReportingOptions
 
 Specifies up to five options that a user can select from the preprocessing dialog to provide a reason for reporting a message.
