@@ -1457,7 +1457,18 @@ Defines groups of controls on a ribbon tab on a non-mobile device. For mobile de
 | icons | Array of `extensionCommonIcon` | Minimum array items: 1. <br> Maximum array items: 3. | | Specifies the icons displayed for the group. |
 | controls | Array of `extensionCommonCustomGroupControlsItem` | Minimum array items: 1. <br> Maximum array items: 20. | Configures the buttons and menus in the group. |
 | builtInGroupId | string | Maximum string length: 64. | | Specifies the ID of a built-in group. For more information, see [Find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration). |
-| overriddenByRibbonApi | boolean | | | Specifies whether a group is hidden on application and platform combinations that support the API (Office.ribbon.requestCreateControls). This API installs custom contextual tabs on the ribbon. <br> Default value: `False`.|
+| overriddenByRibbonApi | boolean | | | Specifies whether a group is hidden on application and platform combinations that support the API (`Office.ribbon.requestCreateControls`). This API installs custom contextual tabs on the ribbon. <br> Default value: `False`.|
+
+### extensionCommonCustomGroup
+
+Defines common custom group.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| id | string | maxLength: 64 | | A unique identifier for this group within the app. |
+| label | string | maxLength: 64 | | Displayed text for the group. |
+| icons | Array | 3 | | Displayed icons for the group. |
+| controls | Array | 20 | Configures the buttons and menus in the group. |
 
 ### extensionCommonCustomGroupControlsItem
 
