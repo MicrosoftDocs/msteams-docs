@@ -1335,8 +1335,6 @@ Specifies the set of actions supported by this runtime. An action is either runn
 | `multiselect` | boolean | | | Specifies whether the end user can select multiple email messages, and apply the action to all of them. <br> This property is only supported in Outlook add-ins, and only when the `extensions.ribbons.contexts` array includes `mailRead` or `mailCompose`. To learn more about item multi-select, see [Activate your Outlook add-in on multiple messages](/office/dev/add-ins/outlook/item-multi-select). <br> Default value: `False`. |
 | `supportsNoItemContext` | boolean | | | Enables task pane add-ins to activate without the reading pane enabled or a message selected. <br> This property is only supported in Outlook add-ins, and only when the `extensions.ribbons.contexts` array includes `mailRead`. To learn more, see [Activate your Outlook add-in without the Reading Pane enabled or a message selected](/office/dev/add-ins/outlook/contextless). <br> Default value: `False`. |
 
-###
-
 ### extensions.ribbons
 
 **Optional** &ndash; Array
@@ -1441,7 +1439,7 @@ Configures a custom tab, or customized built-in tab, on the Office application r
 |---|---|---|---|---|
 | id | string | Maximum string length: 64. | | Specifies the ID for a custom tab.|
 | label | string | Maximum string length: 64. | | Specifies the text displayed for a custom tab. Despite the maximum length of 64 characters, to correctly align the tab in the ribbon, we recommend you limit the label to 16 characters. <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true). |
-| position | Array of extensionRibbonsArrayTabsItem.position | | | Configures the position of the custom tab relative to other tabs on the ribbon. |
+| position | Array of `extensionRibbonsArrayTabsItem.position` | | | Configures the position of the custom tab relative to other tabs on the ribbon. |
 | builtInTabId | string | Maximum string length: 64. | | Specifies the ID of a built-in Office ribbon tab. For more information on possible values, see [Find the IDs of built-in Office ribbon tabs](/office/dev/add-ins/develop/built-in-ui-ids). |
 | groups | Array of extensionRibbonsCustomTabGroupsItem | Minimum array items: 1. <br> Maximum array items: 10. | | Defines groups of controls on a ribbon tab on a non-mobile device. For mobile devices, see `tabs.customMobileRibbonGroups`. |
 | customMobileRibbonGroups | Array of extensionRibbonsCustomMobileGroupItem | Minimum array items: 1. <br> Maximum array items: 10. | | Defines groups of controls on the default tab of the ribbon on a mobile device. This array property can only be present on tab objects that have a `tabs.builtInTabI`d property that is set to `DefaultTab`. For non-mobile devices, see `tabs.group`s above. |
