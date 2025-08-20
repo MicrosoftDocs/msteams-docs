@@ -1538,6 +1538,15 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 |`alternateIcons.highResolutionIcon.size`| Number enum | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image sizes: `16`, `32`, `80`. |
 |`alternateIcons.highResolutionIcon.url`| String | 2048 characters | ✔️ | Specifies the full, absolute URL of the image file that is used to represent the add-in on high DPI screens. Icon image must be 128 x 128 pixels and use one of the following file formats: GIF, JPG, PNG, EXIF, BMP, TIFF.|
 
+### extensionRuntimeCode
+
+Specifies the location of code for the runtime. Based on `runtime.type`, add-ins can use either a JavaScript file or an HTML page with an embedded `script` tag that specifies the URL of a JavaScript file. Both URLs are necessary in situations where the `runtime.type` is uncertain.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|page|string|2048|✔️|Specifies the URL of the web page that contains an embedded `script` tag, which specifies the URL of a JavaScript file (to be loaded in a [browser-based runtime](/office/dev/add-ins/testing/runtimes)). <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true) <br> The string must start with `https://`.|
+|script|string|2048| | Specifies the URL of the JavaScript file to be loaded in [JavaScript-only runtime](/office/dev/add-ins/testing/runtimes). <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true) <br> The string must start with `https://`.
+
 ### extensionRibbonsArrayFixedControlItem
 
 Configures the button of an [integrated spam-reporting](/office/dev/add-ins/outlook/spam-reporting?tabs=jsonmanifest) add-in in Outlook. Must configure if `spamReportingOverride` is specified in the `extensions.ribbons.contexts` array.
