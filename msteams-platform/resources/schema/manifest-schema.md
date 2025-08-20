@@ -1538,6 +1538,16 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 |`alternateIcons.highResolutionIcon.size`| Number enum | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image sizes: `16`, `32`, `80`. |
 |`alternateIcons.highResolutionIcon.url`| String | 2048 characters | ✔️ | Specifies the full, absolute URL of the image file that is used to represent the add-in on high DPI screens. Icon image must be 128 x 128 pixels and use one of the following file formats: GIF, JPG, PNG, EXIF, BMP, TIFF.|
 
+### spamReportingOptions
+
+Specifies up to five options that a user can select from the preprocessing dialog to provide a reason for reporting a message.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| title | string | 128 | ✔️ | Specifies the custom text or title to describe the reporting options provided in the preprocessing dialog. <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true).|
+| options | Array of string | | ✔️ | Specifies a custom option with a checkbox that a user can select from the preprocessing dialog to provide a reason for reporting a message. At least one option must be specified. A maximum of five options can be included. <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true). |
+| type | string | | | The type of preprocessing dialog that appears when a user selects the spam reporting option. <br> Allowed values: `radio`, `checkbox`. <br> Default value: `checkbox`. |
+
 ### spamMoreInfo
 
 Specifies the custom text and URL to provide informational resources to the users.
