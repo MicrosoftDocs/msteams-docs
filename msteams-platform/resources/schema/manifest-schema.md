@@ -818,6 +818,14 @@ Each command item is an object with the following structure:
 |---|---|---|---|---|
 | `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| Specifies one or more runtime capabilities the message extension requires to function properly. Supported values: `dialogUrl`, `dialogUrlBot`, `dialogAdaptiveCard`, `dialogAdaptiveCardBot`. For more information, see [how to specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md). |
 
+### hostFunctionality
+
+An object representing a specific functionality that a host must support.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| name | string | | ✔️ | The name of the functionality. <br> Allowed values: `dialogUrl`, `dialogUrlBot`, `dialogAdaptiveCard`, `dialogAdaptiveCardBot`. |
+
 ## permissions
 
 **Optional** &ndash; Array of strings
@@ -1209,7 +1217,7 @@ It specifies limitations on which clients the add-in can be installed on, includ
 |`capabilities.name`| String |128| ✔️ | Identifies the name of the requirement set. |
 |`capabilities.minVersion`| String | | | Identifies the minimum version for the requirement set. |
 |`capabilities.maxVersion`| String | | | Identifies the maximum version for the requirement set. |
-|`scopes`| Array of enums | 4 | | Identifies the scopes in which the add-in can run. Supported values: 'mail', 'workbook', 'document', 'presentation'. |
+|`scopes`| Array of enums | 4 | | Identifies the scopes in which the add-in can run. Supported values: `mail`, `workbook`, `document`, `presentation`. |
 |`formFactors`| Array of enums | 2| | Identifies the form factors that support the add-in. <br>Supported values: `mobile`, `desktop`|
 
 ### extensions.runtimes
@@ -1242,6 +1250,7 @@ The `extensions.runtimes` array configures the sets of runtimes and actions that
 |`requirements.capabilities.maxVersion`| String | | | Identifies the maximum version for the requirement set. |
 |`requirements.scopes`| Array of enums | 4 | | Identifies the scopes in which the add-in can run and defines the Microsoft 365 applications in which the extension can run. For example, `mail` (Outlook). <br>Supported value: `mail` |
 |`requirements.formFactors`| Array of enums |2 | | Identifies the form factors that support the add-in. <br>Supported values: `mobile`, `desktop`|
+| customFunctions | Array | | | Custom function enable developers to add new functions to Excel by defining those functions in JavaScript as part of an add-in.|
 
 To use `extensions.runtimes`, see [create add-in commands](/office/dev/add-ins/develop/create-addin-commands-unified-manifest), [configure the runtime for a task pane](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-runtime-for-the-task-pane-command), and [configure the runtime for the function command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-runtime-for-the-function-command).
 
@@ -1325,6 +1334,8 @@ Specifies the set of actions supported by this runtime. An action is either runn
 | view | string | Maximum string length: 64. | | Specifies a descriptive name for the task pane container; for example, `MainAppDashboard`. <br> This property is used only when `actions.type` is `openPage`. When you have multiple `openPage` actions, use a different `view` if you want an independent pane for each. Use the same `view` for different pages that share the same pane. When users choose an action of type `openPage` that shares the same `view`, the pane container will remain open, but the contents of the pane will be replaced with the corresponding `runtimes.code.page`. |
 | multiselect | boolean | | | Specifies whether the end user can select multiple email messages, and apply the action to all of them. <br> This property is only supported in Outlook add-ins, and only when the `extensions.ribbons.contexts` array includes `mailRead` or `mailCompose`. To learn more about item multi-select, see [Activate your Outlook add-in on multiple messages](/office/dev/add-ins/outlook/item-multi-select). <br> Default value: `False`. |
 | supportsNoItemContext | boolean | | | Enables task pane add-ins to activate without the reading pane enabled or a message selected. <br> This property is only supported in Outlook add-ins, and only when the `extensions.ribbons.contexts` array includes `mailRead`. To learn more, see [Activate your Outlook add-in without the Reading Pane enabled or a message selected](/office/dev/add-ins/outlook/contextless). <br> Default value: `False`. |
+
+###
 
 ### extensions.ribbons
 
