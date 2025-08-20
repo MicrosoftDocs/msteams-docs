@@ -116,9 +116,9 @@ Microsoft Teams supports different types of channels—Standard, Private, and Sh
 
 ### Core Implementation Concepts for Shared and Private Channels
 
-![This diagram shows how membership works in shared channels across organizations.](../../assets/images/membership-types-shared-channels.png)
+:::image type="content" source="~/assets/images/membership-types-shared-channels.png" alt-text="This diagram shows how membership works in shared channels across organizations.":::
 
-![This diagram shows how direct membership works in a private channel.](../../assets/images/membership-types-private-channels.png)
+:::image type="content" source="~/assets/images/membership-types-private-channels.png" alt-text="This diagram shows how direct membership works in a private channel.":::
 
 ### Channel Membership Basics
 
