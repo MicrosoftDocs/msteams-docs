@@ -238,13 +238,56 @@ server.get('/api/notify', async (req, res) => {
 });
 ```
 
+# [Python](#tab/python)
+
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.cloudadapterbase?view=botbuilder-py-latest#botbuilder-core-cloudadapterbase-continue-conversation&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/5e1d0e4c28a8b2c2205aaa8004e40a99f6bdbd58/samples/bot-conversation/python/bots/teams_conversation_bot.py#L172)
+
+```python
+async def _message_all_members(self, turn_context: TurnContext):
+        team_members = await self._get_paged_members(turn_context)
+
+        for member in team_members:
+            conversation_reference = TurnContext.get_conversation_reference(
+                turn_context.activity
+            )
+
+            conversation_parameters = ConversationParameters(
+                is_group=False,
+                bot=turn_context.activity.recipient,
+                members=[member],
+                tenant_id=turn_context.activity.conversation.tenant_id,
+            )
+
+            async def get_ref(tc1):
+                conversation_reference_inner = TurnContext.get_conversation_reference(
+                    tc1.activity
+                )
+                return await tc1.adapter.continue_conversation(
+                    conversation_reference_inner, send_message, self._app_id
+                )
+
+            async def send_message(tc2: TurnContext):
+                return await tc2.send_activity(
+                    f"Hello {member.name}. I'm a Teams conversation bot."
+                )  # pylint: disable=cell-var-from-loop
+
+            await turn_context.adapter.create_conversation(
+                conversation_reference, get_ref, conversation_parameters
+            )
+
+        await turn_context.send_activity(
+            MessageFactory.text("All messages have been sent")
+        )
+```
+
 ---
 
 ## Code sample
 
-| **Sample Name** | **Description** | **.NET** | **Node.js** |
-|---------------|--------------|--------|-------------|
-| Proactive installation of app and sending proactive notifications | This sample application demonstrates proactive installation of a Teams app and sending notifications to users using Microsoft Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) |
+| **Sample Name** | **Description** | **.NET** | **Node.js** | **Python** |
+|---------------|--------------|--------|-------------|-------------|
+| Proactive installation of app and sending proactive notifications | This sample application demonstrates proactive installation of a Teams app and sending notifications to users using Microsoft Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/python) |
 
 ## Additional code samples
 >
