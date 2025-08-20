@@ -1441,8 +1441,8 @@ Configures a custom tab, or customized built-in tab, on the Office application r
 | label | string | Maximum string length: 64. | | Specifies the text displayed for a custom tab. Despite the maximum length of 64 characters, to correctly align the tab in the ribbon, we recommend you limit the label to 16 characters. <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true). |
 | position | Array of `extensionRibbonsArrayTabsItem.position` | | | Configures the position of the custom tab relative to other tabs on the ribbon. |
 | builtInTabId | string | Maximum string length: 64. | | Specifies the ID of a built-in Office ribbon tab. For more information on possible values, see [Find the IDs of built-in Office ribbon tabs](/office/dev/add-ins/develop/built-in-ui-ids). |
-| groups | Array of extensionRibbonsCustomTabGroupsItem | Minimum array items: 1. <br> Maximum array items: 10. | | Defines groups of controls on a ribbon tab on a non-mobile device. For mobile devices, see `tabs.customMobileRibbonGroups`. |
-| customMobileRibbonGroups | Array of extensionRibbonsCustomMobileGroupItem | Minimum array items: 1. <br> Maximum array items: 10. | | Defines groups of controls on the default tab of the ribbon on a mobile device. This array property can only be present on tab objects that have a `tabs.builtInTabI`d property that is set to `DefaultTab`. For non-mobile devices, see `tabs.group`s above. |
+| groups | Array of `extensionRibbonsCustomTabGroupsItem` | Minimum array items: 1. <br> Maximum array items: 10. | | Defines groups of controls on a ribbon tab on a non-mobile device. For mobile devices, see `tabs.customMobileRibbonGroups`. |
+| customMobileRibbonGroups | Array of `extensionRibbonsCustomMobileGroupItem` | Minimum array items: 1. <br> Maximum array items: 10. | | Defines groups of controls on the default tab of the ribbon on a mobile device. This array property can only be present on tab objects that have a `tabs.builtInTabI`d property that is set to `DefaultTab`. For non-mobile devices, see `tabs.group`s above. |
 
 ### extensionRibbonsCustomTabGroupsItem
 
@@ -1537,6 +1537,15 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 |`alternateIcons.highResolutionIcon`| Object | | ✔️ | Specifies properties of the image file used to represent the add-in on high DPI screens. |
 |`alternateIcons.highResolutionIcon.size`| Number enum | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image sizes: `16`, `32`, `80`. |
 |`alternateIcons.highResolutionIcon.url`| String | 2048 characters | ✔️ | Specifies the full, absolute URL of the image file that is used to represent the add-in on high DPI screens. Icon image must be 128 x 128 pixels and use one of the following file formats: GIF, JPG, PNG, EXIF, BMP, TIFF.|
+
+### spamMoreInfo
+
+Specifies the custom text and URL to provide informational resources to the users.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| text | string | 128 | ✔️ | Specifies display content of the hyperlink pointing to the site containing informational resources in the preprocessing dialog of a spam-reporting add-in.|
+| url | string | 2048 | ✔️ | Specifies the URL of the hyperlink pointing to the site containing informational resources in the preprocessing dialog of a spam-reporting add-in. |
 
 ## dashboardCards
 
