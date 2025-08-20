@@ -1538,6 +1538,20 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 |`alternateIcons.highResolutionIcon.size`| Number enum | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image sizes: `16`, `32`, `80`. |
 |`alternateIcons.highResolutionIcon.url`| String | 2048 characters | ✔️ | Specifies the full, absolute URL of the image file that is used to represent the add-in on high DPI screens. Icon image must be 128 x 128 pixels and use one of the following file formats: GIF, JPG, PNG, EXIF, BMP, TIFF.|
 
+### extensionRibbonsArrayFixedControlItem
+
+Configures the button of an [integrated spam-reporting](/office/dev/add-ins/outlook/spam-reporting?tabs=jsonmanifest) add-in in Outlook. Must configure if `spamReportingOverride` is specified in the `extensions.ribbons.contexts` array.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|id|string| 64 | ✔️ | Specifies the unique ID of the button of a spam-reporting add-in. |
+|type| string| | ✔️ | Defines the control type of a spam-reporting add-in. <br> Allowed values: button.|
+|label| string | 64 | ✔️ | Specifies the text that appears on button of a spam-reporting add-in. <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true).|
+|icons|Array of `extensionCommonIcon`|Minimum array items: 1. <br> Maximum array items: 3.| ✔️ | Defines the icons for the button of a spam-reporting add-in. There must be at least three child objects, each with icon sizes of `16`, `32`, and `80` pixels respectively.|
+| supertip | Array of `extensionCommonSuperToolTip`| | ✔️ | Configures a supertip for the button of a spam-reporting add-in.|
+| actionId| string| 64| ✔️ | Specifies the ID of the action taken when a user selects the button of a spam-reporting add-in. The `actionId` must match the `runtime.actions.id` property of an action in the `runtimes` object.|
+|enabled|boolean| | ✔️ | This property must be specified in the `fixedControls` object. However, it doesn't affect the functionality of a spam-reporting add-in.|
+
 ### extensionRibbonsSpamPreProcessingDialog
 
 Configures the preprocessing dialog of an integrated spam-reporting add-in in Outlook.
