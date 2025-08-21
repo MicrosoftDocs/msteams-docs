@@ -49,7 +49,7 @@ Before diving into implementation, learn about the different channel models avai
 
 - Including external and nonhost team members
 - Sharing with individuals or teams across organizations
-- Storing files in the channel’s dedicated SharePoint sit
+- Storing files in the channel’s dedicated SharePoint site
 
 ### Shared Channel Capabilities
 
@@ -116,9 +116,9 @@ Microsoft Teams supports different types of channels—Standard, Private, and Sh
 
 ### Core Implementation Concepts for Shared and Private Channels
 
-![This diagram shows how membership works in shared channels across organizations.](../../assets/images/membership-types-shared-channels.png)
-
-![This diagram shows how direct membership works in a private channel.](../../assets/images/membership-types-private-channels.png)
+ :::image type="content" source="../../assets/images/membership-types-shared-channels.png" alt-text=""This diagram shows how membership works in shared channels across organizations.":::
+ 
+:::image type="content" source="../../assets/images/membership-types-private-channels.png" alt-text="This diagram shows how direct membership works in a private channel.":::
 
 ### Channel Membership Basics
 
@@ -448,17 +448,21 @@ When creating a tab or task module that needs to access SharePoint files from th
 
 Declare support for shared and private channels by adding a new property in your app manifest. This change is mandatory.
 
+```json
 "supportsChannelFeatures": {
-  "type": "string,"
+  "type": "string",
   "enum": [
-    "tier1,"
-    "tier2,"
-    null
-  ]
+    "tier1"
+  ],
   "description": "A property in the app manifest that declares support for all channel features, categorized by tiers."
 }
+```
 
 To support shared and private channels, set supportsChannelFeatures = tier1.
+
+> [!NOTE]
+>
+> * This field might support other values in future iterations as feature support evolves.
 
 Benefits of Declaring Tier1 Support:
 
@@ -572,7 +576,12 @@ Update your app manifest and permissions to support shared and private channels 
 - Omit this setting, and your app doesn't appear in shared or private channels.
 - Remove this setting later, and your app stops showing up in those channels.
 - Update your manifest with Resource Specific Consent (RSC) permissions, as many APIs now require them for shared/private channel functionality.
-- Check the API documentation and confirm the RSC permissions required for your app.
+
+> [!NOTE]
+>
+> * RSC permissions are optional.
+> * You can choose to use regular permissions instead.
+> * RSC is one way to access resources, and its use depends entirely on the app’s design.
 
 ### Privacy & Security
 
@@ -592,7 +601,7 @@ If you're having trouble installing the app in shared or private channels, check
 
 | Problem | Cause | Resolution |
 |--------|-------|------------|
-| App doesn't appear in shared or private channels | `supportsChannelFeatures` not set in manifest | Add `'supportsChannelFeatures': 'tier 1'` in the app manifest. Reinstall the app. |
+| App doesn't appear in shared or private channels | `supportsChannelFeatures` not set in manifest | Add `'supportsChannelFeatures': 'tier1'` in the app manifest. Reinstall the app. |
 | 403 error - Caller isn't enabled for requesting the [xyz] channel of shared channel type | App installed at team level but not added to the channel | Install the app both at the team level and the specific channel. |
 
 ### Membership & Identity Issues
