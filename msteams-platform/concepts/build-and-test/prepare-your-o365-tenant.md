@@ -31,7 +31,7 @@ If you don't have any Microsoft 365 tenant, you might qualify for a Microsoft 36
 
 Enable Teams for your organization and for more information, see [enabling Teams for your organization](/microsoftteams/enable-features-office-365).
 
-## Enable custom Teams apps and turn on custom app uploading
+## Enable custom Teams apps and configure custom app upload settings
 
 > [!IMPORTANT]
 > If you've set up a Microsoft 365 Developer Program instant sandbox or a configurable sandbox with the Teams sample data pack, you can skip the steps to enable custom app upload. The **Upload custom apps** setting is enabled by default in the Teams sample data pack.
@@ -58,8 +58,9 @@ To turn on the custom app uploading for your developer tenant:
 
     :::image type="content" source="../../assets/images/prepare-test-tenant/upload-for-contoso.png" alt-text="Screenshot shows the upload app view.":::
 
-5. Go to **Teams apps** > **Manage apps** > **Org-wide app settings** > **Custom apps** and turn on the
-   **Upload custom apps for personal use** toggle.
+5. Go to **Teams apps** > **Manage apps** > **Org-wide app settings** > **Custom apps** and turn on the following toggles:
+   * **Let users install and use available apps by default**
+   * **Let users interact with custom apps in preview**
 
     :::image type="content" source="../../assets/images/prepare-test-tenant/Org-wide-app-settings.png" alt-text="Screenshot shows the org-side app settings for custom app upload.":::
 
