@@ -117,7 +117,7 @@ Microsoft Teams supports different types of channels—Standard, Private, and Sh
 ### Core Implementation Concepts for Shared and Private Channels
 
 ![This diagram shows how membership works in shared channels across organizations.](../../assets/images/membership-types-shared-channels.png)
- 
+
 ![This diagram shows how direct membership works in a private channel.](../../assets/images/membership-types-private-channels.png)
 
 ### Channel Membership Basics
@@ -525,7 +525,7 @@ To ensure proper functionality in shared and private channels, all apps must inc
 | **Mandatory** | Use the Channel Members API | Shared/Private channels have different members than the team. Using the wrong API can miss users or cause data leaks. | **Task app**: Assign tasks only to channel members, not all team members. |
 | **Mandatory** | Access the Channel's SharePoint Site | Each channel has its own SharePoint. Using the team site can break file access or expose data. | **Document app**: Store and retrieve files from the channel’s SharePoint site. |
 | **Mandatory** | Respect Channel Boundaries | Don’t access or post across channels unless the user allows it. | **Summary app**: Only summarize messages from channels the user opts into. |
-| **Mandatory** | Update the App Manifest | Declare support for Shared/Private channels so your app shows up there. | **Any app**: Add `"supportsChannelFeatures": "level2"` to your manifest. |
+| **Mandatory** | Update the App Manifest | Declare support for Shared/Private channels so your app shows up there. | **Any app**: Add `"supportsChannelFeatures": "tier1"` to your manifest. |
 
 ### Optional UX Improvements for Shared & Private Channels
 
