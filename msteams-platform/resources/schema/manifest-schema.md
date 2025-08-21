@@ -1538,6 +1538,15 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 |`alternateIcons.highResolutionIcon.size`| Number enum | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image sizes: `16`, `32`, `80`. |
 |`alternateIcons.highResolutionIcon.url`| String | 2048 characters | ✔️ | Specifies the full, absolute URL of the image file that is used to represent the add-in on high DPI screens. Icon image must be 128 x 128 pixels and use one of the following file formats: GIF, JPG, PNG, EXIF, BMP, TIFF.|
 
+### extensionMenuItem
+
+The title used for the top of the callout.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|entryPoint| string| | ✔️ | Use text or cell here for Office context menu. Use text if the context menu should open when a user right-clicks on the selected text. Use cell if the context menu should open when the user right-clicks on a cell on an Excel spreadsheet. <br> Allowed values: `text`, `cell`.|
+|controls| Array of `extensionCommonCustomGroupControlsItem`| 1 | Configures the buttons and menus in the group.|
+
 ### extensionRuntimeCode
 
 Specifies the location of code for the runtime. Based on `runtime.type`, add-ins can use either a JavaScript file or an HTML page with an embedded `script` tag that specifies the URL of a JavaScript file. Both URLs are necessary in situations where the `runtime.type` is uncertain.
