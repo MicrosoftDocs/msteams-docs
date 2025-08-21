@@ -1538,6 +1538,15 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 |`alternateIcons.highResolutionIcon.size`| Number enum | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image sizes: `16`, `32`, `80`. |
 |`alternateIcons.highResolutionIcon.url`| String | 2048 characters | ✔️ | Specifies the full, absolute URL of the image file that is used to represent the add-in on high DPI screens. Icon image must be 128 x 128 pixels and use one of the following file formats: GIF, JPG, PNG, EXIF, BMP, TIFF.|
 
+### extensionContextMenuArray
+
+A shortcut menu that appears when you right-click in the Office UI.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|requirements| Array | | | The extensions.requirements object specifies the scopes, form factors, and Office JavaScript library requirement sets that must be supported on the Office client in order for the add-in to be installed. |
+|menus| Array | Minimum array items: 1 | ✔️ | Configures the context menus. |
+
 ### extensionMenuItem
 
 The title used for the top of the callout.
