@@ -1538,6 +1538,17 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 |`alternateIcons.highResolutionIcon.size`| Number enum | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image sizes: `16`, `32`, `80`. |
 |`alternateIcons.highResolutionIcon.url`| String | 2048 characters | ✔️ | Specifies the full, absolute URL of the image file that is used to represent the add-in on high DPI screens. Icon image must be 128 x 128 pixels and use one of the following file formats: GIF, JPG, PNG, EXIF, BMP, TIFF.|
 
+### extensionKeyCombination
+
+Key combinations in different platform (i.e. default, windows, web and mac).
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| default | string | Minimum string length: 1. <br> Maximum string length: 32. | ✔️ | Fallback key for any platform that isn't specified. <br> Supported values: The string value must contain only letters, numbers, hyphens, underscores, and plus signs. |
+| mac | string | Minimum string length: 1. <br> Maximum string length: 32. | | Key for mac platform. Alt is mapped to the Option key. <br> Supported values: The string value must contain only letters, numbers, hyphens, underscores, and plus signs. |
+| web | string | Minimum string length: 1. <br> Maximum string length: 32. | | Key for web platform. <br> Supported values: The string value must contain only letters, numbers, hyphens, underscores, and plus signs. |
+| windows | string | Minimum string length: 1. <br> Maximum string length: 32. | Key for windows platform. Command is mapped to the Ctrl key. <br> Supported values: The string value must contain only letters, numbers, hyphens, underscores, and plus signs. |
+
 ### extensionContentRuntimeArray
 
 Configures a page of content that is embedded in an Excel or PowerPoint document.
