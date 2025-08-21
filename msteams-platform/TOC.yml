@@ -28,7 +28,7 @@
   - name: Quick-start guide - build your first agent
     href: agents-in-teams/get-started/quick-start-build-your-first-agent-outline.md
 
-- name: Plan you agent
+- name: Plan your agent
   expanded: false
   items:
   - name: Choose your agent use-case
