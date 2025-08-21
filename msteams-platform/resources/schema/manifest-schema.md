@@ -1538,6 +1538,15 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 |`alternateIcons.highResolutionIcon.size`| Number enum | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image sizes: `16`, `32`, `80`. |
 |`alternateIcons.highResolutionIcon.url`| String | 2048 characters | ✔️ | Specifies the full, absolute URL of the image file that is used to represent the add-in on high DPI screens. Icon image must be 128 x 128 pixels and use one of the following file formats: GIF, JPG, PNG, EXIF, BMP, TIFF.|
 
+### extensionShortcut
+
+Array of mappings from actions to the key combinations that invoke the actions.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| key | Array of `extensionKeyCombination` | | ✔️ | Key combinations in different platform. |
+| actionId | string | Minimum string length: 1. <br> Maximum string length: 64. | ✔️ | The ID of an execution-type action that handles this key combination. |
+
 ### extensionKeyCombination
 
 Key combinations in different platform (i.e. default, windows, web and mac).
