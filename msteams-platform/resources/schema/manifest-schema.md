@@ -1538,14 +1538,27 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 |`alternateIcons.highResolutionIcon.size`| Number enum | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image sizes: `16`, `32`, `80`. |
 |`alternateIcons.highResolutionIcon.url`| String | 2048 characters | ✔️ | Specifies the full, absolute URL of the image file that is used to represent the add-in on high DPI screens. Icon image must be 128 x 128 pixels and use one of the following file formats: GIF, JPG, PNG, EXIF, BMP, TIFF.|
 
+### extensionContentRuntimeArray
+
+Configures a page of content that is embedded in an Excel or PowerPoint document.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| requirements | Array of `requirementsExtensionElement` | | | Specifies the Office requirement sets for content add-in runtime. If the user's Office version doesn't support the specified requirements, the component will not be available in that client. |
+| id | string | 64 | ✔️ | A unique identifier for this runtime within the app. This is developer specified. |
+| code | Array of `extensionRuntimeCode` | | ✔️ | Specifies the location of code for this runtime. Depending on the runtime.type, add-ins use either a JavaScript file or an HTML page with an embedded <script> tag that specifies the URL of a JavaScript file. |
+| requestedHeight | number | 1000 | | The desired height in pixels for the initial content placeholder. This value MUST be between 32 and 1000 pixels. Default value will be determined by host. |
+| requestedWidth | number | 1000 | | The desired width in pixels for the initial content placeholder. This value MUST be between 32 and 1000 pixels. Default value will be determined by host. |
+| disableSnapshot | boolean | | | Specifies whether a snapshot image of your content add-in is saved with the host document. Set true to disable. <br> Default value: `False`. |
+
 ### extensionContextMenuArray
 
 A shortcut menu that appears when you right-click in the Office UI.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|requirements| Array | | | The extensions.requirements object specifies the scopes, form factors, and Office JavaScript library requirement sets that must be supported on the Office client in order for the add-in to be installed. |
-|menus| Array | Minimum array items: 1 | ✔️ | Configures the context menus. |
+| requirements | Array | | | The extensions.requirements object specifies the scopes, form factors, and Office JavaScript library requirement sets that must be supported on the Office client in order for the add-in to be installed. |
+| menus | Array | Minimum array items: 1 | ✔️ | Configures the context menus. |
 
 ### extensionMenuItem
 
@@ -1553,8 +1566,8 @@ The title used for the top of the callout.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|entryPoint| string| | ✔️ | Use text or cell here for Office context menu. Use text if the context menu should open when a user right-clicks on the selected text. Use cell if the context menu should open when the user right-clicks on a cell on an Excel spreadsheet. <br> Allowed values: `text`, `cell`.|
-|controls| Array of `extensionCommonCustomGroupControlsItem`| 1 | Configures the buttons and menus in the group.|
+| entryPoint | string | | ✔️ | Use text or cell here for Office context menu. Use text if the context menu should open when a user right-clicks on the selected text. Use cell if the context menu should open when the user right-clicks on a cell on an Excel spreadsheet. <br> Allowed values: `text`, `cell`. |
+| controls | Array of `extensionCommonCustomGroupControlsItem` | 1 | Configures the buttons and menus in the group. |
 
 ### extensionRuntimeCode
 
@@ -1562,8 +1575,8 @@ Specifies the location of code for the runtime. Based on `runtime.type`, add-ins
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|page|string|2048|✔️|Specifies the URL of the web page that contains an embedded `script` tag, which specifies the URL of a JavaScript file (to be loaded in a [browser-based runtime](/office/dev/add-ins/testing/runtimes)). <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true) <br> The string must start with `https://`.|
-|script|string|2048| | Specifies the URL of the JavaScript file to be loaded in [JavaScript-only runtime](/office/dev/add-ins/testing/runtimes). <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true) <br> The string must start with `https://`.
+| page | string | 2048 | ✔️ | Specifies the URL of the web page that contains an embedded `script` tag, which specifies the URL of a JavaScript file (to be loaded in a [browser-based runtime](/office/dev/add-ins/testing/runtimes)). <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true) <br> The string must start with `https://`. |
+| script | string | 2048 | | Specifies the URL of the JavaScript file to be loaded in [JavaScript-only runtime](/office/dev/add-ins/testing/runtimes). <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true) <br> The string must start with `https://`.|
 
 ### extensionRibbonsArrayFixedControlItem
 
@@ -1571,13 +1584,13 @@ Configures the button of an [integrated spam-reporting](/office/dev/add-ins/outl
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|id|string| 64 | ✔️ | Specifies the unique ID of the button of a spam-reporting add-in. |
-|type| string| | ✔️ | Defines the control type of a spam-reporting add-in. <br> Allowed values: button.|
-|label| string | 64 | ✔️ | Specifies the text that appears on button of a spam-reporting add-in. <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true).|
-|icons|Array of `extensionCommonIcon`|Minimum array items: 1. <br> Maximum array items: 3.| ✔️ | Defines the icons for the button of a spam-reporting add-in. There must be at least three child objects, each with icon sizes of `16`, `32`, and `80` pixels respectively.|
-| supertip | Array of `extensionCommonSuperToolTip`| | ✔️ | Configures a supertip for the button of a spam-reporting add-in.|
-| actionId| string| 64| ✔️ | Specifies the ID of the action taken when a user selects the button of a spam-reporting add-in. The `actionId` must match the `runtime.actions.id` property of an action in the `runtimes` object.|
-|enabled|boolean| | ✔️ | This property must be specified in the `fixedControls` object. However, it doesn't affect the functionality of a spam-reporting add-in.|
+| id | string | 64 | ✔️ | Specifies the unique ID of the button of a spam-reporting add-in. |
+| type | string | | ✔️ | Defines the control type of a spam-reporting add-in. <br> Allowed values: button. |
+| label | string | 64 | ✔️ | Specifies the text that appears on button of a spam-reporting add-in. <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true). |
+| icons | Array of `extensionCommonIcon`|Minimum array items: 1. <br> Maximum array items: 3. | ✔️ | Defines the icons for the button of a spam-reporting add-in. There must be at least three child objects, each with icon sizes of `16`, `32`, and `80` pixels respectively. |
+| supertip | Array of `extensionCommonSuperToolTip`| | ✔️ | Configures a supertip for the button of a spam-reporting add-in. |
+| actionId | string | 64 | ✔️ | Specifies the ID of the action taken when a user selects the button of a spam-reporting add-in. The `actionId` must match the `runtime.actions.id` property of an action in the `runtimes` object. |
+ |enabled | boolean | | ✔️ | This property must be specified in the `fixedControls` object. However, it doesn't affect the functionality of a spam-reporting add-in. |
 
 ### extensionRibbonsSpamPreProcessingDialog
 
