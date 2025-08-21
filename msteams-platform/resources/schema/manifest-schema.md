@@ -1289,6 +1289,28 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`spamPreProcessingDialog.spamMoreInfo.text`| String | 128 characters | ✔️ | Specifies the link text for a URL that directs users to informational resources from the preprocessing dialog. |
 |`spamPreProcessingDialog.spamMoreInfo.url`| String | 2048 characters | ✔️ | Specifies the HTTPS URL of a site that contains informational resources. |
 
+#### **extensionRibbonsCustomMobileGroupItem**
+
+Defines groups of controls on the default tab of the ribbon on a mobile device. This array property can only be present on tab objects that have a `tabs.builtInTabId` property that is set to `DefaultTab`. For non-mobile devices, see `tabs.groups`.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`id`| String | 64 characters | ✔️ | Specifies the ID for a menu item. |
+|`label`| String | 32 characters | ✔️ | Defines the menu item's control type. |
+| `controls`| String | 20 characters | ✔️ | Defines the controls in the group. Only mobile buttons are supported. |
+
+#### **extensionCommonCustomControlMenuItem**
+
+Configures the items for a menu control.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`id`| String | 64 characters | ✔️ | A unique identifier for this control within the app. Maximum length is 64 characters. |
+|`type`| String | 64 characters | ✔️ | Displayed text for the control. Maximum length is 64 characters. |
+|`label`| String | 64 characters | ✔️ | Displayed text for the control. Maximum length is 64 characters. |
+|`icons`| Array | 3 characters | ✔️ | Configures the icons for the menu item. |
+|`supertip`| [extensionCommonSuperToolTip object] (<https://learn.microsoft.com/en-us/microsoft-365/extensibility/schema/extension-common-super-tool-tip?view=m365-app-1.23&tabs=schema>) | | ✔️ | Configures a supertip for the menu item. A supertip is a UI feature that displays a brief box of help information about a control when the cursor hovers over it. The box may contain multiple lines of text. |
+
 To use `extensions.ribbons`, see [create add-in commands](/office/dev/add-ins/develop/create-addin-commands-unified-manifest), [configure the UI for the task pane command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-ui-for-the-task-pane-command), and [configure the UI for the function command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-ui-for-the-function-command).
 
 ### extensions.autoRunEvents
