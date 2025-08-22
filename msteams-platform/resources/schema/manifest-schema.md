@@ -8,7 +8,7 @@ ms.date: 8/18/2025
 
 # App manifest
 
-The app manifest (previously called Teams app manifest) describes how your app integrates into the Microsoft Teams product. Your app manifest must conform to the schema hosted at [https://developer.microsoft.com/json-schemas/teams/v1.23/MicrosoftTeams.schema.json](https://developer.microsoft.com/json-schemas/teams/v1.23/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,...,1.22, and the current version is 1.23 are each supported (using "v1.x" in the URL). Version 1.18 is not available.
+The app manifest (previously called Teams app manifest) describes how your app integrates into the Microsoft Teams product. Your app manifest must conform to the schema hosted at [https://developer.microsoft.com/json-schemas/teams/v1.23/MicrosoftTeams.schema.json](https://developer.microsoft.com/json-schemas/teams/v1.23/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,...,1.22, and the current version is 1.23 are each supported (using "v1.x" in the URL). Version 1.18 isn't available.
 For more information on the changes made in each version, see [app manifest change log](https://github.com/OfficeDev/microsoft-teams-app-schema/releases) and for previous versions, see [app manifest versions](https://github.com/microsoft/json-schemas/tree/main/teams).
 
 The following table lists TeamsJS version and app manifest versions as per different app scenarios:
@@ -418,7 +418,7 @@ The ID is a unique Microsoft-generated identifier for the app. The format of the
 The ID stored in Teams admin center is the **External App ID** and it's visible as **ExternalID** on the traces.
 
 > [!NOTE]
-> If you are submitting an update to your existing app in AppSource, the ID in your app manifest must not be modified.
+> If you're submitting an update to your existing app in AppSource, the ID in your app manifest must not be modified.
 
 ## developer
 
@@ -571,8 +571,8 @@ Defines one or more agents to Microsoft 365 Copilot. [Declarative agents](/micro
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`declarativeAgents`|Array of objects| 1 || Array of objects that each define a declarative agent. |
-|`customEngineAgents`|Array of objects| 1 || Array of objects that each define a custom engine agent.|
+|`declarativeAgents`|Array of objects| 1 | | Array of objects that each define a declarative agent. |
+|`customEngineAgents`|Array of objects| 1 | | Array of objects that each define a custom engine agent.|
 
 > [!NOTE]
 > The `copilotAgents` object must contain either `declarativeAgents` or `customEngineAgents`, but not both agents at the same time.
