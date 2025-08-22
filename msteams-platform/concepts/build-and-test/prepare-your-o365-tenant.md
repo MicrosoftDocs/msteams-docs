@@ -58,7 +58,7 @@ To turn on the custom app uploading for your developer tenant:
 
     :::image type="content" source="../../assets/images/prepare-test-tenant/upload-for-contoso.png" alt-text="Screenshot shows the upload app view.":::
 
-5. Go to **Teams apps** > **Manage apps** > **Org-wide app settings** > **Custom apps** and turn on the following toggles:
+5. Go to **Teams apps** > **Manage apps** > **Actions** > **Org-wide app settings** > **Custom apps** and turn on the following toggles:
    * **Let users install and use available apps by default**
    * **Let users interact with custom apps in preview**
 
