@@ -33,7 +33,7 @@ Ensure that you install the following tools and set up your development environm
 > [!NOTE]
 > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/downloads).
 
-# Set up local environment
+## Set up local environment
 
 1. Open [Microsoft-Teams-Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
 
@@ -41,15 +41,13 @@ Ensure that you install the following tools and set up your development environm
 
 3. From the dropdown menu, select **Open with GitHub Desktop**.
 
-  :::image type="content" source="./assets/images/include-files/clone-repository.png" alt-text="Screenshot of the clone repository":::
+![Screenshot of the clone repository](../../assets/images/include-files/clone-repository.png)
 
-  ![Screenshot of the clone repository](../../assets/images/include-files/clone-repository.png)
-
-4. Select **Clone**.
+1. Select **Clone**.
 
  > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Set+up+local+environment&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meetingextension-action%3Ftabs%3Ddev%252Clatestversionofvisualstudio%26tutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-meetingextension-action.yml&documentVersionIndependentId=53b6fe7f-5051-d9d3-57e4-1d339c25ad65&platformId=28e8e36c-27eb-6659-de89-1d9872d985a0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
-# Register Microsoft Entra app
+## Register Microsoft Entra app
 
 The following steps help you to create and register your bot in Azure portal:
 
@@ -58,6 +56,57 @@ The following steps help you to create and register your bot in Azure portal:
 * Add Teams channel to deploy the bot.
 * Create a tunnel to your web server's endpoints using dev tunnel (recommended) or ngrok.
 * Add messaging endpoint to the dev tunnel that you created.
+
+[!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+App+registration&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meetingextension-action%3Ftabs%3Ddev%252Clatestversionofvisualstudio%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-meetingextension-action.yml&documentVersionIndependentId=53b6fe7f-5051-d9d3-57e4-1d339c25ad65&platformId=28e8e36c-27eb-6659-de89-1d9872d985a0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+**Create a tunnel**
+
+# [dev tunnel](#tab/dev)
+
+[!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+tunnel+using+dev+tunnel&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meetingextension-action%3Ftabs%3Ddev%252Clatestversionofvisualstudio%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-meetingextension-action.yml&documentVersionIndependentId=53b6fe7f-5051-d9d3-57e4-1d339c25ad65&platformId=28e8e36c-27eb-6659-de89-1d9872d985a0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+# [ngrok](#tab/ngrok)
+
+[!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+tunnel+using+ngrok&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meetingextension-action%3Ftabs%3Ddev%252Clatestversionofvisualstudio%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-meetingextension-action.yml&documentVersionIndependentId=53b6fe7f-5051-d9d3-57e4-1d339c25ad65&platformId=28e8e36c-27eb-6659-de89-1d9872d985a0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+[!INCLUDE [Azure web authentication](includes/get-started/azure-web-authentication.md)]
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+a+web+authentication&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meetingextension-action%3Ftabs%3Ddev%252Clatestversionofvisualstudio%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-meetingextension-action.yml&documentVersionIndependentId=53b6fe7f-5051-d9d3-57e4-1d339c25ad65&platformId=28e8e36c-27eb-6659-de89-1d9872d985a0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+[!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+client+secret&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meetingextension-action%3Ftabs%3Ddev%252Clatestversionofvisualstudio%26tutorial-step%3D23&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-meetingextension-action.yml&documentVersionIndependentId=53b6fe7f-5051-d9d3-57e4-1d339c25ad65&platformId=28e8e36c-27eb-6659-de89-1d9872d985a0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+[!INCLUDE [API Permissions](includes/get-started/azure-api-permissions.md)]
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+API+permissions&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meetingextension-action%3Ftabs%3Ddev%252Clatestversionofvisualstudio%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-meetingextension-action.yml&documentVersionIndependentId=53b6fe7f-5051-d9d3-57e4-1d339c25ad65&platformId=28e8e36c-27eb-6659-de89-1d9872d985a0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+[!INCLUDE [Application ID URI](includes/get-started/application-id-uri.md)]
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+Application+ID+URI&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meetingextension-action%3Ftabs%3Ddev%252Clatestversionofvisualstudio%26tutorial-step%3D23&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-meetingextension-action.yml&documentVersionIndependentId=53b6fe7f-5051-d9d3-57e4-1d339c25ad65&platformId=28e8e36c-27eb-6659-de89-1d9872d985a0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+[!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+a+scope&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meetingextension-action%3Ftabs%3Ddev%252Clatestversionofvisualstudio%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-meetingextension-action.yml&documentVersionIndependentId=53b6fe7f-5051-d9d3-57e4-1d339c25ad65&platformId=28e8e36c-27eb-6659-de89-1d9872d985a0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+[!INCLUDE [Azure client application](includes/get-started/azure-client-application.md)]
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+client+application&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meetingextension-action%3Ftabs%3Ddev%252Clatestversionofvisualstudio%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-meetingextension-action.yml&documentVersionIndependentId=53b6fe7f-5051-d9d3-57e4-1d339c25ad65&platformId=28e8e36c-27eb-6659-de89-1d9872d985a0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Add App Registration
 
@@ -89,9 +138,9 @@ Your app is registered in Microsoft Entra ID. The app overview page appears.
 
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+App+registration&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meetingextension-action%3Ftabs%3Ddev%252Clatestversionofvisualstudio%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-meetingextension-action.yml&documentVersionIndependentId=53b6fe7f-5051-d9d3-57e4-1d339c25ad65&platformId=28e8e36c-27eb-6659-de89-1d9872d985a0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
-# Create your bot
+## Create your bot
 
-## **Create an Azure bot resource**.
+### **Create an Azure bot resource**.
 
 > [!NOTE]
 >
@@ -131,8 +180,6 @@ If you don't have an existing resource group, you can create a new resource grou
 ![Screenshot for Change Plan](../../assets/images/include-files/pricing-tier.png)
 
 11. Select **FO Free** > **Select**.
-
-:::image type="content" source="./assets/images/include-files/pricing-free.png" alt-text="Screenshot for Choose pricing tier":::
 
 ![Screenshot for Choose pricing tier](../../assets/images/include-files/pricing-free.png)
 
@@ -188,7 +235,7 @@ You've successfully created your Azure bot.
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+a+messaging+endpoint&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meetingextension-action%3Ftabs%3Ddev%252Clatestversionofvisualstudio%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-meetingextension-action.yml&documentVersionIndependentId=53b6fe7f-5051-d9d3-57e4-1d339c25ad65&platformId=28e8e36c-27eb-6659-de89-1d9872d985a0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
-# Set up app settings and manifest files
+## Set up app settings and manifest files
 
 **Estimated Duration**: 1 minute
 
@@ -217,7 +264,7 @@ You've successfully created your Azure bot.
 
  ![Screenshot of manifest page with the ID, bot ID, and Valid domains highlighted in red.](../../assets/images/sbs-messagingextension-action/botid1.png)
 
-# Build and run the service
+## Build and run the service
 
 To build and run the service, use Visual Studio or Command line.
 
@@ -259,7 +306,7 @@ Go to **samples** > **msgext-action** > **csharp** in Command Prompt window and 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Build+and+run+the+service+using+Command+line&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meetingextension-action%3Ftabs%3Dcli%252Clatestversionofvisualstudio%26tutorial-step%3D6&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-meetingextension-action.yml&documentVersionIndependentId=53b6fe7f-5051-d9d3-57e4-1d339c25ad65&platformId=28e8e36c-27eb-6659-de89-1d9872d985a0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
-# Add Action Message Extension app to Teams
+## Add Action Message Extension app to Teams
 
 1. In your cloned repository, go to **samples** > **msgext-action** > **csharp** > **TeamsAppManifest**.
 
@@ -300,7 +347,7 @@ Alternatively, you can either search and select the required scope or select a c
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+Action+Message+Extension+app+to+Teams&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meetingextension-action%3Ftabs%3Ddev%252Clatestversionofvisualstudio%26tutorial-step%3D7&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-meetingextension-action.yml&documentVersionIndependentId=53b6fe7f-5051-d9d3-57e4-1d339c25ad65&platformId=28e8e36c-27eb-6659-de89-1d9872d985a0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
-# Interact with the app in Teams
+## Interact with the app in Teams
 
 1. Select **Create Card** command from the compose box command list.
 
@@ -326,7 +373,7 @@ Alternatively, you can either search and select the required scope or select a c
 
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Interact+with+the+app+in+Teams&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meetingextension-action%3Ftabs%3Ddev%252Clatestversionofvisualstudio%26tutorial-step%3D8&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-meetingextension-action.yml&documentVersionIndependentId=53b6fe7f-5051-d9d3-57e4-1d339c25ad65&platformId=28e8e36c-27eb-6659-de89-1d9872d985a0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
-# Complete Challenge
+## Complete Challenge
 
 Did you come up with something like this?
 
@@ -334,7 +381,7 @@ Did you come up with something like this?
 
 You've completed the tutorial to get started with a **Action Message Extension** app!
 
-# Congratulations
+## Congratulations
 
 100% complete!
 
