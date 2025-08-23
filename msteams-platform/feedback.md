@@ -17,6 +17,7 @@ Use **Azure Admin Center** or **Microsoft 365 Admin Center** for any **business-
 | **Microsoft Teams product issues and failures** | If you have a Premier support contract for :::image type="icon" source="assets/icons/microsoft-icon.png"::: Microsoft 365, visit the Microsoft 365 Admin Center and use the Support menu to [open a service request](https://admin.microsoft.com/). |
 | **Azure help and support** | If you have a paid Azure subscription, visit the Azure Admin Center to [open a ticket](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportreq). |
 | **General questions about Teams** | If you have general questions on Teams, submit your questions on :::image type="icon" source="assets/icons/microsoft-icon.png"::: [Microsoft Teams Community](https://answers.microsoft.com/msteams/forum).|
+| **Partner Center support** | For issues including Partner Center such as subscriptions, billing, and account access, use the [Partner Center AI assistant](https://learn.microsoft.com/en-us/partner-center/support/report-problems-with-partner-center#contact-support-using-partner-center-ai-assistant) to report problems. |
 
 ## Developer community help
 
