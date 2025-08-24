@@ -185,6 +185,8 @@ The following steps help you to create and register your bot in the Azure portal
 
 ## Create your bot
 
+Create an Azure bot resource.
+
 > [!NOTE]
 > If you're already testing your bot in Teams, sign out of this app and Teams. To see this change, sign in again.
 
@@ -224,8 +226,6 @@ If you don't have an existing resource group, you can create a new resource grou
 13. In the **Creation type**, select **Use existing app registration**.
 
 14. Enter the **App ID**.
-
-<!-- You can also select **Use existing app registration** and enter existing **App ID**, **App tenant ID**, and **MSI resource ID**. -->
 
 > [!NOTE]
 > You can't create more than one bot with the same **Microsoft App ID**.
@@ -367,4 +367,111 @@ You have successfully set up a bot in Azure Bot service.
 
 ![Screenshot shows the details filled in the manifest file in visual studio.](./assets/images/teams-file-upload-bot/manifest-bot-id-botsso.png)
 
+## Build and run the service
+
+1. Open Visual Studio.
+
+2. Go to **File** > **Open** > **Project/Solution...**.
+
+![Screenshot of Visual Studio file menu. The menu entries titled Open under File menu and Project/Solution under Open are highlighted in red.](./assets/images/bots/project-solution_1.png)
+
+3. From **bot-conversation-sso-quickstart** > **csharp_dotnetcore** folder, and select **BotConversationSsoQuickstart.sln** file.
+
+![Screenshot of Project file with the file path and BotSSOCSharp.csproj file highlighted in red.](./assets/images/bots/filepath_1.png.png)
+
+4. Select **F5**  to run the project.
+
+5. If a **Security Warning** dialog appears, select **Yes**.
+
+![Screenshot of Security Warning with the Yes option highlighted in red.](./assets/images/bots/certificate.png)
+
+A webpage opens with a message **Your bot is ready!**.
+
+> [!NOTE]
+> This page appears only when you navigate to the localhost URL.
+
+![Screenshot of the webpage that displays Your bot is ready.](./assets/images/bots/yourbot.png)
+
+ <br>
+
+<details>
+
+<summary><b>Troubleshooting</b></summary>
+
+If you get the **Unable to find package** error, follow these steps:
+
+1. Go to **Tools** > **NuGet Package Manager** > **Package Manager Settings**.
+2. In the **Options** window that appears, select **NuGet Package Manager** > **Package Sources**.
+3. Select **Add**.
+4. In **Name**, enter `nuget.org` and in **Source**, enter `https://api.nuget.org/v3/index.json`.
+5. Select **Update** and **OK**.
+6. Rebuild your project.
+<br>
+
+</details>
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Build+and+run+the+service&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-bots-with-sso%3Ftabs%3Ddev%26tutorial-step%3D6&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-bots-with-sso.yml&documentVersionIndependentId=b410630d-3624-e389-480f-ea3307a3b774&author=surbhigupta&platformId=4b2022ca-ee48-5c9a-b390-7ed303c02fd8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
+
+## Upload the bot in Teams
+
+1. In your cloned repository, go to **Microsoft-Teams-Samples** > **samples** > **bot-conversation-sso-quickstart** > **csharp_dotnetcore** > **TeamsApp** > **appPackage**. 
+
+2. Create a .zip file with the following files that are present in the **appPackage** folder: 
+
+        * manifest.json
+        * outline.png
+        * color.png
+
+![Screenshot of Manifest folder with the Teams Bot zip folder highlighted in red.](./assets/images/bots/manifest.png)
+
+3. Go to Microsoft Teams
+    a. In the Teams client, select **Apps**.
+    b. Select **Manage your apps**.
+    c. Select **Upload an app**.
+    d. Look for the option to **Upload a custom app**.
+
+![Screenshot of Teams app with the Apps icon, Manage your apps, and showing the selection of Upload a custom app option highlighted in red.](./assets/images/bots/custom-app-upload.png)
+
+7. Select **Open** to upload the .zip file that you've created in the **Manifest** folder.
+
+![Screenshot of Manifest folder with Open option to upload the Teams Bot zip file highlighted in red.](./assets/images/bots/app-open.png)
+
+8. Select **Add** to add the bot to your chat.
+
+![Screenshot of conversation bot with Add option highlighted.](./assets/images/bots/conversation-bot-add.png)
+
+9. Select **Open**.
+
+![Screenshot of scope selection dialog with Open option highlighted.](./assets/images/bots/conversation-bot-open.png)
+
+You can interact with the bot by sending it a message. The bot exchanges an SSO token and calls the Graph API on your behalf. It keeps you signed in unless you send a message to sign out.
+
+1. Send a message to the bot. The conversation bot asks for consent for the first time.
+
+a. For desktop: Select **Continue** to give permissions to Teams client for accessing the bot.
+
+![Screenshot of additional permissions with Continue option highlighted in red.](./assets/images/bots/sbsdesktop-mobile-consent-request1.png)
+
+> [!NOTE]
+> Now you’ve configured SSO with your bot app and it's the only time you'll have to give consent.
+
+1. For mobile: Select **Accept**.
+
+> [!NOTE]
+> Now you’ve configured SSO with your bot app in mobile, and it's the only time you'll have to give consent.
+
+![Screenshot of bot SSO output after you successfully completed the step-by-step guide.](./assets/images/bots/sbsdesktop-mobile-consent-request.png)
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Upload+the+bot+in+Teams&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-bots-with-sso%3Ftabs%3Ddev%26tutorial-step%3D7&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-bots-with-sso.yml&documentVersionIndependentId=b410630d-3624-e389-480f-ea3307a3b774&author=surbhigupta&platformId=4b2022ca-ee48-5c9a-b390-7ed303c02fd8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
+
+## Complete challenge
+
+Did you come up with something like this?
+
+![Screenshot of the output after you successfully completed the step-by-step guide.](./assets/images/bots/sbs-desktop-mobile.png)
+
+## Congratulations
+
+You've completed the tutorial to get started with build a bot with SSO authentication.
 
