@@ -17,9 +17,9 @@ The  Microsoft Entra single sign-on (Microsoft Entra SSO) helps to authenticate 
   * Allows the user to sign in to other devices without entering credentials again.
   * Obtains token for the signed in user.
 
-   This step-by-step guide helps you to create tabs and message extensions enabling Microsoft Entra SSO authentication. You'll see the following output:
+This step-by-step guide helps you to create tabs and message extensions enabling Microsoft Entra SSO authentication. You'll see the following output:
 
-![Screenshot of the tab and message extension with SSO authentication output after you have successfully completed the step-by-step guide](assets/images/Tab-ME-SSO/hello-megan-profile245-1.png)
+![Screenshot of the tab and message extension with SSO authentication output after you have successfully completed the step-by-step guide](../../assets/images/Tab-ME-SSO/hello-megan-profile245-1.png)
 
 ## Prerequisites
 
@@ -54,17 +54,17 @@ The following steps help you to create and register your bot in Azure portal:
 
 > [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
 
-## Add App Registration
+### Add App Registration
 
 1. Go to [Azure portal](https://ms.portal.azure.com/).
 
 2. Select **App registrations**.
 
-![Screenshot shows the Azure services to select App registrations](assets/images/include-files/azure-app-registration.png)
+![Screenshot shows the Azure services to select App registrations](./assets/images/include-files/azure-app-registration.png)
 
-3. Select **+ New registration**.
+1. Select **+ New registration**.
 
-![Screenshot shows the New registration page on Microsoft Entra admin center](assets/images/include-files/new-registration.png)
+![Screenshot shows the New registration page on Microsoft Entra admin center](./assets/images/include-files/new-registration.png)
 
 4. Enter the name of your app.
 
@@ -72,15 +72,15 @@ The following steps help you to create and register your bot in Azure portal:
 
 6. Select **Register**.
 
-![Screenshot of the Microsoft Entra admin center showing the interface for registering a bot application.](assets/images/Teams-task-module/app-register.png)
+![Screenshot of the Microsoft Entra admin center showing the interface for registering a bot application.](./assets/images/Teams-task-module/app-register.png)
 
 Your app is registered in Microsoft Entra ID. The app overview page appears.
 
-![Screenshot shows the app registration overview page](assets/images/include-files/app-registration-overview.png)
+![Screenshot shows the app registration overview page](./assets/images/include-files/app-registration-overview.png)
 
  **Note:** Save the app ID from **Application (client) ID** and **Directory (tenant) ID** for further use.
 
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+App+registration)
+> [I ran into an issue](https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs-messaging-extensions-with-sso-tutorial)
 
 **Create a tunnel**
 
@@ -112,14 +112,14 @@ Your app is registered in Microsoft Entra ID. The app overview page appears.
 1. In the left pane, select **API permissions**.
 2. Select **+ Add a permission**.
 
-   ![Screenshot shows the option to select Add permission.](../msteams-platform/assets/images/teams-file-upload-bot/add-api-permission.png)
+![Screenshot shows the option to select Add permission.](../msteams-platform/assets/images/teams-file-upload-bot/add-api-permission.png)
 
-3. Select **Microsoft Graph**.
-4. Select **Delegated permissions**.
-5. Select **User** > **User.Read**.
-6. Select **Add permissions**.
+1. Select **Microsoft Graph**.
+2. Select **Delegated permissions**.
+3. Select **User** > **User.Read**.
+4. Select **Add permissions**.
 
-   ![Screenshot show the option to select permissions.](../msteams-platform/assets/images/teams-file-upload-bot/select-api-permission.png)
+![Screenshot show the option to select permissions.](../msteams-platform/assets/images/teams-file-upload-bot/select-api-permission.png)
 
 > **Note:**
 >
@@ -172,11 +172,11 @@ Your app is registered in Microsoft Entra ID. The app overview page appears.
 
 1. Go to the **appsettings.json** file in the cloned repository.
 
-   ![Screenshot of Project file with appsettings.json file highlighted in red.](./assets/images/Tab-ME-SSO/app-setting-folder-1.png)
+![Screenshot of Project file with appsettings.json file highlighted in red.](./assets/images/Tab-ME-SSO/app-setting-folder-1.png)
 
-2. Open the **appsettings.json** file in Visual Studio.
+1. Open the **appsettings.json** file in Visual Studio.
 
-3. Update the following information:
+2. Update the following information:
    * Replace `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
    * Replace `"MicrosoftAppPassword"` to your bot's client secrets **Value**.
    * Replace `"SiteUrl"` to your ngrok URL.
@@ -186,151 +186,7 @@ Your app is registered in Microsoft Entra ID. The app overview page appears.
    * Replace `"AppSecret"` to your bot's client secrets **Value**.
    * Replace `"ApplicationIdURI"` in the form of `api://*******.ngrok.io/botid-{AppID}`.
 
-   ![Screenshot of the appsettings.json file with the values entered highlighted in red.](./assets/images/Tab-ME-SSO/app-setting.png)
-
----
-
-## Set up Manifest File
-
-1. Go to the **manifest.json** file in the cloned repository.
-
-   ![Screenshot of Manifest folder with the manifest file highlighted in red.](./assets/images/Tab-ME-SSO/folder-manifest-1.png)
-
-2. Open the **manifest.json** file in Visual Studio and make the following changes:
-   * Replace `DOMAIN-NAME` with your ngrok URL.
-   * Replace `YOUR-MICROSOFT-APP-ID` with your bot's **Microsoft App ID**.
-
-     > **Note:** Depending on the scenario `[YOUR-MICROSOFT-APP-ID]` and `[DOMAIN-NAME]` may occur multiple times.
-
-   * Replace `resource` as `api://*******.ngrok.io/botid-{AppID}`.
-
-   ![Screenshot of the manifest.json file with the values entered highlighted in red.](~/assets/images/Tab-ME-SSO/vs-manifest.png)
-
----
-
-## Build and Run the Service
-
-To build and run the service, use Visual Studio or Command line.
-
-### Visual Studio
-
-1. Open Visual Studio.
-2. Select **File** > **Open** > **Project/Solution...**.
-
-   ![Screenshot of Visual showing the File menu with 'Open' and 'Project/Solution' options highlighted in red.](~/assets/images/Tab-ME-SSO/open-project1.png)
-
-3. In the **csharp** folder, select **App SSO Sample.csproj** file.
-
-   ![Screenshot of Project file with App SSO Sample.csproj file highlighted in red.](./assets/images/Tab-ME-SSO/project-folder1-1.png)
-
-4. Press **F5** to run the project.
-
-5. Select **Yes** if the following dialog appears:
-
-   ![Screenshot of Security Warning with the Yes option highlighted in red.](./assets/images/sbs-outgoing-webhooks/outgoing-webhook-certificate.png)
-
-   A webpage appears with a message **Your bot is ready!**
-
-   ![Screenshot of the webpage that displays Your bot is ready.](./assets/images/Tab-ME-SSO/bot-completion-explorer.png)
-
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Build+and+run+service+using+Visual+Studio)
-
-### Command Line
-
-Go to the **csharp** folder in a Command Prompt window and enter the following command:
-
-```bash
-dotnet run
-```
-
-![Dotnet](~/assets/images/Tab-ME-SSO/dotnet-run1.png)
-
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Build+and+run+service+using+Command+line)
-
----
-
-## Upload SSO App to Teams (Manual Steps)
-
-1. In your cloned repository, go to **csharp** > **App SSO Sample** > **TeamsAppManifest**.
-2. Create a .zip file with the following files that are present in the **Manifest** folder:
-   * manifest.json
-   * icon-outline.png
-   * icon-color.png
-
-   ![Screenshot of Manifest folder with tab manifest zip folder highlighted in red.](./assets/images/Tab-ME-SSO/upload-tab-me-sso-1.png)
-
-3. In the Teams client, select the **Apps** icon.
-4. Select **Manage your apps**.
-5. Select **Upload an app**.
-6. Look for the option to **Upload a custom app**. If you see the option, custom app upload is enabled.
-
-   ![Screenshot shows the upload a custom app.](~/assets/images/tab-device-permission/custom-upload.png)
-
-   > **Note:** Contact your Teams administrator, if you don't find the option to upload a custom app.
-
-7. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
-
-   ![Screenshot of Manifest folder with Open option to upload the Teams Bot zip file highlighted in red.](./assets/images/Tab-ME-SSO/upload-tab-me-sso-open-1.png)
-
-8. Select **Add**.
-
-   ![Screenshot of app details dialog to add tab SSO app.](./assets/images/Tab-ME-SSO/add-sso-app-1.png)
-
-9. Select **Open** and send a message to the bot.
-
-   ![Screenshot of scope selection dialog with Open option highlighted.](./assets/images/Tab-ME-SSO/open-sso-app.png)
-
-10. The bot performs SSO and displays profile card along with option prompt to view token.
-
-    ![Screenshot of the profile card received in Teams.](./assets/images/Tab-ME-SSO/Congratulation-image-1.png)
-
-11. Select **Yes** to view token or **No** to continue with chat.
-
-    ![Screenshot of the dialog to either select Yes or No.](./assets/images/Tab-ME-SSO/token-view1-1.png)
-
-12. If SSO isn't performed, then the bot performs default authentication method for your tab.
-
-    ![Screenshot of the default SSO page in Teams.](./assets/images/Tab-ME-SSO/not-login11-1.png)
-
-13. To sign in, if SSO isn't performed:
-    1. In the left pane of the Teams, select More added apps (●●●).
-    2. Select your new SSO application.
-
-       ![Screenshot of your app highlighted in red in Apps section.](./assets/images/Tab-ME-SSO/recent-app-sso-1.png)
-
-    3. Select **sign in**.
-
-       ![Screenshot of your app with sign in highlighted in red.](./assets/images/Tab-ME-SSO/sign-in-sso1-1.png)
-
-    4. Enter your credentials in **Sign in** window and select **Next**.
-
-       ![Screenshot of Microsoft Sign in page with Next highlighted in red.](./assets/images/Tab-ME-SSO/sign-in-box.png)
-
-    5. Select **Accept**.
-
-       ![Screenshot of Microsoft consent dialog with Accept highlighted in red.](./assets/images/Tab-ME-SSO/consent-box.png)
-
-    6. Select your profile under search box. You'll see the following output:
-
-       ![Screenshot of the selected profile.](./assets/images/Tab-ME-SSO/hello-megan-profile-1.png)
-
-14. Send `https://profile.botframework.com` to the application to get a profile card.
-
-    ![Screenshot of the selected profile after entering the URL.](./assets/images/Tab-ME-SSO/profile-card-1.png)
-
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Upload+SSO+app+to+Teams)
-
----
-
-## Complete Challenge (Final Step)
-
-Did you come up with output like this?
-
-![Screenshot of the output after you have successfully completed the step-by-step guide.](./assets/images/Tab-ME-SSO//hello-megan-profile245-1.png)
-
----
-
-You've completed the tutorial to get started with SSO for tab and message extension app.
+![Screenshot of the appsettings.json file with the values entered highlighted in red.](./assets/images/Tab-ME-SSO/app-setting.png)
 
 ### Set up Manifest File
 
@@ -341,7 +197,7 @@ You've completed the tutorial to get started with SSO for tab and message extens
 
 * Replace `resource` as `api://*******.ngrok.io/botid-{AppID}`.
 
-![Screenshot of the manifest.json file with the values entered highlighted in red.](~/assets/images/Tab-ME-SSO/vs-manifest.png)
+![Screenshot of the manifest.json file with the values entered highlighted in red.](./assets/images/Tab-ME-SSO/vs-manifest.png)
 
 ---
 
@@ -396,20 +252,20 @@ dotnet run
    * icon-outline.png
    * icon-color.png
 
-   ![Screenshot of Manifest folder with tab manifest zip folder highlighted in red.](./assets/images/Tab-ME-SSO/upload-tab-me-sso-1.png)
+   ![Screenshot of Manifest folder with tab manifest zip folder highlighted in red.](../../assets/images/Tab-ME-SSO/upload-tab-me-sso-1.png)
 
 3. In the Teams client, select the **Apps** icon.
 4. Select **Manage your apps**.
 5. Select **Upload an app**.
 6. Look for the option to **Upload a custom app**. If you see the option, custom app upload is enabled.
 
-   ![Screenshot shows the upload a custom app.](~/assets/images/tab-device-permission/custom-upload.png)
+   ![Screenshot shows the upload a custom app.](../../assets/images/tab-device-permission/custom-upload.png)
 
    > **Note:** Contact your Teams administrator, if you don't find the option to upload a custom app.
 
 7. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
-   ![Screenshot of Manifest folder with Open option to upload the Teams Bot zip file highlighted in red.](./assets/images/Tab-ME-SSO/upload-tab-me-sso-open-1.png)
+   ![Screenshot of Manifest folder with Open option to upload the Teams Bot zip file highlighted in red.](../../assets/images/Tab-ME-SSO/upload-tab-me-sso-open-1.png)
 
 8. Select **Add**.
 
@@ -433,28 +289,28 @@ dotnet run
 
     ### To sign in, if SSO isn't performed
 
-1. In the left pane of Teams, select **More added apps (●●●)**.
-2. Select your new SSO application.
+13. In the left pane of Teams, select **More added apps (●●●)**.
+14. Select your new SSO application.
 
    ![Screenshot of your app highlighted in red in Apps section.](./assets/images/Tab-ME-SSO/recent-app-sso-1.png)
 
-3. Select **sign in**.
+15. Select **sign in**.
 
    ![Screenshot of your app with sign in highlighted in red.](./assets/images/Tab-ME-SSO/sign-in-sso1-1.png)
 
-4. Enter your credentials in the **Sign in** window and select **Next**.
+16. Enter your credentials in the **Sign in** window and select **Next**.
 
    ![Screenshot of Microsoft Sign in page with Next highlighted in red.](./assets/images/Tab-ME-SSO/sign-in-box.png)
 
-5. Select **Accept**.
+17. Select **Accept**.
 
    ![Screenshot of Microsoft consent dialog with Accept highlighted in red.](./assets/images/Tab-ME-SSO/consent-box.png)
 
-6. Select your profile under the search box. You'll see the following output:
+18. Select your profile under the search box. You'll see the following output:
 
    ![Screenshot of the selected profile.](./assets/images/Tab-ME-SSO/hello-megan-profile-1.png)
 
-7. Send `https://profile.botframework.com` to the application to get a profile card.
+19. Send `https://profile.botframework.com` to the application to get a profile card.
 
    ![Screenshot of the selected profile after entering the URL.](./assets/images/Tab-ME-SSO/profile-card-1.png)
 
