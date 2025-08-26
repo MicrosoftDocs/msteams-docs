@@ -10,6 +10,8 @@ ms.date: 09/16/2024
 
 # Agents Toolkit Visual Studio Overview
 
+[!INCLUDE [Deprecation Note](../../includes/deprecation-note-teamsfxsdk.md)]
+
 Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) makes it simple to get started with app development for Microsoft Teams using Microsoft Visual Studio.
 
 * Start with a project template for common custom app built for your org (LOB app) scenarios or from a sample.
