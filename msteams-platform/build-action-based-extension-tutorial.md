@@ -426,13 +426,13 @@ You have successfully set up a bot in Azure Bot service.
     - Leave `"MicrosoftAppTenantId"` blank for MultiTenant bot.
     - Set `"BaseUrl"` to the fully qualified domain name.
 
-    ![Screenshot of appsettings JSON file displaying the appsettings information.](./assets/images/sbs-messagingextension-action/json-file.png)
+![Screenshot of appsettings JSON file displaying the appsettings information.](./assets/images/sbs-messagingextension-action/json-file.png)
 
 3. Go to the **manifest.json** file in the cloned repository.
 
-    ![Screenshot of Teams App Manifest folder with the file path and manifest file highlighted in red.](../../assets/images/sbs-messagingextension-action/manifestlocation.png)
+![Screenshot of Teams App Manifest folder with the file path and manifest file highlighted in red.](./assets/images/sbs-messagingextension-action/manifestlocation.png)
 
-4. Open the **manifest.json** file and make the following changes:
+1. Open the **manifest.json** file and make the following changes:
 
     - Replace the `<<validDomains>>` with your fully qualified domain name.
     - Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.

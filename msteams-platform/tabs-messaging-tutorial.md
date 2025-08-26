@@ -190,7 +190,7 @@ You can find the tunnel you've created in the debug dropdown list as follows:
 
 12. If a **Security Warning** dialog appears, select **Yes**.
 
-![Screenshot shows the tunnel is active and selected.](./assets/images/include-files/security-warning.png)
+![Screenshot shows the Security Warning dialog prompting the user to proceed.](./assets/images/include-files/security-warning.png)
 
 A pop-up window appears.
 
@@ -253,7 +253,7 @@ The window shows the HTTPS URL.
 
 8. Select **Save**.
 
-![Screenshot shows the option to add redirect uri and select implicit grant and hybrid flows.](./assets/images/include-files/web-add-uri.png)
+![Screenshot shows the Web section with the newly added URI for token.botframework.com.](./assets/images/include-files/web-add-uri.png)
 
 > [!div class="button"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+a+web+authentication)
