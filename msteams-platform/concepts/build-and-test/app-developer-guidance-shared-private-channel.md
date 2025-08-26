@@ -71,10 +71,8 @@ Before diving into implementation, learn about the different channel models avai
 
 > [!NOTE]
 >
-> * Currently, only apps that include tabs are supported in private and shared channels in Microsoft Teams.
-> * Tab apps in shared channels are available in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](../cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](../sovereign-cloud.md) environments.
-> * SharePoint and the SharePoint pages apps aren't supported for shared channels in GCC, GCC High, DoD, and Teams operated by 21Vianet environments.
-> * Bots and message extensions aren't supported in shared channels.
+> - Tab apps in shared channels are available in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](../cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](../sovereign-cloud.md) environments.
+> - SharePoint and the SharePoint pages apps aren't supported for shared channels in GCC, GCC High, DoD, and Teams operated by 21Vianet environments.
 
 In addition to channel models and capabilities, understand how your team app behaves in these environments.
 
@@ -462,7 +460,7 @@ To support shared and private channels, set supportsChannelFeatures = tier1.
 
 > [!NOTE]
 >
-> * This field might support other values in future iterations as feature support evolves.
+> - This field might support other values in future iterations as feature support evolves.
 
 Benefits of Declaring Tier1 Support:
 
@@ -579,9 +577,9 @@ Update your app manifest and permissions to support shared and private channels 
 
 > [!NOTE]
 >
-> * RSC permissions are optional.
-> * You can choose to use regular permissions instead.
-> * RSC is one way to access resources, and its use depends entirely on the app’s design.
+> - RSC permissions are optional.
+> - You can choose to use regular permissions instead.
+> - RSC is one way to access resources, and its use depends entirely on the app’s design.
 
 ### Privacy & Security
 
