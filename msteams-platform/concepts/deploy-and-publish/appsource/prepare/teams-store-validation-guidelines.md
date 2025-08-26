@@ -1105,7 +1105,7 @@ If your app includes a bot, ensure that it adheres to these guidelines.
 > For more information on creating a high-quality app experience, see [Teams bot design guidelines](~/bots/design/bots.md).
 
 </br>
-<details><summary>1. Bot design guidelines</summary>
+<details><summary>Bot design guidelines</summary>
 
 * Your Teams app must follow [Teams bot design guidelines](../../../../bots/design/bots.md).
 
