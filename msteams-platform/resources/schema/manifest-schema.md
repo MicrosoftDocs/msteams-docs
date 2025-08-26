@@ -1589,7 +1589,7 @@ The title used for the top of the callout.
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 | entryPoint | string | | ✔️ | Use text or cell here for Office context menu. Use text if the context menu should open when a user right-clicks on the selected text. Use cell if the context menu should open when the user right-clicks on a cell on an Excel spreadsheet. <br> Allowed values: `text`, `cell`. |
-| controls | Array of `extensionCommonCustomGroupControlsItem` | 1 | Configures the buttons and menus in the group. |
+| controls | Array of `extensionCommonCustomGroupControlsItem` | 1 | | Configures the buttons and menus in the group. |
 
 ### extensionRuntimeCode
 
