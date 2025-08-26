@@ -346,11 +346,11 @@ You have successfully set up a bot in Azure Bot service.
 
 2. Open the **appsettings.json** file in Visual Studio and update the following information:
 
-       * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
-       * Set `"MicrosoftAppPassword"` to your bot's client secret ID **value**.
-       * Set `ConnectionName` as OAuth connection name.
-       * Set `"MicrosoftAppType"` to **MultiTenant**.
-       * Set `"MicrosoftAppTenantId"` to **common**.
+       * Set MicrosoftAppId to your bot's **Microsoft App ID**.
+       * Set MicrosoftAppPassword to your bot's client secret ID **value**.
+       * Set ConnectionName as OAuth connection name.
+       * Set MicrosoftAppType to **MultiTenant**.
+       * Set MicrosoftAppTenantId to **common**.
 
 ![Screenshot shows the appsettings json.](./assets/images/teams-file-upload-bot/appsettings-json-bot-sso.png)
 
@@ -377,7 +377,7 @@ You have successfully set up a bot in Azure Bot service.
 
 3. From **bot-conversation-sso-quickstart** > **csharp_dotnetcore** folder, and select **BotConversationSsoQuickstart.sln** file.
 
-![Screenshot of Project file with the file path and BotSSOCSharp.csproj file highlighted in red.](./assets/images/bots/filepath_1.png.png)
+![Screenshot of Project file with the file path and BotSSOCSharp.csproj file highlighted in red.](./assets/images/bots/filepath_1.png)
 
 4. Select **F5**  to run the project.
 
