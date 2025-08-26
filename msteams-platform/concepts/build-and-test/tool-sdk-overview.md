@@ -5,7 +5,7 @@ description: Learn more about the tools such as Microsoft 365 Agents Toolkit, Ag
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.date: 08/26/2024
+ms.date: 08/26/2025
 ---
 
 # Tools and SDKs
