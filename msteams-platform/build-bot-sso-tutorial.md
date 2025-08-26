@@ -206,7 +206,6 @@ Create an Azure bot resource.
 ![Screenshot shows the option resource group and subscription in the Azure portal.](./assets/images/include-files/create-azure-bot.png)
 
 If you don't have an existing resource group, you can create a new resource group. To create a new resource group, follow these steps:
-
     a. Select **Create new**.
     b. Enter the resource name and select **OK**.
     c. Select a location from **New resource group location** dropdown list.
@@ -270,7 +269,7 @@ The bot takes a few minutes to provision.
 
 ### To add a messaging endpoint
 
-# [dev tunnel](#tab/dev)
+# [dev tunnel](#tab/dev2)
 
 1. Use the dev tunnel URL in the **Output** console as the messaging endpoint.
 
@@ -289,7 +288,7 @@ You've successfully set up a bot in Azure Bot service.
 > [!NOTE]
 > If the **Application Insights Instrumentation key** shows an error, update with **App ID**.
 
-# [ngrok](#tab/ngrok)
+# [ngrok](#tab/ngrok2)
 
 1. From ngrok, copy the HTTPS URL.
 
@@ -345,12 +344,11 @@ You have successfully set up a bot in Azure Bot service.
 ![Screenshot shows the location of appsettings json file.](./assets/images/teams-file-upload-bot/appsettings-file-location-bot-sso.png)
 
 2. Open the **appsettings.json** file in Visual Studio and update the following information:
-
-       * Set MicrosoftAppId to your bot's **Microsoft App ID**.
-       * Set MicrosoftAppPassword to your bot's client secret ID **value**.
-       * Set ConnectionName as OAuth connection name.
-       * Set MicrosoftAppType to **MultiTenant**.
-       * Set MicrosoftAppTenantId to **common**.
+    * Set MicrosoftAppId to your bot's **Microsoft App ID**.
+    * Set MicrosoftAppPassword to your bot's client secret ID **value**.
+    * Set ConnectionName as OAuth connection name.
+    * Set MicrosoftAppType to **MultiTenant**.
+    * Set MicrosoftAppTenantId to **common**.
 
 ![Screenshot shows the appsettings json.](./assets/images/teams-file-upload-bot/appsettings-json-bot-sso.png)
 
@@ -414,13 +412,12 @@ If you get the **Unable to find package** error, follow these steps:
 
 ## Upload the bot in Teams
 
-1. In your cloned repository, go to **Microsoft-Teams-Samples** > **samples** > **bot-conversation-sso-quickstart** > **csharp_dotnetcore** > **TeamsApp** > **appPackage**. 
+1. In your cloned repository, go to **Microsoft-Teams-Samples** > **samples** > **bot-conversation-sso-quickstart** > **csharp_dotnetcore** > **TeamsApp** > **appPackage**.
 
-2. Create a .zip file with the following files that are present in the **appPackage** folder: 
-
-        * manifest.json
-        * outline.png
-        * color.png
+2. Create a .zip file with the following files that are present in the **appPackage** folder:
+    * manifest.json
+    * outline.png
+    * color.png
 
 ![Screenshot of Manifest folder with the Teams Bot zip folder highlighted in red.](./assets/images/bots/manifest.png)
 

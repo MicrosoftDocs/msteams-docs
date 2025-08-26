@@ -367,7 +367,7 @@ You've successfully created your Azure bot.
 
 ## To add a messaging endpoint
 
-# [dev tunnel](#tab/dev)
+# [dev tunnel](#tab/dev2)
 
 1. Use the dev tunnel URL in the **Output** console as the messaging endpoint.
 
@@ -386,7 +386,7 @@ You've successfully created your Azure bot.
 > [!NOTE]
 > If the **Application Insights Instrumentation key** shows an error, update with **App ID**.
 
-# [ngrok](#tab/ngrok)
+# [ngrok](#tab/ngrok2)
 
 1. From ngrok, copy the HTTPS URL.
 
