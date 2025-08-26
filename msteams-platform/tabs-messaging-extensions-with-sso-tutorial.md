@@ -145,7 +145,7 @@ Your app is registered in Microsoft Entra ID. The app overview page appears.
 
 4. Select **Next**.
 
-![Screenshot shows the search and selection of the template.](./assets/images/include-files/createmplate-search.png)
+![Screenshot shows the search and selection of the template.](./assets/images/include-files/template-search.png)
 
 5. Enter **Project name** and select **Next**.
 
@@ -312,7 +312,7 @@ The **Add a client secret** window appears.
 
 2. Next to **Application ID URI**, select **Add**.
 
-![Screenshot shows the option to add Application ID URI.](../msteams-platform/assets/images/teams-file-upload-bot/expose-api-add.png)
+![Screenshot shows the option to add Application ID URI.](./assets/images/include-files/expose-api-add.png)
 
 3. Update the **Application ID URI** in the `api://your-devtunnel-domain/botid-{AppID}` or `api://your-ngrok-domain/botid-{AppID}` format and select **Save**.
 
@@ -320,7 +320,7 @@ The **Add a client secret** window appears.
 
 The following image shows the domain name:
 
-![Screenshot shows the redirect uri.](../msteams-platform/assets/images/teams-file-upload-bot/app-id-uri-output.png)
+![Screenshot shows the redirect uri.](../msteams-platform/assets/images/include-files/app-id-uri-output.png)
 
 > [!div class="button"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+Application+ID+URI)
@@ -331,7 +331,7 @@ The following image shows the domain name:
 
 2. Select **+ Add a scope**.
 
-![Screenshot shows the selection to Add a Scope.](../msteams-platform/assets/images/teams-file-upload-bot/select-add-scope.png)
+![Screenshot shows the selection to Add a Scope.](./assets/images/include-files/select-add-scope.png)
 
 3. Enter **access_as_user** as the **Scope name**.
 
@@ -401,8 +401,6 @@ The following image displays the **Client Id**:
 1. In the left pane, select **Manifest**.
 
 2. Set the value for the `requestedAccessTokenVersion` to `2` and select **Save**.
-
-:::image type="content" source="../../assets/images/include-files/manifest-token.png" alt-text="Screenshot shows the manifest option and accesstoken details in Azure portal.":::
 
 ![Screenshot shows the manifest option and accesstoken details in Azure portal.](./assets/images/include-files/manifest-token.png)
 

@@ -114,7 +114,7 @@ Your app is registered in Microsoft Entra ID. The app overview page appears.
 
 5. Select **Configure**.
 
-![Screenshot shows the option to add redirect uri and select implicit grant and hybrid flows](../../assets/images/include-files/configure-web.png)
+![Screenshot shows the option to add redirect uri and select implicit grant and hybrid flows.](../../assets/images/include-files/configure-web.png)
 
 6. Under **Web**, select **Add URI**.
 
@@ -122,7 +122,7 @@ Your app is registered in Microsoft Entra ID. The app overview page appears.
 
 8. Select **Save**.
 
-![Screenshot shows the option to add redirect uri and select implicit grant and hybrid flows](../../assets/images/include-files/web-add-uri.png)
+![Screenshot shows web settings page showing add URI fields.](../../assets/images/include-files/web-add-uri.png)
 
 [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+a+web+authentication&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meetingextension-action%3Ftabs%3Ddev%252Clatestversionofvisualstudio%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-meetingextension-action.yml&documentVersionIndependentId=53b6fe7f-5051-d9d3-57e4-1d339c25ad65&platformId=28e8e36c-27eb-6659-de89-1d9872d985a0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
@@ -143,9 +143,9 @@ The **Add a client secret** window appears.
 
 4. Select **Add**.
 
-![Screenshot show the client secret description option to add](../../assets/images/include-files/dd-client-secret.png)
+![Screenshot show the client secret description option to add](../../assets/images/authentication/teams-sso-bots/add-client-secret.png)
 
-5. Under **Value**, select **Copy to clipboard** to save the client secret value for further use.
+1. Under **Value**, select **Copy to clipboard** to save the client secret value for further use.
 
 ![Screenshot show the option to copy the client secret ID value to copy value to clipboard](../../assets/images/include-files/client-secret-value.png)
 
@@ -365,14 +365,54 @@ You've successfully created your Azure bot.
 
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+a+Teams+channel&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meetingextension-action%3Ftabs%3Ddev%252Clatestversionofvisualstudio%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-meetingextension-action.yml&documentVersionIndependentId=53b6fe7f-5051-d9d3-57e4-1d339c25ad65&platformId=28e8e36c-27eb-6659-de89-1d9872d985a0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
-[Messaging endpoint](includes/get-started/messaging-endpoint.md)
+## To add a messaging endpoint
 
-> [!div class="nextstepaction"]
+# [dev tunnel](#tab/dev)
+
+1. Use the dev tunnel URL in the **Output** console as the messaging endpoint.
+
+![Screenshot shows the url in the Visual studio output console.](../../assets/images/include-files/output-console-url.png)
+
+2. In the left pane, under **Settings**, select **Configuration**.
+
+3. Update the **Messaging endpoint** in the format `https://your-devtunnel-domain/api/messages`.
+
+![Screenshot shows the messaging endpoint adding api.](../../assets/images/include-files/devtunnels-messaging-endpoint.png)
+
+4. Select **Apply**.
+
+    You've successfully set up a bot in Azure Bot service.
+
+> [!NOTE]
+> If the **Application Insights Instrumentation key** shows an error, update with **App ID**.
+
+# [ngrok](#tab/ngrok)
+
+1. From ngrok, copy the HTTPS URL.
+
+![Screenshot shows the ngrok HTTPS URL.](../../assets/images/include-files/ngrok-url.png)
+
+> [!NOTE]
+> The HTTPS URL in your ngrok is a fully qualified domain name.
+> The `WebAppDomain` is a fully qualified domain name that doesn't include `https://` in it.
+
+2. In the left pane, under **Settings**, select **Configuration**.
+
+3. Update the **Messaging endpoint** in the format `https://your-ngrok-domain/api/messages`.
+
+![Screenshot shows the messaging endpoint adding api.](../../assets/images/include-files/ngrok-messaging-endpoint.png)
+
+4. Select **Apply**.
+
+You have successfully set up a bot in Azure Bot service.
+
+> [!NOTE]
+> If the **Application Insights Instrumentation key** shows an error update with **App ID**.
+
+> [!div class="button"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+a+messaging+endpoint&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meetingextension-action%3Ftabs%3Ddev%252Clatestversionofvisualstudio%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-meetingextension-action.yml&documentVersionIndependentId=53b6fe7f-5051-d9d3-57e4-1d339c25ad65&platformId=28e8e36c-27eb-6659-de89-1d9872d985a0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Set up app settings and manifest files
-
-**Estimated Duration**: 1 minute
 
 1. Go to the **appsettings.json** file in cloned repository.
 
