@@ -728,10 +728,10 @@ System‑generated metadata. This information is maintained by Microsoft service
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-| source | string | | ✔️ | The partner source through which the bot is registered. System‑generated metadata. This information is maintained by Microsoft services and must not be modified manually. |
-| environment | string | 128 | | A Power Platform environment that serves as a container for building apps under a Microsoft 365 tenant and can only be accessed by users within that tenant. System‑generated metadata. This information is maintained by Microsoft services and must not be modified manually. |
-| schemaName | string | 128 | | The Copilot Studio copilot schema name. System‑generated metadata. This information is maintained by Microsoft services and must not be modified manually. |
-| clusterCategory | string | 128 | | The core services cluster category for Copilot Studio copilots. System‑generated metadata. This information is maintained by Microsoft services and must not be modified manually. |
+| `source` | string | | ✔️ | The partner source through which the bot is registered. System‑generated metadata. This information is maintained by Microsoft services and must not be modified manually. Allowed values: `standard`, `microsoftCopilotStudio`, `onedriveSharepoint`. |
+| `environment` | string | 128 | | A Power Platform environment that serves as a container for building apps under a Microsoft 365 tenant and can only be accessed by users within that tenant. System‑generated metadata. This information is maintained by Microsoft services and must not be modified manually. |
+| `schemaName` | string | 128 | | The Copilot Studio copilot schema name. System‑generated metadata. This information is maintained by Microsoft services and must not be modified manually. |
+| `clusterCategory` | string | 128 | | The core services cluster category for Copilot Studio copilots. System‑generated metadata. This information is maintained by Microsoft services and must not be modified manually. |
 
 ## connectors
 
@@ -824,7 +824,7 @@ An object representing a specific functionality that a host must support.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-| name | string | | ✔️ | The name of the functionality. <br> Allowed values: `dialogUrl`, `dialogUrlBot`, `dialogAdaptiveCard`, `dialogAdaptiveCardBot`. |
+| `name` | string | | ✔️ | The name of the functionality. <br> Allowed values: `dialogUrl`, `dialogUrlBot`, `dialogAdaptiveCard`, `dialogAdaptiveCardBot`. |
 
 ## permissions
 
@@ -900,7 +900,7 @@ By including this property, an NAA token based on its contents will be prefetche
 |---|---|---|---|---|
 | `redirectUri` | string | | ✔️ | Represents the nested app's valid redirect URI (always a base origin). |
 | scopes | Array of string | 20 | ✔️ | Represents the stringified list of scopes the access token requested requires. Order must match that of the proceeding NAA request in the app. |
-| claims | string | 1 | | An optional JSON formatted object of client capabilities that represents if the resource server is CAE capable. Do not use an empty string for this value. If unsupported, keep the field undefined. If supported, use the following string exactly: {"access_token":{"xms_cc":{"values":["CP1"]}}}. For more information on client capabilities, see [How to communicate client capabilities to Microsoft Entra ID](/entra/identity-platform/claims-challenge?tabs=dotnet#how-to-communicate-client-capabilities-to-microsoft-entra-id).
+| `claims` | string | 1 | | An optional JSON formatted object of client capabilities that represents if the resource server is CAE capable. Do not use an empty string for this value. If unsupported, keep the field undefined. If supported, use the following string exactly: {"access_token":{"xms_cc":{"values":["CP1"]}}}. For more information on client capabilities, see [How to communicate client capabilities to Microsoft Entra ID](/entra/identity-platform/claims-challenge?tabs=dotnet#how-to-communicate-client-capabilities-to-microsoft-entra-id).
 
 ## graphConnector
 
@@ -910,7 +910,7 @@ Specify the app's Graph connector configuration. If this is present, then [webAp
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`notificationUrl`|String|2048 characters|✔️|The url where Graph-connector notifications for the application should be sent.|
+|`notificationUrl`|String|2048 characters|✔️|The url where Graph-connector notifications for the application should be sent. The string must start with `https://`|
 
 ## showLoadingIndicator
 
@@ -1192,16 +1192,16 @@ The `extensions` property specifies Outlook Add-ins within an app manifest and s
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`requirements`| Object | | | Specifies the set of client or host requirements for the extension. |
+|`requirements`| Array of `requirementsExtensionElement` | | | Specifies the set of client or host requirements for the extension. |
 |`runtimes`| Array | 20 | | Configures the set of runtimes and actions that can be used by each extension point. For more information, see [runtimes in Office Add-ins](/office/dev/add-ins/testing/runtimes). |
 |`ribbons`| Array | 20 | | Defines the ribbons extension point. |
 |`autoRunEvents`| Array | 10 | | Defines the event-based activation extension point. |
 |`alternates`| Array | | 10 | Specifies the relationship to alternate existing Microsoft 365 solutions. It's used to hide or prioritize add-ins from the same publisher with overlapping functionality. |
 |`audienceClaimUrl`| String | 2048 characters | | Specifies the URL for your extension and is used to validate Exchange user identity tokens. For more information, see [inside the Exchange identity token](/office/dev/add-ins/outlook/inside-the-identity-token)|
-| `contentRuntimes` | Array of extensionContentRuntimeArray | Minimum array items: 1 | | Configures a page of content that is embedded in an Excel or PowerPoint document. |
-| `getStartedMessages` | Array of extensionGetStartedMessageArray | Minimum array items: 1 <br> Maximum array items: 3 | | Provides information used by the callout that appears when the add-in is installed. |
-| `contextMenus` | Array of extensionContextMenuArray | Minimum array items: 1 | | Specifies the context menus for your extension. A context menu is a shortcut menu that appears when a user right-clicks (selects and holds) in the Office UI. Min size 1.|
-| `keyboardShortcuts` | Array of extensionKeyboardShortcut | Minimum array items: 1 <br> Maximum array items: 10 | | Keyboard shortcuts, also known as key combinations, enable your add-in's users to work more efficiently. Keyboard shortcuts also improve the add-in's accessibility for users with disabilities by providing an alternative to the mouse. |
+| `contentRuntimes` | Array of `extensionContentRuntimeArray` | Minimum array items: 1 | | Configures a page of content that is embedded in an Excel or PowerPoint document. |
+| `getStartedMessages` | Array of `extensionGetStartedMessageArray` | Minimum array items: 1 <br> Maximum array items: 3 | | Provides information used by the callout that appears when the add-in is installed. |
+| `contextMenus` | Array of `extensionContextMenuArray` | Minimum array items: 1 | | Specifies the context menus for your extension. A context menu is a shortcut menu that appears when a user right-clicks (selects and holds) in the Office UI. Min size 1.|
+| `keyboardShortcuts` | Array of `extensionKeyboardShortcut` | Minimum array items: 1 <br> Maximum array items: 10 | | Keyboard shortcuts, also known as key combinations, enable your add-in's users to work more efficiently. Keyboard shortcuts also improve the add-in's accessibility for users with disabilities by providing an alternative to the mouse. |
 
 For more information, see [Office Add-ins manifest for Microsoft 365](/office/dev/add-ins/develop/unified-manifest-overview).
 
@@ -1250,7 +1250,6 @@ The `extensions.runtimes` array configures the sets of runtimes and actions that
 |`requirements.capabilities.maxVersion`| String | | | Identifies the maximum version for the requirement set. |
 |`requirements.scopes`| Array of enums | 4 | | Identifies the scopes in which the add-in can run and defines the Microsoft 365 applications in which the extension can run. For example, `mail` (Outlook). <br>Supported value: `mail` |
 |`requirements.formFactors`| Array of enums |2 | | Identifies the form factors that support the add-in. <br>Supported values: `mobile`, `desktop`|
-| customFunctions | Array | | | Custom function enable developers to add new functions to Excel by defining those functions in JavaScript as part of an add-in.|
 
 To use `extensions.runtimes`, see [create add-in commands](/office/dev/add-ins/develop/create-addin-commands-unified-manifest), [configure the runtime for a task pane](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-runtime-for-the-task-pane-command), and [configure the runtime for the function command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-runtime-for-the-function-command).
 
@@ -1260,8 +1259,8 @@ Custom function enable developers to add new functions to Excel by defining thos
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-| functions | Array of `extensionFunction` | | ✔️ | Array of function object which defines function metadata. |
-| namespace | Array of `extensionCustomFunctionsNamespace` | | ✔️ | Defines the namespace for your custom functions. |
+| `functions` | Array of `extensionFunction` | | ✔️ | Array of function object which defines function metadata. |
+| `namespace` | Array of `extensionCustomFunctionsNamespace` | | ✔️ | Defines the namespace for your custom functions. |
 | `allowCustomDataForDataTypeAny` | boolean | | | Allows a custom function to accept Excel data types as parameters and return values. Default value: `False`. |
 
 ### extensionCustomFunctionsNamespace
@@ -1272,9 +1271,11 @@ Defines the namespace for your custom functions. A namespace prepends itself to 
 |---|---|---|---|---|
 | id | string | Minimum string length: 1. <br> Maximum string length: 32. | ✔️ | Non-localizeable version of the namespace. The string value must start with a letter and can contain only letters, numbers, periods, and underscores.|
 | name | string | Minimum string length: 1. <br> Maximum string length: 32. | ✔️ | Localizeable version of the namespace. The string value must start with a letter and can contain only letters, numbers, periods, and underscores. |
+<!--
 | description | string | Minimum string length: 1. <br> Maximum string length: 128. | The description of the function that end users see in Excel. |
 | helpUrl | string | Minimum string length: 1. <br> Maximum string length: 2048. | | URL that provides information about the function. (It is displayed in a task pane. |
 | parameters | Array of `extensionFunctionParameter` |  | ✔️ | Array that defines the input parameters for the function. |
+-->
 
 ### extensionFunction
 
@@ -1282,15 +1283,15 @@ Array of function object which defines function metadata.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-| id | string | Minimum string length: 3. <br> Maximum string length: 64. | ✔️ | A unique ID for the function. <br> The string value must start with a letter and can contain only letters, numbers, periods, and underscores. |
-| name | string | Minimum string length: 3. <br> Maximum string length: 64. | ✔️ | The name of the function that end users see in Excel. In Excel, this function name is prefixed by the custom functions namespace that's specified in the manifest file. <br> The string value must start with a letter and can contain only letters, numbers, periods, and underscores. |
-|description | string | Minimum string length: 1. <br> Maximum string length: 128. | | The description of the function that end users see in Excel. |
-| helpUrl | string | Minimum string length: 1. <br> Maximum string length: 2048. | | URL that provides information about the function. (It is displayed in a task pane.) |
-| parameters | Array of `extensionFunctionParameter` | Maximum array items: 128 | ✔️ | Array that defines the input parameters for the function. |
+| `id` | string | Minimum string length: 3. <br> Maximum string length: 64. | ✔️ | A unique ID for the function. <br> The string value must start with a letter and can contain only letters, numbers, periods, and underscores. |
+| `name` | string | Minimum string length: 3. <br> Maximum string length: 64. | ✔️ | The name of the function that end users see in Excel. In Excel, this function name is prefixed by the custom functions namespace that's specified in the manifest file. <br> The string value must start with a letter and can contain only letters, numbers, periods, and underscores. |
+|`description` | string | Minimum string length: 1. <br> Maximum string length: 128. | | The description of the function that end users see in Excel. |
+| `helpUrl` | string | Minimum string length: 1. <br> Maximum string length: 2048. | | URL that provides information about the function. (It's displayed in a task pane.) |
+| `parameters` | Array of `extensionFunctionParameter` | Maximum array items: 128 | ✔️ | Array that defines the input parameters for the function. |
 | result | Array of `extensionResult` | | ✔️ | Object that defines the type of information that is returned by the function. |
-| stream | boolean | | | If true, the function can output repeatedly to the cell even when invoked only once. This option is useful for rapidly-changing data sources, such as a stock price. The function should have no return statement. Instead, the result value is passed as the argument of the `StreamingInvocation.setResult` callback function. |
-| volatile | boolean | | | If true, the function recalculates each time Excel recalculates, instead of only when the formula's dependent values have changed. A function can't use both the stream and volatile properties. If the stream and volatile properties are both set to true, the volatile property will be ignored. <br> Default value: `False`. |
-| cancelable | boolean | | | If true, Excel calls the CancelableInvocation handler whenever the user takes an action that has the effect of canceling the function; for example, manually triggering recalculation or editing a cell that is referenced by the function. Cancelable functions are typically only used for asynchronous functions that return a single result and need to handle the cancellation of a request for data. A function can't use both the stream and cancelable properties. <br> Default value: `False`. |
+| `stream` | boolean | | | If true, the function can output repeatedly to the cell even when invoked only once. This option is useful for rapidly-changing data sources, such as a stock price. The function should have no return statement. Instead, the result value is passed as the argument of the `StreamingInvocation.setResult` callback function. |
+| `volatile` | boolean | | | If true, the function recalculates each time Excel recalculates, instead of only when the formula's dependent values have changed. A function can't use both the stream and volatile properties. If the stream and volatile properties are both set to true, the volatile property will be ignored. <br> Default value: `False`. |
+| `cancelable` | boolean | | | If true, Excel calls the CancelableInvocation handler whenever the user takes an action that has the effect of canceling the function; for example, manually triggering recalculation or editing a cell that is referenced by the function. Cancelable functions are typically only used for asynchronous functions that return a single result and need to handle the cancellation of a request for data. A function can't use both the stream and cancelable properties. <br> Default value: `False`. |
 | `requiresAddress` | boolean | | | If true, your custom function can access the address of the cell that invoked it. The address property of the invocation parameter contains the address of the cell that invoked your custom function. A function can't use both the stream and requiresAddress properties. <br> Default value: `False`. |
 | `requiresParameterAddress` | boolean | | | If true, your custom function can access the addresses of the function's input parameters. This property must be used in combination with the dimensionality property of the result object, and dimensionality must be set to matrix. <br> Default value: `False`. |
 
