@@ -10,9 +10,6 @@ ms.date: 01/24/2025
 
 # TeamsFx SDK
 
-> [!IMPORTANT]
-> The TeamsFx SDK will be fully deprecated by **September 2026**. During the deprecation period, it will continue to receive maintenance updates. However, we strongly recommend migrating to the **Microsoft 365 Agents SDK**, which offers long-term support for Teams app development.
-
 TeamsFx helps to reduce your tasks by using Microsoft Teams single sign-on (SSO) and accessing cloud resources down to single line statements with zero configuration. You can use TeamsFx SDK in the browser and Node.js environments. TeamsFx core functionalities can be accessed in client and server environments. You can write user authentication code for:
 
 * Teams tab
