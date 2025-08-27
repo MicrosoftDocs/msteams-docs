@@ -34,7 +34,7 @@ Microsoft Teams needs two assets during app submission to generate the app icons
 
 ### Color icon architecture
 
-The color app icon dimensions must be 192 x 192 pixels. If you have a logo icon, the logo needs to fit within the 96 x 96 safe area in the center.
+The color app icon dimensions must be 192 x 192 pixels. If you have a logo icon, the logo needs to fit within the 120 x 120 safe area in the center.
 
 The submitted icon must be a full square. Teams automatically applies masking for consistent icon shapes across the app.
 
