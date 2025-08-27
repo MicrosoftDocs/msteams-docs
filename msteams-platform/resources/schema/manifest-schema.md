@@ -1454,7 +1454,7 @@ Configures the items for a menu control.
 |`supertip`| Array | | ✔️ | Configures a supertip for the menu item. <br> A supertip is a UI feature that displays a brief box of help information about a control when the cursor hovers over it. The box may contain multiple lines of text. |
 |`actionId`| String | 64 characters | ✔️ | Specifies the ID of the action that is taken when a user selects the control or menu item. The `actionId` must match with some `runtimes.actions.id` property value. |
 |`enabled`| Boolean | | | Indicates whether the menu item is initially enabled. <br> Default value: `true`.|
-|`overriddenByRibbonApi`| Boolean | | | Specifies whether the menu item is hidden on application and platform combinations which support the API [Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon?view=common-js-preview). This API installs custom contextual tabs on the ribbon. <br> Default value: `false`.|
+|`overriddenByRibbonApi`| Boolean | | | Specifies whether the menu item is hidden on application and platform combinations which support the API [Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon?view=common-js-preview&preserve-view=true). This API installs custom contextual tabs on the ribbon. <br> Default value: `false`.|
 
 #### extensionRibbonsCustomMobileControlButtonItem
 
