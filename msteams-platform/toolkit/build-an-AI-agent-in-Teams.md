@@ -46,17 +46,21 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
 
    # [Build new](#tab/buildnew)
 
-    1. Select **Build New**.
+    1. Select **Build from Scratch**.
 
        :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/build-new.png" alt-text="Screenshot shows the option to select the available AI agents.":::
+
+    1. Select **Azure OpenAI** or **OpenAI**.
+
+       :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/azure-openai.png" alt-text="Screenshot shows the option to select the LLM.":::
+
+    1. Enter your **Azure OpenAI** or **OpenAI** credentials based on the service you select. Select **Enter**.
+
+       :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/azure-open-api-key-optional.png" alt-text="Screenshot shows the location to enter Azure open API key.":::
 
     1. Select **JavaScript**.
 
        :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/language-javascript.png" alt-text="Screenshot shows the option to select the programming language.":::
-
-    1. By default **OpenAI** service gets selected, you can optionally enter the credentials to access OpenAI. Select **Enter**.
-
-       :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/azure-open-api-key-optional.png" alt-text="Screenshot shows the location to enter Azure open API key.":::
 
     1. Select **Default folder**.
 
@@ -134,15 +138,6 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
 
        :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/build-assistants-api.png" alt-text="Screenshot shows the option to select the available AI agents.":::
 
-    1. Select **JavaScript**.
-
-       :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/language-javascript.png" alt-text="Screenshot shows the option to select the programming language.":::
-
-       > [!NOTE]
-       >
-       > * If the building agent is selected as Build with Assistants API, Azure OpenAI service has not provided support for Assistants API.
-       > * The `AssistantsPlanner` in Teams AI Library is in preview.
-
     1. Select **Azure OpenAI** or **OpenAI**.
 
        :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/azure-openai.png" alt-text="Screenshot shows the option to select the LLM.":::
@@ -151,7 +146,14 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
 
        :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/azure-open-api-key-optional.png" alt-text="Screenshot shows the location to enter Azure open API key.":::
 
-    1. Select **Enter**.
+    1. Select **JavaScript**.
+
+       :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/language-javascript.png" alt-text="Screenshot shows the option to select the programming language.":::
+
+       > [!NOTE]
+       >
+       > * If the building agent is selected as Build with Assistants API, Azure OpenAI service has not provided support for Assistants API.
+       > * The `AssistantsPlanner` in Teams AI Library is in preview.
 
     1. Select **Default folder**.
 
