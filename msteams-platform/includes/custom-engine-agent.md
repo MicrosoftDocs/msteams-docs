@@ -2,7 +2,7 @@
 >
 > ### Add support for Microsoft 365 Copilot Chat in your custom engine agent
    >
-   > If you want your custom engine agent to support Microsoft 365 Copilot Chat, you must [install a prerelease version of Microsoft 365 Agents Toolkit](../toolkit/install-Teams-Toolkit.md#install-a-prerelease-version) (previously known as Teams Toolkit). After you install the prerelease version, follow these steps:
+   > If you want your custom engine agent to support Microsoft 365 Copilot Chat, you must install [Microsoft 365 Agents Toolkit] (../toolkit/install-Teams-Toolkit.md#install-agents-toolkit-for-visual-studio-code). After you install the Agents Toolkit, follow these steps:
    >
    > 1. Ensure that you enable **Fx-extension: Enable Custom Engine Agent** in Agents Toolkit.
    >
@@ -25,7 +25,7 @@
    >      
    >        ```
 >
-   >     * Ensure that the `scopes` is set as `personal` for `bots` and `commandLists`:
+   >     * Ensure that the `scopes` is set as `copilot` for `bots` and `commandLists`:
    >
    >        ```json
    >        "bots": [ 
@@ -33,12 +33,13 @@
    >              "botId": "<Bot-Id-Guid>", 
    >              "scopes": [
    >                  "personal",
+   >                  "copilot",
    >                  "team",
    >                  "groupChat"
    >              ],
    >              "commandLists": [ 
    >                 { 
-   >                 "scopes": ["personal"], 
+   >                 "scopes": ["personal", "copilot"], 
    >                 "commands": [ 
    >                    { 
    >                       "title": "Sample prompt title", 
@@ -47,7 +48,7 @@
    >                 ] 
    >                 }, 
    >                 { 
-   >                 "scopes": ["personal"], 
+   >                 "scopes": ["personal","copilot"], 
    >                 "commands": [ 
    >                    { 
    >                       "title": "Sample prompt title", 
