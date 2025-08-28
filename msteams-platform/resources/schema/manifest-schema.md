@@ -156,6 +156,7 @@ The following is the sample app manifest schema:
                 {
                     "scopes": [
                         "team",
+                        "personal",
                         "groupChat",
                         "copilot"
                     ],
@@ -167,23 +168,6 @@ The following is the sample app manifest schema:
                         {
                             "title": "Command 2",
                             "description": "Description of Command 2"
-                        }
-                    ]
-                },
-                {
-                    "scopes": [
-                        "personal",
-                        "groupChat",
-                        "copilot"
-                    ],
-                    "commands": [
-                        {
-                            "title": "Personal command 1",
-                            "description": "Description of Personal command 1"
-                        },
-                        {
-                            "title": "Personal command N",
-                            "description": "Description of Personal command N"
                         }
                     ]
                 }
