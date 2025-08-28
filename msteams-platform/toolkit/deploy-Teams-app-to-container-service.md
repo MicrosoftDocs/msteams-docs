@@ -23,7 +23,9 @@ Before you get started, ensure that you have the following tools:
 * Azure Command Line Interfaces (CLI) for Azure Container Apps or AKS deployment.
 
 > [!NOTE]
-> The commands in the article are based on Git Bash. If you're using any other interface, update the commands as required.
+>
+> * The commands in the article are based on Git Bash. If you're using any other interface, update the commands as required.
+> * When deploying to a container service, make sure to configure the required environment variables as described in [Configure authentication in a JavaScript agent](/microsoft-365/agents-sdk/azure-bot-authentication-for-javascript).
 
 ## Deploy to Azure Container Apps
 
@@ -231,7 +233,6 @@ To provision resources with Agents Toolkit, follow these steps:
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Provision%20resources%20with%20Agents%20Toolkit&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdeploy-teams-app-to-container-service%23provision-resources-with-agents-toolkit-1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdeploy-Teams-app-to-container-service.md&documentVersionIndependentId=1276497c-0a84-5a91-c324-3cedca1a2298&author=@MuyangAmigo&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
-
 ### Apply the deployment
 
 The sample includes a deployment file, `deploy/sso-bot.yaml`, for your guidance.
@@ -256,7 +257,6 @@ The sample includes a deployment file, `deploy/sso-bot.yaml`, for your guidance.
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Apply%20the%20deployment&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdeploy-teams-app-to-container-service%23apply-the-deployment-1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdeploy-Teams-app-to-container-service.md&documentVersionIndependentId=1276497c-0a84-5a91-c324-3cedca1a2298&author=@MuyangAmigo&platformId=8ae13e5c-94df-7fba-25ee-15dfb5b8117c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
-
 
 ## Deploy Teams tab app to Kubernetes
 
