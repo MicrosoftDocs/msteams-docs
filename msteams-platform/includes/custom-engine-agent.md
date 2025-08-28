@@ -32,7 +32,7 @@
    >           { 
    >              "botId": "<Bot-Id-Guid>", 
    >              "scopes": [
-                     "personal",
+   >                  "personal",
    >                  "copilot",
    >                  "team",
    >                  "groupChat"
