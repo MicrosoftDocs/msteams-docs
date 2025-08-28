@@ -25,7 +25,7 @@ Before you get started, ensure that you have the following tools:
 > [!NOTE]
 >
 > * The commands in the article are based on Git Bash. If you're using any other interface, update the commands as required.
-> * When deploying to a container service, make sure to configure the required environment variables as described in [Configure authentication in a JavaScript agent](/microsoft-365/agents-sdk/azure-bot-authentication-for-javascript).
+> * When deploying to a container service, make sure to configure the required environment variables as described in [configure authentication in a JavaScript agent](/microsoft-365/agents-sdk/azure-bot-authentication-for-javascript).
 
 ## Deploy to Azure Container Apps
 
