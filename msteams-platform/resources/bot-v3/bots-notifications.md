@@ -37,11 +37,11 @@ The following table lists the events that your bot can receive and take action o
 
 ## Team member or bot addition
 
-The [`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0&preserve-view=true#conversationupdate) event is sent to your bot when it receives information on membership updates for teams where it has been added. It also receives an update when it has been added for the first time specifically for personal conversations. The user information (`Id`) is unique for your bot and can be cached for future use by your service, such as, sending a message to a specific user.
+The [`conversationUpdate`](/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0&preserve-view=true#conversationupdate) event is sent to your bot when it receives information on membership updates for teams where it is added. It also receives an update when it is added for the first time specifically for personal conversations. The user information (`Id`) is unique for your bot and can be cached for future use by your service, such as, sending a message to a specific user.
 
 ### Bot or user added to a team
 
-The `conversationUpdate` event with the `membersAdded` object in the payload is sent when either a bot is added to a team or a new user is added to a team where a bot has been added. Teams also adds `eventType.teamMemberAdded` in the `channelData` object.
+The `conversationUpdate` event with the `membersAdded` object in the payload is sent when either a bot is added to a team or a new user is added to a team where a bot is added. Teams also adds `eventType.teamMemberAdded` in the `channelData` object.
 
 Because this event is sent in both cases, you should parse the `membersAdded` object to determine whether the addition was a user or the bot itself. For the latter, a best practice is to send a [welcome message](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#best-practice-welcome-messages-in-teams) to the channel so users can understand the features your bot provides.
 
@@ -130,8 +130,8 @@ The `conversationUpdate` event with the `membersAdded` object in the payload is 
 
 > [!NOTE]
 >
->* When an anonymous user is added to a meeting, membersAdded payload object does not have `aadObjectId` field.
->* When an anonymous user is added to a meeting, `from` object in the payload always have the id of the meeting organizer, even if the anonymous user was added by another presenter.
+>* When an anonymous user is added to a meeting, membersAdded payload object doesn't have `aadObjectId` field.
+>* When an anonymous user is added to a meeting, `from` object in the payload always has the ID of the meeting organizer, even if the anonymous user was added by another presenter.
 
 #### Schema example: User added to meeting
 
@@ -176,10 +176,10 @@ The `conversationUpdate` event with the `membersAdded` object in the payload is 
 
 ### Bot added for personal context only
 
-Your bot receives a `conversationUpdate` with `membersAdded` when a user adds it directly for personal chat. In this case, the payload that your bot receives doesn't contain the `channelData.team` object. You should use this as a filter in case you want your bot to offer a different [welcome message](~/resources/bot-v3/bot-conversations/bots-conv-personal.md#best-practice-welcome-messages-in-personal-conversations) depending on scope.
+Your bot receives a `conversationUpdate` with `membersAdded` when a user adds it directly for personal chat. In this case, the payload that your bot receives doesn't contain the `channelData.team` object. You should use it as a filter in case you want your bot to offer a different [welcome message](~/resources/bot-v3/bot-conversations/bots-conv-personal.md#best-practice-welcome-messages-in-personal-conversations) depending on scope.
 
 > [!NOTE]
-> For personal scoped bots, your bot will  receive the `conversationUpdate` event multiple times, even if the bot is removed and re-added. For development and testing you may find it useful to add a helper function that will allow you to reset your bot completely. For more information, see [Node.js example](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts) or [C# example](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238) for more details on implementing this.
+> For personal scoped bots, your bot receives the `conversationUpdate` event multiple times, even if the bot is removed and added again. For development and testing you might find it useful to add a helper function that allows you to reset your bot completely. For more information, see [Node.js example](https://github.com/OfficeDev/microsoft-teams-sample-complete-node/blob/master/src/middleware/SimulateResetBotChat.ts) or [C# example](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/master/template-bot-master-csharp/src/controllers/MessagesController.cs#L238) for more details on implementation.
 
 #### Schema example: bot added to personal context
 
@@ -220,7 +220,7 @@ Your bot receives a `conversationUpdate` with `membersAdded` when a user adds it
 
 ## Team member or bot removed
 
-The `conversationUpdate` event with the `membersRemoved` object in the payload is sent when either your bot is removed from a team, or a user is removed from a team where a bot has been added. Teams also adds `eventType.teamMemberRemoved` in the `channelData` object. As with the `membersAdded` object, you should parse the `membersRemoved` object for your bot's App ID to determine who was removed.
+The `conversationUpdate` event with the `membersRemoved` object in the payload is sent when either your bot is removed from a team, or a user is removed from a team where a bot is added. Teams also adds `eventType.teamMemberRemoved` in the `channelData` object. As with the `membersAdded` object, you should parse the `membersRemoved` object for your bot's App ID to determine who was removed.
 
 > [!NOTE]
 > If a bot is added to a team and later blocked for the team owner by tenant admin, it doesn't receive `conversationUpdate` event when the owner removes a user from the team.
@@ -271,7 +271,7 @@ The `conversationUpdate` event with the `membersRemoved` object in the payload i
 
 > [!NOTE]
 >
->* When an anonymous user is removed from a meeting, membersRemoved payload object does not have `aadObjectId` field.
+>* When an anonymous user is removed from a meeting, membersRemoved payload object doesn't have `aadObjectId` field.
 >* When an anonymous user is removed from a meeting, `from` object in the payload always have the id of the meeting organizer, even if the anonymous user was removed by another presenter.
 
 #### Schema example: User removed from meeting
