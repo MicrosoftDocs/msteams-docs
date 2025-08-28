@@ -40,7 +40,7 @@ SupportedChannelTypes is an optional property that enables your app in non-stand
 >
 > * If your app supports the team scope, it functions in standard channels, regardless of what values are defined in this property.
 > * Your app might need to account for the unique properties of each of these channel types in order to function properly.
-> * Only **Teams apps with a tab capability** are supported in **shared** channels.
+> * Only **tabs** are currently supported in **private** and **shared** channels in Microsoft Teams.
 
 ## Get context for shared channels
 
