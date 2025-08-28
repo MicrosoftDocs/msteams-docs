@@ -89,8 +89,8 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
 
         :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/env-testtool-user.png" alt-text="Screenshot shows the details updated in the env file.":::
 
-    > [!NOTE]
-    > You can either manually update the **.env.playground.user** file or enter the values when you're prompted during debugging. If you haven't provided the values earlier, you’ll need to complete steps #f and #g.
+        > [!NOTE]
+        > You can either manually update the **.env.playground.user** file or enter the values when you're prompted during debugging. If you haven't provided the values earlier, you’ll need to complete steps #g and #h.
 
     1. To debug your app, select the **F5** key or from the left pane, select **Run and Debug (Ctrl+Shift+D)** and then select **Debug in Microsoft 365 Agents Playground (Preview)** (previously known as Teams App Test Tool) from the dropdown list.
 
