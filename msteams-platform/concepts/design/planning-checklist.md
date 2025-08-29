@@ -75,7 +75,7 @@ Authentication is all about validating app users and securing the app and app us
 <details>
 <summary>Plan onboarding experience</summary>
 
-Building an awesome Teams app is all about finding the right combination of features to meet your user's needs. To provide your users with a seamless onboarding experience, you can create a step-by-step guide explaining how and what to do with your app. For example, see [create Teams conversation bot](../../sbs-teams-conversation-bot.yml).
+Building an awesome Teams app is all about finding the right combination of features to meet your user's needs. To provide your users with a seamless onboarding experience, you can create a step-by-step guide explaining how and what to do with your app. For example, see [create Teams conversation bot](../../bots/how-to/conversations/channel-and-group-conversations.md).
 
 | # | Consider... |
 | --- | --- |

@@ -36,13 +36,6 @@ SupportedChannelTypes is an optional property that enables your app in nonstanda
     ]
 ```
 
-> [!NOTE]
->
-> Your app must account for the unique properties of each channel type to function properly:
->
-> * Standard channels: Available to all team members and support most app capabilities.
-> * Private channels: Restricted to a subset of team members and might limit app access.
-> * Shared channels: Allow cross-team collaboration and introduce indirect membership scenarios.
 
 ## Get context for shared channels
 
