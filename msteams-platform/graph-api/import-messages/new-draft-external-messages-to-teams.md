@@ -10,7 +10,7 @@ ms.date: 01/08/2025
 
 # Use Microsoft Graph to Import Messages from External Platforms to Teams
 
-You can use Microsoft Graph to migrate users' existing message history and data from an external system into a Teams channel. This feature enables users to continue conversations without interruption, by recreating the messaging hierarchy from a third-party platform directly within Teams.
+You can use Microsoft Graph to migrate existing message history and data from an external system into a Teams channel. This feature enables users to continue conversations without interruption, by recreating the messaging hierarchy from a third-party platform directly within Teams.
 
 > [!NOTE]
 > In the future, Microsoft might require you or your customers to pay extra fees based on the amount of data imported.
@@ -21,7 +21,7 @@ Use the step-by-step migration flow to ensure a seamless transition of historica
 
 ## Step-by-Step Migration Flow
 
-1. ### Create or select a channel/chat
+### 1. Create or select a channel/chat
 
 Namespace: microsoft.graph
 
@@ -30,7 +30,7 @@ You can either create a new channel or chat in a Team or use an existing channel
 > [!NOTE]
 > All APIs listed in the following sections require the `Teamswork.Migrate.All` permission in the application context. Delegated authentication isn't supported.
 
-2. ### Use startMigration API to start channel and chat migration
+### 2. Use startMigration API to start channel and chat migration
 
 * Use the startMigration API, to enable migration mode on existing Teams channels/chats, and allow import of historical messages. Previously, import operations were restricted to newly created standard channels and chats in an empty state. Refer [Import third-party platform messages to Teams using Microsoft Graph](import-external-messages-to-teams.md)
 
@@ -89,13 +89,13 @@ Response of the request:
 >   * Greater than the minimum value for `DateTimeOffset`.
 >   * Less than the current value of the channel or chat's `CreatedDateTime`.
 
-3. Call the **GET /channel/chat API** to confirm that the **migrationMode** property is set to **inProgress**, after completing step 2.
+### 3. Call the GET /channel/chat API to confirm that the **migrationMode** property is set to **inProgress**, after completing step 2
 
-4. ### Import messages using POST API
+### 4. Import messages using POST API
 
 Go to [Import third-party platform messages to Teams using Microsoft Graph](import-external-messages-to-teams.md) and use the POST API, to begin sending back-in-time messages.
 
-5. ### Complete channel and chat migration
+### 5. Complete channel and chat migration
 
 Namespace: microsoft.graph
 
