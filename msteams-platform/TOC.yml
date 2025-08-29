@@ -960,7 +960,7 @@
 - name: App manifest
   items:
     - name: App manifest
-      href: resources/schema/manifest-schema.md
+      href: /microsoft-365/extensibility/schema/?view=m365-app-1.23?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
       displayName: version, validDomain, valid domain, validdomain, properties, meetingExtensionDefinition
     - name: Public developer preview
       items:
