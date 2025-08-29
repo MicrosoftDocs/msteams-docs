@@ -13,6 +13,8 @@ ms.owner: ryanbliss
 
 # Teams JavaScript client library
 
+[!INCLUDE [Deprecation note](../../includes/deprecation-note-teamsfx-sdk.md)]
+
 The Microsoft Teams JavaScript client library (TeamsJS) can help you create hosted experiences in Teams, Microsoft 365 app, and Outlook, where your app content is hosted in an [iFrame](https://developer.mozilla.org/docs/Web/HTML/Element/iframe). The library is helpful for developing apps with the following Teams capabilities:
 
 * [Tabs](../../tabs/what-are-tabs.md)

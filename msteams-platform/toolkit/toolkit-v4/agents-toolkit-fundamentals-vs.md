@@ -5,10 +5,12 @@ description: Learn about Microsoft 365 Agents Toolkit, it's installation, naviga
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 09/16/2024
+ms.date: 08/26/2025
 ---
 
 # Agents Toolkit Visual Studio Overview
+
+[!INCLUDE [Deprecation note](../../includes/deprecation-note-teamsfx-sdk.md)]
 
 Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) makes it simple to get started with app development for Microsoft Teams using Microsoft Visual Studio.
 

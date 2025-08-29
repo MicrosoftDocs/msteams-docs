@@ -5,10 +5,12 @@ description: Learn more about the tools such as Microsoft 365 Agents Toolkit, Ag
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.date: 11/28/2024
+ms.date: 08/26/2025
 ---
 
 # Tools and SDKs
+
+[!INCLUDE [Deprecation note](../../includes/deprecation-note-teamsfx-sdk.md)]
 
 Build and develop your Microsoft Teams app using tools, SDKs, and libraries. Now, Microsoft provides a comprehensive platform to create, develop, test, debug, and publish your Teams app seamlessly, making the entire process efficient and streamlined. Teams offers the following platform:
 
