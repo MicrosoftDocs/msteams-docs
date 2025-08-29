@@ -894,4 +894,4 @@ async def on_remove_items(
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Build a custom engine agent](../../../Teams-AI-library-tutorial.yml)
+> [Build a custom engine agent](teams-ai-library-tutorial.md)
