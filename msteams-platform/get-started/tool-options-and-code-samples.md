@@ -8,7 +8,7 @@ ms.topic: reference
 
 # Tool options and code samples
 
-> [!INCLUDE [Deprecation Note](../includes/deprecation-note-teamsfxsdk.md)]
+[!INCLUDE [Deprecation note](../includes/deprecation-note-teamsfx-sdk.md)]
 
 You've built your first tab app, interactive notification bot, and message extension. You can build a Teams app as per your app's requirements. Based on factors such as business needs, development environment, and domain knowledge, select the environment and tools to build your app.
 
