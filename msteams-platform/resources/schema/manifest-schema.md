@@ -3,7 +3,7 @@ title: App Manifest Reference
 description: In this article, you'll have the latest version of the public manifest schema for Microsoft Teams reference, schema, and sample full manifest.
 ms.topic: reference
 ms.localizationpriority: high
-ms.date: 8/18/2025
+ms.date: 8/27/2025
 --- 
 
 # App manifest
@@ -1431,6 +1431,74 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`spamPreProcessingDialog.spamMoreInfo.text`| String | 128 characters | ✔️ | Specifies the link text for a URL that directs users to informational resources from the preprocessing dialog. |
 |`spamPreProcessingDialog.spamMoreInfo.url`| String | 2048 characters | ✔️ | Specifies the HTTPS URL of a site that contains informational resources. |
 
+#### extensionRibbonsCustomMobileGroupItem
+
+Defines groups of controls on the default tab of the ribbon on a mobile device. This array property can only be present on tab objects that have a `tabs.builtInTabId` property that is set to `DefaultTab`. For non-mobile devices, see `tabs.groups`.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`id`| String | 250 characters | ✔️ | Specifies the ID of the group. It must be different from any built-in group ID in the Microsoft 365 application and any other custom group. |
+|`label`| String | 32 characters | ✔️ | Specifies the label on the group. <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true). |
+| `controls`| Array | 20 characters | ✔️ | Defines the controls in the group. <br> Only mobile buttons are supported. |
+
+#### extensionCommonCustomControlMenuItem
+
+Configures the items for a menu control.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`id`| String | 64 characters | ✔️ | Specifies the ID for a menu item. |
+|`type`| String | | ✔️ | Defines the menu item's control type. Allowed values: `menuItem`. |
+|`label`| String | 64 characters | ✔️ | Specifies the text displayed for the menu item. <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true). |
+|`icons`| Array | 3 characters | | Configures the icons for the menu item. <br> Minimum array items: 1. |
+|`supertip`| Array | | ✔️ | Configures a supertip for the menu item. <br> A supertip is a UI feature that displays a brief box of help information about a control when the cursor hovers over it. The box may contain multiple lines of text. |
+|`actionId`| String | 64 characters | ✔️ | Specifies the ID of the action that is taken when a user selects the control or menu item. The `actionId` must match with some `runtimes.actions.id` property value. |
+|`enabled`| Boolean | | | Indicates whether the menu item is initially enabled. <br> Default value: `true`.|
+|`overriddenByRibbonApi`| Boolean | | | Specifies whether the menu item is hidden on application and platform combinations which support the API [Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon?view=common-js-preview&preserve-view=true). This API installs custom contextual tabs on the ribbon. <br> Default value: `false`.|
+
+#### extensionRibbonsCustomMobileControlButtonItem
+
+Defines the controls in the group. Only mobile buttons are supported.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`id`| String | 250 characters | ✔️ | Specify the Id of the button like `msgReadFunctionButton`. |
+|`type`| String |  | ✔️ | Specifies the type of control. <br> Allowed values: `mobileButton`.|
+|`label`| String | 32 characters | ✔️ | Specifies the label on the control. <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true).|
+|`icons`| Array | 9 items | ✔️ | Specifies the icons that will appear on the control depending on the dimensions and DPI of the mobile device screen. <br> There must be exactly 9 icons. Hence, both minimum and maximum size is 9. |
+|`actionId`| String | 64 characters | ✔️ | Specifies the ID of the action that is taken when a user selects the control. The `actionId` must match the `runtime.actions.id` property of an action in the runtimes object. |
+
+#### extensionCustomMobileIcon
+
+Specifies the icons that will appear on the control depending on the dimensions and DPI of the mobile device screen. There must be exactly 9 icons.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`size`| Number | | ✔️ | Size in pixels of the icon. Three image sizes are required (25, 32, and 48 pixels). <br> There must be exactly one of each size for each possible value of the icons' scale property. <br> Allowed values: 25, 32, 48.|
+|`url`| String | 2048 characters | ✔️ | The full, absolute URL of the icon's image file. <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true). <br> The string must start with `https://`.|
+|`scale`| Number |  | ✔️ | Specifies the UIScreen.scale property for iOS devices. The possible values are 1, 2, and 3. There must be exactly one of each value for each possible value of the icons's `size` property. Allowed values: 1, 2, 3.|
+
+#### extensionCommonSuperToolTip
+
+Configures a supertip.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`title`| String | 64 characters | ✔️ | Specifies the title text of the supertip. <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true). |
+|`description`| String | 250 characters | ✔️ | Specifies the description of the supertip. This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true).|
+
+> [!NOTE]
+> The description property for `extensionCommonSuperToolTip` isn't supported in Outlook on the `web` or [new Outlook on Windows](https://support.microsoft.com/en-us/office/getting-started-with-the-new-outlook-for-windows-656bb8d9-5a60-49b2-a98b-ba7822bc7627).
+
+#### extensionCommonIcon
+
+Specifies properties of the image file used to represent the add-in.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`size`| Number |  | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br> Allowed values: 16, 20, 24, 32, 40, 48, 64, 80.|
+|`url`| String | 2048 characters | ✔️ | Specifies the full, absolute URL of the image file that is used to represent the add-in. <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true). <br> The string must start with `https://`.|
+
 To use `extensions.ribbons`, see [create add-in commands](/office/dev/add-ins/develop/create-addin-commands-unified-manifest), [configure the UI for the task pane command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-ui-for-the-task-pane-command), and [configure the UI for the function command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-ui-for-the-function-command).
 
 #### extensionRibbonsArrayTabsItem
@@ -1507,6 +1575,15 @@ The `extensions.autoRunEvents` property defines event-based activation extension
 |`requirements.capabilities.maxVersion`| String | | | Identifies the maximum version for the requirement set. |
 |`requirements.scopes`| Array of enums |4 | | Identifies the scopes in which the add-in can run and defines the Microsoft 365 applications in which the extension can run. For example, `mail` (Outlook). <br>Supported value: `mail` |
 |`requirements.formFactors`| Array of enums | 2| | Identifies the form factors that support the add-in. <br>Supported values: `mobile`, `desktop`|
+
+#### extensionAutoRunEventsArray
+
+The `extensions.autoRunEvents` property defines event-based activation extension points.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`requirements`| Array|  |  | Specifies the scopes, formFactors, and Office JavaScript library requirement sets that must be supported on the Office client in order for the event handling code to run. <br> For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365.](/office/dev/add-ins/develop/requirements-property-unified-manifest)|
+|`events`| Array | 20 items | ✔️ | Configures the event that cause actions in an Outlook Add-in to run automatically. For example, see [use smart alerts and the OnMessageSend and OnAppointmentSend events in your Outlook Add-ins.](/office/dev/add-ins/outlook/smart-alerts-onmessagesend-walkthrough?tabs=jsonmanifest) |
 
 ### extensions.alternates
 
