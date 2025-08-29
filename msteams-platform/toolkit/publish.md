@@ -21,7 +21,7 @@ Here's what you'll learn in this section:
 
 ## Prerequisites
 
-* Ensure to create your [app package](~/concepts/build-and-test/apps-package.md) and [validate it](https://dev.teams.microsoft.com/appvalidation.html) for errors.
+* Ensure to create your [app package](~/concepts/build-and-test/apps-package.md) and [validate it](https://dev.teams.microsoft.com/tools/store-validation) for errors.
 * [Enable custom app uploading](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) in Teams.
 * Ensure that your app is running and accessible using HTTPs.
 * Ensure you have followed set of guidelines in the publish your app to the Teams Store to publish your app.
