@@ -10,7 +10,7 @@ ms.date: 05/16/2025
 
 # Microsoft 365 Agents Toolkit command line interface
 
-Microsoft 365 Agents Toolkit command line interface (Agents Toolkit CLI) is a text-based command line interface that can help scaffold, validate, and deploy applications for Microsoft 365 from the terminal or a CI/CD process. For more information, see [source code](https://github.com/OfficeDev/teams-toolkit/tree/dev/packages/cli) and [npm package](https://www.npmjs.com/package/@microsoft/m365agentstoolkit-cli).
+Microsoft 365 Agents Toolkit command line interface (Agents Toolkit CLI) is a text-based command line interface that can help scaffold, validate, and deploy applications for Microsoft 365 from the terminal or a CI/CD process. For more information, see [source code](https://github.com/OfficeDev/microsoft-365-agents-toolkit/tree/dev/packages/cli) and [npm package](https://www.npmjs.com/package/@microsoft/m365agentstoolkit-cli).
 
 Whether you prefer keyboard-centric developer operations, or you are automating your CI/CD pipeline, Agents Toolkit CLI offers the same features as the IDE extensions. It provides the following features to facilitate the development of agents or apps for Microsoft 365 Copilot, Microsoft Teams, and Microsoft 365:
 
@@ -45,7 +45,7 @@ The following table lists the supported commands to help developers build and ma
 | [`atk entra-app`](#atk-install)         | Manage the Microsoft Entra app in the current application.                                                         |
 | [`atk env`](#atk-env)                   | Manage environments.                                                                                               |
 | [`atk help`](#atk-help)                 | Show Microsoft 365 Agents Toolkit CLI help.                                                                        |
-| [`atk install`](#atk-install)           | Sideload a given application package across Microsoft 365.                                                         |
+| [`atk install`](#atk-install)           | Upload a given application package across Microsoft 365.                                                         |
 | [`atk launchinfo`](#atk-launchinfo)     | Get launch information of an acquired Microsoft 365 App.                                                           |
 | [`atk list`](#atk-list)                 | List available Microsoft 365 App templates and samples.                                                            |
 | [`atk provision`](#atk-provision)       | Run the provision stage in `m365agents.yml` or `m365agents.local.yml`.                                             |
@@ -195,7 +195,7 @@ The `atk help` command displays all the commands available for Microsoft 365 Age
 
 ## `atk install`
 
-Sideload a given application package across Microsoft 365.
+Upload a given application package across Microsoft 365.
 
 ### `atk install` parameters
 
@@ -209,19 +209,19 @@ The following table lists the parameters available for `atk install`:
 
 ### `atk install` scenarios
 
-Sideload the application package with JSON-based manifest to Teams, Outlook, and the Microsoft 365 app.
+Upload the application package with JSON-based manifest to Teams, Outlook, and the Microsoft 365 app.
 
 ```bash
 atk install --file-path appPackage.zip
 ```
 
-Sideload the application package in Shared scope with JSON-based manifest to Teams, Outlook, and the Microsoft 365 app.
+Upload the application package in Shared scope with JSON-based manifest to Teams, Outlook, and the Microsoft 365 app.
 
 ```bash
 atk install --file-path appPackage.zip --scope Shared
 ```
 
-Sideload the Outlook add-in application package with XML-based manifest to Outlook.
+Upload the Outlook add-in application package with XML-based manifest to Outlook.
 
 ```bash
 atk install --xml-path manifest.xml

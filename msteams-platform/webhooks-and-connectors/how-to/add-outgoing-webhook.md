@@ -270,17 +270,48 @@ var responseMsg = JSON.stringify({
 }
 ```
 
+# [Python](#tab/python)
+
+```python
+received_msg = json.loads(payload)
+response_msg = json.dumps({
+    "type": "message",
+    "attachments": [
+        {
+            "contentType": "application/vnd.microsoft.card.adaptive",
+            "contentUrl": None,
+            "content": {
+                "type": "AdaptiveCard",
+                "version": "1.4",
+                "body": [
+                    {
+                        "type": "TextBlock",
+                        "text": f"Request sent by: {received_msg['from']['name']}"
+                    },
+                    {
+                        "type": "Image",
+                        "url": "https://c.s-microsoft.com/en-us/CMSImages/DesktopContent-04_UPDATED.png?version=43c80870-99dd-7fb1-48c0-59aced085ab6"
+                    },
+                    {
+                        "type": "TextBlock",
+                        "text": "Sample image for Adaptive Card."
+                    }
+                ]
+            },
+            "name": None,
+            "thumbnailUrl": None
+        }
+    ]
+})
+```
+
 ---
 
 ## Code sample
 
 |**Sample name** | **Description** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| Outgoing Webhooks | This sample shows how to  implement and use outgoing webhook.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
-
-## Step-by-step guide
-
-Follow the [step-by-step guide](../../sbs-outgoing-webhooks.yml) to create Outgoing Webhooks in Teams.
+| Outgoing Webhooks | This sample demonstrates how to implement a straightforward Outgoing Webhook for Microsoft Teams, allowing users to send messages to external services without the complexity of creating a full bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
 
 ## See also
 

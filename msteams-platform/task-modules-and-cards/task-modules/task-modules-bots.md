@@ -89,7 +89,53 @@ This section defines the schema of what your bot receives when it receives a `ta
 
 The next section provides an example of receiving and responding to `task/fetch` and `task/submit` invoke messages in Node.js.
 
- The following tabs provide `task/fetch` and `task/submit` invoke messages in Node.js and C#:
+ The following tabs provide `task/fetch` and `task/submit` invoke messages in .NET, Node.js, and python:
+
+# [.NET](#tab/csharp)
+
+```csharp
+protected override Task<TaskModuleResponse> OnTeamsTaskModuleFetchAsync(ITurnContext<IInvokeActivity> turnContext, TaskModuleRequest taskModuleRequest, CancellationToken cancellationToken)
+{
+    var asJobject = JObject.FromObject(taskModuleRequest.Data);
+    var value = asJobject.ToObject<CardTaskFetchValue<string>>()?.Data;
+
+    var taskInfo = new TaskModuleTaskInfo();
+    switch (value)
+    {
+        case TaskModuleIds.YouTube:
+            taskInfo.Url = taskInfo.FallbackUrl = _baseUrl + "/" + TaskModuleIds.YouTube;
+            SetTaskInfo(taskInfo, TaskModuleUIConstants.YouTube);
+            break;
+        case TaskModuleIds.CustomForm:
+            taskInfo.Url = taskInfo.FallbackUrl = _baseUrl + "/" + TaskModuleIds.CustomForm;
+            SetTaskInfo(taskInfo, TaskModuleUIConstants.CustomForm);
+            break;
+        case TaskModuleIds.AdaptiveCard:
+            taskInfo.Card = CreateAdaptiveCardAttachment();
+            SetTaskInfo(taskInfo, TaskModuleUIConstants.AdaptiveCard);
+            break;
+        default:
+            break;
+    }
+
+    return Task.FromResult(taskInfo.ToTaskModuleResponse());
+}
+
+protected override async Task<TaskModuleResponse> OnTeamsTaskModuleSubmitAsync(ITurnContext<IInvokeActivity> turnContext, TaskModuleRequest taskModuleRequest, CancellationToken cancellationToken)
+{
+    var reply = MessageFactory.Text("OnTeamsTaskModuleSubmitAsync Value: " + JsonConvert.SerializeObject(taskModuleRequest));
+    await turnContext.SendActivityAsync(reply, cancellationToken);
+
+    return TaskModuleResponseFactory.CreateResponse("Thanks!");
+}
+
+private static void SetTaskInfo(TaskModuleTaskInfo taskInfo, UISettings uIConstants)
+{
+    taskInfo.Height = uIConstants.Height;
+    taskInfo.Width = uIConstants.Width;
+    taskInfo.Title = uIConstants.Title.ToString();
+}
+```
 
 # [Node.js](#tab/nodejs)
 
@@ -144,50 +190,65 @@ setTaskInfo(taskInfo, uiSettings) {
 }
 ```
 
-# [C#](#tab/csharp)
+# [Python](#tab/python)
 
-```csharp
-protected override Task<TaskModuleResponse> OnTeamsTaskModuleFetchAsync(ITurnContext<IInvokeActivity> turnContext, TaskModuleRequest taskModuleRequest, CancellationToken cancellationToken)
-{
-    var asJobject = JObject.FromObject(taskModuleRequest.Data);
-    var value = asJobject.ToObject<CardTaskFetchValue<string>>()?.Data;
+```python
+async def on_teams_task_module_fetch(
+    self, turn_context: TurnContext, task_module_request: TaskModuleRequest
+) -> TaskModuleResponse:
+    """
+    Called when the user selects an options from the displayed HeroCard or
+    AdaptiveCard.  The result is the action to perform.
+    """
 
-    var taskInfo = new TaskModuleTaskInfo();
-    switch (value)
-    {
-        case TaskModuleIds.YouTube:
-            taskInfo.Url = taskInfo.FallbackUrl = _baseUrl + "/" + TaskModuleIds.YouTube;
-            SetTaskInfo(taskInfo, TaskModuleUIConstants.YouTube);
-            break;
-        case TaskModuleIds.CustomForm:
-            taskInfo.Url = taskInfo.FallbackUrl = _baseUrl + "/" + TaskModuleIds.CustomForm;
-            SetTaskInfo(taskInfo, TaskModuleUIConstants.CustomForm);
-            break;
-        case TaskModuleIds.AdaptiveCard:
-            taskInfo.Card = CreateAdaptiveCardAttachment();
-            SetTaskInfo(taskInfo, TaskModuleUIConstants.AdaptiveCard);
-            break;
-        default:
-            break;
-    }
+    card_task_fetch_value = task_module_request.data["data"]
 
-    return Task.FromResult(taskInfo.ToTaskModuleResponse());
-}
+    task_info = TaskModuleTaskInfo()
+    if card_task_fetch_value == TaskModuleIds.YOUTUBE:
+        # Display the YouTube.html page
+        task_info.url = task_info.fallback_url = (
+            self.__base_url + "/" + TaskModuleIds.YOUTUBE + ".html"
+        )
+        TeamsTaskModuleBot.__set_task_info(task_info, TaskModuleUIConstants.YOUTUBE)
+    elif card_task_fetch_value == TaskModuleIds.CUSTOM_FORM:
+        # Display the CustomForm.html page, and post the form data back via
+        # on_teams_task_module_submit.
+        task_info.url = task_info.fallback_url = (
+            self.__base_url + "/" + TaskModuleIds.CUSTOM_FORM + ".html"
+        )
+        TeamsTaskModuleBot.__set_task_info(task_info, TaskModuleUIConstants.CUSTOM_FORM)
+    elif card_task_fetch_value == TaskModuleIds.ADAPTIVE_CARD:
+        # Display an AdaptiveCard to prompt user for text, and post it back via
+        # on_teams_task_module_submit.
+        task_info.card = TeamsTaskModuleBot.__create_adaptive_card_attachment()
+        TeamsTaskModuleBot.__set_task_info(task_info, TaskModuleUIConstants.ADAPTIVE_CARD)
 
-protected override async Task<TaskModuleResponse> OnTeamsTaskModuleSubmitAsync(ITurnContext<IInvokeActivity> turnContext, TaskModuleRequest taskModuleRequest, CancellationToken cancellationToken)
-{
-    var reply = MessageFactory.Text("OnTeamsTaskModuleSubmitAsync Value: " + JsonConvert.SerializeObject(taskModuleRequest));
-    await turnContext.SendActivityAsync(reply, cancellationToken);
+    return TaskModuleResponseFactory.to_task_module_response(task_info)
 
-    return TaskModuleResponseFactory.CreateResponse("Thanks!");
-}
+async def on_teams_task_module_submit(
+    self, turn_context: TurnContext, task_module_request: TaskModuleRequest
+) -> TaskModuleResponse:
+    """
+    Called when data is being returned from the selected option (see `on_teams_task_module_fetch').
+    """
 
-private static void SetTaskInfo(TaskModuleTaskInfo taskInfo, UISettings uIConstants)
-{
-    taskInfo.Height = uIConstants.Height;
-    taskInfo.Width = uIConstants.Width;
-    taskInfo.Title = uIConstants.Title.ToString();
-}
+    # Echo the users input back.  In a production bot, this is where you'd add behavior in
+    # response to the input.
+    await turn_context.send_activity(
+        MessageFactory.text(
+            f"on_teams_task_module_submit: {json.dumps(task_module_request.data)}"
+        )
+    )
+
+    message_response = TaskModuleMessageResponse(value="Thanks!")
+    return TaskModuleResponse(task=message_response)
+
+@staticmethod
+def __set_task_info(task_info: TaskModuleTaskInfo, ui_constants: UISettings):
+    task_info.height = ui_constants.height
+    task_info.width = ui_constants.width
+    task_info.title = ui_constants.title
+
 ```
 
 ---
@@ -204,11 +265,7 @@ The schema for Bot Framework card actions is different from Adaptive Card `Actio
 
 |Sample name | Description | .NET | Node.js | Manifest|
 |----------------|-----------------|--------------|----------------|----------------|
-|Dialog sample bots-V4 | This sample shows how to create dialogs using Bot Framework v4 and Teams tab. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp/demo-manifest/bot-task-module.zip)
-
-## Step-by-step guide
-
-Follow the [step-by-step guide](../../sbs-botbuilder-taskmodule.yml) to create and fetch dialog bot in Teams.
+|Dialog sample bots-V4 | This sample app demonstrate how to use Dialogs (referred as task modules in TeamsJS v1.x) using Bot Framework v4. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp/demo-manifest/bot-task-module.zip)
 
 ## See also
 

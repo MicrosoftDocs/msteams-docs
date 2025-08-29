@@ -139,9 +139,9 @@ You can use this method to verify custom app upload permission only after you ha
 
     :::image type="content" source="../assets/images/toolkit-v2/accounts1_1.png" alt-text="Screenshot shows the accounts details.":::
 
-1. Verify if you can see the option **Sideloading enabled** as shown in the following image:
+1. Verify if you can see the option **Custom App Upload Enabled** as shown in the following image:
 
-    :::image type="content" source="../assets/images/toolkit-v2/sideloading_1.png" alt-text="Screenshot shows the custom app upload enabled option highlighted in red.":::
+    :::image type="content" source="../assets/images/toolkit-v2/uploading_1.png" alt-text="Screenshot shows the custom app upload enabled option highlighted in red.":::
 
 </details>
 <br>
@@ -202,6 +202,6 @@ If you have admin rights, you can enable custom app upload:
 
 ## See also
 
-* [Microsoft 365 Agents Toolkit Overview](~/toolkit/teams-toolkit-fundamentals.md)
+* [Microsoft 365 Agents Toolkit Overview](~/toolkit/agents-toolkit-fundamentals.md)
 * [Manage custom app policies and settings in Teams](/microsoftteams/teams-custom-app-policies-and-settings)
 * [Manage app setup policies in Teams](/microsoftteams/teams-app-setup-policies)

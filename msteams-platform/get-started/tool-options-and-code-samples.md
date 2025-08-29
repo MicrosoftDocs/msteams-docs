@@ -35,8 +35,9 @@ You can use various tools and services to build your app. Following is an exampl
 ## Tools and SDKs
 
 You can build your Microsoft Teams app with the help of the following tools and SDKs.
-
+<!--
 :::image type="content" source="../assets/images/overview/choose-what-you-need.png" alt-text="Flow chart shows you the SDKs and tools you need to build your Teams app."lightbox="../assets/images/overview/choose-what-you-need.png":::
+-->
 
 To start building your Teams app, you can select the tools and SDKs based on your app requirements.
 
@@ -48,9 +49,9 @@ To start building your Teams app, you can select the tools and SDKs based on you
 
 | App capabilities | User interactions | Recommended tools | SDKs | Languages |
 |--------|-------------|--------|--------|--------|
-| **Tabs** | A full-screen embedded web experience. | VS Code or Visual Studio with Agents Toolkit extension, or [Microsoft 365 Agents Toolkit CLI](~/toolkit/teams-toolkit-cli.md) (previously known as TeamsFx CLI) if you prefer using CLI | [Teams JavaScript client library](/javascript/api/overview/msteams-client#microsoft-teams-javascript-client-library) for UI functionalities, SharePoint Framework (SPFx), and Microsoft Graph SDK | C#, TypeScript, and JavaScript (including React) |
-| **Bots** | A chat bot that converses with members. |VS Code or Visual Studio with Agents Toolkit extension, or [Agents Toolkit CLI](~/toolkit/teams-toolkit-cli.md) if you prefer using CLI | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx), [Bot Framework SDK](https://dev.botframework.com/), [Teams AI library](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md), and Microsoft Graph SDK | C#, TypeScript, and JavaScript |
-| **Message extensions** | Shortcuts for inserting external content into a conversation or taking action on messages. | VS Code or Visual Studio with Agents Toolkit extension, or [Agents Toolkit CLI](~/toolkit/teams-toolkit-cli.md) if you prefer using CLI | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx), [Bot Framework SDK](https://dev.botframework.com/), [Teams AI library](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md), and Microsoft Graph SDK | C#, TypeScript, and JavaScript |
+| **Tabs** | A full-screen embedded web experience. | VS Code or Visual Studio with Agents Toolkit extension, or [Microsoft 365 Agents Toolkit CLI](../toolkit/Microsoft-365-Agents-Toolkit-CLI.md) (previously known as TeamsFx CLI) if you prefer using CLI | [Teams JavaScript client library](/javascript/api/overview/msteams-client#microsoft-teams-javascript-client-library) for UI functionalities, SharePoint Framework (SPFx), and Microsoft Graph SDK | C#, TypeScript, and JavaScript (including React) |
+| **Bots** | A chat bot that converses with members. |VS Code or Visual Studio with Agents Toolkit extension, or [Agents Toolkit CLI](../toolkit/Microsoft-365-Agents-Toolkit-CLI.md) if you prefer using CLI | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx), [Bot Framework SDK](https://dev.botframework.com/), [Teams AI library](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md), and Microsoft Graph SDK | C#, TypeScript, and JavaScript |
+| **Message extensions** | Shortcuts for inserting external content into a conversation or taking action on messages. | VS Code or Visual Studio with Agents Toolkit extension, or [Agents Toolkit CLI](../toolkit/Microsoft-365-Agents-Toolkit-CLI.md) if you prefer using CLI | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx), [Bot Framework SDK](https://dev.botframework.com/), [Teams AI library](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md), and Microsoft Graph SDK | C#, TypeScript, and JavaScript |
 
 > [!NOTE]
 >
@@ -58,15 +59,15 @@ To start building your Teams app, you can select the tools and SDKs based on you
 > * You can also use languages, such as Node.js, Java, Python, and Web technology like HTML and CSS to build your Teams app.
 
 **Example scenario**: If you want to build a social media dashboard app that sends notifications using TypeScript, consider the following scenario:
-
+<!--
 :::image type="content" source="../assets/images/overview/sdks-scenario.png" alt-text="Diagram shows you the scenario where you build Teams app with TypeScript."lightbox="../assets/images/overview/sdks-scenario.png":::
-
+-->
 ### Explore SDKs
 
 You can also create and build your Teams app with various SDKs. Teams supports all the SDKs shown in the following image and you can choose SDKs based on your requirements:
-
+<!--
 :::image type="content" source="../assets/images/Tools-and-SDK-revamp/tools-and-sdk.png" alt-text="Diagram shows you the list of tools and SDKs for you to build your Teams app."lightbox="../assets/images/Tools-and-SDK-revamp/tools-and-sdk.png":::
-
+-->
 ### Explore Tools
 
 The following tools in the Teams platform help you during app development:
@@ -74,7 +75,7 @@ The following tools in the Teams platform help you during app development:
 | App development phase | Teams platform tools |
 |-----|-----|
 | Design | [Teams UI kit](../concepts/design/design-teams-app-ui-templates.md#microsoft-teams-ui-kit) and [Fluent UI React components](../concepts/design/design-teams-app-ui-templates.md#fluent-ui-react-components) |
-| Build | [Microsoft 365 Agents Toolkit](../toolkit/teams-toolkit-fundamentals.md), [Tools and SDKs](../concepts/build-and-test/tool-sdk-overview.md), and [Microsoft Graph](/graph/teams-concept-overview) |
+| Build | [Microsoft 365 Agents Toolkit](../toolkit/agents-toolkit-fundamentals.md), [Tools and SDKs](../concepts/build-and-test/tool-sdk-overview.md), and [Microsoft Graph](/graph/teams-concept-overview) |
 | Test, deploy, and publish |[Microsoft Entra ID](/entra/fundamentals/whatis) and [Developer Portal](../concepts/build-and-test/teams-developer-portal.md) |
 | Distribute | [Partner Center](../concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md) and [Teams Store](../concepts/deploy-and-publish/appsource/publish.md) |
 

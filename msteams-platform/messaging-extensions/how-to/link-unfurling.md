@@ -167,7 +167,7 @@ Example of the response:
       
 ```
 
-# [C#](#tab/dotnet)
+# [.NET](#tab/dotnet)
 
 ```csharp
  protected override Task<MessagingExtensionResponse> OnTeamsAppBasedLinkQueryAsync(ITurnContext<IInvokeActivity> turnContext, AppBasedLinkQuery query, CancellationToken cancellationToken)
@@ -232,6 +232,41 @@ attachment.preview = {
 contentType: "application/vnd.microsoft.card.thumbnail",
 }
 
+```
+
+# [Python](#tab/python)
+
+```python
+async def on_teams_app_based_link_query(self, turn_context: TurnContext, query):
+   """
+   Handles link unfurling when a user pastes a URL in a Teams conversation.
+ 
+    This method creates a ThumbnailCard displaying the pasted URL and an image, 
+    then returns it as a Messaging Extension response.
+    """
+    Handles unfurling links when a user pastes them in a conversation.
+    """
+    # Create a ThumbnailCard for the unfurled link
+    attachment = ThumbnailCard(
+        title="Thumbnail Card",  # Title for the card
+        text=query.url,  # Display the URL that was pasted
+        images=[
+            # Add an image for the card (example image from GitHub)
+            CardImage(
+                url="https://raw.githubusercontent.com/microsoft/botframework-sdk/master/icon.png"
+            )
+        ],
+    ).to_attachment()
+
+    # Prepare a MessagingExtensionResult with the unfurled link
+    result = MessagingExtensionResult(
+        type="result",  # Indicates this is a result
+        attachment_layout="list",  # Use list layout
+        attachments=[attachment],  # Include the attachment
+    )
+
+    # Return the response with the unfurled link
+    return MessagingExtensionResponse(compose_extension=result)
 ```
 
 ---
@@ -490,16 +525,11 @@ The following JSON payload example for `suggestedActions` property:
             ]
         },
 ```
-
-## Step-by-step guide
-
-Follow the [step-by-step guide](../../sbs-botbuilder-linkunfurling.yml) to unfurl links in Teams using bot.
-
 ## Code sample
 
 |**Sample name** | **Description** | **.NET** | **Node.js**| **Manifest**
 |----------------|-----------------|--------------|----------------|----------------|
-| Zero install link unfurling. | This sample shows how to use Search-based Messaging Extension with a configuration page. This sample also features zero install link unfurling. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-sso-config/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search-auth-config/csharp/demo-manifest/msgext-search-auth-config.zip)|
+| Zero install link unfurling. | This sample demonstrates how to implement authentication in a message extension for Microsoft Teams, enabling secure access and user-specific interactions. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-sso-config/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search-auth-config/csharp/demo-manifest/msgext-search-auth-config.zip)|
 
 ## See also
 

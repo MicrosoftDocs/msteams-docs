@@ -192,7 +192,7 @@ This action uploads and deploys the project to Azure Storage.
 
 ### See also
 
-* [Microsoft 365 Agents Toolkit Overview](teams-toolkit-fundamentals-vs.md)
+* [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals-vs.md)
 * [Create and deploy an Azure cloud service](/azure/cloud-services/cloud-services-how-to-create-deploy-portal)
 * [Create new Teams app in Visual Studio](~/toolkit/toolkit-v4/create-new-project-vs.md)
 * [Provision cloud resources using Visual Studio](provision-vs.md)

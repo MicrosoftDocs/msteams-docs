@@ -10,9 +10,9 @@ ms.owner: angovil
 
 # Understand Teams AI library
 
-Teams AI library supports JavaScript and simplifies building bots that can interact with Microsoft Teams. It also facilitates the migration of existing bots to use AI-powered features. It supports migrating messaging, message extension, and Adaptive Cards capabilities to the new format. You can also upgrade your existing Teams apps with these features.
+Teams AI library supports JavaScript and simplifies building bots that can interact with Microsoft Teams. It also facilitates the migration of existing bots to use AI-powered features. The library supports migrating messaging, message extension, and Adaptive Cards capabilities to the new format. You can also upgrade your existing Teams apps with these features.
 
-Earlier, you used the BotBuilder SDK to create bots for Teams. Teams AI library is designed to make this process easier and includes AI support. Initially, you might upgrade your bot without AI, but after upgrading, it can connect to AI or Large Language Models (LLMs) available in the AI library.
+Earlier, you used the BotBuilder SDK to create bots for Teams. The Teams AI library is designed to make this process easier and includes built-in AI support. Initially, you might upgrade your bot without AI, but after upgrading, it can connect to AI or Large Language Models (LLMs) available in the AI library.
 
 With Teams AI library, you can focus on:
 
@@ -28,17 +28,18 @@ Teams AI library supports the following activity handlers:
 - [Message extension (ME) capabilities](#message-extensions)
 - [Adaptive Cards capabilities](#adaptive-cards-capabilities)
 
- You need to use the AI library to scaffold bot and Adaptive Card handlers to the source file. In the subsequent sections, we've used  the samples from the [AI library](https://github.com/microsoft/teams-ai/tree/main) to explain each capability and the path to migration.
+You need to use the AI library to scaffold bot and Adaptive Card handlers in your source file. In the subsequent sections, we use samples from the [AI library](https://github.com/microsoft/teams-ai/tree/main) to explain each capability and the migration path.
 
 ### Send or receive message
 
-You can send and receive messages using the Bot Framework. The app listens for user messages, deletes the conversation state upon receipt, and replies. It also tracks the number of messages in a conversation and echoes back the user's message with the count.
+This capability shows how to send and receive messages using the Bot Framework. The sample listens for user messages, deletes the conversation state upon receipt, tracks the number of messages in a conversation, and echoes back the user's message with the count.
 
 # [.NET](#tab/dotnet6)
 
 - [Code sample](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/01.messaging.echoBot)
-
 - [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/01.messaging.echoBot/Program.cs#L49)
+
+### .NET Code Sample
 
 ```csharp
  // Listen for user to say "/reset" and then delete conversation state
@@ -53,8 +54,9 @@ You can send and receive messages using the Bot Framework. The app listens for u
 # [JavaScript](#tab/javascript6)
 
 - [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/01.getting-started/a.echoBot)
-
 - [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/01.getting-started/a.echoBot/src/index.ts#L74)
+
+### JavaScript Code Sample
 
 ```typescript
 // Listen for user to say '/reset' and then delete conversation state
@@ -77,8 +79,9 @@ app.activity(ActivityTypes.Message, async (context: TurnContext, state: Applicat
 # [Python](#tab/python6)
 
 - [Code sample](https://github.com/microsoft/teams-ai/tree/main/python/samples/01.messaging.a.echoBot)
-
 - [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/python/samples/01.messaging.a.echoBot/src/bot.py#L25)
+
+### Python Code Sample
 
 ```python
 @app.activity("message")
@@ -91,15 +94,15 @@ async def on_message(context: TurnContext, _state: TurnState):
 
 ### Message extensions
 
-In the Bot Framework SDK's `TeamsActivityHandler`, set up the Message extensions query handler by extending handler methods. The app listens for search actions and item taps. It formats search results as Hero Cards displaying package information, and displays them in the messaging extension.
+This section demonstrates setting up Message Extensions in the Bot Framework SDK's `TeamsActivityHandler`. The sample shows how the app listens for search actions and item taps. It formats search results as Hero Cards displaying package information and shows them in the messaging extension.
 
 # [.NET](#tab/dotnet5)
 
 - [Code sample](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/02.messageExtensions.a.searchCommand)
-
 - [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/02.messageExtensions.a.searchCommand/Program.cs#L47)
-
 - [Search results reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/02.messageExtensions.a.searchCommand/ActivityHandlers.cs#L39)
+
+### .NET Code Sample
 
 ```csharp
 // Listen for search actions
@@ -139,20 +142,20 @@ In the Bot Framework SDK's `TeamsActivityHandler`, set up the Message extensions
                 AttachmentLayout = "list",
                 Attachments = attachments
             };
-
 ```
 
 # [JavaScript](#tab/javascript5)
 
-The app class has `messageExtensions` features to simplify creating the handlers:
+The app class includes `messageExtensions` features to simplify creating the handlers. The handler parameters are:
 
 - `context`: `TurnContext`
 - `state`: `TurnState`
-- `query`: The data passed from message extension interaction
+- `query`: Data passed from the message extension interaction
 
 - [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.teams-features/a.messageExtensions.searchCommand)
-
 - [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/02.teams-features/a.messageExtensions.searchCommand/src/index.ts#L79)
+
+### JavaScript Code Sample
 
 ```javascript
 import { MessagingExtensionAttachment } from "botbuilder";
@@ -183,7 +186,7 @@ app.messageExtensions.query('searchCmd', async (context: TurnContext, state: Tur
 });
 ```
 
-Similarly, `selectItem` listener would be set up as:
+Similarly, the `selectItem` listener is set up as follows:
 
 ```typescript
 app.messageExtensions.selectItem(async (context: TurnContext, state: TurnState, item) => {
@@ -202,8 +205,9 @@ app.messageExtensions.selectItem(async (context: TurnContext, state: TurnState, 
 # [Python](#tab/python5)
 
 - [Code sample](https://github.com/microsoft/teams-ai/tree/main/python/samples/02.messageExtensions.a.searchCommand)
-
 - [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/python/samples/02.messageExtensions.a.searchCommand/src/bot.py#L44)
+
+### Python Code Sample
 
 ```python
 @app.message_extensions.query("searchCmd")
@@ -239,13 +243,14 @@ async def search_command(
 
 ### Adaptive Cards capabilities
 
-Register Adaptive Card action handlers using the `app.adaptiveCards` property. The app listens for messages with `static` or `dynamic` keywords and returns an Adaptive Card using `StaticMessageHandler()` or `DynamicMessageHandler()`. It also listens for queries from a dynamic search card and submit buttons.
+This section demonstrates how to register Adaptive Card action handlers using the `app.adaptiveCards` property. The sample listens for messages with `static` or `dynamic` keywords and returns an Adaptive Card using `StaticMessageHandler()` or `DynamicMessageHandler()`. The app also listens for queries from a dynamic search card and for submit button actions.
 
 # [.NET](#tab/dotnet4)
 
 - [Code sample](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/03.adaptiveCards.a.typeAheadBot)
-
 - [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/03.adaptiveCards.a.typeAheadBot/Program.cs#L52)
+
+### .NET Code Sample
 
 ```csharp
 // Listen for messages that trigger returning an Adaptive Card
@@ -267,8 +272,9 @@ Register Adaptive Card action handlers using the `app.adaptiveCards` property. T
 # [JavaScript](#tab/javascript4)
 
 - [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.teams-features/b.adaptiveCards.typeAheadBot)
-
 - [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/02.teams-features/b.adaptiveCards.typeAheadBot/src/index.ts#L86)
+
+### JavaScript Code Sample
 
 ```javascript
 // Listen for messages that trigger returning an Adaptive Card
@@ -301,8 +307,9 @@ app.adaptiveCards.actionSubmit('StaticSubmit', async (context, _state, data: Sub
 # [Python](#tab/python4)
 
 - [Code sample](https://github.com/microsoft/teams-ai/tree/main/python/samples/03.adaptiveCards.a.typeAheadBot)
-
 - [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/python/samples/03.adaptiveCards.a.typeAheadBot/src/bot.py#L39C1-L78C1)
+
+### Python Code Sample
 
 ```python
 @app.message(re.compile(r"static", re.IGNORECASE))
@@ -330,17 +337,15 @@ async def dynamic_card(context: TurnContext, _state: AppTurnState) -> bool:
 
 ## Bot logic for handling an action
 
-The bot responds to the user's input with the action `LightsOn` to turn the lights on.
-
-The following example shows how Teams AI library makes it possible to manage the bot logic for handling an action `LightsOn` or `LightsOff` and connect it to the prompt used with OpenAI:
+This sample shows how the bot responds to the user's input with the action `LightsOn` to turn the lights on. It demonstrates how the Teams AI library helps manage bot logic by mapping actions like `LightsOn` or `LightsOff` to prompt functions, particularly when using OpenAI for responses.
 
 # [.NET](#tab/dotnet3)
 
 - [Code sample](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.c.actionMapping.lightBot)
-
 - [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/04.ai.c.actionMapping.lightBot/Program.cs#L33)
-
 - [Actions sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/04.ai.c.actionMapping.lightBot/LightBotActions.cs#L10)
+
+### .NET Code Sample
 
 ```csharp
 / Create AI Model
@@ -456,17 +461,16 @@ builder.Services.AddTransient<IBot>(sp =>
 
             return "done pausing";
         }
-
 ```
 
 # [JavaScript](#tab/javascript3)
 
 - [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.ai-concepts/c.actionMapping-lightBot)
-
 - [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/03.ai-concepts/c.actionMapping-lightBot/src/index.ts#L87)
 
-```typescript
+### JavaScript Code Sample
 
+```typescript
 // Create AI components
 const model = new OpenAIModel({
     // OpenAI Support
@@ -529,14 +533,14 @@ app.ai.action('Pause', async (context: TurnContext, state: ApplicationTurnState,
     await new Promise((resolve) => setTimeout(resolve, parameters.time));
     return `done pausing`;
 });
-
 ```
 
 # [Python](#tab/python3)
 
 - [Code sample](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.c.actionMapping.lightBot)
-
 - [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/python/samples/04.ai.c.actionMapping.lightBot/src/bot.py#L35)
+
+### Python Code Sample
 
 ```python
 # Create AI components
@@ -561,17 +565,17 @@ elif config.AZURE_OPENAI_KEY and config.AZURE_OPENAI_ENDPOINT:
 
 ### Message extension query
 
-Teams AI library provides a more intuitive way to create handlers for message extension query commands, working alongside the existing Teams Bot Framework SDK.
+The Teams AI library provides an intuitive way to create handlers for message extension query commands. This functionality works alongside the existing Teams Bot Framework SDK.
 
-The following is an example of how you can structure the code to handle a message extension query for the `searchCmd` command.
+The following example shows how to structure the code to handle a message extension query for the `searchCmd` command.
 
 # [.NET](#tab/dotnet2)
 
 - [Code sample](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/02.messageExtensions.a.searchCommand)
-
 - [Search actions sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/02.messageExtensions.a.searchCommand/Program.cs#L47)
-
 - [Search results sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/02.messageExtensions.a.searchCommand/ActivityHandlers.cs#L39)
+
+### .NET Code Sample
 
 ```csharp
 // Listen for search actions
@@ -613,11 +617,11 @@ The following is an example of how you can structure the code to handle a messag
 # [JavaScript](#tab/javascript2)
 
 - [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.teams-features/a.messageExtensions.searchCommand)
-
 - [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/02.teams-features/a.messageExtensions.searchCommand/src/index.ts#L78)
 
-```typescript
+### JavaScript Code Sample
 
+```typescript
 // Listen for search actions
 app.messageExtensions.query('searchCmd', async (context, state, query) => {
     const searchQuery = query.parameters.queryText ?? '';
@@ -658,14 +662,14 @@ app.messageExtensions.selectItem(async (context, state, item) => {
         type: 'result'
     };
 });
-
 ```
 
 # [Python](#tab/python2)
 
 - [Code sample](https://github.com/microsoft/teams-ai/tree/main/python/samples/02.messageExtensions.a.searchCommand)
-
 - [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/python/samples/02.messageExtensions.a.searchCommand/src/bot.py#L44)
+
+### Python Code Sample
 
 ```python
 @app.message_extensions.query("searchCmd")
@@ -709,17 +713,14 @@ async def select_item(_context: TurnContext, _state: AppTurnState, item: Any):
 
 ## Intents to actions
 
-A simple interface for actions and predictions allows bots to react confidently. Ambient presence helps bots learn intent, use prompts based on business logic, and generate responses.
-With Teams AI library, the prompt outlines the bot's actions and provides examples.
+This section explains how the Teams AI library uses a simple interface for mapping actions to predictions, allowing bots to confidently react to user intents. Ambient presence helps bots learn intent, apply business logic prompts, and generate responses. In the provided example, the bot manages lists and recognizes commands via a natural conversation.
 
-Conversation history enables natural dialogue, such as *add cereal to groceries list*, followed by *also add coffee*, indicating coffee should be added to the list.
-
-The following is a conversation with an AI assistant. The AI assistant can manage lists and recognizes the following commands:
+The conversation structure between the human and AI assistant includes:
 
 - DO `<action> <optional entities>`
 - SAY `<response>`
 
-The following actions are supported:
+The supported actions are:
 
 - `addItem list="<list name>" item="<text>"`
 - `removeItem list="<list name>" item="<text>"`
@@ -734,7 +735,6 @@ All entities are required parameters for actions.
     ```
 
     ```text
-
     Examples:  
 
     Human: remind me to buy milk
@@ -753,7 +753,6 @@ All entities are required parameters for actions.
     AI: DO summarizeLists
     Human: show me all lists as a card and sort the lists alphabetically
     AI: DO summarizeLists
-
     ```
 
 - Conversation history:
@@ -774,15 +773,16 @@ All entities are required parameters for actions.
     {{conversation.listNames}}
     ```
 
-- AI: The bot logic is streamlined to include handlers for actions such as `addItem` and `removeItem`. This distinction between actions and the prompts serves as a powerful tool as it guides AI to execute the actions and prompts.
+- AI: The bot logic is streamlined with handlers for actions like `addItem` and `removeItem`. This distinction between actions and prompts guides the AI to execute the correct operations.
 
-  # [.NET](#tab/dotnet1)
+# [.NET](#tab/dotnet1)
   
-  - [Code sample](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.d.chainedActions.listBot)
-  
-  - [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/04.ai.d.chainedActions.listBot/ListBotActions.cs#L40)
+- [Code sample](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.d.chainedActions.listBot)
+- [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/04.ai.d.chainedActions.listBot/ListBotActions.cs#L40)
 
-  ```csharp
+### .NET Code Sample
+
+```csharp
             [Action("AddItem")]
             public string AddItem([ActionTurnState] ListState turnState, [ActionParameters] Dictionary<string, object> parameters)
             {
@@ -821,76 +821,77 @@ All entities are required parameters for actions.
                 SetItems(turnState, listName, items);
                 return "item removed. think about your next action";
             }
+```
 
-  ```
+# [JavaScript](#tab/javascript1)
 
-  # [JavaScript](#tab/javascript1)
+- [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.ai-concepts/d.chainedActions-listBot)
+- [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/03.ai-concepts/d.chainedActions-listBot/src/index.ts#L161)
 
-  - [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.ai-concepts/d.chainedActions-listBot)
+### JavaScript Code Sample
 
-  - [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/03.ai-concepts/d.chainedActions-listBot/src/index.ts#L161)
+```typescript
+app.ai.action('addItems', async (context: TurnContext, state: ApplicationTurnState, parameters: ListAndItems) => {
+    const items = getItems(state, parameters.list);
+    items.push(...(parameters.items ?? []));
+    setItems(state, parameters.list, items);
+    return `items added. think about your next action`;
+});
 
-  ```typescript
-        app.ai.action('addItems', async (context: TurnContext, state: ApplicationTurnState, parameters: ListAndItems) => {
-        const items = getItems(state, parameters.list);
-        items.push(...(parameters.items ?? []));
-        setItems(state, parameters.list, items);
-        return `items added. think about your next action`;
-        });
-    
-        app.ai.action('removeItems', async (context: TurnContext, state: ApplicationTurnState, parameters: ListAndItems) => {
-            const items = getItems(state, parameters.list);
-            (parameters.items ?? []).forEach((item: string) => {
-                const index = items.indexOf(item);
-                if (index >= 0) {
-                    items.splice(index, 1);
-                }
-            });
-            setItems(state, parameters.list, items);
-            return `items removed. think about your next action`;
-        });
-  ```
+app.ai.action('removeItems', async (context: TurnContext, state: ApplicationTurnState, parameters: ListAndItems) => {
+    const items = getItems(state, parameters.list);
+    (parameters.items ?? []).forEach((item: string) => {
+        const index = items.indexOf(item);
+        if (index >= 0) {
+            items.splice(index, 1);
+        }
+    });
+    setItems(state, parameters.list, items);
+    return `items removed. think about your next action`;
+});
+```
 
-  # [Python](#tab/python1)
+# [Python](#tab/python1)
 
-  - [Code sample](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.d.chainedActions.listBot)
+- [Code sample](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.d.chainedActions.listBot)
+- [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/python/samples/04.ai.d.chainedActions.listBot/src/bot.py#L96C1-L123C57)
 
-  - [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/python/samples/04.ai.d.chainedActions.listBot/src/bot.py#L96C1-L123C57)
+### Python Code Sample
 
-  ```python
-    @app.ai.action("addItems")
-    async def on_add_items(
-        context: ActionTurnContext[Dict[str, Any]],
-        state: AppTurnState,
-    ):
-        parameters = ListAndItems.from_dict(context.data, infer_missing=True)
-        state.ensure_list_exists(parameters.list)
-        items = state.conversation.lists[parameters.list]
-        if parameters.items is not None:
-            for item in parameters.items:
-                items.append(item)
-            state.conversation.lists[parameters.list] = items
-        return "items added. think about your next action"
-    
-    @app.ai.action("removeItems")
-    async def on_remove_items(
-        context: ActionTurnContext[Dict[str, Any]],
-        state: AppTurnState,
-    ):
-        parameters = ListAndItems.from_dict(context.data, infer_missing=True)
-        state.ensure_list_exists(parameters.list)
-        items = state.conversation.lists[parameters.list]
-        if parameters.items is not None and len(parameters.items) > 0:
-            for item in parameters.items:
-                if item in items:
-                    items.remove(item)
-            state.conversation.lists[parameters.list] = items
-        return "items removed. think about your next action"
-  ```
+```python
+@app.ai.action("addItems")
+async def on_add_items(
+    context: ActionTurnContext[Dict[str, Any]],
+    state: AppTurnState,
+):
+    parameters = ListAndItems.from_dict(context.data, infer_missing=True)
+    state.ensure_list_exists(parameters.list)
+    items = state.conversation.lists[parameters.list]
+    if parameters.items is not None:
+        for item in parameters.items:
+            items.append(item)
+        state.conversation.lists[parameters.list] = items
+    return "items added. think about your next action"
 
-  ---
+@app.ai.action("removeItems")
+async def on_remove_items(
+    context: ActionTurnContext[Dict[str, Any]],
+    state: AppTurnState,
+):
+    parameters = ListAndItems.from_dict(context.data, infer_missing=True)
+    state.ensure_list_exists(parameters.list)
+    items = state.conversation.lists[parameters.list]
+    if parameters.items is not None and len(parameters.items) > 0:
+        for item in parameters.items:
+            if item in items:
+                items.remove(item)
+        state.conversation.lists[parameters.list] = items
+    return "items removed. think about your next action"
+```
+
+---
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Build a custom engine agent](../../../Teams-AI-library-tutorial.yml)
+> [Build a custom engine agent](teams-ai-library-tutorial.md)

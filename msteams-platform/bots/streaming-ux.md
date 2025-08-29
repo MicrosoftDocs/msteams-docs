@@ -16,8 +16,6 @@ ms.localizationpriority: high
 >
 > - only for one-on-one chats.
 > - is generally available on web, desktop, and mobile.
->
-> Streaming bot message isn't available with function calling and the OpenAI `o1` model.
 
 You can stream bot messages to deliver a bot's responses to the user as small updates while the complete response is being generated to enhance the user experience. Often, bots take a long time to generate responses without updating the user interface, leading to a less engaging experience.
 
@@ -598,7 +596,7 @@ The following are the success and error codes:
 
 | Sample name | Description | Node.js | C# | Python |
 | --- | --- | --- | --- | --- |
-| Teams streaming bot sample | This code sample demonstrates how to build a bot connected to an LLM and send messages through Teams. | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-streaming/csharp) | NA |
+| Teams streaming bot sample| This sample app can be used for streaming scenarios in Teams using Azure Open AI and Bot Framework v4 for personal scope. | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-streaming/csharp) | NA |
 | Conversational streaming bot | This is a conversational streaming bot with Teams AI library. | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai-apps/i.teamsChefBot-streaming)| [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.g.teamsChefBot-streaming) | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.h.chainedActions.listBot-streaming) |
 
 ## See also

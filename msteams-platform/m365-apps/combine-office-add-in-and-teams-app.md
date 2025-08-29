@@ -139,7 +139,7 @@ To separate the source code for the tab or bot, perform the following steps:
 1. Open the `m365agents.local.yml` file in the root of the project, find the line `args: install --no-audit`, and change this to `args: run install:tab --no-audit`.
 1. Open **TERMINAL** in Visual Studio Code. Navigate to the root of the project and run `npm install`. A new `node_modules` folder and a new `package.lock.json` file are created in the project root. 
 1. Next run `npm run install:tab`. A new `node_modules` folder and a new `package.lock.json` file are created in the tab folder, if they aren't there already. 
-1. Verify that you can sideload the tab with the following steps:
+1. Verify that you can upload your custom tab app with the following steps:
 
     1. Open Agents Toolkit. 
     1. In the **ACCOUNTS** section, verify that you're signed in to Microsoft 365 account.
@@ -155,7 +155,7 @@ To separate the source code for the tab or bot, perform the following steps:
     1. To stop debugging and uninstall the app, select **Run** > **Stop Debugging** in Visual Studio Code.
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Prepare%20the%20Teams%20app%20project&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fcombine-office-add-in-and-teams-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fcombine-office-add-in-and-teams-app.md&documentVersionIndependentId=1aa92d67-f5f9-6ec5-87b2-8492cecd202e&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Prepare%20the%20Teams%20app%20project&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fcombine-office-add-in-and-teams-app%23prepare-the-teams-app-project&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fcombine-office-add-in-and-teams-app.md&documentVersionIndependentId=1aa92d67-f5f9-6ec5-87b2-8492cecd202e&author=@rickki&platformId=626799ea-27e2-45ca-0ce9-3d5c2cfaf890&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 ### Create an Outlook Add-in project
 
@@ -168,7 +168,7 @@ To separate the source code for the tab or bot, perform the following steps:
 
     Agents Toolkit creates the project with basic files and scaffolding and opens it in a new Visual Studio Code window. You'll use this project as a source for files and markup that you add to the Teams project.
     
-1. Although you won't be developing this project, perform the following steps to verify that it can be sideloaded from Visual Studio Code before you continue:
+1. Although you won't be developing this project, perform the following steps to verify that it can be uploaded from Visual Studio Code before you continue:
 
     1. Ensure the Outlook desktop is closed.
     1. Open Visual Studio Code.
@@ -190,11 +190,11 @@ To separate the source code for the tab or bot, perform the following steps:
     1. To stop debugging and to uninstall the add-in, select **Run** > **Stop Debugging** in Visual Studio Code. If the Webpack dev-server window doesn't close, open the Visual Studio Code **TERMINAL** in the root of the project and run `npm stop`.
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20an%20Outlook%20Add-in%20project&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fcombine-office-add-in-and-teams-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fcombine-office-add-in-and-teams-app.md&documentVersionIndependentId=1aa92d67-f5f9-6ec5-87b2-8492cecd202e&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Create%20an%20Outlook%20Add-in%20project&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fcombine-office-add-in-and-teams-app%23create-an-outlook-add-in-project&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fcombine-office-add-in-and-teams-app.md&documentVersionIndependentId=1aa92d67-f5f9-6ec5-87b2-8492cecd202e&&author=@rickki&platformId=626799ea-27e2-45ca-0ce9-3d5c2cfaf890&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ### Merge the manifest
 
-The Teams app's manifest is generated at debug-and-sideload time (or build time) from the `manifest.json` file in the **\appPackage** folder of the Teams project. This file is a **template** for a manifest. In this article, it's referred to as the *template* or *manifest template*. Most of the markup is hardcoded into the template, but there are also some configuration files that contain data that gets added to the final generated manifest. In this procedure, perform the following tasks:
+The Teams app's manifest is generated at debug-and-upload time (or build time) from the `manifest.json` file in the **\appPackage** folder of the Teams project. This file is a **template** for a manifest. In this article, it's referred to as the *template* or *manifest template*. Most of the markup is hardcoded into the template, but there are also some configuration files that contain data that gets added to the final generated manifest. In this procedure, perform the following tasks:
 
 - Copy markup from the add-in's manifest to the Teams app's manifest template.
 - Edit the configuration files. 
@@ -466,7 +466,7 @@ Unless specified otherwise, the file you change is `\appPackage\manifest.json`.
 
 1. In the `compounds` section of the same file, rename the `Debug in Teams (Edge)` compound to `Launch App Debug (Edge)` and rename the `Debug in Teams (Chrome)` compound to `Launch App Debug (Chrome)`.
 
-1. Verify that you can sideload the add-in capability of the Teams app to Outlook with the following steps:
+1. Verify that you can upload the add-in capability of the Teams app to Outlook with the following steps:
 
       1. Ensure the Outlook desktop is closed.
       1. Open Visual Studio Code.
@@ -486,11 +486,11 @@ Unless specified otherwise, the file you change is `\appPackage\manifest.json`.
       1. To stop debugging and to uninstall the add-in, select **Run** > **Stop Debugging** in Visual Studio Code. If the Webpack dev-server window doesn't close, open the Visual Studio Code **TERMINAL** in the root of the project and run `npm stop`.
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Edit%20the%20tooling%20configuration%20files&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fcombine-office-add-in-and-teams-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fcombine-office-add-in-and-teams-app.md&documentVersionIndependentId=1aa92d67-f5f9-6ec5-87b2-8492cecd202e&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Edit%20the%20tooling%20configuration%20files&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fcombine-office-add-in-and-teams-app%23edit-the-tooling-configuration-files&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fcombine-office-add-in-and-teams-app.md&documentVersionIndependentId=1aa92d67-f5f9-6ec5-87b2-8492cecd202e&&author=@rickki&platformId=626799ea-27e2-45ca-0ce9-3d5c2cfaf890&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ### Run the app and add-in locally at the same time
 
-You can sideload and run the app and the add-in simultaneously, but the debugger can't reliably attach when both are running. So to debug, run only one at a time. 
+You can upload and run the app and the add-in simultaneously, but the debugger can't reliably attach when both are running. So to debug, run only one at a time. 
 
 To debug the app, refer to the last step of the [Prepare the Teams app project](#prepare-the-teams-app-project) section.
 
@@ -506,7 +506,7 @@ To see both the app and the add-in running at the same time, take the following 
 1. In the **RUN AND DEBUG** dropdown menu, select **Launch App and Add-in Outlook Desktop (Edge Chromium)** and press F5. 
     The project builds and a Webpack dev-server window opens. The tab app is hosted in the Visual Studio Code terminal. This process can take a couple of minutes and the following actions occur:
 
-    - Teams opens in a browser with a prompt to add your tab app. If Teams hasn't opened by the time Outlook desktop opens, then automatic sideloading has failed. You can manually sideload it to see both the app and the add-in running at the same time. For sideloading instructions, see [Upload your app in Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload). You'll find the manifest.zip file to upload at `C:\Users\{yourname}\AppData\Local\Temp`.
+    - Teams opens in a browser with a prompt to add your tab app. If Teams hasn't opened by the time Outlook desktop opens, then automatic uploading has failed. You can manually upload it to see both the app and the add-in running at the same time. For more information, see [Upload your custom app in Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload). You'll find the manifest.zip file to upload at `C:\Users\{yourname}\AppData\Local\Temp`.
     - Outlook desktop opens.
 
 1. In the Teams prompt, select **Add** and the tab opens.
@@ -519,10 +519,10 @@ To see both the app and the add-in running at the same time, take the following 
 1. Select the **Show Taskpane** button. A task pane opens. 
 1. Select the **Perform an action** button. A small notification appears near the top of the message.
 1. To stop debugging and to uninstall the add-in, select **Run** > **Stop Debugging** in Visual Studio Code. If the Webpack dev-server window doesn't close, open the Visual Studio Code **TERMINAL** in the root of the project and run `npm stop`.
-1. If you had to manually sideload the Teams tab app, remove it from Teams as instructed in [Remove your app](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload#remove-your-app). 
+1. If you had to manually upload a custom Teams tab app, remove it from Teams as instructed in [Remove your app](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload#remove-your-app). 
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Run%20the%20app%20and%20add-in%20locally%20at%20the%20same%20time&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fcombine-office-add-in-and-teams-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fcombine-office-add-in-and-teams-app.md&documentVersionIndependentId=1aa92d67-f5f9-6ec5-87b2-8492cecd202e&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+[I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Run+the+app+and+add-in+locally+at+the+same+times&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fcombine-office-add-in-and-teams-app%23run-the-app-and-add-in-locally-at-the-same-time&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fcombine-office-add-in-and-teams-app.md&documentVersionIndependentId=1aa92d67-f5f9-6ec5-87b2-8492cecd202e&&author=@rickki&platformId=626799ea-27e2-45ca-0ce9-3d5c2cfaf890&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ### Move the application to Azure
 
@@ -651,7 +651,7 @@ To see both the app and the add-in running at the same time, take the following 
 1. When provisioning completes, select **Deploy** to deploy your app code to Azure.
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Move%20the%20application%20to%20Azure&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fcombine-office-add-in-and-teams-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fcombine-office-add-in-and-teams-app.md&documentVersionIndependentId=1aa92d67-f5f9-6ec5-87b2-8492cecd202e&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Move%20the%20application%20to%20Azure&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fcombine-office-add-in-and-teams-app%23move-the-application-to-azure&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fcombine-office-add-in-and-teams-app.md&documentVersionIndependentId=1aa92d67-f5f9-6ec5-87b2-8492cecd202e&&author=@rickki&platformId=626799ea-27e2-45ca-0ce9-3d5c2cfaf890&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ### Run the tab capability from the remote deployment
 
@@ -666,7 +666,7 @@ To see both the app and the add-in running at the same time, take the following 
 1. In the Visual Studio Code **TERMINAL**, navigate to the root of the project and then run `npm run build:add-in`.
 1. Copy the file `\add-in\dist\manifest.dev.json` to the `\appPackage` folder.
 1. Rename the copy in the `\appPackage` folder to `manifest.addinPreview.json`.
-1. In the **TERMINAL**, run `npx office-addin-dev-settings sideload .\appPackage\manifest.addinPreview.json`. This process can take a couple of minutes and opens the Outlook desktop. (If you're prompted to install `office-addin-dev-settings`, respond **yes**.)
+1. In the **TERMINAL**, run `npx office-addin-dev-settings upload .\appPackage\manifest.addinPreview.json`. This process can take a couple of minutes and opens the Outlook desktop. (If you're prompted to install `office-addin-dev-settings`, respond **yes**.)
 1. Go to Outlook.
 1. Open the **Inbox** of your Microsoft 365 account identity.
 1. Open any message. 
@@ -677,7 +677,7 @@ To see both the app and the add-in running at the same time, take the following 
 1. Select the **Perform an action** button. A small notification appears near the top of the message.
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Run%20the%20add-in%20capability%20from%20the%20remote%20deployment&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fcombine-office-add-in-and-teams-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fcombine-office-add-in-and-teams-app.md&documentVersionIndependentId=1aa92d67-f5f9-6ec5-87b2-8492cecd202e&author=surbhigupta&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Run%20the%20add-in%20capability%20from%20the%20remote%20deployment&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fcombine-office-add-in-and-teams-app%23run-the-add-in-capability-from-the-remote-deployment&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fcombine-office-add-in-and-teams-app.md&documentVersionIndependentId=1aa92d67-f5f9-6ec5-87b2-8492cecd202e&&author=@rickki&platformId=626799ea-27e2-45ca-0ce9-3d5c2cfaf890&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## What’s next
 

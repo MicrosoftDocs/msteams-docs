@@ -44,35 +44,31 @@ Agents Toolkit helps you generate the authentication files in **TeamsFx-Auth** f
             ]
         ```
 
-    * `replyUrlsWithType`: It lists registered redirect_uri values that Microsoft Entra ID accepts as destinations when returning tokens. Set necessary redirect URIs into `replyUrlsWithType` to successfully return token. For more information, see [replyUrlsWithType attribute](/azure/active-directory/develop/reference-app-manifest#replyurlswithtype-attribute).
+    * `redirectUris`: It lists registered redirect_uri values that Microsoft Entra ID accepts as destinations when returning tokens. Set necessary redirect URIs into `redirectUris` to successfully return token. For more information, see [redirectUris attribute](/entra/identity-platform/reference-microsoft-graph-app-manifest#web-attribute).
 
         ```json
-            "replyUrlsWithType":[
-          {
-            "url": "${{TAB_ENDPOINT}}/auth-end.html",
-            "type": "Web"
-          }
-        ]    
+            "web": {
+            "redirectUris": [
+             "${{TAB_ENDPOINT}}/auth-end.html"
+            ]
+            }
         ```
 
         > [!NOTE]
         > Use `${{ENV_NAME}}` to reference variables in `env/.env.{TEAMSFX_ENV}`.
 
         ```json
-            "replyUrlsWithType":[
-          {
-            "url": "${{TAB_ENDPOINT}}/auth-end.html",
-            "type": "Web"
-          },
-          {
-            "url": "${{TAB_ENDPOINT}}/auth-end.html?clientId=${{AAD_APP_CLIENT_ID}}",
-            "type": "Spa"
-          },
-          {
-            "url": "${{TAB_ENDPOINT}}/blank-auth-end.html",
-            "type": "Spa"
-          }
-        ]
+            "web": {
+             "redirectUris": [
+              "${{TAB_ENDPOINT}}/auth-end.html"
+             ]
+            },
+            "spa": {
+             "redirectUris": [
+              "${{TAB_ENDPOINT}}/auth-end.html?clientId=${{AAD_APP_CLIENT_ID}}",
+              "${{TAB_ENDPOINT}}/blank-auth-end.html"
+             ]
+            }
         ```
 
     * "name": It replaces the value with your expected Microsoft Entra app name.
@@ -103,6 +99,9 @@ Agents Toolkit helps you generate the authentication files in **TeamsFx-Auth** f
    Add Microsoft Entra related changes and configs into your `yml` files:
 
     * Add `aadApp/create` under `provision`: Create new Microsoft Entra apps used for SSO. For more information, see [aadApp/create](https://github.com/OfficeDev/TeamsFx/wiki/Available-actions-in-Teams-Toolkit#aadappcreate).
+
+        > [!NOTE]
+        > You can add any missing parameters under `writeToEnvironmentFile` directly in your .yml file.
 
     * Add `aadApp/update` under `provision`: Update your Microsoft Entra app with Microsoft Entra app manifest in step 1. For more information, see [aadApp/update](https://aka.ms/teamsfx-actions/aadapp-update).
 
@@ -148,6 +147,9 @@ Agents Toolkit helps you generate the authentication files in **TeamsFx-Auth** f
 
     In the `m365agents.local.yml` file:
     * Add the following code under `provision` to add Microsoft Entra related configs to local debug service.
+
+        > [!NOTE]
+        > If the `file/createOrUpdateJsonFile` section is configured in `m365agents.local.yml`, then you can skip the following step.
 
          ```json
             - uses: file/createOrUpdateJsonFile
@@ -371,31 +373,16 @@ Agents Toolkit helps you generate the authentication files in **TeamsFx-Auth** f
     > [!NOTE]
     > You can use `${{ENV_NAME}}` to reference variables in the `env/.env.{TEAMSFX_ENV}` file.
 
-   * `replyUrlsWithType`: It lists registered redirect_uri values that Microsoft Entra ID accepts as destinations when returning tokens. You need to set necessary Redirect URIs into "replyUrlsWithType" for successfully returning token. For more information, see [replyUrlsWithType attribute](/azure/active-directory/develop/reference-app-manifest#replyurlswithtype-attribute).
+   * `redirectUris`: It lists registered redirect_uri values that Microsoft Entra ID accepts as destinations when returning tokens. You need to set necessary Redirect URIs into "redirectUris" for successfully returning token. For more information, see [redirectUris attribute](/entra/identity-platform/reference-microsoft-graph-app-manifest#web-attribute).
 
     Example:
 
     ```
-    "replyUrlsWithType":[
-      {
-        "url": "https://${{BOT_DOMAIN}}/bot-auth-end.html",
-        "type": "Web"
-      }
-    ]
-    ```
-
-    > [!NOTE]
-    > You can use use `${{ENV_NAME}}` to reference envs in the `env/.env.{TEAMSFX_ENV}` file.
-
-    Example:
-
-    ```
-    "replyUrlsWithType":[
-      {
-      "url": "https://${{BOT_DOMAIN}}/bot-auth-end.html",
-      "type": "Web"
-      }
-    ]
+    "web": {
+     "redirectUris": [
+      "https://${{BOT_DOMAIN}}/bot-auth-end.html"
+     ]
+    }
     ```
 
    * "name": Replace the value with your expected Microsoft Entra app name.
@@ -459,6 +446,9 @@ Agents Toolkit helps you generate the authentication files in **TeamsFx-Auth** f
    Microsoft Entra related changes and configs needs to be added into your `yml` files:
     * Add `aadApp/create` under `provision` for creating new Microsoft Entra apps used for SSO. For more information, see [available actions in Agents Toolkit](https://github.com/OfficeDev/TeamsFx/wiki/Available-actions-in-Teams-Toolkit#aadappcreate).
 
+        > [!NOTE]
+        > You can add any missing parameters under `writeToEnvironmentFile` directly in your .yml file.
+
     * Add `aadApp/update` under `provision` for updating your Microsoft Entra app with Microsoft Entra app manifest in step 1. For more information, see [aadApp/update](https://github.com/OfficeDev/TeamsFx/wiki/Available-actions-in-Teams-Toolkit#aadappupdate).
 
     * Update `file/createOrUpdateJson` File for adding the following environment variables during local debug:
@@ -471,6 +461,9 @@ Agents Toolkit helps you generate the authentication files in **TeamsFx-Auth** f
 
    In both `m365agents.yml` and `m365agents.local.yml` files:
     * Add the code under `provision` to create Microsoft Entra app.
+
+        > [!NOTE]
+        > If the `aadApp/create` section is missing under `provision` in your .yml file, you can copy and paste the required section into it.
 
     ```yml
     - uses: aadApp/create
@@ -506,10 +499,13 @@ Agents Toolkit helps you generate the authentication files in **TeamsFx-Auth** f
    In the `m365agents.local.yml` file:
     * Update `file/createOrUpdateJsonFile` under `provision` to add Microsoft Entra related configs to local debug service.
 
+        > [!NOTE]
+        > If the `file/createOrUpdateJsonFile` section is configured in `m365agents.local.yml`, then you can skip the following step.
+
         ```json
         - uses: file/createOrUpdateJsonFile
                 with:
-                  target: ./appsettings.Development.json
+                  target: ../ProjecName/appsettings.Development.json
                   appsettings:
                     BOT_ID: ${{BOT_ID}}
                     BOT_PASSWORD: ${{SECRET_BOT_PASSWORD}}
@@ -558,6 +554,7 @@ Agents Toolkit helps you generate the authentication files in **TeamsFx-Auth** f
    Update the code as:
 
    ```
+   param location string = resourceGroup().location
    param m365ClientId string
    param m365TenantId string
    param m365OauthAuthorityHost string
@@ -633,7 +630,7 @@ Agents Toolkit helps you generate the authentication files in **TeamsFx-Auth** f
 
    Example for TeamsFx Bot template:
 
-   * Open `Config.cs` and replace the code:
+   * Open `Config.cs` and add following classes to the namespace:
 
     ```
     using Microsoft.TeamsFx.Configuration;
@@ -779,7 +776,7 @@ Agents Toolkit helps you generate the authentication files in **TeamsFx-Auth** f
 
 ## See also
 
-* [Microsoft 365 Agents Toolkit Overview](teams-toolkit-fundamentals-vs.md)
+* [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals-vs.md)
 * [Prerequisites for creating your Teams app](tools-prerequisites-vs.md)
 * [Enable SSO for tab app](~/tabs/how-to/authentication/tab-sso-overview.md)
 * [Enable SSO for your bot and message extension](~/bots/how-to/authentication/bot-sso-overview.md)

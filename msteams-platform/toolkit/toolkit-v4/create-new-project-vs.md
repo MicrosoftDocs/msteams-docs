@@ -74,7 +74,7 @@ To create a new Teams app, follow the steps:
 
    The **README.md** tab appears. You can see the instructions in **README** window and check out the different features in Teams Toolkit.
 
-   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/get-started-vs.png" alt-text="Screenshot shows the Getting Started teams toolkit page." lightbox="../../assets/images/toolkit-v2/toolkit-vs/get-started-tab-vs.png":::
+   :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/get-started-vs.png" alt-text="Screenshot shows the Getting Started Agents toolkit page." lightbox="../../assets/images/toolkit-v2/toolkit-vs/get-started-tab-vs.png":::
 
 You have created the app project scaffolding for your Teams app using Teams Toolkit template.
 
@@ -86,11 +86,11 @@ Teams Toolkit provides all components for building an app. After you're created 
 
 * Directory structure for a basic Teams app
 
-  :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/basic-app-directory.png" alt-text="Screenshot shows the tab Solution Explorer teams toolkit for basic tab.":::
+  :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/basic-app-directory.png" alt-text="Screenshot shows the tab Solution Explorer Agents toolkit for basic tab.":::
 
 * Directory structure for a scenario-based Teams app
 
-  :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/scenario-based-directory.png" alt-text="Screenshot shows the scenario based Solution Explorer teams toolkit.":::
+  :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/scenario-based-directory.png" alt-text="Screenshot shows the scenario based Solution Explorer Agents toolkit.":::
 
 ## Teams app templates in Teams Toolkit
 

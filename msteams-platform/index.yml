@@ -59,7 +59,7 @@ conceptualContent:
         - url: bots/how-to/teams-conversational-ai/ai-ux.md        
           itemType: concept
           text: Custom engine agent user experience
-        - url: Teams-AI-library-tutorial.yml
+        - url: bots/how-to/teams-conversational-ai/teams-ai-library-tutorial.md
           itemType: learn
           text: Build a custom engine agent
         - url: /training/modules/microsoft-teams-publish-app-to-store
@@ -212,12 +212,12 @@ tools:
     - title: Microsoft 365 Agents Toolkit extension for Visual Studio Code
       # imageSrc should be square in ratio with no whitespace
       imageSrc: /media/logos/logo_vs-code.svg
-      url: /microsoftteams/platform/toolkit/teams-toolkit-fundamentals
+      url: /microsoftteams/platform/toolkit/agents-toolkit-fundamentals
   # Card
     - title: Microsoft 365 Agents Toolkit extension for Visual Studio
       # imageSrc should be square in ratio with no whitespace
       imageSrc: /media/logos/logo_vs-ide.svg
-      url: /microsoftteams/platform/toolkit/teams-toolkit-overview-visual-studio
+      url: /microsoftteams/platform/toolkit/toolkit-v4/agents-toolkit-fundamentals-vs
     # Card
     - title: Developer Portal
     # imageSrc should be square in ratio with no whitespace

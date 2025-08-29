@@ -23,7 +23,7 @@ The following sections guide us to understand the collaboration process as proje
 
   1. Select **Microsoft 365 Agents Toolkit** in the activity bar.
   
-     :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/select-teams-toolkit.png" alt-text="Screenshot shows the select Agents Toolkit from activity bar.":::
+     :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/select-toolkit.png" alt-text="Screenshot shows the select Agents Toolkit from activity bar.":::
 
   1. In **ENVIRONMENT** section, select Manage Collaborators button as shown in the following image:
 
@@ -71,29 +71,29 @@ The following sections guide us to understand the collaboration process as proje
 
 ## Remove Collaborator
 
-Removing collaborators requires the following manual steps:
+To manually remove collaborators, do one of the following procedures:
 
 * Using Developer Portal
 
   * Go to [Teams Developer Portal](https://dev.teams.microsoft.com/home) and select your Teams app by name or app ID.
   * Select **Owners** from left panel.
-  * Select and remove the collaborator.
+  * Select **Delete** to remove other app owners.
 
 * Using Microsoft Entra ID
 
-  * Go to [Microsoft Entra ID](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), select **App registration** from left panel, and find your Microsoft Entra app.
+  * Go to [Microsoft Entra ID](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), select **App registrations** from left panel, and find your app.
   * Select **Owners** from left panel in Microsoft Entra app management page.
-  * Select and remove the collaborator.
+  * Select and remove the owner.
 
     > [!NOTE]
     >
     > * Collaborator added to your project doesn't receive any notification. Project owner needs to notify collaborator offline.
-    > * Azure related permissions must be set manually by Azure subscription administrator on Azure portal.
-    > * Azure account must have contributor role for the subscription so that developers can work together to provision and deploy TeamsFx project.
+    > * Azure related permissions must be set manually by Azure subscription administrator on Azure portal. To manually remove the permissions, see [revoke granted consent to permissions](/microsoftteams/manage-consent-app-permissions#revoke-granted-consent-to-permissions).
+    > * Azure account must have [contributor role](/azure/role-based-access-control/built-in-roles#contributor) for the subscription so that developers can work together to provision and deploy TeamsFx project.
 
 ## See also
 
-* [Microsoft 365 Agents Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals.md)
 * [Provision cloud resources](provision.md)
 * [Deploy Teams app to the cloud](deploy.md)
 * [Manage multiple environments](TeamsFx-multi-env.md)

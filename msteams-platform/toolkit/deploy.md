@@ -250,7 +250,7 @@ This action upload and deploys generated sppkg to SharePoint app catalog. You ca
 
 ## See also
 
-* [Microsoft 365 Agents Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals.md)
 * [Create and deploy an Azure cloud service](/azure/cloud-services/cloud-services-how-to-create-deploy-portal)
 * [Add How-to guides to Teams app](add-how-to-guides-vsc.md)
 * [Add cloud resources to Teams app](add-resource.md)

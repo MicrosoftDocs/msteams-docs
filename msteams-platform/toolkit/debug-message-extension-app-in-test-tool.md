@@ -29,12 +29,12 @@ Ensure that you install the following tools to build and deploy your bot in Agen
 
 ## Build and run the sample app
 
-1. Go to the [sample](https://github.com/OfficeDev/TeamsFx-Samples).
+1. Go to the [sample](https://github.com/OfficeDev/microsoft-365-agents-toolkit-samples).
 
 1. Clone the repository to test the sample app.
 
    ```
-   git clone https://github.com/OfficeDev/TeamsFx-Samples.git
+   git clone https://github.com/OfficeDev/microsoft-365-agents-toolkit-samples.git
    ```
 
 1. Go to **Visual Studio Code**.
@@ -45,7 +45,7 @@ Ensure that you install the following tools to build and deploy your bot in Agen
 
 1. Select **Select Folder**.
 
-   :::image type="content" source="../assets/images/toolkit-v2/teams-app-select-folder.png" alt-text="Screenshot shows the test tool sample app folder.":::
+   :::image type="content" source="../assets/images/toolkit-v2/teams-app-select-folder.png" alt-text="Screenshot shows the Agents Playground sample app folder.":::
 
 1. From the left pane, select **Microsoft 365 Agents Toolkit**.
 
@@ -53,11 +53,11 @@ Ensure that you install the following tools to build and deploy your bot in Agen
 
 1. Agents Playground opens the bot in a webpage.
 
-   :::image type="content" source="../assets/images/toolkit-v2/test-tool-in-browser-window.png" alt-text="Screenshot shows the test tool opens in a webpage.":::
+   :::image type="content" source="../assets/images/toolkit-v2/test-tool-in-browser-window.png" alt-text="Screenshot shows the Agents Playground opens in a webpage.":::
 
 1. In the message compose area, type `help`. Agents Playground displays all the message extension commands in the sample app.
 
-   :::image type="content" source="../assets/images/toolkit-v2/help-in-teams-app-test-tool.png" alt-text="Screenshot shows the help in the message compose area of test tool.":::
+   :::image type="content" source="../assets/images/toolkit-v2/help-in-teams-app-test-tool.png" alt-text="Screenshot shows the help in the message compose area of Agents Playground.":::
 
 1. Select the **+** icon to display the type of message extension:
 
@@ -127,7 +127,7 @@ Ensure that you install the following tools to build and deploy your bot in Agen
     ---
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Build%20and%20run%20the%20sample%20app&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdebug-message-extension-app-in-test-tool%3Ftabs%3Daction-commands&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdebug-message-extension-app-in-test-tool.md&documentVersionIndependentId=5a31f804-1b50-c555-7f8d-ac9c4ecdf419&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Build%20and%20run%20the%20sample%20app&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdebug-message-extension-app-in-test-tool%3Ftabs%3Daction-commands%23build-and-run-the-sample-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdebug-message-extension-app-in-test-tool.md&documentVersionIndependentId=5a31f804-1b50-c555-7f8d-ac9c4ecdf419&author=surbhigupta&platformId=fa5ab448-6815-3b34-a1bb-b36435c4b7a4&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 You can create a dialog with an Action Command in two ways:
 
@@ -169,7 +169,7 @@ The following code is a sample of the static list of parameters in JSON format:
    }]
    ```
 
-:::image type="content" source="../assets/images/toolkit-v2/static-list-of-parameters-in-teams-app-test-tool.png" alt-text="Screenshot shows how to create a static list of parameters in teams app test tool.":::
+:::image type="content" source="../assets/images/toolkit-v2/static-list-of-parameters-in-teams-app-test-tool.png" alt-text="Screenshot shows how to create a static list of parameters in agents playground.":::
 
 Static list of parameters are available under the `composeExtensions` property in app manifest. For example, see [manifest.json](https://github.com/OfficeDev/TeamsFx/blob/main/templates/ts/message-extension-action/appPackage/manifest.json.tpl#L41-L59).
 
@@ -196,7 +196,7 @@ To test an **Link Unfurling** in Agents Playground, follow these steps:
 
 1. Select **Link Unfurling**.
 
-   :::image type="content" source="../assets/images/toolkit-v2/link-unfurling.png" alt-text="Screenshot shows how to create a link unfurling in teams app test tool.":::
+   :::image type="content" source="../assets/images/toolkit-v2/link-unfurling.png" alt-text="Screenshot shows how to create a link unfurling in agents playground.":::
 
    A **Enter a URL** dialog appears.
 
@@ -204,7 +204,7 @@ To test an **Link Unfurling** in Agents Playground, follow these steps:
 
 1. Select **Send to Conversation**.
 
-   :::image type="content" source="../assets/images/toolkit-v2/link-unfurling-card.png" alt-text="Screenshot shows how to create link unfurling in teams app test tool.":::
+   :::image type="content" source="../assets/images/toolkit-v2/link-unfurling-card.png" alt-text="Screenshot shows how to create link unfurling in agents playground.":::
 
    Agents Playground triggers a `composeExtension/queryLink` invoke request with the URL to the message extension. You can review the Adaptive Card that Agents Playground renders based on the invoke response from the app.
 
@@ -212,7 +212,7 @@ To test an **Link Unfurling** in Agents Playground, follow these steps:
 > The user experience for testing link unfurling in Agents Playground differs from that in Teams, however you can still test or debug the app logic with Agents Playground in a simple way.
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Link%20Unfurling&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdebug-message-extension-app-in-test-tool%3Ftabs%3Daction-commands&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdebug-message-extension-app-in-test-tool.md&documentVersionIndependentId=5a31f804-1b50-c555-7f8d-ac9c4ecdf419&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Link%20Unfurling&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdebug-message-extension-app-in-test-tool%3Ftabs%3Daction-commands%23link-unfurling&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdebug-message-extension-app-in-test-tool.md&documentVersionIndependentId=5a31f804-1b50-c555-7f8d-ac9c4ecdf419&author=surbhigupta&platformId=fa5ab448-6815-3b34-a1bb-b36435c4b7a4&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 ## Limitations
 

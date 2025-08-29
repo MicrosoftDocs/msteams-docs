@@ -333,7 +333,7 @@ The example payload which contains static and dynamic typeahead search with sing
 
 ### Response
 
-#### [C#](#tab/csharp)
+#### [.NET](#tab/csharp)
 
 ```csharp
 protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
@@ -417,6 +417,31 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
         }
     }
 }
+```
+
+#### [Python](#tab/python)
+
+```python
+async def on_invoke_activity(self, context: TurnContext):
+    if context.activity.name == 'application/search':
+        dropdown_card = context.activity.value.get("data", {}).get("choiceselect")
+        search_query = context.activity.value.get("queryText", "")
+
+        url = f"http://registry.npmjs.com/-/v1/search?{urllib.parse.urlencode({'text': search_query, 'size': 8})}"
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url) as response:
+                if response.status == 200:
+                    data = await response.json()
+                    npm_packages = [
+                        {
+                            'title': obj['package']['name'],
+                            'value': f"{obj['package']['name']} - {obj['package'].get('description', 'No description available')}"
+                        }
+                        for obj in data.get('objects', [])
+                    ]
+
+                    return self._build_search_response(dropdown_card, npm_packages)
+    return None
 ```
 
 ---
@@ -556,7 +581,7 @@ The following code snippet shows an example of a bot invoke request for the card
 
 |**Sample name** | **Description** | **.NET** | **Node.js** | **Manifest**
 |----------------|-----------------|--------------|----------------|----------------|
-| Typeahead search control on Adaptive Cards | The sample shows how to use static and dynamic typeahead search control in Adaptive Cards. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp/demo-manifest/Typeahead-search-adaptive-cards.zip)
+| Typeahead search control on Adaptive Cards |Demonstrating the feature of typeahead search (static, dynamic and dependant) control in Adaptive Cards using sent bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-type-ahead-search-adaptive-cards/csharp/demo-manifest/Typeahead-search-adaptive-cards.zip)
 
 ## See also
 

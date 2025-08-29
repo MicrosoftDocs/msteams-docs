@@ -34,9 +34,9 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
 
    :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/create-new-app.png" alt-text="Screenshot shows the location of the Create New Project link in the Agents Toolkit sidebar.":::
 
-1. Select **Custom Engine Agent**.
+1. Select **Agent for Teams**.
 
-   :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/custom-copilot.png" alt-text="Screenshot shows the option to select custom engine agent as the new project to create.":::
+   :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/agent-for-teams.png" alt-text="Screenshot shows the option to select custom engine agent as the new project to create.":::
 
 1. Select **AI Agent**.
 
