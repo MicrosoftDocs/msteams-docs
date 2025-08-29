@@ -636,7 +636,7 @@ No. We always recommend users to test their applications in the Teams client bef
 
 ## Step-by-step guide
 
-Follow the [step-by-step guide](../sbs-teams-app-test-tool.yml) to debug an AI chat bot using Agents Playground.
+Follow the [step-by-step guide](teams-app-test-tool-tutorial.md) to debug an AI chat bot using Agents Playground.
 
 ## See also
 

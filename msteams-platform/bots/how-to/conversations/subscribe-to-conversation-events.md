@@ -1653,5 +1653,5 @@ In the development phase, it's always helpful to send meaningful messages in con
 * [API reference for the Bot Framework Connector service](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)
 * [Channel and group chat conversations with a bot](channel-and-group-conversations.md)
 * [Receive all channel messages for bot and agents](channel-messages-for-bots-and-agents.md)
-* [Create Teams conversation bot](../../../sbs-teams-conversation-bot.yml)
+* [Create Teams conversation bot](channel-and-group-conversations.md)
 * [Triggers in Bot Framework Composer](/composer/concept-events-and-triggers)
