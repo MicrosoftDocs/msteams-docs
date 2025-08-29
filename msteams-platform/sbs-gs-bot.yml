@@ -329,7 +329,7 @@ items:
       > Custom app upload is available in Government Community Cloud (GCC) and isn't supported in GCC High, DoD, and Teams operated by 21Vianet.
 
       > [!TIP]
-      > Check for issues before you upload a custom app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html). This tool is included in the toolkit. Fix the errors to upload the app.
+      > Check for issues before you upload a custom app, using the [app validation tool](https://dev.teams.microsoft.com/tools/store-validation). This tool is included in the toolkit. Fix the errors to upload the app.
       </details> 
 
      > [!div class="nextstepaction"]
