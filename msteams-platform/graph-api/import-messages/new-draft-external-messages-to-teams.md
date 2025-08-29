@@ -36,7 +36,7 @@ You can either create a new channel or chat in a Team or use an existing channel
 
 * Define a minimum timestamp for messages to be migrated. The provided timestamp must be older than the channel or chat’s current createdDateTime and replaces it during migration.
 
-#### Channel migration
+#### 2.1 Channel migration
 
 * The supported channels are all the existing Shared, Private, and Public channels. You can optionally provide a request body to specify the minimum timestamp for the messages to be migrated.
 
@@ -50,7 +50,7 @@ POST  /teams/{team-id}/channels/{channel-id}/startMigration
 }
 ```
 
-#### Chat migration
+#### 2.2 Chat migration
 
 * The supported chat types include Group chats and One-on-one (1:1) chats. **Meeting chats are not supported. External members are supported in all applicable chat types.**
 * The startMigration API initiates the message migration process by setting the migrationMode property to **inProgress** for a specified chat.
@@ -101,7 +101,7 @@ Namespace: microsoft.graph
 
 Use the **completeMigration** API to finish the migration process for both new and existing channels and chats. Previously, this operation was limited to newly created Standard channels and chats initiated for the initial migration flow.
 
-#### Complete Channel Migration
+#### 5.1 Complete Channel Migration
 
 * When a channel is created in migration mode for the initial import flow, calling the **completeMigration** API updates the migrationMode property to completed. **This change is permanent and marks the channel as fully migrated.**
 * After calling completeMigration, you can still import extra messages by using the startMigration API.
@@ -112,7 +112,7 @@ Use the **completeMigration** API to finish the migration process for both new a
 POST /teams/{team-id}/channels/{channel-id}/completeMigration 
 ```
 
-#### Complete Chat Migration
+#### 5.2 Complete Chat Migration
 
 * For existing chats already in migration mode, call the **completeMigration** API to update the migrationMode property to completed. **This marks the chat as fully migrated.**
 * After calling completeMigration on a new or existing chat, you can continue importing messages by using the startMigration API.
@@ -140,7 +140,7 @@ POST /chats/{chat-id}/completeMigration
 |**Channels**   |  General, Standard, Private, Shared   | New and existing  |  Must be created or already in migration mode    |
 |**Chats**    |   Group, One-on-one (1:1)   | New and existing  | Meeting chats not supported; external members supported        |
 
-6. Call the GET /channel/chat API to verify that the migrationMode property is marked as **completed**.
+### 6. Call the GET /channel/chat API to verify that the migrationMode property is marked as **completed**
 
 ## See also
 
