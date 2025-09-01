@@ -3,12 +3,12 @@ title: App Manifest Reference
 description: In this article, you'll have the latest version of the public manifest schema for Microsoft Teams reference, schema, and sample full manifest.
 ms.topic: reference
 ms.localizationpriority: high
-ms.date: 5/29/2025
+ms.date: 8/27/2025
 --- 
 
 # App manifest
 
-The app manifest (previously called Teams app manifest) describes how your app integrates into the Microsoft Teams product. Your app manifest must conform to the schema hosted at [https://developer.microsoft.com/json-schemas/teams/v1.22/MicrosoftTeams.schema.json](https://developer.microsoft.com/json-schemas/teams/v1.22/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,...,1.21, and the current version is 1.22 are each supported (using "v1.x" in the URL). Version 1.18 is not available.
+The app manifest (previously called Teams app manifest) describes how your app integrates into the Microsoft Teams product. Your app manifest must conform to the schema hosted at [https://developer.microsoft.com/json-schemas/teams/v1.23/MicrosoftTeams.schema.json](https://developer.microsoft.com/json-schemas/teams/v1.23/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,...,1.22, and the current version is 1.23 are each supported (using "v1.x" in the URL). Version 1.18 isn't available.
 For more information on the changes made in each version, see [app manifest change log](https://github.com/OfficeDev/microsoft-teams-app-schema/releases) and for previous versions, see [app manifest versions](https://github.com/microsoft/json-schemas/tree/main/teams).
 
 The following table lists TeamsJS version and app manifest versions as per different app scenarios:
@@ -418,7 +418,7 @@ The ID is a unique Microsoft-generated identifier for the app. The format of the
 The ID stored in Teams admin center is the **External App ID** and it's visible as **ExternalID** on the traces.
 
 > [!NOTE]
-> If you are submitting an update to your existing app in AppSource, the ID in your app manifest must not be modified.
+> If you're submitting an update to your existing app in AppSource, the ID in your app manifest must not be modified.
 
 ## developer
 
@@ -543,6 +543,26 @@ Describes the unidirectional dependency of one app capability (X) to another (Y)
 
 Describes a set of mutual dependencies between two or more app capabilities. A Microsoft 365 runtime host must support all required capabilities for any of those capabilities to be available for users in that host.
 
+## backgroundLoadConfiguration
+
+**Optional** &ndash; Object
+
+Optional property containing background loading configuration. By opting in to this performance enhancement, your app is eligible to be loaded in the background in any Microsoft 365 application host that supports this feature.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| `tabConfiguration` | Array of objects | 1 |  | Array of objects containing tab settings for background loading. |
+
+### tabConfiguration
+
+**Optional** &ndash; Object
+
+Optional property within `backgroundLoadConfiguration` containing tab settings for background loading.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| `contentUrl` | string | 2048 | ✔️ | Required URL for background loading. This can be the same `contentUrl` from the staticTabs section or an alternative endpoint used for background loading.|
+
 ## copilotAgents
 
 **Optional** &ndash; Object
@@ -551,8 +571,8 @@ Defines one or more agents to Microsoft 365 Copilot. [Declarative agents](/micro
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`declarativeAgents`|Array of objects| 1 || Array of objects that each define a declarative agent. |
-|`customEngineAgents`|Array of objects| 1 || Array of objects that each define a custom engine agent.|
+|`declarativeAgents`|Array of objects| 1 | | Array of objects that each define a declarative agent. |
+|`customEngineAgents`|Array of objects| 1 | | Array of objects that each define a custom engine agent.|
 
 > [!NOTE]
 > The `copilotAgents` object must contain either `declarativeAgents` or `customEngineAgents`, but not both agents at the same time.
@@ -574,7 +594,7 @@ Represents a conversational Teams bot that uses custom AI language models and or
 |---|---|---|---|---|
 |`id`|String| |✔️| Unique (bot) identifier for the custom engine agent. Must match the `id` specified in the `bots` section of the manifest and be of `personal` scope. |
 |`type`|String| |✔️| Type of the custom engine agent. Supported value: `bot` |
-|`disclaimer.text`|String|500|✔️| The message shown to users before they interact with this application.
+|`disclaimer.text`|String|500|✔️| The message shown to users before they interact with this application. |
 
 ## configurableTabs
 
@@ -618,7 +638,6 @@ This item is an array (maximum of 16 elements) with all elements of the type `ob
 > [!NOTE]
 >
 > * The `contentBotId` property isn't supported in apps that are verified and published on AppSource.
-> * The `groupChat` and `team` scopes are supported only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 > * The `teamLevelApp` context is dedicated only for Education tenants.
 > * The `searchUrl` feature is not available for the third-party developers.
 > * If your tabs require context-dependent information to display relevant content or for initiating an authentication flow, For more information, see [Get context for your Microsoft Teams tab](../../tabs/how-to/access-teams-context.md).
@@ -642,7 +661,7 @@ The item is an array (maximum of only one element&mdash; only one bot is allowed
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`botId`|String||✔️|The unique Microsoft app ID for the bot as registered with the Bot Framework. The ID can be the same as the overall [app ID](#id).|
-|`scopes`|Array of enums|3|✔️|Specifies whether the bot offers an experience in the context of a channel in a `team`, in a group chat (`groupChat`), or an experience scoped to an individual user alone (`personal`). These options are non-exclusive.|
+|`scopes`|Array of enums|4|✔️|Specifies whether the bot offers an experience in the context of a channel in a team, in a group chat (`groupChat`), an experience scoped to an individual user alone (`personal`) or within Copilot surfaces. These options are non-exclusive. |
 |`needsChannelSelector`|Boolean|||Describes whether or not the bot uses a user hint to add the bot to a specific channel. <br>Default value: `false` |
 |`isNotificationOnly`|Boolean|||Indicates whether a bot is a one-way, notification-only bot, as opposed to a conversational bot. <br>Default value: `false` |
 |`supportsFiles`|Boolean|||Indicates whether the bot supports the ability to upload/download files in personal chat. <br>Default value: `false`|
@@ -699,6 +718,19 @@ A list of commands that your bot can recommend to users. The object is an array 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 | `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| Specifies one or more runtime capabilities the bot requires to function properly. Supported values: `dialogUrl`, `dialogUrlBot`, `dialogAdaptiveCard`, `dialogAdaptiveCardBot`. For more information, see [how to specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md). |
+
+## registrationInfo
+
+**Optional** &ndash; Object
+
+System‑generated metadata. This information is maintained by Microsoft services and must not be modified manually.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| `source` | string | | ✔️ | The partner source through which the bot is registered. System‑generated metadata. This information is maintained by Microsoft services and must not be modified manually. Allowed values: `standard`, `microsoftCopilotStudio`, `onedriveSharepoint`. |
+| `environment` | string | 128 | | A Power Platform environment that serves as a container for building apps under a Microsoft 365 tenant and can only be accessed by users within that tenant. System‑generated metadata. This information is maintained by Microsoft services and must not be modified manually. |
+| `schemaName` | string | 128 | | The Copilot Studio copilot schema name. System‑generated metadata. This information is maintained by Microsoft services and must not be modified manually. |
+| `clusterCategory` | string | 128 | | The core services cluster category for Copilot Studio copilots. System‑generated metadata. This information is maintained by Microsoft services and must not be modified manually. |
 
 ## connectors
 
@@ -785,6 +817,14 @@ Each command item is an object with the following structure:
 |---|---|---|---|---|
 | `requirementSet.hostMustSupportFunctionalities`|Array of objects| |✔️| Specifies one or more runtime capabilities the message extension requires to function properly. Supported values: `dialogUrl`, `dialogUrlBot`, `dialogAdaptiveCard`, `dialogAdaptiveCardBot`. For more information, see [how to specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md). |
 
+### hostFunctionality
+
+An object representing a specific functionality that a host must support.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| `name` | string | | ✔️ | The name of the functionality. <br> Allowed values: `dialogUrl`, `dialogUrlBot`, `dialogAdaptiveCard`, `dialogAdaptiveCardBot`. |
+
 ## permissions
 
 **Optional** &ndash; Array of strings
@@ -801,9 +841,9 @@ Changing these permissions during app update, causes your users to repeat the co
 
 ## devicePermissions
 
-**Optional** &ndash; Array of strings
+**Optional** &ndash; Array of enum
 
-Provides the native features on a user's device that your app requests access to. Options are:
+Allows a maximum 5 array items. Provides the native features on a user's device that your app requests access to. Options are:
 
 * `geolocation`
 * `media`
@@ -851,6 +891,16 @@ Provide your Microsoft Entra App ID and Microsoft Graph information to help user
 |`nestedAppAuthInfo.scopes`|Array|20|✔️| Represents the stringified list of scopes the access token requested requires. Order must match that of the proceeding NAA request in the app.|
 |`nestedAppAuthInfo.claims`|String|||An optional JSON formatted object of client capabilities that represents if the resource server is CAE capable. Do not use an empty string for this value. If unsupported, keep the field undefined.|
 
+### nestedAppAuthInfo
+
+By including this property, an NAA token based on its contents will be prefetched when the tab is loaded.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| `redirectUri` | string | | ✔️ | Represents the nested app's valid redirect URI (always a base origin). |
+| scopes | Array of string | 20 | ✔️ | Represents the stringified list of scopes the access token requested requires. Order must match that of the proceeding NAA request in the app. |
+| `claims` | string | 1 | | An optional JSON formatted object of client capabilities that represents if the resource server is CAE capable. Do not use an empty string for this value. If unsupported, keep the field undefined. If supported, use the following string exactly: {"access_token":{"xms_cc":{"values":["CP1"]}}}. For more information on client capabilities, see [How to communicate client capabilities to Microsoft Entra ID](/entra/identity-platform/claims-challenge?tabs=dotnet#how-to-communicate-client-capabilities-to-microsoft-entra-id).
+
 ## graphConnector
 
 **Optional** &ndash; Object
@@ -859,7 +909,7 @@ Specify the app's Graph connector configuration. If this is present, then [webAp
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`notificationUrl`|String|2048 characters|✔️|The url where Graph-connector notifications for the application should be sent.|
+|`notificationUrl`|String|2048 characters|✔️|The url where Graph-connector notifications for the application should be sent. The string must start with `https://`|
 
 ## showLoadingIndicator
 
@@ -1010,6 +1060,7 @@ Enables your app in non-standard channels. If your app supports a team scope and
 >
 > * If your app supports a team scope, it functions in the standard channels regardless of the values that are defined in this property.
 > * Your app can account for the unique properties of each of the channel types to function properly. To enable your tab for private and shared channels, see [retrieve context in private channels](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) and [get context in shared channels](../../tabs/how-to/access-teams-context.md#get-context-in-shared-channels)
+> * Only **tabs** are currently supported in **private** and **shared** channels in Microsoft Teams.
 
 ## defaultBlockUntilAdminAction
 
@@ -1133,7 +1184,7 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
     |`MicrophoneStream.Read.User`| Allows the app to read user's microphone stream.|
     |`MeetingParticipantReaction.Read.User`| Allows the app to read user's reactions while participating in a meeting.|
 
-## extensions
+## elementExtensions
 
 **Optional** &ndash; Object
 
@@ -1141,18 +1192,24 @@ The `extensions` property specifies Outlook Add-ins within an app manifest and s
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`requirements`| Object | | | Specifies the set of client or host requirements for the extension. |
+|`requirements`| Array of `requirementsExtensionElement` | | | Specifies the set of client or host requirements for the extension. |
 |`runtimes`| Array | 20 | | Configures the set of runtimes and actions that can be used by each extension point. For more information, see [runtimes in Office Add-ins](/office/dev/add-ins/testing/runtimes). |
 |`ribbons`| Array | 20 | | Defines the ribbons extension point. |
 |`autoRunEvents`| Array | 10 | | Defines the event-based activation extension point. |
 |`alternates`| Array | | 10 | Specifies the relationship to alternate existing Microsoft 365 solutions. It's used to hide or prioritize add-ins from the same publisher with overlapping functionality. |
 |`audienceClaimUrl`| String | 2048 characters | | Specifies the URL for your extension and is used to validate Exchange user identity tokens. For more information, see [inside the Exchange identity token](/office/dev/add-ins/outlook/inside-the-identity-token)|
+| `contentRuntimes` | Array of `extensionContentRuntimeArray` | Minimum array items: 1 | | Configures a page of content that is embedded in an Excel or PowerPoint document. |
+| `getStartedMessages` | Array of `extensionGetStartedMessageArray` | Minimum array items: 1 <br> Maximum array items: 3 | | Provides information used by the callout that appears when the add-in is installed. |
+| `contextMenus` | Array of `extensionContextMenuArray` | Minimum array items: 1 | | Specifies the context menus for your extension. A context menu is a shortcut menu that appears when a user right-clicks (selects and holds) in the Office UI. Min size 1.|
+| `keyboardShortcuts` | Array of `extensionKeyboardShortcut` | Minimum array items: 1 <br> Maximum array items: 10 | | Keyboard shortcuts, also known as key combinations, enable your add-in's users to work more efficiently. Keyboard shortcuts also improve the add-in's accessibility for users with disabilities by providing an alternative to the mouse. |
 
 For more information, see [Office Add-ins manifest for Microsoft 365](/office/dev/add-ins/develop/unified-manifest-overview).
 
-### extensions.requirements
+### elementExtensions.requirements
 
 The `extensions.requirements` object specifies the scopes, form factors, and Office JavaScript library requirement sets that must be supported on the Office client in order for the add-in to be installed. Requirements are also supported on the `ribbon`, `runtime`, `alternates`, and `autoRunEvents` child properties to selectively filter out some features of the add-in. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).
+
+It specifies limitations on which clients the add-in can be installed on, including limitations on the Office host application, the form factors, and the requirement sets that the client must support.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -1160,7 +1217,7 @@ The `extensions.requirements` object specifies the scopes, form factors, and Off
 |`capabilities.name`| String |128| ✔️ | Identifies the name of the requirement set. |
 |`capabilities.minVersion`| String | | | Identifies the minimum version for the requirement set. |
 |`capabilities.maxVersion`| String | | | Identifies the maximum version for the requirement set. |
-|`scopes`| Array of enums | 4 | | Identifies the scopes in which the add-in can run and defines the Microsoft 365 applications in which the extension can run. For example, `mail` (Outlook). <br>Supported value: `mail` |
+|`scopes`| Array of enums | 4 | | Identifies the scopes in which the add-in can run. Supported values: `mail`, `workbook`, `document`, `presentation`. |
 |`formFactors`| Array of enums | 2| | Identifies the form factors that support the add-in. <br>Supported values: `mobile`, `desktop`|
 
 ### extensions.runtimes
@@ -1178,6 +1235,7 @@ The `extensions.runtimes` array configures the sets of runtimes and actions that
 |`code.script`| String | 2048 characters | | Specifies the URL of the JavaScript file to be loaded in [JavaScript-only runtime](/office/dev/add-ins/testing/runtimes#javascript-only-runtime). |
 |`lifetime`| String enum | | | Specifies the lifetime of the runtime. Runtimes with a `short` lifetime don’t preserve state across executions while runtimes with a `long` lifetime do. For more information, see [Runtimes in Office Add-ins](/office/dev/add-ins/testing/runtimes). <br>Default value: `short` |
 |`actions`| Array | 20 | | Specifies the set of actions supported by the runtime. An action is either running a JavaScript function or opening a view such as a task pane.|
+| customFunctions | Array | | | Enable developers to add new functions to Excel by defining those functions in JavaScript as part of an add-in.|
 |`actions.id`| String | 64 characters | ✔️ | Specifies the ID for the action, which is passed to the code file. |
 |`actions.type`| String | | ✔️ | Specifies the type of action. The `executeFunction` type runs a JavaScript function without waiting for it to finish and the `openPage` type opens a page in a given view. |
 |`actions.displayName`| String | 64 characters | | Specifies the display name of the action and it isn't the label of a button or a menu item that invokes the action (which is configured with `tabs.groups.controls.label`).|
@@ -1195,6 +1253,90 @@ The `extensions.runtimes` array configures the sets of runtimes and actions that
 
 To use `extensions.runtimes`, see [create add-in commands](/office/dev/add-ins/develop/create-addin-commands-unified-manifest), [configure the runtime for a task pane](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-runtime-for-the-task-pane-command), and [configure the runtime for the function command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-runtime-for-the-function-command).
 
+### extensionCustomFunctions
+
+Custom function enable developers to add new functions to Excel by defining those functions in JavaScript as part of an add-in. Users within Excel can access custom functions just as they would any native function in Excel, such as SUM().
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| `functions` | Array of `extensionFunction` | | ✔️ | Array of function object which defines function metadata. |
+| `namespace` | Array of `extensionCustomFunctionsNamespace` | | ✔️ | Defines the namespace for your custom functions. |
+| `allowCustomDataForDataTypeAny` | boolean | | | Allows a custom function to accept Excel data types as parameters and return values. Default value: `False`. |
+
+### extensionCustomFunctionsNamespace
+
+Defines the namespace for your custom functions. A namespace prepends itself to your custom functions to help customers identify your functions as part of your add-in.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| id | string | Minimum string length: 1. <br> Maximum string length: 32. | ✔️ | Non-localizeable version of the namespace. The string value must start with a letter and can contain only letters, numbers, periods, and underscores.|
+| name | string | Minimum string length: 1. <br> Maximum string length: 32. | ✔️ | Localizeable version of the namespace. The string value must start with a letter and can contain only letters, numbers, periods, and underscores. |
+<!--
+| description | string | Minimum string length: 1. <br> Maximum string length: 128. | The description of the function that end users see in Excel. |
+| helpUrl | string | Minimum string length: 1. <br> Maximum string length: 2048. | | URL that provides information about the function. (It is displayed in a task pane. |
+| parameters | Array of `extensionFunctionParameter` |  | ✔️ | Array that defines the input parameters for the function. |
+-->
+
+### extensionFunction
+
+Array of function object which defines function metadata.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| `id` | string | Minimum string length: 3. <br> Maximum string length: 64. | ✔️ | A unique ID for the function. <br> The string value must start with a letter and can contain only letters, numbers, periods, and underscores. |
+| `name` | string | Minimum string length: 3. <br> Maximum string length: 64. | ✔️ | The name of the function that end users see in Excel. In Excel, this function name is prefixed by the custom functions namespace that's specified in the manifest file. <br> The string value must start with a letter and can contain only letters, numbers, periods, and underscores. |
+|`description` | string | Minimum string length: 1. <br> Maximum string length: 128. | | The description of the function that end users see in Excel. |
+| `helpUrl` | string | Minimum string length: 1. <br> Maximum string length: 2048. | | URL that provides information about the function. (It's displayed in a task pane.) |
+| `parameters` | Array of `extensionFunctionParameter` | Maximum array items: 128 | ✔️ | Array that defines the input parameters for the function. |
+| result | Array of `extensionResult` | | ✔️ | Object that defines the type of information that is returned by the function. |
+| `stream` | boolean | | | If true, the function can output repeatedly to the cell even when invoked only once. This option is useful for rapidly-changing data sources, such as a stock price. The function should have no return statement. Instead, the result value is passed as the argument of the `StreamingInvocation.setResult` callback function. |
+| `volatile` | boolean | | | If true, the function recalculates each time Excel recalculates, instead of only when the formula's dependent values have changed. A function can't use both the stream and volatile properties. If the stream and volatile properties are both set to true, the volatile property will be ignored. <br> Default value: `False`. |
+| `cancelable` | boolean | | | If true, Excel calls the CancelableInvocation handler whenever the user takes an action that has the effect of canceling the function; for example, manually triggering recalculation or editing a cell that is referenced by the function. Cancelable functions are typically only used for asynchronous functions that return a single result and need to handle the cancellation of a request for data. A function can't use both the stream and cancelable properties. <br> Default value: `False`. |
+| `requiresAddress` | boolean | | | If true, your custom function can access the address of the cell that invoked it. The address property of the invocation parameter contains the address of the cell that invoked your custom function. A function can't use both the stream and requiresAddress properties. <br> Default value: `False`. |
+| `requiresParameterAddress` | boolean | | | If true, your custom function can access the addresses of the function's input parameters. This property must be used in combination with the dimensionality property of the result object, and dimensionality must be set to matrix. <br> Default value: `False`. |
+
+### extensionFunctionParameter
+
+Array that defines the input parameters for the function.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| `name` | string | Minimum string length: 1. <br> Maximum string length: 64. | ✔️ | The name of the parameter. This name is displayed in Excel's IntelliSense. |
+| `description` | string | Minimum string length: 1. <br> Maximum string length: 128. | | A description of the parameter. This is displayed in Excel's IntelliSense. |
+| `type` | string | Minimum string length: 1. <br> Maximum string length: 128. | | The data type of the parameter. It can only be boolean, number, string, any, `CustomFunctions.Invocation`, `CustomFunctions.StreamingInvocation` or `CustomFunctions.CancelableInvocation`, any allows you to use any of other types. |
+| `cellValueType` | string | | | A subfield of the type property. Specifies the Excel data types accepted by the custom function. <br> Allowed values: <br> `cellvalue`, `booleancellvalue`, `doublecellvalue`, `entitycellvalue`, `errorcellvalue`, `formattednumbercellvalue`, `linkedentitycellvalue`, `localimagecellvalue`, `stringcellvalue`, `webimagecellvalue`. |
+| `dimensionality` | string | | | Must be either scalar (a non-array value) or matrix (a 2-dimensional array). <br> Allowed values: `scalar`, `matrix`.|
+| `optional` | boolean - null | | | If true, the parameter is optional. |
+| `repeating` | boolean | | | If true, parameters populate from a specified array. Note that functions all repeating parameters are considered optional parameters by definition. <br> Default value: `False`.|
+
+### extensionRuntimesArray
+
+The `extensions.runtimes` array configures the sets of runtimes and actions that an Office add-in or Copilot agent can use. For information about runtimes in Office Add-ins, see [Runtimes in Office Add-ins](/office/dev/add-ins/testing/runtimes).
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| `requirements` | Array of `requirementsExtensionElement` | | Specifies the scopes, formFactors, and Office JavaScript library requirement sets that must be supported on the Office client in order for the runtime to be included in the add-in. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).|
+| `id` | string | Maximum string length: 64. | ✔️ | Specifies the ID for runtime. |
+| `type` | string | | | Specifies the type of runtime. The supported enum value for browser-based runtime is general. |
+| `code` | Array of `extensionRuntimeCode` | | ✔️ | Specifies the location of code for the runtime. Based on `runtime.type`, add-ins can use either a JavaScript file or an HTML page with an embedded `script` tag that specifies the URL of a JavaScript file. Both URLs are necessary in situations where the `runtime.type` is uncertain.|
+| `lifetime` | string | | | Specifies the lifetime of the runtime. The possible values are the following: <br> `short` (default): Doesn't preserve state across executions. It enables an [Outlook add-in to process unsolicited messages](/microsoft-365/extensibility/schema/extension-ribbons-spam-pre-processing-dialog?view=m365-app-1.23&preserve-view=true). <br> `long` : Preserves the state across executions, allowing the add-in to run indefinitely. For example, task pane code will continue running even when the user closes the task pane. It can also be shared across different features of your add-in. See [Configure your Office Add-in to use a shared JavaScript runtime](/office/dev/add-ins/develop/configure-your-add-in-to-use-a-shared-runtime) for details.|
+| `actions` | Array of `extensionRuntimesActionsItem` | Minimum array items: 1. <br> Maximum array items: 20.| | Specifies the set of actions supported by the runtime. An action is either running a JavaScript function or opening a view such as a task pane. |
+| `customFunctions` | Array of `extensionCustomFunctions` | | | Custom function enable developers to add new functions to Excel by defining those functions in JavaScript as part of an add-in. Users within Excel can access custom functions just as they would any native function in Excel, such as SUM().|
+
+### extensionRuntimesActionsItem
+
+Specifies the set of actions supported by this runtime. An action is either running a JavaScript function or opening a view such as a task pane.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| `id` | string | Maximum string length: 64. | ✔️ | Specifies the ID for the action. |
+| `type` | string | | ✔️ | Specifies the type of action. The following are the possible values. <br> `openPage`: Opens a page in a task pane. <br> `executeFunction`: Runs a JavaScript function, usually invoked by a button, menu item, or keyboard shortcut. For more information, see [Create add-in commands](/office/dev/add-ins/develop/create-addin-commands-unified-manifest). <br> executeDataFunction: Runs a JavaScript function that is invoked by a Copilot agent. <br> Allowed values: `executeFunction`, `openPage`. |
+| `displayName` | string | Maximum string length: 64. | | If the add-in includes a custom keyboard shortcut to invoke the action, this property specifies a description of a shortcut in a dialog that reports a conflict between the custom shortcut and a shortcut built into Office or installed with another add-in. This property is not the label of a button or a menu item that invokes the action (which is configured with `tabs.groups.controls.label`). <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true). |
+| `pinnable` | boolean | | | Specifies that a task pane supports pinning, which keeps the task pane open when the user changes the selection. <br> This property is used only when `actions.type` is `openPage`. For more information, see [Implement a pinnable task pane in Outlook](/office/dev/add-ins/outlook/pinnable-taskpane).|
+| `view` | string | Maximum string length: 64. | | Specifies a descriptive name for the task pane container; for example, `MainAppDashboard`. <br> This property is used only when `actions.type` is `openPage`. When you have multiple `openPage` actions, use a different `view` if you want an independent pane for each. Use the same `view` for different pages that share the same pane. When users choose an action of type `openPage` that shares the same `view`, the pane container will remain open, but the contents of the pane will be replaced with the corresponding `runtimes.code.page`. |
+| `multiselect` | boolean | | | Specifies whether the end user can select multiple email messages, and apply the action to all of them. <br> This property is only supported in Outlook add-ins, and only when the `extensions.ribbons.contexts` array includes `mailRead` or `mailCompose`. To learn more about item multi-select, see [Activate your Outlook add-in on multiple messages](/office/dev/add-ins/outlook/item-multi-select). <br> Default value: `False`. |
+| `supportsNoItemContext` | boolean | | | Enables task pane add-ins to activate without the reading pane enabled or a message selected. <br> This property is only supported in Outlook add-ins, and only when the `extensions.ribbons.contexts` array includes `mailRead`. To learn more, see [Activate your Outlook add-in without the Reading Pane enabled or a message selected](/office/dev/add-ins/outlook/contextless). <br> Default value: `False`. |
+
 ### extensions.ribbons
 
 **Optional** &ndash; Array
@@ -1203,7 +1345,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`contexts`| Array | 8 | | Specifies the Microsoft 365 application window in which the ribbon customization is available to the user. Each item in the array is a member of a string array. <br>Supported values: `mailRead`, `mailCompose`, `meetingDetailsOrganizer`, `meetingDetailsAttendee`, `onlineMeetingDetailsOrganizer`, `logEventMeetingDetailsAttendee`, `spamReportingOverride`, `default`|
+|`contexts`| Array | 8 | | Specifies the Microsoft 365 application window in which the ribbon customization is available to the user. Each item in the array is a member of a string array. <br>Supported values: `mailRead`, `mailCompose`, `meetingDetailsOrganizer`, `meetingDetailsAttendee`, `onlineMeetingDetailsOrganizer`, `logEventMeetingDetailsAttendee`, `spamReportingOverride`, `default`.|
 |`requirements`| Object | | | Specifies the scopes, formFactors, and Office JavaScript library requirement sets that must be supported on the Office client in order for the ribbon customization to appear. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).|
 |`requirements.capabilities`| Array |100 | | Identifies the requirement sets. <br>Options: `name` (required), `minVersion`, `maxVersion`|
 |`requirements.capabilities.name`| String |128 | ✔️ | Identifies the name of the requirement set. |
@@ -1289,7 +1431,129 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`spamPreProcessingDialog.spamMoreInfo.text`| String | 128 characters | ✔️ | Specifies the link text for a URL that directs users to informational resources from the preprocessing dialog. |
 |`spamPreProcessingDialog.spamMoreInfo.url`| String | 2048 characters | ✔️ | Specifies the HTTPS URL of a site that contains informational resources. |
 
+#### extensionRibbonsCustomMobileGroupItem
+
+Defines groups of controls on the default tab of the ribbon on a mobile device. This array property can only be present on tab objects that have a `tabs.builtInTabId` property that is set to `DefaultTab`. For non-mobile devices, see `tabs.groups`.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`id`| String | 250 characters | ✔️ | Specifies the ID of the group. It must be different from any built-in group ID in the Microsoft 365 application and any other custom group. |
+|`label`| String | 32 characters | ✔️ | Specifies the label on the group. <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true). |
+| `controls`| Array | 20 characters | ✔️ | Defines the controls in the group. <br> Only mobile buttons are supported. |
+
+#### extensionCommonCustomControlMenuItem
+
+Configures the items for a menu control.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`id`| String | 64 characters | ✔️ | Specifies the ID for a menu item. |
+|`type`| String | | ✔️ | Defines the menu item's control type. Allowed values: `menuItem`. |
+|`label`| String | 64 characters | ✔️ | Specifies the text displayed for the menu item. <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true). |
+|`icons`| Array | 3 characters | | Configures the icons for the menu item. <br> Minimum array items: 1. |
+|`supertip`| Array | | ✔️ | Configures a supertip for the menu item. <br> A supertip is a UI feature that displays a brief box of help information about a control when the cursor hovers over it. The box may contain multiple lines of text. |
+|`actionId`| String | 64 characters | ✔️ | Specifies the ID of the action that is taken when a user selects the control or menu item. The `actionId` must match with some `runtimes.actions.id` property value. |
+|`enabled`| Boolean | | | Indicates whether the menu item is initially enabled. <br> Default value: `true`.|
+|`overriddenByRibbonApi`| Boolean | | | Specifies whether the menu item is hidden on application and platform combinations which support the API [Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon?view=common-js-preview&preserve-view=true). This API installs custom contextual tabs on the ribbon. <br> Default value: `false`.|
+
+#### extensionRibbonsCustomMobileControlButtonItem
+
+Defines the controls in the group. Only mobile buttons are supported.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`id`| String | 250 characters | ✔️ | Specify the Id of the button like `msgReadFunctionButton`. |
+|`type`| String |  | ✔️ | Specifies the type of control. <br> Allowed values: `mobileButton`.|
+|`label`| String | 32 characters | ✔️ | Specifies the label on the control. <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true).|
+|`icons`| Array | 9 items | ✔️ | Specifies the icons that will appear on the control depending on the dimensions and DPI of the mobile device screen. <br> There must be exactly 9 icons. Hence, both minimum and maximum size is 9. |
+|`actionId`| String | 64 characters | ✔️ | Specifies the ID of the action that is taken when a user selects the control. The `actionId` must match the `runtime.actions.id` property of an action in the runtimes object. |
+
+#### extensionCustomMobileIcon
+
+Specifies the icons that will appear on the control depending on the dimensions and DPI of the mobile device screen. There must be exactly 9 icons.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`size`| Number | | ✔️ | Size in pixels of the icon. Three image sizes are required (25, 32, and 48 pixels). <br> There must be exactly one of each size for each possible value of the icons' scale property. <br> Allowed values: 25, 32, 48.|
+|`url`| String | 2048 characters | ✔️ | The full, absolute URL of the icon's image file. <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true). <br> The string must start with `https://`.|
+|`scale`| Number |  | ✔️ | Specifies the UIScreen.scale property for iOS devices. The possible values are 1, 2, and 3. There must be exactly one of each value for each possible value of the icons's `size` property. Allowed values: 1, 2, 3.|
+
+#### extensionCommonSuperToolTip
+
+Configures a supertip.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`title`| String | 64 characters | ✔️ | Specifies the title text of the supertip. <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true). |
+|`description`| String | 250 characters | ✔️ | Specifies the description of the supertip. This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true).|
+
+> [!NOTE]
+> The description property for `extensionCommonSuperToolTip` isn't supported in Outlook on the `web` or [new Outlook on Windows](https://support.microsoft.com/en-us/office/getting-started-with-the-new-outlook-for-windows-656bb8d9-5a60-49b2-a98b-ba7822bc7627).
+
+#### extensionCommonIcon
+
+Specifies properties of the image file used to represent the add-in.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`size`| Number |  | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br> Allowed values: 16, 20, 24, 32, 40, 48, 64, 80.|
+|`url`| String | 2048 characters | ✔️ | Specifies the full, absolute URL of the image file that is used to represent the add-in. <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true). <br> The string must start with `https://`.|
+
 To use `extensions.ribbons`, see [create add-in commands](/office/dev/add-ins/develop/create-addin-commands-unified-manifest), [configure the UI for the task pane command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-ui-for-the-task-pane-command), and [configure the UI for the function command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-ui-for-the-function-command).
+
+#### extensionRibbonsArrayTabsItem
+
+Configures a custom tab, or customized built-in tab, on the Office application ribbon. You can include custom and built-in control groups on the tab.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| id | string | Maximum string length: 64. | | Specifies the ID for a custom tab.|
+| label | string | Maximum string length: 64. | | Specifies the text displayed for a custom tab. Despite the maximum length of 64 characters, to correctly align the tab in the ribbon, we recommend you limit the label to 16 characters. <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true). |
+| position | Array of `extensionRibbonsArrayTabsItem.position` | | | Configures the position of the custom tab relative to other tabs on the ribbon. |
+| builtInTabId | string | Maximum string length: 64. | | Specifies the ID of a built-in Office ribbon tab. For more information on possible values, see [Find the IDs of built-in Office ribbon tabs](/office/dev/add-ins/develop/built-in-ui-ids). |
+| groups | Array of `extensionRibbonsCustomTabGroupsItem` | Minimum array items: 1. <br> Maximum array items: 10. | | Defines groups of controls on a ribbon tab on a non-mobile device. For mobile devices, see `tabs.customMobileRibbonGroups`. |
+| customMobileRibbonGroups | Array of `extensionRibbonsCustomMobileGroupItem` | Minimum array items: 1. <br> Maximum array items: 10. | | Defines groups of controls on the default tab of the ribbon on a mobile device. This array property can only be present on tab objects that have a `tabs.builtInTabI`d property that is set to `DefaultTab`. For non-mobile devices, see `tabs.group`s above. |
+
+### extensionRibbonsCustomTabGroupsItem
+
+Defines groups of controls on a ribbon tab on a non-mobile device. For mobile devices, see `tabs.customMobileRibbonGroups`.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| id | string | Maximum string length: 64. | | Specifies the ID for the tab group within the app. It must be different from any built-in group ID in the Microsoft 365 application and any other custom group. |
+| label | string | Maximum string length: 64. | | Specifies the text displayed for the group. Despite the maximum length of 64 characters, to correctly align the tab in the ribbon, we recommend you limit the label to 16 characters. <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true). |
+| icons | Array of `extensionCommonIcon` | Minimum array items: 1. <br> Maximum array items: 3. | | Specifies the icons displayed for the group. |
+| controls | Array of `extensionCommonCustomGroupControlsItem` | Minimum array items: 1. <br> Maximum array items: 20. | Configures the buttons and menus in the group. |
+| builtInGroupId | string | Maximum string length: 64. | | Specifies the ID of a built-in group. For more information, see [Find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration). |
+| overriddenByRibbonApi | boolean | | | Specifies whether a group is hidden on application and platform combinations that support the API (`Office.ribbon.requestCreateControls`). This API installs custom contextual tabs on the ribbon. <br> Default value: `False`.|
+
+### extensionCommonCustomGroup
+
+Defines common custom group.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| id | string | maxLength: 64 | | A unique identifier for this group within the app. |
+| label | string | maxLength: 64 | | Displayed text for the group. |
+| icons | Array | 3 | | Displayed icons for the group. |
+| controls | Array | 20 | Configures the buttons and menus in the group. |
+
+### extensionCommonCustomGroupControlsItem
+
+Configures the buttons and menus in the group.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| id | string | Maximum string length: 64. | ✔️ | Specifies the ID for the control within the app. It must be different from any other custom control and any built-in control ID in the Microsoft 365 application. |
+| type | string | | ✔️ | Defines the control type. |
+| builtInControlId | string | Maximum string length: 64. | | Specifies the ID of an existing Microsoft 365 control. For more information, see [Find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration). |
+| label | string | Maximum string length: 64. | ✔️ | Specifies the text displayed for the control. Despite the maximum length of 64 characters, to correctly align the tab in the ribbon, we recommend you limit the label to 16 characters. <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true).|
+| icons | Array of `extensionCommonIcon` | Minimum array items: 1. <br> Maximum array items: 3.| ✔️ | Defines the icons for the control. There must be at least three child objects; one each with size properties of 16, 32, and 80 pixels. |
+| supertip | Array of `extensionCommonSuperToolTip` | | ✔️ | Configures a supertip for the control. A supertip is a UI feature that displays a brief box of help information about a control when the cursor hovers over it. The box may contain multiple lines of text. |
+| actionId | string | Maximum string length: 64. | | Required if the control type is `button`. Don't use if the control type is `menu`. Specifies the ID of the action that is taken when a user selects the control. The `actionId` must match the `runtime.actions.id` property of an action in the `runtimes` object.|
+| overriddenByRibbonApi | boolean | | | Specifies whether the control is hidden on application and platform combinations which support the API (`Office.ribbon.requestCreateControls`). This API installs custom contextual tabs on the ribbon. Default value: `false`.|
+|enabled| boolean | | | Indicates whether the control is initially enabled. For more information, see [Change the availability of add-in commands](/office/dev/add-ins/design/disable-add-in-commands). Default value: `True`.|
+| items| Array of extensionCommonCustomControlMenuItem | Minimum array items: 1. <br> Maximum array items: 20.| | Configures the items for a menu control.|
 
 ### extensions.autoRunEvents
 
@@ -1311,6 +1575,15 @@ The `extensions.autoRunEvents` property defines event-based activation extension
 |`requirements.capabilities.maxVersion`| String | | | Identifies the maximum version for the requirement set. |
 |`requirements.scopes`| Array of enums |4 | | Identifies the scopes in which the add-in can run and defines the Microsoft 365 applications in which the extension can run. For example, `mail` (Outlook). <br>Supported value: `mail` |
 |`requirements.formFactors`| Array of enums | 2| | Identifies the form factors that support the add-in. <br>Supported values: `mobile`, `desktop`|
+
+#### extensionAutoRunEventsArray
+
+The `extensions.autoRunEvents` property defines event-based activation extension points.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`requirements`| Array|  |  | Specifies the scopes, formFactors, and Office JavaScript library requirement sets that must be supported on the Office client in order for the event handling code to run. <br> For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365.](/office/dev/add-ins/develop/requirements-property-unified-manifest)|
+|`events`| Array | 20 items | ✔️ | Configures the event that cause actions in an Outlook Add-in to run automatically. For example, see [use smart alerts and the OnMessageSend and OnAppointmentSend events in your Outlook Add-ins.](/office/dev/add-ins/outlook/smart-alerts-onmessagesend-walkthrough?tabs=jsonmanifest) |
 
 ### extensions.alternates
 
@@ -1343,6 +1616,112 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 |`alternateIcons.highResolutionIcon`| Object | | ✔️ | Specifies properties of the image file used to represent the add-in on high DPI screens. |
 |`alternateIcons.highResolutionIcon.size`| Number enum | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image sizes: `16`, `32`, `80`. |
 |`alternateIcons.highResolutionIcon.url`| String | 2048 characters | ✔️ | Specifies the full, absolute URL of the image file that is used to represent the add-in on high DPI screens. Icon image must be 128 x 128 pixels and use one of the following file formats: GIF, JPG, PNG, EXIF, BMP, TIFF.|
+
+### extensionShortcut
+
+Array of mappings from actions to the key combinations that invoke the actions.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| key | Array of `extensionKeyCombination` | | ✔️ | Key combinations in different platform. |
+| actionId | string | Minimum string length: 1. <br> Maximum string length: 64. | ✔️ | The ID of an execution-type action that handles this key combination. |
+
+### extensionKeyCombination
+
+Key combinations in different platform (i.e. default, windows, web and mac).
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| default | string | Minimum string length: 1. <br> Maximum string length: 32. | ✔️ | Fallback key for any platform that isn't specified. <br> Supported values: The string value must contain only letters, numbers, hyphens, underscores, and plus signs. |
+| mac | string | Minimum string length: 1. <br> Maximum string length: 32. | | Key for mac platform. Alt is mapped to the Option key. <br> Supported values: The string value must contain only letters, numbers, hyphens, underscores, and plus signs. |
+| web | string | Minimum string length: 1. <br> Maximum string length: 32. | | Key for web platform. <br> Supported values: The string value must contain only letters, numbers, hyphens, underscores, and plus signs. |
+| windows | string | Minimum string length: 1. <br> Maximum string length: 32. | Key for windows platform. Command is mapped to the Ctrl key. <br> Supported values: The string value must contain only letters, numbers, hyphens, underscores, and plus signs. |
+
+### extensionContentRuntimeArray
+
+Configures a page of content that is embedded in an Excel or PowerPoint document.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| requirements | Array of `requirementsExtensionElement` | | | Specifies the Office requirement sets for content add-in runtime. If the user's Office version doesn't support the specified requirements, the component will not be available in that client. |
+| id | string | 64 | ✔️ | A unique identifier for this runtime within the app. This is developer specified. |
+| code | Array of `extensionRuntimeCode` | | ✔️ | Specifies the location of code for this runtime. Depending on the runtime.type, add-ins use either a JavaScript file or an HTML page with an embedded <script> tag that specifies the URL of a JavaScript file. |
+| requestedHeight | number | 1000 | | The desired height in pixels for the initial content placeholder. This value MUST be between 32 and 1000 pixels. Default value will be determined by host. |
+| requestedWidth | number | 1000 | | The desired width in pixels for the initial content placeholder. This value MUST be between 32 and 1000 pixels. Default value will be determined by host. |
+| disableSnapshot | boolean | | | Specifies whether a snapshot image of your content add-in is saved with the host document. Set true to disable. <br> Default value: `False`. |
+
+### extensionContextMenuArray
+
+A shortcut menu that appears when you right-click in the Office UI.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| requirements | Array | | | The extensions.requirements object specifies the scopes, form factors, and Office JavaScript library requirement sets that must be supported on the Office client in order for the add-in to be installed. |
+| menus | Array | Minimum array items: 1 | ✔️ | Configures the context menus. |
+
+### extensionMenuItem
+
+The title used for the top of the callout.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| entryPoint | string | | ✔️ | Use text or cell here for Office context menu. Use text if the context menu should open when a user right-clicks on the selected text. Use cell if the context menu should open when the user right-clicks on a cell on an Excel spreadsheet. <br> Allowed values: `text`, `cell`. |
+| controls | Array of `extensionCommonCustomGroupControlsItem` | 1 | | Configures the buttons and menus in the group. |
+
+### extensionRuntimeCode
+
+Specifies the location of code for the runtime. Based on `runtime.type`, add-ins can use either a JavaScript file or an HTML page with an embedded `script` tag that specifies the URL of a JavaScript file. Both URLs are necessary in situations where the `runtime.type` is uncertain.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| page | string | 2048 | ✔️ | Specifies the URL of the web page that contains an embedded `script` tag, which specifies the URL of a JavaScript file (to be loaded in a [browser-based runtime](/office/dev/add-ins/testing/runtimes)). <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true) <br> The string must start with `https://`. |
+| script | string | 2048 | | Specifies the URL of the JavaScript file to be loaded in [JavaScript-only runtime](/office/dev/add-ins/testing/runtimes). <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true) <br> The string must start with `https://`.|
+
+### extensionRibbonsArrayFixedControlItem
+
+Configures the button of an [integrated spam-reporting](/office/dev/add-ins/outlook/spam-reporting?tabs=jsonmanifest) add-in in Outlook. Must configure if `spamReportingOverride` is specified in the `extensions.ribbons.contexts` array.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| id | string | 64 | ✔️ | Specifies the unique ID of the button of a spam-reporting add-in. |
+| type | string | | ✔️ | Defines the control type of a spam-reporting add-in. <br> Allowed values: button. |
+| label | string | 64 | ✔️ | Specifies the text that appears on button of a spam-reporting add-in. <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true). |
+| icons | Array of `extensionCommonIcon`|Minimum array items: 1. <br> Maximum array items: 3. | ✔️ | Defines the icons for the button of a spam-reporting add-in. There must be at least three child objects, each with icon sizes of `16`, `32`, and `80` pixels respectively. |
+| supertip | Array of `extensionCommonSuperToolTip`| | ✔️ | Configures a supertip for the button of a spam-reporting add-in. |
+| actionId | string | 64 | ✔️ | Specifies the ID of the action taken when a user selects the button of a spam-reporting add-in. The `actionId` must match the `runtime.actions.id` property of an action in the `runtimes` object. |
+ |enabled | boolean | | ✔️ | This property must be specified in the `fixedControls` object. However, it doesn't affect the functionality of a spam-reporting add-in. |
+
+### extensionRibbonsSpamPreProcessingDialog
+
+Configures the preprocessing dialog of an integrated spam-reporting add-in in Outlook.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| title | string | 128 | ✔️ | Specifies the custom title of the preprocessing dialog of a spam-reporting add-in. <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true).|
+| description | string | 250 | ✔️ | Specifies the custom text that appears in the preprocessing dialog of a spam-reporting add-in. <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true).|
+|spamNeverShowAgainOption| boolean | | | Indicating if the developer will allow the user to permanently bypass the PreProcessing Dialog for this add-in. <br> Default value: "false". <br>  To learn more, see Suppress the preprocessing dialog.|
+|spamReportingOptions| Array | | | Specifies up to five options that a user can select from the preprocessing dialog to provide a reason for reporting a message.|
+|spamFreeTextSectionTitle| string | 128 | | Adds a text box to the preprocessing dialog for users to provide additional information on the message they're reporting. The string provided in this property appears above the text box. <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true).|
+| spamMoreInfo| Array| | | Configures a link to provide informational resources to a user. In the preprocessing dialog, the link appears below the text provided in `spamPreProcessingDialog.description`.|
+
+### spamReportingOptions
+
+Specifies up to five options that a user can select from the preprocessing dialog to provide a reason for reporting a message.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| title | string | 128 | ✔️ | Specifies the custom text or title to describe the reporting options provided in the preprocessing dialog. <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true).|
+| options | Array of string | | ✔️ | Specifies a custom option with a checkbox that a user can select from the preprocessing dialog to provide a reason for reporting a message. At least one option must be specified. A maximum of five options can be included. <br> This property is localizable. For more information, see the [localization schema](/microsoft-365/extensibility/schema/loc-schema/root?view=m365-app-1.23&preserve-view=true). |
+| type | string | | | The type of preprocessing dialog that appears when a user selects the spam reporting option. <br> Allowed values: `radio`, `checkbox`. <br> Default value: `checkbox`. |
+
+### spamMoreInfo
+
+Specifies the custom text and URL to provide informational resources to the users.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| text | string | 128 | ✔️ | Specifies display content of the hyperlink pointing to the site containing informational resources in the preprocessing dialog of a spam-reporting add-in.|
+| url | string | 2048 | ✔️ | Specifies the URL of the hyperlink pointing to the site containing informational resources in the preprocessing dialog of a spam-reporting add-in. |
 
 ## dashboardCards
 

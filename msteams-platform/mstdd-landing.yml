@@ -114,11 +114,11 @@ landingContent:
     - linkListType: tutorial
       links:
         - text: Debug your AI chat bot using Agents Playground
-          url: ~/sbs-teams-app-test-tool.yml
+          url: ~/toolkit/teams-app-test-tool-tutorial.md
         - text: Bot configuration experience
           url: ~/qsg-bot-configuration-experience.yml
         - text: Create Teams conversation bot
-          url: ~/sbs-teams-conversation-bot.yml
+          url: ~/bots/how-to/conversations/channel-and-group-conversations.md
         - text: Create Calling and meeting bot
           url: ~/sbs-calling-and-meeting.yml
         - text: Configure SSO for tabs and message extensions
@@ -257,7 +257,7 @@ landingContent:
 #      - text: Share to Teams from personal app or tab
 #        url: ~/concepts/build-and-test/Share-to-Teams-from-personal-app-or-tab.md
 #      - text: Create Teams conversation bot
-#        url: ~/sbs-teams-conversation-bot.yml
+#        url: ~/bots/how-to/conversations/channel-and-group-conversations.md
 #      - text: Build your first app using Blazor
 #        url:  sbs-gs-blazorupdate.yml
 #      - text: Device permissions for the browser

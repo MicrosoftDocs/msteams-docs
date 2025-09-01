@@ -59,7 +59,7 @@ conceptualContent:
         - url: bots/how-to/teams-conversational-ai/ai-ux.md        
           itemType: concept
           text: Custom engine agent user experience
-        - url: Teams-AI-library-tutorial.yml
+        - url: bots/how-to/teams-conversational-ai/teams-ai-library-tutorial.md
           itemType: learn
           text: Build a custom engine agent
         - url: /training/modules/microsoft-teams-publish-app-to-store
