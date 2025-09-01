@@ -55,8 +55,11 @@ conceptualContent:
       links:
         - url: overview.md
           itemType: learn
-          text: Know your options - agent or app
-        - url: bots/build-a-bot.md
+          text: Introduction to custom engine agents      
+        - url: bots/how-to/teams-conversational-ai/ai-ux.md        
+          itemType: concept
+          text: Custom engine agent user experience
+        - url: bots/how-to/teams-conversational-ai/teams-ai-library-tutorial.md
           itemType: learn
           text: Buid an agent or app
     - title: Agents - developer's journey
