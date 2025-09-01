@@ -645,4 +645,4 @@ Follow the [step-by-step guide](teams-app-test-tool-tutorial.md) to debug an AI 
 * [Build bots for Teams](../bots/what-are-bots.md)
 * [Teams AI library](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md)
 * [Adaptive Card](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
-* [Agents SDK](https://microsoft.github.io/Agents/)
+* [Agents SDK](https://github.com/microsoft/Agents)
