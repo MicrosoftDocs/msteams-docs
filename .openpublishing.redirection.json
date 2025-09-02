@@ -1395,6 +1395,10 @@
       {
         "source_path": "msteams-platform/Teams-AI-library-tutorial.yml",
         "redirect_url": "/microsoftteams/platform/teams-ai-library-tutorial.md"
+      },
+      {
+        "source_path": "msteams-platform/sbs-gs-spfx.yml",
+        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples.md"
       }      
     ]
 }
