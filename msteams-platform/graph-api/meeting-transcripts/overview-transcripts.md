@@ -5,7 +5,7 @@ ms.localizationpriority: high
 ms.topic: conceptual
 ms.owner: vichug
 ms.author: surbhigupta
-ms.date: 08/21/2025
+ms.date: 09/2/2025
 ---
 
 # Get meeting transcripts and recordings using Graph APIs
