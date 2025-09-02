@@ -1411,6 +1411,30 @@
       {
         "source_path": "msteams-platform/sbs-bots-with-sso.yml",
         "redirect_url": "/microsoftteams/platform/bots/how-to/authentication/bot-sso-overview.md"
+      },
+      {
+        "source_path": "msteams-platform/sbs-gs-blazorupdate.yml",
+        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples.md"
+      },
+      {
+        "source_path": "msteams-platform/sbs-gs-bot.yml",
+        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples.md"
+      },
+      {
+        "source_path": "msteams-platform/sbs-gs-commandbot.yml",
+        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples.md"
+      },
+     {
+        "source_path": "msteams-platform/sbs-gs-csharp.yml",
+        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples.md"
+      },
+      {
+        "source_path": "msteams-platform/sbs-gs-javascript.yml",
+        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples.md"
+      },
+      {
+        "source_path": "msteams-platform/sbs-gs-msgext.yml",
+        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples.md"
       }
     ]
 }
