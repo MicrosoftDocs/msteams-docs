@@ -129,6 +129,9 @@ Your app is registered in Microsoft Entra ID. The app overview page appears.
 >
 > * Save the app ID from **Application (client) ID** and **Directory (tenant) ID** for further use.
 
+> [!div class="button"]
+> [I ran into an issue](https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2F)
+
 ### Create a tunnel
 
 #### [Dev Tunnel](#tab/dev)
