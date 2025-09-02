@@ -130,7 +130,7 @@ Your app is registered in Microsoft Entra ID. The app overview page appears.
 > * Save the app ID from **Application (client) ID** and **Directory (tenant) ID** for further use.
 
 > [!div class="button"]
-> [I ran into an issue]((https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+App+Registration))
+> [I ran into an issue]((https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml))
 
 ### Create a tunnel
 
