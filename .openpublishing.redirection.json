@@ -1435,6 +1435,30 @@
       {
         "source_path": "msteams-platform/sbs-gs-msgext.yml",
         "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples.md"
+      },
+      {
+        "source_path": "msteams-platform/sbs-gs-nodejs.yml",
+        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples.md"
+      },
+      {
+        "source_path": "msteams-platform/sbs-gs-notificationbot.yml",
+        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples.md"
+      },
+      {
+        "source_path": "msteams-platform/sbs-gs-workflow-bot.yml",
+        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples.md"
+      },
+      {
+        "source_path": "msteams-platform/sbs-meetingextension-action.yml",
+        "redirect_url": "/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command.md"
+      },
+      {
+        "source_path": "msteams-platform/sbs-send-proactive.yml",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages.md"
+      },
+      {
+        "source_path": "msteams-platform/sbs-tabs-and-messaging-extensions-with-sso.yml",
+        "redirect_url": "/microsoftteams/platform/tabs/how-to/authentication/bot-sso-overview.md"
       }
     ]
 }
