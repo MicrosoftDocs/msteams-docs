@@ -1401,16 +1401,16 @@
         "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples.md"
       },
       {
-        "source_path": "sbs-api-based-message-extensions.yml",
+        "source_path": "msteams-platform/sbs-api-based-message-extensions.yml",
         "redirect_url": "/microsoftteams/platform/messaging-extensions/build-bot-based-message-extension.md"
       },
       {
-        "source_path": "sbs-api-msg-ext-ttk.yml",
+        "source_path": "msteams-platform/sbs-api-msg-ext-ttk.yml",
         "redirect_url": "/microsoftteams/platform/messaging-extensions/api-based-overview.md"
       },
       {
-        "source_path": "sbs-bots-with-sso.yml",
-        "redirect_url": "/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots.md"
+        "source_path": "msteams-platform/sbs-bots-with-sso.yml",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/authentication/bot-sso-overview.md"
       }
     ]
 }
