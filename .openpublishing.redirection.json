@@ -1458,7 +1458,7 @@
       },
       {
         "source_path": "msteams-platform/sbs-tabs-and-messaging-extensions-with-sso.yml",
-        "redirect_url": "/microsoftteams/platform/tabs/how-to/authentication/bot-sso-overview.md"
+        "redirect_url": "/microsoftteams/platform/tabs/how-to/authentication/tab-sso-overview.md"
       }
     ]
 }
