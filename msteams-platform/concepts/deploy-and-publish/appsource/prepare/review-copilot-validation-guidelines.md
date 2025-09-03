@@ -325,6 +325,7 @@ A custom engine agent is a conversational Teams bot that must meet the following
       For more information, see [bot welcome messages](teams-store-validation-guidelines.md#bots-1).
    1. A bot must offer at least two context-specific suggestions or prompts to the user, rather than generic or fixed ones. [*Must fix*]
 1. The scopes defined in `bot.scopes` and `bot.commandList.scopes` nodes of the manifest must match to maintain good user experience.
+1. Custom engine agents must include **copilot** in `bot.scopes` and `bot.commandList.scopes` to ensure proper surfacing and full platform support.
 
 [Back to top](#validation-guidelines-for-agents)
 
