@@ -638,7 +638,6 @@ This item is an array (maximum of 16 elements) with all elements of the type `ob
 > [!NOTE]
 >
 > * The `contentBotId` property isn't supported in apps that are verified and published on AppSource.
-> * The `groupChat` and `team` scopes are supported only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 > * The `teamLevelApp` context is dedicated only for Education tenants.
 > * The `searchUrl` feature is not available for the third-party developers.
 > * If your tabs require context-dependent information to display relevant content or for initiating an authentication flow, For more information, see [Get context for your Microsoft Teams tab](../../tabs/how-to/access-teams-context.md).
@@ -1061,6 +1060,7 @@ Enables your app in non-standard channels. If your app supports a team scope and
 >
 > * If your app supports a team scope, it functions in the standard channels regardless of the values that are defined in this property.
 > * Your app can account for the unique properties of each of the channel types to function properly. To enable your tab for private and shared channels, see [retrieve context in private channels](~/tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels) and [get context in shared channels](../../tabs/how-to/access-teams-context.md#get-context-in-shared-channels)
+> * Only **tabs** are currently supported in **private** and **shared** channels in Microsoft Teams.
 
 ## defaultBlockUntilAdminAction
 
