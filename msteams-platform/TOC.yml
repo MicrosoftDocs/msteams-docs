@@ -1,5 +1,5 @@
 - name: Microsoft Teams Developer documentation
-  href: https://graph.office-int.net/en-us/graph/preview?fileName=teams-devdocs-hubpage-update/homepage.htm
+  href: mstdd-landing.yml
 - name: What's new?
   href: whats-new.md
   displayName: Teams platform features, latest updates, RSS feed, deprecated, announcement, preview 

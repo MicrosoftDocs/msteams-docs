@@ -1459,6 +1459,10 @@
       {
         "source_path": "msteams-platform/sbs-tabs-and-messaging-extensions-with-sso.yml",
         "redirect_url": "/microsoftteams/platform/tabs/how-to/authentication/tab-sso-overview"
+      },
+      {
+        "source_path": "msteams-platform/index.yml",
+        "redirect_url": "https://graph.office-int.net/en-us/graph/preview?fileName=teams-devdocs-hubpage-update/homepage.htm"
       }
     ]
 }
