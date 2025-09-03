@@ -72,16 +72,19 @@ For more information about the meeting-specific RSC permissions, see [RSC permis
 
 ### Get notified when a transcript or recording is available
 
-After you configure the permissions, configure your app to receive [change notifications](/graph/teams-changenotifications-callrecording-and-calltranscript) for transcripts and recordings when available or all relevant meeting events. Notifications contain meeting ID and organizer ID that help in accessing transcript content and recording. Your app can fetch the transcript and recording for a meeting when it's generated after it ends. The content of the transcript is available as `.vtt` file. The recording of the meeting is available as an `.mp4` file.
+After you configure the permissions, configure your app to receive [change notifications](/graph/teams-changenotifications-callrecording-and-calltranscript) for transcripts and recordings when available or all relevant meetings and ad hoc calls.
+For online meetings, Notifications contain meeting ID and organizer ID that help in accessing transcript content and recording. Your app can fetch the transcript and recording for a meeting when it is generated after it ends.
+For ad hoc calls, meeting id will not be available as these are spontaneous events (PSTN, 1:1, group calls). While there are no restrictions on notifications path for ad hoc calls, getAll APIs are not available for ad hoc call instances as well (For example, listing of artifacts at call level).
+The content of the transcript is available as `.vtt` file. The recording of the meeting is available as an `.mp4` file.
 
 You can use the following types of change notification for your app:
 
 | Subscription Scope | Description | Supported resource paths |
 | --- | --- | --- |
 |Tenant level| A transcript or recording is available for any online meeting or call for a tenant​.| All transcripts in an organization: <br> • For online meetings: `communications/onlineMeetings/getAllTranscripts`<br> • For calls: `communications/adhocCalls/getAllTranscripts` <br> <br> All recordings in an organization: <br> • For online meetings: `communications/onlineMeetings/getAllRecordings` <br> • For calls: `communications/adhocCalls/getAllRecordings`|
-|Meeting or Call level| A transcript or recording is available for a specific meeting or call.​ <br> | All transcripts for a specific meeting: `communications/onlineMeetings/{onlineMeetingId}/transcripts` <br> <br> All recordings for a specific meeting: `communications/onlineMeetings/{onlineMeetingId}/recordings` <br> <br> *Ad hoc calls are instances for which meeting was not created. |
+|Meeting or Call level| A transcript or recording is available for a specific meeting or call.​ <br> | All transcripts for a specific meeting: `communications/onlineMeetings/{onlineMeetingId}/transcripts` <br> <br> All recordings for a specific meeting: `communications/onlineMeetings/{onlineMeetingId}/recordings` <br> <br> All transcripts for a specific ad hoc call: `/communications/adhocCalls/{callId}/transcripts` <br> <br> All recordings for a specific ad hoc call: `/communications/adhocCalls/{callId}/recordings`  |
 |User-scoped| A transcript or recording is available for any online meeting organized or ad hoc call initiated by a specific user.​| A call transcript that becomes available in a meeting organized by a specific user or in a call where transcription is initiated by a specified user: <br> • For online meetings: `users/{userId}/onlineMeetings/getAllTranscripts` <br> • For ad hoc calls: `users/{userId}/adhocCalls/getAllTranscripts`<br> <br> A call recording that becomes available in a meeting organized by a specific user or or in a call where transcription is initiated by a specified user: <br> • For online meetings: `users/{userId}/onlineMeetings/getAllRecordings` <br> • For ad hoc calls: `users/{userId}/adhocCalls/getAllRecordings`|
-|App-scoped| A transcript or recording is available for any meeting in which a specific teams-app is installed.| A call transcript that becomes available in a meeting where a particular Teams app is installed: <br> • For online meetings: `appCatalogs/teamsApps/{id}/installedToOnlineMeetings/getAllTrancripts` <br> <br> A call recording that becomes available in a meeting where a particular Teams app is installed: <br> • For online meetings: `appCatalogs/teamsApps/{id}/installedToOnlineMeetings/getAllRecordings` <br>|
+|App-scoped| A transcript or recording is available for any meeting in which a specific teams-app is installed. Not applicable for ad hoc calls. | A call transcript that becomes available in a meeting where a particular Teams app is installed: <br> • For online meetings: `appCatalogs/teamsApps/{id}/installedToOnlineMeetings/getAllTrancripts` <br> <br> A call recording that becomes available in a meeting where a particular Teams app is installed: <br> • For online meetings: `appCatalogs/teamsApps/{id}/installedToOnlineMeetings/getAllRecordings` <br>|
 
 For more information about how your app can know when a transcript or recording is available after the online meeting or ad hoc call ends, see [get notified when transcripts and recordings are available](/graph/teams-changenotifications-callrecording-and-calltranscript).
 
@@ -93,7 +96,7 @@ For more information about how your app can know when the meetings ends, see [su
 > - These APIs support private chat meetings, channel meetings and ad hoc calls only in beta.
 > - For ad hoc calls:
 >   - Subscribe to [notifications](/graph/teams-changenotifications-callrecording-and-calltranscript) to get access to the call id.
->   - To obtain the call id while the call is still ongoing, have the app get called through [App-hosted/service-hosted Calls](/graph/api/resources/call?view=graph-rest-1.0) and use the `callChainId`.
+>   - To obtain the call id while the call is still ongoing, have the app get called through [App-hosted/service-hosted Calls](/graph/api/resources/call?view=graph-rest-1.0&preserve-view=true) and use the `callChainId`.
 
 ## Get AI-generated meeting summaries for online meeting instances
 
