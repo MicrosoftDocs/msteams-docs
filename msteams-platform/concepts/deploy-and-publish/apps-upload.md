@@ -28,7 +28,7 @@ If you want to test the app, you can assign users an [app setup policy](/microso
 
 ## Prerequisites
 
-* Ensure to create your [app package](~/concepts/build-and-test/apps-package.md) and [validate it](https://dev.teams.cloud.microsoft/validation) for errors.
+* Ensure to create your [app package](~/concepts/build-and-test/apps-package.md), import it and [validate it](https://dev.teams.microsoft.com/tools/store-validation) for errors.
 * [Enable custom app uploading](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) in Teams.
 * Ensure that your app is running and accessible using HTTPs.
 
@@ -65,7 +65,7 @@ You can upload your app to a team, chat, meeting, or for personal use depending 
 If your app fails to upload or encounters any issues to upload, check the following options:
 
 1. Ensure that you follow all the instructions for [creating your app package](../../concepts/build-and-test/apps-package.md).
-1. [Validate your app package](https://dev.teams.cloud.microsoft/validation).
+1. Upload your app package and then [validate it](https://dev.teams.microsoft.com/tools/store-validation).
 1. Ensure your app manifest matches with the latest [schema](../../resources/schema/manifest-schema.md).
 
 ## Manage your apps
