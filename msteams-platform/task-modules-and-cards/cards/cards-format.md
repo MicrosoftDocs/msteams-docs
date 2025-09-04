@@ -1685,7 +1685,7 @@ You can test formatting in your own cards by modifying this code, where the text
 
 | S.No. | Description |.NET | Node.js | Manifest |
 |:--|:--|:--|---|---|
-| 1 | This sample app shows the various card formats supported in Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/csharp/demo-manifest/bot-formatting-cards.zip) |
+| 1 | This sample demonstrates how to use various formatting styles in Adaptive Cards such as mentions, persona icons, and responsive layout. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/csharp/demo-manifest/bot-formatting-cards.zip) |
 
 ## See also
 

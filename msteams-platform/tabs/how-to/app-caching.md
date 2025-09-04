@@ -222,7 +222,7 @@ The following are the limitations for app suspension within the Teams app:
 
 |Sample name | Description | Node.js |
 |----------------|--------------------------------------------------------|
-| App caching | Sample app to show how app caching works in the meeting side panel. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-cache-meetings/nodejs) |
+| App caching | This sample shows how to enhance app loading times during meetings with side panel caching, improving user experience in Microsoft Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-cache-meetings/nodejs) |
 
 ## See also
 

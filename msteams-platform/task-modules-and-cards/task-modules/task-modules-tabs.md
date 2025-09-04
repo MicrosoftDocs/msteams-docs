@@ -106,7 +106,7 @@ let urlDialogInfo = {
     fallbackUrl: null,
 };
 
-urlDialogInfo.url = "https://contoso.com/teamsapp/customform";
+urlDialogInfo.url = "https://contoso.com/atk/customform";
 urlDialogInfo.title = "Custom Form";
 urlDialogInfo.height = 510;
 urlDialogInfo.width = 430;
@@ -131,7 +131,7 @@ let taskInfo = {
     completionBotId: null,
 };
 
-taskInfo.url = "https://contoso.com/teamsapp/customform";
+taskInfo.url = "https://contoso.com/atk/customform";
 taskInfo.title = "Custom Form";
 taskInfo.height = 510;
 taskInfo.width = 430;
@@ -264,7 +264,7 @@ The following table provides the possible values of `err` that your `submitHandl
 
 |Sample name | Description | .NET | Node.js | Manifest
 |----------------|-----------------|--------------|----------------|----------------|
-|Dialog sample bots-V4 | This sample shows how to create dialogs using bot framework v4 and teams tabs. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp/demo-manifest/bot-task-module.zip)
+|Dialog sample bots-V4 | This sample app demonstrate how to use Dialogs (referred as task modules in TeamsJS v1.x) using Bot Framework v4. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp/demo-manifest/bot-task-module.zip)
 
 ## Next step
 
