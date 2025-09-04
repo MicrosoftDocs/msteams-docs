@@ -28,7 +28,7 @@ If you want to test the app, you can assign users an [app setup policy](/microso
 
 ## Prerequisites
 
-* Ensure to create your [app package](~/concepts/build-and-test/apps-package.md) and [validate it](https://dev.teams.microsoft.com/appvalidation.html) for errors.
+* Ensure to create your [app package](~/concepts/build-and-test/apps-package.md) and [validate it](https://dev.teams.cloud.microsoft/validation) for errors.
 * [Enable custom app uploading](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) in Teams.
 * Ensure that your app is running and accessible using HTTPs.
 
@@ -51,10 +51,10 @@ You can upload your app to a team, chat, meeting, or for personal use depending 
 
     :::image type="content" source="~/assets/images/publish-app/teams-app-detail.png" alt-text="Screenshot of the custom app dialog with the Add option highlighted.":::
 
-1. Select **Open** to open the app in personal scope. 
+1. Select **Open** to open the app in personal scope.
 
     Alternatively, you can either search and select the required scope or select a channel or chat from the list, and move through the dialog to select **Go**.
-    
+
     :::image type="content" source="~/assets/images/publish-app/teams-app-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
 > [!div class="nextstepaction"]
@@ -65,7 +65,7 @@ You can upload your app to a team, chat, meeting, or for personal use depending 
 If your app fails to upload or encounters any issues to upload, check the following options:
 
 1. Ensure that you follow all the instructions for [creating your app package](../../concepts/build-and-test/apps-package.md).
-1. [Validate your app package](https://dev.teams.microsoft.com/appvalidation.html).
+1. [Validate your app package](https://dev.teams.cloud.microsoft/validation).
 1. Ensure your app manifest matches with the latest [schema](../../resources/schema/manifest-schema.md).
 
 ## Manage your apps
