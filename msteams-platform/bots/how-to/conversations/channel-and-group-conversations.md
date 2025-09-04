@@ -442,10 +442,6 @@ Don't send a message in the following cases:
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
 
-## Step-by-step guide
-
-Follow the [step-by-step guide](../../../sbs-teams-conversation-bot.yml), create Teams conversation bot.
-
 ## Next step
 
 > [!div class="nextstepaction"]

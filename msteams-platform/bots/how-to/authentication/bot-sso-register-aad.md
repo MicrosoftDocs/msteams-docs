@@ -25,7 +25,7 @@ To configure single sign-on (SSO) for your bot or message extension app, you'll 
 > Ensure that you've created an app and a bot resource in Microsoft Entra ID.
 >
 > * For more information about creating an app in Microsoft Entra ID, see [register a new app in Microsoft Entra ID](../../../tabs/how-to/authentication/tab-sso-register-aad.md#to-register-a-new-app-in-azure-ad).
-> * For more information about creating and configuring your bot resource in Microsoft Entra ID, see [create Teams conversation bot](../../../sbs-teams-conversation-bot.yml).
+> * For more information about creating and configuring your bot resource in Microsoft Entra ID, see [create Teams conversation bot](../conversations/channel-and-group-conversations.md).
 
 You can configure your bot resource and app in Microsoft Entra ID for your bot or message extension app in one of the following two ways:
 
@@ -276,6 +276,9 @@ The scope and permissions are now configured. Next, you must configure the autho
     >
     > * The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams, Microsoft 365 app, and Outlook are the actual IDs that you must add.
     > * If your app has a tab app, you'll need either web or SPA, as you can't have a mobile or desktop client application in Teams.
+    > * While it's recommended to use same App ID, you can use a different App Registration ID in the webApplicationInfo section of your Teams app manifest that's not same as the Azure bot App ID. This is a valid and supported configuration.
+    >   * The `botId` in the bots section refers to the Azure Bot registration used for messaging and interaction.
+    >   * The `webApplicationInfo.id` refers to the Microsoft Entra App Registration used for authentication such as SSO, token acquisition, Graph API access.
 
 1. Select one of the following client IDs:
 
@@ -660,6 +663,9 @@ The scope and permissions are now configured. Next, you must configure the autho
     >
     > * The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams, Microsoft 365 app, and Outlook are the actual IDs that you must add.
     > * If your app has a tab app, you'll need either web or SPA, as you can't have a mobile or desktop client application in Teams.
+    > * While it's recommended to use same App ID, you can use a different App Registration ID in the webApplicationInfo section of your Teams app manifest that's not same as the Azure bot App ID. This is a valid and supported configuration.
+    >   * The `botId` in the bots section refers to the Azure Bot registration used for messaging and interaction.
+    >   * The `webApplicationInfo.id` refers to the Microsoft Entra App Registration used for authentication such as SSO, token acquisition, Graph API access.
 
 1. Select one of the following client IDs:
 
@@ -794,7 +800,7 @@ The configuration for Microsoft Entra app is complete, and now you can configure
 
 ## Configure bot resource in Microsoft Entra ID
 
-Before you enable SSO for your bot app, you must create and configure your bot resource in Microsoft Entra ID. For more information, see [Create Teams conversation bot](../../../sbs-teams-conversation-bot.yml).
+Before you enable SSO for your bot app, you must create and configure your bot resource in Microsoft Entra ID. For more information, see [Create Teams conversation bot](../conversations/channel-and-group-conversations.md).
 
 > [!NOTE]
 > Ensure that when you create your bot resource, you select the application ID of your Microsoft Entra app that you registered.

@@ -1,7 +1,7 @@
 ---
 title: SSO authentication for nested apps
 description: Learn how to implement, configure nested app authentication in Microsoft Teams app. Learn about the use case scenarios for nested app authentication.
-ms.date: 03/11/2025
+ms.date: 06/10/2025
 ms.topic: conceptual
 author: surbhigupta
 ms.author: surbhigupta
@@ -47,11 +47,6 @@ The NAA model provides several advantages over the On-Behalf-Of (OBO) flow:
 | **Errors** | Tom faces a sign-in error with Contoso due to an issue retrieving account information. Tom encounters a retry button that prompts for reauthentication. However, they discover that the system administrator has restricted access to Contoso. |
 
 ## Configure NAA
-
-> [!NOTE]
->
-> * NAA isn't supported by all host environments (specialized government clouds or iOS Mac device), ensure to check the support status using the [isNAAChannelRecommended()](/javascript/api/@microsoft/teams-js/nestedappauth?) function and provide a fallback experience for unsupported environments.
-> * If the API returns the value as `true`, then call Microsoft Authentication Library (MSAL) for the NAA flow. If it returns `false`, continue to use your existing token retrieval method.
 
 To configure nested authentication, follow these steps:
 
@@ -211,6 +206,50 @@ fetch(graphEndpoint, options)
     });
 
 ```
+
+## Token prefetching for nested app authentication (NAA)
+
+To improve performance and reduce authentication latency, nested app authentication (NAA) supports token prefetching. This feature enables the host to proactively acquire authentication tokens before the app launches, allowing faster access to protected resources.
+
+#### How to Enable Token Prefetching
+
+To enable token prefetching, update your [Teams app manifest](../../resources/schema/manifest-schema.md) to version 1.22 or later and include the `nestedAppAuthInfo` section inside `webApplicationInfo`.
+
+ ```json
+{
+  "webApplicationInfo": {
+    "id": "33333ddd-0000-0000-0000-88888757bbbb",
+    "resource": "api://app.com/botid-33333ddd-0000-0000-0000-88888757bbbb",
+    "nestedAppAuthInfo": [
+      {
+        "redirectUri": "brk-multihub://app.com",
+        "scopes": ["openid", "profile", "offline_access"],
+        "claims": "{\"access_token\":{\"xms_cc\":{\"values\":[\"CP1\"]}}}"
+      }
+    ]
+  }
+}
+ ```
+
+> [!important]
+>
+> * The value of webApplicationInfo.id must match the client ID of the app's Microsoft Entra ID registration. This is the same client ID the app uses when making actual NAA token requests. The host uses this ID to initiate the token prefetch process.
+> * The values in webApplicationInfo.id and all fields inside nestedAppAuthInfo must exactly match the parameters used in the app’s runtime NAA token request. Any mismatch, such as differences in scopes, redirect URIs, or claims, will prevent the host from serving the token from cache.
+> * Prefetched tokens are stored in memory for a short duration and are intended for use only during the app’s initial load. If the app attempts to fetch a token later, such as in response to a user action, the prefetched token may no longer be available. In such cases, the app must initiate a new token request using standard authentication flows.
+
+#### How it works
+
+When token prefetching is enabled, the host environment attempts to acquire and cache the required tokens before the app is rendered. These tokens are stored in memory and made available to the app immediately upon launch.
+
+This behavior is similar to the prefetch capability in the legacy Teams SSO model, where the `getAuthToken` API was automatically triggered during tab load. With Nested App Authentication (NAA), this functionality is introduced through manifest configuration, improving performance without requiring a backend token exchange.
+
+#### Benefits of Token Prefetching in NAA
+
+* Improve performance by reducing authentication delays during app startup
+* Enable single sign-on (SSO) across nested apps without repeated sign-ins
+
+> [!NOTE]
+> Token prefetching is currently supported only in the Microsoft Teams web and desktop clients.
 
 ### Best practices
 
