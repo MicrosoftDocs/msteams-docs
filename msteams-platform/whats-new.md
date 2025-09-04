@@ -36,7 +36,7 @@ Teams platform features that are available to all app developers.</br>
 
 **2025 September**
 
-* ***September 04, 2025***: [The Microsoft Teams JavaScript client library (TeamsJS) now supports app suspension for Teams apps extended to run across other Microsoft 365 applications](tabs/how-to/app-caching.md)</br>
+* ***September 04, 2025***: [The Microsoft Teams JavaScript client library (TeamsJS) now supports app suspension for Teams apps extended to run across other Microsoft 365 applications.](tabs/how-to/app-caching.md)</br>
 
 **2025 August**
 
