@@ -579,7 +579,7 @@ Represents a conversational Teams bot that uses custom AI language models and or
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`id`|String| |✔️| Unique (bot) identifier for the custom engine agent. Must match the `id` specified in the `bots` section of the manifest and be of `copilot` scope. |
+|`id`|String| |✔️| Unique (bot) identifier for the custom engine agent. This identifier must match the `id` specified in the `bots` section of the manifest. The `copilot` scope must be defined in the `bots.scopes` and `commandLists.scopes` fields. |
 |`type`|String| |✔️| Type of the custom engine agent. Supported value: `bot` |
 |`disclaimer.text`|String|500|✔️| The message shown to users before they interact with this application. |
 
