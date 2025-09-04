@@ -5,7 +5,7 @@ description: Learn how to enable app suspension for tab app in Teams, improve ap
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.date: 06/27/2025
+ms.date: 09/04/2025
 ---
 
 # App suspension for your tab app
