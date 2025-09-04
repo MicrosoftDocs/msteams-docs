@@ -34,6 +34,10 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.</br>
 
+**2025 September**
+
+* ***September 04, 2025***: [The Microsoft Teams JavaScript client library (TeamsJS) now supports app suspension for Teams apps extended to run across other Microsoft 365 applications](tabs/how-to/app-caching.md)</br>
+
 **2025 August**
 
 * ***August 19, 2025***: [Teams now supports token prefetching for apps that use nested app authentication (NAA). This enhancement enables the host to acquire authentication tokens proactively before the app launches, improving startup performance and reducing latency.](concepts/authentication/nested-authentication.md#token-prefetching-for-nested-app-authentication-naa)</br>
