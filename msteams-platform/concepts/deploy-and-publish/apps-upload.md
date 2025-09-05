@@ -19,7 +19,7 @@ You can upload Microsoft Teams apps without having to publish to your organizati
 > [!IMPORTANT]
 >
 > * Custom app upload is possible only in Government Community Cloud (GCC) and isn't possible in GCC High, Department of Defense (DoD), and Teams operated by 21Vianet.
-> * App installation is supported only on Teams desktop client.
+> * App upload and installation are supported in Teams for desktop and web (availability depends on your organization’s app setup policies and cloud environment)
 > * We recommend you to avoid multiple uploads of your message extension app to Teams, as it results in multiple instances of the message extension.
 
 Users can't chat with bots that aren't connected to a Microsoft Teams app such as Azure bots created through the Bot Framework or Power Virtual Agents. We recommend you to create a new Teams app connected to the Azure Bot using the [Developer Portal](../build-and-test/manage-your-apps-in-developer-portal.md#configure), publish it to Teams, and allow users to install the app using the [app permission policies](/microsoftteams/teams-app-permission-policies#edit-an-app-permission-policy).
@@ -28,7 +28,7 @@ If you want to test the app, you can assign users an [app setup policy](/microso
 
 ## Prerequisites
 
-* Ensure to create your [app package](~/concepts/build-and-test/apps-package.md) and [validate it](https://dev.teams.microsoft.com/tools/store-validation) for errors.
+* Ensure to create your [app package](~/concepts/build-and-test/apps-package.md), import it and [validate it](https://dev.teams.microsoft.com/tools/store-validation) for errors.
 * [Enable custom app uploading](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) in Teams.
 * Ensure that your app is running and accessible using HTTPs.
 
@@ -65,7 +65,7 @@ You can upload your app to a team, chat, meeting, or for personal use depending 
 If your app fails to upload or encounters any issues to upload, check the following options:
 
 1. Ensure that you follow all the instructions for [creating your app package](../../concepts/build-and-test/apps-package.md).
-1. [Validate your app package](https://dev.teams.microsoft.com/tools/store-validation).
+1. Upload your app package and then [validate it](https://dev.teams.microsoft.com/tools/store-validation).
 1. Ensure your app manifest matches with the latest [schema](../../resources/schema/manifest-schema.md).
 
 ## Manage your apps
