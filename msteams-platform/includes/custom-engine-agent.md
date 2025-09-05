@@ -1,6 +1,6 @@
 > [!NOTE]
 >
-> ## Add support for Microsoft 365 Copilot Chat in your custom engine agent
+> ### Add support for Microsoft 365 Copilot Chat in your custom engine agent
    >
    > If you want your custom engine agent to support Microsoft 365 Copilot Chat, you must [install a prerelease version of Microsoft 365 Agents Toolkit](../toolkit/install-Teams-Toolkit.md#install-a-prerelease-version) (previously known as Teams Toolkit). After you install the prerelease version, follow these steps:
    >
