@@ -7,7 +7,7 @@ ms.localizationpriority: high
 ms.topic: conceptual
 ms.date: 04/09/2025
 ---
-# Adapting Microsoft Teams App for Private and Shared Channels: A Developer's Guide
+# Adapt Microsoft Teams App for Private and Shared Channels: A Developer's Guide
 
 As Microsoft Teams evolves, shared and private channels introduce new collaboration patterns that differ significantly from Standard channels. To function reliably and securely across all channel types, apps must become context-aware—specifically in terms of:
 
@@ -26,9 +26,9 @@ This guide helps you understand the updates, best practices, and testing steps n
 
 ### What This Guide Covers?
 
-- key concepts (membership, access, installation, storage)
+- Key concepts (membership, access, installation, storage)
 - Implementation steps
-- testing guidance
+- Testing guidance
 - Best practices
 
 Before diving into implementation, learn about the different channel models available in Microsoft Teams.
@@ -516,80 +516,6 @@ To make sure your app works smoothly in shared, private, and standard channels, 
 - Test your app with all kinds of users—owners, members, guests, and external users—across every channel type and confirm everything works as expected.
 - Watch for updates in Microsoft Teams documentation and changelogs. For example, keep your app updated when APIs, permissions, or channel features change.
 
-## Technical Appendix: Teams App Update Guide for Shared & Private Channel Support
-
-### Mandatory Updates for Teams Apps in Shared & Private Channels
-
-To ensure proper functionality in shared and private channels, all apps must include these updates.
-
-| Change Type | What to Do | Why It Matters | Example |
-|-------------|------------|----------------|---------|
-| **Mandatory** | Use the Channel Members API | Shared/Private channels have different members than the team. Using the wrong API can miss users or cause data leaks. | **Task app**: Assign tasks only to channel members, not all team members. |
-| **Mandatory** | Access the Channel's SharePoint Site | Each channel has its own SharePoint. Using the team site can break file access or expose data. | **Document app**: Store and retrieve files from the channel’s SharePoint site. |
-| **Mandatory** | Respect Channel Boundaries | Don’t access or post across channels unless the user allows it. | **Summary app**: Only summarize messages from channels the user opts into. |
-| **Mandatory** | Update the App Manifest | Declare support for Shared/Private channels so your app shows up there. | **Any app**: Add `"supportsChannelFeatures": "tier1"` to your manifest. |
-
-### Optional UX Improvements for Shared & Private Channels
-
-These improvements enhance user experience and app reliability, but they're optional.
-
-| Area | What to Do | Why It Helps | Example |
-|------|------------|--------------|---------|
-| **Privacy & Access Controls** | Add logic to limit features for guests/external users | Keeps sensitive data safe and follows company policies | **Poll app**: Guests can vote, but only members can create polls or see results |
-| **Collaboration Features** | Adjust tools based on channel roles and members | Prevents confusion and accidental changes by guests | **Whiteboard app**: Guests can draw, but not erase others’ work |
-| **Smart Notifications** | Customize alerts by channel type and user role | Cuts down noise and makes alerts more useful | **Helpdesk app**: IT gets all alerts. vendors only see their tickets |
-
-### Context & Event Payloads
-
-Follow these guidelines to process events and payloads correctly in shared and private channels.
-
-- Use teamId for the host team and channelId for the shared channel in context and event payloads.
-- Apply hostTeamId and hostTenantId when handling cross-tenant scenarios.
-- Detect external users by comparing a user’s tenantId with hostTenantId.
-- Listen for events like channelShared, channelUnshared, channelMemberAdded, and channelMemberRemoved to track changes in shared channels.
-- Ensure your app is present in the channel so it receives these events.
-
-### API Changes
-
-Use the latest APIs to support shared and private channels. Earlier versions might have limited support.
-
-- Review the API Change Table in the Appendix for updates to Graph and Activity Payload Extensions (APX) APIs.
-- Switch to the latest APIs that support shared and private channels.
-
-### Handling External Users
-
-Follow these steps to identify and manage external or guest users when your app is used across tenants.
-
-- Identify B2B Guests using role = guest in Graph or user role = guest in APX.
-- Detect B2B Native users by comparing their tenantId with the hostTenantId from getContext().
-- Fetch members using /teams/{teamId}/channels/{channelId}/allmembers for tabs.
-- Use channelMemberAdded and /v3/conversations/{conversationId}/pagedMembers to get members in bots.
-- Classify users as external if their tenantId doesn’t match the host tenant.
-
-### Manifest and Permissions
-
-Update your app manifest and permissions to support shared and private channels and enable required capabilities.
-
-- Include supportsChannelFeatures = "tier1" in your app manifest so it supports shared and private channels.
-- Omit this setting, and your app doesn't appear in shared or private channels.
-- Remove this setting later, and your app stops showing up in those channels.
-- Update your manifest with Resource Specific Consent (RSC) permissions, as many APIs now require them for shared/private channel functionality.
-
-> [!NOTE]
->
-> - RSC permissions are optional.
-> - You can choose to use regular permissions instead.
-> - RSC is one way to access resources, and its use depends entirely on the app’s design.
-
-### Privacy & Security
-
-Follow these best practices to protect user data, respect privacy, and manage access in shared and private channels."
-
-- Use channel-specific APIs—don’t assume team members are also channel members.
-- Access storage through channel-specific APIs and avoid cross-posting unless allowed.
-- Respect privacy boundaries, and avoid leaking data between channels or user types.
-- Handle internal users, B2B Guests, and B2B Direct Connect users correctly.
-- Test all scenarios, including edge cases.
 
 ## Troubleshooting Guide
 
@@ -672,21 +598,21 @@ If you have questions about shared or private channels, permissions, or function
 | Can I be part of a shared channel without being in the parent team? | Yes, shared channels allow external users to join if invited and granted permissions. |
 | Who can create shared or private channels? | Typically, team owners or users with specific permissions. Admins might restrict this capability via policy settings. |
 
-### Access & Permissions
+### Access and Permissions
 
 | Question | Answer |
 |----------|--------|
-| Why can’t I see a private channel I was added to? | You must be a member of both the parent team and the private channel. Removal from the team revokes access. |
+| Why can’t I see a private channel I was added to? | You must be a member of both the parent team and the private channel. Removal from the team revokes access to the channel. |
 | Can guests or external users access shared channels? | Yes, if both organizations enable external access and the user is explicitly invited. |
-| How do I know if a channel is private or shared? | A lock icon indicates private channel. A link icon indicates shared channel = shared channel. |
-| Why am I seeing an 'Access Denied' error when joining a shared channel? | Possible causes: incorrect invitation, disabled external access, or wrong account/tenant. |
+| How do I know if a channel is private or shared? | A lock icon indicates a private channel. A link icon indicates shared channel = shared channel. |
+| Why am I seeing an 'Access Denied' error when joining a shared channel? | Possible causes are incorrect invitation, disabled external access, or wrong account or tenant. |
 
-### Functionality & Limitations
+### Functionality and Limitations
 
 | Question | Answer |
 |----------|--------|
 | Can I add apps or tabs to a private channel? | Yes, but some apps might not be supported due to permissions or compatibility. Check before adding. |
-| Are files in private channels stored differently? | Yes, they’re stored in a separate SharePoint site accessible only to channel members. |
+| Are files in private channels stored differently? | Yes, they are stored in a separate SharePoint site accessible only to channel members. |
 | Can I convert a private channel to a shared channel (or vice versa)? | No, channel types are permanent. Create a new channel and migrate content manually. |
-| What should I do if files or tabs aren’t loading in a channel? | Refresh the app/browser, clear cache, try another device, and verify permissions. |
+| What should I do if files or tabs aren’t loading in a channel? | Refresh the app or browser, clear cache, try another device, and verify permissions. |
 | How do I report issues with shared or private channels? | Contact your IT admin or support team with: channel name, type, and error message or screenshot. |
