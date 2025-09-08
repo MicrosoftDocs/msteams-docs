@@ -75,10 +75,10 @@ Additionally, you can identify whether a member of a shared channel is direct or
 
 ## Get app notifications for direct and indirect membership changes
 
- Apps installed in shared channels receive notifications when users are added to or removed from a team that shares the channel. To receive these notifications, you must:
+Apps installed in shared channels receive notifications when users are added to or removed from a team that shares the channel. To receive these notifications, you must:
 
-* [Install the app](../deploy-and-publish/apps-upload.md) in a host team and enable it for the shared channel.
-* Create a valid Microsoft Graph change notification subscription to monitor associated team membership changes and shared or unshared events using supported APIs.
+1. [Install the app](../deploy-and-publish/apps-upload.md) in a host team and enable it for the shared channel.
+1. Create a valid Microsoft Graph change notification subscription to monitor associated team membership changes and shared or unshared events using supported APIs.
 
 To receive both direct and indirect member update notifications, you must include **both the query string parameters** when creating a subscription. If the query strings aren't provided, the subscription only delivers notifications for direct member updates. To learn more, see [Channel membership access](/graph/teams-changenotifications-channelmembership).
 
@@ -100,7 +100,7 @@ See [doesUserHaveAccess API](/graph/api/channel-doesuserhaveaccess?view=graph-re
 
 ### Handle bulk membership changes
 
-Teams supresses individual membership update notifications when a channel is shared or unshared with a team. This feature reduces notification volume and improves performance.
+In case of bulk memebership changes, Teams curbs individual membership update notifications when a channel is shared or unshared with a team. This feature reduces notification volume and improves performance.
 
 #### Use sharedWithTeams Subscription for Bulk Membership Changes
 
@@ -108,7 +108,7 @@ To reduce notification overload during membership updates, such as when a shared
 
 `/teams/{team-id}/channels/{channel-id}/sharedWithTeams`
 
-The sharedWithTeams subscription sends a single notification when a channel is shared or unshared with a team. It avoids thousands of per-user notifications and improves performance for apps that monitor membership changes. Ensure that you update the shared channel member list using the /allMembers API after receiving a "shared with" or "unshared from" team notification.
+The sharedWithTeams subscription sends a single notification when a channel is shared or unshared with a team. It avoids thousands of per-user notifications and improves performance for apps that monitor membership changes. Ensure that you update the shared channel member list using the /allMembers API after receiving a 'shared with' or 'unshared from' team notification.
 
 > [!NOTE]
 > To support membership updates in shared channels, apps using resource-specific consent (RSC) must request extended permissions.
@@ -144,17 +144,22 @@ You can manage indirect membership in shared channels using the following Micros
 
 ## Classify members in the shared channel as in-tenant or out-tenant
 
-You can classify members as in-tenant or out-tenant by comparing `tenantID` of the member or team with `hostTeamTenantID` as follows:
+You can classify members as in-tenant or out-tenant by comparing the `tenantID` of the member or team with `hostTeamTenantID` as follows:
 
-1. Get the member you wish to compare.
+1. Get the tenantID of the member you wish to compare.
 
     ```http
     GET /teams/{host-team-group-id}/channels/{channel-id}/members
     ```
 
-2. Use `getContext`, compare the `tenantID` of the member to the `hostTenantID` property.
+ >[!NOTE]
+ >You get the list of direct members of the channel only.
 
-<a name='azure-ad-native-identity'></a>
+1. Call microsoftTeams.app.getContext() from the Teams JavaScript client library (**TeamsJS SDK**).
+ The Teams context page opens with details such as **displayName**, **membershipType**, **ownerGroupID** and **tenantGroupID**.
+
+1. Compare the `tenantGroupID` of the member to the `hostTenantID` property
+<a name='azure-ad-native-identity'></a> and determine if the member is in-tenant or out-tenant.
 
 ## Microsoft Entra native identity
 
@@ -187,7 +192,7 @@ If you're developing an app for use in federated group chats with external users
 | Sample name | Description | .NET | Node.js | Python |
 |-------------|-------------|------|----|------|----|
 | Teams Conversation Bot | This sample app displays the names of the members in a federated group chat with external users.| NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-feed-members/nodejs/) | NA |
-| Membership change notification | The sample application demonstrates how to send notifications for shared channel events in Microsoft Teams, such as users being added, removed, or having their membership updated and when channel is shared/unshared with a team. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/membershipChangeNotificationNodejs/samples/graph-membership-change-notification/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/membershipChangeNotificationNodejs/samples/graph-membership-change-notification/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/membershipChangeNotificationNodejs/samples/graph-membership-change-notification/python) |
+| Membership change notification | The sample application demonstrates how to send notifications for shared channel events in Microsoft Teams. Scenarios include users being added, removed, or  membership being updated and when channel is shared or unshared with a team. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/membershipChangeNotificationNodejs/samples/graph-membership-change-notification/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/membershipChangeNotificationNodejs/samples/graph-membership-change-notification/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/membershipChangeNotificationNodejs/samples/graph-membership-change-notification/python) |
 
 ## See also
 
