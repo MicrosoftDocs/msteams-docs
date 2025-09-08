@@ -73,14 +73,14 @@ Additionally, you can identify whether a member of a shared channel is direct or
 > You might receive duplicate notifications when a member is added to a shared channel. This scenario can happen if the member is already part of the shared channel directly or through another linked team. Use the **List allMembers API** to view all the direct and indirect members.
 > Ignore the notification if the member already exists; either directly or indirectly.
 
-## Get App notifications for direct and indirect membership changes
+## Get app notifications for direct and indirect membership changes
 
  Apps installed in shared channels receive notifications when users are added to or removed from a team that shares the channel. To receive these notifications, you must:
 
 * [Install the app](../deploy-and-publish/apps-upload.md) in a host team and enable it for the shared channel.
 * Create a valid Microsoft Graph change notification subscription to monitor associated team membership changes and shared or unshared events using supported APIs.
 
-To receive both direct and indirect member update notifications, you must include **both the query string parameters** when creating a subscription. If the query strings aren't provided, the subscription only delivers notifications for direct member updates. Refer [Channel membership access](/graph/teams-changenotifications-channelmembership), for more information.
+To receive both direct and indirect member update notifications, you must include **both the query string parameters** when creating a subscription. If the query strings aren't provided, the subscription only delivers notifications for direct member updates. To learn more, see [Channel membership access](/graph/teams-changenotifications-channelmembership).
 
 ```http
 `/teams/{team-id}/channels/getAllMembers?notifyOnIndirectMembershipUpdate=true&suppressNotificationWhenSharedUnsharedWithTeam=true`
@@ -96,7 +96,7 @@ When an app receives a notification for an indirect membership update, it’s im
 GET /teams/{team-id}/channels/{channel-id}/doesUserHaveAccess(userId='@userid',tenantId='@TenantID',userPrincipalName='@UserPrincipalName')
 ```
 
-Refer to [doesUserHaveAccess API](/graph/api/channel-doesuserhaveaccess?view=graph-rest-beta&tabs=http) to learn more about user accesses and relevant permissions.
+See [doesUserHaveAccess API](/graph/api/channel-doesuserhaveaccess?view=graph-rest-beta&tabs=http) to learn more about user accesses and relevant permissions.
 
 ### Handle bulk membership changes
 
