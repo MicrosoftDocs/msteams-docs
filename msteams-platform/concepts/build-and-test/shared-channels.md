@@ -100,7 +100,7 @@ See [doesUserHaveAccess API](/graph/api/channel-doesuserhaveaccess?view=graph-re
 
 ### Handle bulk membership changes
 
-In case of bulk memebership changes, Teams curbs individual membership update notifications when a channel is shared or unshared with a team. This feature reduces notification volume and improves performance.
+If there are bulk membership changes, Teams curbs individual membership update notifications when a channel is shared or unshared with a team. This feature reduces notification volume and improves performance.
 
 #### Use sharedWithTeams Subscription for Bulk Membership Changes
 
@@ -152,13 +152,13 @@ You can classify members as in-tenant or out-tenant by comparing the `tenantID` 
     GET /teams/{host-team-group-id}/channels/{channel-id}/members
     ```
 
- >[!NOTE]
- >You get the list of direct members of the channel only.
+     >[!NOTE]
+     >You get the list of direct members of the channel only.
 
-1. Call microsoftTeams.app.getContext() from the Teams JavaScript client library (**TeamsJS SDK**).
- The Teams context page opens with details such as **displayName**, **membershipType**, **ownerGroupID** and **tenantGroupID**.
+2. Call microsoftTeams.app.getContext() from the Teams JavaScript client library (**TeamsJS SDK**).
+ The Teams context page opens with details such as **displayName**, **membershipType**, **ownerGroupID** , and **tenantGroupID**.
 
-1. Compare the `tenantGroupID` of the member to the `hostTenantID` property
+3. Compare the `tenantGroupID` of the member to the `hostTenantID` property
 <a name='azure-ad-native-identity'></a> and determine if the member is in-tenant or out-tenant.
 
 ## Microsoft Entra native identity
