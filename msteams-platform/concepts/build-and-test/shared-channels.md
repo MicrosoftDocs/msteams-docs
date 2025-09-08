@@ -12,15 +12,17 @@ ms.date: 04/09/2025
 
 Teams connects shared channels, which facilitates secure collaboration seamlessly. Allow external members outside of your organization to collaborate with internal users in Teams without changing their user context. You can create and share a shared channel with:
 
-* Members of another team within the same organization.
-* Individuals within the same organization.
-* Individuals and other teams of other organizations.
+* Members of another team within the same organization
+* Individuals within the same organization
+* Individuals and other teams of other organizations
 
 Shared channels ensure:
 
 * Enhanced user experience through cross-tenanants collaboration
 * Secure granular access control
 * Real-time membership syncing
+
+A sample illustration showing shared channel membership is as follows:
 
 :::image type="content" source="~/assets/images/app-fundamentals/shared-channels-teams.png" alt-text="Diagram shows Team B from organization A and Team C from organization B collaborating in a shared channel as Team A.":::
 
@@ -66,12 +68,12 @@ Use the [List allMembers API](/graph/api/channel-list-allmembers?view=graph-rest
 
 * **Indirect Members**: Users who are members of the team, with which the channel is shared, including teams in the same tenant or in a cross-tenant.
 
-Additionally, you can identify whether a member of a shared channel is direct or indirect by checking the **@microsoft.graph.originalSourceMembershipUrl** annotation. This property identifies the source of a member’s access to a shared channel, as shown in the following table.
+Additionally, you can identify whether a member of a shared channel is direct or indirect by checking the *@microsoft.graph.originalSourceMembershipUrl* annotation. This property identifies the source of a member’s access to a shared channel, as shown in the following table.
 
 |Member Type |Annotation Present?  |Description  |
 |---------|---------|---------|
 |Direct Member  |  **Yes**      |  The user is added directly to the shared channel.  |
-|Indirect Member|  **Yes**     | The user accesses the shared channel through another team. The  **@microsoft.graph.originalSourceMembershipUrl** property includes a URL that points to the source team and indicates that the user is an indirect member of the shared channel.    |
+|Indirect Member|  **Yes**     | The user accesses the shared channel through another team. The  *@microsoft.graph.originalSourceMembershipUrl* property includes a URL that points to the source team and indicates that the user is an indirect member of the shared channel.    |
 
 > [!NOTE]
 > You might receive duplicate notifications when a member is added to a shared channel. This scenario can happen if the member is already part of the shared channel directly or through another linked team. Use the **List allMembers API** to view all the direct and indirect members.
@@ -157,10 +159,10 @@ You can classify members as in-tenant or out-tenant by comparing the `tenantID` 
     ```
 
      >[!NOTE]
-     >You get the list of direct members of the channel only.
+     > The GET API only gives you the list of direct members of the shared channel.
 
 2. Call microsoftTeams.app.getContext() in your tab from the Teams JavaScript client library (**TeamsJS SDK**).
- The Teams context page opens with details such as **displayName**, **membershipType**, **ownerGroupID** , and **tenantGroupID**.
+ The getContext() call returns context of the shared channel, which contains the details such as **displayName**, **membershipType**, **ownerGroupID** , and **tenantGroupID**.
 
 3. Compare the `ownerTenantID` of the member to the `hostTenantID` property
 <a name='azure-ad-native-identity'></a> and determine if the member is an in-tenant or out-tenant.
