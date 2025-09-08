@@ -10,20 +10,24 @@ ms.date: 04/09/2025
 
 # Microsoft Teams connects shared channels
 
-Microsoft Teams connects shared channels, which allow members of a channel to collaborate with users across other teams and organizations. You can create and share a shared channel with:
+Teams connects shared channels, which facilitates secure collaboration seamlessly. Allow external members outside of your organization to collaborate with internal users in Teams without changing their user context. You can create and share a shared channel with:
 
 * Members of another team within the same organization.
 * Individuals within the same organization.
 * Individuals and other teams of other organizations.
 
+Shared channels ensure:
+
+* Enhanced user experience through cross-tenanants collaboration
+* Secure granular access control
+* Real-time membership syncing
+
+:::image type="content" source="~/assets/images/app-fundamentals/shared-channels-teams.png" alt-text="Diagram shows Team B from organization A and Team C from organization B collaborating in a shared channel as Team A.":::
+
 > [!NOTE]
 >
 > * Tab apps in shared channels are available in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](../cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](../sovereign-cloud.md) environments.
 > * SharePoint and the SharePoint pages apps aren't supported for shared channels in GCC, GCC High, DoD, and Teams operated by 21Vianet environments.
-
-Teams connects shared channels, which facilitates secure collaboration seamlessly. Allow external users outside of your organization to collaborate with internal users in Teams without changing their user context. Enhance user experience through cross-tenanants collaboration, secure granular access control, and real-time membership syncing.
-
-:::image type="content" source="~/assets/images/app-fundamentals/shared-channels-teams.png" alt-text="Diagram shows Team B from organization A and Team C from organization B collaborating in a shared channel as Team A.":::
 
 ## Enable your app for shared channels
 
@@ -142,7 +146,7 @@ You can manage indirect membership in shared channels using the following Micros
 > [!NOTE]
 > `allowedMembers` API returns only newly associated users and doesn't apply to unshared events.
 
-## Classify members in the shared channel as in-tenant or out-tenant
+## Classify shared channel members as in-tenant or out-tenant
 
 You can classify members as in-tenant or out-tenant by comparing the `tenantID` of the member or team with `hostTeamTenantID` as follows:
 
@@ -155,11 +159,11 @@ You can classify members as in-tenant or out-tenant by comparing the `tenantID` 
      >[!NOTE]
      >You get the list of direct members of the channel only.
 
-2. Call microsoftTeams.app.getContext() from the Teams JavaScript client library (**TeamsJS SDK**).
+2. Call microsoftTeams.app.getContext() in your tab from the Teams JavaScript client library (**TeamsJS SDK**).
  The Teams context page opens with details such as **displayName**, **membershipType**, **ownerGroupID** , and **tenantGroupID**.
 
-3. Compare the `tenantGroupID` of the member to the `hostTenantID` property
-<a name='azure-ad-native-identity'></a> and determine if the member is in-tenant or out-tenant.
+3. Compare the `ownerTenantID` of the member to the `hostTenantID` property
+<a name='azure-ad-native-identity'></a> and determine if the member is an in-tenant or out-tenant.
 
 ## Microsoft Entra native identity
 
