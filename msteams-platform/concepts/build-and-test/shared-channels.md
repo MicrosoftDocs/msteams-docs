@@ -145,7 +145,7 @@ These Bot SDK endpoints are essential for monitoring membership changes and main
 
 ## Validate user access for membership updates
 
-When an app receives a notification for an indirect membership update, it’s important to verify whether the user still has access to the shared channel as the same user might have both direct and indirect membership. For example, if a user is removed from a team that shares a channel, the app should confirm whether the user's access is truly lost. Use the **doesUserHaveAccess** API to determine whether the user still has access to the shared channel.
+When an app receives a notification for an indirect membership update, it’s important to verify whether the user still has access to the shared channel as the same user might have both direct and indirect membership. For example, if a user is removed from a team that shares a channel, the app should confirm whether the user's access is truly lost. Use the ```doesUserHaveAccess``` API to determine whether the user still has access to the shared channel.
 
 ```C#
 GET /teams/{team-id}/channels/{channel-id}/doesUserHaveAccess(userId='@userid',tenantId='@TenantID',userPrincipalName='@UserPrincipalName')
@@ -189,7 +189,6 @@ You need to complete this step when your app stores content in the SharePoint si
 ### [Tabs](#tab/tabs)
 
 Save host tenant ID of shared channel where tab is configured. You can get host tenant ID from ```channel.ownerTenantId``` for JSv2 or host tenant ID for JSv1 received under ```getContext``` call.
-
 
 ### [Bots](#tab/bots)
 
