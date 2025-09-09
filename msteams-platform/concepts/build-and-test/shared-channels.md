@@ -186,9 +186,15 @@ When a shared channel is added to another team, the Bot Framework may receive a 
 
 You need to complete this step when your app stores content in the SharePoint site of the tenant that hosts the channel and requests a SharePoint token.
 
- |Tabs|Bots|
-|--------------------------------------|----------------------------------------|
-|Save host tenant ID of Shared channel where tab is configured. You can get host tenant ID from channel.ownerTenantId for JSv2 or hostTenantId for JSv1 received under getContext call. | For any event payload or action payload received for a bot, use Get hostTenant ID, from turnContext.activity.conversation.tenantId|
+### [Tabs](#tab/tabs)
+
+Save host tenant ID of shared channel where tab is configured. You can get host tenant ID from ```channel.ownerTenantId``` for JSv2 or host tenant ID for JSv1 received under ```getContext``` call.
+
+### [Bots](#tab/bots)
+
+For any event payload or action payload received for a bot, use Get hostTenant ID, from ```turnContext.activity.conversation.tenantId```.
+
+---
 
 Now, send saved host tenant ID inside tenantId parameter of getAuthToken call to allow cross-tenant users to access content hosted inside Sharepoint site attached to the Shared channel.
 
