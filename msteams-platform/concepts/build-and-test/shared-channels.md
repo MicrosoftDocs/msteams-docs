@@ -138,9 +138,7 @@ Similarly, when a member is removed from the channel, the ```OnMembersRemovedAsy
 
 ```C#
 public async Task OnMembersRemovedAsync(ITurnContext turnContext, AppState turnState, CancellationToken cancellationToken)
-```
-
-These Bot SDK endpoints are essential for monitoring membership changes and maintaining accurate membership data across shared and private channel.
+```These Bot SDK endpoints are essential for monitoring membership changes and maintaining accurate membership data across shared and private channel.
 ---
 
 ## Validate user access for membership updates
@@ -159,7 +157,7 @@ If there are bulk membership changes, Teams curbs individual membership update n
 
 ### Use sharedWithTeams subscription for bulk membership changes
 
-### [Graph](#tab/graph)
+### [Tab](#tab/tab)
 
 To reduce notification overload during membership updates, such as when a shared channel is added to or removed from a team with thousands of members, use the new sharedWithTeams subscription resource:
 
@@ -176,7 +174,7 @@ The sharedWithTeams subscription sends a single notification when a channel is s
 > * Access membership data (both direct and indirect members).
 > * Receive and respond to membership change notifications.
 
-### [Bot Framework](#tab/bot-framework)
+### [Bot](#tab/bot)
 
 When a shared channel is added to another team, the Bot Framework may receive a conversationUpdate activity through the ```OnConversationUpdateActivityAsync``` method, but only if the bot is installed in the team or channel.
 
