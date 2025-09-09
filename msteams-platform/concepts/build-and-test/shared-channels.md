@@ -159,7 +159,7 @@ If there are bulk membership changes, Teams curbs individual membership update n
 
 ### Use sharedWithTeams subscription for bulk membership changes
 
-### [Graph](#tab1/graph)
+### [Graph](#tab/graph)
 
 To reduce notification overload during membership updates, such as when a shared channel is added to or removed from a team with thousands of members, use the new sharedWithTeams subscription resource:
 
