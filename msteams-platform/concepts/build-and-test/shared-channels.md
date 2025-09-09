@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.date: 04/09/2025
 ---
 
-# Microsoft Teams connects for shared and private Channels
+# Microsoft Teams connects for shared and private channels
 
 Microsoft Teams apps must support shared and private channels, which introduce new collaboration scenarios across teams and organizations. Shared channels in Microsoft Teams Connect can be created and shared with members of other teams within the same organization or with teams from external organizations.
 
