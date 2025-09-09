@@ -141,7 +141,6 @@ public async Task OnMembersRemovedAsync(ITurnContext turnContext, AppState turnS
 ```
 
 These Bot SDK endpoints are essential for monitoring membership changes and maintaining accurate membership data across shared and private channel.
-
 ---
 
 ## Validate user access for membership updates
@@ -180,7 +179,6 @@ The sharedWithTeams subscription sends a single notification when a channel is s
 ### [Bot Framework](#tab/bot-framework)
 
 When a shared channel is added to another team, the Bot Framework may receive a conversationUpdate activity through the ```OnConversationUpdateActivityAsync``` method, but only if the bot is installed in the team or channel.
-
 ---
 
 ## Authenticate external users to access your app content in sharepoint
