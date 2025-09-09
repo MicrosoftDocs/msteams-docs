@@ -174,7 +174,7 @@ Get started with Teams AI library using the LightBot sample. It enables your com
 
    When the app is added, a dialog to select the required scope appears.
 
-1. Select **Open** to open the app in personal scope. 
+1. Select **Open** to open the app in personal scope.
 
    Alternatively, you can either search and select the required scope or select a channel, chat, or meeting from the list, and move through the dialog to select **Go**.
 
@@ -448,4 +448,4 @@ Choose one of the following as a next step:
 >
 > [!div class="nextstepaction"]
 > If you want to build a a custom engine agent using Microsoft 365 Agents Toolkit, select the following:<br>
-> [Build a custom engine agent](../../../Teams-AI-library-tutorial.yml)
+> [Build a custom engine agent](teams-ai-library-tutorial.md)

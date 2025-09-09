@@ -1379,6 +1379,86 @@
       {
         "source_path": "msteams-platform/sbs-meetings-sidepanel.yml",
         "redirect_url": "/microsoftteams/platform/apps-in-teams-meetings/build-tabs-for-meeting.md"
+      },
+      {
+        "source_path": "msteams-platform/graph-api/meeting-transcripts/fetch-id.md",
+        "redirect_url": "/graph/teams-changenotifications-callrecording-and-calltranscript?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json"
+      },
+      {
+        "source_path": "msteams-platform/graph-api/meeting-transcripts/api-transcripts.md",
+        "redirect_url": "/graph/api/resources/calltranscript?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json"
+      },
+      {
+        "source_path": "msteams-platform/sbs-teams-app-test-tool.yml",
+        "redirect_url": "/microsoftteams/platform/toolkit/teams-app-test-tool-tutorial.md"
+      },
+      {
+        "source_path": "msteams-platform/Teams-AI-library-tutorial.yml",
+        "redirect_url": "/microsoftteams/platform/teams-ai-library-tutorial.md"
+      },
+      {
+        "source_path": "msteams-platform/sbs-gs-spfx.yml",
+        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+      },
+      {
+        "source_path": "msteams-platform/sbs-api-based-message-extensions.yml",
+        "redirect_url": "/microsoftteams/platform/messaging-extensions/build-bot-based-message-extension"
+      },
+      {
+        "source_path": "msteams-platform/sbs-api-msg-ext-ttk.yml",
+        "redirect_url": "/microsoftteams/platform/messaging-extensions/api-based-overview"
+      },
+      {
+        "source_path": "msteams-platform/sbs-bots-with-sso.yml",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/authentication/bot-sso-overview"
+      },
+      {
+        "source_path": "msteams-platform/sbs-gs-blazorupdate.yml",
+        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+      },
+      {
+        "source_path": "msteams-platform/sbs-gs-bot.yml",
+        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+      },
+      {
+        "source_path": "msteams-platform/sbs-gs-commandbot.yml",
+        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+      },
+     {
+        "source_path": "msteams-platform/sbs-gs-csharp.yml",
+        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+      },
+      {
+        "source_path": "msteams-platform/sbs-gs-javascript.yml",
+        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+      },
+      {
+        "source_path": "msteams-platform/sbs-gs-msgext.yml",
+        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+      },
+      {
+        "source_path": "msteams-platform/sbs-gs-nodejs.yml",
+        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+      },
+      {
+        "source_path": "msteams-platform/sbs-gs-notificationbot.yml",
+        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+      },
+      {
+        "source_path": "msteams-platform/sbs-gs-workflow-bot.yml",
+        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+      },
+      {
+        "source_path": "msteams-platform/sbs-meetingextension-action.yml",
+        "redirect_url": "/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command"
+      },
+      {
+        "source_path": "msteams-platform/sbs-send-proactive.yml",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages"
+      },
+      {
+        "source_path": "msteams-platform/sbs-tabs-and-messaging-extensions-with-sso.yml",
+        "redirect_url": "/microsoftteams/platform/tabs/how-to/authentication/tab-sso-overview"
       }
     ]
 }
