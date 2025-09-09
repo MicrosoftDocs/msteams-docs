@@ -120,26 +120,27 @@ Apps installed in shared channels receive notifications when users are added to 
 
 To receive both direct and indirect member update notifications, you must include both the query string parameters when creating a subscription. If the query strings aren't provided, the subscription only delivers notifications for direct member updates. To learn more, see [Channel membership access](/graph/teams-changenotifications-channelmembership).
 
-```http
+```C#
 `/teams/{team-id}/channels/getAllMembers?notifyOnIndirectMembershipUpdate=true&suppressNotificationWhenSharedUnsharedWithTeam=true`
 ```
 
 This subscription enables apps to monitor membership changes in shared channels and its associated teams. For more information on how to create a Microsoft Graph change notification subscription, see [Create a subscription.](/graph/teams-changenotifications-teammembership)
 
-### [Bot SDK](#tab/bot sdk)
+### [Bot Framework](#tab/bot-framework)
 
 When a new member is added to a shared channel, the ```OnMembersAddedAsync``` method is called. This method provides the context and details of the user who was added, allowing the bot to respond accordingly.
 
-```http
+```C#
 public async Task OnMembersAddedAsync(ITurnContext turnContext, AppState turnState, CancellationToken cancellationToken) 
 ```
 
 Similarly, when a member is removed from the channel, the ```OnMembersRemovedAsync``` method is called. This method allows the bot to handle clean-up tasks or adjust access controls as needed.
 
-```http
+```C#
 public async Task OnMembersRemovedAsync(ITurnContext turnContext, AppState turnState, CancellationToken cancellationToken)
 ```
 
+---
 These Bot SDK endpoints are essential for monitoring membership changes and maintaining accurate membership data across shared and private channel.
 
 ## Validate user access for membership updates
@@ -158,7 +159,7 @@ If there are bulk membership changes, Teams curbs individual membership update n
 
 ### Use sharedWithTeams subscription for bulk membership changes
 
-To reduce notification overload during membership updates, such as when a shared channel is added to or removed from a team with thousands of members, use the new SharedWithTeams subscription resource:
+To reduce notification overload during membership updates, such as when a shared channel is added to or removed from a team with thousands of members, use the new sharedWithTeams subscription resource:
 
 ```http
 `/teams/{team-id}/channels/{channel-id}/sharedWithTeams`
