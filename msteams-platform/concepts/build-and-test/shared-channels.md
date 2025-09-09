@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.date: 04/09/2025
 ---
 
-# MMicrosoft Teams connect shared and private channels
+# Microsoft Teams connect shared and private channels
 
 Microsoft Teams Connect shared channels allow members of a channel to collaborate with users across other teams and organizations. You can create and share a shared channel with:
 
@@ -16,11 +16,11 @@ Microsoft Teams Connect shared channels allow members of a channel to collaborat
 * Individuals within the same organization.
 * Individuals and other teams of other organizations.
 
-Microsoft Teams private channels allow a subset of team members to collaborate in a more focused and secure space, separate from the main team conversation. You can create and use a private channel with:
+Microsoft Teams private channels allow a subset of team members to collaborate in a more focused and secure space, separate from general team discussion. You can create and use a private channel with:
 
 * Selected members of the same team.
 * Internal stakeholders who require restricted access to sensitive content.
-* Team members working on confidential projects or specialized tasks
+* Team members working on confidential projects.
 
 > [!NOTE]
 >
@@ -111,12 +111,12 @@ You can classify members as in-tenant or out-tenant by comparing `tenantID` of t
 
 ## Get app notifications for direct and indirect membership changes
 
-### In graph
+### [Graph](#tab/graph)
 
 Apps installed in shared channels receive notifications when users are added to or removed from a team that shares the channel. To receive these notifications, you must:
 
 1. [Install the app](../deploy-and-publish/apps-upload.md) in a host team and enable it for the shared channel.
-1. Create a valid Microsoft Graph change notification subscription to monitor associated team membership changes and shared or unshared events using supported APIs.
+2. Create a valid Microsoft Graph change notification subscription to monitor associated team membership changes and shared or unshared events using supported APIs.
 
 To receive both direct and indirect member update notifications, you must include both the query string parameters when creating a subscription. If the query strings aren't provided, the subscription only delivers notifications for direct member updates. To learn more, see [Channel membership access](/graph/teams-changenotifications-channelmembership).
 
@@ -126,19 +126,15 @@ To receive both direct and indirect member update notifications, you must includ
 
 This subscription enables apps to monitor membership changes in shared channels and its associated teams. For more information on how to create a Microsoft Graph change notification subscription, see [Create a subscription.](/graph/teams-changenotifications-teammembership)
 
-### In Bot SDK
+### [Bot SDK](#tab/bot sdk)
 
-When a new member is added to a shared channel, the OnMembersAddedAsync method is called. This method provides the context and details of the user who was added, allowing the bot to respond accordingly.
-
-Member added
+When a new member is added to a shared channel, the ```OnMembersAddedAsync``` method is called. This method provides the context and details of the user who was added, allowing the bot to respond accordingly.
 
 ```http
 public async Task OnMembersAddedAsync(ITurnContext turnContext, AppState turnState, CancellationToken cancellationToken) 
 ```
 
-Similarly, when a member is removed from the channel, the OnMembersRemovedAsync method is called. This method allows the bot to handle clean-up tasks or adjust access controls as needed.
-
-Member removed
+Similarly, when a member is removed from the channel, the ```OnMembersRemovedAsync``` method is called. This method allows the bot to handle clean-up tasks or adjust access controls as needed.
 
 ```http
 public async Task OnMembersRemovedAsync(ITurnContext turnContext, AppState turnState, CancellationToken cancellationToken)
@@ -248,7 +244,7 @@ If an app isn’t visible when trying to add it to a channel, there are a few li
 <details>
 <summary>Why am I getting a 403 error stating "app not enabled in this channel" when calling channel APIs?</summary>
 
-A 403 error stating "app not enabled in this channel" typically occurs when the app is installed at the team level but is not added to the specific channel. To fix this issue, first confirm that the app is explicitly added to the channel. If your app uses resource-specific consent (RSC), verify that the permissions declared in the manifest match the API calls being made, for example, ChannelMember.Read.Group for reading channel membership. After adding the app, retry the operation. For bots, initiate channel-specific logic when the bot receives the channelMemberAdded event to confirm it has been successfully added to the channel.
+A 403 error stating "app not enabled in this channel" typically occurs when the app is installed at the team level but is not added to the specific channel. To resolve this issue, first confirm that the app is explicitly added to the channel. If your app uses resource-specific consent (RSC), verify that the permissions declared in the manifest match the API calls being made, for example, ChannelMember.Read.Group for reading channel membership. After adding the app, retry the operation. For bots, initiate channel-specific logic when the bot receives the channelMemberAdded event to confirm it has been successfully added to the channel.
 
 <br>
 &nbsp;
@@ -256,7 +252,7 @@ A 403 error stating "app not enabled in this channel" typically occurs when the 
 <details>
 <summary>Why does the channel roster appear incomplete, showing only owners or missing users?</summary>
 
-If the channel roster appears incomplete showing only owners or missing users, it might be due to using the team members API instead of the correct channel-specific API. To resolve this, use the /channels/{id}/allMembers API to retrieve the full channel roster. If the response still shows only owners, the app likely hasn’t been added to the channel. Prompt the user to add the app to the channel, then retry the request to fetch the updated roster.
+If the channel roster appears incomplete showing only owners or missing users, it might be due to using the team members API instead of the correct channel-specific API. To resolve this issue, use the /channels/{id}/allMembers API to retrieve the full channel roster. If the response still shows only owners, the app likely is not added to the channel. Prompt the user to add the app to the channel, then retry the request to fetch the updated roster.
 
 <br>
 &nbsp;
@@ -264,7 +260,7 @@ If the channel roster appears incomplete showing only owners or missing users, i
 <details>
 <summary>Why does file access fail for some users even though they are part of the channel?</summary>
 
-This can happen if the app is using the team’s main SharePoint site instead of the specific site linked to the channel. It might also be due to the type of link being blocked by your organization’s sharing policies, or because external users don’t have the right permissions. To fix this, make sure your app uses the channel’s filesFolder property to get the correct driveId and itemId for file operations. When sharing files, use "people with existing access" links or the /invite API to give access to specific users or groups.
+This failure can happen if the app is using the team’s main SharePoint site instead of the specific site linked to the channel. Your organization’s sharing policies might block the type of link, or external users might lack the necessary permissions. To resolve this issue, make sure your app uses the channel’s filesFolder property to get the correct driveId and itemId for file operations. When sharing files, use "people with existing access" links or the /invite API to give access to specific users or groups.
 
 <br>
 &nbsp;
@@ -272,7 +268,7 @@ This can happen if the app is using the team’s main SharePoint site instead of
 <details>
 <summary>Why are external users experiencing authentication issues in tabs or task modules?</summary>
 
-Authentication issues in tabs or task modules for external users often occur when the app requests a token for the host tenant instead of the user’s home tenant. To resolve this, check whether the user is external by comparing context.user.tenant.id with the host or owner tenant ID. If they are different, the user is external, and your app should request the token for the user’s home tenant. You can do this by passing the correct tenant ID (tid) when calling getAuthToken.
+Authentication issues in tabs or task modules for external users often occur when the app requests a token for the host tenant instead of the user’s home tenant. To resolve this issue, check whether the user is external by comparing context.user.tenant.id with the host or owner tenant ID. If they are different, the user is external, and your app should request the token for the user’s home tenant. You can do this by passing the correct tenant ID (tid) when calling getAuthToken.
 
 <br>
 &nbsp;
@@ -280,7 +276,7 @@ Authentication issues in tabs or task modules for external users often occur whe
 <details>
 <summary>How do I know my app was added to a channel?</summary>
 
-This issue might occur if the app is expecting a centralized list of installed apps at the channel level or relying on team-level installation behavior. Currently, there is no channel-level installedApps list available. Bots should instead listen for the channelMemberAdded event within the channel to detect when they have been added. If this event is not received, and a 403 error is returned during operations, the app should handle the error and prompt the user to add the bot to the channel.
+This issue might occur if the app is expecting a centralized list of installed apps at the channel level or relying on team-level installation behavior. Currently, there is no channel-level installedApps list available. Bots should instead listen for the channelMemberAdded event within the channel to detect when they are added. If the app doesn’t receive the event and gets a 403 error, it prompts the user to add the bot to the channel and handles the error.
 
 <br>
 &nbsp;
@@ -288,15 +284,15 @@ This issue might occur if the app is expecting a centralized list of installed a
 <details>
 <summary>Why is my app failing to create message change notifications in shared or private channels?</summary>
 
-Message change notifications might fail in shared or private channels because subscriptions to /channels/{id}/messages are blocked when using resource-specific consent (RSC) in these types of channels. If your app encounters a 403 error when attempting to create a subscription, this behavior is expected. To fix this, use on-demand message reads after the app has been successfully added to the channel.
+Message change notifications might fail in shared or private channels because subscriptions to /channels/{id}/messages are blocked when using resource-specific consent (RSC) in these types of channels. If your app encounters a 403 error when attempting to create a subscription, this behavior is expected. To resolve this issue, use on-demand message reads after the app is successfully added to the channel.
 
 <br>
 &nbsp;
 </details>
 <details>
-<summary>Why do file links still fail for external users even after the app has been added to the channel?</summary>
+<summary>Why do file links still fail for external users even after the app is added to the channel?</summary>
 
-This can happen if the type of link being used is not allowed by the tenant’s sharing policy, or if the user hasn’t been granted access to the specific item, despite being a member of the channel. Another common cause is that the app might have generated links pointing to the team drive instead of the channel’s dedicated drive. To resolve this, reissue the links using the "people with existing access" option or use the /invite API to grant access to specific users. Also, make sure the links reference the channel drive, which can be identified using the filesFolder property, rather than the team site.
+This can happen if the type of link being used is not allowed by the tenant’s sharing policy, or if the user hasn’t been granted access to the specific item, despite being a member of the channel. Another common cause is that the app might have generated links pointing to the team drive instead of the channel’s dedicated drive. To resolve this issue, reissue the links using the "people with existing access" option or use the /invite API to grant access to specific users. Also, make sure the links reference the channel drive, which can be identified using the filesFolder property, rather than the team site.
 
 ## See also
 
