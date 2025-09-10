@@ -77,7 +77,7 @@ Note: This returns both internal and external users added to the shared channel.
 
 2. Get each shared team with GET `sharedWithTeams` API.
 
-    ```http
+    ```csharp
     GET /teams/{host-team-group-id}/channels/{channel-id}/sharedWithTeams
     ```
 
