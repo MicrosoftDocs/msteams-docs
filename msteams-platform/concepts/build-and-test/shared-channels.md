@@ -35,17 +35,17 @@ Teams Connects shared channels facilitate secure collaboration seamlessly. Allow
 
 | **Category** | **Capability**                                                                 | **Standard channel** | **Private channel** | **Shared channel** |
 |--------------|----------------------------------------------------------------------------------|----------------------|---------------------|---------------------|
-| **Membership** | Can add people to the channel without adding to the host team                 | No                   | No                  | Yes                 |
-|              | Channel membership can be limited to a subset of the host team                 | No                   | Yes                 | Yes                 |
-|              | Channel can be shared with other teams to inherit members from the team        | No                   | No                  | Yes                 |
-|              | Channel can be shared directly with its parent team to inherit members         | N/A                  | No                  | Yes                 |
-|              | Guests (B2B Guests) can participate in the channel                             | Yes                  | Yes                 | No                  |
-|              | External participants (B2B Direct Connect) can participate in the channel      | No                   | No                  | Yes                 |
-|              | Channel is hosted under a host team                                            | Yes                  | Yes                 | Yes                 |
-| **Storage**   | Each channel has a dedicated SharePoint site                                  | No (inherits team site) | Yes              | Yes                 |
-| **App Model** | App must be installed in the host team                                        | Yes                  | Yes                 | Yes                 |
-|              | App installed to host team automatically available in channel                 | Yes                  | No                  | No                  |
-|              | App must be added to each channel                                              | No                   | Yes                 | Yes                 |
+| **Membership** | Can add people to the channel without adding to the host team                 | :x:                    | :x:                   |  :white_check_mark:                 |
+|              | Channel membership can be limited to a subset of the host team                 | :x:                    |  :white_check_mark:                 |  :white_check_mark:                 |
+|              | Channel can be shared with other teams to inherit members from the team        | :x:                    | :x:                   |  :white_check_mark:                 |
+|              | Channel can be shared directly with its parent team to inherit members         | N/A                  | :x:                   |  :white_check_mark:                 |
+|              | Guests (B2B Guests) can participate in the channel                             |  :white_check_mark:                  |  :white_check_mark:                 | :x:                   |
+|              | External participants (B2B Direct Connect) can participate in the channel      | :x:                    | :x:                   |  :white_check_mark:                 |
+|              | Channel is hosted under a host team                                            |  :white_check_mark:                  |  :white_check_mark:                 |  :white_check_mark:                 |
+| **Storage**   | Each channel has a dedicated SharePoint site                                  | :x:  (inherits team site) |  :white_check_mark:              |  :white_check_mark:                 |
+| **App Model** | App must be installed in the host team                                        |  :white_check_mark:                  |  :white_check_mark:                 |  :white_check_mark:                 |
+|              | App installed to host team automatically available in channel                 |  :white_check_mark:                  | :x:                   | :x:                   |
+|              | App must be added to each channel                                              | :x:                    |  :white_check_mark:                 |  :white_check_mark:                 |
 
 ### Get context for shared channels
 
