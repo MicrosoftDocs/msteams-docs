@@ -210,9 +210,9 @@ Apps must function cross-tenants in installation and usage. The following table 
 
 If you're building an app using [SharePoint](/sharepoint/dev/spfx/integrate-with-teams-introduction) Framework, you need to use the SharePoint Online (SPO) site linked to the shared channel—not the one linked to the host team group. Each private channel has its own SPO site that is only accessible to members of that specific shared or private channel.
 
-Use the Graph API to access the document library of the SharePoint Online (SPO) site linked to a shared or private channel. Ensure you pass the Team ID and Channel ID received from the [Get Host Team Group ID & Channel ID](#get-host-team-group-id--channel-id) and pass in [Get filesFolder - Microsoft Graph v1.0 | Microsoft Learn](/graph/api/channel-get-filesfolder).
+Use the Graph API to access the document library of the SPO site linked to a shared or private channel. Ensure you pass the Team ID and Channel ID received from the [Get Host Team Group ID & Channel ID](#get-host-team-group-id--channel-id) and pass in [Get filesFolder - Microsoft Graph v1.0 | Microsoft Learn](/graph/api/channel-get-filesfolder).
 
-## Apps in Federated group chats with external users
+## Apps in federated group chats with external users
 
 > [!NOTE]
 >
