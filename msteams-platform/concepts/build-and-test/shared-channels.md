@@ -177,7 +177,7 @@ The sharedWithTeams subscription sends a single notification when a channel is s
 > * Access membership data (both direct and indirect members).
 > * Receive and respond to membership change notifications.
 
-### [Bot Framework](#tab/bot-framework-bulk)
+### [Bot Framework](#tab/botframework-bulk)
 
 When a shared channel is added to another team, the Bot Framework may receive a conversationUpdate activity through the ```OnConversationUpdateActivityAsync``` method, but only if the bot is installed in the team or channel.
 
