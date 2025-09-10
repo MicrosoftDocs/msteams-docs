@@ -71,19 +71,19 @@ Note: This returns both internal and external users added to the shared channel.
 
 1. Get direct members with [GET channel members API](/graph/api/channel-list-members?view=graph-rest-beta&tabs=http&preserve-view=true) API.
 
-    ```csharp
+    ```HTTP
     GET /teams/{host-team-group-id}/channels/{channel-id}/members
     ```
 
 2. Get each shared team with GET `sharedWithTeams` API.
 
-    ```csharp
+    ```HTTP
     GET /teams/{host-team-group-id}/channels/{channel-id}/sharedWithTeams
     ```
 
 3. Use GET members of each shared team (Team X) with GET `sharedWithTeams` API.
 
-    ```csharp
+    ```HTTP
     GET /teams/{host-team-group-id}/channels/{channel-id}/sharedWithTeams/{teamX}/members
     ```
 
@@ -93,7 +93,7 @@ You can classify members as in-tenant or out-tenant by comparing `tenantID` of t
 
 1. Get the member you wish to compare.
 
-    ```csharp
+    ```HTTP
     GET /teams/{host-team-group-id}/channels/{channel-id}/members
     ```
 
@@ -112,7 +112,7 @@ Apps installed in shared channels receive notifications when users are added to 
 
 To receive both direct and indirect member update notifications, you must include both the query string parameters when creating a subscription. If the query strings aren't provided, the subscription only delivers notifications for direct member updates. To learn more, see [Channel membership access](/graph/teams-changenotifications-channelmembership).
 
-```csharp
+```HTTP
 `/teams/{team-id}/channels/getAllMembers?notifyOnIndirectMembershipUpdate=true&suppressNotificationWhenSharedUnsharedWithTeam=true`
 ```
 
@@ -140,7 +140,7 @@ These Bot Framework endpoints are essential for monitoring membership changes an
 
 When an app receives a notification for an indirect membership update, it’s important to verify whether the user still has access to the shared channel as the same user might have both direct and indirect membership. For example, if a user is removed from a team that shares a channel, the app should confirm whether the user's access is truly lost. Use the ```doesUserHaveAccess``` API to determine whether the user still has access to the shared channel.
 
-```csharp
+```HTTP
 GET /teams/{team-id}/channels/{channel-id}/doesUserHaveAccess(userId='@userid',tenantId='@TenantID',userPrincipalName='@UserPrincipalName')
 ```
 
@@ -156,7 +156,7 @@ If there are bulk membership changes, Teams curbs individual membership update n
 
 To reduce notification overload during membership updates, such as when a shared channel is added to or removed from a team with thousands of members, use the new sharedWithTeams subscription resource:
 
-```csharp
+```HTTP
 `/teams/{team-id}/channels/{channel-id}/sharedWithTeams`
 ```
 
