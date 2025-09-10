@@ -56,14 +56,6 @@ For more information to enable your tab, see:
 * [Get context for your tab for private channels](../../tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels)
 * [Get context in shared channels](../../tabs/how-to/access-teams-context.md#get-context-in-shared-channels)
 
-### Managing channel members and permissions in Microsoft Teams apps
-
-To ensure your app functions correctly in shared and private channels, you must use channel-specific APIs to gather accurate member information. Usage of channel-specific APIS is important because:
-
-Team membership APIs aren't equal to shared or private Channel membership Shared and private channels have their own membership models, which aren't the same as the parent team’s membership.
-
-Each channel has its own SharePoint site with its own permissions. Apps must follow these rules to prevent data leaks or access problems.
-
 ## Apps and permissions in shared channels
 
 You can collaborate with external members outside of your organization using Shared channels. App permissions in Shared channels follow the host team's app roster and host tenant's app policy.
