@@ -150,9 +150,9 @@ You can manage indirect membership in shared channels using the following Micros
 
 ## Classify shared channel members as in-tenant or out-tenant
 
-You can classify members as in-tenant or out-tenant by comparing the `TenantID` of the member or team with `OwnerTenantID` as follows:
+You can classify members as in-tenant or out-tenant by comparing the `TenantId` of the member or team with `ownerTenantId` as follows:
 
-1. Get the tenantID of the member you wish to compare.
+1. Get the TenantId of the member you wish to compare.
 
     ```http
     GET /teams/{host-team-group-id}/channels/{channel-id}/members
@@ -162,9 +162,9 @@ You can classify members as in-tenant or out-tenant by comparing the `TenantID` 
      > The GET API only gives you the list of direct members of the shared channel.
 
 2. Call microsoftTeams.app.getContext() in your tab from the Teams JavaScript client library (**TeamsJS SDK**).
- The getContext() call returns context of the shared channel, which contains the details such as **displayName**, **membershipType**, **ownerGroupID** , and **tenantGroupID**.
+ The getContext() call returns context of the shared channel, which contains the details such as **displayName**, **membershipType**, **ownerGroupId** , and **ownerTenantId**.
 
-3. Compare the `TenantID` of the member to the `OwnerTenantID` property
+3. Compare the `TenantId` of the member to the `ownerTenantId` property
 <a name='azure-ad-native-identity'></a> and determine if the member is an in-tenant or out-tenant.
 
 ## Microsoft Entra native identity
