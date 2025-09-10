@@ -78,7 +78,7 @@ The following variants show the kinds of activity feed notification cards you ca
 
 Activity feed APIs work with a Teams app. The following are the requirements to send activity feed notifications:
 
-* The app manifest must have the Microsoft Entra app ID added to the `webApplicationInfo` section. For more information, see [app manifest schema](../resources/schema/manifest-schema.md#webapplicationinfo).
+* The app manifest must have the Microsoft Entra app ID added to the `webApplicationInfo` section. For more information, see [app manifest schema](/microsoft-365/extensibility/schema/root-web-application-info).
 * The activity notifications can be sent with or without activity types added in the app manifest.
   * By default, you can use the activity notification APIs without adding the `activities` section in the app manifest. The `systemDefault` activity type is reserved, which allows you to provide free-form text in the `Actor+Reason` line of the activity feed notification. For more information, see [send customizable activity feed notifications](/graph/teams-send-activityfeednotifications?tabs=http#example-8-send-a-notification-to-a-user-using-the-systemdefault-activity-type).
     > [!NOTE]
