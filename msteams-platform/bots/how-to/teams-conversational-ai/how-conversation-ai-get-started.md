@@ -833,7 +833,7 @@ You can add support for custom engine agents in Microsoft 365 Copilot Chat. This
 
 To support Microsoft 365 Copilot Chat, update your app manifest:
 
-1. Add the `copilotAgents` property with a sub-property `customEngineAgents` to your [app manifest](../../../resources/schema/manifest-schema-dev-preview.md#customengineagents):
+1. Add the `copilotAgents` property with a sub-property `customEngineAgents` to your [app manifest](/microsoft-365/extensibility/schema/root-copilot-agents#customengineagents):
 
     ```json
     "copilotAgents": { 
