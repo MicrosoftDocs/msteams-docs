@@ -71,7 +71,7 @@ Note: This returns both internal and external users added to the shared channel.
 
 1. Get direct members with [GET channel members API](/graph/api/channel-list-members?view=graph-rest-beta&tabs=http&preserve-view=true) API.
 
-    ```http
+    ```csharp
     GET /teams/{host-team-group-id}/channels/{channel-id}/members
     ```
 
@@ -83,7 +83,7 @@ Note: This returns both internal and external users added to the shared channel.
 
 3. Use GET members of each shared team (Team X) with GET `sharedWithTeams` API.
 
-    ```http
+    ```csharp
     GET /teams/{host-team-group-id}/channels/{channel-id}/sharedWithTeams/{teamX}/members
     ```
 
@@ -93,7 +93,7 @@ You can classify members as in-tenant or out-tenant by comparing `tenantID` of t
 
 1. Get the member you wish to compare.
 
-    ```http
+    ```csharp
     GET /teams/{host-team-group-id}/channels/{channel-id}/members
     ```
 
