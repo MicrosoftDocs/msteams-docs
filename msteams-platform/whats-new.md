@@ -36,7 +36,7 @@ Teams platform features that are available to all app developers.</br>
 
 **2025 August**
 
-***Sep 11, 2025***: [Apps can now receive notifications when users are added to or removed from a shared channel through associated teams, helping developers maintain accurate access control](/microsoftteams/platform/concepts/build-and-test/shared-channels)
+* **Sep 11, 2025***: [Apps can now receive notifications when users are added to or removed from a shared channel through associated teams, helping developers maintain accurate access control](/microsoftteams/platform/concepts/build-and-test/shared-channels)
 
 * ***August 19, 2025***: [Teams now supports token prefetching for apps that use nested app authentication (NAA). This enhancement enables the host to acquire authentication tokens proactively before the app launches, improving startup performance and reducing latency.](concepts/authentication/nested-authentication.md#token-prefetching-for-nested-app-authentication-naa)</br>
 
