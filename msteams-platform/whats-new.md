@@ -36,6 +36,8 @@ Teams platform features that are available to all app developers.</br>
 
 **2025 August**
 
+***Sep 11, 2025***: [Apps can now receive notifications when users are added to or removed from a shared channel through associated teams, helping developers maintain accurate access control](/microsoftteams/platform/concepts/build-and-test/shared-channels)
+
 * ***August 19, 2025***: [Teams now supports token prefetching for apps that use nested app authentication (NAA). This enhancement enables the host to acquire authentication tokens proactively before the app launches, improving startup performance and reducing latency.](concepts/authentication/nested-authentication.md#token-prefetching-for-nested-app-authentication-naa)</br>
 
 * ***August 08, 2025***: [Introducing app manifest v1.23 with support for custom contextual tabs and system-generated metadata for agents.](/microsoft-365/extensibility/schema/?view=m365-app-1.23&preserve-view=true)
@@ -43,8 +45,6 @@ Teams platform features that are available to all app developers.</br>
 **2025 July**
 
 * ***July 10, 2025***: [Custom icons for Teams notifications help your app stand out and increase engagement through more personalized activity feed updates.](/graph/teams-send-activityfeednotifications#custom-activity-icons-in-activity-feed-notifications)</br>
-
-***Aug 15, 2025***: [Apps can now recieve notifications when users are added to or removed from a shared channel through assoicated teams, helping developers maintain accurate access control](/microsoftteams/platform/concepts/build-and-test/shared-channels)
 
 :::column-end:::
 :::row-end:::

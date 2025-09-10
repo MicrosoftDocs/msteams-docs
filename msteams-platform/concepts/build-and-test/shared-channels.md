@@ -8,9 +8,9 @@ ms.topic: conceptual
 ms.date: 04/09/2025
 ---
 
-# Microsoft Teams connects shared channels
+# Microsoft Teams connect shared channels
 
-Teams connects shared channels, which facilitates secure collaboration seamlessly. Allow external members outside of your organization to collaborate with internal users in Teams without changing their user context. You can create and share a shared channel with:
+Teams connect shared channels, which facilitates secure collaboration seamlessly. Allow external members outside of your organization to collaborate with internal users in Teams without changing their user context. You can create and share a shared channel with:
 
 * Members of another team within the same organization
 * Individuals within the same organization
@@ -18,7 +18,7 @@ Teams connects shared channels, which facilitates secure collaboration seamlessl
 
 Shared channels ensure:
 
-* Enhanced user experience through cross-tenanants collaboration
+* Enhanced user experience through cross-tenants collaboration
 * Secure granular access control
 * Real-time membership syncing
 
@@ -33,7 +33,7 @@ A sample illustration showing shared channel membership is as follows:
 
 ## Enable your app for shared channels
 
-SupportedChannelTypes is an optional property that enables your app in nonstandard channels. If your app supports the team scope and the property is defined, Teams enables your app in each channel type accordingly. Private and shared channels are supported. For more information, see [supportedChannelTypes](../../resources/schema/manifest-schema.md#supportedchanneltypes).
+SupportedChannelTypes is an optional property that enables your app in non-standard channels. If your app supports the team scope and the property is defined, Teams enables your app in each channel type accordingly. Private and shared channels are supported. For more information, see [supportedChannelTypes](../../resources/schema/manifest-schema.md#supportedchanneltypes).
 
 ```JSON
     "supportedChannelTypes": [
@@ -44,7 +44,7 @@ SupportedChannelTypes is an optional property that enables your app in nonstanda
 
 ## Get context for shared channels
 
-When the content UX is loaded in a shared channel, use the data received from `getContext` call for  shared channel changes. `getContext` call publishes two new properties, `hostTeamGroupID` and `hostTenantID`, which are used to retrieve channel membership using Microsoft Graph APIs. `hostTeam` is the team that creates the shared channel.
+When the content UX is loaded in a shared channel, use the data received from `getContext` call for shared channel changes. `getContext` call publishes two new properties, `ownerGroupID` and `ownerTenantID`, which are used to retrieve channel membership using Microsoft Graph APIs. `hostTeam` is the team that creates the shared channel.
 
 For more information to enable your tab, see:
 
@@ -60,15 +60,15 @@ You can collaborate with external members outside of your organization using sha
 
 ## Get shared channel membership
 
-Use the [List allMembers API](/graph/api/channel-list-allmembers?view=graph-rest-beta&tabs=http) to retrieve all members (**direct** and **indirect**) of a shared channel.
+Use the [List allMembers API](/graph/api/channel-list-allmembers?view=graph-rest-beta&tabs=http) to retrieve both direct and indirect members of a shared channel.
 
-### Identify Direct vs. Indirect Members
+### Identify direct or indirect members
 
-* **Direct Members**: Users who are added directly to the channel, including users from other tenants (cross-tenants).
+* Direct Members: Users who are added directly to the channel, including users from other tenants (cross-tenants).
 
-* **Indirect Members**: Users who are members of the team, with which the channel is shared, including teams in the same tenant or in a cross-tenant.
+* Indirect Members: Users who are members of the team, with which the channel is shared, including teams in the same tenant or in a cross-tenant.
 
-Additionally, you can identify whether a member of a shared channel is direct or indirect by checking the *@microsoft.graph.originalSourceMembershipUrl* annotation. This property identifies the source of a member’s access to a shared channel, as shown in the following table.
+Additionally, you can identify whether a member of a shared channel is direct or indirect by checking the **@microsoft.graph.originalSourceMembershipUrl** annotation. This property identifies the source of a member’s access to a shared channel, as shown in the following table.
 
 |Member Type |Annotation Present?  |Description  |
 |---------|---------|---------|
@@ -150,7 +150,7 @@ You can manage indirect membership in shared channels using the following Micros
 
 ## Classify shared channel members as in-tenant or out-tenant
 
-You can classify members as in-tenant or out-tenant by comparing the `tenantID` of the member or team with `hostTeamTenantID` as follows:
+You can classify members as in-tenant or out-tenant by comparing the `TenantID` of the member or team with `OwnerTenantID` as follows:
 
 1. Get the tenantID of the member you wish to compare.
 
@@ -164,7 +164,7 @@ You can classify members as in-tenant or out-tenant by comparing the `tenantID` 
 2. Call microsoftTeams.app.getContext() in your tab from the Teams JavaScript client library (**TeamsJS SDK**).
  The getContext() call returns context of the shared channel, which contains the details such as **displayName**, **membershipType**, **ownerGroupID** , and **tenantGroupID**.
 
-3. Compare the `ownerTenantID` of the member to the `hostTenantID` property
+3. Compare the `TenantID` of the member to the `OwnerTenantID` property
 <a name='azure-ad-native-identity'></a> and determine if the member is an in-tenant or out-tenant.
 
 ## Microsoft Entra native identity
