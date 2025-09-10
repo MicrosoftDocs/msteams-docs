@@ -120,7 +120,7 @@ Apps installed in shared channels receive notifications when users are added to 
 
 To receive both direct and indirect member update notifications, you must include both the query string parameters when creating a subscription. If the query strings aren't provided, the subscription only delivers notifications for direct member updates. To learn more, see [Channel membership access](/graph/teams-changenotifications-channelmembership).
 
-```C#
+```csharp
 `/teams/{team-id}/channels/getAllMembers?notifyOnIndirectMembershipUpdate=true&suppressNotificationWhenSharedUnsharedWithTeam=true`
 ```
 
@@ -130,24 +130,25 @@ This subscription enables apps to monitor membership changes in shared channels 
 
 When a new member is added to a shared channel, the ```OnMembersAddedAsync``` method is called. This method provides the context and details of the user who was added, allowing the bot to respond accordingly.
 
-```C#
+```csharp
 public async Task OnMembersAddedAsync(ITurnContext turnContext, AppState turnState, CancellationToken cancellationToken) 
 ```
 
 Similarly, when a member is removed from the channel, the ```OnMembersRemovedAsync``` method is called. This method allows the bot to handle clean-up tasks or adjust access controls as needed.
 
-```C#
+```csharp
 public async Task OnMembersRemovedAsync(ITurnContext turnContext, AppState turnState, CancellationToken cancellationToken)
 ```
 
+These Bot Framework endpoints are essential for monitoring membership changes and maintaining accurate membership data across shared and private channel.
+
 ---
-These Bot SDK endpoints are essential for monitoring membership changes and maintaining accurate membership data across shared and private channel.
 
 ## Validate user access for membership updates
 
 When an app receives a notification for an indirect membership update, it’s important to verify whether the user still has access to the shared channel as the same user might have both direct and indirect membership. For example, if a user is removed from a team that shares a channel, the app should confirm whether the user's access is truly lost. Use the ```doesUserHaveAccess``` API to determine whether the user still has access to the shared channel.
 
-```C#
+```csharp
 GET /teams/{team-id}/channels/{channel-id}/doesUserHaveAccess(userId='@userid',tenantId='@TenantID',userPrincipalName='@UserPrincipalName')
 ```
 
@@ -159,11 +160,11 @@ If there are bulk membership changes, Teams curbs individual membership update n
 
 ### Use sharedWithTeams subscription for bulk membership changes
 
-### [Graph](#tab/graph)
+### [Graph](#tab/graph-bulk)
 
 To reduce notification overload during membership updates, such as when a shared channel is added to or removed from a team with thousands of members, use the new sharedWithTeams subscription resource:
 
-```C#
+```csharp
 `/teams/{team-id}/channels/{channel-id}/sharedWithTeams`
 ```
 
@@ -176,7 +177,7 @@ The sharedWithTeams subscription sends a single notification when a channel is s
 > * Access membership data (both direct and indirect members).
 > * Receive and respond to membership change notifications.
 
-### [Bot Framework](#tab1/bot-framework)
+### [Bot Framework](#tab/bot-framework-bulk)
 
 When a shared channel is added to another team, the Bot Framework may receive a conversationUpdate activity through the ```OnConversationUpdateActivityAsync``` method, but only if the bot is installed in the team or channel.
 
