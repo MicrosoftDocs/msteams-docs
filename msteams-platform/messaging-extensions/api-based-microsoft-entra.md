@@ -293,7 +293,7 @@ After the API-based message extension gets a request header with token, perform 
 
 Update the following properties in the app manifest file:
 
-* `webApplicationInfo`: The `webApplicationInfo` property is used to enable SSO for your app to help app users access your API-based message extension app seamlessly. The app ID URI that you registered in Microsoft Entra ID is configured with the scope of the API you exposed. For more information, see [webApplicationInfo](../resources/schema/manifest-schema.md#webapplicationinfo).
+* `webApplicationInfo`: The `webApplicationInfo` property is used to enable SSO for your app to help app users access your API-based message extension app seamlessly. The app ID URI that you registered in Microsoft Entra ID is configured with the scope of the API you exposed. For more information, see [webApplicationInfo](/microsoft-365/extensibility/schema/root-web-application-info).
 
    &nbsp;&nbsp;:::image type="content" source="../assets/images/authentication/teams-sso-tabs/sso-manifest.png" alt-text="Screenshot shows the app manifest configuration.":::
 
