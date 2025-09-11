@@ -12,7 +12,7 @@ ms.date: 04/09/2025
 
 Shared and private channels in Microsoft Teams enable flexible collaboration within and across teams or organizations. Shared channels allow seamless communication with internal or external partners. Private channels provide a secure space for selected team members to collaborate on sensitive or confidential content, ensuring privacy and focused discussions within the team.
 
-## Enable apps support for shared and private channels
+## Enable app support for shared and private channels
 
 You can enable app support for shared and private channels based on whether your app is:
   
