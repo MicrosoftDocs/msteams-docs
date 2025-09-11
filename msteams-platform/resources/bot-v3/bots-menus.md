@@ -23,7 +23,7 @@ When a user selects a menu item, the command string is inserted into the text bo
 
 ## App manifest
 
-To create a bot menu, add a new [`commandLists`](~/resources/schema/manifest-schema.md#botscommandlists) object to your app manifest under the bot section. You can declare individual menus with separate commands for each scope your bot supports (`personal`, `groupChat`, or `team`) Each menu supports up to 10 commands.
+To create a bot menu, add a new [`commandLists`](/microsoft-365/extensibility/schema/root-bots-command-lists) object to your app manifest under the bot section. You can declare individual menus with separate commands for each scope your bot supports (`personal`, `groupChat`, or `team`) Each menu supports up to 10 commands.
 
 ### Manifest excerpt - single menu for both scopes
 

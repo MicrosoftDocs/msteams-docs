@@ -88,7 +88,7 @@ Each property allows you to prompt the users to ask for their consent:
 | midi          | Permission to send and receive  Musical Instrument Digital Interface (MIDI) information from a digital musical instrument.   |
 | openExternal  | Permission to open links in external applications.  |
 
-For more information, see [app manifest](../../resources/schema/manifest-schema.md#devicepermissions).
+For more information, see [app manifest](/microsoft-365/extensibility/schema/root-authorization-permissions).
 
 ## Check permissions from your app
 
@@ -212,16 +212,16 @@ For example:
 * To prompt the user to share location on the map interface, Teams app asks permission when you call `getLocation()`:
 
   # [TeamsJS v2](#tab/teamsjs-v2)
-    
+
   ```JavaScript
   function getLocation() {
     location.getLocation({ allowChooseLocation: true, showMap: true }).then((location) => { 
         let currentLocation = JSON.stringify(location);
     }).catch((error) => { /*Error getting location*/ })} 
   ```
-    
+
   # [TeamsJS v1](#tab/teamsjs-v1)
-    
+
   ```JavaScript
   function getLocation() {
   microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
@@ -229,7 +229,7 @@ For example:
   });
   } 
   ```
-    
+
  ---
 
 Here's how the device permissions prompts appear to users on mobile and desktop.

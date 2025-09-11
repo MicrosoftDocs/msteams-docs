@@ -31,7 +31,7 @@ Configure the `webApplicationInfo` property in the app manifest file. This prope
 
 The application ID URI that you registered in Microsoft Entra ID is configured with the scope of the API you exposed. Configure your app's subdomain URI in `resource` to ensure that the authentication request using `getAuthToken()` is from the domain given in app manifest.
 
-For more information, see [webApplicationInfo](../../../resources/schema/manifest-schema.md#webapplicationinfo).
+For more information, see [webApplicationInfo](/microsoft-365/extensibility/schema/root-web-application-info).
 
 ## To configure app manifest
 
@@ -41,7 +41,7 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
     > [!NOTE]
     >
     > - The app manifest folder should be at the root of your project. For more information, see [Create a Microsoft Teams app package](../../../concepts/build-and-test/apps-package.md).
-    > - For more information on learning how to create a manifest.json, see [the app manifest schema for Microsoft Teams](../../../resources/schema/manifest-schema.md).
+    > - For more information on learning how to create a manifest.json, see [the app manifest schema for Microsoft Teams](/microsoft-365/extensibility/schema/).
 
 1. Open the `manifest.json` file.
 1. Add one of the following code snippets to the app manifest file to add the new property:
@@ -79,7 +79,7 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
    > [!NOTE]
    > To handle authentication and token exchange, add `https://token.botframework.com` to the `validDomains` property for bots using Bot Framework. For OAuth URLs and data residency list, see [OAuth URL support in Azure AI Bot Service](/azure/bot-service/ref-oauth-redirect-urls?view=azure-bot-service-4.0&preserve-view=true).
 
-6. Save the app manifest file. For more information, see [app manifest](../../../resources/schema/manifest-schema.md).
+6. Save the app manifest file. For more information, see [app manifest](/microsoft-365/extensibility/schema/).
 
 <br>
 <details>

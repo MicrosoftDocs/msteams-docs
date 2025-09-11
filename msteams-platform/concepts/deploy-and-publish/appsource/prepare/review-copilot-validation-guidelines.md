@@ -139,7 +139,7 @@ You must ensure the following guidelines for sample prompts and prompt starters:
 
 ### Sample prompts
 
-For message extension based declarative agent, the [`samplePrompts`](../../../../resources/schema/manifest-schema.md#composeextensionscommands) property provides guidance to users on utilizing the agents in Microsoft 365 Copilot
+For message extension based declarative agent, the [`samplePrompts`](/microsoft-365/extensibility/schema/root-compose-extensions-commands-sample-prompts) property provides guidance to users on utilizing the agents in Microsoft 365 Copilot
 
 :::image type="content" source="../../../../assets/images/Copilot/bot-based-sample-prompts.png" alt-text="Screenshot shows the sample prompts displayed when the message extension agent is enabled in Microsoft 365 Copilot.":::
 

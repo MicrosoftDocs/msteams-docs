@@ -1,0 +1,634 @@
+items:
+- name: App manifest for Microsoft 365
+  href: ../../index.md
+- name: App manifest root
+  href: ../../root.md
+  displayName: root
+- name: Localization schema
+  href: ../../loc-schema/root.md
+- name: actions
+  items:
+  - name: Overview
+    href: ../../element-actions.md
+    displayName: elementActions
+  - name: handlers
+    items:
+    - name: Overview
+      href: ../../element-actions-handlers.md
+      displayName: handlers
+    - name: botInfo
+      href: ../../element-actions-handlers-bot-info.md
+      displayName: botInfo
+    - name: dialogInfo
+      items:
+      - name: Overview
+        href: ../../element-actions-handlers-dialog-info.md
+        displayName: dialogInfo
+      - name: parameters
+        href: ../../element-actions-handlers-dialog-info-parameters.md
+        displayName: parameters
+    - name: pageInfo
+      href: ../../element-actions-handlers-page-info.md
+      displayName: pageInfo
+    - name: supportedObjects
+      items:
+      - name: Overview
+        href: ../../element-actions-handlers-supported-objects.md
+        displayName: supportedObjects
+      - name: file
+        href: ../../element-actions-handlers-supported-objects-file.md
+        displayName: file
+  - name: icons
+    href: ../../element-actions-icons.md
+    displayName: icons
+- name: activities
+  items:
+  - name: Overview
+    href: ../../root-activities.md
+    displayName: activities
+  - name: activityIcons
+    href: ../../root-activities-activity-icons.md
+    displayName: activityIcons
+  - name: activityTypes
+    href: ../../root-activities-activity-types.md
+    displayName: activityTypes
+- name: authorization
+  items:
+  - name: Overview
+    href: ../../root-authorization.md
+    displayName: authorization
+  - name: permissions
+    items:
+    - name: Overview
+      href: ../../root-authorization-permissions.md
+      displayName: permissions
+    - name: resourceSpecific
+      href: ../../root-authorization-permissions-resource-specific.md
+      displayName: resourceSpecific
+- name: backgroundLoadConfiguration
+  items:
+  - name: Overview
+    href: ../../root-background-load-configuration.md
+    displayName: backgroundLoadConfiguration
+  - name: tabConfiguration
+    href: ../../root-background-load-configuration-tab-configuration.md
+    displayName: tabConfiguration
+- name: bots
+  items:
+  - name: Overview
+    href: ../../root-bots.md
+    displayName: bots
+  - name: commandLists
+    items:
+    - name: Overview
+      href: ../../root-bots-command-lists.md
+      displayName: commandLists
+    - name: commands
+      href: ../../root-bots-command-lists-commands.md
+      displayName: commands
+  - name: configuration
+    items:
+    - name: Overview
+      href: ../../root-bots-configuration.md
+      displayName: configuration
+    - name: groupChat
+      items:
+      - name: Overview
+        href: ../../root-bots-configuration-group-chat.md
+        displayName: groupChat
+      - name: taskInfo
+        href: ../../task-info.md
+        displayName: taskInfo
+    - name: team
+      items:
+      - name: Overview
+        href: ../../root-bots-configuration-team.md
+        displayName: team
+      - name: taskInfo
+        href: ../../task-info.md
+        displayName: taskInfo
+  - name: registrationInfo
+    href: ../../root-bots-registration-info.md
+    displayName: registrationInfo
+  - name: requirementSet
+    items:
+    - name: Overview
+      href: ../../element-requirement-set.md
+      displayName: elementRequirementSet
+    - name: hostMustSupportFunctionalities
+      href: ../../host-functionality.md
+      displayName: hostFunctionality
+- name: composeExtensions
+  items:
+  - name: Overview
+    href: ../../root-compose-extensions.md
+    displayName: composeExtensions
+  - name: authorization
+    items:
+    - name: Overview
+      href: ../../root-compose-extensions-authorization.md
+      displayName: authorization
+    - name: apiSecretServiceAuthConfiguration
+      href: ../../root-compose-extensions-authorization-api-secret-service-auth-configuration.md
+      displayName: apiSecretServiceAuthConfiguration
+    - name: microsoftEntraConfiguration
+      href: ../../root-compose-extensions-authorization-microsoft-entra-configuration.md
+      displayName: microsoftEntraConfiguration
+    - name: oAuthConfiguration
+      href: ../../root-compose-extensions-authorization-o-auth-configuration.md
+      displayName: oAuthConfiguration
+  - name: commands
+    items:
+    - name: Overview
+      href: ../../root-compose-extensions-commands.md
+      displayName: commands
+    - name: parameters
+      items:
+      - name: Overview
+        href: ../../root-compose-extensions-commands-parameters.md
+        displayName: parameters
+      - name: choices
+        href: ../../root-compose-extensions-commands-parameters-choices.md
+        displayName: choices
+    - name: samplePrompts
+      href: ../../root-compose-extensions-commands-sample-prompts.md
+      displayName: samplePrompts
+    - name: taskInfo
+      href: ../../task-info.md
+      displayName: taskInfo
+  - name: messageHandlers
+    items:
+    - name: Overview
+      href: ../../root-compose-extensions-message-handlers.md
+      displayName: messageHandlers
+    - name: value
+      href: ../../root-compose-extensions-message-handlers-value.md
+      displayName: value
+  - name: requirementSet
+    items:
+    - name: Overview
+      href: ../../element-requirement-set.md
+      displayName: elementRequirementSet
+    - name: hostMustSupportFunctionalities
+      href: ../../host-functionality.md
+      displayName: hostFunctionality
+- name: configurableTabs
+  href: ../../root-configurable-tabs.md
+  displayName: configurableTabs
+- name: connectors
+  href: ../../root-connectors.md
+  displayName: connectors
+- name: copilotAgents
+  items:
+  - name: Overview
+    href: ../../root-copilot-agents.md
+    displayName: copilotAgents
+  - name: customEngineAgents
+    items:
+    - name: Overview
+      href: ../../root-copilot-agents-custom-engine-agents.md
+      displayName: customEngineAgents
+    - name: disclaimer
+      href: ../../root-copilot-agents-custom-engine-agents-disclaimer.md
+      displayName: disclaimer
+  - name: declarativeAgents
+    href: ../../declarative-agent-ref.md
+    displayName: declarativeAgentRef
+- name: dashboardCards
+  items:
+  - name: Overview
+    href: ../../dashboard-card.md
+    displayName: dashboardCard
+  - name: contentSource
+    items:
+    - name: Overview
+      href: ../../dashboard-card-content-source.md
+      displayName: dashboardCardContentSource
+    - name: botConfiguration
+      href: ../../dashboard-card-content-source-bot-configuration.md
+      displayName: botConfiguration
+  - name: icon
+    href: ../../dashboard-card-icon.md
+    displayName: dashboardCardIcon
+- name: defaultGroupCapability
+  href: ../../root-default-group-capability.md
+  displayName: defaultGroupCapability
+- name: description
+  href: ../../root-description.md
+  displayName: description
+- name: developer
+  items:
+  - name: Overview
+    href: ../../root-developer.md
+    displayName: developer
+  - name: contactInfo
+    items:
+    - name: Overview
+      href: ../../root-developer-contact-info.md
+      displayName: contactInfo
+    - name: defaultSupport
+      href: ../../root-developer-contact-info-default-support.md
+      displayName: defaultSupport
+- name: elementRelationshipSet
+  items:
+  - name: Overview
+    href: ../../root-element-relationship-set.md
+    displayName: elementRelationshipSet
+  - name: oneWayDependencies
+    items:
+    - name: Overview
+      href: ../../one-way-dependency.md
+      displayName: oneWayDependency
+    - name: dependsOn
+      href: ../../element-reference.md
+      displayName: elementReference
+    - name: element
+      href: ../../element-reference.md
+      displayName: elementReference
+- name: extensions
+  items:
+  - name: Overview
+    href: ../../element-extensions.md
+    displayName: elementExtensions
+  - name: alternates
+    items:
+    - name: Overview
+      href: ../../extension-alternate-versions-array.md
+      displayName: extensionAlternateVersionsArray
+    - name: alternateIcons
+      items:
+      - name: Overview
+        href: ../../extension-alternate-versions-array-alternate-icons.md
+        displayName: alternateIcons
+      - name: highResolutionIcon
+        href: ../../extension-common-icon.md
+        displayName: extensionCommonIcon
+      - name: icon
+        href: ../../extension-common-icon.md
+        displayName: extensionCommonIcon
+    - name: hide
+      items:
+      - name: Overview
+        href: ../../extension-alternate-versions-array-hide.md
+        displayName: hide
+      - name: customOfficeAddin
+        href: ../../extension-alternate-versions-array-hide-custom-office-addin.md
+        displayName: customOfficeAddin
+      - name: storeOfficeAddin
+        href: ../../extension-alternate-versions-array-hide-store-office-addin.md
+        displayName: storeOfficeAddin
+      - name: windowsExtensions
+        items:
+        - name: Overview
+          href: ../../extension-alternate-versions-array-hide-windows-extensions.md
+          displayName: windowsExtensions
+        - name: automationAddin
+          href: ../../extension-alternate-versions-array-hide-windows-extensions-automation-addin.md
+          displayName: automationAddin
+        - name: comAddin
+          href: ../../extension-alternate-versions-array-hide-windows-extensions-com-addin.md
+          displayName: comAddin
+        - name: xllCustomFunctions
+          href: ../../extension-alternate-versions-array-hide-windows-extensions-xll-custom-functions.md
+          displayName: xllCustomFunctions
+    - name: prefer
+      items:
+      - name: Overview
+        href: ../../extension-alternate-versions-array-prefer.md
+        displayName: prefer
+      - name: comAddin
+        href: ../../extension-alternate-versions-array-prefer-com-addin.md
+        displayName: comAddin
+      - name: xllCustomFunctions
+        href: ../../extension-xll-custom-functions.md
+        displayName: extensionXllCustomFunctions
+    - name: requirements
+      items:
+      - name: Overview
+        href: ../../requirements-extension-element.md
+        displayName: requirementsExtensionElement
+      - name: capabilities
+        href: ../../requirements-extension-element-capabilities.md
+        displayName: capabilities
+  - name: appDeeplinks
+    items:
+    - name: Overview
+      href: ../../extension-app-deeplinks-array.md
+      displayName: extensionAppDeeplinksArray
+    - name: requirements
+      items:
+      - name: Overview
+        href: ../../requirements-extension-element.md
+        displayName: requirementsExtensionElement
+      - name: capabilities
+        href: ../../requirements-extension-element-capabilities.md
+        displayName: capabilities
+  - name: autoRunEvents
+    items:
+    - name: Overview
+      href: ../../extension-auto-run-events-array.md
+      displayName: extensionAutoRunEventsArray
+    - name: events
+      items:
+      - name: Overview
+        href: ../../extension-auto-run-events-array-events.md
+        displayName: events
+      - name: options
+        href: ../../extension-auto-run-events-array-events-options.md
+        displayName: options
+    - name: requirements
+      items:
+      - name: Overview
+        href: ../../requirements-extension-element.md
+        displayName: requirementsExtensionElement
+      - name: capabilities
+        href: ../../requirements-extension-element-capabilities.md
+        displayName: capabilities
+  - name: contentRuntimes
+    items:
+    - name: Overview
+      href: ../../extension-content-runtime-array.md
+      displayName: extensionContentRuntimeArray
+    - name: code
+      href: ../../extension-runtime-code.md
+      displayName: extensionRuntimeCode
+    - name: requirements
+      items:
+      - name: Overview
+        href: ../../requirements-extension-element.md
+        displayName: requirementsExtensionElement
+      - name: capabilities
+        href: ../../requirements-extension-element-capabilities.md
+        displayName: capabilities
+  - name: contextMenus
+    items:
+    - name: Overview
+      href: ../../extension-context-menu-array.md
+      displayName: extensionContextMenuArray
+    - name: menus
+      items:
+      - name: Overview
+        href: ../../extension-menu-item.md
+        displayName: extensionMenuItem
+      - name: controls
+        items:
+        - name: Overview
+          href: ../../extension-common-custom-group-controls-item.md
+          displayName: extensionCommonCustomGroupControlsItem
+        - name: icons
+          href: ../../extension-common-icon.md
+          displayName: extensionCommonIcon
+        - name: items
+          items:
+          - name: Overview
+            href: ../../extension-common-custom-control-menu-item.md
+            displayName: extensionCommonCustomControlMenuItem
+          - name: icons
+            href: ../../extension-common-icon.md
+            displayName: extensionCommonIcon
+          - name: supertip
+            href: ../../extension-common-super-tool-tip.md
+            displayName: extensionCommonSuperToolTip
+        - name: supertip
+          href: ../../extension-common-super-tool-tip.md
+          displayName: extensionCommonSuperToolTip
+    - name: requirements
+      items:
+      - name: Overview
+        href: ../../requirements-extension-element.md
+        displayName: requirementsExtensionElement
+      - name: capabilities
+        href: ../../requirements-extension-element-capabilities.md
+        displayName: capabilities
+  - name: getStartedMessages
+    items:
+    - name: Overview
+      href: ../../extension-get-started-message-array.md
+      displayName: extensionGetStartedMessageArray
+    - name: requirements
+      items:
+      - name: Overview
+        href: ../../requirements-extension-element.md
+        displayName: requirementsExtensionElement
+      - name: capabilities
+        href: ../../requirements-extension-element-capabilities.md
+        displayName: capabilities
+  - name: keyboardShortcuts
+    items:
+    - name: Overview
+      href: ../../extension-keyboard-shortcut.md
+      displayName: extensionKeyboardShortcut
+    - name: requirements
+      items:
+      - name: Overview
+        href: ../../requirements-extension-element.md
+        displayName: requirementsExtensionElement
+      - name: capabilities
+        href: ../../requirements-extension-element-capabilities.md
+        displayName: capabilities
+    - name: shortcuts
+      items:
+      - name: Overview
+        href: ../../extension-shortcut.md
+        displayName: extensionShortcut
+      - name: key
+        href: ../../extension-key-combination.md
+        displayName: extensionKeyCombination
+  - name: requirements
+    items:
+    - name: Overview
+      href: ../../requirements-extension-element.md
+      displayName: requirementsExtensionElement
+    - name: capabilities
+      href: ../../requirements-extension-element-capabilities.md
+      displayName: capabilities
+  - name: ribbons
+    items:
+    - name: Overview
+      href: ../../extension-ribbons-array.md
+      displayName: extensionRibbonsArray
+    - name: fixedControls
+      items:
+      - name: Overview
+        href: ../../extension-ribbons-array-fixed-control-item.md
+        displayName: extensionRibbonsArrayFixedControlItem
+      - name: icons
+        href: ../../extension-common-icon.md
+        displayName: extensionCommonIcon
+      - name: supertip
+        href: ../../extension-common-super-tool-tip.md
+        displayName: extensionCommonSuperToolTip
+    - name: requirements
+      items:
+      - name: Overview
+        href: ../../requirements-extension-element.md
+        displayName: requirementsExtensionElement
+      - name: capabilities
+        href: ../../requirements-extension-element-capabilities.md
+        displayName: capabilities
+    - name: spamPreProcessingDialog
+      items:
+      - name: Overview
+        href: ../../extension-ribbons-spam-pre-processing-dialog.md
+        displayName: extensionRibbonsSpamPreProcessingDialog
+      - name: spamMoreInfo
+        href: ../../extension-ribbons-spam-pre-processing-dialog-spam-more-info.md
+        displayName: spamMoreInfo
+      - name: spamReportingOptions
+        href: ../../extension-ribbons-spam-pre-processing-dialog-spam-reporting-options.md
+        displayName: spamReportingOptions
+    - name: tabs
+      items:
+      - name: Overview
+        href: ../../extension-ribbons-array-tabs-item.md
+        displayName: extensionRibbonsArrayTabsItem
+      - name: customMobileRibbonGroups
+        items:
+        - name: Overview
+          href: ../../extension-ribbons-custom-mobile-group-item.md
+          displayName: extensionRibbonsCustomMobileGroupItem
+        - name: controls
+          items:
+          - name: Overview
+            href: ../../extension-ribbons-custom-mobile-control-button-item.md
+            displayName: extensionRibbonsCustomMobileControlButtonItem
+          - name: icons
+            href: ../../extension-custom-mobile-icon.md
+            displayName: extensionCustomMobileIcon
+      - name: groups
+        items:
+        - name: Overview
+          href: ../../extension-ribbons-custom-tab-groups-item.md
+          displayName: extensionRibbonsCustomTabGroupsItem
+        - name: controls
+          items:
+          - name: Overview
+            href: ../../extension-common-custom-group-controls-item.md
+            displayName: extensionCommonCustomGroupControlsItem
+          - name: icons
+            href: ../../extension-common-icon.md
+            displayName: extensionCommonIcon
+          - name: items
+            items:
+            - name: Overview
+              href: ../../extension-common-custom-control-menu-item.md
+              displayName: extensionCommonCustomControlMenuItem
+            - name: icons
+              href: ../../extension-common-icon.md
+              displayName: extensionCommonIcon
+            - name: supertip
+              href: ../../extension-common-super-tool-tip.md
+              displayName: extensionCommonSuperToolTip
+          - name: supertip
+            href: ../../extension-common-super-tool-tip.md
+            displayName: extensionCommonSuperToolTip
+        - name: icons
+          href: ../../extension-common-icon.md
+          displayName: extensionCommonIcon
+      - name: position
+        href: ../../extension-ribbons-array-tabs-item-position.md
+        displayName: position
+  - name: runtimes
+    items:
+    - name: Overview
+      href: ../../extension-runtimes-array.md
+      displayName: extensionRuntimesArray
+    - name: actions
+      href: ../../extension-runtimes-actions-item.md
+      displayName: extensionRuntimesActionsItem
+    - name: code
+      href: ../../extension-runtime-code.md
+      displayName: extensionRuntimeCode
+    - name: customFunctions
+      items:
+      - name: Overview
+        href: ../../extension-custom-functions.md
+        displayName: extensionCustomFunctions
+      - name: functions
+        items:
+        - name: Overview
+          href: ../../extension-function.md
+          displayName: extensionFunction
+        - name: parameters
+          href: ../../extension-function-parameter.md
+          displayName: extensionFunctionParameter
+        - name: result
+          href: ../../extension-result.md
+          displayName: extensionResult
+      - name: namespace
+        href: ../../extension-custom-functions-namespace.md
+        displayName: extensionCustomFunctionsNamespace
+    - name: requirements
+      items:
+      - name: Overview
+        href: ../../requirements-extension-element.md
+        displayName: requirementsExtensionElement
+      - name: capabilities
+        href: ../../requirements-extension-element-capabilities.md
+        displayName: capabilities
+- name: graphConnector
+  href: ../../root-graph-connector.md
+  displayName: graphConnector
+- name: icons
+  href: ../../root-icons.md
+  displayName: icons
+- name: intuneInfo
+  href: ../../root-intune-info.md
+  displayName: intuneInfo
+- name: localizationInfo
+  items:
+  - name: Overview
+    href: ../../root-localization-info.md
+    displayName: localizationInfo
+  - name: additionalLanguages
+    href: ../../root-localization-info-additional-languages.md
+    displayName: additionalLanguages
+- name: meetingExtensionDefinition
+  items:
+  - name: Overview
+    href: ../../root-meeting-extension-definition.md
+    displayName: meetingExtensionDefinition
+  - name: scenes
+    href: ../../root-meeting-extension-definition-scenes.md
+    displayName: scenes
+  - name: videoFilters
+    href: ../../root-meeting-extension-definition-video-filters.md
+    displayName: videoFilters
+- name: name
+  href: ../../root-name.md
+  displayName: name
+- name: scopeConstraints
+  items:
+  - name: Overview
+    href: ../../root-scope-constraints.md
+    displayName: scopeConstraints
+  - name: groupChats
+    href: ../../root-scope-constraints-group-chats.md
+    displayName: groupChats
+  - name: teams
+    href: ../../root-scope-constraints-teams.md
+    displayName: teams
+- name: staticTabs
+  items:
+  - name: Overview
+    href: ../../root-static-tabs.md
+    displayName: staticTabs
+  - name: requirementSet
+    items:
+    - name: Overview
+      href: ../../element-requirement-set.md
+      displayName: elementRequirementSet
+    - name: hostMustSupportFunctionalities
+      href: ../../host-functionality.md
+      displayName: hostFunctionality
+- name: subscriptionOffer
+  href: ../../root-subscription-offer.md
+  displayName: subscriptionOffer
+- name: webApplicationInfo
+  items:
+  - name: Overview
+    href: ../../root-web-application-info.md
+    displayName: webApplicationInfo
+  - name: nestedAppAuthInfo
+    href: ../../root-web-application-info-nested-app-auth-info.md
+    displayName: nestedAppAuthInfo

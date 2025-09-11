@@ -58,7 +58,7 @@ For bots registered in the Microsoft Bot Framework, update the bot's messaging e
 
 ## Cloud-hosted
 
-You can use any externally addressable service to host your development and production code and their HTTPS endpoints. There's no expectation that your capabilities reside on the same service. We require all domains to be accessed from your Teams apps listed in the [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) object in the `manifest.json` file.
+You can use any externally addressable service to host your development and production code and their HTTPS endpoints. There's no expectation that your capabilities reside on the same service. We require all domains to be accessed from your Teams apps listed in the [`validDomains`](/microsoft-365/extensibility/schema/root#validdomains) object in the `manifest.json` file.
 
 > [!NOTE]
 > To ensure a secure environment, be explicit about the exact domain and subdomains you reference and those domains must be in your control. For example, `*.azurewebsites.net` is not recommended, however `contoso.azurewebsites.net` is recommended.

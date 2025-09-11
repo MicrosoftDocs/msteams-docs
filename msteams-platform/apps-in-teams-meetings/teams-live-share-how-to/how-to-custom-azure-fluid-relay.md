@@ -369,4 +369,4 @@ Many Live Share APIs depend on a global timestamp API, which allows `LiveDataObj
 * [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)
 * [Live Share FAQ](../teams-live-share-faq.md)
 * [Use Fluid with Teams](../../tabs/how-to/using-fluid-msteam.md)
-* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
+* [App manifest schema for Teams](/microsoft-365/extensibility/schema)

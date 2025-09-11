@@ -72,4 +72,4 @@ For a detailed implementation for tab authentication using Microsoft Entra ID, s
 
 * [Authenticate a user in a Teams tab](~/tabs/how-to/authentication/auth-tab-AAD.md)
 * [Silent authentication](~/tabs/how-to/authentication/auth-silent-AAD.md)
-* [validDomains](../../../resources/schema/manifest-schema.md#validdomains)
+* [validDomains](/microsoft-365/extensibility/schema/root#validdomains)

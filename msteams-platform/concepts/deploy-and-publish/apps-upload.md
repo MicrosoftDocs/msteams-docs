@@ -66,7 +66,7 @@ If your app fails to upload or encounters any issues to upload, check the follow
 
 1. Ensure that you follow all the instructions for [creating your app package](../../concepts/build-and-test/apps-package.md).
 1. Upload your app package and then [validate it](https://dev.teams.microsoft.com/tools/store-validation).
-1. Ensure your app manifest matches with the latest [schema](../../resources/schema/manifest-schema.md).
+1. Ensure your app manifest matches with the latest [schema](/microsoft-365/extensibility/schema).
 
 ## Manage your apps
 

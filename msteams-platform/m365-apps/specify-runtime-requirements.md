@@ -98,9 +98,9 @@ Use the `mutualDependencies` array to group app capabilities that must load toge
 
 ## Specify runtime requirements for specific app capabilities (`requirementSet`)
 
-Within individual app capability definitions, you can specify specific TeamsJS runtime requirements using a [`requirementSet`](../resources/schema/manifest-schema-dev-preview.md#statictabsrequirementset). This ensures that the app capability only loads in Microsoft 365 hosts with support for the critical TeamsJS capabilities.
+Within individual app capability definitions, you can specify specific TeamsJS runtime requirements using a [`requirementSet`](/microsoft-365/extensibility/schema/element-requirement-set?view=m365-app-prev). This ensures that the app capability only loads in Microsoft 365 hosts with support for the critical TeamsJS capabilities.
 
-The following TeamsJS capabilities can be specified as runtime requirements for [`staticTabs`](../resources/schema/manifest-schema-dev-preview.md#statictabsrequirementset), [`composeExtensions`](../resources/schema/manifest-schema-dev-preview.md#composeextensionsrequirementset), and [`bots`](../resources/schema/manifest-schema-dev-preview.md#botsrequirementset):
+The following TeamsJS capabilities can be specified as runtime requirements for [`staticTabs`](/microsoft-365/extensibility/schema/root-static-tabs#requirementset), [`composeExtensions`](/microsoft-365/extensibility/schema/root-compose-extensions#requirementset), and [`bots`](/microsoft-365/extensibility/schema/root-bots#requirementset):
 
 - HTML-based dialogs ([`dialog.url`](/javascript/api/@microsoft/teams-js/dialog.url))
 - HTML-based dialogs for Bot Framework ([`dialog.url.bot`](/javascript/api/@microsoft/teams-js/dialog.url.bot))
@@ -139,7 +139,7 @@ The following JSON snippet shows a static tab that requires its host to support 
 
 ## See also
 
-- [Developer preview app manifest schema](../resources/schema/manifest-schema-dev-preview.md)
+- [Developer preview app manifest schema](/microsoft-365/extensibility/schema/?view=m365-app-prev)
 - [Extend Teams apps across Microsoft 365](overview.md)
 - [Build dialogs](/microsoftteams/platform/task-modules-and-cards/what-are-task-modules)
 - [Use TeamsJS to differentiate your app experience](../tabs/how-to/using-teams-client-library.md#differentiate-your-app-experience)

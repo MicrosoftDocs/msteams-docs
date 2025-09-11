@@ -409,7 +409,7 @@ Here are the best practices you can adapt when defining the parameters:
 > [!NOTE]
 > Search through dialog (referred as task module in TeamsJS v1.x) isn't supported in Microsoft 365 Copilot.
 
-For Microsoft 365 Copilot, a search-based message extension must support more than three unique compound utterances to perform deep retrieval of accurate information. To enable compound utterances, you must expand the scope of search to handle three or more parameters by updating the [app manifest (previously called Teams app manifest)](../resources/schema/manifest-schema.md#composeextensionscommands) and ensure the following:
+For Microsoft 365 Copilot, a search-based message extension must support more than three unique compound utterances to perform deep retrieval of accurate information. To enable compound utterances, you must expand the scope of search to handle three or more parameters by updating the [app manifest (previously called Teams app manifest)]/microsoft-365/extensibility/schema/#composeextensionscommands) and ensure the following:
 
 * Update your web service to support search based on multiple parameters. For more information on how to respond to user requests, see [respond to search command](how-to/search-commands/respond-to-search.md).
 * Microsoft 365 Copilot might pass an empty string or null value for parameters, which aren't part of user utterance. Update your web service to handle the parameters.
@@ -513,7 +513,7 @@ The search parameters must have good descriptions with acceptable parameters, en
 
 [*Must fix*]
 
-The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionscommands) property guides users on how to use the various agents within Microsoft 365 Copilot. Microsoft 365 Copilot uses the sample prompts to display the prompts for the user. The prompts must be adaptable to different locales and clear across different commands. Sample prompts are available for First Run Experience (FRE) within Microsoft 365 Copilot when a user first installs or enables an agent.
+The [`samplePrompts`](/microsoft-365/extensibility/schema/root-compose-extensions-commands#sampleprompts) property guides users on how to use the various agents within Microsoft 365 Copilot. Microsoft 365 Copilot uses the sample prompts to display the prompts for the user. The prompts must be adaptable to different locales and clear across different commands. Sample prompts are available for First Run Experience (FRE) within Microsoft 365 Copilot when a user first installs or enables an agent.
 
 :::image type="content" source="../assets/images/Copilot/bot-based-sample-prompts.png" alt-text="Screenshot shows the sample prompts displayed when the message extension agent is enabled in Microsoft 365 Copilot.":::
 
