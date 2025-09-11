@@ -26,9 +26,7 @@ If it doesn't follow the preceding parameters, perform the following steps to en
 1. Add ```"supportsChannelFeatures": "tier1"``` to your app manifest to enable support for shared and private channels.
 2. To verify expected behavior, test your app in standard, private, and shared channels.
 
-If your app uses any of the preceding features:
-
-For more information, see the following articles:
+If your app uses any of the preceding features, see the following articles, for more information:
 
 * [Manage Shared Channel Membership](#manage-shared-channel-membership)
 * [Apps and permissions in shared channels](#apps-and-permissions-in-shared-channels)
@@ -381,7 +379,7 @@ If you're developing an app for use in federated group chats with external users
 <details>
 <summary>Why isn’t the app visible when trying to add it to a channel?</summary>
 
-If an app isn’t visible when trying to add it to a channel, there are a few likely causes. The app manifest might be missing required support, such as "supportsChannelFeatures": tier1, which enables compatibility with channel features. Additionally, the installer might not have sufficient permissions, only team members or owners can add apps, and local policies must allow app installation. If the channel is an incoming shared channel (shared into a team), apps can't be added directly from that location. In such cases, switch to the host team to add the app to the channel. You can detect whether a channel is shared-in by checking the channel metadata for the host team ID.
+If an app isn’t visible when trying to add it to a channel, there are a few likely causes. The app manifest might be missing required support, such as ```"supportsChannelFeatures": tier1```, which enables compatibility with channel features. Additionally, the installer might not have sufficient permissions, only team members or owners can add apps, and local policies must allow app installation. If the channel is an incoming shared channel (shared into a team), apps can't be added directly from that location. In such cases, switch to the host team to add the app to the channel. You can detect whether a channel is shared-in by checking the channel metadata for the host team ID.
 
 <br>
 &nbsp;
@@ -389,7 +387,7 @@ If an app isn’t visible when trying to add it to a channel, there are a few li
 <details>
 <summary>Why am I getting a 403 error stating "app not enabled in this channel" when calling channel APIs?</summary>
 
-You’ll see a 403 error saying "app not enabled in this channel" if the app is installed at the team level but hasn’t been added to the channel. To resolve this issue, first confirm that the app is explicitly added to the channel. If your app uses resource-specific consent (RSC), verify that the permissions declared in the manifest match the API calls being made, for example, ChannelMember.Read.Group for reading channel membership. After adding the app, retry the operation. For bots, initiate channel-specific logic when the bot receives the channelMemberAdded event to confirm it has been successfully added to the channel.
+You’ll see a 403 error saying "app not enabled in this channel" if the app is installed at the team level but hasn’t been added to the channel. To resolve this issue, first confirm that the app is explicitly added to the channel. If your app uses resource-specific consent (RSC), verify that the permissions declared in the manifest match the API calls being made, for example, ```ChannelMember.Read.Group``` for reading channel membership. After adding the app, retry the operation. For bots, initiate channel-specific logic when the bot receives the channelMemberAdded event to confirm it has been successfully added to the channel.
 
 <br>
 &nbsp;
@@ -397,7 +395,7 @@ You’ll see a 403 error saying "app not enabled in this channel" if the app is 
 <details>
 <summary>Why does the channel roster appear incomplete, showing only owners or missing users?</summary>
 
-If the channel roster appears incomplete showing only owners or missing users, it might be due to using the team members API instead of the correct channel-specific API. To resolve this issue, use the /channels/{id}/allMembers API to retrieve the full channel roster. If the response still shows only owners, the app likely isn't added to the channel. Prompt the user to add the app to the channel, then retry the request to fetch the updated roster.
+If the channel roster appears incomplete showing only owners or missing users, it might be due to using the team members API instead of the correct channel-specific API. To resolve this issue, use the ```/channels/{id}/allMembers``` API to retrieve the full channel roster. If the response still shows only owners, the app likely isn't added to the channel. Prompt the user to add the app to the channel, then retry the request to fetch the updated roster.
 
 <br>
 &nbsp;
@@ -413,7 +411,7 @@ This failure can happen if the app is using the team’s main SharePoint site in
 <details>
 <summary>Why are external users experiencing authentication issues in tabs or task modules?</summary>
 
-Authentication issues in tabs or task modules for external users often occur when the app requests a token for the host tenant instead of the user’s home tenant. To resolve this authentication issue, check whether the user is external by comparing context.user.tenant.id with the host or owner tenant ID. If they're different, the user is external, and your app should request the token for the user’s home tenant. You can do this by passing the correct tenant ID (tid) when calling getAuthToken.
+Authentication issues in tabs or task modules for external users often occur when the app requests a token for the host tenant instead of the user’s home tenant. To resolve this authentication issue, check whether the user is external by comparing ```context.user.tenant.id``` with the host or owner tenant ID. If they're different, the user is external, and your app should request the token for the user’s home tenant. You can do this by passing the correct tenant ID (tid) when calling getAuthToken.
 
 <br>
 &nbsp;
@@ -429,7 +427,7 @@ This issue might occur if the app is expecting a centralized list of installed a
 <details>
 <summary>Why is my app failing to create message change notifications in shared or private channels?</summary>
 
-Message change notifications might fail in shared or private channels because subscriptions to /channels/{id}/messages are blocked when using resource-specific consent (RSC) in these types of channels. If your app encounters a 403 error when attempting to create a subscription, this behavior is expected. To resolve this issue, use on-demand message reads after the app is successfully added to the channel.
+Message change notifications might fail in shared or private channels because subscriptions to ```/channels/{id}/messages``` are blocked when using resource-specific consent (RSC) in these types of channels. If your app encounters a 403 error when attempting to create a subscription, this behavior is expected. To resolve this issue, use on-demand message reads after the app is successfully added to the channel.
 
 <br>
 &nbsp;
@@ -437,7 +435,7 @@ Message change notifications might fail in shared or private channels because su
 <details>
 <summary>Why do file links still fail for external users even after the app is added to the channel?</summary>
 
-This happens when the tenant’s sharing policy blocks the link type, or when the user doesn’t have access to the item—even if they’re a member of the channel. Another common cause is that the app might generate links pointing to the team drive instead of the channel’s dedicated drive. To resolve this issue, reissue the links using the "people with existing access" option or use the /invite API to grant access to specific users. Also, make sure the links reference the channel drive, which can be identified using the filesFolder property, rather than the team site.
+This happens when the tenant’s sharing policy blocks the link type, or when the user doesn’t have access to the item, even if they’re a member of the channel. Another common cause is that the app might generate links pointing to the team drive instead of the channel’s dedicated drive. To resolve this issue, reissue the links using the "people with existing access" option or use the /invite API to grant access to specific users. Also, make sure the links reference the channel drive, which can be identified using the filesFolder property, rather than the team site.
 
 ## See also
 
