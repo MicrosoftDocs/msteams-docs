@@ -92,6 +92,6 @@ Your app can directly fetch AI-generated meeting summaries, including conversati
 
 * [Apps for Teams meetings and calls](../../apps-in-teams-meetings/teams-apps-in-meetings.md)
 * [Meeting app APIs](../../apps-in-teams-meetings/meeting-apps-apis.md)
-* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
+* [App manifest schema for Teams](/microsoft-365/extensibility/schema)
 * [Microsoft Graph API to get information about online meeting](/graph/api/resources/onlinemeeting)
 * [Considerations when choosing an API](/graph/choose-online-meeting-api)

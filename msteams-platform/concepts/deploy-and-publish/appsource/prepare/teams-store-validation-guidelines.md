@@ -498,9 +498,9 @@ App packages must be correctly formatted and include all required information an
 
 The app manifest defines your app's configuration.
 
-* Your app manifest must conform to a publicly released app manifest schema. For more information, see [app manifest reference](~/resources/schema/manifest-schema.md). Don't submit your app using a preview version of the app manifest.
+* Your app manifest must conform to a publicly released app manifest schema. For more information, see [app manifest reference](/microsoft-365/extensibility/schema). Don't submit your app using a preview version of the app manifest.
 * If your app includes a bot or message extension, details in the app manifest must be consistent with Bot Framework metadata including bot name, logo, privacy policy link, and terms of service link.
-* If your app uses Microsoft Entra ID for authentication, include the Microsoft Entra Application (client) ID in the app manifest. For more information, see the [app manifest reference](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* If your app uses Microsoft Entra ID for authentication, include the Microsoft Entra Application (client) ID in the app manifest. For more information, see the [app manifest reference](/microsoft-365/extensibility/schema/root-web-application-info-nested-app-auth-info).
 
 ### Uses of latest app manifest schema
 

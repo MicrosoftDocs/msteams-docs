@@ -307,7 +307,7 @@ To configure app manifest:
     > [!NOTE]
     >
     > * The app manifest folder should be at the root of your app folder. For more information, see [create a Microsoft Teams app package](../concepts/build-and-test/apps-package.md).
-    > * For more information on learning how to create a manifest.json, see [the app manifest schema](../resources/schema/manifest-schema.md).
+    > * For more information on learning how to create a manifest.json, see [the app manifest schema](/microsoft-365/extensibility/schema).
 
 1. Open the `manifest.json` file.
 1. Add the following code snippet into the `webApplicationInfo` section of your app manifest file:
