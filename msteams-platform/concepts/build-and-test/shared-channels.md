@@ -10,18 +10,18 @@ ms.date: 04/09/2025
 
 # Microsoft Teams connect shared and private channels
 
-Shared and private channels in Microsoft Teams enable flexible collaboration within and across teams or organizations. Shared channels enable users to work across teams and organizations, allowing seamless communication with internal members or external partners. Private channels provide a secure space for select team members to collaborate on sensitive or confidential content, ensuring privacy and focused discussions within the team.
+Shared and private channels in Microsoft Teams enable flexible collaboration within and across teams or organizations. Shared channels allow seamless communication with internal or external partners. Private channels provide a secure space for selected team members to collaborate on sensitive or confidential content, ensuring privacy and focused discussions within the team.
 
-## Most apps easily support shared and private channels in Microsoft Teams
+## Enable apps support for shared and private channels
 
-For many apps, enabling support is simple. If your app doesn’t depend on any of the following:
-
+You can enable app support for shared and private channels based on whether your app is:
+  
 * Using channel or team membership to determine message delivery, task assignment, or permissions
 * Accessing or managing files stored in Teams or SharePoint
 * Combining or sharing data across multiple channels or teams
-* Customizing the experience based on whether users are internal, guests, or external participants
+* Customizing the experience based on whether users are internal, guests, or external participants 
 
-In that case, complete the following steps:
+If it doesn't follow the preceding parameters, perform the following steps to enable app support in shared and private channels:
 
 1. Add ```"supportsChannelFeatures": "tier1"``` to your app manifest to enable support for shared and private channels.
 2. Test your app in standard, private, and shared channels to verify expected behavior.
@@ -30,7 +30,7 @@ If your app uses any of the preceding features:
 
 Continue reading for specific updates and best practices to help your app run smoothly across all channel types.
 
-For most apps, only a small update is needed. If your app involves more complex scenarios, this guide provides necessary updates to help you make the right changes without rebuilding theyour entire codebase.
+For most apps, only a small update is needed. If your app involves more complex scenarios, this guide provides necessary updates to help you make the right changes without rebuilding your entire codebase.
 
 > [!NOTE]
 >
@@ -72,6 +72,8 @@ You can collaborate with external members outside of your organization using sha
 
 > [!NOTE]
 > The [activity feed notification API](/graph/teams-send-activityfeednotifications) doesn't support cross-tenant notifications for apps in a shared channel.
+
+## Manage Shared Channel Membership
 
 ### Get shared channel membership
 
