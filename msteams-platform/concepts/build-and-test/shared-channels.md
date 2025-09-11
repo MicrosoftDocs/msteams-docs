@@ -29,7 +29,7 @@ If it doesn't follow the preceding parameters, perform the following steps to en
 If your app uses any of the preceding features, see the following articles, for more information:
 
 * [Manage Shared Channel Membership](#manage-shared-channel-membership)
-* [Apps and permissions in shared channels](#apps-and-permissions-in-shared-channels)
+* [Understand app permissions in shared channels](#understand-app-permissions-in-shared-channels)
 * [Verify if your app is added to a channel](#verify-if-your-app-is-added-to-a-channel)
 
 > [!NOTE]
@@ -294,7 +294,7 @@ When a shared channel is added to another team, the Bot Framework might receive 
 
 ---
 
-## Apps and permissions in shared channels
+## Understand app permissions in shared channels
 
 You can collaborate with external members outside of your organization using shared channels. App permissions in shared channels follow the host team's app roster and host tenant's app policy.
 
@@ -387,7 +387,7 @@ If an app isn’t visible when trying to add it to a channel, there are a few li
 <details>
 <summary>Why am I getting a 403 error stating "app not enabled in this channel" when calling channel APIs?</summary>
 
-You’ll see a 403 error saying "app not enabled in this channel" if the app is installed at the team level but hasn’t been added to the channel. To resolve this issue, first confirm that the app is explicitly added to the channel. If your app uses resource-specific consent (RSC), verify that the permissions declared in the manifest match the API calls being made, for example, ```ChannelMember.Read.Group``` for reading channel membership. After adding the app, retry the operation. For bots, initiate channel-specific logic when the bot receives the channelMemberAdded event to confirm it has been successfully added to the channel.
+You’ll see a 403 error saying "app not enabled in this channel" if the app is installed at the team level but hasn’t been added to the channel. To resolve this issue, first confirm that the app is explicitly added to the channel. If your app uses resource-specific consent (RSC), verify that the permissions declared in the manifest match the API calls being made, for example, ```ChannelMember.Read.Group``` for reading channel membership. After adding the app, retry the operation. For bots, initiate channel-specific logic when the bot receives the ```channelMemberAdded``` event to confirm it has been successfully added to the channel.
 
 <br>
 &nbsp;
@@ -403,7 +403,7 @@ If the channel roster appears incomplete showing only owners or missing users, i
 <details>
 <summary>Why does file access fail for some users even though they're part of the channel?</summary>
 
-This failure can happen if the app is using the team’s main SharePoint site instead of the specific site linked to the channel. Your organization’s sharing policies might block the type of link, or external users might lack the necessary permissions. To resolve this issue, make sure your app uses the channel’s filesFolder property to get the correct driveId and itemId for file operations. When sharing files, use "people with existing access" links or the /invite API to give access to specific users or groups.
+This failure can happen if the app is using the team’s main SharePoint site instead of the specific site linked to the channel. Your organization’s sharing policies might block the type of link, or external users might lack the necessary permissions. To resolve this issue, make sure your app uses the channel’s filesFolder property to get the correct driveId and itemId for file operations. When sharing files, use "people with existing access" links or the invite API to give access to specific users or groups.
 
 <br>
 &nbsp;
@@ -435,7 +435,7 @@ Message change notifications might fail in shared or private channels because su
 <details>
 <summary>Why do file links still fail for external users even after the app is added to the channel?</summary>
 
-This happens when the tenant’s sharing policy blocks the link type, or when the user doesn’t have access to the item, even if they’re a member of the channel. Another common cause is that the app might generate links pointing to the team drive instead of the channel’s dedicated drive. To resolve this issue, reissue the links using the "people with existing access" option or use the /invite API to grant access to specific users. Also, make sure the links reference the channel drive, which can be identified using the filesFolder property, rather than the team site.
+This happens when the tenant’s sharing policy blocks the link type, or when the user doesn’t have access to the item, even if they’re a member of the channel. Another common cause is that the app might generate links pointing to the team drive instead of the channel’s dedicated drive. To resolve this issue, reissue the links using the "people with existing access" option or use the invite API to grant access to specific users. Also, make sure the links reference the channel drive, which can be identified using the filesFolder property, rather than the team site.
 
 ## See also
 
