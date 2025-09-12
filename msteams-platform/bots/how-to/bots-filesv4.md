@@ -10,7 +10,7 @@ ms.owner: angovil
 
 > [!IMPORTANT]
 >
-> * This article is based on the v4 Bot Framework SDK.
+> * This article is based on the v4 Agents SDK.
 > * Bots don't support sending and receiving files in Government Community Cloud High (GCC High), Department of Defense (DoD), and Teams operated by 21Vianet environments.
 
 There are two ways to send files to and receive files from a bot:
