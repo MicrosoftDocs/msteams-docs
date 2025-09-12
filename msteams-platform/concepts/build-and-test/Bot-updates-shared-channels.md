@@ -1,3 +1,12 @@
+---
+title: Enhance collaboration with bots in shared channels
+author: surbhigupta
+description: Learn about Teams Connect shared channels to securely collaborate with internal and external users in a shared space without switching tenants.
+ms.author: surbhigupta
+ms.localizationpriority: high
+ms.topic: conceptual
+ms.date: 09/12/2025
+---
 # Enhance collaboration with bots in Microsoft Teams shared channels
 
 Shared channels in Microsoft Teams enable collaboration across teams and organizations. 
