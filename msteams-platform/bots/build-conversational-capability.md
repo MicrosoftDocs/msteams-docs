@@ -95,9 +95,9 @@ Sending and receiving messages is the core functionality of a bot. It enables a 
 
 In a chat, each message is an `Activity` object of type `messageType: message`. When someone sends a message, Microsoft Teams posts it to your bot. Teams sends a JSON object to your bot's messaging endpoint, and it allows only one endpoint for messaging. Your bot then checks the message to figure out its type and responds accordingly.
 
-Basic conversations are managed through the Bot Framework connector, which is a single REST API. This API enables your bot talk to Teams and other channels. The Bot Builder SDK offers the following features:
+Basic conversations are managed through the Agents SDK connector, which is a single REST API. This API enables your bot talk to Teams and other channels. The Bot Builder SDK offers the following features:
 
-- Easy access to the Bot Framework connector.
+- Easy access to the Agents SDK connector.
 - Tools to manage conversation flow and state.
 - Simple ways to add cognitive services, like natural language processing (NLP).
 
@@ -765,7 +765,7 @@ async onTeamsMessageSoftDelete(context) {
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-Your bot can dynamically update messages after sending them instead of having them as static snapshots of data. Messages can also be deleted using the Bot Framework's `DeleteActivity` method.
+Your bot can dynamically update messages after sending them instead of having them as static snapshots of data. Messages can also be deleted using the `DeleteActivity` method in Agents SDK.
 
 > [!NOTE]
 > A bot can't update or delete messages sent by the user in Microsoft Teams.
@@ -924,11 +924,11 @@ PUT /v3/conversations/{conversationId}/activities/{activityId}
 
 ---
 
-Now that you have updated cards, you can delete messages using the Bot Framework.
+Now that you have updated cards, you can delete messages using the Agents SDK.
 
 #### Delete messages
 
-In the Bot Framework, every message has its unique activity identifier. Messages can be deleted using the Bot Framework's `DeleteActivity` method.
+In the Agents SDK, every message has its unique activity identifier. Messages can be deleted using the `DeleteActivity` method Agents SDK.
 
 # [C#](#tab/csharp1)
 
