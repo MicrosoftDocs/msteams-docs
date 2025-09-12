@@ -28,7 +28,7 @@ If it doesn't follow the preceding parameters, perform the following steps to en
 
 If your app uses any of the preceding features, see the following articles, for more information:
 
-* [Manage Shared Channel Membership](#manage-shared-channel-membership)
+* [Manage Shared and Private Channel Membership](#manage-shared-channel-membership)
 * [Understand app permissions in shared channels](#understand-app-permissions-in-shared-channels)
 * [Verify if your app is added to a channel](#verify-if-your-app-is-added-to-a-channel)
 
@@ -68,7 +68,7 @@ For more information to enable your tab, see:
 * [Get context for your tab for private channels](../../tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels)
 * [Get context in shared channels](../../tabs/how-to/access-teams-context.md#get-context-in-shared-channels)
 
-## Manage Shared Channel Membership
+## Manage Shared and Private Channel Membership
 
 ### Get shared channel membership
 
