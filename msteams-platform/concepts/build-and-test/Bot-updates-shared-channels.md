@@ -24,12 +24,11 @@ To receive `conversationUpdate` event notifications when indirect members are ad
 
 Add the `supportedChannelTypes` property to your app manifest to declare support for shared channels:
 
-    ```json
+```JSON
     "supportedChannelTypes": [
-    "sharedChannels"
+        "sharedChannels",
     ]
-    ```
-
+```
 2. RSC Permission 
 
 Your app must request the following RSC permission to access channel membership information:
