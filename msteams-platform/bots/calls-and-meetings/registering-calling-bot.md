@@ -32,7 +32,7 @@ The next section enables you to create a new bot or add calling capabilities to 
 
 To create a new bot for Teams:
 
-1. Use this link to create a new bot, `https://dev.botframework.com/bots/new`. Alternately, if you select the **Create a bot** button in the Bot Framework portal, you create your bot in Microsoft Azure, for which you must have an Azure account.
+1. Use this link to create a new bot, `https://dev.botframework.com/bots/new`. Alternately, if you select the **Create a bot** button in the Agents SDK portal, you create your bot in Microsoft Azure, for which you must have an Azure account.
     > [!NOTE]
     > Bot display names can't include special characters.
 1. Add the Teams channel.
