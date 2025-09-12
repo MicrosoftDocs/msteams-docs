@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 11/16/2023
 ---
 
-# Microsoft 365 Agents Playground 
+# Microsoft 365 Agents Playground
 
 > [!NOTE]
 >
@@ -130,7 +130,7 @@ Agents Playground offers a faster debug experience for applications when compare
    1. Run the following command to install Agents Playground CLI from `npm`:
 
       ```cmd
-      npm install -g @microsoft/microsoft-365-agents-playground
+      npm i @microsoft/m365agentsplayground
       ```
 
         :::image type="content" source="../assets/images/toolkit-v2/debug/npm-teams-app-test-tool.png" alt-text="Screenshot shows install agents playground cli.":::
@@ -636,7 +636,7 @@ No. We always recommend users to test their applications in the Teams client bef
 
 ## Step-by-step guide
 
-Follow the [step-by-step guide](../sbs-teams-app-test-tool.yml) to debug an AI chat bot using Agents Playground.
+Follow the [step-by-step guide](teams-app-test-tool-tutorial.md) to debug an AI chat bot using Agents Playground.
 
 ## See also
 
@@ -645,4 +645,4 @@ Follow the [step-by-step guide](../sbs-teams-app-test-tool.yml) to debug an AI c
 * [Build bots for Teams](../bots/what-are-bots.md)
 * [Teams AI library](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md)
 * [Adaptive Card](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
-* [Agents SDK](https://microsoft.github.io/Agents/)
+* [Agents SDK](https://github.com/microsoft/Agents)
