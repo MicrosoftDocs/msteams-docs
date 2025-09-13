@@ -14,7 +14,7 @@ The Teams AI library simplifies building intelligent Microsoft Teams application
 
 ## Initial setup
 
-Teams AI library is built on top of the Bot Framework SDK. It extends the capabilities of the Bot Framework by importing core functionalities. As part of the initial setup, import the Bot Framework SDK components. The adapter class that handles connectivity with the channels is imported from [Bot Framework SDK](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true#the-bot-adapter).
+Teams AI library is built on top of the Agents SDK. It extends the capabilities of the Agents SDK by importing core functionalities. As part of the initial setup, import the Agents SDK components. The adapter class that handles connectivity with the channels is imported from [Bot Framework SDK](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true#the-bot-adapter).
 
 # [.NET](#tab/dotnet1)
 
