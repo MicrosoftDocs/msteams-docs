@@ -58,7 +58,7 @@ You've now configured the required environment variables for your bot app and SS
 The request to get the token is a POST message request using the existing message schema. It's included in the attachments of an OAuthCard. The schema for the OAuthCard class is defined in [Microsoft Bot Schema 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true). Teams refreshes the token if the `TokenExchangeResource` property is populated on the card. For the Teams channel, only the `Id` property, which uniquely identifies a token request, is honored.
 
 >[!NOTE]
-> The Microsoft Bot Framework `OAuthPrompt` or the `MultiProviderAuthDialog` is supported for SSO authentication.
+> The Microsoft Agents SDK `OAuthPrompt` or the `MultiProviderAuthDialog` is supported for SSO authentication.
 
 To update your app's code:
 
@@ -387,7 +387,7 @@ async loginStep(stepContext) {
 Web APIs on your server must decode the access token and verify if it's sent from the client.
 
 > [!NOTE]
-> If you use Bot Framework, it handles the access token validation. If you don't use Bot Framework, follow the guidelines given in this section.
+> If you use Agents SDK, it handles the access token validation. If you don't use Agents SDK, follow the guidelines given in this section.
 
 For more information about validating access token, see [Validate tokens](/azure/active-directory/develop/access-tokens#validate-tokens).
 
