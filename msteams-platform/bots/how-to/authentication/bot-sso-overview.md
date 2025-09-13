@@ -31,7 +31,7 @@ Now, let's see what happens at the backend during runtime to achieve SSO experie
 
 ## SSO in Teams at runtime
 
-Achieve SSO in a bot or message extension app by obtaining access token for the Teams app user who's signed in. This process involves the bot app client and server, Teams client, Bot Framework, and Microsoft Entra ID. During this interaction, the app user must give consent to obtain the access token in a multitenant environment.
+Achieve SSO in a bot or message extension app by obtaining access token for the Teams app user who's signed in. This process involves the bot app client and server, Teams client, Agents SDK, and Microsoft Entra ID. During this interaction, the app user must give consent to obtain the access token in a multitenant environment.
 
 The following image shows how SSO works when a Teams app user attempts to access the bot or message extension app:
 
@@ -39,12 +39,12 @@ The following image shows how SSO works when a Teams app user attempts to access
 
 | # | Interaction | What's going on |
 | --- | --- | --- |
-| 1 | Teams client → Bot service | The message that app user sends is received by the Teams client, which sends it to the bot. <br> If the app user has previously signed in, a token is saved in the Bot Framework Token Store. The bot calls the Bot Framework Token Service which checks for an existing token for the app user in the Bot Framework Token Store. <br> • If the token exists, the app user is given access. <br> • If no token is available, the bot triggers the auth flow. |
-| 2 | Bot service → Bot Framework Token Service | The bot calls the Bot Framework Token Service to obtain a sign in link for the user. |
-| 3 | Bot Framework Token Service → Teams client | • **For bot app**: Bot Framework Token Service sends the request for sign-in link to the bot service, which forwards it to the Teams client in an OAuth card. <br> • **For message extension app**: Instead of the OAuth card, the Bot Framework Token Service sends an invoke request. |
-| 4 | Teams client → Bot service → Bot Framework Token Service → Microsoft Entra ID | After the Teams client receives the OAuth card for the app user, if SSO is enabled, it sends a token exchange request for the app user back to the bot. The bot calls the Bot Framework Token Service, attempting to exchange the received token from Microsoft Entra ID. |
+| 1 | Teams client → Bot service | The message that app user sends is received by the Teams client, which sends it to the bot. <br> If the app user has previously signed in, a token is saved in the Agents SDK Token Store. The bot calls the Agents SDK Token Service which checks for an existing token for the app user in the Agents SDK Token Store. <br> • If the token exists, the app user is given access. <br> • If no token is available, the bot triggers the auth flow. |
+| 2 | Bot service → Agents SDK Token Service | The bot calls the Agents SDK Token Service to obtain a sign in link for the user. |
+| 3 | Agents SDK Token Service → Teams client | • **For bot app**: Agents SDK Token Service sends the request for sign-in link to the bot service, which forwards it to the Teams client in an OAuth card. <br> • **For message extension app**: Instead of the OAuth card, the Agents SDK Token Service sends an invoke request. |
+| 4 | Teams client → Bot service → Agents SDK Token Service → Microsoft Entra ID | After the Teams client receives the OAuth card for the app user, if SSO is enabled, it sends a token exchange request for the app user back to the bot. The bot calls the Agents SDK Token Service, attempting to exchange the received token from Microsoft Entra ID. |
 | 5 | Microsoft Entra ID → Teams client | For the app user who's using the bot service for the first time, the token exchange can occur only after app user gives their consent. Teams client displays a message to the app user for giving consent. <br> In case the consent fails: <br> 1. The authentication falls back to the sign-in prompt and the app user must sign in to use the bot app. The sign-in button pops up in Teams client, and when app user selects it, the Microsoft Entra sign-in page is rendered. <br> 2. The app user signs in and grants access to the bot service. |
-| 6 | Bot service → Bot Framework Token Service | The token for the app user is stored in the Bot Framework Token Store. |
+| 6 | Bot service → Agents SDK Token Service | The token for the app user is stored in the Agents SDK Token Store. |
 
 For a bot or a message extension app, the bot app sends an OAuth Card to Teams client. This card is used to get access token from Microsoft Entra ID using `tokenExchangeResource`. Following app user's consent, Teams client sends the token received from Microsoft Entra ID to the bot app using `tokenExchange`. The bot app can then parse the token to retrieve the app user's information, such as email address.
 
@@ -53,7 +53,7 @@ For a bot or a message extension app, the bot app sends an OAuth Card to Teams c
 
 ## Enable SSO for a Teams app
 
-The bot and message extension apps use Bot Framework to handle communication with the app users.
+The bot and message extension apps use Agents SDK to handle communication with the app users.
 
 - **Bot app**: Also referred to as a chatbot or conversational bot, it's a service that runs simple and repetitive tasks for app users. Bots can be part of a larger application or be a standalone service.
 
