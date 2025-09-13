@@ -183,7 +183,7 @@ The `Mention` object has two properties that you must set using the following:
 * Include *@username* in the message text.
 * Include the mention object inside the entities collection.
 
-The Bot Framework SDK provides helper methods and objects to create mentions.
+The Agents SDK provides helper methods and objects to create mentions.
 
 The following code shows an example of adding mentions to your messages:
 

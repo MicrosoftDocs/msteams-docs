@@ -161,7 +161,7 @@ Bots in a group or channel respond only when they're @mentioned in a message. Ev
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/Microsoft.Teams.Samples.HelloWorld.Web/Bots/MessageExtension.cs#L19)
 
-You can parse out the **\@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework. It's a method of the `Activity` class named `RemoveRecipientMention`.
+You can parse out the **\@Mention** portion of the message text using a static method provided with the Microsoft Agents SDK. It's a method of the `Activity` class named `RemoveRecipientMention`.
 
 The C# code to parse out the **\@Mention** portion of the message text is as follows:
 
@@ -177,7 +177,7 @@ var modifiedText = turnContext.Activity.RemoveRecipientMention();
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-people-picker-adaptive-card/nodejs/bots/teamsBot.js#L21)
 
-You can parse out the **\@Mention** portion of the message text using a static method provided with the Bot Framework. It's a method of the `TurnContext` class named `removeMentionText`.
+You can parse out the **\@Mention** portion of the message text using a static method provided with the Agents SDK. It's a method of the `TurnContext` class named `removeMentionText`.
 
 The JavaScript code to parse out the **\@Mention** portion of the message text is as follows:
 
@@ -192,7 +192,7 @@ const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnCon
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L34)
 
-You can parse out the **@Mention** portion of the message text using a static method provided with the Bot Framework. It's a method of the `TurnContext` class named `remove_recipient_mention`.
+You can parse out the **@Mention** portion of the message text using a static method provided with the Agents SDK. It's a method of the `TurnContext` class named `remove_recipient_mention`.
 
 The Python code to parse out the **\@Mention** portion of the message text is as follows:
 
