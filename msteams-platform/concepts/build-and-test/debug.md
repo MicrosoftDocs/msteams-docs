@@ -24,7 +24,7 @@ Use multiple manifests and packages to maintain separation between production an
 ## Purely local
 
 > [!NOTE]
-> Running the bot locally does not give you access to Teams app functionality or Teams-specific bot functions like roster calls and other channel-specific functionality. In addition, some capabilities are permitted by the Bot Framework in the Bot Emulator that might not function when running in Teams.
+> Running the bot locally does not give you access to Teams app functionality or Teams-specific bot functions like roster calls and other channel-specific functionality. In addition, some capabilities are permitted by the Agents SDK in the Bot Emulator that might not function when running in Teams.
 
 Your bot can run within the Bot Emulator. This enables you to test some of the core logic of the bot, see a rough layout of messages, and perform simple tests. Following are the steps:
 
@@ -51,10 +51,10 @@ To set up ngrok in preparation to execute your Teams app locally, follow these s
 
 To use ngrok in your project based on the capabilities you're using, you must replace all URL references in your code, configuration, and manifest.json file to use this URL endpoint.
 
-For bots registered in the Microsoft Bot Framework, update the bot's messaging endpoint to use this new ngrok endpoint. For example, `https://2d1224fb.ngrok.io/api/messages`. You can validate that ngrok is working by testing the bot response in the Bot Framework portal's Test chat window. Again, like the emulator, this test doesn't permit you to access Teams-specific functionality.
+For bots registered in the Microsoft Agents SDK, update the bot's messaging endpoint to use this new ngrok endpoint. For example, `https://2d1224fb.ngrok.io/api/messages`. You can validate that ngrok is working by testing the bot response in the Agents SDK portal's Test chat window. Again, like the emulator, this test doesn't permit you to access Teams-specific functionality.
 
 > [!NOTE]
-> To update the messaging endpoint for a bot, you must use the Bot Framework. Select your bot in [your list of bots in Bot Framework](https://dev.botframework.com/bots). You do not need to migrate your bot to Microsoft Azure. You can also update your messaging endpoint through [Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md).
+> To update the messaging endpoint for a bot, you must use the Agents SDK. Select your bot in [your list of bots in Bot Framework](https://dev.botframework.com/bots). You do not need to migrate your bot to Microsoft Azure. You can also update your messaging endpoint through [Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md).
 
 ## Cloud-hosted
 
