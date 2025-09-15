@@ -68,9 +68,9 @@ To receive member event notifications:
 
 These steps ensure the bot is active and authorized to receive notifications for both direct and indirect members.
 
-## Handle member add and remove events
+## Manage member added and removed events
 
-The following Bot Framework SDK examples apply to both direct and indirect member add and remove events. Ensure your bot is set up with all prerequisites to receive transitive member events.
+The following Bot Framework SDK examples apply to both direct and indirect member add and remove events. To receive transitive member events, ensure your bot is set up with all prerequisites .
 
 ### Member added event
 
