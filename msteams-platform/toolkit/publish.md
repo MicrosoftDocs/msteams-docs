@@ -74,6 +74,7 @@ When the app is ready for use in production, you can submit the app using the Te
 The following steps help you to publish the app from Agents Toolkit:
 
 1. You can publish your Teams app in one of the following ways:
+     * Open the **Agents Toolkit** extension in **Visual Studio Code**.
      * Select **Publish** under **LIFECYCLE**.
      * Select **View** > **Command Palette...** > **Teams: Publish to Organization**.
 
