@@ -44,7 +44,7 @@ To reply to an existing message, call [`ReplyToActivity`](/bot-framework/dotnet/
 
 If you choose to use the REST API, you can also call the [`/conversations/{conversationId}/activities/{activityId}`](/bot-framework/rest-api/bot-framework-rest-connector-send-and-receive-messages#send-the-reply) endpoint.
 
-In a channel, replying to a message shows as a reply to the initiating reply chain. The `conversation.id` contains the channel and the top level message ID. Although the Bot Framework takes care of the details, you can cache that `conversation.id` for future replies to that conversation thread as needed.
+In a channel, replying to a message shows as a reply to the initiating reply chain. The `conversation.id` contains the channel and the top level message ID. Although the Agents SDK takes care of the details, you can cache that `conversation.id` for future replies to that conversation thread as needed.
 
 ### Best practice: Welcome messages in Teams
 
