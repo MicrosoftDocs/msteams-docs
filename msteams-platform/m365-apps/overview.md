@@ -84,7 +84,7 @@ For more information, see [app manifest for Office Add-ins](/office/dev/add-ins/
 
 ### Word, Excel, PowerPoint Add-ins (preview)
 
-You can now define and deploy Word, Excel, and PowerPoint Add-ins with the [developer preview](../resources/schema/manifest-schema-dev-preview.md) unified manifest for Microsoft 365.
+You can now define and deploy Word, Excel, and PowerPoint Add-ins with the [developer preview](/microsoft-365/extensibility/schema/?view=m365-app-prev) unified manifest for Microsoft 365.
 
 For more information, see [app manifest for Office Add-ins](/office/dev/add-ins/develop/unified-manifest-overview).
 
