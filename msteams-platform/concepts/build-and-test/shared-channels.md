@@ -1,5 +1,5 @@
 ---
-title: Teams Connects Shared Channels
+title: Teams Connect Shared Channels
 author: surbhigupta
 description: Learn about Teams Connect shared channels to securely collaborate with internal and external users in a shared space without switching tenants.
 ms.author: surbhigupta
@@ -96,13 +96,20 @@ This subscription enables apps to monitor membership changes in shared channels 
 
 ### Validate user access for membership updates
 
-When an app receives a notification for an indirect membership update, it’s important to verify whether the user still has access to the shared channel as the same user might have both direct and indirect membership. For example, if a user is removed from a team that shares a channel, the app should confirm whether the user's access is truly lost. Use the **doesUserHaveAccess** API to determine whether the user still has access to the shared channel.
+When an app receives a 'member removed' notification for an indirect membership update, it’s important to verify whether the user is removed from the shared channel, especially since the same user might have both direct and indirect membership. For example, if a user is removed from a team that shares a channel, the app should confirm whether the user's access to the shared channel is actually revoked. Use the **doesUserHaveAccess** API to determine whether the user is removed from the shared channel.
 
 ```http
 GET /teams/{team-id}/channels/{channel-id}/doesUserHaveAccess(userId='@userid',tenantId='@TenantID',userPrincipalName='@UserPrincipalName')
 ```
 
 See [doesUserHaveAccess API](/graph/api/channel-doesuserhaveaccess?view=graph-rest-beta&tabs=http) to learn more about user accesses and relevant permissions.
+
+When a member receives a 'member added' notification for an indirect membership update,
+See [allMembers API](/graph/api/channel-list-allmembers?view=graph-rest-beta&branch=pr-en-us-27360&tabs=http), to refresh the list of all memebers.
+
+```http
+GET /teams/{team-id}/channels/{channel-id}/allMembers
+```
 
 ### Handle bulk membership changes
 
