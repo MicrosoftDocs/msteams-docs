@@ -1,18 +1,18 @@
 ---
 title: Enhance collaboration with bots in shared channels
 author: surbhigupta
-description: Learn about Teams Connect shared channels to securely collaborate with internal and external users in a shared space without switching tenants.
+description: Learn about updates in indirect membership for bots.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.date: 09/12/2025
 ---
-# Enhance collaboration with bots in Microsoft Teams shared channels
+# Enhance collaboration with bots in shared channels
 
 Shared channels in Microsoft Teams enable collaboration across teams and organizations. 
-Users in these channels can be of two types: 
-- **Direct members**: These are users that are added explicitly to the channel
-- **Indirect members**: These are users who access the channel through a shared team.
+Users in these channels are of two types: 
+- **Direct members**: These users are added explicitly to the channel
+- **Indirect members**: These users access the channel through a shared team.
 
 Bots in shared channels can automate workflows, deliver notifications, and respond to user actions in real time. You can integrate bots into shared channels to streamline collaboration. 
 
@@ -28,7 +28,7 @@ With this enhancement, bots now also receive events for indirect members, who ga
 
 ### Enable member event notifications for shared channels
 
-To receive `conversationUpdate` event notifications when indirect members are added or removed, configure your bot with the following pre-requisites:
+To receive `conversationUpdate` event notifications when indirect members are added or removed, configure your bot with the following prerequisites:
 1. Update the App Manifest
 
 Add the `supportedChannelTypes` property to your app manifest to declare support for shared channels:
