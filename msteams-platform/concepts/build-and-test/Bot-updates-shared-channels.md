@@ -29,7 +29,7 @@ With this enhancement, bots now also receive events for indirect members, who ga
 ### Enable member event notifications for shared channels
 
 To receive `conversationUpdate` event notifications when indirect members are added or removed, configure your bot with the following prerequisites:
-1. Update the App Manifest
+1. Update the App manifest
 
 Add the `supportedChannelTypes` property to your app manifest to declare support for shared channels:
 
@@ -38,7 +38,7 @@ Add the `supportedChannelTypes` property to your app manifest to declare support
         "sharedChannels",
     ]
 ```
-2. RSC Permission 
+2. Resource-Specific Consent (RSC)permission 
 
 Your app must request the following RSC permission to access channel membership information:
 
@@ -118,6 +118,84 @@ public async Task OnMembersRemovedAsync(ITurnContext turnContext, AppState turnS
         cancellationToken).ConfigureAwait(false);
 }
 ```
+
+### Membership Changes 
+
+When a shared channel is added to another team, the Bot Framework might receive a `conversationUpdate` activity through the ```OnConversationUpdateActivityAsync``` method, but only if the bot is installed in the team or channel.
+
+```csharp
+        protected override async Task OnConversationUpdateActivityAsync(
+            ITurnContext<IConversationUpdateActivity> turnContext,
+            CancellationToken cancellationToken)
+        {
+            // Always present on Teams activities
+            var tcd = turnContext.Activity.GetChannelData<TeamsChannelData>();
+            var eventType = tcd?.EventType?.ToLowerInvariant();
+
+            // Read extended shared-channel shape (safe even if fields are absent)
+            var extended = turnContext.Activity.GetChannelData<SharedChannelChannelData>();
+
+            // Also keep a raw JObject for logging / future-proof access
+            var raw = turnContext.Activity.ChannelData as JObject
+                      ?? (turnContext.Activity.ChannelData != null
+                          ? JObject.FromObject(turnContext.Activity.ChannelData)
+                          : new JObject());
+
+            // Helpful baseline log
+            _logger.LogInformation("ConversationUpdate eventType={EventType}, channelId={ChannelId}, teamId={TeamId}",
+                eventType, tcd?.Channel?.Id, tcd?.Team?.Id);
+
+            switch (eventType)
+            {
+                case "channelshared":
+                {
+                    var hostTeam = extended?.Team; // The channel's host team
+                    var sharedWith = extended?.SharedWithTeams ?? new List<TeamInfoEx>();
+
+                    _logger.LogInformation("ChannelShared: hostTeam={HostTeamId}, sharedWithCount={Count}",
+                        hostTeam?.Id, sharedWith.Count);
+
+                    foreach (var team in sharedWith)
+                    {
+                        _logger.LogInformation("SharedWithTeam: id={Id}, name={Name}, aadGroupId={AadGroupId}, tenantId={TenantId}",
+                            team.Id, team.Name, team.AadGroupId, team.TenantId);
+                    }
+
+                    // Optional: surface a quick confirmation in-channel
+                    await turnContext.SendActivityAsync(
+                        MessageFactory.Text($"✅ Channel shared with {sharedWith.Count} team(s)."),
+                        cancellationToken);
+                    break;
+                }
+
+                case "channelunshared":
+                {
+                    var unsharedFrom = extended?.UnsharedFromTeams ?? new List<TeamInfoEx>();
+
+                    _logger.LogInformation("ChannelUnshared: unsharedFromCount={Count}", unsharedFrom.Count);
+
+                    foreach (var team in unsharedFrom)
+                    {
+                        _logger.LogInformation("UnsharedFromTeam: id={Id}, name={Name}, aadGroupId={AadGroupId}, tenantId={TenantId}",
+                            team.Id, team.Name, team.AadGroupId, team.TenantId);
+                    }
+
+                    await turnContext.SendActivityAsync(
+                        MessageFactory.Text($"❎ Channel unshared from {unsharedFrom.Count} team(s)."),
+                        cancellationToken);
+                    break;
+                }
+
+                default:
+                    // No-op; continue normal routing
+                    break;
+            }
+
+            await base.OnConversationUpdateActivityAsync(turnContext, cancellationToken);
+        }
+```
+
+---
 
 ## Code sample
 
