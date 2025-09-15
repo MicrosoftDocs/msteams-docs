@@ -29,16 +29,17 @@ With this enhancement, bots now also receive events for indirect members, who ga
 ### Enable member event notifications for shared channels
 
 To receive `conversationUpdate` event notifications when indirect members are added or removed, configure your bot with the following prerequisites:
+
 1. Update the App manifest
 
-Add the `supportedChannelTypes` property to your app manifest to declare support for shared channels:
+ To declare support for shared channels, add the `supportedChannelTypes` property to your app manifest:
 
 ```JSON
     "supportedChannelTypes": [
         "sharedChannels",
     ]
 ```
-2. Resource-Specific Consent (RSC)permission 
+2. Resource-Specific Consent (RSC) permission 
 
 Your app must request the following RSC permission to access channel membership information:
 
@@ -65,7 +66,7 @@ To receive member event notifications:
 
 2. Manually allow the bot in each shared channel.
 
-This ensures the bot is active and authorized to receive notifications for both direct and indirect members.
+These steps ensure the bot is active and authorized to receive notifications for both direct and indirect members.
 
 ## Handle member add and remove events
 
