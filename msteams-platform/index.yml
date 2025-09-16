@@ -114,7 +114,7 @@ conceptualContent:
           text: Custom engine agent
         - url: /microsoftteams/platform/teams-ai-library/welcome
           itemType: quickstart
-          text: Teams AI library v2 (preview)
+          text: Teams AI library v2
         - url: /microsoftteams/platform/teams-ai-library/welcome
           itemType: concept
           text: Teams AI library v1
