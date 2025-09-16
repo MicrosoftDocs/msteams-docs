@@ -10,6 +10,8 @@ ms.date: 01/24/2025
 
 # TeamsFx SDK
 
+[!INCLUDE [Deprecation note](../includes/deprecation-note-teamsfx-sdk.md)]
+
 TeamsFx helps to reduce your tasks by using Microsoft Teams single sign-on (SSO) and accessing cloud resources down to single line statements with zero configuration. You can use TeamsFx SDK in the browser and Node.js environments. TeamsFx core functionalities can be accessed in client and server environments. You can write user authentication code for:
 
 * Teams tab
@@ -354,7 +356,7 @@ This section provides several code snippets for common scenarios that are relate
        }
        ```
 
-    For more information on sample to use Graph API in tab app, see [Graph Conector app sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/graph-connector-app).
+    For more information on sample to use Graph API in tab app, see [Graph Conector app sample](https://github.com/OfficeDev/microsoft-365-agents-toolkit-samples/tree/dev/copilot-connector-app).
 
     </details>
 
