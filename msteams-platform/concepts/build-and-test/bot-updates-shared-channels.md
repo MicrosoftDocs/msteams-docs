@@ -13,6 +13,7 @@ Shared channels in Microsoft Teams enable collaboration across teams and organiz
 Users in these channels are of two types: 
 - **Direct members**: These users are added explicitly to the channel.
 - **Indirect members**: These users access the channel through a shared team.
+Bots must be able to distinguish between these member types to operate correctly in collaborative environments.
 
 Bots in shared channels can automate workflows, deliver notifications, and respond to user actions in real time. You can integrate bots into shared channels to streamline collaboration. 
 
@@ -67,6 +68,50 @@ To receive member event notifications:
 2. Manually allow the bot in each shared channel.
 
 These steps ensure the bot is active and authorized to receive notifications for both direct and indirect members.
+
+### Detect when your app is added to a channel
+
+There’s no dedicated API to check if your app is part of a channel. Bots can detect this indirectly:
+
+When your bot receives a `channelMemberAdded` event for itself in a `conversationUpdate`, your app has been added to the channel.
+
+Use this event to trigger app-specific logic such as:
+
+* Sending a welcome message
+* Fetching the channel roster
+* Configuring tabs
+* Starting scheduled jobs
+
+Bot events (like messages and mentions) will only begin after your app is added to the channel.
+
+### Identify external users and guests in Teams channels
+
+When building apps or bots for Microsoft Teams, you need to distinguish between internal, guest, and external (cross-tenant) users. This distinction is useful for:
+
+* Enforcing access controls for sensitive operations
+* Tailoring UI behavior based on user type (for example, hiding features for guests or external users)
+* Managing authentication flows in tabs or bots
+
+### Detect user type at run time
+You can use `aadObjectId` received in activity payloads to match the member who invoked the activity with the member list returned by `getPagedMembersAsync`.
+
+#### Identify guest users
+
+Use either `TeamsInfo.getMemberAsync` or `TeamsInfo.getPagedMembersAsync`, and check if `userRole === "guest"`.
+
+#### Identify external users
+
+Each incoming activity for the bot includes `channelData.tenantId`. Compare this value with `membershipSource.tenantId` from the `getPagedMembersAsync` response. If the tenant IDs do not match, the user is considered as an external user.
+
+
+#### Detect user type from membership data 
+
+Use `TeamsInfo.getPagedMembersAsync` to retrieve membership details.
+
+- For guest users, check if `UserRole === "guest"` in `TeamsChannelAccount`.
+- For external users, compare `conversation.tenantId` with `membershipSource.tenantId` in the member payload. If the tenant IDs differ, the user is external.
+
+When a channel member is added or removed, the event payload includes both `conversation.tenantId` and `membershipSource.tenantId`. Compare these values to determine if the member is an external user or not.
 
 ## Manage member added and removed events
 
