@@ -10,10 +10,17 @@ ms.date: 12/20/2022
 
 Universal Actions for Adaptive Cards provide a way to implement Adaptive Card based scenarios for both, Teams and Outlook. This document covers the following topics:
 
-* [Schema used for Universal Actions for Adaptive Cards](#schema-for-universal-actions-for-adaptive-cards)
-* [Refresh model](#refresh-model)
-* [`adaptiveCard/action` invoke activity](#adaptivecardaction-invoke-activity)
-* [Backward compatibility](#backward-compatibility)
+- [Work with Universal Actions for Adaptive Cards](#work-with-universal-actions-for-adaptive-cards)
+  - [Quick start guide to use Universal Actions for Adaptive Cards in Teams](#quick-start-guide-to-use-universal-actions-for-adaptive-cards-in-teams)
+  - [Schema for Universal Actions for Adaptive Cards](#schema-for-universal-actions-for-adaptive-cards)
+    - [Action.Execute](#actionexecute)
+  - [Refresh model](#refresh-model)
+  - [User IDs in refresh](#user-ids-in-refresh)
+  - [`adaptiveCard/action` invoke activity](#adaptivecardaction-invoke-activity)
+  - [Backward compatibility](#backward-compatibility)
+    - [Teams](#teams)
+  - [Code samples](#code-samples)
+  - [See also](#see-also)
 
 ## Quick start guide to use Universal Actions for Adaptive Cards in Teams
 

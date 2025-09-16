@@ -8,7 +8,7 @@ ms.date: 09/16/2024
 
 # Types of cards
 
-Adaptive, hero, list, connector card for Microsoft 365 Groups, receipt, sign in, and thumbnail cards and card collections are supported in bots for Microsoft Teams. They're based on cards defined by the Bot Framework, but Teams doesn't support all Bot Framework cards and has added some of its own.
+Adaptive, hero, list, connector card for Microsoft 365 Groups, receipt, sign in, and thumbnail cards and card collections are supported in bots for Microsoft Teams. They're based on cards defined by the Microsoft 365 Agents SDK, but Teams doesn't support all Microsoft 365 Agents SDK cards and has added some of its own.
 
 Before you identify the different card types, understand how to create a hero card, thumbnail card, or Adaptive Card.
 
@@ -121,7 +121,7 @@ To explore Adaptive Card templates, see [Adaptive Card starter collection](desig
 
 The following table provides the features that support Adaptive Cards:
 
-| Bots in Teams | Tabs | Message extensions | Connectors | Bot Framework |
+| Bots in Teams | Tabs | Message extensions | Connectors | Microsoft 365 Agents SDK |
 | --- | --- | --- | --- |
 | ✔️ | ❌ | ✔️ | ❌ | ✔️ |
 
@@ -310,7 +310,7 @@ Example:
 
 ```
 
-Bot Framework reference:
+Microsoft 365 Agents SDK reference:
 
 * [Adaptive Cards Node](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript&preserve-view=true#send-an-adaptive-card)
 * [Adaptive Card C#](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true#send-an-adaptive-card)
@@ -329,7 +329,7 @@ A card that typically contains a single large image, one or more buttons, and te
 
 The following table provides the features that support hero cards:
 
-| Bots in Teams | Message extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions  | Connectors | Microsoft 365 Agents SDK |
 | --- | --- | --- | --- |
 | ✔️ | ✔️ | ❌ | ✔️ |
 
@@ -383,7 +383,7 @@ The following code shows an example of a hero card:
 
 ### Additional information on hero cards
 
-Bot Framework reference:
+Microsoft 365 Agents SDK reference:
 
 * [Hero card Node.js](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript&preserve-view=true#send-a-hero-card)
 * [Hero card C#](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&preserve-view=true&tabs=csharp#send-a-hero-card)
@@ -396,7 +396,7 @@ The list card has been added by Teams to provide functions beyond what the list 
 
 The following table provides the features that support list cards:
 
-| Bots in Teams | Message extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions  | Connectors | Microsoft 365 Agents SDK |
 | --- | --- | --- | --- |
 | ✔️ | ❌ | ❌ |✔️ |
 
@@ -468,13 +468,13 @@ The following code shows an example of a list card:
 
 ## Connector card for Microsoft 365 Groups
 
-You can work with a connector card for Microsoft 365 Groups that provides a flexible layout and is a great way to get useful information. The connector card for Microsoft 365 Groups is supported in Teams, not in Bot Framework. This card provides a flexible layout with multiple sections, fields, images, and actions. This card contains a connector card so that it can be used by bots. For differences between connector cards and the connector card for Microsoft 365 Groups, see [Connector card for Microsoft 365 Groups](#additional-information-on-the-connector-card-for-microsoft-365-groups).
+You can work with a connector card for Microsoft 365 Groups that provides a flexible layout and is a great way to get useful information. The connector card for Microsoft 365 Groups is supported in Microsoft Teams, not in Microsoft 365 Agents SDK. This card provides a flexible layout with multiple sections, fields, images, and actions. This card contains a connector card so that it can be used by bots. For differences between connector cards and the connector card for Microsoft 365 Groups, see [Connector card for Microsoft 365 Groups](#additional-information-on-the-connector-card-for-microsoft-365-groups).
 
 ### Support for connector cards for Microsoft 365 Groups
 
 The following table provides the features that support connector cards for Microsoft 365 Groups:
 
-| Bots in Teams | Message extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions  | Connectors | Microsoft 365 Agents SDK |
 | --- | --- | --- | --- |
 | ✔️ | ✔️ | ✔️ | ❌ |
 
@@ -598,7 +598,7 @@ Teams supports receipt card, which enables a bot to provide a receipt to the use
 
 The following table provides the features that support receipt cards:
 
-| Bots in Teams | Message extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions  | Connectors | Microsoft 365 Agents SDK |
 | --- | --- | --- | --- |
 | ✔️ | ✔️ | ❌ | ✔️ |
 
@@ -657,14 +657,14 @@ The following code shows an example of a receipt card:
 
 ### Additional information on receipt cards
 
-Bot Framework reference:
+Microsoft 365 Agents SDK reference:
 
 * [Receipt card Node.js](/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest&preserve-view=true)
 * [Receipt card C#](/dotnet/api/microsoft.bot.schema.receiptcard?view=botbuilder-dotnet-stable&preserve-view=true)
 
 ## Sign in card
 
-The sign in card in Teams is similar to the sign in card in the Bot Framework except that the sign in card in Teams only supports two actions `signin` and `openUrl`.
+The sign in card in Microsft Teams is similar to the sign in card in the Microsoft 365 Agents SDK except that the sign in card in Microsoft Teams only supports two actions `signin` and `openUrl`.
 
 The sign in action can be used from any card in Teams, not just the sign in card. For more information, see [Teams authentication flow for bots](~/bots/how-to/authentication/auth-flow-bot.md).
 
@@ -672,13 +672,13 @@ The sign in action can be used from any card in Teams, not just the sign in card
 
 The following table provides the features that support sign in cards:
 
-| Bots in Teams | Message extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions  | Connectors | Microsoft 365 Agents SDK |
 | --- | --- | --- | --- |
 | ✔️ | ❌ | ❌ | ✔️ |
 
 ### Additional information on sign in cards
 
-Bot Framework reference:
+Microsoft 365 Agents SDK reference:
 
 * [Sign in card Node.js](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest&preserve-view=true)
 * [Sign in card C#](/dotnet/api/microsoft.bot.schema.signincard?view=botbuilder-dotnet-stable&preserve-view=true)
@@ -691,7 +691,7 @@ You can work with a thumbnail card that is used for sending a simple actionable 
 
 The following table provides the features that support thumbnail cards:
 
-| Bots in Teams | Message extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions  | Connectors | Microsoft 365 Agents SDK |
 | --- | --- | --- | --- |
 | ✔️ | ✔️ | ❌ | ✔️ |
 
@@ -757,7 +757,7 @@ The following code shows an example of a thumbnail card:
 
 ### Additional information
 
-Bot Framework reference:
+Microsoft 365 Agents SDK reference:
 
 * [Thumbnail card Node.js](/javascript/api/botframework-schema/thumbnailcard?view=botbuilder-ts-latest&preserve-view=true)
 * [Thumbnail card C#](/dotnet/api/microsoft.bot.schema.thumbnailcard?view=botbuilder-dotnet-stable&preserve-view=true)
@@ -774,7 +774,7 @@ The [carousel layout](/azure/bot-service/bot-builder-howto-add-media-attachments
 
 The following table provides the features that support carousel collections:
 
-| Bots in Teams | Message extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions  | Connectors | Microsoft 365 Agents SDK |
 | --- | --- | --- | --- |
 | ✔️ | ❌ | ❌ | ✔️ |
 
@@ -968,7 +968,7 @@ The list layout shows a vertically stacked list of cards, optionally with associ
 
 The following table provides the features that support list collections:
 
-| Bots in Teams | Message extensions  | Connectors | Bot Framework |
+| Bots in Teams | Message extensions  | Connectors | Microsoft 365 Agents SDK |
 | --- | --- | --- | --- |
 | ✔️ | ✔️ | ❌ | ✔️ |
 
@@ -989,7 +989,7 @@ A list can display a maximum of 10 cards per message.
 
 ## Cards not supported in Teams
 
-The following cards are implemented by the Bot Framework, but aren't supported by Teams:
+The following cards are implemented by the Microsoft 365 Agents SDK, but aren't supported by Microsoft Teams:
 
 * Animation cards
 * Audio cards
