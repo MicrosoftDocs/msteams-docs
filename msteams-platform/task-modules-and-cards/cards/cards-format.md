@@ -18,8 +18,8 @@ ms.date: 11/07/2024
 
 Following are the two ways to add rich text formatting to your cards:
 
-* [Markdown](#format-cards-with-markdown)
-* [HTML](#format-cards-with-html)
+- [Markdown](#format-cards-with-markdown)
+- [HTML](#format-cards-with-html)
 
 Cards support formatting in the text property only, not in the title or subtitle properties. Formatting can be specified using a subset of XML or HTML formatting or Markdown, depending on the card type. For current and future development of Adaptive Cards, Markdown formatting is recommended.
 
@@ -33,8 +33,8 @@ You can format Adaptive Cards and connector cards for Microsoft 365 Groups with 
 
 The following card types support Markdown formatting in Teams:
 
-* Adaptive Cards: Markdown is supported in Adaptive Card `Textblock` field, and `Fact.Title` and `Fact.Value`. HTML isn't supported in Adaptive Cards.
-* Connector cards for Microsoft 365 Groups: Markdown and limited HTML is supported in connector cards for Microsoft 365 Groups in the text fields.
+- Adaptive Cards: Markdown is supported in Adaptive Card `Textblock` field, and `Fact.Title` and `Fact.Value`. HTML isn't supported in Adaptive Cards.
+- Connector cards for Microsoft 365 Groups: Markdown and limited HTML is supported in connector cards for Microsoft 365 Groups in the text fields.
 
 > [!NOTE]
 > Markdown isn't supported for OAuth sign in cards in bots.
@@ -45,23 +45,23 @@ Formatting is different between the desktop and the mobile versions of Teams for
 
 # [Markdown format for Adaptive Cards](#tab/adaptive-md)
 
- The following table provides the supported styles for `Textblock`, `Fact.Title`, and `Fact.Value`:
+The following table provides the supported styles for `Textblock`, `Fact.Title`, and `Fact.Value`:
 
-| Style | Example | Markdown |
-| --- | --- | --- |
-| Bold | **Bold** | ```**Bold**``` |
-| Italic | _Italic_ | ```_Italic_``` |
-| Unordered list | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
-| Ordered list | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
-| Hyperlinks |[Bing](https://www.bing.com/)| ```[Title](url)``` |
+| Style          | Example                             | Markdown                       |
+| -------------- | ----------------------------------- | ------------------------------ |
+| Bold           | **Bold**                            | `**Bold**`                     |
+| Italic         | _Italic_                            | `_Italic_`                     |
+| Unordered list | <ul><li>text</li><li>text</li></ul> | `- Item 1\r- Item 2\r- Item 3` |
+| Ordered list   | <ol><li>text</li><li>text</li></ol> | `1. Green\r2. Orange\r3. Blue` |
+| Hyperlinks     | [Bing](https://www.bing.com/)       | `[Title](url)`                 |
 
 The following Markdown tags aren't supported:
 
-* Headers
-* Tables
-* Images
-* Preformatted text
-* Blockquotes
+- Headers
+- Tables
+- Images
+- Preformatted text
+- Blockquotes
 
 ### Newlines for Adaptive Cards
 
@@ -87,41 +87,41 @@ For more information about date and time formatting and localization in Adaptive
 
 The following code shows an example of Adaptive Cards formatting:
 
-``` json
+```json
 {
-    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
-    "type": "AdaptiveCard",
-    "version": "1.0",
-    "body": [
-        {
-            "type": "TextBlock",
-            "text": "This is some **bold** text"
-        },
-        {
-            "type": "TextBlock",
-            "text": "This is some _italic_ text"
-        },
-        {
-            "type": "TextBlock",
-            "text": "- Bullet \r- List \r",
-            "wrap": true
-        },
-        {
-            "type": "TextBlock",
-            "text": "1. Numbered\r2. List\r",
-            "wrap": true
-        },
-        {
-            "type": "TextBlock",
-            "text": "Check out [Adaptive Cards](https://adaptivecards.microsoft.com/?topic=welcome)"
-        }
-    ]
+  "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.0",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "This is some **bold** text"
+    },
+    {
+      "type": "TextBlock",
+      "text": "This is some _italic_ text"
+    },
+    {
+      "type": "TextBlock",
+      "text": "- Bullet \r- List \r",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "text": "1. Numbered\r2. List\r",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "text": "Check out [Adaptive Cards](https://adaptivecards.microsoft.com/?topic=welcome)"
+    }
+  ]
 }
 ```
 
 Adaptive Cards support emojis. The following card payload shows an Adaptive Card with an emoji:
 
-``` json
+```json
 {
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "type": "AdaptiveCard",
@@ -155,21 +155,21 @@ Bots and message extensions can include mentions within the card content in [Tex
 
 > [!NOTE]
 >
-> * Channel and team mentions aren't supported in bot messages.
-> * You can @mention multiple users in a single Adaptive Card message, however, ensure that the message size limit doesn't exceed 28 KB for [Incoming Webhooks](~/webhooks-and-connectors/how-to/add-incoming-webhook.md) and 40 KB for a [bot message](~/bots/how-to/format-your-bot-messages.md).
-> * Adaptive Cards sent from Incoming Webhooks only support user mentions and don't support bot mentions.
+> - Channel and team mentions aren't supported in bot messages.
+> - You can @mention multiple users in a single Adaptive Card message, however, ensure that the message size limit doesn't exceed 28 KB for [Incoming Webhooks](~/webhooks-and-connectors/how-to/add-incoming-webhook.md) and 100 KB for a [bot message](~/bots/how-to/format-your-bot-messages.md).
+> - Adaptive Cards sent from Incoming Webhooks only support user mentions and don't support bot mentions.
 
 To include a mention in an Adaptive Card, your app needs to include the following elements:
 
-* `<at>username</at>` in the supported Adaptive Card elements.
-* The `mention` object inside of an `msteams` property in the card content includes the Teams user ID of the user being mentioned.
-* The `userId` is unique to your bot ID and a particular user. It can be used to @mention a particular user. The `userId` can be retrieved using one of the options mentioned in [get the user ID](/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages?tabs=dotnet#get-the-user-id-team-id-or-channel-id).
+- `<at>username</at>` in the supported Adaptive Card elements.
+- The `mention` object inside of an `msteams` property in the card content includes the Teams user ID of the user being mentioned.
+- The `userId` is unique to your bot ID and a particular user. It can be used to @mention a particular user. The `userId` can be retrieved using one of the options mentioned in [get the user ID](/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages?tabs=dotnet#get-the-user-id-team-id-or-channel-id).
 
 #### Sample Adaptive Card with a mention
 
 The following code shows an example of Adaptive Card with a mention:
 
-``` json
+```json
 {
   "contentType": "application/vnd.microsoft.card.adaptive",
   "content": {
@@ -206,10 +206,10 @@ Teams platform allows you to mention users with their Microsoft Entra Object ID 
 
 The following table describes the newly supported user mention IDs:
 
-|IDs | Supporting capabilities | Description | Example |
-|----------|--------|---------------|---------|
-| Microsoft Entra Object ID | Bot, Connector |  Microsoft Entra user’s Object ID | 49c4641c-ab91-4248-aebb-6a7de286397b |
-| UPN | Bot, Connector | Microsoft Entra user’s UPN | `john.smith@microsoft.com` |
+| IDs                       | Supporting capabilities | Description                      | Example                              |
+| ------------------------- | ----------------------- | -------------------------------- | ------------------------------------ |
+| Microsoft Entra Object ID | Bot, Connector          | Microsoft Entra user’s Object ID | 49c4641c-ab91-4248-aebb-6a7de286397b |
+| UPN                       | Bot, Connector          | Microsoft Entra user’s UPN       | `john.smith@microsoft.com`           |
 
 #### User mention in bots with Adaptive Cards
 
@@ -266,8 +266,8 @@ Incoming webhooks start to support user mention in Adaptive Cards with the Micro
 
 > [!NOTE]
 >
-> * Enable user mention in the schema for Incoming webhooks to support Microsoft Entra Object ID and UPN.
-> * UI/UX changes aren't required for user mentions with Microsoft Entra Object ID and UPN.
+> - Enable user mention in the schema for Incoming webhooks to support Microsoft Entra Object ID and UPN.
+> - UI/UX changes aren't required for user mentions with Microsoft Entra Object ID and UPN.
 
 ##### Example
 
@@ -275,48 +275,49 @@ Example for user mention in Incoming Webhook as follows:
 
 ```json
 {
-    "type": "message",
-    "attachments": [
-        {
-        "contentType": "application/vnd.microsoft.card.adaptive",
-        "content": {
-            "type": "AdaptiveCard",
-            "body": [
-                {
-                    "type": "TextBlock",
-                    "size": "Medium",
-                    "weight": "Bolder",
-                    "text": "Sample Adaptive Card with User Mention"
-                },
-                {
-                    "type": "TextBlock",
-                    "text": "Hi <at>Adele UPN</at>, <at>Adele Microsoft Entra ID</at>"
-                }
-            ],
-            "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-            "version": "1.0",
-            "msteams": {
-                "entities": [
-                    {
-                        "type": "mention",
-                        "text": "<at>Adele UPN</at>",
-                        "mentioned": {
-                          "id": "AdeleV@contoso.onmicrosoft.com",
-                          "name": "Adele Vance"
-                        }
-                      },
-                      {
-                        "type": "mention",
-                        "text": "<at>Adele Microsoft Entra ID</at>",
-                        "mentioned": {
-                          "id": "87d349ed-44d7-43e1-9a83-5f2406dee5bd",
-                          "name": "Adele Vance"
-                        }
-                      }
-                ]
+  "type": "message",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "type": "AdaptiveCard",
+        "body": [
+          {
+            "type": "TextBlock",
+            "size": "Medium",
+            "weight": "Bolder",
+            "text": "Sample Adaptive Card with User Mention"
+          },
+          {
+            "type": "TextBlock",
+            "text": "Hi <at>Adele UPN</at>, <at>Adele Microsoft Entra ID</at>"
+          }
+        ],
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "version": "1.0",
+        "msteams": {
+          "entities": [
+            {
+              "type": "mention",
+              "text": "<at>Adele UPN</at>",
+              "mentioned": {
+                "id": "AdeleV@contoso.onmicrosoft.com",
+                "name": "Adele Vance"
+              }
+            },
+            {
+              "type": "mention",
+              "text": "<at>Adele Microsoft Entra ID</at>",
+              "mentioned": {
+                "id": "87d349ed-44d7-43e1-9a83-5f2406dee5bd",
+                "name": "Adele Vance"
+              }
             }
+          ]
         }
-    }]
+      }
+    }
+  ]
 }
 ```
 
@@ -330,72 +331,72 @@ People icon helps users to view the images of users in an Adaptive Card. You can
 
 There are two types of people icons that are supported in an Adaptive Card:
 
-* Persona: If you want to show a single user in an Adaptive Card, it displays the people icon and the name of the user.
+- Persona: If you want to show a single user in an Adaptive Card, it displays the people icon and the name of the user.
 
-    The following JSON code is an example of a Persona card:
+  The following JSON code is an example of a Persona card:
 
-    ```json
-    {
-      "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
-      "type": "AdaptiveCard",
-      "version": "1.0.0",
-      "body": [
-    {
-          "type": "TextBlock",
-          "text": "Persona",
-          "weight": "bolder"
-        },
-        {
-          "type": "Component",
-          "name": "graph.microsoft.com/user",
-          "view": "compact",
-          "properties": {
-            "id": "65f50003-e15d-434a-9e14-0fcfeb3d7817",
-            "displayName": "Daniela Mandera",
-            "userPrincipalName": "damandera@microsoft.com"
-          }
+  ```json
+  {
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.0.0",
+    "body": [
+      {
+        "type": "TextBlock",
+        "text": "Persona",
+        "weight": "bolder"
+      },
+      {
+        "type": "Component",
+        "name": "graph.microsoft.com/user",
+        "view": "compact",
+        "properties": {
+          "id": "65f50003-e15d-434a-9e14-0fcfeb3d7817",
+          "displayName": "Daniela Mandera",
+          "userPrincipalName": "damandera@microsoft.com"
         }
-      ]
-    }
-    ```
+      }
+    ]
+  }
+  ```
 
-* Persona Set: If you want to show multiple users in an Adaptive Card, it displays only the people icon of the users.
+- Persona Set: If you want to show multiple users in an Adaptive Card, it displays only the people icon of the users.
 
-    The following JSON code is an example of a Persona Set:
+  The following JSON code is an example of a Persona Set:
 
-    ```json
-    {
-      "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
-      "type": "AdaptiveCard",
-      "version": "1.0.0",
-      "body": [
-        {
-          "type": "TextBlock",
-          "text": "Persona Set",
-          "weight": "bolder"
-        },
-        {
-          "type": "Component",
-          "name": "graph.microsoft.com/users",
-          "view": "compact",
-          "properties": {
-            "users": [
-              {
-                "id": "65f50003-e15d-434a-9e14-0fcfeb3d7817",
-                "displayName": "Daniela Mandera",
-                "userPrincipalName": "damandera@microsoft.com"
-              },
-              {
-                "id": "65f50003-e15d-434a-9e14-0fcfeb3d7817",
-                "displayName": "Daniela Mandera",
-                "userPrincipalName": "damandera@microsoft.com"
-              }
-            ]
-          }
+  ```json
+  {
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.0.0",
+    "body": [
+      {
+        "type": "TextBlock",
+        "text": "Persona Set",
+        "weight": "bolder"
+      },
+      {
+        "type": "Component",
+        "name": "graph.microsoft.com/users",
+        "view": "compact",
+        "properties": {
+          "users": [
+            {
+              "id": "65f50003-e15d-434a-9e14-0fcfeb3d7817",
+              "displayName": "Daniela Mandera",
+              "userPrincipalName": "damandera@microsoft.com"
+            },
+            {
+              "id": "65f50003-e15d-434a-9e14-0fcfeb3d7817",
+              "displayName": "Daniela Mandera",
+              "userPrincipalName": "damandera@microsoft.com"
+            }
+          ]
         }
-      ]
-    }
-    ```
+      }
+    ]
+  }
+  ```
 
   > [!NOTE]
   > You can't customize the style of the Persona and Persona Set in an Adaptive Card.
@@ -408,15 +409,15 @@ The following image is an example of the people icon in an Adaptive Card:
 
 The following table lists the properties of the `Component` element:
 
-| Property name | Description |
-|---------|---------|
-| `type` | `component` |
-| `name` | Use `graph.microsoft.com/users` to search all members across the organization |
-| `view` | `compact` |
-| `properties` | Passed to the component template |
-| `id` | User's MRI |
-| `displayName` | Name of the user |
-| `userPrincipalName` | The user's principal name of the account in Microsoft Entra ID |
+| Property name       | Description                                                                   |
+| ------------------- | ----------------------------------------------------------------------------- |
+| `type`              | `component`                                                                   |
+| `name`              | Use `graph.microsoft.com/users` to search all members across the organization |
+| `view`              | `compact`                                                                     |
+| `properties`        | Passed to the component template                                              |
+| `id`                | User's MRI                                                                    |
+| `displayName`       | Name of the user                                                              |
+| `userPrincipalName` | The user's principal name of the account in Microsoft Entra ID                |
 
 Adaptive Components are high-level components powered by [templating](/adaptive-cards/templating/) and native Adaptive Card elements. The type `component` can be used anywhere inside the card body and the component data is defined in the `properties` attribute. The component data under `properties` is passed directly to the component. The `properties` property defines the format for Persona and Persona Set and all other properties under `properties` is ignored by `component` type in the Adaptive Card schema.
 
@@ -435,10 +436,10 @@ When a user hovers on a people icon, the people card of that user is displayed.
 :::row:::
 
 :::column:::
-  :::image type="content" source="../../assets/images/adaptive-cards/people-icon-mobile-1.png" alt-text="Screenshot shows an example of people icon in a persona and persona set in Teams mobile client.":::
+:::image type="content" source="../../assets/images/adaptive-cards/people-icon-mobile-1.png" alt-text="Screenshot shows an example of people icon in a persona and persona set in Teams mobile client.":::
 :::column-end:::
 :::column:::
-  :::image type="content" source="../../assets/images/adaptive-cards/people-icon-mobile-2.png" alt-text="Screenshot shows another example of people icon in a persona and persona set in Teams mobile client.":::
+:::image type="content" source="../../assets/images/adaptive-cards/people-icon-mobile-2.png" alt-text="Screenshot shows another example of people icon in a persona and persona set in Teams mobile client.":::
 :::column-end:::
 
 :::row-end:::
@@ -485,24 +486,28 @@ To make a full width Adaptive Card, the `width` object in `msteams` property in 
 
 To make a full width Adaptive Card, your app must include the elements from the following code sample:
 
-``` json
+```json
 {
-    "type": "AdaptiveCard",
-    "body": [{
-        "type": "Container",
-        "items": [{
-            "type": "TextBlock",
-            "text": "Digest card",
-            "size": "Large",
-            "weight": "Bolder"
-        }]
-    }],
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "Container",
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "Digest card",
+          "size": "Large",
+          "weight": "Bolder"
+        }
+      ]
+    }
+  ],
 
-    "msteams": {
-        "width": "Full"
-    },
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-    "version": "1.2"
+  "msteams": {
+    "width": "Full"
+  },
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.2"
 }
 ```
 
@@ -524,184 +529,183 @@ Adaptive Card responsive layout helps you to design cards with different layouts
 
 Use the `targetWidth` property on any element to:
 
-* Show or hide any element based on the card's width.
-* Set different target widths on different elements to create different layouts.
+- Show or hide any element based on the card's width.
+- Set different target widths on different elements to create different layouts.
 
   The following table lists the available `targetWidth` values:
 
-  |Value  |Description  |
-  |---------|---------|
-  | `veryNarrow` | The element is visible when the Adaptive Card's width is very narrow such as in a meeting chat. |
-  | `narrow` | The element is visible when the Adaptive Card's width is narrow such as on a mobile phone in portrait mode. |
-  | `standard` | The element is visible when the Adaptive Card's width is standard such as on a mobile phone in landscape mode, on a tablet in portrait mode, or in a chat on desktop. |
-  | `wide` | The element is visible when the Adaptive Card's width is wide such as on a tablet in landscape mode, in a channel or chat on desktop when you set your card to be [full width](#full-width-adaptive-card). |
+  | Value        | Description                                                                                                                                                                                                |
+  | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+  | `veryNarrow` | The element is visible when the Adaptive Card's width is very narrow such as in a meeting chat.                                                                                                            |
+  | `narrow`     | The element is visible when the Adaptive Card's width is narrow such as on a mobile phone in portrait mode.                                                                                                |
+  | `standard`   | The element is visible when the Adaptive Card's width is standard such as on a mobile phone in landscape mode, on a tablet in portrait mode, or in a chat on desktop.                                      |
+  | `wide`       | The element is visible when the Adaptive Card's width is wide such as on a tablet in landscape mode, in a channel or chat on desktop when you set your card to be [full width](#full-width-adaptive-card). |
 
   You can also set the `targetWidth` property to make an element visible for a range of card widths using the `atLeast` and
   `atMost` prefixes. For example, you can make an element visible only when the card width is 'standard or above' or only when the card width is 'narrow or below'. The following table provides guidance on how to make an element visible for a range of card widths:
 
-  | Example | Description  |
-  |---------|---------|
-  | `"targetWidth": "atLeast:standard"` | The element is visible only when the Adaptive Card's width is at least standard, which means standard or wide. |
-  | `"targetWidth": "atMost:narrow"` |The element is visible only when the Adaptive Card's width is at most narrow, which means very narrow or narrow. |
+  | Example                             | Description                                                                                                      |
+  | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+  | `"targetWidth": "atLeast:standard"` | The element is visible only when the Adaptive Card's width is at least standard, which means standard or wide.   |
+  | `"targetWidth": "atMost:narrow"`    | The element is visible only when the Adaptive Card's width is at most narrow, which means very narrow or narrow. |
 
   > [!NOTE]
   > You don't have to set `targetWidth` on all elements. If you don't set `targetWidth` for an element, the element is always visible irrespective of the card's width.
 
 The following are JSON samples for an Adaptive Card designed without using `targetWidth` and modified to use`targetWidth`:
 
-* Adaptive Card designed without using `targetWidth`:
+- Adaptive Card designed without using `targetWidth`:
 
-    ```json
-    {
-      "type": "AdaptiveCard",
-      "body": [
-        {
-          "type": "ColumnSet",
-          "columns": [
-            {
-              "type": "Column",
-              "items": [
-                {
-                  "type": "Image",
-                  "style": "Person",
-                  "url": "https://aka.ms/AAp9xo4",
-                  "size": "Small"
-                }
-              ],
-              "width": "auto"
-            },
-            {
-              "type": "Column",
-              "spacing": "medium",
-              "verticalContentAlignment": "center",
-              "items": [
-                {
-                  "type": "TextBlock",
-                  "weight": "Bolder",
-                  "text": "David Claux",
-                  "wrap": true
-                }
-              ],
-              "width": "auto"
-            },
-            {
-              "type": "Column",
-              "spacing": "medium",
-              "items": [
-                {
-                  "type": "TextBlock",
-                  "text": "Platform Architect",
-                  "isSubtle": true,
-                  "wrap": true
-                }
-              ],
-              "width": "stretch",
-              "verticalContentAlignment": "center"
-            }
-          ]
-        }
-      ],
-      "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
-      "version": "1.5"
-    }
-
-    ```
+  ```json
+  {
+    "type": "AdaptiveCard",
+    "body": [
+      {
+        "type": "ColumnSet",
+        "columns": [
+          {
+            "type": "Column",
+            "items": [
+              {
+                "type": "Image",
+                "style": "Person",
+                "url": "https://aka.ms/AAp9xo4",
+                "size": "Small"
+              }
+            ],
+            "width": "auto"
+          },
+          {
+            "type": "Column",
+            "spacing": "medium",
+            "verticalContentAlignment": "center",
+            "items": [
+              {
+                "type": "TextBlock",
+                "weight": "Bolder",
+                "text": "David Claux",
+                "wrap": true
+              }
+            ],
+            "width": "auto"
+          },
+          {
+            "type": "Column",
+            "spacing": "medium",
+            "items": [
+              {
+                "type": "TextBlock",
+                "text": "Platform Architect",
+                "isSubtle": true,
+                "wrap": true
+              }
+            ],
+            "width": "stretch",
+            "verticalContentAlignment": "center"
+          }
+        ]
+      }
+    ],
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5"
+  }
+  ```
 
   The following images show the rendering of the Adaptive Card for different card widths:
 
-  * When the card's width is **wide**, the card looks good.
+  - When the card's width is **wide**, the card looks good.
 
     :::image type="content" source="../../assets/images/Cards/card-width-wide.png" alt-text="Screenshot shows how an Adaptive Card with card width as wide renders when the card is designed without using targetWidth property.":::
 
-  * When the card's width is **standard** or **narrow**, the role is squeezed.
+  - When the card's width is **standard** or **narrow**, the role is squeezed.
 
     :::image type="content" source="../../assets/images/Cards/card-width-standard-narrow.png" alt-text="Screenshot shows how an Adaptive Card with card width as standard or narrow renders when the card is designed without using targetWidth property.":::
 
-  * When the card's width is **very narrow**, the name and role are significantly squeezed.
+  - When the card's width is **very narrow**, the name and role are significantly squeezed.
 
-    :::image type="content" source="../../assets/images/Cards/card-width-very-narrow.png" alt-text="Screenshot shows how an Adaptive Card with card width as very narrow  renders when the card is designed without using targetWidth property.":::
+    :::image type="content" source="../../assets/images/Cards/card-width-very-narrow.png" alt-text="Screenshot shows how an Adaptive Card with card width as very narrow renders when the card is designed without using targetWidth property.":::
 
-* Adaptive Card updated to be responsive using `targetWidth`:
+- Adaptive Card updated to be responsive using `targetWidth`:
 
-   ``` json
-    {
-      "type": "AdaptiveCard",
-      "body": [
-        {
-          "type": "ColumnSet",
-          "columns": [
-            {
-              "type": "Column",
-              "targetWidth": "atLeast:narrow",
-              "items": [
-                {
-                  "type": "Image",
-                  "style": "Person",
-                  "url": "https://aka.ms/AAp9xo4",
-                  "size": "Small"
-                }
-              ],
-              "width": "auto"
-            },
-            {
-              "type": "Column",
-              "spacing": "medium",
-              "verticalContentAlignment": "center",
-              "items": [
-                {
-                  "type": "TextBlock",
-                  "weight": "Bolder",
-                  "text": "David Claux",
-                  "wrap": true
-                },
-                {
-                  "type": "TextBlock",
-                  "targetWidth": "atMost:narrow",
-                  "spacing": "None",
-                  "text": "Platform Architect",
-                  "isSubtle": true,
-                  "wrap": true
-                }
-              ],
-              "width": "auto"
-            },
-            {
-              "type": "Column",
-              "targetWidth": "atLeast:standard",
-              "spacing": "medium",
-              "items": [
-                {
-                  "type": "TextBlock",
-                  "text": "Platform Architect",
-                  "isSubtle": true,
-                  "wrap": true
-                }
-              ],
-              "width": "stretch",
-              "verticalContentAlignment": "center"
-            }
-          ]
-        }
-      ],
-      "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
-      "version": "1.5"
-    }
-   ```
+  ```json
+  {
+    "type": "AdaptiveCard",
+    "body": [
+      {
+        "type": "ColumnSet",
+        "columns": [
+          {
+            "type": "Column",
+            "targetWidth": "atLeast:narrow",
+            "items": [
+              {
+                "type": "Image",
+                "style": "Person",
+                "url": "https://aka.ms/AAp9xo4",
+                "size": "Small"
+              }
+            ],
+            "width": "auto"
+          },
+          {
+            "type": "Column",
+            "spacing": "medium",
+            "verticalContentAlignment": "center",
+            "items": [
+              {
+                "type": "TextBlock",
+                "weight": "Bolder",
+                "text": "David Claux",
+                "wrap": true
+              },
+              {
+                "type": "TextBlock",
+                "targetWidth": "atMost:narrow",
+                "spacing": "None",
+                "text": "Platform Architect",
+                "isSubtle": true,
+                "wrap": true
+              }
+            ],
+            "width": "auto"
+          },
+          {
+            "type": "Column",
+            "targetWidth": "atLeast:standard",
+            "spacing": "medium",
+            "items": [
+              {
+                "type": "TextBlock",
+                "text": "Platform Architect",
+                "isSubtle": true,
+                "wrap": true
+              }
+            ],
+            "width": "stretch",
+            "verticalContentAlignment": "center"
+          }
+        ]
+      }
+    ],
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5"
+  }
+  ```
 
   Let's see how the same Adaptive Card renders after using the `targetWidth` property for different card widths:
 
-  * When the card's width is **wide**, the card still looks good.
+  - When the card's width is **wide**, the card still looks good.
 
     :::image type="content" source="../../assets/images/Cards/target-width-wide.png" alt-text="Screenshot shows how an Adaptive Card renders when the targetWidth property is wide.":::
 
-  * When the card's width is **standard** or **narrow**, the role is moved under the name as there's no horizontal space to show them side-by-side.
+  - When the card's width is **standard** or **narrow**, the role is moved under the name as there's no horizontal space to show them side-by-side.
 
     :::image type="content" source="../../assets/images/Cards/target-width-standard-narrow.png" alt-text="Screenshot shows how an Adaptive Card renders when the targetWidth property is standard or narrow.":::
 
-  * When the card's width is **very narrow**, we can hide the image and only keep the most meaningful information.
+  - When the card's width is **very narrow**, we can hide the image and only keep the most meaningful information.
 
     :::image type="content" source="../../assets/images/Cards/target-width-very-narrow.png" alt-text="Screenshot shows how an Adaptive Card renders when the targetWidth property is veryNarrow.":::
-  
+
 For more information on how to design an Adaptive Card, see [designing Adaptive Cards for your Teams app](design-effective-cards.md).
 
 ### Typeahead support
@@ -714,16 +718,16 @@ To enable typeahead within the `Input.Choiceset`, set `style` to `filtered` and 
 
 The following code shows an example of Adaptive Card with typeahead support:
 
-``` json
+```json
 {
-   "type": "Input.ChoiceSet",
-   "label": "Select a user",
-   "isMultiSelect": false,
-   "choices":  [
-      { "title": "User 1", "value": "User1" },
-      { "title": "User 2", "value": "User2" }
-    ],
-   "style": "filtered"
+  "type": "Input.ChoiceSet",
+  "label": "Select a user",
+  "isMultiSelect": false,
+  "choices": [
+    { "title": "User 1", "value": "User1" },
+    { "title": "User 2", "value": "User2" }
+  ],
+  "style": "filtered"
 }
 ```
 
@@ -731,20 +735,20 @@ The following code shows an example of Adaptive Card with typeahead support:
 
 In an Adaptive Card, you can use the `msteams` property to add the ability to display images in Stageview selectively. When users hover over the images, they can see an expand icon, for which the `allowExpand` attribute is set to `true`. The following code is an example of the `msteams` property:
 
-``` json
+```json
 {
-    "type": "AdaptiveCard",
-     "body": [
-          {
-            "type": "Image",
-            "url": "https://picsum.photos/200/200?image=110",
-            "msTeams": {
-              "allowExpand": true
-            }
-          }
-     ],
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-    "version": "1.2"
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "Image",
+      "url": "https://picsum.photos/200/200?image=110",
+      "msTeams": {
+        "allowExpand": true
+      }
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.2"
 }
 ```
 
@@ -760,25 +764,25 @@ In the Stageview, users can zoom in and zoom out of the image. You can select th
 
 > [!NOTE]
 >
-> * Zoom in and zoom out capability applies only to the image elements that is image type in an Adaptive Card.
-> * For Teams mobile apps, Stageview functionality for images in Adaptive Cards is available by default. Users can view Adaptive Card images in Stageview by simply tapping on the image, irrespective of whether the `allowExpand` attribute is present or not.
+> - Zoom in and zoom out capability applies only to the image elements that is image type in an Adaptive Card.
+> - For Teams mobile apps, Stageview functionality for images in Adaptive Cards is available by default. Users can view Adaptive Card images in Stageview by simply tapping on the image, irrespective of whether the `allowExpand` attribute is present or not.
 
 # [Markdown format for connector cards for Microsoft 365 Groups](#tab/connector-md)
 
 Connector cards support limited Markdown and HTML formatting.
 
-| Style | Example | Markdown |
-| --- | --- | --- |
-| Bold | **text** | `**text**` |
-| Italic | _text_ | `*text*` |
-| Header (levels 1&ndash;3) | **Text** | `### Text`|
-| Strikethrough | ~~text~~ | `~~text~~` |
-| Unordered list | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
-| Ordered list | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
-| Preformatted text | `text` | ``preformatted text`` |
-| Blockquote | >blockquote text | `>blockquote text` |
-| Hyperlink | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` |
-| Image link |![Duck on a rock](https://aka.ms/Fo983c) | `![Duck](https://aka.ms/Fo983c)` |
+| Style                     | Example                                  | Markdown                         |
+| ------------------------- | ---------------------------------------- | -------------------------------- |
+| Bold                      | **text**                                 | `**text**`                       |
+| Italic                    | _text_                                   | `*text*`                         |
+| Header (levels 1&ndash;3) | **Text**                                 | `### Text`                       |
+| Strikethrough             | ~~text~~                                 | `~~text~~`                       |
+| Unordered list            | <ul><li>text</li><li>text</li></ul>      | `- Item 1\r- Item 2\r- Item 3`   |
+| Ordered list              | <ol><li>text</li><li>text</li></ol>      | `1. Green\r2. Orange\r3. Blue`   |
+| Preformatted text         | `text`                                   | `preformatted text`              |
+| Blockquote                | >blockquote text                         | `>blockquote text`               |
+| Hyperlink                 | [Bing](https://www.bing.com/)            | `[Bing](https://www.bing.com/)`  |
+| Image link                | ![Duck on a rock](https://aka.ms/Fo983c) | `![Duck](https://aka.ms/Fo983c)` |
 
 In connector cards, newlines are rendered for `\n\n`, but not for `\n` or `\r`.
 
@@ -794,8 +798,8 @@ On iOS, Markdown formatting for connector cards appears as shown in the followin
 
 Connector cards using Markdown for iOS include the following issues:
 
-* The iOS client for Teams doesn't render Markdown or HTML inline images in connector cards.
-* Blockquotes are rendered as indented but without a gray background.
+- The iOS client for Teams doesn't render Markdown or HTML inline images in connector cards.
+- Blockquotes are rendered as indented but without a gray background.
 
 On Android, Markdown formatting for connector cards appears as shown in the following image:
 
@@ -805,7 +809,7 @@ On Android, Markdown formatting for connector cards appears as shown in the foll
 
 The following code shows an example of formatting for Markdown connector cards:
 
-``` json
+```json
 {
   "contentType": "application/vnd.microsoft.teams.card.o365connector",
   "content": {
@@ -814,40 +818,39 @@ The following code shows an example of formatting for Markdown connector cards:
     "summary": "Summary",
     "title": "Connector Card Markdown formatting",
     "sections": [
-        {
-            "text": "This is some **bold** text"
-        },
-        {
-            "text": "This is some _italic_ text"
-        },
-        {
-            "text": "# Header 1\r## Header 2\r### Header 3"
-        },
-        {
-            "text": "- Bullet \r- List \r"
-        },
-        {
-            "text": "1. Numbered\r1. List \r"
-        },
-        {
-            "text": "Link: [Bing](https://www.bing.com)"
-        },
-        {
-            "text": "embedded image link: ![Duck on a rock](https://aka.ms/Fo983c)"
-        },
-        {
-            "text": "`preformatted text`"
-        },
-        {
-            "text": "Newlines (backslash n, backslash n):\n\nline a\n\nline b\n\nline c"
-        },
-        {
-            "text": ">This is a blockquote"
-        }
-     ]
+      {
+        "text": "This is some **bold** text"
+      },
+      {
+        "text": "This is some _italic_ text"
+      },
+      {
+        "text": "# Header 1\r## Header 2\r### Header 3"
+      },
+      {
+        "text": "- Bullet \r- List \r"
+      },
+      {
+        "text": "1. Numbered\r1. List \r"
+      },
+      {
+        "text": "Link: [Bing](https://www.bing.com)"
+      },
+      {
+        "text": "embedded image link: ![Duck on a rock](https://aka.ms/Fo983c)"
+      },
+      {
+        "text": "`preformatted text`"
+      },
+      {
+        "text": "Newlines (backslash n, backslash n):\n\nline a\n\nline b\n\nline c"
+      },
+      {
+        "text": ">This is a blockquote"
+      }
+    ]
   }
 }
-
 ```
 
 ---
@@ -858,105 +861,105 @@ The `CodeBlock` element enables you to share code snippets as richly formatted A
 
 The following screenshot shows an Adaptive Card with a code snippet:
 
-  :::image type="content" source="../../assets/images/adaptive-cards/code-block-adaptive-card.png" alt-text="Screenshot shows an Adaptive Card with a code snippet.":::
+:::image type="content" source="../../assets/images/adaptive-cards/code-block-adaptive-card.png" alt-text="Screenshot shows an Adaptive Card with a code snippet.":::
 
 The `CodeBlock` element supports the following languages:
 
-| Language | Supported | Language | Supported |
-|:---|:---:|:---|:---:|
-| Bash | ✔️ | JSON | ✔️ |
-| C | ✔️ | Perl | ✔️ |
-| C++ | ✔️ | PHP | ✔️ |
-| C# | ✔️ | PowerShell | ✔️ |
-| CSS | ✔️ | Python | ✔️ |
-| DOS | ✔️ | SQL | ✔️ |
-| Go | ✔️ | TypeScript | ✔️ |
-| GraphQL | ✔️ | Visual Basic | ✔️ |
-| HTML | ✔️ | Verilog | ✔️ |
-| Java | ✔️ | VHDL | ✔️ |
-| JavaScript | ✔️ | XML | ✔️ |
+| Language   | Supported | Language     | Supported |
+| :--------- | :-------: | :----------- | :-------: |
+| Bash       |    ✔️     | JSON         |    ✔️     |
+| C          |    ✔️     | Perl         |    ✔️     |
+| C++        |    ✔️     | PHP          |    ✔️     |
+| C#         |    ✔️     | PowerShell   |    ✔️     |
+| CSS        |    ✔️     | Python       |    ✔️     |
+| DOS        |    ✔️     | SQL          |    ✔️     |
+| Go         |    ✔️     | TypeScript   |    ✔️     |
+| GraphQL    |    ✔️     | Visual Basic |    ✔️     |
+| HTML       |    ✔️     | Verilog      |    ✔️     |
+| Java       |    ✔️     | VHDL         |    ✔️     |
+| JavaScript |    ✔️     | XML          |    ✔️     |
 
 > [!NOTE]
 > The `CodeBlock` element recognizes plain text as a language if you set the enum value to `PlainText` in the `language` property of the schema.
 
 The following code is an example of an Adaptive Card displaying a code snippet:
 
-``` json
+```json
 {
-    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
-    "type": "AdaptiveCard",
-    "version": "1.5",
-    "body": [
-        {
-            "type": "TextBlock",
-            "text": "editor.js",
-            "style": "heading"
-        },
-        {
-            "type": "TextBlock",
-            "text": "Lines 61 - 76"
-        },
-        {
-            "type": "CodeBlock",
-            "codeSnippet": "/**\n* @author John Smith <john.smith@example.com>\n*/\npackage l2f.gameserver.model;\n\npublic abstract strictfp class L2Char extends L2Object {\n  public static final Short ERROR = 0x0001;\n\n  public void moveTo(int x, int y, int z) {\n    _ai = null;\n    log(\"Shouldn't be called\");\n    if (1 > 5) { // what!?\n      return;\n    }\n  }\n}",
-            "language": "java",
-            "startLineNumber": 61
-        }
-    ],
-    "actions": [
-        {
-            "type": "Action.OpenUrl",
-            "title": "View in Azure Repos",
-            "url": "https://azure.microsoft.com/en-us/products/devops/repos/"
-        },
-        {
-            "type": "Action.OpenUrl",
-            "title": "Edit in vscode.dev",
-            "url": "https://vscode.dev/"
-        }
-    ]
+  "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "editor.js",
+      "style": "heading"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Lines 61 - 76"
+    },
+    {
+      "type": "CodeBlock",
+      "codeSnippet": "/**\n* @author John Smith <john.smith@example.com>\n*/\npackage l2f.gameserver.model;\n\npublic abstract strictfp class L2Char extends L2Object {\n  public static final Short ERROR = 0x0001;\n\n  public void moveTo(int x, int y, int z) {\n    _ai = null;\n    log(\"Shouldn't be called\");\n    if (1 > 5) { // what!?\n      return;\n    }\n  }\n}",
+      "language": "java",
+      "startLineNumber": 61
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.OpenUrl",
+      "title": "View in Azure Repos",
+      "url": "https://azure.microsoft.com/en-us/products/devops/repos/"
+    },
+    {
+      "type": "Action.OpenUrl",
+      "title": "Edit in vscode.dev",
+      "url": "https://vscode.dev/"
+    }
+  ]
 }
 ```
 
 The `CodeBlock` element supports the following properties:
 
-| Property | Type | Required | Description |
-|---|---|---|---|
-| `codeSnippet` | String | Yes | The code snippet to be displayed in an Adaptive Card. |
-| `language` | Enum | Yes | The language of the code snippet to be displayed in an Adaptive Card. |
-| `startLineNumber` | Number | No | The line number in the source where the code snippet begins. If left blank, defaults to 1. |
+| Property          | Type   | Required | Description                                                                                |
+| ----------------- | ------ | -------- | ------------------------------------------------------------------------------------------ |
+| `codeSnippet`     | String | Yes      | The code snippet to be displayed in an Adaptive Card.                                      |
+| `language`        | Enum   | Yes      | The language of the code snippet to be displayed in an Adaptive Card.                      |
+| `startLineNumber` | Number | No       | The line number in the source where the code snippet begins. If left blank, defaults to 1. |
 
 > [!TIP]
 >
-> * Special characters have specific functions in the `codeSnippet` property. For example, the newline character `\n` triggers a line break.
-> * To display the newline character `\n` as part of the code snippet in an Adaptive Card, ensure that you escape it as `\\n` in the `codeSnippet` property. Else, Teams renders the code after the `\n` in the next line of the card.
+> - Special characters have specific functions in the `codeSnippet` property. For example, the newline character `\n` triggers a line break.
+> - To display the newline character `\n` as part of the code snippet in an Adaptive Card, ensure that you escape it as `\\n` in the `codeSnippet` property. Else, Teams renders the code after the `\n` in the next line of the card.
 
 ### Limitations
 
-* An Adaptive Card with the `CodeBlock` element is supported only in Teams web and desktop clients.
-* The code snippet in an Adaptive Card is read-only and not editable.
-* An Adaptive Card only previews the first 10 lines of the code snippet. If there are more than 10 lines of code, the user must select **Expand** to see the rest of the code snippet.
+- An Adaptive Card with the `CodeBlock` element is supported only in Teams web and desktop clients.
+- The code snippet in an Adaptive Card is read-only and not editable.
+- An Adaptive Card only previews the first 10 lines of the code snippet. If there are more than 10 lines of code, the user must select **Expand** to see the rest of the code snippet.
 
 ## Adaptive Cards overflow menu
 
 Adaptive Card in Teams supports overflow menu. You can populate an overflow menu for all the secondary actions in an Adaptive Card. An overflow menu in an Adaptive Card can be added to the following:
 
-* **Actions**: In actions, the primary buttons appear on the Adaptive Card and the secondary buttons are inside the overflow menu.
+- **Actions**: In actions, the primary buttons appear on the Adaptive Card and the secondary buttons are inside the overflow menu.
 
-* [ActionSet](https://adaptivecards.microsoft.com/?topic=ActionSet): ActionSet is a combination of multiple actions in an Adaptive Card. Each action set can have an overflow menu.
+- [ActionSet](https://adaptivecards.microsoft.com/?topic=ActionSet): ActionSet is a combination of multiple actions in an Adaptive Card. Each action set can have an overflow menu.
 
 > [!NOTE]
 > An Adaptive Card supports up to six primary actions to be viewed on the card. Any additional primary action is viewed in the overflow menu.
 
-  :::image type="content" source="../../assets/images/Cards/overflow-menu-gif.gif" alt-text="The graphical representation shows the overflow menu experience in an Adaptive Card.":::
+:::image type="content" source="../../assets/images/Cards/overflow-menu-gif.gif" alt-text="The graphical representation shows the overflow menu experience in an Adaptive Card.":::
 
 ### Enable overflow menu
 
 To enable overflow menu, configure the `mode` property with the value as `primary` or `secondary` in the Adaptive Card schema. The following table describes the `mode` property:
 
-|Property|Type|Required|Description|
-|---|---|---|---|
-|`mode`| Enum (Primary, Secondary) |No |Whether or not the action is a primary or secondary action. Secondary actions are collapsed into an overflow menu.|
+| Property | Type                      | Required | Description                                                                                                        |
+| -------- | ------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------ |
+| `mode`   | Enum (Primary, Secondary) | No       | Whether or not the action is a primary or secondary action. Secondary actions are collapsed into an overflow menu. |
 
 The following example shows the `mode` property in the `actions` type and the `ActionSet` element:
 
@@ -966,23 +969,23 @@ In the following example, there are two primary actions and one secondary action
 
 ```json
 {
-   "type": "AdaptiveCard",
-   "actions": [
-        {
-            "type": "Action.Submit",
-            "title": "Set due date"
-        },
-        {
-            "type": "Action.OpenUrl",
-            "title": "View",
-            "url": "https://adaptivecards.microsoft.com/?topic=welcome"
-        },
-        {
-            "type": "Action.Submit",
-            "title": "Delete",
-            "mode": "secondary"
-        }
-    ]
+  "type": "AdaptiveCard",
+  "actions": [
+    {
+      "type": "Action.Submit",
+      "title": "Set due date"
+    },
+    {
+      "type": "Action.OpenUrl",
+      "title": "View",
+      "url": "https://adaptivecards.microsoft.com/?topic=welcome"
+    },
+    {
+      "type": "Action.Submit",
+      "title": "Delete",
+      "mode": "secondary"
+    }
+  ]
 }
 ```
 
@@ -997,16 +1000,16 @@ The following image is an example of overflow menu in a bot sent card and a mess
 
 In the following example, all the actions are marked as secondary, therefore, a single overflow menu appears on the card.
 
-``` json
+```json
 {
     "type": "ActionSet",
      "actions": [
 
           {
-           
+
             "type": "Action.Submit",
             "title": "view",
-            "mode": "Secondary" 
+            "mode": "Secondary"
        {
        },
             "type": "Action.submit",
@@ -1029,17 +1032,17 @@ The following example shows the overflow menu experience in Teams desktop and mo
 
 When a user selects the overflow menu on a desktop, the buttons that are set as secondary appear in the Adaptive Card.
 
-  :::image type="content" source="../../assets/images/Cards/desktop-overflow-image-1.png" alt-text="Screenshot shows an example of buttons in an Adaptive Card on Teams desktop client.":::
+:::image type="content" source="../../assets/images/Cards/desktop-overflow-image-1.png" alt-text="Screenshot shows an example of buttons in an Adaptive Card on Teams desktop client.":::
 
-  :::image type="content" source="../../assets/images/Cards/desktop-overflow-image-2.png" alt-text="Screenshot shows an example of an Adaptive Card with the list of actions in an overflow menu on Teams desktop client.":::
-  
-  :::image type="content" source="../../assets/images/Cards/desktop-overflow-menu-image-3.png" alt-text="Screenshot shows an example of an Adaptive Card with the buttons that are set as secondary as options in an overflow menu on Teams desktop client.":::
+:::image type="content" source="../../assets/images/Cards/desktop-overflow-image-2.png" alt-text="Screenshot shows an example of an Adaptive Card with the list of actions in an overflow menu on Teams desktop client.":::
+
+:::image type="content" source="../../assets/images/Cards/desktop-overflow-menu-image-3.png" alt-text="Screenshot shows an example of an Adaptive Card with the buttons that are set as secondary as options in an overflow menu on Teams desktop client.":::
 
 # [Mobile](#tab/mobile)
 
 When a user selects the overflow menu on mobile, Adaptive Card displays the buttons that are defined. There's an integrated sheet that displays an overflow menu with card related tasks with a message option. A long press on any message displays a list of related messages. This option is available only for actions.
 
-  :::image type="content" source="../../assets/images/over-flow-menu-mob-1.png" alt-text="Screenshot shows an example of overflow menu on Teams mobile client.":::
+:::image type="content" source="../../assets/images/over-flow-menu-mob-1.png" alt-text="Screenshot shows an example of overflow menu on Teams mobile client.":::
 
 ---
 
@@ -1139,143 +1142,143 @@ You can use Adaptive Cards across multiple hosts. Many of these hosts follow con
 
 You can add borders and rounded corners only to the following elements:
 
-| Element | Borders | Rounded Corners |
-| --- | :---: | :---: |
-| [`Container`](https://adaptivecards.microsoft.com/?topic=Container) | ✔️ | ✔️ |
-| [`ColumnSet`](https://adaptivecards.microsoft.com/?topic=ColumnSet) | ✔️ | ✔️ |
-| [`Column`](https://adaptivecards.microsoft.com/?topic=Column) | ✔️ | ✔️ |
-| [`Table`](https://adaptivecards.microsoft.com/?topic=Table) | ✔️ | ✔️ |
-| [`Image`](https://adaptivecards.microsoft.com/?topic=Image) | ❌ | ✔️ |
+| Element                                                             | Borders | Rounded Corners |
+| ------------------------------------------------------------------- | :-----: | :-------------: |
+| [`Container`](https://adaptivecards.microsoft.com/?topic=Container) |   ✔️    |       ✔️        |
+| [`ColumnSet`](https://adaptivecards.microsoft.com/?topic=ColumnSet) |   ✔️    |       ✔️        |
+| [`Column`](https://adaptivecards.microsoft.com/?topic=Column)       |   ✔️    |       ✔️        |
+| [`Table`](https://adaptivecards.microsoft.com/?topic=Table)         |   ✔️    |       ✔️        |
+| [`Image`](https://adaptivecards.microsoft.com/?topic=Image)         |   ❌    |       ✔️        |
 
 ### Implement borders and rounded corners in Adaptive Cards
 
 To add a border to a `Container`, `ColumnSet`, or `Column` element, set the `showBorder` property to `true` for the element in the card’s payload. To add a border to a `Table` element, set the `showGridLines` property to `true`. The border color matches the element’s style, as defined in the [`HostConfig.json`](/adaptive-cards/rendering-cards/host-config).
 
-| Property | Type | Required | Description |
-| --- | --- | --- | --- |
-| `showBorder` | Boolean | No | Adds a border to the `Container`, `ColumnSet`, or `Column` elements. |
-| `showGridLines` | Boolean | No | Adds a border to the `Table` element. Default value: `true` |
+| Property        | Type    | Required | Description                                                          |
+| --------------- | ------- | -------- | -------------------------------------------------------------------- |
+| `showBorder`    | Boolean | No       | Adds a border to the `Container`, `ColumnSet`, or `Column` elements. |
+| `showGridLines` | Boolean | No       | Adds a border to the `Table` element. Default value: `true`          |
 
 To add rounded corners to a `Container`, `ColumnSet`, `Column`, or `Table` element, set the `roundedCorners` property to `true` for the element in the card’s payload. To add rounded corners to the `Image` element, set the `style` property to `RoundedCorners` within the element.
 
-| Property | Type | Required | Description |
-| --- | --- | --- | --- |
-| `roundedCorners` | Boolean | No | Adds rounded corners to the `Container`, `ColumnSet`, `Column`, or `Table` elements. |
-| `style` | String | No | Adds rounded corners to the `Image` element when you set the value to `roundedCorners`. |
+| Property         | Type    | Required | Description                                                                             |
+| ---------------- | ------- | -------- | --------------------------------------------------------------------------------------- |
+| `roundedCorners` | Boolean | No       | Adds rounded corners to the `Container`, `ColumnSet`, `Column`, or `Table` elements.    |
+| `style`          | String  | No       | Adds rounded corners to the `Image` element when you set the value to `roundedCorners`. |
 
 The following JSON payload shows an Adaptive Card with borders and rounded corners around its elements:
 
 ```json
 {
-    "type": "AdaptiveCard",
-    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
-    "version": "1.5",
-    "body": [
+  "type": "AdaptiveCard",
+  "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "Below is a **ColumnSet** with borders and rounded corners:",
+      "wrap": true
+    },
+    {
+      "type": "ColumnSet",
+      "showBorder": true,
+      "roundedCorners": true,
+      "style": "emphasis",
+      "columns": [
         {
-            "type": "TextBlock",
-            "text": "Below is a **ColumnSet** with borders and rounded corners:",
-            "wrap": true
+          "type": "Column",
+          "width": "stretch",
+          "showBorder": true,
+          "roundedCorners": true,
+          "style": "accent",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "This is a **Column** with borders and rounded corners",
+              "wrap": true
+            }
+          ]
         },
         {
-            "type": "ColumnSet",
-            "showBorder": true,
-            "roundedCorners": true,
-            "style": "emphasis",
-            "columns": [
-                {
-                    "type": "Column",
-                    "width": "stretch",
-                    "showBorder": true,
-                    "roundedCorners": true,
-                    "style": "accent",
-                    "items": [
-                        {
-                            "type": "TextBlock",
-                            "text": "This is a **Column** with borders and rounded corners",
-                            "wrap": true
-                        }
-                    ]
-                },
-                {
-                    "type": "Column",
-                    "width": "stretch",
-                    "showBorder": true,
-                    "roundedCorners": true,
-                    "style": "good",
-                    "items": [
-                        {
-                            "type": "TextBlock",
-                            "text": "This is another **Column** with borders and rounded corners",
-                            "wrap": true
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "type": "Container",
-            "style": "attention",
-            "showBorder": true,
-            "roundedCorners": true,
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "This is a **Container** with borders and rounded corners",
-                    "wrap": true
-                }
-            ]
-        },
-        {
-            "type": "Table",
-            "roundedCorners": true,
-            "columns": [
-                {
-                    "width": 1
-                },
-                {
-                    "width": 1
-                }
-            ],
-            "rows": [
-                {
-                    "type": "TableRow",
-                    "cells": [
-                        {
-                            "type": "TableCell",
-                            "items": [
-                                {
-                                    "type": "TextBlock",
-                                    "text": "This **Table**...",
-                                    "wrap": true
-                                }
-                            ]
-                        },
-                        {
-                            "type": "TableCell",
-                            "items": [
-                                {
-                                    "type": "TextBlock",
-                                    "text": "...has borders and rounded corners",
-                                    "wrap": true
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "type": "TextBlock",
-            "text": "The below **Image** has rounded corners:",
-            "wrap": true
-        },
-        {
-            "type": "Image",
-            "url": "https://media.licdn.com/dms/image/C4E03AQF5uhIghtPzrA/profile-displayphoto-shrink_400_400/0/1517690039090?e=2147483647&v=beta&t=g1DFilNHZhah2fhaTS9ylBxGGGb2XyPA2C7LZptk4QE",
-            "width": "100px",
-            "style": "RoundedCorners"
+          "type": "Column",
+          "width": "stretch",
+          "showBorder": true,
+          "roundedCorners": true,
+          "style": "good",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "This is another **Column** with borders and rounded corners",
+              "wrap": true
+            }
+          ]
         }
-    ]
+      ]
+    },
+    {
+      "type": "Container",
+      "style": "attention",
+      "showBorder": true,
+      "roundedCorners": true,
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "This is a **Container** with borders and rounded corners",
+          "wrap": true
+        }
+      ]
+    },
+    {
+      "type": "Table",
+      "roundedCorners": true,
+      "columns": [
+        {
+          "width": 1
+        },
+        {
+          "width": 1
+        }
+      ],
+      "rows": [
+        {
+          "type": "TableRow",
+          "cells": [
+            {
+              "type": "TableCell",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "This **Table**...",
+                  "wrap": true
+                }
+              ]
+            },
+            {
+              "type": "TableCell",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "...has borders and rounded corners",
+                  "wrap": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "text": "The below **Image** has rounded corners:",
+      "wrap": true
+    },
+    {
+      "type": "Image",
+      "url": "https://media.licdn.com/dms/image/C4E03AQF5uhIghtPzrA/profile-displayphoto-shrink_400_400/0/1517690039090?e=2147483647&v=beta&t=g1DFilNHZhah2fhaTS9ylBxGGGb2XyPA2C7LZptk4QE",
+      "width": "100px",
+      "style": "RoundedCorners"
+    }
+  ]
 }
 ```
 
@@ -1285,49 +1288,49 @@ A container with many elements might lead to a long, unreadable card. Use the `m
 
 Here's how the `maxHeight` property is defined:
 
-| Property | Type | Description |
-| --- | --- | --- |
+| Property    | Type   | Description                                                                                                                                                                                              |
+| ----------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `maxHeight` | String | Defines the maximum height of the container. This property is available in `Container`, `Column`, `TableCell`, and in other containers as well.<br>You must define the value in the `<number>px` format. |
 
 The following card payload shows a container with a scroll bar:
 
 ```json
 {
-    "type": "AdaptiveCard",
-    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
-    "version": "1.5",
-    "body": [
+  "type": "AdaptiveCard",
+  "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "This is a scrollable container",
+      "wrap": true,
+      "size": "ExtraLarge",
+      "weight": "Bolder"
+    },
+    {
+      "type": "Container",
+      "style": "emphasis",
+      "showBorder": true,
+      "maxHeight": "100px",
+      "items": [
         {
-            "type": "TextBlock",
-            "text": "This is a scrollable container",
-            "wrap": true,
-            "size": "ExtraLarge",
-            "weight": "Bolder"
+          "type": "TextBlock",
+          "text": "Item 1",
+          "size": "ExtraLarge"
         },
         {
-            "type": "Container",
-            "style": "emphasis",
-            "showBorder": true,
-            "maxHeight": "100px",
-            "items": [
-                {
-                    "type": "TextBlock",
-                    "text": "Item 1",
-                    "size": "ExtraLarge"
-                },
-                {
-                    "type": "TextBlock",
-                    "text": "Item 2",
-                    "size": "ExtraLarge"
-                },
-                {
-                    "type": "TextBlock",
-                    "text": "Item 3",
-                    "size": "ExtraLarge"
-                }
-            ]
+          "type": "TextBlock",
+          "text": "Item 2",
+          "size": "ExtraLarge"
+        },
+        {
+          "type": "TextBlock",
+          "text": "Item 3",
+          "size": "ExtraLarge"
         }
-    ]
+      ]
+    }
+  ]
 }
 ```
 
@@ -1339,50 +1342,50 @@ Compound button is a special type of button with an icon, title, and description
 
 Here are the properties of the `CompoundButton` element:
 
-| Property | Required | Type | Description |
-|---------|---------|---------|---------|
-| `type` | ✔️ | String | Must be `CompoundButton`. |
-| `title` | ✔️ | String | Title of the button. Markdown isn't supported. |
-| `id` |  | String | Unique identifier for the element or action. |
-| `requires` |  | Object | A list of capabilities that the element requires the host app to support. If the host app doesn't support at least one of the listed capabilities, either the element isn't rendered or its fallback is rendered, if provided. |
-| `isVisible` |  | Boolean | Controls the visibility of the element. |
-| `separator` |  | Boolean | Controls whether a separator line must be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`. |
-| `height` |  | String | Height of the element. When set to `stretch`, the element uses the remaining vertical space in its container. <br> Allowed values: `auto`, `stretch` |
-| `horizontalAlignment` |  | String | Controls how the element must be horizontally aligned. <br> Allowed values: `Left`, `Center`, `Right` |
-| `Spacing` |  | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container. <br> Allowed values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge` |
-| `targetWidth` |  | String | Controls the card width for which the element should be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space. For more information, see [Adaptive Card responsive layout](#adaptive-card-responsive-layout). <br> Allowed values: `VeryNarrow`, `Narrow`, `Standard`, `Wide` |
-| `icon` |  | String | Icon shown on the button. |
-| `badge` |  | String | Badge shown on the button. Markdown isn't supported. |
-| `description` |  | String | Description text of the button. Markdown isn't supported. |
-| `selectAction` |  |  | Action that gets invoked when the button is selected. All Actions are allowed except `Action.ShowCard`. |
+| Property              | Required | Type    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| --------------------- | -------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `type`                | ✔️       | String  | Must be `CompoundButton`.                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `title`               | ✔️       | String  | Title of the button. Markdown isn't supported.                                                                                                                                                                                                                                                                                                                                                                                              |
+| `id`                  |          | String  | Unique identifier for the element or action.                                                                                                                                                                                                                                                                                                                                                                                                |
+| `requires`            |          | Object  | A list of capabilities that the element requires the host app to support. If the host app doesn't support at least one of the listed capabilities, either the element isn't rendered or its fallback is rendered, if provided.                                                                                                                                                                                                              |
+| `isVisible`           |          | Boolean | Controls the visibility of the element.                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `separator`           |          | Boolean | Controls whether a separator line must be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.                                                                                                                                                                                                            |
+| `height`              |          | String  | Height of the element. When set to `stretch`, the element uses the remaining vertical space in its container. <br> Allowed values: `auto`, `stretch`                                                                                                                                                                                                                                                                                        |
+| `horizontalAlignment` |          | String  | Controls how the element must be horizontally aligned. <br> Allowed values: `Left`, `Center`, `Right`                                                                                                                                                                                                                                                                                                                                       |
+| `Spacing`             |          | String  | Controls the amount of space between this element and the previous one. No space is added for the first element in a container. <br> Allowed values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`                                                                                                                                                                                                                            |
+| `targetWidth`         |          | String  | Controls the card width for which the element should be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space. For more information, see [Adaptive Card responsive layout](#adaptive-card-responsive-layout). <br> Allowed values: `VeryNarrow`, `Narrow`, `Standard`, `Wide` |
+| `icon`                |          | String  | Icon shown on the button.                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `badge`               |          | String  | Badge shown on the button. Markdown isn't supported.                                                                                                                                                                                                                                                                                                                                                                                        |
+| `description`         |          | String  | Description text of the button. Markdown isn't supported.                                                                                                                                                                                                                                                                                                                                                                                   |
+| `selectAction`        |          |         | Action that gets invoked when the button is selected. All Actions are allowed except `Action.ShowCard`.                                                                                                                                                                                                                                                                                                                                     |
 
 Here are the properties of the `icon` element:
 
-| Property | Required | Type | Description |
-|---------|---------|---------|---------|
-| `name` | ✔️ | String | Name of the icon, as per the Fluent icon directory. It's same as the name of the new icon element. |
-| `size` |  | String | Size of the icon. Allowed values: `xxSmall`, `xSmall`, `Small`, `Standard`, `Medium`, `Large`, `xLarge`, `xxLarge` |
-| `style` |  | String | Style of the icon. Allowed values: `Regular`, `Filled` |
-| `color` |  | String | Color of the icon. Allowed values: `Default`, `Dark`, `Light`, `Accent`, `Good`, `Warning`, `Attention` |
+| Property | Required | Type   | Description                                                                                                        |
+| -------- | -------- | ------ | ------------------------------------------------------------------------------------------------------------------ |
+| `name`   | ✔️       | String | Name of the icon, as per the Fluent icon directory. It's same as the name of the new icon element.                 |
+| `size`   |          | String | Size of the icon. Allowed values: `xxSmall`, `xSmall`, `Small`, `Standard`, `Medium`, `Large`, `xLarge`, `xxLarge` |
+| `style`  |          | String | Style of the icon. Allowed values: `Regular`, `Filled`                                                             |
+| `color`  |          | String | Color of the icon. Allowed values: `Default`, `Dark`, `Light`, `Accent`, `Good`, `Warning`, `Attention`            |
 
 Here's an Adaptive Card example that uses the `CompoundButton` element:
 
 ```json
-{ 
-    "type": "AdaptiveCard", 
-    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json", 
-    "version": "1.5", 
-    "body": [ 
-        { 
-            "type": "CompoundButton", 
-            "title": "Photos", 
-            "icon": { 
-                "name": "Camera" 
-            }, 
-            "description": "Add photos", 
-            "height": "stretch"
-        } 
-    ] 
+{
+  "type": "AdaptiveCard",
+  "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "CompoundButton",
+      "title": "Photos",
+      "icon": {
+        "name": "Camera"
+      },
+      "description": "Add photos",
+      "height": "stretch"
+    }
+  ]
 }
 ```
 
@@ -1394,13 +1397,13 @@ Adaptive Cards support adding icons from the [Fluent icon](https://www.figma.com
 
 Here are the properties of the `Icon` element:
 
-| Property | Description |
-| --- | --- |
-| `type` | Must be `Icon`. |
-| `name` | Name of the icon to display. For example, `calendar`. |
-| `size` | Size of the icon. </br> Allowed values: `xxSmall`, `xSmall`, `Small`, `Medium`, `Large`, `xLarge`, and `xxLarge` </br> Default value: `Standard` |
-| `color` | Color of the icon. </br> Allowed values: `Dark`, `Light`, `Accent`, `Good`, `Warning`, and `Attention` </br> Default value: `Default` |
-| `style` | Style of the icon. </br> Allowed values: `Filled`, `Regular` |
+| Property       | Description                                                                                                                                                                                                                                                     |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `type`         | Must be `Icon`.                                                                                                                                                                                                                                                 |
+| `name`         | Name of the icon to display. For example, `calendar`.                                                                                                                                                                                                           |
+| `size`         | Size of the icon. </br> Allowed values: `xxSmall`, `xSmall`, `Small`, `Medium`, `Large`, `xLarge`, and `xxLarge` </br> Default value: `Standard`                                                                                                                |
+| `color`        | Color of the icon. </br> Allowed values: `Dark`, `Light`, `Accent`, `Good`, `Warning`, and `Attention` </br> Default value: `Default`                                                                                                                           |
+| `style`        | Style of the icon. </br> Allowed values: `Filled`, `Regular`                                                                                                                                                                                                    |
 | `selectAction` | Action that's invoked when the icon is tapped or selected. All Action types are supported except `Action.ShowCard`. <br> Allowed values: `Action.Execute`, `Action.OpenUrl`, `Action.Popover`, `Action.ResetInputs`, `Action.Submit`, `Action.ToggleVisibility` |
 
 Here's an Adaptive Card example that uses the `Icon` element and the `iconUrl` property in an action button:
@@ -1416,25 +1419,25 @@ Here's an Adaptive Card example that uses the `Icon` element and the `iconUrl` p
       "text": "Here's an Icon element"
     },
     {
-  "type": "Icon",
-        "name": "Calendar",
-        "size": "Medium",
-        "style": "Filled",
-        "color": "Accent"
+      "type": "Icon",
+      "name": "Calendar",
+      "size": "Medium",
+      "style": "Filled",
+      "color": "Accent"
     },
     {
       "type": "TextBlock",
       "text": "Here's an Icon element in a button"
     }
- ],
- "actions": [
-        {
-            "type": "Action.OpenUrl",
-            "title": "Filled icon",
-            "url": "https://www.microsoft.com",
-            "iconUrl": "icon:AccessTime,filled"
-        }
-    ]
+  ],
+  "actions": [
+    {
+      "type": "Action.OpenUrl",
+      "title": "Filled icon",
+      "url": "https://www.microsoft.com",
+      "iconUrl": "icon:AccessTime,filled"
+    }
+  ]
 }
 ```
 
@@ -1450,38 +1453,38 @@ The following payload shows an Adaptive Card with input-enabled and read-only st
 
 ```json
 {
-    "type": "AdaptiveCard",
-    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
-    "version": "1.5",
-    "body": [
-        {
-            "type": "TextBlock",
-            "size": "Large",
-            "text": "Rating input"
-        },
-        {
-            "type": "Input.Rating",
-            "id": "rating1",
-            "label": "Pick a rating",
-            "size": "medium",
-            "color": "marigold",
-            "isRequired": true,
-            "errorMessage": "Please pick a rating"
-        },
-        {
-            "type": "TextBlock",
-            "size": "large",
-            "text": "Read-only rating",
-            "separator": true,
-            "spacing": "ExtraLarge"
-        },
-        {
-            "type": "Rating",
-            "max": 20,
-            "value": 3.2,
-            "color": "marigold"
-        }
-    ]
+  "type": "AdaptiveCard",
+  "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "TextBlock",
+      "size": "Large",
+      "text": "Rating input"
+    },
+    {
+      "type": "Input.Rating",
+      "id": "rating1",
+      "label": "Pick a rating",
+      "size": "medium",
+      "color": "marigold",
+      "isRequired": true,
+      "errorMessage": "Please pick a rating"
+    },
+    {
+      "type": "TextBlock",
+      "size": "large",
+      "text": "Read-only rating",
+      "separator": true,
+      "spacing": "ExtraLarge"
+    },
+    {
+      "type": "Rating",
+      "max": 20,
+      "value": 3.2,
+      "color": "marigold"
+    }
+  ]
 }
 ```
 
@@ -1489,60 +1492,60 @@ The following payload shows an Adaptive Card with input-enabled and read-only st
 
 Here are the properties of the `Input.Rating` element:
 
-| Property | Required | Type | Description |
-|----|----|----|----|
-| `type` | ✔️ | String | Must be `Input.Rating`. |
-| `allowHalfSteps` | | Boolean | Controls if the user can select half stars. Default value: `false` |
-| `color` | | String | The color of the stars.<br>Allowed values: `Neutral`, `Marigold`<br>Default value: `Neutral` |
-| `errorMessage` | | String | The error message to display when the input fails validation. |
-| `fallback` | | One of Object or String | An alternate element to render if the type of this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Allowed values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
-| `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element must be displayed. |
-| `height` | | String | Controls the height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Allowed values: `auto`, `stretch`<br>Default value: `auto` |
-| `id` | ✔️ | String | A unique identifier for the element or action. |
-| `isRequired` | | Boolean | Determines whether the input is required.<br>Default value: `false` |
-| `isVisible` | | Boolean | Determines the visibility of the element.<br>Default value: `true` |
-| `label` | | String | The label of the input. |
-| `lang` | | String | The locale associated with the element. |
-| `max` | | Number | The number of stars to display. The default and maximum supported number of stars is five. |
-| `requires` | | Object | A list of capabilities the element requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the element isn't rendered or its fallback is rendered, if provided.<br>Allowed values: `HostCapabilities` |
-| `separator` | | Boolean | Determines whether a separator line should be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.<br>Default value: `false` |
-| `size` | | String | The size of the stars.<br>Allowed values: `Medium`, `Large`<br>Default value: `Large` |
-| `spacing` | | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container.<br>Allowed values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default` |
-| `targetWidth` | | String | Controls the card width for which the element should be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space. For more information, see [Adaptive Card responsive layout](#adaptive-card-responsive-layout).<br>Allowed values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
-| `value` | | Number | The default value of the input. This value can't exceed `max`, if `max` is specified. |
-| `valueChangedAction` | | Action | An `Action.ResetInputs` action that will be executed when the value of the input changes.<br>Allowed value: `Action.ResetInputs` |
+| Property             | Required | Type                    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| -------------------- | -------- | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `type`               | ✔️       | String                  | Must be `Input.Rating`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `allowHalfSteps`     |          | Boolean                 | Controls if the user can select half stars. Default value: `false`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| `color`              |          | String                  | The color of the stars.<br>Allowed values: `Neutral`, `Marigold`<br>Default value: `Neutral`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| `errorMessage`       |          | String                  | The error message to display when the input fails validation.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `fallback`           |          | One of Object or String | An alternate element to render if the type of this element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Allowed values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
+| `grid.area`          |          | String                  | The area of a `Layout.AreaGrid` layout in which an element must be displayed.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `height`             |          | String                  | Controls the height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Allowed values: `auto`, `stretch`<br>Default value: `auto`                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `id`                 | ✔️       | String                  | A unique identifier for the element or action.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `isRequired`         |          | Boolean                 | Determines whether the input is required.<br>Default value: `false`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| `isVisible`          |          | Boolean                 | Determines the visibility of the element.<br>Default value: `true`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| `label`              |          | String                  | The label of the input.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `lang`               |          | String                  | The locale associated with the element.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `max`                |          | Number                  | The number of stars to display. The default and maximum supported number of stars is five.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `requires`           |          | Object                  | A list of capabilities the element requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the element isn't rendered or its fallback is rendered, if provided.<br>Allowed values: `HostCapabilities`                                                                                                                                                                                                                                                                                                                                                                                        |
+| `separator`          |          | Boolean                 | Determines whether a separator line should be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.<br>Default value: `false`                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `size`               |          | String                  | The size of the stars.<br>Allowed values: `Medium`, `Large`<br>Default value: `Large`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `spacing`            |          | String                  | Controls the amount of space between this element and the previous one. No space is added for the first element in a container.<br>Allowed values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default`                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `targetWidth`        |          | String                  | Controls the card width for which the element should be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space. For more information, see [Adaptive Card responsive layout](#adaptive-card-responsive-layout).<br>Allowed values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide`                                                                   |
+| `value`              |          | Number                  | The default value of the input. This value can't exceed `max`, if `max` is specified.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `valueChangedAction` |          | Action                  | An `Action.ResetInputs` action that will be executed when the value of the input changes.<br>Allowed value: `Action.ResetInputs`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 
 ### Rating
 
 Here are the properties of the `Rating` element:
 
-| Property | Required | Type | Description |
-|----|----|----|----|
-| `type` | ✔️ | String | Must be `Rating`. |
-| `color` | | String | The color of the stars.<br>Allowed values: `Neutral`, `Marigold`<br>Default value: `Neutral` |
-| `count` | | Number | The number of "votes" associated with the rating. |
-| `fallback` | | One of Object or String | An alternate element to render if this type of element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Allowed values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
-| `grid.area` | | String | The area of a `Layout.AreaGrid` layout in which an element must be displayed. |
-| `height` | | String | The height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Allowed values: `Auto`, `Stretch` |
-| `horizontalAlignment` | | String | Controls how the element should be horizontally aligned.<br>Allowed values: `Left`, `Center`, `Right` |
-| `id` | | String | A unique identifier for the element or action. |
-| `isVisible` | | Boolean | Controls the visibility of the element.<br>Default value: `true` |
-| `lang` | | String | The locale associated with the element. |
-| `max` | | Number | The number of stars to display. The default and maximum supported number of stars is five. |
-| `requires` | | Object | A list of capabilities the element requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the element isn't rendered or its fallback is rendered, if provided.<br>Allowed value: `HostCapabilities` |
-| `separator` | | Boolean | Controls whether a separator line should be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.<br>Default value: `false` |
-| `size` | | String | The size of the stars.<br>Allowed values: `Medium`, `Large`<br>Default value: `Large` |
-| `spacing` | | String | Controls the amount of space between this element and the previous one. No space is added for the first element in a container.<br>Allowed values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default` |
-| `style` | | String | The style of the stars. In compact mode, only one star is displayed.<br>Allowed values: `Default`, `Compact`<br>Default value: `Default` |
-| `targetWidth` | | String | Controls the card width for which the element should be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space. For more information, see [Adaptive Card responsive layout](#adaptive-card-responsive-layout).<br>Allowed values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide` |
-| `value` | | Number | The value of the rating. This value must be between zero and `max`, if `max` is specified. |
+| Property              | Required | Type                    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| --------------------- | -------- | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `type`                | ✔️       | String                  | Must be `Rating`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `color`               |          | String                  | The color of the stars.<br>Allowed values: `Neutral`, `Marigold`<br>Default value: `Neutral`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| `count`               |          | Number                  | The number of "votes" associated with the rating.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `fallback`            |          | One of Object or String | An alternate element to render if this type of element is unsupported or if the host application doesn't support all the capabilities specified in the `requires` property.<br>Allowed values: `Container`, `ActionSet`, `ColumnSet`, `Media`, `RichTextBlock`, `Table`, `TextBlock`, `FactSet`, `ImageSet`, `Image`, `Input.Text`, `Input.Date`, `Input.Time`, `Input.Number`, `Input.Toggle`, `Input.ChoiceSet`, `Input.Rating`, `Rating`, `CompoundButton`, `Icon`, `Chart.Donut`, `Chart.Pie`, `Chart.VerticalBar.Grouped`, `Chart.VerticalBar`, `Chart.HorizontalBar`, `Chart.HorizontalBar.Stacked`, `Chart.Line`, `Chart.Gauge`, `CodeBlock`, `drop` |
+| `grid.area`           |          | String                  | The area of a `Layout.AreaGrid` layout in which an element must be displayed.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| `height`              |          | String                  | The height of the element. When set to `stretch`, the element uses the remaining vertical space in its container.<br>Allowed values: `Auto`, `Stretch`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `horizontalAlignment` |          | String                  | Controls how the element should be horizontally aligned.<br>Allowed values: `Left`, `Center`, `Right`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `id`                  |          | String                  | A unique identifier for the element or action.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| `isVisible`           |          | Boolean                 | Controls the visibility of the element.<br>Default value: `true`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| `lang`                |          | String                  | The locale associated with the element.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `max`                 |          | Number                  | The number of stars to display. The default and maximum supported number of stars is five.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `requires`            |          | Object                  | A list of capabilities the element requires the host application to support. If the host application doesn't support at least one of the listed capabilities, the element isn't rendered or its fallback is rendered, if provided.<br>Allowed value: `HostCapabilities`                                                                                                                                                                                                                                                                                                                                                                                     |
+| `separator`           |          | Boolean                 | Controls whether a separator line should be displayed above the element to visually separate it from the previous element. No separator is displayed for the first element in a container, even if this property is set to `true`.<br>Default value: `false`                                                                                                                                                                                                                                                                                                                                                                                                |
+| `size`                |          | String                  | The size of the stars.<br>Allowed values: `Medium`, `Large`<br>Default value: `Large`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `spacing`             |          | String                  | Controls the amount of space between this element and the previous one. No space is added for the first element in a container.<br>Allowed values: `None`, `Small`, `Default`, `Medium`, `Large`, `ExtraLarge`, `Padding`<br>Default value: `Default`                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `style`               |          | String                  | The style of the stars. In compact mode, only one star is displayed.<br>Allowed values: `Default`, `Compact`<br>Default value: `Default`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| `targetWidth`         |          | String                  | Controls the card width for which the element should be displayed. If `targetWidth` isn't specified, the element is rendered at all card widths. Using `targetWidth` makes it possible to author responsive cards that adapt their layout to the available horizontal space. For more information, see [Adaptive Card responsive layout](#adaptive-card-responsive-layout).<br>Allowed values: `VeryNarrow`, `Narrow`, `Standard`, `Wide`, `atLeast:VeryNarrow`, `atMost:VeryNarrow`, `atLeast:Narrow`, `atMost:Narrow`, `atLeast:Standard`, `atMost:Standard`, `atLeast:Wide`, `atMost:Wide`                                                               |
+| `value`               |          | Number                  | The value of the rating. This value must be between zero and `max`, if `max` is specified.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
 ## Format cards with HTML
 
 The following card types support HTML formatting in Teams:
 
-* Connector cards for Microsoft 365 Groups: Limited Markdown and HTML formatting are supported in connector card for Microsoft 365 Groups.
-* Hero and thumbnail cards: HTML tags are supported for simple cards, such as the hero and thumbnail cards.
+- Connector cards for Microsoft 365 Groups: Limited Markdown and HTML formatting are supported in connector card for Microsoft 365 Groups.
+- Hero and thumbnail cards: HTML tags are supported for simple cards, such as the hero and thumbnail cards.
 
 Formatting is different between the desktop and the mobile versions of Teams for connector cards for Microsoft 365 Groups and simple cards. In this section, you can go through the HTML format example for connector cards and simple cards.
 
@@ -1550,18 +1553,18 @@ Formatting is different between the desktop and the mobile versions of Teams for
 
 Connector cards support limited Markdown and HTML formatting.
 
-| Style | Example | HTML |
-| --- | --- | --- |
-| Bold | **text** | `<strong>text</strong>` |
-| Italic | _text_ | `<em>text</em>` |
-| Header (levels 1&ndash;3) | **Text** | `<h3>Text</h3>` |
-| Strikethrough | ~~text~~ | `<strike>text</strike>` |
-| Unordered list | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
-| Ordered list | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
-| Preformatted text | `text` | `<pre>text</pre>` |
-| Blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
-| Hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
-| Image link | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| Style                     | Example                                                      | HTML                                                           |
+| ------------------------- | ------------------------------------------------------------ | -------------------------------------------------------------- |
+| Bold                      | **text**                                                     | `<strong>text</strong>`                                        |
+| Italic                    | _text_                                                       | `<em>text</em>`                                                |
+| Header (levels 1&ndash;3) | **Text**                                                     | `<h3>Text</h3>`                                                |
+| Strikethrough             | ~~text~~                                                     | `<strike>text</strike>`                                        |
+| Unordered list            | <ul><li>text</li><li>text</li></ul>                          | `<ul><li>text</li><li>text</li></ul>`                          |
+| Ordered list              | <ol><li>text</li><li>text</li></ol>                          | `<ol><li>text</li><li>text</li></ol>`                          |
+| Preformatted text         | `text`                                                       | `<pre>text</pre>`                                              |
+| Blockquote                | <blockquote>text</blockquote>                                | `<blockquote>text</blockquote>`                                |
+| Hyperlink                 | [Bing](https://www.bing.com/)                                | `<a href="https://www.bing.com/">Bing</a>`                     |
+| Image link                | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
 In connector cards, newlines are rendered in HTML using the `<p>` tag.
 
@@ -1577,8 +1580,8 @@ On iOS, HTML formatting appears as shown in the following image:
 
 Connector cards using HTML for iOS include the following issues:
 
-* Inline images aren't rendered on iOS using either Markdown or HTML in connector cards.
-* Preformatted text is rendered but doesn't have a gray background.
+- Inline images aren't rendered on iOS using either Markdown or HTML in connector cards.
+- Preformatted text is rendered but doesn't have a gray background.
 
 On Android, HTML formatting appears as shown in the following image:
 
@@ -1588,7 +1591,7 @@ On Android, HTML formatting appears as shown in the following image:
 
 The following code shows an example of formatting for HTML connector cards:
 
-``` json
+```json
 {
   "contentType": "application/vnd.microsoft.teams.card.o365connector",
   "content": {
@@ -1597,61 +1600,60 @@ The following code shows an example of formatting for HTML connector cards:
     "summary": "Summary",
     "title": "Connector Card HTML formatting",
     "sections": [
-        {
-            "text": "This is some <strong>bold</strong> text"
-        },
-        {
-            "text": "This is some <em>italic</em> text"
-        },
-        {
-            "text": "This is some <strike>strikethrough</strike> text"
-        },
-        {
-            "text": "<h1>Header 1</h1>\r<h2>Header 2</h2>\r <h3>Header 3</h3>"
-        },
-        {
-            "text": "bullet list <ul><li>text</li><li>text</li></ul>"
-        },
-        {
-            "text": "ordered list <ol><li>text</li><li>text</li></ol>"
-        },
-        {
-            "text": "hyperlink <a href=\"https://www.bing.com/\">Bing</a>"
-        },
-        {
-            "text": "embedded image <img src=\"https://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img>"
-        },
-        {
-            "text": "preformatted text <pre>text</pre>"
-        },
-        {
-            "text": "Paragraphs <p>Line a</p><p>Line b</p>"
-        },
-        {
-            "text": "<blockquote>Blockquote text</blockquote>"
-        }
-     ]
+      {
+        "text": "This is some <strong>bold</strong> text"
+      },
+      {
+        "text": "This is some <em>italic</em> text"
+      },
+      {
+        "text": "This is some <strike>strikethrough</strike> text"
+      },
+      {
+        "text": "<h1>Header 1</h1>\r<h2>Header 2</h2>\r <h3>Header 3</h3>"
+      },
+      {
+        "text": "bullet list <ul><li>text</li><li>text</li></ul>"
+      },
+      {
+        "text": "ordered list <ol><li>text</li><li>text</li></ol>"
+      },
+      {
+        "text": "hyperlink <a href=\"https://www.bing.com/\">Bing</a>"
+      },
+      {
+        "text": "embedded image <img src=\"https://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img>"
+      },
+      {
+        "text": "preformatted text <pre>text</pre>"
+      },
+      {
+        "text": "Paragraphs <p>Line a</p><p>Line b</p>"
+      },
+      {
+        "text": "<blockquote>Blockquote text</blockquote>"
+      }
+    ]
   }
 }
-
 ```
 
 # [HTML format for hero and thumbnail cards](#tab/simple-html)
 
 HTML tags are supported for simple cards, such as the hero and thumbnail cards. Markdown isn't supported.
 
-| Style | Example | HTML |
-| --- | --- | --- |
-| Bold | **text** | `<strong>text</strong>` |
-| Italic | _text_ | `<em>text</em>` |
-| Header (levels 1&ndash;3) | **Text** | `<h3>Text</h3>` |
-| Strikethrough | ~~text~~ | `<strike>text</strike>` |
-| Unordered list | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
-| Ordered list | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
-| Preformatted text | `text` | `<pre>text</pre>` |
-| Blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
-| Hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
-| Image link |<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>| `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| Style                     | Example                                                      | HTML                                                           |
+| ------------------------- | ------------------------------------------------------------ | -------------------------------------------------------------- |
+| Bold                      | **text**                                                     | `<strong>text</strong>`                                        |
+| Italic                    | _text_                                                       | `<em>text</em>`                                                |
+| Header (levels 1&ndash;3) | **Text**                                                     | `<h3>Text</h3>`                                                |
+| Strikethrough             | ~~text~~                                                     | `<strike>text</strike>`                                        |
+| Unordered list            | <ul><li>text</li><li>text</li></ul>                          | `<ul><li>text</li><li>text</li></ul>`                          |
+| Ordered list              | <ol><li>text</li><li>text</li></ol>                          | `<ol><li>text</li><li>text</li></ol>`                          |
+| Preformatted text         | `text`                                                       | `<pre>text</pre>`                                              |
+| Blockquote                | <blockquote>text</blockquote>                                | `<blockquote>text</blockquote>`                                |
+| Hyperlink                 | [Bing](https://www.bing.com/)                                | `<a href="https://www.bing.com/">Bing</a>`                     |
+| Image link                | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
 ### Mobile and desktop differences for simple cards
 
@@ -1683,15 +1685,15 @@ You can test formatting in your own cards by modifying this code, where the text
 
 ## Code samples
 
-| S.No. | Description |.NET | Node.js | Manifest |
-|:--|:--|:--|---|---|
-| 1 | This sample demonstrates how to use various formatting styles in Adaptive Cards such as mentions, persona icons, and responsive layout. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/csharp/demo-manifest/bot-formatting-cards.zip) |
+| S.No. | Description                                                                                                                             | .NET                                                                                                       | Node.js                                                                                                    | Manifest                                                                                                                                          |
+| :---- | :-------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1     | This sample demonstrates how to use various formatting styles in Adaptive Cards such as mentions, persona icons, and responsive layout. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/csharp/demo-manifest/bot-formatting-cards.zip) |
 
 ## See also
 
-* [Cards and dialogs](../cards-and-task-modules.md)
-* [Use dialogs from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
-* [Schema explorer for Adaptive Cards](https://adaptivecards.microsoft.com/?topic=AdaptiveCard)
-* [Create connectors for Microsoft 365 Groups](../../webhooks-and-connectors/how-to/connectors-creating.md)
-* [Create Incoming Webhooks](../../webhooks-and-connectors/how-to/add-incoming-webhook.md)
-* [Adaptive Card Templating SDKs](/adaptive-cards/templating/sdk)
+- [Cards and dialogs](../cards-and-task-modules.md)
+- [Use dialogs from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
+- [Schema explorer for Adaptive Cards](https://adaptivecards.microsoft.com/?topic=AdaptiveCard)
+- [Create connectors for Microsoft 365 Groups](../../webhooks-and-connectors/how-to/connectors-creating.md)
+- [Create Incoming Webhooks](../../webhooks-and-connectors/how-to/add-incoming-webhook.md)
+- [Adaptive Card Templating SDKs](/adaptive-cards/templating/sdk)
