@@ -11,7 +11,7 @@ ms.date: 09/12/2025
 
 Shared channels in Microsoft Teams enable collaboration across teams and organizations. 
 Users in these channels are of two types: 
-- **Direct members**: These users are added explicitly to the channel
+- **Direct members**: These users are added explicitly to the channel.
 - **Indirect members**: These users access the channel through a shared team.
 
 Bots in shared channels can automate workflows, deliver notifications, and respond to user actions in real time. You can integrate bots into shared channels to streamline collaboration. 
@@ -129,20 +129,16 @@ When a shared channel is added to another team, the Bot Framework might receive 
             ITurnContext<IConversationUpdateActivity> turnContext,
             CancellationToken cancellationToken)
         {
-            // Always present on Teams activities
             var tcd = turnContext.Activity.GetChannelData<TeamsChannelData>();
             var eventType = tcd?.EventType?.ToLowerInvariant();
 
-            // Read extended shared-channel shape (safe even if fields are absent)
             var extended = turnContext.Activity.GetChannelData<SharedChannelChannelData>();
 
-            // Also keep a raw JObject for logging / future-proof access
             var raw = turnContext.Activity.ChannelData as JObject
                       ?? (turnContext.Activity.ChannelData != null
                           ? JObject.FromObject(turnContext.Activity.ChannelData)
                           : new JObject());
 
-            // Helpful baseline log
             _logger.LogInformation("ConversationUpdate eventType={EventType}, channelId={ChannelId}, teamId={TeamId}",
                 eventType, tcd?.Channel?.Id, tcd?.Team?.Id);
 
@@ -150,7 +146,7 @@ When a shared channel is added to another team, the Bot Framework might receive 
             {
                 case "channelshared":
                 {
-                    var hostTeam = extended?.Team; // The channel's host team
+                    var hostTeam = extended?.Team; 
                     var sharedWith = extended?.SharedWithTeams ?? new List<TeamInfoEx>();
 
                     _logger.LogInformation("ChannelShared: hostTeam={HostTeamId}, sharedWithCount={Count}",
@@ -162,9 +158,8 @@ When a shared channel is added to another team, the Bot Framework might receive 
                             team.Id, team.Name, team.AadGroupId, team.TenantId);
                     }
 
-                    // Optional: surface a quick confirmation in-channel
                     await turnContext.SendActivityAsync(
-                        MessageFactory.Text($"✅ Channel shared with {sharedWith.Count} team(s)."),
+                        MessageFactory.Text($" Channel shared with {sharedWith.Count} team(s)."),
                         cancellationToken);
                     break;
                 }
@@ -182,13 +177,12 @@ When a shared channel is added to another team, the Bot Framework might receive 
                     }
 
                     await turnContext.SendActivityAsync(
-                        MessageFactory.Text($"❎ Channel unshared from {unsharedFrom.Count} team(s)."),
+                        MessageFactory.Text($" Channel unshared from {unsharedFrom.Count} team(s)."),
                         cancellationToken);
                     break;
                 }
 
                 default:
-                    // No-op; continue normal routing
                     break;
             }
 
