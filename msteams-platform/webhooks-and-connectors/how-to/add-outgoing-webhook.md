@@ -29,7 +29,7 @@ The following table provides the features and description of Outgoing Webhooks:
 | ------- | ----------- |
 | Scoped configuration| Webhooks are scoped at the team level. Mandatory setup process for each adds an Outgoing Webhook. |
 | Reactive messaging| Users must use **@mention** for the webhook to receive messages. The users can only message an Outgoing Webhook in public channels and not within the personal or private scope. |
-|Standard HTTP message exchange|Responses appear in the same chain as the original request message and can include any Bot Framework message content. For example, rich text, images, cards, and emojis. Although Outgoing Webhooks can use cards, they can't use any card actions except for `openURL`.|
+|Standard HTTP message exchange|Responses appear in the same chain as the original request message and can include any Microsoft 365 Agents SDK message content. For example, rich text, images, cards, and emojis. Although Outgoing Webhooks can use cards, they can't use any card actions except for `openURL`.|
 | Teams API method support|Outgoing Webhooks sends an HTTP POST to a web service and gets a response. They can't access any other APIs, such as retrieve the roster or list of channels in a team.|
 
 ## Create Outgoing Webhooks
@@ -78,7 +78,7 @@ The following scenario provides the details to add an Outgoing Webhook:
 
 **Create a URL on your app's server to accept and process a POST request with a JSON payload**
 
-Your service receives messages in a standard Azure bot service messaging schema. The Bot Framework connector is a RESTful service that empowers to process the interchange of JSON formatted messages through HTTPS protocols as documented in the [Azure Bot Service API](/bot-framework/rest-api/bot-framework-rest-connector-api-reference). Alternatively, you can follow the Microsoft Bot Framework SDK to process and parse messages. For more information, see [overview of Azure Bot Service](/azure/bot-service/bot-service-overview-introduction).
+Your service receives messages in a standard Azure bot service messaging schema. The Microsoft 365 Agents SDK connector is a RESTful service that empowers to process the interchange of JSON formatted messages through HTTPS protocols as documented in the [Azure Bot Service API](/bot-framework/rest-api/bot-framework-rest-connector-api-reference). Alternatively, you can follow the Microsoft 365 Agents SDK to process and parse messages. For more information, see [overview of Azure Bot Service](/azure/bot-service/bot-service-overview-introduction).
 
 Outgoing Webhooks are scoped to the `team` level and are visible to all the team members. Users need to **@mention** the name of the Outgoing Webhook to invoke it in the channel.
 

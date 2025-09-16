@@ -57,7 +57,7 @@ Before you start to learn how to build Incoming Webhooks, you may also want to k
 | Send a welcome message | Yes | Yes | No |
 | Trigger supported |All triggers are supported. | All triggers are supported. <br> If you use Agents Toolkit, you can quickly get a template project with the following triggers: <br> • Time trigger hosted on Azure functions. <br> • Express HTTP trigger hosted on Azure app service. <br> • HTTP trigger hosted on Azure Functions.| All triggers are supported.|
 | Building Tools |[Quick start - Microsoft Graph](https://developer.microsoft.com/graph/quick-start) | • [Agents Toolkit Overview for Visual Studio Code](../toolkit/agents-toolkit-fundamentals.md) <br> • [Agents Toolkit Overview for Visual Studio](../toolkit/toolkit-v4/agents-toolkit-fundamentals-vs.md) <br> • [Microsoft 365 Agents Toolkit CLI](../toolkit/microsoft-365-agents-toolkit-CLI.md) <br> • [TeamsFx SDK](../toolkit/TeamsFx-SDK.md) | No tools are required. |
-| Cloud resource required | Microsoft Entra app  | Azure Bot Framework  | No resources are required. |
+| Cloud resource required | Microsoft Entra app  | Azure Microsoft 365 Agents SDK  | No resources are required. |
 | Tutorial | • [Send activity feed notifications to users in Microsoft Teams](/graph/teams-send-activityfeednotifications) <br> • [Send activity feed notification](../sbs-graphactivity-feedbroadcast.yml) | [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml) | [Incoming Webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification) |
 
 ### Connectors for Microsoft 365 Groups
