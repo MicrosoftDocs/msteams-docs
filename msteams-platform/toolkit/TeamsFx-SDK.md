@@ -174,7 +174,7 @@ Required configurations are `authorityHost`, `tenantId`, `clientId`, `clientSecr
 
 Bot related classes are stored under [bot folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/bot).
 
-`TeamsBotSsoPrompt` integrates with the bot framework. It simplifies the authentication process when you develop bot application and want to use the bot SSO.
+`TeamsBotSsoPrompt` integrates with the Microsoft 365 Agents SDK. It simplifies the authentication process when you develop bot application and want to use the bot SSO.
 
 The following code is an example to create `TeamsBotSsoPrompt`:
 
