@@ -325,7 +325,7 @@
       displayName: ACP
   - name: SDKs
     items:
-    - name: Teams AI library v2 (preview)
+    - name: Teams AI library v2
       href: /microsoftteams/platform/teams-ai-library/welcome
     - name: TeamsFx SDK
       href: toolkit/TeamsFx-SDK.md
@@ -398,7 +398,7 @@
   - name: Custom engine agent overview
     href: /microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     displayName: AI bot, Teams AI library, custom agent
-  - name: Teams AI library v2 (preview)
+  - name: Teams AI library v2
     items:
       - name: Get started
         href: /microsoftteams/platform/teams-ai-library/welcome
