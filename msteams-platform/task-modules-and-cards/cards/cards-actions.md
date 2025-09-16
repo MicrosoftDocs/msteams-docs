@@ -27,7 +27,7 @@ Cards used by bots and message extensions in Microsoft Teams support the followi
 >
 >* Teams does not support `CardAction` types not listed in the previous table.
 >* Teams does not support the `potentialActions` property.
->* Card actions are different than [suggested actions](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript&preserve-view=true#suggest-action-using-button) in Bot Framework or Azure Bot Service.
+>* Card actions are different than [suggested actions](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript&preserve-view=true#suggest-action-using-button) in Microsoft 365 Agents SDK or Azure Bot Service.
 >* If you are using a card action as part of a message extension, the actions do not work until the card is submitted to the channel. The actions do not work while the card is in the compose message box.
 
 ## Action type openUrl
@@ -440,12 +440,12 @@ In the Adaptive Card schema, the `data` property for Action.Submit is either a `
 * `string`: A string submit action automatically sends a message from the user to the bot and is visible in the conversation history.
 * `object`: An object submit action automatically sends an invisible message from the user to the bot that contains hidden data. An object submit action populates the activity’s value property while the text property is empty.
 
-Action.Submit is equivalent to the Bot Framework actions. You can also modify the Adaptive Card `Action.Submit` payload to support existing Bot Framework actions using a `msteams` property in the `data` object of `Action.Submit`. When you define the `msteams` property under `data`, the Teams client defines the behavior of `Action.Submit`. If the `msteams` property isn't defined in the schema, `Action.Submit` works like a regular Bot Framework invoke action, where; the submit action triggers an invoke call to the bot and the bot receives the payload with all the input values defined in the input fields.
+Action.Submit is equivalent to the Microsoft 365 Agents SDK actions. You can also modify the Adaptive Card `Action.Submit` payload to support existing Microsoft 365 Agents SDK actions using a `msteams` property in the `data` object of `Action.Submit`. When you define the `msteams` property under `data`, the Teams client defines the behavior of `Action.Submit`. If the `msteams` property isn't defined in the schema, `Action.Submit` works like a regular Microsoft 365 Agents SDK invoke action, where; the submit action triggers an invoke call to the bot and the bot receives the payload with all the input values defined in the input fields.
 
 > [!NOTE]
 >
 >* The bot doesn’t receive user input unless the user submits their actions in the Adaptive Card through a button, such as **Save** or **Submit**. For example, the bot doesn't consider user actions, such as selecting an option from multiple choices or filling out fields in a form, as inputs unless the user submits them.
->* Adding `msteams` to data with a Bot Framework action doesn't work with an Adaptive Card dialog.
+>* Adding `msteams` to data with a Microsoft 365 Agents SDK action doesn't work with an Adaptive Card dialog.
 >* Primary or destructive `ActionStyle` isn't supported in Teams.
 >* Your app has five seconds to respond to the invoke message.
 
