@@ -11,7 +11,6 @@ ms.date: 04/09/2025
 # Microsoft Teams connect shared channels
 
 Teams connect shared channels, which facilitates secure collaboration seamlessly. Allow external members outside of your organization to collaborate with internal users in Teams without changing their user context. You can create and share a shared channel with:
-Teams connect shared channels, which facilitates secure collaboration seamlessly. Allow external members outside of your organization to collaborate with internal users in Teams without changing their user context. You can create and share a shared channel with:
 
 * Members of another team within the same organization
 * Individuals within the same organization
@@ -97,15 +96,16 @@ This subscription enables apps to monitor membership changes in shared channels 
 
 ### Validate user access for membership updates
 
-When an app receives a 'member removed' notification for an indirect membership update, it’s important to verify whether the user is removed from the shared channel, especially since the same user might have both direct and indirect membership. For example, if a user is removed from a team that shares a channel, the app should confirm whether the user's access to the shared channel is actually revoked. Use the **doesUserHaveAccess** API to determine whether the user is removed from the shared channel.
-See [doesUserHaveAccess API](/graph/api/channel-doesuserhaveaccess?view=graph-rest-beta&tabs=http) to learn more about user accesses and relevant permissions.
+When an app receives a 'member removed' notification for an indirect membership update, it’s important to verify whether the user is removed from the shared channel, especially since the same user might have both direct and indirect membership. For example, if a user is removed from a team that shares a channel, the app should confirm whether the user's access to the shared channel is actually revoked.
+Use the **doesUserHaveAccess** API to determine whether the user is removed from the shared channel.
+See [doesUserHaveAccess API](/graph/api/channel-doesuserhaveaccess?view=graph-rest-beta&tabs=http&preserve-view=true) to learn more about user accesses and relevant permissions.
 
 ```http
 GET /teams/{team-id}/channels/{channel-id}/doesUserHaveAccess(userId='@userid',tenantId='@TenantID',userPrincipalName='@UserPrincipalName')
 ```
 
 When a member receives a 'member added' notification for an indirect membership update,
-See [allMembers API](/graph/api/channel-list-allmembers?view=graph-rest-beta&branch=pr-en-us-27360&tabs=http), to refresh the list of all memebers.
+See [allMembers API](/graph/api/channel-list-allmembers?view=graph-rest-beta&branch=pr-en-us-27360&tabs=http&preserve-view=true), to refresh the list of all memebers.
 
 ```http
 GET /teams/{team-id}/channels/{channel-id}/allMembers
@@ -121,7 +121,7 @@ To reduce notification overload during membership updates, such as when a shared
 
 `/teams/{team-id}/channels/{channel-id}/sharedWithTeams`
 
-The sharedWithTeams subscription sends a single notification when a channel is shared or unshared with a team. It avoids thousands of per-user notifications and improves performance for apps that monitor membership changes. Ensure that you update the shared channel member list using the /allMembers API after receiving a 'shared with' or 'unshared from' team notification.
+The sharedWithTeams subscription sends a single notification when a channel is shared or unshared with a team. It avoids thousands of per-user notifications and improves performance for apps that monitor membership changes. Ensure that you update the shared channel member list using the [allMembers](/graph/api/channel-list-allmembers?branch=main&branchFallbackFrom=pr-en-us-13010&view=graph-rest-1.0&tabs=http&preserve-view=true) API  after receiving a 'shared with' or 'unshared from' team notification.
 
 > [!NOTE]
 > To support membership updates in shared channels, apps using resource-specific consent (RSC) must request extended permissions.
@@ -173,32 +173,6 @@ You can classify members as in-tenant or out-tenant by comparing the `TenantId` 
 
 3. Compare the `TenantId` of the member to the `ownerTenantId` property
 <a name='azure-ad-native-identity'></a> and determine if the member is an in-tenant or out-tenant.
-
-## Microsoft Entra native identity
-
-Apps must function cross-tenants in installation and usage. The following table lists the channel types and their corresponding group IDs:
-
-|Channel type| groupId | hostTeamGroupId |
-|----------|---------|-----------------|
-|Regular | Team Microsoft Entra group ID | Team Microsoft Entra group ID |
-|Shared | Empty | Host Team Microsoft Entra group ID |
-
-## Apps in federated group chats with external users
-
-> [!NOTE]
->
-> * Apps in federated group chats with external users aren't available in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](../cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](~/concepts/sovereign-cloud.md) environments.
-> * Apps aren't supported in one-on-one chats, channels, or meetings with external users.
-
-Teams supports the use of apps in federated group chats with external users. These users can't add, update, or remove apps from the group chat. Only the host of the group chat can add, update, or remove apps. However, all members of the chat, including external users, can use apps under the following conditions:
-
-* The tenant admin of the group chat host's organization and the tenant admin of the external user's organization must allow the use of the app in federated group chats. For more information, see [Teams apps for external attendees or guests from outside an organization](/microsoftteams/apps-external-users).
-* The app allows access to external users in federated group chats.
-
-If you're developing an app for use in federated group chats with external users, register your app as a multitenant app in Microsoft Entra ID. This action allows users across multiple organizations to access your app.
-
-> [!NOTE]
-> If you want to test the [code sample](#code-sample) with an external user in a federated group chat, you must first add the external user as a guest to your tenant. For more information, see [Quickstart: Add a guest user and send an invitation](/entra/external-id/b2b-quickstart-add-guest-users-portal). After adding the user to the tenant, go to the federated group chat and add the guest to test the app.
 
 ## Code sample
 
