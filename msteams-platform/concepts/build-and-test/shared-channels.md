@@ -171,9 +171,6 @@ You can classify members as in-tenant or out-tenant by comparing the `TenantId` 
     GET /teams/{host-team-group-id}/channels/{channel-id}/allMembers
     ```
 
-     >[!NOTE]
-     > The GET API only gives you the list of direct members of the shared channel.
-
 2. Call microsoftTeams.app.getContext() in your tab from the Teams JavaScript client library (**TeamsJS SDK**).
  The getContext() call returns context of the shared channel, which contains the details such as **displayName**, **membershipType**, **ownerGroupId** , and **ownerTenantId**.
 
