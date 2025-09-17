@@ -91,7 +91,7 @@ The Azure Bot resource registration registers your web service as a bot with the
 1. Select your **Resource group** from the dropdown list.
 1. Select **Type of App** as **User-Assigned Managed Identity** or **Single Tenant** for **Microsoft App ID**.
 
-   :::image type="content" source="../../../assets/images/adaptive-cards/multi-tenant.png" alt-text="Screenshot shows how to select multitenant for Microsoft AppID.":::
+   :::image type="content" source="../../../assets/images/adaptive-cards/single-tenant.png" alt-text="Screenshot shows how to select multitenant for Microsoft AppID.":::
 
 1. Select **Review + create**.
 
