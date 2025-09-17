@@ -14,7 +14,7 @@ Developer Portal for Microsoft Teams provides a comprehensive suite of tools to 
 
 Whether you're tracking active users, retention rates, or usage patterns across different platforms, Developer Portal helps you with the information you need to optimize your app and ensure its success. Custom apps built for your org (LOB apps) can access app and agent usage data only for Teams. However, for third-party apps you can explore new Microsoft 365 dimensions, such as host product and capabilities.
 
-The app and agent usage for a given day is reflected within 24 to 48 hours, and usage data for the new apps or agents can take up to three to five days to reflect in the charts. Usage under 5 active users or agent build by Agent Builder in Copilot Chat is not supported. 
+The app and agent usage for a given day is reflected within 24 to 48 hours, and usage data for the new apps or agents can take up to three to five days to reflect in the charts. Usage isn’t reported for apps with fewer than five active users or for agents built with Copilot Studio agent builder.
 
 # [Custom apps (New)](#tab/custom-apps-built-for-your-org)
 
