@@ -140,6 +140,12 @@ You can manage indirect membership in shared channels using the following Micros
     GET /teams/{team-id}/channels/{channel-id}/allMembers
     ```
 
+* Use [doesUserHaveAccess API](/graph/api/channel-doesuserhaveaccess?view=graph-rest-beta&tabs=http&preserve-view=true) API to determine whether the user is removed from the channel and view all user accesses and relevant permissions.
+
+    ```http
+    GET /teams/{team-id}/channels/{channel-id}/doesUserHaveAccess(userId='@userid',tenantId='@TenantID',userPrincipalName='@UserPrincipalName')
+    ```
+
 * Use [sharedWithTeams](/graph/api/sharedwithchannelteaminfo-list?branch=main&branchFallbackFrom=pr-en-us-13010&view=graph-rest-1.0&tabs=http&preserve-view=true) API to list all teams a channel is shared with.
 
     ```http
@@ -162,7 +168,7 @@ You can classify members as in-tenant or out-tenant by comparing the `TenantId` 
 1. Get the TenantId of the member you wish to compare.
 
     ```http
-    GET /teams/{host-team-group-id}/channels/{channel-id}/members
+    GET /teams/{host-team-group-id}/channels/{channel-id}/allMembers
     ```
 
      >[!NOTE]
