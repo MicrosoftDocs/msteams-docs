@@ -11,6 +11,7 @@ ms.date: 04/09/2025
 # Microsoft Teams connect shared channels
 
 Teams connect shared channels, which facilitates secure collaboration seamlessly. Allow external members outside of your organization to collaborate with internal users in Teams without changing their user context. You can create and share a shared channel with:
+Teams connect shared channels, which facilitates secure collaboration seamlessly. Allow external members outside of your organization to collaborate with internal users in Teams without changing their user context. You can create and share a shared channel with:
 
 * Members of another team within the same organization
 * Individuals within the same organization
