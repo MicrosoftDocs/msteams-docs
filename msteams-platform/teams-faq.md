@@ -79,7 +79,7 @@ For more information about using Adaptive Cards with a bot, see [Work with Unive
 <details>
 <summary>How can I remove specific messages from bot history? Is there a way to get the chat history and find an activity ID of a specific message?</summary>
 
-Use Delete messages-Agents SDK's `DeleteActivity` method: [Update and delete messages sent from bot](bots/how-to/update-and-delete-bot-messages.md#delete-messages).
+Use Delete messages-Microsoft 365 Agents SDK's `DeleteActivity` method: [Update and delete messages sent from bot](bots/how-to/update-and-delete-bot-messages.md#delete-messages).
 <br>
 &nbsp;
 </details>
@@ -1189,9 +1189,9 @@ Teams AI library story is targeted towards pro-developers and separate from the 
 </br>
 
 <details>
-<summary>How must information about the existing Agents SDK be communicated after announcing a new version?</summary>
+<summary>How must information about the existing Microsoft 365 Agents SDK be communicated after announcing a new version?</summary>
 
-Teams AI library works alongside the existing Agents SDK and isn't a replacement.
+Teams AI library works alongside the existing Microsoft 365 Agents SDK and isn't a replacement.
 <br>
 </details>
 
