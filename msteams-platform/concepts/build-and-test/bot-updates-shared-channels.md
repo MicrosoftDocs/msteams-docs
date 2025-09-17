@@ -164,7 +164,7 @@ public async Task OnMembersRemovedAsync(ITurnContext turnContext, AppState turnS
 }
 ```
 
-### Membership changes 
+### Shared or unshared with channel events
 
 When a shared channel is added to another team, the Bot Framework might receive a `conversationUpdate` activity through the ```OnConversationUpdateActivityAsync``` method, but only if the bot is installed in the team or channel.
 
