@@ -283,7 +283,7 @@ The following is an app manifest example with definitions for API-based message 
 |`composeExtensions.commands.parameters`    | Defines a static list of parameters for the command. The name must map to the `parameters.name` in the OpenAPI Description. If you're referencing a property in the request body schema, then the name must map to `properties.name` or query parameters.     |
 |`composeExtensions.commands.apiResponseRenderingTemplateFile`| Template used to format the JSON response from developer’s API to Adaptive Card response. *[Mandatory]* |
 
-For more information, see [composeExtensions](/microsoft-365/extensibility/schema/root-compose-extensions?view=m365-app-prev).
+For more information, see [composeExtensions](/microsoft-365/extensibility/schema/root-compose-extensions).
 
 ### Response rendering template
 

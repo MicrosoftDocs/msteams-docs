@@ -110,4 +110,4 @@ To trigger in-app purchase for the app, invoke the `openPurchaseExperience` API 
 ## See also
 
 * [Monetize your app](monetize-overview.md)
-* [App manifest](/microsoft-365/extensibility/schema/?view=m365-app-prev)
+* [App manifest](/microsoft-365/extensibility/schema/)

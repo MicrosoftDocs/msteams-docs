@@ -110,4 +110,4 @@ Upon successful testing, you can push the offer to go live where app validations
 * [Preview creation phase](/azure/marketplace/review-publish-offer)
 * [Preview and subscribe](/partner-center/marketplace/test-saas-preview-offer)
 * [Unsubscribe from a test plan](/partner-center/marketplace/test-saas-unsubscribe)
-* [App manifest](/microsoft-365/extensibility/schema/?view=m365-app-prev)
+* [App manifest](/microsoft-365/extensibility/schema)

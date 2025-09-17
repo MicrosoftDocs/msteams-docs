@@ -538,7 +538,7 @@ To prompt an unauthenticated user to sign in, respond with a suggested action of
 ```
 
 > [!NOTE]
-> For the sign in experience to be hosted in a Teams pop-up, the domain portion of the URL must be in your app’s list of valid domains. For more information, see [validDomains](/microsoft-365/extensibility/schemad/root#validdomains) in the manifest schema.
+> For the sign in experience to be hosted in a Teams pop-up, the domain portion of the URL must be in your app’s list of valid domains. For more information, see [validDomains](/microsoft-365/extensibility/schema/root#validdomains) in the manifest schema.
 
 ### Start the sign-in flow
 
