@@ -92,7 +92,7 @@ When building apps or bots for Microsoft Teams, you need to distinguish between 
 * Tailoring UI behavior based on user type (for example, hiding features for guests or external users)
 * Managing authentication flows in tabs or bots
 
-### Detect user type at run time
+#### Detect user type at run time
 You can use `aadObjectId` received in activity payloads to match the member who invoked the activity with the member list returned by `getPagedMembersAsync`.
 
 #### Identify guest users
