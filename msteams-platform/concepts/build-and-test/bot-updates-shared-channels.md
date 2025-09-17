@@ -103,7 +103,6 @@ Use either `TeamsInfo.getMemberAsync` or `TeamsInfo.getPagedMembersAsync`, and c
 
 Each incoming activity for the bot includes `channelData.tenantId`. Compare this value with `membershipSource.tenantId` from the `getPagedMembersAsync` response. If the tenant IDs do not match, the user is considered as an external user.
 
-
 #### Detect user type from membership data 
 
 Use `TeamsInfo.getPagedMembersAsync` to retrieve membership details.
