@@ -96,7 +96,7 @@ This subscription enables apps to monitor membership changes in shared channels 
 
 ### Validate user access for membership updates
 
-When an app receives a 'member removed' notification for an indirect membership update, it’s important to verify whether the user is removed from the shared channel, especially since the same user might have both direct and indirect membership. For example, if a user is removed from a team that shares a channel, the app should confirm whether the user's access to the shared channel is actually revoked.
+When an app receives a 'member removed' notification for an indirect membership update, it’s important to verify whether the user is removed from the shared channel, especially since the same user might have both direct and indirect membership. For example, if a user is removed from a team that shares a channel, the app should confirm whether the user's access to the shared channel is revoked.
 Use the **doesUserHaveAccess** API to determine whether the user is removed from the shared channel.
 See [doesUserHaveAccess API](/graph/api/channel-doesuserhaveaccess?view=graph-rest-beta&tabs=http&preserve-view=true) to learn more about user accesses and relevant permissions.
 
@@ -105,7 +105,7 @@ GET /teams/{team-id}/channels/{channel-id}/doesUserHaveAccess(userId='@userid',t
 ```
 
 When a member receives a 'member added' notification for an indirect membership update,
-See [allMembers API](/graph/api/channel-list-allmembers?view=graph-rest-beta&branch=pr-en-us-27360&tabs=http&preserve-view=true), to refresh the list of all memebers.
+See [allMembers API](/graph/api/channel-list-allmembers?view=graph-rest-beta&branch=pr-en-us-27360&tabs=http&preserve-view=true), to refresh the list of all member.
 
 ```http
 GET /teams/{team-id}/channels/{channel-id}/allMembers
