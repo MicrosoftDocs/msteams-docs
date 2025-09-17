@@ -94,7 +94,7 @@ You must add the following search parameter details that define the text visible
 | `parameter.inputType` | Set to the type of the input required. Possible values include `text`, `textarea`, `number`, `date`, `time`, `toggle`. Default is set to `text`. | No | 1.4 |
 | `parameters.value` | Initial value for the parameter. The value isn't supported | No | 1.5 |
 
-For more information, see [app manifest schema](~/resources/schema/manifest-schema.md).
+For more information, see [app manifest schema](/microsoft-365/extensibility/schema).
 
 ## Next step
 
@@ -185,7 +185,7 @@ If you're using an embedded web view, you can optionally add the `taskInfo` obje
 |`taskInfo.height`|Task module height, either a number in pixels or default layout such as `large`, `medium`, or `small`.|No | 1.4 |
 |`taskInfo.url`|Initial web view URL.|No | 1.4 |
 
-For more information, see [app manifest schema](~/resources/schema/manifest-schema.md).
+For more information, see [app manifest schema](/microsoft-365/extensibility/schema).
 
 ## Next step
 

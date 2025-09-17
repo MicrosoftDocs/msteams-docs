@@ -36,7 +36,7 @@ To enable app icon badging, follow these steps:
 To enable app icon badging, you must:
 
 * Ensure that you've configured `meetingSidePanel` as a `context` property for your app.
-* Configure the `authorization` property and the `name` and `type` properties under the `resourceSpecific` field in the [app manifest](../resources/schema/manifest-schema.md#authorization) as follows:
+* Configure the `authorization` property and the `name` and `type` properties under the `resourceSpecific` field in the [app manifest](/microsoft-365/extensibility/schema/root-authorization) as follows:
 
 ```json
 

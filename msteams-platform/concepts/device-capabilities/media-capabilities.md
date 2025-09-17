@@ -33,7 +33,7 @@ The advantage of integrating device capabilities into your Teams apps is that it
 
 ## Update manifest
 
-Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) file by adding the `devicePermissions` property and specifying `media`. It allows your app to ask for requisite permissions from users before they start using  the camera to capture the image, open the gallery to select an image to submit as an attachment, or use the microphone to record the conversation. The update for app manifest is as follows:
+Update your Teams app [manifest.json](/microsoft-365/extensibility/schema/root#devicepermissions) file by adding the `devicePermissions` property and specifying `media`. It allows your app to ask for requisite permissions from users before they start using  the camera to capture the image, open the gallery to select an image to submit as an attachment, or use the microphone to record the conversation. The update for app manifest is as follows:
 
 ``` json
 "devicePermissions": [
@@ -420,7 +420,7 @@ You can configure an app to enable users to download files from the webview to t
 
 To enable, follow the steps:
 
-1. Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) file by adding the `devicePermissions` property and specifying `media` as shown in the [update manifest](#update-manifest).
+1. Update your Teams app [manifest.json](/microsoft-365/extensibility/schema/root-authorization-permissions) file by adding the `devicePermissions` property and specifying `media` as shown in the [update manifest](#update-manifest).
 
 2. Use the following format and add the HTML download attribute to the webpage:
 
@@ -435,5 +435,5 @@ To enable, follow the steps:
 * [Integrate location capabilities in Teams](location-capability.md)
 * [Integrate People Picker](people-picker-capability.md)
 * [Requirements and considerations for application-hosted media bots](~/bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md)
-* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
+* [App manifest schema for Teams](/microsoft-365/extensibility/schema/)
 * [Plan responsive tabs for Teams mobile](../design/plan-responsive-tabs-for-teams-mobile.md)

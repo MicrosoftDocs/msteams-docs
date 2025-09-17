@@ -26,7 +26,7 @@ Build and connect intelligent bots to interact with Microsoft Teams users natura
 
 A bot appears just like any other team member you interact with in a conversation except that it has a hexagonal avatar icon and is always online.
 
-A bot behaves differently depending on what kind of conversation it's involved in. Bots in Teams support several kinds of conversations called scopes in the [app manifest](~/resources/schema/manifest-schema.md).
+A bot behaves differently depending on what kind of conversation it's involved in. Bots in Teams support several kinds of conversations called scopes in the [app manifest](/microsoft-365/extensibility/schema/root-bots#scopes).
 
 * `teams` Also called channel conversations.
 * `personal` Conversations between a bot and a single user.

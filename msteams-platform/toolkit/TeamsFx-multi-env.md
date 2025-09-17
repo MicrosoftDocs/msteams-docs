@@ -59,7 +59,7 @@ When you have multiple environments and select the Production, dev, or local men
 ## See also
 
 * [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals.md)
-* [App manifest schema for Teams](../resources/schema/manifest-schema.md)
+* [App manifest schema for Teams](/microsoft-365/extensibility/schema/)
 * [Add more cloud resources](add-resource.md)
 * [Collaborate with other developers on Teams project](TeamsFx-collaboration.md)
 * [Test app behavior in different environment](test-app-behavior.md)

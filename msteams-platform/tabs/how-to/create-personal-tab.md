@@ -1066,7 +1066,7 @@ This property also enables you to set the default landing capability for your ap
 
 You can extend static tabs to group chat, channels, and meetings. Instead of pinned app content, you can build tabs that behave more like apps as you can pin only one tab per app, for example, pinning a single YouTube app tab.
 
-To extend your static tabs to group chat, channels, and meetings, update your [app manifest](~/resources/schema/manifest-schema.md#statictabs) with the `scopes` and `context` parameters in the `staticTabs` property. When you declare multiple static tabs in the manifest and add the app in the channel scope, only the first tab listed in the manifest appears.
+To extend your static tabs to group chat, channels, and meetings, update your [app manifest](/microsoft-365/extensibility/schema/root-static-tabs) with the `scopes` and `context` parameters in the `staticTabs` property. When you declare multiple static tabs in the manifest and add the app in the channel scope, only the first tab listed in the manifest appears.
 
 Following is an example of app manifest where a static tab is defined that works in all scopes and contexts in Teams:
 
@@ -1190,5 +1190,5 @@ To learn how to optimize your tab's performance in the Teams Android and iOS cli
 * [Create a channel tab or group tab](create-channel-group-tab.md)
 * [Share to Teams from personal app or tab](~/concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md)
 * [Developer Portal for Teams](../../concepts/build-and-test/teams-developer-portal.md)
-* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
+* [App manifest schema for Teams](/microsoft-365/extensibility/schema/)
 * [Tabs on mobile](../design/tabs-mobile.md)

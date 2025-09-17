@@ -216,6 +216,6 @@ modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
 ## See also
 
 * [Build bots for Teams](~/bots/what-are-bots.md)
-* [App manifest schema for Teams](~/resources/schema/manifest-schema.md)
+* [App manifest schema for Teams](/microsoft-365/extensibility/schema/)
 * [Messages in bot conversations](~/bots/how-to/conversations/conversation-messages.md)
 * [Adaptive Cards for bot developers](/adaptive-cards/getting-started/bots)

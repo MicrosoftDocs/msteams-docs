@@ -12,7 +12,7 @@ Take note of your bot app ID and app password, you need to provide the app ID in
 
 ### Update your app manifest
 
-As with bots and tabs, you update the [manifest](~/resources/schema/manifest-schema.md#composeextensions) of your app to include the message extension properties. These properties govern how your message extension appears and behaves in the Microsoft Teams client. Message extensions are supported beginning with manifest v1.0.
+As with bots and tabs, you update the [manifest](/microsoft-365/extensibility/schema/root-compose-extensions) of your app to include the message extension properties. These properties govern how your message extension appears and behaves in the Microsoft Teams client. Message extensions are supported beginning with manifest v1.0.
 
 #### Declare your message extension
 

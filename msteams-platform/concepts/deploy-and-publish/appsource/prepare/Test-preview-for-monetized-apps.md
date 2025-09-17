@@ -54,7 +54,7 @@ After you generate the preview offer ID, link the preview offer ID to your Teams
 
     :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-add-offer-id.png" alt-text="Screenshot shows the plan and pricing screen to add offer ID." lightbox="../../../../assets/images/apps-in-meetings/test-preview-add-offer-id.png":::
 
-You must add the `subscriptionOffer` property to your [app manifest](../../../../resources/schema/manifest-schema.md#subscriptionoffer).
+You must add the `subscriptionOffer` property to your [app manifest](/microsoft-365/extensibility/schema/root#subscriptionoffer).
 
 ```json
 "subscriptionOffer": {
@@ -110,4 +110,4 @@ Upon successful testing, you can push the offer to go live where app validations
 * [Preview creation phase](/azure/marketplace/review-publish-offer)
 * [Preview and subscribe](/partner-center/marketplace/test-saas-preview-offer)
 * [Unsubscribe from a test plan](/partner-center/marketplace/test-saas-unsubscribe)
-* [App manifest](../../../../resources/schema/manifest-schema-dev-preview.md)
+* [App manifest](/microsoft-365/extensibility/schema)
