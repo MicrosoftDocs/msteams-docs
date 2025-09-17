@@ -71,7 +71,7 @@ These steps ensure the bot is active and authorized to receive notifications for
 
 ### Detect when your app is added to a channel
 
-There’s no dedicated API to check if your app is part of a channel. Bots can detect when youar app is added to a channel indirectly:
+There’s no dedicated API to check if your app is part of a channel. Bots can detect when your app is added to a channel indirectly:
 
 When your bot receives a `channelMemberAdded` event for itself in a `conversationUpdate`, your app has been added to the channel.
 
