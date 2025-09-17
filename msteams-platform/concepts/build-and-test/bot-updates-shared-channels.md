@@ -71,7 +71,7 @@ These steps ensure the bot is active and authorized to receive notifications for
 
 ### Detect when your app is added to a channel
 
-There’s no dedicated API to check if your app is part of a channel. Bots can detect this indirectly:
+There’s no dedicated API to check if your app is part of a channel. Bots can detect when youar app is added to a channel indirectly:
 
 When your bot receives a `channelMemberAdded` event for itself in a `conversationUpdate`, your app has been added to the channel.
 
@@ -101,7 +101,7 @@ Use either `TeamsInfo.getMemberAsync` or `TeamsInfo.getPagedMembersAsync`, and c
 
 #### Identify external users
 
-Each incoming activity for the bot includes `channelData.tenantId`. Compare this value with `membershipSource.tenantId` from the `getPagedMembersAsync` response. If the tenant IDs do not match, the user is considered as an external user.
+Each incoming activity for the bot includes `channelData.tenantId`. Compare this value with `membershipSource.tenantId` from the `getPagedMembersAsync` response. If the tenant IDs don't match, the user is considered as an external user.
 
 #### Detect user type from membership data 
 
