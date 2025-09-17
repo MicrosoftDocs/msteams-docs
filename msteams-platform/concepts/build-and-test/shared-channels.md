@@ -60,7 +60,7 @@ You can collaborate with external members outside of your organization using sha
 
 ## Get shared channel membership
 
-Use the [List allMembers API](/graph/api/channel-list-allmembers?view=graph-rest-beta&tabs=http) to retrieve both direct and indirect members of a shared channel.
+Use the [List allMembers API](/graph/api/channel-list-allmembers?view=graph-rest-beta&tabs=http&preserve-view=true) to retrieve both direct and indirect members of a shared channel.
 
 ### Identify direct or indirect members
 
