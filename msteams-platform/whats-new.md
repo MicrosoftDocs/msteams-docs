@@ -36,6 +36,8 @@ Teams platform features that are available to all app developers.</br>
 
 **2025 August**
 
+* ***September 18, 2025:***: [Teams AI library v2 is now generally available.](/microsoftteams/platform/teams-ai-library/welcome).
+
 * ***August 19, 2025***: [Teams now supports token prefetching for apps that use nested app authentication (NAA). This enhancement enables the host to acquire authentication tokens proactively before the app launches, improving startup performance and reducing latency.](concepts/authentication/nested-authentication.md#token-prefetching-for-nested-app-authentication-naa)</br>
 
 * ***August 08, 2025***: [Introducing app manifest v1.23 with support for custom contextual tabs and system-generated metadata for agents.](/microsoft-365/extensibility/schema/?view=m365-app-1.23&preserve-view=true)
