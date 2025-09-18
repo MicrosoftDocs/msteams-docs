@@ -34,9 +34,9 @@ Occasionally it's necessary to test your bot without installing it as an app in 
 
 ### Use the Bot Emulator
 
-The Bot Framework Emulator is a desktop application that allows bot developers to test and debug their bots, either locally or remotely. Using the emulator, you can chat with your bot and inspect the messages that your bot sends and receives. This can be useful for verifying that your bot is available and responding, however the emulator won't allow you to test any Teams-specific functionality you've added to your bot, nor will responses from your bot be an accurate visual representation of how they're rendered in Teams. If you need to test either of those things isn't best to [upload your bot](#test-by-uploading-to-teams).
+The Agents SDK Emulator is a desktop application that allows bot developers to test and debug their bots, either locally or remotely. Using the emulator, you can chat with your bot and inspect the messages that your bot sends and receives. This can be useful for verifying that your bot is available and responding, however the emulator won't allow you to test any Teams-specific functionality you've added to your bot, nor will responses from your bot be an accurate visual representation of how they're rendered in Teams. If you need to test either of those things isn't best to [upload your bot](#test-by-uploading-to-teams).
 
-Complete instructions on the Bot Framework Emulator can be found [here](/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0&preserve-view=true).
+Complete instructions on the Agents SDK Emulator can be found [here](/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0&preserve-view=true).
 
 ## Blocking a bot in personal chat
 
