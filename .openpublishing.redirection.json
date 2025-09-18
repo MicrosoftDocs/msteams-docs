@@ -1462,7 +1462,7 @@
       },
       {
         "source_path": "msteams-platform/index.yml",
-        "redirect_url": "https://graph.office-int.net/en-us/graph/preview?fileName=teams-devdocs-hubpage-update/homepage.htm"
+        "redirect_url": "https://developer.microsoft.com/en-us/microsoft-teams"
       }
     ]
 }
