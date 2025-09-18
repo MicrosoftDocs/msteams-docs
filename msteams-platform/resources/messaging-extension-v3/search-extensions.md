@@ -1,6 +1,6 @@
 ---
 title: Build Search-based Message Extensions
-description: Learn how to create search based message extensions for Microsoft Teams using v3 Bot Framework SDK, handle queries, event handlers, authentication, and SDK support.
+description: Learn how to create search based message extensions for Microsoft Teams using v3 Agents SDK, handle queries, event handlers, authentication, and SDK support.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 04/02/2023
@@ -176,7 +176,7 @@ Every request to your message extension is done via an `Activity` object that is
 
 ### Receive user requests
 
-When a user performs a query, Microsoft Teams sends your service a standard Bot Framework `Activity` object. Your service should perform its logic for an `Activity` that has `type` set to `invoke` and `name` set to a supported `composeExtensions` type, as shown in the following table.
+When a user performs a query, Microsoft Teams sends your service a standard Agents SDK `Activity` object. Your service should perform its logic for an `Activity` that has `type` set to `invoke` and `name` set to a supported `composeExtensions` type, as shown in the following table.
 
 In addition to the standard bot activity properties, the payload contains the following request metadata:
 

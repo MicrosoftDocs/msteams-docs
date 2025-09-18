@@ -394,7 +394,7 @@ This version string must follow the [semver](http://semver.org/) standard (MAJOR
 
 **Required** &ndash; Microsoft app ID
 
-The unique Microsoft-generated identifier for this app. The format of the ID is GUID. If you've registered a bot through Microsoft Bot Framework, or your tab's web app already signs in with Microsoft, then you might already have an ID and must enter it here. Otherwise, you must generate a new ID at the Microsoft Application Registration Portal ([My Applications](https://apps.dev.microsoft.com)), enter it here, and then reuse it when you [add a bot](~/bots/how-to/create-a-bot-for-teams.md).
+The unique Microsoft-generated identifier for this app. The format of the ID is GUID. If you've registered a bot through Microsoft Agents SDK, or your tab's web app already signs in with Microsoft, then you might already have an ID and must enter it here. Otherwise, you must generate a new ID at the Microsoft Application Registration Portal ([My Applications](https://apps.dev.microsoft.com)), enter it here, and then reuse it when you [add a bot](~/bots/how-to/create-a-bot-for-teams.md).
 
 ## developer
 
@@ -599,7 +599,7 @@ The object is an array (maximum of 16 elements) with all elements of the type `o
 |`entityId`|String|64 characters|✔️|A unique identifier for the entity that the tab displays.|
 |`name`|String|128 characters||The display name of the tab.|
 |`contentUrl`|String|2048 characters||The *https://* URL that points to the entity UI to be displayed in the Teams canvas.|
-|`contentBotId`|String| | | The Microsoft Teams app ID specified for the bot in the Bot Framework portal. |
+|`contentBotId`|String| | | The Microsoft Teams app ID specified for the bot in the Agents SDK portal. |
 |`websiteUrl`|String|2048 characters||The *https://* URL to point at if a user opts to view in a browser.|
 |`scopes`|Array of enum|3|✔️|Static tabs support the `personal`, `team`, and `groupChat` scopes, which means it can be provisioned as part of the personal, group chat, and channel meetings experience.|
 |`searchUrl`|String|2048 characters||The *https://* URL to direct a user's search queries.|
@@ -636,7 +636,7 @@ The object is an array (maximum of only 1 element&mdash; only one bot is allowed
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`botId`|String| |✔️|The unique Microsoft app ID for the bot as registered with the Bot Framework. The ID can be the same as the overall [app ID](#id).|
+|`botId`|String| |✔️|The unique Microsoft app ID for the bot as registered with the Agents SDK. The ID can be the same as the overall [app ID](#id).|
 |`needsChannelSelector`|Boolean|||Describes whether the bot utilizes a user hint to add the bot to a specific channel. <br>Default value: `false`|
 |`isNotificationOnly`|Boolean|||Indicates whether a bot is a one-way, notification-only bot, as opposed to a conversational bot. <br>Default value: `false`|
 |`supportsFiles`|Boolean|||Indicates whether the bot supports the ability to upload/download files in personal chat. <br>Default value: `false`|
@@ -718,7 +718,7 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 |Name| Type | Maximum Size | Required | Description|
 |---|---|---|---|---|
 |`id`|String||| Unique identifier for the message extension. Used when defining one-way and mutual app capability dependencies under [elementRelationshipSet](#elementrelationshipset).|
-|`botId`|String|||The unique Microsoft app ID for the bot that backs the message extension, as registered with the Bot Framework. The ID can be the same as the overall [app ID](#id).|
+|`botId`|String|||The unique Microsoft app ID for the bot that backs the message extension, as registered with the Agents SDK. The ID can be the same as the overall [app ID](#id).|
 |`composeExtensionType`|String|||Type of the message extension. Enum values are `botBased` and `apiBased`.|
 |`authorization`|Object|2||Authorization related information for the API-based message extension|
 |`authorization.authType`|String|||Enum of possible authorization types. Supported values are `none`, `apiSecretServiceAuth`, and `microsoftEntra`.|
@@ -1574,7 +1574,7 @@ Defines the content source of a given dashboard card.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`botId`| String | | | The unique Microsoft app ID for the bot as registered with the Bot Framework. The ID must be a GUID. |
+|`botId`| String | | | The unique Microsoft app ID for the bot as registered with the Agents SDK. The ID must be a GUID. |
 
 ## intuneInfo
 

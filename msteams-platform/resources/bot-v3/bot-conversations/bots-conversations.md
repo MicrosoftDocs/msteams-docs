@@ -40,7 +40,7 @@ Bots also support event-style messages. For more information, see [Handle bot ev
 
 Messages are usually the same in across all scopes, but there are differences in how the bot is accessed in the UI and differences behind the scenes, which you need to know about.
 
-Basic conversation is handled through the Bot Framework Connector, a single REST API to enable your bot to communicate with Teams and other channels. The Bot Builder SDK provides easy access to this API, additional functionality to manage conversation flow and state, and simple ways to incorporate cognitive services such as natural language processing (NLP).
+Basic conversation is handled through the Agents SDK Connector, a single REST API to enable your bot to communicate with Teams and other channels. The Bot Builder SDK provides easy access to this API, additional functionality to manage conversation flow and state, and simple ways to incorporate cognitive services such as natural language processing (NLP).
 
 ## Message content
 
@@ -54,7 +54,7 @@ Your bot can send rich text, pictures, and cards. Users can send rich text and p
 | Emojis | ✖ | ✔ | Teams supports emojis via UTF-16 such as, U+1F600 for grinning face. |
 |
 
-For more information on the types of bot interaction supported by the Bot Framework, which bots in teams are based on, see the Bot Framework documentation on [conversation flow](/azure/bot-service/dotnet/bot-builder-dotnet-manage-conversation-flow?view=azure-bot-service-3.0&preserve-view=true) and related concepts in the documentation for [the Bot Builder SDK for .NET](/azure/bot-service/dotnet/bot-builder-dotnet-overview?view=azure-bot-service-3.0&preserve-view=true) and [the Bot Builder SDK for Node.js](/azure/bot-service/nodejs/bot-builder-nodejs-overview?view=azure-bot-service-3.0&preserve-view=true).
+For more information on the types of bot interaction supported by the Agents SDK, which bots in teams are based on, see the Agents SDK documentation on [conversation flow](/azure/bot-service/dotnet/bot-builder-dotnet-manage-conversation-flow?view=azure-bot-service-3.0&preserve-view=true) and related concepts in the documentation for [the Bot Builder SDK for .NET](/azure/bot-service/dotnet/bot-builder-dotnet-overview?view=azure-bot-service-3.0&preserve-view=true) and [the Bot Builder SDK for Node.js](/azure/bot-service/nodejs/bot-builder-nodejs-overview?view=azure-bot-service-3.0&preserve-view=true).
 
 ## Message formatting
 
@@ -89,7 +89,7 @@ Your bot receives a payload that contains the user message `Text` and other info
 
 * `timestamp` The date and time of the message in Coordinated Universal Time (UTC).
 * `localTimestamp` The date and time of the message in the time zone of the sender.
-* `channelId` Always "msteams". This refers to a bot framework channel, not a teams channel.
+* `channelId` Always "msteams". This refers to an Agents SDK channel, not a teams channel.
 * `from.id` A unique and encrypted ID for that user for your bot; suitable as a key if your app needs to store user data. It's unique for your bot and can't be directly used outside your bot instance in any meaningful way to identify that user.
 * `channelData.tenant.id` The tenant ID for the user.
 
@@ -199,7 +199,7 @@ To reply to an existing message, call [`ReplyToActivity`](/dotnet/api/microsoft.
 
 If you choose to use the REST API, you can also call the [`/v3/conversations/{conversationId}/activities/{activityId}`](/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?view=azure-bot-service-3.0&preserve-view=true) endpoint.
 
-The message content itself can contain simple text or some of the Bot Framework supplied [cards and card actions](~/task-modules-and-cards/cards/cards-actions.md).
+The message content itself can contain simple text or some of the Agents SDK supplied [cards and card actions](~/task-modules-and-cards/cards/cards-actions.md).
 
 Please note that in your outbound schema you should always use the same `serviceUrl` as the one you received. Be aware that the value of `serviceUrl` tends to be stable but can change. When a new message arrives, your bot should verify its stored value of `serviceUrl`.
 
