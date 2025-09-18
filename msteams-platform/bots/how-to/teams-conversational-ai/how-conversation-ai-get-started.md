@@ -10,6 +10,8 @@ ms.owner: angovil
 
 # Build with Teams AI library
 
+[!INCLUDE [teams-ai-lib-v2-rec](../../../includes/teams-ai-lib-v2-rec.md)]
+
 The Teams AI library simplifies building intelligent Microsoft Teams applications with AI components. It offers APIs for data access, custom UI creation, prompt management, and safety moderation. You can easily create bots using OpenAI or Azure OpenAI to deliver an AI-driven experience.
 
 ## Initial setup

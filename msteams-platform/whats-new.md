@@ -13,6 +13,7 @@ zone_pivot_groups: What-new-features
 
 Discover Microsoft Teams platform features that are generally available (GA). You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
 
+<!--
 ## Microsoft Build 2025 :::image type="icon" source="assets/images/bullhorn.png" border="false"
 
 | **Date** | **Update** | **Find here** |
@@ -21,6 +22,7 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 | May 19, 2025 | Introducing Microsoft 365 admin center permission to view custom app analytics and the agent usage analytics for custom apps in Developer Portal | Tools and SDKs > Tools > Developer Portal for Teams > [Analyze app and agent usage in Developer Portal](/microsoftteams/platform/concepts/build-and-test/analyze-your-apps-usage-in-developer-portal?tabs=custom-apps-built-for-your-org) |
 | May 16, 2025 | Use Meeting AI Insights API to fetch conversation summaries, action items, and mentions directly from Teams meetings | Build apps for Teams meetings and calls > Get meeting transcripts, recordings, and AI summaries > [Get AI-generated meeting summaries](graph-api/meeting-transcripts/meeting-insights.md) |
 | May 13, 2025 | Introducing agent usage analytics for third-party apps in Developer Portal | Tools and SDKs > Tools > Developer Portal for Teams > [Analyze app and agent usage in Developer Portal](/microsoftteams/platform/concepts/build-and-test/analyze-your-apps-usage-in-developer-portal?tabs=thirdpartyapps) |
+-->
 
 ## Generally available
 
@@ -36,7 +38,7 @@ Teams platform features that are available to all app developers.</br>
 
 **2025 August**
 
-* ***September 18, 2025:***: [Teams AI library v2 is now generally available.](/microsoftteams/platform/teams-ai-library/welcome).
+* ***September 18, 2025:***: [Teams AI library is now generally available for JavaScript and C#. It provides a simplified SDK, support for Model Context Protocol (MCP), Agent-to-Agent communication (A2A), and streamlined tools to enable developers to build intelligent agents for Teams.](/microsoftteams/platform/teams-ai-library/welcome).
 
 * ***August 19, 2025***: [Teams now supports token prefetching for apps that use nested app authentication (NAA). This enhancement enables the host to acquire authentication tokens proactively before the app launches, improving startup performance and reducing latency.](concepts/authentication/nested-authentication.md#token-prefetching-for-nested-app-authentication-naa)</br>
 
@@ -492,6 +494,9 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 :::column span="2":::
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
+
+* ***September 18, 2025:***: [Teams AI library supports Python in developer preview. It provides a simplified SDK, support for Model Context Protocol (MCP), Agent-to-Agent communication (A2A), and streamlined tools to enable developers to build intelligent agents for Teams.](/microsoftteams/platform/teams-ai-library/welcome).
+
 <!--
 **2025 May**
 
