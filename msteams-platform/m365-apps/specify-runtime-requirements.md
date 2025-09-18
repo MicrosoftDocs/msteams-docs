@@ -103,9 +103,9 @@ Within individual app capability definitions, you can specify specific TeamsJS r
 The following TeamsJS capabilities can be specified as runtime requirements for [`staticTabs`](../resources/schema/manifest-schema-dev-preview.md#statictabsrequirementset), [`composeExtensions`](../resources/schema/manifest-schema-dev-preview.md#composeextensionsrequirementset), and [`bots`](../resources/schema/manifest-schema-dev-preview.md#botsrequirementset):
 
 - HTML-based dialogs ([`dialog.url`](/javascript/api/@microsoft/teams-js/dialog.url))
-- HTML-based dialogs for Bot Framework ([`dialog.url.bot`](/javascript/api/@microsoft/teams-js/dialog.url.bot))
+- HTML-based dialogs for Agents SDK ([`dialog.url.bot`](/javascript/api/@microsoft/teams-js/dialog.url.bot))
 - Adaptive Card dialogs ([`dialog.adaptiveCard`](/javascript/api/@microsoft/teams-js/dialog.adaptivecard))
-- Adaptive Card dialogs for Bot Framework ([`dialog.adaptiveCard.bot`](/javascript/api/@microsoft/teams-js/dialog.adaptivecard.bot))
+- Adaptive Card dialogs for Agents SDK ([`dialog.adaptiveCard.bot`](/javascript/api/@microsoft/teams-js/dialog.adaptivecard.bot))
 
 The following JSON snippet shows a static tab that requires its host to support HTML dialogs (referred to as task modules in TeamsJS v1.x) invoked from tabs and bots:
 
