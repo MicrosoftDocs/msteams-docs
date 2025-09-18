@@ -383,37 +383,11 @@ You can identify if a member of private channel is guest user, invited to your t
 
 For guests, “roles” = “guest”
 
-## Microsoft Entra native identity
-
-Apps must function cross-tenants in installation and usage. The following table lists the channel types and their corresponding group IDs:
-
-|Channel type| groupId | hostTeamGroupId |
-|----------|---------|-----------------|
-|Standard | Team Microsoft Entra group ID | Team Microsoft Entra group ID |
-|Shared | Empty | Host Team Microsoft Entra group ID |
-
 ## Access sharepoint data in shared and private channels
 
 If you're building an app using [SharePoint](/sharepoint/dev/spfx/integrate-with-teams-introduction) Framework, you need to use the SharePoint Online (SPO) site linked to the shared channel—not the one linked to the host team group. Each private channel has its own SPO site that is only accessible to members of that specific shared or private channel.
 
 Use the Graph API to access the document library of the SPO site linked to a shared or private channel. Ensure you pass the Team ID and Channel ID received from the [Get Host Team Group ID & Channel ID](#get-host-team-group-id--channel-id) and pass in [Get filesFolder - Microsoft Graph v1.0 | Microsoft Learn](/graph/api/channel-get-filesfolder).
-
-## Apps in federated group chats with external users
-
-> [!NOTE]
->
-> * Apps in federated group chats with external users aren't available in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](../cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](~/concepts/sovereign-cloud.md) environments.
-> * Apps aren't supported in one-on-one chats, channels, or meetings with external users.
-
-Teams supports the use of apps in federated group chats with external users. These users can't add, update, or remove apps from the group chat. Only the host of the group chat can add, update, or remove apps. However, all members of the chat, including external users, can use apps under the following conditions:
-
-* The tenant admin of the group chat host's organization and the tenant admin of the external user's organization must allow the use of the app in federated group chats. For more information, see [Teams apps for external attendees or guests from outside an organization](/microsoftteams/apps-external-users).
-* The app allows access to external users in federated group chats.
-
-If you're developing an app for use in federated group chats with external users, register your app as a multitenant app in Microsoft Entra ID. This action allows users across multiple organizations to access your app.
-
-> [!NOTE]
-> If you want to test the [code sample](#code-sample) with an external user in a federated group chat, you must first add the external user as a guest to your tenant. For more information, see [Quickstart: Add a guest user and send an invitation](/entra/external-id/b2b-quickstart-add-guest-users-portal). After adding the user to the tenant, go to the federated group chat and add the guest to test the app.
 
 ## Code sample
 
