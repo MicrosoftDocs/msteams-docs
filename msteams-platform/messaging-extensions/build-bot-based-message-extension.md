@@ -1,7 +1,7 @@
 ---
 title: Build Bot-based Message Extensions
 author: surbhigupta
-description: Learn about Bot-based message extension using Bot Framework to interact with your web service from different locations in the Teams client.
+description: Learn about Bot-based message extension using Agents SDK to interact with your web service from different locations in the Teams client.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
@@ -9,11 +9,11 @@ ms.owner: slamba
 ms.date: 09/16/2024
 ---
 
-# Build message extensions using Bot Framework
+# Build message extensions using Agents SDK
 
-Message extensions built using Bot Framework (Bot-based) use a web service as a bot. You can use message extensions to enable users to interact with your web service from different locations in the Teams client, such as the compose message area, the command box, or directly from a message and send back structured data, such as cards.
+Message extensions built using Agents SDK (Bot-based) use a web service as a bot. You can use message extensions to enable users to interact with your web service from different locations in the Teams client, such as the compose message area, the command box, or directly from a message and send back structured data, such as cards.
 
-Bot-based message extension takes advantage of the Bot Framework's messaging schema and secure communication protocol. The bot is defined in the app manifest for the Teams app and you can also define different types of commands for your message extension, such as action commands or search commands.
+Bot-based message extension takes advantage of the Agents SDK's messaging schema and secure communication protocol. The bot is defined in the app manifest for the Teams app and you can also define different types of commands for your message extension, such as action commands or search commands.
 
 There are two types of message extension commands, action command and search command. The message extension command type defines the UI elements and interaction flows available to your web service. You can use a search command or an action command to interact with your web service through a bot in Teams.
 
