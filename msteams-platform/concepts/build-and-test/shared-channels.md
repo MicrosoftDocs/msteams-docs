@@ -12,7 +12,7 @@ ms.date: 04/09/2025
 
 Shared and private channels in Microsoft Teams enable flexible collaboration within and across teams or organizations. Shared channels allow seamless communication with internal or external partners. Private channels provide a secure space for selected team members to collaborate on sensitive or confidential content, ensuring privacy and focused discussions within the team.
 
-## Understand Channel Models in Microsoft Teams
+## Understand channel models in Microsoft Teams
 
 When building or integrating apps with Microsoft Teams, understand how different channel types affect visibility, membership, and data storage.
 
