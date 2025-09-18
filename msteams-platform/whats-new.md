@@ -38,7 +38,7 @@ Teams platform features that are available to all app developers.</br>
 
 **2025 August**
 
-* ***September 18, 2025:***: [Teams AI library is now generally available for JavaScript and C#. It provides a simplified SDK, support for Model Context Protocol (MCP), Agent-to-Agent communication (A2A), and streamlined tools to enable developers to build intelligent agents for Teams.](/microsoftteams/platform/teams-ai-library/welcome).
+* ***September 18, 2025***: [Teams AI library is now generally available for JavaScript and C#. It provides a simplified SDK, support for Model Context Protocol (MCP), Agent-to-Agent communication (A2A), and streamlined tools to enable developers to build intelligent agents for Teams](/microsoftteams/platform/teams-ai-library/welcome).
 
 * ***August 19, 2025***: [Teams now supports token prefetching for apps that use nested app authentication (NAA). This enhancement enables the host to acquire authentication tokens proactively before the app launches, improving startup performance and reducing latency.](concepts/authentication/nested-authentication.md#token-prefetching-for-nested-app-authentication-naa)</br>
 

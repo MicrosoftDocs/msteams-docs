@@ -114,7 +114,7 @@ conceptualContent:
           text: Custom engine agent
         - url: /microsoftteams/platform/teams-ai-library/welcome
           itemType: quickstart
-          text: Teams AI Library
+          text: Teams AI library
         - url: concepts/design/overview-analytics.md
           itemType: reference
           text: Plan analytics for Teams apps
