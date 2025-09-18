@@ -1,6 +1,6 @@
 ---
 title: Bot message format
-description: Learn how to format bot messages in Microsoft Teams using Bot Framework SDK including Markdown and HTML tags with platform-specific limitations.
+description: Learn how to format bot messages in Microsoft Teams using Agents SDK including Markdown and HTML tags with platform-specific limitations.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.owner: ginobuzz
