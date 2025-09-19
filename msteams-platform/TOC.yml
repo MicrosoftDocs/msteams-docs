@@ -333,9 +333,9 @@
     - name: Teams JavaScript client library
       href: tabs/how-to/using-teams-client-library.md
       displayName: iFrame, execute URL, getTabInstances
-    - name: Microsoft 365 Agents SDK for Node.js
+    - name: Microsoft 365 Microsoft 365 Agents SDK (previously known as Bot Framework SDK) for Node.js
       href: https://github.com/Microsoft/botbuilder-js
-    - name: Microsoft 365 Agents SDK for .NET
+    - name: Microsoft 365 Microsoft 365 Agents SDK (previously known as Bot Framework SDK) for .NET
       href: https://github.com/Microsoft/botbuilder-dotnet
     - name: Microsoft Graph SDKs
       href: /graph/sdks/sdks-overview
@@ -394,7 +394,7 @@
     displayName: AI bot, bot capability, command bot, workflow bot, custom engine agent, agent, conversational bot, activity handler, bot logic, notification bot
   - name: Bots and agents in Teams
     href: bots/build-a-bot.md
-    displayName: Bot samples, Code sample, Teams AI library, Microsoft 365 Agents SDK, build a bot, build AI bot, command bot, workflow bot, custom engine agent, agent, conversational bot, notification bot, tools, platforms, Azure OpenAI, Microsoft 365 Agents Toolkit, Azure AI Foundry
+    displayName: Bot samples, Code sample, Teams AI library, Microsoft 365 Agents SDK (previously known as Bot Framework SDK), build a bot, build AI bot, command bot, workflow bot, custom engine agent, agent, conversational bot, notification bot, tools, platforms, Azure OpenAI, Microsoft 365 Agents Toolkit, Azure AI Foundry
   - name: Custom engine agent overview
     href: /microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     displayName: AI bot, Teams AI library, custom agent
@@ -415,7 +415,7 @@
       displayName: AI label, citations, feedback buttons, sensitivity label, Powered by AI UX Kit
   - name: Understand bot concepts
     href: bots/bot-concepts.md
-    displayName: Microsoft 365 Agents SDK, Activity handler, Bot logic, Teams handler
+    displayName: Microsoft 365 Agents SDK (previously known as Bot Framework SDK), Activity handler, Bot logic, Teams handler
   - name: Send and receive messages
     items:
     - name: Build conversational capability
@@ -445,7 +445,7 @@
       displayName: Adapter, notifications
     - name: Send proactive messages
       href: bots/how-to/conversations/send-proactive-messages.md
-      displayName: conversationId, send message, Microsoft 365 Agents SDK, notification,
+      displayName: conversationId, send message, Microsoft 365 Agents SDK (previously known as Bot Framework SDK), notification,
   - name: Command bot in Teams
     href: bots/how-to/conversations/command-bot-in-teams.md
     displayName: bot initialization
@@ -545,7 +545,7 @@
     - name: Create API-based message extensions
       href: messaging-extensions/create-api-message-extension.md
       displayName: API-based, Microsoft 365 Agents Toolkit CLI, Developer Portal, Visual Studio Code, Visual Studio
-  - name: Build message extensions using Microsoft 365 Agents SDK 
+  - name: Build message extensions using Microsoft 365 Agents SDK (previously known as Bot Framework SDK)
     items:
     - name: Bot-based message extensions
       href: messaging-extensions/build-bot-based-message-extension.md
@@ -740,7 +740,7 @@
     items:
     - name: Dialogs overview
       href: task-modules-and-cards/what-are-task-modules.md
-      displayName: Task module, open dialog, command bot, Microsoft 365 Agents SDK Web Chat, Adaptive Card
+      displayName: Task module, open dialog, command bot, Microsoft 365 Agents SDK (previously known as Bot Framework SDK) Web Chat, Adaptive Card
     - name: Invoke and dismiss dialogs
       href: task-modules-and-cards/task-modules/invoking-task-modules.md
       displayName: JavaScript dialogs (task modules), keyboard and accessibility guidelines, module sizing, css
