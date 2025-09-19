@@ -77,7 +77,7 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
    3. `validDomains`
 
    > [!NOTE]
-   > To handle authentication and token exchange, add `https://token.botframework.com` to the `validDomains` property for bots using Agents SDK. For OAuth URLs and data residency list, see [OAuth URL support in Azure AI Bot Service](/azure/bot-service/ref-oauth-redirect-urls?view=azure-bot-service-4.0&preserve-view=true).
+   > To handle authentication and token exchange, add `https://token.botframework.com` to the `validDomains` property for bots using Microsoft 365 Agents SDK (previously known as Bot Framework SDK). For OAuth URLs and data residency list, see [OAuth URL support in Azure AI Bot Service](/azure/bot-service/ref-oauth-redirect-urls?view=azure-bot-service-4.0&preserve-view=true).
 
 6. Save the app manifest file. For more information, see [app manifest](../../../resources/schema/manifest-schema.md).
 

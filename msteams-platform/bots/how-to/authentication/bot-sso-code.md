@@ -23,10 +23,24 @@ You need to configure your app's code to obtain an access token from Microsoft E
 
 This section covers:
 
-1. [Update development environment variables](#update-development-environment-variables)
-1. [Add code to handle an access token](#add-code-to-handle-an-access-token)
-1. [Add code to receive the token](#add-code-to-receive-the-token)
-1. [Handle app user sign out](#handle-app-user-sign-out)
+- [Add code to enable SSO in your bot app](#add-code-to-enable-sso-in-your-bot-app)
+  - [Update development environment variables](#update-development-environment-variables)
+  - [Add code to handle an access token](#add-code-to-handle-an-access-token)
+- [C#](#c)
+- [JavaScript](#javascript)
+- [C#](#c-1)
+- [JavaScript](#javascript-1)
+    - [Consent dialog for getting access token](#consent-dialog-for-getting-access-token)
+  - [Add code to receive the token](#add-code-to-receive-the-token)
+- [C#](#c-2)
+- [JavaScript](#javascript-2)
+    - [Validate the access token](#validate-the-access-token)
+      - [Example access token](#example-access-token)
+  - [Handle app user sign out](#handle-app-user-sign-out)
+- [C#](#c-3)
+- [JavaScript](#javascript-3)
+  - [Code sample](#code-sample)
+  - [Next step](#next-step)
 
 ## Update development environment variables
 
@@ -58,7 +72,7 @@ You've now configured the required environment variables for your bot app and SS
 The request to get the token is a POST message request using the existing message schema. It's included in the attachments of an OAuthCard. The schema for the OAuthCard class is defined in [Microsoft Bot Schema 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true). Teams refreshes the token if the `TokenExchangeResource` property is populated on the card. For the Teams channel, only the `Id` property, which uniquely identifies a token request, is honored.
 
 >[!NOTE]
-> The Microsoft Agents SDK `OAuthPrompt` or the `MultiProviderAuthDialog` is supported for SSO authentication.
+> The Microsoft 365 Agents SDK (previously known as Bot Framework SDK) `OAuthPrompt` or the `MultiProviderAuthDialog` is supported for SSO authentication.
 
 To update your app's code:
 
@@ -387,7 +401,7 @@ async loginStep(stepContext) {
 Web APIs on your server must decode the access token and verify if it's sent from the client.
 
 > [!NOTE]
-> If you use Agents SDK, it handles the access token validation. If you don't use Agents SDK, follow the guidelines given in this section.
+> If you use Microsoft 365 Agents SDK (previously known as Bot Framework SDK), it handles the access token validation. If you don't use Microsoft 365 Agents SDK (previously known as Bot Framework SDK), follow the guidelines given in this section.
 
 For more information about validating access token, see [Validate tokens](/azure/active-directory/develop/access-tokens#validate-tokens).
 
