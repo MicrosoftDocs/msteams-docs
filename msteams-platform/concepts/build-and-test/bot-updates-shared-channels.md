@@ -17,13 +17,13 @@ Bots must be able to distinguish between these member types to operate correctly
 
 Bots in shared channels can automate workflows, deliver notifications, and respond to user actions in real time. You can integrate bots into shared channels to streamline collaboration. 
 
-## Get member event notifications for shared channels in Microsoft Teams
+## Get member event notifications for shared channels
 Previously, bots subscribed to member events in shared channels only received notifications for direct members added to and removed from the shared channel. 
 
 Microsoft Teams now supports bot notifications for both direct and indirect members. This enhancement expands its Bot Framework SDK to support notifications for indirect members in shared channels. 
 This update improves visibility into membership changes across teams, enabling bots to more effectively track user access in collaborative environments. It builds on the existing capability for bots to subscribe to `conversationUpdate` events in channels.
 
-With this enhancement, bots now also receive events for indirect members, who gain access through:
+With this enhancement, bots now receive events for indirect members who gain acces through:
 * Membership in a team that the channel is shared with
 * Updates to the team’s roster
 
@@ -33,16 +33,16 @@ To receive `conversationUpdate` event notifications when indirect members are ad
 
 1. Update the App manifest
 
- To declare support for shared channels, add the `supportedChannelTypes` property to your app manifest:
+    To declare support for shared channels, add the `supportedChannelTypes` property to your app manifest:
 
 ```JSON
     "supportedChannelTypes": [
         "sharedChannels",
     ]
 ```
-2. Resource-Specific Consent (RSC) permission 
+2. Request Resource-Specific Consent (RSC) permission 
 
-Your app must request the following RSC permission to access channel membership information:
+    Your app must request the following RSC permission to access channel membership information:
 
 ```json
 {
@@ -61,17 +61,14 @@ Your app must request the following RSC permission to access channel membership 
 
 3. Ensure the bot is enabled in the shared channel
 
-To receive member event notifications:
+    To receive member event notifications, install the bot at the team level and manually allow it in the shared channel. 
 
-1. Install the bot at the team level.
 
-2. Manually allow the bot in each shared channel.
+    This ensures the bot is active and authorized to receive notifications for both direct and indirect members.
 
-These steps ensure the bot is active and authorized to receive notifications for both direct and indirect members.
+### Verify app addition to a channel
 
-### Detect when your app is added to a channel
-
-There’s no dedicated API to check if your app is part of a channel. Bots can detect when your app is added to a channel indirectly:
+There’s no dedicated API to check if your app is part of a channel. Bots can detect when your app is added to a channel indirectly.
 
 When your bot receives a `channelMemberAdded` event for itself in a `conversationUpdate`, your app is added to the channel.
 
@@ -164,7 +161,7 @@ public async Task OnMembersRemovedAsync(ITurnContext turnContext, AppState turnS
 }
 ```
 
-### Shared/Unshared with Team events
+### Shared and unshared with team events
 
 When a shared channel is added to another team, the Bot Framework might receive a `conversationUpdate` activity through the ```OnConversationUpdateActivityAsync``` method, but only if the bot is installed in the team or channel.
 
