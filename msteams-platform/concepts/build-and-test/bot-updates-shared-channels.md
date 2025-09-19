@@ -23,7 +23,7 @@ Previously, bots subscribed to member events in shared channels only received no
 Microsoft Teams now supports bot notifications for both direct and indirect members. This enhancement expands its Bot Framework SDK to support notifications for indirect members in shared channels. 
 This update improves visibility into membership changes across teams, enabling bots to more effectively track user access in collaborative environments. It builds on the existing capability for bots to subscribe to `conversationUpdate` events in channels.
 
-With this enhancement, bots now receive events for indirect members who gain acces through:
+With this enhancement, bots now receive events for indirect members who gain access through:
 * Membership in a team that the channel is shared with
 * Updates to the team’s roster
 
@@ -64,7 +64,7 @@ To receive `conversationUpdate` event notifications when indirect members are ad
     To receive member event notifications, install the bot at the team level and manually allow it in the shared channel. 
 
 
-    This ensures the bot is active and authorized to receive notifications for both direct and indirect members.
+    This process ensures the bot is active and authorized to receive notifications for both direct and indirect members.
 
 ### Verify app addition to a channel
 
