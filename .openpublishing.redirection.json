@@ -1395,6 +1395,90 @@
       {
         "source_path": "msteams-platform/Teams-AI-library-tutorial.yml",
         "redirect_url": "/microsoftteams/platform/teams-ai-library-tutorial.md"
-      }      
+      },
+      {
+        "source_path": "msteams-platform/sbs-gs-spfx.yml",
+        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+      },
+      {
+        "source_path": "msteams-platform/sbs-api-based-message-extensions.yml",
+        "redirect_url": "/microsoftteams/platform/messaging-extensions/build-bot-based-message-extension"
+      },
+      {
+        "source_path": "msteams-platform/sbs-api-msg-ext-ttk.yml",
+        "redirect_url": "/microsoftteams/platform/messaging-extensions/api-based-overview"
+      },
+      {
+        "source_path": "msteams-platform/sbs-bots-with-sso.yml",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/authentication/bot-sso-overview"
+      },
+      {
+        "source_path": "msteams-platform/sbs-gs-blazorupdate.yml",
+        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+      },
+      {
+        "source_path": "msteams-platform/sbs-gs-bot.yml",
+        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+      },
+      {
+        "source_path": "msteams-platform/sbs-gs-commandbot.yml",
+        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+      },
+     {
+        "source_path": "msteams-platform/sbs-gs-csharp.yml",
+        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+      },
+      {
+        "source_path": "msteams-platform/sbs-gs-javascript.yml",
+        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+      },
+      {
+        "source_path": "msteams-platform/sbs-gs-msgext.yml",
+        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+      },
+      {
+        "source_path": "msteams-platform/sbs-gs-nodejs.yml",
+        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+      },
+      {
+        "source_path": "msteams-platform/sbs-gs-notificationbot.yml",
+        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+      },
+      {
+        "source_path": "msteams-platform/sbs-gs-workflow-bot.yml",
+        "redirect_url": "/microsoftteams/platform/get-started/tool-options-and-code-samples"
+      },
+      {
+        "source_path": "msteams-platform/sbs-meetingextension-action.yml",
+        "redirect_url": "/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command"
+      },
+      {
+        "source_path": "msteams-platform/sbs-send-proactive.yml",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages"
+      },
+      {
+        "source_path": "msteams-platform/sbs-tabs-and-messaging-extensions-with-sso.yml",
+        "redirect_url": "/microsoftteams/platform/tabs/how-to/authentication/tab-sso-overview"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md",
+        "redirect_url": "/microsoftteams/platform/teams-ai-library/welcome"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md",
+        "redirect_url": "/microsoftteams/platform/teams-ai-library/welcome"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md",
+        "redirect_url": "/microsoftteams/platform/teams-ai-library/welcome"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md",
+        "redirect_url": "/microsoftteams/platform/teams-ai-library/welcome"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/teams-conversational-ai/teams-ai-library-tutorial.md",
+        "redirect_url": "/microsoftteams/platform/teams-ai-library/welcome"
+      }
     ]
 }
