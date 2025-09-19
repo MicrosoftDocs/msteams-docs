@@ -50,7 +50,7 @@ Ensure you install the following tools for building and deploying your applicati
 
 ## Understand Agents Playground
 
-Agents Playground is an npm package that has a CLI command called `teamsapptester`. When you run `teamsapptester start`, it opens a web app on your local machine that emulates the Teams or WebChat client and Bot Framework service. This web app doesn't need any cloud resources as it uses mock data to simulate the contextual information.
+Agents Playground is an npm package that has a CLI command called `teamsapptester`. When you run `teamsapptester start`, it opens a web app on your local machine that emulates the Teams or WebChat client and Microsoft 365 Agents SDK service. This web app doesn't need any cloud resources as it uses mock data to simulate the contextual information.
 
 To use an application on Agents Playground, you need to provide:
 
@@ -332,7 +332,7 @@ Currently, the accepted channel IDs are: `msteams`, `directline`, `webchat`, and
 
 ## Customize Teams context
 
-The configuration file in the project's root folder allows you to customize Teams context information such as chats, teams, and users. It provides mock data for testing Bot Framework APIs or methods from the Agent SDK or Teams AI Library, such as `TeamsInfo.getTeamMembers`.
+The configuration file in the project's root folder allows you to customize Teams context information such as chats, teams, and users. It provides mock data for testing Microsoft 365 Agents SDK APIs or methods from the Agent SDK or Teams AI Library, such as `TeamsInfo.getTeamMembers`.
 
 ### Default configuration
 
@@ -343,7 +343,7 @@ The configuration file in the project's root folder allows you to customize Team
 # Visit https://aka.ms/teams-app-test-tool-config-guide for more details on this file.
 
 # This configuration file customizes the Teams context information like chats, teams, and users.
-# It contains mock data for testing Bot Framework APIs or Bot Builder SDK methods such as TeamsInfo.getTeamMembers().
+# It contains mock data for testing Microsoft 365 Agents SDK APIs or Bot Builder SDK methods such as TeamsInfo.getTeamMembers().
 # You can customize this file to change API response if your bot code uses these APIs.
 version: "0.1.0"
 tenantId: 00000000-0000-0000-0000-0000000000001
@@ -412,13 +412,13 @@ team:
 
 ### Update the configuration file
 
-If your bot code uses Bot Framework APIs, you can modify the configuration file to customize the API responses. For example, consider an Azure DevOps notification bot installed in a team that fetches inactive bugs from Azure DevOps. It identifies the owners of the inactive bugs, retrieves their email addresses, and sends daily notifications to their personal chats.
+If your bot code uses Microsoft 365 Agents SDK APIs, you can modify the configuration file to customize the API responses. For example, consider an Azure DevOps notification bot installed in a team that fetches inactive bugs from Azure DevOps. It identifies the owners of the inactive bugs, retrieves their email addresses, and sends daily notifications to their personal chats.
 
 To comprehensively test this bot in Agents Playground, ensure to update the configuration file with the correct email addresses of the inactive bug owners.
 
 1. Go to the `.m365agentsplayground.yml` file in the project's root folder.
 
-1. Go to the `users` section and update the `name`, `userPrincipleName`, and `email` of the required user.
+2. Go to the `users` section and update the `name`, `userPrincipleName`, and `email` of the required user.
 
     ```yaml
     users:
@@ -431,14 +431,14 @@ To comprehensively test this bot in Agents Playground, ensure to update the conf
           email: some-real-user@real-domain.onmicrosoft.com
     ```
 
-1. Save the file and select **F5** to debug in Agents Playground.
+3. Save the file and select **F5** to debug in Agents Playground.
 
 > [!NOTE]
 > When you edit the configuration file in Visual Studio Code, Intellisense automatically updates the property names and warns you if you enter invalid values.
 
 It's important to understand that updating the configuration file has three major impacts:
 
-* It affects the responses returned by Bot Framework Connector APIs. For example, `TeamsInfo.getPagedMembers()`.
+* It affects the responses returned by Microsoft 365 Agents SDK Connector APIs. For example, `TeamsInfo.getPagedMembers()`.
 * It modifies the details in the activity payload. For example, `activity.recipient`.
 * It influences the user interface in Agents Playground. For example, group chat names.
 
@@ -465,7 +465,7 @@ It's important to understand that updating the configuration file has three majo
    | Features | Debug in Agents Playground | [Debug your app locally](debug-local.md) |
    | --- | --- | --- |
    | Basic sending / receiving messages | Available | Available |
-   | Bot Framework APIs (TeamsInfo.getPagedMembers()...) |Available (respond with mocked data) | Available |
+   | Microsoft 365 Agents SDK APIs (TeamsInfo.getPagedMembers()...) |Available (respond with mocked data) | Available |
    | Sending Teams events | Available (mock activity) |Available |
    | Typing indicator | Not Available | Available |
    | Tab, Message extension, Dialogs (referred as task modules in TeamsJS v1.x), Single sign-on (SSO), and non-Adaptive Cards | Not Available | Available |
