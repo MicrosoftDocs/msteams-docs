@@ -70,7 +70,7 @@ You can enable app support for shared and private channels based on whether your
 
 If it doesn't follow the preceding parameters, perform the following steps to enable app support in shared and private channels:
 
-1. Add ```"supportsChannelFeatures": "tier1"``` to your app manifest to enable support for shared and private channels.
+1. Add ``"supportsChannelFeatures": "tier1"`` to your app manifest to enable support for shared and private channels.
 2. To verify expected behavior, test your app in standard, private, and shared channels.
 
 If your app uses any of the preceding features, see the following articles, for more information:
