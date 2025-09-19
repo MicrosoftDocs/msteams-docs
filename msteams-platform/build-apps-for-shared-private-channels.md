@@ -51,7 +51,7 @@ Understanding the difference between Microsoft Teams channel types is essential.
 
 * Aggregate or cross-post data across channels only when necessary. Keep data scoped to the channel unless clearly defined to prevent accidental leaks. For example, analytics apps should not include private channel data in team-wide reports unless permissions are clearly defined.
 
-![Diagram shows Team B from organization A and Team C from organization B collaborating in a shared channel as Team A.](../../assets/images/app-fundamentals/shared-channels-teams.png)                                                   |
+![Diagram shows Team B from organization A and Team C from organization B collaborating in a shared channel as Team A.](./assets/images/app-fundamentals/shared-channels-teams.png)                                                   |
 
 > [!NOTE]
 >
@@ -399,9 +399,9 @@ Confirm that the existing functionality remains intact after your changes. Ensur
 
 ### Private channel
 
-Try this setup: Create a private channel P in Team A with atleast two members (one owner, one member).
+Create a private channel P in Team A with atleast two members (one owner, one member).
 
-Test steps:
+Perform the following steps to validate:
 
 1. Add the app to Team A then add it to private channel P.
 2. Verify that your tab loads correctly in the private channel.
@@ -413,11 +413,11 @@ Test steps:
    * Whether your app receives a membership change event
    * Whether your membership API reflects the new member.
   
-### Shared channel (same tenant)
+### [Shared channel (same tenant)](#tab/sharedchannel)
 
-Try this setup: Create shared channel X in Team A, then share it with Team B (requires owner permissions).
+Create shared channel X in Team A, then share it with Team B (requires owner permissions).
 
-Test steps:
+Perform the following steps to validate:
 
 1. Add the app to Team A (host team), then to Channel X.
 2. Validate that members from Team B.
@@ -427,11 +427,11 @@ Test steps:
    * Your bot receives a ``channelUnshared`` event
    * Membership updates are handled correctly
 
-### Shared channel (external tenant)
+### [Shared channel (external tenant)](#tab/sharedchannel-externaltenant)
 
-Try this setup: Use two tenants or collaborate with a colleague from another organization via Teams Connect.
+Use two tenants or collaborate with a colleague from another organization via Teams Connect.
 
-Test steps:
+Perform the following steps to validate:
 
 1. Have an external user send a message to your bot and confirm that is responds.
    * The bot should receive the message, provided it is added to the appropriate scope (personal chat, group chat, or channel).
@@ -440,6 +440,8 @@ Test steps:
 3. Attempt to send a direct message from your bot to the external user:
    * This will fail if the user is outside your tenant
    * Confirm that in-channel communication still works.
+
+---
   
 Testing across these scenarios will help you spot any issues with functionality, permissions, and user experience.
   
