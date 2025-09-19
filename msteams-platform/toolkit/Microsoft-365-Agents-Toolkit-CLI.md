@@ -480,7 +480,7 @@ atk collaborator grant -i false --manifest-file ./appPackage/manifest.json --env
 
 ## `atk uninstall`
 
-Clean up resources associated with manifest ID, title ID, or an environment in Microsoft 365 Agents Toolkit generated project. Resources include app registration in Developer Portal, bot registration in Microsoft 365 Agents SDK Portal, and uploaded custom apps in Microsoft 365 apps.
+Clean up resources associated with manifest ID, title ID, or an environment in Microsoft 365 Agents Toolkit generated project. Resources include app registration in Developer Portal, bot registration in Microsoft 365 Agents SDK (previously known as Bot Framework SDK) Portal, and uploaded custom apps in Microsoft 365 apps.
 
 ### `atk uninstall` parameters
 
