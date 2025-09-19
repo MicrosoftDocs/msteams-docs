@@ -413,7 +413,7 @@ Perform the following steps to validate:
    * Whether your app receives a membership change event
    * Whether your membership API reflects the new member.
   
-### Shared Channel
+### Shared channel
   
 ### [Shared channel (same tenant)](#tab/sharedchannel)
 
