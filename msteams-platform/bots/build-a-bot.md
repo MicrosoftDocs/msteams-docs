@@ -1,6 +1,6 @@
 ---
 title: Bots and Agents
-description: Learn to build a basic chatbot using Microsoft 365 Agents Toolkit, Bot Framework SDK. Additionally, learn to build a custom engine agent.
+description: Learn to build a basic chatbot using Microsoft 365 Agents Toolkit, Microsoft 365 Agents SDK (previously known as Bot Framework SDK). Additionally, learn to build a custom engine agent.
 ms.localizationpriority: high
 ms.date: 09/25/2024
 ms.topic: conceptual
@@ -31,13 +31,13 @@ If you want to create your own bot, here's a list of tools and platforms to help
 
 ## Build a bot
 
-Let's start by building a bot. You can use Agents Toolkit, Bot Framework SDK, or Teams AI library. After you build a conventional Teams bot app, you can add the AI layer to your bot to elevate it.
+Let's start by building a bot. You can use Agents Toolkit, Microsoft 365 Agents SDK (previously known as Bot Framework SDK), or Teams AI library. After you build a conventional Teams bot app, you can add the AI layer to your bot to elevate it.
 
 ### Build a conventional Teams bot app
 
 | # | I want to build ... | Here's a sample |
 | --- | --- | --- |
-| 1. | Conversational bot using Bot Framework SDK | - [Bot app with Node.js](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) <br> - [Bot app with C#](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) <br> - [Bot app with Python](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) |
+| 1. | Conversational bot using Microsoft 365 Agents SDK (previously known as Bot Framework SDK) | - [Bot app with Node.js](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) <br> - [Bot app with C#](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) <br> - [Bot app with Python](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) |
 | 2. | Conversational bot using Agents Toolkit | [Create Teams conversation bot](how-to/conversations/channel-and-group-conversations.md) |
 
 ### Build an AI-powered Teams bot app
@@ -48,8 +48,8 @@ You can build a new custom engine agent or elevate your existing conventional bo
 | --- | --- | --- |
 | 1. | Build a custom engine agent with Teams AI library | [Teams AI library](/microsoftteams/platform/teams-ai-library/welcome) |
 | 2. | Upgrade a conventional bot to custom engine agent | [Upgrade bot to Custom engine agent](how-to/teams-conversational-ai/how-conversation-ai-get-started.md#upgrade-your-conventional-bot-to-custom-engine-agent) |
-| 3. | Elevate a conventional bot built with Bot framework adapter to use AI | [Elevate your conventional bot to use AI](how-to/teams-conversational-ai/how-conversation-ai-get-started.md#elevate-your-conventional-bot-to-use-ai) |
-| 4. | Migrate a bot built with Bot framework to use Teams AI Library | [Migrate your bot to use Teams AI library](how-to/teams-conversational-ai/how-conversation-ai-get-started.md#migrate-your-bot-to-use-teams-ai-library) |
+| 3. | Elevate a conventional bot built with Microsoft 365 Agents SDK (previously known as Bot Framework SDK) adapter to use AI | [Elevate your conventional bot to use AI](how-to/teams-conversational-ai/how-conversation-ai-get-started.md#elevate-your-conventional-bot-to-use-ai) |
+| 4. | Migrate a bot built with Microsoft 365 Agents SDK (previously known as Bot Framework SDK) to use Teams AI Library | [Migrate your bot to use Teams AI library](how-to/teams-conversational-ai/how-conversation-ai-get-started.md#migrate-your-bot-to-use-teams-ai-library) |
 
 ## Next step
 
