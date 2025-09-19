@@ -48,14 +48,6 @@ Teams platform features that are available to all app developers.</br>
 
 * ***July 10, 2025***: [Custom icons for Teams notifications help your app stand out and increase engagement through more personalized activity feed updates.](/graph/teams-send-activityfeednotifications#custom-activity-icons-in-activity-feed-notifications)</br>
 
-* ***July 07, 2025***: [Custom engine agents support for Microsoft 365 Copilot Chat is now generally available.](bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#add-support-for-microsoft-365-copilot-chat)
-
-**2025 May**
-
-* ***May 29, 2025***: [Introducing app manifest v1.22 with support for custom activity icons and prefetch of nested app authentication tokens.](/microsoft-365/extensibility/schema/?view=m365-app-1.22&preserve-view=true)
-* ***May 19, 2025***: [Introducing Microsoft 365 admin center permission to view custom app analytics and the agent usage analytics for custom apps in Developer Portal.](/microsoftteams/platform/concepts/build-and-test/analyze-your-apps-usage-in-developer-portal?tabs=custom-apps-built-for-your-org)
-* ***May 19, 2025***: </br> Branding updates: </br> • Teams Toolkit is now Microsoft 365 Agents Toolkit. </br> • Teams App Test Tool is now Microsoft 365 Agents Playground. </br> • Teams App CLI, TeamFx CLI, and Teams Toolkit CLI are now Microsoft 365 Agents Toolkit CLI. </br> • `teamsapp` CLI signature is now referred as `atk`.
-
 :::column-end:::
 :::row-end:::
 <br/>
@@ -68,6 +60,10 @@ Teams platform features that are available to all app developers.</br>
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 07/07/2025 | Custom engine agent support for Microsoft 365 Copilot Chat is now generally available. | [Support for Microsoft 365 copilot chat](bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#add-support-for-microsoft-365-copilot-chat) |
+| 29/05/2025 | App manifest v1.22 adds support for custom activity icons and prefetching nested app authentication tokens. | [App manifest for Microsoft 365](/microsoft-365/extensibility/schema/?view=m365-app-1.22&preserve-view=true) |
+| 19/05/2025 | You can now use Microsoft 365 admin center permissions to view custom app and agent usage analytics in Developer Portal. | Tools and SDKs > Tools > [Developer Portal for Teams](concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md) |
+| 19/05/2025 | </br> Branding updates: </br> • Teams Toolkit is now Microsoft 365 Agents Toolkit. </br> • Teams App Test Tool is now Microsoft 365 Agents Playground. </br> • Teams App CLI, TeamFx CLI, and Teams Toolkit CLI are now Microsoft 365 Agents Toolkit CLI. </br> • `teamsapp` CLI signature is now referred as `atk`. | NA |
 | 16/05/2025 | Use the Meeting AI Insights API to get summaries, action items, and mentions from Teams meetings. | Build apps for Teams meetings and calls > Get meeting transcripts, recordings, and AI summaries > [Get AI-generated meeting summaries](graph-api/meeting-transcripts/meeting-insights.md) |
 | 13/05/2025 | Introducing agent usage analytics for third-party apps in Developer Portal | Tools and SDKs > Tools > [Developer Portal for Teams](concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md) |
 | 30/04/2025 | Introducing streaming messages for bot apps. | Build bots and agents > Bot user experience > [Stream bot messages](bots/streaming-ux.md) |
