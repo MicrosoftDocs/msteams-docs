@@ -8,7 +8,7 @@ ms.date: 09/16/2024
 
 # Types of cards
 
-Adaptive, hero, list, connector card for Microsoft 365 Groups, receipt, sign in, and thumbnail cards and card collections are supported in bots for Microsoft Teams. They're based on cards defined by the Microsoft 365 Agents SDK, but Teams doesn't support all Microsoft 365 Agents SDK cards and has added some of its own.
+Adaptive, hero, list, connector card for Microsoft 365 Groups, receipt, sign in, and thumbnail cards and card collections are supported in bots for Microsoft Teams. They're based on cards defined by the Microsoft 365 Agents SDK (previously known as Bot Framework SDK), but Teams doesn't support all Microsoft 365 Agents SDK (previously known as Bot Framework SDK) cards and has added some of its own.
 
 Before you identify the different card types, understand how to create a hero card, thumbnail card, or Adaptive Card.
 
@@ -989,7 +989,7 @@ A list can display a maximum of 10 cards per message.
 
 ## Cards not supported in Teams
 
-The following cards are implemented by the Microsoft 365 Agents SDK, but aren't supported by Microsoft Teams:
+The following cards are implemented by the Microsoft 365 Agents SDK (previously known as Bot Framework SDK), but aren't supported by Microsoft Teams:
 
 * Animation cards
 * Audio cards

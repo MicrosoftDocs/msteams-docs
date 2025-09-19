@@ -100,7 +100,7 @@ When the app user selects **View and accept**, the existing Microsoft Entra perm
             }
     ```
 
-1. Teams client sends an invoke request to the bot. The bot receives the app users consent and uses their identity to help the token exchange process with the Microsoft 365 Agents SDK token service and Microsoft Entra ID. The Microsoft 365 Agents SDK token service delivers the app users access token to the bot.
+1. Teams client sends an invoke request to the bot. The bot receives the app users consent and uses their identity to help the token exchange process with the Microsoft 365 Agents SDK (previously known as Bot Framework SDK) token service and Microsoft Entra ID. The Microsoft 365 Agents SDK (previously known as Bot Framework SDK) token service delivers the app users access token to the bot.
    * Bot service ignores the access token if the value is incorrect.
    * Bot service that experiences an error while performing token exchange must respond with an error or a second sign-in request that doesn't include SSO information. If the bot service responds with an error, the error must be:
 
