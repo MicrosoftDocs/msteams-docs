@@ -9,8 +9,6 @@ ms.author: surbhigupta
 
 # Build a custom engine agent
 
-[!INCLUDE [teams-ai-lib-v2-rec](../../../includes/teams-ai-lib-v2-rec.md)]
-
 This tutorial shows how to create a custom engine agent using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) with OpenAI.
 
 In this tutorial, learn:

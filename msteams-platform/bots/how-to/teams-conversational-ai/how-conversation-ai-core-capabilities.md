@@ -10,8 +10,6 @@ ms.owner: angovil
 
 # Understand Teams AI library
 
-[!INCLUDE [teams-ai-lib-v2-rec](../../../includes/teams-ai-lib-v2-rec.md)]
-
 Teams AI library supports JavaScript and simplifies building bots that can interact with Microsoft Teams. It also facilitates the migration of existing bots to use AI-powered features. The library supports migrating messaging, message extension, and Adaptive Cards capabilities to the new format. You can also upgrade your existing Teams apps with these features.
 
 Earlier, you used the BotBuilder SDK to create bots for Teams. The Teams AI library is designed to make this process easier and includes built-in AI support. Initially, you might upgrade your bot without AI, but after upgrading, it can connect to AI or Large Language Models (LLMs) available in the AI library.
