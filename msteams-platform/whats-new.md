@@ -597,17 +597,26 @@ Discover Microsoft Teams platform features that are deprecated. You can now get 
 
 Teams platform features that aren't available.
 
-* ***February 07, 2025***: Support for Yeoman generator is deprecated from Teams developer documentation.
+* ***September 18, 2025***: Teams AI library v1 is deprecated. We recommend that you upgrade your agents to use the updated [Teams AI library](/microsoftteams/platform/teams-ai-library/welcome). Teams AI library is now generally available for JavaScript and C#, supports Python in developer preview. It provides a simplified SDK, support for Model Context Protocol (MCP), Agent-to-Agent communication (A2A), and streamlined tools to enable developers to build intelligent agents for Teams.
 
 :::column-end:::
 :::row-end:::
+
+<details>
+<summary><b>2025</b></summary>
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ------------------ |
+| 07/02/2025 | Support for Yeoman generator is deprecated from Teams developer documentation. |
+
+</details>
 
 <details>
 <summary><b>2024</b></summary>
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
-| 01/17/2025 | Copilot plugin as a message extension in Teams meeting is deprecated. |
+| 17/01/2025 | Copilot plugin as a message extension in Teams meeting is deprecated. |
 | 01/16/1015 | [Future-proof your app for third-party cookie deprecation across major browsers.](resources/samesite-cookie-update.md#third-party-cookies-deprecation) |
 | 02/08/2024| The Collaboration controls for model-driven applications are retired. |  |
 | 25/07/2024| Teams, Outlook, and Microsoft 365 web domains are migrating to `*.cloud.microsoft` domain. Configure your app before September 2024 to ensure continued functionality. | Extend your app across Microsoft 365 > Teams tabs in Microsoft 365 and Outlook > [Enable Teams personal tab for Microsoft 365](m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers) |
