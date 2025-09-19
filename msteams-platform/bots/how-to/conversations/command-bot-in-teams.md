@@ -13,14 +13,14 @@ ms.date: 12/11/2024
 
 Microsoft Teams allows you to automate simple and repetitive tasks in a conversation. You can build a command bot that can respond to simple commands sent in chats with Adaptive Cards. You can create a command bot template in Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) that responds to chat commands by displaying UI using an Adaptive Card. This enables users to send messages in Teams and your app can provide a response as required.
 
-The command bot template is built using the TeamsFx SDK, which provides a simple set of functions over the Microsoft Agents SDK. Command bot can be used in different scenarios such as checking ticket status and retrieving help information.
+The command bot template is built using the TeamsFx SDK, which provides a simple set of functions over the Microsoft 365 Agents SDK (previously known as Bot Framework SDK). Command bot can be used in different scenarios such as checking ticket status and retrieving help information.
 
 :::image type="content" source="../../../assets/images/command-bot-teams/commandbot-flowchart1.png" alt-text="Screenshot of creating command bot app with Adaptive Card flow chart." lightbox="../../../assets/images/command-bot-teams/commandbot-flowchart1.png":::
 
 **Advantages**
 
 * Automates simple and repetitive tasks with a chat command.
-* Simplifies programming model with TeamsFx SDK, built on Agents SDK.
+* Simplifies programming model with TeamsFx SDK, built on Microsoft 365 Agents SDK (previously known as Bot Framework SDK).
 * Supports regular expressions for processing commands.
 
 ## Command bot installation
@@ -37,7 +37,7 @@ For uninstalling, see [remove an app from Teams](https://support.microsoft.com/e
 
 ## Command and response
 
-The TeamsFx command and response bots are built using the [Agents SDK](/azure/bot-service/bot-builder-basics). The Agents SDK provides [built-in message handler](../../bot-basics.md#teams-activity-handlers) to handle the incoming message activity, which requires you to understand the concept of Agents SDK such as the [event-driven conversation model](/azure/bot-service/bot-activity-handler-concept). TeamsFx SDK provides command-response abstraction layer to let the users focus on handling the command request according to the business need, without learning the Agents SDK.
+The TeamsFx command and response bots are built using the [Bot Framework SDK](/azure/bot-service/bot-builder-basics). The Microsoft 365 Agents SDK (previously known as Bot Framework SDK) provides [built-in message handler](../../bot-basics.md#teams-activity-handlers) to handle the incoming message activity, which requires you to understand the concept of Microsoft 365 Agents SDK (previously known as Bot Framework SDK) such as the [event-driven conversation model](/azure/bot-service/bot-activity-handler-concept). TeamsFx SDK provides command-response abstraction layer to let the users focus on handling the command request according to the business need, without learning the Microsoft 365 Agents SDK (previously known as Bot Framework SDK).
 
 TeamsFx SDK pulls [Bot Framework middleware](/azure/bot-service/bot-builder-concept-middleware) to handle the integration with the underlying activity handlers. If the received message text matches the command pattern provided in a `TeamsFxBotCommandHandler` instance, the middleware handles the incoming message activity and invokes the corresponding `handlerCommandReceived` function. The middleware calls `context.sendActivity` to send the command response returned from the `handlerCommandReceived` function to the user.
 

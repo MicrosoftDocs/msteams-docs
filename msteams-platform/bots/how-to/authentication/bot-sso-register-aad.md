@@ -14,7 +14,7 @@ Microsoft Entra ID provides app users access to your bot or message extension ap
 
 ## SSO configuration in Microsoft Entra admin center
 
-The bot and message extension apps use Agents SDK for communicating with app users and implementing authentication.
+The bot and message extension apps use Microsoft 365 Agents SDK (previously known as Bot Framework SDK) for communicating with app users and implementing authentication.
 
 To configure single sign-on (SSO) for your bot or message extension app, you'll need to:
 
@@ -421,7 +421,7 @@ For a bot to support SSO, you must update its OAuth connection settings. This pr
 * Tenant ID
 * Scope and permissions
 
-With the app (client) ID and client secret provided, the Agents SDK Token Store exchanges the token for a graph token with defined permissions.
+With the app (client) ID and client secret provided, the Microsoft 365 Agents SDK (previously known as Bot Framework SDK) Token Store exchanges the token for a graph token with defined permissions.
 
 ### To update OAuth connection
 
@@ -848,7 +848,7 @@ For a bot to support SSO, you must update its OAuth connection settings. This pr
 * Tenant ID
 * Scope and permissions
 
-With the app (client) ID and client secret provided, the Agents SDK Token Store exchanges the token for a graph token with defined permissions.
+With the app (client) ID and client secret provided, the Microsoft 365 Agents SDK (previously known as Bot Framework SDK) Token Store exchanges the token for a graph token with defined permissions.
 
 #### To update OAuth connection for your bot resource
 
