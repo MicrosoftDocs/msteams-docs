@@ -37,7 +37,7 @@ Suggested actions help users continue conversations with your bot.
 
 :::column-end:::
 
-:::row-end:::
+:::row-end::: 
 
 ## Prompt starters
 
@@ -47,7 +47,16 @@ Suggested actions help users continue conversations with your bot.
 >
 > * Prompt starters are only supported for one-on-one chat bots.
 
-To enable prompt starters, define the `commands` property in your bot's app manifest. Each command contains a `title` and `description`. The `title` is the prompt and the `description` describes what the users accomplish. When the user selects on a prompt starter, the `title` of the prompt is populated in the compose box. To define `commands` in your app manifest, you can either use **Developer Portal** or add them manually in the app manifest.
+To enable prompt starters, define the `commands` property in your bot's app manifest. Each command now contains four fields, a `title`, `description`, `type` and `prompt`. The `title` field is the text shown in the prompt starter and the `description` describes what the users accomplish. The `type` field indicates whether the bot command is a basic command or a prompt. The `prompt` field defines the text to populate in the compose box, when the command is a prompt type.
+When the user selects on a prompt starter, the `title` of the prompt is populated in the compose box. To define `commands` in your app manifest, you can either use **Developer Portal** or add them manually in the app manifest. 
+The `type ` field determines how the command behaves. 
+* For `type`:basic, the title will be used to populate the compose box. 
+* For `type`:prompt, the prompt text will be used to populate the compose box. 
+
+If the command is a prompt, set type to "prompt" and provide the text in the prompt field.
+If the command is basic, set type to "basic" and use the title field for the text.
+
+For agent-based bots, developers must set type to prompt and provide a valid prompt. If prompt is left blank, manifest validation will fail at submission.
 
 # [Developer Portal](#tab/developer-portal)
 
@@ -103,18 +112,25 @@ The manifest example code for prompt starters is as follows:
             {
               "title":"Help",
               "description":"Displays this help message"
+              "type":"basic"
             },
             {
               "title":"Search Flights",
               "description":"Search flights from Seattle to Phoenix May 2-5 departing after 3pm"
+              "type": "prompt",
+              "prompt": "Search flights from Seattle to Phoenix May 2-5 departing after 3pm. Please show me the best options."
             },
             {
               "title":"Search Hotels",
               "description":"Search hotels in Portland tonight"
+              "type": "prompt",
+              "prompt": "Search hotels in Portland for tonight. Please show me available options with good ratings."
             },
             {
               "title":"Best Time to Fly",
               "description":"Best time to fly to London for a 5 day trip this summer"
+              "type": "prompt",
+              "prompt": "What is the best time to fly to London for a 5 day trip? I'm looking for good weather and reasonable prices."
             }
           ]
         }
