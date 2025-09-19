@@ -12,7 +12,7 @@ ms.date: 04/25/2024
 
 You can debug bot-based message extension capabilities such as search commands, action commands, and link unfurling using Agents Playground (previously known as Teams App Test Tool) within a simulated environment. Test tool helps you to identify and resolve issues before deploying the extension to a live environment.
 
-Agents Playground enhances the functionality of bot-based message extensions, which are built on top of Bot Framework. When a message extension is activated, Agents Playground sends an invoke request to the app. The app then processes this request and returns an invoke response, which Agents Playground renders and displays.
+Agents Playground enhances the functionality of bot-based message extensions, which are built on top of Microsoft 365 Agents SDK (previously known as Bot Framework SDK). When a message extension is activated, Agents Playground sends an invoke request to the app. The app then processes this request and returns an invoke response, which Agents Playground renders and displays.
 
 > [!NOTE]
 > The user experience to trigger message extension in Agents Playground is different from Teams, as the goal of Agents Playground is to test and debug the app logic and make the flow simple.
@@ -230,7 +230,7 @@ The following table lists the features for each message extension type that aren
 <details>
 <summary>How can I use `commandId` or `parameters.name` properties for a Search Command in Agents Playground?</summary>
 
-When you use the search box in a search-based message extension in Teams, your app receives an invoke activity that includes two parameters. Sometimes, your app might need to use `activity.value.commandId` or `activity.value.parameters[0].name` to manage different search command behaviors in the activity handler for the `composeExtension/query` invoke activity, such as the `handleTeamsMessagingExtensionQuery` method in the Bot Framework SDK for JavaScript. However, your app doesn't need it because [Teams only supports a single search command](../resources/schema/manifest-schema.md#composeextensionscommands) and you can leave them empty.
+When you use the search box in a search-based message extension in Teams, your app receives an invoke activity that includes two parameters. Sometimes, your app might need to use `activity.value.commandId` or `activity.value.parameters[0].name` to manage different search command behaviors in the activity handler for the `composeExtension/query` invoke activity, such as the `handleTeamsMessagingExtensionQuery` method in the Microsoft 365 Agents SDK (previously known as Bot Framework SDK) for JavaScript. However, your app doesn't need it because [Teams only supports a single search command](../resources/schema/manifest-schema.md#composeextensionscommands) and you can leave them empty.
 
 If your app uses these two parameters, you can provide additional inputs by selecting `Specify Command ID or Parameter` and updating the required values. Agents Playground includes these parameters in the invoke activity payload during a search. If you don't specify them, the payload avoids these parameters.
 
@@ -245,7 +245,7 @@ In Teams, the parameters are available in the app manifest. Since Agents Playgro
 <details>
 <summary>How can I use `commandId` property for an Action Command in Agents Playground?</summary>
 
-In Teams, dialogs are triggered from action commands and your app receives a `composeExtension/fetchTask` or `composeExtension/submitAction` invoke activity. This activity includes the `activity.value.commandId` parameter. However, your app uses this parameter to differentiate between commands within the activity handler for these invoke activities, such as the `handleTeamsMessagingExtensionFetchTask` or `handleTeamsMessagingExtensionSubmitAction` methods in the Bot Framework SDK for JavaScript.
+In Teams, dialogs are triggered from action commands and your app receives a `composeExtension/fetchTask` or `composeExtension/submitAction` invoke activity. This activity includes the `activity.value.commandId` parameter. However, your app uses this parameter to differentiate between commands within the activity handler for these invoke activities, such as the `handleTeamsMessagingExtensionFetchTask` or `handleTeamsMessagingExtensionSubmitAction` methods in the Microsoft 365 Agents SDK (previously known as Bot Framework SDK) for JavaScript.
 
 To test various action commands, you must enter the `Command ID` in the respective field. If you don't update, the command IDs aren't included in the activity payload.
 
