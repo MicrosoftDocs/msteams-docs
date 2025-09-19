@@ -1,6 +1,6 @@
 ---
 title: Use dialogs in Microsoft Teams bots
-description: Learn how to use dialogs with Microsoft Teams bots and invoke dialogs, about Microsoft 365 Agents SDK card and Adaptive Card actions, deep links, and respond to messages.
+description: Learn how to use dialogs with Microsoft Teams bots and invoke dialogs, about Microsoft 365 Agents SDK (previously known as Bot Framework SDK) card and Adaptive Card actions, deep links, and respond to messages.
 ms.localizationpriority: medium
 ms.topic: how-to
 ms.date: 01/31/2023
@@ -8,12 +8,12 @@ ms.date: 01/31/2023
 
 # Use dialogs with bots
 
-Invoke dialogs (referred as task modules in TeamsJS v1.x) from Microsoft Teams bots using buttons on Adaptive Cards and Microsoft 365 Agents SDK cards that are hero, thumbnail, and connector for Microsoft 365 Groups. Dialogs are often a better user experience than multiple conversation steps. Keep track of bot state and allow the user to interrupt or cancel the sequence.
+Invoke dialogs (referred as task modules in TeamsJS v1.x) from Microsoft Teams bots using buttons on Adaptive Cards and Microsoft 365 Agents SDK (previously known as Bot Framework SDK) cards that are hero, thumbnail, and connector for Microsoft 365 Groups. Dialogs are often a better user experience than multiple conversation steps. Keep track of bot state and allow the user to interrupt or cancel the sequence.
 
 There are two ways of invoking dialogs:
 
-* A new invoke message `task/fetch`: Using the `invoke` [card action](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke) for Microsoft 365 Agents SDK cards, or the `Action.Submit` [card action](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) for Adaptive Cards, with `task/fetch`, either an HTML or Adaptive Card-based dialog is fetched dynamically from your bot.
-* Deep link URLs: Using the [deep link syntax for dialogs](../../concepts/build-and-test/deep-link-application.md#deep-link-to-open-a-dialog), you can use the `openUrl` [card action](~/task-modules-and-cards/cards/cards-actions.md#action-type-openurl) for Microsoft 365 Agents SDK cards or the `Action.OpenUrl` [card action](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) for Adaptive Cards, respectively. With deep link URLs, the dialog URL or Adaptive Card body is already known to avoid a server round-trip relative to `task/fetch`.
+* A new invoke message `task/fetch`: Using the `invoke` [card action](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke) for Microsoft 365 Agents SDK (previously known as Bot Framework SDK) cards, or the `Action.Submit` [card action](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) for Adaptive Cards, with `task/fetch`, either an HTML or Adaptive Card-based dialog is fetched dynamically from your bot.
+* Deep link URLs: Using the [deep link syntax for dialogs](../../concepts/build-and-test/deep-link-application.md#deep-link-to-open-a-dialog), you can use the `openUrl` [card action](~/task-modules-and-cards/cards/cards-actions.md#action-type-openurl) for Microsoft 365 Agents SDK (previously known as Bot Framework SDK) cards or the `Action.OpenUrl` [card action](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) for Adaptive Cards, respectively. With deep link URLs, the dialog URL or Adaptive Card body is already known to avoid a server round-trip relative to `task/fetch`.
 
 > [!IMPORTANT]
 > Each `url` and `fallbackUrl` must implement the HTTPS encryption protocol.
@@ -28,7 +28,7 @@ When the `value` object of the `invoke` card action or `Action.Submit` is initia
 
 The following steps provide instructions on how to invoke a dialog (referred as task module in TeamsJS v1.x) using `task/fetch`:
 
-1. This image shows a Microsoft 365 Agents SDK hero card with a **Buy** `invoke` [card action](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke). The value of the `type` property is `task/fetch` and the rest of the `value` object can be of your choice.
+1. This image shows a Microsoft 365 Agents SDK (previously known as Bot Framework SDK) hero card with a **Buy** `invoke` [card action](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke). The value of the `type` property is `task/fetch` and the rest of the `value` object can be of your choice.
 1. The bot receives the `invoke` HTTP POST message.
 1. The bot creates a response object and returns it in the body of the POST response with an HTTP 200 response code. For more information on schema for responses, see the [discussion on task/submit](#responds-to-the-tasksubmit-messages). The following code provides an example of body of the HTTP response that contains a [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#dialoginfo-object) embedded in a wrapper object:
 
@@ -79,13 +79,13 @@ The next section provides details on payload of `task/fetch` and `task/submit` m
 
 ## Payload of `task/fetch` and `task/submit` messages
 
-This section defines the schema of what your bot receives when it receives a `task/fetch` or `task/submit` Microsoft 365 Agents SDK  `Activity` object. The following table provides the properties of payload of `task/fetch` and `task/submit` messages:
+This section defines the schema of what your bot receives when it receives a `task/fetch` or `task/submit` Microsoft 365 Agents SDK (previously known as Bot Framework SDK)  `Activity` object. The following table provides the properties of payload of `task/fetch` and `task/submit` messages:
 
 | Property | Description                          |
 | -------- | ------------------------------------ |
 | `type`   | Is always `invoke`.           |
 | `name`   | Is either `task/fetch` or `task/submit`. |
-| `value`  | Is the developer-defined payload. The structure of the `value` object is the same as what is sent from Teams. In this case, however, it's different. It requires support for dynamic fetch that is `task/fetch` from both Microsoft 365 Agents SDK, which is `value` and Adaptive Card `Action.Submit` actions, which is `data`. A way to communicate Teams `context` to the bot is required in addition to what is included in `value` or `data`.<br/><br/>Combine 'value' and 'data' into a parent object:<br/><br/><pre>{<br/>  "context": {<br/>    "theme": "default" &vert; "dark" &vert; "contrast",<br/>  },<br/>  "data": [value field from Bot Framework card] &vert; [data field from Adaptive Card] <br/>}</pre>  |
+| `value`  | Is the developer-defined payload. The structure of the `value` object is the same as what is sent from Teams. In this case, however, it's different. It requires support for dynamic fetch that is `task/fetch` from both Microsoft 365 Agents SDK (previously known as Bot Framework SDK), which is `value` and Adaptive Card `Action.Submit` actions, which is `data`. A way to communicate Teams `context` to the bot is required in addition to what is included in `value` or `data`.<br/><br/>Combine 'value' and 'data' into a parent object:<br/><br/><pre>{<br/>  "context": {<br/>    "theme": "default" &vert; "dark" &vert; "contrast",<br/>  },<br/>  "data": [value field from Bot Framework card] &vert; [data field from Adaptive Card] <br/>}</pre>  |
 
 The next section provides an example of receiving and responding to `task/fetch` and `task/submit` invoke messages in Node.js.
 
