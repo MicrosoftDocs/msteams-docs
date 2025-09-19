@@ -49,7 +49,7 @@ A dialog includes the following as shown in the previous image:
 
 ## Using dialogs in Microsoft 365 Agents SDK
 
-You can integrate dialogs into Microsoft 365 Agents SDK Web Chat to improve user experience. However, with the primary focus on chat interactions, Web Chat doesn't support opening dialogs. To create custom events or components within Web Chat, use [Bot Framework Web Chat](https://github.com/microsoft/BotFramework-WebChat). For more information, see [Bot Framework documentation](/azure/bot-service).
+You can integrate dialogs into Microsoft 365 Agents SDK (previously known as Bot Framework SDK) Web Chat to improve user experience. However, with the primary focus on chat interactions, Web Chat doesn't support opening dialogs. To create custom events or components within Web Chat, use [Bot Framework Web Chat](https://github.com/microsoft/BotFramework-WebChat). For more information, see [Bot Framework documentation](/azure/bot-service).
 
 ## Next step
 

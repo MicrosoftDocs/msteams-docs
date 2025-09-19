@@ -38,7 +38,7 @@ Cards were first defined as part of Outlook and Microsoft 365 and are now used a
 
 ## Cards in bots
 
-The Microsoft 365 Agents SDK extends the cards specification by adding a set of predefined cards that bots can use as part of bot messages. Teams supports bots using the Microsoft 365 Agents SDK, but it supports a different set of these cards. General information on cards in Microsoft 365 Agents SDK can be found in [add rich card attachments to messages](/bot-framework/nodejs/bot-builder-nodejs-send-rich-cards). These cards are called simple cards in Teams.
+The Microsoft 365 Agents SDK (previously known as Bot Framework SDK) extends the cards specification by adding a set of predefined cards that bots can use as part of bot messages. Teams supports bots using the Microsoft 365 Agents SDK (previously known as Bot Framework SDK), but it supports a different set of these cards. General information on cards in Microsoft 365 Agents SDK (previously known as Bot Framework SDK) can be found in [add rich card attachments to messages](/bot-framework/nodejs/bot-builder-nodejs-send-rich-cards). These cards are called simple cards in Teams.
 
 Bots in Teams can use simple cards, connector cards, or Adaptive Cards. [Types of cards](~/task-modules-and-cards/cards/cards-reference.md) provides information on cards, supported by bots in Teams.
 
@@ -48,7 +48,7 @@ Bots in Teams can use simple cards, connector cards, or Adaptive Cards. [Types o
 
 ## Types of cards
 
-All cards used by Teams are listed in [types of cards](~/task-modules-and-cards/cards/cards-reference.md). This reference also describes differences between Microsoft 365 Agents SDK cards and cards in Teams.
+All cards used by Teams are listed in [types of cards](~/task-modules-and-cards/cards/cards-reference.md). This reference also describes differences between Microsoft 365 Agents SDK (previously known as Bot Framework SDK) cards and cards in Teams.
 
 ## Adaptive Cards
 
@@ -59,7 +59,7 @@ All cards used by Teams are listed in [types of cards](~/task-modules-and-cards/
 In addition to Adaptive Cards, Teams supports two other types of cards:
 
 - Connector cards: Used as part of connectors for Microsoft 365 Groups.
-- Simple cards: Used from the Microsoft 365 Agents SDK, such as the thumbnail and hero cards.
+- Simple cards: Used from the Microsoft 365 Agents SDK (previously known as Bot Framework SDK), such as the thumbnail and hero cards.
 
 ### People Picker in Adaptive Cards
 
