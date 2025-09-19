@@ -36,17 +36,9 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.</br>
 
-**2025 August**
+**2025 September**
 
 * ***September 18, 2025***: [Teams AI library is now generally available for JavaScript and C#. It provides a simplified SDK, support for Model Context Protocol (MCP), Agent-to-Agent communication (A2A), and streamlined tools to enable developers to build intelligent agents for Teams](/microsoftteams/platform/teams-ai-library/welcome).
-
-* ***August 19, 2025***: [Teams now supports token prefetching for apps that use nested app authentication (NAA). This enhancement enables the host to acquire authentication tokens proactively before the app launches, improving startup performance and reducing latency.](concepts/authentication/nested-authentication.md#token-prefetching-for-nested-app-authentication-naa)</br>
-
-* ***August 08, 2025***: [Introducing app manifest v1.23 with support for custom contextual tabs and system-generated metadata for agents.](/microsoft-365/extensibility/schema/?view=m365-app-1.23&preserve-view=true)
-
-**2025 July**
-
-* ***July 10, 2025***: [Custom icons for Teams notifications help your app stand out and increase engagement through more personalized activity feed updates.](/graph/teams-send-activityfeednotifications#custom-activity-icons-in-activity-feed-notifications)</br>
 
 :::column-end:::
 :::row-end:::
@@ -60,10 +52,13 @@ Teams platform features that are available to all app developers.</br>
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 19/08/2025 | Teams now supports token prefetching for apps that use nested app authentication (NAA). | Add authentication > [Enable nested app authentication](concepts/authentication/nested-authentication.md#token-prefetching-for-nested-app-authentication-naa) |
+| 08/08/2025 | App manifest v1.23 introduces support for custom contextual tabs and system-generated agent metadata. | [App manifest for Microsoft 365](/microsoft-365/extensibility/schema/?view=m365-app-1.23&preserve-view=true) |
+| 10/07/2025 | Custom icons for Teams notifications make your app stand out and boost engagement with personalized activity feed updates. | Teamwork and communications > Activity feed notifications > [Send activity feed notifications](/graph/teams-send-activityfeednotifications#custom-activity-icons-in-activity-feed-notifications) |
 | 07/07/2025 | Custom engine agent support for Microsoft 365 Copilot Chat is now generally available. | [Support for Microsoft 365 copilot chat](bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#add-support-for-microsoft-365-copilot-chat) |
 | 29/05/2025 | App manifest v1.22 adds support for custom activity icons and prefetching nested app authentication tokens. | [App manifest for Microsoft 365](/microsoft-365/extensibility/schema/?view=m365-app-1.22&preserve-view=true) |
 | 19/05/2025 | You can now use Microsoft 365 admin center permissions to view custom app and agent usage analytics in Developer Portal. | Tools and SDKs > Tools > [Developer Portal for Teams](concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md) |
-| 19/05/2025 | </br> Branding updates: </br> • Teams Toolkit is now Microsoft 365 Agents Toolkit. </br> • Teams App Test Tool is now Microsoft 365 Agents Playground. </br> • Teams App CLI, TeamFx CLI, and Teams Toolkit CLI are now Microsoft 365 Agents Toolkit CLI. </br> • `teamsapp` CLI signature is now referred as `atk`. | NA |
+| 19/05/2025 | Branding updates: </br> • Teams Toolkit is now Microsoft 365 Agents Toolkit. </br> • Teams App Test Tool is now Microsoft 365 Agents Playground. </br> • Teams App CLI, TeamFx CLI, and Teams Toolkit CLI are now Microsoft 365 Agents Toolkit CLI. </br> • `teamsapp` CLI signature is now referred as `atk`. |  |
 | 16/05/2025 | Use the Meeting AI Insights API to get summaries, action items, and mentions from Teams meetings. | Build apps for Teams meetings and calls > Get meeting transcripts, recordings, and AI summaries > [Get AI-generated meeting summaries](graph-api/meeting-transcripts/meeting-insights.md) |
 | 13/05/2025 | Introducing agent usage analytics for third-party apps in Developer Portal | Tools and SDKs > Tools > [Developer Portal for Teams](concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md) |
 | 30/04/2025 | Introducing streaming messages for bot apps. | Build bots and agents > Bot user experience > [Stream bot messages](bots/streaming-ux.md) |
@@ -472,13 +467,6 @@ Explore updates from the previous GA releases listed here.
 
 Discover Microsoft Teams platform features that are in developer preview. You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
 
-## Microsoft Build 2025 :::image type="icon" source="assets/images/bullhorn.png" border="false"
-
-| **Date** | **Update** | **Find here** |
-| -------- | --------- | ----------------|
-| May 19, 2025 | Introducing Teams AI library v2. This new library consolidates all the SDKs needed to create collaborative agents for Microsoft Teams | [Teams AI library v2 (preview)](/microsoftteams/platform/teams-ai-library/welcome) |
-| May 16, 2025 | Increase app engagement with custom activity icons in activity feed notifications | Build tabs > Tab features > Send activity feed notifications > [Custom activity icons in activity feed notifications](/graph/teams-send-activityfeednotifications?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json&tabs=desktop%2Chttp#custom-activity-icons-in-activity-feed-notifications) |
-
 ## Developer preview
 
 :::row:::
@@ -491,7 +479,7 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-* ***September 18, 2025:***: [Teams AI library supports Python in developer preview. It provides a simplified SDK, support for Model Context Protocol (MCP), Agent-to-Agent communication (A2A), and streamlined tools to enable developers to build intelligent agents for Teams.](/microsoftteams/platform/teams-ai-library/welcome).
+* ***September 18, 2025:*** [Teams AI library supports Python in developer preview. It provides a simplified SDK, support for Model Context Protocol (MCP), Agent-to-Agent communication (A2A), and streamlined tools to enable developers to build intelligent agents for Teams.](/microsoftteams/platform/teams-ai-library/welcome)
 
 <!--
 **2025 May**
