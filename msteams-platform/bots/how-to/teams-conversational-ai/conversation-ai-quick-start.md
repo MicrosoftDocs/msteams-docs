@@ -12,6 +12,8 @@ ms.date: 05/27/2025
 
 # Teams AI library quick start guide
 
+[!INCLUDE [teams-ai-lib-v2-rec](../../../includes/teams-ai-lib-v2-rec.md)]
+
 Get started with Teams AI library using the LightBot sample, which is designed to help you through the process of creating apps that can control lights, such as turning them on and off using Teams AI library. The bot uses the gpt-3.5-turbo model to chat with Microsoft Teams users and respond in a polite and respectful manner, staying within the scope of the conversation.
 
 ::: zone pivot="qs-javascript"
