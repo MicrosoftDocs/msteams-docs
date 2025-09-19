@@ -11,8 +11,7 @@ ms.owner: angovil
 
 # Teams AI library
 
-> [!IMPORTANT]
-> [Teams AI library v2](/microsoftteams/platform/teams-ai-library/) is available in developer preview. Learn more about the new and improved developer experience, MCP support, and more.
+[!INCLUDE [teams-ai-lib-v2-rec](../../../includes/teams-ai-lib-v2-rec.md)]
 
 Teams AI library is a Teams-centric interface for integrating GPT-based language models and user intent engines. It simplifies the development process by reducing the need to write and maintain complex conversational bot logic.
 
@@ -353,6 +352,6 @@ Below is a table listing sample projects demonstrating various features of Teams
 
 ## See also
 
-* [Teams AI library v2 (preview)](/microsoftteams/platform/teams-ai-library/welcome#overview)
+* [Teams AI library](/microsoftteams/platform/teams-ai-library/welcome#overview)
 * [Copilot handoff](../conversations/bot-copilot-handoff.md)
 * [Teams AI library FAQs](../../../teams-faq.md#teams-ai-library)
