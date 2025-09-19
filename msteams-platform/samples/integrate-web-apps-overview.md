@@ -44,7 +44,7 @@ With Power Apps, you can build business apps that connect to your business data 
 
 ### Power Virtual Agents
 
-Power Virtual Agent is a no code, guided graphical interface solution. Built on the Microsoft Power Platform and the Micorosft 365 Agents SDK. It empowers every member of your team to create and maintain rich conversational chatbots that easily integrate with the Teams platform. You can design, develop, and publish intelligent virtual agents for Teams without having to set up a development environment, create a web service, or directly register with the Microsoft 365 Agents SDK.
+Power Virtual Agent is a no code, guided graphical interface solution. Built on the Microsoft Power Platform and the Microsoft 365 Agents SDK (previously known as Bot Framework SDK). It empowers every member of your team to create and maintain rich conversational chatbots that easily integrate with the Teams platform. You can design, develop, and publish intelligent virtual agents for Teams without having to set up a development environment, create a web service, or directly register with the Microsoft 365 Agents SDK (previously known as Bot Framework SDK).
 
 ### Create Virtual Assistant
 

@@ -413,7 +413,7 @@ This version string must follow the [semver](http://semver.org/) standard (MAJOR
 
 **Required** &ndash; Microsoft app ID
 
-The ID is a unique Microsoft-generated identifier for the app. The format of the ID is GUID. You have an ID if your bot is registered through the Microsoft 365 Agents SDK. You have an ID if your tab's web app already signs in with Microsoft. You must enter the ID here. Otherwise, you must generate a new ID at the [Microsoft Application Registration Portal](https://aka.ms/appregistrations). Use the same ID if you add a bot.
+The ID is a unique Microsoft-generated identifier for the app. The format of the ID is GUID. You have an ID if your bot is registered through the Microsoft 365 Agents SDK (previously known as Bot Framework SDK). You have an ID if your tab's web app already signs in with Microsoft. You must enter the ID here. Otherwise, you must generate a new ID at the [Microsoft Application Registration Portal](https://aka.ms/appregistrations). Use the same ID if you add a bot.
 
 The ID stored in Teams admin center is the **External App ID** and it's visible as **ExternalID** on the traces.
 
@@ -660,7 +660,7 @@ The item is an array (maximum of only one element&mdash; only one bot is allowed
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`botId`|String||✔️|The unique Microsoft app ID for the bot as registered with the Microsoft 365 Agents SDK. The ID can be the same as the overall [app ID](#id).|
+|`botId`|String||✔️|The unique Microsoft app ID for the bot as registered with the Microsoft 365 Agents SDK (previously known as Bot Framework SDK). The ID can be the same as the overall [app ID](#id).|
 |`scopes`|Array of enums|4|✔️|Specifies whether the bot offers an experience in the context of a channel in a team, in a group chat (`groupChat`), an experience scoped to an individual user alone (`personal`) or within Copilot surfaces. These options are non-exclusive. |
 |`needsChannelSelector`|Boolean|||Describes whether or not the bot uses a user hint to add the bot to a specific channel. <br>Default value: `false` |
 |`isNotificationOnly`|Boolean|||Indicates whether a bot is a one-way, notification-only bot, as opposed to a conversational bot. <br>Default value: `false` |
@@ -757,7 +757,7 @@ The item is an array (maximum of one element) with all elements of type `object`
 |Name| Type | Maximum Size | Required | Description &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |---|---|---|---|---|
 |`id`|String||64| Unique identifier for the message extension. Used when defining one-way and mutual app capability dependencies under [elementRelationshipSet](#elementrelationshipset).|
-|`botId`|String|||The unique Microsoft app ID for the bot that backs the message extension, as registered with the Microsoft 365 Agents SDK. The ID can be the same as the overall App ID.|
+|`botId`|String|||The unique Microsoft app ID for the bot that backs the message extension, as registered with the Microsoft 365 Agents SDK (previously known as Bot Framework SDK). The ID can be the same as the overall App ID.|
 |`composeExtensionType`|String||✔️|Type of the compose extension. Enum values are `botBased` and `apiBased`.|
 |`authorization`|Object| ||Authorization related information for the API-based message extension.|
 |`authorization.authType`|String|||Enum of possible authorization types. Supported values are `none`, `apiSecretServiceAuth`, and `microsoftEntra`.|
@@ -1767,7 +1767,7 @@ Defines the content source of a given dashboard card.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`botId`| String | | | The unique Microsoft app ID for the bot as registered with the Microsoft 365 Agents SDK. ID must be a GUID.|
+|`botId`| String | | | The unique Microsoft app ID for the bot as registered with the Microsoft 365 Agents SDK (previously known as Bot Framework SDK). ID must be a GUID.|
 
 ## intuneInfo
 
