@@ -1002,4 +1002,4 @@ Choose the relevant migration guide for your bot's language:
 
 > [!div class="nextstepaction"]
 > If you want to learn about the core capabilities of Teams AI library, select the following: <br>
-> [Understand Teams AI library](how-conversation-ai-core-capabilities.md)
+> [Understand Teams AI library](/microsoftteams/platform/teams-ai-library/welcome)
