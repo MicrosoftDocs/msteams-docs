@@ -4,11 +4,13 @@ description: Learn how to create an app using Teams AI library with AI component
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.date: 02/06/2025
+ms.date: 07/09/2025
 ms.owner: angovil
 ---
 
 # Build with Teams AI library
+
+[!INCLUDE [teams-ai-lib-v2-rec](../../../includes/teams-ai-lib-v2-rec.md)]
 
 The Teams AI library simplifies building intelligent Microsoft Teams applications with AI components. It offers APIs for data access, custom UI creation, prompt management, and safety moderation. You can easily create bots using OpenAI or Azure OpenAI to deliver an AI-driven experience.
 
@@ -846,7 +848,7 @@ To support Microsoft 365 Copilot Chat, update your app manifest:
       }
     ```
 
-2. Set the `scopes` to `personal` for `bots` and `commandLists` in your app manifest:
+2. Set the `scopes` to `copilot` for `bots` and `commandLists` in your app manifest:
 
     ```json
     "bots": [ 
@@ -854,12 +856,13 @@ To support Microsoft 365 Copilot Chat, update your app manifest:
           "botId": "<Bot-Id-Guid>", 
           "scopes": [
               "personal",
+              "copilot",
               "team",
               "groupChat"
           ], 
           "commandLists": [ 
             { 
-              "scopes": ["personal"], 
+              "scopes":  ["personal","copilot"], 
               "commands": [ 
                 { 
                   "title": "Sample prompt title", 
@@ -868,7 +871,7 @@ To support Microsoft 365 Copilot Chat, update your app manifest:
               ] 
             }, 
             { 
-              "scopes": ["personal"], 
+              "scopes": ["personal","copilot"], 
               "commands": [ 
                 { 
                   "title": "Sample prompt title", 
@@ -999,4 +1002,4 @@ Choose the relevant migration guide for your bot's language:
 
 > [!div class="nextstepaction"]
 > If you want to learn about the core capabilities of Teams AI library, select the following: <br>
-> [Understand Teams AI library](how-conversation-ai-core-capabilities.md)
+> [Understand Teams AI library](/microsoftteams/platform/teams-ai-library/welcome)
