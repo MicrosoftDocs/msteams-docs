@@ -70,7 +70,7 @@ By understanding the activity handler and bot logic, you can design and implemen
 
 ### Teams activity handler
 
-The activity handler is the core of a bot's functionality, managing and processing user interactions. It's based on the activity handler in Microsoft 365 Agents SDK and routes all Teams activities before handling any non-Teams specific ones. It acts as an intermediary between the user's input and the bot's response:
+The activity handler is the core of a bot's functionality, managing and processing user interactions. It's based on the activity handler in Microsoft 365 Agents SDK (previously known as Bot Framework SDK) and routes all Teams activities before handling any non-Teams specific ones. It acts as an intermediary between the user's input and the bot's response:
 
 * Receives incoming messages.
 * Retrieves key data from user input.
@@ -80,14 +80,14 @@ The activity handler is the core of a bot's functionality, managing and processi
 
 The activity handler improves user experience, efficiency, accuracy, scalability, and flexibility.
 
-When a Teams bot gets an activity, it's routed through the activity handlers. All activities go through a base handler called the turn handler, which then calls the appropriate activity handler. The Teams bot is derived from the `TeamsActivityHandler` class, which comes from the activity handler in Microsoft 365 Agents SDK.
+When a Teams bot gets an activity, it's routed through the activity handlers. All activities go through a base handler called the turn handler, which then calls the appropriate activity handler. The Teams bot is derived from the `TeamsActivityHandler` class, which comes from the activity handler in Microsoft 365 Agents SDK (previously known as Bot Framework SDK).
 
 > [!NOTE]
 > If a bot activity takes more than 15 seconds to process, Teams sends a retry request to the bot endpoint, so you might see duplicate requests.
 
 # [C#](#tab/csharp)
 
-Bots are built using the Microsoft 365 Agents SDK. When a bot gets a message, the turn handler is notified and sends it to the `OnMessageActivityAsync` handler. This works the same way in Teams. If the bot gets a conversation update, the turn handler sends it to `OnConversationUpdateActivityAsync`. The Teams activity handler first looks for any Teams-specific events. If there aren't any, it passes them to the activity handler in Microsoft 365 Agents SDK.
+Bots are built using the Microsoft 365 Agents SDK (previously known as Bot Framework SDK). When a bot gets a message, the turn handler is notified and sends it to the `OnMessageActivityAsync` handler. This works the same way in Teams. If the bot gets a conversation update, the turn handler sends it to `OnConversationUpdateActivityAsync`. The Teams activity handler first looks for any Teams-specific events. If there aren't any, it passes them to the activity handler in Microsoft 365 Agents SDK (previously known as Bot Framework SDK).
 
 In the Teams activity handler class, there are two primary Teams activity handlers:
 
@@ -189,7 +189,7 @@ protected override async Task OnTeamsMessageUndeleteAsync(ITurnContext<IMessageU
 
 # [JavaScript](#tab/javascript)
 
-Bots are created using the Microsoft 365 Agents SDK. If the bots receive a message activity, then the turn handler receives a notification of that incoming activity. The turn handler then sends the incoming activity to the `onMessage` activity handler. In Teams, this functionality remains the same. If the bot receives a conversation update activity, then the turn handler receives a notification of that incoming activity and sends the incoming activity to `dispatchConversationUpdateActivity`. The Teams activity handler first checks for any Teams specific events. If no events are found, it then passes them along to the activity handler in Microsoft 365 Agents SDK.
+Bots are created using the Microsoft 365 Agents SDK (previously known as Bot Framework SDK). If the bots receive a message activity, then the turn handler receives a notification of that incoming activity. The turn handler then sends the incoming activity to the `onMessage` activity handler. In Teams, this functionality remains the same. If the bot receives a conversation update activity, then the turn handler receives a notification of that incoming activity and sends the incoming activity to `dispatchConversationUpdateActivity`. The Teams activity handler first checks for any Teams specific events. If no events are found, it then passes them along to the activity handler in Microsoft 365 Agents SDK (previously known as Bot Framework SDK).
 
 In the Teams activity handler class, there are two primary Teams activity handlers, `dispatchConversationUpdateActivity` and `onInvokeActivity`. `dispatchConversationUpdateActivity` routes all conversation update activities and `onInvokeActivity` routes all Teams invoke activities.
 
@@ -259,7 +259,7 @@ onTeamsMembersRemoved(async (membersRemoved, teamInfo, context, next) => {
 
 # [Python](#tab/python)
 
-Bots are created using the Microsoft 365 Agents SDK. If the bots receive a message activity, then the turn handler receives a notification of that incoming activity. The turn handler then sends the incoming activity to the `on_message_activity` activity handler. In Teams, this functionality remains the same. If the bot receives a conversation update activity, then the turn handler receives a notification of that incoming activity and sends the incoming activity to `on_conversation_update_activity`. The Teams activity handler first checks for any Teams specific events. If no events are found, it then passes them along to the activity handler in Microsoft 365 Agents SDK.
+Bots are created using the Microsoft 365 Agents SDK (previously known as Bot Framework SDK). If the bots receive a message activity, then the turn handler receives a notification of that incoming activity. The turn handler then sends the incoming activity to the `on_message_activity` activity handler. In Teams, this functionality remains the same. If the bot receives a conversation update activity, then the turn handler receives a notification of that incoming activity and sends the incoming activity to `on_conversation_update_activity`. The Teams activity handler first checks for any Teams specific events. If no events are found, it then passes them along to the activity handler in Microsoft 365 Agents SDK (previously known as Bot Framework SDK).
 
 In the Teams activity handler class, there are two primary Teams activity handlers, `on_conversation_update_activity` and `on_invoke_activity`. `on_conversation_update_activity` routes all conversation update activities and `on_invoke_activity` routes all Teams invoke activities.
 
@@ -370,7 +370,7 @@ this.onMessage(async (context, next) => {
 
 Bot logic incorporates the fundamental rules and decision-making frameworks that dictate a bot's actions and interactions. It outlines how the bot interprets user input, formulates responses, and participates in conversations.
 
-In Teams, the bot logic processes incoming activities from one or more of your bot channels and in response generates outgoing activities. It's still true of bots derived from the Teams activity handler class, which first checks for Teams activities. After checking for Teams activities, it passes all other activities to the activity handler in Microsoft 365 Agents SDK.
+In Teams, the bot logic processes incoming activities from one or more of your bot channels and in response generates outgoing activities. It's still true of bots derived from the Teams activity handler class, which first checks for Teams activities. After checking for Teams activities, it passes all other activities to the activity handler in Microsoft 365 Agents SDK (previously known as Bot Framework SDK).
 
 # [C#](#tab/csharp)
 
@@ -401,7 +401,7 @@ The list of handlers defined in `ActivityHandler` includes the following events:
 
 #### Teams specific activity handlers
 
-The `TeamsActivityHandler` extends the list of handlers in the core Microsoft 365 Agents SDK handlers section to include the following events:
+The `TeamsActivityHandler` extends the list of handlers in the core Microsoft 365 Agents SDK (previously known as Bot Framework SDK) handlers section to include the following events:
 
 | Event | Handler or SDK method | Description |
 | :-- | :-- | :-- |
@@ -430,7 +430,7 @@ The list of Teams activity handlers called from the `OnInvokeActivityAsync` Team
 | task/fetch | `OnTeamsTaskModuleFetchAsync()` | You can override this method in a derived class to provide logic when a dialog (referred as task module in TeamsJS v1.x) is fetched. |
 | task/submit | `OnTeamsTaskModuleSubmitAsync()` | You can override this method in a derived class to provide logic when a dialog is submitted. |
 
-The Invoke activities listed in this section are for conversational bots in Teams. The Microsoft 365 Agents SDK also supports invoke activities specific to message extensions. For more information, see [what are message extensions](../messaging-extensions/what-are-messaging-extensions.md).
+The Invoke activities listed in this section are for conversational bots in Teams. The Microsoft 365 Agents SDK (previously known as Bot Framework SDK) also supports invoke activities specific to message extensions. For more information, see [what are message extensions](../messaging-extensions/what-are-messaging-extensions.md).
 
 # [JavaScript](#tab/javascript)
 
@@ -461,7 +461,7 @@ The list of handlers defined in `ActivityHandler` includes the following events:
 
 #### Teams specific activity handlers
 
-The `TeamsActivityHandler` extends the list of handlers in the core Microsoft 365 Agents SDK handlers section to include the following events:
+The `TeamsActivityHandler` extends the list of handlers in the core Microsoft 365 Agents SDK (previously known as Bot Framework SDK) handlers section to include the following events:
 
 | Event | Handler or SDK method | Description |
 | :-- | :-- | :-- |
@@ -487,7 +487,7 @@ The following table provides the list of Teams activity handlers called from the
 | task/fetch | `handleTeamsTaskModuleFetch()` | This method can be overridden in a derived class to provide logic when a dialog is fetched. |
 | task/submit | `handleTeamsTaskModuleSubmit()` | This method can be overridden in a derived class to provide logic when a dialog is submitted. |
 
-The invoke activities listed in this section are for conversational bots in Teams. The Microsoft 365 Agents SDK also supports invoke activities specific to message extensions. For more information, see [what are message extensions](../messaging-extensions/what-are-messaging-extensions.md).
+The invoke activities listed in this section are for conversational bots in Teams. The Microsoft 365 Agents SDK (previously known as Bot Framework SDK) also supports invoke activities specific to message extensions. For more information, see [what are message extensions](../messaging-extensions/what-are-messaging-extensions.md).
 
 # [Python](#tab/python)
 
@@ -514,7 +514,7 @@ The list of handlers defined in `ActivityHandler` includes the following events:
 
 #### Teams specific activity handlers
 
-The `TeamsActivityHandler` extends the list of handlers from the core Microsoft 365 Agents SDK handlers section to include the following events:
+The `TeamsActivityHandler` extends the list of handlers from the core Microsoft 365 Agents SDK (previously known as Bot Framework SDK)handlers section to include the following events:
 
 | Event | Handler or SDK method | Description |
 | :-- | :-- | :-- |
@@ -540,7 +540,7 @@ The list of Teams activity handlers called from the `on_invoke_activity` Teams a
 | task/fetch | `on_teams_task_module_fetch()`| This method can be overridden in a derived class to provide logic when a dialog is fetched. |
 | task/submit | `on_teams_task_module_submit()` | This method can be overridden in a derived class to provide logic when a dialog is submitted. |
 
-The invoke activities listed in this section are for conversational bots in Teams. The Microsoft 365 Agents SDK also supports invoke activities specific to message extensions. For more information, see [what are message extensions](../messaging-extensions/what-are-messaging-extensions.md).
+The invoke activities listed in this section are for conversational bots in Teams. The Microsoft 365 Agents SDK (previously known as Bot Framework SDK) also supports invoke activities specific to message extensions. For more information, see [what are message extensions](../messaging-extensions/what-are-messaging-extensions.md).
 
 ---
 
@@ -589,4 +589,4 @@ In addition to conventional bot features, you can also explore advanced features
 | Sample name | Description | .NET | Node.js | Python |
 |--- |--- | --- | --- | --- |
 | Teams conversation bot | This app demonstrates bot conversation events, supporting Adaptive Cards, read receipts, and message update events. It includes immersive reader support for accessibility. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python)|
-| Bot samples | Set of Microsoft 365 Agents SDK v4 samples. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|
+| Bot samples | Set of Microsoft 365 Agents SDK (previously known as Bot Framework SDK) v4 samples. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|

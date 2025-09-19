@@ -1,6 +1,6 @@
 ---
 title: Enhance Meeting Experience with APIs
-description: Learn meeting apps API references that are available for Teams client and Microsoft 365 Agents SDK with examples, code samples, and response codes.
+description: Learn meeting apps API references that are available for Teams client and Microsoft 365 Agents SDK (previously known as Bot Framework SDK) with examples, code samples, and response codes.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
@@ -19,7 +19,7 @@ The meeting extensibility provides APIs to enhance meeting experience. You can p
 > [!NOTE]
 > Use the [Microsoft Teams JavaScript client library (TeamsJS)](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) (*Version*: 1.10 and later) for single sign-on (SSO) to work in meeting side panel.
 
-The following table provides a list of APIs available across the Microsoft Teams JavaScript library and Microsoft 365 Agents SDK:
+The following table provides a list of APIs available across the Microsoft Teams JavaScript library and Microsoft 365 Agents SDK (previously known as Bot Framework SDK):
 
 | Method | Description | Source |
 | --- | --- | --- |
