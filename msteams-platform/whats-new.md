@@ -609,7 +609,7 @@ Teams platform features that aren't available.
 | -------- | --------- | ------------------ |
 | 07/02/2025 | Support for Yeoman generator is deprecated from Teams developer documentation. |
 | 17/01/2025 | Copilot plugin as a message extension in Teams meeting is deprecated. |
-| 16/01/2025 | Future-proof your app for third-party cookie deprecation across major browsers. | [Cookies and local storage](resources/samesite-cookie-update.md#third-party-cookies-deprecation) |
+| 16/01/2025 | Future-proof your app for third-party cookie deprecation across major browsers. | Resources > Localization > [Cookies and local storage](resources/samesite-cookie-update.md#third-party-cookies-deprecation) |
 
 </details>
 
