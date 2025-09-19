@@ -144,7 +144,8 @@ The following is the sample app manifest schema:
             "scopes": [
                 "team",
                 "personal",
-                "groupChat"
+                "groupChat",
+                "copilot"
             ],
             "needsChannelSelector": false,
             "isNotificationOnly": false,
@@ -155,7 +156,9 @@ The following is the sample app manifest schema:
                 {
                     "scopes": [
                         "team",
-                        "groupChat"
+                        "personal",
+                        "groupChat",
+                        "copilot"
                     ],
                     "commands": [
                         {
@@ -165,22 +168,6 @@ The following is the sample app manifest schema:
                         {
                             "title": "Command 2",
                             "description": "Description of Command 2"
-                        }
-                    ]
-                },
-                {
-                    "scopes": [
-                        "personal",
-                        "groupChat"
-                    ],
-                    "commands": [
-                        {
-                            "title": "Personal command 1",
-                            "description": "Description of Personal command 1"
-                        },
-                        {
-                            "title": "Personal command N",
-                            "description": "Description of Personal command N"
                         }
                     ]
                 }
@@ -592,7 +579,7 @@ Represents a conversational Teams bot that uses custom AI language models and or
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`id`|String| |✔️| Unique (bot) identifier for the custom engine agent. Must match the `id` specified in the `bots` section of the manifest and be of `personal` scope. |
+|`id`|String| |✔️| Unique (bot) identifier for the custom engine agent. This identifier must match the `id` specified in the `bots` section of the manifest. The `copilot` scope must be defined in the `bots.scopes` and `commandLists.scopes` fields. |
 |`type`|String| |✔️| Type of the custom engine agent. Supported value: `bot` |
 |`disclaimer.text`|String|500|✔️| The message shown to users before they interact with this application. |
 
@@ -661,7 +648,7 @@ The item is an array (maximum of only one element&mdash; only one bot is allowed
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`botId`|String||✔️|The unique Microsoft app ID for the bot as registered with the Bot Framework. The ID can be the same as the overall [app ID](#id).|
-|`scopes`|Array of enums|4|✔️|Specifies whether the bot offers an experience in the context of a channel in a team, in a group chat (`groupChat`), an experience scoped to an individual user alone (`personal`) or within Copilot surfaces. These options are non-exclusive. |
+|`scopes`|Array of enums|4|✔️|Specifies whether the bot offers an experience in the context of a channel in a `team`, in a group chat (`groupChat`), in a Microsoft 365 copilot chat (`copilot`) or an experience scoped to an individual user alone (`personal`). These options are non-exclusive.|
 |`needsChannelSelector`|Boolean|||Describes whether or not the bot uses a user hint to add the bot to a specific channel. <br>Default value: `false` |
 |`isNotificationOnly`|Boolean|||Indicates whether a bot is a one-way, notification-only bot, as opposed to a conversational bot. <br>Default value: `false` |
 |`supportsFiles`|Boolean|||Indicates whether the bot supports the ability to upload/download files in personal chat. <br>Default value: `false`|
@@ -696,8 +683,8 @@ A list of commands that your bot can recommend to users. The object is an array 
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`scopes`|Array of enums|3|✔️|Specifies the scope for which the command list is valid. Options are `team`, `personal`, and `groupChat`.|
-|`commands`|Array of objects|10|✔️|An array of commands the bot supports.|
+|`scopes`|Array of enums|4|✔️|Specifies the scope for which the command list is valid. Options are `team`, `personal`, `groupChat`, and `copilot`.|
+|`commands`|Array of objects|10|✔️|An array of commands that power the Copilot experience by enabling rich interactions and functionalities supported by the bot.|
 
 > [!NOTE]
 > Teams mobile client doesn't support the bot app when there is no value in the `commandLists` property.
