@@ -48,7 +48,7 @@ Let's learn about some common bot elements and how they work together to make a 
 
 ### Explore bot capabilities
 
-You can choose one or more of the following capabilities for your bot app. Use either Agents SDK or Teams AI library with Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) to build these capabilities in your bot.
+You can choose one or more of the following capabilities for your bot app. Use either Microsoft 365 Agents SDK (previously known as Bot Framework SDK) or Teams AI library with Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) to build these capabilities in your bot.
 
 * **Custom engine agent**: A custom engine agent is a bot that uses AI to perform automated tasks. It understands natural language, can engage in conversations, and answer questions. You can use them for virtual assistance, language translation, predictive analysis, and more. Custom engine agents, which are AI-enabled Teams bots, can be built using custom AI models of your choice.
 
