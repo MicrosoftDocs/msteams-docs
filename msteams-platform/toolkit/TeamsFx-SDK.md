@@ -356,7 +356,7 @@ This section provides several code snippets for common scenarios that are relate
        }
        ```
 
-    For more information on sample to use Graph API in tab app, see [Graph Conector app sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/graph-connector-app).
+    For more information on sample to use Graph API in tab app, see [Graph Conector app sample](https://github.com/OfficeDev/microsoft-365-agents-toolkit-samples/tree/dev/copilot-connector-app).
 
     </details>
 
