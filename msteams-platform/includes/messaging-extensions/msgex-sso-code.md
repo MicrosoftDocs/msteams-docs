@@ -36,7 +36,7 @@ You've now configured the required environment variables for your bot app and SS
 The request to get the token is a POST message request using the existing message schema. It's included in the attachments of an OAuthCard. The schema for the OAuthCard class is defined in [Microsoft Bot Schema 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true). Teams refreshes the token if the `TokenExchangeResource` property is populated on the card. For the Teams channel, only the `Id` property, which uniquely identifies a token request, is honored.
 
 >[!NOTE]
-> The Microsoft Agents SDK `OAuthPrompt` or the `MultiProviderAuthDialog` is supported for SSO authentication.
+> The Microsoft 365 Agents SDK (previously known as Bot Framework SDK) `OAuthPrompt` or the `MultiProviderAuthDialog` is supported for SSO authentication.
 
 To update your app's code:
 
@@ -372,7 +372,7 @@ if(valueObject["authentication"] !=null)
 Web APIs on your server must decode the access token and verify if it's sent from the client.
 
 > [!NOTE]
-> If you use Agents SDK, it handles the access token validation. If you don't use Agents SDK, follow the guidelines in this section.
+> If you use Microsoft 365 Agents SDK (previously known as Bot Framework SDK), it handles the access token validation. If you don't use Microsoft 365 Agents SDK (previously known as Bot Framework SDK), follow the guidelines in this section.
 
 For more information about validating access token, see [Validate tokens](/azure/active-directory/develop/access-tokens#validate-tokens).
 
@@ -414,9 +414,9 @@ The following code snippet is a typical decoded payload of an access token:
 }
 ```
 
-## Add token to Agents SDK Token Store
+## Add token to Microsoft 365 Agents SDK Token Store
 
-If you're using the OAuth connection, you must update or add the token in the Agents SDK Token store. Add the following code snippet example to `TeamsMessagingExtensionsSearchAuthConfigBot.cs` (or the equivalent file in your app's code) for updating or adding the token in the store:
+If you're using the OAuth connection, you must update or add the token in the Microsoft 365 Agents SDK (previously known as Bot Framework SDK) Token store. Add the following code snippet example to `TeamsMessagingExtensionsSearchAuthConfigBot.cs` (or the equivalent file in your app's code) for updating or adding the token in the store:
 
 > [!NOTE]
 > You can find the sample `TeamsMessagingExtensionsSearchAuthConfigBot.cs` in [Tab, Bot, and Message Extension (ME) SSO](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp/App%20SSO%20Sample/Bots).

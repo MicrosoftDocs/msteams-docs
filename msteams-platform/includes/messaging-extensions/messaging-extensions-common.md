@@ -1,12 +1,12 @@
 ## Add a message extension to your app
 
-A message extension is a cloud-hosted service that listens to user requests and responds with structured data, such as a [card](~/task-modules-and-cards/what-are-cards.md). You integrate your service with Microsoft Teams via Agents SDK `Activity` objects. Our .NET and Node.js extensions for the Bot Builder SDK can help you add message extension functionality to your app.
+A message extension is a cloud-hosted service that listens to user requests and responds with structured data, such as a [card](~/task-modules-and-cards/what-are-cards.md). You integrate your service with Microsoft Teams via Microsoft 365 Agents SDK (previously known as Bot Framework SDK) `Activity` objects. Our .NET and Node.js extensions for the Bot Builder SDK can help you add message extension functionality to your app.
 
 :::image type="content" source="../../assets/images/compose-extensions/ceflow.png" alt-text="Screenshot that shows the action-based message extension in Teams.":::
 
-### Register in the Agents SDK
+### Register in the Microsoft 365 Agents SDK
 
-You must first register a bot with the Microsoft Agents SDK. The Microsoft app ID and callback endpoints for your bot, as defined there, is used in your message extension to receive and respond to user requests. Remember to enable the Microsoft Teams channel for your bot.
+You must first register a bot with the Microsoft Microsoft 365 Agents SDK (previously known as Bot Framework SDK). The Microsoft app ID and callback endpoints for your bot, as defined there, is used in your message extension to receive and respond to user requests. Remember to enable the Microsoft Teams channel for your bot.
 
 Take note of your bot app ID and app password, you need to provide the app ID in your app manifest.
 
@@ -25,7 +25,7 @@ The extension definition is an object that has the following structure:
 
 | Property name | Purpose | Required? |
 |---|---|---|
-| `botId` | The unique Microsoft app ID for the bot as registered with the Agents SDK. This should typically be the same as the ID for your overall Teams app. | Yes |
+| `botId` | The unique Microsoft app ID for the bot as registered with the Microsoft 365 Agents SDK (previously known as Bot Framework SDK). This should typically be the same as the ID for your overall Teams app. | Yes |
 | `scopes` | Array declaring whether this extension can be added to `personal` or `team` scopes (or both). | Yes |
 | `canUpdateConfiguration` | Enables **Settings** menu item. | No |
 | `commands` | Array of commands that this message extension supports. You're limited to 10 commands. | Yes |
