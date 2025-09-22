@@ -1,2 +1,2 @@
 > [!IMPORTANT]
-> [Teams AI library v2](/microsoftteams/platform/teams-ai-library/) is available in developer preview. Learn more about the new and improved developer experience, MCP support, and more.
+> Teams AI library v1 is deprecated. We recommend that you upgrade your agents to use the updated [Teams AI library](/microsoftteams/platform/teams-ai-library/welcome). Teams AI library is now generally available for JavaScript and C#, supports Python in developer preview. It provides a simplified SDK, support for Model Context Protocol (MCP), Agent-to-Agent communication (A2A), and streamlined tools to enable developers to build intelligent agents for Teams.
