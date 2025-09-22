@@ -75,7 +75,7 @@ Use the following types of updates while streaming responses:
 You can use one of the following to stream the response:
 
 - Use Teams AI library to add streaming to the agent.
-- Call the Microsoft 365 Agents SDK (previously known as Bot Framework SDK) APIs directly for streaming.
+- Call the Agents SDK APIs directly for streaming.
 
 >[!NOTE]
 >
@@ -90,7 +90,7 @@ Users must know the sources a custom engine agent uses to generate its final res
 You can use one of the following to include citations for the resources used by the agent:
 
 - Use Teams AI library citations module.
-- Incorporate citations into the Microsoft 365 Agents SDK (previously known as Bot Framework SDK) API calls.
+- Incorporate citations into the Agents SDK API calls.
 
 > [!NOTE]
 >
@@ -113,7 +113,7 @@ Examples of AI label:
 You can use one of the following to include AI label in the agent's response:
 
 - Use Teams AI library to add the AI label to all AI-generated messages automatically.
-- Set the flag in the Microsoft 365 Agents SDK (previously known as Bot Framework SDK) API for message activities.
+- Set the flag in the Agents SDK API for message activities.
 
 ### Ensure that the custom engine agent is an intelligent conversational bot
 
@@ -122,7 +122,7 @@ A custom engine agent must track a conversation's context and history to provide
 You can use one of the following to ensure intelligent context-based conversation:
 
 - Use Teams AI library to manage and pass conversational history and context to the LLM.
-- Use Microsoft 365 Agents SDK (previously known as Bot Framework SDK) to:
+- Use Agents SDK to:
 
   - **Manage context and conversation history**: Ensure that the agent can track the context and conversation history.
   - **Identify conversation location**: Ensure the agent is aware of the platform on which the conversation is ongoing, such as on Teams, copilot.com, in a meeting side panel, or a group chat.
@@ -169,7 +169,7 @@ To collect the user feedback, you must:
 You can use one of the following to enable feedback collection and usage:
 
 - Use Teams AI library to add the feedback button property to the AI module. This property adds a feedback button to each AI-generated message automatically.
-- Use the feedback flag in the Microsoft 365 Agents SDK (previously known as Bot Framework SDK) API to add the feedback button for each message.
+- Use the feedback flag in the Agents SDK API to add the feedback button for each message.
 
 > [!NOTE]
 > Customizable feedback forms are available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
