@@ -16,9 +16,15 @@ A Teams app offers you the flexibility of choosing your build environment. It in
 
 This section takes you through the various options for building your Teams app.
 
-* [Teams collaborative platform](#teams-collaborative-platform)
-* [Tools and SDKs](#tools-and-sdks)
-* [Teams app tutorials and code samples](#teams-app-tutorials-and-code-samples)
+- [Tool options and code samples](#tool-options-and-code-samples)
+  - [Teams collaborative platform](#teams-collaborative-platform)
+  - [Tools and SDKs](#tools-and-sdks)
+    - [Explore SDKs](#explore-sdks)
+    - [Explore Tools](#explore-tools)
+  - [Teams app tutorials and code samples](#teams-app-tutorials-and-code-samples)
+    - [Teams app tutorials](#teams-app-tutorials)
+    - [Code samples](#code-samples)
+  - [See also](#see-also)
 
 ## Teams collaborative platform
 
@@ -52,7 +58,7 @@ To start building your Teams app, you can select the tools and SDKs based on you
 | App capabilities | User interactions | Recommended tools | SDKs | Languages |
 |--------|-------------|--------|--------|--------|
 | **Tabs** | A full-screen embedded web experience. | VS Code or Visual Studio with Agents Toolkit extension, or [Microsoft 365 Agents Toolkit CLI](../toolkit/Microsoft-365-Agents-Toolkit-CLI.md) (previously known as TeamsFx CLI) if you prefer using CLI | [Teams JavaScript client library](/javascript/api/overview/msteams-client#microsoft-teams-javascript-client-library) for UI functionalities, SharePoint Framework (SPFx), and Microsoft Graph SDK | C#, TypeScript, and JavaScript (including React) |
-| **Bots** | A chat bot that converses with members. |VS Code or Visual Studio with Agents Toolkit extension, or [Agents Toolkit CLI](../toolkit/Microsoft-365-Agents-Toolkit-CLI.md) if you prefer using CLI | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx), [Agents SDK](https://dev.botframework.com/), [Teams AI library](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md), and Microsoft Graph SDK | C#, TypeScript, and JavaScript |
+| **Bots** | A chat bot that converses with members. |VS Code or Visual Studio with Agents Toolkit extension, or [Agents Toolkit CLI](../toolkit/Microsoft-365-Agents-Toolkit-CLI.md) if you prefer using CLI | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx), [Bot Framework SDK](https://dev.botframework.com/), [Teams AI library](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md), and Microsoft Graph SDK | C#, TypeScript, and JavaScript |
 | **Message extensions** | Shortcuts for inserting external content into a conversation or taking action on messages. | VS Code or Visual Studio with Agents Toolkit extension, or [Agents Toolkit CLI](../toolkit/Microsoft-365-Agents-Toolkit-CLI.md) if you prefer using CLI | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx), [Bot Framework SDK](https://dev.botframework.com/), [Teams AI library](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md), and Microsoft Graph SDK | C#, TypeScript, and JavaScript |
 
 > [!NOTE]

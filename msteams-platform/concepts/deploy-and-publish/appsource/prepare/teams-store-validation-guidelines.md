@@ -499,7 +499,7 @@ App packages must be correctly formatted and include all required information an
 The app manifest defines your app's configuration.
 
 * Your app manifest must conform to a publicly released app manifest schema. For more information, see [app manifest reference](~/resources/schema/manifest-schema.md). Don't submit your app using a preview version of the app manifest.
-* If your app includes a bot or message extension, details in the app manifest must be consistent with Agents SDK metadata including bot name, logo, privacy policy link, and terms of service link.
+* If your app includes a bot or message extension, details in the app manifest must be consistent with Microsoft 365 Agents SDK (previously known as Bot Framework SDK) metadata including bot name, logo, privacy policy link, and terms of service link.
 * If your app uses Microsoft Entra ID for authentication, include the Microsoft Entra Application (client) ID in the app manifest. For more information, see the [app manifest reference](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ### Uses of latest app manifest schema
@@ -1360,7 +1360,7 @@ Apps that consist of notification only bots provide user value by triggering use
 
 <details><summary>Bot metadata information</summary>
 
-* Bot information in the app manifest (bot name, logo, privacy link, and terms of service link) must be consistent with the Agents SDK metadata. [*Must fix*]
+* Bot information in the app manifest (bot name, logo, privacy link, and terms of service link) must be consistent with the Microsoft 365 Agents SDK (previously known as Bot Framework SDK) metadata. [*Must fix*]
 
 * Ensure that the bot ID in the app manifest matches with bot ID in the last Teams Store published version of your app. Changing bot IDs in an app update leads to permanent loss of all user interaction history with the bot for existing users of your app and starts a new conversation chain with the new Bot ID. [*Must fix*]
 
