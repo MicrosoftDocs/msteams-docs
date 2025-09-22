@@ -1317,7 +1317,7 @@ Preview. Subcapability for interacting with Adaptive Card dialogs.
 
 [Reference](/javascript/api/@microsoft/teams-js/dialog.adaptivecard.bot) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+dialog.adaptiveCard.bot)
 
-Preview. Subcapability for interaction with Adaptive Card dialogs that need to communicate with the Bot Framework.
+Preview. Subcapability for interaction with Adaptive Card dialogs that need to communicate with the Microsoft 365 Agents SDK (previously known as Bot Framework SDK).
 
 ### `dialog.update`
 
@@ -1335,7 +1335,7 @@ Preview. Subcapability for interacting with HTML-based dialogs.
 
 [Reference](/javascript/api/@microsoft/teams-js/dialog.url.bot) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+dialog.url.bot)
 
-Preview. Subcapability for interacting with HTML-based dialogs that need to communicate with the Bot Framework.
+Preview. Subcapability for interacting with HTML-based dialogs that need to communicate with the Microsoft 365 Agents SDK (previously known as Bot Framework SDK).
 
 ## `geoLocation`
 

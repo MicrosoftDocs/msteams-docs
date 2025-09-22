@@ -44,7 +44,7 @@ The following image displays the locations from where message extensions can be 
 
 ## Understand how message extensions work
 
-A message extension is composed of a web service hosted by you and an app manifest that defines the location where your web service is invoked within the Teams client. The web service utilizes the Bot Framework's messaging schema and secure communication protocol, so you must register your web service as a bot in the Bot Framework.
+A message extension is composed of a web service hosted by you and an app manifest that defines the location where your web service is invoked within the Teams client. The web service utilizes the Microsoft 365 Agents SDK's (previously known as Bot Framework SDK) messaging schema and secure communication protocol, so you must register your web service as a bot in the Microsoft 365 Agents SDK (previously known as Bot Framework SDK).
 
 > [!NOTE]
 > Though it's possible to manually create the web service, we recommend to use [Bot Framework SDK](https://github.com/microsoft/botframework-sdk) to work with the protocol.
@@ -93,7 +93,7 @@ To build a message extension, if you don't already have one, there are two ways:
 
 * **Build message extensions using API (API-based)**: You can easily create a message extension from an existing API. An OpenAPI Description (OAD) document is required for this method.
 
-* **Build message extensions using Bot Framework (Bot-based)**: If you want a one-on-one conversational experience, you can create a new message extension from a bot.
+* **Build message extensions using Microsoft 365 Agents SDK (Bot-based)**: If you want a one-on-one conversational experience, you can create a new message extension from a bot.
 
 The following table helps you select a message extension type to get started:
 
@@ -114,7 +114,7 @@ The following table helps you select a message extension type to get started:
 **Bot-based message extension**</br>
 
 * More flexible.
-* Message extension uses a Bot Framework.
+* Message extension uses a Microsoft 365 Agents SDK (previously known as Bot Framework SDK).
 * Can use the full capabilities of a bot.
 * Ideal for scenarios where the message extension needs to communicate with multiple services, manage complex logic or user interactions, or maintain state across sessions.
 * Supports action commands, search commands, and link unfurling.
@@ -133,7 +133,7 @@ The following table helps you select a message extension type to get started:
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :::image type="content" source="../assets/images/Copilot/build-message-extension-api-tile.png" alt-text="Screenshot shows the OpenAPI icon tile." link="api-based-overview.md" border="false":::
     :::column-end:::
     :::column span="4":::
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:::image type="content" source="../assets/images/Copilot/build-message-extension-bot-tile.png" alt-text="Screenshot shows the Bot Framework tile." link="build-bot-based-message-extension.md" border="false":::
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:::image type="content" source="../assets/images/Copilot/build-message-extension-bot-tile.png" alt-text="Screenshot shows the Microsoft 365 Agents SDK (previously known as Bot Framework SDK) tile." link="build-bot-based-message-extension.md" border="false":::
     :::column-end:::
 :::row-end:::
 
