@@ -19,7 +19,7 @@ metadata:
 highlightedContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
    items: 
-    - title: Microsoft Build 2025
+    - title: What's new
       itemType: whats-new
       url: /microsoftteams/platform/whats-new
     - title: New to Teams development? 🚀Start here! 
@@ -114,10 +114,7 @@ conceptualContent:
           text: Custom engine agent
         - url: /microsoftteams/platform/teams-ai-library/welcome
           itemType: quickstart
-          text: Teams AI library v2 (preview)
-        - url: /microsoftteams/platform/teams-ai-library/welcome
-          itemType: concept
-          text: Teams AI library v1
+          text: Teams AI library
         - url: concepts/design/overview-analytics.md
           itemType: reference
           text: Plan analytics for Teams apps
