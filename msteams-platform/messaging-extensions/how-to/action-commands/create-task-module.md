@@ -669,7 +669,7 @@ The following code section is an example to `fetchTask` response with an Adaptiv
 
 # [C#/.NET](#tab/dotnet)
 
-This sample uses the [AdaptiveCards NuGet package](https://www.nuget.org/packages/AdaptiveCards) in addition to the Agents SDK.
+This sample uses the [AdaptiveCards NuGet package](https://www.nuget.org/packages/AdaptiveCards) in addition to the  Microsoft 365 Agents SDK (previously known as Bot Framework SDK).
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
