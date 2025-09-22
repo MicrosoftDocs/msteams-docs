@@ -29,7 +29,7 @@ You can create a workflow bot to respond to the Adaptive Card triggered by users
 
 ## Card action handler
 
-To simplify the creation of a workflow bot, the TeamsFx SDK provides an Adaptive Card action handler `TeamsFxAdaptiveCardActionHandler`. You can focus only on the development of workflow bot to respond to the card action without learning the Agents SDK.
+To simplify the creation of a workflow bot, the TeamsFx SDK provides an Adaptive Card action handler `TeamsFxAdaptiveCardActionHandler`. You can focus only on the development of workflow bot to respond to the card action without learning the Microsoft 365 Agents SDK (previously known as Bot Framework SDK).
 
 The following diagram illustrates how to respond to an Adaptive Card action with TeamsFx SDK:
 
