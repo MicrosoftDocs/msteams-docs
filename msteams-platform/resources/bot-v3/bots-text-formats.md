@@ -1,6 +1,6 @@
 ---
 title: Format Bot Messages & Text
-description: Learn how to format bot text in Microsoft Teams using Markdown and XML tags with Agents SDK, support in bot conversations, and check platform compatibility.
+description: Learn how to format bot text in Microsoft Teams using Markdown and XML tags with  Microsoft 365 Agents SDK (previously known as Bot Framework SDK), support in bot conversations, and check platform compatibility.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.owner: ginobuzz
