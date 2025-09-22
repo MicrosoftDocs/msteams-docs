@@ -48,15 +48,15 @@ Suggested actions help users continue conversations with your bot.
 > * Prompt starters are only supported for one-on-one chat bots.
 
 To enable prompt starters, define the `commands` property in your bot's app manifest. Each command now contains four fields, a `title`, `description`, `type` and `prompt`. The `title` field is the text shown in the prompt starter and the `description` describes what the users accomplish. The `type` field indicates whether the bot command is a basic command or a prompt. The `prompt` field defines the text to populate in the compose box, when the command is a prompt type.
-When the user selects on a prompt starter, the `title` of the prompt is populated in the compose box. To define `commands` in your app manifest, you can either use **Developer Portal** or add them manually in the app manifest. 
+When the user selects on a prompt starter, the `title` of the prompt is populated in the compose box. 
 The `type ` field determines how the command behaves. 
-* For `type`:basic, the title will be used to populate the compose box. 
-* For `type`:prompt, the prompt text will be used to populate the compose box. 
 
-If the command is a prompt, set type to "prompt" and provide the text in the prompt field.
-If the command is basic, set type to "basic" and use the title field for the text.
+* If the `command` is `prompt`, set type to "prompt" and provide the text in the prompt field.
+* If the `command` is `basic`, set type to "basic" and use the title field for the text.
 
-For agent-based bots, developers must set type to prompt and provide a valid prompt. If prompt is left blank, manifest validation will fail at submission.
+For agent-based bots, set `type` to `prompt` and provide a valid prompt. If `prompt` is left blank, manifest validation will fail at submission.
+
+To define `commands` in your app manifest, you can either use **Developer Portal** or add them manually in the app manifest. 
 
 # [Developer Portal](#tab/developer-portal)
 
