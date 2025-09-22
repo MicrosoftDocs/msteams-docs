@@ -59,11 +59,11 @@ A limited set of RSC permissions have been reviewed by Microsoft privacy and sec
 
 ### RSC-based data access APIs
 
-Microsoft Graph SDK, Microsoft Agents SDK, and Microsoft TeamsJS client library support fine-grained data access through RSC. The supported modes and resource types vary across the API surfaces.
+Microsoft Graph SDK, Microsoft 365 Agents SDK (previously known as Bot Framework SDK), and Microsoft TeamsJS client library support fine-grained data access through RSC. The supported modes and resource types vary across the API surfaces.
 
 | RSC mode | Supported SDKs | App manifest version | Resource types | RSC-related controls for the entire tenant | Who can consent to RSC permissions? |
 |---------|---------|---------|---------|---------|---------|
-|Application| • Microsoft Graph  <br> • Microsoft Agents SDK | >=v1.6 | Teams, chats, and meetings | • Microsoft Graph-based controls for chats and meetings <br> • Microsoft Entra admin center-based controls for Teams |• Team: A team owner or member <br> • Chat: A chat member <br> • Meeting: A meeting organizer or presenter |
+|Application| • Microsoft Graph  <br> • Microsoft 365 Agents SDK (previously known as Bot Framework SDK) | >=v1.6 | Teams, chats, and meetings | • Microsoft Graph-based controls for chats and meetings <br> • Microsoft Entra admin center-based controls for Teams |• Team: A team owner or member <br> • Chat: A chat member <br> • Meeting: A meeting organizer or presenter |
 | Delegated | Microsoft Teams Client | >=v1.12 | Teams, chats, meetings, and users | Always on | Any user authorized to install an app in the specific scope. |
 
 > [!NOTE]
