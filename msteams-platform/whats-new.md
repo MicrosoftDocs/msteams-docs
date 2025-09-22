@@ -2,7 +2,7 @@
 title: What's New for Developers in Teams
 description: Learn about new Microsoft Teams developer features and updates to existing features, deprecation notes, and changes. Subscribe to the RSS feed for latest updates.
 ms.topic: reference
-ms.date: 05/29/2025
+ms.date: 08/22/2025
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
 ---
@@ -512,7 +512,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ---------------- |
-| 10/31/2025 | Ad hoc calls—spontaneous, unscheduled meetings—are now receiving enhanced support across Graph APIs. | Build apps for Teams meetings and calls > Get meetings, transcripts, recordings and AI summaries > [Meeting transcripts and recordings](graph-api/meeting-transcripts/overview-transcripts.md)|
+| 9/30/2025 | Ad hoc calls (spontaneous, unscheduled meetings) are now receiving enhanced support across Graph APIs. | Build apps for Teams meetings and calls > Get meetings, transcripts, recordings and AI summaries > [Meeting transcripts and recordings](graph-api/meeting-transcripts/overview-transcripts.md)|
 | 10/04/2025 | Introducing custom engine agents support for Microsoft 365 Copilot Chat. | Build bots and agents > Teams AI library v1 > [Build with Teams AI library](bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#add-support-for-microsoft-365-copilot-chat) |
 | 17/03/2025 | Precache your tab app to optimize its initial load time | Build tabs > Tab features > [App caching for your tab app](tabs/how-to/app-caching.md#precaching-tab-apps) |
 | 19/02/2025 | Introducing stop stream generation button for streaming bot messages | Build bots > Bot user experience > [Stream bot messages](bots/streaming-ux.md) |
