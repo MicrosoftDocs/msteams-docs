@@ -32,7 +32,7 @@ You need to use the AI library to scaffold bot and Adaptive Card handlers in you
 
 ### Send or receive message
 
-This capability shows how to send and receive messages using the Agents SDK. The sample listens for user messages, deletes the conversation state upon receipt, tracks the number of messages in a conversation, and echoes back the user's message with the count.
+This capability shows how to send and receive messages using the Microsoft 365 Agents SDK (previously known as Bot Framework SDK). The sample listens for user messages, deletes the conversation state upon receipt, tracks the number of messages in a conversation, and echoes back the user's message with the count.
 
 # [.NET](#tab/dotnet6)
 
@@ -94,7 +94,7 @@ async def on_message(context: TurnContext, _state: TurnState):
 
 ### Message extensions
 
-This section demonstrates setting up Message Extensions in the Agents SDK's `TeamsActivityHandler`. The sample shows how the app listens for search actions and item taps. It formats search results as Hero Cards displaying package information and shows them in the messaging extension.
+This section demonstrates setting up Message Extensions in the Microsoft 365 Agents SDK's (previously known as Bot Framework SDK) `TeamsActivityHandler`. The sample shows how the app listens for search actions and item taps. It formats search results as Hero Cards displaying package information and shows them in the messaging extension.
 
 # [.NET](#tab/dotnet5)
 
@@ -565,7 +565,7 @@ elif config.AZURE_OPENAI_KEY and config.AZURE_OPENAI_ENDPOINT:
 
 ### Message extension query
 
-The Teams AI library provides an intuitive way to create handlers for message extension query commands. This functionality works alongside the existing Teams Agents SDK.
+The Teams AI library provides an intuitive way to create handlers for message extension query commands. This functionality works alongside the existing Teams Microsoft 365 Agents SDK (previously known as Bot Framework SDK).
 
 The following example shows how to structure the code to handle a message extension query for the `searchCmd` command.
 

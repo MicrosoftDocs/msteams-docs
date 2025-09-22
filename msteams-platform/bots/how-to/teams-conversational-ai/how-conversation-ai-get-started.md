@@ -56,7 +56,7 @@ builder.Services.AddSingleton<BotAdapter>(sp => sp.GetService<CloudAdapter>());
 
 [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/a.teamsChefBot/src/index.ts#L9)
 
-### JavaScript Code: Adapter Setup and Bot Framework Authentication
+### JavaScript Code: Adapter Setup and Microsoft 365 Agents SDK Authentication
 
 ```javascript
 // Import required bot services.
@@ -139,7 +139,7 @@ import { VectraDataSource } from './VectraDataSource';
 
 ## Create AI components
 
-You can create AI components in an existing bot app or in a new Bot Framework app. The main components include:
+You can create AI components in an existing bot app or in a new Microsoft 365 Agents SDK (previously known as Bot Framework SDK) app. The main components include:
 
 * **OpenAIModel**: Provides access to the OpenAI API—or any service following the OpenAI REST format. It works with both OpenAI and Azure OpenAI language models.
 * **Prompt Manager**: Manages prompt creation. It inserts functions, conversation state, and user state into the prompt automatically.
@@ -889,7 +889,7 @@ To support Microsoft 365 Copilot Chat, update your app manifest:
 
 ## Elevate your conventional bot to use AI
 
-You can update your existing conventional bot to be powered by AI. Adding an AI layer enhances your bot with LLM-driven features. Below is an example of integrating the AI layer using the Bot Framework adapter and the `app` object.
+You can update your existing conventional bot to be powered by AI. Adding an AI layer enhances your bot with LLM-driven features. Below is an example of integrating the AI layer using the Microsoft 365 Agents SDK (previously known as Bot Framework SDK) adapter and the `app` object.
 
 ### JavaScript Code: Elevating a Conventional Bot to Use AI
 
@@ -974,16 +974,16 @@ server.post('/api/messages', async (req, res) => {
 
 ## Migrate your bot to use Teams AI library
 
-If you built your bot using the Bot Framework SDK, you can migrate to the Teams AI library to unlock advanced AI features. Migrating offers these benefits:
+If you built your bot using the Microsoft 365 Agents SDK (previously known as Bot Framework SDK) SDK, you can migrate to the Teams AI library to unlock advanced AI features. Migrating offers these benefits:
 
 * Advanced AI system for building complex Teams applications powered by LLM.
 * Integrated user authentication for accessing third-party user data.
-* Leverages familiar Bot Framework SDK tools and concepts.
+* Leverages familiar Microsoft 365 Agents SDK (previously known as Bot Framework SDK) SDK tools and concepts.
 * Supports the latest LLM tools and APIs.
 
 Choose the relevant migration guide for your bot's language:
 
-| Migrate a Bot Framework SDK app ... | To use Teams AI library ... |
+| Migrate a Microsoft 365 Agents SDK (previously known as Bot Framework SDK) app ... | To use Teams AI library ... |
 | ------------------------------------|-----------------------------|
 | A bot app built using JavaScript    | [Migrate](https://github.com/microsoft/teams-ai/blob/b34bbd14e9d13aed140686e4f91dbb673982b1cf/getting-started/MIGRATION/01.JS.md) |
 | A bot app built using C#             | [Migrate](https://github.com/microsoft/teams-ai/blob/b34bbd14e9d13aed140686e4f91dbb673982b1cf/getting-started/MIGRATION/02.DOTNET.md) |
