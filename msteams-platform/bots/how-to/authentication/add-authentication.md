@@ -45,13 +45,13 @@ The resource group and the service plan aren't strictly necessary, but they allo
 You use a resource group to create individual resources for the Microsoft 365 Agents SDK (previously known as Bot Framework SDK). For performance, ensure that these resources are located in the same Azure region.
 
 1. In your browser, sign into the [**Microsoft Azure portal**][azure-portal].
-2. In the left navigation panel, select **Resource groups**.
-3. In the upper left of the displayed window, select **Add** tab to create a new resource group. Provide the following details:
+1. In the left navigation panel, select **Resource groups**.
+1. In the upper left of the displayed window, select **Add** tab to create a new resource group. Provide the following details:
     1. **Subscription**. Use your existing subscription.
-    2. **Resource group**. Enter the name for the resource group. An example could be  *TeamsResourceGroup*. Remember that the name must be unique.
-    3. From the **Region** dropdown menu, select *West US*, or a region close to your applications.
-    4. Select the **Review and create** button. You should see a banner that reads *Validation passed*.
-    5. Select the **Create** button. It might take a few minutes to create the resource group.
+    1. **Resource group**. Enter the name for the resource group. An example could be  *TeamsResourceGroup*. Remember that the name must be unique.
+    1. From the **Region** dropdown menu, select *West US*, or a region close to your applications.
+    1. Select the **Review and create** button. You should see a banner that reads *Validation passed*.
+    1. Select the **Create** button. It might take a few minutes to create the resource group.
 
 > [!TIP]
 > As with the resources you'll create later in this tutorial, it's a good idea to pin this resource group to your dashboard for easy access. If you'd like to do so, select the pin icon &#128204; in the upper right of the dashboard.
@@ -85,25 +85,25 @@ The Azure Bot resource registration registers your web service as a bot with the
 > You only need to register your bot if it's not hosted in Azure. If you [created a bot](/azure/bot-service/abs-quickstart?view=azure-bot-service-4.0&viewFallbackFrom=azure-bot-service-3.0&preserve-view=true) through the Azure portal then it's already registered with the service. If you created your bot through the [Bot Framework](https://dev.botframework.com/bots/new) or [Developer Portal](../../../concepts/build-and-test/teams-developer-portal.md) your bot isn't registered in Azure.
 
 1. Visit [**Azure portal**][azure-portal] and search for **Azure Bot** in **Create a resource** section.
-2. Open the **Azure Bot** and select **Create**.
-3. Enter bot handle name in **Bot handle** field.
-4. Select your **Subscription** from the dropdown list.
-5. Select your **Resource group** from the dropdown list.
-6. Select **Type of App** as **Multi Tenant** for **Microsoft App ID**.
+1. Open the **Azure Bot** and select **Create**.
+1. Enter bot handle name in **Bot handle** field.
+1. Select your **Subscription** from the dropdown list.
+1. Select your **Resource group** from the dropdown list.
+1. Select **Type of App** as **Multi Tenant** for **Microsoft App ID**.
 
    :::image type="content" source="../../../assets/images/adaptive-cards/multi-tenant.png" alt-text="Screenshot shows how to select multitenant for Microsoft AppID.":::
 
-7. Select **Review + create**.
+1. Select **Review + create**.
 
    :::image type="content" source="../../../assets/images/adaptive-cards/create-azure-bot.png" alt-text="Screenshot shows how to create Azure bot.":::
 
-8. If the validation passes, select **Create**.
+1. If the validation passes, select **Create**.
 
     Azure provisions your bot in a few moments.
 
    :::image type="content" source="../../../assets/images/adaptive-cards/validation-pane.png" alt-text="Screenshot shows how Azure bot validation passes.":::
 
-9. Select **Go to resource**. The bot and the related resources are listed in the resource group.
+1. Select **Go to resource**. The bot and the related resources are listed in the resource group.
 
    :::image type="content" source="../../../assets/images/adaptive-cards/go-to-resource-card.png" alt-text="Screenshot shows how to select resources group.":::
 
@@ -517,8 +517,8 @@ It launches ngrok to listen on the port you specify. In return, it gives you an 
     1. In the left panel, select **Settings**.
     1. In the right panel, in the **Messaging endpoint** box, enter the ngrok URL, in our example, `https://dea822bf.ngrok.io/api/messages`.
 1. Start your bot locally, for example in Visual Studio debug mode.
-2. Test the bot while running locally using the Microsoft 365 Agents SDK (previously known as Bot Framework SDK) portal's **Test Web chat**. Like the Emulator, this test doesn't allow you to access Teams-specific functionality.
-3. In the terminal window where `ngrok` is running you can see HTTP traffic between the bot and the web chat client. If you want a more detailed view, in a browser window enter `http://127.0.0.1:4040` you obtained from the previous terminal window. The following image is an example:
+1. Test the bot while running locally using the Microsoft 365 Agents SDK (previously known as Bot Framework SDK) portal's **Test Web chat**. Like the Emulator, this test doesn't allow you to access Teams-specific functionality.
+1. In the terminal window where `ngrok` is running you can see HTTP traffic between the bot and the web chat client. If you want a more detailed view, in a browser window enter `http://127.0.0.1:4040` you obtained from the previous terminal window. The following image is an example:
 
    :::image type="content" source="../../../assets/images/authentication/auth-bot-teams-ngrok-testing.png" alt-text="Screenshot shows auth bot teams ngrok testing.":::
 
