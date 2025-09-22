@@ -25,7 +25,7 @@ The following image displays the invoke locations of the search command:
 
 To add the search command to your [app manifest](../../../resources/schema/manifest-schema.md#composeextensions) (previously called Teams app manifest), you must add a new `composeExtensions` object to the top level of your app manifest JSON. You can add the search command either with the help of Developer Portal or manually.
 
-### Create search message extension using Agents SDK
+### Create search message extension using Microsoft 365 Agents SDK
 
 You can create a search message extension using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) and Developer Portal for Teams.
 
@@ -105,7 +105,7 @@ To run the message extension in Teams, follow these steps:
    * Parameter description
    * Select the type of input
 
-2. Select **Save**. A search message extension using Agents SDK created.
+2. Select **Save**. A search message extension using Microsoft 365 Agents SDK (previously known as Bot Framework SDK) created.
 3. At the upper-right corner, select **Preview in Teams**. The app opens in Teams desktop or web client.
 
 ---

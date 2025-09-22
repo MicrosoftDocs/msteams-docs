@@ -14,14 +14,14 @@ ms.owner: angovil
 > [!NOTE]
 >
 > * The deprecation process for `TeamsInfo.getMembers` and `TeamsInfo.GetMembersAsync` APIs have started. Initially, they are heavily throttled to five requests per minute and return a maximum of 10K members per team. This results in the full roster not being returned as team size increases.
-> * You must update to version 4.10 or higher of the Agents SDK and switch to the paginated API endpoints, or the `TeamsInfo.GetMemberAsync` single user API. This also applies to your bot even if you are not directly using these APIs, as older SDKs call these APIs during [membersAdded](../bots/how-to/conversations/subscribe-to-conversation-events.md#members-added) events. To view the list of upcoming changes, see [API changes](team-chat-member-api-changes.md#api-changes).
+> * You must update to version 4.10 or higher of the Microsoft 365 Agents SDK (previously known as Bot Framework SDK) and switch to the paginated API endpoints, or the `TeamsInfo.GetMemberAsync` single user API. This also applies to your bot even if you are not directly using these APIs, as older SDKs call these APIs during [membersAdded](../bots/how-to/conversations/subscribe-to-conversation-events.md#members-added) events. To view the list of upcoming changes, see [API changes](team-chat-member-api-changes.md#api-changes).
 
 If you want to retrieve information for one or more members of a chat or team, you can use the [Microsoft Teams bot APIs](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile) `TeamsInfo.GetMembersAsync` for C# or `TeamsInfo.getMembers` for TypeScript or Node.js APIs. For more information, see [fetch roster or user profile](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile).
 
 These APIs have the following shortcomings:
 
 * For large teams, performance is poor and timeouts are more likely: The maximum team size has grown since Teams was released. As `GetMembersAsync` or `getMembers` returns the entire member list, it takes a long time for the API call to return for large teams, and it's common for the call to time out and you must try again.
-* Getting profile details for a single user is difficult: To get the profile information for a single user, you must retrieve the entire member list, and then search for the one you want. There's a helper function in the Agents SDK to make it simpler, but it isn't efficient.
+* Getting profile details for a single user is difficult: To get the profile information for a single user, you must retrieve the entire member list, and then search for the one you want. There's a helper function in the Microsoft 365 Agents SDK (previously known as Bot Framework SDK) to make it simpler, but it isn't efficient.
 
 With the introduction of organization wide teams, there's a requirement to better align these APIs with Microsoft 365 privacy controls. Bots used in large teams can retrieve basic profile information similar to the `User.ReadBasic.All` Microsoft Graph permission. Admins have a great deal of control over which apps and bots can be used in their tenant, but these settings are different from Microsoft Graph.
 
@@ -58,19 +58,19 @@ The following code provides a sample JSON representation of what is returned by 
 
 Following are the upcoming API changes:
 
-* A new API is created [`TeamsInfo.GetPagedMembersAsync`](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile) for retrieving profile information for members of a chat or team. This API is now available with the Agents SDK version 4.8 or later SDK. For development in all other versions, use the [`GetConversationPagedMembers`](/dotnet/api/microsoft.bot.connector.conversationsextensions.getconversationpagedmembersasync?view=botbuilder-dotnet-stable&preserve-view=true) method.
+* A new API is created [`TeamsInfo.GetPagedMembersAsync`](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile) for retrieving profile information for members of a chat or team. This API is now available with the Microsoft 365 Agents SDK (previously known as Bot Framework SDK) version 4.8 or later SDK. For development in all other versions, use the [`GetConversationPagedMembers`](/dotnet/api/microsoft.bot.connector.conversationsextensions.getconversationpagedmembersasync?view=botbuilder-dotnet-stable&preserve-view=true) method.
 
     > [!NOTE]
     >
-    > Upgrade to the latest version of the Microsoft Agents SDK as follows:
+    > Upgrade to the latest version of the Microsoft 365 Agents SDK (previously known as Bot Framework SDK) as follows:
     >
-    > * Agents SDK v3: Upgrade to version 3.30.2 or later.
-    > * Agents SDK v4: Upgrade to version 4.8 or later.
+    > * Microsoft 365 Agents SDK v3: Upgrade to version 3.30.2 or later.
+    > * Microsoft 365 Agents SDK v4: Upgrade to version 4.8 or later.
 
 * A new API is created [`TeamsInfo.GetMemberAsync`](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#get-single-member-details) for retrieving the profile information for a single user. It takes the ID of the team or chat and a [UPN](/windows/win32/ad/naming-properties#userprincipalname) that is `userPrincipalName`, Microsoft Entra Object ID `objectId`, or the Teams user ID `id` as parameters and returns the profile information for that user.
 
     > [!NOTE]
-    > `objectId` is changed to `aadObjectId` to match what is called in the `Activity` object of a Agents SDK message. The new API is available with version 4.8 or later of the Agents SDK. It is also available in the Teams SDK extension Agents SDK 3.x. Meanwhile, you can use the [REST](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#get-single-member-details) endpoint.
+    > `objectId` is changed to `aadObjectId` to match what is called in the `Activity` object of a Microsoft 365 Agents SDK (previously known as Bot Framework SDK) message. The new API is available with version 4.8 or later of the Microsoft 365 Agents SDK (previously known as Bot Framework SDK). It is also available in the Teams SDK extension Microsoft 365 Agents SDK (previously known as Bot Framework SDK) 3.x. Meanwhile, you can use the [REST](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#get-single-member-details) endpoint.
 
 * `TeamsInfo.GetMembersAsync` in C# and `TeamsInfo.getMembers` in TypeScript or Node.js is formally deprecated. Once the new API is available, you must update your bots to use it. This also applies to the [underlying REST API that these APIs use](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#tabpanel_CeZOj-G++Q_json).
 * Bots can't proactively retrieve the `userPrincipalName` or `email` properties for members of a chat or team. Bots must use the Graph APIs to retrieve the required information. The new `GetConversationPagedMembers` API can't return the `userPrincipalName` and `email` properties.

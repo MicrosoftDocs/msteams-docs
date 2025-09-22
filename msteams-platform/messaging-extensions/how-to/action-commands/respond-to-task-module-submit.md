@@ -203,7 +203,7 @@ You can select to respond to the `submitAction` event with additional dialog. It
 * Dynamically change the information collection based on user input.
 * Validate the information submitted by the user and resend the form with an error message if something is wrong.
 
-The method for response is the same as [responding to the initial `fetchTask` event](~/messaging-extensions/how-to/action-commands/create-task-module.md). If you're using the Agents SDK the same event triggers for both submit actions. To make this work, you must add logic that determines the correct response.
+The method for response is the same as [responding to the initial `fetchTask` event](~/messaging-extensions/how-to/action-commands/create-task-module.md). If you're using the Microsoft 365 Agents SDK (previously known as Bot Framework SDK) the same event triggers for both submit actions. To make this work, you must add logic that determines the correct response.
 
 ## Bot response with Adaptive Card
 
