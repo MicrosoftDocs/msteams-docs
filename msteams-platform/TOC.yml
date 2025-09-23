@@ -469,6 +469,8 @@
     - name: Modify Teams bot API to fetch team or chat members
       href: resources/team-chat-member-api-changes.md
       displayName: team, chat, member, API, bot, fetch, team or chat members
+    - name: Secure bot Teams channel content
+      href: bots/secure-bots-in-teams.md
     - name: Calls and meetings bots
       items:
       - name: Overview
