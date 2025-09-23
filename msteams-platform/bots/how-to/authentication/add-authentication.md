@@ -388,7 +388,7 @@ If a bot requires authentication, you must configure the Emulator. To configure:
 1. Start the Emulator.
 1. In the Emulator, select the gear icon &#9881; in the bottom left, or the **Emulator Settings** tab in the upper right.
 1. Check the box by **Use version 1.0 authentication tokens**.
-1. Enter the local path to the **ngrok** tool. *See* the Microsoft 365 Agents SDK (previously known as Bot Framework SDK) Emulator / ngrok tunneling integration [Wiki](https://github.com/Microsoft/BotFramework-Emulator/wiki/Tunneling-(ngrok)). For more tool information, see [ngrok](https://ngrok.com/).
+1. Enter the local path to the **ngrok** tool. *See* Bot Framework Emulator / ngrok tunneling integration [Wiki](https://github.com/Microsoft/BotFramework-Emulator/wiki/Tunneling-(ngrok)). For more tool information, see [ngrok](https://ngrok.com/).
 1. Check the box by **Run ngrok when the Emulator starts up**.
 1. Select the **Save** button.
 
