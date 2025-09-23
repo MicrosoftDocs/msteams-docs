@@ -1851,3 +1851,4 @@ To create an app manifest file:
 * [Localize your app](~/concepts/build-and-test/apps-localization.md)
 * [Integrate media capabilities](~/concepts/device-capabilities/media-capabilities.md)
 * [Public developer preview app manifest schema](manifest-schema-dev-preview.md)
+* [Official Agents SDK Learn docs](/microsoft-365/agents-sdk/)
