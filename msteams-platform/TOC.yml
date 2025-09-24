@@ -272,6 +272,7 @@
         - name: Public developer preview app manifest
           href: resources/schema/manifest-schema-dev-preview.md
           displayName: properties
+
 #- name: Microsoft Teams Developer documentation
 #  href: mstdd-landing.yml
 #- name: What's new?
@@ -295,6 +296,7 @@
 #    href: overview-solution.md
 #    displayName: develop Teams app, app development, tools used
 
+- name: Conventional apps
 - name: Get started
   expanded: false
   items:
