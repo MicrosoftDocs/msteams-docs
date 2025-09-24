@@ -423,7 +423,7 @@ Following is the expected drive behavior of the channels:
 > Avoid hardcoding library names or URLs based on assumptions about the team site, as the team site location can change.
 > Use the preceding API for all channel types.
 
-### Handle external or guest users’ access to files
+### Manage file access for external or guest users
 
 #### [External users](#tab/external users)
 
