@@ -64,7 +64,15 @@ To run a performance audit, follow these steps:
 
 Monitoring and analytics are crucial for optimizing app performance; and identifying existing apps with low performance to get them to adapt best practices is the ideal way forward. With the new **Self-Serve Lightweight Audit Tool** developers can now assess and optimize app performance, especially on mobile platforms for Android and iOS. This tool is accessible through the Developer Preview toggle and provides simple, integrated real-time insights using browser and OS-level APIs, along with Teams-specific performance markers.
 
-### Generating the report
+### Prerequisites
+
+There are no prerequisites to use the self-serve lightweight audit tool. However, for accurate latency calculation, ensure that your app calls the `notifySuccess()` API after the app is fully loaded.
+
+### How to leverage the tool
+
+This section describes how to generate, access, and understand the performance metrics report.
+
+#### Generate the performance metrics report
 
 To generate the performance metrics for an app, follow these steps:
 
@@ -83,24 +91,55 @@ To generate the performance metrics for an app, follow these steps:
 
     * On an iOS app landing page, select the audit app performance icon that appears next to the bot icon, as shown in the following figure.
 
-    A bottom sheet appears as shown in the following figure if the report is generated successfully (in html format).
+    A bottom sheet appears as shown in the following figure if the report is generated successfully (static HTML).
 
     If the report is not generated, a **Performance metrics could not be calculated. Please refresh or try again** message appears.
 
+> [!NOTE]
+>
+> * An interim page appears while the report is being generated. Do not refresh or navigate away, as this will interrupt the process.
+> * There is no restriction on the number of times that a report can be generated for an app.
+> * The generated report is a static HTML page whose contents will remain unchanged throughout the user’s journey. A new report is generated only when the user clicks on generate report trigger again.
+
 ### Accessing the report
 
-To access the report from the bottom sheet, click **Open report**. The generated report can be opened in a new browser window or an html viewer.
+Once the report generation is successful, you can access it from the bottom sheet which appears with the following options:
 
-You will also be able to download, share or forward the report to Teams as allowed by your device specifications (refer preceding figure).
+* **Open Report**: Clicking this item opens the report in a new browser window Chrome custom tab (in Android) or equivalent (in iOS).
+* **Share Report**: Clicking this opens the device’s share menu for sharing outside Teams.
+* **Forward in Teams**: Clicking this opens the device’s share menu for sharing in Teams.
+* **Download**: Clicking this downloads the report in the user device’s local storage.
 
-> [NOTE!]
->
-> An interim page appears while the report is being generated. Do not refresh or navigate away, as this will interrupt the process.
-> There is no restriction on the number of times that a report can be generated for an app.
+The following figure shows a bottom sheet generated for Calendar app on Android.
 
 ### Understanding the report
 
-To generate the performance metrics for an app
+The report contains the following sections:
+
+* **Latency**: This metric measures the (approximate) time taken by an app to load in WebView, to target a P95 app load latency of less than 5 seconds.
+
+  * For apps calling notifySuccess(): This section contains an overall latency number at the top. This is followed by a sequential timeline indicating end time for each API call on app load.  
+
+  * For apps that don’t call notifySuccess(): Latency can’t be calculated. Hence, there’ll be either a dash or question mark in place of the overall latency number. There will be an error message (highlighted) notifying users of the above and nudging them to use NotifySuccess() API call.
+
+>[!IMPORTANT]
+>Latency won't be calculated if notifySuccess() API is not called from code.
+
+* **Caching (Service Worker)**: This section indicates whether a service worker (SW) is enabled as a local caching mechanism. Values are ‘Available’ (in green) and ‘Not Available’ (in red). It is applicable only for reports generated from Android.
+
+  * If report is generated from Android (and viewed anywhere) and SW is Not Available, component displays link to public Teams documentation.
+
+  * If report is generated from iOS, actual SW implementation can’t be captured accurately. Hence, an error message appears.
+
+> [!IMPORTANT]
+> Using SW optimizes app performance.
+
+* **App Package**: App Package indicates the total size occupied by the bundle of JS files. Ideal value is 1 MB. Clicking on ‘Check bundle files’ opens a L2 screen for a detailed list of files affecting bundle size.
+
+* **Content Paint Metrics**: Is a tabulated list of all relevant content paint metrics (and their values).
+
+* **Disk Size**: Indicates the size of the app stored on the mobile device. The ideal limit is 20 MB. If an app is larger than this, size will be displayed in red else in green.  
+In case the disk size can’t be calculated, an error message with the reason will show up in place of expected value.
 
 ## See also
 
