@@ -21,18 +21,24 @@ landingContent:
 # Cards and links should be based on top customer tasks or top subjects
 # Start card title with a verb
 
-- title: I want to build an assistant that understands natural language
+- title: Build custom engine agents
   linkLists:
     - linkListType: concept
       links:
-      - text: Start with building an agent
-        url: teams-ai-library-tutorial.yml
-      - text:   • Work across Microsoft 365
+      - text: Custom engine agents overview
         url: /microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-      - text:   • Use memory, tools, and prompt planning
-        url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md
-      - text: Agent for intelligent data access and automation
-        url: bots/how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md
+      - text: Teams AI library
+        url: /microsoftteams/platform/teams-ai-library/welcome
+      - text: Build custom engine agents using Agents Toolkit
+        url: Teams-AI-library-tutorial.yml
+      - text: Custom engine agent user experience
+        url: bots/how-to/teams-conversational-ai/ai-ux.md
+      - text: Enhance AI-generated bot Messages
+        url: bots/how-to/bot-messages-ai-generated-content.md
+      - text: Custom engine agents support for Microsoft 365 Copilot Chat
+        url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#add-support-for-microsoft-365-copilot-chat
+      - text: Extend bot-based message extension as an agent for Microsoft 365 Copilot
+        url: messaging-extensions/build-bot-based-agent.md
 
 - title: I want to build intelligent lookup agent
   linkLists:
