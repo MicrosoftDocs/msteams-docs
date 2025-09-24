@@ -618,7 +618,7 @@ This item is an array (maximum of 16 elements) with all elements of the type `ob
 |`contentBotId`|String|128 characters||The Microsoft app ID specified for the bot in the [Bot Framework portal](https://dev.botframework.com/bots).|
 |`websiteUrl`|String|2048 characters||The https:// URL to point to if a user opts to view in a browser.|
 |`searchUrl`|String|2048 characters||The https:// URL to point to for a user's search queries.|
-|`scopes`|Array of enums|3|✔️|Specifies whether the tab offers an experience in the context of a channel in a team, or an experience scoped to an individual user or group chat. The static tabs support `personal` scope only.|
+|`scopes`|Array of enums|3|✔️|Specifies whether the tab offers an experience in the context of a channel in a team, or an experience scoped to an individual user or group chat. The static tabs support `personal`, `team` and `groupChat` scopes.|
 |`context` | Array of enums| 8|| The set of `contextItem` contexts where a [tab is supported](../../tabs/how-to/access-teams-context.md). </br> Accepted values: `personalTab`, `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingStage`, `meetingSidepanel`, `teamLevelApp`. </br> Default values: `personalTab`, `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`. |
 |`requirementSet`|Object|||Runtime requirements for the tab to function properly in the Microsoft 365 host application. If one or more of the requirements aren't supported by the runtime host, the host won't load the tab.|
 
