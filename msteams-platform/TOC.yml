@@ -15,6 +15,9 @@
 - name: What's new?
   href: whats-new.md
   displayName: Teams platform features, latest updates, RSS feed, deprecated, announcement, preview
+- name: Glossary
+  href: get-started/glossary.md
+  displayName: App tray, terminologies, definitions, welcome, new word, meaning
 
 #- name: Microsoft Teams Developer documentation
 #  href: mstdd-landing.yml
