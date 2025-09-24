@@ -55,7 +55,7 @@ Understanding the difference between Microsoft Teams channel types is essential.
 
 > [!NOTE]
 >
-> Don't depend on channel type to determine behavior. Avoid making make any logic decisions based on the channel type in your code. Instead, check for the capabilities your app needs (for example, membership boundaries, storage location, external access) and always use APIs and patterns that work across all channel types.
+> Don't depend on channel type to determine behavior. Avoid making any changes to your code based on channel type. Instead, check for the capabilities your app needs (for example, membership boundaries, storage location, external access) and always use APIs and patterns that work across all channel types.
 
 Use the following guidance to enable app support for shared and private channels.
 
@@ -385,9 +385,68 @@ For guests, “roles” = “guest”
 
 ## Access sharepoint data in shared and private channels
 
-If you're building an app using [SharePoint](/sharepoint/dev/spfx/integrate-with-teams-introduction) Framework, you need to use the SharePoint Online (SPO) site linked to the shared channel—not the one linked to the host team group. Each private channel has its own SPO site that is only accessible to members of that specific shared or private channel.
+If you're building an app using [SharePoint](/sharepoint/dev/spfx/integrate-with-teams-introduction) Framework, you need to use the SharePoint Online (SPO) site linked to the shared channel, not the one linked to the host team group. Each private channel has its own SPO site that is only accessible to members of that specific shared or private channel.
 
 Use the Graph API to access the document library of the SPO site linked to a shared or private channel. Ensure you pass the Team ID and Channel ID received from the [Get Host Team Group ID & Channel ID](#get-host-team-group-id--channel-id) and pass in [Get filesFolder - Microsoft Graph v1.0 | Microsoft Learn](/graph/api/channel-get-filesfolder).
+
+### Resolve storage correctly for channel files
+
+To access a channel’s SharePoint files root, use the following API:
+
+`GET /teams/{teamId}/channels/{channelId}/filesFolder`
+
+This returns a DriveItem object for that channel's files root.
+
+Use the following properties for all subsequent file operations:
+
+* `parentReference.driveId`: The SharePoint drive ID for the channel’s site.  
+* `itemId`: The folder ID for the channel’s root.
+
+Following is the expected drive behavior of the channels:
+
+* Standard channels use the team site’s driveId.
+* Other channels use a separate driveId for their individual sites.
+
+> [!NOTE]
+>
+> Always store and reuse the `driveId` and `itemId` returned by the API.
+> Avoid hardcoding library names or URLs based on assumptions about the team site, as the team site location can change.
+> Use the preceding API for all channel types.
+
+### Handle external or guest users’ access to files
+
+#### [External users](#tab/external users)
+
+External users remain in their home tenant while accessing the host channel’s SharePoint site. To enable access:
+
+* Configure cross-tenant access on both sides.
+* Ensure your app is multi-tenant and has received consent in the host tenant.
+
+#### [Guest users](#tab/guest users)
+
+The channel’s SharePoint site automatically grants access to all channel members, including tenant guests.
+
+Consider the following steps:
+
+* Avoid using Organization-wide sharing links they typically exclude external users.
+* Use specific-people sharing, or rely on membership-based permissions.
+* Check tenant or site policies, as they may block anonymous or organization-wide links.
+
+To grant access to specific users/groups , use the following API:
+
+`POST /drives/{driveId}/items/{itemId}/invite`
+
+---
+
+### Authenticate external users in tabs or task modules
+
+When your tab or task module needs to access SharePoint resources in the channel’s home tenant, perform the following steps:
+
+1. Detect external users
+Use getContext() to retrieve channel context. Compare `user.tenant.id` with `channel.ownerTenantId or channel.hostTenantId`. If they differ, the user is external.
+
+2. Request token from home tenant
+Call getAuthToken() with the external user's tenant ID (`user.tenant.id` or `tid`) to ensure the token is issued from their home tenant.
 
 ## Test your app across channel types
 
