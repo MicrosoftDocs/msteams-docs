@@ -379,9 +379,17 @@ Now, send saved host tenant ID inside tenantId parameter of getAuthToken call to
 
 ## Identify guest users (B2B guests) in private channels
 
-You can identify if a member of private channel is guest user, invited to your tenant from external organization, using 'roles' property received for each [conversationMember](/graph/api/resources/conversationmember) object in [List members of a channel - Microsoft Graph v1.0 | Microsoft Learn](/graph/api/channel-list-members) response.  
+You can identify if a member of private channel is guest user, invited to your tenant from external organization, using 'roles' property received for each object in [List members of a channel - Microsoft Graph v1.0 | Microsoft Learn](/graph/api/channel-list-members) response.  
 
 For guests, “roles” = “guest”
+
+To accurately retrieve the all guest users in Private channel use the following``allMembers`` API:
+
+```HTTP
+GET /teams/{team-id}/channels/{channel-id}/allMembers``
+```
+
+This API works across standard and other channels and and is recommended for reliably indentifying guest members.
 
 ## Access sharepoint data in shared and private channels
 
@@ -393,7 +401,9 @@ Use the Graph API to access the document library of the SPO site linked to a sha
 
 To access a channel’s SharePoint files root, use the following API:
 
-`GET /teams/{teamId}/channels/{channelId}/filesFolder`
+```HTTP
+GET /teams/{teamId}/channels/{channelId}/filesFolder
+```
 
 This returns a DriveItem object for that channel's files root.
 
@@ -434,7 +444,9 @@ Consider the following steps:
 
 To grant access to specific users/groups , use the following API:
 
-`POST /drives/{driveId}/items/{itemId}/invite`
+```HTTP
+POST /drives/{driveId}/items/{itemId}/invite`
+```
 
 ---
 
