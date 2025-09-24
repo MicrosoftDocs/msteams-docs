@@ -1,15 +1,7 @@
-- name: Microsoft Teams Developer documentation
-  href: mstdd-landing.yml
-- name: What's new?
-  href: whats-new.md
-  displayName: Teams platform features, latest updates, RSS feed, deprecated, announcement, preview 
-- name: Glossary
-  href: get-started/glossary.md
-  displayName: App tray, terminologies, definitions, welcome, new word, meaning
 - name: Overview
   expanded: false 
   items:
-  - name: Teams app that fits
+  - name: Why build on Teams platform
     href: overview.md
     displayName: why build apps with Microsoft Teams platform
   - name: From ideas to Teams app
@@ -20,6 +12,33 @@
   - name: The Teams solution
     href: overview-solution.md
     displayName: develop Teams app, app development, tools used
+- name: What's new?
+  href: whats-new.md
+  displayName: Teams platform features, latest updates, RSS feed, deprecated, announcement, preview
+
+#- name: Microsoft Teams Developer documentation
+#  href: mstdd-landing.yml
+#- name: What's new?
+#  href: whats-new.md
+#  displayName: Teams platform features, latest updates, RSS feed, deprecated, announcement, preview 
+#- name: Glossary
+#  href: get-started/glossary.md
+#  displayName: App tray, terminologies, definitions, welcome, new word, meaning
+#- name: Overview
+#  expanded: false 
+#  items:
+#  - name: Teams app that fits
+#    href: overview.md
+#    displayName: why build apps with Microsoft Teams platform
+#  - name: From ideas to Teams app
+#    href: overview-story.md
+#    displayName: Teams app user experience, user scenario
+#  - name: Explore Teams platform features
+#    href: overview-explore.md
+#  - name: The Teams solution
+#    href: overview-solution.md
+#    displayName: develop Teams app, app development, tools used
+
 - name: Get started
   expanded: false
   items:
