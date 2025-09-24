@@ -52,12 +52,13 @@ To enable prompt starters, define the `commands` property in your bot's app mani
 - The `description` field describes what the users accomplish. 
 - The `type` field indicates whether the bot command is a basic command or a prompt.
  
-  * If the `command` is `prompt`, set type to "prompt" and provide the text in the prompt field.
-  * If the `command` is `basic`, set type to "basic" and use the title field for the text.
-- The `prompt`field defines the text to populate in the compose box. 
+  * If the `command` is `prompt`, set type to **prompt** and provide the text in the prompt field.
+  * If the `command` is `basic`, set type to **basic** and use the title field for the text.
+- The `prompt`field defines the text to populate in the compose box, when the command is a prompt type.
 
-[!NOTE]
-If you're building an agent, you must set type to "prompt" and provide a valid prompt value. If the prompt field is empty, the app manifest fails validation during submission.
+>[!NOTE]
+>
+>If you're building an agent, you must set `type` to **prompt** and provide a valid prompt value. If the `prompt` field is empty, the app manifest fails validation during submission.
 
 ## Define `commands` in app manifest
 
