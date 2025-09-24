@@ -349,7 +349,43 @@
     displayName: Nested app, authentication, tabs, single page apps, use case scenario, MSAL, SSO
   - name: Use external OAuth providers
     href: tabs/how-to/authentication/auth-oauth-provider.md
-    
+- name: Integrated Microsoft Graph
+  items:
+  - name: Overview
+    href: /graph/teams-concept-overview?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+    displayName: Permissions, communication, channels, delegated, reports, extensions
+  - name: Microsoft Graph Toolkit
+    href: /graph/toolkit/overview?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+    displayName: Access, routing
+  - name: Get started
+    href: /graph/toolkit/get-started/build-a-microsoft-teams-tab?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+    displayName: Access, report, MSAL2
+  - name: Teams app permissions
+    href: graph-api/App-permissions/Teams-app-permissions.md
+    displayName: RSC permissions
+  - name: Resource-specific consent
+    items:
+    - name: RSC permissions
+      href: graph-api/rsc/resource-specific-consent.md
+      displayName: types of RSC, delegated, application
+    - name: Preapproval of RSC permissions
+      href: graph-api/rsc/preapproval-instruction-docs.md
+      displayName: User, team, chat, application, delegated
+    - name: Grant RSC permission to your app
+      href: graph-api/rsc/grant-resource-specific-consent.md
+      displayName: Permissions, delegated, user, team, chat, application
+  - name: Proactive app installation to send messages
+    href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
+    displayName: app installation, proactive message, proactive bot installation, add bot to conversation, bot conversation using graph api
+  - name: Approvals app APIs
+    href: /graph/approvals-app-api?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+    displayName: Approvals, Approvals API, Get approvals, Track and report requests, Customize approval
+  - name: Import third-party messages
+    href: graph-api/import-messages/import-external-messages-to-teams.md
+  - name: Code samples
+    href: https://github.com/OfficeDev/microsoft-teams-samples#graph-apis
+    displayName: graph api samples
+
 #- name: Microsoft Teams Developer documentation
 #  href: mstdd-landing.yml
 #- name: What's new?
