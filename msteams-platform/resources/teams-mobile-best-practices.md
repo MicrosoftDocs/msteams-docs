@@ -94,9 +94,9 @@ To access the report from the bottom sheet, click **Open report**. The generated
 You will also be able to download, share or forward the report to Teams as allowed by your device specifications (refer preceding figure).
 
 > [NOTE!]
+>
 > An interim page appears while the report is being generated. Do not refresh or navigate away, as this will interrupt the process.
 > There is no restriction on the number of times that a report can be generated for an app.
->
 
 ### Understanding the report
 
