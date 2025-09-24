@@ -399,7 +399,7 @@ Use the Graph API to access the document library of the SPO site linked to a sha
 
 ### Resolve storage correctly for channel files
 
-To access a channel’s SharePoint files root, use the following API:
+To access a channel’s sharepoint files root, use the following API:
 
 ```HTTP
 GET /teams/{teamId}/channels/{channelId}/filesFolder
@@ -409,7 +409,7 @@ This returns a DriveItem object for that channel's files root.
 
 Use the following properties for all subsequent file operations:
 
-* `parentReference.driveId`: The SharePoint drive ID for the channel’s site.  
+* `parentReference.driveId`: The sharepoint drive ID for the channel’s site.  
 * `itemId`: The folder ID for the channel’s root.
 
 Following is the expected drive behavior of the channels:
@@ -427,14 +427,14 @@ Following is the expected drive behavior of the channels:
 
 #### [External users](#tab/external users)
 
-External users remain in their home tenant while accessing the host channel’s SharePoint site. To enable access:
+External users remain in their home tenant while accessing the host channel’s sharepoint site. To enable access:
 
 * Configure cross-tenant access on both sides.
 * Ensure your app is multi-tenant and has received consent in the host tenant.
 
 #### [Guest users](#tab/guest users)
 
-The channel’s SharePoint site automatically grants access to all channel members, including tenant guests.
+The channel’s sharepoint site automatically grants access to all channel members, including tenant guests.
 
 Consider the following steps:
 
@@ -452,7 +452,7 @@ POST /drives/{driveId}/items/{itemId}/invite`
 
 ### Authenticate external users in tabs or task modules
 
-When your tab or task module needs to access SharePoint resources in the channel’s home tenant, perform the following steps:
+When your tab or task module needs to access sharepoint resources in the channel’s home tenant, perform the following steps:
 
 1. Detect external users
 Use getContext() to retrieve channel context. Compare `user.tenant.id` with `channel.ownerTenantId or channel.hostTenantId`. If they differ, the user is external.
