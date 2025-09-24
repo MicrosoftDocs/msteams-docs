@@ -198,6 +198,7 @@ The following are the limitations for app caching:
 
 ## See also
 
+* [TeamsJS app initialization process](app-initialization-process.md)
 * [Create a personal tab](create-personal-tab.md)
 * [Create a channel tab or group tab](create-channel-group-tab.md)
 * [Build tabs for meeting](../../apps-in-teams-meetings/build-tabs-for-meeting.md)
