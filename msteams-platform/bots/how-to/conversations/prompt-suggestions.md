@@ -47,14 +47,19 @@ Suggested actions help users continue conversations with your bot.
 >
 > * Prompt starters are only supported for one-on-one chat bots.
 
-To enable prompt starters, define the `commands` property in your bot's app manifest. Each command now contains four fields, a `title`, `description`, `type` and `prompt`. The `title` field is the text shown in the prompt starter and the `description` describes what the users accomplish. The `type` field indicates whether the bot command is a basic command or a prompt. The `prompt` field defines the text to populate in the compose box, when the command is a prompt type.
-When the user selects on a prompt starter, the `title` of the prompt is populated in the compose box. 
-The `type` field determines how the command behaves. 
+To enable prompt starters, define the `commands` property in your bot's app manifest. Each command now contains four fields, a `title`, `description`, `type`, and `prompt`. 
+- The `title` field is the text shown in the prompt starter. When selected, this text is populated into the compose box. 
+- The `description` field describes what the users accomplish. 
+- The `type` field indicates whether the bot command is a basic command or a prompt.
+ 
+  * If the `command` is `prompt`, set type to "prompt" and provide the text in the prompt field.
+  * If the `command` is `basic`, set type to "basic" and use the title field for the text.
+- The `prompt`field defines the text to populate in the compose box. 
 
-* If the `command` is `prompt`, set type to "prompt" and provide the text in the prompt field.
-* If the `command` is `basic`, set type to "basic" and use the title field for the text.
+[!NOTE]
+If you're building an agent, you must set type to "prompt" and provide a valid prompt value. If the prompt field is empty, the app manifest fails validation during submission.
 
-For agent-based bots, set `type` to `prompt` and provide a valid prompt. If `prompt` is left blank, manifest validation will fail at submission.
+## Define `commands` in app manifest
 
 To define `commands` in your app manifest, you can either use **Developer Portal** or add them manually in the app manifest. 
 
@@ -79,7 +84,7 @@ To create prompt starters using Developer Portal:
     * **Command**: Appears as the prompt for your bot.
     * **Description**: A brief explanation of the purpose of the command.
 
-1. Select the personal scope and then select **Add**. This defines where the command menu must appear.
+1. Select the personal scope and then select **Add**. This step defines where the command menu must appear.
 
    :::image type="content" source="~/assets/images/tdp/bot-command.png" alt-text="Screenshot shows how to add a command, description, and scopes for your bot.":::
 
@@ -146,7 +151,7 @@ The manifest example code for prompt starters is as follows:
 > [!NOTE]
 > If you remove any commands from your manifest, you must redeploy your app to implement the changes. In general, any changes to the manifest require you to redeploy your app.
 
-The following illustrates an example of prompt suggestions:
+The following image illustrates an example of prompt suggestions:
 
 # [Desktop](#tab/desktop)
 
@@ -158,7 +163,7 @@ The following illustrates an example of prompt suggestions:
 
 ---
 
-Prompt starters reappear in the **View Prompts** flyout above the compose box during a conversation and enables users to review the prompts while interacting with your bot.
+Prompt starters reappear in the **View Prompts** flyout above the compose box during a conversation and enable users to review the prompts while interacting with your bot.
 
 :::image type="content" source="~/assets/images/bots/prompt-starter-desktop-reappear.png" alt-text="Screenshot that shows the Prompt Starter reappear during the conversation." lightbox="~/assets/images/bots/prompt-starter-desktop-reappear.png":::
 
@@ -169,7 +174,7 @@ You must handle menu commands in your bot code as you handle any message from us
 Bots in a group or channel respond only when they're @mentioned in a message. Every message received by a bot when in a group or channel scope contains its name in the message text. Before handling the command being returned, your message parsing must handle the message received by a bot with its name.
 
 > [!NOTE]
-> Handle the commands in code, they are sent to your bot as a regular message. You must handle them as you would handle any other message from your users. The commands in code insert pre-configured text into the text box. The user must then send that text as they do for any other message.
+> Handle the commands in code, they are sent to your bot as a regular message. You must handle them as you would handle any other message from your users. The commands in code insert preconfigured text into the text box. The user must then send that text as they do for any other message.
 
 # [C#](#tab/dotnet)
 
