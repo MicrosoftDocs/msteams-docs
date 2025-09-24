@@ -260,7 +260,18 @@
           displayName: loop
         - name: Action extensions
           href: resources/messaging-extension-v3/create-extensions.md
-
+- name: App manifest
+  items:
+    - name: App manifest
+      href: resources/schema/manifest-schema.md
+      displayName: version, validDomain, valid domain, validdomain, properties, meetingExtensionDefinition
+    - name: Public developer preview
+      items:
+        - name: Overview
+          href: resources/dev-preview/developer-preview-intro.md          
+        - name: Public developer preview app manifest
+          href: resources/schema/manifest-schema-dev-preview.md
+          displayName: properties
 #- name: Microsoft Teams Developer documentation
 #  href: mstdd-landing.yml
 #- name: What's new?
