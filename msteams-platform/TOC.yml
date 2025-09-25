@@ -568,7 +568,26 @@
       - name: Succeed with your collaborative app
         href: concepts/deploy-and-publish/appsource/post-publish/app-growth/succeed.md
         displayName: TAM, PQL, metrics, success, ROI
-
+- name: Monetize your agent
+  items:
+  - name: App monetization
+    href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
+    displayName: Subscription, In-app purchases, Free trials, Test preview, paid, fee, Pricing model, SaaS offer, private offer
+  - name: SaaS offer for your Teams app
+    href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
+    displayName: transactable SaaS offer, create SaaS offer, UsageRights, configure offer, create plan, submit offer, SaaS Fulfillment API
+  - name: Test your SaaS offer
+    href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
+    displayName: preview offer ID, configure preview offer, error scenarios
+  - name: Publish your SaaS app
+    href: concepts/deploy-and-publish/appsource/prepare/publish-saas-offer-app.md
+    displayName: go live, configure, SaaS app, SaaS offer, publish, remove offer, post purchase
+  - name: Configure in-app purchases
+    href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
+    displayName: manifest, purchase experience API, purchase
+  - name: App subscriptions and licenses
+    href: concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md
+    displayName: Purchase, Teams apps, License, manage, buy subscriptions, ISVs, Manage, License, third party, SaaS, Partner Center
 
 #- name: Microsoft Teams Developer documentation
 #  href: mstdd-landing.yml
