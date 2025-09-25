@@ -29,10 +29,17 @@ Here are some use cases for fetching meeting transcripts and recordings using Gr
 
 To fetch the transcript and recording for a particular meeting:
 
-1. [Configure permissions on Microsoft Entra ID to access transcript and recording](#configure-permissions-on-azure-ad-to-access-transcript-and-recording)
-1. [Get notified when the meeting transcripts and recordings are available](/graph/teams-changenotifications-callrecording-and-calltranscript)
-1. [Use Graph APIs to fetch transcript](/graph/api/resources/calltranscript?view=graph-rest-1.0&preserve-view=true)
-1. [Use Graph APIs to fetch recording](/graph/api/resources/callrecording?view=graph-rest-beta&preserve-view=true)
+- [Get meeting transcripts and recordings using Graph APIs](#get-meeting-transcripts-and-recordings-using-graph-apis)
+  - [Use cases](#use-cases)
+  - [Get meeting transcripts and recordings](#get-meeting-transcripts-and-recordings)
+    - [Configure permissions on Microsoft Entra ID to access transcript and recording](#configure-permissions-on-microsoft-entra-id-to-access-transcript-and-recording)
+      - [Use organization-wide application permissions](#use-organization-wide-application-permissions)
+      - [Use meeting-specific RSC application permissions](#use-meeting-specific-rsc-application-permissions)
+    - [Get notified when a transcript or recording is available](#get-notified-when-a-transcript-or-recording-is-available)
+  - [Get AI-generated meeting summaries](#get-ai-generated-meeting-summaries)
+  - [Code samples](#code-samples)
+  - [Next step](#next-step)
+  - [See also](#see-also)
 
 <a name='configure-permissions-on-azure-ad-to-access-transcript-and-recording'></a>
 
