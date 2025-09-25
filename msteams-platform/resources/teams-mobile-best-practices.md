@@ -64,9 +64,10 @@ To run a performance audit, follow these steps:
 
 Monitoring and analytics are crucial for optimizing app performance; and identifying existing apps with low performance to get them to adapt best practices is the ideal way forward. With the new **Self-Serve Lightweight Audit Tool** developers can now assess and optimize app performance, especially on mobile platforms for Android and iOS. This tool is accessible through the **Developer Preview toggle** and provides simple, integrated real-time insights using browser and OS-level APIs, along with Teams-specific performance markers.
 
-### Prerequisites
-
-There are no prerequisites to use the self-serve lightweight audit tool. However, for accurate latency calculation, ensure that your app calls the `notifySuccess()` API after the app is fully loaded.
+> [!NOTE]
+>
+> * There are no prerequisites to use the self-serve lightweight audit tool.
+> * For accurate latency calculation, ensure that your app calls the `notifySuccess()` API after it's fully loaded.
 
 ### How to use the tool
 
@@ -91,9 +92,11 @@ To generate the performance metrics for an app, follow these steps:
 
     * On an iOS app landing page, select the audit app performance icon that appears next to the bot icon.
 
-    :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/iOS-entrypoint.png" alt-text="iOS entrypoint":::
+    :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/iOS-entrypoint.png" alt-text="iOS entrypoint for self-serve audit tool" lightbox="../assets/images/tabs/lightweight-audit-tool/iOS-entrypoint.png":::
 
     A bottom sheet appears, with the embedded html report in a chiclet
+
+    :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/html-report-chiclet.png" alt-text="Screenshot shows the embedded HTML report in a chiclet" lightbox="../assets/images/tabs/lightweight-audit-tool/html-report-chiclet.png":::
 
     If the report isn't generated, a **Performance metrics could not be calculated. Please refresh or try again** message appears.
 
@@ -112,20 +115,24 @@ Once the report generation is successful, you can access it from the bottom shee
 * **Forward in Teams**: Opens the device’s share menu for sharing in Teams.
 * **Download**: Downloads the report in the user device’s local storage.
 
-:::image type="content" source="../assets/images/tabs/lightweight-audit-tool/performance-report-success-bottom-sheet.png" alt-text="report-success-bottom-sheet":::
+<p align="center">
+
+:::image type="content" source="../assets/images/tabs/lightweight-audit-tool/performance-report-success-bottom-sheet.png" alt-text="report-success-bottom-sheet" lightbox="../assets/images/tabs/lightweight-audit-tool/performance-report-success-bottom-sheet.png":::
+
+</p>
 
 ### Analyze app performance report
 
-The report contains the following sections:
+The report contains these sections:
 
-* **Latency**: This metric measures the (approximate) time taken by an app to load in WebView, to target a P95 app load latency of less than 5 seconds.
+* **Latency**: This metric measures the (approximate) time taken by your app to load in WebView, to target a P95 app load latency of less than 5 seconds.
 
   * For apps calling notifySuccess(): This section contains an overall latency number at the top, followed by a sequential timeline indicating end time for each API call on app load.  
 
   * For apps that don’t call notifySuccess(): Latency can’t be calculated. Hence, there will be either a dash or question mark in place of the overall latency number. An error message appears, notifying users of the issue and nudging them to use NotifySuccess() API call.
 
->[!IMPORTANT]
->Latency is not calculated if notifySuccess() API isn't called from code.
+> [!IMPORTANT]
+> Latency is not calculated if notifySuccess() API isn't called from code.
 
 * **Caching (Service Worker)**: This section indicates whether a service worker (SW) is enabled as a local caching mechanism. Values are ‘Available’ (in green) and ‘Not Available’ (in red). It's applicable only for reports generated from Android.
 
@@ -136,9 +143,9 @@ The report contains the following sections:
 > [!IMPORTANT]
 > Using SW optimizes app performance.
 
-* **App Package**: Indicates the total size occupied by the bundle of JS files. Ideal value is 1 MB. Click on **Check bundle files** to open a L2 screen for a detailed list of files affecting bundle size.
+* **App Package**: Indicates the total size occupied by the bundle of JS files. Ideal value is 1 MB. To optimize your app, click on **Check bundle files** to open a L2 screen for a detailed list of files affecting bundle size.
 
-* **Content Paint Metrics**: Is a tabulated list of all relevant content paint metrics (and their values).
+* **Content Paint Metrics**: Is a tabulated list of all relevant content paint metrics (and their values). This data will help you to identify and improve perceived performance by reducing delays in visual content rendering.
 
 * **Disk Size**: Indicates the size of the app stored on the mobile device. The ideal limit is 20 MB. If an app is larger, size is displayed in red else in green.  
 In case the disk size can’t be calculated, an error message with the reason shows up in place of expected value.
