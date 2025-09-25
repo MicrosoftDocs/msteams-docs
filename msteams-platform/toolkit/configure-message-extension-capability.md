@@ -12,7 +12,7 @@ ms.date: 12/17/2024
 
 A message extension allows users to interact with your web service when composing messages in Microsoft Teams. Users can invoke your web service to assist message composition from the message compose box or from the search bar.
 
-Message extensions are built on the Bot Framework architecture in Teams. For more information, see [build message extensions](../messaging-extensions/what-are-messaging-extensions.md).
+Message extensions are built on the Microsoft 365 Agents SDK architecture in Teams. For more information, see [build message extensions](../messaging-extensions/what-are-messaging-extensions.md).
 
 ## Prerequisites
 
@@ -28,11 +28,21 @@ To configure the message extension capability in your app, ensure the following 
 
 To add a message extension to a tab app, follow these steps:
 
-1. [Create message extension app using Agents Toolkit](#create-message-extension-app-using-agents-toolkit)
-1. [Configure message extension in app manifest](#configure-message-extension-in-app-manifest)
-1. [Add message extension code to your project](#add-message-extension-code-to-your-project)
-1. [Setup local debug environment](#setup-local-debug-environment)
-1. [Provision your app to Azure](#provision-your-app-to-azure)
+- [Add message extension capability to Teams app](#add-message-extension-capability-to-teams-app)
+  - [Prerequisites](#prerequisites)
+  - [Add message extension to Teams app](#add-message-extension-to-teams-app)
+- [Add message extension to tab app](#add-message-extension-to-tab-app)
+    - [Create message extension app using Agents Toolkit](#create-message-extension-app-using-agents-toolkit)
+    - [Configure message extension in app manifest](#configure-message-extension-in-app-manifest)
+    - [Add message extension code to your project](#add-message-extension-code-to-your-project)
+    - [Setup local debug environment](#setup-local-debug-environment)
+  - [Provision your app to Azure](#provision-your-app-to-azure)
+- [Add message extension to bot app](#add-message-extension-to-bot-app)
+    - [Create a message extension using Agents Toolkit](#create-a-message-extension-using-agents-toolkit)
+    - [Configure message extension in app manifest](#configure-message-extension-in-app-manifest-1)
+    - [Add message extension code to project](#add-message-extension-code-to-project)
+  - [Next step](#next-step)
+  - [See also](#see-also)
 
 ### Create message extension app using Agents Toolkit
 
@@ -504,13 +514,13 @@ The following code snippet is an example:
 
 # [Add message extension to bot app](#tab/botapp)
 
-You can add the message extension capability to a bot app easily as message extensions are built on Bot Framework.
+You can add the message extension capability to a bot app easily as message extensions are built on Microsoft 365 Agents SDK.
 
 To add a message extension to a bot app, follow these steps:
 
 1. [Create a message extension app using Agents Toolkit](#create-a-message-extension-using-agents-toolkit)
-1. [Configure message extension in app manifest](#configure-message-extension-in-app-manifest)
-1. [Add message extension code to project](#add-message-extension-code-to-project)
+2. [Configure message extension in app manifest](#configure-message-extension-in-app-manifest)
+3. [Add message extension code to project](#add-message-extension-code-to-project)
 
 ### Create a message extension using Agents Toolkit
 
