@@ -96,11 +96,11 @@ To generate the performance metrics for an app, follow these steps:
 
         :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/entry-point-for-iOS.png" alt-text="Screenshot shows entry point for iOS audit tool" lightbox="../assets/images/tabs/lightweight-audit-tool/entry-point-for-iOS.png":::
 
-An interim page appears while the report is being generated.
+    An interim page appears while the report is being generated.
 
     :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/calculating-metrics.jpg" alt-text="Screenshot shows the metrics calculation in progress page" lightbox="../assets/images/tabs/lightweight-audit-tool/calculating-metrics.jpg":::
 
-If the report is generated successfully, a bottom sheet appears with the embedded html report.
+    If the report is generated successfully, a bottom sheet appears with the embedded html report.
 
     :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/html-report-chiclet.png" alt-text="Screenshot shows the embedded HTML report in a chiclet" lightbox="../assets/images/tabs/lightweight-audit-tool/html-report-chiclet.png":::
 
@@ -130,11 +130,11 @@ The report contains these sections:
 
   * **For apps that call notifySuccess()**: This section contains an overall latency number at the top, followed by a sequential timeline indicating end time for each API call on app load.
 
-        :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/notify-success-called.jpg" alt-text="Screenshot shows the notification for apps calling notifySuccess()" lightbox="../assets/images/tabs/lightweight-audit-tool/notify-success-called.jpg":::
+    :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/notify-success-called.jpg" alt-text="Screenshot shows the notification for apps calling notifySuccess()" lightbox="../assets/images/tabs/lightweight-audit-tool/notify-success-called.jpg":::
 
 * **For apps that don’t call notifySuccess()**: Latency can’t be calculated. Hence, there will be either a dash or question mark in place of the overall latency number. An error message appears, notifying users of the issue and nudging them to use NotifySuccess() API call.
 
-        :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/notify-success-API-not-called.png" alt-text="Screenshot shows the error message for apps not calling notifySuccess()" lightbox="../assets/images/tabs/lightweight-audit-tool/notify-success-API-not-called.png":::
+    :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/notify-success-API-not-called.png" alt-text="Screenshot shows the error message for apps not calling notifySuccess()" lightbox="../assets/images/tabs/lightweight-audit-tool/notify-success-API-not-called.png":::
 
 > [!IMPORTANT]
 > Latency is not calculated if notifySuccess() API isn't called from code.
