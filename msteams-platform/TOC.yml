@@ -1020,27 +1020,27 @@
 #    href: overview-solution.md
 #    displayName: develop Teams app, app development, tools used
 
-- name: Current ToC
+#- name: Current ToC
 
-- name: Get started
-  expanded: false
-  items:
-  - name: Build your Teams app
-    href: get-started/get-started-overview.md
-    displayName: build Teams app, new Teams app, GitHub Codespaces, tutorials
-  - name: Build a tab app
-    href: get-started/build-basic-tab-app.md
-    displayName: build Teams tab app
-  - name: Build an interactive notification bot app
-    href: get-started/build-interactive-notification-bot.md
-    displayName: build Teams bot app, build interactive bot
-  - name: Build a message extension app
-    href: get-started/build-message-extension.md
-    displayName: search based message extension app
-  - name: Tool options and code samples
-    href: get-started/tool-options-and-code-samples.md
-    displayName: Teams app samples, tools to build Teams app
-- name: Plan your app or agent
+#- name: Get started
+#  expanded: false
+#  items:
+#  - name: Build your Teams app
+#    href: get-started/get-started-overview.md
+#    displayName: build Teams app, new Teams app, GitHub Codespaces, tutorials
+#  - name: Build a tab app
+#    href: get-started/build-basic-tab-app.md
+#    displayName: build Teams tab app
+#  - name: Build an interactive notification bot app
+#    href: get-started/build-interactive-notification-bot.md
+#    displayName: build Teams bot app, build interactive bot
+#  - name: Build a message extension app
+#    href: get-started/build-message-extension.md
+#    displayName: search based message extension app
+#  - name: Tool options and code samples
+#    href: get-started/tool-options-and-code-samples.md
+#    displayName: Teams app samples, tools to build Teams app
+#- name: Plan your app or agent
   items:
   - name: Overview
     href: concepts/app-fundamentals-overview.md
@@ -1079,7 +1079,7 @@
     - name: Plan for sovereign clouds
       href: concepts/sovereign-cloud.md
       displayName: Teams operated by 21Vianet, gallatin
-- name: Design your app or agent
+#- name: Design your app or agent
   items:
   - name: Overview
     href: concepts/design/design-teams-app-overview.md
@@ -1152,7 +1152,7 @@
     - name: Activity feed notifications
       href: concepts/design/activity-feed-notifications.md
       displayName: notify, notification
-- name: Tools and SDKs
+#- name: Tools and SDKs
   items:
   - name: Overview
     href: concepts/build-and-test/tool-sdk-overview.md
@@ -1388,7 +1388,7 @@
           displayName: loop
         - name: Action extensions
           href: resources/messaging-extension-v3/create-extensions.md
-- name: Build bots and agents
+#- name: Build bots and agents
   expand: true
   items:
   - name: Overview
@@ -1503,7 +1503,7 @@
       - name: Application-hosted media bots
         href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
         displayName: Service Fabric with Virtual Machine Scale Sets, instance-level public 
-- name: Build tabs
+#- name: Build tabs
   items:
   - name: Tabs overview
     href: tabs/what-are-tabs.md
@@ -1549,7 +1549,7 @@
     - name: Build a dashboard tab app
       href: tabs/how-to/Build-a-dashboard-tab-app.md
       displayName: Dashboard, widget, Graph API call
-- name: Build message extensions
+#- name: Build message extensions
   items:
   - name: What are message extensions?
     href: messaging-extensions/what-are-messaging-extensions.md
@@ -1608,7 +1608,7 @@
     - name: Micro-capabilities for website links
       href: messaging-extensions/how-to/micro-capabilities-for-website-links.md
       displayName: App less link unfurling  
-- name: Build apps for Teams meetings and calls
+#- name: Build apps for Teams meetings and calls
   items:
   - name: Apps for meetings and calls
     href: apps-in-teams-meetings/teams-apps-in-meetings.md
@@ -1690,7 +1690,7 @@
   - name: Integrate meetings and calls in external apps
     href: get-started/b2c-apps.md
     displayName: Teams meeting, Teams call, Teams meeting and call for external apps, external apps
-- name: Build webhooks and connectors
+#- name: Build webhooks and connectors
   items:
   - name: Overview
     href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
@@ -1706,7 +1706,7 @@
   - name: Create and send messages (Deprecated)
     href: webhooks-and-connectors/how-to/connectors-using.md
     displayName: MessageCard, Attachments, potentialAction, Send messages using cURL and PowerShell, Rate limiting for connectors, ActionCard, message in channel, Teams message
-- name: Build cards and dialogs
+#- name: Build cards and dialogs
   items:
   - name: What are cards and dialogs?
     href: task-modules-and-cards/cards-and-task-modules.md
@@ -1768,7 +1768,7 @@
     - name: Use dialogs from bots
       href: task-modules-and-cards/task-modules/task-modules-bots.md
       displayName: create dialogue box
-- name: Add authentication
+#- name: Add authentication
   items:
   - name: User authentication in Teams
     href: concepts/authentication/authentication.md
@@ -1845,7 +1845,7 @@
     displayName: Nested app, authentication, tabs, single page apps, use case scenario, MSAL, SSO
   - name: Use external OAuth providers
     href: tabs/how-to/authentication/auth-oauth-provider.md
-- name: Integrate device capabilities
+#- name: Integrate device capabilities
   items:
   - name: What are device capabilities?
     href: concepts/device-capabilities/device-capabilities-overview.md
@@ -1864,7 +1864,7 @@
   - name: Integrate location capabilities
     href: concepts/device-capabilities/location-capability.md
     displayName: attendance
-- name: Utilize Teams data with Microsoft Graph
+#- name: Utilize Teams data with Microsoft Graph
   items:
   - name: Overview
     href: /graph/teams-concept-overview?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
@@ -1900,7 +1900,7 @@
   - name: Code samples
     href: https://github.com/OfficeDev/microsoft-teams-samples#graph-apis
     displayName: graph api samples
-- name: Extend your app across Microsoft 365
+#- name: Extend your app across Microsoft 365
   items:
   - name: Overview
     href: m365-apps/overview.md
@@ -1957,9 +1957,9 @@
         displayName: run in Azure
   - name: Publish Teams apps for Microsoft 365
     href: m365-apps/publish.md
-- name: Teams developer documentation FAQs
-  href: teams-faq.md
-- name: App manifest
+#- name: Teams developer documentation FAQs
+#  href: teams-faq.md
+#- name: App manifest
   items:
     - name: App manifest
       href: resources/schema/manifest-schema.md
@@ -1971,7 +1971,7 @@
         - name: Public developer preview app manifest
           href: resources/schema/manifest-schema-dev-preview.md
           displayName: properties
-- name: Test your app or agent
+#- name: Test your app or agent
   items:
   - name: Overview
     href: concepts/build-and-test/test-app-overview.md
@@ -2010,7 +2010,7 @@
       href: graph-api/rsc/test-team-rsc-json-file.md
     - name: JSON test file for chat RSC
       href: graph-api/rsc/test-chat-rsc-json-file.md
-- name: Publish your app or agent
+#- name: Publish your app or agent
   items:
   - name: Overview
     href: concepts/deploy-and-publish/apps-publish-overview.md
@@ -2066,7 +2066,7 @@
   - name: Drive customer adoption of your app
     href: promote-app-adoption.md
     displayName: app promotion, awareness, adoption, rollout, admin approval, change management
-- name: Monetize your app
+#- name: Monetize your app
   items:
   - name: App monetization
     href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
@@ -2086,7 +2086,7 @@
   - name: App subscriptions and licenses
     href: concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md
     displayName: Purchase, Teams apps, License, manage, buy subscriptions, ISVs, Manage, License, third party, SaaS, Partner Center
-- name: Grow your app
+#- name: Grow your app
   items:
     - name: Strategize and execute app growth
       href: concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md
@@ -2111,7 +2111,7 @@
       - name: Succeed with your collaborative app
         href: concepts/deploy-and-publish/appsource/post-publish/app-growth/succeed.md
         displayName: TAM, PQL, metrics, success, ROI
-- name: Integrate with Teams
+#- name: Integrate with Teams
   items:
   - name: Web app integration
     href: samples/integrate-web-apps-overview.md
@@ -2182,7 +2182,7 @@
   - name: Use Fluid with Teams
     href: tabs/how-to/using-fluid-msteam.md
     displayName: Fluid client, Azure Fluid Relay, Fluid Containers, React component
-- name: Resources
+#- name: Resources
   items:
   - name: Localization
     items:
@@ -2209,6 +2209,6 @@
   - name: Extend Microsoft 365 Copilot
     href: messaging-extensions/how-to-extend-copilot.md
     displayName: message extension, plugin, Copilot, Microsoft 365 Copilot
-- name: Support and feedback
-  href: feedback.md
-  displayName: Developer community help, questions, suggestions, contact, issues
+#- name: Support and feedback
+#  href: feedback.md
+#  displayName: Developer community help, questions, suggestions, contact, issues
