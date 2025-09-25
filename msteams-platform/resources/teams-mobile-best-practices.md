@@ -135,7 +135,7 @@ The report contains these sections:
     :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/notify-success-API-not-called.png" alt-text="Screenshot shows the error message for apps not calling notifySuccess()" lightbox="../assets/images/tabs/lightweight-audit-tool/notify-success-API-not-called.png":::
 
 > [!IMPORTANT]
-> Latency is not calculated if notifySuccess() API isn't called from code.
+> Latency is not calculated if `notifySuccess()` API isn't called from code.
 
 * **Caching (Service Worker)**: This section indicates whether a [service worker](#use-service-workers-to-cache-static-assets) (SW) is enabled as a local caching mechanism. Values are ‘Available’ (in green) and ‘Not Available’ (in red).
 
@@ -143,7 +143,7 @@ The report contains these sections:
 
     :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/app-audit-report-caching.png" alt-text="screenshot shows caching status for Android" lightbox="../assets/images/tabs/lightweight-audit-tool/app-audit-report-caching.png":::
 
-* If report is generated from iOS, actual SW implementation can’t be captured accurately. Hence, an error message appears.
+  * If report is generated from iOS, actual SW implementation can’t be captured accurately. Hence, an error message appears.
 
 > [!IMPORTANT]
 > Using [service worker](#use-service-workers-to-cache-static-assets) optimizes app performance.
@@ -155,7 +155,7 @@ The report contains these sections:
 
 This opens a detailed list of files affecting bundle size. Use [service worker](#use-service-workers-to-cache-static-assets) and other [best practices](teams-mobile-best-practices.md) to reduce bundle size.
 
-:::image type="content" source="../assets/images/tabs/lightweight-audit-tool/files-affecting-bundle-size.png" alt-text="" lightbox="../assets/images/tabs/lightweight-audit-tool/files-affecting-bundle-size.png":::
+:::image type="content" source="../assets/images/tabs/lightweight-audit-tool/files-affecting-bundle-size.png" alt-text="Screenshot shows the files affecting bundle size" lightbox="../assets/images/tabs/lightweight-audit-tool/files-affecting-bundle-size.png":::
 
 * **Content Paint Metrics**: Is a tabulated list of all relevant content paint metrics (and their values). This data will help you to identify and improve perceived performance by reducing delays in visual content rendering.
 
