@@ -8,31 +8,34 @@ ms.owner: TBD
 ms.date: 01/08/2025
 ---
 
-# Use Microsoft Graph to Import Messages from External Platforms to Teams
+# Import messages from external Platforms to Teams through Microsoft Graph
 
-You can use Microsoft Graph to migrate existing message history and data from an external system into a Teams channel. This feature enables users to continue conversations without interruption, by recreating the messaging hierarchy from a third-party platform directly within Teams.
+Use Microsoft Graph to migrate users' existing message history and data from an external system into Teams. Users can continue their conversations seamlessly without interruption, by recreating the messaging hierarchy from a third-party platform directly within Teams.
 
 > [!NOTE]
-> In the future, Microsoft might require you or your customers to pay extra fees based on the amount of data imported.
+> In future, Microsoft might require you or your customers to pay extra fees based on the amount of data imported.
 
-## API Migration Workflow
+## Understand API migration workflow
 
-Use the step-by-step migration flow to ensure a seamless transition of historical messages in both existing and newly created channels or chats by enabling migration mode.
+You can ensure a seamless transition of historical messages, in both existing and newly created channels or chats by enabling the migration mode. All the APIs listed in the following table require **Teamswork.Migrate.All** permission in the application context. Delegated authentication isn't supported for these APIs.
 
-## Step-by-Step Migration Flow
+Channel APIs
 
-### 1. Create or select a channel/chat
+|APIs |Context  |
+|---------|---------|
+|Row1     |         |
+|Row2     |         |
+|Row3     |         |
+
+### 1. Create or select a channel or chat
 
 Namespace: microsoft.graph
 
 You can either create a new channel or chat in a Team or use an existing channel or chat.
 
-> [!NOTE]
-> All APIs listed in the following sections require the `Teamswork.Migrate.All` permission in the application context. Delegated authentication isn't supported.
+### 2. Use startMigration API to bring channel and chat into migration mode
 
-### 2. Use startMigration API to start channel and chat migration
-
-* Use the startMigration API, to enable migration mode on existing Teams channels/chats, and allow import of historical messages. Previously, import operations were restricted to newly created standard channels and chats in an empty state. Refer [Import third-party platform messages to Teams using Microsoft Graph](import-external-messages-to-teams.md)
+* Use the startMigration API, to enable migration mode on existing Teams channels or chats, and allow import of historical messages. Previously, import operations were restricted to newly created standard channels and chats in an empty state. See [Import third-party platform messages to Teams using Microsoft Graph](import-external-messages-to-teams.md)
 
 * Define a minimum timestamp for messages to be migrated. The provided timestamp must be older than the channel or chat’s current createdDateTime and replaces it during migration.
 
