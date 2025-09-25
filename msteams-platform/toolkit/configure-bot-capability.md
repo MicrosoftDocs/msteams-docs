@@ -24,11 +24,20 @@ To configure bot as an additional capability, ensure the following prerequisites
 
 The following steps help you to add bot to a tab app:
 
-* [Create bot app using Microsoft 365 Agents Toolkit](#create-bot-app-using-agents-toolkit)
-* [Configure bot capability in app manifest](#configure-bot-capability-in-app-manifest)
-* [Add bot code to your project](#add-bot-code-to-your-project)
-* [Setup local debug environment](#setup-local-debug-environment)
-* [Provision the app to Azure](#provision-the-app-to-azure)
+- [Add bot capability to Teams app](#add-bot-capability-to-teams-app)
+  - [Prerequisites](#prerequisites)
+- [Add bot to tab app](#add-bot-to-tab-app)
+  - [Create bot app using Agents Toolkit](#create-bot-app-using-agents-toolkit)
+  - [Configure bot capability in app manifest](#configure-bot-capability-in-app-manifest)
+  - [Add bot code to your project](#add-bot-code-to-your-project)
+  - [Setup local debug environment](#setup-local-debug-environment)
+  - [Provision the app to Azure](#provision-the-app-to-azure)
+- [Add bot to message extension app](#add-bot-to-message-extension-app)
+  - [Create bot app using Agents Toolkit](#create-bot-app-using-agents-toolkit-1)
+  - [Update manifest file](#update-manifest-file)
+  - [Add bot code to project](#add-bot-code-to-project)
+  - [Next step](#next-step)
+  - [See also](#see-also)
 
 ## Create bot app using Agents Toolkit
 
@@ -456,7 +465,7 @@ The following code snippet is an example:
 
 # [Add bot to message extension app](#tab/messageextensionapp)
 
-You can add the bot capability to a message extension app easily as message extensions are built on Bot Framework.
+You can add the bot capability to a message extension app easily as message extensions are built on Microsoft 365 Agents SDK (previously known as Bot Framework SDK).
 
 The following steps help you to add the bot capability to a message extension app:
 

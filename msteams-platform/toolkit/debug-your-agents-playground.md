@@ -50,7 +50,7 @@ Ensure you install the following tools for building and deploying your applicati
 
 ## Understand Agents Playground
 
-Agents Playground is an npm package that has a CLI command called `teamsapptester`. When you run `teamsapptester start`, it opens a web app on your local machine that emulates the Teams or WebChat client and Bot Framework service. This web app doesn't need any cloud resources as it uses mock data to simulate the contextual information.
+Agents Playground is an npm package that has a CLI command called `teamsapptester`. When you run `teamsapptester start`, it opens a web app on your local machine that emulates the Teams or WebChat client and Microsoft 365 Agents SDK (previously known as Bot Framework SDK) service. This web app doesn't need any cloud resources as it uses mock data to simulate the contextual information.
 
 To use an application on Agents Playground, you need to provide:
 
@@ -332,7 +332,7 @@ Currently, the accepted channel IDs are: `msteams`, `directline`, `webchat`, and
 
 ## Customize Teams context
 
-The configuration file in the project's root folder allows you to customize Teams context information such as chats, teams, and users. It provides mock data for testing Bot Framework APIs or methods from the Agent SDK or Teams AI Library, such as `TeamsInfo.getTeamMembers`.
+The configuration file in the project's root folder allows you to customize Teams context information such as chats, teams, and users. It provides mock data for testing Microsoft 365 Agents SDK (previously known as Bot Framework SDK) APIs or methods from the Agent SDK or Teams AI Library, such as `TeamsInfo.getTeamMembers`.
 
 ### Default configuration
 
@@ -412,7 +412,7 @@ team:
 
 ### Update the configuration file
 
-If your bot code uses Bot Framework APIs, you can modify the configuration file to customize the API responses. For example, consider an Azure DevOps notification bot installed in a team that fetches inactive bugs from Azure DevOps. It identifies the owners of the inactive bugs, retrieves their email addresses, and sends daily notifications to their personal chats.
+If your bot code uses Microsoft 365 Agents SDK (previously known as Bot Framework SDK) APIs, you can modify the configuration file to customize the API responses. For example, consider an Azure DevOps notification bot installed in a team that fetches inactive bugs from Azure DevOps. It identifies the owners of the inactive bugs, retrieves their email addresses, and sends daily notifications to their personal chats.
 
 To comprehensively test this bot in Agents Playground, ensure to update the configuration file with the correct email addresses of the inactive bug owners.
 
@@ -438,7 +438,7 @@ To comprehensively test this bot in Agents Playground, ensure to update the conf
 
 It's important to understand that updating the configuration file has three major impacts:
 
-* It affects the responses returned by Bot Framework Connector APIs. For example, `TeamsInfo.getPagedMembers()`.
+* It affects the responses returned by Microsoft 365 Agents SDK (previously known as Bot Framework SDK) Connector APIs. For example, `TeamsInfo.getPagedMembers()`.
 * It modifies the details in the activity payload. For example, `activity.recipient`.
 * It influences the user interface in Agents Playground. For example, group chat names.
 
@@ -465,7 +465,7 @@ It's important to understand that updating the configuration file has three majo
    | Features | Debug in Agents Playground | [Debug your app locally](debug-local.md) |
    | --- | --- | --- |
    | Basic sending / receiving messages | Available | Available |
-   | Bot Framework APIs (TeamsInfo.getPagedMembers()...) |Available (respond with mocked data) | Available |
+   | Microsoft 365 Agents SDK (previously known as Bot Framework SDK) APIs (TeamsInfo.getPagedMembers()...) |Available (respond with mocked data) | Available |
    | Sending Teams events | Available (mock activity) |Available |
    | Typing indicator | Not Available | Available |
    | Tab, Message extension, Dialogs (referred as task modules in TeamsJS v1.x), Single sign-on (SSO), and non-Adaptive Cards | Not Available | Available |
