@@ -79,6 +79,8 @@ To generate the performance metrics for an app, follow these steps:
 
 1. On your Teams client, go to **Settings** > **About** > **Developer Preview** and toggle the switch to enable Developer Preview.
 
+:::image type="content" source="../assets/images/developer-preview.png" alt-text="Screenshot shows the Developer Preview toggle in Teams settings." lightbox="../assets/images/developer-preview.png":::
+
 1. Navigate to **Apps** section.
 
 1. Select the app you want to audit. The app home page opens.
@@ -127,9 +129,13 @@ The report contains these sections:
 
 * **Latency**: This metric measures the (approximate) time taken by your app to load in WebView, to target a P95 app load latency of less than 5 seconds.
 
-  * For apps calling notifySuccess(): This section contains an overall latency number at the top, followed by a sequential timeline indicating end time for each API call on app load.  
+  * For apps calling notifySuccess(): This section contains an overall latency number at the top, followed by a sequential timeline indicating end time for each API call on app load.
 
-  * For apps that don’t call notifySuccess(): Latency can’t be calculated. Hence, there will be either a dash or question mark in place of the overall latency number. An error message appears, notifying users of the issue and nudging them to use NotifySuccess() API call.
+:::image type="content" source="../assets/images/tabs/lightweight-audit-tool/notify-success-called.jpg" alt-text="Screenshot shows the notification for apps calling notifySuccess()" lightbox="../assets/images/tabs/lightweight-audit-tool/notify-success-called.jpg":::
+
+* For apps that don’t call notifySuccess(): Latency can’t be calculated. Hence, there will be either a dash or question mark in place of the overall latency number. An error message appears, notifying users of the issue and nudging them to use NotifySuccess() API call.
+
+:::image type="content" source="../assets/images/tabs/lightweight-audit-tool/notify-success-API-not-called.jpg" alt-text="Screenshot shows the error message for apps not calling notifySuccess()" lightbox="../assets/images/tabs/lightweight-audit-tool/notify-success-API-not-called.jpg":::
 
 > [!IMPORTANT]
 > Latency is not calculated if notifySuccess() API isn't called from code.
