@@ -153,9 +153,9 @@ The report contains these sections:
 
     :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/app-audit-report-app-package.png" alt-text="Screenshot shows ideal app package size with link to relevant documentation" lightbox="../assets/images/tabs/lightweight-audit-tool/app-audit-report-app-package.png":::
 
-This opens a detailed list of files affecting bundle size. Use [service worker](#use-service-workers-to-cache-static-assets) and other [best practices](teams-mobile-best-practices.md) to reduce bundle size.
+  This opens a detailed list of files affecting bundle size. Use [service worker](#use-service-workers-to-cache-static-assets) and other [best practices](teams-mobile-best-practices.md) to reduce bundle size.
 
-:::image type="content" source="../assets/images/tabs/lightweight-audit-tool/files-affecting-bundle-size.png" alt-text="Screenshot shows the files affecting bundle size" lightbox="../assets/images/tabs/lightweight-audit-tool/files-affecting-bundle-size.png":::
+    :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/files-affecting-bundle-size.png" alt-text="Screenshot shows the files affecting bundle size" lightbox="../assets/images/tabs/lightweight-audit-tool/files-affecting-bundle-size.png":::
 
 * **Content Paint Metrics**: Is a tabulated list of all relevant content paint metrics (and their values). This data will help you to identify and improve perceived performance by reducing delays in visual content rendering.
 
