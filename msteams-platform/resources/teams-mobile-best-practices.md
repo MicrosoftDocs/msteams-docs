@@ -62,7 +62,7 @@ To run a performance audit, follow these steps:
 
 ## Calculate performance metrics for apps
 
-Monitoring and analytics are crucial for optimizing app performance; and identifying existing apps with low performance to get them to adapt best practices is the ideal way forward. With the new **Self-Serve Lightweight Audit Tool** developers can now assess and optimize app performance, especially on mobile platforms for Android and iOS. This tool is accessible through the **Developer Preview toggle** and provides simple, integrated real-time insights using browser and OS-level APIs, along with Teams-specific performance markers.
+Monitoring and analytics are crucial for optimizing app performance; and identifying existing apps with low performance to get them to adapt best practices is the ideal way forward. With the new **Self-Serve Lightweight Audit Tool** developers can now assess and optimize app performance, especially on mobile platforms for Android and iOS.
 
 > [!NOTE]
 >
@@ -113,7 +113,7 @@ To generate the performance metrics for an app, follow these steps:
 
 ### Access the report
 
-If the report generation is successful, you can access it from the bottom sheet, which appears with the following options:
+The report provides simple, integrated real-time insights using browser and OS-level APIs, along with Teams-specific performance markers. If the report generation is successful, you can access it from the bottom sheet, which appears with the following options:
 
 * **Open Report**: Opens the report in a new browser window Chrome custom tab (in Android) or equivalent (in iOS).
 * **Share Report**: Opens the device’s share menu for sharing outside Teams.
