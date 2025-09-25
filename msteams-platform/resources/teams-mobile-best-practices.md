@@ -84,7 +84,7 @@ To generate the performance metrics for an app, follow these steps:
 1. To trigger report generation
     * On an Android app landing page:
 
-         1. Select the kebab (:::image type="icon" source="../assets/icons/kebab-icon.jpg" border="false" lightbox="../assets/icons/kebab-icon.jpg":::) menu on the top right corner.
+         1. Select the kebab (:::image type="icon" source="../assets/icons/kebab-icon.jpg" border="false":::) menu on the top right corner.
 
          1. Select **Audit app performance**. A popup appears.
 
