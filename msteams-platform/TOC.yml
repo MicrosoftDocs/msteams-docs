@@ -272,7 +272,6 @@
         - name: Public developer preview app manifest
           href: resources/schema/manifest-schema-dev-preview.md
           displayName: properties
-- name: Conventional apps
 - name: Add authentication
   items:
   - name: User authentication in Teams
@@ -459,8 +458,6 @@
 - name: Manifest validation workflow
   href: concepts/build-and-test/manifest-validation-workflow.md
   displayName: validate, validation, app validation, manifest validation, Developer Portal
-- name: Teams developer documentation FAQs
-  href: teams-faq.md
 - name: Publish your app or agent
   items:
   - name: Overview
@@ -990,8 +987,14 @@
     - name: Create and send messages (Deprecated)
       href: webhooks-and-connectors/how-to/connectors-using.md
       displayName: MessageCard, Attachments, potentialAction, Send messages using cURL and PowerShell, Rate limiting for connectors, ActionCard, message in channel, Teams message
-
-
+- name: Teams developer documentation FAQs
+  href: teams-faq.md
+- name: Templates and sample App
+  href: get-started/tool-options-and-code-samples.md
+  displayName: Teams app samples, tools to build Teams app  
+- name: Support and feedback
+  href: feedback.md
+  displayName: Developer community help, questions, suggestions, contact, issues
 
 
 #- name: Microsoft Teams Developer documentation
