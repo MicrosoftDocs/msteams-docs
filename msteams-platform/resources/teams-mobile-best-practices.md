@@ -98,7 +98,7 @@ To generate the performance metrics for an app, follow these steps:
 
     * On an iOS app landing page, select the audit app performance icon that appears next to the bot icon.
 
-    :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/iOS-entrypoint.png" alt-text="iOS entrypoint for self-serve audit tool" lightbox="../assets/images/tabs/lightweight-audit-tool/iOS-entrypoint.png":::
+    :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/entry-point-for-iOS.png" alt-text="Screenshot shows entry point for iOS audit tool" lightbox="../assets/images/tabs/lightweight-audit-tool/entry-point-for-iOS.png":::
 
     A bottom sheet appears, with the embedded html report in a chiclet
 
@@ -134,7 +134,7 @@ The report contains these sections:
 
 * **For apps that don’t call notifySuccess()**: Latency can’t be calculated. Hence, there will be either a dash or question mark in place of the overall latency number. An error message appears, notifying users of the issue and nudging them to use NotifySuccess() API call.
 
-:::image type="content" source="../assets/images/tabs/lightweight-audit-tool/notify-success-API-not-called.jpg" alt-text="Screenshot shows the error message for apps not calling notifySuccess()" lightbox="../assets/images/tabs/lightweight-audit-tool/notify-success-API-not-called.jpg":::
+:::image type="content" source="../assets/images/tabs/lightweight-audit-tool/notify-success-API-not-called.png" alt-text="Screenshot shows the error message for apps not calling notifySuccess()" lightbox="../assets/images/tabs/lightweight-audit-tool/notify-success-API-not-called.png":::
 
 > [!IMPORTANT]
 > Latency is not calculated if notifySuccess() API isn't called from code.
@@ -157,7 +157,7 @@ The report contains these sections:
 
 This opens a detailed list of files affecting bundle size. Use [service worker](#use-service-workers-to-cache-static-assets) and other [best practices](teams-mobile-best-practices.md) to reduce bundle size.
 
-:::image type="content" source="../assets/images/tabs/lightweight-audit-tool/factors-affecting-bundle-size.png" alt-text="Screenshot shows factors affecting bundle size" lightbox="../assets/images/tabs/lightweight-audit-tool/factors-affecting-bundle-size.png":::
+:::image type="content" source="../assets/images/tabs/lightweight-audit-tool/files-affecting-bundle-size.png" alt-text="Screenshot shows the L2 screen for files affecting app bundle size" lightbox="../assets/images/tabs/lightweight-audit-tool/files-affecting-bundle-size.png":::
 
 * **Content Paint Metrics**: Is a tabulated list of all relevant content paint metrics (and their values). This data will help you to identify and improve perceived performance by reducing delays in visual content rendering.
 
