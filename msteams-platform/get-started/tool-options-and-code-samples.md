@@ -16,9 +16,15 @@ A Teams app offers you the flexibility of choosing your build environment. It in
 
 This section takes you through the various options for building your Teams app.
 
-* [Teams collaborative platform](#teams-collaborative-platform)
-* [Tools and SDKs](#tools-and-sdks)
-* [Teams app tutorials and code samples](#teams-app-tutorials-and-code-samples)
+- [Tool options and code samples](#tool-options-and-code-samples)
+  - [Teams collaborative platform](#teams-collaborative-platform)
+  - [Tools and SDKs](#tools-and-sdks)
+    - [Explore SDKs](#explore-sdks)
+    - [Explore Tools](#explore-tools)
+  - [Teams app tutorials and code samples](#teams-app-tutorials-and-code-samples)
+    - [Teams app tutorials](#teams-app-tutorials)
+    - [Code samples](#code-samples)
+  - [See also](#see-also)
 
 ## Teams collaborative platform
 
