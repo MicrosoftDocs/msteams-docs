@@ -23,10 +23,24 @@ You need to configure your app's code to obtain an access token from Microsoft E
 
 This section covers:
 
-1. [Update development environment variables](#update-development-environment-variables)
-1. [Add code to handle an access token](#add-code-to-handle-an-access-token)
-1. [Add code to receive the token](#add-code-to-receive-the-token)
-1. [Handle app user sign out](#handle-app-user-sign-out)
+- [Add code to enable SSO in your bot app](#add-code-to-enable-sso-in-your-bot-app)
+  - [Update development environment variables](#update-development-environment-variables)
+  - [Add code to handle an access token](#add-code-to-handle-an-access-token)
+- [C#](#c)
+- [JavaScript](#javascript)
+- [C#](#c-1)
+- [JavaScript](#javascript-1)
+    - [Consent dialog for getting access token](#consent-dialog-for-getting-access-token)
+  - [Add code to receive the token](#add-code-to-receive-the-token)
+- [C#](#c-2)
+- [JavaScript](#javascript-2)
+    - [Validate the access token](#validate-the-access-token)
+      - [Example access token](#example-access-token)
+  - [Handle app user sign out](#handle-app-user-sign-out)
+- [C#](#c-3)
+- [JavaScript](#javascript-3)
+  - [Code sample](#code-sample)
+  - [Next step](#next-step)
 
 ## Update development environment variables
 
