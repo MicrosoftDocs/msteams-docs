@@ -84,7 +84,7 @@ To generate the performance metrics for an app, follow these steps:
 1. To trigger report generation
     * On an Android app landing page:
 
-         1. Select the kebab (:::image type="icon" source="../assets/icons/kebab-icon.jpg" border="false":::) menu on the top right corner.
+         1. Select the kebab :::image type="icon" source="../assets/icons/kebab-icon.jpg" border="false"::: menu on the top right corner.
 
          1. Select **Audit app performance**. A popup appears.
 
@@ -92,7 +92,7 @@ To generate the performance metrics for an app, follow these steps:
 
          :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/android-entry-point.jpg" alt-text="Screenshot shows the entry point for Android audit tool" lightbox="../assets/images/tabs/lightweight-audit-tool/android-entry-point.jpg":::
 
-    * On an iOS app landing page, select the audit app performance (:::image type="icon" source="../assets/icons/ios-generate-report-icon.png" border="false":::) icon that appears next to the bot (:::image type="icon" source="../assets/icons/bot-icon-ios.png" border="false":::) icon.
+    * On an iOS app landing page, select the audit app performance :::image type="icon" source="../assets/icons/ios-generate-report-icon.png" border="false"::: icon that appears on the top right corner.
 
     An interim page appears while the report is being generated.
 
@@ -155,7 +155,7 @@ The report contains these sections:
 
 This opens a detailed list of files affecting bundle size. Use [service worker](#use-service-workers-to-cache-static-assets) and other [best practices](teams-mobile-best-practices.md) to reduce bundle size.
 
-    :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/files-affecting-bundle-size.png" alt-text="" lightbox="../assets/images/tabs/lightweight-audit-tool/files-affecting-bundle-size.png":::
+:::image type="content" source="../assets/images/tabs/lightweight-audit-tool/files-affecting-bundle-size.png" alt-text="" lightbox="../assets/images/tabs/lightweight-audit-tool/files-affecting-bundle-size.png":::
 
 * **Content Paint Metrics**: Is a tabulated list of all relevant content paint metrics (and their values). This data will help you to identify and improve perceived performance by reducing delays in visual content rendering.
 
