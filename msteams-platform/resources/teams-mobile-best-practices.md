@@ -92,7 +92,7 @@ To generate the performance metrics for an app, follow these steps:
 
          :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/android-entry-point.jpg" alt-text="Screenshot shows the entry point for Android audit tool" lightbox="../assets/images/tabs/lightweight-audit-tool/android-entry-point.jpg":::
 
-    * On an iOS app landing page, select the audit app performance (:::image type="icon" source="../assets/icons/iOS-generate-report-icon.png" border="false":::) icon that appears next to the bot (:::image type="icon" source="../assets/icons/bot-icon-ios.png" border="false":::) icon.
+    * On an iOS app landing page, select the audit app performance (:::image type="icon" source="../assets/icons/ios-generate-report-icon.png" border="false":::) icon that appears next to the bot (:::image type="icon" source="../assets/icons/bot-icon-ios.png" border="false":::) icon.
 
     An interim page appears while the report is being generated.
 
