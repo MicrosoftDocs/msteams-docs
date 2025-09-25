@@ -972,6 +972,27 @@
       - name: Add an Outlook Add-in to a Teams app
         href: m365-apps/combine-office-add-in-and-teams-app.md
         displayName: Microsoft 365, Office 365, Outlook add-in, integrate Outlook Add-in to Teams, Teams app Outlook Add-in
+- name: Notification and webhooks
+  items:
+  - name: Build webhooks and connectors
+    items:
+    - name: Overview
+      href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
+      displayName: Webhooks, Connectors, endpoint, message in channel, Teams message
+    - name: Create Outgoing Webhooks
+      href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
+      displayName: HMAC security token, message in channel, Teams message
+    - name: Create Incoming Webhooks (Deprecated)
+      href: webhooks-and-connectors/how-to/add-incoming-webhook.md
+      displayName: share content in Microsoft Teams channels, external applications, message in channel, Teams message, incoming webhook
+    - name: Create connectors for Microsoft 365 Groups (Deprecated)
+      href: webhooks-and-connectors/how-to/connectors-creating.md
+    - name: Create and send messages (Deprecated)
+      href: webhooks-and-connectors/how-to/connectors-using.md
+      displayName: MessageCard, Attachments, potentialAction, Send messages using cURL and PowerShell, Rate limiting for connectors, ActionCard, message in channel, Teams message
+
+
+
 
 #- name: Microsoft Teams Developer documentation
 #  href: mstdd-landing.yml
