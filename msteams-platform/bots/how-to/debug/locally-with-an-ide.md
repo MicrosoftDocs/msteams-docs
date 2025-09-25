@@ -41,7 +41,7 @@ Use the https endpoint provided by ngrok in your [app manifest](../../../resourc
 > [!NOTE]
 >
 > * If you close your command window and restart, a new URL is generated and you need to update your bot endpoint address to use it.
-> * Bots built through Microsoft Bot Framework must be accessible through the https endpoint, however the endpoint isn't exposed. The endpoint is linked only between Bot Framework and your internal address.
+> * Bots built through Microsoft 365 Agents SDK (previously known as Bot Framework SDK) must be accessible through the https endpoint, however the endpoint isn't exposed. The endpoint is linked only between Microsoft 365 Agents SDK (previously known as Bot Framework SDK) and your internal address.
 
 ## Test your bot without uploading to Teams
 
@@ -58,7 +58,7 @@ For more information, see [complete instructions on the Bot Framework Emulator](
 > [!Important]
 >
 > * Talking to your bot by ID is intended for basic testing purposes only. Any Teams-specific functionality you add to your bot fails to work.
-> * Users can't chat with bots that aren't connected to a Microsoft Teams app such as Azure bots created through the Bot Framework or Power Virtual Agents. We recommend you to create a new Teams app connected to the Azure Bot using the [Developer Portal](../../../concepts/build-and-test/manage-your-apps-in-developer-portal.md#configure), publish it to Teams, and allow users to install the app using the [app permission policies](/microsoftteams/teams-app-permission-policies#edit-an-app-permission-policy). If you want to test the app, you can assign users an [app setup policy](/microsoftteams/teams-app-setup-policies#manage-app-setup-policies) that allows uploading custom apps and chat with the Azure bot through a direct link to a chat.
+> * Users can't chat with bots that aren't connected to a Microsoft Teams app such as Azure bots created through the Microsoft 365 Agents SDK (previously known as Bot Framework SDK) or Power Virtual Agents. We recommend you to create a new Teams app connected to the Azure Bot using the [Developer Portal](../../../concepts/build-and-test/manage-your-apps-in-developer-portal.md#configure), publish it to Teams, and allow users to install the app using the [app permission policies](/microsoftteams/teams-app-permission-policies#edit-an-app-permission-policy). If you want to test the app, you can assign users an [app setup policy](/microsoftteams/teams-app-setup-policies#manage-app-setup-policies) that allows uploading custom apps and chat with the Azure bot through a direct link to a chat.
 
 Initiate a conversation with your bot by using its ID. When a bot is added through one of these methods, it isn't addressable in channel conversations, and you can't take advantage of other Teams app capabilities like tabs or message extensions. Initiate a conversation in one of the following ways:
 
