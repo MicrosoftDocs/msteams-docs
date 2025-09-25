@@ -155,7 +155,7 @@ The report contains these sections:
 
 This opens a detailed list of files affecting bundle size. Use [service worker](#use-service-workers-to-cache-static-assets) and other [best practices](teams-mobile-best-practices.md) to reduce bundle size.
 
-    :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/files-affecting-bundle-size.png" alt-text="Screenshot shows the L2 screen for files affecting app bundle size" lightbox="../assets/images/tabs/lightweight-audit-tool/files-affecting-bundle-size.png":::
+    :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/files-affecting-bundle-size.png" alt-text="" lightbox="../assets/images/tabs/lightweight-audit-tool/files-affecting-bundle-size.png":::
 
 * **Content Paint Metrics**: Is a tabulated list of all relevant content paint metrics (and their values). This data will help you to identify and improve perceived performance by reducing delays in visual content rendering.
 
