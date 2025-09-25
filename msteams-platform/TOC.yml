@@ -482,7 +482,9 @@
       href: graph-api/rsc/test-team-rsc-json-file.md
     - name: JSON test file for chat RSC
       href: graph-api/rsc/test-chat-rsc-json-file.md
-
+- name: Manifest validation workflow
+  href: concepts/build-and-test/manifest-validation-workflow.md
+  displayName: validate, validation, app validation, manifest validation, Developer Portal
 #- name: Microsoft Teams Developer documentation
 #  href: mstdd-landing.yml
 #- name: What's new?
