@@ -88,7 +88,7 @@ To generate the performance metrics for an app, follow these steps:
 
          1. Select **Audit app performance**. A popup appears.
 
-          1. Select **Generate Performance Report**.
+         1. Select **Generate Performance Report**.
 
          :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/android-entry-point.jpg" alt-text="Screenshot shows the entry point for Android audit tool" lightbox="../assets/images/tabs/lightweight-audit-tool/android-entry-point.jpg":::
 
