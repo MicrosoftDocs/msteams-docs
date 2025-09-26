@@ -132,7 +132,7 @@ The report contains these sections:
 
   * **For apps that don’t call notifySuccess()**: Latency can’t be calculated. Hence, either a dash or question mark appears in place of the overall latency number. An error message appears, notifying users of the issue and nudging them to use `notifysuccess()` API call.
 
-    :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/latency-not-calculated.png" alt-text="" lightbox="../assets/images/tabs/lightweight-audit-tool/latency-not-calculated.png":::
+    :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/latency-not-calculated.png" alt-text="Screenshot shows the error message for apps not calling notifySuccess()" lightbox="../assets/images/tabs/lightweight-audit-tool/latency-not-calculated.png":::
 
 > [!IMPORTANT]
 > Latency is not calculated if `notifySuccess()` API isn't called from code.
@@ -166,7 +166,7 @@ In case the disk size can’t be calculated, an error message with the reason sh
 
     :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/app-audit-report-disk-size.png" alt-text="Screenshot shows disk size of app on your device" lightbox="../assets/images/tabs/lightweight-audit-tool/app-audit-report-disk-size.png":::
 
-Using the metrics, you'll be able to identify performance bottlenecks and optimize your app for better performance on Teams mobile clients. All the sections in the report contain [relevant documentation links](teams-mobile-best-practices.md) to help you optimize your app.
+Using the metrics, you'll be able to identify performance bottlenecks and optimize your app for better performance on Teams mobile clients.
 
 ## See also
 
