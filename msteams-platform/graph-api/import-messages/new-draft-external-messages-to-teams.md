@@ -4,8 +4,8 @@ description: Learn how to use Microsoft Graph to import historical messages and 
 ms.localizationpriority: high
 author: "surbhigupta"
 ms.topic: overview
-ms.owner: TBD
-ms.date: 01/08/2025
+ms.owner: mehakagarwal
+ms.date: 26/09/2025
 ---
 
 # Import messages from external Platforms to Teams through Microsoft Graph
@@ -17,15 +17,19 @@ Use Microsoft Graph to migrate users' existing message history and data from an 
 
 ## Understand API migration workflow
 
-You can ensure a seamless transition of historical messages, in both existing and newly created channels or chats by enabling the migration mode. All the APIs listed in the following table require **Teamswork.Migrate.All** permission in the application context. Delegated authentication isn't supported for these APIs.
+You can ensure a seamless transition of historical messages, in both existing and newly created channels or chats by performing the following steps:
 
-Channel APIs
+1. [1. Create or select a channel or chat](#1-create-or-select-a-channel-or-chat)
+1. [2. Use startMigration API to bring channel and chat into migration mode](#2-use-startmigration-api-to-bring-channel-and-chat-into-migration-mode)
+1.
+1.
 
-|APIs |Context  |
-|---------|---------|
-|Row1     |         |
-|Row2     |         |
-|Row3     |         |
+Delegated authentication isn't supported. Permissions required for both channel and chat APIs are tabulated as follows:
+
+|APIs |Permission required  |Auth Type  |
+|---------|---------|---------|
+|startMigration   |    Teamswork.Migrate.All |  Application |
+|completeMigration | Teamswork.Migrate.All |   Application      |
 
 ### 1. Create or select a channel or chat
 
@@ -53,9 +57,13 @@ POST  /teams/{team-id}/channels/{channel-id}/startMigration
 }
 ```
 
+#### Channel response
+
+If the request is successful, the method returns a **204 No Content** status code. The response body is empty.
+
 #### 2.2 Chat migration
 
-* The supported chat types include Group chats and One-on-one (1:1) chats. **Meeting chats are not supported. External members are supported in all applicable chat types.**
+* The supported chat types include Group chats and One-on-one (1:1) chats. Meeting chats are not supported. External members are supported in all applicable chat types.
 * The startMigration API initiates the message migration process by setting the migrationMode property to **inProgress** for a specified chat.
 
 #### Chat request
@@ -68,9 +76,9 @@ POST   /chats/{chat-id}/startMigration
 }
 ```
 
-#### Channel and Chat response
+#### Chat response
 
-For both channels and chats, if the request is successful, the method returns a **204 No Content** status code. The response body is empty.
+If the request is successful, the method returns a **204 No Content** status code. The response body is empty.
 
 **Example of a request**:
 
