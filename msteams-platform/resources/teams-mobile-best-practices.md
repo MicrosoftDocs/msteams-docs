@@ -135,7 +135,7 @@ Section name | Description | Action |
 | **Content Paint Metrics** | Indicates all relevant content paint metrics (and their values). | Use this data to identify and reduce delays in visual content rendering.:::image type="content" source="../assets/images/tabs/lightweight-audit-tool/app-audit-report-content-paint-metrics.png" alt-text="Screenshot shows content paint metrics" lightbox="../assets/images/tabs/lightweight-audit-tool/app-audit-report-content-paint-metrics.png":::|
 |**Disk Size**| Indicates the size of the app stored on the mobile device. The ideal limit is 20 MB. If an app is larger, size is displayed in red else in green.| If the disk size can’t be calculated, an error message with the reason shows up in place of expected value. |
 
-> [!IMPORTANT]
+> [!NOTE]
 >
 > * Latency is not calculated if `notifySuccess()` API isn't called from code.
 > * Using [service worker](#use-service-workers-to-cache-static-assets) optimizes app performance.
