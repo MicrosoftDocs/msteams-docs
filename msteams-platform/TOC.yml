@@ -397,6 +397,24 @@
   - name: Plan your app experience across Microsoft 365 hosts
     href: m365-apps/specify-runtime-requirements.md
     displayName: runtime requirements, requirement set, one-way dependency, mutual dependency 
+  - name: Teams tabs in Microsoft 365 and Outlook
+    items:
+    - name: Enable Teams personal tab for Microsoft 365
+      href: m365-apps/extend-m365-teams-personal-tab.md
+      displayName: Microsoft 365, Office 365
+    - name: TeamsJS capability across Microsoft 365
+      href: m365-apps/teamsjs-support-m365.md
+  - name: Teams meeting apps in Outlook
+    href: m365-apps/extend-m365-meeting-app.md
+    displayName: Microsoft 365, Office 365, meeting app
+  - name: Teams message extensions in Outlook
+    items:
+      - name: Enable Teams message extension for Outlook
+        href: m365-apps/extend-m365-teams-message-extension.md
+        displayName: mail, Microsoft 365, Office 365Microsoft 365  
+      - name: Teams message extension vs. Outlook add-in
+        href: m365-apps/me-or-outlook-add-in.md
+        displayName: mail, Microsoft 365, Office 365, Outlook add-in, link unfurling
   - name: Adaptive Card-based Loop components
     items:
       - name: Design your Loop component
@@ -405,6 +423,14 @@
       - name: Build your Loop component
         href: m365-apps/cards-loop-component.md
         displayName: loop component, weburl, metadata
+  - name: Combine Teams apps and Outlook Add-ins
+    items:
+      - name: Overview
+        href: m365-apps/overview-combining-add-in-and-teams-app.md
+        displayName: Microsoft 365, Office 365, Outlook add-in, integrate Outlook Add-in to Teams, Teams app Outlook Add-in
+      - name: Add an Outlook Add-in to a Teams app
+        href: m365-apps/combine-office-add-in-and-teams-app.md
+        displayName: Microsoft 365, Office 365, Outlook add-in, integrate Outlook Add-in to Teams, Teams app Outlook Add-in
   - name: Actions in Microsoft 365
     items:
       - name: What are Actions?
@@ -943,34 +969,6 @@
   - name: Integrate meetings and calls in external apps
     href: get-started/b2c-apps.md
     displayName: Teams meeting, Teams call, Teams meeting and call for external apps, external apps
-- name: Cross platform capabilities - outlook 365
-  items:
-  - name: Teams tabs in Microsoft 365 and Outlook
-    items:
-    - name: Enable Teams personal tab for Microsoft 365
-      href: m365-apps/extend-m365-teams-personal-tab.md
-      displayName: Microsoft 365, Office 365
-    - name: TeamsJS capability across Microsoft 365
-      href: m365-apps/teamsjs-support-m365.md
-  - name: Teams meeting apps in Outlook
-    href: m365-apps/extend-m365-meeting-app.md
-    displayName: Microsoft 365, Office 365, meeting app
-  - name: Teams message extensions in Outlook
-    items:
-      - name: Enable Teams message extension for Outlook
-        href: m365-apps/extend-m365-teams-message-extension.md
-        displayName: mail, Microsoft 365, Office 365Microsoft 365  
-      - name: Teams message extension vs. Outlook add-in
-        href: m365-apps/me-or-outlook-add-in.md
-        displayName: mail, Microsoft 365, Office 365, Outlook add-in, link unfurling
-  - name: Combine Teams apps and Outlook Add-ins
-    items:
-      - name: Overview
-        href: m365-apps/overview-combining-add-in-and-teams-app.md
-        displayName: Microsoft 365, Office 365, Outlook add-in, integrate Outlook Add-in to Teams, Teams app Outlook Add-in
-      - name: Add an Outlook Add-in to a Teams app
-        href: m365-apps/combine-office-add-in-and-teams-app.md
-        displayName: Microsoft 365, Office 365, Outlook add-in, integrate Outlook Add-in to Teams, Teams app Outlook Add-in
 - name: Notification and webhooks
   items:
   - name: Build webhooks and connectors
