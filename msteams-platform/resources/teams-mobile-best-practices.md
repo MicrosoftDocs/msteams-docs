@@ -101,7 +101,7 @@ To generate performance metrics via **Self-Serve Lightweight Audit Tool** for yo
 
 1. After the report is generated, access it from the bottom sheet that appears with the html performance report.
 
-    :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/performance-report.png" alt-text="" lightbox="../assets/images/tabs/lightweight-audit-tool/performance-report.png":::
+    :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/performance-report.png" alt-text="Screenshot shows the static html performance report" lightbox="../assets/images/tabs/lightweight-audit-tool/performance-report.png":::
 
 > [!NOTE]
 >
