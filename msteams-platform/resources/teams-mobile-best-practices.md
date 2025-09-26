@@ -62,7 +62,7 @@ To run a performance audit, follow these steps:
 
 ## Calculate performance metrics for apps
 
-Identifying existing apps with low performance to drive them to adapt best practices is crucial for improving app performance. The new **Self-Serve Lightweight Audit Tool** allows developers to analyze and optimize app performance on mobile platforms for Android and iOS.
+Identifying existing apps with low performance to drive them to adapt best practices is crucial for improving app performance. The new **Self-Serve Lightweight Audit Tool** allows developers to analyze and optimize app performance on Android and iOS mobile platforms.
 
 > [!NOTE]
 >
@@ -124,7 +124,7 @@ The report provides simple, integrated real-time insights using browser and OS-l
 
 The report contains these sections:
 
-* **Latency**: This metric measures the (approximate) time taken by your app to load, to target a P95 app load latency of less than 5 seconds.
+* **Latency**: This metric measures the (approximate) time taken by your app to load.
 
   * **For apps that call notifySuccess()**: This section contains an overall latency number at the top, followed by a sequential timeline indicating end time for each API call on app load.
 
@@ -134,10 +134,10 @@ The report contains these sections:
 
     :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/latency-not-calculated.png" alt-text="Screenshot shows the error message for apps not calling notifySuccess()" lightbox="../assets/images/tabs/lightweight-audit-tool/latency-not-calculated.png":::
 
-> [!IMPORTANT]
-> Latency is not calculated if `notifySuccess()` API isn't called from code.
+    > [!IMPORTANT]
+    > Latency is not calculated if `notifySuccess()` API isn't called from code.
 
-* **Caching (Service Worker)**: This section indicates whether a [service worker](#use-service-workers-to-cache-static-assets) (SW) is enabled as a local caching mechanism. Values are ‘Available’ (in green) and ‘Not Available’ (in red).
+* **Caching (Service Worker)**: This section indicates whether a [service worker](#use-service-workers-to-cache-static-assets) (SW) is enabled as a local caching mechanism. The values are **Available** (in green) and **Not Available** (in red).
 
   * If report is generated from Android (and viewed anywhere) and SW is Not Available, it displays link to public Teams documentation.
 
@@ -145,9 +145,9 @@ The report contains these sections:
 
   * If report is generated from iOS, actual SW implementation can’t be captured accurately. Hence, an error message appears.
 
-> [!IMPORTANT]
-> Using [service worker](#use-service-workers-to-cache-static-assets) optimizes app performance.
-> Service worker is applicable only for reports generated from Android.
+    > [!IMPORTANT]
+    > Using [service worker](#use-service-workers-to-cache-static-assets) optimizes app performance.
+    > Service worker is applicable only for reports generated from Android.
 
 * **App Package**: Indicates the total size occupied by the bundle of JS files. Ideal value is 1 MB. To optimize your app, click on **Check bundle files**.
 
@@ -157,7 +157,7 @@ The report contains these sections:
 
     :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/files-affecting-bundle-size.png" alt-text="Screenshot shows the files affecting bundle size" lightbox="../assets/images/tabs/lightweight-audit-tool/files-affecting-bundle-size.png":::
 
-* **Content Paint Metrics**: Is a tabulated list of all relevant content paint metrics (and their values). This data will help you to identify and improve perceived performance by reducing delays in visual content rendering.
+* **Content Paint Metrics**: Is a tabulated list of all relevant content paint metrics (and their values). This data will help you to identify and reduce delays in visual content rendering.
 
     :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/app-audit-report-content-paint-metrics.png" alt-text="Screenshot shows content paint metrics" lightbox="../assets/images/tabs/lightweight-audit-tool/app-audit-report-content-paint-metrics.png":::
 
@@ -165,8 +165,6 @@ The report contains these sections:
 In case the disk size can’t be calculated, an error message with the reason shows up in place of expected value.
 
     :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/app-audit-report-disk-size.png" alt-text="Screenshot shows disk size of app on your device" lightbox="../assets/images/tabs/lightweight-audit-tool/app-audit-report-disk-size.png":::
-
-Using the metrics, you'll be able to identify performance bottlenecks and optimize your app for better performance on Teams mobile clients.
 
 ## See also
 
