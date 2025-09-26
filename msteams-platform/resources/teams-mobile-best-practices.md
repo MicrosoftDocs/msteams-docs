@@ -62,7 +62,7 @@ To run a performance audit, follow these steps:
 
 ## Calculate performance metrics for apps
 
-Identifying existing apps with low performance to drive them to adapt best practices is crucial for improving app performance. The new **Self-Serve Lightweight Audit Tool** allows you to analyze and optimize app performance on Android and iOS mobile platforms.
+Identifying existing apps with low performance to drive them to adapt best practices is crucial for improving app performance. The **Self-Serve Lightweight Audit Tool** allows you to analyze and optimize app performance on Android and iOS mobile platforms.
 
 The steps involved are:
 
@@ -72,11 +72,11 @@ The steps involved are:
 
 > [!NOTE]
 >
-> * For accurate latency calculation, ensure that your app calls the `notifySuccess()` API after it's fully loaded.
+> For accurate latency calculation, ensure that your app calls the `notifySuccess()` API after it's fully loaded.
 
 ### Generate performance metrics report
 
-To generate performance metrics via Self-Serve Lightweight Audit Tool for your mobile app, follow these steps:
+To generate performance metrics via **Self-Serve Lightweight Audit Tool** for your mobile app, follow these steps:
 
 1. On your Teams app, go to **Settings** > **About** > **Developer preview** and toggle the switch to enable **Developer preview**.
 
@@ -99,7 +99,7 @@ To generate performance metrics via Self-Serve Lightweight Audit Tool for your m
 
     An interim page appears while the report is being generated for both Android and iOS.
 
-1. Access the report from the bottom sheet that appears with the html performance report.
+1. After the report is generated, access it from the bottom sheet that appears with the html performance report.
 
     :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/generated-report-chiclet.png" alt-text="Screenshot shows the static html report in a chiclet" lightbox="../assets/images/tabs/lightweight-audit-tool/generated-report-chiclet.png":::
 
@@ -113,10 +113,11 @@ To generate performance metrics via Self-Serve Lightweight Audit Tool for your m
 ### Access performance metrics report
 
 The report provides simple, integrated real-time insights using browser and operating system-level APIs, along with Teams-specific performance markers.
-You can access the report from the following options:
+
+You can access the report from the following options on the bottom sheet:
 
 * **Open Report**: Opens the report in a new browser window.
-* **Share Report**: Opens the device’s options for sharing outside Teams.
+* **Share report**: Opens the device’s options for sharing outside Teams.
 * **Forward in Teams**: Opens the device’s share menu for sharing in Teams.
 * **Download**: Downloads the report in the device’s local storage.
 
@@ -128,10 +129,10 @@ The performance metrics report contains the following sections:
 
 Section name | Description | Action |
 |----------- |-------------| ------ |
-| **Latency** | This metric measures the (approximate) time taken by your app to load.| **For apps that call notifySuccess()**: The overall latency number appears on top, followed by a sequential timeline indicating end time for each API call on app load. :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/notify-success-called.jpg" alt-text="Screenshot shows the notification for apps calling notifySuccess()" lightbox="../assets/images/tabs/lightweight-audit-tool/notify-success-called.jpg"::: <br> * **For apps that don’t call notifySuccess()**: Latency can’t be calculated. Hence, either a dash or question mark appears in place of the overall latency number. An error message appears, with the nudge to use `notifysuccess()` API call.:::image type="content" source="../assets/images/tabs/lightweight-audit-tool/latency-not-calculated.png" alt-text="Screenshot shows the error message for apps not calling notifySuccess()" lightbox="../assets/images/tabs/lightweight-audit-tool/latency-not-calculated.png":::|
-| **Caching (Service Worker)** | [service worker](#use-service-workers-to-cache-static-assets) (SW) is enabled as a local caching mechanism. The values are **Available** (in green) and **Not Available** (in red).| * If SW is not available, the report provides a link to relevant documentation to help you implement SW in your app. :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/app-audit-report-caching.png" alt-text="screenshot shows caching status for Android" lightbox="../assets/images/tabs/lightweight-audit-tool/app-audit-report-caching.png"::: |
-| **App Package** | Indicates the total size occupied by the bundle of JS files. Ideal value is 1 MB.|   Click on **Check bundle files** to open a detailed list of files affecting bundle size.To optimize your app, click on **Check bundle files**.:::image type="content" source="../assets/images/tabs/lightweight-audit-tool/app-audit-report-app-package.png" alt-text="Screenshot shows ideal app package size with link to relevant documentation" lightbox="../assets/images/tabs/lightweight-audit-tool/app-audit-report-app-package.png"::: <br> This opens a detailed list of files affecting bundle size. Use [service worker](#use-service-workers-to-cache-static-assets) and other [best practices](teams-mobile-best-practices.md) to reduce bundle size.:::image type="content" source="../assets/images/tabs/lightweight-audit-tool/files-affecting-bundle-size.png" alt-text="Screenshot shows the files affecting bundle size" lightbox="../assets/images/tabs/lightweight-audit-tool/files-affecting-bundle-size.png":::|
-| **Content Paint Metrics** | Is a tabulated list of all relevant content paint metrics (and their values). | This data helps you to identify and reduce delays in visual content rendering.:::image type="content" source="../assets/images/tabs/lightweight-audit-tool/app-audit-report-content-paint-metrics.png" alt-text="Screenshot shows content paint metrics" lightbox="../assets/images/tabs/lightweight-audit-tool/app-audit-report-content-paint-metrics.png":::| No action required.|
+| **Latency** | This metric measures the (approximate) time taken by your app to load.| <ul><li/> **For apps that call notifySuccess()**: The overall latency number appears on top, followed by a sequential timeline indicating end time for each API call on app load. :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/notify-success-called.jpg" alt-text="Screenshot shows the notification for apps calling notifySuccess()" lightbox="../assets/images/tabs/lightweight-audit-tool/notify-success-called.jpg"::: <br> <br> <li/> **For apps that don’t call notifySuccess()**: Latency can’t be calculated. Either a dash or question mark appears in place of the overall latency number. An error message appears, with the nudge to use `notifysuccess()` API call.:::image type="content" source="../assets/images/tabs/lightweight-audit-tool/latency-not-calculated.png" alt-text="Screenshot shows the error message for apps not calling notifySuccess()" lightbox="../assets/images/tabs/lightweight-audit-tool/latency-not-calculated.png":::</ul>|
+| **Caching (Service Worker)** | [Service worker](#use-service-workers-to-cache-static-assets) (SW) is enabled as a local caching mechanism. The values are **Available** (in green) and **Not Available** (in red).| If SW is not available, the report provides a link to relevant documentation to help you implement it in your app. <br> :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/app-audit-report-caching.png" alt-text="screenshot shows caching status for Android" lightbox="../assets/images/tabs/lightweight-audit-tool/app-audit-report-caching.png"::: |
+| **App Package** | Indicates the total size occupied by the bundle of JS files. Ideal value is 1 MB.|   Click on **Check bundle files** to open a detailed list of files affecting bundle size. <br> :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/app-audit-report-app-package.png" alt-text="Screenshot shows ideal app package size with link to relevant documentation" lightbox="../assets/images/tabs/lightweight-audit-tool/app-audit-report-app-package.png"::: <br> This opens a detailed list of files affecting bundle size.<br> :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/files-affecting-bundle-size.png" alt-text="Screenshot shows the files affecting bundle size" lightbox="../assets/images/tabs/lightweight-audit-tool/files-affecting-bundle-size.png"::: <br> Use [service worker](#use-service-workers-to-cache-static-assets) and other [best practices](teams-mobile-best-practices.md) to reduce bundle size.|
+| **Content Paint Metrics** | Is a tabulated list of all relevant content paint metrics (and their values). | Use this data to identify and reduce delays in visual content rendering.:::image type="content" source="../assets/images/tabs/lightweight-audit-tool/app-audit-report-content-paint-metrics.png" alt-text="Screenshot shows content paint metrics" lightbox="../assets/images/tabs/lightweight-audit-tool/app-audit-report-content-paint-metrics.png":::|
 |**Disk Size**| Indicates the size of the app stored on the mobile device. The ideal limit is 20 MB. If an app is larger, size is displayed in red else in green.| If the disk size can’t be calculated, an error message with the reason shows up in place of expected value. |
 
 > [!IMPORTANT]
