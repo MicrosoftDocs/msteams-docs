@@ -5,7 +5,7 @@ ms.localizationpriority: high
 author: "surbhigupta"
 ms.topic: overview
 ms.owner: mehakagarwal
-ms.date: 26/09/2025
+ms.date: 09/26/2025
 ---
 
 # Import messages from external Platforms to Teams through Microsoft Graph
@@ -19,17 +19,14 @@ Use Microsoft Graph to migrate users' existing message history and data from an 
 
 You can ensure a seamless transition of historical messages, in both existing and newly created channels or chats by performing the following steps:
 
-1. [1. Create or select a channel or chat](#1-create-or-select-a-channel-or-chat)
-1. [2. Use startMigration API to bring channel and chat into migration mode](#2-use-startmigration-api-to-bring-channel-and-chat-into-migration-mode)
-1.
-1.
+[1. Create or select a channel or chat](#1-create-or-select-a-channel-or-chat)
+[2. Use startMigration API](#2-use-startmigration-api)
 
 Delegated authentication isn't supported. Permissions required for both channel and chat APIs are tabulated as follows:
 
-|APIs |Permission required  |Auth Type  |
-|---------|---------|---------|
-|startMigration   |    Teamswork.Migrate.All |  Application |
-|completeMigration | Teamswork.Migrate.All |   Application      |
+|ScopeName|DisplayName| Type|Entities/APIs covered|
+|---------|---------|---------|---------|
+| `Teamwork.Migrate.All`|  Manage migration to Microsoft Teams | Application-only  |`POST /teams`|
 
 ### 1. Create or select a channel or chat
 
@@ -37,15 +34,15 @@ Namespace: microsoft.graph
 
 You can either create a new channel or chat in a Team or use an existing channel or chat.
 
-### 2. Use startMigration API to bring channel and chat into migration mode
+### 2. Use startMigration API
 
-* Use the startMigration API, to enable migration mode on existing Teams channels or chats, and allow import of historical messages. Previously, import operations were restricted to newly created standard channels and chats in an empty state. See [Import third-party platform messages to Teams using Microsoft Graph](import-external-messages-to-teams.md)
+* Use the `startMigration` API, to enable migration mode on existing Teams channels or chats, and allow import of historical messages. Previously, import operations were restricted to newly created standard channels and chats in an empty state. See [Import third-party platform messages to Teams using Microsoft Graph](import-external-messages-to-teams.md).
 
 * Define a minimum timestamp for messages to be migrated. The provided timestamp must be older than the channel or chat’s current createdDateTime and replaces it during migration.
 
 #### 2.1 Channel migration
 
-* The supported channels are all the existing Shared, Private, and Public channels. You can optionally provide a request body to specify the minimum timestamp for the messages to be migrated.
+The supported channels are all the existing Shared, Private, and Public channels. You can optionally provide a request body to specify the minimum timestamp for the messages to be migrated.
 
 #### Channel request
 
@@ -59,12 +56,24 @@ POST  /teams/{team-id}/channels/{channel-id}/startMigration
 
 #### Channel response
 
-If the request is successful, the method returns a **204 No Content** status code. The response body is empty.
+If the request is successful, the method returns a '204 No Content' status code. The response body is empty.
+
+Example of a channel request:
+
+```HTTP
+POST https://graph.microsoft.com/beta/teams/57fb72d0-d811-46f4-8947-305e6072eaa5/channels/19:4b6bed8d24574f6a9e436813cb2617d8@thread.tacv2/startMigration
+{
+“conversationCreationDateTime”: “2024-01-01T00:00:00Z”
+}
+
+```
+
+Response of the request: **HTTP/1.1 204 No Content**
 
 #### 2.2 Chat migration
 
 * The supported chat types include Group chats and One-on-one (1:1) chats. Meeting chats are not supported. External members are supported in all applicable chat types.
-* The startMigration API initiates the message migration process by setting the migrationMode property to **inProgress** for a specified chat.
+* The startMigration API initiates the message migration process by setting the migrationMode property to 'inProgress' for a specified chat.
 
 #### Chat request
 
@@ -78,9 +87,9 @@ POST   /chats/{chat-id}/startMigration
 
 #### Chat response
 
-If the request is successful, the method returns a **204 No Content** status code. The response body is empty.
+If the request is successful, the method returns a *204 No Content* status code. The response body is empty.
 
-**Example of a request**:
+Example of a chat request:
 
 ```HTTP
 POST https://graph.microsoft.com/beta/teams/57fb72d0-d811-46f4-8947-305e6072eaa5/channels/19:4b6bed8d24574f6a9e436813cb2617d8@thread.tacv2/startMigration 
@@ -90,8 +99,7 @@ POST https://graph.microsoft.com/beta/teams/57fb72d0-d811-46f4-8947-305e6072eaa5
 } 
 ```
 
-Response of the request:
-**HTTP/1.1 204 No Content**
+Response of the request: **HTTP/1.1 204 No Content**
 
 > [!NOTE]
 >
