@@ -21,6 +21,9 @@ You can ensure a seamless transition of historical messages, in both existing an
 
 [1. Create or select a channel or chat](#1-create-or-select-a-channel-or-chat)
 [2. Use startMigration API](#2-use-startmigration-api)
+[3. Call the GET API](#3-call-the-get-api)
+[4. Import messages using POST API](#4-import-messages-using-post-api)
+[6. Call the GET /channel/chat API (#6-call-the-get-channelchat-api-to-verify-that-the-migrationmode-property-is-marked-as-completed)
 
 Delegated authentication isn't supported. Permissions required for both channel and chat APIs are tabulated as follows:
 
@@ -32,11 +35,11 @@ Delegated authentication isn't supported. Permissions required for both channel 
 
 Namespace: microsoft.graph
 
-You can either create a new channel or chat in a Team or use an existing channel or chat.
+You can either create a new channel or chat in a Team or use an existing channel or chat, to migrate users' message history from any external application to Teams.
 
 ### 2. Use startMigration API
 
-* Use the `startMigration` API, to enable migration mode on existing Teams channels or chats, and allow import of historical messages. Previously, import operations were restricted to newly created standard channels and chats in an empty state. See [Import third-party platform messages to Teams using Microsoft Graph](import-external-messages-to-teams.md).
+* Use the `startMigration` API, to enable migration mode on Teams channels or chats, and allow import of historical messages. Previously, import operations were restricted to newly created standard channels and chats in an empty state. See [Import third-party platform messages to Teams using Microsoft Graph](import-external-messages-to-teams.md).
 
 * Define a minimum timestamp for messages to be migrated. The provided timestamp must be older than the channel or chat’s current createdDateTime and replaces it during migration.
 
@@ -104,11 +107,17 @@ Response of the request: **HTTP/1.1 204 No Content**
 > [!NOTE]
 >
 > * If no request body is provided, the API uses the current date and time as the minimum timestamp.
-> * `conversationCreationDateTime` must be:
+> `conversationCreationDateTime` must be:
 >   * Greater than the minimum value for `DateTimeOffset`.
 >   * Less than the current value of the channel or chat's `CreatedDateTime`.
 
-### 3. Call the GET /channel/chat API to confirm that the **migrationMode** property is set to **inProgress**, after completing step 2
+### 3. Call the GET API
+
+After completing Step 2, call the `GET channel` or `GET chat` API to confirm that the *migrationMode* property is set to *inProgress*. For more information see [GET Channel](/graph/api/channel-get?view=graph-rest-1.0&tabs=http)
+
+```HTTP
+GET /teams/{team-id}/channels/{channel-id}
+```
 
 ### 4. Import messages using POST API
 
@@ -118,7 +127,7 @@ Go to [Import third-party platform messages to Teams using Microsoft Graph](impo
 
 Namespace: microsoft.graph
 
-Use the **completeMigration** API to finish the migration process for both new and existing channels and chats. Previously, this operation was limited to newly created Standard channels and chats initiated for the initial migration flow.
+Use the `completeMigration` API to finish the migration process for both new and existing channels and chats. Previously, this operation was limited to newly created Standard channels and chats initiated for the initial migration flow.
 
 #### 5.1 Complete Channel Migration
 
