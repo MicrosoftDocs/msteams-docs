@@ -1,3 +1,5 @@
+- name: Microsoft Teams Platform documentation
+  href: mstdd-landing.yml
 - name: Overview
   expanded: false 
   items:
