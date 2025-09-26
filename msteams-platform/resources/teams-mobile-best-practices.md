@@ -92,7 +92,7 @@ To generate the performance metrics for an app, follow these steps:
 
          :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/android-entry-point.jpg" alt-text="Screenshot shows the entry point for Android audit tool" lightbox="../assets/images/tabs/lightweight-audit-tool/android-entry-point.jpg":::
 
-    * On an iOS app landing page, select the audit app performance :::image type="icon" source="../assets/icons/ios-generate-report-icon.png" border="false"::: icon that appears on the top right corner.
+    * On an iOS app landing page, select the audit app performance :::image type="icon" source="../assets/icons/generate-report-icon.png" border="false"::: icon that appears on the top right corner.
 
     An interim page appears while the report is being generated.
 
@@ -100,7 +100,7 @@ To generate the performance metrics for an app, follow these steps:
 
     If the report is generated successfully, a bottom sheet appears with the embedded html report.
 
-    :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/html-report-chiclet.png" alt-text="Screenshot shows the embedded HTML report in a chiclet" lightbox="../assets/images/tabs/lightweight-audit-tool/html-report-chiclet.png":::
+    :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/generated-report-chiclet.png" alt-text="Screenshot shows the static html report in a chiclet" lightbox="../assets/images/tabs/lightweight-audit-tool/generated-report-chiclet.png":::
 
 > [!NOTE]
 >
@@ -130,9 +130,9 @@ The report contains these sections:
 
     :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/notify-success-called.jpg" alt-text="Screenshot shows the notification for apps calling notifySuccess()" lightbox="../assets/images/tabs/lightweight-audit-tool/notify-success-called.jpg":::
 
-  * **For apps that don’t call notifySuccess()**: Latency can’t be calculated. Hence, there will be either a dash or question mark in place of the overall latency number. An error message appears, notifying users of the issue and nudging them to use NotifySuccess() API call.
+  * **For apps that don’t call notifySuccess()**: Latency can’t be calculated. Hence, either a dash or question mark appears in place of the overall latency number. An error message appears, notifying users of the issue and nudging them to use `notifysuccess()` API call.
 
-    :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/notify-success-API-not-called.png" alt-text="Screenshot shows the error message for apps not calling notifySuccess()" lightbox="../assets/images/tabs/lightweight-audit-tool/notify-success-API-not-called.png":::
+    :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/latency-not-calculated.png" alt-text="" lightbox="../assets/images/tabs/lightweight-audit-tool/latency-not-calculated.png":::
 
 > [!IMPORTANT]
 > Latency is not calculated if `notifySuccess()` API isn't called from code.
