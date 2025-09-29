@@ -568,7 +568,7 @@
       href: messaging-extensions/create-api-message-extension.md
       displayName: API-based, Microsoft 365 Agents Toolkit CLI, Developer Portal, Visual Studio Code, Visual Studio
     - name: Action-based Message Extensions
-      href: messaging-extensions/build-action-extension-tutorial.md
+      href: messaging-extensions/build-action-based-extension-tutorial.md
       displayName: action-based message extension, Azure bot
   - name: Build message extensions using Bot Framework  
     items:
