@@ -19,7 +19,7 @@ A bot behaves differently depending on the conversation it's involved in:
   
 This step-by-step guide helps you to build a bot with SSO authentication. You'll see the following output:
 
-![Screenshot of the bot with SSO authentication output after you’ve successfully completed the step-by-step guide.](./assets/images/bots/sbs-desktop-mobile.png)
+![Screenshot of the bot with SSO authentication output after you’ve successfully completed the step-by-step guide.](../assets/images/bots/sbs-desktop-mobile.png)
 
 ## Prerequisites
 
@@ -71,7 +71,7 @@ If you don't have a Teams developer account, you can get it for free. Join the M
 3. In the welcome screen, select **Setup E5 subscription**.
 4. Set up an administrator account. After you finish, the following screen displays.
 
-![Screenshot of the Microsoft 365 Developer Program subscription.](./assets/images/toolkit-v2/prerequisites/microsoft-365.png)
+![Screenshot of the Microsoft 365 Developer Program subscription.](../assets/images/toolkit-v2/prerequisites/microsoft-365.png)
 
 5. Sign in to Teams using the new administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
 
@@ -84,7 +84,7 @@ If you don't have a Teams developer account, you can get it for free. Join the M
 2. Select **Code**.
 3. From the dropdown menu, select **Open with GitHub Desktop**.
 
-![Screenshot show the option to clone repository in local.](./assets/images/include-files/clone-repository.png)
+![Screenshot show the option to clone repository in local.](../assets/images/include-files/clone-repository.png)
 
 4. Select **Clone**.
 
@@ -101,7 +101,7 @@ The following steps help you to create and register your bot in the Azure portal
 * Create a tunnel to your web server's endpoints using dev tunnel (recommended) or ngrok.
 * Add messaging endpoint to the dev tunnel that you created.
 
-[!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
+[!INCLUDE [Azure app registration](../includes/get-started/azure-app-registration.md)]
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+App+registration&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-bots-with-sso%3Ftabs%3Ddev%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-bots-with-sso.yml&documentVersionIndependentId=b410630d-3624-e389-480f-ea3307a3b774&author=surbhigupta&platformId=4b2022ca-ee48-5c9a-b390-7ed303c02fd8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
@@ -109,24 +109,24 @@ The following steps help you to create and register your bot in the Azure portal
 **Create a tunnel**
 # [dev tunnel](#tab/dev)
 
-[!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
+[!INCLUDE [Tunnel](../includes/get-started/dev-tunnel.md)]
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+tunnel+using+dev+tunnel&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-bots-with-sso%3Ftabs%3Ddev%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-bots-with-sso.yml&documentVersionIndependentId=b410630d-3624-e389-480f-ea3307a3b774&author=surbhigupta&platformId=4b2022ca-ee48-5c9a-b390-7ed303c02fd8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 # [ngrok](#tab/ngrok)
 
-[!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
+[!INCLUDE [Tunnel](../includes/get-started/ngrok-tunnel.md)]
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+tunnel+using+ngrok&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-bots-with-sso%3Ftabs%3Ddev%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-bots-with-sso.yml&documentVersionIndependentId=b410630d-3624-e389-480f-ea3307a3b774&author=surbhigupta&platformId=4b2022ca-ee48-5c9a-b390-7ed303c02fd8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
-[!INCLUDE [Azure web authentication](includes/get-started/azure-web-authentication.md)]
+[!INCLUDE [Azure web authentication](../includes/get-started/azure-web-authentication.md)]
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+a+web+authentication&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-bots-with-sso%3Ftabs%3Ddev%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-bots-with-sso.yml&documentVersionIndependentId=b410630d-3624-e389-480f-ea3307a3b774&author=surbhigupta&platformId=4b2022ca-ee48-5c9a-b390-7ed303c02fd8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
-[!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
+[!INCLUDE [Client secret](../includes/get-started/create-client-secret.md)]
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+client+secret&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-bots-with-sso%3Ftabs%3Ddev%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-bots-with-sso.yml&documentVersionIndependentId=b410630d-3624-e389-480f-ea3307a3b774&author=surbhigupta&platformId=4b2022ca-ee48-5c9a-b390-7ed303c02fd8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
@@ -137,7 +137,7 @@ The following steps help you to create and register your bot in the Azure portal
 
 2. Select **+ Add a permission**.
 
-:::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-api-permission.png" alt-text="Screenshot shows the option to select Add permission.":::
+![Screenshot shows the option to select Add permission.](../assets/images/teams-file-upload-bot/add-api-permission.png)
 
 1. Select **Microsoft Graph**.
 
@@ -147,7 +147,7 @@ The following steps help you to create and register your bot in the Azure portal
 
 4. Select **Add permissions**.
 
-:::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/select-api-permission.png" alt-text="Screenshot show the option to select permissions.":::
+![Screenshot show the option to select permissions.](../assets/images/teams-file-upload-bot/select-api-permission.png)
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+API+permissions&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-bots-with-sso%3Ftabs%3Ddev%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-bots-with-sso.yml&documentVersionIndependentId=b410630d-3624-e389-480f-ea3307a3b774&author=surbhigupta&platformId=4b2022ca-ee48-5c9a-b390-7ed303c02fd8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**) 
@@ -171,17 +171,17 @@ The following steps help you to create and register your bot in the Azure portal
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Application+ID+URI&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-bots-with-sso%3Ftabs%3Ddev%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-bots-with-sso.yml&documentVersionIndependentId=b410630d-3624-e389-480f-ea3307a3b774&author=surbhigupta&platformId=4b2022ca-ee48-5c9a-b390-7ed303c02fd8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
-[!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
+[!INCLUDE [Azure add scope](../includes/get-started/azure-add-scope.md)]
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+a+scope&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-bots-with-sso%3Ftabs%3Ddev%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-bots-with-sso.yml&documentVersionIndependentId=b410630d-3624-e389-480f-ea3307a3b774&author=surbhigupta&platformId=4b2022ca-ee48-5c9a-b390-7ed303c02fd8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
-[!INCLUDE [Azure client application](includes/get-started/azure-client-application.md)]
+[!INCLUDE [Azure client application](../includes/get-started/azure-client-application.md)]
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+client+application&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-bots-with-sso%3Ftabs%3Ddev%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-bots-with-sso.yml&documentVersionIndependentId=b410630d-3624-e389-480f-ea3307a3b774&author=surbhigupta&platformId=4b2022ca-ee48-5c9a-b390-7ed303c02fd8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
-[!INCLUDE [Manifest](includes/get-started/azure-manifest.md)]
+[!INCLUDE [Manifest](../includes/get-started/azure-manifest.md)]
 
 ## Create your bot
 
@@ -197,7 +197,7 @@ Create an Azure bot resource.
 5. Select **Azure Bot**.
 6. Select **Create**.
 
-![Screenshot shows the creation of Azure bot.](./assets/images/include-files/azure-bot.png)
+![Screenshot shows the creation of Azure bot.](../assets/images/include-files/azure-bot.png)
 
 7. Enter the bot name in **Bot handle**.
 8. Select your **Subscription** from the dropdown list.
@@ -210,15 +210,15 @@ If you don't have an existing resource group, you can create a new resource grou
     b. Enter the resource name and select **OK**.
     c. Select a location from **New resource group location** dropdown list.
 
-![Screenshot shows the new resource group option in Azure portal](./assets/images/include-files/new-resource-location.png)
+![Screenshot shows the new resource group option in Azure portal](../assets/images/include-files/new-resource-location.png)
 
 10. Under **Pricing**, select **Change plan**.
 
-![Screenshot shows the pricing option in Azure portal](./assets/images/include-files/pricing-tier.png)
+![Screenshot shows the pricing option in Azure portal](../assets/images/include-files/pricing-tier.png)
 
 11. Select **FO Free** > **Select**.
 
-![Screenshot shows the option to select free](./assets/images/include-files/pricing-free.png)
+![Screenshot shows the option to select free](../assets/images/include-files/pricing-free.png)
 
 12. Under **Microsoft App ID**, select **Type of App** as **Multi Tenant**.
 
@@ -231,7 +231,7 @@ If you don't have an existing resource group, you can create a new resource grou
 
 15. Select **Review + create**.
 
-![Screenshot shows the creation of new bot](./assets/images/include-files/review-create-app-id.png)
+![Screenshot shows the creation of new bot](../assets/images/include-files/review-create-app-id.png)
 
 16. After the validation passes, select **Create**.
 
@@ -239,11 +239,11 @@ The bot takes a few minutes to provision.
 
 17. Select **Go to resource**.
 
-![Screenshot shows the Go to resource option in the Azure portal](./assets/images/include-files/resource-deployment.png)
+![Screenshot shows the Go to resource option in the Azure portal](../assets/images/include-files/resource-deployment.png)
 
  You've successfully created your Azure bot.
 
-![Screenshot shows the output of a bot](./assets/images/include-files/azure-bot-created-output.png)
+![Screenshot shows the output of a bot](../assets/images/include-files/azure-bot-created-output.png)
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+an+Azure+bot+resource&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-bots-with-sso%3Ftabs%3Ddev%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-bots-with-sso.yml&documentVersionIndependentId=b410630d-3624-e389-480f-ea3307a3b774&author=surbhigupta&platformId=4b2022ca-ee48-5c9a-b390-7ed303c02fd8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
@@ -253,16 +253,16 @@ The bot takes a few minutes to provision.
 1. In the left pane, select **Channels**.
 2. Under **Available Channels**, select **Microsoft Teams**.
 
-![Screenshot shows the selection of Teams in channels.](./assets/images/include-files/channels-teams.png)
+![Screenshot shows the selection of Teams in channels.](../assets/images/include-files/channels-teams.png)
 
 3. Select the checkbox to accept the **Terms of Service**.
 4. Select **Agree**.
 
-![Screenshot shows the acceptance of terms of service.](./assets/images/include-files/terms-service.png)
+![Screenshot shows the acceptance of terms of service.](../assets/images/include-files/terms-service.png)
 
 5. Select **Apply**.
 
-![Screenshot shows the Microsoft Teams as messaging to apply.](./assets/images/include-files/teams-apply.png)
+![Screenshot shows the Microsoft Teams as messaging to apply.](../assets/images/include-files/teams-apply.png)
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+a+Teams+channel&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-bots-with-sso%3Ftabs%3Ddev%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-bots-with-sso.yml&documentVersionIndependentId=b410630d-3624-e389-480f-ea3307a3b774&author=surbhigupta&platformId=4b2022ca-ee48-5c9a-b390-7ed303c02fd8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams)
@@ -273,7 +273,7 @@ The bot takes a few minutes to provision.
 
 1. Use the dev tunnel URL in the **Output** console as the messaging endpoint.
 
-![Screenshot shows the url in the Visual studio output console.](./assets/images/include-files/output-console-url.png)
+![Screenshot shows the url in the Visual studio output console.](../assets/images/include-files/output-console-url.png)
 
 2. In the left pane, under **Settings**, select **Configuration**.
 
