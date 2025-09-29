@@ -231,6 +231,7 @@ The window shows the HTTPS URL.
 > [!div class="button"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+tunnel+using+ngrok)
 ---
+
 ### Add a web authentication
 
 1. In the left pane, under **Manage**, select **Authentication**.
@@ -536,6 +537,8 @@ You have successfully set up a bot in Azure Bot service.
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+add+a+messaging+endpoint)
+
+---
 
 ### Add an OAuth connection settings
 
