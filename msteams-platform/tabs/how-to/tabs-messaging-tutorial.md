@@ -630,8 +630,6 @@ A webpage appears with a message **Your bot is ready!**
 > [!div class="button"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Build+and+run+service+using+Visual+Studio)
 
----
-
 ### [Command Line](#tab/command-line)
 
 Go to the **csharp** folder in a Command Prompt window and enter the following command:
