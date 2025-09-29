@@ -50,7 +50,7 @@ Delegated authentication isn't supported.
 
 ### Supported channel and chat types
 
-|Entities |Sub type  |Migration mode Support |Notes|
+|Entities |Sub type  |Migration mode support |Notes|
 |---------|---------|---------|---------|
 |**Channels** | Standard, Private, Shared | New and existing | Must be created or already in migration mode |
 |**Chats** | Group, 1:1 | New and existing | Meeting chats not supported; external members supported |
@@ -132,15 +132,6 @@ POST https://graph.microsoft.com/beta/teams/57fb72d0-d811-46f4-8947-305e6072eaa5
 } 
 
 ```
-
-> [!NOTE]
->
-> If no request body is provided, the API uses the current date and time as the minimum timestamp.
-> `conversationCreationDateTime` must be:
->
-> * Greater than the minimum value for `DateTimeOffset`.
->
-> * Less than the current value of the channel or chat's `creationDateTime`.
 
 ## Step 3: Call GET API to check migrationMode status
 
