@@ -17,7 +17,7 @@ Teams action based message extension allow users to interact with web services i
 
 This step-by-step guide helps you to build Teams action-based message extension to initiate actions from compose message and message area. By the end of this tutorial, you can achieve the following output:
 
-![Screenshot of the message extension output after you have successfully completed the step-by-step guide](./assets/images/sbs-messagingextension-action/sharemessageoutput1.png)
+![Screenshot of the message extension output after you have successfully completed the step-by-step guide](../assets/images/sbs-messagingextension-action/sharemessageoutput1.png)
 
 ## Prerequisites
 
@@ -41,7 +41,7 @@ Ensure that you install the following tools and set up your development environm
 
 3. From the dropdown menu, select **Open with GitHub Desktop**.
 
-![Screenshot of the clone repository](./assets/images/include-files/clone-repository.png)
+![Screenshot of the clone repository](../assets/images/include-files/clone-repository.png)
 
 4. Select **Clone**.
 
@@ -64,11 +64,11 @@ The following steps help you to create and register your bot in Azure portal:
 
 2. Select **App registrations**.
 
-![Screenshot of the Azure services](./assets/images/include-files/azure-app-registration.png)
+![Screenshot of the Azure services](../assets/images/include-files/azure-app-registration.png)
   
 3. Select + **New registration**.
 
-![Screenshot of App registrations](./assets/images/include-files/new-registration.png)
+![Screenshot of App registrations](../assets/images/include-files/new-registration.png)
 
 4. Enter the name of your app.
 
