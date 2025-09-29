@@ -272,8 +272,7 @@ The following image shows the fields and the values:
 ### **Create an Azure bot resource**
 
 > [!NOTE]
->
-> * If you're already testing your bot in Teams, sign out of this app and Teams. To see this change, sign in again.
+> If you're already testing your bot in Teams, sign out of this app and Teams. To see this change, sign in again.
 
 1. Go to **Home**.
 

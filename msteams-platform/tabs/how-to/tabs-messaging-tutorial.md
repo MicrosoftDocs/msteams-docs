@@ -75,7 +75,7 @@ If you don't have a Teams developer account, you can get it for free. Join the M
 > [!div class="button"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+free+Teams+developer+tenant+(optional)&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-bots-with-sso%3Ftabs%3Ddev%26tutorial-step%3D1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-bots-with-sso.yml&documentVersionIndependentId=b410630d-3624-e389-480f-ea3307a3b774&author=surbhigupta&platformId=4b2022ca-ee48-5c9a-b390-7ed303c02fd8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
-## Set up Local Environment
+## Set up local environment
 
 1. Open Microsoft-Teams-Samples
 2. Select **Code**.
@@ -88,7 +88,7 @@ If you don't have a Teams developer account, you can get it for free. Join the M
 > [!div class="button"]
 >[I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Set+up+local+environment)
 
-## Register Microsoft Entra App
+## Register Microsoft Entra app
 
 The following steps help you to create and register your bot in Azure portal:
 
@@ -100,7 +100,7 @@ The following steps help you to create and register your bot in Azure portal:
 
 [!INCLUDE [Azure app registration](../../includes/get-started/azure-app-registration.md)]()
 
-### Add App Registration
+### Add app registration
 
 1. Go to [Azure portal](https://ms.portal.azure.com/).
 
@@ -284,7 +284,7 @@ The **Add a client secret** window appears.
 > [!div class="button"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+client+secret)
 
-### Add API Permissions
+### Add API permissions
 
 1. In the left pane, select **API permissions**.
 2. Select **+ Add a permission**.
@@ -305,7 +305,7 @@ The **Add a client secret** window appears.
 > [!div class="button"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+API+permissions)
 
-### Add Application ID URI
+### Add application ID URI
 
 1. In the left pane, under **Manage**, select **Expose an API**.
 
@@ -406,7 +406,7 @@ The following image displays the **Client Id**:
 > [!div class="button"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+API+permissions)
 
-## Create Your Bot
+## Create your bot
 
 ### Create an Azure bot resource
 
@@ -561,7 +561,7 @@ You have successfully set up a bot in Azure Bot service.
 > [!div class="button"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+an+OAuth+connection+settings)
 
-## Set up App Settings
+## Set up app settings
 
 1. Go to the **appsettings.json** file in the cloned repository.
 
@@ -581,7 +581,7 @@ You have successfully set up a bot in Azure Bot service.
 
 ![Screenshot of the appsettings.json file with the values entered highlighted in red.](../../assets/images/Tab-ME-SSO/app-setting.png)
 
-## Set up Manifest File
+## Set up Manifest file
 
 1. Go to the **manifest.json** file in the cloned repository.
 
@@ -599,7 +599,7 @@ You have successfully set up a bot in Azure Bot service.
 
 ![Screenshot of the manifest.json file with the values entered highlighted in red.](../../assets/images/Tab-ME-SSO/vs-manifest.png)
 
-## Build and Run the Service Using Visual Studio
+## Build and run the service using visual studio
 
 To build and run the service, use Visual Studio or Command line.
 
@@ -642,7 +642,7 @@ dotnet run
 
 ---
 
-## Upload SSO App to Teams
+## Upload SSO app to Teams
 
 1. In your cloned repository, go to **csharp** > **App SSO Sample** > **TeamsAppManifest**.
 2. Create a .zip file with the following files that are present in the **Manifest** folder:
@@ -717,7 +717,7 @@ dotnet run
 > [!div class="button"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Upload+SSO+app+to+Teams)
 
-## Complete Challenge
+## Complete challenge
 
 Did you come up with output like this?
 
