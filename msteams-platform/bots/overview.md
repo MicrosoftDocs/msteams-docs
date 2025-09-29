@@ -10,6 +10,8 @@ ms.owner: angovil
 
 # Bot overview
 
+[!INCLUDE [teams-ai-lib-v2-rec](../includes/teams-ai-lib-v2-rec.md)]
+
 Bots are software applications that interact with users through text-based conversations. Bots follow predefined rules to answer questions or do specific tasks. AI-powered bots use artificial intelligence to understand natural language, have complex conversations, and handle more tasks. Bots can be as simple as basic scripts or as advanced as AI systems that learn and adapt. You can build Teams bots as virtual assistants in Microsoft Teams and Microsoft 365.
 
 Bot apps offer a range of business advantages:
@@ -50,8 +52,8 @@ You can choose one or more of the following capabilities for your bot app. Use e
 
 * **Custom engine agent**: A custom engine agent is a bot that uses AI to perform automated tasks. It understands natural language, can engage in conversations, and answer questions. You can use them for virtual assistance, language translation, predictive analysis, and more. Custom engine agents, which are AI-enabled Teams bots, can be built using custom AI models of your choice.
 
-  * Use [Teams AI library v2 (preview)](/microsoftteams/platform/teams-ai-library/welcome) for adding more advanced features to your agents.
-  * For more information, see [how to build a custom engine agent](../Teams-AI-library-tutorial.yml).
+  * Use [Teams AI library](/microsoftteams/platform/teams-ai-library/welcome) for adding more advanced features to your agents.
+  * For more information, see [how to build a custom engine agent](how-to/teams-conversational-ai/teams-ai-library-tutorial.md).
 
 * **Conventional bots**:
 
