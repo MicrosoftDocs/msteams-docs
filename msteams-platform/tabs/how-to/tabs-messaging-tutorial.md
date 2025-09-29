@@ -55,7 +55,7 @@ To verify custom upload apps in Teams:
 3. Select **Upload an app**
 4. Look for the option **Upload a custom app**. If you see the option, custom app upload is enabled.
 
-![Screenshot showing the Teams apps, Manage your apps, Upload an app, and Upload a custom app highlighted in red](./assets/images/bots/upload-a-custom-app-sso-bot-authentication.png)
+![Screenshot showing the Teams apps, Manage your apps, Upload an app, and Upload a custom app highlighted in red](../../assets/images/bots/upload-a-custom-app-sso-bot-authentication.png)
 
 > [!NOTE]
 > Contact Teams administrator, if you don't have the option to upload a custom app.
@@ -107,7 +107,7 @@ The following steps help you to create and register your bot in Azure portal:
 
 2. Select **App registrations**.
 
-![Screenshot shows the Azure services to select App registrations](./assets/images/include-files/azure-app-registration.png)
+![Screenshot shows the Azure services to select App registrations](../../assets/images/include-files/azure-app-registration.png)
 
 3. Select **+ New registration**.
 
@@ -145,7 +145,7 @@ Your app is registered in Microsoft Entra ID. The app overview page appears.
 
 4. Select **Next**.
 
-![Screenshot shows the search and selection of the template.](./assets/images/include-files/template-search.png)
+![Screenshot shows the search and selection of the template.](../../assets/images/include-files/template-search.png)
 
 5. Enter **Project name** and select **Next**.
 
@@ -153,15 +153,15 @@ Your app is registered in Microsoft Entra ID. The app overview page appears.
 
 6. Select **Create**.
 
-![Screenshot shows the project additional information.](./assets/images/include-files/additional-information.png)
+![Screenshot shows the project additional information.](../../assets/images/include-files/additional-information.png)
 
 An overview window appears.
 
-![Screenshot shows the overview window.](./assets/images/include-files/asp-net-output.png)
+![Screenshot shows the overview window.](../../assets/images/include-files/asp-net-output.png)
 
 7. In the debug dropdown list, select **Dev Tunnels (no active tunnel)** > **Create a Tunnel...**.
 
-![Screenshot shows the dropdown to select the dev tunnels.](./assets/images/include-files/create-tunnel.png)
+![Screenshot shows the dropdown to select the dev tunnels.](../../assets/images/include-files/create-tunnel.png)
 
 A pop-up window appears.
 
@@ -289,14 +289,14 @@ The **Add a client secret** window appears.
 1. In the left pane, select **API permissions**.
 2. Select **+ Add a permission**.
 
-![Screenshot shows the option to select Add permission.](../msteams-platform/assets/images/teams-file-upload-bot/add-api-permission.png)
+![Screenshot shows the option to select Add permission.](../../assets/images/teams-file-upload-bot/add-api-permission.png)
 
 1. Select **Microsoft Graph**.
 2. Select **Delegated permissions**.
 3. Select **User** > **User.Read**.
 4. Select **Add permissions**.
 
-![Screenshot show the option to select permissions.](../msteams-platform/assets/images/teams-file-upload-bot/select-api-permission.png)
+![Screenshot show the option to select permissions.](../../assets/images/teams-file-upload-bot/select-api-permission.png)
 
 > **Note:**
 >
@@ -316,11 +316,11 @@ The **Add a client secret** window appears.
 
 3. Update the **Application ID URI** in the `api://your-devtunnel-domain/botid-{AppID}` or `api://your-ngrok-domain/botid-{AppID}` format and select **Save**.
 
-![Screenshot shows the option to add redirect uri and save.](../msteams-platform/assets/images/teams-file-upload-bot/app-id-uri.png)
+![Screenshot shows the option to add redirect uri and save.](../../assets/images/teams-file-upload-bot/app-id-uri.png)
 
 The following image shows the domain name:
 
-![Screenshot shows the redirect uri.](../msteams-platform/assets/images/include-files/app-id-uri-output.png)
+![Screenshot shows the redirect uri.](../../assets/images/include-files/app-id-uri-output.png)
 
 > [!div class="button"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+Application+ID+URI)
@@ -502,7 +502,7 @@ You've successfully created your Azure bot.
 
 3. Update the **Messaging endpoint** in the format `https://your-devtunnel-domain/api/messages`.
 
-![Screenshot shows the messaging endpoint adding api.](./assets/images/include-files/devtunnels-messaging-endpoint.png) 
+![Screenshot shows the messaging endpoint adding api.](../../assets/images/include-files/devtunnels-messaging-endpoint.png) 
 
 4. Select **Apply**.
 
