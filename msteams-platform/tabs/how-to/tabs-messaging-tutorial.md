@@ -606,7 +606,7 @@ You have successfully set up a bot in Azure Bot service.
 
 To build and run the service, use Visual Studio or Command line.
 
-### [Visual Studio](#tab/Visual Studio)
+### [Visual Studio](#tab/Visual-Studio)
 
 1. Open Visual Studio.
 2. Select **File** > **Open** > **Project/Solution...**.
@@ -632,7 +632,7 @@ A webpage appears with a message **Your bot is ready!**
 
 ---
 
-### [Command Line](#tab/command line)
+### [Command Line](#tab/command-line)
 
 Go to the **csharp** folder in a Command Prompt window and enter the following command:
 
