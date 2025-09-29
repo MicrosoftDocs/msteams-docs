@@ -61,15 +61,14 @@ You can create a new channel or chat in a Team, or use an existing one, to migra
 
 ## Use startMigration API to import messages
 
-* Use the `startMigration` API, to enable migration mode on Teams channels or chats, and allow import of historical messages. Previously, import operations were restricted to newly created standard channels and chats in an empty state. See [Import third-party platform messages to Teams using Microsoft Graph](import-external-messages-to-teams.md).
+* Use `startMigration` API, to enable migration mode on Teams channels or chats, and allow import of historical messages. Previously, import operations were restricted to newly created standard channels and chats in an empty state.
+* Define a minimum timestamp for messages to be migrated. The provided timestamp must be older than the channel or chat’s current `createdDateTime` and replaces it during migration.
 
-* Define a minimum timestamp for messages to be migrated. The provided timestamp must be older than the channel or chat’s current createdDateTime and replaces it during migration.
+### [Channel migration](#tab/channelmigration)
 
-### Channel migration
+All the Shared, Private, and Public channels are supported. You can optionally provide a request body to specify the minimum timestamp for the messages to be migrated.
 
-The supported channels are all the existing Shared, Private, and Public channels. You can optionally provide a request body to specify the minimum timestamp for the messages to be migrated.
-
-### Channel request
+#### Channel request
 
 ```HTTP
 POST  /teams/{team-id}/channels/{channel-id}/startMigration
@@ -79,7 +78,7 @@ POST  /teams/{team-id}/channels/{channel-id}/startMigration
 }
 ```
 
-### Channel response
+#### Channel response
 
 If the request is successful, the method returns a '204 No Content' status code. The response body is empty.
 
@@ -91,14 +90,14 @@ POST https://graph.microsoft.com/beta/teams/57fb72d0-d811-46f4-8947-305e6072eaa5
 “conversationCreationDateTime”: “2024-01-01T00:00:00Z”
 }
 
+Response
+HTTP/1.1 204 No Content
+
 ```
 
-Response of the request: **HTTP/1.1 204 No Content**
+### [Chat migration](#tab/chatmigration)
 
-#### Chat migration
-
-* The supported chat types include Group chats and One-on-one (1:1) chats. Meeting chats aren't supported. External members are supported in all applicable chat types.
-* The startMigration API initiates the message migration process by setting the migrationMode property to 'inProgress' for a specified chat.
+* The `startMigration` API initiates the message migration process by setting the migrationMode property to 'inProgress' for a specified chat.
 
 #### Chat request
 
@@ -112,7 +111,7 @@ POST   /chats/{chat-id}/startMigration
 
 #### Chat response
 
-If the request is successful, the method returns a *204 No Content* status code. The response body is empty.
+If the request is successful, the method returns a 204 No Content status code. The response body is empty.
 
 Example of a chat request:
 
