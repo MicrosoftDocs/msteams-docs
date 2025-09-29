@@ -32,7 +32,6 @@ This step-by-step guide helps you to create tabs and message extensions enabling
 |Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. You can also use [ngrok](https://ngrok.com/downloads) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
 
 > [!NOTE]
->
 > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/downloads).
 
 ## Set up your Teams development tenant
@@ -125,9 +124,8 @@ Your app is registered in Microsoft Entra ID. The app overview page appears.
 
 ![Screenshot shows the app registration overview page](../../assets/images/include-files/app-registration-overview.png)
 
-> **Note:**
->
-> * Save the app ID from **Application (client) ID** and **Directory (tenant) ID** for further use.
+> [!NOTE]
+> Save the app ID from **Application (client) ID** and **Directory (tenant) ID** for further use.
 
 > [!div class="button"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+App+Registration)
@@ -300,10 +298,9 @@ The **Add a client secret** window appears.
 
 ![Screenshot show the option to select permissions.](../../assets/images/teams-file-upload-bot/select-api-permission.png)
 
-> **Note:**
->
-> * If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
-> * Users need to consent to the API permissions only if the Microsoft Entra app is registered in a different tenant.
+> [!NOTE]
+> If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
+> Users need to consent to the API permissions only if the Microsoft Entra app is registered in a different tenant.
 
 > [!div class="button"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+API+permissions)
