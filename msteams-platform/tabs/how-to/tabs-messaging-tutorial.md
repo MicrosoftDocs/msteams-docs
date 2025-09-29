@@ -8,7 +8,7 @@ ms.topic: tutorial
 description: Tutorial for enabling SSO for Microsoft Teams Tabs and Message Extensions
 
 ---
-# SSO for Tabs and Message Extension
+# SSO for tabs and message extension
 
 The  Microsoft Entra single sign-on (Microsoft Entra SSO) helps to authenticate users in Teams.
 **Key aspects of Microsoft Entra SSO**:
@@ -396,7 +396,7 @@ The following image displays the **Client Id**:
 ![Screenshot shows the output of Client applications.](../../assets/images/include-files/add-client-application-output.png)
 
 > [!div class="button"]
-[I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+client+application)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+API+permissions)
 
 ### Update the manifest
 
@@ -407,7 +407,7 @@ The following image displays the **Client Id**:
 ![Screenshot shows the manifest option and accesstoken details in Azure portal.](../../assets/images/include-files/manifest-token.png)
 
 > [!div class="button"]
-[I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+client+application)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+API+permissions)
 
 ## Create Your Bot
 
