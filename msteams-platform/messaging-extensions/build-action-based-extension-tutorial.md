@@ -546,7 +546,8 @@ Alternatively, you can either search and select the required scope or select a c
 
 ![Include Image](../assets/images/sbs-messagingextension-action/sharemessageoutput.png)
 
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Interact+with+the+app+in+Teams&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meetingextension-action%3Ftabs%3Ddev%252Clatestversionofvisualstudio%26tutorial-step%3D8&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-meetingextension-action.yml&documentVersionIndependentId=53b6fe7f-5051-d9d3-57e4-1d339c25ad65&platformId=28e8e36c-27eb-6659-de89-1d9872d985a0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+Action+Message+Extension+app+to+Teams&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meetingextension-action%3Ftabs%3Ddev%252Clatestversionofvisualstudio%26tutorial-step%3D7&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-meetingextension-action.yml&documentVersionIndependentId=53b6fe7f-5051-d9d3-57e4-1d339c25ad65&platformId=28e8e36c-27eb-6659-de89-1d9872d985a0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Complete challenge
 
