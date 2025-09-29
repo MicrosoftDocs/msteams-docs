@@ -46,21 +46,17 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
 
    # [Build new](#tab/buildnew)
 
-    1. Select **Build from Scratch**.
+    1. Select **Build New**.
 
        :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/build-new.png" alt-text="Screenshot shows the option to select the available AI agents.":::
-
-    1. Select **Azure OpenAI** or **OpenAI**.
-
-       :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/azure-openai.png" alt-text="Screenshot shows the option to select the LLM.":::
-
-    1. Enter your **Azure OpenAI** or **OpenAI** credentials based on the service you select. Select **Enter**.
-
-       :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/azure-open-api-key-optional.png" alt-text="Screenshot shows the location to enter Azure open API key.":::
 
     1. Select **JavaScript**.
 
        :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/language-javascript.png" alt-text="Screenshot shows the option to select the programming language.":::
+
+    1. By default **OpenAI** service gets selected, you can optionally enter the credentials to access OpenAI. Select **Enter**.
+
+       :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/azure-open-api-key-optional.png" alt-text="Screenshot shows the location to enter Azure open API key.":::
 
     1. Select **Default folder**.
 
@@ -88,9 +84,6 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
        * `AZURE_OPENAI_DEPLOYMENT_NAME=<your-deployment>`
 
         :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/env-testtool-user.png" alt-text="Screenshot shows the details updated in the env file.":::
-
-        > [!NOTE]
-        > You can either manually update the **.env.playground.user** file or enter the values when you're prompted during debugging. If you haven't provided the values earlier, you’ll need to complete steps #g and #h.
 
     1. To debug your app, select the **F5** key or from the left pane, select **Run and Debug (Ctrl+Shift+D)** and then select **Debug in Microsoft 365 Agents Playground (Preview)** (previously known as Teams App Test Tool) from the dropdown list.
 
@@ -138,14 +131,6 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
 
        :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/build-assistants-api.png" alt-text="Screenshot shows the option to select the available AI agents.":::
 
-    1. Select **Azure OpenAI** or **OpenAI**.
-
-       :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/azure-openai.png" alt-text="Screenshot shows the option to select the LLM.":::
-
-    1. Enter your **Azure OpenAI** or **OpenAI** credentials based on the service you select. Select **Enter**.
-
-       :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/azure-open-api-key-optional.png" alt-text="Screenshot shows the location to enter Azure open API key.":::
-
     1. Select **JavaScript**.
 
        :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/language-javascript.png" alt-text="Screenshot shows the option to select the programming language.":::
@@ -154,6 +139,16 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
        >
        > * If the building agent is selected as Build with Assistants API, Azure OpenAI service has not provided support for Assistants API.
        > * The `AssistantsPlanner` in Teams AI Library is in preview.
+
+    1. Select **Azure OpenAI** or **OpenAI**.
+
+       :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/azure-openai.png" alt-text="Screenshot shows the option to select the LLM.":::
+
+    1. Enter your **Azure OpenAI** or **OpenAI** credentials based on the service you select. Select **Enter**.
+
+       :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/azure-open-api-key-optional.png" alt-text="Screenshot shows the location to enter Azure open API key.":::
+
+    1. Select **Enter**.
 
     1. Select **Default folder**.
 

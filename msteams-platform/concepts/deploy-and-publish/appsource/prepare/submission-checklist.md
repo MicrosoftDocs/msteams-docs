@@ -26,7 +26,7 @@ While your app may be working in a test environment, you should check your app p
 
 The Teams app validation tool helps you identify and fix issues before submitting to Partner Center. The tool automatically checks your app's configurations against the same test cases used during Teams Store validation.
 
-1. Go to the [Teams app validation tool](https://dev.teams.microsoft.com/tools/store-validation).
+1. Go to the [Teams app validation tool](https://dev.teams.microsoft.com/appvalidation.html).
 
    You can also validate your app using [Developer Portal for Teams.](~/concepts/build-and-test/teams-developer-portal.md)
 

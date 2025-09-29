@@ -51,9 +51,9 @@ For your app to pass Teams Store review, these icons must meet the following siz
 
 ### Color icon
 
-* **Teams**: The color version of your icon displays in most Teams scenarios and must be 192x192 pixels. Your icon symbol (120x120 pixels) can be any color, but it must sit on a solid or fully transparent square background.
+* **Teams**: The color version of your icon displays in most Teams scenarios and must be 192x192 pixels. Your icon symbol (96x96 pixels) can be any color, but it must sit on a solid or fully transparent square background.
 
-  Teams automatically crops your icon to display a square with rounded corners in multiple scenarios and a hexagonal shape in bot scenarios. To crop the symbol without losing any detail, include 36 pixels of padding around your symbol.
+  Teams automatically crops your icon to display a square with rounded corners in multiple scenarios and a hexagonal shape in bot scenarios. To crop the symbol without losing any detail, include 48 pixels of padding around your symbol.
 
   :::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Teams color icon and design guidance.":::
 
