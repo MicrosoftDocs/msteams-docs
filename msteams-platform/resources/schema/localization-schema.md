@@ -3,7 +3,7 @@ title: Localize JSON Schema Reference
 description: Learn and know about the localization schema supported by the localization file for Microsoft Teams using an example schema and about schema versions.
 ms.topic: reference
 ms.localizationpriority: medium
-ms.date: 05/08/2025
+ms.date: 05/30/2025
 ---
 
 # Localize JSON schema reference
@@ -11,7 +11,6 @@ ms.date: 05/08/2025
 The Microsoft Teams localization file describes language translations that are served based on the client language settings.
 
 > [!TIP]
-> Specify the schema at the beginning of your manifest to enable `IntelliSense` or similar support from your code editor: `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.21/MicrosoftTeams.schema.json".`
 > Specify the schema at the beginning of your manifest to enable `IntelliSense` or similar support from your code editor: `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.22/MicrosoftTeams.schema.json".`
 
 ## Localization schema v1.22
