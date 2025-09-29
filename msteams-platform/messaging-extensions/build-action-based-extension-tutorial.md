@@ -76,11 +76,11 @@ The following steps help you to create and register your bot in Azure portal:
 
 6. Select **Register**.
 
-![Screenshot of registering an app](./assets/images/include-files/app-register.png)
+![Screenshot of registering an app](../assets/images/include-files/app-register.png)
 
 Your app is registered in Microsoft Entra ID. The app overview page appears.
 
-![Screenshot of app registration](./assets/images/include-files/app-registration-overview.png)
+![Screenshot of app registration](../assets/images/include-files/app-registration-overview.png)
 
 > > [!NOTE]
 >
@@ -106,7 +106,7 @@ Your app is registered in Microsoft Entra ID. The app overview page appears.
 
 2. Select **Add a platform** > **Web**.
 
-![Screenshot shows the selection of web authentication](./assets/images/include-files/platform-web.png)
+![Screenshot shows the selection of web authentication](../assets/images/include-files/platform-web.png)
 
 3. Enter the redirect URI for your app by appending `auth-end` to the fully qualified domain name. For example, `https://your-devtunnel-domain/auth-end` or `https://your-ngrok-domain/auth-end`.
 
@@ -114,7 +114,7 @@ Your app is registered in Microsoft Entra ID. The app overview page appears.
 
 5. Select **Configure**.
 
-![Screenshot shows the option to add redirect uri and select implicit grant and hybrid flows.](./assets/images/include-files/configure-web.png)
+![Screenshot shows the option to add redirect uri and select implicit grant and hybrid flows.](../assets/images/include-files/configure-web.png)
 
 6. Under **Web**, select **Add URI**.
 
@@ -122,7 +122,7 @@ Your app is registered in Microsoft Entra ID. The app overview page appears.
 
 8. Select **Save**.
 
-![Screenshot shows web settings page showing add URI fields.](./assets/images/include-files/web-add-uri.png)
+![Screenshot shows web settings page showing add URI fields.](../assets/images/include-files/web-add-uri.png)
 
 [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+a+web+authentication&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meetingextension-action%3Ftabs%3Ddev%252Clatestversionofvisualstudio%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-meetingextension-action.yml&documentVersionIndependentId=53b6fe7f-5051-d9d3-57e4-1d339c25ad65&platformId=28e8e36c-27eb-6659-de89-1d9872d985a0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
@@ -135,7 +135,7 @@ Your app is registered in Microsoft Entra ID. The app overview page appears.
 
 2. Under **Client secrets**, select **+ New client secret**.
 
-![Screenshot show the selection of new client secret](./assets/images/include-files/new-client-secret.png)
+![Screenshot show the selection of new client secret](../assets/images/include-files/new-client-secret.png)
 
 The **Add a client secret** window appears.
 
@@ -143,11 +143,11 @@ The **Add a client secret** window appears.
 
 4. Select **Add**.
 
-![Screenshot show the client secret description option to add](./assets/images/authentication/teams-sso-bots/add-client-secret.png)
+![Screenshot show the client secret description option to add](../assets/images/authentication/teams-sso-bots/add-client-secret.png)
 
 1. Under **Value**, select **Copy to clipboard** to save the client secret value for further use.
 
-![Screenshot show the option to copy the client secret ID value to copy value to clipboard](./assets/images/include-files/client-secret-value.png)
+![Screenshot show the option to copy the client secret ID value to copy value to clipboard](../assets/images/include-files/client-secret-value.png)
 
 [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+client+secret&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meetingextension-action%3Ftabs%3Ddev%252Clatestversionofvisualstudio%26tutorial-step%3D23&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-meetingextension-action.yml&documentVersionIndependentId=53b6fe7f-5051-d9d3-57e4-1d339c25ad65&platformId=28e8e36c-27eb-6659-de89-1d9872d985a0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
@@ -157,7 +157,7 @@ The **Add a client secret** window appears.
 
 2. Select **+ Add a permission**.
 
-![Screenshot show the option to select Add permission](./assets/images/include-files/add-permission.png)
+![Screenshot show the option to select Add permission](../assets/images/include-files/add-permission.png)
 
 3. Select **Microsoft Graph**.
 
@@ -169,7 +169,7 @@ The **Add a client secret** window appears.
 
 6. Select **Add permissions**.
 
-![Screenshot show the option to select permissions](./assets/images/include-files/select-add-permission.png)
+![Screenshot show the option to select permissions](../assets/images/include-files/select-add-permission.png)
 
 > [!NOTE]
 >
@@ -184,15 +184,15 @@ The **Add a client secret** window appears.
 
 2. Next to **Application ID URI**, select **Add**.
 
-![Screenshot shows the option to add Application ID URI](./assets/images/include-files/expose-api-add.png)
+![Screenshot shows the option to add Application ID URI](../assets/images/include-files/expose-api-add.png)
 
 3. Update the **Application ID URI** in the `api://your-devtunnel-domain/botid-{AppID}` or `api://your-ngrok-domain/botid-{AppID}` format and select **Save**.
 
-![Screenshot shows the option to add redirect uri and save](./assets/images/include-files/app-id-uri.png)
+![Screenshot shows the option to add redirect uri and save](../assets/images/include-files/app-id-uri.png)
 
 The following image shows the domain name:
 
-![Screenshot shows the redirect uri](./assets/images/include-files/app-id-uri-output.png)
+![Screenshot shows the redirect uri](../assets/images/include-files/app-id-uri-output.png)
 
 <!--
 > [!NOTE]
@@ -208,7 +208,7 @@ The following image shows the domain name:
 
 2. Select **+ Add a scope**.
 
-![Screenshot shows the selection to Add a Scope](./assets/images/include-files/select-add-scope.png)
+![Screenshot shows the selection to Add a Scope](../assets/images/include-files/select-add-scope.png)
 
 3. Enter **access_as_user** as the **Scope name**.
 
@@ -230,12 +230,12 @@ The following image shows the domain name:
 
 The following image shows the fields and the values:
 
-![Screenshot shows the values filled in the field to Add a scope](./assets/images/include-files/set-add-scope.png)
+![Screenshot shows the values filled in the field to Add a scope](../assets/images/include-files/set-add-scope.png)
 
 > [!NOTE]
 > The **Scope name** must match with the **Application ID** URI with `/access_as_user` appended at the end.
 
-![Screenshot shows the details in Scopes](./assets/images/include-files/add-scope.png)
+![Screenshot shows the details in Scopes](../assets/images/include-files/add-scope.png)
 
 [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+a+scope&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meetingextension-action%3Ftabs%3Ddev%252Clatestversionofvisualstudio%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-meetingextension-action.yml&documentVersionIndependentId=53b6fe7f-5051-d9d3-57e4-1d339c25ad65&platformId=28e8e36c-27eb-6659-de89-1d9872d985a0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
@@ -247,29 +247,29 @@ The following image shows the fields and the values:
 
 2. Select **+ Add a client application**.
 
-   ![Screenshot shows the option to Select client application](./assets/images/include-files/add-client-application.png)
+   ![Screenshot shows the option to Select client application](../assets/images/include-files/add-client-application.png)
 
 3. Add Teams mobile or desktop and Teams web application.
 
     a. For Teams mobile or desktop: Enter the **Client ID** as `1fec8e78-bce4-4aaf-ab1b-5451cc387264`.
 
-    ![Screenshot shows the mobile or desktop Client ID application](./assets/images/include-files/client-id-mobile-desktop.png)
+    ![Screenshot shows the mobile or desktop Client ID application](../assets/images/include-files/client-id-mobile-desktop.png)
 
     b. For Teams web: Enter the **Client ID** as `5e3ce6c0-2b1f-4285-8d4b-75ee78787346`.
 
-    ![Screenshot shows the web Client ID application](./assets/images/include-files/client-id-web.png)
+    ![Screenshot shows the web Client ID application](../assets/images/include-files/client-id-web.png)
 
 4. Select the **Authorized scopes** checkbox.
 
 5. Select **Add application**.
 
-  ![Screenshot shows the option to select authorized scopes and add application](./assets/images/include-files/authorized-scope-add.png)
+  ![Screenshot shows the option to select authorized scopes and add application](../assets/images/include-files/authorized-scope-add.png)
 
    The following image displays the **Client Id**:
 
-  ![Screenshot shows the output of Client applications](./assets/images/include-files/add-client-application-output.png)
+  ![Screenshot shows the output of Client applications](../assets/images/include-files/add-client-application-output.png)
 
-  ![Screenshot shows the output of Client applications](./assets/images/include-files/add-client-application-output.png)
+  ![Screenshot shows the output of Client applications](../assets/images/include-files/add-client-application-output.png)
 
 [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+client+application&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meetingextension-action%3Ftabs%3Ddev%252Clatestversionofvisualstudio%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-meetingextension-action.yml&documentVersionIndependentId=53b6fe7f-5051-d9d3-57e4-1d339c25ad65&platformId=28e8e36c-27eb-6659-de89-1d9872d985a0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
@@ -293,7 +293,7 @@ The following image shows the fields and the values:
 
 6. Select **Create**.
 
-![Screenshot of Azure bot](./assets/images/include-files/azure-bot.png)
+![Screenshot of Azure bot](../assets/images/include-files/azure-bot.png)
 
 7. Enter the bot name in **Bot handle**.
 
@@ -301,22 +301,22 @@ The following image shows the fields and the values:
 
 9. Select your **Resource group** from the dropdown list.
 
-![Screenshot of creating an Azure bot basics](./assets/images/include-files/create-azure-bot.png)
+![Screenshot of creating an Azure bot basics](../assets/images/include-files/create-azure-bot.png)
 
 If you don't have an existing resource group, you can create a new resource group. To create a new resource group, follow these steps:</br>
   a. Select Create new.</br>
   b. Enter the resource name and select OK.</br>
   c. Select a location from New resource group location dropdown list.
 
-![Screenshot for New resource group location](./assets/images/include-files/new-resource-location.png)
+![Screenshot for New resource group location](../assets/images/include-files/new-resource-location.png)
 
 10. Under **Pricing**, select **Change plan**.
 
-![Screenshot for Change Plan](./assets/images/include-files/pricing-tier.png)
+![Screenshot for Change Plan](../assets/images/include-files/pricing-tier.png)
 
 11. Select **FO Free** > **Select**.
 
-![Screenshot for Choose pricing tier](./assets/images/include-files/pricing-free.png)
+![Screenshot for Choose pricing tier](../assets/images/include-files/pricing-free.png)
 
 12. Under **Microsoft App ID**, select **Type of App** as **Multi Tenant**.
 
@@ -329,7 +329,7 @@ If you don't have an existing resource group, you can create a new resource grou
 
 15. Select **Review** + **create**.
 
-![Screenshot for Review and create app ID](./assets/images/include-files/review-create-app-id.png)
+![Screenshot for Review and create app ID](../assets/images/include-files/review-create-app-id.png)
 
 16. After the validation passes, select **Create**.
 
@@ -337,11 +337,11 @@ The bot takes a few minutes to provision.
 
 17. Select **Go to resource**.
 
-![Screenshot for resource deployment](./assets/images/include-files/resource-deployment.png)
+![Screenshot for resource deployment](../assets/images/include-files/resource-deployment.png)
 
 You've successfully created your Azure bot.
 
-![Screenshot for successful creation of Azure bot](./assets/images/include-files/azure-bot-created-output.png)
+![Screenshot for successful creation of Azure bot](../assets/images/include-files/azure-bot-created-output.png)
 
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+an+Azure+bot+resource&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meetingextension-action%3Ftabs%3Ddev%252Clatestversionofvisualstudio%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-meetingextension-action.yml&documentVersionIndependentId=53b6fe7f-5051-d9d3-57e4-1d339c25ad65&platformId=28e8e36c-27eb-6659-de89-1d9872d985a0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)  
 
@@ -351,17 +351,17 @@ You've successfully created your Azure bot.
 
 2. Under **Available Channels**, select **Microsoft Teams**.
 
-![Screenshot for adding a Teams channel](./assets/images/include-files/channels-teams.png)
+![Screenshot for adding a Teams channel](../assets/images/include-files/channels-teams.png)
 
 3. Select the checkbox to accept the Terms of Service.
 
 4. Select **Agree**.
 
-![Screenshot for accepting Terms of Service](./assets/images/include-files/terms-service.png)
+![Screenshot for accepting Terms of Service](../assets/images/include-files/terms-service.png)
 
 5. Select **Apply**.
 
-![Screenshot for Teams messaging selection apply](./assets/images/include-files/teams-apply.png)
+![Screenshot for Teams messaging selection apply](../assets/images/include-files/teams-apply.png)
 
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+a+Teams+channel&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meetingextension-action%3Ftabs%3Ddev%252Clatestversionofvisualstudio%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-meetingextension-action.yml&documentVersionIndependentId=53b6fe7f-5051-d9d3-57e4-1d339c25ad65&platformId=28e8e36c-27eb-6659-de89-1d9872d985a0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
@@ -371,13 +371,13 @@ You've successfully created your Azure bot.
 
 1. Use the dev tunnel URL in the **Output** console as the messaging endpoint.
 
-![Screenshot shows the url in the Visual studio output console.](./assets/images/include-files/output-console-url.png)
+![Screenshot shows the url in the Visual studio output console.](../assets/images/include-files/output-console-url.png)
 
 2. In the left pane, under **Settings**, select **Configuration**.
 
 3. Update the **Messaging endpoint** in the format `https://your-devtunnel-domain/api/messages`.
 
-![Screenshot shows the messaging endpoint adding api.](./assets/images/include-files/devtunnels-messaging-endpoint.png)
+![Screenshot shows the messaging endpoint adding api.](../assets/images/include-files/devtunnels-messaging-endpoint.png)
 
 4. Select **Apply**.
 
@@ -390,7 +390,7 @@ You've successfully created your Azure bot.
 
 1. From ngrok, copy the HTTPS URL.
 
-![Screenshot shows the ngrok HTTPS URL.](./assets/images/include-files/ngrok-url.png)
+![Screenshot shows the ngrok HTTPS URL.](../assets/images/include-files/ngrok-url.png)
 
 > [!NOTE]
 > The HTTPS URL in your ngrok is a fully qualified domain name.
@@ -400,7 +400,7 @@ You've successfully created your Azure bot.
 
 3. Update the **Messaging endpoint** in the format `https://your-ngrok-domain/api/messages`.
 
-![Screenshot shows the messaging endpoint adding api.](./assets/images/include-files/ngrok-messaging-endpoint.png)
+![Screenshot shows the messaging endpoint adding api.](../assets/images/include-files/ngrok-messaging-endpoint.png)
 
 4. Select **Apply**.
 
@@ -416,7 +416,7 @@ You have successfully set up a bot in Azure Bot service.
 
 1. Go to the **appsettings.json** file in cloned repository.
 
-[Screenshot of cloned repository with the file path and appsettings JSON file highlighted in red.](./assets/images/sbs-messagingextension-action/appsettingslocation.png)
+[Screenshot of cloned repository with the file path and appsettings JSON file highlighted in red.](../assets/images/sbs-messagingextension-action/appsettingslocation.png)
 
 2. Open the **appsettings.json** file and update the following information:  
 
@@ -426,18 +426,18 @@ You have successfully set up a bot in Azure Bot service.
     - Leave `"MicrosoftAppTenantId"` blank for MultiTenant bot.
     - Set `"BaseUrl"` to the fully qualified domain name.
 
-![Screenshot of appsettings JSON file displaying the appsettings information.](./assets/images/sbs-messagingextension-action/json-file.png)
+![Screenshot of appsettings JSON file displaying the appsettings information.](../assets/images/sbs-messagingextension-action/json-file.png)
 
 3. Go to the **manifest.json** file in the cloned repository.
 
-![Screenshot of Teams App Manifest folder with the file path and manifest file highlighted in red.](./assets/images/sbs-messagingextension-action/manifestlocation.png)
+![Screenshot of Teams App Manifest folder with the file path and manifest file highlighted in red.](../assets/images/sbs-messagingextension-action/manifestlocation.png)
 
 1. Open the **manifest.json** file and make the following changes:
 
     - Replace the `<<validDomains>>` with your fully qualified domain name.
     - Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
 
- ![Screenshot of manifest page with the ID, bot ID, and Valid domains highlighted in red.](./assets/images/sbs-messagingextension-action/botid1.png)
+ ![Screenshot of manifest page with the ID, bot ID, and Valid domains highlighted in red.](../assets/images/sbs-messagingextension-action/botid1.png)
 
 ## Build and run the service
 
@@ -449,21 +449,21 @@ To build and run the service, use Visual Studio or Command line.
 
 2. Go to File > Open > Project/Solution.
 
- ![Screenshot of Visual Studio with the Project/Solution highlighted in red.](./assets/images/sbs-messagingextension-action/VSopenfile.png)
+ ![Screenshot of Visual Studio with the Project/Solution highlighted in red.](../assets/images/sbs-messagingextension-action/VSopenfile.png)
 
 3. From csharp folder, select the TeamsMessagingExtensionsAction.csproj file.
 
-![Screenshot of cloned repository with the TeamsMessagingExtensionsAction.csproj highlighted in red.](./assets/images/sbs-messagingextension-action/openproject.png)
+![Screenshot of cloned repository with the TeamsMessagingExtensionsAction.csproj highlighted in red.](../assets/images/sbs-messagingextension-action/openproject.png)
 
 4. Press F5 to run the project.
 
 5. Select Yes if the following dialog appears:
 
-![Screenshot of Security Warning with the Yes option highlighted in red.](./assets/images/sbs-messagingextension-action/certificate.png)
+![Screenshot of Security Warning with the Yes option highlighted in red.](../assets/images/sbs-messagingextension-action/certificate.png)
 
 A webpage appears with a message Your bot is ready!.
 
-![Screenshot of the webpage that displays Your bot is ready!](./assets/images/sbs-messagingextension-action/appisready.png)
+![Screenshot of the webpage that displays Your bot is ready!](../assets/images/sbs-messagingextension-action/appisready.png)
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Build+and+run+the+service+using+Visual+Studio&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meetingextension-action%3Ftabs%3Ddev%252Clatestversionofvisualstudio%26tutorial-step%3D6&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-meetingextension-action.yml&documentVersionIndependentId=53b6fe7f-5051-d9d3-57e4-1d339c25ad65&platformId=28e8e36c-27eb-6659-de89-1d9872d985a0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
@@ -476,7 +476,7 @@ Go to **samples** > **msgext-action** > **csharp** in Command Prompt window and 
     dotnet run
  ```
 
-![Screenshot of Command Prompt - dotnet run with the dotnet run command](./assets/images/sbs-messagingextension-action/dotnetruncmd.png)
+![Screenshot of Command Prompt - dotnet run with the dotnet run command](../assets/images/sbs-messagingextension-action/dotnetruncmd.png)
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Build+and+run+the+service+using+Command+line&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meetingextension-action%3Ftabs%3Dcli%252Clatestversionofvisualstudio%26tutorial-step%3D6&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-meetingextension-action.yml&documentVersionIndependentId=53b6fe7f-5051-d9d3-57e4-1d339c25ad65&platformId=28e8e36c-27eb-6659-de89-1d9872d985a0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
@@ -490,7 +490,7 @@ Go to **samples** > **msgext-action** > **csharp** in Command Prompt window and 
        * icon-outline.png
        * icon-color.png
 
-   ![Screenshot of cloned repository with the Mes.saging extension zip file highlighted in red.](./assets/images/sbs-messagingextension-action/zipfile.png)
+   ![Screenshot of cloned repository with the Mes.saging extension zip file highlighted in red.](../assets/images/sbs-messagingextension-action/zipfile.png)
 
 3. In the Teams client, select the **Apps** icon.
 
@@ -500,24 +500,24 @@ Go to **samples** > **msgext-action** > **csharp** in Command Prompt window and 
 
 6. Look for the option to **Upload a custom app**. If you see the option, custom app upload is enabled.
 
-![Screenshot shows the upload a custom app.](./assets/images/tab-device-permission/custom-upload.png)
+![Screenshot shows the upload a custom app.](../assets/images/tab-device-permission/custom-upload.png)
 
 > [!NOTE]
 > Contact your Teams administrator, if you don't find the option to upload a custom app.
 
 7. Select **Open** to upload the messaging.zip file that you created in the TeamsAppManifest folder.
 
-![Screenshot of the cloned repository displaying the messaging zip file.](./assets/images/sbs-messagingextension-action/openzipfile.png)
+![Screenshot of the cloned repository displaying the messaging zip file.](../assets/images/sbs-messagingextension-action/openzipfile.png)
 
 8. Select **Add**.
 
-![Screenshot of the app details dialog to add the message extension app.](./assets/images/sbs-messagingextension-action/add-app.png)
+![Screenshot of the app details dialog to add the message extension app.](../assets/images/sbs-messagingextension-action/add-app.png)
 
 9. Select **Open** to open the app in personal scope.
 
 Alternatively, you can either search and select the required scope or select a channel, chat, or meeting from the list, and move through the dialog to select **Go**.
 
-![Screenshot of the scope selection dialog to select the required scope.](./assets/images/sbs-messagingextension-action/add-scope.png)
+![Screenshot of the scope selection dialog to select the required scope.](../assets/images/sbs-messagingextension-action/add-scope.png)
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+Action+Message+Extension+app+to+Teams&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meetingextension-action%3Ftabs%3Ddev%252Clatestversionofvisualstudio%26tutorial-step%3D7&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-meetingextension-action.yml&documentVersionIndependentId=53b6fe7f-5051-d9d3-57e4-1d339c25ad65&platformId=28e8e36c-27eb-6659-de89-1d9872d985a0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
@@ -526,25 +526,25 @@ Alternatively, you can either search and select the required scope or select a c
 
 1. Select **Create Card** command from the compose box command list.
 
-![Create Card](./assets/images/sbs-messagingextension-action/create-card.png)
+![Create Card](../assets/images/sbs-messagingextension-action/create-card.png)
 
 2. Enter your information in the modal pop-up window.
 
-![Modal Pop-up](./assets/images/sbs-messagingextension-action/output-card.png)
+![Modal Pop-up](../assets/images/sbs-messagingextension-action/output-card.png)
 
 3. Select **Submit**.
 
-[Submit](./assets/images/sbs-messagingextension-action/submit.png)
+![Submit](../assets/images/sbs-messagingextension-action/submit.png)
 
 4. Select More options (...) from the overflow menu.
 
 5. Select **More actions** > **Share Message**.
 
-![Share Message](./assets/images/sbs-messagingextension-action/sharemessage.png)
+![Share Message](../assets/images/sbs-messagingextension-action/sharemessage.png)
 
 6. If you want to include an image, select the **Include image in Hero Card** checkbox and then select **Submit**.
 
-![Include Image](./assets/images/sbs-messagingextension-action/sharemessageoutput.png)
+![Include Image](../assets/images/sbs-messagingextension-action/sharemessageoutput.png)
 
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Interact+with+the+app+in+Teams&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meetingextension-action%3Ftabs%3Ddev%252Clatestversionofvisualstudio%26tutorial-step%3D8&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-meetingextension-action.yml&documentVersionIndependentId=53b6fe7f-5051-d9d3-57e4-1d339c25ad65&platformId=28e8e36c-27eb-6659-de89-1d9872d985a0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
@@ -552,7 +552,7 @@ Alternatively, you can either search and select the required scope or select a c
 
 Did you come up with something like this?
 
-![Screenshot of the message extension output after you have successfully completed the step-by-step guide](./assets/images/sbs-messagingextension-action/sharemessageoutput1.png)
+![Screenshot of the message extension output after you have successfully completed the step-by-step guide](../assets/images/sbs-messagingextension-action/sharemessageoutput1.png)
 
 You've completed the tutorial to get started with a **Action Message Extension** app!
 
