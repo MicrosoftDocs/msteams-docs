@@ -407,7 +407,7 @@ The following image displays the **Client Id**:
 ![Screenshot shows the manifest option and accesstoken details in Azure portal.](../../assets/images/include-files/manifest-token.png)
 
 > [!div class="button"]
-[I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Update+the+manifest)
+[I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+client+application)
 
 ## Create Your Bot
 
