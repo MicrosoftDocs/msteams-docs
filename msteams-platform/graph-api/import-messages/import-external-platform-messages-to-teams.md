@@ -15,18 +15,32 @@ Use Microsoft Graph to migrate users' existing message history and data from an 
 > [!NOTE]
 > In the future, Microsoft might require you or your customers to pay extra fees based on the amount of data imported.
 
+## Prerequisites
+
+### Analyze and prepare message data
+
+* Review the third-party messages to decide what is migrated.  
+* Extract the selected data from the third-party channel or chat.  
+* Map the third-party channel or chat structure to the Teams structure.  
+* Convert imported data into a format that's suitable for migration.  
+
+### Set up your Microsoft 365 tenant
+
+* Ensure that a Microsoft 365 tenant exists for the import data. For more information on setting up a Microsoft 365 tenancy for Teams, see [prepare your Microsoft 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).
+* Make sure that team members are in Microsoft Entra ID. For more information, see [add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory) to Microsoft Entra ID.
+
 ## Understand the API migration workflow
 
 You can ensure a seamless transition of historical messages, in both existing and newly created channels or chats by performing the following steps:
 
 1. [Create or select an existing channel or chat](#create-or-select-an-existing-channel-or-chat)
-1. [Use startMigration API](#use-startmigration-api)
+1. [Use startMigration API to import messages](#use-startmigration-api-to-import-messages)
 1. [Call GET API to check migrationMode status](#call-get-api-to-check-migrationmode-status)
 1. [Import messages using POST API](#import-messages-using-post-api)
 1. [Complete channel and chat migration](#complete-channel-and-chat-migration)
 1. [Call GET API to verify migrationMode](#call-get-api-to-verify-migrationmode)
 
-## Permissions
+### Permissions
 
 Delegated authentication isn't supported.
 
@@ -34,11 +48,18 @@ Delegated authentication isn't supported.
 |---------|---------|---------|---------|
 | `Teamwork.Migrate.All`|  Manage migration to Microsoft Teams | Application-only  |`POST /teams`|
 
+### Supported channel or chat types
+
+|Entities |Sub type  |Migration mode Support |Notes|
+|---------|---------|---------|---------|
+|**Channels** | Standard, Private, Shared | New and existing | Must be created or already in migration mode |
+|**Chats** | Group, 1:1 | New and existing | Meeting chats not supported; external members supported |
+
 ## Create or select an existing channel or chat
 
-You can either create a new channel or chat in a Team or use an existing channel or chat, to migrate users' message history from any external application to Teams.
+You can create a new channel or chat in a Team, or use an existing one, to migrate users' message history from an external application to Teams.
 
-## Use startMigration API
+## Use startMigration API to import messages
 
 * Use the `startMigration` API, to enable migration mode on Teams channels or chats, and allow import of historical messages. Previously, import operations were restricted to newly created standard channels and chats in an empty state. See [Import third-party platform messages to Teams using Microsoft Graph](import-external-messages-to-teams.md).
 
@@ -76,7 +97,7 @@ Response of the request: **HTTP/1.1 204 No Content**
 
 #### Chat migration
 
-* The supported chat types include Group chats and One-on-one (1:1) chats. Meeting chats are not supported. External members are supported in all applicable chat types.
+* The supported chat types include Group chats and One-on-one (1:1) chats. Meeting chats aren't supported. External members are supported in all applicable chat types.
 * The startMigration API initiates the message migration process by setting the migrationMode property to 'inProgress' for a specified chat.
 
 #### Chat request
@@ -114,7 +135,7 @@ Response of the request: **HTTP/1.1 204 No Content**
 
 ## Call GET API to check migrationMode status
 
-After completing Step 2, call the `GET channel` or `GET chat` API to confirm that the *migrationMode* property is set to *inProgress*. For more information see [GET Channel](/graph/api/channel-get?view=graph-rest-1.0&tabs=http)
+After completing Step 2, call the `GET channel` or `GET chat` API to confirm that the *migrationMode* property is set to *inProgress*. For more information, see [GET Channel](/graph/api/channel-get?view=graph-rest-1.0&tabs=http)
 
 ```HTTP
 GET /teams/{team-id}/channels/{channel-id}
@@ -162,16 +183,9 @@ POST /chats/{chat-id}/completeMigration
 > * Certain operations such as sending messages and adding members are restricted.
 > * Calling the completeMigration API means that channel or chat migration is complete and normal operations can resume.
 
-#### Supported channel or chat types
-
-|Entity Type |Sub Type  |Migration Mode Support |Notes|
-|---------|---------|---------|---------|
-|**Channels**   |  General, Standard, Private, Shared   | New and existing  |  Must be created or already in migration mode    |
-|**Chats**    |   Group, One-on-one (1:1)   | New and existing  | Meeting chats not supported; external members supported        |
-
 ## Call GET API to verify migrationMode
 
-to verify that the migrationMode property is marked as **completed**
+To verify that the migrationMode property is marked as **completed**
 
 ## See also
 
