@@ -133,6 +133,8 @@ POST https://graph.microsoft.com/beta/teams/57fb72d0-d811-46f4-8947-305e6072eaa5
 
 ```
 
+### End Tabset {.tabset}
+
 ## Step 3: Call GET API to check migrationMode status
 
 Call `GET channel` or `GET chat` APIs to confirm that the `migrationMode` property is set to `inProgress`. For more information on the APIs, see:
