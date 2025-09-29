@@ -297,7 +297,7 @@ HTTP/1.1 200 OK
 Use `completeMigration` API to finish the migration process for both new and existing channels and chats:
 Previously, this operation was limited to newly created standard channels and chats, initiated for the initial migration flow.
 
-### [Complete channel migration](#tab/completechannelmigration)
+### Complete channel migration
 
 * When a channel is created in migration mode for the initial import flow, calling the `completeMigration` API updates the `migrationMode` property to completed. This change is permanent and marks the channel as fully migrated.
 * After calling `completeMigration`, you can still import extra messages by using the `startMigration` API.
@@ -308,12 +308,12 @@ Previously, this operation was limited to newly created standard channels and ch
 POST /teams/{team-id}/channels/{channel-id}/completeMigration 
 ```
 
-### [Complete chat migration](#tab/completechatmigration)
+### Complete chat migration
 
 * For existing chats, which are already in migration mode, call `completeMigration` API to update the `migrationMode` property to completed. This process marks the chat as fully migrated.
 * After calling `completeMigration` on a new or existing chat, you can continue importing messages by using `startMigration` API.
 
-#### Request for Completing Chat Migration
+#### Request for completing chat migration
 
 ```HTTP
 POST /chats/{chat-id}/completeMigration 
@@ -321,7 +321,7 @@ POST /chats/{chat-id}/completeMigration
 
 ## Step 6: Call GET API to verify migrationMode
 
-Call `GET channel` or `GET chat` API, to verify that the migrationMode property is marked as completed.
+Call `GET channel` or `GET chat` API, to verify that the `migrationMode` property is marked as completed.
 
 ### Import content scope
 
