@@ -134,7 +134,7 @@ Your app is registered in Microsoft Entra ID. The app overview page appears.
 
 ### Create a tunnel
 
-#### [Dev Tunnel](#tab/dev)
+#### [Dev tunnel](#tab/dev)
 
 1. Open Visual Studio.
 2. Select **Create a new project**.

@@ -10,7 +10,7 @@ ms.localizationpriority: high
 
 Teams action based message extension allow users to interact with web services in the Microsoft Teams client. Message extensions help to initiate actions in an external system from the compose message area, the command box, or directly from a message.
 
-**Key features of action based message extension**:
+**Key features of action-based message extension**:
 
 * Presents the user with a modal pop-up to collect or display information.
 * Triggers the action commands from the compose message area, the command box, or from a message. 
@@ -58,7 +58,7 @@ The following steps help you to create and register your bot in Azure portal:
 * Create a tunnel to your web server's endpoints using dev tunnel (recommended) or ngrok.
 * Add messaging endpoint to the dev tunnel that you created.
 
-## Add App Registration
+## Add app registration
 
 1. Go to [Azure Portal](https://ms.portal.azure.com/#home)
 
@@ -169,7 +169,7 @@ The **Add a client secret** window appears.
 > [!div class="button"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Set+up+local+environment&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meetingextension-action%3Ftabs%3Ddev%252Clatestversionofvisualstudio%26tutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-meetingextension-action.yml&documentVersionIndependentId=53b6fe7f-5051-d9d3-57e4-1d339c25ad65&platformId=28e8e36c-27eb-6659-de89-1d9872d985a0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
-## Add Application ID URI
+## Add application ID URI
 
 1. In the left pane, under **Manage**, select **Expose an API**.
 
@@ -481,7 +481,7 @@ Go to **samples** > **msgext-action** > **csharp** in Command Prompt window and 
 
 ---
 
-## Add Action Message Extension app to Teams
+## Add action message extension app to Teams
 
 1. In your cloned repository, go to **samples** > **msgext-action** > **csharp** > **TeamsAppManifest**.
 
@@ -548,7 +548,7 @@ Alternatively, you can either search and select the required scope or select a c
 
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Interact+with+the+app+in+Teams&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-meetingextension-action%3Ftabs%3Ddev%252Clatestversionofvisualstudio%26tutorial-step%3D8&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-meetingextension-action.yml&documentVersionIndependentId=53b6fe7f-5051-d9d3-57e4-1d339c25ad65&platformId=28e8e36c-27eb-6659-de89-1d9872d985a0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
-## Complete Challenge
+## Complete challenge
 
 Did you come up with something like this?
 
