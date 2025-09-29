@@ -162,11 +162,11 @@ The following steps help you to create and register your bot in the Azure portal
 
 2. Next to **Application ID URI**, select **Add**.
 
-:::image type="content" source="~/assets/images/bots/expose-api-add-uri.png" alt-text="Screenshot shows the option to add Application ID URI.":::
+![Screenshot shows the option to add Application ID URI.](../assets/images/bots/expose-api-add-uri.png)
 
 1. Update the **Application ID URI** in the `api://botid-{AppID}` format and select **Save**.
 
-:::image type="content" source="~/assets/images/bots/app-id-uri1.png" alt-text="Screenshot shows the option to add the app ID URI and save.":::
+![Screenshot shows the option to add the app ID URI and save.](../assets/images/bots/app-id-uri1.png)
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Application+ID+URI&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-bots-with-sso%3Ftabs%3Ddev%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-bots-with-sso.yml&documentVersionIndependentId=b410630d-3624-e389-480f-ea3307a3b774&author=surbhigupta&platformId=4b2022ca-ee48-5c9a-b390-7ed303c02fd8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
@@ -203,7 +203,7 @@ Create an Azure bot resource.
 8. Select your **Subscription** from the dropdown list.
 9. Select your **Resource group** from the dropdown list.
 
-![Screenshot shows the option resource group and subscription in the Azure portal.](./assets/images/include-files/create-azure-bot.png)
+![Screenshot shows the option resource group and subscription in the Azure portal.](../assets/images/include-files/create-azure-bot.png)
 
 If you don't have an existing resource group, you can create a new resource group. To create a new resource group, follow these steps:
     a. Select **Create new**.
@@ -279,7 +279,7 @@ The bot takes a few minutes to provision.
 
 3. Update the **Messaging endpoint** in the format `https://your-devtunnel-domain/api/messages`.
 
-![Screenshot shows the messaging endpoint adding api.](./assets/images/include-files/devtunnels-messaging-endpoint.png)
+![Screenshot shows the messaging endpoint adding api.](../assets/images/include-files/devtunnels-messaging-endpoint.png)
 
 4. Select **Apply**.
 
@@ -292,7 +292,7 @@ You've successfully set up a bot in Azure Bot service.
 
 1. From ngrok, copy the HTTPS URL.
 
-![Screenshot shows the ngrok HTTPS URL.](./assets/images/include-files/ngrok-url.png)
+![Screenshot shows the ngrok HTTPS URL.](../assets/images/include-files/ngrok-url.png)
 
 > [!NOTE]
 > The HTTPS URL in your ngrok is a fully qualified domain name.
@@ -302,7 +302,7 @@ You've successfully set up a bot in Azure Bot service.
 
 3. Update the **Messaging endpoint** in the format `https://your-ngrok-domain/api/messages`.
 
-![Screenshot shows the messaging endpoint adding api.](./assets/images/include-files/ngrok-messaging-endpoint.png)
+![Screenshot shows the messaging endpoint adding api.](../assets/images/include-files/ngrok-messaging-endpoint.png)
 
 4. Select **Apply**.
 
@@ -332,7 +332,7 @@ You have successfully set up a bot in Azure Bot service.
 
 4. Select **Save**.
 
-![Screenshot shows the values added to set OAuth connection.](./assets/images/include-files/new-connection-setting.png)
+![Screenshot shows the values added to set OAuth connection.](../assets/images/include-files/new-connection-setting.png)
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+an+OAuth+connection+settings&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-bots-with-sso%3Ftabs%3Ddev%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-bots-with-sso.yml&documentVersionIndependentId=b410630d-3624-e389-480f-ea3307a3b774&author=surbhigupta&platformId=4b2022ca-ee48-5c9a-b390-7ed303c02fd8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
@@ -341,7 +341,7 @@ You have successfully set up a bot in Azure Bot service.
 
 1. Go to the **appsettings.json** file in the cloned repository.
 
-![Screenshot shows the location of appsettings json file.](./assets/images/teams-file-upload-bot/appsettings-file-location-bot-sso.png)
+![Screenshot shows the location of appsettings json file.](../assets/images/teams-file-upload-bot/appsettings-file-location-bot-sso.png)
 
 2. Open the **appsettings.json** file in Visual Studio and update the following information:
     * Set MicrosoftAppId to your bot's **Microsoft App ID**.
@@ -350,20 +350,20 @@ You have successfully set up a bot in Azure Bot service.
     * Set MicrosoftAppType to **MultiTenant**.
     * Set MicrosoftAppTenantId to **common**.
 
-![Screenshot shows the appsettings json.](./assets/images/teams-file-upload-bot/appsettings-json-bot-sso.png)
+![Screenshot shows the appsettings json.](../assets/images/teams-file-upload-bot/appsettings-json-bot-sso.png)
 
 ## Set up manifest file
 
 1. Go to the **manifest.json** file in the cloned repository.
 
-![Screenshot shows the selection of manifest json file.](./assets/images/teams-file-upload-bot/manifest-file-location.png)
+![Screenshot shows the selection of manifest json file.](../assets/images/teams-file-upload-bot/manifest-file-location.png)
 
 2. Open the **manifest.json** file and update the following changes:
 
     * Replace all occurrences of `"{TODO: MicrosoftAppId}"` with your **Microsoft App ID**.
     * Set `"<<domain-name>>"` to your ngrok or dev tunnel domain.
 
-![Screenshot shows the details filled in the manifest file in visual studio.](./assets/images/teams-file-upload-bot/manifest-bot-id-botsso.png)
+![Screenshot shows the details filled in the manifest file in visual studio.](../assets/images/teams-file-upload-bot/manifest-bot-id-botsso.png)
 
 ## Build and run the service
 
@@ -371,24 +371,24 @@ You have successfully set up a bot in Azure Bot service.
 
 2. Go to **File** > **Open** > **Project/Solution...**.
 
-![Screenshot of Visual Studio file menu. The menu entries titled Open under File menu and Project/Solution under Open are highlighted in red.](./assets/images/bots/project-solution_1.png)
+![Screenshot of Visual Studio file menu. The menu entries titled Open under File menu and Project/Solution under Open are highlighted in red.](../assets/images/bots/project-solution_1.png)
 
 3. From **bot-conversation-sso-quickstart** > **csharp_dotnetcore** folder, and select **BotConversationSsoQuickstart.sln** file.
 
-![Screenshot of Project file with the file path and BotSSOCSharp.csproj file highlighted in red.](./assets/images/bots/filepath_1.png)
+![Screenshot of Project file with the file path and BotSSOCSharp.csproj file highlighted in red.](../assets/images/bots/filepath_1.png)
 
 4. Select **F5**  to run the project.
 
 5. If a **Security Warning** dialog appears, select **Yes**.
 
-![Screenshot of Security Warning with the Yes option highlighted in red.](./assets/images/bots/certificate.png)
+![Screenshot of Security Warning with the Yes option highlighted in red.](../assets/images/bots/certificate.png)
 
 A webpage opens with a message **Your bot is ready!**.
 
 > [!NOTE]
 > This page appears only when you navigate to the localhost URL.
 
-![Screenshot of the webpage that displays Your bot is ready.](./assets/images/bots/yourbot.png)
+![Screenshot of the webpage that displays Your bot is ready.](../assets/images/bots/yourbot.png)
 
  <br>
 
@@ -419,7 +419,7 @@ If you get the **Unable to find package** error, follow these steps:
     * outline.png
     * color.png
 
-![Screenshot of Manifest folder with the Teams Bot zip folder highlighted in red.](./assets/images/bots/manifest.png)
+![Screenshot of Manifest folder with the Teams Bot zip folder highlighted in red.](../assets/images/bots/manifest.png)
 
 3. Go to Microsoft Teams
     a. In the Teams client, select **Apps**.
@@ -427,19 +427,19 @@ If you get the **Unable to find package** error, follow these steps:
     c. Select **Upload an app**.
     d. Look for the option to **Upload a custom app**.
 
-![Screenshot of Teams app with the Apps icon, Manage your apps, and showing the selection of Upload a custom app option highlighted in red.](./assets/images/bots/custom-app-upload.png)
+![Screenshot of Teams app with the Apps icon, Manage your apps, and showing the selection of Upload a custom app option highlighted in red.](../assets/images/bots/custom-app-upload.png)
 
 7. Select **Open** to upload the .zip file that you've created in the **Manifest** folder.
 
-![Screenshot of Manifest folder with Open option to upload the Teams Bot zip file highlighted in red.](./assets/images/bots/app-open.png)
+![Screenshot of Manifest folder with Open option to upload the Teams Bot zip file highlighted in red.](../assets/images/bots/app-open.png)
 
 8. Select **Add** to add the bot to your chat.
 
-![Screenshot of conversation bot with Add option highlighted.](./assets/images/bots/conversation-bot-add.png)
+![Screenshot of conversation bot with Add option highlighted.](../assets/images/bots/conversation-bot-add.png)
 
 9. Select **Open**.
 
-![Screenshot of scope selection dialog with Open option highlighted.](./assets/images/bots/conversation-bot-open.png)
+![Screenshot of scope selection dialog with Open option highlighted.](../assets/images/bots/conversation-bot-open.png)
 
 You can interact with the bot by sending it a message. The bot exchanges an SSO token and calls the Graph API on your behalf. It keeps you signed in unless you send a message to sign out.
 
@@ -447,7 +447,7 @@ You can interact with the bot by sending it a message. The bot exchanges an SSO 
 
 a. For desktop: Select **Continue** to give permissions to Teams client for accessing the bot.
 
-![Screenshot of additional permissions with Continue option highlighted in red.](./assets/images/bots/sbsdesktop-mobile-consent-request1.png)
+![Screenshot of additional permissions with Continue option highlighted in red.](../assets/images/bots/sbsdesktop-mobile-consent-request1.png)
 
 > [!NOTE]
 > Now you’ve configured SSO with your bot app and it's the only time you'll have to give consent.
@@ -457,7 +457,7 @@ a. For desktop: Select **Continue** to give permissions to Teams client for acce
 > [!NOTE]
 > Now you’ve configured SSO with your bot app in mobile, and it's the only time you'll have to give consent.
 
-![Screenshot of bot SSO output after you successfully completed the step-by-step guide.](./assets/images/bots/sbsdesktop-mobile-consent-request.png)
+![Screenshot of bot SSO output after you successfully completed the step-by-step guide.](../assets/images/bots/sbsdesktop-mobile-consent-request.png)
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Upload+the+bot+in+Teams&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-bots-with-sso%3Ftabs%3Ddev%26tutorial-step%3D7&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-bots-with-sso.yml&documentVersionIndependentId=b410630d-3624-e389-480f-ea3307a3b774&author=surbhigupta&platformId=4b2022ca-ee48-5c9a-b390-7ed303c02fd8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
@@ -466,7 +466,7 @@ a. For desktop: Select **Continue** to give permissions to Teams client for acce
 
 Did you come up with something like this?
 
-![Screenshot of the output after you successfully completed the step-by-step guide.](./assets/images/bots/sbs-desktop-mobile.png)
+![Screenshot of the output after you successfully completed the step-by-step guide.](../assets/images/bots/sbs-desktop-mobile.png)
 
 ## Congratulations
 
