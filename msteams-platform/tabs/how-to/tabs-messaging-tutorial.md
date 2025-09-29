@@ -494,7 +494,7 @@ You've successfully created your Azure bot.
 
 ## To add a messaging endpoint
 
-# [dev tunnel](#tab/dev2)
+### [Dev tunnel](#tab/dev2)
 
 1. Use the dev tunnel URL in the **Output** console as the messaging endpoint.
 
@@ -513,7 +513,7 @@ You've successfully set up a bot in Azure Bot service.
 > [!NOTE]
 > If the **Application Insights Instrumentation key** shows an error, update with **App ID**.
 
-# [ngrok](#tab/ngrok2)
+### [Ngrok](#tab/ngrok2)
 
 1. From ngrok, copy the HTTPS URL.
 
@@ -606,7 +606,7 @@ You have successfully set up a bot in Azure Bot service.
 
 To build and run the service, use Visual Studio or Command line.
 
-### [Visual Studio](#tab/Visual-Studio)
+### [Visual studio](#tab/Visual-Studio)
 
 1. Open Visual Studio.
 2. Select **File** > **Open** > **Project/Solution...**.
@@ -630,7 +630,7 @@ A webpage appears with a message **Your bot is ready!**
 > [!div class="button"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Build+and+run+service+using+Visual+Studio)
 
-### [Command Line](#tab/command-line)
+### [Command line](#tab/command-line)
 
 Go to the **csharp** folder in a Command Prompt window and enter the following command:
 
