@@ -63,10 +63,6 @@ To navigate to a specific chat conversation in Teams, use the following deep lin
 
 The query parameter is `chatId`, which represents chat ID of the conversation. The supported format for `chatId` is 19:xxx.
 
-**To get the chat ID**
-
-In the chat, point to a message, select **More options** > **Copy link**. The copied link contains the chat ID, which typically starts with `19:`.
-
 Example: `https://teams.microsoft.com/l/chat/19:c6d70e392a384916c3262b15406d763e@thread.v2/conversations`
 
 ## Deep link to navigate to channel conversation
