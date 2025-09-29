@@ -211,7 +211,7 @@ The **Output** console shows the dev tunnel URL.
 ![Screenshot shows the url in the Visual Studio output console.](../../assets/images/include-files/output-console-url.png)
 
 > [!div class="button"]
-[I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+tunnel+using+dev+tunnel)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+App+Registration)
 
 #### [Ngrok](#tab/ngrok)
 
@@ -230,6 +230,7 @@ The window shows the HTTPS URL.
 
 > [!div class="button"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+tunnel+using+ngrok)
+
 ---
 
 ### Add a web authentication
@@ -535,8 +536,8 @@ You have successfully set up a bot in Azure Bot service.
 > [!NOTE]
 > If the **Application Insights Instrumentation key** shows an error update with **App ID**.
 
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+add+a+messaging+endpoint)
+> [!div class="button"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+App+Registration)
 
 ---
 
