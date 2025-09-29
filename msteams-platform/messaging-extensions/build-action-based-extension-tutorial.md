@@ -534,7 +534,7 @@ Alternatively, you can either search and select the required scope or select a c
 
 3. Select **Submit**.
 
-![Submit](../assets/images/sbs-messagingextension-action/submit.png)
+![Submit button screenshot](../assets/images/sbs-messagingextension-action/submit.png)
 
 4. Select More options (...) from the overflow menu.
 
