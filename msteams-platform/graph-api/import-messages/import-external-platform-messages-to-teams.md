@@ -5,7 +5,7 @@ ms.localizationpriority: high
 author: "surbhigupta"
 ms.topic: overview
 ms.owner: mehakagarwal
-ms.date: 09/26/2025
+ms.date: 09/30/2025
 ---
 
 # Import external platform messages to Teams via Microsoft Graph
@@ -35,11 +35,11 @@ Delegated authentication isn't supported.
 You can import historical messages seamlessly, in both; existing and newly created channels or chats by performing the following migration steps:
 
 1. [Create or use an existing channel or chat](#step-1-create-or-use-an-existing-channel-or-chat)
-1. [Step 2: Enable migration mode to import messages](#step-2-enable-migration-mode-to-import-messages)
-1. [Step 3: Call GET API to check migrationMode status](#step-3-call-get-api-to-check-migrationmode-status)
-1. [Step 4: Import messages using POST API](#step-4-import-messages-using-post-api)
-1. [Step 5: Complete channel and chat migration](#step-5-complete-channel-and-chat-migration)
-1. [Step 6: Call GET API to verify migrationMode](#step-6-call-get-api-to-verify-migrationmode)
+1. [Enable migration mode to import messages](#step-2-enable-migration-mode-to-import-messages)
+1. [Call GET API to check the migration status](#step-3-call-get-api-to-check-the-migration-status)
+1. 
+1. [Complete channel and chat migration](#step-5-complete-channel-and-chat-migration)
+1. [Call GET API to verify migrationMode](#step-6-call-get-api-to-verify-migrationmode)
 
 ## Step 1: Create or use an existing channel or chat
 
@@ -122,16 +122,16 @@ POST https://graph.microsoft.com/beta/teams/57fb72d0-d811-46f4-8947-305e6072eaa5
 
 ---
 
-## Step 3: Call GET API to check migrationMode status
+## Step 3: check the migration status
 
-Call `GET channel` or `GET chat` APIs to confirm that the `migrationMode` property is set to `inProgress`. For more information on the APIs, see:
+Call `GET channel` or `GET chat` APIs to confirm that the `migrationMode` property is set to `inProgress`. For more information see:
 
 * [GET channel](/graph/api/channel-get?view=graph-rest-1.0&tabs=http&preserve-view=true)
 * [GET chat](/graph/api/chat-get?view=graph-rest-1.0&tabs=http&preserve-view=true)
 
-## Step 4: Import messages using POST API
+## Step 4: Import messages 
 
-Use POST API to import back-in-time messages using the `createdDateTime`  and `from` keys in the request body.
+Use the `POST` API to import back-in-time messages using the `createdDateTime`  and `from` keys in the request body.
 
 > [!NOTE]
 >
