@@ -10,37 +10,12 @@ ms.date: 09/26/2025
 
 # Import external platform messages to Teams via Microsoft Graph
 
-Use Microsoft Graph to migrate users' existing message history and data from an external system into Teams. Users can continue their conversations seamlessly without interruption, by recreating the messaging hierarchy from a third-party platform directly within Teams.
+Use Microsoft Graph to import users' existing message history and data from an external system into Teams. Users can continue their conversations seamlessly without interruption, by recreating the messaging hierarchy from a third-party platform directly within Teams.
 
 > [!NOTE]
 > In the future, Microsoft might require you or your customers to pay extra fees based on the amount of data imported.
 
-## Prerequisites
-
-### Analyze and prepare message data
-
-* Review the third-party messages to decide what is migrated.  
-* Extract the selected data from the third-party channel or chat.  
-* Map the third-party channel or chat structure to the Teams structure.  
-* Convert imported data into a format that's suitable for migration.  
-
-### Set up your Microsoft 365 tenant
-
-* Ensure that a Microsoft 365 tenant exists for the import data. For more information on setting up a Microsoft 365 tenancy for Teams, see [prepare your Microsoft 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).
-* Make sure that team members are in Microsoft Entra ID. For more information, see [add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory) to Microsoft Entra ID.
-
-## Understand the migration workflow
-
-You can ensure a seamless transition of historical messages, in both existing and newly created channels or chats by performing the following steps:
-
-* [Step 1: Create or select an existing channel or chat](#step-1-create-or-select-an-existing-channel-or-chat)
-* [Step 2: Use startMigration API to import messages](#step-2-use-startmigration-api-to-import-messages)
-* [Step 3: Call GET API to check migrationMode status](#step-3-call-get-api-to-check-migrationmode-status)
-* [Step 4: Import messages using POST API](#step-4-import-messages-using-post-api)
-* [Step 5: Complete channel and chat migration](#step-5-complete-channel-and-chat-migration)
-* [Step 6: Call GET API to verify migrationMode](#step-6-call-get-api-to-verify-migrationmode)
-
-### Permissions
+## Permissions
 
 Delegated authentication isn't supported.
 
@@ -55,18 +30,28 @@ Delegated authentication isn't supported.
 |**Channels** | Standard, Private, Shared | New and existing | Must be created or already in migration mode |
 |**Chats** | Group, 1:1 | New and existing | Meeting chats not supported; external members supported |
 
-## Step 1: Create or select an existing channel or chat
+## Understand the import process
 
-You can create a new channel or chat in a Team, or use an existing one, to migrate users' message history from an external application to Teams.
+You can import historical messages seamlessly, in both; existing and newly created channels or chats by performing the following migration steps:
 
-## Step 2: Use startMigration API to import messages
+1. [Create or use an existing channel or chat](#step-1-create-or-use-an-existing-channel-or-chat)
+1. [Step 2: Enable migration mode to import messages](#step-2-enable-migration-mode-to-import-messages)
+1. [Step 3: Call GET API to check migrationMode status](#step-3-call-get-api-to-check-migrationmode-status)
+1. [Step 4: Import messages using POST API](#step-4-import-messages-using-post-api)
+1. [Step 5: Complete channel and chat migration](#step-5-complete-channel-and-chat-migration)
+1. [Step 6: Call GET API to verify migrationMode](#step-6-call-get-api-to-verify-migrationmode)
 
-* Use `startMigration` API, to enable migration mode on Teams channels or chats, and allow import of historical messages. Previously, import operations were restricted to newly created standard channels and chats in an empty state.
-* Define a minimum timestamp for messages to be migrated. The provided timestamp must be older than the channel or chat’s current `creationDateTime` and replaces it during migration.
+## Step 1: Create or use an existing channel or chat
+
+You can create a new channel or chat in a team, or use existing ones, to migrate users' message history from an external application to Teams.
+
+## Step 2: Enable migration mode to import messages
+
+* Use the `startMigration` API, to enable migration mode on Teams channels or chats, and allow import of historical messages.
+* Define a minimum timestamp for messages to be migrated. The provided timestamp must be older than the channel or chat’s current `createdDateTime`. The provided timestamp replaces the existing `createdDateTime` of the channel.
+* The`creationDateTime`property is optional in a request body. If omitted, the `startMigration` API uses the current date and time as a minimum timestamp.
 
 ### [Channel migration](#tab/channelmigration)
-
-You can provide a request body to specify the minimum timestamp for the messages to be migrated, optionally.
 
 #### Channel request
 
@@ -77,6 +62,8 @@ POST  /teams/{team-id}/channels/{channel-id}/startMigration
 "conversationcreationDateTime": "2024-01-01T00:00:00Z"
 }
 ```
+
+`conversationCreationDateTime` must be greater than the minimum value for`DateTimeOffset` and less than the current value of the channel's `createdDateTime`.
 
 #### Channel response
 
@@ -100,7 +87,7 @@ POST https://graph.microsoft.com/beta/teams/57fb72d0-d811-46f4-8947-305e6072eaa5
 
 ### [Chat migration](#tab/chatmigration)
 
-* `startMigration` API initiates the message migration process by setting the migrationMode property to 'inProgress' for a specified chat.
+The `startMigration` API initiates the message migration process by setting the `migrationMode` property to `inProgress` for a specified chat.
 
 #### Chat request
 
