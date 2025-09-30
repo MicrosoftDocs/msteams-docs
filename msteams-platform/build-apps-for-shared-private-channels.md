@@ -1,5 +1,5 @@
 ---
-title: Teams Connects Shared and Private Channels
+title: Teams connect shared and private channels
 author: surbhigupta
 description: Learn about Teams Connect shared channels to securely collaborate with internal and external users in a shared space without switching tenants.
 ms.author: surbhigupta
@@ -83,7 +83,7 @@ See the following articles, for more information:
 
 > [!NOTE]
 >
-> * Tab and bot apps in shared and private channels are available in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](../cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](../sovereign-cloud.md) environments.
+> * Tab and bot apps in shared and private channels are available in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](concepts/cloud-overview.md), and [Teams operated by 21Vianet](concepts/sovereign-cloud.md) environments.
 > * SharePoint and the SharePoint pages apps aren't supported for shared channels in GCC, GCC High, DoD, and Teams operated by 21Vianet environments.                                                   |
 
 ### Get context for shared and private channels
@@ -94,8 +94,8 @@ When loading the content UX in a shared or private channel, use the data receive
 
 For more information to enable your tab, see:
 
-* [Get context for your tab for private channels](../../tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels)
-* [Get context in shared channels](../../tabs/how-to/access-teams-context.md#get-context-in-shared-channels)
+* [Get context for your tab for private channels](tabs/how-to/access-teams-context.md)
+* [Get context in shared channels](tabs/how-to/access-teams-context.md)
 
 ## Manage channel membership
 
@@ -107,9 +107,9 @@ GET /teams/{team-id}/channels/{channel-id}/allMembers``
 
 ### Identify members
 
-* Direct members: Users who are added directly to the channel, including users from other tenants (cross-tenants).
-* Indirect members: Users who are members of the team, with which the channel is shared, including teams in the same tenant or in a cross-tenant.
-* External members: Guest users, who are not part of your organization but have been granted access to a shared channel through guest access or cross-tenant collaboration.
+* **Direct members:** Users who are added directly to the channel, including users from other tenants (cross-tenants).
+* **Indirect members:** Users who are members of the team, with which the channel is shared, including teams in the same tenant or in a cross-tenant.
+* **External members:** Guest users, who are not part of your organization but have been granted access to a shared channel through guest access or cross-tenant collaboration.
 
 Additionally, you can identify whether a member of a shared channel is direct or indirect by checking the `@microsoft.graph.originalSourceMembershipUrl` annotation. This property identifies the source of a member’s access to a shared channel, as shown in the following table.
 
@@ -118,7 +118,7 @@ Additionally, you can identify whether a member of a shared channel is direct or
 | Direct Member   | Yes                 | The user is added directly to the shared channel.                                                                                                                                                           |
 | Indirect Member | Yes                 | The user accesses the shared channel through another team. The `@microsoft.graph.originalSourceMembershipUrl` property includes a URL that points to the source team and indicates indirect membership. |
 
-> [!Note]
+> [!NOTE]
 > You might receive duplicate notifications when a member is added to a shared channel. This scenario can happen if the member is already part of the shared channel directly or indirectly. Use the `List allMembers` API to view all the direct and indirect members. Ignore the notification if the member already exists; either directly or indirectly.
 
 ## Manage indirect membership across channels
@@ -148,11 +148,8 @@ GET /teams/{team-id}/channels/{channel-id}/sharedWithTeams
 ```HTTP
 GET /teams/{team-id}/channels/{channel-id}/sharedWithTeams/{sharewithteamsId}/allowedMembers
 ```
->[!Note]
+>[!NOTE]
 >`allowedMembers` API returns only newly associated users and doesn't apply to unshared events.
-
-
-
 
 #### Direct members
 
@@ -174,10 +171,10 @@ To retrieve direct members of a shared channel:
 
 Apps installed in shared channels receive notifications when users are added to or removed from a team that shares the channel. To receive these notifications, you must:
 
-1. [Install the app](../deploy-and-publish/apps-upload.md) in a host team and enable it for the shared channel.
+1. [Install the app](concepts/deploy-and-publish/apps-upload.md) in a host team and enable it for the shared channel.
 2. Create a valid Microsoft Graph change notification subscription to monitor associated team membership changes and shared or unshared events using supported APIs.
 
-To receive both direct and indirect member update notifications, you must include both the query string parameters when creating a subscription. If the query strings aren't provided, the subscription only delivers notifications for direct member updates. To learn more, see [Channel membership access](/graph/teams-changenotifications-channelmembership).
+To receive both direct and indirect member update notifications, you must include both the query string parameters when creating a subscription. If the query strings aren't provided, the subscription only delivers notifications for direct member updates. To learn more, see [Channel membership access](/graph/teams-changenotifications-channelmembership.md).
 
 ```HTTP
 /teams/{team-id}/channels/getAllMembers?notifyOnIndirectMembershipUpdate=true&suppressNotificationWhenSharedUnsharedWithTeam=true`
@@ -459,14 +456,14 @@ Following is the expected drive behavior of the channels:
 
 ### Manage file access for external or guest users
 
-#### [External users](#tab/external users)
+#### [External users](#tab/external-users)
 
 External users remain in their home tenant while accessing the host channel’s sharepoint site. To enable access:
 
 * Configure cross-tenant access on both sides.
 * Ensure your app is multi-tenant and has received consent in the host tenant.
 
-#### [Guest users](#tab/guest users)
+#### [Guest users](#tab/guest-users)
 
 The channel’s sharepoint site automatically grants access to all channel members, including tenant guests.
 
