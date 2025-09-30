@@ -55,9 +55,7 @@ To verify custom upload apps in Teams:
 3. Select **Upload an app**
 4. Look for the option **Upload a custom app**. If you see the option, custom app upload is enabled.
 
-:::image type="content" source="~/assets/images/bots/upload-a-custom-app-sso-bot-authentication.png" alt-text="Screenshot showing the Teams apps, Manage your apps, Upload an app, and Upload a custom app highlighted in red.":::
-
-
+![Screenshot showing the Teams apps, Manage your apps, Upload an app, and Upload a custom app highlighted in red.](../assets/images/bots/upload-a-custom-app-sso-bot-authentication.png)
 
 > [!NOTE]
 > Contact Teams administrator, if you don't have the option to upload a custom app.
@@ -106,16 +104,16 @@ The following steps help you to create and register your bot in the Azure portal
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+App+registration&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-bots-with-sso%3Ftabs%3Ddev%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-bots-with-sso.yml&documentVersionIndependentId=b410630d-3624-e389-480f-ea3307a3b774&author=surbhigupta&platformId=4b2022ca-ee48-5c9a-b390-7ed303c02fd8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
-**Configure SSO for your app**
+**Create a tunnel**
 
-# [dev tunnel](#tab/dev)
+# [Dev tunnel](#tab/dev)
 
 [!INCLUDE [Tunnel](../includes/get-started/dev-tunnel.md)]
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+tunnel+using+dev+tunnel&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-bots-with-sso%3Ftabs%3Ddev%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-bots-with-sso.yml&documentVersionIndependentId=b410630d-3624-e389-480f-ea3307a3b774&author=surbhigupta&platformId=4b2022ca-ee48-5c9a-b390-7ed303c02fd8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
-# [ngrok](#tab/ngrok)
+# [Ngrok](#tab/ngrok)
 
 [!INCLUDE [Tunnel](../includes/get-started/ngrok-tunnel.md)]
 

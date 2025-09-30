@@ -550,9 +550,6 @@
     - name: Build a dashboard tab app
       href: tabs/how-to/Build-a-dashboard-tab-app.md
       displayName: Dashboard, widget, Graph API call
-    - name: SSO for Tabs and Message Extensions
-      href: tabs/how-to/tabs-messaging-tutorial.md
-      displayName: Microsoft Entra SSO, web authentication, OAuth connection 
 - name: Build message extensions
   items:
   - name: What are message extensions?
@@ -570,6 +567,9 @@
     - name: Action-based Message Extensions
       href: messaging-extensions/build-action-based-extension-tutorial.md
       displayName: action-based message extension, Azure bot
+    - name: SSO for Teams and Message Extensions
+      href:  messaging-extensions/messaging-extension-tutorial.md
+      displayName: Microsoft Entra SSO, web authentication, OAuth connection 
   - name: Build message extensions using Bot Framework  
     items:
     - name: Bot-based message extensions

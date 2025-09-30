@@ -1,14 +1,14 @@
 ---
-title: Enable Single Sign-On (SSO) for Microsoft Teams Tabs and Message Extensions
+title: Enable Single Sign-On (SSO) for Microsoft Teams and Message Extensions
 
 ms.date: 07/31/2025
 
 ms.topic: tutorial
 
-description: Tutorial for enabling SSO for Microsoft Teams Tabs and Message Extensions
+description: Tutorial for enabling SSO for Microsoft Teams and Message Extensions
 
 ---
-# SSO for tabs and message extension
+# SSO for Teams and message extension
 
 The  Microsoft Entra single sign-on (Microsoft Entra SSO) helps to authenticate users in Teams.
 **Key aspects of Microsoft Entra SSO**:
@@ -17,7 +17,7 @@ The  Microsoft Entra single sign-on (Microsoft Entra SSO) helps to authenticate 
   * Allows the user to sign in to other devices without entering credentials again.
   * Obtains token for the signed in user.
 
-This step-by-step guide helps you to create tabs and message extensions enabling Microsoft Entra SSO authentication. You'll see the following output:
+This step-by-step guide helps you to create and message extensions enabling Microsoft Entra SSO authentication. You'll see the following output:
 
 ![Screenshot of the tab and message extension with SSO authentication output after you have successfully completed the step-by-step guide](../../assets/images/Tab-ME-SSO/hello-megan-profile245-1.png)
 
@@ -29,7 +29,7 @@ This step-by-step guide helps you to create tabs and message extensions enabling
 |[Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
 |[.NET Core SDK](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the latest version, install the portable version. |
 |[Visual Studio 2022](https://visualstudio.microsoft.com) | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
-|Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. You can also use [ngrok](https://ngrok.com/downloads) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
+|Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. You can also use [ngrok](https://ngrok.com/downloads) as a tunnel to connect your development system to Teams. This package is installed within the project directory (using npm `devDependencies`). |
 
 > [!NOTE]
 > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/downloads).
