@@ -27,17 +27,17 @@ Delegated authentication isn't supported.
 
 |Entities |Sub type  |Migration mode support |Notes|
 |---------|---------|---------|---------|
-|**Channels** | Standard, Private, Shared | New and existing | Must be created or already in migration mode |
+|**Channels** | Standard, Private, Shared | New and existing | Channels must be created or already in migration mode |
 |**Chats** | Group, 1:1 | New and existing | Meeting chats not supported; external members supported |
 
 ## Understand the import process
 
-You can import historical messages seamlessly, in both; existing and newly created channels or chats by performing the following migration steps:
+You can import historical messages seamlessly, in both; existing and newly created channels or chats by performing the following steps:
 
 1. [Create or use an existing channel or chat](#step-1-create-or-use-an-existing-channel-or-chat)
 1. [Enable migration mode to import messages](#step-2-enable-migration-mode-to-import-messages)
-1. [Call GET API to check the migration status](#step-3-call-get-api-to-check-the-migration-status)
-1. 
+1. [Check the migration status](#step-3-check-the-migration-status)
+1. [Import messages](#step-4-import-messages)
 1. [Complete channel and chat migration](#step-5-complete-channel-and-chat-migration)
 1. [Call GET API to verify migrationMode](#step-6-call-get-api-to-verify-migrationmode)
 
@@ -122,14 +122,14 @@ POST https://graph.microsoft.com/beta/teams/57fb72d0-d811-46f4-8947-305e6072eaa5
 
 ---
 
-## Step 3: check the migration status
+## Step 3: Check the migration status
 
-Call `GET channel` or `GET chat` APIs to confirm that the `migrationMode` property is set to `inProgress`. For more information see:
+Call `GET channel` or `GET chat` APIs to confirm that the `migrationMode` property is set to `inProgress`. For more information, see:
 
 * [GET channel](/graph/api/channel-get?view=graph-rest-1.0&tabs=http&preserve-view=true)
 * [GET chat](/graph/api/chat-get?view=graph-rest-1.0&tabs=http&preserve-view=true)
 
-## Step 4: Import messages 
+## Step 4: Import messages
 
 Use the `POST` API to import back-in-time messages using the `createdDateTime`  and `from` keys in the request body.
 
@@ -274,8 +274,7 @@ HTTP/1.1 200 OK
 
 ## Step 5: Complete channel and chat migration
 
-Use `completeMigration` API to finish the migration process for both new and existing channels and chats:
-Previously, this operation was limited to newly created standard channels and chats, initiated for the initial migration flow.
+Use the `completeMigration` API to finish the migration process for both new and existing channels and chats, as follows:
 
 ### Complete channel migration
 
@@ -290,8 +289,8 @@ POST /teams/{team-id}/channels/{channel-id}/completeMigration
 
 ### Complete chat migration
 
-* For existing chats, which are already in migration mode, call `completeMigration` API to update the `migrationMode` property to completed. This process marks the chat as fully migrated.
-* After calling `completeMigration` on a new or existing chat, you can continue importing messages by using `startMigration` API.
+* For existing chats, which are already in migration mode, call the `completeMigration` API to update the `migrationMode` property to completed. This process marks the chat as fully migrated.
+* After calling `completeMigration` on a new or existing chat, you can continue importing messages by using the `startMigration` API.
 
 #### Request for completing chat migration
 
@@ -301,7 +300,7 @@ POST /chats/{chat-id}/completeMigration
 
 ## Step 6: Call GET API to verify migrationMode
 
-Call `GET channel` or `GET chat` API, to verify that the `migrationMode` property is marked as completed.
+Call `GET channel` or `GET chat` APIs, to verify that the `migrationMode` property is marked as completed.
 
 ### Import content scope
 
