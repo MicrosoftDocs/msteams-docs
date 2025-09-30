@@ -406,8 +406,6 @@ Here are the best practices you can adapt when defining the parameters:
 
 ## Enhance message extension to retrieve information through compound utterances
 
-[*Must fix*]
-
 > [!NOTE]
 > Search through dialog (referred as task module in TeamsJS v1.x) isn't supported in Microsoft 365 Copilot.
 

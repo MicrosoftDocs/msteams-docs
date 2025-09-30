@@ -1221,7 +1221,7 @@ The following code shows an example of reactions to a bot message:
 # [C#](#tab/dotnet)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onreactionsaddedasync?view=botbuilder-dotnet-stable&preserve-view=true#definition)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-message-reaction/csharp/Bots/MessageReactionBot.cs#L26)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/7fee0f1c1db4964296bbad0279a655cf32f10101/samples/bot-message-reaction/csharp/MessageReaction/Bot/MessageReactionBot.cs#L22)
 
 ```csharp
 protected override async Task OnReactionsAddedAsync(IList<MessageReaction> messageReactions, ITurnContext<IMessageReactionActivity> turnContext, CancellationToken cancellationToken)
@@ -1349,7 +1349,7 @@ The following code shows an example of reactions removed from bot message:
 # [C#](#tab/dotnet)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onreactionsremovedasync?view=botbuilder-dotnet-stable&preserve-view=true#definition)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-message-reaction/csharp/Bots/MessageReactionBot.cs#L44)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/7fee0f1c1db4964296bbad0279a655cf32f10101/samples/bot-message-reaction/csharp/MessageReaction/Bot/MessageReactionBot.cs#L27)
 
 ```csharp
 protected override async Task OnReactionsRemovedAsync(IList<MessageReaction> messageReactions, ITurnContext<IMessageReactionActivity> turnContext, CancellationToken cancellationToken)
@@ -1653,5 +1653,5 @@ In the development phase, it's always helpful to send meaningful messages in con
 * [API reference for the Bot Framework Connector service](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)
 * [Channel and group chat conversations with a bot](channel-and-group-conversations.md)
 * [Receive all channel messages for bot and agents](channel-messages-for-bots-and-agents.md)
-* [Create Teams conversation bot](../../../sbs-teams-conversation-bot.yml)
+* [Create Teams conversation bot](channel-and-group-conversations.md)
 * [Triggers in Bot Framework Composer](/composer/concept-events-and-triggers)
