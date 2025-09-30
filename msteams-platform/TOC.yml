@@ -673,7 +673,7 @@
     href: get-started/b2c-apps.md
     displayName: Teams meeting, Teams call, Teams meeting and call for external apps, external apps
 - name: Apps for Shared and Private Channels
-  href: build-apps-for-shared-private-channels.md
+  href: msteams-platform/build-apps-for-shared-private-channels.md
   displayName: shared channels, private channels
 - name: Build webhooks and connectors
   items:
