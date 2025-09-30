@@ -8,7 +8,7 @@ ms.topic: tutorial
 description: Tutorial for enabling SSO for Microsoft Teams and Message Extensions
 
 ---
-# SSO for Teams and message extension
+# SSO for message extension
 
 The  Microsoft Entra single sign-on (Microsoft Entra SSO) helps to authenticate users in Teams.
 **Key aspects of Microsoft Entra SSO**:
