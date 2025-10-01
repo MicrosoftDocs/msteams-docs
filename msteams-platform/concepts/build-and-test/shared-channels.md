@@ -68,7 +68,7 @@ You can enable app support for shared and private channels based on whether your
 * Combining or sharing data across multiple channels or teams
 * Customizing the experience based on whether users are internal, guests, or external participants 
 
-If it doesn't follow the preceding parameters, perform the following steps to enable app support in shared and private channels:
+SupportedChannelTypes is an optional property that enables your app in non-standard channels. If your app supports the team scope and the property is defined, Teams enables your app in each channel type accordingly. Private and shared channels are supported. For more information, see [supportedChannelTypes](/microsoft-365/extensibility/schema/root#supportedchanneltypes).
 
 1. Add ```"supportsChannelFeatures": "tier1"``` to your app manifest to enable support for shared and private channels.
 2. To verify expected behavior, test your app in standard, private, and shared channels.
@@ -536,7 +536,7 @@ This happens when the tenant’s sharing policy blocks the link type, or when th
 ## See also
 
 * [Build tabs for Teams](../../tabs/what-are-tabs.md)
-* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
+* [App manifest schema for Teams](/microsoft-365/extensibility/schema/)
 * [Shared channels in Microsoft Teams](/microsoftteams/shared-channels)
 * [Channel resource type](/graph/api/resources/channel)
 * [Retention policy for Teams locations](/microsoft-365/compliance/create-retention-policies)

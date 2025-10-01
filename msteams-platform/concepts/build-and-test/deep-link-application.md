@@ -100,7 +100,7 @@ You can configure deep links to browse within your app in the following ways:
 
 ### Configure deep link to browse within your app manually
 
-Personal tabs have a `personal` scope, while channel and group tabs use `team` or `group` scopes. The two tab types have slightly different syntax since only the configurable tab has a `channel` property associated with its context object. For more information on tab scopes, see [app manifest](~/resources/schema/manifest-schema.md).
+Personal tabs have a `personal` scope, while channel and group tabs use `team` or `group` scopes. The two tab types have slightly different syntax since only the configurable tab has a `channel` property associated with its context object. For more information on tab scopes, see [app manifest](/microsoft-365/extensibility/schema/root-static-tabs#scopes).
 
 # [Deep link format](#tab/format2)
 
@@ -387,7 +387,7 @@ The following table provides information on `APP_ID` and `BOT_APP_ID`:
 
 | Value | Type | Required | Description |
 | --- | --- | --- | --- |
-| `APP_ID` | string | Yes | - For third-party apps, use the app `id` from manifest or the `APP_ID` from Teams admin center as they're identical. <br> <br> - For custom apps or custom apps built for your org (LOB apps), use the `APP_ID` from Teams admin center or use the [Graph API](/graph/api/application-list). <br> <br> - The [validDomains array](~/resources/schema/manifest-schema.md#validdomains) in the manifest for `APP_ID` must contain the domain for `url` if `url` is present in the deep-link URL. The app ID is already known when a dialog is invoked from a tab or a bot, which is why it isn't included in `TaskInfo`. |
+| `APP_ID` | string | Yes | - For third-party apps, use the app `id` from manifest or the `APP_ID` from Teams admin center as they're identical. <br> <br> - For custom apps or custom apps built for your org (LOB apps), use the `APP_ID` from Teams admin center or use the [Graph API](/graph/api/application-list). <br> <br> - The [validDomains array](/microsoft-365/extensibility/schema/root#validdomains) in the manifest for `APP_ID` must contain the domain for `url` if `url` is present in the deep-link URL. The app ID is already known when a dialog is invoked from a tab or a bot, which is why it isn't included in `TaskInfo`. |
 | `BOT_APP_ID` | string | No | If a value for `completionBotId` is specified, the `result` object is sent using a `task/submit invoke` message to the specified bot. Specify `BOT_APP_ID` must be specified as a bot in the app's manifest, which you can't send to any bot. |
 
 > [!NOTE]
