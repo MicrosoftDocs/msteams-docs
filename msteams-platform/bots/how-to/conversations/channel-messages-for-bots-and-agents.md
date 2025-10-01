@@ -85,7 +85,7 @@ For example, use RSC permissions for an AI agent to manage channel content.
 
 ## Update app manifest
 
-For your bot or agent to receive all conversation messages, specify the relevant RSC permission strings in the `authorization.permissions.resourceSpecific` property of your app manifest. For more information, see [app manifest schema](../../../resources/schema/manifest-schema.md).
+For your bot or agent to receive all conversation messages, specify the relevant RSC permission strings in the `authorization.permissions.resourceSpecific` property of your app manifest. For more information, see [app manifest schema](/microsoft-365/extensibility/schema/root-authorization-permissions).
 
 Here's an app manifest example followed by a sample code snippet:
 

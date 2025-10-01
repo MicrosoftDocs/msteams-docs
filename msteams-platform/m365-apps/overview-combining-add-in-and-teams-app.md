@@ -60,9 +60,9 @@ When you're ready to merge your existing add-in and Teams app, follow these prin
 - Move source files and configuration files that are only applicable to the Teams app into a subfolder off the root of the project. Similarly, copy source and configuration files that are only used by the add-in from the existing add-in to a different subfolder off the root of the combined project.
 - Use the same base domain for the built files of both the add-in and Teams app; for example, contoso.com.
 - Merge the two manifests into a single manifest. Use the process you went through in [add an Outlook add-in to a Teams app](combine-office-add-in-and-teams-app.md) as a guide.
-- The [id](../resources/schema/manifest-schema.md#id) property in the new manifest should be the same value as the "id" property in the original Teams app manifest.
-- Raise the value of the [version](../resources/schema/manifest-schema.md#version) property; for example, raise "1.0.0" to "1.1.0".
-- Add an [extensions.alternates](../resources/schema/manifest-schema.md#extensionsalternates) property to the manifest and configure it to hide the original Office add-in in versions of Office that support combining an add-in and a Teams app. For more information, see [Manage new and old versions of an add-in](/office/dev/add-ins/concepts/duplicate-legacy-metaos-add-ins).
+- The [id](/microsoft-365/extensibility/schema/root#id) property in the new manifest should be the same value as the "id" property in the original Teams app manifest.
+- Raise the value of the [version](/microsoft-365/extensibility/schema/root#version) property; for example, raise "1.0.0" to "1.1.0".
+- Add an [extensions.alternates](/microsoft-365/extensibility/schema/extension-alternate-versions-array) property to the manifest and configure it to hide the original Office add-in in versions of Office that support combining an add-in and a Teams app. For more information, see [Manage new and old versions of an add-in](/office/dev/add-ins/concepts/duplicate-legacy-metaos-add-ins).
 
 ## Publish the combined Teams app and Office add-in
 

@@ -31,7 +31,7 @@ Ensure that you adhere to the following prerequisites while building your Teams 
     > [!NOTE]
     > It is recommended that you set the intended use for your cookies rather than rely on default browser behavior. For more information, see [SameSite cookie attribute](../../resources/samesite-cookie-update.md).
 
-* Browsers same-origin policy restriction prevents webpages from making requests to different domains than the served web page. So, you can redirect the configuration or content page to another domain or subdomain. Your cross-domain navigation logic needs to allow the Teams client to validate the origin against a static `validDomains` list in the [app manifest](../../resources/schema/manifest-schema.md#validdomains) when loading or communicating with the tab.
+* Browsers same-origin policy restriction prevents webpages from making requests to different domains than the served web page. So, you can redirect the configuration or content page to another domain or subdomain. Your cross-domain navigation logic needs to allow the Teams client to validate the origin against a static `validDomains` list in the [app manifest](/microsoft-365/extensibility/schema/root#validdomains) when loading or communicating with the tab.
 
 * Style your tabs based on the Teams client's theme, design, and intent. Tabs work best when built to address a specific need and focus on a small set of tasks or a subset of data that is relevant to the tab's channel location.
 
