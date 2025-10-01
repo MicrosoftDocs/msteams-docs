@@ -168,44 +168,18 @@ To receive both direct and indirect member update notifications, you must includ
 
 This subscription enables apps to monitor membership changes in shared channels and its associated teams. For more information on how to create a Microsoft Graph change notification subscription, see [Create a subscription.](/graph/teams-changenotifications-teammembership)
 
-### Handle bulk membership changes
+The `conversationUpdate` event is sent to your bot when it receives notifications on membership updates for teams where it is added. To receive both direct and indirect member update notifications, configure your bot with the following prerequisites:
 
-If there are bulk membership changes, Teams curbs individual membership update notifications when a channel is shared or unshared with a team. To reduce notification overload during membership updates, such as when a shared channel is added to or removed from a team with thousands of members, use the`sharedWithTeams` subscription resource:
+1. Update the app manifest. Add `supportsChannelFeatures`: `tier1` to declare app readiness.
 
-```HTTP
-/teams/{team-id}/channels/{channel-id}/sharedWithTeams
-```
-
-The `sharedWithTeams` subscription sends a single notification when a channel is shared or unshared with a team. It avoids thousands of per-user notifications and improves performance for apps that monitor membership changes. Ensure that you update the shared channel member list using the [allMembers](/graph/api/channel-list-allmembers?view=graph-rest-1.0&tabs=http&preserve-view=true ) API after receiving a *shared with* or *unshared from* team notification.
-
-### Manage member added and removed events
-
-A member added event is sent to your bot in the following scenarios:
-
-1. When the bot, itself, is installed and added to a conversation
-2. When a user is added to a conversation where the bot is installed
-
-For more information, see [Conversation events - Teams | Microsoft Learn]()
-
-To receive `conversationUpdate` event notifications when indirect members are added or removed, configure your bot with the following prerequisites:
-
-1. Update the App manifest
-
-    To declare support for shared channels, add the `supportedChannelTypes` property to your app manifest:
-
-```JSON
-    "supportedChannelTypes": [
-        "sharedChannels",
-    ]
-```
-
-2. Request Resource-Specific Consent (RSC) permission
+    
+2. Request Resource-Specific Consent (RSC) permission 
 
     Your app must request the following RSC permission to access channel membership information:
 
-```json
-{
-  "authorization": {
+    ```json
+    {
+    "authorization": {
     "permissions": {
       "resourceSpecific": [
         {
@@ -214,19 +188,38 @@ To receive `conversationUpdate` event notifications when indirect members are ad
         }
       ]
     }
-  }
-}
-```
+      }
+    }
+    ```
 
 3. Ensure the bot is enabled in the shared channel
 
-    To receive member event notifications, install the bot at the team level and manually allow it in the shared channel.
+    To receive member event notifications, install the bot at the team level and manually allow it in the shared channel. 
 
     This process ensures the bot is active and authorized to receive notifications for both direct and indirect members.
 
+### Manage member added and removed events
+
+A member added event is sent to your bot in the following scenarios:
+
+1. When the bot, itself, is installed and added to a conversation
+2. When a user is added to a conversation where the bot is installed
+
+A member removed event is sent to your bot in the following scenarios:
+
+1. When the bot, itself, is uninstalled and removed from a conversation.
+2. When a user is removed from a conversation where the bot is installed.
+
+For more information, see [Conversation events.](/graph/teams-changenotifications-teammembership)
+
+If the bot is installed in the team or channel, the Agents SDK receives a `conversationUpdate` activity through the `OnConversationUpdateActivityAsync` method, when a shared channel is added to another team.
+
+
+
 When a new member is added to a shared channel, the ```OnMembersAddedAsync``` method is called. This method provides the context and details of the user who was added, allowing the bot to respond accordingly.
 
-The following Bot Framework SDK examples apply to both direct and indirect member add and remove events.
+The following Agents SDK examples apply to both direct and indirect member add and remove events.
+
 Member added event
 
 ```csharp
@@ -278,9 +271,20 @@ public async Task OnMembersRemovedAsync(ITurnContext turnContext, AppState turnS
 
 ---
 
+### Handle bulk membership changes
+
+If there are bulk membership changes, Teams curbs individual membership update notifications when a channel is shared or unshared with a team. To reduce notification overload during membership updates, such as when a shared channel is added to or removed from a team with thousands of members, use the`sharedWithTeams` subscription resource:
+
+```HTTP
+/teams/{team-id}/channels/{channel-id}/sharedWithTeams
+```
+
+The `sharedWithTeams` subscription sends a single notification when a channel is shared or unshared with a team. It avoids thousands of per-user notifications and improves performance for apps that monitor membership changes. Ensure that you update the shared channel member list using the [allMembers](/graph/api/channel-list-allmembers?view=graph-rest-1.0&tabs=http&preserve-view=true ) API after receiving a *shared with* or *unshared from* team notification.
+
+
 ### Shared and unshared with team events
 
-When a shared channel is added to another team, the Bot Framework might receive a `conversationUpdate` activity through the `OnConversationUpdateActivityAsync` method, but only if the bot is installed in the team or channel.
+When a shared channel is added to another team, the Agents SDK  might receive a `conversationUpdate` activity through the `OnConversationUpdateActivityAsync` method, but only if the bot is installed in the team or channel.
 
 ```csharp
         protected override async Task OnConversationUpdateActivityAsync(
