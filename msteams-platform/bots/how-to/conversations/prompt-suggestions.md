@@ -48,12 +48,10 @@ Suggested actions help users continue conversations with your bot.
 > * Prompt starters are only supported for one-on-one chat bots.
 
 To enable prompt starters, define the `commands` property in your bot's app manifest. Each command now contains four fields, a `title`, `description`, `type`, and `prompt`. 
-- The `title` field is the text shown in the prompt starter. When selected, this text is populated into the compose box. 
+- The `title` field is the text shown in the prompt starter. When selected, this text is populated into the compose box. If the `type` is **basic**, this text is also used to populate the compose box.
 - The `description` field describes what the users accomplish. 
 - The `type` field indicates whether the bot command is a basic command or a prompt.
- 
-  * If the `command` is `prompt`, set type to **prompt** and provide the text in the prompt field.
-  * If the `command` is `basic`, set type to **basic** and use the title field for the text.
+  Set `type` to **prompt** and provide the text in the prompt field.
 - The `prompt`field defines the text to populate in the compose box, when the command is a prompt type.
 
 >[!NOTE]
@@ -175,7 +173,7 @@ You must handle menu commands in your bot code as you handle any message from us
 Bots in a group or channel respond only when they're @mentioned in a message. Every message received by a bot when in a group or channel scope contains its name in the message text. Before handling the command being returned, your message parsing must handle the message received by a bot with its name.
 
 > [!NOTE]
-> Handle the commands in code, they are sent to your bot as a regular message. You must handle them as you would handle any other message from your users. The commands in code insert preconfigured text into the text box. The user must then send that text as they do for any other message.
+> Handle the commands in code, they're sent to your bot as a regular message. You must handle them as you would handle any other message from your users. The commands in code insert preconfigured text into the text box. The user must then send that text as they do for any other message.
 
 # [C#](#tab/dotnet)
 
