@@ -73,7 +73,9 @@ Ensure that you understand that how different channels determine app functionali
 
 ## Enable your app for shared and private channels
 
-Enabling app support in shared and private channels is easy for most apps. If your apps don't depend on channel membership, channel-specific file storage, or deal with cross-channel data access scenarios, you can enable app support with a simple manifest update.
+Enabling app support in shared and private channels is easy for most apps. If your apps doesn't support the following
+
+If your apps don't depend on channel membership, channel-specific file storage, or deal with cross-channel data access scenarios, you can enable app support with a simple manifest update.
 
 If your apps don't:  
 
