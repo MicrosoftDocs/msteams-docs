@@ -465,7 +465,7 @@
     href: bots/how-to/rate-limit.md
     displayName: handle rate limit, detect transient exceptions, per thread limit, exponential backoff
   - name: Apps for shared and private channels
-    href: msteams-platform/build-apps-for-shared-private-channels.md
+    href: build-apps-for-shared-private-channels.md
     displayName: shared channels, private channels
   - name: Explore advanced bot capabilities
     items:
@@ -526,7 +526,7 @@
       href: concepts/build-and-test/shared-channels.md
       displayName: Cross-tenant notifications, context for shared channel, apps and permissions in shared channels
     - name: Apps for shared and private channels
-      href: msteams-platform/build-apps-for-shared-private-channels.md
+      href: build-apps-for-shared-private-channels.md
       displayName: shared channels, private channels
     - name: Deep link to a tab
       href: tabs/how-to/deep-link-to-tab.md
