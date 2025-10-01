@@ -26,7 +26,7 @@ When building or integrating apps with Microsoft Teams, understanding channel ty
 | Private  | Only to selected team members   | Suitable for scenarios requiring restricted access to bots, connectors, or files     | Private channel’s SharePoint site   |
 | Shared   | Cross-team and cross-organization | Enables interaction with users outside the host team without requiring them to join the team | Shared channel’s SharePoint site    |
 
-## Capabilities across channels
+### Capabilities across channels
 
 Here’s an outline of the different channels and their capabilities, across various parameters:
 
@@ -43,7 +43,7 @@ Here’s an outline of the different channels and their capabilities, across var
 |             | App installed to host team automatically available in channel                         | Yes                               | No                               | No                               |
 |             | App must be added to each channel                                                     | No                                | Yes                              | Yes                              |
 
-## Understand how different channels impact app functionality
+### Understand how different channels impact app functionality
 
 Understanding the difference between Microsoft Teams channel types is essential. Incorrect assumptions about membership, storage, or privacy can lead to broken functionality or unintended data exposure. Ensure that you:
 
@@ -66,23 +66,19 @@ Private and shared channels have their own SharePoint sites. Always use the corr
 
 ## Enable your app for shared and private channels
 
-Enabling app support in shared and private channels depends on whether your app:
-  
-* Uses channel or team membership to determine message delivery, task assignment, or permissions
-* Accesses or manages files stored in Teams or SharePoint
-* Combines or shares data across multiple channels or teams
-* Customizes experience based on whether users (internal, guests, or external participants)
+Enabling app support in shared and private channels is asy for most apps. If your apps don't depend on channel membership, channel-specific file storage, or deal with cross-channel data access scenarios, you can enable app support with a simple manifest update.
 
-In case your app, doesn’t support any of the listed parameters, then perform the following steps to enable app support in shared and private channels:
+If your apps don't:  
+
+* Use channel or team membership to determine message delivery, task assignment, or permissions
+* Access or manage files stored in Teams or SharePoint
+* Combine or share data across multiple channels or teams
+* Customize experience, based on users (internal, guests, or external participants)
+
+perform the following steps to enable app support in shared and private channels:
 
 1. Add ``"supportsChannelFeatures": "tier1"`` to your app manifest to enable support for shared and private channels.
 2. To verify expected behavior, test your app in standard, private, and shared channels.
-
-See the following articles, for more information:
-
-* [Manage channel membership](#manage-channel-membership)
-* [Understand app permissions in shared channels](#understand-app-permissions-in-shared-channels)
-* [Verify if your app is added to a channel](#verify-if-your-app-is-added-to-a-channel)
 
 > [!NOTE]
 >
@@ -655,6 +651,8 @@ This happens when the **tenant’s sharing policy blocks the link type, or when 
 
 ## See also
 
+* [Manage channel membership](#manage-channel-membership)
+* [Understand app permissions in shared channels](#understand-app-permissions-in-shared-channels)
 * [Build tabs for Teams](../../tabs/what-are-tabs.md)
 * [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
 * [Shared channels in Microsoft Teams](/microsoftteams/shared-channels)
