@@ -48,15 +48,20 @@ Here’s an outline of the different channels and their capabilities, across var
 Understanding the difference between Microsoft Teams channel types is essential. Incorrect assumptions about membership, storage, or privacy can lead to broken functionality or unintended data exposure. Ensure that you:
 
 * **Use channel-specific membership APIs**
-Don't assume that team membership is equal to channel membership. Only members who are specifically added to the channel can participate in shared and private channels. If your bot targets ‘everyone’, it may violate privacy or miss external members.
+
+    Don't assume that team membership is equal to channel membership. Only members who are specifically added to the channel can participate in shared and private channels. If your bot targets ‘everyone’, it may violate privacy or miss external members.
 
 * **Distinguish between users and roles**
-Channel members might include in-tenant users, guests, or cross-tenant users (external users from other tenants). Your app must distinguish between these roles to manage access, data visibility, and feature availability. Validate user roles and tenant IDs before granting permissions.
+
+    Channel members might include in-tenant users, guests, or cross-tenant users (external users from other tenants). Your app must distinguish between these roles to manage access, data visibility, and feature availability. Validate user roles and tenant IDs before granting permissions.
 
 * **Don't assume a single SharePoint site**
-Private and shared channels have their own SharePoint sites. Always use the correct URL for each channel, to avoid missing files or unauthorized access errors.
 
-* **Keep data scoped to channels** Aggregate or cross-post data across channels only when necessary, to prevent accidental leaks. For example, analytics apps should not include private channel data in team-wide reports unless permissions are clearly defined.
+    Private and shared channels have their own SharePoint sites. Always use the correct URL for each channel, to avoid missing files or unauthorized access errors.
+
+* **Keep data scoped to channels**
+
+    Aggregate or cross-post data across channels only when necessary, to prevent accidental leaks. For example, analytics apps should not include private channel data in team-wide reports unless permissions are clearly defined.
 
 > [!IMPORTANT]
 >
@@ -77,7 +82,7 @@ If your apps don't:
 
 perform the following steps to enable app support in shared and private channels:
 
-1. Add ``"supportsChannelFeatures": "tier1"`` to your app manifest to enable support for shared and private channels.
+1. Add `supportsChannelFeatures`: `tier1` to your app manifest to enable support for shared and private channels.
 2. To verify expected behavior, test your app in standard, private, and shared channels.
 
 > [!NOTE]
@@ -89,7 +94,7 @@ perform the following steps to enable app support in shared and private channels
 
 Microsoft Teams now supports enhanced bot and tab capabilities in shared and private channels.
 
-When loading the content UX in a shared or private channel, use the data received from `getContext` call for shared or private channel changes. `getContext` call publishes two new properties, `hostTeamGroupID` and `hostTenantID`, which are used to retrieve channel membership using Microsoft Graph APIs. `hostTeam` is the team that creates the shared channel.
+When loading the content UX in a shared or private channel, use the data received from the `getContext` call for shared or private channel changes. `getContext` call publishes two new properties, `hostTeamGroupID` and `hostTenantID`, which are used to retrieve channel membership using Microsoft Graph APIs. `hostTeam` is the team that creates the shared channel.
 
 For more information to enable your tab, see:
 
@@ -98,7 +103,7 @@ For more information to enable your tab, see:
 
 ## Manage channel membership
 
-Use the `allMembers` API that manages and monitors channel memberships across standard, shared, and private channels. It enhances accuracy by reflecting direct and indirect members correctly. Get the list of all members in a channel.
+Use the `allMembers` API that manages and monitors channel memberships across standard, shared, and private channels. It enhances accuracy by reflecting direct and indirect members correctly.
 
 ```HTTP
 GET /teams/{team-id}/channels/{channel-id}/allMembers``
@@ -110,9 +115,9 @@ GET /teams/{team-id}/channels/{channel-id}/allMembers``
 * **Indirect members:** Users who are members of the team, with which the channel is shared, including teams in the same tenant or in a cross-tenant.
 * **External members:** Guest users, who are not part of your organization but have been granted access to a shared channel through guest access or cross-tenant collaboration.
 
-Additionally, you can identify whether a member of a shared channel is direct or indirect by checking the `@microsoft.graph.originalSourceMembershipUrl` annotation. This property identifies the source of a member’s access to a shared channel, as shown in the following table.
+Additionally, you can identify whether a member of a shared channel is direct or indirect by checking the `@microsoft.graph.originalSourceMembershipUrl` annotation. This property identifies the source of a member’s access to a shared channel, as shown in the following table:
 
-| Member Type     | Annotation Present? | Description                                                                                                                                                                                                 |
+| Member Type | Annotation | Description                                                                                                                                                                                                 |
 |-----------------|---------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Direct Member   | Yes                 | The user is added directly to the shared channel.                                                                                                                                                           |
 | Indirect Member | Yes                 | The user accesses the shared channel through another team. The `@microsoft.graph.originalSourceMembershipUrl` property includes a URL that points to the source team and indicates indirect membership. |
@@ -120,29 +125,29 @@ Additionally, you can identify whether a member of a shared channel is direct or
 > [!NOTE]
 > You might receive duplicate notifications when a member is added to a shared channel. This scenario can happen if the member is already part of the shared channel directly or indirectly. Use the `List allMembers` API to view all the direct and indirect members. Ignore the notification if the member already exists; either directly or indirectly.
 
-## Manage indirect membership across channels
+### Manage direct and indirect membership across channels
 
 You can manage indirect membership in channels using the following Microsoft Graph APIs:
 
-* Use `allMembers` API to retrieve all users who are members of a specific channel.
+* Use  the `allMembers` API to retrieve all users who are members of a specific channel.
 
 ```HTTP
 GET /teams/{team-id}/channels/{channel-id}/allMembers
 ```
 
-* Use `doesUserHaveAccess API` to determine whether the user is removed from the channel and can view all user accesses and relevant permissions.
+* Use the `doesUserHaveAccess API` to determine whether the user is removed from the channel and can view all user accesses and relevant permissions.
 
 ```HTTP
 GET /teams/{team-id}/channels/{channel-id}/doesUserHaveAccess(userId='@userid',tenantId='@TenantID',userPrincipalName='@UserPrincipalName')
 ```
 
-* Use sharedWithTeams API to list all teams a channel is shared with.
+* Use the`sharedWithTeams` API to list all teams a channel is shared with.
 
 ```HTTP
 GET /teams/{team-id}/channels/{channel-id}/sharedWithTeams
 ```
 
-* Use the allowedMembers API to retrieve users from a shared team who can access a shared channel.
+* Use the `allowedMembers` API to retrieve users from a shared team who can access a shared channel.
 
 ```HTTP
 GET /teams/{team-id}/channels/{channel-id}/sharedWithTeams/{sharewithteamsId}/allowedMembers
@@ -151,27 +156,19 @@ GET /teams/{team-id}/channels/{channel-id}/sharedWithTeams/{sharewithteamsId}/al
 >[!NOTE]
 >`allowedMembers` API returns only newly associated users and doesn't apply to unshared events.
 
-### Direct members
-
-Direct members are users who has been explicitly added to the shared channel itself. Direct members has access to the shared channel regardless of their team membership.
-
-You can retrieve the list of direct members in a shared channel by using the ``hostTeamGroupID`` obtained from ``getContext`` and calling the appropriate API. This method returns all users who have been explicitly added to the shared channel, including both internal and external participants.
-
-To retrieve direct members of a shared channel:
-
-1. Call the following API:
-
-    ```HTTP
-    GET /teams/{host-team-group-id}/channels/{channel-id}/members
-    ```
-
 [Back to Top](#microsoft-teams-connect-shared-and-private-channels)
 
 ## Get app notifications for direct and indirect membership changes
 
-### [Graph](#tab/graph)
+Apps installed in shared channels receive notifications when users are added to or removed from a team that shares the channel.
+Depending on where you install your apps, go to the following:
 
-Apps installed in shared channels receive notifications when users are added to or removed from a team that shares the channel. To receive these notifications, you must:
+* [Installing apps using Microsoft Graph APIs](#installing-apps-using-microsoft-graph-apis)
+* [Installing apps using BOT APIs](#installing-apps-using-bot-apis)
+
+### Installing apps using Microsoft Graph APIs
+
+To receive app notifications, you must:
 
 1. [Install the app](concepts/deploy-and-publish/apps-upload.md) in a host team and enable it for the shared channel.
 2. Create a valid Microsoft Graph change notification subscription to monitor associated team membership changes and shared or unshared events using supported APIs.
@@ -184,7 +181,7 @@ To receive both direct and indirect member update notifications, you must includ
 
 This subscription enables apps to monitor membership changes in shared channels and its associated teams. For more information on how to create a Microsoft Graph change notification subscription, see [Create a subscription.](/graph/teams-changenotifications-teammembership)
 
-### [Bots](#tab/bots)
+### Installing apps using BOT APIs
 
 Microsoft Teams now supports bot notifications for both direct and indirect members. This enhancement expands its Bot Framework SDK to support notifications for indirect members in shared channels. This update improves visibility into membership changes across teams, enabling bots to more effectively track user access in collaborative environments. It builds on the existing capability for bots to subscribe to `conversationUpdate` events in channels.
 
