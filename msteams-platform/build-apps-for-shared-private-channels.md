@@ -96,9 +96,8 @@ Microsoft Teams now supports enhanced bot and tab capabilities in shared and pri
 
 When loading the content UX in a shared or private channel, use the data received from the `getContext` call for shared or private channel changes. `getContext` call publishes two new properties, `hostTeamGroupID` and `hostTenantID`, which are used to retrieve channel membership using Microsoft Graph APIs. `hostTeam` is the team that creates the shared channel.
 
-For more information to enable your tab, see:
+See more:
 
-* [Get context for your tab for private channels](tabs/how-to/access-teams-context.md)
 * [Get context in shared channels](tabs/how-to/access-teams-context.md)
 * [Get context for your bot](bots/how-to/get-teams-context.md)
 ## Manage channel membership
