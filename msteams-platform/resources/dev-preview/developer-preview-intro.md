@@ -13,7 +13,7 @@ ms.date: 01/31/2023
 Developer Preview is a public program for developers, which provides early access to unreleased features in Microsoft Teams. Developer Preview allows you to explore and test upcoming features for potential inclusion in your Teams app. We also welcome [feedback](~/feedback.md) on any feature in developer preview. Developer preview is enabled per Microsoft Teams client, so you don't need to worry about affecting your entire organization.
 
 > [!div class="nextstepaction"]
-> [Developer preview app manifest scnema](/microsoft-365/extensibility/schema/?view=m365-app-prev)
+> [Go to developer preview app manifest scnema](/microsoft-365/extensibility/schema/?view=m365-app-prev&preserve-view=true)
 
 ## Developer preview app manifest
 
