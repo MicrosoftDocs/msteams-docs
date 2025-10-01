@@ -71,7 +71,7 @@ Understanding the difference between Microsoft Teams channel types is essential.
 
 ## Enable your app for shared and private channels
 
-Enabling app support in shared and private channels is asy for most apps. If your apps don't depend on channel membership, channel-specific file storage, or deal with cross-channel data access scenarios, you can enable app support with a simple manifest update.
+Enabling app support in shared and private channels is easy for most apps. If your apps don't depend on channel membership, channel-specific file storage, or deal with cross-channel data access scenarios, you can enable app support with a simple manifest update.
 
 If your apps don't:  
 
@@ -80,7 +80,7 @@ If your apps don't:
 * Combine or share data across multiple channels or teams
 * Customize experience, based on users (internal, guests, or external participants)
 
-perform the following steps to enable app support in shared and private channels:
+Perform the following steps to enable app support in shared and private channels:
 
 1. Add `supportsChannelFeatures`: `tier1` to your app manifest to enable support for shared and private channels.
 2. To verify expected behavior, test your app in standard, private, and shared channels.
@@ -100,7 +100,7 @@ For more information to enable your tab, see:
 
 * [Get context for your tab for private channels](tabs/how-to/access-teams-context.md)
 * [Get context in shared channels](tabs/how-to/access-teams-context.md)
-
+* [Get context for your bot](bots/how-to/get-teams-context.md)
 ## Manage channel membership
 
 Use the `allMembers` API that manages and monitors channel memberships across standard, shared, and private channels. It enhances accuracy by reflecting direct and indirect members correctly.
@@ -183,7 +183,8 @@ This subscription enables apps to monitor membership changes in shared channels 
 
 ### Installing apps using BOT APIs
 
-Microsoft Teams now supports bot notifications for both direct and indirect members. This enhancement expands its Bot Framework SDK to support notifications for indirect members in shared channels. This update improves visibility into membership changes across teams, enabling bots to more effectively track user access in collaborative environments. It builds on the existing capability for bots to subscribe to `conversationUpdate` events in channels.
+Microsoft Teams now supports bot notifications for both direct and indirect members. 
+This enhancement expands its Bot Framework SDK to support notifications for indirect members in shared channels. This update improves visibility into membership changes across teams, enabling bots to more effectively track user access in collaborative environments. It builds on the existing capability for bots to subscribe to `conversationUpdate` events in channels.
 
 ### Manage member added and removed events
 
@@ -198,10 +199,47 @@ A member removed event is sent to your bot in the following scenarios:
 2. When a user is removed from a conversation where the bot is installed.
 
 For more information, see [Conversation events - Teams | Microsoft Learn]()
-The following Bot Framework SDK examples apply to both direct and indirect member add and remove events. To receive transitive member events, ensure your bot is set up with all the prerequisites.
+
+To receive `conversationUpdate` event notifications when indirect members are added or removed, configure your bot with the following prerequisites:
+
+1. Update the App manifest
+
+    To declare support for shared channels, add the `supportedChannelTypes` property to your app manifest:
+
+```JSON
+    "supportedChannelTypes": [
+        "sharedChannels",
+    ]
+```
+2. Request Resource-Specific Consent (RSC) permission 
+
+    Your app must request the following RSC permission to access channel membership information:
+
+```json
+{
+  "authorization": {
+    "permissions": {
+      "resourceSpecific": [
+        {
+          "name": "ChannelMember.Read.Group",
+          "type": "Application"
+        }
+      ]
+    }
+  }
+}
+```
+
+3. Ensure the bot is enabled in the shared channel
+
+    To receive member event notifications, install the bot at the team level and manually allow it in the shared channel. 
+
+
+    This process ensures the bot is active and authorized to receive notifications for both direct and indirect members.
 
 When a new member is added to a shared channel, the ```OnMembersAddedAsync``` method is called. This method provides the context and details of the user who was added, allowing the bot to respond accordingly.
 
+The following Bot Framework SDK examples apply to both direct and indirect member add and remove events.
 Member added event
 
 ```csharp
@@ -255,7 +293,7 @@ public async Task OnMembersRemovedAsync(ITurnContext turnContext, AppState turnS
 
 ### Shared and unshared with team events
 
-When a shared channel is added to another team, the Bot Framework might receive a conversationUpdate activity through the OnConversationUpdateActivityAsync method, but only if the bot is installed in the team or channel.
+When a shared channel is added to another team, the Bot Framework might receive a `conversationUpdate` activity through the `OnConversationUpdateActivityAsync` method, but only if the bot is installed in the team or channel.
 
 ```csharp
         protected override async Task OnConversationUpdateActivityAsync(
@@ -333,7 +371,7 @@ When an app receives a 'member removed' notification for an indirect membership 
 GET /teams/{team-id}/channels/{channel-id}/doesUserHaveAccess(userId='@userid',tenantId='@TenantID',userPrincipalName='@UserPrincipalName')
 ```
 
-When an app receives a 'member added' notification for an indirect membership update, see allMembers API to refresh the list of all members.
+When an app receives a 'member added' notification for an indirect membership update, see `allMembers API` to refresh the list of all members.
 
 ```HTTP
 GET /teams/{team-id}/channels/{channel-id}/allMembers
@@ -389,10 +427,6 @@ Use this event to trigger app-specific logic such as:
 * Configuring tabs
 * Starting scheduled jobs
 
-Bot events (like messages and mentions) will only begin after your app is added to the channel.
-
-There’s no direct API to check whether your app is added to a channel.
-
 ## Authenticate external users to access app content in SharePoint
 
 You need to complete this step when your app stores content in the SharePoint site of the tenant that hosts the channel and requests a SharePoint token.
@@ -411,7 +445,7 @@ Now, send saved host tenant ID inside tenantId parameter of getAuthToken call to
 
 ## Identify guest users (B2B guests) in private channels
 
-You can identify if a member of private channel is guest user, invited to your tenant from external organization, using 'roles' property received for each object in [List members of a channel - Microsoft Graph v1.0 | Microsoft Learn](/graph/api/channel-list-members) response.  
+You can identify if a member of private channel is a guest user, invited to your tenant from external organization, using `roles` property received for each object in [List members of a channel - Microsoft Graph v1.0 | Microsoft Learn](/graph/api/channel-list-members) response.  
 
 For guests, “roles” = “guest”
 
@@ -619,7 +653,7 @@ Authentication issues often occur when the **app requests a token for the host t
 <details>
 <summary>How do I know my app was added to a channel?</summary>
 
-This issue might occur if the **app is expects a centralized list of installed apps at the channel level or relies on team-level installation behavior**. Currently, there's no channel-level installedApps list available. Instead, Bots should listen for the `channelMemberAdded` event within the channel to detect when they're added. When the app gets a 403 error and misses the event, it asks the user to add the bot to the channel and manages the error.
+This issue might occur if the **app is expects a centralized list of installed apps at the channel level or relies on team-level installation behavior**. Currently, there's no channel-level installedApps list available. Instead, bots should listen for the `channelMemberAdded` event within the channel to detect when they're added. When the app gets a 403 error and misses the event, it asks the user to add the bot to the channel and manages the error.
 
 <br>
 &nbsp;
