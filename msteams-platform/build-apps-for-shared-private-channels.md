@@ -49,11 +49,11 @@ Understanding the difference between Microsoft Teams channel types is essential.
 
 * **Use channel-specific membership APIs**
 
-    Don't assume that team membership is equal to channel membership. Only members who are added to the channel can participate in shared and private channels. If your bot targets everyone, it may violate privacy or miss external members.
+    Don't assume that team membership is equal to channel membership. Only members who are added to the channel can participate in shared and private channels. If your bot targets everyone, it might violate privacy or miss external members.
 
 * **Distinguish between users and roles**
 
-    Channel members might include in-tenant users, guests, or cross-tenant users (external users from other tenants). Your app must distinguish between these roles to manage access, data visibility, and feature availability. Validate user roles and tenant IDs before granting permissions.
+    Channel members might include in-tenant users, guests, or cross-tenant users (external users from other tenants). Your app must distinguish between these roles to manage access, data visibility, and feature availability. Validate user roles and tenant ids before granting permissions.
 
 * **Don't assume a single SharePoint site**
 
@@ -61,7 +61,7 @@ Understanding the difference between Microsoft Teams channel types is essential.
 
 * **Keep data scoped to channels**
 
-    Aggregate or cross-post data across channels only when necessary, to prevent accidental leaks. For example, analytics apps should not include private channel data in team-wide reports unless permissions are clearly defined.
+    Aggregate or cross-post data across channels only when necessary, to prevent accidental leaks. For example, analytics apps shouldn't include private channel data in team-wide reports unless permissions are clearly defined.
 
 > [!IMPORTANT]
 >
@@ -573,7 +573,7 @@ Perform the following steps to validate:
 1. Have an external user send a message to your bot and confirm that it responds.
    * The bot should receive the message, provided added to the appropriate scope (personal chat, group chat, or channel).
 2. Have the external user trigger a task module or tab interaction and verify that the authentication succeeds.
-   * If using SSO, ensure ``getAuthToken`` handles the user's home tenant ID correctly.
+   * If using Single Sign-On authentication (SSO), ensure ``getAuthToken`` handles the user's home tenant ID correctly.
 3. Attempt to send a direct message from your bot to the external user:
    * This functionality fails if the user is outside your tenant
    * Confirm that in-channel communication still works.
@@ -613,9 +613,9 @@ The app might not appear if the **manifest is missing required support**, such a
 &nbsp;
 </details>
 <details>
-<summary>Why am I getting a 403 error stating "app not enabled in this channel" when calling channel APIs?</summary>
+<summary>Why am I getting a 403 error stating 'app not enabled in this channel' when calling channel APIs?</summary>
 
-This error occurs if the **app is installed at the team level but hasn’t been added to the channel**. To resolve this issue, confirm that the app is added to the channel. If your app uses resource-specific consent (RSC), verify that the permissions declared in the manifest match the API calls being made, for example, ``ChannelMember.Read.Group`` for reading channel membership. After adding the app, retry the operation. For bots, initiate channel-specific logic when the bot receives the ``channelMemberAdded`` event to confirm it's successfully added to the channel.
+This error occurs if the **app is installed at the team level but hasn’t been added to the channel**. To resolve this issue, confirm that the app is added to the channel. If your app uses resource-specific consent (RSC), verify that the permissions declared in the manifest match the API calls being made, for example, ``ChannelMember.Read.Group`` for reading channel membership. After adding the app, retry the operation. For bots, initiate channel-specific logic when the bot receives the ``channelMemberAdded`` event to verify successfully addition to the channel.
 
 <br>
 &nbsp;
@@ -663,7 +663,7 @@ Message change notifications might fail in shared or private channels **because 
 <details>
 <summary>Why do file links still fail for external users even after the app is added to the channel?</summary>
 
-This faliure happens when the **tenant’s sharing policy blocks the link type, or when the user doesn’t have access to the item, even if they’re a member of the channel**. Another common cause is that the app might generate links pointing to the team drive instead of the channel’s dedicated drive. To resolve this issue, reissue the links using the 'people with existing access' option or use the invite API to grant access to specific users. Also, make sure the links reference the channel drive, which can be identified using the filesFolder property, rather than the team site.
+This failure happens when the **tenant’s sharing policy blocks the link type, or when the user doesn’t have access to the item, even if they’re a member of the channel**. Another common cause is that the app might generate links pointing to the team drive instead of the channel’s dedicated drive. To resolve this issue, reissue the links using the 'people with existing access' option or use the invite API to grant access to specific users. Also, make sure the links reference the channel drive, which can be identified using the filesFolder property, rather than the team site.
 
 [Back to Top](#microsoft-teams-connect-shared-and-private-channels)
 
