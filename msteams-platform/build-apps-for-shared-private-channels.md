@@ -12,9 +12,9 @@ ms.date: 04/09/2025
 
 Shared and private channels in Microsoft Teams enable flexible collaboration within teams and across  organizations. You can experience multiple benefits, depending on your channel:
 
-* Shared channels: Allow seamless communication with internal or external partners, without changing the user’s context. These channels ensure secure granular access control and real-time membership syncing.
+* **Shared channels**: Allow seamless communication with internal or external partners, without changing the user’s context. These channels ensure secure granular access control and real-time membership syncing.
 
-* Private channels: Provide secure space for selected team members to collaborate on sensitive or confidential content, ensuring privacy and focused discussions within the team.
+* **Private channels**: Provide secure space for selected team members to collaborate on sensitive or confidential content, ensuring privacy and focused discussions within the team.
 
 ## Understand channels for app integration
 
