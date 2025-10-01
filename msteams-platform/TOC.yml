@@ -464,6 +464,9 @@
   - name: Optimize bots with rate limits
     href: bots/how-to/rate-limit.md
     displayName: handle rate limit, detect transient exceptions, per thread limit, exponential backoff
+  - name: Apps for shared and private channels
+    href: msteams-platform/build-apps-for-shared-private-channels.md
+    displayName: shared channels, private channels
   - name: Explore advanced bot capabilities
     items:
     - name: Modify Teams bot API to fetch team or chat members
@@ -522,6 +525,12 @@
     - name: Apps for shared channels
       href: concepts/build-and-test/shared-channels.md
       displayName: Cross-tenant notifications, context for shared channel, apps and permissions in shared channels
+    - name: Apps for shared and private channels
+      href: msteams-platform/build-apps-for-shared-private-channels.md
+      displayName: shared channels, private channels
+    - name: Deep link to a tab
+      href: tabs/how-to/deep-link-to-tab.md
+      displayName: deep link, link to tab, link to specific content, sub-page in tab 
     - name: Send activity feed notifications
       href: /graph/teams-send-activityfeednotifications?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
       displayName: activity feed, notification, customize notification
@@ -672,9 +681,6 @@
   - name: Integrate meetings and calls in external apps
     href: get-started/b2c-apps.md
     displayName: Teams meeting, Teams call, Teams meeting and call for external apps, external apps
-- name: Apps for Shared and Private Channels
-  href: msteams-platform/build-apps-for-shared-private-channels.md
-  displayName: shared channels, private channels
 - name: Build webhooks and connectors
   items:
   - name: Overview
