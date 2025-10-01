@@ -1483,6 +1483,10 @@
       {
         "source_path": "msteams-platform/bots/how-to/teams-conversational-ai/teams-ai-library-tutorial.md",
         "redirect_url": "/microsoftteams/platform/teams-ai-library/welcome"
+      },
+      {
+        "source_path": "msteams-platform/resources/schema/manifest-schema-dev-preview.md",
+        "redirect_url": "/microsoftteams/platform/resources/dev-preview/developer-preview"
       }
     ]
 }
