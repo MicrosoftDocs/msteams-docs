@@ -168,6 +168,16 @@ To receive both direct and indirect member update notifications, you must includ
 
 This subscription enables apps to monitor membership changes in shared channels and its associated teams. For more information on how to create a Microsoft Graph change notification subscription, see [Create a subscription.](/graph/teams-changenotifications-teammembership)
 
+### Handle bulk membership changes
+
+If there are bulk membership changes, Teams curbs individual membership update notifications when a channel is shared or unshared with a team. To reduce notification overload during membership updates, such as when a shared channel is added to or removed from a team with thousands of members, use the`sharedWithTeams` subscription resource:
+
+```HTTP
+/teams/{team-id}/channels/{channel-id}/sharedWithTeams
+```
+
+The `sharedWithTeams` subscription sends a single notification when a channel is shared or unshared with a team. It avoids thousands of per-user notifications and improves performance for apps that monitor membership changes. Ensure that you update the shared channel member list using the [allMembers](/graph/api/channel-list-allmembers?view=graph-rest-1.0&tabs=http&preserve-view=true ) API after receiving a *shared with* or *unshared from* team notification.
+
 ### Manage member added and removed events
 
 A member added event is sent to your bot in the following scenarios:
@@ -340,35 +350,19 @@ When a shared channel is added to another team, the Bot Framework might receive 
 
 ## Validate user access for membership updates
 
-When an app receives a 'member removed' notification for an indirect membership update, it’s important to verify whether the user is removed from the shared channel, especially since the same user might have both direct and indirect membership. For example, if a user is removed from a team that shares a channel, your app should confirm whether the user's access to the shared channel is revoked. Use the `doesUserHaveAccess` API to determine whether the user is removed from the shared channel. See [doesUserHaveAccess](/graph/api/channel-doesuserhaveaccess?view=graph-rest-beta&tabs=http&preserve-view=true ) API to learn more about user accesses and relevant permissions.
+When an app receives a *member removed* notification for an indirect membership update, it’s important to verify whether the user is removed from the channel, especially since the same user might have both direct and indirect membership. For example, if a user is removed from a team that shares a channel, your app must confirm whether the user's access to the shared channel is revoked. Use the `doesUserHaveAccess` API to determine whether the user is removed from the shared channel. See [doesUserHaveAccess](/graph/api/channel-doesuserhaveaccess?view=graph-rest-beta&tabs=http&preserve-view=true ) API to learn more about user accesses and relevant permissions.
 
 ```HTTP
 GET /teams/{team-id}/channels/{channel-id}/doesUserHaveAccess(userId='@userid',tenantId='@TenantID',userPrincipalName='@UserPrincipalName')
 ```
 
-When an app receives a 'member added' notification for an indirect membership update, see see the [allMembers](/graph/api/channel-list-allmembers?view=graph-rest-1.0&tabs=http&preserve-view=true ) API to refresh the list of all members.
+When an app receives a *member added* notification for an indirect membership update, see the [allMembers](/graph/api/channel-list-allmembers?view=graph-rest-1.0&tabs=http&preserve-view=true ) API to refresh the list of all members.
 
 ```HTTP
 GET /teams/{team-id}/channels/{channel-id}/allMembers
 ```
 
-### Handle bulk membership changes
-
-If there are bulk membership changes, Teams curbs individual membership update notifications when a channel is shared or unshared with a team. This feature reduces notification volume and improves performance.
-
-### Use `sharedWithTeams` subscription for bulk membership changes
-
-To reduce notification overload during membership updates, such as when a shared channel is added to or removed from a team with thousands of members, use the new `sharedWithTeams` subscription resource:
-
-```HTTP
-/teams/{team-id}/channels/{channel-id}/sharedWithTeams
-```
-
-The `sharedWithTeams` subscription sends a single notification when a channel is shared or unshared with a team. It avoids thousands of per-user notifications and improves performance for apps that monitor membership changes. Ensure that you update the shared channel member list using the allMembers API after receiving a 'shared with' or 'unshared from' team notification.
-
-[Back to Top](#microsoft-teams-connect-shared-and-private-channels)
-
-## Classify channels as in-tenant or out-tenant
+### Classify members as in-tenant or out-tenant
 
 You can classify members as in-tenant or out-tenant by comparing the 'TenantId' of the member or team with `ownerTenantId` as follows:
 
@@ -378,9 +372,11 @@ You can classify members as in-tenant or out-tenant by comparing the 'TenantId' 
 GET /teams/{host-team-group-id}/channels/{channel-id}/allMembers
 ```
 
-2. Call `microsoftTeams.app.getContext()` in your tab from the Teams JavaScript client library (TeamsJS SDK). The getContext() call returns context of the shared channel, which contains the details such as displayName, membershipType, ownerGroupId, and ownerTenantId.
+2. Call `microsoftTeams.app.getContext()` in your tab from the Teams JavaScript client library. The getContext() call returns context of the shared channel, which contains the details such as `displayName`, `membershipType`, `ownerGroupId`, and `ownerTenantId`.
 
-3. Compare the TenantId of the member to the ownerTenantId property and determine if the member is an in-tenant or out-tenant.
+3. Compare the `TenantId` of the member to the `ownerTenantId` property and determine if the member is an in-tenant or out-tenant.
+
+[Back to Top](#enable-apps-for-shared-and-private-channels)
 
 ## Understand app permissions in shared channels
 
