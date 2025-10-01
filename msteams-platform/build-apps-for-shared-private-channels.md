@@ -96,7 +96,7 @@ When loading the user experience in a shared or private channel, use the data re
   
 ### Manage channel membership
 
-Use the `allMembers` API that manages and monitors channel memberships across standard, shared, and private channels. It enhances accuracy by reflecting direct and indirect members correctly. For more information, see
+Use the `allMembers` API that manages and monitors channel memberships across standard, shared, and private channels. It enhances accuracy by reflecting direct and indirect members correctly. For more information, see [List allMembers](/graph/api/channel-list-allmembers?view=graph-rest-1.0&tabs=http&preserve-view=true )
 
 ```HTTP
 GET /teams/{team-id}/channels/{channel-id}/allMembers
@@ -340,7 +340,7 @@ When a shared channel is added to another team, the Bot Framework might receive 
 
 ## Validate user access for membership updates
 
-When an app receives a 'member removed' notification for an indirect membership update, it’s important to verify whether the user is removed from the shared channel, especially since the same user might have both direct and indirect membership. For example, if a user is removed from a team that shares a channel, your app should confirm whether the user's access to the shared channel is revoked. Use the `doesUserHaveAccess` API to determine whether the user is removed from the shared channel. See [doesUserHaveAccess API](/graph/api/channel-doesuserhaveaccess?view=graph-rest-beta&tabs=http) API to learn more about user accesses and relevant permissions.
+When an app receives a 'member removed' notification for an indirect membership update, it’s important to verify whether the user is removed from the shared channel, especially since the same user might have both direct and indirect membership. For example, if a user is removed from a team that shares a channel, your app should confirm whether the user's access to the shared channel is revoked. Use the `doesUserHaveAccess` API to determine whether the user is removed from the shared channel. See [doesUserHaveAccess API](/graph/api/channel-doesuserhaveaccess?view=graph-rest-beta&tabs=http&preserve-view=true ) API to learn more about user accesses and relevant permissions.
 
 ```HTTP
 GET /teams/{team-id}/channels/{channel-id}/doesUserHaveAccess(userId='@userid',tenantId='@TenantID',userPrincipalName='@UserPrincipalName')
