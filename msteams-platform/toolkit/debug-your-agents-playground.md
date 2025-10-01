@@ -130,7 +130,7 @@ Agents Playground offers a faster debug experience for applications when compare
    1. Run the following command to install Agents Playground CLI from `npm`:
 
       ```cmd
-      npm install -g @microsoft/microsoft-365-agents-playground
+      npm i @microsoft/m365agentsplayground
       ```
 
         :::image type="content" source="../assets/images/toolkit-v2/debug/npm-teams-app-test-tool.png" alt-text="Screenshot shows install agents playground cli.":::
@@ -645,4 +645,4 @@ Follow the [step-by-step guide](teams-app-test-tool-tutorial.md) to debug an AI 
 * [Build bots for Teams](../bots/what-are-bots.md)
 * [Teams AI library](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md)
 * [Adaptive Card](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
-* [Agents SDK](https://microsoft.github.io/Agents/)
+* [Agents SDK](https://github.com/microsoft/Agents)
