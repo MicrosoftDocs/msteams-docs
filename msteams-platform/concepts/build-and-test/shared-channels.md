@@ -33,7 +33,7 @@ A sample illustration showing shared channel membership is as follows:
 
 ## Enable your app for shared channels
 
-SupportedChannelTypes is an optional property that enables your app in non-standard channels. If your app supports the team scope and the property is defined, Teams enables your app in each channel type accordingly. Private and shared channels are supported. For more information, see [supportedChannelTypes](../../resources/schema/manifest-schema.md#supportedchanneltypes).
+SupportedChannelTypes is an optional property that enables your app in non-standard channels. If your app supports the team scope and the property is defined, Teams enables your app in each channel type accordingly. Private and shared channels are supported. For more information, see [supportedChannelTypes](/microsoft-365/extensibility/schema/root#supportedchanneltypes).
 
 ```JSON
     "supportedChannelTypes": [
@@ -187,7 +187,7 @@ You can classify members as in-tenant or out-tenant by comparing the `TenantId` 
 ## See also
 
 * [Build tabs for Teams](../../tabs/what-are-tabs.md)
-* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
+* [App manifest schema for Teams](/microsoft-365/extensibility/schema/)
 * [Shared channels in Microsoft Teams](/microsoftteams/shared-channels)
 * [Channel resource type](/graph/api/resources/channel)
 * [Retention policy for Teams locations](/microsoft-365/compliance/create-retention-policies)

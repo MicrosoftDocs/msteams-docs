@@ -383,6 +383,6 @@ The following image shows the dark theme option in the Teams:
 * [Design your tab for Microsoft Teams](../design/tabs.md)
 * [Enable SSO for tab app](authentication/tab-sso-overview.md)
 * [Microsoft Teams Connect shared channels](../../concepts/build-and-test/shared-channels.md)
-* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
+* [App manifest schema for Teams](/microsoft-365/extensibility/schema/)
 * [Use dialogs in tabs](../../task-modules-and-cards/task-modules/task-modules-tabs.md)
 * [Introducing the new Teams client](../../resources/teams-updates.md)

@@ -89,9 +89,12 @@ The Azure Bot resource registration registers your web service as a bot with the
 1. Enter bot handle name in **Bot handle** field.
 1. Select your **Subscription** from the dropdown list.
 1. Select your **Resource group** from the dropdown list.
-1. Select **Type of App** as **Multi Tenant** for **Microsoft App ID**.
+1. Select **Type of App** as **User-Assigned Managed Identity** or **Single Tenant** for **Microsoft App ID**.
 
-   :::image type="content" source="../../../assets/images/adaptive-cards/multi-tenant.png" alt-text="Screenshot shows how to select multitenant for Microsoft AppID.":::
+    >[!IMPORTANT]
+    > The **Multi Tenant** bot type in **Azure Bot Service** is deprecated. Existing Multi Tenant bots continues to work for now.</br> All new bot registrations must either use the **Single Tenant** bot type or the **User-Assigned Managed Identity** type.</br> When registering your Entra app in Azure portal, you can still select the **Accounts in any organizational directory (Multi Tenant)** option. This enables your bot to work across multiple tenants, even outside the tenant where the app is registered, when using one of the supported bot types.
+
+   :::image type="content" source="../../../assets/images/adaptive-cards/single-tenant.png" alt-text="Screenshot shows how to select multitenant for Microsoft AppID.":::
 
 1. Select **Review + create**.
 
@@ -297,7 +300,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 
      [!code-json[appsettings](~/../Microsoft-Teams-Samples/samples/bot-teams-authentication/csharp/appsettings.json?range=1-5)]
 
-1. In the Solution Explorer, go to the `TeamsAppManifest` folder, open `manifest.json` and set `id` and `botId` to the **bot App ID** you saved at the time of the bot registration. For more information, see [app manifest](../../../resources/schema/manifest-schema.md#bots).
+1. In the Solution Explorer, go to the `TeamsAppManifest` folder, open `manifest.json` and set `id` and `botId` to the **bot App ID** you saved at the time of the bot registration. For more information, see [app manifest](/microsoft-365/extensibility/schema/root-bots#botid).
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Prepare+the+bot+sample+code+using+C%23%2F.NET&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fadd-authentication%3Ftabs%3Dnode-js%252Cdotnet-sample%23test-the-connection&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fadd-authentication.md&documentVersionIndependentId=70952f91-56e9-ff08-59f6-e237d4aaeca9&platformId=cc53b20b-69e0-cb70-1ca7-9b939c969c92&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
