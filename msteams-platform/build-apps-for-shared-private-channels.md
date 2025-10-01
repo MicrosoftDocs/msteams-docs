@@ -7,9 +7,6 @@ ms.localizationpriority: high
 ms.topic: conceptual
 ms.date: 04/09/2025
 ---
-> [!NOTE]
->
-> * Apps in shared and private channel is currently in developer preview [Public developer preview](resources/dev-preview/developer-preview-intro.md).
 
 # Apps for shared and private channels
 
@@ -20,6 +17,10 @@ Shared and private channels in Microsoft Teams enable flexible collaboration wit
 * **Private channels**: Provide secure space for selected team members to collaborate on sensitive or confidential content, ensuring privacy and focused discussions within the team.
 
 Bot and tab apps are supported in shared and private channels.
+
+> [!NOTE]
+>
+> Apps in shared and private channel is currently in developer preview [Public developer preview](resources/dev-preview/developer-preview-intro.md).
 
 ## Understand channels for app integration
 
@@ -72,7 +73,7 @@ Ensure that you understand that how different channels determine app functionali
 
     Aggregate or cross-post data across channels only when necessary, to prevent accidental leaks. For example, analytics apps shouldn't include private channel data in team-wide reports unless permissions are clearly defined.
 
-[Back to Top](#microsoft-teams-connect-shared-and-private-channels)
+[Back to Top](#apps-for-shared-and-private-channels)
 
 ## Enable apps for shared and private channels
 
@@ -95,11 +96,11 @@ To enable app support in shared and private channels, perform the following step
 
 ### Get context for shared and private channels
 
-When loading the user experience in a shared or private channel, use the data received from the `getContext` call for shared or private channels. The `getContext` call publishes two new properties, `hostTeamGroupID` and `hostTenantID`, which are used to retrieve channel membership using Microsoft Graph APIs. `hostTeam` is the team that creates both private and shared channels. For more information, see [Get context in shared channels](tabs/how-to/access-teams-context.md#retrieve-context-in-shared-channels) and [Get context for your tab for private channels](tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels).
-  
+When loading the user experience in a shared and private channel, use the data received from the `getContext` call for shared and private channels. The `getContext` call publishes two new properties, `hostTeamGroupID` and `hostTenantID`, which are used to retrieve channel membership using Microsoft Graph APIs. `hostTeam` is the team that creates both private and shared channels. For more information, see [Get context in shared channels](tabs/how-to/access-teams-context.md#retrieve-context-in-shared-channels) and [Get context for your tab for private channels](tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels)
+
 ### Manage channel membership
 
-Use the `allMembers` API that manages and monitors channel memberships across standard, shared, and private channels. It enhances accuracy by reflecting direct and indirect members correctly. For more information, see [List allMembers](/graph/api/channel-list-allmembers?view=graph-rest-1.0&tabs=http&preserve-view=true ).
+Use the `allMembers` API that manages and monitors channel memberships across standard, shared, and private channels. It enhances accuracy by reflecting direct and indirect members correctly. For more information, see [List allMembers](/graph/api/channel-list-allmembers?view=graph-rest-1.0&tabs=http&preserve-view=true).
 
 ```HTTP
 GET /teams/{team-id}/channels/{channel-id}/allMembers
@@ -157,11 +158,6 @@ You can manage indirect membership in channels using the following Microsoft Gra
 ## Get app notifications for membership changes
 
 Apps installed in shared channels receive notifications when users are added to or removed from a team that shares the channel.
-Depending on how you install your apps, go to the following section:
-
-* [Installing apps using Microsoft Graph APIs](#installing-apps-using-microsoft-graph-apis)
-
-### Installing apps using Microsoft Graph APIs
 
 To receive app notifications, you must:
 
@@ -176,6 +172,17 @@ To receive both direct and indirect member update notifications, you must includ
 
 This subscription enables apps to monitor membership changes in shared channels and its associated teams. For more information on how to create a Microsoft Graph change notification subscription, see [Create a subscription.](/graph/teams-changenotifications-teammembership)
 
+### Handle bulk membership changes
+
+If there are bulk membership changes, Teams curbs individual membership update notifications when a channel is shared or unshared with a team. To reduce notification overload during membership updates, such as when a shared channel is added to or removed from a team with thousands of members, use the`sharedWithTeams` subscription resource:
+
+```HTTP
+/teams/{team-id}/channels/{channel-id}/sharedWithTeams
+```
+
+The `sharedWithTeams` subscription sends a single notification when a channel is shared or unshared with a team. It avoids thousands of per-user notifications and improves performance for apps that monitor membership changes. Ensure that you update the shared channel member list using the [allMembers](/graph/api/channel-list-allmembers?view=graph-rest-1.0&tabs=http&preserve-view=true ) API after receiving a *shared with* or *unshared from* team notification.
+
+Bots
 The `conversationUpdate` event is sent to your bot when it receives notifications on membership updates for teams where it is added. To receive both direct and indirect member update notifications, configure your bot with the following prerequisites:
 
 1. Update the app manifest. Add `supportsChannelFeatures`: `tier1` to declare app readiness.
@@ -275,16 +282,6 @@ public async Task OnMembersRemovedAsync(ITurnContext turnContext, AppState turnS
 ```
 
 ---
-
-### Handle bulk membership changes
-
-If there are bulk membership changes, Teams curbs individual membership update notifications when a channel is shared or unshared with a team. To reduce notification overload during membership updates, such as when a shared channel is added to or removed from a team with thousands of members, use the`sharedWithTeams` subscription resource:
-
-```HTTP
-/teams/{team-id}/channels/{channel-id}/sharedWithTeams
-```
-
-The `sharedWithTeams` subscription sends a single notification when a channel is shared or unshared with a team. It avoids thousands of per-user notifications and improves performance for apps that monitor membership changes. Ensure that you update the shared channel member list using the [allMembers](/graph/api/channel-list-allmembers?view=graph-rest-1.0&tabs=http&preserve-view=true ) API after receiving a *shared with* or *unshared from* team notification.
 
 ### Shared and unshared with team events
 
