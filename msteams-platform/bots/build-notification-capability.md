@@ -10,6 +10,8 @@ ms.date: 10/03/2024
 
 # Send notifications
 
+[!INCLUDE [Deprecation Note](../includes/deprecation-note-teamsfx-sdk.md)]
+
 With the notification capability in bots, you can send alerts, updates, or messages to users through various channels, ensuring timely communication. Utilizing bots for notifications offers several benefits, including enhanced user engagement, timely communication, increased conversation, improved customer experience, and reduced response time.
 
 Notifications can be triggered by user interactions, system updates, data changes, error messages or alerts, reminders and follow-ups, or personalized recommendations. The article covers the following types of notifications:
@@ -25,7 +27,7 @@ By integrating notification capabilities, bots can effectively communicate with 
 
 Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) enables you to build applications that capture events and send them as interactive notifications to a personal, group chat, or a channel in Microsoft Teams. You can send notifications as plain text or [Adaptive Cards](../task-modules-and-cards/cards/cards-reference.md). The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by HTTP post request.
 
-The app template is built using the TeamsFx SDK, which provides a simple set of functions over Microsoft Bot Framework to implement your requirement. For example, a travel agency builds an app in Teams for their users to keep them up to date with the weather forecast. In the following flowchart, a Teams app notifies about the weather forecast to the users using an Adaptive Card:
+The app template is built using the Microsoft 365 Agents SDK (formerly known as TeamsFx SDK), which provides a simple set of functions over Microsoft Bot Framework to implement your requirement. For example, a travel agency builds an app in Teams for their users to keep them up to date with the weather forecast. In the following flowchart, a Teams app notifies about the weather forecast to the users using an Adaptive Card:
 
 :::image type="content" source="../assets/images/notification-bot/notification-new-scenario-diagram.png" alt-text="Image shows a weather forecast sample notification scenario" lightbox="../assets/images/notification-bot/notification-new-scenario-diagram.png":::
 
@@ -41,7 +43,7 @@ You can send a bot notification in the following scenarios:
 
 **Advantages**
 
-- Facilitates notifications to a personal, group chat, and in a channel, using APIs from TeamsFx SDK.
+- Facilitates notifications to a personal, group chat, and in a channel, using APIs from Microsoft 365 Agents SDK (formerly known as TeamsFx SDK).
 - Enhances user experience by customizing notification with an Adaptive Card.
 - Provides multiple mechanisms to trigger notifications such as HTTP and schedule timer trigger with Azure Functions.
 
@@ -54,7 +56,7 @@ You can send a bot notification in the following scenarios:
 
 ### Notification based on events
 
-Bot Framework SDK provides the functionality to proactively message in Teams. TeamsFx SDK provides the functionality to manage bot's conversation references when a bot event is triggered. TeamsFx SDK recognizes the following bot events:
+Bot Framework SDK provides the functionality to proactively message in Teams. Microsoft 365 Agents SDK (formerly known as TeamsFx SDK) provides the functionality to manage bot's conversation references when a bot event is triggered. Microsoft 365 Agents SDK recognizes the following bot events:
 
 | **Event** | **Behavior** |
 | --- | --- |
@@ -66,7 +68,7 @@ Bot Framework SDK provides the functionality to proactively message in Teams. Te
 
 :::image type="content" source="../assets/images/notification-bot/notification-new-event.png" alt-text="Image shows a new notification event sample":::
 
-When you send notifications, TeamsFx SDK creates a new conversation from the selected conversation reference, and then sends a message. For advanced usage, you can directly access the conversation reference to execute your own bot logic:
+When you send notifications, Microsoft 365 Agents SDK (formerly known as TeamsFx SDK) creates a new conversation from the selected conversation reference, and then sends a message. For advanced usage, you can directly access the conversation reference to execute your own bot logic:
 
 # [TypeScript](#tab/ts1)
 
@@ -489,7 +491,7 @@ If you don't have the required SDK and want to invoke external APIs in your code
 
 #### Teams bot application or Teams Incoming Webhook
 
-TeamsFx supports two ways to help you send notifications from your system to Teams:
+Microsoft 365 Agents SDK (formerly known as TeamsFx) supports two ways to help you send notifications from your system to Teams:
 
 - Create a Teams bot app.
 - Create Teams Incoming Webhook.
@@ -511,7 +513,7 @@ In the following table, you can see the comparison of the two different ways:
 #### Incoming Webhook notification
 
 Incoming Webhooks help in posting messages from apps to Teams. If Incoming Webhooks are enabled for a Team in any channel, it exposes the HTTPS endpoint, which accepts correctly formatted JSON and inserts the messages into that channel. For example, you can create an Incoming Webhook in your DevOps channel, configure your build, and simultaneously deploy and monitor services to send alerts.
-TeamsFx provides you with an [Incoming Webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/v3/incoming-webhook-notification) that helps you to:
+Microsoft 365 Agents SDK (formerly known as TeamsFx) provides you with an [Incoming Webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/v3/incoming-webhook-notification) that helps you to:
 
 - [Create Incoming Webhooks](../webhooks-and-connectors/how-to/add-incoming-webhook.md) in Teams.
 - Send notifications using Incoming Webhooks with Adaptive Cards.
