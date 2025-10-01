@@ -227,7 +227,7 @@ To receive `conversationUpdate` event notifications when indirect members are ad
 
 3. Ensure the bot is enabled in the shared channel
 
-    To receive member event notifications, install the bot at the team level and manually allow it in the shared channel. 
+    To receive member event notifications, install the bot at the team level and manually allow it in the shared channel.
 
 
     This process ensures the bot is active and authorized to receive notifications for both direct and indirect members.
@@ -409,7 +409,7 @@ You can collaborate with external members outside of your organization using sha
 
 ## Verify app addition to a channel
 
-There’s no dedicated API to check if your app is part of a channel. Bots can detect when your app is added to a channel indirectly. when your bot receives. When your bot receives a `channelMemberAdded` event for itself in a `conversationUpdate`, your app is added to the channel.There’s no dedicated API to check if your app is part of a channel.
+When your bot receives a `channelMemberAdded` event for itself in a `conversationUpdate`, your app is added to the channel. There’s no dedicated API to check if your app is part of a channel. Bots can detect when your app is added to a channel indirectly.
 
 Use this event to trigger app-specific logic such as:
 
@@ -585,14 +585,14 @@ Follow these best practices to ensure your app works reliably across all channel
 
 ### Dos
 
-* Always get the current channel’s **member list and roles** before performing actions. For example, when sending notifications or assigning tasks, target only the actual channel members and not the entire team.
-* **Adjust app functionality** and **access controls** based on user roles (owner, member, guest, external).
-* Control **data access and sharing** based on channel membership and permissions. For more information, see [Manage channel membership](#manage-channel-membership).
-* Identify whether users are **internal, guests, or external (cross-tenant)**, and authenticate them in their home tenant. Always **validate permissions** for cross-tenant scenarios, especially when accessing files. For more information, see [Identify guest users (B2B guests) in private channels](#identify-guest-users-b2b-guests-in-private-channels)
-* **Update help text and user guides** to explain how your app behaves in different channel types, including any limitations for guests or external users.
-* Use **cache large member lists** and **change notifications** to update them, rather than relying on frequent API calls. For example, refresh your cache only when a membership change event occurs.
-* **Validate your app's behavior** across all channel types and user roles. Test with owners, members, guests, and external users to ensure correct permissions and consistent functionality.
-* **Review Microsoft Teams documentation and changelogs** to stay aligned with the latest updates to APIs, permissions, and channel configurations.
+* Always get the current channel’s member list and roles before performing actions. For example, when sending notifications or assigning tasks, target only the actual channel members and not the entire team.
+* Adjust app functionality and access controls based on user roles (owner, member, guest, external).
+* Control data access and sharing based on channel membership and permissions. For more information, see [Manage channel membership](#manage-channel-membership).
+* Identify whether users are internal, guests, or external (cross-tenant), and authenticate them in their home tenant. Always validate permissions for cross-tenant scenarios, especially when accessing files. For more information, see [Identify guest users (B2B guests) in private channels](#identify-guest-users-b2b-guests-in-private-channels)
+* Update help text and user guides to explain how your app behaves in different channel types, including any limitations for guests or external users.
+* Use cache large member lists and change notifications to update them, rather than relying on frequent API calls. For example, refresh your cache only when a membership change event occurs.
+* Validate your app's behavior across all channel types and user roles. Test with owners, members, guests, and external users to ensure correct permissions and consistent functionality.
+* Review Microsoft Teams documentation and changelogs to stay aligned with the latest updates to APIs, permissions, and channel configurations.
 
 ### Don'ts
 
