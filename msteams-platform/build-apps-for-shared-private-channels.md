@@ -10,7 +10,7 @@ ms.date: 04/09/2025
 
 # Apps for shared and private channels
 
-Shared and private channels in Microsoft Teams enable flexible collaboration within teams and across  organizations. You can experience multiple benefits, depending on your channel:
+Shared and private channels in Microsoft Teams enable flexible collaboration within teams and across  organizations. You can experience multiple benefits:
 
 * **Shared channels**: Allow seamless communication with internal or external members, without changing the user’s context. These channels ensure secure granular access control and real-time membership syncing.
 
@@ -24,7 +24,7 @@ When you're building or integrating apps with Microsoft Teams, understanding cha
 
 | Channels | Access                          | Collaboration                                                                 | File storage location               |
 |----------|----------------------------------|--------------------------------------------------------------------------------|-------------------------------------|
-| Standard | All team members by default     | Ideal for team-wide collaboration where bots or tabs should be available to everyone | Team’s SharePoint site              |
+| Standard | All team members by default     | Ideal for team-wide collaboration where bots or tabs must be available to everyone | Team’s SharePoint site              |
 | Private  | Only to selected team members   | Suitable for scenarios requiring restricted access to bots, connectors, or files     | Private channel’s SharePoint site   |
 | Shared   | Cross-team and cross-organization | Enables interaction with users outside the host team without requiring them to join the team | Shared channel’s SharePoint site    |
 
@@ -32,22 +32,22 @@ When you're building or integrating apps with Microsoft Teams, understanding cha
 
 Here’s an outline of the different channels and their capabilities, across various parameters:
 
-| Model       | Channel Capabilities                                                                 | Standard Channel                  | Shared Channels                  | Private Channels                 |
-|-------------|----------------------------------------------------------------------------------------|-----------------------------------|----------------------------------|----------------------------------|
-| Membership  | Can add people to the channel without adding to the host team                         | ❌                                | ✔️                              | ❌                               |
-|             | Channel membership can be limited to a subset of the host team                        | ❌                                | ✔️                             | ✔️                              |
-|             | Channel can be shared with other teams to inherit members from the team               | ❌                                | ✔️                              | ❌                               |
-|             | Channel can be shared directly with its parent team to inherit members from parent team | N/A                               | ✔️                              | ❌                               |
-|             | External users can participate in the channel                                         | ✔️ (B2B collab users)            | ✔️ (B2B Direct connect)         | ✔️ (B2B collab users)           |
-|             | Channel is hosted under a host team                                                   | ✔️                               | ✔️                              |                                  |
-| Storage     | Each channel has a dedicated SharePoint site                                          | ❌ (Inherits team site)           | ✔️                              | ✔️                              |
-| App Model   | App must be installed in the host team                                                | ✔️                               | ✔️                              | ✔️                              |
-|             | App installed to host team automatically available in channel                         | ✔️                               | ❌                               | ❌                               |
-|             | App must be added to each channel                                                     | ❌                                | ✔️                              | ✔️                              |
+| Model         | Channel capabilities                                             | Standard channel                          | Shared and private channels                          |
+|---------------|------------------------------------------------------------------|-------------------------------------------|-------------------------------------------------------|
+| **Membership**| Can add people to the channel without adding to the host team    | ❌                                        | ✔️ <br> (not supported for private channels)           |
+|               | Channel membership can be limited to a subset of the host team   | ❌                                        | ✔️                                                  |
+|               | Channel can be shared with other teams to inherit members        | ❌                                        | ✔️ <br> (not supported for private channels)           |
+|               | Channel can be shared directly with its parent team              | N/A                                       | ✔️ <br> (not supported for private channels)           |
+|               | External users can participate in the channel                    | ✔️ <br> (B2B collaboration users)           | ✔️                                                  |
+|               | Channel is hosted under a host team                              | ✔️                                       | ✔️                                                  |
+| **Storage**   | Each channel has a dedicated SharePoint site                     | ❌ <br> (inherits team site)                | ✔️                                                  |
+| **App Model** | App must be installed in the host team                           | ✔️                                       | ✔️                                                  |
+|               | App installed to host team automatically available in channel    | ✔️                                       | ❌                                                   |
+|               | App must be added to each channel                                | ❌                                        | ✔️                                                  |
 
 ### Understand how different channels determine app functionality
 
-Understanding the difference between Microsoft Teams channel types is essential. Incorrect assumptions about membership, storage, or privacy can lead to broken functionality or unintended data exposure. Ensure that you:
+Ensure that you understand that how different channels determine app functionality, membership, storage, or privacy, else can lead to broken functionality or unintended data exposure:
 
 * **Use channel-specific membership APIs**
 
@@ -636,14 +636,14 @@ This failure can happen if the app is using the team’s main SharePoint site in
 <details>
 <summary>Why are external users experiencing authentication issues in tabs or task modules?</summary>
 
-Authentication issues often occur when the app requests a token for the host tenant instead of the user’s home tenant. To resolve this issue, check whether the user is external by comparing ``context.user.tenant.id`` with the host or owner tenant ID. If they're different, the user is external, and your app should request the token for the user’s home tenant. You can do this step by passing the correct tenant ID (tid) when calling `getAuthToken`.
+Authentication issues often occur when the app requests a token for the host tenant instead of the user’s home tenant. To resolve this issue, check whether the user is external by comparing ``context.user.tenant.id`` with the host or owner tenant ID. If they're different, the user is external, and your app must request the token for the user’s home tenant. You can do this step by passing the correct tenant ID (tid) when calling `getAuthToken`.
 
 </details>
 <br>
 <details>
 <summary>How do I know my app was added to a channel?</summary>
 
-This issue might occur if the app is expects a centralized list of installed apps at the channel level or relies on team-level installation behavior. Currently, there's no channel-level installedApps list available. Instead, bots should listen for the `channelMemberAdded` event within the channel to detect when they're added. When the app gets a 403 error and misses the event, it asks the user to add the bot to the channel and manages the error.
+This issue might occur if the app is expects a centralized list of installed apps at the channel level or relies on team-level installation behavior. Currently, there's no channel-level installedApps list available. Instead, bots must listen for the `channelMemberAdded` event within the channel to detect when they're added. When the app gets a 403 error and misses the event, it asks the user to add the bot to the channel and manages the error.
 
 </details>
 <br>
