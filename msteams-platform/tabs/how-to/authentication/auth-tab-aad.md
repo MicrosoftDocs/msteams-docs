@@ -97,7 +97,7 @@ microsoftTeams.authentication.authenticate({
 
 * The URL you pass to `authenticate()` is the start page of the authentication flow. In this example that is `/tab-auth/simple-start`. This should match what you registered in the [Microsoft Entra Application Registration Portal](https://apps.dev.microsoft.com).
 
-* Authentication flow must start on a page that's on your domain. This domain should also be listed in the [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) section of the manifest. Failure to do results in an empty pop-up.
+* Authentication flow must start on a page that's on your domain. This domain should also be listed in the [`validDomains`](/microsoft-365/extensibility/schema/root#validdomains) section of the manifest. Failure to do results in an empty pop-up.
 
 * If you fail to use `authenticate()`, the pop-up might not close at the end of the sign-in process, causing a problem.
 

@@ -161,10 +161,10 @@ GET /teams/{team-id}/channels/{channel-id}/sharedWithTeams/{sharewithteamsId}/al
 ## Get app notifications for direct and indirect membership changes
 
 Apps installed in shared channels receive notifications when users are added to or removed from a team that shares the channel.
-Depending on where you install your apps, go to the following section:
+Depending on how you install your apps, go to the following section:
 
 * [Installing apps using Microsoft Graph APIs](#installing-apps-using-microsoft-graph-apis)
-* [Installing apps using BOT APIs](#installing-apps-using-bot-apis)
+
 
 ### Installing apps using Microsoft Graph APIs
 
@@ -183,7 +183,7 @@ This subscription enables apps to monitor membership changes in shared channels 
 
 ### Installing apps using BOT APIs
 
-Microsoft Teams now supports bot notifications for both direct and indirect members. 
+Microsoft Teams supports bot notifications for both direct and indirect members. 
 This enhancement expands its Bot Framework SDK to support notifications for indirect members in shared channels. This update improves visibility into membership changes across teams, enabling bots to more effectively track user access in collaborative environments. It builds on the existing capability for bots to subscribe to `conversationUpdate` events in channels.
 
 ### Manage member added and removed events

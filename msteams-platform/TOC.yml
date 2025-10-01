@@ -953,15 +953,11 @@
 - name: App manifest
   items:
     - name: App manifest
-      href: resources/schema/manifest-schema.md
+      href: /microsoft-365/extensibility/schema/?view=m365-app-1.23?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json&preserve-view=true
       displayName: version, validDomain, valid domain, validdomain, properties, meetingExtensionDefinition
     - name: Public developer preview
-      items:
-        - name: Overview
-          href: resources/dev-preview/developer-preview-intro.md          
-        - name: Public developer preview app manifest
-          href: resources/schema/manifest-schema-dev-preview.md
-          displayName: properties
+      href: resources/dev-preview/developer-preview-intro.md
+      displayName: developer preview, preview features, preview capabilities
 - name: Test your app or agent
   items:
   - name: Overview

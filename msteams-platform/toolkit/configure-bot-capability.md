@@ -36,7 +36,7 @@ To create a bot app using Agents Toolkit (previously known as Teams Toolkit), se
 
 ## Configure bot capability in app manifest
 
-You can configure the bot capability in the `appPackage/manifest.json` file. For more information, see [app manifest schema](../resources/schema/manifest-schema.md#bots).
+You can configure the bot capability in the `appPackage/manifest.json` file. For more information, see [app manifest schema](/microsoft-365/extensibility/schema/root-bots).
 
 The following code snippet is an example:
 
@@ -470,7 +470,7 @@ To create a bot app with Agents Toolkit, see [create a new Teams bot app](create
 
 ## Update manifest file
 
-You can configure the bot capability in the `appPackage/manifest.json` file. For more information, see [app manifest schema](../resources/schema/manifest-schema.md#bots).
+You can configure the bot capability in the `appPackage/manifest.json` file. For more information, see [app manifest schema](/microsoft-365/extensibility/schema/root-bots).
 
 The following code snippet is an example:
 
