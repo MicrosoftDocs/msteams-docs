@@ -198,11 +198,6 @@ A member added event is sent to your bot in the following scenarios:
 1. When the bot, itself, is installed and added to a conversation
 2. When a user is added to a conversation where the bot is installed
 
-A member removed event is sent to your bot in the following scenarios:
-
-1. When the bot, itself, is uninstalled and removed from a conversation.
-2. When a user is removed from a conversation where the bot is installed.
-
 For more information, see [Conversation events - Teams | Microsoft Learn]()
 The following Bot Framework SDK examples apply to both direct and indirect member add and remove events. To receive transitive member events, ensure your bot is set up with all the prerequisites.
 
@@ -585,7 +580,7 @@ Follow these best practices to ensure your app works reliably across all channel
 <details>
 <summary>Why isn’t the app visible when trying to add it to a channel?</summary>
 
-The app may not appear if the **manifest is missing required support**, such as ``"supportsChannelFeatures": tier1``. Additionally, the **installer might not have sufficient permissions**, only team members or owners can add apps, and local policies must allow app installation. If the channel is an incoming shared channel (shared into a team), apps can't be added directly from that location. In such cases, switch to the host team to add the app to the channel. You can detect whether a channel is shared-in by checking the channel metadata for the host team ID.
+The app may not appear if the **manifest is missing required support**, such as ``supportsChannelFeatures: tier1``. Additionally, the **installer might not have sufficient permissions**, only team members or owners can add apps, and local policies must allow app installation. If the channel is an incoming shared channel (shared into a team), apps can't be added directly from that location. In such cases, switch to the host team to add the app to the channel. You can detect whether a channel is shared-in by checking the channel metadata for the host team ID.
 
 <br>
 &nbsp;
@@ -625,7 +620,7 @@ Authentication issues often occur when the **app requests a token for the host t
 <details>
 <summary>How do I know my app was added to a channel?</summary>
 
-This issue might occur if the **app is expects a centralized list of installed apps at the channel level or relies on team-level installation behavior**. Currently, there's no channel-level installedApps list available. Instead, Bots should listen for the `channelMemberAdded` event within the channel to detect when they're added. When the app gets a 403 error and misses the event, it asks the user to add the bot to the channel and manages the error.
+This issue might occur if the **app is expects a centralized list of installed apps at the channel level or relies on team-level installation behavior**. Currently, there's no channel-level installedApps list available. Instead, bots should listen for the `channelMemberAdded` event within the channel to detect when they're added. When the app gets a 403 error and misses the event, it asks the user to add the bot to the channel and manages the error.
 
 <br>
 &nbsp;
@@ -641,7 +636,7 @@ Message change notifications might fail in shared or private channels **because 
 <details>
 <summary>Why do file links still fail for external users even after the app is added to the channel?</summary>
 
-This happens when the **tenant’s sharing policy blocks the link type, or when the user doesn’t have access to the item, even if they’re a member of the channel**. Another common cause is that the app might generate links pointing to the team drive instead of the channel’s dedicated drive. To resolve this issue, reissue the links using the "people with existing access" option or use the invite API to grant access to specific users. Also, make sure the links reference the channel drive, which can be identified using the filesFolder property, rather than the team site.
+This happens when the **tenant’s sharing policy blocks the link type, or when the user doesn’t have access to the item, even if they’re a member of the channel**. Another common cause is that the app might generate links pointing to the team drive instead of the channel’s dedicated drive. To resolve this issue, reissue the links using the 'people with existing access' option or use the invite API to grant access to specific users. Also, make sure the links reference the channel drive, which can be identified using the filesFolder property, rather than the team site.
 
 [Back to Top](#microsoft-teams-connect-shared-and-private-channels)
 
