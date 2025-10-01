@@ -1113,7 +1113,7 @@ Static tab capability is extended to support group chat, channels, and meetings.
 You can update your existing configurable tab to a static tab and add different scopes to the static tab. To change your configurable tab to static tab:
 
 1. Move your configuration logic out of your `configurationUrl` code space to your `contentUrl` code space.
-1. Add the `staticTabs` property to your [app manifest](~/resources/schema/manifest-schema.md#statictabs) with `scopes` and `context` parameters. Following is an example of app manifest where a static tab is defined that works in all scopes and contexts in Teams:
+1. Add the `staticTabs` property to your [app manifest](/microsoft-365/extensibility/schema/root-static-tabs) with `scopes` and `context` parameters. Following is an example of app manifest where a static tab is defined that works in all scopes and contexts in Teams:
 
    ```json
    "staticTabs": [ 
@@ -1158,4 +1158,4 @@ If your app supports [configurable tab,](~/tabs/how-to/create-tab-pages/configur
 * [Create a personal tab](create-personal-tab.md)
 * [Developer Portal for Teams](../../concepts/build-and-test/teams-developer-portal.md)
 * [Add a SharePoint page as a tab in Teams](https://support.microsoft.com/en-us/office/add-a-sharepoint-page-list-or-document-library-as-a-tab-in-teams-131edef1-455f-4c67-a8ce-efa2ebf25f0b)
-* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
+* [App manifest schema for Teams](/microsoft-365/extensibility/schema/)

@@ -62,7 +62,7 @@ The following is an app manifest example for Actions that can be triggered on fi
 }
 ```
 
-For more information, see [public developer preview app manifest schema](../resources/schema/manifest-schema-dev-preview.md#actions).
+For more information, see [app manifest schema](/microsoft-365/extensibility/schema/element-actions).
 
 When a user selects an action to open a personal tab and view related tasks in an app based on the selected file. The app uses the `"intent": "custom"` property to identify the file type, such as .xlsx or doc and the `"type": "openPage"` handler opens the app and navigates to the `pageId`.
 
