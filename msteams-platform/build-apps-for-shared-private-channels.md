@@ -78,7 +78,7 @@ You can enable app support in shared and private channels, even if your apps don
 * Use channel or team membership to determine message delivery, task assignment, or permissions
 * Access or manage files stored in Teams or SharePoint
 * Combine or share data across multiple channels or teams
-* Customize experience, based on users (internal, guests, or external participants)
+* Customize experience, based on users (internal, guests, or external members)
 
  To enable app support in shared and private channels:
 
@@ -92,7 +92,7 @@ You can enable app support in shared and private channels, even if your apps don
 
 ### Get context for shared and private channels
 
-When loading the user experience in a shared or private channel, use the data received from the `getContext` call for shared or private channels. The `getContext` call publishes two new properties, `hostTeamGroupID` and `hostTenantID`, which are used to retrieve channel membership using Microsoft Graph APIs. `hostTeam` is the team that creates both private and shared channels. For more information, see [Get context in shared channels](tabs/how-to/access-teams-context.md) and [Get context for your tab for private channels](tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels).
+When loading the user experience in a shared or private channel, use the data received from the `getContext` call for shared or private channels. The `getContext` call publishes two new properties, `hostTeamGroupID` and `hostTenantID`, which are used to retrieve channel membership using Microsoft Graph APIs. `hostTeam` is the team that creates both private and shared channels. For more information, see [Get context in shared channels](tabs/how-to/access-teams-context.md#retrieve-context-in-shared-channels) and [Get context for your tab for private channels](tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels).
   
 ### Manage channel membership
 
@@ -172,8 +172,7 @@ The `conversationUpdate` event is sent to your bot when it receives notification
 
 1. Update the app manifest. Add `supportsChannelFeatures`: `tier1` to declare app readiness.
 
-    
-2. Request Resource-Specific Consent (RSC) permission 
+2. Request Resource-Specific Consent (RSC) permission
 
     Your app must request the following RSC permission to access channel membership information:
 
@@ -194,7 +193,7 @@ The `conversationUpdate` event is sent to your bot when it receives notification
 
 3. Ensure the bot is enabled in the shared channel
 
-    To receive member event notifications, install the bot at the team level and manually allow it in the shared channel. 
+    To receive member event notifications, install the bot at the team level and manually allow it in the shared channel.
 
     This process ensures the bot is active and authorized to receive notifications for both direct and indirect members.
 
@@ -213,8 +212,6 @@ A member removed event is sent to your bot in the following scenarios:
 For more information, see [Conversation events.](/graph/teams-changenotifications-teammembership)
 
 If the bot is installed in the team or channel, the Agents SDK receives a `conversationUpdate` activity through the `OnConversationUpdateActivityAsync` method, when a shared channel is added to another team.
-
-
 
 When a new member is added to a shared channel, the ```OnMembersAddedAsync``` method is called. This method provides the context and details of the user who was added, allowing the bot to respond accordingly.
 
@@ -280,7 +277,6 @@ If there are bulk membership changes, Teams curbs individual membership update n
 ```
 
 The `sharedWithTeams` subscription sends a single notification when a channel is shared or unshared with a team. It avoids thousands of per-user notifications and improves performance for apps that monitor membership changes. Ensure that you update the shared channel member list using the [allMembers](/graph/api/channel-list-allmembers?view=graph-rest-1.0&tabs=http&preserve-view=true ) API after receiving a *shared with* or *unshared from* team notification.
-
 
 ### Shared and unshared with team events
 
