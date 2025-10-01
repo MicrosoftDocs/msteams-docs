@@ -10,15 +10,15 @@ ms.date: 04/09/2025
 
 # Microsoft Teams connect shared and private channels
 
-Shared and private channels in Microsoft Teams enable flexible collaboration within and across teams or organizations. You can experience multiple benefits, depending on your channel:
+Shared and private channels in Microsoft Teams enable flexible collaboration within teams and across  organizations. You can experience multiple benefits, depending on your channel:
 
-* Shared channels: Allow seamless communication with internal or external partners, without changing the user’s context. These channels ensure secure granular access control and real-time membership syncing
+* Shared channels: Allow seamless communication with internal or external partners, without changing the user’s context. These channels ensure secure granular access control and real-time membership syncing.
 
 * Private channels: Provide secure space for selected team members to collaborate on sensitive or confidential content, ensuring privacy and focused discussions within the team.
 
 ## Understand channels for app integration
 
-When building or integrating apps with Microsoft Teams, understanding channel types is crucial, as they determine app visibility, user access, and data storage behavior as shown:
+When building or integrating apps with Microsoft Teams, understanding channel types is crucial, as different channels determine app visibility, user access, and data storage behavior as shown:
 
 | Channels | Access                          | Collaboration                                                                 | File storage location               |
 |----------|----------------------------------|--------------------------------------------------------------------------------|-------------------------------------|
@@ -45,21 +45,22 @@ Here’s an outline of the different channels and their capabilities, across var
 
 ## Understand how different channels impact app functionality
 
-Understanding the difference between Microsoft Teams channel types is essential. Incorrect assumptions about membership, storage, or privacy can lead to broken functionality or unintended data exposure.
+Understanding the difference between Microsoft Teams channel types is essential. Incorrect assumptions about membership, storage, or privacy can lead to broken functionality or unintended data exposure. Ensure that you:
 
-* **Access limits in private and shared channels:** Only members who are specifically added to the channel can participate in these channels. If your bot targets ‘everyone’, it may violate privacy or miss external members. Use channel-specific membership APIs to determine the correct members.
+* **Use channel-specific membership APIs**
+Don't assume that team membership is equal to channel membership. Only members who are specifically added to the channel can participate in shared and private channels. If your bot targets ‘everyone’, it may violate privacy or miss external members.
 
-* **Different user types:** Channel members might include in-tenant users, guests, or cross-tenant users (external users from other tenants). Your app must distinguish between these roles to manage access, data visibility, and feature availability. Validate user roles and tenant IDs before granting permissions.
+* **Distinguish between users and roles**
+Channel members might include in-tenant users, guests, or cross-tenant users (external users from other tenants). Your app must distinguish between these roles to manage access, data visibility, and feature availability. Validate user roles and tenant IDs before granting permissions.
 
-* **SharePoint sites:** Private and shared channels have their own SharePoint sites. Always use the correct site URL for each channel to avoid missing files or unauthorized access errors.
+* **Don't assume a single SharePoint site**
+Private and shared channels have their own SharePoint sites. Always use the correct URL for each channel, to avoid missing files or unauthorized access errors.
 
-* **Data aggregation:** Aggregate or cross-post data across channels only when necessary. Keep data scoped to the channel unless clearly defined to prevent accidental leaks. For example, analytics apps should not include private channel data in team-wide reports unless permissions are clearly defined.
-
-![Diagram shows Team B from organization A and Team C from organization B collaborating in a shared channel as Team A.](./assets/images/app-fundamentals/shared-channels-teams.png)                                                   |
+* **Keep data scoped to channels** Aggregate or cross-post data across channels only when necessary, to prevent accidental leaks. For example, analytics apps should not include private channel data in team-wide reports unless permissions are clearly defined.
 
 > [!IMPORTANT]
 >
-> Check your app’s capability (membership boundaries, storage location, external access) and don’t make any code changes, based on channel type.
+> Check your app’s capabilities such as membership boundaries, storage location,and external access. Don't make any code changes, based on channel type.
 
 [Back to Top](#microsoft-teams-connect-shared-and-private-channels)
 
