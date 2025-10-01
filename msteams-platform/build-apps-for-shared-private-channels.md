@@ -73,18 +73,16 @@ Ensure that you understand that how different channels determine app functionali
 
 ## Enable your app for shared and private channels
 
-Enabling app support in shared and private channels is easy for most apps. If your apps doesn't support the following
+Enabling app support in shared and private channels is easy for most apps. If your apps don't depend on channel membership, channel-specific file storage, or deal with cross-channel data access scenarios, you can enable app support with a simple configuration change.
 
-If your apps don't depend on channel membership, channel-specific file storage, or deal with cross-channel data access scenarios, you can enable app support with a simple manifest update.
-
-If your apps don't:  
+You can enable your app for shared and private channels, even if your apps don't support the following:  
 
 * Use channel or team membership to determine message delivery, task assignment, or permissions
 * Access or manage files stored in Teams or SharePoint
 * Combine or share data across multiple channels or teams
 * Customize experience, based on users (internal, guests, or external participants)
 
-Perform the following steps to enable app support in shared and private channels:
+To enable app support in shared and private channels, perform the following steps:
 
 1. Add `supportsChannelFeatures`: `tier1` to your app manifest, to enable support for shared and private channels.
 2. To verify expected behavior, test your app in standard, private, and shared channels.
@@ -96,9 +94,7 @@ Perform the following steps to enable app support in shared and private channels
 
 ### Get context for shared and private channels
 
-Microsoft Teams now supports enhanced bot and tab capabilities in shared and private channels.
-
-When loading the content UX in a shared or private channel, use the data received from the `getContext` call for shared or private channel changes. `getContext` call publishes two new properties, `hostTeamGroupID` and `hostTenantID`, which are used to retrieve channel membership using Microsoft Graph APIs. `hostTeam` is the team that creates the shared channel.
+When loading the user experience in a shared or private channel, use the data received from the `getContext` call for shared or private channel changes. `getContext` call publishes two new properties, `hostTeamGroupID` and `hostTenantID`, which are used to retrieve channel membership using Microsoft Graph APIs. `hostTeam` is the team that creates the shared channel.
 
 See more:
 
