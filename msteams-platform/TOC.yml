@@ -31,6 +31,12 @@
     - name: Get started
       href: /microsoftteams/platform/teams-ai-library/welcome
       displayName: Teams AI library, custom engine agent, AI bot, JavaScript, Python, C#, code sample
+    - name: Bots and agents in Teams
+      href: bots/build-a-bot.md
+      displayName: Bot samples, Code sample, Teams AI library, Microsoft Bot Framework SDK, build a bot, build AI bot, command bot, workflow bot, custom engine agent, agent, conversational bot, notification bot, tools, platforms, Azure OpenAI, Microsoft 365 Agents Toolkit, Azure AI Foundr
+    - name: Custom engine agent user experience
+      href: bots/how-to/teams-conversational-ai/ai-ux.md
+      displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop            
 - name: Tools and SDKs
   items:
   - name: Overview
@@ -400,9 +406,9 @@
     - name: Overview
       href: bots/overview.md
       displayName: AI bot, bot capability, command bot, workflow bot, custom engine agent, agent, conversational bot, activity handler, bot logic, notification bot
-    - name: Bots and agents in Teams
-      href: bots/build-a-bot.md
-      displayName: Bot samples, Code sample, Teams AI library, Microsoft Bot Framework SDK, build a bot, build AI bot, command bot, workflow bot, custom engine agent, agent, conversational bot, notification bot, tools, platforms, Azure OpenAI, Microsoft 365 Agents Toolkit, Azure AI Foundry
+#    - name: Bots and agents in Teams
+#      href: bots/build-a-bot.md
+#      displayName: Bot samples, Code sample, Teams AI library, Microsoft Bot Framework SDK, build a bot, build AI bot, command bot, workflow bot, custom engine agent, agent, conversational bot, notification bot, tools, platforms, Azure OpenAI, Microsoft 365 Agents Toolkit, Azure AI Foundry
 #    - name: Teams AI library v1
 #      items:
 #      - name: What is Teams AI library?
@@ -421,9 +427,9 @@
 #        href: bots/how-to/teams-conversational-ai/teams-ai-library-tutorial.md
     - name: Bot user experience
       items:
-      - name: Custom engine agent user experience
-        href: bots/how-to/teams-conversational-ai/ai-ux.md
-        displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop    
+#      - name: Custom engine agent user experience
+#        href: bots/how-to/teams-conversational-ai/ai-ux.md
+#        displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop    
       - name: Stream bot messages
         href: bots/streaming-ux.md
         displayName: Streaming, response generation, AI library, AI SDK, REST API
