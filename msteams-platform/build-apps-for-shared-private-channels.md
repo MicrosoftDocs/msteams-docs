@@ -197,10 +197,6 @@ The `conversationUpdate` event is sent to your bot when it receives notification
 3. Ensure the bot is enabled in the shared channel
 
     To receive member event notifications, install the bot at the team level and manually allow it in the shared channel.
-<<<<<<< HEAD
-
-=======
->>>>>>> 46b0943db27cd2e1d2597c4db06100bf17b4f02c
 
     This process ensures the bot is active and authorized to receive notifications for both direct and indirect members.
 
