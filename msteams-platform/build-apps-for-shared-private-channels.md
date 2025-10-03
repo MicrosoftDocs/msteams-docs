@@ -72,28 +72,18 @@ Ensure that you understand that how different channels determine app functionali
 
     Aggregate or cross-post data across channels only when necessary, to prevent accidental leaks. For example, analytics apps shouldn't include private channel data in team-wide reports unless permissions are clearly defined.
 
-[Back to Top](#microsoft-teams-connect-shared-and-private-channels)
+[Back to Top](#apps-for-shared-and-private-channels)
 
 ## Enable apps for shared and private channels
 
-<<<<<<< HEAD
-Enabling app support in shared and private channels is easy for most apps. If your apps don't depend on channel membership, channel-specific file storage, or deal with cross-channel data access scenarios, you can enable app support with a simple configuration change.
-
-You can enable your app for shared and private channels, even if your apps don't support the following:  
-=======
 You can enable app support in shared and private channels, even if your apps don't:  
->>>>>>> 46b0943db27cd2e1d2597c4db06100bf17b4f02c
 
 * Use channel or team membership to determine message delivery, task assignment, or permissions
 * Access or manage files stored in Teams or SharePoint
 * Combine or share data across multiple channels or teams
 * Customize experience, based on users (internal, guests, or external members)
 
-<<<<<<< HEAD
-To enable app support in shared and private channels, perform the following steps:
-=======
  To enable app support in shared and private channels:
->>>>>>> 46b0943db27cd2e1d2597c4db06100bf17b4f02c
 
 1. Add `supportsChannelFeatures`: `tier1` to your app manifest.
 2. Verify expected behavior, and test your app across channels.
@@ -105,16 +95,7 @@ To enable app support in shared and private channels, perform the following step
 
 ### Get context for shared and private channels
 
-<<<<<<< HEAD
-When loading the user experience in a shared or private channel, use the data received from the `getContext` call for shared or private channel changes. `getContext` call publishes two new properties, `hostTeamGroupID` and `hostTenantID`, which are used to retrieve channel membership using Microsoft Graph APIs. `hostTeam` is the team that creates the shared channel.
-
-See more:
-
-* [Get context in shared channels](tabs/how-to/access-teams-context.md)
-* [Get context for your bot](bots/how-to/get-teams-context.md)
-=======
 When loading the user experience in a shared or private channel, use the data received from the `getContext` call for shared or private channels. The `getContext` call publishes two new properties, `hostTeamGroupID` and `hostTenantID`, which are used to retrieve channel membership using Microsoft Graph APIs. `hostTeam` is the team that creates both private and shared channels. For more information, see [Get context in shared channels](tabs/how-to/access-teams-context.md#retrieve-context-in-shared-channels) and [Get context for your tab for private channels](tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels).
->>>>>>> 46b0943db27cd2e1d2597c4db06100bf17b4f02c
   
 ### Manage channel membership
 
@@ -171,19 +152,11 @@ You can manage indirect membership in channels using the following Microsoft Gra
 >[!NOTE]
 >The `allowedMembers` API returns only newly associated users and doesn't apply to unshared events.
 
-[Back to Top](#enable-apps-for-shared-and-private-channels)
+[Back to Top](#apps-for-shared-and-private-channels)
 
 ## Get app notifications for membership changes
 
 Apps installed in shared channels receive notifications when users are added to or removed from a team that shares the channel.
-<<<<<<< HEAD
-Depending on how you install your apps, go to the following section:
-
-* [Installing apps using Microsoft Graph APIs](#installing-apps-using-microsoft-graph-apis)
-
-### Installing apps using Microsoft Graph APIs
-=======
->>>>>>> 46b0943db27cd2e1d2597c4db06100bf17b4f02c
 
 To receive app notifications, you must:
 
@@ -410,7 +383,7 @@ GET /teams/{host-team-group-id}/channels/{channel-id}/allMembers
 
 3. Compare the `TenantId` of the member to the `ownerTenantId` property and determine if the member is an in-tenant or out-tenant.
 
-[Back to Top](#enable-apps-for-shared-and-private-channels)
+[Back to Top](#apps-for-shared-and-private-channels)
 
 ## Understand app permissions in shared channels
 
@@ -467,7 +440,7 @@ If you're building an app using [SharePoint](/sharepoint/dev/spfx/integrate-with
 
 Use the Graph API to access the document library of the SPO site linked to a shared or private channel. Ensure you pass the Team ID and Channel ID received from the [Get Host Team Group ID & Channel ID](#get-host-team-group-id--channel-id) and pass in [Get filesFolder](/graph/api/channel-get-filesfolder).
 
-[Back to Top](#microsoft-teams-connect-shared-and-private-channels)
+[Back to Top](#apps-for-shared-and-private-channels)
 
 ### Access SharePoint storage correctly for channel files
 
@@ -532,7 +505,7 @@ Use getContext() to retrieve channel context. Compare `user.tenant.id` with `cha
 2. Request token from home tenant
 Call getAuthToken() with the external user's tenant ID (`user.tenant.id` or `tid`) to ensure the token is issued from their home tenant.
 
-[Back to Top](#microsoft-teams-connect-shared-and-private-channels)
+[Back to Top](#apps-for-shared-and-private-channels)
 
 ## Test your app across channels
 
@@ -570,6 +543,8 @@ Perform the following steps to validate:
    * This functionality fails if the user is outside your tenant
    * Confirm that in-channel communication still works.
 
+---
+
 ### Private channel
 
 Create a private channel in Team A with atleast two members (owner and member).
@@ -585,9 +560,7 @@ Perform the following steps to validate:
 5. Add a new member to the private channel and check:
    * Whether your app receives a membership change event.
    * Whether your membership API reflects the new member.
-  
----
-  
+
 Testings across these scenarios help you spot any issues with functionality, permissions, and user experience.
   
 ## Best practices for supporting all channels
@@ -668,7 +641,7 @@ This failure happens when the tenant’s sharing policy blocks the link type, or
 
 </details>
 
-[Back to Top](#microsoft-teams-connect-shared-and-private-channels)
+[Back to Top](#apps-for-shared-and-private-channels)
 
 ## Code sample
 
