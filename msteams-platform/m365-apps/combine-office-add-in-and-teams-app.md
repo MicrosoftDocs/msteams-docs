@@ -148,8 +148,8 @@ To separate the source code for the tab or bot, perform the following steps:
 
      The project builds and runs. This process can take a couple of minutes. When it completes, Teams opens in a browser with a prompt to add your tab app.
 
-        > [!NOTE]
-        > If this is the first time you've debugged a Teams app on this computer, you're prompted to install an SSL certificate. Select **Install** and then **Yes** to the second prompt. Login to your Microsoft 365 account if you're prompted to do so.
+    > [!NOTE]
+    > If this is the first time you've debugged a Teams app on this computer, you're prompted to install an SSL certificate. Select **Install** and then **Yes** to the second prompt. Login to your Microsoft 365 account if you're prompted to do so.
 
     1. Select **Add**.
     1. To stop debugging and uninstall the app, select **Run** > **Stop Debugging** in Visual Studio Code.
