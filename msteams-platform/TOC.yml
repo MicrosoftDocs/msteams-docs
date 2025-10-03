@@ -521,7 +521,7 @@
       displayName: Teams Store apps approved by Microsoft for mobile
     - name: Apps for shared channels
       href: concepts/build-and-test/shared-channels.md
-      displayName: Cross-tenant notifications, context for shared channel, apps and permissions in shared channels
+      displayName: Cross-tenant notifications, context for shared channel, apps and permissions in shared channels, notifications for indirect membership
     - name: Send activity feed notifications
       href: /graph/teams-send-activityfeednotifications?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
       displayName: activity feed, notification, customize notification
