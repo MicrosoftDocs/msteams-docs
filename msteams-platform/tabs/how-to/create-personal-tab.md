@@ -737,7 +737,7 @@ If you don't have a Teams developer account, you can get it for free. Join the M
 
 ## Get a free Azure account
 
-If you wish to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account?cid=msft_learn) before you begin.
+If you wish to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn) before you begin.
 
 Now you've got all the tools and set up your accounts. Next, let's set up your development environment and start building!
 

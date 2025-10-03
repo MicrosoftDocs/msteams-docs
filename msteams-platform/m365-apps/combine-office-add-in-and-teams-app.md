@@ -36,7 +36,7 @@ Before you start, ensure that you meet the following requirements:
 
 - A Microsoft 365 account that includes Teams to test the application. Alternatively, you can have separate subscriptions to both Microsoft 365 and Teams. For example, a test account with *.onmicrosoft.com through the [Microsoft 365 Developer Program](/office/developer-program/microsoft-365-developer-program).
 - Your Microsoft 365 account is added as an account in desktop Outlook. For more information, see [add an email account to Outlook](https://support.microsoft.com/office/add-an-email-account-to-outlook-e9da47c4-9b89-4b49-b945-a204aeea6726).
-- An Azure account with active subscription to deploy the Teams app to Azure. If you don't have one, you can create your [free Azure account](https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account?cid=msft_learn).
+- An Azure account with active subscription to deploy the Teams app to Azure. If you don't have one, you can create your [free Azure account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 - A Teams app created using the latest version of Microsoft 365 Agents Toolkit (previously known as Teams Toolkit).
 
 ## Add an Outlook Add-in to a Teams app
@@ -145,7 +145,7 @@ To separate the source code for the tab or bot, perform the following steps:
     1. In the **ACCOUNTS** section, verify that you're signed in to Microsoft 365 account.
     1. Select **View** > **Run** in Visual Studio Code.
     1. In the **RUN AND DEBUG** dropdown menu, select **Debug in Teams (Edge)** and press F5.
- 
+
      The project builds and runs. This process can take a couple of minutes. When it completes, Teams opens in a browser with a prompt to add your tab app.
 
         > [!NOTE]
