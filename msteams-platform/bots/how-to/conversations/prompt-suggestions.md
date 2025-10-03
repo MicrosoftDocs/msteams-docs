@@ -48,7 +48,7 @@ Suggested actions help users continue conversations with your bot.
 > * Prompt starters are only supported for one-on-one chat bots.
 
 To enable prompt starters, define the `commands` property in your bot's app manifest. Each command now contains four fields, a `title`, `description`, `type`, and `prompt`. 
-- The `title` field is the text shown in the prompt starter. When selected, this text is populated into the compose box. If the `type` is **basic**, this text is also used to populate the compose box.
+- The `title` field is the text shown in the prompt starter. When selected, this text is populated into the compose box. 
 - The `description` field describes what the users accomplish. 
 - The `type` field indicates whether the bot command is a basic command or a prompt.
   Set `type` to **prompt** and provide the text in the prompt field.
@@ -116,7 +116,6 @@ The manifest example code for prompt starters is as follows:
             {
               "title":"Help",
               "description":"Displays this help message",
-              "type":"basic"
             },
             {
               "title":"Search Flights",
