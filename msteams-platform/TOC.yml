@@ -26,6 +26,11 @@
 - name: Build your first agent
   href: bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md
   displayName: custom engine agent, AI bot, JavaScript, Python, C#, code sample, Microsoft 365 Agents Toolkit
+- name: Build your agent with Teams AI library
+  items:
+    - name: Get started
+      href: /microsoftteams/platform/teams-ai-library/welcome
+      displayName: Teams AI library, custom engine agent, AI bot, JavaScript, Python, C#, code sample
 - name: Tools and SDKs
   items:
   - name: Overview
