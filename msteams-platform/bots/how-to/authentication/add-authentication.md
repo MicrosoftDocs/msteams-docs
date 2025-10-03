@@ -29,7 +29,7 @@ In this article you'll learn:
 - Knowledge of [bot basics][concept-basics], [managing state][concept-state], the [dialogs library][concept-dialogs], and how to [implement sequential conversation flow][simple-dialog].
 - Knowledge of Azure and OAuth 2.0 development.
 - The latest versions of Microsoft Visual Studio and Git.
-- Azure account. If needed, you can create an [Azure free account](https://azure.microsoft.com/free/).
+- Azure account. If needed, you can create an [Azure free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 - The following sample:
 
     | Sample | BotBuilder version | Demonstrates |
