@@ -165,7 +165,7 @@ Before you enable share content to meetings, you must ensure the following:
 
 2. The meeting app must support Share to Stage APIs with two primary requirements to display the content on the meeting stage:
 
-    * The [app manifest](../../resources/schema/manifest-schema.md) that supports both `meetingStage` and `meetingSidePanel` configured as frame contexts. If not configured, meeting participants might not be able to view the content on stage.
+    * The [app manifest](/microsoft-365/extensibility/schema/root-configurable-tabs#context-1) that supports both `meetingStage` and `meetingSidePanel` configured as frame contexts. If not configured, meeting participants might not be able to view the content on stage.
     * The app that supports `MeetingStage.Write.Chat` permissions for taking control of the stage. This is a read permission requirement.
 
 > [!NOTE]

@@ -44,4 +44,4 @@ Teams app that requires device permissions in the browser must show instructions
 ## See also
 
 * [Device capabilities overview](device-capabilities-overview.md)
-* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
+* [App manifest schema for Teams](/microsoft-365/extensibility/schema/)
