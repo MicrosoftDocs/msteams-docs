@@ -212,11 +212,7 @@ A member removed event is sent to your bot in the following scenarios:
 1. When the bot, itself, is uninstalled and removed from a conversation.
 2. When a user is removed from a conversation where the bot is installed.
 
-For more information, see [Conversation events.](/graph/teams-changenotifications-teammembership)
-
-If the bot is installed in the team or channel, the Agents SDK receives a `conversationUpdate` activity through the `OnConversationUpdateActivityAsync` method, when a shared channel is added to another team.
-
-When a new member is added to a shared channel, the ```OnMembersAddedAsync``` method is called. This method provides the context and details of the user who was added, allowing the bot to respond accordingly.
+For more information, see [Conversation events.](bots/how-to/conversations/subscribe-to-conversation-events.md)
 
 The following Agents SDK examples apply to both direct and indirect member add and remove events.
 
@@ -283,7 +279,7 @@ The `sharedWithTeams` subscription sends a single notification when a channel is
 
 ### Shared and unshared with team events
 
-When a shared channel is added to another team, the Agents SDK  might receive a `conversationUpdate` activity through the `OnConversationUpdateActivityAsync` method, but only if the bot is installed in the team or channel.
+When a new member is added to a shared channel, the ```OnMembersAddedAsync``` method is called. This method provides the context and details of the user who was added, allowing the bot to respond accordingly.
 
 ```csharp
         protected override async Task OnConversationUpdateActivityAsync(
