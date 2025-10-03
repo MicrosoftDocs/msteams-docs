@@ -11,6 +11,8 @@ ms.owner: ryanbliss
 
 # Workflow bot in Teams
 
+[!INCLUDE [Deprecation note](../../../includes/deprecation-note-teamsfx-sdk.md)]
+
 A workflow bot allows users to interact with an Adaptive Card. Adaptive Card action handler enables an Adaptive Card to converse in Teams app. You can create a workflow bot in multiple scenarios for your users to enhance the user experience, such as incident management, ticketing, approval workflow, and project management cards. You can create and assign a work item with workflow bot and sync the content to Azure DevOps or Jira system.
 
 A workflow bot can be installed into a team, group chat, or as personal app, depending on different scopes. The default command logic returns an Adaptive Card. You can customize this logic with your business requirement. For the customization, you need to call your existing APIs.
@@ -20,20 +22,20 @@ A workflow bot can be installed into a team, group chat, or as personal app, dep
 * Automates business processes and repetitive workflows without leaving the context of conversations.
 * Supports users with sequential workflow through various cards progressively, without sending additional cards.
 * Provides up-to-date user-specific views.
-* Simplifies programming model with TeamsFx SDK.
+* Simplifies programming model with Microsoft 365 Agents (formerly TeamsFx) SDK.
 
    > [!NOTE]
    > You can select the capability that you want to install, when adding the app. For more information, see [configure default install options](../../../concepts/deploy-and-publish/apps-publish-overview.md#configure-default-install-options).
 
-You can create a workflow bot to respond to the Adaptive Card triggered by users. Adaptive Card action handler powered by TeamsFx SDK can execute the Adaptive Card universal action `Action.Execute` triggered by users. In response to this respective card action in the conversation, the Adaptive Card action handler sends another Adaptive Card.
+You can create a workflow bot to respond to the Adaptive Card triggered by users. Adaptive Card action handler powered by Microsoft 365 Agents (formerly TeamsFx) SDK can execute the Adaptive Card universal action `Action.Execute` triggered by users. In response to this respective card action in the conversation, the Adaptive Card action handler sends another Adaptive Card.
 
 :::image type="content" source="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-final-output.png" alt-text="Screenshot shows the final output of a workflow bot in Teams." lightbox="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-final-output.png" :::
 
 ## Card action handler
 
-To simplify the creation of a workflow bot, the TeamsFx SDK provides an Adaptive Card action handler `TeamsFxAdaptiveCardActionHandler`. You can focus only on the development of workflow bot to respond to the card action without learning the Bot Framework.
+To simplify the creation of a workflow bot, the Microsoft 365 Agents (formerly TeamsFx) SDK provides an Adaptive Card action handler `TeamsFxAdaptiveCardActionHandler`. You can focus only on the development of workflow bot to respond to the card action without learning the Bot Framework.
 
-The following diagram illustrates how to respond to an Adaptive Card action with TeamsFx SDK:
+The following diagram illustrates how to respond to an Adaptive Card action with Microsoft 365 Agents (formerly TeamsFx) SDK:
 
 :::image type="content" source="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-action-card.png" alt-text="Diagram shows workflow bot card action handler." lightbox="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-action-card.png":::
 
@@ -41,7 +43,7 @@ The following diagram illustrates how to respond to an Adaptive Card action with
 1. **Card action handler**: Triggered when users invoke the corresponding card action, its `triggerVerb` is same as the `verb` property in Adaptive Card action. It can send a response card to respond to the action.
 1. **Response card**: The card that responds to the action when user invokes it from the action card.
 
-To handle card actions with TeamsFx SDK, each card action handler must implement the `TeamsFxAdaptiveCardActionHandler` interface:
+To handle card actions with Microsoft 365 Agents (formerly TeamsFx) SDK, each card action handler must implement the `TeamsFxAdaptiveCardActionHandler` interface:
 
 ```typescript
 
@@ -157,7 +159,7 @@ You can return a new Adaptive Card for each action invoked to display the respon
 
 <summary><b>3. Add action handler</b></summary>
 
-You can handle a new action invoked by Adaptive Card with TeamsFx SDK's class `TeamsFxAdaptiveCardActionHandler`. You need to customize the action in this step, such as calling an API, processing data, or any other action as per your business need.
+You can handle a new action invoked by Adaptive Card with Microsoft 365 Agents SDK(formerly TeamsFx SDK)'s class `TeamsFxAdaptiveCardActionHandler`. You need to customize the action in this step, such as calling an API, processing data, or any other action as per your business need.
 
 ### [JavaScript](#tab/JS)
 
@@ -310,7 +312,7 @@ The following image illustrates how user-specific view is displayed in Teams:
 
 ### Add user-specific view
 
-The following steps help you to add user-specific view with TeamsFx SDK:
+The following steps help you to add user-specific view with Microsoft 365 Agents (formerly TeamsFx) SDK:
 
 <br>
 

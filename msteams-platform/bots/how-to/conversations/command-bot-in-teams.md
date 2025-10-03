@@ -11,16 +11,18 @@ ms.date: 12/11/2024
 
 # Command bot in Teams
 
+[!INCLUDE [Deprecation Note](../../../includes/deprecation-note-teamsfx-sdk.md)]
+
 Microsoft Teams allows you to automate simple and repetitive tasks in a conversation. You can build a command bot that can respond to simple commands sent in chats with Adaptive Cards. You can create a command bot template in Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) that responds to chat commands by displaying UI using an Adaptive Card. This enables users to send messages in Teams and your app can provide a response as required.
 
-The command bot template is built using the TeamsFx SDK, which provides a simple set of functions over the Microsoft Bot Framework. Command bot can be used in different scenarios such as checking ticket status and retrieving help information.
+The command bot template is built using the Microsoft 365 Agents SDK (formerly known as TeamsFx SDK), which provides a simple set of functions over the Microsoft Bot Framework. Command bot can be used in different scenarios such as checking ticket status and retrieving help information.
 
 :::image type="content" source="../../../assets/images/command-bot-teams/commandbot-flowchart1.png" alt-text="Screenshot of creating command bot app with Adaptive Card flow chart." lightbox="../../../assets/images/command-bot-teams/commandbot-flowchart1.png":::
 
 **Advantages**
 
 * Automates simple and repetitive tasks with a chat command.
-* Simplifies programming model with TeamsFx SDK, built on Bot Framework SDK.
+* Simplifies programming model with Microsoft 365 Agents SDK (formerly known as TeamsFx SDK), built on Bot Framework SDK.
 * Supports regular expressions for processing commands.
 
 ## Command bot installation
@@ -37,9 +39,9 @@ For uninstalling, see [remove an app from Teams](https://support.microsoft.com/e
 
 ## Command and response
 
-The TeamsFx command and response bots are built using the [Bot Framework SDK](/azure/bot-service/bot-builder-basics). The Bot Framework SDK provides [built-in message handler](../../bot-basics.md#teams-activity-handlers) to handle the incoming message activity, which requires you to understand the concept of Bot Framework such as the [event-driven conversation model](/azure/bot-service/bot-activity-handler-concept). TeamsFx SDK provides command-response abstraction layer to let the users focus on handling the command request according to the business need, without learning the Bot Framework SDK.
+The  Microsoft 365 Agents (formerly TeamsFx) command and response bots are built using the [Bot Framework SDK](/azure/bot-service/bot-builder-basics). The Bot Framework SDK provides [built-in message handler](../../bot-basics.md#teams-activity-handlers) to handle the incoming message activity, which requires you to understand the concept of Bot Framework such as the [event-driven conversation model](/azure/bot-service/bot-activity-handler-concept). Microsoft 365 Agents SDK (formerly TeamsFx SDK) provides command-response abstraction layer to let the users focus on handling the command request according to the business need, without learning the Bot Framework SDK.
 
-TeamsFx SDK pulls [Bot Framework middleware](/azure/bot-service/bot-builder-concept-middleware) to handle the integration with the underlying activity handlers. If the received message text matches the command pattern provided in a `TeamsFxBotCommandHandler` instance, the middleware handles the incoming message activity and invokes the corresponding `handlerCommandReceived` function. The middleware calls `context.sendActivity` to send the command response returned from the `handlerCommandReceived` function to the user.
+Microsoft 365 Agents (formerly TeamsFx) SDK pulls [Bot Framework middleware](/azure/bot-service/bot-builder-concept-middleware) to handle the integration with the underlying activity handlers. If the received message text matches the command pattern provided in a `TeamsFxBotCommandHandler` instance, the middleware handles the incoming message activity and invokes the corresponding `handlerCommandReceived` function. The middleware calls `context.sendActivity` to send the command response returned from the `handlerCommandReceived` function to the user.
 
 ## Customize initialization
 
@@ -184,7 +186,7 @@ Following are the JavaScript, TypeScript, and C# command handlers to handle the 
 
 # [JavaScript](#tab/js)
 
-TeamsFx SDK provides a convenient class `TeamsFxBotCommandHandler`, to handle when a command is triggered from Teams conversation message. Create a new file in the path `src/doSomethingCommandHandler.js`.
+ Microsoft 365 Agents (formerly TeamsFx) SDK provides a convenient class `TeamsFxBotCommandHandler`, to handle when a command is triggered from Teams conversation message. Create a new file in the path `src/doSomethingCommandHandler.js`.
 
 Add the following code to the `doSomethingCommandHandler.js` file:
 
@@ -218,7 +220,7 @@ module.exports = {
 
 # [TypeScript](#tab/ts)
 
-TeamsFx SDK provides a convenient class `TeamsFxBotCommandHandler`, to handle when a command is triggered from Teams conversation message. Create a new file in the path `src/doSomethingCommandHandler.ts`.
+ Microsoft 365 Agents (formerly TeamsFx) SDK provides a convenient class `TeamsFxBotCommandHandler`, to handle when a command is triggered from Teams conversation message. Create a new file in the path `src/doSomethingCommandHandler.ts`.
 
 Add the following code to the `doSomethingCommandHandler.ts` file:
 
@@ -258,7 +260,7 @@ export class DoSomethingCommandHandler implements TeamsFxBotCommandHandler {
 
 # [C#](#tab/csharp)
 
-TeamsFx .NET SDK provides an interface `ITeamsCommandHandler` for command handler to handle when a command is triggered from Teams conversation message. Create a new file in the path `Commands/DoSomethingCommandHandler.cs`.
+TeamsFx.NET SDK provides an interface `ITeamsCommandHandler` for command handler to handle when a command is triggered from Teams conversation message. Create a new file in the path `Commands/DoSomethingCommandHandler.cs`.
 
 Add the following code to the `DoSomethingCommandHandler.cs`:
 
