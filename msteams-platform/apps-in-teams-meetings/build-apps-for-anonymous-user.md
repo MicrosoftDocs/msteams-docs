@@ -35,7 +35,7 @@ To allow anonymous users to interact with the tab app, update the `supportsAnony
 }
 ```
 
-For more information, see [app manifest schema.](~/resources/schema/manifest-schema.md#meetingextensiondefinition)
+For more information, see [app manifest schema.](/microsoft-365/extensibility/schema/root-meeting-extension-definition)
 
 ## Anonymous user authentication flow
 

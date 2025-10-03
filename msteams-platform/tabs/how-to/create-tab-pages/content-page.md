@@ -15,7 +15,7 @@ Content page is the base level webpage that is rendered within Microsoft Teams c
 * A channel or group custom tab: The content page is displayed after the user pins and configures the tab in the appropriate context.
 * A [dialog](~/task-modules-and-cards/what-are-task-modules.md): You can create a content page and embed it as a webview inside a dialog (referred as task module in TeamsJS v1.x). The page is rendered inside the modal pop-up.
 
-If you need to add your tab within a channel or group, or personal scope, present an HTML content page in your tab. For static tabs, the content URL is set directly in your [app manifest](../../../resources/schema/manifest-schema.md#statictabs).
+If you need to add your tab within a channel or group, or personal scope, present an HTML content page in your tab. For static tabs, the content URL is set directly in your [app manifest](/microsoft-365/extensibility/schema/root-static-tabs).
 
 This article is specific to using content pages as tabs; however, most of the guidance here applies regardless of how the content page is presented to the user.
 
@@ -112,14 +112,14 @@ You can access additional content by using TeamsJS to interact with Teams, creat
 
 * **Dialogs**: A dialog is a modal pop-up experience that you can trigger from your tab. Use dialogs in a content page to present forms for gathering additional information, displaying the details of an item in a list, or presenting the user with additional information. The dialogs themselves can be additional content pages or created completely using Adaptive Cards. For more information, see [using dialogs in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
 
-* **Valid domains**: Ensure that all URL domains used in your tabs are included in the `validDomains` array in your [app manifest](~/concepts/build-and-test/apps-package.md). For more information, see [validDomains](~/resources/schema/manifest-schema.md#validdomains).
+* **Valid domains**: Ensure that all URL domains used in your tabs are included in the `validDomains` array in your [app manifest](~/concepts/build-and-test/apps-package.md). For more information, see [validDomains](/microsoft-365/extensibility/schema/root#validdomains).
 
 > [!NOTE]
 > The core functionality of your tab exists within Teams and not outside of Teams.
 
 ## Show a native loading indicator
 
-You can configure and show a native loading indicator to a tab. You can provide a [native loading indicator](../../../resources/schema/manifest-schema.md#showloadingindicator) starting with [manifest schema v1.7](../../../resources/schema/manifest-schema.md). For example, [tab content page](#integrate-your-code-with-teams), [configuration page](configuration-page.md), [removal page](removal-page.md), and [dialogs in tabs](../../../task-modules-and-cards/task-modules/task-modules-tabs.md).
+You can configure and show a native loading indicator to a tab. You can provide a [native loading indicator](/microsoft-365/extensibility/schema/root#showloadingindicator) starting with manifest schema v1.7. For example, [tab content page](#integrate-your-code-with-teams), [configuration page](configuration-page.md), [removal page](removal-page.md), and [dialogs in tabs](../../../task-modules-and-cards/task-modules/task-modules-tabs.md).
 
 > [!NOTE]
 >
@@ -158,5 +158,5 @@ Use the following steps to show the native loading indicator:
 * [Build tabs for Teams](../../what-are-tabs.md)
 * [Create a personal tab](../create-personal-tab.md)
 * [Create a channel tab or group tab](../create-channel-group-tab.md)
-* [App manifest schema for Teams](../../../resources/schema/manifest-schema.md)
+* [App manifest schema for Teams](/microsoft-365/extensibility/schema/)
 * [Dev Tools for Microsoft Teams tabs](~/tabs/how-to/developer-tools.md)
