@@ -78,6 +78,7 @@ You can get direct shared channel membership by using the `hostTeamGroupID` from
 
     ```http
     GET /teams/{host-team-group-id}/channels/{channel-id}/sharedWithTeams/{teamX}/members
+    ```
 
 ## Classify members in the shared channel as in-tenant or out-tenant
 

@@ -212,7 +212,11 @@ A member removed event is sent to your bot in the following scenarios:
 1. When the bot, itself, is uninstalled and removed from a conversation.
 2. When a user is removed from a conversation where the bot is installed.
 
-For more information, see [Conversation events.](bots/how-to/conversations/subscribe-to-conversation-events.md)
+For more information, see [Conversation events.](/graph/teams-changenotifications-teammembership)
+
+If the bot is installed in the team or channel, the Agents SDK receives a `conversationUpdate` activity through the `OnConversationUpdateActivityAsync` method, when a shared channel is added to another team.
+
+When a new member is added to a shared channel, the ```OnMembersAddedAsync``` method is called. This method provides the context and details of the user who was added, allowing the bot to respond accordingly.
 
 The following Agents SDK examples apply to both direct and indirect member add and remove events.
 
@@ -279,7 +283,7 @@ The `sharedWithTeams` subscription sends a single notification when a channel is
 
 ### Shared and unshared with team events
 
-When a new member is added to a shared channel, the ```OnMembersAddedAsync``` method is called. This method provides the context and details of the user who was added, allowing the bot to respond accordingly.
+When a shared channel is added to another team, the Agents SDK  might receive a `conversationUpdate` activity through the `OnConversationUpdateActivityAsync` method, but only if the bot is installed in the team or channel.
 
 ```csharp
         protected override async Task OnConversationUpdateActivityAsync(
@@ -430,7 +434,7 @@ This API works across standard and other channels and is recommended for reliabl
 
 If you're building an app using [SharePoint](/sharepoint/dev/spfx/integrate-with-teams-introduction) Framework, you need to use the SharePoint Online (SPO) site linked to the shared channel, not the one linked to the host team group. Each private channel has its own SPO site that is only accessible to members of that specific shared or private channel.
 
-Use the Graph API to access the document library of the SPO site linked to a shared or private channel. Ensure you pass the Team ID and Channel ID received from the [Get Host Team Group ID & Channel ID](#get-host-team-group-id--channel-id) and pass in [Get filesFolder](/graph/api/channel-get-filesfolder).
+Use the Graph API to access the document library of the SPO site linked to a shared or private channel. Ensure you pass the Team ID and Channel ID received from the [Get Host Team Group ID & Channel ID](#get-host-team-group-id-channel-id) and pass in [Get filesFolder](/graph/api/channel-get-filesfolder).
 
 [Back to Top](#apps-for-shared-and-private-channels)
 
@@ -442,7 +446,7 @@ To access a channel’s SharePoint files root, use the following API:
 GET /teams/{teamId}/channels/{channelId}/filesFolder
 ```
 
-This API returns a DriveItem object for that channel's files root. For more, see [channel files](/graph/api/channel-get-filesfolder?view=graph-rest-1.0&tabs=http)
+This API returns a DriveItem object for that channel's files root. For more, see [channel files](/graph/api/channel-get-filesfolder?view=graph-rest-1.0&tabs=http&preserve-view=true)
 
 Use the following properties for all subsequent file operations:
 
