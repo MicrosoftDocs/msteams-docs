@@ -353,7 +353,7 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
   * Support insertion for all images in the Adaptive Card.
 
-* Declarative agents support only static tool discovery from MCP servers. Therefore, within the agent plugin manifest, the flags `enable_dynamic_discovery` and `enable_dynamic_client_registration` for MCP servers must always be set to false. [*Must fix*]
+* Declarative agents support only static tool discovery from MCP servers. Therefore, within the agent plugin manifest, the flags `enable_dynamic_discovery` and `enable_dynamic_client_registration` for MCP servers must always be set to false.
 
 <!--
 * Nodes for Graph connector in the declarative agent manifest must be left blank to ground the agent in all available Graph connectors of a tenant. [*Must fix*]
@@ -416,11 +416,11 @@ All agents must handle the following scenarios gracefully, that is, the agent mu
 
 ## Security requirements for OpenAPI spec URL
 
-Agents that use Message Extension, OpenAPI and MCP server calls must ensure the following security standards:
+Agents that use message extension, OpenAPI, and MCP server calls must ensure the following security standards:
 
-1. All calls must use HTTPS with TLS 1.2 or higher. [*Must fix*]
-1. The calls mustn't lead to any URL redirection. [*Must fix*]
-1. The calls must be served from the same domain or subdomain as the root domain verified for the developer. [*Must fix*]
+* All calls must use HTTPS with TLS 1.2 or higher. [*Must fix*]
+* The calls mustn't lead to any URL redirection. [*Must fix*]
+* The calls must be served from the same domain or subdomain as the root domain verified for the developer. [*Must fix*]
 
 <!--
 Agents that use OpenAPI specs must ensure the following security standards:
