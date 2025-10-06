@@ -409,10 +409,18 @@ All agents must handle the following scenarios gracefully, that is, the agent mu
 
 ## Security requirements for OpenAPI spec URL
 
+Agents that use Message Extension, OpenAPI and MCP server calls must ensure the following security standards:
+
+1. All calls must use HTTPS with TLS 1.2 or higher. [*Must fix*]
+1. The calls mustn't lead to any URL redirection. [*Must fix*]
+1. The calls must be served from the same domain or subdomain as the root domain verified for the developer. [*Must fix*]
+
+<!--
 Agents that use OpenAPI specs must ensure the following security standards:
 
 * All API calls must use HTTPS with TLS 1.2 or higher. [*Must fix*]
 * API calls mustn't lead to any URL redirection. Actual API calls must be served from the same domain or subdomain as the root domain verified for the developer. [*Must fix*]
+-->
 
 [Back to top](#validation-guidelines-for-agents)
 
