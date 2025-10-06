@@ -102,11 +102,13 @@ You must ensure to meet the following guidelines for agents:
   > * For API based plugins, these guidelines apply to `description_for_human`, `description_for_model`, `capabilities`, `conversation_starters` (both the title and text), `states\reasoning\description` in `functions` fields, if provided. [*Must fix*]
   > * When utilizing Swagger or OpenAPI file formats, adhere to these guidelines for the `path` content associated with keys and the `description` field for GET, POST, PUT, or DELETE APIs. [*Must fix*]
 
+<!--
 * App long description must clearly call out that the agent works in Microsoft 365 Copilot. For example, use Contoso in Microsoft 365 Copilot to search and summarize your tasks. ​[*Must fix*]
 
   :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of a sample prompt for message extension agent in Microsoft 365 Copilot.":::
 
   :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension as an agent in Microsoft 365 Copilot.":::
+-->
 
 * The `semanticDescription` property isn't a mandatory field. However, if you add `semanticDescription` in app manifest, the existing validation checks for short, parameter, and command descriptions are also applicable for semantic descriptions.
 
@@ -329,7 +331,7 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
 [Back to top](#validation-guidelines-for-agents)
 
-## Action or knowledge source
+## Action and knowledge source
 
 * Your agent must have nodes defined as actions in the app manifest. All agents must have a core use case that's served through API actions. [*Must fix*]
 
@@ -350,6 +352,8 @@ A custom engine agent is a conversational Teams bot that must meet the following
   * Ensure the fallback is set to **Drop** to guarantee that the Adaptive Card functions in all compatible clients.
 
   * Support insertion for all images in the Adaptive Card.
+
+* Declarative agents support only static tool discovery from MCP servers. Therefore, within the agent plugin manifest, the flags `enable_dynamic_discovery` and `enable_dynamic_client_registration` for MCP servers must always be set to false. [*Must fix*]
 
 <!--
 * Nodes for Graph connector in the declarative agent manifest must be left blank to ground the agent in all available Graph connectors of a tenant. [*Must fix*]
@@ -399,11 +403,14 @@ All agents must handle the following scenarios gracefully, that is, the agent mu
 
 * For incorrect search parameters
 * For misuse or inappropriate language
+
+<!--
 * For topics in which the agent doesn’t specialize
 
   For example, graceful error message with way forward for declarative agent:
 
   :::image type="content" source="../../../../assets/images/Copilot/graceful-error-handling.png" alt-text="The screenshot shows how to incorporate graceful error handling." lightbox="../../../../assets/images/Copilot/graceful-error-handling.png":::
+-->
 
 [Back to top](#validation-guidelines-for-agents)
 
