@@ -282,9 +282,54 @@ If there are bulk membership changes, Teams curbs individual membership update n
 
 The `sharedWithTeams` subscription sends a single notification when a channel is shared or unshared with a team. It avoids thousands of per-user notifications and improves performance for apps that monitor membership changes. Ensure that you update the shared channel member list using the [allMembers](/graph/api/channel-list-allmembers?view=graph-rest-1.0&tabs=http&preserve-view=true ) API after receiving a *shared with* or *unshared from* team notification.
 
-### Shared and unshared with team events
 
-When a shared channel is added to another team, the Agents SDK  might receive a `conversationUpdate` activity through the `OnConversationUpdateActivityAsync` method, but only if the bot is installed in the team or channel.
+## Validate user access for membership updates
+
+When an app receives a *member removed* notification for an indirect membership update, it’s important to verify whether the user is removed from the channel, especially since the same user might have both direct and indirect membership. For example, if a user is removed from a team that shares a channel, your app must confirm whether the user's access to the shared channel is revoked. Use the `doesUserHaveAccess` API to determine whether the user is removed from the shared channel. See [doesUserHaveAccess](/graph/api/channel-doesuserhaveaccess?view=graph-rest-beta&tabs=http&preserve-view=true ) API to learn more about user accesses and relevant permissions.
+
+```HTTP
+GET /teams/{team-id}/channels/{channel-id}/doesUserHaveAccess(userId='@userid',tenantId='@TenantID',userPrincipalName='@UserPrincipalName')
+```
+
+When an app receives a *member added* notification for an indirect membership update, see the [allMembers](/graph/api/channel-list-allmembers?view=graph-rest-1.0&tabs=http&preserve-view=true ) API to refresh the list of all members.
+
+```HTTP
+GET /teams/{team-id}/channels/{channel-id}/allMembers
+```
+
+### Classify members as in-tenant or out-tenant
+
+You can classify members as in-tenant or out-tenant by comparing the 'TenantId' of the member or team with `ownerTenantId` as follows:
+
+1. Get the 'TenantId' of the member you wish to compare.
+
+```HTTP
+GET /teams/{host-team-group-id}/channels/{channel-id}/allMembers
+```
+
+2. Call `microsoftTeams.app.getContext()` in your tab from the Teams JavaScript client library. The getContext() call returns context of the shared channel, which contains the details such as `displayName`, `membershipType`, `ownerGroupId`, and `ownerTenantId`.
+
+3. Compare the `TenantId` of the member to the `ownerTenantId` property and determine if the member is an in-tenant or out-tenant.
+
+[Back to Top](#apps-for-shared-and-private-channels)
+
+## Understand app permissions in shared channels
+
+You can collaborate with external members outside of your organization using shared channels. App permissions in shared channels follow the host team's app roster and host tenant's app policy.
+
+> [!NOTE]
+> The [activity feed notification API](/graph/teams-send-activityfeednotifications) doesn't support cross-tenant notifications for apps in a shared channel.
+
+## Verify app addition to a channel
+
+When a shared channel is added to another team, the Agents SDK receives a `conversationUpdate` activity through the `OnConversationUpdateActivityAsync` method, only if the bot is installed in the team. There’s no dedicated API to check if your app is part of a channel. Bots can detect when your app is added to a channel indirectly.
+
+Use this `channelMemberAdded` event to trigger app-specific logic such as:
+
+* Sending a welcome message
+* Fetching the channel roster
+* Configuring tabs
+* Starting scheduled jobs
 
 ```csharp
         protected override async Task OnConversationUpdateActivityAsync(
@@ -352,54 +397,6 @@ When a shared channel is added to another team, the Agents SDK  might receive a 
         }
 ```
 
-## Validate user access for membership updates
-
-When an app receives a *member removed* notification for an indirect membership update, it’s important to verify whether the user is removed from the channel, especially since the same user might have both direct and indirect membership. For example, if a user is removed from a team that shares a channel, your app must confirm whether the user's access to the shared channel is revoked. Use the `doesUserHaveAccess` API to determine whether the user is removed from the shared channel. See [doesUserHaveAccess](/graph/api/channel-doesuserhaveaccess?view=graph-rest-beta&tabs=http&preserve-view=true ) API to learn more about user accesses and relevant permissions.
-
-```HTTP
-GET /teams/{team-id}/channels/{channel-id}/doesUserHaveAccess(userId='@userid',tenantId='@TenantID',userPrincipalName='@UserPrincipalName')
-```
-
-When an app receives a *member added* notification for an indirect membership update, see the [allMembers](/graph/api/channel-list-allmembers?view=graph-rest-1.0&tabs=http&preserve-view=true ) API to refresh the list of all members.
-
-```HTTP
-GET /teams/{team-id}/channels/{channel-id}/allMembers
-```
-
-### Classify members as in-tenant or out-tenant
-
-You can classify members as in-tenant or out-tenant by comparing the 'TenantId' of the member or team with `ownerTenantId` as follows:
-
-1. Get the 'TenantId' of the member you wish to compare.
-
-```HTTP
-GET /teams/{host-team-group-id}/channels/{channel-id}/allMembers
-```
-
-2. Call `microsoftTeams.app.getContext()` in your tab from the Teams JavaScript client library. The getContext() call returns context of the shared channel, which contains the details such as `displayName`, `membershipType`, `ownerGroupId`, and `ownerTenantId`.
-
-3. Compare the `TenantId` of the member to the `ownerTenantId` property and determine if the member is an in-tenant or out-tenant.
-
-[Back to Top](#apps-for-shared-and-private-channels)
-
-## Understand app permissions in shared channels
-
-You can collaborate with external members outside of your organization using shared channels. App permissions in shared channels follow the host team's app roster and host tenant's app policy.
-
-> [!NOTE]
-> The [activity feed notification API](/graph/teams-send-activityfeednotifications) doesn't support cross-tenant notifications for apps in a shared channel.
-
-## Verify app addition to a channel
-
-When your bot receives a `channelMemberAdded` event for itself in a `conversationUpdate`, your app is added to the channel. There’s no dedicated API to check if your app is part of a channel. Bots can detect when your app is added to a channel indirectly.
-
-Use this `channelMemberAdded` event to trigger app-specific logic such as:
-
-* Sending a welcome message
-* Fetching the channel roster
-* Configuring tabs
-* Starting scheduled jobs
-
 ## Authenticate external users to access app content in SharePoint
 
 You need to complete this step when your app stores content in the SharePoint site of the tenant that hosts the channel and requests a SharePoint token.
@@ -433,7 +430,7 @@ This API works across standard and other channels and is recommended for reliabl
 
 ## Access SharePoint data in shared and private channels
 
-If you're building an app using [SharePoint](/sharepoint/dev/spfx/integrate-with-teams-introduction) Framework, you need to use the SharePoint Online (SPO) site linked to the shared channel, not the one linked to the host team group. Each private channel has its own SPO site that is only accessible to members of that specific shared or private channel.
+If you're building an app using [SharePoint](/sharepoint/dev/spfx/integrate-with-teams-introduction) Framework, you need to use the SharePoint Online (SPO) site linked to the shared channel, not the one linked to the host team group. Both shared and private channels have their own SPO site that is only accessible to members of that specific shared or private channel.
 
 Use the Graph API to access the document library of the SPO site linked to a shared or private channel. Ensure you pass the Team ID and Channel ID received from the [Get Host Team Group ID & Channel ID](#get-host-team-group-id-channel-id) and pass in [Get filesFolder](/graph/api/channel-get-filesfolder).
 
@@ -565,12 +562,10 @@ Testings across these scenarios help you spot any issues with functionality, per
 ### Dos
 
 * **Always retrieve the current channel’s member list and roles** before performing actions. For example, when sending notifications or assigning tasks, target only the actual channel members and not the entire team.
-* **Adjust app functionality and access controls** based on user roles (owner, member, guest, external).
 * **Control data access and sharing** based on channel membership and permissions. For more information, see [Manage channel membership](#manage-channel-membership).
 * **Determine** whether users are internal, guests, or external (cross-tenant), and authenticate them in their home tenant. Always validate permissions for cross-tenant scenarios, especially when accessing files. For more information, see [Identify guest users in channels](#identify-guest-users-in-channels)
 * **Update help text and user guides** to explain how your app behaves in different channel types, including any limitations for guests or external users.
 * **Use cache large member lists and change notifications** to update them, rather than relying on frequent API calls. For example, refresh your cache only when a membership change event occurs.
-* **Validate your app's behavior** across all channel types and user roles. Test with owners, members, guests, and external users to ensure correct permissions and consistent functionality.
 * **Review Microsoft Teams documentation and changelogs** to stay aligned with the latest updates to APIs, permissions, and channel configurations.
 
 ### Don'ts
