@@ -1487,6 +1487,14 @@
       {
         "source_path": "msteams-platform/resources/schema/manifest-schema-dev-preview.md",
         "redirect_url": "/microsoftteams/platform/resources/dev-preview/developer-preview"
+      },
+      {
+        "source_path": "msteams-platform/messaging-extensions/build-bot-based-agent.md",
+        "redirect_url": "/microsoftteams/platform/messaging-extensions/build-bot-based-message-extension"
+      },
+      {
+        "source_path": "msteams-platform/messaging-extensions/dev-guidelines-agents.md",
+        "redirect_url": "/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines"
       }
     ]
 }
