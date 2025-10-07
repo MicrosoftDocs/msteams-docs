@@ -317,7 +317,7 @@ A custom engine agent is a conversational Teams bot that must meet the following
 1. User must be able to reference custom engine agent in Microsoft 365 Copilot and handoff chat experience in Teams. [*Good-to-fix*]
 1. Bot must include the following UX design components:
 
-   1. An [AI label](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=after%2Cbotmessage#ai-label) that enables a user to identify that the message was generated using AI. [*Must fix*]
+   1. An [AI label](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=after%2Cbotmessage#ai-label) that enables a user to identify that the message was generated using AI. This label may appear as a persistent disclaimer, per-message/content disclaimer, or as during first-run experience. [*Must fix*]
    1. A [feedback button](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=after%2Cbotmessage#feedback-buttons) that enables a user to provide positive or negative feedback to the agent's messages. [*Must fix*]
    1. A [citation](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=after%2Cbotmessage#citations) that enables a user to refer to the source of the bot message through in-text citations and references. [*Must fix*]
    1. A [sensitivity label](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=after%2Cbotmessage#sensitivity-label) that enables a user to understand the confidentiality of the bot message. [*Good-to-fix*]
@@ -353,7 +353,7 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
   * Support insertion for all images in the Adaptive Card.
 
-* Declarative agents support only static tool discovery from MCP servers. Therefore, within the agent plugin manifest, the flags `enable_dynamic_discovery` and `enable_dynamic_client_registration` for MCP servers must always be set to false.
+* Declarative agents support only static tool discovery from MCP servers. Therefore, within the agent plugin manifest, the flags `enable_dynamic_discovery` and `enable_dynamic_client_registration` for MCP servers must always be set to false. [*Must fix*]
 
 <!--
 * Nodes for Graph connector in the declarative agent manifest must be left blank to ground the agent in all available Graph connectors of a tenant. [*Must fix*]
@@ -414,7 +414,7 @@ All agents must handle the following scenarios gracefully, that is, the agent mu
 
 [Back to top](#validation-guidelines-for-agents)
 
-## Security requirements for OpenAPI spec URL
+## Security requirements for server calls (message extension, OpenAPIs, MCP servers)
 
 Agents that use message extension, OpenAPI, and MCP server calls must ensure the following security standards:
 
