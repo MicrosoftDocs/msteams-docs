@@ -395,8 +395,120 @@
   - name: Code samples
     href: https://github.com/OfficeDev/microsoft-teams-samples#graph-apis
     displayName: graph api samples
-- name: Build additional Teams capabilities
+- name: Add Teams capabilities
   items:
+  - name: Plan your app or agent
+    items:
+    - name: Overview
+      href: concepts/app-fundamentals-overview.md
+      displayName: Teams app features, Government Community Cloud (GCC), Department of Defense (DoD), GCC High (GCCH), Teams operated by 21Vianet
+    - name: Understand use cases
+      href: concepts/design/understand-use-cases.md
+      displayName: user requirements, app functionalities, app scope, capabilities
+    - name: Map use case to Teams features
+      href: concepts/design/map-use-cases.md
+      displayName: user scenarios, Teams app features
+    - name: Teams app planning checklist
+      href: concepts/design/planning-checklist.md
+      displayName: HTTPs, localhost, host your Teams app
+    - name: Plan responsive tabs for Teams mobile
+      href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
+      displayName: tab app in Teams mobile, Teams mobile apps
+    - name: Plan analytics for your Teams app
+      items:
+        - name: Get started with app analytics
+          href: concepts/design/overview-analytics.md
+          displayName: data instrumentation, user-specific insights, constructs, conversational, hosted web canvas 
+        - name: Strategize and decide what to measure
+          href: concepts/design/strategize-measure.md
+          displayName: measure your products, monitor events, product satisfaction, customer values
+        - name: Plan code instrumentation using analytics service
+          href: concepts/design/plan-code-instrumentation.md
+          displayName: track events, monitor, Azure Applications Insights
+    - name: Plan to send app notifications
+      href: concepts/design/design-app-notification.md
+      displayName: notification framework, activity feed, message, alert, notify
+    - name: Plan for special clouds
+      items:
+      - name: Plan for government clouds
+        href: concepts/cloud-overview.md
+        displayName: Government Community Cloud (GCC), GCC High (GCCH), Department of Defense (DoD), Teams for government tenant
+      - name: Plan for sovereign clouds
+        href: concepts/sovereign-cloud.md
+        displayName: Teams operated by 21Vianet, gallatin
+  - name: Design your app or agent
+    items:
+    - name: Overview
+      href: concepts/design/design-teams-app-overview.md
+      displayName: Design principles, Figma, UI Kit, Fluent UI React components, Fluent UI 
+    - name: Understand design process
+      href: concepts/design/design-teams-app-process.md
+      displayName: design phases, design kit
+    - name: Design system
+      items:
+      - name: App design system fundamentals
+        href: concepts/design/design-teams-app-fundamentals.md
+        displayName: design principles
+      - name: Layout and scaling
+        href: concepts/design/design-teams-app-layout-scaling.md
+        displayName: layout, scaling 
+      - name: App icons for Teams Store and app bar
+        href: concepts/design/design-teams-app-icon-store-appbar.md
+        displayName: icon design, icon guidelines 
+      - name: App artwork for Teams Store
+        href: concepts/design/design-teams-app-artwork-store.md
+        displayName: app artwork, image template
+      - name: Typography
+        href: concepts/design/design-teams-app-type.md
+        displayName: font design, font style
+      - name: Color
+        href: concepts/design/design-teams-app-color.md
+        displayName: app color, themes, primary colors
+      - name: Shape and elevation
+        href: concepts/design/design-teams-app-shape-elevation.md
+        displayName: shape, elevation
+    - name: App capabilities
+      items:
+      - name: Understand app structure
+        href: concepts/design/app-structure.md
+        displayName: best practices, customize app structure, wireframes
+      - name: Personal apps
+        href: concepts/design/personal-apps.md
+        displayName: design personal app, manage, logo
+      - name: Tabs
+        href: tabs/design/tabs.md
+        displayName: design, tab
+      - name: Bots
+        href: bots/design/bots.md
+        displayName: add Teams bot, design your bot, manage bot, chat with Teams bot, bot authentication
+      - name: Message extensions
+        href: messaging-extensions/design/messaging-extension-design.md
+        displayName: set up extensions, commands     
+      - name: Meeting extensions
+        href: apps-in-teams-meetings/design/designing-apps-in-meetings.md
+        displayName: meeting stage
+    - name: UI templates
+      href: concepts/design/design-teams-app-ui-templates.md
+      displayName: data visualization, UI templates, use cases
+    - name: UI components
+      items:
+      - name: Basic UI components
+        href: concepts/design/design-teams-app-basic-ui-components.md
+        displayName: dropdown
+      - name: Advanced UI components
+        href: concepts/design/design-teams-app-advanced-ui-components.md
+      - name: Adaptive Cards
+        href: task-modules-and-cards/cards/design-effective-cards.md
+        displayName: Adaptive Cards, Adaptive Card types, anatomy, best practices, Adaptive Card templates, Adaptive Card samples, starter cards
+      - name: Dialogs
+        href: task-modules-and-cards/task-modules/design-teams-task-modules.md
+        displayname: Forms, launch dialogs
+      - name: Lightbox view
+        href: concepts/design/design-teams-app-light-box-view.md
+        displayName: hide page layout  
+      - name: Activity feed notifications
+        href: concepts/design/activity-feed-notifications.md
+        displayName: notify, notification
   - name: Build bots and agents
     expand: true
     items:
@@ -789,7 +901,6 @@
   - name: Integrate location capabilities
     href: concepts/device-capabilities/location-capability.md
     displayName: attendance
-
 - name: Extend your app across Microsoft 365
   items:
   - name: Overview
