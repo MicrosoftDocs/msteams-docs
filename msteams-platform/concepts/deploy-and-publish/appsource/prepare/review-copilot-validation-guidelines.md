@@ -138,9 +138,9 @@ You must ensure the following guidelines for sample prompts and prompt starters:
 
 ### Sample prompts
 
-For message extension based declarative agent, the [`samplePrompts`](/microsoft-365/extensibility/schema/root-compose-extensions-commands-sample-prompts) property provides guidance to users on utilizing the agents in Microsoft 365 Copilot
+For declarative agent, the [`samplePrompts`](/microsoft-365/extensibility/schema/root-compose-extensions-commands-sample-prompts) property provides guidance to users on utilizing the agents in Microsoft 365 Copilot
 
-:::image type="content" source="../../../../assets/images/Copilot/bot-based-sample-prompts.png" alt-text="Screenshot shows the sample prompts displayed when the message extension agent is enabled in Microsoft 365 Copilot.":::
+:::image type="content" source="../../../../assets/images/Copilot/bot-based-sample-prompts.png" alt-text="Screenshot shows the sample prompts displayed when the agent is enabled in Microsoft 365 Copilot.":::
 
 Sample prompts are specified using `samplePrompts` property in the app manifest. These prompts must meet the following requirements:
 
