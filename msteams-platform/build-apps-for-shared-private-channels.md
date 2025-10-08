@@ -12,15 +12,13 @@ ms.date: 04/09/2025
 
 > [!NOTE]
 >
-> * Apps in shared and private channel is currently in developer preview [Public developer preview](resources/dev-preview/developer-preview-intro.md)
+> Apps in shared and private channel are currently in developer preview [Public developer preview](resources/dev-preview/developer-preview-intro.md)
 
-Shared and private channels in Microsoft Teams enable flexible collaboration within teams and across  organizations. You can experience multiple benefits:
+Shared and private channels in Microsoft Teams enable flexible collaboration within teams and across organizations. Currently, Bot and tab apps are supported in shared and private channels. With this ypdate, you can experience multiple benefits:
 
 * **Shared channels**: Allow seamless communication with internal or external members, without changing the user’s context. These channels ensure secure granular access control and real-time membership syncing.
 
 * **Private channels**: Provide secure space for selected team members to collaborate on sensitive or confidential content, ensuring privacy and focused discussions within the team.
-
-Bot and tab apps are supported in shared and private channels.
 
 ## Understand channels for app integration
 
@@ -281,7 +279,6 @@ If there are bulk membership changes, Teams curbs individual membership update n
 ```
 
 The `sharedWithTeams` subscription sends a single notification when a channel is shared or unshared with a team. It avoids thousands of per-user notifications and improves performance for apps that monitor membership changes. Ensure that you update the shared channel member list using the [allMembers](/graph/api/channel-list-allmembers?view=graph-rest-1.0&tabs=http&preserve-view=true ) API after receiving a *shared with* or *unshared from* team notification.
-
 
 ## Validate user access for membership updates
 
