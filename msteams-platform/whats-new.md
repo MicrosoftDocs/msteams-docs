@@ -38,10 +38,6 @@ Teams platform features that are available to all app developers.</br>
 
 **2025 September**
 
-* ***September 18, 2025***: [Teams AI library is now generally available for JavaScript and C#. It provides a simplified SDK, support for Model Context Protocol (MCP), Agent-to-Agent communication (A2A), and streamlined tools to enable developers to build intelligent agents for Teams](/microsoftteams/platform/teams-ai-library/welcome).
-
-:::column-end:::
-:::row-end:::
 <br/>
 
 </br>
