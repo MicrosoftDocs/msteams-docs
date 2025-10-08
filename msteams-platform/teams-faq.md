@@ -1287,7 +1287,7 @@ Use the `-First` and `-Skip` parameters with `Get-CsAutoAttendant` or `Get-CsCal
 &nbsp;
 </details>
 
-## Power platform
+## Power Platform
 
 <details>
 <summary> How can I configure a Teams workflow to wait for manual approval without timing out too quickly?</summary>
