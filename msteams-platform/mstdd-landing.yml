@@ -102,50 +102,50 @@ landingContent:
           url: ~/toolkit/teams-app-test-tool-tutorial.md
         - text: Bot configuration experience
           url: ~/qsg-bot-configuration-experience.yml
-        - text: Create Teams conversation bot
-          url: ~/bots/how-to/conversations/channel-and-group-conversations.md
-        - text: Create Calling and meeting bot
-          url: ~/sbs-calling-and-meeting.yml
-        - text: Configure SSO for tabs and message extensions
-          url: ~/sbs-tabs-and-messaging-extensions-with-SSO.yml  
-        - text: Build tabs with Adaptive Card
-          url: ~/sbs-tab-with-adaptive-cards.yml
-        - text: Build a bot to send Proactive messages
-          url: ~/sbs-send-proactive.yml
+#        - text: Create Teams conversation bot
+#          url: ~/bots/how-to/conversations/channel-and-group-conversations.md
+#        - text: Create Calling and meeting bot
+#          url: ~/sbs-calling-and-meeting.yml
+#        - text: Configure SSO for tabs and message extensions
+#          url: ~/sbs-tabs-and-messaging-extensions-with-SSO.yml  
+#        - text: Build tabs with Adaptive Card
+#          url: ~/sbs-tab-with-adaptive-cards.yml
+#        - text: Build a bot to send Proactive messages
+#          url: ~/sbs-send-proactive.yml
         - text: Build a bot with SSO authentication
           url: ~/sbs-bots-with-sso.yml
-        - text: Generate meeting token
-          url: ~/sbs-meeting-token-generator.yml
-    - linkListType: tutorial
-      links:
-        - text: Generate meeting side panel
-          url: ~/sbs-meetings-sidepanel.yml
-        - text: Build an in-meeting document signing app
-          url:  ~/sbs-inmeeting-document-signing.yml
-        - text: Build command bot with JavaScript
-          url: sbs-gs-commandbot.yml
-        - text: Build notification bot with JavaScript
-          url: sbs-gs-notificationbot.yml
-        - text: Upload files to Teams from a bot
-          url: ~/sbs-file-handling-in-bot.yml
-        - text: Generate meeting content bubble
-          url: ~/sbs-meeting-content-bubble.yml
-        - text: Invoke dialogs from Microsoft Teams
-          url: ~/sbs-botbuilder-taskmodule.yml
-        - text: Build search based message extension
-          url: ~/sbs-messagingextension-searchcommand.yml
-        - text: Build action based message extension
-          url: ~/sbs-meetingextension-action.yml
-        - text: Build Outgoing Webhooks
-          url: ~/sbs-outgoing-webhooks.yml
-    - linkListType: tutorial
-      links:
-        - text: Unfurl links in Teams using bot
-          url: ~/sbs-botbuilder-linkunfurling.yml
-        - text: Build Teams connectors
-          url: ~/sbs-teams-connectors.yml
-        - text: Send activity feed notification 
-          url:  ~/sbs-graphactivity-feedbroadcast.yml          
+#        - text: Generate meeting token
+#          url: ~/sbs-meeting-token-generator.yml
+#    - linkListType: tutorial
+#      links:
+#        - text: Generate meeting side panel
+#          url: ~/sbs-meetings-sidepanel.yml
+#        - text: Build an in-meeting document signing app
+#          url:  ~/sbs-inmeeting-document-signing.yml
+#        - text: Build command bot with JavaScript
+#          url: sbs-gs-commandbot.yml
+#        - text: Build notification bot with JavaScript
+#          url: sbs-gs-notificationbot.yml
+#        - text: Upload files to Teams from a bot
+#          url: ~/sbs-file-handling-in-bot.yml
+#        - text: Generate meeting content bubble
+#          url: ~/sbs-meeting-content-bubble.yml
+#        - text: Invoke dialogs from Microsoft Teams
+#          url: ~/sbs-botbuilder-taskmodule.yml
+#        - text: Build search based message extension
+#          url: ~/sbs-messagingextension-searchcommand.yml
+#        - text: Build action based message extension
+#          url: ~/sbs-meetingextension-action.yml
+#        - text: Build Outgoing Webhooks
+#          url: ~/sbs-outgoing-webhooks.yml
+#    - linkListType: tutorial
+#      links:
+#        - text: Unfurl links in Teams using bot
+#          url: ~/sbs-botbuilder-linkunfurling.yml
+#        - text: Build Teams connectors
+#          url: ~/sbs-teams-connectors.yml
+#        - text: Send activity feed notification 
+#          url:  ~/sbs-graphactivity-feedbroadcast.yml          
         
 # - title: Build apps for Teams
 #  linkLists:
