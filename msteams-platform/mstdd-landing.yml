@@ -100,7 +100,7 @@ landingContent:
         - text: Debug your AI chat bot using Agents Playground
           url: ~/toolkit/teams-app-test-tool-tutorial.md
         - text: Bot configuration experience
-          url: ~/qsg-bot-configuration-experience.yml
+          url: ~/bot/how-to/bot-configuration-experience.md
 #        - text: Create Teams conversation bot
 #          url: ~/bots/how-to/conversations/channel-and-group-conversations.md
         - text: Build notification bot with JavaScript

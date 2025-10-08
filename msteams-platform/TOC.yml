@@ -26,16 +26,16 @@
 - name: Build agents with Teams AI library
   items:
   - name: Build an agent using CLI
-    href: /teams-ai-library/welcome/
+    href: /microsoftteams/platform/teams-ai-library/welcome
     displayName: agent, custom engine agent, AI bot, JavaScript, Python, C#, code sample, Teams AI library
   - name: Build an agent using TypeScript
-    href: /teams-ai-library/typescript/getting-started/quickstart?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+    href: /microsoftteams/platform/teams-ai-library/typescript/getting-started/quickstart?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     displayName: agent, custom engine agent, AI bot, TypeScript, code sample, Teams AI library
   - name: Build an agent using C#
-    href: /teams-ai-library/csharp/getting-started/quickstart?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+    href: /microsoftteams/platform/teams-ai-library/csharp/getting-started/quickstart?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     displayName: agent, custom engine agent, AI bot, C#, code sample, Teams AI library
   - name: Build an agent using Python
-    href: /teams-ai-library/python/getting-started/quickstart?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+    href: /microsoftteams/platform/teams-ai-library/python/getting-started/quickstart?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     displayName: agent, custom engine agent, AI bot, Python, code sample, Teams AI library
   - name: Agents and bots in Teams
     href: bots/build-a-bot.md
