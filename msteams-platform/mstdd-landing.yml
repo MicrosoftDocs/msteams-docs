@@ -101,20 +101,20 @@ landingContent:
           url: ~/qsg-bot-configuration-experience.yml
         - text: Create Teams conversation bot
           url: ~/bots/how-to/conversations/channel-and-group-conversations.md
-#        - text: Create Calling and meeting bot
-#          url: ~/sbs-calling-and-meeting.yml
-        - text: Configure SSO for tabs and message extensions
-          url: ~/sbs-tabs-and-messaging-extensions-with-SSO.yml  
-#        - text: Build tabs with Adaptive Card
-#          url: ~/sbs-tab-with-adaptive-cards.yml
+        - text: Build notification bot with JavaScript
+          url: sbs-gs-notificationbot.yml          
         - text: Build a bot to send Proactive messages
           url: ~/sbs-send-proactive.yml
         - text: Build a bot with SSO authentication
           url: ~/sbs-bots-with-sso.yml
-        - text: Build notification bot with JavaScript
-          url: sbs-gs-notificationbot.yml
-#        - text: Generate meeting token
-#          url: ~/sbs-meeting-token-generator.yml
+        - text: Configure SSO for tabs and message extensions
+          url: ~/sbs-tabs-and-messaging-extensions-with-SSO.yml 
+#       - text: Create Calling and meeting bot
+#         url: ~/sbs-calling-and-meeting.yml
+#       - text: Build tabs with Adaptive Card
+#         url: ~/sbs-tab-with-adaptive-cards.yml
+#       - text: Generate meeting token
+#         url: ~/sbs-meeting-token-generator.yml
 #    - linkListType: tutorial
 #      links:
 #        - text: Generate meeting side panel
@@ -165,7 +165,7 @@ landingContent:
 #        url: ../msteams-platform/whats-new.md  
 
 
-- title: Publish Teams app or agents
+- title: Publish Teams agents or apps
   linkLists:
   - linkListType: concept
     links:
@@ -175,7 +175,7 @@ landingContent:
       url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
 #    - text: Publish Teams apps in Microsoft Teams Store
 #      url: /training/modules/microsoft-teams-publish-app-to-store
-    - text: Publish your Teams apps
+    - text: Publish your agents or apps in Teams
       url: ~/concepts/deploy-and-publish/apps-publish-overview.md
 #    - text: Upload your app in Microsoft Teams
 #      url: ~/concepts/deploy-and-publish/apps-upload.md
