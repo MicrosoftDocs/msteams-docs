@@ -184,7 +184,7 @@ landingContent:
 #    - text: Maintain your published app
 #      url: ~/concepts/deploy-and-publish/appsource/post-publish/overview.md
 
-- title: Teams app scenarios
+- title: References
   linkLists:
   - linkListType: reference
     links:
@@ -197,7 +197,7 @@ landingContent:
     - text: Public developer preview manifest schema
       url: ~/resources/schema/manifest-schema-dev-preview.md
 
-- title: Monetize your app
+- title: Monetize your agent or app
   linkLists:
     - linkListType: concept
       links:
