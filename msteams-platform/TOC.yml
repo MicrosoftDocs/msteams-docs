@@ -20,11 +20,11 @@
 - name: Glossary
   href: get-started/glossary.md
   displayName: App tray, terminologies, definitions, welcome, new word, meaning
-- name: What are agents in Teams
+- name: Agents in Teams
   href: /microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
   displayName: AI bot, Teams AI library, custom agent
 - name: Build your first agent
-  href: bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md
+  href: /teams-ai-library/welcome/
   displayName: custom engine agent, AI bot, JavaScript, Python, C#, code sample, Microsoft 365 Agents Toolkit
 - name: Build agents with Teams AI library
   items:

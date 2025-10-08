@@ -21,14 +21,14 @@ landingContent:
 # Cards and links should be based on top customer tasks or top subjects
 # Start card title with a verb
 
-- title: Build custom engine agents
+- title: Build agents
   linkLists:
     - linkListType: concept
       links:
-      - text: Custom engine agents overview
-        url: /microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
       - text: Teams AI library
         url: /microsoftteams/platform/teams-ai-library/welcome
+      - text: Custom engine agents overview
+        url: /microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
       - text: Custom engine agent user experience
         url: bots/how-to/teams-conversational-ai/ai-ux.md
       - text: Enhance AI-generated bot Messages
