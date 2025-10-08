@@ -375,7 +375,7 @@ Developers are encouraged to certify their new agent after successfully completi
 
 <summary>What happens to my published message extension plugins? </summary>
 
-All published message extension plugins will now appear as agents in the right pane of the Microsoft 365 Copilot. Depending on the partner's requirement to implement an API, they might either accept this upgrade or consider building a [custom engine agent](/microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json) or an [API-based plugin](messaging-extensions/api-based-overview.md).
+All published message extension plugins will now appear in the right pane of the Microsoft 365 Copilot. Depending on the partner's requirement to implement an API, they might either accept this upgrade or consider building a [custom engine agent](/microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json) or an [API-based plugin](messaging-extensions/api-based-overview.md).
 <br>
 &nbsp;
 </details>
@@ -383,7 +383,7 @@ All published message extension plugins will now appear as agents in the right p
 
 <summary>What can partners do to build a more robust agent?</summary>
 
-If a partner wants to build a more robust agent, they can deprecate their existing plugin and build a declarative agent with custom instructions and API-based actions. For more information, see [API plugins for Microsoft 365 Copilot]([https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/overview-api-plugins](/microsoft-365-copilot/extensibility/overview-api-plugins)).
+If a partner wants to build a more robust agent, they can deprecate their existing plugin and build a declarative agent with custom instructions and API-based actions. For more information, see [API plugins for Microsoft 365 Copilot](./microsoft-365-copilot/extensibility/overview-api-plugins).
 <br>
 &nbsp;
 </details>
