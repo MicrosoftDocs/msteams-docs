@@ -35,8 +35,6 @@ landingContent:
         url: bots/how-to/bot-messages-ai-generated-content.md
       - text: Custom engine agents support for Microsoft 365 Copilot Chat
         url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#add-support-for-microsoft-365-copilot-chat
-      - text: Extend bot-based message extension as an agent for Microsoft 365 Copilot
-        url: messaging-extensions/build-bot-based-agent.md
 
 - title: Build app capabilities
   linkLists:
@@ -60,12 +58,12 @@ landingContent:
       url: ~/resources/schema/manifest-schema-dev-preview.md
 
 
-- title: Step-by-step guides
+- title: Get started with building agents and apps
   linkLists:
     - linkListType: get-started
       links:
-      - text: Get started with building apps
-        url: ../msteams-platform/get-started/get-started-overview.md
+      - text: Build agents and apps for Teams
+        url: ../msteams-platform/bots/build-a-bot.md
       - text: Get started with GitHub
         url: /contribute/additional-resources
       - text: Glossary
