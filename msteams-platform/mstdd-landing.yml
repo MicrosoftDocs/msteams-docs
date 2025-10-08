@@ -40,14 +40,16 @@ landingContent:
   linkLists:
     - linkListType: get-started
       links:
+      - text: Build your first agent
+        url: /teams-ai-library/welcome/
       - text: Build agents and apps for Teams
         url: ../msteams-platform/bots/build-a-bot.md
       - text: Get started with GitHub
         url: /contribute/additional-resources
-      - text: Glossary
-        url: ~/get-started/glossary.md
-      - text: Overview
-        url: ~/overview.md
+#      - text: Glossary
+#        url: ~/get-started/glossary.md
+#      - text: Overview
+#        url: ~/overview.md
       - text: Code samples
         url: https://github.com/OfficeDev/Microsoft-Teams-Samples        
 
@@ -65,8 +67,8 @@ landingContent:
       url: ~/apps-in-teams-meetings/teams-apps-in-meetings.md
 #    - text: Build webhooks and connectors
 #      url: ~/webhooks-and-connectors/what-are-webhooks-and-connectors.md
-    - text: Build cards and dialogs
-      url: ~/task-modules-and-cards/cards-and-task-modules.md
+#    - text: Build cards and dialogs
+#      url: ~/task-modules-and-cards/cards-and-task-modules.md
 
 
 
