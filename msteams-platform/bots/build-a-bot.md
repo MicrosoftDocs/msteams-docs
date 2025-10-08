@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ---
 
-# Bots and agents in Teams
+# Agents and bots in Teams
 
 [!INCLUDE [teams-ai-lib-v2-rec](../includes/teams-ai-lib-v2-rec.md)]
 
