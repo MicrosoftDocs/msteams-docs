@@ -55,10 +55,10 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
-    - text: Build tabs
-      url: ~/tabs/what-are-tabs.md
     - text: Build bots and agents
       url: ~/bots/what-are-bots.md
+    - text: Build tabs
+      url: ~/tabs/what-are-tabs.md
     - text: Build message extensions
       url: ~/messaging-extensions/what-are-messaging-extensions.md
     - text: Build apps for Teams meetings
@@ -67,10 +67,7 @@ landingContent:
       url: ~/webhooks-and-connectors/what-are-webhooks-and-connectors.md
     - text: Build cards and dialogs
       url: ~/task-modules-and-cards/cards-and-task-modules.md
-    - text: App manifest
-      url: ../msteams-platform/resources/schema/manifest-schema.md
-    - text: Public developer preview manifest schema
-      url: ~/resources/schema/manifest-schema-dev-preview.md
+
 
 
         
@@ -191,10 +188,14 @@ landingContent:
   linkLists:
   - linkListType: reference
     links:
-    - text: Best practices for Teams app scenarios
-      url: https://developer.microsoft.com/microsoft-teams/app-development-resources/?filter=bestpractices
+    - text: Grow your agent or app
+      url: ~/concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md
     - text: Explore low-code apps for Teams
       url:  ~/samples/teams-low-code-solutions.md
+    - text: App manifest
+      url: ../msteams-platform/resources/schema/manifest-schema.md
+    - text: Public developer preview manifest schema
+      url: ~/resources/schema/manifest-schema-dev-preview.md
 
 - title: Monetize your app
   linkLists:
