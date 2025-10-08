@@ -14,7 +14,7 @@ ms.date: 04/09/2025
 >
 > Apps in shared and private channel are currently in developer preview [Public developer preview](resources/dev-preview/developer-preview-intro.md)
 
-Shared and private channels in Microsoft Teams enable flexible collaboration within teams and across organizations. Currently, Bot and tab apps are supported in shared and private channels. With this ypdate, you can experience multiple benefits:
+Shared and private channels in Microsoft Teams enable flexible collaboration within teams and across organizations. Currently, Bot and tab apps are supported in shared and private channels. With this update, you can experience multiple benefits:
 
 * **Shared channels**: Allow seamless communication with internal or external members, without changing the user’s context. These channels ensure secure granular access control and real-time membership syncing.
 
@@ -57,15 +57,15 @@ Ensure that you understand that how different channels determine app functionali
 
 * **Use channel-specific membership APIs**
 
-    Don't assume that team membership is equal to channel membership. Only members who are added to the channel can participate in shared and private channels. If your bot targets everyone, it might violate privacy or miss external members.
+    Don't assume that team membership is equal to channel membership. Only members who are added to the channel can participate in shared and private channels.
 
 * **Distinguish between users and roles**
 
-    Channel members might include in-tenant users, guests, or cross-tenant users (external users from other tenants). Your app must distinguish between these roles to manage access, data visibility, and feature availability. Validate user roles and tenant ids before granting permissions.
+    Channel members might include in-tenant users, guests, or cross-tenant users (external users from other tenants). If your app needs to distinguish between various users to manage access, data visibility, and feature availability, then you must validate user roles and tenant IDs before granting permissions.
 
 * **Don't assume a single SharePoint site tied to a team**
 
-    Private and shared channels have their own SharePoint sites. Always use the correct URL for each channel, to avoid missing files or unauthorized access errors.
+    Unlike standard channels, which all share sharpoint site with the team, Private and shared channels have their own SharePoint sites. Always use the correct URL for each channel, to avoid missing files or unauthorized access errors.
 
 * **Keep data scoped to channels**
 
@@ -75,17 +75,28 @@ Ensure that you understand that how different channels determine app functionali
 
 ## Enable apps for shared and private channels
 
-You can enable app support in shared and private channels, even if your apps don't:  
+Most apps can support shared and private channels with a simple manifest update. Based on either of the following scenarios, you can decide the approach:
+
+* [Apps with no dependence on specified parameters](#apps-with-no-dependence-on-specified-parameters)
+* [Apps with dependence on specified parameters](#apps-with-dependence-on-specified-parameters)
+
+### Apps with no dependence on specified parameters
+
+If your app doesn’t:
 
 * Use channel or team membership to determine message delivery, task assignment, or permissions
 * Access or manage files stored in Teams or SharePoint
 * Combine or share data across multiple channels or teams
 * Customize experience, based on users (internal, guests, or external members)
 
- To enable app support in shared and private channels:
+then, you only need to:
 
 1. Add `supportsChannelFeatures`: `tier1` to your app manifest.
 2. Verify expected behavior, and test your app across channels.
+
+### Apps with dependence on specified parameters
+
+If your app handles advanced scenarios, or depends on the specified prameters listed in the [Apps with no dependence on specified parameters](#apps-with-no-dependence-on-specified-parameters) section, then read through this guide for targeted updates and the best practices. Don't re-write your code.
 
 > [!NOTE]
 >
