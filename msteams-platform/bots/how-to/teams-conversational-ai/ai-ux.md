@@ -1,13 +1,13 @@
 ---
-title: Custom engine agent user experience
-description: Learn about the user experience for custom engine agent
+title: Best practices for building agent in Teams user experience
+description: Learn about the user experience for agents in Teams
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
 ms.date: 09/27/2024
 ---
 
-# Custom engine agent user experience
+# Agents user experience
 
 [!INCLUDE [teams-ai-lib-v2-rec](../../../includes/teams-ai-lib-v2-rec.md)]
 

@@ -26,15 +26,15 @@ landingContent:
     - linkListType: concept
       links:
       - text: Teams AI library
-        url: /microsoftteams/platform/teams-ai-library/welcome
-      - text: Custom engine agents overview
+        url: /microsoftteams/platform/teams-ai-library
+      - text: Agents overview
         url: /microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-      - text: Custom engine agent user experience
+      - text: Agents user experience
         url: bots/how-to/teams-conversational-ai/ai-ux.md
       - text: Enhance AI-generated bot Messages
         url: bots/how-to/bot-messages-ai-generated-content.md
-      - text: Custom engine agents support for Microsoft 365 Copilot Chat
-        url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#add-support-for-microsoft-365-copilot-chat
+#      - text: Custom engine agents support for Microsoft 365 Copilot Chat
+#        url: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#add-support-for-microsoft-365-copilot-chat
 
 - title: Get started
   linkLists:
@@ -55,7 +55,7 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
-    - text: Build bots and agents
+    - text: Build agents and bots
       url: ~/bots/what-are-bots.md
     - text: Build tabs
       url: ~/tabs/what-are-tabs.md
