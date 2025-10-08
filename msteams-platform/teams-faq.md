@@ -1256,6 +1256,9 @@ Shared references to deploy the code using toolkit:
 * [Agents Toolkit CLI](toolkit/Teams-Toolkit-CLI.md)
 
 You can call Graph API to get the app user's profile photo.
+<br>
+&nbsp;
+</details>
 
 ## App distribution
 
