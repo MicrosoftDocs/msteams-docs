@@ -383,7 +383,7 @@ All published message extension plugins will now appear in the right pane of the
 
 <summary>What can partners do to build a more robust agent?</summary>
 
-If a partner wants to build a more robust agent, they can deprecate their existing plugin and build a declarative agent with custom instructions and API-based actions. For more information, see [API plugins for Microsoft 365 Copilot](./microsoft-365-copilot/extensibility/overview-api-plugins).
+If a partner wants to build a more robust agent, they can deprecate their existing plugin and build a declarative agent with custom instructions and API-based actions. For more information, see [API plugins for Microsoft 365 Copilot](./microsoft-365-copilot/extensibility/overview-api-plugins.md).
 <br>
 &nbsp;
 </details>
