@@ -41,7 +41,7 @@ landingContent:
     - linkListType: get-started
       links:
       - text: Build your first agent
-        url: /teams-ai-library/welcome/
+        url: /microsoftteams/platform/teams-ai-library/welcome/
       - text: Build agents and apps for Teams
         url: ../msteams-platform/bots/build-a-bot.md
       - text: Get started with GitHub
@@ -100,7 +100,7 @@ landingContent:
         - text: Debug your AI chat bot using Agents Playground
           url: ~/toolkit/teams-app-test-tool-tutorial.md
         - text: Bot configuration experience
-          url: ~/bot/how-to/bot-configuration-experience.md
+          url: ~/bots/how-to/bot-configuration-experience.md
 #        - text: Create Teams conversation bot
 #          url: ~/bots/how-to/conversations/channel-and-group-conversations.md
         - text: Build notification bot with JavaScript
