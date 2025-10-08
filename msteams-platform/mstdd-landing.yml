@@ -70,24 +70,28 @@ landingContent:
         url: ~/get-started/glossary.md
       - text: Overview
         url: ~/overview.md        
-    - linkListType: tutorial
-      links:
-      - text: Build app with JavaScript
-        url: sbs-gs-javascript.yml
-      - text: Build your first app using Blazor
-        url:  sbs-gs-blazorupdate.yml
-      - text: Build app with SPFx
-        url: sbs-gs-spfx.yml
-      - text: Build app with C# or .NET
-        url: sbs-gs-csharp.yml
-      - text: Build app with Node.js
-        url: sbs-gs-nodejs.yml
-      - text: Build command bot with JavaScript
-        url: sbs-gs-commandbot.yml
-      - text: Build notification bot with JavaScript
-        url: sbs-gs-notificationbot.yml
-      - text: Build workflow bot
-        url: sbs-gs-workflow-bot.yml   
+
+#    - linkListType: tutorial
+#      links:
+#      - text: Build app with JavaScript
+#        url: sbs-gs-javascript.yml
+#      - text: Build your first app using Blazor
+#        url:  sbs-gs-blazorupdate.yml
+#      - text: Build app with SPFx
+#         url: sbs-gs-spfx.yml
+#      - text: Build app with C# or .NET
+#        url: sbs-gs-csharp.yml
+#      - text: Build app with Node.js
+#        url: sbs-gs-nodejs.yml
+#      - text: Build command bot with JavaScript
+#        url: sbs-gs-commandbot.yml
+#      - text: Build notification bot with JavaScript
+#        url: sbs-gs-notificationbot.yml
+#      - text: Build workflow bot
+#        url: sbs-gs-workflow-bot.yml   
+
+- title: Tutorials
+  linkLists:
     - linkListType: tutorial
       links:
         - text: Debug your AI chat bot using Agents Playground
