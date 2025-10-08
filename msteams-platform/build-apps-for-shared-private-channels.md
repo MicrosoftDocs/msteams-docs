@@ -12,7 +12,7 @@ ms.date: 04/09/2025
 
 > [!NOTE]
 >
-> Apps in shared and private channel are currently in developer preview [Public developer preview](resources/dev-preview/developer-preview-intro.md)
+> Apps in shared and private channel are currently in [Public developer preview](resources/dev-preview/developer-preview-intro.md).
 
 Shared and private channels in Microsoft Teams enable flexible collaboration within teams and across organizations. Currently, Bot and tab apps are supported in shared and private channels. With this update, you can experience multiple benefits:
 
@@ -65,7 +65,7 @@ Ensure that you understand that how different channels determine app functionali
 
 * **Don't assume a single SharePoint site tied to a team**
 
-    Unlike standard channels, which all share sharpoint site with the team, Private and shared channels have their own SharePoint sites. Always use the correct URL for each channel, to avoid missing files or unauthorized access errors.
+    Unlike standard channels, which share SharPoint site with the team, Private and shared channels have their own SharePoint sites. Always use the correct URL for each channel, to avoid missing files or unauthorized access errors.
 
 * **Keep data scoped to channels**
 
@@ -94,6 +94,8 @@ then, you only need to:
 1. Add `supportsChannelFeatures`: `tier1` to your app manifest.
 2. Verify expected behavior, and test your app across channels.
 
+There is no dependence on classical and admin access for `supportsChannelFeatures`: `tier1`.
+
 ### Apps with dependence on specified parameters
 
 If your app handles advanced scenarios, or depends on the specified prameters listed in the [Apps with no dependence on specified parameters](#apps-with-no-dependence-on-specified-parameters) section, then read through this guide for targeted updates and the best practices. Don't re-write your code.
@@ -121,12 +123,12 @@ GET /teams/{team-id}/channels/{channel-id}/allMembers
 * **Indirect members:** Users who are members of the team, with which the channel is shared, including teams in the same tenant or in a cross-tenant.
 * **External members:** Guest users, who aren't part of your organization but are granted access to a shared channel through guest access or cross-tenant collaboration.
 
-Additionally, you can identify whether a member of a shared channel is direct or indirect by checking the `@microsoft.graph.originalSourceMembershipUrl` annotation. This property identifies the source of a member’s access to a shared channel:
+You can identify whether a member of a shared or private channel is direct or indirect by checking the `@microsoft.graph.originalSourceMembershipUrl` annotation. This property identifies the source of a member’s access the channels:
 
-| Member Type | Annotation | Description                                                                                                                                                                                                 |
-|-----------------|---------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Direct Member   | Yes                 | The user is added directly to the shared channel.                                                                                                                                                           |
-| Indirect Member | Yes                 | The user accesses the shared channel through another team. The `@microsoft.graph.originalSourceMembershipUrl` property includes a URL that points to the source team and indicates indirect membership. |
+|Member Type  |Annotation scope |
+|---------|---------|
+|Direct member    |  The `@microsoft.graph.originalSourceMembershipUrl` property shows that the user is directly added to the channels       |
+|Indirect member    |The `@microsoft.graph.originalSourceMembershipUrl` property includes a URL that points to the source team and indicates indirect membership.  |
 
   > [!NOTE]
   > You might receive duplicate notifications when a member is added to a shared channel. This scenario can happen if the member is already part of the shared channel directly or indirectly. Use the `allMembers` API to view all the direct and indirect members. Ignore the notification if the member already exists, either directly or indirectly.
@@ -141,7 +143,7 @@ You can manage indirect membership in channels using the following Microsoft Gra
     GET /teams/{team-id}/channels/{channel-id}/allMembers
     ```
 
-* Use the `doesUserHaveAccess` API to determine whether the user is removed from the channel and can view all user accesses and relevant permissions.
+* Use the `doesUserHaveAccess` API to determine whether the user is removed from the channel and can view all user accesses and relevant permissions. Apps with classic application permissions and RSC permissions can use this API.
 
     ```HTTP
     GET /teams/{team-id}/channels/{channel-id}/doesUserHaveAccess(userId='@userid',tenantId='@TenantID',userPrincipalName='@UserPrincipalName')
