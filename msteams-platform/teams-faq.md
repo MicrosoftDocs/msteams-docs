@@ -599,6 +599,13 @@ Yes. Metered billing is available for SaaS offer. For more information, see [met
 </br>
 
 </details>
+<details>
+<summary>How can my Teams bot distinguish between regular users and admins without using Graph API?</summary>
+
+Configure your Azure AD app to include the `wids` claim in the token. Your bot can then inspect the token to securely identify admin roles such as Global Admin (`62e90394-69f5-4237-9190-012177145e10`) or Teams Admin (`69091246-20e8-4a56-aa4d-066075b2a7a8`), without using Graph API.
+<br>
+&nbsp;
+</details>
 
 ## Moodle
 
@@ -749,13 +756,6 @@ However, you can access the invite and manually add participant names to the **R
 
 For support and help on the product and services issues or developer community help see, [Support and feedback](feedback.md).
 
-</details>
-<details>
-<summary>How can my Teams bot distinguish between regular users and admins without using Graph API?</summary>
-
-Configure your Azure AD app to include the `wids` claim in the token. Your bot can then inspect the token to securely identify admin roles such as Global Admin (`62e90394-69f5-4237-9190-012177145e10`) or Teams Admin (`69091246-20e8-4a56-aa4d-066075b2a7a8`), without using Graph API.
-<br>
-&nbsp;
 </details>
 
 ## Notifications
