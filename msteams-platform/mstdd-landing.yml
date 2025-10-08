@@ -48,8 +48,10 @@ landingContent:
         url: ~/get-started/glossary.md
       - text: Overview
         url: ~/overview.md
+      - text: Code samples
+        url: https://github.com/OfficeDev/Microsoft-Teams-Samples        
 
-- title: Build app capabilities
+- title: Add Teams capabilities
   linkLists:
   - linkListType: concept
     links:
@@ -145,24 +147,24 @@ landingContent:
         - text: Send activity feed notification 
           url:  ~/sbs-graphactivity-feedbroadcast.yml          
         
-- title: Build apps for Teams
-  linkLists:
-    - linkListType: overview
-      links:
-      - text: Build apps for Microsoft Teams
-        url: ../msteams-platform/overview.md
-      - text: App fundamentals
-        url: ~/concepts/app-fundamentals-overview.md
-      - text: Design your app
-        url: ~/concepts/design/design-teams-app-overview.md
-      - text: Code samples
-        url: https://github.com/OfficeDev/Microsoft-Teams-Samples
-      - text: Build apps for Teams meeting stage
-        url:  ~/apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
-    - linkListType: whats-new
-      links:
-      - text: What's new
-        url: ../msteams-platform/whats-new.md  
+# - title: Build apps for Teams
+#  linkLists:
+#    - linkListType: overview
+#      links:
+#      - text: Build apps for Microsoft Teams
+#        url: ../msteams-platform/overview.md
+#      - text: App fundamentals
+#        url: ~/concepts/app-fundamentals-overview.md
+#      - text: Design your app
+#        url: ~/concepts/design/design-teams-app-overview.md
+#      - text: Code samples
+#        url: https://github.com/OfficeDev/Microsoft-Teams-Samples
+#      - text: Build apps for Teams meeting stage
+#        url:  ~/apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md
+#    - linkListType: whats-new
+#      links:
+#      - text: What's new
+#        url: ../msteams-platform/whats-new.md  
 
 
 - title: Publish Teams app or agents
