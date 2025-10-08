@@ -63,8 +63,8 @@ landingContent:
       url: ~/messaging-extensions/what-are-messaging-extensions.md
     - text: Build apps for Teams meetings
       url: ~/apps-in-teams-meetings/teams-apps-in-meetings.md
-    - text: Build webhooks and connectors
-      url: ~/webhooks-and-connectors/what-are-webhooks-and-connectors.md
+#    - text: Build webhooks and connectors
+#      url: ~/webhooks-and-connectors/what-are-webhooks-and-connectors.md
     - text: Build cards and dialogs
       url: ~/task-modules-and-cards/cards-and-task-modules.md
 
@@ -99,12 +99,12 @@ landingContent:
           url: ~/toolkit/teams-app-test-tool-tutorial.md
         - text: Bot configuration experience
           url: ~/qsg-bot-configuration-experience.yml
-        - text: Create Teams conversation bot
-          url: ~/bots/how-to/conversations/channel-and-group-conversations.md
+#        - text: Create Teams conversation bot
+#          url: ~/bots/how-to/conversations/channel-and-group-conversations.md
         - text: Build notification bot with JavaScript
           url: sbs-gs-notificationbot.yml          
-        - text: Build a bot to send Proactive messages
-          url: ~/sbs-send-proactive.yml
+#       - text: Build a bot to send Proactive messages
+#         url: ~/sbs-send-proactive.yml
         - text: Build a bot with SSO authentication
           url: ~/sbs-bots-with-sso.yml
         - text: Configure SSO for tabs and message extensions
