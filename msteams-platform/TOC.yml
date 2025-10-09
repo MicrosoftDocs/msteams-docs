@@ -521,7 +521,7 @@
     - name: Overview
       href: bots/overview.md
       displayName: AI bot, bot capability, command bot, workflow bot, custom engine agent, agent, conversational bot, activity handler, bot logic, notification bot
-    - name: Bots and agents in Teams
+    - name: Bots in Teams
       href: bots/build-a-bot.md
       displayName: Bot samples, Code sample, Teams AI library, Microsoft Bot Framework SDK, build a bot, build AI bot, command bot, workflow bot, custom engine agent, agent, conversational bot, notification bot, tools, platforms, Azure OpenAI, Microsoft 365 Agents Toolkit, Azure AI Foundry
 #    - name: Teams AI library v1
