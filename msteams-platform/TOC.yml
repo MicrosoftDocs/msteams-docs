@@ -37,9 +37,6 @@
   - name: Build an agent using Python
     href: /microsoftteams/platform/teams-ai-library/python/getting-started/quickstart?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     displayName: agent, custom engine agent, AI bot, Python, code sample, Teams AI library
-  - name: Agents and bots in Teams
-    href: bots/build-a-bot.md
-    displayName: Code sample, Teams AI library, build a bot, build AI bot, command bot, workflow bot, custom engine agent, agent, conversational bot, notification bot, tools, platforms, Azure OpenAI, Microsoft 365 Agents Toolkit, Azure AI Foundry
   - name: Agents user experience
     href: bots/how-to/teams-conversational-ai/ai-ux.md
     displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop            
@@ -404,7 +401,7 @@
   - name: Code samples
     href: https://github.com/OfficeDev/microsoft-teams-samples#graph-apis
     displayName: graph api samples
-- name: Add Teams capabilities
+- name: Add Teams app capabilities
   items:
   - name: Plan your app
     items:
@@ -524,9 +521,9 @@
     - name: Overview
       href: bots/overview.md
       displayName: AI bot, bot capability, command bot, workflow bot, custom engine agent, agent, conversational bot, activity handler, bot logic, notification bot
-#    - name: Bots and agents in Teams
-#      href: bots/build-a-bot.md
-#      displayName: Bot samples, Code sample, Teams AI library, Microsoft Bot Framework SDK, build a bot, build AI bot, command bot, workflow bot, custom engine agent, agent, conversational bot, notification bot, tools, platforms, Azure OpenAI, Microsoft 365 Agents Toolkit, Azure AI Foundry
+    - name: Bots and agents in Teams
+      href: bots/build-a-bot.md
+      displayName: Bot samples, Code sample, Teams AI library, Microsoft Bot Framework SDK, build a bot, build AI bot, command bot, workflow bot, custom engine agent, agent, conversational bot, notification bot, tools, platforms, Azure OpenAI, Microsoft 365 Agents Toolkit, Azure AI Foundry
 #    - name: Teams AI library v1
 #      items:
 #      - name: What is Teams AI library?
