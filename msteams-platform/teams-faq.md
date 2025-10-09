@@ -1263,16 +1263,16 @@ You can call Graph API to get the app user's profile photo.
 ## App distribution
 
 <details>
-<summary>Why do I see the message **You don’t have access to this app** when adding a custom Teams app?</summary>
+<summary>Why do I see the message <b>You don’t have access to this app<b> when adding a custom Teams app?</summary>
 
 To resolve the **You don’t have access to this app** error, ensure the Teams channel is enabled in your Azure Bot Service.
 <br>
 &nbsp;
 </details>
 <details>
-<summary> Is it acceptable to include 'localhost' as a valid domain in an Outlook Add-in manifest?</summary>
+<summary> Is it acceptable to include <code>localhost</code> as a valid domain in an Outlook Add-in manifest?</summary>
 
-The 'localhost' domain is acceptable for local development and testing only. For production or store submission, all endpoints must be publicly accessible and secured by using HTTPS.
+The `localhost` domain is acceptable for local development and testing only. For production or store submission, all endpoints must be publicly accessible and secured by using HTTPS.
 <br>
 &nbsp;
 </details>
@@ -1292,7 +1292,7 @@ Use the `-First` and `-Skip` parameters with `Get-CsAutoAttendant` or `Get-CsCal
 <details>
 <summary> How can I configure a Teams workflow to wait for manual approval without timing out too quickly?</summary>
 
-Use the **Start and wait for an approval** action in Power Automate. In the action settings, extend the timeout by specifying the duration in ISO 8601 format (for example, `P7D` for 7 days). This ensure the workflow pauses until approval is granted.
+Use the **Start and wait for an approval** action in Power Automate. In the action settings, extend the timeout by specifying the duration in ISO 8601 format (for example, `P7D` for 7 days). This ensures the workflow is paused until the approval is granted.
 <br>
 &nbsp;
 </details>
