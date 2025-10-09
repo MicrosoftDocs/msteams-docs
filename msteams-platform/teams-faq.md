@@ -1263,7 +1263,7 @@ You can call Graph API to get the app user's profile photo.
 ## App distribution
 
 <details>
-<summary>Why do I see the message You don’t have access to this app when adding a custom Teams app?</summary>
+<summary>Why do I see the message <b>You don’t have access to this app</b> when adding a custom Teams app?</summary>
 
 To resolve the **You don’t have access to this app** error, ensure the Teams channel is enabled in your Azure Bot Service.
 <br>
