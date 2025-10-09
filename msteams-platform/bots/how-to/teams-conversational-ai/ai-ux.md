@@ -151,8 +151,8 @@ An agent must assist users by offering prompt suggestions on how to best utilize
 
 :::image type="content" source="../../../assets/images/bots/ai-zero-prompts.png" alt-text="Image shows an example of prompt starters." border="false":::
 
-- **Prompt starters**: Prompt starters are the initial prompts users see when a custom engine agent is added to a new conversation, whether it's a one-on-one chat, a new session, or a group chat. These prompts must be tailored to the user's context and the specific conversation thread.
-- **Contextual prompts**: Contextual prompts are dynamic recommendations from a custom engine agent during user interactions. These prompts appear via contextual flyouts, such as **View Prompts** in one-on-one chats and @mention flyouts in group chats. These suggestions are updated to stay relevant to the ongoing conversation.
+- **Prompt starters**: Prompt starters are the initial prompts users see when an agent is added to a new conversation, whether it's a one-on-one chat, a new session, or a group chat. These prompts must be tailored to the user's context and the specific conversation thread.
+- **Contextual prompts**: Contextual prompts are dynamic recommendations from an agent during user interactions. These prompts appear via contextual flyouts, such as **View Prompts** in one-on-one chats and @mention flyouts in group chats. These suggestions are updated to stay relevant to the ongoing conversation.
 - **Suggested action**: Suggested actions are prompts that appear as pills above the compose box in one-on-one chats and as action buttons in group chats. They are suggestions for actions a user might take in response to the agent's message and must be customized to match the response.
 
 ## Compound utterance guidelines for agents
@@ -167,12 +167,12 @@ The following best practices can help enhance the overall effectiveness of an ag
 
 - [Ensure that agent's response contains feedback button](#ensure-that-agents-response-contains-feedback-button).
 - [Enable Teams Azure AD single sign-on](#enable-teams-azure-ad-single-sign-on).
-- [Enable the custom engine agent to understand conversational history and context](#enable-the-custom-engine-agent-to-understand-conversational-history-and-context).
+- [Enable the agent to understand conversational history and context](#enable-the-agent-to-understand-conversational-history-and-context)
 - [Offer dynamic and contextual suggestion prompts](#offer-dynamic-and-contextual-suggestion-prompts).
 
 ### Ensure that agent's response contains feedback button
 
-Develop the capability in the custom engine agent to receive user feedback. This could enable the collection of valuable insights from users, which can be analyzed to identify areas for improvement. By incorporating this feedback, the bot's responses can be continuously refined and enhanced, leading to a more effective and user-friendly interaction experience.
+Develop the capability in the agent to receive user feedback. This could enable the collection of valuable insights from users, which can be analyzed to identify areas for improvement. By incorporating this feedback, the bot's responses can be continuously refined and enhanced, leading to a more effective and user-friendly interaction experience.
 
 :::image type="content" source="../../../assets/images/bots/ai-feedback-loop.png" alt-text="Image shows an example of feedback loop." border="false":::
 
@@ -182,25 +182,31 @@ To collect the user feedback, you must:
 - Provide the feedback received from the user to the agent.
 - Use the feedback to improve the quality of agent's responses.
 
+<!--
 You can use one of the following to enable feedback collection and usage:
 
 - Use Teams AI library to add the feedback button property to the AI module. This property adds a feedback button to each AI-generated message automatically.
 - Use the feedback flag in the Bot Framework API to add the feedback button for each message.
+-->
+
+Use Teams AI library to add the feedback button property to the AI module. This property adds a feedback button to each AI-generated message automatically.
 
 > [!NOTE]
 > Customizable feedback forms are available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
 
 ### Enable Teams Azure AD single sign-on
 
-You can add single sign-on (SSO) authentication to your custom engine agent. For more information, see [enable SSO for your app](../authentication/bot-sso-overview.md).
+You can add single sign-on (SSO) authentication to your agent. For more information, see [enable SSO for your app](../authentication/bot-sso-overview.md).
 
-### Enable the custom engine agent to understand conversational history and context
+### Enable the agent to understand conversational history and context
 
-You can design your custom engine agent to understand and refer to conversational history and context. It helps to ensure that every interaction is relevant and tailored to the user's specific needs. The agent can refer to the context and offer responses that are accurate and contextually appropriate. For more information, see [messages in bot conversations](../conversations/conversation-messages.md).
+You can design your agent to understand and refer to conversational history and context. It helps to ensure that every interaction is relevant and tailored to the user's specific needs. The agent can refer to the context and offer responses that are accurate and contextually appropriate.
+
+<!--For more information, see [messages in bot conversations](../conversations/conversation-messages.md).-->
 
 ### Offer dynamic and contextual suggestion prompts
 
-Enhance your custom engine agent experience with intelligent and context-aware prompts. The agent can offer context-relevant prompts dynamically.
+Enhance your agent's user experience with intelligent and context-aware prompts. The agent can offer context-relevant prompts dynamically.
 
 :::image type="content" source="../../../assets/images/bots/ai-suggested-prompts.png" alt-text="Image shows an example of suggested prompts." border="false":::
 
