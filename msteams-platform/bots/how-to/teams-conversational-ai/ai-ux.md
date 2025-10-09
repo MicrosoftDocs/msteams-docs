@@ -32,13 +32,15 @@ The following requirements are mandatory for building the agent UX:
 - [Ensure that the custom engine agent is an intelligent conversational bot](#ensure-that-the-custom-engine-agent-is-an-intelligent-conversational-bot).
 - [Ensure that the custom engine agent offers prompt starters or a welcome card](#ensure-that-the-custom-engine-agent-offers-prompt-starters-or-a-welcome-card).
 
+<!--
 > [!NOTE]
 >
 > - AI label, citation, feedback buttons, and sensitivity label are available for bots in personal chats, group chats, and channels.
+-->
 
-### Update the app manifest for custom engine agent
+### Update the app manifest an agent
 
-You must update the app manifest for the custom engine agent to define specific properties and configurations that characterize its capabilities and behavior.
+You must update the app manifest for the agent to define specific properties and configurations that characterize its capabilities and behavior.
 
 Here's an example for updating the app manifest. You must add the `botID` property to the `copilotAgents` node in the app manifest.
 
@@ -63,21 +65,25 @@ Here's an example for updating the app manifest. You must add the `botID` proper
 
 </details>
 
-### Stream the custom engine agent response to the user
+### Stream the agent response to the user
 
-A custom engine agent uses LLM for complex user requests, which may delay responses. To prevent noticeable delays, the agent streams its responses, making them appear fast.
+An agent uses LLM for complex user requests, which may delay responses. To prevent noticeable delays, the agent streams its responses, making them appear fast.
 
-:::image type="content" source="../../../assets/images/bots/ai-streaming-ux.gif" alt-text="Graphical representation shows streaming bot messages" border="false":::
+:::image type="content" source="../../../assets/images/bots/ai-streaming-ux.gif" alt-text="Graphical representation shows streaming agent messages" border="false":::
 
 Use the following types of updates while streaming responses:
 
 - Informative updates: Send information on the sub-steps as the agent generates the response before it sends the final response.
 - Response streaming: Send the intermediate states of the final response while the LLM creates its full response.
 
+<!--
 You can use one of the following to stream the response:
 
 - Use Teams AI library to add streaming to the agent.
 - Call the Bot Framework APIs directly for streaming.
+-->
+
+Use [Teams AI library](/microsoftteams/platform/teams-ai-library/) to add streaming to the agent.
 
 >[!NOTE]
 >
