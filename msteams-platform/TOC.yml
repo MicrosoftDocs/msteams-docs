@@ -368,7 +368,7 @@
     displayName: Nested app, authentication, tabs, single page apps, use case scenario, MSAL, SSO
   - name: Use external OAuth providers
     href: tabs/how-to/authentication/auth-oauth-provider.md
-- name: Integrated Microsoft Graph
+- name: Integrate Microsoft Graph
   items:
   - name: Overview
     href: /graph/teams-concept-overview?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
