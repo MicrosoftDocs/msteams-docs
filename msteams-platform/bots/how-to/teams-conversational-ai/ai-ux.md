@@ -135,7 +135,7 @@ Use [Teams AI library](/microsoftteams/platform/teams-ai-library/) to add stream
 
 An agent must track a conversation's context and history to provide an intelligent interaction. The agent must meet the user's expectation by being aware of the conversation's context and allowing them to refer to previous messages and responses.
 
-You can use one of the following to ensure intelligent context-based conversation. Use Teams AI library to manage and pass conversational history and context to the LLM. Teams AI library enables you to:
+Use Teams AI library to ensure intelligent context-based conversation and to manage and pass conversational history and context to the LLM. Teams AI library enables you to:
 
 <!--
 - Use Bot Framework SDK to:
