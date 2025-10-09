@@ -53,7 +53,7 @@ landingContent:
       - text: Code samples
         url: https://github.com/OfficeDev/Microsoft-Teams-Samples        
 
-- title: Add Teams capabilities
+- title: Add Teams app capabilities
   linkLists:
   - linkListType: concept
     links:
@@ -92,6 +92,25 @@ landingContent:
 #        url: sbs-gs-notificationbot.yml
 #      - text: Build workflow bot
 #        url: sbs-gs-workflow-bot.yml   
+
+- title: Publish Teams agents
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Validation guidelines for agents
+      url: ~/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md
+    - text: Microsoft Teams Store validation guidelines
+      url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
+#    - text: Publish Teams apps in Microsoft Teams Store
+#      url: /training/modules/microsoft-teams-publish-app-to-store
+    - text: Publish your agents or apps in Teams
+      url: ~/concepts/deploy-and-publish/apps-publish-overview.md
+#    - text: Upload your app in Microsoft Teams
+#      url: ~/concepts/deploy-and-publish/apps-upload.md
+    - text: Common reasons for app validation failure
+      url: ~/concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
+#    - text: Maintain your published app
+#      url: ~/concepts/deploy-and-publish/appsource/post-publish/overview.md
 
 - title: Tutorials
   linkLists:
@@ -167,49 +186,35 @@ landingContent:
 #        url: ../msteams-platform/whats-new.md  
 
 
-- title: Publish Teams agents or apps
-  linkLists:
-  - linkListType: concept
-    links:
-    - text: Validation guidelines for agents
-      url: ~/concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md
-    - text: Microsoft Teams Store validation guidelines
-      url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
-#    - text: Publish Teams apps in Microsoft Teams Store
-#      url: /training/modules/microsoft-teams-publish-app-to-store
-    - text: Publish your agents or apps in Teams
-      url: ~/concepts/deploy-and-publish/apps-publish-overview.md
-#    - text: Upload your app in Microsoft Teams
-#      url: ~/concepts/deploy-and-publish/apps-upload.md
-    - text: Common reasons for app validation failure
-      url: ~/concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
-#    - text: Maintain your published app
-#      url: ~/concepts/deploy-and-publish/appsource/post-publish/overview.md
 
-- title: Monetize your agent or app
-  linkLists:
-    - linkListType: concept
-      links:
-      - text: Guidelines for apps linked to SaaS offers
-        url: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer
-      - text: Monetize your Teams app with a transactable SaaS offer
-        url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
-      - text: In-app purchases
-        url: ~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
-      - text: Test preview for monetized apps
-        url: ~/concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md
-      - text: Additional tips for rapid approval to publish your app linked to a SaaS offer
-        url: ~/concepts/deploy-and-publish/appsource/publish.md#additional-tips-for-rapid-approval-to-publish-your-app-linked-to-a-saas-offer     
+
+#- title: Monetize your agent or app
+#  linkLists:
+#    - linkListType: concept
+#      links:
+#      - text: Guidelines for apps linked to SaaS offers
+#        url: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer
+#      - text: Monetize your Teams app with a transactable SaaS offer
+#        url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
+#      - text: In-app purchases
+#        url: ~/concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
+#      - text: Test preview for monetized apps
+#        url: ~/concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md
+#      - text: Additional tips for rapid approval to publish your app linked to a SaaS offer
+#        url: ~/concepts/deploy-and-publish/appsource/publish.md#additional-tips-for-rapid-approval-to-publish-your-app-linked-to-a-saas-offer     
 
 - title: References
   linkLists:
   - linkListType: reference
     links:
-    - text: Grow your agent or app
-      url: ~/concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md
-    - text: Explore low-code apps for Teams
-      url:  ~/samples/teams-low-code-solutions.md
     - text: App manifest
       url: ../msteams-platform/resources/schema/manifest-schema.md
     - text: Public developer preview manifest schema
       url: ~/resources/schema/manifest-schema-dev-preview.md
+    - text: Grow your agent
+      url: ~/concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md
+    - text: Monitize your agent
+      url: ~/concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
+
+#    - text: Explore low-code apps for Teams
+#      url:  ~/samples/teams-low-code-solutions.md

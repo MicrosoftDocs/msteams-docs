@@ -23,7 +23,7 @@
 #- name: Agents in Teams
 #  href: /microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
 #  displayName: AI bot, Teams AI library, custom agent
-- name: Build agents with Teams AI library
+- name: Build agents using Teams AI library
   items:
   - name: Build an agent using CLI
     href: /microsoftteams/platform/teams-ai-library/welcome?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
@@ -40,8 +40,8 @@
   - name: Agents user experience
     href: bots/how-to/teams-conversational-ai/ai-ux.md
     displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop            
-  - name: Custom engine agents overview
-    href: /microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+  - name: Extend agents to Microsoft 365 hubs
+    href: https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/ecosystem?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     displayName: AI bot, Teams AI library, custom agent
 - name: Tools and SDKs
   items:
@@ -967,7 +967,7 @@
         displayName: run in Azure
   - name: Publish Teams apps for Microsoft 365
     href: m365-apps/publish.md
-- name: Test your app or agent
+- name: Test your agent or app
   items:
   - name: Overview
     href: concepts/build-and-test/test-app-overview.md
@@ -1009,7 +1009,7 @@
 #- name: Manifest validation workflow
 #  href: concepts/build-and-test/manifest-validation-workflow.md
 #  displayName: validate, validation, app validation, manifest validation, Developer Portal
-- name: Publish your app or agent
+- name: Publish your agent or app
   items:
   - name: Overview
     href: concepts/deploy-and-publish/apps-publish-overview.md
@@ -1090,7 +1090,7 @@
       - name: Succeed with your collaborative app
         href: concepts/deploy-and-publish/appsource/post-publish/app-growth/succeed.md
         displayName: TAM, PQL, metrics, success, ROI
-- name: Monetize your agent
+- name: Monetize your agent or app
   items:
   - name: App monetization
     href: concepts/deploy-and-publish/appsource/prepare/monetize-overview.md
