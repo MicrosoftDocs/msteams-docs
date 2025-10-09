@@ -111,6 +111,13 @@ App registration is disabled for the user or the user doesn't have enough permis
 To use your app within Teams, you must upload it into Teams. For more information, see [upload your app to Teams](toolkit/test-app-behavior.md#upload-your-app-to-teams).
 
 </details>
+<details>
+<summary>How does a bot use custom emoji in a message in Teams?</summary>
+
+Bots must send emojis as UTF-16 text. HTML, data URI images, and Skype emoji schemas aren't supported in Teams.
+<br>
+&nbsp;
+</details>
 
 ## Live share
 
@@ -462,6 +469,13 @@ For more information, see [Use Postman with the Microsoft Graph API](/graph/use-
 Yes, Graph API works in Microsoft Graph explorer.
 
 For more information, see [Graph explorer](https://developer.microsoft.com/graph/graph-explorer).
+<br>
+&nbsp;
+</details>
+<details>
+<summary>How can my Teams bot distinguish between regular users and admins without using Graph API?</summary>
+
+Configure your Azure AD app to include the `wids` claim in the token. Your bot can then inspect the token to securely identify admin roles such as Global Admin (`62e90394-69f5-4237-9190-012177145e10`) or Teams Admin (`69091246-20e8-4a56-aa4d-066075b2a7a8`), without using Graph API.
 <br>
 &nbsp;
 </details>
@@ -1242,5 +1256,50 @@ Shared references to deploy the code using toolkit:
 * [Agents Toolkit CLI](toolkit/Teams-Toolkit-CLI.md)
 
 You can call Graph API to get the app user's profile photo.
+<br>
+&nbsp;
+</details>
 
+## App distribution
+
+<details>
+<summary>Why do I see the message <b>You don’t have access to this app</b> when adding a custom Teams app?</summary>
+
+To resolve the **You don’t have access to this app** error, ensure the Teams channel is enabled in your Azure Bot Service.
+<br>
+&nbsp;
+</details>
+<details>
+<summary> Is it acceptable to include <code>localhost</code> as a valid domain in an Outlook Add-in manifest?</summary>
+
+The `localhost` domain is acceptable for local development and testing only. For production or store submission, all endpoints must be publicly accessible and secured by using HTTPS.
+<br>
+&nbsp;
+</details>
+
+## PowerShell
+
+<details>
+<summary>How can I retrieve all auto attendants or call queues if the output is limited to 100 rows?</summary>
+
+Use the `-First` and `-Skip` parameters with `Get-CsAutoAttendant` or `Get-CsCallQueue` to paginate results and retrieve all entries. The `-Limit All` parameter is no longer supported.
+<br>
+&nbsp;
+</details>
+
+## Power Platform
+
+<details>
+<summary> How can I configure a Teams workflow to wait for manual approval without timing out too quickly?</summary>
+
+Use the **Start and wait for an approval** action in Power Automate. In the action settings, extend the timeout by specifying the duration in ISO 8601 format (for example, `P7D` for 7 days). This ensures the workflow is paused until the approval is granted.
+<br>
+&nbsp;
+</details>
+<details>
+<summary> What are the Power Platform licensing requirement for managed environments and Copilot usage?</summary>
+
+In managed environments, all makers and end users must have a Power Platform premium license, even for standard apps. For Copilot, individual licenses aren’t required if users are covered under tenant-level messaging capacity. Otherwise, a personal Copilot license is needed.
+<br>
+&nbsp;
 </details>
