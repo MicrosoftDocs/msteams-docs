@@ -891,6 +891,9 @@
       - name: Use dialogs from bots
         href: task-modules-and-cards/task-modules/task-modules-bots.md
         displayName: create dialogue box, invoke dialog, submit action
+  - name: Explore SDKs and code samples
+    href: get-started/tool-options-and-code-samples.md
+    displayName: Teams app samples, tools to build Teams app 
 - name: Integrate device capabilities
   items:
   - name: What are device capabilities?
@@ -1111,10 +1114,7 @@
     href: concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md
     displayName: Purchase, Teams apps, License, manage, buy subscriptions, ISVs, Manage, License, third party, SaaS, Partner Center
 - name: Teams developer documentation FAQs
-  href: teams-faq.md
-- name: Templates and sample app
-  href: get-started/tool-options-and-code-samples.md
-  displayName: Teams app samples, tools to build Teams app  
+  href: teams-faq.md 
 - name: Support and feedback
   href: feedback.md
   displayName: Developer community help, questions, suggestions, contact, issues
