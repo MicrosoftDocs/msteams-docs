@@ -72,10 +72,7 @@ Use the following types of updates while streaming responses:
 - Informative updates: Send information on the sub-steps as the agent generates the response before it sends the final response.
 - Response streaming: Send the intermediate states of the final response while the LLM creates its full response.
 
-You can use one of the following to stream the response:
-
-- Use Teams AI library to add streaming to the agent.
-- Call the Bot Framework APIs directly for streaming.
+You can use Teams AI library to add streaming to the agent.
 
 >[!NOTE]
 >
@@ -87,10 +84,7 @@ Users must know the sources a custom engine agent uses to generate its final res
 
 :::image type="content" source="../../../assets/images/bots/ai-citation.png" alt-text="Image shows an example of citations in custom engine agents." border="false":::
 
-You can use one of the following to include citations for the resources used by the agent:
-
-- Use Teams AI library citations module.
-- Incorporate citations into the Bot Framework API calls.
+You can se Teams AI library citations module.
 
 > [!NOTE]
 >
@@ -110,24 +104,13 @@ Examples of AI label:
 
     :::image type="content" source="../../../assets/images/bots/ai-labels-2.png" alt-text="Image shows an example of AI label for a confidential message." border="false":::
 
-You can use one of the following to include AI label in the agent's response:
-
-- Use Teams AI library to add the AI label to all AI-generated messages automatically.
-- Set the flag in the Bot Framework API for message activities.
+You can use Teams AI library to add the AI label to all AI-generated messages automatically.
 
 ### Ensure that the custom engine agent is an intelligent conversational bot
 
 A custom engine agent must track a conversation's context and history to provide an intelligent interaction. The agent must meet the user's expectation by being aware of the conversation's context and allowing them to refer to previous messages and responses.
 
-You can use one of the following to ensure intelligent context-based conversation:
-
-- Use Teams AI library to manage and pass conversational history and context to the LLM.
-- Use Bot Framework SDK to:
-
-  - **Manage context and conversation history**: Ensure that the agent can track the context and conversation history.
-  - **Identify conversation location**: Ensure the agent is aware of the platform on which the conversation is ongoing, such as on Teams, copilot.com, in a meeting side panel, or a group chat.
-  - **Store and pass conversation history**: Determine the means of storage and pass some of the conversation history to the agent.
-  - **Understand user references**: Ensure that when a user sends a message, the agent must understand what the user is referring to. You can build this understanding in the agent using LLM and the recent conversation history. The agent mustn't need the user to reestablish context with every message.
+You can use Teams AI library to manage and pass conversational history and context to the LLM.
 
 ### Ensure that the custom engine agent offers prompt starters or a welcome card
 
@@ -166,10 +149,7 @@ To collect the user feedback, you must:
 - Provide the feedback received from the user to the agent.
 - Use the feedback to improve the quality of agent's responses.
 
-You can use one of the following to enable feedback collection and usage:
-
-- Use Teams AI library to add the feedback button property to the AI module. This property adds a feedback button to each AI-generated message automatically.
-- Use the feedback flag in the Bot Framework API to add the feedback button for each message.
+You can use Teams AI library to add the feedback button property to the AI module. This property adds a feedback button to each AI-generated message automatically.
 
 > [!NOTE]
 > Customizable feedback forms are available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
