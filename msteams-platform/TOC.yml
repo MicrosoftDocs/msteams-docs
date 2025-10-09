@@ -406,7 +406,7 @@
     displayName: graph api samples
 - name: Add Teams capabilities
   items:
-  - name: Plan your app or agent
+  - name: Plan your app
     items:
     - name: Overview
       href: concepts/app-fundamentals-overview.md
@@ -445,7 +445,7 @@
       - name: Plan for sovereign clouds
         href: concepts/sovereign-cloud.md
         displayName: Teams operated by 21Vianet, gallatin
-  - name: Design your app or agent
+  - name: Design your app
     items:
     - name: Overview
       href: concepts/design/design-teams-app-overview.md
@@ -518,7 +518,7 @@
       - name: Activity feed notifications
         href: concepts/design/activity-feed-notifications.md
         displayName: notify, notification
-  - name: Build bots and agents
+  - name: Build bots
     expand: true
     items:
     - name: Overview
