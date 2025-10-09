@@ -1,13 +1,13 @@
 ---
-title: Agents and bots
-description: Learn to build an agent using Teams AI library, Microsoft 365 Agents Toolkit, Bot Framework SDK.
+title: Bots and Agents
+description: Learn to build a basic chatbot using Microsoft 365 Agents Toolkit, Bot Framework SDK. Additionally, learn to build a custom engine agent.
 ms.localizationpriority: high
 ms.date: 09/25/2024
 ms.topic: conceptual
 ms.author: surbhigupta
 ---
 
-# Agents and bots in Teams
+# Bots and agents in Teams
 
 [!INCLUDE [teams-ai-lib-v2-rec](../includes/teams-ai-lib-v2-rec.md)]
 
