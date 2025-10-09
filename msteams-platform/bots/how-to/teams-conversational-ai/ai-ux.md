@@ -11,17 +11,19 @@ ms.date: 09/27/2024
 
 [!INCLUDE [teams-ai-lib-v2-rec](../../../includes/teams-ai-lib-v2-rec.md)]
 
-A custom engine agent transforms system interactions. For developers, creating an exceptional user experience is crucial. This article details the steps, principles, and considerations for designing intuitive, user-centered interfaces that seamlessly integrate AI capabilities. The main goals are to simplify complex tasks, enhance productivity, and offer personalized experiences through adaptive learning. A custom engine agent includes features that enhance its functionality and integration within the Microsoft ecosystem:
+An agent transforms system interactions. For developers, creating an exceptional user experience is crucial. This article details the steps, principles, and considerations for designing intuitive, user-centered interfaces that seamlessly integrate AI capabilities. The main goals are to simplify complex tasks, enhance productivity, and offer personalized experiences through adaptive learning. An agent includes features that enhance its functionality and integration within the Teams environment:
+<!--the Microsoft ecosystem-->
 
 - **Generative AI integration**: Uses advanced AI models for natural language processing and interaction.
-- **Bots**: Allows building or extending bots with LLM and generative AI for high-quality chat experiences.
+<!--
+- **Bots**: Allows building or extending bots with LLM and generative AI for high-quality chat experiences.-->
 - **Customizable orchestration**: Provides extensive customization options for tailoring the agent's behavior and responses to specific use cases.
 
 To achieve this, you must follow mandatory requirements and best practices. For more information, see [validation guidelines for agents](../../../concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md).
 
-## Ensure mandatory requirements for custom engine agent
+## Ensure mandatory requirements for an agent in Teams
 
-The following requirements are mandatory for building the custom engine agent UX:
+The following requirements are mandatory for building the agent UX:
 
 - [Update the app manifest for custom engine agent](#update-the-app-manifest-for-custom-engine-agent).
 - [Stream the custom engine agent response to the user](#stream-the-custom-engine-agent-response-to-the-user).
