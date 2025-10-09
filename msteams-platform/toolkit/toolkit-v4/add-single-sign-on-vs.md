@@ -73,7 +73,7 @@ Agents Toolkit helps you generate the authentication files in **TeamsFx-Auth** f
 
     * "name": It replaces the value with your expected Microsoft Entra app name.
 
-1. Open your app manifest file, add `WebApplicationInfo` property with the value of your SSO app. For more information, see [webApplicationInfo](/microsoft-365/extensibility/schema/root-web-application-info).
+1. Open your app manifest file, add `WebApplicationInfo` property with the value of your SSO app. For more information, see [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo).
 
     ```JSON
         "webApplicationInfo": {
@@ -389,7 +389,7 @@ Agents Toolkit helps you generate the authentication files in **TeamsFx-Auth** f
 
 1. Update app manifest.
   
-   * A `WebApplicationInfo` object needs to be added into your app manifest to enable SSO in the Teams app. For more information, see [webApplicationInfo](/microsoft-365/extensibility/schema/root-web-application-info).
+   * A `WebApplicationInfo` object needs to be added into your app manifest to enable SSO in the Teams app. For more information, see [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo).
 
     For example: open your app manifest template, and append the following object in app manifest:
 

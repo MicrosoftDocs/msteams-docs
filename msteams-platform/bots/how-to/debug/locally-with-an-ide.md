@@ -36,7 +36,7 @@ If you're hosting your bot locally during development, you need to use a tunneli
 ngrok http <port> --host-header=localhost:<port>
 ```
 
-Use the https endpoint provided by ngrok in your [app manifest](/microsoft-365/extensibility/schema/).
+Use the https endpoint provided by ngrok in your [app manifest](../../../resources/schema/manifest-schema.md).
 
 > [!NOTE]
 >

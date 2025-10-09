@@ -35,7 +35,7 @@ The following sections describe how to do this to send file content as a result 
 
 ### Configure your bot to support files
 
-In order to send and receive files in your bot, you have to set the `supportsFiles` property in the manifest to `true`. This property is described in the [bots]/microsoft-365/extensibility/schema/root-bots#supportsfiles) section of the Manifest reference.
+In order to send and receive files in your bot, you have to set the `supportsFiles` property in the manifest to `true`. This property is described in the [bots](~/resources/schema/manifest-schema.md#bots) section of the Manifest reference.
 
 The definition will look like this: `"supportsFiles": true`. If your bot doesn't enable `supportsFiles`, the following features won't work.
 
@@ -183,7 +183,7 @@ The following table describes the content properties of the attachment:
 | `uniqueId` | OneDrive/SharePoint drive item ID. |
 | `fileType` | File type, such as pdf or docx. |
 
-### Basic example in C #
+### Basic example in C#
 
 The following sample shows how you can handle file uploads and send file consent requests in your bot's dialog:
 

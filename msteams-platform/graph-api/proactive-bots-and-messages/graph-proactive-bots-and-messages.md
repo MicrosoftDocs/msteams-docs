@@ -32,7 +32,7 @@ Microsoft Graph [teamsAppInstallation resource type](/graph/api/resources/teamsa
 |`TeamsAppInstallation.ReadWriteSelfForUser.All`|Allows a Teams app to read, install, upgrade, and uninstall itself for any *user*, without prior sign in or use.|
 |`TeamsAppInstallation.ReadWriteSelfForTeam.All`|Allows a Teams app to read, install, upgrade, and uninstall itself in any *team*, without prior sign in or use.|
 
-To use these permissions, you must add a [webApplicationInfo](/microsoft-365/extensibility/schema/root-web-application-info) key to your app manifest (previously called Teams app manifest) with the following values:
+To use these permissions, you must add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest (previously called Teams app manifest) with the following values:
 
 * **id**: Your Microsoft Entra app ID.
 * **resource**: The resource URL for the app.

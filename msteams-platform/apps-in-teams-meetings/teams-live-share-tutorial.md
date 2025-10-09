@@ -78,7 +78,6 @@ async function start() {
 
 start().catch((error) => console.error(error));
 ```
-
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Set+up+the+application&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fapps-in-teams-meetings%2Fteams-live-share-tutorial%23set-up-the-application&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fapps-in-teams-meetings%2Fteams-live-share-tutorial.md&documentVersionIndependentId=c4095988-9b54-4919-411d-4db9b081af57&platformId=c94461f7-1c1f-7cac-ba73-b2982d5b6cb6&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
@@ -185,7 +184,6 @@ After you initialize `LiveState`, the `stateChanged` event you registered earlie
 await diceState.initialize(1);
 updateDice();
 ```
-
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Connect+meeting+Stageview+to+Live+Share&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fapps-in-teams-meetings%2Fteams-live-share-tutorial%23connect-meeting-stageview-to-live-share&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fapps-in-teams-meetings%2Fteams-live-share-tutorial.md&documentVersionIndependentId=c4095988-9b54-4919-411d-4db9b081af57&platformId=c94461f7-1c1f-7cac-ba73-b2982d5b6cb6&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
@@ -217,7 +215,7 @@ function renderSidePanel(elem) {
 
 ## Write the settings view
 
-The settings view, loaded through `configurationUrl` in your [app manifest](/microsoft-365/extensibility/schema/root-configurable-tabs#configurationurl), is shown to a user when they first add your app to a Teams meeting. This view lets the developer configure the `contentUrl` for the tab that is pinned to the meeting based on user input. This page is required even if no user input is required to set the `contentUrl`.
+The settings view, loaded through `configurationUrl` in your [app manifest](../resources/schema/manifest-schema.md#configurabletabs), is shown to a user when they first add your app to a Teams meeting. This view lets the developer configure the `contentUrl` for the tab that is pinned to the meeting based on user input. This page is required even if no user input is required to set the `contentUrl`.
 
 > [!NOTE]
 > The Live Share's' `joinContainer()` is not supported in the tab `settings` context.
@@ -305,7 +303,7 @@ After you start running your app locally with `npm run start`, you can then test
    > - Don't zip the containing folder.
    > - Give your zip file a descriptive name. For example, `DiceRollerLiveShare`.
 
-   For more information on manifest, visit the [Teams manifest documentation](/microsoft-365/extensibility/schema)
+   For more information on manifest, visit the [Teams manifest documentation](../resources/schema/manifest-schema.md)
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+the+app+package+to+upload+into+Teams&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fapps-in-teams-meetings%2Fteams-live-share-tutorial%23create-the-app-package-to-upload-into-teams&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fapps-in-teams-meetings%2Fteams-live-share-tutorial.md&documentVersionIndependentId=c4095988-9b54-4919-411d-4db9b081af57&platformId=c94461f7-1c1f-7cac-ba73-b2982d5b6cb6&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
@@ -353,9 +351,9 @@ Users invited to the meeting can see your app on stage when they join the meetin
 
 After you're ready to deploy your code, you can use Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) or Developer Portal to provision and upload your app's zip file. To learn more about publishing and deploying your Teams app, see the following resources:
 
-- [Publish your app using Agents Toolkit for Visual Studio Code](../toolkit/publish.md).
-- [Publish your app using Developer Portal](../toolkit/publish-your-teams-apps-using-developer-portal.md).
-- [Deploy your app with Agents Toolkit for Visual Studio](../toolkit/toolkit-v4/deploy-vs.md).
+* [Publish your app using Agents Toolkit for Visual Studio Code](../toolkit/publish.md).
+* [Publish your app using Developer Portal](../toolkit/publish-your-teams-apps-using-developer-portal.md).
+* [Deploy your app with Agents Toolkit for Visual Studio](../toolkit/toolkit-v4/deploy-vs.md).
 
 > [!NOTE]
 > You need to add your provisioned appId to the `manifest.json` before uploading or distributing the app.

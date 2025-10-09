@@ -70,7 +70,7 @@ To extend your existing Teams message extension app to Outlook, ensure the follo
 
 ### Update your app manifest
 
-Update the [app manifest](/microsoft-365/extensibility/schema) (previously called Teams app manifest) schema version `1.13` or later to enable your Teams message extension to run in Outlook.
+Update the [app manifest](../resources/schema/manifest-schema.md) (previously called Teams app manifest) schema version `1.13` or later to enable your Teams message extension to run in Outlook.
 
 Open your app manifest and update the `$schema` and `manifestVersion` with the following values:
 

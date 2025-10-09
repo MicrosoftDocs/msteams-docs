@@ -27,7 +27,7 @@ Teams Connect shared channels facilitate secure collaboration seamlessly. Allow 
 
 ## Enable your app for shared channels
 
-SupportedChannelTypes is an optional property that enables your app in non-standard channels. If your app supports the team scope and the property is defined, Teams enables your app in each channel type accordingly. Private and shared channels are supported. For more information, see [supportedChannelTypes](/microsoft-365/extensibility/schema/root#supportedchanneltypes).
+SupportedChannelTypes is an optional property that enables your app in non-standard channels. If your app supports the team scope and the property is defined, Teams enables your app in each channel type accordingly. Private and shared channels are supported. For more information, see [supportedChannelTypes](../../resources/schema/manifest-schema.md#supportedchanneltypes).
 
 ```JSON
     "supportedChannelTypes": [
@@ -128,7 +128,7 @@ If you're developing an app for use in federated group chats with external users
 ## See also
 
 * [Build tabs for Teams](../../tabs/what-are-tabs.md)
-* [App manifest schema for Teams](/microsoft-365/extensibility/schema/)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
 * [Shared channels in Microsoft Teams](/microsoftteams/shared-channels)
 * [Channel resource type](/graph/api/resources/channel)
 * [Retention policy for Teams locations](/microsoft-365/compliance/create-retention-policies)

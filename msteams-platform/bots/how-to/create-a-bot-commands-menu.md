@@ -239,6 +239,6 @@ Following are the command menu best practices:
 ## See also
 
 * [Build bots for Teams](../what-are-bots.md)
-* [App manifest schema for Teams](/microsoft-365/extensibility/schema/)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
 * [Messages in bot conversations](conversations/conversation-messages.md)
 * [Adaptive Cards for bot developers](/adaptive-cards/getting-started/bots)

@@ -59,4 +59,4 @@ Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) project templat
 * [Walkthrough building an app that responds to chat commands](../sbs-gs-commandbot.yml).
 * [Walkthrough building an app that sends chat messages](../sbs-gs-notificationbot.yml).
 * [Walkthrough building an app with a workflow in chat](../sbs-gs-workflow-bot.yml)
-* [App manifest schema](/microsoft-365/extensibility/schema/)
+* [App manifest schema](../resources/schema/manifest-schema.md)

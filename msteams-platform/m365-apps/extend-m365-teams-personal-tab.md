@@ -94,7 +94,7 @@ After you update TeamsJS references, [upload your app in Teams](#upload-your-cus
 
 ## Update the app manifest
 
-You need to use the app manifest schema version `1.13` (or later) to enable your Teams personal tab to run in Outlook and Microsoft 365 app. For more information on schema version, see [app manifest](/microsoft-365/extensibility/schema/).
+You need to use the app manifest schema version `1.13` (or later) to enable your Teams personal tab to run in Outlook and Microsoft 365 app. For more information on schema version, see [app manifest](../resources/schema/manifest-schema.md).
 
 You have two options for updating your app manifest:
 
@@ -106,7 +106,7 @@ You have two options for updating your app manifest:
 
 # [Manual steps](#tab/manifest-manual)
 
-Open your app manifest and update the `$schema` and `manifestVersion` manually with the appropriate version. Refer to [Teams developer manifest](/microsoft-365/extensibility/schema/) for version information:
+Open your app manifest and update the `$schema` and `manifestVersion` manually with the appropriate version. Refer to [Teams developer manifest](../resources/schema/manifest-schema.md) for version information:
 
 ```json
 {
@@ -180,7 +180,7 @@ If your app makes use of [Content Security Policy](https://developer.mozilla.org
 
 The final step to running your app in Microsoft 365 and Outlook is to upload your updated personal tab [app package](..//concepts/build-and-test/apps-package.md) in Microsoft Teams.
 
-1. Package your ([app manifest](/microsoft-365/extensibility/schema/) and [app icons](/microsoft-365/extensibility/schema/root-icons)) in a zip file. If you used Agents Toolkit to create your app, you can easily do this using the **Zip Teams App Package** option in the **UTILITY** section of Agents Toolkit. Select the `manifest.json` file for your app and the appropriate environment.
+1. Package your ([app manifest](../resources/schema/manifest-schema.md) and [app icons](/microsoftteams/platform/resources/schema/manifest-schema#icons)) in a zip file. If you used Agents Toolkit to create your app, you can easily do this using the **Zip Teams App Package** option in the **UTILITY** section of Agents Toolkit. Select the `manifest.json` file for your app and the appropriate environment.
 
     :::image type="content" source="images/toolkit-zip-teams-app-package.png" alt-text="Screenshot shows the Zip Teams App Package option in Agents Toolkit extension for Visual Studio Code.":::
 

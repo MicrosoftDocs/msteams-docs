@@ -198,4 +198,4 @@ Sample name | Description | Node.js | .NET | Python |
 
 ## See also
 
-[App manifest](/microsoft-365/extensibility/schema/)
+[App manifest](../../resources/schema/manifest-schema.md)

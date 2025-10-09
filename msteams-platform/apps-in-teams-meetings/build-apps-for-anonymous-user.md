@@ -35,7 +35,7 @@ To allow anonymous users to interact with the tab app, update the `supportsAnony
 }
 ```
 
-For more information, see [app manifest schema.](/microsoft-365/extensibility/schema/root-meeting-extension-definition)
+For more information, see [app manifest schema.](~/resources/schema/manifest-schema.md#meetingextensiondefinition)
 
 ## Anonymous user authentication flow
 
@@ -241,7 +241,7 @@ Anonymous users can view and interact with Adaptive Cards in the meeting chat. A
 
 |Sample name | Description | .NET |Node.js|
 |----------------|-----------------|--------------|--------------|
-| Anonymous user support | This sample app enables anonymous user support in Teams meeting apps using Microsoft Entra ID, Teams AI library, and tunneling setup, allowing guests to interact through features like meeting tabs and Stageview. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-anonymous-users/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-anonymous-users/nodejs)|
+| Anonymous user support | This sample app enables anonymous user support in Teams meeting apps using Microsoft Entra ID, Bot Framework, and tunneling setup, allowing guests to interact through features like meeting tabs and Stageview. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-anonymous-users/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-anonymous-users/nodejs)|
 
 ## Next step
 

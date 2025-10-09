@@ -554,4 +554,4 @@ Additionally, add the following [RSC](/microsoftteams/platform/graph-api/rsc/res
 - [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
 - [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)
 - [Use Fluid with Teams](../tabs/how-to/using-fluid-msteam.md)
-- [App manifest schema for Teams](/microsoft-365/extensibility/schema)
+- [App manifest schema for Teams](../resources/schema/manifest-schema.md)

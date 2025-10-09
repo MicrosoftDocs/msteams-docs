@@ -40,7 +40,7 @@ To create a message extension app with Agents Toolkit (previously known as Teams
 
 ### Configure message extension in app manifest
 
-You can configure the message extension capability in the `appPackage/manifest.json` file. For more information, see [app manifest schema](/microsoft-365/extensibility/schema/root-compose-extensions).
+You can configure the message extension capability in the `appPackage/manifest.json` file. For more information, see [app manifest schema](../resources/schema/manifest-schema.md#composeextensions).
 
 The following code snippet is an example:
 
@@ -518,7 +518,7 @@ To create a message extension app, see [create a message extension app with Agen
 
 ### Configure message extension in app manifest
 
-You can configure the message extension capability in `appPackage/manifest.json`. For more information, see [app manifest schema](/microsoft-365/extensibility/schema/root-compose-extensions).
+You can configure the message extension capability in `appPackage/manifest.json`. For more information, see [app manifest schema](../resources/schema/manifest-schema.md#composeextensions).
 
 The following code snippet is an example:
 

@@ -12,7 +12,7 @@ It’s common for an app to support multiple scenarios in Microsoft Teams, but y
 
 When a user installs an app from Microsoft Teams Store or uploads a custom app, the user has the option to open the app in either personal or shared scope:
 
-* Personal scope: If an app supports personal scope, the **Open** option in the scope selection dialog allows to open the app in personal scope.
+* Personal scope: If an app supports personal scope, the **Open** option in the scope selection dialog allows to open the app in personal scope. 
 
 * Shared scope: If an app supports shared scopes, all the supported scopes such as channel, chat, and meeting are listed to select the required scope. If your app is configured with a default install scope, a **Recommended** label appears adjacent to the respective scope.
 
@@ -22,7 +22,7 @@ If your app's primary capability is a bot and intended to work in personal scope
 
 ## Configure your app's default install scope
 
-You can use default install scope to specify whether your app is available for personal, channel, chat, or meeting scopes. When you configure the default install scope, you can set only one scope at a time. For more information, see [app manifest](/microsoft-365/extensibility/schema/root#defaultinstallscope).
+You can use default install scope to specify whether your app is available for personal, channel, chat, or meeting scopes. When you configure the default install scope, you can set only one scope at a time. For more information, see [app manifest](../../resources/schema/manifest-schema.md#defaultinstallscope).
 
 To configure the default install scope in your app manifest:
 
@@ -116,7 +116,7 @@ If an app is configured with shared scopes along with a default install scope, h
 
 ## Configure the default capability for shared scopes
 
-Configure the default capability when your app is installed for a team, meeting, or groupchat. For more information, see [app manifest](/microsoft-365/extensibility/schema/root#defaultgroupcapability).
+Configure the default capability when your app is installed for a team, meeting, or groupchat. For more information, see [app manifest](../../resources/schema/manifest-schema.md#defaultgroupcapability).
 
 > [!NOTE]
 > `defaultGroupCapability` provides the default capability that's added to the team, group chat, or meeting. Select a tab, bot, or connector as the default capability for your app, but you must ensure that you have provided the selected capability in your app definition.
@@ -190,7 +190,7 @@ Configure your app to open as a bot by default:
     1. Add the following properties as the first entry of the array:
         1. Define `entityId` as `conversations`.
         1. Define `scopes` as `personal`.
-    1. Add the tab properties as defined in the [app manifest](/microsoft-365/extensibility/schema/root-static-tabs).
+    1. Add the tab properties as defined in the [app manifest](../../resources/schema/manifest-schema.md#statictabs).
 
  The following code snippet is an example for configuring bot as the default landing capability for mobile:
 
@@ -242,7 +242,7 @@ Configure your app to open as a tab by default:
 
 1. Open your app manifest.
 1. Under `staticTabs` property:
-    1. Add the tab properties as the first entry of the array. To define tab properties, see [app manifest](/microsoft-365/extensibility/schema/root-static-tabs).
+    1. Add the tab properties as the first entry of the array. To define tab properties, see [app manifest](../../resources/schema/manifest-schema.md#statictabs).
     1. Add the following properties:
         1. Define `entityId` as `conversations`.
         1. Define `scopes` as `personal`.
@@ -275,7 +275,7 @@ The following code snippet is an example for setting tab as the default landing 
 # [Mobile](#tab/Mobile)
 
 1. Open your app manifest.
-1. Under `staticTabs` property, add the tab properties as the first entry of the array. To define tab properties, see [app manifest](/microsoft-365/extensibility/schema/root-static-tabs).
+1. Under `staticTabs` property, add the tab properties as the first entry of the array. To define tab properties, see [app manifest](../../resources/schema/manifest-schema.md#statictabs).
 
 The following code snippet is an example for setting tab as the default landing capability  for mobile:
 
@@ -316,7 +316,7 @@ The following example demonstrates opening an app with tab as default landing ca
 
 ---
 
-The `staticTabs` property is also used to pin personal tabs and [reorder tabs](../../tabs/how-to/create-personal-tab.md#reorder-tabs). For more information, see [app manifest](/microsoft-365/extensibility/schema/root-static-tabs).
+The `staticTabs` property is also used to pin personal tabs and [reorder tabs](../../tabs/how-to/create-personal-tab.md#reorder-tabs). For more information, see [app manifest](../../resources/schema/manifest-schema.md#statictabs).
 
 ## Block apps by default for users until an admin approves
 
@@ -340,6 +340,7 @@ If you don't want your app to be blocked by default, update the `defaultBlockUnt
 |**Sample name** | **Description** | **.NET** | **Node.js** | **Manifest**|
 |----------------|-----------------|--------------|----------------|-----------|
 | Hello world | A Microsoft Teams Hello World sample app built with .NET/C# that demonstrates essential features like tabs, bots, and messaging extensions for seamless interaction within the Teams environment. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/csharp/demo-manifest/app-hello-world.zip)|
+
 
 ## Next step
 

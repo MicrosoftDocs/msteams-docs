@@ -47,10 +47,10 @@ You can upload your custom app to a team, chat, meeting, or for personal use dep
 1. Add your app to Teams as per your requirement:
 
     1. Select **Add** to install your personal app to Teams.
-
+        
         :::image type="content" source="~/assets/images/publish-app/teams-app-detail.png" alt-text="Screenshot of custom app installation to Teams with the Add option highlighted.":::
 
-    1. Select **Open** to open the app in personal scope.
+    1.  Select **Open** to open the app in personal scope.
 
         Alternatively, you can either search and select the required scope or select a channel or chat from the list, and move through the dialog to select **Go**.
 
@@ -85,4 +85,4 @@ To host your development and production code and their HTTPS endpoints, you need
 * [Deploy to the cloud](deploy.md)
 * [Preview and customize Teams app manifest](TeamsFx-preview-and-customize-app-manifest.md)
 * [Manage multiple environments](TeamsFx-multi-env.md)
-* [validDomains](/microsoft-365/extensibility/schema/root#validdomains)
+* [validDomains](../resources/schema/manifest-schema.md#validdomains)

@@ -61,7 +61,7 @@ Apps must be consistent with responsible [AI checks](teams-store-validation-guid
       :::image type="icon" source="../../../../assets/icons/bot-requirement-agent.png" link="#bot-requirements-for-custom-engine-agents" border="false":::
    :::column-end:::
    :::column span="":::
-      :::image type="icon" source="../../../../assets/icons/action-knowledge-source.png" link="#action-and-knowledge-source" border="false":::
+      :::image type="icon" source="../../../../assets/icons/action-knowledge-source.png" link="#action-or-knowledge-source" border="false":::
    :::column-end:::
 :::row-end:::
 
@@ -76,7 +76,7 @@ Apps must be consistent with responsible [AI checks](teams-store-validation-guid
       :::image type="icon" source="../../../../assets/icons/graceful-error-handling.png" link="#graceful-error-handling" border="false":::
    :::column-end:::
    :::column span="":::
-      :::image type="icon" source="../../../../assets/icons/security.png" link="#security-requirements-for-server-calls-message-extension-openapis-mcp-servers" border="false":::
+      :::image type="icon" source="../../../../assets/icons/security-openapi.png" link="#security-requirements-for-openapi-spec-url" border="false":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/white-bg.png" border="false":::
@@ -102,13 +102,11 @@ You must ensure to meet the following guidelines for agents:
   > * For API based plugins, these guidelines apply to `description_for_human`, `description_for_model`, `capabilities`, `conversation_starters` (both the title and text), `states\reasoning\description` in `functions` fields, if provided. [*Must fix*]
   > * When utilizing Swagger or OpenAPI file formats, adhere to these guidelines for the `path` content associated with keys and the `description` field for GET, POST, PUT, or DELETE APIs. [*Must fix*]
 
-<!--
 * App long description must clearly call out that the agent works in Microsoft 365 Copilot. For example, use Contoso in Microsoft 365 Copilot to search and summarize your tasks. ​[*Must fix*]
 
   :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of a sample prompt for message extension agent in Microsoft 365 Copilot.":::
 
   :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension as an agent in Microsoft 365 Copilot.":::
--->
 
 * The `semanticDescription` property isn't a mandatory field. However, if you add `semanticDescription` in app manifest, the existing validation checks for short, parameter, and command descriptions are also applicable for semantic descriptions.
 
@@ -141,7 +139,7 @@ You must ensure the following guidelines for sample prompts and prompt starters:
 
 ### Sample prompts
 
-For message extension based declarative agent, the [`samplePrompts`](/microsoft-365/extensibility/schema/root-compose-extensions-commands-sample-prompts) property provides guidance to users on utilizing the agents in Microsoft 365 Copilot
+For message extension based declarative agent, the [`samplePrompts`](../../../../resources/schema/manifest-schema.md#composeextensionscommands) property provides guidance to users on utilizing the agents in Microsoft 365 Copilot
 
 :::image type="content" source="../../../../assets/images/Copilot/bot-based-sample-prompts.png" alt-text="Screenshot shows the sample prompts displayed when the message extension agent is enabled in Microsoft 365 Copilot.":::
 
@@ -258,7 +256,7 @@ For an agent to be validated, invoked, and to work seamlessly, ensure that it me
 
 | Criteria | Fulfillment |
 |---|---|
-| Manifest version | *App manifest version must be 1.13 or later. [*Must fix*] <br>* |
+| Manifest version | *App manifest version must be 1.13 or later. [*Must fix*] <br>* If you're using declarative agent, you must use [public developer preview app manifest schema](../../../../resources/schema/manifest-schema-dev-preview.md). [*Must fix*] |
 | Response time | Response time mustn't exceed nine seconds for 99 percent, five seconds for 75 percent and two seconds for 50 percent. [*Must fix*] |
 | Reliability | Apps must maintain 99.9% availability. For instance, if Microsoft 365 Copilot calls an agent 1,000 times, it must provide a meaningful response 999 times. [*Must fix*] |
 | Zero regressions | If you need to resubmit your agent for validation, the existing message extension functionality that was working earlier mustn't break. [*Must fix*] |
@@ -317,7 +315,7 @@ A custom engine agent is a conversational Teams bot that must meet the following
 1. User must be able to reference custom engine agent in Microsoft 365 Copilot and handoff chat experience in Teams. [*Good-to-fix*]
 1. Bot must include the following UX design components:
 
-   1. An [AI label](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=after%2Cbotmessage#ai-label) that enables a user to identify that the message was generated using AI. This label may appear as a persistent disclaimer, per-message or content disclaimer, or during first-run experience. [*Must fix*]
+   1. An [AI label](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=after%2Cbotmessage#ai-label) that enables a user to identify that the message was generated using AI. [*Must fix*]
    1. A [feedback button](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=after%2Cbotmessage#feedback-buttons) that enables a user to provide positive or negative feedback to the agent's messages. [*Must fix*]
    1. A [citation](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=after%2Cbotmessage#citations) that enables a user to refer to the source of the bot message through in-text citations and references. [*Must fix*]
    1. A [sensitivity label](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=after%2Cbotmessage#sensitivity-label) that enables a user to understand the confidentiality of the bot message. [*Good-to-fix*]
@@ -330,7 +328,7 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
 [Back to top](#validation-guidelines-for-agents)
 
-## Action and knowledge source
+## Action or knowledge source
 
 * Your agent must have nodes defined as actions in the app manifest. All agents must have a core use case that's served through API actions. [*Must fix*]
 
@@ -351,8 +349,6 @@ A custom engine agent is a conversational Teams bot that must meet the following
   * Ensure the fallback is set to **Drop** to guarantee that the Adaptive Card functions in all compatible clients.
 
   * Support insertion for all images in the Adaptive Card.
-
-* Declarative agents only support static tool discovery from MCP servers. Therefore, within the agent plugin manifest, the flags `enable_dynamic_discovery` and `enable_dynamic_client_registration` for MCP servers must always be set to false. [*Must fix*]
 
 <!--
 * Nodes for Graph connector in the declarative agent manifest must be left blank to ground the agent in all available Graph connectors of a tenant. [*Must fix*]
@@ -402,31 +398,20 @@ All agents must handle the following scenarios gracefully, that is, the agent mu
 
 * For incorrect search parameters
 * For misuse or inappropriate language
-
-<!--
 * For topics in which the agent doesn’t specialize
 
   For example, graceful error message with way forward for declarative agent:
 
   :::image type="content" source="../../../../assets/images/Copilot/graceful-error-handling.png" alt-text="The screenshot shows how to incorporate graceful error handling." lightbox="../../../../assets/images/Copilot/graceful-error-handling.png":::
--->
 
 [Back to top](#validation-guidelines-for-agents)
 
-## Security requirements for server calls (message extension, OpenAPIs, MCP servers)
+## Security requirements for OpenAPI spec URL
 
-Agents that use message extension, OpenAPI, and MCP server calls must ensure the following security standards:
-
-* All calls must use HTTPS with TLS 1.2 or higher. [*Must fix*]
-* The calls mustn't lead to any URL redirection. [*Must fix*]
-* The calls must be served from the same domain or subdomain as the root domain verified for the developer. [*Must fix*]
-
-<!--
 Agents that use OpenAPI specs must ensure the following security standards:
 
 * All API calls must use HTTPS with TLS 1.2 or higher. [*Must fix*]
 * API calls mustn't lead to any URL redirection. Actual API calls must be served from the same domain or subdomain as the root domain verified for the developer. [*Must fix*]
--->
 
 [Back to top](#validation-guidelines-for-agents)
 

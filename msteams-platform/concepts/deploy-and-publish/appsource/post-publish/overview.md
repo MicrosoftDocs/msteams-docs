@@ -40,7 +40,7 @@ If you make any of the following changes to your app, however, your existing use
 * Add a personal tab.
 * Add a channel and group tab.
 * Add a connector.
-* Modify configurations related to your Microsoft Entra app registration. For more information, see [`webApplicationInfo`](/microsoft-365/extensibility/schema/root-web-application-info-nested-app-auth-info).
+* Modify configurations related to your Microsoft Entra app registration. For more information, see [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ## Promote your app on another site
 

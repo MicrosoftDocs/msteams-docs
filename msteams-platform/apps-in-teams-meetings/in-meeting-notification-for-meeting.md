@@ -79,7 +79,7 @@ In the following image, a meeting notification requesting payment is sent to one
 
 ### Enable app manifest settings for targeted in-meeting notification
 
-To send targeted in-meeting notifications, you must configure the `authorization` property and the `name` and `type` properties under the `resourceSpecific` field in the [app manifest](/microsoft-365/extensibility/schema/root-authorization-permissions-resource-specific) as follows:
+To send targeted in-meeting notifications, you must configure the `authorization` property and the `name` and `type` properties under the `resourceSpecific` field in the [app manifest](../resources/schema/manifest-schema.md#authorization) as follows:
 
 ```json
 

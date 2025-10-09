@@ -183,7 +183,7 @@ The following table provides RSC permissions for a user and their applicable dat
 
 ## See also
 
-* [App manifest schema for Teams](/microsoft-365/extensibility/schema/)
+* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
 * [Permissions in Teams app](../App-permissions/Teams-app-permissions.md)
 * [Manage custom apps in Teams admin center](/microsoftteams/teams-custom-app-policies-and-settings)
 * [Allow members to upload custom apps](/microsoftteams/teams-custom-app-policies-and-settings?branch=main)

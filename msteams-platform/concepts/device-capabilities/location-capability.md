@@ -56,7 +56,7 @@ To integrate location capabilities, you must:
 
 ## Update manifest
 
-Update your Teams app [manifest.json](/microsoft-365/extensibility/schema/root#devicepermissions) file by adding the `devicePermissions` property and specifying `geolocation`. It allows your app to ask for required permissions from users before they start using the location capabilities. The update for app manifest is as follows:
+Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) file by adding the `devicePermissions` property and specifying `geolocation`. It allows your app to ask for required permissions from users before they start using the location capabilities. The update for app manifest is as follows:
 
 ``` json
 "devicePermissions": [

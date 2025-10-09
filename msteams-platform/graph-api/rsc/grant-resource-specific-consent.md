@@ -56,7 +56,7 @@ Whenever an authorized user installs your app within Teams, the RSC permissions 
 
 To add RSC permission in app manifest:
 
-1. Add the [webApplicationInfo](/microsoft-365/extensibility/schema/root-web-application-info) key to your app manifest with the following values:
+1. Add the [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest with the following values:
 
     |Name| Type | Description|
     |---|---|---|
@@ -67,7 +67,7 @@ To add RSC permission in app manifest:
 
     |Name| Type | Description|
     |---|---|---|
-    |`authorization`|Object|List of permissions that the app needs to function. For more information, see [authorization in app manifest](/microsoft-365/extensibility/schema/root-authorization). |
+    |`authorization`|Object|List of permissions that the app needs to function. For more information, see [authorization in app manifest](../../resources/schema/manifest-schema.md#authorization). |
 
     If an app is meant to support installation in both team and chat scopes, then both team and chat permissions can be specified in the same app manifest under `authorization`.
 
@@ -264,7 +264,7 @@ Example for RSC permissions for user:
 > [!NOTE]
 > It's recommended to use app manifest v1.12 or later.
 
-Add the [webApplicationInfo](/microsoft-365/extensibility/schema/root-web-application-info) key to your app manifest with the following values:
+Add the [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest with the following values:
 
 |Name| Type | Description|
 |---|---|---|
@@ -533,7 +533,7 @@ For more information on how to get details of the apps installed for the user, s
 | **Sample name** | **Description** | **.NET** |**Node.js** | **App manifest**|
 |-----------------|-----------------|----------------|----------------|----------------|
 | Resource-Specific Consent (RSC) | This sample application demonstrates how to request Resource Specific Consent (RSC) permissions, use them to call Microsoft Graph, and enumerate permission grants through a Teams tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/nodeJs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/csharp/demo-manifest/graph-rsc.zip)|
-| Configure RSC permissions |  This sample demonstrates how to configure Resource Specific Consent (RSC) permissions in a Teams app manifest and use them to call Microsoft Graph, allowing you to observe real API responses in both team channels and group chats. | NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc-helper/nodeJs)|NA|
+| Configure RSC permissions | 	This sample demonstrates how to configure Resource Specific Consent (RSC) permissions in a Teams app manifest and use them to call Microsoft Graph, allowing you to observe real API responses in both team channels and group chats. | NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc-helper/nodeJs)|NA|
 
 ## See also
 

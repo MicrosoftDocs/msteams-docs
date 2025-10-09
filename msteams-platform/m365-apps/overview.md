@@ -10,7 +10,7 @@ ms.subservice: m365apps
 ---
 # Extend Teams apps across Microsoft 365
 
-With the latest releases of [Microsoft Teams JavaScript client library](../tabs/how-to/using-teams-client-library.md) (TeamsJS version 2.0.0 and later), [app manifest](/microsoft-365/extensibility/schema/) (previously called Teams app manifest) (version 1.13 and later), and [Microsoft 365 Agents Toolkit](../toolkit/visual-studio-code-overview.md) (previously known as Teams Toolkit), you can build and update Teams apps to run in other high-usage Microsoft 365 products and publish them to the Microsoft commercial marketplace ([Microsoft AppSource](https://appsource.microsoft.com/)) or your organization's private app store.
+With the latest releases of [Microsoft Teams JavaScript client library](../tabs/how-to/using-teams-client-library.md) (TeamsJS version 2.0.0 and later), [app manifest](../resources/schema/manifest-schema.md) (previously called Teams app manifest) (version 1.13 and later), and [Microsoft 365 Agents Toolkit](../toolkit/visual-studio-code-overview.md) (previously known as Teams Toolkit), you can build and update Teams apps to run in other high-usage Microsoft 365 products and publish them to the Microsoft commercial marketplace ([Microsoft AppSource](https://appsource.microsoft.com/)) or your organization's private app store.
 
 Extending your Teams app across Microsoft 365 provides a streamlined way to deliver cross-platform apps to an expanded user audience: from a single codebase, you can create app experiences tailored for Teams, Outlook, Microsoft 365 app, Word (preview), Excel (preview), and PowerPoint (preview) environments. End users don't have to leave the context of their work to use your app, and administrators benefit from a consolidated management and deployment workflow.
 
@@ -64,7 +64,7 @@ Link unfurling works in Outlook web and Windows environments the same way it doe
 
 :::image type="content" source="images/outlook-teams-link-unfurling.png" alt-text="The screenshot is an example that shows Link unfurling running in Outlook and Teams.":::
 
-Build your app with the latest [app manifest](/microsoft-365/extensibility/schema/) and [Teams JavaScript client library](../tabs/how-to/using-teams-client-library.md) to benefit the latest consolidated Microsoft 365 app development process. Then deliver a streamlined deployment, installation, and admin experience for your customers that expands the reach and usage of your app.
+Build your app with the latest [app manifest](../resources/schema/manifest-schema.md) and [Teams JavaScript client library](../tabs/how-to/using-teams-client-library.md) to benefit the latest consolidated Microsoft 365 app development process. Then deliver a streamlined deployment, installation, and admin experience for your customers that expands the reach and usage of your app.
 
 ## Meeting apps in Outlook
 
@@ -78,13 +78,13 @@ With an aim toward simplifying and streamlining the Microsoft 365 developer ecos
 
 ### Outlook Add-ins
 
-You can now define and deploy Outlook Add-ins in [version 1.17 and later](/microsoft-365/extensibility/schema/) of the app manifest.
+You can now define and deploy Outlook Add-ins in [version 1.17 and later](../resources/schema/manifest-schema.md) of the app manifest.
 
 For more information, see [app manifest for Office Add-ins](/office/dev/add-ins/develop/unified-manifest-overview).
 
 ### Word, Excel, PowerPoint Add-ins (preview)
 
-You can now define and deploy Word, Excel, and PowerPoint Add-ins with the [unified manifest for Microsoft 365](/microsoft-365/extensibility/schema).
+You can now define and deploy Word, Excel, and PowerPoint Add-ins with the [developer preview](../resources/schema/manifest-schema-dev-preview.md) unified manifest for Microsoft 365.
 
 For more information, see [app manifest for Office Add-ins](/office/dev/add-ins/develop/unified-manifest-overview).
 

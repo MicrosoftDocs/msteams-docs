@@ -216,7 +216,7 @@ The code snippet for `OnTeamsTaskModuleFetchAsync` and `OnTeamsTaskModuleSubmitA
     }
 ```
 
-Additionally, you must include all skill domains in the `validDomains` section in Virtual Assistant's [app manifest](/microsoft-365/extensibility/schema/root#validdomains) file so that dialogs invoked through a skill render properly.
+Additionally, you must include all skill domains in the `validDomains` section in Virtual Assistant's [app manifest](../resources/schema/manifest-schema.md#validdomains) file so that dialogs invoked through a skill render properly.
 
 ### Handle collaborative app scopes
 
@@ -570,7 +570,7 @@ You can also use existing skills from [Bot Framework Solutions repository](https
 * **Message extensions**:
   * A Virtual Assistant can support a maximum of 10 commands for message extensions.
   * Configuration of message extensions isn't scoped to individual commands but for the entire extension itself. This limits configuration for each individual skill through Virtual Assistant.
-  * Message extensions command IDs have a maximum length of [64 characters](/microsoft-365/extensibility/schema/root-compose-extensions) and 37 characters are used for embedding skill information. Thus, updated constraints for command ID are limited to 27 characters.
+  * Message extensions command IDs have a maximum length of [64 characters](../resources/schema/manifest-schema.md#composeextensions) and 37 characters are used for embedding skill information. Thus, updated constraints for command ID are limited to 27 characters.
 
 You can also use existing skills from [Bot Framework Solutions repository](https://github.com/microsoft/botframework-components/tree/main/skills/csharp) or create a new skill altogether from scratch. Tutorials for the later can be found [here](https://microsoft.github.io/botframework-solutions/overview/skills/). Refer to [documentation](/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true) for Virtual Assistant and skills architecture.
 

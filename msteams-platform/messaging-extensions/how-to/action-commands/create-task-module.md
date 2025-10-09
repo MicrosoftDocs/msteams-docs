@@ -993,7 +993,7 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 ## See also
 
-* [App manifest schema for Teams](/microsoft-365/extensibility/schema/)
+* [App manifest schema for Teams](../../../resources/schema/manifest-schema.md)
 * [Cards](../../../task-modules-and-cards/what-are-cards.md)
 * [Dialogs](../../../task-modules-and-cards/what-are-task-modules.md)
 * [Define message extension action commands](define-action-command.md)

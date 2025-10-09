@@ -5,7 +5,7 @@
 1. Select **Command Palette...** under the **View** option or **Ctrl+Shift+P**.
 1. Select **Teams: Create a New App**.
 1. Select **Message Extension** from the dropdown list.
-1. Select **Custom Search Results** to download the sample code for a Teams search-based message extension using the latest app manifest (previously called Teams [app manifest](/microsoft-365/extensibility/schema/)).
+1. Select **Custom Search Results** to download the sample code for a Teams search-based message extension using the latest app manifest (previously called Teams [app manifest](../../resources/schema/manifest-schema.md)).
 
    :::image type="content" source="../../m365-apps/images/toolkit-palatte-search-sample.png" alt-text="Screenshot shows the Create a new Teams app VS Code command palette to list Teams sample options.":::
 
@@ -29,7 +29,7 @@
 1. Select **Command Palette...** under the **View** option or **Ctrl+Shift+P**.
 1. Select **Teams: Create a New App**.
 1. Select **Message Extension** from the dropdown list.
-1. Select **Collect Form Input and Process Data** to download the sample code for a Teams action-based message extension using the latest app manifest (previously called Teams [app manifest](/microsoft-365/extensibility/schema/)).
+1. Select **Collect Form Input and Process Data** to download the sample code for a Teams action-based message extension using the latest app manifest (previously called Teams [app manifest](../../resources/schema/manifest-schema.md)).
 
    :::image type="content" source="../../m365-apps/images/toolkit-palatte-action-sample.png" alt-text="Screenshot shows the Create a new Teams app VS Code command palette to list Teams action-based message extension sample option.":::
 

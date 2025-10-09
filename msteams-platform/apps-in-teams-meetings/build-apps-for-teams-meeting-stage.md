@@ -33,7 +33,7 @@ To invoke share to stage, users can select the **Share to Stage** icon on the up
 
 ### App manifest
 
-To share an app to the meeting stage, you must configure the context and Resource-specific consent (RSC) permissions in the [app manifest](/microsoft-365/extensibility/schema/root-authorization-permissions-resource-specific):
+To share an app to the meeting stage, you must configure the context and Resource-specific consent (RSC) permissions in the [app manifest](../resources/schema/manifest-schema.md):
 
 1. Update the `context` property in the app manifest as follows:
 
@@ -448,7 +448,7 @@ Follow the [step-by-step guide](../sbs-inmeeting-document-signing.yml) to build 
 
 * [Apps for Teams meetings](teams-apps-in-meetings.md)
 * [Enable authentication using third-party OAuth provider](../tabs/how-to/authentication/auth-flow-tab.md)
-* [Resource-specific consent for delegated permissions](/microsoft-365/extensibility/schema/root-authorization-permissions-resource-specific)
+* [Resource-specific consent for delegated permissions](../resources/schema/manifest-schema.md#authorizationpermissions)
 * [Create deep links](../concepts/build-and-test/deep-links.md)
 * [Meeting app APIs](meeting-apps-apis.md)
 * [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md)

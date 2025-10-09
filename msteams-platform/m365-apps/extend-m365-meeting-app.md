@@ -12,7 +12,7 @@ ms.subservice: m365apps
 
 Across the Microsoft 365 ecosystem, most monthly users schedule their Microsoft Teams meetings from Outlook. To help users stay in the flow of their work, Teams meeting apps are now supported on Outlook. You can configure and add meeting apps to the Teams meetings scheduled from Outlook and also run meeting apps within the Outlook calendar.
 
-Meeting apps are essentially Teams tab apps that are designed to foster collaboration before, during, and after meetings. You can specify which contexts your meeting app supports from the app manifest (previously called Teams app manifest) through the [configurableTabs.context](/microsoft-365/extensibility/schema/root-configurable-tabs#context-1) property.
+Meeting apps are essentially Teams tab apps that are designed to foster collaboration before, during, and after meetings. You can specify which contexts your meeting app supports from the app manifest (previously called Teams app manifest) through the [configurableTabs.context](../resources/schema/manifest-schema.md#configurabletabs) property.
 
 > [!NOTE]
 > In addition to `configurableTabs`, your meeting app must contain at least one [app capability in personal scope](../concepts/design/personal-apps.md) (for example, `staticTabs`), for it to be available in Outlook.
@@ -87,7 +87,7 @@ If you have an existing meeting app, make a copy or a branch of your production 
 
 ## Update your app manifest
 
-Update the [app manifest](/microsoft-365/extensibility/schema) (previously called Teams app manifest) schema version to 1.13 or later.
+Update the [app manifest](~/resources/schema/manifest-schema.md) (previously called Teams app manifest) schema version to 1.13 or later.
 
 Open your Teams app manifest and update the `$schema` and `manifestVersion` properties as follows:
 
@@ -149,7 +149,7 @@ You can [upload your custom app in Teams admin center](#upload-your-custom-app-i
 
 To test your app in Microsoft 365 and Outlook, upload your [app package](../concepts/build-and-test/apps-package.md) to Teams admin center.
 
-1. Package your Teams [app manifest](/microsoft-365/extensibility/schema) and [app icons](/microsoftteams/platform/resources/schema/manifest-schema#icons) in a zip file. To create an app package through Agents Toolkit, see [build app package.](~/toolkit/publish.md#build-app-package)
+1. Package your Teams [app manifest](../resources/schema/manifest-schema.md) and [app icons](/microsoftteams/platform/resources/schema/manifest-schema#icons) in a zip file. To create an app package through Agents Toolkit, see [build app package.](~/toolkit/publish.md#build-app-package)
 
 1. Go to [Teams admin center](https://admin.teams.microsoft.com) and select **Teams apps** > **Manage apps**.
 

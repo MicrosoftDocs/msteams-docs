@@ -59,5 +59,5 @@ After you've created your Teams app project, you can use the following options t
 
 * [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals-vs.md)
 * [Create a new Teams app using Agents Toolkit](create-new-project-vs.md)
-* [App manifest schema](/microsoft-365/extensibility/schema)
+* [App manifest schema](~/resources/schema/manifest-schema.md)
 * [Prepare to build apps using Agents Toolkit](build-environments-vs.md)
