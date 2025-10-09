@@ -186,19 +186,6 @@ landingContent:
 #    - text: Maintain your published app
 #      url: ~/concepts/deploy-and-publish/appsource/post-publish/overview.md
 
-- title: References
-  linkLists:
-  - linkListType: reference
-    links:
-    - text: Grow your agent or app
-      url: ~/concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md
-    - text: Explore low-code apps for Teams
-      url:  ~/samples/teams-low-code-solutions.md
-    - text: App manifest
-      url: ../msteams-platform/resources/schema/manifest-schema.md
-    - text: Public developer preview manifest schema
-      url: ~/resources/schema/manifest-schema-dev-preview.md
-
 - title: Monetize your agent or app
   linkLists:
     - linkListType: concept
@@ -213,3 +200,16 @@ landingContent:
         url: ~/concepts/deploy-and-publish/appsource/prepare/test-preview-for-monetized-apps.md
       - text: Additional tips for rapid approval to publish your app linked to a SaaS offer
         url: ~/concepts/deploy-and-publish/appsource/publish.md#additional-tips-for-rapid-approval-to-publish-your-app-linked-to-a-saas-offer     
+
+- title: References
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Grow your agent or app
+      url: ~/concepts/deploy-and-publish/appsource/post-publish/app-growth/overview-app-growth.md
+    - text: Explore low-code apps for Teams
+      url:  ~/samples/teams-low-code-solutions.md
+    - text: App manifest
+      url: ../msteams-platform/resources/schema/manifest-schema.md
+    - text: Public developer preview manifest schema
+      url: ~/resources/schema/manifest-schema-dev-preview.md
