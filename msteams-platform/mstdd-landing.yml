@@ -41,13 +41,13 @@ landingContent:
     - linkListType: get-started
       links:
       - text: Build your first agent
-        url: /microsoftteams/platform/teams-ai-library/welcome/
-      - text: Build agents and apps for Teams
-        url: ../msteams-platform/bots/build-a-bot.md
+        url: /microsoftteams/platform/teams-ai-library/welcome?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+#      - text: Build agents and apps for Teams
+#        url: ../msteams-platform/bots/build-a-bot.md
       - text: Get started with GitHub
         url: /contribute/additional-resources
-#      - text: Glossary
-#        url: ~/get-started/glossary.md
+      - text: Glossary
+        url: ~/get-started/glossary.md
 #      - text: Overview
 #        url: ~/overview.md
       - text: Code samples
@@ -57,7 +57,7 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
-    - text: Build agents and bots
+    - text: Build bots
       url: ~/bots/what-are-bots.md
     - text: Build tabs
       url: ~/tabs/what-are-tabs.md
