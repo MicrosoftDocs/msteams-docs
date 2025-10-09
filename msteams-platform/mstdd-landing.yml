@@ -21,35 +21,14 @@ landingContent:
 # Cards and links should be based on top customer tasks or top subjects
 # Start card title with a verb
 
-- title: Microsoft Build 2025
-  linkLists:
-    - linkListType: concept
-      links:
-      - text: Teams AI library v2 (preview)
-        url: /microsoftteams/platform/teams-ai-library/welcome
-      - text: Teams Toolkit renamed to Microsoft 365 Agents Toolkit
-        url: /microsoft-365/developer/overview-m365-agents-toolkit?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json
-      - text: Custom app analytics and agent usage analytics for custom apps in Developer Portal
-        url: /microsoftteams/platform/concepts/build-and-test/analyze-your-apps-usage-in-developer-portal?tabs=custom-apps-built-for-your-org
-      - text: Agent usage analytics for third-party apps in Developer Portal
-        url: /microsoftteams/platform/concepts/build-and-test/analyze-your-apps-usage-in-developer-portal?tabs=thirdpartyapps
-      - text: AI-generated meeting summary
-        url: graph-api/meeting-transcripts/meeting-insights.md
-      - text: Custom activity icons (preview)
-        url: /graph/teams-send-activityfeednotifications?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json&tabs=desktop%2Chttp#custom-activity-icons-in-activity-feed-notifications
-
 - title: Build custom engine agents
   linkLists:
     - linkListType: concept
       links:
       - text: Custom engine agents overview
         url: /microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-      - text: Teams AI library v2 (preview)
+      - text: Teams AI library
         url: /microsoftteams/platform/teams-ai-library/welcome
-      - text: Teams AI library v1
-        url: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md
-      - text: Build custom engine agents using Agents Toolkit
-        url: Teams-AI-library-tutorial.yml
       - text: Custom engine agent user experience
         url: bots/how-to/teams-conversational-ai/ai-ux.md
       - text: Enhance AI-generated bot Messages
@@ -114,11 +93,11 @@ landingContent:
     - linkListType: tutorial
       links:
         - text: Debug your AI chat bot using Agents Playground
-          url: ~/sbs-teams-app-test-tool.yml
+          url: ~/toolkit/teams-app-test-tool-tutorial.md
         - text: Bot configuration experience
           url: ~/qsg-bot-configuration-experience.yml
         - text: Create Teams conversation bot
-          url: ~/sbs-teams-conversation-bot.yml
+          url: ~/bots/how-to/conversations/channel-and-group-conversations.md
         - text: Create Calling and meeting bot
           url: ~/sbs-calling-and-meeting.yml
         - text: Configure SSO for tabs and message extensions
@@ -257,7 +236,7 @@ landingContent:
 #      - text: Share to Teams from personal app or tab
 #        url: ~/concepts/build-and-test/Share-to-Teams-from-personal-app-or-tab.md
 #      - text: Create Teams conversation bot
-#        url: ~/sbs-teams-conversation-bot.yml
+#        url: ~/bots/how-to/conversations/channel-and-group-conversations.md
 #      - text: Build your first app using Blazor
 #        url:  sbs-gs-blazorupdate.yml
 #      - text: Device permissions for the browser
