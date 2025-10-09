@@ -1,17 +1,17 @@
 ---
-title: Bots and Agents
-description: Learn to build a basic chatbot using Microsoft 365 Agents Toolkit, Bot Framework SDK. Additionally, learn to build a custom engine agent.
+title: Bots in Teams
+description: Learn to build a basic chatbot. Additionally, learn to migrate  build an agent.
 ms.localizationpriority: high
 ms.date: 09/25/2024
 ms.topic: conceptual
 ms.author: surbhigupta
 ---
 
-# Bots and agents in Teams
+# Bots in Teams
 
 [!INCLUDE [teams-ai-lib-v2-rec](../includes/teams-ai-lib-v2-rec.md)]
 
-When deciding how to develop your bot, it's important to know your options. You must choose between an AI-enabled bot or a conventional one. This article gives a quick overview to help you start. It shows you how to build a basic bot app and then enhance it into a custom engine agent.
+When deciding how to develop your bot, it's important to know your options. You must choose between an AI-enabled bot or a conventional one. This article gives a quick overview to help you start. It shows you how to build a basic bot app and then enhance it into a Teams agent.
 
 ## Choose the tools and platforms
 
