@@ -77,7 +77,7 @@ For more information, see [webApplicationInfo](/microsoft-365/extensibility/sche
    3. `validDomains`
 
    > [!NOTE]
-   > To handle authentication and token exchange, add `https://token.botframework.com` to the `validDomains` property for bots using Teams AI library. For OAuth URLs and data residency list, see [OAuth URL support in Azure AI Bot Service](/azure/bot-service/ref-oauth-redirect-urls?view=azure-bot-service-4.0&preserve-view=true)..
+   > To handle authentication and token exchange, add `https://token.botframework.com` to the `validDomains` property for bots using Teams AI library. For OAuth URLs and data residency list, see [OAuth URL support in Azure AI Bot Service](/azure/bot-service/ref-oauth-redirect-urls?view=azure-bot-service-4.0&preserve-view=true).
 
 6. Save the app manifest file. For more information, see [app manifest](/microsoft-365/extensibility/schema/).
 
