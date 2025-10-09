@@ -145,9 +145,9 @@ Use Teams AI library to ensure intelligent context-based conversation and to man
 - **Store and pass conversation history**: Determine the means of storage and pass some of the conversation history to the agent.
 - **Understand user references**: Ensure that when a user sends a message, the agent must understand what the user is referring to. You can build this understanding in the agent using LLM and the recent conversation history. The agent mustn't need the user to reestablish context with every message.
 
-### Ensure that the custom engine agent offers prompt starters or a welcome card
+### Ensure that the agent offers prompt starters or a welcome card
 
-A custom engine agent must assist users by offering prompt suggestions on how to best utilize the agent. This helps users overcome challenges during both initial and subsequent interactions with the agent.
+An agent must assist users by offering prompt suggestions on how to best utilize the agent. This helps users overcome challenges during both initial and subsequent interactions with the agent.
 
 :::image type="content" source="../../../assets/images/bots/ai-zero-prompts.png" alt-text="Image shows an example of prompt starters." border="false":::
 
@@ -161,9 +161,9 @@ Agents must support at least three unique compound utterances by handling three 
 
 :::image type="content" source="../../../assets/images/Copilot/high-quaity-me-pass-multi-parameters.png" alt-text="Screenshot shows an example of a pass scenario where the Northwind app returns a response for a seafood and in stock parameters.":::
 
-## Best practices for custom engine agent
+## Best practices for agents in Teams
 
-The following best practices can help enhance the overall effectiveness of a custom engine agent.
+The following best practices can help enhance the overall effectiveness of an agent:
 
 - [Ensure that agent's response contains feedback button](#ensure-that-agents-response-contains-feedback-button).
 - [Enable Teams Azure AD single sign-on](#enable-teams-azure-ad-single-sign-on).
