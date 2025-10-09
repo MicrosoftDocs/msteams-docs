@@ -18,7 +18,7 @@ This section takes you through the various options for building your Teams app.
 
 * [Teams collaborative platform](#teams-collaborative-platform)
 * [Tools and SDKs](#tools-and-sdks)
-* [Teams app tutorials and code samples](#teams-app-tutorials-and-code-samples)
+* [Code samples](#code-samples)
 
 ## Teams collaborative platform
 
