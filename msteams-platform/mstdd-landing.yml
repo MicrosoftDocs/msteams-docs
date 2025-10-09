@@ -122,8 +122,8 @@ landingContent:
           url: ~/bots/how-to/bot-configuration-experience.md
 #        - text: Create Teams conversation bot
 #          url: ~/bots/how-to/conversations/channel-and-group-conversations.md
-        - text: Build notification bot with JavaScript
-          url: sbs-gs-notificationbot.yml          
+#        - text: Build notification bot with JavaScript
+#          url: sbs-gs-notificationbot.yml          
 #       - text: Build a bot to send Proactive messages
 #         url: ~/sbs-send-proactive.yml
         - text: Build a bot with SSO authentication
