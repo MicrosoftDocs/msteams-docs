@@ -131,19 +131,19 @@ You can use one of the following to include AI label in the agent's response:
 
 Use [Teams AI library](/microsoftteams/platform/teams-ai-library/) to add streaming to the agent.
 
-### Ensure that the custom engine agent is an intelligent conversational bot
+### Ensure that the agent maintains intelligent conversation
 
-A custom engine agent must track a conversation's context and history to provide an intelligent interaction. The agent must meet the user's expectation by being aware of the conversation's context and allowing them to refer to previous messages and responses.
+An agent must track a conversation's context and history to provide an intelligent interaction. The agent must meet the user's expectation by being aware of the conversation's context and allowing them to refer to previous messages and responses.
 
-You can use one of the following to ensure intelligent context-based conversation:
+You can use one of the following to ensure intelligent context-based conversation. Use Teams AI library to manage and pass conversational history and context to the LLM. Teams AI library enables you to:
 
-- Use Teams AI library to manage and pass conversational history and context to the LLM.
+<!--
 - Use Bot Framework SDK to:
-
-  - **Manage context and conversation history**: Ensure that the agent can track the context and conversation history.
-  - **Identify conversation location**: Ensure the agent is aware of the platform on which the conversation is ongoing, such as on Teams, copilot.com, in a meeting side panel, or a group chat.
-  - **Store and pass conversation history**: Determine the means of storage and pass some of the conversation history to the agent.
-  - **Understand user references**: Ensure that when a user sends a message, the agent must understand what the user is referring to. You can build this understanding in the agent using LLM and the recent conversation history. The agent mustn't need the user to reestablish context with every message.
+-->
+- **Manage context and conversation history**: Ensure that the agent can track the context and conversation history.
+- **Identify conversation location**: Ensure the agent is aware of the platform on which the conversation is ongoing, such as on Teams, copilot.com, in a meeting side panel, or a group chat.
+- **Store and pass conversation history**: Determine the means of storage and pass some of the conversation history to the agent.
+- **Understand user references**: Ensure that when a user sends a message, the agent must understand what the user is referring to. You can build this understanding in the agent using LLM and the recent conversation history. The agent mustn't need the user to reestablish context with every message.
 
 ### Ensure that the custom engine agent offers prompt starters or a welcome card
 
