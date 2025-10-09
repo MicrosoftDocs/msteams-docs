@@ -87,7 +87,7 @@ Use [Teams AI library](/microsoftteams/platform/teams-ai-library/) to add stream
 
 >[!NOTE]
 >
-> - Streaming bot messages is available only for one-on-one chats and in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
+> Streaming bot messages is available only for one-on-one chats and in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
 
 ### Ensure the agent response contains citations
 
