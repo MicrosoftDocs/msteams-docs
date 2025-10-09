@@ -40,6 +40,9 @@
   - name: Agents user experience
     href: bots/how-to/teams-conversational-ai/ai-ux.md
     displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop            
+  - name: Custom engine agents overview
+    href: /microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+    displayName: AI bot, Teams AI library, custom agent
 - name: Tools and SDKs
   items:
   - name: Overview
@@ -542,9 +545,9 @@
 #        href: bots/how-to/teams-conversational-ai/teams-ai-library-tutorial.md
     - name: Bot user experience
       items:
-      - name: Custom engine agent user experience
-        href: bots/how-to/teams-conversational-ai/ai-ux.md
-        displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop    
+#      - name: Custom engine agent user experience
+#        href: bots/how-to/teams-conversational-ai/ai-ux.md
+#        displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop    
       - name: Stream bot messages
         href: bots/streaming-ux.md
         displayName: Streaming, response generation, AI library, AI SDK, REST API
