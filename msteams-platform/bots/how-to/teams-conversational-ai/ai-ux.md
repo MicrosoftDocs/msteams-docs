@@ -25,12 +25,12 @@ To achieve this, you must follow mandatory requirements and best practices. For 
 
 The following requirements are mandatory for building the agent UX:
 
-- [Update the app manifest for custom engine agent](#update-the-app-manifest-for-custom-engine-agent).
-- [Stream the custom engine agent response to the user](#stream-the-custom-engine-agent-response-to-the-user).
-- [Ensure the custom engine agent response contains citations](#ensure-the-custom-engine-agent-response-contains-citations).
-- [Ensure the custom engine agent response contains an AI label](#ensure-the-custom-engine-agent-response-contains-an-ai-label).
-- [Ensure that the custom engine agent is an intelligent conversational bot](#ensure-that-the-custom-engine-agent-is-an-intelligent-conversational-bot).
-- [Ensure that the custom engine agent offers prompt starters or a welcome card](#ensure-that-the-custom-engine-agent-offers-prompt-starters-or-a-welcome-card).
+- [Update the app manifest an agent](#update-the-app-manifest-an-agent)
+- [Stream the agent response to the user](#stream-the-agent-response-to-the-user)
+- [Ensure the agent response contains citations](#ensure-the-agent-response-contains-citations)
+- [Ensure the agent response contains an AI label](#ensure-the-agent-response-contains-an-ai-label)
+- [Ensure that the agent maintains intelligent conversation](#ensure-that-the-agent-maintains-intelligent-conversation)
+- [Ensure that the agent offers prompt starters or a welcome card](#ensure-that-the-agent-offers-prompt-starters-or-a-welcome-card)
 
 <!--
 > [!NOTE]
