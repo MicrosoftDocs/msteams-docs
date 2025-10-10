@@ -14,14 +14,12 @@ ms.collection: ce-skilling-ai-copilot
 > [!IMPORTANT]
 >
 > * Agents for Microsoft 365 Copilot are in preview and work only in Microsoft 365 Copilot.
-> * Message extension are in preview.
-> * Message extensions in Microsoft 365 Copilot are in public preview for Microsoft Word and PowerPoint.
 > * Ensure that Microsoft 365 Copilot is available for your organization. You have two ways to get a developer environment for Microsoft 365 Copilot:
 >   * A sandbox Microsoft 365 tenant with Microsoft 365 Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 >   * An enterprise customer production environment with Microsoft 365 Copilot licenses.
 > For more information about validation guidelines for agents to increase their chance for being listed on the Team Store, see [validation guidelines for agents](../concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md).
 
-Microsoft 365 agents provide integration with various Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension allow Microsoft 365 Copilot to interact with APIs from other software and services through a bot. With Microsoft 365 Copilot, you can:
+Microsoft 365 agents provide integration with various Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Agents enable Microsoft 365 Copilot to interact with APIs from other software and services through a bot. With Microsoft 365 Copilot, you can:
 
 * Search for the latest information or record. For example, the latest incident ticket or survey results.
 * Summarize information based on multiple records. For example, summarize all incident tickets related to the project Northwind.
@@ -44,7 +42,7 @@ A good description offers a clear and concise summary of the app’s features an
 
 Long and short app descriptions must be clear and define the app's scope. To render an app as an agent in Microsoft 365 Copilot, modify the app description to suit the following agent requirements:
 
-* Long description must clearly explain the functionality and usage of the message extension in Microsoft 365 Copilot. For example, use Contoso cloud in Microsoft 365 Copilot to search and summarize your tasks.
+* Long description must clearly explain the functionality and usage of agent in Microsoft 365 Copilot. For example, use Contoso cloud in Microsoft 365 Copilot to search and summarize your tasks.
 * Short description must briefly describe the app's functionality in a natural language and can include the name of the app.
 
 The following code snippets show the short description examples for each category:
