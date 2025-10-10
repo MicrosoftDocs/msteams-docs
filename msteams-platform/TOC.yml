@@ -406,6 +406,21 @@
     displayName: graph api samples
 - name: Add Teams app capabilities
   items:
+  - name: Get started
+    expanded: false
+    items:
+    - name: Build your Teams app
+      href: get-started/get-started-overview.md
+      displayName: build Teams app, new Teams app, GitHub Codespaces, tutorials
+    - name: Build a tab app
+      href: get-started/build-basic-tab-app.md
+      displayName: build Teams tab app
+    - name: Build an interactive notification bot app
+      href: get-started/build-interactive-notification-bot.md
+      displayName: build Teams bot app, build interactive bot
+    - name: Build a message extension app
+      href: get-started/build-message-extension.md
+      displayName: search based message extension app
   - name: Plan your app
     items:
     - name: Overview
@@ -965,6 +980,33 @@
   - name: Explore SDKs and code samples
     href: get-started/tool-options-and-code-samples.md
     displayName: Teams app samples, tools to build Teams app
+  - name: Resources
+    items:
+    - name: Localization
+      items:
+      - name: Localize your app
+        href: concepts/build-and-test/apps-localization.md
+        displayname: localizationInfo, Marketplace listings, Partner Center, AppSource
+      - name: Localize JSON schema reference
+        href: resources/schema/localization-schema.md
+        displayname: meetingExtensionDefinition
+    - name: Cookies and local storage
+      href: resources/samesite-cookie-update.md
+      displayName: Cookies, third-party cookies, SameSite, Lax, Strict, None, Secure, SameSite=None, SameSite=Lax, SameSite=Strict
+    - name: Best practices for Teams mobile app
+      href: resources/teams-mobile-best-practices.md
+      displayName: Teams mobile app, best practices, service worker, lighthouse, performance audit
+    - name: Contribute to Teams documentation
+      href: resources/teams-contributor-reference.md
+    - name: Troubleshoot your Microsoft Teams app
+      href: resources/troubleshoot.md
+      displayName:  DevTools, Cache-Control, authentication issues, app uploading error
+    - name: Know about New Microsoft Teams client
+      href: resources/teams-updates.md
+      displayName: Classic Teams, new Teams client, Teams 2.1
+    - name: Extend Microsoft 365 Copilot
+    href: messaging-extensions/how-to-extend-copilot.md
+    displayName: message extension, plugin, Copilot, Microsoft 365 Copilot
 - name: Integrate device capabilities
   items:
   - name: What are device capabilities?
