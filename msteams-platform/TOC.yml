@@ -890,10 +890,7 @@
         displayName: payload
       - name: Use dialogs from bots
         href: task-modules-and-cards/task-modules/task-modules-bots.md
-        displayName: create dialogue box, invoke dialog, submit action
-  - name: Explore SDKs and code samples
-    href: get-started/tool-options-and-code-samples.md
-    displayName: Teams app samples, tools to build Teams app 
+        displayName: create dialogue box, invoke dialog, submit action 
   - name: Integrate with Teams
     items:
     - name: Web app integration
@@ -965,6 +962,9 @@
     - name: Use Fluid with Teams
       href: tabs/how-to/using-fluid-msteam.md
       displayName: Fluid client, Azure Fluid Relay, Fluid Containers, React component
+  - name: Explore SDKs and code samples
+    href: get-started/tool-options-and-code-samples.md
+    displayName: Teams app samples, tools to build Teams app
 - name: Integrate device capabilities
   items:
   - name: What are device capabilities?
