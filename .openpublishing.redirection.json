@@ -1465,6 +1465,10 @@
         "redirect_url": "/microsoftteams/platform/tabs/how-to/authentication/tab-sso-overview"
       },
       {
+        "source_path": "msteams-platform/index.yml",
+        "redirect_url": "https://developer.microsoft.com/en-us/microsoft-teams"
+      },
+      { 
         "source_path": "msteams-platform/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md",
         "redirect_url": "/microsoftteams/platform/teams-ai-library/welcome"
       },
