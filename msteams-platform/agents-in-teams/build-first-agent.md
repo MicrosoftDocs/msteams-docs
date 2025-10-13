@@ -27,9 +27,9 @@ To build a Teams agent, you’ll need the following:
 
 To build your agent:
 
-1. Set up your environment
-1. Create the agent using Microsoft 365 Agents Toolkit
-1. Debug and run your agent in Teams
+1. [Set up your environment](#set-up-your-environment)
+1. [Create an agent using Microsoft 365 Agents Toolkit](#create-an-agent-using-microsoft-365-agents-toolkit)
+1. [Run and use your agent in Teams](#run-and-use-your-agent-in-teams)
 
 ## Set up your environment
 
