@@ -24,24 +24,6 @@ Developers can now build agents in Teams using Teams AI library and enables natu
 
 At the same time, developers can continue to create Teams apps - tabs, bots, message extensions, and meeting apps - that extend Teams capabilities for task-specific workflows, data, visualization, and integration with enterprise systems.
 
-## Driving organizational goals
-
-Collaboration and communication serve as key pillars for any organization. Concise communication, integration with necessary services, and on-the-go accessibility demonstrate why organizations choose to rely on apps.
-
-Organizations connect with customers, provide services, and share information with apps. Apps become the meeting place for people to work together. A well-placed app builds a cohesive environment for external and internal business needs.
-
-Consider example areas where an app meets a business requirement:
-
-:::image type="content" border="false" source="../msteams-platform/assets/images/overview/why-teams-apps.png" alt-text="Screenshot shows you why should you build Teams app." :::
-
-| **Development options** | **Business opportunities** |
-| --- | --- |
-| - Desktop app <br> - Web app <br> - Mobile app | - Increase user engagements <br> - Make your app discoverable on Microsoft Teams Store |
-| **Customer benefits** | **Internal workflows** |
-| - On-the-go accessibility <br> - Secure customer data <br> - Ease of communication | - Automate repetitive tasks <br> - Simplify tasks with bots, such as Q&A and helpdesk |
-
-You can build apps with the Teams platform by extending app capabilities to fit specific needs. You can create something brand new for Teams or integrate an existing app.
-
 <!--
 
 Take a look at these example developer personas and app scenarios:
@@ -80,6 +62,28 @@ For more information, see [Agents in Teams](agents-in-teams/overview.md).
 ### Apps in Teams
 
 Teams apps extend collaboration with custom interfacses and integrated workflows. Developers can add one or more capabilities such as tabs, bots, message extension, or meeting apps to deliver tailored solutions.
+
+## Driving organizational goals
+
+Collaboration and communication serve as key pillars for any organization. Concise communication, integration with necessary services, and on-the-go accessibility demonstrate why organizations choose to rely on apps.
+
+Organizations connect with customers, provide services, and share information with apps. Apps become the meeting place for people to work together. A well-placed app builds a cohesive environment for external and internal business needs.
+
+Consider example areas where an app meets a business requirement:
+
+:::image type="content" border="false" source="../msteams-platform/assets/images/overview/why-teams-apps.png" alt-text="Screenshot shows you why should you build Teams app." :::
+
+| **Development options** | **Business opportunities** |
+| --- | --- |
+| - Desktop app <br> - Web app <br> - Mobile app | - Increase user engagements <br> - Make your app discoverable on Microsoft Teams Store |
+| **Customer benefits** | **Internal workflows** |
+| - On-the-go accessibility <br> - Secure customer data <br> - Ease of communication | - Automate repetitive tasks <br> - Simplify tasks with bots, such as Q&A and helpdesk |
+
+You can build apps with the Teams platform by extending app capabilities to fit specific needs. You can create something brand new for Teams or integrate an existing app.
+
+## Choose your path and get started
+
+[Add links to build topics for building agents and apps, and extending agents and apps.]
 
 <!--
 ### Build apps with Microsoft Teams platform
