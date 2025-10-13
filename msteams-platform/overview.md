@@ -6,11 +6,15 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.date: 04/18/2025
 ---
-# Teams app that fits
+# Microsoft Teams developer platform overview
 
-Microsoft Teams offers a collection of apps provided by Microsoft or external services. Teams apps include tabs, bots, message extensions, or any combination of these capabilities. You can extend Teams apps to work on Outlook and Microsoft 365 App, too. These apps expand the value of the Teams collaborative experience for users.
+Microsoft Teams platform empowers developers to create intelligent, connected, and collaborative experiences directly into Teams experience. Whether you're building AI-powered agents or rich Teams apps, the platform gives you the tools to extend Teams with seamless, secure, and contextual solutions. Teams is a collaborative hub that supports custom experiences, workflowsm and integrations that live where people work.
+
+<!--
+Microsoft Teams offers a collection of apps provided by Microsoft or external services. Teams apps include tabs, bots, message extensions, or any combination of these capabilities. You can extend Teams apps to work on Outlook and Microsoft 365 app, too. These apps expand the value of the Teams collaborative experience for users.
 
 Apps present themselves as personal or shared. A personal app enables one-on-one communication, while a shared app lets multiple users collaborate in a common space.
+-->
 
 ## Driving organizational goals
 
