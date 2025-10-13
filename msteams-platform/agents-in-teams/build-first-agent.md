@@ -25,22 +25,20 @@ To build a Teams agent, you’ll need the following:
 | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and calls all in one place.|
 | [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's Generative Pretrained Transformer (GPT). If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
 
-## Build an agent
-
 To build your agent:
 
 1. Set up your environment
 1. Create the agent using Microsoft 365 Agents Toolkit
-1. Run your agent in Teams
+1. Debug and run your agent in Teams
 
-### Set up your environment
+## Set up your environment
 
 1. Install the latest versions of Visual Studio Code, Node.js, and the Microsoft 365 Agents Toolkit.
 1. Create an Azure OpenAI service on the [Azure portal](https://ms.portal.azure.com/#home) and get your API key.
 
-### Create an agent using Microsoft 365 Agents Toolkit
+## Create an agent using Microsoft 365 Agents Toolkit
 
-1. Open **Visual Studio Code**.
+1. Open Visual Studio Code.
 1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="~/assets/icons/m-365-agents-toolkit-icon.png" border="false"::: icon in the Visual Studio Code **Activity Bar**.
 1. Select **Create a New Agent/App**.
 
@@ -60,6 +58,49 @@ To build your agent:
 
 1. Enter the OpenAI key that you got from Azure portal.
 
-    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/add-key.png" alt-text="Screenshot shows the location of the field to enter the OpenAI key." lightbox="../assets/images/agents-in-teams/first-agent-qsg/add-key.png:::
+    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/add-key.png" alt-text="Screenshot shows the location of the field to enter the OpenAI key to be used for your agent." lightbox="../assets/images/agents-in-teams/first-agent-qsg/add-key.png":::
 
-1.
+1.Select the **Programming Language** for your developing your agent.
+
+    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/select-language.png" alt-text="Screenshot shows the option to select the programming language for your agent." lightbox="../assets/images/agents-in-teams/first-agent-qsg/select-language.png":::
+
+1. Select the **Default folder** as the **Workspace Folder** for your agent project.
+
+    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/select-workspace.png" alt-text="Screenshot shows the field to select the workspace forlder for your agent project." lightbox="../assets/images/agents-in-teams/first-agent-qsg/select-workspace.png":::
+
+1. Enter the agent name and then select **Enter**.
+
+    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/add-agent-name.png" alt-text="Screenshot shows the field to add the agent name." lightbox="../assets/images/agents-in-teams/first-agent-qsg/add-agent-name.png":::
+
+    The toolkit displays a message that the agent has been successfully created. If the toolkit displays a message to confirm if you trust the author, select **Yes, I trust the authors**.
+
+### Take a tour of the bot app source code
+
+Microsoft 365 Agents Toolkit creates your agent project and scaffolds the project workspace. Here's a look at the folder structure:
+
+| Folder | Contents |
+| --- | --- |
+| `.vscode` | Visual Studio Code files for debugging. |
+| `appPackage` | Templates for the Teams app manifest. |
+| `env` | Environment files. |
+| `infra` | Templates for provisioning Azure resources. |
+| `src` | The source code for the app. |
+
+## Run and use your agent in Teams
+
+1. Open your agent project in Visual Studio Code.
+1. Select **Run** > **Start Debugging**, or alternatively, select the **F5** key.
+
+  If all prerequisites are installed, Visual Studio Code uploads and opens your app in Microsoft Teams.
+
+    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/run-agent-in-teams.png" alt-text="Screenshot shows the agent opened in Microsoft Teams." lightbox="../assets/images/agents-in-teams/first-agent-qsg/run-agent-in-teams.png":::
+
+1. To use your agent, select one of the prompts shown by the agent.
+
+    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/select-agent-prompt.png" alt-text="Screenshot shows how to select a prompt from the agent." lightbox="../assets/images/agents-in-teams/first-agent-qsg/select-agent-prompt.png":::
+
+    When you select the prompt, it shows up in the comment box, and you can select the **Send** icon. The agent responds to the prompt.
+
+    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/agent-response.png" alt-text="Screenshot shows the agent response to the user prompt." lightbox="../assets/images/agents-in-teams/first-agent-qsg/agent-response.png":::
+
+Congratulations! You've created and run your first agent in Teams.
