@@ -74,6 +74,8 @@ To build your agent:
 
     The toolkit displays a message that the agent has been successfully created. If the toolkit displays a message to confirm if you trust the author, select **Yes, I trust the authors**.
 
+    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/trust-author.png" alt-text="Screenshows the message for confirming if you trust the authors of the agent.":::
+
 ### Take a tour of the bot app source code
 
 Microsoft 365 Agents Toolkit creates your agent project and scaffolds the project workspace. Here's a look at the folder structure:
