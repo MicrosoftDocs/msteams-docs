@@ -41,9 +41,25 @@ To build your agent:
 ### Create an agent using Microsoft 365 Agents Toolkit
 
 1. Open **Visual Studio Code**.
-1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="~/assets/icons/m365-agents-toolkit-icon.png" border="false"::: icon in the Visual Studio Code **Activity Bar**.
+1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="~/assets/icons/m-365-agents-toolkit-icon.png" border="false"::: icon in the Visual Studio Code **Activity Bar**.
 1. Select **Create a New Agent/App**.
 
-    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/create-new-agent.png" alt-text="Screenshot shows the location of the option to create a new agent using Microsoft 365 Agents Toolkit sidebar.":::
+    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/create-new-agent.png" alt-text="Screenshot shows the location of the option to create a new agent using Microsoft 365 Agents Toolkit sidebar." lightbox="../assets/images/agents-in-teams/first-agent-qsg/create-new-agent.png":::
 
 1. From the **New Project** menu, select **Teams and Agents and Apps**.
+
+    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/teams-agents.png" alt-text="Screenshot shows the location of the option to create a new agent or app in Teams." lightbox="../assets/images/agents-in-teams/first-agent-qsg/teams-agents.png":::
+
+1. Select **General Teams Agent** to create an agent.
+
+    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/general-teams-agent.png" alt-text="Screenshot shows the location of the option to create a new agent in Teams." lightbox="../assets/images/agents-in-teams/first-agent-qsg/general-teams-agent.png":::
+
+1. Select **OpenAI** as the LLM for your agent.
+
+    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/select-llm.png" alt-text="Screenshot shows the location of the option to select an appropriate LLM for your agent." lightbox="../assets/images/agents-in-teams/first-agent-qsg/select-llm.png":::
+
+1. Enter the OpenAI key that you got from Azure portal.
+
+    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/add-key.png" alt-text="Screenshot shows the location of the field to enter the OpenAI key." lightbox="../assets/images/agents-in-teams/first-agent-qsg/add-key.png:::
+
+1.
