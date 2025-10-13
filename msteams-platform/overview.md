@@ -62,11 +62,17 @@ Agents in Teams are intelligent assistants that can understand, reason, and act 
 - **Future-ready**: [Add details]
 - **Built secure**: [Add details]
 
+For more information, see [Agents in Teams](agents-in-teams/overview.md).
+
 ### Example scenario
 
 [Add scenario for Teams agents: Summarizes updates and creates tasks; helpdesk, etc.]
 
-## Build apps with Microsoft Teams platform
+## Apps in Teams
+
+Teams apps extend collaboration with custom interfacses and integrated workflows. Developers can add one or more capabilities such as tabs, bots, message extension, or meeting apps to deliver tailored solutions.
+
+### Build apps with Microsoft Teams platform
 
 Teams apps empower collaborative workspaces to increase productivity by bringing key information, common tools, and trusted processes directly to users. You can extend the capabilities of the Teams platform to fulfill specific requirements by creating a brand new app or integrating an existing app. This process meets both organizational goals and productivity needs.
 
