@@ -106,3 +106,12 @@ Microsoft 365 Agents Toolkit creates your agent project and scaffolds the projec
     :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/agent-response.png" alt-text="Screenshot shows the agent response to the user prompt." lightbox="../assets/images/agents-in-teams/first-agent-qsg/agent-response.png":::
 
 Congratulations! You've created and run your first agent in Teams.
+
+## Code sample
+
+[Add link to scenario code sample]
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Build your first agent](build-first-agent.md)

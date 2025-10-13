@@ -6,14 +6,14 @@
   - name: Why build on Teams platform
     href: overview.md
     displayName: why build apps with Microsoft Teams platform
-  - name: From ideas to Teams app
-    href: overview-story.md
-    displayName: Teams app user experience, user scenario
-  - name: Explore Teams platform features
-    href: overview-explore.md
-  - name: The Teams solution
-    href: overview-solution.md
-    displayName: develop Teams app, app development, tools used
+#  - name: From ideas to Teams app
+#    href: overview-story.md
+#    displayName: Teams app user experience, user scenario
+#  - name: Explore Teams platform features
+#    href: overview-explore.md
+#  - name: The Teams solution
+#    href: overview-solution.md
+#    displayName: develop Teams app, app development, tools used
 - name: What's new?
   href: whats-new.md
   displayName: Teams platform features, latest updates, RSS feed, deprecated, announcement, preview
@@ -25,6 +25,11 @@
 #  displayName: AI bot, Teams AI library, custom agent
 - name: Build agents using Teams AI library
   items:
+  - name: Overview
+    href: agents-in-teams/overview.md
+  - name: Build your first agent
+    href: agents-in-teams/build-first-agent.md
+    displayName: create, run, first agent, Teams AI library, custom engine agent, AI bot, JavaScript, Python, C#, code sample
   - name: Build an agent using CLI
     href: /microsoftteams/platform/teams-ai-library/welcome?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     displayName: agent, custom engine agent, AI bot, JavaScript, Python, C#, code sample, Teams AI library
