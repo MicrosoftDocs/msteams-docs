@@ -60,7 +60,7 @@ To build your agent:
 
     :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/add-key.png" alt-text="Screenshot shows the location of the field to enter the OpenAI key to be used for your agent." lightbox="../assets/images/agents-in-teams/first-agent-qsg/add-key.png":::
 
-1.Select the **Programming Language** for your developing your agent.
+1. Select the **Programming Language** for your developing your agent.
 
     :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/select-language.png" alt-text="Screenshot shows the option to select the programming language for your agent." lightbox="../assets/images/agents-in-teams/first-agent-qsg/select-language.png":::
 
