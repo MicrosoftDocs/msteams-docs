@@ -16,6 +16,14 @@ Microsoft Teams offers a collection of apps provided by Microsoft or external se
 Apps present themselves as personal or shared. A personal app enables one-on-one communication, while a shared app lets multiple users collaborate in a common space.
 -->
 
+## Teams - a future-ready platform for intelligent collaboration
+
+Teams is evolving from a communication hub into a collaborative and intelligent platform where people, data, and AI come together.
+
+Developers can now build agents in Teams using Teams AI library and enables natural, conversational, and context-aware experiences powered by large language models (LLMs).
+
+At the same time, developers can continue to create Teams apps - tabs, bots, message extensions, and meeting apps - that extend Teams capabilities for task-specific workflows, data, visualization, and integration with enterprise systems.
+
 ## Driving organizational goals
 
 Collaboration and communication serve as key pillars for any organization. Concise communication, integration with necessary services, and on-the-go accessibility demonstrate why organizations choose to rely on apps.
@@ -34,9 +42,12 @@ Consider example areas where an app meets a business requirement:
 
 You can build apps with the Teams platform by extending app capabilities to fit specific needs. You can create something brand new for Teams or integrate an existing app.
 
+<!--
+
 Take a look at these example developer personas and app scenarios:
 
 :::image type="content" border="false" source="assets/images/overview/dev-persona.png" alt-text="Screenshot shows you the developer persona and user stories." lightbox="assets/images/overview/dev-persona.png" :::
+-->
 
 You can meet all scenarios using Teams apps, thereby enhancing collaboration across Microsoft 365.
 
