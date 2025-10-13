@@ -38,4 +38,12 @@ To build your agent:
 1. Install the latest versions of Visual Studio Code, Node.js, and the Microsoft 365 Agents Toolkit.
 1. Create an Azure OpenAI service on the [Azure portal](https://ms.portal.azure.com/#home) and get your API key.
 
-### Create the agent using Microsoft 365 Agents Toolkit
+### Create an agent using Microsoft 365 Agents Toolkit
+
+1. Open **Visual Studio Code**.
+1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="~/assets/icons/m365-agents-toolkit-icon.png" border="false"::: icon in the Visual Studio Code **Activity Bar**.
+1. Select **Create a New Agent/App**.
+
+    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/create-new-agent.png" alt-text=""Screenshot shows the location of the option to create a new agent in the Microsoft 365 Agents Toolkit sidebar.":::
+
+1. From the **New Project** menu, select **Teams and Agents and Apps**.
