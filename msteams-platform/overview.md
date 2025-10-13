@@ -51,11 +51,20 @@ Take a look at these example developer personas and app scenarios:
 You can meet all scenarios using Teams apps, thereby enhancing collaboration across Microsoft 365.
 -->
 
-## Agents in Teams
+## Build agents or apps - choose what fits your scenario
+
+The Teams platform offers two powerful paths for developers:
+
+| When to build | Use this approach | Ideal for ... |
+| --- | --- | --- |
+| Agents in Teams | Use the Teams AI library to build intelligent, conversational agents that understand natural language and act within context. | Personalized assistance, task automation, intelligent workflows, summarization, insights |
+| Apps in Teams | Use the Microsoft 365 Agents SDK and Microsoft 365 Agents toolkit to build or add capabilities like tabs, bots, message extensions, or meeting experiences | Productivity tools, dashboards, content sharing, structured workflows, enterprise integrations |
+
+### Agents in Teams
 
 Agents in Teams are intelligent assistants that can understand, reason, and act within the Teams environment. Using Teams AI library, developers can create agents that engage naturally with users, automate business processes, and integrate securely with Microsoft 365 data and services.
 
-### Key benefits
+#### Key benefits
 
 - **Conversational and contextual**: [Add details]
 - **Seamless integration**: [Add details]
@@ -64,14 +73,15 @@ Agents in Teams are intelligent assistants that can understand, reason, and act 
 
 For more information, see [Agents in Teams](agents-in-teams/overview.md).
 
-### Example scenario
+#### Example scenario
 
 [Add scenario for Teams agents: Summarizes updates and creates tasks; helpdesk, etc.]
 
-## Apps in Teams
+### Apps in Teams
 
 Teams apps extend collaboration with custom interfacses and integrated workflows. Developers can add one or more capabilities such as tabs, bots, message extension, or meeting apps to deliver tailored solutions.
 
+<!--
 ### Build apps with Microsoft Teams platform
 
 Teams apps empower collaborative workspaces to increase productivity by bringing key information, common tools, and trusted processes directly to users. You can extend the capabilities of the Teams platform to fulfill specific requirements by creating a brand new app or integrating an existing app. This process meets both organizational goals and productivity needs.
@@ -120,3 +130,4 @@ Here's why Teams is best suited for your app needs:
 
 > [!div class="nextstepaction"]
 > [From ideas to Teams app](overview-story.md)
+-->
