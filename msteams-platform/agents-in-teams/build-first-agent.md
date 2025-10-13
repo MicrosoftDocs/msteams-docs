@@ -9,3 +9,20 @@ ms.topic: reference
 # Build your first agent
 
 Agents use AI to automate and execute business processes, working alongside or on behalf of a person, team, or organization. Agents range from simple prompt-and-response agents to more advanced, fully autonomous agents.
+
+A Teams agent is an AI-powered chatbot integrated into Microsoft Teams that uses large language models (LLMs) to understand user intent, perform tasks, and enhance collaboration. These agents can be embedded in chats, meetings, or channels and can respond to queries, generate reports, manage tasks, and more.
+
+## Tools you'll need
+
+To build a Teams agent, you’ll need the following:
+
+| Install | For using... |
+| --- | --- |
+| [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or Python build environments. Use the latest version. |
+| [Teams AI Library](/microsoftteams/platform/teams-ai-library/teams/overview) | A simplified SDK for building intelligent agents. Now GA for JavaScript and C#, and in public preview for Python. |
+| [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
+| [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
+| [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and calls all in one place.|
+| [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's Generative Pretrained Transformer (GPT). If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
+
+## Build an agent using Microsoft 365 Agents Toolkit
