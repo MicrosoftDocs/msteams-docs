@@ -1,11 +1,8 @@
 - name: Microsoft Teams Platform documentation
   href: mstdd-landing.yml
 - name: Overview
-  expanded: false 
-  items:
-  - name: Why build on Teams platform
-    href: overview.md
-    displayName: why build apps with Microsoft Teams platform
+  href: overview.md
+  displayName: why build apps with Microsoft Teams platform
 #  - name: From ideas to Teams app
 #    href: overview-story.md
 #    displayName: Teams app user experience, user scenario
