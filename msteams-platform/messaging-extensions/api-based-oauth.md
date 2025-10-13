@@ -41,7 +41,7 @@ For more information about OAuth 2.0, see [Microsoft identity platform and OAuth
 
 When a user tries to use a message action on a new Teams app with OAuth, Teams makes an invoke request to check if there's a valid access token using the app ID. If a valid token is available, Teams sends this bearer token with the HTTP request to resource API.
 
-If there is no valid token available, Teams Client starts the sign-in process and shows the OAuth card in a pop-up. The user signs into the third-party service and approves the requested access. The third-party server sends an authorization code to the callback URL on the Teams Graph Service (TGS), which then exchanges the code for a token.
+If there's no valid token available, Teams Client starts the sign-in process and shows the OAuth card in a pop-up. The user signs into the third-party service and approves the requested access. The third-party server sends an authorization code to the callback URL on the Teams Graph Service (TGS), which then exchanges the code for a token.
 
 To enable OAuth for your API based message extension:
 
@@ -70,11 +70,11 @@ To register OAuth for your API based message extensions, follow these steps:
 
 1. Select **Register Client**.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-oauth-register.png" alt-text="Screenshot shows the registerclient  option to register oauth configuration id in Developer Portal for Teams.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-oauth-register.png" alt-text="Screenshot shows the register client option to register oauth configuration ID in Developer Portal for Teams.":::
 
 1. In the **OAuth client registration** page under **App settings**, update the following:
 
-    :::image type="content" source="../assets/images/Copilot/api-based-me-oauth-app-settings.png" alt-text="Screenshot shows the app seetings for Oauth configutraion in developer portal for Teams.":::
+    :::image type="content" source="../assets/images/Copilot/api-based-me-oauth-app-settings.png" alt-text="Screenshot shows the app settings for Oauth configutraion in developer portal for Teams.":::
 
    1. <b>Registration name</b>: This is a unique name to describe your OAuth client registration.
    1. <b>Base URL</b>: Teams transmits the secret to URL endpoints that begin with the value in this field.
@@ -86,7 +86,7 @@ To register OAuth for your API based message extensions, follow these steps:
           | Option | When to use | Description |
           | --- | --- | --- |
           | **My organization only** | When you develop your app in your tenant and test the app as a custom app or custom app built for your org. | The API key is only usable within the tenant where the API is registered. |
-          | **Any Microsoft 365 organization** | After you've completed testing the app and want to enable the app across different tenants. <br> Ensure that you update your target tenant to **Any Microsoft 365 organization** before submitting your app package to the Partner Center. <br><br> :::image type="icon" source="../assets/images/Copilot/api-based-me-api-key-tenant.png" alt-text="Screenshot shows the Home tenant and Any tenant options under set a target tenant heading in Developer Portal for Teams."::: | The API key can be used in other tenants after the app is available in the Teams Store. |
+          | **Any Microsoft 365 organization** | After you test the app and want to enable the app across different tenants. <br> Ensure that you update your target tenant to **Any Microsoft 365 organization** before submitting your app package to the Partner Center. <br><br> :::image type="icon" source="../assets/images/Copilot/api-based-me-api-key-tenant.png" alt-text="Screenshot shows the Home tenant and Any tenant options under set a target tenant heading in Developer Portal for Teams."::: | The API key can be used in other tenants after the app is available in the Teams Store. |
 
    1. Under **Restrict usage by app**, select any of the following:
 
@@ -96,7 +96,7 @@ To register OAuth for your API based message extensions, follow these steps:
           | Option | When to use | Description |
           | --- | --- |--- |
           | **Any Teams app** | When you develop your app in your tenant and test the app as a custom app or custom app built for your organization. | The API key can be used with any Teams app. It's useful when custom app or custom app built for your organization have IDs generated after app upload. |
-          |**Existing Teams app ID** | After you've completed testing your app within your tenant as a custom app or custom app built for your organization. <br> Update your API key registration and select **Existing Teams app** and input your app’s manifest ID. | The **Existing Teams app** option binds the API secret registration to your specific Teams app. |
+          |**Existing Teams app ID** | After you test your app within your tenant as a custom app or custom app built for your organization. <br> Update your API key registration and select **Existing Teams app** and input your app’s manifest ID. | The **Existing Teams app** option binds the API secret registration to your specific Teams app. |
 
 1. Under **OAuth settings**, update the following:
 
@@ -118,7 +118,7 @@ To register OAuth for your API based message extensions, follow these steps:
 
    An **OAuth client registration ID** is generated.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-oauth-registration-id.png" alt-text="Screenshot shows the OAuth client registration ID generated in Developer POrtal for Teams.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-oauth-registration-id.png" alt-text="Screenshot shows the OAuth client registration ID generated in Developer Portal for Teams.":::
 
 ### Add OAuth client registration ID in API based message extension
 
@@ -144,42 +144,42 @@ You've successfully configured OAuth for your API based messsage extension in De
 
 ### Update app manifest
 
-Update your app manifest schema to include the new authentication type: `oAuth` and the `oAuthConfigurationId` you received from the Developer Portal.
+Update your app manifest schema to include the new authentication type: `apiSecretServiceAuth` and the `apiSecretRegistrationId` you received from the Developer Portal.
 
 The following code snippet is an example of app manifest update for configuring OAuth for your API based message extension:
 
 ```json
-{
-    "composeExtensions": [
-        {
-            "composeExtensionType": "apiBased",
-            "authorization":
-            {
-                "authType": "oAuth2.0",
-                "oAuthConfiguration": {
-                    "oAuthConfigurationId": "sCVBX2udSXEtxo97behM1ReO8pJc4MdA"
-                }
-            },
-            "apiSpecificationFile": "apiSpecFiles/repairs-openapi.json",
-            "commands": [
-                {
-                    "id": "listRepairs",
-                    "type": "query",
-                    "context": ["compose", "commandBox"],
-                    "title": "List all repairs",
-                    "description": "Returns a list of repairs with their details and images",
-                    "parameters": [
-                        {
-                            "name": "assignedTo",
-                            "title": "Assigned To",
-                            "description": "Filter repairs by who they're assigned to"
-                        }
-                    ],
-                    "apiResponseRenderingTemplateFile": "adaptiveCards/repairs.json"
-                }
-            ]
-        }
-    ]
+ {
+    "composeExtensions": [
+        {
+            "composeExtensionType": "apiBased",
+            "authorization":
+            {
+                "authType": "apiSecretServiceAuth",
+                "apiSecretServiceAuthConfiguration": {
+                    "apiSecretRegistrationId": "sCVBX2udSXEtxo97behM1ReO8pJc4MdA"
+                }
+            },
+            "apiSpecificationFile": "apiSpecFiles/repairs-openapi.json",
+            "commands": [
+                {
+                    "id": "listRepairs",
+                    "type": "query",
+                    "context": ["compose", "commandBox"],
+                    "title": "List all repairs",
+                    "description": "Returns a list of repairs with their details and images",
+                    "parameters": [
+                        {
+                            "name": "assignedTo",
+                            "title": "Assigned To",
+                            "description": "Filter repairs by who they're assigned to"
+                        }
+                    ],
+                    "apiResponseRenderingTemplateFile": "adaptiveCards/repairs.json"
+                }
+            ]
+        }
+    ]
 }
 ```
 
