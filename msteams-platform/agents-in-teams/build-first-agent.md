@@ -93,7 +93,7 @@ Microsoft 365 Agents Toolkit creates your agent project and scaffolds the projec
 1. Open your agent project in Visual Studio Code.
 1. Select **Run** > **Start Debugging**, or alternatively, select the **F5** key.
 
-  If all prerequisites are installed, Visual Studio Code uploads and opens your app in Microsoft Teams.
+    If all prerequisites are installed, Visual Studio Code uploads and opens your app in Microsoft Teams.
 
     :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/run-agent-in-teams.png" alt-text="Screenshot shows the agent opened in Microsoft Teams." lightbox="../assets/images/agents-in-teams/first-agent-qsg/run-agent-in-teams.png":::
 
