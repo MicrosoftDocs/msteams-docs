@@ -13,7 +13,7 @@ ms.date: 09/16/2024
 
 > [!IMPORTANT]
 >
-> Message extensions are no longer supported as agents.
+> Message extensions are no longer supported as agents in Microsoft 365 Copilot.
 
 Message extensions built using Bot Framework (Bot-based) use a web service as a bot. You can use message extensions to enable users to interact with your web service from different locations in the Teams client, such as the compose message area, the command box, or directly from a message and send back structured data, such as cards.
 
