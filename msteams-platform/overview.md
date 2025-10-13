@@ -47,9 +47,24 @@ You can build apps with the Teams platform by extending app capabilities to fit 
 Take a look at these example developer personas and app scenarios:
 
 :::image type="content" border="false" source="assets/images/overview/dev-persona.png" alt-text="Screenshot shows you the developer persona and user stories." lightbox="assets/images/overview/dev-persona.png" :::
--->
 
 You can meet all scenarios using Teams apps, thereby enhancing collaboration across Microsoft 365.
+-->
+
+## Agents in Teams
+
+Agents in Teams are intelligent assistants that can understand, reason, and act within the Teams environment. Using Teams AI library, developers can create agents that engage naturally with users, automate business processes, and integrate securely with Microsoft 365 data and services.
+
+### Key benefits
+
+- **Conversational and contextual**: [Add details]
+- **Seamless integration**: [Add details]
+- **Future-ready**: [Add details]
+- **Built secure**: [Add details]
+
+### Example scenario
+
+[Add scenario for Teams agents: Summarizes updates and creates tasks; helpdesk, etc.]
 
 ## Build apps with Microsoft Teams platform
 
