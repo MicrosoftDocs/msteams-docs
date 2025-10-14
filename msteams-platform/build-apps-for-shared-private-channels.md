@@ -656,7 +656,7 @@ This failure happens when the tenant’s sharing policy blocks the link type, or
 
 * [Manage channel membership](#manage-channel-membership)
 * [Understand app permissions in shared channels](#understand-app-permissions-in-shared-channels)
-* [Build tabs for Teams](../../tabs/what-are-tabs.md)
+* [Build tabs for Teams](tabs/what-are-tabs.md)
 * [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
 * [Shared channels in Microsoft Teams](/microsoftteams/shared-channels)
 * [Channel resource type](/graph/api/resources/channel)
