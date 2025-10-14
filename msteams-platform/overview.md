@@ -28,7 +28,7 @@ Take a look at these example developer personas and app scenarios:
 
 You can meet all scenarios using Teams apps, thereby enhancing collaboration across Microsoft 365.
 -->
-### Build with Teams
+### Agents and apps
 
 Agents are the backbone of modern organizations, enabling seamless collaboration, communication, and workflow automation. By integrating agents into workspaces, organizations connect with customers, deliver services, and share information efficiently. Key roles of an agent include:
 
@@ -42,7 +42,7 @@ Agents can be deployed across desktop, web, and mobile platforms, and integrated
 - Surface key information and tools
 - Automate business processes
 
-## Agents and apps
+## Build with Teams
 
 The Teams platform offers two powerful paths for developers:
 
@@ -51,6 +51,7 @@ The Teams platform offers two powerful paths for developers:
 | Agents in Teams | Use the Teams AI library to build intelligent, conversational agents that understand natural language and act within context. | Personalized assistance, task automation, intelligent workflows, summarization, insights |
 | Apps in Teams | Use the Microsoft 365 Agents SDK and Microsoft 365 Agents toolkit to build or add capabilities like tabs, bots, message extensions, or meeting experiences | Productivity tools, dashboards, content sharing, structured workflows, enterprise integrations |
 
+<!--
 ### Agents in Teams
 
 Agents in Teams are intelligent assistants that can understand, reason, and act within the Teams environment. Using Teams AI library, developers can create agents that engage naturally with users, automate business processes, and integrate securely with Microsoft 365 data and services.
@@ -73,7 +74,7 @@ For more information, see [Agents in Teams](agents-in-teams/overview.md).
 Teams apps extend collaboration with custom interfacses and integrated workflows. Developers can add one or more capabilities such as tabs, bots, message extension, or meeting apps to deliver tailored solutions.
 
 ### Choose your path and get started
-
+-->
 [Add links to build topics for building agents and apps, and extending agents and apps.]
 
 <!--
