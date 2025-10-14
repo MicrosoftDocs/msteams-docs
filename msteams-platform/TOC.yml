@@ -278,10 +278,10 @@
           href: resources/messaging-extension-v3/create-extensions.md
 - name: Manifest for agents or apps
   items:
-    - name: Manifest schema for agents or apps
+    - name: Manifest schema
       href: resources/schema/manifest-schema.md
       displayName: version, validDomain, valid domain, validdomain, properties, meetingExtensionDefinition
-    - name: Developer preview manifest for agents or apps
+    - name: Developer preview manifest schema
       href: resources/dev-preview/developer-preview-intro.md
       displayName: developer preview, preview, public preview
 - name: Add authentication
