@@ -18,7 +18,7 @@ Your agents built for Teams can also be extended beyond Teams environment into o
 
 Agents in Teams are intelligent, conversational apps designed to assist users, automate workflows, and provide contextual insights within the Teams environment. These agents can interact through natural language, connect to business data, and perform actions on behalf of the users.
 
-:::image type="content" source="../assets/images/agents-in-teams/agent-overview/agents-in-teams.png" alt-text="Image shows what are agents in Teams." lightbox="../assets/images/agents-in-teams/agent-overview/Teams-agent.png":::
+:::image type="content" source="../assets/images/agents-in-teams/agent-overview/agents-in-teams.png" alt-text="Image shows what are agents in Teams." lightbox="../assets/images/agents-in-teams/agent-overview/agents-in-teams.png":::
 
 Built using Teams AI library, agents leverage the power of large language models (LLMs) and Microsoft's ecosystem to deliver customized and secure AI experiences within Teams.
 
