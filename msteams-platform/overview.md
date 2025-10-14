@@ -16,7 +16,7 @@ Microsoft Teams offers a collection of apps provided by Microsoft or external se
 Apps present themselves as personal or shared. A personal app enables one-on-one communication, while a shared app lets multiple users collaborate in a common space.
 -->
 
-## Teams - a future-ready platform
+## What is the Teams platform?
 
 Teams is evolving from a communication hub into a collaborative and intelligent platform where people, data, and AI come together. Developers can build agents in Teams using Teams AI library and enables natural, conversational, and context-aware experiences powered by large language models (LLMs). At the same time, developers can continue to create Teams apps - tabs, bots, message extensions, and meeting apps - that extend Teams capabilities for task-specific workflows, data, visualization, and integration with enterprise systems.
 
@@ -28,7 +28,7 @@ Take a look at these example developer personas and app scenarios:
 
 You can meet all scenarios using Teams apps, thereby enhancing collaboration across Microsoft 365.
 -->
-### Agents and apps
+### What does Teams platform offer?
 
 Agents are the backbone of modern organizations, enabling seamless collaboration, communication, and workflow automation. By integrating agents into workspaces, organizations connect with customers, deliver services, and share information efficiently. Key roles of an agent include:
 
@@ -55,7 +55,7 @@ Teams acts as a social platform, where custom apps help extend company culture. 
 <br>
 Teams plaform empowers developers to build agents and apps to achieve goals, boost productivity, and foster collaboration. You can automate tasks, facilitate communication, and integrate seamlessly across Microsoft 365 platforms.
 
-## Build with Teams
+## How to
 
 The Teams platform offers two powerful paths for developers:
 
