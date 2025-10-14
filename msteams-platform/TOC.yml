@@ -279,14 +279,14 @@
 - name: Manifest for agents or apps
   items:
     - name: Manifest schema for agents or apps
-      href: resources/schema/manifest-schema.md
+      href: /microsoft-365/extensibility/schema/?view=m365-app-1.23
       displayName: version, validDomain, valid domain, validdomain, properties, meetingExtensionDefinition
     - name: Public developer preview
       items:
         - name: Overview
           href: resources/dev-preview/developer-preview-intro.md          
         - name: Public developer preview agents or apps manifest
-          href: /microsoft-365/extensibility/schema/?view=m365-app-prev&preserve-view=true
+          href: /microsoft-365/extensibility/schema/?view=m365-app-prev
           displayName: properties
 - name: Add authentication
   items:
