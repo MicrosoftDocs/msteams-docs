@@ -85,7 +85,6 @@ You can build apps with the Teams platform by extending app capabilities to fit 
 
 [Add links to build topics for building agents and apps, and extending agents and apps.]
 
-<!--
 ### Build apps with Microsoft Teams platform
 
 Teams apps empower collaborative workspaces to increase productivity by bringing key information, common tools, and trusted processes directly to users. You can extend the capabilities of the Teams platform to fulfill specific requirements by creating a brand new app or integrating an existing app. This process meets both organizational goals and productivity needs.
@@ -134,4 +133,3 @@ Here's why Teams is best suited for your app needs:
 
 > [!div class="nextstepaction"]
 > [From ideas to Teams app](overview-story.md)
--->
