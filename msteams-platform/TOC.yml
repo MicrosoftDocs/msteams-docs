@@ -404,7 +404,7 @@
   - name: Get started
     expanded: false
     items:
-    - name: Build your Teams app
+    - name: Apps in Teams
       href: get-started/get-started-overview.md
       displayName: build Teams app, new Teams app, GitHub Codespaces, tutorials
     - name: Build a tab app
@@ -1021,7 +1021,7 @@
   - name: Integrate location capabilities
     href: concepts/device-capabilities/location-capability.md
     displayName: attendance
-- name: Extend your app across Microsoft 365
+- name: Extend agents or app across Microsoft 365
   items:
   - name: Overview
     href: m365-apps/overview.md

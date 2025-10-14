@@ -6,7 +6,7 @@ ms.date: 02/06/2025
 ms.topic: reference
 ---
 
-# Build your Teams app
+# Apps in Teams
 
 Get started with building apps for Microsoft Teams and beyond!
 
