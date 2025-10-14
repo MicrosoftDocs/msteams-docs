@@ -20,9 +20,6 @@
 - name: Glossary
   href: get-started/glossary.md
   displayName: App tray, terminologies, definitions, welcome, new word, meaning
-#- name: Agents in Teams
-#  href: /microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-#  displayName: AI bot, Teams AI library, custom agent
 - name: Build agents using Teams AI library
   items:
   - name: Build an agent using CLI
@@ -279,17 +276,17 @@
           displayName: loop
         - name: Action extensions
           href: resources/messaging-extension-v3/create-extensions.md
-- name: App manifest
+- name: Manifest for agents or apps
   items:
-    - name: App manifest
+    - name: Manifest schema for agents or apps
       href: resources/schema/manifest-schema.md
       displayName: version, validDomain, valid domain, validdomain, properties, meetingExtensionDefinition
     - name: Public developer preview
       items:
         - name: Overview
           href: resources/dev-preview/developer-preview-intro.md          
-        - name: Public developer preview app manifest
-          href: resources/schema/manifest-schema-dev-preview.md
+        - name: Public developer preview agents or apps manifest
+          href: /microsoft-365/extensibility/schema/?view=m365-app-prev&preserve-view=true
           displayName: properties
 - name: Add authentication
   items:
