@@ -121,7 +121,6 @@ GET /teams/{team-id}/channels/{channel-id}/allMembers
 
 * **Direct members:** Users who are added directly to the channel, including users from other tenants (cross-tenants).
 * **Indirect members:** Users who are members of the team, with which the channel is shared, including teams in the same tenant or in a cross-tenant.
-* **External members:** Guest users, who aren't part of your organization but are granted access to a shared channel through guest access or cross-tenant collaboration.
 
 You can identify whether a member of a shared or private channel is direct or indirect by checking the `@microsoft.graph.originalSourceMembershipUrl` annotation. This property identifies the source of a member’s access the channels:
 
@@ -166,13 +165,13 @@ You can manage indirect membership in channels using the following Microsoft Gra
 
 [Back to Top](#apps-for-shared-and-private-channels)
 
-## Get app notifications for membership changes
+## Get app notifications for graph membership changes
 
-Apps installed in shared channels receive notifications when users are added to or removed from a team that shares the channel.
+Apps installed in shared and private channels receive notifications when users are added to or removed from a team that shares the channel.
 
 To receive app notifications, you must:
 
-1. Install the app in a host team and enable it for the shared channel. For more information on installing the app, see [Install the app](concepts/deploy-and-publish/apps-upload.md).
+1. Install the app in a host team and enable it for the shared or private channel. For more information on installing the app, see [Install the app](concepts/deploy-and-publish/apps-upload.md).
 2. Create a valid Microsoft Graph change notification subscription to monitor associated team membership changes and shared or unshared events using supported APIs.
 
 To receive both direct and indirect member update notifications, you must include both the query string parameters when creating a subscription. If the query strings aren't provided, the subscription only delivers notifications for direct member updates. For more information, see [Channel membership access](/graph/teams-changenotifications-channelmembership.md).
@@ -181,7 +180,9 @@ To receive both direct and indirect member update notifications, you must includ
 /teams/{team-id}/channels/getAllMembers?notifyOnIndirectMembershipUpdate=true&suppressNotificationWhenSharedUnsharedWithTeam=true
 ```
 
-This subscription enables apps to monitor membership changes in shared channels and its associated teams. For more information on how to create a Microsoft Graph change notification subscription, see [Create a subscription.](/graph/teams-changenotifications-teammembership)
+This subscription enables apps to monitor membership changes in channels and its associated teams. For more information on how to create a Microsoft Graph change notification subscription, see [Create a subscription.](/graph/teams-changenotifications-teammembership)
+
+## Get app notifications for bot membership changes
 
 The `conversationUpdate` event is sent to your bot when it receives notifications on membership updates for teams where it is added. To receive both direct and indirect member update notifications, configure your bot with the following prerequisites:
 
