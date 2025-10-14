@@ -20,14 +20,12 @@ Apps present themselves as personal or shared. A personal app enables one-on-one
 
 Teams is evolving from a communication hub into a collaborative and intelligent platform where people, data, and AI come together. Developers can build agents in Teams using Teams AI library and enables natural, conversational, and context-aware experiences powered by large language models (LLMs). At the same time, developers can continue to create Teams apps - tabs, bots, message extensions, and meeting apps - that extend Teams capabilities for task-specific workflows, data, visualization, and integration with enterprise systems.
 
-<!--
-
 Take a look at these example developer personas and app scenarios:
 
 :::image type="content" border="false" source="assets/images/overview/dev-persona.png" alt-text="Screenshot shows you the developer persona and user stories." lightbox="assets/images/overview/dev-persona.png" :::
 
 You can meet all scenarios using Teams apps, thereby enhancing collaboration across Microsoft 365.
--->
+
 ### What does Teams platform offer?
 
 Agents are the backbone of modern organizations, enabling seamless collaboration, communication, and workflow automation. By integrating agents into workspaces, organizations connect with customers, deliver services, and share information efficiently. Key roles of an agent include:
