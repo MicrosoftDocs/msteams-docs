@@ -19,7 +19,7 @@
   displayName: App tray, terminologies, definitions, welcome, new word, meaning
 - name: Build agents using Teams AI library
   items:
-  - name: Overview
+  - name: Agents in Teams
     href: agents-in-teams/overview.md
   - name: Build your first agent
     href: agents-in-teams/build-first-agent.md

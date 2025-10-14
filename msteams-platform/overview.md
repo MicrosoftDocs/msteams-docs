@@ -132,4 +132,4 @@ Here's why Teams is best suited for your app needs:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [From ideas to Teams app](overview-story.md)
+> [Agents in Teams](agents-in-teams/overview.md)
