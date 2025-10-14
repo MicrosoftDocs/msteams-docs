@@ -32,6 +32,9 @@ Take a look at these example developer personas and app scenarios:
 
 You can meet all scenarios using Teams apps, thereby enhancing collaboration across Microsoft 365.
 -->
+### Driving Organizational Goals with Agents
+
+Agents are the backbone of modern organizations, enabling seamless collaboration, communication, and workflow automation. By integrating agents into workspaces, organizations connect with customers, deliver services, and share information efficiently.
 
 ## Build agents or apps - choose what fits your scenario
 
@@ -63,6 +66,11 @@ For more information, see [Agents in Teams](agents-in-teams/overview.md).
 
 Teams apps extend collaboration with custom interfacses and integrated workflows. Developers can add one or more capabilities such as tabs, bots, message extension, or meeting apps to deliver tailored solutions.
 
+### Choose your path and get started
+
+[Add links to build topics for building agents and apps, and extending agents and apps.]
+
+<!--
 ## Driving organizational goals
 
 Collaboration and communication serve as key pillars for any organization. Concise communication, integration with necessary services, and on-the-go accessibility demonstrate why organizations choose to rely on apps.
@@ -81,11 +89,7 @@ Consider example areas where an app meets a business requirement:
 
 You can build apps with the Teams platform by extending app capabilities to fit specific needs. You can create something brand new for Teams or integrate an existing app.
 
-## Choose your path and get started
-
-[Add links to build topics for building agents and apps, and extending agents and apps.]
-
-### Build apps with Microsoft Teams platform
+### Build agent with Microsoft Teams platform
 
 Teams apps empower collaborative workspaces to increase productivity by bringing key information, common tools, and trusted processes directly to users. You can extend the capabilities of the Teams platform to fulfill specific requirements by creating a brand new app or integrating an existing app. This process meets both organizational goals and productivity needs.
 
@@ -128,12 +132,9 @@ Here's why Teams is best suited for your app needs:
    Extend Teams apps across Microsoft 365, which streamlines delivering cross-platform apps to a wider audience. A single codebase supports tailored app experiences for Teams, Outlook, and Microsoft 365 app environments. End users access apps without leaving their work context, while administrators manage and deploy workflows efficiently.
 
    Use the latest app manifest and Teams JavaScript client library versions to enable personal tabs and message extension apps to run in other Microsoft 365 experiences in addition to Teams. You can reach users on platforms such as Outlook and Microsoft 365 app with the same codebase, broadening app reach and streamlining development and distribution processes.
+-->
 
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Agents in Teams](agents-in-teams/overview.md)
-> [!div class="nextstepaction"]
-> [Apps in Teams](get-started/get-started-overview.md)
-> [!div class="nextstepaction"]
-> [Extend agents and apps across Microsoft 365](m365-apps/overview.md)
