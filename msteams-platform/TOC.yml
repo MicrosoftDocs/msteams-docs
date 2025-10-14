@@ -286,7 +286,7 @@
         - name: Overview
           href: resources/dev-preview/developer-preview-intro.md          
         - name: Public developer preview agents or apps manifest
-          href: /microsoft-365/extensibility/schema/?view=m365-app-prev
+          href: resources/schema/manifest-schema-dev-preview.md
           displayName: properties
 - name: Add authentication
   items:
