@@ -1490,7 +1490,7 @@
       },
       {
         "source_path": "msteams-platform/resources/schema/manifest-schema-dev-preview.md",
-        "redirect_url": "/microsoft-365/extensibility/schema/?view=m365-app-prev&preserve-view=true?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json&preserve-view=true"
+        "redirect_url": "/microsoft-365/extensibility/schema/?view=m365-app-prev?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json&preserve-view=true"
       }
     ]
 }
