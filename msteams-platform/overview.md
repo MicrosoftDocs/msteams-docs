@@ -16,13 +16,9 @@ Microsoft Teams offers a collection of apps provided by Microsoft or external se
 Apps present themselves as personal or shared. A personal app enables one-on-one communication, while a shared app lets multiple users collaborate in a common space.
 -->
 
-## Teams - a future-ready platform for intelligent collaboration
+## Teams - a future-ready platform
 
-Teams is evolving from a communication hub into a collaborative and intelligent platform where people, data, and AI come together.
-
-Developers can now build agents in Teams using Teams AI library and enables natural, conversational, and context-aware experiences powered by large language models (LLMs).
-
-At the same time, developers can continue to create Teams apps - tabs, bots, message extensions, and meeting apps - that extend Teams capabilities for task-specific workflows, data, visualization, and integration with enterprise systems.
+Teams is evolving from a communication hub into a collaborative and intelligent platform where people, data, and AI come together. Developers can build agents in Teams using Teams AI library and enables natural, conversational, and context-aware experiences powered by large language models (LLMs). At the same time, developers can continue to create Teams apps - tabs, bots, message extensions, and meeting apps - that extend Teams capabilities for task-specific workflows, data, visualization, and integration with enterprise systems.
 
 <!--
 
@@ -32,9 +28,15 @@ Take a look at these example developer personas and app scenarios:
 
 You can meet all scenarios using Teams apps, thereby enhancing collaboration across Microsoft 365.
 -->
-### Driving Organizational Goals with Agents
+### Build with Teams
 
 Agents are the backbone of modern organizations, enabling seamless collaboration, communication, and workflow automation. By integrating agents into workspaces, organizations connect with customers, deliver services, and share information efficiently.
+
+**Key roles of agents:**
+
+- **Collaboration and communication**: Agents facilitate concise, targeted interactions, integrating with essential services and providing on-the-go accessibility.
+- **Business enablement**: Agents automate repetitive tasks, streamline internal workflows, and simplify processes such as Q&A, helpdesk, and approvals.
+- **Customer engagement**: Agents ensure secure data handling, ease of communication, and personalized experiences.
 
 ## Build agents or apps - choose what fits your scenario
 
