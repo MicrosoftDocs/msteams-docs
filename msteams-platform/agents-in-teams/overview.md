@@ -42,7 +42,7 @@ Built using Teams AI library, agents leverage the power of large language models
 
 [Add introduction]
 
-Code companion: Get instant coding assistance with the code companion - an agent for helping developers on-the-go. This agent provides:
+**Code companion**: Get instant coding assistance with the code companion, an agent for helping developers on-the-go. This agent provides:
 
 - Code and tool suggestions: Get hep with code snippets, debugging, relevant code samples, and tools available for building your agents and apps.
 - Error resolution:Identifying and suggesting fixes with code analysis.
@@ -55,7 +55,7 @@ Code companion is your on-the-go agent available 24/7 to help you overcome codin
 
 Some other user scenarios can include:
 
-- Knowledge assistant
+- Knowledge hub
 - Helpdesk and customer support
 - Task automation
 
