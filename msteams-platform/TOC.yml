@@ -278,16 +278,12 @@
           href: resources/messaging-extension-v3/create-extensions.md
 - name: Manifest for agents or apps
   items:
-    - name: Manifest schema for agents or apps
+    - name: Manifest schema
       href: resources/schema/manifest-schema.md
       displayName: version, validDomain, valid domain, validdomain, properties, meetingExtensionDefinition
-    - name: Public developer preview
-      items:
-        - name: Overview
-          href: resources/dev-preview/developer-preview-intro.md          
-        - name: Public developer preview agents or apps manifest
-          href: resources/schema/manifest-schema-dev-preview.md
-          displayName: properties
+    - name: Developer preview manifest schema
+      href: resources/dev-preview/developer-preview-intro.md
+      displayName: developer preview, preview, public preview
 - name: Add authentication
   items:
   - name: User authentication in Teams
