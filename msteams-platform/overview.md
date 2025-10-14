@@ -42,6 +42,14 @@ Agents can be deployed across desktop, web, and mobile platforms, and integrated
 - Surface key information and tools
 - Automate business processes
 
+### Extend and scale agents
+
+Agents can integrate existing web apps, SharePoint sites, PowerApps, and other solutions into Teams, expanding reach and engagement. Publishing agents to the Teams Store increases visibility and adoption.
+
+You can build unified experience for agents. Build agents once and deploy them everywhere—across Teams, Outlook, and Microsoft 365—using a single codebase. This approach streamlines development, management, and user access, ensuring consistent experiences and efficient administration.
+
+### Social interactions and personal apps
+
 ## Build with Teams
 
 The Teams platform offers two powerful paths for developers:
