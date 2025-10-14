@@ -52,13 +52,21 @@ To build your agent:
 
     :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/general-teams-agent.png" alt-text="Screenshot shows the location of the option to create a new agent in Teams." lightbox="../assets/images/agents-in-teams/first-agent-qsg/general-teams-agent.png":::
 
-1. Select **OpenAI** as the LLM for your agent.
+1. Select OpenAI key as the LLM for your agent.
 
     :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/select-llm.png" alt-text="Screenshot shows the location of the option to select an appropriate LLM for your agent." lightbox="../assets/images/agents-in-teams/first-agent-qsg/select-llm.png":::
 
-1. Enter the OpenAI key that you got from Azure portal.
+    Select one of the following options to define the OpenAI key:
 
-    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/add-key.png" alt-text="Screenshot shows the location of the field to enter the OpenAI key to be used for your agent." lightbox="../assets/images/agents-in-teams/first-agent-qsg/add-key.png":::
+    - Select **Azure OpenAI** if you've got the OpenAI key from Azure. Following this, you must:
+
+        1. Enter Azure OpenAI key in **Azure OpenAI service key**.
+        1. Enter the endpoint in **Azure OpenAI service endpoint**.
+        1. Enter the deployment name in **Azure OpenAI deployement name**.
+
+    - Select **OpenAI Key**.
+
+        - Enter the OpenAI key.
 
 1. Select the **Programming Language** for your developing your agent.
 
