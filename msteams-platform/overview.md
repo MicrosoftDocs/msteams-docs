@@ -24,7 +24,7 @@ Take a look at these example developer personas and app scenarios:
 
 :::image type="content" border="false" source="assets/images/overview/dev-persona.png" alt-text="Screenshot shows you the developer persona and user stories." lightbox="assets/images/overview/dev-persona.png" :::
 
-You can meet all scenarios using Teams apps, thereby enhancing collaboration across Microsoft 365.
+You can meet all scenarios using Teams agents and apps and enhance collaboration across Microsoft 365.
 
 ## Why build on Teams platform?
 
