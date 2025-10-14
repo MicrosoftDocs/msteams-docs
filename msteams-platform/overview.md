@@ -16,7 +16,7 @@ Microsoft Teams offers a collection of apps provided by Microsoft or external se
 Apps present themselves as personal or shared. A personal app enables one-on-one communication, while a shared app lets multiple users collaborate in a common space.
 -->
 
-## What is the Teams platform?
+## What is Teams platform?
 
 Teams is evolving from a communication hub into a collaborative and intelligent platform where people, data, and AI come together. Developers can build agents in Teams using Teams AI library and enables natural, conversational, and context-aware experiences powered by large language models (LLMs). At the same time, developers can continue to create Teams apps - tabs, bots, message extensions, and meeting apps - that extend Teams capabilities for task-specific workflows, data, visualization, and integration with enterprise systems.
 
@@ -26,7 +26,9 @@ Take a look at these example developer personas and app scenarios:
 
 You can meet all scenarios using Teams apps, thereby enhancing collaboration across Microsoft 365.
 
-### What does Teams platform offer?
+## Why build on Teams platform?
+
+Teams plaform empowers developers to build agents and apps to achieve goals, boost productivity, and foster collaboration. You can automate tasks, facilitate communication, and integrate seamlessly across Microsoft 365 platforms.
 
 Agents are the backbone of modern organizations, enabling seamless collaboration, communication, and workflow automation. By integrating agents into workspaces, organizations connect with customers, deliver services, and share information efficiently. Key roles of an agent include:
 
@@ -50,10 +52,7 @@ You can build unified experience for agents. Build agents once and deploy them e
 
 Teams acts as a social platform, where custom apps help extend company culture. Personal apps use conversational bots for direct user interaction, and task modules (dialogs) make complex data easy to manage.
 
-<br>
-Teams plaform empowers developers to build agents and apps to achieve goals, boost productivity, and foster collaboration. You can automate tasks, facilitate communication, and integrate seamlessly across Microsoft 365 platforms.
-
-## How to
+## What to build on Teams platform?
 
 The Teams platform offers two powerful paths for developers:
 
@@ -156,3 +155,5 @@ Here's why Teams is best suited for your app needs:
 
 > [!div class="nextstepaction"]
 > [Agents in Teams](agents-in-teams/overview.md)
+> [!div class="nextstepaction"]
+> [Build your first agent](agents-in-teams/build-first-agent.md)
