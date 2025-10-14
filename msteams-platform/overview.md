@@ -50,6 +50,8 @@ You can build unified experience for agents. Build agents once and deploy them e
 
 ### Social interactions and personal apps
 
+Teams acts as a social platform, where custom apps help extend company culture. Personal apps use conversational bots for direct user interaction, and task modules (dialogs) make complex data easy to manage.
+
 ## Build with Teams
 
 The Teams platform offers two powerful paths for developers:
