@@ -134,6 +134,6 @@ Here's why Teams is best suited for your app needs:
 > [!div class="nextstepaction"]
 > [Agents in Teams](agents-in-teams/overview.md)
 > [!div class="nextstepaction"]
-> [Build your Teams app](get-started/get-started-overview.md)
+> [Apps in Teams](get-started/get-started-overview.md)
 > [!div class="nextstepaction"]
 > [Extend agents and apps across Microsoft 365](m365-apps/overview.md)
