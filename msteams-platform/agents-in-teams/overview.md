@@ -9,6 +9,7 @@ ms.topic: reference
 # Agents in Teams
 
 [Add Introduction]
+
 Microsoft Teams platform enables developers to build and integrate collaborative experiences into Teams. Whith the introduction of Teams AI library, developers can now create agents - intelligent apps that can understand context, respond conversationally, and perform tasks across Teams.
 
 Your agents built for Teams can also be extended beyond Teams environment into other Microsoft 365 hubs, such as Outlook, using Microsoft 365 Agents SDK.
@@ -16,6 +17,8 @@ Your agents built for Teams can also be extended beyond Teams environment into o
 ## What are agents in Teams?
 
 Agents in Teams are intelligent, conversational apps designed to assist users, automate workflows, and provide contextual insights within the Teams environment. These agents can interact through natural language, connect to business data, and perform actions on behalf of the users.
+
+:::image type="content" source="../assets/images/agents-in-teams/agent-overview/Teams-agent.png" alt-text="Image shows what are agents in Teams." lightbox="../assets/images/agents-in-teams/agent-overview/Teams-agent.png":::
 
 Built using Teams AI library, agents leverage the power of large language models (LLMs) and Microsoft's ecosystem to deliver customized and secure AI experiences within Teams.
 
@@ -36,6 +39,10 @@ Built using Teams AI library, agents leverage the power of large language models
 - **Extensibility across Microsoft 365**: Agents can evolve beyond Teams into other Microsoft 365 experiences using Microsoft 365 Agents SDK.
 
 ### Common use scenarios
+
+[Add introduction]
+
+:::image type="content" source="../assets/images/agents-in-teams/agent-overview/agent-scenario.png" alt-text="Image shows agent user scenario." lightbox="../assets/images/agents-in-teams/agent-overview/agent-scenario.png":::
 
 - Knowledge assistant
 - Helpdesk and customer support
