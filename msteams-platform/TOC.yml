@@ -281,7 +281,7 @@
     - name: Manifest schema for agents or apps
       href: resources/schema/manifest-schema.md
       displayName: version, validDomain, valid domain, validdomain, properties, meetingExtensionDefinition
-    - name: Public developer preview manifest for agents or apps
+    - name: Developer preview manifest for agents or apps
       href: resources/dev-preview/developer-preview-intro.md
       displayName: developer preview, preview, public preview
 - name: Add authentication
