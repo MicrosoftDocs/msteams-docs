@@ -30,15 +30,19 @@ You can meet all scenarios using Teams apps, thereby enhancing collaboration acr
 -->
 ### Build with Teams
 
-Agents are the backbone of modern organizations, enabling seamless collaboration, communication, and workflow automation. By integrating agents into workspaces, organizations connect with customers, deliver services, and share information efficiently.
-
-**Key roles of agents:**
+Agents are the backbone of modern organizations, enabling seamless collaboration, communication, and workflow automation. By integrating agents into workspaces, organizations connect with customers, deliver services, and share information efficiently. Key roles of an agent include:
 
 - **Collaboration and communication**: Agents facilitate concise, targeted interactions, integrating with essential services and providing on-the-go accessibility.
 - **Business enablement**: Agents automate repetitive tasks, streamline internal workflows, and simplify processes such as Q&A, helpdesk, and approvals.
 - **Customer engagement**: Agents ensure secure data handling, ease of communication, and personalized experiences.
 
-## Build agents or apps - choose what fits your scenario
+Agents can be deployed across desktop, web, and mobile platforms, and integrated into Microsoft Teams to:
+
+- Increase user engagement
+- Surface key information and tools
+- Automate business processes
+
+## Agents and apps
 
 The Teams platform offers two powerful paths for developers:
 
