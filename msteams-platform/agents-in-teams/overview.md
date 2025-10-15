@@ -42,14 +42,20 @@ Built using Teams AI library, agents leverage the power of large language models
 
 [Add introduction]
 
-**Knowledge hub**: Get instant and personalized guidance and support with the knowledge hub agent. This comprehensive tool provides:
+**Knowledge hub**: Get instant and personalized guidance and support with the knowledge hub agent. This agent is designed to empower students in their academic and career journeys. The agent offers personalized support for course selection, study strategies, career development planning, and academic roadmap creation. By responding to targeted prompts, it helps students make informed decisions about their education and future career paths.
 
-- Course guidance
-- Study support
-- Career development:
-- Academic planning
+This comprehensive tool provides:
+
+- **Personalized course recommendations**: Suggests courses to build AI skills and other in-demand competencies.
+- **Career-aligned academic planning**: Guides students in choosing courses that match their career goals.
+- **Sample course plans**: Generates tailored course plans based on individual aspirations.
+- **Institutional insights**: Provides information about top educational institutions in IT and related fields.
+- **Course shortlisting and next steps**: Shortlists top courses aligned with career objectives and outlines actionable next steps for each.
+- **Expert-endorsed recommendations**: Recommends leading courses from recognized experts in IT and AI.
 
 :::image type="content" source="../assets/images/agents-in-teams/agent-overview/agent-scenario-academic.png" alt-text="Image shows agent user scenario." lightbox="../assets/images/agents-in-teams/agent-overview/agent-scenario.png" border="none":::
+
+For more information, see [Add link to code sample].
 
 Some other user scenarios can include:
 
@@ -62,7 +68,6 @@ Some other user scenarios can include:
 
 Code companion is your on-the-go agent available 24/7 to help you overcome coding challenges and boost productivity.
 
-- Knowledge hub
 - Helpdesk and customer support
 - Task automation
 
