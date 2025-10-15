@@ -1,7 +1,7 @@
 ---
 title: Teams connect shared and private channels
 author: surbhigupta
-description: Learn about apps for shared and privated channels to securely collaborate with internal and external users in a shared space.
+description: Learn about apps for shared and private channels to securely collaborate with internal and external users in a shared space.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: conceptual
@@ -65,7 +65,7 @@ Ensure that you understand that how different channels determine app functionali
 
 * **Don't assume a single SharePoint site tied to a team**
 
-    Unlike standard channels, which share SharPoint site with the team, Private and shared channels have their own SharePoint sites. Always use the correct URL for each channel, to avoid missing files or unauthorized access errors.
+    Unlike standard channels, which share SharePoint site with the team, Private and shared channels have their own SharePoint sites. Always use the correct URL for each channel, to avoid missing files or unauthorized access errors.
 
 * **Keep data scoped to channels**
 
@@ -89,16 +89,16 @@ If your app doesn’t:
 * Combine or share data across multiple channels or teams
 * Customize experience, based on users (internal, guests, or external members)
 
-then, you only need to:
+Then, you only need to:
 
-1. Add `supportsChannelFeatures`: `tier1` to your app manifest.
-2. Verify expected behavior, and test your app across channels.
+1. Add `supportsChannelFeatures`: `tier1` to your app manifest
+2. Verify expected behavior, and test your app across channels
 
-There is no dependence on classical and admin access for `supportsChannelFeatures`: `tier1`.
+There's no dependence on classical and admin access for `supportsChannelFeatures`: `tier1`.
 
 ### Apps with dependence on specified parameters
 
-If your app handles advanced scenarios, or depends on the specified prameters listed in the [Apps with no dependence on specified parameters](#apps-with-no-dependence-on-specified-parameters) section, then read through this guide for targeted updates and the best practices. Don't re-write your code.
+If your app handles advanced scenarios, or depends on the specified parameters listed in the [Apps with no dependence on specified parameters](#apps-with-no-dependence-on-specified-parameters) section, then read through this guide for targeted updates and the best practices. Don't rewrite your code.
 
 > [!NOTE]
 >
@@ -184,7 +184,7 @@ This subscription enables apps to monitor membership changes in channels and its
 
 ## Get app notifications for bot membership changes
 
-The `conversationUpdate` event is sent to your bot when it receives notifications on membership updates for teams where it is added. To receive both direct and indirect member update notifications, configure your bot with the following prerequisites:
+The `conversationUpdate` event is sent to your bot when it receives notifications on membership updates for teams where it's added. To receive both direct and indirect member update notifications, configure your bot with the following prerequisites:
 
 1. Update the app manifest. Add `supportsChannelFeatures`: `tier1` to declare app readiness.
 
@@ -431,7 +431,7 @@ You can identify if a member of a channel is a guest user, invited to your tenan
 
 For guests, 'roles' = 'guest'
 
-To accurately, retrieve the all guest users in a channel use the following `allMembers` API:
+To accurately retrieve the all guest users in a channel, use the following `allMembers` API:
 
 ```HTTP
 GET /teams/{team-id}/channels/{channel-id}/allMembers
@@ -443,7 +443,7 @@ This API works across standard and other channels and is recommended for reliabl
 
 If you're building an app using [SharePoint](/sharepoint/dev/spfx/integrate-with-teams-introduction) Framework, you need to use the SharePoint Online (SPO) site linked to the shared channel, not the one linked to the host team group. Both shared and private channels have their own SPO site that is only accessible to members of that specific shared or private channel.
 
-Use the Graph API to access the document library of the SPO site linked to a shared or private channel. Ensure you pass the Team ID and Channel ID received from the [Get Host Team Group ID & Channel ID](#get-host-team-group-id-channel-id) and pass in [Get filesFolder](/graph/api/channel-get-filesfolder).
+Use the Microsoft Graph invite API to access the document library of the SPO site linked to a shared or private channel.
 
 [Back to Top](#apps-for-shared-and-private-channels)
 
@@ -486,7 +486,7 @@ External users remain in their tenant while accessing the host channel’s share
 
 The channel’s SharePoint site automatically grants access to all channel members, including tenants.
 
-Esnure the following:
+Ensure that you:
 
 * Avoid using organization-wide sharing links they typically exclude external users.
 * Use specific-people sharing, or rely on membership-based permissions.
@@ -563,8 +563,8 @@ Perform the following steps to validate:
    * Guest user or external user
 4. If your app lists members or assigns tasks, confirm it only uses channel members and not the complete team.
 5. Add a new member to the private channel and check:
-   * Whether your app receives a membership change event.
-   * Whether your membership API reflects the new member.
+   * Whether your app receives a membership change event
+   * Whether your membership API reflects the new member
 
 Testings across these scenarios help you spot any issues with functionality, permissions, and user experience.
   
@@ -596,7 +596,7 @@ The app might not appear if the manifest is missing required support, such as `s
 <details>
 <summary>Why am I getting a 403 error stating 'app not enabled in this channel' when calling channel APIs?</summary>
 
-This error occurs if the app is installed at the team level but hasn’t been added to the channel. To resolve this issue, confirm that the app is added to the channel. If your app uses resource-specific consent (RSC), verify that the permissions declared in the manifest match the API calls being made, for example, `ChannelMember.Read.Group` for reading channel membership. After adding the app, retry the operation. For bots, initiate channel-specific logic when the bot receives the `channelMemberAdded` event to verify successfully addition to the channel.
+This error occurs if the app is installed at the team level but isn't added to the channel. To resolve this issue, confirm that the app is added to the channel. If your app uses resource-specific consent (RSC), verify that the permissions declared in the manifest match the API calls being made, for example, `ChannelMember.Read.Group` for reading channel membership. After adding the app, retry the operation. For bots, initiate channel-specific logic when the bot receives the `channelMemberAdded` event to verify successfully addition to the channel.
 <br>
 &nbsp;
 </details>
@@ -624,7 +624,7 @@ Authentication issues often occur when the app requests a token for the host ten
 <details>
 <summary>How do I know my app was added to a channel?</summary>
 
-This issue might occur if the app is expects a centralized list of installed apps at the channel level or relies on team-level installation behavior. Currently, there's no channel-level installedApps list available. Instead, bots must listen for the `channelMemberAdded` event within the channel to detect when they're added. When the app gets a 403 error and misses the event, it asks the user to add the bot to the channel and manages the error.
+This issue might occur if the app expects a centralized list of installed apps at the channel level or relies on team-level installation behavior. Currently, there's no channel-level installedApps list available. Instead, bots must listen for the `channelMemberAdded` event within the channel to detect when they're added. When the app gets a 403 error and misses the event, it asks the user to add the bot to the channel and manages the error.
 <br>
 &nbsp;
 </details>
@@ -638,7 +638,7 @@ Message change notifications might fail in shared or private channels because su
 <details>
 <summary>Why do file links still fail for external users even after the app is added to the channel?</summary>
 
-This failure happens when the tenant’s sharing policy blocks the link type, or when the user doesn’t have access to the item, even if they’re a member of the channel. Another common cause is that the app might generate links pointing to the team drive instead of the channel’s dedicated drive. To resolve this issue, reissue the links using the 'people with existing access' option or use the invite API to grant access to specific users. Also, ensure the links reference the channel drive, which can be identified using the filesFolder property, rather than the team site.
+The message change notification failure happens when the tenant’s sharing policy blocks the link type, or when the user doesn’t have access to the item, even if they’re a member of the channel. Another common cause is that the app might generate links pointing to the team drive instead of the channel’s dedicated drive. To resolve this issue, reissue the links using the 'people with existing access' option or use the invite API to grant access to specific users. Also, ensure the links reference the channel drive, which can be identified using the filesFolder property, rather than the team site.
 <br>
 &nbsp;
 </details>
