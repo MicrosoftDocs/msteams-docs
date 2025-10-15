@@ -66,7 +66,7 @@ Some other user scenarios can include:
   - Best practices: Learn more about industry-standard coding practices.
   - Knowledgebase: Access a vast repository of domain and product knowledge from Learn documentation and tutorials.
 
-Code companion is your on-the-go agent available 24/7 to help you overcome coding challenges and boost productivity.
+    Code companion is your on-the-go agent available 24/7 to help you overcome coding challenges and boost productivity.
 
 - Helpdesk and customer support
 - Task automation
