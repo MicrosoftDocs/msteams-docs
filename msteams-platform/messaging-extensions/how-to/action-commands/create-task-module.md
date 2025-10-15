@@ -10,7 +10,7 @@ ms.date: 03/11/2025
 ---
 # Create and send dialogs
 
-[!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
+<!--[!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]-->
 
 You can create a modal dialog (referred as task module in TeamsJS v1.x) using an Adaptive Card or an embedded web view. To create a dialog, you must perform the process called the initial invoke request. This document covers
 the initial invoke request, payload activity properties when a dialog is invoked from 1:1 chat, group chat, channel (new post), channel (reply to thread), and command box.
@@ -669,7 +669,7 @@ The following code section is an example to `fetchTask` response with an Adaptiv
 
 # [C#/.NET](#tab/dotnet)
 
-This sample uses the [AdaptiveCards NuGet package](https://www.nuget.org/packages/AdaptiveCards) in addition to the Bot Framework SDK.
+This sample uses the [AdaptiveCards NuGet package](https://www.nuget.org/packages/AdaptiveCards) in addition to the Teams AI library.
 
 ```csharp
 protected override async Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)

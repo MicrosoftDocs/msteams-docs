@@ -11,7 +11,9 @@ ms.date: 11/14/2024
 
 # Conversation events in your Teams bot
 
+<!--
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
+-->
 
 When building your conversational bots for Microsoft Teams, you can work with conversation events. Teams sends notifications to your bot for conversation events that happen in scopes where your bot is active. You can capture these events in your code and take the following actions:
 
@@ -35,7 +37,7 @@ You can use conversation update events to provide better notifications and effec
 >
 > * You can add new events any time and your bot begins to receive them.
 > * You must design your bot to receive unexpected events.
-> * If you are using the Bot Framework SDK, your bot automatically responds with a `200 - OK` to any events you choose not to handle.
+> * If you are using the Teams AI library, your bot automatically responds with a `200 - OK` to any events you choose not to handle.
 > * When an Azure Communication Services (ACS) client joins or leaves the Teams meeting, no conversation update events are triggered.
 
 A bot receives a `conversationUpdate` event in either of the following cases:
@@ -1623,10 +1625,10 @@ When you uninstall an app, the bot is also uninstalled. When a user sends a mess
 
 When you use the install and uninstall events, there are some instances where bots give exceptions on receiving unexpected events from Teams, which occurs in the following cases:
 
-* You build your bot without the Microsoft Bot Framework SDK, and as a result the bot gives an exception on receiving an unexpected event.
-* You build your bot with the Microsoft Bot Framework SDK, and you select to alter the default event behavior by overriding the base event handle.
+* You build your bot without the Microsoft Teams AI library, and as a result the bot gives an exception on receiving an unexpected event.
+* You build your bot with the Microsoft Teams AI library, and you select to alter the default event behavior by overriding the base event handle.
 
-It's important to know that new events can be added anytime in the future and your bot begins to receive them. So you must design for the possibility of receiving unexpected events. If you're using the Bot Framework SDK, your bot automatically responds with a 200 – OK to any events you don't choose to handle.
+It's important to know that new events can be added anytime in the future and your bot begins to receive them. So you must design for the possibility of receiving unexpected events. If you're using the Teams AI library, your bot automatically responds with a 200 – OK to any events you don't choose to handle.
 
 ## Handling errors in conversation events
 
@@ -1650,8 +1652,8 @@ In the development phase, it's always helpful to send meaningful messages in con
 ## See also
 
 * [Build bots for Teams](../../what-are-bots.md)
-* [API reference for the Bot Framework Connector service](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)
+<!--* [API reference for the Bot Framework Connector service](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)-->
 * [Channel and group chat conversations with a bot](channel-and-group-conversations.md)
 * [Receive all channel messages for bot and agents](channel-messages-for-bots-and-agents.md)
 * [Create Teams conversation bot](channel-and-group-conversations.md)
-* [Triggers in Bot Framework Composer](/composer/concept-events-and-triggers)
+<!--* [Triggers in Bot Framework Composer](/composer/concept-events-and-triggers)-->
