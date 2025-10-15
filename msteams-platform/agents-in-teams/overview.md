@@ -20,7 +20,7 @@ Agents in Teams are intelligent, conversational apps designed to assist users, a
 
 :::image type="content" source="../assets/images/agents-in-teams/agent-overview/agents-in-teams.png" alt-text="Image shows what are agents in Teams." lightbox="../assets/images/agents-in-teams/agent-overview/agents-in-teams.png":::
 
-Built using Teams AI library, agents leverage the power of large language models (LLMs) and Microsoft's ecosystem to deliver customized and secure AI experiences within Teams.
+Built using Teams AI library, agents leverage the power of large language models (LLMs) and Microsoft's ecosystem to deliver customized and secure AI experiences within Teams. A Teams agent integrates into Microsoft Teams and uses large language models (LLMs) to understand user intent, perform tasks, and enhance collaboration. These agents can be embedded in chats, meetings, or channels and can respond to queries, generate reports, manage tasks, and more.
 
 ## Why build agents for Teams?
 
@@ -55,7 +55,7 @@ This comprehensive tool provides:
 
 :::image type="content" source="../assets/images/agents-in-teams/agent-overview/agent-scenario-academic.png" alt-text="Image shows agent user scenario." lightbox="../assets/images/agents-in-teams/agent-overview/agent-scenario.png" border="none":::
 
-For more information, see [Add link to code sample].
+For more information, see [Add link to code sample to Contoso Knowledge Hub].
 
 Some other user scenarios can include:
 

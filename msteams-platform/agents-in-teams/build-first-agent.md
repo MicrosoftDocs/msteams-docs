@@ -10,8 +10,6 @@ ms.topic: reference
 
 Agents use AI to automate and execute business processes, working alongside or on behalf of a person, team, or organization. Agents range from simple prompt-and-response agents to more advanced, fully autonomous agents.
 
-A Teams agent is an AI-powered chatbot integrated into Microsoft Teams that uses large language models (LLMs) to understand user intent, perform tasks, and enhance collaboration. These agents can be embedded in chats, meetings, or channels and can respond to queries, generate reports, manage tasks, and more.
-
 ## Tools you'll need
 
 To build a Teams agent, you’ll need the following:
