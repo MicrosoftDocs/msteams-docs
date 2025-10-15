@@ -59,15 +59,13 @@ For more information, see [Add link to code sample].
 
 Some other user scenarios can include:
 
-- **Code companion**: Get instant coding assistance with the code companion, an agent for helping developers on-the-go. This agent provides:
+- **Code companion**: Get instant coding assistance with the code companion, an agent for helping developers on-the-go. Code companion is your on-the-go agent available 24/7 to help you overcome coding challenges and boost productivity.
+ This agent provides:
 
   - Code and tool suggestions: Get hep with code snippets, debugging, relevant code samples, and tools available for building your agents and apps.
   - Error resolution:Identifying and suggesting fixes with code analysis.
   - Best practices: Learn more about industry-standard coding practices.
   - Knowledgebase: Access a vast repository of domain and product knowledge from Learn documentation and tutorials.
-
-  Code companion is your on-the-go agent available 24/7 to help you overcome coding challenges and boost productivity.
-
 - Helpdesk and customer support
 - Task automation
 
