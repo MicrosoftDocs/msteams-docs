@@ -51,7 +51,7 @@ Built using Teams AI library, agents leverage the power of large language models
 
 Code companion is your on-the-go agent available 24/7 to help you overcome coding challenges and boost productivity.
 
-:::image type="content" source="../assets/images/agents-in-teams/agent-overview/agent-scenario.png" alt-text="Image shows agent user scenario." lightbox="../assets/images/agents-in-teams/agent-overview/agent-scenario.png":::
+:::image type="content" source="../assets/images/agents-in-teams/agent-overview/agent-scenario-academic.png" alt-text="Image shows agent user scenario." lightbox="../assets/images/agents-in-teams/agent-overview/agent-scenario.png":::
 
 Some other user scenarios can include:
 
