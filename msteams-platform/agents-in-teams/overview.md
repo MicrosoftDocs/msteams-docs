@@ -26,6 +26,10 @@ Built using Teams AI library, agents leverage the power of large language models
 
 [Add introduction]
 
+Microsoft Teams provides a powerful platform for teams to connect, communicate, and work together. By building agents on Teams, you can build user and developer experience.
+
+Building agents on Microsoft Teams helps to build enhanced collaboration, increased productivity, and customization. Agents can automate workflows, provide real-time updates, and facilitate informed decision-making. By leveraging Teams' capabilities, organizations can streamline processes, increase team efficiency, and improve customer engagement. With agents, Teams can focus on high-priority work to enable better outcomes and success.
+
 ### Agent user experience
 
 - **In-context intelligence**: Users can interact directly with agents within their Teams usage during conversations and meetings.
