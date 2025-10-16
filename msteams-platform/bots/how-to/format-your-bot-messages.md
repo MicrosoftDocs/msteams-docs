@@ -17,8 +17,8 @@ Message formatting enables you to bring out the best in bot messages. You can fo
 >
 > - 100 KB is an approximate limit because it includes the message itself (text, image links, etc.), @-mentions, and reactions encoded as UTF-16.
 > - 100KB size limitation does not include base64 encoded image.
-> During implementation, the recommend limit for message itself must be within 80KB to guarantee message successful delivery.
-> If the bot message size limit exceeds the limit, bot receives a `413` status code (`RequestEntityTooLarge`), which contains the error code `MessageSizeTooBig`. The bot message size limit includes the entire message payload encoded as UTF-16 and doesn't include Base64 encoded images.
+> - During implementation, the recommend limit for message itself must be within 80KB to guarantee message successful delivery.
+> - If the bot message size limit exceeds the limit, bot receives a `413` status code (`RequestEntityTooLarge`), which contains the error code `MessageSizeTooBig`. The bot message size limit includes the entire message payload encoded as UTF-16 and doesn't include Base64 encoded images.
 
 ## Format text content
 
