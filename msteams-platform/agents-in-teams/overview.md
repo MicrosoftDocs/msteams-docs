@@ -64,9 +64,9 @@ Some other user scenarios can include:
 
 ## How to choose?
 
-[Add introduction]
+Developers and organizations can choose from multiple approaches depending on the app requirements:
 
-- **Low-code or no-code**: Use Microsoft Copilot Studio
+- **Low-code or no-code**: Use Microsoft Copilot Studio to design conversational experiences with minimal code.
 - **Pro-code**: Use Teams AI library to build fully customized agents, integrated with agents to handle comples or domain-specific needs.
 
 ## Tools and SDKs for building agents
