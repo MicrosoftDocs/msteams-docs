@@ -10,13 +10,11 @@ ms.topic: reference
 
 [Add Introduction]
 
-Microsoft Teams platform enables developers to build and integrate collaborative experiences into Teams. Whith the introduction of Teams AI library, developers can now create agents - intelligent apps that can understand context, respond conversationally, and perform tasks across Teams.
-
-Your agents built for Teams can also be extended beyond Teams environment into other Microsoft 365 hubs, such as Outlook, using Microsoft 365 Agents SDK.
+Microsoft Teams platform enables developers to build and integrate collaborative experiences into Teams. Whith the introduction of Teams AI library, developers can now create agents - intelligent apps that can understand context, respond conversationally, and perform tasks across Teams. Your agents built for Teams can also be extended beyond Teams environment into other Microsoft 365 hubs, such as Outlook, using Microsoft 365 Agents SDK.
 
 ## What are agents in Teams?
 
-Agents in Teams are intelligent, conversational apps designed to assist users, automate workflows, and provide contextual insights within the Teams environment. These agents can interact through natural language, connect to business data, and perform actions on behalf of the users.
+Agents in Teams can interact through natural language, connect to business data, and perform actions on behalf of the users.
 
 :::image type="content" source="../assets/images/agents-in-teams/agent-overview/agents-in-teams.png" alt-text="Image shows what are agents in Teams." lightbox="../assets/images/agents-in-teams/agent-overview/agents-in-teams.png":::
 
@@ -26,9 +24,7 @@ Built using Teams AI library, agents leverage the power of large language models
 
 [Add introduction]
 
-Microsoft Teams provides a powerful platform for teams to connect, communicate, and work together. By building agents on Teams, you can build user and developer experience.
-
-Building agents on Microsoft Teams helps to build enhanced collaboration, increased productivity, and customization. Agents can automate workflows, provide real-time updates, and facilitate informed decision-making. By leveraging Teams' capabilities, organizations can streamline processes, increase team efficiency, and improve customer engagement. With agents, Teams can focus on high-priority work to enable better outcomes and success.
+Microsoft Teams provides a powerful platform for teams to connect, communicate, and work together. Building agents on Microsoft Teams helps to build enhanced collaboration, increased productivity, and customization. Agents can automate workflows, provide real-time updates, and facilitate informed decision-making. By leveraging Teams' capabilities, organizations can streamline processes, increase team efficiency, and improve customer engagement. With agents, Teams can focus on high-priority work to enable better outcomes and success.
 
 ### Agent user experience
 
