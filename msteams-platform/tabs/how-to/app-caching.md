@@ -136,7 +136,7 @@ To enable precaching for your tab app, follow these steps:
 
 1. Update your app manifest as follows:
 
-    1. Set the value of `showLoadingIndicator` to `true`. This action ensures that Teams waits until your app sends `notifySuccess` to conclude the app load sequence during precaching. For more information, see [showLoadingIndicator](../../resources/schema/manifest-schema-dev-preview.md#showloadingindicator).
+    1. Set the value of `showLoadingIndicator` to `true`. This action ensures that Teams waits until your app sends `notifySuccess` to conclude the app load sequence during precaching. For more information, see [showLoadingIndicator](/microsoft-365/extensibility/schema/root#showloadingindicator).
 
     1. Add the `backgroundLoadConfiguration` object and define the `contentUrl`.
 
@@ -154,7 +154,7 @@ To enable precaching for your tab app, follow these steps:
         > * The `contentUrl` can't contain context-specific parameters, such as team site URL or thread ID, as Teams loads apps with no prior context during launch.
         > * The `contentUrl` must be generic enough to load in the background without any user interaction.
 
-        For more information, see [backgroundLoadConfiguration](../../resources/schema/manifest-schema-dev-preview.md#backgroundloadconfiguration).
+        For more information, see [backgroundLoadConfiguration](/microsoft-365/extensibility/schema/root-background-load-configuration).
 
 ### Monitor background loading
 

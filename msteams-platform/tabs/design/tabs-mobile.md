@@ -84,4 +84,4 @@ If you're uploading your custom app or publishing to an organization's app catal
 * [Test your app](../../concepts/build-and-test/test-app-overview.md)
 * [Distribute your Microsoft Teams app](../../concepts/deploy-and-publish/apps-publish-overview.md)
 * [Create Teams app package](../../concepts/build-and-test/apps-package.md)
-* [App manifest schema for Teams](../../resources/schema/manifest-schema.md#statictabs)
+* [App manifest schema for Teams](/microsoft-365/extensibility/schema/root-static-tabs)

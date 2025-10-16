@@ -6,7 +6,7 @@ ms.date: 08/26/2025
 ms.topic: reference
 ---
 
-# Tool options and code samples
+# SDK options and code samples
 
 [!INCLUDE [Deprecation note](../includes/deprecation-note-teamsfx-sdk.md)]
 
@@ -18,7 +18,7 @@ This section takes you through the various options for building your Teams app.
 
 * [Teams collaborative platform](#teams-collaborative-platform)
 * [Tools and SDKs](#tools-and-sdks)
-* [Teams app tutorials and code samples](#teams-app-tutorials-and-code-samples)
+* [Code samples](#code-samples)
 
 ## Teams collaborative platform
 
@@ -81,10 +81,11 @@ The following tools in the Teams platform help you during app development:
 | Test, deploy, and publish |[Microsoft Entra ID](/entra/fundamentals/whatis) and [Developer Portal](../concepts/build-and-test/teams-developer-portal.md) |
 | Distribute | [Partner Center](../concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md) and [Teams Store](../concepts/deploy-and-publish/appsource/publish.md) |
 
-## Teams app tutorials and code samples
+## Code samples
 
 You can build your own Microsoft Teams app with different capabilities using the following tutorials and code samples.
 
+<!--
 ### Teams app tutorials
 
 To start building your Teams app, use the following languages or frameworks and prepare your development environment.
@@ -95,6 +96,7 @@ To start building your Teams app, use the following languages or frameworks and 
 | **Scenario-based app** | NA | • [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml) <br> • [Build command bot with JavaScript](../sbs-gs-commandbot.yml) <br> • [Create Teams workflow bot](../sbs-gs-workflow-bot.yml) | NA |
 
 ### Code samples
+-->
 
 Code samples are designed to help you understand and build your own Teams app with different capabilities and scenarios. To learn more about the code samples, see [Microsoft Teams samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
 

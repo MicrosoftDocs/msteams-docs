@@ -12,9 +12,12 @@ ms.date: 01/31/2023
 
 Developer Preview is a public program for developers, which provides early access to unreleased features in Microsoft Teams. Developer Preview allows you to explore and test upcoming features for potential inclusion in your Teams app. We also welcome [feedback](~/feedback.md) on any feature in developer preview. Developer preview is enabled per Microsoft Teams client, so you don't need to worry about affecting your entire organization.
 
+> [!div class="nextstepaction"]
+> [Go to developer preview app manifest schema](/microsoft-365/extensibility/schema/?view=m365-app-prev&preserve-view=true)
+
 ## Developer preview app manifest
 
-Many features enabled in developer preview require alterations to your app manifest (previously called Teams app manifest) JSON file. To do so, you need to use the [developer preview app manifest schema](~/resources/schema/manifest-schema-dev-preview.md). If you use this schema, you can't use [Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md) to make these changes or upload your app for testing. To upload your app in Teams, select **Apps** > **Manage your apps** > **Upload an app**. Using this method, you can only upload a zipped version of your app package.
+Many features enabled in developer preview require alterations to your app manifest (previously called Teams app manifest) JSON file. To do so, you need to use the [developer preview app manifest schema](/microsoft-365/extensibility/schema/). If you use this schema, you can't use [Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md) to make these changes or upload your app for testing. To upload your app in Teams, select **Apps** > **Manage your apps** > **Upload an app**. Using this method, you can only upload a zipped version of your app package.
 
 You might find it useful to use Developer Portal to create the non-developer preview portions of your app package, then export that package and manually edit the `manifest.json` file to add the developer preview features you wish to use. After you added the developer preview features to the `manifest.json` file, you can't reimport the package into Developer Portal.
 
@@ -33,7 +36,7 @@ Using an app that contains developer preview features might cause clients that d
 
 To enable the public developer preview on Teams desktop or web client:
 
-1. Enable custom app upload for your developer tenant. For more information, see [enable custom app upload](../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
+1. Enable custom app upload for your developer tenant. For more information, see [enable custom app upload](../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-configure-custom-app-upload-settings).
 1. Select **Settings and more** (**...**) next to your user profile.
 1. Select **Settings** > **About Teams**.
 1. Under **Early access**, select the **Public preview** checkbox.
@@ -44,7 +47,7 @@ To enable the public developer preview on Teams desktop or web client:
 
 To enable the public developer preview on Teams desktop or web client:
 
-1. Enable custom app upload for your developer tenant. For more information, see [enable custom app upload](../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
+1. Enable custom app upload for your developer tenant. For more information, see [enable custom app upload](../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-configure-custom-app-upload-settings).
 1. Select the **Settings and more** (**...**) next to your user profile.
 1. Select **About** > **Developer preview**.
 
@@ -58,14 +61,14 @@ To enable the public developer preview on Teams desktop or web client:
 
 To enable the public developer preview on Teams mobile client:
 
-1. Enable custom app upload for your developer tenant. For more information, see [enable custom app upload](../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
+1. Enable custom app upload for your developer tenant. For more information, see [enable custom app upload](../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-configure-custom-app-upload-settings).
 1. In the upper-left corner, select your user profile.
 1. Select **Settings**.
 1. Select **About**.
 1. Turn on the **Developer preview** toggle.
 
 > [!NOTE]
-> If you [enable custom Teams apps and turn on custom app uploading](../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) doesn't enable developer preview features in Microsoft Teams [set the update policy](/MicrosoftTeams/public-preview-doc-updates#set-the-update-policy).
+> If you [enable custom Teams apps and turn on custom app uploading](../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-configure-custom-app-upload-settings) doesn't enable developer preview features in Microsoft Teams [set the update policy](/MicrosoftTeams/public-preview-doc-updates#set-the-update-policy).
 
 ## Disable developer preview
 
