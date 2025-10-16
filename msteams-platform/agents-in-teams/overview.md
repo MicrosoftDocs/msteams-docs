@@ -67,12 +67,18 @@ Some other user scenarios can include:
 Developers and organizations can choose from multiple approaches depending on the app requirements:
 
 - **Low-code or no-code**: Use Microsoft Copilot Studio to design conversational experiences with minimal code.
-- **Pro-code**: Use Teams AI library to build fully customized agents, integrated with agents to handle comples or domain-specific needs.
+- **Pro-code**: Use Teams AI library to build fully customized agents, integrated with agents to handle complex or domain-specific needs.
 
 ## Tools and SDKs for building agents
 
 [Add introduction]
 
-- **Teams AI library**: [Add details]
-- **Microsoft 365 Agents SDK**: [Add details]
+- **Teams AI library**: This is the latest SDK for building agents specifically tailored for the Teams environment It simplifies the development process by providing:
+
+  - Simplified message handling
+  - Integration with Adaptive Cards and Teams UI components
+  - Native support for OpenAI and Azure OpenAI models
+
+- **Microsoft 365 Agents SDK**: The Microsoft 365 Agents SDK allows developers to extend their Teams agents and apps beyond Teams. It helps make the agents and apps available for Microsoft 365 Chat,  Outlook, and other Microsoft 365 hubs. This enables developers to deliver consistent experience across platforms in the Microsoft ecosystem.
+
 - **Microsoft 365 Agent Tools**: [Add details]
