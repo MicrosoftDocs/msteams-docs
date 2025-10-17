@@ -396,7 +396,7 @@
     href: bots/build-a-bot.md
     displayName: Bot samples, Code sample, Teams AI library, Microsoft Bot Framework SDK, build a bot, build AI bot, command bot, workflow bot, custom engine agent, agent, conversational bot, notification bot, tools, platforms, Azure OpenAI, Microsoft 365 Agents Toolkit, Azure AI Foundry
   - name: Bot with SSO Authentication
-    href: bots/build-bot-tutorial.md
+    href: bots/bots-with-sso.md
     displayName: SSO, authentication, OAuth
   - name: Custom engine agent overview
     href: /microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
@@ -564,11 +564,11 @@
     - name: Create API-based message extensions
       href: messaging-extensions/create-api-message-extension.md
       displayName: API-based, Microsoft 365 Agents Toolkit CLI, Developer Portal, Visual Studio Code, Visual Studio
-    - name: Action-based Message Extensions
-      href: messaging-extensions/build-action-based-extension-tutorial.md
-      displayName: action-based message extension, Azure bot
+    - name: Action-based Meeting Extensions
+      href: messaging-extensions/meeting-extension-action.md
+      displayName: action-based meeting extension, Azure bot
     - name: SSO for Message Extensions
-      href:  messaging-extensions/messaging-extension-tutorial.md
+      href:  messaging-extensions/tabs-messaging-extensions.md
       displayName: Microsoft Entra SSO, web authentication, OAuth connection 
   - name: Build message extensions using Bot Framework  
     items:
