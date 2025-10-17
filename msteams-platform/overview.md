@@ -70,11 +70,12 @@ The Teams platform offers two powerful paths for developers:
     :::column-end:::
 :::row-end:::
 
+<!--
 | When to build | Use this approach | Ideal for ... |
 | --- | --- | --- |
 | Agents in Teams | Use the Teams AI library to build intelligent, conversational agents that understand natural language and act within context. | Personalized assistance, task automation, intelligent workflows, summarization, insights |
 | Apps in Teams | Use the Microsoft 365 Agents SDK and Microsoft 365 Agents toolkit to build or add capabilities like tabs, bots, message extensions, or meeting experiences | Productivity tools, dashboards, content sharing, structured workflows, enterprise integrations |
-
+-->
 <!--
 ### Agents in Teams
 
