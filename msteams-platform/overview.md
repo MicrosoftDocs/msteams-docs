@@ -61,6 +61,14 @@ The Teams platform offers two powerful paths for developers:
         :::image type="content" source="assets/images/agents-in-teams/path.png" alt-text="Image to choose a path":::
     :::column-end:::
 :::row-end:::
+:::row:::
+    :::column:::
+        :::image type="content" source="assets/images/agents-in-teams/choose-agent.png" alt-text="Image to choose a path":::
+    :::column-end:::
+    :::column:::
+        :::image type="content" source="assets/images/agents-in-teams/choose-app.png" alt-text="Image to choose a path":::
+    :::column-end:::
+:::row-end:::
 
 | When to build | Use this approach | Ideal for ... |
 | --- | --- | --- |
