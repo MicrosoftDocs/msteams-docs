@@ -37,7 +37,7 @@ Suggested actions help users continue conversations with your bot.
 
 :::column-end:::
 
-:::row-end::: 
+:::row-end:::
 
 ## Prompt starters
 
@@ -47,12 +47,12 @@ Suggested actions help users continue conversations with your bot.
 >
 > * Prompt starters are only supported for one-on-one chat bots.
 
-To enable prompt starters, define the `commands` property in your bot's app manifest. Each command now contains four fields, a `title`, `description`, `type`, and `prompt`. 
-- The `title` field is the text shown in the prompt starter. When selected, this text is populated into the compose box. 
-- The `description` field describes what the users accomplish. 
-- The `type` field indicates whether the bot command is a basic command or a prompt.
-  Set `type` to **prompt** and provide the text in the prompt field.
-- The `prompt`field defines the text to populate in the compose box, when the command is a prompt type.
+To enable prompt starters, define the `commands` property in your bot's app manifest. Each command contains four fields, `title`, `description`, `type`, and `prompt`.
+
+* The `title` field is the text shown in the prompt starter. When selected, this text is populated into the compose box.
+* The `description` field describes what the users accomplish.
+* The `type` field indicates whether the bot command is basic or prompt. Set `type` to **prompt** and provide the text in the prompt field. When selected, the prompt text appears in the compose box instead of the title or description.
+* The `prompt`field specifies the text that appears in the compose box for a prompt command. It supports up to 4,000 characters.
 
 >[!NOTE]
 >
@@ -60,7 +60,7 @@ To enable prompt starters, define the `commands` property in your bot's app mani
 
 ## Define `commands` in app manifest
 
-To define `commands` in your app manifest, you can either use **Developer Portal** or add them manually in the app manifest. 
+To define `commands` in your app manifest, you can either use **Developer Portal** or add them manually in the app manifest.
 
 # [Developer Portal](#tab/developer-portal)
 
