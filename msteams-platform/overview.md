@@ -56,7 +56,7 @@ Teams acts as a social platform, where custom apps help extend company culture. 
 
 The Teams platform offers two powerful paths for developers. Select agents to build an agent in Teams, or select apps to add other Teams capabilities.
 
-[WIP image]
+[WIP image placeholder]
 
 :::row:::
     :::column:::
