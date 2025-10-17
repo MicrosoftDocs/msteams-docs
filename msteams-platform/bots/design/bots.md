@@ -9,7 +9,7 @@ ms.date: 01/23/2025
 ---
 # Designing your Microsoft Teams bot
 
-Bots are conversational apps that perform a specific set of tasks. Based on the <a href="https://dev.botframework.com/" target="_blank">Microsoft Bot Framework</a>, bots communicate with users, respond to their questions, and proactively notify them about changes and other events. They're a great way to reach out.
+Bots are conversational apps that perform a specific set of tasks. Based on the [Teams AI library](/microsoftteams/platform/teams-ai-library/), bots communicate with users, respond to their questions, and proactively notify them about changes and other events. They're a great way to reach out.
 
 > [!IMPORTANT]
 > Bots are available in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](../../concepts/cloud-overview.md), and [Teams operated by 21Vianet](../../concepts/sovereign-cloud.md) environments.
