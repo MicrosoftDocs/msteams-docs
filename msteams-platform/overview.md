@@ -63,10 +63,10 @@ The Teams platform offers two powerful paths for developers:
 :::row-end:::
 :::row:::
     :::column:::
-        :::image type="content" source="assets/images/agents-in-teams/choose-agent.png" alt-text="Image to choose a path":::
+        :::image type="content" source="assets/images/agents-in-teams/choose-agent.png" alt-text="Image to choose agent":::
     :::column-end:::
     :::column:::
-        :::image type="content" source="assets/images/agents-in-teams/choose-app.png" alt-text="Image to choose a path":::
+        :::image type="content" source="assets/images/agents-in-teams/choose-app.png" alt-text="Image to choose app":::
     :::column-end:::
 :::row-end:::
 
