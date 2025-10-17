@@ -108,7 +108,67 @@ The `onQuerySettingsUrl` and `onSettingsUpdate` events work together to enable t
 
 :::image type="content" source="../../assets/images/compose-extensions/compose-extension-settings-menu-item.png" alt-text="Screenshot shows the locations of Settings menu item.":::
 
-Your handler for `onQuerySettingsUrl` returns the URL for the configuration page; after the configuration page closes, your handler for `onSettingsUpdate` accepts and saves the returned state. This is the one case in which `onQuery` *doesn't* receive the response from the configuration page.
+The [`onQuerySettingsUrl`](/dotnet/api/microsoft.teams.ai.messageextensions-1.onquery) handler returns the URL for the configuration page when a user clicks on the settings button. After the configuration page is closed, the `onSettingsUpdate` method is called to accept and save the returned state. The `onQuery` handler then retrieves the updated settings and uses them to update the behavior of the message extension. This is the one case in which `onQuery` *doesn't* receive the response from the configuration page.
+
+The following image shows the `config` command workflow:
+
+:::image type="content" source="~/assets/images/messaging-extension/respond-to-search.png" alt-text="Screenshot shows the config command workflow and how it works.":::
+
+The following code handles a user request for the configuration page of a message extension. It fetches the user's existing configuration settings, escapes them, and builds a response. This response includes the configuration page's URL with the escaped settings added as a query parameter.
+
+```csharp
+
+protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtensionConfigurationQuerySettingUrlAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionQuery query, CancellationToken cancellationToken)
+{
+    // The user has requested the Messaging Extension Configuration page.
+    var escapedSettings = string.Empty;
+    var userConfigSettings = await _userConfigProperty.GetAsync(turnContext, () => string.Empty);
+    if (!string.IsNullOrEmpty(userConfigSettings))
+    {
+        escapedSettings = Uri.EscapeDataString(userConfigSettings);
+    }
+
+    return new MessagingExtensionResponse
+    {
+        ComposeExtension = new MessagingExtensionResult
+            {
+                Type = "config",
+                SuggestedActions = new MessagingExtensionSuggestedAction
+                    {
+                        Actions = new List<CardAction>
+                            {
+                                new CardAction
+                                {
+                                    Type = ActionTypes.OpenUrl,
+                                    Value = "https://<your-tunnel-url>/searchSettings.html?settings={escapedSettings}",
+                                },
+                            },
+                    },
+            },
+    };
+}
+
+```
+
+The following response is the configuration response that appears when the user interacts with the compose extension:
+
+```json
+{
+    "composeExtension": {
+        "type": "config",
+        "suggestedActions": {
+            "actions": [
+                {
+                    "type": "openUrl",
+                    "value": "https://<your-tunnel-url>/searchSettings.html?settings="
+                }
+            ]
+        }
+    }
+}
+```
+
+:::image type="content" source="~/assets/images/configuration-response-me.png" alt-text="Screenshot shows the configuration response for message extension.":::
 
 ## Receive and respond to queries
 
@@ -478,7 +538,7 @@ To prompt an unauthenticated user to sign in, respond with a suggested action of
 ```
 
 > [!NOTE]
-> For the sign in experience to be hosted in a Teams pop-up, the domain portion of the URL must be in your app’s list of valid domains. For more information, see [validDomains](~/resources/schema/manifest-schema.md#validdomains) in the manifest schema.
+> For the sign in experience to be hosted in a Teams pop-up, the domain portion of the URL must be in your app’s list of valid domains. For more information, see [validDomains](/microsoft-365/extensibility/schema/root#validdomains) in the manifest schema.
 
 ### Start the sign-in flow
 

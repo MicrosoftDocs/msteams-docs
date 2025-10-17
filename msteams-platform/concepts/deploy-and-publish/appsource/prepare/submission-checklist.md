@@ -26,13 +26,13 @@ While your app may be working in a test environment, you should check your app p
 
 The Teams app validation tool helps you identify and fix issues before submitting to Partner Center. The tool automatically checks your app's configurations against the same test cases used during Teams Store validation.
 
-1. Go to the [Teams app validation tool](https://dev.teams.microsoft.com/appvalidation.html).
+1. Go to the [Teams app validation tool](https://dev.teams.microsoft.com/tools/store-validation).
 
    You can also validate your app using [Developer Portal for Teams.](~/concepts/build-and-test/teams-developer-portal.md)
 
 1. Upload your app package to run the automated tests.
 1. Go to the **Preliminary checklist** and review the test cases that are difficult to automate.
-1. [Fix issues with your configurations](~/resources/schema/manifest-schema.md) or app in general. These issues occur if the automated tests give you errors or you haven't met all the criteria in the checklist.
+1. [Fix issues with your configurations](/microsoft-365/extensibility/schema) or app in general. These issues occur if the automated tests give you errors or you haven't met all the criteria in the checklist.
 
 ## Compile testing instructions
 
@@ -77,7 +77,7 @@ A Teams Store listing may be someone's first impression of your app. Increase in
 
 ### Specify a short name
 
-Your app's name (specifically, its *[short name](~/resources/schema/manifest-schema.md#name)*) plays a crucial role in how users discover it in the Teams Store.
+Your app's name (specifically, its *[short name](/microsoft-365/extensibility/schema/root-name#short)*) plays a crucial role in how users discover it in the Teams Store.
 
 :::row:::
 

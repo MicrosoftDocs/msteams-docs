@@ -636,6 +636,6 @@ The following section is a description of the entities in the `OnBehalfOf` Array
 
 ## See also
 
-* [App manifest schema for Teams](../../../resources/schema/manifest-schema.md)
+* [App manifest schema for Teams](/microsoft-365/extensibility/schema)
 * [Respond to search command](../search-commands/respond-to-search.md)
 * [Message extensions](../../what-are-messaging-extensions.md)
