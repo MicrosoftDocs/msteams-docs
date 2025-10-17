@@ -1395,6 +1395,19 @@
       {
         "source_path": "msteams-platform/Teams-AI-library-tutorial.yml",
         "redirect_url": "/microsoftteams/platform/teams-ai-library-tutorial.md"
-      }      
+      },
+       {
+        "source_path": "msteams-platform/sbs-bots-with-sso.yml",
+        "redirect_url": "/microsoftteams/platform/bots-with-sso.md"
+      },
+      {
+        "source_path": "msteams-platform/sbs-meetingextension-action.yml",
+        "redirect_url": "/microsoftteams/platform/meeting-extension-action.md"
+      },
+      {
+        "source_path": "msteams-platform/sbs-tabs-and-messaging-extensions-with-sso.yml",
+        "redirect_url": "/microsoftteams/platform/tabs-messaging-extensions.md"
+      }
+      
     ]
 }
