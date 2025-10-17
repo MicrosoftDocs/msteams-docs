@@ -70,6 +70,8 @@ The Teams platform offers two powerful paths for developers:
     :::column-end:::
 :::row-end:::
 
+Select agents to build an agent in Teams, or select apps to add other Teams capabilities.
+
 <!--
 | When to build | Use this approach | Ideal for ... |
 | --- | --- | --- |
@@ -100,7 +102,6 @@ Teams apps extend collaboration with custom interfacses and integrated workflows
 
 ### Choose your path and get started
 -->
-[Add links to build topics for building agents and apps, and extending agents and apps.]
 
 <!--
 ## Driving organizational goals
