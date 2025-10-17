@@ -88,7 +88,7 @@ You can use the following types of change notification for your app:
 
 For more information about how your app can know when a transcript or recording is available after the online meeting or ad hoc call ends, see [get notified when transcripts and recordings are available](/graph/teams-changenotifications-callrecording-and-calltranscript).
 
-For more information about how your app can know when the meetings ends, see [subscribe to change notifications](/graph/teams-changenotifications-callrecording-and-calltranscript) and [use Bot Framework to get meeting ID and organizer ID](/graph/teams-changenotifications-callrecording-and-calltranscript).
+For more information about how your app can know when the meetings ends, see [subscribe to change notifications](/graph/teams-changenotifications-callrecording-and-calltranscript).
 
 > [!IMPORTANT]
 >
