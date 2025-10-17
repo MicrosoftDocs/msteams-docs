@@ -161,7 +161,7 @@ export default function App() {
 
 ### Modify manifest to add a new dashboard tab app
 
-Open the `appPackage/manifest.json` file and add a new dashboard tab under `staticTabs`. For more information, see [app manifest](../../resources/schema/manifest-schema.md#statictabs). Here's an example:
+Open the `appPackage/manifest.json` file and add a new dashboard tab under `staticTabs`. For more information, see [app manifest](/microsoft-365/extensibility/schema/root-static-tabs). Here's an example:
 
 ```json
 {

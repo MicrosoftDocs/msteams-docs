@@ -144,7 +144,7 @@ In the action-based message extension dialog, select **Adaptive Cards**. Agents 
 
 #### Create dialog with static list of parameters
 
-In the action-based message extension dialog, select **Static list of parameters**. Agents Playground renders the parameters you provided into a dialog. For more information on parameters, see [composeExtensions.commands](../resources/schema/manifest-schema.md#composeextensionscommands).
+In the action-based message extension dialog, select **Static list of parameters**. Agents Playground renders the parameters you provided into a dialog. For more information on parameters, see [composeExtensions.commands](/microsoft-365/extensibility/schema/root-compose-extensions-commands).
 
 The following code is a sample of the static list of parameters in JSON format:
 
@@ -230,7 +230,7 @@ The following table lists the features for each message extension type that aren
 <details>
 <summary>How can I use `commandId` or `parameters.name` properties for a Search Command in Agents Playground?</summary>
 
-When you use the search box in a search-based message extension in Teams, your app receives an invoke activity that includes two parameters. Sometimes, your app might need to use `activity.value.commandId` or `activity.value.parameters[0].name` to manage different search command behaviors in the activity handler for the `composeExtension/query` invoke activity, such as the `handleTeamsMessagingExtensionQuery` method in the Bot Framework SDK for JavaScript. However, your app doesn't need it because [Teams only supports a single search command](../resources/schema/manifest-schema.md#composeextensionscommands) and you can leave them empty.
+When you use the search box in a search-based message extension in Teams, your app receives an invoke activity that includes two parameters. Sometimes, your app might need to use `activity.value.commandId` or `activity.value.parameters[0].name` to manage different search command behaviors in the activity handler for the `composeExtension/query` invoke activity, such as the `handleTeamsMessagingExtensionQuery` method in the Bot Framework SDK for JavaScript. However, your app doesn't need it because [Teams only supports a single search command](/microsoft-365/extensibility/schema/root-compose-extensions-commands) and you can leave them empty.
 
 If your app uses these two parameters, you can provide additional inputs by selecting `Specify Command ID or Parameter` and updating the required values. Agents Playground includes these parameters in the invoke activity payload during a search. If you don't specify them, the payload avoids these parameters.
 
@@ -276,4 +276,4 @@ In Teams, the parameters are available in the app manifest. Since Agents Playgro
 * [Respond to user requests](../messaging-extensions/how-to/search-commands/respond-to-search.md#respond-to-user-requests)
 * [Create and send dialogs](../messaging-extensions/how-to/action-commands/create-task-module.md)
 * [Respond to the dialog submit action](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
-* [ComposeExtensions.commands](../resources/schema/manifest-schema.md#composeextensionscommands)
+* [ComposeExtensions.commands](/microsoft-365/extensibility/schema/root-compose-extensions-commands)
