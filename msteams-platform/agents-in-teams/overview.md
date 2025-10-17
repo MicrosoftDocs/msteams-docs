@@ -47,7 +47,7 @@ Here are some scenarios for agents in Teams:
 - **Course shortlisting and next steps**: Shortlists top courses aligned with career objectives and outlines actionable next steps for each.
 - **Expert-endorsed recommendations**: Recommends leading courses from recognized experts in IT and AI.
 
-:::image type="content" source="../assets/images/agents-in-teams/agent-overview/agent-scenario-academic.png" alt-text="Image shows agent user scenario." lightbox="../assets/images/agents-in-teams/agent-overview/agent-scenario.png" border="none":::
+:::image type="content" source="../assets/images/agents-in-teams/agent-overview/agent-scenario-academic.png" alt-text="Image shows agent user scenario." lightbox="../assets/images/agents-in-teams/agent-overview/agent-scenario.png" border="false":::
 
 For more information, see [Add link to code sample to Contoso Knowledge Hub].
 
