@@ -56,6 +56,11 @@ Teams acts as a social platform, where custom apps help extend company culture. 
 
 The Teams platform offers two powerful paths for developers:
 
+:::row:::
+    :::column:::
+        :::image type="content" source="assets/images/agents-in-teams/path.png" alt-text="Image to choose a path":::
+    :::column-end:::
+
 | When to build | Use this approach | Ideal for ... |
 | --- | --- | --- |
 | Agents in Teams | Use the Teams AI library to build intelligent, conversational agents that understand natural language and act within context. | Personalized assistance, task automation, intelligent workflows, summarization, insights |
