@@ -25,7 +25,7 @@ The following image displays the invoke locations of the search command:
 
 To add the search command to your [app manifest](/microsoft-365/extensibility/schema/root-compose-extensions-commands) (previously called Teams app manifest), you must add a new `composeExtensions` object to the top level of your app manifest JSON. You can add the search command either with the help of Developer Portal or manually.
 
-### Create search message extension using Bot Framework
+### Create search message extension using Bot service
 
 You can create a search message extension using Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) and Developer Portal for Teams.
 

@@ -43,7 +43,7 @@ Graph API permissions are managed in Microsoft Entra ID. For your app to access 
 The bot or messaging extension ID is generated based on the following registration platform. This ID is required to add a bot or messaging extension to a Teams app.
 
 * Microsoft Entra admin center
-* Developer or Bot Framework portal
+* Developer portal
 
 <a name='azure-ad-portal'></a>
 
@@ -51,9 +51,9 @@ The bot or messaging extension ID is generated based on the following registrat
 
 When a bot or message extension is registered on Microsoft Entra admin center, it has a Microsoft Entra app ID associated with it, which can be found in **Microsoft Entra admin center** > **App Registrations**. Endpoints and other bot configurations are managed in Azure portal.
 
-#### Developer or Bot Framework portal
+#### Developer portal
 
-When a bot or message extension is registered in Developer or Bot Framework portal, it doesn't have a Microsoft Entra app ID. However, the bot or message extension ID can be found on the Bot Framework portal. Endpoints and other bot configurations are managed in the Bot Framework portal.
+When a bot or message extension is registered in Developer portal, it doesn't have a Microsoft Entra app ID. However, the bot or message extension ID can be found on the Azure portal. Endpoints and other bot configurations are managed in the Azure portal.
 
 Other Teams specific configuration for the bot can be managed in the Developer portal section for the app.
 
