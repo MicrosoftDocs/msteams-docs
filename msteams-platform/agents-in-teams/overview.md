@@ -49,7 +49,7 @@ Here are some scenarios for agents in Teams:
 
 [WIP image placeholder]
 
-:::image type="content" source="../assets/images/agents-in-teams/agent-overview/agent-scenario-academic.png" alt-text="Image shows agent user scenario." lightbox="../assets/images/agents-in-teams/agent-overview/agent-scenario.png" border="false":::
+:::image type="content" source="../assets/images/agents-in-teams/agent-overview/agent-scenario-academic.png" alt-text="Image shows agent user scenario." lightbox="../assets/images/agents-in-teams/agent-overview/agent-scenario-academic.png" border="false":::
 
 For more information, see [Add link to code sample to Contoso Knowledge Hub].
 
