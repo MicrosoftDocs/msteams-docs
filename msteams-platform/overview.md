@@ -18,7 +18,8 @@ Apps present themselves as personal or shared. A personal app enables one-on-one
 
 ## What is Teams platform?
 
-Teams is evolving from a communication hub into a collaborative and intelligent platform with agents where people, data, and AI come together. Developers can build agents in Teams using Teams AI library and enable natural, conversational, and context-aware experiences powered by large language models (LLMs). At the same time, developers can continue to create Teams apps like tabs, bots, message extensions, and meeting apps. You can extend Teams capabilities for task-specific workflows, data, visualization, and integration with enterprise systems.
+Teams is evolving from a communication hub into a collaborative and intelligent platform with agents where people, data, and AI come together. Developers can build agents in Teams using Teams AI library. It enables natural, conversational, and context-aware experiences powered by large language models (LLMs).
+At the same time, developers can continue to create Teams apps. You can also extend Teams capabilities for task-specific workflows, data, visualization, and integration with enterprise systems.
 
 Take a look at these example developer personas, and agent and app scenarios:
 
