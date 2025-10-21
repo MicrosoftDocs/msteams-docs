@@ -20,7 +20,7 @@ Built using Teams AI library, agents in Teams are intelligent apps that understa
 
 ## Why build agents for Teams?
 
-Microsoft Teams provides a powerful platform for teams to connect, communicate, and work together. Building agents on Microsoft Teams helps to build enhanced collaboration, increased productivity, and customization. Agents can automate workflows, provide real-time updates, and facilitate informed decision-making. By leveraging Teams' capabilities, organizations can streamline processes, increase team efficiency, and improve customer engagement. With agents, Teams can focus on high-priority work to enable better outcomes and success.
+Building agents for Teams helps to enhance collaboration and increase productivity. Agents can automate workflows, provide real-time updates, and facilitate informed decision-making. By leveraging Teams' capabilities, organizations can streamline processes, increase team efficiency, and improve customer engagement. Within Teams, agents can focus on high-priority work to enable better outcomes and success.
 
 ### Agent user experience
 
@@ -30,7 +30,7 @@ Microsoft Teams provides a powerful platform for teams to connect, communicate, 
 
 ### Agent developer experience
 
-- **Native Teams integration**: Simplified developmnt using Teams AI library with built-in support for Teams' authentication, messaging, and UI components.
+- **Native Teams integration**: Simplified development using Teams AI library with built-in support for Teams' authentication, messaging, and UI components.
 - **Security and compliance**: Benefit from identity, compliance, and data protection frameworks.
 - **Extensibility across Microsoft 365**: Agents can evolve beyond Teams into other Microsoft 365 experiences using Microsoft 365 Agents SDK.
 
@@ -73,7 +73,7 @@ Developers and organizations can choose from multiple approaches depending on th
 
 ## Tools and SDKs for building agents
 
-[Add introduction]
+Here's a list of tools and SDKs you can use to build agents for Teams:
 
 - **Teams AI library**: This is the latest SDK for building agents specifically tailored for the Teams environment It simplifies the development process by providing:
 
@@ -83,4 +83,4 @@ Developers and organizations can choose from multiple approaches depending on th
 
 - **Microsoft 365 Agents SDK**: The Microsoft 365 Agents SDK allows developers to extend their Teams agents and apps beyond Teams. It helps make the agents and apps available for Microsoft 365 Chat,  Outlook, and other Microsoft 365 hubs. This enables developers to deliver consistent experience across platforms in the Microsoft ecosystem.
 
-- **Microsoft 365 Agent Tools**: [Add details]
+- **Microsoft 365 Agent Toolkit**: Microsoft 365 Agents Toolkit is the pro-code option for building and debugging agents and actions (plugins). You can use the toolkit to build agents tailored for Teams. It also provides support for all major Microsoft 365 platform extensibility surfaces, including agents, tabs, bots, message extensions, and Outlook Add-ins. Agents Toolkit is available as an extension for Visual Studio Code and Visual Studio.
