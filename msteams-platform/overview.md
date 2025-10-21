@@ -25,13 +25,13 @@ You can meet these scenarios using Teams agents and apps, and enhance collaborat
 
 Whether you want to build powerful agents or rich apps, the platform gives you the tools to extend Teams with seamless, secure, and contextual solutions. Teams platform supports custom experiences, workflows, and integrations that live where people work. You can automate tasks, facilitate communication, and integrate seamlessly across Microsoft 365 platforms.
 
-Agents are the backbone of modern organizations By integrating agents into workspaces, organizations connect with customers, deliver services, and share information efficiently. Key roles of an agent include:
+Agents are the backbone of modern organizations By building and integrating agents into Teams workspaces, organizations connect with customers, deliver services, and share information efficiently. Key roles of an agent in Teams include:
 
 - **Collaboration and communication**: Agents facilitate concise, targeted interactions, integrating with essential services and providing on-the-go accessibility.
 - **Business enablement**: Agents automate repetitive tasks, streamline internal workflows, and simplify processes such as Q&A, helpdesk, and approvals.
 - **Secure interaction**: Agents ensure secure data handling, ease of communication, and personalized experiences.
 
-Agents can be deployed across desktop, web, and mobile platforms, and integrated into Microsoft Teams to:
+Agents in Teams can be deployed across desktop, web, and mobile platforms, and integrated into Teams to:
 
 - Increase user engagement
 - Surface key information and tools
