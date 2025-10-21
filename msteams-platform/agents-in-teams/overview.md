@@ -8,15 +8,15 @@ ms.topic: reference
 
 # Agents in Teams
 
-With the introduction of Teams AI library, developers can create agents - intelligent apps that understand context, respond conversationally, and perform tasks across Teams. Your agents built for Teams can also be extended beyond Teams into other Microsoft 365 hubs, such as Outlook, using Microsoft 365 Agents SDK.
+With the introduction of Teams AI library, developers can create agents in Teams that can interact through natural language, connect to business data, and perform actions on behalf of the users. Your agents built for Teams can also be extended beyond Teams into other Microsoft 365 hubs, such as Outlook, using Microsoft 365 Agents SDK.
 
 ## What are agents in Teams?
 
-Agents in Teams can interact through natural language, connect to business data, and perform actions on behalf of the users.
+Built using Teams AI library, agents in Teams are intelligent apps that understand context, respond conversationally, and perform tasks across Teams. Agents leverage the power of large language models (LLMs) and Microsoft's ecosystem to deliver customized and secure AI experiences within Teams.
 
 :::image type="content" source="../assets/images/agents-in-teams/agent-overview/agents-in-teams.png" alt-text="Image shows what are agents in Teams." border="false" lightbox="../assets/images/agents-in-teams/agent-overview/agents-in-teams.png":::
 
-Built using Teams AI library, agents leverage the power of large language models (LLMs) and Microsoft's ecosystem to deliver customized and secure AI experiences within Teams. A Teams agent integrates into Microsoft Teams and uses large language models (LLMs) to understand user intent, perform tasks, and enhance collaboration. These agents can be embedded in chats, meetings, or channels and can respond to queries, generate reports, manage tasks, and more.
+ A Teams agent integrates into Microsoft Teams and uses large language models (LLMs) to understand user intent, perform tasks, and enhance collaboration. These agents can be embedded in chats, meetings, or channels and can respond to queries, generate reports, manage tasks, and more.
 
 ## Why build agents for Teams?
 
