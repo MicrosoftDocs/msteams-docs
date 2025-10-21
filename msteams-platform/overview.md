@@ -13,19 +13,19 @@ Microsoft Teams platform empowers developers to create intelligent and collabora
 ## What is Teams platform?
 
 Teams is evolving from a communication hub into a collaborative and intelligent platform with agents where people, data, and AI come together. You can build agents in Teams using Teams AI library. It enables natural, conversational, and context-aware experiences powered by large language models (LLMs).
-You can continue to create Teams appsm and extend Teams capabilities for task-specific workflows, data, visualization, and integration with enterprise systems.
+You can continue to create Teams apps, and extend Teams capabilities for task-specific workflows, data, visualization, and integration with enterprise systems.
 
-Take a look at these example developer personas, and agent and app scenarios:
+Take a look at these example developer personas and agent or app scenarios:
 
 :::image type="content" border="false" source="assets/images/overview/dev-persona.png" alt-text="Screenshot shows you the developer persona and user stories." lightbox="assets/images/overview/dev-persona.png":::
 
-You can meet these scenarios using Teams agents and apps, and enhance collaboration.
+You can meet these scenarios using Teams agents or apps and enhance collaboration.
 
 ## Why build on Teams platform?
 
 Whether you want to build powerful agents or rich apps, the platform gives you the tools to extend Teams with seamless, secure, and contextual solutions. Teams platform supports custom experiences, workflows, and integrations that live where people work. You can automate tasks, facilitate communication, and integrate seamlessly across Microsoft 365 platforms.
 
-Agents are the backbone of modern organizations By building and integrating agents into Teams workspaces, organizations connect with customers, deliver services, and share information efficiently. Key roles of an agent in Teams include:
+Agents are the backbone of modern organizations. By building and integrating agents into Teams workspaces, organizations connect with customers, deliver services, and share information efficiently. Key roles of an agent in Teams include:
 
 - **Collaboration and communication**: Agents facilitate concise, targeted interactions, integrating with essential services and providing on-the-go accessibility.
 - **Business enablement**: Agents automate repetitive tasks, streamline internal workflows, and simplify processes such as Q&A, helpdesk, and approvals.
