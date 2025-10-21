@@ -8,7 +8,9 @@ ms.date: 04/18/2025
 ---
 # Microsoft Teams developer platform overview
 
-Microsoft Teams platform empowers developers to create intelligent and collaborative experiences directly into Teams experience. Whether you want to build powerful agents or rich apps, the platform gives you the tools to extend Teams with seamless, secure, and contextual solutions. Teams platform supports custom experiences, workflows, and integrations that live where people work.
+Microsoft Teams platform empowers developers to create intelligent and collaborative experiences directly into Teams experience. Developers can build agents and apps to achieve goals, boost productivity, and foster collaboration.
+
+Teams plaform empowers developers to build agents and apps to achieve goals, boost productivity, and foster collaboration. You can automate tasks, facilitate communication, and integrate seamlessly across Microsoft 365 platforms.
 
 <!--
 Microsoft Teams offers a collection of apps provided by Microsoft or external services. Teams apps include tabs, bots, message extensions, or any combination of these capabilities. You can extend Teams apps to work on Outlook and Microsoft 365 app, too. These apps expand the value of the Teams collaborative experience for users.
@@ -29,7 +31,10 @@ You can meet these scenarios using Teams agents and apps, and enhance collaborat
 
 ## Why build on Teams platform?
 
-Teams plaform empowers developers to build agents and apps to achieve goals, boost productivity, and foster collaboration. You can automate tasks, facilitate communication, and integrate seamlessly across Microsoft 365 platforms.
+Whether you want to build powerful agents or rich apps, the platform gives you the tools to extend Teams with seamless, secure, and contextual solutions.
+
+Teams platform supports custom experiences, workflows, and integrations that live where people work.
+ You can automate tasks, facilitate communication, and integrate seamlessly across Microsoft 365 platforms.
 
 Agents are the backbone of modern organizations, enabling seamless collaboration, communication, and workflow automation. By integrating agents into workspaces, organizations connect with customers, deliver services, and share information efficiently. Key roles of an agent include:
 
