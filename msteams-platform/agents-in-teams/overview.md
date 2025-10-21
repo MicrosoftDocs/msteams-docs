@@ -8,7 +8,7 @@ ms.topic: reference
 
 # Agents in Teams
 
-With the introduction of Teams AI library, developers can create agents in Teams that can interact through natural language, connect to business data, and perform actions on behalf of the users. Your agents built for Teams can also be extended beyond Teams into other Microsoft 365 hubs, such as Outlook, using Microsoft 365 Agents SDK.
+With the introduction of Teams AI library, developers can create agents tailored for Teams. Agents in Teams interact through natural language, connect to business data, and perform actions on behalf of users. Your agents built for Teams can also be extended beyond Teams into other Microsoft 365 hubs, such as Outlook, using Microsoft 365 Agents SDK.
 
 ## What are agents in Teams?
 
@@ -16,7 +16,7 @@ Built using Teams AI library, agents in Teams are intelligent apps that understa
 
 :::image type="content" source="../assets/images/agents-in-teams/agent-overview/agents-in-teams.png" alt-text="Image shows what are agents in Teams." border="false" lightbox="../assets/images/agents-in-teams/agent-overview/agents-in-teams.png":::
 
- A Teams agent integrates into Microsoft Teams and uses large language models (LLMs) to understand user intent, perform tasks, and enhance collaboration. These agents can be embedded in chats, meetings, or channels and can respond to queries, generate reports, manage tasks, and more.
+ An agent in Teams understands user intent, performs tasks, and enhances collaboration.
 
 ## Why build agents for Teams?
 
