@@ -8,7 +8,7 @@ ms.topic: reference
 
 # Agents in Teams
 
-Microsoft Teams platform enables developers to build and integrate collaborative experiences into Teams. Whith the introduction of Teams AI library, developers can now create agents - intelligent apps that can understand context, respond conversationally, and perform tasks across Teams. Your agents built for Teams can also be extended beyond Teams environment into other Microsoft 365 hubs, such as Outlook, using Microsoft 365 Agents SDK.
+With the introduction of Teams AI library, developers can create agents - intelligent apps that understand context, respond conversationally, and perform tasks across Teams. Your agents built for Teams can also be extended beyond Teams into other Microsoft 365 hubs, such as Outlook, using Microsoft 365 Agents SDK.
 
 ## What are agents in Teams?
 

@@ -8,7 +8,7 @@ ms.date: 04/18/2025
 ---
 # Microsoft Teams developer platform overview
 
-Microsoft Teams platform empowers developers to create intelligent and collaborative experiences directly into Teams experience. Developers can build agents and apps to achieve goals, boost productivity, and foster collaboration. In addition, Teams platform enables task automation and seamless integration across Microsoft 365 platforms.
+Microsoft Teams platform empowers developers to create intelligent and collaborative experiences directly into Teams experience. Developers can build agents and apps to achieve goals, boost productivity, and foster collaboration. In addition, Teams platform enables seamless integration across Microsoft 365 platforms.
 
 ## What is Teams platform?
 
