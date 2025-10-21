@@ -8,18 +8,18 @@ ms.date: 04/18/2025
 ---
 # Microsoft Teams developer platform overview
 
-Microsoft Teams platform empowers developers to create intelligent and collaborative experiences directly into Teams experience. Developers can build agents and apps to achieve goals, boost productivity, and foster collaboration. In addition, Teams platform enables task automation, and seamless integration across Microsoft 365 platforms.
+Microsoft Teams platform empowers developers to create intelligent and collaborative experiences directly into Teams experience. Developers can build agents and apps to achieve goals, boost productivity, and foster collaboration. In addition, Teams platform enables task automation and seamless integration across Microsoft 365 platforms.
 
 ## What is Teams platform?
 
-Teams is evolving from a communication hub into a collaborative and intelligent platform with agents where people, data, and AI come together. Developers can build agents in Teams using Teams AI library. It enables natural, conversational, and context-aware experiences powered by large language models (LLMs).
-At the same time, developers can continue to create Teams apps. You can also extend Teams capabilities for task-specific workflows, data, visualization, and integration with enterprise systems.
+Teams is evolving from a communication hub into a collaborative and intelligent platform with agents where people, data, and AI come together. You can build agents in Teams using Teams AI library. It enables natural, conversational, and context-aware experiences powered by large language models (LLMs).
+You can continue to create Teams appsm and extend Teams capabilities for task-specific workflows, data, visualization, and integration with enterprise systems.
 
 Take a look at these example developer personas, and agent and app scenarios:
 
 :::image type="content" border="false" source="assets/images/overview/dev-persona.png" alt-text="Screenshot shows you the developer persona and user stories." lightbox="assets/images/overview/dev-persona.png":::
 
-You can meet these scenarios using Teams agents and apps, and enhance collaboration across Microsoft 365.
+You can meet these scenarios using Teams agents and apps, and enhance collaboration.
 
 ## Why build on Teams platform?
 
