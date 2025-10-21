@@ -12,7 +12,7 @@ With the introduction of Teams AI library, developers can create agents tailored
 
 ## What are agents in Teams?
 
-Built using Teams AI library, agents in Teams are intelligent apps that understand context, respond conversationally, and perform tasks across Teams. Agents leverage the power of large language models (LLMs) and Microsoft's ecosystem to deliver customized and secure AI experiences within Teams.
+Agents in Teams are intelligent apps built with the Teams AI library. They interact through natural language (LLM), connect to business data, and perform actions on behalf of users. Leveraging large language models and Microsoft’s ecosystem, these agents deliver secure, customized AI experiences within Teams and can be extended to other Microsoft 365 hubs using the Microsoft 365 Agents SDK.
 
 :::image type="content" source="../assets/images/agents-in-teams/agent-overview/agents-in-teams.png" alt-text="Image shows what are agents in Teams." border="false" lightbox="../assets/images/agents-in-teams/agent-overview/agents-in-teams.png":::
 
@@ -57,8 +57,8 @@ Some other user scenarios can include:
 
 - **Code companion**: Get instant coding assistance with the code companion, an agent for helping developers on-the-go. Code companion is your on-the-go agent available 24/7 to help you overcome coding challenges and boost productivity. This agent provides:
 
-  - Code and tool suggestions: Get hep with code snippets, debugging, relevant code samples, and tools available for building your agents and apps.
-  - Error resolution:Identifying and suggesting fixes with code analysis.
+  - Code and tool suggestions: Get help with code snippets, debugging, relevant code samples, and tools available for building your agents and apps.
+  - Error resolution: Identifying and suggesting fixes with code analysis.
   - Best practices: Learn more about industry-standard coding practices.
   - Knowledgebase: Access a vast repository of domain and product knowledge from Learn documentation and tutorials.
 - Helpdesk and customer support
