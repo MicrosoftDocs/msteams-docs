@@ -23,22 +23,19 @@ You can meet these scenarios using Teams agents and apps, and enhance collaborat
 
 ## Why build on Teams platform?
 
-Whether you want to build powerful agents or rich apps, the platform gives you the tools to extend Teams with seamless, secure, and contextual solutions.
+Whether you want to build powerful agents or rich apps, the platform gives you the tools to extend Teams with seamless, secure, and contextual solutions. Teams platform supports custom experiences, workflows, and integrations that live where people work. You can automate tasks, facilitate communication, and integrate seamlessly across Microsoft 365 platforms.
 
-Teams platform supports custom experiences, workflows, and integrations that live where people work.
- You can automate tasks, facilitate communication, and integrate seamlessly across Microsoft 365 platforms.
-
-Agents are the backbone of modern organizations, enabling seamless collaboration, communication, and workflow automation. By integrating agents into workspaces, organizations connect with customers, deliver services, and share information efficiently. Key roles of an agent include:
+Agents are the backbone of modern organizations By integrating agents into workspaces, organizations connect with customers, deliver services, and share information efficiently. Key roles of an agent include:
 
 - **Collaboration and communication**: Agents facilitate concise, targeted interactions, integrating with essential services and providing on-the-go accessibility.
 - **Business enablement**: Agents automate repetitive tasks, streamline internal workflows, and simplify processes such as Q&A, helpdesk, and approvals.
-- **Customer engagement**: Agents ensure secure data handling, ease of communication, and personalized experiences.
+- **Secure interaction**: Agents ensure secure data handling, ease of communication, and personalized experiences.
 
 Agents can be deployed across desktop, web, and mobile platforms, and integrated into Microsoft Teams to:
 
 - Increase user engagement
 - Surface key information and tools
-- Automate business processes
+- Automate processes
 
 ### Extend and scale agents
 
@@ -48,11 +45,11 @@ You can build unified experience for agents. Build agents once and deploy them e
 
 ### Social interactions and personal apps
 
-Teams acts as a social platform, where custom apps help extend company culture. Personal apps use conversational bots for direct user interaction, and task modules (dialogs) make complex data easy to manage.
+Teams acts as a social platform where custom apps help extend company culture. Personal apps use conversational bots for direct user interaction, and task modules (dialogs) make complex data easy to manage.
 
 ## What to build on Teams platform?
 
-The Teams platform offers two powerful paths for developers. Select agents to build an agent in Teams, or select apps to add other Teams capabilities.
+Teams platform offers two powerful paths for developers. Select agents to build an agent in Teams, or select apps to add other Teams capabilities.
 
 [WIP image placeholder]
 
