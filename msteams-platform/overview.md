@@ -8,7 +8,7 @@ ms.date: 04/18/2025
 ---
 # Microsoft Teams developer platform overview
 
-Microsoft Teams platform empowers developers to create intelligent and collaborative experiences directly into Teams experience. Developers can build agents and apps to achieve goals, boost productivity, and foster collaboration. In addition, Teams platform enables seamless integration across Microsoft 365 platforms.
+Microsoft Teams platform empowers you as developers to create intelligent and collaborative experiences directly into Teams experience. Developers can build agents and apps to achieve goals, boost productivity, and foster collaboration. In addition, Teams platform enables seamless integration across Microsoft 365 platforms.
 
 ## What is Teams platform?
 
@@ -19,7 +19,7 @@ Take a look at these example developer personas and agent or app scenarios:
 
 :::image type="content" border="false" source="assets/images/overview/dev-persona.png" alt-text="Screenshot shows you the developer persona and user stories." lightbox="assets/images/overview/dev-persona.png":::
 
-You can meet these scenarios using Teams agents or apps and enhance collaboration.
+You can meet these scenarios to enhance collaboration using Teams agents or apps.
 
 ## Why build on Teams platform?
 
@@ -41,7 +41,7 @@ Agents in Teams can be deployed across desktop, web, and mobile platforms, and i
 
 Agents can consolidate existing web apps, SharePoint sites, PowerApps, and other solutions into Teams, expanding reach and engagement. Publishing agents to the Teams Store increases visibility and adoption.
 
-You can build unified experience for agents. Build agents once and deploy them everywhere—across Teams, Outlook, and Microsoft 365—using a single codebase. This approach streamlines development, management, and user access, ensuring consistent experiences and efficient administration.
+You can build unified experience for agents. Build agents once and deploy them across Teams, Outlook, and Microsoft 365 using a single codebase. This approach streamlines development, management, and user access, ensuring consistent experiences and efficient administration.
 
 ### Social interactions and personal apps
 
@@ -69,6 +69,8 @@ Teams platform offers two powerful paths for developers:
         :::image type="content" source="assets/images/agents-in-teams/choose-app.png" alt-text="Image to choose app" border="false" link="get-started/get-started-overview.md" lightbox="assets/images/agents-in-teams/choose-app.png":::
     :::column-end:::
 :::row-end:::
+
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Agents in Teams](agents-in-teams/overview.md)
