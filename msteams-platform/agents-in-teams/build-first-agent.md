@@ -44,11 +44,11 @@ To build a Teams agent, you’ll need the following:
 
     :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/general-teams-agent.png" alt-text="Screenshot shows the location of the option to create a new agent in Teams." lightbox="../assets/images/agents-in-teams/first-agent-qsg/general-teams-agent.png":::
 
-1. Select OpenAI key as the LLM for your agent.
+1. Select a service to access large language model (LLM) for your agent.
 
-    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/select-llm.png" alt-text="Screenshot shows the location of the option to select an appropriate LLM for your agent." lightbox="../assets/images/agents-in-teams/first-agent-qsg/select-llm.png":::
+    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/access-llm.png" alt-text="Screenshot shows the location of the option to select an appropriate LLM for your agent." lightbox="../assets/images/agents-in-teams/first-agent-qsg/access-llm.png":::
 
-    Select one of the following options to define the OpenAI key:
+    Select one of the following options:
 
     - Select **Azure OpenAI** if you've got the OpenAI key from Azure. Following this, you must:
 
@@ -56,11 +56,9 @@ To build a Teams agent, you’ll need the following:
         1. Enter the endpoint in **Azure OpenAI service endpoint**.
         1. Enter the deployment name in **Azure OpenAI deployment name**.
 
-    - Select **OpenAI Key**.
+    - Select **OpenAI Key** and enter the OpenAI key.
 
-        - Enter the OpenAI key.
-
-1. Select the **Programming Language** for your developing your agent.
+1. Select the **Programming Language** for developing your agent.
 
     :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/select-language.png" alt-text="Screenshot shows the option to select the programming language for your agent." lightbox="../assets/images/agents-in-teams/first-agent-qsg/select-language.png":::
 
@@ -72,11 +70,11 @@ To build a Teams agent, you’ll need the following:
 
     :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/add-agent-name.png" alt-text="Screenshot shows the field to add the agent name." lightbox="../assets/images/agents-in-teams/first-agent-qsg/add-agent-name.png":::
 
-    The toolkit displays a message that the agent has been successfully created. If the toolkit displays a message to confirm if you trust the author, select **Yes, I trust the authors**.
+    The toolkit displays a message that the agent has been successfully created. You can also provision the agent at this time or later. If the toolkit displays a message to confirm if you trust the author, select **Yes, I trust the authors**.
 
     :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/trust-author.png" alt-text="Screenshows the message for confirming if you trust the authors of the agent.":::
 
-### Take a tour of the bot app source code
+### Take a tour of the agent source code
 
 Microsoft 365 Agents Toolkit creates your agent project and scaffolds the project workspace. Here's a look at the folder structure:
 
