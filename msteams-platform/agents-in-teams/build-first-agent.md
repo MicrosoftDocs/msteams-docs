@@ -12,7 +12,7 @@ Agents use AI to automate and execute business processes, working alongside or o
 
 ## Tools you'll need
 
-To build a Teams agent, you’ll need the following:
+To build an agent in Teams, you’ll need the following:
 
 | Install | For using... |
 | --- | --- |
@@ -26,7 +26,7 @@ To build a Teams agent, you’ll need the following:
 ## Set up your environment
 
 1. Install the latest versions of Visual Studio Code, Node.js, and the Microsoft 365 Agents Toolkit.
-1. Create an Azure OpenAI service on the [Azure portal](https://ms.portal.azure.com/#home) and get your API key.
+1. If you want to use Azure OpenAI service to access large language model (LLM) for your agent, create an Azure OpenAI service on the [Azure portal](https://ms.portal.azure.com/#home) and get your API key.
 
 ## Create an agent using Microsoft 365 Agents Toolkit
 
@@ -109,7 +109,7 @@ Congratulations! You've created and ran your first agent in Teams.
 
 | Sample name | Description | .NET | Node.js | Python |
 |--- |--- | --- | --- | --- |
-| Contoso knowledge hub | An intelligent guidance agent built on the Teams AI library, designed to empower students in their academic and career journeys. The agent offers personalized support for course selection, study strategies, career development planning, and academic roadmap creation.  | [View] | [View] | [View] |
+| Contoso knowledge hub | An intelligent agent built on the Teams AI library that is designed to empower students in their academic and career journeys. The agent offers personalized support for course selection, study strategies, career development planning, and academic roadmap creation.  | [View] | [View] | [View] |
 
 ## See also
 
