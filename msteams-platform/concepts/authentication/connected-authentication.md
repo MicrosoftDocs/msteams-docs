@@ -10,4 +10,20 @@ ms.localizationpriority: medium
 
 # Connected authentication for Teams
 
+[Add introduction]
+
 Connected authentication enables you to unify sign-in process for Teams agents and bot and tab apps.
+
+[Add key benefits]
+
+- Seamless user interaction
+- Efficient developer experience
+- Enhanced security
+- Consistent onboarding user experience
+
+## Prerequisites
+
+- Account linking URL
+- Nested app authentication (NAA) based PKCE authentication flow for tab app authentication
+
+## Developer experience
