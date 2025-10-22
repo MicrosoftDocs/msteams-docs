@@ -23,12 +23,6 @@ To build a Teams agent, you’ll need the following:
 | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and calls all in one place.|
 | [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's Generative Pretrained Transformer (GPT). If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
 
-To build your agent:
-
-1. [Set up your environment](#set-up-your-environment)
-1. [Create an agent using Microsoft 365 Agents Toolkit](#create-an-agent-using-microsoft-365-agents-toolkit)
-1. [Run and use your agent in Teams](#run-and-use-your-agent-in-teams)
-
 ## Set up your environment
 
 1. Install the latest versions of Visual Studio Code, Node.js, and the Microsoft 365 Agents Toolkit.
