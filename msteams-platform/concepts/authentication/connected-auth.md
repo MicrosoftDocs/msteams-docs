@@ -9,3 +9,5 @@ ms.localizationpriority: medium
 ---
 
 # Connected authentication for Teams
+
+Connected authentication enables you to unify sign-in process for Teams agents and bot and tab apps.
