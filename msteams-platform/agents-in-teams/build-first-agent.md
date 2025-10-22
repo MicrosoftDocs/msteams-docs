@@ -111,7 +111,6 @@ Congratulations! You've created and ran your first agent in Teams.
 |--- |--- | --- | --- | --- |
 | Contoso knowledge hub | An intelligent guidance agent built on the Teams AI library, designed to empower students in their academic and career journeys. The agent offers personalized support for course selection, study strategies, career development planning, and academic roadmap creation.  | [View] | [View] | [View] |
 
-## Next step
+## See also
 
-> [!div class="nextstepaction"]
-> [Build your first agent](build-first-agent.md)
+[Agents user experience](../bots/how-to/teams-conversational-ai/ai-ux.md)

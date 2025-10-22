@@ -84,3 +84,8 @@ Here's a list of tools and SDKs you can use to build agents for Teams:
 - **Microsoft 365 Agents SDK**: The Microsoft 365 Agents SDK allows developers to extend their Teams agents and apps beyond Teams. It helps make the agents and apps available for Microsoft 365 Chat,  Outlook, and other Microsoft 365 hubs. This enables developers to deliver consistent experience across platforms in the Microsoft ecosystem.
 
 - **Microsoft 365 Agent Toolkit**: Microsoft 365 Agents Toolkit is the pro-code option for building and debugging agents and actions (plugins). You can use the toolkit to build agents tailored for Teams. It also provides support for all major Microsoft 365 platform extensibility surfaces, including agents, tabs, bots, message extensions, and Outlook Add-ins. Agents Toolkit is available as an extension for Visual Studio Code and Visual Studio.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Build your first agent](build-first-agent.md)
