@@ -115,7 +115,9 @@ Congratulations! You've created and run your first agent in Teams.
 
 ## Code sample
 
-[Add link to scenario code sample]
+| Sample name | Description | .NET | Node.js | Python |
+|--- |--- | --- | --- | --- |
+| Contoso knowledge hub | An intelligent guidance agent built on the Teams AI library, designed to empower students in their academic and career journeys. The agent offers personalized support for course selection, study strategies, career development planning, and academic roadmap creation.  | [View] | [View] | [View] |
 
 ## Next step
 
