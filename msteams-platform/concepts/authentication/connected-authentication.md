@@ -35,7 +35,19 @@ User scenario:
 1. I want to the app users to log in only once...
 1. ... but be able access all capabilities.
 
-With connected authentication, apps with multiple capabilities require the users to log in only once. Following successful consent and authentication, users are able to access all app capabilities successfully.
+With connected authentication, apps with multiple capabilities require the users to log in only once. Following successful consent and authentication, users are able to access all app capabilities successfully:
+
+Step 1: App Installation and Initial Access
+
+- The user installs the Teams app and opens the app.
+- Teams loads the bot chat as the first user interaction.
+
+Step 2: Bot Authentication Prompt
+
+- The user is prompted to sign in to the bot.
+- At sign-in, the app opens a task module and an authentication popup for the bot login flow.
+
+**Flow-chart steps**:
 
 1. A user installs and opens the app.
 1. The user navigates to bot chat and sees the sign-in prompt.
