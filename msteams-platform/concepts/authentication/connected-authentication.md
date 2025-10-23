@@ -50,6 +50,12 @@ Flow:
 Step-by-step authentication flow
 
 1. user onboarding
-1. silent login
+    1. User initiates authentication (e.g., via bot or app tab).
+    1. Application triggers the primary authentication flow.
+    1. Upon success, user is prompted to link accounts (if applicable).
+    1. Account linking process exchanges and stores tokens securely.
+    1. User gains access to all connected services without repeated logins.
+
+1. silent login: how silent login and token refresh are handled for persistent sessions.
 
 ## Authentication flow for Connected authentication
