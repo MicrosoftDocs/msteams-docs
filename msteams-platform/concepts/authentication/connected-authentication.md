@@ -26,7 +26,7 @@ Connected authentication enables you to unify sign-in process for Teams agents a
 - Account linking URL
 - Nested app authentication (NAA) based PKCE authentication flow for tab app authentication
 
-## User journey for connected authentication
+## Connected authentication at run time
 
 User scenario:
 
@@ -37,15 +37,25 @@ User scenario:
 
 With connected authentication, apps with multiple capabilities require the users to log in only once. Following successful consent and authentication, users are able to access all app capabilities successfully:
 
-Step 1: App Installation and Initial Access
+**Step 1**: App Installation and Initial Access
 
 - The user installs the Teams app and opens the app.
 - Teams loads the bot chat as the first user interaction.
 
-Step 2: Bot Authentication Prompt
+**Step 2**: Bot Authentication Prompt
 
 - The user is prompted to sign in to the bot.
 - At sign-in, the app opens a task module and an authentication popup for the bot login flow.
+
+**Step 3**: Completing Bot Authentication
+
+- The user completes the bot authentication process.
+- The app notifies the user of successful authentication within Teams.
+
+**Step 4**: Initiating Account Linking with Entra NAA
+
+- Immediately after bot authentication, the app shows the user an option to link their account with Microsoft Entra NAA.
+- If the user consents to the account linking process, the app triggers the NAA authentication flow.
 
 **Flow-chart steps**:
 
