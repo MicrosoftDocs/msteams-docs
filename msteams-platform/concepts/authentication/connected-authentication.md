@@ -19,7 +19,7 @@ Connected authentication enables you to unify sign-in process for Teams agents a
 
 ## Prerequisites
 
-- Account linking URL
+- Account linking URL: This url must be hosted by the app. Teams will rendered the URL using a task module in an embedded iframe. An example for the account URL can look like `Myapp.com/linkWithMicrosoft`.
 - NAA-based PKCE authentication flow for tab app authentication
 
 ## Connected authentication at run time
@@ -97,16 +97,7 @@ Flow:
 
 ## Authentication flow for Connected authentication
 
-Step-by-step authentication flow
-
-1. user onboarding
-    1. User initiates authentication (e.g., via bot or app tab).
-    1. Application triggers the primary authentication flow.
-    1. Upon success, user is prompted to link accounts (if applicable).
-    1. Account linking process exchanges and stores tokens securely.
-    1. User gains access to all connected services without repeated logins.
-
-1. silent login: how silent login and token refresh are handled for persistent sessions.
+Use the following guidelines to implement connected authentication for bot and tab capabilities within a Teams app.
 
 ### Guidelines to implement connected authentication
 
@@ -120,3 +111,16 @@ Step-by-step authentication flow
 - Security requirements
   - Token validation
   - handle third-party cookies and authentication across domains
+
+Notes for auth flow:
+
+Step-by-step authentication flow
+
+1. user onboarding
+    1. User initiates authentication (e.g., via bot or app tab).
+    1. Application triggers the primary authentication flow.
+    1. Upon success, user is prompted to link accounts (if applicable).
+    1. Account linking process exchanges and stores tokens securely.
+    1. User gains access to all connected services without repeated logins.
+
+1. silent login: how silent login and token refresh are handled for persistent sessions.
