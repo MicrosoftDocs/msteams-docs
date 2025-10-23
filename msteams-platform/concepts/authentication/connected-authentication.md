@@ -57,6 +57,17 @@ With connected authentication, apps with multiple capabilities require the users
 - Immediately after bot authentication, the app shows the user an option to link their account with Microsoft Entra NAA.
 - If the user consents to the account linking process, the app triggers the NAA authentication flow.
 
+**Step 5**: Linking Accounts and Token Exchange
+
+- The NAA consent dialog appears. When the user gives consent, the app receives an NAA token for the user.
+  - The app backend uses both the bot token and the NAA token to link the user’s profiles.
+  - This linkage ensures that the user’s authentication is unified and persistent.
+
+**Step 6**: Seamless Future Logins
+
+- In future sessions, the user benefits from silent, automatic login using the linked NAA token.
+- The user doesn't need to log in separately for the bot and tab capabilities and can enjoy a streamlined and consistent experience across the app.
+
 **Flow-chart steps**:
 
 1. A user installs and opens the app.
