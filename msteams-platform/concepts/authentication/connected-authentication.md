@@ -28,6 +28,15 @@ Connected authentication enables you to unify sign-in process for Teams agents a
 
 ## User journey for connected authentication
 
+User scenario:
+
+1. As a developer, I build apps for Teams for my organization.
+1. The Contoso app includes both bot and tab capabilities. The app user must log in separately.
+1. I want to the app users to log in only once...
+1. ... but be able access all capabilities.
+
+With connected authentication, apps with multiple capabilities require the users to log in only once. Following successful consent and authentication, users are able to access all app capabilities successfully.
+
 1. A user installs and opens the app.
 1. The user navigates to bot chat and sees the sign-in prompt.
 1. The app initiates bot sign-in, which opens a task module and external auth popup.
