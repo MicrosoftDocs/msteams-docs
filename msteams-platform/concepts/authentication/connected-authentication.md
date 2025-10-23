@@ -47,6 +47,8 @@ Flow:
 - Show the main actors (user, app, authentication providers, backend services).
 - Explain how tokens are issued, exchanged, and linked.
 
+## Authentication flow for Connected authentication
+
 Step-by-step authentication flow
 
 1. user onboarding
@@ -58,4 +60,15 @@ Step-by-step authentication flow
 
 1. silent login: how silent login and token refresh are handled for persistent sessions.
 
-## Authentication flow for Connected authentication
+### Guidelines to implement connected authentication
+
+- App interface requirements
+  - UI prompts for authentication and account linking
+  - Handle redirection, popups, and consent dialog for users
+- Backend requirements
+  - secure token management and storage
+  - NAA API and other APIs for linking and validating account
+  - Integration with IdP (Azure, Auth0)
+- Security requirements
+  - Token validation
+  - handle third-party cookies and authentication across domains
