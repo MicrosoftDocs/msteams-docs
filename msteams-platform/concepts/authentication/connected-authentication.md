@@ -14,21 +14,23 @@ ms.localizationpriority: medium
 
 Connected authentication enables you to unify sign-in process for Teams agents and bot and tab apps.
 
-- Seamless user interaction
-- Efficient developer experience
-- Enhanced security
-- Consistent onboarding user experience
+- Efficient developer experience: Developers can implement a single authentication and setup flow. Enabling connected authentication minimizes redundant code and fragmented user onboarding.
+- Enhanced security: Managing authentication centrally ensures compliance with organizational policies and enables advanced security features like multi-factor authentication.
 
-Key Benefits Highlighted
+**Key highlights**:
 
-- Unified Experience: The user only authenticates once, eliminating repetitive logins.
-- Persistent Login: Account linking with Entra NAA ensures the user stays logged in, even if the primary login method expires.
-- Seamless Access: Both bot and tab components recognize the user through the linked tokens, enabling smooth transitions and interactions.
+- Unified user experience: Users authenticate once and gain access to all app capabilities, reducing confusion and repetitive logins.
+
+- Consistent Onboarding: Connected authentication flow ensures that all users meet minimum setup requirements before accessing app features. Following onboarding, the user experiences increased reliability and lesser support issues.
+
+- Persistent Login: Account linking with Entra Nested app authentication (NAA) ensures that the user stays logged in, even if the primary login method expires.
+
+- Seamless Access: Connected authentication achieves smoother app transactions and interactions as bot and tab capabilities recognize the user through the linked tokens.
 
 ## Prerequisites
 
 - Account linking URL
-- Nested app authentication (NAA) based PKCE authentication flow for tab app authentication
+- NAA-based PKCE authentication flow for tab app authentication
 
 ## Connected authentication at run time
 
