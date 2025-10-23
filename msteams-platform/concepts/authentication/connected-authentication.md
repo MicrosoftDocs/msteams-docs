@@ -17,16 +17,6 @@ Connected authentication enables you to unify sign-in process for Teams agents a
 - Efficient developer experience: Developers can implement a single authentication and setup flow. Enabling connected authentication minimizes redundant code and fragmented user onboarding.
 - Enhanced security: Managing authentication centrally ensures compliance with organizational policies and enables advanced security features like multi-factor authentication.
 
-**Key highlights**:
-
-- Unified user experience: Users authenticate once and gain access to all app capabilities, reducing confusion and repetitive logins.
-
-- Consistent Onboarding: Connected authentication flow ensures that all users meet minimum setup requirements before accessing app features. Following onboarding, the user experiences increased reliability and lesser support issues.
-
-- Persistent Login: Account linking with Entra Nested app authentication (NAA) ensures that the user stays logged in, even if the primary login method expires.
-
-- Seamless Access: Connected authentication achieves smoother app transactions and interactions as bot and tab capabilities recognize the user through the linked tokens.
-
 ## Prerequisites
 
 - Account linking URL
@@ -73,6 +63,16 @@ With connected authentication, apps with multiple capabilities require the users
 
 - In future sessions, the user benefits from silent, automatic login using the linked NAA token.
 - The user doesn't need to log in separately for the bot and tab capabilities and can enjoy a streamlined and consistent experience across the app.
+
+**Key highlights for users**:
+
+- Unified user experience: Users authenticate once and gain access to all app capabilities, reducing confusion and repetitive logins.
+
+- Consistent Onboarding: Connected authentication flow ensures that all users meet minimum setup requirements before accessing app features. Following onboarding, the user experiences increased reliability and lesser support issues.
+
+- Persistent Login: Account linking with Entra Nested app authentication (NAA) ensures that the user stays logged in, even if the primary login method expires.
+
+- Seamless Access: Connected authentication achieves smoother app transactions and interactions as bot and tab capabilities recognize the user through the linked tokens.
 
 **Flow-chart steps**:
 
