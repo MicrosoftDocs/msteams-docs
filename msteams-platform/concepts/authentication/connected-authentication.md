@@ -14,12 +14,16 @@ ms.localizationpriority: medium
 
 Connected authentication enables you to unify sign-in process for Teams agents and bot and tab apps.
 
-[Add key benefits]
-
 - Seamless user interaction
 - Efficient developer experience
 - Enhanced security
 - Consistent onboarding user experience
+
+Key Benefits Highlighted
+
+- Unified Experience: The user only authenticates once, eliminating repetitive logins.
+- Persistent Login: Account linking with Entra NAA ensures the user stays logged in, even if the primary login method expires.
+- Seamless Access: Both bot and tab components recognize the user through the linked tokens, enabling smooth transitions and interactions.
 
 ## Prerequisites
 
