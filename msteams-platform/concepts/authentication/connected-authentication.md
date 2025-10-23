@@ -89,28 +89,36 @@ With connected authentication, apps with multiple capabilities require the users
 
 [Add introduction]
 
-Flow:
+Notes for flow infographic:
 
 - High-level diagram or description of the authentication flow.
 - Show the main actors (user, app, authentication providers, backend services).
 - Explain how tokens are issued, exchanged, and linked.
 
-## Authentication flow for Connected authentication
+## Enable connected authentication
 
-Use the following guidelines to implement connected authentication for bot and tab capabilities within a Teams app.
+This section describes the tasks involved in implementing connected authentication within Teams. These tasks are language- and framework-agnostic.
 
-### Guidelines to implement connected authentication
+To enable connected authentication for a Teams app that includes bot and tab capabilities:
 
-- App interface requirements
-  - UI prompts for authentication and account linking
-  - Handle redirection, popups, and consent dialog for users
-- Backend requirements
-  - secure token management and storage
-  - NAA API and other APIs for linking and validating account
-  - Integration with IdP (Azure, Auth0)
-- Security requirements
-  - Token validation
-  - handle third-party cookies and authentication across domains
+1. Configure app with Microsoft Entra ID: For more information, see [tabs](../../tabs/how-to/authentication/tab-sso-register-aad.md) and [bots](../../bots/how-to/authentication/bot-sso-register-aad.md).
+1. App interface requirements
+
+- UI prompts for authentication and account linking
+- Handle redirection, popups, and consent dialog for users
+
+1. Backend requirements
+
+- secure token management and storage
+- NAA API and other APIs for linking and validating account
+- Integration with IdP (Azure, Auth0)
+
+1. Security requirements
+
+- Token validation
+- handle third-party cookies and authentication across domains
+
+###
 
 Notes for auth flow:
 
