@@ -39,4 +39,17 @@ Connected authentication enables you to unify sign-in process for Teams agents a
 
 ## Developer experience
 
+[Add introduction]
+
+Flow:
+
+- High-level diagram or description of the authentication flow.
+- Show the main actors (user, app, authentication providers, backend services).
+- Explain how tokens are issued, exchanged, and linked.
+
+Step-by-step authentication flow
+
+1. user onboarding
+1. silent login
+
 ## Authentication flow for Connected authentication
