@@ -47,7 +47,7 @@ Here are some scenarios for agents in Teams:
 - **Course shortlisting and next steps**: Shortlists top courses aligned with career objectives and outlines actionable next steps for each.
 - **Expert-endorsed recommendations**: Recommends leading courses from recognized experts in IT and AI.
 
-[WIP image placeholder]
+[WIP: image placeholder]
 
 :::image type="content" source="../assets/images/agents-in-teams/agent-overview/agent-scenario-academic.png" alt-text="Image shows agent user scenario." lightbox="../assets/images/agents-in-teams/agent-overview/agent-scenario-academic.png" border="false":::
 
@@ -55,12 +55,7 @@ For more information, see [Add link to code sample to Contoso Knowledge Hub].
 
 Some other user scenarios can include:
 
-- **Code companion**: Get instant coding assistance with the code companion, an agent for helping developers on-the-go. Code companion is your on-the-go agent available 24/7 to help you overcome coding challenges and boost productivity. This agent provides:
-
-  - Code and tool suggestions: Get help with code snippets, debugging, relevant code samples, and tools available for building your agents and apps.
-  - Error resolution: Identifying and suggesting fixes with code analysis.
-  - Best practices: Learn more about industry-standard coding practices.
-  - Knowledgebase: Access a vast repository of domain and product knowledge from Learn documentation and tutorials.
+- Code companion
 - Helpdesk and customer support
 - Task automation
 
