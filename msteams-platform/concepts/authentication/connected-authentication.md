@@ -118,7 +118,11 @@ To enable connected authentication for a Teams app that includes bot and tab cap
 - Token validation
 - handle third-party cookies and authentication across domains
 
-###
+### Build app interface
+
+Design the user experience to ensure smooth and seamless one-time authentication process for the app users. The user experience must trigger the authentication flow to seek user consent for account linking, popups dialogs, and redirection.
+
+consent and validation process
 
 Notes for auth flow:
 
