@@ -144,9 +144,9 @@ To implement backend logic for token management and account linking:
 
     After the user completes authentication with Microsoft Entra (NAA), the backend system of the app generates a secure access token.
 
-        - This token represents the user’s authenticated session for the NAA-based login. This access token is used to verify the user’s identity and grant access to protected resources in the Teams tab.
-        - During the auth redirect, the user is sent back to the app after successful login. The backend sends this access token to the user’s browser by setting it in a cookie.
-        - The Teams tab can now use this cookie to automatically authenticate the user in future interactions. It enables a seamless experience without repeated logins.
+    - This token represents the user’s authenticated session for the NAA-based login. This access token is used to verify the user’s identity and grant access to protected resources in the Teams tab.
+    - During the auth redirect, the user is sent back to the app after successful login. The backend sends this access token to the user’s browser by setting it in a cookie.
+    - The Teams tab can now use this cookie to automatically authenticate the user in future interactions. It enables a seamless experience without repeated logins.
 
 Post authentication success the account linking page needs to now call its backend to link the NAA based profile with the Bot auth Profile.
 
