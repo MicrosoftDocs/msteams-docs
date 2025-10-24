@@ -20,7 +20,7 @@ Connected authentication enables you to unify sign-in process for Teams agents a
 ## Prerequisites
 
 - Account linking URL: This url must be hosted by the app. Teams will rendered the URL using a task module in an embedded iframe. An example for the account URL can look like `Myapp.com/linkWithMicrosoft`.
-- NAA-based PKCE authentication flow for tab app authentication
+- NAA-based Proof Key for Code Exchange (PKCE) authentication flow for tab app authentication
 
 ## Connected authentication at run time
 
@@ -123,7 +123,21 @@ To enable connected authentication for a Teams app that includes bot and tab cap
 
 To implement backend logic for token management and account linking:
 
-1.
+1. Obtain and save the NAA token:
+
+    1. After the app receives user consent, call the NAA Auth API to receive NAA token.
+    1. Save the received NAA token securely in a cookie for subsequent flows.
+
+1. Trigger the tab auth flow:
+
+    1. Configure `connectionName` as `microsoftEntraCustom` for NAA-based tab auth flow.
+    1. Use the `MicrosoftTeams.authentication.authenticate` API to trigger tab auth flow in a popout window.
+    1. Ensure that the authentication URL reads the NAA token that you've saved in a cookie.
+    1. Validate the cookie and perform PKCE code exchange.
+    1. Create a user profile for the NAA user who gave the consent.
+
+d. Now the app needs to trigger the Tab auth flow in a popout window using MicrosoftTeams.authentication.authenticate API with connectionName as microsoftEntraCustom as configured for their NAA based tab auth flow.
+e. The authentication url for the microsoftEntraCustom needs to read the NAA token set in the cookie, validate it, perform PKCE code exchange and create a user profile in the backend for this NAA User.
 
 ### Build user experience to trigger authentication
 
