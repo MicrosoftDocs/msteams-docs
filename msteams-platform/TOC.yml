@@ -535,6 +535,9 @@
     - name: Bots in Teams
       href: bots/build-a-bot.md
       displayName: Bot samples, Code sample, Teams AI library, Microsoft Bot Framework SDK, build a bot, build AI bot, command bot, workflow bot, custom engine agent, agent, conversational bot, notification bot, tools, platforms, Azure OpenAI, Microsoft 365 Agents Toolkit, Azure AI Foundry
+    - name: Bot with SSO authentication
+      href: bots/bots-with-sso.md
+      displayName: SSO, authentication, OAuth
 #    - name: Teams AI library v1
 #      items:
 #      - name: What is Teams AI library?
@@ -694,6 +697,12 @@
       - name: Create API-based message extensions
         href: messaging-extensions/create-api-message-extension.md
         displayName: API-based, Microsoft 365 Agents Toolkit CLI, Developer Portal, Visual Studio Code, Visual Studio
+      - name: Action-based message extension
+        href: messaging-extensions/build-action-based-message-extension
+        displayName: action-based message extension, Azure Bot
+      - name: SSO for message extensions
+        href: messaging-extensions/enable-sso-for-message-extension
+        displayName: Microsoft entra SSO, web authentication, OAuth connection
     - name: Build message extensions using Bot Framework  
       items:
       - name: Bot-based message extensions

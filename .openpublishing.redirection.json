@@ -1491,6 +1491,16 @@
       {
         "source_path": "msteams-platform/resources/schema/manifest-schema-dev-preview.md",
         "redirect_url": "/microsoft-365/extensibility/schema/?view=m365-app-prev?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json&preserve-view=true"
+      },
+      {
+        "source_path": "msteams-platform/sbs-bots-with-sso.yml",
+        "redirect_url": "/microsoftteams/platform/bots-with-sso.md"
+      },
+      {  "source_path": "msteams-platform/sbs-meetingextension-action.yml",
+        "redirect_url": "/microsoftteams/platform/enable-sso-for-message-extension.md"
+      },
+      {  "source_path": "msteams-platform/sbs-tabs-and-messaging-extensions-with-sso.yml",
+        "redirect_url": "/microsoftteams/platform/build-action-based-message-extension.md"
       }
     ]
 }
