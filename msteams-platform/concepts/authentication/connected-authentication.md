@@ -14,6 +14,8 @@ ms.localizationpriority: medium
 
 Connected authentication enables you to unify sign-in process for Teams agents and bot and tab apps.
 
+[WIP: Query - check for agents]
+
 - Efficient developer experience: Developers can implement a single authentication and setup flow. Enabling connected authentication minimizes redundant code and fragmented user onboarding.
 - Enhanced security: Managing authentication centrally ensures compliance with organizational policies and enables advanced security features like multi-factor authentication.
 
@@ -21,6 +23,8 @@ Connected authentication enables you to unify sign-in process for Teams agents a
 
 - Account linking URL: This url must be hosted by the app. Teams will rendered the URL using a task module in an embedded iframe. An example for the account URL can look like `Myapp.com/linkWithMicrosoft`.
 - NAA-based Proof Key for Code Exchange (PKCE) authentication flow for tab app authentication
+
+For more information about NAA, see [Nested app authentication](nested-authentication.md).
 
 ## Connected authentication at run time
 
@@ -32,6 +36,8 @@ User scenario:
 1. ... but be able access all capabilities.
 
 With connected authentication, apps with multiple capabilities require the users to log in only once. Following successful consent and authentication, users are able to access all app capabilities successfully:
+
+[WIP: Add screenshots]
 
 **Step 1**: App Installation and Initial Access
 
@@ -108,6 +114,8 @@ To enable connected authentication for a Teams app that includes bot and tab cap
 
 To implement backend logic for token management and account linking:
 
+[WIP: Add code snippets]
+
 1. Obtain and save the NAA token:
 
     1. After the app receives user consent, call the NAA Auth API to receive NAA token.
@@ -176,3 +184,14 @@ Post authentication the account linking page must call the backend to link the N
 ### Build user experience to trigger authentication
 
 Design the user experience to ensure smooth and seamless one-time authentication process for the app users. The user experience must trigger the authentication flow to seek user consent for account linking, popups dialogs, and redirection.
+
+## Code sample
+
+[WIP: Check for code samples]
+
+## See also
+
+- [Authenticate users in Microsoft Teams](authentication.md)
+- [Nested app authentication](nested-authentication.md)
+- [Enable SSO for tab app](../../tabs/how-to/authentication/tab-sso-overview.md)
+- [Enable SSO for your app](../../bots/how-to/authentication/bot-sso-overview.md)
