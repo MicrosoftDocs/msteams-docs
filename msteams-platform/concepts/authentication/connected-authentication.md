@@ -102,20 +102,14 @@ This section describes the tasks involved in implementing connected authenticati
 To enable connected authentication for a Teams app that includes bot and tab capabilities:
 
 1. Configure app with Microsoft Entra ID: For more information, see [tabs](../../tabs/how-to/authentication/tab-sso-register-aad.md) and [bots](../../bots/how-to/authentication/bot-sso-register-aad.md).
-
 1. Backend requirements
-
     - secure token management and storage
     - NAA API and other APIs for linking and validating account
     - Integration with IdP (Azure, Auth0)
-
 1. Build user experience to trigger authentication
-
     - UI prompts for authentication and account linking
     - Handle redirection, popups, and consent dialog for users
-
 1. Security requirements
-
     - Token validation
     - handle third-party cookies and authentication across domains
 
