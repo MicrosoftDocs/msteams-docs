@@ -95,7 +95,7 @@ Notes for flow infographic:
 - Show the main actors (user, app, authentication providers, backend services).
 - Explain how tokens are issued, exchanged, and linked.
 
-## Enable connected authentication
+### Enable connected authentication
 
 This section describes the tasks involved in implementing connected authentication within Teams. These tasks are language- and framework-agnostic.
 
