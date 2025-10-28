@@ -12,7 +12,7 @@ With the introduction of Teams AI library, developers can create agents tailored
 
 ## What are agents in Teams?
 
-Agents in Teams are intelligent apps built with the Teams AI library. They interact through natural language (LLM), connect to business data, and perform actions on behalf of users. Leveraging large language models and Microsoft’s ecosystem, these agents deliver secure, customized AI experiences within Teams and can be extended to other Microsoft 365 hubs using the Microsoft 365 Agents SDK.
+Agents in Teams are intelligent and conversational apps built with the Teams AI library. They interact through natural language (LLM), connect to business data, and perform actions on behalf of users. Leveraging large language models and Microsoft’s ecosystem, these agents deliver secure, customized AI experiences within Teams and can be extended to other Microsoft 365 hubs using the Microsoft 365 Agents SDK.
 
 :::image type="content" source="../assets/images/agents-in-teams/agent-overview/agents-in-teams.png" alt-text="Image shows what are agents in Teams." border="false" lightbox="../assets/images/agents-in-teams/agent-overview/agents-in-teams.png":::
 
