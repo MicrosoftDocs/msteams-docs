@@ -148,12 +148,6 @@ To implement backend logic for token management and account linking:
     - During the auth redirect, the user is sent back to the app after successful login. The backend sends this access token to the user’s browser by setting it in a cookie.
     - The Teams tab can now use this cookie to automatically authenticate the user in future interactions. It enables a seamless experience without repeated logins.
 
-Post authentication success the account linking page needs to now call its backend to link the NAA based profile with the Bot auth Profile.
-
-1. Link account to enable persistent login:
-    1. After successful authentication for both tab (NAA) and bot, the app account linking dialog must send a request to backed to link the tab and bot accounts along with the tokens.
-    2. The backend must receive the NAA token and the bot access token and link the two profiles.
-
     Here's an example code snippet to fetch the bot auth flow from the token service:
 
     ```JavaScript
@@ -171,6 +165,14 @@ Post authentication success the account linking page needs to now call its backe
 
     const bearer = res.token;
     ```
+
+Post authentication the account linking page must call the backend to link the NAA based profile with the bot auth Profile.
+
+1. Link account to enable persistent login:
+    1. After successful authentication for both tab (NAA) and bot, the app account linking dialog must send a request to backed to link the tab and bot accounts along with the tokens.
+    1. The backend must receive the NAA token and the bot access token.
+    1. After the tokens are available, the app must unify the profiles in one.
+    1. The app must use the microsftEntraCustom as the login connection for future silent login.
 
   Linking these profiles means that the user’s identity is unified across both the bot and tab capabilities. The user enjoys a persistent, unified login experience across the Teams app.
 
