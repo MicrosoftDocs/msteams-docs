@@ -153,6 +153,25 @@ Post authentication success the account linking page needs to now call its backe
 1. Link account to enable persistent login:
     1. After successful authentication for both tab (NAA) and bot, the app account linking dialog must send a request to backed to link the tab and bot accounts along with the tokens.
     2. The backend must receive the NAA token and the bot access token and link the two profiles.
+
+    Here's an example code snippet to fetch the bot auth flow from the token service:
+
+    ```JavaScript
+    import { App } from '@microsoft/teams.apps';
+
+    const app = new App({
+        clientId: process.env.ENTRA_CLIENT_ID,
+        clientSecret: process.env.ENTRA_SECRET_ID,
+    });
+    await app.start();
+    const res = await app.api.users.token.get({
+        userId: "aad-user-id",
+        connectionName: "auth0",
+    });
+
+    const bearer = res.token;
+    ```
+
   Linking these profiles means that the user’s identity is unified across both the bot and tab capabilities. The user enjoys a persistent, unified login experience across the Teams app.
 
 ### Build user experience to trigger authentication
