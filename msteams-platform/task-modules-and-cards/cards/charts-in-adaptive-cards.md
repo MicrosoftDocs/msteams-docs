@@ -22,7 +22,7 @@ You can visually represent data through charts in Adaptive Cards. You can use ch
 * [Vertical bar chart](https://adaptivecards.microsoft.com/?topic=Chart.VerticalBar)
 
 > [!NOTE]
-> Charts in Adaptive Cards aren't currently supported in the developer portal.
+> Charts in Adaptive Cards aren't currently supported in the developer portal, so you can't view or test them there.
 
 ## Donut chart
 
