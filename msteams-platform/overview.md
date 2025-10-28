@@ -23,7 +23,7 @@ You can meet these scenarios to enhance collaboration using Teams agents or apps
 
 ## Why build on Teams platform?
 
-Whether you want to build powerful agents or rich apps, the platform gives you the tools to extend Teams with seamless, secure, and contextual solutions. Teams platform supports custom experiences, workflows, and integrations that live where people work. You can facilitate communication and integrate agents and apps seamlessly across Microsoft 365 platforms.
+Whether you want to build powerful agents or rich apps, the platform gives you the tools to extend Teams with seamless, secure, and contextual solutions. Teams platform, with over 320 million monthly active users, enables custom experiences, workflows, and integrations where people work. You can facilitate communication and integrate agents and apps seamlessly across Microsoft 365 platforms.
 
 Agents are the digital workers in the organization. By building and integrating agents into Teams workspaces, organizations connect with customers, deliver services, and share information efficiently. Key roles of an agent in Teams include:
 
