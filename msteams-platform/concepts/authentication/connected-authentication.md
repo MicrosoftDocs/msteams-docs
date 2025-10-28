@@ -105,19 +105,19 @@ To enable connected authentication for a Teams app that includes bot and tab cap
 
 1. Backend requirements
 
-- secure token management and storage
-- NAA API and other APIs for linking and validating account
-- Integration with IdP (Azure, Auth0)
+    - secure token management and storage
+    - NAA API and other APIs for linking and validating account
+    - Integration with IdP (Azure, Auth0)
 
 1. Build user experience to trigger authentication
 
-- UI prompts for authentication and account linking
-- Handle redirection, popups, and consent dialog for users
+    - UI prompts for authentication and account linking
+    - Handle redirection, popups, and consent dialog for users
 
 1. Security requirements
 
-- Token validation
-- handle third-party cookies and authentication across domains
+    - Token validation
+    - handle third-party cookies and authentication across domains
 
 ## Add code for connected authentication
 
@@ -179,18 +179,3 @@ Post authentication the account linking page must call the backend to link the N
 ### Build user experience to trigger authentication
 
 Design the user experience to ensure smooth and seamless one-time authentication process for the app users. The user experience must trigger the authentication flow to seek user consent for account linking, popups dialogs, and redirection.
-
-consent and validation process
-
-Notes for auth flow:
-
-Step-by-step authentication flow
-
-1. user onboarding
-    1. User initiates authentication (e.g., via bot or app tab).
-    1. Application triggers the primary authentication flow.
-    1. Upon success, user is prompted to link accounts (if applicable).
-    1. Account linking process exchanges and stores tokens securely.
-    1. User gains access to all connected services without repeated logins.
-
-1. silent login: how silent login and token refresh are handled for persistent sessions.
