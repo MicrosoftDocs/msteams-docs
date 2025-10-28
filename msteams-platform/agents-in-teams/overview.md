@@ -53,13 +53,7 @@ Here are some scenarios for agents in Teams:
 
 For more information, see [Add link to code sample to Contoso Knowledge Hub].
 
-Some other user scenarios can include:
-
-- Code companion
-- Helpdesk and customer support
-- Task automation
-
-## How to choose?
+## Choose how to build an agent
 
 Developers and organizations can choose from multiple approaches depending on the app requirements:
 
