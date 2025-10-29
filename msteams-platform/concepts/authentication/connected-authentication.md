@@ -37,6 +37,8 @@ User scenario:
 
 With connected authentication, apps with multiple capabilities require the users to log in only once. Following successful consent and authentication, users are able to access all app capabilities successfully:
 
+:::image type="content" source="../../assets/images/authentication/connected-authentication/connected-authentication-flow.png" alt-text="Image shows the connected authentication flow.":::
+
 [WIP: Add screenshots]
 
 **Step 1**: App Installation and Initial Access
@@ -81,8 +83,6 @@ With connected authentication, apps with multiple capabilities require the users
 - Seamless Access: Connected authentication achieves smoother app transactions and interactions as bot and tab capabilities recognize the user through the linked tokens.
 
 [WIP: Add Flow diagram]
-
-:::image type="content" source="../../assets/images/authentication/connected-authentication/connected-authentication-flow.png" alt-text="Image shows the connected authentication flow.":::
 
 ## Developer experience
 
