@@ -82,6 +82,8 @@ With connected authentication, apps with multiple capabilities require the users
 
 [WIP: Add Flow diagram]
 
+:::image type="content" source="../../assets/images/authentication/connected-authentication/connected-authentication-flow.png" alt-text="Image shows the connected authentication flow.":::
+
 ## Developer experience
 
 [Add introduction]
