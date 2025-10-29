@@ -37,7 +37,7 @@ User scenario:
 
 With connected authentication, apps with multiple capabilities require the users to log in only once. Following successful consent and authentication, users are able to access all app capabilities successfully:
 
-:::image type="content" source="../../assets/images/authentication/connected-authentication/connected-authentication-flow.png" alt-text="Image shows the connected authentication flow." lightbox="../../assets/images/authentication/connected-authentication/connected-authentication-flow.png":::
+:::image type="content" source="../../assets/images/authentication/connected-authentication/connected-authentication-flow.png" alt-text="Image shows the connected authentication flow." border="false" lightbox="../../assets/images/authentication/connected-authentication/connected-authentication-flow.png":::
 
 [WIP: Add screenshots]
 
