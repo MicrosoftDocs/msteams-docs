@@ -22,7 +22,7 @@ Shared and private channels in Microsoft Teams enable flexible collaboration wit
 
 ## Understand channels for app integration
 
-When you're building or integrating apps with Microsoft Teams, understanding channel types is crucial, as different channels determine app visibility, user access, and data storage behavior:
+ Different channels determine app visibility, user access, and data storage behavior:
 
 | Channels | Access                          | Collaboration                                                                 | File storage location               |
 |----------|----------------------------------|--------------------------------------------------------------------------------|-------------------------------------|
@@ -107,7 +107,7 @@ If your app handles advanced scenarios, or depends on the specified parameters l
 
 ### Get context for shared and private channels
 
-When loading the user experience in a shared or private channel, use the data received from the `getContext` call for shared or private channels. The `getContext` call publishes two new properties, `hostTeamGroupID` and `hostTenantID`, which are used to retrieve channel membership using Microsoft Graph APIs. `hostTeam` is the team that creates both private and shared channels. For more information, see [Get context in shared channels](tabs/how-to/access-teams-context.md#get-context-in-shared-channels) and [Get context for your tab for private channels](tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels).
+When loading the user experience in a shared or private channel, use the data received from the `getContext` call for shared or private channels. The `getContext` call publishes two new properties, `hostTeamGroupID` and `hostTenantID`, which are used to retrieve channel membership using Microsoft Graph APIs. Every channel is created within a host team.. For more information, see [Get context in shared channels](tabs/how-to/access-teams-context.md#get-context-in-shared-channels) and [Get context for your tab for private channels](tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels).
   
 ### Manage channel membership
 
@@ -207,7 +207,7 @@ The `conversationUpdate` event is sent to your bot when it receives notification
     }
     ```
 
-3. Ensure the bot is enabled in the shared channel
+3. Ensure the bot is added in the shared channel
 
     To receive member event notifications, install the bot at the team level and manually allow it in the shared channel.
 
@@ -445,6 +445,9 @@ If you're building an app using [SharePoint](/sharepoint/dev/spfx/integrate-with
 
 Use the Microsoft Graph invite API to access the document library of the SPO site linked to a shared or private channel.
 
+> [!NOTE]
+>For any Mailbox or Calendar integration requirements, contact Microsoft for guidance.
+
 [Back to Top](#apps-for-shared-and-private-channels)
 
 ### Access SharePoint storage correctly for channel files
@@ -508,7 +511,7 @@ When your tab or task module needs to access sharepoint resources in the channel
 Use getContext() to retrieve channel context. Compare `user.tenant.id` with `channel.ownerTenantId or channel.hostTenantId`. If they differ, the user is external.
 
 2. Request token from home tenant
-Call getAuthToken() with the external user's tenant ID (`user.tenant.id` or `tid`) to ensure the token is issued from their home tenant.
+Call [getAuthToken()](msteams-platform\tabs\how-to\authentication\tab-sso-code.md) with the external user's tenant ID (`user.tenant.id` or `tid`) to ensure the token is issued from their home tenant.
 
 [Back to Top](#apps-for-shared-and-private-channels)
 
@@ -567,7 +570,10 @@ Perform the following steps to validate:
    * Whether your membership API reflects the new member
 
 Testings across these scenarios help you spot any issues with functionality, permissions, and user experience.
-  
+
+> [!NOTE]  
+> **Private channel** is not yet available in Developer preview and will be available soon.
+
 ## Best practices for supporting all channels
 
 ### Dos
@@ -576,7 +582,6 @@ Testings across these scenarios help you spot any issues with functionality, per
 * **Control data access and sharing** based on channel membership and permissions. For more information, see [Manage channel membership](#manage-channel-membership).
 * **Determine** whether users are internal, guests, or external (cross-tenant), and authenticate them in their home tenant. Always validate permissions for cross-tenant scenarios, especially when accessing files. For more information, see [Identify guest users in channels](#identify-guest-users-in-channels)
 * **Update help text and user guides** to explain how your app behaves in different channel types, including any limitations for guests or external users.
-* **Use cache large member lists and change notifications** to update them, rather than relying on frequent API calls. For example, refresh your cache only when a membership change event occurs.
 * **Review Microsoft Teams documentation and changelogs** to stay aligned with the latest updates to APIs, permissions, and channel configurations.
 
 ### Don'ts
