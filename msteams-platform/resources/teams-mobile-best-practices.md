@@ -62,7 +62,7 @@ To run a performance audit, follow these steps:
 
 ## Calculate performance metrics for apps
 
-Identifying new or existing apps with low performance for compliance with best practices is crucial for operational effectiveness. The **Performance Report tool** (or Perf Report tool) not only allows you to assess performance of your mobile apps in absolute terms; but also helps you compare performance across different apps by benchmarking against recommended values. It's a self-serve, lightweight tool that can be run directly on your mobile (Android and iOS) or local device.
+Identifying new or existing apps with low performance for compliance with best practices is crucial for operational effectiveness. The **Performance Report tool** (or Perf Report tool) not only allows you to assess performance of your mobile apps in absolute terms; but also helps you compare performance across different apps by benchmarking against recommended values. It's a self-serve, lightweight tool that can be run directly on your mobile (Android and iOS).
 
 The steps involved are:
 
