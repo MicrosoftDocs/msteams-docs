@@ -511,7 +511,7 @@ When your tab or task module needs to access sharepoint resources in the channel
 Use getContext() to retrieve channel context. Compare `user.tenant.id` with `channel.ownerTenantId or channel.hostTenantId`. If they differ, the user is external.
 
 2. Request token from home tenant
-Call [getAuthToken()](msteams-platform\tabs\how-to\authentication\tab-sso-code.md) with the external user's tenant ID (`user.tenant.id` or `tid`) to ensure the token is issued from their home tenant.
+Call [getAuthToken()](tabs\how-to\authentication\tab-sso-code.md) with the external user's tenant ID (`user.tenant.id` or `tid`) to ensure the token is issued from their home tenant.
 
 [Back to Top](#apps-for-shared-and-private-channels)
 
