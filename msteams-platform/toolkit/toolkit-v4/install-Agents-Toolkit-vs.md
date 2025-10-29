@@ -23,7 +23,7 @@ You can learn how to install Microsoft 365 Agents Toolkit (previously known as T
 
 1. From the installation screen, perform the following steps:
    1. Select **Workloads** > **ASP.NET and web development**.
-   1. On the right pane, go to **Installation details** > **Optional** and then select **Microsoft Teams development tools**.
+   1. On the right pane, go to **Installation details** > **Optional** and then select **Microsoft 365 Agents Tookkit**.
    1. Select **Install**. Visual Studio is installed and a pop-up appears.
 
 1. Select **Launch**.
