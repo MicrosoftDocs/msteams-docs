@@ -446,8 +446,7 @@ If you're building an app using [SharePoint](/sharepoint/dev/spfx/integrate-with
 Use the Microsoft Graph invite API to access the document library of the SPO site linked to a shared or private channel.
 
 > [!NOTE]
->For any Mailbox or Calendar integration requirements, contact Microsoft for guidance.
-
+>See [Feature request and general help](feedback.md) for any requirements on Mailbox or Calendar scenarios.
 [Back to Top](#apps-for-shared-and-private-channels)
 
 ### Access SharePoint storage correctly for channel files
