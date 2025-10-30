@@ -27,7 +27,7 @@ Here's a list of tools you need for building and deploying your apps.
    | &nbsp; | Install | For using |
    | --- | --- | --- |
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, or TypeScript, build environments. Use the latest version. |
-   | &nbsp; | [Microsoft 365 Agents Toolkit](toolkit-v4/install-Agents-Toolkit-vs.md) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
+   | &nbsp; | [Microsoft 365 Agents Toolkit](toolkit-v4\install-Agents-Toolkit-vs.md) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
    | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call all in one place.|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
@@ -262,9 +262,127 @@ You get the notification in the Teams channel:
 
 You get the notification in the personal chat:
 
-:::image type="content" source="../assets/images/sbs-notification-bot/member-output.png" alt-text="member-output" lightbox="/assets/images/sbs-notification-bot/member-output.png"..:::
+:::image type="content" source="../assets/images/sbs-notification-bot/member-output.png" alt-text="member-output" lightbox="../assets/images/sbs-notification-bot/member-output.png"..:::
 
  > [!div class="nextstepaction"]
  > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+send+notification+to+Teams+channel&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-notificationbot%3Ftabs%3Dvscode%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-notificationbot.yml&documentVersionIndependentId=4680d8ea-8210-67e0-7a1f-f24e94d58985&platformId=dd058113-fb02-e03e-07e6-edb5a32216f4&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 [Back to Top](#build-an-interactive-notification-bot-app)
+
+## Deploy your first Teams app
+
+You've learned to build and run Teams app with notification bot capability. The final step is to deploy your app to Azure.
+
+Let's deploy the first app with notification bot capability on Azure using Agents Toolkit.
+
+### Sign in to your Azure account
+
+Use your account to access the Microsoft Azure portal and to provide provision new cloud resources to support your app.
+
+1. Open Visual Studio Code.
+1. Open the project folder where you created the notification bot app.
+1. Select the Microsoft 365 Agents Toolkit  :::image type="icon" source="../assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the sidebar.
+1. Select **Sign in to Azure** using your credentials.
+
+> [!TIP]
+> If you have the AZURE ACCOUNT extension installed and are using the same account, you can skip this step.
+
+Your default web browser opens to let you sign in to the account.
+
+1. Close the browser when prompted and return to Visual Studio Code.
+
+The **ACCOUNTS** section of the sidebar shows the two accounts separately. It also lists the number of usable Azure subscriptions available to you. Ensure you have at least one usable Azure subscription available. If not, sign out and use a different account.
+
+Congratulations, you have created a Teams app! Now let's go ahead and learn how to deploy one of the apps to Azure using Agents Toolkit.
+
+ > [!div class="nextstepaction"]
+ > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Sign+in+to+your+Azure+account&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-notificationbot%3Ftabs%3Dvscode%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-notificationbot.yml&documentVersionIndependentId=4680d8ea-8210-67e0-7a1f-f24e94d58985&platformId=dd058113-fb02-e03e-07e6-edb5a32216f4&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+### Deploy your app to Azure
+
+Under **DEPLOYMENT**, you can provision for necessary cloud resources and your app's code is copied into the created cloud resources.
+
+# [Visual Studio Code](#tab/vscode)
+
+1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="~/assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
+
+1. Select **Provision** under **LIFECYCLE**.
+
+:::image type="content" source="../assets/images/sbs-notification-bot/provision-cloud.png" alt-text="Screenshot showing the provisioning commands":::
+
+1. Select an existing resource group or create new resource group. For more information, see [Create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups).
+
+1. Select anyone of the existing subscription.
+
+:::image type="content" source="../assets/images/sbs-notification-bot/select-subscription.png" alt-text="Screenshot showing the selection of existing subscription.":::
+
+1. Select an existing or create new resource group.
+
+:::image type="content" source="../assets/images/sbs-notification-bot/subscription-cloud.png" alt-text="Screenshot showing resources for provisioning.":::
+
+> [!NOTE]
+> A dialog appears mentioning that costs may be incurred when running resources in Azure.
+
+1. Select **Provision**.
+
+:::image type="content" source="../assets/images/sbs-notification-bot/provision-confirm1.png" alt-text="Screenshot of the provisioning dialog.":::
+
+The provisioning process creates resources in Azure cloud. You can monitor the progress by observing the dialogs in the lower-right corner.
+
+:::image type="content" source="../assets/images/sbs-notification-bot/deploy-provision-success.png" alt-text="Screenshot showing the provisioning complete dialog.":::
+
+You see the option to view the provisioned resources. For this tutorial, you don't need to view resources.
+
+1. Select **Deploy** under **LIFECYCLE** after provisioning is complete.
+
+:::image type="content" source="../assets/images/sbs-notification-bot/deploy-cloud.png" alt-text="Screenshot showing where to select to deploy to cloud.":::
+
+1. Select **Deploy**.
+
+:::image type="content" source="../assets/images/sbs-notification-bot/Deploy-confirm.png" alt-text="Deploy to confirm.":::
+
+Deployment takes some time. You can monitor the progress in the dialogs in lower-right corner.
+
+:::image type="content" source="../assets/images/sbs-notification-bot/deploy-confirmation-cloud.png" alt-text="Deploy confirmation.":::
+
+ > [!div class="nextstepaction"]
+ > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Deploy+your+app+to+Azure+using+Visual+Studio+Code&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-notificationbot%3Ftabs%3Dvscode%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-notificationbot.yml&documentVersionIndependentId=4680d8ea-8210-67e0-7a1f-f24e94d58985&platformId=dd058113-fb02-e03e-07e6-edb5a32216f4&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+# [Command Line](#tab/cli)
+
+In your terminal window:
+
+1. Run `atk new` to create new project.
+
+``` bash
+    atk new
+```
+
+1. Run `atk provision` to create azure resource.
+
+``` bash
+    atk provision
+```
+
+1. Run `atk deploy` to deploy the app.
+
+``` bash
+    atk deploy
+```
+
+1. Run `atk preview` to run the app.
+
+ ``` bash
+   atk preview
+```
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Deploy+your+app+to+Azure+using+Command+Line&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-notificationbot%3Ftabs%3Dcli%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-notificationbot.yml&documentVersionIndependentId=4680d8ea-8210-67e0-7a1f-f24e94d58985&platformId=dd058113-fb02-e03e-07e6-edb5a32216f4&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+## Complete Challenge
+
+Did you come up with something like this?
+
+:::image type="content" source="../assets/images/sbs-notification-bot/trigger-output.png" alt-text="Trigger Output"border="true":::
+
+You've completed the tutorial to build a notification bot. You can extend your notification bot to add the command response and workflow features.
