@@ -67,7 +67,7 @@ To build notification bot using Visual Studio Code:
 
 1. Select **JavaScript** as the programming language.
 
-:::image type="content" source="../assets/images/sbs-command-bot/select-script.png" alt-text="Screenshot showing how to select the programming language.":::
+:::image type="content" source="../assets/images/sbs-command-bot/select-script.png" alt-text="Screenshot showing how to select JavaScript as the programming language.":::
 
 1. Select **Default folder** to store your project root folder in default location.
 
@@ -126,7 +126,7 @@ To invoke an event to trigger a notification, use one of the following ways:
   1. Open **Windows PowerShell**.
   1. Run the `Invoke-Webrequest -Method POST -URI http://localhost:3978/api/notification` command.
 
-  :::image type="content" source="../assets/images/sbs-notification-bot/windows-powershell.png" alt-text="Powershell Trigger"border="true" lightbox="../msteams-platform/assets/images/sbs-notification-bot/windows-powershell-1.png":::
+  :::image type="content" source="../assets/images/sbs-notification-bot/windows-powershell.png" alt-text="Powershell Trigger"border="true" lightbox="../assets/images/sbs-notification-bot/windows-powershell-1.png":::
 
 * If you don't use Windows, follow the steps:
   1. In Visual Studio Code, go to **Terminal** > **New Terminal** to open another terminal.
@@ -134,7 +134,7 @@ To invoke an event to trigger a notification, use one of the following ways:
 
   You'll get the following output in Teams:
 
-  :::image type="content" source="../assets/images/sbs-notification-bot/trigger-output.png" alt-text="Trigger Output"border="true" lightbox="../msteams-platform/assets/images/sbs-notification-bot/trigger-output.png":::
+  :::image type="content" source="../assets/images/sbs-notification-bot/trigger-output.png" alt-text="Trigger Output"border="true" lightbox="../assets/images/sbs-notification-bot/trigger-output.png":::
 
     > [!NOTE]
     > If you want to extend your app to Outlook and Microsoft 365, you can choose to debug your app with Outlook and Microsoft 365 from **RUN AND DEBUG** dropdown in Visual Studio Code.
@@ -162,3 +162,105 @@ The new project folder contains following content:
 | `src\adaptiveCards\notification-default.json` | A generated Adaptive Card that is sent to Teams. |
 | `m365agents.yml` | Main project file describing your application configuration and defining actions for each lifecycle stage. |
 | `m365agents.local.yml` | Overrides `m365agents.yml` with actions enabling local execution and debugging. |
+
+## Send notification to Teams channel
+
+To send notification to Teams channel:
+
+1. In Visual Studio Code, under **EXPLORER**, select **MYNOTIFICATIONBOT> src> index.js**.
+
+:::image type="content" source="/assets/images/sbs-notification-bot/file-path.png" alt-text="File path":::
+
+You can see the following page:
+
+:::image type="content" source="../assets/images/sbs-notification-bot/default-program.png" alt-text="Default Program" lightbox="../assets/images/sbs-notification-bot/default-program.png":::
+
+1. Use the following code after `for (const target of installations) {` in Visual Studio Code:
+
+         ```bash          
+            if (target.type === "Channel") {
+              const members = await target.members();
+              await target.sendMessage("This is a message to channel: " + members.length + " members.");
+              for (const member of members) {
+              await member.sendMessage("This is a message to Member: " + member.account.email);
+            }
+          }
+        ```
+
+:::image type="content" source="../assets/images/sbs-notification-bot/code-add.png" alt-text="Code Add" lightbox="../assets/images/sbs-notification-bot/code-add.png":::
+
+**To customize storage (Optional):**
+
+1. In Visual Studio Code, under **EXPLORER**, select **MYNOTIFICATIONBOT> src> internal> initialize.js**.
+
+:::image type="content" source="../assets/images/sbs-notification-bot/initialize-storage.png" alt-text="Storage Initialize":::
+
+You can see the following page:
+
+:::image type="content" source="../assets/images/sbs-notification-bot/storage-code.png" alt-text="Storage Code" lightbox="../assets/images/sbs-notification-bot/storage-code-1.png":::
+
+1. Update the following code in **initialize.js** file to customize the storage.
+
+```bash
+const myStorage = new MyStorage(...);
+
+// Initialize ConversationBot with notifications enabled and customized storage
+const bot = new ConversationBot({
+    // The bot ID and password to create the BotFrameworkAdapter.
+    // See https://aka.ms/about-bot-adapter to learn more about adapters.
+    adapterConfig: {
+        appId: process.env.BOT_ID,
+        appPassword: process.env.BOT_PASSWORD,
+    },
+    // Enable notifications
+    notification: {
+        enabled: true,
+        storage: myStorage,
+    },
+});
+ ```
+
+1. Use your own storage location instead of **MyStorage**.
+
+    > [!NOTE]
+    > It's required to use your own storage for production environment. If storage isn't provided, default local file storage is considered.
+
+1. Select **Run and Debug** :::image type="icon" source="../assets/images/toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code sidebar.
+
+1. Select **Debug in Teams (Edge)** or **Debug in Teams (Chrome)** from the dropdown list.
+
+1. Select **Start Debugging** button.
+
+:::image type="content" source="../assets/images/sbs-command-bot/debug-app.png" alt-text="The screenshot shows how to debug your app in Agents Toolkit.":::
+
+A dialog appears in Teams to upload the app.
+
+1. Select **Add**.
+
+:::image type="content" source="../assets/images/sbs-notification-bot/my-notification-output.png" alt-text="Screenshot of the app details dialog to add the notification bot.":::
+
+1. Select **Open** to open the app in personal scope.
+Alternatively, you can either search and select the required scope or select a channel from the list, and move through the dialog to select **Go**.
+
+:::image type="content" source="../assets/images/sbs-notification-bot/add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
+
+The following screen appears:
+
+:::image type="content" source="../assets/images/sbs-notification-bot/channel-notification.png" alt-text="Channe1 Notification":::
+
+1. Open **Windows PowerShell**.
+
+1. Run the `Invoke-Webrequest -Method POST -URI http://localhost:3978/api/notification` command.
+
+:::image type="content" source="../assets/images/sbs-notification-bot/windows-powershell.png" alt-text="Powershell Trigger"border="true" lightbox="../assets/images/sbs-notification-bot/windows-powershell-1.png":::
+
+You get the notification in the Teams channel:
+
+:::image type="content" source="..assets/images/sbs-notification-bot/channel-output.png" alt-text="Channel Output" lightbox="../assets/images/sbs-notification-bot/channel-output.png":::
+
+You get the notification in the personal chat:
+
+:::image type="content" source="../assets/images/sbs-notification-bot/member-output.png" alt-text="member-output":::
+
+ > [!div class="nextstepaction"]
+ > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+send+notification+to+Teams+channel&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-notificationbot%3Ftabs%3Dvscode%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-notificationbot.yml&documentVersionIndependentId=4680d8ea-8210-67e0-7a1f-f24e94d58985&platformId=dd058113-fb02-e03e-07e6-edb5a32216f4&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
