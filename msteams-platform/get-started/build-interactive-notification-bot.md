@@ -27,7 +27,7 @@ Here's a list of tools you need for building and deploying your apps.
    | &nbsp; | Install | For using |
    | --- | --- | --- |
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, or TypeScript, build environments. Use the latest version. |
-   | &nbsp; | [Microsoft 365 Agents Toolkit](toolkit-v4\install-Agents-Toolkit-vs.md) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
+   | &nbsp; | [Microsoft 365 Agents Toolkit](toolkit-v4/install-Agents-Toolkit-vs.md) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
    | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call all in one place.|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
@@ -36,7 +36,7 @@ Here's a list of tools you need for building and deploying your apps.
    > [!NOTE]
    > The guide is tested on Agents Toolkit latest version and Nodejs version 18 and 20. The steps in this guide may work with other versions, but that isn't tested.
 
-[Set up prerequisites](get-started/prepare-toolkit.md)
+[Set up prerequisites](../get-started/prepare-toolkit.md)
 
  > [!div class="nextstepaction"]
  > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Build+an+interactive+notification+bot+app+using+GitHub+Codespaces&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fget-started%2Fbuild-interactive-notification-bot%3Ftabs%3Dagentstoolkitcodespaces&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fget-started%2Fbuild-interactive-notification-bot.md&documentVersionIndependentId=e5653869-a83d-3558-0896-b88c45816a22&platformId=eee097dd-e3f6-d51e-48d6-fc448f59cf0d&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
@@ -171,7 +171,7 @@ To send notification to Teams channel:
 
 1. In Visual Studio Code, under **EXPLORER**, select **MYNOTIFICATIONBOT> src> index.js**.
 
-:::image type="content" source="/assets/images/sbs-notification-bot/file-path.png" alt-text="File path":::
+:::image type="content" source="../assets/images/sbs-notification-bot/file-path.png" alt-text="File path":::
 
 You can see the following page:
 
@@ -179,8 +179,8 @@ You can see the following page:
 
 1. Use the following code after `for (const target of installations) {` in Visual Studio Code:
 
-```bash
-            if (target.type === "Channel") {
+```
+        if (target.type === "Channel") {
               const members = await target.members();
               await target.sendMessage("This is a message to channel: " + members.length + " members.");
               for (const member of members) {
@@ -354,8 +354,8 @@ In your terminal window:
 
 1. Run `atk new` to create new project.
 
-``` bash
-    atk new
+```bash
+atk new
 ```
 
 1. Run `atk provision` to create azure resource.
