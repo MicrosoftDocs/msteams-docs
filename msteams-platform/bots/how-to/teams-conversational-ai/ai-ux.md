@@ -169,8 +169,9 @@ The following best practices can help enhance the overall effectiveness of an ag
 
 - [Ensure that agent's response contains feedback button](#ensure-that-agents-response-contains-feedback-button).
 - [Enable Teams Azure AD single sign-on](#enable-teams-azure-ad-single-sign-on).
-- [Enable the agent to understand conversational history and context](#enable-the-agent-to-understand-conversational-history-and-context)
+- [Enable the agent to understand conversational history and context](#enable-the-agent-to-understand-conversational-history-and-context).
 - [Offer dynamic and contextual suggestion prompts](#offer-dynamic-and-contextual-suggestion-prompts).
+- [Enable app profile card](#enable-app-profile-card).
 
 ### Ensure that agent's response contains feedback button
 
@@ -217,6 +218,8 @@ To achieve this, the agent must leverage the conversation context and history, a
 ### Enable app profile card
 
 You can now add hovercard experience for all agents and bots. Hovercards can provide valueable and relavant information to educate users about the app and its features.
+
+To enable app profile card to your agents or bots, you must add the `hoverCardDescription` field in the under the `description` field in the app manifest.
 
 ## See also
 
