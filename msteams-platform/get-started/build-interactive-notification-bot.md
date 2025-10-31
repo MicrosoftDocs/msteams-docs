@@ -82,9 +82,9 @@ You can also change the default location by the following steps:
 
       :::image type="content" source="../assets/images/sbs-notification-bot/select-browse.png" alt-text="Select browse location":::
 
-    2. Select the location for project workspace.
+  2. Select the location for project workspace.
 
-    3. Select the **Select Folder**.
+  3. Select the **Select Folder**.
 
        :::image type="content" source="../assets/images/sbs-notification-bot/select-folder.png" alt-text="Select Folder":::
 
@@ -95,15 +95,15 @@ You can also change the default location by the following steps:
 
   1. Select **Enter**.
 
-    :::image type="content" source="../assets/images/sbs-notification-bot/type-notfication-name.png" alt-text="Screenshot showing where to enter the app name.":::
+   :::image type="content" source="../assets/images/sbs-notification-bot/type-notfication-name.png" alt-text="Screenshot showing where to enter the app name.":::
 
-    1. After your app is created, Agents Toolkit displays the following message:
+  1. After your app is created, Agents Toolkit displays the following message:
 
-    :::image type="content" source="../assets/images/sbs-notification-bot/new-window-notification.png" alt-text="New window notification":::
+   :::image type="content" source="../assets/images/sbs-notification-bot/new-window-notification.png" alt-text="New window notification":::
 
-   The notification bot app is created in a few seconds.
+  The notification bot app is created in a few seconds.
 
-    :::image type="content" source="../assets/images/sbs-notification-bot/my-notification-bot.png" alt-text="Screenshot showing the app created.":::
+   :::image type="content" source="../assets/images/sbs-notification-bot/my-notification-bot.png" alt-text="Screenshot showing the app created.":::
   
 1. Select **Run and Debug** :::image type="icon" source="../assets/images/toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code **Activity Bar**.
 
