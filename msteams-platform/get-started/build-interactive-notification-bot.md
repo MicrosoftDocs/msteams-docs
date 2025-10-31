@@ -262,7 +262,7 @@ You get the notification in the Teams channel:
 
 You get the notification in the personal chat:
 
-:::image type="content" source="../assets/images/sbs-notification-bot/member-output.png" alt-text="member-output" lightbox="../assets/images/sbs-notification-bot/member-output.png":::
+:::image type="content" source="../assets/images/sbs-notification-bot/member-output.png" alt-text="member-output in personal chat" lightbox="../assets/images/sbs-notification-bot/member-output.png":::
 
  > [!div class="nextstepaction"]
  > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+send+notification+to+Teams+channel&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-notificationbot%3Ftabs%3Dvscode%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-notificationbot.yml&documentVersionIndependentId=4680d8ea-8210-67e0-7a1f-f24e94d58985&platformId=dd058113-fb02-e03e-07e6-edb5a32216f4&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
