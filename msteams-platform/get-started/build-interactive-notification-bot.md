@@ -27,7 +27,7 @@ Here's a list of tools you need for building and deploying your apps.
    | &nbsp; | Install | For using |
    | --- | --- | --- |
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, or TypeScript, build environments. Use the latest version. |
-   | &nbsp; | [Microsoft 365 Agents Toolkit](..toolkit/install-Agents-Toolkit.md) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
+   | &nbsp; | [Microsoft 365 Agents Toolkit](../toolkit/install-Agents-Toolkit.md) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
    | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call all in one place.|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
@@ -36,7 +36,7 @@ Here's a list of tools you need for building and deploying your apps.
    > [!NOTE]
    > The guide is tested on Agents Toolkit latest version and Nodejs version 18 and 20. The steps in this guide may work with other versions, but that isn't tested.
 
-[Set up prerequisites](../get-started/prepare-toolkit.md)
+[Set up prerequisites](../includes/get-started/prepare-toolkit.md)
 
  > [!div class="nextstepaction"]
  > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Build+an+interactive+notification+bot+app+using+GitHub+Codespaces&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fget-started%2Fbuild-interactive-notification-bot%3Ftabs%3Dagentstoolkitcodespaces&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fget-started%2Fbuild-interactive-notification-bot.md&documentVersionIndependentId=e5653869-a83d-3558-0896-b88c45816a22&platformId=eee097dd-e3f6-d51e-48d6-fc448f59cf0d&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
@@ -118,7 +118,7 @@ Alternatively, you can either search and select the required scope or select a c
 
  Your notification bot app is uploaded into Teams client.
 
-In real time, events are triggered by an external source, such as a third party API that cause the notification bot to send the user a notification. To emulate an event trigger, you can send an event manually using powershell or terminal.
+In real time, events are triggered by an external source, such as a third party API that causes the notification bot to send the user a notification. To emulate an event trigger, you can send an event manually using PowerShell or terminal.
 
 To invoke an event to trigger a notification, use one of the following ways:
 
@@ -126,7 +126,7 @@ To invoke an event to trigger a notification, use one of the following ways:
   1. Open **Windows PowerShell**.
   1. Run the `Invoke-Webrequest -Method POST -URI http://localhost:3978/api/notification` command.
 
-  :::image type="content" source="../assets/images/sbs-notification-bot/windows-powershell.png" alt-text="Powershell Trigger"border="true" lightbox="../assets/images/sbs-notification-bot/windows-powershell-1.png":::
+  :::image type="content" source="../assets/images/sbs-notification-bot/windows-powershell.png" alt-text="PowerShell Trigger"border="true" lightbox="../assets/images/sbs-notification-bot/windows-powershell-1.png":::
 
 * If you don't use Windows, follow the steps:
   1. In Visual Studio Code, go to **Terminal** > **New Terminal** to open another terminal.
@@ -179,15 +179,15 @@ You can see the following page:
 
 1. Use the following code after `for (const target of installations) {` in Visual Studio Code:
 
+```bash
+if (target.type === "Channel") {
+const members = await target.members();
+await target.sendMessage("This is a message to channel: " + members.length + " members.");
+for (const member of members) {
+await member.sendMessage("This is a message to Member: " + member.account.email);
+}
+}
 ```
-        if (target.type === "Channel") {
-              const members = await target.members();
-              await target.sendMessage("This is a message to channel: " + members.length + " members.");
-              for (const member of members) {
-              await member.sendMessage("This is a message to Member: " + member.account.email);
-            }
-          }
-        ```
 
 :::image type="content" source="../assets/images/sbs-notification-bot/code-add.png" alt-text="Code Add" lightbox="../assets/images/sbs-notification-bot/code-add.png":::
 
@@ -262,7 +262,7 @@ You get the notification in the Teams channel:
 
 You get the notification in the personal chat:
 
-:::image type="content" source="../assets/images/sbs-notification-bot/member-output.png" alt-text="member-output" lightbox="../assets/images/sbs-notification-bot/member-output.png"..:::
+:::image type="content" source="../assets/images/sbs-notification-bot/member-output.png" alt-text="member-output" lightbox="../assets/images/sbs-notification-bot/member-output.png":::
 
  > [!div class="nextstepaction"]
  > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+send+notification+to+Teams+channel&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-notificationbot%3Ftabs%3Dvscode%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-notificationbot.yml&documentVersionIndependentId=4680d8ea-8210-67e0-7a1f-f24e94d58985&platformId=dd058113-fb02-e03e-07e6-edb5a32216f4&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
@@ -348,7 +348,9 @@ Deployment takes some time. You can monitor the progress in the dialogs in lower
  > [!div class="nextstepaction"]
  > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Deploy+your+app+to+Azure+using+Visual+Studio+Code&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-notificationbot%3Ftabs%3Dvscode%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-notificationbot.yml&documentVersionIndependentId=4680d8ea-8210-67e0-7a1f-f24e94d58985&platformId=dd058113-fb02-e03e-07e6-edb5a32216f4&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
-# [Command Line](#tab/cli)
+[Back to Top](#build-an-interactive-notification-bot-app)
+
+## Command Line
 
 In your terminal window:
 
@@ -358,22 +360,22 @@ In your terminal window:
 atk new
 ```
 
-1. Run `atk provision` to create azure resource.
+1. Run `atk provision` to create Azure resource.
 
-``` bash
-    atk provision
+```bash
+atk provision
 ```
 
 1. Run `atk deploy` to deploy the app.
 
-``` bash
-    atk deploy
+```bash
+atk deploy
 ```
 
 1. Run `atk preview` to run the app.
 
- ``` bash
-   atk preview
+``` bash
+atk preview
 ```
 
 > [!div class="nextstepaction"]
