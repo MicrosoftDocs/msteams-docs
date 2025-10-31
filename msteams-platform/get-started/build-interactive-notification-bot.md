@@ -18,7 +18,7 @@ For an interactive notification, a bot sends messages in a Teams channel, group 
 * About the directory structure of your app.
 * How to send multiple notifications.
 
-This step-by-step guide helps you to build notification bot with Agents Toolkit. You can see the following output:
+You can see the following output:
 
 :::image type="content" source="../assets\images\sbs-notification-bot\trigger-output.png" alt-text="Trigger Output"border="true":::
 
@@ -51,11 +51,11 @@ To build notification bot using Visual Studio Code:
 
 1. Select **Create a New Agent/App** > **Teams App*.
 
-:::image type="content" source="../assets/images/sbs-notification-bot/create-new-teams-app.png" alt-text="Location of the Create New Project link in the Agents Toolkit sidebar.":::
+    :::image type="content" source="../assets/images/sbs-notification-bot/create-new-teams-app.png" alt-text="Location of the Create New Project link in the Agents Toolkit sidebar.":::
 
 1. Select **Bot** to create a new bot project.
 
-:::image type="content" source="../assets/images/sbs-notification-bot/create-new-app.png" alt-text="Wizard starts for creating a new project":::
+    :::image type="content" source="../assets/images/sbs-notification-bot/create-new-app.png" alt-text="Wizard starts for creating a new project":::
 
 1. Ensure that **Chat Notification Message** is selected as the App feature that you want to build in your app.
 
@@ -67,23 +67,23 @@ To build notification bot using Visual Studio Code:
 
 1. Select **JavaScript** as the programming language.
 
-:::image type="content" source="../assets/images/sbs-command-bot/select-script.png" alt-text="Screenshot showing how to select JavaScript as the programming language.":::
+    :::image type="content" source="../assets/images/sbs-command-bot/select-script.png" alt-text="Screenshot showing how to select JavaScript as the programming language.":::
 
 1. Select **Default folder** to store your project root folder in default location.
 
-:::image type="content" source="../assets/images/sbs-notification-bot/select-default-location.png" alt-text="Select default location":::
+    :::image type="content" source="../assets/images/sbs-notification-bot/select-default-location.png" alt-text="Select default location":::
 
 You can also change the default location by the following steps:
 
 1. Select **Browse**.
 
-:::image type="content" source="../assets/images/sbs-notification-bot/select-browse.png" alt-text="Select browse location":::
+    :::image type="content" source="../assets/images/sbs-notification-bot/select-browse.png" alt-text="Select browse location":::
 
 1. Select the location for project workspace.
 
 1. Select the **Select Folder**.
 
-:::image type="content" source="../assets/images/sbs-notification-bot/select-folder.png" alt-text="Select Folder":::
+    :::image type="content" source="../assets/images/sbs-notification-bot/select-folder.png" alt-text="Select Folder":::
 
 1. Enter a suitable name for your app.
 1. Select **Enter**.
@@ -96,7 +96,7 @@ You can also change the default location by the following steps:
 
 The notification bot app is created in a few seconds.
 
-:::image type="content" source="../assets/images/sbs-notification-bot/my-notification-bot.png" alt-text="Screenshot showing the app created.":::
+    :::image type="content" source="../assets/images/sbs-notification-bot/my-notification-bot.png" alt-text="Screenshot showing the app created.":::
   
 1. Select **Run and Debug** :::image type="icon" source="../assets/images/toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code **Activity Bar**.
 
@@ -104,17 +104,17 @@ The notification bot app is created in a few seconds.
 
 1. Select **Start Debugging** button.
 
-:::image type="content" source="../assets/images/sbs-command-bot/debug-app.png" alt-text="The screenshot shows how to debug your app in Agents Toolkit." border="true":::
+    :::image type="content" source="../assets/images/sbs-command-bot/debug-app.png" alt-text="The screenshot shows how to debug your app in Agents Toolkit." border="true":::
 
 1. Select **Add**.
 
-:::image type="content" source="../assets/images/sbs-notification-bot/my-notification-output.png" alt-text="Screenshot of the app details dialog to add the notification bot.":::
+    :::image type="content" source="../assets/images/sbs-notification-bot/my-notification-output.png" alt-text="Screenshot of the app details dialog to add the notification bot.":::
 
 1. Select **Open** to open the app in personal scope.
 
 Alternatively, you can either search and select the required scope or select a channel, chat, or meeting from the list, and move through the dialog to select **Go**.
 
-:::image type="content" source="../assets/images/sbs-notification-bot/add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
+    :::image type="content" source="../assets/images/sbs-notification-bot/add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
  Your notification bot app is uploaded into Teams client.
 
