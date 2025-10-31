@@ -76,7 +76,7 @@ To build notification bot using Visual Studio Code:
 You can also change the default location by the following steps:
 
   <details>
-  <summary>Learn to chang the default folder:</summary>
+  <summary>Learn to changE the default folder:</summary>
 
   1. Select **Browse**.
 
@@ -88,7 +88,8 @@ You can also change the default location by the following steps:
 
        :::image type="content" source="../assets/images/sbs-notification-bot/select-folder.png" alt-text="Select Folder":::
 
-    The folder you select is the location for your project workspace.
+   The folder you select is the location for your project workspace.
+
   </details>
 
   1. Enter a suitable name for your app.
@@ -99,9 +100,9 @@ You can also change the default location by the following steps:
 
   1. After your app is created, Agents Toolkit displays the following message:
 
-   :::image type="content" source="../assets/images/sbs-notification-bot/new-window-notification.png" alt-text="New window notification":::
+       :::image type="content" source="../assets/images/sbs-notification-bot/new-window-notification.png" alt-text="New window notification":::
 
-  The notification bot app is created in a few seconds.
+   The notification bot app is created in a few seconds.
 
    :::image type="content" source="../assets/images/sbs-notification-bot/my-notification-bot.png" alt-text="Screenshot showing the app created.":::
   
@@ -119,7 +120,7 @@ You can also change the default location by the following steps:
 
 5. Select **Open** to open the app in personal scope.
 
-Alternatively, you can either search and select the required scope or select a channel, chat, or meeting from the list, and move through the dialog to select **Go**.
+  Alternatively, you can either search and select the required scope or select a channel, chat, or meeting from the list, and move through the dialog to select **Go**.
 
    :::image type="content" source="../assets/images/sbs-notification-bot/add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
@@ -204,9 +205,9 @@ await member.sendMessage("This is a message to Member: " + member.account.email)
 
     :::image type="content" source="../assets/images/sbs-notification-bot/initialize-storage.png" alt-text="Storage Initialize":::
 
-  You can see the following page:
+   You can see the following page:
 
-   :::image type="content" source="../assets/images/sbs-notification-bot/storage-code.png" alt-text="Storage Code" lightbox="../assets/images/sbs-notification-bot/storage-code-1.png":::
+      :::image type="content" source="../assets/images/sbs-notification-bot/storage-code.png" alt-text="Storage Code" lightbox="../assets/images/sbs-notification-bot/storage-code-1.png":::
 
 2. Update the following code in **initialize.js** file to customize the storage.
 
@@ -242,7 +243,7 @@ const bot = new ConversationBot({
 
    :::image type="content" source="../assets/images/sbs-command-bot/debug-app.png" alt-text="The screenshot shows how to debug your app in Agents Toolkit.":::
 
-  A dialog appears in Teams to upload the app.
+   A dialog appears in Teams to upload the app.
 
 1. Select **Add**.
 
@@ -253,7 +254,7 @@ Alternatively, you can either search and select the required scope or select a c
 
    :::image type="content" source="../assets/images/sbs-notification-bot/add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
-  The following screen appears:
+   The following screen appears:
 
    :::image type="content" source="../assets/images/sbs-notification-bot/channel-notification.png" alt-text="Channe1 Notification":::
 
@@ -263,7 +264,7 @@ Alternatively, you can either search and select the required scope or select a c
 
     :::image type="content" source="../assets/images/sbs-notification-bot/windows-powershell.png" alt-text="Powershell Trigger"border="true" lightbox="../assets/images/sbs-notification-bot/windows-powershell-1.png":::
 
-  You get the notification in the Teams channel:
+   You get the notification in the Teams channel:
 
    :::image type="content" source="..\assets\images\sbs-notification-bot\channel-output.png" alt-text="Channel Output" lightbox="../assets/images/sbs-notification-bot/channel-output.png":::
 
@@ -327,18 +328,18 @@ Under **DEPLOYMENT**, you can provision for necessary cloud resources and your a
 
    :::image type="content" source="../assets/images/sbs-notification-bot/subscription-cloud.png" alt-text="Screenshot showing resources for provisioning.":::
 
-> [!NOTE]
-> A dialog appears mentioning that costs may be incurred when running resources in Azure.
+  > [!NOTE]
+  > A dialog appears mentioning that costs may be incurred when running resources in Azure.
 
 6. Select **Provision**.
 
    :::image type="content" source="../assets/images/sbs-notification-bot/provision-confirm1.png" alt-text="Screenshot of the provisioning dialog.":::
 
-  The provisioning process creates resources in Azure cloud. You can monitor the progress by observing the dialogs in the lower-right corner.
+   The provisioning process creates resources in Azure cloud. You can monitor the progress by observing the dialogs in the lower-right corner.
 
    :::image type="content" source="../assets/images/sbs-notification-bot/deploy-provision-success.png" alt-text="Screenshot showing the provisioning complete dialog.":::
 
-  You see the option to view the provisioned resources. For this tutorial, you don't need to view resources.
+   You see the option to view the provisioned resources. For this tutorial, you don't need to view resources.
 
 7. Select **Deploy** under **LIFECYCLE** after provisioning is complete.
 
@@ -348,7 +349,7 @@ Under **DEPLOYMENT**, you can provision for necessary cloud resources and your a
 
    :::image type="content" source="../assets/images/sbs-notification-bot/Deploy-confirm.png" alt-text="Deploy to confirm.":::
 
-  Deployment takes some time. You can monitor the progress in the dialogs in lower-right corner.
+   Deployment takes some time. You can monitor the progress in the dialogs in lower-right corner.
 
    :::image type="content" source="../assets/images/sbs-notification-bot/deploy-confirmation-cloud.png" alt-text="Deploy confirmation.":::
 
