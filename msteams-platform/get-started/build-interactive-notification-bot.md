@@ -63,27 +63,27 @@ To build notification bot using Visual Studio Code:
 
 6. Select **HTTP Trigger Express Server** as the trigger.
 
-  :::image type="content" source="../assets/images/sbs-notification-bot/select-trigger.png" alt-text="Screenshot showing how to select the programming language.":::  
+   :::image type="content" source="../assets/images/sbs-notification-bot/select-trigger.png" alt-text="Screenshot showing how to select the programming language.":::  
 
 7. Select **JavaScript** as the programming language.
 
-  :::image type="content" source="../assets/images/sbs-command-bot/select-script.png" alt-text="Screenshot showing how to select JavaScript as the programming language.":::
+   :::image type="content" source="../assets/images/sbs-command-bot/select-script.png" alt-text="Screenshot showing how to select JavaScript as the programming language.":::
 
 8. Select **Default folder** to store your project root folder in default location.
 
-  :::image type="content" source="../assets/images/sbs-notification-bot/select-default-location.png" alt-text="Select default location":::
+   :::image type="content" source="../assets/images/sbs-notification-bot/select-default-location.png" alt-text="Select default location":::
 
 You can also change the default location by the following steps:
 
 1. Select **Browse**.
 
-  :::image type="content" source="../assets/images/sbs-notification-bot/select-browse.png" alt-text="Select browse location":::
+   :::image type="content" source="../assets/images/sbs-notification-bot/select-browse.png" alt-text="Select browse location":::
 
 2. Select the location for project workspace.
 
 3. Select the **Select Folder**.
 
-  :::image type="content" source="../assets/images/sbs-notification-bot/select-folder.png" alt-text="Select Folder":::
+   :::image type="content" source="../assets/images/sbs-notification-bot/select-folder.png" alt-text="Select Folder":::
 
 4. Enter a suitable name for your app.
 
@@ -95,9 +95,9 @@ You can also change the default location by the following steps:
 
     :::image type="content" source="../assets/images/sbs-notification-bot/new-window-notification.png" alt-text="New window notification":::
 
-The notification bot app is created in a few seconds.
+  The notification bot app is created in a few seconds.
 
-  :::image type="content" source="../assets/images/sbs-notification-bot/my-notification-bot.png" alt-text="Screenshot showing the app created.":::
+   :::image type="content" source="../assets/images/sbs-notification-bot/my-notification-bot.png" alt-text="Screenshot showing the app created.":::
   
 1. Select **Run and Debug** :::image type="icon" source="../assets/images/toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code **Activity Bar**.
 
@@ -105,17 +105,17 @@ The notification bot app is created in a few seconds.
 
 1. Select **Start Debugging** button.
 
-  :::image type="content" source="../assets/images/sbs-command-bot/debug-app.png" alt-text="The screenshot shows how to debug your app in Agents Toolkit." border="true":::
+   :::image type="content" source="../assets/images/sbs-command-bot/debug-app.png" alt-text="The screenshot shows how to debug your app in Agents Toolkit." border="true":::
 
-1. Select **Add**.
+4. Select **Add**.
 
-  :::image type="content" source="../assets/images/sbs-notification-bot/my-notification-output.png" alt-text="Screenshot of the app details dialog to add the notification bot.":::
+   :::image type="content" source="../assets/images/sbs-notification-bot/my-notification-output.png" alt-text="Screenshot of the app details dialog to add the notification bot.":::
 
-1. Select **Open** to open the app in personal scope.
+5. Select **Open** to open the app in personal scope.
 
 Alternatively, you can either search and select the required scope or select a channel, chat, or meeting from the list, and move through the dialog to select **Go**.
 
-  :::image type="content" source="../assets/images/sbs-notification-bot/add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
+   :::image type="content" source="../assets/images/sbs-notification-bot/add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
  Your notification bot app is uploaded into Teams client.
 
@@ -202,7 +202,7 @@ You can see the following page:
 
   :::image type="content" source="../assets/images/sbs-notification-bot/storage-code.png" alt-text="Storage Code" lightbox="../assets/images/sbs-notification-bot/storage-code-1.png":::
 
-1. Update the following code in **initialize.js** file to customize the storage.
+2. Update the following code in **initialize.js** file to customize the storage.
 
 ```bash
 const myStorage = new MyStorage(...);
@@ -234,13 +234,13 @@ const bot = new ConversationBot({
 
 1. Select **Start Debugging** button.
 
-  :::image type="content" source="../assets/images/sbs-command-bot/debug-app.png" alt-text="The screenshot shows how to debug your app in Agents Toolkit.":::
+   :::image type="content" source="../assets/images/sbs-command-bot/debug-app.png" alt-text="The screenshot shows how to debug your app in Agents Toolkit.":::
 
 A dialog appears in Teams to upload the app.
 
 1. Select **Add**.
 
-  :::image type="content" source="../assets/images/sbs-notification-bot/my-notification-output.png" alt-text="Screenshot of the app details dialog to add the notification bot.":::
+   :::image type="content" source="../assets/images/sbs-notification-bot/my-notification-output.png" alt-text="Screenshot of the app details dialog to add the notification bot.":::
 
 1. Select **Open** to open the app in personal scope.
 Alternatively, you can either search and select the required scope or select a channel from the list, and move through the dialog to select **Go**.
@@ -336,11 +336,11 @@ You see the option to view the provisioned resources. For this tutorial, you don
 
 7. Select **Deploy** under **LIFECYCLE** after provisioning is complete.
 
-  :::image type="content" source="../assets/images/sbs-notification-bot/deploy-cloud.png" alt-text="Screenshot showing where to select to deploy to cloud.":::
+   :::image type="content" source="../assets/images/sbs-notification-bot/deploy-cloud.png" alt-text="Screenshot showing where to select to deploy to cloud.":::
 
 8. Select **Deploy**.
 
-  :::image type="content" source="../assets/images/sbs-notification-bot/Deploy-confirm.png" alt-text="Deploy to confirm.":::
+   :::image type="content" source="../assets/images/sbs-notification-bot/Deploy-confirm.png" alt-text="Deploy to confirm.":::
 
 Deployment takes some time. You can monitor the progress in the dialogs in lower-right corner.
 
