@@ -59,17 +59,17 @@ To build notification bot using Visual Studio Code:
 
 1. Ensure that **Chat Notification Message** is selected as the App feature that you want to build in your app.
 
-  :::image type="content" source="../assets/images/sbs-notification-bot/select-notification-bot.png" alt-text="Select App Capability":::
+   :::image type="content" source="../assets/images/sbs-notification-bot/select-notification-bot.png" alt-text="Select App Capability":::
 
-1. Select **HTTP Trigger Express Server** as the trigger.
+6. Select **HTTP Trigger Express Server** as the trigger.
 
   :::image type="content" source="../assets/images/sbs-notification-bot/select-trigger.png" alt-text="Screenshot showing how to select the programming language.":::  
 
-1. Select **JavaScript** as the programming language.
+7. Select **JavaScript** as the programming language.
 
   :::image type="content" source="../assets/images/sbs-command-bot/select-script.png" alt-text="Screenshot showing how to select JavaScript as the programming language.":::
 
-1. Select **Default folder** to store your project root folder in default location.
+8. Select **Default folder** to store your project root folder in default location.
 
   :::image type="content" source="../assets/images/sbs-notification-bot/select-default-location.png" alt-text="Select default location":::
 
@@ -79,20 +79,21 @@ You can also change the default location by the following steps:
 
   :::image type="content" source="../assets/images/sbs-notification-bot/select-browse.png" alt-text="Select browse location":::
 
-1. Select the location for project workspace.
+2. Select the location for project workspace.
 
-1. Select the **Select Folder**.
+3. Select the **Select Folder**.
 
   :::image type="content" source="../assets/images/sbs-notification-bot/select-folder.png" alt-text="Select Folder":::
 
-1. Enter a suitable name for your app.
-1. Select **Enter**.
+4. Enter a suitable name for your app.
 
-  :::image type="content" source="../assets/images/sbs-notification-bot/type-notfication-name.png" alt-text="Screenshot showing where to enter the app name.":::
+5. Select **Enter**.
 
-1. After your app is created, Agents Toolkit displays the following message:
+    :::image type="content" source="../assets/images/sbs-notification-bot/type-notfication-name.png" alt-text="Screenshot showing where to enter the app name.":::
 
-  :::image type="content" source="../assets/images/sbs-notification-bot/new-window-notification.png" alt-text="New window notification":::
+6. After your app is created, Agents Toolkit displays the following message:
+
+    :::image type="content" source="../assets/images/sbs-notification-bot/new-window-notification.png" alt-text="New window notification":::
 
 The notification bot app is created in a few seconds.
 
@@ -171,13 +172,13 @@ To send notification to Teams channel:
 
 1. In Visual Studio Code, under **EXPLORER**, select **MYNOTIFICATIONBOT> src> index.js**.
 
-  :::image type="content" source="../assets/images/sbs-notification-bot/file-path.png" alt-text="File path":::
+    :::image type="content" source="../assets/images/sbs-notification-bot/file-path.png" alt-text="File path":::
 
-You can see the following page:
+  You can see the following page:
 
   :::image type="content" source="../assets/images/sbs-notification-bot/default-program.png" alt-text="Default Program" lightbox="../assets/images/sbs-notification-bot/default-program.png":::
 
-1. Use the following code after `for (const target of installations) {` in Visual Studio Code:
+2. Use the following code after `for (const target of installations) {` in Visual Studio Code:
 
 ```bash
 if (target.type === "Channel") {
@@ -310,20 +311,20 @@ Under **DEPLOYMENT**, you can provision for necessary cloud resources and your a
 
 :::image type="content" source="../assets/images/sbs-notification-bot/provision-cloud.png" alt-text="Screenshot showing the provisioning commands":::
 
-1. Select an existing resource group or create new resource group. For more information, see [Create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups).
+3. Select an existing resource group or create new resource group. For more information, see [Create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups).
 
-1. Select anyone of the existing subscription.
+4. Select anyone of the existing subscription.
 
 :::image type="content" source="../assets/images/sbs-notification-bot/select-subscription.png" alt-text="Screenshot showing the selection of existing subscription.":::
 
-1. Select an existing or create new resource group.
+5. Select an existing or create new resource group.
 
   :::image type="content" source="../assets/images/sbs-notification-bot/subscription-cloud.png" alt-text="Screenshot showing resources for provisioning.":::
 
 > [!NOTE]
 > A dialog appears mentioning that costs may be incurred when running resources in Azure.
 
-1. Select **Provision**.
+6. Select **Provision**.
 
   :::image type="content" source="../assets/images/sbs-notification-bot/provision-confirm1.png" alt-text="Screenshot of the provisioning dialog.":::
 
@@ -333,11 +334,11 @@ The provisioning process creates resources in Azure cloud. You can monitor the p
 
 You see the option to view the provisioned resources. For this tutorial, you don't need to view resources.
 
-1. Select **Deploy** under **LIFECYCLE** after provisioning is complete.
+7. Select **Deploy** under **LIFECYCLE** after provisioning is complete.
 
   :::image type="content" source="../assets/images/sbs-notification-bot/deploy-cloud.png" alt-text="Screenshot showing where to select to deploy to cloud.":::
 
-1. Select **Deploy**.
+8. Select **Deploy**.
 
   :::image type="content" source="../assets/images/sbs-notification-bot/Deploy-confirm.png" alt-text="Deploy to confirm.":::
 
@@ -350,7 +351,7 @@ Deployment takes some time. You can monitor the progress in the dialogs in lower
 
 [Back to Top](#build-an-interactive-notification-bot-app)
 
-## Command Line (#tab/cli)
+## [Command Line](#tab/cli)
 
 In your terminal window:
 
