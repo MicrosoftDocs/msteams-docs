@@ -76,7 +76,7 @@ To build notification bot using Visual Studio Code:
 You can also change the default location by the following steps:
 
   <details>
-  <summary>Learn to changE the default folder:</summary>
+  <summary>Learn to change the default folder:</summary>
 
   1. Select **Browse**.
 
@@ -88,7 +88,7 @@ You can also change the default location by the following steps:
 
        :::image type="content" source="../assets/images/sbs-notification-bot/select-folder.png" alt-text="Select Folder":::
 
-   The folder you select is the location for your project workspace.
+       The folder you select is the location for your project workspace.
 
   </details>
 
@@ -96,15 +96,15 @@ You can also change the default location by the following steps:
 
   1. Select **Enter**.
 
-   :::image type="content" source="../assets/images/sbs-notification-bot/type-notfication-name.png" alt-text="Screenshot showing where to enter the app name.":::
+       :::image type="content" source="../assets/images/sbs-notification-bot/type-notfication-name.png" alt-text="Screenshot showing where to enter the app name.":::
 
-  1. After your app is created, Agents Toolkit displays the following message:
+  3. After your app is created, Agents Toolkit displays the following message:
 
        :::image type="content" source="../assets/images/sbs-notification-bot/new-window-notification.png" alt-text="New window notification":::
 
    The notification bot app is created in a few seconds.
 
-   :::image type="content" source="../assets/images/sbs-notification-bot/my-notification-bot.png" alt-text="Screenshot showing the app created.":::
+       :::image type="content" source="../assets/images/sbs-notification-bot/my-notification-bot.png" alt-text="Screenshot showing the app created.":::
   
 1. Select **Run and Debug** :::image type="icon" source="../assets/images/toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code **Activity Bar**.
 
@@ -268,7 +268,7 @@ Alternatively, you can either search and select the required scope or select a c
 
    :::image type="content" source="..\assets\images\sbs-notification-bot\channel-output.png" alt-text="Channel Output" lightbox="../assets/images/sbs-notification-bot/channel-output.png":::
 
-  You get the notification in the personal chat:
+   You get the notification in the personal chat:
 
    :::image type="content" source="../assets/images/sbs-notification-bot/member-output.png" alt-text="member-output in personal chat" lightbox="../assets/images/sbs-notification-bot/member-output.png":::
 
