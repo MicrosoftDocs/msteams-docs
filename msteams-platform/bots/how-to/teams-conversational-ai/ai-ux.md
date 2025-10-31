@@ -214,6 +214,10 @@ Enhance your agent's user experience with intelligent and context-aware prompts.
 
 To achieve this, the agent must leverage the conversation context and history, and prompt suggestions can be timely and fit for the query.
 
+### Enable app profile card
+
+You can now add hovercard experience for all agents and bots. Hovercards can provide valueable and relavant information to educate users about the app and its features.
+
 ## See also
 
 - [Teams AI library](teams-conversation-ai-overview.md)
