@@ -75,8 +75,9 @@ To build notification bot using Visual Studio Code:
 
 You can also change the default location by the following steps:
 
-    <details>
-    <summary>Learn to change the default folder:</summary>
+  <details>
+  <summary>Learn to change the default folder:</summary>
+
     1. Select **Browse**.
 
         :::image type="content" source="../assets/images/sbs-notification-bot/select-browse.png" alt-text="Select browse location":::
@@ -88,10 +89,11 @@ You can also change the default location by the following steps:
        :::image type="content" source="../assets/images/sbs-notification-bot/select-folder.png" alt-text="Select Folder":::
 
     The folder you select is the location for your project workspace.
-    </details>
-    1. Enter a suitable name for your app.
+  </details>
 
-    1. Select **Enter**.
+  1. Enter a suitable name for your app.
+
+  1. Select **Enter**.
 
     :::image type="content" source="../assets/images/sbs-notification-bot/type-notfication-name.png" alt-text="Screenshot showing where to enter the app name.":::
 
