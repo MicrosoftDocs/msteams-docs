@@ -59,40 +59,40 @@ To build notification bot using Visual Studio Code:
 
 1. Ensure that **Chat Notification Message** is selected as the App feature that you want to build in your app.
 
-:::image type="content" source="../assets/images/sbs-notification-bot/select-notification-bot.png" alt-text="Select App Capability":::
+  :::image type="content" source="../assets/images/sbs-notification-bot/select-notification-bot.png" alt-text="Select App Capability":::
 
 1. Select **HTTP Trigger Express Server** as the trigger.
 
-:::image type="content" source="../assets/images/sbs-notification-bot/select-trigger.png" alt-text="Screenshot showing how to select the programming language.":::  
+  :::image type="content" source="../assets/images/sbs-notification-bot/select-trigger.png" alt-text="Screenshot showing how to select the programming language.":::  
 
 1. Select **JavaScript** as the programming language.
 
-    :::image type="content" source="../assets/images/sbs-command-bot/select-script.png" alt-text="Screenshot showing how to select JavaScript as the programming language.":::
+  :::image type="content" source="../assets/images/sbs-command-bot/select-script.png" alt-text="Screenshot showing how to select JavaScript as the programming language.":::
 
 1. Select **Default folder** to store your project root folder in default location.
 
-    :::image type="content" source="../assets/images/sbs-notification-bot/select-default-location.png" alt-text="Select default location":::
+  :::image type="content" source="../assets/images/sbs-notification-bot/select-default-location.png" alt-text="Select default location":::
 
 You can also change the default location by the following steps:
 
 1. Select **Browse**.
 
-    :::image type="content" source="../assets/images/sbs-notification-bot/select-browse.png" alt-text="Select browse location":::
+  :::image type="content" source="../assets/images/sbs-notification-bot/select-browse.png" alt-text="Select browse location":::
 
 1. Select the location for project workspace.
 
 1. Select the **Select Folder**.
 
-    :::image type="content" source="../assets/images/sbs-notification-bot/select-folder.png" alt-text="Select Folder":::
+  :::image type="content" source="../assets/images/sbs-notification-bot/select-folder.png" alt-text="Select Folder":::
 
 1. Enter a suitable name for your app.
 1. Select **Enter**.
 
-:::image type="content" source="../assets/images/sbs-notification-bot/type-notfication-name.png" alt-text="Screenshot showing where to enter the app name.":::
+  :::image type="content" source="../assets/images/sbs-notification-bot/type-notfication-name.png" alt-text="Screenshot showing where to enter the app name.":::
 
 1. After your app is created, Agents Toolkit displays the following message:
 
-:::image type="content" source="../assets/images/sbs-notification-bot/new-window-notification.png" alt-text="New window notification":::
+  :::image type="content" source="../assets/images/sbs-notification-bot/new-window-notification.png" alt-text="New window notification":::
 
 The notification bot app is created in a few seconds.
 
@@ -146,7 +146,7 @@ To invoke an event to trigger a notification, use one of the following ways:
 
 Agents Toolkit provides components for building an app. After creating the project, you can view the project folders and files in the **Explorer** area of Visual Studio Code.
 
-:::image type="content" source="../assets/images/sbs-notification-bot/folder-structure1.png" alt-text="structure tab":::
+  :::image type="content" source="../assets/images/sbs-notification-bot/folder-structure1.png" alt-text="structure tab":::
 
 The new project folder contains following content:
 
@@ -195,7 +195,7 @@ await member.sendMessage("This is a message to Member: " + member.account.email)
 
 1. In Visual Studio Code, under **EXPLORER**, select **MYNOTIFICATIONBOT> src> internal> initialize.js**.
 
-  :::image type="content" source="../assets/images/sbs-notification-bot/initialize-storage.png" alt-text="Storage Initialize":::
+    :::image type="content" source="../assets/images/sbs-notification-bot/initialize-storage.png" alt-text="Storage Initialize":::
 
 You can see the following page:
 
@@ -244,7 +244,7 @@ A dialog appears in Teams to upload the app.
 1. Select **Open** to open the app in personal scope.
 Alternatively, you can either search and select the required scope or select a channel from the list, and move through the dialog to select **Go**.
 
-  :::image type="content" source="../assets/images/sbs-notification-bot/add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
+   :::image type="content" source="../assets/images/sbs-notification-bot/add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
 The following screen appears:
 
@@ -254,7 +254,7 @@ The following screen appears:
 
 1. Run the `Invoke-Webrequest -Method POST -URI http://localhost:3978/api/notification` command.
 
-  :::image type="content" source="../assets/images/sbs-notification-bot/windows-powershell.png" alt-text="Powershell Trigger"border="true" lightbox="../assets/images/sbs-notification-bot/windows-powershell-1.png":::
+    :::image type="content" source="../assets/images/sbs-notification-bot/windows-powershell.png" alt-text="Powershell Trigger"border="true" lightbox="../assets/images/sbs-notification-bot/windows-powershell-1.png":::
 
 You get the notification in the Teams channel:
 
@@ -289,7 +289,7 @@ Use your account to access the Microsoft Azure portal and to provide provision n
 
 Your default web browser opens to let you sign in to the account.
 
-1. Close the browser when prompted and return to Visual Studio Code.
+Close the browser when prompted and return to Visual Studio Code.
 
 The **ACCOUNTS** section of the sidebar shows the two accounts separately. It also lists the number of usable Azure subscriptions available to you. Ensure you have at least one usable Azure subscription available. If not, sign out and use a different account.
 
@@ -297,8 +297,6 @@ Congratulations, you have created a Teams app! Now let's go ahead and learn how 
 
  > [!div class="nextstepaction"]
  > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Sign+in+to+your+Azure+account&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-notificationbot%3Ftabs%3Dvscode%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-notificationbot.yml&documentVersionIndependentId=4680d8ea-8210-67e0-7a1f-f24e94d58985&platformId=dd058113-fb02-e03e-07e6-edb5a32216f4&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
-
-[Back to Top](#build-an-interactive-notification-bot-app)
 
 ### Deploy your app to Azure
 
@@ -352,7 +350,7 @@ Deployment takes some time. You can monitor the progress in the dialogs in lower
 
 [Back to Top](#build-an-interactive-notification-bot-app)
 
-## Command Line
+## Command Line (#tab/cli)
 
 In your terminal window:
 
