@@ -96,7 +96,7 @@ You can also change the default location by the following steps:
 
 The notification bot app is created in a few seconds.
 
-    :::image type="content" source="../assets/images/sbs-notification-bot/my-notification-bot.png" alt-text="Screenshot showing the app created.":::
+  :::image type="content" source="../assets/images/sbs-notification-bot/my-notification-bot.png" alt-text="Screenshot showing the app created.":::
   
 1. Select **Run and Debug** :::image type="icon" source="../assets/images/toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code **Activity Bar**.
 
@@ -104,17 +104,17 @@ The notification bot app is created in a few seconds.
 
 1. Select **Start Debugging** button.
 
-    :::image type="content" source="../assets/images/sbs-command-bot/debug-app.png" alt-text="The screenshot shows how to debug your app in Agents Toolkit." border="true":::
+  :::image type="content" source="../assets/images/sbs-command-bot/debug-app.png" alt-text="The screenshot shows how to debug your app in Agents Toolkit." border="true":::
 
 1. Select **Add**.
 
-    :::image type="content" source="../assets/images/sbs-notification-bot/my-notification-output.png" alt-text="Screenshot of the app details dialog to add the notification bot.":::
+  :::image type="content" source="../assets/images/sbs-notification-bot/my-notification-output.png" alt-text="Screenshot of the app details dialog to add the notification bot.":::
 
 1. Select **Open** to open the app in personal scope.
 
 Alternatively, you can either search and select the required scope or select a channel, chat, or meeting from the list, and move through the dialog to select **Go**.
 
-    :::image type="content" source="../assets/images/sbs-notification-bot/add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
+  :::image type="content" source="../assets/images/sbs-notification-bot/add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
  Your notification bot app is uploaded into Teams client.
 
@@ -171,11 +171,11 @@ To send notification to Teams channel:
 
 1. In Visual Studio Code, under **EXPLORER**, select **MYNOTIFICATIONBOT> src> index.js**.
 
-:::image type="content" source="../assets/images/sbs-notification-bot/file-path.png" alt-text="File path":::
+  :::image type="content" source="../assets/images/sbs-notification-bot/file-path.png" alt-text="File path":::
 
 You can see the following page:
 
-:::image type="content" source="../assets/images/sbs-notification-bot/default-program.png" alt-text="Default Program" lightbox="../assets/images/sbs-notification-bot/default-program.png":::
+  :::image type="content" source="../assets/images/sbs-notification-bot/default-program.png" alt-text="Default Program" lightbox="../assets/images/sbs-notification-bot/default-program.png":::
 
 1. Use the following code after `for (const target of installations) {` in Visual Studio Code:
 
@@ -189,17 +189,17 @@ await member.sendMessage("This is a message to Member: " + member.account.email)
 }
 ```
 
-:::image type="content" source="../assets/images/sbs-notification-bot/code-add.png" alt-text="Code Add" lightbox="../assets/images/sbs-notification-bot/code-add.png":::
+  :::image type="content" source="../assets/images/sbs-notification-bot/code-add.png" alt-text="Code Add" lightbox="../assets/images/sbs-notification-bot/code-add.png":::
 
 **To customize storage (Optional):**
 
 1. In Visual Studio Code, under **EXPLORER**, select **MYNOTIFICATIONBOT> src> internal> initialize.js**.
 
-:::image type="content" source="../assets/images/sbs-notification-bot/initialize-storage.png" alt-text="Storage Initialize":::
+  :::image type="content" source="../assets/images/sbs-notification-bot/initialize-storage.png" alt-text="Storage Initialize":::
 
 You can see the following page:
 
-:::image type="content" source="../assets/images/sbs-notification-bot/storage-code.png" alt-text="Storage Code" lightbox="../assets/images/sbs-notification-bot/storage-code-1.png":::
+  :::image type="content" source="../assets/images/sbs-notification-bot/storage-code.png" alt-text="Storage Code" lightbox="../assets/images/sbs-notification-bot/storage-code-1.png":::
 
 1. Update the following code in **initialize.js** file to customize the storage.
 
@@ -233,36 +233,36 @@ const bot = new ConversationBot({
 
 1. Select **Start Debugging** button.
 
-:::image type="content" source="../assets/images/sbs-command-bot/debug-app.png" alt-text="The screenshot shows how to debug your app in Agents Toolkit.":::
+  :::image type="content" source="../assets/images/sbs-command-bot/debug-app.png" alt-text="The screenshot shows how to debug your app in Agents Toolkit.":::
 
 A dialog appears in Teams to upload the app.
 
 1. Select **Add**.
 
-:::image type="content" source="../assets/images/sbs-notification-bot/my-notification-output.png" alt-text="Screenshot of the app details dialog to add the notification bot.":::
+  :::image type="content" source="../assets/images/sbs-notification-bot/my-notification-output.png" alt-text="Screenshot of the app details dialog to add the notification bot.":::
 
 1. Select **Open** to open the app in personal scope.
 Alternatively, you can either search and select the required scope or select a channel from the list, and move through the dialog to select **Go**.
 
-:::image type="content" source="../assets/images/sbs-notification-bot/add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
+  :::image type="content" source="../assets/images/sbs-notification-bot/add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
 The following screen appears:
 
-:::image type="content" source="../assets/images/sbs-notification-bot/channel-notification.png" alt-text="Channe1 Notification":::
+  :::image type="content" source="../assets/images/sbs-notification-bot/channel-notification.png" alt-text="Channe1 Notification":::
 
 1. Open **Windows PowerShell**.
 
 1. Run the `Invoke-Webrequest -Method POST -URI http://localhost:3978/api/notification` command.
 
-:::image type="content" source="../assets/images/sbs-notification-bot/windows-powershell.png" alt-text="Powershell Trigger"border="true" lightbox="../assets/images/sbs-notification-bot/windows-powershell-1.png":::
+  :::image type="content" source="../assets/images/sbs-notification-bot/windows-powershell.png" alt-text="Powershell Trigger"border="true" lightbox="../assets/images/sbs-notification-bot/windows-powershell-1.png":::
 
 You get the notification in the Teams channel:
 
-:::image type="content" source="..\assets\images\sbs-notification-bot\channel-output.png" alt-text="Channel Output" lightbox="../assets/images/sbs-notification-bot/channel-output.png":::
+  :::image type="content" source="..\assets\images\sbs-notification-bot\channel-output.png" alt-text="Channel Output" lightbox="../assets/images/sbs-notification-bot/channel-output.png":::
 
 You get the notification in the personal chat:
 
-:::image type="content" source="../assets/images/sbs-notification-bot/member-output.png" alt-text="member-output in personal chat" lightbox="../assets/images/sbs-notification-bot/member-output.png":::
+  :::image type="content" source="../assets/images/sbs-notification-bot/member-output.png" alt-text="member-output in personal chat" lightbox="../assets/images/sbs-notification-bot/member-output.png":::
 
  > [!div class="nextstepaction"]
  > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+send+notification+to+Teams+channel&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-notificationbot%3Ftabs%3Dvscode%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-notificationbot.yml&documentVersionIndependentId=4680d8ea-8210-67e0-7a1f-f24e94d58985&platformId=dd058113-fb02-e03e-07e6-edb5a32216f4&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
@@ -298,6 +298,8 @@ Congratulations, you have created a Teams app! Now let's go ahead and learn how 
  > [!div class="nextstepaction"]
  > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Sign+in+to+your+Azure+account&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-notificationbot%3Ftabs%3Dvscode%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-notificationbot.yml&documentVersionIndependentId=4680d8ea-8210-67e0-7a1f-f24e94d58985&platformId=dd058113-fb02-e03e-07e6-edb5a32216f4&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
+[Back to Top](#build-an-interactive-notification-bot-app)
+
 ### Deploy your app to Azure
 
 Under **DEPLOYMENT**, you can provision for necessary cloud resources and your app's code is copied into the created cloud resources.
@@ -318,32 +320,32 @@ Under **DEPLOYMENT**, you can provision for necessary cloud resources and your a
 
 1. Select an existing or create new resource group.
 
-:::image type="content" source="../assets/images/sbs-notification-bot/subscription-cloud.png" alt-text="Screenshot showing resources for provisioning.":::
+  :::image type="content" source="../assets/images/sbs-notification-bot/subscription-cloud.png" alt-text="Screenshot showing resources for provisioning.":::
 
 > [!NOTE]
 > A dialog appears mentioning that costs may be incurred when running resources in Azure.
 
 1. Select **Provision**.
 
-:::image type="content" source="../assets/images/sbs-notification-bot/provision-confirm1.png" alt-text="Screenshot of the provisioning dialog.":::
+  :::image type="content" source="../assets/images/sbs-notification-bot/provision-confirm1.png" alt-text="Screenshot of the provisioning dialog.":::
 
 The provisioning process creates resources in Azure cloud. You can monitor the progress by observing the dialogs in the lower-right corner.
 
-:::image type="content" source="../assets/images/sbs-notification-bot/deploy-provision-success.png" alt-text="Screenshot showing the provisioning complete dialog.":::
+  :::image type="content" source="../assets/images/sbs-notification-bot/deploy-provision-success.png" alt-text="Screenshot showing the provisioning complete dialog.":::
 
 You see the option to view the provisioned resources. For this tutorial, you don't need to view resources.
 
 1. Select **Deploy** under **LIFECYCLE** after provisioning is complete.
 
-:::image type="content" source="../assets/images/sbs-notification-bot/deploy-cloud.png" alt-text="Screenshot showing where to select to deploy to cloud.":::
+  :::image type="content" source="../assets/images/sbs-notification-bot/deploy-cloud.png" alt-text="Screenshot showing where to select to deploy to cloud.":::
 
 1. Select **Deploy**.
 
-:::image type="content" source="../assets/images/sbs-notification-bot/Deploy-confirm.png" alt-text="Deploy to confirm.":::
+  :::image type="content" source="../assets/images/sbs-notification-bot/Deploy-confirm.png" alt-text="Deploy to confirm.":::
 
 Deployment takes some time. You can monitor the progress in the dialogs in lower-right corner.
 
-:::image type="content" source="../assets/images/sbs-notification-bot/deploy-confirmation-cloud.png" alt-text="Deploy confirmation.":::
+  :::image type="content" source="../assets/images/sbs-notification-bot/deploy-confirmation-cloud.png" alt-text="Deploy confirmation.":::
 
  > [!div class="nextstepaction"]
  > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Deploy+your+app+to+Azure+using+Visual+Studio+Code&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-notificationbot%3Ftabs%3Dvscode%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-notificationbot.yml&documentVersionIndependentId=4680d8ea-8210-67e0-7a1f-f24e94d58985&platformId=dd058113-fb02-e03e-07e6-edb5a32216f4&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
