@@ -49,7 +49,7 @@ Here are some scenarios for agents in Teams:
 
 :::image type="content" source="../assets/images/agents-in-teams/agent-overview/agent-scenario-academic.png" alt-text="Image shows agent user scenario." lightbox="../assets/images/agents-in-teams/agent-overview/agent-scenario-academic.png" border="false":::
 
-For more information, see [code samples for agents](build-first-agent.md#code-sample) .
+For more information, see [code samples for agents](build-first-agent.md#code-sample).
 
 ## Choose an approach to build your agent
 
