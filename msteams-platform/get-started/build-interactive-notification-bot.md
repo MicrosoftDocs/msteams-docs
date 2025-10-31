@@ -18,7 +18,7 @@ For an interactive notification, a bot sends messages in a Teams channel, group 
 * About the directory structure of your app.
 * How to send multiple notifications.
 
-You can see the following output:
+After completing these steps, you can see the following output:
 
 :::image type="content" source="../assets\images\sbs-notification-bot\trigger-output.png" alt-text="Trigger Output"border="true":::
 
@@ -49,7 +49,7 @@ To build notification bot using Visual Studio Code:
 
 1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="../assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
 
-1. Select **Create a New Agent/App** > **Teams App*.
+1. Select **Create a New Agent/App** > **Teams App**.
 
     :::image type="content" source="../assets/images/sbs-notification-bot/create-new-teams-app.png" alt-text="Location of the Create New Project link in the Agents Toolkit sidebar.":::
 
@@ -75,29 +75,33 @@ To build notification bot using Visual Studio Code:
 
 You can also change the default location by the following steps:
 
-1. Select **Browse**.
+    <details>
+    <summary>Learn to change the default folder:</summary>
+    1. Select **Browse**.
 
-   :::image type="content" source="../assets/images/sbs-notification-bot/select-browse.png" alt-text="Select browse location":::
+        :::image type="content" source="../assets/images/sbs-notification-bot/select-browse.png" alt-text="Select browse location":::
 
-2. Select the location for project workspace.
+    2. Select the location for project workspace.
 
-3. Select the **Select Folder**.
+    3. Select the **Select Folder**.
 
-   :::image type="content" source="../assets/images/sbs-notification-bot/select-folder.png" alt-text="Select Folder":::
+       :::image type="content" source="../assets/images/sbs-notification-bot/select-folder.png" alt-text="Select Folder":::
 
-4. Enter a suitable name for your app.
+    The folder you select is the location for your project workspace.
+    </details>
+    1. Enter a suitable name for your app.
 
-5. Select **Enter**.
+    1. Select **Enter**.
 
     :::image type="content" source="../assets/images/sbs-notification-bot/type-notfication-name.png" alt-text="Screenshot showing where to enter the app name.":::
 
-6. After your app is created, Agents Toolkit displays the following message:
+    1. After your app is created, Agents Toolkit displays the following message:
 
     :::image type="content" source="../assets/images/sbs-notification-bot/new-window-notification.png" alt-text="New window notification":::
 
-  The notification bot app is created in a few seconds.
+   The notification bot app is created in a few seconds.
 
-   :::image type="content" source="../assets/images/sbs-notification-bot/my-notification-bot.png" alt-text="Screenshot showing the app created.":::
+      :::image type="content" source="../assets/images/sbs-notification-bot/my-notification-bot.png" alt-text="Screenshot showing the app created.":::
   
 1. Select **Run and Debug** :::image type="icon" source="../assets/images/toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code **Activity Bar**.
 
