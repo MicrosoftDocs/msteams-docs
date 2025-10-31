@@ -47,13 +47,11 @@ Here are some scenarios for agents in Teams:
 - **Course shortlisting and next steps**: Shortlists top courses aligned with career objectives and outlines actionable next steps for each.
 - **Expert-endorsed recommendations**: Recommends leading courses from recognized experts in IT and AI.
 
-[WIP: image placeholder]
-
 :::image type="content" source="../assets/images/agents-in-teams/agent-overview/agent-scenario-academic.png" alt-text="Image shows agent user scenario." lightbox="../assets/images/agents-in-teams/agent-overview/agent-scenario-academic.png" border="false":::
 
-For more information, see [Add link to code sample to Contoso Knowledge Hub].
+For more information, see [code samples for agents](build-first-agent.md#code-sample) .
 
-## Choose how to build an agent
+## Choose an approach to build your agent
 
 Developers and organizations can choose from multiple approaches depending on the app requirements:
 
