@@ -13,7 +13,12 @@ ms.date: 03/11/2025
 Message formatting enables you to bring out the best in bot messages. You can format your bot messages to include rich cards as attachments that contain interactive elements, such as buttons, text, and images.
 
 > [!NOTE]
-> The bot message size limit is 40 KB. If the bot message size limit exceeds 40 KB, bot receives a `413` status code (`RequestEntityTooLarge`), which contains the error code `MessageSizeTooBig`. The bot message size limit includes the entire message payload encoded as UTF-16 and doesn't include Base64 encoded images.
+> Regarding bot message size limit:
+>
+> - The bot message size limit is 100 KB:
+>   - 100 KB is an approximate limit because it includes the message itself (text, image links, etc.), @-mentions, and reactions encoded as UTF-16. This 100 KB size limitation doesn't include base64 encoded image.
+>   - During implementation, it's recommended to ensure that the size of the message itself is within 80 KB to guarantee successful message delivery.
+> - If the bot message exceeds the size limit, the bot receives a `413` status code (`RequestEntityTooLarge`), which contains the error code `MessageSizeTooBig`.
 
 ## Format text content
 
@@ -31,9 +36,9 @@ Teams supports a subset of `markdown` and `xml` or HTML formatting tags. Your bo
 
 The following limitations apply to formatting:
 
-* Text-only messages don't support table formatting.
-* Rich cards support formatting in the text property only, not in the title or subtitle properties.
-* Rich cards don't support Markdown or table formatting.
+- Text-only messages don't support table formatting.
+- Rich cards support formatting in the text property only, not in the title or subtitle properties.
+- Rich cards don't support Markdown or table formatting.
 
 After you format text content, ensure that your formatting works across all platforms supported by Teams.
 
@@ -83,10 +88,10 @@ The following table provides a list of styles, which are supported on desktop, i
 
 AI labels, citations, feedback buttons, and sensitivity labels in your bot’s messages improve user engagement and foster transparency and trust.
 
-* [AI label](format-ai-bot-messages.md#ai-label) enables users to identify that the message was generated using AI.
-* [Citations](format-ai-bot-messages.md#citations) enables users to refer to the source of the bot's message through in-text citations and references.
-* [Feedback buttons](format-ai-bot-messages.md#feedback-buttons) enables users to provide positive or negative feedback to the bot's messages.
-* [Sensitivity label](format-ai-bot-messages.md#sensitivity-label) enables users to understand the confidentiality of the bot's message.
+- [AI label](format-ai-bot-messages.md#ai-label) enables users to identify that the message was generated using AI.
+- [Citations](format-ai-bot-messages.md#citations) enables users to refer to the source of the bot's message through in-text citations and references.
+- [Feedback buttons](format-ai-bot-messages.md#feedback-buttons) enables users to provide positive or negative feedback to the bot's messages.
+- [Sensitivity label](format-ai-bot-messages.md#sensitivity-label) enables users to understand the confidentiality of the bot's message.
 
 For more information, see [bot messages with AI-generated content](format-ai-bot-messages.md).
 
@@ -97,7 +102,7 @@ For more information, see [bot messages with AI-generated content](format-ai-bot
 
 ## See also
 
-* [Build bots for Teams](../what-are-bots.md)
-* [Designing your Microsoft Teams bot](../design/bots.md)
-* [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
-* [Format cards in Teams](../../task-modules-and-cards/cards/cards-format.md)
+- [Build bots for Teams](../what-are-bots.md)
+- [Designing your Microsoft Teams bot](../design/bots.md)
+- [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
+- [Format cards in Teams](../../task-modules-and-cards/cards/cards-format.md)

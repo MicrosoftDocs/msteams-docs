@@ -21,6 +21,9 @@ You can visually represent data through charts in Adaptive Cards. You can use ch
 * [Stacked horizontal bar chart](https://adaptivecards.microsoft.com/?topic=Chart.HorizontalBar.Stacked)
 * [Vertical bar chart](https://adaptivecards.microsoft.com/?topic=Chart.VerticalBar)
 
+> [!NOTE]
+> Charts in Adaptive Cards are not supported in Developer Portal.
+
 ## Donut chart
 
 You can use the `Chart.Donut` element to add a donut chart in an Adaptive Card.

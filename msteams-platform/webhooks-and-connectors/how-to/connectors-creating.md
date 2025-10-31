@@ -251,4 +251,4 @@ The following table provides the sample name and its description:
 * [Create and send messages](connectors-using.md)
 * [How admins can enable or disable connectors](/microsoftteams/office-365-custom-connectors#enable-or-disable-connectors-in-teams)
 * [How admins can publish custom connectors within their org](/microsoftteams/office-365-custom-connectors)
-* [App manifest schema](../../resources/schema/manifest-schema.md)
+* [App manifest schema](/microsoft-365/extensibility/schema/)
