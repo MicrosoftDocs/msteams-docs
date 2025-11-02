@@ -98,27 +98,27 @@ You can also change the default location by the following steps:
 
        :::image type="content" source="../assets/images/sbs-notification-bot/type-notfication-name.png" alt-text="Screenshot showing where to enter the app name.":::
 
-  3. After your app is created, Agents Toolkit displays the following message:
+  1. After your app is created, Agents Toolkit displays the following message:
 
        :::image type="content" source="../assets/images/sbs-notification-bot/new-window-notification.png" alt-text="New window notification":::
 
-   The notification bot app is created in a few seconds.
+  1. The notification bot app is created in a few seconds.
 
-   :::image type="content" source="../assets/images/sbs-notification-bot/my-notification-bot.png" alt-text="Screenshot showing the app created.":::
+       :::image type="content" source="../assets/images/sbs-notification-bot/my-notification-bot.png" alt-text="Screenshot showing the app created.":::
   
-1. Select **Run and Debug** :::image type="icon" source="../assets/images/toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code **Activity Bar**.
+  1. Select **Run and Debug** :::image type="icon" source="../assets/images/toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code **Activity Bar**.
 
-1. Select **Debug in Teams (Edge)** or **Debug in Teams (Chrome)** from the dropdown list.
+  1. Select **Debug in Teams (Edge)** or **Debug in Teams (Chrome)** from the dropdown list.
 
-1. Select **Start Debugging** button.
+  1. Select **Start Debugging** button.
 
    :::image type="content" source="../assets/images/sbs-command-bot/debug-app.png" alt-text="The screenshot shows how to debug your app in Agents Toolkit." border="true":::
 
-4. Select **Add**.
+  4. Select **Add**.
 
    :::image type="content" source="../assets/images/sbs-notification-bot/my-notification-output.png" alt-text="Screenshot of the app details dialog to add the notification bot.":::
 
-5. Select **Open** to open the app in personal scope.
+  5. Select **Open** to open the app in personal scope.
 
   Alternatively, you can either search and select the required scope or select a channel, chat, or meeting from the list, and move through the dialog to select **Go**.
 
