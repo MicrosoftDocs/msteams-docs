@@ -73,22 +73,22 @@ To build notification bot using Visual Studio Code:
 
    :::image type="content" source="../assets/images/sbs-notification-bot/select-default-location.png" alt-text="Select default location":::
 
-You can also change the default location by the following steps:
+   You can also change the default location by the following steps:
 
-  <details>
-  <summary>Learn to change the default folder:</summary>
+<details>
+    <summary>Learn to change the default folder:</summary>
 
-  1. Select **Browse**.
+    1. Select **Browse**.
 
-      :::image type="content" source="../assets/images/sbs-notification-bot/select-browse.png" alt-text="Select browse location":::
+        :::image type="content" source="../assets/images/sbs-notification-bot/select-browse.png" alt-text="Select browse location":::
 
-  2. Select the location for project workspace.
+    2. Select the location for project workspace.
 
-  3. Select the **Select Folder**.
+    3. Select the **Select Folder**.
 
-       :::image type="content" source="../assets/images/sbs-notification-bot/select-folder.png" alt-text="Select Folder":::
+         :::image type="content" source="../assets/images/sbs-notification-bot/select-folder.png" alt-text="Select Folder":::
 
-       The folder you select is the location for your project workspace.
+         The folder you select is the location for your project workspace.
 
   </details>
 
@@ -112,11 +112,11 @@ You can also change the default location by the following steps:
 
   1. Select **Start Debugging** button.
 
-   :::image type="content" source="../assets/images/sbs-command-bot/debug-app.png" alt-text="The screenshot shows how to debug your app in Agents Toolkit." border="true":::
+      :::image type="content" source="../assets/images/sbs-command-bot/debug-app.png" alt-text="The screenshot shows how to debug your app in Agents Toolkit." border="true":::
 
   4. Select **Add**.
 
-   :::image type="content" source="../assets/images/sbs-notification-bot/my-notification-output.png" alt-text="Screenshot of the app details dialog to add the notification bot.":::
+      :::image type="content" source="../assets/images/sbs-notification-bot/my-notification-output.png" alt-text="Screenshot of the app details dialog to add the notification bot.":::
 
   5. Select **Open** to open the app in personal scope.
 
