@@ -112,11 +112,11 @@ You can also change the default location by the following steps:
 
   1. Select **Start Debugging** button.
 
-   :::image type="content" source="../assets/images/sbs-command-bot/debug-app.png" alt-text="The screenshot shows how to debug your app in Agents Toolkit." border="true":::
+      :::image type="content" source="../assets/images/sbs-command-bot/debug-app.png" alt-text="The screenshot shows how to debug your app in Agents Toolkit." border="true":::
 
   4. Select **Add**.
 
-   :::image type="content" source="../assets/images/sbs-notification-bot/my-notification-output.png" alt-text="Screenshot of the app details dialog to add the notification bot.":::
+      :::image type="content" source="../assets/images/sbs-notification-bot/my-notification-output.png" alt-text="Screenshot of the app details dialog to add the notification bot.":::
 
   5. Select **Open** to open the app in personal scope.
 
