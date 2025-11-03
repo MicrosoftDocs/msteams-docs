@@ -2,11 +2,13 @@
 title: Enable SSO with Microsoft Entra ID
 description: Learn about Single sign-on (SSO) authentication in Microsoft Teams and how to enable it in bots and message extension, user experience, and SSO in Teams at runtime.
 ms.topic: conceptual
+ms.date: 11/12/2024
 ms.localizationpriority: high
+ms.owner: ryanbliss
 ---
 # Enable SSO for your app
 
-With Single sign-on (SSO) in Teams, app users have the advantage of using Teams to access bot or message extension apps. After logging into Teams using Microsoft or Microsoft 365 account, app users can use your app without needing to sign in again. Your app is available to app users on any device with access granted through Microsoft Entra ID.
+With single sign-on (SSO) in Microsoft Teams, app users can sign in to Teams using either a Microsoft or Microsoft 365 account and use bot and message extension apps without needing to sign in again. Your app is available to app users on any device with access granted through Microsoft Entra ID.
 
 > [!NOTE]
 > SSO for a bot app in Teams is supported only in one-on-one chat.
@@ -23,7 +25,7 @@ App users sign in to Teams using either personal Microsoft account or Microsoft 
 - The app user can access the app on web, desktop, or mobile client.
 
 > [!NOTE]
-> App users can't give permission to some permission scopes, such as `Sites.ReadWrite.All`, which allows the app user to read and write to all SharePoint and OneDrive assets in the tenant. For such scopes, only the tenant administrator can grant consent on an app user's behalf.
+> App users can't give permission to some permission scopes, such as `Sites.ReadWrite.All`, which allows the app user to read and write to all SharePoint and OneDrive assets in the tenant. For such scopes, only the admin can grant consent on an app user's behalf.
 
 Now, let's see what happens at the backend during runtime to achieve SSO experience within Teams.
 

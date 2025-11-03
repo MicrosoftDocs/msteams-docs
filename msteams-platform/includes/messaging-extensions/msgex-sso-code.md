@@ -28,6 +28,9 @@ To update the development environment variables:
 
 You've now configured the required environment variables for your bot app and SSO. Next, add the code for handling tokens.
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Update+development+environment+variables&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code%3Ftabs%3Dcs1%252Ccs2%252Ccs3%252Ccs4%252Ccs5%26pivots&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code.md&documentVersionIndependentId=039ff5cc-7243-ce4b-527e-c152755eeb72&platformId=915789b2-9617-01bb-fb21-d6789a634ed8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ## Add code to request a token
 
 The request to get the token is a POST message request using the existing message schema. It's included in the attachments of an OAuthCard. The schema for the OAuthCard class is defined in [Microsoft Bot Schema 4.0](/dotnet/api/microsoft.bot.schema.oauthcard?view=botbuilder-dotnet-stable&preserve-view=true). Teams refreshes the token if the `TokenExchangeResource` property is populated on the card. For the Teams channel, only the `Id` property, which uniquely identifies a token request, is honored.
@@ -133,7 +136,7 @@ To update your app's code:
        const ENV_FILE = path.join(__dirname, '.env');
        require('dotenv').config({ path: ENV_FILE });
     
-       const restify = require('restify');
+       const express = require("express");
     
        // Import required bot services.
        // See https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0 to learn more about the different parts of a bot.
@@ -197,25 +200,27 @@ To update your app's code:
        // Create the bot that will handle incoming messages.
        const bot = new TeamsBot(conversationState, userState, dialog);
     
-       // Create HTTP server.
-       const server = restify.createServer();
-       server.use(restify.plugins.bodyParser());
-    
-       server.listen(process.env.port || process.env.PORT || 3978, function() {
-           console.log(`\n${ server.name } listening to ${ server.url }`);
+       // Create express application.
+       const expressApp = express();
+       expressApp.use(express.json());
+
+       const server = expressApp.listen(process.env.port || process.env.PORT || 3978, () => {
+           console.log(`\n${ expressApp.name } listening to`, server.address());
            console.log('\nGet Bot Framework Emulator: https://aka.ms/botframework-emulator');
            console.log('\nTo talk to your bot, open the emulator select "Open Bot"');
        });
     
        // Listen for incoming requests.
-       server.post('/api/messages', async (req, res) => {
+       expressApp.post('/api/messages', async (req, res) => {
            // Route received a request to adapter for processing.
            await adapter.process(req, res, (context) => bot.run(context));
        });
 
    ```
 
-   ---
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+code+to+request+a+token&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code.md&documentVersionIndependentId=039ff5cc-7243-ce4b-527e-c152755eeb72&platformId=915789b2-9617-01bb-fb21-d6789a634ed8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 
 ### Consent dialog for getting access token
 
@@ -232,9 +237,12 @@ The consent dialog that appears is for open-id scopes defined in Microsoft Entra
 > [!IMPORTANT]
 > Scenarios where consent dialogs are not needed:
 >
-> - If the tenant administrator has granted consent on behalf of the tenant, app users don't need to be prompted for consent at all. This means that the app users don't see the consent dialogs and can access the app seamlessly.
+> - If the admin has granted consent on behalf of the tenant, app users don't need to be prompted for consent at all. This means that the app users don't see the consent dialogs and can access the app seamlessly.
 
 If you encounter any errors, see [Troubleshoot SSO authentication in Teams](~/tabs/how-to/authentication/tab-sso-troubleshooting.md).
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Consent+dialog+for+getting+access+token&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code%3Ftabs%3Dcs1%252Ccs2%252Ccs3%252Ccs4%252Ccs5%26pivots%3Dmex-app%23consent-dialog-for-getting-access-token&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code.md&documentVersionIndependentId=039ff5cc-7243-ce4b-527e-c152755eeb72&platformId=915789b2-9617-01bb-fb21-d6789a634ed8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Add code to receive the token
 
@@ -243,7 +251,7 @@ sign in/tokenExchange, and the **value** field. The **value** field contains the
 
 Use the following code snippet example to invoke response:
 
-   # [C#](#tab/cs3)
+# [C#](#tab/cs3)
 
 ```csharp
 public MainDialog(IConfiguration configuration, ILogger<MainDialog> logger)
@@ -297,7 +305,7 @@ private async Task<DialogTurnResult> LoginStepAsync(WaterfallStepContext stepCon
         }
 ```
 
-   # [JavaScript](#tab/js3)
+# [JavaScript](#tab/js3)
 
    ```JavaScript
     class MainDialog {
@@ -357,7 +365,8 @@ if(valueObject["authentication"] !=null)
     if(authenticationObject["token"] !=null)
  }
 ```
-
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+code+to+receive+the+token&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code%3Ftabs%3Dcs1%252Ccs2%252Ccs3%252Ccs4%252Ccs5%26pivots%3Dmex-app%23add-code-to-receive-the-token&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code.md&documentVersionIndependentId=039ff5cc-7243-ce4b-527e-c152755eeb72&platformId=915789b2-9617-01bb-fb21-d6789a634ed8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 ### Validate the access token
 
 Web APIs on your server must decode the access token and verify if it's sent from the client.
@@ -412,7 +421,7 @@ If you're using the OAuth connection, you must update or add the token in the Bo
 > [!NOTE]
 > You can find the sample `TeamsMessagingExtensionsSearchAuthConfigBot.cs` in [Tab, Bot, and Message Extension (ME) SSO](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp/App%20SSO%20Sample/Bots).
 
-   # [C#](#tab/cs4)
+# [C#](#tab/cs4)
 
 ```csharp
 protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
@@ -473,7 +482,7 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
      }
 ```
 
-   # [JavaScript](#tab/js4)
+# [JavaScript](#tab/js4)
 
 ```JavaScript
 
@@ -517,14 +526,16 @@ async tokenIsExchangeable(context) {
     return true;
 }
 ```
-
 ---
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Add+token+to+Bot+Framework+Token+Store&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code%3Ftabs%3Dcs1%252Ccs2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code.md&documentVersionIndependentId=039ff5cc-7243-ce4b-527e-c152755eeb72&platformId=915789b2-9617-01bb-fb21-d6789a634ed8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Handle app user log out
 
 Use the following code snippet to handle the access token in case the app user logs out:
 
-   # [C#](#tab/cs5)
+# [C#](#tab/cs5)
 
 ```csharp
     private async Task<DialogTurnResult> InterruptAsync(DialogContext innerDc, 
@@ -555,7 +566,7 @@ Use the following code snippet to handle the access token in case the app user l
         }
 ```
 
-   # [JavaScript](#tab/js5)
+# [JavaScript](#tab/js5)
 
 ```JavaScript
     async interrupt(innerDc) {
@@ -573,8 +584,10 @@ Use the following code snippet to handle the access token in case the app user l
         }
     }
 ```
-
 ---
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Handle+app+user+log+out&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code%3Ftabs%3Dcs1%252Ccs2%252Ccs3%252Ccs4%252Ccs5%26pivots%3Dmex-app%23handle-app-user-log-out&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-code.md&documentVersionIndependentId=039ff5cc-7243-ce4b-527e-c152755eeb72&platformId=915789b2-9617-01bb-fb21-d6789a634ed8&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Code sample
 
@@ -582,6 +595,6 @@ This section provides bot authentication v3 SDK sample.
 
 | **Sample name** | **Description** | **.NET** | **Node.js** | **Python** | **Manifest** |
 |---------------|------------|------------|-------------|---------------|---------------|
-| Bot authentication | This sample shows how to get started with authentication in a bot for Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/csharp/demo-manifest/bot-teams-authentication.zip)|
-| Tab, bot, and Message extension (ME) SSO | This sample shows SSO for tab, bot, and message extension - search, action, link unfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp/demo-manifest/App-SSO.zip)|
-|Tab, bot, and Message extension | This sample shows how to check authentication in bot, tab, and message extension with SSO | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/nodejs) | NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp/demo-manifest/App-Complete-Auth.zip)|
+| Bot authentication | This sample app demonstrate how an Bot can use Teams authentication. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/csharp/demo-manifest/bot-teams-authentication.zip)|
+| Tab, bot, and Message extension (ME) SSO | This sample app demonstrates Teams SSO integration for Tab, Bot, and Messaging Extension, using C# and Microsoft Entra ID for secure authentication. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp/demo-manifest/App-SSO.zip)|
+|Tab, bot, and Message extension | This sample showcases Microsoft Entra ID and Facebook authentication across bots, tabs, and messaging extensions in Microsoft Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/nodejs) | NA |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp/demo-manifest/App-Complete-Auth.zip)|

@@ -4,6 +4,8 @@ description: Learn how to send and customize activity feed notifications in chat
 author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: conceptual
+ms.owner: vishachadha
+ms.date: 12/17/2024
 ---
 
 # Send activity feed notifications to users in Microsoft Teams
@@ -76,7 +78,7 @@ The following variants show the kinds of activity feed notification cards you ca
 
 Activity feed APIs work with a Teams app. The following are the requirements to send activity feed notifications:
 
-* The app manifest must have the Microsoft Entra app ID added to the `webApplicationInfo` section. For more information, see [app manifest schema](../resources/schema/manifest-schema.md#webapplicationinfo).
+* The app manifest must have the Microsoft Entra app ID added to the `webApplicationInfo` section. For more information, see [app manifest schema](/microsoft-365/extensibility/schema/root-web-application-info).
 * The activity notifications can be sent with or without activity types added in the app manifest.
   * By default, you can use the activity notification APIs without adding the `activities` section in the app manifest. The `systemDefault` activity type is reserved, which allows you to provide free-form text in the `Actor+Reason` line of the activity feed notification. For more information, see [send customizable activity feed notifications](/graph/teams-send-activityfeednotifications?tabs=http#example-8-send-a-notification-to-a-user-using-the-systemdefault-activity-type).
     > [!NOTE]
@@ -177,7 +179,7 @@ This section describes the updates that need to be added to the app manifest. En
 
 ### Install the Teams app
 
-Teams apps must be installed in a team, chat, or for a user in personal scope for users to receive activity feed notifications. For details, see [Teams app distribution methods](/microsoftteams/platform/concepts/deploy-and-publish/overview). For development purposes, we prefer [custom app upload](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload). After development, you can choose the right distribution method based on whether you want to distribute to one tenant or to all tenants.
+Teams apps must be installed in a team, chat, or for a user in personal scope for users to receive activity feed notifications. For details, see [Teams app distribution methods](/microsoftteams/platform/concepts/deploy-and-publish/overview). For development purposes, we prefer [custom app upload](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload). After development, you can choose the right distribution method based on whether you want to publish to one tenant or to all tenants.
 
 You can also use [Teams app installation](/graph/api/resources/teamsappinstallation) APIs to manage Teams app installations.
 

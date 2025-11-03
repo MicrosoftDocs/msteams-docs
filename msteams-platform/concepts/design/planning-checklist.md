@@ -1,11 +1,11 @@
 ---
 title: App Planning Checklist
 author: heath-hamilton
-description: Learn to plan your app using the checklist to ensure your plan covers the important details of app development. Plan app's lifecycle. Plan to host your Teams app.
+description: Learn to plan your app using the checklist to ensure your plan covers the important details of app development. Plan app's lifecycle and to host your Teams app.
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.date: 07/28/2022
+ms.date: 02/06/2025
 ---
 
 # Teams app planning checklist
@@ -75,7 +75,7 @@ Authentication is all about validating app users and securing the app and app us
 <details>
 <summary>Plan onboarding experience</summary>
 
-Building an awesome Teams app is all about finding the right combination of features to meet your user's needs. To provide your users with a seamless onboarding experience, you can create a step-by-step guide explaining how and what to do with your app. For example, see [create Teams conversation bot](../../sbs-teams-conversation-bot.yml).
+Building an awesome Teams app is all about finding the right combination of features to meet your user's needs. To provide your users with a seamless onboarding experience, you can create a step-by-step guide explaining how and what to do with your app. For example, see [create Teams conversation bot](../../bots/how-to/conversations/channel-and-group-conversations.md).
 
 | # | Consider... |
 | --- | --- |
@@ -111,7 +111,7 @@ Building an awesome Teams app is all about finding the right combination of feat
 <details>
 <summary>Choose build environment</summary>
 
-With Teams, you can choose the build environment that best suits your app requirement. Use Teams Toolkit or other SDKs, such as C#, Blazor, Node.js, and more to get started. For more information, see [plan your app with Teams features](../app-fundamentals-overview.md).
+With Teams, you can choose the build environment that best suits your app requirement. Use Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) or other SDKs, such as C#, Blazor, Node.js, and more to get started. For more information, see [plan your app with Teams features](../app-fundamentals-overview.md).
 
 Suggestion: Options that help select the correct environment based on app needs.
 </details>

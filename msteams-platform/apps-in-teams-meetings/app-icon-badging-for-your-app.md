@@ -1,17 +1,18 @@
 ---
 title: App Icon Badges for Meetings
-author: v-sdhakshina
-description: Learn how to enable app icon badging for your Microsoft Teams app in meeting, app manifest setting and its code samples to enable app icon badging (Node.js, .NET).
+description: Learn how to enable app icon badging for your Microsoft Teams app in meeting, app manifest setting, and its code samples to enable app icon badging (Node.js, .NET).
 ms.topic: conceptual
-ms.author: v-sdhakshina
+ms.author: surbhigupta
 ms.localizationpriority: medium
+ms.owner: vichug
+ms.date: 01/23/2025
 ---
 
 # Enable app icon badging for your Teams app
 
 App icon badging helps a meeting participant identify any app activity during a meeting. Participants get activity notification for the meeting apps.
 
-When there's new activity during the meeting, the app calls the `targetedMeetingNotification` API and displays a red badge on the app icon in the meeting unified bar (U-bar). When the participant selects the app icon, the app opens in the meeting side panel, and the badge goes away.
+When there's a new activity during the meeting, the app calls the `targetedMeetingNotification` API and displays a red badge on the app icon in the meeting unified bar (U-bar). When the participant selects the app icon, the app opens in the meeting side panel, and the badge goes away.
 
 For example, during a real time collaboration in a meeting, if a participant adds a comment in a file added to the meeting, the app calls the `targetedMeetingNotification` API from the participant's meeting side panel. The API triggers a badge on the app icon to make other participants aware of the comment activity.
 
@@ -21,7 +22,7 @@ The following image shows you the app icon badging in the meeting U-bar:
 
 > [!NOTE]
 >
-> * App icon badging isn't available for [Government Community Cloud (GCC)-High and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
+> * App icon badging is available for [Government Community Cloud (GCC), GCC High, and Department of Defense (DoD)](../concepts/cloud-overview.md) environments and isn't supported in [Teams operated by 21Vianet](../concepts/sovereign-cloud.md).
 > * App icon badging isn't supported for mobile clients.
 > * App icon badging isn't supported for channel meetings.
 
@@ -35,7 +36,7 @@ To enable app icon badging, follow these steps:
 To enable app icon badging, you must:
 
 * Ensure that you've configured `meetingSidePanel` as a `context` property for your app.
-* Configure the `authorization` property and the `name` and `type` properties under the `resourceSpecific` field in the [app manifest](../resources/schema/manifest-schema.md#authorization) as follows:
+* Configure the `authorization` property and the `name` and `type` properties under the `resourceSpecific` field in the [app manifest](/microsoft-365/extensibility/schema/root-authorization) as follows:
 
 ```json
 
@@ -113,7 +114,7 @@ TeamsInfo.sendMeetingNotification(context, notificationPayload, meetingId);
 
 |Sample name | Description | Node.js | .NET |
 |----------------|-----------------|--------------|
-| App icon badging for your Teams app | This sample demonstrates how to enable app icon badging for your Teams app. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-app-icon-badging/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-app-icon-badging/csharp) |
+| App icon badging for your Teams app | This sample app showcases how to implement app icon badging for notifications in Teams meetings. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-app-icon-badging/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-app-icon-badging/csharp) |
 
 ## See also
 

@@ -3,7 +3,8 @@ title: Integrate Teams Tab to SharePoint
 description: Learn about SharePoint web parts and how to add and deploy your existing Teams tab to SharePoint as a SharePoint Framework web part using code samples.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.date: 06/08/2023
+ms.date: 12/11/2024
+ms.owner: ryanbliss
 ---
 
 # Add Teams tab to SharePoint
@@ -44,13 +45,15 @@ With SPFx, you can host your Teams tabs directly in SharePoint that provides a f
 
 1. Select the sample app manifest .zip file and select **Open**. A dialog opens to add the custom app.
 
-1. Under the **Add** dropdown, select **Add to a team**.
+1. Select **Add**.
 
-    :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/custom-tab-add-to-team.png" alt-text="Screenshot shows how to add a custom app to a team.":::
+    :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/custom-tab-add-to-team.png" alt-text="Screenshot of the app details dialog to add the sample app to Teams.":::
 
-1. Select the team where you want to install the app and select **Set up**.
+1. Select **Open** to open the app in personal scope. 
 
-    :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/set-up-custom-tab.png" alt-text="Screenshot shows the option to select set up a tab in a team.":::
+   Alternatively, you can either search and select the required scope or select a channel or meeting from the list, and move through the dialog to select **Go**.
+
+   :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/add-scope.png" alt-text="Screenshot of the scope selection dialog to select the required scope.":::
 
 1. A new static tab is added to your Teams channel.
 
@@ -60,6 +63,9 @@ With SPFx, you can host your Teams tabs directly in SharePoint that provides a f
 
 > [!NOTE]
 > SharePoint extension commands aren’t supported in the Teams **Files** tab. You can [add a SharePoint page, list, or document library as a tab in Teams](https://support.microsoft.com/office/add-a-sharepoint-page-list-or-document-library-as-a-tab-in-teams-131edef1-455f-4c67-a8ce-efa2ebf25f0b).
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Test+the+sample+app&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Ftabs-in-sharepoint%23test-the-sample-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Ftabs-in-sharepoint.md&documentVersionIndependentId=afcc83c4-12c0-bab6-1cec-61ac463b4f60&platformId=f9b2ba89-f12b-cf79-099e-cba724602935&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ### Use Teams tab in SharePoint
 
@@ -93,6 +99,9 @@ With SPFx, you can host your Teams tabs directly in SharePoint that provides a f
 
     :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/image073.png" alt-text="Screenshot shows the tab in SharePoint." lightbox="../../assets/images/tabs/tabs-in-sharepoint/image073.png":::
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Use+Teams+tab+in+SharePoint&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Ftabs-in-sharepoint%23use-teams-tab-in-sharepoint&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Ftabs-in-sharepoint.md&documentVersionIndependentId=afcc83c4-12c0-bab6-1cec-61ac463b4f60&platformId=f9b2ba89-f12b-cf79-099e-cba724602935&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ### Explore single part app pages in SharePoint
 
 After you publish your page, explore [single part app pages in SharePoint](/sharepoint/dev/spfx/web-parts/single-part-app-pages). This helps you convert the current page into a single part app page, a normal SharePoint page layout with the full-page experience for the Teams tab.
@@ -103,7 +112,7 @@ After you publish your page, explore [single part app pages in SharePoint](/shar
 
 | **Sample name** | **Description** | **SPFx** |
 |-----------------|-----------------|----------|
-| SPFx web part | SPFx web part samples for tabs, channels, and groups. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/) |
+| SPFx web part | A Microsoft Teams Hello World sample app built with .NET/C# that demonstrates essential features like tabs, bots, and message extensions for seamless interaction within the Teams environment. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/) |
 
 ## See also
 

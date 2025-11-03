@@ -1,9 +1,10 @@
 ---
 title: Requirements for Building Tabs
-description: In this article, learn about the prerequisites and tools needed to build a Microsoft Teams personal, channel, or group tab.
+description: Learn about the permissions, compatibility, and other prerequisites, and tools required to build a Microsoft Teams personal, channel, or group tab.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.date: 03/28/2023
+ms.date: 02/06/2025
+ms.owner: ryanbliss
 ---
 
 # Prerequisites
@@ -30,7 +31,7 @@ Ensure that you adhere to the following prerequisites while building your Teams 
     > [!NOTE]
     > It is recommended that you set the intended use for your cookies rather than rely on default browser behavior. For more information, see [SameSite cookie attribute](../../resources/samesite-cookie-update.md).
 
-* Browsers same-origin policy restriction prevents webpages from making requests to different domains than the served web page. So, you can redirect the configuration or content page to another domain or subdomain. Your cross-domain navigation logic needs to allow the Teams client to validate the origin against a static `validDomains` list in the [app manifest](../../resources/schema/manifest-schema.md#validdomains) when loading or communicating with the tab.
+* Browsers same-origin policy restriction prevents webpages from making requests to different domains than the served web page. So, you can redirect the configuration or content page to another domain or subdomain. Your cross-domain navigation logic needs to allow the Teams client to validate the origin against a static `validDomains` list in the [app manifest](/microsoft-365/extensibility/schema/root#validdomains) when loading or communicating with the tab.
 
 * Style your tabs based on the Teams client's theme, design, and intent. Tabs work best when built to address a specific need and focus on a small set of tasks or a subset of data that is relevant to the tab's channel location.
 
@@ -55,8 +56,8 @@ Ensure that you adhere to the following prerequisites while building your Teams 
 | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com), **ASP.NET and web development** workload| .NET. You can install the free community edition of Visual Studio 2022. |
 | &nbsp; | [Git](https://git-scm.com/downloads) | Git to use the sample apps repo from GitHub. |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
-| &nbsp; | [ngrok](https://ngrok.com/download) | Ngrok is a reverse proxy software tool. Ngrok creates a tunnel to your locally running web server's publicly available HTTPS endpoints. Your server's web endpoints are available during the current session on your computer. When you shut down or put your device to sleep, the service is no longer available. |
-| &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Microsoft Teams Store. |
+| &nbsp; | [ngrok](https://ngrok.com/downloads) | Ngrok is a reverse proxy software tool. Ngrok creates a tunnel to your locally running web server's publicly available HTTPS endpoints. Your server's web endpoints are available during the current session on your computer. When you shut down or put your device to sleep, the service is no longer available. |
+| &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and publish your Teams app including to your organization or the Microsoft Teams Store. |
 
 ### Build your Teams tab
 

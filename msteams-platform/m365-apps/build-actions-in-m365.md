@@ -25,14 +25,7 @@ To build Actions for your app, follow these steps:
 
 ## Prerequisites
 
-Before you get started, ensure that you install the following:
-
-| &nbsp; | Install | Description |
-| --- | --- | --- |
-| &nbsp; | [Node.js](https://nodejs.org/en/download/) | A JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
-| &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge/) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
-| &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | Visual Studio Code is a lightweight but powerful source code editor, which comes with built-in support for JavaScript, TypeScript, Node.js, and SharePoint Framework (SPFx) build environments. Use the latest version. |
-| &nbsp; | [Teams Toolkit](../toolkit/install-Teams-Toolkit.md) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
+[!INCLUDE [prerequisites-actions-m365](../includes/get-started/prerequisites-actions-m365.md)]
 
 ## Configure app manifest
 
@@ -69,7 +62,7 @@ The following is an app manifest example for Actions that can be triggered on fi
 }
 ```
 
-For more information, see [public developer preview app manifest schema](../resources/schema/manifest-schema-dev-preview.md#actions).
+For more information, see [app manifest schema](/microsoft-365/extensibility/schema/element-actions).
 
 When a user selects an action to open a personal tab and view related tasks in an app based on the selected file. The app uses the `"intent": "custom"` property to identify the file type, such as .xlsx or doc and the `"type": "openPage"` handler opens the app and navigates to the `pageId`.
 
@@ -93,7 +86,7 @@ app.getContext().then((context) => {
     if (actionInfo) {
         if (actionInfo.actionObject.type == app.ActionObjectType.M365Content) {
             const itemId = actionInfo.actionObjects[0].itemId;
-            // Get the requested content from Mirosoft Graph by item id:
+            // Get the requested content from Microsoft Graph by item id:
         } 
     }
 })
@@ -115,9 +108,9 @@ After obtaining the `itemId` of the triggering content, you can use the [Graph A
 GET /users/{user-id}/drive/items/{item-id}
 ```
 
-## Sideload your app using Teams Toolkit
+## Upload your custom app using Microsoft 365 Agents Toolkit
 
-After you update the app package with the required information, you're ready to test your Actions in the Teams Toolkit. To initiate debugging, select the **F5** key.
+After you update the app package with the required information, you're ready to test your Actions in the Microsoft 365 Agents Toolkit (previously known as Teams Toolkit). To initiate debugging, select the **F5** key.
 
    :::image type="content" source="images/actions-debug.png" alt-text="The screenshot shows actions in debug.":::
 
@@ -126,6 +119,8 @@ A browser window opens with Microsoft 365 home page and your app is available un
 You can now preview your Actions in the Microsoft 365 home page, right-click a file that is supported by your Actions. Actions appear in the context menu, for example **Add todo task**.
 
 :::image type="content" source="images/actions-context-menu.png" alt-text="The screenshot shows the actions in context menu.":::
+
+[!INCLUDE [m365-app-rename](~/includes/m365-app-rename.md)]
 
 ## Preinstall Actions for users in Microsoft 365 Admin Center
 
@@ -144,7 +139,7 @@ Follow instructions to preinstall your app for entire organization or user group
 
 | **Sample name** | **Description** |**Node.js** |
 |-----------------|-----------------|----------------|
-| Actions in Microsoft 365 apps | This sample code describes the actions implemented in Microsoft 365 apps, specifically focusing on two actions within a To Do app. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/m365-actions-preview/nodejs)|
+| Actions in Microsoft 365 apps | This sample demonstrates how to build Teams apps using Actions in the Microsoft 365 app to streamline task management and enhance productivity by minimizing context switching. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/m365-actions-preview/nodejs)|
 
 ## Next step
 

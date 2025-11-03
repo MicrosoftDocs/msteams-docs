@@ -1,11 +1,11 @@
 ---
-title: Teams Connect shared channels
-author: Rajeshwari-v
-description:  Learn about Teams Connect shared channels to securely collaborate with internal and external users in a shared space without switching tenants.
+title: Teams Connect Shared Channels
+author: surbhigupta
+description: Learn about Teams Connect shared channels to securely collaborate with internal and external users in a shared space without switching tenants.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.date: 11/02/2022
+ms.date: 04/09/2025
 ---
 
 # Microsoft Teams Connect shared channels
@@ -17,16 +17,17 @@ Microsoft Teams Connect shared channels allow members of a channel to collaborat
 * Individuals and other teams of other organizations.
 
 > [!NOTE]
-> * Tab apps in shared channels are available in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
-> * SharePoint and the SharePoint pages apps aren't supported for shared channels in GCC, GCC-High, and DOD environments.
+>
+> * Tab apps in shared channels are available in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](../cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](../sovereign-cloud.md) environments.
+> * SharePoint and the SharePoint pages apps aren't supported for shared channels in GCC, GCC High, DoD, and Teams operated by 21Vianet environments.
 
 Teams Connect shared channels facilitate secure collaboration seamlessly. Allow external users outside of your organization to collaborate with internal users in Teams without changing their user context. Enhance user experience unlike using guest accounts, for example, the members must sign out of Teams and sign in again using a guest account. Teams applications extend the powerful collaboration space.
 
-:::image type="content" source="~/assets/images/app-fundamentals/shared-channels-teams.png" alt-text="Diagram that shows Team B from organization A and Team C from organization B collaborating in a shared Channel as Team A.":::
+:::image type="content" source="~/assets/images/app-fundamentals/shared-channels-teams.png" alt-text="Diagram shows Team B from organization A and Team C from organization B collaborating in a shared channel as Team A.":::
 
 ## Enable your app for shared channels
 
-SupportedChannelTypes is an optional property that enables your app in non-standard channels. If your app supports the team scope and the property is defined, Teams enables your app in each channel type accordingly. Private and shared channels are supported. For more information, see [supportedChannelTypes](../../resources/schema/manifest-schema.md#supportedchanneltypes).
+SupportedChannelTypes is an optional property that enables your app in non-standard channels. If your app supports the team scope and the property is defined, Teams enables your app in each channel type accordingly. Private and shared channels are supported. For more information, see [supportedChannelTypes](/microsoft-365/extensibility/schema/root#supportedchanneltypes).
 
 ```JSON
     "supportedChannelTypes": [
@@ -38,7 +39,8 @@ SupportedChannelTypes is an optional property that enables your app in non-stand
 > [!NOTE]
 >
 > * If your app supports the team scope, it functions in standard channels, regardless of what values are defined in this property.
-> * Your app may need to account for the unique properties of each of these channel types in order to function properly.
+> * Your app might need to account for the unique properties of each of these channel types in order to function properly.
+> * Only **tabs** are currently supported in **private** and **shared** channels in Microsoft Teams.
 
 ## Get context for shared channels
 
@@ -101,10 +103,35 @@ Apps must function cross-tenants in installation and usage. The following table 
 |Regular | Team Microsoft Entra group ID | Team Microsoft Entra group ID |
 |Shared | Empty | Host Team Microsoft Entra group ID |
 
+## Apps in federated group chats with external users
+
+> [!NOTE]
+>
+> * Apps in federated group chats with external users aren't available in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](../cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](~/concepts/sovereign-cloud.md) environments.
+> * Apps aren't supported in one-on-one chats, channels, or meetings with external users.
+
+Teams supports the use of apps in federated group chats with external users. These users can't add, update, or remove apps from the group chat. Only the host of the group chat can add, update, or remove apps. However, all members of the chat, including external users, can use apps under the following conditions:
+
+* The tenant admin of the group chat host's organization and the tenant admin of the external user's organization must allow the use of the app in federated group chats. For more information, see [Teams apps for external attendees or guests from outside an organization](/microsoftteams/apps-external-users).
+* The app allows access to external users in federated group chats.
+
+If you're developing an app for use in federated group chats with external users, register your app as a multitenant app in Microsoft Entra ID. This action allows users across multiple organizations to access your app.
+
+> [!NOTE]
+> If you want to test the [code sample](#code-sample) with an external user in a federated group chat, you must first add the external user as a guest to your tenant. For more information, see [Quickstart: Add a guest user and send an invitation](/entra/external-id/b2b-quickstart-add-guest-users-portal). After adding the user to the tenant, go to the federated group chat and add the guest to test the app.
+
+## Code sample
+
+| Sample name | Description | Node.js |
+|-------------|-------------|------|----|
+| Teams Conversation Bot | This sample app displays the names of the members in a federated group chat with external users. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-feed-members/nodejs/)|
+
 ## See also
 
 * [Build tabs for Teams](../../tabs/what-are-tabs.md)
-* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
+* [App manifest schema for Teams](/microsoft-365/extensibility/schema/)
 * [Shared channels in Microsoft Teams](/microsoftteams/shared-channels)
 * [Channel resource type](/graph/api/resources/channel)
-* [Retension policy for Teams locations](/microsoft-365/compliance/create-retention-policies)
+* [Retention policy for Teams locations](/microsoft-365/compliance/create-retention-policies)
+* [Use guest access and external access to collaborate with people outside your organization](/microsoftteams/communicate-with-users-from-other-organizations)
+* [Manage external meetings and chat with people and organizations using Microsoft identities](/microsoftteams/trusted-organizations-external-meetings-chat?tabs=organization-settings)

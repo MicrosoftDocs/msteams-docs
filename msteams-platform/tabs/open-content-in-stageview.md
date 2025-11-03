@@ -1,6 +1,6 @@
 ---
 title: Multi-window Experience for App Content
-author: Rajeshwari-v
+author: surbhigupta
 description: Learn the types of Stageview, full screen UI component invoked to surface your app content. Open content in multi-window using deep links, Adaptive Cards or TeamsJS.
 ms.topic: conceptual
 ms.author: surbhigupta
@@ -89,6 +89,32 @@ When `openMode` isn't defined, the content opens by default in Collaborative Sta
 
 </details>
 
+<details>
+<summary id="closestage" ><b>close() function</b></summary>
+
+When a Stageview is open, `close()` function allows you to programmatically close the Stageview after user action. This is an optional function that you can integrate into your Microsoft built apps. If the function is called from outside a Stageview, the close action isn't performed.
+
+Initialize your app using `microsoftTeams.app.initialize()` and implement `close()` function from the [`self` module](/javascript/api/@microsoft/teams-js/stageview.self):
+
+```typescript
+// App Initialize
+microsoftTeams.app.initialize();
+
+// User defined function to close the Stageview in Teams
+function closeStageView() {
+    // Attempt to close the Stageview using close() function
+    microsoftTeams.stageView.self.close()
+        .then(() => {
+            console.log("Stage view closed successfully."); // Log success message
+        })
+        .catch((error) => {
+            console.error("Error closing stage view:", error); // Log error if closing fails
+        });
+}
+```
+
+</details>
+
 ### Invoke Collaborative Stageview from Adaptive Card
 
 Collaborative Stageview from an Adaptive Card allows users to engage with your content while continuing the conversation flow. If Collaborative Stageview is invoked from an Adaptive Card JSON in Teams web client, it opens in a Stageview Modal.
@@ -131,7 +157,7 @@ The following JSON code is an example to create an action button in an Adaptive 
 * The `invoke` workflow must be similar to the `appLinking` workflow.
 * The `Action.Submit` must be configured as `Open` to maintain consistency.
 
-If your app isn't optimized to work in Teams mobile client, Stageview for apps distributed through the [Microsoft Teams Store](../concepts/deploy-and-publish/apps-publish-overview.md) opens in a default web browser.
+If your app isn't optimized to work in Teams mobile client, Stageview for apps published through the [Microsoft Teams Store](../concepts/deploy-and-publish/apps-publish-overview.md) opens in a default web browser.
 
 ### Invoke from stageView API
 
@@ -269,7 +295,7 @@ Stageview Modal is useful to display rich content to the users, such as page, da
 
 <summary>When Stageview is invoked, the content opens in Collaborative Stageview but gets loaded in the main Teams window instead of a new window. How to open the content in a new window?</summary>
 
-Ensure that your `contentUrl` domain is accurately reflected in the manifest `validDomains` property. For more information, see [app manifest schema](../resources/schema/manifest-schema.md).
+Ensure that your `contentUrl` domain is accurately reflected in the manifest `validDomains` property. For more information, see [app manifest schema](/microsoft-365/extensibility/schema/root#validdomains).
 
 </br>
 
@@ -309,7 +335,7 @@ Collaborative Stageview from a deep link or a stageView API comes with the addit
 
 |Sample name | Description | .NET | Node.js |
 |----------------|-----------------|--------------|----------------|
-| Teams tab Stageview | This sample app demonstrates a tab in Stageview. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs) |
+| Teams tab Stageview | This sample app demonstrates the use of Teams tab in stage view using C#, showcasing collaborative features and interactive elements. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs) |
 
 ## See also
 

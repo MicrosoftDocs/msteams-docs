@@ -5,6 +5,8 @@ description: Learn to respond to message extension action commands with Proactiv
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
+ms.owner: ginobuzz
+ms.date: 03/11/2025
 ---
 
 # Respond to the dialog submit action
@@ -21,7 +23,7 @@ You have the following options to respond:
 * [Card response](#respond-with-a-card-inserted-into-the-compose-message-area): You can respond with a card that the user can interact with or insert into a message.
 * [Adaptive Card from bot](#bot-response-with-adaptive-card): Insert an Adaptive Card directly into the conversation.
 * [Request the user to authenticate](/microsoftteams/platform/messaging-extensions/how-to/add-authentication).
-* [Request the user to provide additional configuration](../search-commands/respond-to-search.md#configuration-response).
+* [Request the user to provide additional configuration](../search-commands/respond-to-search.md#config-response).
 
 If the app doesn't respond within five seconds, the Teams client retries the request twice before it sends an error message **Unable to reach the app**. If the bot replies after the timeout, the response is ignored.
 
@@ -623,9 +625,9 @@ The following section is a description of the entities in the `OnBehalfOf` Array
 
 | Sample name           | Description | .NET    | Node.js   | Manifest|
 |:---------------------|:--------------|:---------|:--------|:--------|
-|Teams message extension action| This sample shows how to define action commands, create dialog, and respond to dialog submit action. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp/demo-manifest/msgext-action.zip)
-|Message extension action preview| This sample shows how to use action preview in Messaging Extensions using Bot Framework v4. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp/demo-manifest/msgext-action-preview.zip) |
-|Teams message extension search   |  This sample shows how to build a Search-based Message Extension. It searches NuGet packages and displays the results in search based messaging extension.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
+|Teams message extension action| This sample demonstrates how to create action-based message extensions for Microsoft Teams, enabling users to interactively generate content. It features bots, message extensions, and seamless integration with user inputs for enhanced functionality. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp/demo-manifest/msgext-action.zip)
+|Message extension action preview| This sample app illustrates how to utilize action previews in Teams message extensions, allowing users to create cards from input in a Task Module. It showcases bot interactions that enhance user engagement by attributing messages to users. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp/demo-manifest/msgext-action-preview.zip) |
+|Teams message extension search | This sample demonstrates how to create a message extension in Microsoft Teams that allows users to perform searches and retrieve results.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
 
 ## Next Step
 
@@ -634,6 +636,6 @@ The following section is a description of the entities in the `OnBehalfOf` Array
 
 ## See also
 
-* [App manifest schema for Teams](../../../resources/schema/manifest-schema.md)
+* [App manifest schema for Teams](/microsoft-365/extensibility/schema)
 * [Respond to search command](../search-commands/respond-to-search.md)
 * [Message extensions](../../what-are-messaging-extensions.md)

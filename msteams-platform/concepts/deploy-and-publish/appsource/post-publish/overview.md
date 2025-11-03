@@ -5,7 +5,7 @@ ms.topic: conceptual
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.date: 10/19/2022
+ms.date: 02/10/2025
 ---
 # Maintain your published Microsoft Teams app
 
@@ -40,7 +40,7 @@ If you make any of the following changes to your app, however, your existing use
 * Add a personal tab.
 * Add a channel and group tab.
 * Add a connector.
-* Modify configurations related to your Microsoft Entra app registration. For more information, see [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* Modify configurations related to your Microsoft Entra app registration. For more information, see [`webApplicationInfo`](/microsoft-365/extensibility/schema/root-web-application-info-nested-app-auth-info).
 
 ## Promote your app on another site
 
@@ -66,7 +66,7 @@ You can download the complete set of badge images (in PNG and PDF format) from t
 
 *Microsoft Marks* means the *Microsoft badge* described on the [badge generator](https://apps.microsoft.com/store/app-badge) page. To use these badges, you must:
 
-* Have your app or other content available in the Teams Store, or be part of the [Microsoft Affiliate Program](https://www.microsoftaffiliates.com/).
+* Have your app or other content available in the Teams Store, or be part of the [Microsoft Affiliate Program](https://www.microsoft.com/en-us/microsoft-365/business/microsoft-365-affiliate-program?ms.officeurl=affiliate).
 
 * If you're registered as an app developer in Partner Center, comply with the [“License to Microsoft Marks”](/legal/windows/agreements/app-developer-agreement#license_to_mark) section of the App Developer Agreement.
 
@@ -125,17 +125,19 @@ You must maintain your app's user experience as at the initial app review. If yo
 
 To discontinue your app:
 
-* To remove your app from Microsoft AppSource, in your Microsoft Partner Center account, go the **Product Overview** page and select **Stop Selling**.
+* To remove your app from Microsoft AppSource, in your [Microsoft Partner Center](https://partner.microsoft.com/dashboard/v2/membership/workspace/overview) account, go the **Product Overview** page and select **Stop Selling**. This action removes the app from all marketplace listings and user interfaces. The app is no longer discoverable, installable, or available for acquisition. Any content previously posted by the app, such as messages from a bot remains visible in user history.
 
 * Contact the Microsoft Teams App Health evaluation team at [apphealthevaluation@microsoft.com](mailto:apphealthevaluation@microsoft.com) or [teams-sas@microsoft.com](mailto:teams-sas@microsoft.com) to remove your app from the Teams Store.
 
 * Contact your customers where appropriate. Delete or revoke any security or authorization tokens generated for your app.
 
+After the app is discontinued, Microsoft AppSource stores the partner communication data for six months. After this duration, the data is permanently deleted.
+
 ## Ratings and review for Teams apps
 
 Users can rate apps from one to five stars on Microsoft Teams Store and offer feedback (review) on their usage experiences. The ratings and reviews for apps appear on the app listing and the product details page in Teams Store. As a developer, you can interact and respond to these reviews from Partner Center, and the responses are shown on AppSource along with Teams experience, helping users find and use the app more easily. This feedback improves app visibility, keeps users engaged, and encourages more downloads on Teams Store.
 
-:::image type="content" source="../../../../assets/images/submission/review.gif" alt-text="Graphics shows the user ratings and review for teams app.":::
+:::image type="content" source="../../../../assets/images/submission/review.gif" alt-text="Graphical representation that shows rating and review submission for an app.":::
 
 > [!NOTE]
 > Ratings and reviews aren't available for custom apps that are built for your organization.

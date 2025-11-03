@@ -26,7 +26,7 @@
     :::image type="content" source="../../assets/images/include-files/ngrok-url.png" alt-text="Screenshot shows the ngrok HTTPS URL.":::
 
     > [!NOTE]
-    > The HTTPS URL in your ngrok is your fully qualified domain name.
+    > The HTTPS URL in your ngrok is a fully qualified domain name.
     > The `WebAppDomain` is a fully qualified domain name that doesn't include `https://` in it.
 
 1. In the left pane, under **Settings**, select **Configuration**.

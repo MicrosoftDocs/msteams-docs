@@ -56,7 +56,7 @@ To integrate location capabilities, you must:
 
 ## Update manifest
 
-Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) file by adding the `devicePermissions` property and specifying `geolocation`. It allows your app to ask for required permissions from users before they start using the location capabilities. The update for app manifest is as follows:
+Update your Teams app [manifest.json](/microsoft-365/extensibility/schema/root#devicepermissions) file by adding the `devicePermissions` property and specifying `geolocation`. It allows your app to ask for required permissions from users before they start using the location capabilities. The update for app manifest is as follows:
 
 ``` json
 "devicePermissions": [
@@ -184,7 +184,7 @@ You must ensure to handle these errors appropriately in your Teams app. The foll
 
 |Sample name | Description | .NET | Node.js | Manifest
 |----------------|-----------------|--------------|--------------|--------------|
-| App check-in current location | This sample shows how users can check in the current location and view all the previous location check-ins using bot.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-checkin-location/csharp/demo-manifest/App-checkin-location.zip) |
+| App check-in current location | This sample showcases a Microsoft Teams bot that allows users to check in their current location and view all previous check-ins seamlessly. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-checkin-location/csharp/demo-manifest/App-checkin-location.zip) |
 
 ## See also
 

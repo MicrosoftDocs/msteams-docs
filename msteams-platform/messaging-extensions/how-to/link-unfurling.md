@@ -4,7 +4,9 @@ author: surbhigupta
 description: Learn to add link unfurling with Developer Portal and messaging extension in a Teams app with app manifest or manually. Update web service code to handle invoke.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.author: v-ypalikila
+ms.author: surbhigupta
+ms.owner: slamba
+ms.date: 11/06/2024
 ---
 # Link unfurling
 
@@ -18,7 +20,7 @@ The document guides you on how to add link unfurling to your app manifest using 
 >
 > * The link unfurling result is cached for 30 minutes.
 > * Link unfurling supports Adaptive Cards version 1.3 and earlier.
-> * Messaging extension commands aren't required for Link unfurling. However, there must be at least one command in manifest as it is a mandatory property in messaging extensions. For more information, see [compose extensions](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions).
+> * Link unfurling doesn't require message extension commands. If you define `messagehandlers` within `composeExtensions` in the app manifest, there's no need to add `commands`. For more information, see [compose extensions](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions).
 > * For mobile client, link unfurling is supported only for links that don't require authentication.
 
 The following image is an example of link unfurling in Teams desktop and mobile clients:
@@ -39,7 +41,7 @@ When an app link is pasted into the Teams compose message area, the link unfurls
 
 See the following video to learn more about link unfurling:
 <br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OFZG]
+> [!VIDEO c1c13e1e-23fc-4ca4-91c6-026c5776506b]
 <br>
 
 ## Add link unfurling to your app manifest
@@ -105,7 +107,7 @@ First, you must add the `messageHandlers` array to your app manifest and enable 
 ...
 ```
 
-For a complete manifest example, see [manifest reference](~/resources/schema/manifest-schema.md).
+For a complete manifest example, see [manifest reference](/microsoft-365/extensibility/schema/).
 
 ## Handle the `composeExtensions/queryLink` invoke
 
@@ -165,7 +167,7 @@ Example of the response:
       
 ```
 
-# [C#](#tab/dotnet)
+# [.NET](#tab/dotnet)
 
 ```csharp
  protected override Task<MessagingExtensionResponse> OnTeamsAppBasedLinkQueryAsync(ITurnContext<IInvokeActivity> turnContext, AppBasedLinkQuery query, CancellationToken cancellationToken)
@@ -232,6 +234,41 @@ contentType: "application/vnd.microsoft.card.thumbnail",
 
 ```
 
+# [Python](#tab/python)
+
+```python
+async def on_teams_app_based_link_query(self, turn_context: TurnContext, query):
+   """
+   Handles link unfurling when a user pastes a URL in a Teams conversation.
+ 
+    This method creates a ThumbnailCard displaying the pasted URL and an image, 
+    then returns it as a Messaging Extension response.
+    """
+    Handles unfurling links when a user pastes them in a conversation.
+    """
+    # Create a ThumbnailCard for the unfurled link
+    attachment = ThumbnailCard(
+        title="Thumbnail Card",  # Title for the card
+        text=query.url,  # Display the URL that was pasted
+        images=[
+            # Add an image for the card (example image from GitHub)
+            CardImage(
+                url="https://raw.githubusercontent.com/microsoft/botframework-sdk/master/icon.png"
+            )
+        ],
+    ).to_attachment()
+
+    # Prepare a MessagingExtensionResult with the unfurled link
+    result = MessagingExtensionResult(
+        type="result",  # Indicates this is a result
+        attachment_layout="list",  # Use list layout
+        attachments=[attachment],  # Include the attachment
+    )
+
+    # Return the response with the unfurled link
+    return MessagingExtensionResponse(compose_extension=result)
+```
+
 ---
 
 ## Micro-capabilities for website links
@@ -250,7 +287,7 @@ If you've not added [schema.org](<https://schema.org/>) to your website, you can
 
 1. Add the [schema.org](https://schema.org/) metadata with the [JSON-LD format](https://json-ld.org/) to your website.
 1. In your website, check for the supported `@type` attribute and copy the metadata under the script tag `application/ld+json`.
-1. Open [Adaptive Card designer](https://www.adaptivecards.io/designer/) and create a new file.
+1. Open [Adaptive Card Designer](https://adaptivecards.microsoft.com/designer.html) and create a new file.
 1. In the **SAMPLE DATA EDITOR**, paste the json metadata from your website.
 
    :::image type="content" source="../../assets/images/messaging-extension/link-unfurling-app-less-adaptive-card-sample-data-editor.png" alt-text="Screenshot shows an example of website metadata in the sample data editor section of the Adaptive Card Designer.":::
@@ -277,7 +314,7 @@ The following image provides a sequential flow to enable and use zero install li
 
 To get your app ready for zero install link unfurling, follow these steps:
 
-1. Set the property `supportsAnonymizedPayloads` to true in the [manifest schema](../../resources/schema/manifest-schema.md#composeextensions).
+1. Set the property `supportsAnonymizedPayloads` to true in the [manifest schema](/microsoft-365/extensibility/schema/root-compose-extensions-message-handlers-value#supportsanonymizedpayloads).
 
 1. Set your app to handle the new `invoke` request `composeExtensions/anonymousQueryLink`.
 
@@ -422,14 +459,14 @@ To get your app ready for zero install link unfurling, follow these steps:
 
 1. **Advantages and limitations**:
 
-    # [Advantages](#tab/advantages)
-    
+   # [Advantages](#tab/advantages)
+
     Zero install link unfurling helps you provide enhanced experience to the users, such as:
-    
+
     * Unfurl previews for your links that users share in Teams even before they've installed your app.
     * Create a welcome card for your app to show a preview with the placeholder fields.
 
-    # [Limitations](#tab/limitations)
+   # [Limitations](#tab/limitations)
 
     The following are the limitations:
 
@@ -489,15 +526,11 @@ The following JSON payload example for `suggestedActions` property:
         },
 ```
 
-## Step-by-step guide
-
-Follow the [step-by-step guide](../../sbs-botbuilder-linkunfurling.yml) to unfurl links in Teams using bot.
-
 ## Code sample
 
 |**Sample name** | **Description** | **.NET** | **Node.js**| **Manifest**
 |----------------|-----------------|--------------|----------------|----------------|
-| Zero install link unfurling. | This sample shows how to use Search-based Messaging Extension with a configuration page. This sample also features zero install link unfurling. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-sso-config/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search-auth-config/csharp/demo-manifest/msgext-search-auth-config.zip)|
+| Zero install link unfurling. | This sample demonstrates how to implement authentication in a message extension for Microsoft Teams, enabling secure access and user-specific interactions. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-sso-config/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-search-auth-config/csharp/demo-manifest/msgext-search-auth-config.zip)|
 
 ## See also
 

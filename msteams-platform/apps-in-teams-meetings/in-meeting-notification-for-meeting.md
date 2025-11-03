@@ -1,10 +1,10 @@
 ---
 title: Send Notifications to Users in Meetings
-author: v-sdhakshina
 description: Learn how to build in-meeting and targeted in-meeting notifications for Microsoft Teams meeting with code samples and its feature compatibility by user types.
 ms.topic: conceptual
-ms.author: v-sdhakshina
+ms.author: surbhigupta
 ms.localizationpriority: medium
+ms.owner: kanchankaur
 ms.date: 02/02/2023
 ---
 
@@ -79,7 +79,7 @@ In the following image, a meeting notification requesting payment is sent to one
 
 ### Enable app manifest settings for targeted in-meeting notification
 
-To send targeted in-meeting notifications, you must configure the `authorization` property and the `name` and `type` properties under the `resourceSpecific` field in the [app manifest](../resources/schema/manifest-schema.md#authorization) as follows:
+To send targeted in-meeting notifications, you must configure the `authorization` property and the `name` and `type` properties under the `resourceSpecific` field in the [app manifest](/microsoft-365/extensibility/schema/root-authorization-permissions-resource-specific) as follows:
 
 ```json
 

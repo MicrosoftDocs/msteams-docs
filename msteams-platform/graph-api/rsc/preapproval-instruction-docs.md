@@ -37,7 +37,7 @@ To create, manage, and delete RSC preapproval policies, you must grant the follo
 * `Application.ReadWrite.All`
 
 > [!NOTE]
-> You need global admin level privileges to connect Graph with your organization for the first time.
+> You need Global Administrator level privileges to connect Graph with your organization for the first time.
 
 The following is an example of the PowerShell setup to manage preapproval policies of RSC permissions:
 
@@ -84,7 +84,7 @@ To create a preapproval policy without a sensitivity label, ensure that you have
 
 * Teams App ID.
 * The RSC permissions associated with the app.
-* Team or Global admin privilege in your tenant.
+* Team or Global Administrator privilege in your tenant.
 
 You can use PowerShell cmdlets to create a preapproval policy. To create the cmdlet, you must get the information mentioned earlier with the `New-MgBetaTeamAppPreApproval` command and specify the one of the following RSC permissions you want to preapprove in the cmdlet:
 
@@ -123,7 +123,7 @@ You can also create a preapproval policy for specific permissions in addition to
 * Teams App ID.
 * The RSC permissions associated with the app.
 * The sensitivity label ID associated with the sensitivity label. This isn't required if you want the policy to apply to all sensitivity labels or if you preapprove only chat RSC permissions.
-* Team or Global admin privilege in your tenant.
+* Team or Global Administrator privilege in your tenant.
 
 You can use PowerShell cmdlets to create a preapproval policy. To create the cmdlet, you must get the information mentioned earlier with the `New-MgBetaTeamAppPreApproval` command and specify the one of the following RSC permissions you want to preapprove in the cmdlet:
 

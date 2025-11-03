@@ -5,6 +5,7 @@ description: Learn how to get started with Live Share SDK, build Dice Roller sam
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
+ms.owner: ryanbliss
 ms.date: 04/07/2022
 ---
 
@@ -78,6 +79,9 @@ async function start() {
 start().catch((error) => console.error(error));
 ```
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Set+up+the+application&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fapps-in-teams-meetings%2Fteams-live-share-tutorial%23set-up-the-application&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fapps-in-teams-meetings%2Fteams-live-share-tutorial.md&documentVersionIndependentId=c4095988-9b54-4919-411d-4db9b081af57&platformId=c94461f7-1c1f-7cac-ba73-b2982d5b6cb6&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ## Join a Fluid container
 
 Not all of your app's views need to be collaborative. The `stage` view _always_ needs collaborative features, the `content` view _might_ need collaborative features, and the `config` view should _never_ need collaborative features. For views that need collaborative features, you must join a Fluid container associated with the current meeting.
@@ -100,6 +104,9 @@ async function joinContainer() {
 ```
 
 When you're testing locally, `TestLiveShareHost` updates the browser URL to contain the ID of the test container that was created. Copying that link to other browser tabs causes the `LiveShareClient` to join the test container that was created. If the modification of the applications URL interferes with the operation of the application, the strategy used to store the test containers ID can be customized using the [setLocalTestContainerId](/javascript/api/@microsoft/live-share/iliveshareclientoptions) and [getLocalTestContainerId](/javascript/api/@microsoft/live-share/iliveshareclientoptions) options passed to `LiveShareClient`.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Join+a+Fluid+container&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fapps-in-teams-meetings%2Fteams-live-share-tutorial%23join-a-fluid-container&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fapps-in-teams-meetings%2Fteams-live-share-tutorial.md&documentVersionIndependentId=c4095988-9b54-4919-411d-4db9b081af57&platformId=c94461f7-1c1f-7cac-ba73-b2982d5b6cb6&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Write the Stageview
 
@@ -179,6 +186,9 @@ await diceState.initialize(1);
 updateDice();
 ```
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Connect+meeting+Stageview+to+Live+Share&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fapps-in-teams-meetings%2Fteams-live-share-tutorial%23connect-meeting-stageview-to-live-share&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fapps-in-teams-meetings%2Fteams-live-share-tutorial.md&documentVersionIndependentId=c4095988-9b54-4919-411d-4db9b081af57&platformId=c94461f7-1c1f-7cac-ba73-b2982d5b6cb6&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ## Write the side panel view
 
 The side panel view, loaded through the tab `contentUrl` with the `sidePanel` frame context, is displayed to the user in a side panel when they open your app within a meeting. The goal of side panel view is to let a user select content for the app before sharing the app to the meeting stage. For the Live Share SDK apps, the side panel view can also be used as a companion experience for the app. Calling `joinContainer()` from the side panel view connects to the same Fluid container the Stageview is connected to. This container can then be used to communicate with the Stageview. Ensure that you're communicating with everyone's Stageview and side panel view.
@@ -195,7 +205,7 @@ sidePanelTemplate["innerHTML"] = `
     .text { font-size: medium; }
   </style>
   <div class="wrapper">
-    <p class="title">Lets get started</p>
+    <p class="title">Let's get started</p>
     <p class="text">Press the share to stage button to share Dice Roller to the meeting stage.</p>
   </div>
 `;
@@ -207,7 +217,7 @@ function renderSidePanel(elem) {
 
 ## Write the settings view
 
-The settings view, loaded through `configurationUrl` in your [app manifest](../resources/schema/manifest-schema.md#configurabletabs), is shown to a user when they first add your app to a Teams meeting. This view lets the developer configure the `contentUrl` for the tab that is pinned to the meeting based on user input. This page is required even if no user input is required to set the `contentUrl`.
+The settings view, loaded through `configurationUrl` in your [app manifest](/microsoft-365/extensibility/schema/root-configurable-tabs#configurationurl), is shown to a user when they first add your app to a Teams meeting. This view lets the developer configure the `contentUrl` for the tab that is pinned to the meeting based on user input. This page is required even if no user input is required to set the `contentUrl`.
 
 > [!NOTE]
 > The Live Share's' `joinContainer()` is not supported in the tab `settings` context.
@@ -268,6 +278,9 @@ After you start running your app locally with `npm run start`, you can then test
 
    A new ngrok terminal opens with a new url, for example `https:...ngrok.io`. The new URL is the tunnel that points to your app, which needs to be updated in your app `manifest.json`.
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+ngrok+tunnel+to+allow+Teams+to+reach+your+app&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fapps-in-teams-meetings%2Fteams-live-share-tutorial%23create-a-ngrok-tunnel-to-allow-teams-to-reach-your-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fapps-in-teams-meetings%2Fteams-live-share-tutorial.md&documentVersionIndependentId=c4095988-9b54-4919-411d-4db9b081af57&platformId=c94461f7-1c1f-7cac-ba73-b2982d5b6cb6&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ### Create the app package to upload into Teams
 
 1. Go to the Dice Roller sample folder `live-share-sdk\samples\javascript\01.dice-roller` on your computer. You can also check the [manifest.json](https://github.com/microsoft/live-share-sdk/blob/main/samples/javascript/01.dice-roller/manifest/manifest.json) from the Dice Roller sample on GitHub.
@@ -292,7 +305,10 @@ After you start running your app locally with `npm run start`, you can then test
    > - Don't zip the containing folder.
    > - Give your zip file a descriptive name. For example, `DiceRollerLiveShare`.
 
-   For more information on manifest, visit the [Teams manifest documentation](../resources/schema/manifest-schema.md)
+   For more information on manifest, visit the [Teams manifest documentation](/microsoft-365/extensibility/schema)
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+the+app+package+to+upload+into+Teams&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fapps-in-teams-meetings%2Fteams-live-share-tutorial%23create-the-app-package-to-upload-into-teams&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fapps-in-teams-meetings%2Fteams-live-share-tutorial.md&documentVersionIndependentId=c4095988-9b54-4919-411d-4db9b081af57&platformId=c94461f7-1c1f-7cac-ba73-b2982d5b6cb6&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ### Upload your custom app into a meeting
 
@@ -330,9 +346,16 @@ After you start running your app locally with `npm run start`, you can then test
 
 Users invited to the meeting can see your app on stage when they join the meeting.
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Upload+your+custom+app+into+a+meeting&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fapps-in-teams-meetings%2Fteams-live-share-tutorial%23upload-your-custom-app-into-a-meeting&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fapps-in-teams-meetings%2Fteams-live-share-tutorial.md&documentVersionIndependentId=c4095988-9b54-4919-411d-4db9b081af57&platformId=c94461f7-1c1f-7cac-ba73-b2982d5b6cb6&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ## Deployment
 
-After you're ready to deploy your code, you can use Teams Toolkit or the Teams Developer Portal to provision and upload your app's zip file.
+After you're ready to deploy your code, you can use Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) or Developer Portal to provision and upload your app's zip file. To learn more about publishing and deploying your Teams app, see the following resources:
+
+- [Publish your app using Agents Toolkit for Visual Studio Code](../toolkit/publish.md).
+- [Publish your app using Developer Portal](../toolkit/publish-your-teams-apps-using-developer-portal.md).
+- [Deploy your app with Agents Toolkit for Visual Studio](../toolkit/toolkit-v4/deploy-vs.md).
 
 > [!NOTE]
 > You need to add your provisioned appId to the `manifest.json` before uploading or distributing the app.

@@ -1,7 +1,7 @@
 ---
 title: Adaptive Card Previewer - Visual Studio
-author: v-ganr
-description: In this article, learn more about the Microsoft Adaptive Card previewer using Teams Toolkit for Visual Studio, features, advantages, limitations.
+author: surbhigupta
+description: In this article, learn more about the Microsoft Adaptive Card previewer using Microsoft 365 Agents Toolkit for Visual Studio, features, advantages, limitations.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
@@ -10,13 +10,13 @@ ms.date: 02/13/2024
 
 # Microsoft Adaptive Card Previewer Microsoft Visual Studio
 
-The Adaptive Card Previewer, integrated with the Microsoft Teams Toolkit for Visual Studio, enables real-time previews of Adaptive Cards created for Microsoft Teams bots. You can open a side-by-side preview of your Adaptive Card to observe live changes, switch between different themes, and refine your designs to ensure they're accurate and effective.
+The Adaptive Card Previewer, integrated with Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) for Visual Studio, enables real-time previews of Adaptive Cards created for Microsoft Teams bots. You can open a side-by-side preview of your Adaptive Card to observe live changes, switch between different themes, and refine your designs to ensure they're accurate and effective.
 
 ## Explore Adaptive Card Previewer
 
 Adaptive Card Previewer provides faster and more reliable solutions to preview Adaptive Card designs. Adaptive Card Previewer supports the following features:
 
-* **Teams Toolkit Integration**: Enables Just-in-Time (JIT) installation of Adaptive Card Previewer when you update Adaptive Cards generated from a Teams Toolkit project.
+* **Microsoft 365 Agents Toolkit Integration**: Enables Just-in-Time (JIT) installation of Adaptive Card Previewer when you update Adaptive Cards generated from Agents Toolkit project.
 
   :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-example-vs.png" alt-text="Screenshot shows an example of Adaptive Card in the right pane.":::
 
@@ -32,7 +32,7 @@ Adaptive Card Previewer provides faster and more reliable solutions to preview A
 
 The Adaptive Card Previewer offers the following benefits:
 
-* **Quick updates**: Allows you to preview Adaptive Card designs within their integrated development environment and eliminates the need to switch between tools constantly. You can create a bot or message extension with Teams Toolkit, open the Adaptive Card metadata file, and use **CodeLens** or a specific command to preview the card. Any update or changes to the card are reflected instantly through the **Hot Reload** feature in the Adaptive Card Previewer.
+* **Quick updates**: Allows you to preview Adaptive Card designs within their integrated development environment and eliminates the need to switch between tools constantly. You can create a bot or message extension with Agents Toolkit, open the Adaptive Card metadata file, and use **CodeLens** or a specific command to preview the card. Any update or changes to the card are reflected instantly through the **Hot Reload** feature in the Adaptive Card Previewer.
 
 * **Reliable previews**: Uses the same rendering stack as Teams and Outlook to ensure accurate and consistent preview results are aligned with the actual card rendering.
 

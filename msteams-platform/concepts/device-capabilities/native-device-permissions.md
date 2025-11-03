@@ -88,7 +88,7 @@ Each property allows you to prompt the users to ask for their consent:
 | midi          | Permission to send and receive  Musical Instrument Digital Interface (MIDI) information from a digital musical instrument.   |
 | openExternal  | Permission to open links in external applications.  |
 
-For more information, see [app manifest](../../resources/schema/manifest-schema.md#devicepermissions).
+For more information, see [app manifest](/microsoft-365/extensibility/schema/root-authorization-permissions).
 
 ## Check permissions from your app
 
@@ -212,16 +212,16 @@ For example:
 * To prompt the user to share location on the map interface, Teams app asks permission when you call `getLocation()`:
 
   # [TeamsJS v2](#tab/teamsjs-v2)
-    
+
   ```JavaScript
   function getLocation() {
     location.getLocation({ allowChooseLocation: true, showMap: true }).then((location) => { 
         let currentLocation = JSON.stringify(location);
     }).catch((error) => { /*Error getting location*/ })} 
   ```
-    
+
   # [TeamsJS v1](#tab/teamsjs-v1)
-    
+
   ```JavaScript
   function getLocation() {
   microsoftTeams.location.getLocation({ allowChooseLocation: true, showMap: true }, (error: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
@@ -229,7 +229,7 @@ For example:
   });
   } 
   ```
-    
+
  ---
 
 Here's how the device permissions prompts appear to users on mobile and desktop.
@@ -257,7 +257,7 @@ Device permissions are stored for every sign in session. It means that if you si
 
 | Sample name           | Description | Node.js    | Manifest
 |---------------------|--------------|---------|---------|
-|Device permissions | The sample shows how to use the device permissions using TeamsJS SDK and browser api's. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs/demo-manifest/tab-device-permissions.zip)
+|Device permissions | This sample app for Microsoft Teams demonstrates how to handle device permissions, including audio, video, and geolocation, within a tab interface. It provides insights into device permission usage across desktop and mobile views, allowing developers to enhance user interactions effectively. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs/demo-manifest/tab-device-permissions.zip)
 
 ## Next step
 

@@ -3,7 +3,8 @@ title: Enable OAuth Authentication for Tab
 description: Learn about Teams authentication flow in tabs using third-party OAuth provider with Microsoft Entra configuration and code samples.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.date: 01/05/2023
+ms.date: 03/02/2025
+ms.owner: ryanbliss
 ---
 # Enable authentication using third-party OAuth provider
 
@@ -41,8 +42,13 @@ Similar to other application auth flows in Teams, the start page must be on a do
 5. On the provider's site, the user sign in and grants access to the tab.
 6. The provider takes the user to the tab's OAuth 2.0 redirect page with an access token.
 7. The tab checks that the returned `state` value matches what was saved earlier, and calls `authentication.notifySuccess()`, which in turn calls the success handler (`.then()`) for the promise-based `authenticate()` method from step 3.
-8. Teams closes the pop-up window.
-9. The tab either displays configuration UI, refreshes, or reloads the tabs content, depending on where the user started from.
+
+    > [!IMPORTANT]
+    >
+    > Be aware that there are security considerations for the `notifySuccess()` **result** parameter. For additional information, refer to the remarks section of the TeamsJS reference documentation for the [notifySuccess()](/javascript/api/%40microsoft/teams-js/authentication#@microsoft-teams-js-authentication-notifysuccess) function.
+
+1. Teams closes the pop-up window.
+1. The tab either displays configuration UI, refreshes, or reloads the tabs content, depending on where the user started from.
 
 > [!NOTE]
 >
@@ -50,7 +56,7 @@ Similar to other application auth flows in Teams, the start page must be on a do
 
 ## Treat tab context as hints
 
-Although the tab context provides helpful information regarding the user, don't use this information to authenticate the user. Do authenticate the user even if you get the information as URL parameters to your tab content URL or by calling the `app.getContext()` function in the Microsoft Teams JavaScript client library (TeamsJS). A malicious actor can invoke your tab content URL with its own parameters. The actor can also invoke a web page impersonating Microsoft Teams to load your tab content URL in an iframe and return its own data to the `getContext()` function. You must treat the identity-related information in the tab context as a  hint and validate it before using. Refer to the notes in [navigate to the authorization page from your pop-up page](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page).
+Although the tab context provides helpful information regarding the user, don't use this information to authenticate the user. Do authenticate the user even if you get the information as URL parameters to your tab content URL or by calling the `app.getContext()` function in the Microsoft Teams JavaScript client library (TeamsJS). A malicious actor can invoke your tab content URL with its own parameters. The actor can also invoke a web page impersonating Microsoft Teams to load your tab content URL in an iframe and return its own data to the `getContext()` function. You must treat the identity-related information in the tab context as a  hint and validate it before using. For more information, see [navigate to the authorization page from your pop-up page](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page).
 
 ## Code sample
 
@@ -58,7 +64,7 @@ Sample code showing the tab authentication process:
 
 | **Sample name** | **Description** | **.NET** | **Node.js** | **Manifest**|
 |-----------------|-----------------|-------------|------------|------------|
-| App complete authentication | This sample shows how to use authentication in a bot, tab, and messaging extension with Single sign-on (SSO) and in Facebook using a username and password | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp/demo-manifest/App-Complete-Auth.zip) |
+| App complete authentication | This sample showcases Microsoft Entra ID and Facebook authentication across bots, tabs, and messaging extensions. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-auth/csharp/demo-manifest/App-Complete-Auth.zip) |
 
 ## See also
 
@@ -66,4 +72,4 @@ For a detailed implementation for tab authentication using Microsoft Entra ID, s
 
 * [Authenticate a user in a Teams tab](~/tabs/how-to/authentication/auth-tab-AAD.md)
 * [Silent authentication](~/tabs/how-to/authentication/auth-silent-AAD.md)
-* [validDomains](../../../resources/schema/manifest-schema.md#validdomains)
+* [validDomains](/microsoft-365/extensibility/schema/root#validdomains)

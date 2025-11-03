@@ -3,6 +3,7 @@ title: Create an Outgoing Webhook
 description: Learn how to create Outgoing Webhook in Microsoft Teams, its key features and code sample (.NET, Node.js) to create custom bots to be used in Teams.
 ms.topic: conceptual
 ms.localizationpriority: high
+ms.owner: hantony
 ms.date: 02/27/2023
 ---
 
@@ -19,12 +20,6 @@ The Outgoing Webhook acts as a bot and searches for messages in channels using *
 * Try using &nbsp; to add spaces in codeblocks for indentation and remove the hard tabs.
 * Table with just a row is not really needed. Provide the content without tabulating it.
 --->
-
-See the following video to learn how to create Outgoing Webhooks:
-<br>
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIzu]
-<br>
 
 ## Key features of Outgoing Webhooks
 
@@ -54,7 +49,7 @@ Create Outgoing Webhooks and add custom bots to Teams. To create an Outgoing Web
 
     :::image type="content" source="../../assets/images/outgoing-webhook.png" alt-text="Screenshot shows the apps tab on a Teams channel.":::
 
-1. Select **Create an Outgoing Webhook**.
+1. Under **Upload an app**, select **Create an outgoing webhook**.
 
     :::image type="content" source="../../assets/images/create-an-outgoing-webhook.png" alt-text="Screenshot shows the select create outgoing webhook option."lightbox="../../assets/images/create-an-outgoing-webhook.png":::
 
@@ -71,7 +66,7 @@ Create Outgoing Webhooks and add custom bots to Teams. To create an Outgoing Web
 
 A [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) dialogue appears. It's a security token used to authenticate calls between Teams and the designated outside service. The HMAC security token doesn't expire and is unique for each configuration.
 
->[!NOTE]
+> [!NOTE]
 > The Outgoing Webhook is available to the team's users, only if the URL is valid and the server and client authentication tokens are equal. For example, an HMAC handshake.
 
 The following scenario provides the details to add an Outgoing Webhook:
@@ -99,7 +94,7 @@ To ensure that your service is receiving calls only from actual Teams clients, T
 
 Your code must always validate the HMAC signature included in the request as follows:
 
-* Generate the HMAC token from the request body of the message. There are standard libraries to do this on most platform, such as [Crypto](https://nodejs.org/api/crypto.html#crypto_crypto) for Node.js and [Teams webhook sample](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook/blob/23eb61da5a18634d51c5247944843da9abed01b6/WebhookSampleBot/Models/AuthProvider.cs) for C\#. Microsoft Teams uses standard SHA256 HMAC cryptography. You must convert the body to a byte array in UTF8.
+* Generate the HMAC token from the request body of the message. There are standard libraries to do this on most platform, such as [Crypto](https://nodejs.org/api/crypto.html#crypto_crypto) for Node.js and [Teams webhook sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook) for C\#. Microsoft Teams uses standard SHA256 HMAC cryptography. You must convert the body to a byte array in UTF8.
 * Compute the hash from the byte array of the security token provided by Teams when you registered the Outgoing Webhook in the Teams client. See [create an Outgoing Webhook](#create-outgoing-webhooks).
 * Convert the hash to a string using UTF-8 encoding.
 * Compare the string value of the generated hash with the value provided in the HTTP request.
@@ -139,7 +134,7 @@ public static AuthResponse Validate(AuthenticationHeaderValue authenticationHead
     }
     catch (Exception ex)
     {
-        Trace.TraceError("Exception occcured while verifying HMAC on the incoming request. Exception: {0}", ex);
+        Trace.TraceError("Exception occurred while verifying HMAC on the incoming request. Exception: {0}", ex);
         return new AuthResponse(false, "Exception thrown while verifying MAC on incoming request.");
     }
 }
@@ -275,17 +270,48 @@ var responseMsg = JSON.stringify({
 }
 ```
 
+# [Python](#tab/python)
+
+```python
+received_msg = json.loads(payload)
+response_msg = json.dumps({
+    "type": "message",
+    "attachments": [
+        {
+            "contentType": "application/vnd.microsoft.card.adaptive",
+            "contentUrl": None,
+            "content": {
+                "type": "AdaptiveCard",
+                "version": "1.4",
+                "body": [
+                    {
+                        "type": "TextBlock",
+                        "text": f"Request sent by: {received_msg['from']['name']}"
+                    },
+                    {
+                        "type": "Image",
+                        "url": "https://c.s-microsoft.com/en-us/CMSImages/DesktopContent-04_UPDATED.png?version=43c80870-99dd-7fb1-48c0-59aced085ab6"
+                    },
+                    {
+                        "type": "TextBlock",
+                        "text": "Sample image for Adaptive Card."
+                    }
+                ]
+            },
+            "name": None,
+            "thumbnailUrl": None
+        }
+    ]
+})
+```
+
 ---
 
 ## Code sample
 
 |**Sample name** | **Description** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| Outgoing Webhooks | This sample shows how to  implement and use outgoing webhook.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
-
-## Step-by-step guide
-
-Follow the [step-by-step guide](../../sbs-outgoing-webhooks.yml) to create Outgoing Webhooks in Teams.
+| Outgoing Webhooks | This sample demonstrates how to implement a straightforward Outgoing Webhook for Microsoft Teams, allowing users to send messages to external services without the complexity of creating a full bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
 
 ## See also
 

@@ -48,7 +48,7 @@ With a private workspace, users can view app content that's meaningful to them i
 
 You can add multiple actions to the upper-right NavBar and build an overflow menu for extra actions in an app. A maximum of five actions can be added in the NavBar, including the overflow menu.
 
-:::image type="content" source="../../assets/images/overflow-menu-and-multiple-actionsoptions.png" alt-text="The screenshot is an example thats describes the NavBar and Overflow menu.":::
+:::image type="content" source="../../assets/images/overflow-menu-and-multiple-actionsoptions.png" alt-text="The screenshot is an example that's describes the NavBar and Overflow menu.":::
 
 |Counter|Description|
 |----------|-----------|
@@ -260,7 +260,7 @@ Unless you created your app specifically for Teams, you probably have features t
 
 |Sample name | Description | TypeScript|
 |----------------|--------------------------------------------------------|--------------|
-| Meeting app | Sample to show navbar-menu in personal tab app. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-navbar-menu/ts) |
+| Nav-bar menu in personal tab | This sample application illustrates the use of a navbar menu in personal tabs within Microsoft Teams, enabling users to access multiple actions seamlessly. Designed for mobile clients, it includes features like an overflow menu for additional actions, enhancing user navigation and experience. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-navbar-menu/ts) |
 
 ## See also
 

@@ -4,7 +4,8 @@ author: surbhigupta
 description: Learn how to use a custom Azure Fluid Relay service with Live Share, Live Share without LiveShareClient, Live Share with your custom service, and container mapping.
 ms.topic: overview
 ms.localizationpriority: high
-ms.author: v-ypalikila
+ms.author: surbhigupta
+ms.owner: ryanbliss
 ms.date: 07/21/2022
 ---
 
@@ -368,4 +369,4 @@ Many Live Share APIs depend on a global timestamp API, which allows `LiveDataObj
 * [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)
 * [Live Share FAQ](../teams-live-share-faq.md)
 * [Use Fluid with Teams](../../tabs/how-to/using-fluid-msteam.md)
-* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
+* [App manifest schema for Teams](/microsoft-365/extensibility/schema)

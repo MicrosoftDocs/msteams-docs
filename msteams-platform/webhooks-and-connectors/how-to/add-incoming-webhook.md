@@ -3,6 +3,7 @@ title: Create an Incoming Webhook
 description: Create an Incoming Webhook to Teams app and post external requests to Teams. Remove Incoming Webhook. Sample code(C#, Node.js) to  send card using Incoming Webhook.
 ms.localizationpriority: high
 ms.topic: conceptual
+ms.owner: hantony
 ms.date: 01/25/2023
 ---
 
@@ -40,7 +41,7 @@ The following table provides the features and description of an Incoming Webhook
 > [!NOTE]
 >
 > * Teams bots, message extensions, Incoming Webhook, and the Bot Framework support Adaptive Cards. Adaptive Card is an open cross-card platform framework that is used in all platforms such as Windows, Android, and iOS. [Teams connectors](../../webhooks-and-connectors/how-to/connectors-creating.md) don't support Adaptive Cards. However, it is possible to create a [flow](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) that posts Adaptive Cards to a Teams channel.
-> * For more information on cards and webhooks, see [Adaptive cards and Incoming Webhooks](~/task-modules-and-cards/what-are-cards.md#adaptive-cards-and-incoming-webhooks).
+> * For more information on cards and webhooks, see [Adaptive Cards and Incoming Webhooks](~/task-modules-and-cards/what-are-cards.md#adaptive-cards-and-incoming-webhooks).
 
 ## Create an Incoming Webhook
 
@@ -133,7 +134,7 @@ The webhook is now available in the Teams channel.
 ---
 
 > [!IMPORTANT]
-> You can build a notification bot Teams app using [Teams Toolkit](../../toolkit/teams-toolkit-fundamentals.md) other than an Incoming Webhook. They perform similarly but notification bot has more functionalities. For more information, see [Build notification bot with JavaScript](../../sbs-gs-notificationbot.yml) or [Incoming Webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification).
+> You can build a notification bot Teams app using [Microsoft 365 Agents Toolkit](../../toolkit/agents-toolkit-fundamentals.md) (previously known as Teams Toolkit) other than an Incoming Webhook. They perform similarly but notification bot has more functionalities. For more information, see [Build notification bot with JavaScript](../../sbs-gs-notificationbot.yml) or [Incoming Webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification).
 
 You can create and send actionable messages through an Incoming Webhook or connector for Microsoft 365 Groups. For more information, see [create and send messages](~/webhooks-and-connectors/how-to/connectors-using.md).
 
@@ -291,7 +292,7 @@ The webhook is now removed from the Teams channel.
 
 | Sample name | Description | .NET | Node.js |
 |---------------------|--------------|---------|--------|
-| Incoming Webhook |This sample shows how to implement and use an Incoming Webhook. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/nodejs)|
+| Incoming Webhook |This sample demonstrates a Teams tab to send message cards using Incoming Webhook, showcasing the HttpPOST action for interactive cards. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/nodejs)|
 
 ## See also
 

@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.localizationpriority: high
 author: heath-hamilton
 ms.author: surbhigupta
-ms.date: 01/06/2023
+ms.date: 01/23/2025
 ---
 
 # Prepare your Teams Store submission
@@ -15,7 +15,7 @@ You've designed, built, and tested your Microsoft Teams app. Now you're ready to
 See the following video to learn more about publishing your app to the Microsoft Teams Store:
 <br>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4WG3l]
+> [!VIDEO a9ad8a8e-1dcf-4e65-88e5-58998ec91c99]
 <br>
 
 Before you submit your app to [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource), ensure you've done the following.
@@ -26,13 +26,13 @@ While your app may be working in a test environment, you should check your app p
 
 The Teams app validation tool helps you identify and fix issues before submitting to Partner Center. The tool automatically checks your app's configurations against the same test cases used during Teams Store validation.
 
-1. Go to the [Teams app validation tool](https://dev.teams.microsoft.com/appvalidation.html).
+1. Go to the [Teams app validation tool](https://dev.teams.microsoft.com/tools/store-validation).
 
    You can also validate your app using [Developer Portal for Teams.](~/concepts/build-and-test/teams-developer-portal.md)
 
 1. Upload your app package to run the automated tests.
 1. Go to the **Preliminary checklist** and review the test cases that are difficult to automate.
-1. [Fix issues with your configurations](~/resources/schema/manifest-schema.md) or app in general. These issues occur if the automated tests give you errors or you haven't met all the criteria in the checklist.
+1. [Fix issues with your configurations](/microsoft-365/extensibility/schema) or app in general. These issues occur if the automated tests give you errors or you haven't met all the criteria in the checklist.
 
 ## Compile testing instructions
 
@@ -47,7 +47,6 @@ Depending on your app functionality, you're required to provide Teams tenant con
 
         * Ensure that test accounts are safe-listed or configured with license keys, if applicable.
         * If your app requires users to log in or connect to external services, provide the required credentials to complete the login or connection with the external service.
-        * Ensure that phone-based two-way authentication is disabled for test accounts.
         * If the app provides a collaborative experience, provide a non-admin account for each user persona. For example, if your app is used by teachers and students, provide credentials for both user personas.
         * Ensure that at least one account has access to premium or upgraded features, if applicable.
         * All accounts you provide must include pre-populated data to help in testing. For example, if your app helps to provide market insights based on the user profile, ensure that market data is pre-populated along with a few user profiles.
@@ -78,7 +77,7 @@ A Teams Store listing may be someone's first impression of your app. Increase in
 
 ### Specify a short name
 
-Your app's name (specifically, its *[short name](~/resources/schema/manifest-schema.md#name)*) plays a crucial role in how users discover it in the Teams Store.
+Your app's name (specifically, its *[short name](/microsoft-365/extensibility/schema/root-name#short)*) plays a crucial role in how users discover it in the Teams Store.
 
 :::row:::
 
@@ -221,7 +220,7 @@ During submission, you're asked to categorize your app. App category helps impro
 | Maps and feeds |
 | Other |
 
-### Distribute your app to specific countries or regions
+### Publish your app to specific countries or regions
 
 If you want to cater your app to a specific audience, you can select from the available list of countries or regions and communicate what’s great about your app in ways that are relevant to users. This is known as Geo-filtering. Geo-filtering is applicable only for apps listed in the Teams Store. For example, a Contoso US app, which sells gift cards that are valid within the US and Canada is only visible in the Teams Store for the users in the US and Canada.
 
@@ -240,7 +239,7 @@ The following image shows the use of Geo-filtering for apps in the Teams mobile 
 ---
 
 > [!NOTE]
-> Geo-filtering isn't supported in Government community cloud (GCC), GCC-High, and Department of Defence (DoD) tenants.
+> Geo-filtering isn't supported in Government Community Cloud (GCC), GCC High, Department of Defense (DoD), and Teams operated by 21Vianet environments.
 
 Geo-filtering helps you improve your app's visibility in the Teams Store. When you publish your app to the Teams Store, you can select from the available list of countries/regions in the Partner Center to target your app to users in specific countries or regions. For more information on supported geographic locations in Partner Center, see [Geographic availability and currencies](/partner-center/marketplace/marketplace-geo-availability-currencies).
 

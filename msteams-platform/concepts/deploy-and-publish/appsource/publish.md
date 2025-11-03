@@ -9,9 +9,15 @@ ms.date: 12/15/2022
 ---
 # Publish your app to the Teams Store
 
-You can distribute your app directly to the Microsoft Teams Store inside Microsoft Teams and reach millions of users around the world. If your app is also featured in the Teams Store, you can instantly reach potential customers.
+You can publish your app directly to the Microsoft Teams Store inside Microsoft Teams and reach millions of users around the world. If your app is also featured in the Teams Store, you can instantly reach potential customers.
 
 Apps published to the Teams Store also automatically list on [the Microsoft commercial marketplace](https://appsource.microsoft.com), which is the official marketplace for Microsoft 365 apps and solutions.
+
+The following video on publish your Teams app to Teams Store outlines the steps involved in the app publishing process:
+
+<br>
+
+> [!VIDEO https://www.youtube.com/embed/cFqAuLy0JaE]
 
 ## Understand the publishing process
 
@@ -129,7 +135,7 @@ If your app is production ready, you can begin the process of getting it listed 
 
       1. Your app is linked to a live (already published) SaaS offer on AppSource with at least one plan with pricing information.
 
-      1. You've correctly mentioned the `subscriptionOffer` details in your [app manifest](../../../resources/schema/manifest-schema.md#subscriptionoffer) (previously called Teams app manifest) in the format `publisherId.offerId`.
+      1. You've correctly mentioned the `subscriptionOffer` details in your [app manifest](/microsoft-365/extensibility/schema/root#subscriptionoffer) (previously called Teams app manifest) in the format `publisherId.offerId`.
 
       1. You must ensure your linked SaaS offer is designed to support licenses assigned on a [SaaS pricing model](/azure/marketplace/create-new-saas-offer-plans).
 
@@ -173,6 +179,6 @@ Teams provides intelligent search experience by matching the user input to the f
 * [Upload your Teams app](~/concepts/deploy-and-publish/apps-upload.md)
 * [Publish your Teams app to your org](/microsoftteams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/breadcrumb/toc.json)
 * [Plan onboarding experience for users](../../design/planning-checklist.md#plan-beyond-app-building)
-* [Distribute tab apps on mobile](../../../tabs/design/tabs-mobile.md#distribution)
+* [Publish tab apps on mobile](../../../tabs/design/tabs-mobile.md#publish-to-teams-store)
 * [Test preview for monetized apps](prepare/Test-preview-for-monetized-apps.md)
 * [Microsoft Teams Store ranking parameters](post-publish/teams-store-ranking-parameters.md)

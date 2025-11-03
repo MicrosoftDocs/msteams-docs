@@ -1,11 +1,12 @@
 ---
 title: Create Configuration Page in Tabs
 author: surbhigupta
-description: Create configuration page to collect information from user. Also, get context data for Microsoft Teams tabs, know about authentication, modify or remove tabs.
+description: Learn to create configuration page to collect information from user. Also, get context data for Microsoft Teams tabs, know about authentication, modify or remove tab.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.author: v-npaladugu
-ms.date: 01/31/2023
+ms.author: surbhigupta
+ms.date: 02/06/2025
+ms.owner: ryanbliss
 ---
 # Create a configuration page
 
@@ -182,7 +183,7 @@ Your tab requires contextual information to display relevant content. Contextual
 
 For more information on the properties used for tab configuration, see [context interface](/javascript/api/@microsoft/teams-js/app.context). Collect the values of context data variables in the following two ways:
 
-* Insert URL query string placeholders in `configurationURL`of your [app manifest](../../../resources/schema/manifest-schema.md#configurabletabs).
+* Insert URL query string placeholders in `configurationURL`of your [app manifest](/microsoft-365/extensibility/schema/root-configurable-tabs#configurationurl).
 
 * Use the [TeamsJS library](/javascript/api/overview/msteams-client#microsoft-teams-javascript-client-library) `app.getContext()` method.
 

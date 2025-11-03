@@ -4,6 +4,7 @@ description: Learn to test and revoke resource-specific consent (RSC) permission
 ms.localizationpriority: medium
 author: akjo
 ms.topic: tutorial
+ms.owner: vishachadha
 keywords: teams authorization OAuth SSO Microsoft Azure Active Directory (Azure AD) rsc Postman Graph
 ms.date: 03/28/2023
 ---
@@ -24,7 +25,7 @@ Ensure that you verify the following app manifest changes for resource-specific 
 
 <summary><b>RSC permissions for app manifest version 1.12 and later</b></summary>
 
-Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest with the following values:
+Add a [webApplicationInfo](/microsoft-365/extensibility/schema/root-web-application-info) key to your app manifest with the following values:
 
 |Name| Type | Description|
 |---|---|---|
@@ -35,7 +36,7 @@ Specify permissions needed by the app.
 
 |Name| Type | Description|
 |---|---|---|
-|`authorization`|Object|List of permissions that the app needs to function. For more information, see [authorization](../../resources/schema/manifest-schema.md#authorization).|
+|`authorization`|Object|List of permissions that the app needs to function. For more information, see [authorization](/microsoft-365/extensibility/schema/root-authorization).|
 
 Example for RSC in a team
 
@@ -194,7 +195,7 @@ Example for RSC in a chat
 
 <summary><b>RSC permissions for app manifest version 1.11 and earlier</b></summary>
 
-Add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest with the following values:
+Add a [webApplicationInfo](/microsoft-365/extensibility/schema/root-web-application-info) key to your app manifest with the following values:
 
 |Name| Type | Description|
 |---|---|---|

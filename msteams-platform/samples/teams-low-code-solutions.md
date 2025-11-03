@@ -27,7 +27,7 @@ Microsoft Power Platform combines four robust Microsoft technologies, such as Po
 
 ### ✔ Teams and Power BI
 
-The [Power BI tab for Microsoft Teams](https://powerbi.microsoft.com/blog/announcing-new-power-bi-tab-for-microsoft-teams/) adds support for reports in the Teams workspace and allows users to [share interactive Power BI content](/power-bi/collaborate-share/service-embed-report-microsoft-teams) and [collaborate with others in Teams](/power-bi/collaborate-share/service-collaborate-microsoft-teams) channels and chats. You can create packaged [Power BI app](/power-bi/collaborate-share/service-create-distribute-apps) content from scratch and distribute it as an app or [create a template app in Power BI](/power-bi/connect-data/service-template-apps-create). Additionally, use the new [Power BI app in Teams](https://go.microsoft.com/fwlink/?linkid=2143643) to bring your entire basic Power BI service experience into Teams.
+The [Power BI tab for Microsoft Teams](https://powerbi.microsoft.com/blog/announcing-new-power-bi-tab-for-microsoft-teams/) adds support for reports in the Teams workspace and allows users to [share interactive Power BI content](/power-bi/collaborate-share/service-embed-report-microsoft-teams) and [collaborate with others in Teams](/power-bi/collaborate-share/service-collaborate-microsoft-teams) channels and chats. You can create packaged [Power BI app](/power-bi/collaborate-share/service-create-distribute-apps) content from scratch and publish it as an app or [create a template app in Power BI](/power-bi/connect-data/service-template-apps-create). Additionally, use the new [Power BI app in Teams](https://go.microsoft.com/fwlink/?linkid=2143643) to bring your entire basic Power BI service experience into Teams.
 
 ### ✔ Teams and Power Apps
 
@@ -41,7 +41,7 @@ You can [create flows to automate repetitive work tasks](https://flow.microsoft.
 
 ### ✔ Teams and Power Virtual Agents
 
-[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) is a no code, guided graphical interface solution, built on the Microsoft Power Platform and the Bot Framework. It empowers every member of your team to create and maintain rich, conversational chatbots that easily integrate with the Teams platform. All content authored in Power Virtual Agents renders naturally in Teams and Power Virtual Agents bots engage with users in the Teams native chat canvas. You can [integrate your Power Virtual Agents chatbot](/power-virtual-agents/publication-add-bot-to-microsoft-teams) to Teams through the [Power Virtual Agents portal](https://powervirtualagents.microsoft.com).
+[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) is a no code, guided graphical interface solution, built on the Microsoft Power Platform and the Teams AI library. It empowers every member of your team to create and maintain rich, conversational chatbots that easily integrate with the Teams platform. All content authored in Power Virtual Agents renders naturally in Teams and Power Virtual Agents bots engage with users in the Teams native chat canvas. You can [integrate your Power Virtual Agents chatbot](/power-virtual-agents/publication-add-bot-to-microsoft-teams) to Teams through the [Power Virtual Agents portal](https://powervirtualagents.microsoft.com).
 
 Use the new [Power Virtual Agents](/power-virtual-agents/teams/fundamentals-what-is-power-virtual-agents-teams) app in Teams, to create, manage, and publish conversational chatbots easily from within Teams. You can share your bots with other people in your organization to chat and get answers for their questions.
 
@@ -83,4 +83,3 @@ Virtual Assistant is a Microsoft open-source template that enables you to create
 
 - [Integrate web apps](~/samples/integrate-web-apps-overview.md)
 - [Power Platform Connectors overview](/connectors/connectors)
-

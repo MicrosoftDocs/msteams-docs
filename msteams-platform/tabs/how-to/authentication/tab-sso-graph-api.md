@@ -4,7 +4,8 @@ description: Learn how to configure API permissions and authentication for diffe
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API Delegated permission access token scope
-ms.date: 07/14/2023
+ms.date: 03/13/2025
+ms.owner: ryanbliss
 ---
 # Extend tab app with Microsoft Graph permissions and scopes
 
@@ -62,6 +63,9 @@ We recommend using delegated permissions for the signed-in user. If your applica
 
     You've now configured your app with Microsoft Graph permissions.
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+configure+API+permissions&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fauthentication%2Ftab-sso-graph-api%3Ftabs%3Ddotnet%23to-configure-api-permissions&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fauthentication%2Ftab-sso-graph-api.md&documentVersionIndependentId=a44ac17f-15cd-8809-e885-bcc8e48b4749&platformId=2ed4b35e-b9e7-32fc-e247-1698692d30eb&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ## Configure authentication for different platforms
 
 Depending on the platform or device where you want to target your app, additional configuration might require, such as redirect URIs, specific authentication settings, or details specific to the platform.
@@ -111,6 +115,9 @@ You can configure authentication for multiple platforms as long as the URL is un
 1. Select **Configure**.
 
     The platform is configured and displayed in the **Platform configurations** page.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+configure+authentication+for+a+platform&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fauthentication%2Ftab-sso-graph-api%3Ftabs%3Ddotnet%23to-configure-authentication-for-a-platform&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fauthentication%2Ftab-sso-graph-api.md&documentVersionIndependentId=a44ac17f-15cd-8809-e885-bcc8e48b4749&platformId=2ed4b35e-b9e7-32fc-e247-1698692d30eb&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Acquire access token for MS Graph
 
@@ -163,7 +170,7 @@ IConfidentialClientApplication app = ConfidentialClientApplicationBuilder.Create
 
 [ConfidentiaClientApplication class](/javascript/api/@azure/msal-node/confidentialclientapplication?view=azure-node-latest&preserve-view=true#@azure-msal-node-confidentialclientapplication-acquiretokenonbehalfof) SDK reference | [sample code](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs/src/server/tabs.js#L51-L94)
 
-```Node.js
+```javascript
 // Exchange client Id side token with server token
   app.post('/getProfileOnBehalfOf', function(req, res) {
         var tid = < "Tenant id" >
@@ -207,11 +214,14 @@ If you need to access Microsoft Graph data, configure your server-side code to:
 > - Two separate apps registered in Microsoft Entra ID require individual tokens for each app. Use the [OBO flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) to enable communication between the apps.
 > - Don’t use `notifySuccess` result to return the token information to the parent page. Use `localStorage` to save the token and pass the item key via `notifySuccess`.
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Exchange+the+token+ID+with+the+server-side+token&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fauthentication%2Ftab-sso-graph-api%3Ftabs%3Ddotnet%23exchange-the-token-id-with-the-server-side-token&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fauthentication%2Ftab-sso-graph-api.md&documentVersionIndependentId=a44ac17f-15cd-8809-e885-bcc8e48b4749&platformId=2ed4b35e-b9e7-32fc-e247-1698692d30eb&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ## Obtain consent
 
-Your app can obtain consent for Graph permissions globally from the tenant administrator, or individually per user.
+You can obtain app consent for Graph permissions globally from the admin, or individually per user.
 
-### From the tenant administrator
+### From the administrator
 
  A simple way of [consenting on behalf of an organization](/azure/active-directory/manage-apps/consent-and-permissions-overview#admin-consent) is by obtaining [admin consent](/azure/active-directory/manage-apps/grant-admin-consent).
 
@@ -223,7 +233,7 @@ To implement SSO authentication in a personal tab, follow these steps:
 
 1. The token retrieved using `getAuthToken()` must be exchanged on the server-side using Microsoft Entra OBO flow to get access to those other Graph APIs. Ensure that you use the Microsoft Entra v2 endpoint for this exchange.
 1. When you try to execute the token exchange for a user for the first time, if Microsoft Entra refuses to exchange tokens it might be because the user hasn't consented to give your app permission to the user's data. In these cases, your exchange fails with either the `invalid_grant` or `interaction_required` error.  Examples of *invalid_grant* errors include when consent is required or *auth_code*, assertion, or the refresh token is expired, revoked, malformed, or absent. Examples of *interaction_required* include when multifactor authentication or corporate device enrollment is required.
-1. If the exchange fails because of the `invalid_grant` or `interaction_required` errors, you must prompt the user for consent. Since user interaction can only happen from the client, your server needs to return an indication to your client app that consent is required. You can then use the user interface (UI) to ask the app user to grant other consent. The UI must include a button that triggers an [Microsoft Entra consent dialog](../../../tabs/how-to/authentication/tab-sso-code.md#consent-dialog-for-getting-access-token).
+1. If the exchange fails because of the `invalid_grant` or `interaction_required` errors, you must prompt the user for consent. Since user interaction can only happen from the client, your server needs to return an indication to your client app that consent is required. You can then use the user interface (UI) to ask the app user to grant other consent. The UI must include a button that triggers a [Microsoft Entra consent dialog](../../../tabs/how-to/authentication/tab-sso-code.md#consent-dialog-for-getting-access-token).
 1. To ask the user for consent for your app to access their data, you must include the `prompt=consent` property in your [query-string-parameter](/azure/active-directory/develop/v2-oauth2-implicit-grant-flow#send-the-sign-in-request) to Microsoft Entra ID.
     - Instead of `?scope={scopes}`, use `?prompt=consent&scope={scopes}`
     - Ensure that the `{scopes}` property includes all the scopes you're prompting the user for. For example, `Mail.Read` or `User.Read`.
@@ -251,7 +261,7 @@ This approach helps reduce the possibility of user being prompted for consent mo
 
 | **Sample name** | **Description** | **C#** | **Node.js** |
 | --- | --- | --- | --- |
-| Tabs Microsoft Entra SSO | Microsoft Teams sample app for tabs Microsoft Entra SSO, which uses OBO flow to call Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/69c76fded29d7ae0fde49841d4ec9af7597ceedd/samples/tab-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/69c76fded29d7ae0fde49841d4ec9af7597ceedd/samples/tab-sso/nodejs)|
+| Tabs Microsoft Entra SSO | This sample app showcases a tab with Microsoft Entra SSO and uses OBO flow to call Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/nodejs)|
 
 ## See also
 

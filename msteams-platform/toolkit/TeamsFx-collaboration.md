@@ -1,16 +1,16 @@
 ---
-title: Collaborate on TeamsFx - Teams Toolkit
+title: Collaborate on TeamsFx - Agents Toolkit
 author: surbhigupta
-description: In this module, learn how to collaborate on TeamsFx Project as project owner or collaborator using Teams Toolkit, remove collaboration, and test app behavior.
+description: In this module, learn how to collaborate on TeamsFx Project as project owner or collaborator using toolkit, remove collaboration, and test app behavior.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Collaborate on Microsoft Teams project using Microsoft Teams Toolkit
+# Collaborate on Microsoft Teams project using Microsoft 365 Agents Toolkit
 
-Multiple developers can work together to debug, provision, and deploy the same Teams Toolkit project, but it requires manually setting the right permissions of Teams App and Microsoft Entra ID. Teams Toolkit's collaboration feature simplifies this process between developers and project owners.
+Multiple developers can work together to debug, provision, and deploy the same Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) project, but it requires manually setting the right permissions of Teams App and Microsoft Entra ID. Agents Toolkit's collaboration feature simplifies this process between developers and project owners.
 
 ## Collaborate with other developers
 
@@ -21,37 +21,37 @@ The following sections guide us to understand the collaboration process as proje
   > [!NOTE]
   > Before adding collaborators for an environment, project owner needs to [provision](provision.md) the project first.
 
-  1. Select **Teams Toolkit** in the activity bar.
+  1. Select **Microsoft 365 Agents Toolkit** in the activity bar.
   
-     :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-teams-toolkit.png" alt-text="Screenshot shows the select teams toolkit from activity bar.":::
+     :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/select-toolkit.png" alt-text="Screenshot shows the select Agents Toolkit from activity bar.":::
 
   1. In **ENVIRONMENT** section, select Manage Collaborators button as shown in the following image:
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/add collaborators.png" alt-text="Screenshot shows the collaborators.":::
+     :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/add collaborators.png" alt-text="Screenshot shows the collaborators.":::
 
   1. Select **Add App Owners** to add other Microsoft 365 account email address as collaborator:
 
         * Select the apps you want to add app owners for.
-        :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/add-owner.png" alt-text="Screenshot shows the Add project owner.":::
+        :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/add-owner.png" alt-text="Screenshot shows the Add project owner.":::
         * (Optional) Select and confirm Teams `manifest.json` file.
-        :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest.png" alt-text="Screenshot shows the Teams manifest file.":::
+        :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/manifest.png" alt-text="Screenshot shows the Teams manifest file.":::
         * (Optional) Select and confirm Microsoft Entra app `aad.manifest.json` file.
-        :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/browse-1.png" alt-text="Screenshot shows the Browse option.":::
+        :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/browse-1.png" alt-text="Screenshot shows the Browse option.":::
         * Input the M365 account email address you want to add as app owner. The account to be added must be on the same tenant as project owner for remote debug as shown in the image.
-        :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/confirm-owner.png" alt-text="Screenshot shows the owner name to confirm.":::
+        :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/confirm-owner.png" alt-text="Screenshot shows the owner name to confirm.":::
 
   1. Select **List App Owners** to view collaborators in current environment:
 
         * Select the apps you want to add app owners for.
-        :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/add-owner.png" alt-text="Screenshot shows the Add project owner.":::
+        :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/add-owner.png" alt-text="Screenshot shows the Add project owner.":::
         * (Optional) Select and confirm Teams `manifest.json` file.
-        :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest.png" alt-text="Screenshot shows the Teams manifest file.":::
+        :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/manifest.png" alt-text="Screenshot shows the Teams manifest file.":::
         * (Optional) Select and confirm Microsoft Entra app `aad.manifest.json` file.
-        :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/browse-1.png" alt-text="Screenshot shows the Browse option.":::
+        :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/browse-1.png" alt-text="Screenshot shows the Browse option.":::
         * Input the M365 account email address you want to add as app owner. The account to be added must be on the same tenant as project owner for remote debug as shown in the image.
-        :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/confirm-owner.png" alt-text="Screenshot shows the owner name to confirm.":::
+        :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/confirm-owner.png" alt-text="Screenshot shows the owner name to confirm.":::
         * Then you can see collaborators listed in the output channel as shown in following image:
-        :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/list of collaborators.png" alt-text="Screenshot shows the collaborators list.":::
+        :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/list of collaborators.png" alt-text="Screenshot shows the collaborators list.":::
 
   1. Push the project to GitHub.
 
@@ -71,29 +71,29 @@ The following sections guide us to understand the collaboration process as proje
 
 ## Remove Collaborator
 
-Removing collaborators requires the following manual steps:
+To manually remove collaborators, do one of the following procedures:
 
 * Using Developer Portal
 
   * Go to [Teams Developer Portal](https://dev.teams.microsoft.com/home) and select your Teams app by name or app ID.
   * Select **Owners** from left panel.
-  * Select and remove the collaborator.
+  * Select **Delete** to remove other app owners.
 
 * Using Microsoft Entra ID
 
-  * Go to [Microsoft Entra ID](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), select **App registration** from left panel, and find your Microsoft Entra app.
+  * Go to [Microsoft Entra ID](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), select **App registrations** from left panel, and find your app.
   * Select **Owners** from left panel in Microsoft Entra app management page.
-  * Select and remove the collaborator.
+  * Select and remove the owner.
 
     > [!NOTE]
     >
     > * Collaborator added to your project doesn't receive any notification. Project owner needs to notify collaborator offline.
-    > * Azure related permissions must be set manually by Azure subscription administrator on Azure portal.
-    > * Azure account must have contributor role for the subscription so that developers can work together to provision and deploy TeamsFx project.
+    > * Azure related permissions must be set manually by Azure subscription administrator on Azure portal. To manually remove the permissions, see [revoke granted consent to permissions](/microsoftteams/manage-consent-app-permissions#revoke-granted-consent-to-permissions).
+    > * Azure account must have [contributor role](/azure/role-based-access-control/built-in-roles#contributor) for the subscription so that developers can work together to provision and deploy TeamsFx project.
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals.md)
 * [Provision cloud resources](provision.md)
 * [Deploy Teams app to the cloud](deploy.md)
 * [Manage multiple environments](TeamsFx-multi-env.md)

@@ -1,6 +1,6 @@
 ---
 title: Use Universal Actions for Adaptive Card
-description: Learn to work with the Universal Actions for Adaptive Cards, including Schema for UniversalActions for Adaptive cards, Refresh model, and backward compatibility
+description: Learn about Universal Actions for Adaptive Cards, including schema for Universal Actions for Adaptive Cards, refresh model, and backward compatibility.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 12/20/2022
@@ -54,7 +54,7 @@ Now, you can use the refresh model to allow Adaptive Cards to update automatical
 
 ## Refresh model
 
-To automatically refresh your Adaptive Card, define its `refresh` property, which embeds an action of type `Action.Execute` and an `userIds` array.
+To automatically refresh your Adaptive Card, define its `refresh` property, which embeds an action of type `Action.Execute` and a `userIds` array.
 
 For more information, see [refresh schema and properties](/adaptive-cards/authoring-cards/universal-action-model#refresh-mechanism).
 
@@ -70,7 +70,7 @@ The following are the features of UserIds in refresh:
 
 * You can fetch Teams conversation member's user MRIs. For more information on how to add in userIds list in refresh section of Adaptive Card, see [fetch roster or user profile](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile).
 
- You can get the user MRI for channel, Group Chat or 1:1 chat using the following example:
+ You can get the user MRI for personal chats, group chats, or channels using the following example:
 
  1. Using TurnContext  
 
@@ -112,13 +112,12 @@ For more information, see [backward compatibility on Teams](/adaptive-cards/auth
 |Sample name | Description | .NET | Node.js | Manifest|
 |----------------|-----------------|--------------|--------------|--------------|
 | Teams catering bot | This sample shows  a bot that accepts food order using Adaptive Cards. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| NA | NA|
-| Sequential Workflows Adaptive Cards | This sample demonstrates the implementation of Sequential Workflows, User Specific Views, and current Adaptive Cards in bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-sequential-flow-adaptive-cards/csharp/demo-manifest/bot-sequential-flow-adaptive-cards.zip) |
+| Sequential Workflows Adaptive Cards | This sample demonstrates how to implement sequential flow, user-specific view and up-to-date Adaptive Cards. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-sequential-flow-adaptive-cards/csharp/demo-manifest/bot-sequential-flow-adaptive-cards.zip) |
 
 ## See also
 
 * [Cards and dialogs](../../cards-and-task-modules.md)
 * [Adaptive Card actions in Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
-* [Basics of the Microsoft Bot Framework](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
 * [Sequential Workflows](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/sequential-workflows.md)
 * [Up to date cards](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/up-to-date-views.md)
 * [Form completion feedback](../cards-actions.md#form-completion-feedback)

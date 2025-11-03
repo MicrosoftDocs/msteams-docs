@@ -1,11 +1,11 @@
 ---
 title: Build Extensible Conversations
-author: v-sdhakshina
 description: In this article, learn how to build extensible conversation for Microsoft Teams meeting chat with bots, cards, and message extensions.
 ms.topic: conceptual
-ms.author: v-sdhakshina
+ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.date: 01/11/2023
+ms.owner: ginobuzz
 ---
 
 # Build extensible conversation for meeting chat
@@ -24,7 +24,7 @@ The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create 
 
 |Sample name | Description | .NETCore | Node.js | Python | Java| Manifest|
 |----------------|-----------------|--------------|----------------|----------------|----------------|----------------|
-| Teams conversation bot | This sample app shows how to use different bot conversation events available in bot framework v4. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/java) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp/demo-manifest/bot-conversation.zip)
+| Teams conversation bot | This app demonstrates bot conversation events, supporting Adaptive Cards, read receipts, and message update events. It includes immersive reader support for accessibility. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/java) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp/demo-manifest/bot-conversation.zip)
 |Bot samples | Set of bot framework v4 samples  | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) |
 
 ## Message extensions
@@ -47,6 +47,7 @@ The following table provides the user types and lists the features that each use
 | Anonymous |  Can view and interact with the messages sent by the bot. Can't invoke the bot. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
 
 > [!Note]
+>
 > * If a federated user is a participant in the meeting, the tenant user can't view the message extensions.
 > * If an anonymous user and a tenant user are participants in the meeting, the tenant user can view the message extensions.
 
@@ -55,6 +56,6 @@ The following table provides the user types and lists the features that each use
 * [Apps for Teams meetings and calls](teams-apps-in-meetings.md)
 * [Design your Microsoft Teams message extension](../messaging-extensions/design/messaging-extension-design.md)
 * [Design dialogs for your Microsoft Teams app](../task-modules-and-cards/task-modules/design-teams-task-modules.md)
-* [Receive all conversation messages with RSC](../bots/how-to/conversations/channel-messages-with-rsc.md)
+* [Receive all conversation messages with RSC](../bots/how-to/conversations/channel-messages-for-bots-and-agents.md)
 * [Conversation basics](../bots/how-to/conversations/conversation-basics.md)
 * [Adaptive Card](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)

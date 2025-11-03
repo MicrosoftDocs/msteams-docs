@@ -23,15 +23,15 @@ Microsoft 365 subscribers can develop apps for Microsoft Teams with one of the f
 
 ## Create your development environment
 
-If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits). It's active as long as your Visual Studio subscription is active. For more information, see [Microsoft 365 developer subscription](https://developer.microsoft.com/microsoft-365/dev-program).
+If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 [developer subscription](https://aex.dev.azure.com/profile/create). It's active as long as your Visual Studio subscription is active. For more information, see [Microsoft 365 developer subscription](https://developer.microsoft.com/microsoft-365/dev-program).
 
-If you don't have any Microsoft 365 tenant, you might qualify for a Microsoft 365 E5 developer subscription through the [Microsoft 365 Developer Program](https://aka.ms/m365devprogram); for details, see the [FAQ](/office/developer-program/microsoft-365-developer-program-faq#who-qualifies-for-a-microsoft-365-e5-developer-subscription-). Alternatively, you can sign up for a [1-month free trial](https://www.microsoft.com/microsoft-365/try) or [purchase a Microsoft 365 plan](https://www.microsoft.com/microsoft-365/business/compare-all-microsoft-365-business-products-g).
+If you don't have any Microsoft 365 tenant, you might qualify for a Microsoft 365 E5 developer subscription through the [Microsoft 365 Developer Program](https://developer.microsoft.com/en-us/microsoft-365/dev-program); for details, see the [FAQ](/office/developer-program/microsoft-365-developer-program-faq#who-qualifies-for-a-microsoft-365-e5-developer-subscription-). Alternatively, you can sign up for a [1-month free trial](https://www.microsoft.com/microsoft-365/try) or [purchase a Microsoft 365 plan](https://www.microsoft.com/microsoft-365/business/compare-all-microsoft-365-business-products-g).
 
 ## Enable Teams for your organization
 
 Enable Teams for your organization and for more information, see [enabling Teams for your organization](/microsoftteams/enable-features-office-365).
 
-## Enable custom Teams apps and turn on custom app uploading
+## Enable custom Teams apps and configure custom app upload settings
 
 > [!IMPORTANT]
 > If you've set up a Microsoft 365 Developer Program instant sandbox or a configurable sandbox with the Teams sample data pack, you can skip the steps to enable custom app upload. The **Upload custom apps** setting is enabled by default in the Teams sample data pack.
@@ -47,7 +47,7 @@ To turn on the custom app uploading for your developer tenant:
 
 2. Go to **Teams apps** > **Setup Policies** > **Global**.
 
-    :::image type="content" source="../../assets/images/prepare-test-tenant/turn-on-sideload.png" alt-text="Screenshot shows the turn on custom app upload view.":::
+    :::image type="content" source="../../assets/images/prepare-test-tenant/turn-on-upload.png" alt-text="Screenshot shows the turn on custom app upload view.":::
 
 3. Toggle **Upload custom apps** to the **On** position.
 
@@ -58,8 +58,9 @@ To turn on the custom app uploading for your developer tenant:
 
     :::image type="content" source="../../assets/images/prepare-test-tenant/upload-for-contoso.png" alt-text="Screenshot shows the upload app view.":::
 
-5. Go to **Teams apps** > **Manage apps** > **Org-wide app settings** > **Custom apps** and turn on the
-   **Upload custom apps for personal use** toggle.
+5. Go to **Teams apps** > **Manage apps** > **Actions** > **Org-wide app settings** > **Custom apps** and turn on the following toggles:
+   * Let users install and use available apps by default
+   * Let users interact with custom apps in preview
 
     :::image type="content" source="../../assets/images/prepare-test-tenant/Org-wide-app-settings.png" alt-text="Screenshot shows the org-side app settings for custom app upload.":::
 

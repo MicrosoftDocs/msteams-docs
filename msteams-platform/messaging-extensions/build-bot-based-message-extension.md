@@ -1,10 +1,11 @@
 ---
 title: Build Bot-based Message Extensions
-author: v-ypalikila
+author: surbhigupta
 description: Learn about Bot-based message extension using Bot Framework to interact with your web service from different locations in the Teams client.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
+ms.owner: slamba
 ms.date: 09/16/2024
 ---
 
@@ -27,7 +28,7 @@ Message extension search commands allow users to search external systems and ins
 
 See the following video to learn how to define message extension search commands:
 <br>
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK]
+> [!VIDEO 64d251ff-0c4c-43df-a3f9-58171a3faf04]
 <br>
 
 The search command in a message extension is configured using the `composeExtensions.commands` property and the `query` type in the app manifest (previously called as Teams app manifest). Command and parameter descriptions enhance the usability and effectiveness of a message extension. A good command description offers a clear and concise summary of the app’s features.
@@ -93,30 +94,7 @@ You must add the following search parameter details that define the text visible
 | `parameter.inputType` | Set to the type of the input required. Possible values include `text`, `textarea`, `number`, `date`, `time`, `toggle`. Default is set to `text`. | No | 1.4 |
 | `parameters.value` | Initial value for the parameter. The value isn't supported | No | 1.5 |
 
-For more information, see [app manifest schema](~/resources/schema/manifest-schema.md).
-
-## Message extension as plugin for Copilot for Teams meetings
-
-Message extension plugins are supported in Copilot for Teams meetings. Extending bot-based message extension plugins to meetings allows you to enhance the Copilot for Teams meetings. Copilot for Teams meetings can utilize various app capabilities during meetings, such as task modules, app sharing, and more, to improve user engagement and productivity. For example, a plugin can be used in Copilot for Teams meetings to summarize discussions, generate notes, and list tasks. It also extends the benefits of traditional plugins by enabling real-time interaction with external data and custom functionality.
-
-Copilot for Teams meetings is interactive and efficient, it can assist with summarizing discussions, suggesting action items, and providing prompt-less assistance in real-time. Users can ask natural language questions to Copilot for Teams meetings and get responses from your plugin that are relevant to the meeting context. Plugins are available for users to enable in both Microsoft 365 Copilot and Copilot for Teams meetings.
-
-:::image type="content" source="../assets/images/Copilot/meeting-copilot-extensibility.png" alt-text="Screenshot shows the plugins flyout menu in Copilot for Teams meetings.":::
-
-| Benefits          | Description                                                                                                            |
-|-------------------|------------------------------------------------------------------------------------------------------------------------|
-| User Empowerment  | Extending Copilot for Teams meetings empowers users with various actions to enhance their meeting experience.                      |
-| UI Commands       | Users can easily access features like opening a task module or sharing an app to the stage.                             |
-| Search Commands   | Efficient data retrieval from app databases is made possible, streamlining the search process.                          |
-
-| Scenarios         | Description                                                                                                            |
-|-------------------|------------------------------------------------------------------------------------------------------------------------|
-| Reactive Commands | Users can directly command Copilot for Teams meetings to perform specific actions or provide information.                                  |
-|                   | - Natural Language Prompts: Users can instruct Copilot for Teams meetings to carry out search commands.                         |
-|                   | - Prompt Suggestions: Apps can offer static or enriched prompts for Copilot for Teams meetings to execute.                                |
-| Proactive Assistance | Copilot for Teams meetings proactively listens to meeting signals and assists users by:                                                   |
-|                   | - Suggesting prompts from apps: Contextually relevant suggestions based on the discussion topics.                      |
-|                   | - Providing assistance without explicit prompts: Copilot for Teams meetings can automatically suggest actions based on the discussion.    |
+For more information, see [app manifest schema](/microsoft-365/extensibility/schema).
 
 ## Next step
 
@@ -128,7 +106,7 @@ Copilot for Teams meetings is interactive and efficient, it can assist with summ
 > [!NOTE]
 > When a message action is initiated, attachment details aren't sent as part of the `turncontext` invoke activity.
 
-Action commands allow you to present your users with a modal pop-up called a task module in Teams. The task module collects or displays information, processes the interaction, and sends the information back to Teams. This document guides you on how to select action command invoke locations, create your task module, send final message, or card, create action command using app studio, or create it manually.
+Action commands allow you to present your users with a modal pop-up called a task module in Teams. The task module collects or displays information, processes the interaction, and sends the information back to Teams. This document guides you on how to select action command invoke locations, create your task module, send final message or card, and create an action command manually.
 
 The action command in a message extension is configured using the `composeExtensions.commands` property and `action` type in the app manifest.
 
@@ -207,7 +185,7 @@ If you're using an embedded web view, you can optionally add the `taskInfo` obje
 |`taskInfo.height`|Task module height, either a number in pixels or default layout such as `large`, `medium`, or `small`.|No | 1.4 |
 |`taskInfo.url`|Initial web view URL.|No | 1.4 |
 
-For more information, see [app manifest schema](~/resources/schema/manifest-schema.md).
+For more information, see [app manifest schema](/microsoft-365/extensibility/schema).
 
 ## Next step
 

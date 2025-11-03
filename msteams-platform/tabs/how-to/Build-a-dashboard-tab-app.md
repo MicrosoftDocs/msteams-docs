@@ -1,18 +1,19 @@
 ---
 title: Build Dashboard with Widget & Graph API
-author: v-silakshmi
-description: Learn how to build dashboard tab app in Teams, customize layout, use a widget, make Graph API calls using Teams Toolkit, and embed a Power BI dashboard.
+author: surbhigupta
+description: Learn how to build dashboard tab app, customize layout, use a widget, make Graph API calls using Microsoft 365 Agents Toolkit, and embed a Power BI dashboard.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 01/17/2023
+ms.owner: ryanbliss
 ---
 
 # Build a dashboard tab app
 
 A dashboard is a tool to track, analyze, and display data to gain insight of an organization or a specific process. Dashboards in Teams allow you to monitor and view important metrics.
 
-The dashboard tab template from Teams Toolkit allows you to get started with integrating a canvas with multiple cards that provide an overview of content in Teams. You can:
+The dashboard tab template from Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) allows you to get started with integrating a canvas with multiple cards that provide an overview of content in Teams. You can:
 
 * Use widgets to display content from apps and services within your dashboard tab.
 * Integrate your app with Graph API to visualize details about the implementation of the selected data.
@@ -20,7 +21,7 @@ The dashboard tab template from Teams Toolkit allows you to get started with int
 
 :::image type="content" source="../../assets/images/dashboard/dashboard-demonstration.png" alt-text="Screenshot shows the sample of a dashboard.":::
 
-Your team can get the latest updates from different sources in Teams using the Teams dashboard tab app. Use dashboard tab apps to connect numerous metrics, data sources, APIs, and services. Dashboard tab apps help your business extract relevant information from the sources and present it to the users. For more information about creating a dashboard tab app, see [step-by-step guide](#step-by-step-guide).
+Your team can get the latest updates from different sources in Teams using the Teams dashboard tab app. Use dashboard tab apps to connect numerous metrics, data sources, APIs, and services. Dashboard tab apps help your business extract relevant information from the sources and present it to the users.
 
 ## Add a new dashboard
 
@@ -38,12 +39,25 @@ To add a new dashboard, follow these steps:
 Create a file with the `.tsx` extension for your dashboard in the `src/dashboards` directory, for example, `YourDashboard.tsx`. Then, create a class that extends the `BaseDashboard class from`  
 [@microsoft/teamsfx-react](/javascript/api/%40microsoft/teamsfx-react).
 
+# [JavaScript](#tab/javascript1)
+
+```javascript
+// Create a dashboard class - https://learn.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/build-a-dashboard-tab-app#create-a-dashboard-class
+import { BaseDashboard } from "@microsoft/teamsfx-react";
+
+export default class SampleDashboard extends BaseDashboard { }
+```
+
+# [TypeScript](#tab/typescript1)
+
 ```typescript
 //YourDashboard.tsx
 import { BaseDashboard } from "@microsoft/teamsfx-react";
 
 export default class YourDashboard extends BaseDashboard<any, any> {}
 ```
+
+---
 
 > [!NOTE]
 > All methods are optional. If you don't override any method, the default dashboard layout is used.
@@ -64,6 +78,31 @@ The following code is an example to customize the dashboard layout:
   grid-template-columns: 6fr 4fr;
 }
 ```
+
+# [JavaScript](#tab/javascript5)
+
+```javascript
+import { BaseDashboard } from "@microsoft/teamsfx-react";
+import ListWidget from "../widgets/ListWidget";
+import ChartWidget from "../widgets/ChartWidget";
+
+export default class YourDashboard extends BaseDashboard {
+  styling() {
+    return "your-dashboard-layout";
+  }
+
+  layout() {
+    return (
+      <>
+        <ListWidget />
+        <ChartWidget />
+      </>
+    );
+  }
+}
+```
+
+# [TypeScript](#tab/typescript5)
 
 ```typescript
 import { BaseDashboard } from "@microsoft/teamsfx-react";
@@ -86,11 +125,27 @@ export default class YourDashboard extends BaseDashboard<any, any> {
 }
 ```
 
+---
+
 ### Add a route for the new dashboard tab app
 
 You must link your widget to a data source file. The widget picks up the data that's presented in the dashboard from the source file.
 
 Open the `src/App.tsx` file and add a route for the new dashboard. Here's an example:
+
+# [JavaScript](#tab/javascript6)
+
+```javascript
+import YourDashboard from "./dashboards/YourDashboard";
+
+export default function App() {
+  ...
+  <Route path="/yourdashboard" element={<yourdashboard />} />
+  ...
+}
+```
+
+# [TypeScript](#tab/typescript6)
 
 ```typescript
 import YourDashboard from "./dashboards/YourDashboard";
@@ -102,9 +157,11 @@ export default function App() {
 }
 ```
 
+---
+
 ### Modify manifest to add a new dashboard tab app
 
-Open the `appPackage/manifest.json` file and add a new dashboard tab under `staticTabs`. For more information, see [app manifest](../../resources/schema/manifest-schema.md#statictabs). Here's an example:
+Open the `appPackage/manifest.json` file and add a new dashboard tab under `staticTabs`. For more information, see [app manifest](/microsoft-365/extensibility/schema/root-static-tabs). Here's an example:
 
 ```json
 {
@@ -129,6 +186,28 @@ TeamsFx provides convenient methods to define and modify the layout of the dashb
     }
     ```
 
+    # [JavaScript](#tab/javascript2)
+
+    ```javascript
+    export default class SampleDashboard extends BaseDashboard {
+        styling() {
+          return "customize-class-name";
+        }
+      
+        layout() {
+          return (
+            <>
+              <ListWidget />
+              <ChartWidget />
+              <NewsWidget />
+            </>
+          );
+        }
+      }
+    ```
+
+    # [TypeScript](#tab/typescript2)
+
     ```typescript
     export default class SampleDashboard extends BaseDashboard<any, any> {
 
@@ -148,6 +227,8 @@ TeamsFx provides convenient methods to define and modify the layout of the dashb
     }
     ```
 
+    ---
+
    :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/customize-dashboard-layout.png" alt-text="Screenshot shows the customized dashboard layout.":::
 
 * Two widgets in a row with a width of 600 px and 1100 px. The height of the first line is the maximum height of its content, and the height of the second line is 400 px.
@@ -158,6 +239,28 @@ TeamsFx provides convenient methods to define and modify the layout of the dashb
       grid-template-columns: 600px 1100px;
     }
     ```
+
+    # [JavaScript](#tab/javascript3)
+
+    ```javascript
+    export default class SampleDashboard extends Dashboard {
+      styling() {
+        return "customize-class-name";
+      }
+      
+      layout() {
+        return (
+          <>
+            <ListWidget />
+            <ChartWidget />
+            <NewsWidget />
+          </>
+        );
+      }
+    }
+    ```
+
+    # [TypeScript](#tab/typescript3)
 
     ```typescript
         export default class SampleDashboard extends Dashboard {
@@ -177,35 +280,57 @@ TeamsFx provides convenient methods to define and modify the layout of the dashb
         }
     ```
 
+    ---
+
     :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/customize-dashboard-layout2.png" alt-text="Screenshot shows the customization of height and width of the dashboard layout.":::
 
 * Arrange two widgets in a column.
 
-  ```css
-  .one-column {
-      display: grid;
-      gap: 20px;
-      grid-template-rows: 1fr 1fr;
-    }
-  ```
+    ```css
+    .one-column {
+        display: grid;
+        gap: 20px;
+        grid-template-rows: 1fr 1fr;
+      }
+    ```
 
-  ```typescript
-    export default class SampleDashboard extends BaseDashboard<any, any> {
-      override layout(): JSX.Element | undefined {
+
+    # [JavaScript](#tab/javascript4)
+
+    ```javascript
+    export default class SampleDashboard extends BaseDashboard {
+      layout() {
         return (
           <>
-            <NewsWidget />
-            <div className="one-column">
-              <ListWidget />
-              <ChartWidget />          
-            </div>
+            <ListWidget />
+            <ChartWidget />
           </>
         );
       }
     }
-  ```
+    ```
 
-  :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/widget-customize.png" alt-text="Screenshot shows the two-widget customization.":::
+    # [TypeScript](#tab/typescript4)
+
+    ```typescript
+      export default class SampleDashboard extends BaseDashboard<any, any> {
+        override layout(): JSX.Element | undefined {
+          return (
+            <>
+              <NewsWidget />
+              <div className="one-column">
+                <ListWidget />
+                <ChartWidget />          
+              </div>
+            </>
+          );
+        }
+      }
+    ```
+
+    ---
+
+    :::image type="content" source="../../assets/images/sbs-create-a-new-dashboard/widget-customize.png" alt-text="Screenshot shows the two-widget customization.":::
 
 ### Dashboard tab app abstraction
 
@@ -778,7 +903,7 @@ To consent application permissions, follow these steps:
 
 #### Add an Azure function
 
-In the left pane of the Visual Studio Code, go to **Teams Toolkit** > **Adding features** > **Azure Functions** and enter the function name.
+In the left pane of the Visual Studio Code, go to **Microsoft 365 Agents Toolkit** > **Adding features** > **Azure Functions** and enter the function name.
 
 :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/azure-functions.png" alt-text="Screenshot shows the selection of Azure Functions.":::
 
@@ -790,11 +915,11 @@ In the `index.ts`/`index.ts` under the folder named Azure Function, you can add 
 
 ```typescript
 /**
- * This function handles requests from teamsfx client.
+ * This function handles requests from atk client.
  * The HTTP request should contain an SSO token queried from Teams in the header.
- * Before triggering this function, teamsfx binding would process the SSO token and generate teamsfx configuration.
+ * Before triggering this function, atk binding would process the SSO token and generate atk configuration.
  *
- * You should initializes the teamsfx SDK with the configuration and calls these APIs.
+ * You should initializes the atk SDK with the configuration and calls these APIs.
  *
  * The response contains multiple message blocks constructed into a JSON object, including:
  * - An echo of the request body.
@@ -803,7 +928,7 @@ In the `index.ts`/`index.ts` under the folder named Azure Function, you can add 
  *
  * @param {Context} context - The Azure Functions context object.
  * @param {HttpRequest} req - The HTTP request.
- * @param {teamsfxContext} TeamsfxContext - The context generated by teamsfx binding.
+ * @param {teamsfxContext} TeamsfxContext - The context generated by atk binding.
  */
 export default async function run(
   context: Context,
@@ -860,10 +985,6 @@ For more information, see:
 ## Embed Power BI to dashboard
 
 To embed Power BI to the dashboard, see [Power BI client react](/javascript/api/overview/powerbi/powerbi-client-react).
-
-## Step-by-step guide
-
-Follow the [step-by-step](~/sbs-create-dashboard-widget-graph-api-call-in-Teams-toolkit.yml) guide to build a dashboard, and learn to add a widget and Graph API call to the dashboard.
 
 ## See also
 

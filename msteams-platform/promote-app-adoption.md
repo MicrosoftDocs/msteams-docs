@@ -1,7 +1,7 @@
 ---
 title: Facilitate App Adoption
 author: ashishguptaiitb
-ms.author: guptaashish
+ms.author: surbhigupta
 manager: prkosh
 description: Learn about the best practices and guidance for app adoption and promotion, understand how to drive app adoption and track app usage analytics.
 ms.topic: reference
@@ -312,10 +312,10 @@ To learn more about how your customers access the support information for your a
 
 | Input source when creating app                                          | Parameter          | Description and meaning                                                                                                    | Visibility of the information in Teams                                                                       |
 |-------------------------------------------------------------------------|--------------------|----------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| [Manifest file](resources/schema/manifest-schema.md)                    | `websiteUrl`       | The web page at this URL provides support information for an app.                                                          | App details page in Teams admin center displays the website URL.                                             |
-| [Manifest file](resources/schema/manifest-schema.md)                    | `privacyUrl`       | The URL to the page that provides privacy information for the app.                                                         | • Displayed in app details page in Teams admin center. <br> • Displayed in AppSource listing.                |
-| [Manifest file](resources/schema/manifest-schema.md)                    | `termsOfUseUrl`    | The URL to the page that provides the terms of use for the app.                                                            | • Displayed in app details page in Teams admin center. <br> • Displayed in AppSource listing.                |
-| [Manifest file](resources/schema/manifest-schema.md)                    | `publisherDocsUrl` | The URL destination provides app documentation for the admins to use to understand, allow, configure, and rollout the app. | Teams admin center displays the URL if the app developer provides it in the manifest file. |
+| [Manifest file](/microsoft-365/extensibility/schema/root-developer#websiteurl)                    | `websiteUrl`       | The web page at this URL provides support information for an app.                                                          | App details page in Teams admin center displays the website URL.                                             |
+| [Manifest file](/microsoft-365/extensibility/schema/root-developer#privacyurl)                    | `privacyUrl`       | The URL to the page that provides privacy information for the app.                                                         | • Displayed in app details page in Teams admin center. <br> • Displayed in AppSource listing.                |
+| [Manifest file](/microsoft-365/extensibility/schema/root-developer#termsofuseurl)                    | `termsOfUseUrl`    | The URL to the page that provides the terms of use for the app.                                                            | • Displayed in app details page in Teams admin center. <br> • Displayed in AppSource listing.                |
+| [Manifest file](/microsoft-365/extensibility/schema/root#publisherdocsurl)                    | `publisherDocsUrl` | The URL destination provides app documentation for the admins to use to understand, allow, configure, and rollout the app. | Teams admin center displays the URL if the app developer provides it in the manifest file. |
 | [Partner Center submission](/azure/marketplace/add-in-submission-guide) | NA                 | Support or help documentation URL.                                                                                         | Displayed in [Microsoft AppSource](https://appsource.microsoft.com/), in the **Details + support** tab.      |
 
 > [!div class="nextstepaction"]
@@ -323,7 +323,7 @@ To learn more about how your customers access the support information for your a
 
 ## Step 5: Track app adoption and usage using analytics
 
-You build an app for millions of Teams users to achieve specific business or customer goals. For this purpose, you distribute it using the options available on the Teams Store versus a custom app. After the app is published, you'll want to measure how your app is performing in the real-world. You’d also want to guide the admins to measure their org-specific app usage.
+You build an app for millions of Teams users to achieve specific business or customer goals. For this purpose, you publish it using the options available on the Teams Store versus a custom app. After the app is published, you'll want to measure how your app is performing in the real-world. You’d also want to guide the admins to measure their org-specific app usage.
 
 ### Track app usage in Partner Center
 

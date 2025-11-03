@@ -4,6 +4,7 @@ description: Learn about third-party OAuth IdP authentication, navigation and au
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 12/13/2022
+ms.owner: ryanbliss
 ---
 # Configure third party OAuth IdP authentication
 
@@ -96,7 +97,7 @@ microsoftTeams.authentication.authenticate({
 
 * The URL you pass to `authenticate()` is the start page of the authentication flow. In this example that is `/tab-auth/simple-start`. This should match what you registered in the [Microsoft Entra Application Registration Portal](https://apps.dev.microsoft.com).
 
-* Authentication flow must start on a page that's on your domain. This domain should also be listed in the [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) section of the manifest. Failure to do results in an empty pop-up.
+* Authentication flow must start on a page that's on your domain. This domain should also be listed in the [`validDomains`](/microsoft-365/extensibility/schema/root#validdomains) section of the manifest. Failure to do results in an empty pop-up.
 
 * If you fail to use `authenticate()`, the pop-up might not close at the end of the sign-in process, causing a problem.
 
@@ -229,7 +230,7 @@ Your app can set its own session cookie so that the user doesn't need to sign in
 
 > [!NOTE]
 >
-> * Chrome 80, scheduled for release in early 2020, introduces new cookie values and imposes cookie policies by default. It's recommended that you set the intended use for your cookies rather than rely on default browser behavior. *See* [SameSite cookie attribute (2020 update)](../../../resources/samesite-cookie-update.md).
+> * Chrome 80 introduces new cookie values and imposes cookie policies by default. We recommend that you set the intended use for your cookies rather than rely on default browser behavior. For more information, see [SameSite cookie attribute](../../../resources/samesite-cookie-update.md).
 > * To obtain the appropriate token for Microsoft Teams Free and guest users, ensure your apps utilize the tenant-specific endpoint `https://login.microsoftonline.com/**{tenantId}**`. You can acquire the tenantId from the bot message or tab context. If your apps use `https://login.microsoftonline.com/common`, users might receive incorrect tokens, causing them to log into the "home" tenant rather than the tenant they are signed into.
 
 For more information on single sign-on (SSO), see the article [Silent authentication](~/tabs/how-to/authentication/auth-silent-AAD.md).
@@ -240,8 +241,8 @@ Sample code showing the tab authentication process using Microsoft Entra ID:
 
 | Sample name | Description | .NET| Node.js | Manifest |
 |---------------|---------------|------|--------------|--------------|
-| Tab SSO |This sample app shows Microsoft Entra SSO for tabs in Teams.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)| NA |
-| Tab, Bot, and Message Extension (ME) SSO | This sample shows SSO for Tab, Bot, and ME- search, action, link unfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp/demo-manifest)|
+| Tab SSO | This sample app showcases Microsoft Entra SSO within a tab, using the On-Behalf-Of flow to call Microsoft Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)| NA |
+| Tab, Bot, and Message Extension (ME) SSO | This sample app demonstrates Teams SSO integration for tabs, bots, and message extensions and Microsoft Entra ID for secure authentication. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp/demo-manifest)|
 
 ## See also
 

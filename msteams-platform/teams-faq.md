@@ -2,8 +2,9 @@
 title: Teams Developer Documentation - FAQs
 description: In this article, check FAQS on Adaptive Card Previewer, bots, Live Share, Microsoft 365 Chat, Teams AI library, Partner Center, and other Teams FAQs.
 ms.topic: reference
-ms.date: 09/16/2024
+ms.date: 01/23/2025
 ms.localizationpriority: high
+ms.owner: angovil
 ---
 
 # Frequently asked questions
@@ -13,9 +14,9 @@ This section contains the frequently asked questions and the answers.
 ## Adaptive Card Previewer
 
 <details>
-<summary>Why do we have to use a new extension in Visual Studio Code? Can’t this extension be integrated into Teams Toolkit for Visual Studio Code?</summary>
+<summary>Why do we have to use a new extension in Visual Studio Code? Can’t this extension be integrated into Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) for Visual Studio Code?</summary>
 
-Adaptive Card Previewer is a standalone extension because it uses a closed-source package to render the Adaptive Cards to ensure consistent rendering logic with the Teams platform. Teams Toolkit is an open-source project and doesn't include dependencies on packages that third-party developers can't access.
+Adaptive Card Previewer is a standalone extension because it uses a closed-source package to render the Adaptive Cards to ensure consistent rendering logic with the Teams platform. Agents Toolkit is an open-source project and doesn't include dependencies on packages that third-party developers can't access.
 <br>
 &nbsp;
 </details>
@@ -85,12 +86,37 @@ Use Delete messages-Bot framework's `DeleteActivity` method: [Update and delete
 <details>
 <summary>How can I test the validity of the card schema via code?</summary>
 
-You can test or validate the Adaptive Card schema using the **Adaptive cards editor (preview)** option in [Developer Portal > Tools](https://dev.teams.microsoft.com/tools).
+You can test or validate the Adaptive Card schema using the **Adaptive Cards editor (Preview)** option in [Developer Portal > Tools](https://dev.teams.microsoft.com/tools).
 </details>
 <details>
 <summary>Why am I unable to create a bot in Developer Portal?</summary>
 
 App registration is disabled for the user or the user doesn't have enough permissions to create an app. For more information, see [limitations and known issues.](~/bots/bot-features.md#limitations-and-known-issues)
+</details>
+<details>
+
+<summary>How can I resolve the error "Microsoft.Graph.Communications.Core.Exceptions.ServiceException: 'Code: 9999 Message: Unknown internal server error'"?</summary>
+
+* Verify that the app has the `Calls.JoinGroupCall.All` and `Calls.InitiateGroupCall.All` permissions and admin consent.
+* Sign in to your app to capture more information about the error.
+* Ensure that the `joinParams` being passed to the `AddAsync` method are correct and contain the required information.
+* Ensure the values for `JoinUrl`, `MeetingId`, and other parameters are correct.
+* Ensure that the `scenarioId` is unique for each call. Reusing scenario IDs can sometimes cause issues.
+
+</details>
+
+<details>
+<summary>After registering my bot in the Azure portal, I get the error <b>You do not have permission to use this app here</b> when opening it in Teams. How can I resolve this?</summary>
+
+To use your app within Teams, you must upload it into Teams. For more information, see [upload your app to Teams](toolkit/test-app-behavior.md#upload-your-app-to-teams).
+
+</details>
+<details>
+<summary>How does a bot use custom emoji in a message in Teams?</summary>
+
+Bots must send emojis as UTF-16 text. HTML, data URI images, and Skype emoji schemas aren't supported in Teams.
+<br>
+&nbsp;
 </details>
 
 ## Live share
@@ -184,9 +210,9 @@ While Live Share is in Preview, any limit to events emitted through Live Share i
 </details>
 
 <details>
-<summary>Is Live Share supported for Government Community Cloud (GCC), Government Community Cloud High (GCC-High), and Department of Defense (DOD) tenants?</summary>
+<summary>Is Live Share supported for Government Community Cloud (GCC), GCC High, Department of Defense (DoD), and Teams operated by 21Vianet environments?</summary>
 
-Live Share isn't supported for GCC, GCC-High, and DOD tenants.
+Live Share is supported only in GCC environment.
 
 <br>
 
@@ -219,12 +245,13 @@ No, Live Share doesn't support meeting recordings.
 
 <details>
 
-<summary>Why isn't Microsoft 365 Copilot including my plugin in a response?</summary>
+<summary>Why isn't Microsoft 365 Copilot including my agent in a response?</summary>
 
-Ensure your app manifest (previously called Teams app manifest) is descriptive. The app manifest helps in plugin matching in response to a user prompt. Also, ensure that you upload the app package to Outlook and interacted with the app, including authentication.
+Ensure your app manifest (previously called Teams app manifest) is descriptive. The app manifest helps in agent matching in response to a user prompt. Also, ensure that you upload the app package to Outlook and interacted with the app, including authentication.
 
 If the problem continues, use the thumbs down indicator in the Microsoft 365 Copilot reply and prefix your reply with [MessageExtension].
-
+<br>
+&nbsp;
 </details>
 <details>
 
@@ -289,19 +316,24 @@ Here's an example description that work for NPM Finder.
 
 ```
 
+<br>
+&nbsp;
 </details>
 <details>
 
-<summary> Microsoft 365 Copilot includes my plugin in the response, but Microsoft 365 Copilot’s response doesn’t meet my expectations. What should I do?</summary>
+<summary> Microsoft 365 Copilot includes my agent in the response, but Microsoft 365 Copilot’s response doesn’t meet my expectations. What should I do?</summary>
 
 Use the downvoting option in the Microsoft 365 Copilot reply and prefix your reply with [MessageExtension].
-
+<br>
+&nbsp;
 </details>
 <details>
 
 <summary> Can I build my own Teams message extension? </summary>
 
 Yes, you can. Ensure that you have a descriptive app manifest and upload the app to Outlook and interacted with it.</br>
+<br>
+&nbsp;
 </details>
 <details>
 
@@ -309,39 +341,95 @@ Yes, you can. Ensure that you have a descriptive app manifest and upload the app
 
 1. Register the bot channel in Azure Bot Service.
 1. Upload the app to Outlook.
+<br>
 
+&nbsp;
 </details>
 <details>
-<summary>What are the guidelines for Teams apps extensible as plugin for Microsoft 365 Copilot? </summary>
+<summary>What are the guidelines for Teams apps extensible as agent for Microsoft 365 Copilot? </summary>
 
-You can read the [Teams Store validation guidelines](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-plugin-for-microsoft-365-copilot) for Teams apps extensible as plugin for Microsoft 365 Copilot.
-
+You can read the [Teams Store validation guidelines](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-agents-for-microsoft-365-copilot) for Teams apps extensible as agent for Microsoft 365 Copilot.
+<br>
+&nbsp;
 </details>
 <details>
 
 <summary> What is the certification process?</summary>
 
-After publishing the plugin, start the App Compliance flow in Partner Center. If [Publisher verification](/entra/identity-platform/publisher-verification-overview) is incomplete, ensure that the App Compliance flow is completed before Microsoft 365 Certification. Then, complete [Publisher Attestation](/microsoft-365-app-certification/docs/attestation), which gathers self-attested data about the plugin, company, and operations. For more information, see [Microsoft 365 App Compliance Program](/microsoft-365-app-certification/overview).
+After publishing the agent, start the App Compliance flow in Partner Center. If [Publisher verification](/entra/identity-platform/publisher-verification-overview) is incomplete, ensure that the App Compliance flow is completed before Microsoft 365 Certification. Then, complete [Publisher Attestation](/microsoft-365-app-certification/docs/attestation), which gathers self-attested data about the agent, company, and operations. For more information, see [Microsoft 365 App Compliance Program](/microsoft-365-app-certification/overview).
 
-To start the [Microsoft 365 Certification process](/microsoft-365-app-certification/docs/certification), upload initial documents that define the assessment scope for the plugin and operating environment. Depending on the scope, provide evidence for specific controls related to application security, operational security, and data handling or privacy. If you build your plugin on Azure, you can use the App Compliance Automation Tool (ACAT) to scan the environment and generate evidence for several controls, reducing the manual workload. For more information, see [App Compliance Automation Tool for Microsoft 365](/microsoft-365-app-certification/docs/acat-overview).
-
+To start the [Microsoft 365 Certification process](/microsoft-365-app-certification/docs/certification), upload initial documents that define the assessment scope for the agent and operating environment. Depending on the scope, provide evidence for specific controls related to application security, operational security, and data handling or privacy. If you build your agent on Azure, you can use the App Compliance Automation Tool (ACAT) to scan the environment and generate evidence for several controls, reducing the manual workload. For more information, see [App Compliance Automation Tool for Microsoft 365](/microsoft-365-app-certification/docs/acat-overview).
+<br>
+&nbsp;
 </details>
 <details>
 
-<summary> How are plugins certified?</summary>
+<summary> How are agents certified?</summary>
 
-After the app passes the proactive validation, developers of both existing and new message extensions that aren't certified will be encouraged to certify their plugin. This is communicated through an email confirming their message extension is validated.
+After the app passes the proactive validation, developers of both existing and new message extensions that aren't certified will be encouraged to certify their agent. This is communicated through an email confirming their message extension is validated.
+<br>
+&nbsp;
 </details>
 <details>
 
-<summary> How are new plugins certified?</summary>
+<summary> How are new agents certified?</summary>
 
-Developers are encouraged to certify their new plugin after successfully completing validation.
+Developers are encouraged to certify their new agent after successfully completing validation.
+<br>
+&nbsp;
 </details>
 <details>
-<summary>How can I create or upgrade a message extension plugin for Microsoft 365 Copilot?</summary>
+<br>
+<summary>How can I create or upgrade a message extension agent for Microsoft 365 Copilot?</summary>
 
- You can [create or upgrade a message extension as a plugin in Microsoft 365 Copilot](messaging-extensions/build-bot-based-plugin.md) to interact with third-party tools and services and achieve more with Microsoft 365 Copilot. Additionally, your extensions must meet the standards for compliance, performance, security, and user experience outlined in [guidelines to create or upgrade a message extension plugin for Microsoft 365 Copilot](messaging-extensions/dev-guidelines-copilot-agents.md).
+You can [create or upgrade a message extension as an agent in Microsoft 365 Copilot](messaging-extensions/build-bot-based-agent.md) to interact with third-party tools and services and achieve more with Microsoft 365 Copilot. Additionally, your extensions must meet the standards for compliance, performance, security, and user experience outlined in [guidelines to create or upgrade a message extension agent for Microsoft 365 Copilot](messaging-extensions/dev-guidelines-copilot-agents.md).
+<br>
+&nbsp;
+</details>
+<details>
+<summary>What happens to my published message extension plugins? </summary>
+
+All published message extension plugins will now appear as agents in the right pane of the Microsoft 365 Copilot. Depending on the partner's requirement to implement an API, they might either accept this upgrade or consider building a [custom engine agent](/microsoft-365-copilot/extensibility/overview-custom-engine-agent?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json) or an [API-based plugin](messaging-extensions/api-based-overview.md).
+<br>
+&nbsp;
+</details>
+<details>
+
+<summary>What can partners do to build a more robust agent?</summary>
+
+If a partner wants to build a more robust agent, they can deprecate their existing plugin and build a declarative agent with custom instructions and API-based actions. For more information, see [extend bot-based message extension as agent for Microsoft 365 Copilot](messaging-extensions/build-bot-based-agent.md).
+<br>
+&nbsp;
+</details>
+<details>
+
+<summary>Will declarative agents and custom engine agents have the same user experience and features?</summary>
+
+Yes, both declarative agents and custom engine agents will have the same invocation and session history user experience, and ZQL (query language) will be supported for both.
+<br>
+&nbsp;
+</details>
+<details>
+
+<summary>Can Independent Software Vendors (ISVs) enhance their existing wrapped declarative agents moving forward?</summary>
+
+ISVs can continue to improve their message extension agent and submit their app through standard methods or channels. However, they will be limited in terms of adding new instructions or knowledge to their agent.
+<br>
+&nbsp;
+</details>
+<details>
+
+<summary>Can partners submit both a message extension Copilot and a declarative agent?</summary>
+
+Partners can’t have both in one app package. However, they could have them in separate app packages, but this would be unusual and would require approval as per app store validation guidelines. For more information, see [validation guidelines for agents](concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md).
+<br>
+&nbsp;
+</details>
+<details>
+
+<summary>Does a declarative agent require a Copilot license?</summary>
+
+Yes, a declarative agent requires a Copilot license, as did plugins in Copilot. The message extension continues to work as a message extension in Teams, and all declarative agents appear in the app chat.
 </details>
 
 ## Microsoft Graph
@@ -359,9 +447,9 @@ You can use the following Graph API [Get user mailbox settings](/graph/api/user-
 
 </details>
 <details>
-<summary>How can I deploy the code in Azure using Teams Toolkit, and use Graph API to get a user profile photo?</summary>
+<summary>How can I deploy the code in Azure using Microsoft 365 Agents Toolkit, and use Graph API to get a user profile photo?</summary>
 
-For more information on Teams Toolkit, see [Create a new Teams project](toolkit/create-new-project.md) and [Teams Toolkit CLI](toolkit/Teams-Toolkit-CLI.md).
+For more information on Agents Toolkit, see [Create a new Teams project](toolkit/create-new-project.md) and [Microsoft 365 Agents Toolkit CLI](toolkit/Teams-Toolkit-CLI.md) (previously known as Teams Toolkit CLI).
 
 <br>
 &nbsp;
@@ -383,6 +471,140 @@ Yes, Graph API works in Microsoft Graph explorer.
 For more information, see [Graph explorer](https://developer.microsoft.com/graph/graph-explorer).
 <br>
 &nbsp;
+</details>
+<details>
+<summary>How can my Teams bot distinguish between regular users and admins without using Graph API?</summary>
+
+Configure your Azure AD app to include the `wids` claim in the token. Your bot can then inspect the token to securely identify admin roles such as Global Admin (`62e90394-69f5-4237-9190-012177145e10`) or Teams Admin (`69091246-20e8-4a56-aa4d-066075b2a7a8`), without using Graph API.
+<br>
+&nbsp;
+</details>
+
+## Monetize your app
+
+<details>
+
+<summary>Do we support in-app purchases?</summary>
+
+Yes, we support in-app purchases. For more information, see [in-app purchases](concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md).
+
+</br>
+
+</details>
+<details>
+
+<summary>How the flow is handled by CSP who makes the purchase for enterprise?</summary>
+
+CSP can make purchases for enterprise from Microsoft Teams Store. For more information, see [third-party app purchase](concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md#subscription-purchase-experience).
+
+</br>
+
+</details>
+<details>
+
+<summary>What's the percentage fee that is taken by Microsoft?</summary>
+
+Microsoft charges a 3% transaction fee whenever a payment is processed. So, if it's a monthly subscription, then the 3% is applied on a monthly basis. This charge applies for both credit card transactions and invoice billing.
+
+</br>
+
+</details>
+<details>
+
+<summary>Can I test the offer before publishing?</summary>
+
+Yes, you can test the offer before publishing. For more information, see [test your SaaS offer](concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md).
+
+</br>
+
+</details>
+<details>
+
+<summary>Is it mandatory to link existing Teams app to my monetization module listed on AppSource?</summary>
+
+It's not mandatory but a good practice to implement it.
+
+</br>
+
+</details>
+<details>
+
+<summary>If the app is transactable on Azure Marketplace, is it also available in Microsoft AppSource or Teams by default?</summary>
+
+No. Azure Marketplace is different than AppSource (and by extension Teams App Store). In order to be listed in the Teams App Store, Teams apps must be submitted in Partner Center for AppSource. It must have a linked transactable offer and must update their Teams app manifest to include their publisher and offer IDs. Once done, resubmit to Partner Center for validation before they appear in the Teams App Store with a **Buy a subscription** button.
+
+</br>
+
+</details>
+<details>
+
+<summary>What are the additional steps to get Buy a subscription option on Teams Store?</summary>
+
+You must add the IDs to the manifest (and uploading through PC to validate) that shows the **Buy a subscription** button in Teams. Partners can continue to have apps available in Teams and require customers to purchase through AppSource. Going through a few additional steps brings the purchase option into the Teams Store.​
+
+</br>
+
+</details>
+<details>
+
+<summary>Can ISV set different pricing per country per region?</summary>
+
+Yes. For more information, see [pricing and offers](/partner-center/pricing/pricing-and-offers).
+
+</br>
+
+</details>
+<details>
+
+<summary>What are the possible scenarios my partner may face when submitting their Teams app for validation?</summary>
+
+* Scenario 1: Partner has an existing Teams app and an existing transactable SaaS offer​.
+* Scenario 2: Partner has an existing Teams app and NO existing transactable SaaS offer.
+* Scenario 3: Partner has NO existing Teams app and an existing transactable SaaS offer.
+* Scenario 4: Partner has NO existing Teams app and NO existing transactable SaaS offer.
+
+</br>
+
+</details>
+<details>
+
+<summary>What are CSPs looking for when matching with ISVs?</summary>
+
+To be channel ready places, ISVs in the best position to be successfully matched as CSPs must look for:​
+
+1. Complementary apps to add to their bundles solutions and services​.
+1. An attractive margin, balancing their effort with potential revenue​.
+1. Materials that are easy to consume and ready to use with customers.
+
+</br>
+
+</details>
+<details>
+
+<summary>Are partners able to provide a minimum number of licenses available to purchase as part of a subscription?</summary>
+
+Yes. For more information, see [subscription purchase experience](concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md).
+
+</br>
+
+</details>
+<details>
+
+<summary>How can subscribers upgrade, downgrade, or cancel their subscriptions? Can they upgrade from monthly to annual?</summary>
+
+Yes. Upgrade, downgrade, and canceling subscriptions are allowed. For more information on license management, see [license management](concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md#license-and-subscriptions-management-experience).
+
+</br>
+
+</details>
+<details>
+
+<summary>Does Teams app support metered billing?</summary>
+
+Yes. Metered billing is available for SaaS offer. For more information, see [metered billing for SaaS offers](/partner-center/marketplace-offers/partner-center-portal/saas-metered-billing).
+
+</br>
+
 </details>
 
 ## Moodle
@@ -696,7 +918,7 @@ You received this error message because your [account verification status](/part
 
 There are three verification areas, **Email Ownership**, **Employment**, and **Business**. For more information, see [what is verified and how to respond](/partner-center/verification-responses#what-is-verified-and-how-to-respond).
 
-If you're the primary contact, global admin, or account admin, you can monitor verification status and track progress on your profile page.
+If you're the primary contact, Global Administrator or account admin, you can monitor verification status and track progress on your profile page.
 
 After the verification process is complete, the status of your enrollment on the profile page changes from *pending* to *authorized*. The primary contact then receives an email from Microsoft within a few business days.
 <br>
@@ -825,7 +1047,7 @@ Configure the application you're using to only execute HTML encoding of the scop
 <details>
 <summary>How can I implement Bot SSO using React?</summary>
 
-If you use Teams Toolkit to build your app, see [Add single sign-on to Teams app](toolkit/add-single-sign-on.md) for more information.
+If you use Agents Toolkit to build your app, see [Add single sign-on to Teams app](toolkit/add-single-sign-on.md) for more information.
 
 For more information about Node js code sample, see [Bot SSO quick-start](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js).
 <br>
@@ -860,7 +1082,7 @@ Stageview Modal is useful to display rich content to the users, such as page, da
 
 <summary>When Stageview is invoked, the content opens in Collaborative Stageview but gets loaded in the main Teams window instead of a new window. How to open the content in a new window?</summary>
 
-Ensure that your `contentUrl` domain is accurately reflected in the manifest `validDomains` property. For more information, see [app manifest schema](resources/schema/manifest-schema.md).
+Ensure that your `contentUrl` domain is accurately reflected in the manifest `validDomains` property. For more information, see [app manifest schema](/microsoft-365/extensibility/schema/root#validdomains).
 
 </br>
 
@@ -917,6 +1139,14 @@ If you have both configurable tab and static tab defined in your app manifest fo
 
 Pre-existing pinned configurable tab instances of your app continue to work the same. You don't have the option to pin new instances of these configurable tabs. When you select to pin your tab, then Teams pins the static tab of your app.
 <br>
+&nbsp;
+</details>
+<details>
+<summary>How do I optimize my tab webpages to perform better on mobile devices?</summary>
+
+To optimize your tab app performance on Teams mobile, use service workers to cache static assets and minimize web page size. You can also conduct performance audits using dev tools to identify bottlenecks. For more information, see [best practices for Teams mobile apps](resources/teams-mobile-best-practices.md).
+<br>
+&nbsp;
 </details>
 </details>
 
@@ -924,32 +1154,36 @@ Pre-existing pinned configurable tab instances of your app continue to work the 
 
 <br>
 <details>
-<summary>What does the Teams AI library do?</summary>
+<summary>What does Teams AI library do?</summary>
 
 Teams AI library provides abstractions for you to build robust applications that utilize OpenAI Large Language Models (LLMs).
 <br>
 </details>
+</br>
 
 <details>
 <summary>Does Microsoft provide a hosted version of OpenAI models that are used by the AI library?</summary>
 
-No, you need to have your Large Language Models (LLMs), hosted in Azure OpenAI or elsewhere.
+No, you need to have your Large Language Models (LLMs) hosted in Azure OpenAI or elsewhere.
 <br>
 </details>
+</br>
 
 <details>
-<summary>Can we use the AI library with other Large Language Models (LLMs) apart from OpenAI?</summary>
+<summary>Can we use the AI library with other large language models apart from OpenAI?</summary>
 
 Yes, it's possible to use Teams AI library with other Large Language Models (LLMs).
 <br>
 </details>
+</br>
 
 <details>
 <summary>Does a developer need to do anything to benefit from LLMs? If yes, why?</summary>
 
-Yes, Teams AI library provides abstractions to simplify utilization of Large Language Models (LLMs) in conversational applications. However, you (developer) must tweak the prompts, topic filters, and actions depending upon your scenarios.
+Yes, Teams AI library provides abstractions to simplify utilization of Large Language Models (LLMs) in conversational applications. However, you (developer) must tweak the prompts, topic filters, and actions depending on your scenarios.
 <br>
 </details>
+</br>
 
 <details>
 <summary>How does Teams AI library integrate with ODSL?</summary>
@@ -957,31 +1191,35 @@ Yes, Teams AI library provides abstractions to simplify utilization of Large Lan
 The two are independent and can't be integrated.
 <br>
 </details>
+</br>
 
 <details>
 <summary>How does Teams AI library co-exist against the hero-story of developers building for the skills ecosystem in Microsoft 365?</summary>
+</br>
 
-Teams AI library story is targeted towards Pro-developers and separate from the hero-story around skills ecosystem in Microsoft 365.
+Teams AI library story is targeted towards pro-developers and separate from the hero-story around skills ecosystem in Microsoft 365.
 <br>
 </details>
+</br>
 
 <details>
-<summary>How should information about the existing Bot Framework SDK be communicated after announcing a new version?</summary>
+<summary>How must information about the existing Bot Framework SDK be communicated after announcing a new version?</summary>
 
 Teams AI library works alongside the existing Bot Framework SDK and isn't a replacement.
 <br>
 </details>
 
-## Teams toolkit
+## Microsoft 365 Agents Toolkit
 
-FAQ for [Provision cloud resources](toolkit/provision.md) using Teams Toolkit.
+FAQ for [Provision cloud resources](toolkit/provision.md) using Agents Toolkit.
 <br>
 
 <details>
 <summary>How to troubleshoot?</summary>
 
-If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document.
+If you get errors with Agents Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document. If you're using Agents Toolkit CLI, there'll be a hyperlink at the end of error message that points to the help doc.
 <br>
+
 &nbsp;
 </details>
 <details>
@@ -1005,22 +1243,63 @@ Before provision, the toolkit asks you if you want to create a new resource grou
 <details>
 <summary>How can I provision a SharePoint-based app?</summary>
 
-You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4).
-
-> [!NOTE]
-> Building a Teams app using SharePoint Framework with Teams Toolkit doesn't have direct integration with Microsoft Entra admin center. The content in the document doesn't apply to SPFx-based apps.
-
+You can do so by following [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4).
 <br>
 &nbsp;
 </details>
 <details>
-<summary>How can I deploy the code in Microsoft Entra ID using Teams Toolkit, and use Graph API to get the app user's profile photo?</summary>
+<summary>How can I deploy the code in Microsoft Entra ID using Microsoft 365 Agents Toolkit, and use Graph API to get the app user's profile photo?</summary>
 
 Shared references to deploy the code using toolkit:
 
-* [Create a new Teams app using Teams Toolkit](toolkit/create-new-project.md)
-* [Teams Toolkit CLI](toolkit/Teams-Toolkit-CLI.md)
+* [Create a new Teams app using Agents Toolkit](toolkit/create-new-project.md)
+* [Agents Toolkit CLI](toolkit/Teams-Toolkit-CLI.md)
 
 You can call Graph API to get the app user's profile photo.
+<br>
+&nbsp;
+</details>
 
+## App distribution
+
+<details>
+<summary>Why do I see the message <b>You don’t have access to this app</b> when adding a custom Teams app?</summary>
+
+To resolve the **You don’t have access to this app** error, ensure the Teams channel is enabled in your Azure Bot Service.
+<br>
+&nbsp;
+</details>
+<details>
+<summary> Is it acceptable to include <code>localhost</code> as a valid domain in an Outlook Add-in manifest?</summary>
+
+The `localhost` domain is acceptable for local development and testing only. For production or store submission, all endpoints must be publicly accessible and secured by using HTTPS.
+<br>
+&nbsp;
+</details>
+
+## PowerShell
+
+<details>
+<summary>How can I retrieve all auto attendants or call queues if the output is limited to 100 rows?</summary>
+
+Use the `-First` and `-Skip` parameters with `Get-CsAutoAttendant` or `Get-CsCallQueue` to paginate results and retrieve all entries. The `-Limit All` parameter is no longer supported.
+<br>
+&nbsp;
+</details>
+
+## Power Platform
+
+<details>
+<summary> How can I configure a Teams workflow to wait for manual approval without timing out too quickly?</summary>
+
+Use the **Start and wait for an approval** action in Power Automate. In the action settings, extend the timeout by specifying the duration in ISO 8601 format (for example, `P7D` for 7 days). This ensures the workflow is paused until the approval is granted.
+<br>
+&nbsp;
+</details>
+<details>
+<summary> What are the Power Platform licensing requirement for managed environments and Copilot usage?</summary>
+
+In managed environments, all makers and end users must have a Power Platform premium license, even for standard apps. For Copilot, individual licenses aren’t required if users are covered under tenant-level messaging capacity. Otherwise, a personal Copilot license is needed.
+<br>
+&nbsp;
 </details>

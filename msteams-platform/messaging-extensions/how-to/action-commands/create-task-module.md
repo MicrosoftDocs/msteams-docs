@@ -5,6 +5,8 @@ description: Learn to create and send dialogs (task modules). Handle the initial
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
+ms.owner: ginobuzz
+ms.date: 03/11/2025
 ---
 # Create and send dialogs
 
@@ -957,7 +959,7 @@ The task response to the invoke must be similar to that of the installed bot.
 
 #### Example
 
-The following code section is an example of just-in time installation of app with Adaptive card:
+The following code section is an example of just-in time installation of app with Adaptive Card:
 
 ```csharp
 private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
@@ -980,9 +982,9 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 | Sample name           | Description | .NET    | Node.js   | Python | Manifest|
 |:---------------------|:--------------|:---------|:--------|:--------|:--------|
-|Teams message extension action| This sample shows how to define action commands, create dialog, and respond to dialog submit action. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp/demo-manifest/msgext-action.zip)
-|Message extension action preview| This sample shows how to use action preview in Messaging Extensions using Bot Framework v4. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/nodejs) |NA|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp/demo-manifest/msgext-action-preview.zip) |
-|Teams message extension search   |  This sample shows how to build a Search-based Message Extension. It searches nudget packages and displays the results in search based messaging extension.        |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/python)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
+|Teams message extension action| This sample demonstrates how to create Action-Based Messaging Extensions for Microsoft Teams, enabling users to interactively generate content. It features bots, message extensions, and seamless integration with user inputs for enhanced functionality. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp/demo-manifest/msgext-action.zip)
+|Message extension action preview| This sample app illustrates how to utilize action previews in Teams Messaging Extensions, allowing users to create cards from input in a Task Module. It showcases bot interactions that enhance user engagement by attributing messages to users. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/nodejs) |NA|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp/demo-manifest/msgext-action-preview.zip) |
+|Teams message extension search   |  This sample demonstrates how to create a Messaging Extension in Microsoft Teams that allows users to perform searches and retrieve results.        |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/python)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
 
 ## Next step
 
@@ -991,7 +993,7 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 ## See also
 
-* [App manifest schema for Teams](../../../resources/schema/manifest-schema.md)
+* [App manifest schema for Teams](/microsoft-365/extensibility/schema/)
 * [Cards](../../../task-modules-and-cards/what-are-cards.md)
 * [Dialogs](../../../task-modules-and-cards/what-are-task-modules.md)
 * [Define message extension action commands](define-action-command.md)

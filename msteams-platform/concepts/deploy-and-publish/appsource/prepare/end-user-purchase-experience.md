@@ -5,12 +5,12 @@ author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 ms.localizationpriority: high
-ms.date: 04/06/2023
+ms.date: 11/25/2024
 ---
 
 # Purchase and manage app subscriptions and licenses
 
-Users can purchase subscriptions and manage licenses from Microsoft Teams Store for an individual, a team, or an organization. As a developer, you can enhance the user experience for your app purchases based on the content outlined here. This article helps you understand the user's app purchase experience in Teams Store and provide a similar experience.
+Users can purchase subscriptions and manage licenses from Microsoft Teams Store for an individual, a team, or an organization. You can enhance the user experience for your app purchases based on the content outlined here. This article helps you understand the user's app purchase experience in Teams Store and you can provide a similar experience.
 
 ## Subscription purchase experience
 
@@ -27,7 +27,7 @@ Here's the user experience to purchase a subscription plan for a Teams app:
 
 1. In the app details dialog, select **Buy a subscription**.
 
-    :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplan.png" alt-text="Screenshot shows buying the subscription for an app."  lightbox="../../../../assets/images/saas-offer/buysubscriptionplan-lightbox.png":::
+    :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplan.png" alt-text="Screenshot shows buying the subscription for an app." lightbox="../../../../assets/images/saas-offer/buysubscriptionplan-lightbox.png":::
 
 1. To view the available plans for your location, select your country or region and select **Save and continue**.
 
@@ -84,7 +84,7 @@ Here's the user experience to purchase a subscription plan for a Teams app:
 
     :::image type="content" source="~/assets/images/saas-offer/saas-offer-set-up.png" alt-text="Screenshot shows the option to set up your subscription.":::
 
-    Users are redirected to the app website (also known as a [landing page](include-saas-offer.md#build-a-landing-page-for-subscription-management)) where they can manage subscriptions.
+    Users are redirected to the app website (also known as a [landing page](/partner-center/marketplace-offers/azure-ad-transactable-saas-landing-page)) where they can manage subscriptions.
 
     :::image type="content" source="~/assets/images/saas-offer/subscriptionlicenses.png" alt-text="Screenshot shows User and Licenses screen to assign license.":::
 
@@ -99,7 +99,7 @@ Following is an example of the consent screen:
 
 ## License and subscriptions management experience
 
-Users can manage the app subscriptions purchased in Teams through the **Manage your apps** section. It allows to access the list of subscriptions and their details, and perform the following actions to manage the subscription:
+Users can manage the app subscriptions purchased in Teams from the **Manage your apps** section. It allows to access the list of subscriptions and their details, and perform the following actions to manage the subscription:
 
 * Change a plan
 * Buy or remove licenses
@@ -119,7 +119,7 @@ The following example shows how users can manage licenses for third-party apps f
 
     :::image type="content" source="../../../../assets/images/saas-offer/subscription-list.png" alt-text="Screenshot shows the list of subscriptions under subscriptions tab highlighted in red." lightbox="../../../../assets/images/saas-offer/subscription-list.png":::
 
-    Here's the subscription management options available for users on the **Subscriptions** page:
+    Here's the subscription management options on the **Subscriptions** page:
     
     <br>
     <details>
@@ -195,6 +195,14 @@ Users can take additional actions related to app subscription, such as editing t
 
 Admins can manage the app subscriptions and licenses in the Teams admin center. For more information, see [purchase third-party Teams apps and manage subscriptions](/microsoftteams/purchase-third-party-apps).
 
+## Check license usage in Partner Center analytics
+
+1. Sign in to [Partner Center](https://partner.microsoft.com/).
+1. In the left pane, go to **Commercial Marketplace > Analyze > Licensing**.
+1. Select **Plan and Tenant** in the reporting widget to see the month wise usage.
+
 ## See also
 
-[Monetize your app](monetize-overview.md)
+* [Monetize your app](monetize-overview.md)
+* [Monetize your app FAQs](../../../../teams-faq.md#monetize-your-app)
+* [ISV to customer private offers](/partner-center/marketplace-offers/isv-customer)

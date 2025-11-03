@@ -4,6 +4,7 @@ description: Install app proactively using Graph APIs. Check if your bot is curr
 ms.localizationpriority: medium
 author: akjo
 ms.topic: overview
+ms.owner: vishachadha
 ms.date: 12/15/2022
 ---
 
@@ -31,7 +32,7 @@ Microsoft Graph [teamsAppInstallation resource type](/graph/api/resources/teamsa
 |`TeamsAppInstallation.ReadWriteSelfForUser.All`|Allows a Teams app to read, install, upgrade, and uninstall itself for any *user*, without prior sign in or use.|
 |`TeamsAppInstallation.ReadWriteSelfForTeam.All`|Allows a Teams app to read, install, upgrade, and uninstall itself in any *team*, without prior sign in or use.|
 
-To use these permissions, you must add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest (previously called Teams app manifest) with the following values:
+To use these permissions, you must add a [webApplicationInfo](/microsoft-365/extensibility/schema/root-web-application-info) key to your app manifest (previously called Teams app manifest) with the following values:
 
 * **id**: Your Microsoft Entra app ID.
 * **resource**: The resource URL for the app.
@@ -40,7 +41,7 @@ To use these permissions, you must add a [webApplicationInfo](../../resources/sc
 >
 > * Your bot requires application and not user delegated permissions because the installation is for others.
 >
-> * A Microsoft Entra tenant administrator must [explicitly grant permissions to an application](/graph/security-authorization#grant-permissions-to-an-application). After the application is granted permissions, all members of the Microsoft Entra tenant get the granted permissions.
+> * A Microsoft Entra admin must [explicitly grant permissions to an application](/graph/security-authorization#grant-permissions-to-an-application). After the application is granted permissions, all members of the Microsoft Entra tenant get the granted permissions.
 
 ## Enable proactive app installation and messaging
 
@@ -243,7 +244,7 @@ server.get('/api/notify', async (req, res) => {
 
 | **Sample Name** | **Description** | **.NET** | **Node.js** |
 |---------------|--------------|--------|-------------|
-| Proactive installation of app and sending proactive notifications | This sample shows how you can use proactive installation of app for users and send proactive notifications by calling Microsoft Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) |
+| Proactive installation of app and sending proactive notifications | This sample application demonstrates proactive installation of a Teams app and sending notifications to users using Microsoft Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) |
 
 ## Additional code samples
 >

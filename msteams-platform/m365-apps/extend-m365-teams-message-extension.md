@@ -1,7 +1,7 @@
 ---
 title: Extend Message Extension to Outlook
 description: Learn how to update search-based message extension to run in Outlook, add Microsoft 365 channel for bot, and update Microsoft Entra app registration for SSO.
-ms.date: 01/31/2023
+ms.date: 10/17/2024
 ms.author: mosdevdocs
 author: erikadoyle
 ms.topic: tutorial
@@ -21,7 +21,7 @@ Message extensions allow users to interact with your web service using buttons a
 
 Outlook mobile users on Android and iOS can receive and take actions on cards from your apps that were sent to them by users on Outlook on the web and Outlook for Windows.
 
-Teams message extension across Microsoft 365 also supports [link unfurling](../messaging-extensions/how-to/link-unfurling.md) that display cards to launch [Stageview](../tabs/tabs-link-unfurling.md) and task modules.
+Teams message extension across Microsoft 365 also supports [link unfurling](../messaging-extensions/how-to/link-unfurling.md) that display cards to launch [Stageview](../tabs/tabs-link-unfurling.md) and dialogs.
 
 ## Prerequisites
 
@@ -32,13 +32,15 @@ To extend your Teams message extension to Outlook, ensure the following:
 > * Check for message extensions support within Outlook for Windows desktop, web, and mobile, see the support table in [extend Teams apps across Microsoft 365](~/m365-apps/overview.md).
 > * [A Microsoft 365 Developer Program sandbox tenant.](~/m365-apps/prerequisites.md#prepare-a-developer-tenant-for-testing) For action based message extension, enroll your developer tenant for Microsoft 365 [Targeted Releases](~/m365-apps/prerequisites.md#enroll-your-developer-tenant-for-microsoft-365-targeted-releases-optional).
 > * [A test environment with Microsoft 365 apps installed from the Microsoft 365 Apps **Current Channel**.](~/m365-apps/prerequisites.md#enroll-your-developer-tenant-for-microsoft-365-targeted-releases-optional)
-> * [(Optional) Microsoft Visual Studio Code with the Teams Toolkit extension.](~/m365-apps/prerequisites.md#enroll-your-developer-tenant-for-microsoft-365-targeted-releases-optional)
+> * [(Optional) Microsoft Visual Studio Code with the Microsoft 365 Agents Toolkit extension](~/m365-apps/prerequisites.md#enroll-your-developer-tenant-for-microsoft-365-targeted-releases-optional).
 
-To extend your Teams message extension to Outlook, you can either build a new message extension app with Teams Toolkit or extend an existing Teams message extension app to Outlook.
+## Build or extend a message extension
+
+To extend your Teams message extension to Outlook, you can either build a new message extension app with Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) or extend an existing Teams message extension app to Outlook.
 
 # [Build a message extension app for Outlook](#tab/ttk)
 
-You can build a Teams message extension app for Outlook through Teams Toolkit extension for Visual Studio Code. To build a message extension app for Outlook, ensure the following:
+You can build a Teams message extension app for Outlook through Agents Toolkit extension for Visual Studio Code. To build a message extension app for Outlook, ensure the following:
 
 > [!div class="checklist"]
 >
@@ -49,7 +51,10 @@ You can build either a search-based or an action-based message extension.
 
 [!INCLUDE [message-extensions-outlook](../includes/messaging-extensions/message-extensions-outlook.md)]
 
-Now, you can [upload your app in Teams](#upload-your-custom-app-in-teams) and [preview your message extension in Outlook](#preview-your-message-extension-in-outlook). To build your app package through Teams Toolkit, see [build app package.](~/toolkit/publish.md#build-app-package)
+Now, you can [upload your app in Teams](#upload-your-custom-app-in-teams) and [preview your message extension in Outlook](#preview-your-message-extension-in-outlook). To build your app package through Agents Toolkit, see [build app package.](~/toolkit/publish.md#build-app-package)
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Build%20a%20message%20extension%20app%20for%20Outlook&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-message-extension%3Ftabs%3Dttk%252Csearch-based-message-extension%23build-or-extend-a-message-extension&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-message-extension.md&documentVersionIndependentId=2f0e2f61-c2b6-13c5-c367-283c55ae1be0&author=surbhigupta&platformId=f6fd84a6-25e7-c46b-e713-4a1598c448a9&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 # [Extend an existing Teams message extension app to Outlook](#tab/existing-app)
 
@@ -65,7 +70,7 @@ To extend your existing Teams message extension app to Outlook, ensure the follo
 
 ### Update your app manifest
 
-Update the [app manifest](../resources/schema/manifest-schema.md) (previously called Teams app manifest) schema version `1.13` or later to enable your Teams message extension to run in Outlook.
+Update the [app manifest](/microsoft-365/extensibility/schema) (previously called Teams app manifest) schema version `1.13` or later to enable your Teams message extension to run in Outlook.
 
 Open your app manifest and update the `$schema` and `manifestVersion` with the following values:
 
@@ -75,6 +80,10 @@ Open your app manifest and update the `$schema` and `manifestVersion` with the f
 "manifestVersion" : "1.16"
 }
 ```
+
+You can use Agents Toolkit to [validate your app manifest](../toolkit/TeamsFx-preview-and-customize-app-manifest.md#validate-your-app) and identify any errors.
+
+[!INCLUDE [requirements-targeting](../includes/requirements-targeting.md)]
 
 ### Add Microsoft 365 channel for your app
 
@@ -105,7 +114,7 @@ For users to interact with your message extension from Outlook, you need to enab
 ### Update Microsoft Entra app registration for SSO
 
 > [!NOTE]
-> You can skip this step if you're building an app for Outlook using Teams Toolkit, as the scenario doesn't involve Microsoft Entra single sign-on authentication.
+> You can skip this step if you're building an app for Outlook using Agents Toolkit, as the scenario doesn't involve Microsoft Entra single sign-on authentication.
 
 Microsoft Entra single sign-on (SSO) for message extensions works the same way in Outlook [as it does in Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots). However, you need to add several client application identifiers to the Microsoft Entra app registration of your bot in your tenant's **App registrations** portal.
 
@@ -126,9 +135,12 @@ Microsoft Entra single sign-on (SSO) for message extensions works the same way i
    |Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
    |Outlook mobile | 27922004-5251-4030-b22d-91ecd9a37ea4 |
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D+Extend+an+existing+Teams+message+extension+app+to+Outlook&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fm365-apps%2Fextend-m365-teams-message-extension%3Ftabs%3Dexisting-app%252Csearch-based-message-extension&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fm365-apps%2Fextend-m365-teams-message-extension.md&documentVersionIndependentId=2f0e2f61-c2b6-13c5-c367-283c55ae1be0&author=surbhigupta&platformId=f6fd84a6-25e7-c46b-e713-4a1598c448a9&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
+
 ---
 
-### Upload your custom app in Teams
+## Upload your custom app in Teams
 
 Upload your updated message extension ([app package](/microsoftteams/platform/concepts/build-and-test/apps-package)) into Teams. After you complete, message extension appears in your installed **Apps** from the compose message area.
 
@@ -146,7 +158,7 @@ Upload your updated message extension ([app package](/microsoftteams/platform/co
 
 After it's uploaded through Teams, your message extension is available in Outlook for Windows desktop and web.
 
-### Preview your message extension in Outlook
+## Preview your message extension in Outlook
 
 Here's how to test your message extension running in Outlook on the web. To preview your app running in Outlook on the web, follow these steps:
 
@@ -186,9 +198,9 @@ Use the [Microsoft Teams developer community channels](/microsoftteams/platform/
 | **Sample Name** | **Description** | **Node.js** |
 |---------------|--------------|--------|
 | NPM Search Connector | Teams Toolkit sample app to build a message extension app. Works in Teams and Outlook. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2.1.0/NPM-search-connector-M365) |
-| Teams Link Unfurling | Simple Teams app to demonstrate link unfurling. Works in Teams, Outlook. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-link-unfurling/nodejs)
-| Tab in Stageview | Microsoft Teams tab sample app for demonstrating a tab in Stageview. Works in Teams, Outlook, Microsoft 365 app. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs) |
-|Teams action-based message extension for Microsoft 365| Teams Toolkit sample app to build a message extension app. Works in Teams and Outlook. | [View](https://github.com/OfficeDev/TeamsFx/tree/dev/templates/js/message-extension-action) |
+| Teams Link Unfurling | This sample app showcases a Node.js bot that implements link unfurling within Microsoft Teams messaging extensions. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-link-unfurling/nodejs)
+| Tab in Stageview | This sample app demonstrates the use of Teams tab in stage view using Node.js, featuring collaborative elements and interactive capabilities. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs) |
+|Teams action-based message extension for Microsoft 365| Teams Toolkit sample app to build a message extension app. Works in Teams and Outlook. | [View](https://github.com/OfficeDev/microsoft-365-agents-toolkit/tree/dev/templates/vsc/js) |
 
 ## Next step
 

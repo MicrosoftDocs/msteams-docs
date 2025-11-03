@@ -4,6 +4,7 @@ description: Learn how to invoke dialogs (task modules) from Teams tabs and subm
 ms.localizationpriority: medium
 ms.topic: how-to
 ms.date: 02/22/2023
+ms.owner: ryanbliss
 ---
 
 # Use dialogs in tabs
@@ -105,7 +106,7 @@ let urlDialogInfo = {
     fallbackUrl: null,
 };
 
-urlDialogInfo.url = "https://contoso.com/teamsapp/customform";
+urlDialogInfo.url = "https://contoso.com/atk/customform";
 urlDialogInfo.title = "Custom Form";
 urlDialogInfo.height = 510;
 urlDialogInfo.width = 430;
@@ -130,7 +131,7 @@ let taskInfo = {
     completionBotId: null,
 };
 
-taskInfo.url = "https://contoso.com/teamsapp/customform";
+taskInfo.url = "https://contoso.com/atk/customform";
 taskInfo.title = "Custom Form";
 taskInfo.height = 510;
 taskInfo.width = 430;
@@ -162,7 +163,7 @@ Teams then invokes your `submitHandler` where `err` is *null* and `result` is th
 When you invoke the dialog with a `submitHandler` and the user selects an `Action.Submit` button, the values in the card are returned as its `data` object. If the user presses the **Esc** key or selects **X** to exit the dialog, your `submitHandler` is called with the `err` string. If your app contains a bot in addition to a tab, you can include the `appId` of the bot as the value of `completionBotId` in the `TaskInfo` ([BotAdaptiveCardDialogInfo](/javascript/api/@microsoft/teams-js/botadaptivecarddialoginfo)) object.
 
 The Adaptive Card body as filled in by the user is sent to the bot using a `task/submit invoke` message when the user selects an `Action.Submit` button. The schema for the object you receive is similar to [the schema you receive for task/fetch and task/submit messages](../../task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages).
-The only difference is that the schema of the JSON object is an Adaptive Card object as opposed to an object containing an Adaptive Card object as [when Adaptive cards are used with bots](../../task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages).
+The only difference is that the schema of the JSON object is an Adaptive Card object as opposed to an object containing an Adaptive Card object as [when Adaptive Cards are used with bots](../../task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages).
 
 The following code is the example of payload:
 
@@ -202,7 +203,7 @@ adaptiveCardDialogInfo.card = {
     "body": [
         {
             "type": "TextBlock",
-            "text": "This is a sample adaptive card.",
+            "text": "This is a sample Adaptive Card.",
             "wrap": true
         }
     ]
@@ -263,7 +264,7 @@ The following table provides the possible values of `err` that your `submitHandl
 
 |Sample name | Description | .NET | Node.js | Manifest
 |----------------|-----------------|--------------|----------------|----------------|
-|Dialog sample bots-V4 | This sample shows how to create dialogs using bot framework v4 and teams tabs. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp/demo-manifest/bot-task-module.zip)
+|Dialog sample bots-V4 | This sample app demonstrate how to use Dialogs (referred as task modules in TeamsJS v1.x) using Bot Framework v4. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp/demo-manifest/bot-task-module.zip)
 
 ## Next step
 

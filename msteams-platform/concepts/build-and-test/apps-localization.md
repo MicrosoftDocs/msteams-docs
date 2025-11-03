@@ -3,7 +3,7 @@ title: App Localization - Factors to Consider
 description: Learn considerations for localizing your Microsoft Teams app, localize strings in your app manifest, and handle localized text submissions from your users.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 05/15/2018
+ms.date: 10/17/2024
 ---
 # Localize your app
 
@@ -44,6 +44,8 @@ Add the `localizationInfo` property with the default language that your applicat
 > [!NOTE]
 > Manifest version must be same for both manifest.json and localization.json files.
 
+Starting with app manifest v1.19, agents are also localizable. For more information, see [Localizing your agent](/microsoft-365-copilot/extensibility/agents-are-apps#localizing-your-agent) in Microsoft 365 Copilot extensibility documentation.
+
 ### Example manifest.json change
 
 The following `manifest.json` helps to add the `localizationInfo` property with the default language that your application supports along with `additionalLanguages`:
@@ -71,8 +73,7 @@ Following is an example for localization .json:
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.Localization.schema.json",
-  "manifestVersion": "1.5",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.22/MicrosoftTeams.Localization.schema.json",
   "name.short": "Localización",
   "name.full": "Aplicación de localización",
   ...
@@ -152,7 +153,7 @@ If you provide localized versions of your application, the users respond with th
 
 | Sample name | Description | .NET | Node.js |
 |-------------|-------------|------|------|
-| App Localization | Teams app localization using bot and tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |
+| App Localization | This sample demonstrates how to implement localization for Microsoft Teams apps using Bots and Tabs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |
 
 ## Next step
 

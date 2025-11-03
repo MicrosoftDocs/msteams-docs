@@ -5,6 +5,7 @@ keywords: teams bots files send receive
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 04/02/2023
+ms.owner: angovil
 ---
 # Send and receive files using bots
 
@@ -34,7 +35,7 @@ The following sections describe how to do this to send file content as a result 
 
 ### Configure your bot to support files
 
-In order to send and receive files in your bot, you have to set the `supportsFiles` property in the manifest to `true`. This property is described in the [bots](~/resources/schema/manifest-schema.md#bots) section of the Manifest reference.
+In order to send and receive files in your bot, you have to set the `supportsFiles` property in the manifest to `true`. This property is described in the [bots]/microsoft-365/extensibility/schema/root-bots#supportsfiles) section of the Manifest reference.
 
 The definition will look like this: `"supportsFiles": true`. If your bot doesn't enable `supportsFiles`, the following features won't work.
 

@@ -7,10 +7,13 @@ author: erikadoyle
 ms.subservice: m365apps
 ms.topic: conceptual
 keywords: SDK TeamsJS Teams client JavaScript library
-ms.date: 05/05/2023
+ms.date: 12/19/2024
+ms.owner: ryanbliss
 ---
 
 # Teams JavaScript client library
+
+[!INCLUDE [Deprecation note](../../includes/deprecation-note-teamsfx-sdk.md)]
 
 The Microsoft Teams JavaScript client library (TeamsJS) can help you create hosted experiences in Teams, Microsoft 365 app, and Outlook, where your app content is hosted in an [iFrame](https://developer.mozilla.org/docs/Web/HTML/Element/iframe). The library is helpful for developing apps with the following Teams capabilities:
 
@@ -29,6 +32,40 @@ The remainder of this article walks you through the structure and latest updates
 
 TeamsJS v.2.0 introduces the ability for certain types of Teams apps to run across the Microsoft 365 ecosystem. The other Microsoft 365 application hosts (including Microsoft 365 app and Outlook) for Teams apps support a subset of the application types and capabilities you can build for the Teams platform. This support expands over time. For a summary of host support for Teams apps, see [TeamsJS capability support across Microsoft 365](../../m365-apps/teamsjs-support-m365.md).
 
+### Improve load time performance with JavaScript tree shaking
+
+From version 2.31.0 and later, the TeamsJS library is fully tree-shakable. [Tree shaking](https://developer.mozilla.org/docs/Glossary/Tree_shaking) is a JavaScript optimization that eliminates unused code. By using tree shaking when an app is bundled for deployment you can reduce package size, which results in faster download and improved load time.
+
+#### How to use tree shaking with TeamsJS
+
+To take advantage of tree shaking when you bundle your app package, use a bundler that supports tree shaking, such as [webpack](https://webpack.js.org/guides/tree-shaking/#root) or [Rollup](https://rollupjs.org/faqs/#what-is-tree-shaking). When tree shaking is enabled, all unused TeamsJS code is automatically removed in the final bundle. For example, consider the following code:
+
+```typescript
+export function scanBarCode(barCodeConfig: BarCodeConfig): Promise<string> {
+   //implementation omitted
+}
+
+export function hasPermission(): Promise<boolean>{
+   //implementation omitted
+}
+
+export function requestPermission(): Promise<boolean>{
+   //implementation omitted
+}
+
+export function isSupported(): boolean {
+   //implementation omitted
+}
+```
+
+Assume the **barCode** module in TeamsJS contains the four functions `hasPermission()`, `isSupported()`, `requestPermission()`, and `scanBarCode(BarCodeConfig)`. If an app only uses the `hasPermission()` function, then after tree shaking the other three functions would be excluded from the app bundle. This ensures that apps stay as lightweight as possible and only include the code they need.
+
+> [!IMPORTANT]
+> When using tree shaking, keep in mind the following considerations:
+>
+> 1. If your app uses CDN to consume the TeamsJS library, then the library version used isn't tree-shakable.
+> 1. The TeamsJS library type was changed from UMD (Universal Module Definition) to ESM (ECMAScript Modules) in order to support tree shaking. However, the UMD version is still offered. If a bundler supports ESM the tree-shakable ESM package of TeamsJS is used, otherwise the UMD package is used.
+
 ## What's new in TeamsJS version 2.x.x
 
 There are two significant changes between TeamsJS 1.x.x versions and v.2.0.0 and later:
@@ -38,7 +75,7 @@ There are two significant changes between TeamsJS 1.x.x versions and v.2.0.0 and
 * [**APIs are now organized into *capabilities*.**](#apis-organized-into-capabilities) You can think of capabilities as logical groupings of APIs that provide similar functionality, such as `authentication`, `dialog`, `chat`, and `calendar`. Each namespace represents a separate capability.
 
 > [!TIP]
-> You can use the [Teams Toolkit extension](https://aka.ms/teams-toolkit) for Microsoft Visual Studio Code to simplify the [TeamsJS v.2.0 update process](#updating-to-teamsjs-version-20) for an existing Teams app.
+> You can use the [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) (previously known as Teams Toolkit) extension for Microsoft Visual Studio Code to simplify the [TeamsJS v.2.0 update process](#updating-to-teamsjs-version-20) for an existing Teams app.
 
 ### Backwards compatibility
 
@@ -143,7 +180,7 @@ async function example() {
 ---
 
 > [!TIP]
-> When you use [Teams Toolkit to update to TeamsJS v.2.0](#updating-to-teamsjs-version-20), the required updates are flagged for you with `TODO` comments in your client code.
+> When you use [Agents Toolkit to update to TeamsJS v.2.0](#updating-to-teamsjs-version-20), the required updates are flagged for you with `TODO` comments in your client code.
 
 Cross-cloud communication through SDK is restricted for security reasons; hence, Teams operated by 21Vianet domain isn't included in `validOrigins`. To enable an app to function in Teams operated by 21Vianet, specify the Teams operated by 21Vianet domain during the SDK initialization in your app deployment, using the [validMessageOrigins](/javascript/api/@microsoft/teams-js/app) parameter.
 
@@ -173,6 +210,9 @@ The `{hostName}` [URL placeholder value](./access-teams-context.md#get-context-b
 * **Don't** use *hostName* to gate API calls. Instead, check for capability support (`isSupported`).
 * **Do** use *hostName* to differentiate the theme of your application based on the host it's running in. For example, you can use Microsoft Teams purple as the main accent color when running in Teams, and Outlook blue when running in Outlook.
 * **Do** use *hostName* to differentiate messages shown to the user based on which host it's running in. For example, show *Manage your tasks in Microsoft 365* when running in Microsoft 365 on the web, and *Manage your tasks in Teams* when running in Teams.
+
+> [!TIP]
+> The best practice is to specify the runtime requirements and dependencies of your app in a host-agnostic way, rather than special casing your app code with host-specific logic. For more information, see [how to specify Microsoft 365 host runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md).
 
 #### Namespaces
 
@@ -300,7 +340,7 @@ The `Context` interface is moved to the `app` namespace and updated to group sim
 
 A new property `app.Context.app.host.name` is added to enable tabs to differentiate user experience depending on the host application.
 
-You can also visualize the changes by reviewing the `transformLegacyContextToAppContext` function in the [TeamsJS version 2.x.x source](https://github.com/OfficeDev/microsoft-teams-library-js/blob/main/packages/teams-js/src/public/app.ts)  (*app.ts* file).
+You can also visualize the changes by reviewing the `transformLegacyContextToAppContext` function in the [TeamsJS version 2.x.x source](https://github.com/OfficeDev/microsoft-teams-library-js/blob/main/packages/teams-js/src/public/app/app.ts)  (*app.ts* file).
 
 | Original name in `Context` interface | New location in `app.Context` |
 | - | - |
@@ -351,17 +391,17 @@ You can also visualize the changes by reviewing the `transformLegacyContextToApp
 
 ## Updating to TeamsJS version 2.0
 
-The easiest way to update your Teams app with TeamsJS version 2.0.x is to use the [Teams Toolkit extension](https://aka.ms/teams-toolkit) for Visual Studio Code. This section walks you through the steps to do that. If you prefer to manually update your code, see the [Callbacks converted to promises](#callbacks-converted-to-promises) and [APIs organized into capabilities](#apis-organized-into-capabilities) sections for more information on required API changes.
+The easiest way to update your Teams app with TeamsJS version 2.0.x is to use the [Agents Toolkit extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) for Visual Studio Code. This section walks you through the steps to do that. If you prefer to manually update your code, see the [Callbacks converted to promises](#callbacks-converted-to-promises) and [APIs organized into capabilities](#apis-organized-into-capabilities) sections for more information on required API changes.
 
-### 1. Install the latest Teams Toolkit Visual Studio Code extension
+### 1. Install the latest Agents Toolkit Visual Studio Code extension
 
-In the *Visual Studio Code Extensions Marketplace*, search for **Teams Toolkit** and install the latest version.
+In the *Visual Studio Code Extensions Marketplace*, search for **Microsoft 365 Agents Toolkit** and install the latest version.
 
 ### 2. Update TeamsJS references
 
 To run in Outlook and Microsoft 365 app, your app needs to depend on the [npm package](https://www.npmjs.com/package/@microsoft/teams-js/v/2.0.0) `@microsoft/teams-js@2.0.0` (or later). To perform these steps manually, and for more information on the API changes, see the following sections on [Callbacks converted to promises](#callbacks-converted-to-promises) and [APIs organized into capabilities](#apis-organized-into-capabilities).
 
-1. Ensure you have the latest [Teams Toolkit](https://aka.ms/teams-toolkit) (version 2.10.0 or later)
+1. Ensure you have the latest [Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) (version 2.10.0 or later)
 1. Open the *Command palette*: `Ctrl+Shift+P`
 1. Run the command `Teams: Upgrade Teams JS SDK references to support Outlook and Microsoft 365 apps`
 
@@ -380,9 +420,9 @@ After completion, the utility updates your `package.json` file with the TeamsJS 
 
 ### 3. Update the app manifest (optional)
 
-If you're updating a Teams app to run in Microsoft 365 app and Outlook, you also need to update the app manifest to version 1.13 or later. You can do this easily with Teams Toolkit, or manually.
+If you're updating a Teams app to run in Microsoft 365 app and Outlook, you also need to update the app manifest to version 1.13 or later. You can do this easily with Agents Toolkit, or manually.
 
-# [Teams Toolkit](#tab/manifest-teams-toolkit)
+# [Agents Toolkit](#tab/manifest-toolkit)
 
 1. Open the *Command palette*: `Ctrl+Shift+P`
 1. Run **Teams: Upgrade Teams manifest to support Outlook and Microsoft 365 apps** command and select your app manifest file. Changes are made in place.
@@ -400,9 +440,9 @@ Open your app manifest and update the `$schema` and `manifestVersion` with the f
 
 ---
 
-If you used Teams Toolkit to create your personal app, you can also use it to validate the changes to your app manifest file and identify any errors. Open the command palette `Ctrl+Shift+P` and find **Teams: Validate manifest file** or select the option from the Deployment menu of the Teams Toolkit (look for the Teams icon on the left side of Visual Studio Code).
+If you used Agents Toolkit to create your personal app, you can also use it to validate the changes to your app manifest file and identify any errors. Open the command palette `Ctrl+Shift+P` and find **Teams: Validate manifest file** or select the option from the Deployment menu of the Agents Toolkit (look for the Teams icon on the left side of Visual Studio Code).
 
-:::image type="content" source="../../m365-apps/images/toolkit-validate-manifest-file.png" alt-text="Teams Toolkit 'Validate manifest file' option under 'Deployment' menu":::
+:::image type="content" source="../../m365-apps/images/toolkit-validate-manifest-file.png" alt-text="Agents Toolkit 'Validate manifest file' option under 'Deployment' menu":::
 
 ## Next steps
 

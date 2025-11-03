@@ -12,7 +12,7 @@ Take note of your bot app ID and app password, you need to provide the app ID in
 
 ### Update your app manifest
 
-As with bots and tabs, you update the [manifest](~/resources/schema/manifest-schema.md#composeextensions) of your app to include the message extension properties. These properties govern how your message extension appears and behaves in the Microsoft Teams client. Message extensions are supported beginning with manifest v1.0.
+As with bots and tabs, you update the [manifest](/microsoft-365/extensibility/schema/root-compose-extensions) of your app to include the message extension properties. These properties govern how your message extension appears and behaves in the Microsoft Teams client. Message extensions are supported beginning with manifest v1.0.
 
 #### Declare your message extension
 
@@ -48,7 +48,7 @@ In the app manifest, your command item is an object with the following structure
 | `description` | Help text indicating what this command does. This value appears in the UI. | Yes | 1.0 |
 | `type` | Set the type of command. Possible values include `query` and `action`. If not present, the default value is set to `query`. | No | 1.4 |
 | `initialRun` | Optional parameter, used with `query` commands. If set to **true**, indicates this command should be executed as soon as the user chooses this command in the UI. | No | 1.0 |
-| `fetchTask` | Optional parameter, used with `action` commands. Set to **true** to fetch the adaptive card or web url to display within the [task module](~/task-modules-and-cards/what-are-task-modules.md). This is used when the input to the `action` command is dynamic as opposed to a static set of parameters. Note that if set to **true**, the static parameter list for the command is ignored. | No | 1.4 |
+| `fetchTask` | Optional parameter, used with `action` commands. Set to **true** to fetch an Adaptive Card or web URL to display within the [task module](~/task-modules-and-cards/what-are-task-modules.md). This is used when the input to the `action` command is dynamic as opposed to a static set of parameters. Note that if set to **true**, the static parameter list for the command is ignored. | No | 1.4 |
 | `parameters` | Static list of parameters for the command. | Yes | 1.0 |
 | `parameter.name` | The name of the parameter. This is sent to your service in the user request. | Yes | 1.0 |
 | `parameter.description` | Describes this parameter’s purposes and example of the value that should be provided. This value appears in the UI. | Yes | 1.0 |

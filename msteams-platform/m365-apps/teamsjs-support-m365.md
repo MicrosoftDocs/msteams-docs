@@ -30,6 +30,8 @@ Microsoft 365 hosts are signified by the product icons in the following table:
 | :::image type="content" source="./images/teams-icon.png" alt-text="Microsoft Teams icon"::: | :::image type="content" source="./images/microsoft-365-icon.png" alt-text="Microsoft 365 app icon"::: | :::image type="content" source="./images/outlook-icon.png" alt-text="Microsoft Outlook icon"::: |
 | :::image type="content" source="./images/new-teams-icon.png" alt-text="New Microsoft Teams icon"::: |  | :::image type="content" source="./images/new-outlook-icon.png" alt-text="New Microsoft Outlook icon" ::: |
 
+[!INCLUDE [m365-app-rename](~/includes/m365-app-rename.md)]
+
 For more information about the new Teams and Outlook, see [Outlook blog](https://techcommunity.microsoft.com/t5/outlook-blog/new-outlook-for-windows-now-available/ba-p/3932068) and [Teams adoption](https://adoption.microsoft.com/new-microsoft-teams/).
 
 Using the following tables, select any TeamsJS Capability for further details including reference docs, samples, usage notes, and limitations.

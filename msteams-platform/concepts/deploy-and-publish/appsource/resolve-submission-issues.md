@@ -68,7 +68,7 @@ Doing the following can lead to a successful submission:
 
 1. Develop your app based on the [Teams design guidelines](~/concepts/design/design-teams-app-overview.md).
 1. Make sure your app adheres to the [Teams Store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) and [Microsoft commercial marketplace certification policies](/legal/marketplace/certification-policies).
-1. Test your app package with the [Microsoft Teams app validation tool](https://dev.teams.microsoft.com/appvalidation.html).
+1. Test your app package with the [Microsoft Teams app validation tool](https://dev.teams.microsoft.com/tools/store-validation).
 1. [Prepare your Teams Store submission](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md).
 
 <br>
@@ -107,4 +107,4 @@ Once your app is approved, publishing usually takes 1-2 business days depending 
 
 ## See also
 
-[Distribute your Microsoft Teams app](../apps-publish-overview.md)
+[Publish your Microsoft Teams app](../apps-publish-overview.md)

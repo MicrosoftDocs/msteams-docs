@@ -1,10 +1,11 @@
 ---
 title: SSO for Adaptive Cards Universal Action
 description: Learn about Single sign-on (SSO) authentication in Teams and how to enable it in Adaptive Cards Universal Action in bots.
-author: v-sdhakshina
+ms.author: surbhigupta
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 01/24/2023
+ms.owner: ryanbliss
 ---
 
 # Enable SSO for Adaptive Cards Universal Actions in your bot
@@ -15,7 +16,7 @@ For more information about Universal Actions for Adaptive Cards, see [Universal 
 
 Adaptive Cards Universal Actions uses the bot as the common backend for handling actions and introduces a new action type. Bot uses Bot Framework to handle communication with the app users and to send and receive access token to the bot for SSO authentication. Similarly, Adaptive Cards Universal Actions also uses Bot Framework to enable SSO authentication.
 
-Ensure that you enable the SSO for your bot before you enable SSO for your Adaptive Cards Universal Actions, .
+Ensure that you enable the SSO for your bot before you enable SSO for your Adaptive Cards Universal Actions.
 
 > [!div class="nextstepaction"]
 > [Enable SSO for your bot](../../../bots/how-to/authentication/bot-sso-overview.md)

@@ -38,7 +38,7 @@ The `UrlDialogInfo` object for HTML-based dialogs extends the `DialogInfo` objec
 
 | Attribute | Type | Description |
 | --- | --- | --- |
-| `url` | string | This attribute is the URL of the page loaded as an `<iframe>` inside the dialog. The URLs domain must be in the app's [validDomains array](~/resources/schema/manifest-schema.md#validdomains) in your app's manifest. |
+| `url` | string | This attribute is the URL of the page loaded as an `<iframe>` inside the dialog. The URLs domain must be in the app's [validDomains array](/microsoft-365/extensibility/schema/root#validdomains) in your app's manifest. |
 
 ### AdaptiveCardDialogInfo object
 
@@ -163,11 +163,11 @@ If you're invoking from a tab, use an Adaptive Card:
     "body": [
         {
             "type": "TextBlock",
-            "text": "Here is a ninja cat:"
+            "text": "Here is a guitar:"
         },
         {
             "type": "Image",
-            "url": "http://adaptivecards.io/content/cats/1.png",
+            "url": "https://adaptivecards.microsoft.com/images/guitar1.jpeg",
             "size": "Medium"
         }
     ],
@@ -185,11 +185,11 @@ If you're invoking from a bot, use an Adaptive Card bot card attachment:
         "body": [
             {
                 "type": "TextBlock",
-                "text": "Here is a ninja cat:"
+                "text": "Here is a guitar:"
             },
             {
                 "type": "Image",
-                "url": "http://adaptivecards.io/content/cats/1.png",
+                "url": "https://adaptivecards.microsoft.com/images/guitar1.jpeg",
                 "size": "Medium"
             }
         ],
@@ -222,7 +222,7 @@ Microsoft Teams ensures that keyboard navigation works properly from the dialog 
 
 |Sample name | Description | .NET | Node.js | Manifest|
 |----------------|-----------------|--------------|----------------|----------------|
-|Dialog sample bots-V4 | This sample shows how to create dialogs using bot framework v4 and Teams tab. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp/demo-manifest/bot-task-module.zip)
+|Dialog sample bots-V4 | This sample app demonstrate how to use Dialogs (referred as task modules in TeamsJS v1.x) using Bot Framework v4. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/csharp/demo-manifest/bot-task-module.zip)
 
 ## Next step
 

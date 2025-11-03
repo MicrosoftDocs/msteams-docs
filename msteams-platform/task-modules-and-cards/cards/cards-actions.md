@@ -1,12 +1,14 @@
 ---
 title: Add card actions in a bot
-description: Learn about card actions in Microsoft Teams, action types such as openAI, messageBack, imBack, invoke, and signin, and how to use card actions in bots.
+description: Learn about card actions such as openUrl, messageBack, imBack, invoke, and signin, and Adaptive Card actions such as Action.Submit.
 ms.localizationpriority: medium
 ms.topic: conceptual
-ms.date: 05/04/2023
+ms.date: 11/07/2024
 ---
 
 # Card actions
+
+[!INCLUDE [adaptive-card-redirect](../../includes/adaptive-card-redirect.md)]
 
 Cards used by bots and message extensions in Microsoft Teams support the following activity [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) types:
 
@@ -417,13 +419,17 @@ CardFactory.actions([
 
 ## Adaptive Cards actions
 
-Adaptive Cards support four action types:
+> [!IMPORTANT]
+> This documentation is considered legacy. For comprehensive information and resources related to Adaptive Cards, visit the [Adaptive Cards documentation hub](https://adaptivecards.microsoft.com/).
 
-* [Action.OpenUrl](https://adaptivecards.io/explorer/Action.OpenUrl.html): Open the specified url.
-* [Action.Submit](https://adaptivecards.io/explorer/Action.Submit.html): Sends the result of the submit action to the bot.
-* [Action.ShowCard](https://adaptivecards.io/explorer/Action.ShowCard.html): Invokes a dialog and renders the sub-card into that dialog. You only need to handle this if `ShowCardActionMode` is set to popup.
-* [Action.ToggleVisibility](https://adaptivecards.io/explorer/Action.ToggleVisibility.html): Shows or hides one or more elements in the card.
+Adaptive Cards support the following six action types:
+
+* [Action.OpenUrl](https://adaptivecards.microsoft.com/?topic=Action.OpenUrl): Opens the specified url.
+* [Action.Submit](https://adaptivecards.microsoft.com/?topic=Action.Submit): Sends the result of the submit action to the bot.
+* [Action.ShowCard](https://adaptivecards.microsoft.com/?topic=Action.ShowCard): Invokes a dialog and renders the sub-card into that dialog. You only need to handle this if `ShowCardActionMode` is set to popup.
+* [Action.ToggleVisibility](https://adaptivecards.microsoft.com/?topic=Action.ToggleVisibility): Shows or hides one or more elements in the card.
 * [Action.Execute](/adaptive-cards/authoring-cards/universal-action-model#actionexecute): Gathers the input fields, merges with optional data field, and sends an event to the client.
+* [Action.ResetInputs](dynamic-search.md#actionresetinputs): Resets the values of the inputs in an Adaptive Card.
 
 ### Action.Submit
 
@@ -434,7 +440,7 @@ In the Adaptive Card schema, the `data` property for Action.Submit is either a `
 * `string`: A string submit action automatically sends a message from the user to the bot and is visible in the conversation history.
 * `object`: An object submit action automatically sends an invisible message from the user to the bot that contains hidden data. An object submit action populates the activity’s value property while the text property is empty.
 
-Action.Submit is equivalent to the Bot Framework actions. You can also modify the Adaptive Card `Action.Submit` payload to support existing Bot Framework actions using an `msteams` property in the `data` object of `Action.Submit`. When you define the `msteams` property under `data`, the Teams client defines the behavior of `Action.Submit`. If the `msteams` property isn't defined in the schema, `Action.Submit` works like a regular Bot Framework invoke action, where; the submit action triggers an invoke call to the bot and the bot receives the payload with all the input values defined in the input fields.
+Action.Submit is equivalent to the Bot Framework actions. You can also modify the Adaptive Card `Action.Submit` payload to support existing Bot Framework actions using a `msteams` property in the `data` object of `Action.Submit`. When you define the `msteams` property under `data`, the Teams client defines the behavior of `Action.Submit`. If the `msteams` property isn't defined in the schema, `Action.Submit` works like a regular Bot Framework invoke action, where; the submit action triggers an invoke call to the bot and the bot receives the payload with all the input values defined in the input fields.
 
 > [!NOTE]
 >
@@ -455,7 +461,7 @@ The payload consists of a text input field `"id": "text-1"` and hidden data payl
   "type": "AdaptiveCard",
   "version": "1.5",
   "fallbackText": "fallback text for sample 01",
-  "speak": "This is adaptive card sample 1",
+  "speak": "This is Adaptive Card sample 1",
   "body": [
     {
       "type": "Container",
@@ -535,7 +541,71 @@ The following is an example of the incoming activity to a bot when user types so
 }
  ```
 
-The next section provides details on how to use existing Bot Framework actions with Adaptive Cards.
+### Conditional enablement of action buttons
+
+You can use the `conditionallyEnabled` property to disable action buttons until the user changes the value of at least one of the required inputs. This property can only be used with `Action.Submit` and `Action.Execute` actions. For a conditionally enabled button, if the `isEnabled` property is set to `false`, actions are disabled regardless of the input.
+
+Here's how the `conditionallyEnabled` property is defined:
+
+| Property| Type | Required | Description |
+|-----------|------|----------|-------------|
+| `conditionallyEnabled` | Boolean | ✔️ | Controls if the action is enabled only if at least one required input has been filled by the user. |
+
+The following card payload shows a conditionally enabled button:
+
+```json
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5",
+    "body": [
+        {
+            "type": "Input.Text",
+            "placeholder": "Placeholder text",
+            "label": "Required text input",
+            "isRequired": true,
+            "id": "text"
+        },
+        {
+            "type": "Input.Date",
+            "label": "Required date input",
+            "isRequired": true,
+            "id": "date"
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.Submit",
+            "title": "Submit",
+            "conditionallyEnabled": true
+        },
+        {
+            "type": "Action.Submit",
+            "title": "Permanently disabled button",
+            "isEnabled": false
+        }
+    ]
+}
+```
+
+:::row:::
+:::column span="2":::
+
+**Disabled**
+
+:::image type="content" source="../../assets/images/adaptive-cards/disabled.png" alt-text="Screenshot shows an Adaptive Card with disabled submit button on the Teams." lightbox="../../assets/images/adaptive-cards/disabled.png":::
+
+:::column-end:::
+
+:::column span="2":::
+
+**Enabled**
+
+:::image type="content" source="../../assets/images/adaptive-cards/enabled.png" alt-text="Screenshot shows an Adaptive Card with enabled submit button on the Teams." lightbox="../../assets/images/adaptive-cards/enabled.png":::
+
+:::column-end:::
+
+:::row-end:::
 
 #### Form completion feedback
 
@@ -727,9 +797,10 @@ The following code shows an example of Adaptive Cards with `invoke` action with 
 
 |S.No.|Card| Description|.NET|Node.js|Python|Java|Manifest|
 |:--|:--|:--------------------------------------------------------|-----|------------|-----|----------------------------|------|
-|1|Adaptive Card actions|This sample showcases different actions supported in Adaptive Cards.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-adaptive-card-actions/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-adaptive-card-actions/nodejs)|NA|NA|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-adaptive-card-actions/csharp/demo-manifest/bot-adaptivecard-actions.zip)|
-|2|Using cards|Introduces all card types including thumbnail, audio, media etc. Builds on Welcoming user + multi-prompt bot by presenting a card with buttons in welcome message that route to appropriate dialog.|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/06.using-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/06.using-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/06.using-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/06.using-cards)|NA|
-|3|Adaptive cards|Demonstrates how the multi-turn dialog can use a card to get user input for name and age.|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/07.using-adaptive-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/07.using-adaptive-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/07.using-adaptive-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/07.using-adaptive-cards)|NA|
+|1|Adaptive Card actions|This sample shows how to send Adaptive Cards with multiple action types using a Teams bot.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-adaptive-card-actions/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-adaptive-card-actions/nodejs)|NA|NA|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-adaptive-card-actions/csharp/demo-manifest/bot-adaptivecard-actions.zip)|
+|2|Using cards|Introduces all card types including thumbnail, audio, media etc. Builds on Welcoming user + multi-prompt bot by presenting a card with buttons in welcome message that route to appropriate dialog.|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/06.using-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/06.using-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/06.using-cards)|NA|NA|
+|3|Adaptive Cards|Demonstrates how the multi-turn dialog can use a card to get user input for name and age.|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/07.using-adaptive-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/07.using-adaptive-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/07.using-adaptive-cards)|NA|NA|
+|4|Card Formatting|This sample demonstrates a conditionally enabled button.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/nodejs)|NA|NA|NA|
 
 ## Next step
 

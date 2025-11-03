@@ -1,14 +1,14 @@
 ---
 title: Build Application-hosted Media Bots
-description: Learn how to create application-hosted media bots for Microsoft Teams, scalability and performance. See samples for different remote and local media scenarios. 
+description: Learn how to create application-hosted media bots for Microsoft Teams, scalability and performance. See samples for remote and local media scenarios. Supported media formats for bots
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 11/16/2018
+ms.date: 11/27/2018
 ---
 
 # Requirements and considerations for application-hosted media bots
 
-An application-hosted media bot requires the [`Microsoft.Graph.Communications.Calls.Media` .NET library](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) to access the audio and video media streams. The bot must be deployed on a Windows Server on-premises machine or a Windows Server guest Operating System (OS) in Azure.
+An application-hosted media bot requires the [`Microsoft.Graph.Communications.Calls.Media` .NET library](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) to access the audio and video media streams. Production application-hosted media bots must be deployed on a Windows Server guest Operating System (OS) in Azure. For non-production purposes such as development or testing, you might deploy bots on an on-premise Windows Server.
 
 > [!NOTE]
 >
@@ -18,7 +18,6 @@ An application-hosted media bot requires the [`Microsoft.Graph.Communications.Ca
 ## C# or .NET and Windows Server for development
 
 An application-hosted media bot has the following requirements:
-
 
 * The bot must be developed using C# and the standard .NET Framework, and deployed on Microsoft Azure. You can't use C++ or Node.js APIs to access real-time media. However, .NET Core is supported for an application-hosted media bot, and the SDK provides support for .NET 6.0.
 
@@ -50,7 +49,6 @@ Application-hosted media bots must be directly accessible on the internet. These
 * The service hosting an application-hosted media bot must also configure each VM instance with a public-facing port, which maps to the specific instance.
   * For an Azure Cloud Service, this requires an instance input endpoint. For more information, see [enable communication for role instances in Azure](/azure/cloud-services/cloud-services-enable-communication-role-instances).
   * For a VM Scale Set, a NAT rule on the load balancer must be configured. For more information, see [virtual networks and virtual machines in Azure](/azure/virtual-machines/windows/network-overview).
-
 * Bot Framework Emulator doesn't support application-hosted media bots.
 
 The next section provides details on scalability and performance considerations of application-hosted media bots.
@@ -63,6 +61,23 @@ The application-hosted media bots require the following scalability and performa
 * The Real-time Media Platform doesn't take advantage of any Graphics Processing Units (GPU) available on the VM to off-load H.264 video encoding/decoding. Instead, video encode and decode are done in software on the CPU. If a GPU is available, the bot may take advantage of it for its own graphics rendering, for example, if the bot is using a 3D graphics engine.
 * The VM instance hosting the real-time media bot must have at least two CPU cores. For Azure, a Dv2-series virtual machine is recommended. For other Azure VM types, a system with four virtual CPUs (vCPU) is the minimum size required. Detailed information about Azure VM types is available in the [Azure documentation](/azure/virtual-machines/windows/sizes-general).
 
+## Supported media formats for bots
+
+Bots on Microsoft Teams support only the following media formats for audio and video content:
+
+| Format | More information |
+| --- | --- |
+| Vorbis | <http://www.vorbis.com/> |
+| PCM_U8, PCM_S16LE, PCM_S32LE, PCM_F32LE, PCM_S16BE, PCM_S24BE, PCM_MULAW | <https://wiki.multimedia.cx/?title=PCM> |
+| Ogg | <http://www.vorbis.com/> |
+| Matroska | <https://matroska.org/> |
+| WAV | <https://en.wikipedia.org/wiki/WAV> |
+| AAC | <https://en.wikipedia.org/wiki/Advanced_Audio_Coding> |
+| H264 | <https://en.wikipedia.org/wiki/H.264/MPEG-4_AVC> |
+| MP3 | <https://en.wikipedia.org/wiki/MP3> |
+| Opus | <http://opus-codec.org/> |
+| MP4 | <https://en.wikipedia.org/wiki/MPEG-4> |
+
 ## Code sample
 
 Application-hosted media bots samples are as follows:
@@ -72,12 +87,9 @@ Application-hosted media bots samples are as follows:
 | Local media sample | Sample that illustrates different local media scenarios. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples) |
 | Remote media sample | Sample that illustrates different remote media scenarios. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/RemoteMediaSamples) |
 
-## Next step
-
-> [!div class="nextstepaction"]
-> [Supported media formats for bots](../../resources/media-formats.md)
-
 ## See also
 
 * [Graph Calling SDK Documentation](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/)
 * [Sample applications](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples)
+* [Integrate media capabilities](../../concepts/device-capabilities/media-capabilities.md)
+* [Teams bot API changes to fetch team or chat members](../../resources/team-chat-member-api-changes.md)

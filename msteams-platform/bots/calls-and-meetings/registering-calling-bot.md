@@ -9,9 +9,9 @@ ms.date: 11/23/2022
 
 A bot that participates in audio or video calls and online meetings is a regular Microsoft Teams bot with the following extra features used to register the bot:
 
-* There's a new version of app manifest (previously called Teams app manifest) with two additional settings, `supportsCalling` and `supportsVideo`. These settings are included in the [app manifest](../../resources/schema/manifest-schema.md#bots).
+* There's a new version of app manifest (previously called Teams app manifest) with two additional settings, `supportsCalling` and `supportsVideo`. These settings are included in the [app manifest](/microsoft-365/extensibility/schema/root-bots).
 * [Microsoft Graph permissions](./registering-calling-bot.md#add-graph-permissions) must be configured for your bot's Microsoft App ID.
-* The Graph calls and online meetings APIs permissions require tenant admin consent.
+* The Graph calls and online meetings APIs permissions require admin consent.
 
 ## New app manifest settings
 
@@ -30,11 +30,11 @@ The next section enables you to create a new bot or add calling capabilities to 
 
 ## Create new bot or add calling capabilities
 
-For information on creating bots, see [create a bot for Teams](../how-to/create-a-bot-for-teams.md).
-
 To create a new bot for Teams:
 
 1. Use this link to create a new bot, `https://dev.botframework.com/bots/new`. Alternately, if you select the **Create a bot** button in the Bot Framework portal, you create your bot in Microsoft Azure, for which you must have an Azure account.
+    > [!NOTE]
+    > Bot display names can't include special characters.
 1. Add the Teams channel.
 1. Select the **Calling** tab on the Teams channel page. Select **Enable calling**, and then update **Webhook (for calling)** with your HTTPS URL where you receive incoming notifications, for example `https://contoso.com/teamsapp/api/calling`. For more information, see [configuring channels](/bot-framework/portal-configure-channels).
 
@@ -61,7 +61,7 @@ The following table provides RSC application permissions for calls:
 
 ### Application permissions for calls
 
-The application permissions for calls are used by apps that run without a signed-in user present. A tenant administrator must grant consent to application permissions.
+The application permissions for calls are used by apps that run without a signed-in user present. An admin must grant consent to application permissions.
 
 The following table provides a list of application permissions for calls:
 
@@ -89,14 +89,14 @@ The following table provides a list of application permissions for online meetin
 
 You must configure the application permissions for your bot in advance by using the [Microsoft Azure portal](https://portal.azure.com) if you prefer to use the [Azure Active Directory (Azure AD) v1 endpoint](/azure/active-directory/develop/azure-ad-endpoint-comparison).
 
-### Get tenant administrator consent
+### Get admin consent
 
-For apps using the Azure AD v1 endpoint, a tenant administrator can consent to the application permissions using the [Microsoft Azure portal](https://portal.azure.com) when your app is installed in their organization. Alternately, you can provide a sign-up experience in your app through which administrators can consent to the permissions you configured. Once administrator consent is recorded by Microsoft Entra ID, your app can request tokens without having to request consent again.
+For apps using the Azure AD v1 endpoint, an admin can consent to the application permissions using the [Microsoft Azure portal](https://portal.azure.com) when your app is installed in their organization. Alternately, you can provide a sign-up experience in your app through which administrators can consent to the permissions you configured. After Microsoft Entra ID records administrator consent, your app can request tokens without having to request consent again.
 
 You can rely on an administrator to grant the permissions your app needs at the [Microsoft Azure portal](https://portal.azure.com). A better option is to provide a sign-up experience for administrators by using the Azure AD v2 `/adminconsent` endpoint. For more information, see [instructions on constructing an Admin consent URL](/graph/auth-v2-service#3-get-administrator-consent).
 
 > [!NOTE]
-> To construct the tenant Admin consent URL, a configured redirect URI or a reply URL in the [app registration portal](https://apps.dev.microsoft.com/) is required. To add reply URLs for your bot, access your bot registration, choose **Advanced Options** > **Edit Application Manifest**. Add your redirect URL to the `replyUrls` collection.
+> To construct the admin consent URL, a configured redirect URI or a reply URL in the [app registration portal](https://apps.dev.microsoft.com/) is required. To add reply URLs for your bot, access your bot registration, choose **Advanced Options** > **Edit Application Manifest**. Add your redirect URL to the `replyUrls` collection.
 
 > [!IMPORTANT]
 > Anytime you make a change to your application's permissions, you must also repeat the Admin consent process. Changes made in the app registration portal are not reflected until the consent has been reapplied by the tenant's administrator.
@@ -105,12 +105,8 @@ You can rely on an administrator to grant the permissions your app needs at the 
 
 | **Sample name** | **Description** | **.NET** |
 |---------------|----------|--------|
-| Calling and meeting bot | The sample app demonstrates how Bot can create call, join meeting and transfer call. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
-| Realtime meeting events |The sample app demonstrates how Bot can receive real-time meeting events.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|
-
-## Step-by-step guide
-
-Follow the [step-by-step guide](../../sbs-calling-and-meeting.yml) to set up Teams calling and meeting bot.
+| Calling and meeting bot | This sample demonstrates how a bot can create, join, and transfer calls or meetings within Microsoft Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
+| Realtime meeting events |This sample demonstrates how a bot can receive real-time updates for meeting events and participant activities within Microsoft Teams.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp)|
 
 ## Next step
 

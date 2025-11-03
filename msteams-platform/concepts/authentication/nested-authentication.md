@@ -1,9 +1,9 @@
 ---
 title: SSO authentication for nested apps
 description: Learn how to implement, configure nested app authentication in Microsoft Teams app. Learn about the use case scenarios for nested app authentication.
-ms.date:
+ms.date: 06/10/2025
 ms.topic: conceptual
-author: v-ypalikila
+author: surbhigupta
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ---
@@ -12,8 +12,7 @@ ms.localizationpriority: medium
 
 > [!NOTE]
 >
-> * Nested app authentication (NAA) is available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
-> * NAA is supported only in single-page application (SPA), such as tabs.
+> Nested app authentication (NAA) is supported only in single-page application (SPA), such as tabs.
 
 NAA is a new authentication protocol for SPAs that are embedded in host environments, such as Teams, Outlook, and Microsoft 365. It simplifies the authentication process to facilitate single sign-on (SSO) across apps nested within supported host apps. The NAA model supports a primary identity for the host app that includes multiple app identities for nested apps. Microsoft utilizes this model in Teams tabs, personal apps, and Office Add-ins.
 
@@ -24,18 +23,18 @@ The NAA model provides several advantages over the On-Behalf-Of (OBO) flow:
 * You can use incremental and dynamic consent for scopes (permissions).
 * You don't need to preauthorize your hosts, such as Teams or Microsoft 365, to call your endpoints.
 
-The following table outlines the difference between Teams Microsoft Entra SSO and NAA:
+    The following table outlines the difference between Teams Microsoft Entra SSO and NAA:
 
-| Steps required for development | Traditional Teams Entra SSO | NAA |
-| --- |:---:|:---:|
-| Expose redirect URI | Required | Required |
-| Register API in Microsoft Entra ID | Required |  |
-| Define a custom scope in Microsoft Entra ID | Required |  |
-| Authorize Teams client apps | Required |  |
-| Revise app manifest (previously called Teams app manifest) | Required | Recommended* |
-| Acquire access token through TeamsJS SDK | Required |  |
-| Solicit user consent for more permissions | Required |  |
-| Conduct an OBO exchange on the server | Required |  |
+    | Steps required for development | Traditional Teams Entra SSO | NAA |
+    | --- |:---:|:---:|
+    | Expose redirect URI | Required | Required |
+    | Register API in Microsoft Entra ID | Required |  |
+    | Define a custom scope in Microsoft Entra ID | Required |  |
+    | Authorize Teams client apps | Required |  |
+    | Revise app manifest (previously called Teams app manifest) | Required | Recommended* |
+    | Acquire access token through TeamsJS SDK | Required |  |
+    | Solicit user consent for more permissions | Required |  |
+    | Conduct an OBO exchange on the server | Required |  |
 
 * The IT admin might block the app or consent to only certain permissions for the app in Microsoft Entra ID. To avoid it, you must include the app ID and the default resource in the app manifest for the admin to approve the permissions in Teams admin center.
 
@@ -48,11 +47,6 @@ The following table outlines the difference between Teams Microsoft Entra SSO an
 | **Errors** | Tom faces a sign-in error with Contoso due to an issue retrieving account information. Tom encounters a retry button that prompts for reauthentication. However, they discover that the system administrator has restricted access to Contoso. |
 
 ## Configure NAA
-
-> [!NOTE]
->
-> * As NAA is in developer preview and isn't supported by all host environments, ensure that you check the support status using the [isNAAChannelRecommended()](/javascript/api/@microsoft/teams-js/nestedappauth?) function and provide a fallback experience for unsupported environments.
-> * If the API returns the value as `true`, then call Microsoft Authentication Library (MSAL) for the NAA flow. If it returns `false`, continue to use your existing token retrieval method.
 
 To configure nested authentication, follow these steps:
 
@@ -101,9 +95,7 @@ For more information on upgrading your Teams app to run in Outlook and Microsoft
 
 Initialize MSAL and get an instance of the public client app to get access tokens, when needed.
 
-# [JavaScript](#tab/js1)
-
-```javascript
+```JavaScript
 import {
   AccountInfo,
   IPublicClientApplication,
@@ -132,8 +124,6 @@ export function initializePublicClient() {
 }
 ```
 
----
-
 ### Acquire your first token
 
 The tokens acquired by MSAL.js through nested app authentication are issued for your Microsoft Entra app registration ID. MSAL.js handles token acquisition for user authentication. It tries to get an access token silently. If that's unsuccessful, it prompts the user for consent. The token is then used to call the Microsoft Graph API or other Microsoft Entra ID protected resources. Unlike the OBO flow, you don't need to preauthorize your hosts to call the endpoints.
@@ -151,58 +141,52 @@ To acquire a token, follow these steps:
 
 1. If no account is available, MSAL.js returns an `InteractionRequiredAuthError`. Call `publicClientApplication.acquireTokenPopup(accessTokenRequest)` to display an interactive dialog for the user. `acquireTokenSilent` can fail if the token expired or if the user didn't consent to all the requested scopes.
 
-The following code snippet shows an example to access a token:
+    The following code snippet shows an example to access a token:
 
-# [JavaScript](#tab/js2)
-
-```javascript
-
-  // MSAL.js exposes several account APIs, logic to determine which account to use is the responsibility of the developer
-  const account = publicClientApplication.getActiveAccount();
-
-  const accessTokenRequest = {
-  scopes: ["user.read"],
-  account: account,
-  };
-
-  publicClientApplication
-    .acquireTokenSilent(accessTokenRequest)
-    .then(function (accessTokenResponse) {
-      // Acquire token silent success
-      let accessToken = accessTokenResponse.accessToken;
-      // Call your API with token
-      callApi(accessToken);
-    })
-    .catch(function (error) {
-      //Acquire token silent failure, and send an interactive request
-      if (error instanceof InteractionRequiredAuthError) {
-        publicClientApplication
-          .acquireTokenPopup(accessTokenRequest)
-          .then(function (accessTokenResponse) {
-            // Acquire token interactive success
-            let accessToken = accessTokenResponse.accessToken;
-            // Call your API with token
-            callApi(accessToken);
-          })
-          .catch(function (error) {
-            // Acquire token interactive failure
-            console.log(error);
-          });
-      }
-      console.log(error);
-    });
-
-```
-
----
+    ```JavaScript
+    
+      // MSAL.js exposes several account APIs, logic to determine which account to use is the responsibility of the developer
+      const account = publicClientApplication.getActiveAccount();
+    
+      const accessTokenRequest = {
+      scopes: ["user.read"],
+      account: account,
+      };
+    
+      publicClientApplication
+        .acquireTokenSilent(accessTokenRequest)
+        .then(function (accessTokenResponse) {
+          // Acquire token silent success
+          let accessToken = accessTokenResponse.accessToken;
+          // Call your API with token
+          callApi(accessToken);
+        })
+        .catch(function (error) {
+          //Acquire token silent failure, and send an interactive request
+          if (error instanceof InteractionRequiredAuthError) {
+            publicClientApplication
+              .acquireTokenPopup(accessTokenRequest)
+              .then(function (accessTokenResponse) {
+                // Acquire token interactive success
+                let accessToken = accessTokenResponse.accessToken;
+                // Call your API with token
+                callApi(accessToken);
+              })
+              .catch(function (error) {
+                // Acquire token interactive failure
+                console.log(error);
+              });
+          }
+          console.log(error);
+        });
+    
+    ```
 
 ### Call an API
 
 After you receive the token, use it to call the API. This ensures that the API is called with a valid token to make authenticated requests to the server.
 
 The following example shows how to make an authenticated request to Microsoft Graph API to access Microsoft 365 data:
-
-# [JavaScript](#tab/js3)
 
 ```javascript
 
@@ -223,7 +207,49 @@ fetch(graphEndpoint, options)
 
 ```
 
----
+## Token prefetching for nested app authentication (NAA)
+
+To improve performance and reduce authentication latency, nested app authentication (NAA) supports token prefetching. This feature enables the host to proactively acquire authentication tokens before the app launches, allowing faster access to protected resources.
+
+#### How to Enable Token Prefetching
+
+To enable token prefetching, update your [Teams app manifest](/microsoft-365/extensibility/schema/root-web-application-info-nested-app-auth-info) to version 1.22 or later and include the `nestedAppAuthInfo` section inside `webApplicationInfo`.
+
+ ```json
+{
+  "webApplicationInfo": {
+    "id": "33333ddd-0000-0000-0000-88888757bbbb",
+    "resource": "api://app.com/botid-33333ddd-0000-0000-0000-88888757bbbb",
+    "nestedAppAuthInfo": [
+      {
+        "redirectUri": "brk-multihub://app.com",
+        "scopes": ["openid", "profile", "offline_access"],
+        "claims": "{\"access_token\":{\"xms_cc\":{\"values\":[\"CP1\"]}}}"
+      }
+    ]
+  }
+}
+ ```
+
+> [!important]
+>
+> * The value of webApplicationInfo.id must match the client ID of the app's Microsoft Entra ID registration. This is the same client ID the app uses when making actual NAA token requests. The host uses this ID to initiate the token prefetch process.
+> * The values in webApplicationInfo.id and all fields inside nestedAppAuthInfo must exactly match the parameters used in the app’s runtime NAA token request. Any mismatch, such as differences in scopes, redirect URIs, or claims, will prevent the host from serving the token from cache.
+> * Prefetched tokens are stored in memory for a short duration and are intended for use only during the app’s initial load. If the app attempts to fetch a token later, such as in response to a user action, the prefetched token may no longer be available. In such cases, the app must initiate a new token request using standard authentication flows.
+
+#### How it works
+
+When token prefetching is enabled, the host environment attempts to acquire and cache the required tokens before the app is rendered. These tokens are stored in memory and made available to the app immediately upon launch.
+
+This behavior is similar to the prefetch capability in the legacy Teams SSO model, where the `getAuthToken` API was automatically triggered during tab load. With Nested App Authentication (NAA), this functionality is introduced through manifest configuration, improving performance without requiring a backend token exchange.
+
+#### Benefits of Token Prefetching in NAA
+
+* Improve performance by reducing authentication delays during app startup
+* Enable single sign-on (SSO) across nested apps without repeated sign-ins
+
+> [!NOTE]
+> Token prefetching is currently supported only in the Microsoft Teams web and desktop clients.
 
 ### Best practices
 
@@ -246,7 +272,7 @@ fetch(graphEndpoint, options)
 
 | Sample name           | Description | .NET    | Node.js   |
 |:---------------------|:--------------|:---------|:--------|:--------|
-| Nested app authentication   | This sample shows how to build an NAA protocol for SPA embedded in host environments, such as Teams, Outlook, and Microsoft 365.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-nested-auth/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-nested-auth/nodejs)|
+| Nested app authentication   | This sample showcases Microsoft Entra single sign-on (SSO) within a Microsoft Teams tab, utilizing the On-Behalf-Of (OBO) flow to call Microsoft Graph API on behalf of the user. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-nested-auth/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-nested-auth/nodejs)|
 
 ## See also
 

@@ -1,14 +1,22 @@
 ---
 title: Search Users with People Picker Control
 description: In this module, learn how to use the People Picker control in Adaptive Cards, its scenarios and implement people picker.
-localization_priority: Medium
+ms.localizationpriority: medium
 ms.topic: reference
-author: Rajeshwari-v
+author: surbhigupta
 ms.author: surbhigupta
-ms.date: 01/19/2023
+ms.date: 02/26/2025
 ---
 
 # People Picker in Adaptive Cards
+
+> [!IMPORTANT]
+>
+> This documentation is considered legacy. For comprehensive information and resources related to People Picker in Adaptive Cards, visit the [Adaptive Cards documentation hub](https://adaptivecards.microsoft.com/?topic=people-picker).
+>
+> :::image type="content" source="../../assets/images/adaptive-cards/new-adaptive-card-hub.png" alt-text="Screenshot shows the home page of the Microsoft Adaptive Cards website.":::
+>
+> The Adaptive Cards documentation hub offers complete and latest reference documentation, an updated Adaptive Card Designer, built-in JSON examples, design best practices, and a detailed release history of Adaptive Card features. For more information, see [introducing the Adaptive Cards documentation hub and new Adaptive Cards updates](https://devblogs.microsoft.com/microsoft365dev/introducing-the-adaptive-cards-documentation-hub-and-new-adaptive-cards-updates/#:~:text=Explore%20the%20latest%20adaptive%20card%20features%20and%20samples,productivity%E2%80%94all%20seamlessly%20integrated%20into%20your%20users%E2%80%99%20daily%20workflows.).
 
 People Picker helps users to search and select users in Adaptive Card. You can add People Picker as input control to Adaptive Card, which works across chats, channels, dialogs (referred as task modules in TeamsJS v1.x), and tabs. People Picker supports the following features:
 
@@ -73,7 +81,7 @@ The following image shows the reassignment scenario:
 
 ## Implement People Picker
 
-People Picker is implemented as an extension of the [Input.ChoiceSet](https://adaptivecards.io/explorer/Input.ChoiceSet.html) control. The input control includes the following selections:
+People Picker is implemented as an extension of the [Input.ChoiceSet](https://adaptivecards.microsoft.com/?topic=Input.ChoiceSet) control. The input control includes the following selections:
 
 * Dropdown, such as an expanded selection.
 * Radio button, such as a single selection.
@@ -301,7 +309,7 @@ You can implement People Picker for efficient task management in different scena
 
 | Sample Name           | Description | .NET    | Node.js   | Manifest
 |:---------------------|:--------------|:---------|:--------|:--------|
-|People picker control in Adaptive Cards| This sample shows how to use the people picker control in Adaptive Cards.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-people-picker-adaptive-card/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-people-picker-adaptive-card/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-people-picker-adaptive-card/csharp/demo-manifest/People-picker-adaptive-card.zip)
+|People picker control in Adaptive Cards| This bot showcases how to use the people picker control within Adaptive Cards on Teams.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-people-picker-adaptive-card/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-people-picker-adaptive-card/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-people-picker-adaptive-card/csharp/demo-manifest/People-picker-adaptive-card.zip)
 
 ## See also
 

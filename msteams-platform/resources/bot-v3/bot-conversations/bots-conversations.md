@@ -5,6 +5,7 @@ description: In this module, learn to have a conversation with a Microsoft Teams
 ms.topic: overview
 ms.localizationpriority: medium
 ms.date: 04/02/2023
+ms.owner: angovil
 ---
 # Have a conversation with a Microsoft Teams bot
 
@@ -21,7 +22,7 @@ A bot behaves slightly differently depending on what kind of conversation it's i
 * [Bots in channel and group chat conversations](~/resources/bot-v3/bot-conversations/bots-conv-channel.md) require the user to @mention the bot to invoke it in a channel.
 * [Bots in single user conversations](~/resources/bot-v3/bot-conversations/bots-conv-personal.md) don't require an @mention -  the user can just type.
 
-In order for the bot to work in a particular scope it should be listed as supporting that scope in the manifest. Scopes are defined and discussed further in the [Manifest Reference](~/resources/schema/manifest-schema.md).
+In order for the bot to work in a particular scope it should be listed as supporting that scope in the manifest. Scopes are defined and discussed further in the [Manifest Reference](/microsoft-365/extensibility/schema).
 
 ## Proactive messages
 

@@ -1,11 +1,11 @@
 ---
 title: Apps for Teams Meeting Stage
-author: v-sdhakshina
 description: Learn how to build apps for Teams meeting stage, share to stage APIs, and generate a deep link to share content to stage in meetings.
 ms.topic: conceptual
-ms.author: v-sdhakshina
+ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.date: 04/07/2022
+ms.owner: kanchankaur
+ms.date: 10/29/2024
 ---
 
 # Build apps for Teams meeting stage
@@ -18,7 +18,7 @@ In addition to screen sharing, Microsoft Teams offers various tools designed to 
 
 The following table lists the scenarios to use Screen share and Share to stage features:
 
-| Feature |  Share to stage | Screen share content to stage  |
+| Feature | Share to stage | Screen share content to stage |
 | --- | --- | --- |
 | **Interaction Level** | Allows attendees to interact with the content. | View-only mode of the app or content.  |
 | **Scenarios** | Collaborative experiences, such as whiteboarding. |  Coconsumption scenarios, such as reviewing dashboards in a scrum meeting.  |
@@ -33,7 +33,7 @@ To invoke share to stage, users can select the **Share to Stage** icon on the up
 
 ### App manifest
 
-To share an app to the meeting stage, you must configure the context and Resource-specific consent (RSC) permissions in the [app manifest](../resources/schema/manifest-schema.md):
+To share an app to the meeting stage, you must configure the context and Resource-specific consent (RSC) permissions in the [app manifest](/microsoft-365/extensibility/schema/root-authorization-permissions-resource-specific):
 
 1. Update the `context` property in the app manifest as follows:
 
@@ -85,13 +85,18 @@ The following image shows the share to stage option in the Teams mobile client:
 
 ---
 
+If you use an advanced share to stage API, you can customize the text on the button. Here are the guidelines for customization:
+  
+* Use **Share** and not **Present** or **Screenshare**, if your experience offers simple sharing of app content to the stage. This sets the right expectation for users as **Share** consistently means **Share to stage** in Teams meetings.
+* Use more specific text to provide meaningful context of the scenario. For example, you can use text such as **Watch together** or **Play together** if your app offers videos or casual games.
+
 Use the following APIs to share specific part of the app:
 
-* **Share app content to stage**: Share specific parts of the app to meeting stage from the meeting side panel in a meeting. [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting)
-
-* **Get app content stage sharing state**: Fetch information about app's sharing state on the meeting stage. [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingstate)
-
-* **Get app content stage sharing capabilities**: Fetch the app's capabilities for sharing to the meeting stage. [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingcapabilities)
+| Method| Description | Source |
+|---|---|----|
+| **Share app content to stage** | Share specific parts of the app to meeting stage from the meeting side panel in a meeting. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting) |
+| **Get app content stage sharing state** | Fetch information about app's sharing state on the meeting stage. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingstate) |
+| **Get app content stage sharing capabilities** | Fetch the app's capabilities for sharing to the meeting stage. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingcapabilities) |
 
 # [Share app content to stage](#tab/app-content)
 
@@ -199,6 +204,7 @@ The following table includes the query parameter:
 >
 > * Only In-tenant or guest and external users with presenter or organizer role can initiate a sharing session.
 > * Share to stage using screen share isn't supported on Mac, classic Teams, mobile, web and VDI.
+> * In Teams, you can't share your screen and share to the stage at the same time.
 
 Users can screen share content to the meeting Stage in Teams using the screen sharing architecture. When a user shares an app to the meeting stage, the app is rendered only on the presenter’s device and then the screen is shared or mirrored to all other attendees in a new window. After the app content is shared in a meeting, all the participants can view the content, but only the presenter has the ability to interact with the content, which provides a multi-player viewing experience.
 
@@ -215,7 +221,7 @@ Screen share content to the meeting Stage simplifies app content sharing during 
 
 Users can screen share content to the meeting stage in the following scenarios:
 
-* **Share entire app**: When you share a tab to the Meeting Stage in a Teams meeting, the `contentUrl` associated with the tab is poped-out a new window for the app and screen shares that window with all other meeting participants. The `page.frameContext` property in the `getContext` object is set to `meetingStage` to signal the app that it's being presented on a large surface, allowing the app to update its content appropriately.
+* **Share entire app**: When you share a tab to the meeting stage in a Teams meeting, the `contentUrl` associated with the tab is popped out into a new window for the app, and that window is screen shared with all other meeting participants. The `page.frameContext` property in the `getContext` object is set to `meetingStage` to signal the app that it's being presented on a large surface, allowing the app to update its content appropriately.
 
   > [!NOTE]
   > Apps that specify `MeetingStage` in the `page.frameContext` property of the `getContext` object in the manifest and declare `MeetingStage.Write.Chat` permissions support collaborative Share to Stage infrastructure. The share button initiates the existing collaborative protocol instead of the screen sharing protocol.
@@ -304,6 +310,107 @@ The following code is an example of sharing app content to meeting stage view an
 * A sharing button is available on all meeting side panels for users with organizer or presenter roles.
 * Users can initiate sharing through a deep link or the Share in Meeting button.
 
+## Stop share action
+
+When a user is presenting the screen, you can programmatically control the stop-sharing behavior by converting the **Share** button into a **Stop Sharing** button once the sharing has started. This capability allows users to start and stop sharing from the same button in the app's side panel.
+
+The `stopSharingAppContentToStage` API allows you to manage the stop-sharing behavior for specific parts of your app on the meeting stage. The API is available through the TeamsJS library.
+
+The following code is an example of `stopSharingAppContentToStage` API:
+
+```javascript
+microsoftTeams.meeting.stopSharingAppContentToStage((err, result) => {
+    if (result) {
+        // handle success
+    }
+    if (err) {
+        // handle error
+    }
+});
+```
+
+**Query parameter**
+
+The following table includes the query parameter:
+
+|Value|Type|Required|Description|
+|---|---|----|---|
+|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can contain either an error of type *SdkError* or null if sharing stops successfully. The result contains `true` if sharing stops successfully or `null` if the operation fails. |
+
+### Advantages
+
+* Simplified present flow reduces user confusion.
+* Programmatic control on the stop presenting action provides more flexibility in managing app content sharing during meetings.
+* Enhanced user experience provides a more intuitive and seamless sharing process.
+
+## Hide native share button
+
+Use this field to specify if the app has its own share to stage experience. To avoid user confusion due to multiple buttons serving the same purpose, you can opt to hide the native share button. This ensures that users experience either the app's custom share to stage feature or the default native experience, but not both.
+
+The `supportsCustomShareToStage` property name in the app manifest indicates whether the app has enabled support for sharing app content to the stage.
+
+The following code is an example of `supportsCustomShareToStage` property in the app manifest:
+
+```javascript
+{
+  "supportsCustomShareToStage": true // hides the native share button
+} 
+```
+
+| Value | Type | Required | Description |
+|---|---|----|---|
+| `supportsCustomShareToStage` | Boolean | No | Represents if the app has added support for sharing to the stage. The supported values are `false` and `true`. Default is `false`. You can set the value to `true` to hide the native share button. |
+
+### Advantages
+
+* You can ensure a consistent sharing experience for users, reducing confusion by disabling the default share to stage button when the app's custom implementation is used.
+* You have explicit control over the sharing experience, allowing to enable or disable specific sharing protocols as needed.
+
+## Get app content in meeting side panel
+
+The `sharing.history.getContent` API enables you to fetch the content shared in a meeting and display in the meeting side panel.
+
+When a meeting begins, the app, in which the content is shared, automatically opens the meeting side panel for the user who shared the content. You can call the `sharing.history.getContent` API to fetch a list of shared content and display it in the side panel, making it readily accessible. For an upcoming recurring meeting, where the app is already added, developers can call the API to get the latest content to be displayed in the app's side panel.
+
+The following code is an example to fetch shared content in the meeting side panel:
+
+```javascript
+// Define an async function
+async function fetchContentDetails() {
+    // Fetches a list of content details that was shared in the meeting
+    const contentDetails = await microsoftTeams.sharing.history.getContent();
+
+    // Above content details can be used to hydrate the meeting side panel 
+    // to share to meeting stage
+
+}
+```
+
+**Response payload parameters**
+
+The following table includes the response payload parameters:
+
+| Value | Type | Required | Description |
+|---|---|----|---|
+| `appId` | String | Yes | The ID of the app to be shared. |
+| `title` | String | Yes | The title of the shared content. |
+| `contentReference` | String | Yes | The content reference link of the shared content. |
+| `threadId` | String | Yes | The conversation ID where the content was shared. |
+| `author` | String | Yes | The ID of the user who shared the content. |
+| `contentType` | String | Yes | The type of content shared. For sharing to Teams stage scenarios, this value must be `ShareToStage`. |
+
+**Response codes**
+
+The following table provides the response codes:
+
+| Response code | Description |
+|---|---|
+| **200** | Meeting content details successfully retrieved. |
+| **500** | Internal error. |
+| **501** | API isn't supported in the current context.|
+
+For more information, see [sharing.history.getContent](/javascript/api/@microsoft/teams-js/sharing.history).
+
 ## Build an in-meeting document signing app
 
 You can build an in-meeting app for enabling meeting participants to sign documents in real time. It facilitates reviewing and signing documents in a single session. The participants can sign the documents using their current tenant identity.
@@ -328,10 +435,10 @@ The following participant roles might be involved during the meeting:
 
 |Sample name | Description | .NET| Node.js | Manifest |
 |----------------|-----------------|--------------|----------------|----------------|
-|Meeting stage sample | This sample app shows a tab in meeting stage for collaboration. This sample also uses Live Share SDK for collaborative Stageview. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp/demo-manifest) |
-| In-meeting notification | Demonstrates how to implement in-meeting notifications using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp/demo-manifest) |
-| In-meeting document signing | This sample app shows how to implement a document signing Teams app. Includes sharing specific app content to stage, Teams single sign-on (SSO), and user specific Stageview. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA | NA |
-|Screen share content to stage| This sample app shows how screen share content to the meeting Stage in Teams using the screen sharing architecture.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp)|NA|NA|
+|Meeting stage sample | This sample app shows a tab in meeting stage in collaborative Stageview. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp/demo-manifest) |
+| In-meeting notification |This sample app demonstrates how to implement targeted notifications in meetings using Adaptive Cards and bot interactions. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp/demo-manifest) |
+| In-meeting document signing | This sample app enables users to review and sign documents in real time during meetings. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA | NA |
+|Screen share content to stage| This sample app demonstrates how to enable and configure apps for Teams meetings, allowing users to interact with a shared meeting stage. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp)|NA|NA|
 
 ## Step-by-step guide
 
@@ -341,7 +448,7 @@ Follow the [step-by-step guide](../sbs-inmeeting-document-signing.yml) to build 
 
 * [Apps for Teams meetings](teams-apps-in-meetings.md)
 * [Enable authentication using third-party OAuth provider](../tabs/how-to/authentication/auth-flow-tab.md)
-* [Resource-specific consent for delegated permissions](../resources/schema/manifest-schema.md#authorizationpermissions)
+* [Resource-specific consent for delegated permissions](/microsoft-365/extensibility/schema/root-authorization-permissions-resource-specific)
 * [Create deep links](../concepts/build-and-test/deep-links.md)
 * [Meeting app APIs](meeting-apps-apis.md)
 * [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md)

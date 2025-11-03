@@ -22,13 +22,13 @@ Ensure that the following tools are installed on the device where you’ll creat
 | &nbsp; | Tools | Purpose | For environment type |
 | --- | --- | --- | --- |
 | **Required** | &nbsp; | &nbsp; | &nbsp; |
-| &nbsp; | Teams Toolkit| A Microsoft Visual Studio extension that creates a project scaffolding for your app. Use the latest version. | C# and Blazor |
+| &nbsp; | Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) | A Microsoft Visual Studio extension that creates a project scaffolding for your app. Use the latest version. | C# and Blazor |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Collaborate with everyone you work with through apps for chat, meetings, and call - all in one place.| C# and Blazor |
 | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. | C# and Blazor |
 | **Optional** | &nbsp; | &nbsp; | &nbsp; |
 | &nbsp; | [Azure development workload for Visual Studio](/dotnet/azure/configure-visual-studio) and [Azure CLI](/cli/azure/install-azure-cli) | Access stored data or deploy a cloud-based back-end for your Teams app in Azure. | C# and Blazor |
 | &nbsp; | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | A browser-based tool that lets you run a query from Microsoft Graph data. |  C# and Blazor |
-| &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | A web-based portal to configure, manage, and distribute your Teams app including to your organization or the Microsoft Teams Store.| C# and Blazor |
+| &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | A web-based portal to configure, manage, and publish your Teams app including to your organization or the Microsoft Teams Store.| C# and Blazor |
 
 It's recommended that you bookmark the Microsoft Graph Explorer to learn about Microsoft Graph services. This browser-based tool allows you to run a query and access the Microsoft Graph API.
 
@@ -48,7 +48,7 @@ Ensure that you have the following accounts before you start building your Teams
 
 If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits). It's active as long as your Visual Studio subscription is active. For more information, see [Microsoft 365 developer subscription](https://developer.microsoft.com/microsoft-365/dev-program).
 
-If you don't have any Microsoft 365 tenant, you might qualify for a Microsoft 365 E5 developer subscription through the [Microsoft 365 Developer Program](https://aka.ms/m365devprogram); for details, see the [FAQ](/office/developer-program/microsoft-365-developer-program-faq#who-qualifies-for-a-microsoft-365-e5-developer-subscription-). Alternatively, you can sign up for a [1-month free trial](https://www.microsoft.com/microsoft-365/try) or [purchase a Microsoft 365 plan](https://www.microsoft.com/microsoft-365/business/compare-all-microsoft-365-business-products-g).
+If you don't have any Microsoft 365 tenant, you might qualify for a Microsoft 365 E5 developer subscription through the [Microsoft 365 Developer Program](https://aka.ms/m365devprogram); for details, see the [FAQ](/office/developer-program/microsoft-365-developer-program-faq#who-qualifies-for-a-microsoft-365-e5-developer-subscription-). Alternatively, you can sign up for a [1-month free trial](https://www.microsoft.com/microsoft-365/try) or [purchase a Microsoft 365 plan](https://www.microsoft.com/microsoft-365/business/compare-all-microsoft-365-business-products).
 
 You can sign up for the developer program using one of the following account types:
 
@@ -81,7 +81,7 @@ You can sign up for the developer program using one of the following account typ
 
     :::column-end:::
     :::column span="1":::
-             :::image type="content" source="images/work-account-icon-v4.png" alt-text="work account."::::::
+             :::image type="content" source="images/work-account-icon-v4.png" alt-text="Screenshot shows a Microsoft work account icon.":::
     :::column-end:::
 
   :::row-end:::
@@ -100,13 +100,13 @@ To create a free Microsoft 365 developer account:
 
 ### Azure account
 
-An Azure account allows you to host a Teams app or the back-end resources for your Teams app to Azure. You can do this using Teams Toolkit in Visual Studio. You must have an Azure subscription in the following scenarios:
+An Azure account allows you to host a Teams app or the back-end resources for your Teams app to Azure. You can do this using Agents Toolkit in Visual Studio. You must have an Azure subscription in the following scenarios:
 
 * If you already have an existing app on a different cloud provider other than Azure, and you want to integrate the app on Teams platform.
 * If you want to host the back-end resources for your app using another cloud provider, or on your own servers if they're available in the public domain.
 
 > [!NOTE]
-> You can use Azure account to provision Azure resource to host your Teams app. You can [create a free account](https://azure.microsoft.com/free/) in case you don't have any. If you don't use Teams Toolkit to provision and deploy, Azure account isn't required.
+> You can use Azure account to provision Azure resource to host your Teams app. You can [create a free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn) in case you don't have any. If you don't use Agents Toolkit to provision and deploy, Azure account isn't required.
 
 ## Verify custom app upload permission
 
@@ -119,22 +119,22 @@ You can verify if the custom app upload permission is enabled using Teams client
 
 1. In the Teams client, select **Apps** > **Manage your apps** > **Upload an app**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/upload-app.png" alt-text="Screenshot shows the option to select upload an app in Teams manage your apps.":::
+    :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/upload-app.png" alt-text="Screenshot shows the option to select upload an app in Teams manage your apps.":::
 
 1. Check if you can see the option **Upload a custom app** as you can see in the following image:
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/upload-custom-app.png" alt-text="Screenshot shows the option to select upload a custom apps.":::
+    :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/upload-custom-app.png" alt-text="Screenshot shows the option to select upload a custom apps.":::
 
 </details>
 
 ### Enable custom app upload using admin center
 
-If custom app upload option isn’t visible in Teams Toolkit extension in Visual Studio Code or if the option to upload a custom app isn’t available in Teams, it indicates that you don't have the required permission for custom app upload.
+If custom app upload option isn’t visible in Agents Toolkit extension in Visual Studio Code or if the option to upload a custom app isn’t available in Teams, it indicates that you don't have the required permission for custom app upload.
 
 You must enable custom app upload for your app in Teams:
 
-* If you're a tenant admin, enable the custom app upload setting for your tenant or organization in the Teams admin center.
-* If you aren't a tenant admin, contact your tenant admin to enable custom app upload.
+* If you're a Teams Administrator, enable the custom app upload setting for your tenant or organization in Teams admin center.
+* If you aren't a Teams Administrator, contact your admin to enable custom app upload.
 
 If you have admin rights, you can enable custom app upload:
 
@@ -142,7 +142,7 @@ If you have admin rights, you can enable custom app upload:
 
   1. Select the :::image type="icon" source="images/showall icon-v4.png" border="false":::icon > **Teams**.
 
-       :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/m365-admin-center.png" alt-text="Screenshot shows the option to select Teams under Admin centers.":::
+       :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/m365-admin-center.png" alt-text="Screenshot shows the option to select Teams under Admin centers.":::
 
      > [!Note]
      > It can take up to 24 hours for the Teams option to appear. You can [upload your custom app to a Teams environment](/microsoftteams/upload-custom-apps) for testing and validation.
@@ -150,7 +150,7 @@ If you have admin rights, you can enable custom app upload:
   1. Sign in to Microsoft Teams admin center with your admin credentials.
   1. Select the :::image type="icon" source="images/showall icon-v4.png" border="false"::: icon > **Teams apps** > **Setup policies**.
 
-     :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/m365-admin-setup-policies.png" alt-text="Screenshot shows the option to select setup policies.":::
+     :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/m365-admin-setup-policies.png" alt-text="Screenshot shows the option to select setup policies.":::
 
   1. Select **Global (Org-wide default)**.
 
@@ -171,7 +171,7 @@ If you have admin rights, you can enable custom app upload:
 
 ## See also
 
-* [Teams Toolkit Visual Studio Overview](teams-toolkit-fundamentals-vs.md)
+* [Agents Toolkit for Visual Studio](agents-toolkit-fundamentals-vs.md)
 * [Manage custom app policies and settings in Teams](/microsoftteams/teams-custom-app-policies-and-settings)
 * [Manage app setup policies in Teams](/microsoftteams/teams-app-setup-policies)
 * [Provision cloud resources in Visual Studio](provision-vs.md)

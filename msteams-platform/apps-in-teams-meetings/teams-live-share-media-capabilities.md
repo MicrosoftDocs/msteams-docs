@@ -4,7 +4,8 @@ author: surbhigupta
 description: In this module, learn more about Live Share media capabilities, suspensions and wait points, audio ducking, and synchronizing video and audio.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.author: v-ypalikila
+ms.author: surbhigupta
+ms.owner: ryanbliss
 ms.date: 04/07/2022
 ---
 
@@ -553,4 +554,4 @@ Additionally, add the following [RSC](/microsoftteams/platform/graph-api/rsc/res
 - [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
 - [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)
 - [Use Fluid with Teams](../tabs/how-to/using-fluid-msteam.md)
-- [App manifest schema for Teams](../resources/schema/manifest-schema.md)
+- [App manifest schema for Teams](/microsoft-365/extensibility/schema)

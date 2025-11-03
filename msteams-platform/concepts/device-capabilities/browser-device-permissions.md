@@ -1,7 +1,7 @@
 ---
 title: Enable Device Permissions in Teams Apps
 description: App that requires device permissions, such as camera or microphone access, now require users to manually grant permission at a per app level in the web browser.
-localization_priority: medium
+ms.localizationpriority: medium
 ms.topic: how-to
 ms.date: 03/21/2023
 ---
@@ -39,13 +39,9 @@ Teams app that requires device permissions in the browser must show instructions
 
 |Sample name | Description | Node.js | Manifest
 |----------------|-----------------|--------------|--------------|
-| Tab device permissions for browser | The sample shows how to show the device permissions using TeamsJS SDK and browser APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs/demo-manifest/tab-device-permissions.zip)
-
-## Step-by-step guide
-
-Follow the [step-by-step guide](../../sbs-tab-device-permissions.yml) to grant tab device permission in Teams.
+| Tab device permissions for browser | This sample app for Microsoft Teams demonstrates how to handle device permissions, including audio, video, and geolocation, within a tab interface. It provides insights into device permission usage across desktop and mobile views, allowing developers to enhance user interactions effectively. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs/demo-manifest/tab-device-permissions.zip)
 
 ## See also
 
 * [Device capabilities overview](device-capabilities-overview.md)
-* [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
+* [App manifest schema for Teams](/microsoft-365/extensibility/schema/)
