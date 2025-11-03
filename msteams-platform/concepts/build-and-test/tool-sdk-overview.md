@@ -27,10 +27,6 @@ Teams platform brings you different tools to build and develop your Teams apps. 
 | [Microsoft 365 Agents Toolkit CLI](../../toolkit/Teams-Toolkit-CLI.md) (previously known as Teams Toolkit CLI) | Agents Toolkit CLI is a text-based command line interface (CLI) that accelerates Teams application development. It aims to provide keyboard centric experience when building Teams applications. | JavaScript and .NET | Use command prompt |
 | [Developer Portal for Teams](teams-developer-portal.md) | Developer Portal for Teams is the primary tool for configuring, distributing, and managing your Teams apps. With Developer Portal, you can create a basic app manifest (previously known as Teams app manifest) and publish the app to Teams.  | Supports all languages | Developer Portal for Teams |
 
-### Workflow for Teams
-
-You can create workflows in Teams integrating AI. You can manage and use workflows in Teams chats, and include practical workflow ideas like sending weekly reminders or triggering actions via emojis. For more information, see [Add link to Teams end-user docs].
-
 </br>
 
 <details>
@@ -49,6 +45,10 @@ You can create workflows in Teams integrating AI. You can manage and use workflo
 | One-click debug | F5 or debug in Visual Studio Code and Visual Studio |
 
 </details>
+
+### Workflow for Teams
+
+You can create workflows in Teams integrating AI. You can manage and use workflows in Teams chats, and include practical workflow ideas like sending weekly reminders or triggering actions via emojis. For more information, see [Add link to Teams end-user docs].
 
 ## SDKs and libraries
 
