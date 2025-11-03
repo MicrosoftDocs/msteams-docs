@@ -580,7 +580,7 @@ Testings across these scenarios help you spot any issues with functionality, per
 
 * **Always retrieve the current channel’s member list and roles** before performing actions. For example, when sending notifications or assigning tasks, target only the actual channel members and not the entire team.
 * **Control data access and sharing** based on channel membership and permissions. For more information, see [Manage channel membership](#manage-channel-membership).
-* **Determine** whether users are internal, guests, or external (cross-tenant), and authenticate them in their home tenant. Always validate permissions for cross-tenant scenarios, especially when accessing files. For more information, see [Identify guest users in channels](#identify-guest-users-in-channels).
+* **Determine** whether users are internal, guests, or external (cross-tenant), and authenticate them in their home tenant. Always validate permissions for cross-tenant scenarios, especially when accessing files. For more information, see [Identify guest users in channels using Graph API](#identify-guest-users-in-channels-using-graph-api).
 * **Update help text and user guides** to explain how your app behaves in different channel types, including any limitations for guests or external users.
 * **Review Microsoft Teams documentation and changelogs** to stay aligned with the latest updates to APIs, permissions, and channel configurations.
 
