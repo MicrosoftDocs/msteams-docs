@@ -5,14 +5,14 @@ description: Learn about apps for shared and private channels to securely collab
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.date: 04/09/2025
+ms.date: 03/11/2025
 ---
 
 # Apps for shared and private channels
 
 > [!NOTE]
 >
-> Apps in shared and private channel are currently in [Public developer preview](resources/dev-preview/developer-preview-intro.md).
+> Apps in shared channel are currently in [Public developer preview](resources/dev-preview/developer-preview-intro.md). Apps in private channels are coming soon!
 
 Shared and private channels in Microsoft Teams enable flexible collaboration within teams and across organizations. Currently, Bot and tab apps are supported in shared and private channels. With this update, you can experience multiple benefits:
 
@@ -65,7 +65,7 @@ Ensure that you understand that how different channels determine app functionali
 
 * **Don't assume a single SharePoint site tied to a team**
 
-    Unlike standard channels, which share SharePoint site with the team, Private and shared channels have their own SharePoint sites. Always use the correct URL for each channel, to avoid missing files or unauthorized access errors.
+    Unlike standard channels, which share SharePoint site with the team, private and shared channels have their own SharePoint sites. Always use the correct URL for each channel, to avoid missing files or unauthorized access errors.
 
 * **Keep data scoped to channels**
 
@@ -107,7 +107,7 @@ If your app handles advanced scenarios, or depends on the specified parameters l
 
 ### Get context for shared and private channels
 
-When loading the user experience in a shared or private channel, use the data received from the `getContext` call for shared or private channels. The `getContext` call publishes two new properties, `hostTeamGroupID` and `hostTenantID`, which are used to retrieve channel membership using Microsoft Graph APIs. Every channel is created within a host team.. For more information, see [Get context in shared channels](tabs/how-to/access-teams-context.md#get-context-in-shared-channels) and [Get context for your tab for private channels](tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels).
+When loading the user experience in a shared or private channel, use the data received from the `getContext` call for shared or private channels. The `getContext` call publishes two new properties, `hostTeamGroupID` and `hostTenantID`, which are used to retrieve channel membership using Microsoft Graph APIs. Every channel is created within a host team. For more information, see [Get context in shared channels](tabs/how-to/access-teams-context.md#get-context-in-shared-channels) and [Get context for your tab for private channels](tabs/how-to/access-teams-context.md#retrieve-context-in-private-channels).
   
 ### Manage channel membership
 
@@ -160,8 +160,8 @@ You can manage indirect membership in channels using the following Microsoft Gra
     GET /teams/{team-id}/channels/{channel-id}/sharedWithTeams/{sharewithteamsId}/allowedMembers
     ```
 
->[!NOTE]
->The `allowedMembers` API returns only newly associated users and doesn't apply to unshared events.
+    >[!NOTE]
+    >The `allowedMembers` API returns only newly associated users and doesn't apply to unshared events.
 
 [Back to Top](#apps-for-shared-and-private-channels)
 
@@ -284,7 +284,7 @@ public async Task OnMembersRemovedAsync(ITurnContext turnContext, AppState turnS
 
 ---
 
-### Handle bulk membership changes
+## Handle bulk membership changes
 
 If there are bulk membership changes, Teams curbs individual membership update notifications when a channel is shared or unshared with a team. To reduce notification overload during membership updates, such as when a shared channel is added to or removed from a team with thousands of members, use the`sharedWithTeams` subscription resource:
 
@@ -314,9 +314,9 @@ You can classify members as in-tenant or out-tenant by comparing the 'TenantId' 
 
 1. Get the 'TenantId' of the member you wish to compare.
 
-```HTTP
-GET /teams/{host-team-group-id}/channels/{channel-id}/allMembers
-```
+    ```HTTP
+    GET /teams/{host-team-group-id}/channels/{channel-id}/allMembers
+    ```
 
 2. Call `microsoftTeams.app.getContext()` in your tab from the Teams JavaScript client library. The getContext() call returns context of the shared channel, which contains the details such as `displayName`, `membershipType`, `ownerGroupId`, and `ownerTenantId`.
 
@@ -446,7 +446,8 @@ If you're building an app using [SharePoint](/sharepoint/dev/spfx/integrate-with
 Use the Microsoft Graph invite API to access the document library of the SPO site linked to a shared or private channel.
 
 > [!NOTE]
->See [Feature request and general help](feedback.md) for any requirements on Mailbox or Calendar scenarios.
+> See [Feature request and general help](feedback.md) for any requirements on Mailbox or Calendar scenarios.
+
 [Back to Top](#apps-for-shared-and-private-channels)
 
 ### Access SharePoint storage correctly for channel files
@@ -649,12 +650,12 @@ The message change notification failure happens when the tenant’s sharing poli
 
 [Back to Top](#apps-for-shared-and-private-channels)
 
-## Code sample
+## Code samples
 
 | Sample Name                   | Description                                                                                                                                                                                                 | .NET | Node.js | Python |
 |------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------|---------|--------|
 | Teams Conversation Bot       | This sample app displays the names of the members in a federated group chat with external users.                                                                                                           | NA   | View    | NA     |
-| Membership Change Notification | The sample application demonstrates how to send notifications for shared channel events in Microsoft Teams. Scenarios include users being added, removed, or membership being updated and when channel is shared or unshared with a team. | View | View    | View   |
+| Membership Change Notification | The sample application demonstrates how to send notifications for shared channel events in Microsoft Teams. Scenarios include users being added, removed, or membership being updated and when channel is shared or unshared with a team. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-membership-change-notification/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-membership-change-notification/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-membership-change-notification/python)   |
 
 ## See also
 
