@@ -213,6 +213,11 @@
     - name: Adaptive Card Previewer for VS
       href: concepts/build-and-test/adaptive-card-previewer-vs.md 
       displayName: ACP
+    - name: Workflows in Teams
+      items:
+        - name: Get started
+          href: workflows/workflows-get-started.md
+          
   - name: SDKs
     items:
     - name: Teams AI library v2 (preview)
