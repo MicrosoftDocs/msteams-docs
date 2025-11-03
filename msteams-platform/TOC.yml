@@ -45,6 +45,7 @@
   - name: Overview
     href: concepts/build-and-test/tool-sdk-overview.md
     displayName: Tools and SDKs
+
   - name: Tools 
     items:
     - name: Microsoft 365 Agents Toolkit
@@ -213,11 +214,12 @@
     - name: Adaptive Card Previewer for VS
       href: concepts/build-and-test/adaptive-card-previewer-vs.md 
       displayName: ACP
+  - name: Build AI capabilities in agents or apps
+    items:
     - name: Workflows in Teams
       items:
         - name: Get started
           href: workflows/workflows-get-started.md
-          
   - name: SDKs
     items:
     - name: Teams AI library v2 (preview)
