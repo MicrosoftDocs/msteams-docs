@@ -14,7 +14,7 @@ ms.date: 03/11/2025
 >
 > Apps in shared channel are currently in [Public developer preview](resources/dev-preview/developer-preview-intro.md). Apps in private channels are coming soon!
 
-Shared and private channels in Microsoft Teams enable flexible collaboration within teams and across organizations. Currently, Bot and tab apps are supported in shared and private channels. With this update, you can experience multiple benefits:
+Shared and private channels in Microsoft Teams enable flexible collaboration within teams and across organizations. Currently, bot and tab apps are supported in shared and private channels. With this update, you can experience multiple benefits:
 
 * **Shared channels**: Allow seamless communication with internal or external members, without changing the user’s context. These channels ensure secure granular access control and real-time membership syncing.
 
@@ -284,7 +284,7 @@ public async Task OnMembersRemovedAsync(ITurnContext turnContext, AppState turnS
 
 ---
 
-## Handle bulk membership changes
+## Handle bulk membership changes for graph
 
 If there are bulk membership changes, Teams curbs individual membership update notifications when a channel is shared or unshared with a team. To reduce notification overload during membership updates, such as when a shared channel is added to or removed from a team with thousands of members, use the`sharedWithTeams` subscription resource:
 
@@ -294,7 +294,7 @@ If there are bulk membership changes, Teams curbs individual membership update n
 
 The `sharedWithTeams` subscription sends a single notification when a channel is shared or unshared with a team. It avoids thousands of per-user notifications and improves performance for apps that monitor membership changes. Ensure that you update the shared channel member list using the [allMembers](/graph/api/channel-list-allmembers?view=graph-rest-1.0&tabs=http&preserve-view=true ) API after receiving a *shared with* or *unshared from* team notification.
 
-## Validate user access for membership updates
+## Validate user access for graph membership updates
 
 When an app receives a *member removed* notification for an indirect membership update, it’s important to verify whether the user is removed from the channel, especially since the same user might have both direct and indirect membership. For example, if a user is removed from a team that shares a channel, your app must confirm whether the user's access to the shared channel is revoked. Use the `doesUserHaveAccess` API to determine whether the user is removed from the shared channel. See [doesUserHaveAccess](/graph/api/channel-doesuserhaveaccess?view=graph-rest-beta&tabs=http&preserve-view=true ) API to learn more about user accesses and relevant permissions.
 
@@ -331,7 +331,7 @@ You can collaborate with external members outside of your organization using sha
 > [!NOTE]
 > The [activity feed notification API](/graph/teams-send-activityfeednotifications) doesn't support cross-tenant notifications for apps in a shared channel.
 
-## Verify app addition to a channel
+## Verify bot installation in a channel
 
 When a shared channel is added to another team, the Agents SDK receives a `conversationUpdate` activity through the `OnConversationUpdateActivityAsync` method, only if the bot is installed in the team. There’s no dedicated API to check if your app is part of a channel. Bots can detect when your app is added to a channel indirectly.
 
@@ -423,9 +423,9 @@ To retrieve the host tenant ID for any event or action payload received by a bot
 
 ---
 
-Now, send saved host tenantId inside tenantId parameter of getAuthToken call to allow cross-tenant users to access content hosted inside SharePoint site attached to the shared channel.
+Now, send saved host `tenantId` inside `tenantId` parameter of `getAuthToken` call to allow cross-tenant users to access content hosted inside SharePoint site attached to the shared channel.
 
-## Identify guest users in channels
+## Identify guest users in channels using Graph API
 
 You can identify if a member of a channel is a guest user, invited to your tenant from external organization, using `roles` property received for each object in [List members of a channel](/graph/api/channel-list-members) response.
 
@@ -450,7 +450,7 @@ Use the Microsoft Graph invite API to access the document library of the SPO sit
 
 [Back to Top](#apps-for-shared-and-private-channels)
 
-### Access SharePoint storage correctly for channel files
+### Access SharePoint storage for channel files using Graph API
 
 To access a channel’s SharePoint files root, use the following API:
 
@@ -465,10 +465,10 @@ Use the following properties for all subsequent file operations:
 * `parentReference.driveId`: The SharePoint driveId for the channel’s site.
 * `itemId`: The folderId for the channel’s root.
 
-Following is the expected drive behavior of the channels:
+The expected drive behavior of the channels is as follows:
 
 * Standard channels use the team site’s driveId.
-* Other channels use a separate driveId for their individual sites.
+* Other channels use a separate `driveId` for their individual sites.
 
 > [!NOTE]
 >
@@ -476,7 +476,7 @@ Following is the expected drive behavior of the channels:
 > Don't hardcode library names or URLs based on assumptions about the team site, as the team site location can change.
 > Use this `GET /teams/{teamId}/channels/{channelId}/filesFolder` API for all channel types.
 
-### Manage file access for external or guest users
+### Manage file access for external or guest users using Graph API
 
 #### [External users](#tab/external-users)
 
@@ -580,7 +580,7 @@ Testings across these scenarios help you spot any issues with functionality, per
 
 * **Always retrieve the current channel’s member list and roles** before performing actions. For example, when sending notifications or assigning tasks, target only the actual channel members and not the entire team.
 * **Control data access and sharing** based on channel membership and permissions. For more information, see [Manage channel membership](#manage-channel-membership).
-* **Determine** whether users are internal, guests, or external (cross-tenant), and authenticate them in their home tenant. Always validate permissions for cross-tenant scenarios, especially when accessing files. For more information, see [Identify guest users in channels](#identify-guest-users-in-channels)
+* **Determine** whether users are internal, guests, or external (cross-tenant), and authenticate them in their home tenant. Always validate permissions for cross-tenant scenarios, especially when accessing files. For more information, see [Identify guest users in channels](#identify-guest-users-in-channels).
 * **Update help text and user guides** to explain how your app behaves in different channel types, including any limitations for guests or external users.
 * **Review Microsoft Teams documentation and changelogs** to stay aligned with the latest updates to APIs, permissions, and channel configurations.
 
