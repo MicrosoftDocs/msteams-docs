@@ -359,6 +359,9 @@
   - name: Enable nested app authentication
     href: concepts/authentication/nested-authentication.md
     displayName: Nested app, authentication, tabs, single page apps, use case scenario, MSAL, SSO
+  - name: Enable connected authentication
+    href: concepts/authentication/connected-authentication.md
+    displayName: connected authentication, third-party identity provider, OAuth 2.0, SSO, use case scenario 
   - name: Use external OAuth providers
     href: tabs/how-to/authentication/auth-oauth-provider.md
 - name: Integrate Microsoft Graph
