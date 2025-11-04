@@ -46,6 +46,10 @@ Teams platform brings you different tools to build and develop your Teams apps. 
 
 </details>
 
+### Workflow for Teams
+
+You can create workflows in Teams integrating AI. You can manage and use workflows in Teams chats, and include practical workflow ideas like sending weekly reminders or triggering actions via emojis. For more information, see [Add link to Teams end-user docs].
+
 ## SDKs and libraries
 
 Teams Platform brings you different SDKs, libraries, and APIs to build and develop your Teams apps.
