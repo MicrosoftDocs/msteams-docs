@@ -237,3 +237,168 @@ Now that the development environment is configured, you. can create, build, and 
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Sign+in+to+your+Microsoft+365+account+using+Command+line&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-javascript%3Ftabs%3Dvscode%252Ccli%252Cviscode%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-javascript.yml&documentVersionIndependentId=e473e1f3-69f5-bcfa-bcab-54b098b59c80&platformId=49d016cb-d1f9-dbb1-b10d-01f7dd6fcf5f&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ---
+
+## Build and run your app locally in Visual Studio Code
+
+To build and run your app locally:
+
+1. From Visual Studio Code, select **F5** to run the application in debug mode.
+
+<!-- markdownlint-disable MD033 -->
+
+<details>
+<summary>Learn what happens when you run your app locally in the debugger.</summary>
+
+In case you're wondering, when you press the **F5** key, Agents Toolkit:
+
+1. Checks for the following prerequisites:
+
+- You're logged in with a Microsoft 365 account.
+- Custom app upload is enabled for your Microsoft 365 account.
+- Supported Node.js version is installed.
+- Development certificate for localhost is installed.
+- Port is available for the tab app.
+
+> [!NOTE]
+> If Agents Toolkit is unable to check a particular prerequisite, it prompts you to check.
+
+2. Install NPM packages.
+3. Registers the app with Microsoft Entra ID and configures the app.
+4. Registers the app in Teams Developer Portal and configures the app.
+5. Starts the tab app.
+6. Starts Teams in a web browser and uploads the tab app.
+
+</details>
+
+:::image type="content" source="../assets/images/toolkit-v2/first-tab/f5-build-and-run.png" alt-text="Screenshot showing when F5 key is pressed." lightbox="../assets/images/toolkit-v2/first-tab/f5-build-and-run.png":::
+
+> [!NOTE]
+> When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window opens when the build is complete. This process can take 3-5 minutes to complete.
+
+The toolkit prompts you to install a local certificate, if necessary. This certificate allows Teams to load your application from `https://localhost`.
+
+2. Select **Yes** if the following dialog appears:
+:::image type="content" source="../assets/images/toolkit-v2/first-tab/hw-warning.png" alt-text="Screenshot shows the microsoft warning.":::
+
+Or select **Continue**, depending on your operating system:
+
+:::image type="content" source="../assets/images/toolkit-v2/first-tab/ssl-prompt-mac.png" alt-text="Screenshot showing the prompt to install an SSL certificate to enable Teams to load your application from localhost on Mac.":::
+
+Teams web client opens in a browser window.
+
+> [!NOTE]
+> If the toolkit doesn't prompt you to install a certificate, you must install the certificate manually. For more information, see [Add manual certificate](/skype-sdk/sdn/articles/installing-the-trusted-root-certificate#adding-certificate-snap-ins).
+
+1. Sign in with your Microsoft 365 account, if prompted.
+1. Select **Add** when prompted to upload the custom app onto Teams on your local machine.
+:::image type="content" source="../assets/images/toolkit-v2/first-tab/add-tab-app-local-debug.png" alt-text="Screenshot shows to add the app to Teams.":::
+1. Congratulations, your first app is running on Teams!
+:::image type="content" source="../assets/images/toolkit-v2/first-tab/tab-app-localdebug.png" alt-text="Screenshot shows the completed app" lightbox="../assets/images/toolkit-v2/first-tab/tab-app-localdebug-1.png":::
+
+> [!NOTE]
+> If you want to extend your app to Outlook and Microsoft 365, you can choose to debug your app with Outlook and Microsoft 365 from RUN AND DEBUG dropdown in Visual Studio Code.
+
+You can add SSO feature to retrieve the user details. You can do normal debugging activities, such as setting breakpoints, as if it were any other web application. The app supports hot reloading. If you change any file within the project, the page reloads.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Build+and+run+your+app+locally+in+Visual+Studio+Code&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-javascript%3Ftabs%3Dvscode%252Cvsc%252Cviscode%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-javascript.yml&documentVersionIndependentId=e473e1f3-69f5-bcfa-bcab-54b098b59c80&platformId=49d016cb-d1f9-dbb1-b10d-01f7dd6fcf5f&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+<!-- markdownlint-disable MD033 -->
+
+<details>
+<summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
+
+To successfully run your app in Teams, ensure that you've enabled custom app upload in your Teams account. You can learn more about custom app upload in the prerequisites section.
+
+</details>
+
+## Deploy your first Teams app
+
+You've learned to create, build, and run Teams app with Tab app. The final step is to deploy your app on Azure.
+
+Let's deploy the first app with Tab capability on Azure using Agents Toolkit.
+
+### Sign in to your Azure account
+
+Use this account to access the Microsoft Azure portal and to provision new cloud resources to support your app.
+
+# [Visual Studio Code](#tab/viscode)
+
+1. Open Visual Studio Code.
+1. Open the project folder in which you created the tab app.
+1. Select the Microsoft 365 Agents Toolkit  :::image type="icon" source="../assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the sidebar.
+1. Select **Sign in to Azure** using your credentials.
+
+> [!TIP]
+> If you have the AZURE ACCOUNT extension installed and are using the same account, you can skip this step. Use the same account as you're using in other extensions.
+
+Your default web browser opens to let you sign in to the account.
+
+1. Close the browser when prompted and return to Visual Studio Code.
+
+The **ACCOUNTS** section of the sidebar shows the two accounts separately. It also lists the number of usable Azure subscriptions available to you. Ensure you have at least one usable Azure subscription available. If not, sign out and use a different account.
+
+Congratulations, you've created a Teams app!
+Now let's go ahead and learn how to deploy one of the apps to Azure using Agents Toolkit.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Sign+in+to+your+Azure+account+using+Visual+Studio+Code&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-javascript%3Ftabs%3Dvscode%252Cvsc%252Cviscode%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-javascript.yml&documentVersionIndependentId=e473e1f3-69f5-bcfa-bcab-54b098b59c80&platformId=49d016cb-d1f9-dbb1-b10d-01f7dd6fcf5f&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+# [Command line](#tab/cline)
+
+1. Sign in to Microsoft 365 with Agents Toolkit CLI:
+
+``` bash
+atk account login m365
+```
+
+Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+
+2. Sign in to Azure with Agents Toolkit CLI:
+
+``` bash
+atk account login azure
+```
+
+Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+
+The account logins are shared between Visual Studio Code and Agents Toolkit CLI.
+
+Congratulations, you've created a Teams app!
+Now let's go ahead and learn how to deploy one of the apps to Azure using Agents Toolkit.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Sign+in+to+your+Azure+account+using+Command+line&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-javascript%3Ftabs%3Dvscode%252Ccli%252Cviscode%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-javascript.yml&documentVersionIndependentId=e473e1f3-69f5-bcfa-bcab-54b098b59c80&platformId=49d016cb-d1f9-dbb1-b10d-01f7dd6fcf5f&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+---
+
+[!INCLUDE [Provision and Deploy your app on Azure](../includes/get-started/azure-provisioning-instructions-tab.md)]
+
+>[!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Run+the+deployed+app&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-javascript%3Ftabs%3Dvscode%252Ccli%252Cviscode%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-javascript.yml&documentVersionIndependentId=e473e1f3-69f5-bcfa-bcab-54b098b59c80&platformId=49d016cb-d1f9-dbb1-b10d-01f7dd6fcf5f&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+<!-- markdownlint-disable MD033 -->
+ <details>
+ <summary>Learn what happens when you deployed your app to Azure</summary>
+
+Before deployment, the application has been running locally:
+
+- The backend runs using **Azure Functions Core Tools**.
+- The application HTTP endpoint, where Microsoft Teams loads the application, runs locally.
+
+Deployment is a two-step process. You provision the resources on an active Azure subscription, and then deploy or upload the backend and frontend code for the application to Azure.
+
+- The backend, if configured, uses various Azure services, including Azure App Service and Azure Storage.
+- The frontend application is deployed to an Azure Storage account configured for static web hosting.
+
+</details>
+
+### Congratulations
+
+You've done it!
+
+You've created a tab app.
+
+Now that you've learned to create a basic app, you can move on to creating more complex apps. Follow the procedures to build and deploy the app, and your app has multiple capabilities.
+
+You've completed the tutorial to build tab app with JavaScript.
