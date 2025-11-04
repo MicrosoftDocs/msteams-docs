@@ -28,6 +28,11 @@ To build an agent in Teams, you’ll need the following:
 1. Install the latest versions of Visual Studio Code, Node.js, and the Microsoft 365 Agents Toolkit.
 1. If you want to use Azure OpenAI service to access large language model (LLM) for your agent, create an Azure OpenAI service on the [Azure portal](https://ms.portal.azure.com/#home) and get your API key.
 
+For more information about setting up Azure OpenAI services, see:
+
+- [Create and deploy an Azure OpenAI in Azure AI Foundry Models resource](/azure/ai-foundry/openai/how-to/create-resource?pivots=web-portal).
+- [Create an Azure OpenAI Resource and Deploy a Model](/microsoft-cloud/dev/tutorials/openai-acs-msgraph/02-openai-create-resource).
+
 ## Create an agent using Microsoft 365 Agents Toolkit
 
 1. Open Visual Studio Code.
