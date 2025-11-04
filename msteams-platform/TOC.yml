@@ -586,16 +586,12 @@
     displayName: MessageCard, Attachments, potentialAction, Send messages using cURL and PowerShell, Rate limiting for connectors, ActionCard, message in channel, Teams message
 - name: Build cards and dialogs
   items:
-    - name: Manifest schema for agents or apps
+    - name: Manifest schema
       href: resources/schema/manifest-schema.md
       displayName: version, validDomain, valid domain, validdomain, properties, meetingExtensionDefinition
-    - name: Public developer preview
-      items:
-        - name: Overview
-          href: resources/dev-preview/developer-preview-intro.md          
-        - name: Public developer preview agents or apps manifest
-          href: resources/schema/manifest-schema-dev-preview.md
-          displayName: properties
+    - name: Developer preview manifest schema
+      href: resources/dev-preview/developer-preview-intro.md
+      displayName: developer preview, preview, public preview
 - name: Add authentication
   items:
   - name: User authentication in Teams
@@ -986,9 +982,9 @@
       - name: Send activity feed notifications
         href: /graph/teams-send-activityfeednotifications?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
         displayName: activity feed, notification, customize notification
-      - name: App caching for your tab app
+      - name: App suspension for your tab app
         href: tabs/how-to/app-caching.md
-        displayName: App caching, caching, launch time, cache
+        displayName: App suspension, caching, launch time, cache
       - name: Build a dashboard tab app
         href: tabs/how-to/Build-a-dashboard-tab-app.md
         displayName: Dashboard, widget, Graph API call
