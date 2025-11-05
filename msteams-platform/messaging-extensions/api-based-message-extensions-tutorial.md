@@ -9,10 +9,9 @@ ms.owner: slamba
 ms.date: 05/11/2025
 ---
 
-# Build message extension using Bot Framework
+# Build API-based message extension
 
 > [!NOTE]
->
 > API-based message extensions only support search commands.
 
 Message extensions built using API (API-based) significantly enhance the functionality of your Teams apps by allowing them to interact with external services. API-based message extensions can help streamline workflows by reducing the need to switch between different applications.
