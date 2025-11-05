@@ -1163,7 +1163,7 @@ To build an API-based message extension, follow these step-by-step guides:
 * [For advanced users](../sbs-api-based-message-extensions.yml): Build an API-based message extension from the ground up.
 
 <details>
-<summary>Tutorial: Build API-based message extension</summary>
+<summary><b>Tutorial: Build API-based message extension</b></summary>
 
 > [!NOTE]
 > API-based message extensions only support search commands.
@@ -1224,7 +1224,7 @@ If you don't have a Teams developer account, you can get it free. Join the Micro
 1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+free+Teams+developer+tenant+(optional)&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-api-based-message-extensions%3Ftutorial-step%3D1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-api-based-message-extensions.yml&documentVersionIndependentId=6b8f43f0-7f44-cbd3-0fea-5161c72e2c00&author=%40surbhigupta&platformId=9fbfa1ed-5ce3-5b6f-5503-4e968b6698e5&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Build+an+API-based+message+extension&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fmessaging-extensions%2Fcreate-api-message-extension%3Ftabs%3Ddeveloper-portal-for-teams%252Cnew-api%252)
 
 #### Get a free Azure account
 
