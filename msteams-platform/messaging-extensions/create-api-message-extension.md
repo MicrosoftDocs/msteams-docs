@@ -1205,7 +1205,7 @@ Verify if you can upload a custom app in Teams:
 1. Select **Upload an app**.
 1. Look for the option to **Upload a custom app**. If you see the option, custom app upload is enabled.
 
-:::image type="content" source="~/assets/images/toolkit-v2/spfx-custom-new1.png" alt-text="Screenshot shows the bot home.":::
+    :::image type="content" source="~/assets/images/toolkit-v2/spfx-custom-new1.png" alt-text="Screenshot shows the bot home.":::
 
 > [!NOTE]
 > Contact your Teams administrator, if you don't find the option to upload a custom app.
@@ -1219,7 +1219,7 @@ If you don't have a Teams developer account, you can get it free. Join the Micro
 1. In the welcome screen, select **Set up E5 subscription**.
 1. Set up your administrator account. After you finish, the following screen appears.
 
-:::image type="content" source="~/assets/images/toolkit-v2/prerequisites/microsoft-365.png" alt-text="Screenshot shows the Microsoft 365 Developer Program.":::
+    :::image type="content" source="~/assets/images/toolkit-v2/prerequisites/microsoft-365.png" alt-text="Screenshot shows the Microsoft 365 Developer Program.":::
 
 1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
 
@@ -1353,12 +1353,12 @@ You can validate if the OpenAPI Description document is valid. To verify, follow
 1. Enter the values for the **search** parameter as **Tool to create music**.
 1. Select **Execute**. The swagger editor displays a response with a list of products.
 
-  :::image type="content" source="../assets/images/Copilot/api-me-sbs-execute-get-response.png" alt-text="Screenshots shows the parameters, its values and the **EXECUTE** option in the swagger editor.":::
+    :::image type="content" source="../assets/images/Copilot/api-me-sbs-execute-get-response.png" alt-text="Screenshots shows the parameters, its values and the **EXECUTE** option in the swagger editor.":::
 
 1. Go to **Server response** > **Response Body**.
 1. Under `products`, copy the first product from the list and save it for future reference.
 
-  :::image type="content" source="../assets/images/Copilot/api-me-sbs-product-response.png" alt-text="Screenshots shows the highlighted product that is selected from the response body.":::
+    :::image type="content" source="../assets/images/Copilot/api-me-sbs-product-response.png" alt-text="Screenshots shows the highlighted product that is selected from the response body.":::
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+OpenAPI+Description+document&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-api-based-message-extensions%3Ftutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-api-based-message-extensions.yml&documentVersionIndependentId=6b8f43f0-7f44-cbd3-0fea-5161c72e2c00&author=%40surbhigupta&platformId=9fbfa1ed-5ce3-5b6f-5503-4e968b6698e5&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
@@ -1373,22 +1373,22 @@ To create an Adaptive Card template, follow these steps:
 
 1. Go to [ChatGPT](https://chat.openai.com/) and ask the following query in the message compose area:
 
-```text
- Create an Adaptive Card Template that binds to the following response:
-     "categories": [
-         "Music Generation",
-         "AI Detection"
-     ],
-     "chatbot_short_url": "https://goto.opentools.ai/c/ai-music-generator",
-     "main_summary": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. With advanced AI technology, AI Music Generator makes music production accessible to everyone.",
-     "name": "AI Music Generator",
-     "opentools_url": "https://goto.opentools.ai/ai-music-generator",
-     "platforms": [
-         "Web",
-         "App",
-         "API"
-     ]
-```
+    ```text
+    Create an Adaptive Card Template that binds to the following response:
+        "categories": [
+            "Music Generation",
+            "AI Detection"
+        ],
+        "chatbot_short_url": "https://goto.opentools.ai/c/ai-music-generator",
+        "main_summary": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. With advanced AI technology, AI Music Generator makes music production accessible to everyone.",
+        "name": "AI Music Generator",
+        "opentools_url": "https://goto.opentools.ai/ai-music-generator",
+        "platforms": [
+            "Web",
+            "App",
+            "API"
+        ]
+    ```
 
 1. Select **Send message**.
 
@@ -1465,11 +1465,11 @@ Following is an example of the Adaptive Card template:
    1. Go to **CARD PAYLOAD EDITOR** and paste the Adaptive Card template code.
    1. Go to **SAMPLE DATA EDITOR** and paste the GET API response that you saved earlier.
 
-    :::image type="content" source="../assets/images/Copilot/api-me-sbs-adaptive-card-designer.png" alt-text="Screenshots shows the Adaptive Card designer with the Adaptive Card template and the sample data.":::
+        :::image type="content" source="../assets/images/Copilot/api-me-sbs-adaptive-card-designer.png" alt-text="Screenshots shows the Adaptive Card designer with the Adaptive Card template and the sample data.":::
 
    1. Select **Preview mode**. The Adaptive Card designer displays an Adaptive Card with the data that binds the response to the template.
 
-    :::image type="content" source="../assets/images/Copilot/api-me-sbs-adaptive-card-preview.png" alt-text="Screenshot shows the Adaptive Card designer with the Adaptive Card template and the sample data.":::
+        :::image type="content" source="../assets/images/Copilot/api-me-sbs-adaptive-card-preview.png" alt-text="Screenshot shows the Adaptive Card designer with the Adaptive Card template and the sample data.":::
 
 ### Create a preview card template
 
