@@ -10,7 +10,7 @@ ms.date: 03/11/2025
 
 # Add Power Virtual Agents chatbot
 
-Power Virtual Agents is a no-code, guided graphical interface solution that empowers every member of your team to create rich, conversational chatbots that easily integrate with the Teams platform. All content authored in Power Virtual Agents renders naturally in Teams. Power Virtual Agents bots engage with users in the Teams native chat canvas. The IT administrators, business analysts, domain specialists, and skilled app developers can design, develop, and publish intelligent virtual agents for Teams without having to setup a development environment. They can create a web service, or directly register with the Bot Framework.
+Power Virtual Agents is a no-code, guided graphical interface solution that empowers every member of your team to create rich, conversational chatbots that easily integrate with the Teams platform. All content authored in Power Virtual Agents renders naturally in Teams. Power Virtual Agents bots engage with users in the Teams native chat canvas. The IT administrators, business analysts, domain specialists, and skilled app developers can design, develop, and publish intelligent virtual agents for Teams without having to set up a development environment. They can create a web service, or directly register with the Azure portal.
 
 This document guides you on how to make your chatbot available in Teams through the Power Virtual Agents portal and add your bot to Teams using Developer Portal.
 
@@ -90,7 +90,7 @@ If [uploading custom apps is enabled](/microsoftteams/admin-settings) in your Te
 
 1. **Start a chat**
 
-   The set up process for adding your Power Virtual Agents chat bot to Teams is complete. You can now start a conversation with your bot in a personal chat.
+   The setup process for adding your Power Virtual Agents chat bot to Teams is complete. You can now start a conversation with your bot in a personal chat.
 
 ## See also
 

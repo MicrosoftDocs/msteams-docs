@@ -10,7 +10,6 @@ ms.owner: angovil
 
 > [!IMPORTANT]
 >
-> * This article is based on the v4 Bot Framework SDK.
 > * Bots don't support sending and receiving files in Government Community Cloud High (GCC High), Department of Defense (DoD), and Teams operated by 21Vianet environments.
 
 There are two ways to send files to and receive files from a bot:
@@ -453,7 +452,7 @@ The following code sample demonstrates how to obtain file consent and upload fil
 
 |**Sample name** | **Description** | **.NET** | **Node.js** | **Python**| **Manifest**|
 |----------------|-----------------|--------------|----------------|-----------|-----------|
-| File upload | This bot sample for Teams demonstrates file upload capabilities using Bot Framework v4, enabling users to upload files and view inline images within chats. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-file-upload/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-file-upload/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-file-upload/python) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-file-upload/csharp/demo-manifest/bot-file-upload.zip)
+| File upload | This bot sample for Teams demonstrates file upload capabilities using Teams AI library, enabling users to upload files and view inline images within chats. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-file-upload/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-file-upload/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-file-upload/python) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-file-upload/csharp/demo-manifest/bot-file-upload.zip)
 
 ## Next step
 
