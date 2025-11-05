@@ -1172,7 +1172,7 @@ Message extensions built using API (API-based) significantly enhance the functio
 
 You can use API-based message extensions to integrate external services that are commonly used in the business workflow. For example, a business that frequently uses a CRM system for customer management could use a message extension to fetch and display customer data directly from Teams. This app helps save time and improves efficiency by reducing the need to switch between different applications. This feature is supported on all platforms where Teams is available, including desktop, web, and mobile.
 
-## Prerequisites
+### Prerequisites
 
 Here's a list of tools you need for building and deploying your apps.
 
@@ -1185,7 +1185,7 @@ Here's a list of tools you need for building and deploying your apps.
 |[Azure account](https://azure.microsoft.com/free/) | Access to Azure resources.|
 |OpenAPI Description (OAD) document| A document that describes the capabilities of your API. For more information, see [OpenAPI Description](https://learn.openapis.org/specification/structure.html).|
 
-## Set up your Teams development tenant
+### Set up your Teams development tenant
 
 A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where your upload and test your custom app. Let's verify if you're ready to develop with the tenant.
 
@@ -1210,7 +1210,7 @@ Verify if you can upload a custom app in Teams:
 > [!NOTE]
 > Contact your Teams administrator, if you don't find the option to upload a custom app.
 
-### Create a free Teams developer tenant (optional)
+#### Create a free Teams developer tenant (optional)
 
 If you don't have a Teams developer account, you can get it free. Join the Microsoft 365 developer program!
 
@@ -1226,15 +1226,15 @@ If you don't have a Teams developer account, you can get it free. Join the Micro
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+a+free+Teams+developer+tenant+(optional)&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-api-based-message-extensions%3Ftutorial-step%3D1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-api-based-message-extensions.yml&documentVersionIndependentId=6b8f43f0-7f44-cbd3-0fea-5161c72e2c00&author=%40surbhigupta&platformId=9fbfa1ed-5ce3-5b6f-5503-4e968b6698e5&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
-### Get a free Azure account
+#### Get a free Azure account
 
 If you want to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
 
 You have all the tools to set up your account. Next, let's set up your development environment and start building! Select the app you want to build first.
 
-## Create OpenAPI Description document
+### Create OpenAPI Description document
 
-### OpenAPI Description
+#### OpenAPI Description
 
 OpenAPI Description (OAD) is the industry-standard specification that outlines how OpenAPI files are structured and outlined. It's a language-agnostic, human-readable format for describing APIs. It's easy for both humans and machines to read and write. The schema is machine-readable and represented in either YAML or JSON.
 
@@ -1363,11 +1363,11 @@ You can validate if the OpenAPI Description document is valid. To verify, follow
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+OpenAPI+Description+document&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-api-based-message-extensions%3Ftutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-api-based-message-extensions.yml&documentVersionIndependentId=6b8f43f0-7f44-cbd3-0fea-5161c72e2c00&author=%40surbhigupta&platformId=9fbfa1ed-5ce3-5b6f-5503-4e968b6698e5&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
-## Create response rendering template
+### Create response rendering template
 
 An OpenAPI Description document requires a response rendering template for the app to respond to the GET or POST requests. The response rendering template consists of an Adaptive Card template, Preview card template, and metadata.
 
-### Adaptive Card template
+#### Adaptive Card template
 
 To create an Adaptive Card template, follow these steps:
 
@@ -1471,7 +1471,7 @@ Following is an example of the Adaptive Card template:
 
         :::image type="content" source="../assets/images/Copilot/api-me-sbs-adaptive-card-preview.png" alt-text="Screenshot shows the Adaptive Card designer with the Adaptive Card template and the sample data.":::
 
-### Create a preview card template
+#### Create a preview card template
 
 The preview card template can contain a `title`, `subtitle` and `image` properties. If the API response doesn't have an image, you can remove the image property.
 
@@ -1498,7 +1498,7 @@ Save the preview card template for future reference.
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Adaptive+Card+template&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-api-based-message-extensions%3Ftutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-api-based-message-extensions.yml&documentVersionIndependentId=6b8f43f0-7f44-cbd3-0fea-5161c72e2c00&author=%40surbhigupta&platformId=9fbfa1ed-5ce3-5b6f-5503-4e968b6698e5&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
-### Response rendering template
+#### Response rendering template
 
 The response rendering template must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.ResponseRenderingTemplate.schema.json`](https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.ResponseRenderingTemplate.schema.json).
 
@@ -1620,11 +1620,11 @@ The following code is an example of a Response rendering template:
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Response+rendering+template&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-api-based-message-extensions%3Ftutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-api-based-message-extensions.yml&documentVersionIndependentId=6b8f43f0-7f44-cbd3-0fea-5161c72e2c00&author=%40surbhigupta&platformId=9fbfa1ed-5ce3-5b6f-5503-4e968b6698e5&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
-## Create app manifest
+### Create app manifest
 
 Now, you need to create an app manifest (previously called Teams app manifest). The app manifest describes how your app integrates into the Microsoft Teams product.
 
-### Create a Teams app manifest
+#### Create a Teams app manifest
 
 To create the manifest, follow these steps:
 
@@ -1719,7 +1719,7 @@ To create the manifest, follow these steps:
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+app+manifest&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-api-based-message-extensions%3Ftutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-api-based-message-extensions.yml&documentVersionIndependentId=6b8f43f0-7f44-cbd3-0fea-5161c72e2c00&author=%40surbhigupta&platformId=9fbfa1ed-5ce3-5b6f-5503-4e968b6698e5&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
-## Upload a custom app to Teams
+### Upload a custom app to Teams
 
 Sign into Teams test environment to test your app in Teams. To upload a custom app in Teams, follow these steps:
 
