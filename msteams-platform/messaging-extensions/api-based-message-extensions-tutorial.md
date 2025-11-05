@@ -200,7 +200,7 @@ You can validate if the OpenAPI Description document is valid. To verify, follow
 1. Enter the values for the **search** parameter as **Tool to create music**.
 1. Select **Execute**. The swagger editor displays a response with a list of products.
 
-  :::image type="content" source="assets/images/Copilot/api-me-sbs-execute-get-response.png" alt-text="Screenshots shows the parameters, its values and the **EXECUTE** option in the swagger editor.":::
+  :::image type="content" source="../assets/images/Copilot/api-me-sbs-execute-get-response.png" alt-text="Screenshots shows the parameters, its values and the **EXECUTE** option in the swagger editor.":::
 
 1. Go to **Server response** > **Response Body**.
 1. Under `products`, copy the first product from the list and save it for future reference.
@@ -316,7 +316,7 @@ Following is an example of the Adaptive Card template:
 
    1. Select **Preview mode**. The Adaptive Card designer displays an Adaptive Card with the data that binds the response to the template.
 
-    :::image type="content" source="../assets/images/Copilot/api-me-sbs-adaptive-card-preview.png" alt-text="Screenshots shows the Adaptive Card designer with the Adaptive Card template and the sample data.":::
+    :::image type="content" source="../assets/images/Copilot/api-me-sbs-adaptive-card-preview.png" alt-text="Screenshot shows the Adaptive Card designer with the Adaptive Card template and the sample data.":::
 
 ### Create a preview card template
 
@@ -475,7 +475,7 @@ Now, you need to create an app manifest (previously called Teams app manifest). 
 
 To create the manifest, follow these steps:
 
-1. Create a new JSON file. Your app manifest must conform to the 1.20 version of the schema defined in [App manifest schema](resources/schema/manifest-schema).
+1. Create a new JSON file. Your app manifest must conform to the 1.20 version of the schema defined in [App manifest schema](/microsoft-365/extensibility/schema/?view=m365-app-1.24&viewFallbackFrom=m365-app-1.23%3Ftoc%3D%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json&preserve-view=true).
 
 1. Add the following code to the JSON file:
 
@@ -585,12 +585,12 @@ Sign into Teams test environment to test your app in Teams. To upload a custom a
 1. Go to a chat, then select **+** from the message compose area, and search for your app.
 1. Select the app and make a search query.
 
-   :::image type="content" source="assets/images/Copilot/api-based-me-ttk-invoke-teams.png" alt-text="Screenshot shows that from the plus icon in the chat menu, users can invoke the message extension app that is displayed in the flyout menu.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-invoke-teams.png" alt-text="Screenshot shows that from the plus icon in the chat menu, users can invoke the message extension app that is displayed in the flyout menu.":::
 
 1. The app responds with an Adaptive Card in the chat window.
 1. Select **Send**.
 
-   :::image type="content" source="assets/images/Copilot/api-based-me-ttk-sbs-result.png" alt-text="Screenshot shows the Adaptive Card with the search results in the chat message in Teams.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-sbs-result.png" alt-text="Screenshot shows the Adaptive Card with the search results in the chat message in Teams.":::
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Upload+a+custom+app+to+Teams&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-api-based-message-extensions%3Ftutorial-step%3D5&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-api-based-message-extensions.yml&documentVersionIndependentId=6b8f43f0-7f44-cbd3-0fea-5161c72e2c00&author=%40surbhigupta&platformId=9fbfa1ed-5ce3-5b6f-5503-4e968b6698e5&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
