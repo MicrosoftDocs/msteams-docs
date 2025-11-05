@@ -28,7 +28,7 @@ Here's a list of tools you need for building and deploying your apps.
 |[Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, or call - all in one place.|
 |[Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 |[Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
-|[Microsoft 365 developer account](concepts/build-and-test/prepare-your-o365-tenant.md)| Access to Teams account with the appropriate permissions to install an app. |
+|[Microsoft 365 developer account](../concepts/build-and-test/prepare-your-o365-tenant.md) | Access to Teams account with the appropriate permissions to install an app. |
 |[Azure account](https://azure.microsoft.com/free/) | Access to Azure resources.|
 |OpenAPI Description (OAD) document| A document that describes the capabilities of your API. For more information, see [OpenAPI Description](https://learn.openapis.org/specification/structure.html).|
 
@@ -205,7 +205,7 @@ You can validate if the OpenAPI Description document is valid. To verify, follow
 1. Go to **Server response** > **Response Body**.
 1. Under `products`, copy the first product from the list and save it for future reference.
 
-  :::image type="content" source="assets/images/Copilot/api-me-sbs-product-response.png" alt-text="Screenshots shows the highlighted product that is selected from the response body.":::
+  :::image type="content" source="../assets/images/Copilot/api-me-sbs-product-response.png" alt-text="Screenshots shows the highlighted product that is selected from the response body.":::
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+OpenAPI+Description+document&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-api-based-message-extensions%3Ftutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-api-based-message-extensions.yml&documentVersionIndependentId=6b8f43f0-7f44-cbd3-0fea-5161c72e2c00&author=%40surbhigupta&platformId=9fbfa1ed-5ce3-5b6f-5503-4e968b6698e5&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
@@ -312,13 +312,13 @@ Following is an example of the Adaptive Card template:
    1. Go to **CARD PAYLOAD EDITOR** and paste the Adaptive Card template code.
    1. Go to **SAMPLE DATA EDITOR** and paste the GET API response that you saved earlier.
 
-    :::image type="content" source="assets/images/Copilot/api-me-sbs-adaptive-card-designer.png" alt-text="Screenshots shows the Adaptive Card designer with the Adaptive Card template and the sample data.":::
+    :::image type="content" source="../assets/images/Copilot/api-me-sbs-adaptive-card-designer.png" alt-text="Screenshots shows the Adaptive Card designer with the Adaptive Card template and the sample data.":::
 
    1. Select **Preview mode**. The Adaptive Card designer displays an Adaptive Card with the data that binds the response to the template.
 
-    :::image type="content" source="assets/images/Copilot/api-me-sbs-adaptive-card-preview.png" alt-text="Screenshots shows the Adaptive Card designer with the Adaptive Card template and the sample data.":::
+    :::image type="content" source="../assets/images/Copilot/api-me-sbs-adaptive-card-preview.png" alt-text="Screenshots shows the Adaptive Card designer with the Adaptive Card template and the sample data.":::
 
-**Create a preview card template**
+### Create a preview card template
 
 The preview card template can contain a `title`, `subtitle` and `image` properties. If the API response doesn't have an image, you can remove the image property.
 
@@ -475,7 +475,7 @@ Now, you need to create an app manifest (previously called Teams app manifest). 
 
 To create the manifest, follow these steps:
 
-1. Create a new JSON file. Your app manifest must conform to the 1.20 version of the schema defined in [App manifest schema](https://learn.microsoft.com/en-us/microsoftteams/platform/resources/schema/manifest-schema).
+1. Create a new JSON file. Your app manifest must conform to the 1.20 version of the schema defined in [App manifest schema](resources/schema/manifest-schema).
 
 1. Add the following code to the JSON file:
 
@@ -576,11 +576,11 @@ Sign into Teams test environment to test your app in Teams. To upload a custom a
 1. Select the zip file created and select **Open**.
 1. Select **Add**.
 
-   :::image type="content" source="assets/images/Copilot/api-me-sbs-add-app-teams.png" alt-text="Screenshot of message extension app with the Add option highlighted.":::
+   :::image type="content" source="../assets/images/Copilot/api-me-sbs-add-app-teams.png" alt-text="Screenshot of message extension app with the Add option highlighted.":::
 
 1. Select **Open**.
 
-   :::image type="content" source="assets/images/Copilot/api-me-open.png" alt-text="Screenshot of message extension app with the Open option highlighted.":::
+   :::image type="content" source="../assets/images/Copilot/api-me-open.png" alt-text="Screenshot of message extension app with the Open option highlighted.":::
 
 1. Go to a chat, then select **+** from the message compose area, and search for your app.
 1. Select the app and make a search query.
