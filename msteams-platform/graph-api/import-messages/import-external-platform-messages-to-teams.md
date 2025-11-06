@@ -295,7 +295,7 @@ POST /chats/{chat-id}/completeMigration
 ### Step 6: Call GET API to verify migrationMode
 
 Call `GET channel` or `GET chat` APIs, to verify that the `migrationMode` property is marked as completed. For more information, see [GET channel](/graph/api/channel-get?view=graph-rest-1.0&tabs=http&preserve-view=true) or
-[GET chat](/graph/api/chat-get?view=graph-rest-1.0&tabs=http&preserve-view=true)
+[GET chat](/graph/api/chat-get?view=graph-rest-1.0&tabs=http&preserve-view=true).
 
 ## Import content scope
 
