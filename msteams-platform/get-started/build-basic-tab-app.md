@@ -14,12 +14,12 @@ Tabs are Teams-aware webpages embedded in Microsoft Teams and a good way to begi
 
 In this tutorial, you'll learn:
 
-- How to set up a new project with Microsoft 365 Agents Toolkit (previously known as Teams Toolkit).
-  - How to build a tab app
-  - The structure of the app:
+- [How to set up a new project with Microsoft 365 Agents Toolkit (previously known as Teams Toolkit).](#create-your-tab-project-workspace)
+  - [How to build a tab app](#build-and-run-your-first-tab-app)
+  - [The structure of the app](#take-a-tour-of-the-tab-app-source-code)
     - The tab portion with JavaScript using React
     - The rest of the features with Node.js
-  - How to deploy your app
+  - [How to deploy your app](#deploy-your-first-teams-app)
 
 This step-by-step guide helps you to build tab with Agents Toolkit. You'll see the following output after you've completed this guide:
 
@@ -62,12 +62,6 @@ Now you've got all the tools to set up your account. Next, let's set up your dev
 Start Microsoft Teams app development by creating your first app. This app uses the tab capability.
 
 :::image type="content" source="../assets/images/toolkit-v2/first-tab/your-helloworld-app-tab.png" alt-text="Diagram shows that this app has three features. Tab is highlighted.":::
-
-In this page, you'll learn:
-
-1. [How to set up a new tab project with Agents Toolkit](#create-your-tab-project-workspace)
-
-1. [About the directory structure of your app](#take-a-tour-of-the-tab-app-source-code)
 
 ### Create your tab project workspace
 
