@@ -82,39 +82,39 @@ If the prerequisites are in place, let's begin!
 1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="../assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
 1. Select **Create a New Agent/App** > **Teams App**.
 
-:::image type="content" source="../assets/images/toolkit-v2/first-tab/create-project.png" alt-text="Screenshots shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
+   :::image type="content" source="../assets/images/toolkit-v2/first-tab/create-project.png" alt-text="Screenshots shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
 
 4. Select **Tab** to create a new tab project.
 
-:::image type="content" source="../assets/images/toolkit-v2/first-tab/create-new-app1.png" alt-text="Screenshots shows the wizard to create a new project.":::
+   :::image type="content" source="../assets/images/toolkit-v2/first-tab/create-new-app1.png" alt-text="Screenshots shows the wizard to create a new project.":::
 
 5. Ensure that **Basic Tab** is selected as the app feature that you want to build in your app.
 
-:::image type="content" source="../assets/images/toolkit-v2/first-tab/select-capabilities-tabapp.png" alt-text="Screenshot shows to add app feature to add to your new app.":::
+   :::image type="content" source="../assets/images/toolkit-v2/first-tab/select-capabilities-tabapp.png" alt-text="Screenshot shows to add app feature to add to your new app.":::
 
 6. Select **JavaScript** as the programming language.
 
-:::image type="content" source="../assets/images/toolkit-v2/first-tab/select-language-tab.png" alt-text="Screenshot shows how to select the programming language.":::
+   :::image type="content" source="../assets/images/toolkit-v2/first-tab/select-language-tab.png" alt-text="Screenshot shows how to select the programming language.":::
 
 7. Select **Default folder** to store your project root folder in default location.
 
-:::image type="content" source="../assets/images/toolkit-v2/first-tab/select-default-location.png" alt-text="Screenshot shows how to select default location.":::
+   :::image type="content" source="../assets/images/toolkit-v2/first-tab/select-default-location.png" alt-text="Screenshot shows how to select default location.":::
 
 Follow the steps to change the default location:
 
 1. Select **Browse**.
 
-:::image type="content" source="../assets/images/toolkit-v2/first-tab/select-browse.png" alt-text="Screenshot shows to select browse for storage.":::
+   :::image type="content" source="../assets/images/toolkit-v2/first-tab/select-browse.png" alt-text="Screenshot shows to select browse for storage.":::
 
 2. Select the location for project workspace.
 
 3. Select the **Select folder**.
 
-:::image type="content" source="../assets/images/toolkit-v2/select-folder.png" alt-text="Screenshot shows how to select-folder.":::
+   :::image type="content" source="../assets/images/toolkit-v2/select-folder.png" alt-text="Screenshot shows how to select-folder.":::
 
 4. Enter a suitable name for your app and then select **Enter**.
 
-:::image type="content" source="../assets/images/toolkit-v2/first-tab/enter-name-tab1.png" alt-text="Screenshot shows where to enter the app name.":::
+   :::image type="content" source="../assets/images/toolkit-v2/first-tab/enter-name-tab1.png" alt-text="Screenshot shows where to enter the app name.":::
 
 The Teams tab app is created in few seconds.
 
@@ -206,6 +206,7 @@ Your default web browser opens to let you sign in to the account.
 The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name. If custom app upload is enabled for your Microsoft 365 account, Agents Toolkit displays **Custom App Upload Enabled**.
 
 :::image type="content" source="../assets/images/toolkit-v2/first-tab/m365-uploading-enabled.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure.":::
+
 Now you're ready to build the app and run it in the local environment!
 
 > [!div class="nextstepaction"]
@@ -242,7 +243,7 @@ Now that the development environment is configured, you. can create, build, and 
 
 To build and run your app locally:
 
-1. From Visual Studio Code, select **F5** to run the application in debug mode.
+From Visual Studio Code, select **F5** to run the application in debug mode.
 
 <!-- markdownlint-disable MD033 -->
 
@@ -262,7 +263,7 @@ In case you're wondering, when you press the **F5** key, Agents Toolkit:
 > [!NOTE]
 > If Agents Toolkit is unable to check a particular prerequisite, it prompts you to check.
 
-2. Install NPM packages.
+2. Installs NPM packages.
 3. Registers the app with Microsoft Entra ID and configures the app.
 4. Registers the app in Teams Developer Portal and configures the app.
 5. Starts the tab app.
@@ -277,7 +278,8 @@ In case you're wondering, when you press the **F5** key, Agents Toolkit:
 
 The toolkit prompts you to install a local certificate, if necessary. This certificate allows Teams to load your application from `https://localhost`.
 
-2. Select **Yes** if the following dialog appears:
+Select **Yes** if the following dialog appears:
+
 :::image type="content" source="../assets/images/toolkit-v2/first-tab/hw-warning.png" alt-text="Screenshot shows the microsoft warning.":::
 
 Or select **Continue**, depending on your operating system:
@@ -306,6 +308,7 @@ You can add SSO feature to retrieve the user details. You can do normal debuggin
 <!-- markdownlint-disable MD033 -->
 
 <details>
+
 <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
 To successfully run your app in Teams, ensure that you've enabled custom app upload in your Teams account. You can learn more about custom app upload in the prerequisites section.
@@ -334,7 +337,7 @@ Use this account to access the Microsoft Azure portal and to provision new cloud
 
 Your default web browser opens to let you sign in to the account.
 
-1. Close the browser when prompted and return to Visual Studio Code.
+5. Close the browser when prompted and return to Visual Studio Code.
 
 The **ACCOUNTS** section of the sidebar shows the two accounts separately. It also lists the number of usable Azure subscriptions available to you. Ensure you have at least one usable Azure subscription available. If not, sign out and use a different account.
 
@@ -349,7 +352,7 @@ Now let's go ahead and learn how to deploy one of the apps to Azure using Agents
 1. Sign in to Microsoft 365 with Agents Toolkit CLI:
 
 ``` bash
-atk account login m365
+ atk account login m365
 ```
 
 Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
@@ -378,6 +381,7 @@ Now let's go ahead and learn how to deploy one of the apps to Azure using Agents
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Run+the+deployed+app&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-javascript%3Ftabs%3Dvscode%252Ccli%252Cviscode%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-javascript.yml&documentVersionIndependentId=e473e1f3-69f5-bcfa-bcab-54b098b59c80&platformId=49d016cb-d1f9-dbb1-b10d-01f7dd6fcf5f&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 <!-- markdownlint-disable MD033 -->
+
  <details>
  <summary>Learn what happens when you deployed your app to Azure</summary>
 
@@ -393,7 +397,7 @@ Deployment is a two-step process. You provision the resources on an active Azure
 
 </details>
 
-### Congratulations
+## Congratulations
 
 You've done it!
 
