@@ -5,12 +5,12 @@ ms.localizationpriority: high
 author: "surbhigupta"
 ms.topic: overview
 ms.owner: mehakagarwal
-ms.date: 09/30/2025
+ms.date: 11/06/2025
 ---
 
-# Import external platform messages to Teams via Microsoft Graph
+# Import external platform messages to Teams with Microsoft Graph
 
-Use Microsoft Graph to import users' existing message history and data from an external system into Teams. Users can continue their conversations seamlessly without interruption, by recreating the messaging hierarchy from a third-party platform directly within Teams.
+Use Microsoft Graph to import users' existing message history and data from an external system into Teams. Users can continue their conversations seamlessly without interruption, as their messaging hierarchy from the third-party platform is recreated directly within Teams.
 
 > [!NOTE]
 > In the future, Microsoft might require you or your customers to pay extra fees based on the amount of data imported.
@@ -21,27 +21,27 @@ Delegated authentication isn't supported.
 
 |ScopeName|DisplayName| Type|APIs covered|
 |---------|---------|---------|---------|
-| `Teamwork.Migrate.All`|  Manage migration to Microsoft Teams | Application-only  |`POST /teams`|
+| `Teamwork.Migrate.All`| Manage migration to Microsoft Teams | Application-only|`POST/teams`|
 
-### Supported channel and chat types
+## Supported channel and chat types
 
 |Entities |Sub type  |Migration mode support |Notes|
 |---------|---------|---------|---------|
 |**Channels** | Standard, Private, Shared | New and existing | Channels must be created or already in migration mode |
 |**Chats** | Group, 1:1 | New and existing | Meeting chats not supported; external members supported |
 
-## Understand the import process
+## Import historical messages into Teams
 
-You can import historical messages seamlessly, in both; existing and newly created channels or chats by performing the following steps:
+You can import historical messages seamlessly, in both; the existing and newly created channels or chats by performing the following steps:
 
-1. [Create or use an existing channel or chat](#step-1-create-or-use-an-existing-channel-or-chat)
+1. [Create new or use an existing channel or chat](#step-1-create-new-or-use-an-existing-channel-or-chat)
 1. [Enable migration mode to import messages](#step-2-enable-migration-mode-to-import-messages)
-1. [Check the migration status](#step-3-check-the-migration-status)
+1. [Check migration status](#step-3-check-migration-status)
 1. [Import messages](#step-4-import-messages)
-1. [Complete channel and chat migration](#step-5-complete-channel-and-chat-migration)
+1. [Complete migration](#step-5-complete-migration)
 1. [Call GET API to verify migrationMode](#step-6-call-get-api-to-verify-migrationmode)
 
-## Step 1: Create or use an existing channel or chat
+## Step 1: Create new or use an existing channel or chat
 
 You can create a new channel or chat in a team, or use existing ones, to migrate users' message history from an external application to Teams.
 
@@ -59,7 +59,7 @@ You can create a new channel or chat in a team, or use existing ones, to migrate
 POST  /teams/{team-id}/channels/{channel-id}/startMigration
 {
   
-"conversationcreationDateTime": "2024-01-01T00:00:00Z"
+"conversationCreationDateTime": "2024-01-01T00:00:00Z"
 }
 ```
 
@@ -80,7 +80,7 @@ Example:
 ```HTTP
 POST https://graph.microsoft.com/beta/teams/57fb72d0-d811-46f4-8947-305e6072eaa5/channels/19:4b6bed8d24574f6a9e436813cb2617d8@thread.tacv2/startMigration
 {
-“conversationcreationDateTime”: “2024-01-01T00:00:00Z”
+“conversationCreationDateTime”: “2024-01-01T00:00:00Z”
 }
 
 ```
@@ -95,7 +95,7 @@ The `startMigration` API initiates the message migration process by setting the 
 POST   /chats/{chat-id}/startMigration 
 {
    
-"conversationcreationDateTime": "2024-01-01T00:00:00Z"
+"conversationCreationDateTime": "2024-01-01T00:00:00Z"
 }
 ```
 
@@ -115,14 +115,14 @@ Example:
 POST https://graph.microsoft.com/beta/teams/57fb72d0-d811-46f4-8947-305e6072eaa5/channels/19:4b6bed8d24574f6a9e436813cb2617d8@thread.tacv2/startMigration 
 
 { 
-“conversationcreationDateTime”: “2024-01-01T00:00:00Z” 
+“conversationCreationDateTime”: “2024-01-01T00:00:00Z” 
 } 
 
 ```
 
 ---
 
-## Step 3: Check the migration status
+## Step 3: Check migration status
 
 Call `GET channel` or `GET chat` APIs to confirm that the `migrationMode` property is set to `inProgress`. For more information, see:
 
@@ -272,7 +272,7 @@ HTTP/1.1 200 OK
 }
 ```
 
-## Step 5: Complete channel and chat migration
+## Step 5: Complete migration
 
 Use the `completeMigration` API to finish the migration process for both new and existing channels and chats, as follows:
 
