@@ -50,10 +50,11 @@ You can create a new channel or chat in a team, or use the ones existing on Team
 * Use the `startMigration` API, to enable migration mode on Teams channels or chats, and allow import of historical messages.
 * Define a minimum timestamp for messages to be migrated. The provided timestamp must be older than the channel or chat’s current `createdDateTime`. The provided timestamp replaces the existing `createdDateTime` of the channel.
 * The`creationDateTime`property is optional in a request body. If omitted, the `startMigration` API uses the current date and time as a minimum timestamp.
+* The `startMigration` API initiates the message migration process by setting the `migrationMode` property to `inProgress` for a specified channel or chat.
 
 ### [Channel migration](#tab/channelmigration)
 
-#### Channel request
+#### request
 
 ```HTTP
 POST  /teams/{team-id}/channels/{channel-id}/startMigration
@@ -65,17 +66,15 @@ POST  /teams/{team-id}/channels/{channel-id}/startMigration
 
 `conversationCreationDateTime` must be greater than the minimum value for`DateTimeOffset` and less than the current value of the channel's `createdDateTime`.
 
-#### Channel response
+#### response
 
-If the request is successful, the method returns the following status:
+If the request is successful, the method returns an empty status:
 
 ```http
 HTTP/1.1 204 No Content
 ```
 
-The response body is empty.
-
-Example:
+**Example**:
 
 ```HTTP
 POST https://graph.microsoft.com/beta/teams/57fb72d0-d811-46f4-8947-305e6072eaa5/channels/19:4b6bed8d24574f6a9e436813cb2617d8@thread.tacv2/startMigration
@@ -87,9 +86,7 @@ POST https://graph.microsoft.com/beta/teams/57fb72d0-d811-46f4-8947-305e6072eaa5
 
 ### [Chat migration](#tab/chatmigration)
 
-The `startMigration` API initiates the message migration process by setting the `migrationMode` property to `inProgress` for a specified chat.
-
-#### Chat request
+#### request
 
 ```HTTP
 POST   /chats/{chat-id}/startMigration 
@@ -99,17 +96,15 @@ POST   /chats/{chat-id}/startMigration
 }
 ```
 
-#### Chat response
+#### response
 
-If the request is successful, the method returns the following status:
+If the request is successful, the method returns an empty status:
 
 ```http
 HTTP/1.1 204 No Content
 ```
 
-The response body is empty.
-
-Example:
+***Example**:
 
 ```HTTP
 POST https://graph.microsoft.com/beta/teams/57fb72d0-d811-46f4-8947-305e6072eaa5/channels/19:4b6bed8d24574f6a9e436813cb2617d8@thread.tacv2/startMigration 
@@ -131,7 +126,7 @@ Call `GET channel` or `GET chat` APIs to confirm that the `migrationMode` proper
 
 ### Step 4: Import messages
 
-Use the `POST` API to import back-in-time messages using the `createdDateTime`  and `from` keys in the request body.
+Use the `POST` API to import back-in-time messages using the `createdDateTime`  and  from keys in the request body.
 
 > [!NOTE]
 >
@@ -212,8 +207,7 @@ HTTP/1.1 200 OK
 
 > [!NOTE]
 >
-> * There are no special permission scopes in this scenario since the request is part of `chatMessage`.
-> * The scopes for `chatMessage` apply here.
+> No additional permission scopes are required. Use the standard `chatMessage` scopes.
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/messages
@@ -274,7 +268,7 @@ HTTP/1.1 200 OK
 
 ### Step 5: Complete migration
 
-Use the `completeMigration` API to finish the migration process for both new and existing channels and chats, as follows:
+Use the `completeMigration` API to finish the migration process for both new and existing channels and chats.
 
 ### Complete channel migration
 
@@ -300,9 +294,10 @@ POST /chats/{chat-id}/completeMigration
 
 ### Step 6: Call GET API to verify migrationMode
 
-Call `GET channel` or `GET chat` APIs, to verify that the `migrationMode` property is marked as completed.
+Call `GET channel` or `GET chat` APIs, to verify that the `migrationMode` property is marked as completed. For more information, see [GET channel](/graph/api/channel-get?view=graph-rest-1.0&tabs=http&preserve-view=true) or
+[GET chat](/graph/api/chat-get?view=graph-rest-1.0&tabs=http&preserve-view=true)
 
-### Import content scope
+## Import content scope
 
 The following table provides the content scope:
 
