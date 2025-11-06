@@ -293,8 +293,11 @@ Teams web client opens in a browser window.
 
 1. Sign in with your Microsoft 365 account, if prompted.
 1. Select **Add** when prompted to upload the custom app onto Teams on your local machine.
+
 :::image type="content" source="../assets/images/toolkit-v2/first-tab/add-tab-app-local-debug.png" alt-text="Screenshot shows to add the app to Teams.":::
+
 1. Congratulations, your first app is running on Teams!
+
 :::image type="content" source="../assets/images/toolkit-v2/first-tab/tab-app-localdebug.png" alt-text="Screenshot shows the completed app" lightbox="../assets/images/toolkit-v2/first-tab/tab-app-localdebug-1.png":::
 
 > [!NOTE]
@@ -304,8 +307,6 @@ You can add SSO feature to retrieve the user details. You can do normal debuggin
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Build+and+run+your+app+locally+in+Visual+Studio+Code&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-javascript%3Ftabs%3Dvscode%252Cvsc%252Cviscode%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-javascript.yml&documentVersionIndependentId=e473e1f3-69f5-bcfa-bcab-54b098b59c80&platformId=49d016cb-d1f9-dbb1-b10d-01f7dd6fcf5f&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
-
-<!-- markdownlint-disable MD033 -->
 
 <details>
 
@@ -380,9 +381,8 @@ Now let's go ahead and learn how to deploy one of the apps to Azure using Agents
 >[!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Run+the+deployed+app&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-javascript%3Ftabs%3Dvscode%252Ccli%252Cviscode%26tutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-javascript.yml&documentVersionIndependentId=e473e1f3-69f5-bcfa-bcab-54b098b59c80&platformId=49d016cb-d1f9-dbb1-b10d-01f7dd6fcf5f&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
-<!-- markdownlint-disable MD033 -->
-
  <details>
+
  <summary>Learn what happens when you deployed your app to Azure</summary>
 
 Before deployment, the application has been running locally:
