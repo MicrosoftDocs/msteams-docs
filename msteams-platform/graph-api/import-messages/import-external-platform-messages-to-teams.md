@@ -41,11 +41,11 @@ You can import historical messages seamlessly, in both; the existing and newly c
 1. [Complete migration](#step-5-complete-migration)
 1. [Call GET API to verify migrationMode](#step-6-call-get-api-to-verify-migrationmode)
 
-## Step 1: Create new or use an existing channel or chat
+### Step 1: Create new or use an existing channel or chat
 
-You can create a new channel or chat in a team, or use existing ones, to migrate users' message history from an external application to Teams.
+You can create a new channel or chat in a team, or use the ones existing on Teams, to migrate users' message history from an external application to Teams.
 
-## Step 2: Enable migration mode to import messages
+### Step 2: Enable migration mode to import messages
 
 * Use the `startMigration` API, to enable migration mode on Teams channels or chats, and allow import of historical messages.
 * Define a minimum timestamp for messages to be migrated. The provided timestamp must be older than the channel or chat’s current `createdDateTime`. The provided timestamp replaces the existing `createdDateTime` of the channel.
@@ -122,14 +122,14 @@ POST https://graph.microsoft.com/beta/teams/57fb72d0-d811-46f4-8947-305e6072eaa5
 
 ---
 
-## Step 3: Check migration status
+### Step 3: Check migration status
 
 Call `GET channel` or `GET chat` APIs to confirm that the `migrationMode` property is set to `inProgress`. For more information, see:
 
 * [GET channel](/graph/api/channel-get?view=graph-rest-1.0&tabs=http&preserve-view=true)
 * [GET chat](/graph/api/chat-get?view=graph-rest-1.0&tabs=http&preserve-view=true)
 
-## Step 4: Import messages
+### Step 4: Import messages
 
 Use the `POST` API to import back-in-time messages using the `createdDateTime`  and `from` keys in the request body.
 
@@ -272,7 +272,7 @@ HTTP/1.1 200 OK
 }
 ```
 
-## Step 5: Complete migration
+### Step 5: Complete migration
 
 Use the `completeMigration` API to finish the migration process for both new and existing channels and chats, as follows:
 
@@ -298,7 +298,7 @@ POST /teams/{team-id}/channels/{channel-id}/completeMigration
 POST /chats/{chat-id}/completeMigration 
 ```
 
-## Step 6: Call GET API to verify migrationMode
+### Step 6: Call GET API to verify migrationMode
 
 Call `GET channel` or `GET chat` APIs, to verify that the `migrationMode` property is marked as completed.
 
