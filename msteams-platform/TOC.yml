@@ -615,6 +615,9 @@
     - name: Optimize bots with rate limits
       href: bots/how-to/rate-limit.md
       displayName: handle rate limit, detect transient exceptions, per thread limit, exponential backoff
+    - name: Apps for shared and private channels
+      href: build-apps-for-shared-private-channels.md
+      displayName: shared channels, private channels
     - name: Explore advanced bot capabilities
       items:
       - name: Modify Teams bot API to fetch team or chat members
@@ -673,6 +676,9 @@
       - name: Apps for shared channels
         href: concepts/build-and-test/shared-channels.md
         displayName: Cross-tenant notifications, context for shared channel, apps and permissions in shared channels
+      - name: Apps for shared and private channels
+        href: build-apps-for-shared-private-channels.md
+        displayName: shared channels, private channels
       - name: Send activity feed notifications
         href: /graph/teams-send-activityfeednotifications?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
         displayName: activity feed, notification, customize notification
