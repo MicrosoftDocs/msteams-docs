@@ -480,7 +480,7 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-* ***November 4, 2025***: [Add app profile hovercard to your agent or app.](bots/how-to/teams-conversational-ai/ai-ux.md#enable-app-profile-card)
+* ***November 7, 2025***: [Add app profile hovercard to your agent or app.](bots/how-to/teams-conversational-ai/ai-ux.md#enable-app-profile-card)
 
 <!--
 **2025 May**
