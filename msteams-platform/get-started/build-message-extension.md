@@ -60,8 +60,8 @@ The message extension capability lets you interact with a web service through bu
 
 There are two types of Teams message extensions:
 
-- [Search commands](../msteams-platform/messaging-extensions/how-to/search-commands/define-search-command.md): You can search external systems and insert the results into a message in the form of a card.
-- [Action commands](../msteams-platform/messaging-extensions/how-to/action-commands/define-action-command.md): You can present your users with a modal pop-up to collect or display information. Then, you can process their interaction and send the information back to Teams.
+- [Search commands](../messaging-extensions/how-to/search-commands/define-search-command.md): You can search external systems and insert the results into a message in the form of a card.
+- [Action commands](../messaging-extensions/how-to/action-commands/define-action-command.md): You can present your users with a modal pop-up to collect or display information. Then, you can process their interaction and send the information back to Teams.
 
 Let's create a message extension app with a search command. First, set up a new Teams project for creating the message extension app.
 
@@ -93,7 +93,7 @@ If the prerequisites are in place, let's begin!
 
 1. Select **Custom Search Results**.
 
-:::image type="content" source="..assets/images/toolkit-v2/first-msgext/select-capabilities-mex1.png" alt-text="Screenshot shows the option to select the capabilities of a new app.":::
+:::image type="content" source="../assets/images/toolkit-v2/first-msgext/select-capabilities-mex1.png" alt-text="Screenshot shows the option to select the capabilities of a new app.":::
 
 1. Select **Start with a Bot**.
 
@@ -117,19 +117,19 @@ You can also change the default location by the following steps:
 
 1. Select **Select Folder**.
 
-:::image type="content" source=".. /assets/images/toolkit-v2/select-folder.png" alt-text="Screenshot shows how to select the location for the project workspace folder.":::
+:::image type="content" source="../assets/images/toolkit-v2/select-folder.png" alt-text="Screenshot shows how to select the location for the project workspace folder.":::
 
 1. Enter a suitable name for your app. Select **Enter**.
 
-:::image type="content" source="..assets/images/toolkit-v2/first-msgext/enter-project-name.png" alt-text="Screenshot shows the option to enter the app name.":::
+:::image type="content" source="../assets/images/toolkit-v2/first-msgext/enter-project-name.png" alt-text="Screenshot shows the option to enter the app name.":::
 
 Agents Toolkit creates the app in a few seconds.
 
-:::image type="content" source="../msteams-platform/assets/images/toolkit-v2/first-msgext/app-created-mex.png" alt-text="Screenshot shows the newly created message extension app." lightbox="../msteams-platform/assets/images/toolkit-v2/first-msgext/app-created-mex.png":::
+:::image type="content" source="../assets/images/toolkit-v2/first-msgext/app-created-mex.png" alt-text="Screenshot shows the newly created message extension app." lightbox="../assets/images/toolkit-v2/first-msgext/app-created-mex.png":::
 
 After your app is created, Agents Toolkit displays the following message:
 
-:::image type="content" source="../msteams-platform/assets/images/toolkit-v2/preview-project-msg.png" alt-text="Screenshot shows a dialog saying that the message extension app is created.":::
+:::image type="content" source="../assets/images/toolkit-v2/preview-project-msg.png" alt-text="Screenshot shows a dialog saying that the message extension app is created.":::
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+your+message+extension+project+workspace+using+Visual+Studio+Code&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-msgext%3Ftabs%3Dvscode%252Cvsc1%252Cvsc2%252Cmsgext%252Cvsc3%252Cvsc4%26tutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-msgext.yml&documentVersionIndependentId=d0c82a43-2f4a-ad2e-251e-922e2e357806&platformId=e2feec5c-06f2-6065-f4a5-2e2947f00b97&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
@@ -270,11 +270,11 @@ When you debug the app for the first time, Teams downloads the dependencies and 
 
 1. A dialog box opens to let you add the message extension app to Teams. Select **Add**.
 
-:::image type="content" source="../assets/images/toolkit-v2/first-msgext/add-mex-app-local-debug-latest.png" alt-text="Screenshot shows the option to add the custom app in Teams." lightbox="../msteams-platform/assets/images/toolkit-v2/first-msgext/add-mex-app-local-debug.png":::
+:::image type="content" source="../assets/images/toolkit-v2/first-msgext/add-mex-app-local-debug-latest.png" alt-text="Screenshot shows the option to add the custom app in Teams." lightbox="../assets/images/toolkit-v2/first-msgext/add-mex-app-local-debug.png":::
 
 Teams loads the message extension app.
 
-:::image type="content" source="../assets/images/toolkit-v2/first-msgext/app-added-mex-local-debug-2.png" alt-text="Screenshot shows the message extension app open in a Teams bot chat." lightbox="../msteams-platform/assets/images/toolkit-v2/first-msgext/app-added-mex-local-debug-2.png":::
+:::image type="content" source="../assets/images/toolkit-v2/first-msgext/app-added-mex-local-debug-2.png" alt-text="Screenshot shows the message extension app open in a Teams bot chat." lightbox="../assets/images/toolkit-v2/first-msgext/app-added-mex-local-debug-2.png":::
 
 As message extension apps rely on bots for enabling communication between the user and the web service, your app loads in to a chat feature of a bot.
 
