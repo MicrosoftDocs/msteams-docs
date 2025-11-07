@@ -215,7 +215,7 @@
       displayName: ACP
   - name: SDKs
     items:
-    - name: Teams AI library v2 (preview)
+    - name: Teams SDK
       href: /microsoftteams/platform/teams-ai-library/welcome
     - name: TeamsFx SDK
       href: toolkit/TeamsFx-SDK.md
