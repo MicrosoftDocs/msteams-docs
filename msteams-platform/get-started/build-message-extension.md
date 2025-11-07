@@ -12,97 +12,40 @@ A message extension allows the users to interact with your web service through b
 
 :::image type="content" border="false" source="../assets/images/get-started/get-started-me.png" alt-text="Screenshot shows you the conceptual message extension in Teams client.":::
 
-In this tutorial, you'll learn to build a search-based message extension app, and the app allows users to search npm packages from the Node Package Manager (npm) directory.
+Start Microsoft Teams app development with your first Teams app using JavaScript.
 
-Get familiarized with search based message extension app in one of the following ways:
+In this tutorial, you'll learn:
 
-* **GitHub Codespaces**: The codespace instance allows you to experience a Teams app instantaneously. It opens Visual Studio Code (VS Code), where the Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) extension, the app source code, and all the dependencies are pre-packaged for you.
-* **Step-by-step guide**: Allows you to set up your development environment and build a Teams app from start.
+- How to set up a new project with Microsoft 365 Agents Toolkit (previously known as Teams Toolkit).
+- How to build a message extension app.
+- How to deploy your app.
 
-# [GitHub Codespaces](#tab/agentstoolkitcodespaces)
+You'll see the following output after you complete this guide:
 
-Before you create your codespace, ensure that you have the following prerequisites:
+:::image type="content" source="../assets/images/toolkit-v2/first-msgext/app-added-mex-local-debug.png" alt-text="Screenshot shows the final output of the message extension app in Teams." lightbox="../assets/images/toolkit-v2/first-msgext/app-added-mex-local-debug.png":::
 
-* A GitHub account to create your codespace instance
-* A [Microsoft 365 account](https://developer.microsoft.com/microsoft-365/dev-program) with custom app upload permission
-* A [Microsoft 365 tenant](../concepts/build-and-test/prepare-your-o365-tenant.md)
+## Prerequisites
 
-> [!TIP]
-> [GitHub Codespaces](https://github.com/features/codespaces) offers free plan up to a fixed amount of usage per month. If you need to free up more space, go to [github.com/codespaces](https://github.com/codespaces) and delete the codespaces that you no longer need.
+Ensure you install the following tools for building and deploying your apps.
 
-To create a search-based message extension app with GitHub Codespaces, follow these steps:
+   | &nbsp; | Install | For using... |
+   | --- | --- | --- |
+   | **Required** | &nbsp; | &nbsp; |
+   | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript or TypeScript build environments. Use the latest version. |
+   | &nbsp; | [Microsoft 365 Agents Toolkit](#install-microsoft-365-agents-toolkit) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
+   | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Backend JavaScript runtime environment. For more information, see [Node.js version compatibility table](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
+   | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Collaborate with people you work with through apps for chats, meetings, and calls in one place.|
+   | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools essential for debugging and testing. |
+   | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with appropriate permissions to install a custom app. |
+   | **Optional** | &nbsp; | &nbsp; |
+   | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
+   | &nbsp; | [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) or [React Developer Tools for Microsoft Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil) | A browser DevTools extension for the open-source React JavaScript library. |
 
-1. Select the following button to open GitHub Codespaces.
-
-    <a href="https://github.com/codespaces/new?hide_repo_select=true&ref=v3&repo=348288141&machine=basicLinux32gb&location=WestUs2&devcontainer_path=.devcontainer%2Fnpm-search-message-extension-codespaces%2Fdevcontainer.json&resume=1" target="_blank"><img src="https://github.com/codespaces/badge.svg" alt="Open message extension in GitHub Codespaces"></a>
-
-   You might be asked to sign in to GitHub account if you haven't already.
-
-1. Select **Create new codespace**.
-
-   :::image type="content" source="../assets/images/get-started/codespace.png" alt-text="Screenshot shows you the GitHub page to create a codespace for message extension.":::
-
-   The **Setting up your codespace** page appears.
-
-   :::image type="content" source="../assets/images/get-started/building-codespace.png" alt-text="Screenshot shows you the codespace building your message extension.":::
-
-   Agents Toolkit prepares the message extension for you and opens it in VS Code in the browser. The Microsoft 365 Agents Toolkit icon appears in the activity bar of VS Code.
-
-1. Select **Sign in to your Microsoft 365** and **Sign in to Azure** to sign in with your Microsoft 365 account.
-
-   :::image type="content" source="../assets/images/get-started/codespace/me-sign-in.png" alt-text="Screenshot shows you the Agents Toolkit window in browser to sign in."lightbox="../assets/images/get-started/add-tab-in-teams.png":::
-
-    > [!NOTE]
-    >
-    > When you build your app, GitHub Codespaces loads it to the Teams client in a new tab. If your browser blocks pop-up tabs or windows, you'll need to allow pop-ups for your app to open.
-
-1. Select **Preview your Teams App (F5)** to build your message extension.
-
-      :::image type="content" source="../assets/images/get-started/codespace/me-preview-teams.png" alt-text="Screenshot shows you the Agents Toolkit window in browser with your message extension."lightbox="../assets/images/get-started/codespace/me-preview-teams.png":::
-
-      GitHub Codespaces builds your message extension app, loads it to Teams client, and opens in a separate browser tab.
-
-1. Select **Add** to install your message extension in Teams.
-
-   :::image type="content" source="../assets/images/get-started/codespace/me-in-teams.png" alt-text="Screenshot of the app details dialog to add the message extension app in Teams.":::
-
-1. Select **Open** to open the app in personal scope.
-
-   :::image type="content" source="../assets/images/get-started/codespace/me-in-teams-scope.png" alt-text="Screenshot of the scope selection dialog to open the app in personal scope.":::
-
-   You've successfully created the search-based message extension and loaded in the Teams client.
-
-   :::image type="content" source="../assets/images/get-started/codespace/me-teams-chat.png" alt-text="Screenshot shows your message extension loaded in the Teams client.":::
-
- > [!div class="nextstepaction"]
- > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Build+a+message+extension+app+using+GitHub+Codespaces&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fget-started%2Fbuild-message-extension%3Ftabs%3Dagentstoolkitcodespaces&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fget-started%2Fbuild-message-extension.md&documentVersionIndependentId=4f4e5027-7a0b-30e1-dc4b-d2bd8daee892&platformId=03898b42-3609-cc37-16a8-a24f488a9b12&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
-
-# [Step-by-step guide](#tab/step-by-step-guide)
-
-If you want to learn how to start a project with Agents Toolkit from the beginning, you'll need to set up your development environment. Select the following button to start building your message extension app.
+[!INCLUDE [Set up prerequisites](includes/get-started/prepare-toolkit.md)]
 
 > [!div class="nextstepaction"]
-> [Build your first message extension app using JavaScript](../sbs-gs-msgext.yml)
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Prepare+development+environment&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-msgext%3Ftabs%3Dvscode%252Cvsc1%252Cvsc2%252Cmsgext%252Cvsc3%252Cvsc4%26tutorial-step%3D1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-msgext.yml&documentVersionIndependentId=d0c82a43-2f4a-ad2e-251e-922e2e357806&platformId=e2feec5c-06f2-6065-f4a5-2e2947f00b97&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
----
+## Get a free Azure account
 
-For more information on message extensions, see [message extensions](../messaging-extensions/what-are-messaging-extensions.md).
-
-If a bot is what you are interested in, select the following:
-
-> [!div class="nextstepaction"]
-> [Start building a bot](build-notification-bot.md)
-
-If you want to build basic tab app, select the following:
-
-> [!div class="nextstepaction"]
-> [Build your basic tab app](build-basic-tab-app.md)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Tool options and code samples](tool-options-and-code-samples.md)
-
-## See also
-
-[npm directory](https://www.npmjs.com/)
+If you want to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
