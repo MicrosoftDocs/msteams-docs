@@ -246,7 +246,11 @@ To update your app's code:
 
 ### Consent dialog for getting access token
 
-If the app user is using the application for the first time and user consent is required, the following dialog box appears:
+The user needs to consent to the permissions requested by the bot app to get the access token. The consent dialog appears based on the scope of the app.
+
+- **In personal (1:1) chats**
+
+When the app user is using the application for the first time and user consent is required, the following dialog box appears:
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-consent.png" alt-text="Consent dialog for bot SSO" border="false":::
 
@@ -257,6 +261,25 @@ When the user selects **Continue**, one of the following events occurs:
 - If the bot doesn't have a sign-in button on the OAuth card, app user consent is required for a minimal set of permissions. This token is useful for basic authentication and to get the app user's email address.
 
 The consent dialog that appears is for open-id scopes defined in Microsoft Entra ID. The app user must give consent only once. After consenting, the app user can access and use your bot app for the granted permissions and scopes.
+
+- **In group chats**
+
+When a bot is added to a group chat for the first time and consent is required for a particular user, the following dialog box appears:
+
+:::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-permission-adaptive-card.png" alt-text="consent dialog box for user in group chats":::
+
+>[!NOTE]
+>Only the user who @mentions bot is able to see this consent dialog box.
+
+- If the user selects **Add**, a permissions dialog box appears to the user exclusively.
+
+  :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-permissions-dialog-box.png" alt-text="permissions dialog box":::
+
+ The user must select **Accept** to give consent.
+
+- If the user declines, or the request times out, the user has to @mention bot again to grant permission for token acquisition. The group sees a public message that the action was not completed.
+
+  :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/request-times-out.png" alt-text="consent denied or request times out":::
 
 > [!NOTE]
 > After the app user consents, they're not required to consent again for any other permissions. If the permissions defined in Microsoft Entra scope are modified, then the app user might need to consent again. If, however, the consent prompt fails to let the app user access, the bot app falls back to sign-in card.
