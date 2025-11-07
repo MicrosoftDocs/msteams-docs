@@ -12,7 +12,7 @@ Microsoft Teams platform empowers you as developers to create intelligent and co
 
 ## What is Teams platform?
 
-Teams is evolving from a communication hub into a collaborative and intelligent platform with agents where people, data, and AI come together. You can build agents in Teams using Teams AI library. It enables natural, conversational, and context-aware experiences powered by large language models (LLMs).
+Teams is evolving from a communication hub into a collaborative and intelligent platform with agents where people, data, and AI come together. You can build agents in Teams using Teams SDK. It enables natural, conversational, and context-aware experiences powered by large language models (LLMs).
 You can continue to create Teams apps, and extend Teams capabilities for task-specific workflows, data, visualization, and integration with enterprise systems.
 
 Take a look at these example developer personas and agent or app scenarios:
