@@ -46,14 +46,6 @@ To create a basic Teams app:
 
     :::image type="content" source="../assets/images/toolkit-v2/first-tab/select-capabilities-tabapp_1.png" alt-text="Screenshot shows the App Capability to select.":::
 
-<!--1. Select **Basic Tab** as app capability.
-
-    :::image type="content" source="../assets/images/toolkit-v2/first-tab/select-basic-tab.png" alt-text="Screenshot shows the option to select App Feature using a Tab as Basic Tab.":::
-
-1. Select **JavaScript** as the programming language.
-
-    :::image type="content" source="../assets/images/toolkit-v2/first-tab/select-language-tab_1.png" alt-text="Screenshot shows the programming language to select.":::
--->
 1. Select **Default folder** to store your project root folder in the default location.
 
     :::image type="content" source="../assets/images/toolkit-v2/first-tab/select-default-location.png" alt-text="Screenshot shows the default location option to select.":::
