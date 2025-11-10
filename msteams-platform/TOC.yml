@@ -1,27 +1,29 @@
 - name: Microsoft Teams Platform documentation
   href: mstdd-landing.yml
 - name: Overview
-  expanded: false 
-  items:
-  - name: Why build on Teams platform
-    href: overview.md
-    displayName: why build apps with Microsoft Teams platform
-  - name: From ideas to Teams app
-    href: overview-story.md
-    displayName: Teams app user experience, user scenario
-  - name: Explore Teams platform features
-    href: overview-explore.md
-  - name: The Teams solution
-    href: overview-solution.md
-    displayName: develop Teams app, app development, tools used
+  href: overview.md
+  displayName: why build apps with Microsoft Teams platform
+#  - name: From ideas to Teams app
+#    href: overview-story.md
+#    displayName: Teams app user experience, user scenario
+#  - name: Explore Teams platform features
+#    href: overview-explore.md
+#  - name: The Teams solution
+#    href: overview-solution.md
+#    displayName: develop Teams app, app development, tools used
 - name: What's new?
   href: whats-new.md
   displayName: Teams platform features, latest updates, RSS feed, deprecated, announcement, preview
 - name: Glossary
   href: get-started/glossary.md
   displayName: App tray, terminologies, definitions, welcome, new word, meaning
-- name: Build agents using Teams AI library
+- name: Build agents using Teams SDK
   items:
+  - name: Agents in Teams
+    href: agents-in-teams/overview.md
+  - name: Build your first agent
+    href: agents-in-teams/build-first-agent.md
+    displayName: create, run, first agent, Teams AI library, custom engine agent, AI bot, JavaScript, Python, C#, code sample
   - name: Build an agent using CLI
     href: /microsoftteams/platform/teams-ai-library/welcome?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     displayName: agent, custom engine agent, AI bot, JavaScript, Python, C#, code sample, Teams AI library
@@ -215,7 +217,7 @@
       displayName: ACP
   - name: SDKs
     items:
-    - name: Teams AI library v2 (preview)
+    - name: Teams AI library
       href: /microsoftteams/platform/teams-ai-library/welcome
     - name: TeamsFx SDK
       href: toolkit/TeamsFx-SDK.md
@@ -402,7 +404,7 @@
   - name: Get started
     expanded: false
     items:
-    - name: Build your Teams app
+    - name: Apps in Teams
       href: get-started/get-started-overview.md
       displayName: build Teams app, new Teams app, GitHub Codespaces, tutorials
     - name: Build a tab app
@@ -1025,7 +1027,7 @@
   - name: Integrate location capabilities
     href: concepts/device-capabilities/location-capability.md
     displayName: attendance
-- name: Extend your app across Microsoft 365
+- name: Extend agents or app across Microsoft 365
   items:
   - name: Overview
     href: m365-apps/overview.md

@@ -38,11 +38,11 @@ Microsoft Teams enables you to build a conversational bot with RAG to create an 
 
    :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/create-new-app.png" alt-text="Screenshot shows the location of the Create New Project link in the Agents Toolkit sidebar.":::
 
-1. Select **Agent for Teams**.
+1. Select **Teams Agents and Apps**.
 
    :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/agent-for-teams.png" alt-text="Screenshot shows the option to select custom engine agent as the new project to create.":::
 
-1. Select **Chat With Your Data**.
+1. Select **Teams Agent with Data**.
 
    :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/chat-with-your-data.png" alt-text="Screenshot shows the option to select app features using AI library list.":::
 
@@ -80,7 +80,7 @@ Microsoft Teams enables you to build a conversational bot with RAG to create an 
 
    :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/application-name.png" alt-text="Screenshot shows the option to enter the suitable name.":::
 
-   You've successfully created your **Chat With Your Data** project workspace.
+   You've successfully created your **Teams Agent with Data** project workspace.
 
    :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/rag-project-output.png" alt-text="Screenshot shows the ai chatbot created and readme file is available.":::
 
