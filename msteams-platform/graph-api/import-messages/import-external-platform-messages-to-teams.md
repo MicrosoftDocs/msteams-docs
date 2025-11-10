@@ -1,27 +1,29 @@
 ---
-title: Import External Platform Messages Using Microsoft Graphs
+title: Import external platform messages to Teams with Microsoft Graphs
 description: Learn how to use Microsoft Graph to import historical messages and data from all third-party platforms to Teams.
 ms.localizationpriority: high
 author: "surbhigupta"
 ms.topic: overview
 ms.owner: mehakagarwal
-ms.date: 11/06/2025
+ms.date: 11/10/2025
 ---
 
-# Import external platform messages to Teams with Microsoft Graph
+# Use Microsoft Graph APIs to import external messages into Teams
 
-Use Microsoft Graph to import users' existing message history and data from an external system into Teams. Users can continue their conversations seamlessly without interruption, as their messaging hierarchy from the third-party platform is recreated directly within Teams.
+Use Microsoft Graph to import users' existing message history and data from any third-party platform into Teams. Users can continue their conversations seamlessly without interruption, as their messaging hierarchy from the third-party platform is recreated directly within Teams.
 
 > [!NOTE]
 > In the future, Microsoft might require you or your customers to pay extra fees based on the amount of data imported.
 
 ## Permissions
 
-Delegated authentication isn't supported.
-
-|ScopeName|DisplayName| Type|APIs covered|
+|ScopeName|DisplayName|Type|APIs covered|
 |---------|---------|---------|---------|
 | `Teamwork.Migrate.All`| Manage migration to Microsoft Teams | Application-only|`POST/teams`|
+
+> [!NOTE]
+> Delegated authentication isn't supported.
+>
 
 ## Supported channel and chat types
 
@@ -30,31 +32,38 @@ Delegated authentication isn't supported.
 |**Channels** | Standard, Private, Shared | New and existing | Channels must be created or already in migration mode |
 |**Chats** | Group, 1:1 | New and existing | Meeting chats not supported; external members supported |
 
+## Prerequisites
+
+Before you set up your Microsoft 365 tenant:
+
+* Verify that a Microsoft 365 tenant exists for the import data. For more information on setting up a Microsoft 365 tenancy for Teams, see [prepare your Microsoft 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).
+* Verify that team members are in Microsoft Entra ID. For more information, see [add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory) to Microsoft Entra ID.
+
 ## Import historical messages into Teams
 
-You can import historical messages seamlessly, in both; the existing and newly created channels or chats by performing the following steps:
+You can import historical messages seamlessly, in both the existing and newly created channels or chats by performing the following steps:
 
-1. [Create new or use an existing channel or chat](#step-1-create-new-or-use-an-existing-channel-or-chat)
+1. [Create a new channel or chat or use an existing one](#step-1-create-a-new-channel-or-chat-or-use-an-existing-one)
 1. [Enable migration mode to import messages](#step-2-enable-migration-mode-to-import-messages)
 1. [Check migration status](#step-3-check-migration-status)
 1. [Import messages](#step-4-import-messages)
 1. [Complete migration](#step-5-complete-migration)
 1. [Call GET API to verify migrationMode](#step-6-call-get-api-to-verify-migrationmode)
 
-### Step 1: Create new or use an existing channel or chat
+### Step 1: Create a new channel or chat or use an existing one
 
-You can create a new channel or chat in a team, or use the ones existing on Teams, to migrate users' message history from an external application to Teams.
+You can create a new channel or chat, or use an existing one, to migrate user's message history from any third-party platform to Teams.
 
 ### Step 2: Enable migration mode to import messages
 
 * Use the `startMigration` API, to enable migration mode on Teams channels or chats, and allow import of historical messages.
 * Define a minimum timestamp for messages to be migrated. The provided timestamp must be older than the channel or chat’s current `createdDateTime`. The provided timestamp replaces the existing `createdDateTime` of the channel.
 * The`creationDateTime`property is optional in a request body. If omitted, the `startMigration` API uses the current date and time as a minimum timestamp.
-* The `startMigration` API initiates the message migration process by setting the `migrationMode` property to `inProgress` for a specified channel or chat.
+* The `startMigration` API initiates the message migration process by setting migration mode to `inProgress` for a specified channel or chat.
 
 ### [Channel migration](#tab/channelmigration)
 
-#### request
+#### Request
 
 ```HTTP
 POST  /teams/{team-id}/channels/{channel-id}/startMigration
@@ -64,9 +73,9 @@ POST  /teams/{team-id}/channels/{channel-id}/startMigration
 }
 ```
 
-`conversationCreationDateTime` must be greater than the minimum value for`DateTimeOffset` and less than the current value of the channel's `createdDateTime`.
+`conversationCreationDateTime` must be greater than the minimum value for <abbr title="Represents date and time with a UTC offset for accurate time zone handling. Example: 2024-01-01T00:00:00+05:30">DateTimeOffset</abbr> and less than the current value of the channel's `createdDateTime`.
 
-#### response
+#### Response
 
 If the request is successful, the method returns an empty status:
 
@@ -86,7 +95,7 @@ POST https://graph.microsoft.com/beta/teams/57fb72d0-d811-46f4-8947-305e6072eaa5
 
 ### [Chat migration](#tab/chatmigration)
 
-#### request
+#### Request
 
 ```HTTP
 POST   /chats/{chat-id}/startMigration 
@@ -96,7 +105,7 @@ POST   /chats/{chat-id}/startMigration
 }
 ```
 
-#### response
+#### Response
 
 If the request is successful, the method returns an empty status:
 
@@ -107,7 +116,7 @@ HTTP/1.1 204 No Content
 ***Example**:
 
 ```HTTP
-POST https://graph.microsoft.com/beta/teams/57fb72d0-d811-46f4-8947-305e6072eaa5/channels/19:4b6bed8d24574f6a9e436813cb2617d8@thread.tacv2/startMigration 
+POST https://graph.microsoft.com/beta/teams/57fb72d0-d811-46f4-8947-305e6072eaa5/chats/19:4b6bed8d24574f6a9e436813cb2617d8@thread.tacv2/startMigration 
 
 { 
 “conversationCreationDateTime”: “2024-01-01T00:00:00Z” 
