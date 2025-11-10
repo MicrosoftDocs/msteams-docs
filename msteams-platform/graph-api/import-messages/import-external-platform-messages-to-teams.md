@@ -73,7 +73,10 @@ POST  /teams/{team-id}/channels/{channel-id}/startMigration
 }
 ```
 
-`conversationCreationDateTime` must be greater than the minimum value for <abbr title="Represents date and time with a UTC offset for accurate time zone handling. Example: 2024-01-01T00:00:00+05:30">DateTimeOffset</abbr> and less than the current value of the channel's `createdDateTime`.
+`conversationCreationDateTime` must be greater than the minimum value for `DateTimeOffset` and less than the current value of the channel's `createdDateTime`.
+
+> [!TIP]
+> Microsoft Graph uses DateTimeOffset to represent date and time with a UTC offset for an accurate time zone.
 
 #### Response
 
