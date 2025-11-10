@@ -276,7 +276,7 @@ The user needs to consent to the permissions requested by the bot app to get the
 
   - If the user declines, or the request times out, the user has to @mention bot again to grant permission for token acquisition. The group sees a public message that the action was not completed.
 
-  :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/request-times-out.png" alt-text="consent denied or request times out":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/request-times-out.png" alt-text="consent denied or request times out":::
 
 > [!NOTE]
 > After the app user consents, they're not required to consent again for any other permissions. If the permissions defined in Microsoft Entra scope are modified, then the app user might need to consent again. If, however, the consent prompt fails to let the app user access, the bot app falls back to sign-in card.

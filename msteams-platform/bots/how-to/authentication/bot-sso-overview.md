@@ -24,7 +24,10 @@ App users sign in to Teams using either personal Microsoft account or Microsoft 
 - The app user needs to give consent to Teams for using the identity to access your bot.
 - The app user can access the app on web, desktop, or mobile client.
 
-In personal scope, the app user interacts with the bot or message extension app in a one-on-one chat. While in group scope, the app user interacts with the bot or message extension app in a group chat or channel without needing to sign in again.[Conceptualized infographics to be added here.]
+In personal scope, the app user interacts with the bot or message extension app in a one-on-one chat. While in group scope, the app user interacts with the bot or message extension app in a group chat or channel without needing to sign in again.
+
+[Conceptualized infographics to be added here.]
+
 The permission scopes for accessing resources remain the same in both personal and group scopes.
 
 > [!NOTE]
