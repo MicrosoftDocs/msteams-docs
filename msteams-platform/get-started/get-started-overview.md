@@ -1,12 +1,12 @@
 ---
 title: Get Started - Overview
-description: Learn how to create your first Microsoft Teams app based on language and developement environments, understand app capabilities, and SDKs.
+description: Learn how to create your first Microsoft Teams app based on language and development environments, understand app capabilities, and SDKs.
 ms.localizationpriority: high
 ms.date: 02/06/2025
 ms.topic: reference
 ---
 
-# Build your Teams app
+# Apps in Teams
 
 Get started with building apps for Microsoft Teams and beyond!
 
