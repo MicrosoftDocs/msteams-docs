@@ -1,6 +1,6 @@
 ---
-title: Use Teams Apps across Microsoft 365
-description: Learn how to extend Teams apps across Microsoft 365 (running in Teams, Outlook, Word, Excel, PowerPoint and Microsoft 365 as application hosts).
+title: Use Agents and Apps across Microsoft 365
+description: Learn how to extend Teams agents and apps across Microsoft 365 (running in Teams, Outlook, Word, Excel, PowerPoint and Microsoft 365 as application hosts).
 ms.date: 11/27/2024
 ms.author: mosdevdocs
 author: erikadoyle
@@ -8,7 +8,7 @@ ms.topic: overview
 ms.localizationpriority: medium
 ms.subservice: m365apps
 ---
-# Extend Teams apps across Microsoft 365
+# Extend agents and apps across Microsoft 365
 
 With the latest releases of [Microsoft Teams JavaScript client library](../tabs/how-to/using-teams-client-library.md) (TeamsJS version 2.0.0 and later), [app manifest](/microsoft-365/extensibility/schema/) (previously called Teams app manifest) (version 1.13 and later), and [Microsoft 365 Agents Toolkit](../toolkit/visual-studio-code-overview.md) (previously known as Teams Toolkit), you can build and update Teams apps to run in other high-usage Microsoft 365 products and publish them to the Microsoft commercial marketplace ([Microsoft AppSource](https://appsource.microsoft.com/)) or your organization's private app store.
 
