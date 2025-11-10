@@ -291,7 +291,7 @@ The scope and permissions are now configured. Next, you must configure the autho
    | d3590ed6-52b3-4102-aeff-aad2292ab01c | Microsoft 365 mobile application </br> Outlook desktop application |
    | bc59ab01-8403-45c6-8796-ac3ef710b3e3 | Outlook web application |
    | 27922004-5251-4030-b22d-91ecd9a37ea4 | Outlook mobile application |
-   | | Microsoft Edge |
+   | c0ab8ce9-e9a0-42e7-b064-33d422df41f1 | Microsoft Edge |
 
 1. Select the application ID URI you created for your app in **Authorized scopes** to add the scope to the web API you exposed.
 
@@ -679,6 +679,7 @@ The scope and permissions are now configured. Next, you must configure the autho
    | d3590ed6-52b3-4102-aeff-aad2292ab01c | Microsoft 365 mobile application </br> Outlook desktop application |
    | bc59ab01-8403-45c6-8796-ac3ef710b3e3 | Outlook web application |
    | 27922004-5251-4030-b22d-91ecd9a37ea4 | Outlook mobile application |
+   | c0ab8ce9-e9a0-42e7-b064-33d422df41f1 | Microsoft Edge |
 
 1. Select the application ID URI you created for your app in **Authorized scopes** to add the scope to the web API you exposed.
 
