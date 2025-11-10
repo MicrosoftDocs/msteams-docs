@@ -73,20 +73,19 @@ POST  /teams/{team-id}/channels/{channel-id}/startMigration
 }
 ```
 
-`conversationCreationDateTime` must be greater than the minimum value for `DateTimeOffset` and less than the current value of the channel's `createdDateTime`.
-
 > [!TIP]
 > Microsoft Graph uses DateTimeOffset to represent date and time with a UTC offset for an accurate time zone.
+>The `conversationCreationDateTime` must be greater than the minimum value for `DateTimeOffset` and less than the current value of the channel's `createdDateTime`.
 
 #### Response
 
-If the request is successful, the method returns an empty status:
+If the request is successful, the method returns an empty status.
 
 ```http
 HTTP/1.1 204 No Content
 ```
 
-**Example**:
+**Example**
 
 ```HTTP
 POST https://graph.microsoft.com/beta/teams/57fb72d0-d811-46f4-8947-305e6072eaa5/channels/19:4b6bed8d24574f6a9e436813cb2617d8@thread.tacv2/startMigration
@@ -108,6 +107,10 @@ POST   /chats/{chat-id}/startMigration
 }
 ```
 
+> [!TIP]
+> Microsoft Graph uses DateTimeOffset to represent date and time with a UTC offset for an accurate time zone.
+>The `conversationCreationDateTime` must be greater than the minimum value for `DateTimeOffset` and less than the current value of the chat's `createdDateTime`.
+
 #### Response
 
 If the request is successful, the method returns an empty status:
@@ -116,7 +119,7 @@ If the request is successful, the method returns an empty status:
 HTTP/1.1 204 No Content
 ```
 
-***Example**:
+**Example**
 
 ```HTTP
 POST https://graph.microsoft.com/beta/teams/57fb72d0-d811-46f4-8947-305e6072eaa5/chats/19:4b6bed8d24574f6a9e436813cb2617d8@thread.tacv2/startMigration 
