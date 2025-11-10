@@ -49,10 +49,7 @@ Teams acts as a social platform where custom apps help extend company culture. P
 
 ## What to build on Teams platform?
 
-Teams platform offers two powerful paths for developers:
-
-- Build an agent in Teams
-- Add Teams capabilities
+Teams platform offers two powerful paths to choose from:
 
 :::row:::
     :::column:::

@@ -34,9 +34,9 @@ Building agents for Teams helps to enhance collaboration and increase productivi
 - **Security and compliance**: Benefit from identity, compliance, and data protection frameworks.
 - **Extensibility across Microsoft 365**: Agents can evolve beyond Teams into other Microsoft 365 experiences using Microsoft 365 Agents SDK.
 
-### Common user scenarios
+### Example user scenario
 
-Here are some scenarios for agents in Teams:
+Here's a knowledge hub scenario for which you can build an agent in Teams:
 
 **Knowledge hub**: Get instant and personalized guidance and support with the knowledge hub agent. This agent is designed to empower students in their academic and career journeys. The agent offers personalized support for course selection, study strategies, career development planning, and academic roadmap creation. By responding to targeted prompts, it helps students make informed decisions about their education and future career paths. This comprehensive tool provides:
 

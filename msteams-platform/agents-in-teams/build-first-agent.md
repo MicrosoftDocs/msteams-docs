@@ -18,10 +18,10 @@ To build an agent in Teams, you’ll need the following:
 | --- | --- |
 | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or Python build environments. Use the latest version. |
 | [Teams SDK](/microsoftteams/platform/teams-ai-library/teams/overview) | A simplified SDK for building intelligent agents. Now GA for JavaScript and C#, and in public preview for Python. |
-| [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
+| [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your agent. Use the latest version.|
 | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
-| [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and calls all in one place.|
-| [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's Generative Pretrained Transformer (GPT). If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
+| [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through agents and apps for chat, meetings, and calls all in one place.|
+| [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's Generative Pretrained Transformer (GPT). If you want to host your agent or access resources in Azure, you must create an Azure OpenAI service.|
 
 ## Set up your environment
 
@@ -41,7 +41,7 @@ For more information about setting up Azure OpenAI services, see:
 
     :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/create-new-agent.png" alt-text="Screenshot shows the location of the option to create a new agent using Microsoft 365 Agents Toolkit sidebar." lightbox="../assets/images/agents-in-teams/first-agent-qsg/create-new-agent.png":::
 
-1. From the **New Project** menu, select **Teams and Agents and Apps**.
+1. From the **New Project** menu, select **Teams Agents and Apps**.
 
     :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/teams-agents.png" alt-text="Screenshot shows the location of the option to create a new agent or app in Teams." lightbox="../assets/images/agents-in-teams/first-agent-qsg/teams-agents.png":::
 
@@ -86,17 +86,17 @@ Microsoft 365 Agents Toolkit creates your agent project and scaffolds the projec
 | Folder | Contents |
 | --- | --- |
 | `.vscode` | Visual Studio Code files for debugging. |
-| `appPackage` | Templates for the Teams app manifest. |
+| `appPackage` | Templates for the Teams manifest. |
 | `env` | Environment files. |
 | `infra` | Templates for provisioning Azure resources. |
-| `src` | The source code for the app. |
+| `src` | The source code for the project. |
 
 ## Run and use your agent in Teams
 
 1. Open your agent project in Visual Studio Code.
 1. Select **Run** > **Start Debugging**, or alternatively, select the **F5** key.
 
-    If all prerequisites are installed, Visual Studio Code uploads and opens your app in Microsoft Teams.
+    If all prerequisites are installed, Visual Studio Code uploads and opens your agent in Microsoft Teams.
 
     :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/run-agent-in-teams.png" alt-text="Screenshot shows the agent opened in Microsoft Teams." lightbox="../assets/images/agents-in-teams/first-agent-qsg/run-agent-in-teams.png":::
 
@@ -111,8 +111,6 @@ Microsoft 365 Agents Toolkit creates your agent project and scaffolds the projec
 Congratulations! You've created and ran your first agent in Teams.
 
 ## Code sample
-
-[WIP: Code sample links to be updated post approval and merge of samples.]
 
 | Sample name | Description | .NET | Node.js | Python |
 |--- |--- | --- | --- | --- |
