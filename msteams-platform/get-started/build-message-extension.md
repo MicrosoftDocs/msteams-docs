@@ -345,7 +345,7 @@ You tested the search feature of the message extension app in the previous step.
 
 1. Enter **/** followed by your message extension app's name in the command box.
 
-   :::image type="content" source="../msteams-platform/assets/images/toolkit-v2/first-msgext/mention-mex-app.png" alt-text="Screenshot shows how to invoke the message extension app.":::
+   :::image type="content" source="../assets/images/toolkit-v2/first-msgext/mention-mex-app.png" alt-text="Screenshot shows how to invoke the message extension app in the command box.":::
 
 The app opens in the command box and you can use it to run a query.
 
