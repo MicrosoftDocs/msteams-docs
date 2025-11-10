@@ -283,3 +283,54 @@ As message extension apps rely on bots for enabling communication between the us
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Build+and+run+your+app+locally&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-msgext%3Ftabs%3Dvscode%252Cvsc1%252Cvsc2%252Cmsgext%252Cvsc3%252Cvsc4%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-msgext.yml&documentVersionIndependentId=d0c82a43-2f4a-ad2e-251e-922e2e357806&platformId=e2feec5c-06f2-6065-f4a5-2e2947f00b97&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+### Test your app
+
+The first time your app loads, the message extension app is open for you to test. This sample app lets you search open-source npm packages from the software registry.
+
+### How to run a search query
+
+# [Message Extension](#tab/msgext)
+
+1. Enter the name of an open-source npm package in the search box of the message extension, such as **cli**. The message extension displays a list of the matching items.
+
+:::image type="content" source="..assets/images/toolkit-v2/first-msgext/mex-search-string.png" alt-text="Screenshot shows a search string in the message extension app.":::
+
+1. Select one of the items from the list. The app creates an Adaptive Card with the item in the message compose area so you can send it in a chat or channel.
+
+:::image type="content" source="../assets/images/toolkit-v2/first-msgext/mex-search-result.png" alt-text="Screenshot shows the search result in the message compose area.":::
+
+1. Select **Enter**. The message extension app sends the Adaptive Card with the item in the chat or channel.
+
+:::image type="content" source="../assets/images/toolkit-v2/first-msgext/mex-search-sent.png" alt-text="Screenshot shows the search result sent in chat.":::
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+How+to+run+a+search+query+using+Message+Extension&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-msgext%3Ftabs%3Dvscode%252Cvsc1%252Cvsc2%252Cmsgext%252Cvsc3%252Cvsc4%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-msgext.yml&documentVersionIndependentId=d0c82a43-2f4a-ad2e-251e-922e2e357806&platformId=e2feec5c-06f2-6065-f4a5-2e2947f00b97&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+# [Command Box](#tab/cmdbox)
+
+1. Enter **/** followed by your message extension app's name in the command box.
+
+:::image type="content" source="../assets/images/toolkit-v2/first-msgext/mention-mex-app.png" alt-text="Screenshot shows how to invoke the message extension app.":::
+
+The message extension app opens in the command box.
+
+1. Enter a name of an open-source npm package and select one of the search results.
+
+:::image type="content" source=".. /assets/images/toolkit-v2/first-msgext/command-box-search.png" alt-text="Screenshot shows a search string in the command box.":::
+
+ The message extension displays the search result as an Adaptive Card in the command box.
+:::image type="content" source="../assets/images/toolkit-v2/first-msgext/command-search-card.png" alt-text="Screenshot shows the search result as a card in the command box.":::
+
+1. Copy the Adaptive Card to paste it in the message compose area.
+
+:::image type="content" source="../assets/images/toolkit-v2/first-msgext/command-search-card-send.png" alt-text="Screenshot shows search result in a card in the message compose area.":::
+
+1. Select **Enter**. The message extension app sends the Adaptive Card with the search result in the most recent chat.
+
+:::image type="content" source="../assets/images/toolkit-v2/first-msgext/command-search-card-sent.png" alt-text="Screenshot shows the search result sent in a chat.":::
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+How+to+run+a+search+query+using+Command+Box&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-msgext%3Ftabs%3Dvscode%252Cvsc1%252Cvsc2%252Ccmdbox%252Cvsc3%252Cvsc4%26tutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-msgext.yml&documentVersionIndependentId=d0c82a43-2f4a-ad2e-251e-922e2e357806&platformId=e2feec5c-06f2-6065-f4a5-2e2947f00b97&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+   ---
