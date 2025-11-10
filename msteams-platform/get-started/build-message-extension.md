@@ -16,9 +16,9 @@ Start Microsoft Teams app development with your first Teams app using JavaScript
 
 In this tutorial, you'll learn:
 
-- How to set up a new project with Microsoft 365 Agents Toolkit (previously known as Teams Toolkit).
-- How to build a message extension app.
-- How to deploy your app.
+- [How to set up a new project with Microsoft 365 Agents Toolkit (previously known as Teams Toolkit)](#create-your-message-extension-project-workspace)
+- [How to build a message extension app](#build-and-run-your-first-message-extension-app)
+- [How to deploy your app](#deploy-your-first-teams-app)
 
 You'll see the following output after you complete this guide:
 
@@ -64,11 +64,6 @@ There are two types of Teams message extensions:
 - [Action commands](../messaging-extensions/how-to/action-commands/define-action-command.md): You can present your users with a modal pop-up to collect or display information. Then, you can process their interaction and send the information back to Teams.
 
 Let's create a message extension app with a search command. First, set up a new Teams project for creating the message extension app.
-
-In this tutorial, you'll learn:
-
-1. [How to set up a new message extension project with Agents Toolkit.](#create-your-message-extension-project-workspace)
-1. [About the directory structure of your app project.](#take-a-tour-of-the-message-extension-app-source-code)
 
 ## Create your message extension project workspace
 
@@ -272,9 +267,9 @@ When you debug the app for the first time, Teams downloads the dependencies and 
 
    :::image type="content" source="../assets/images/toolkit-v2/first-msgext/add-mex-app-local-debug-latest.png" alt-text="Screenshot shows the option to add the custom app in Teams." lightbox="../assets/images/toolkit-v2/first-msgext/add-mex-app-local-debug.png":::
 
-Teams loads the message extension app.
+   Teams loads the message extension app.
 
-:::image type="content" source="../assets/images/toolkit-v2/first-msgext/app-added-mex-local-debug-2.png" alt-text="Screenshot shows the message extension app open in a Teams bot chat." lightbox="../assets/images/toolkit-v2/first-msgext/app-added-mex-local-debug-2.png":::
+   :::image type="content" source="../assets/images/toolkit-v2/first-msgext/app-added-mex-local-debug-2.png" alt-text="Screenshot shows the message extension app open in a Teams bot chat." lightbox="../assets/images/toolkit-v2/first-msgext/app-added-mex-local-debug-2.png":::
 
 As message extension apps rely on bots for enabling communication between the user and the web service, your app loads in to a chat feature of a bot.
 
@@ -313,7 +308,7 @@ The first time your app loads, the message extension app is open for you to test
 
    :::image type="content" source="../assets/images/toolkit-v2/first-msgext/mention-mex-app.png" alt-text="Screenshot shows how to invoke the message extension app.":::
 
-The message extension app opens in the command box.
+   The message extension app opens in the command box.
 
 2. Enter a name of an open-source npm package and select one of the search results.
 
@@ -360,9 +355,9 @@ The app opens in the command box and you can use it to run a query.
    <details>
    <summary>Open your app from message compose area</summary>
 
-2. Select the three dots at the bottom of the message compose area.
+1. Select the three dots at the bottom of the message compose area.
 
-3. Select your message extension app.
+2. Select your message extension app.
 
    :::image type="content" source="../assets/images/toolkit-v2/first-msgext/three-dot-mex.png" alt-text="Screenshot shows how to open the message extension app from message compose area.":::
 
