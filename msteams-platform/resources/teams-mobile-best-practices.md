@@ -5,7 +5,7 @@ ms.author: surbhigupta
 description: Learn how to optimize your tab app performance on Teams mobile with best practices such as using service workers and performance audits.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.date: 03/27/2025
+ms.date: 11/10/2025
 ---
 
 # Best practices for Teams mobile apps
@@ -135,7 +135,7 @@ The performance metrics report contains the following metrics.
 |**Caching (Service Worker)** | This metric shows if [service worker](#use-service-workers-to-cache-static-assets) is implemented as a local caching mechanism*.| If service worker is implemented, **Available** is displayed in green, else **Not Available** is displayed in red. <br> When service worker is **Not Available**, use the link displayed in the report to proceed with implementation.<br> :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/app-audit-report-caching.png" alt-text="screenshot shows caching status for Android" lightbox="../assets/images/tabs/lightweight-audit-tool/app-audit-report-caching.png"::: |
 | **App Package** | This metric indicates the total size occupied by the javascript file bundle of the mobile app.| Ideal package size is 1 MB. If package size exceeds the ideal size of 1 MB, the size is displayed in red. <br> Click **Check bundle files**. <br> :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/app-audit-report-app-package.png" alt-text="Screenshot shows ideal app package size with link to relevant documentation" lightbox="../assets/images/tabs/lightweight-audit-tool/app-audit-report-app-package.png"::: <br> A detailed list of files affecting bundle size appears, in descending order of file size.<br> :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/files-affecting-bundle-size.png" alt-text="Screenshot shows the files affecting bundle size" lightbox="../assets/images/tabs/lightweight-audit-tool/files-affecting-bundle-size.png"::: <br> <br> Use [service worker](#use-service-workers-to-cache-static-assets) and other [best practices](#best-practices-for-teams-mobile-apps) to optimize your app's performance.|
 | **Content Paint Metrics** | This metric indicates all relevant content paint metrics (and their values) for your mobile app. | Content paint metrics show how fast visual elements appear while your app page loads. Use this data to identify and fix delays in visual content rendering.:::image type="content" source="../assets/images/tabs/lightweight-audit-tool/app-audit-report-content-paint-metrics.png" alt-text="screenshot shows content paint metrics":::
-|**Disk Size**| Indicates the app size on your mobile device. | Ideal limit is 20 MB. If an app is larger than 20 MB, the metric is displayed in red else in green. If your app's disk size can’t be calculated, an error message shows up. :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/app-audit-report-disk-size.png" alt-text="":::|
+|**Disk Size**| Indicates the app size on your mobile device. | Ideal limit is 20 MB. If an app is larger than 20 MB, the metric is displayed in red else in green. If your app's disk size can’t be calculated, an error message shows up. :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/app-audit-report-disk-size.png" alt-text="perf report disk size metric":::|
 
 > [!NOTE]
 >
