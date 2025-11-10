@@ -59,7 +59,7 @@ You can create a new channel or chat, or use an existing one, to migrate user's 
 Use the `startMigration` API to enable migration mode on Teams channels or chats, and allow import of historical messages. Migration mode is a special state that prevents certain operations, like sending messages and adding members, during the data migration process.
 Migration mode is a special state that blocks certain operations, such as sending messages and adding members during data migration.
 
-Consider the following:
+Consider the following points:
 
 * Define a minimum timestamp for messages to migrate. The provided timestamp must be older than the channel or chat’s current `createdDateTime`. This timestamp replaces the existing `createdDateTime` of the channel.
 * The`creationDateTime`property is optional in a request body. If omitted, the `startMigration` API uses the current date and time as the minimum timestamp.
@@ -228,7 +228,7 @@ You can receive an error message if the`createdDateTime` property is set for the
 
 > [!NOTE]
 >
-> No additional permission scopes are required. Use the standard `chatMessage` scopes.
+> No other permission scopes are required. Use the standard `chatMessage` scopes.
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/messages
@@ -311,10 +311,11 @@ Use the `completeMigration` API to finish the migration process for both new and
 
 #### Complete channel migration
 
-* When a channel is created in migration mode for the initial import flow, calling the `completeMigration` API updates the `migrationMode` property to completed. This change is permanent and marks the channel as fully migrated.
-* After calling `completeMigration`, you can still import extra messages by using the `startMigration` API.
+When a channel is created in migration mode for the initial import, use the `completeMigration` API to update its migration state to completed. This change ensures that the channel  remains permanently available instead of being dropped after migration.
 
-#### Request for completing channel migration
+For existing channels already in migration mode, use the `completeMigration` API to mark the migration state as completed. After you send a `completeMigration` request for new or existing channels, you can still import more messages by calling the `startMigration` API.
+
+#### Request
 
 ```HTTP
 POST /teams/{team-id}/channels/{channel-id}/completeMigration 
@@ -322,10 +323,9 @@ POST /teams/{team-id}/channels/{channel-id}/completeMigration
 
 #### Complete chat migration
 
-* For existing chats, which are already in migration mode, call the `completeMigration` API to update the `migrationMode` property to completed. This process marks the chat as fully migrated.
-* After calling `completeMigration` on a new or existing chat, you can continue importing messages by using the `startMigration` API.
+For existing chats, which are already in migration mode, call the `completeMigration` API to update the migration mode state to completed. This process marks the chat as fully migrated. After calling `completeMigration` on a new or existing chat, you can continue importing messages by using the `startMigration` API.
 
-#### Request for completing chat migration
+#### Request
 
 ```HTTP
 POST /chats/{chat-id}/completeMigration 
