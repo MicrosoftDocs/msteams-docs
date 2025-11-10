@@ -38,7 +38,7 @@ Teams platform features that are available to all app developers.</br>
 
 **2025 November**
 
-* ***November 6, 2025***: [Teams AI Library v2 has been renamed to *Teams SDK*.](/microsoftteams/platform/teams-ai-library/)
+* ***November 6, 2025***: [Teams AI library v2 has been renamed to *Teams SDK*.](/microsoftteams/platform/teams-ai-library/)
 
 :::column-end:::
 :::row-end:::
