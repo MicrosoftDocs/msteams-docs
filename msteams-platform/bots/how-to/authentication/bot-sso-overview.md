@@ -26,7 +26,7 @@ App users sign in to Teams using either personal Microsoft account or Microsoft 
 
 In personal scope, the app user interacts with the bot or message extension app in a one-on-one chat. While in group scope, the app user interacts with the bot or message extension app in a group chat or channel without needing to sign in again.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-authetication-in-group-scopes-infographic.png" alt-text="infographic showing bot authentication in group scopes":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-authetication-in-group-scopes-infographic.png" alt-text="infographic showing bot authentication in group scopes":::
 
 The permission scopes for accessing resources remain the same in both personal and group scopes.
 
