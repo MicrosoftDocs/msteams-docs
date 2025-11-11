@@ -266,7 +266,7 @@ From the Developer Portal, you can go to Bot Framework portal and configure your
 
 ### Agent Blueprint
 
-An Agent Blueprint provides a reusable configurations for **agent identities**, that can perform tasks and interact. Each blueprint acts as a template that specifies how an agent is configured, authenticated, and connected to a back-end service.
+An Agent Blueprint provides a reusable configurations for **agent identities**, that can perform tasks and interact with users or services in Teams. Each blueprint acts as a template that specifies how an agent is configured, authenticated, and connected to a back-end service.
 
 Agent Blueprints are created and managed in the **Teams Developer Portal**, while the agent identities derived from them are managed in the **Teams Admin Center**.
 
@@ -274,14 +274,14 @@ Agent Blueprints are created and managed in the **Teams Developer Portal**, whil
 
 The Agent Blueprint tool in the Developer Portal displays a list of existing blueprints available in your tenant. You can:
 
-* **View configuration details** for an existing blueprint, including its type, credentials, and blueprint ID.
-* **Edit or update credentials and configuration** for a blueprint.
+* View **configuration** details for an existing blueprint, including its type, credentials, and blueprint ID.
+* Edit or update **credentials** and **configuration** for a blueprint.
 
 If a suitable blueprint doesn’t already exist, you can create a new one.
 
 #### Create and configure a new agent blueprint
 
-1. In the [Teams Developer Portal](https://dev.teams.microsoft.com/home), go to the **Tools** section and select **Agent Blueprint**.
+1. In [Teams Developer Portal](https://dev.teams.microsoft.com/home), go to the **Tools** section and select **Agent Blueprint**.
 
     :::image type="content" source="../../assets/images/tdp/agent-blueprint.png" alt-text="Agent Blueprint":::
 
@@ -306,6 +306,8 @@ Each blueprint includes three key configuration areas:
     :::image type="content" source="../../assets/images/tdp/basic-information-agent-blueprint.png" alt-text="Basic information tab in Agent Blueprint":::
 
 1. **Configuration**
+
+This table helps you understand the options available in the configuration pane and what each setting controls when defining your agent blueprint.
 
     | Agent Type | Description |
     |-----------|------------|
@@ -338,6 +340,7 @@ Each blueprint includes three key configuration areas:
 
 ## See also
 
+* [Teams Admin Center](https://admin.teams.microsoft.com/dashboard)
 * [Microsoft 365 Agents Toolkit Overview](../../toolkit/agents-toolkit-fundamentals.md)
 * [Include a SaaS offer with your Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
 * [Teams Store validation guidelines](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
