@@ -264,23 +264,39 @@ The user needs to consent to the permissions requested by the bot app to get the
 
 - **In group chats**
 
-    When a bot is added to a group chat for the first time and consent is required for a particular user, the following dialog box appears only to the user who @mentions the bot:
+    When a bot is added to a group chat for the first time and consent is required for a particular user, a consent dialog box appears only to the user who @mentions the bot.
 
-### [Desktop view](#tab/desktop)
+  # [Desktop](#tab/desktop)
+
+  - The user selects **Add**, an adaptive card appears to the user to request consent for permissions.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-permission-adaptive-card.png" alt-text="consent dialog box for user in group chats":::
 
-### [Mobile view](#tab/mobile)
-
-- If the user selects **Add**, a permissions dialog box appears to the user.
+  - If the user selects **Add**, a permissions dialog box appears to the user.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-permissions-dialog-box.png" alt-text="permissions dialog box":::
 
     The user must select **Accept** to give consent.
 
-- If the user declines, or the request times out, the user has to @mention bot again to grant permission for token acquisition. The group sees a public message that the action was not completed.
+  - If the user declines, or the request times out, the user has to @mention bot again to grant permission for token acquisition. The group sees a public message that the action was not completed.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/request-times-out.png" alt-text="consent denied or request times out":::
+  
+  # [Mobile](#tab/mobile)
+
+  - The user selects **Add**, an adaptive card appears to the user to request consent for permissions.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/user-mentions-bot-mobile.png" alt-text="consent dialog box for user in group chats mobile":::
+
+  - If the user selects **Add**, a permissions dialog box appears to the user.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-consent-mobile.png" alt-text="permissions dialog box mobile":::
+
+    The user must select **Accept** to give consent.
+
+  - If the user declines, or the request times out, the user has to @mention bot again to grant permission for token acquisition. The group sees a public message that the action was not completed.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/request-times-out-mobile.png" alt-text="consent denied or request times out mobile":::
 
 > [!NOTE]
 > After the app user consents, they're not required to consent again for any other permissions. If the permissions defined in Microsoft Entra scope are modified, then the app user might need to consent again. If, however, the consent prompt fails to let the app user access, the bot app falls back to sign-in card.
