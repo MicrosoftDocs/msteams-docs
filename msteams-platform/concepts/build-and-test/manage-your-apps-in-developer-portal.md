@@ -328,7 +328,7 @@ Each blueprint includes three key configuration areas:
         * Select **+ New Federated Identity** to add a new federated identity.
 
         * Edit or remove a federated identity using the **⋯** menu.
-    :::image type="content" source="../../assets/images/tdp/credentials-agent-blueprint.png" alt-text="Credentials tab in Agent Blueprint":::
+  :::image type="content" source="../../assets/images/tdp/credentials-agent-blueprint.png" alt-text="Credentials tab in Agent Blueprint":::
 
 ## See also
 
