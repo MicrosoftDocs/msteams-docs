@@ -50,6 +50,7 @@ You can build a new custom engine agent or elevate your existing conventional bo
 | 2. | Upgrade a conventional bot to custom engine agent | [Upgrade bot to Custom engine agent](how-to/teams-conversational-ai/how-conversation-ai-get-started.md#upgrade-your-conventional-bot-to-custom-engine-agent) |
 | 3. | Elevate a conventional bot built with Bot framework adapter to use AI | [Elevate your conventional bot to use AI](how-to/teams-conversational-ai/how-conversation-ai-get-started.md#elevate-your-conventional-bot-to-use-ai) |
 | 4. | Migrate a bot built with Bot framework to use Teams SDK | [Migrate your bot to use Teams SDK](how-to/teams-conversational-ai/how-conversation-ai-get-started.md#migrate-your-bot-to-use-teams-ai-library) |
+| 5. | Build reusable configurations for bot-based agents | [Agent Blueprint](../concepts/build-and-test/manage-your-apps-in-developer-portal.md#agent-blueprint) |
 
 ## Next step
 
