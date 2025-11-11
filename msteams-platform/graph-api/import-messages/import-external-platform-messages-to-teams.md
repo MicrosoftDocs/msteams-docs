@@ -65,6 +65,8 @@ Consider the following points:
 * The`creationDateTime`property is optional in a request body. If omitted, the `startMigration` API uses the current date and time as the minimum timestamp.
 * The `startMigration` API starts the message migration process by setting the migration mode to `inProgress` for a specified channel or chat.
 
+To enable channel and chat migration in Teams, see the following:
+
 ### [Channel migration](#tab/channelmigration)
 
 #### Request
@@ -303,7 +305,7 @@ The following table provides the content scope.
 |1:1 and group chat messages||
 |Shared and private channels||
 |Reactions and emojis||
-|||
+|
 
 ### Step 5: Complete migration
 
