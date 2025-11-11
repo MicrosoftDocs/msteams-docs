@@ -48,22 +48,22 @@ To build notification bot using Visual Studio Code:
 1. Open Visual Studio Code.
 
 1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="../assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
-
-1. Select **Create a New Agent/App** > **Teams App**.
+r
+1. Select **Create a New Agent/App**.
 
     :::image type="content" source="../assets/images/sbs-notification-bot/create-new-teams-app.png" alt-text="Location of the Create New Project link in the Agents Toolkit sidebar.":::
 
-1. Select **Bot** to create a new bot project.
+1. Select **Teams Agents and Apps**.
+
+    :::image type="content" source="../assets/images/sbs-notification-bot/teams-agents-and-apps.png" alt-text="Teams agents and apps link in the title bar.":::
+
+1. Select **Other Teams Capabilities**.
+
+:::image type="content" source="../assets/images/sbs-notification-bot/other-teams-capabilities.png" alt-text= Other Teams Capabilities’ selected.":::
+
+1. Select **Simple Bot** to create a new bot project.
 
     :::image type="content" source="../assets/images/sbs-notification-bot/create-new-app.png" alt-text="Wizard starts for creating a new project":::
-
-1. Ensure that **Chat Notification Message** is selected as the App feature that you want to build in your app.
-
-   :::image type="content" source="../assets/images/sbs-notification-bot/select-notification-bot.png" alt-text="Select App Capability":::
-
-6. Select **HTTP Trigger Express Server** as the trigger.
-
-   :::image type="content" source="../assets/images/sbs-notification-bot/select-trigger.png" alt-text="Screenshot showing how to select the programming language.":::  
 
 7. Select **JavaScript** as the programming language.
 
