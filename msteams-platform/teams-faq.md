@@ -1172,7 +1172,7 @@ No, you need to have your Large Language Models (LLMs) hosted in Azure OpenAI or
 <details>
 <summary>Can we use the AI library with other large language models apart from OpenAI?</summary>
 
-Yes, it's possible to use Teams AI library with other Large Language Models (LLMs).
+Yes, it's possible to use Teams SDK with other Large Language Models (LLMs).
 <br>
 </details>
 </br>
@@ -1180,7 +1180,7 @@ Yes, it's possible to use Teams AI library with other Large Language Models (LLM
 <details>
 <summary>Does a developer need to do anything to benefit from LLMs? If yes, why?</summary>
 
-Yes, Teams AI library provides abstractions to simplify utilization of Large Language Models (LLMs) in conversational applications. However, you (developer) must tweak the prompts, topic filters, and actions depending on your scenarios.
+Yes, Teams SDK provides abstractions to simplify utilization of Large Language Models (LLMs) in conversational applications. However, you (developer) must tweak the prompts, topic filters, and actions depending on your scenarios.
 <br>
 </details>
 </br>
