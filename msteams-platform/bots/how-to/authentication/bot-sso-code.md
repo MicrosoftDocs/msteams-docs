@@ -266,15 +266,19 @@ The user needs to consent to the permissions requested by the bot app to get the
 
     When a bot is added to a group chat for the first time and consent is required for a particular user, the following dialog box appears only to the user who @mentions the bot:
 
+### [Desktop view](#tab/desktop)
+
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-permission-adaptive-card.png" alt-text="consent dialog box for user in group chats":::
 
-  - If the user selects **Add**, a permissions dialog box appears to the user.
+### [Mobile view](#tab/mobile)
+
+- If the user selects **Add**, a permissions dialog box appears to the user.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-permissions-dialog-box.png" alt-text="permissions dialog box":::
 
     The user must select **Accept** to give consent.
 
-  - If the user declines, or the request times out, the user has to @mention bot again to grant permission for token acquisition. The group sees a public message that the action was not completed.
+- If the user declines, or the request times out, the user has to @mention bot again to grant permission for token acquisition. The group sees a public message that the action was not completed.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/request-times-out.png" alt-text="consent denied or request times out":::
 
