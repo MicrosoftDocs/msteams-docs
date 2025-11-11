@@ -148,8 +148,9 @@ The following best practices can help enhance the overall effectiveness of an ag
 
 - [Ensure that agent's response contains feedback button](#ensure-that-agents-response-contains-feedback-button).
 - [Enable Teams Azure AD single sign-on](#enable-teams-azure-ad-single-sign-on).
-- [Enable the agent to understand conversational history and context](#enable-the-agent-to-understand-conversational-history-and-context)
+- [Enable the agent to understand conversational history and context](#enable-the-agent-to-understand-conversational-history-and-context).
 - [Offer dynamic and contextual suggestion prompts](#offer-dynamic-and-contextual-suggestion-prompts).
+- [Enable app profile card](#enable-app-profile-card).
 
 ### Ensure that agent's response contains feedback button
 
@@ -185,6 +186,17 @@ Enhance your agent's user experience with intelligent and context-aware prompts.
 :::image type="content" source="../../../assets/images/bots/ai-suggested-prompts.png" alt-text="Image shows an example of suggested prompts." border="false":::
 
 To achieve this, the agent must leverage the conversation context and history, and prompt suggestions can be timely and fit for the query.
+
+### Enable app profile card
+
+> [!NOTE]
+> Enable app profile card is available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md) for Teams apps.
+
+You can now add hovercard experience for all agents and bots. Hovercards can provide valueable and relavant information to educate users about the app and its features.
+
+:::image type="content" source="../../../assets/images/bots/contoso-app-profile-card.png" alt-text="Image shows app profile card." border="false" lightbox="../../../assets/images/bots/contoso-app-profile-card.png":::
+
+To enable app profile card to your agents or bots, you must add the `features` field under the `description` field in the app manifest. For more information, see [public developer preview for Teams](../../../resources/dev-preview/developer-preview-intro.md).
 
 ## See also
 

@@ -27,6 +27,9 @@ Ensure that you check the following when you're publishing updates:
 * Increment your app's version number.
 * In Partner Center, don't select **Add a new app** to do the update. Go to your app's page instead.
 
+> [!TIP]
+> You can add new AI-based features to your agents and app. For more information, see [best practices for agents in Teams](../../../../bots/how-to/teams-conversational-ai/ai-ux.md#best-practices-for-agents-in-teams). It's recommended that you must include skills and a short description of each skill in your agent or app's description, to educate users about the new features.
+
 ### App updates requiring user consent
 
 When a user installs your app, they must give the app permission to access the services, and information the app requires to function. In most cases, users must do this once and the new version of your app is installed automatically.
