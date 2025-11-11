@@ -10,9 +10,9 @@ ms.owner: angovil
 ms.date: 05/20/2024
 ---
 
-# Quick start guide for using Assistants API with Teams AI library
+# Quick start guide for using Assistants API with Teams SDK
 
-Get started using OpenAI or Azure OpenAI Assistants API with Teams AI library in Math tutor assistant sample. This guide uses the OpenAI Code Interpreter tool to help you create an assistant that specializes in mathematics. The bot uses the gpt-3.5-turbo model to chat with Microsoft Teams users and respond in a polite and respectful manner, staying within the scope of the conversation.
+Get started using OpenAI or Azure OpenAI Assistants API with Teams SDK in Math tutor assistant sample. This guide uses the OpenAI Code Interpreter tool to help you create an assistant that specializes in mathematics. The bot uses the gpt-3.5-turbo model to chat with Microsoft Teams users and respond in a polite and respectful manner, staying within the scope of the conversation.
 
 ## Prerequisites
 
@@ -43,7 +43,7 @@ Agents Toolkit automatically provisions `MicrosoftAppId` and `MicrosoftAppPasswo
 
 ## Build and run the sample app
 
-Get started with Teams AI library using the **Math tutor assistant** sample. It enables your computer’s localhost to quickly execute a Teams AI library-based sample.
+Get started with Teams SDK using the **Math tutor assistant** sample. It enables your computer’s localhost to quickly execute a Teams SDK-based sample.
 
 1. Go to the [sample](https://github.com/microsoft/teams-ai/tree/main/js/samples).
 
