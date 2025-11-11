@@ -282,12 +282,15 @@ If a suitable blueprint doesn’t already exist, you can create a new one.
 #### Create and configure a new agent blueprint
 
 1. In the [Teams Developer Portal](https://dev.teams.microsoft.com/home), go to the **Tools** section and select **Agent Blueprint**.
+
     :::image type="content" source="../../assets/images/tdp/agent-blueprint.png" alt-text="Agent Blueprint":::
 
 1. Select **New Agent Blueprint**.
+
     :::image type="content" source="../../assets/images/tdp/new-agent-blueprint.png" alt-text="Create a new agent blueprint":::
 
 1. Enter the name and select **Create**.
+
     :::image type="content" source="../../assets/images/tdp/create-new-agent-blueprint.png" alt-text="Create a new agent blueprint window":::
 A unique **Agent Blueprint ID** is automatically generated. This ID is used when you create agent identities based on this blueprint.
 
@@ -299,6 +302,7 @@ Each blueprint includes three key configuration areas:
 
     1. **Agent Blueprint ID**: A system-generated unique identifier for the blueprint.
     1. **Blueprint display name**: The name assigned when the blueprint is created.
+
   :::image type="content" source="../../assets/images/tdp/basic-information-agent-blueprint.png" alt-text="Basic information tab in Agent Blueprint":::
 
 1. **Configuration**
@@ -330,7 +334,7 @@ Each blueprint includes three key configuration areas:
 
         * Edit or remove a federated identity using the **⋯** menu.
 
-:::image type="content" source="../../assets/images/tdp/credentials-agent-blueprint.png" alt-text="Credentials tab in Agent Blueprint":::
+  :::image type="content" source="../../assets/images/tdp/credentials-agent-blueprint.png" alt-text="Credentials tab in Agent Blueprint":::
 
 ## See also
 
