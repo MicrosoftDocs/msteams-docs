@@ -92,7 +92,7 @@ Use [Teams SDK](/microsoftteams/platform/teams-ai-library/) to add streaming to 
 
 > [!NOTE]
 >
-> - Citations with Adaptive Cards are available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
+> Citations with Adaptive Cards are available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
 
 ### Ensure the agent response contains an AI label
 
