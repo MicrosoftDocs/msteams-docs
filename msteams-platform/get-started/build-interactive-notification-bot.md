@@ -59,7 +59,7 @@ r
 
 1. Select **Other Teams Capabilities**.
 
-:::image type="content" source="../assets/images/sbs-notification-bot/teams-capabilities.png" alt-text= "Other Teams Capabilities’ selected.":::
+    :::image type="content" source="../assets/images/sbs-notification-bot/teams-capabilities.png" alt-text= "Other Teams Capabilities’ selected.":::
 
 6. Select **Simple Bot** to create a new bot project.
 
