@@ -296,9 +296,10 @@ A unique **Agent Blueprint ID** is automatically generated. This ID is used when
 Each blueprint includes three key configuration areas:
 
 1. **Basic information**
+
     1. **Agent Blueprint ID**: A system-generated unique identifier for the blueprint.
     1. **Blueprint display name**: The name assigned when the blueprint is created.
-    :::image type="content" source="../../assets/images/tdp/basic-information-agent-blueprint.png" alt-text="Basic information tab in Agent Blueprint":::
+  :::image type="content" source="../../assets/images/tdp/basic-information-agent-blueprint.png" alt-text="Basic information tab in Agent Blueprint":::
 
 1. **Configuration**
 
@@ -328,7 +329,8 @@ Each blueprint includes three key configuration areas:
         * Select **+ New Federated Identity** to add a new federated identity.
 
         * Edit or remove a federated identity using the **⋯** menu.
-  :::image type="content" source="../../assets/images/tdp/credentials-agent-blueprint.png" alt-text="Credentials tab in Agent Blueprint":::
+
+:::image type="content" source="../../assets/images/tdp/credentials-agent-blueprint.png" alt-text="Credentials tab in Agent Blueprint":::
 
 ## See also
 
