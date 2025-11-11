@@ -1162,7 +1162,7 @@ Teams SDK provides abstractions for you to build robust applications that utiliz
 </br>
 
 <details>
-<summary>Does Microsoft provide a hosted version of OpenAI models that are used by the AI library?</summary>
+<summary>Does Microsoft provide a hosted version of OpenAI models that are used by Teams SDK?</summary>
 
 No, you need to have your Large Language Models (LLMs) hosted in Azure OpenAI or elsewhere.
 <br>
@@ -1170,7 +1170,7 @@ No, you need to have your Large Language Models (LLMs) hosted in Azure OpenAI or
 </br>
 
 <details>
-<summary>Can we use the AI library with other large language models apart from OpenAI?</summary>
+<summary>Can we use Teams SDK with other large language models apart from OpenAI?</summary>
 
 Yes, it's possible to use Teams SDK with other Large Language Models (LLMs).
 <br>
