@@ -1,6 +1,6 @@
 ---
 title: Teams Developer Documentation - FAQs
-description: In this article, check FAQS on Adaptive Card Previewer, bots, Live Share, Microsoft 365 Chat, Teams AI library, Partner Center, and other Teams FAQs.
+description: In this article, check FAQS on Adaptive Card Previewer, bots, Live Share, Microsoft 365 Chat, Teams AI library, Teams SDK, Partner Center, and other Teams FAQs.
 ms.topic: reference
 ms.date: 01/23/2025
 ms.localizationpriority: high
@@ -1150,13 +1150,13 @@ To optimize your tab app performance on Teams mobile, use service workers to cac
 </details>
 </details>
 
-## Teams AI library
+## Teams SDK
 
 <br>
 <details>
-<summary>What does Teams AI library do?</summary>
+<summary>What does Teams SDK do?</summary>
 
-Teams AI library provides abstractions for you to build robust applications that utilize OpenAI Large Language Models (LLMs).
+Teams SDK provides abstractions for you to build robust applications that utilize OpenAI Large Language Models (LLMs).
 <br>
 </details>
 </br>

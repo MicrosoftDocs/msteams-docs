@@ -51,12 +51,12 @@ Streaming bot messages has two types of updates:
 
 You can implement streaming bot messages in your app in one of the following ways:
 
-- [Stream using Teams AI library](#stream-message-through-teams-ai-library).
+- [Stream using Teams SDK](#stream-message-through-teams-sdk).
 - [Stream using REST API](#stream-message-through-rest-api).
 
 In addition, you'll also learn how to [stop streaming bot response](#stop-streaming-bot-response) and [response codes](#response-codes) for streaming bot messages.
 
-## Stream message through Teams AI library
+## Stream message through Teams SDK
 
 [!INCLUDE [teams-ai-lib-v2-rec](../includes/teams-ai-lib-v2-rec.md)]
 
@@ -69,7 +69,7 @@ Through streaming, your AI-powered bot can offer an experience that is engaging 
 
 1. **Enable streaming for AI-powered bot**:
 
-    Bot messages can be streamed through AI SDK. The AI-powered bot sends chunks to the user as the model generates the response. Streaming messages support text. However, attachment, AI-label, feedback loop, and sensitivity labels are available only for the final streaming message.
+    Bot messages can be streamed through Teams SDK. The AI-powered bot sends chunks to the user as the model generates the response. Streaming messages support text. However, attachment, AI-label, feedback loop, and sensitivity labels are available only for the final streaming message.
 
 2. **Set informative message**:
 
@@ -602,5 +602,5 @@ The following are the success and error codes:
 ## See also
 
 - [Bot messages with AI-generated content](~/bots/how-to/bot-messages-ai-generated-content.md)
-- [Teams AI library](~/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md)
+- [Teams SDK](~/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md)
 - [Function calls using AI SDK](how-to/teams-conversational-ai/teams-conversation-ai-overview.md#function-calls-using-ai-sdk)

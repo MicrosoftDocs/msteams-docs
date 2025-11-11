@@ -17,7 +17,7 @@
 - name: Glossary
   href: get-started/glossary.md
   displayName: App tray, terminologies, definitions, welcome, new word, meaning
-- name: Build agents using Teams AI library
+- name: Build agents using Teams SDK
   items:
   - name: Agents in Teams
     href: agents-in-teams/overview.md
