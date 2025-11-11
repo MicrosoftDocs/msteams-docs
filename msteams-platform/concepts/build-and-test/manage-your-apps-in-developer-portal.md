@@ -307,15 +307,15 @@ Each blueprint includes three key configuration areas:
 
 1. **Configuration**
 
-This table helps you understand the options available in the configuration pane and what each setting controls when defining your agent blueprint.
+ This table helps you understand the options available in the configuration pane and what each setting controls when defining your agent blueprint.
 
-    | Agent Type | Description |
-    |-----------|------------|
-    | none | No bot or API association (default).|
-    |botBased | Use an existing bot registered in Teams. Enter the **Bot ID** for association.|
-    |apiBased | Use a custom API endpoint to define agent behaviour. Enter the **API endpoint URL**.|
+  | Agent Type | Description |
+  |-----------|------------|
+  | none | No bot or API association (default).|
+  |botBased | Use an existing bot registered in Teams. Enter the **Bot ID** for association.|
+  |apiBased | Use a custom API endpoint to define agent behaviour. Enter the **API endpoint URL**.|
 
-    :::image type="content" source="../../assets/images/tdp/configuration-agent-blueprint.png" alt-text="Configuration tab in Agent Blueprint":::
+  :::image type="content" source="../../assets/images/tdp/configuration-agent-blueprint.png" alt-text="Configuration tab in Agent Blueprint":::
 
 1. **Credentials**:
     Agent blueprints include credentials used for authentication and authorization when agent identities interact with Teams services. You can manage two types of credentials:
