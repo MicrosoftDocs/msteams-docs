@@ -1186,7 +1186,7 @@ Yes, Teams SDK provides abstractions to simplify utilization of Large Language M
 </br>
 
 <details>
-<summary>How does Teams AI library integrate with ODSL?</summary>
+<summary>How does Teams SDK integrate with ODSL?</summary>
 
 The two are independent and can't be integrated.
 <br>
@@ -1194,10 +1194,10 @@ The two are independent and can't be integrated.
 </br>
 
 <details>
-<summary>How does Teams AI library co-exist against the hero-story of developers building for the skills ecosystem in Microsoft 365?</summary>
+<summary>How does Teams SDK co-exist against the hero-story of developers building for the skills ecosystem in Microsoft 365?</summary>
 </br>
 
-Teams AI library story is targeted towards pro-developers and separate from the hero-story around skills ecosystem in Microsoft 365.
+Teams SDK story is targeted towards pro-developers and separate from the hero-story around skills ecosystem in Microsoft 365.
 <br>
 </details>
 </br>
@@ -1205,7 +1205,7 @@ Teams AI library story is targeted towards pro-developers and separate from the 
 <details>
 <summary>How must information about the existing Bot Framework SDK be communicated after announcing a new version?</summary>
 
-Teams AI library works alongside the existing Bot Framework SDK and isn't a replacement.
+Teams SDK works alongside the existing Bot Framework SDK and isn't a replacement.
 <br>
 </details>
 
