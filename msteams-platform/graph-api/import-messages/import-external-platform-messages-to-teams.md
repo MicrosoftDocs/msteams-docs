@@ -57,7 +57,6 @@ You can create a new channel or chat, or use an existing one, to migrate user's 
 ### Step 2: Enable migration mode to import messages
 
 Use the `startMigration` API to enable migration mode on Teams channels or chats, and allow import of historical messages. Migration mode is a special state that prevents certain operations, like sending messages and adding members, during the data migration process.
-Migration mode is a special state that blocks certain operations, such as sending messages and adding members during data migration.
 
 Consider the following points:
 
