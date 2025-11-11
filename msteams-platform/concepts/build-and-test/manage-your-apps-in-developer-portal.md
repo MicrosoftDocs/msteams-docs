@@ -244,6 +244,7 @@ The Developer Portal also includes tools to help you build key features of Teams
 * **Adaptive Cards editor (Preview)**: Create and preview Adaptive Cards to include with your apps.
 * **Identity platform management (Preview)**: Register your apps with Microsoft Entra ID to help users sign in and provide access to APIs.
 * **Teams Store app validation**: Check your app package against the test cases that Microsoft uses to review your app. We recommend you to use latest app validation tool in your app under [**Publish**](#publish) section.
+* **Agent Blueprint**: Create, configure, and manage reusable blueprints that define agent identities, their authentication, and back-end connection details. For more information, see[Agent Blueprint](#agent-blueprint).
 * **Bot management**: Add conversational bots to your app that communicate with users, respond to their questions, and proactively notify them about changes and other events.
 
 To add a bot:
@@ -263,11 +264,13 @@ From the Developer Portal, you can go to Bot Framework portal and configure your
   > [!NOTE]
   > Bot ID doesn't support environment variables.
 
-* **Agent Blueprint**: Define reusable configurations for **agent identities**, that can perform tasks and interact. Each blueprint acts as a template that specifies how an agent is configured, authenticated, and connected to a back-end service.
+### Agent Blueprint
+
+Define reusable configurations for **agent identities**, that can perform tasks and interact. Each blueprint acts as a template that specifies how an agent is configured, authenticated, and connected to a back-end service.
 
 Agent Blueprints are created and managed in the **Teams Developer Portal**, while the agent identities derived from them are managed in the **Teams Admin Center**.
 
-### View and use existing agent blueprints
+#### View and use existing agent blueprints
 
 The Agent Blueprint tool in the Developer Portal displays a list of existing blueprints available in your tenant. You can:
 
@@ -276,14 +279,14 @@ The Agent Blueprint tool in the Developer Portal displays a list of existing blu
 
 If a suitable blueprint doesn’t already exist, you can create a new one.
 
-### Create and configure a new agent blueprint
+#### Create and configure a new agent blueprint
 
 1. In the [Teams Developer Portal](https://dev.teams.microsoft.com/home), go to the **Tools** section and select **Agent Blueprint**.
 1. Select **New Agent Blueprint**.
 1. Enter the name and select **Create**.
     * A unique **Agent Blueprint ID** is automatically generated. This ID is used when you create agent identities based on this blueprint.
 
-### Configure the agent blueprint
+#### Configure the agent blueprint
 
 Each blueprint includes three key configuration areas:
 
@@ -291,19 +294,30 @@ Each blueprint includes three key configuration areas:
     1. **Agent Blueprint ID**: A system-generated unique identifier for the blueprint.
     1. **Blueprint display name**: The name assigned when the blueprint is created.
 1. **Configuration**
+
     | Agent Type | Description |
+    |-----------|------------|
     | none | No bot or API association (default).|
     |botBased | Use an existing bot registered in Teams. Enter the **Bot ID** for association.|
     |apiBased | Use a custom API endpoint to define agent behaviour. Enter the **API endpoint URL**.|
-1. **Credentials**
+
+1. **Credentials**:
     Agent blueprints includes credentials used for authentication and authorization when agent identities interact with Teams services. You can manage two types of credentials:
+
     * **Client Secrets**: They are used for API secret–based authentication.
+
         * View existing client secrets that are added to the blueprint.
+
         * Select **+ New Secret** to add a new client secret.
+
         * Edit or delete existing secrets using the **⋯** menu.
+
     * **Federated Identity Credentials**: They allow token-based authentication.
+
         * View existing federated identities that are added to the blueprint.
+
         * Select **+ New Federated Identity** to add a new federated identity.
+
         * Edit or remove a federated identity using the **⋯** menu.
 
 ## See also
