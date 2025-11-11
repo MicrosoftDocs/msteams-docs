@@ -305,7 +305,6 @@ The following table provides the content scope.
 |1:1 and group chat messages||
 |Shared and private channels||
 |Reactions and emojis||
-|
 
 ### Step 5: Complete migration
 
