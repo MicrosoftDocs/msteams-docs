@@ -9,7 +9,7 @@ ms.owner: ryanbliss
 ---
 # Add code to enable SSO in your bot app
 
-Before you add code to enable single sign-on (SSO), ensure that you've configured your app and bot resource in Microsoft Entra admin center.
+Before you add code to enable single sign-on (SSO), ensure to configur your app and bot resource in Microsoft Entra admin center.
 
 > [!div class="nextstepaction"]
 > [Configure bot app in Microsoft Entra ID](bot-sso-register-aad.md)
@@ -44,7 +44,7 @@ To update the development environment variables:
     - For `MicrosoftAppTenantId`, update the tenant ID.
 
     > [!NOTE]
-    > You can customize the OAuth redirect URL for your bot and identity provider based on your data residency requirements, whether your bot is in the public cloud, Microsoft Azure Government cloud, or Microsoft Azure operated by 21Vianet. For OAuth URLs and data residency list, see [OAuth URL support in Azure AI Bot Service](/azure/bot-service/ref-oauth-redirect-urls?view=azure-bot-service-4.0&preserve-view=true).
+    > You can customize the OAuth redirect URL for your bot and identity provider based on your data residency requirements, irrespective of whether your bot is in the public cloud, Microsoft Azure Government cloud, or Microsoft Azure operated by 21Vianet. For OAuth URLs and data residency list, see [OAuth URL support in Azure AI Bot Service](/azure/bot-service/ref-oauth-redirect-urls?view=azure-bot-service-4.0&preserve-view=true).
 
 1. Save the file.
 
@@ -264,12 +264,12 @@ The consent dialog that appears is for open-id scopes defined in Microsoft Entra
 
 ### In group chats
 
-In group scope, when the user does not have the app , there are two scenarios for bot interaction.
+In group scope, when the user doesn't have the app , there are two scenarios for bot interaction.
 
-- AAD consent is required for bot interaction
-- AAD consent is not required for bot interaction
+- Microsoft Entra ID consent is required for bot interaction
+- Microsoft Entra ID consent is not required for bot interaction
 
-#### AAD consent is required for bot interaction
+#### Microsoft Entra ID consent is required for bot interaction
 
 When a bot is added to a group chat for the first time and consent is required for a particular user, a consent dialog box appears only to the user who @mentions the bot.
 
@@ -285,15 +285,15 @@ When a bot is added to a group chat for the first time and consent is required f
 
   The user must select **Accept** to give consent.
 
-- If the user declines, or the request times out, the user has to @mention bot again to grant permission for token acquisition. The group sees a public message that the action was not completed.
+- If the user declines, or the request times out, the user has to @mention bot again to grant permission for token acquisition. The group sees a public message that the action wasn't completed.
 
   :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/request-times-out-desktop.png" alt-text="consent denied or request times out" lightbox="../../../assets/images/authentication/teams-sso-bots/request-times-out-desktop.png" border="false":::
   
 # [Mobile](#tab/mobile)
 
 - The user selects **Add**, an adaptive card appears to the user to request consent for permissions.
-  
-  :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/user-mentions-bot-mobile.png" alt-text="user mentions bot on mobile" border="false":::
+
+  :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/user-mentions-bot-mobile.png" alt-text="user mentions bot on mobile" lightbox="../../../assets/images/authentication/teams-sso-bots/request-times-out-desktop.png" border="false":::
 
 - If the user selects **Add**, a permissions dialog box appears to the user.
 
@@ -301,13 +301,13 @@ When a bot is added to a group chat for the first time and consent is required f
 
   The user must select **Accept** to give consent.
 
-- If the user declines, or the request times out, the user has to @mention bot again to grant permission for token acquisition. The group sees a public message that the action was not completed.
+- If the user declines, or the request times out, the user has to @mention bot again to grant permission for token acquisition. The group sees a public message that the action wasn't completed.
 
   :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/request-times-out-mobile.png" alt-text="consent denied or request times out mobile":::
 
-#### AAD consent is not required for bot interaction
+#### Microsoft Entra ID consent is not required for bot interaction
 
-In this scenario, where user permissions have been granted by default or for trusted apps, the user who @mentions the bot can directly interact with the bot without needing to give consent.
+In this scenario, where user permissions are granted by default or for trusted apps, the user who @mentions the bot can directly interact with the bot without needing to give consent.
 
 ---
 > [!NOTE]
@@ -316,7 +316,7 @@ In this scenario, where user permissions have been granted by default or for tru
 > [!IMPORTANT]
 > Scenarios where consent dialogs aren't needed:
 >
-> - If the admin has granted consent on behalf of the tenant, app users don't need to be prompted for consent at all. This means that the app users don't see the consent dialogs and can access the app seamlessly.
+> - If the admin grants consent on behalf of the tenant, app users don't need to be prompted for consent at all. This means that the app users don't see the consent dialogs and can access the app seamlessly.
 > - If your Microsoft Entra app is registered in the same tenant from which you're requesting an authentication in Teams, the app user can't be asked to consent, and is granted an access token right away. App users consent to these permissions only if the Microsoft Entra app is registered in a different tenant.
 
 If you encounter any errors, see [Troubleshoot SSO authentication in Teams](../../../tabs/how-to/authentication/tab-sso-troubleshooting.md).
