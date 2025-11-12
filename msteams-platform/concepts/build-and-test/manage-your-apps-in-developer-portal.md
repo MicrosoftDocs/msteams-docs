@@ -270,7 +270,7 @@ An Agent Identity Blueprint provides a reusable configurations for **agent ident
 
 Agent Identity Blueprints are created and managed in **Teams Developer Portal**, while the agent identities derived from them are managed in the **Teams Admin Center**.
 
-#### View and use existing agent identity blueprints
+#### View and use existing Agent Identity Blueprints
 
 The Agent Identity Blueprint tool in the Developer Portal displays a list of existing blueprints available in your tenant. You can:
 
@@ -281,7 +281,7 @@ The Agent Identity Blueprint tool in the Developer Portal displays a list of exi
 
 If a suitable blueprint doesn’t already exist, you can create a new one.
 
-#### Create and configure a new agent identity blueprint
+#### Create and configure a new Agent Identity Blueprint
 
 1. In [Teams Developer Portal](https://dev.teams.microsoft.com/home), go to the **Tools** section and select **Agent Identity Blueprint**.
 
@@ -296,7 +296,7 @@ If a suitable blueprint doesn’t already exist, you can create a new one.
     :::image type="content" source="../../assets/images/tdp/create-new-agent-blueprint.png" alt-text="Create a new agent blueprint window":::
 A unique **Agent Blueprint ID** is automatically generated. This ID is used when you create agent identities based on this blueprint.
 
-#### Configure the agent identity blueprint
+#### Configure the Agent Identity Blueprint
 
 Each blueprint includes two key configuration areas:
 
@@ -314,20 +314,18 @@ Each blueprint includes two key configuration areas:
     1. In the **Configuration** tab, go to **Agent Type**.
         * Choose how the agent connects to a back-end service.
         * Select one of the following options:
-            * **Bot Based** – Use an existing bot by providing its bot ID.
-            * **API Based** – Connect using a custom backend service by providing its API endpoint.
-            * **None** – Leave the connection unconfigured (default).
-    1. Based on the selected agent type, enter one of the following:
-        * **Bot ID** – If you selected Bot-based, provide the ID of your registered Teams bot.
-        * **Backend URL** – If you selected API-based, provide the URL of your backend service endpoint.
-    1. Select **Save** to apply your configuration.
-    1. select **Revert** to discard the changes.
 
-    | Agent Type | Description |
-    |-----------|------------|
-    | none | No bot or API association (default).|
-    |Bot Based | Use an existing bot registered in Teams. Enter the **Bot ID** for association.|
-    |API Based | Use a custom API endpoint to define agent behaviour. Enter the **Backend URL**.|
+            | Agent Type | Description |
+            |-----------|------------|
+            | none | No bot or API association (default).|
+            |Bot Based | Use an existing bot registered in Teams. Enter the **Bot ID** for association.|
+            |API Based | Use a custom API endpoint to define agent behaviour. Enter the **Backend URL**.|
+
+    1. Based on the selected agent type, enter one of the following:
+        * **Bot ID**: If you selected Bot-based, provide the ID of your registered Teams bot.
+        * **Backend URL**: If you selected API-based, provide the URL of your backend service endpoint.
+    1. Select **Save** to apply your configuration.
+    1. Select **Revert** to discard the changes.
 
     :::image type="content" source="../../assets/images/tdp/configuration-agent-blueprint.png" alt-text="Configuration tab in Agent Blueprint":::
 
