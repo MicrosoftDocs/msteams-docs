@@ -24,29 +24,29 @@ App users sign in to Teams using either personal Microsoft account or Microsoft 
 - The app user needs to give consent to Teams for using the identity to access your bot.
 - The app user can access the app on web, desktop, or mobile client.
 
-You can add code to [enable SSO in your bot app](bot-sso-code.md). Let's look at how SSO works in different scopes.
+Let's look at how SSO works in different scopes.
 
 # [Personal Scope](#tab/personal)
 
-In personal scope, the app user interacts with the bot or message extension app in a one-on-one chat.
+In personal scope, the app user interacts with the bot or message extension app in a one-on-one chat. The user needs to consent only once to use the bot or message extension app.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-consent-flow-personal-scope-overview-infographics.png" alt-text="bot consent flow in personal scope" border="false":::
 
 # [Group Scope](#tab/group)
 
-In group scope, the app user interacts with the bot in a group chat without needing to sign in again. Only the user mentioning the bot receives an Adaptive Card to consent to the bot.
+The user can interact with the bot in a group chat without needing to sign in again. The consent card is displayed only to the user who @mentions the bot for the first time.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-authentication-in-group-scopes-infographic.png" alt-text="bot authentication in group scope" border="false":::
 
-In group scope, when the user does not have the app pre-installed, there are two scenarios for bot interaction:
+If the user doesn't have the app pre-installed the following are the two scenarios for user authentication:
 
-- **AAD consent is required**: The user who @mentions the bot agrees to the permissions requested by the bot. The bot can then acquire the access token for that app user and respond to the request in the group chat.
+- **Microsoft Entra ID consent is required**: The user who @mentions the bot gives consent for the permissions requested by the bot. The bot acquires an access token for that user and responds to the request in the group chat.
 
-- **AAD consent is not required**: In scenarios where user permissions have been granted by default or for trusted apps, the user who @mentions the bot can directly interact with the bot without needing to give consent.
+- **Microsoft Entra ID consent is not required**: In scenarios where user permissions are granted by default or for trusted apps, the user who @mentions the bot can directly interact with the bot without needing to give consent.
 
 ---
 
-The permission scopes for accessing resources remain the same in both personal and group scopes.
+The permission scopes for accessing resources remain the same in both personal and group scopes. For more information, see [add code to enable SSO in your bot app](bot-sso-code.md).
 
 > [!NOTE]
 > App users can't give permission to some permission scopes, such as `Sites.ReadWrite.All`, which allows the app user to read and write to all SharePoint and OneDrive assets in the tenant. For such scopes, only the admin can grant consent on an app user's behalf.

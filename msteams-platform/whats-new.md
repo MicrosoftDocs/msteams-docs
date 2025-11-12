@@ -40,7 +40,7 @@ Teams platform features that are available to all app developers.</br>
 
 * ***November 6, 2025***: [Teams AI library v2 has been renamed to *Teams SDK*.](/microsoftteams/platform/teams-ai-library/)
 
-* ***November 17, 2025***: [Bot AAD auth is now available in group scopes.](bots/how-to/authentication/bot-sso-overview.md)
+* ***November 17, 2025***: [Microsoft Entra ID authtication for bots is now available in group scope.](bots/how-to/authentication/bot-sso-overview.md)
 
 :::column-end:::
 :::row-end:::
