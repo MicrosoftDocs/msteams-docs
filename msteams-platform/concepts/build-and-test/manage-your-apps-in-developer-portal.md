@@ -268,7 +268,7 @@ From the Developer Portal, you can go to Bot Framework portal and configure your
 
 An Agent Blueprint provides a reusable configurations for **agent identities**, that can perform tasks and interact with users or services in Teams. Each blueprint acts as a template that specifies how an agent is configured, authenticated, and connected to a back-end service.
 
-Agent Blueprints are created and managed in the **Teams Developer Portal**, while the agent identities derived from them are managed in the **Teams Admin Center**.
+Agent Blueprints are created and managed in **Teams Developer Portal**, while the agent identities derived from them are managed in the **Teams Admin Center**.
 
 #### View and use existing agent blueprints
 
