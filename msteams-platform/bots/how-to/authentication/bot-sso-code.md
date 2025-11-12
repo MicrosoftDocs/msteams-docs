@@ -281,7 +281,7 @@ The user @mentions the bot. An Adaptive Card appears to request the user's conse
 
 - If the user selects **Add**, a permissions dialog box appears.
 
-  :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/request-times-out-small.png" alt-text="consent denied or request times out" lightbox="../../../assets/images/authentication/teams-sso-bots/permissions-requested-desktop.png" border="false":::
+  :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/permissions-requested-desktop-small.png" alt-text="consent denied or request times out" lightbox="../../../assets/images/authentication/teams-sso-bots/permissions-requested-desktop.png" border="false":::
 
   The user must select **Accept** to give consent.
 
