@@ -132,7 +132,7 @@ Agents Playground opens the bot in a webpage.
 |`src/prompts/chat/config.json`| Configures the prompt.|
 
 ---
-
+<!--
 ## How Teams AI chatbot works
 
 Teams SDK provides a flow to build an intelligent chatbot with AI capabilities as follows:
@@ -156,6 +156,7 @@ Teams SDK provides a flow to build an intelligent chatbot with AI capabilities a
 * **AfterTurn handler**: After the activity handler or AI system is executed, Teams SDK executes an `afterTurn` handler. The handler allows you to perform an action after the turn. If it returns as `true`, the SDK saves the turn state to storage.
 
 * **Respond to user**: Teams SDK saves the state and the bot can send the responses to the user.
+-->
 
 ## Customize basic AI chatbot
 

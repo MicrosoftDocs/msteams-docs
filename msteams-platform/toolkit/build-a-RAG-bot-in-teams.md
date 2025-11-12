@@ -1,7 +1,7 @@
 ---
 title: Create a Teams AI Bot with RAG
 author: surbhigupta
-description: Learn how to build basic AI chatbot using Teams AI library in Microsoft 365 Agents Toolkit, RAG scenarios, data integration, Azure AI Search, and Microsoft 365 as data sources.
+description: Learn how to build basic AI chatbot using Teams SDK in Microsoft 365 Agents Toolkit, RAG scenarios, data integration, Azure AI Search, and Microsoft 365 as data sources.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
@@ -44,7 +44,7 @@ Microsoft Teams enables you to build a conversational bot with RAG to create an 
 
 1. Select **Teams Agent with Data**.
 
-   :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/chat-with-your-data.png" alt-text="Screenshot shows the option to select app features using AI library list.":::
+   :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/chat-with-your-data.png" alt-text="Screenshot shows the option to select app features.":::
 
 1. Select **Customize**.
 
@@ -125,10 +125,10 @@ Agents Playground opens the bot in a webpage.
 
 ## RAG scenarios for Teams AI
 
-In AI context, the vector databases are widely used as RAG storages, which store embeddings data and provide vector-similarity search. Teams AI library provides utilities to help create embeddings for the given inputs.
+In AI context, the vector databases are widely used as RAG storages, which store embeddings data and provide vector-similarity search. Teams SDK provides utilities to help create embeddings for the given inputs.
 
 > [!Tip]
-> Teams AI library doesn't provide the vector database implementation, so you need to add your own logic to process the created embeddings.
+> Teams SDK doesn't provide the vector database implementation, so you need to add your own logic to process the created embeddings.
 
 # [JavaScript](#tab/javascript)
 
