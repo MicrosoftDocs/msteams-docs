@@ -26,13 +26,13 @@ App users sign in to Teams using either personal Microsoft account or Microsoft 
 
 Let's look at how SSO works in different scopes.
 
-# [Personal Scope](#tab/personal)
+# [Personal scope](#tab/personal)
 
 In personal scope, the app user interacts with the bot or message extension app in a one-on-one chat. The user needs to consent only once to use the bot or message extension app.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-consent-flow-personal-scope-overview-infographics.png" alt-text="bot consent flow in personal scope" border="false":::
 
-# [Group Scope](#tab/group)
+# [Group scope](#tab/group)
 
 The user can interact with the bot in a group chat without needing to sign in again. The consent card is displayed only to the user who @mentions the bot for the first time.
 

@@ -281,7 +281,7 @@ The user @mentions the bot. An Adaptive Card appears to request the user's conse
 
 - If the user selects **Add**, a permissions dialog box appears.
 
-  :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/permissions-requested-desktop.png" alt-text="permissions dialog box" border="false":::
+  :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/request-times-out-small.png" alt-text="consent denied or request times out" lightbox="../../../assets/images/authentication/teams-sso-bots/permissions-requested-desktop.png" border="false":::
 
   The user must select **Accept** to give consent.
 
@@ -544,7 +544,7 @@ Use the following code snippet to handle the access token in case the app user s
 
 | **Sample name** | **Description** | **C#** | **Node.js** |
 | --- | --- | --- | --- |
-| Bot conversation SSO quick start | Quickly set up Teams bot with SSO for seamless user authentication. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/csharp_dotnetcore/BotConversationSsoQuickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js)  |
+| Bot conversation SSO quick start | Quickly set up Teams bot with SSO for seamless user authentication for one-on-one and group chats. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/csharp_dotnetcore/BotConversationSsoQuickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js)  |
 
 ::: zone-end
 
