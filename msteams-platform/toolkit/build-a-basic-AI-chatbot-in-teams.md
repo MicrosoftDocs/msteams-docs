@@ -1,7 +1,7 @@
 ---
 title: Build a basic AI Chatbot in Teams
 author: surbhigupta
-description: Learn how to build and customize a basic AI chatbot using Teams AI library in Microsoft 365 Agents Toolkit, about bot app source code and workflow.
+description: Learn how to build and customize a basic AI chatbot using Teams SDK in Microsoft 365 Agents Toolkit, about bot app source code and workflow.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
@@ -25,7 +25,7 @@ The AI chatbot template showcases a bot app, similar to ChatGPT, that responds t
 ## Create a new basic AI chatbot project
 
 1. Open **Visual Studio Code**.
- 
+
 1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="~/assets/images/toolkit-v2/toolkit-sidebar-icon.PNG" border="false"::: icon in the Visual Studio Code **Activity Bar**
 
 1. Select **Create a New Agent/App**.
@@ -70,7 +70,7 @@ The AI chatbot template showcases a bot app, similar to ChatGPT, that responds t
 
      :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/application-name.png" alt-text="Screenshot shows the option to enter the suitable name.":::
 
-    You've successfully created your AI chat bot project workspace. 
+    You've successfully created your AI chat bot project workspace.
 
     :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/ai-chatbot-project-output.png" alt-text="Screenshot shows the ai chatbot created and readme file is available.":::
 
@@ -151,7 +151,7 @@ Teams AI library provides a flow to build an intelligent chatbot with AI capabil
 
     1. [**Prompt manager**](https://github.com/microsoft/teams-ai/blob/main/getting-started/CONCEPTS/PROMPTS.md): Prompts play a crucial role in communicating and directing the behavior of Large Language Models (LLMs) AI.
     1. [**Planner**](https://github.com/microsoft/teams-ai/blob/main/getting-started/CONCEPTS/PLANNER.md): The planner receives the user's request, which is in the form of a prompt or prompt template, and returns a plan to fulfill it. This is achieved by using AI to mix and match atomic functions, known as actions, that are registered to the AI system. These actions are recombined into a series of steps that complete a goal.
-    1. [**Actions**](https://github.com/microsoft/teams-ai/blob/main/getting-started/CONCEPTS/ACTIONS.md): An action is an atomic function that is registered to the AI system. 
+    1. [**Actions**](https://github.com/microsoft/teams-ai/blob/main/getting-started/CONCEPTS/ACTIONS.md): An action is an atomic function that is registered to the AI system.
 
 * **AfterTurn handler**: After the activity handler or AI system is executed, Teams AI library executes an `afterTurn` handler. The handler allows you to perform an action after the turn. If it returns as `true`, the SDK saves the turn state to storage.
 
@@ -164,29 +164,32 @@ You can add customizations on top of the basic app to build complex scenarios as
 1. **Customize prompt**: Prompts play a crucial role in communicating and directing the behavior of LLMs AI. They serve as inputs or queries that users can provide to elicit specific responses from a model. Here's a prompt that asks the LLM for name suggestions:
 
      **Request**
+
      ```
      Give me 3 name suggestions for my pet golden retriever.
      ```
+
      **Response**
+
      ```
      Some possible name suggestions for a pet golden retriever are:
      - Bailey
      - Sunny
      - Cooper
      ```
-    
+
      To use project generated with Agents Toolkit, you can author the prompts in the `src/prompts/chat/skprompt.txt` file. The prompts written in this file are inserted into the prompt used to instruct the LLM. Teams AI library defines the following syntax that you can use in the prompt text:
-    
-     # [Syntax 1](#tab/syntax1)
-    
+
+   # [Syntax 1](#tab/syntax1)
+
      1. `{{ $[scope].property }}`: Teams AI library renders the value of a property that is scoped and defined within the turn state. It defines three such scopes: temp, user, and conversation. If no scope is specified,  by default, the library uses the temp scope.
-    
+
      1. The `{{$[scope].property}}` is used in the following way:
-    
+
         # [JavaScript](#tab/javascript1)
-    
+
         1. In the `src/app/turnState.ts` file, define your temp state, user state, conversation state, and app turn state. If the `turnState.ts` file doesn't exist in your project, create it under `src/app`.
-    
+
             ```javascript
             import { DefaultConversationState, DefaultTempState, DefaultUserState, TurnState } from "@microsoft/teams-ai";
 
@@ -205,7 +208,7 @@ You can add customizations on top of the basic app to build complex scenarios as
             ```
 
         1. In the `src/app/app.ts` file, use app turn state to initialize the app.
-    
+
             ```javascript
             const storage = new MemoryStorage();
             const app = new Application<ApplicationTurnState>({
@@ -217,11 +220,11 @@ You can add customizations on top of the basic app to build complex scenarios as
             ```
 
         1. In the `src/prompts/chat/skprompt.txt` file, use the scoped state property such as `{{$conversation.tasks}}`.
-    
+
         # [Python](#tab/python1)
-    
+
         1. In the `src/state.py` file, define your temp state, user state, conversation state, and app turn state.
-    
+
             ```python
             from teams.state import TempState, ConversationState, UserState, TurnState
         
@@ -244,39 +247,39 @@ You can add customizations on top of the basic app to build complex scenarios as
                         temp=await TempState.load(context, storage),
                     )
             ```
-    
+
         1. In the `src/bot.py` file, user app turn state to initialize app.
-    
+
             ```python
             from state import AppTurnState
         
             app = Application[AppTurnState](...)
             ```
-    
+
         1. In the `src/prompts/chat/skprompt.txt` file, use the scoped state property such as `{{$conversation.tasks}}`.
 `
          ---
-    
-     # [Syntax 2](#tab/syntax2)
-    
+
+   # [Syntax 2](#tab/syntax2)
+
      1. `{{ functionName }}`: To call an external function and embed the result in your text, use the `{{ functionName }}` syntax. For example, if you have a function called `getTasks` that can return a list of task items, you can embed the results into the prompt:
-    
+
         # [JavaScript](#tab/javascript2)
-    
+
         1. Register the function in the prompt manager in the `src/app/app.ts` file:
-    
+
             ```typescript
             prompts.addFunction("getTasks", async (context: TurnContext, memory: Memory, functions: PromptFunctions, tokenizer: Tokenizer, args: string[]) => {
             return ...
             });
             ```
-    
+
         1. Use the function in  `src/prompts/chat/skprompt.txt: Your tasks are: {{ getTasks }}`.
-    
+
         # [Python](#tab/python2)
-    
+
         1. Register the function into prompt manager in the `src/bot.py` file:
-    
+
             ```python
             @prompts.function("getTasks")
             async def get_tasks(
@@ -288,20 +291,20 @@ You can add customizations on top of the basic app to build complex scenarios as
             ):
                 return state.get("conversation.tasks")
             ```
-    
+
         1. Use the function in the `src/prompts/chat/skprompt.txt: Your tasks are: {{ getTasks }}`.
          ---
-    
-     # [Syntax 3](#tab/syntax3)
-    
+
+   # [Syntax 3](#tab/syntax3)
+
      `{{ functionName arg1 arg2 }}`: This syntax enables you to call the specified function with the provided arguments and renders the result. Similar to the usage of calling a function, you can:
-    
+
      1. Register the function in prompt manager:
           * For JavaScript language, register it in `src/app/app.ts`.
           * For Python language, register it in `src/bot.py`.
-    
-     1. Use the function in `src/prompts/chat/skprompt.txt: Your `task is: {{ getTasks taskTitle }}`.
-    
+
+     1. Use the function in `src/prompts/chat/skprompt.txt: Your`task is: {{ getTasks taskTitle }}`.
+
      ---
 
 1. **Customize user input**: Teams AI library allows you to augment the prompt sent to LLM by including the user inputs. When including user inputs, you need to specify it in a prompt configuration file by setting `completion.include_input` to `true` in `src/prompts/chat/config.json`. You can also optionally configure the maximum number of user input tokens in `src/prompts/chat/config.json` by changing `completion.max_input_tokens`. This is useful when you want to limit the length of user inputs to avoid exceeding the token limit.
@@ -309,11 +312,11 @@ You can add customizations on top of the basic app to build complex scenarios as
 1. **Customize conversation history**: The SDK automatically manages the conversation history, and you can customize as follows:
 
     * In `src/prompts/chat/config.json`, configure `completion.include_history`. If `true`, the history is inserted into the prompt to let LLM aware of the conversation context.
-    
+
     * Maximum number of history messages. Configure `max_history_messages` when initializing `PromptManager`.
-    
-        # [JavaScript](#tab/javaScript3)
-        
+
+      # [JavaScript](#tab/javaScript3)
+
         ```javascript
 
         const prompts = new PromptManager({
@@ -321,9 +324,9 @@ You can add customizations on top of the basic app to build complex scenarios as
         max_history_messages: 3,
         });
         ```
-        
-        # [Python](#tab/python3)
-        
+
+      # [Python](#tab/python3)
+
         ```python
         
         prompts = PromptManager(PromptManagerOptions(
@@ -332,12 +335,13 @@ You can add customizations on top of the basic app to build complex scenarios as
         ))
         
         ```
+
         ---
-    
+
     * Maximum number of history tokens. Configure `max_conversation_history_tokens` when initializing `PromptManager`.
-    
-        # [JavaScript](#tab/javaScript4)
-        
+
+      # [JavaScript](#tab/javaScript4)
+
         ```javascript
         
         const prompts = new PromptManager({
@@ -346,9 +350,9 @@ You can add customizations on top of the basic app to build complex scenarios as
         });
         
         ```
-        
-        # [Python](#tab/python4)
-        
+
+      # [Python](#tab/python4)
+
         ```python
         
         prompts = PromptManager(PromptManagerOptions(
@@ -357,8 +361,9 @@ You can add customizations on top of the basic app to build complex scenarios as
         ))
         
         ```
+
         ---
-    
+
 1. **Customize model type**: You can use a specific model for a prompt. In the `src/prompts/chat/config.json` file, configure `completion.model`. If no model is configured for the prompt, the default model configured in `OpenAIModel` is used.
 
     The models that support the SDK as follows:
@@ -390,4 +395,3 @@ You can add customizations on top of the basic app to build complex scenarios as
 ## See also
 
 [Teams AI library](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md)
-
