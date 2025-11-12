@@ -298,6 +298,7 @@ When a bot is added to a group chat for the first time and consent is required f
 
   :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/request-times-out-mobile.png" alt-text="consent denied or request times out mobile":::
 
+---
 > [!NOTE]
 > After the app user consents, they're not required to consent again for any other permissions. If the permissions defined in Microsoft Entra scope are modified, then the app user might need to consent again. If, however, the consent prompt fails to let the app user access, the bot app falls back to sign-in card.
 
