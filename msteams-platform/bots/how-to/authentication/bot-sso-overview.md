@@ -24,7 +24,7 @@ App users sign in to Teams using either personal Microsoft account or Microsoft 
 - The app user needs to give consent to Teams for using the identity to access your bot.
 - The app user can access the app on web, desktop, or mobile client.
 
-Let's look at [how SSO works in different scopes](bot-sso-code.md).
+You can add code to [enable SSO in your bot app](bot-sso-code.md). Let's look at how SSO works in different scopes.
 
 # [Personal Scope](#tab/personal)
 
