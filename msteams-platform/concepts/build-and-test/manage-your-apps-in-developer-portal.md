@@ -318,8 +318,8 @@ Each blueprint includes two key configuration areas:
             | Agent Type | Description |
             |-----------|------------|
             | none | No bot or API association (default).|
-            |Bot Based | Use an existing bot registered in Teams. Enter the **Bot ID** for association.|
-            |API Based | Use a custom API endpoint to define agent behaviour. Enter the **Backend URL**.|
+            |Bot Based | Use an existing bot registered in Teams.|
+            |API Based | Use a custom API endpoint to define agent behaviour.|
 
     1. Based on the selected agent type, enter one of the following:
         * **Bot ID**: If you selected Bot-based, provide the ID of your registered Teams bot.
