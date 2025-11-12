@@ -10,7 +10,7 @@ ms.date: 09/16/2024
 
 # Build a basic AI chatbot
 
-The AI chatbot template showcases a bot app, similar to ChatGPT, that responds to user questions and allows users to interact with the AI bot in  Microsoft Teams. [Teams AI library](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md) is used to build the app template, providing the capabilities to create AI-based Teams applications.
+The AI chatbot template showcases a bot app, similar to ChatGPT, that responds to user questions and allows users to interact with the AI bot in  Microsoft Teams. [Teams SDK](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md) is used to build the app template, providing the capabilities to create AI-based Teams applications.
 
 ## Prerequisites
 
@@ -38,7 +38,7 @@ The AI chatbot template showcases a bot app, similar to ChatGPT, that responds t
 
 1. Select **Basic Custom Engine Agent**.
 
-   :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/basic-ai-chatbot.png" alt-text="Screenshot shows the option to select app features using AI library list.":::
+   :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/basic-ai-chatbot.png" alt-text="Screenshot shows the option to select app features.":::
 
 1. Select **Azure OpenAI**.
 
@@ -135,7 +135,7 @@ Agents Playground opens the bot in a webpage.
 
 ## How Teams AI chatbot works
 
-Teams AI library provides a flow to build an intelligent chatbot with AI capabilities as follows:
+Teams SDK provides a flow to build an intelligent chatbot with AI capabilities as follows:
 
 :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/teams-ai-chatbot-process.png" alt-text="Screenshot shows the typical flow of AI chatbot."Lightbox="../assets/images/toolkit-v2/custom-copilot/teams-ai-chatbot-process.png":::
 
@@ -143,19 +143,19 @@ Teams AI library provides a flow to build an intelligent chatbot with AI capabil
 
 * **TurnState**: The turn state object, similar to a cookie, stores data for the current turn. This object, as the turn context, is carried through the entire application logic, including the activity handlers and the AI system.
 
-* **Authentication**: If user authentication is configured, Teams AI attempts to sign the user in. If the user is already signed in, the SDK retrieves the access token and continues. Otherwise, the SDK initiates the sign-in flow and ends the current turn.
+* **Authentication**: If user authentication is configured, Teams SDK attempts to sign the user in. If the user is already signed in, the SDK retrieves the access token and continues. Otherwise, the SDK initiates the sign-in flow and ends the current turn.
 
-* **Activity Handlers**: Teams AI library executes a set of registered activity handlers, enabling you to handle several types of activities. The activity handler system is the primary method for implementing bot or message extension app logic. It's a set of methods and configurations that allow you to register callbacks, known as route handlers, which trigger based on the incoming activity. The incoming activity can be in the form of a message, message reaction, or virtually any interaction within the Teams app.
+* **Activity Handlers**: Teams SDK executes a set of registered activity handlers, enabling you to handle several types of activities. The activity handler system is the primary method for implementing bot or message extension app logic. It's a set of methods and configurations that allow you to register callbacks, known as route handlers, which trigger based on the incoming activity. The incoming activity can be in the form of a message, message reaction, or virtually any interaction within the Teams app.
 
-* **AI system**: The AI system in Teams AI library is responsible for moderating input and output, generating plans, and executing them. It can be used as a standalone or routed to by the app object. The important concepts are as follows:
+* **AI system**: The AI system in Teams SDK is responsible for moderating input and output, generating plans, and executing them. It can be used as a standalone or routed to by the app object. The important concepts are as follows:
 
     1. [**Prompt manager**](https://github.com/microsoft/teams-ai/blob/main/getting-started/CONCEPTS/PROMPTS.md): Prompts play a crucial role in communicating and directing the behavior of Large Language Models (LLMs) AI.
     1. [**Planner**](https://github.com/microsoft/teams-ai/blob/main/getting-started/CONCEPTS/PLANNER.md): The planner receives the user's request, which is in the form of a prompt or prompt template, and returns a plan to fulfill it. This is achieved by using AI to mix and match atomic functions, known as actions, that are registered to the AI system. These actions are recombined into a series of steps that complete a goal.
     1. [**Actions**](https://github.com/microsoft/teams-ai/blob/main/getting-started/CONCEPTS/ACTIONS.md): An action is an atomic function that is registered to the AI system.
 
-* **AfterTurn handler**: After the activity handler or AI system is executed, Teams AI library executes an `afterTurn` handler. The handler allows you to perform an action after the turn. If it returns as `true`, the SDK saves the turn state to storage.
+* **AfterTurn handler**: After the activity handler or AI system is executed, Teams SDK executes an `afterTurn` handler. The handler allows you to perform an action after the turn. If it returns as `true`, the SDK saves the turn state to storage.
 
-* **Respond to user**: Teams AI library saves the state and the bot can send the responses to the user.
+* **Respond to user**: Teams SDK saves the state and the bot can send the responses to the user.
 
 ## Customize basic AI chatbot
 
@@ -178,11 +178,11 @@ You can add customizations on top of the basic app to build complex scenarios as
      - Cooper
      ```
 
-     To use project generated with Agents Toolkit, you can author the prompts in the `src/prompts/chat/skprompt.txt` file. The prompts written in this file are inserted into the prompt used to instruct the LLM. Teams AI library defines the following syntax that you can use in the prompt text:
+     To use project generated with Agents Toolkit, you can author the prompts in the `src/prompts/chat/skprompt.txt` file. The prompts written in this file are inserted into the prompt used to instruct the LLM. Teams SDK defines the following syntax that you can use in the prompt text:
 
    # [Syntax 1](#tab/syntax1)
 
-     1. `{{ $[scope].property }}`: Teams AI library renders the value of a property that is scoped and defined within the turn state. It defines three such scopes: temp, user, and conversation. If no scope is specified,  by default, the library uses the temp scope.
+     1. `{{ $[scope].property }}`: Teams SDK renders the value of a property that is scoped and defined within the turn state. It defines three such scopes: temp, user, and conversation. If no scope is specified, by default, Teams SDK uses the temp scope.
 
      1. The `{{$[scope].property}}` is used in the following way:
 
@@ -307,7 +307,7 @@ You can add customizations on top of the basic app to build complex scenarios as
 
      ---
 
-1. **Customize user input**: Teams AI library allows you to augment the prompt sent to LLM by including the user inputs. When including user inputs, you need to specify it in a prompt configuration file by setting `completion.include_input` to `true` in `src/prompts/chat/config.json`. You can also optionally configure the maximum number of user input tokens in `src/prompts/chat/config.json` by changing `completion.max_input_tokens`. This is useful when you want to limit the length of user inputs to avoid exceeding the token limit.
+1. **Customize user input**: Teams SDK allows you to augment the prompt sent to LLM by including the user inputs. When including user inputs, you need to specify it in a prompt configuration file by setting `completion.include_input` to `true` in `src/prompts/chat/config.json`. You can also optionally configure the maximum number of user input tokens in `src/prompts/chat/config.json` by changing `completion.max_input_tokens`. This is useful when you want to limit the length of user inputs to avoid exceeding the token limit.
 
 1. **Customize conversation history**: The SDK automatically manages the conversation history, and you can customize as follows:
 
@@ -394,4 +394,4 @@ You can add customizations on top of the basic app to build complex scenarios as
 
 ## See also
 
-[Teams AI library](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md)
+[Teams SDK](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md)
