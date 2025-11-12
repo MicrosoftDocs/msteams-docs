@@ -156,13 +156,13 @@ embeddings = await model.create_embeddings(inputs)
 
 ---
 
-The following diagram shows how Teams AI library provides functionalities to ease each step of the retrieval and generation process:
+The following diagram shows how Teams SDK provides functionalities to ease each step of the retrieval and generation process:
 
 :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/teams-ai-rag-scenario.png" alt-text="Screenshot shows the RAG scenario.":::
 
 1. **Handle input**: The most straight forward way is to pass the user’s input to the retrieval without any change. However, if you'd like to customize the input before retrieval, you can add an [activity handler](https://github.com/OfficeDev/TeamsFx/wiki/How-to-configure-Bot-capability-within-your-Teams-app#bring-bot-code-to-your-project) to certain incoming activities.
 
-1. **Retrieve DataSource**: Teams AI library provides `DataSource` interface to let you add your own retrieval logic. You need to create your own `DataSource` instance, and Teams AI library calls it on demand.
+1. **Retrieve DataSource**: Teams SDK provides `DataSource` interface to let you add your own retrieval logic. You need to create your own `DataSource` instance, and Teams SDK calls it on demand.
 
    # [Typescript](#tab/typescript1)
 
@@ -222,7 +222,7 @@ The following diagram shows how Teams AI library provides functionalities to eas
     }
     ```
 
-1. **Build response**: By default, Teams AI library replies to the AI generated response as a text message to the user. If you want to customize the response, you can override the default [SAY actions](https://github.com/OfficeDev/TeamsFx/wiki/) or explicitly call the [AI Model](https://github.com/OfficeDev/TeamsFx/wiki/) to build your replies, for example, with Adaptive Cards.
+1. **Build response**: By default, Teams SDK replies to the AI generated response as a text message to the user. If you want to customize the response, you can override the default [SAY actions](https://github.com/OfficeDev/TeamsFx/wiki/) or explicitly call the [AI Model](https://github.com/OfficeDev/TeamsFx/wiki/) to build your replies, for example, with Adaptive Cards.
 
 Here's a minimal set of implementations to add RAG to your app. In general, it implements `DataSource` to inject your `knowledge` into prompt, so that AI can generate response based on the `knowledge`.
 
@@ -389,7 +389,7 @@ To build your data ingestion, follow these steps:
     
     ```
 
-* `embeddings.ts`: Use Teams AI library `OpenAIEmbeddings` to create embeddings.
+* `embeddings.ts`: Use Teams SDK `OpenAIEmbeddings` to create embeddings.
 
     ```javascript
     import { OpenAIEmbeddings } from "@microsoft/teams-ai";
@@ -571,7 +571,7 @@ To build your data ingestion, follow these steps:
         return results
     ```
 
-* `embeddings.py`: Use Teams AI library `OpenAIEmbeddings` to create embeddings.
+* `embeddings.py`: Use Teams SDK `OpenAIEmbeddings` to create embeddings.
 
     ```python
     async def create_embeddings(text: str, embeddings):
@@ -670,7 +670,7 @@ In this section you'll learn how to:
 ### Add document to Azure AI Search
 
 > [!Note]
-> This approach creates an end-to-end chat API called as AI model. You can also use the index created earlier as a data source, and use Teams AI library to customize the retrieval and prompt.
+> This approach creates an end-to-end chat API called as AI model. You can also use the index created earlier as a data source, and use Teams SDK to customize the retrieval and prompt.
 
 You can ingest your knowledge documents to Azure AI Search Service and create a vector index with Azure OpenAI on your data. After ingestion, you can use the index as a data source.
 
@@ -1068,4 +1068,4 @@ export class GraphApiSearchDataSource implements DataSource {
 
 ## See also
 
-[Teams AI library](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md)
+[Teams SDK](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md)
