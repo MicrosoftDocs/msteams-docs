@@ -40,6 +40,8 @@ Teams platform features that are available to all app developers.</br>
 
 * ***November 6, 2025***: [Teams AI library v2 has been renamed to *Teams SDK*.](/microsoftteams/platform/teams-ai-library/)
 
+* ***November 17, 2025***: [Bot AAD auth is now available in group scopes.] (bots/how-to/authentication/bot-sso-overview.md)
+
 :::column-end:::
 :::row-end:::
 <br/>
@@ -52,7 +54,6 @@ Teams platform features that are available to all app developers.</br>
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-|17/11/2025 | Bot AAD auth is now available in group scopes. | [Enable SSO for your app](bots/how-to/authentication/bot-sso-overview.md)
 |15/10/2025 | The Microsoft Teams JavaScript client library (TeamsJS) supports app suspension for Teams apps extended to run across other Microsoft 365 applications. | Build tabs > Tab features > [App suspension for your tab app](tabs/how-to/app-caching.md)
 | 18/09/2025 | Teams AI library is now generally available for JavaScript and C#. It provides a simplified SDK, support for Model Context Protocol (MCP), Agent-to-Agent communication (A2A), and streamlined tools to enable developers to build intelligent agents for Teams | [Overview of Teams AI Library](/microsoftteams/platform/teams-ai-library/welcome) |
 | 19/08/2025 | Teams now supports token prefetching for apps that use nested app authentication (NAA). | Add authentication > [Enable nested app authentication](concepts/authentication/nested-authentication.md#token-prefetching-for-nested-app-authentication-naa) |
