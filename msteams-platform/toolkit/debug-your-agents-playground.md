@@ -156,13 +156,13 @@ Agents Playground offers a faster debug experience for applications when compare
    1. Run the following command to start your app:
 
       ```cmd
-      npm run dev:atk:playground
+      npm run dev:teamsfx:testtool
       ```
 
    1. Run the following command in a separate terminal to launch Agents Playground:
 
       ```cmd
-      npm run dev:atk:launch-playground
+      npm run dev:teamsfx:launch-testtool
       ```
 
    # [C#](#tab/clicsharp)
