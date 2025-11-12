@@ -34,9 +34,17 @@ In personal scope, the app user interacts with the bot or message extension app 
 
 # [Group Scope](#tab/group)
 
-In group scope, the app user interacts with the bot or message extension app in a group chat or channel without needing to sign in again.
+In group scope, the app user interacts with the bot in a group chat without needing to sign in again. Only the user mentioning the bot receives an Adaptive Card to consent to the bot.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-authentication-in-group-scopes-infographic.png" alt-text="bot authentication in group scope" border="false":::
+
+In group scope, when the user does not have the app pre-installed, there are two scenarios for bot interaction:
+
+- **AAD consent is required**: The user who @mentions the bot agrees to the permissions requested by the bot. The bot can then acquire the access token for that app user and respond to the request in the group chat.
+
+- **AAD consent is not required**: In scenarios where user permissions have been granted by default or for trusted apps, the user who @mentions the bot can directly interact with the bot without needing to give consent.
+
+---
 
 The permission scopes for accessing resources remain the same in both personal and group scopes.
 

@@ -264,6 +264,13 @@ The consent dialog that appears is for open-id scopes defined in Microsoft Entra
 
 ### In group chats
 
+In group scope, when the user does not have the app , there are two scenarios for bot interaction.
+
+- AAD consent is required for bot interaction
+- AAD consent is not required for bot interaction
+
+#### AAD consent is required for bot interaction
+
 When a bot is added to a group chat for the first time and consent is required for a particular user, a consent dialog box appears only to the user who @mentions the bot.
 
 # [Desktop](#tab/desktop)
@@ -297,6 +304,10 @@ When a bot is added to a group chat for the first time and consent is required f
 - If the user declines, or the request times out, the user has to @mention bot again to grant permission for token acquisition. The group sees a public message that the action was not completed.
 
   :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/request-times-out-mobile.png" alt-text="consent denied or request times out mobile":::
+
+#### AAD consent is not required for bot interaction
+
+In this scenario, where user permissions have been granted by default or for trusted apps, the user who @mentions the bot can directly interact with the bot without needing to give consent.
 
 ---
 > [!NOTE]

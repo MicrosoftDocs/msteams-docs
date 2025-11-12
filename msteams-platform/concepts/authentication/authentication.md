@@ -13,7 +13,7 @@ Choose to add authentication for your app in one of the following ways:
 
 * **Enable single sign-on (SSO) in a Teams app**:
   SSO within Teams is an authentication method that uses an app user's Teams identity to provide them with access to your app. A user who has logged into Teams doesn't need to log in again to your app within the Teams environment. With only a consent required from the app user, the Teams app retrieves access details for them from Microsoft Entra ID. After the app user has given consent, they can access the app even from other devices without having to be validated again.<br>
-  In personal scope, the app user interacts with the app in a one-on-one chat. While in group scope, the app user interacts with the app in a group chat without needing to sign in again. Only the user mentioning the bot receives an adaptive card to consent to the bot. <br>
+  SSO is available for one-on-one and group scopes. <br>
 
 * **Enable authentication using third-party OAuth provider**:
   You can use a third-party OAuth Identity Provider (IdP) to authenticate your app users. The app user is registered with the identity provider, which has a trust relationship with your app. When the user attempts to log in, the identity provider validates the app user and provides them with access to your app. Microsoft Entra ID is one such third party OAuth provider. You can use other providers, such as Google, Facebook, GitHub, or any other provider.
