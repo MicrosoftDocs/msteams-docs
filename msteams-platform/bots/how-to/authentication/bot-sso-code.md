@@ -285,10 +285,12 @@ The user needs to consent to the permissions requested by the bot app to get the
   # [Mobile](#tab/mobile)
 
   - The user selects **Add**, an adaptive card appears to the user to request consent for permissions.
+  
+  :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/user-mentions-bot-mobile.png" alt-text="permissions dialog box on mobile":::
 
   - If the user selects **Add**, a permissions dialog box appears to the user.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-consent-mobile.png" alt-text="permissions dialog box mobile":::
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-consent-mobile.png" alt-text="permissions dialog box on mobile":::
 
     The user must select **Accept** to give consent.
 
