@@ -307,7 +307,7 @@ Each blueprint includes three key configuration areas:
 
 1. **Configuration**
 
-     This table helps you understand the options available in the configuration pane and what each setting controls when defining your agent blueprint.
+     In this tab, you specify how the agent communicates with its service. You can select the connection type as bot based or API based and provide the corresponding bot ID or backend URL.
 
     | Agent Type | Description |
     |-----------|------------|
