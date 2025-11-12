@@ -274,7 +274,7 @@ Agent Blueprints are created and managed in **Teams Developer Portal**, while th
 
 The Agent Blueprint tool in the Developer Portal displays a list of existing blueprints available in your tenant. You can:
 
-* View **configuration** details for an existing blueprint, including its type, credentials, and blueprint ID.
+* View configuration details for an existing blueprint, including its type, credentials, and blueprint ID.
 * Edit or update **configuration** and **credentials** for a blueprint.
 
 If a suitable blueprint doesn’t already exist, you can create a new one.
