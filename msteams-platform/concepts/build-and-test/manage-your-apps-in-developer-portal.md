@@ -9,7 +9,7 @@ ms.date: 01/23/2025
 
 # Manage your apps in Developer Portal
 
-After you upload your app in Microsoft Teams, you can manage your app in Developer Portal. The article provides comprehensive guidance on app configuration, analytics, and validation to enhance the Teams app experience.
+After you upload your app in Microsoft Teams, you can manage your app in Developer Portal. The article provides comprehensive guidance on app configuration, analytics, and validation to enhance the Teams app experience. Agent Identity Blueprint lets you create and manage agent identities for your Teams app.
 
 ## Overview
 
