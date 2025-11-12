@@ -252,7 +252,7 @@ The user needs to consent to the permissions requested by the bot app to get the
 
 When the app user is using the application for the first time and user consent is required, the following dialog box appears:
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-consent.png" alt-text="Consent dialog for bot SSO" border="false":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-consent-in-personal-scope-infographics.png" alt-text="consent dialog for bot SSO in personal scope" border="false":::
 
 When the user selects **Continue**, one of the following events occurs:
 
@@ -280,7 +280,7 @@ When a bot is added to a group chat for the first time and consent is required f
 
 - If the user declines, or the request times out, the user has to @mention bot again to grant permission for token acquisition. The group sees a public message that the action was not completed.
 
-  :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/request-times-out-desktop.png" alt-text="consent denied or request times out" border="false":::
+  :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/request-times-out-desktop.png" alt-text="consent denied or request times out" lightbox="../../../assets/images/authentication/teams-sso-bots/request-times-out-desktop.png" border="false":::
   
 # [Mobile](#tab/mobile)
 
