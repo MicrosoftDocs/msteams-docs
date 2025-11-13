@@ -8,11 +8,11 @@ ms.author: surbhigupta
 ms.date: 09/16/2024
 ---
 
-# Build an AI agent bot in Teams
+# Build an AI agent in Teams
 
 An AI agent in Microsoft Teams is a conversational chatbot that uses Large Language Models (LLMs) to interact with the users. It understands user intentions and selects a sequence of actions, enabling the chatbot to complete common tasks.
 
-:::image type="content" source="../assets/images/toolkit-v2/custom-copilot/build-ai-agent.png" alt-text="Screenshot shows the process of build AI agent bot requests and responses."Lightbox="../assets/images/toolkit-v2/custom-copilot/build-ai-agent.png":::
+:::image type="content" source="../assets/images/toolkit-v2/custom-copilot/build-ai-agent.png" alt-text="Screenshot shows the process of build AI agent bot requests and responses." lightbox="../assets/images/toolkit-v2/custom-copilot/build-ai-agent.png":::
 
 ## Prerequisites
 
@@ -40,7 +40,7 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
 
 1. Select **AI Agent**.
 
-   :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/ai-agent.png" alt-text="Screenshot shows the option to select app features using AI library list.":::
+   :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/ai-agent.png" alt-text="Screenshot shows the option to select app features.":::
 
 1. To build an app, select any of the following options:
 
@@ -76,9 +76,9 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
 
        :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/application-name.png" alt-text="Screenshot shows the option to enter the suitable name.":::
 
-       You've successfully created your AI agent bot.
+       You've successfully created your AI agent.
 
-       :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/ai-agent-project-output-biuld-new.png" alt-text="Screenshot shows the ai chatbot created and readme file is available.":::
+       :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/ai-agent-project-output-biuld-new.png" alt-text="Screenshot shows the AI agent created and readme file is available.":::
 
     1. Under **EXPLORER**, go to the **env** > **.env.playground.user** file.
 
@@ -126,7 +126,7 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
 
     The following are Agents Toolkit specific project files. For more information on how Agents Toolkit works, see [a complete guide on GitHub](https://github.com/OfficeDev/TeamsFx/wiki/Teams-Toolkit-Visual-Studio-Code-v5-Guide#overview):
 
-    | File                                 | Contents                                           |
+    | File | Contents |
     | - | - |
     |`m365agents.yml`| This is the main Agents Toolkit project file. The project file defines the properties and configuration stage definitions. |
     |`m365agents.local.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging.|
@@ -153,7 +153,7 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
        > [!NOTE]
        >
        > * If the building agent is selected as Build with Assistants API, Azure OpenAI service has not provided support for Assistants API.
-       > * The `AssistantsPlanner` in Teams AI Library is in preview.
+       > * The `AssistantsPlanner` in Teams SDK is in preview.
 
     1. Select **Default folder**.
 
@@ -169,9 +169,9 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
 
        :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/application-name.png" alt-text="Screenshot shows the option to enter the suitable name.":::
 
-       You've successfully created your AI agent bot.
+       You've successfully created your AI agent.
 
-       :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/ai-agent-project-output-biuld-assistant-api.png" alt-text="Screenshot shows the ai chatbot created and readme file is available.":::
+       :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/ai-agent-project-output-biuld-assistant-api.png" alt-text="Screenshot shows the AI agent created and readme file is available.":::
 
        **Create your own OpenAI Assistant**
 
@@ -209,7 +209,7 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
 
    Agents Playground opens the bot in a webpage.
 
-      :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/ai-agent-build-assistant-api-final-output.png" alt-text="Screenshot shows the final output of AI agent build with assistants API bot." lightbox="../assets/images/toolkit-v2/custom-copilot/ai-agent-assistant-api-output.png":::
+      :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/ai-agent-build-assistant-api-final-output.png" alt-text="Screenshot shows the final output of AI agent built with assistants API bot." lightbox="../assets/images/toolkit-v2/custom-copilot/ai-agent-assistant-api-output.png":::
 
    ## Take a tour of the bot app source code
 
@@ -229,7 +229,7 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
     |`src/adapter.js`| Sets up the bot adapter.|
     |`src/config.js`| Defines the environment variables.|
     |`src/creator.js`| One-time tool to create OpenAI Assistant.|
-    |`src/app/app.js`| Handles business logics for the AI Agent.|
+    |`src/app/app.js`| Handles business logics for the AI agent.|
     |`src/app/messages.js`| Defines the message activity handlers.|
     |`src/app/actions.js`| Defines the AI actions.|
 
@@ -243,11 +243,11 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
 
     ---
 
-## Create an AI agent using Teams AI library
+## Create an AI agent using Teams SDK
 
 ### Build new
 
-Teams AI library provides a comprehensive flow that simplifies the process of building your own AI agent. The important concepts that you need to understand are as follows:
+Teams SDK provides a comprehensive flow that simplifies the process of building your own AI agent. The important concepts that you need to understand are as follows:
 
 * [**Actions**](https://github.com/microsoft/teams-ai/blob/main/getting-started/CONCEPTS/ACTIONS.md): An action is an atomic function that is registered to the AI system.
 * [**Planner**](https://github.com/microsoft/teams-ai/blob/main/getting-started/CONCEPTS/PLANNER.md): The planner receives the user's request, which is in the form of a prompt or prompt template, and returns a plan to fulfill it. This is achieved by using AI to mix and match atomic functions, known as actions, that are registered to the AI system. These actions are recombined into a series of steps that complete a goal.
@@ -263,7 +263,7 @@ Assistants API from OpenAI simplifies the development effort of creating an AI a
    | Dev effort | Medium | Relatively small |
    | LLM services | Azure OpenAI or OpenAI | OpenAI only |
    | Example implementations in template | This app template can chat and help users to manage the tasks. | This app templates use the Code Interpreter tool to solve math problems and also the Function Calling tool to get city weather. |
-   | Limitations | NA | Teams AI library doesn't support the Knowledge Retrieval tool. |
+   | Limitations | NA | Teams SDK doesn't support the Knowledge Retrieval tool. |
 
 ## Customize the app template
 
@@ -350,4 +350,4 @@ When the assistant provides a function and its arguments for execution, the SDK 
 
 ## See also
 
-[Teams AI library](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md)
+[Teams SDK](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md)
