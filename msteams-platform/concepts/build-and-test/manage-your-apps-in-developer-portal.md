@@ -296,7 +296,7 @@ If a suitable blueprint doesn’t already exist, you can create a new one.
 
 1. Enter the name and select **Create**.
 
-    :::image type="content" source="../../assets/images/tdp/create-new-agent-blueprint.png" alt-text="Create a new agent blueprint window" lightbox="../../assets/images/tdp/create-new-agent-blueprint.png" lightbox="../../assets/images/tdp/create-new-agent-blueprint.png":::
+    :::image type="content" source="../../assets/images/tdp/create-new-agent-blueprint.png" alt-text="Create a new agent blueprint window" lightbox="../../assets/images/tdp/create-new-agent-blueprint.png":::
 A unique **Agent Blueprint ID** is automatically generated. This ID is used when you create agent identities based on this blueprint.
 
 #### Configure the agent identity blueprint
