@@ -62,7 +62,7 @@ To run a performance audit, follow these steps:
 
 ## Calculate performance metrics for apps
 
-Leverage the self-serve, lightweight **Performance Report tool** (or Perf tool) to evaluate efficiency of your mobile app. This tool runs seamlessly on both Android and iOS, and with real-time performance metrics mapped against industry benchmarks, ensuring a superior user experience. It also enables you to implement Teams-specific best practices into your app directly from your mobile.
+Leverage the self-serve, lightweight **Performance Report tool** (or Perf tool) to evaluate efficiency of your web and tab apps on mobile. This tool runs seamlessly on both Android and iOS, and with real-time performance metrics mapped against industry benchmarks, ensuring a superior user experience. It also enables you to implement Teams-specific best practices into your app directly from your mobile.
 
 The steps involved are:
 
@@ -84,7 +84,7 @@ To generate performance metrics via **Performance Report tool** for your mobile 
 
 1. Navigate to **Apps** section.
 
-1. Select the app you want to audit. The app details page appears.
+1. Open the app you want to audit, wait for it to load.
 
 1. To generate the report
     * On Android app:
