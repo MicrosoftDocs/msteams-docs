@@ -1537,7 +1537,8 @@ To create a response rendering template, follow these steps:
 
 The following code is an example of a Response rendering template:
 
-<details><summary>Response rendering template</summary>
+<details>
+<summary>Response rendering template</summary>
 
 ```json
 {
@@ -1606,7 +1607,7 @@ The following code is an example of a Response rendering template:
 }
 ```
 
----
+</details>
 
 ### Create app manifest
 
