@@ -8,7 +8,7 @@ ms.owner: mehakagarwal
 ms.date: 11/10/2025
 ---
 
-# Use Microsoft Graph APIs to import external messages into Teams
+# Import external messages into Teams with Microsoft Graph APIs
 
 Use Microsoft Graph to import users' existing message history and data from any third-party platform into Teams. Users can continue their conversations seamlessly without interruption, as their messaging hierarchy from the third-party platform is recreated directly within Teams.
 
@@ -73,12 +73,14 @@ You can create a new channel or chat, or use an existing one, to migrate user's 
 
 ### Step 2: Enable migration mode to import messages
 
-Use the `startMigration` API to enable migration mode on Teams channels or chats, and allow import of historical messages. Migration mode is a special state that prevents certain operations, like sending messages and adding members, during the data migration process. For more information, see:
+The `startMigration` API to enables migration mode on Teams channels or chats, and allows import of historical messages. Migration mode is a special state that prevents certain operations, like sending messages and adding members, during the data migration process. For more information, see:
 
 * [Channel migration](#channel-migration)
 * [Chat migration](#chat-migration)
 
 ### Channel migration
+
+Use the `startMigration` API to enable migration mode on new or existing channels. This API sets the channel’s migration state to `inProgress` and begins the message import process.
 
 #### Request
 
@@ -113,6 +115,8 @@ POST https://graph.microsoft.com/beta/teams/57fb72d0-d811-46f4-8947-305e6072eaa5
 ```
 
 ### Chat migration
+
+Use the `startMigration` API to enable migration mode on new or existing chats. This API sets the chat’s migration state to `inProgress` and begins the message import process.
 
 #### Request
 
