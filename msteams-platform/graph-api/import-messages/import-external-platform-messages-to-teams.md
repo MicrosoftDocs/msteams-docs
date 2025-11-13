@@ -1,6 +1,6 @@
 ---
 title: Import external platform messages to Teams with Microsoft Graphs
-description: Learn how to use Microsoft Graph to import historical messages and data from all third-party platforms to Teams.
+description: Learn how to use Microsoft Graph to import messages such as message history and data from any third-party platform to Teams.
 ms.localizationpriority: high
 author: "surbhigupta"
 ms.topic: overview
@@ -31,6 +31,23 @@ Use Microsoft Graph to import users' existing message history and data from any 
 |---------|---------|---------|---------|
 |**Channels** | Standard, Private, Shared | New and existing | Channels must be created or already in migration mode |
 |**Chats** | Group, 1:1 | New and existing | Meeting chats not supported; external members supported |
+
+## Content scope for import
+
+The following table provides the content scope.
+
+|In-scope | Out-of-scope|
+|----------|--------------------------|
+|Team and channel messages|At mentions|
+|Created time of the original message|Announcements|
+|Inline images as part of the message|Videos|
+|Links to existing files in SPO or OneDrive|Code snippets|
+|Messages with rich text|Sticker|
+|Message reply chain|Quotes|
+|High throughput processing|Cross posts between channels|
+|1:1 and group chat messages||
+|Shared and private channels||
+|Reactions and emojis||
 
 ## Prerequisites
 
@@ -288,23 +305,6 @@ HTTP/1.1 200 OK
 }
 ```
 
-### Content scope for import
-
-The following table provides the content scope.
-
-|In-scope | Out-of-scope|
-|----------|--------------------------|
-|Team and channel messages|At mentions|
-|Created time of the original message|Announcements|
-|Inline images as part of the message|Videos|
-|Links to existing files in SPO or OneDrive|Code snippets|
-|Messages with rich text|Sticker|
-|Message reply chain|Quotes|
-|High throughput processing|Cross posts between channels|
-|1:1 and group chat messages||
-|Shared and private channels||
-|Reactions and emojis||
-
 ### Step 5: Complete migration
 
 Use the `completeMigration` API to finish the migration process for both new and existing channels and chats.
@@ -335,6 +335,29 @@ POST /chats/{chat-id}/completeMigration
 
 Call the `Get channel` or the `Get chat` API, to verify that the migration mode state is marked as completed. For more information, see [Get channel](/graph/api/channel-get?view=graph-rest-1.0&tabs=http&preserve-view=true) or
 [Get chat](/graph/api/chat-get?view=graph-rest-1.0&tabs=http&preserve-view=true).
+
+## See also
+
+* [Microsoft Graph and Teams integration](/graph/teams-concept-overview)
+* [Export content with the Microsoft Teams Export APIs](/microsoftteams/export-teams-content)
+* [Microsoft Teams service limits](/graph/throttling-limits#microsoft-teams-service-limits)
+* [Licensing and payment requirements for the Microsoft Teams API](/graph/teams-licenses)
+
+## Tips and additional information
+
+<!-- markdownlint-disable MD001 -->
+<!-- markdownlint-disable MD026 -->
+
+* After the `completeMigration` request is made, you can't import further messages into the team.
+
+* You can only add team members to the new team after the `completeMigration` request has returned a successful response.
+
+* Throttling: Messages import at five RPS per channel.
+
+* If you need to make a correction to the migration results, you must delete the team, repeat the steps to create the team and channel and re-migrate the messages.
+
+> [!NOTE]
+> Inline images are the only type of media supported by the import message API schema.
 
 ## See also
 
