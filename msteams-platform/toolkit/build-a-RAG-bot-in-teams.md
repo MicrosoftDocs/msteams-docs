@@ -82,7 +82,7 @@ Microsoft Teams enables you to build a conversational bot with RAG to create an 
 
    You've successfully created your **Teams Agent with Data** project workspace.
 
-   :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/rag-project-output.png" alt-text="Screenshot shows the ai chatbot created and readme file is available.":::
+   :::image type="content" source="../assets/images/toolkit-v2/custom-copilot/rag-project-output.png" alt-text="Screenshot shows the AI chatbot created and readme file is available.":::
 
 1. Under **EXPLORER**, go to the **env** > **.env.playground.user** file.
 
