@@ -77,20 +77,15 @@ If the prerequisites are in place, let's begin!
 1. Select **Create a New Agent/App** > **Teams App**.
 
    :::image type="content" source="../assets/images/toolkit-v2/first-tab/create-project.png" alt-text="Screenshots shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
+1. Select **Other Teams Capabilities**
 
-4. Select **Tab** to create a new tab project.
+   :::image type="content" source="../assets/images/toolkit-v2/first-tab/other-teams-capabilities.png" alt-text="Screenshot shows the Other Teams Capabilities to select.":::
 
-   :::image type="content" source="../assets/images/toolkit-v2/first-tab/create-new-app1.png" alt-text="Screenshots shows the wizard to create a new project.":::
+1. In this example, select **Tab** as app capability.
 
-5. Ensure that **Basic Tab** is selected as the app feature that you want to build in your app.
+   :::image type="content" source="../assets/images/toolkit-v2/first-tab/select-capabilities-tabapp_1.png" alt-text="Screenshot shows the App Capability to select.":::
 
-   :::image type="content" source="../assets/images/toolkit-v2/first-tab/select-capabilities-tabapp.png" alt-text="Screenshot shows to add app feature to add to your new app.":::
-
-6. Select **JavaScript** as the programming language.
-
-   :::image type="content" source="../assets/images/toolkit-v2/first-tab/select-language-tab.png" alt-text="Screenshot shows how to select the programming language.":::
-
-7. Select **Default folder** to store your project root folder in default location.
+1. Select **Default folder** to store your project root folder in default location.
 
    :::image type="content" source="../assets/images/toolkit-v2/first-tab/select-default-location.png" alt-text="Screenshot shows how to select default location.":::
 
