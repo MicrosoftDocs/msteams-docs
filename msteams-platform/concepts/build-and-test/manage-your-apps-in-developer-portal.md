@@ -275,7 +275,7 @@ Agent Identity Blueprints are created and managed in **Teams Developer Portal**,
 
 The Agent Identity Blueprint tool in the Developer Portal displays a list of existing blueprints available in your tenant.
 
-:::image type="content" source="../../assets/images/tdp/list-agent-blueprint.png" alt-text="List of available agent blueprints":::
+:::image type="content" source="../../assets/images/tdp/list-agent-blueprint.png" alt-text="List of available agent blueprints" lightbox="../../assets/images/tdp/list-agent-blueprint.png":::
 
  You can use Agent Identity Blueprint to:
 
@@ -288,15 +288,15 @@ If a suitable blueprint doesn’t already exist, you can create a new one.
 
 1. In [Teams Developer Portal](https://dev.teams.microsoft.com/home), go to the **Tools** section and select **Agent Identity Blueprint**.
 
-    :::image type="content" source="../../assets/images/tdp/agent-blueprint.png" alt-text="Agent Blueprint":::
+    :::image type="content" source="../../assets/images/tdp/agent-blueprint.png" alt-text="Agent Blueprint" lightbox="../../assets/images/tdp/agent-blueprint.png":::
 
 1. Select **+ New blueprint**.
 
-    :::image type="content" source="../../assets/images/tdp/new-agent-blueprint.png" alt-text="Create a new agent blueprint":::
+    :::image type="content" source="../../assets/images/tdp/new-agent-blueprint.png" alt-text="Create a new agent blueprint" lightbox="../../assets/images/tdp/new-agent-blueprint.png":::
 
 1. Enter the name and select **Create**.
 
-    :::image type="content" source="../../assets/images/tdp/create-new-agent-blueprint.png" alt-text="Create a new agent blueprint window":::
+    :::image type="content" source="../../assets/images/tdp/create-new-agent-blueprint.png" alt-text="Create a new agent blueprint window" lightbox="../../assets/images/tdp/create-new-agent-blueprint.png" lightbox="../../assets/images/tdp/create-new-agent-blueprint.png":::
 A unique **Agent Blueprint ID** is automatically generated. This ID is used when you create agent identities based on this blueprint.
 
 #### Configure the agent identity blueprint
@@ -308,7 +308,7 @@ Each blueprint includes two key configuration areas:
     1. **Agent Blueprint ID**: A system-generated unique identifier for the blueprint.
     1. **Name**: The name assigned when the blueprint was created.
 
-    :::image type="content" source="../../assets/images/tdp/basic-information-agent-blueprint.png" alt-text="Basic information tab in Agent Blueprint":::
+    :::image type="content" source="../../assets/images/tdp/basic-information-agent-blueprint.png" alt-text="Basic information tab in Agent Blueprint" lightbox="../../assets/images/tdp/basic-information-agent-blueprint.png":::
 
 1. **Configuration**: In this tab, you can specify how the agent communicates with its service.
 
@@ -328,7 +328,7 @@ Each blueprint includes two key configuration areas:
     1. Select **Save** to apply your configuration.
     1. Select **Revert** to discard the changes.
 
-    :::image type="content" source="../../assets/images/tdp/configuration-agent-blueprint.png" alt-text="Configuration tab in Agent Blueprint":::
+    :::image type="content" source="../../assets/images/tdp/configuration-agent-blueprint.png" alt-text="Configuration tab in Agent Blueprint" lightbox="../../assets/images/tdp/configuration-agent-blueprint.png":::
 
 <!--1. **Credentials**:
     Agent blueprints include credentials used for authentication and authorization when agent identities interact with Teams services. You can manage two types of credentials:
