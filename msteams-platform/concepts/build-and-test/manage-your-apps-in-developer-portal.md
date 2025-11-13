@@ -9,7 +9,8 @@ ms.date: 01/23/2025
 
 # Manage your apps in Developer Portal
 
-After you upload your app in Microsoft Teams, you can manage your app in Developer Portal. The article provides comprehensive guidance on app configuration, analytics, and validation to enhance the Teams app experience. Agent Identity Blueprint lets you create and manage agent identities for your Teams app.
+After you upload your app in Microsoft Teams, you can manage your app in Developer Portal. The article provides comprehensive guidance on app configuration, analytics, and validation to enhance the Teams app experience.<br>
+In addition, you learn about Agent Identity Blueprint to create and manage agent identities for your Teams app.
 
 ## Overview
 
@@ -244,7 +245,7 @@ The Developer Portal also includes tools to help you build key features of Teams
 * **Adaptive Cards editor (Preview)**: Create and preview Adaptive Cards to include with your apps.
 * **Identity platform management (Preview)**: Register your apps with Microsoft Entra ID to help users sign in and provide access to APIs.
 * **Teams Store app validation**: Check your app package against the test cases that Microsoft uses to review your app. We recommend you to use latest app validation tool in your app under [**Publish**](#publish) section.
-* **Agent Identity Blueprint**: Create, configure, and manage reusable blueprints that define agent identities, their authentication, and back-end connection details. For more information, see [Agent Identity Blueprint](#agent-identity-blueprint).
+* **Agent Identity Blueprint**: Create, configure, and manage reusable blueprints that define agent identities and back-end connection details. For more information, see [Agent Identity Blueprint](#agent-identity-blueprint).
 * **Bot management**: Add conversational bots to your app that communicate with users, respond to their questions, and proactively notify them about changes and other events.
 
 To add a bot:
@@ -266,22 +267,24 @@ From the Developer Portal, you can go to Bot Framework portal and configure your
 
 ### Agent Identity Blueprint
 
-An Agent Identity Blueprint provides a reusable configurations for **agent identities**, that can perform tasks and interact with users or services in Teams. Each blueprint acts as a template that specifies how an agent is configured, authenticated, and connected to a back-end service.
+An Agent Identity Blueprint provides a reusable configurations for **agent identities** that can perform tasks and interact with users or services in Teams. Each blueprint acts as a template that specifies how an agent is configured and connected to a back-end service.
 
 Agent Identity Blueprints are created and managed in **Teams Developer Portal**, while the agent identities derived from them are managed in the **Teams Admin Center**.
 
 #### View and use existing Agent Identity Blueprints
 
-The Agent Identity Blueprint tool in the Developer Portal displays a list of existing blueprints available in your tenant. You can:
+The Agent Identity Blueprint tool in the Developer Portal displays a list of existing blueprints available in your tenant.
+
+:::image type="content" source="../../assets/images/tdp/list-agent-blueprint.png" alt-text="List of available agent blueprints":::
+
+ You can use Agent Identity Blueprint to:
 
 * View configuration details for an existing blueprint, including its type and blueprint ID.
 * Edit or update configuration for a blueprint.
 
-:::image type="content" source="../../assets/images/tdp/list-agent-blueprint.png" alt-text="List of available agent blueprints":::
-
 If a suitable blueprint doesn’t already exist, you can create a new one.
 
-#### Create and configure a new Agent Identity Blueprint
+#### Create a new agent identity blueprint
 
 1. In [Teams Developer Portal](https://dev.teams.microsoft.com/home), go to the **Tools** section and select **Agent Identity Blueprint**.
 
@@ -296,20 +299,18 @@ If a suitable blueprint doesn’t already exist, you can create a new one.
     :::image type="content" source="../../assets/images/tdp/create-new-agent-blueprint.png" alt-text="Create a new agent blueprint window":::
 A unique **Agent Blueprint ID** is automatically generated. This ID is used when you create agent identities based on this blueprint.
 
-#### Configure the Agent Identity Blueprint
+#### Configure the agent identity blueprint
 
 Each blueprint includes two key configuration areas:
 
-1. **Basic information**
+1. **Basic information**: You can view the following basic configuration for your blueprint:
 
     1. **Agent Blueprint ID**: A system-generated unique identifier for the blueprint.
-    1. **Name**: The name assigned when the blueprint is created.
+    1. **Name**: The name assigned when the blueprint was created.
 
     :::image type="content" source="../../assets/images/tdp/basic-information-agent-blueprint.png" alt-text="Basic information tab in Agent Blueprint":::
 
-1. **Configuration**
-
-     In this tab, you specify how the agent communicates with its service.
+1. **Configuration**: In this tab, you can specify how the agent communicates with its service.
 
     1. In the **Configuration** tab, go to **Agent Type**.
         * Choose how the agent connects to a back-end service.
@@ -323,7 +324,7 @@ Each blueprint includes two key configuration areas:
 
     1. Based on the selected agent type, enter one of the following:
         * **Bot ID**: If you selected Bot-based, provide the ID of your registered Teams bot.
-        * **Backend URL**: If you selected API-based, provide the URL of your backend service endpoint.
+        * **Backend URL**: If you selected API-based, provide the URL of your back-end service endpoint.
     1. Select **Save** to apply your configuration.
     1. Select **Revert** to discard the changes.
 
