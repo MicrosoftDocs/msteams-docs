@@ -1360,9 +1360,6 @@ You can validate if the OpenAPI Description document is valid. To verify, follow
 
     :::image type="content" source="../assets/images/Copilot/api-me-sbs-product-response.png" alt-text="Screenshots shows the highlighted product that is selected from the response body.":::
 
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+OpenAPI+Description+document&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-api-based-message-extensions%3Ftutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-api-based-message-extensions.yml&documentVersionIndependentId=6b8f43f0-7f44-cbd3-0fea-5161c72e2c00&author=%40surbhigupta&platformId=9fbfa1ed-5ce3-5b6f-5503-4e968b6698e5&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
-
 ### Create response rendering template
 
 An OpenAPI Description document requires a response rendering template for the app to respond to the GET or POST requests. The response rendering template consists of an Adaptive Card template, Preview card template, and metadata.
@@ -1716,9 +1713,6 @@ To create the manifest, follow these steps:
       * Color icon
       * Outline icon
 
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+app+manifest&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-api-based-message-extensions%3Ftutorial-step%3D4&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-api-based-message-extensions.yml&documentVersionIndependentId=6b8f43f0-7f44-cbd3-0fea-5161c72e2c00&author=%40surbhigupta&platformId=9fbfa1ed-5ce3-5b6f-5503-4e968b6698e5&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
-
 ### Upload a custom app to Teams
 
 Sign into Teams test environment to test your app in Teams. To upload a custom app in Teams, follow these steps:
@@ -1744,9 +1738,6 @@ Sign into Teams test environment to test your app in Teams. To upload a custom a
 1. Select **Send**.
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-sbs-result.png" alt-text="Screenshot shows the Adaptive Card with the search results in the chat message in Teams.":::
-
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Upload+a+custom+app+to+Teams&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-api-based-message-extensions%3Ftutorial-step%3D5&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-api-based-message-extensions.yml&documentVersionIndependentId=6b8f43f0-7f44-cbd3-0fea-5161c72e2c00&author=%40surbhigupta&platformId=9fbfa1ed-5ce3-5b6f-5503-4e968b6698e5&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 Congratulations! You did it!
 You learned to create an API-based message extension using OpenAPI Description document.
