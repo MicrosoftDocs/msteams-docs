@@ -30,13 +30,13 @@ Let's look at how SSO works in different scopes.
 
 In personal scope, the app user interacts with the bot or message extension app in a one-on-one chat. The user needs to consent only once to use the bot or message extension app.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-consent-flow-personal-scope-overview-infographics.png" alt-text="bot consent flow in personal scope" border="false":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-consent-flow-personal-scope-overview.png" alt-text="The infographic shows the bot consent flow in personal scope." border="false":::
 
 # [Group scope](#tab/group)
 
 The user can interact with the bot in a group chat without needing to sign in again. The consent card is displayed only to the user who @mentions the bot for the first time.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-authentication-in-group-scopes-infographic.png" alt-text="bot authentication in group scope" border="false":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-authentication-in-group-scope.png" alt-text="The infographic shows the bot consent flow in group scope." border="false":::
 
 If the user doesn't have the app pre-installed the following are the two scenarios for user authentication:
 

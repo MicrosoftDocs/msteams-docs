@@ -252,7 +252,7 @@ The user needs to consent to the permissions requested by the bot app to get the
 
 When the app user is using the application for the first time and user consent is required, the following dialog box appears:
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-consent-in-personal-scope-infographics.png" alt-text="consent dialog for bot SSO in personal scope" border="false":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-consent-in-personal-scope.png" alt-text="The infographic shows the interaction of a bot with an user in personal scope" border="false":::
 
 When the user selects **Continue**, one of the following events occurs:
 
@@ -277,33 +277,33 @@ When a bot is added to a group chat for the first time and consent is required f
 
 The user @mentions the bot. An Adaptive Card appears to request the user's consent.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-bots/user-mentions-bot-desktop.png" alt-text="consent dialog box for desktop" border="false":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-bots/user-mentions-bot-desktop.png" alt-text="The image shows a consent dialog box for desktop" border="false":::
 
 - If the user selects **Add**, a permissions dialog box appears.
 
-  :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/permissions-requested-desktop-small.png" alt-text="permissions requested" lightbox="../../../assets/images/authentication/teams-sso-bots/permissions-requested-desktop.png" border="false":::
+  :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/permissions-requested-desktop-small.png" alt-text="The image shows permissions requested pop-up on desktop" lightbox="../../../assets/images/authentication/teams-sso-bots/permissions-requested-desktop.png" border="false":::
 
   The user must select **Accept** to give consent.
 
 - If the user declines, or the request times out, the user must @mention the bot again to grant permission for token acquisition. The group is able to see a bot message that the authentication wasn't successful.
 
-  :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/request-times-out-desktop.png" alt-text="consent denied or request times out" lightbox="../../../assets/images/authentication/teams-sso-bots/request-times-out-desktop.png" border="false":::
+  :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/request-times-out-desktop.png" alt-text="The image shows the bot interaction when user consent is denied or request times out" lightbox="../../../assets/images/authentication/teams-sso-bots/request-times-out-desktop.png" border="false":::
   
 # [Mobile](#tab/mobile)
 
 The user @mentions the bot. An Adaptive Card appears to request the user's consent.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-bots/user-mentions-bot-small.png" alt-text="user mentions bot on mobile" lightbox="../../../assets/images/authentication/teams-sso-bots/user-mentions-bot-mobile.png" border="false":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-bots/user-mentions-bot-small.png" alt-text="The image shows the bot interaction when user @mentions bot on mobile" lightbox="../../../assets/images/authentication/teams-sso-bots/user-mentions-bot-mobile.png" border="false":::
 
 - If the user selects **Add**, a permissions dialog box appears.
   
-  :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/permissions-requested-small.png" alt-text="permissions requested on mobile" lightbox="../../../assets/images/authentication/teams-sso-bots/permissions-requested-mobile.png" border="false":::
+  :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/permissions-requested-small.png" alt-text="The image shows the permissions requested pop-up on mobile" lightbox="../../../assets/images/authentication/teams-sso-bots/permissions-requested-mobile.png" border="false":::
 
   The user must select **Accept** to give consent.
 
 - If the user declines, or the request times out, the user must @mention the bot again to grant permission for token acquisition. The group is able to see a bot message that the authentication wasn't succesful.
 
-  :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/request-times-out-small.png" alt-text="request times out" lightbox="../../../assets/images/authentication/teams-sso-bots/request-times-out-mobile.png" border="false":::
+  :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/request-times-out-small.png" alt-text="The image shows the bot interaction when user denies access or request times out" lightbox="../../../assets/images/authentication/teams-sso-bots/request-times-out-mobile.png" border="false":::
 
 ---
 
