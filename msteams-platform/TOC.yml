@@ -1,45 +1,47 @@
 - name: Microsoft Teams Platform documentation
   href: mstdd-landing.yml
 - name: Overview
-  expanded: false 
-  items:
-  - name: Why build on Teams platform
-    href: overview.md
-    displayName: why build apps with Microsoft Teams platform
-  - name: From ideas to Teams app
-    href: overview-story.md
-    displayName: Teams app user experience, user scenario
-  - name: Explore Teams platform features
-    href: overview-explore.md
-  - name: The Teams solution
-    href: overview-solution.md
-    displayName: develop Teams app, app development, tools used
+  href: overview.md
+  displayName: why build apps with Microsoft Teams platform
+#  - name: From ideas to Teams app
+#    href: overview-story.md
+#    displayName: Teams app user experience, user scenario
+#  - name: Explore Teams platform features
+#    href: overview-explore.md
+#  - name: The Teams solution
+#    href: overview-solution.md
+#    displayName: develop Teams app, app development, tools used
 - name: What's new?
   href: whats-new.md
   displayName: Teams platform features, latest updates, RSS feed, deprecated, announcement, preview
 - name: Glossary
   href: get-started/glossary.md
   displayName: App tray, terminologies, definitions, welcome, new word, meaning
-- name: Build agents using Teams AI library
+- name: Build agents using Teams SDK
   items:
+  - name: Agents in Teams
+    href: agents-in-teams/overview.md
+  - name: Build your first agent
+    href: agents-in-teams/build-first-agent.md
+    displayName: create, run, first agent, Teams AI library, Teams SDK, custom engine agent, AI bot, JavaScript, Python, C#, code sample
   - name: Build an agent using CLI
     href: /microsoftteams/platform/teams-ai-library/welcome?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-    displayName: agent, custom engine agent, AI bot, JavaScript, Python, C#, code sample, Teams AI library
+    displayName: agent, custom engine agent, AI bot, JavaScript, Python, C#, code sample, Teams AI library, Teams SDK
   - name: Build an agent using TypeScript
     href: /microsoftteams/platform/teams-ai-library/typescript/getting-started/quickstart?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-    displayName: agent, custom engine agent, AI bot, TypeScript, code sample, Teams AI library
+    displayName: agent, custom engine agent, AI bot, TypeScript, code sample, Teams AI library, Teams SDK
   - name: Build an agent using C#
     href: /microsoftteams/platform/teams-ai-library/csharp/getting-started/quickstart?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-    displayName: agent, custom engine agent, AI bot, C#, code sample, Teams AI library
+    displayName: agent, custom engine agent, AI bot, C#, code sample, Teams AI library, Teams SDK
   - name: Build an agent using Python
     href: /microsoftteams/platform/teams-ai-library/python/getting-started/quickstart?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-    displayName: agent, custom engine agent, AI bot, Python, code sample, Teams AI library
+    displayName: agent, custom engine agent, AI bot, Python, code sample, Teams AI library, Teams SDK
   - name: Agents user experience
     href: bots/how-to/teams-conversational-ai/ai-ux.md
     displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop            
   - name: Extend agents to Microsoft 365 hubs
     href: /microsoft-365-copilot/extensibility/ecosystem?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-    displayName: AI bot, Teams AI library, custom agent
+    displayName: AI bot, Teams AI library, Teams SDK, custom agent
 - name: Tools and SDKs
   items:
   - name: Overview
@@ -215,7 +217,7 @@
       displayName: ACP
   - name: SDKs
     items:
-    - name: Teams AI library v2 (preview)
+    - name: Teams SDK
       href: /microsoftteams/platform/teams-ai-library/welcome
     - name: TeamsFx SDK
       href: toolkit/TeamsFx-SDK.md
@@ -402,7 +404,7 @@
   - name: Get started
     expanded: false
     items:
-    - name: Build your Teams app
+    - name: Apps in Teams
       href: get-started/get-started-overview.md
       displayName: build Teams app, new Teams app, GitHub Codespaces, tutorials
     - name: Build a tab app
@@ -534,28 +536,9 @@
       displayName: AI bot, bot capability, command bot, workflow bot, custom engine agent, agent, conversational bot, activity handler, bot logic, notification bot
     - name: Bots in Teams
       href: bots/build-a-bot.md
-      displayName: Bot samples, Code sample, Teams AI library, Microsoft Bot Framework SDK, build a bot, build AI bot, command bot, workflow bot, custom engine agent, agent, conversational bot, notification bot, tools, platforms, Azure OpenAI, Microsoft 365 Agents Toolkit, Azure AI Foundry
-#    - name: Teams AI library v1
-#      items:
-#      - name: What is Teams AI library?
-#        href: bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md
-#        displayName: OpenAI, Azure OpenAI, LLM, ChatGPT, prompt, Math tutor, Assistants API, AI bot, custom engine agent, RAG, Intents to actions, AI, Teams AI library, custom engine agent, AI bot, responsible AI, prompts, augmentation, Function calls using AI SDK, AI SDK
-#      - name: Quick start guide
-#        href: bots/how-to/teams-conversational-ai/conversation-ai-quick-start.md
-#        displayName: custom engine agent, AI bot, JavaScript, Python, C#, code sample, Microsoft 365 Agents Toolkit
-#      - name: Build with Teams AI library
-#        href: bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md
-#        displayName: custom engine agent, AI bot, Teams AI library, prompt manager, Action planner, action handler, feedback loop, custom engine agent, AI library
-#      - name: Understand Teams AI library
-#        href: bots/how-to/teams-conversational-ai/how-conversation-ai-core-capabilities.md
-#        displayName: AI activity handlers, Adaptive Card for AI bot, Teams AI library, AI library, Teams AI library, bot logic, OpenAI, Azure OpenAI, custom engine agent
-#      - name: Build custom engine agent using Microsoft 365 Agents Toolkit
-#        href: bots/how-to/teams-conversational-ai/teams-ai-library-tutorial.md
+      displayName: Bot samples, Code sample, Teams AI library, Teams SDK, Microsoft Bot Framework SDK, build a bot, build AI bot, command bot, workflow bot, custom engine agent, agent, conversational bot, notification bot, tools, platforms, Azure OpenAI, Microsoft 365 Agents Toolkit, Azure AI Foundry
     - name: Bot user experience
-      items:
-#      - name: Custom engine agent user experience
-#        href: bots/how-to/teams-conversational-ai/ai-ux.md
-#        displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop    
+      items:   
       - name: Stream bot messages
         href: bots/streaming-ux.md
         displayName: Streaming, response generation, AI library, AI SDK, REST API
@@ -1025,7 +1008,7 @@
   - name: Integrate location capabilities
     href: concepts/device-capabilities/location-capability.md
     displayName: attendance
-- name: Extend your app across Microsoft 365
+- name: Extend agents or app across Microsoft 365
   items:
   - name: Overview
     href: m365-apps/overview.md
