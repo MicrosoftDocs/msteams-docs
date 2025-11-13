@@ -73,17 +73,12 @@ You can create a new channel or chat, or use an existing one, to migrate user's 
 
 ### Step 2: Enable migration mode to import messages
 
-Use the `startMigration` API to enable migration mode on Teams channels or chats, and allow import of historical messages. Migration mode is a special state that prevents certain operations, like sending messages and adding members, during the data migration process.
+Use the `startMigration` API to enable migration mode on Teams channels or chats, and allow import of historical messages. Migration mode is a special state that prevents certain operations, like sending messages and adding members, during the data migration process. For more information, see:
 
-Consider the following points:
+* [Channel migration](#channel-migration)
+* [Chat migration](#chat-migration)
 
-* Define a minimum timestamp for messages to migrate. The provided timestamp must be older than the channel or chat’s current `createdDateTime`. This timestamp replaces the existing `createdDateTime` of the channel.
-* The`creationDateTime`property is optional in a request body. If omitted, the `startMigration` API uses the current date and time as the minimum timestamp.
-* The `startMigration` API starts the message migration process by setting the migration mode to `inProgress` for a specified channel or chat.
-
-To enable channel and chat migration in Teams, see the following:
-
-### [Channel migration](#tab/channelmigration)
+### Channel migration
 
 #### Request
 
@@ -117,7 +112,7 @@ POST https://graph.microsoft.com/beta/teams/57fb72d0-d811-46f4-8947-305e6072eaa5
 
 ```
 
-### [Chat migration](#tab/chatmigration)
+### Chat migration
 
 #### Request
 
@@ -152,7 +147,11 @@ POST https://graph.microsoft.com/beta/teams/57fb72d0-d811-46f4-8947-305e6072eaa5
 
 ```
 
----
+Consider the following important points:
+
+* Define a minimum timestamp for messages to migrate. The provided timestamp must be older than the channel or chat’s current `createdDateTime`. This timestamp replaces the existing `createdDateTime` of the channel.
+* The`creationDateTime`property is optional in a request body. If omitted, the `startMigration` API uses the current date and time as the minimum timestamp.
+* The `startMigration` API starts the message migration process by setting the migration mode to `inProgress` for a specified channel or chat.
 
 ### Step 3: Check migration status
 
@@ -307,7 +306,10 @@ HTTP/1.1 200 OK
 
 ### Step 5: Complete migration
 
-Use the `completeMigration` API to finish the migration process for both new and existing channels and chats.
+Use the `completeMigration` API to finish the migration process for both new and existing channels and chats. For more information, see:
+
+* [Complete channel migration](#complete-channel-migration)
+* [Complete chat migration](#complete-chat-migration)
 
 #### Complete channel migration
 
@@ -336,13 +338,6 @@ POST /chats/{chat-id}/completeMigration
 Call the `Get channel` or the `Get chat` API, to verify that the migration mode state is marked as completed. For more information, see [Get channel](/graph/api/channel-get?view=graph-rest-1.0&tabs=http&preserve-view=true) or
 [Get chat](/graph/api/chat-get?view=graph-rest-1.0&tabs=http&preserve-view=true).
 
-## See also
-
-* [Microsoft Graph and Teams integration](/graph/teams-concept-overview)
-* [Export content with the Microsoft Teams Export APIs](/microsoftteams/export-teams-content)
-* [Microsoft Teams service limits](/graph/throttling-limits#microsoft-teams-service-limits)
-* [Licensing and payment requirements for the Microsoft Teams API](/graph/teams-licenses)
-
 ## Tips and additional information
 
 <!-- markdownlint-disable MD001 -->
@@ -350,7 +345,7 @@ Call the `Get channel` or the `Get chat` API, to verify that the migration mode 
 
 * After the `completeMigration` request is made, you can't import further messages into the team.
 
-* You can only add team members to the new team after the `completeMigration` request has returned a successful response.
+* You can only add team members to the new team after the `completeMigration` request returns a successful response.
 
 * Throttling: Messages import at five RPS per channel.
 
