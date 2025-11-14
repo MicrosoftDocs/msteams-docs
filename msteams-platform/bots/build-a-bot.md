@@ -64,6 +64,7 @@ Choose one of the following next steps:
 
 ## See also
 
+* [Build reusable configurations for bot-based agents](../concepts/build-and-test/manage-your-apps-in-developer-portal.md#agent-identity-blueprint)
 * [Send and receive messages](build-conversational-capability.md)
 * [Send notifications](build-notification-capability.md)
 * [Workflow bot in Teams](how-to/conversations/workflow-bot-in-teams.md)
