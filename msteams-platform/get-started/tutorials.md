@@ -590,4 +590,4 @@ You learned to create an API-based message extension using OpenAPI Description d
 
 </details>
 
-[Back to top]([Teams app tutorials](#teams-app-tutorials))
+[Back to top](#teams-app-tutorials)
