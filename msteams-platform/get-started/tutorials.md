@@ -10,10 +10,6 @@ ms.topic: reference
 
 Learn more about building Teams app capabilities.
 
-| &nbsp; | Tabs | Bots | Message extension | Meeting apps | Others |
-| --- | --- | --- | --- | --- | --- |
-| | | | | [Build API-based message extension](#build-api-based-message-extension) | |
-
 ## Build API-based message extension
 
 <details>
