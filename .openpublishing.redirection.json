@@ -1503,6 +1503,10 @@
       {
         "source_path": "msteams-platform/overview-solution.md",
         "redirect_url": "/microsoftteams/platform/overview"
-      }
+      },
+      {
+        "source_path": "msteams-platform/toolkit/build-an-AI-agent-in-Teams.md",
+        "redirect_url": "/microsoftteams/platform/agents-in-teams/overview"
+      }      
     ]
 }
