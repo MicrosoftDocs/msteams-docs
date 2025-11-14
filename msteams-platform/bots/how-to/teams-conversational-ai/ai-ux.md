@@ -76,14 +76,7 @@ Use the following types of updates while streaming responses:
 - Informative updates: Send information on the sub-steps as the agent generates the response before it sends the final response.
 - Response streaming: Send the intermediate states of the final response while the LLM creates its full response.
 
-<!--
-You can use one of the following to stream the response:
-
-- Use Teams AI library to add streaming to the agent.
-- Call the Bot Framework APIs directly for streaming.
--->
-
-Use [Teams AI library](/microsoftteams/platform/teams-ai-library/) to add streaming to the agent.
+Use [Teams SDK](/microsoftteams/platform/teams-ai-library/) to add streaming to the agent.
 
 >[!NOTE]
 >
@@ -95,18 +88,11 @@ Users must know the sources an agent uses to generate its final response. Identi
 
 :::image type="content" source="../../../assets/images/bots/ai-citation.png" alt-text="Image shows an example of citations in agents." border="false":::
 
-<!--
-You can use one of the following to include citations for the resources used by the agent:
-
-- Use Teams AI library citations module.
-- Incorporate citations into the Bot Framework API calls.
--->
-
-Use [Teams AI library](/microsoftteams/platform/teams-ai-library/) to add streaming to the agent.
+Use [Teams SDK](/microsoftteams/platform/teams-ai-library/) to add streaming to the agent.
 
 > [!NOTE]
 >
-> - Citations with Adaptive Cards are available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
+> Citations with Adaptive Cards are available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
 
 ### Ensure the agent response contains an AI label
 
@@ -122,20 +108,13 @@ Examples of AI label:
 
     :::image type="content" source="../../../assets/images/bots/ai-labels-2.png" alt-text="Image shows an example of AI label for a confidential message." border="false":::
 
-<!--
-You can use one of the following to include AI label in the agent's response:
-
-- Use Teams AI library to add the AI label to all AI-generated messages automatically.
-- Set the flag in the Bot Framework API for message activities.
--->
-
-Use [Teams AI library](/microsoftteams/platform/teams-ai-library/) to add streaming to the agent.
+Use [Teams SDK](/microsoftteams/platform/teams-ai-library/) to add streaming to the agent.
 
 ### Ensure that the agent maintains intelligent conversation
 
 An agent must track a conversation's context and history to provide an intelligent interaction. The agent must meet the user's expectation by being aware of the conversation's context and allowing them to refer to previous messages and responses.
 
-Use Teams AI library to ensure intelligent context-based conversation and to manage and pass conversational history and context to the LLM. Teams AI library enables you to:
+Use Teams SDK to ensure intelligent context-based conversation and to manage and pass conversational history and context to the LLM. Teams SDK enables you to:
 
 <!--
 - Use Bot Framework SDK to:
@@ -169,8 +148,9 @@ The following best practices can help enhance the overall effectiveness of an ag
 
 - [Ensure that agent's response contains feedback button](#ensure-that-agents-response-contains-feedback-button).
 - [Enable Teams Azure AD single sign-on](#enable-teams-azure-ad-single-sign-on).
-- [Enable the agent to understand conversational history and context](#enable-the-agent-to-understand-conversational-history-and-context)
+- [Enable the agent to understand conversational history and context](#enable-the-agent-to-understand-conversational-history-and-context).
 - [Offer dynamic and contextual suggestion prompts](#offer-dynamic-and-contextual-suggestion-prompts).
+- [Enable app profile card](#enable-app-profile-card).
 
 ### Ensure that agent's response contains feedback button
 
@@ -184,14 +164,7 @@ To collect the user feedback, you must:
 - Provide the feedback received from the user to the agent.
 - Use the feedback to improve the quality of agent's responses.
 
-<!--
-You can use one of the following to enable feedback collection and usage:
-
-- Use Teams AI library to add the feedback button property to the AI module. This property adds a feedback button to each AI-generated message automatically.
-- Use the feedback flag in the Bot Framework API to add the feedback button for each message.
--->
-
-Use Teams AI library to add the feedback button property to the AI module. This property adds a feedback button to each AI-generated message automatically.
+Use Teams SDK to add the feedback button property to the AI module. This property adds a feedback button to each AI-generated message automatically.
 
 > [!NOTE]
 > Customizable feedback forms are available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
@@ -214,8 +187,19 @@ Enhance your agent's user experience with intelligent and context-aware prompts.
 
 To achieve this, the agent must leverage the conversation context and history, and prompt suggestions can be timely and fit for the query.
 
+### Enable app profile card
+
+> [!NOTE]
+> Enable app profile card is available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md) for Teams apps.
+
+You can now add hovercard experience for all agents and bots. Hovercards can provide valueable and relavant information to educate users about the app and its features.
+
+:::image type="content" source="../../../assets/images/bots/contoso-app-profile-card.png" alt-text="Image shows app profile card." border="false" lightbox="../../../assets/images/bots/contoso-app-profile-card.png":::
+
+To enable app profile card to your agents or bots, you must add the `features` field under the `description` field in the app manifest. For more information, see [public developer preview for Teams](../../../resources/dev-preview/developer-preview-intro.md).
+
 ## See also
 
-- [Teams AI library](teams-conversation-ai-overview.md)
+- [Teams SDK](teams-conversation-ai-overview.md)
 - [Stream bot messages](../../streaming-ux.md)
 - [Enhance AI-generated bot messages](../bot-messages-ai-generated-content.md)

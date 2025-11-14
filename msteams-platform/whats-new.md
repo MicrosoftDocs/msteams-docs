@@ -36,9 +36,9 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.</br>
 
-**2025 October**
+**2025 November**
 
-* ***October 15, 2025***: [The Microsoft Teams JavaScript client library (TeamsJS) supports app suspension for Teams apps extended to run across other Microsoft 365 applications.](tabs/how-to/app-caching.md)
+* ***November 6, 2025***: [Teams AI library v2 has been renamed to *Teams SDK*.](/microsoftteams/platform/teams-ai-library/)
 
 :::column-end:::
 :::row-end:::
@@ -52,6 +52,7 @@ Teams platform features that are available to all app developers.</br>
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+|15/10/2025 | The Microsoft Teams JavaScript client library (TeamsJS) supports app suspension for Teams apps extended to run across other Microsoft 365 applications. | Build tabs > Tab features > [App suspension for your tab app](tabs/how-to/app-caching.md)
 | 18/09/2025 | Teams AI library is now generally available for JavaScript and C#. It provides a simplified SDK, support for Model Context Protocol (MCP), Agent-to-Agent communication (A2A), and streamlined tools to enable developers to build intelligent agents for Teams | [Overview of Teams AI Library](/microsoftteams/platform/teams-ai-library/welcome) |
 | 19/08/2025 | Teams now supports token prefetching for apps that use nested app authentication (NAA). | Add authentication > [Enable nested app authentication](concepts/authentication/nested-authentication.md#token-prefetching-for-nested-app-authentication-naa) |
 | 08/08/2025 | App manifest v1.23 introduces support for custom contextual tabs and system-generated agent metadata. | [App manifest for Microsoft 365](/microsoft-365/extensibility/schema/?view=m365-app-1.23&preserve-view=true) |
@@ -480,7 +481,7 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-* ***September 18, 2025:*** [Teams AI library supports Python in developer preview. It provides a simplified SDK, support for Model Context Protocol (MCP), Agent-to-Agent communication (A2A), and streamlined tools to enable developers to build intelligent agents for Teams.](/microsoftteams/platform/teams-ai-library/welcome)
+* ***November 11, 2025***: [Add app profile hovercard to your agent or app.](bots/how-to/teams-conversational-ai/ai-ux.md#enable-app-profile-card)
 
 <!--
 **2025 May**
@@ -498,6 +499,7 @@ Developer preview is a public program that provides early access to unreleased T
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ---------------- |
 | 24/09/2025 | Ad hoc calls (spontaneous, unscheduled meetings) are now receiving enhanced support across Graph APIs. | Build apps for Teams meetings and calls > Get meetings, transcripts, recordings and AI summaries > [Meeting transcripts and recordings](graph-api/meeting-transcripts/overview-transcripts.md)|
+| 18/09/2025 | Teams AI library supports Python in developer preview. It provides a simplified SDK, support for Model Context Protocol (MCP), Agent-to-Agent communication (A2A), and streamlined tools to enable developers to build intelligent agents for Teams. | [Teams AI library](/microsoftteams/platform/teams-ai-library/welcome) |
 | 10/04/2025 | Introducing custom engine agents support for Microsoft 365 Copilot Chat. | Build bots and agents > Teams AI library v1 > [Build with Teams AI library](bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#add-support-for-microsoft-365-copilot-chat) |
 | 17/03/2025 | Precache your tab app to optimize its initial load time | Build tabs > Tab features > [App caching for your tab app](tabs/how-to/app-caching.md#precaching-tab-apps) |
 | 19/02/2025 | Introducing stop stream generation button for streaming bot messages | Build bots > Bot user experience > [Stream bot messages](bots/streaming-ux.md) |
