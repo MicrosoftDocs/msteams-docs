@@ -9,7 +9,7 @@ ms.owner: ryanbliss
 ---
 # Add code to enable SSO in your bot app
 
-Before you add code to enable single sign-on (SSO), ensure that you've configured your app and bot resource in Microsoft Entra admin center.
+Before you add code to enable single sign-on (SSO), ensure to configure your app and bot resource in Microsoft Entra admin center.
 
 > [!div class="nextstepaction"]
 > [Configure bot app in Microsoft Entra ID](bot-sso-register-aad.md)
