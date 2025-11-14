@@ -5,7 +5,7 @@ ms.author: surbhigupta
 description: Learn how to optimize your tab app performance on Teams mobile with best practices such as using service workers and performance audits.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.date: 11/10/2025
+ms.date: 11/14/2025
 ---
 
 # Best practices for Teams mobile apps
@@ -62,7 +62,7 @@ To run a performance audit, follow these steps:
 
 ## Calculate performance metrics for apps
 
-Leverage the self-serve, lightweight **Performance Report tool** (or Perf tool) to evaluate efficiency of your web and tab apps on mobile. This tool runs seamlessly on both Android and iOS, and with real-time performance metrics mapped against industry benchmarks, ensuring a superior user experience. It also enables you to implement Teams-specific best practices into your app directly from your mobile.
+Use the self-serve, lightweight **Performance Report tool** (or Perf tool) to evaluate the efficiency of your web and tab apps on mobile. This tool runs seamlessly on both Android and iOS, and provides real-time performance metrics mapped against industry benchmarks, ensuring a superior user experience. It also enables you to implement Teams-specific best practices into your app directly from your mobile device.
 
 The steps involved are:
 
