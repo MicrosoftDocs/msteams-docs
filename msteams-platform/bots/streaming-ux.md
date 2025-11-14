@@ -597,7 +597,7 @@ The following are the success and error codes:
 | Sample name | Description | Node.js | C# | Python |
 | --- | --- | --- | --- | --- |
 | Teams streaming bot sample| This sample app can be used for streaming scenarios in Teams using Azure Open AI and Bot Framework v4 for personal scope. | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-streaming/csharp) | NA |
-| Conversational streaming bot | This is a conversational streaming bot with Teams SDK. | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai-apps/i.teamsChefBot-streaming)| [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.g.teamsChefBot-streaming) | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.h.chainedActions.listBot-streaming) |
+| Conversational streaming bot | This is a conversational streaming bot with Teams SDK. | [View](https://github.com/microsoft/teams-sdk/tree/release/v1/js/samples/04.ai-apps/a.teamsChefBot)| [View](https://github.com/microsoft/teams-sdk/tree/release/v1/dotnet/samples/04.ai.a.teamsChefBot) | [View](https://github.com/microsoft/teams-sdk/tree/release/v1/python/samples/04.ai.h.chainedActions.listBot-streaming) |
 
 ## See also
 
