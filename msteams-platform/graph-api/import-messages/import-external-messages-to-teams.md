@@ -29,9 +29,9 @@ Use Microsoft Graph to import users' existing message history and data from any 
 
 Migration mode supports all new and existing channels and chats. Here's how you can use it:
 
-* **New channels or chats**: You can create a new team and its standard channels in migration mode to import content.
+* **New channels or chats**: You can create a new team and its standard channels in migration mode to import content. This option is ideal for recreating the exact structure from your external platform.
 
-* **Existing channels or chats**: You can use any team or channel that already exists in Teams, regardless of when you created it.
+* **Existing channels or chats**: You can use any team or channel that already exists in Teams, regardless of when you created it. This option adds historical context to channels that are already active in Teams and maintains continuity for ongoing conversations.
 
 |Entities |Sub type  |Migration mode support |Notes|
 |---------|---------|---------|---------|
@@ -39,7 +39,10 @@ Migration mode supports all new and existing channels and chats. Here's how you 
 |**Chats** | Group, 1:1 | New and existing | Meeting chats not supported; external members supported |
 
 > [!NOTE]
-> Federated content can't be imported for chats, channels, or messages. Only one app can manage a thread, and all imported content must come from the authenticated tenant. If another app needs to import content, the first app must complete migration before the second app restarts the process.
+>
+> * Only standard channels are supported when creating a channel in migration mode from scratch
+>
+> * Federated content can't be imported for chats, channels, or messages. Only one app can manage a thread, and all imported content must come from the authenticated tenant. If another app needs to import content, the first app must complete migration before the second app restarts the process.
 
 ## Content scope for import
 
@@ -60,10 +63,10 @@ The following table provides the content scope.
 
 ## Prerequisites
 
-Before you set up your Microsoft 365 (M365) tenant:
+Before you set up your Microsoft 365 tenant:
 
-* Verify that a M365 tenant exists for the import data. For more information on setting up a M365 tenancy for Teams, see [prepare your Microsoft 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).
-* Verify that team members are in Microsoft Entra ID (Entra ID). For more information, see [add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory) to Entra ID.
+* Verify that a Microsoft 365 tenant exists for the import data. For more information on setting up a Microsoft 365 tenancy for Teams, see [prepare your Microsoft 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).
+* Verify that team members are in Microsoft Entra ID. For more information, see [add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory) to Microsoft Entra ID.
 
 ## Import historical messages into Teams
 
@@ -80,11 +83,6 @@ You can import historical messages seamlessly into both existing and newly creat
 
 You can create a new channel or chat, or use an existing one, to migrate a user's message history from any third-party platform to Teams.
 
-**When to use new vs. existing channels:**
-
-* **New channels**: Create when you want to establish a fresh space specifically for migrated content. This option is ideal for recreating the exact structure from your external platform.
-* **Existing channels**: Use when you want to add historical context to channels that are already active in Teams. This approach maintains continuity for ongoing conversations.
-
 ### Step 2: Enable migration mode to import messages
 
 The `startMigration` API enables migration mode on Teams channels or chats, which allows import of historical messages. Migration mode is a special state that prevents certain operations during the data migration process to ensure data integrity.
@@ -96,10 +94,21 @@ The `startMigration` API enables migration mode on Teams channels or chats, whic
 * Allows importing historical messages with custom timestamps
 * Maintains the original conversation structure and hierarchy
 
-For more information, see:
+Choose either of the two paths to initiate migration mode on channels or chats:
 
-* [Channel migration](#channel-migration)
-* [Chat migration](#chat-migration)
+* [Create a Team and standard channel in migration mode](#create-a-team-and-standard-channel-in-migration-mode)
+* Path 2: Start migration on existing channels and chats
+
+### Create a Team and standard channel in migration mode
+
+To create a new team with a back-in-time timestamp:
+
+1. Use the team resource `createdDateTime` property to place the new team in migration mode.
+1. Include the `teamCreationMode` instance attribute with the `migration` value in the POST request to identify the team as created for migration.
+Since you're migrating existing data, maintaining the original message timestamps, and preventing messaging activity during the migration process are key to recreating the user's existing message flow in Teams.
+
+> [!NOTE]
+> The `createdDateTime` field is only populated for migrated teams or channels.
 
 ### Channel migration
 
@@ -191,7 +200,7 @@ Use the `POST` API to import back-in-time messages by including the `createdDate
 
 > [!NOTE]
 >
-> * The API doesn't support messages imported with `createdDateTime` earlier than the message thread `createdDateTime`.
+> * Messages imported with `createdDateTime` earlier than the message thread `createdDateTime` aren't supported.
 > * `createdDateTime` must be unique across messages in the same thread.
 > * `createdDateTime` supports timestamps with milliseconds precision. For example, if the incoming request message has `createdDateTime` set to *2020-09-16T05:50:31.0025302Z*, the API converts it to *2020-09-16T05:50:31.002Z* when ingesting the message.
 
