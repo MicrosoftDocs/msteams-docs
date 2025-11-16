@@ -27,16 +27,19 @@ Use Microsoft Graph to import users' existing message history and data from any 
 
 ## Supported channel and chat types
 
-Migration mode supports all new and existing channels and chats. Here's how you can understand and use:
+Migration mode supports all new and existing channels and chats. Here's how you can use it:
 
 * **New channels or chats**: You can create a new team and its standard channels in migration mode to import content.
 
-* **Existing channels or chats** : You can use any team or channel that already exists in Teams, regardless of when it was created.
+* **Existing channels or chats**: You can use any team or channel that already exists in Teams, regardless of when you created it.
 
 |Entities |Sub type  |Migration mode support |Notes|
 |---------|---------|---------|---------|
 |**Channels** | Standard, Private, Shared | New and existing | Channels must be created or already in migration mode |
 |**Chats** | Group, 1:1 | New and existing | Meeting chats not supported; external members supported |
+
+> [!NOTE]
+> Federated content can't be imported for chats, channels, or messages. Only one app can manage a thread, and all imported content must come from the authenticated tenant. If another app needs to import content, the first app must complete migration before the second app restarts the process.
 
 ## Content scope for import
 
@@ -57,10 +60,10 @@ The following table provides the content scope.
 
 ## Prerequisites
 
-Before you set up your Microsoft 365 tenant:
+Before you set up your Microsoft 365 (M365) tenant:
 
 * Verify that a M365 tenant exists for the import data. For more information on setting up a M365 tenancy for Teams, see [prepare your Microsoft 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).
-* Verify that team members are in Microsoft Entra ID. For more information, see [add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory) to Microsoft Entra ID.
+* Verify that team members are in Microsoft Entra ID (Entra ID). For more information, see [add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory) to Entra ID.
 
 ## Import historical messages into Teams
 
