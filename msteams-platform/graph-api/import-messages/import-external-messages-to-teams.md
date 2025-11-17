@@ -5,7 +5,7 @@ ms.localizationpriority: high
 author: "surbhigupta"
 ms.topic: overview
 ms.owner: mehakagarwal
-ms.date: 11/10/2025
+ms.date: 11/17/2025
 ---
 
 # Import external messages into Teams with Microsoft Graph APIs
@@ -50,7 +50,7 @@ The following table provides the content scope for existing channels and chats.
 
 |In-scope | Out-of-scope|
 |----------|--------------------------|
-|Team (general) and standard, private, and shared channel messages|Announcements|
+|Team (general)|Announcements|
 |Created time of the original message|Videos|
 |Inline images as part of the message|Code snippets|
 |Links to existing files in Microsoft 365 (M365) SharePoint Oneline (SPO) or OneDrive (OD)|Stickers|
@@ -58,7 +58,7 @@ The following table provides the content scope for existing channels and chats.
 |Message reply chain|Quotes|
 |High throughput processing||
 |1:1 and group chat messages||
-|Shared and private channels||
+|Standard, private, and shared channel messages||
 |Up to 250 reactions||
 |At mentions and emojis||
 
@@ -209,7 +209,7 @@ Use the `startMigration` API to enable migration mode on existing channels or ch
 
 ### Existing channel migration
 
-Learn how to enable migration mode on existing channels here including the request, response, and an example.
+Learn how to enable migration mode on existing channels including the request, response, and an example.
 
 #### Request for existing channel migration
 
@@ -244,7 +244,7 @@ POST https://graph.microsoft.com/beta/teams/57fb72d0-d811-46f4-8947-305e6072eaa5
 
 ### Existing chat migration
 
-Learn how to enable migration mode on existing chats here including the request, response, and an example.
+Learn how to enable migration mode on existing chats, including the request, response, and an example.
 
 #### Chat migration request
 
@@ -280,7 +280,7 @@ POST https://graph.microsoft.com/beta/teams/57fb72d0-d811-46f4-8947-305e6072eaa5
 
 Consider the following important points:
 
-* Define a minimum timestamp for messages to migrate. The provided timestamp must be older than the channel or chat's current `createdDateTime`. This timestamp replaces the existing `createdDateTime` of the channel.
+* Define a minimum timestamp for messages to migrate. The provided timestamp must be older than the channel or chat's current `createdDateTime`. This timestamp replaces the existing `createdDateTime` of the channel. If you update `createdDateTime` to a past timestamp, you can't move it to a future timestamp again.
 * The `creationDateTime` property is optional in a request body. If omitted, the `startMigration` API uses the current date and time as the minimum timestamp.
 * The `startMigration` API starts the message migration process by setting the migration mode to `inProgress` for a specified channel or chat.
 
@@ -439,14 +439,41 @@ HTTP/1.1 200 OK
 
 Use the `completeMigration` API to finish the migration process for both new and existing channels and chats. For more information, see:
 
-* [Complete channel migration](#complete-channel-migration)
-* [Complete chat migration](#complete-chat-migration)
+* [Complete the new team and channel migration](#complete-the-new-team-and-channel-migration)
+* [Complete existing channel migration](#complete-existing-channel-migration)
+* [Complete existing chat migration](#complete-existing-chat-migration)
 
-#### Complete channel migration
+#### Complete the new team and channel migration
 
-When you create a channel in migration mode for the initial import, use the `completeMigration` API to update its migration state to completed. This change ensures that the channel remains permanently available instead of being dropped after migration.
+After the message migration process completes, use the `completeMigration` method to take both the team and channel out of migration mode. This step opens the team and channel resources for general use by team members. The action is bound to the `team` instance. Before the team completes, you must complete all channels out of migration mode.
 
-For existing channels already in migration mode, use the `completeMigration` API to mark the migration state as completed. After you send a `completeMigration` request for new or existing channels, you can still import more messages by calling the `startMigration` API.
+#### Request for channel migration mode end
+
+```http
+POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/completeMigration
+```
+
+#### Response for channel migration mode end
+
+```http
+HTTP/1.1 204 NoContent
+```
+
+#### Request for team migration mode end
+
+```http
+POST https://graph.microsoft.com/v1.0/teams/team-id/completeMigration
+```
+
+#### Response for team migration mode end
+
+```http
+HTTP/1.1 204 NoContent
+```
+
+#### Complete existing channel migration
+
+For existing channels already in migration mode, use the `completeMigration` API to mark the migration state as completed. This change ensures that the channel remains permanently available instead of being dropped after migration.After you send a `completeMigration` request for new or existing channels, you can still import more messages by calling the `startMigration` API.
 
 #### Complete channel migration request
 
@@ -454,7 +481,7 @@ For existing channels already in migration mode, use the `completeMigration` API
 POST /teams/{team-id}/channels/{channel-id}/completeMigration 
 ```
 
-#### Complete chat migration
+#### Complete existing chat migration
 
 For existing chats already in migration mode, call the `completeMigration` API to update the migration mode state to completed. This process marks the chat as fully migrated. After calling `completeMigration` on a new or existing chat, you can continue importing messages by using the `startMigration` API.
 
