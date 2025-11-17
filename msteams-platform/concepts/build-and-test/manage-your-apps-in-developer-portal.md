@@ -10,7 +10,7 @@ ms.date: 01/23/2025
 # Manage your apps in Developer Portal
 
 After you upload your app in Microsoft Teams, you can manage your app in Developer Portal. The article provides comprehensive guidance on app configuration, analytics, and validation to enhance the Teams app experience.<br>
-In addition, you learn about Agent Identity Blueprint to create and manage agent identities for your Teams app.
+In addition, you learn about Agent Identity Blueprint to create and manage agent identities for your agent.
 
 ## Overview
 
@@ -267,7 +267,7 @@ From the Developer Portal, you can go to Bot Framework portal and configure your
 
 ### Agent Identity Blueprint
 
-An Agent Identity Blueprint provides a reusable configurations for **agent identities** that can perform tasks and interact with users or services in Teams. Each blueprint acts as a template that specifies how an agent is configured and connected to a back-end service.
+An Agent Identity Blueprint provides a reusable configurations for **agent identities** that can perform tasks and interact with users or services in Teams. Each blueprint acts as a template that specifies how an agent is configured and connected to a back-end service. For more information, see [Microsoft Agent 365](/microsoft-agent-365/?branch=main).
 
 Agent Identity Blueprints are created and managed in **Teams Developer Portal**, while the agent identities derived from them are managed in the **Teams Admin Center**.
 
