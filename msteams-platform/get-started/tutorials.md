@@ -989,7 +989,7 @@ If you don't have a Teams developer account, you can get it for free. Join the M
 
 ### Set up local environment
 
-   [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
+[!INCLUDE [Set up local environment](../includes/get-started/clone-repository.md)]
 
 ### Register Microsoft Entra app
 
@@ -1001,23 +1001,23 @@ The following steps help you to create and register your bot in the Azure portal
 * Create a tunnel to your web server's endpoints using dev tunnel (recommended) or ngrok.
 * Add messaging endpoint to the dev tunnel that you created.
 
-[!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
+[!INCLUDE [Azure app registration](../includes/get-started/azure-app-registration.md)]
 
 **Create a tunnel**
 
 # [dev tunnel](#tab/dev)
 
-[!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
+[!INCLUDE [Tunnel](../includes/get-started/dev-tunnel.md)]
 
 # [ngrok](#tab/ngrok)
 
-[!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
+[!INCLUDE [Tunnel](../includes/get-started/ngrok-tunnel.md)]
 
 ---
 
-[!INCLUDE [Azure web authentication](includes/get-started/azure-web-authentication.md)]
+[!INCLUDE [Azure web authentication](../includes/get-started/azure-web-authentication.md)]
 
-[!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
+[!INCLUDE [Client secret](../includes/get-started/create-client-secret.md)]
 
 **Add API permissions**
 
@@ -1054,11 +1054,11 @@ The following steps help you to create and register your bot in the Azure portal
 
    :::image type="content" source="~/assets/images/bots/app-id-uri1.png" alt-text="Screenshot shows the option to add the app ID URI and save.":::
 
-[!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
+[!INCLUDE [Azure add scope](../includes/get-started/azure-add-scope.md)
 
-[!INCLUDE [Azure client application](includes/get-started/azure-client-application.md)]
+[!INCLUDE [Azure client application](../includes/get-started/azure-client-application.md)]
 
-[!INCLUDE [Manifest](includes/get-started/azure-manifest.md)]
+[!INCLUDE [Manifest](../includes/get-started/azure-manifest.md)]
 
 ### Create your bot
 
