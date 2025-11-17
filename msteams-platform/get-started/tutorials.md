@@ -15,9 +15,7 @@ Learn more about building Teams app capabilities.
     <b>Bots</b>
     - [Debug your AI chat bot using Microsoft 365 Agents Playground](#debug-your-ai-chat-bot-using-microsoft-365-agents-playground)
    :::column-end:::
-:::row-end:::
 
-:::row:::
    :::column:::
     <b>Message extension</b>
     - [Build API-based message extension](#build-api-based-message-extension)
