@@ -267,7 +267,7 @@ From the Developer Portal, you can go to Bot Framework portal and configure your
 
 ### Agent Identity Blueprint
 
-An Agent Identity Blueprint provides a reusable configurations for **agent identities** that can perform tasks and interact with users or services in Teams. Each blueprint acts as a template that specifies how an agent is configured and connected to a back-end service. For more information, see [Microsoft Agent 365](https://review.learn.microsoft.com/microsoft-agent-365/?branch=main).
+An Agent Identity Blueprint provides a reusable configurations for **agent identities** that can perform tasks and interact with users or services in Teams. Each blueprint acts as a template that specifies how an agent is configured and connected to a back-end service.
 
 Agent Identity Blueprints are created and managed in **Teams Developer Portal**, while the agent identities derived from them are managed in the **Teams Admin Center**.
 
