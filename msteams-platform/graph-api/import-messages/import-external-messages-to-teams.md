@@ -29,9 +29,9 @@ Use Microsoft Graph to import users' existing message history and data from any 
 
 Migration mode supports all new and existing channels and chats. Here's how you can use it:
 
-* **New channels or chats**: You can create a new team and its standard channels in migration mode to import content. This option is ideal for recreating the exact structure from your external platform.
+* **New channels or chats**: Create a new team and its standard channels in migration mode to import content. This option is ideal for recreating the exact structure from your external platform.
 
-* **Existing channels or chats**: You can use any team or channel that already exists in Teams, regardless of when you created it. This option adds historical context to channels that are already active in Teams and maintains continuity for ongoing conversations.
+* **Existing channels or chats**: Use any team or channel that already exists in Teams, regardless of when you created it. This option adds historical context to channels that are already active in Teams and maintains continuity for ongoing conversations.
 
 |Entities |Sub type  |Migration mode support |Notes|
 |---------|---------|---------|---------|
@@ -65,8 +65,8 @@ The following table provides the content scope.
 
 Before you set up your Microsoft 365 tenant:
 
-* Verify that a Microsoft 365 tenant exists for the import data. For more information on setting up a Microsoft 365 tenancy for Teams, see [prepare your Microsoft 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).
-* Verify that team members are in Microsoft Entra ID. For more information, see [add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory) to Microsoft Entra ID.
+* Verify that a Microsoft 365 (M365) tenant exists for the import data. For more information on setting up a M365 tenancy for Teams, see [prepare your Microsoft 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).
+* Verify that team members are in Microsoft Entra ID (Entra ID). For more information, see [add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory) to Entra ID.
 
 ## Import historical messages into Teams
 
@@ -81,13 +81,16 @@ You can import historical messages seamlessly into both existing and newly creat
 
 ### Step 1: Create a new channel or chat or use an existing one
 
-You can create a new channel or chat, or use an existing one, to migrate a user's message history from any third-party platform to Teams.
+You can create a new channel or chat, or use an existing one, to migrate a user's message history from any third-party platform to Teams. For more information, see:
+
+* [Path 1: Create a team and standard channel in migration mode](#create-a-team-and-standard-channel-in-migration-mode)
+* [Path 2: Start migration on existing channels and chats](#start-migration-on-existing-channels-and-chats)
 
 ### Step 2: Enable migration mode to import messages
 
 The `startMigration` API enables migration mode on Teams channels or chats, which allows import of historical messages. Migration mode is a special state that prevents certain operations during the data migration process to ensure data integrity.
 
-**What migration mode does:**
+The migration mode:
 
 * Temporarily restricts sending new messages to the channel or chat
 * Prevents adding or removing members during migration
@@ -96,10 +99,12 @@ The `startMigration` API enables migration mode on Teams channels or chats, whic
 
 Choose either of the two paths to initiate migration mode on channels or chats:
 
-* [Create a Team and standard channel in migration mode](#create-a-team-and-standard-channel-in-migration-mode)
-* Path 2: Start migration on existing channels and chats
+* [Path 1: Create a team and standard channel in migration mode](#create-a-team-and-standard-channel-in-migration-mode)
+* [Path 2: Start migration on existing channels and chats](#start-migration-on-existing-channels-and-chats)
 
-### Create a Team and standard channel in migration mode
+### Create a team and standard channel in migration mode
+
+To start migration mode, you need to create a new team in Teams and then create a channel. Currently, you can only create a standard channel.
 
 To create a new team with a back-in-time timestamp:
 
@@ -109,6 +114,86 @@ Since you're migrating existing data, maintaining the original message timestamp
 
 > [!NOTE]
 > The `createdDateTime` field is only populated for migrated teams or channels.
+
+#### Request (create a team in migration state)
+
+```HTTP
+POST https://graph.microsoft.com/v1.0/teams
+Content-Type: application/json
+
+{
+  "@microsoft.graph.teamCreationMode": "migration",
+  "template@odata.bind": "https://graph.microsoft.com/v1.0/teamsTemplates('standard')",
+  "displayName": "My Sample Team",
+  "description": "My Sample Team’s Description",
+  "createdDateTime": "2020-03-14T11:22:17.043Z"
+}
+```
+
+#### Response for new team creation
+
+```HTTP
+HTTP/1.1 202 Accepted
+Location: /teams/{team-id}/operations/{operation-id}
+Content-Location: /teams/{team-id}
+```
+
+You can receive the error message in the following scenarios:
+
+If you set `createdDateTime` for a future date.
+If you correctly specify `createdDateTime`, but you omit or set an invalid value for the `teamCreationMode` instance attribute.
+
+#### Error Message
+
+```HTTP
+400 Bad Request
+```
+
+To create a new channel with a back-in-time timestamp:
+
+1. Use the channel resource `createdDateTime` property to place the new channel in migration mode.
+1. Include the `channelCreationMode` instance attribute with the `migration` value in the POST request to identify the team as created for migration.
+
+#### Request (create a channel in migration state)
+
+```HTTP
+POST https://graph.microsoft.com/v1.0/teams/{team-id}/channels
+Content-Type: application/json
+
+{
+  "@microsoft.graph.channelCreationMode": "migration",
+  "displayName": "Architecture Discussion",
+  "description": "This channel is where we debate all future architecture plans",
+  "membershipType": "standard",
+  "createdDateTime": "2020-03-14T11:22:17.047Z"
+}
+```
+
+#### Response of new channel creation
+
+```HTTP
+HTTP/1.1 202 Accepted
+
+{
+   "@odata.context":"https://graph.microsoft.com/v1.0/$metadata#teams('team-id')/channels/$entity",
+   "id":"id-value",
+   "createdDateTime":null,
+   "displayName":"Architecture Discussion",
+   "description":"This channel is where we debate all future architecture plans",
+   "isFavoriteByDefault":null,
+   "email":null,
+   "webUrl":null,
+   "membershipType":null,
+   "moderationSettings":null
+}
+```
+
+You can receive the error message in the following scenarios:
+
+If you set `createdDateTime` for a future date.
+If you correctly specify `createdDateTime`, but you omit or set an invalid value for the `channelCreationMode` instance attribute.
+
+### Start migration on existing channels and chats
 
 ### Channel migration
 
@@ -200,7 +285,7 @@ Use the `POST` API to import back-in-time messages by including the `createdDate
 
 > [!NOTE]
 >
-> * Messages imported with `createdDateTime` earlier than the message thread `createdDateTime` aren't supported.
+> * The API doesn't support messages imported with `createdDateTime` earlier than the message thread `createdDateTime`.
 > * `createdDateTime` must be unique across messages in the same thread.
 > * `createdDateTime` supports timestamps with milliseconds precision. For example, if the incoming request message has `createdDateTime` set to *2020-09-16T05:50:31.0025302Z*, the API converts it to *2020-09-16T05:50:31.002Z* when ingesting the message.
 
