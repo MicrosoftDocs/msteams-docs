@@ -40,32 +40,33 @@ Migration mode supports all new and existing channels and chats. Here's how you 
 
 > [!NOTE]
 >
-> * Only standard channels are supported when creating a channel in migration mode from scratch
+> * Only standard channels are supported when creating a channel in migration mode from scratch.
 >
-> * Federated content can't be imported for chats, channels, or messages. Only one app can manage a thread, and all imported content must come from the authenticated tenant. If another app needs to import content, the first app must complete migration before the second app restarts the process.
+> * Federated content can't be imported for chats, channels, or messages. All imported content must come from the authenticated tenant and only one app can manage a thread. If another app needs to import content, the first app must complete migration before the second app restarts the process.
 
 ## Content scope for import
 
-The following table provides the content scope.
+The following table provides the content scope for existing channels and chats.
 
 |In-scope | Out-of-scope|
 |----------|--------------------------|
-|Team and channel messages|At mentions|
-|Created time of the original message|Announcements|
-|Inline images as part of the message|Videos|
-|Links to existing files in SPO or Microsoft OneDrive (OD)|Code snippets|
-|Messages with rich text|Sticker|
+|Team (general) and standard, private, and shared channel messages|Announcements|
+|Created time of the original message|Videos|
+|Inline images as part of the message|Code snippets|
+|Links to existing files in Microsoft 365 (M365) SharePoint Oneline (SPO) or OneDrive (OD)|Stickers|
+|Messages with rich text|Cross posts between channels|
 |Message reply chain|Quotes|
-|High throughput processing|Cross posts between channels|
+|High throughput processing||
 |1:1 and group chat messages||
 |Shared and private channels||
-|Reactions and emojis||
+|Up to 250 reactions||
+|At mentions and emojis||
 
 ## Prerequisites
 
 Before you set up your Microsoft 365 tenant:
 
-* Verify that a Microsoft 365 (M365) tenant exists for the import data. For more information on setting up a M365 tenancy for Teams, see [prepare your Microsoft 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).
+* Verify that a M365 tenant exists for the import data. For more information on setting up a M365 tenancy for Teams, see [prepare your Microsoft 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).
 * Verify that team members are in Microsoft Entra ID (Entra ID). For more information, see [add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory) to Entra ID.
 
 ## Import historical messages into Teams
@@ -113,9 +114,9 @@ To create a new team with a back-in-time timestamp:
 Since you're migrating existing data, maintaining the original message timestamps, and preventing messaging activity during the migration process are key to recreating the user's existing message flow in Teams.
 
 > [!NOTE]
-> The `createdDateTime` field is only populated for migrated teams or channels.
+> The `createdDateTime` field is only populated for migrated teams or channels. If you update `createdDateTime` to a past timestamp, you can't move it to a future timestamp again.
 
-#### Request (create a team in migration state)
+#### Request for new team creation in migration state
 
 ```HTTP
 POST https://graph.microsoft.com/v1.0/teams
@@ -140,10 +141,10 @@ Content-Location: /teams/{team-id}
 
 You can receive the error message in the following scenarios:
 
-If you set `createdDateTime` for a future date.
-If you correctly specify `createdDateTime`, but you omit or set an invalid value for the `teamCreationMode` instance attribute.
+* If you set `createdDateTime` for a future date.
+* If you correctly specify `createdDateTime`, but you omit or set an invalid value for the `teamCreationMode` instance attribute.
 
-#### Error Message
+#### Error message for team creation
 
 ```HTTP
 400 Bad Request
@@ -154,7 +155,7 @@ To create a new channel with a back-in-time timestamp:
 1. Use the channel resource `createdDateTime` property to place the new channel in migration mode.
 1. Include the `channelCreationMode` instance attribute with the `migration` value in the POST request to identify the team as created for migration.
 
-#### Request (create a channel in migration state)
+#### Request for new channel creation in migration state
 
 ```HTTP
 POST https://graph.microsoft.com/v1.0/teams/{team-id}/channels
@@ -190,16 +191,27 @@ HTTP/1.1 202 Accepted
 
 You can receive the error message in the following scenarios:
 
-If you set `createdDateTime` for a future date.
-If you correctly specify `createdDateTime`, but you omit or set an invalid value for the `channelCreationMode` instance attribute.
+* If you set `createdDateTime` for a future date.
+* If you correctly specify `createdDateTime`, but you omit or set an invalid value for the `channelCreationMode` instance attribute.
+
+#### Error message for channel creation
+
+```HTTP
+400 Bad Request
+```
 
 ### Start migration on existing channels and chats
 
-### Channel migration
+Use the `startMigration` API to enable migration mode on existing channels or chats. `startMigration` sets the channel’s or chat's migration state to `inProgress` and begins the message import process. For more information, see:
 
-Use the `startMigration` API to enable migration mode on new or existing channels. This API sets the channel’s migration state to `inProgress` and begins the message import process.
+* [Existing channel migration](#existing-channel-migration)
+* [Existing chat migration](#existing-chat-migration)
 
-#### Request
+### Existing channel migration
+
+Learn how to enable migration mode on existing channels here including the request, response, and an example.
+
+#### Request for existing channel migration
 
 ```HTTP
 POST /teams/{team-id}/channels/{channel-id}/startMigration
@@ -230,9 +242,9 @@ POST https://graph.microsoft.com/beta/teams/57fb72d0-d811-46f4-8947-305e6072eaa5
 
 ```
 
-### Chat migration
+### Existing chat migration
 
-Use the `startMigration` API to enable migration mode on new or existing chats. This API sets the chat's migration state to `inProgress` and begins the message import process.
+Learn how to enable migration mode on existing chats here including the request, response, and an example.
 
 #### Chat migration request
 
@@ -247,7 +259,7 @@ POST /chats/{chat-id}/startMigration
 > Microsoft Graph uses DateTimeOffset to represent date and time with a UTC offset for an accurate time zone.
 >The `conversationCreationDateTime` must be greater than the minimum value for `DateTimeOffset` and less than the current value of the chat's `createdDateTime`.
 
-#### Response
+#### Chat migration response
 
 If the request is successful, the method returns an empty status:
 
