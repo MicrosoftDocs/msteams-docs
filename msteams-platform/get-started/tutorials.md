@@ -1035,7 +1035,7 @@ The following steps help you to create and register your bot in the Azure portal
 
 1. Select **Add permissions**.
 
-   :::image type="content" source="../assets/images/teams-file-upload-bot/select-api-permission.png"" alt-text="Screenshot show the option to select permissions.":::
+   :::image type="content" source="../assets/images/teams-file-upload-bot/select-api-permission.png" alt-text="Screenshot show the option to select permissions.":::
 
     > [!NOTE]
  >
@@ -1088,14 +1088,14 @@ The following steps help you to create and register your bot in the Azure portal
 
 1. Go to the **manifest.json** file in the cloned repository.
 
-   :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/manifest-file-location.png" alt-text="Screenshot shows the selection of manifest json file.":::
+   :::image type="content" source="../assets/images/teams-file-upload-bot/manifest-file-location.png" alt-text="Screenshot shows the selection of manifest json file.":::
 
 1. Open the **manifest.json** file and update the following changes:
 
    * Replace all occurrences of `"{TODO: MicrosoftAppId}"` with your **Microsoft App ID**.
    * Set `"<<domain-name>>"` to your ngrok or dev tunnel domain.
 
-   :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/manifest-bot-id-botsso.png" alt-text="Screenshot shows the details filled in the manifest file in visual studio.":::
+   :::image type="content" source="../assets/images/teams-file-upload-bot/manifest-bot-id-botsso.png" alt-text="Screenshot shows the details filled in the manifest file in visual studio.":::
 
 ### Build and run the service
 
@@ -1107,7 +1107,7 @@ The following steps help you to create and register your bot in the Azure portal
 
 1. From **bot-conversation-sso-quickstart** > **csharp_dotnetcore** folder, and select **BotConversationSsoQuickstart.sln** file.
 
-        :::image type="content" source="~/assets/images/bots/filepath_1.png" alt-text="Screenshot of Project file with the file path and BotSSOCSharp.csproj file highlighted in red.":::
+    :::image type="content" source="~/assets/images/bots/filepath_1.png" alt-text="Screenshot of Project file with the file path and BotSSOCSharp.csproj file highlighted in red.":::
 
 1. Select **F5**  to run the project.
 1. If a **Security Warning** dialog appears, select **Yes**.
@@ -1116,8 +1116,8 @@ The following steps help you to create and register your bot in the Azure portal
 
    A webpage opens with a message **Your bot is ready!**.
 
-> [!NOTE]
-> This page appears only when you navigate to the localhost URL.
+    > [!NOTE]
+    > This page appears only when you navigate to the localhost URL.
 
     :::image type="content" source="~/assets/images/bots/yourbot.png" alt-text="Screenshot of the webpage that displays Your bot is ready.":::
 
@@ -1189,7 +1189,7 @@ The following steps help you to create and register your bot in the Azure portal
 
 Did you come up with something like this?
 
-    :::image type="content" source="~/assets/images/bots/sbs-desktop-mobile.png" alt-text="Screenshot of the output after you successfully completed the step-by-step guide.":::
+:::image type="content" source="~/assets/images/bots/sbs-desktop-mobile.png" alt-text="Screenshot of the output after you successfully completed the step-by-step guide.":::
 
 You've completed the tutorial to get started with build a bot with SSO authentication.
 
