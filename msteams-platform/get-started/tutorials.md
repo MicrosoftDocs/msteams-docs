@@ -1025,7 +1025,7 @@ The following steps help you to create and register your bot in the Azure portal
 
 1. Select **+ Add a permission**.
 
-   :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-api-permission.png" alt-text="Screenshot shows the option to select Add permission.":::
+   :::image type="content" source="../assets/images/teams-file-upload-bot/add-api-permission.png" alt-text="Screenshot shows the option to select Add permission.":::
 
 1. Select **Microsoft Graph**.
 
@@ -1035,7 +1035,7 @@ The following steps help you to create and register your bot in the Azure portal
 
 1. Select **Add permissions**.
 
-   :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/select-api-permission.png" alt-text="Screenshot show the option to select permissions.":::
+   :::image type="content" source="../assets/images/teams-file-upload-bot/select-api-permission.png"" alt-text="Screenshot show the option to select permissions.":::
 
     > [!NOTE]
  >
@@ -1054,7 +1054,7 @@ The following steps help you to create and register your bot in the Azure portal
 
    :::image type="content" source="~/assets/images/bots/app-id-uri1.png" alt-text="Screenshot shows the option to add the app ID URI and save.":::
 
-[!INCLUDE [Azure add scope](../includes/get-started/azure-add-scope.md)
+[!INCLUDE [Azure add scope](../includes/get-started/azure-add-scope.md)]
 
 [!INCLUDE [Azure client application](../includes/get-started/azure-client-application.md)]
 
@@ -1062,13 +1062,13 @@ The following steps help you to create and register your bot in the Azure portal
 
 ### Create your bot
 
-[!INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource.md)]
+[!INCLUDE [Azure bot resource](../includes/get-started/azure-bot-resource.md)]
 
-[!INCLUDE [Teams channel](includes/get-started/add-teams-channel.md)]
+[!INCLUDE [Teams channel](../includes/get-started/add-teams-channel.md)]
 
-[!INCLUDE [Messaging endpoint](includes/get-started/messaging-endpoint.md)]
+[!INCLUDE [Messaging endpoint](../includes/get-started/messaging-endpoint.md)]
 
-[!INCLUDE [Service connection](includes/get-started/oauth-connection-settings.md)]
+[!INCLUDE [Service connection](../includes/get-started/oauth-connection-settings.md)]
 
 ### Set up app settings and manifest files
 
