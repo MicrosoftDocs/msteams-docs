@@ -27,7 +27,7 @@ Use Microsoft Graph to import users' existing message history and data from any 
 
 ## Supported channel and chat types
 
-All channels and chats, either new or existing support migration mode for importing historical messages. Migration mode is a special state that prevents certain operations during the data migration process to ensure data integrity.
+All channels and chats, either new or existing, support migration mode for importing historical messages. Migration mode is a special state that prevents certain operations during the data migration process to ensure data integrity.
 
 The migration mode:
 
@@ -46,7 +46,7 @@ Here's how you can enable migration of historical messages:
 >
 > * Only standard channels are supported when creating a channel in migration mode from scratch.
 >
-> * Federated content can’t be imported. All imported content must come from the authenticated tenant and only one app can manage a thread at a time. Another app can import content only after the first app completes migration.
+> * Federated content can't be imported. All imported content must come from the authenticated tenant and only one app can manage a thread at a time. Another app can import content only after the first app completes migration.
 
 ## Content scope for import
 
@@ -57,7 +57,7 @@ The following table provides the content scope for existing channels and chats.
 |Team (general)|Announcements|
 |Created time of the original message|Videos|
 |Inline images as part of the message|Code snippets|
-|Links to existing files in Microsoft 365 (M365) SharePoint Oneline (SPO) or OneDrive (OD)|Stickers|
+|Links to existing files in Microsoft 365 (Microsoft 365) SharePoint Online (SPO) or OneDrive (OD)|Stickers|
 |Messages with rich text|Cross posts between channels|
 |Message reply chain|Quotes|
 |High throughput processing||
@@ -70,7 +70,7 @@ The following table provides the content scope for existing channels and chats.
 
 Before you set up your Microsoft 365 tenant:
 
-* Verify that a M365 tenant exists for the import data. For more information on setting up a M365 tenancy for Teams, see [prepare your Microsoft 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).
+* Verify that a Microsoft 365 tenant exists for the import data. For more information on setting up a Microsoft 365 tenancy for Teams, see [prepare your Microsoft 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).
 * Verify that team members are in Microsoft Entra ID (Entra ID). For more information, see [add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory) to Entra ID.
 
 ## Import historical messages into Teams
@@ -140,7 +140,7 @@ You can receive the error message in the following scenarios:
 To create a new channel with a back-in-time timestamp:
 
 1. Use the channel resource `createdDateTime` property to place the new channel in migration mode.
-1. Include the `channelCreationMode` instance attribute with the `migration` value in the POST request to identify the team as created for migration.
+1. Include the `channelCreationMode` instance attribute with the `migration` value in the POST request to identify the team created for migration.
 
 #### Request for new channel creation in migration state
 
@@ -220,7 +220,7 @@ POST /teams/{team-id}/channels/{channel-id}/startMigration
 
 #### Channel migration response
 
-If the request is successful, the method returns an empty status.
+If the request is successful, the method returns an empty HTTP response.
 
 ```http
 HTTP/1.1 204 No Content
@@ -255,7 +255,7 @@ POST /chats/{chat-id}/startMigration
 
 #### Chat migration response
 
-If the request is successful, the method returns an empty status:
+If the request is successful, the method returns an empty HTTP response.
 
 ```http
 HTTP/1.1 204 No Content
@@ -469,7 +469,7 @@ Go to [Step 5: Verify migration mode completion](#step-5-verify-migration-mode-c
 
 #### Complete existing channel migration
 
-For existing channels already in migration mode, use the `completeMigration` API to mark the migration state as completed. This change ensures that the channel remains permanently available instead of being dropped after migration.After you send a `completeMigration` request for new or existing channels, you can still import more messages by calling the `startMigration` API.
+For existing channels already in migration mode, use the `completeMigration` API to mark the migration state as completed. This change ensures that the channel remains permanently available instead of being dropped after migration. After you send a `completeMigration` request for new or existing channels, you can still import more messages by calling the `startMigration` API.
 
 #### Complete channel migration request
 
