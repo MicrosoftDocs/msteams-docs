@@ -285,7 +285,7 @@ Consider the following important points:
 
 ## Step 2: Check migration status
 
-Call `Get channel` or `Get chat` to confirm that the 'migrationMode' state is set to `InProgress`. For more information, see:
+Call `Get channel` or `Get chat` to confirm that the `migrationMode` state is set to `InProgress`. For more information, see:
 
 * [Get channel](/graph/api/channel-get?view=graph-rest-1.0&tabs=http&preserve-view=true)
 * [Get chat](/graph/api/chat-get?view=graph-rest-1.0&tabs=http&preserve-view=true)
