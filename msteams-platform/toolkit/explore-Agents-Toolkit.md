@@ -24,16 +24,17 @@ Agents Toolkit appears within Visual Studio Code as an extension. After you inst
 | 1 | **Build a Declatative Agent** | Build a declarative agent. |
 | 2 | **Create a New Agent/App** | Create a new agent/app. |
 | 3 | **View Samples** | Select and build existing app samples based on common use cases for a Teams app. |
-| 4 | **Create App with GitHub Copilot** | Create an app with GitHub Copilot. |
-| 5 | • **New File** <br> • **Open File** <br> • **Open Folder** <br> • **Connect to** | • Create a new file. <br> • Open an existing file. <br> • Open an existing folder. <br> • Connect to remote development workspaces. |
-| 6 | **Recent** | View the recent files. |
+| 4 | • **New File** <br> • **Open File** <br> • **Open Folder** <br> • **Connect to** | • Create a new file. <br> • Open an existing file. <br> • Open an existing folder. <br> • Connect to remote development workspaces. |
+| 5 | **Recent** | View the recent files. |
 
 ### Explore the Agents Toolkit task pane
 
-You can explore the available functionalities from the Agents Toolkit task pane. The task pane appears only after you create an app project using Agents Toolkit. The following video helps you to learn about the process of creating a new Teams app:
+You can explore the available functionalities from the Agents Toolkit task pane. The task pane appears only after you create an app project using Agents Toolkit.
+<!--
+The following video helps you to learn about the process of creating a new Teams app:
 
    :::image type="content" source="../assets/videos/javascript-botapp.gif" alt-text="Graphical representation shows the steps to create a Teams app.":::
-
+-->
 After you create a new Teams app project, the directory structure of the app appears in the left pane and the **`README`** file in the right pane.
 
 :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/first-page_1.png" alt-text="Screenshot shows the  first page of Agents Toolkit." lightbox="../assets/images/toolkit-v2/toolkit-fundamentals/first-page_1.png":::
