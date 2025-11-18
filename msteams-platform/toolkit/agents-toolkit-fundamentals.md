@@ -43,7 +43,7 @@ The following list provides the key features of Agents Toolkit:
 
 Save time getting started with new Teams apps using the capability-focused templates for tabs, bots, message extensions, and common app scenarios.
 
-:::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/create-new-app_2.png" alt-text="Screenshot shows the list of new Teams app menu to create in Visual Studio Code.":::
+:::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/teams-agents.png" alt-text="Screenshot shows the list of new Teams app menu to create in Visual Studio Code.":::
 
 ### Composable automation tasks
 
