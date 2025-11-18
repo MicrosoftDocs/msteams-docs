@@ -466,7 +466,7 @@ HTTP/1.1 204 NoContent
 
 ### Add Team members
 
-You can add a member to a team using the Teams UI or Microsoft Graph add member API:
+You can add a member to a team using the [Teams UI](https://support.microsoft.com/en-us/office/add-members-to-a-team-in-microsoft-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9) or Microsoft Graph [add member](/graph/api/group-post-members?view=graph-rest-beta&tabs=http&preserve-view=true) API:
 
 #### Request (add member)
 
