@@ -31,7 +31,7 @@ All new and existing channels and chats  support migration mode for importing hi
 
 Understand the approach for new or existing channels and chats:
 
-* **New channels or chats**: Create a new team and its standard channels in migration mode to import content. This approach allows you to recreate the exact structure from your external platform.
+* **New standard channels**: Create a new team and its standard channels in migration mode to import content. This approach allows you to recreate the exact structure from your external platform.
 
 * **Existing channels or chats**: Use any team or channel that already exists in Teams, regardless of when you created it. This approach allows you to add historical context to channels that are already active in Teams and maintains continuity for ongoing conversations.
 
@@ -75,22 +75,22 @@ The following table provides the content scope for existing channels and chats.
 
 ## Import historical messages into Teams
 
-You can import historical messages seamlessly into both existing and newly created channels or chats by performing the following five steps:
+You can import historical messages seamlessly into both existing and newly created channels or chats by performing the following steps:
 
-1. [Create a new channel or chat or use an existing one](#step-1-create-a-new-channel-or-chat-or-use-an-existing-one)
+1. [Start migration](#step-1-start-migration)
 1. [Check migration status](#step-2-check-migration-status)
 1. [Import messages](#step-3-import-messages)
-1. [Complete migration](#step-4-complete-migration)
+1. [Complete migration mode](#step-4-complete-migration-mode)
 1. [Verify migration mode completion](#step-5-verify-migration-mode-completion)
 
-### Step 1: Create a new channel or chat or use an existing one
+## Step 1: Start migration
 
-You can create a new channel or chat or use an existing one to import a user's message history from any third-party platform to Teams. For more information, see:
+To start migration, you can either create a new standard channel or use an existing channel or chat to import a user's message history from any third-party platform to Teams. Depending on your scenario, choose either of the two paths:
 
 * [Path 1: Create a team and standard channel in migration mode](#path-1-create-a-team-and-standard-channel-in-migration-mode)
 * [Path 2: Start migration on existing channels and chats](#start-migration-on-existing-channels-and-chats)
 
-#### Path 1: Create a team and standard channel in migration mode
+### Path 1: Create a team and standard channel in migration mode
 
 To start migration mode, you need to create a new team in Teams and then create a channel. Currently, you can only create a standard channel.
 
@@ -141,7 +141,7 @@ You can receive the error message in the following scenarios:
 
 [Create a new channel](/graph/api/channel-post?view=graph-rest-1.0&viewFallbackFrom=graph-rest-v1.0&tabs=http&preserve-view=true) with a back-in-time timestamp using the channel resource `createdDateTime` property. Place the new channel in migration mode, a special state that restricts users from most chat activities within the channel until the migration process is complete. Include the `channelCreationMode` instance attribute with the `migration` value in the POST request to explicitly identify the new team as being created for migration.
 
-#### Request for new channel creation in migration state
+#### Request (create a channel in migration state)
 
 ```HTTP
 POST https://graph.microsoft.com/v1.0/teams/{team-id}/channels
@@ -156,7 +156,7 @@ Content-Type: application/json
 }
 ```
 
-#### Response of new channel creation
+#### Response (create a channel in migration state)
 
 ```HTTP
 HTTP/1.1 202 Accepted
@@ -175,22 +175,22 @@ HTTP/1.1 202 Accepted
 }
 ```
 
-You can receive the error message in the following scenarios:
-
-* If you set `createdDateTime` for a future date.
-* If you correctly specify `createdDateTime`, but you omit or set an invalid value for the `channelCreationMode` instance attribute.
-
-#### Error message for channel creation
+#### Error message
 
 ```HTTP
 400 Bad Request
 ```
 
-After you create a new team and channel, perform the following steps:
+You can receive the error message in the following scenarios:
+
+* If `createdDateTime` is set for future.
+* If `createdDateTime` is correctly specified but `channelCreationMode` instance attribute is missing or set to an invalid value.
+
+Complete the following steps after you create a new team and standard channel:
 
 1. [Check migration status](#step-2-check-migration-status)
 1. [Import messages](#step-3-import-messages)
-1. [Complete migration](#step-4-complete-migration)
+1. [Complete migration mode](#step-4-complete-migration-mode)
 1. [Verify migration mode completion](#step-5-verify-migration-mode-completion)
 
 ### Start migration on existing channels and chats
@@ -204,7 +204,7 @@ Use the `startMigration` API to enable migration mode on existing channels or ch
 
 Learn how to enable migration mode on existing channels including the request, response, and an example.
 
-#### Request for existing channel migration
+#### Request (existing channel migration)
 
 ```HTTP
 POST /teams/{team-id}/channels/{channel-id}/startMigration
@@ -217,7 +217,7 @@ POST /teams/{team-id}/channels/{channel-id}/startMigration
 > Microsoft Graph uses DateTimeOffset to represent date and time with a UTC offset for an accurate time zone.
 >The `conversationCreationDateTime` value must be greater than the minimum value for `DateTimeOffset` and less than the current value of the channel's `createdDateTime`.
 
-#### Channel migration response
+#### Response (existing channel migration)
 
 If the request is successful, the method returns an empty HTTP response.
 
@@ -239,7 +239,7 @@ POST https://graph.microsoft.com/beta/teams/57fb72d0-d811-46f4-8947-305e6072eaa5
 
 Learn how to enable migration mode on existing chats, including the request, response, and an example.
 
-#### Chat migration request
+#### Request (existing chat migration)
 
 ```HTTP
 POST /chats/{chat-id}/startMigration
@@ -252,7 +252,7 @@ POST /chats/{chat-id}/startMigration
 > Microsoft Graph uses DateTimeOffset to represent date and time with a UTC offset for an accurate time zone.
 >The `conversationCreationDateTime` must be greater than the minimum value for `DateTimeOffset` and less than the current value of the chat's `createdDateTime`.
 
-#### Chat migration response
+#### Response (existing chat migration)
 
 If the request is successful, the method returns an empty HTTP response.
 
@@ -277,14 +277,14 @@ Consider the following important points:
 * The `creationDateTime` property is optional in a request body. If omitted, the `startMigration` API uses the current date and time as the minimum timestamp.
 * The `startMigration` API starts the message migration process by setting the migration mode to `inProgress` for a specified channel or chat.
 
-### Step 2: Check migration status
+## Step 2: Check migration status
 
 Call the `Get channel` or `Get chat` API to confirm that the migration mode state is set to `inProgress`. For more information, see:
 
 * [Get channel](/graph/api/channel-get?view=graph-rest-1.0&tabs=http&preserve-view=true)
 * [Get chat](/graph/api/chat-get?view=graph-rest-1.0&tabs=http&preserve-view=true)
 
-### Step 3: Import messages
+## Step 3: Import messages
 
 Use the `POST` API to import back-in-time messages by including the `createdDateTime` and `from` properties in the request body.
 
@@ -294,7 +294,7 @@ Use the `POST` API to import back-in-time messages by including the `createdDate
 > * `createdDateTime` must be unique across messages in the same thread.
 > * `createdDateTime` supports timestamps with milliseconds precision. For example, if the incoming request message has `createdDateTime` set to *2020-09-16T05:50:31.0025302Z*, the API converts it to *2020-09-16T05:50:31.002Z* when ingesting the message.
 
-#### Send a text-only message using POST
+### Request (POST message that is text-only)
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/messages
@@ -315,7 +315,7 @@ POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/messages
 }
 ```
 
-#### Send text message response
+### Response
 
 ```http
 HTTP/1.1 200 OK
@@ -357,7 +357,7 @@ HTTP/1.1 200 OK
 }
 ```
 
-#### Error message
+### Error message
 
 ```http
 400 Bad Request
@@ -365,11 +365,12 @@ HTTP/1.1 200 OK
 
 You receive an error message if you set the `createdDateTime` property to a future date and time.
 
-#### Send a message with an inline image using POST
+### Request (POST a message with inline image)
 
 > [!NOTE]
 >
-> Use the standard `chatMessage` scopes. No other permission scopes are required.
+> * There are no special permission scopes in this scenario since the request is part of `chatMessage`.
+> * The scopes for `chatMessage` apply here.
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/messages
@@ -389,7 +390,7 @@ POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/messages
 }
 ```
 
-#### Send inline image response
+### Response (inline image)
 
 ```http
 HTTP/1.1 200 OK
@@ -428,61 +429,78 @@ HTTP/1.1 200 OK
 }
 ```
 
-### Step 4: Complete migration
+## Step 4: Complete migration mode
 
-Use the `completeMigration` API to finish the migration process for both new and existing channels and chats. For more information, see:
+Use the `completeMigration` method to finish the migration process for new channels and the `completeMigration` API to finish migration for existing channels and chats. For more information, see:
 
 * [Complete the new team and channel migration](#complete-the-new-team-and-channel-migration)
-* [Complete existing channel migration](#complete-existing-channel-migration)
-* [Complete existing chat migration](#complete-existing-chat-migration)
+* [Complete existing channel or chat migration](#complete-existing-channel-or-chat-migration)
 
-#### Complete the new team and channel migration
+### Complete the new team and channel migration
 
-After the message migration process completes, use the `completeMigration` method to take both the team and channel out of migration mode. This step opens the team and channel resources for general use by team members. The action is bound to the `team` instance. Before the team completes, you must complete all channels out of migration mode.
+After the message migration process is complete, both the team and channel are taken out of migration mode using the `completeMigration` method. This step opens the team and channel resources for general use by team members. The action is bound to the `team` instance. Before the team completes, all channels must be completed out of migration mode.
 
-#### Request for end of channel migration mode
+#### Request (end channel migration mode)
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/completeMigration
 ```
 
-#### Response for end of channel migration mode
+#### Response (end channel migration mode)
 
 ```http
 HTTP/1.1 204 NoContent
 ```
 
-#### Request for end of team migration mode
+#### Request (end team migration mode)
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams/team-id/completeMigration
 ```
 
-#### Response for end of team migration mode
+#### Response (end team migration mode)
 
 ```http
 HTTP/1.1 204 NoContent
 ```
 
+### Add Team members
+
+You can add a member to a team using the Teams UI or Microsoft Graph add member API:
+
+#### Request (add member)
+
+```http
+POST https://graph.microsoft.com/beta/teams/{team-id}/members
+Content-type: application/json
+Content-length: 30
+
+{
+   "@odata.type": "#microsoft.graph.aadUserConversationMember",
+   "roles": [],
+   "user@odata.bind": "https://graph.microsoft.com/beta/users/{user-id}"
+}
+```
+
+#### Response (add member)
+
+```http
+HTTP/1.1 204 No Content
+```
+
 Go to [Step 5: Verify migration mode completion](#step-5-verify-migration-mode-completion).
 
-#### Complete existing channel migration
+### Complete existing channel or chat migration
 
-For existing channels already in migration mode, use the `completeMigration` API to mark the migration state as completed. This change ensures that the channel remains permanently available instead of being dropped after migration. After you send a `completeMigration` request for new or existing channels, you can still import more messages by calling the `startMigration` API.
+For existing channels or chats already in migration mode, use the `completeMigration` API to mark the migration state as completed. This process ensures that the channel or chat remains permanently available instead of being dropped after migration.
 
-#### Complete channel migration request
+#### Request (existing channel migration completion)
 
 ```HTTP
 POST /teams/{team-id}/channels/{channel-id}/completeMigration 
 ```
 
-Go to [Step 5: Verify migration mode completion](#step-5-verify-migration-mode-completion), after you complete the existing channel migration.
-
-#### Complete existing chat migration
-
-For existing chats already in migration mode, call the `completeMigration` API to update the migration mode state to completed. This process marks the chat as fully migrated. After calling `completeMigration` on a new or existing chat, you can continue importing messages by using the `startMigration` API.
-
-#### Complete chat migration request
+#### Request (existing chat migration completion)
 
 ```HTTP
 POST /chats/{chat-id}/completeMigration 
@@ -498,9 +516,9 @@ Call the `Get channel` or the `Get chat` API to verify that the migration mode s
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD026 -->
 
-* After you make the `completeMigration` request, you can't import more messages into the Teams.
+* After calling `completeMigration` on an existing channel or chat, you can continue importing messages by using the `startMigration` API.
 
-* You can only add team members to the new Teams after the `completeMigration` request returns a successful response.
+* You can only add team members to the new Teams after the `completeMigration` request returns a successful response. This is applicable only for the newly created team and standard channel.
 
 * Throttling: Messages import at five RPS per channel.
 
