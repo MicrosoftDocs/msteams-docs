@@ -245,7 +245,7 @@ The Developer Portal also includes tools to help you build key features of Teams
 * **Adaptive Cards editor (Preview)**: Create and preview Adaptive Cards to include with your apps.
 * **Identity platform management (Preview)**: Register your apps with Microsoft Entra ID to help users sign in and provide access to APIs.
 * **Teams Store app validation**: Check your app package against the test cases that Microsoft uses to review your app. We recommend you to use latest app validation tool in your app under [**Publish**](#publish) section.
-* **Agent Identity Blueprint**: Create, configure, and manage reusable blueprints that define agent identities and back-end connection details. For more information, see [Agent Identity Blueprint](#agent-identity-blueprint).
+* **Agent Identity Blueprint**: Create, configure, and manage reusable blueprints that define an Agent 365 and its back-end connection details. For more information, see [Agent Identity Blueprint](#agent-identity-blueprint).
 * **Bot management**: Add conversational bots to your app that communicate with users, respond to their questions, and proactively notify them about changes and other events.
 
 To add a bot:
@@ -267,9 +267,9 @@ From the Developer Portal, you can go to Bot Framework portal and configure your
 
 ### Agent Identity Blueprint
 
-An Agent Identity Blueprint provides a reusable configurations for **agent identities** that can perform tasks and interact with users or services in Teams. Each blueprint acts as a template that specifies how an agent is configured and connected to a back-end service.
+An Agent Identity Blueprint provides a reusable configurations for agents in **Agent 365** that can perform tasks and interact with users or Microsoft 365 services. Each blueprint acts as a template that specifies how an agent is configured and connected to a back-end service.
 
-Agent Identity Blueprints are created and managed in **Teams Developer Portal**, while the agent identities derived from them are managed in the **Teams Admin Center**.
+Agent Identity Blueprints are created and managed in **Developer Portal**, while the agent identities derived from them are managed in the **Microsoft 365 Admin Center**. To get started and for complete end-to-end guidance on extending your agent to Agent 365, use the **Microsoft Agent 365 SDK**.
 
 #### View and use existing Agent Identity Blueprints
 
