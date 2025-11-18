@@ -11,7 +11,7 @@ ms.date: 03/11/2025
 
 # Respond to the dialog submit action
 
-[!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
+<!--[!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]-->
 
 This document guides you on how your app responds to the action commands, such as user's dialog (referred as task module in TeamsJS v1.x) submit action.
 After a user submits the dialog, your web service receives a `composeExtensions/submitAction` invoke message with the command ID and parameter values. Your app has five seconds to respond to the invoke.
@@ -203,7 +203,7 @@ You can select to respond to the `submitAction` event with additional dialog. It
 * Dynamically change the information collection based on user input.
 * Validate the information submitted by the user and resend the form with an error message if something is wrong.
 
-The method for response is the same as [responding to the initial `fetchTask` event](~/messaging-extensions/how-to/action-commands/create-task-module.md). If you're using the Bot Framework SDK the same event triggers for both submit actions. To make this work, you must add logic that determines the correct response.
+The method for response is the same as [responding to the initial `fetchTask` event](~/messaging-extensions/how-to/action-commands/create-task-module.md). If you're using the Teams AI library the same event triggers for both submit actions. To make this work, you must add logic that determines the correct response.
 
 ## Bot response with Adaptive Card
 
