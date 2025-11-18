@@ -506,7 +506,7 @@ POST /teams/{team-id}/channels/{channel-id}/completeMigration
 POST /chats/{chat-id}/completeMigration 
 ```
 
-### Step 5: Verify migration mode completion
+## Step 5: Verify migration mode completion
 
 Call the `Get channel` or the `Get chat` API to verify that the migration mode state is marked as completed. For more information, see [Get channel](/graph/api/channel-get?view=graph-rest-1.0&tabs=http&preserve-view=true) or
 [Get chat](/graph/api/chat-get?view=graph-rest-1.0&tabs=http&preserve-view=true).
