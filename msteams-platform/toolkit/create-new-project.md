@@ -36,7 +36,7 @@ To create a basic Teams app:
 
 1. Select the **Microsoft 365 Agents Toolkit** > **Create a New Agent/App** > select **Teams Agents and Apps**.
 
-    :::image type="content" source="../assets/images/toolkit-v2/first-tab/create-project.png" alt-text="Screenshot shows the Create New Project button in the Agents Toolkit sidebar.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-tab/toolkit-activity-bar.jpg" alt-text="Screenshot shows the Create New Project button in the Agents Toolkit sidebar.":::
 
 1. Select **Other Teams Capabilities**
 
