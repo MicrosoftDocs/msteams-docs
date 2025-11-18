@@ -24,9 +24,8 @@ Agents Toolkit appears within Visual Studio Code as an extension. After you inst
 | 1 | **Build a Declatative Agent** | Build a declarative agent. |
 | 2 | **Create a New Agent/App** | Create a new agent/app. |
 | 3 | **View Samples** | Select and build existing app samples based on common use cases for a Teams app. |
-| 4 | **Create App with GitHub Copilot** | Create an app with GitHub Copilot. |
-| 5 | • **New File** <br> • **Open File** <br> • **Open Folder** <br> • **Connect to** | • Create a new file. <br> • Open an existing file. <br> • Open an existing folder. <br> • Connect to remote development workspaces. |
-| 6 | **Recent** | View the recent files. |
+| 4 | • **New File** <br> • **Open File** <br> • **Open Folder** <br> • **Connect to** | • Create a new file. <br> • Open an existing file. <br> • Open an existing folder. <br> • Connect to remote development workspaces. |
+| 5 | **Recent** | View the recent files. |
 
 ### Explore the Agents Toolkit task pane
 
