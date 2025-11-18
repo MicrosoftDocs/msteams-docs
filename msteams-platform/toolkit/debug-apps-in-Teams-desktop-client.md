@@ -48,6 +48,45 @@ Ensure you install the following tools for building and deploying your app in Te
 
    To learn more creating a new agent or app, see [build your first agent](../agents-in-teams/build-first-agent.md) or [apps in Teams](../get-started/get-started-overview.md).
 
+1. From the left pane, select **Run and Debug** (`Ctrl+Shift+D`) and select **Debug in Teams (Desktop)** from the dropdown list.
+
+    :::image type="content" source="../assets/images/toolkit-v2/debug-apps-in-teams-desktop-client/debug-in-teams-desktop.png" alt-text="Screenshot shows the option to select debug in Teams (Desktop).":::
+
+1. Ensure your Teams desktop login matches your Microsoft 365 account used in Agents Toolkit and then select **Continue**.
+
+    :::image type="content" source="../assets/images/toolkit-v2/debug-apps-in-teams-desktop-client/desktop-login-matches.png" alt-text="Screenshot shows the desktop login.":::
+
+   Teams desktop client requests to add your app.
+
+1. Select **Add**.
+
+    :::image type="content" source="../assets/images/toolkit-v2/debug-apps-in-teams-desktop-client/add-app.png" alt-text="Screenshot shows the add button to add the app to Teams desktop client.":::
+
+    A chat window opens.
+
+1. From the message compose area, send a message to invoke the bot.
+
+    :::image type="content" source="../assets/images/toolkit-v2/debug-apps-in-teams-desktop-client/desktop-client.png" alt-text="Screenshot shows the app added to Teams desktop client.":::
+
+    > [!NOTE]
+    >
+    > The system level notification for account matching appears only once per project. In subsequent debug sessions, Agents Toolkit sends reminders about the account through VS Code notifications.
+    >
+    > :::image type="content" source="../assets/images/toolkit-v2/debug-apps-in-teams-desktop-client/subsequent-desktop-login.png" alt-text="Screenshot shows the subsequent desktop login notification in vs code.":::
+
+1. You can add breakpoints and [hot reload](debug-overview.md#hot-reload) your changes. In the following example, the breakpoint is highlighted with the red dot next to the row number.
+
+    :::image type="content" source="../assets/images/toolkit-v2/debug-apps-in-teams-desktop-client/hot-reload.png" alt-text="Screenshot shows an example of the breakpoints in app.":::
+
+    :::image type="content" source="../assets/images/toolkit-v2/debug-apps-in-teams-desktop-client/after-hot-reload.png" alt-text="Screenshot shows an example after hot reload of an app.":::
+
+You can continue to debug your custom engine agent app in Teams desktop client.
+
+## See also
+
+* [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals.md)
+* [Debug for mobile](debug-mobile.md)
+
 <!--
 
 1. Select the Agents Toolkit :::image type="icon" source="../assets/images/toolkit-v2/toolkit-sidebar-icon.PNG" border="false"::: icon in the VS Code **Activity Bar** and then select **Create a New Agent/App**.
@@ -97,42 +136,3 @@ Ensure you install the following tools for building and deploying your app in Te
 
     :::image type="content" source="../assets/images/toolkit-v2/first-bot/hello-bot.png" alt-text="Screenshot shows where to enter the app name.":::
 -->
-
-1. From the left pane, select **Run and Debug** (`Ctrl+Shift+D`) and select **Debug in Teams (Desktop)** from the dropdown list.
-
-    :::image type="content" source="../assets/images/toolkit-v2/debug-apps-in-teams-desktop-client/debug-in-teams-desktop.png" alt-text="Screenshot shows the option to select debug in Teams (Desktop).":::
-
-1. Ensure your Teams desktop login matches your Microsoft 365 account used in Agents Toolkit and then select **Continue**.
-
-    :::image type="content" source="../assets/images/toolkit-v2/debug-apps-in-teams-desktop-client/desktop-login-matches.png" alt-text="Screenshot shows the desktop login.":::
-
-   Teams desktop client requests to add your app.
-
-1. Select **Add**.
-
-    :::image type="content" source="../assets/images/toolkit-v2/debug-apps-in-teams-desktop-client/add-app.png" alt-text="Screenshot shows the add button to add the app to Teams desktop client.":::
-
-    A chat window opens.
-
-1. From the message compose area, send a message to invoke the bot.
-
-    :::image type="content" source="../assets/images/toolkit-v2/debug-apps-in-teams-desktop-client/desktop-client.png" alt-text="Screenshot shows the app added to Teams desktop client.":::
-
-    > [!NOTE]
-    >
-    > The system level notification for account matching appears only once per project. In subsequent debug sessions, Agents Toolkit sends reminders about the account through VS Code notifications.
-    >
-    > :::image type="content" source="../assets/images/toolkit-v2/debug-apps-in-teams-desktop-client/subsequent-desktop-login.png" alt-text="Screenshot shows the subsequent desktop login notification in vs code.":::
-
-1. You can add breakpoints and [hot reload](debug-overview.md#hot-reload) your changes. In the following example, the breakpoint is highlighted with the red dot next to the row number.
-
-    :::image type="content" source="../assets/images/toolkit-v2/debug-apps-in-teams-desktop-client/hot-reload.png" alt-text="Screenshot shows an example of the breakpoints in app.":::
-
-    :::image type="content" source="../assets/images/toolkit-v2/debug-apps-in-teams-desktop-client/after-hot-reload.png" alt-text="Screenshot shows an example after hot reload of an app.":::
-
-You can continue to debug your custom engine agent app in Teams desktop client.
-
-## See also
-
-* [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals.md)
-* [Debug for mobile](debug-mobile.md)
