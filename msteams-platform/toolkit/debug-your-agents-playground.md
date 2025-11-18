@@ -34,7 +34,7 @@ The following are the advantages of Agents Playground:
 
 * **Reliable**: Agents Playground is reliable as the application's Adaptive Card utilizes the same rendering technology as in Teams or WebChat.
 
-* **Integration with existing applications**:  Agents Playground integrates effortlessly with existing applications built with Agent SDK or Teams AI library.
+* **Integration with existing applications**:  Agents Playground integrates effortlessly with existing applications built with Agent SDK or Teams SDK.
 
 * **Support for different scopes**: Agents Playground supports testing in personal, team, and group chat scopes.
 
@@ -156,13 +156,13 @@ Agents Playground offers a faster debug experience for applications when compare
    1. Run the following command to start your app:
 
       ```cmd
-      npm run dev:atk:playground
+      npm run dev:teamsfx:testtool
       ```
 
    1. Run the following command in a separate terminal to launch Agents Playground:
 
       ```cmd
-      npm run dev:atk:launch-playground
+      npm run dev:teamsfx:launch-testtool
       ```
 
    # [C#](#tab/clicsharp)
@@ -332,7 +332,7 @@ Currently, the accepted channel IDs are: `msteams`, `directline`, `webchat`, and
 
 ## Customize Teams context
 
-The configuration file in the project's root folder allows you to customize Teams context information such as chats, teams, and users. It provides mock data for testing Bot Framework APIs or methods from the Agent SDK or Teams AI Library, such as `TeamsInfo.getTeamMembers`.
+The configuration file in the project's root folder allows you to customize Teams context information such as chats, teams, and users. It provides mock data for testing Bot Framework APIs or methods from the Agent SDK or Teams SDK, such as `TeamsInfo.getTeamMembers`.
 
 ### Default configuration
 
@@ -643,6 +643,6 @@ Follow the [step-by-step guide](teams-app-test-tool-tutorial.md) to debug an AI 
 * [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals.md)
 * [Install Microsoft 365 Agents Toolkit](install-Teams-Toolkit.md)
 * [Build bots for Teams](../bots/what-are-bots.md)
-* [Teams AI library](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md)
+* [Teams SDK](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md)
 * [Adaptive Card](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 * [Agents SDK](https://github.com/microsoft/Agents)

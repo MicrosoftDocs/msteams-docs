@@ -444,7 +444,7 @@ Explore resources designed to help you with responsible Artificial Intelligence 
 * App must not generate, contain, or provide access to inappropriate, harmful, or offensive AI generated content consistent with existing commercial marketplace policies outlined in [100.10](/legal/marketplace/certification-policies#10010-inappropriate-content). [*Must fix*]
 
   * Consider using any of the following:
-    * Use [Teams AI library](~/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md), Teams-centric interface to GPT-based common language models and user intent engines. [*Good-to-fix*]
+    * Use [Teams SDK](~/bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md), Teams-centric interface to GPT-based common language models and user intent engines. [*Good-to-fix*]
     * Use of moderation hooks, which can be used to regulate bot responses through moderation API. [*Good-to-fix*]
     * Add conversation sweeping capability, which helps you monitor conversations and intervene when conversations go astray. [*Good-to-fix*]
 
@@ -498,9 +498,9 @@ App packages must be correctly formatted and include all required information an
 
 The app manifest defines your app's configuration.
 
-* Your app manifest must conform to a publicly released app manifest schema. For more information, see [app manifest reference](~/resources/schema/manifest-schema.md). Don't submit your app using a preview version of the app manifest.
+* Your app manifest must conform to a publicly released app manifest schema. For more information, see [app manifest reference](/microsoft-365/extensibility/schema). Don't submit your app using a preview version of the app manifest.
 * If your app includes a bot or message extension, details in the app manifest must be consistent with Bot Framework metadata including bot name, logo, privacy policy link, and terms of service link.
-* If your app uses Microsoft Entra ID for authentication, include the Microsoft Entra Application (client) ID in the app manifest. For more information, see the [app manifest reference](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* If your app uses Microsoft Entra ID for authentication, include the Microsoft Entra Application (client) ID in the app manifest. For more information, see the [app manifest reference](/microsoft-365/extensibility/schema/root-web-application-info-nested-app-auth-info).
 
 ### Uses of latest app manifest schema
 
@@ -1794,10 +1794,11 @@ After an internal Microsoft review, if the compliance demonstration is satisfact
 * All app capabilities must be functional and must work properly as described in the AppSource or app manifest long description. [*Must fix*]
 * Apps must always notify the user before downloading any file or executable on the user’s environment. Any call to action (CTA), either text based or otherwise, that makes it clear to the user that a file or executable is downloaded on user action is allowed in the app. [*Must fix*]
 * Apps with region dependency must notify the users with a graceful failure message in all applicable capabilities if they attempt to use it in an unsupported region. [*Must fix*]
-* Apps and agents using manifest version **v1.2x or higher** must support collaborative or team capabilities across all channel types (Standard, Shared, and Private).</br> To ensure a consistent and transparent experience [*Must fix*]:
+* Apps and agents using manifest version **v1.25 or higher** must support collaborative or team capabilities across all channel types (Standard, Shared, and Private). For more information, see [Apps for shared and private channels](../../../../build-apps-for-shared-private-channels.md).</br> To ensure a consistent and transparent experience [*Must fix*]:
   * Clearly document any functional differences or limitations across channel types (Standard, Shared, and Private) in the app or agent description.
   * Gracefully handle authentication and in-app or in-agent experiences for all channel members, including internal users, guest users, and users from trusted B2B tenants.
   * Ensure seamless storage access for all channel members (app-generated links must honor tenant sharing policies and should prefer **people with existing access** or explicit invites for cross-tenant members).
+  * Ensure that your app or agent doesn't share discussions, discussion summaries, and channel metadata with users outside the shared or private channels without explicit member configuration.
 
 [Back to top](#teams-store-validation-guidelines)
 

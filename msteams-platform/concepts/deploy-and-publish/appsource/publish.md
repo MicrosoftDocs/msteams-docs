@@ -13,11 +13,11 @@ You can publish your app directly to the Microsoft Teams Store inside Microsoft 
 
 Apps published to the Teams Store also automatically list on [the Microsoft commercial marketplace](https://appsource.microsoft.com), which is the official marketplace for Microsoft 365 apps and solutions.
 
-The following video on publish your Teams app to Teams Store outlines the steps involved in the app publishing process:
+<!--The following video on publish your Teams app to Teams Store outlines the steps involved in the app publishing process:
 
 <br>
 
-> [!VIDEO https://www.youtube.com/embed/cFqAuLy0JaE]
+> [!VIDEO https://www.youtube.com/embed/cFqAuLy0JaE]-->
 
 ## Understand the publishing process
 
@@ -135,7 +135,7 @@ If your app is production ready, you can begin the process of getting it listed 
 
       1. Your app is linked to a live (already published) SaaS offer on AppSource with at least one plan with pricing information.
 
-      1. You've correctly mentioned the `subscriptionOffer` details in your [app manifest](../../../resources/schema/manifest-schema.md#subscriptionoffer) (previously called Teams app manifest) in the format `publisherId.offerId`.
+      1. You've correctly mentioned the `subscriptionOffer` details in your [app manifest](/microsoft-365/extensibility/schema/root#subscriptionoffer) (previously called Teams app manifest) in the format `publisherId.offerId`.
 
       1. You must ensure your linked SaaS offer is designed to support licenses assigned on a [SaaS pricing model](/azure/marketplace/create-new-saas-offer-plans).
 
