@@ -444,7 +444,7 @@ Use `completeMigration` API to finish the migration process for new and existing
 
 ### Complete new team and channel migration
 
-Use `completeMigration` API to complete migration for the new team and channel. This opens the team and channel resources for general use by team members. The action is bound to the `team` instance. Before the team message migration is completed, migration on all channels must be completed.
+Use `completeMigration` API to [complete migration for the new team and channel](/graph/api/chat-completemigration?view=graph-rest-beta&viewFallbackFrom=graph-rest-1.0&branch=pr-en-us-26836). This opens the team and channel resources for general use by team members. The action is bound to the `team` instance. Before the team message migration is completed, migration on all channels must be completed.
 
 #### Request (end channel migration mode)
 
@@ -478,7 +478,7 @@ Once you've completed new team and channel migration, [verify migration mode com
 
 ### Complete existing channel or chat migration
 
-For existing channels or chats already in migration mode, use the `completeMigration` API to mark the migration state as completed. This process ensures that the channel or chat remains permanently available instead of being dropped after migration.
+For existing channels or chats already in migration mode, use the `completeMigration` API to [mark the migration state as completed](/graph/api/channel-completemigration?view=graph-rest-beta&branch=pr-en-us-26836&tabs=http). This process ensures that the channel or chat remains permanently available instead of being dropped after migration.
 
 #### Request (complete existing channel migration)
 
