@@ -67,25 +67,25 @@ Agents Playground offers a faster debug experience for applications when compare
 
 1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="../assets/images/toolkit-v2/toolkit-sidebar-icon.PNG" border="false"::: icon in the Visual Studio Code **Activity Bar**.
 
-1. Select **Create a New Agent/App** > **Teams App**.
+1. Select **Create a New Agent/App**.
 
     :::image type="content" source="../assets/images/toolkit-v2/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Agents Toolkit sidebar.":::
 
 1. Select **Agent for Teams**.
 
-    :::image type="content" source="../assets/images/toolkit-v2/first-bot/create-new-app1.png" alt-text="Screenshot shows the agents toolkit app templates.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-bot/create-new-agent-app.png" alt-text="Screenshot shows the agents toolkit app templates.":::
 
-1. Select **Basic Agent for Teams**. If you need a different functionality for your agent, pick a different option.
+1. Select **General Teams Agent** to create an agent. If you need a different functionality for your agent, pick a different option.
 
-    :::image type="content" source="../assets/images/toolkit-v2/debug/ai-chat-bot.png" alt-text="Screenshot shows the app feature to add to your new app.":::
+    :::image type="content" source="../assets/images/toolkit-v2/debug/general-teams-agent.png" alt-text="Screenshot shows the app feature to add to your new app.":::
 
 1. Select **Azure OpenAI** and enter service key. If you are using OpenAI, pick a different option.
 
-    :::image type="content" source="../assets/images/toolkit-v2/first-bot/azure-openai.png" alt-text="Screenshot shows the options to configure LLM service.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-bot/access-llm.png" alt-text="Screenshot shows the options to configure LLM service.":::
 
 1. Select **JavaScript**.
 
-    :::image type="content" source="../assets/images/toolkit-v2/first-bot/select-language-tab.png" alt-text="Screenshot shows the option to select the programming language.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-bot/select-language.png" alt-text="Screenshot shows the option to select the programming language.":::
 
 1. Select **Default folder**.
 
@@ -104,11 +104,11 @@ Agents Playground offers a faster debug experience for applications when compare
 
 1. Enter a suitable name for your app and then select the **Enter** key.
 
-    :::image type="content" source="../assets/images/toolkit-v2/first-bot/hello-bot.png" alt-text="Screenshot shows where to enter the app name.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-bot/add-agent-name.png" alt-text="Screenshot shows where to enter the app name.":::
 
     A dialog appears, where you need to choose yes or no to trust the authors of the files in this folder.
 
-    :::image type="content" source="../assets/images/toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-bot/trust-author.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder.":::
 
 1. From the left pane, select **Run and Debug** (`Ctrl+Shift+D`) and select **Debug in Microsoft 365 Agents Playground (Preview)** in dropdown list.
 
