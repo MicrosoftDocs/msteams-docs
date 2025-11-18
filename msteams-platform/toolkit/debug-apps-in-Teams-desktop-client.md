@@ -44,9 +44,15 @@ Ensure you install the following tools for building and deploying your app in Te
 
 1. Open Visual Studio Code (VS Code) and log into your Microsoft 365 account through Agents Toolkit.
 
+1. Open your Teams agent or app project.
+
+   To learn more creating a new agent or app, see [build your first agent](../agents-in-teams/build-first-agent.md) or [apps in Teams](../get-started/get-started-overview.md).
+
+<!--
+
 1. Select the Agents Toolkit :::image type="icon" source="../assets/images/toolkit-v2/toolkit-sidebar-icon.PNG" border="false"::: icon in the VS Code **Activity Bar** and then select **Create a New Agent/App**.
 
-    :::image type="content" source="../assets/images/toolkit-v2/debug-apps-in-teams-desktop-client/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
+    :::image type="content" source="../assets/images/toolkit-v2/debug-apps-in-teams-desktop-client/toolkit-activity-bar.png" alt-text="Screenshot shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
 
 1. Select **Custom Engine Agent**.
 
@@ -90,6 +96,7 @@ Ensure you install the following tools for building and deploying your app in Te
 1. Enter a suitable name for your app and then select the **Enter** key.
 
     :::image type="content" source="../assets/images/toolkit-v2/first-bot/hello-bot.png" alt-text="Screenshot shows where to enter the app name.":::
+-->
 
 1. From the left pane, select **Run and Debug** (`Ctrl+Shift+D`) and select **Debug in Teams (Desktop)** from the dropdown list.
 
