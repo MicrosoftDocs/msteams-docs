@@ -46,7 +46,7 @@ Ensure you install the following tools for building and deploying your app in Te
 
 1. Open your Teams agent or app project.
 
-   To learn more creating a new agent or app, see [build your first agent](../agents-in-teams/build-first-agent.md) or [apps in Teams](../get-started/get-started-overview.md).
+   To learn more about creating a new agent or app, see [build your first agent](../agents-in-teams/build-first-agent.md) or [apps in Teams](../get-started/get-started-overview.md).
 
 1. From the left pane, select **Run and Debug** (`Ctrl+Shift+D`) and select **Debug in Teams (Desktop)** from the dropdown list.
 
