@@ -26,12 +26,12 @@ With Microsoft Graph, you can migrate users' existing message history and data f
 
 ## Supported channel and chat types
 
-The supported channel and chat types for migrating external messages to teams are as\s follows:
+Teams supports migrating external messages to the following channel and chat types:
 
-* **New team and standard channel**: Create a new team and its standard channels in migration mode to import content. This allows you to import the exact structure of your external system into the new channel.
+* **New team and standard channel**: Create a new team and its standard channels in migration mode to import content. This approach lets you import the exact structure of your external system into the new channel.
 To enable `migrationMode` for a new standard team and channel, see [Create a team and standard channel in migration mode](#create-a-team-and-standard-channel-in-migration-mode).
 
-* **Existing channel or chat**: Use any channel or chat that already exists in Teams, regardless of when you created it. This allows you to add existing context to channels that are already active in Teams and maintains continuity for ongoing conversations.
+* **Existing channel or chat**: Use any channel or chat that already exists in Teams, regardless of when you created it. This approach lets you add existing context to channels that are already active in Teams and maintains continuity for ongoing conversations.
 To enable migration mode in an existing channel or chat, see [Existing channel migration](#existing-channel-migration).
 
 > [!NOTE]
@@ -39,12 +39,14 @@ To enable migration mode in an existing channel or chat, see [Existing channel m
 > * Only standard channels are supported when creating a channel in migration mode from scratch.
 > * Federated content can't be imported. All imported content must come from the authenticated tenant and only one app can manage a thread at a time. Another app can import content only after the first app completes migration.
 
-`migrationMode` is a special state that prevents certain operations during the data migration process to ensure data integrity. It does the following:
+`migrationMode` is a special state that ensures data integrity by preventing the following operations during data migration.
 
-* Restricts receipt of new messages to the channel or chat
-* Prevents adding or removing members during migration
-* Allows importing historical messages with custom timestamps
-* Maintains the original conversation structure and hierarchy
+* For new teams and standard channels:
+  * It restricts receipt of new messages
+  * It prevents adding or removing members
+* For all supported channels and chat types:
+  * It allows importing historical messages with custom timestamps
+  * It maintains the original conversation structure and hierarchy
 
 ## Content scope for import
 
@@ -68,10 +70,10 @@ The following table provides the content scope for existing channels and chats.
 
 ### Analyze and prepare message data
 
-* Review the third-party data to decide what is migrated.
+* Review the third-party data to decide what to migrate.
 * Extract the selected data from the third-party chat system.
 * Map the third-party chat structure to the Teams structure.
-* Convert import data into format needed for migration.
+* Convert import data into the format needed for migration.
 
 ### Set up your Microsoft 365 tenant
 
@@ -90,7 +92,7 @@ You can import historical messages seamlessly into both existing and newly creat
 
 ## Step 1: Start migration
 
-To start migrating a user's message history from any third-party platform to Teams, you can either create a new team and standard channel or use an existing channel or chat. Depending on your scenario, choose either of the two paths:
+To start migrating a user's message history from any third-party platform to Teams, you can either create a new team and standard channel or use an existing channel or chat. Depending on your scenario, choose either of the following options:
 
 * [Create a team and standard channel in migration mode](#create-a-team-and-standard-channel-in-migration-mode)
 * [Start migration on existing channels and chats](#start-migration-on-existing-channels-and-chats)
@@ -192,7 +194,7 @@ You can receive the error message in the following scenarios:
 * If `createdDateTime` is set for future.
 * If `createdDateTime` is correctly specified but `channelCreationMode` instance attribute is missing or set to invalid value.
 
-Once you've created a new team and standard channel, complete migration with the following steps:
+After you create a new team and standard channel, complete migration with the following steps:
 
 1. [Check migration status](#step-2-check-migration-status)
 1. [Import messages](#step-3-import-messages)
@@ -201,16 +203,16 @@ Once you've created a new team and standard channel, complete migration with the
 
 ### Start migration on existing channels and chats
 
-In this scenario, use the `startMigration` API to [enable migration mode](/graph/api/channel-startmigration?view=graph-rest-beta&branch=pr-en-us-26836) on existing channels or chats. `startMigration` sets the migration state to `InProgress` and begins the message import process. For more information, see:
+On existing channels or chats, use the `startMigration` API to [enable migration mode](/graph/api/channel-startmigration?view=graph-rest-beta&branch=pr-en-us-26836). `startMigration` sets the migration state to `InProgress` and begins the message import process. For more information, see:
 
 * [Existing channel migration](#existing-channel-migration)
 * [Existing chat migration](#existing-chat-migration)
 
 #### Existing channel migration
 
-To enable migration mode on existing channels, refer the following.
+To enable migration mode on existing channels, use the `startMigration` API.
 
-##### Request (use existing channel in migration mode)
+##### Request (existing channel in migration mode)
 
 ```HTTP
 POST https://graph.microsoft.com/beta/teams/{team-id}/channels/{channel-id}/startMigration
@@ -243,7 +245,7 @@ POST https://graph.microsoft.com/beta/teams/57fb72d0-d811-46f4-8947-305e6072eaa5
 
 #### Existing chat migration
 
-To enable migration mode on existing chats, refer the following.
+To enable migration mode on existing chats, use the `startMigration` API.
 
 ##### Request (existing chat in migration mode)
 
@@ -282,6 +284,9 @@ Consider the following important points:
 * Define a minimum timestamp for messages to migrate. The provided timestamp must be older than the channel or chat's current `createdDateTime`. This timestamp replaces the existing `createdDateTime` of the channel. If you update `createdDateTime` to a past timestamp, you can't move it to a future timestamp again.
 * The `creationDateTime` property is optional in a request body. If omitted, the `startMigration` API uses the current date and time as the minimum timestamp.
 * The `startMigration` API starts the message migration process by setting the migration mode to `InProgress` for a specified channel or chat.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Step+5%3A+Add+team+members&&author=%40AkJo&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fgraph-api%2Fimport-messages%2Fimport-external-messages-to-teams%23step-five-add-team-members&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fgraph-api%2Fimport-messages%2Fimport-external-messages-to-teams.md&documentVersionIndependentId=ce77e760-90cf-e6b1-3cec-ae55ee50c33e&platformId=c9cc8ad3-6c28-7c8c-af03-219bbefa1d38&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Step 2: Check migration status
 
@@ -435,16 +440,19 @@ HTTP/1.1 200 OK
 }
 ```
 
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Step+5%3A+Add+team+members&&author=%40AkJo&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fgraph-api%2Fimport-messages%2Fimport-external-messages-to-teams%23step-five-add-team-members&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fgraph-api%2Fimport-messages%2Fimport-external-messages-to-teams.md&documentVersionIndependentId=ce77e760-90cf-e6b1-3cec-ae55ee50c33e&platformId=c9cc8ad3-6c28-7c8c-af03-219bbefa1d38&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
 ## Step 4: Complete migration mode
 
-Use `completeMigration` API to finish the migration process for new and existing channels and chats. For more information, see:
+Use the `completeMigration` API to finish the migration process for new and existing channels and chats. For more information, see:
 
 * [Complete new team and channel migration](#complete-new-team-and-channel-migration)
 * [Complete existing channel or chat migration](#complete-existing-channel-or-chat-migration)
 
 ### Complete new team and channel migration
 
-Use `completeMigration` API to [complete migration for the new team and channel](/graph/api/chat-completemigration?view=graph-rest-beta&viewFallbackFrom=graph-rest-1.0&branch=pr-en-us-26836). This opens the team and channel resources for general use by team members. The action is bound to the `team` instance. Before the team message migration is completed, migration on all channels must be completed.
+Use the `completeMigration` API to [complete migration for the new team and channel](/graph/api/chat-completemigration?view=graph-rest-beta&viewFallbackFrom=graph-rest-1.0&branch=pr-en-us-26836). This action opens the team and channel resources for general use by team members. The action is bound to the `team` instance. Before you complete the team message migration, you must complete migration on all channels.
 
 #### Request (end channel migration mode)
 
@@ -472,9 +480,29 @@ HTTP/1.1 204 NoContent
 
 ### Add team members
 
-After completing migration of external messages, you can add a single member to a team using the [Teams UI](https://support.microsoft.com/en-us/office/add-members-to-a-team-in-microsoft-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9)., You can also use Microsoft Graph to [add single member](/graph/api/team-post-members?view=graph-rest-1.0&branch=pr-en-us-26836&tabs=http) or [add members in bulk](/graph/api/conversationmembers-add?view=graph-rest-1.0&tabs=http)
+After completing migration of external messages, you can add a single member to a team by using the [Teams UI](https://support.microsoft.com/en-us/office/add-members-to-a-team-in-microsoft-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9). You can also use Microsoft Graph to [add single member](/graph/api/team-post-members?view=graph-rest-1.0&branch=pr-en-us-26836&tabs=http) or [add members in bulk](/graph/api/conversationmembers-add?view=graph-rest-1.0&tabs=http).
 
-Once you've completed new team and channel migration, [verify migration mode completion](#step-5-verify-migration-mode-completion).
+#### Request (add member)
+
+```http
+POST https://graph.microsoft.com/beta/teams/{team-id}/members
+Content-type: application/json
+Content-length: 30
+
+{
+   "@odata.type": "#microsoft.graph.aadUserConversationMember",
+   "roles": [],
+   "user@odata.bind": "https://graph.microsoft.com/beta/users/{user-id}"
+}
+```
+
+#### Response
+
+```http
+HTTP/1.1 204 No Content
+```
+
+Once you complete new team and channel migration, [verify migration mode completion](#step-5-verify-migration-mode-completion).
 
 ### Complete existing channel or chat migration
 
@@ -508,7 +536,10 @@ HTTP/1.1 204 NoContent
 ## Step 5: Verify migration mode completion
 
 Call [Get channel](/graph/api/channel-get?view=graph-rest-1.0&tabs=http&preserve-view=true) or
-[Get chat](/graph/api/chat-get?view=graph-rest-1.0&tabs=http&preserve-view=true) to verify that the migration mode state is marked as completed.
+[Get chat](/graph/api/chat-get?view=graph-rest-1.0&tabs=http&preserve-view=true) to verify that the `migrationMode` is marked as `Completed`.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Step+5%3A+Add+team+members&&author=%40AkJo&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fgraph-api%2Fimport-messages%2Fimport-external-messages-to-teams%23step-five-add-team-members&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fgraph-api%2Fimport-messages%2Fimport-external-messages-to-teams.md&documentVersionIndependentId=ce77e760-90cf-e6b1-3cec-ae55ee50c33e&platformId=c9cc8ad3-6c28-7c8c-af03-219bbefa1d38&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 ## Tips and additional information
 
@@ -517,7 +548,7 @@ Call [Get channel](/graph/api/channel-get?view=graph-rest-1.0&tabs=http&preserve
 
 * After calling `completeMigration` on an existing channel or chat, you can continue importing messages by using the `startMigration` API.
 
-* You can only add team members to the new Teams after the `completeMigration` request returns a successful response. This is applicable only for the newly created team and standard channel.
+* You can only add team members to the new Teams after the `completeMigration` request returns a successful response. This rule applies only to the newly created team and standard channel.
 
 * Throttling: Messages import at five RPS per channel.
 
