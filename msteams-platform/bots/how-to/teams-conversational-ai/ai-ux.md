@@ -192,11 +192,11 @@ To achieve this, the agent must leverage the conversation context and history, a
 > [!NOTE]
 > Enable app profile card is available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md) for Teams apps.
 
-You can now add hovercard experience for all agents and bots. Hovercards can provide valueable and relavant information to educate users about the app and its features.
+You can now add hovercard experience for all agents and bots. Hovercards can provide valuable and relevant information to educate users about the app and its features.
 
 :::image type="content" source="../../../assets/images/bots/contoso-app-profile-card.png" alt-text="Image shows app profile card." border="false" lightbox="../../../assets/images/bots/contoso-app-profile-card.png":::
 
-To enable app profile card to your agents or bots, you must add the `features` field under the `description` field in the app manifest. For more information, see [public developer preview for Teams](../../../resources/dev-preview/developer-preview-intro.md).
+To enable app profile card to your agents or bots, you must add the `features` field under the `description` field in the app manifest. For more information, see [public developer preview for Teams](/microsoft-365/extensibility/schema/root-description?view=m365-app-prev&tabs=syntax&preserve-view=true).
 
 ## See also
 
