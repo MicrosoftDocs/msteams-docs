@@ -52,7 +52,7 @@ Following are the steps to open your app in Visual Studio Code from Developer Po
 
 1. Select your preferred programming language.
 
-    :::image type="content" source="../../assets/images/tdp/select-programmimg-language.png" alt-text="Screenshot shows Agents Toolkit with Select a programming language highlighted in red.":::
+    :::image type="content" source="../../assets/images/tdp/select-language.png" alt-text="Screenshot shows Agents Toolkit with Select a programming language highlighted in red.":::
 
 1. Select your workspace folder.
 
