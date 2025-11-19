@@ -27,16 +27,18 @@ In this section, learn how to build a Teams app with different capabilities, suc
 
    * **Build a basic Teams tab app**: Get started with building a Teams app with a basic tab app.
 
-   * **Build a scenario-based Teams bot app**: Build a Teams app that is suitable for a particular scenario or use-case. For example, a notification bot is suitable for sending notifications but not to chat.
+   * **Build a simple Teams bot app**: Build a Teams app that is suitable for a particular scenario or use-case. For example, a notification bot is suitable for sending notifications but not to chat.
 
    * **Build message extension Teams app**: Build a search-based message extension Teams app.
 
+<!--
 2. Choose your path to build your selected app.
 
    * **GitHub Codespaces**: Allows you to run, test, and debug your app in a development environment without the need for any extra setup.
    * **Step-by-step guide**: Allows you to create a Teams app from the ground up including setting up your development environment.
 
    :::image type="content" border="false" source="../assets/images/get-started/codescpaces-vs-manual.png" alt-text="Your choices to build a Teams app with codespaces and step-by-step guide."lightbox="../assets/images/get-started/codescpaces-vs-manual.png":::
+-->
 
 ## Next step
 
