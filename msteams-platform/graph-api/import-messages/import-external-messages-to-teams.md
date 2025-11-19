@@ -19,7 +19,7 @@ With Microsoft Graph, you can migrate users' existing message history and data f
 
 | Scope name | Display name | Description | Type | Admin consent required | Entities/APIs covered |
 |---------- |-------------|-------------|------|----------------|-------------------------|
-| Teamwork.Migrate.All  | [Manage migration to Microsoft Teams](https://learn.microsoft.com/graph/permissions-reference#teamworkmigrateall)| Creating and managing resources for migration to Teams. | **Application-only** | Yes            | POST /team             |
+| Teamwork.Migrate.All  | [Manage migration to Microsoft Teams](/graph/permissions-reference#teamworkmigrateall)| Creating and managing resources for migration to Teams. | **Application-only** | Yes            | POST /team             |
 
 > [!NOTE]
 > Delegated authentication isn't supported.
