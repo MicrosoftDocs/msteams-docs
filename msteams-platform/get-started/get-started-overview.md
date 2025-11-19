@@ -8,9 +8,9 @@ ms.topic: reference
 
 # Apps in Teams
 
-Get started with building apps for Microsoft Teams and beyond!
+Teams apps are custom solutions designed to enhance collaboration and productivity within Microsoft Teams. They leverage the platform’s extensibility to deliver interactive experiences directly inside chats, channels, and meetings.
 
-Use GitHub Codespaces or walk through the step-by-step guide to build a basic, real-world Teams app. This module introduces you to common tools, fundamental concepts, and more advanced functionalities.
+Get started with building apps for Microsoft Teams and beyond!
 
 Here's an idea of what you'll learn
 
@@ -28,15 +28,6 @@ In this section, learn how to build a Teams app with different capabilities, suc
 * **Build a simple Teams bot app**: Build a Teams app that is suitable for a particular scenario or use-case. For example, a notification bot is suitable for sending notifications but not to chat.
 
 * **Build message extension Teams app**: Build a search-based message extension Teams app.
-
-<!--
-2. Choose your path to build your selected app.
-
-   * **GitHub Codespaces**: Allows you to run, test, and debug your app in a development environment without the need for any extra setup.
-   * **Step-by-step guide**: Allows you to create a Teams app from the ground up including setting up your development environment.
-
-   :::image type="content" border="false" source="../assets/images/get-started/codescpaces-vs-manual.png" alt-text="Your choices to build a Teams app with codespaces and step-by-step guide."lightbox="../assets/images/get-started/codescpaces-vs-manual.png":::
--->
 
 ## Next step
 
