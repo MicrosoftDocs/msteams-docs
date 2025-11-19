@@ -203,7 +203,7 @@ After you create a new team and standard channel, complete migration with the fo
 
 ### Start migration on existing channels and chats
 
-On existing channels or chats, use the `startMigration` API to [enable migration mode](/graph/api/channel-startmigration?view=graph-rest-beta&branch=pr-en-us-26836). `startMigration` sets the migration state to `InProgress` and begins the message import process. For more information, see:
+On existing channels or chats, use the `startMigration` API to [enable migration mode](/graph/api/channel-startmigration?view=graph-rest-beta&branch=pr-en-us-26836&preserve-view=true ). `startMigration` sets the migration state to `InProgress` and begins the message import process. For more information, see:
 
 * [Existing channel migration](#existing-channel-migration)
 * [Existing chat migration](#existing-chat-migration)
@@ -452,7 +452,7 @@ Use the `completeMigration` API to finish the migration process for new and exis
 
 ### Complete new team and channel migration
 
-Use the `completeMigration` API to [complete migration for the new team and channel](/graph/api/chat-completemigration?view=graph-rest-beta&viewFallbackFrom=graph-rest-1.0&branch=pr-en-us-26836). This action opens the team and channel resources for general use by team members. The action is bound to the `team` instance. Before you complete the team message migration, you must complete migration on all channels.
+Use the `completeMigration` API to [complete migration for the new team and channel](/graph/api/chat-completemigration?view=graph-rest-beta&viewFallbackFrom=graph-rest-1.0&branch=pr-en-us-26836&preserve-view=true ). This action opens the team and channel resources for general use by team members. The action is bound to the `team` instance. Before you complete the team message migration, you must complete migration on all channels.
 
 #### Request (end channel migration mode)
 
@@ -480,7 +480,7 @@ HTTP/1.1 204 NoContent
 
 ### Add team members
 
-After completing migration of external messages, you can add a single member to a team by using the [Teams UI](https://support.microsoft.com/en-us/office/add-members-to-a-team-in-microsoft-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9). You can also use Microsoft Graph to [add single member](/graph/api/team-post-members?view=graph-rest-1.0&branch=pr-en-us-26836&tabs=http) or [add members in bulk](/graph/api/conversationmembers-add?view=graph-rest-1.0&tabs=http).
+After completing migration of external messages, you can add a single member to a team by using the [Teams UI](https://support.microsoft.com/en-us/office/add-members-to-a-team-in-microsoft-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9&preserve-view=true ). You can also use Microsoft Graph to [add single member](/graph/api/team-post-members?view=graph-rest-1.0&branch=pr-en-us-26836&tabs=http&preserve-view=true ) or [add members in bulk](/graph/api/conversationmembers-add?view=graph-rest-1.0&tabs=http&preserve-view=true ).
 
 #### Request (add member)
 
@@ -506,7 +506,7 @@ Once you complete new team and channel migration, [verify migration mode complet
 
 ### Complete existing channel or chat migration
 
-For existing channels or chats already in migration mode, use the `completeMigration` API to [mark the migration state as completed](/graph/api/channel-completemigration?view=graph-rest-beta&branch=pr-en-us-26836&tabs=http). This process ensures that the channel or chat remains permanently available instead of being dropped after migration.
+For existing channels or chats already in migration mode, use the `completeMigration` API to [mark the migration state as completed](/graph/api/channel-completemigration?view=graph-rest-beta&branch=pr-en-us-26836&tabs=http&preserve-view=true ). This process ensures that the channel or chat remains permanently available instead of being dropped after migration.
 
 #### Request (complete existing channel migration)
 
