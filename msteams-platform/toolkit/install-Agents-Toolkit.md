@@ -42,7 +42,7 @@ You can install Agents Toolkit using **Extensions** in Visual Studio Code, or in
 
    After successful installation, Agents Toolkit icon appears in the Visual Studio Code activity bar.
 
-    :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/toolkit-activity-bar.jpg" alt-text="Screenshot shows the Agents Toolkit icon in the activity bar.":::
+    :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/toolkit-activity-bar.png" alt-text="Screenshot shows the Agents Toolkit icon in the activity bar.":::
 
  > [!div class="nextstepaction"]
  > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Install+Agents+Toolkit+for+Visual+Studio+Code+using+Visual+Studio+Code&&author=%40zyxiaoyuer&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Finstall-agents-toolkit%3Ftabs%3Dvscode%23install-agents-toolkit-for-visual-studio-code&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Finstall-Agents-Toolkit.md&documentVersionIndependentId=8402fe47-1338-4cb0-9cc0-c35f06dc6ca5&platformId=857dcef4-57f6-1b0a-65f7-221c9f49c1c7&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
@@ -71,7 +71,8 @@ You can install Agents Toolkit using **Extensions** in Visual Studio Code, or in
 
    After successful installation, Agents Toolkit icon appears in the Visual Studio Code activity bar.
 
-   :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/toolkit-activity-bar.jpg" alt-text="Screenshot shows the Agents Toolkit icon in the activity bar after installation.":::
+   :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/toolkit-activity-bar.png" alt-text="Screenshot shows the Agents Toolkit icon in the activity bar after installation.":::
+
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Install+Agents+Toolkit+for+Visual+Studio+Code+using+Marketplace&&author=%40zyxiaoyuer&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Finstall-agents-toolkit%3Ftabs%3Dmarketplace%23install-agents-toolkit-for-visual-studio-code&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Finstall-Agents-Toolkit.md&documentVersionIndependentId=8402fe47-1338-4cb0-9cc0-c35f06dc6ca5&platformId=857dcef4-57f6-1b0a-65f7-221c9f49c1c7&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
@@ -121,7 +122,6 @@ Agents Toolkit for Visual Studio Code extension is available in a prerelease ver
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Install+a+prerelease+version&&author=%40zyxiaoyuer&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Finstall-agents-toolkit%3Ftabs%3Dvscode%23install-a-prerelease-version&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Finstall-Agents-Toolkit.md&documentVersionIndependentId=8402fe47-1338-4cb0-9cc0-c35f06dc6ca5&platformId=857dcef4-57f6-1b0a-65f7-221c9f49c1c7&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
-
 ## Next step
 
 > [!div class="nextstepaction"]
@@ -129,5 +129,5 @@ Agents Toolkit for Visual Studio Code extension is available in a prerelease ver
 
 ## See also
 
-- [Explore Microsoft 365 Agents Toolkit features](~/toolkit/explore-Teams-Toolkit.md)
-- [Prepare to build apps](~/toolkit/build-environments.md)
+* [Explore Microsoft 365 Agents Toolkit features](~/toolkit/explore-Teams-Toolkit.md)
+* [Prepare to build apps](~/toolkit/build-environments.md)

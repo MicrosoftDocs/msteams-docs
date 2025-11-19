@@ -66,7 +66,7 @@ Teams platform features that are available to all app developers.</br>
 | 13/05/2025 | Introducing agent usage analytics for third-party apps in Developer Portal | Tools and SDKs > Tools > [Developer Portal for Teams](concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md) |
 | 30/04/2025 | Introducing streaming messages for bot apps. | Build bots and agents > Bot user experience > [Stream bot messages](bots/streaming-ux.md) |
 | 21/04/2025 | Precache your tab app to optimize its initial load time. | Build tabs > Tab features > App caching for your tab app > [Debug tool for cached apps](tabs/how-to/app-caching.md#precaching-tab-apps) |
-| 21/04/2025 | You can specify a 32x32 color icon with a transparent background to ensure a consistent appearance when your app runs in Outlook and Microsoft 365. | Publish your app or agent > Create Teams app package > [Color icon](concepts/build-and-test/apps-package.md#color-icon) |
+| 21/04/2025 | You can specify a 32x32 color icon with a transparent background to ensure a consistent appearance when your app runs in Outlook and Microsoft 365. | Publish your app or agent > Create Teams app package > [Color icon](concepts/build-and-test/apps-package.md#app-icons) |
 | 21/04/2025 | Introducing custom engine agents support for Microsoft 365 Copilot Chat. | Build bots and agents > Teams AI library v1 > Build with Teams AI library > [Add support for Microsoft 365 Copilot Chat](bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#add-support-for-microsoft-365-copilot-chat) |
 | 10/04/2025 | Create personal scope apps that integrate seamlessly with Public Switched Telephone Network (PSTN) and Teams-to-Teams calls. | Build apps for Teams meetings and calls > [Build tabs for calling](apps-in-teams-meetings/build-tabs-for-calling.md) |
 | 03/04/2025 | Enable OAuth authentication for API based message extension. | Add authentication > Enable authentication for API-based message extension > [Enable OAuth for API based message extension](messaging-extensions/api-based-oauth.md) |
@@ -482,7 +482,7 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-* ***September 18, 2025:*** [Teams AI library supports Python in developer preview. It provides a simplified SDK, support for Model Context Protocol (MCP), Agent-to-Agent communication (A2A), and streamlined tools to enable developers to build intelligent agents for Teams.](/microsoftteams/platform/teams-ai-library/welcome)
+* ***November 11, 2025***: [Add app profile hovercard to your agent or app.](bots/how-to/teams-conversational-ai/ai-ux.md#enable-app-profile-card)
 
 <!--
 **2025 May**
@@ -500,6 +500,7 @@ Developer preview is a public program that provides early access to unreleased T
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ---------------- |
 | 24/09/2025 | Ad hoc calls (spontaneous, unscheduled meetings) are now receiving enhanced support across Graph APIs. | Build apps for Teams meetings and calls > Get meetings, transcripts, recordings and AI summaries > [Meeting transcripts and recordings](graph-api/meeting-transcripts/overview-transcripts.md)|
+| 18/09/2025 | Teams AI library supports Python in developer preview. It provides a simplified SDK, support for Model Context Protocol (MCP), Agent-to-Agent communication (A2A), and streamlined tools to enable developers to build intelligent agents for Teams. | [Teams AI library](/microsoftteams/platform/teams-ai-library/welcome) |
 | 10/04/2025 | Introducing custom engine agents support for Microsoft 365 Copilot Chat. | Build bots and agents > Teams AI library v1 > [Build with Teams AI library](bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#add-support-for-microsoft-365-copilot-chat) |
 | 17/03/2025 | Precache your tab app to optimize its initial load time | Build tabs > Tab features > [App caching for your tab app](tabs/how-to/app-caching.md#precaching-tab-apps) |
 | 19/02/2025 | Introducing stop stream generation button for streaming bot messages | Build bots > Bot user experience > [Stream bot messages](bots/streaming-ux.md) |
@@ -525,7 +526,7 @@ Developer preview is a public program that provides early access to unreleased T
 | 23/05/2024 | Leverage AI label, citations, feedback buttons, and sensitivity labels in your bot's messages. | Build bots > Bot conversations > [Format AI bot messages](bots/how-to/format-ai-bot-messages.md) |
 | 23/05/2024 | Enhance your Copilot message extension agent to hand off a conversation to your custom engine agent.| Build message extensions > Build message extensions using Bot Framework > Search commands > [Copilot handoff](bots/how-to/conversations/bot-copilot-handoff.md)|
 | 14/05/2024 | Introduced a new manifest property to let potential customers contact you with queries before they can confidently adopt your app.| App manifest > [Public developer preview](/microsoft-365/extensibility/schema/root-developer-contact-info)|
-| 07/05/2024 | You can specify a 32x32 color icon with a transparent background to ensure a consistent appearance when your app runs in Outlook and Microsoft 365.| Publish your app > [32x32 color icon](concepts/build-and-test/apps-package.md#outline-icon)|
+| 07/05/2024 | You can specify a 32x32 color icon with a transparent background to ensure a consistent appearance when your app runs in Outlook and Microsoft 365.| Publish your app > [32x32 color icon](concepts/build-and-test/apps-package.md#app-icons)|
 | 15/03/2024 | Extend static tabs to channels with a customizable experience. | [Build tabs for Teams](tabs/what-are-tabs.md) |
 | 12/02/2024 | Build API-based message extension using Developer Portal for Teams. | Build message extension > [Build API-based message extension](messaging-extensions/build-api-based-message-extension.md) |
 | 06/02/2024 | Introduced `systemDefault` reserved activity type for send activity feed notifications| Build tabs > [Send activity feed notifications](tabs/send-activity-feed-notification.md#requirements-to-use-the-activity-feed-notification-apis)|
