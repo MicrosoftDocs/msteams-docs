@@ -31,7 +31,7 @@ The supported channel and chat types for migrating external messages to teams ar
 * **New team and standard channel**: Create a new team and its standard channels in migration mode to import content. This allows you to import the exact structure of your external system into the new channel.
 To enable `migrationMode` for a new standard team and channel, see [Create a team and standard channel in migration mode](#create-a-team-and-standard-channel-in-migration-mode).
 
-* **Existing team, channel or chat**: Use any team, channel or chat that already exists in Teams, regardless of when you created it. This allows you to add existing context to channels that are already active in Teams and maintains continuity for ongoing conversations.
+* **Existing channel or chat**: Use any channel or chat that already exists in Teams, regardless of when you created it. This allows you to add existing context to channels that are already active in Teams and maintains continuity for ongoing conversations.
 To enable migration mode in an existing channel or chat, see [Existing channel migration](#existing-channel-migration).
 
 > [!NOTE]
