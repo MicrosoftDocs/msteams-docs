@@ -10,7 +10,9 @@ ms.topic: reference
 
 Teams apps are custom solutions designed to enhance collaboration and productivity within Microsoft Teams. They leverage the platform’s extensibility to deliver interactive experiences directly inside chats, channels, and meetings.
 
-:::image type="content" source="../assets/images/overview/teams-capabilities-updated.png" alt-text="Image shows types of Teams app.":::
+[WIP: Placeholder image]
+
+:::image type="content" source="../assets/images/overview/teams-capabilities-updated.png" alt-text="Image shows types of Teams app." border="false":::
 
 Teams platforms supports the following app types:
 
