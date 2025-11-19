@@ -40,6 +40,8 @@ Teams platform features that are available to all app developers.</br>
 
 * ***November 19, 2025***: [Create and manage agent identities for your agent.](concepts/build-and-test/manage-your-apps-in-developer-portal.md#agent-identity-blueprint)
 
+* ***November 19, 2025***: [Microsoft Entra ID authentication for bots is now available in group scope.](bots/how-to/authentication/bot-sso-overview.md)
+
 :::column-end:::
 :::row-end:::
 <br/>
