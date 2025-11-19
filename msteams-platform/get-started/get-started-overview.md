@@ -8,10 +8,14 @@ ms.topic: reference
 
 # Apps in Teams
 
-Teams apps are custom solutions designed to enhance collaboration and productivity within Microsoft Teams. They leverage the platform’s extensibility to deliver interactive experiences directly inside chats, channels, and meetings. Teams platforms supports the following app types:
+Teams apps are custom solutions designed to enhance collaboration and productivity within Microsoft Teams. They leverage the platform’s extensibility to deliver interactive experiences directly inside chats, channels, and meetings.
+
+:::image type="content" source="../assets/images/overview/teams-capabilities-updated.png" alt-text="Image shows types of Teams app.":::
+
+Teams platforms supports the following app types:
 
 - **Tabs**: Embedded web experiences for dashboards, forms, or full-featured applications, accessible in chats, channels, or meetings.
-- **Bots and agents**: Conversational apps that respond to user queries, automate tasks, and participate in discussions or meetings.
+- **Bots**: Conversational apps that respond to user queries, automate tasks, and participate in discussions or meetings.
 - **Message extensions**: Tools that enable users to find and insert content or trigger actions from the compose box and contextual menus.
 - **Meeting apps**: Solutions that add configurable tabs and bot capabilities to the meeting surface, supporting workflows like agenda management and action item tracking.
 
