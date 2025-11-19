@@ -38,7 +38,7 @@ The user can interact with the bot in a group chat without needing to sign in ag
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-authentication-in-group-scope.png" alt-text="The infographic shows the bot consent flow in group scope." border="false":::
 
-If the user doesn't have the app pre-installed the following are the two scenarios for user authentication:
+If the user doesn't have the app pre-installed, the following are the two scenarios for user authentication:
 
 - **Microsoft Entra ID consent is required**: The user who @mentions the bot gives consent for the permissions requested by the bot. The bot acquires an access token for that user and responds to the request in the group chat.
 

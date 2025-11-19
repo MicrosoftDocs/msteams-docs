@@ -271,7 +271,7 @@ Here are the two scenarios for authentication in group scope:
 
 #### Microsoft Entra ID consent is required
 
-When a bot is added to a group chat for the first time and consent is required for a particular user, a consent dialog box appears only to the user who @mentions the bot. The user must give a one-time consent to the permissions requested by the bot app to get the access token.
+When a bot is added to a group chat for the first time and consent is required for a particular user, a consent dialog box appears only to the user who @mentions the bot. The user must give one-time consent to the permissions requested by the bot app to get the access token.
 
 # [Desktop](#tab/desktop)
 
