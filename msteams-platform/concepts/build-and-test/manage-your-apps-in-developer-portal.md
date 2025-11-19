@@ -269,7 +269,7 @@ From the Developer Portal, you can go to Bot Framework portal and configure your
 
 An Agent Identity Blueprint provides a reusable configurations for agents in **Agent 365** that can perform tasks and interact with users or Microsoft 365 services. Each blueprint acts as a template that specifies how an agent is configured and connected to a back-end service.
 
-Agent Identity Blueprints are created and managed in **Developer Portal**, while the agent identities derived from them are managed in the **Microsoft 365 Admin Center**. To get started and for complete end-to-end guidance on extending your agent to Agent 365, use the **Microsoft Agent 365 SDK**.
+Agent Identity Blueprints are created and managed in **Developer Portal**, while the agent identities derived from them are managed in the **Microsoft 365 Admin Center**. To get started and for complete end-to-end guidance on extending your agent to Agent 365, use the [Microsoft Agent 365 SDK](/microsoft-agent-365/developer/?tabs=python).
 
 #### View and use existing Agent Identity Blueprints
 
