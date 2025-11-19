@@ -38,7 +38,7 @@ This condition is more common on Linux and macOS systems.
 
 Ensure you add the npm global cache to your PATH. This step is normally done as part of the Node.js installer.
 
-You can use the CLI with the `atk' command. Verify that the command is working by running `atk -h`.
+You can use the CLI with the `atk` command. Verify that the command is working by running `atk -h`.
 
 > [!CAUTION]
 > Before you can run TeamsFx in PowerShell terminals, you must enable the **remote signed** execution policy for PowerShell.
