@@ -34,7 +34,7 @@ The following are the advantages of Agents Playground:
 
 * **Reliable**: Agents Playground is reliable as the application's Adaptive Card utilizes the same rendering technology as in Teams or WebChat.
 
-* **Integration with existing applications**:  Agents Playground integrates effortlessly with existing applications built with Agent SDK or Teams AI library.
+* **Integration with existing applications**:  Agents Playground integrates effortlessly with existing applications built with Agent SDK or Teams SDK.
 
 * **Support for different scopes**: Agents Playground supports testing in personal, team, and group chat scopes.
 
@@ -67,25 +67,25 @@ Agents Playground offers a faster debug experience for applications when compare
 
 1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="../assets/images/toolkit-v2/toolkit-sidebar-icon.PNG" border="false"::: icon in the Visual Studio Code **Activity Bar**.
 
-1. Select **Create a New Agent/App** > **Teams App**.
+1. Select **Create a New Agent/App**.
 
     :::image type="content" source="../assets/images/toolkit-v2/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Agents Toolkit sidebar.":::
 
 1. Select **Agent for Teams**.
 
-    :::image type="content" source="../assets/images/toolkit-v2/first-bot/create-new-app1.png" alt-text="Screenshot shows the agents toolkit app templates.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-bot/create-new-agent-app.png" alt-text="Screenshot shows the agents toolkit app templates.":::
 
-1. Select **Basic Agent for Teams**. If you need a different functionality for your agent, pick a different option.
+1. Select **General Teams Agent** to create an agent. If you need a different functionality for your agent, pick a different option.
 
-    :::image type="content" source="../assets/images/toolkit-v2/debug/ai-chat-bot.png" alt-text="Screenshot shows the app feature to add to your new app.":::
+    :::image type="content" source="../assets/images/toolkit-v2/debug/general-teams-agent.png" alt-text="Screenshot shows the app feature to add to your new app.":::
 
 1. Select **Azure OpenAI** and enter service key. If you are using OpenAI, pick a different option.
 
-    :::image type="content" source="../assets/images/toolkit-v2/first-bot/azure-openai.png" alt-text="Screenshot shows the options to configure LLM service.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-bot/access-llm.png" alt-text="Screenshot shows the options to configure LLM service.":::
 
 1. Select **JavaScript**.
 
-    :::image type="content" source="../assets/images/toolkit-v2/first-bot/select-language-tab.png" alt-text="Screenshot shows the option to select the programming language.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-bot/select-language.png" alt-text="Screenshot shows the option to select the programming language.":::
 
 1. Select **Default folder**.
 
@@ -104,11 +104,11 @@ Agents Playground offers a faster debug experience for applications when compare
 
 1. Enter a suitable name for your app and then select the **Enter** key.
 
-    :::image type="content" source="../assets/images/toolkit-v2/first-bot/hello-bot.png" alt-text="Screenshot shows where to enter the app name.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-bot/add-agent-name.png" alt-text="Screenshot shows where to enter the app name.":::
 
     A dialog appears, where you need to choose yes or no to trust the authors of the files in this folder.
 
-    :::image type="content" source="../assets/images/toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-bot/trust-author.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder.":::
 
 1. From the left pane, select **Run and Debug** (`Ctrl+Shift+D`) and select **Debug in Microsoft 365 Agents Playground (Preview)** in dropdown list.
 
@@ -156,13 +156,13 @@ Agents Playground offers a faster debug experience for applications when compare
    1. Run the following command to start your app:
 
       ```cmd
-      npm run dev:atk:playground
+      npm run dev:teamsfx:testtool
       ```
 
    1. Run the following command in a separate terminal to launch Agents Playground:
 
       ```cmd
-      npm run dev:atk:launch-playground
+      npm run dev:teamsfx:launch-testtool
       ```
 
    # [C#](#tab/clicsharp)
@@ -332,7 +332,7 @@ Currently, the accepted channel IDs are: `msteams`, `directline`, `webchat`, and
 
 ## Customize Teams context
 
-The configuration file in the project's root folder allows you to customize Teams context information such as chats, teams, and users. It provides mock data for testing Bot Framework APIs or methods from the Agent SDK or Teams AI Library, such as `TeamsInfo.getTeamMembers`.
+The configuration file in the project's root folder allows you to customize Teams context information such as chats, teams, and users. It provides mock data for testing Bot Framework APIs or methods from the Agent SDK or Teams SDK, such as `TeamsInfo.getTeamMembers`.
 
 ### Default configuration
 
@@ -643,6 +643,6 @@ Follow the [step-by-step guide](teams-app-test-tool-tutorial.md) to debug an AI 
 * [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals.md)
 * [Install Microsoft 365 Agents Toolkit](install-Teams-Toolkit.md)
 * [Build bots for Teams](../bots/what-are-bots.md)
-* [Teams AI library](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md)
+* [Teams SDK](../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md)
 * [Adaptive Card](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 * [Agents SDK](https://github.com/microsoft/Agents)
