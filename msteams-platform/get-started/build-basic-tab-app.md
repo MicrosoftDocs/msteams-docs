@@ -153,7 +153,7 @@ After you've answered all the questions, your project is created.
 
 ## Take a tour of the tab app source code
 
-Agents Toolkit provides all components for building an app. After creating the project, you can view the project folders and files in the **Explorer** in the Visual Studio Code.
+Agents Toolkit provides all components for building an app. After creating the project, you can view the project folders and files in the **EXPLORER** in the Visual Studio Code.
 
 :::image type="content" source="../assets/images/toolkit-v2/first-tab/folder-structure-tab-app.png" alt-text="Screen shot shows the structure tab.":::
 
@@ -168,9 +168,6 @@ Among other items in this directory structure, the Toolkit maintains:
 | `env` | Name / value pairs are stored in environment files and used by m365agents.yml to customize the provisioning and deployment rules. |
 | `infra` | Templates for provisioning Azure resources. |
 | `src/`| The source code for the notification Teams application. |
-| `src/app.js` | Application entry point and `express` handlers for website. |
-| `src/views/hello.html`| A HTML template that is bind to the tab endpoint. |
-| `src/static` | The static assets like CSS and JavaScript files that can be served by the web server. |
 | `m365agents.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
 | `m365agents.local.yml` | This overrides `m365agents.yml` with actions that enable local execution and debugging. |
 
