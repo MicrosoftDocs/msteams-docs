@@ -535,7 +535,7 @@ HTTP/1.1 204 NoContent
 
 #### Optional: Update group chat member history after migration
 
-When you complete message migration in a group chat, you can optionally update members’ share history by using the `visibleHistoryStartDateTime` property in Microsoft Graph. This property defines the earliest point in time from which a chat member can view messages in a conversation. If imported messages are earlier than the member’s, they don’t appear unless you update this value.
+When you complete message migration in a group chat, you can optionally update members’ share history by using the `visibleHistoryStartDateTime` property in Microsoft Graph. This property sets the earliest time a chat member can view messages in a conversation. If imported messages are older than the property's value, they don’t appear unless you update the property.
 
 To update the `visibleHistoryStartDateTime` property:
 
@@ -544,10 +544,11 @@ To update the `visibleHistoryStartDateTime` property:
 
 ##### Example
 
-For a member A, if the chat was created at 10 PM, messages imported at 9 AM, and member A’s share history starts at 10 AM, then:
+Consider a scenario where the original chat was created at 10 PM, updated at 1 AM, messages were imported at 9 AM, and member A’s share history starts at 10 AM.
+To ensure that member A can see the 9 AM imported messages:
 
 1. Remove member A from the chat.
-1. Add member A with `visibleHistoryStartDateTime` set before 9 AM.
+1. Add member A with the `visibleHistoryStartDateTime` property set before 9 AM.
 
 ## Step 5: Verify migration mode completion
 
