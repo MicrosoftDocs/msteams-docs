@@ -25,6 +25,20 @@ Build Teams apps with the Teams SDK for client and conversational experiences, a
 
 Get started with building apps for Microsoft Teams and beyond!
 
+## What you can build in Teams
+
+**Tabs (personal, team/channel, and meeting tabs)**
+Tabs are web experiences (hosted pages) that run inside Teams. Use them for dashboards, forms, or full fidelity web apps embedded in a chat, channel, or meeting. Tabs can also be extended to Outlook and the Microsoft 365 app when you target the modern Teams client APIs.
+
+**Bots (conversational experiences)**
+In Teams, “bots” have evolved into agents—AI enhanced, conversational apps that respond in 1:1, group, channel, or meeting contexts. You can build agents that answer questions, summarize discussions, automate tasks, and participate in meetings (for example, sending agenda updates or capturing action items).
+
+**Message extensions**
+Message extensions bring “find and insert” and “action” commands to the compose box and contextual menus. They call into your service and return cards that users can insert into a message, or launch dialogs to complete short workflows.
+
+**Meeting apps**
+Meeting apps add configurable tabs and bot capabilities to the meeting surface. You can react to meeting lifecycle events (start/end), notify participants, and provide in meeting UI for notes, tasks, and workflows.
+
 Here's an idea of what you'll learn
 
 - Get started quickly with Microsoft 365 Agents Toolkit (previously known as Teams Toolkit).
