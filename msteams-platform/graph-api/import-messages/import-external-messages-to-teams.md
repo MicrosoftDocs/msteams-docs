@@ -10,7 +10,7 @@ ms.date: 11/17/2025
 
 # Import third-party platform messages to Teams using Microsoft Graph
 
-With Microsoft Graph, you can migrate users' existing message history and data from an external system into Teams. By enabling the recreation of a third-party platform messaging hierarchy inside Teams, users can continue their communications in a seamless manner and proceed without interruption.
+With Microsoft Graph, you can migrate users' existing message history and data from an external system into Teams. Users can continue their communications in a seamless manner and proceed without interruption by enabling the recreation of a third-party platform messaging hierarchy inside Teams.
 
 > [!NOTE]
 > In the future, Microsoft might require you or your customers to pay extra fees based on the amount of data imported.
@@ -532,6 +532,22 @@ POST https://graph.microsoft.com/beta/chats/{chat-id}/completeMigration
 ```http
 HTTP/1.1 204 NoContent
 ```
+
+#### Optional: Update group chat member history after migration
+
+When you complete message migration in a group chat, you can optionally update members’ share history by using the `visibleHistoryStartDateTime` property in Microsoft Graph. This property defines the earliest point in time from which a chat member can view messages in a conversation. If imported messages are earlier than the member’s, they don’t appear unless you update this value.
+
+To update the `visibleHistoryStartDateTime` property:
+
+1. [Remove the member](/graph/api/chat-delete-members?view=graph-rest-1.0&tabs=http) from the chat.
+1. [Add the member](/graph/api/chat-post-members?view=graph-rest-1.0&tabs=http) back with a new `visibleHistoryStartDateTime` that includes the imported messages.
+
+##### Example
+
+For a member A, if the chat was created at 10 PM, messages imported at 9 AM, and member A’s share history starts at 10 AM, then:
+
+1. Remove member A from the chat.
+1. Add member A with `visibleHistoryStartDateTime` set before 9 AM.
 
 ## Step 5: Verify migration mode completion
 
