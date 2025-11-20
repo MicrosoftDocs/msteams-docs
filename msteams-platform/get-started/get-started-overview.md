@@ -14,7 +14,7 @@ Teams apps are custom solutions designed to enhance collaboration and productivi
 
 :::image type="content" source="../assets/images/overview/teams-capabilities-updated.png" alt-text="Image shows types of Teams app." border="false":::
 
-Teams platforms supports the following app types:
+[WIP: tags for infographic]
 
 - **Tabs**: Embedded web experiences for dashboards, forms, or full-featured applications, accessible in chats, channels, or meetings.
 - **Bots**: Conversational apps that respond to user queries, automate tasks, and participate in discussions or meetings.
@@ -26,6 +26,8 @@ Build Teams apps with the Teams SDK for client and conversational experiences, a
 Get started with building apps for Microsoft Teams and beyond!
 
 ## What you can build in Teams
+
+Teams platforms supports the following app types:
 
 **Tabs (personal, team/channel, and meeting tabs)**
 Tabs are web experiences (hosted pages) that run inside Teams. Use them for dashboards, forms, or full fidelity web apps embedded in a chat, channel, or meeting. Tabs can also be extended to Outlook and the Microsoft 365 app when you target the modern Teams client APIs.
