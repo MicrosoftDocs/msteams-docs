@@ -107,7 +107,7 @@ Follow the steps to change the default location:
 
 The Teams tab app is created in few seconds.
 
-:::image type="content" source="../assets/images/toolkit-v2/first-tab/tab-app-created1.png" alt-text="Screenshot shows the app created.":::
+:::image type="content" source="../assets/images/toolkit-v2/first-tab/tap-app-created1.png" alt-text="Screenshot shows the app created.":::
 
 After your app is created, Agents Toolkit displays the following message:
 
