@@ -48,6 +48,12 @@ Here's an idea of what you'll learn
 - Learn about tutorials and code samples available for building your Teams app.
 - Learn about various tools and SDKs available for building your Teams app.
 
+- The types of apps and agents that can be built for Teams and Microsoft 365
+- The recommended SDKs and toolkits for different scenarios
+- Key architectural concepts, including integration with Microsoft Graph and enterprise data
+- Security and authentication best practices for conversational apps
+- The developer journey from scaffolding projects to publishing apps and agents across Teams and Copilot
+
 ## Build your first Teams app
 
 In this section, learn how to build a Teams app with different capabilities, such as tab, scenario-based bot app, and message extension. Select the type of Teams app that you want to build:
