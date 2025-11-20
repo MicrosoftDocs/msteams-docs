@@ -25,7 +25,11 @@ Build Teams apps with the Teams SDK for client and conversational experiences, a
 
 Get started with building apps for Microsoft Teams and beyond!
 
-## What you can build in Teams
+## Why Build Apps for Microsoft Teams?
+
+Build collaborative workspace with apps for Microsoft Teams. You can bring people, data, and workflows together in one place. With over 320 million users, Teams isn’t just for chats and meetings; it’s a powerful hub to simplify processes, automate tasks, and keep key information at readily accessible.
+
+## What you can build in Teams?
 
 Teams platforms supports the following app types:
 
