@@ -15,7 +15,7 @@ Tabs are Teams-aware webpages embedded in Microsoft Teams and a good way to begi
 In this tutorial, you'll learn:
 
 - [How to set up a new project with Microsoft 365 Agents Toolkit (previously known as Teams Toolkit).](#create-project-workspace-for-your-tab-app)
-  - [How to build a tab app](#build-and-run-your-first-tab-app)
+  - [How to build a tab app](#create-project-workspace-for-your-tab-app)
   - [The structure of the app](#take-a-tour-of-the-tab-app-source-code)
     - The tab portion with JavaScript using React
     - The rest of the features with Node.js
@@ -107,7 +107,7 @@ Follow the steps to change the default location:
 
 The Teams tab app is created in few seconds.
 
-:::image type="content" source="../assets/images/toolkit-v2/first-tab/tap-app-created1.png" alt-text="Screenshot shows the app created.":::
+:::image type="content" source="../assets/images/toolkit-v2/first-tab/tab-app-created1.png" alt-text="Screenshot shows the app created.":::
 
 After your app is created, Agents Toolkit displays the following message:
 
@@ -161,15 +161,31 @@ Although you're free to choose any UI framework (or not to use any), this sample
 
 Among other items in this directory structure, the Toolkit maintains:
 
-| Folder name | Contents |
-| --- | --- |
-| `.vscode` | VSCode files for debugging. |
-| `appPackage` | Templates for the Teams application manifest. |
-| `env` | Name / value pairs are stored in environment files and used by m365agents.yml to customize the provisioning and deployment rules. |
-| `infra` | Templates for provisioning Azure resources. |
-| `src/`| The source code for the notification Teams application. |
-| `m365agents.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
-| `m365agents.local.yml` | This overrides `m365agents.yml` with actions that enable local execution and debugging. |
+| Folder       | Contents                                     |
+| ------------ | -------------------------------------------- |
+| `.vscode`    | VSCode files for debugging                   |
+| `appPackage` | Templates for the application manifest |
+| `env`        | Environment files                            |
+| `infra`      | Templates for provisioning Azure resources   |
+| `src`        | The source code for the application    |
+
+The following files can be customized and demonstrate an example implementation to get you started.
+
+| File                             | Contents                                                                                                        |
+| -------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `index.html`                     | HTML file.                                                                                                      |
+| `src/Tab/App.css`                | CSS file for the app.                                                                                           |
+| `src/Tab/App.tsx`                | Tab source file. It calls `teamsjs` SDK to get the context of on which Microsoft 365 application your app is running.      |
+| `src/index.ts`                   | Starting the app using [Microsoft Teams SDK](https://aka.ms/teams-ai-library-v2).                                                                     |
+| `vite.config.js`                 | Configuration for Vite build tool.                                                                              |  
+| `nodemon.json`                   | Configuration for Nodemon to watch and restart the server.                                                      |
+
+The following are Microsoft 365 Agents Toolkit specific project files. You can [visit a complete guide on Github](https://github.com/OfficeDev/TeamsFx/wiki/Teams-Toolkit-Visual-Studio-Code-v5-Guide#overview) to understand how Microsoft 365 Agents Toolkit works.
+
+| File                 | Contents                                                                                                                                  |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `m365agents.yml`       | This is the main Microsoft 365 Agents Toolkit project file. The project file defines two primary things: Properties and configuration Stage definitions. |
+| `m365agents.local.yml` | This overrides `m365agents.yml` with actions that enable local execution and debugging.                                                     |
 
 ## Build and run your first tab app
 
