@@ -41,18 +41,14 @@ Message extensions bring “find and insert” and “action” commands to the 
 **Meeting apps**
 Meeting apps add configurable tabs and bot capabilities to the meeting surface. You can react to meeting lifecycle events (start/end), notify participants, and provide in meeting UI for notes, tasks, and workflows.
 
-Here's an idea of what you'll learn
+Here's an idea of what you'll learn:
 
-- Get started quickly with Microsoft 365 Agents Toolkit (previously known as Teams Toolkit).
-- Build tab, scenario-based apps, and message extension with GitHub Codespaces or step-by-step guide.
-- Learn about tutorials and code samples available for building your Teams app.
+- The types of apps and agents that you can build for Teams and Microsoft 365 with Microsoft 365 Agents Toolkit (previously known as Teams Toolkit):
+  - Build tab, scenario-based apps, and message extension with GitHub Codespaces or step-by-step guide.
+  - Learn about tutorials and code samples available for building your Teams app.
 - Learn about various tools and SDKs available for building your Teams app.
-
-- The types of apps and agents that can be built for Teams and Microsoft 365
-- The recommended SDKs and toolkits for different scenarios
-- Key architectural concepts, including integration with Microsoft Graph and enterprise data
+  - The recommended SDKs and toolkits for different scenarios
 - Security and authentication best practices for conversational apps
-- The developer journey from scaffolding projects to publishing apps and agents across Teams and Copilot
 
 ## Build your first Teams app
 
