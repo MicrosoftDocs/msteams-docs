@@ -539,8 +539,8 @@ When you complete message migration in a group chat, you can optionally update m
 
 To update the `visibleHistoryStartDateTime` property:
 
-1. [Remove the member](/graph/api/chat-delete-members?view=graph-rest-1.0&tabs=http) from the chat.
-1. [Add the member](/graph/api/chat-post-members?view=graph-rest-1.0&tabs=http) back with a new `visibleHistoryStartDateTime` that includes the imported messages.
+1. [Remove the member](/graph/api/chat-delete-members?view=graph-rest-1.0&tabs=http&preserve-view=true) from the chat.
+1. [Add the member](/graph/api/chat-post-members?view=graph-rest-1.0&tabs=http&preserve-view=true) back with a new `visibleHistoryStartDateTime` that includes the imported messages.
 
 ##### Example
 
