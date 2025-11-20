@@ -12,7 +12,7 @@ Teams apps are custom solutions designed to enhance collaboration and productivi
 
 [WIP: Placeholder image]
 
-:::image type="content" source="../assets/images/overview/teams-capabilities-updated.png" alt-text="Image shows types of Teams app." border="false":::
+:::image type="content" source="../assets/images/overview/teams-apps-types.png" alt-text="Image shows types of Teams app." border="false":::
 
 [WIP: tags for infographic]
 
@@ -29,7 +29,9 @@ Get started with building apps for Microsoft Teams and beyond!
 
 Build collaborative workspace with apps for Microsoft Teams. You can bring people, data, and workflows together in one place. With over 320 million users, Teams isn’t just for chats and meetings; it’s a powerful hub to simplify processes, automate tasks, and keep key information at readily accessible.
 
-:::image type="content" source="../assets/images/overview/why-teams-apps.png" alt-text="Image shows collaborating with Teams apps. ":::
+[WIP: Placeholder image]
+
+:::image type="content" source="../assets/images/overview/why-teams-apps.png" alt-text="Image shows collaborating with Teams apps." border="false":::
 
 Develop custom apps or integrating existing solutions into Teams to:
 
