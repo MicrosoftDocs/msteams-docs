@@ -31,8 +31,8 @@ Build collaborative workspace with apps for Microsoft Teams. You can bring peopl
 
 By developing custom apps or integrating existing solutions into Teams, you can:
 
-- Boost productivity
-- Enhance collaboration
+- Boost productivity: Bring all your essential tools, data, and business processes in one place. It enables app users to switch quickly between apps and achieve more.
+- Enhance collaboration: Enable teams to communicate, share insights, and work together whether through bots, tabs, message extensions, or meeting apps.
 - Personalize experiences
 - Automate and streamline
 - Reach users everywhere
