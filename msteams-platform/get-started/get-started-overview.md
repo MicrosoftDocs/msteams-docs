@@ -52,12 +52,10 @@ Here's an idea of what you'll learn:
 
 ## Build your first Teams app
 
-In this section, learn how to build a Teams app with different capabilities, such as tab, scenario-based bot app, and message extension. Select the type of Teams app that you want to build:
+In this section, learn how to build a Teams app with different capabilities, such as bot, tab, and message extension. Select the type of Teams app that you want to build:
 
+- **Build a simple Teams bot app**: Build a conversational bot.
 - **Build a basic Teams tab app**: Get started with building a Teams app with a basic tab app.
-
-- **Build a simple Teams bot app**: Build a Teams app that is suitable for a particular scenario or use-case. For example, a notification bot is suitable for sending notifications but not to chat.
-
 - **Build message extension Teams app**: Build a search-based message extension Teams app.
 
 ## Next step
