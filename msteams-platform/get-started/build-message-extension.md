@@ -165,12 +165,12 @@ A message extension uses Bot Framework to interact with your service through a c
 
    | Folder / File | Contents |
    | --- | --- |
-   | `m365agents.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stage. |
-   | `m365agents.local.yml` | Overrides `m365agents.yml` with actions that enable local execution and debugging. |
    | `.vscode/` | Visual Studio Code files for local debug. |
    | `appPackage/` | Templates for the Teams application manifest. |
    | `infra/` | Templates for provisioning Azure resources. |
-   | `index.js` | Application entry point and `express` handler. |
+   | `env` | Name / value pairs are stored in environment files and used by m365agents.yml to customize the provisioning and deployment rules. |
+   | `m365agents.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stage. |
+   | `m365agents.local.yml` | Overrides `m365agents.yml` with actions that enable local execution and debugging. |
 
 > [!Tip]
 > Familiarize yourself with bots and message extension outside of Teams before you integrate your app within Teams.
