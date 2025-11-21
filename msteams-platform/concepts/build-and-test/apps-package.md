@@ -47,8 +47,9 @@ Your app package must include two .png versions of your app icon: A color and ou
 > [!NOTE]
 > If your app has a bot or message extension, your icons are included in your Microsoft Azure Bot Service registration.
 
-For your app to pass Teams Store review, these icons must meet the following size requirements.
+For your app to pass Teams Store review, these icons must meet certain size requirements. For more information, see [Teams app icon for Teams Store and app bar](../design/design-teams-app-icon-store-appbar.md).
 
+<!--
 ### Color icon
 
 * **Teams**: The color version of your icon displays in most Teams scenarios and must be 192x192 pixels. Your icon symbol (120x120 pixels) can be any color, but it must sit on a solid or fully transparent square background.
@@ -122,6 +123,7 @@ Here's how app icons appear in different Teams capabilities and contexts.
 #### Message extension
 
 :::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="<alt text>":::
+-->
 
 ## Next step
 

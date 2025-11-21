@@ -2,15 +2,7 @@
   href: mstdd-landing.yml
 - name: Overview
   href: overview.md
-  displayName: why build apps with Microsoft Teams platform
-#  - name: From ideas to Teams app
-#    href: overview-story.md
-#    displayName: Teams app user experience, user scenario
-#  - name: Explore Teams platform features
-#    href: overview-explore.md
-#  - name: The Teams solution
-#    href: overview-solution.md
-#    displayName: develop Teams app, app development, tools used
+  displayName: why build apps with Microsoft Teams platform, Teams app capabilities, Teams SDKs and tools, Teams app development lifecycle
 - name: What's new?
   href: whats-new.md
   displayName: Teams platform features, latest updates, RSS feed, deprecated, announcement, preview
@@ -278,7 +270,7 @@
           displayName: loop
         - name: Action extensions
           href: resources/messaging-extension-v3/create-extensions.md
-- name: Manifest for agents or apps
+- name: Manifest for agent or app
   items:
     - name: Manifest schema
       href: resources/schema/manifest-schema.md
@@ -1008,7 +1000,7 @@
   - name: Integrate location capabilities
     href: concepts/device-capabilities/location-capability.md
     displayName: attendance
-- name: Extend agents or app across Microsoft 365
+- name: Extend agent or app across Microsoft 365
   items:
   - name: Overview
     href: m365-apps/overview.md
@@ -1205,7 +1197,7 @@
   - name: App subscriptions and licenses
     href: concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md
     displayName: Purchase, Teams apps, License, manage, buy subscriptions, ISVs, Manage, License, third party, SaaS, Partner Center
-- name: Teams developer documentation FAQs
+- name: Frequently asked questions
   href: teams-faq.md 
 - name: Support and feedback
   href: feedback.md
