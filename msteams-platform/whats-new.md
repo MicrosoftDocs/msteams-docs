@@ -38,11 +38,11 @@ Teams platform features that are available to all app developers.</br>
 
 **2025 November**
 
+* ***November 21, 2025***: [Use the **Performance Report tool** to evaluate the efficiency of your web and tab apps on mobile.](resources/teams-mobile-best-practices.md)
+
 * ***November 19, 2025***: [Create and manage agent identities for your agent.](concepts/build-and-test/manage-your-apps-in-developer-portal.md#agent-identity-blueprint)
 
 * ***November 19, 2025***: [Microsoft Entra ID authentication for bots is now available in group scope.](bots/how-to/authentication/bot-sso-overview.md)
-
-* ***November 21, 2025***: [Use the **Performance Report tool** to evaluate the efficiency of your web and tab apps on mobile.](resources/teams-mobile-best-practices.md)
 
 :::column-end:::
 :::row-end:::
