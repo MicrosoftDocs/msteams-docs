@@ -6,6 +6,7 @@ ms.localizationpriority: high
 ms.date: 01/17/2023
 ms.owner: ryanbliss
 ---
+
 # Enable SSO for tab app
 
 With single sign-on (SSO) in Teams, app users have the advantage of using Teams to access tab apps. After logging in to Teams using Microsoft or Microsoft 365 account, app users can use your app without the need to sign in again. Your app is available to app users on any device with the access granted through Microsoft Entra ID.
