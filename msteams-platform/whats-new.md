@@ -42,6 +42,8 @@ Teams platform features that are available to all app developers.</br>
 
 * ***November 19, 2025***: [Microsoft Entra ID authentication for bots is now available in group scope.](bots/how-to/authentication/bot-sso-overview.md)
 
+* ***November 21, 2025***: [Use the **Performance Report tool** to evaluate the efficiency of your web and tab apps on mobile.][Best practices for Teams mobile apps](resources/teams-mobile-best-practices.md)
+
 :::column-end:::
 :::row-end:::
 <br/>
