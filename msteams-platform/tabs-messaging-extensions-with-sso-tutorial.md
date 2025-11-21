@@ -39,3 +39,15 @@ Ensure that you install the following tools and set up your development environm
 ## Set up local environment
 
 [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
+
+## Register Microsoft Entra app
+
+The following steps help you to create and register your bot in Azure portal:
+
+- Create and register your Azure app.
+- Create client secret to enable SSO authentication of the bot.
+- Add Teams channel to deploy the bot.
+- Create a tunnel to your web server's endpoints using dev tunnel (recommended) or ngrok.
+- Add messaging endpoint to the dev tunnel that you created.
+
+[!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
