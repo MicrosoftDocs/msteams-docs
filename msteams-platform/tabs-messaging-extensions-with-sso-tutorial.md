@@ -19,7 +19,7 @@ The  Microsoft Entra single sign-on (Microsoft Entra SSO) helps to authenticate 
 
 This step-by-step guide helps you to create tabs and message extensions enabling Microsoft Entra SSO authentication. You'll see the following output:
 
-:::image type="content" source="../../../assets/images/Tab-ME-SSO/hello-megan-profile245-1.png" alt-text="Screenshot of the tab and message extension with SSO authentication output after you have successfully completed the step-by-step guide.":::
+:::image type="content" source="assets/images/Tab-ME-SSO/hello-megan-profile245-1.png" alt-text="Screenshot of the tab and message extension with SSO authentication output after you have successfully completed the step-by-step guide.":::
 
 ## Prerequisites
 
@@ -51,3 +51,99 @@ The following steps help you to create and register your bot in Azure portal:
 - Add messaging endpoint to the dev tunnel that you created.
 
 [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
+
+**Create a tunnel**
+
+# [dev tunnel](#tab/dev)
+
+[!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
+
+# [ngrok](#tab/ngrok)
+
+[!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
+
+---
+
+[!INCLUDE [Azure web authentication](includes/get-started/azure-web-authentication.md)]
+
+[!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
+
+**Add API permissions**
+
+1. In the left pane, select **API permissions**.
+
+1. Select **+ Add a permission**.
+
+    :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-api-permission.png" alt-text="Screenshot shows the option to select Add permission.":::
+
+1. Select **Microsoft Graph**.
+
+1. Select **Delegated permissions**.
+
+1. Select **User** > **User.Read**.
+
+1. Select **Add permissions**.
+
+    :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/select-api-permission.png" alt-text="Screenshot show the option to select permissions.":::
+
+> [!NOTE]
+>
+> - If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
+> - Users need to consent to the API permissions only if the Microsoft Entra app is registered in a different tenant.
+
+[!INCLUDE [Application ID URI](includes/get-started/application-id-uri.md)]
+
+[!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
+
+[!INCLUDE [Azure client application](includes/get-started/azure-client-application.md)]
+
+[!INCLUDE [Manifest](includes/get-started/azure-manifest.md)]
+
+## Create your bot
+
+[!INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource.md)]
+
+[!INCLUDE [Teams channel](includes/get-started/add-teams-channel.md)]
+
+[!INCLUDE [Messaging endpoint](includes/get-started/messaging-endpoint.md)]
+
+[!INCLUDE [Service connection](includes/get-started/oauth-connection-settings.md)]
+
+## Set up app settings
+
+1. Go to the **appsettings.json** file in the cloned repository.
+
+    :::image type="content" source="./assets/images/Tab-ME-SSO/app-setting-folder-1.png" alt-text="Screenshot of Project file with appsettings.json file highlighted in red.":::
+
+1. Open the **appsettings.json** file in Visual Studio.
+
+1. Update the following information:  
+
+    - Replace `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
+    - Replace `"MicrosoftAppPassword"` to your bot's client secrets **Value**.
+    - Replace `"SiteUrl"` to your ngrok URL.
+    - Replace `"ConnectionName"` to the name of OAuth connection setting.
+    - Replace `"TenantId"` to the tenant ID of the tenant where the app is used.
+    - Replace `"ClientId"` to your bot's **Microsoft App ID**.
+    - Replace `"AppSecret"` to your bot's client secrets **Value**.
+    - Replace `"ApplicationIdURI"` in the form of `api://*******.ngrok.io/botid-{AppID}`.
+
+    :::image type="content" source="./assets/images/Tab-ME-SSO/app-setting.png" alt-text="Screenshot of the appsettings.json file with the values entered highlighted in red.":::
+
+## Set up manifest file
+
+1. Go to the **manifest.json** file in the cloned repository.
+
+    :::image type="content" source="./assets/images/Tab-ME-SSO/folder-manifest-1.png" alt-text="Screenshot of Manifest folder with the manifest file highlighted in red.":::
+
+1. Open the **manifest.json** file in Visual Studio and make the following changes:
+
+    - Replace `DOMAIN-NAME` with your ngrok URL.
+    - Replace `YOUR-MICROSOFT-APP-ID` with your bot's **Microsoft App ID**.
+
+        > [!NOTE]
+        > Depending on the scenario `[YOUR-MICROSOFT-APP-ID]` and `[DOMAIN-NAME]` may occur multiple times.
+
+    - Replace `resource` as `api://*******.ngrok.io/botid-{AppID}`.
+
+        :::image type="content" source="~/assets/images/Tab-ME-SSO/vs-manifest.png" alt-text="Screenshot of the manifest.json file with the values entered highlighted in red.":::
