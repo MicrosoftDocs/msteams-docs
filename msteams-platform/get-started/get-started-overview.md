@@ -20,13 +20,7 @@ Get started with building apps for Microsoft Teams and beyond!
 
 ## Why Build Apps for Microsoft Teams?
 
-Build collaborative workspace with apps for Microsoft Teams. You can bring people, data, and workflows together in one place. With over 320 million users, Teams isn’t just for chats and meetings; it’s a powerful hub to simplify processes, automate tasks, and keep key information at readily accessible.
-
-[WIP: Placeholder image]
-
-:::image type="content" source="../assets/images/overview/why-teams-apps.png" alt-text="Image shows collaborating with Teams apps." border="false":::
-
-Develop custom apps or integrating existing solutions into Teams to:
+Build collaborative workspace with apps for Microsoft Teams. You can bring people, data, and workflows together in one place. With over 320 million users, Teams isn’t just for chats and meetings; it’s a powerful hub to simplify processes, automate tasks, and keep key information at readily accessible. Develop custom apps or integrating existing solutions into Teams to:
 
 - **Boost productivity**: Bring all your essential tools, data, and business processes in one place. It enables app users to switch quickly between apps and achieve more.
 - **Enhance collaboration**: Enable teams to communicate, share insights, and work together whether through bots, tabs, message extensions, or meeting apps.
