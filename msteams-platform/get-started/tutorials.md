@@ -1199,3 +1199,209 @@ You've completed the tutorial to get started with build a bot with SSO authentic
 </details>
 
 [Back to top](#teams-app-tutorials)
+
+## Build your first app using C #
+
+<details>
+<summary>Tutorial: Build your first app using C#</summary>
+
+Start Microsoft Teams app development by building your first Teams app with a tab, a bot, or a message extension capability.
+
+In this tutorial, you'll learn:
+
+* How to set up a new project.
+* How to build apps with tab capability using C# and Microsoft Visual Studio 2022.
+
+This step-by-step guide helps you to build a tab with Microsoft 365 Agents Toolkit (previously known as Teams Toolkit). You'll see the following output after you've completed this guide:
+
+:::image type="content" source="../assets/images/sbs-csharp/final-output.png" alt-text=" Screenshot shows the final output of the Teams tab app.":::
+
+## Prerequisites
+
+Here's a list of tools you need to install for building and deploying a Teams app.
+
+  | &nbsp; | Install | For using... |
+|  --- | --- | --- |
+
+   | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call all in one place.|
+   | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com)<br> | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
+   | &nbsp; | [Microsoft 365 Agents Toolkit](#install-agents-toolkit) | A Visual Studio extension that creates a project scaffolding for your app. Use the latest version.|
+
+## Install Agents Toolkit
+
+Agents Toolkit helps simplify the development process with tools to create a project scaffolding for your app. It creates the necessary directory structure for all selected capabilities with the required files in place, ready to build the project.
+
+You can download the latest [Visual Studio installer](https://visualstudio.microsoft.com). Agents Toolkit is available as an extension in Visual Studio.
+
+After you open the Visual Studio installer, in the pop-up workloads window.
+
+1. Select **ASP.NET and web development**.
+1. Under **installation details** > **Optional**, select **Microsoft Teams development tools**.
+1. Select **Install**.
+
+   :::image type="content" source="../assets/images/sbs-csharp/visual-studio-install.png" alt-text="Screenshot shows the Visual Studio installation." lightbox="~/assets/images/sbs-csharp/visual-studio-install.png":::
+
+1. Select **Launch**. Visual Studio 2022 app window appears.
+
+   :::image type="content" source="../assets/images/sbs-csharp/visual-studio-launch.png" alt-text="Screenshot shows the selection of Launch in visual studio.":::
+
+1. Go to **Extensions** > **Manage Extensions**.
+
+   :::image type="content" source="../assets/images/sbs-csharp/select-extension.png" alt-text="Screenshot shows the selection of Extensions.":::
+
+The Manage Extension window appears:
+
+   :::image type="content" source="../assets/images/sbs-csharp/manage-ext.png" alt-text="Screenshot shows the Manage Extensions." lightbox="~/assets/images/sbs-csharp/manage-extension.png":::
+
+1. From the left pane, select **Installed**. The **Microsoft 365 Agents Toolkit** extension is avaialble.
+
+   :::image type="content" source="../assets/images/sbs-csharp/select-ttk.png" alt-text="Screenshot shows the selection of Agents Toolkit." lightbox="~/assets/images/sbs-csharp/select-installed-ttk.png":::
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Install+Teams+Toolkit&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-csharp%3Ftutorial-step%3D&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-csharp.yml&documentVersionIndependentId=868d10d0-97f7-0be0-3cf5-8a26ad6db573&author=surbhigupta&platformId=2733de0a-edc3-1fad-9a1d-f66571421b8a&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+## Set up your Teams development tenant
+
+A **tenant** is like a space or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you upload and test your custom app. Let's verify if you're ready to develop with the tenant.
+
+### Check for custom app upload option
+
+After creating the app, you must load your app in Teams without distributing it. This process is known as custom app upload. Sign in to your Microsoft 365 account to view this option.
+
+> [!NOTE]
+> Custom app upload is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you won't be able to preview and test your app in Teams local environment.
+
+Do you already have a tenant, and admin access? Let's check if you do!
+
+Verify if you can upload a custom apps in Teams:
+
+1. Open Microsoft Teams, select the **Apps** icon.
+1. Select **Manage your apps**.
+1. Select **Upload an app**.
+1. Look for the **Upload a custom app** option. If you see the option, custom app upload is enabled.
+
+:::image type="content" source="../assets/images/sbs-csharp/custom-upload.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
+
+> [!NOTE]
+> If you don't find the option to upload a custom app, contact your Teams administrator.
+
+### Create a free Teams developer tenant (optional)
+
+If you don't have a Teams account, you can get it for free. Join the Microsoft 365 developer program!
+
+1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
+1. Select **Join Now** and follow the onscreen instructions.
+1. In the welcome screen, select **Setup E5 subscription**.
+1. Set up your administrator account. After you finish, the following screen appears:
+
+:::image type="content" source="../assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Screenshot shows the example of what you see after signing up for the Microsoft 365 developer program.":::
+
+1. Sign in to Teams using the administrator account you set up. Verify that you've the **Upload a custom app** option in Teams.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Set+up+your+Teams+development+tenant&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-csharp%3Ftutorial-step%3D&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-csharp.yml&documentVersionIndependentId=868d10d0-97f7-0be0-3cf5-8a26ad6db573&author=surbhigupta&platformId=2733de0a-edc3-1fad-9a1d-f66571421b8a&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+### Get a free Azure account
+
+If you wish to host your app or access resources in Azure, you must have an [Azure subscription](https://azure.microsoft.com/en-in/free/). Create a free account before you begin.
+
+Now you've got all the tools to set up your account. Next, let's set up your development environment and start building! Select the app you want to create first.
+
+## Create project workspace for your tab app using C #
+
+Start Microsoft Teams app development by creating your first app. This app uses the tab capability.
+
+If the prerequisites are in place, let's begin!
+
+The following steps help you to create project workspace for your tab app in Visual Studio:
+
+1. Open Visual Studio.
+1. Select **New Project**.
+
+   :::image type="content" source="../assets/images/sbs-csharp/visual-studio-welcome.png" alt-text="Screenshot shows the selection of New Project in Visual Studio.":::
+
+1. In the search box, enter **Teams**.
+1. Select **Microsoft 365 Agents** > **Next**.
+
+   :::image type="content" source="../assets/images/sbs-csharp/project-template.png" alt-text="Screenshot shows the selection of Teams." lightbox="../assets/images/sbs-csharp/new-project-template-vs.png":::
+
+1. Enter the following details to configure your new project.
+1. Enter required project name in **Project name**.
+1. Select required location to save project files and folders.
+1. Select **Create**.
+
+   :::image type="content" source="../assets/images/sbs-csharp/teams-app-project-name.png" alt-text="Screenshot shows the creation of Project name.":::
+
+1. Select **Tab** > **Create**.
+
+   :::image type="content" source="../assets/images/sbs-csharp/select-tab.png" alt-text="Screenshot shows the selection of tab.":::
+
+The Teams tab app is created in few seconds.
+
+   :::image type="content" source="../assets/images/sbs-csharp/get-started.png" alt-text="Screenshot shows the Project Creation." lightbox="../assets/images/sbs-csharp/get-started-tab-vs.png":::
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+project+workspace+for+your+tab+app+using+C%23&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-csharp%3Ftutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-csharp.yml&documentVersionIndependentId=868d10d0-97f7-0be0-3cf5-8a26ad6db573&author=surbhigupta&platformId=2733de0a-edc3-1fad-9a1d-f66571421b8a&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+## Build and run your first tab app using C #
+
+After you set up your project workspace with Agents Toolkit, build your tab app.
+
+### Sign in to your Microsoft 365 account
+
+Use your Microsoft 365 account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
+
+1. In the **Solution Explorer**, under **Solution MyTeamsApp**, right-click on **MyTeamsApp**.
+
+1. Select **Microsoft 365 Agents Toolkit** > **Select Microsoft 365 Account**.
+
+   :::image type="content" source="../assets/images/sbs-csharp/app-dependencies.png" alt-text="Screenshot shows the selection of Teams app Dependencies." lightbox="../assets/images/sbs-csharp/teams-app-dependencies.png":::
+
+1. Select **Microsoft 365 Account** > **Continue**.
+
+   :::image type="content" source="../assets/images/sbs-csharp/select-m365-account.png" alt-text="Screenshot shows the Selection of M365-account.":::
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Sign+in+to+your+Microsoft+365+account&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-csharp%3Ftutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-csharp.yml&documentVersionIndependentId=868d10d0-97f7-0be0-3cf5-8a26ad6db573&author=surbhigupta&platformId=2733de0a-edc3-1fad-9a1d-f66571421b8a&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+## Build and run your app locally in Visual Studio
+
+To build and run your app locally:
+
+1. Select **Debug** > **Start Debugging** or select **F5**.
+
+   :::image type="content" source="../assets/images/sbs-csharp/start-debugging.png" alt-text="Screenshot shows the selection of start debugging action.":::
+
+   Visual Studio starts the debugging process and opens the Teams web client in a browser. If prompted, sign in with your Microsoft 365 account.
+
+1. Select **Add**.
+
+   :::image type="content" source="../assets/images/sbs-csharp/select-add.png" alt-text="Screenshot of the app details dialog to add the tab app to Teams.":::
+
+1. Select **Open** to open the app in personal scope.
+
+Alternatively, you can either search and select the required scope or select a channel or chat from the list, and move through the dialog to select **Go**.
+
+   :::image type="content" source="../assets/images/sbs-csharp/add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
+
+Congratulations, your first tab app is running on Teams!
+   :::image type="content" source="../assets/images/sbs-csharp/final-output.png" alt-text=" Screenshot shows the final output of the Teams tab app.":::
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Build+and+run+your+app+locally+in+Visual+Studio&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-csharp%3Ftutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-csharp.yml&documentVersionIndependentId=868d10d0-97f7-0be0-3cf5-8a26ad6db573&author=surbhigupta&platformId=2733de0a-edc3-1fad-9a1d-f66571421b8a&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+<details>
+<summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
+
+To successfully run your app in Teams, ensure that you've enabled custom app upload in your Teams account. You can learn more about custom app upload in the [Prerequisites](sbs-gs-csharp.yml?tutorial-step=1) section.
+
+</details>
+
+### Congratulations
+
+You have successfully created a tab app using C#. Agents Toolkit has added the necessary scaffolding to your app's directory structure.
+The tutorial is now complete.
+
+</details>
+
+[Back to top](#teams-app-tutorials)
