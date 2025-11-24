@@ -191,9 +191,9 @@ dotnet run
 
 1. Create a .zip file with the following files that are present in the **Manifest** folder:
 
-- manifest.json
-- icon-outline.png
-- icon-color.png
+    - manifest.json
+    - icon-outline.png
+    - icon-color.png
 
     :::image type="content" source="./assets/images/Tab-ME-SSO/upload-tab-me-sso-1.png" alt-text="Screenshot of Manifest folder with tab manifest zip folder highlighted in red.":::
 
@@ -248,19 +248,19 @@ dotnet run
 
     1. Enter your credentials in **Sign in** window and select **Next**.
 
-    :::image type="content" source="./assets/images/Tab-ME-SSO/sign-in-box.png" alt-text= "Screenshot of Microsoft Sign in page with Next highlighted in red.":::
+        :::image type="content" source="./assets/images/Tab-ME-SSO/sign-in-box.png" alt-text= "Screenshot of Microsoft Sign in page with Next highlighted in red.":::
 
     1. Select **Accept**.
 
-    :::image type="content" source="./assets/images/Tab-ME-SSO/consent-box.png" alt-text= "Screenshot of Microsoft consent dialog with Accept highlighted in red.":::
+        :::image type="content" source="./assets/images/Tab-ME-SSO/consent-box.png" alt-text= "Screenshot of Microsoft consent dialog with Accept highlighted in red.":::
 
     1. Select your profile under search box. You'll see the following output:
 
-    :::image type="content" source="./assets/images/Tab-ME-SSO/hello-megan-profile-1.png" alt-text= "Screenshot of the selected profile.":::
+        :::image type="content" source="./assets/images/Tab-ME-SSO/hello-megan-profile-1.png" alt-text= "Screenshot of the selected profile.":::
 
     1. Send `https://profile.botframework.com` to the application to get a profile card.
 
-    :::image type="content" source="./assets/images/Tab-ME-SSO/profile-card-1.png" alt-text= "Screenshot of the selected profile after entering the URL.":::
+        :::image type="content" source="./assets/images/Tab-ME-SSO/profile-card-1.png" alt-text= "Screenshot of the selected profile after entering the URL.":::
 
 ## Complete challenge
 
