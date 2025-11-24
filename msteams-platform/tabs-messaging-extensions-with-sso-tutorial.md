@@ -147,3 +147,28 @@ The following steps help you to create and register your bot in Azure portal:
     - Replace `resource` as `api://*******.ngrok.io/botid-{AppID}`.
 
         :::image type="content" source="~/assets/images/Tab-ME-SSO/vs-manifest.png" alt-text="Screenshot of the manifest.json file with the values entered highlighted in red.":::
+
+## Build and run the service
+
+To build and run the service, use Visual Studio or Command line.
+
+# [Visual Studio](#tab/vs2019)
+
+1. Open Visual Studio.
+1. Select **File** > **Open** > **Project/Solution...**.
+
+    :::image type="content" source="~/assets/images/Tab-ME-SSO/open-project1.png" alt-text="Screenshot of Visual Studio file menu. The menu entries titled Open under File menu and Project/Solution under Open are highlighted in red.":::
+
+1. In the **csharp** folder, select **App SSO Sample.csproj** file.
+
+    :::image type="content" source="./assets/images/Tab-ME-SSO/project-folder1-1.png" alt-text= "Screenshot of Project file with App SSO Sample.csproj file highlighted in red.":::
+
+1. Press **F5** to run the project.
+
+1. Select **Yes** if the following dialog appears:
+
+    :::image type="content" source="./assets/images/sbs-outgoing-webhooks/outgoing-webhook-certificate.png" alt-text="Screenshot of Security Warning with the Yes option highlighted in red.":::
+
+    A webpage appears with a message **Your bot is ready!**
+
+    :::image type="content" source="./assets/images/Tab-ME-SSO/bot-completion-explorer.png" alt-text="Screenshot of the webpage that displays Your bot is ready.":::
