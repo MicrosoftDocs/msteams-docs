@@ -13,6 +13,8 @@ Teams apps are custom solutions designed to enhance collaboration and productivi
 [WIP: Placeholder image]
 
 :::image type="content" source="../assets/images/overview/teams-apps-types.png" alt-text="Image shows types of Teams app." border="false":::
+<br>
+:::image type="content" source="../assets/images/overview/image-7.png" alt-text="Image shows types of Teams app." border="false":::
 
 Build Teams apps with the Teams SDK for client and conversational experiences, and Microsoft 365 Agents SDK for advanced, cross-hub agent scenarios. These tools help you connect to enterprise data, coordinate multi-agent workflows, and keep interactions secure and context-aware. Whether you’re creating a Teams-first solution or expanding across Microsoft 365, Teams apps give you a flexible, powerful way to deliver real impact within the Microsoft ecosystem.
 
