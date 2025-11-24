@@ -14,13 +14,6 @@ Teams apps are custom solutions designed to enhance collaboration and productivi
 
 :::image type="content" source="../assets/images/overview/teams-apps-types.png" alt-text="Image shows types of Teams app." border="false":::
 
-[WIP: tags for infographic]
-
-- **Tabs**: Embedded web experiences for dashboards, forms, or full-featured applications, accessible in chats, channels, or meetings.
-- **Bots**: Conversational apps that respond to user queries, automate tasks, and participate in discussions or meetings.
-- **Message extensions**: Tools that enable users to find and insert content or trigger actions from the compose box and contextual menus.
-- **Meeting apps**: Solutions that add configurable tabs and bot capabilities to the meeting surface, supporting workflows like agenda management and action item tracking.
-
 Build Teams apps with the Teams SDK for client and conversational experiences, and Microsoft 365 Agents SDK for advanced, cross-hub agent scenarios. These tools help you connect to enterprise data, coordinate multi-agent workflows, and keep interactions secure and context-aware. Whether you’re creating a Teams-first solution or expanding across Microsoft 365, Teams apps give you a flexible, powerful way to deliver real impact within the Microsoft ecosystem.
 
 Get started with building apps for Microsoft Teams and beyond!
