@@ -172,3 +172,13 @@ To build and run the service, use Visual Studio or Command line.
     A webpage appears with a message **Your bot is ready!**
 
     :::image type="content" source="./assets/images/Tab-ME-SSO/bot-completion-explorer.png" alt-text="Screenshot of the webpage that displays Your bot is ready.":::
+
+# [Command line](#tab/cli)
+
+Go to the **csharp** folder in a Command Prompt window and enter the following command:
+
+```bash
+dotnet run
+```
+
+![Dotnet](~/assets/images/Tab-ME-SSO/dotnet-run1.png)
