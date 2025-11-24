@@ -1,5 +1,3 @@
-**Add a web authentication**
-
 1. In the left pane, under **Manage**, select **Authentication**.
 
 1. Select **Add a platform** > **Web**.
