@@ -1,3 +1,5 @@
+**Add a web authentication**
+
 1. In the left pane, under **Manage**, select **Authentication**.
 
 1. Select **Add a platform** > **Web**.
@@ -18,4 +20,4 @@
 
 1. Select **Save**.
 
-    :::image type="content" source="../../assets/images/include-files/web-add-uri.png" alt-text="Screenshot shows the option to save the redirect URL details.":::
+    :::image type="content" source="../../assets/images/include-files/web-add-uri.png" alt-text="Screenshot shows the option to save the redirect uri.":::

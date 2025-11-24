@@ -1,3 +1,5 @@
+**Add App registration**
+
 1. Go to [Azure portal](https://ms.portal.azure.com/).
 
 1. Select **App registrations**.
