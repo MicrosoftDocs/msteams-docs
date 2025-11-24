@@ -183,6 +183,8 @@ dotnet run
 
 ![Dotnet](~/assets/images/Tab-ME-SSO/dotnet-run1.png)
 
+---
+
 ## Upload SSO App to Teams
 
 1. In your cloned repository, go to **csharp** > **App SSO Sample** > **TeamsAppManifest**.
