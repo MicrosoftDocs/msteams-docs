@@ -18,4 +18,4 @@
 
 1. Select **Save**.
 
-    :::image type="content" source="../../assets/images/include-files/web-add-uri.png" alt-text="Screenshot shows the option to add redirect uri and select implicit grant and hybrid flows.":::
+    :::image type="content" source="../../assets/images/include-files/web-add-uri.png" alt-text="Screenshot shows the option to save the redirect URL details.":::

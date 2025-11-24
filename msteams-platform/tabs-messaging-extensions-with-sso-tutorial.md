@@ -44,8 +44,8 @@ Ensure that you install the following tools and set up your development environm
 
 The following steps help you to create and register your bot in Azure portal:
 
-- Create and register your Azure app.
-- Create client secret to enable SSO authentication of the bot.
+- [Create and register your Azure app](#add-app-registration).
+- [Create client secret to enable SSO authentication of the bot](#create-a-client-secret).
 - Add Teams channel to deploy the bot.
 - Create a tunnel to your web server's endpoints using dev tunnel (recommended) or ngrok.
 - Add messaging endpoint to the dev tunnel that you created.
