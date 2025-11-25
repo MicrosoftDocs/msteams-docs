@@ -128,7 +128,7 @@ The following steps help you to create and register your bot in Azure portal:
     - Replace `"AppSecret"` to your bot's client secrets **Value**.
     - Replace `"ApplicationIdURI"` in the form of `api://*******.ngrok.io/botid-{AppID}`.
 
-    :::image type="content" source="./assets/images/Tab-ME-SSO/app-setting.png" alt-text="Screenshot of the appsettings.json file with the values entered highlighted in red.":::
+        :::image type="content" source="./assets/images/Tab-ME-SSO/app-setting.png" alt-text="Screenshot of the appsettings.json file with the values entered highlighted in red.":::
 
 ## Set up manifest file
 
