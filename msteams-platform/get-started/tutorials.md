@@ -1553,7 +1553,7 @@ To build and run the service, use Visual Studio or Command line.
 1. Open Visual Studio.
 1. Select **File** > **Open** > **Project/Solution...**.
 
-    :::image type="content" source="../assets/images/Tab-ME-SSO/open-project1.png" alt-text="Screenshot of Visual Studio file menu. The menu entries titled Open under File menu and Project/Solution under Open are highlighted in red.":::
+    :::image type="content" source="../assets/images/Tab-ME-SSO/open-project1.png" alt-text="Screenshot of Visual Studio file menu. The menu entries titled Open under the File menu and Project/Solution under Open are highlighted in red.":::
 
 1. In the **csharp** folder, select **App SSO Sample.csproj** file.
 
