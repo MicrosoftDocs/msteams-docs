@@ -134,7 +134,7 @@ The following steps help you to create and register your bot in Azure portal:
 
 1. Go to the **manifest.json** file in the cloned repository.
 
-    :::image type="content" source="./assets/images/Tab-ME-SSO/folder-manifest-1.png" alt-text="Screenshot of Manifest folder with the manifest file highlighted in red.":::
+    :::image type="content" source="./assets/images/Tab-ME-SSO/folder-manifest.png" alt-text="Screenshot of Manifest folder with the manifest file highlighted in red.":::
 
 1. Open the **manifest.json** file in Visual Studio and make the following changes:
 
