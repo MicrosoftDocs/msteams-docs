@@ -1563,11 +1563,11 @@ To build and run the service, use Visual Studio or Command line.
 
 1. Select **Yes** if the following dialog appears:
 
-    :::image type="content" source="../assets/images/sbs-outgoing-webhooks/outgoing-webhook-certificate.png" alt-text="Screenshot of Security Warning with the Yes option highlighted in red.":::
+    :::image type="content" source="../assets/images/sbs-outgoing-webhooks/outgoing-webhook-certificate.png" alt-text="Screenshot of Security Warning with the Yes option.":::
 
     A webpage appears with a message **Your bot is ready!**
 
-    :::image type="content" source="../assets/images/Tab-ME-SSO/bot-completion-explorer.png" alt-text="Screenshot of the webpage that displays Your bot is ready.":::
+    :::image type="content" source="../assets/images/Tab-ME-SSO/bot-completion-explorer.png" alt-text="Screenshot of the webpage that displays the message that your bot is ready.":::
 
 # [Command line](#tab/cli)
 
@@ -1608,7 +1608,7 @@ dotnet run
 
 1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
-    :::image type="content" source="../assets/images/Tab-ME-SSO/upload-tab-me-sso-open-1.png" alt-text="Screenshot of Manifest folder with Open option to upload the Teams Bot zip file highlighted in red.":::
+    :::image type="content" source="../assets/images/Tab-ME-SSO/upload-tab-me-sso-open-1.png" alt-text="Screenshot of the Manifest folder with Open option to upload the Teams Bot zip file highlighted in red.":::
 
 1. Select **Add**.
 
@@ -1616,7 +1616,7 @@ dotnet run
 
 1. Select **Open** and send a message to the bot.
 
-    :::image type="content" source="../assets/images/Tab-ME-SSO/open-sso-app.png" alt-text="Screenshot of scope selection dialog with Open option highlighted.":::
+    :::image type="content" source="../assets/images/Tab-ME-SSO/open-sso-app.png" alt-text="Screenshot of scope selection dialog with the Open option highlighted.":::
 
 1. The bot performs SSO and displays profile card along with option prompt to view token.
 
