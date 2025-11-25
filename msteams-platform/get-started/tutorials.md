@@ -1530,7 +1530,7 @@ The following steps help you to create and register your bot in Azure portal:
 
 1. Go to the **manifest.json** file in the cloned repository.
 
-    :::image type="content" source="./assets/images/Tab-ME-SSO/folder-manifest.png" alt-text="Screenshot of Manifest folder with the manifest file highlighted in red.":::
+    :::image type="content" source="../assets/images/Tab-ME-SSO/folder-manifest.png" alt-text="Screenshot of Manifest folder with the manifest file highlighted in red.":::
 
 1. Open the **manifest.json** file in Visual Studio and make the following changes:
 
@@ -1553,21 +1553,21 @@ To build and run the service, use Visual Studio or Command line.
 1. Open Visual Studio.
 1. Select **File** > **Open** > **Project/Solution...**.
 
-    :::image type="content" source="~/assets/images/Tab-ME-SSO/open-project1.png" alt-text="Screenshot of Visual Studio file menu. The menu entries titled Open under File menu and Project/Solution under Open are highlighted in red.":::
+    :::image type="content" source="../assets/images/Tab-ME-SSO/open-project1.png" alt-text="Screenshot of Visual Studio file menu. The menu entries titled Open under File menu and Project/Solution under Open are highlighted in red.":::
 
 1. In the **csharp** folder, select **App SSO Sample.csproj** file.
 
-    :::image type="content" source="./assets/images/Tab-ME-SSO/project-folder1-1.png" alt-text= "Screenshot of Project file with App SSO Sample.csproj file highlighted in red.":::
+    :::image type="content" source="../assets/images/Tab-ME-SSO/project-folder1-1.png" alt-text= "Screenshot of Project file with App SSO Sample.csproj file highlighted in red.":::
 
 1. Press **F5** to run the project.
 
 1. Select **Yes** if the following dialog appears:
 
-    :::image type="content" source="./assets/images/sbs-outgoing-webhooks/outgoing-webhook-certificate.png" alt-text="Screenshot of Security Warning with the Yes option highlighted in red.":::
+    :::image type="content" source="../assets/images/sbs-outgoing-webhooks/outgoing-webhook-certificate.png" alt-text="Screenshot of Security Warning with the Yes option highlighted in red.":::
 
     A webpage appears with a message **Your bot is ready!**
 
-    :::image type="content" source="./assets/images/Tab-ME-SSO/bot-completion-explorer.png" alt-text="Screenshot of the webpage that displays Your bot is ready.":::
+    :::image type="content" source="../assets/images/Tab-ME-SSO/bot-completion-explorer.png" alt-text="Screenshot of the webpage that displays Your bot is ready.":::
 
 # [Command line](#tab/cli)
 
@@ -1591,7 +1591,7 @@ dotnet run
     * icon-outline.png
     * icon-color.png
 
-        :::image type="content" source="./assets/images/Tab-ME-SSO/upload-tab-me-sso-1.png" alt-text="Screenshot of Manifest folder with tab manifest zip folder highlighted in red.":::
+        :::image type="content" source="../assets/images/Tab-ME-SSO/upload-tab-me-sso-1.png" alt-text="Screenshot of Manifest folder with tab manifest zip folder highlighted in red.":::
 
 1. In the Teams client, select the **Apps** icon.
 
@@ -1608,27 +1608,27 @@ dotnet run
 
 1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
-    :::image type="content" source="./assets/images/Tab-ME-SSO/upload-tab-me-sso-open-1.png" alt-text="Screenshot of Manifest folder with Open option to upload the Teams Bot zip file highlighted in red.":::
+    :::image type="content" source="../assets/images/Tab-ME-SSO/upload-tab-me-sso-open-1.png" alt-text="Screenshot of Manifest folder with Open option to upload the Teams Bot zip file highlighted in red.":::
 
 1. Select **Add**.
 
-    :::image type="content" source="./assets/images/Tab-ME-SSO/add-sso-app-1.png" alt-text="Screenshot of app details dialog to add tab SSO app.":::
+    :::image type="content" source="../assets/images/Tab-ME-SSO/add-sso-app-1.png" alt-text="Screenshot of app details dialog to add tab SSO app.":::
 
 1. Select **Open** and send a message to the bot.
 
-    :::image type="content" source="./assets/images/Tab-ME-SSO/open-sso-app.png" alt-text="Screenshot of scope selection dialog with Open option highlighted.":::
+    :::image type="content" source="../assets/images/Tab-ME-SSO/open-sso-app.png" alt-text="Screenshot of scope selection dialog with Open option highlighted.":::
 
 1. The bot performs SSO and displays profile card along with option prompt to view token.
 
-    :::image type="content" source="./assets/images/Tab-ME-SSO/Congratulation-image-1.png" alt-text="Screenshot of the profile card received in Teams.":::
+    :::image type="content" source="../assets/images/Tab-ME-SSO/Congratulation-image-1.png" alt-text="Screenshot of the profile card received in Teams.":::
 
 1. Select **Yes** to view token or **No** to continue with chat.
 
-    :::image type="content" source="./assets/images/Tab-ME-SSO/token-view1-1.png" alt-text="Screenshot of the dialog to either select Yes or No.":::
+    :::image type="content" source="../assets/images/Tab-ME-SSO/token-view1-1.png" alt-text="Screenshot of the dialog to either select Yes or No.":::
 
 1. If SSO isn't performed, then the bot performs default authentication method for your tab.
 
-    :::image type="content" source="./assets/images/Tab-ME-SSO/not-login11-1.png" alt-text="Screenshot of the default SSO page in Teams.":::
+    :::image type="content" source="../assets/images/Tab-ME-SSO/not-login11-1.png" alt-text="Screenshot of the default SSO page in Teams.":::
 
 1. To sign in, if SSO isn't performed:
 
@@ -1636,32 +1636,32 @@ dotnet run
 
     1. Select your new SSO application.
 
-        :::image type="content" source="./assets/images/Tab-ME-SSO/recent-app-sso-1.png" alt-text="Screenshot of your app highlighted in red in Apps section.":::
+        :::image type="content" source="../assets/images/Tab-ME-SSO/recent-app-sso-1.png" alt-text="Screenshot of your app highlighted in red in Apps section.":::
 
     1. Select **sign in**.
 
-        :::image type="content" source="./assets/images/Tab-ME-SSO/sign-in-sso1-1.png" alt-text= "Screenshot of your app with sign in highlighted in red.":::
+        :::image type="content" source="../assets/images/Tab-ME-SSO/sign-in-sso1-1.png" alt-text= "Screenshot of your app with sign in highlighted in red.":::
 
     1. Enter your credentials in **Sign in** window and select **Next**.
 
-        :::image type="content" source="./assets/images/Tab-ME-SSO/sign-in-box.png" alt-text= "Screenshot of Microsoft Sign in page with Next highlighted in red.":::
+        :::image type="content" source="../assets/images/Tab-ME-SSO/sign-in-box.png" alt-text= "Screenshot of Microsoft Sign in page with Next highlighted in red.":::
 
     1. Select **Accept**.
 
-        :::image type="content" source="./assets/images/Tab-ME-SSO/consent-box.png" alt-text= "Screenshot of Microsoft consent dialog with Accept highlighted in red.":::
+        :::image type="content" source="../assets/images/Tab-ME-SSO/consent-box.png" alt-text= "Screenshot of Microsoft consent dialog with Accept highlighted in red.":::
 
     1. Select your profile under search box. You'll see the following output:
 
-        :::image type="content" source="./assets/images/Tab-ME-SSO/hello-megan-profile-1.png" alt-text= "Screenshot of the selected profile.":::
+        :::image type="content" source="../assets/images/Tab-ME-SSO/hello-megan-profile-1.png" alt-text= "Screenshot of the selected profile.":::
 
     1. Send `https://profile.botframework.com` to the application to get a profile card.
 
-        :::image type="content" source="./assets/images/Tab-ME-SSO/profile-card-1.png" alt-text= "Screenshot of the selected profile after entering the URL.":::
+        :::image type="content" source="../assets/images/Tab-ME-SSO/profile-card-1.png" alt-text= "Screenshot of the selected profile after entering the URL.":::
 
 ### Complete challenge
 
 Did you come up with output like this?
 
-:::image type="content" source="./assets/images/Tab-ME-SSO//hello-megan-profile245-1.png" alt-text="Screenshot of the output after you have successfully completed the step-by-step guide.":::
+:::image type="content" source="../assets/images/Tab-ME-SSO//hello-megan-profile245-1.png" alt-text="Screenshot of the output after you have successfully completed the step-by-step guide.":::
 
 You've completed the tutorial to get started with SSO for tab and message extension app.
