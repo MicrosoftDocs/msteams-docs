@@ -50,10 +50,11 @@ Alternately, you can use a basic single sign-on (SSO) **hello world** app that's
 Use the Agents Toolkit extension for Visual Studio Code to start with a personal tab that's enabled to run in Teams, Outlook, and Microsoft 365.
 
 1. Open **Visual Studio Code**.
-2. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="../assets/images/toolkit-v2/toolkit-sidebar-icon.PNG" border="false"::: icon in the activity bar.
-3. Select **Create a New App**.
-4. Select **Tab**.
-5. Select **Basic Tab**.
+1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="../assets/images/toolkit-v2/toolkit-sidebar-icon.PNG" border="false"::: icon in the activity bar.
+1. Select **Create a New Agent/App**.
+1. Select **Teams Agents and Apps**.
+1. Select **Other Teams Capabilities**.
+1. Select **Tab**.
 
     :::image type="content" source="images/toolkit-tab-sample.png" alt-text="Screenshot shows the Basic Tab option highlighted to create a new app feature using a tab.":::
 
@@ -61,12 +62,12 @@ Use the Agents Toolkit extension for Visual Studio Code to start with a personal
 7. Select a location on your local machine for the workspace folder and enter your application name.
 8. Once your app is created, within the Agents Toolkit extension, make sure you're signed in to the appropriate Microsoft 365 Developer Program sandbox tenant and Azure account. These options are available in the **ACCOUNTS** section of the extension.
 9. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
-10. Enter **Microsoft 365 Agents: Provision** to create the Teams app resources such as Azure App Service, App Service plan, Azure Bot, and Managed Identity in your Azure account. 
+10. Enter **Microsoft 365 Agents: Provision** to create the Teams app resources such as Azure App Service, App Service plan, Azure Bot, and Managed Identity in your Azure account.
     Alternatively, you can select **Provision** under **LIFECYCLE** section of the extension.
 1. Select a subscription and a resource group. If you choose to create a new resource group, you need to specify the location.
 1. Select **Provision**.
 1. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
-1. Enter **Microsoft 365 Agents: Deploy** to deploy the sample code to the provisioned resources in Azure and start the app. 
+1. Enter **Microsoft 365 Agents: Deploy** to deploy the sample code to the provisioned resources in Azure and start the app.
     Alternatively, you can select **Deploy** under the **LIFECYCLE** section of the extension.
 
 From here, you can skip ahead to [upload your custom app in Teams](#upload-your-custom-app-in-teams) and preview your app in Outlook and the Microsoft 365 app. The app manifest and TeamsJS API calls are already updated for Microsoft 365 app.
@@ -103,7 +104,6 @@ You have two options for updating your app manifest:
 1. Open the command palette: `Ctrl+Shift+P`.
 1. Run the `Microsoft 365 Agents: Upgrade Teams manifest` command and select your app manifest file. Changes are made in place.
 
-
 # [Manual steps](#tab/manifest-manual)
 
 Open your app manifest and update the `$schema` and `manifestVersion` manually with the appropriate version. Refer to [Teams developer manifest](/microsoft-365/extensibility/schema/) for version information:
@@ -114,6 +114,7 @@ Open your app manifest and update the `$schema` and `manifestVersion` manually w
     "manifestVersion" : "1.20"
 }
 ```
+
 ---
 
 You can use Agents Toolkit to [validate your app manifest](../toolkit/TeamsFx-preview-and-customize-app-manifest.md#validate-your-app) and identify any errors.

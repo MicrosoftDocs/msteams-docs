@@ -99,7 +99,7 @@ To change the default location, follow these steps:
 
     A dialog appears, where you need to choose yes or no to trust the authors of the files in this folder.
 
-    :::image type="content" source="../assets/images/toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-bot/trust-author.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder.":::
 
 Now, you've successfully created your AI chat bot project workspace.
 
