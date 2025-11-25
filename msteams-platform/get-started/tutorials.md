@@ -1306,7 +1306,7 @@ If you wish to host your app or access resources in Azure, you must have an [Azu
 
 Now you've got all the tools to set up your account. Next, let's set up your development environment and start building! Select the app you want to create first.
 
-## Create project workspace for your tab app using C #
+### Create project workspace for your tab app using C #
 
 Start Microsoft Teams app development by creating your first app. This app uses the tab capability.
 
@@ -1363,7 +1363,7 @@ Use your Microsoft 365 account to sign in to Teams. If you're using a Microsoft 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Sign+in+to+your+Microsoft+365+account&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-csharp%3Ftutorial-step%3D3&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-csharp.yml&documentVersionIndependentId=868d10d0-97f7-0be0-3cf5-8a26ad6db573&author=surbhigupta&platformId=2733de0a-edc3-1fad-9a1d-f66571421b8a&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
-## Build and run your app locally in Visual Studio
+### Build and run your app locally in Visual Studio
 
 To build and run your app locally:
 
