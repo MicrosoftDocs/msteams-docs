@@ -298,7 +298,7 @@ Teams web client opens in a browser window.
 
 :::image type="content" source="../assets/images/toolkit-v2/first-tab/add-tab-app-local-debug.png" alt-text="Screenshot shows to add the app to Teams.":::
 
-1. Congratulations, your first app is running on Teams!
+3. Congratulations, your first app is running on Teams!
 
 :::image type="content" source="../assets/images/toolkit-v2/first-tab/tab-app-localdebug.png" alt-text="Screenshot shows the completed app" lightbox="../assets/images/toolkit-v2/first-tab/tab-app-localdebug-1.png":::
 
