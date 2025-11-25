@@ -94,4 +94,4 @@ Once the provisioning and deployment steps are complete:
 
     Congratulations, your first tab app is running in your Azure environment!
 
-   :::image type="content" source="../assets/images/toolkit-v2/deploy-azure/azure-deployed-apptab.png" alt-text="Screenshot shows the message to try the app now or later.":::
+   :::image type="content" source="~/assets/images/toolkit-v2/deploy-azure/azure-deployed-apptab.png" alt-text="Screenshot shows the message to try the app now or later.":::
