@@ -138,13 +138,13 @@ The following steps help you to create and register your bot in Azure portal:
 
 1. Open the **manifest.json** file in Visual Studio and make the following changes:
 
-    - Replace `DOMAIN-NAME` with your ngrok URL.
-    - Replace `YOUR-MICROSOFT-APP-ID` with your bot's **Microsoft App ID**.
+    1. Replace `DOMAIN-NAME` with your ngrok URL.
+    1. Replace `YOUR-MICROSOFT-APP-ID` with your bot's **Microsoft App ID**.
 
         > [!NOTE]
         > Depending on the scenario `[YOUR-MICROSOFT-APP-ID]` and `[DOMAIN-NAME]` may occur multiple times.
 
-    - Replace `resource` as `api://*******.ngrok.io/botid-{AppID}`.
+    1. Replace `resource` as `api://*******.ngrok.io/botid-{AppID}`.
 
         :::image type="content" source="~/assets/images/Tab-ME-SSO/vs-manifest.png" alt-text="Screenshot of the manifest.json file with the values entered highlighted in red.":::
 
@@ -195,7 +195,7 @@ dotnet run
     - icon-outline.png
     - icon-color.png
 
-    :::image type="content" source="./assets/images/Tab-ME-SSO/upload-tab-me-sso-1.png" alt-text="Screenshot of Manifest folder with tab manifest zip folder highlighted in red.":::
+        :::image type="content" source="./assets/images/Tab-ME-SSO/upload-tab-me-sso-1.png" alt-text="Screenshot of Manifest folder with tab manifest zip folder highlighted in red.":::
 
 1. In the Teams client, select the **Apps** icon.
 
