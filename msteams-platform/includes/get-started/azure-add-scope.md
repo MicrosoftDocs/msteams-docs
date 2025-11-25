@@ -12,13 +12,10 @@
 
 1. Update the values for the rest of the fields as follows:
 
-   * Enter **Teams can access the user’s profile** as **Admin consent display name**.
-
-   * Enter **Allows Teams to call the app’s web APIs as the current user** as **Admin consent description**.
-
-   * Enter **Teams can access the user profile and make requests on the user’s behalf** as **User consent display name**.
-
-   * Enter **Enable Teams to call this app’s APIs with the same rights as the user** as **User consent description**.
+   - Enter **Teams can access the user’s profile** as **Admin consent display name**.
+   - Enter **Allows Teams to call the app’s web APIs as the current user** as **Admin consent description**.
+   - Enter **Teams can access the user profile and make requests on the user’s behalf** as **User consent display name**.
+   - Enter **Enable Teams to call this app’s APIs with the same rights as the user** as **User consent description**.
 
 1. Ensure that **State** is set to **Enabled**.
 
