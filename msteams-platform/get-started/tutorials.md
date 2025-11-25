@@ -114,7 +114,7 @@ To change the default location, follow these steps:
 
     A dialog appears, where you need to choose yes or no to trust the authors of the files in this folder.
 
-    :::image type="content" source="../assets/images/toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder.":::
+    :::image type="content" source="../toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/first-bot/vsc-trust-authors.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder.":::
 
 Now, you've successfully created your AI chat bot project workspace.
 
@@ -1048,7 +1048,7 @@ The following steps help you to create and register your bot in the Azure portal
 
 1. Next to **Application ID URI**, select **Add**.
 
-   :::image type="content" source="~/assets/images/bots/expose-api-add-uri.png" alt-text="Screenshot shows the option to add Application ID URI.":::
+   :::image type="content" source="~/assets/images/bots/expose-api-add-uri.png" alt-text="Screenshot shows the option to add Application ID URI for your app.":::
 
 1. Update the **Application ID URI** in the `api://botid-{AppID}` format and select **Save**.
 
