@@ -1200,7 +1200,7 @@ You've completed the tutorial to get started with build a bot with SSO authentic
 
 [Back to top](#teams-app-tutorials)
 
-## Build your first app using C #
+## Build your first app using C sharp
 
 <details>
 <summary>Tutorial: Build your first app using C#</summary>
