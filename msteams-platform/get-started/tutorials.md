@@ -974,7 +974,7 @@ To verify custom upload apps in Teams:
 > [!NOTE]
 > Contact Teams administrator, if you don't have the option to upload a custom app.
 
-#### Create a free Teams developer tenant (optional)
+#### Create a free Teams developer tenant
 
 If you don't have a Teams developer account, you can get it for free. Join the Microsoft 365 developer program!
 
@@ -1417,7 +1417,7 @@ The  Microsoft Entra single sign-on (Microsoft Entra SSO) helps to authenticate 
 
 This step-by-step guide helps you to create tabs and message extensions enabling Microsoft Entra SSO authentication. You'll see the following output:
 
-:::image type="content" source="assets/images/Tab-ME-SSO/hello-megan-profile245-1.png" alt-text="Screenshot of the tab and message extension with SSO authentication output after you have successfully completed the step-by-step guide.":::
+:::image type="content" source="../assets/images/Tab-ME-SSO/hello-megan-profile245-1.png" alt-text="Screenshot of the tab and message extension with SSO authentication output after you have successfully completed the step-by-step guide.":::
 
 ### Prerequisites
 
@@ -1426,7 +1426,7 @@ Ensure that you install the following tools and set up your development environm
 | &nbsp; | Install | For using... |
 | --- | --- | --- |
 | 1. | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and calls all in one place.|
-| 2. | [Microsoft 365 developer account](concepts/build-and-test/prepare-your-o365-tenant.md) | Access to Teams account with the appropriate permissions to install an app. |
+| 2. | [Microsoft 365 developer account](../concepts/build-and-test/prepare-your-o365-tenant.md) | Access to Teams account with the appropriate permissions to install an app. |
 | 3. | [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the latest version, install the portable version. |
 | 4. | [Visual Studio 2022](https://visualstudio.microsoft.com) | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
 | 5. | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/downloads) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
@@ -1436,7 +1436,7 @@ Ensure that you install the following tools and set up your development environm
 
 ### Set up local environment
 
-[!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
+[!INCLUDE [Set up local environment](../includes/get-started/clone-repository.md)]
 
 ### Register Microsoft Entra app
 
@@ -1448,23 +1448,23 @@ The following steps help you to create and register your bot in Azure portal:
 * Create a tunnel to your web server's endpoints using dev tunnel (recommended) or ngrok.
 * Add messaging endpoint to the dev tunnel that you created.
 
-[!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
+[!INCLUDE [Azure app registration](../includes/get-started/azure-app-registration.md)]
 
 **Create a tunnel**
 
 # [dev tunnel](#tab/dev)
 
-[!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
+[!INCLUDE [Tunnel](../includes/get-started/dev-tunnel.md)]
 
 # [ngrok](#tab/ngrok)
 
-[!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
+[!INCLUDE [Tunnel](../includes/get-started/ngrok-tunnel.md)]
 
 ---
 
-[!INCLUDE [Azure web authentication](includes/get-started/azure-web-authentication.md)]
+[!INCLUDE [Azure web authentication](../includes/get-started/azure-web-authentication.md)]
 
-[!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
+[!INCLUDE [Client secret](../includes/get-started/create-client-secret.md)]
 
 **Add API permissions**
 
@@ -1472,7 +1472,7 @@ The following steps help you to create and register your bot in Azure portal:
 
 1. Select **+ Add a permission**.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-api-permission.png" alt-text="Screenshot shows the option to select Add permission.":::
+    :::image type="content" source="../assets/images/teams-file-upload-bot/add-api-permission.png" alt-text="Screenshot shows the option to select Add permission.":::
 
 1. Select **Microsoft Graph**.
 
@@ -1482,38 +1482,36 @@ The following steps help you to create and register your bot in Azure portal:
 
 1. Select **Add permissions**.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/select-api-permission.png" alt-text="Screenshot show the option to select permissions.":::
+    :::image type="content" source="../assets/images/teams-file-upload-bot/select-api-permission.png" alt-text="Screenshot show the option to select permissions.":::
 
 > [!NOTE]
 >
 > * If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
 > * Users need to consent to the API permissions only if the Microsoft Entra app is registered in a different tenant.
 
-[!INCLUDE [Application ID URI](includes/get-started/application-id-uri.md)]
+[!INCLUDE [Application ID URI](../includes/get-started/application-id-uri.md)]
 
-[!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
+[!INCLUDE [Azure add scope](../includes/get-started/azure-add-scope.md)]
 
-[!INCLUDE [Azure client application](includes/get-started/azure-client-application.md)]
+[!INCLUDE [Azure client application](../includes/get-started/azure-client-application.md)]
 
-[!INCLUDE [Manifest](includes/get-started/azure-manifest.md)]
+[!INCLUDE [Manifest](../includes/get-started/azure-manifest.md)]
 
 ### Create your bot
 
-[!INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource.md)]
+[!INCLUDE [Azure bot resource](../includes/get-started/azure-bot-resource.md)]
 
-[!INCLUDE [Teams channel](includes/get-started/add-teams-channel.md)]
+[!INCLUDE [Teams channel](../includes/get-started/add-teams-channel.md)]
 
-[!INCLUDE [Messaging endpoint](includes/get-started/messaging-endpoint.md)]
+[!INCLUDE [Messaging endpoint](../includes/get-started/messaging-endpoint.md)]
 
-[!INCLUDE [Service connection](includes/get-started/oauth-connection-settings.md)]
+[!INCLUDE [Service connection](../includes/get-started/oauth-connection-settings.md)]
 
 ### Set up app settings
 
 1. Go to the **appsettings.json** file in the cloned repository.
 
-    :::image type="content" source="./assets/images/Tab-ME-SSO/app-setting-folder-1.png" alt-text="Screenshot of Project file with appsettings.json file highlighted in red.":::
-
-1. Open the **appsettings.json** file in Visual Studio.
+    :::image type="content" source="../assets/images/Tab-ME-SSO/app-setting-folder-1.png" alt-text="Screenshot of Project file with appsettings.json file highlighted in red.":::
 
 1. Update the following information:  
 
@@ -1526,7 +1524,7 @@ The following steps help you to create and register your bot in Azure portal:
     * Replace `"AppSecret"` to your bot's client secrets **Value**.
     * Replace `"ApplicationIdURI"` in the form of `api://*******.ngrok.io/botid-{AppID}`.
 
-        :::image type="content" source="./assets/images/Tab-ME-SSO/app-setting.png" alt-text="Screenshot of the appsettings.json file with the values entered highlighted in red.":::
+    :::image type="content" source="../assets/images/Tab-ME-SSO/app-setting.png" alt-text="Screenshot of the appsettings.json file with the values entered highlighted in red.":::
 
 ### Set up manifest file
 
