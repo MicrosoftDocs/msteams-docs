@@ -10,7 +10,7 @@ The <b>Provision</b> step creates resources in Azure and Microsoft 365 for your 
 </details>
 <br>
 
-   # [Visual Studio Code](#tab/vscode)
+# [Visual Studio Code](#tab/vscode)
 
    Select the Microsoft 365 Agents Toolkit :::image type="icon" source="~/assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
@@ -55,7 +55,7 @@ The <b>Provision</b> step creates resources in Azure and Microsoft 365 for your 
 
    Now, you can use the same process to deploy your Bot and Message Extension apps to Azure.
 
-   # [Command Line](#tab/cli)
+# [Command Line](#tab/cli)
 
    In your terminal window:
 
@@ -94,4 +94,4 @@ Once the provisioning and deployment steps are complete:
 
     Congratulations, your first tab app is running in your Azure environment!
 
-   :::image type="content" source="~/assets/images/toolkit-v2/deploy-azure/azure-deployed-apptab.png" alt-text="Screenshot shows the message to try the app now or later.":::
+   :::image type="content" source="../assets/images/toolkit-v2/deploy-azure/azure-deployed-apptab.png" alt-text="Screenshot shows the message to try the app now or later.":::
