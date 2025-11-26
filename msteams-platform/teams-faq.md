@@ -1,6 +1,6 @@
 ---
 title: Teams Developer Documentation - FAQs
-description: In this article, check FAQS on Adaptive Card Previewer, bots, Live Share, Microsoft 365 Chat, Teams AI library, Partner Center, and other Teams FAQs.
+description: In this article, check FAQS on Adaptive Card Previewer, bots, Live Share, Microsoft 365 Chat, Teams AI library, Teams SDK, Partner Center, and other Teams FAQs.
 ms.topic: reference
 ms.date: 01/23/2025
 ms.localizationpriority: high
@@ -110,6 +110,13 @@ App registration is disabled for the user or the user doesn't have enough permis
 
 To use your app within Teams, you must upload it into Teams. For more information, see [upload your app to Teams](toolkit/test-app-behavior.md#upload-your-app-to-teams).
 
+</details>
+<details>
+<summary>How does a bot use custom emoji in a message in Teams?</summary>
+
+Bots must send emojis as UTF-16 text. HTML, data URI images, and Skype emoji schemas aren't supported in Teams.
+<br>
+&nbsp;
 </details>
 
 ## Live share
@@ -462,6 +469,13 @@ For more information, see [Use Postman with the Microsoft Graph API](/graph/use-
 Yes, Graph API works in Microsoft Graph explorer.
 
 For more information, see [Graph explorer](https://developer.microsoft.com/graph/graph-explorer).
+<br>
+&nbsp;
+</details>
+<details>
+<summary>How can my Teams bot distinguish between regular users and admins without using Graph API?</summary>
+
+Configure your Azure AD app to include the `wids` claim in the token. Your bot can then inspect the token to securely identify admin roles such as Global Admin (`62e90394-69f5-4237-9190-012177145e10`) or Teams Admin (`69091246-20e8-4a56-aa4d-066075b2a7a8`), without using Graph API.
 <br>
 &nbsp;
 </details>
@@ -1136,19 +1150,19 @@ To optimize your tab app performance on Teams mobile, use service workers to cac
 </details>
 </details>
 
-## Teams AI library
+## Teams SDK
 
 <br>
 <details>
-<summary>What does Teams AI library do?</summary>
+<summary>What does Teams SDK do?</summary>
 
-Teams AI library provides abstractions for you to build robust applications that utilize OpenAI Large Language Models (LLMs).
+Teams SDK provides abstractions for you to build robust applications that utilize OpenAI Large Language Models (LLMs).
 <br>
 </details>
 </br>
 
 <details>
-<summary>Does Microsoft provide a hosted version of OpenAI models that are used by the AI library?</summary>
+<summary>Does Microsoft provide a hosted version of OpenAI models that are used by Teams SDK?</summary>
 
 No, you need to have your Large Language Models (LLMs) hosted in Azure OpenAI or elsewhere.
 <br>
@@ -1156,9 +1170,9 @@ No, you need to have your Large Language Models (LLMs) hosted in Azure OpenAI or
 </br>
 
 <details>
-<summary>Can we use the AI library with other large language models apart from OpenAI?</summary>
+<summary>Can we use Teams SDK with other large language models apart from OpenAI?</summary>
 
-Yes, it's possible to use Teams AI library with other Large Language Models (LLMs).
+Yes, it's possible to use Teams SDK with other Large Language Models (LLMs).
 <br>
 </details>
 </br>
@@ -1166,13 +1180,13 @@ Yes, it's possible to use Teams AI library with other Large Language Models (LLM
 <details>
 <summary>Does a developer need to do anything to benefit from LLMs? If yes, why?</summary>
 
-Yes, Teams AI library provides abstractions to simplify utilization of Large Language Models (LLMs) in conversational applications. However, you (developer) must tweak the prompts, topic filters, and actions depending on your scenarios.
+Yes, Teams SDK provides abstractions to simplify utilization of Large Language Models (LLMs) in conversational applications. However, you (developer) must tweak the prompts, topic filters, and actions depending on your scenarios.
 <br>
 </details>
 </br>
 
 <details>
-<summary>How does Teams AI library integrate with ODSL?</summary>
+<summary>How does Teams SDK integrate with ODSL?</summary>
 
 The two are independent and can't be integrated.
 <br>
@@ -1180,10 +1194,10 @@ The two are independent and can't be integrated.
 </br>
 
 <details>
-<summary>How does Teams AI library co-exist against the hero-story of developers building for the skills ecosystem in Microsoft 365?</summary>
+<summary>How does Teams SDK co-exist against the hero-story of developers building for the skills ecosystem in Microsoft 365?</summary>
 </br>
 
-Teams AI library story is targeted towards pro-developers and separate from the hero-story around skills ecosystem in Microsoft 365.
+Teams SDK story is targeted towards pro-developers and separate from the hero-story around skills ecosystem in Microsoft 365.
 <br>
 </details>
 </br>
@@ -1191,7 +1205,7 @@ Teams AI library story is targeted towards pro-developers and separate from the 
 <details>
 <summary>How must information about the existing Bot Framework SDK be communicated after announcing a new version?</summary>
 
-Teams AI library works alongside the existing Bot Framework SDK and isn't a replacement.
+Teams SDK works alongside the existing Bot Framework SDK and isn't a replacement.
 <br>
 </details>
 
@@ -1242,5 +1256,50 @@ Shared references to deploy the code using toolkit:
 * [Agents Toolkit CLI](toolkit/Teams-Toolkit-CLI.md)
 
 You can call Graph API to get the app user's profile photo.
+<br>
+&nbsp;
+</details>
 
+## App distribution
+
+<details>
+<summary>Why do I see the message <b>You don’t have access to this app</b> when adding a custom Teams app?</summary>
+
+To resolve the **You don’t have access to this app** error, ensure the Teams channel is enabled in your Azure Bot Service.
+<br>
+&nbsp;
+</details>
+<details>
+<summary> Is it acceptable to include <code>localhost</code> as a valid domain in an Outlook Add-in manifest?</summary>
+
+The `localhost` domain is acceptable for local development and testing only. For production or store submission, all endpoints must be publicly accessible and secured by using HTTPS.
+<br>
+&nbsp;
+</details>
+
+## PowerShell
+
+<details>
+<summary>How can I retrieve all auto attendants or call queues if the output is limited to 100 rows?</summary>
+
+Use the `-First` and `-Skip` parameters with `Get-CsAutoAttendant` or `Get-CsCallQueue` to paginate results and retrieve all entries. The `-Limit All` parameter is no longer supported.
+<br>
+&nbsp;
+</details>
+
+## Power Platform
+
+<details>
+<summary> How can I configure a Teams workflow to wait for manual approval without timing out too quickly?</summary>
+
+Use the **Start and wait for an approval** action in Power Automate. In the action settings, extend the timeout by specifying the duration in ISO 8601 format (for example, `P7D` for 7 days). This ensures the workflow is paused until the approval is granted.
+<br>
+&nbsp;
+</details>
+<details>
+<summary> What are the Power Platform licensing requirement for managed environments and Copilot usage?</summary>
+
+In managed environments, all makers and end users must have a Power Platform premium license, even for standard apps. For Copilot, individual licenses aren’t required if users are covered under tenant-level messaging capacity. Otherwise, a personal Copilot license is needed.
+<br>
+&nbsp;
 </details>

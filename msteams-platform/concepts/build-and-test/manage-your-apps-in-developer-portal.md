@@ -9,7 +9,8 @@ ms.date: 01/23/2025
 
 # Manage your apps in Developer Portal
 
-After you upload your app in Microsoft Teams, you can manage your app in Developer Portal. The article provides comprehensive guidance on app configuration, analytics, and validation to enhance the Teams app experience.
+After you upload your app in Microsoft Teams, you can manage your app in Developer Portal. The article provides comprehensive guidance on app configuration, analytics, and validation to enhance the Teams app experience.<br>
+In addition, you learn about Agent Identity Blueprint to create and manage agent identities for your agent.
 
 ## Overview
 
@@ -244,6 +245,7 @@ The Developer Portal also includes tools to help you build key features of Teams
 * **Adaptive Cards editor (Preview)**: Create and preview Adaptive Cards to include with your apps.
 * **Identity platform management (Preview)**: Register your apps with Microsoft Entra ID to help users sign in and provide access to APIs.
 * **Teams Store app validation**: Check your app package against the test cases that Microsoft uses to review your app. We recommend you to use latest app validation tool in your app under [**Publish**](#publish) section.
+* **Agent Identity Blueprint**: Create, configure, and manage reusable blueprints that define an Agent 365 and its back-end connection details. For more information, see [Agent Identity Blueprint](#agent-identity-blueprint).
 * **Bot management**: Add conversational bots to your app that communicate with users, respond to their questions, and proactively notify them about changes and other events.
 
 To add a bot:
@@ -276,8 +278,96 @@ From the Developer Portal, you can go to Bot Framework portal and configure your
   > [!NOTE]
   > Bot ID doesn't support environment variables.
 
+### Agent Identity Blueprint
+
+An Agent Identity Blueprint provides a reusable configurations for agents in **Agent 365** that can perform tasks and interact with users or Microsoft 365 services. Each blueprint acts as a template that specifies how an agent is configured and connected to a back-end service.
+
+Agent Identity Blueprints are created and managed in **Developer Portal**, while the agent identities derived from them are managed in the **Microsoft 365 Admin Center**. To get started and for complete end-to-end guidance on extending your agent to Agent 365, use the [Microsoft Agent 365 SDK](/microsoft-agent-365/developer/?tabs=python).
+
+#### View and use existing Agent Identity Blueprints
+
+The Agent Identity Blueprint tool in the Developer Portal displays a list of existing blueprints available in your tenant.
+
+:::image type="content" source="../../assets/images/tdp/list-agent-blueprint.png" alt-text="List of available agent blueprints" lightbox="../../assets/images/tdp/list-agent-blueprint.png":::
+
+ You can use Agent Identity Blueprint to:
+
+* View configuration details for an existing blueprint, including its type and blueprint ID.
+* Edit or update configuration for a blueprint.
+
+If a suitable blueprint doesn’t already exist, you can create a new one.
+
+#### Create a new agent identity blueprint
+
+1. In [Teams Developer Portal](https://dev.teams.microsoft.com/home), go to the **Tools** section and select **Agent Identity Blueprint**.
+
+    :::image type="content" source="../../assets/images/tdp/agent-blueprint.png" alt-text="Agent Blueprint" lightbox="../../assets/images/tdp/agent-blueprint.png":::
+
+1. Select **+ New blueprint**.
+
+    :::image type="content" source="../../assets/images/tdp/new-agent-blueprint.png" alt-text="Create a new agent blueprint" lightbox="../../assets/images/tdp/new-agent-blueprint.png":::
+
+1. Enter the name and select **Create**.
+
+    :::image type="content" source="../../assets/images/tdp/create-new-agent-blueprint.png" alt-text="Create a new agent blueprint window" lightbox="../../assets/images/tdp/create-new-agent-blueprint.png":::
+
+    A unique **Agent Blueprint ID** is automatically generated. This ID is used when you create agent identities based on this blueprint.
+
+#### Configure the agent identity blueprint
+
+Each blueprint includes two key configuration areas:
+
+1. **Basic information**: You can view the following basic configuration for your blueprint:
+
+    1. **Agent Blueprint ID**: A system-generated unique identifier for the blueprint.
+    1. **Name**: The name assigned when the blueprint was created.
+
+    :::image type="content" source="../../assets/images/tdp/basic-information-agent-blueprint.png" alt-text="Basic information tab in Agent Blueprint" lightbox="../../assets/images/tdp/basic-information-agent-blueprint.png":::
+
+1. **Configuration**: In this tab, you can specify how the agent communicates with its service.
+
+    1. In the **Configuration** tab, go to **Agent Type**.
+        * Choose how the agent connects to a back-end service.
+        * Select one of the following options:
+
+            | Agent Type | Description |
+            |-----------|------------|
+            | none | No bot or API association (default).|
+            |Bot Based | Use an existing bot registered in Teams.|
+            |API Based | Use a custom API endpoint to define agent behaviour.|
+
+    1. Based on the selected agent type, enter one of the following:
+        * **Bot ID**: If you selected Bot-based, provide the ID of your registered Teams bot.
+        * **Backend URL**: If you selected API-based, provide the URL of your back-end service endpoint.
+    1. Select **Save** to apply your configuration.
+    1. Select **Revert** to discard the changes.
+
+    :::image type="content" source="../../assets/images/tdp/configuration-agent-blueprint.png" alt-text="Configuration tab in Agent Blueprint" lightbox="../../assets/images/tdp/configuration-agent-blueprint.png":::
+
+<!--1. **Credentials**:
+    Agent blueprints include credentials used for authentication and authorization when agent identities interact with Teams services. You can manage two types of credentials:
+
+    * **Client Secrets**: They are used for API secret–based authentication.
+
+        * View existing client secrets that are added to the blueprint.
+
+        * Select **+ New Secret** to add a new client secret.
+
+        * Edit or delete existing secrets using the **⋯** menu.
+
+    * **Federated Identity Credentials**: They allow token-based authentication.
+
+        * View existing federated identities that are added to the blueprint.
+
+        * Select **+ New Federated Identity** to add a new federated identity.
+
+        * Edit or remove a federated identity using the **⋯** menu.
+
+    :::image type="content" source="../../assets/images/tdp/credentials-agent-blueprint.png" alt-text="Credentials tab in Agent Blueprint":::
+-->
 ## See also
 
+* [Teams Admin Center](https://admin.teams.microsoft.com/dashboard)
 * [Microsoft 365 Agents Toolkit Overview](../../toolkit/agents-toolkit-fundamentals.md)
 * [Include a SaaS offer with your Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
 * [Teams Store validation guidelines](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
