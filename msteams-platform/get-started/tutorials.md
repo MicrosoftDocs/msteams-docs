@@ -14,13 +14,23 @@ Learn more about building Teams app capabilities.
    :::column:::
     <b>Bots</b>
     - [Debug your AI chat bot using Microsoft 365 Agents Playground](#debug-your-ai-chat-bot-using-microsoft-365-agents-playground)
-    - [Build a bot with SSO authentication](#build-a-bot-with-sso-authentication)
+   :::column-end:::
+
+    <b>Tabs</b>
+    - [Build your first app using C sharp](#build-your-first-app-using-c-sharp)
    :::column-end:::
 
    :::column:::
     <b>Message extension</b>
     - [Build API-based message extension](#build-api-based-message-extension)
    :::column-end:::
+
+   :::column:::
+    <b>SSO</b>
+    - [Build a bot with SSO authentication](#build-a-bot-with-sso-authentication)
+    - [Add SSO to tab and message extension app](#add-sso-to-tab-and-message-extension-app)
+   :::column-end:::
+
 :::row-end:::
 
 ## Debug your AI chat bot using Microsoft 365 Agents Playground
