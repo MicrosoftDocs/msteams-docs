@@ -1670,4 +1670,5 @@ Did you come up with output like this?
 You've completed the tutorial to get started with SSO for tab and message extension app.
 
 </details>
+
 [Back to top](#teams-app-tutorials)
