@@ -35,20 +35,24 @@ Build collaborative workspace with apps for Microsoft Teams. You can bring peopl
 
 Teams helps organizations modernize communication, foster engagement, and deliver seamless, secure, and context-aware experiences.
 
-## What you can build in Teams?
+## What capabilities can you build in Teams?
 
 Teams platforms supports the following app types:
 
-- **Tabs (personal, team/channel, and meeting tabs)**
+- **Tabs**:
+
   Tabs are web experiences (hosted pages) that run inside Teams. Use them for dashboards, forms, or full fidelity web apps embedded in a chat, channel, or meeting. Tabs can also be extended to Outlook and the Microsoft 365 app when you target the modern Teams client APIs.
 
-- **Bots (conversational experiences)**
-  In Teams, “bots” have evolved into agents—AI enhanced, conversational apps that respond in 1:1, group, channel, or meeting contexts. You can build agents that answer questions, summarize discussions, automate tasks, and participate in meetings (for example, sending agenda updates or capturing action items).
+- **Bots**:
 
-- **Message extensions**
-  Message extensions bring “find and insert” and “action” commands to the compose box and contextual menus. They call into your service and return cards that users can insert into a message, or launch dialogs to complete short workflows.
+  In Teams, bots have evolved into agents, that is, AI-enhanced, conversational apps that respond in 1:1, group, channel, or meeting contexts. You can build bot apps or agents that answer questions, summarize discussions, automate tasks, and participate in meetings (for example, sending agenda updates or capturing action items).
 
-- **Meeting apps**
+- **Message extensions**:
+
+  Message extensions bring search and action commands to the compose box and contextual menus. They call into your service and return cards that users can insert into a message, or launch dialogs to complete short workflows.
+
+- **Meeting apps**:
+
   Meeting apps add configurable tabs and bot capabilities to the meeting surface. You can react to meeting lifecycle events (start/end), notify participants, and provide in meeting UI for notes, tasks, and workflows.
 
 ## Teams apps building blocks
@@ -76,13 +80,6 @@ In this section, learn how to build a Teams app with different capabilities, suc
 - **Build message extension Teams app**: Build a [search-based message extension](build-message-extension.md).
 
 Get started with building apps for Microsoft Teams and beyond!
-
-## Next step
-
-If you want to build a declarative agent, select the following:
-
-> [!div class="nextstepaction"]
-> [Build declarative agent](/microsoft-365-copilot/extensibility/build-declarative-agents?tabs=ttk)
 
 ## See also
 
