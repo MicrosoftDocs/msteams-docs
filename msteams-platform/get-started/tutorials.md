@@ -31,7 +31,6 @@ Learn more about building Teams app capabilities.
     - [Build a bot with SSO authentication](#build-a-bot-with-sso-authentication)
     - [Add SSO to tab and message extension app](#add-sso-to-tab-and-message-extension-app)
    :::column-end:::
-
 :::row-end:::
 
 ## Debug your AI chat bot using Microsoft 365 Agents Playground
@@ -47,8 +46,8 @@ You can chat with your bot and view the messages and Adaptive Cards as they appe
 
 > [!NOTE]
 >
-> * Agents Playground is available only in v5.4.0 of Microsoft 365 Agents Toolkit (previously known as Teams Toolkit).
-> * Agents Playground is supported only for desktop and web clients.
+> - Agents Playground is available only in v5.4.0 of Microsoft 365 Agents Toolkit (previously known as Teams Toolkit).
+> - Agents Playground is supported only for desktop and web clients.
 
 This step-by-step guide helps you to build an AI chat bot using Agents Toolkit and debug with the Test Tool. You'll see the following output after you've completed this guide, where the user can access and use the AI chat bot:
 
@@ -426,21 +425,21 @@ OpenAPI Description (OAD) is the industry-standard specification that outlines h
 
 To interact with the APIs, an OpenAPI Description document is necessary. The OpenAPI Description document must meet the following criteria:
 
-* The `auth` property must not be specified.
-* JSON and YAML are the supported formats.
-* OpenAPI Versions 2.0 and 3.0.x are supported.
-* Teams doesn't support the oneOf, anyOf, allOf, and not (swagger.io) constructs.
-* Constructing arrays for the request isn't supported, however, nested objects within a JSON request body are supported.
-* The request body, if present, must be application/Json to ensure compatibility with a wide range of APIs.
-* Define an HTTPS protocol server URL for the `servers.url` property.
-* Only single parameter search is supported.
-* Only one required parameter without a default value is allowed.
-* Only POST and GET HTTP methods are supported.
-* The OpenAPI Description document must have an `operationId`.
-* The operation mustn't require Header or Cookie parameters without default values.
-* A command must have exactly one parameter.
-* Ensure that there are no remote references in the OpenAPI Description document.
-* A required parameter with a default value is considered optional.
+- The `auth` property must not be specified.
+- JSON and YAML are the supported formats.
+- OpenAPI Versions 2.0 and 3.0.x are supported.
+- Teams doesn't support the oneOf, anyOf, allOf, and not (swagger.io) constructs.
+- Constructing arrays for the request isn't supported, however, nested objects within a JSON request body are supported.
+- The request body, if present, must be application/Json to ensure compatibility with a wide range of APIs.
+- Define an HTTPS protocol server URL for the `servers.url` property.
+- Only single parameter search is supported.
+- Only one required parameter without a default value is allowed.
+- Only POST and GET HTTP methods are supported.
+- The OpenAPI Description document must have an `operationId`.
+- The operation mustn't require Header or Cookie parameters without default values.
+- A command must have exactly one parameter.
+- Ensure that there are no remote references in the OpenAPI Description document.
+- A required parameter with a default value is considered optional.
 
 We used the following OpenAPI Description as an example for this tutorial:
 
@@ -671,8 +670,8 @@ Following is an example of a preview card template:
 
 Create an if condition for the `title` and `subtitle`, where:
 
-* If name exists, the bot uses the name.
-* If name doesn't exist, the bot uses NA.
+- If name exists, the bot uses the name.
+- If name doesn't exist, the bot uses NA.
 
 For example, `"title": "Name: ${if(name, name, 'N/A')}"`.
 Save the preview card template for future reference.
@@ -875,24 +874,24 @@ To create the manifest, follow these steps:
 
 1. Update the app manifest properties as follows:
 
-     * Replace `<<YOUR-MICROSOFT-APP-ID>>` with bot's Microsoft App ID.
-     * Update the value for `composeExtensionType` to `apiBased`.
-     * Update the value for `apiSpecificationFile` to the path of your OpenAPI Description file.
-     * Update the value for `commands.id` to `searchTools`.
-     * Update the value for `commands.title` to `Search for AI Tools`.
-     * Update the value for `commands.description` to `Search for AI Tools`.
-     * Update the value for `parameters.name` to `search`. If there are no parameters, then the values must be query parameters or `properties.name` if referencing a property in the request body schema.
-     * Update the `apiResponseRenderingTemplateFile` to the path of your response rendering template file.
-     * Update the value for `validDomains` to the `service URL` endpoint defined in the OpenAPI Description file.
+     - Replace `<<YOUR-MICROSOFT-APP-ID>>` with bot's Microsoft App ID.
+     - Update the value for `composeExtensionType` to `apiBased`.
+     - Update the value for `apiSpecificationFile` to the path of your OpenAPI Description file.
+     - Update the value for `commands.id` to `searchTools`.
+     - Update the value for `commands.title` to `Search for AI Tools`.
+     - Update the value for `commands.description` to `Search for AI Tools`.
+     - Update the value for `parameters.name` to `search`. If there are no parameters, then the values must be query parameters or `properties.name` if referencing a property in the request body schema.
+     - Update the `apiResponseRenderingTemplateFile` to the path of your response rendering template file.
+     - Update the value for `validDomains` to the `service URL` endpoint defined in the OpenAPI Description file.
 
 1. Save the Teams app manifest in the same folder you saved the OpenAPI Description document and the response rendering template.
-    * You need a color image and outline image. These images should be included in the folder and referenced in your Teams app manifest.
-    * Zip up the contents of the folder. The zip file must include the following files:
-      * OpenAPI Description document
-      * Response rendering template
-      * App manifest
-      * Color icon
-      * Outline icon
+    - You need a color image and outline image. These images should be included in the folder and referenced in your Teams app manifest.
+    - Zip up the contents of the folder. The zip file must include the following files:
+      - OpenAPI Description document
+      - Response rendering template
+      - App manifest
+      - Color icon
+      - Outline icon
 
 ### Upload a custom app to Teams
 
@@ -939,8 +938,8 @@ Conversational bots in Microsoft Teams perform repetitive automated tasks initia
 
 A bot behaves differently depending on the conversation it's involved in:
 
-* Bots in channel and group chat conversations require the users to @mention the bot.
-* Bots in a one-to-one conversation don't require an @mention. All messages sent by the user routes to the bot.
+- Bots in channel and group chat conversations require the users to @mention the bot.
+- Bots in a one-to-one conversation don't require an @mention. All messages sent by the user routes to the bot.
 
 This step-by-step guide helps you to build a bot with SSO authentication. You'll see the following output:
 
@@ -1006,11 +1005,11 @@ If you don't have a Teams developer account, you can get it for free. Join the M
 
 The following steps help you to create and register your bot in the Azure portal:
 
-* Create and register your Azure app.
-* Create client secret to enable SSO authentication of the bot.
-* Add Teams channel to deploy the bot.
-* Create a tunnel to your web server's endpoints using dev tunnel (recommended) or ngrok.
-* Add messaging endpoint to the dev tunnel that you created.
+- Create and register your Azure app.
+- Create client secret to enable SSO authentication of the bot.
+- Add Teams channel to deploy the bot.
+- Create a tunnel to your web server's endpoints using dev tunnel (recommended) or ngrok.
+- Add messaging endpoint to the dev tunnel that you created.
 
 [!INCLUDE [Azure app registration](../includes/get-started/azure-app-registration.md)]
 
@@ -1089,11 +1088,11 @@ The following steps help you to create and register your bot in the Azure portal
 
 1. Open the **appsettings.json** file and update the following information:
 
-   * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
-   * Set `"MicrosoftAppPassword"` to your bot's client secret ID **value**.
-   * Set `ConnectionName` as OAuth connection name.
-   * Set `"MicrosoftAppType"` to **MultiTenant**.
-   * Set `"MicrosoftAppTenantId"` to **common**.
+   - Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
+   - Set `"MicrosoftAppPassword"` to your bot's client secret ID **value**.
+   - Set `ConnectionName` as OAuth connection name.
+   - Set `"MicrosoftAppType"` to **MultiTenant**.
+   - Set `"MicrosoftAppTenantId"` to **common**.
 
    :::image type="content" source="~/assets/images/teams-file-upload-bot/appsettings-json-bot-sso.png" alt-text="Screenshot shows the appsettings json.":::
 
@@ -1103,8 +1102,8 @@ The following steps help you to create and register your bot in the Azure portal
 
 1. Open the **manifest.json** file and update the following changes:
 
-   * Replace all occurrences of `"{TODO: MicrosoftAppId}"` with your **Microsoft App ID**.
-   * Set `"<<domain-name>>"` to your ngrok or dev tunnel domain.
+   - Replace all occurrences of `"{TODO: MicrosoftAppId}"` with your **Microsoft App ID**.
+   - Set `"<<domain-name>>"` to your ngrok or dev tunnel domain.
 
    :::image type="content" source="../assets/images/teams-file-upload-bot/manifest-bot-id-botsso.png" alt-text="Screenshot shows the details filled in the manifest file in visual studio.":::
 
@@ -1153,9 +1152,9 @@ The following steps help you to create and register your bot in the Azure portal
 1. In your cloned repository, go to **Microsoft-Teams-Samples** > **samples** > **bot-conversation-sso-quickstart** > **csharp_dotnetcore** > **TeamsApp** > **appPackage**.
 1. Create a .zip file with the following files that are present in the **appPackage** folder:
 
-    * manifest.json
-    * outline.png
-    * color.png
+    - manifest.json
+    - outline.png
+    - color.png
 
     :::image type="content" source="~/assets/images/bots/manifest_1.png" alt-text="Screenshot of Manifest folder with the Teams Bot zip folder highlighted in red.":::
 
@@ -1220,8 +1219,8 @@ Start Microsoft Teams app development by building your first Teams app with a ta
 
 In this tutorial, you'll learn:
 
-* How to set up a new project.
-* How to build apps with tab capability using C# and Microsoft Visual Studio 2022.
+- How to set up a new project.
+- How to build apps with tab capability using C# and Microsoft Visual Studio 2022.
 
 This step-by-step guide helps you to build a tab with Microsoft 365 Agents Toolkit (previously known as Teams Toolkit). You'll see the following output after you've completed this guide:
 
@@ -1425,9 +1424,9 @@ The  Microsoft Entra single sign-on (Microsoft Entra SSO) helps to authenticate 
 
 **Key aspects of Microsoft Entra SSO**:
 
-* Allows the user to sign in automatically after the first sign in.
-* Allows the user to sign in to other devices without entering credentials again.
-* Obtains token for the signed in user.
+- Allows the user to sign in automatically after the first sign in.
+- Allows the user to sign in to other devices without entering credentials again.
+- Obtains token for the signed in user.
 
 This step-by-step guide helps you to create tabs and message extensions enabling Microsoft Entra SSO authentication. You'll see the following output:
 
@@ -1456,11 +1455,11 @@ Ensure that you install the following tools and set up your development environm
 
 The following steps help you to create and register your bot in Azure portal:
 
-* Create and register your Azure app.
-* Create client secret to enable SSO authentication of the bot.
-* Add Teams channel to deploy the bot.
-* Create a tunnel to your web server's endpoints using dev tunnel (recommended) or ngrok.
-* Add messaging endpoint to the dev tunnel that you created.
+- Create and register your Azure app.
+- Create client secret to enable SSO authentication of the bot.
+- Add Teams channel to deploy the bot.
+- Create a tunnel to your web server's endpoints using dev tunnel (recommended) or ngrok.
+- Add messaging endpoint to the dev tunnel that you created.
 
 [!INCLUDE [Azure app registration](../includes/get-started/azure-app-registration.md)]
 
@@ -1500,8 +1499,8 @@ The following steps help you to create and register your bot in Azure portal:
 
 > [!NOTE]
 >
-> * If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
-> * Users need to consent to the API permissions only if the Microsoft Entra app is registered in a different tenant.
+> - If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
+> - Users need to consent to the API permissions only if the Microsoft Entra app is registered in a different tenant.
 
 [!INCLUDE [Application ID URI](../includes/get-started/application-id-uri.md)]
 
@@ -1529,14 +1528,14 @@ The following steps help you to create and register your bot in Azure portal:
 
 1. Update the following information:  
 
-    * Replace `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
-    * Replace `"MicrosoftAppPassword"` to your bot's client secrets **Value**.
-    * Replace `"SiteUrl"` to your ngrok URL.
-    * Replace `"ConnectionName"` to the name of OAuth connection setting.
-    * Replace `"TenantId"` to the tenant ID of the tenant where the app is used.
-    * Replace `"ClientId"` to your bot's **Microsoft App ID**.
-    * Replace `"AppSecret"` to your bot's client secrets **Value**.
-    * Replace `"ApplicationIdURI"` in the form of `api://*******.ngrok.io/botid-{AppID}`.
+    - Replace `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
+    - Replace `"MicrosoftAppPassword"` to your bot's client secrets **Value**.
+    - Replace `"SiteUrl"` to your ngrok URL.
+    - Replace `"ConnectionName"` to the name of OAuth connection setting.
+    - Replace `"TenantId"` to the tenant ID of the tenant where the app is used.
+    - Replace `"ClientId"` to your bot's **Microsoft App ID**.
+    - Replace `"AppSecret"` to your bot's client secrets **Value**.
+    - Replace `"ApplicationIdURI"` in the form of `api://*******.ngrok.io/botid-{AppID}`.
 
     :::image type="content" source="../assets/images/Tab-ME-SSO/app-setting.png" alt-text="Screenshot of the appsettings.json file with the values entered highlighted in red.":::
 
@@ -1601,9 +1600,9 @@ dotnet run
 
 1. Create a .zip file with the following files that are present in the **Manifest** folder:
 
-    * manifest.json
-    * icon-outline.png
-    * icon-color.png
+    - manifest.json
+    - icon-outline.png
+    - icon-color.png
 
         :::image type="content" source="../assets/images/Tab-ME-SSO/upload-tab-me-sso-1.png" alt-text="Screenshot of Manifest folder with tab manifest zip folder highlighted in red.":::
 
