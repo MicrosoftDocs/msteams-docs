@@ -1701,7 +1701,7 @@ Ensure that you install the following tools and set up your development environm
 
 ### Set up local environment
 
-[!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
+[!INCLUDE [Set up local environment](../includes/get-started/clone-repository.md)]
 
 ### Register Microsoft Entra app
 
@@ -1713,31 +1713,31 @@ The following steps help you to create and register your bot in Azure portal:
 - Create a tunnel to your web server's endpoints using dev tunnel (recommended) or ngrok.
 - Add messaging endpoint to the dev tunnel that you created.
 
-[!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
+[!INCLUDE [Azure app registration](../includes/get-started/azure-app-registration.md)]
 
 **Create a tunnel**
 
 # [dev tunnel](#tab/dev)
 
-[!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
+[!INCLUDE [Tunnel](../includes/get-started/dev-tunnel.md)]
 
 # [ngrok](#tab/ngrok)
 
-[!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
+[!INCLUDE [Tunnel](../includes/get-started/ngrok-tunnel.md)]
 
 ---
 
-[!INCLUDE [Azure web authentication](includes/get-started/azure-web-authentication.md)]
+[!INCLUDE [Azure web authentication](../includes/get-started/azure-web-authentication.md)]
 
-[!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
+[!INCLUDE [Client secret](../includes/get-started/create-client-secret.md)]
 
-[!INCLUDE [API Permissions](includes/get-started/azure-api-permissions.md)]
+[!INCLUDE [API Permissions](../includes/get-started/azure-api-permissions.md)]
 
-[!INCLUDE [Application ID URI](includes/get-started/application-id-uri.md)]
+[!INCLUDE [Application ID URI](../includes/get-started/application-id-uri.md)]
 
-[!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
+[!INCLUDE [Azure add scope](../includes/get-started/azure-add-scope.md)]
 
-[!INCLUDE [Azure client application](includes/get-started/azure-client-application.md)]
+[!INCLUDE [Azure client application](../includes/get-started/azure-client-application.md)]
 
 ### Create your bot
 
