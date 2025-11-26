@@ -1683,7 +1683,7 @@ Teams action based message extension allow users to interact with web services i
 
 This step-by-step guide helps you to build Teams action-based message extension to initiate actions from compose message and message area. By the end of this tutorial, you can achieve the following output:
 
-:::image type="content" source="./assets/images/sbs-messagingextension-action/sharemessageoutput1.png" alt-text="Screenshot of the message extension output after you have successfully completed the step-by-step guide.":::
+:::image type="content" source="../assets/images/sbs-messagingextension-action/sharemessageoutput1.png" alt-text="Screenshot of the message extension output after you have successfully completed the step-by-step guide.":::
 
 ### Prerequisites
 
@@ -1741,17 +1741,17 @@ The following steps help you to create and register your bot in Azure portal:
 
 ### Create your bot
 
-[!INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource.md)]
+[!INCLUDE [Azure bot resource](../includes/get-started/azure-bot-resource.md)]
 
-[!INCLUDE [Teams channel](includes/get-started/add-teams-channel.md)]
+[!INCLUDE [Teams channel](../includes/get-started/add-teams-channel.md)]
 
-[!INCLUDE [Messaging endpoint](includes/get-started/messaging-endpoint.md)]
+[!INCLUDE [Messaging endpoint](../includes/get-started/messaging-endpoint.md)]
 
 ### Set up app settings and manifest files
 
 1. Go to the **appsettings.json** file in cloned repository.
 
-    :::image type="content" source="./assets/images/sbs-messagingextension-action/appsettingslocation.png" alt-text="Screenshot of cloned repository with the file path and appsettings JSON file highlighted in red.":::
+    :::image type="content" source="../assets/images/sbs-messagingextension-action/appsettingslocation.png" alt-text="Screenshot of cloned repository with the file path and appsettings JSON file highlighted in red.":::
 
 1. Open the **appsettings.json** file and update the following information:  
 
@@ -1761,44 +1761,44 @@ The following steps help you to create and register your bot in Azure portal:
     - Leave `"MicrosoftAppTenantId"` blank for MultiTenant bot.
     - Set `"BaseUrl"` to the fully qualified domain name.
 
-    :::image type="content" source="./assets/images/sbs-messagingextension-action/json-file.png" alt-text="Screenshot of appsettings JSON file displaying the appsettings information.":::
+    :::image type="content" source="../assets/images/sbs-messagingextension-action/json-file.png" alt-text="Screenshot of appsettings JSON file displaying the appsettings information.":::
 
 1. Go to the **manifest.json** file in the cloned repository.
 
-    :::image type="content" source="./assets/images/sbs-messagingextension-action/manifestlocation.png" alt-text="Screenshot of Teams App Manifest folder with the file path and manifest file highlighted in red.":::
+    :::image type="content" source="../assets/images/sbs-messagingextension-action/manifestlocation.png" alt-text="Screenshot of Teams App Manifest folder with the file path and manifest file highlighted in red.":::
 
 1. Open the **manifest.json** file and make the following changes:
 
     - Replace the `<<validDomains>>` with your fully qualified domain name.
     - Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
 
-    :::image type="content" source="./assets/images/sbs-messagingextension-action/botid1.png" alt-text="Screenshot of manifest page with the ID, bot ID, and Valid domains highlighted in red.":::
+    :::image type="content" source="../assets/images/sbs-messagingextension-action/botid1.png" alt-text="Screenshot of manifest page with the ID, bot ID, and Valid domains highlighted in red.":::
 
 ### Build and run the service
 
 To build and run the service, use Visual Studio or Command line.
 
-# [Visual Studio](#tab/latestversionofvisualstudio)
+# [Visual Studio](#tab/vs2025)
 
 1. Open Visual Studio.
 
 1. Go to **File** > **Open** > **Project/Solution....**.
 
-    :::image type="content" source="./assets/images/sbs-messagingextension-action/VSopenfile.png" alt-text="Screenshot of Visual Studio with the Project/Solution highlighted in red.":::
+    :::image type="content" source="../assets/images/sbs-messagingextension-action/VSopenfile.png" alt-text="Screenshot of Visual Studio with the Project/Solution highlighted in red.":::
 
 1. From **csharp** folder, select the **TeamsMessagingExtensionsAction.csproj** file.
 
-    :::image type="content" source="./assets/images/sbs-messagingextension-action/openproject.png" alt-text="Screenshot of cloned repository with the TeamsMessagingExtensionsAction.csproj highlighted in red.":::
+    :::image type="content" source="../assets/images/sbs-messagingextension-action/openproject.png" alt-text="Screenshot of cloned repository with the TeamsMessagingExtensionsAction.csproj highlighted in red.":::
 
 1. Press **F5** to run the project.
 
 1. Select **Yes** if the following dialog appears:
 
-    :::image type="content" source="./assets/images/sbs-messagingextension-action/certificate.png" alt-text="Screenshot of Security Warning with the Yes option highlighted in red.":::
+    :::image type="content" source="../assets/images/sbs-messagingextension-action/certificate.png" alt-text="Screenshot of Security Warning with the Yes option highlighted in red.":::
 
     A webpage appears with a message **Your bot is ready!**.
 
-    :::image type="content" source="./assets/images/sbs-messagingextension-action/appisready.png" alt-text="Screenshot of the webpage that displays Your bot is ready!.":::
+    :::image type="content" source="../assets/images/sbs-messagingextension-action/appisready.png" alt-text="Screenshot of the webpage that displays Your bot is ready!.":::
 
 # [Command line](#tab/cli)
 
@@ -1808,7 +1808,7 @@ Go to **samples** > **msgext-action** > **csharp** in Command Prompt window and 
     dotnet run
 ```
 
-:::image type="content" source="./assets/images/sbs-messagingextension-action/dotnetruncmd.png" alt-text="Screenshot of Command Prompt - dotnet run with the dotnet run command.":::
+:::image type="content" source="../assets/images/sbs-messagingextension-action/dotnetruncmd.png" alt-text="Screenshot of Command Prompt - dotnet run with the dotnet run command.":::
 
 ---
 
@@ -1822,7 +1822,7 @@ Go to **samples** > **msgext-action** > **csharp** in Command Prompt window and 
     - icon-outline.png
     - icon-color.png
 
-    :::image type="content" source="./assets/images/sbs-messagingextension-action/zipfile.png" alt-text="Screenshot of cloned repository with the Messaging extension zip file highlighted in red.":::
+    :::image type="content" source="../assets/images/sbs-messagingextension-action/zipfile.png" alt-text="Screenshot of cloned repository with the Messaging extension zip file highlighted in red.":::
 
 1. In the Teams client, select the **Apps** icon.
 
