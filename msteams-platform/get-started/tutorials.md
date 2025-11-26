@@ -16,6 +16,7 @@ Learn more about building Teams app capabilities.
     - [Debug your AI chat bot using Microsoft 365 Agents Playground](#debug-your-ai-chat-bot-using-microsoft-365-agents-playground)
    :::column-end:::
 
+    :::column:::
     <b>Tabs</b>
     - [Build your first app using C sharp](#build-your-first-app-using-c-sharp)
    :::column-end:::
