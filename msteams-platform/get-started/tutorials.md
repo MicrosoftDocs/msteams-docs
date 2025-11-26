@@ -53,9 +53,6 @@ This step-by-step guide helps you to build an AI chat bot using Agents Toolkit a
 
 :::image type="content" source="../assets/images/toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool." lightbox="../assets/images/toolkit-v2/debug/test-tool.png":::
 
-<details>
-<summary><b>Ensure you install the following tools for building and deploying your apps.</b></summary>
-
 | Install | For using... |
 | --- | --- |
 | [Visual Studio Code](https://code.visualstudio.com/download) or  [Visual Studio](https://visualstudio.microsoft.com/downloads/) | JavaScript, TypeScript, or C# build environments. Use the latest version. |
@@ -63,8 +60,6 @@ This step-by-step guide helps you to build an AI chat bot using Agents Toolkit a
 | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
 | [OpenAI](https://openai.com/api/) or  [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
 | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
-
-</details>
 
 ### Create project workspace for your AI chat bot app
 
@@ -74,7 +69,7 @@ The bot capability of a Teams app creates a chatbot or a conversational bot. It 
 
 As you've already prepared for creating these apps, you can set up a new Teams project for creating the AI chat bot app.
 
-In this tutorial, learn:
+In this tutorial, learn how to:
 
 1. [Create your bot project workspace.](#create-your-bot-project-workspace)
 1. [Take a tour of the bot app source code.](#take-a-tour-of-the-bot-app-source-code)
@@ -241,7 +236,7 @@ You've successfully created key and endpoint for your AI chat bot.
 1. Enter your Azure Open AI deployment name in `azureDefaultDeployment`.
 
     ```JavaScript
-    ...
+
     // Use OpenAI
     // apiKey: config.openAIKey,
     // defaultModel: "gpt-3.5-turbo",
@@ -249,7 +244,7 @@ You've successfully created key and endpoint for your AI chat bot.
     azureApiKey: config.azureOpenAIKey,
     azureDefaultDeployment: "gpt-35-turbo",
     azureEndpoint: config.azureOpenAIEndpoint,
-    ...
+
     ```
 
 #### Debug and run your AI chat bot app
@@ -348,6 +343,8 @@ Congratulations! You've successfully created an AI chat bot app. Now, you've lea
 
 </details>
 
+[Back to top](#teams-app-tutorials)
+
 ## Build API-based message extension
 
 <details>
@@ -360,7 +357,7 @@ Message extensions built using API (API-based) significantly enhance the functio
 
 You can use API-based message extensions to integrate external services that are commonly used in the business workflow. For example, a business that frequently uses a CRM system for customer management could use a message extension to fetch and display customer data directly from Teams. This app helps save time and improves efficiency by reducing the need to switch between different applications. This feature is supported on all platforms where Teams is available, including desktop, web, and mobile.
 
-### Prerequisites
+### Prerequisites for building a message extension
 
 Here's a list of tools you need for building and deploying your apps.
 
@@ -555,7 +552,8 @@ To create an Adaptive Card template, follow these steps:
 
 1. Go to [ChatGPT](https://chat.openai.com/) and ask the following query in the message compose area:
 
-    ```text
+    ```http
+    
     Create an Adaptive Card Template that binds to the following response:
         "categories": [
             "Music Generation",
@@ -578,9 +576,11 @@ To create an Adaptive Card template, follow these steps:
 
 Following is an example of the Adaptive Card template:
 
-<details><summary>Adaptive Card template</summary>
+<details>
+<summary>Adaptive Card template</summary>
 
 ```json
+
 {
 "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
 "type": "AdaptiveCard",
@@ -729,6 +729,7 @@ The following code is an example of a Response rendering template:
 <summary>Response rendering template</summary>
 
 ```json
+
 {
     "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.ResponseRenderingTemplate.schema.json",
     "version": "1.0",
@@ -945,25 +946,25 @@ This step-by-step guide helps you to build a bot with SSO authentication. You'll
 
  :::image type="content" source="~/assets/images/bots/sbs-desktop-mobile.png" alt-text=" Screenshot of the bot with SSO authentication output after you’ve successfully completed the step-by-step guide.":::
 
-### Prerequisites
+### Prerequisites for building a bot
 
 Ensure that you install the following tools and set up your development environment:  
 
-| &nbsp; | Install | For using... |
-| --- | --- | --- |
-| &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) |  Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and calls all in one place. |
-| &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com) | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
-| &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
-| &nbsp; | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/download) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
+| Install | For using... |
+| --- | --- |
+| [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) |  Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and calls all in one place. |
+| [Visual Studio 2022](https://visualstudio.microsoft.com) | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
+| [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
+| Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/download) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
 
 > [!NOTE]
 > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
-### Set up your Teams development tenant
+### Set up the Teams development tenant
 
- tenant is like a space or a container where you chat, share files, and run meetings for your organization in Teams. You can also upload and test the custom app.
+A tenant is like a space or a container where you chat, share files, and run meetings for your organization in Teams. You can also upload and test the custom app.
 
-#### Check for custom app upload option
+#### Check for a custom app upload option
 
 After creating the app, you must load your app in Teams without distributing it. This process is known as custom app upload. Sign in to your Microsoft 365 account to view this option.
 
