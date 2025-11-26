@@ -25,7 +25,7 @@ Here's an idea of what you'll learn:
 
 ## Why Build Apps for Microsoft Teams?
 
-Build collaborative workspace with apps for Microsoft Teams. You can bring people, data, and workflows together in one place. With over 320 million users, Teams isn’t just for chats and meetings; it’s a powerful hub to simplify processes, automate tasks, and keep key information at readily accessible. Develop custom apps or integrating existing solutions into Teams to:
+Build collaborative workspace with apps for Microsoft Teams. You can bring people, data, and workflows together in one place. With over 320 million users, Teams isn’t just for chats and meetings. It’s a powerful hub to simplify processes, automate tasks, and keep key information at readily accessible. Develop custom apps or integrate existing solutions into Teams to:
 
 - **Boost productivity**: Bring all your essential tools, data, and business processes in one place. It enables app users to switch quickly between apps and achieve more.
 - **Enhance collaboration**: Enable teams to communicate, share insights, and work together whether through bots, tabs, message extensions, or meeting apps.
@@ -75,9 +75,11 @@ Here's a list of SDKs and tools that you can use to build app capabilities:
 
 In this section, learn how to build a Teams app with different capabilities, such as bot, tab, and message extension. Select the type of Teams app that you want to build:
 
-- **Build a simple Teams bot app**: Build a [bot](build-notification-bot.md). (WIP: Link to be updated for basic bot app.)
-- **Build a basic Teams tab app**: Get started with building a Teams app with a [a basic tab app](build-basic-tab-app.md).
-- **Build message extension Teams app**: Build a [search-based message extension](build-message-extension.md).
+- [Build a simple Teams bot app](build-notification-bot.md) (WIP: Link to be updated for basic bot app.)
+- [Build a basic Teams tab app](build-basic-tab-app.md)
+- [Build message extension Teams app](build-message-extension.md)
+
+After you've built the basic app capabilities, [explore tutorials and code samples](tool-options-and-code-samples.md). (WIP: Link to be added for Tutorials page once that is merged.)
 
 Get started with building apps for Microsoft Teams and beyond!
 
