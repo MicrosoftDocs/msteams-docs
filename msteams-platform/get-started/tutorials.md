@@ -1481,7 +1481,7 @@ The following steps help you to create and register your bot in Azure portal:
 
 1. Select **Add permissions**.
 
-    :::image type="content" source="../assets/images/teams-file-upload-bot/select-api-permission.png" alt-text="Screenshot show the option to select permissions.":::
+    :::image type="content" source="../assets/images/teams-file-upload-bot/select-api-permission.png" alt-text="Screenshot shows the option to select permissions.":::
 
 > [!NOTE]
 >
@@ -1778,7 +1778,7 @@ The following steps help you to create and register your bot in Azure portal:
 
 To build and run the service, use Visual Studio or Command line.
 
-# [Visual Studio](#tab/vs2025)
+# [Visual Studio](#tab/vs2019)
 
 1. Open Visual Studio.
 
@@ -1794,7 +1794,7 @@ To build and run the service, use Visual Studio or Command line.
 
 1. Select **Yes** if the following dialog appears:
 
-    :::image type="content" source="../assets/images/sbs-messagingextension-action/certificate.png" alt-text="Screenshot of Security Warning with the Yes option highlighted in red.":::
+    :::image type="content" source="../assets/images/sbs-messagingextension-action/certificate.png" alt-text="Screenshot of Security Warning with the Yes option highlighted in red color.":::
 
     A webpage appears with a message **Your bot is ready!**.
 
@@ -1839,47 +1839,47 @@ Go to **samples** > **msgext-action** > **csharp** in Command Prompt window and 
 
 1. Select **Open** to upload the messaging.zip file that you created in the TeamsAppManifest folder.
 
-    :::image type="content" source="./assets/images/sbs-messagingextension-action/openzipfile.png" alt-text="Screenshot of the cloned repository displaying the messaging zip file.":::
+    :::image type="content" source="../assets/images/sbs-messagingextension-action/openzipfile.png" alt-text="Screenshot of the cloned repository displaying the messaging zip file.":::
 
 1. Select **Add**.
 
-    :::image type="content" source="./assets/images/sbs-messagingextension-action/add-app.png" alt-text="Screenshot of the app details dialog to add the message extension app.":::
+    :::image type="content" source="../assets/images/sbs-messagingextension-action/add-app.png" alt-text="Screenshot of the app details dialog to add the message extension app.":::
 
 1. Select **Open** to open the app in personal scope.
 
     Alternatively, you can either search and select the required scope or select a channel, chat, or meeting from the list, and move through the dialog to select **Go**.
 
-    :::image type="content" source="./assets/images/sbs-messagingextension-action/add-scope.png" alt-text="Screenshot of the scope selection dialog to select the required scope.":::
+    :::image type="content" source="../assets/images/sbs-messagingextension-action/add-scope.png" alt-text="Screenshot of the scope selection dialog to select the required scope.":::
 
 ### Interact with the app in Teams
 
 1. Select **Create Card** command from the compose box command list.
 
-    :::image type="content" source="./assets/images/sbs-messagingextension-action/create-card.png" alt-text="Screenshot of message compose box overflow menu with Create Card highlighted in red.":::
+    :::image type="content" source="../assets/images/sbs-messagingextension-action/create-card.png" alt-text="Screenshot of message compose box overflow menu with Create Card highlighted in red.":::
 
 1. Enter your information in the modal pop-up window.
 
-    :::image type="content" source="./assets/images/sbs-messagingextension-action/output-card.png" alt-text="The Screenshot shows the Create Card model pop-up of the Action Messaging Extension.":::
+    :::image type="content" source="../assets/images/sbs-messagingextension-action/output-card.png" alt-text="The Screenshot shows the Create Card model pop-up of the Action Messaging Extension.":::
 
 1. Select **Submit**.
 
-    :::image type="content" source="./assets/images/sbs-messagingextension-action/submit.png" alt-text="Screenshot of Create Card model pop-up with the Submit option highlighted in red.":::
+    :::image type="content" source="../assets/images/sbs-messagingextension-action/submit.png" alt-text="Screenshot of Create Card model pop-up with the Submit option highlighted in red.":::
 
 1. Select More options (...) from the overflow menu.
 
 1. Select **More actions** > **Share Message**.
 
-    :::image type="content" source="./assets/images/sbs-messagingextension-action/sharemessage.png" alt-text="Screenshot shows the message overflow menu. The Share Message and More actions are highlighted in red.":::
+    :::image type="content" source="../assets/images/sbs-messagingextension-action/sharemessage.png" alt-text="Screenshot shows the message overflow menu. The Share Message and More actions are highlighted in red.":::
 
 1. If you want to include an image, select the **Include image in Hero Card** checkbox and then select **Submit**.
 
-    :::image type="content" source="./assets/images/sbs-messagingextension-action/sharemessageoutput.png" alt-text="Screenshot of Action Messaging Extension with the include image in Hero Card checkbox and Submit option highlighted in red.":::
+    :::image type="content" source="../assets/images/sbs-messagingextension-action/sharemessageoutput.png" alt-text="Screenshot of Action Messaging Extension with the include image in Hero Card checkbox and Submit option highlighted in red.":::
 
 ### Complete challenge
 
 Did you come up with something like this?
 
-:::image type="content" source="./assets/images/sbs-messagingextension-action/sharemessageoutput1.png" alt-text="Screenshot of the message extension output after you have successfully completed the step-by-step guide.":::
+:::image type="content" source="../assets/images/sbs-messagingextension-action/sharemessageoutput1.png" alt-text="Screenshot of the action based message extension output after you have successfully completed the step-by-step guide.":::
 
 You've completed the tutorial to get started with a **Action Message Extension** app!
 
