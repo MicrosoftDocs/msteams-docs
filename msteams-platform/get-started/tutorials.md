@@ -1668,3 +1668,221 @@ You've completed the tutorial to get started with SSO for tab and message extens
 </details>
 
 [Back to top](#teams-app-tutorials)
+
+## Build action based message extension
+
+<details>
+<summary><b>Tutorial: Build action based message extension</b></summary>
+
+Teams action based message extension allow users to interact with web services in the Microsoft Teams client. Message extensions help to initiate actions in an external system from the compose message area, the command box, or directly from a message.
+
+**Key features of action based message extension**:
+
+- Presents the user with a modal pop-up to collect or display information.
+- Triggers the action commands from the compose message area, the command box, or from a message.
+
+This step-by-step guide helps you to build Teams action-based message extension to initiate actions from compose message and message area. By the end of this tutorial, you can achieve the following output:
+
+:::image type="content" source="./assets/images/sbs-messagingextension-action/sharemessageoutput1.png" alt-text="Screenshot of the message extension output after you have successfully completed the step-by-step guide.":::
+
+### Prerequisites
+
+Ensure that you install the following tools and set up your development environment:
+
+| &nbsp; | Install | For using... |
+| --- | --- | --- |
+| 1. | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call all in one place.|
+| 2. | [Visual Studio 2022](https://visualstudio.microsoft.com) |You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
+| 3. | [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the latest version, install the portable version. |
+| 4. | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/downloads) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
+
+> [!NOTE]
+> After downloading ngrok, sign up and install [authtoken](https://ngrok.com/downloads).
+
+### Set up local environment
+
+[!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
+
+### Register Microsoft Entra app
+
+The following steps help you to create and register your bot in Azure portal:
+
+- Create and register your Azure app.
+- Create client secret to enable SSO authentication of the bot.
+- Add Teams channel to deploy the bot.
+- Create a tunnel to your web server's endpoints using dev tunnel (recommended) or ngrok.
+- Add messaging endpoint to the dev tunnel that you created.
+
+[!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
+
+**Create a tunnel**
+
+# [dev tunnel](#tab/dev)
+
+[!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
+
+# [ngrok](#tab/ngrok)
+
+[!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
+
+---
+
+[!INCLUDE [Azure web authentication](includes/get-started/azure-web-authentication.md)]
+
+[!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
+
+[!INCLUDE [API Permissions](includes/get-started/azure-api-permissions.md)]
+
+[!INCLUDE [Application ID URI](includes/get-started/application-id-uri.md)]
+
+[!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
+
+[!INCLUDE [Azure client application](includes/get-started/azure-client-application.md)]
+
+### Create your bot
+
+[!INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource.md)]
+
+[!INCLUDE [Teams channel](includes/get-started/add-teams-channel.md)]
+
+[!INCLUDE [Messaging endpoint](includes/get-started/messaging-endpoint.md)]
+
+### Set up app settings and manifest files
+
+1. Go to the **appsettings.json** file in cloned repository.
+
+    :::image type="content" source="./assets/images/sbs-messagingextension-action/appsettingslocation.png" alt-text="Screenshot of cloned repository with the file path and appsettings JSON file highlighted in red.":::
+
+1. Open the **appsettings.json** file and update the following information:  
+
+    - Set `"MicrosoftAppType"` to **MultiTenant**.
+    - Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
+    - Set `"MicrosoftAppPassword"` to your bot's **Value** of **Client Secret**.
+    - Leave `"MicrosoftAppTenantId"` blank for MultiTenant bot.
+    - Set `"BaseUrl"` to the fully qualified domain name.
+
+    :::image type="content" source="./assets/images/sbs-messagingextension-action/json-file.png" alt-text="Screenshot of appsettings JSON file displaying the appsettings information.":::
+
+1. Go to the **manifest.json** file in the cloned repository.
+
+    :::image type="content" source="./assets/images/sbs-messagingextension-action/manifestlocation.png" alt-text="Screenshot of Teams App Manifest folder with the file path and manifest file highlighted in red.":::
+
+1. Open the **manifest.json** file and make the following changes:
+
+    - Replace the `<<validDomains>>` with your fully qualified domain name.
+    - Replace all occurrences of `<<Microsoft-App-ID>>` with your bot's **Microsoft App ID**.
+
+    :::image type="content" source="./assets/images/sbs-messagingextension-action/botid1.png" alt-text="Screenshot of manifest page with the ID, bot ID, and Valid domains highlighted in red.":::
+
+### Build and run the service
+
+To build and run the service, use Visual Studio or Command line.
+
+# [Visual Studio](#tab/latestversionofvisualstudio)
+
+1. Open Visual Studio.
+
+1. Go to **File** > **Open** > **Project/Solution....**.
+
+    :::image type="content" source="./assets/images/sbs-messagingextension-action/VSopenfile.png" alt-text="Screenshot of Visual Studio with the Project/Solution highlighted in red.":::
+
+1. From **csharp** folder, select the **TeamsMessagingExtensionsAction.csproj** file.
+
+    :::image type="content" source="./assets/images/sbs-messagingextension-action/openproject.png" alt-text="Screenshot of cloned repository with the TeamsMessagingExtensionsAction.csproj highlighted in red.":::
+
+1. Press **F5** to run the project.
+
+1. Select **Yes** if the following dialog appears:
+
+    :::image type="content" source="./assets/images/sbs-messagingextension-action/certificate.png" alt-text="Screenshot of Security Warning with the Yes option highlighted in red.":::
+
+    A webpage appears with a message **Your bot is ready!**.
+
+    :::image type="content" source="./assets/images/sbs-messagingextension-action/appisready.png" alt-text="Screenshot of the webpage that displays Your bot is ready!.":::
+
+# [Command line](#tab/cli)
+
+Go to **samples** > **msgext-action** > **csharp** in Command Prompt window and enter the following command:
+
+```bash
+    dotnet run
+```
+
+:::image type="content" source="./assets/images/sbs-messagingextension-action/dotnetruncmd.png" alt-text="Screenshot of Command Prompt - dotnet run with the dotnet run command.":::
+
+---
+
+### Add Action Message Extension app to Teams
+
+1. In your cloned repository, go to **samples** > **msgext-action** > **csharp** > **TeamsAppManifest**.
+
+1. Create a .zip with the following files that are present in the **Manifest** folder:
+
+    - manifest.json
+    - icon-outline.png
+    - icon-color.png
+
+    :::image type="content" source="./assets/images/sbs-messagingextension-action/zipfile.png" alt-text="Screenshot of cloned repository with the Messaging extension zip file highlighted in red.":::
+
+1. In the Teams client, select the **Apps** icon.
+
+1. Select **Manage your apps**.
+
+1. Select **Upload an app**.
+
+1. Look for the option to **Upload a custom app**. If you see the option, custom app upload is enabled.
+
+    :::image type="content" source="~/assets/images/tab-device-permission/custom-upload.png" alt-text="Screenshot shows the upload a custom app.":::
+
+    > [!NOTE]
+    > Contact your Teams administrator, if you don't find the option to upload a custom app.
+
+1. Select **Open** to upload the messaging.zip file that you created in the TeamsAppManifest folder.
+
+    :::image type="content" source="./assets/images/sbs-messagingextension-action/openzipfile.png" alt-text="Screenshot of the cloned repository displaying the messaging zip file.":::
+
+1. Select **Add**.
+
+    :::image type="content" source="./assets/images/sbs-messagingextension-action/add-app.png" alt-text="Screenshot of the app details dialog to add the message extension app.":::
+
+1. Select **Open** to open the app in personal scope.
+
+    Alternatively, you can either search and select the required scope or select a channel, chat, or meeting from the list, and move through the dialog to select **Go**.
+
+    :::image type="content" source="./assets/images/sbs-messagingextension-action/add-scope.png" alt-text="Screenshot of the scope selection dialog to select the required scope.":::
+
+### Interact with the app in Teams
+
+1. Select **Create Card** command from the compose box command list.
+
+    :::image type="content" source="./assets/images/sbs-messagingextension-action/create-card.png" alt-text="Screenshot of message compose box overflow menu with Create Card highlighted in red.":::
+
+1. Enter your information in the modal pop-up window.
+
+    :::image type="content" source="./assets/images/sbs-messagingextension-action/output-card.png" alt-text="The Screenshot shows the Create Card model pop-up of the Action Messaging Extension.":::
+
+1. Select **Submit**.
+
+    :::image type="content" source="./assets/images/sbs-messagingextension-action/submit.png" alt-text="Screenshot of Create Card model pop-up with the Submit option highlighted in red.":::
+
+1. Select More options (...) from the overflow menu.
+
+1. Select **More actions** > **Share Message**.
+
+    :::image type="content" source="./assets/images/sbs-messagingextension-action/sharemessage.png" alt-text="Screenshot shows the message overflow menu. The Share Message and More actions are highlighted in red.":::
+
+1. If you want to include an image, select the **Include image in Hero Card** checkbox and then select **Submit**.
+
+    :::image type="content" source="./assets/images/sbs-messagingextension-action/sharemessageoutput.png" alt-text="Screenshot of Action Messaging Extension with the include image in Hero Card checkbox and Submit option highlighted in red.":::
+
+### Complete challenge
+
+Did you come up with something like this?
+
+:::image type="content" source="./assets/images/sbs-messagingextension-action/sharemessageoutput1.png" alt-text="Screenshot of the message extension output after you have successfully completed the step-by-step guide.":::
+
+You've completed the tutorial to get started with a **Action Message Extension** app!
+
+</details>
+
+[Back to top](#teams-app-tutorials)
