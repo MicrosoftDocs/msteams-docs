@@ -16,7 +16,12 @@ Teams apps are custom solutions designed to enhance collaboration and productivi
 
 Build Teams apps with the Teams SDK for client and conversational experiences, and Microsoft 365 Agents SDK for advanced, cross-hub agent scenarios. These tools help you connect to enterprise data, coordinate multi-agent workflows, and keep interactions secure and context-aware. Whether you’re creating a Teams-first solution or expanding across Microsoft 365, Teams apps give you a flexible, powerful way to deliver real impact within the Microsoft ecosystem.
 
-Get started with building apps for Microsoft Teams and beyond!
+Here's an idea of what you'll learn:
+
+- The types of apps and agents that you can build for Teams and Microsoft 365 with Microsoft 365 Agents Toolkit (previously known as Teams Toolkit):
+  - Build tab, scenario-based apps, and message extension with GitHub Codespaces or step-by-step guide.
+  - Learn about tutorials and code samples available for building your Teams app.
+- Learn about various tools and SDKs available for building your Teams app.
 
 ## Why Build Apps for Microsoft Teams?
 
@@ -46,39 +51,33 @@ Teams platforms supports the following app types:
 - **Meeting apps**
   Meeting apps add configurable tabs and bot capabilities to the meeting surface. You can react to meeting lifecycle events (start/end), notify participants, and provide in meeting UI for notes, tasks, and workflows.
 
-Here's an idea of what you'll learn:
+## Teams apps building blocks
 
-- The types of apps and agents that you can build for Teams and Microsoft 365 with Microsoft 365 Agents Toolkit (previously known as Teams Toolkit):
-  - Build tab, scenario-based apps, and message extension with GitHub Codespaces or step-by-step guide.
-  - Learn about tutorials and code samples available for building your Teams app.
-- Learn about various tools and SDKs available for building your Teams app.
-  - The recommended SDKs and toolkits for different scenarios
-- Security and authentication best practices for conversational apps
+Here's a list of SDKs and tools that you can use to build app capabilities:
+
+- Teams SDK (previously known as Teams AI library)
+
+  The Teams SDK offers streamlined client APIs (TeamsJS v2 “capabilities”) for tabs and meeting surfaces, plus language SDKs for building conversational agents (with streaming, adaptive cards, dialogs, and more).
+
+- Microsoft 365 Agents SDK (multi hub, pro code agents)
+
+  The Microsoft 365 Agents SDK lets you build agents and apps that can be published to Microsoft 365 Copilot and other endpoints and can interoperate with Teams. It’s designed for agents that work across hubs and collaborate with other agents (A2A) and tools (MCP).
+
+- Microsoft 365 Agents Toolkit (developer workflow & scaffolding)
+
+  The Microsoft 365 Agents Toolkit (evolution of Teams Toolkit) provides VS Code and CLI templates, local debugging, resource provisioning, and testing against Teams or Copilot. The toolkit is a quick way to scaffold tabs, message extensions, and agents, then deploy using Azure defaults.
 
 ## Build your first Teams app
 
 In this section, learn how to build a Teams app with different capabilities, such as bot, tab, and message extension. Select the type of Teams app that you want to build:
 
-- **Build a simple Teams bot app**: Build a conversational bot.
-- **Build a basic Teams tab app**: Get started with building a Teams app with a basic tab app.
-- **Build message extension Teams app**: Build a search-based message extension Teams app.
+- **Build a simple Teams bot app**: Build a [bot](build-notification-bot.md). (WIP: Link to be updated for basic bot app.)
+- **Build a basic Teams tab app**: Get started with building a Teams app with a [a basic tab app](build-basic-tab-app.md).
+- **Build message extension Teams app**: Build a [search-based message extension](build-message-extension.md).
+
+Get started with building apps for Microsoft Teams and beyond!
 
 ## Next step
-
-If you want to build a basic tab app, select the following:
-
-> [!div class="nextstepaction"]
-> [Build your basic tab app](build-basic-tab-app.md)
-
-If a bot is what you're interested in, select the following:
-
-> [!div class="nextstepaction"]
-> [Start building a bot](build-notification-bot.md)
-
-If you want to build a message extension app, select the following:
-
-> [!div class="nextstepaction"]
-> [Build message extension](build-message-extension.md)
 
 If you want to build a declarative agent, select the following:
 
