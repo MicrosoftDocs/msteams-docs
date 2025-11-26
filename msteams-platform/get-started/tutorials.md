@@ -1220,11 +1220,11 @@ This step-by-step guide helps you to build a tab with Microsoft 365 Agents Toolk
 
 Here's a list of tools you need to install for building and deploying a Teams app.
 
-   | &nbsp; | Install | For using... |
+| &nbsp; | Install | For using... |
 |  --- | --- | --- |
-   | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call all in one place.|
-   | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com)<br> | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
-   | &nbsp; | [Microsoft 365 Agents Toolkit](#install-agents-toolkit) | A Visual Studio extension that creates a project scaffolding for your app. Use the latest version.|
+| &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call all in one place.|
+| &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com)<br> | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
+| &nbsp; | [Microsoft 365 Agents Toolkit](#install-agents-toolkit) | A Visual Studio extension that creates a project scaffolding for your app. Use the latest version.|
 
 ### Install Agents Toolkit
 
@@ -1342,7 +1342,7 @@ The Teams tab app is created in few seconds.
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Create+project+workspace+for+your+tab+app+using+C%23&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fsbs-gs-csharp%3Ftutorial-step%3D2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fsbs-gs-csharp.yml&documentVersionIndependentId=868d10d0-97f7-0be0-3cf5-8a26ad6db573&author=surbhigupta&platformId=2733de0a-edc3-1fad-9a1d-f66571421b8a&metadata=%2A%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A%2A%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
-### Build and run your first tab app using C #
+### Build and run your first tab app using C sharp
 
 After you set up your project workspace with Agents Toolkit, build your tab app.
 
@@ -1406,6 +1406,9 @@ The tutorial is now complete.
 [Back to top](#teams-app-tutorials)
 
 ## Add SSO to tab and message extension app
+
+<details>
+<summary>Tutorial: Add SSO to tab and message extension app</summary>
 
 The  Microsoft Entra single sign-on (Microsoft Entra SSO) helps to authenticate users in Teams.
 
@@ -1665,3 +1668,6 @@ Did you come up with output like this?
 :::image type="content" source="../assets/images/Tab-ME-SSO//hello-megan-profile245-1.png" alt-text="Screenshot of the output after you have successfully completed the step-by-step guide.":::
 
 You've completed the tutorial to get started with SSO for tab and message extension app.
+
+</details>
+[Back to top](#teams-app-tutorials)
