@@ -110,9 +110,9 @@ Microsoft 365 Agents Toolkit creates your agent project and scaffolds the projec
 
 Congratulations! You've created and ran your first agent in Teams.
 
-## Choose your build environment
+## Choose your programming language
 
-You can choose your programming language to build Agents in Teams SDK
+Teams SDK is available for JavaScript, C#, and Python (dev preview). It provides a simplified SDK, support for Model Context Protocol (MCP), Agent-to-Agent communication (A2A), and streamlined tools to enable developers to build intelligent agents for Teams.
 
 :::row:::
    :::column:::
