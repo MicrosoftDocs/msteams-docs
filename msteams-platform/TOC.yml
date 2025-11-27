@@ -19,15 +19,15 @@
   - name: Build an agent using CLI
     href: /microsoftteams/platform/teams-ai-library/getting-started/quickstart?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     displayName: agent, custom engine agent, AI bot, JavaScript, Python, C#, code sample, Teams AI library, Teams SDK
-  - name: Build an agent using TypeScript
-    href: /microsoftteams/platform/teams-ai-library/typescript/getting-started/quickstart?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+  - name: Build an agent
+    href: /microsoftteams/platform/teams-ai-library/getting-started/code-basics?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     displayName: agent, custom engine agent, AI bot, TypeScript, code sample, Teams AI library, Teams SDK
-  - name: Build an agent using C#
-    href: /microsoftteams/platform/teams-ai-library/csharp/getting-started/quickstart?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-    displayName: agent, custom engine agent, AI bot, C#, code sample, Teams AI library, Teams SDK
-  - name: Build an agent using Python
-    href: /microsoftteams/platform/teams-ai-library/python/getting-started/quickstart?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
-    displayName: agent, custom engine agent, AI bot, Python, code sample, Teams AI library, Teams SDK
+  #- name: Build an agent using C#
+   # href: /microsoftteams/platform/teams-ai-library/csharp/getting-started/quickstart?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+   # displayName: agent, custom engine agent, AI bot, C#, code sample, Teams AI library, Teams SDK
+  #- name: Build an agent using Python
+   # href: /microsoftteams/platform/teams-ai-library/python/getting-started/quickstart?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+   # displayName: agent, custom engine agent, AI bot, Python, code sample, Teams AI library, Teams SDK
   - name: Agents user experience
     href: bots/how-to/teams-conversational-ai/ai-ux.md
     displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop            
