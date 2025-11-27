@@ -1046,7 +1046,7 @@ The following steps help you to create and register your bot in the Azure portal
 
 1. Select **Add permissions**.
 
-   :::image type="content" source="../assets/images/teams-file-upload-bot/select-api-permission.png" alt-text="Screenshot show the option to select permissions.":::
+   :::image type="content" source="../assets/images/teams-file-upload-bot/select-api-permission.png" alt-text="Screenshot shows the option to select permissions.":::
 
     > [!NOTE]
  >
