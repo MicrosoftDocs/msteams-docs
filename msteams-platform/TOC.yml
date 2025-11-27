@@ -17,7 +17,7 @@
     href: agents-in-teams/build-first-agent.md
     displayName: create, run, first agent, Teams AI library, Teams SDK, custom engine agent, AI bot, JavaScript, Python, C#, code sample
   - name: Build an agent using CLI
-    href: /microsoftteams/platform/teams-ai-library/welcome?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+    href: /microsoftteams/platform/teams-ai-library/getting-started/quickstart?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     displayName: agent, custom engine agent, AI bot, JavaScript, Python, C#, code sample, Teams AI library, Teams SDK
   - name: Build an agent using TypeScript
     href: /microsoftteams/platform/teams-ai-library/typescript/getting-started/quickstart?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
