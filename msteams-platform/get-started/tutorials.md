@@ -8,7 +8,11 @@ ms.topic: reference
 
 # Teams app tutorials
 
-Learn more about building Teams app capabilities.
+In this article, learn more about building Teams app capabilities. Here's a list of the step-by-step guides available for Teams platform capabilities.
+
+| # | Capability | Step-by-step guide |
+| --- | --- | --- |
+| 1. | Bots | [Debug your AI chat bot using Microsoft 365 Agents Playground](#debug-your-ai-chat-bot-using-microsoft-365-agents-playground) |
 
 :::row:::
    :::column:::
