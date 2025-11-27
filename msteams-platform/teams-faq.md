@@ -1249,7 +1249,7 @@ FAQ for [Provision cloud resources](toolkit/provision.md) using Agents Toolkit.
 <details>
 <summary>How to troubleshoot?</summary>
 
-If you get errors with Agents Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document. If you're using Agents Toolkit CLI, there will be a hyperlink at the end of error message that points to the help doc.
+If you get errors with Agents Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document. If you're using Agents Toolkit CLI, there'll be a hyperlink at the end of error message that points to the help doc.
 <br>
 
 &nbsp;
