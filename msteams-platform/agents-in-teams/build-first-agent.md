@@ -122,14 +122,8 @@ You can choose your programming language to build Agents in Teams SDK
    :::column:::
       **Description**
    :::column-end:::
-   :::column:::
-      **C#**
-   :::column-end:::
-   :::column:::
-      **TypeScript**
-   :::column-end:::
-   :::column:::
-      **Python (preview)**
+   :::column span="4":::
+      **Choose your build environment**
    :::column-end:::
 :::row-end:::
 :::row:::
