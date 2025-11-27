@@ -110,6 +110,8 @@ Microsoft 365 Agents Toolkit creates your agent project and scaffolds the projec
 
 Congratulations! You've created and ran your first agent in Teams.
 
+## Choose your build environment
+
 ## Code sample
 
 | Sample name | Description | .NET | Node.js | Python |
