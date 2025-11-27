@@ -123,7 +123,7 @@ You can choose your programming language to build Agents in Teams SDK
       > [!div class="nextstepaction"]
       > [Build with C#](/microsoftteams/platform/teams-ai-library/getting-started/quickstart?pivots=csharp)
    :::column-end:::
-::::row-end:::
+:::row-end:::
 
 ## Code sample
 
