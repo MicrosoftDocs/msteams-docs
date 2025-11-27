@@ -134,19 +134,19 @@ You can choose your programming language to build Agents in Teams SDK
 :::row-end:::
 :::row:::
    :::column:::
-      Quick start for Teams SDK
+      Build with ...
    :::column-end:::
    :::column:::
       > [!div class="nextstepaction"]
-      > [Build with C#](/microsoftteams/platform/teams-ai-library/getting-started/quickstart?pivots=csharp)
+      > [C#](/microsoftteams/platform/teams-ai-library/getting-started/quickstart?pivots=csharp)
    :::column-end:::
    :::column:::
       > [!div class="nextstepaction"]
-      > [Build with TypeScript](/microsoftteams/platform/teams-ai-library/getting-started/quickstart?pivots=typescript)
+      > [TypeScript](/microsoftteams/platform/teams-ai-library/getting-started/quickstart?pivots=typescript)
    :::column-end:::
    :::column:::
       > [!div class="nextstepaction"]
-      > [Build with Python](/microsoftteams/platform/teams-ai-library/getting-started/quickstart?pivots=python)
+      > [Python](/microsoftteams/platform/teams-ai-library/getting-started/quickstart?pivots=python)
    :::column-end:::
 :::row-end:::
 
