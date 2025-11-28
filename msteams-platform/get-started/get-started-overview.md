@@ -61,11 +61,11 @@ Here's a list of SDKs and tools that you can use to build app capabilities:
 
 - Teams SDK (previously known as Teams AI library)
 
-  The Teams SDK offers streamlined client APIs (TeamsJS v2 “capabilities”) for tabs and meeting surfaces, plus language SDKs for building conversational agents (with streaming, adaptive cards, dialogs, and more).
+  The Teams SDK offers streamlined client APIs (TeamsJS v2 “capabilities”) for tabs and meeting surfaces, plus language SDKs for building conversational agents (with streaming, Adaptive Cards, dialogs, and more).
 
 - Microsoft 365 Agents SDK (multi hub, pro code agents)
 
-  The Microsoft 365 Agents SDK lets you build agents and apps that can be published to Microsoft 365 Copilot and other endpoints and can interoperate with Teams. It’s designed for agents that work across hubs and collaborate with other agents (A2A) and tools (MCP).
+  The Microsoft 365 Agents SDK lets you build agents and apps that can be published to Microsoft 365 Copilot and other endpoints and can interoperate with Teams. It’s designed for agents that work across hubs and collaborate with other agents (Agents to Agents (A2A)) and tools (Model Context Protocol) (MCP).
 
 - Microsoft 365 Agents Toolkit (developer workflow & scaffolding)
 
