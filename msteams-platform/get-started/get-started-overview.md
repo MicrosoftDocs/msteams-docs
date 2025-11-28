@@ -22,13 +22,13 @@ Teams platform provides a wide range of app features, including bots, tabs, and 
 Here's an idea of what you'll learn in this article:
 
 - The types of apps and agents that you can build for Teams:
-  - Build tab, scenario-based apps, and message extension with step-by-step guides.
+  - Try building a tab, bot, and message extension app using step-by-step guides.
   - Learn about tutorials and code samples available for building your Teams app.
-- Learn about various tools and SDKs available for building your Teams app.
+- Learn about various tools and SDKs available for building Teams app capabilities.
 
 ## Why build apps for Microsoft Teams?
 
-Teams app capabilities enable collaborative workspaces with apps for Microsoft Teams platform. You can bring people, data, and workflows together in one place. With over 320 million users, Teams isn’t just for chats and meetings. It’s a hub to simplify processes and keep key information at readily accessible. Develop custom apps or integrate existing solutions into Teams to:
+Teams app capabilities enable collaborative workspaces with apps for Microsoft Teams platform. You can bring people, data, and workflows together in one place. With over 320 million users, Teams isn’t just for chats and meetings. It’s a hub to simplify processes and keep key information readily accessible. Develop custom apps or integrate existing solutions into Teams to:
 
 - **Boost productivity**: Bring all your essential tools, data, and business processes in one place. It enables app users to switch quickly between apps and achieve more.
 - **Enhance collaboration**: Enable teams to communicate, share insights, and work together whether through bots, tabs, message extensions, or meeting apps.
@@ -36,7 +36,7 @@ Teams app capabilities enable collaborative workspaces with apps for Microsoft T
 - **Automate and streamline**: Use apps to handle repetitive tasks, approvals, and notifications, optimizing app user’s time.
 - **Reach users everywhere**: Teams apps work across desktop, web, and mobile, ensuring your solutions are accessible to app users.
 
-Teams helps organizations modernize communication, foster engagement, and deliver seamless, secure, and context-aware experiences.
+Teams helps organizations modernize communication, foster engagement, and deliver seamless, secure, and relevant experiences.
 
 ## What capabilities can you build in Teams?
 
@@ -58,7 +58,7 @@ Teams platforms supports the following app types:
 
   Meeting apps add configurable tabs and bot capabilities to the meeting surface. You can react to meeting lifecycle events (start to end), notify participants, and provide in meeting UI for notes, tasks, and workflows.
 
-## Teams apps building blocks
+## SDKs and tools
 
 Here's a list of SDKs and tools that you can use to build app capabilities:
 
@@ -70,7 +70,7 @@ Here's a list of SDKs and tools that you can use to build app capabilities:
 
   The Microsoft 365 Agents SDK lets you build agents and apps that can be published to Microsoft 365 Copilot and other endpoints and can interoperate with Teams. It’s designed for agents that work across hubs and collaborate with other agents (Agents to Agents (A2A)) and tools (Model Context Protocol) (MCP).
 
-- Microsoft 365 Agents Toolkit (developer workflow & scaffolding)
+- Microsoft 365 Agents Toolkit (developer workflow and scaffolding)
 
   The Microsoft 365 Agents Toolkit (evolution of Teams Toolkit) provides VS Code and CLI templates, local debugging, resource provisioning, and testing against Teams or Copilot. The toolkit is a quick way to scaffold tabs, message extensions, and agents, then deploy using Azure defaults.
 
