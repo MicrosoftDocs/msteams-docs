@@ -1033,9 +1033,9 @@ The following steps help you to create and register your bot in the Azure portal
    :::image type="content" source="../assets/images/teams-file-upload-bot/select-api-permission.png" alt-text="Screenshot shows the option to select permissions.":::
 
     > [!NOTE]
- >
-  > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
-  > Users need to consent to the API permissions only if the Microsoft Entra app is registered in a different tenant.
+    >
+    > - If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
+    > - Users need to consent to the API permissions only if the Microsoft Entra app is registered in a different tenant.
 
 **Application ID URI**
 
