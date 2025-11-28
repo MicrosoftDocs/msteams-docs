@@ -14,7 +14,7 @@ Teams apps are custom solutions designed to enhance collaboration and productivi
 
 Build apps for Teams platform and cross-hub agent scenarios to connect with enterprise data, coordinate multi-agent workflows, while keeping interactions secure. Whether you’re creating a Teams-first solution or expanding across Microsoft 365, Teams apps give you a flexible, powerful way to deliver real impact within the Microsoft ecosystem.
 
-Teams platform provides a wide range of app features, including bots, tabs, and message extensions. It's encouraged that you explore agents for Teams that take advantage of these capabilities and beyond.
+Teams platform provides a wide range of app features, including bots, tabs, and message extensions. Explore agents for Teams that take advantage of these capabilities and beyond.
 
 > [!div class="nextstepaction"]
 > [Get started with building agents in Teams](../agents-in-teams/overview.md)
@@ -44,11 +44,11 @@ Teams platform supports the following app types:
 
 - **Tabs**:
 
-  Tabs are web experiences (hosted pages) that run inside Teams. Use them for dashboards, forms, or full fidelity web apps embedded in a chat, channel, or meeting. Tabs can also be extended to Outlook and the Microsoft 365 app when you target the modern Teams client APIs.
+  Tabs are web experiences (hosted pages) that run inside Teams. Use them for dashboards, forms, or full fidelity web apps embedded in a chat, channel, or meeting. You can also extend tabs to Outlook and the Microsoft 365 app when you target the modern Teams client APIs.
 
 - **Bots**:
 
-  In Teams, bots have evolved into agents, that is, AI-enhanced, conversational apps that respond in 1:1, group, channel, or meeting contexts. Bot apps or agents answer questions, summarize discussions, automate tasks, and participate in meetings such as sending agenda updates or capturing action items.
+  In Teams, bots evolved into agents, which are AI-enhanced, conversational apps that respond in 1:1, group, channel, or meeting contexts. Bot apps or agents answer questions, summarize discussions, automate tasks, and participate in meetings such as sending agenda updates or capturing action items.
 
 - **Message extensions**:
 
@@ -68,7 +68,7 @@ Here's a list of SDKs and tools that you can use to build app capabilities:
 
 - Microsoft 365 Agents SDK (multi hub, pro code agents)
 
-  The Microsoft 365 Agents SDK lets you build agents and apps that can be published to Microsoft 365 Copilot and other endpoints and can interoperate with Teams. It’s designed for agents that work across hubs and collaborate with other agents (Agents to Agents (A2A)) and tools (Model Context Protocol) (MCP).
+  The Microsoft 365 Agents SDK lets you build agents and apps that you can publish to Microsoft 365 Copilot and other endpoints and that can interoperate with Teams. It's designed for agents that work across hubs and collaborate with other agents (Agents to Agents (A2A)) and tools (Model Context Protocol) (MCP).
 
 - Microsoft 365 Agents Toolkit (developer workflow and scaffolding)
 
@@ -82,7 +82,7 @@ In this section, learn how to build a Teams app with different capabilities, suc
 - [Build a basic Teams tab app](build-basic-tab-app.md)
 - [Build message extension Teams app](build-message-extension.md)
 
-After you've built the basic app capabilities, [explore tutorials and code samples](tool-options-and-code-samples.md). (WIP: Link to be added for Tutorials page once it's merged.)
+After you build the basic app capabilities, [explore tutorials and code samples](tool-options-and-code-samples.md). (WIP: Link to be added for Tutorials page once it's merged.)
 
 Get started with building apps for Microsoft Teams and beyond!
 
