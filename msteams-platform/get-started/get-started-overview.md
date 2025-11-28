@@ -14,7 +14,7 @@ Teams apps are custom solutions designed to enhance collaboration and productivi
 
 Build apps for Teams platform and cross-hub agent scenarios to connect with enterprise data, coordinate multi-agent workflows, while keeping interactions secure. Whether you’re creating a Teams-first solution or expanding across Microsoft 365, Teams apps give you a flexible, powerful way to deliver real impact within the Microsoft ecosystem.
 
-Teams platform provides a wide range of app features, including bots, tabs, and message extensions. It's encouraged to explore building agents for Teams that take advantage of these capabilities and beyond.
+Teams platform provides a wide range of app features, including bots, tabs, and message extensions. It's encouraged to explore agents for Teams that take advantage of these capabilities and beyond.
 
 > [!div class="nextstepaction"]
 > [Get started with building agents in Teams](../agents-in-teams/overview.md)
@@ -28,7 +28,7 @@ Here's an idea of what you'll learn in this article:
 
 ## Why build apps for Microsoft Teams?
 
-Build collaborative workspace with apps for Microsoft Teams. You can bring people, data, and workflows together in one place. With over 320 million users, Teams isn’t just for chats and meetings. It’s a powerful hub to simplify processes, automate tasks, and keep key information at readily accessible. Develop custom apps or integrate existing solutions into Teams to:
+Teams capabilities enable collaborative workspaces with apps for Microsoft Teams platform. You can bring people, data, and workflows together in one place. With over 320 million users, Teams isn’t just for chats and meetings. It’s a hub to simplify processes and keep key information at readily accessible. Develop custom apps or integrate existing solutions into Teams to:
 
 - **Boost productivity**: Bring all your essential tools, data, and business processes in one place. It enables app users to switch quickly between apps and achieve more.
 - **Enhance collaboration**: Enable teams to communicate, share insights, and work together whether through bots, tabs, message extensions, or meeting apps.
