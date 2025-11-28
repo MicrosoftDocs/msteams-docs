@@ -938,10 +938,7 @@
       href: concepts/device-capabilities/people-picker-capability.md
     - name: Use Fluid with Teams
       href: tabs/how-to/using-fluid-msteam.md
-      displayName: Fluid client, Azure Fluid Relay, Fluid Containers, React component
-  - name: Explore SDKs and code samples
-    href: get-started/tool-options-and-code-samples.md
-    displayName: Teams app samples, tools to build Teams app
+      displayName: Fluid client, Azure Fluid Relay, Fluid Containers, React components, Fluid Framework
   - name: Resources
     items:
     - name: Localization
