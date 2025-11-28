@@ -44,11 +44,11 @@ Teams platform supports the following app types:
 
 - **Tabs**:
 
-  Tabs are web experiences (hosted pages) that run inside Teams. Use them for dashboards, forms, or full fidelity web apps embedded in a chat, channel, or meeting. You can also extend tabs to Outlook and the Microsoft 365 app when you target the modern Teams client APIs.
+  Tabs are web experiences (hosted pages) that run inside Teams. Use them for dashboards, forms, or full fidelity web apps embedded in a chat, channel, or meeting. You can also extend tabs to Outlook and the Microsoft 365.
 
 - **Bots**:
 
-  In Teams, bots evolved into agents, which are AI-enhanced, conversational apps that respond in 1:1, group, channel, or meeting contexts. Bot apps or agents answer questions, summarize discussions, automate tasks, and participate in meetings such as sending agenda updates or capturing action items.
+  In Teams, bots evolved into agents, which are AI-enhanced, conversational apps that respond in 1:1, group, channel, or meeting contexts. Bot apps answer questions, summarize discussions, automate tasks, and participate in meetings such as sending agenda updates or capturing action items.
 
 - **Message extensions**:
 
@@ -56,7 +56,7 @@ Teams platform supports the following app types:
 
 - **Meeting apps**:
 
-  Meeting apps add configurable tabs and bot capabilities to the meeting surface. You can react to meeting lifecycle events (start to end), notify participants, and provide in meeting UI for notes, tasks, and workflows.
+  Meeting apps add configurable tabs and bot capabilities to the meeting surface. You can react to meeting lifecycle events (start to end), notify participants, and provide in-meeting UI for notes, tasks, and workflows.
 
 ## SDKs and tools
 
@@ -64,7 +64,7 @@ Here's a list of SDKs and tools that you can use to build app capabilities:
 
 - Teams SDK (previously known as Teams AI library)
 
-  The Teams SDK offers streamlined client APIs (TeamsJS v2 “capabilities”) for tabs and meeting surfaces, plus language SDKs for building conversational agents (with streaming, Adaptive Cards, dialogs, and more).
+  The Teams SDK offers streamlined client APIs of TeamsJS v2 capabilities for tabs and meeting surfaces, plus language SDKs for building conversational agents (with streaming, Adaptive Cards, dialogs, and more).
 
 - Microsoft 365 Agents SDK (multi hub, pro code agents)
 
