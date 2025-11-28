@@ -12,7 +12,6 @@ ms.date: 05/16/2025
 
 > [!IMPORTANT]
 >
-> * Meeting AI Insights API is available under the beta version in Microsoft Graph. For more information, see [versioning, support, and breaking change policies for Microsoft Graph](/graph/versioning-and-support#beta-version).
 > * Meeting AI Insights API is part of the Microsoft 365 Copilot API namespace. Insights can only be fetched on behalf of a Microsoft 365 Copilot licensed user. For more information, see [license requirements for Meeting Insights API](/graph/teams-licenses#license-requirements-for-teams-meeting-ai-insights-apis).
 
 The Meeting AI Insights API enables you to programmatically access structured AI-generated insights from transcribed Microsoft Teams meetings. These insights include:
@@ -64,7 +63,7 @@ To fetch the insights of a particular meeting, follow these steps:
     Content-Type: application/json
     
     {
-      "@odata.context": "https://graph.microsoft.com/beta/$metadata#copilot/users('000000000-0000-0000-0000-000000000000')/onlineMeetings('00000...')/aiInsights",
+      "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#copilot/users('000000000-0000-0000-0000-000000000000')/onlineMeetings('00000...')/aiInsights",
       "@odata.count": 1,
       "value": [
         {
@@ -101,7 +100,7 @@ To fetch the insights of a particular meeting, follow these steps:
     Content-Type: application/json
     
     {
-      "@odata.context": "https://graph.microsoft.com/beta/$metadata#copilot/users('00000000-0000-0000-0000-000000000000')/onlineMeetings('000000...')/aiInsights/$entity",
+      "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#copilot/users('00000000-0000-0000-0000-000000000000')/onlineMeetings('000000...')/aiInsights/$entity",
       "id": "Z2HWbT...",
       "callId": "af630fe0-04d3-4559-8cf9-91fe45e36296",
       "contentCorrelationId": "bc842d7a-2f6e-4b18-a1c7-73ef91d5c8e3",
