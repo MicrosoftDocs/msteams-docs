@@ -2,7 +2,7 @@
 title: Graph APIs to Fetch Meeting Insights
 description: Learn how to use the Meeting AI Insights API to fetch Teams meeting insights including conversation summaries, action items, and mentions.
 ms.localizationpriority: high
-ms.topic: conceptual
+ms.topic: article
 ms.owner: vichug
 ms.author: surbhigupta
 ms.date: 05/16/2025
