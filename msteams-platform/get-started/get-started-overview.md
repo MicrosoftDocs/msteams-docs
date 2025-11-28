@@ -10,8 +10,6 @@ ms.topic: reference
 
 Teams apps are custom solutions designed to enhance collaboration and productivity within Microsoft Teams. They leverage the platform’s extensibility to deliver interactive experiences directly inside chats, channels, and meetings.
 
-[WIP: Placeholder image]
-
 :::image type="content" source="../assets/images/overview/teams-apps-types.png" alt-text="Image shows types of Teams app." border="false":::
 
 Build Teams apps with the Teams SDK for client and conversational experiences, and Microsoft 365 Agents SDK for advanced, cross-hub agent scenarios. These tools help you connect to enterprise data, coordinate multi-agent workflows, and keep interactions secure and context-aware. Whether you’re creating a Teams-first solution or expanding across Microsoft 365, Teams apps give you a flexible, powerful way to deliver real impact within the Microsoft ecosystem.
@@ -19,11 +17,11 @@ Build Teams apps with the Teams SDK for client and conversational experiences, a
 Here's an idea of what you'll learn:
 
 - The types of apps and agents that you can build for Teams and Microsoft 365 with Microsoft 365 Agents Toolkit (previously known as Teams Toolkit):
-  - Build tab, scenario-based apps, and message extension with GitHub Codespaces or step-by-step guide.
+  - Build tab, scenario-based apps, and message extension with step-by-step guides.
   - Learn about tutorials and code samples available for building your Teams app.
 - Learn about various tools and SDKs available for building your Teams app.
 
-## Why Build Apps for Microsoft Teams?
+## Why build apps for Microsoft Teams?
 
 Build collaborative workspace with apps for Microsoft Teams. You can bring people, data, and workflows together in one place. With over 320 million users, Teams isn’t just for chats and meetings. It’s a powerful hub to simplify processes, automate tasks, and keep key information at readily accessible. Develop custom apps or integrate existing solutions into Teams to:
 
