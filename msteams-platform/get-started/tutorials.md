@@ -17,29 +17,6 @@ In this article, learn more about building Teams app capabilities. Here's a list
 | 3. | Message extension | [Build API-based message extension](#build-api-based-message-extension) |
 | 4. | SSO | - [Build a bot with SSO authentication](#build-a-bot-with-sso-authentication) <br> - [Add SSO to tab and message extension app](#add-sso-to-tab-and-message-extension-app) |
 
-:::row:::
-   :::column:::
-    <b>Bots</b>
-    - [Debug your AI chat bot using Microsoft 365 Agents Playground](#debug-your-ai-chat-bot-using-microsoft-365-agents-playground)
-   :::column-end:::
-
-    :::column:::
-    <b>Tabs</b>
-    - [Build your first app using C sharp](#build-your-first-app-using-c-sharp)
-   :::column-end:::
-
-   :::column:::
-    <b>Message extension</b>
-    - [Build API-based message extension](#build-api-based-message-extension)
-   :::column-end:::
-
-   :::column:::
-    <b>SSO</b>
-    - [Build a bot with SSO authentication](#build-a-bot-with-sso-authentication)
-    - [Add SSO to tab and message extension app](#add-sso-to-tab-and-message-extension-app)
-   :::column-end:::
-:::row-end:::
-
 ## Debug your AI chat bot using Microsoft 365 Agents Playground
 
 <details>
@@ -1001,7 +978,7 @@ If you don't have a Teams developer account, you can get it for free. Join the M
 1. In the welcome screen, select **Setup E5 subscription**.
 1. Set up an administrator account. After you finish, the following screen displays.
 
-    :::image type="content" source="~/assets/images/toolkit-v2/prerequisites/microsoft-365.png" alt-text="Screenshot of the Microsoft 365 Developer Program subscription.":::
+    :::image type="content" source="../assets/images/toolkit-v2/prerequisites/microsoft-365.png" alt-text="Screenshot of the Microsoft 365 Developer Program subscription.":::
 
 1. Sign in to Teams using the new administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
 
