@@ -1,8 +1,8 @@
 ---
 title: Get Started - Overview
-description: Learn how to create your first Microsoft Teams app based on language and development environments, understand app capabilities, and SDKs.
+description: Learn about Microsoft Teams app capabilities.
 ms.localizationpriority: high
-ms.date: 02/06/2025
+ms.date: 11/28/2025
 ms.topic: reference
 ---
 
@@ -14,7 +14,7 @@ Teams apps are custom solutions designed to enhance collaboration and productivi
 
 Build Teams apps with the Teams SDK for client and conversational experiences, and Microsoft 365 Agents SDK for advanced, cross-hub agent scenarios. These tools help you connect to enterprise data, coordinate multi-agent workflows, and keep interactions secure and context-aware. Whether you’re creating a Teams-first solution or expanding across Microsoft 365, Teams apps give you a flexible, powerful way to deliver real impact within the Microsoft ecosystem.
 
-If you want to build an agent, see [agents in Teams](../agents-in-teams/overview.md).
+[Get started with buulding agents in Teams](../agents-in-teams/overview.md) if you want to build an agent.
 
 Here's an idea of what you'll learn:
 
@@ -53,7 +53,7 @@ Teams platforms supports the following app types:
 
 - **Meeting apps**:
 
-  Meeting apps add configurable tabs and bot capabilities to the meeting surface. You can react to meeting lifecycle events (start/end), notify participants, and provide in meeting UI for notes, tasks, and workflows.
+  Meeting apps add configurable tabs and bot capabilities to the meeting surface. You can react to meeting lifecycle events (start to end), notify participants, and provide in meeting UI for notes, tasks, and workflows.
 
 ## Teams apps building blocks
 
