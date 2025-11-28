@@ -24,7 +24,7 @@ The API empowers you to deliver intelligent meeting experiences, such as surfaci
 
 > [!NOTE]
 >
-> Meeting AI Insights API provides insights only for private scheduled meetings.
+> Meeting AI Insights API provides insights for private scheduled meetings, town halls, webinars, and Meet Now sessions. AI Insights API does not yet support channel meetings.
 
 ## Use cases
 
@@ -39,8 +39,6 @@ Here are some use cases for fetching AI-generated insights using Meeting AI Insi
 ## Prerequisites
 
 * You must [turn on the transcription or recording](https://support.microsoft.com/en-us/office/view-live-transcription-in-microsoft-teams-meetings-dc1a8f23-2e20-4684-885e-2152e06a4a8b) for the meeting for which the insights are to be generated. Alternatively, you can set a meeting to autotranscribe or autorecord programmatically using the [update onlineMeeting API](/graph/api/onlinemeeting-update?view=graph-rest-1.0&preserve-view=true&tabs=http) or directly through the [meeting options](/microsoftteams/manage-meeting-recording-options#record-and-transcribe-automatically).
-
-* The Meeting AI Insights API only works with delegated permissions and hence requires a token from a signed-in user to be passed in the call. The signed-in user must have a [Microsoft 365 Copilot license](/copilot/microsoft-365/microsoft-365-copilot-licensing) and access to the meeting’s transcript file.
 
 ## Fetch meeting insights
 
@@ -157,7 +155,6 @@ To fetch the insights of a particular meeting, follow these steps:
 
 * AI-generated insights are only available after a meeting ends. The API doesn't support accessing live notes during a meeting.
 * AI-generated insights might take up to four hours to be available after the call ends.
-* Application-level permissions aren't supported.
 
 ## Code sample
 
