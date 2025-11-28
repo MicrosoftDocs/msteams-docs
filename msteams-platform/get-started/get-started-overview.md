@@ -14,8 +14,10 @@ Teams apps are custom solutions designed to enhance collaboration and productivi
 
 Build Teams apps with the Teams SDK for client and conversational experiences, and Microsoft 365 Agents SDK for advanced, cross-hub agent scenarios. These tools help you connect to enterprise data, coordinate multi-agent workflows, and keep interactions secure and context-aware. Whether you’re creating a Teams-first solution or expanding across Microsoft 365, Teams apps give you a flexible, powerful way to deliver real impact within the Microsoft ecosystem.
 
+The Teams platform provides a wide range of app features, including bots, tabs, and message extensions. It's encouraged to explore building agents for Teams that take advantage of these capabilities and beyond.
+
 > [!div class="nextstepaction"]
-> [Get started with buulding agents in Teams](../agents-in-teams/overview.md) if you want to build an agent.
+> [Get started with building agents in Teams](../agents-in-teams/overview.md) if you want to build an agent.
 
 Here's an idea of what you'll learn:
 
