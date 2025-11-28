@@ -8,13 +8,13 @@ ms.topic: reference
 
 # Apps in Teams
 
-Teams apps are custom solutions designed to enhance collaboration and productivity within Microsoft Teams. They leverage the platform’s extensibility to deliver interactive experiences directly inside chats, channels, and meetings.
+Teams apps are custom solutions designed to enhance collaboration and productivity within Microsoft Teams. They use the platform’s extensibility to deliver interactive experiences directly inside chats, channels, and meetings.
 
 :::image type="content" source="../assets/images/overview/teams-apps-types.png" alt-text="Image shows types of Teams app." border="false":::
 
 Build apps for Teams platform and cross-hub agent scenarios to connect with enterprise data, coordinate multi-agent workflows, while keeping interactions secure. Whether you’re creating a Teams-first solution or expanding across Microsoft 365, Teams apps give you a flexible, powerful way to deliver real impact within the Microsoft ecosystem.
 
-Teams platform provides a wide range of app features, including bots, tabs, and message extensions. It's encouraged to explore agents for Teams that take advantage of these capabilities and beyond.
+Teams platform provides a wide range of app features, including bots, tabs, and message extensions. It's encouraged that you explore agents for Teams that take advantage of these capabilities and beyond.
 
 > [!div class="nextstepaction"]
 > [Get started with building agents in Teams](../agents-in-teams/overview.md)
@@ -40,7 +40,7 @@ Teams helps organizations modernize communication, foster engagement, and delive
 
 ## What capabilities can you build in Teams?
 
-Teams platforms supports the following app types:
+Teams platform supports the following app types:
 
 - **Tabs**:
 
@@ -48,7 +48,7 @@ Teams platforms supports the following app types:
 
 - **Bots**:
 
-  In Teams, bots have evolved into agents, that is, AI-enhanced, conversational apps that respond in 1:1, group, channel, or meeting contexts. You can build bot apps or agents that answer questions, summarize discussions, automate tasks, and participate in meetings (for example, sending agenda updates or capturing action items).
+  In Teams, bots have evolved into agents, that is, AI-enhanced, conversational apps that respond in 1:1, group, channel, or meeting contexts. Bot apps or agents answer questions, summarize discussions, automate tasks, and participate in meetings such as sending agenda updates or capturing action items.
 
 - **Message extensions**:
 
@@ -78,11 +78,11 @@ Here's a list of SDKs and tools that you can use to build app capabilities:
 
 In this section, learn how to build a Teams app with different capabilities, such as bot, tab, and message extension. Select the type of Teams app that you want to build:
 
-- [Build a simple Teams bot app](build-notification-bot.md) (WIP: Link to be updated for basic bot app.)
+- [Build a Teams bot app](build-notification-bot.md) (WIP: Link to be updated for basic bot app.)
 - [Build a basic Teams tab app](build-basic-tab-app.md)
 - [Build message extension Teams app](build-message-extension.md)
 
-After you've built the basic app capabilities, [explore tutorials and code samples](tool-options-and-code-samples.md). (WIP: Link to be added for Tutorials page once that is merged.)
+After you've built the basic app capabilities, [explore tutorials and code samples](tool-options-and-code-samples.md). (WIP: Link to be added for Tutorials page once it's merged.)
 
 Get started with building apps for Microsoft Teams and beyond!
 
