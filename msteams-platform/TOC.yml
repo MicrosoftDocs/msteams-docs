@@ -969,6 +969,14 @@
     - name: Extend Microsoft 365 Copilot
     href: messaging-extensions/how-to-extend-copilot.md
     displayName: message extension, plugin, Copilot, Microsoft 365 Copilot
+- name: Tutorials and code samples
+  items:
+  - name: Tutorials
+    href: get-started/tutorials.md
+    displayName: Build a Teams app, Build a Teams bot, Build a Teams tab, Build a message extension, Build apps for Teams meetings and calls
+  - name: Code samples
+    href: get-started/tool-options-and-code-samples.md
+    displayName: Teams app samples, Teams bot samples, Teams tab samples, Message extension samples, Apps for Teams meetings and calls samples
 - name: Integrate device capabilities
   items:
   - name: What are device capabilities?
