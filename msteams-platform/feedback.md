@@ -21,7 +21,7 @@ Use **Azure Admin Center** or **Microsoft 365 Admin Center** for any **business-
 
 ## Developer community help
 
-Teams community of developers use Stack Overflow and Microsoft Q&A to connect with other developers to ideate, get clarifications, and submit queries. In addition, you can also use other contacts or sites, depending on the type of community help required to raise issues, limitations, and general questions.
+Developers in the Teams community use Stack Overflow and Microsoft Q&A to connect with other developers, share ideas, seek clarifications and ask questions. You can also use other sites such as GitHub or the Tech Community to report issues, note limitations, and ask general questions.
 
 📢 Read our latest [announcements](https://github.com/MicrosoftDocs/msteams-docs/discussions/categories/announcements) and join the conversation with community members and platform engineers!
 
@@ -69,4 +69,3 @@ Suggest a feature or vote up existing feature requests.
 ## See also
 
 [TeamsJS library reference](/javascript/api/overview/msteams-client)
-
