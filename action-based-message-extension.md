@@ -1,12 +1,11 @@
 ---
 title: Action-based Message Extension Tutorial
-author: ashishguptaiitb
-ms.author: surbhigupta
-manager: prkosh
+author: surbhigupta
 description: With this learning module, learn how to set up action message extension for Teams to initiate actions from compose message and message area.
-ms.topic: reference
-ms.localizationpriority: medium
-ms.date: 12/01/2025
+ms.author: surbhigupta
+ms.topic: conceptual
+ms.localizationpriority: high
+ms.date: 01/12/2025
 ---
 
 ## Build action based message extension
