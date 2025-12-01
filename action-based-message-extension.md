@@ -11,8 +11,8 @@ ms.date: 12/01/2025
 
 ## Build action based message extension
 
-<details>
-<summary><b>Tutorial: Build action based message extension</b></summary>
+<!--<details>
+<summary><b>Tutorial: Build action based message extension</b></summary>-->
 
 Teams action based message extension allow users to interact with web services in the Microsoft Teams client. Message extensions help to initiate actions in an external system from the compose message area, the command box, or directly from a message.
 
@@ -223,4 +223,4 @@ Did you come up with something like this?
 
 You've completed the tutorial to get started with a **Action Message Extension** app!
 
-</details>
+<!--</details>-->
