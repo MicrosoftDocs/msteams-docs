@@ -131,9 +131,7 @@ After you finish scaffolding, explore the project directories and files in the *
 #### Create Open AI key and endpoint for your AI chat bot
 
 1. Go to [Azure portal](https://ms.portal.azure.com/).
-
 1. Select **Create a resource** and search for Azure Open AI.
-
 1. Select **Azure Open AI** and select **Create**.
 
     :::image type="content" source="~/assets/images/agents-playground/azure-open-ai.png" alt-text="Screenshot shows the Azure open AI in Azure portal.":::
@@ -158,7 +156,7 @@ You've successfully created key and endpoint for your AI chat bot.
 
 :::image type="content" source="~/assets/images/agents-playground/deployment.png" alt-text="Screenshot shows the deployment of the Azure open AI.":::
 
->[!NOTE]
+> [!NOTE]
 > You can also get OpenAI API key to debug your AI chat bot. For more information, see [setup your API key](https://platform.openai.com/docs/quickstart/step-2-setup-your-api-key).
 
 ##### Get Azure Open AI keys and endpoint
