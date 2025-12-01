@@ -57,7 +57,7 @@ To prompt an unauthenticated user, to sign in, respond with a suggested action o
       "actions":[
         {
           "type": "openUrl",
-          "value": "https://example.com/auth",
+          "value": "https://contoso.com/auth",
           "title": "Sign in to this app"
         }
       ]
