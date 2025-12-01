@@ -517,7 +517,7 @@ You can validate if the OpenAPI Description document is valid. To verify, follow
 1. Enter the values for the **search** parameter as **Tool to create music**.
 1. Select **Execute**. The swagger editor displays a response with a list of products.
 
-    :::image type="content" source="../assets/images/Copilot/api-me-sbs-execute-get-response.png" alt-text="Screenshots shows the parameters, its values and the **EXECUTE** option in the swagger editor.":::
+    :::image type="content" source="../assets/images/Copilot/api-me-sbs-execute-get-response.png" alt-text="Screenshots shows the parameters, its values, and the **EXECUTE** option in the swagger editor.":::
 
 1. Go to **Server response** > **Response Body**.
 1. Under `products`, copy the first product from the list and save it for future reference.
@@ -1196,7 +1196,7 @@ You've completed the tutorial to get started with build a bot with SSO authentic
 ## Build your first app using C sharp
 
 <details>
-<summary>Tutorial: Build your first app using C#</summary>
+<summary><b>Tutorial: Build your first app using C#</b></summary>
 
 Start Microsoft Teams app development by building your first Teams app with a tab, a bot, or a message extension capability.
 
