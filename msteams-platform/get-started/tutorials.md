@@ -884,11 +884,11 @@ Sign into Teams test environment to test your app in Teams. To upload a custom a
 1. Select the zip file created and select **Open**.
 1. Select **Add**.
 
-   :::image type="content" source="../assets/images/Copilot/api-me-sbs-add-app-teams.png" alt-text="Screenshot of message extension app with the Add option highlighted.":::
+    :::image type="content" source="../assets/images/Copilot/api-me-sbs-add-app-teams.png" alt-text="Screenshot of message extension app with the Add option highlighted.":::
 
 1. Select **Open**.
 
-   :::image type="content" source="../assets/images/Copilot/api-me-open.png" alt-text="Screenshot of message extension app with the Open option highlighted.":::
+:::image type="content" source="../assets/images/Copilot/api-me-open.png" alt-text="Screenshot of message extension app with the Open option highlighted.":::
 
 1. Go to a chat, then select **+** from the message compose area, and search for your app.
 1. Select the app and make a search query.
@@ -924,7 +924,7 @@ A bot behaves differently depending on the conversation it's involved in:
 
 This step-by-step guide helps you to build a bot with SSO authentication. You'll see the following output:
 
- :::image type="content" source="~/assets/images/bots/sbs-desktop-mobile.png" alt-text=" Screenshot of the bot with SSO authentication output after you’ve successfully completed the step-by-step guide.":::
+:::image type="content" source="~/assets/images/bots/sbs-desktop-mobile.png" alt-text=" Screenshot of the bot with SSO authentication output after you’ve successfully completed the step-by-step guide.":::
 
 ### Prerequisites for building a bot
 
@@ -960,7 +960,7 @@ To verify custom upload apps in Teams:
 1. Select **Upload an app**
 1. Look for the option **Upload a custom app**. If you see the option, custom app upload is enabled.
 
-:::image type="content" source="~/assets/images/bots/upload-a-custom-app-sso-bot-authentication.png" alt-text="Screenshot showing the Teams apps, Manage your apps, Upload an app, and Upload a custom app highlighted in red.":::
+    :::image type="content" source="../assets/images/bots/upload-a-custom-app-sso-bot-authentication.png" alt-text="Screenshot showing the Teams apps, Manage your apps, Upload an app, and Upload a custom app highlighted in red.":::
 
 > [!NOTE]
 > Contact Teams administrator, if you don't have the option to upload a custom app.
@@ -1553,10 +1553,10 @@ To build and run the service, use Visual Studio or Command line.
 Go to the **csharp** folder in a Command Prompt window and enter the following command:
 
 ```bash
-dotnet run
+    dotnet run
 ```
 
-![Dotnet](~/assets/images/Tab-ME-SSO/dotnet-run1.png)
+![Dotnet](../assets/images/Tab-ME-SSO/dotnet-run1.png)
 
 ---
 
@@ -1587,7 +1587,7 @@ dotnet run
 
 1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
-    :::image type="content" source="../assets/images/Tab-ME-SSO/upload-tab-me-sso-open-1.png" alt-text="Screenshot of the Manifest folder with Open option to upload the Teams Bot zip file highlighted in red.":::
+    :::image type="content" source="../assets/images/Tab-ME-SSO/upload-tab-me-sso-open-1.png" alt-text="Screenshot of the Manifest folder with Open option to upload the Teams bot zip file highlighted in red.":::
 
 1. Select **Add**.
 
