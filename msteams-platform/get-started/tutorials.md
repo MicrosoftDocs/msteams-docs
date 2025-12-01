@@ -1209,15 +1209,15 @@ This step-by-step guide helps you to build a tab with Microsoft 365 Agents Toolk
 
 :::image type="content" source="../assets/images/sbs-csharp/final-output.png" alt-text=" Screenshot shows the final output of the Teams tab app.":::
 
-### Prerequisites
+### Prerequisites for building a bot app
 
 Here's a list of tools you need to install for building and deploying a Teams app.
 
-| &nbsp; | Install | For using... |
-|  --- | --- | --- |
-| &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call all in one place.|
-| &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com)<br> | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
-| &nbsp; | [Microsoft 365 Agents Toolkit](#install-agents-toolkit) | A Visual Studio extension that creates a project scaffolding for your app. Use the latest version.|
+| Install | For using... |
+ --- | --- |
+| [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call all in one place.|
+| [Visual Studio 2022](https://visualstudio.microsoft.com)<br> | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
+| [Microsoft 365 Agents Toolkit](#install-agents-toolkit) | A Visual Studio extension that creates a project scaffolding for your app. Use the latest version.|
 
 ### Install Agents Toolkit
 
