@@ -1388,7 +1388,7 @@ The tutorial is now complete.
 ## Add SSO to tab and message extension app
 
 <details>
-<summary>Tutorial: Add SSO to tab and message extension app</summary>
+<summary><b>Tutorial: Add SSO to tab and message extension app</b></summary>
 
 The  Microsoft Entra single sign-on (Microsoft Entra SSO) helps to authenticate users in Teams.
 
