@@ -1368,7 +1368,7 @@ Congratulations, your first tab app is running on Teams!
 <details>
 <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-To successfully run your app in Teams, ensure that you've enabled custom app upload in your Teams account. You can learn more about custom app upload in the [Prerequisites](#prerequisites-3) section.
+To successfully run your app in Teams, ensure that you've enabled custom app upload in your Teams account. You can learn more about custom app upload in the [Prerequisites](#prerequisites-for-building-a-bot-app) section.
 
 </details>
 
