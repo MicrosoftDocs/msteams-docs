@@ -134,15 +134,15 @@ After you finish scaffolding, explore the project directories and files in the *
 1. Select **Create a resource** and search for Azure Open AI.
 1. Select **Azure Open AI** and select **Create**.
 
-    :::image type="content" source="~/assets/images/agents-playground/azure-open-ai.png" alt-text="Screenshot shows the Azure open AI in Azure portal.":::
+    :::image type="content" source="../assets/images/agents-playground/azure-open-ai.png" alt-text="Screenshot shows the Azure open AI in Azure portal.":::
 
 1. Fill the required details and select **Next**.
 
-    :::image type="content" source="~/assets/images/agents-playground/azure-open-ai-resource.png" alt-text="Screenshot shows you the Azure open AI subscription and resource group.":::
+    :::image type="content" source="../assets/images/agents-playground/azure-open-ai-resource.png" alt-text="Screenshot shows you the Azure open AI subscription and resource group.":::
 
 1. Select **All networks, including the internet, can access this resource** and then select **Next**.
 
-    :::image type="content" source="~/assets/images/agents-playground/azure-open-ai-network.png" alt-text="Screenshot shows the Azure open AI network details.":::
+    :::image type="content" source="../assets/images/agents-playground/azure-open-ai-network.png" alt-text="Screenshot shows the Azure open AI network details.":::
 
 1. Fill the required details and select **Next**.
 
