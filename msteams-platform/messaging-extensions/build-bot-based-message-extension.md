@@ -1,7 +1,7 @@
 ---
 title: Build Bot-based Message Extensions
 author: surbhigupta
-description: Learn about Bot-based message extension using Bot Framework to interact with your web service from different locations in the Teams client.
+description: Learn about Bot-based message extension using Bot Framework to interact with your web service from different locations in Teams client.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
@@ -11,29 +11,29 @@ ms.date: 09/16/2024
 
 # Build message extensions using Bot Framework
 
-Message extensions built using Bot Framework (Bot-based) use a web service as a bot. You can use message extensions to enable users to interact with your web service from different locations in the Teams client, such as the compose message area, the command box, or directly from a message and send back structured data, such as cards.
+Message extensions built using Bot Framework (Bot-based) use a web service as bot. Developers can use message extensions to enable users to interact with web service from different locations in Teams client, such as compose message area, command box, or directly from message and send back structured data, such as cards.
 
-Bot-based message extension takes advantage of the Bot Framework's messaging schema and secure communication protocol. The bot is defined in the app manifest for the Teams app and you can also define different types of commands for your message extension, such as action commands or search commands.
+Bot-based message extension takes advantage of Bot Framework's messaging schema and secure communication protocol. Bot is defined in app manifest for Teams app and developers can also define different types of commands for message extension, such as action commands or search commands.
 
-There are two types of message extension commands, action command and search command. The message extension command type defines the UI elements and interaction flows available to your web service. You can use a search command or an action command to interact with your web service through a bot in Teams.
+There are two types of message extension commands, action command and search command. Message extension command type defines UI elements and interaction flows available to web service. Developers can use search command or action command to interact with web service through bot in Teams.
 
-:::image type="content" source="../assets/images/Copilot/bot-based-action-search-command.png" alt-text="Screenshot shows the way for a developer to select between action commands and search commands.":::
+:::image type="content" source="../assets/images/Copilot/bot-based-action-search-command.png" alt-text="Screenshot shows the way for a developer to select between action commands and search commands." :::
 
 # [Search commands](#tab/search-commands)
 
-Message extension search commands allow users to search external systems and insert the results of that search into a message in the form of a card. This document guides you on how to select search command invoke locations, and add the search command to your app manifest.
+Message extension search commands allow users to search external systems and insert results of that search into message in form of card. This document guides developers on how to select search command invoke locations and add search command to app manifest.
 
 > [!NOTE]
-> The result card size limit is 28 KB. The card isn't sent if its size exceeds 28 KB.
+> Result card size limit is 28 KB. Card isn't sent if its size exceeds 28 KB.
 
-See the following video to learn how to define message extension search commands:
+See following video to learn how to define message extension search commands:
 <br>
 > [!VIDEO 64d251ff-0c4c-43df-a3f9-58171a3faf04]
 <br>
 
-The search command in a message extension is configured using the `composeExtensions.commands` property and the `query` type in the app manifest (previously called as Teams app manifest). Command and parameter descriptions enhance the usability and effectiveness of a message extension. A good command description offers a clear and concise summary of the app’s features.
+Search command in message extension is configured using `composeExtensions.commands` property and `query` type in app manifest (previously called as Teams app manifest). Command and parameter descriptions enhance usability and effectiveness of message extension. Good command description offers clear and concise summary of app’s features.
 
-The following code is an example of the `composeExtensions` property defining a search command:
+Following code is example of `composeExtensions` property defining search command:
 
 ```json
 {
@@ -70,29 +70,29 @@ The following code is an example of the `composeExtensions` property defining a 
 
 ### Parameters
 
-You must add the following parameters to your `composeExtensions.commands` array of objects:
+Developers must add following parameters to `composeExtensions.commands` array of objects:
 
 | Property name | Purpose | Required? | Manifest version |
 |---|---|---|---|
-| `id` | Unique ID that you assign to search command. The user request includes this ID. | Yes | 1.0 |
-| `title` |Command name. This value appears in the user interface (UI). | Yes | 1.0 |
-| `description` | Help text indicating what this command does. This value appears in the UI. | Yes | 1.0 |
-|`semanticDescription`|Semantic description of the command for consumption by the Large Language Models (LLMs).|No|1.17|
+| `id` | Unique ID assigned to search command. User request includes this ID. | Yes | 1.0 |
+| `title` | Command name. Value appears in user interface (UI). | Yes | 1.0 |
+| `description` | Help text indicating what command does. Value appears in UI. | Yes | 1.0 |
+|`semanticDescription`|Semantic description of command for consumption by Large Language Models (LLMs).|No|1.17|
 | `type` | Type of command. Default is `query`. | No | 1.4 |
-|`initialRun` | If this property is set to **true**, it indicates this command should be executed as soon as the user selects this command in the UI. | No | 1.0 |
-| `context` | Optional array of values that defines the context the search action is available in. The possible values are `message`, `compose`, or `commandBox`. The default is `compose`,`commandBox`. | No | 1.5 |
+|`initialRun` | Indicates command should execute immediately when user selects it in UI if set to **true**. | No | 1.0 |
+| `context` | Optional array of values that defines context in which search action is available. Possible values are `message`, `compose`, or `commandBox`. Default is `compose`,`commandBox`. | No | 1.5 |
 
-You must add the following search parameter details that define the text visible to your user in the Teams client:
+Developers must add following search parameter details that define text visible to user in Teams client:
 
 | Property name | Purpose | Is required? | Minimum manifest version |
 |---|---|---|---|
-| `parameters` | Defines a static list of parameters for the command. | No | 1.0 |
-| `parameter.name` | Describes the name of the parameter. The `parameter.name` is sent to your service in the user request. | Yes | 1.0 |
-| `parameter.description` | Describes the parameter’s purposes or example of the value that must be provided. This value appears in the UI. | Yes | 1.0 |
-|`parameter.semanticDescription`|Semantic description of the parameter for consumption by the Large Language Models (LLMs).|No|1.17|
+| `parameters` | Defines static list of parameters for command. | No | 1.0 |
+| `parameter.name` | Describes name of parameter. `parameter.name` is sent to service in user request. | Yes | 1.0 |
+| `parameter.description` | Describes parameter’s purposes or example of value that must be provided. Value appears in UI. | Yes | 1.0 |
+|`parameter.semanticDescription`|Semantic description of parameter for consumption by Large Language Models (LLMs).|No|1.17|
 | `parameter.title` | Short user-friendly parameter title or label. | Yes | 1.0 |
-| `parameter.inputType` | Set to the type of the input required. Possible values include `text`, `textarea`, `number`, `date`, `time`, `toggle`. Default is set to `text`. | No | 1.4 |
-| `parameters.value` | Initial value for the parameter. The value isn't supported | No | 1.5 |
+| `parameter.inputType` | Specifies type of input required. Possible values include `text`, `textarea`, `number`, `date`, `time`, `toggle`. Default is `text`. | No | 1.4 |
+| `parameters.value` | Initial value for parameter. Value isn't supported | No | 1.5 |
 
 For more information, see [app manifest schema](/microsoft-365/extensibility/schema).
 
@@ -104,13 +104,13 @@ For more information, see [app manifest schema](/microsoft-365/extensibility/sch
 # [Action commands](#tab/action-commands)
 
 > [!NOTE]
-> When a message action is initiated, attachment details aren't sent as part of the `turncontext` invoke activity.
+> When message action is initiated, attachment details aren't sent as part of `turncontext` invoke activity.
 
-Action commands allow you to present your users with a modal pop-up called a task module in Teams. The task module collects or displays information, processes the interaction, and sends the information back to Teams. This document guides you on how to select action command invoke locations, create your task module, send final message or card, and create an action command manually.
+Action commands allow developers to present users with modal pop-up called task module in Teams. Task module collects or displays information, processes interaction, and sends information back to Teams. This document guides developers on how to select action command invoke locations, create task module, send final message or card, and create action command manually.
 
-The action command in a message extension is configured using the `composeExtensions.commands` property and `action` type in the app manifest.
+Action command in message extension is configured using `composeExtensions.commands` property and `action` type in app manifest.
 
-The following code is an example of the `composeExtensions` property defining an action command:
+Following code is example of `composeExtensions` property defining action command:
 
 ```json
 "composeExtensions": [
@@ -155,31 +155,31 @@ The following code is an example of the `composeExtensions` property defining an
 
 ### Parameters
 
-You must add the following parameters to your `composeExtensions.commands` array of objects:
+Developers must add following parameters to `composeExtensions.commands` array of objects:
 
 | Property name | Purpose | Required? | Manifest version |
 |---|---|---|---|
-| `id` | Unique ID that you assign to this command. The user request includes this ID. | Yes | 1.0 |
-| `title` | Command name. This value appears in the UI. | Yes | 1.0 |
+| `id` | Unique ID assigned to this command. User request includes this ID. | Yes | 1.0 |
+| `title` | Command name. Value appears in UI. | Yes | 1.0 |
 | `type` | Message extension type. Default is `action`. | No | 1.4 |
-| `fetchTask` | Set to `true` for an Adaptive Card or embedded web view for your task module, and`false` for a static list of parameters or when loading the web view by a `taskInfo`. | No | 1.4 |
-| `context` | Optional array of values that defines where the message extension is invoked from. The possible values are `message`, `compose`, or `commandBox`. The default value is `["compose", "commandBox"]`. | No | 1.5 |
+| `fetchTask` | Set to `true` for Adaptive Card or embedded web view for task module and `false` for static list of parameters or when loading web view by `taskInfo`. | No | 1.4 |
+| `context` | Optional array of values that defines where message extension is invoked. Possible values are `message`, `compose`, or `commandBox`. Default value is `["compose", "commandBox"]`. | No | 1.5 |
 
-If you're using a static list of parameters, you must also add the following parameters:
+When using static list of parameters, developers must also add following parameters:
 
 | Property name | Purpose | Is required? | Minimum manifest version |
 |---|---|---|---|
-| `parameters` | Describes the static list of parameters for the command. Only use when `fetchTask` is `false`. | No | 1.0 |
-| `parameter.name` | Describes the name of the parameter. This is sent to your service in the user request. | Yes | 1.0 |
-| `parameter.description` | Describes the parameter’s purposes or example of the value that should be provided. This value appears in the UI. | Yes | 1.0 |
+| `parameters` | Describes static list of parameters for command. Only use when `fetchTask` is `false`. | No | 1.0 |
+| `parameter.name` | Describes name of parameter. This is sent to service in user request. | Yes | 1.0 |
+| `parameter.description` | Describes parameter’s purposes or example of value that should be provided. Value appears in UI. | Yes | 1.0 |
 | `parameter.title` | Short user-friendly parameter title or label. | Yes | 1.0 |
-| `parameter.inputType` | Set to the type of input required. The possible values include `text`, `textarea`, `number`, `date`, `time`, `toggle`. The default value is set to `text`. | No | 1.4 |
+| `parameter.inputType` | Specifies type of input required. Possible values include `text`, `textarea`, `number`, `date`, `time`, `toggle`. Default is `text`. | No | 1.4 |
 
-If you're using an embedded web view, you can optionally add the `taskInfo` object to fetch your web view without calling your bot directly. If you select this option, the behavior is similar to that of using a static list of parameters. In that the first interaction with your bot is [responding to the task module submit action](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md). If you're using a `taskInfo` object, you must set the `fetchTask` parameter to `false`.
+When using embedded web view, developers can optionally add `taskInfo` object to fetch web view without calling bot directly. Selecting this option yields behavior similar to using static list of parameters. In this case, first interaction with bot is [responding to task module submit action](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md). When using `taskInfo` object, developers must set `fetchTask` parameter to `false`.
 
 | Property name | Purpose | Is required? | Minimum manifest version |
 |---|---|---|---|
-|`taskInfo`|Specify the task module to preload when using a message extension command. | No | 1.4 |
+|`taskInfo`|Specifies task module to preload when using message extension command. | No | 1.4 |
 |`taskInfo.title`|Initial task module title. |No | 1.4 |
 |`taskInfo.width`|Task module width, either a number in pixels or default layout such as `large`, `medium`, or `small`. |No | 1.4 |
 |`taskInfo.height`|Task module height, either a number in pixels or default layout such as `large`, `medium`, or `small`.|No | 1.4 |
