@@ -179,7 +179,7 @@ You've successfully created key and endpoint for your AI chat bot.
 
 1. Select **Deployments** from the left pane and select **+ Create new deployments**.
 
-    :::image type="content" source="~/assets/images/agents-playground/ai-studio.png" lightbox="~/assets/images/agents-playground/ai-studio.png" alt-text="Screenshot shows the model deployments for Azure open AI.":::
+    :::image type="content" source="../assets/images/agents-playground/ai-studio.png" lightbox="~/assets/images/agents-playground/ai-studio.png" alt-text="Screenshot shows the model deployments for Azure open AI.":::
 
 1. Select the following details:
 
@@ -191,11 +191,11 @@ You've successfully created key and endpoint for your AI chat bot.
 1. Select **0301 (Default)** from the **Model version** dropdown list.
 1. Enter **Deployment name** and select **Create**.
 
-    :::image type="content" source="~/assets/images/agents-playground/model-version.png" lightbox="~/assets/images/agents-playground/model-version.png" alt-text="Screenshot shows the model and version for Azure open AI deployment.":::
+    :::image type="content" source="../assets/images/agents-playground/model-version.png" lightbox="~/assets/images/agents-playground/model-version.png" alt-text="Screenshot shows the model and version for Azure open AI deployment.":::
 
 1. Copy and save the **Deployment name** for further use.
 
-    :::image type="content" source="~/assets/images/agents-playground/copy-deployment.png" lightbox="~/assets/images/agents-playground/copy-deployment.png" alt-text="Screenshot shows the deployment name for Azure open AI deployment.":::
+    :::image type="content" source="../assets/images/agents-playground/copy-deployment.png" lightbox="~/assets/images/agents-playground/copy-deployment.png" alt-text="Screenshot shows the deployment name for Azure open AI deployment.":::
 
 #### Update Azure Open AI key and endpoints
 
