@@ -917,7 +917,7 @@ You learned to create an API-based message extension using OpenAPI Description d
 ## Build a bot with SSO authentication
 
 <details>
-<summary>Tutorial: Build a bot with SSO authentication</summary>
+<summary><b>Tutorial: Build a bot with SSO authentication</b></summary>
 
 Conversational bots in Microsoft Teams perform repetitive automated tasks initiated by users, such as customer service. The user needs to sign in multiple times without single sign-on (SSO) authentication. With SSO authentication methods, the users don't need to sign in to the bot multiple times.
 
