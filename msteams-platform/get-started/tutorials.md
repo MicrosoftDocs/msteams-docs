@@ -400,8 +400,6 @@ You have all the tools to set up your account. Next, let's set up your developme
 
 ### Create OpenAPI Description document
 
-#### OpenAPI Description
-
 OpenAPI Description (OAD) is the industry-standard specification that outlines how OpenAPI files are structured and outlined. It's a language-agnostic, human-readable format for describing APIs. It's easy for both humans and machines to read and write. The schema is machine-readable and represented in either YAML or JSON.
 
 To interact with the APIs, an OpenAPI Description document is necessary. The OpenAPI Description document must meet the following criteria:
