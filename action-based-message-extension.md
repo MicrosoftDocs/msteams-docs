@@ -1,6 +1,5 @@
 ---
 title: Action-based Message Extension Tutorial
-author: surbhigupta
 description: With this learning module, learn how to set up action message extension for Teams to initiate actions from compose message and message area.
 ms.author: surbhigupta
 ms.topic: conceptual
@@ -8,7 +7,7 @@ ms.localizationpriority: high
 ms.date: 01/12/2025
 ---
 
-## Build action based message extension
+# Build action based message extension
 
 Teams action based message extension allow users to interact with web services in the Microsoft Teams client. Message extensions help to initiate actions in an external system from the compose message area, the command box, or directly from a message.
 
@@ -21,7 +20,7 @@ This step-by-step guide helps you to build Teams action-based message extension 
 
 :::image type="content" source="assets/images/sbs-messagingextension-action/sharemessageoutput1.png" alt-text="Screenshot of the message extension output after you have successfully completed the step-by-step guide.":::
 
-### Prerequisites
+## Prerequisites
 
 Ensure that you install the following tools and set up your development environment:
 
