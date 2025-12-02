@@ -147,3 +147,41 @@ You've successfully created key and endpoint for your AI chat bot.
 
 > [!NOTE]
 > You can also get OpenAI API key to debug your AI chat bot. For more information, see [setup your API key](https://platform.openai.com/docs/quickstart/step-2-setup-your-api-key).
+
+##### Get Azure Open AI keys and endpoint
+
+1. Select **Go to resources**.
+
+    :::image type="content" source="../assets/images/agents-playground/deployment-azure.png" alt-text="Screenshot shows you the deployment of the Azure open AI.":::
+
+1. Select **Keys and Endpoint** from the left pane and copy the **KEY** and **Endpoint**. You can copy either **KEY 1** or **KEY 2**.
+
+    :::image type="content" source="~/assets/images/agents-playground/key-endpoints.png" lightbox="~/assets/images/agents-playground/key-endpoints.png" alt-text="Screenshot shows the keys and endpoints.":::
+
+    Save the **KEY** and **Endpoint** for further use.
+
+1. Select **Model deployments** from the left pane and select **Manage Deployments**.
+
+    :::image type="content" source="~/assets/images/agents-playground/model-deployments.png" lightbox="~/assets/images/agents-playground/model-deployments.png" alt-text="Screenshot shows the model deployment for Azure open AI.":::
+
+    The Azure Open AI Studio window appears.
+
+1. Select **Deployments** from the left pane and select **+ Create new deployments**.
+
+    :::image type="content" source="../assets/images/agents-playground/ai-studio.png" lightbox="~/assets/images/agents-playground/ai-studio.png" alt-text="Screenshot shows the model deployments for Azure open AI.":::
+
+1. Select the following details:
+
+1. Select **gpt-35-turbo** from the **Select a model** dropdown list.
+
+    > [!NOTE]
+    > Only **gpt-35-turbo** model is supported for the AI chat bot.
+
+1. Select **0301 (Default)** from the **Model version** dropdown list.
+1. Enter **Deployment name** and select **Create**.
+
+    :::image type="content" source="../assets/images/agents-playground/model-version.png" lightbox="~/assets/images/agents-playground/model-version.png" alt-text="Screenshot shows the model and version for Azure open AI deployment.":::
+
+1. Copy and save the **Deployment name** for further use.
+
+    :::image type="content" source="../assets/images/agents-playground/copy-deployment.png" lightbox="~/assets/images/agents-playground/copy-deployment.png" alt-text="Screenshot shows the deployment name for Azure open AI deployment.":::
