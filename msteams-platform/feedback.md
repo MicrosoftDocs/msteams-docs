@@ -3,7 +3,7 @@ title: Developer Community Support & Feedback
 description: Learn about developer community help, raise issues, and general questions. Questions related to SDK and samples, documentation feedback, and feature requests.
 ms.localizationpriority: medium
 ms.topic: reference
-ms.date: 09/28/2022
+ms.date: 12/02/2025
 ---
 
 # Support and feedback
@@ -31,12 +31,12 @@ Post your questions and help other community members by sharing and responding t
 
 | **Community channel**|   **Contact**  |
 |:---------------------|:---------------|
-|**Community help** | <ul> <li>:::image type="icon" source="assets/icons/microsoft-icon.png"::: [Microsoft Q&A](/answers/tags/339/office-teams-development-routing): is the platform where you can connect with others to build, integrate, or customize apps and workflows in Microsoft Teams using developer tools and APIs. Use the `Microsoft Teams`tag to post your query.  </li> <li>:::image type="icon" source="assets/icons/stack-overflow-icon.png"::: [Stack Overflow](https://stackoverflow.com/questions/tagged/microsoft-teams): We love Stack Overflow and provide extensive support to questions posted on Stack Overflow. Use the `microsoft-teams` tag to post questions. Stack Overflow has criteria about appropriate questions and [Microsoft Q&A](/answers/tags/339/office-teams-development-routing) has an open policy regarding this. Follow the Stack Overflow guidelines, such as providing a descriptive title, a concise problem statement, and details to reproduce the issue. Feature requests or broad questions are off-topic. If you're a new user, see [Stack Overflow Help Center](https://stackoverflow.com/help). We value your feedback! Let us know how we’re doing by sharing your thoughts through this [feedback form](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR7iCOpS5_b9Nqmwx43u5rtZUOThVR081SllSR05aSDQxQ0tUMDVPTVIxTi4u).</li> <li>:::image type="icon" source="assets/icons/github-icon.png"::: [GitHub](https://github.com): Use the `teams-developer-support` tag across issues related to [Microsoft Teams Docs](https://github.com/MicrosoftDocs/msteams-docs/issues), [Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/issues), and [Microsoft Teams JavaScript client library](https://github.com/OfficeDev/microsoft-teams-library-js/issues) </li> <li>:::image type="icon" source="assets/icons/microsoft-icon.png"::: [Tech Community Hub](https://techcommunity.microsoft.com/): On the [Teams Developer Community](https://techcommunity.microsoft.com/category/microsoftteams/discussions/teamsdeveloper?messages.widget.messagelistfornodebyrecentactivitywidget-tab-main-forum-widgets-0=newest) page, select **Start a Discussion** to begin a conversation. Additionally, you can view the newest posts, check the most liked ones, and search the most recent posts to seek resolutions for your queries. Use the `MICROSOFT TEAMS` tag to get started. </li> <ul> |
+|**Community help** | <ul> <li>:::image type="icon" source="assets/icons/microsoft-icon.png"::: [Microsoft Q&A](/answers/tags/339/office-teams-development-routing): is the platform where you can connect with others to build, integrate, or customize apps and workflows in Teams using developer tools and APIs. Use the `Microsoft Teams`tag to post your query.  </li> <li>:::image type="icon" source="assets/icons/stack-overflow-icon.png"::: [Stack Overflow](https://stackoverflow.com/questions/tagged/microsoft-teams): We love Stack Overflow and provide extensive support to questions posted on Stack Overflow. Use the `microsoft-teams` tag to post questions. Stack Overflow has criteria about appropriate questions and [Microsoft Q&A](/answers/tags/339/office-teams-development-routing) has an open policy regarding this. Follow the Stack Overflow guidelines, such as providing a descriptive title, a concise problem statement, and details to reproduce the issue. Feature requests or broad questions are off-topic. If you're a new user, see [Stack Overflow Help Center](https://stackoverflow.com/help). We value your feedback! Let us know how we’re doing by sharing your thoughts through this [feedback form](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR7iCOpS5_b9Nqmwx43u5rtZUOThVR081SllSR05aSDQxQ0tUMDVPTVIxTi4u).</li> <li>:::image type="icon" source="assets/icons/github-icon.png"::: [GitHub](https://github.com): Use the `teams-developer-support` tag across issues related to [Microsoft Teams Docs](https://github.com/MicrosoftDocs/msteams-docs/issues), [Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/issues), and [Microsoft Teams JavaScript client library](https://github.com/OfficeDev/microsoft-teams-library-js/issues) </li> <li>:::image type="icon" source="assets/icons/microsoft-icon.png"::: [Tech Community Hub](https://techcommunity.microsoft.com/): On the [Teams Developer Community](https://techcommunity.microsoft.com/category/microsoftteams/discussions/teamsdeveloper?messages.widget.messagelistfornodebyrecentactivitywidget-tab-main-forum-widgets-0=newest) page, select **Start a Discussion** to begin a conversation. Additionally, you can view the newest posts, check the most liked ones, and search the most recent posts to seek resolutions for your queries. Use the `MICROSOFT TEAMS` tag to get started. </li> <ul> |
 | **Community chat group** | Use the informal community chat room for :::image type="icon" source="assets/icons/Teams-icon.png":::[Microsoft Teams app developers](https://gitter.im/OfficeDev/MicrosoftTeamsAppDev). Select **SIGN IN TO START TALKING**, if signing in for the first time. Select **JOIN ROOM**, if already logged in. |
 
 ### Report issues
 
-Submit issues and ask general questions related to SDK and samples using the community help channels.
+Submit issues and ask general questions related to SDK and samples by using the community help channels.
 
 | **Community channel** | **Contact** |
 |:----------------------|:------------|
@@ -49,7 +49,7 @@ Submit issues and ask general questions related to SDK and samples using the com
 
 ### Documentation feedback
 
-Submit documentation feedback or updates using the community help channels.
+Submit documentation feedback or updates by using the community help channels.
 
 | **Community channel** | **Contact** |
 |:--------------------------|:--------------------------|
