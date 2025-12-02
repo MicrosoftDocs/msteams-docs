@@ -1119,12 +1119,13 @@ The following steps help you to create and register your bot in the Azure portal
 
     If you get the **Unable to find package** error, follow these steps:
 
-    1. Go to **Tools** > **NuGet Package Manager** > **Package Manager Settings**.
-    1. In the **Options** window that appears, select **NuGet Package Manager** > **Package Sources**.
-    1. Select **Add**.
-    1. In **Name**, enter `nuget.org` and in **Source**, enter `https://api.nuget.org/v3/index.json`.
-    1. Select **Update** and **OK**.
-    1. Rebuild your project.
+      1. Go to **Tools** > **NuGet Package Manager** > **Package Manager Settings**.
+      1. In the **Options** window that appears, select **NuGet Package Manager** > **Package Sources**.
+      1. Select **Add**.
+      1. In **Name**, enter `nuget.org` and in **Source**, enter `https://api.nuget.org/v3/index.json`.
+      1. Select **Update** and **OK**.
+      1. Rebuild your project.
+
     <br>
     </details>
 
