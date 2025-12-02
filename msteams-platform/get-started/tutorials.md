@@ -215,8 +215,6 @@ You've successfully created key and endpoint for your AI chat bot.
 
     ```
 
-</details>
-
 #### Debug and run your AI chat bot app
 
 1. From the left pane, select **RUN and DEBUG** (Ctrl+Shift+D), and then select **Debug in Agents Playground** from the dropdown list.
@@ -262,3 +260,46 @@ To mock an **Add user** activity, follow these steps:
     Bot sends the following response:
 
     :::image type="content" source="~/assets/images/toolkit-v2/debug/add-a-user-response.png" alt-text="Screenshot shows the response of predefined mock activity add user.":::
+
+#### Custom activity triggers
+
+You can use **Custom activity** to customize activity triggers, for example, `reactionsAdded` to meet the requirements of your bot app. Agents Playground automatically populates the required properties of the activity. You can also modify the activity type and add more properties.
+
+1. Select **Mock an Activity** > **Custom activity**.
+
+    :::image type="content" source="../assets/images/toolkit-v2/debug/mock-activity.png" alt-text="Screenshot shows the list of option under mock an activity.":::
+
+1. Add `messageReaction` to customize the activity under the `type` property:
+
+    ```json
+    {
+        "type": "messageReaction",
+        "reactionsAdded": [
+        {
+            "type": "like"
+        }
+        ],
+        "replyToId": "d60fd1cb-3e8f-44ef-849c-404806ba1b47"
+    }
+    ```
+
+1. Select **Send activity**.
+
+    :::image type="content" source="~/assets/images/toolkit-v2/debug/custom-activity-request.png" alt-text="Screenshot shows the option to send activity after customization on mock activity.":::
+
+    Bot sends an `onReactionsAdded` handler in response.
+
+    :::image type="content" source="../assets/images/toolkit-v2/debug/custom-activity-response.png" alt-text="Screenshot shows the response of custom mock activity.":::
+
+#### Complete challenge
+
+Did you come up with output like this?
+
+:::image type="content" source="~/assets/images/toolkit-v2/debug/test-tool.png" lightbox="~/assets/images/toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
+
+Congratulations! You've successfully created an AI chat bot app. Now, you've learned to debug your AI chat bot app in Agents Playground.
+
+> [!div class="nextstepaction"]
+> [Microsoft 365 Agents Playground](../toolkit/debug-your-agents-playground.md)
+
+</details>
