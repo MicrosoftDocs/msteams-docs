@@ -996,7 +996,7 @@ The following steps help you to create and register your bot in the Azure portal
 
 [!INCLUDE [Azure app registration](../includes/get-started/azure-app-registration.md)]
 
-**Create a tunnel**
+#### Create a tunnel
 
 # [dev tunnel](#tab/dev)
 
@@ -1012,7 +1012,7 @@ The following steps help you to create and register your bot in the Azure portal
 
 [!INCLUDE [Client secret](../includes/get-started/create-client-secret.md)]
 
-**Add API permissions**
+#### Add API permissions
 
 1. In the left pane, select **API permissions**.
 
@@ -1035,7 +1035,7 @@ The following steps help you to create and register your bot in the Azure portal
     > - If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
     > - Users need to consent to the API permissions only if the Microsoft Entra app is registered in a different tenant.
 
-**Application ID URI**
+#### Application ID URI
 
 1. In the left pane, under **Manage**, select **Expose an API**.
 
