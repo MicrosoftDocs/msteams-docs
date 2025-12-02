@@ -1368,14 +1368,11 @@ Congratulations, your first tab app is running on Teams!
 <details>
 <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-To successfully run your app in Teams, ensure that you've enabled custom app upload in your Teams account. You can learn more about custom app upload in the [Prerequisites](#prerequisites-for-building-a-bot-app) section.
+To successfully run your app in Teams, ensure that you've enabled custom app upload in your Teams account. You can learn more about custom app upload in the [prerequisites](#prerequisites-for-building-a-bot-app) section.
 
 </details>
 
-### Congratulations
-
-You have successfully created a tab app using C#. Agents Toolkit has added the necessary scaffolding to your app's directory structure.
-The tutorial is now complete.
+You have successfully created a tab app using C#. Agents Toolkit has added the necessary scaffolding to your app's directory structure. The tutorial is now complete.
 
 </details>
 
@@ -1386,13 +1383,14 @@ The tutorial is now complete.
 <details>
 <summary><b>Tutorial: Add SSO to tab and message extension app</b></summary>
 
-The  Microsoft Entra single sign-on (Microsoft Entra SSO) helps to authenticate users in Teams.
+Microsoft Entra single sign-on (SSO) enables seamless user authentication in Teams.
 
-**Key aspects of Microsoft Entra SSO**:
+Key aspects of Microsoft Entra SSO:
 
 - Allows the user to sign in automatically after the first sign in.
 - Allows the user to sign in to other devices without entering credentials again.
 - Obtains token for the signed in user.
+
 This step-by-step guide helps you to create tabs and message extensions enabling Microsoft Entra SSO authentication. You'll see the following output:
 
 :::image type="content" source="../assets/images/Tab-ME-SSO/hello-megan-profile245-1.png" alt-text="Screenshot of the tab and message extension with SSO authentication output after you have successfully completed the step-by-step guide.":::
