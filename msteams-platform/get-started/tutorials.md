@@ -156,13 +156,13 @@ You've successfully created key and endpoint for your AI chat bot.
 
 1. Select **Keys and Endpoint** from the left pane and copy the **KEY** and **Endpoint**. You can copy either **KEY 1** or **KEY 2**.
 
-    :::image type="content" source="~/assets/images/agents-playground/key-endpoints.png" lightbox="~/assets/images/agents-playground/key-endpoints.png" alt-text="Screenshot shows the keys and endpoints.":::
+    :::image type="content" source="../assets/images/agents-playground/key-endpoints.png" lightbox="~/assets/images/agents-playground/key-endpoints.png" alt-text="Screenshot shows the keys and endpoints.":::
 
     Save the **KEY** and **Endpoint** for further use.
 
 1. Select **Model deployments** from the left pane and select **Manage Deployments**.
 
-    :::image type="content" source="~/assets/images/agents-playground/model-deployments.png" lightbox="~/assets/images/agents-playground/model-deployments.png" alt-text="Screenshot shows the model deployment for Azure open AI.":::
+    :::image type="content" source="../assets/images/agents-playground/model-deployments.png" lightbox="~/assets/images/agents-playground/model-deployments.png" alt-text="Screenshot shows the model deployment for Azure open AI.":::
 
     The Azure Open AI Studio window appears.
 
