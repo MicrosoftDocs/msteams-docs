@@ -185,3 +185,31 @@ You've successfully created key and endpoint for your AI chat bot.
 1. Copy and save the **Deployment name** for further use.
 
     :::image type="content" source="../assets/images/agents-playground/copy-deployment.png" lightbox="~/assets/images/agents-playground/copy-deployment.png" alt-text="Screenshot shows the deployment name for Azure open AI deployment.":::
+
+#### Update Azure Open AI key and endpoints
+
+1. Open your project in Visual Studio Code.
+1. Under **EXPLORER**, go to **env** > **.env.playground.user** file.
+1. Enter your **SECRET_AZURE_OPENAI_API_KEY** and **SECRET_AZURE_OPENAI_ENDPOINT**.
+
+    ```text
+    ...
+    SECRET_AZURE_OPENAI_API_KEY=<azure-openai-api-key>
+    SECRET_AZURE_OPENAI_ENDPOINT=<azure-openai-endpoint>
+    ```
+
+1. Go to **src** > **app.js** file.
+1. Comment the `OpenAI` code and uncomment the `Azure OpenAI` code.
+1. Enter your Azure Open AI deployment name in `azureDefaultDeployment`.
+
+    ```JavaScript
+
+    // Use OpenAI
+    // apiKey: config.openAIKey,
+    // defaultModel: "gpt-3.5-turbo",
+
+    azureApiKey: config.azureOpenAIKey,
+    azureDefaultDeployment: "gpt-35-turbo",
+    azureEndpoint: config.azureOpenAIEndpoint,
+
+    ```
