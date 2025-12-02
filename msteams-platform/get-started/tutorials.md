@@ -982,7 +982,7 @@ If you don't have a Teams developer account, you can get it for free. Join the M
 
 ### Set up local environment
 
-[!INCLUDE [Set up local environment](../includes/get-started/clone-repository.md)]
+[!INCLUDE [clone-repository](../includes/get-started/clone-repository.md)]
 
 ### Register Microsoft Entra app
 
