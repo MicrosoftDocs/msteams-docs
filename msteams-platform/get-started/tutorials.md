@@ -48,3 +48,52 @@ The bot capability of a Teams app creates a chatbot or a conversational bot. It 
 :::image type="content" source="~/assets/images/toolkit-v2/first-bot/your-helloworld-app-bot.png" alt-text="Screenshot shows you the app with three features. Bot is highlighted.":::
 
 As you've already prepared for creating these apps, you can set up a new Teams project for creating the AI chat bot app.
+
+#### Create your bot project workspace
+
+If the prerequisites are in place, let's begin!
+
+1. Open **Visual Studio Code**.
+
+1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="~/assets/images/toolkit-v2/toolkit-sidebar-icon.PNG" border="false"::: icon in the Visual Studio Code **Activity Bar**.
+
+1. Select **Create a New Agent/App**.
+
+    :::image type="content" source="~/assets/images/toolkit-v2/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Agents Toolkit sidebar.":::
+
+1. Select **Agents for Teams** > **Azure OpenAI** > enter an input in **Input Azure API service key now**
+
+    :::image type="content" source="~/assets/images/toolkit-v2/first-bot/create-newapp.png" alt-text="Screenshot shows the Agents Toolkit app templates.":::
+
+1. Select **Basic Agents for Teams**. If you need a different functionality for your bot, select the required option.
+
+    :::image type="content" source="~/assets/images/toolkit-v2/debug/ai-chat-bot.png" alt-text="Screenshot shows the app feature to add to your new app.":::
+
+1. Select the programming language as **JavaScript**.
+
+    :::image type="content" source="~/assets/images/agents-playground/select-language-bot.png" alt-text="Screenshot shows the option to select the programming language.":::
+
+1. Select **Default folder**.
+
+    :::image type="content" source="~/assets/images/toolkit-v2/first-bot/select-default-location.png" alt-text="Screenshot shows the selection of default location.":::
+
+To change the default location, follow these steps:
+
+1. Select **Browse**.
+
+    :::image type="content" source="~/assets/images/toolkit-v2/first-bot/select-browse.png" alt-text="Screenshot shows the selection of browse location option.":::
+
+1. Select the location for the project workspace.
+1. Select **Select Folder**.
+
+    :::image type="content" source="~/assets/images/toolkit-v2/select-folder.png" alt-text="Screenshot shows the folder to select.":::
+
+1. Enter a suitable name for your app and then select the **Enter** key.
+
+    :::image type="content" source="../assets/images/toolkit-v2/first-bot/hello-bot.png" alt-text="Screenshot shows where to enter the app name.":::
+
+    A dialog appears, where you need to choose yes or no to trust the authors of the files in this folder.
+
+    :::image type="content" source="../toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/first-bot/vsc-trust-authors.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder.":::
+
+Now, you've successfully created your AI chat bot project workspace.
