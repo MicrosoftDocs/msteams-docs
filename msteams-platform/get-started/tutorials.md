@@ -866,8 +866,10 @@ To create the manifest, follow these steps:
      - Update the value for `validDomains` to the `service URL` endpoint defined in the OpenAPI Description file.
 
 1. Save the Teams app manifest in the same folder you saved the OpenAPI Description document and the response rendering template.
+
     - You need a color image and outline image. These images should be included in the folder and referenced in your Teams app manifest.
     - Zip up the contents of the folder. The zip file must include the following files:
+
       - OpenAPI Description document
       - Response rendering template
       - App manifest
@@ -893,7 +895,7 @@ Sign into Teams test environment to test your app in Teams. To upload a custom a
 1. Go to a chat, then select **+** from the message compose area, and search for your app.
 1. Select the app and make a search query.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-invoke-teams.png" alt-text="Screenshot shows that from the plus icon in the chat menu, users can invoke the message extension app that is displayed in the flyout menu.":::
+    :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-invoke-teams.png" alt-text="Screenshot shows that from the plus icon in the chat menu, users can invoke the message extension app that is displayed in the flyout menu.":::
 
 1. The app responds with an Adaptive Card in the chat window.
 1. Select **Send**.
