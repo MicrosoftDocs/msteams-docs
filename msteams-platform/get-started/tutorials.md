@@ -303,3 +303,5 @@ Congratulations! You've successfully created an AI chat bot app. Now, you've lea
 > [Microsoft 365 Agents Playground](../toolkit/debug-your-agents-playground.md)
 
 </details>
+
+[Back to top](#teams-app-tutorials)
