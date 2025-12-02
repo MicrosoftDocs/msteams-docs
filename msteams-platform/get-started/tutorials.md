@@ -226,3 +226,39 @@ You've successfully created key and endpoint for your AI chat bot.
 1. Agents Playground opens your AI chat bot in a webpage.
 
     :::image type="content" source="~/assets/images/toolkit-v2/debug/test-tool.png" lightbox="~/assets/images/toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
+
+### Activity triggers
+
+There are two types of activity triggers:
+
+#### Predefined activity triggers
+
+Agents Playground provides predefined activity triggers to test the functionalities of your bot.
+
+| Category | Activity | Handler |
+| --- | --- | --- |
+| Trigger Installation Update Activity | Install bot <br><br><br> Uninstall bot | `onInstallationUpdate` <br> `onInstallationUpdateAdded` <br><br> `onInstallationUpdate` <br> `onInstallationUpdateRemove`|
+| Trigger Conversation Update Activity | Add user <br><br><br> Add bot <br><br><br> Add channel | `onMembersAdded` <br> `onTeamsMembersAddedEvent` <br><br> `onMembersAdded` <br> `onTeamsMembersAddedEvent` <br><br> `onTeamsChannelCreatedEvent` |
+| | Remove user <br><br><br> Remove bot <br><br><br> Remove channel <br><br> Remove team | `onMembersRemoved` <br> `onTeamsMembersRemovedEvent` <br><br> `onMembersRemoved` <br> `onTeamsMembersRemovedEvent` <br><br> `onTeamsChannelDeletedEvent` <br><br> `onTeamsTeamDeletedEvent` |
+| | Rename channel <br><br> Rename team | `onTeamsChannelRenamedEvent` <br><br> `onTeamsTeamRenamedEvent` |
+
+> [!NOTE]
+> All types of activities aren't available in all scopes. For example, you can't add or remove a channel in a personal chat or a group chat.
+
+Predefined activity triggers are available in the **Mock an Activity** menu in Agents Playground.
+
+To mock an **Add user** activity, follow these steps:
+
+1. In Agents Playground, go to **Mock an Activity** > **Add user**.
+
+    :::image type="content" source="../assets/images/toolkit-v2/debug/add-user.png" alt-text="Screenshot shows the add user option under mock an activity.":::
+
+    A dialog appears to preview the activity handler.
+
+1. Select **Send activity**.
+
+    :::image type="content" source="../assets/images/toolkit-v2/debug/add-a-user-request.png" alt-text="Screenshot shows the option to send activity for predefined mock activity add user.":::
+
+    Bot sends the following response:
+
+    :::image type="content" source="~/assets/images/toolkit-v2/debug/add-a-user-response.png" alt-text="Screenshot shows the response of predefined mock activity add user.":::
