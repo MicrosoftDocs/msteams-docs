@@ -5,6 +5,7 @@ ms.localizationpriority: high
 ms.topic: reference
 ms.date: 12/02/2025
 ---
+
 # Tutorials
 
 In this article, learn more about building Teams app capabilities. Here's a list of the step-by-step guides available for Teams platform capabilities.
@@ -215,3 +216,13 @@ You've successfully created key and endpoint for your AI chat bot.
     ```
 
 </details>
+
+#### Debug and run your AI chat bot app
+
+1. From the left pane, select **RUN and DEBUG** (Ctrl+Shift+D), and then select **Debug in Agents Playground** from the dropdown list.
+
+    :::image type="content" source="~/assets/images/toolkit-v2/debug/select-debug-in-test-tool.png" lightbox="~/assets/images/toolkit-v2/debug/select-debug-in-test-tool.png" alt-text="Screenshot shows the option to select debug in Agents Playground.":::
+
+1. Agents Playground opens your AI chat bot in a webpage.
+
+    :::image type="content" source="~/assets/images/toolkit-v2/debug/test-tool.png" lightbox="~/assets/images/toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
