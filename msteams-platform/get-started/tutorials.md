@@ -1393,12 +1393,11 @@ The  Microsoft Entra single sign-on (Microsoft Entra SSO) helps to authenticate 
 - Allows the user to sign in automatically after the first sign in.
 - Allows the user to sign in to other devices without entering credentials again.
 - Obtains token for the signed in user.
-
 This step-by-step guide helps you to create tabs and message extensions enabling Microsoft Entra SSO authentication. You'll see the following output:
 
 :::image type="content" source="../assets/images/Tab-ME-SSO/hello-megan-profile245-1.png" alt-text="Screenshot of the tab and message extension with SSO authentication output after you have successfully completed the step-by-step guide.":::
 
-### Prerequisites
+### Prerequisites for adding SSO to apps
 
 Ensure that you install the following tools and set up your development environment:  
 
