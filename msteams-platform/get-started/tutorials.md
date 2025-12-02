@@ -114,3 +114,36 @@ After you finish scaffolding, explore the project directories and files in the *
 |`m365agents.yml`| This is the main Agents Toolkit project file. The project file defines two primary things:  Properties and configuration and stage definitions. |
 |`m365agents.local.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging.|
 |`m365agents.playground.yml`|This overrides `m365agents.yml` with actions that enable local execution and debugging in Test Tool.|
+
+### Build and run your AI chat bot app
+
+#### Create Open AI key and endpoint for your AI chat bot
+
+1. Go to [Azure portal](https://ms.portal.azure.com/).
+1. Select **Create a resource** and search for Azure Open AI.
+1. Select **Azure Open AI** and select **Create**.
+
+    :::image type="content" source="../assets/images/agents-playground/azure-open-ai.png" alt-text="Screenshot shows the Azure open AI in Azure portal.":::
+
+1. Fill the required details and select **Next**.
+
+    :::image type="content" source="../assets/images/agents-playground/azure-open-ai-resource.png" alt-text="Screenshot shows you the Azure open AI subscription and resource group.":::
+
+1. Select **All networks, including the internet, can access this resource** and then select **Next**.
+
+    :::image type="content" source="../assets/images/agents-playground/azure-open-ai-network.png" alt-text="Screenshot shows the Azure open AI network details.":::
+
+1. Fill the required details and select **Next**.
+
+    :::image type="content" source="../assets/images/agents-playground/azure-open-ai-tags.png" alt-text="Screenshot shows the Azure open AI tags details.":::
+
+1. Select **Create**.
+
+    :::image type="content" source="../assets/images/agents-playground/review-create.png" alt-text="Screenshot shows you to preview and create Azure open AI.":::
+
+You've successfully created key and endpoint for your AI chat bot.
+
+:::image type="content" source="~/assets/images/agents-playground/deployment.png" alt-text="Screenshot shows the deployment of the Azure open AI.":::
+
+> [!NOTE]
+> You can also get OpenAI API key to debug your AI chat bot. For more information, see [setup your API key](https://platform.openai.com/docs/quickstart/step-2-setup-your-api-key).
