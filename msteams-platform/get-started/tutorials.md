@@ -888,7 +888,7 @@ Sign into Teams test environment to test your app in Teams. To upload a custom a
 
 1. Select **Open**.
 
-:::image type="content" source="../assets/images/Copilot/api-me-open.png" alt-text="Screenshot of message extension app with the Open option highlighted.":::
+    :::image type="content" source="../assets/images/Copilot/api-me-open.png" alt-text="Screenshot of message extension app with the Open option highlighted.":::
 
 1. Go to a chat, then select **+** from the message compose area, and search for your app.
 1. Select the app and make a search query.
@@ -898,7 +898,7 @@ Sign into Teams test environment to test your app in Teams. To upload a custom a
 1. The app responds with an Adaptive Card in the chat window.
 1. Select **Send**.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-sbs-result.png" alt-text="Screenshot shows the Adaptive Card with the search results in the chat message in Teams.":::
+    :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-sbs-result.png" alt-text="Screenshot shows the Adaptive Card with the search results in the chat message in Teams.":::
 
 Congratulations! You did it!
 You learned to create an API-based message extension using OpenAPI Description document.
@@ -1113,7 +1113,6 @@ The following steps help you to create and register your bot in the Azure portal
     :::image type="content" source="~/assets/images/bots/yourbot.png" alt-text="Screenshot of the webpage that displays Your bot is ready.":::
 
     <details>
-
     <summary><b>Troubleshooting</b></summary>
 
     If you get the **Unable to find package** error, follow these steps:
@@ -1125,7 +1124,6 @@ The following steps help you to create and register your bot in the Azure portal
     1. Select **Update** and **OK**.
     1. Rebuild your project.
     <br>
-
     </details>
 
 ### Upload the bot in Teams
@@ -1291,11 +1289,9 @@ If you wish to host your app or access resources in Azure, you must have an [Azu
 
 Now you've got all the tools to set up your account. Next, let's set up your development environment and start building! Select the app you want to create first.
 
-### Create project workspace for your tab app using C #
+### Create project workspace for your tab app using C sharp
 
-Start Microsoft Teams app development by creating your first app. This app uses the tab capability.
-
-If the prerequisites are in place, let's begin!
+Start Microsoft Teams app development by creating your first app. This app uses the tab capability. If the prerequisites are in place, let's begin!
 
 The following steps help you to create project workspace for your tab app in Visual Studio:
 
@@ -1363,6 +1359,7 @@ Alternatively, you can either search and select the required scope or select a c
    :::image type="content" source="../assets/images/sbs-csharp/add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
 Congratulations, your first tab app is running on Teams!
+
    :::image type="content" source="../assets/images/sbs-csharp/final-output.png" alt-text=" Screenshot shows the final output of the Teams tab app.":::
 
 <details>
