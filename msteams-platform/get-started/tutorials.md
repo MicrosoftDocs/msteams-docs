@@ -193,7 +193,7 @@ You've successfully created key and endpoint for your AI chat bot.
 1. Under **EXPLORER**, go to **env** > **.env.playground.user** file.
 1. Enter your **SECRET_AZURE_OPENAI_API_KEY** and **SECRET_AZURE_OPENAI_ENDPOINT**.
 
-    ```text
+    ```json
     ...
     SECRET_AZURE_OPENAI_API_KEY=<azure-openai-api-key>
     SECRET_AZURE_OPENAI_ENDPOINT=<azure-openai-endpoint>
