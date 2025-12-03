@@ -8,6 +8,14 @@
 	<category term="new"/>
 	<category term="updated"/>
 	<entry>
+		<title type="html"><![CDATA[Platform update: Microsoft Entra ID auth for bots is now available in group scope!]]></title>
+		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/13637</id>
+		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/13637?referrer=whats.new.rssfeed"/>
+		<updated>2025-05-20T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[If you’re in a group chat and @mention the bot, you can interact with it without signing in again. The consent card appears only for the user who @mentions the bot for the first time. If the app isn’t pre-installed, user authentication depends on whether Microsoft Entra ID consent is required. In scenarios where consent is needed, the user who @mentions the bot grants permission for the requested access, allowing the bot to acquire an access token and respond within the group chat. When permissions are granted by default or trusted apps, the user can interact with the bot directly without providing consent. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/13637?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<category label="new" term="new"/>
+	</entry>
+	<entry>
 		<title type="html"><![CDATA[Platform update: Introducing Performance Report tool to evaluate web and tab apps efficiency on mobile!]]></title>
 		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/13635</id>
 		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/13635?referrer=whats.new.rssfeed"/>
@@ -117,14 +125,6 @@
 		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12056?referrer=whats.new.rssfeed"/>
 		<updated>2025-01-16T11:04:01+05:30</updated>
 		<summary type="html"><![CDATA[We're thrilled to announce 10 NEW Adaptive Card features now available in Microsoft Teams! These exciting updates empower you to create interactive, dynamic, and visually captivating Adaptive Cards. Supercharge your app development with these powerful new features today. These features are applicable in a wide variety of organizational scenarios - from creating intelligent forms in cards that avoid data entry errors through dependent inputs and conditionally-enabled buttons to visualize business trends through charts.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12056?referrer=whats.new.rssfeed">here</a>!]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[App validation update: Ensure a secure and user-friendly experience for app users with Nested App Authentication]]></title>
-		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/11548</id>
-		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/11548?referrer=whats.new.rssfeed"/>
-		<updated>2024-10-01T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[Excited to introduce Nested app authentication (NAA) for single-page applications that are embedded in host environment. NAA ensures that users can seamlessly interact with integrated apps within a primary app. It offers all this while maintaining security and enhancing user experience without requiring multiple logins. Use NAA to enable Single Sign-On (SSO) for apps embedded within supported Microsoft apps. NAA improves security by offering better security and flexibility. This allows for the creation of rich, client-driven apps while ensuring a secure and user-friendly experience for app users.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/11548?referrer=whats.new.rssfeed">here</a>!]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 </feed>
