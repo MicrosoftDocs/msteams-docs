@@ -34,9 +34,9 @@ Teams app capabilities enable collaborative workspaces with apps for Microsoft T
 - **Enhance collaboration**: Enable teams to communicate, share insights, and work together whether through bots, tabs, message extensions, or meeting apps.
 - **Personalize experiences**: Tailor solutions to your organization’s unique needs, from simple task lists to complex project management or helpdesk apps.
 - **Automate and streamline**: Use apps to handle repetitive tasks, approvals, and notifications, optimizing app user’s time.
-- **Reach users everywhere**: Teams apps work across desktop, web, and mobile, ensuring your solutions are accessible to app users.
+- **Reach users everywhere**: Teams apps work across desktop, web, and mobile. It ensures your solutions are accessible to app users.
 
-Teams helps organizations modernize communication, foster engagement, and deliver seamless, secure, and relevant experiences.
+Teams app capabilities help organizations modernize communication and foster engagement. The platform delivers seamless, secure, and relevant experiences.
 
 ## What capabilities can you build in Teams?
 
@@ -68,7 +68,7 @@ Here's a list of SDKs and tools that you can use to build app capabilities:
 
 - Microsoft 365 Agents SDK (multi hub, pro code agents)
 
-  The Microsoft 365 Agents SDK lets you build agents and apps that you can publish to Microsoft 365 Copilot and other endpoints and that can interoperate with Teams. It's designed for agents that work across hubs and collaborate with other agents (Agents to Agents (A2A)) and tools (Model Context Protocol) (MCP).
+  The Microsoft 365 Agents SDK lets you build agents and apps that you can publish to Microsoft 365 Copilot and other endpoints and that can interoperate with Teams. It's designed for agents that work across hubs and collaborate with other agents (Agents to Agents (A2A)) and tools (Model Context Protocol (MCP)).
 
 - Microsoft 365 Agents Toolkit (developer workflow and scaffolding)
 
