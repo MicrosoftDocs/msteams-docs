@@ -304,4 +304,4 @@ Congratulations! You've successfully created an AI chat bot app. Now, you've lea
 
 </details>
 
-[Back to top](#teams-app-tutorials)
+[Tutorials](#tutorials)
