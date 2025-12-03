@@ -44,7 +44,7 @@ Teams platform supports the following app types:
 
 - **Tabs**:
 
-  Tabs are web experiences (hosted pages) that run inside Teams. Use them for dashboards, forms, or full fidelity web apps embedded in a chat, channel, or meeting. You can also extend tabs to Outlook and the Microsoft 365.
+  Tabs are web experiences (hosted pages) that run inside Teams. Use them for dashboards, forms, or full fidelity web apps embedded in a chat, channel, or meeting. You can also extend tabs to Outlook and Microsoft 365.
 
 - **Bots**:
 
@@ -78,11 +78,11 @@ Here's a list of SDKs and tools that you can use to build app capabilities:
 
 In this section, learn how to build a Teams app with different capabilities, such as bot, tab, and message extension. Select the type of Teams app that you want to build:
 
-- [Build a Teams bot app](build-notification-bot.md) (WIP: Link to be updated for basic bot app.)
+- [Build a Teams bot app](build-notification-bot.md)
 - [Build a basic Teams tab app](build-basic-tab-app.md)
 - [Build message extension Teams app](build-message-extension.md)
 
-After you build the basic app capabilities, [explore tutorials and code samples](tool-options-and-code-samples.md). (WIP: Link to be added for Tutorials page once it's merged.)
+After you build the basic app capabilities, [explore tutorials and code samples](tool-options-and-code-samples.md).
 
 Get started with building apps for Microsoft Teams and beyond!
 
