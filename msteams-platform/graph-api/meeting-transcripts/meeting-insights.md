@@ -2,8 +2,8 @@
 title: Graph APIs to Fetch Meeting Insights
 description: Learn how to use the Meeting AI Insights API to fetch Teams meeting insights including conversation summaries, action items, and mentions.
 ms.localizationpriority: high
-ms.topic: conceptual
-ms.owner: vichug
+ms.topic: article
+ms.owner: vtarasov
 ms.author: surbhigupta
 ms.date: 05/16/2025
 ---
@@ -12,7 +12,6 @@ ms.date: 05/16/2025
 
 > [!IMPORTANT]
 >
-> * Meeting AI Insights API is available under the beta version in Microsoft Graph. For more information, see [versioning, support, and breaking change policies for Microsoft Graph](/graph/versioning-and-support#beta-version).
 > * Meeting AI Insights API is part of the Microsoft 365 Copilot API namespace. Insights can only be fetched on behalf of a Microsoft 365 Copilot licensed user. For more information, see [license requirements for Meeting Insights API](/graph/teams-licenses#license-requirements-for-teams-meeting-ai-insights-apis).
 
 The Meeting AI Insights API enables you to programmatically access structured AI-generated insights from transcribed Microsoft Teams meetings. These insights include:
@@ -25,7 +24,7 @@ The API empowers you to deliver intelligent meeting experiences, such as surfaci
 
 > [!NOTE]
 >
-> Meeting AI Insights API provides insights only for private scheduled meetings.
+> Meeting AI Insights API provides insights for private scheduled meetings, town halls, webinars, and Meet Now sessions. AI Insights API does not yet support channel meetings.
 
 ## Use cases
 
@@ -41,15 +40,13 @@ Here are some use cases for fetching AI-generated insights using Meeting AI Insi
 
 * You must [turn on the transcription or recording](https://support.microsoft.com/en-us/office/view-live-transcription-in-microsoft-teams-meetings-dc1a8f23-2e20-4684-885e-2152e06a4a8b) for the meeting for which the insights are to be generated. Alternatively, you can set a meeting to autotranscribe or autorecord programmatically using the [update onlineMeeting API](/graph/api/onlinemeeting-update?view=graph-rest-1.0&preserve-view=true&tabs=http) or directly through the [meeting options](/microsoftteams/manage-meeting-recording-options#record-and-transcribe-automatically).
 
-* The Meeting AI Insights API only works with delegated permissions and hence requires a token from a signed-in user to be passed in the call. The signed-in user must have a [Microsoft 365 Copilot license](/copilot/microsoft-365/microsoft-365-copilot-licensing) and access to the meeting’s transcript file.
-
 ## Fetch meeting insights
 
 To fetch the insights of a particular meeting, follow these steps:
 
 1. If you don’t have the meeting identifier (`id`), call online meeting API with the `JoinWebUrl` property to retrieve the `id`. For more information, see [retrieve an online meeting by JoinWebUrl](/graph/api/onlinemeeting-get?view=graph-rest-1.0&preserve-view=true&tabs=http#example-3-retrieve-an-online-meeting-by-joinweburl).
 
-1. Each transcript event of the meeting creates an associated [AI insight object](/graph/api/resources/callaiinsight?view=graph-rest-beta&preserve-view=true). Use the [List AI Insights API](/graph/api/onlinemeeting-list-aiinsights?view=graph-rest-beta&preserve-view=true) to fetch all the AI insight objects related to the meeting and use the included metadata in the response to select the relevant AI insight object for your scenario. Here's an example request and response:
+1. Each transcript event of the meeting creates an associated [AI insight object](/graph/api/resources/callaiinsight?preserve-view=true). Use the [List AI Insights API](/graph/api/onlinemeeting-list-aiinsights?preserve-view=true) to fetch all the AI insight objects related to the meeting and use the included metadata in the response to select the relevant AI insight object for your scenario. Here's an example request and response:
 
     **Request**
 
@@ -64,7 +61,7 @@ To fetch the insights of a particular meeting, follow these steps:
     Content-Type: application/json
     
     {
-      "@odata.context": "https://graph.microsoft.com/beta/$metadata#copilot/users('000000000-0000-0000-0000-000000000000')/onlineMeetings('00000...')/aiInsights",
+      "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#copilot/users('000000000-0000-0000-0000-000000000000')/onlineMeetings('00000...')/aiInsights",
       "@odata.count": 1,
       "value": [
         {
@@ -82,11 +79,11 @@ To fetch the insights of a particular meeting, follow these steps:
     | --- | --- |
     | `id` | A unique identifier for the generated AI insight object. |
     | `callId` | A unique identifier for the call during which this insight is generated. |
-    | `contentCorrelationId` | A unique identifier that correlates the [transcript](/graph/api/resources/calltranscript?&view=graph-rest-beta&preserve-view=true) of the meeting from which the AI insight object is generated. |
+    | `contentCorrelationId` | A unique identifier that correlates the [transcript](/graph/api/resources/calltranscript?preserve-view=true) of the meeting from which the AI insight object is generated. |
     | `createdDateTime` | The date and time at which the corresponding transcript was created. The timestamp type represents the date and time information using the ISO 8601 format and is always in Coordinated Universal Time (UTC). |
     | `endDateTime` | The date and time at which the corresponding transcript ends. The timestamp type represents the date and time information using the ISO 8601 format and is always in UTC. |
 
-1. Each AI insight object provides detailed meeting notes, action items, and participant-specific mentions, which can be accessed by calling [GET AI Insights API](/graph/api/callaiinsight-get?view=graph-rest-beta&preserve-view=true) for a specific insight object ID. Here's an example request and response:
+1. Each AI insight object provides detailed meeting notes, action items, and participant-specific mentions, which can be accessed by calling [GET AI Insights API](/graph/api/callaiinsight-get?preserve-view=true) for a specific insight object ID. Here's an example request and response:
 
     **Request**
 
@@ -101,7 +98,7 @@ To fetch the insights of a particular meeting, follow these steps:
     Content-Type: application/json
     
     {
-      "@odata.context": "https://graph.microsoft.com/beta/$metadata#copilot/users('00000000-0000-0000-0000-000000000000')/onlineMeetings('000000...')/aiInsights/$entity",
+      "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#copilot/users('00000000-0000-0000-0000-000000000000')/onlineMeetings('000000...')/aiInsights/$entity",
       "id": "Z2HWbT...",
       "callId": "af630fe0-04d3-4559-8cf9-91fe45e36296",
       "contentCorrelationId": "bc842d7a-2f6e-4b18-a1c7-73ef91d5c8e3",
@@ -158,7 +155,6 @@ To fetch the insights of a particular meeting, follow these steps:
 
 * AI-generated insights are only available after a meeting ends. The API doesn't support accessing live notes during a meeting.
 * AI-generated insights might take up to four hours to be available after the call ends.
-* Application-level permissions aren't supported.
 
 ## Code sample
 
@@ -168,5 +164,5 @@ To fetch the insights of a particular meeting, follow these steps:
 
 ## See also
 
-* [callAiInsight resource type](/graph/api/resources/callaiinsight?view=graph-rest-beta&preserve-view=true)
+* [callAiInsight resource type](/graph/api/resources/callaiinsight?preserve-view=true)
 * [Working with the cloud communications API in Microsoft Graph](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
