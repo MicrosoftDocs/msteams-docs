@@ -305,3 +305,10 @@ Congratulations! You've successfully created an AI chat bot app. Now, you've lea
 </details>
 
 [Tutorials](#tutorials)
+
+## Build API-based message extension
+
+<details>
+<summary><b>Tutorial: Build API-based message extension</b></summary>
+
+</details>
