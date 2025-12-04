@@ -5,6 +5,9 @@ ms.localizationpriority: high
 ms.date: 11/14/2025
 ms.topic: reference
 ---
+<!-- markdownlint-disable MD033 -->
+<!-- markdownlint-disable MD024 -->
+<!-- markdownlint-disable MD001 -->
 
 # Teams app tutorials
 
@@ -19,7 +22,6 @@ In this article, learn more about building Teams app capabilities. Here's a list
 
 ## Debug your AI chat bot using Microsoft 365 Agents Playground
 
-<!-- markdownlint-disable MD033 -->
 <details>
 <summary><b>Tutorial: Debug your AI chat bot</b></summary>
 
@@ -909,20 +911,14 @@ You learned to create an API-based message extension using OpenAPI Description d
 > [!div class="nextstepaction"]
 > [Create an API-based message extension](../messaging-extensions/create-api-message-extension.md)
 
-<!-- markdownlint-disable MD033 -->
 </details>
-<!-- markdownlint-enable MD033 -->
 
 [Back to top][def]
 
 ## Build a bot with SSO authentication
 
-<!-- markdownlint-disable MD033 -->
-
 <details>
 <summary><b>Tutorial: Build a bot with SSO authentication</b></summary>
-
-<!-- markdownlint-enable MD033 -->
 
 Conversational bots in Microsoft Teams perform repetitive automated tasks initiated by users, such as customer service. The user needs to sign in multiple times without single sign-on (SSO) authentication. With SSO authentication methods, the users don't need to sign in to the bot multiple times.
 
@@ -1198,13 +1194,10 @@ You've completed the tutorial to get started with build a bot with SSO authentic
 
 </details>
 
-<!-- markdownlint-enable MD033 -->
-
 [Back to top][def]
 
 ## Build your first app using C sharp
 
-<!-- markdownlint-disable MD033 -->
 <details>
 <summary><b>Tutorial: Build your first app using C#</b></summary>
 
@@ -1410,7 +1403,7 @@ This step-by-step guide helps you to create tabs and message extensions enabling
 
 Ensure that you install the following tools and set up your development environment:  
 
-| &nbsp; | Install | For using... |
+| # | Install | For using... |
 | --- | --- | --- |
 | 1. | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and calls all in one place.|
 | 2. | [Microsoft 365 developer account](../concepts/build-and-test/prepare-your-o365-tenant.md) | Access to Teams account with the appropriate permissions to install an app. |
@@ -1658,7 +1651,7 @@ You've completed the tutorial to get started with SSO for tab and message extens
 [Back to top][def]
 
 ## Build action based message extension
-<!-- markdownlint-disable MD033 -->
+
 <details>
 <summary><b>Tutorial: Build action based message extension</b></summary>
 
@@ -1677,7 +1670,7 @@ This step-by-step guide helps you to build Teams action-based message extension 
 
 Ensure that you install the following tools and set up your development environment:
 
-| &nbsp; | Install | For using... |
+| # | Install | For using... |
 | --- | --- | --- |
 | 1. | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call all in one place.|
 | 2. | [Visual Studio 2022](https://visualstudio.microsoft.com) |You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
@@ -1799,9 +1792,8 @@ Go to **samples** > **msgext-action** > **csharp** in Command Prompt window and 
 :::image type="content" source="../assets/images/sbs-messagingextension-action/dotnetruncmd.png" alt-text="Screenshot of Command Prompt - dotnet run with the dotnet run command.":::
 
 ---
-<!-- markdownlint-disable MD001 -->
+
 ### Add Action Message Extension app to Teams
-<!-- markdownlint-enable MD001 -->
 
 1. In your cloned repository, go to **samples** > **msgext-action** > **csharp** > **TeamsAppManifest**.
 
@@ -1872,9 +1864,8 @@ Did you come up with something like this?
 
 You've completed the tutorial to get started with a **Action Message Extension** app!
 
-<!-- markdownlint-disable MD033 -->
 </details>
-<!-- markdownlint-enable MD033 -->
+
 [Back to top][def]
 
 [def]: #teams-app-tutorials
