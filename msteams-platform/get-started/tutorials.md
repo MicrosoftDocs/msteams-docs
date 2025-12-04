@@ -311,4 +311,7 @@ Congratulations! You've successfully created an AI chat bot app. Now, you've lea
 <details>
 <summary><b>Tutorial: Build API-based message extension</b></summary>
 
+> [!NOTE]
+> API-based message extensions only support search commands.
+
 </details>
