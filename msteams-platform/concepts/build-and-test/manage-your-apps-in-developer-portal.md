@@ -1,6 +1,6 @@
 ---
 title: Manage Apps with Developer Portal
-description: Learn how to configure, develop, publish, manage, validate against Microsoft's test cases, and publish your apps using the Developer Portal for Teams.
+description: Learn how to configure, develop, publish, manage, validate against Microsoft's test cases, and publish your apps using Developer Portal for Teams.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
@@ -9,38 +9,38 @@ ms.date: 01/23/2025
 
 # Manage your apps in Developer Portal
 
-After you upload your app in Microsoft Teams, you can manage your app in Developer Portal. The article provides comprehensive guidance on app configuration, analytics, and validation to enhance the Teams app experience.<br>
+After you upload your app in Microsoft Teams, you can manage your app in Developer Portal. This article provides comprehensive guidance on app configuration, analytics, and validation to enhance Teams app experience.<br>
 In addition, you learn about Agent Identity Blueprint to create and manage agent identities for your agent.
 
 ## Overview
 
-In the **Overview** section, you can see the following components to manage your app:
+In the **Overview** section, you see the following components to manage your app:
 
 * **Dashboard**
 
-  * In the **Dashboard** under **Overview** section, you can see the following components for your app:
-    * **Recommendation**: App validation tool checks your app package against the test cases Microsoft uses when reviewing your app.
+  * In the **Dashboard** under **Overview** section, you see the following components for your app:
+    * **Recommendation**: App validation tool checks your app package against test cases Microsoft uses when reviewing your app.
     * **Announcement**: Latest updates of your apps on Developer Portal.
-    * **Active users (Preview)**: Shows you the active user count.
-    * **Basic information**: Shows you the **App ID**, **Version**, **Manifest version**, and other basic information.
+    * **Active users (Preview)**: Displays active user count.
+    * **Basic information**: Shows **App ID**, **Version**, **Manifest version**, and other basic details.
 
     :::image type="content" source="../../assets/images/tdp/dashboard-page_1.png" alt-text="The screenshot is an example that shows the Overview page of the app you created in Developer Portal." lightbox="../../assets/images/tdp/dashboard-page_1.PNG":::
 
 * **Analytics**
 
-    In the **Analytics** under **Overview** section, you can get an overview of your app's usage, engagement, and other insights. For more information, see [how to analyze your app's usage](analyze-your-apps-usage-in-developer-portal.md).
+    In the **Analytics** under **Overview** section, you get an overview of your app's usage, engagement, and other insights. For additional details, see [how to analyze your app's usage](analyze-your-apps-usage-in-developer-portal.md).
 
 ## Configure
 
-To install and render your app in Teams, you must include a set of configurations that Teams recognizes. To upload your apps in Teams, you need to have app manifest, which contains all the app details to display your app in Teams. This can be achieved with the help of components and tools that are available in Developer Portal.
+To install and render your app in Teams, you must include a set of configurations that Teams recognizes. To upload your apps in Teams, you need an app manifest that contains all app details required to display your app in Teams. You achieve this with components and tools available in Developer Portal.
 
 :::image type="content" source="../../assets/images/tdp/configure.png" alt-text="The screenshot is an example that shows how to configure features to manage and access your app in Developer Portal.":::
 
-In the **Configure** section, you can see the following components to manage and access your app:
+In the **Configure** section, you see the following components to manage and access your app:
 
-* **Basic information**: This section shows and allows you to edit the **App names**, **App ID**, **Descriptions**, **Version**, **Developer information**, **App URLs**, **Application (client) ID**, and **Microsoft Partner Network ID** (CCP ID).
-* **Branding**: This section allows you to add **Color icon** and **Outline icon** in `.png` format.
-* **App features**: This section allows you to add the following features to your app:
+* **Basic information**: This section shows and allows editing of **App names**, **App ID**, **Descriptions**, **Version**, **Developer information**, **App URLs**, **Application (client) ID**, and **Microsoft Partner Network ID** (CCP ID).
+* **Branding**: This section lets you add **Color icon** and **Outline icon** in `.png` format.
+* **App features**: This section lets you add the following features to your app:
   * Personal app
   * Bot
   * Connector
@@ -51,11 +51,11 @@ In the **Configure** section, you can see the following components to manage and
   * Activity feed notification
   > [!NOTE]
   > Connector is available in Government Community Cloud (GCC) but isn't available in GCC High, Department of Defense (DoD), and Teams operated by 21Vianet environments.
-* **App package editor**: This section allows you to create, manage, and customize app packages for Teams. Similar to Visual Studio Code, it enables you to seamlessly edit your app’s components, including the manifest, icons, Copilot agent files, scenes, JSON, and YAML files. You can also add a declarative agent and its related files into your app package.
+* **App package editor**: This section lets you create, manage, and customize app packages for Teams. Similar to Visual Studio Code, it enables seamless editing of your app’s components, including the manifest, icons, Copilot agent files, scenes, JSON, and YAML files. You can also add a declarative agent and its related files into your app package.
 
     :::image type="content" source="../../assets/images/tdp/package-editor.png" alt-text="Screenshot shows you the App package editor in Teams developer portal." lightbox="../../assets/images/tdp/app-package-editor.png":::
 
-    After you edit or add new files to your app package, you can either discard or update the package. If you select **Update**, the Developer Portal reviews the files and identifies errors. You can save the package with errors, but you must resolve them before you publish.
+    After you edit or add new files to your app package, you can either discard or update the package. If you select **Update**, Developer Portal reviews the files and identifies errors. You can save the package with errors, but you must resolve them before you publish.
 
     :::image type="content" source="../../assets/images/tdp/app-package-editor-update.png" alt-text="Screenshot shows you the App package editor to update the new files in Teams developer portal." lightbox="../../assets/images/tdp/app-package-editor-update.png":::
 
@@ -66,7 +66,7 @@ In the **Configure** section, you can see the following components to manage and
     <details>
     <summary><b>Add a declarative agent to your app package using Developer Portal</b></summary><br>
 
-    Before you add a declarative agent to your app package, ensure your app package is updated to the latest version v1.19.
+    Before you add a declarative agent to your app package, ensure your app package is updated to latest version v1.19.
 
     1. In Teams Developer Portal, select **Apps** from the left pane and select your app.
     1. Go to **Configure** > **App package editor**.
@@ -89,24 +89,24 @@ In the **Configure** section, you can see the following components to manage and
 
         :::image type="content" source="../../assets/images/tdp/app-package-update.png" alt-text="Screenshot shows you how to update declarative agents behavior into your app package." lightbox="../../assets/images/tdp/app-package-update.png":::
 
-       Now, the Developer Portal reviews the files and identifies any errors, which you must resolve before you publish.
+       Now, Developer Portal reviews the files and identifies any errors, which you must resolve before you publish.
 
     </details>
 
-* **Permissions**: This section allows you to give **Device permissions**, **Team Permissions**, **Chat/Meeting permissions**, and **User Permissions** for your app.
+* **Permissions**: This section lets you grant **Device permissions**, **Team Permissions**, **Chat/Meeting permissions**, and **User Permissions** for your app.
   > [!NOTE]
   > The maximum limit for RSC permissions is 16.
-* **Single sign-on**: Bot registered on Microsoft Entra ID supports single sign-on (SSO). If a bot is registered on Bot Framework portal (or within the Developer Portal under **Bot management**), then a bot doesn't support SSO, and you have to register your bot on Microsoft Entra ID to support SSO. For a bot registered on Microsoft Entra ID, add the **Application ID URI**. To get **Application ID URI** from Microsoft Entra ID, see [how to use SSO authentication for bots](../../bots/how-to/authentication/auth-aad-sso-bots.md).
-* **Languages**: This section allows you to set up or change the language of your app.
-* **Domain**: This section allows you to add the domains to load your apps in the Teams client, such as *.example.com.
+* **Single sign-on**: Bot registered on Microsoft Entra ID supports single sign-on (SSO). If a bot registers on Bot Framework portal (or within Developer Portal under **Bot management**), then the bot doesn't support SSO, and you must register your bot on Microsoft Entra ID to support SSO. For a bot registered on Microsoft Entra ID, add **Application ID URI**. To get **Application ID URI** from Microsoft Entra ID, see [how to use SSO authentication for bots](../../bots/how-to/authentication/auth-aad-sso-bots.md).
+* **Languages**: This section lets you set up or change your app language.
+* **Domain**: This section lets you add domains to load your apps in Teams client, such as *.example.com.
 
 ## Advanced
 
-In the **Advanced** section, you can see the following components to manage your app in Developer Portal:
+In the **Advanced** section, you see the following components to manage your app in Developer Portal:
 
 * **Owners**
 
-    Each app includes an **Owners** page, where you can share your app registration with others in your org. You can add **Administrator** and **Operative** role to manage who can change the settings of your app. The **Operative** role has a permission, such as updating an app's configuration. The **Administrator** role has the permissions, such as updating an app's configuration, adding or removing owners, and deleting an app. If there are no active owners for an app, admins can own the apps by entering the app ID in Teams Developer Portal.
+    Each app includes an **Owners** page, where you can share your app registration with others in your org. You can add **Administrator** and **Operative** roles to manage who can change app settings. The **Operative** role has permission, such as updating an app's configuration. The **Administrator** role has permissions, such as updating an app's configuration, adding or removing owners, and deleting an app. If no active owners exist for an app, admins can claim ownership by entering the app ID in Developer Portal.
 
     To add an owner:
 
@@ -118,18 +118,18 @@ In the **Advanced** section, you can see the following components to manage your
 
 * **App content**: You can configure your app with the following features:
   
-  * **Loading indicator**: Displays an indicator to let users know your hosted app content (for example, Tabs and Dialogs (referred as task modules in TeamsJS v1.x)) is loading.
-  * **Full-screen mode**: Displays a personal app without an app header. It's supported for the published apps to your org.
-  * **Supported channel types**: Lists the non-standard channel types that the app supports.
-  * **Default group capability**: For apps that support multiple group capabilities, such as teams, group chat, or meetings, select the default capability to navigate users when you add your app from the Microsoft Teams Store.
+  * **Loading indicator**: Displays an indicator to notify users that your hosted app content (for example, Tabs and Dialogs (referred as task modules in TeamsJS v1.x)) is loading.
+  * **Full-screen mode**: Displays a personal app without an app header. This feature supports published apps in your org.
+  * **Supported channel types**: Lists non-standard channel types that the app supports.
+  * **Default group capability**: For apps that support multiple group capabilities, such as teams, group chat, or meetings, select the default capability to navigate users when you add your app from Microsoft Teams Store.
 
 * **Environments**
 
-    You can configure environments and global variables to help transition your app from your local runtime to production. Global variables are used across all environments.
+    You can configure environments and global variables to help transition your app from local runtime to production. Global variables apply across all environments.
 
     To set up an environment, follow these steps:
 
-    1. In the Developer Portal, select the **Apps** that you're working.
+    1. In Developer Portal, select the **Apps** you are working on.
     1. Go to **Environments** under **Advanced** section.
     1. Select **+ Add an environment**>**Add**.
 
@@ -139,44 +139,44 @@ In the **Advanced** section, you can see the following components to manage your
 
       To use global variables:
 
-      Use the variable names instead of hard-coded values to set your app configurations.
+      Use variable names instead of hard-coded values to set your app configurations.
 
-      1. Enter `{{` in any field in the Developer Portal. A dropdown with all the variables you've created for the chosen environment along with the global variables appears.  
-      1. Before downloading your app package (for example, when getting ready to publish to the Teams Store), select the environment you want to use. Your app configurations update automatically based on the environment.
+      1. Enter `{{` in any field in Developer Portal. A dropdown with all variables created for the chosen environment along with global variables appears.  
+      1. Before downloading your app package (for example, when getting ready to publish to Microsoft Teams Store), select the environment you want to use. Your app configurations update automatically based on the environment.
 
-* **Plan and pricing**: You can link a Software-as-a-Services (SaaS) offer that you've created in the Partner center for your app.
+* **Plan and pricing**: You can link a Software-as-a-Services (SaaS) offer created in Partner center for your app.
 * **Admin settings**:
-  * **App Customization**: You can customize your app by selecting different properties, such as **Name**, **Short description**, **Small icon**, and other properties.  
-  * **Block app by default**: You can block your app by default for users until a Teams Administrator selects to enable it.
+  * **App Customization**: You can customize your app by selecting different properties, such as **Name**, **Short description**, **Small icon**, and other attributes.  
+  * **Block app by default**: You can block your app by default for users until a Teams Administrator enables it.
 
 ## Develop
 
-In the **Develop** section, you can open and develop your app in Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) in the Visual Studio Code and Visual Studio. For more information, see [develop your app with Microsoft 365 Agents Toolkit](develop-your-apps-with-toolkit.md).
+In the **Develop** section, you can open and develop your app in Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) in Visual Studio Code and Visual Studio. For more information, see [develop your app with Microsoft 365 Agents Toolkit](develop-your-apps-with-toolkit.md).
 
 ## Publish
 
-In the **Publish** section, you can publish your app to your org or to the Teams Store.
+In the **Publish** section, you can publish your app to your org or to Microsoft Teams Store.
 
-* **App package**: The app package describes how your app is configured that includes app features, required resources, and other important attributes in manifest. The app definition refers to the configuration and settings associated with the application. The Icon tab shows the icon used for your app.
+* **App package**: The app package describes how your app configures, including app features, required resources, and other important attributes in manifest. The app definition refers to the configuration and settings associated with the application. The Icon tab shows the icon used for your app.
 
-* **App validation**: Evaluate your app package based on the test cases that Microsoft uses to review your app, app manifest, basic information of your app, and bot capability. The **App validation** tool identifies any errors or warnings in your app package and provides guidelines for resolution.
+* **App validation**: Evaluate your app package based on test cases Microsoft uses to review your app, app manifest, basic app information, and bot capability. The **App validation** tool identifies any errors or warnings in your app package and provides guidelines for resolution.
 
     :::image type="content" source="../../assets/images/tdp/app-validation-home-get-started.png" alt-text="Screenshot shows you the App validation with get started in Teams developer portal." lightbox="../../assets/images/tdp/app-validation-home-get-started.png":::
 
-    If your app fails any test case, you can review the guidelines and make necessary updates to your app package based on the Microsoft test case results. You can also download your app package and validation report. For more information on Microsoft test cases, see [Teams Store validation guidelines](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) and [Commercial marketplace certification policies](/legal/marketplace/certification-policies).
+    If your app fails any test case, review the guidelines and update your app package as needed based on Microsoft test case results. You can also download your app package and validation report. For more information on Microsoft test cases, see [Teams Store validation guidelines](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) and [Commercial marketplace certification policies](/legal/marketplace/certification-policies).
 
     <br>
     <details>
     <summary><b>Validate your app package</b></summary><br>
 
-    To ensure that your app functions as expected in Teams, use the **App validation** tool to check your app package against Microsoft's test cases:
+    To ensure your app functions as expected in Teams, use the **App validation** tool to check your app package against Microsoft's test cases:
 
     1. In Teams Developer Portal, select **Apps** from the left pane and select your app.
     1. Go to **Publish** > **App validation** > **Get Started**.
 
         :::image type="content" source="../../assets/images/tdp/app-validation-home.png" alt-text="Screenshot shows you the App validation in Teams developer portal." lightbox="../../assets/images/tdp/app-validation-get-started.png":::
 
-    1. Select all the checkboxes under **Validation Acknowledgment** and select the **Start Validation**.
+    1. Select all checkboxes under **Validation Acknowledgment** and select **Start Validation**.
 
         :::image type="content" source="../../assets/images/tdp/app-validation.png" alt-text="Screenshot shows you the App validation acknowledgment of your app package." lightbox="../../assets/images/tdp/app-validation-start.png":::
 
@@ -184,28 +184,28 @@ In the **Publish** section, you can publish your app to your org or to the Teams
         > * Before you start validation, resolve any app manifest errors.
         > * You can submit only one validation request for a particular app at any given time. After the current validation completes, you can initiate a subsequent request.
 
-        Teams Developer Portal now starts to validate your app package:
+        Teams Developer Portal then starts validating your app package:
 
         :::image type="content" source="../../assets/images/tdp/app-validation-in-progress.png" alt-text="Screenshot shows you the App validation in progress." lightbox="../../assets/images/tdp/app-validation-in-progress.png":::
 
-        The app validation status is updated as follows:
+        The app validation status updates as follows:
 
           1. **Created**: After you select **Start Validation**.
-          1. **In progress**: App validation is initiated.
-          1. **Completed**: App validation is completed.
+          1. **In progress**: App validation initiates.
+          1. **Completed**: App validation completes.
 
-        You can select **Refresh Status** to retrieve latest validation status when the validation is **In progress** status.
+        You can select **Refresh Status** to retrieve the latest validation status when the status is **In progress**.
 
         :::image type="content" source="../../assets/images/tdp/app-validation-refresh.png" alt-text="Screenshot shows the app validation status." lightbox="../../assets/images/tdp/app-validation-refresh.png":::
 
-    1. After validation, it shows a list of test cases your app has passed or failed. The following are the app validation test result status available:<br>
+    1. After validation, the tool shows a list of test cases your app passed or failed. The following are the app validation test result statuses available:<br>
 
         |Status|Validation|Result|Description|
         |----|----|----|----|
         |**Success**| Complete | Pass | No issues. |
         |**Warning** | Complete | Pass | Fixing this issue is optional but recommended. |
         |**Error** | Complete | Fail | Fixing the issue is required to successfully publish the app. |
-        |**Skipped**|Incomplete |NA | We weren't able to continue the validation check. This may be a temporary issue. We recommend you rerun the test later.|
+        |**Skipped**|Incomplete |NA | The validation check could not continue. This may be a temporary issue. Rerun the test later.|
 
         :::image type="content" source="../../assets/images/tdp/app-validation-result.png" alt-text="Screenshot shows you the app validation tool result." lightbox="../../assets/images/tdp/app-validation-result.png":::
 
@@ -213,45 +213,45 @@ In the **Publish** section, you can publish your app to your org or to the Teams
 
     > [!NOTE]
     >
-    > * App validation is supported only for the apps with bot capability.
-    > * The app validation tool evaluates your app package based on the test cases Microsoft uses for app review prior to submission to the Microsoft Teams Store. Resolve errors or warnings and read the **App submission checklist** before submitting your app.
+    > * App validation applies only for apps with bot capability.
+    > * The app validation tool evaluates your app package based on test cases Microsoft uses for app review prior to submission to Microsoft Teams Store. Resolve errors or warnings and review **App submission checklist** before submitting your app.
 
 * **Publish to org**:
 
-   1. In the Developer Portal, select the **Apps** that you're working.
+   1. In Developer Portal, select the **Apps** you are working on.
    1. Go to **Publish to org** under **Publish**.
    1. Select **Publish your App**.
 
 * **Publish to Store**:
 
-   1. In the Developer Portal, select the **Apps** that you're working.
+   1. In Developer Portal, select the **Apps** you are working on.
    1. Go to **Publish to Store** under **Publish**.
    1. Select **Publish**.
 
-   You can download the app package by selecting the **Download app package** button from the **Publish to store** page.
+   You can download the app package by selecting **Download app package** from the **Publish to store** page.
 
 ## Test your app directly in Teams
 
-The Developer Portal provides options for testing and debugging your app:
+Developer Portal provides options for testing and debugging your app:
 
-* On the **Overview** page, you can see a snapshot whether your app is configured and is validated against Teams Store test cases.
-* The **Preview in Teams** button launches your app quickly in the Teams client for debugging.
+* On the **Overview** page, you see a snapshot indicating whether your app is configured and validated against Teams Store test cases.
+* The **Preview in Teams** button launches your app quickly in Teams client for debugging.
 
 ## Use tools to create app features
 
-The Developer Portal also includes tools to help you build key features of Teams apps. The following are the tools:
+Developer Portal also includes tools to help build key features of Teams apps. The following tools are available:
 
 * **Scene studio**: Design [custom Together Mode scenes in Teams](../../apps-in-teams-meetings/teams-together-mode.md) for Teams meetings.
 * **Adaptive Cards editor (Preview)**: Create and preview Adaptive Cards to include with your apps.
 * **Identity platform management (Preview)**: Register your apps with Microsoft Entra ID to help users sign in and provide access to APIs.
-* **Teams Store app validation**: Check your app package against the test cases that Microsoft uses to review your app. We recommend you to use latest app validation tool in your app under [**Publish**](#publish) section.
-* **Agent Identity Blueprint**: Create, configure, and manage reusable blueprints that define an Agent 365 and its back-end connection details. For more information, see [Agent Identity Blueprint](#agent-identity-blueprint).
-* **Bot management**: Add conversational bots to your app that communicate with users, respond to their questions, and proactively notify them about changes and other events.
+* **Teams Store app validation**: Check your app package against test cases Microsoft uses to review your app. Use the latest app validation tool in your app under [**Publish**](#publish) section.
+* **Agent Identity Blueprint**: Create, configure, and manage reusable blueprints that define Agent 365 and its back-end connection details. For more information, see [Agent Identity Blueprint](#agent-identity-blueprint).
+* **Bot management**: Add conversational bots to your app that communicate with users, answer questions, and proactively notify them about changes and other events.
 
 To add a bot:
 
-1. In the Developer Portal, select **Tools** in the left pane.
-1. Select the **Bot management**.
+1. In Developer Portal, select **Tools** in the left pane.
+1. Select **Bot management**.
 
     :::image type="content" source="../../assets/images/tdp/tools-in-dev-portal_1.png" alt-text="The screenshot is an example that shows the tools in developer portal, which helps you to build key features." lightbox="../../assets/images/tdp/tools-in-dev-portal_1.PNG":::
 
@@ -262,10 +262,10 @@ To add a bot:
 
 > [!NOTE]
 >
-> * Bots created using the **Microsoft Teams Developer Portal** are **single tenant** by default.
-> * **Multi tenant** bots are deprecated, but bots that were already created as **Multi tenant** continue to work as expected.
-> * When you create a bot using the **Developer Portal**, a corresponding [servicePrincipal](/graph/api/resources/serviceprincipal?view=graph-rest-1.0&preserve-view=true) is automatically created in your **Microsoft Entra ID** tenant.
-> * In delegated scenarios with work or school accounts, the admin must be assigned a supported [Microsoft Entra role](/entra/identity/role-based-access-control/permissions-reference?toc=%2Fgraph%2Ftoc.json) or a custom role with a supported role permission. The following least privileged roles are supported for this operation.
+> * Bots created using Microsoft Teams Developer Portal are **single tenant** by default.
+> * **Multi tenant** bots are deprecated, but bots already created as **Multi tenant** continue to work as expected.
+> * When you create a bot using Developer Portal, a corresponding [servicePrincipal](/graph/api/resources/serviceprincipal?view=graph-rest-1.0&preserve-view=true) automatically creates in your Microsoft Entra ID tenant.
+> * In delegated scenarios with work or school accounts, the admin must assign a supported [Microsoft Entra role](/entra/identity/role-based-access-control/permissions-reference?toc=%2Fgraph%2Ftoc.json) or a custom role with supported role permission. The following least privileged roles support this operation.
 >
 >   * For multitenant apps:
 >     * Application Administrator
@@ -273,20 +273,20 @@ To add a bot:
 >
 >   * For single-tenant apps where the calling user is a nonadmin user but is the owner of the backing application, the user must have the *Application Developer* role.
 
-From the Developer Portal, you can go to Bot Framework portal and configure your bot to update icon and other properties.
+From Developer Portal, you can go to Bot Framework portal and configure your bot to update icon and other properties.
 
   > [!NOTE]
   > Bot ID doesn't support environment variables.
 
 ### Agent Identity Blueprint
 
-An Agent Identity Blueprint provides a reusable configurations for agents in **Agent 365** that can perform tasks and interact with users or Microsoft 365 services. Each blueprint acts as a template that specifies how an agent is configured and connected to a back-end service.
+Agent Identity Blueprint provides reusable configurations for agents in **Agent 365** that perform tasks and interact with users or Microsoft 365 services. Each blueprint acts as a template that specifies how an agent configures and connects to a back-end service.
 
-Agent Identity Blueprints are created and managed in **Developer Portal**, while the agent identities derived from them are managed in the **Microsoft 365 Admin Center**. To get started and for complete end-to-end guidance on extending your agent to Agent 365, use the [Microsoft Agent 365 SDK](/microsoft-agent-365/developer/?tabs=python).
+Agent Identity Blueprints create and manage in Developer Portal, while agent identities derived from them manage in Microsoft 365 Admin Center. To get started and for complete end-to-end guidance on extending your agent to Agent 365, use [Microsoft Agent 365 SDK](/microsoft-agent-365/developer/?tabs=python).
 
 #### View and use existing Agent Identity Blueprints
 
-The Agent Identity Blueprint tool in the Developer Portal displays a list of existing blueprints available in your tenant.
+The Agent Identity Blueprint tool in Developer Portal displays a list of existing blueprints available in your tenant.
 
 :::image type="content" source="../../assets/images/tdp/list-agent-blueprint.png" alt-text="List of available agent blueprints" lightbox="../../assets/images/tdp/list-agent-blueprint.png":::
 
@@ -299,7 +299,7 @@ If a suitable blueprint doesn’t already exist, you can create a new one.
 
 #### Create a new agent identity blueprint
 
-1. In [Teams Developer Portal](https://dev.teams.microsoft.com/home), go to the **Tools** section and select **Agent Identity Blueprint**.
+1. In [Teams Developer Portal](https://dev.teams.microsoft.com/home), go to **Tools** and select **Agent Identity Blueprint**.
 
     :::image type="content" source="../../assets/images/tdp/agent-blueprint.png" alt-text="Agent Blueprint" lightbox="../../assets/images/tdp/agent-blueprint.png":::
 
@@ -311,20 +311,20 @@ If a suitable blueprint doesn’t already exist, you can create a new one.
 
     :::image type="content" source="../../assets/images/tdp/create-new-agent-blueprint.png" alt-text="Create a new agent blueprint window" lightbox="../../assets/images/tdp/create-new-agent-blueprint.png":::
 
-    A unique **Agent Blueprint ID** is automatically generated. This ID is used when you create agent identities based on this blueprint.
+    A unique **Agent Blueprint ID** automatically generates. This ID uses when you create agent identities based on this blueprint.
 
 #### Configure the agent identity blueprint
 
 Each blueprint includes two key configuration areas:
 
-1. **Basic information**: You can view the following basic configuration for your blueprint:
+1. **Basic information**: You view the following basic configuration for your blueprint:
 
     1. **Agent Blueprint ID**: A system-generated unique identifier for the blueprint.
-    1. **Name**: The name assigned when the blueprint was created.
+    1. **Name**: The name assigned when the blueprint created.
 
     :::image type="content" source="../../assets/images/tdp/basic-information-agent-blueprint.png" alt-text="Basic information tab in Agent Blueprint" lightbox="../../assets/images/tdp/basic-information-agent-blueprint.png":::
 
-1. **Configuration**: In this tab, you can specify how the agent communicates with its service.
+1. **Configuration**: In this tab, you specify how the agent communicates with its service.
 
     1. In the **Configuration** tab, go to **Agent Type**.
         * Choose how the agent connects to a back-end service.
@@ -337,10 +337,10 @@ Each blueprint includes two key configuration areas:
             |API Based | Use a custom API endpoint to define agent behaviour.|
 
     1. Based on the selected agent type, enter one of the following:
-        * **Bot ID**: If you selected Bot-based, provide the ID of your registered Teams bot.
-        * **Backend URL**: If you selected API-based, provide the URL of your back-end service endpoint.
+        * **Bot ID**: If you selected Bot Based, provide the ID of your registered Teams bot.
+        * **Backend URL**: If you selected API Based, provide the URL of your back-end service endpoint.
     1. Select **Save** to apply your configuration.
-    1. Select **Revert** to discard the changes.
+    1. Select **Revert** to discard changes.
 
     :::image type="content" source="../../assets/images/tdp/configuration-agent-blueprint.png" alt-text="Configuration tab in Agent Blueprint" lightbox="../../assets/images/tdp/configuration-agent-blueprint.png":::
 
