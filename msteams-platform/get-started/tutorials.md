@@ -331,4 +331,29 @@ Here's a list of tools you need for building and deploying your apps.
 | [Azure account](https://azure.microsoft.com/free/) | Access to Azure resources.|
 |OpenAPI Description (OAD) document| A document that describes the capabilities of your API. For more information, see [OpenAPI Description](https://learn.openapis.org/specification/structure.html).|
 
+### Set up your Teams development tenant
+
+A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where your upload and test your custom app. Let's verify if you're ready to develop with the tenant.
+
+### Check for custom app upload option
+
+After creating the app, you must load your app in Teams without distributing it. This process is known as custom app upload. Sign in to your Microsoft 365 account to view this option.
+
+> [!NOTE]
+> Custom app upload is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you can't preview and test your app in Teams local environment.
+
+Do you already have a tenant, and do you have the admin access? Let's check if you really do!
+
+Verify if you can upload a custom app in Teams:
+
+1. In the Teams client, select the **Apps** icon.
+1. Select **Manage your apps**.
+1. Select **Upload an app**.
+1. Look for the option to **Upload a custom app**. If you see the option, custom app upload is enabled.
+
+    :::image type="content" source="~/assets/images/toolkit-v2/spfx-custom-new1.png" alt-text="Screenshot shows the bot home.":::
+
+> [!NOTE]
+> Contact your Teams administrator if you don't find the option to upload a custom app.
+
 </details>
