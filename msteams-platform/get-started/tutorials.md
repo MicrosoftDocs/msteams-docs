@@ -478,4 +478,31 @@ We used the following OpenAPI Description as an example for this tutorial:
 
 ```
 
+> [!NOTE]
+> Ensure that the `required: true` property is available for only one parameter. If there are more than one required parameters, you can update the required property to `required: false` for the other parameters.
+
+</details>
+
+You can validate if the OpenAPI Description document is valid. To verify, follow these steps:
+
+1. Go to [Swagger/OpenAPI validator](https://apitools.dev/swagger-parser/) and validate the OpenAPI Description document.
+1. Save the OpenAPI Description document.
+1. Go to [Swagger Editor](https://editor.swagger.io/).
+1. In the left pane, paste the OpenAPI Description in the editor.
+1. In the right pane, select **GET**.
+1. Select **Try it out**.
+1. Enter the values for the **search** parameter as **Tool to create music**.
+1. Select **Execute**. The swagger editor displays a response with a list of products.
+
+    :::image type="content" source="../assets/images/Copilot/api-me-sbs-execute-get-response.png" alt-text="Screenshots shows the parameters, its values, and the **EXECUTE** option in the swagger editor.":::
+
+1. Go to **Server response** > **Response Body**.
+1. Under `products`, copy the first product from the list and save it for future reference.
+
+    :::image type="content" source="../assets/images/Copilot/api-me-sbs-product-response.png" alt-text="Screenshots shows the highlighted product that is selected from the response body.":::
+
+### Create response rendering template
+
+An OpenAPI Description document requires a response rendering template for the app to respond to the GET or POST requests. The response rendering template consists of an Adaptive Card template, Preview card template, and metadata.
+
 </details>
