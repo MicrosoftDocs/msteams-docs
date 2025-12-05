@@ -506,3 +506,134 @@ You can validate if the OpenAPI Description document is valid. To verify, follow
 An OpenAPI Description document requires a response rendering template for the app to respond to the GET or POST requests. The response rendering template consists of an Adaptive Card template, Preview card template, and metadata.
 
 </details>
+
+#### Adaptive Card template
+
+To create an Adaptive Card template, follow these steps:
+
+1. Go to [ChatGPT](https://chat.openai.com/) and ask the following query in the message compose area:
+
+    ```http
+    
+    Create an Adaptive Card Template that binds to the following response:
+        "categories": [
+            "Music Generation",
+            "AI Detection"
+        ],
+        "chatbot_short_url": "https://goto.opentools.ai/c/ai-music-generator",
+        "main_summary": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. With advanced AI technology, AI Music Generator makes music production accessible to everyone.",
+        "name": "AI Music Generator",
+        "opentools_url": "https://goto.opentools.ai/ai-music-generator",
+        "platforms": [
+            "Web",
+            "App",
+            "API"
+        ]
+    ```
+
+1. Select **Send message**.
+
+1. ChatGPT generates a response with an Adaptive Card template that binds to the sample data. Save the Adaptive Card template for future reference.
+
+Following is an example of the Adaptive Card template:
+
+<details>
+<summary>Adaptive Card template</summary>
+
+```json
+
+{
+"$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+"type": "AdaptiveCard",
+"version": "1.4",
+"body": [
+    {
+    "type": "TextBlock",
+    "text": "AI Music Generator",
+    "weight": "Bolder",
+    "size": "Large"
+    },
+    {
+    "type": "TextBlock",
+    "text": "Categories",
+    "size": "Medium"
+    },
+    {
+    "type": "TextBlock",
+     "text": "Music Generation, AI Detection",
+     "wrap": true
+    },
+    {
+    "type": "TextBlock",
+    "text": "Description",
+    "size": "Medium"
+    },
+    {
+    "type": "TextBlock",
+    "text": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. AI Music Generator is powered by advanced AI technology, and it makes music production accessible to everyone.",
+    "wrap": true
+    },
+    {
+    "type": "TextBlock",
+    "text": "Platform",
+    "size": "Medium"
+    },
+    {
+    "type": "TextBlock",
+    "text": "Web, App, API",
+    "wrap": true
+    }
+],
+"actions": [
+    {
+    "type": "Action.OpenUrl",
+    "title": "Learn More",
+    "url": "https://goto.opentools.ai/ai-music-generator"
+    },
+    {
+    "type": "Action.OpenUrl",
+    "title": "Try It",
+    "url": "https://goto.opentools.ai/c/ai-music-generator"
+    }
+]
+}
+
+```
+
+</details>
+
+1. To verify if the Adaptive Card generated binds to the sample data, follow these steps:
+   1. Go to [Adaptive Card Designer](https://adaptivecards.io/designer/).
+   1. Go to **Select host app**, and then select **Microsoft Teams** from the dropdown.
+   1. Go to **CARD PAYLOAD EDITOR** and paste the Adaptive Card template code.
+   1. Go to **SAMPLE DATA EDITOR** and paste the GET API response that you saved earlier.
+
+        :::image type="content" source="../assets/images/Copilot/api-me-sbs-adaptive-card-designer.png" alt-text="Screenshots shows the Adaptive Card designer with the Adaptive Card template and the sample data.":::
+
+   1. Select **Preview mode**. The Adaptive Card designer displays an Adaptive Card with the data that binds the response to the template.
+
+        :::image type="content" source="../assets/images/Copilot/api-me-sbs-adaptive-card-preview.png" alt-text="Screenshot shows the Adaptive Card designer with the Adaptive Card template and the sample data.":::
+
+#### Create a preview card template
+
+The preview card template can contain a `title`, `subtitle` and `image` properties. If the API response doesn't have an image, you can remove the image property.
+
+Following is an example of a preview card template:
+
+<details><summary>Preview card template</summary>
+
+```json
+   "previewCardTemplate": {
+        "title": "${if(name, name, 'N/A')}",
+        "subtitle": "$${if(price, price, 'N/A')}"
+    } 
+```
+
+Create an if condition for the `title` and `subtitle`, where:
+
+- If name exists, the bot uses the name.
+- If name doesn't exist, the bot uses NA.
+
+For example, `"title": "Name: ${if(name, name, 'N/A')}"`.
+Save the preview card template for future reference.
+</details>
