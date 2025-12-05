@@ -397,4 +397,85 @@ To interact with the APIs, an OpenAPI Description document is necessary. The Ope
 - Ensure that there are no remote references in the OpenAPI Description document.
 - A required parameter with a default value is considered optional.
 
+We used the following OpenAPI Description as an example for this tutorial:
+
+<details><summary>OpenAPI Description</summary>
+
+```yml
+    openapi: 3.0.1
+    info:
+    title: OpenTools Plugin
+    description: A plugin that allows the user to find the most appropriate AI tools for their use cases, with their pricing information.
+    version: 'v1'
+    servers:
+    - url: https://gptplugin.opentools.ai
+    paths:
+    /tools:
+    get:
+    operationId: searchTools
+    summary: Search for AI Tools
+        parameters:
+        - in: query
+          name: search
+          required: true
+          schema:
+          type: string
+          description: Used to search for AI tools by their category based on the keywords. For example, a search for "tool to create music" provides a list of tools that can create music.
+        responses:
+        "200":
+          description: OK
+          content:
+          application/json:
+            schema:
+            $ref: '#/components/schemas/searchToolsResponse'
+        "400":
+          description: Search Error
+          content:
+          application/json:
+            schema:
+            ref: '#/components/schemas/searchToolsError'
+    components:
+        schemas:
+        searchToolsResponse:
+        required:
+        - search
+          type: object
+        properties:
+        tools:
+          type: array
+        items:
+        type: object
+        properties:
+        name:
+        type: string
+        description: The name of the tool.
+        opentools_url:
+        type: string
+        description: The URL to access the tool.
+        main_summary:
+        type: string
+        description: A summary of what the tool is.
+        pricing_summary:
+        type: string
+        description: A summary of the pricing of the tool.
+        categories:
+        type: array
+        items:
+        type: string
+        description: The categories assigned to the tool.
+        platforms:
+        type: array
+        items:
+        type: string
+        description: The platforms that this tool is available on.
+        description: The list of AI tools.
+        searchToolsError:
+        type: object
+        properties:
+        message:
+            type: string
+            description: Message of the error.
+
+```
+
 </details>
