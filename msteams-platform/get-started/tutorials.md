@@ -356,4 +356,45 @@ Verify if you can upload a custom app in Teams:
 > [!NOTE]
 > Contact your Teams administrator if you don't find the option to upload a custom app.
 
+#### Create a free Teams developer tenant (optional)
+
+If you don't have a Teams developer account, you can get it free. Join the Microsoft 365 developer program!
+
+1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
+1. Select **Join Now** and follow the onscreen instructions.
+1. In the welcome screen, select **Set up E5 subscription**.
+1. Set up your administrator account. After you finish, the following screen appears.
+
+   :::image type="content" source="../assets/images/toolkit-v2/prerequisites/microsoft-365.png" alt-text="Screenshot shows the Microsoft 365 Developer Program.":::
+
+1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
+
+#### Get a free Azure account
+
+If you want to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
+
+You have all the tools to set up your account. Next, let's set up your development environment and start building! Select the app you want to build first.
+
+### Create OpenAPI Description document
+
+OpenAPI Description (OAD) is the industry-standard specification that outlines how OpenAPI files are structured and outlined. It's a language-agnostic, human-readable format for describing APIs. It's easy for both humans and machines to read and write. The schema is machine-readable and represented in either YAML or JSON.
+
+To interact with the APIs, an OpenAPI Description document is necessary. The OpenAPI Description document must meet the following criteria:
+
+- The `auth` property must not be specified.
+- JSON and YAML are the supported formats.
+- OpenAPI Versions 2.0 and 3.0.x are supported.
+- Teams doesn't support the oneOf, anyOf, allOf, and not (swagger.io) constructs.
+- Constructing arrays for the request isn't supported, however, nested objects within a JSON request body are supported.
+- The request body, if present, must be application/Json to ensure compatibility with a wide range of APIs.
+- Define an HTTPS protocol server URL for the `servers.url` property.
+- Only single parameter search is supported.
+- Only one required parameter without a default value is allowed.
+- Only POST and GET HTTP methods are supported.
+- The OpenAPI Description document must have an `operationId`.
+- The operation mustn't require Header or Cookie parameters without default values.
+- A command must have exactly one parameter.
+- Ensure that there are no remote references in the OpenAPI Description document.
+- A required parameter with a default value is considered optional.
+
 </details>
