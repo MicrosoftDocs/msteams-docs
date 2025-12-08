@@ -48,21 +48,21 @@ To fetch the insights of a particular meeting, follow these steps:
 
 1. Each transcript event of the meeting creates an associated [AI insight object](/graph/api/resources/callaiinsight?preserve-view=true). Use the [List AI Insights API](/graph/api/onlinemeeting-list-aiinsights?preserve-view=true) to fetch all the AI insight objects related to the meeting and use the included metadata in the response to select the relevant AI insight object for your scenario. Here's an example request and response:
 
-    **Request**
+### Request
 
-    ```http
-    GET/stagingv1.0/copilot/users/{userId}/onlineMeetings/{onlineMeetingId}/aiInsights
-    ```
+```http
+GET/stagingv1.0/copilot/users/{userId}/onlineMeetings/{onlineMeetingId}/aiInsights
+```
 
-    **Response**
+### Response
 
-    ```json
-    HTTP/1.1 200 OK
-    Content-Type: application/json
-    
-    {
-      "@odata.context": "https://graph.microsoft.com/stagingv1.0/$metadata#copilot/users('224317f2-e936-449c-8955-978c1497ce17')/onlineMeetings('MSoyMjQzMTdmMi1lOTM2LTQ0OWMtODk1NS05NzhjMTQ5N2NlMTcqMCoqMTk6bWVldGluZ19OV0kxWXpkbVlqWXRaamRoTVMwME1UVTVMV0ZpTUdVdE9HWm1ZemRtTVRFd01qQTVAdGhyZWFkLnYy')/aiInsights",
-      "@odata.count": 1,
+```json
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "@odata.context": "https://graph.microsoft.com/stagingv1.0/$metadata#copilot/users('224317f2-e936-449c-8955-978c1497ce17')/onlineMeetings('MSoyMjQzMTdmMi1lOTM2LTQ0OWMtODk1NS05NzhjMTQ5N2NlMTcqMCoqMTk6bWVldGluZ19OV0kxWXpkbVlqWXRaamRoTVMwME1UVTVMV0ZpTUdVdE9HWm1ZemRtTVRFd01qQTVAdGhyZWFkLnYy')/aiInsights",
+  "@odata.count": 1,
       "value": 
       [
         {
@@ -73,80 +73,76 @@ To fetch the insights of a particular meeting, follow these steps:
           "endDateTime": "2025-12-08T05:41:31Z"
         }
       ]
-    }
-    ```
+}
+```
 
-    | Property | Description |
-    | --- | --- |
-    | `id` | A unique identifier for the generated AI insight object. |
-    | `callId` | A unique identifier for the call during which this insight is generated. |
-    | `contentCorrelationId` | A unique identifier that correlates the [transcript](/graph/api/resources/calltranscript?preserve-view=true) of the meeting from which the AI insight object is generated. |
-    | `createdDateTime` | The date and time at which the corresponding transcript was created. The timestamp type represents the date and time information using the ISO 8601 format and is always in Coordinated Universal Time (UTC). |
-    | `endDateTime` | The date and time at which the corresponding transcript ends. The timestamp type represents the date and time information using the ISO 8601 format and is always in UTC. |
+| Property | Description |
+| --- | --- |
+| `id` | A unique identifier for the generated AI insight object. |
+| `callId` | A unique identifier for the call during which this insight is generated. |
+| `contentCorrelationId` | A unique identifier that correlates the [transcript](/graph/api/resources/calltranscript?preserve-view=true) of the meeting from which the AI insight object is generated. |
+| `createdDateTime` | The date and time at which the corresponding transcript was created. The timestamp type represents the date and time information using the ISO 8601 format and is always in Coordinated Universal Time (UTC). |
+| `endDateTime` | The date and time at which the corresponding transcript ends. The timestamp type represents the date and time information using the ISO 8601 format and is always in UTC. |
 
 1. Each AI insight object provides detailed meeting notes, action items, and participant-specific mentions, which you can access by calling [GET AI Insights API](/graph/api/callaiinsight-get?preserve-view=true) for a specific insight object ID. Here's an example request and response:
 
-    **Request**
+### Request
 
-    ```http
-    GET/stagingv1.0/copilot/users/{userId}/onlineMeetings/{onlineMeetingId}/aiInsights/{aiInsightId}
-    ```
-
-    **Response**
-
-    ```json
-    HTTP/1.1 200 OK
-    Content-Type: application/json
-
-    {
-      "@odata.context": "<https://graph.microsoft.com/stagingv1.0/$metadata#copilot/users('224317f2-e936-449c-8955-978c1497ce17')/onlineMeetings('MSoyMjQzMTdmMi1lOTM2LTQ0OWMtODk1NS05NzhjMTQ5N2NlMTcqMCoqMTk6bWVldGluZ19OV0kxWXpkbVlqWXRaamRoTVMwME1UVTVMV0ZpTUdVdE9HWm1ZemRtTVRFd01qQTVAdGhyZWFkLnYy')/aiInsights/$entity>",
-      "id":
-      "VjEjI1NQT0A2ZWMzMmU4MC1jN2U1LTQwMWUtYjE4NS01ODVjYjRkYTNiZTYsb21SalBlQTJPRTZDSnBMYmlncEtETk9YeExkcEtjOUVoSHZUdTJqSWJiTTNMRWZJUi1rUlJyNTZnOWNaWTl1aW9TdnQ5d2VON1VHU0VLQTN2WjZ0bFE=",
-      "callId": "97d0b60e-4341-470f-b273-ea7ddb31f8f9",
-      "contentCorrelationId": "fb7aa4c9-b2a0-497f-94f1-f52d1975bd3c-0",
-      "createdDateTime": "2025-12-08T05:41:31Z",
-      "endDateTime": "2025-12-08T05:41:31Z",
-      "meetingNotes": [
-      {
-        "title": "Sample Testing and Staging Code Update",
-        "text": "MOD discussed the process of testing a sample, confirming that it will function after updating the staging code, and outlined the necessary steps for this update.",
-          "subpoints": [
-        {
-          "title": "Staging Code Modification",
-          "text": "MOD stated that the sample will work after changing the staging code, indicating that this is the primary requirement for successful testing.",
-        },
-        {
-          "title": "Beta Environment Configuration",
-          "text": "MOD clarified that updates are needed only in the beta environment, specifically mentioning the need to replace or update the access token and configure related settings.",
-        },
-        {
-          "title": "Testing Process Steps",
-          "text": "MOD described the process of generating the beta, suggested that another person might need to participate, and encouraged further attempts if initial tests do not succeed.",
-        }
-      ]
-    }
-    {
-      "title": "ReadMe File Integration Issue",
-      "text": "MOD identified an issue related to the ReadMe file, noting that it was properly created and centrally added, which is affecting the current process.",
-      "subpoints":[
-        {
-          "title": "ReadMe File Addition",
-          "text": "MOD explained that the ReadMe file was properly created and centrally added, which is contributing to the observed issue in the workflow."
-        }
-      ]
-    }
-
-  ]
-}
-
+```http
+GET/stagingv1.0/copilot/users/{userId}/onlineMeetings/{onlineMeetingId}/aiInsights/{aiInsightId}
 ```
 
+### Response
 
-    | Property | Description |
-    | --- | --- |
-    | `meetingNotes` | Contains detailed notes of the meeting discussion as generated by Microsoft Teams Copilot. The notes include a title, summary, and detailed subpoints of the discussion. |
-    | `actionItems` | Contains the action items generated from the meeting conversation. The action items include a summary of the action item and the assigned owner. |
-    | `viewpoint.mentionEvents` | Contains participant-specific information from the conversation, including mentions with the timestamps in the meeting when a user is mentioned, the speaker, and the utterance details. |
+```json
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "@odata.context": "https://graph.microsoft.com/stagingv1.0/$metadata#copilot/users('224317f2-e936-449c-8955-978c1497ce17')/onlineMeetings('MSoyMjQzMTdmMi1lOTM2LTQ0OWMtODk1NS05NzhjMTQ5N2NlMTcqMCoqMTk6bWVldGluZ19OV0kxWXpkbVlqWXRaamRoTVMwME1UVTVMV0ZpTUdVdE9HWm1ZemRtTVRFd01qQTVAdGhyZWFkLnYy')/aiInsights/$entity",
+    "id": "VjEjI1NQT0A2ZWMzMmU4MC1jN2U1LTQwMWUtYjE4NS01ODVjYjRkYTNiZTYsb21SalBlQTJPRTZDSnBMYmlncEtETk9YeExkcEtjOUVoSHZUdTJqSWJiTTNMRWZJUi1rUlJyNTZnOWNaWTl1aW9TdnQ5d2VON1VHU0VLQTN2WjZ0bFE=",
+    "callId": "97d0b60e-4341-470f-b273-ea7ddb31f8f9",
+    "contentCorrelationId": "fb7aa4c9-b2a0-497f-94f1-f52d1975bd3c-0",
+    "createdDateTime": "2025-12-08T05:41:31Z",
+    "endDateTime": "2025-12-08T05:41:31Z",
+    "meetingNotes": [
+        {
+          "title": "Sample Testing and Staging Code Update",
+          "text": "MOD discussed the process of testing a sample, confirming that it will function after updating the staging code, and outlined the necessary steps for this update.",
+          "subpoints": [
+          {
+          "title": "Staging Code Modification",
+          "text": "MOD stated that the sample will work after changing the staging code, indicating that this is the primary requirement for successful testing.",
+          },
+          {
+          "title": "Beta Environment Configuration",
+          "text": "MOD clarified that updates are needed only in the beta environment, specifically mentioning the need to replace or update the access token and configure related settings.",
+          },
+          {
+          "title": "Testing Process Steps",
+          "text": "MOD described the process of generating the beta, suggested that another person might need to participate, and encouraged further attempts if initial tests do not succeed.",
+          },
+        ],
+      },
+      {
+        "title": "ReadMe File Integration Issue",
+        "text": "MOD identified an issue related to the ReadMe file, noting that it was properly created and centrally added, which is affecting the current process.",
+        "subpoints": [
+        {
+          "title": "ReadMe File Addition",
+          "text": "MOD explained that the ReadMe file was properly created and centrally added, which is contributing to the observed issue in the workflow.",
+        },
+      ],
+    },
+  ],
+}
+```
+
+| Property | Description |
+| --- | --- |
+| `meetingNotes` | Contains detailed notes of the meeting discussion as generated by Microsoft Teams Copilot. The notes include a title, summary, and detailed subpoints of the discussion. |
+| `actionItems` | Contains the action items generated from the meeting conversation. The action items include a summary of the action item and the assigned owner. |
+| `viewpoint.mentionEvents` | Contains participant-specific information from the conversation, including mentions with the timestamps in the meeting when a user is mentioned, the speaker, and the utterance details. |
 
 ## Limitations
 
