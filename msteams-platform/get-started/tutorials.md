@@ -957,8 +957,4 @@ If you don't have a Teams developer account, you can get it for free. Join the M
 
 1. Sign in to Teams using the new administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
 
-### Set up local environment
-
-[!INCLUDE [clone-repository](../includes/get-started/clone-repository.md)]
-
 </details>
