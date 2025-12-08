@@ -927,4 +927,21 @@ A tenant is like a space or a container where you chat, share files, and run mee
 
 After creating the app, you must load your app in Teams without distributing it. This process is known as custom app upload. Sign in to your Microsoft 365 account to view this option.
 
+> [!NOTE]
+> Custom app upload is necessary for previewing and testing apps in Teams local environment. Enable app upload to preview and test your app in Teams locally.
+
+Do you already have a tenant, and do you have the admin access? Let's check if you really do!
+
+To verify custom upload apps in Teams:
+
+1. In the Teams client, select the **Apps** icon.
+1. Select **Manage your apps**.
+1. Select **Upload an app**
+1. Look for the option **Upload a custom app**. If you see the option, custom app upload is enabled.
+
+    :::image type="content" source="../assets/images/bots/upload-a-custom-app-sso-bot-authentication.png" alt-text="Screenshot showing the Teams apps, Manage your apps, Upload an app, and Upload a custom app highlighted in red.":::
+
+> [!NOTE]
+> Contact Teams administrator, if you don't have the option to upload a custom app.
+
 </details>
