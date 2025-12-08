@@ -752,4 +752,87 @@ The following code is an example of a Response rendering template:
 
 Now, you need to create an app manifest (previously called Teams app manifest). The app manifest describes how your app integrates into the Microsoft Teams product.
 
+#### Create a Teams app manifest
+
+To create the manifest, follow these steps:
+
+1. Create a new JSON file. Your app manifest must conform to the 1.20 version of the schema defined in [App manifest schema](/microsoft-365/extensibility/schema/?view=m365-app-1.24&viewFallbackFrom=m365-app-1.23%3Ftoc%3D%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json&preserve-view=true).
+1. Add the following code to the JSON file:
+
+   <details>
+   <summary>App manifest</summary>
+
+   ```json
+   {
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.20",
+    "version": "1.0.3",
+    "id": "<<YOUR-MICROSOFT-APP-ID>>",
+    "packageName": "com.microsoft.teams.extension",
+    "developer": {
+        "name": "Teams App, Inc.",
+        "websiteUrl": "https://www.example.com",
+        "privacyUrl": "https://www.example.com/termofuse",
+        "termsOfUseUrl": "https://www.example.com/privacy"
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "name": {
+        "short": "Search ME API",
+        "full": "Search ME API full"
+    },
+    "description": {
+        "short": "product app for testing API Message Extensions",
+        "full": "product app for testing API Message Extensions"
+    },
+    "accentColor": "#FFFFFF",
+    "composeExtensions": [
+        {
+            "composeExtensionType": "",
+            "apiSpecificationFile": "",
+            "commands": [
+                {
+                    "context": [
+                        "compose"
+                    ],
+                    "type": "query",
+                    "title": "API for fetching Klarna.",
+                    "id": "",
+                    "parameters": [
+                        {
+                            "name": "",
+                            "title": "",
+                            "description": ""
+                        }
+                    ],
+                    "description": "",
+                    "apiResponseRenderingTemplateFile": ""
+                }
+            ]
+        }
+    ],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": []
+   }
+   ```
+
+   </details>
+
+1. Update the app manifest properties as follows:
+
+    - Replace `<<YOUR-MICROSOFT-APP-ID>>` with bot's Microsoft App ID.
+    - Update the value for `composeExtensionType` to `apiBased`.
+    - Update the value for `apiSpecificationFile` to the path of your OpenAPI Description file.
+    - Update the value for `commands.id` to `searchTools`.
+    - Update the value for `commands.title` to `Search for AI Tools`.
+    - Update the value for `commands.description` to `Search for AI Tools`.
+    - Update the value for `parameters.name` to `search`. If there are no parameters, then the values must be query parameters or `properties.name` if referencing a property in the request body schema.
+    - Update the `apiResponseRenderingTemplateFile` to the path of your response rendering template file.
+    - Update the value for `validDomains` to the `service URL` endpoint defined in the OpenAPI Description file.
+
 </details>
