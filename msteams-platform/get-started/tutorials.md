@@ -748,4 +748,8 @@ The following code is an example of a Response rendering template:
 
 </details>
 
+### Create app manifest
+
+Now, you need to create an app manifest (previously called Teams app manifest). The app manifest describes how your app integrates into the Microsoft Teams product.
+
 </details>
