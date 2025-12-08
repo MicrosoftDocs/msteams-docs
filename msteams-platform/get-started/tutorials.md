@@ -613,4 +613,8 @@ To create an Adaptive Card template, follow these steps:
 
         :::image type="content" source="../assets/images/Copilot/api-me-sbs-adaptive-card-preview.png" alt-text="Screenshot shows the Adaptive Card designer with the Adaptive Card template and the sample data.":::
 
+#### Create a preview card template
+
+The preview card template can contain a `title`, `subtitle` and `image` properties. If the API response doesn't have an image, you can remove the image property.
+
 </details>
