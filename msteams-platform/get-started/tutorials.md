@@ -506,4 +506,28 @@ You can validate if the OpenAPI Description document is valid. To verify, follow
 
 An OpenAPI Description document requires a response rendering template for the app to respond to the GET or POST requests. The response rendering template consists of an Adaptive Card template, Preview card template, and metadata.
 
+#### Adaptive Card template
+
+To create an Adaptive Card template, follow these steps:
+
+1. Go to [ChatGPT](https://chat.openai.com/) and ask the following query in the message compose area:
+
+    ```http
+    
+    Create an Adaptive Card Template that binds to the following response:
+        "categories": [
+            "Music Generation",
+            "AI Detection"
+        ],
+        "chatbot_short_url": "https://goto.opentools.ai/c/ai-music-generator",
+        "main_summary": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. With advanced AI technology, AI Music Generator makes music production accessible to everyone.",
+        "name": "AI Music Generator",
+        "opentools_url": "https://goto.opentools.ai/ai-music-generator",
+        "platforms": [
+            "Web",
+            "App",
+            "API"
+        ]
+    ```
+
 </details>
