@@ -643,4 +643,21 @@ Save the preview card template for future reference.
 
 The response rendering template must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.ResponseRenderingTemplate.schema.json`](https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.ResponseRenderingTemplate.schema.json).
 
+To create a response rendering template, follow these steps:
+
+1. Create a JSON file and add the following code to the file:
+
+   ```json
+   { 
+     "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.ResponseRenderingTemplate.schema.json", 
+     "version": "1.0", 
+     "jsonPath": "", 
+     "responseLayout": "", 
+     "responseCardTemplate": { 
+    },
+    "previewCardTemplate": {
+        }
+    }
+    ```
+
 </details>
