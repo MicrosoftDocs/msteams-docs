@@ -663,6 +663,7 @@ To create a response rendering template, follow these steps:
 1. Update the properties in the response rendering template as follows:
 
     | Property name | Value |
+    | --- | --- |
     | `"$schema"` | `"https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.ResponseRenderingTemplate.schema.json"` |
     | `"version"`| `"1.0"` |
 
