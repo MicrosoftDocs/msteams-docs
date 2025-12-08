@@ -16,10 +16,10 @@ In this article, learn more about building Teams app capabilities. Here's a list
 
 ## Debug your AI chat bot using Microsoft 365 Agents Playground
 
+Start Microsoft Teams app development with your Teams AI chat bot app and debug with Microsoft 365 Agents Playground (previously known as Teams App Test Tool). Agents Playground makes debugging bot-based apps effortless. You don't need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Agents Playground.
+
 <details>
 <summary><b>Tutorial: Debug your AI chat bot</b></summary>
-
-Start Microsoft Teams app development with your Teams AI chat bot app and debug with Microsoft 365 Agents Playground (previously known as Teams App Test Tool). Agents Playground makes debugging bot-based apps effortless. You don't need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Agents Playground.
 
 ### Prerequisites
 
