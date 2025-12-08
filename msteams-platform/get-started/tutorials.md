@@ -846,4 +846,38 @@ To create the manifest, follow these steps:
       - Color icon
       - Outline icon
 
+### Upload a custom app to Teams
+
+Sign into Teams test environment to test your app in Teams. To upload a custom app in Teams, follow these steps:
+
+1. Go to **Microsoft Teams** and sign in using your test tenant credentials.
+1. Go to **Apps** > **Manage your app** > **Upload an app**.
+1. Select **Upload a customized app**.
+1. Select the zip file created and select **Open**.
+1. Select **Add**.
+
+    :::image type="content" source="../assets/images/Copilot/api-me-sbs-add-app-teams.png" alt-text="Screenshot of message extension app with the Add option highlighted.":::
+
+1. Select **Open**.
+
+    :::image type="content" source="../assets/images/Copilot/api-me-open.png" alt-text="Screenshot of message extension app with the Open option highlighted.":::
+
+1. Go to a chat, then select **+** from the message compose area, and search for your app.
+1. Select the app and make a search query.
+
+    :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-invoke-teams.png" alt-text="Screenshot shows that from the plus icon in the chat menu, users can invoke the message extension app that is displayed in the flyout menu.":::
+
+1. The app responds with an Adaptive Card in the chat window.
+1. Select **Send**.
+
+    :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-sbs-result.png" alt-text="Screenshot shows the Adaptive Card with the search results in the chat message in Teams.":::
+
+Congratulations! You did it!
+You learned to create an API-based message extension using OpenAPI Description document.
+
+> [!div class="nextstepaction"]
+> [Create an API-based message extension](../messaging-extensions/create-api-message-extension.md)
+
 </details>
+
+[Tutorials](#tutorials)
