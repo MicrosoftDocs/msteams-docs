@@ -409,7 +409,7 @@ We used the following OpenAPI Description as an example for this tutorial:
     description: A plugin that allows the user to find the most appropriate AI tools for their use cases, with their pricing information.
     version: 'v1'
     servers:
-    - url: https://gptplugin.opentools.ai
+        - url: https://gptplugin.opentools.ai
     paths:
     /tools:
     get:
@@ -440,10 +440,10 @@ We used the following OpenAPI Description as an example for this tutorial:
         searchToolsResponse:
         required:
         - search
-          type: object
+        type: object
         properties:
         tools:
-          type: array
+        type: array
         items:
         type: object
         properties:
@@ -534,74 +534,75 @@ To create an Adaptive Card template, follow these steps:
 
 1. ChatGPT generates a response with an Adaptive Card template that binds to the sample data. Save the Adaptive Card template for future reference.
 
-Following is an example of the Adaptive Card template:
+    Following is an example of the Adaptive Card template:
 
-<details>
-<summary>Adaptive Card template</summary>
+    <details>
+    <summary>Adaptive Card template</summary>
 
-```json
-
-{
-"$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-"type": "AdaptiveCard",
-"version": "1.4",
-"body": [
+    ```json
+    
     {
-    "type": "TextBlock",
-    "text": "AI Music Generator",
-    "weight": "Bolder",
-    "size": "Large"
-    },
-    {
-    "type": "TextBlock",
-    "text": "Categories",
-    "size": "Medium"
-    },
-    {
-    "type": "TextBlock",
-     "text": "Music Generation, AI Detection",
-     "wrap": true
-    },
-    {
-    "type": "TextBlock",
-    "text": "Description",
-    "size": "Medium"
-    },
-    {
-    "type": "TextBlock",
-    "text": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. AI Music Generator is powered by advanced AI technology, and it makes music production accessible to everyone.",
-    "wrap": true
-    },
-    {
-    "type": "TextBlock",
-    "text": "Platform",
-    "size": "Medium"
-    },
-    {
-    "type": "TextBlock",
-    "text": "Web, App, API",
-    "wrap": true
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.4",
+    "body": [
+        {
+        "type": "TextBlock",
+        "text": "AI Music Generator",
+        "weight": "Bolder",
+        "size": "Large"
+        },
+        {
+        "type": "TextBlock",
+        "text": "Categories",
+        "size": "Medium"
+        },
+        {
+        "type": "TextBlock",
+         "text": "Music Generation, AI Detection",
+         "wrap": true
+        },
+        {
+        "type": "TextBlock",
+        "text": "Description",
+        "size": "Medium"
+        },
+        {
+        "type": "TextBlock",
+        "text": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. AI Music Generator is powered by advanced AI technology, and it makes music production accessible to everyone.",
+        "wrap": true
+        },
+        {
+        "type": "TextBlock",
+        "text": "Platform",
+        "size": "Medium"
+        },
+        {
+        "type": "TextBlock",
+        "text": "Web, App, API",
+        "wrap": true
+        }
+    ],
+    "actions": [
+        {
+        "type": "Action.OpenUrl",
+        "title": "Learn More",
+        "url": "https://goto.opentools.ai/ai-music-generator"
+        },
+        {
+        "type": "Action.OpenUrl",
+        "title": "Try It",
+        "url": "https://goto.opentools.ai/c/ai-music-generator"
+        }
+    ]
     }
-],
-"actions": [
-    {
-    "type": "Action.OpenUrl",
-    "title": "Learn More",
-    "url": "https://goto.opentools.ai/ai-music-generator"
-    },
-    {
-    "type": "Action.OpenUrl",
-    "title": "Try It",
-    "url": "https://goto.opentools.ai/c/ai-music-generator"
-    }
-]
-}
+    
+    ```
 
-```
-
-</details>
+    </details>
 
 1. To verify if the Adaptive Card generated binds to the sample data, follow these steps:
+
    1. Go to [Adaptive Card Designer](https://adaptivecards.io/designer/).
    1. Go to **Select host app**, and then select **Microsoft Teams** from the dropdown.
    1. Go to **CARD PAYLOAD EDITOR** and paste the Adaptive Card template code.
@@ -619,7 +620,8 @@ The preview card template can contain a `title`, `subtitle` and `image` properti
 
 Following is an example of a preview card template:
 
-<details><summary>Preview card template</summary>
+<details>
+<summary>Preview card template</summary>
 
 ```json
    "previewCardTemplate": {
@@ -635,6 +637,7 @@ Create an if condition for the `title` and `subtitle`, where:
 
 For example, `"title": "Name: ${if(name, name, 'N/A')}"`.
 Save the preview card template for future reference.
+
 </details>
 
 #### Response rendering template
