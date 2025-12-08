@@ -435,7 +435,7 @@ We used the following OpenAPI Description as an example for this tutorial:
           application/json:
             schema:
             ref: '#/components/schemas/searchToolsError'
-    components:
+        components:
         schemas:
         searchToolsResponse:
         required:
@@ -474,8 +474,8 @@ We used the following OpenAPI Description as an example for this tutorial:
         type: object
         properties:
         message:
-            type: string
-            description: Message of the error.
+        type: string
+        description: Message of the error.
 
 ```
 
@@ -501,8 +501,6 @@ You can validate if the OpenAPI Description document is valid. To verify, follow
 1. Under `products`, copy the first product from the list and save it for future reference.
 
     :::image type="content" source="../assets/images/Copilot/api-me-sbs-product-response.png" alt-text="Screenshots shows the highlighted product that is selected from the response body.":::
-
-[Create response rendering template](#create-response-rendering-template)
 
 ### Create response rendering template
 
