@@ -397,96 +397,96 @@ To interact with the APIs, an OpenAPI Description document is necessary. The Ope
 - Ensure that there are no remote references in the OpenAPI Description document.
 - A required parameter with a default value is considered optional.
 
-We used the following OpenAPI Description as an example for this tutorial:
+    We used the following OpenAPI Description as an example for this tutorial:
 
-<details>
-<summary>OpenAPI Description</summary>
+    <details>
+    <summary>OpenAPI Description</summary>
 
-```yml
-    openapi: 3.0.1
-    info:
-    title: OpenTools Plugin
-    description: A plugin that allows the user to find the most appropriate AI tools for their use cases, with their pricing information.
-    version: 'v1'
-    servers:
-        - url: https://gptplugin.opentools.ai
-    paths:
-    /tools:
-    get:
-    operationId: searchTools
-    summary: Search for AI Tools
-        parameters:
-        - in: query
-          name: search
-          required: true
-          schema:
-          type: string
-          description: Used to search for AI tools by their category based on the keywords. For example, a search for "tool to create music" provides a list of tools that can create music.
-        responses:
-        "200":
-          description: OK
-          content:
-          application/json:
-            schema:
-            $ref: '#/components/schemas/searchToolsResponse'
-        "400":
-          description: Search Error
-          content:
-          application/json:
-            schema:
-            ref: '#/components/schemas/searchToolsError'
-        components:
-        schemas:
-        searchToolsResponse:
-        required:
-        - search
-        type: object
-        properties:
-        tools:
-        type: array
-        items:
-        type: object
-        properties:
-        name:
-        type: string
-        description: The name of the tool.
-        opentools_url:
-        type: string
-        description: The URL to access the tool.
-        main_summary:
-        type: string
-        description: A summary of what the tool is.
-        pricing_summary:
-        type: string
-        description: A summary of the pricing of the tool.
-        categories:
-        type: array
-        items:
-        type: string
-        description: The categories assigned to the tool.
-        platforms:
-        type: array
-        items:
-        type: string
-        description: The platforms that this tool is available on.
-        description: The list of AI tools.
-        searchToolsError:
-        type: object
-        properties:
-        message:
-        type: string
-        description: Message of the error.
+    ```yml
+        openapi: 3.0.1
+        info:
+        title: OpenTools Plugin
+        description: A plugin that allows the user to find the most appropriate AI tools for their use cases, with their pricing information.
+        version: 'v1'
+        servers:
+            - url: https://gptplugin.opentools.ai
+        paths:
+        /tools:
+        get:
+        operationId: searchTools
+        summary: Search for AI Tools
+            parameters:
+            - in: query
+              name: search
+              required: true
+              schema:
+              type: string
+              description: Used to search for AI tools by their category based on the keywords. For example, a search for "tool to create music" provides a list of tools that can create music.
+            responses:
+            "200":
+              description: OK
+              content:
+              application/json:
+                schema:
+                $ref: '#/components/schemas/searchToolsResponse'
+            "400":
+              description: Search Error
+              content:
+              application/json:
+                schema:
+                ref: '#/components/schemas/searchToolsError'
+            components:
+            schemas:
+            searchToolsResponse:
+            required:
+            - search
+            type: object
+            properties:
+            tools:
+            type: array
+            items:
+            type: object
+            properties:
+            name:
+            type: string
+            description: The name of the tool.
+            opentools_url:
+            type: string
+            description: The URL to access the tool.
+            main_summary:
+            type: string
+            description: A summary of what the tool is.
+            pricing_summary:
+            type: string
+            description: A summary of the pricing of the tool.
+            categories:
+            type: array
+            items:
+            type: string
+            description: The categories assigned to the tool.
+            platforms:
+            type: array
+            items:
+            type: string
+            description: The platforms that this tool is available on.
+            description: The list of AI tools.
+            searchToolsError:
+            type: object
+            properties:
+            message:
+            type: string
+            description: Message of the error.
+    
+    ```
 
-```
+    > [!NOTE]
+    > Ensure that the `required: true` property is available for only one parameter. If there are more than one required parameters, you can update the required property to `required: false` for the other parameters.
 
-> [!NOTE]
-> Ensure that the `required: true` property is available for only one parameter. If there are more than one required parameters, you can update the required property to `required: false` for the other parameters.
-
-</details>
+    </details>
 
 You can validate if the OpenAPI Description document is valid. To verify, follow these steps:
 
-1. Go to [Swagger/OpenAPI validator](https://apitools.dev/swagger-parser/) and validate the OpenAPI Description document.
+1. Go to [Swagger or OpenAPI validator](https://apitools.dev/swagger-parser/) and validate the OpenAPI Description document.
 1. Save the OpenAPI Description document.
 1. Go to [Swagger Editor](https://editor.swagger.io/).
 1. In the left pane, paste the OpenAPI Description in the editor.
@@ -501,164 +501,5 @@ You can validate if the OpenAPI Description document is valid. To verify, follow
 1. Under `products`, copy the first product from the list and save it for future reference.
 
     :::image type="content" source="../assets/images/Copilot/api-me-sbs-product-response.png" alt-text="Screenshots shows the highlighted product that is selected from the response body.":::
-
-### Create response rendering template
-
-An OpenAPI Description document requires a response rendering template for the app to respond to the GET or POST requests. The response rendering template consists of an Adaptive Card template, Preview card template, and metadata.
-
-#### Adaptive Card template
-
-To create an Adaptive Card template, follow these steps:
-
-1. Go to [ChatGPT](https://chat.openai.com/) and ask the following query in the message compose area:
-
-    ```http
-    
-    Create an Adaptive Card Template that binds to the following response:
-        "categories": [
-            "Music Generation",
-            "AI Detection"
-        ],
-        "chatbot_short_url": "https://goto.opentools.ai/c/ai-music-generator",
-        "main_summary": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. With advanced AI technology, AI Music Generator makes music production accessible to everyone.",
-        "name": "AI Music Generator",
-        "opentools_url": "https://goto.opentools.ai/ai-music-generator",
-        "platforms": [
-            "Web",
-            "App",
-            "API"
-        ]
-    ```
-
-1. Select **Send message**.
-
-1. ChatGPT generates a response with an Adaptive Card template that binds to the sample data. Save the Adaptive Card template for future reference.
-
-    Following is an example of the Adaptive Card template:
-
-    <details>
-    <summary>Adaptive Card template</summary>
-
-    ```json
-    
-    {
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-    "type": "AdaptiveCard",
-    "version": "1.4",
-    "body": [
-        {
-        "type": "TextBlock",
-        "text": "AI Music Generator",
-        "weight": "Bolder",
-        "size": "Large"
-        },
-        {
-        "type": "TextBlock",
-        "text": "Categories",
-        "size": "Medium"
-        },
-        {
-        "type": "TextBlock",
-         "text": "Music Generation, AI Detection",
-         "wrap": true
-        },
-        {
-        "type": "TextBlock",
-        "text": "Description",
-        "size": "Medium"
-        },
-        {
-        "type": "TextBlock",
-        "text": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. AI Music Generator is powered by advanced AI technology, and it makes music production accessible to everyone.",
-        "wrap": true
-        },
-        {
-        "type": "TextBlock",
-        "text": "Platform",
-        "size": "Medium"
-        },
-        {
-        "type": "TextBlock",
-        "text": "Web, App, API",
-        "wrap": true
-        }
-    ],
-    "actions": [
-        {
-        "type": "Action.OpenUrl",
-        "title": "Learn More",
-        "url": "https://goto.opentools.ai/ai-music-generator"
-        },
-        {
-        "type": "Action.OpenUrl",
-        "title": "Try It",
-        "url": "https://goto.opentools.ai/c/ai-music-generator"
-        }
-    ]
-    }
-    
-    ```
-
-    </details>
-
-1. To verify if the Adaptive Card generated binds to the sample data, follow these steps:
-
-   1. Go to [Adaptive Card Designer](https://adaptivecards.io/designer/).
-   1. Go to **Select host app**, and then select **Microsoft Teams** from the dropdown.
-   1. Go to **CARD PAYLOAD EDITOR** and paste the Adaptive Card template code.
-   1. Go to **SAMPLE DATA EDITOR** and paste the GET API response that you saved earlier.
-
-        :::image type="content" source="../assets/images/Copilot/api-me-sbs-adaptive-card-designer.png" alt-text="Screenshots shows the Adaptive Card designer with the Adaptive Card template and the sample data.":::
-
-   1. Select **Preview mode**. The Adaptive Card designer displays an Adaptive Card with the data that binds the response to the template.
-
-        :::image type="content" source="../assets/images/Copilot/api-me-sbs-adaptive-card-preview.png" alt-text="Screenshot shows the Adaptive Card designer with the Adaptive Card template and the sample data.":::
-
-#### Create a preview card template
-
-The preview card template can contain a `title`, `subtitle` and `image` properties. If the API response doesn't have an image, you can remove the image property.
-
-Following is an example of a preview card template:
-
-<details>
-<summary>Preview card template</summary>
-
-```json
-   "previewCardTemplate": {
-        "title": "${if(name, name, 'N/A')}",
-        "subtitle": "$${if(price, price, 'N/A')}"
-    } 
-```
-
-Create an if condition for the `title` and `subtitle`, where:
-
-- If name exists, the bot uses the name.
-- If name doesn't exist, the bot uses NA.
-
-For example, `"title": "Name: ${if(name, name, 'N/A')}"`.
-Save the preview card template for future reference.
-
-</details>
-
-#### Response rendering template
-
-The response rendering template must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.ResponseRenderingTemplate.schema.json`](https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.ResponseRenderingTemplate.schema.json).
-
-To create a response rendering template, follow these steps:
-
-1. Create a JSON file and add the following code to the file:
-
-   ```json
-   { 
-     "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.ResponseRenderingTemplate.schema.json", 
-     "version": "1.0", 
-     "jsonPath": "", 
-     "responseLayout": "", 
-     "responseCardTemplate": { 
-    },
-    "previewCardTemplate": {
-        }
-    }
-    ```
 
 </details>
