@@ -617,4 +617,30 @@ To create an Adaptive Card template, follow these steps:
 
 The preview card template can contain a `title`, `subtitle` and `image` properties. If the API response doesn't have an image, you can remove the image property.
 
+Following is an example of a preview card template:
+
+<details>
+<summary>Preview card template</summary>
+
+```json
+   "previewCardTemplate": {
+        "title": "${if(name, name, 'N/A')}",
+        "subtitle": "$${if(price, price, 'N/A')}"
+    } 
+```
+
+Create an if condition for the `title` and `subtitle`, where:
+
+- If name exists, the bot uses the name.
+- If name doesn't exist, the bot uses NA.
+
+For example, `"title": "Name: ${if(name, name, 'N/A')}"`.
+Save the preview card template for future reference.
+
+</details>
+
+#### Response rendering template
+
+The response rendering template must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.ResponseRenderingTemplate.schema.json`](https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.ResponseRenderingTemplate.schema.json).
+
 </details>
