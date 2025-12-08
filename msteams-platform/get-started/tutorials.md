@@ -12,11 +12,14 @@ In this article, learn more about building Teams app capabilities. Here's a list
 
 | # | Capability | Step-by-step guide |
 | --- | --- | --- |
-|  |   |   |
+| 1. | Bots  | - [Debug your AI chat bot using Microsoft 365 Agents Playground](#debug-your-ai-chat-bot-using-microsoft-365-agents-playground) <br> - [Build a bot with SSO authentication](#build-a-bot-with-sso-authentication) |
+| 2. | Message extension | [Build API-based message extension](#build-api-based-message-extension) |
 
 ## Debug your AI chat bot using Microsoft 365 Agents Playground
 
 Start Microsoft Teams app development with your Teams AI chat bot app and debug with Microsoft 365 Agents Playground (previously known as Teams App Test Tool). Agents Playground makes debugging bot-based apps effortless. You don't need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Agents Playground.
+
+<br>
 
 <details>
 <summary><b>Tutorial: Debug your AI chat bot</b></summary>
@@ -309,6 +312,8 @@ Congratulations! You've successfully created an AI chat bot app. Now, you've lea
 ## Build API-based message extension
 
 Message extensions built using API (API-based) significantly enhance the functionality of your Teams apps by allowing them to interact with external services. API-based message extensions can help streamline workflows by reducing the need to switch between different applications.
+
+<br>
 
 <details>
 <summary><b>Tutorial: Build API-based message extension</b></summary>
@@ -885,6 +890,7 @@ You learned to create an API-based message extension using OpenAPI Description d
 ## Build a bot with SSO authentication
 
 Conversational bots in Microsoft Teams perform repetitive automated tasks initiated by users, such as customer service. The user needs to sign in multiple times without single sign-on (SSO) authentication. With SSO authentication methods, the users don't need to sign in to the bot multiple times.
+<br>
 
 <details>
 <summary><b>Tutorial: Build a bot with SSO authentication</b></summary>
