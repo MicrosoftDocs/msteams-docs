@@ -502,4 +502,8 @@ You can validate if the OpenAPI Description document is valid. To verify, follow
 
     :::image type="content" source="../assets/images/Copilot/api-me-sbs-product-response.png" alt-text="Screenshots shows the highlighted product that is selected from the response body.":::
 
+### Create response rendering template
+
+An OpenAPI Description document requires a response rendering template for the app to respond to the GET or POST requests. The response rendering template consists of an Adaptive Card template, Preview card template, and metadata.
+
 </details>
