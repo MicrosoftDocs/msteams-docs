@@ -19,9 +19,9 @@ In this article, learn more about building Teams app capabilities. Here's a list
 <details>
 <summary><b>Tutorial: Debug your AI chat bot</b></summary>
 
-### Prerequisites
-
 Start Microsoft Teams app development with your Teams AI chat bot app and debug with Microsoft 365 Agents Playground (previously known as Teams App Test Tool). Agents Playground makes debugging bot-based apps effortless. You don't need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Agents Playground.
+
+### Prerequisites
 
 You can chat with your bot and view the messages and Adaptive Cards as they appear in Teams. You can also mock an activity in Agents Playground using activity triggers.
 
@@ -311,10 +311,10 @@ Congratulations! You've successfully created an AI chat bot app. Now, you've lea
 <details>
 <summary><b>Tutorial: Build API-based message extension</b></summary>
 
+Message extensions built using API (API-based) significantly enhance the functionality of your Teams apps by allowing them to interact with external services. API-based message extensions can help streamline workflows by reducing the need to switch between different applications.
+
 > [!NOTE]
 > API-based message extensions only support search commands.
-
-Message extensions built using API (API-based) significantly enhance the functionality of your Teams apps by allowing them to interact with external services. API-based message extensions can help streamline workflows by reducing the need to switch between different applications.
 
 You can use API-based message extensions to integrate external services that are commonly used in the business workflow. For example, a business that frequently uses a CRM system for customer management could use a message extension to fetch and display customer data directly from Teams. This app helps save time and improves efficiency by reducing the need to switch between different applications. This feature is supported on all platforms where Teams is available, including desktop, web, and mobile.
 
@@ -884,7 +884,18 @@ You learned to create an API-based message extension using OpenAPI Description d
 
 ## Build a bot with SSO authentication
 
+Conversational bots in Microsoft Teams perform repetitive automated tasks initiated by users, such as customer service. The user needs to sign in multiple times without single sign-on (SSO) authentication. With SSO authentication methods, the users don't need to sign in to the bot multiple times.
+
 <details>
 <summary><b>Tutorial: Build a bot with SSO authentication</b></summary>
 
-Conversational bots in Microsoft Teams perform repetitive automated tasks initiated by users, such as customer service. The user needs to sign in multiple times without single sign-on (SSO) authentication. With SSO authentication methods, the users don't need to sign in to the bot multiple times.
+A bot behaves differently depending on the conversation it's involved in:
+
+- Bots in channel and group chat conversations require the users to @mention the bot.
+- Bots in a one-to-one conversation don't require an @mention. All messages sent by the user routes to the bot.
+
+This step-by-step guide helps you to build a bot with SSO authentication. You'll see the following output:
+
+:::image type="content" source="~/assets/images/bots/sbs-desktop-mobile.png" alt-text=" Screenshot of the bot with SSO authentication output after you’ve successfully completed the step-by-step guide.":::
+
+</details>
