@@ -944,4 +944,17 @@ To verify custom upload apps in Teams:
 > [!NOTE]
 > Contact Teams administrator, if you don't have the option to upload a custom app.
 
+#### Create a free Teams developer tenant
+
+If you don't have a Teams developer account, you can get it for free. Join the Microsoft 365 developer program!
+
+1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
+1. Select **Join Now** and follow the onscreen instructions.
+1. In the welcome screen, select **Setup E5 subscription**.
+1. Set up an administrator account. After you finish, the following screen displays.
+
+    :::image type="content" source="../assets/images/toolkit-v2/prerequisites/microsoft-365.png" alt-text="Screenshot of the Microsoft 365 Developer Program subscription.":::
+
+1. Sign in to Teams using the new administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
+
 </details>
