@@ -399,7 +399,8 @@ To interact with the APIs, an OpenAPI Description document is necessary. The Ope
 
 We used the following OpenAPI Description as an example for this tutorial:
 
-<details><summary>OpenAPI Description</summary>
+<details>
+<summary>OpenAPI Description</summary>
 
 ```yml
     openapi: 3.0.1
@@ -500,13 +501,12 @@ You can validate if the OpenAPI Description document is valid. To verify, follow
 1. Under `products`, copy the first product from the list and save it for future reference.
 
     :::image type="content" source="../assets/images/Copilot/api-me-sbs-product-response.png" alt-text="Screenshots shows the highlighted product that is selected from the response body.":::
+
 [Create response rendering template](#create-response-rendering-template)
 
 ### Create response rendering template
 
 An OpenAPI Description document requires a response rendering template for the app to respond to the GET or POST requests. The response rendering template consists of an Adaptive Card template, Preview card template, and metadata.
-
-</details>
 
 #### Adaptive Card template
 
@@ -637,6 +637,7 @@ Create an if condition for the `title` and `subtitle`, where:
 
 For example, `"title": "Name: ${if(name, name, 'N/A')}"`.
 Save the preview card template for future reference.
+</details>
 
 #### Response rendering template
 
