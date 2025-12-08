@@ -671,4 +671,81 @@ To create a response rendering template, follow these steps:
     | 5. | `"responseCardTemplate"` | Paste the Adaptive Card template code that you saved earlier. <br> `responseCardTemplate` is an Adaptive Card template to map the JSON response to an Adaptive Card. |
     | 6. |  `"previewCardTemplate"` | Paste the preview card template code that you saved earlier. <br> `previewCardTemplate` is a preview card template is used to show a preview of results in the message extension flyout. |
 
+1. Save the response rendering template in the same folder you saved the OpenAPI Description document.
+
+The following code is an example of a Response rendering template:
+
+<details>
+<summary>Response rendering template</summary>
+
+```json
+
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.ResponseRenderingTemplate.schema.json",
+    "version": "1.0",
+    "jsonPath": "tools",
+    "responseLayout": "list",
+    "responseCardTemplate": {
+        "type": "AdaptiveCard",
+        "version": "1.4",
+        "body": [
+            {
+            "type": "TextBlock",
+            "text": "AI Music Generator",
+            "weight": "Bolder",
+            "size": "Large"
+            },
+            {
+            "type": "TextBlock",
+            "text": "Categories",
+            "size": "Medium"
+            },
+            {
+            "type": "TextBlock",
+            "text": "Music Generation, AI Detection",
+            "wrap": true
+            },
+            {
+            "type": "TextBlock",
+            "text": "Description",
+            "size": "Medium"
+            },
+            {
+            "type": "TextBlock",
+            "text": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. With advanced AI technology, AI Music Generator makes music production accessible to everyone.",
+            "wrap": true
+            },
+            {
+            "type": "TextBlock",
+            "text": "Platform",
+            "size": "Medium"
+            },
+            {
+            "type": "TextBlock",
+            "text": "Web, App, API",
+            "wrap": true
+            }
+        ],
+        "actions": [
+            {
+            "type": "Action.OpenUrl",
+            "title": "Learn More",
+            "url": "https://goto.opentools.ai/ai-music-generator"
+            },
+            {
+            "type": "Action.OpenUrl",
+            "title": "Try It",
+            "url": "https://goto.opentools.ai/c/ai-music-generator"
+            }
+        ]
+    },
+    "previewCardTemplate": {
+        "title": "${if(name, name, 'N/A')}",
+        "subtitle": "$${if(price, price, 'N/A')}"
+    } 
+}
+```
+
+</details>
+
 </details>
