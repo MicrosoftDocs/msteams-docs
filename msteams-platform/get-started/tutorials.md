@@ -835,4 +835,15 @@ To create the manifest, follow these steps:
     - Update the `apiResponseRenderingTemplateFile` to the path of your response rendering template file.
     - Update the value for `validDomains` to the `service URL` endpoint defined in the OpenAPI Description file.
 
+1. Save the Teams app manifest in the same folder you saved the OpenAPI Description document and the response rendering template.
+
+    - You need a color image and outline image. These images should be included in the folder and referenced in your Teams app manifest.
+    - Zip up the contents of the folder. The zip file must include the following files:
+
+      - OpenAPI Description document
+      - Response rendering template
+      - App manifest
+      - Color icon
+      - Outline icon
+
 </details>
