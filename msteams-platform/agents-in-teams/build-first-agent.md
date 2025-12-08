@@ -110,6 +110,36 @@ Microsoft 365 Agents Toolkit creates your agent project and scaffolds the projec
 
 Congratulations! You've created and ran your first agent in Teams.
 
+## Choose your programming language
+
+Teams SDK is available for JavaScript, C#, and Python (dev preview). It provides a simplified SDK, support for Model Context Protocol (MCP), Agent-to-Agent communication (A2A), and streamlined tools to enable developers to build intelligent agents for Teams.
+
+:::row:::
+   :::column:::
+      **Description**
+   :::column-end:::
+   :::column span="3":::
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Choose your build environment**
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column:::
+      Build with ...
+   :::column-end:::
+   :::column:::
+      > [!div class="nextstepaction"]
+      > [C#](/microsoftteams/platform/teams-ai-library/getting-started/quickstart?pivots=csharp)
+   :::column-end:::
+   :::column:::
+      > [!div class="nextstepaction"]
+      > [TypeScript](/microsoftteams/platform/teams-ai-library/getting-started/quickstart?pivots=typescript)
+   :::column-end:::
+   :::column:::
+      > [!div class="nextstepaction"]
+      > [Python](/microsoftteams/platform/teams-ai-library/getting-started/quickstart?pivots=python)
+   :::column-end:::
+:::row-end:::
+
 ## Code sample
 
 | Sample name | Description | .NET | Node.js | Python |
