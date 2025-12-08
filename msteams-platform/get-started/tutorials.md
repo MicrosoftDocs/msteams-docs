@@ -890,6 +890,7 @@ You learned to create an API-based message extension using OpenAPI Description d
 ## Build a bot with SSO authentication
 
 Conversational bots in Microsoft Teams perform repetitive automated tasks initiated by users, such as customer service. The user needs to sign in multiple times without single sign-on (SSO) authentication. With SSO authentication methods, the users don't need to sign in to the bot multiple times.
+
 <br>
 
 <details>
@@ -917,5 +918,13 @@ Ensure that you install the following tools and set up your development environm
 
 > [!NOTE]
 > After downloading ngrok, sign up, and install [authtoken](https://ngrok.com/download).
+
+### Set up the Teams development tenant
+
+A tenant is like a space or a container where you chat, share files, and run meetings for your organization in Teams. You can also upload and test the custom app.
+
+#### Check for a custom app upload option
+
+After creating the app, you must load your app in Teams without distributing it. This process is known as custom app upload. Sign in to your Microsoft 365 account to view this option.
 
 </details>
