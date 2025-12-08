@@ -500,6 +500,7 @@ You can validate if the OpenAPI Description document is valid. To verify, follow
 1. Under `products`, copy the first product from the list and save it for future reference.
 
     :::image type="content" source="../assets/images/Copilot/api-me-sbs-product-response.png" alt-text="Screenshots shows the highlighted product that is selected from the response body.":::
+[Create response rendering template](#create-response-rendering-template)
 
 ### Create response rendering template
 
@@ -636,4 +637,26 @@ Create an if condition for the `title` and `subtitle`, where:
 
 For example, `"title": "Name: ${if(name, name, 'N/A')}"`.
 Save the preview card template for future reference.
+
+#### Response rendering template
+
+The response rendering template must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.ResponseRenderingTemplate.schema.json`](https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.ResponseRenderingTemplate.schema.json).
+
+To create a response rendering template, follow these steps:
+
+1. Create a JSON file and add the following code to the file:
+
+   ```json
+   { 
+     "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.ResponseRenderingTemplate.schema.json", 
+     "version": "1.0", 
+     "jsonPath": "", 
+     "responseLayout": "", 
+     "responseCardTemplate": { 
+    },
+    "previewCardTemplate": {
+        }
+    }
+    ```
+
 </details>
