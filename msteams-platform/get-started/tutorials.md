@@ -530,4 +530,75 @@ To create an Adaptive Card template, follow these steps:
         ]
     ```
 
+1. Select **Send message**.
+
+1. ChatGPT generates a response with an Adaptive Card template that binds to the sample data. Save the Adaptive Card template for future reference.
+
+    Following is an example of the Adaptive Card template:
+
+    <details>
+    <summary>Adaptive Card template</summary>
+
+    ```json
+    
+    {
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.4",
+    "body": [
+        {
+        "type": "TextBlock",
+        "text": "AI Music Generator",
+        "weight": "Bolder",
+        "size": "Large"
+        },
+        {
+        "type": "TextBlock",
+        "text": "Categories",
+        "size": "Medium"
+        },
+        {
+        "type": "TextBlock",
+         "text": "Music Generation, AI Detection",
+         "wrap": true
+        },
+        {
+        "type": "TextBlock",
+        "text": "Description",
+        "size": "Medium"
+        },
+        {
+        "type": "TextBlock",
+        "text": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. AI Music Generator is powered by advanced AI technology, and it makes music production accessible to everyone.",
+        "wrap": true
+        },
+        {
+        "type": "TextBlock",
+        "text": "Platform",
+        "size": "Medium"
+        },
+        {
+        "type": "TextBlock",
+        "text": "Web, App, API",
+        "wrap": true
+        }
+    ],
+    "actions": [
+        {
+        "type": "Action.OpenUrl",
+        "title": "Learn More",
+        "url": "https://goto.opentools.ai/ai-music-generator"
+        },
+        {
+        "type": "Action.OpenUrl",
+        "title": "Try It",
+        "url": "https://goto.opentools.ai/c/ai-music-generator"
+        }
+    ]
+    }
+    
+    ```
+
+    </details>
+
 </details>
