@@ -662,9 +662,13 @@ To create a response rendering template, follow these steps:
 
 1. Update the properties in the response rendering template as follows:
 
-    | Property name | Value |
-    | --- | --- |
-    | `"$schema"` | `"https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.ResponseRenderingTemplate.schema.json"` |
-    | `"version"`| `"1.0"` |
+    | # | Property name | Value |
+    | --- | --- | --- |
+    | 1. | `"$schema"` | `"https://developer.microsoft.com/json-schemas/teams/v1.20/MicrosoftTeams.ResponseRenderingTemplate.schema.json"` |
+    | 2. | `"version"`| `"1.0"` <br> `version` is the version of the rendering template to use. |
+    | 3. | `"jsonPath"` | `"tools"` <br> `jsonPath` is the path to one or more results in the response JSON response. Add the `jsonPath` to the relevant data/array from the product list in the API response. In this case, the `jsonPath` is tools. For more information on how to determiner the JSON path, see [Querying JSON with JSON path](https://www.newtonsoft.com/json/help/html/QueryJsonSelectToken.htm). |
+    | 4. | `"responseLayout"` | `"list"` <br> `responseLayout` specifies the layout of the attachments. Used for responses of type result. Supported types are list and grid. If the response body contains an object with multiple elements like text, title, and image, then the response layout must be set to `list`. If the API response contains only images or thumbnails, then the response layout must be set to `grid`. |
+    | 5. | `"responseCardTemplate"` | Paste the Adaptive Card template code that you saved earlier. <br> `responseCardTemplate` is an Adaptive Card template to map the JSON response to an Adaptive Card. |
+    | 6. |  `"previewCardTemplate"` | Paste the preview card template code that you saved earlier. <br> `previewCardTemplate` is a preview card template is used to show a preview of results in the message extension flyout. |
 
 </details>
