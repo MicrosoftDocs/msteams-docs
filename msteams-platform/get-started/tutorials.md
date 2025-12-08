@@ -308,10 +308,10 @@ Congratulations! You've successfully created an AI chat bot app. Now, you've lea
 
 ## Build API-based message extension
 
+Message extensions built using API (API-based) significantly enhance the functionality of your Teams apps by allowing them to interact with external services. API-based message extensions can help streamline workflows by reducing the need to switch between different applications.
+
 <details>
 <summary><b>Tutorial: Build API-based message extension</b></summary>
-
-Message extensions built using API (API-based) significantly enhance the functionality of your Teams apps by allowing them to interact with external services. API-based message extensions can help streamline workflows by reducing the need to switch between different applications.
 
 > [!NOTE]
 > API-based message extensions only support search commands.
