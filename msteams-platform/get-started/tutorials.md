@@ -1177,4 +1177,16 @@ The window shows the HTTPS URL.
     > - If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
     > - Users need to consent to the API permissions only if the Microsoft Entra app is registered in a different tenant.
 
+#### Add application ID URI
+
+1. In the left pane, under **Manage**, select **Expose an API**.
+
+1. Next to **Application ID URI**, select **Add**.
+
+   :::image type="content" source="../assets/images/bots/expose-api-add-uri.png" alt-text="Screenshot shows the option to add Application ID URI for your app.":::
+
+1. Update the **Application ID URI** in the `api://botid-{AppID}` format and select **Save**.
+
+   :::image type="content" source="../assets/images/bots/app-id-uri1.png" alt-text="Screenshot shows the option to add the app ID URI and save.":::
+
 </details>
