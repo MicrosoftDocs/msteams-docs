@@ -1029,7 +1029,7 @@ Follow one of the following two methods to create a tunnel.
 
 1. Select **Create**.
 
-    :::image type="content" source="../assets/images/include-files/additional-information.png" alt-text="Screenshot shows the project additional information." lightbox="../../assets/images/include-files/additional-information.png":::
+    :::image type="content" source="../assets/images/include-files/additional-information.png" alt-text="Screenshot shows the project additional information." lightbox="../assets/images/include-files/additional-information.png":::
 
     An overview window appears.
 
