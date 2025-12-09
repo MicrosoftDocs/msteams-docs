@@ -1006,4 +1006,8 @@ The following steps help you to create and register your bot in the Azure portal
     > [!NOTE]
     > Save the app ID from **Application (client) ID** and **Directory (tenant) ID** for further use.
 
+#### Create a tunnel
+
+Follow one of the following two methods to create a tunnel.
+
 </details>
