@@ -1121,7 +1121,7 @@ The window shows the HTTPS URL.
 
 1. Select **Configure**.
 
-   :::image type="content" source="../assets/images/include-files/configure-web.png" alt-text="Screenshot shows the option to add redirect uri and select implicit grant and hybrid flows.":::
+   :::image type="content" source="../assets/images/include-files/configure-web.png" alt-text="Screenshot shows the option to add redirect URI and select implicit grant and hybrid flows.":::
 
 1. Under **Web**, select **Add URI**.
 
@@ -1129,7 +1129,7 @@ The window shows the HTTPS URL.
 
 1. Select **Save**.
 
-    :::image type="content" source="../assets/images/include-files/web-add-uri.png" alt-text="Screenshot shows the option to add redirect uri and select implicit grant and hybrid flows.":::
+    :::image type="content" source="../assets/images/include-files/web-add-uri.png" alt-text="Screenshot shows the option to add the redirect URI and select implicit grant and hybrid flows.":::
 
 #### Create a client secret
 
@@ -1188,5 +1188,42 @@ The window shows the HTTPS URL.
 1. Update the **Application ID URI** in the `api://botid-{AppID}` format and select **Save**.
 
    :::image type="content" source="../assets/images/bots/app-id-uri1.png" alt-text="Screenshot shows the option to add the app ID URI and save.":::
+
+#### Add a scope
+
+1. In the left pane, under **Manage**, select **Expose an API**.
+
+1. Select **+ Add a scope**.
+
+   :::image type="content" source="../assets/images/include-files/select-add-scope.png" alt-text="Screenshot shows the selection to Add a Scope.":::
+
+1. Enter **access_as_user** as the **Scope name**.
+
+1. Under **Who can consent?**, select **Admins and users**.
+
+1. Update the values for the rest of the fields as follows:
+
+   - Enter **Teams can access the user’s profile** as **Admin consent display name**.
+
+   - Enter **Allows Teams to call the app’s web APIs as the current user** as **Admin consent description**.
+
+   - Enter **Teams can access the user profile and make requests on the user’s behalf** as **User consent display name**.
+
+   - Enter **Enable Teams to call this app’s APIs with the same rights as the user** as **User consent description**.
+
+1. Ensure that **State** is set to **Enabled**.
+
+1. Select **Add scope**.
+
+   The following image shows the fields and the values:
+
+   :::image type="content" source="../assets/images/include-files/set-add-scope.png" alt-text="Screenshot shows the values filled in the field to Add a scope.":::
+
+   > [!NOTE]
+   > The **Scope name** must match with the **Application ID** URI with `/access_as_user` appended at the end.
+
+    <!--  `api://d4b8****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`-->  
+
+   :::image type="content" source="../assets/images/include-files/add-scope.png" alt-text="Screenshot shows the details in Scopes.":::
 
 </details>
