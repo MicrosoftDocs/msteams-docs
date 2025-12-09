@@ -985,11 +985,11 @@ The following steps help you to create and register your bot in the Azure portal
 
 1. Select **App registrations**.
 
-    :::image type="content" source="../../assets/images/include-files/azure-app-registration.png" alt-text="Screenshot shows the Azure services to select App registrations.":::
+    :::image type="content" source="../assets/images/include-files/azure-app-registration.png" alt-text="Screenshot shows the Azure services to select App registrations.":::
 
 1. Select **+ New registration**.
 
-    :::image type="content" source="../../assets/images/include-files/new-registration.png" alt-text="Screenshot shows the New registration page on Microsoft Entra admin center.":::
+    :::image type="content" source="../assets/images/include-files/new-registration.png" alt-text="Screenshot shows the New registration page on Microsoft Entra admin center.":::
 
 1. Enter the name of your app.
 
@@ -997,11 +997,11 @@ The following steps help you to create and register your bot in the Azure portal
 
 1. Select **Register**.
 
-    :::image type="content" source="../../assets/images/include-files/app-register.png" alt-text="Screenshot shows the option to register the bot in Microsoft Entra admin center.":::
+    :::image type="content" source="../assets/images/include-files/app-register.png" alt-text="Screenshot shows the option to register the bot in Microsoft Entra admin center.":::
 
     Your app is registered in Microsoft Entra ID. The app overview page appears.
 
-    :::image type="content" source="../../assets/images/include-files/app-registration-overview.png" alt-text="Screenshot shows the app registration overview page.":::
+    :::image type="content" source="../assets/images/include-files/app-registration-overview.png" alt-text="Screenshot shows the app registration overview page.":::
 
     > [!NOTE]
     > Save the app ID from **Application (client) ID** and **Directory (tenant) ID** for further use.
