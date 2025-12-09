@@ -6,6 +6,10 @@ ms.topic: reference
 ms.date: 12/02/2025
 ---
 
+<!-- markdownlint-disable MD033 -->
+<!-- markdownlint-disable MD024 -->
+<!-- markdownlint-disable MD001 -->
+
 # Tutorials
 
 In this article, learn more about building Teams app capabilities. Here's a list of the step-by-step guides available for Teams platform capabilities.
@@ -1103,7 +1107,7 @@ The window shows the HTTPS URL.
 
 ---
 
-### Add a web authentication
+### Add web authentication
 
 1. In the left pane, under **Manage**, select **Authentication**.
 
