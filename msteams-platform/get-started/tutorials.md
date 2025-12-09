@@ -1107,7 +1107,7 @@ The window shows the HTTPS URL.
 
 ---
 
-### Add web authentication
+#### Add web authentication
 
 1. In the left pane, under **Manage**, select **Authentication**.
 
@@ -1131,7 +1131,7 @@ The window shows the HTTPS URL.
 
     :::image type="content" source="../assets/images/include-files/web-add-uri.png" alt-text="Screenshot shows the option to add redirect uri and select implicit grant and hybrid flows.":::
 
-### Create a client secret
+#### Create a client secret
 
 > [!NOTE]
 > If you encounter the error **Client secrets are blocked by tenant-wide policy. Contact your tenant administrator for more information.**, you can create a certificate instead. For step-by-step instructions, refer to [create a certificate for app registration.](/graph/auth-register-app-v2#add-credentials)
@@ -1153,5 +1153,28 @@ The window shows the HTTPS URL.
 1. Under **Value**, select **Copy to clipboard** to save the client secret value for further use.
 
     :::image type="content" source="../assets/images/include-files/client-secret-value.png" alt-text="Screenshot show the option to copy the client secret ID value to copy value to clipboard.":::
+
+#### Add API permissions
+
+1. In the left pane, select **API permissions**.
+
+1. Select **+ Add a permission**.
+
+   :::image type="content" source="../assets/images/teams-file-upload-bot/add-api-permission.png" alt-text="Screenshot shows the option to select Add permission.":::
+
+1. Select **Microsoft Graph**.
+
+1. Select **Delegated permissions**.
+
+1. Select **User** > **User.Read**.
+
+1. Select **Add permissions**.
+
+   :::image type="content" source="../assets/images/teams-file-upload-bot/select-api-permission.png" alt-text="Screenshot shows the option to select permissions.":::
+
+    > [!NOTE]
+    >
+    > - If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
+    > - Users need to consent to the API permissions only if the Microsoft Entra app is registered in a different tenant.
 
 </details>
