@@ -1691,4 +1691,39 @@ Use your Microsoft 365 account to sign in to Teams. If you're using a Microsoft 
 
    :::image type="content" source="../assets/images/sbs-csharp/select-m365-account.png" alt-text="Screenshot shows the Selection of M365-account.":::
 
+### Build and run your app locally in Visual Studio
+
+To build and run your app locally:
+
+1. Select **Debug** > **Start Debugging** or select **F5**.
+
+   :::image type="content" source="../assets/images/sbs-csharp/start-debugging.png" alt-text="Screenshot shows the selection of start debugging action.":::
+
+   Visual Studio starts the debugging process and opens the Teams web client in a browser. If prompted, sign in with your Microsoft 365 account.
+
+1. Select **Add**.
+
+   :::image type="content" source="../assets/images/sbs-csharp/select-add.png" alt-text="Screenshot of the app details dialog to add the tab app to Teams.":::
+
+1. Select **Open** to open the app in personal scope.
+
+Alternatively, you can either search and select the required scope or select a channel or chat from the list, and move through the dialog to select **Go**.
+
+   :::image type="content" source="../assets/images/sbs-csharp/add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
+
+Congratulations, your first tab app is running on Teams!
+
+   :::image type="content" source="../assets/images/sbs-csharp/final-output.png" alt-text=" Screenshot shows the final output of the Teams tab app.":::
+
+<details>
+<summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
+
+To successfully run your app in Teams, ensure that you've enabled custom app upload in your Teams account. You can learn more about custom app upload in the [prerequisites](#prerequisites-for-building-a-bot-app) section.
+
 </details>
+
+You have successfully created a tab app using C#. Agents Toolkit has added the necessary scaffolding to your app's directory structure. The tutorial is now complete.
+
+</details>
+
+[Tutorials](#tutorials)
