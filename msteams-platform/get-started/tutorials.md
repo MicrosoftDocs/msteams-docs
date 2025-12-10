@@ -1673,4 +1673,22 @@ The Teams tab app is created in few seconds.
 
 :::image type="content" source="../assets/images/sbs-csharp/get-started.png" alt-text="Screenshot shows the Project Creation." lightbox="../assets/images/sbs-csharp/get-started-tab-vs.png":::
 
+### Build and run your first tab app using C sharp
+
+After you set up your project workspace with Agents Toolkit, build your tab app.
+
+#### Sign in to your Microsoft 365 account
+
+Use your Microsoft 365 account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
+
+1. In the **Solution Explorer**, under **Solution MyTeamsApp**, right-click on **MyTeamsApp**.
+
+1. Select **Microsoft 365 Agents Toolkit** > **Select Microsoft 365 Account**.
+
+   :::image type="content" source="../assets/images/sbs-csharp/app-dependencies.png" alt-text="Screenshot shows the selection of Teams app Dependencies." lightbox="../assets/images/sbs-csharp/teams-app-dependencies.png":::
+
+1. Select **Microsoft 365 Account** > **Continue**.
+
+   :::image type="content" source="../assets/images/sbs-csharp/select-m365-account.png" alt-text="Screenshot shows the Selection of M365-account.":::
+
 </details>
