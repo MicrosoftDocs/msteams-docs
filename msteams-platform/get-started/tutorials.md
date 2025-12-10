@@ -1636,4 +1636,41 @@ If you don't have a Teams account, you can get it for free. Join the Microsoft 3
 
 1. Sign in to Teams using the administrator account you set up. Verify that you've the **Upload a custom app** option in Teams.
 
+### Get a free Azure account
+
+If you wish to host your app or access resources in Azure, you must have an [Azure subscription](https://azure.microsoft.com/free/). Create a free account before you begin.
+
+Now you've got all the tools to set up your account. Next, let's set up your development environment and start building! Select the app you want to create first.
+
+### Create project workspace for your tab app using C sharp
+
+Start Microsoft Teams app development by creating your first app. This app uses the tab capability. If the prerequisites are in place, let's begin!
+
+The following steps help you to create project workspace for your tab app in Visual Studio:
+
+1. Open Visual Studio.
+1. Select **New Project**.
+
+    :::image type="content" source="../assets/images/sbs-csharp/visual-studio-welcome.png" alt-text="Screenshot shows the selection of New Project in Visual Studio.":::
+
+1. In the search box, enter **Teams**.
+1. Select **Microsoft 365 Agents** > **Next**.
+
+    :::image type="content" source="../assets/images/sbs-csharp/project-template.png" alt-text="Screenshot shows the selection of Teams." lightbox="../assets/images/sbs-csharp/new-project-template-vs.png":::
+
+1. Enter the following details to configure your new project.
+1. Enter required project name in **Project name**.
+1. Select required location to save project files and folders.
+1. Select **Create**.
+
+    :::image type="content" source="../assets/images/sbs-csharp/teams-app-project-name.png" alt-text="Screenshot shows the creation of Project name.":::
+
+1. Select **Tab** > **Create**.
+
+    :::image type="content" source="../assets/images/sbs-csharp/select-tab.png" alt-text="Screenshot shows the selection of tab.":::
+
+The Teams tab app is created in few seconds.
+
+:::image type="content" source="../assets/images/sbs-csharp/get-started.png" alt-text="Screenshot shows the Project Creation." lightbox="../assets/images/sbs-csharp/get-started-tab-vs.png":::
+
 </details>
