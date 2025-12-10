@@ -1414,4 +1414,31 @@ Use one of the following ways to add a messaging endpoint:
 
     :::image type="content" source="../assets/images/include-files/new-connection-setting.png" alt-text="Screenshot shows the values added to set OAuth connection.":::
 
+### Set up app settings and manifest files
+
+1. Go to the **appsettings.json** file in the cloned repository.
+
+   :::image type="content" source="~/assets/images/teams-file-upload-bot/appsettings-file-location-bot-sso.png" alt-text="Screenshot shows the location of appsettings json file.":::
+
+1. Open the **appsettings.json** file and update the following information:
+
+   - Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
+   - Set `"MicrosoftAppPassword"` to your bot's client secret ID **value**.
+   - Set `ConnectionName` as OAuth connection name.
+   - Set `"MicrosoftAppType"` to **MultiTenant**.
+   - Set `"MicrosoftAppTenantId"` to **common**.
+
+   :::image type="content" source="~/assets/images/teams-file-upload-bot/appsettings-json-bot-sso.png" alt-text="Screenshot shows the appsettings json.":::
+
+1. Go to the **manifest.json** file in the cloned repository.
+
+   :::image type="content" source="../assets/images/teams-file-upload-bot/manifest-file-location.png" alt-text="Screenshot shows the selection of manifest json file.":::
+
+1. Open the **manifest.json** file and update the following changes:
+
+   - Replace all occurrences of `"{TODO: MicrosoftAppId}"` with your **Microsoft App ID**.
+   - Set `"<<domain-name>>"` to your ngrok or dev tunnel domain.
+
+   :::image type="content" source="../assets/images/teams-file-upload-bot/manifest-bot-id-botsso.png" alt-text="Screenshot shows the details filled in the manifest file in visual studio.":::
+
 </details>
