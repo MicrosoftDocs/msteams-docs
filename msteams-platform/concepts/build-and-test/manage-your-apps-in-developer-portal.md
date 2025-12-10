@@ -262,16 +262,22 @@ To add a bot:
 
 > [!NOTE]
 >
-> * Bots created using the **Microsoft Teams Developer Portal** are **single tenant** by default.
 > * **Multi tenant** bots are deprecated, but bots that were already created as **Multi tenant** continue to work as expected.
-> * When you create a bot using the **Developer Portal**, a corresponding [servicePrincipal](/graph/api/resources/serviceprincipal?view=graph-rest-1.0&preserve-view=true) is automatically created in your **Microsoft Entra ID** tenant.
+> * Bots created using the **Microsoft Teams Developer Portal** are **single tenant** by default. Use the steps given for [requesting access token for your single tenant bot](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&tabs=singletenant#step-1-request-an-access-token-from-the-microsoft-entra-id-account-login-service&preserve-view=true).
+>
+> **For admin users**:
+>
+> * Admin users must create [servicePrincipal](/graph/api/resources/serviceprincipal?view=graph-rest-1.0&preserve-view=true) manually in Azure portal in your app's Overview page.
 > * In delegated scenarios with work or school accounts, the admin must be assigned a supported [Microsoft Entra role](/entra/identity/role-based-access-control/permissions-reference?toc=%2Fgraph%2Ftoc.json) or a custom role with a supported role permission. The following least privileged roles are supported for this operation.
 >
 >   * For multitenant apps:
 >     * Application Administrator
 >     * Cloud Application Administrator
 >
->   * For single-tenant apps where the calling user is a nonadmin user but is the owner of the backing application, the user must have the *Application Developer* role.
+> **For nonadmin users**:
+>
+> * When you create a bot using the **Developer Portal**, a corresponding [servicePrincipal](/graph/api/resources/serviceprincipal?view=graph-rest-1.0&preserve-view=true) is automatically created in your **Microsoft Entra ID** tenant.
+> * In delegated scenarios with work or school accounts for single tenant apps, where the calling user is a nonadmin user but is the owner of the backing application, the user must have the *Application Developer* role.
 
 From the Developer Portal, you can go to Bot Framework portal and configure your bot to update icon and other properties.
 
