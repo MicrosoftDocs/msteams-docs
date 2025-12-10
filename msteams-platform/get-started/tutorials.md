@@ -1611,4 +1611,29 @@ After creating the app, you must load your app in Teams without distributing it.
 
 Do you already have a tenant, and admin access? Let's check if you do!
 
+Verify if you can upload a custom apps in Teams:
+
+1. Open Microsoft Teams, select the **Apps** icon.
+1. Select **Manage your apps**.
+1. Select **Upload an app**.
+1. Look for the **Upload a custom app** option. If you see the option, custom app upload is enabled.
+
+   :::image type="content" source="../assets/images/sbs-csharp/custom-upload.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
+
+> [!NOTE]
+> If you don't find the option to upload a custom app, contact your Teams administrator.
+
+### Create a free Teams developer tenant (optional)
+
+If you don't have a Teams account, you can get it for free. Join the Microsoft 365 developer program!
+
+1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
+1. Select **Join Now** and follow the onscreen instructions.
+1. In the welcome screen, select **Setup E5 subscription**.
+1. Set up your administrator account. After you finish, the following screen appears:
+
+   :::image type="content" source="../assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Screenshot shows the example of what you see after signing up for the Microsoft 365 developer program.":::
+
+1. Sign in to Teams using the administrator account you set up. Verify that you've the **Upload a custom app** option in Teams.
+
 </details>
