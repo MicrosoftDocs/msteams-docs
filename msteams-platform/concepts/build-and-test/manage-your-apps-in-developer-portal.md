@@ -263,11 +263,11 @@ To add a bot:
 > [!NOTE]
 >
 > * **Multi tenant** bots are deprecated, but bots that were already created as **Multi tenant** continue to work as expected.
-> * Bots created using the **Microsoft Teams Developer Portal** are **single tenant** by default. The developer must configure the bot to request access token from single tenant, and include tenant ID as an environment variable while requesting access token from the tenant.
+> * Bots created using the **Microsoft Teams Developer Portal** are **single tenant** by default. Use the steps given for [requesting access token for a single tenant](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&tabs=singletenant) for your bot apps.
 >
 > **For admin users**:
 >
-> * Admin users must create [servicePrincipal](/graph/api/resources/serviceprincipal?view=graph-rest-1.0&preserve-view=true) manually.
+> * Admin users must create [servicePrincipal](/graph/api/resources/serviceprincipal?view=graph-rest-1.0&preserve-view=true) manually in Azure portal in your app's Overview page.
 > * In delegated scenarios with work or school accounts, the admin must be assigned a supported [Microsoft Entra role](/entra/identity/role-based-access-control/permissions-reference?toc=%2Fgraph%2Ftoc.json) or a custom role with a supported role permission. The following least privileged roles are supported for this operation.
 >
 >   * For multitenant apps:
