@@ -1441,4 +1441,42 @@ Use one of the following ways to add a messaging endpoint:
 
    :::image type="content" source="../assets/images/teams-file-upload-bot/manifest-bot-id-botsso.png" alt-text="Screenshot shows the details filled in the manifest file in visual studio.":::
 
+### Build and run the service
+
+1. Open Visual Studio.
+
+1. Go to **File** > **Open** > **Project/Solution...**.
+
+    :::image type="content" source="../assets/images/bots/project-solution_1.png" alt-text="Screenshot of Visual Studio file menu. The menu entries titled Open under File menu and Project/Solution under Open are highlighted in red.":::
+
+1. From **bot-conversation-sso-quickstart** > **csharp_dotnetcore** folder, and select **BotConversationSsoQuickstart.sln** file.
+
+    :::image type="content" source="../assets/images/bots/filepath_1.png" alt-text="Screenshot of Project file with the file path and BotSSOCSharp.csproj file highlighted in red.":::
+
+1. Select **F5**  to run the project.
+1. If a **Security Warning** dialog appears, select **Yes**.
+
+    :::image type="content" source="../assets/images/bots/certificate.png" alt-text="Screenshot of Security Warning with the Yes option highlighted in red.":::
+
+   A webpage opens with a message **Your bot is ready!**.
+
+    > [!NOTE]
+    > This page appears only when you navigate to the localhost URL.
+
+    :::image type="content" source="../assets/images/bots/yourbot.png" alt-text="Screenshot of the webpage that displays Your bot is ready.":::
+
+    <details>
+    <summary><b>Troubleshooting</b></summary>
+
+    If you get the **Unable to find package** error, follow these steps:
+
+      1. Go to **Tools** > **NuGet Package Manager** > **Package Manager Settings**.
+      1. In the **Options** window that appears, select **NuGet Package Manager** > **Package Sources**.
+      1. Select **Add**.
+      1. In **Name**, enter `nuget.org` and in **Source**, enter `https://api.nuget.org/v3/index.json`.
+      1. Select **Update** and **OK**.
+      1. Rebuild your project.
+
+    </details>
+
 </details>
