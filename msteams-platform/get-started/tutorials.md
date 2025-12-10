@@ -1550,3 +1550,12 @@ In this tutorial, you'll learn:
 
 - How to set up a new project.
 - How to build apps with tab capability using C# and Microsoft Visual Studio 2022.
+
+<details>
+<summary><b>Tutorial: Build your first app using C#</b></summary>
+
+This step-by-step guide helps you to build a tab with Microsoft 365 Agents Toolkit (previously known as Teams Toolkit). You'll see the following output after you've completed this guide:
+
+:::image type="content" source="../assets/images/sbs-csharp/final-output.png" alt-text=" Screenshot shows the final output of the Teams tab app.":::
+
+</details>
