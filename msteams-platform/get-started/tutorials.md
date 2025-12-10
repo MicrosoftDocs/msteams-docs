@@ -1479,4 +1479,63 @@ Use one of the following ways to add a messaging endpoint:
 
     </details>
 
+### Upload the bot in Teams
+
+1. In your cloned repository, go to **Microsoft-Teams-Samples** > **samples** > **bot-conversation-sso-quickstart** > **csharp_dotnetcore** > **TeamsApp** > **appPackage**.
+1. Create a .zip file with the following files that are present in the **appPackage** folder:
+
+    - manifest.json
+    - outline.png
+    - color.png
+
+    :::image type="content" source="../assets/images/bots/manifest_1.png" alt-text="Screenshot of Manifest folder with the Teams Bot zip folder highlighted in red.":::
+
+1. Go to **Microsoft Teams**.
+
+    1. In the Teams client, select **Apps**.
+    1. Select **Manage your apps**.
+    1. Select **Upload an app**.
+    1. Look for the option to **Upload a custom app**.
+
+    :::image type="content" source="../assets/images/bots/custom-app-upload.png" alt-text="Screenshot of Teams app with the Apps icon, Manage your apps, and showing the selection of Upload a custom app option highlighted in red.":::
+
+1. Select **Open** to upload the .zip file that you've created in the **Manifest** folder.
+
+    :::image type="content" source="../assets/images/bots/app-open.png" alt-text="Screenshot of Manifest folder with Open option to upload the Teams Bot zip file highlighted in red.":::
+
+1. Select **Add** to add the bot to your chat.
+
+    :::image type="content" source="../assets/images/bots/conversation-bot-add.png" alt-text="Screenshot of conversation bot with Add option highlighted.":::
+
+1. Select **Open**.
+
+    :::image type="content" source="../assets/images/bots/conversation-bot-open.png" alt-text="Screenshot of scope selection dialog with Open option highlighted.":::
+
+    You can interact with the bot by sending it a message. The bot exchanges an SSO token and calls the Graph API on your behalf. It keeps you signed in unless you send a message to sign out.
+
+1. Send a message to the bot. The conversation bot asks for consent for the first time.
+
+1. For desktop: Select **Continue** to give permissions to Teams client for accessing the bot.
+
+    :::image type="content" source="../assets/images/bots/sbsdesktop-mobile-consent-request1.png" alt-text="Screenshot of additional permissions with Continue option highlighted in red.":::
+
+    > [!NOTE]
+    > Now you’ve configured SSO with your bot app and it's the only time you'll have to give consent.
+
+1. For mobile: Select **Accept**.
+
+    > [!NOTE]
+    > Now you’ve configured SSO with your bot app in mobile, and it's the only time you'll have to give consent.
+
+    :::image type="content" source="../assets/images/bots/sbsdesktop-mobile-consent-request.png" alt-text="Screenshot of bot SSO output after you successfully completed the step-by-step guide.":::
+
+Did you come up with something like this?
+
+:::image type="content" source="../assets/images/bots/sbs-desktop-mobile.png" alt-text="Screenshot of the output after you successfully completed the step-by-step guide.":::
+
+You've completed the tutorial to get started with build a bot with SSO authentication.
+
+> [!div class="nextstepaction"]
+> [Enable SSO for your app](../bots/how-to/authentication/bot-sso-overview.md)
+
 </details>
