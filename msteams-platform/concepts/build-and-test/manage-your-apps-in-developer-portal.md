@@ -272,6 +272,8 @@ To add a bot:
 >     * Cloud Application Administrator
 >
 >   * For single-tenant apps where the calling user is a nonadmin user but is the owner of the backing application, the user must have the *Application Developer* role.
+>
+> For single-tenant apps, the developer must configure the bot to request access token from single tenant. They must include tenant ID as part of the environment variables while requesting access token.
 
 From the Developer Portal, you can go to Bot Framework portal and configure your bot to update icon and other properties.
 
