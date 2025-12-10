@@ -263,7 +263,7 @@ To add a bot:
 > [!NOTE]
 >
 > * **Multi tenant** bots are deprecated, but bots that were already created as **Multi tenant** continue to work as expected.
-> * Bots created using the **Microsoft Teams Developer Portal** are **single tenant** by default. Use the steps given for [requesting access token for your single tenant bot](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?branch=main&branchFallbackFrom=pr-en-us-13685&view=azure-bot-service-4.0&tabs=singletenant#bot-to-connector&preserve-view=true).
+> * Bots created using the **Microsoft Teams Developer Portal** are **single tenant** by default. Use the steps given for [requesting access token for your single tenant bot](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&tabs=singletenant#step-1-request-an-access-token-from-the-microsoft-entra-id-account-login-service&preserve-view=true).
 >
 > **For admin users**:
 >
