@@ -1539,3 +1539,14 @@ You've completed the tutorial to get started with build a bot with SSO authentic
 > [Enable SSO for your app](../bots/how-to/authentication/bot-sso-overview.md)
 
 </details>
+
+[Tutorials](#tutorials)
+
+## Build your first app using C sharp
+
+Start Microsoft Teams app development by building your first Teams app with a tab, a bot, or a message extension capability.
+
+In this tutorial, you'll learn:
+
+- How to set up a new project.
+- How to build apps with tab capability using C# and Microsoft Visual Studio 2022.
