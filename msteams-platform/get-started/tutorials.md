@@ -1598,4 +1598,17 @@ After you open the Visual Studio installer, in the pop-up workloads window.
 
    :::image type="content" source="../assets/images/sbs-csharp/select-ttk.png" alt-text="Screenshot shows the selection of Agents Toolkit." lightbox="~/assets/images/sbs-csharp/select-installed-ttk.png":::
 
+### Set up your Teams development tenant
+
+A **tenant** is like a space or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you upload and test your custom app. Let's verify if you're ready to develop with the tenant.
+
+### Check for custom app upload option
+
+After creating the app, you must load your app in Teams without distributing it. This process is known as custom app upload. Sign in to your Microsoft 365 account to view this option.
+
+> [!NOTE]
+> Custom app upload is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you won't be able to preview and test your app in Teams local environment.
+
+Do you already have a tenant, and admin access? Let's check if you do!
+
 </details>
