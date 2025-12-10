@@ -265,6 +265,8 @@ To add a bot:
 > * Bots created using the **Microsoft Teams Developer Portal** are **single tenant** by default.
 > * **Multi tenant** bots are deprecated, but bots that were already created as **Multi tenant** continue to work as expected.
 > * When you create a bot using the **Developer Portal**, a corresponding [servicePrincipal](/graph/api/resources/serviceprincipal?view=graph-rest-1.0&preserve-view=true) is automatically created in your **Microsoft Entra ID** tenant.
+> * Admin users must create [servicePrincipal](/graph/api/resources/serviceprincipal?view=graph-rest-1.0&preserve-view=true) manually.
+>
 > * In delegated scenarios with work or school accounts, the admin must be assigned a supported [Microsoft Entra role](/entra/identity/role-based-access-control/permissions-reference?toc=%2Fgraph%2Ftoc.json) or a custom role with a supported role permission. The following least privileged roles are supported for this operation.
 >
 >   * For multitenant apps:
@@ -273,7 +275,7 @@ To add a bot:
 >
 >   * For single-tenant apps where the calling user is a nonadmin user but is the owner of the backing application, the user must have the *Application Developer* role.
 >
-> For single-tenant apps, the developer must configure the bot to request access token from single tenant. They must include tenant ID as part of the environment variables while requesting access token.
+> * For single-tenant apps, the developer must configure the bot to request access token from single tenant. They must include tenant ID as part of the environment variables while requesting access token.
 
 From the Developer Portal, you can go to Bot Framework portal and configure your bot to update icon and other properties.
 
