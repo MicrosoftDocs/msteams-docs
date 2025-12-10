@@ -1568,4 +1568,34 @@ Here's a list of tools you need to install for building and deploying a Teams ap
 | [Visual Studio 2022](https://visualstudio.microsoft.com)<br> | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
 | [Microsoft 365 Agents Toolkit](#install-agents-toolkit) | A Visual Studio extension that creates a project scaffolding for your app. Use the latest version.|
 
+### Install Agents Toolkit
+
+Agents Toolkit helps simplify the development process with tools to create a project scaffolding for your app. It creates the necessary directory structure for all selected capabilities with the required files in place, ready to build the project.
+
+You can download the latest [Visual Studio installer](https://visualstudio.microsoft.com). Agents Toolkit is available as an extension in Visual Studio.
+
+After you open the Visual Studio installer, in the pop-up workloads window.
+
+1. Select **ASP.NET and web development**.
+1. Under **installation details** > **Optional**, select **Microsoft Teams development tools**.
+1. Select **Install**.
+
+   :::image type="content" source="../assets/images/sbs-csharp/visual-studio-install.png" alt-text="Screenshot shows the Visual Studio installation." lightbox="~/assets/images/sbs-csharp/visual-studio-install.png":::
+
+1. Select **Launch**. Visual Studio 2022 app window appears.
+
+   :::image type="content" source="../assets/images/sbs-csharp/visual-studio-launch.png" alt-text="Screenshot shows the selection of Launch in visual studio.":::
+
+1. Go to **Extensions** > **Manage Extensions**.
+
+   :::image type="content" source="../assets/images/sbs-csharp/select-extension.png" alt-text="Screenshot shows the selection of Extensions.":::
+
+   The Manage Extension window appears:
+
+   :::image type="content" source="../assets/images/sbs-csharp/manage-ext.png" alt-text="Screenshot shows the Manage Extensions." lightbox="~/assets/images/sbs-csharp/manage-extension.png":::
+
+1. From the left pane, select **Installed**. The **Microsoft 365 Agents Toolkit** extension is avaialble.
+
+   :::image type="content" source="../assets/images/sbs-csharp/select-ttk.png" alt-text="Screenshot shows the selection of Agents Toolkit." lightbox="~/assets/images/sbs-csharp/select-installed-ttk.png":::
+
 </details>
