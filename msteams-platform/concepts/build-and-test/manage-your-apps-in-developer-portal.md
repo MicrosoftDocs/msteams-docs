@@ -277,7 +277,7 @@ To add a bot:
 > **For nonadmin users**:
 >
 > * When you create a bot using the **Developer Portal**, a corresponding [servicePrincipal](/graph/api/resources/serviceprincipal?view=graph-rest-1.0&preserve-view=true) is automatically created in your **Microsoft Entra ID** tenant.
-> * For single-tenant apps where the calling user is a nonadmin user but is the owner of the backing application, the user must have the *Application Developer* role.
+> * In delegated scenarios with work or school accounts for single tenant apps, where the calling user is a nonadmin user but is the owner of the backing application, the user must have the *Application Developer* role.
 
 From the Developer Portal, you can go to Bot Framework portal and configure your bot to update icon and other properties.
 
