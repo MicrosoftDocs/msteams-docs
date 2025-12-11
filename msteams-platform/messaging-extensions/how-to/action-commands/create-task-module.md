@@ -3,7 +3,7 @@ title: Modal Dialogs in Message Extensions
 author: surbhigupta
 description: Learn to create and send dialogs (task modules). Handle the initial invoke action and respond with a dialog (task module) from an action message extension command.
 ms.localizationpriority: medium
-ms.topic: conceptual
+ms.topic: article
 ms.author: anclear
 ms.owner: ginobuzz
 ms.date: 03/11/2025
