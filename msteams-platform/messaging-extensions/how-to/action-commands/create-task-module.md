@@ -3,7 +3,7 @@ title: Modal Dialogs in Message Extensions
 author: surbhigupta
 description: Learn to create and send dialogs (task modules). Handle the initial invoke action and respond with a dialog (task module) from an action message extension command.
 ms.localizationpriority: medium
-ms.topic: conceptual
+ms.topic: article
 ms.author: anclear
 ms.owner: ginobuzz
 ms.date: 03/11/2025
@@ -16,6 +16,8 @@ You can create a modal dialog (referred as task module in TeamsJS v1.x) using an
 the initial invoke request, payload activity properties when a dialog is invoked from 1:1 chat, group chat, channel (new post), channel (reply to thread), and command box.
 > [!NOTE]
 > If you are not populating the dialog with parameters defined in the app manifest, you must create the dialog for users with either an Adaptive Card or an embedded web view.
+
+[!INCLUDE [bot-based-me-note](../../../includes/messaging-extensions/bot-based-me-note.md)]
 
 ## The initial invoke request
 
