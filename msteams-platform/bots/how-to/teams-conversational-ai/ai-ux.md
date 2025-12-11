@@ -1,22 +1,10 @@
----
-title: Best practices for building agent in Teams user experience
-description: Learn about the user experience for agents in Teams
-ms.localizationpriority: medium
-ms.topic: overview
-ms.author: surbhigupta
-ms.date: 09/27/2024
----
-
 # Agents user experience
 
-[!INCLUDE [teams-ai-lib-v2-rec](../../../includes/teams-ai-lib-v2-rec.md)]
+> ⚠️ **Error loading included file: ../../../includes/teams-ai-lib-v2-rec.md**
 
 An agent transforms system interactions. For developers, creating an exceptional user experience is crucial. This article details the steps, principles, and considerations for designing intuitive, user-centered interfaces that seamlessly integrate AI capabilities. The main goals are to simplify complex tasks, enhance productivity, and offer personalized experiences through adaptive learning. An agent includes features that enhance its functionality and integration within the Teams environment:
-<!--the Microsoft ecosystem-->
 
 - **Generative AI integration**: Uses advanced AI models for natural language processing and interaction.
-<!--
-- **Bots**: Allows building or extending bots with LLM and generative AI for high-quality chat experiences.-->
 - **Customizable orchestration**: Provides extensive customization options for tailoring the agent's behavior and responses to specific use cases.
 
 To achieve this, you must follow mandatory requirements and best practices. For more information, see [validation guidelines for agents](../../../concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md).
@@ -32,12 +20,6 @@ The following requirements are mandatory for building the agent UX:
 - [Ensure that the agent maintains intelligent conversation](#ensure-that-the-agent-maintains-intelligent-conversation)
 - [Ensure that the agent offers prompt starters or a welcome card](#ensure-that-the-agent-offers-prompt-starters-or-a-welcome-card)
 
-<!--
-> [!NOTE]
->
-> - AI label, citation, feedback buttons, and sensitivity label are available for bots in personal chats, group chats, and channels.
--->
-
 ### Update the app manifest an agent
 
 You must update the app manifest for the agent to define specific properties and configurations that characterize its capabilities and behavior.
@@ -48,18 +30,18 @@ Here's an example for updating the app manifest. You must add the `botID` proper
 <summary>App manifest update example:</summary>
 
 ```json
-    "bots": [
-        { 
-          "botId": "00001111-aaaa-2222-bbbb-3333cccc4444", 
-          // ... existing bot node fields
-        } 
-      ],
-      "copilotAgents": {
-        "customEngineAgents": [{ // New 
-          "type": "bot", // Only option 
-          "id": "00001111-aaaa-2222-bbbb-3333cccc4444"  // Validated against bots node 
-        }] 
-      },
+"bots": [
+{ 
+"botId": "00001111-aaaa-2222-bbbb-3333cccc4444", 
+// ... existing bot node fields
+} 
+],
+"copilotAgents": {
+"customEngineAgents": [{ 
+"type": "bot", 
+"id": "00001111-aaaa-2222-bbbb-3333cccc4444"  
+}] 
+},
 
 ```
 
@@ -69,7 +51,7 @@ Here's an example for updating the app manifest. You must add the `botID` proper
 
 An agent uses LLM for complex user requests, which may delay responses. To prevent noticeable delays, the agent streams its responses, making them appear fast.
 
-:::image type="content" source="../../../assets/images/bots/ai-streaming-ux.gif" alt-text="Graphical representation shows streaming agent messages" border="false":::
+![Graphical representation shows streaming agent messages](https://learn.microsoft.com/en-us/microsoftteams/platform/assets/images/bots/ai-streaming-ux.gif)
 
 Use the following types of updates while streaming responses:
 
@@ -86,7 +68,7 @@ Use [Teams SDK](/microsoftteams/platform/teams-ai-library/) to add streaming to 
 
 Users must know the sources an agent uses to generate its final response. Identifying these resources allows users to validate and trust the agent's responses.
 
-:::image type="content" source="../../../assets/images/bots/ai-citation.png" alt-text="Image shows an example of citations in agents." border="false":::
+![Image shows an example of citations in agents.](https://learn.microsoft.com/en-us/microsoftteams/platform/assets/images/bots/ai-citation.png)
 
 Use [Teams SDK](/microsoftteams/platform/teams-ai-library/) to add streaming to the agent.
 
@@ -101,12 +83,10 @@ An agent must identify that it uses AI. Informing users that a response is AI-ge
 Examples of AI label:
 
 - Example of AI-generated label:
-
-    :::image type="content" source="../../../assets/images/bots/ai-labels-1.png" alt-text="Image shows an example of AI label for AI-generated message." border="false":::
+![Image shows an example of AI label for AI-generated message.](https://learn.microsoft.com/en-us/microsoftteams/platform/assets/images/bots/ai-labels-1.png)
 
 - Example of sensitivity label:
-
-    :::image type="content" source="../../../assets/images/bots/ai-labels-2.png" alt-text="Image shows an example of AI label for a confidential message." border="false":::
+![Image shows an example of AI label for a confidential message.](https://learn.microsoft.com/en-us/microsoftteams/platform/assets/images/bots/ai-labels-2.png)
 
 Use [Teams SDK](/microsoftteams/platform/teams-ai-library/) to add streaming to the agent.
 
@@ -116,9 +96,6 @@ An agent must track a conversation's context and history to provide an intellige
 
 Use Teams SDK to ensure intelligent context-based conversation and to manage and pass conversational history and context to the LLM. Teams SDK enables you to:
 
-<!--
-- Use Bot Framework SDK to:
--->
 - **Manage context and conversation history**: Ensure that the agent can track the context and conversation history.
 - **Identify conversation location**: Ensure the agent is aware of the platform on which the conversation is ongoing, such as on Teams, copilot.com, in a meeting side panel, or a group chat.
 - **Store and pass conversation history**: Determine the means of storage and pass some of the conversation history to the agent.
@@ -128,19 +105,11 @@ Use Teams SDK to ensure intelligent context-based conversation and to manage and
 
 An agent must assist users by offering prompt suggestions on how to best utilize the agent. This helps users overcome challenges during both initial and subsequent interactions with the agent.
 
-:::image type="content" source="../../../assets/images/bots/ai-zero-prompts.png" alt-text="Image shows an example of prompt starters." border="false":::
+![Image shows an example of prompt starters.](https://learn.microsoft.com/en-us/microsoftteams/platform/assets/images/bots/ai-zero-prompts.png)
 
 - **Prompt starters**: Prompt starters are the initial prompts users see when an agent is added to a new conversation, whether it's a one-on-one chat, a new session, or a group chat. These prompts must be tailored to the user's context and the specific conversation thread.
 - **Contextual prompts**: Contextual prompts are dynamic recommendations from an agent during user interactions. These prompts appear via contextual flyouts, such as **View Prompts** in one-on-one chats and @mention flyouts in group chats. These suggestions are updated to stay relevant to the ongoing conversation.
 - **Suggested action**: Suggested actions are prompts that appear as pills above the compose box in one-on-one chats and as action buttons in group chats. They are suggestions for actions a user might take in response to the agent's message and must be customized to match the response.
-
-<!--
-## Compound utterance guidelines for agents
-
-Agents must support at least three unique compound utterances by handling three or more parameters. Guidelines for agents provide detailed information on [parameter description](../../../messaging-extensions/dev-guidelines-agents.md#parameter-description) and ways to [enhance message extension to retrieve information through compound utterances](../../../messaging-extensions/dev-guidelines-agents.md#enhance-message-extension-to-retrieve-information-through-compound-utterances).
-
-:::image type="content" source="../../../assets/images/Copilot/high-quaity-me-pass-multi-parameters.png" alt-text="Screenshot shows an example of a pass scenario where the Northwind app returns a response for a seafood and in stock parameters.":::
--->
 
 ## Best practices for agents in Teams
 
@@ -156,47 +125,57 @@ The following best practices can help enhance the overall effectiveness of an ag
 
 Develop the capability in the agent to receive user feedback. This could enable the collection of valuable insights from users, which can be analyzed to identify areas for improvement. By incorporating this feedback, the bot's responses can be continuously refined and enhanced, leading to a more effective and user-friendly interaction experience.
 
-:::image type="content" source="../../../assets/images/bots/ai-feedback-loop.png" alt-text="Image shows an example of feedback loop." border="false":::
+---
+title: 
+description:
+ms.author: 
+ms.topic:
+ms.localizationpriority: 
+ms.date: 
+ms.owner: 
+---
 
-To collect the user feedback, you must:
+![Image shows an example of feedback loop.](https://learn.microsoft.com/en-us/microsoftteams/platform/assets/images/bots/ai-feedback-loop.png)
 
-- Provide feedback buttons with every response.
-- Provide the feedback received from the user to the agent.
-- Use the feedback to improve the quality of agent's responses.
+To gather user feedback, you must:
 
-Use Teams SDK to add the feedback button property to the AI module. This property adds a feedback button to each AI-generated message automatically.
+- Include feedback buttons with every response.
+- Forward the feedback received from users to the agent.
+- Utilize the feedback to enhance the quality of the agent's responses.
+
+Use Teams SDK to integrate the feedback button property into the AI module. This property automatically adds a feedback button to each AI-generated message.
 
 > [!NOTE]
 > Customizable feedback forms are available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
 
 ### Enable Teams Azure AD single sign-on
 
-You can add single sign-on (SSO) authentication to your agent. For more information, see [enable SSO for your app](../authentication/bot-sso-overview.md).
+Incorporate single sign-on (SSO) authentication into your agent. For more details, see [enable SSO for your app](../authentication/bot-sso-overview.md).
 
 ### Enable the agent to understand conversational history and context
 
-You can design your agent to understand and refer to conversational history and context. It helps to ensure that every interaction is relevant and tailored to the user's specific needs. The agent can refer to the context and offer responses that are accurate and contextually appropriate.
+Design your agent to comprehend and reference conversational history and context. This capability ensures that each interaction remains relevant and tailored to the user's specific needs. The agent can refer to the context and provide responses that are accurate and contextually appropriate.
 
 <!--For more information, see [messages in bot conversations](../conversations/conversation-messages.md).-->
 
 ### Offer dynamic and contextual suggestion prompts
 
-Enhance your agent's user experience with intelligent and context-aware prompts. The agent can offer context-relevant prompts dynamically.
+Improve your agent's user experience with intelligent and context-aware prompts. The agent can dynamically offer prompts that are relevant to the context.
 
-:::image type="content" source="../../../assets/images/bots/ai-suggested-prompts.png" alt-text="Image shows an example of suggested prompts." border="false":::
+![Image shows an example of suggested prompts.](https://learn.microsoft.com/en-us/microsoftteams/platform/assets/images/bots/ai-suggested-prompts.png)
 
-To achieve this, the agent must leverage the conversation context and history, and prompt suggestions can be timely and fit for the query.
+To accomplish this, the agent must utilize the conversation context and history, ensuring that prompt suggestions are timely and appropriate for the query.
 
 ### Enable app profile card
 
 > [!NOTE]
-> Enable app profile card is available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md) for Teams apps.
+> The app profile card feature is available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md) for Teams apps.
 
-You can now add hovercard experience for all agents and bots. Hovercards can provide valuable and relevant information to educate users about the app and its features.
+You can now implement a hovercard experience for all agents and bots. Hovercards provide valuable and relevant information to educate users about the app and its features.
 
-:::image type="content" source="../../../assets/images/bots/contoso-app-profile-card.png" alt-text="Image shows app profile card." border="false" lightbox="../../../assets/images/bots/contoso-app-profile-card.png":::
+![Image shows app profile card.](https://learn.microsoft.com/en-us/microsoftteams/platform/assets/images/bots/contoso-app-profile-card.png)
 
-To enable app profile card to your agents or bots, you must add the `features` field under the `description` field in the app manifest. For more information, see [public developer preview for Teams](/microsoft-365/extensibility/schema/root-description?view=m365-app-prev&tabs=syntax&preserve-view=true).
+To enable the app profile card for your agents or bots, add the `features` field under the `description` field in the app manifest. For more information, see [public developer preview for Teams](/microsoft-365/extensibility/schema/root-description?view=m365-app-prev&tabs=syntax&preserve-view=true).
 
 ## See also
 
