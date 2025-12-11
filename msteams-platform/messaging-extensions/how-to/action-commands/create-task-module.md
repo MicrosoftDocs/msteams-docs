@@ -17,6 +17,8 @@ the initial invoke request, payload activity properties when a dialog is invoked
 > [!NOTE]
 > If you are not populating the dialog with parameters defined in the app manifest, you must create the dialog for users with either an Adaptive Card or an embedded web view.
 
+[!INCLUDE [bot-based-me-note](../../../includes/messaging-extensions/bot-based-me-note.md)]
+
 ## The initial invoke request
 
 In the process of the initial invoke request, your service receives an `Activity` object of type `composeExtensions/fetchTask`, and you must respond with a `task` object containing either an Adaptive Card or a URL to the embedded web view. Along with the standard bot activity properties, the initial invoke payload contains the following request metadata:
