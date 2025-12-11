@@ -2,7 +2,7 @@
 title: Create Search Commands for App
 author: surbhigupta
 description: Learn about message extension search commands for Teams apps, to create a search command through app manifest and manually.
-ms.topic: conceptual
+ms.topic: article
 ms.author: anclear
 ms.date: 09/16/2024
 ms.localizationpriority: medium
