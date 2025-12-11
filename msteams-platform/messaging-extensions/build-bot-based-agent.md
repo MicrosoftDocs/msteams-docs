@@ -30,6 +30,8 @@ An agent allows Microsoft 365 Copilot to interact directly with third-party data
 * Fetch real-time information, such as the latest news coverage on a product launch.
 * Retrieve knowledge-based information, such as a team’s design files in Figma.
 
+[!INCLUDE [bot-based-me-note](../includes/messaging-extensions/bot-based-me-note.md)]
+
 Descriptions enhance the usability and effectiveness of a message extension agent. The following description offer a clear and concise summary of the app’s features:
 
 * **App description**: App description helps improve your app discoverability in the Teams Store.
