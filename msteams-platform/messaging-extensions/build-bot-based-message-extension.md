@@ -16,10 +16,9 @@ Message extensions built using Bot Framework (Bot-based) use a web service as a 
 Bot-based message extension takes advantage of the Bot Framework's messaging schema and secure communication protocol. The bot is defined in the app manifest for the Teams app and you can also define different types of commands for your message extension, such as action commands or search commands.
 
 > [!NOTE]
-> We recommend building Agents instead of bot‑based message extensions. Agents provide a more flexible, intelligent, and future‑ready experience, enabling richer reasoning, simpler development, and better alignment with the evolving Teams and Microsoft 365 platform.
+> Agents provide a more flexible, intelligent, and future‑ready experience which enables richer reasoning, simpler development, and better alignment with the evolving Teams and Microsoft 365 platform. We recommend building Agents instead of bot‑based message extensions.
 >
-> [!div class="nextstepaction"]
-> [Get started with building agents in Teams](../agents-in-teams/overview.md)
+> For more information, see [build declarative agents](/microsoft-365-copilot/extensibility/overview-declarative-agent) and [build agents in Teams](../agents-in-teams/overview.md).
 
 There are two types of message extension commands, action command and search command. The message extension command type defines the UI elements and interaction flows available to your web service. You can use a search command or an action command to interact with your web service through a bot in Teams.
 
