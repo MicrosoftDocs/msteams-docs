@@ -11,18 +11,42 @@ ms.owner: ryanbliss
 With single sign-on (SSO) in Microsoft Teams, app users can sign in to Teams using either a Microsoft or Microsoft 365 account and use bot and message extension apps without needing to sign in again. Your app is available to app users on any device with access granted through Microsoft Entra ID.
 
 > [!NOTE]
-> SSO for a bot app in Teams is supported only in one-on-one chat.
+> SSO for a bot app in Teams is supported in one-on-one and group chat scope, and not supported in channel scope.
 
 This section covers SSO configuration required for bot and messaging extension apps.
 
 ## SSO user experience in Teams
 
-App users sign in to Teams using either personal Microsoft account or Microsoft 365 account. You can take advantage of this and use SSO to authenticate and authorize the app users. Microsoft Entra ID provides app users access to your bot or message extension app.
+App users sign in to Teams using either personal Microsoft account or Microsoft 365 account. You can take advantage of this and use SSO to authenticate and authorize the app users. Microsoft Entra ID provides app users access to your bot or message extension app whether in personal or in group scopes.
 
 - Teams authenticates and stores the identity of its app user.
 - Your bot uses the stored identity of the app user who is already validated by Teams.
 - The app user needs to give consent to Teams for using the identity to access your bot.
 - The app user can access the app on web, desktop, or mobile client.
+
+Let's look at how SSO works in different scopes.
+
+# [Personal scope](#tab/personal)
+
+In personal scope, the app user interacts with the bot or message extension app in a one-on-one chat. The user needs to consent only once to use the bot or message extension app.
+
+:::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-consent-flow-personal-scope-overview.png" alt-text="The infographic shows the bot consent flow in personal scope." border="false":::
+
+# [Group scope](#tab/group)
+
+The user can interact with the bot in a group chat without needing to sign in again. The consent card is displayed only to the user who @mentions the bot for the first time.
+
+:::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-authentication-in-group-scope.png" alt-text="The infographic shows the bot consent flow in group scope." border="false":::
+
+If the user doesn't have the app pre-installed, the following are the two scenarios for user authentication:
+
+- **Microsoft Entra ID consent is required**: The user who @mentions the bot gives consent for the permissions requested by the bot. The bot acquires an access token for that user and responds to the request in the group chat.
+
+- **Microsoft Entra ID consent is not required**: In scenarios where user permissions are granted by default or for trusted apps, the user who @mentions the bot can directly interact with the bot without needing to give consent.
+
+---
+
+The permission scopes for accessing resources remain the same in both personal and group scopes. For more information, see [add code to enable SSO in your bot app](bot-sso-code.md).
 
 > [!NOTE]
 > App users can't give permission to some permission scopes, such as `Sites.ReadWrite.All`, which allows the app user to read and write to all SharePoint and OneDrive assets in the tenant. For such scopes, only the admin can grant consent on an app user's behalf.

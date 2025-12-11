@@ -1491,6 +1491,30 @@
       {
         "source_path": "msteams-platform/resources/schema/manifest-schema-dev-preview.md",
         "redirect_url": "/microsoft-365/extensibility/schema/?view=m365-app-prev?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json&preserve-view=true"
-      }
+      },
+      {
+        "source_path": "msteams-platform/overview-story.md",
+        "redirect_url": "/microsoftteams/platform/overview"
+      },
+      {
+        "source_path": "msteams-platform/overview-explore.md",
+        "redirect_url": "/microsoftteams/platform/overview"
+      },
+      {
+        "source_path": "msteams-platform/overview-solution.md",
+        "redirect_url": "/microsoftteams/platform/overview"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/build-an-AI-agent-in-Teams.md",
+        "redirect_url": "/microsoftteams/platform/agents-in-teams/overview"
+      },
+      {   
+        "source_path": "msteams-platform/toolkit/build-a-basic-AI-chatbot-in-teams.md",
+        "redirect_url": "/microsoftteams/platform/agents-in-teams/overview"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/build-a-RAG-bot-in-teams.md",
+        "redirect_url": "/microsoftteams/platform/agents-in-teams/overview"
+      }   
     ]
 }

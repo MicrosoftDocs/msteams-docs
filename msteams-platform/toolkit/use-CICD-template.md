@@ -65,7 +65,7 @@ To set up the pipeline with GitHub, follow these steps:
       build:
         runs-on: ubuntu-latest
         env:
-          TEAMSAPP_CLI_VERSION: "3.0.4"
+          TEAMSAPP_CLI_VERSION: "1.0.4"
           # Add extra environment variables here so that teamsapp cli can use them.
     
         steps:
@@ -79,7 +79,7 @@ To set up the pipeline with GitHub, follow these steps:
     
           - name: install cli
             run: |
-              npm install @microsoft/atk-cli@${{env.TEAMSAPP_CLI_VERSION}}
+              npm install @microsoft/m365agentstoolkit-cli@${{env.TEAMSAPP_CLI_VERSION}}
 
           - name: Retrieve the secret and decode it to a file
             env:
@@ -120,7 +120,7 @@ To set up the pipeline with GitHub, follow these steps:
       build:
         runs-on: ubuntu-latest
         env:
-          TEAMSAPP_CLI_VERSION: "3.0.4"
+          TEAMSAPP_CLI_VERSION: "1.0.4"
           # Add extra environment variables here so that atk cli can use them.
     
         steps:
@@ -134,7 +134,7 @@ To set up the pipeline with GitHub, follow these steps:
     
           - name: install cli
             run: |
-              npm install @microsoft/atk-cli@${{env.TEAMSAPP_CLI_VERSION}}
+              npm install @microsoft/m365agentstoolkit-cli@${{env.TEAMSAPP_CLI_VERSION}}
     
           - name: Login Azure by service principal
             run: |
@@ -246,7 +246,7 @@ To set up the pipeline with Azure DevOps, follow these steps:
       vmImage: ubuntu-latest
     
     variables:
-      TEAMSAPP_CLI_VERSION: 3.0.4
+      TEAMSAPP_CLI_VERSION: 1.0.4
     
     steps:
       - task: NodeTool@0
@@ -255,7 +255,7 @@ To set up the pipeline with Azure DevOps, follow these steps:
           checkLatest: true
     
       - script: |
-          npm install @microsoft/atk-cli@$(TEAMSAPP_CLI_VERSION)
+          npm install @microsoft/m365agentstoolkit-cli@$(TEAMSAPP_CLI_VERSION)
         displayName: "Install CLI"
 
       - task: DownloadSecureFile@1  
@@ -291,7 +291,7 @@ To set up the pipeline with Azure DevOps, follow these steps:
       vmImage: ubuntu-latest
     
     variables:
-      TEAMSAPP_CLI_VERSION: 3.0.4
+      TEAMSAPP_CLI_VERSION: 1.0.4
     
     steps:
       - task: NodeTool@0
@@ -300,7 +300,7 @@ To set up the pipeline with Azure DevOps, follow these steps:
           checkLatest: true
     
       - script: |
-          npm install @microsoft/atk-cli@$(TEAMSAPP_CLI_VERSION)
+          npm install @microsoft/m365agentstoolkit-cli@$(TEAMSAPP_CLI_VERSION)
         displayName: "Install CLI"
     
       - script: |
