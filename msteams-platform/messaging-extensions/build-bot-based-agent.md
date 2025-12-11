@@ -23,14 +23,14 @@ Microsoft 365 Copilot, powered by an advanced processing and orchestration engin
 
 :::image type="content" source="../assets/images/Copilot/ailib-copilot-diff.png" alt-text="Graphic shows the user interaction flow between the user, Microsoft Teams, and Microsoft 365 Copilot." lightbox="../assets/images/Copilot/ailib-copilot-diff.png":::
 
+[!INCLUDE [bot-based-me-note](../includes/messaging-extensions/bot-based-me-note.md)]
+
 ## What is an agent?
 
 An agent allows Microsoft 365 Copilot to interact directly with third-party data, apps, and services, enhance its capabilities, and broaden its range of capabilities. Agents allow Microsoft 365 Copilot to:
 
 * Fetch real-time information, such as the latest news coverage on a product launch.
 * Retrieve knowledge-based information, such as a team’s design files in Figma.
-
-[!INCLUDE [bot-based-me-note](../includes/messaging-extensions/bot-based-me-note.md)]
 
 Descriptions enhance the usability and effectiveness of a message extension agent. The following description offer a clear and concise summary of the app’s features:
 
