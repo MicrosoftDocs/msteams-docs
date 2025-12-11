@@ -12,6 +12,8 @@ An Outlook add-in and a message extension allow you to create rich and interacti
 
 If your app includes scenarios from Outlook add-in and message extension, then you must create both apps, an Outlook add-in and a message extension. You must host both these apps at the same domain so that they can share files.
 
+[!INCLUDE [bot-based-me-note](../includes/messaging-extensions/bot-based-me-note.md)]
+
 ## Guidelines for Outlook add-in and message extension
 
 # [**Outlook add-in**](#tab/outlook-add-in)
