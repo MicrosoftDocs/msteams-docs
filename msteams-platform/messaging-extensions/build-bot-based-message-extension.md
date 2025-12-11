@@ -17,6 +17,9 @@ Bot-based message extension takes advantage of the Bot Framework's messaging sch
 
 > [!NOTE]
 > We recommend building Agents instead of bot‑based message extensions. Agents provide a more flexible, intelligent, and future‑ready experience, enabling richer reasoning, simpler development, and better alignment with the evolving Teams and Microsoft 365 platform.
+>
+> [!div class="nextstepaction"]
+> [Get started with building agents in Teams](../agents-in-teams/overview.md)
 
 There are two types of message extension commands, action command and search command. The message extension command type defines the UI elements and interaction flows available to your web service. You can use a search command or an action command to interact with your web service through a bot in Teams.
 
