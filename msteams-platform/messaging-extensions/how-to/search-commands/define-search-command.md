@@ -10,6 +10,8 @@ ms.owner: slamba
 ---
 # Define message extension search commands
 
+[!INCLUDE [bot-based-me-note](../../../includes/messaging-extensions/bot-based-me-note.md)]
+
 The search command is invoked from any one or both of the following locations:
 
 * Compose message area: The buttons at the bottom of the compose message area.

@@ -9,6 +9,8 @@ ms.localizationpriority: medium
 ---
 # Respond to search command
 
+[!INCLUDE [bot-based-me-note](../../../includes/messaging-extensions/bot-based-me-note.md)]
+
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 After the user submits the search command, your web service receives a `composeExtension/query` invoke message that contains a `value` object with the search parameters. The invoke is triggered by the following conditions:

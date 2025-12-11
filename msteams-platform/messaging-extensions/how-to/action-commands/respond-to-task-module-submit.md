@@ -32,6 +32,8 @@ If the app doesn't respond within five seconds, the Teams client retries the req
 >* The app must defer any long-running actions after the bot replies to the invoke request. The long-running action results can be delivered as a message.
 >* Your app has five seconds to respond to the invoke message.
 
+[!INCLUDE [bot-based-me-note](../../../includes/messaging-extensions/bot-based-me-note.md)]
+
 For authentication or configuration, after the user completes the process, the original invoke is resent to your web service. The following table shows which types of responses are available, based on the invoke location `commandContext` of the message extension:
 
 |Response Type | Compose | Command bar | Message |
