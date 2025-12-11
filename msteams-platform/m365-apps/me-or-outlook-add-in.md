@@ -2,7 +2,7 @@
 title: Message Extension vs. Outlook Add-in
 description: Learn how to decide whether Microsoft 365 app must be message extension or Outlook add-in, and customer relation, security, attachment, and signature management.
 ms.date: 01/05/2023
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
 ms.subservice: m365apps
 ---
