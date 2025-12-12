@@ -57,7 +57,7 @@ To fetch the insights of a particular meeting, follow these steps:
 The following example retrieves all AI insight objects for a specific online meeting.
 
 ```http
-GET/copilot/users/{userId}/onlineMeetings/{onlineMeetingId}/aiInsights
+GET /copilot/users/{userId}/onlineMeetings/{onlineMeetingId}/aiInsights
 ```
 
 #### Response
