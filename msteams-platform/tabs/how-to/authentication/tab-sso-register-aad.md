@@ -9,13 +9,13 @@ ms.owner: ryanbliss
 ---
 # Configure your tab app in Microsoft Entra ID
 
-Microsoft Entra ID provides access to your tab app based on the app user's Teams identity. Register your tab app with Microsoft Entra ID so that the app user who has signed into Teams can be given access to your tab app.
+Microsoft Entra ID provides access to your tab app based on the app user's Teams identity. Register your tab app with Microsoft Entra ID so that the app user who has signed into Teams can access your tab app.
 
 <a name='enable-sso-in-azure-ad'></a>
 
 ## Enable SSO in Microsoft Entra ID
 
-Registering your tab app in Microsoft Entra ID and enabling it for SSO requires making app configurations, such as generating app ID, defining API scope, and preauthorize client IDs for trusted applications.
+Registering your tab app in Microsoft Entra ID and enabling it for SSO requires making app configurations, such as generating app ID, defining API scope, and preauthorizing client IDs for trusted applications.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-azure-ad.png" alt-text="Configure Microsoft Entra ID to send access token to Teams Client app":::
 
@@ -23,7 +23,7 @@ Create a new app registration in Microsoft Entra ID, and expose its (web) API us
 
 You might also need to configure other details, such as authenticating app users on the platform or device where you want to target your tab app.
 
-User-level Graph API permissions are supported, that is, email, profile, offline_access, and OpenId. If you require access to other Graph scopes, such as `User.Read` or `Mail.Read`, see [get an access token with Graph permissions](tab-sso-graph-api.md#acquire-access-token-for-ms-graph).
+User-level Graph API permissions are supported, such as email, profile, offline_access, and OpenId. If you require access to other Graph scopes, such as `User.Read` or `Mail.Read`, see [get an access token with Graph permissions](tab-sso-graph-api.md#acquire-access-token-for-ms-graph).
 
 Microsoft Entra configuration enables SSO for your tab app in Teams. It responds with an access token for validating the app user.
 
@@ -96,7 +96,7 @@ Register your app in Microsoft Entra ID and configure the tenancy and app's plat
     </details>
 
     > [!NOTE]
-    > You don't need  to enter **Redirect URI** for enabling SSO for a tab app.
+    > You don't need to enter **Redirect URI** for enabling SSO for a tab app.
 
 7. Select **Register**.
     A message pops up on the browser stating that the app was created.
@@ -146,9 +146,10 @@ After you've created a new app registration, configure scope (permission) option
 
 To configure scope and authorize trusted client applications, you need:
 
+
 - [To expose an API](#to-expose-an-api): Configure scope (permission) options for your app. Expose a web API and configure the application ID URI.
-- [To configure API scope](#to-configure-api-scope): Define scope for the API, and the users who can consent for a scope. You can let only admins provide consent for higher-privileged permissions.
-- [To configure authorized client application](#to-configure-authorized-client-application): Create authorized client IDs for applications that you want to preauthorize. It allows the app user to access the app scopes (permissions) you've configured, without requiring any further consent. Preauthorize only those client applications you trust as your app users won't have the opportunity to decline consent.
+- [To configure API scope](#to-configure-api-scope): Define scope for the API and specify users who can consent to a scope. Allow only admins to consent to higher-privileged permissions.
+- [To configure authorized client application](#to-configure-authorized-client-application): Create authorized client IDs for applications you want to preauthorize. This allows app users to access the app scopes (permissions) you've configured without requiring further consent. Preauthorize only trusted client applications, as app users won't have the opportunity to decline consent.
 
 #### To expose an API
 
@@ -158,25 +159,25 @@ To configure scope and authorize trusted client applications, you need:
 
     The **Expose an API** page appears.
 
-1. Select **Add** to generate application ID URI in the form of `api://{AppID}`.
+1. Select **Add** to generate the application ID URI in the form of `api://{AppID}`.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-an-api.png" alt-text="Set app ID URI":::
 
-    The section for setting application ID URI appears.
+    The section for setting the application ID URI appears.
 
-1. Enter the application ID URI in the format explained here.
+1. Enter the application ID URI in the specified format.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/set-app-id-uri.png" alt-text="Application ID URI":::
 
-    - The **Application ID URI** is prefilled with app ID (GUID) in the format `api://{AppID}`.
+    - The **Application ID URI** is prefilled with the app ID (GUID) in the format `api://{AppID}`.
     - The application ID URI format must be: `api://fully-qualified-domain-name.com/{AppID}`.
     - Insert the `fully-qualified-domain-name.com` between `api://` and `{AppID}` (which is, GUID). For example, api://example.com/{AppID}.
 
     where,
     - `fully-qualified-domain-name.com` is the human-readable domain name from which your tab app is served. Your application's domain name and the domain name you register for your Microsoft Entra application must be the same.
 
-      If you're using a tunneling service, such as ngrok, you must update this value whenever your ngrok subdomain changes.
-    - `AppID` is the app ID (GUID) that was generated when you registered your app. You can view it in the **Overview** section.
+      If you're using a tunneling service, such as ngrok, update this value whenever your ngrok subdomain changes.
+    - `AppID` is the app ID (GUID) generated when you registered your app. You can view it in the **Overview** section.
 
     > [!IMPORTANT]
     >
@@ -184,7 +185,7 @@ To configure scope and authorize trusted client applications, you need:
     >
     > - **Application ID URI for app with multiple capabilities**: If you're building an app with a bot, a messaging extension, and a tab, enter the application ID URI as `api://fully-qualified-domain-name.com/botid-{YourClientId}`, where {YourClientId} is your bot app ID.
     >
-    > - **Format for domain name**: Use lower case letters for domain name. Don't use upper case.
+    > - **Format for domain name**: Use lowercase letters for the domain name. Don't use uppercase.
     >
     >   For example, to create an app service or web app with resource name, `demoapplication`:
     >
@@ -193,7 +194,7 @@ To configure scope and authorize trusted client applications, you need:
     >   | *demoapplication* | `https://demoapplication.example.net` | All platforms.|
     >   | *DemoApplication* | `https://DemoApplication.example.net` | Desktop, web, and iOS only. It isn't supported in Android. |
     >
-    >    Use the lower case option *demoapplication* as base resource name.
+    >    Use the lowercase option *demoapplication* as the base resource name.
 
 1. Select **Save**.
 
@@ -218,7 +219,7 @@ To configure scope and authorize trusted client applications, you need:
 
     The **Add a scope** page appears.
 
-1. Enter the details for configuring scope.
+1. Enter the details for configuring the scope.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="The screenshot shows how to add scope details in Azure.":::
 
@@ -244,19 +245,19 @@ To configure scope and authorize trusted client applications, you need:
 
 #### To configure authorized client application
 
-1. Move through the **Expose an API** page to the **Authorized client application** section, and select **+ Add a client application**.
+1. Navigate to the **Expose an API** page, go to the **Authorized client application** section, and select **+ Add a client application**.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/auth-client-apps.png" alt-text="Authorized client application":::
 
     The **Add a client application** page appears.
 
-1. Enter the appropriate Microsoft 365 client ID for the applications that you want to authorize for your app’s web application.
+1. Enter the appropriate Microsoft 365 client ID for the applications you want to authorize for your app’s web application.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-app.png" alt-text="Add a client application":::
 
     > [!NOTE]
     >
-    > - The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams, Microsoft 365 app, and Outlook are the actual IDs that you must add.
+    > - The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams, Microsoft 365 app, and Outlook are the actual IDs you must add.
     > - For a Teams tab app, you need either Web or SPA, as you can't have a mobile or desktop client application in Teams.
 
     1. Select one of the following client IDs:
@@ -293,6 +294,6 @@ Congratulations! You've completed the app configuration in Microsoft Entra ID re
 ## See also
 
 - [Tenancy in Microsoft Entra ID](/azure/active-directory/develop/single-and-multi-tenant-apps)
-- [Quickstart - Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app)
+- [Quickstart - Register an application with Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app)
 - [Quickstart: Configure an application to expose a web API](/azure/active-directory/develop/quickstart-configure-app-expose-web-apis)
 - [OAuth 2.0 authorization code flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow)
