@@ -22,6 +22,9 @@
   - name: Extend agents to Microsoft 365 hubs
     href: /microsoft-365-copilot/extensibility/ecosystem?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     displayName: AI bot, Teams AI library, Teams SDK, custom agent
+  - name: Enable targeted messages for agents
+    href: agents-in-teams/targeted-messages.md
+    displayName: targeted messages, proactive messages, adaptive cards, message actions, message extension, notifications
 - name: Tools and SDKs
   items:
   - name: Overview
