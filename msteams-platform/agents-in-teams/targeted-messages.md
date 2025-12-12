@@ -34,14 +34,14 @@ The scenario in the image shows a poll in the group chat. When a group member su
 
 Targeted messages come with the following benefits for enhacing user experience:
 
-- **Help reduce bot spam**: An agent or bot can send a message in a group chat or channel that is visible only to a specific user, avoiding spamming the entire group.
-- **Maintaining context**: The agent responds to the user request aligned with the context in the chat. While other members aren't able to see this interaction, a user can get chat summary and be updated about the discussion.
+- **Reduce bot spam**: An agent or bot can send a message in a group chat or channel that's visible only to a specific user, avoiding spamming the entire group.
+- **Maintain context**: The agent responds to the user request aligned with the context in the chat. While other members aren't able to see this interaction, a user can get chat summary and be updated about the discussion.
 - **Human-in-the-loop scenarios**: It's useful for human-in-the-loop scenarios, such as authentication prompts, approvals, or informational messages that should only be visible to the relevant user.
 - **Ephemeral messages**: The targeted message isn't retained in the chat indefinitely. They are cleared after 24 hours, so the conversation stays clean. However, your agent or app retains them in the backend storage for compliance as needed (for example, eDiscovery).
 
 Some common use scenarios include:
 
-- **Authentication flows**: A user triggers a bot command in a channel (for example, “@Bot login”). The bot replies with a sign-in card as a targeted message visible only to that user. This prevents the whole group from seeing someone’s login prompt.
+- **Authentication flows**: A user can trigger a bot command in a channel (for example, “@Bot login”). The bot replies with a sign-in card as a targeted message visible only to that user. This prevents the group from seeing one user's login prompt.
 - **Help or error responses**: If a user asks a bot for help or encounters an error in a group chat, the bot can respond just to that user (with tips, usage examples, or error details) via a targeted message . Others aren’t spammed by a message that only the one user needed.
 - **Personal reminders or nudges**: A bot in a channel can privately remind a specific user to complete an action (fill a poll, review a document, etc.) using a targeted message, instead of @mentioning them publicly. This avoids public call-outs or extraneous notifications to others.
 - **Welcome and onboarding**: When a new user joins a team channel, a bot can send a welcome message or onboarding info visible only to that user (for example, with links to FAQs), rather than a message that everyone sees repeatedly for each new member.
