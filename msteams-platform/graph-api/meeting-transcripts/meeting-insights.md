@@ -97,7 +97,7 @@ Content-Type: application/json
 
 #### Request
 
-The following example retrieves detailed insights for a specific AI insight object.
+The example below demonstrates how to retrieve an AI insight object.
 
 ```http
 GET /copilot/users/{userId}/onlineMeetings/{onlineMeetingId}/aiInsights/{aiInsightId}
