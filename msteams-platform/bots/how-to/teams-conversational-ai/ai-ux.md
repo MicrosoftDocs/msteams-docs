@@ -12,11 +12,8 @@ ms.date: 09/27/2024
 [!INCLUDE [teams-ai-lib-v2-rec](../../../includes/teams-ai-lib-v2-rec.md)]
 
 An agent transforms system interactions. For developers, creating an exceptional user experience is crucial. This article details the steps, principles, and considerations for designing intuitive, user-centered interfaces that seamlessly integrate AI capabilities. The main goals are to simplify complex tasks, enhance productivity, and offer personalized experiences through adaptive learning. An agent includes features that enhance its functionality and integration within the Teams environment:
-<!--the Microsoft ecosystem-->
 
 - **Generative AI integration**: Uses advanced AI models for natural language processing and interaction.
-<!--
-- **Bots**: Allows building or extending bots with LLM and generative AI for high-quality chat experiences.-->
 - **Customizable orchestration**: Provides extensive customization options for tailoring the agent's behavior and responses to specific use cases.
 
 To achieve this, you must follow mandatory requirements and best practices. For more information, see [validation guidelines for agents](../../../concepts/deploy-and-publish/appsource/prepare/review-copilot-validation-guidelines.md).
@@ -31,12 +28,6 @@ The following requirements are mandatory for building the agent UX:
 - [Ensure the agent response contains an AI label](#ensure-the-agent-response-contains-an-ai-label)
 - [Ensure that the agent maintains intelligent conversation](#ensure-that-the-agent-maintains-intelligent-conversation)
 - [Ensure that the agent offers prompt starters or a welcome card](#ensure-that-the-agent-offers-prompt-starters-or-a-welcome-card)
-
-<!--
-> [!NOTE]
->
-> - AI label, citation, feedback buttons, and sensitivity label are available for bots in personal chats, group chats, and channels.
--->
 
 ### Update the app manifest an agent
 
@@ -116,9 +107,6 @@ An agent must track a conversation's context and history to provide an intellige
 
 Use Teams SDK to ensure intelligent context-based conversation and to manage and pass conversational history and context to the LLM. Teams SDK enables you to:
 
-<!--
-- Use Bot Framework SDK to:
--->
 - **Manage context and conversation history**: Ensure that the agent can track the context and conversation history.
 - **Identify conversation location**: Ensure the agent is aware of the platform on which the conversation is ongoing, such as on Teams, copilot.com, in a meeting side panel, or a group chat.
 - **Store and pass conversation history**: Determine the means of storage and pass some of the conversation history to the agent.
@@ -133,14 +121,6 @@ An agent must assist users by offering prompt suggestions on how to best utilize
 - **Prompt starters**: Prompt starters are the initial prompts users see when an agent is added to a new conversation, whether it's a one-on-one chat, a new session, or a group chat. These prompts must be tailored to the user's context and the specific conversation thread.
 - **Contextual prompts**: Contextual prompts are dynamic recommendations from an agent during user interactions. These prompts appear via contextual flyouts, such as **View Prompts** in one-on-one chats and @mention flyouts in group chats. These suggestions are updated to stay relevant to the ongoing conversation.
 - **Suggested action**: Suggested actions are prompts that appear as pills above the compose box in one-on-one chats and as action buttons in group chats. They are suggestions for actions a user might take in response to the agent's message and must be customized to match the response.
-
-<!--
-## Compound utterance guidelines for agents
-
-Agents must support at least three unique compound utterances by handling three or more parameters. Guidelines for agents provide detailed information on [parameter description](../../../messaging-extensions/dev-guidelines-agents.md#parameter-description) and ways to [enhance message extension to retrieve information through compound utterances](../../../messaging-extensions/dev-guidelines-agents.md#enhance-message-extension-to-retrieve-information-through-compound-utterances).
-
-:::image type="content" source="../../../assets/images/Copilot/high-quaity-me-pass-multi-parameters.png" alt-text="Screenshot shows an example of a pass scenario where the Northwind app returns a response for a seafood and in stock parameters.":::
--->
 
 ## Best practices for agents in Teams
 
@@ -158,24 +138,24 @@ Develop the capability in the agent to receive user feedback. This could enable 
 
 :::image type="content" source="../../../assets/images/bots/ai-feedback-loop.png" alt-text="Image shows an example of feedback loop." border="false":::
 
-To collect the user feedback, you must:
+To collect user feedback, you must:
 
 - Provide feedback buttons with every response.
-- Provide the feedback received from the user to the agent.
-- Use the feedback to improve the quality of agent's responses.
+- Deliver the feedback received from users to the agent.
+- Use the feedback to enhance the quality of the agent's responses.
 
-Use Teams SDK to add the feedback button property to the AI module. This property adds a feedback button to each AI-generated message automatically.
+Use Teams SDK to add the feedback button property to the AI module. This property automatically adds a feedback button to each AI-generated message.
 
 > [!NOTE]
 > Customizable feedback forms are available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
 
 ### Enable Teams Azure AD single sign-on
 
-You can add single sign-on (SSO) authentication to your agent. For more information, see [enable SSO for your app](../authentication/bot-sso-overview.md).
+Add single sign-on (SSO) authentication to your agent. For more information, see [enable SSO for your app](../authentication/bot-sso-overview.md).
 
 ### Enable the agent to understand conversational history and context
 
-You can design your agent to understand and refer to conversational history and context. It helps to ensure that every interaction is relevant and tailored to the user's specific needs. The agent can refer to the context and offer responses that are accurate and contextually appropriate.
+Design your agent to understand and refer to conversational history and context. This ensures that every interaction is relevant and tailored to the user's specific needs. The agent can refer to the context and offer responses that are accurate and contextually appropriate.
 
 <!--For more information, see [messages in bot conversations](../conversations/conversation-messages.md).-->
 
@@ -185,18 +165,18 @@ Enhance your agent's user experience with intelligent and context-aware prompts.
 
 :::image type="content" source="../../../assets/images/bots/ai-suggested-prompts.png" alt-text="Image shows an example of suggested prompts." border="false":::
 
-To achieve this, the agent must leverage the conversation context and history, and prompt suggestions can be timely and fit for the query.
+To achieve this, the agent must leverage the conversation context and history, ensuring prompt suggestions are timely and fit for the query.
 
 ### Enable app profile card
 
 > [!NOTE]
 > Enable app profile card is available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md) for Teams apps.
 
-You can now add hovercard experience for all agents and bots. Hovercards can provide valuable and relevant information to educate users about the app and its features.
+Add hovercard experience for all agents and bots. Hovercards provide valuable and relevant information to educate users about the app and its features.
 
 :::image type="content" source="../../../assets/images/bots/contoso-app-profile-card.png" alt-text="Image shows app profile card." border="false" lightbox="../../../assets/images/bots/contoso-app-profile-card.png":::
 
-To enable app profile card to your agents or bots, you must add the `features` field under the `description` field in the app manifest. For more information, see [public developer preview for Teams](/microsoft-365/extensibility/schema/root-description?view=m365-app-prev&tabs=syntax&preserve-view=true).
+To enable the app profile card for your agents or bots, add the `features` field under the `description` field in the app manifest. For more information, see [public developer preview for Teams](/microsoft-365/extensibility/schema/root-description?view=m365-app-prev&tabs=syntax&preserve-view=true).
 
 ## See also
 
