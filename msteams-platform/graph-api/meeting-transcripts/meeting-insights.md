@@ -62,7 +62,7 @@ GET/copilot/users/{userId}/onlineMeetings/{onlineMeetingId}/aiInsights
 
 #### Response
 
-The following example shows a successful response with a list of AI insight objects. The IDs in the example have been shortened for readability.
+The following example shows a response with a list of AI insight objects. The IDs in the example have been shortened for readability.
 
 ```json
 HTTP/1.1 200 OK
@@ -100,16 +100,12 @@ Content-Type: application/json
 The following example retrieves detailed insights for a specific AI insight object.
 
 ```http
-GET/copilot/users/{userId}/onlineMeetings/{onlineMeetingId}/aiInsights/{aiInsightId}
+GET /copilot/users/{userId}/onlineMeetings/{onlineMeetingId}/aiInsights/{aiInsightId}
 ```
 
 #### Response
 
-The following example shows a successful response with detailed meeting insights. The IDs in the example have been shortened for readability.
-
-```json
-HTTP/1.1 200 OK
-Content-Type: application/json
+The following example shows a response with a detailed meeting summary. The IDs in the example have been shortened for readability.
 
 ```json
 HTTP/1.1 200 OK
@@ -124,58 +120,40 @@ Content-Type: application/json
   "endDateTime": "2025-12-08T05:41:31Z",
   "meetingNotes": [
     {
-      "title": "Sample Testing and Staging Code Update",
-      "text": "MOD discussed the process of testing a sample, confirming that it will function after updating the staging code, and outlined the necessary steps for this update.",
+      "title": "Introducing Project Objectives and Key Stakeholders",
+      "text": "The stakeholders present included representatives from each department involved in the project, ensuring alignment and clear communication channels from the start.",
       "subpoints": [
         {
-          "title": "Staging Code Modification",
-          "text": "MOD stated that the sample will work after changing the staging code, indicating that this is the primary requirement for successful testing."
-        },
-        {
-          "title": "Beta Environment Configuration", 
-          "text": "MOD clarified that updates are needed only in the beta environment, specifically mentioning the need to replace or update the access token and configure related settings."
-        },
-        {
-          "title": "Testing Process Steps",
-          "text": "MOD described the process of generating the beta, suggested that another person might need to participate, and encouraged further attempts if initial tests do not succeed."
-        }
-      ]
-    },
-    {
-      "title": "ReadMe File Integration Issue",
-      "text": "MOD identified an issue related to the ReadMe file, noting that it was properly created and centrally added, which is affecting the current process.",
-      "subpoints": [
-        {
-          "title": "ReadMe File Addition",
-          "text": "MOD explained that the ReadMe file was properly created and centrally added, which is contributing to the observed issue in the workflow."
+          "title": "Discussion on action items",
+          "text": "Action items were assigned to team members, and a follow-up meeting schedule was established."
         }
       ]
     }
   ],
   "actionItems": [
     {
-      "title": "Finalize Project Timeline",
+      "title": "Project Timeline Finalization",
       "text": "Review and finalize the project timeline to ensure alignment with stakeholder expectations and resource availability.",
       "ownerDisplayName": "Bella Smith"
-    }
+    },
   ],
   "viewpoint": {
     "mentionEvents": [
       {
+        "eventDateTime": "2025-12-08T05:30:00Z",
+        "transcriptUtterance": "We need to get approval from Sarah Johnson before proceeding with the budget allocation.",
         "speaker": {
-          "application": null,
-          "device": null,
-          "user": {
-            "@odata.type": "#Microsoft.Teams.GraphSvc.teamworkUserIdentity",
-            "id": "VjEjI...",
-            "displayName": "Display Name",
-            "userIdentityType": "aadUser",
-            "tenantId": "d1aeb..."
-          }
+            "application": null,
+            "device": null,
+            "user": {
+                "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+                "id": "9a760...",
+                "displayName": "John Smith",
+                "userIdentityType": "aadUser",
+                "tenantId": "d1aeb..."
+            }
         },
-        "eventDateTime": "2024-05-21T09:00:00",
-        "transcriptUtterance": "We need to get approval from manager before proceeding with the budget allocation."
-      }
+      },
     ]
   }
 }
