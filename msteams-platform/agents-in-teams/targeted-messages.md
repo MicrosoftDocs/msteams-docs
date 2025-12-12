@@ -55,3 +55,28 @@ Some common use scenarios include:
 - **Personal reminders or nudges**: A bot in a channel can privately remind a specific user to complete an action (fill a poll, review a document, etc.) using a targeted message, instead of @mentioning them publicly. This avoids public call-outs or extraneous notifications to others.
 - **Welcome and onboarding**: When a new user joins a team channel, a bot can send a welcome message or onboarding info visible only to that user (for example, with links to FAQs), rather than a message that everyone sees repeatedly for each new member.
 - **AI or Copilot summaries**: In long-running chats (for example, incident management channels), if a new participant joins, the bot can offer a private summary of what happened so far. Slack supports this pattern with ephemeral messages; now Teams can too.
+
+## Targeted message developer experience
+
+You can send a targeted message in an agent or bot just as a normal message. The bot indicates that the message is intended for a specific user in the conversation, and the platform delivers it to that user. The bot doesn't initiate a separate conversation or create a new chat. The message lives in the same channel or thread ID, but with restricted visibility.
+
+Key steps for enabling targeted messages:
+
+1. **Detect the scenario to use a targeted reply**:
+
+    The bot logic for  must determine sending a targeted message in response to one of the following triggers:
+
+    - When a user @mentions or selects a button that might require a response that isn't meant for other group members.
+    - The agent or bot must send a proactive message to a specific user, for example, a reminder or welcome message in-context.
+    - The agent or bot must send a recommend to a user that isn't relevant to other group members.
+
+1. **Include the targeted designation in the send API**:
+
+    Ensure that you specify the following when the agent or bot sends the message:
+
+    - The conversation (chat or channel) ID and targeted user’s ID (Principal ID or MRI). This identifies where the message goes and who should see it.
+    - A flag or API call that marks the message as targeted or ephemeral.
+
+        - For REST APIs:
+        - For Teams SDK:
+        - For Bot Framework SDK:
