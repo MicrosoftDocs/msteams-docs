@@ -104,3 +104,10 @@ Key steps for enabling targeted messages:
 
     > [!NOTE]
     > Backward compatibility logic is a service on Teams ensures older clients don't show targeted messages to all members, when not supported. It's helpful if your agent or bot is notified when the client doesn't support targeted messages.
+
+1. **Bot edits and deletes**:
+
+    After sending a targeted message, your agent or bot updates or deletes it:
+
+    - **Edit**: If a user takes an action, for example submitting the login card, the agent or bot might want to update the original targeted message. The agent calls the update message API for that message using the message’s `activityId`). The edit will update the content only in the target user’s view.
+    - **Delete**: The agent can delete a targeted message using the delete message API . For example, if the user didn’t act on an ephemeral prompt after some time, the agent can delete it to avoid leaving stale content.
