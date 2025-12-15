@@ -15,7 +15,7 @@ Microsoft Entra ID provides access to your tab app based on the app user's Teams
 
 ## Enable SSO in Microsoft Entra ID
 
-Registering your tab app in Microsoft Entra ID and enabling it for SSO requires making app configurations, such as generating app ID, defining API scope, and preauthorizing client IDs for trusted applications.
+Registering your tab app in Microsoft Entra ID and enabling it for SSO requires making app configurations, such as, generating app ID, defining API scope, and preauthorizing client IDs for trusted applications.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-azure-ad.png" alt-text="Configure Microsoft Entra ID to send access token to Teams Client app":::
 
