@@ -108,7 +108,7 @@ For OAuth 2.0 tokens stored in Microsoft's secure vault, specify authorization t
 }
 ````
 
-The `referenceId` points to a secure OAuth configuration that you register in Developer Portal (<https://dev.teams.microsoft.com/tools/api-key-registration>). For details, see [Configure OAuth in Developer Portal](../messaging-extensions/api-based-oauth.md#configure-oauth-in-developer-portal). When setting up your OAuth app with a third-party authentication provider, ensure that you add `https://teams.microsoft.com/api/platform/v1.0/oAuthRedirect` to the list of allowed redirect endpoints.
+The `referenceId` points to a secure [OAuth configuration that you register in Developer Portal](https://dev.teams.microsoft.com/tools/oauth-configuration). For details, see [Configure OAuth in Developer Portal](../messaging-extensions/api-based-oauth.md#configure-oauth-in-developer-portal). When setting up your OAuth app with a third-party authentication provider, ensure that you add `https://teams.microsoft.com/api/platform/v1.0/oAuthRedirect` to the list of allowed redirect endpoints.
 
 ### Use API key authentication
 
@@ -120,6 +120,8 @@ For API keys stored in a vault, configure the authorization type as `ApiKeyPlugi
   "referenceId": "my-apikey"
 }
 ````
+
+The `referenceId` points to an [API key that you register in Developer Portal](https://dev.teams.microsoft.com/tools/api-key-registration). For details, see [API key authentication](../messaging-extensions/api-based-secret-service-auth.md).
 
 ### Use no authentication
 
