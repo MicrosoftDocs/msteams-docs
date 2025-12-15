@@ -77,9 +77,9 @@ Key steps for enabling targeted messages:
     - The conversation (chat or channel) ID and targeted user’s ID (Principal ID or MRI). This identifies where the message goes and who should see it.
     - A flag or API call that marks the message as targeted or ephemeral.
 
-        - For REST APIs: The exact URL varies by region. Use the service URL from the conversation. The `userId` is the user’s Teams ID (MRI) to target, and `conversationId` is the group chat or channel thread ID. The payload of the POST is the activity or message to send, just like a normal message activity.
-        - For Teams SDK:
-        - For Bot Framework SDK: In Bot Framework SDK, this is planned as a specialized method or property. For example, Teams is introducing a method like `SendTargetedActivityAsync` that you can call instead of the regular `SendActivityAsync`. This invokes a Teams-specific API endpoint to deliver a targeted message, where `isTargeted: true` indicates this message should be private to `targetUserId`.
+        - **For REST APIs**: The exact URL varies by region. Use the service URL from the conversation. The `userId` is the user’s Teams ID (MRI) to target, and `conversationId` is the group chat or channel thread ID. The payload of the POST is the activity or message to send, just like a normal message activity.
+        - **For Teams SDK**:
+        - **For Bot Framework SDK**: In Bot Framework SDK, this is planned as a specialized method or property. For example, Teams is introducing a method like `SendTargetedActivityAsync` that you can call instead of the regular `SendActivityAsync`. This invokes a Teams-specific API endpoint to deliver a targeted message, where `isTargeted: true` indicates this message should be private to `targetUserId`.
 
     The following code snippet is an example of a scenario where the agent or bot uses targeted message to inform a group member when they submit their vote in a group poll:
 
@@ -92,6 +92,8 @@ Key steps for enabling targeted messages:
         ... (recipient = user, etc.)
     }
     ```
+
+    - **Capabilities**: Targeted messages support all capabilities as other Teams messages. Your agent or bot can include most types of messages that include like interactive Adaptive Cards with buttons, images, file attachments, and so on. For example, a sign-in card or a task module can be delivered via targeted message to a user.
 
 1. **Handle send results and fallbacks**:
 
