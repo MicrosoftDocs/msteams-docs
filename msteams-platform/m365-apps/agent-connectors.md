@@ -46,7 +46,9 @@ First, declare your MCP server in the [agentConnectors](/microsoft-365/extensibi
 
 ````json
 {
-  "root": {
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
+  "manifestVersion": "devPreview",
+  ...
     "agentConnectors": [
       {
         "id": "my-mcp-server",
@@ -89,10 +91,10 @@ The endpoint must be publicly accessible and respond to MCP protocol handshake m
 
 Specify how Microsoft 365 retrieves credentials when calling your MCP server. MCP servers support several authorization methods:
 
-- None: No authentication required
-- OAuthPluginVault: OAuth 2.0 tokens stored inside Microsoft’s secure vault
-- ApiKeyPluginVault: API key stored in a vault and referenced by ID
-- DynamicClientRegistration: Dynamic OAuth client creation
+- **None**: No authentication required
+- **OAuthPluginVault**: OAuth 2.0 tokens stored inside Microsoft’s secure vault
+- **ApiKeyPluginVault**: API key stored in a vault and referenced by ID
+- **DynamicClientRegistration**: Dynamic OAuth client creation
 
 ### Use OAuth authentication
 
@@ -108,7 +110,9 @@ For OAuth 2.0 tokens stored in Microsoft's secure vault, specify authorization t
 }
 ````
 
-The `referenceId` points to a secure [OAuth configuration that you register in Developer Portal](https://dev.teams.microsoft.com/tools/oauth-configuration). For details, see [Configure OAuth in Developer Portal](../messaging-extensions/api-based-oauth.md#configure-oauth-in-developer-portal). When setting up your OAuth app with a third-party authentication provider, ensure that you add `https://teams.microsoft.com/api/platform/v1.0/oAuthRedirect` to the list of allowed redirect endpoints.
+The `referenceId` points to a secure [OAuth configuration that you register in Developer Portal](https://dev.teams.microsoft.com/tools/oauth-configuration). For details, see [Configure OAuth in Developer Portal](../messaging-extensions/api-based-oauth.md#configure-oauth-in-developer-portal).
+
+When setting up your OAuth app with a third-party authentication provider, ensure that you add `https://teams.microsoft.com/api/platform/v1.0/oAuthRedirect` to the list of allowed redirect endpoints.
 
 ### Use API key authentication
 
@@ -154,9 +158,7 @@ When enabled, agents call your server's `tools/list` method to retrieve availabl
 
 ### Use inline tool definitions
 
-For static toolsets that don't change frequently:
-
-1. Add an `mcpToolDescription` object with your tool definitions:
+For static toolsets that don't change frequentl, add an `mcpToolDescription` object with your tool definitions:
 
 ````json
 "remoteMcpServer": {
@@ -181,25 +183,26 @@ The following is an example of a complete agent connector configuration:
 
 ```json
 {
-  "root": {
-    "agentConnectors": [
-      {
-        "id": "my-mcp-server",
-        "displayName": "My Automation Server",
-        "description": "Provides workflow automation and task management tools.",
-        "toolSource": {
-          "remoteMcpServer": {
-            "endpoint": "https://mcp.mycompany.com",
-            "authorization": {
-              "type": "ApiKeyPluginVault",
-              "referenceId": "my-apikey"
-            },
-            "modelContextProtocol.enable_dynamic_discovery": true
-          }
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
+  "manifestVersion": "devPreview",
+  ...
+  "agentConnectors": [
+    {
+      "id": "my-mcp-server",
+      "displayName": "My Automation Server",
+      "description": "Provides workflow automation and task management tools.",
+      "toolSource": {
+        "remoteMcpServer": {
+          "endpoint": "https://mcp.mycompany.com",
+          "authorization": {
+            "type": "ApiKeyPluginVault",
+            "referenceId": "my-apikey"
+          },
+          "modelContextProtocol.enable_dynamic_discovery": true
         }
       }
-    ]
-  }
+    }
+  ]
 }
 ```
 
@@ -255,28 +258,28 @@ Validate your integration by testing with actual Microsoft 365 agents.
 
 If your MCP server isn't working as expected, check these common issues:
 
-**Agent can't connect to your server**
+### Agent can't connect to your server
 
 - Verify your endpoint is publicly accessible
 - Confirm your endpoint uses HTTPS or WSS
 - Check firewall and network security settings
 - Ensure your server responds to MCP handshake messages
 
-**Tools don't appear in agents**
+### Tools don't appear in agents
 
 - Verify `tools/list` returns valid tool definitions
 - Check that tool descriptions are clear and complete
 - Confirm `modelContextProtocol.enable_dynamic_discovery` is set correctly
 - Validate the JSON schema of inline tool definitions
 
-**Authentication failures**
+### Authentication failures
 
 - Verify the `referenceId` matches your stored secret configuration
 - Test that OAuth tokens are valid and not expired
 - Confirm API keys have the necessary permissions
 - Check authorization header format in outbound requests
 
-**Tool calls fail or time out**
+### Tool calls fail or time out
 
 - Review your server logs for errors
 - Verify input parameter validation is working correctly
@@ -285,11 +288,4 @@ If your MCP server isn't working as expected, check these common issues:
 
 ## Next steps
 
-After successfully registering your MCP server:
-
-- Test your integration thoroughly across different Microsoft 365 agents
-- Monitor your server's performance and reliability metrics
-- Gather user feedback on tool descriptions and usability
-- Submit your app for partner certification and publishing
-- Review the MCP protocol specification for advanced features
-- Consider implementing additional tools based on user needs
+When ready, submit your app for [partner certification and publishing](../concepts/deploy-and-publish/appsource/publish.md).
