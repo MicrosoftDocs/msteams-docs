@@ -187,7 +187,7 @@ In the **Publish** section, publish your app to your organization or the Teams S
 
         :::image type="content" source="../../assets/images/tdp/app-validation-in-progress.png" alt-text="Screenshot shows you the App validation in progress." lightbox="../../assets/images/tdp/app-validation-in-progress.png":::
 
-        The app validation status updates as follows:
+        The app validation status is updated as follows:
 
           1. **Created**: After you select **Start Validation**.
           1. **In progress**: App validation is initiated.
@@ -197,7 +197,7 @@ In the **Publish** section, publish your app to your organization or the Teams S
 
         :::image type="content" source="../../assets/images/tdp/app-validation-refresh.png" alt-text="Screenshot shows the app validation status." lightbox="../../assets/images/tdp/app-validation-refresh.png":::
 
-    1. After validation, it shows a list of test cases your app has passed or failed. The following are the app validation test result statuses available:<br>
+    1. After validation, it shows a list of test cases your app has passed or failed. The following are the app validation test result status available:<br>
 
         |Status|Validation|Result|Description|
         |----|----|----|----|
@@ -279,8 +279,6 @@ From the Developer Portal, go to Bot Framework portal and configure your bot to 
 
 ### Agent Identity Blueprint
 
-### Agent Identity Blueprint
-
 An Agent Identity Blueprint provides reusable configurations for agents in Agent 365 that perform tasks and interact with users or Microsoft 365 services. Each blueprint functions as a template specifying how an agent is configured and connected to a back-end service.
 
 Create and manage Agent Identity Blueprints in Developer Portal, while manage agent identities derived from them in Microsoft 365 Admin Center. For comprehensive guidance on extending your agent to Agent 365, use the [Microsoft Agent 365 SDK](/microsoft-agent-365/developer/?tabs=python).
@@ -298,7 +296,7 @@ Use Agent Identity Blueprint to:
 
 If a suitable blueprint doesn't exist, create a new one.
 
-#### Create a new agent identity blueprint
+#### Create a new Agent Identity Blueprint
 
 1. In [Teams Developer Portal](https://dev.teams.microsoft.com/home), go to **Tools** and select **Agent Identity Blueprint**.
 
@@ -314,7 +312,7 @@ If a suitable blueprint doesn't exist, create a new one.
 
     A unique **Agent Blueprint ID** is automatically generated. Use this ID when creating agent identities based on this blueprint.
 
-#### Configure the agent identity blueprint
+#### Configure the Agent Identity Blueprint
 
 Each blueprint includes two key configuration areas:
 
