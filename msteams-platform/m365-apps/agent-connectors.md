@@ -238,7 +238,7 @@ Validate your integration by testing with actual Microsoft 365 agents.
 
 1. Deploy your app to a test environment.
 
-2. Open the Channel Agent in Microsoft Teams or another Microsoft 365 agent that supports MCP.
+2. Open a [Channel Agent](/microsoftteams/set-up-channel-agent-teams) in Microsoft Teams or another Microsoft 365 agent that supports MCP.
 
 3. Test natural language commands that should trigger your tools:
    - "Create a task in my project management system"
