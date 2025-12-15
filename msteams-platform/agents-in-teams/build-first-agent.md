@@ -1,6 +1,6 @@
 ---
 title: Create your first agent
-description: Learn how to build your agent in Microsoft Teams using GitHub Codespaces, the Toolkit extension, and step-by-step guides.
+description: Learn how to build your agent in Microsoft Teams with the help of GitHub codespaces that opens Toolkit extension and step-by-step guides.
 ms.localizationpriority: high
 ms.date: 12/11/2024
 ms.topic: reference
@@ -26,7 +26,7 @@ To build an agent in Microsoft Teams, ensure you have the following:
 ## Set up your environment
 
 1. Install the latest versions of Visual Studio Code, Node.js, and Microsoft 365 Agents Toolkit.
-1. If you want to use Azure OpenAI service to access large language models (LLM) for your agent, create an Azure OpenAI service on the [Azure portal](https://ms.portal.azure.com/#home) and obtain your API key.
+1. If you want to use Azure OpenAI service to access Large Language Model (LLM) for your agent, create an Azure OpenAI service on the [Azure portal](https://ms.portal.azure.com/#home) and obtain your API key.
 
 For more information about setting up Azure OpenAI services, see:
 
@@ -49,7 +49,7 @@ For more information about setting up Azure OpenAI services, see:
 
     :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/general-teams-agent.png" alt-text="Screenshot shows the location of the option to create a new agent in Teams." lightbox="../assets/images/agents-in-teams/first-agent-qsg/general-teams-agent.png":::
 
-1. Select a service to access large language models (LLM) for your agent.
+1. Select a service to access Large Language Model (LLM) for your agent.
 
     :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/access-llm.png" alt-text="Screenshot shows the location of the option to select an appropriate LLM for your agent." lightbox="../assets/images/agents-in-teams/first-agent-qsg/access-llm.png":::
 
@@ -57,7 +57,7 @@ For more information about setting up Azure OpenAI services, see:
 
     - Select **Azure OpenAI** if you've obtained the OpenAI key from Azure. Following this, you must:
 
-        1. Enter the Azure OpenAI key in **Azure OpenAI service key**.
+        1. Enter Azure OpenAI key in **Azure OpenAI service key**.
         1. Enter the endpoint in **Azure OpenAI service endpoint**.
         1. Enter the deployment name in **Azure OpenAI deployment name**.
 
@@ -108,7 +108,7 @@ Microsoft 365 Agents Toolkit creates your agent project and scaffolds the projec
 
     :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/agent-response.png" alt-text="Screenshot shows the agent response to the user prompt." lightbox="../assets/images/agents-in-teams/first-agent-qsg/agent-response.png":::
 
-Congratulations! You've created and run your first agent in Microsoft Teams.
+Congratulations! You've created and ran your first agent in Microsoft Teams.
 
 ## Choose your programming language
 
