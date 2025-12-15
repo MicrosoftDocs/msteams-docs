@@ -79,6 +79,11 @@ Key steps for enabling targeted messages:
 
         - For REST APIs: The exact URL varies by region. Use the service URL from the conversation. The `userId` is the user’s Teams ID (MRI) to target, and `conversationId` is the group chat or channel thread ID. The payload of the POST is the activity or message to send, just like a normal message activity.
         - For Teams SDK:
-        - For Bot Framework SDK: In Bot Framework SDK, this is planned as a specialized method or property. For example, Teams is introducing a method like `SendTargetedActivityAsync` that you can call instead of the regular `SendActivityAsync`. This invokes a Teams-specific API endpoint to deliver a targeted message.
+        - For Bot Framework SDK: In Bot Framework SDK, this is planned as a specialized method or property. For example, Teams is introducing a method like `SendTargetedActivityAsync` that you can call instead of the regular `SendActivityAsync`. This invokes a Teams-specific API endpoint to deliver a targeted message, where `isTargeted: true` indicates this message should be private to `targetUserId`.
 
-1.
+1. **Handle send results and fallbacks**:
+
+    After calling the targeted `send` API, the API returns a success or error:
+
+    1. If successful, the targeted user gets the message sent by the agent or bot.
+    1. If the send event fails, the agent or bot may choose a fallback, such as sending a 1:1 chat message as a backup. However, the intended user must be a member of the chat or channel to receive a targeted message, else the message isn't delivered. Some scenarios where a send event may fail are if a user isn’t a group member or if the client doesn’t support targeted messages.
