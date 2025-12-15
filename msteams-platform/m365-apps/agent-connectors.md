@@ -11,7 +11,7 @@ ms.subservice: m365apps
 
 # Register MCP servers as agent connectors for Microsoft 365 (preview)
 
-Agents in Microsoft 365, such as [Channel Agent](/microsoftteams/set-up-channel-agent-teams) in Microsoft Teams, can connect to external systems through *agent connectors* declared in the app manifest. This article shows you how to register your Model Context Protocol (MCP) server in the Microsoft 365 app manifest, enabling Microsoft 365 agents to securely discover, select, and invoke MCP tools that your server exposes.
+Agents in Microsoft 365, such as [Channel Agent](/microsoftteams/set-up-channel-agent-teams) in Microsoft Teams, can connect to external systems through *agent connectors* declared in the app manifest. This article shows you how to register your remote Model Context Protocol (MCP) server in the Microsoft 365 app manifest, enabling Microsoft 365 agents to securely discover, select, and invoke MCP tools that your server exposes.
 
 > [!NOTE]
 >
@@ -36,7 +36,7 @@ Before you begin, ensure you have:
 
 ## Add the agent connector to your manifest
 
-The first step is to declare your MCP server in the [agentConnectors](/microsoft-365/extensibility/schema/root-agent-connectors?view=m365-app-prev) array at the root level of your app manifest.
+First, declare your MCP server in the [agentConnectors](/microsoft-365/extensibility/schema/root-agent-connectors?view=m365-app-prev&preserve-view=true) array at the root level of your app manifest.
 
 1. Open your Microsoft 365 app manifest (`manifest.json`) file.
 
@@ -87,11 +87,16 @@ The endpoint must be publicly accessible and respond to MCP protocol handshake m
 
 ## Configure authentication
 
-Specify how Microsoft 365 retrieves credentials when calling your MCP server. MCP servers support several authorization methods.
+Specify how Microsoft 365 retrieves credentials when calling your MCP server. MCP servers support several authorization methods:
+
+- None: No authentication required
+- OAuthPluginVault: OAuth 2.0 tokens stored inside Microsoft’s secure vault
+- ApiKeyPluginVault: API key stored in a vault and referenced by ID
+- DynamicClientRegistration: Dynamic OAuth client creation
 
 ### Use OAuth authentication
 
-For OAuth 2.0 tokens stored in Microsoft's secure vault, add the `authorization` object to your `remoteMcpServer` configuration:
+For OAuth 2.0 tokens stored in Microsoft's secure vault, specify authorization type `OAuthPluginVault`in your configuration:
 
 ````json
 "remoteMcpServer": {
@@ -103,7 +108,7 @@ For OAuth 2.0 tokens stored in Microsoft's secure vault, add the `authorization`
 }
 ````
 
-The `referenceId` points to a secure OAuth configuration that administrators manage outside your manifest.
+The `referenceId` points to a secure OAuth configuration that you register in Developer Portal (<https://dev.teams.microsoft.com/tools/api-key-registration>). For details, see [Configure OAuth in Developer Portal](../messaging-extensions/api-based-oauth.md#configure-oauth-in-developer-portal). When setting up your OAuth app with a third-party authentication provider, ensure that you add `https://teams.microsoft.com/api/platform/v1.0/oAuthRedirect` to the list of allowed redirect endpoints.
 
 ### Use API key authentication
 
@@ -124,7 +129,7 @@ For enterprise scenarios, prefer OAuth over API keys to align with security best
 
 ## Define tool discovery
 
-Choose how Microsoft 365 agents discover the tools your MCP server provides. You can use inline definitions or dynamic discovery.
+Choose how Microsoft 365 agents discover the tools your MCP server provides. You can use inline definitions if your toolset is static, or dynamic discovery if your toolset changes frequently.
 
 ### Enable dynamic tool discovery
 
@@ -168,13 +173,11 @@ For static toolsets that don't change frequently:
 
 The `description` object must match the schema returned by your MCP server's `tools/list` response.
 
-## Create a complete configuration
+## Example schema
 
-Combine all elements into a working agent connector configuration.
+The following is an example of a complete agent connector configuration:
 
-1. Assemble your complete connector definition:
-
-````json
+```json
 {
   "root": {
     "agentConnectors": [
@@ -196,17 +199,15 @@ Combine all elements into a working agent connector configuration.
     ]
   }
 }
-````
+```
 
-2. Save your manifest file.
-
-This configuration enables Microsoft 365 agents to establish a connection, retrieve credentials, and discover tools from your MCP server.
+This configuration is sufficient for Microsoft 365 agents, including the Channel Agent in Teams, to establish a connection and discover tools from your MCP server.
 
 ## Validate your configuration
 
 Before deploying your app, verify that your manifest and MCP server are correctly configured.
 
-1. Use the Microsoft 365 App Validator to check your manifest for errors.
+1. Use the [Microsoft 365 app package validation](https://dev.teams.microsoft.com/tools/store-validation) tool in Developer Portal to check your manifest for errors.
 
 2. Verify your MCP server responds correctly to handshake messages by testing the connection manually.
 
@@ -236,7 +237,7 @@ Validate your integration by testing with actual Microsoft 365 agents.
 
 3. Test natural language commands that should trigger your tools:
    - "Create a task in my project management system"
-   - "Update the status of ticket #123"
+   - "Update the status of ticket number 123"
    - "Search for open issues assigned to me"
 
 4. Verify that:
