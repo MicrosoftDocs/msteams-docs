@@ -141,7 +141,7 @@ Develop the capability in the agent to receive user feedback. This could enable 
 To collect user feedback, you must:
 
 - Provide feedback buttons with every response.
-- Deliver the feedback received from users to the agent.
+- Provide the feedback received from users to the agent.
 - Use the feedback to enhance the quality of the agent's responses.
 
 Use Teams SDK to add the feedback button property to the AI module. This property automatically adds a feedback button to each AI-generated message.
