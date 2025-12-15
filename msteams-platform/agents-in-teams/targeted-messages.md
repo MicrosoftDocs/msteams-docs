@@ -84,13 +84,13 @@ Key steps for enabling targeted messages:
     The following code snippet is an example of a scenario where the agent or bot uses targeted message to inform a group member when they submit their vote in a group poll:
 
     ```rest
-        POST /v3/users/29:.../conversations/19:.../targetedactivities
-        {
-            "type": "message",
-            "text": "Thank you, your vote has been recorded.",
-            "replyToId": "<id of user's command>",
-            ... (recipient = user, etc.)
-        }
+    POST /v3/users/29:.../conversations/19:.../targetedactivities
+    {
+        "type": "message",
+        "text": "Thank you, your vote has been recorded.",
+        "replyToId": "<id of user's command>",
+        ... (recipient = user, etc.)
+    }
     ```
 
 1. **Handle send results and fallbacks**:
