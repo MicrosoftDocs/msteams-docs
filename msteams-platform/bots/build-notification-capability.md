@@ -10,7 +10,7 @@ ms.date: 10/03/2024
 
 # Send notifications
 
-With the notification capability in bots, you can send alerts, updates, or messages to users through various channels, ensuring timely communication. Utilizing bots for notifications offers several benefits, including enhanced user engagement, timely communication, increased conversation, improved customer experience, and reduced response time.
+With notification capability in bots, you can send alerts, updates, or messages to users through various channels, ensuring timely communication. Utilizing bots for notifications offers several benefits, including enhanced user engagement, timely communication, increased conversation, improved customer experience, and reduced response time.
 
 Notifications can be triggered by user interactions, system updates, data changes, error messages or alerts, reminders and follow-ups, or personalized recommendations. The article covers the following types of notifications:
 
@@ -173,9 +173,9 @@ You can customize sending the notification to the following targets:
   # [TypeScript](#tab/ts2)
 
     ```TypeScript
-    // list all installation targets
+    // List all installation targets
     for (const target of await notificationApp.notification.installations()) {
-        // "Person" means this bot is installed as Personal app
+        // "Person" indicates this bot is installed as a Personal app
         if (target.type === "Person") {
             // Directly notify the individual person
             await target.sendAdaptiveCard(...);
@@ -186,9 +186,9 @@ You can customize sending the notification to the following targets:
   # [C#](#tab/csharp2)
 
     ```C#
-    // list all installation targets
+    // List all installation targets
     foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
-        // "Person" means this bot is installed as Personal app
+        // "Person" indicates this bot is installed as a Personal app
         if (target.Type == NotificationTargetType.Person)
         {
             // Directly notify the individual person
@@ -204,34 +204,33 @@ You can customize sending the notification to the following targets:
   # [TypeScript](#tab/ts3)
 
     ```TypeScript
-    // list all installation targets
+    // List all installation targets
     for (const target of await notificationApp.notification.installations()) {
-        // "Group" means this bot is installed to a Group Chat
+        // "Group" indicates this bot is installed to a Group Chat
         if (target.type === "Group") {
             // Directly notify the Group Chat
             await target.sendAdaptiveCard(...);
 
-                // List all members in the Group Chat then notify each member
-                const members = await target.members();
-                for (const member of members) {
-                    await member.sendAdaptiveCard(...);
-                }
+            // List all members in the Group Chat then notify each member
+            const members = await target.members();
+            for (const member of members) {
+                await member.sendAdaptiveCard(...);
             }
-        
+        }
     }
     ```
 
   # [C#](#tab/csharp3)
 
     ```C#
-    // list all installation targets
+    // List all installation targets
     foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
-        // "Group" means this bot is installed to a Group Chat
+        // "Group" indicates this bot is installed to a Group Chat
         if (target.Type == NotificationTargetType.Group)
         {
             // Directly notify the Group Chat
             await target.SendAdaptiveCard(...);
-        // List all members in the Group Chat then notify each member
+            // List all members in the Group Chat then notify each member
             var members = await target.GetMembersAsync();
             foreach (var member in members) {
                 await member.SendAdaptiveCard(...);
@@ -247,9 +246,9 @@ You can customize sending the notification to the following targets:
   # [TypeScript](#tab/ts4)
 
     ```TypeScript
-    // list all installation targets
+    // List all installation targets
     for (const target of await notificationApp.notification.installations()) {
-        // "Channel" means this bot is installed to a Team (default to notify General channel)
+        // "Channel" indicates this bot is installed to a Team (default to notify General channel)
         if (target.type === "Channel") {
             // Directly notify the Team (to the default General channel)
             await target.sendAdaptiveCard(...);
@@ -272,9 +271,9 @@ You can customize sending the notification to the following targets:
   # [C#](#tab/csharp4)
 
     ```C#
-    // list all installation targets
+    // List all installation targets
     foreach (var target in await _conversation.Notification.GetInstallationsAsync()) {
-        // "Channel" means this bot is installed to a Team (default to notify General channel)
+        // "Channel" indicates this bot is installed to a Team (default to notify General channel)
         if (target.Type == NotificationTargetType.Channel)
         {
             // Directly notify the Team (to the default General channel)
@@ -300,10 +299,10 @@ You can customize sending the notification to the following targets:
 - Notifications to a specific channel:
 
      ```TypeScript
-     // find the first channel when the predicate is true.
+     // Find the first channel when the predicate is true.
      const channel = await notificationApp.notification.findChannel(c => Promise.resolve(c.info.name === "MyChannelName"));
     
-     // send an Adaptive Card to the specific channel.
+     // Send an Adaptive Card to the specific channel.
      await channel?.sendAdaptiveCard(...);
      ```
 
@@ -313,10 +312,10 @@ You can customize sending the notification to the following targets:
 - Notifications to a specific person:
 
      ```TypeScript
-     // find the first person when the predicate is true.
+     // Find the first person when the predicate is true.
      const member = await notificationApp.notification.findMember(m => Promise.resolve(m.account.name === "Bob"));
     
-     // send an Adaptive Card to the specific person. 
+     // Send an Adaptive Card to the specific person. 
      await member?.sendAdaptiveCard(...);
      ```
 
@@ -388,7 +387,7 @@ const adapter = new CloudAdapter(...);
 adapter.onTurnError = ...
 
 const notificationApp = new ConversationBot({
-    // use your own adapter
+    // Use your own adapter
     adapter: adapter;
     ...
 });
@@ -406,11 +405,11 @@ Storage can be used to implement notification connections. You can add your own 
 # [TypeScript](#tab/ts5)
 
 ```Typescript
-// implement your own storage
+// Implement your own storage
 class MyStorage implements NotificationTargetStorage {...}
 const myStorage = new MyStorage(...);
 
-// initialize ConversationBot with notification enabled and customized storage
+// Initialize ConversationBot with notification enabled and customized storage
 const notificationApp = new ConversationBot({
     // The bot id and password to create CloudAdapter.
     // See https://aka.ms/about-bot-adapter to learn more about adapters.
@@ -430,10 +429,10 @@ const notificationApp = new ConversationBot({
 # [C#](#tab/csharp6)
 
 ```C#
-// implement your own storage
+// Implement your own storage
 public class MyStorage : INotificationTargetStorage {...}
 
-// initialize ConversationBot with notification enabled and customized storage
+// Initialize ConversationBot with notification enabled and customized storage
 builder.Services.AddSingleton(sp =>
 {
     var options = new ConversationOptions()
@@ -473,9 +472,9 @@ For more information about Azure blob storage, see the [notification storage imp
 
 ### Add authentication for notification API
 
-If you select HTTP trigger, the scaffolded notification API doesn't have authentication or authorization enabled. Ensure that you add authentication or authorization for the API before using it for production. You can perform one of the following actions:
+If you select HTTP trigger, the scaffolded notification API doesn't have authentication or authorization enabled. Ensure you add authentication or authorization for the API before using it for production. You can perform one of the following actions:
 
-- Use an API key. You can use [function access keys](/azure/azure-functions/security-concepts?tabs=v4#function-access-keys), if you select Azure Functions to host your notification bot.
+- Use an API key. You can use [function access keys](/azure/azure-functions/security-concepts?tabs=v4#function-access-keys) if you select Azure Functions to host your notification bot.
 
 - Use an access token issued by Microsoft Entra ID. For more information, see [configure your app in Microsoft Entra ID](how-to/authentication/bot-sso-register-aad.md).
 
@@ -485,7 +484,7 @@ There can be more authentication or authorization solutions for an API, you can 
 
 ### Connect to existing APIs
 
-If you don't have the required SDK and want to invoke external APIs in your code, the **Microsoft 365 Agents: Connect to an API** command in Agents Toolkit extension for Visual Studio Code, or the  **atk add api-connection** command in Microsoft 365 Agents Toolkit CLI (previously known as TeamsFx CLI) can be used to bootstrap code to call target APIs. For more information, see [integrate existing third-party APIs](../toolkit/add-API-connection.md).
+If you don't have the required SDK and want to invoke external APIs in your code, the **Microsoft 365 Agents: Connect to an API** command in Agents Toolkit extension for Visual Studio Code, or the **atk add api-connection** command in Microsoft 365 Agents Toolkit CLI (previously known as TeamsFx CLI) can be used to bootstrap code to call target APIs. For more information, see [integrate existing third-party APIs](../toolkit/add-API-connection.md).
 
 #### Teams bot application or Teams Incoming Webhook
 
@@ -510,8 +509,7 @@ In the following table, you can see the comparison of the two different ways:
 
 #### Incoming Webhook notification
 
-Incoming Webhooks help in posting messages from apps to Teams. If Incoming Webhooks are enabled for a Team in any channel, it exposes the HTTPS endpoint, which accepts correctly formatted JSON and inserts the messages into that channel. For example, you can create an Incoming Webhook in your DevOps channel, configure your build, and simultaneously deploy and monitor services to send alerts.
-TeamsFx provides you with an [Incoming Webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/v3/incoming-webhook-notification) that helps you to:
+Incoming Webhooks help in posting messages from apps to Teams. If Incoming Webhooks are enabled for a Team in any channel, it exposes the HTTPS endpoint, which accepts correctly formatted JSON and inserts the messages into that channel. For example, you can create an Incoming Webhook in your DevOps channel, configure your build, and simultaneously deploy and monitor services to send alerts. TeamsFx provides you with an [Incoming Webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/v3/incoming-webhook-notification) that helps you to:
 
 - [Create Incoming Webhooks](../webhooks-and-connectors/how-to/add-incoming-webhook.md) in Teams.
 - Send notifications using Incoming Webhooks with Adaptive Cards.
@@ -621,72 +619,11 @@ async def on_message_activity(self, turn_context: TurnContext):
 }
 ```
 
----
-
-## FAQ
-
-<br>
-
-<details>
-
-<summary><b>Why is the notification installations empty even though the bot app is installed in Teams?</b></summary>
-
-Teams sends an event only at the first installation. If the bot app is already installed before your notification bot service is launched, either the installation event didn't reach the bot service or is omitted.
-
-You can resolve this issue in the following ways:
-
-- Send a message to your personal bot or mention your bot in group chat or channel, which helps you to reach the bot service again with correct installation information.
-- Uninstall the bot app from Teams then debug or relaunch it. You can resend the installation event to bot service.
-
-Notification target connections are stored in the persistence storage. If you're using the default local file storage, all installations are stored under `.notification.localstore.json`.
-
-> [!NOTE]
-> For more information to add your own storage, see [add storage](#add-storage).
-
-<br>
-
-</details>
-
-<details>
-
-<summary><b>Why Bad Request or Bad Argument error occurs when sending notification?</b></summary>
-
-If the notification installation doesn't match the bot ID or password, you can get a **Failed to decrypt conversation ID** error. One of the causes for this error is that the bot ID or password is changed due to cleaning local state or reprovisioning.
-
-You can resolve this issue by cleaning your notification storage. After cleaning, notify in Teams to reinstall your bot, and ensure that the new installation is up to date. Each stored notification installation is bound with one bot. If you're able to check your notification storage, its bot field should match the bot you're running such as the bot ID with the same GUID.
-
-> [!NOTE]
-> In case of local storage, the default location is `.notification.localstore.json`.
-
-<br>
-
-</details>
-
-<details>
-
-<summary><b>Why is notification target lost after restarting or redeploying the bot app?</b></summary>
-
-Notification target connections are stored in the persistence storage. If you're using the default local file storage, Azure web app and Azure Functions clean up the local file during a restart or redeploy. You can also uninstall the bot from Teams, then install it to again add connections to the storage. It's recommended to use your own shared storage for production environment.
-
-<br>
-
-</details>
-
-<details>
-
-<summary><b>Why is undefined error returned when using the API `findChannel`()?</b></summary>
-
-You can encounter an undefined error, when the bot app is installed into other channels instead of the `General` channel. To fix this error, you can uninstall the bot app from Teams and debug and relaunch it. After you've debug and relaunched, ensure that the bot app is installed into the `General` channel.
-
-<br>
-
-</details>
-
 <details>
 
 <summary><b>Can I know all the targets where my bot is installed in and out of the notification project?</b></summary>
 
-There are [Microsoft Graph APIs](/graph/api/team-list-installedapps) to list apps installed in a team, group, or chat. If necessary, iterate your team, group, or chat into an installed app to be targeted. In the notification project, it uses persistence storage to store installation targets. For more information, see [notification based on events](#notification-based-on-events).
+Use [Microsoft Graph APIs](/graph/api/team-list-installedapps) to list apps installed in a team, group, or chat. If necessary, iterate through your team, group, or chat to target an installed app. In the notification project, persistence storage stores installation targets. For more information, see [notification based on events](#notification-based-on-events).
 
 <br>
 
@@ -696,7 +633,7 @@ There are [Microsoft Graph APIs](/graph/api/team-list-installedapps) to list app
 
 <summary><b>How to customize the Azurite listening ports?</b></summary>
 
-If Azurite exits due to port in use, you can [specify another listening port](/azure/storage/common/storage-use-azurite?tabs=visual-studio#blob-listening-port-configuration) and update the [connection string](/azure/storage/common/storage-use-azurite?tabs=visual-studio#http-connection-strings) of `AzureWebJobsStorage` in `local.settings.json`.
+If Azurite exits due to a port being in use, you can [specify another listening port](/azure/storage/common/storage-use-azurite?tabs=visual-studio#blob-listening-port-configuration) and update the [connection string](/azure/storage/common/storage-use-azurite?tabs=visual-studio#http-connection-strings) of `AzureWebJobsStorage` in `local.settings.json`.
 
 <br>
 
@@ -710,7 +647,7 @@ If Azurite exits due to port in use, you can [specify another listening port](/a
 
     :::image type="content" source="../assets/images/notification-bot/notification-bot-enable.png" alt-text="Conversation bot initialization to enable notification feature." lightbox="../assets/images/notification-bot/notification-bot-enable.png":::
 
-2. To add command to your bot, follow the instructions in [command bot in Teams](how-to/conversations/command-bot-in-teams.md).
+2. To add a command to your bot, follow the instructions in [command bot in Teams](how-to/conversations/command-bot-in-teams.md).
 
 <br>
 
@@ -720,9 +657,9 @@ If Azurite exits due to port in use, you can [specify another listening port](/a
 
 <summary><b>How to extend my notification bot by adding workflow bot Adaptive Card actions?</b></summary>
 
-The Adaptive Card action handler feature enables the app to respond to Adaptive Card actions that are triggered by end users to complete a sequential workflow. An Adaptive Card provides one or more buttons in the card to ask for user's input such as calling some APIs. The Adaptive Card then sends another Adaptive Card in the conversation to respond to the card action.
+The Adaptive Card action handler feature enables the app to respond to Adaptive Card actions triggered by end users to complete a sequential workflow. An Adaptive Card provides one or more buttons in the card to request user input, such as calling some APIs. The Adaptive Card then sends another Adaptive Card in the conversation to respond to the card action.
 
-For more information on how to add Adaptive Card actions to command bot, see [workflow bot in Teams](how-to/conversations/workflow-bot-in-teams.md).
+For more information on how to add Adaptive Card actions to a command bot, see [workflow bot in Teams](how-to/conversations/workflow-bot-in-teams.md).
 
 <br>
 
@@ -732,4 +669,4 @@ For more information on how to add Adaptive Card actions to command bot, see [wo
 
 ## Step-by-step guide
 
-Follow the [step-by-step](../sbs-gs-notificationbot.yml) guide to build Teams notification bot.
+Follow the [step-by-step](../sbs-gs-notificationbot.yml) guide to build a Teams notification bot.
