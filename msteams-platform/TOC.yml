@@ -998,8 +998,8 @@
   - name: Plan your app experience across Microsoft 365 hosts
     href: m365-apps/specify-runtime-requirements.md
     displayName: runtime requirements, requirement set, one-way dependency, mutual dependency 
-  - name: Onboard MCP servers for agents
-    href: m365-apps/agent-connectors-for-m365.md
+  - name: Connect MCP servers to agents
+    href: m365-apps/agent-connectors.md
     displayName: MCP, agent connectors, channel agent
   - name: Teams tabs in Microsoft 365 and Outlook
     items:

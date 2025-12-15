@@ -1,6 +1,6 @@
 ---
-title: Register a MCP Server as an Agent Connector for Microsoft 365
-description: Register your MCP server in the Microsoft 365 app manifest and empower agents like the Channel Agent in Teams to access your tools effortlessly.
+title: Register MCP Servers as Agent Connectors for Microsoft 365
+description: Register your MCP server in the Microsoft 365 app manifest to enable access to your tools from agents like the Channel Agent in Teams.
 #customer intent: As a developer, I want to register my MCP server as an agent connector so that Microsoft 365 agents can access my external tools and services.
 author: erikadoyle
 ms.author: edoyle
@@ -9,13 +9,22 @@ ms.topic: how-to
 ms.subservice: m365apps
 ---
 
-# Register a MCP server as an agent connector for Microsoft 365 (preview)
+# Register MCP servers as agent connectors for Microsoft 365 (preview)
 
-Agents in Microsoft 365, such as [Channel Agent](/microsoftteams/set-up-channel-agent-teams) in Microsoft Teams, can connect to external systems through agent connectors declared in the app manifest. This article shows you how to register your Model Context Protocol (MCP) server in the Microsoft 365 app manifest, enabling Microsoft 365 agents to discover and invoke the tools your server exposes.
+Agents in Microsoft 365, such as [Channel Agent](/microsoftteams/set-up-channel-agent-teams) in Microsoft Teams, can connect to external systems through *agent connectors* declared in the app manifest. This article shows you how to register your Model Context Protocol (MCP) server in the Microsoft 365 app manifest, enabling Microsoft 365 agents to securely discover, select, and invoke MCP tools that your server exposes.
 
-By completing this article, you'll have a fully configured MCP server registered in your app manifest that Microsoft 365 agents can use to access your external tools and services. Your MCP server becomes available to any Microsoft 365 agent capable of using MCP, including Channel Agent in Microsoft Teams.
+> [!NOTE]
+>
+> Agent Connectors are available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
-Agent connectors provide the network endpoint, authentication configuration, and tool definitions that agents need to communicate with your MCP server. Once registered, agents can securely discover, select, and invoke your MCP tools during natural language interactions.
+Microsoft 365 agents use agent connectors to communicate with external systems. For MCP servers, the connector provides:
+
+- The network endpoint of your MCP server
+- Authentication and authorization configuration
+- Tool definitions (inline or dynamically discovered)
+- Optional metadata that helps agents orchestrate the right tool during user interactions
+
+Once registered, your MCP server becomes available to any Microsoft 365 agent capable of using MCP, including the Channel Agent in Microsoft Teams.
 
 ## Prerequisites
 
@@ -27,7 +36,7 @@ Before you begin, ensure you have:
 
 ## Add the agent connector to your manifest
 
-The first step is to declare your MCP server in the `agentConnectors` array at the root level of your app manifest.
+The first step is to declare your MCP server in the [agentConnectors](/microsoft-365/extensibility/schema/root-agent-connectors?view=m365-app-prev) array at the root level of your app manifest.
 
 1. Open your Microsoft 365 app manifest (`manifest.json`) file.
 
@@ -54,7 +63,9 @@ The first step is to declare your MCP server in the `agentConnectors` array at t
 }
 ````
 
-Each connector must have a unique `id` that distinguishes it from other connectors in your manifest. The `displayName` and `description` help administrators and agents understand what your connector provides.
+Each connector must have a unique `id` that distinguishes it from other connectors in your manifest. The `toolSource` object must include exactly one of `remoteMcpServer`, `localMcpServer`, or `plugin`.
+
+For MCP servers, use **remoteMcpServer** unless your server runs locally within the Teams client environment (advanced scenarios).
 
 ## Configure the remote MCP server endpoint
 
@@ -80,9 +91,7 @@ Specify how Microsoft 365 retrieves credentials when calling your MCP server. MC
 
 ### Use OAuth authentication
 
-For OAuth 2.0 tokens stored in Microsoft's secure vault:
-
-1. Add the `authorization` object to your `remoteMcpServer` configuration:
+For OAuth 2.0 tokens stored in Microsoft's secure vault, add the `authorization` object to your `remoteMcpServer` configuration:
 
 ````json
 "remoteMcpServer": {
@@ -98,9 +107,7 @@ The `referenceId` points to a secure OAuth configuration that administrators man
 
 ### Use API key authentication
 
-For API keys stored in a vault:
-
-1. Configure the authorization type as `ApiKeyPluginVault`:
+For API keys stored in a vault, configure the authorization type as `ApiKeyPluginVault`:
 
 ````json
 "authorization": {
@@ -111,9 +118,7 @@ For API keys stored in a vault:
 
 ### Use no authentication
 
-If your server doesn't require authentication (not recommended for production):
-
-1. Set the authorization type to `None` or omit the `authorization` object entirely.
+If your server doesn't require authentication (not recommended for production), set the authorization type to `None` or omit the `authorization` object entirely.
 
 For enterprise scenarios, prefer OAuth over API keys to align with security best practices and administrator expectations.
 
