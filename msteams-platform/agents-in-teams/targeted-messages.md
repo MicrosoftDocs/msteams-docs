@@ -81,9 +81,24 @@ Key steps for enabling targeted messages:
         - For Teams SDK:
         - For Bot Framework SDK: In Bot Framework SDK, this is planned as a specialized method or property. For example, Teams is introducing a method like `SendTargetedActivityAsync` that you can call instead of the regular `SendActivityAsync`. This invokes a Teams-specific API endpoint to deliver a targeted message, where `isTargeted: true` indicates this message should be private to `targetUserId`.
 
+    The following code snippet is an example of a scenario where the agent or bot uses targeted message to inform a group member when they submit their vote in a group poll:
+
+    ```rest
+        POST /v3/users/29:.../conversations/19:.../targetedactivities
+        {
+            "type": "message",
+            "text": "Thank you, your vote has been recorded.",
+            "replyToId": "<id of user's command>",
+            ... (recipient = user, etc.)
+        }
+    ```
+
 1. **Handle send results and fallbacks**:
 
     After calling the targeted `send` API, the API returns a success or error:
 
     1. If successful, the targeted user gets the message sent by the agent or bot.
     1. If the send event fails, the agent or bot may choose a fallback, such as sending a 1:1 chat message as a backup. However, the intended user must be a member of the chat or channel to receive a targeted message, else the message isn't delivered. Some scenarios where a send event may fail are if a user isn’t a group member or if the client doesn’t support targeted messages.
+
+    > [!NOTE]
+    > Backward compatibility logic is a service on Teams ensures older clients don't show targeted messages to all members, when not supported. It's helpful if your agent or bot is notified when the client doesn't support targeted messages.
