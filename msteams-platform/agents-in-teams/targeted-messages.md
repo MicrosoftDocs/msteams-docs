@@ -21,9 +21,9 @@ Even though targeted messages might be contextually relevant, they're best suite
 
 ## Targeted messages user experience
 
-Targeted messages are intended as immediate, relevant, and private agent or bot-to-user communication. From a single user's perspective, they appear as regular inline messages in a conversation. However, they're visible only to them and exist only for a short duration. Targeted messages are initiated by the agent in response to a user action. Key aspects of the user experience include:
+Targeted messages are intended as immediate, relevant, and private agent or bot-to-user communication. From a single user's perspective, they appear as regular inline messages in a conversation. However, they're visible only to them and exist only for a short duration. Agents or bots initiate targeted messages in response to a user action. Key aspects of the user experience include:
 
-- The messages appear in context where the trigerring action occured.
+- The messages appear in context where the triggering action occurred.
 - Only the intended user can see the message. Other group or channel members are unaware of the messages sent. The bot messages or responses appear to that user with the label 'Only you can see this message tagged on them.
 - The message disappears after 24 hours from the client UI.
 - The message doesn't impede the ongoing conversation and reduce spamming while still supporting the user effectively.
@@ -37,13 +37,13 @@ Targeted messages come with the following benefits for enhancing user experience
         **Reduce chat noise**:
     :::column-end:::
     :::column span="2"
-            An agent or bot can send a message in a group chat or channel that's visible only to a specific user. They prevent one user's actions from cluterring the conversation. It allows other members to remain focused on the main discussion, even if the intended recipient of the targeted message still receives help from the agent.
+            An agent or bot can send a message in a group chat or channel that's visible only to a specific user. They prevent one user's actions from cluttering the conversation. It allows other members to remain focused on the main discussion, even if the intended recipient of the targeted message still receives help from the agent.
     :::column-end:::
 :::row-end:::
 
 - **Reduce chat noise**:
 
-    An agent or bot can send a message in a group chat or channel that's visible only to a specific user. They prevent one user's actions from cluterring the conversation. It allows other members to remain focused on the main discussion, even if the intended recipient of the targeted message still receives help from the agent.
+    An agent or bot can send a message in a group chat or channel that's visible only to a specific user. They prevent one user's actions from cluttering the conversation. It allows other members to remain focused on the main discussion, even if the intended recipient of the targeted message still receives help from the agent.
 
 - **Maintain context**:
 
@@ -55,7 +55,7 @@ Targeted messages come with the following benefits for enhancing user experience
 
 - **Cleaner chat experience**:
 
-    Agents can surface errors or feedback privately and avoid disruption for intended user. It can help users engage more openly. In addition, the conversation remains reserved for meaningful, persistent communication. A clear message hierarchy that shows only the content that is relevant to everyone is permanent in the chat.
+    Agents can surface errors or feedback privately and avoid disruption for intended user. It can help users engage more openly. In addition, the conversation remains reserved for meaningful, persistent communication. A clear message hierarchy that shows only the content that's relevant to everyone is permanent in the chat.
 
 - **Human-in-the-loop scenarios**:
 
