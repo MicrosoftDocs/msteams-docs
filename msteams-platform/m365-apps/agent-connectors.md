@@ -158,7 +158,7 @@ When enabled, agents call your server's `tools/list` method to retrieve availabl
 
 ### Use inline tool definitions
 
-For static toolsets that don't change frequentl, add an `mcpToolDescription` object with your tool definitions:
+For static toolsets that don't change frequently, add an `mcpToolDescription` object with your tool definitions:
 
 ````json
 "remoteMcpServer": {
