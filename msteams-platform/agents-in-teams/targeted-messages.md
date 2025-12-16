@@ -30,6 +30,7 @@ Targeted messages are intended as immediate, relevant, and private agent or bot-
 - The message disappears after 24 hours from the client UI.
 - The message doesn't impede the ongoing conversation and reduce spamming while still supporting the user effectively.
 
+<!--
 | Targeted message in Teams client | End-user experience |
 | --- | --- |
 | **In Chat or Channel** | The targeted message appears in the chat or channel thread only for the target user. It shows up inline among other messages, with the label 'Only you can see this message' to indicate its privacy. The message can be at the root of the chat, channel, or inside a thread (if the bot message is a reply to a user's specific message in a channel). Bot developers can determine where to post the message, same as a normal bot message: <br> - If the bot replies in a channel thread (at level 2), it can target that reply to the specific user. Only that user sees the reply in the thread. Other users might temporarily see the thread as if it has no new replies (until there's a public reply). <br> - If the bot posts a top-level message (L1) in a chat or channel, it can mark it targeted to a user. The user sees the message in the main chat flow, but others don't see any message at that spot. |
@@ -38,6 +39,7 @@ Targeted messages are intended as immediate, relevant, and private agent or bot-
 | **Ephemeral lifespan** | Targeted messages show in the clients for 24 hours only. They're retained in backend storage for compliance. |
 | **Notification** | Targeted messages aren't notified, however, the chat appears as bold when the user receives a new message in a group chat. |
 | **User actions** | The user actions are limited to any actions within the targeted message. The users can't react or reply to the message. |
+-->
 
 ## Why use targeted messages
 
