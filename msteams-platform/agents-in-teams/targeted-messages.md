@@ -10,21 +10,14 @@ ms.topic: reference
 
 Targeted messages, also known as ephemeral messages are a new message type in Teams. Targeted messages are temporary, user-specific messages that appear in a group  meeting, or channel conversation that are visible to a single user only. With targeted messages, the agent or bot can interact with specific users in certain scenarios. Agents or bots can use them for contextual, real-time feedback to a user like reminders, welcome messages, or chat summary. All this is done without adding permamnent noise to the conversation that may be irrelevant to the other group members.
 
-Unlike standard messages, targeted messages are:
-
-- Triggered in response to user action
-- Delivered to only one user in a group context
-- Temporary and visible up to 24 hours only in the client
-- Offer limited user actions
-
 ## Targeted message on Teams platform
 
-You can use targeted message to deliver agent messages or responses to a specific user only. Other members in the group, meeting, or channel don't receive it. Teams supports the following targeted messaging capabilities for agents and bots:
+Targeted messages support all capabilities as other Teams messages. Your agent or bot can include most types of messages that include like interactive Adaptive Cards with buttons, images, file attachments, and so on. For example, a sign-in card or a task module can be delivered via targeted message to a user. Unlike standard messages, targeted messages are:
 
-- **Private bot-to-user messages in group context**: An agent can send a message in a group chat or channel that's visible only to a specified user. The message appears in the conversation thread for that user with the label 'Only you can see this message' that indicates its private scope.
-- **Ephemeral client behavior**: Targeted messages are ephemeral on the client, that is, the user interface doesn't show them indefinitely.
-- **Limited actions**: Certain user actions such as replying, reacting, or forwarding are disabled to preserve privacy.
-- **Support for Teams message types**: Targeted messages support all capabilities as other Teams messages. Your agent or bot can include most types of messages that include like interactive Adaptive Cards with buttons, images, file attachments, and so on. For example, a sign-in card or a task module can be delivered via targeted message to a user.
+- Triggered in response to user action.
+- Delivered to only one user in a group context.
+- Temporary and visible up to 24 hours only in the client.
+- Disables user actions such as reaction, replies, and forwarding.
 
 ## Targeted messages user experience
 
