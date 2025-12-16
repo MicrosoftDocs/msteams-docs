@@ -99,16 +99,16 @@ To start migrating a user's message history from any third-party platform to Tea
 
 ### Create a team and standard channel in migration mode
 
-In this scenario, create a new team and standard channel under it in migration mode to proceed with importing existing messages. Migration mode is supported only for standard channels.
+In this scenario, create a new team and standard channel in `migrationMode` to proceed with importing existing messages. `migrationMode` is supported only for standard channels.
 
 #### Create a new team
 
 * [Create a new team](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) with a back-in-time timestamp using the `createdDateTime` property.
-* Place the new team in migration mode by setting `teamCreationMode` to `migration`.
+* Place the new team in `migrationMode` by setting `teamCreationMode` to `migration`.
 
 > [!NOTE]
 > The `createdDateTime` field is only populated for migrated teams or channels. If you update `createdDateTime` to a past timestamp, you can't move it to a future timestamp again.
-> Migration mode ensures that the original message timestamps are preserved, and prevents new messages from being sent when the migration is in progress.
+> `migrationMode` ensures that the original message timestamps are preserved, and prevents new messages from being sent when the migration is in progress.
 
 ##### Request (create a team in migration mode)
 
@@ -203,7 +203,8 @@ After you create a new team and standard channel, complete migration with the fo
 
 ### Start migration on existing channels and chats
 
-On existing channels or chats, use the `startMigration` API to [enable migration mode](/graph/api/channel-startmigration?view=graph-rest-beta&branch=pr-en-us-26836&preserve-view=true ). `startMigration` sets the migration state to `InProgress` and begins the message import process. For more information, see:
+On existing channels or chats, use the `startMigration` API to [enable channel migration mode](/graph/api/channel-startmigration?view=graph-rest-beta) or to [enable chat migration mode](/graph/api/chat-startmigration?view=graph-rest-beta)
+`startMigration` sets the migration state to `InProgress` and begins the message import process. For more information, see:
 
 * [Existing channel migration](#existing-channel-migration)
 * [Existing chat migration](#existing-chat-migration)
@@ -452,7 +453,8 @@ Use the `completeMigration` API to finish the migration process for new and exis
 
 ### Complete new team and channel migration
 
-Use the `completeMigration` API to [complete migration for the new team and channel](/graph/api/chat-completemigration?view=graph-rest-beta&viewFallbackFrom=graph-rest-1.0&branch=pr-en-us-26836&preserve-view=true ). This action opens the team and channel resources for general use by team members. The action is bound to the `team` instance. Before you complete the team message migration, you must complete migration on all channels.
+Use the `completeMigration` API to [complete migration for the new team and channel](/graph/api/channel-completemigration?view=graph-rest-1.0&tabs=http)
+ This action opens the team and channel resources for general use by team members. The action is bound to the `team` instance. Before you complete the team message migration, you must complete migration on all channels.
 
 #### Request (end channel migration mode)
 
@@ -480,7 +482,7 @@ HTTP/1.1 204 NoContent
 
 ### Add team members
 
-After completing migration of external messages, you can add a single member to a team by using the [Teams UI](https://support.microsoft.com/en-us/office/add-members-to-a-team-in-microsoft-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9&preserve-view=true ). You can also use Microsoft Graph to [add single member](/graph/api/team-post-members?view=graph-rest-1.0&branch=pr-en-us-26836&tabs=http&preserve-view=true ) or [add members in bulk](/graph/api/conversationmembers-add?view=graph-rest-1.0&tabs=http&preserve-view=true ).
+After completing migration of external messages, you can add a single member to a team by using the [Teams UI](https://support.microsoft.com/en-us/office/add-members-to-a-team-in-microsoft-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9&preserve-view=true). You can also use Microsoft Graph to [add single member](/graph/api/team-post-members?view=graph-rest-1.0&branch=pr-en-us-26836&tabs=http&preserve-view=true) or [add members in bulk](/graph/api/conversationmembers-add?view=graph-rest-1.0&tabs=http&preserve-view=true).
 
 #### Request (add member)
 
