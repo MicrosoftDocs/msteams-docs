@@ -10,50 +10,50 @@ ms.owner: ryanbliss
 
 # Add code to enable SSO for Adaptive Cards Universal Actions
 
-Authentication steps for single sign-on (SSO) are similar to that of a bot in Teams. Following are the steps to achieve SSO in Adaptive Cards Universal Action.
+Authentication steps for single sign-on (SSO) are similar to that of a bot in Microsoft Teams. The following steps achieve SSO in Adaptive Cards Universal Action.
 
 > [!NOTE]
 > To implement SSO flow, you must have a one-on-one chat declared for your bot in the app manifest. When an app user invokes the SSO flow via the Adaptive Card `Action.Execute` protocol, a prompt appears to allow the app user to install the app in a personal scope if they haven't installed it.
 
 ## Add code to handle an access token
 
-Ensure you've configured your bot in Microsoft Entra ID for obtaining access token. You can update the code to handle the access token for Adaptive Cards Universal Actions in bot.
+Ensure you've configured your bot in Microsoft Entra ID for obtaining an access token. You can update the code to handle the access token for Adaptive Cards Universal Actions in the bot.
 
-If there's a cached token, the bot uses the same token. If there's no token available, the Adaptive Card sends an invoke response to the bot service, which sends an OAuth card with the following values that includes a `tokenExchangeResource` to designate an SSO operation:
+If there's a cached token, the bot uses the same token. If there's no token available, the Adaptive Card sends an invoke response to the bot service, which sends an OAuth card with the following values that include a `tokenExchangeResource` to designate an SSO operation:
 
-```JSON
+```json
 {
-"statusCode": 401,
-"type": "application/vnd.microsoft.activity.loginRequest",
-"value": {
-   "text": "Please sign-in",
-   "connectionName": "<configured-connection-name>",
-   "tokenExchangeResource": {
+  "statusCode": 401,
+  "type": "application/vnd.microsoft.activity.loginRequest",
+  "value": {
+    "text": "Please sign-in",
+    "connectionName": "<configured-connection-name>",
+    "tokenExchangeResource": {
       "id": "<unique-indentifier>",
       "uri": "<application-or-resource-identifier>",
       "providerId": "<optional-provider-identifier>"
-   },
-   "buttons": [
+    },
+    "buttons": [
       {
-      "title": "Sign-In",
-         "text": "Sign-In",
-         "type": "signin",
-         "value": "<sign-in-URL>"
+        "title": "Sign-In",
+        "text": "Sign-In",
+        "type": "signin",
+        "value": "<sign-in-URL>"
       }
-   ]
-}
+    ]
+  }
 }
 ```
 
-The bot service delivers the invoke response to the Teams client, which uses the `tokenExchangeResource` value and the Teams client token to obtain an on-behalf-of token or exchangeable token from Microsoft Entra ID.
+The bot service delivers the invoke response to the Teams client, which uses the `tokenExchangeResource` value and the Teams client token to obtain an on-behalf-of token or exchangeable token from Microsoft Entra ID.
 
-The SSO fails when the Teams client ignores the `tokenExchangeResource` value for any reason, including invalid values, errors retrieving exchangeable tokens, or if Microsoft Entra ID doesn't support the value. Then the Teams client triggers the nominal sign-in or OAuth flow. We recommend that you provide a sign-in URL in the response so that the OAuth flow works.
+The SSO fails when the Teams client ignores the `tokenExchangeResource` value for any reason, including invalid values, errors retrieving exchangeable tokens, or if Microsoft Entra ID doesn't support the value. Then the Teams client triggers the nominal sign-in or OAuth flow. We recommend that you provide a sign-in URL in the response so that the OAuth flow works.
 
 ## Consent dialog for getting access token
 
 If the app user is using an Adaptive Card for the first time, they must give consent for the app to use their identity. The following dialog appears:
 
-   :::image type="content" source="../../../assets/images/authentication/consent-sso-ac.png" alt-text="Screenshot shows you the consent dialog box.":::
+:::image type="content" source="../../../assets/images/authentication/consent-sso-ac.png" alt-text="Screenshot shows you the consent dialog box.":::
 
 When the app user selects **View and accept**, the existing Microsoft Entra permission consent view appears to show all the permissions. The app user can continue with the authentication flow.
 
@@ -63,56 +63,56 @@ When the app user selects **View and accept**, the existing Microsoft Entra perm
 
     ```javascript
     {
-    "type": "invoke",
-    "name": "adaptiveCard/action"
-    "value": {
-    "action": {
-       "id": "abc123",
-       "type": "Action.Execute",
-       "verb": "saveCommand",
-       "data": {
-          "firstName": "Jeff",
-          "lastName": "Derstadt"
-       }
-    },
-    "authentication": {
-       "id": "8769-xyz",
-       "connectionName": "oauthConnection",
-       "token": "...single sign-on token..."
-    }
-    }
+      "type": "invoke",
+      "name": "adaptiveCard/action",
+      "value": {
+        "action": {
+          "id": "abc123",
+          "type": "Action.Execute",
+          "verb": "saveCommand",
+          "data": {
+            "firstName": "Jeff",
+            "lastName": "Derstadt"
+          }
+        },
+        "authentication": {
+          "id": "8769-xyz",
+          "connectionName": "oauthConnection",
+          "token": "...single sign-on token..."
+        }
+      }
     }
     ```
 
     The following code snippet shows how to receive invoke activity in the bot service:
 
     ```csharp
-            protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, 
-         CancellationToken cancellationToken)
-            {
-              JObject value = JsonConvert.DeserializeObject<JObject>
-              (turnContext.Activity.Value.ToString());
-              JObject authentication = null;
-              if (value["authentication"] != null)
-              {
-              authentication = JsonConvert.DeserializeObject<JObject>(value["authentication"].ToString());
-              }
-            }
+    protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, 
+    CancellationToken cancellationToken)
+    {
+      JObject value = JsonConvert.DeserializeObject<JObject>(turnContext.Activity.Value.ToString());
+      JObject authentication = null;
+      if (value["authentication"] != null)
+      {
+        authentication = JsonConvert.DeserializeObject<JObject>(value["authentication"].ToString());
+      }
+    }
     ```
 
-1. Teams client sends an invoke request to the bot. The bot receives the app users consent and uses their identity to help the token exchange process with the bot framework token service and Microsoft Entra ID. The bot framework token service delivers the app users access token to the bot.
+1. Teams client sends an invoke request to the bot. The bot receives the app user's consent and uses their identity to help the token exchange process with the Bot Framework token service and Microsoft Entra ID. The Bot Framework token service delivers the app user's access token to the bot.
    * Bot service ignores the access token if the value is incorrect.
    * Bot service that experiences an error while performing token exchange must respond with an error or a second sign-in request that doesn't include SSO information. If the bot service responds with an error, the error must be:
 
-        ```javascript
-         {
-          "statusCode" = 412,
-          "type" = "application/vnd.microsoft.error.preconditionFailed",
-          "value" = {
-            "code" = "412",
-            "message" = "authentication token expired"    }
-            }
-        ```
+    ```javascript
+    {
+      "statusCode": 412,
+      "type": "application/vnd.microsoft.error.preconditionFailed",
+      "value": {
+        "code": "412",
+        "message": "authentication token expired"
+      }
+    }
+    ```
 
    * When SSO fails, the Teams client shows a sign-in button in the card footer to initiate nominal sign-in flow.
 
