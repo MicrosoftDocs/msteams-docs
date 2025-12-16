@@ -26,15 +26,18 @@ Even though targeted messages might be contextually relevant, they're best suite
 Targeted messages are intended as immediate, relevant, and private agent or bot-to-user communication. From a single user's perspective, they appear as regular inline messages in a conversation. However, they're visible only to them and exist only for a short duration. Targeted messages are initiated by the agent in response to a user action. Key aspects of the user experience include:
 
 - The messages appear in context where the trigerring action occured.
-- Only the intended user can see the message. Other group or channel members are unaware of the messages sent.
+- Only the intended user can see the message. Other group or channel members are unaware of the messages sent. The bot messages or responses appear to that user with the label 'Only you can see this message' tagged on them.
 - The message disappears after 24 hours from the client UI.
 - The message doesn't impede the ongoing conversation and reduce spamming while still supporting the user effectively.
 
-The bot messages or responses appear to that user with the label 'Only you can see this message' tagged on them.
-
-[WIP: Placeholder image]
-
-:::image type="content" source="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png" alt-text="Image shows user scenario for targeted messages" border="false":::
+| Targeted message in Teams client | End-user experience |
+| --- | --- |
+| **In Chat or Channel** | The targeted message appears in the chat or channel thread only for the target user. It shows up inline among other messages, with the label 'Only you can see this message' to indicate its privacy. The message can be at the root of the chat, channel, or inside a thread (if the bot message is a reply to a user's specific message in a channel). Bot developers can determine where to post the message, same as a normal bot message: <br> - If the bot replies in a channel thread (at level 2), it can target that reply to the specific user. Only that user sees the reply in the thread. Other users might temporarily see the thread as if it has no new replies (until there's a public reply). <br> - If the bot posts a top-level message (L1) in a chat or channel, it can mark it targeted to a user. The user sees the message in the main chat flow, but others don't see any message at that spot. |
+| **Threading behavior** | If a targeted message is sent as a new thread reply (level 2) in a channel: <br> - Teams creates a thread visible only to the targeted user. <br> - If later someone (or the bot) posts a public message in that thread, the thread becomes visible to everyone, but with some differences. Users who were previously unaware can see the thread starter and any public replies. However, the targeted reply remains invisible to them. <br> - Teams manages the thread count per user: The reply count and summary adapt per viewer so that the private reply is only counted for the person who received it. In short, thread reply counts and follow-status are personalized when targeted messages are involved. <br> - If the targeted user wasn’t already following the thread (or in a group chat context, if it’s a side conversation), the act of receiving a targeted message automatically makes them follow the thread (to ensure they get updates). The user can manually unfollow if they want. <br> - Other people can't reply to a targeted message. If another user replies to the same parent message (in a channel thread scenario), that reply starts a separate public thread (or be a separate reply). That user can’t see or join the private thread until a public message is posted in that thread. |
+| **Top-level targeted message in a chat or channel (level 1)** | - Other users simply don't see that message. It doesn't increment the chat “unread” for them. <br> - They might notice that the bot seemingly didn't respond to an earlier user’s command (if they saw the user’s message). This is the “dangling message” issue. |
+| **Ephemeral lifespan** | Targeted messages show in the clients for 24 hours only. They're retained in backend storage for compliance. |
+| **Notification** | Targeted messages aren't notified, however, the chat appears as bold when the user receives a new message in a group chat. |
+| **User actions** | The user actions are limited to any actions within the targeted message. The users can't react or reply to the message. |
 
 ## Why use targeted messages
 
@@ -45,14 +48,9 @@ Targeted messages come with the following benefits for enhancing user experience
 - **Human-in-the-loop scenarios**: It's useful for human-in-the-loop scenarios, such as authentication prompts, approvals, or informational messages that should only be visible to the relevant user.
 - **Ephemeral messages**: The targeted message isn't retained in the chat indefinitely. They're cleared after 24 hours, so the conversation stays clean. However, your agent or app retains them in the backend storage for compliance as needed (for example, eDiscovery).
 
-| Targeted message in Teams client | End-user experience |
-| --- | --- |
-| **In Chat or Channel** | The targeted message appears in the chat or channel thread only for the target user. It shows up inline among other messages, with the label 'Only you can see this message' to indicate its privacy. The message can be at the root of the chat, channel, or inside a thread (if the bot message is a reply to a user's specific message in a channel). Bot developers can determine where to post the message, same as a normal bot message: <br> - If the bot replies in a channel thread (at level 2), it can target that reply to the specific user. Only that user sees the reply in the thread. Other users might temporarily see the thread as if it has no new replies (until there's a public reply). <br> - If the bot posts a top-level message (L1) in a chat or channel, it can mark it targeted to a user. The user sees the message in the main chat flow, but others don't see any message at that spot. |
-| **Threading behavior** | If a targeted message is sent as a new thread reply (level 2) in a channel: <br> - Teams creates a thread visible only to the targeted user. <br> - If later someone (or the bot) posts a public message in that thread, the thread becomes visible to everyone, but with some differences. Users who were previously unaware can see the thread starter and any public replies. However, the targeted reply remains invisible to them. <br> - Teams manages the thread count per user: The reply count and summary adapt per viewer so that the private reply is only counted for the person who received it. In short, thread reply counts and follow-status are personalized when targeted messages are involved. <br> - If the targeted user wasn’t already following the thread (or in a group chat context, if it’s a side conversation), the act of receiving a targeted message automatically makes them follow the thread (to ensure they get updates). The user can manually unfollow if they want. <br> - Other people can't reply to a targeted message. If another user replies to the same parent message (in a channel thread scenario), that reply starts a separate public thread (or be a separate reply). That user can’t see or join the private thread until a public message is posted in that thread. |
-| **Top-level targeted message in a chat or channel (level 1)** | - Other users simply don't see that message. It doesn't increment the chat “unread” for them. <br> - They might notice that the bot seemingly didn't respond to an earlier user’s command (if they saw the user’s message). This is the “dangling message” issue. |
-| **Ephemeral lifespan** | Targeted messages show in the clients for 24 hours only. They're retained in backend storage for compliance. |
-| **Notification** | Targeted messages aren't notified, however, the chat appears as bold when the user receives a new message in a group chat. |
-| **User actions** | The user actions are limited to any actions within the targeted message. The users can't react or reply to the message. |
+[WIP: Placeholder image]
+
+:::image type="content" source="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png" alt-text="Image shows user scenario for targeted messages" border="false":::
 
 Some common use scenarios include:
 
