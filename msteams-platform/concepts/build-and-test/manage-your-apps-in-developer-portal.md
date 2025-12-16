@@ -1,10 +1,12 @@
 ---
+
 title: Manage Apps with Developer Portal
 description: Learn how to configure, develop, publish, manage, validate against Microsoft's test cases, and publish your apps using the Developer Portal for Teams.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
 ms.date: 01/23/2025
+
 ---
 
 # Manage your apps in Developer Portal
@@ -202,18 +204,19 @@ In the **Publish** section, publish your app to your organization or the Teams S
         |Status|Validation|Result|Description|
         |----|----|----|----|
         |**Success**| Complete | Pass | No issues. |
-        |**Warning** | Complete | Pass | Fixing this issue is optional but recommended. |
-        |**Error** | Complete | Fail | Fixing the issue is required to successfully publish the app. |
-        |**Skipped**|Incomplete |NA | We weren't able to continue the validation check. This may be a temporary issue. We recommend you rerun the test later.|
 
-        :::image type="content" source="../../assets/images/tdp/app-validation-result.png" alt-text="Screenshot shows you the app validation tool result." lightbox="../../assets/images/tdp/app-validation-result.png":::
+| **Warning** | Complete | Pass | Fixing this issue is optional but recommended. |
+| **Error** | Complete | Fail | Fixing the issue is required to successfully publish the app. |
+| **Skipped** | Incomplete | NA | We weren't able to continue the validation check. This may be a temporary issue. We recommend you rerun the test later. |
 
-    </details>
+:::image type="content" source="../../assets/images/tdp/app-validation-result.png" alt-text="Screenshot shows you the app validation tool result." lightbox="../../assets/images/tdp/app-validation-result.png":::
 
-    > [!NOTE]
-    >
-    > * App validation is supported only for apps with bot capability.
-    > * The app validation tool evaluates your app package based on the test cases Microsoft uses for app review prior to submission to the Microsoft Teams Store. Resolve errors or warnings and read the **App submission checklist** before submitting your app.
+</details>
+
+> [!NOTE]
+>
+> * App validation is supported only for apps with bot capability.
+> * The app validation tool evaluates your app package based on the test cases Microsoft uses for app review prior to submission to the Microsoft Teams Store. Resolve errors or warnings and read the **App submission checklist** before submitting your app.
 
 * **Publish to org**:
 
