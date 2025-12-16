@@ -21,11 +21,11 @@ Proactive messages are initiated by bots to start conversations with a user. The
 
 ## Proactive app installation in Teams
 
-Before your bot can proactively message a user, it must be installed either as a personal app or in a team where the user is a member. At times, you need to proactively message users that haven't installed or previously interacted with your app. For example, If you need to message important information to everyone in your organization, then you can use the Microsoft Graph API to proactively install your bot for your users.
+Before your bot can proactively message a user, it must be installed either as a personal app or in a team where the user is a member. At times, you need to proactively message users that haven't installed or previously interacted with your app. For example, if you need to message important information to everyone in your organization, then you can use Microsoft Graph API to proactively install your bot for your users.
 
 ## Permissions
 
-Microsoft Graph [teamsAppInstallation resource type](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0&preserve-view=true) permissions help you to manage your app's installation lifecycle for all user (personal) or team (channel) scopes within the Microsoft Teams platform:
+Microsoft Graph [teamsAppInstallation resource type](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0&preserve-view=true) permissions help you to manage your app's installation lifecycle for all user (personal) or team (channel) scopes within Microsoft Teams platform:
 
 |Application permission | Description|
 |------------------|---------------------|
@@ -46,11 +46,11 @@ To use these permissions, you must add a [webApplicationInfo](/microsoft-365/ext
 ## Enable proactive app installation and messaging
 
 > [!IMPORTANT]
-> Microsoft Graph can only install apps published to your organization's app store or the Microsoft Teams Store.
+> Microsoft Graph can only install apps published to your organization's app store or Microsoft Teams Store.
 
 ### Create and publish your proactive messaging bot for Teams
 
-To get started, you need a [bot for Teams](../../bots/how-to/create-a-bot-for-teams.md) with [proactive messaging](../../concepts/bots/bot-conversations/bots-conv-proactive.md) capabilities that is in your [organization's app store](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-to-your-org) or the [Teams Store](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-your-app-to-the-teams-store).
+To get started, you need a [bot for Teams](../../bots/how-to/create-a-bot-for-teams.md) with [proactive messaging](../../concepts/bots/bot-conversations/bots-conv-proactive.md) capabilities that is in your [organization's app store](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-to-your-org) or [Teams Store](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-your-app-to-the-teams-store).
 
 > [!TIP]
 > The production-ready [*Company Communicator*](../..//samples/app-templates.md#company-communicator) app template permits broadcast messaging and is a good start to build your proactive bot application.
@@ -86,7 +86,7 @@ You can retrieve the `teamsAppId` in the following ways:
     ```
 
     > [!NOTE]
-    > When the app is in the Teams Store, the `teamsAppId` is same as `IdFromManifest` and the `externalId` must not be used in this case.
+    > When the app is in Teams Store, the `teamsAppId` is same as `IdFromManifest` and the `externalId` must not be used in this case.
 
 * If your app has already been uploaded for a user in personal scope:
 
