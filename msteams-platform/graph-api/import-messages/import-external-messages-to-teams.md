@@ -482,7 +482,8 @@ HTTP/1.1 204 NoContent
 
 ### Add team members
 
-After completing migration of external messages, you can add a single member to a team by using the [Teams UI](https://support.microsoft.com/en-us/office/add-members-to-a-team-in-microsoft-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9&preserve-view=true). You can also use Microsoft Graph to [add single member](/graph/api/team-post-members?view=graph-rest-1.0&branch=pr-en-us-26836&tabs=http&preserve-view=true) or [add members in bulk](/graph/api/conversationmembers-add?view=graph-rest-1.0&tabs=http&preserve-view=true).
+After completing migration of external messages, you can add a single member to a team by using the [Teams UI](https://support.microsoft.com/en-us/office/add-members-to-a-team-in-microsoft-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9)
+ You can also use Microsoft Graph to [add single member](/graph/api/team-post-members?view=graph-rest-1.0&branch=pr-en-us-26836&tabs=http&preserve-view=true) or [add members in bulk](/graph/api/conversationmembers-add?view=graph-rest-1.0&tabs=http&preserve-view=true).
 
 #### Request (add member)
 
