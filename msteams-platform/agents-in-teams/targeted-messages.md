@@ -10,8 +10,6 @@ ms.topic: reference
 
 Targeted messages, also known as ephemeral messages are a new message type in Teams. Targeted messages are temporary, user-specific messages that appear in a group  meeting, or channel that are visible to a single user only. With targeted messages, the agent or bot can interact with specific users in certain scenarios. Agents or bots can use them for contextual, real-time feedback to a user like reminders, welcome messages, or chat summary. All this is done without adding permanent noise to the conversation that might be irrelevant to the other group members.
 
-## Targeted message on Teams platform
-
 Targeted messages support all capabilities as other Teams messages. Your agent or bot can include most types of messages that include like interactive Adaptive Cards with buttons, images, file attachments, and so on. For example, a sign-in card or a task module can be delivered via targeted message to a user. Unlike standard messages, targeted messages are:
 
 - Triggered in response to user action.
@@ -40,7 +38,12 @@ Targeted messages come with the following benefits for enhancing user experience
 
 - **Maintain context**:
 
-    The agent responds to the user request aligned with the context in the chat. While other members aren't able to see this interaction, a user can get chat summary and be updated about the discussion.
+    The agent responds to the user request aligned with the context in the chat. While other members aren't able to see this interaction, a user can get chat summary and be updated about the discussion. It avoids the need to generalize the discussion or explain to the broader audience.
+
+- **Agent responsiveness and attention**:
+
+    In-the-moment responses by the agent to the user's requirement in the group setting enhances the experience. It reinforces that the agent is alert to user actions and it leads to instant and relevant response.
+
 - **Human-in-the-loop scenarios**:
 
     It's useful for human-in-the-loop scenarios, such as authentication prompts, approvals, or informational messages that should only be visible to the relevant user.
