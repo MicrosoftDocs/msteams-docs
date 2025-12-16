@@ -30,7 +30,7 @@ Once registered, your MCP server becomes available to any Microsoft 365 agent ca
 
 Before you begin, ensure you have:
 
-- A test tenant [enabled with Teams pubic preview](/microsoftteams/public-preview-doc-updates) features (for testing your MCP integration with Teams Channel Agent)
+- A test tenant [enabled with Teams public preview](/microsoftteams/public-preview-doc-updates) features (for testing your MCP integration with Teams Channel Agent)
 - A working MCP server with a secure public endpoint
 - Authentication credentials (OAuth configuration or API key)
 
