@@ -73,7 +73,7 @@ For MCP servers, use **remoteMcpServer** unless your server runs locally within 
 
 Define how Microsoft 365 connects to your MCP server using the `remoteMcpServer` object.
 
-1. Within your connector's `toolSource`, specify the `remoteMcpServer` endpoint:
+1. Within your connector's [toolSource](/microsoft-365/extensibility/schema/root-agent-connectors-tool-source?view=m365-app-prev&preserve-view=true), specify the `remoteMcpServer` endpoint:
 
 ````json
 "toolSource": {
@@ -98,7 +98,7 @@ Specify how Microsoft 365 retrieves credentials when calling your MCP server. MC
 
 ### Use OAuth authentication
 
-For OAuth 2.0 tokens stored in Microsoft's secure vault, specify authorization type `OAuthPluginVault`in your configuration:
+For OAuth 2.0 tokens stored in Microsoft's secure vault, specify authorization type `OAuthPluginVault` in your configuration:
 
 ````json
 "remoteMcpServer": {
@@ -141,7 +141,7 @@ Choose how Microsoft 365 agents discover the tools your MCP server provides. You
 
 Dynamic discovery allows Microsoft 365 to fetch your tool list at runtime, which is recommended for servers whose tools change frequently.
 
-1. Add the dynamic discovery flag to your `remoteMcpServer` configuration:
+The following example shows how to add the dynamic discovery flag to your `remoteMcpServer` configuration:
 
 ````json
 "remoteMcpServer": {
