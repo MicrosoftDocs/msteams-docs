@@ -32,6 +32,15 @@ Targeted messages are intended as immediate, relevant, and private agent or bot-
 
 Targeted messages come with the following benefits for enhancing user experience:
 
+:::row:::
+    :::column span="1"
+        **Reduce chat noise**:
+    :::column-end:::
+    :::column span="2"
+            An agent or bot can send a message in a group chat or channel that's visible only to a specific user. They prevent one user's actions from cluterring the conversation. It allows other members to remain focused on the main discussion, even if the intended recipient of the targeted message still receives help from the agent.
+    :::column-end:::
+:::row-end:::
+
 - **Reduce chat noise**:
 
     An agent or bot can send a message in a group chat or channel that's visible only to a specific user. They prevent one user's actions from cluterring the conversation. It allows other members to remain focused on the main discussion, even if the intended recipient of the targeted message still receives help from the agent.
