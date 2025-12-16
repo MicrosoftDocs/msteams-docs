@@ -19,7 +19,7 @@ Targeted messages support all capabilities as other Teams messages. Your agent o
 - Temporary and visible up to 24 hours only in the client.
 - Disables user actions such as reaction, replies, and forwarding.
 
-Even though targeted messages might be contextually relevant, they're best suited for short-lived, action-driven communication rather than ongoing conversation. Use them when you want the agent or bot to respond in the moment as required by the user.
+Even though targeted messages might be contextually relevant, they're best suited for short-lived, action-driven communication rather than ongoing conversation. Use them when you want the agent or bot to respond in the moment as required by a specific user.
 
 ## Targeted messages user experience
 
