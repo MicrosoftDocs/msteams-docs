@@ -12,7 +12,7 @@ ms.date: 11/06/2024
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-The document guides you on how to add link unfurling to your app manifest using Developer Portal and manually. With link unfurling, your app can register to receive an invoke activity when URLs with a particular domain are pasted into the compose message area. The `invoke` contains the full URL that was pasted into the compose message area, and you can respond with a card that the user can unfurl, providing additional information or actions. This works similar to a search command with the URL serving as the search term. You can now add link unfurling to Microsoft Teams without installing the app.
+This document guides you on how to add link unfurling to your app manifest using Developer Portal and manually. With link unfurling, your app can register to receive an invoke activity when URLs with a particular domain are pasted into the compose message area. The `invoke` contains the full URL that was pasted into the compose message area, and you can respond with a card that the user can unfurl, providing additional information or actions. This works similar to a search command with the URL serving as the search term. You can now add link unfurling to Microsoft Teams without installing the app.
 
 :::image type="content" source="../../assets/images/tdp/link-unfurling-adaptive-cards1.png" alt-text="Screenshot shows the link unfurling experience for a Teams app installed or not installed in Teams and other apps." lightbox="../../assets/images/tdp/link-unfurling-adaptive-cards1.png":::
 
@@ -314,13 +314,13 @@ The following image provides a sequential flow to enable and use zero install li
 
 To get your app ready for zero install link unfurling, follow these steps:
 
-1. Set the property `supportsAnonymizedPayloads` to true in the [manifest schema](/microsoft-365/extensibility/schema/root-compose-extensions-message-handlers-value#supportsanonymizedpayloads).
+1. Set the `supportsAnonymizedPayloads` property to true in the [manifest schema](/microsoft-365/extensibility/schema/root-compose-extensions-message-handlers-value#supportsanonymizedpayloads).
 
-1. Set your app to handle the new `invoke` request `composeExtensions/anonymousQueryLink`.
+1. Configure your app to handle the new `invoke` request `composeExtensions/anonymousQueryLink`.
 
    Example of the new `invoke` request:
 
-   :::image type="content" source="../../assets/images/tdp/link-unfurl_1.png" alt-text="Screenshot of the `invoke` request  `composeExtensions/anonymousQueryLink` declaration in the manifest." lightbox="../../assets/images/tdp/link-unfurl_1.png":::
+   :::image type="content" source="../../assets/images/tdp/link-unfurl_1.png" alt-text="Screenshot of the `invoke` request `composeExtensions/anonymousQueryLink` declaration in the manifest." lightbox="../../assets/images/tdp/link-unfurl_1.png":::
 
    Example of the `invoke` request payload:
 
@@ -375,7 +375,7 @@ To get your app ready for zero install link unfurling, follow these steps:
 
 1. Respond to the `composeExtensions/anonymousQueryLink` payload.
 
-   1. For non-auth scenarios: You must send back a response with the `type` as `result` and a card. Use the following template:
+   1. For non-auth scenarios: Send back a response with the `type` as `result` and a card. Use the following template:
 
       ```json
       {
@@ -412,7 +412,7 @@ To get your app ready for zero install link unfurling, follow these steps:
       }
       ```
 
-   1. For auth scenarios: You must send back a response with the `type` as `auth` with an optional preauth card in the attachments. Use the following template:
+   1. For auth scenarios: Send back a response with the `type` as `auth` with an optional preauth card in the attachments. Use the following template:
   
       ```json
       {
