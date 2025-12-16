@@ -26,7 +26,7 @@ Even though targeted messages might be contextually relevant, they're best suite
 Targeted messages are intended as immediate, relevant, and private agent or bot-to-user communication. From a single user's perspective, they appear as regular inline messages in a conversation. However, they're visible only to them and exist only for a short duration. Targeted messages are initiated by the agent in response to a user action. Key aspects of the user experience include:
 
 - The messages appear in context where the trigerring action occured.
-- Only the intended user can see the message. Other group or channel members are unaware of the messages sent. The bot messages or responses appear to that user with the label 'Only you can see this message' tagged on them.
+- Only the intended user can see the message. Other group or channel members are unaware of the messages sent. The bot messages or responses appear to that user with the label 'Only you can see this message tagged on them.
 - The message disappears after 24 hours from the client UI.
 - The message doesn't impede the ongoing conversation and reduce spamming while still supporting the user effectively.
 
