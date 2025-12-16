@@ -8,11 +8,11 @@ ms.topic: reference
 
 # Build your first agent
 
-Agents use AI to automate and execute business processes, working alongside or on behalf of a person, team, or organization. Agents range from simple prompt-and-response agents to more advanced, fully autonomous agents.
+Agents utilize AI to automate and execute business processes, functioning alongside or on behalf of a person, team, or organization. Agents range from simple prompt-and-response agents to more advanced, fully autonomous agents.
 
 ## Tools you'll need
 
-To build an agent in Teams, you’ll need the following:
+To build an agent in Microsoft Teams, ensure you have the following:
 
 | Install | For using... |
 | --- | --- |
@@ -25,8 +25,8 @@ To build an agent in Teams, you’ll need the following:
 
 ## Set up your environment
 
-1. Install the latest versions of Visual Studio Code, Node.js, and the Microsoft 365 Agents Toolkit.
-1. If you want to use Azure OpenAI service to access large language model (LLM) for your agent, create an Azure OpenAI service on the [Azure portal](https://ms.portal.azure.com/#home) and get your API key.
+1. Install the latest versions of Visual Studio Code, Node.js, and Microsoft 365 Agents Toolkit.
+1. If you want to use Azure OpenAI service to access Large Language Model (LLM) for your agent, create an Azure OpenAI service on the [Azure portal](https://ms.portal.azure.com/#home) and obtain your API key.
 
 For more information about setting up Azure OpenAI services, see:
 
@@ -49,13 +49,13 @@ For more information about setting up Azure OpenAI services, see:
 
     :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/general-teams-agent.png" alt-text="Screenshot shows the location of the option to create a new agent in Teams." lightbox="../assets/images/agents-in-teams/first-agent-qsg/general-teams-agent.png":::
 
-1. Select a service to access large language model (LLM) for your agent.
+1. Select a service to access Large Language Model (LLM) for your agent.
 
     :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/access-llm.png" alt-text="Screenshot shows the location of the option to select an appropriate LLM for your agent." lightbox="../assets/images/agents-in-teams/first-agent-qsg/access-llm.png":::
 
-    Select one of the following options:
+    Choose one of the following options:
 
-    - Select **Azure OpenAI** if you've got the OpenAI key from Azure. Following this, you must:
+    - Select **Azure OpenAI** if you've obtained the OpenAI key from Azure. Following this, you must:
 
         1. Enter Azure OpenAI key in **Azure OpenAI service key**.
         1. Enter the endpoint in **Azure OpenAI service endpoint**.
@@ -69,7 +69,7 @@ For more information about setting up Azure OpenAI services, see:
 
 1. Select the **Default folder** as the **Workspace Folder** for your agent project.
 
-    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/select-workspace.png" alt-text="Screenshot shows the field to select the workspace forlder for your agent project." lightbox="../assets/images/agents-in-teams/first-agent-qsg/select-workspace.png":::
+    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/select-workspace.png" alt-text="Screenshot shows the field to select the workspace folder for your agent project." lightbox="../assets/images/agents-in-teams/first-agent-qsg/select-workspace.png":::
 
 1. Enter the agent name and then select **Enter**.
 
@@ -77,7 +77,7 @@ For more information about setting up Azure OpenAI services, see:
 
     The toolkit displays a message that the agent has been successfully created. You can also provision the agent at this time or later. If the toolkit displays a message to confirm if you trust the author, select **Yes, I trust the authors**.
 
-    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/trust-author.png" alt-text="Screenshows the message for confirming if you trust the authors of the agent.":::
+    :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/trust-author.png" alt-text="Screenshot shows the message for confirming if you trust the authors of the agent.":::
 
 ### Take a tour of the agent source code
 
@@ -104,15 +104,15 @@ Microsoft 365 Agents Toolkit creates your agent project and scaffolds the projec
 
     :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/select-agent-prompt.png" alt-text="Screenshot shows how to select a prompt from the agent." lightbox="../assets/images/agents-in-teams/first-agent-qsg/select-agent-prompt.png":::
 
-    When you select the prompt, it shows up in the comment box, and you can select the **Send** icon. The agent responds to the prompt.
+    When you select the prompt, it appears in the comment box, and you can select the **Send** icon. The agent responds to the prompt.
 
     :::image type="content" source="../assets/images/agents-in-teams/first-agent-qsg/agent-response.png" alt-text="Screenshot shows the agent response to the user prompt." lightbox="../assets/images/agents-in-teams/first-agent-qsg/agent-response.png":::
 
-Congratulations! You've created and ran your first agent in Teams.
+Congratulations! You've created and ran your first agent in Microsoft Teams.
 
 ## Choose your programming language
 
-Teams SDK is available for JavaScript, C#, and Python (dev preview). It provides a simplified SDK, support for Model Context Protocol (MCP), Agent-to-Agent communication (A2A), and streamlined tools to enable developers to build intelligent agents for Teams.
+Teams SDK is available for JavaScript, C#, and Python (dev preview). It provides a simplified SDK, support for Model Context Protocol (MCP), Agent-to-Agent communication (A2A), and streamlined tools to enable developers to build intelligent agents for Microsoft Teams.
 
 :::row:::
    :::column:::
