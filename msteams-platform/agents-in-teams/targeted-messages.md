@@ -8,7 +8,7 @@ ms.topic: reference
 
 # Enable targeted messages for agents
 
-Targeted messages, also known as ephemeral messages are a new message type in Teams. Targeted messages are temporary, user-specific messages that appear in a group  meeting, or channel conversation that are visible to a single user only. With targeted messages, the agent or bot can interact with specific users in certain scenarios. Agents or bots can use them for contextual, real-time feedback to a user like reminders, welcome messages, or chat summary. All this is done without adding permamnent noise to the conversation that may be irrelevant to the other group members.
+Targeted messages, also known as ephemeral messages are a new message type in Teams. Targeted messages are temporary, user-specific messages that appear in a group  meeting, or channel that are visible to a single user only. With targeted messages, the agent or bot can interact with specific users in certain scenarios. Agents or bots can use them for contextual, real-time feedback to a user like reminders, welcome messages, or chat summary. All this is done without adding permamnent noise to the conversation that may be irrelevant to the other group members.
 
 ## Targeted message on Teams platform
 
@@ -19,9 +19,11 @@ Targeted messages support all capabilities as other Teams messages. Your agent o
 - Temporary and visible up to 24 hours only in the client.
 - Disables user actions such as reaction, replies, and forwarding.
 
+Even though targeted messages might be contextually relevant, they're best suited for short-lived, action-driven communication rather than ongoing conversation. Use them when you want the agent or bot to respond in the moment as required by the user.
+
 ## Targeted messages user experience
 
-Agents and bots can use targeted messages to send a message directed to a user in a group context as required.  
+Targeted messages are intended as immediate, relevant, and private agent or bot-to-user communication. From a single user's perspective, they appear as regular inline messages in a conversation. However, they're visible only to them and exist only for a short duration.
 
 The bot messages or responses appear to that user with the label 'Only you can see this message' tagged on them.
 
