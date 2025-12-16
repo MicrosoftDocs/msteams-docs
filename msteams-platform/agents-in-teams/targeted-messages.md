@@ -17,7 +17,7 @@ Your agent or bot can include most types of messages like interactive Adaptive C
 - Temporary and visible up to 24 hours only in the client.
 - Disables user actions such as reaction, replies, and forwarding.
 
-Even though targeted messages are contextually relevant, they're best suited for action-driven communication. Use them when you want the agent or bot to respond in the moment as required by a specific user.
+Even though targeted messages are contextually relevant, they're best suited for short-term, action-driven communication. Use them when you want the agent or bot to respond in-the-moment as required by a specific user.
 
 ## Targeted messages user experience
 
