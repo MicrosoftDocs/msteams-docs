@@ -40,13 +40,17 @@ Targeted messages come with the following benefits for enhancing user experience
 
     The agent responds to the user request aligned with the context in the chat. While other members aren't able to see this interaction, a user can get chat summary and be updated about the discussion. It avoids the need to generalize the discussion or explain to the broader audience.
 
-- **Agent responsiveness and attention**:
+- **Agent sensitivity and alertness**:
 
     In-the-moment responses by the agent to the user's requirement in the group setting enhances the experience. It reinforces that the agent is alert to user actions and it leads to instant and relevant response.
 
+- **Cleaner chat experience**:
+
+    Agents can surface errors or feedback privately and avoid disruption for intended user. It can help users engage more openly. In addition, the conversation remains reserved for meaningful, persistent communication. A clear message hierarchy that shows only the content that is relevant to everyone is permanent in the chat.
+
 - **Human-in-the-loop scenarios**:
 
-    It's useful for human-in-the-loop scenarios, such as authentication prompts, approvals, or informational messages that should only be visible to the relevant user.
+    It's useful for human-in-the-loop scenarios, such as authentication prompts, approvals, or informational messages that should only be visible to the relevant user. It helps user's progress through a workflow without switching context or seeking assistance elsewhere.
 
 - **Ephemeral messages**:
 
