@@ -78,7 +78,7 @@ Key steps for enabling targeted messages:
     - A flag or API call that marks the message as targeted or ephemeral.
 
         - **For REST APIs**: The exact URL varies by region. Use the service URL from the conversation. The `userId` is the user’s Teams ID (MRI) to target, and `conversationId` is the group chat or channel thread ID. The payload of the POST is the activity or message to send, just like a normal message activity.
-        - **For Teams SDK**:
+        - **For Teams SDK**: [WIP - details to be added]
         - **For Bot Framework SDK**: In Bot Framework SDK, this is planned as a specialized method or property. For example, Teams is introducing a method like `SendTargetedActivityAsync` that you can call instead of the regular `SendActivityAsync`. This invokes a Teams-specific API endpoint to deliver a targeted message, where `isTargeted: true` indicates this message should be private to `targetUserId`.
 
     The following code snippet is an example of a scenario where the agent or bot uses targeted message to inform a group member when they submit their vote in a group poll:
@@ -111,3 +111,7 @@ Key steps for enabling targeted messages:
 
     - **Edit**: If a user takes an action, for example submitting the login card, the agent or bot might want to update the original targeted message. The agent calls the update message API for that message using the message’s `activityId`). The edit will update the content only in the target user’s view.
     - **Delete**: The agent can delete a targeted message using the delete message API . For example, if the user didn’t act on an ephemeral prompt after some time, the agent can delete it to avoid leaving stale content.
+
+1. **Use Graph API**:
+
+    Microsoft Graph exposes targeted messaging support. For instance, Graph API for Teams chat messages may include a property to send a message to specific users or a new endpoint for targeted messages. This allows workflows or external apps to create targeted messages.
