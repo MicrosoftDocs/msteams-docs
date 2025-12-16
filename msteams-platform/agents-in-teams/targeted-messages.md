@@ -8,7 +8,7 @@ ms.topic: reference
 
 # Enable targeted messages for agents
 
-Targeted messages, also known as ephemeral messages are a new message type in Teams. With targeted messages, the agent or bot can interact with specific users in a group chat, meeting chat, or channel conversation.
+Targeted messages, also known as ephemeral messages are a new message type in Teams. Targeted messages are temporary, user-specific messages that appear in a group  meeting, or channel conversation that are visible to a single user only. With targeted messages, the agent or bot can interact with specific users in certain scenarios. Agents or bots can use them for contextual, real-time feedback to a user like reminders, welcome messages, or chat summary. All this is done without adding permamnent noise to the conversation that may be irrelevant to the other group members.
 
 ## What is a targeted message?
 
@@ -21,7 +21,9 @@ You can use targeted message to deliver agent messages or responses to a specifi
 
 ## Targeted messages user experience
 
-Agents and bots can use targeted messages in a group context to send messages directed to a particular user only. The bot messages or responses appear to that user with the label 'Only you can see this message' tagged on them.
+Agents and bots can use targeted messages to send a message directed to a user in a group context as required.  
+
+The bot messages or responses appear to that user with the label 'Only you can see this message' tagged on them.
 
 [WIP: Placeholder image]
 
