@@ -1,7 +1,7 @@
 ---
 title: Deep link to a Teams chat
 author: surbhigupta
-description: Learn how to create deep links to a Teams chat and navigate to a chat, channel, chat messages, team, and files in the channel in Microsoft Teams. 
+description: Learn how to create deep links to a Teams chat and navigate to a chat, channel, chat messages, team, and files in the channel in Microsoft Teams.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
@@ -14,11 +14,11 @@ You can create a deep link to a Teams chat, such as to start a new chat, go to a
 
 ## Deep link to start a new chat
 
-You can navigate to or create private chats between users with the Microsoft Teams JavaScript client library (TeamsJS) by specifying the set of participants. If a chat doesn’t exist with the specified participants, the user is navigated to an empty new chat.
+You can navigate to or create private chats between users with Microsoft Teams JavaScript client library (TeamsJS) by specifying the set of participants. If a chat doesn’t exist with the specified participants, the user navigates to an empty new chat.
 
-When a user creates a new chat using a deep link, Teams creates the new chat in the draft state until the user sends the first message. You can also provide the name of the chat if it doesn’t already exist, along with text that should be inserted into the user's compose box. Consider this a shortcut for the user taking the manual action of navigating to or creating the chat and then compose the message.
+When a user creates a new chat using a deep link, Teams creates the new chat in the draft state until the user sends the first message. You can also provide the name of the chat if it doesn’t already exist, along with text that should be inserted into the user's compose box. Consider this a shortcut for the user taking the manual action of navigating to or creating the chat and then composing the message.
 
-As a use-case example, if you’re retrieving a Microsoft 365 user profile information from your bot as a card, this deep link can allow the app user to easily chat with that person.
+As a use-case example, if you’re retrieving Microsoft 365 user profile information from your bot as a card, this deep link can allow the app user to easily chat with that person.
 
 You can configure deep links to start a new chat in one of the following two ways:
 
@@ -35,7 +35,7 @@ To use this deep link with your bot, specify the deep link as the URL target in 
 
 The query parameters are:
 
-* `users`: A comma-separated list of user IDs representing the participants of the chat. The user that performs the action is always included as a participant. The User ID parameter supports the Microsoft Entra `UserPrincipalName`, such as an email address only.
+* `users`: A comma-separated list of user IDs representing the participants of the chat. The user that performs the action is always included as a participant. The User ID parameter supports Microsoft Entra `UserPrincipalName`, such as an email address only.
 * `topicName`: An optional parameter for chat's display name if a chat has three or more users. If this field isn't specified, the chat's display name is based on the names of the participants.
 * `message`: An optional field for the message text that you want to insert into the current app user's compose box while the chat is in the draft state.
 
