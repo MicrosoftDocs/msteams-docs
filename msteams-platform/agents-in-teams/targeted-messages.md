@@ -37,7 +37,7 @@ Targeted messages come with the following benefits for enhancing user experience
 - **Reduce bot spam**: An agent or bot can send a message in a group chat or channel that's visible only to a specific user, avoiding spamming the entire group.
 - **Maintain context**: The agent responds to the user request aligned with the context in the chat. While other members aren't able to see this interaction, a user can get chat summary and be updated about the discussion.
 - **Human-in-the-loop scenarios**: It's useful for human-in-the-loop scenarios, such as authentication prompts, approvals, or informational messages that should only be visible to the relevant user.
-- **Ephemeral messages**: The targeted message isn't retained in the chat indefinitely. They're cleared after 24 hours, so the conversation stays clean. However, your agent or app retains them in the backend storage for compliance as needed (for example, eDiscovery).
+- **Ephemeral messages**: The targeted message isn't retained in the chat indefinitely. They're cleared after 24 hours, so the conversation stays clean. However, your agent or app retains them in the backend storage for compliance as needed.
 
 [WIP: Placeholder image]
 
