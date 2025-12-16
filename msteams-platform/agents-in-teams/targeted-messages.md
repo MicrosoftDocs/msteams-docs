@@ -32,15 +32,6 @@ Targeted messages are intended as immediate, relevant, and private agent or bot-
 
 Targeted messages come with the following benefits for enhancing user experience:
 
-:::row:::
-    :::column span="1":::
-        **Reduce chat noise**:
-    :::column-end:::
-    :::column span="2":::
-            An agent or bot can send a message in a group chat or channel that's visible only to a specific user. They prevent one user's actions from cluttering the conversation. It allows other members to remain focused on the main discussion, even if the intended recipient of the targeted message still receives help from the agent.
-    :::column-end:::
-:::row-end:::
-
 - **Reduce chat noise**:
 
     An agent or bot can send a message in a group chat or channel that's visible only to a specific user. They prevent one user's actions from cluttering the conversation. It allows other members to remain focused on the main discussion, even if the intended recipient of the targeted message still receives help from the agent.
@@ -144,4 +135,14 @@ Key steps for enabling targeted messages:
 | **Ephemeral lifespan** | Targeted messages show in the clients for 24 hours only. They're retained in backend storage for compliance. |
 | **Notification** | Targeted messages aren't notified, however, the chat appears as bold when the user receives a new message in a group chat. |
 | **User actions** | The user actions are limited to any actions within the targeted message. The users can't react or reply to the message. |
+
+:::row:::
+    :::column:::
+        **Reduce chat noise**:
+    :::column-end:::
+    :::column span="2":::
+            An agent or bot can send a message in a group chat or channel that's visible only to a specific user. They prevent one user's actions from cluttering the conversation. It allows other members to remain focused on the main discussion, even if the intended recipient of the targeted message still receives help from the agent.
+    :::column-end:::
+:::row-end:::
+
 -->
