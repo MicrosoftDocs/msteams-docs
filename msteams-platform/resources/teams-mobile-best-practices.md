@@ -10,13 +10,13 @@ ms.date: 11/21/2025
 
 # Best practices for Teams mobile apps
 
- Mobile devices have limited processing power, network connectivity, and battery compared to desktops and laptops. To increase the adoption of your Teams tab app on mobile devices, you must ensure a fast and responsive web experience on the Teams Android and iOS clients. This article outlines the best practices to optimize your Teams tab's webpages for the Teams mobile client.
+Mobile devices have limited processing power, network connectivity, and battery compared to desktops and laptops. To increase the adoption of your Teams tab app on mobile devices, ensure a fast and responsive web experience on the Teams Android and iOS clients. This article outlines the best practices to optimize your Teams tab's webpages for the Teams mobile client.
 
 ## Use service workers to cache static assets
 
-* Cache static assets such as HTML, CSS, JavaScript, and images to reduce network dependency.
-* Use the stale-while-revalidate strategy to serve cached content quickly while fetching updated data in the background. You can also use this strategy to cache API responses that don't change frequently, such as configuration data.
-* Avoid caching large assets to prevent unnecessary storage consumption on mobile devices.
+- Cache static assets such as HTML, CSS, JavaScript, and images to reduce network dependency.
+- Use the stale-while-revalidate strategy to serve cached content quickly while fetching updated data in the background. You can also use this strategy to cache API responses that don't change frequently, such as configuration data.
+- Avoid caching large assets to prevent unnecessary storage consumption on mobile devices.
 
 ### Sample app
 
@@ -24,7 +24,7 @@ Check out this [sample app](https://github.com/OfficeDev/Microsoft-Teams-Samples
 
 ## Minimize webpage size
 
-In areas with weak signal strength, mobile data network can be slow and unstable, resulting in high latency. Hence, reducing the overall app package size and optimizing data transfers is critical. To reduce the page size, gather key performance metrics by running a performance audit using the **Performance** tab in dev tools. The performance audit helps identify bottlenecks and areas for improvement in your app.
+In areas with weak signal strength, mobile data networks can be slow and unstable, resulting in high latency. Hence, reducing the overall app package size and optimizing data transfers is critical. To reduce the page size, gather key performance metrics by running a performance audit using the **Performance** tab in dev tools. The performance audit helps identify bottlenecks and areas for improvement in your app.
 
 ### Performance audit
 
@@ -87,7 +87,7 @@ To generate performance metrics report for your mobile app with the **Performanc
 1. Open the app you want to audit, wait for it to load.
 
 1. To generate the report
-    * On Android app:
+    - On Android app:
 
          1. Select the kebab :::image type="icon" source="../assets/icons/kebab-icon.jpg" border="false"::: menu.
 
@@ -95,7 +95,7 @@ To generate performance metrics report for your mobile app with the **Performanc
 
              :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/android-entry-point.jpg" alt-text="Screenshot shows the entry point for Android audit tool" lightbox="../assets/images/tabs/lightweight-audit-tool/android-entry-point.jpg":::
 
-    * On iOS app, select the audit app performance :::image type="icon" source="../assets/icons/generate-report-icon.png" border="false"::: icon that appears on the title bar.
+    - On iOS app, select the audit app performance :::image type="icon" source="../assets/icons/generate-report-icon.png" border="false"::: icon that appears on the title bar.
 
     An interim page appears while the report is being generated for both Android and iOS.
 
@@ -103,10 +103,10 @@ To generate performance metrics report for your mobile app with the **Performanc
 
 > [!NOTE]
 >
-> * There's no restriction on the number of times that a report can be generated for an app.
-> * The generated report is a static html page whose contents remain unchanged throughout the journey. A new report is generated only when you repeat the report generation process.
-> * Refreshing or navigating away interrupts the process.
-> * If the report isn't generated, an error message appears.
+> - There's no restriction on the number of times that a report can be generated for an app.
+> - The generated report is a static html page whose contents remain unchanged throughout the journey. A new report is generated only when you repeat the report generation process.
+> - Refreshing or navigating away interrupts the process.
+> - If the report isn't generated, an error message appears.
 
 ### Access performance metrics report
 
@@ -114,10 +114,10 @@ The report provides insights using JavaScript SDK and WebView APIs, along with T
 
 You can access the report from the following options on the bottom sheet:
 
-* **Open Report**: Opens the report in a new browser window.
-* **Share report**: Opens the device’s options for sharing outside Teams on Android. On iOS, this option opens the device’s share menu.
-* **Forward in Teams**: Opens the device’s share menu for sharing in Teams. This option is available only on Android.
-* **Download**: Downloads the report in the device’s local storage.
+- **Open Report**: Opens the report in a new browser window.
+- **Share report**: Opens the device’s options for sharing outside Teams on Android. On iOS, this option opens the device’s share menu.
+- **Forward in Teams**: Opens the device’s share menu for sharing in Teams. This option is available only on Android.
+- **Download**: Downloads the report in the device’s local storage.
 
     :::image type="content" source="../assets/images/tabs/lightweight-audit-tool/performance-report-success-bottom-sheet.png" alt-text="report-success-bottom-sheet" lightbox="../assets/images/tabs/lightweight-audit-tool/performance-report-success-bottom-sheet.png":::
 
@@ -135,10 +135,10 @@ The performance metrics report contains the following metrics.
 
 > [!NOTE]
 >
-> * Latency isn't calculated if `notifySuccess()` API isn't called from code.
-> * Use [service worker](#use-service-workers-to-cache-static-assets) caching mechanism as one way to optimize app performance.
+> - Latency isn't calculated if `notifySuccess()` API isn't called from code.
+> - Use [service worker](#use-service-workers-to-cache-static-assets) caching mechanism as one way to optimize app performance.
 
 ## See also
 
-* [Build tabs for Teams](../tabs/what-are-tabs.md)
-* [Create a tab](../tabs/how-to/create-personal-tab.md)
+- [Build tabs for Teams](../tabs/what-are-tabs.md)
+- [Create a tab](../tabs/how-to/create-personal-tab.md)
