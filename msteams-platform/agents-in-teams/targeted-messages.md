@@ -8,7 +8,7 @@ ms.topic: reference
 
 # Enable targeted messages for agents
 
-Targeted messages are temporary, user-specific messages that appear in a group  meeting, or channel that are visible to a single user only. With targeted messages, the agent or bot can interact with specific users in certain scenarios. Agents or bots can use them for sharing contextual, real-time feedback that includes reminders, welcome messages, or chat summary. All this is done without adding permanent noise to the conversation that might be irrelevant to the other group members.
+Targeted messages are temporary, user-specific messages that appear in a group, meeting, or channel that are visible to only a single user. Agents or bots can use them for sharing contextual, real-time feedback that includes reminders, welcome messages, or chat summary. All this is done without adding permanent noise to the conversation that might be irrelevant to the other group members.
 
 Your agent or bot can include most types of messages like interactive Adaptive Cards with buttons, images, file attachments, and so on. For example, a sign-in card or a task module can be delivered via targeted message to a user. Unlike standard messages, targeted messages are:
 
