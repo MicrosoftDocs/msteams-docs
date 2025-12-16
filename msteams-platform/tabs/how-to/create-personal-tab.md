@@ -28,7 +28,7 @@ Ensure that you've all the [prerequisites](~/tabs/how-to/tab-requirements.md) to
 Follow the step-by-step guide to [build your tab app using JavaScript](../../sbs-gs-javascript.yml).
 
 <!--
-1. At the command prompt, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by entering the following command after installing the Node.js:
+1. At the command prompt, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by entering the following command after installing Node.js:
 
     ```cmd
     npm install yo gulp-cli --global
@@ -320,18 +320,18 @@ Following are the steps to create a tab:
 
 #### Startup.cs
 
-This project was created from an ASP.NET Core 3.1 web application empty template with the **Advanced - Configure for HTTPS** check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template doesn't enable serving static content by default, so the static files middleware is added to the `Configure()` method using the following code:
+This project originates from an ASP.NET Core 3.1 web application empty template with the **Advanced - Configure for HTTPS** check box selected during setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template doesn't enable serving static content by default, so the static files middleware is added to the `Configure()` method using the following code:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
-  {
-      services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-  }
+{
+    services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+}
 public void Configure(IApplicationBuilder app)
-  {
+{
     app.UseStaticFiles();
     app.UseMvc();
-  }
+}
 ```
 
 #### wwwroot folder
@@ -340,15 +340,15 @@ In ASP.NET Core, the web root folder is where the application looks for static f
 
 #### Index.cshtml
 
-ASP.NET Core treats files called **Index** as the default or home page for the site. When your browser URL points to the root of the site, **Index.cshtml** is displayed as the home page for your application.
+ASP.NET Core treats files named **Index** as the default or home page for the site. When your browser URL points to the root of the site, **Index.cshtml** is displayed as the home page for your application.
 
 #### AppManifest folder
 
 This folder contains the following required app package files:
 
-* A full color icon measuring 192 x 192 pixels.
-* A transparent outline icon measuring 32 x 32 pixels.
-* A `manifest.json` file that specifies the attributes of your app.
+- A full color icon measuring 192 x 192 pixels.
+- A transparent outline icon measuring 32 x 32 pixels.
+- A `manifest.json` file that specifies the attributes of your app.
 
 These files must be zipped in an app package for use in uploading your tab to Teams. Teams loads the `contentUrl` specified in your manifest, embeds it in an <iframe\>, and renders it in your tab.
 
@@ -359,29 +359,27 @@ In Visual Studio Solution Explorer, right-click on the project and select **Edit
 ```xml
 <PropertyGroup>
     <PostBuildEvent>powershell.exe Compress-Archive -Path \"$(ProjectDir)AppManifest\*\" -DestinationPath \"$(TargetDir)tab.zip\" -Force</PostBuildEvent>
-  </PropertyGroup>
+</PropertyGroup>
 
-  <ItemGroup>
+<ItemGroup>
     <EmbeddedResource Include="AppManifest\icon-outline.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="AppManifest\icon-color.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="AppManifest\manifest.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-  </ItemGroup>
+</ItemGroup>
 ```
-
-</details>
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Generate+your+application+with+a+tab&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-personal-tab%3Ftabs%3Dvs%26pivots%3Drazor-csharp%23generate-your-application-with-a-tab-1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-personal-tab.md&documentVersionIndependentId=6d43a761-19e0-541e-ba06-170099411ac1&author=surbhigupta&platformId=7b2eedc9-c3ef-d30c-e8e1-e6d80e341b11&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 ### Update and run your application
 
-1. Open Visual Studio Solution Explorer and go to **Pages** > **Shared** folder and open **_Layout.cshtml** and add the following to the `<head>` tags section:
+1. Open Visual Studio Solution Explorer and go to **Pages** > **Shared** folder and open **_Layout.cshtml**. Add the following to the `<head>` tags section:
 
     ```HTML
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
@@ -417,7 +415,7 @@ ngrok http 3978 --host-header=localhost
 
 1. A default **App ID** is created and populated in **Basic information** section.
 
-1. Add the Short and Long description  for your app in **Descriptions**.
+1. Add the Short and Long description for your app in **Descriptions**.
 
 1. In **Developer Information**, add the required details and in **Website (must be a valid HTTPS URL)** give your ngrok HTTPS URL.
 
@@ -434,7 +432,7 @@ ngrok http 3978 --host-header=localhost
 
 ### Preview your app in Teams
 
-1. Select **Preview in Teams** from the Developer Portal toolbar, Developer Portal informs you that your custom app is uploaded successfully. The **Add** page appears for your app in Teams.
+1. Select **Preview in Teams** from the Developer Portal toolbar. Developer Portal informs you that your custom app is uploaded successfully. The **Add** page appears for your app in Teams.
 
 1. Select **Add** to load the tab in Teams. Your tab is now available in Teams.
 
@@ -442,162 +440,11 @@ ngrok http 3978 --host-header=localhost
 
    Your tab is successfully created and added in Teams. You can also [reorder](#reorder-tabs) your tab in Teams.
 
-::: zone-end
+1. A default **App ID** is created and populated in the **Basic information** section.
 
-::: zone pivot="mvc-csharp"
+1. Add the short and long description for your app in **Descriptions**.
 
-## Create a tab with ASP.NET Core MVC
-
-1. At the command prompt, create a new directory for your tab project.
-
-1. Clone the sample repository into your new directory using the following command or you can download the [source code](https://github.com/OfficeDev/Microsoft-Teams-Samples) and extract the files:
-
-    ```cmd
-    git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
-    ```
-
-Following are the steps to create a tab:
-
-1. [Generate your application with a tab](#generate-your-application-with-a-tab)
-1. [Update and run application](#update-and-run-your-application-1)
-1. [Establish a secure tunnel to your tab](#establish-a-secure-tunnel-to-your-tab-2)
-1. [Update your app package with Developer Portal](#update-your-app-package-with-developer-portal-1)
-1. [Preview your app in Teams](#preview-your-app-in-teams-1)
-
-### Generate your application with a tab
-
-1. Open Visual Studio and select **Open a project or solution**.
-
-1. Go to **Microsoft-Teams-Samples** > **samples** > **tab-personal** > **mvc-csharp** folder and open **PersonalTabMVC.sln** in Visual Studio.
-
-1. In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application is loaded properly. In a browser, go to the following URLs:
-
-    * `<http://localhost:3978>`
-    * `<http://localhost:3978/personalTab>`
-    * `<http://localhost:3978/privacy>`
-    * `<http://localhost:3978/tou>`
-
-<details>
-<summary><b>Review the source code</b></summary>
-
-#### Startup.cs
-
-This project was created from an ASP.NET Core 3.1 web application empty template with the **Advanced - Configure for HTTPS** check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template doesn't enable serving static content by default, so the static files middleware is added to the `Configure()` method using the following code:
-
-``` csharp
-public void ConfigureServices(IServiceCollection services)
-  {
-    services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-  }
-public void Configure(IApplicationBuilder app)
-  {
-    app.UseStaticFiles();
-    app.UseMvc();
-  }
-```
-
-#### wwwroot folder
-
-In ASP.NET Core, the web root folder is where the application looks for static files.
-
-#### AppManifest folder
-
-This folder contains the following required app package files:
-
-* A **full color icon** measuring 192 x 192 pixels.
-* A **transparent outline icon** measuring 32 x 32 pixels.
-* A `manifest.json` file that specifies the attributes of your app.
-
-These files must be zipped in an app package for use in uploading your tab to Teams. Teams loads the `contentUrl` specified in your manifest, embeds it in an iFrame, and renders it in your tab.
-
-#### .csproj
-
-In the Visual Studio Solution Explorer, right-click on the project and select **Edit Project File**. At the end of the file, you see the following code that creates and updates your zip folder when the application builds:
-
-``` xml
-<PropertyGroup>
-    <PostBuildEvent>powershell.exe Compress-Archive -Path \"$(ProjectDir)AppManifest\*\" -DestinationPath \"$(TargetDir)tab.zip\" -Force</PostBuildEvent>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="AppManifest\icon-outline.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AppManifest\icon-color.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AppManifest\manifest.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-  </ItemGroup>
-```
-
-#### Models
-
-**PersonalTab.cs** presents a message object and methods that are called from **PersonalTabController** when a user selects a button in the **PersonalTab** View.
-
-#### Views
-
-These views are the different views in ASP.NET Core MVC:
-
-* Home: ASP.NET Core treats files called **Index** as the default or home page for the site. When your browser URL points to the root of the site, **Index.cshtml** is displayed as the home page for your application.
-
-* Shared: The partial view markup **_Layout.cshtml** contains the application's overall page structure and shared visual elements. It also references the Teams Library.
-
-#### Controllers
-
-The controllers use the `ViewBag` property to transfer values dynamically to the Views.
-
-</details>
-
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Generate+your+application+with+a+tab&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-personal-tab%3Ftabs%3Dvs%26pivots%3Drazor-csharp%23generate-your-application-with-a-tab&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-personal-tab.md&documentVersionIndependentId=6d43a761-19e0-541e-ba06-170099411ac1&author=surbhigupta&platformId=7b2eedc9-c3ef-d30c-e8e1-e6d80e341b11&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
-
-### Update and run your application
-
-1. Open Visual Studio Solution Explorer and go to **Views** > **Shared** folder and open **_Layout.cshtml**, and add the following to the `<head>` tags section:
-
-    ```HTML
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <script src="https://res.cdn.office.net/teams-js/2.0.0/js/MicrosoftTeams.min.js" integrity="sha384-QtTBFeFlfRDZBfwHJHYQp7MdLJ2C3sfAEB1Qpy+YblvjavBye+q87TELpTnvlXw4" crossorigin="anonymous"></script>
-    ```
-
-1. In Visual Studio Solution Explorer, open **PersonalTab.cshtml** from **Views** > **PersonalTab** folder and add `microsoftTeams.app.initialize()` inside the `<script>` tags.
-
-1. Select **Save**.
-
-1. In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu.
-
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Update+and+run+your+application&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-personal-tab%3Ftabs%3Dvs%26pivots%3Drazor-csharp%23update-and-run-your-application&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-personal-tab.md&documentVersionIndependentId=6d43a761-19e0-541e-ba06-170099411ac1&author=surbhigupta&platformId=7b2eedc9-c3ef-d30c-e8e1-e6d80e341b11&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
->
-### Establish a secure tunnel to your tab
-
-At the command prompt in the root of your project directory, run the following command to establish a secure tunnel to your tab:
-
-```cmd
-ngrok http 3978 --host-header=localhost
-```
-
-### Update your app package with Developer Portal
-
-1. Go to [**Developer portal**](https://dev.teams.microsoft.com/home).
-
-1. Open **Apps** and select **Import app**.
-
-1. The name of your app package is **tab.zip**. It's available in the following path:
-
-    ```
-    /bin/Debug/netcoreapp3.1/tab.zip
-    ```
-
-1. Select **tab.zip** and open it in the Developer Portal.
-
-1. A default **App ID** is created and populated in **Basic information** section.
-
-1. Add the Short and Long description  for your app in **Descriptions**.
-
-1. In **Developer information**, add the required details and in **Website (must be a valid HTTPS URL)** give your ngrok HTTPS URL.
+1. In **Developer information**, add the required details and in **Website (must be a valid HTTPS URL)** provide your ngrok HTTPS URL.
 
 1. In **App URLs**, update the Privacy policy to `https://<yourngrokurl>/privacy` and Terms of use to `https://<yourngrokurl>/tou` and select **Save**.
 
@@ -605,26 +452,26 @@ ngrok http 3978 --host-header=localhost
 
 1. Select **Save**.
 
-1. In the Domains section, Domains from your tabs must contain your ngrok URL without the HTTPS prefix `<yourngrokurl>.ngrok.io`.
+1. In the Domains section, domains from your tabs must contain your ngrok URL without the HTTPS prefix `<yourngrokurl>.ngrok.io`.
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Update+your+app+package+with+Developer+Portal&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-personal-tab%3Ftabs%3Dvs%26pivots%3Dmvc-csharp%23update-your-app-package-with-developer-portal-1&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-personal-tab.md&documentVersionIndependentId=6d43a761-19e0-541e-ba06-170099411ac1&author=surbhigupta&platformId=7b2eedc9-c3ef-d30c-e8e1-e6d80e341b11&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 ### Preview your app in Teams
 
-1. Select **Preview in Teams** from the Developer Portal toolbar, Developer Portal informs you that your custom app is uploaded successfully. The **Add** page appears for your app in Teams.
+1. Select **Preview in Teams** from the Developer Portal toolbar. Developer Portal informs you that your custom app is uploaded successfully. The **Add** page appears for your app in Teams.
 
 1. Select **Add** to load the tab on Teams. Your tab is now available in Teams.
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="Personal tab":::
-  
+
     Your tab is successfully created and added in Teams. You can also [reorder](#reorder-tabs) your tab in Teams.
 
 ::: zone-end
 
 ::: zone pivot="blazor-app"
 
-Blazor lets you build interactive web UIs using C#, instead of JavaScript. You can create a tab app and a bot app  with Blazor and the latest version of Visual Studio.
+Blazor lets you build interactive web UIs using C#, instead of JavaScript. You can create a tab app and a bot app with Blazor and the latest version of Visual Studio.
 
 :::image type="content" source="~/assets/images/toolkit-v2/blazor/your-blazor-helloworld-app.png" alt-text="Screenshot of the Blazor app displaying the tab, Bot, and Message Extension output after the step-by-step Blazor guide is successfully completed.":::
 
@@ -677,21 +524,21 @@ To install the Agents Toolkit extension:
 
 To install Microsoft 365 Agents Toolkit CLI (previously known as TeamsFx CLI), use the `npm` package manager:
 
-``` bash
+```bash
 npm install -g @microsoft/teamsfx-cli
 ```
 
 Depending on your configuration, you may need to use `sudo` to install the CLI:
 
-``` bash
+```bash
 sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
- ```
+```
 
 This condition is more common on Linux and macOS systems.
 
-Ensure you add the npm global cache to your PATH. This step is normally done as part of the Node.js installer.  
+Ensure you add the npm global cache to your PATH. This step is normally done as part of the Node.js installer.
 
-You can use the CLI with the `atk' command. Verify that the command is working by running`atk -h`.
+You can use the CLI with the `atk` command. Verify that the command is working by running `atk -h`.
 
 > [!CAUTION]
 > Before you can run TeamsFx in PowerShell terminals, you must enable the remote signed execution policy for PowerShell.
@@ -907,7 +754,7 @@ To build and run your app:
 
     :::image type="content" source="../../assets/images/toolkit-v2/blazor/tab-user-info.png" alt-text="Screenshot shows the basic information displayed on the personal tab of your app in Teams.":::
 
-    You can do normal debugging activities, such as setting breakpoints, as if it were any other web application. The app supports hot reloading.  If you change any file within the project, the page reloads.
+    You can do normal debugging activities, such as setting breakpoints, as if it were any other web application. The app supports hot reloading. If you change any file within the project, the page reloads.
 
     <!-- markdownlint-disable MD033 -->
     <br>
@@ -1067,9 +914,9 @@ This property also enables you to set the default landing capability for your ap
 
 You can extend static tabs to group chat, channels, and meetings. Instead of pinned app content, you can build tabs that behave more like apps as you can pin only one tab per app, for example, pinning a single YouTube app tab.
 
-To extend your static tabs to group chat, channels, and meetings, update your [app manifest](/microsoft-365/extensibility/schema/root-static-tabs) with the `scopes` and `context` parameters in the `staticTabs` property. When you declare multiple static tabs in the manifest and add the app in the channel scope, only the first tab listed in the manifest appears.
+To extend static tabs to group chat, channels, and meetings, update your [app manifest](/microsoft-365/extensibility/schema/root-static-tabs) with the `scopes` and `context` parameters in the `staticTabs` property. When you declare multiple static tabs in the manifest and add the app in the channel scope, only the first tab listed in the manifest appears.
 
-Following is an example of app manifest where a static tab is defined that works in all scopes and contexts in Teams:
+The following example shows an app manifest where a static tab is defined that works in all scopes and contexts in Teams:
 
 ```json
 "staticTabs": [ 
@@ -1094,10 +941,9 @@ Following is an example of app manifest where a static tab is defined that works
       "websiteUrl": "https://contoso.com/content (displayed in web browser)" 
   }
 ], 
-
 ```
 
-If a context isn't defined in the app manifest, by default Teams consider the following context:
+If a context isn't defined in the app manifest, by default Teams considers the following context:
 
 ```json
 "context": [ 
@@ -1118,16 +964,15 @@ For more information, see [build tabs for calling](../../apps-in-teams-meetings/
 
 ## Customizing your static tab in chats or meetings
 
-To customize your static tab experience in chats, channels, or meetings, you can use the `setConfig` APIs in your tab to update the `contentUrl` and `websiteUrl`. Following is an example:
+To customize your static tab experience in chats, channels, or meetings, you can use the `setConfig` APIs in your tab to update the `contentUrl` and `websiteUrl`. The following is an example:
 
 ```json
 pages.config.setConfig({ 
   "contentUrl": "https://wwww.contoso.com/teamsapp/thread/" + context.threadId,
    ...}
-
 ```
 
-Only `contentUrl` and `websiteUrl` changes are supported for `setConfig`, other properties can't be changed for static tabs.
+Only `contentUrl` and `websiteUrl` changes are supported for `setConfig`; other properties can't be changed for static tabs.
 
 ## Offline tabs
 
@@ -1136,8 +981,8 @@ Only `contentUrl` and `websiteUrl` changes are supported for `setConfig`, other 
 
 You can create a personal tab that works in Teams without an internet connection. An offline tab benefits users who work in areas with poor or no network coverage, such as field agents or frontline workers. Users can perform the following tasks in an offline tab:
 
-* Record data through forms that can include images and videos.
-* View details of previously submitted requests, incidents, or forms.
+- Record data through forms that can include images and videos.
+- View details of previously submitted requests, incidents, or forms.
 
 When the user's device reconnects to the internet, the tab automatically synchronizes the locally stored data with an Azure Blob storage. This action ensures that all offline changes made by the user are updated in a central storage, maintaining data consistency across the organization.
 
@@ -1166,6 +1011,7 @@ Before you get started with building an offline tab, ensure that you meet the [p
    :::image type="content" source="../../assets/images/tabs/add-offline-tab-teams.png" alt-text="Screenshot shows how to add the offline tab app to Teams.":::
 
 Congratulations! You've successfully created a Teams tab with offline functionality.
+
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Build+an+offline+tab&author=%40laujan&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-personal-tab%3Fbranch%3Dpr-en-us-12027%26tabs%3Dvs%26pivots%3Dnode-java-script%23build-an-offline-tab&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-personal-tab.md&documentVersionIndependentId=6d43a761-19e0-541e-ba06-170099411ac1&platformId=7b2eedc9-c3ef-d30c-e8e1-e6d80e341b11&metadata=*+ID%3A+61f5ca59-ab3e-b7ef-d3bc-55a88a362abf+%0A*+Service%3A+**msteams**)
 
@@ -1187,9 +1033,9 @@ To learn how to optimize your tab's performance in the Teams Android and iOS cli
 
 ## See also
 
-* [Build tabs for Teams](../what-are-tabs.md)
-* [Create a channel tab or group tab](create-channel-group-tab.md)
-* [Share to Teams from personal app or tab](~/concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md)
-* [Developer Portal for Teams](../../concepts/build-and-test/teams-developer-portal.md)
-* [App manifest schema for Teams](/microsoft-365/extensibility/schema/)
-* [Tabs on mobile](../design/tabs-mobile.md)
+- [Build tabs for Teams](../what-are-tabs.md)
+- [Create a channel tab or group tab](create-channel-group-tab.md)
+- [Share to Teams from personal app or tab](~/concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md)
+- [Developer Portal for Teams](../../concepts/build-and-test/teams-developer-portal.md)
+- [App manifest schema for Teams](/microsoft-365/extensibility/schema/)
+- [Tabs on mobile](../design/tabs-mobile.md)
