@@ -203,7 +203,7 @@ After you create a new team and standard channel, complete migration with the fo
 
 ### Start migration on existing channels and chats
 
-On existing channels or chats, use the `startMigration` API to [enable channel migration mode](/graph/api/channel-startmigration?view=graph-rest-beta) or to [enable chat migration mode](/graph/api/chat-startmigration?view=graph-rest-beta)
+On existing channels or chats, use the `startMigration` API to [enable channel migration mode](/graph/api/channel-startmigration?view=graph-rest-beta&preserve-view=true) or to [enable chat migration mode](/graph/api/chat-startmigration?view=graph-rest-beta&preserve-view=true)
 `startMigration` sets the migration state to `InProgress` and begins the message import process. For more information, see:
 
 * [Existing channel migration](#existing-channel-migration)
@@ -453,8 +453,8 @@ Use the `completeMigration` API to finish the migration process for new and exis
 
 ### Complete new team and channel migration
 
-Use the `completeMigration` API to [complete migration for the new team and channel](/graph/api/channel-completemigration?view=graph-rest-1.0&tabs=http)
- This action opens the team and channel resources for general use by team members. The action is bound to the `team` instance. Before you complete the team message migration, you must complete migration on all channels.
+Use the `completeMigration` API to [complete migration for the new team and channel](/graph/api/channel-completemigration?view=graph-rest-1.0&tabs=http&preserve-view=true)
+This action opens the team and channel resources for general use by team members. The action is bound to the `team` instance. Before you complete the team message migration, you must complete migration on all channels.
 
 #### Request (end channel migration mode)
 
