@@ -24,7 +24,7 @@ Even though targeted messages are contextually relevant, they're best suited for
 Targeted messages are intended as immediate, relevant, and private agent or bot-to-user communication. From a single user's perspective, they appear as regular inline messages in a conversation. However, they're visible only to them and exist only for a short duration. Agents or bots initiate targeted messages in response to a user action. Key aspects of the user experience include:
 
 - The messages appear in context where the triggering action occurred.
-- Only the intended user can see the message. Other group or channel members are unaware of the messages sent. The bot messages or responses appear to that user with the label 'Only you can see this message tagged on them.
+- Only the intended user can see the message. Other group or channel members are unaware of the messages sent. The bot messages or responses appear to that user with the label 'Only you can see this message' tagged on them.
 - The message disappears after 24 hours from the client UI.
 - The message doesn't impede the ongoing conversation and reduce spamming while still supporting the user effectively.
 
@@ -62,9 +62,9 @@ Targeted messages come with the following benefits for enhancing user experience
 
 Some common use scenarios include:
 
-- **Authentication flows**: A user can trigger a bot command in a channel (for example, “@Bot login”). The bot replies with a sign-in card as a targeted message visible only to that user. This prevents the group from seeing one user's login prompt.
+- **Authentication flows**: A user can trigger a bot command in a channel (for example, “@Bot login”). The bot replies with a sign-in card as a targeted message visible only to that user. It prevents the group from seeing one user's login prompt.
 - **Help or error responses**: If a user asks a bot for help or encounters an error in a group chat, the bot can respond just to that user (with tips, usage examples, or error details) via a targeted message. The message doesn't spam other members.
-- **Personal reminders or nudges**: A bot in a channel can privately remind a specific user to complete an action (fill a poll, review a document, etc.) using a targeted message, instead of @mentioning them publicly. This avoids public call-outs or extraneous notifications to others.
+- **Personal reminders or nudges**: A bot in a channel can privately remind a specific user to complete an action (fill a poll, review a document, etc.) using a targeted message, instead of @mentioning them publicly. It avoids public call-outs or extraneous notifications to others.
 - **Welcome and onboarding**: When a new user joins a team channel, a bot can send a welcome message or onboarding info visible only to that user (for example, with links to FAQs), rather than a message that everyone sees repeatedly for each new member.
 - **AI or Copilot summaries**: In long-running chats (for example, incident management channels), if a new participant joins, the bot can offer a private summary of what happened so far.
 
@@ -86,12 +86,12 @@ Key steps for enabling targeted messages:
 
     Ensure that you specify the following when the agent or bot sends the message:
 
-    - The conversation (chat or channel) ID and targeted user’s ID (Principal ID or MRI). This identifies where the message goes and who should see it.
+    - The conversation (chat or channel) ID and targeted user’s ID (Principal ID or MRI). It identifies where the message goes and who should see it.
     - A flag or API call that marks the message as targeted or ephemeral.
 
         - **For REST APIs**: The exact URL varies by region. Use the service URL from the conversation. The `userId` is the user’s Teams ID (MRI) to target, and `conversationId` is the group chat or channel thread ID. The payload of the POST is the activity or message to send, just like a normal message activity.
         - **For Teams SDK**: [WIP - details to be added]
-        - **For Bot Framework SDK**: In Bot Framework SDK, this is planned as a specialized method or property. For example, Teams is introducing a method like `SendTargetedActivityAsync` that you can call instead of the regular `SendActivityAsync`. This invokes a Teams-specific API endpoint to deliver a targeted message, where `isTargeted: true` indicates this message should be private to `targetUserId`.
+        - **For Bot Framework SDK**: In Bot Framework SDK, it's planned as a specialized method or property. For example, Teams is introducing a method like `SendTargetedActivityAsync` that you can call instead of the regular `SendActivityAsync`. It invokes a Teams-specific API endpoint to deliver a targeted message, where `isTargeted: true` indicates this message should be private to `targetUserId`.
 
     The following code snippet is an example of a scenario where the agent or bot uses targeted message to inform a group member when they submit their vote in a group poll:
 
@@ -117,7 +117,7 @@ Key steps for enabling targeted messages:
 
 1. **Bot edits and deletes**:
 
-    After sending a targeted message, your agent or bot updates or deletes it:
+    Your agent or bot can update or delete the targeted message after sending it:
 
     - **Edit**: If a user takes an action, for example submitting the login card, the agent or bot might want to update the original targeted message. The agent calls the update message API for that message using the message’s `activityId`). The edit updates the content only in the target user’s view.
     - **Delete**: The agent can delete a targeted message using the delete message API. For example, if the user didn’t act on an ephemeral prompt after some time, the agent can delete it to avoid leaving stale content.
