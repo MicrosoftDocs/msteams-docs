@@ -489,13 +489,13 @@ After completing migration of external messages, you can add a single member to 
 
 ```http
 POST https://graph.microsoft.com/beta/teams/{team-id}/members
-Content-type: application/json
-Content-length: 30
+Content-type:application/json
+Content-length:30
 
 {
-   "@odata.type": "#microsoft.graph.aadUserConversationMember",
-   "roles": [],
-   "user@odata.bind": "https://graph.microsoft.com/beta/users/{user-id}"
+   "@odata.type":"#microsoft.graph.aadUserConversationMember",
+   "roles":[],
+   "user@odata.bind":"https://graph.microsoft.com/beta/users/{user-id}"
 }
 ```
 
