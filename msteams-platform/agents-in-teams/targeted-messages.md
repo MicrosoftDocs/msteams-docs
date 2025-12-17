@@ -1,6 +1,6 @@
 ---
 title: Targeted Messages
-description: Learn about enabling targeted messages for agents and bots in Teams.
+description: Learn about enabling targeted messages for agents in Teams.
 ms.localizationpriority: high
 ms.date: 02/06/2025
 ms.topic: reference
@@ -8,23 +8,23 @@ ms.topic: reference
 
 # Enable targeted messages for agents
 
-Targeted messages are temporary, user-specific messages that appear in a group, meeting, or channel that are visible to only a single user. Agents or bots can use them for sharing contextual, real-time support that includes reminders, welcome messages, or chat summary. All this is done without adding permanent noise to the conversation that might be irrelevant to the other group members.
+Targeted messages are temporary, user-specific messages that appear in a group, meeting, or channel that are visible to only a single user. Agents can use them for sharing contextual, real-time support that includes reminders, welcome messages, or chat summary. All this is done without adding permanent noise to the conversation that might be irrelevant to the other group members.
 
-Your agent or bot can include most types of messages like interactive Adaptive Cards with buttons, images, or file attachments in a targeted message. For example, a targeted message can deliver a sign‑in card or an error message with a help link to the user. Unlike standard messages, targeted messages are:
+Your agent can include most types of messages like interactive Adaptive Cards with buttons, images, or file attachments in a targeted message. For example, a targeted message can deliver a sign‑in card or an error message with a help link to the user. Unlike standard messages, targeted messages are:
 
 - Triggered in response to user action.
 - Delivered to only one user in a group context.
 - Temporary and visible up to 24 hours only in the client.
 - Disables user actions such as reaction, replies, and forwarding.
 
-Even though targeted messages are contextually relevant, they're best suited for short-term, action-driven communication. Use them when you want the agent or bot to respond in-the-moment as required by a specific user.
+Even though targeted messages are contextually relevant, they're best suited for short-term, action-driven communication. Use them when you want the agent to respond in-the-moment as required by a specific user.
 
 ## Targeted messages user experience
 
-Targeted messages are intended as immediate, relevant, and private agent or bot-to-user communication. From a single user's perspective, they appear as regular inline messages in a conversation. However, they're visible only to them and exist only for a short duration. Agents or bots initiate targeted messages in response to a user action. Key aspects of the user experience include:
+Targeted messages are intended as immediate, relevant, and private agent or agent-to-user communication. From a single user's perspective, they appear as regular inline messages in a conversation. However, they're visible only to them and exist only for a short duration. Agents initiate targeted messages in response to a user action. Key aspects of the user experience include:
 
 - The messages appear in context where the triggering action occurred.
-- Only the intended user can see the message. Other group or channel members are unaware of the messages sent. The bot messages or responses appear to that user with the label 'Only you can see this message' tagged on them.
+- Only the intended user can see the message. Other group or channel members are unaware of the messages sent. The agent messages or responses appear to that user with the label 'Only you can see this message' tagged on them.
 - The message disappears after 24 hours from the client UI.
 - The message doesn't impede the ongoing conversation and reduce spamming while still supporting the user effectively.
 
@@ -34,7 +34,7 @@ Targeted messages come with the following benefits for enhancing user experience
 
 - **Reduce chat noise**:
 
-    An agent or bot can send a message in a group chat or channel that's visible only to a specific user. They prevent one user's actions from cluttering the conversation. It allows other members to remain focused on the main discussion, even if the intended recipient of the targeted message still receives help from the agent.
+    An agent can send a message in a group chat or channel that's visible only to a specific user. They prevent one user's actions from cluttering the conversation. It allows other members to remain focused on the main discussion, even if the intended recipient of the targeted message still receives help from the agent.
 
 - **Maintain context**:
 
@@ -62,38 +62,39 @@ Targeted messages come with the following benefits for enhancing user experience
 
 Some common use scenarios include:
 
-- **Authentication flows**: A user can trigger a bot command in a channel (for example, “@Bot login”). The bot replies with a sign-in card as a targeted message visible only to that user. It prevents the group from seeing one user's login prompt.
-- **Help or error responses**: If a user asks a bot for help or encounters an error in a group chat, the bot can respond just to that user (with tips, usage examples, or error details) via a targeted message. The message doesn't spam other members.
-- **Personal reminders or nudges**: A bot in a channel can privately remind a specific user to complete an action (fill a poll, review a document, etc.) using a targeted message, instead of @mentioning them publicly. It avoids public call-outs or extraneous notifications to others.
-- **Welcome and onboarding**: When a new user joins a team channel, a bot can send a welcome message or onboarding info visible only to that user (for example, with links to FAQs), rather than a message that everyone sees repeatedly for each new member.
-- **AI or Copilot summaries**: In long-running chats (for example, incident management channels), if a new participant joins, the bot can offer a private summary of what happened so far.
+- **Authentication flows**: A user can trigger a command in a channel (for example, “@agent login”). The agent replies with a sign-in card as a targeted message visible only to that user. It prevents the group from seeing one user's login prompt.
+- **Help or error responses**: If a user asks an agent for help or encounters an error in a group chat, it can respond just to that user (with tips, usage examples, or error details) via a targeted message. The message doesn't spam other members.
+- **Personal reminders or nudges**: An agent in a channel can privately remind a specific user to complete an action (fill a poll, review a document, etc.) using a targeted message, instead of @mentioning them publicly. It avoids public call-outs or extraneous notifications to others.
+- **Welcome and onboarding**: When a new user joins a team channel, an agent can send a welcome message or onboarding info visible only to that user (for example, with links to FAQs), rather than a message that everyone sees repeatedly for each new member.
+- **AI or Copilot summaries**: In long-running chats (for example, incident management channels), if a new participant joins, the agent can offer a private summary of what happened so far.
 
 ## Targeted message developer experience
 
-You can send a targeted message in an agent or bot just as a normal message. The bot indicates that the message is intended for a specific user in the conversation, and the platform delivers it to that user. The bot doesn't initiate a separate conversation or create a new chat. The message lives in the same channel or thread ID, but with restricted visibility.
+You can send a targeted message in an agent just as a normal message. The agent indicates that the message is intended for a specific user in the conversation, and the platform delivers it to that user. The agent doesn't initiate a separate conversation or create a new chat. The message lives in the same channel or thread ID, but with restricted visibility.
 
 Key steps for enabling targeted messages:
 
 1. **Detect the scenario to use a targeted reply**:
 
-    The bot logic for  must determine to send a targeted message in response to one of the following triggers:
+    The agent for  must determine to send a targeted message in response to one of the following triggers:
 
     - When a user @mentions or selects a button that might require a response that isn't meant for other group members.
-    - The agent or bot must send a proactive message to a specific user, for example, a reminder or welcome message in-context.
-    - The agent or bot must send a recommendation to a user that isn't relevant to other group members.
+    - The agent must send a proactive message to a specific user, for example, a reminder or welcome message in-context.
+    - The agent must send a recommendation to a user that isn't relevant to other group members.
 
 1. **Include the targeted designation in the `send` API**:
 
-    Ensure that you specify the following when the agent or bot sends the message:
+    Ensure that you specify the following when the agent sends the message:
 
     - The conversation (chat or channel) ID and targeted user’s ID (Principal ID or MRI). It identifies where the message goes and who should see it.
     - A flag or API call that marks the message as targeted or ephemeral.
 
         - **For REST APIs**: The exact URL varies by region. Use the service URL from the conversation. The `userId` is the user’s Teams ID (MRI) to target, and `conversationId` is the group chat or channel thread ID. The payload of the POST is the activity or message to send, just like a normal message activity.
         - **For Teams SDK**: [WIP - details to be added]
+<!--
         - **For Bot Framework SDK**: In Bot Framework SDK, it's planned as a specialized method or property. For example, Teams is introducing a method like `SendTargetedActivityAsync` that you can call instead of the regular `SendActivityAsync`. It invokes a Teams-specific API endpoint to deliver a targeted message, where `isTargeted: true` indicates this message should be private to `targetUserId`.
-
-    The following code snippet is an example of a scenario where the agent or bot uses targeted message to inform a group member when they submit their vote in a group poll:
+-->
+    The following code snippet is an example of a scenario where the agent uses targeted message to inform a group member when they submit their vote in a group poll:
 
     ```rest
     POST /v3/users/29:.../conversations/19:.../targetedactivities
