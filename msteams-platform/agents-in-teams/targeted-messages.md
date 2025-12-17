@@ -32,22 +32,22 @@ Targeted messages are intended as immediate, relevant, and private agent or agen
 
 Targeted messages come with the following benefits for enhancing user experience:
 
-- **Reduce chat noise**:
+- **Reduce chat noise**: <br>
     An agent can send a message in a group chat or channel that's visible only to a specific user. They prevent one user's actions from cluttering the conversation. It allows other members to remain focused on the main discussion, even if the intended recipient of the targeted message still receives help from the agent.
 
-- **Maintain context**:
+- **Maintain context**: <br>
     The agent responds to the user request aligned with the context in the chat. While other members aren't able to see this interaction, a user can get chat summary and be updated about the discussion. It avoids the need to generalize the discussion or explain to the broader audience.
 
-- **Agent sensitivity and alertness**:
+- **Agent sensitivity and alertness**: <br>
     In-the-moment responses by the agent to the user's requirement in the group setting enhances the experience. It reinforces that the agent is alert to user actions and it leads to instant and relevant response.
 
-- **Cleaner chat experience**:
+- **Cleaner chat experience**: <br>
     Agents can surface errors or feedback privately and avoid disruption for intended user. It can help users engage more openly. In addition, the conversation remains reserved for meaningful, persistent communication. A clear message hierarchy that shows only the content that's relevant to everyone is permanent in the chat.
 
-- **Human-in-the-loop scenarios**:
+- **Human-in-the-loop scenarios**: <br>
     It's useful for human-in-the-loop scenarios, such as authentication prompts, approvals, or informational messages that should only be visible to the relevant user. It helps user's progress through a workflow without switching context or seeking assistance elsewhere.
 
-- **Ephemeral messages**:
+- **Ephemeral messages**: <br>
     The targeted message isn't retained in the chat indefinitely. They're cleared after 24 hours, so the conversation stays clean. However, your agent or app retains them in the backend storage for compliance as needed.
 
 [WIP: Placeholder image]
