@@ -62,7 +62,7 @@ Targeted messages come with the following benefits for enhancing user experience
 
 Some common use scenarios include:
 
-- **Authentication flows**: A user can trigger a command in a channel (for example, “@agent login”). The agent replies with a sign-in card as a targeted message visible only to that user. It prevents the group from seeing one user's login prompt.
+- **Authentication flows**: A user can trigger a command in a channel (for example, “@agent login”). The agent replies with a sign-in card as a targeted message visible only to that user. It prevents the group from seeing one user's log in prompt.
 - **Help or error responses**: If a user asks an agent for help or encounters an error in a group chat, it can respond just to that user (with tips, usage examples, or error details) via a targeted message. The message doesn't spam other members.
 - **Personal reminders or nudges**: An agent in a channel can privately remind a specific user to complete an action (fill a poll, review a document, etc.) using a targeted message, instead of @mentioning them publicly. It avoids public call-outs or extraneous notifications to others.
 - **Welcome and onboarding**: When a new user joins a team channel, an agent can send a welcome message or onboarding info visible only to that user (for example, with links to FAQs), rather than a message that everyone sees repeatedly for each new member.
@@ -108,18 +108,18 @@ Key steps for enabling targeted messages:
 
     After the agent calls the targeted `send` API, the API returns a success or error:
 
-    1. If successful, the targeted user gets the message sent by the agent or bot.
-    1. If the `send` API fails, the agent or bot might choose a fallback, such as sending a 1:1 chat message as a backup. However, the intended user must be a member of the chat or channel to receive a targeted message, else the message isn't delivered. Some scenarios where a send event might fail are if a user isn’t a group member or if the client doesn’t support targeted messages.
+    1. If successful, the targeted user gets the message sent by the agent.
+    1. If the `send` API fails, the agent chooses a fallback, such as sending a 1:1 chat message as a backup. However, the intended user must be a member of the chat or channel to receive a targeted message, else the message isn't delivered. Some scenarios where a send event might fail are if a user isn’t a group member or if the client doesn’t support targeted messages.
 
     > [!NOTE]
-    > Backward compatibility logic is a service on Teams ensures older clients don't show targeted messages to all members, when not supported. It's helpful if your agent or bot is notified when the client doesn't support targeted messages.
+    > Backward compatibility logic is a service on Teams ensures older clients don't show targeted messages to all members, when not supported. It's helpful if your agent is notified when the client doesn't support targeted messages.
 
-1. **Bot edits and deletes**:
+1. **Agent edits and deletes the message**:
 
-    Your agent or bot can update or delete the targeted message after sending it:
+    Your agent can update or delete the targeted message after sending it:
 
-    - **Edit**: If a user takes an action, for example submitting the login card, the agent or bot might want to update the original targeted message. The agent calls the update message API for that message using the message’s `activityId`). The edit updates the content only in the target user’s view.
-    - **Delete**: The agent can delete a targeted message using the delete message API. For example, if the user didn’t act on an ephemeral prompt after some time, the agent can delete it to avoid leaving stale content.
+    - **Edit**: If a user takes an action, for example submitting the log in card, the agent might want to update the original targeted message. The agent calls the update message API for that message using the message’s `activityId`). The edit updates the content only in the target user’s view.
+    - **Delete**: The agent can delete a targeted message using the delete message API. For example, if the user didn’t act on an ephemeral prompt for some time, the agent can delete it to avoid leaving stale content.
 
 1. **Use Graph API**:
 
