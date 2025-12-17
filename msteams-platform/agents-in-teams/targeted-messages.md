@@ -76,7 +76,7 @@ Key steps for enabling targeted messages:
     - The agent must send a proactive message to a specific user, for example, a reminder or welcome message in-context.
     - The agent must send a recommendation to a user that isn't relevant to other group members.
 
-1. **Include the targeted designation in the `send` API**:
+1. **Include the targeted designation**:
 
     Ensure that you specify the following when the agent sends the message:
 
