@@ -589,5 +589,3 @@ Call [Get channel](/graph/api/channel-get?view=graph-rest-1.0&tabs=http&preserve
 * [Export content with the Microsoft Teams Export APIs](/microsoftteams/export-teams-content)
 * [Microsoft Teams service limits](/graph/throttling-limits#microsoft-teams-service-limits)
 * [Licensing and payment requirements for the Microsoft Teams API](/graph/teams-licenses)
-
-test
