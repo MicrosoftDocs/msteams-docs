@@ -2,12 +2,14 @@
 title: Respond to Search Command in Teams
 author: surbhigupta
 description: Learn how to respond to the search command from a message extension in a Microsoft Teams app. Understand how to respond to the user request.
-ms.topic: conceptual
+ms.topic: article
 ms.author: anclear
 ms.date: 03/06/2025
 ms.localizationpriority: medium
 ---
 # Respond to search command
+
+[!INCLUDE [bot-based-me-note](../../../includes/messaging-extensions/bot-based-me-note.md)]
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
