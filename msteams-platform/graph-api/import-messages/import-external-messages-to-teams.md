@@ -2,10 +2,10 @@
 title: Import third-party platform messages to Teams using Microsoft Graph
 description: Learn how to use Microsoft Graph to import messages such as message history and data from any third-party platform to Teams.
 ms.localizationpriority: high
-author: "surbhigupta"
+author: "vikasalmal"
 ms.topic: overview
 ms.owner: mehakagarwal
-ms.date: 11/17/2025
+ms.date: 12/17/2025
 ---
 
 # Import third-party platform messages to Teams using Microsoft Graph
@@ -78,7 +78,7 @@ The following table provides the content scope for existing channels and chats.
 ### Set up your Microsoft 365 tenant
 
 * Ensure that a Microsoft 365 tenant exists for the import data. For more information on setting up a Microsoft 365 tenancy for Teams, see [prepare your Microsoft 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).
-* Make sure that team members are in Microsoft Entra ID. For more information, see [add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory) to Entra ID.
+* Make sure that team members are in Microsoft Entra ID. For more information, see [add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory) to Microsoft Entra ID.
 
 ## Import historical messages into Teams
 
@@ -218,7 +218,7 @@ To enable migration mode on existing channels, use the `startMigration` API.
 ```HTTP
 POST https://graph.microsoft.com/beta/teams/{team-id}/channels/{channel-id}/startMigration
 {
-  "conversationCreationDateTime": "2024-01-01T00:00:00Z"
+"conversationCreationDateTime": "2024-01-01T00:00:00Z"
 }
 ```
 
@@ -239,7 +239,7 @@ HTTP/1.1 204 No Content
 ```HTTP
 POST https://graph.microsoft.com/beta/teams/57fb72d0-d811-46f4-8947-305e6072eaa5/channels/19:4b6bed8d24574f6a9e436813cb2617d8@thread.tacv2/startMigration
 {
-“conversationCreationDateTime”: “2024-01-01T00:00:00Z”
+"conversationCreationDateTime": "2024-01-01T00:00:00Z"
 }
 
 ```
@@ -253,7 +253,7 @@ To enable migration mode on existing chats, use the `startMigration` API.
 ```HTTP
 POST https://graph.microsoft.com/beta/chats/{chat-id}/startMigration
 {
-  "conversationCreationDateTime": "2024-01-01T00:00:00Z"
+"conversationCreationDateTime": "2024-01-01T00:00:00Z"
 }
 ```
 
@@ -275,7 +275,7 @@ HTTP/1.1 204 No Content
 POST https://graph.microsoft.com/beta/teams/57fb72d0-d811-46f4-8947-305e6072eaa5/chats/19:4b6bed8d24574f6a9e436813cb2617d8@thread.tacv2/startMigration 
 
 { 
-“conversationCreationDateTime”: “2024-01-01T00:00:00Z” 
+"conversationCreationDateTime": "2024-01-01T00:00:00Z" 
 } 
 
 ```
