@@ -156,7 +156,7 @@ POST https://graph.microsoft.com/v1.0/teams/{team-id}/channels
 Content-Type: application/json
 
 {
-  "@microsoft.graph.channelCreationMode": "migration",
+  "@microsoft.graph.channelCreationMode":"migration",
   "displayName":"Architecture Discussion",
   "description":"This channel is where we debate all future architecture plans",
   "membershipType":"standard",
