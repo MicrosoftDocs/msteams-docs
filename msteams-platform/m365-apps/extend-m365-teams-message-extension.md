@@ -23,8 +23,6 @@ Outlook mobile users on Android and iOS can receive and take actions on cards fr
 
 Teams message extension across Microsoft 365 also supports [link unfurling](../messaging-extensions/how-to/link-unfurling.md) that display cards to launch [Stageview](../tabs/tabs-link-unfurling.md) and dialogs.
 
-[!INCLUDE [bot-based-me-note](../includes/messaging-extensions/bot-based-me-note.md)]
-
 ## Prerequisites
 
 To extend your Teams message extension to Outlook, ensure the following:

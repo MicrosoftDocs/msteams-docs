@@ -3,4 +3,4 @@
 >
 > For more information, see [build declarative agents](/microsoft-365-copilot/extensibility/overview-declarative-agent) and [build agents in Teams](../../agents-in-teams/overview.md).
 >
-> You can also [extend bot-based message extension](../../messaging-extensions/build-bot-based-agent.md) as an agent.
+> If you have an existing bot-based message extension, you can [extend it as an agent](../../messaging-extensions/build-bot-based-agent.md) as well.
