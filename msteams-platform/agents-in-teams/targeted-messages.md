@@ -56,11 +56,11 @@ Targeted messages come with the following benefits for enhancing user experience
 
 Some common use scenarios include:
 
-- **Authentication flows**: For a user who joins the group or chat and @mentions the agent, it can respond with a sign-in card as a targeted message. It ensures that the discussion of the other group members can go on uninterrupted because of the log in workflow of one member.
-- **Help or error responses**: If a user asks an agent for help or encounters an error in a group chat, it can respond just to that user (with tips, usage examples, or error details) via a targeted message. The message doesn't spam other members.
-- **Personal reminders or nudges**: An agent in a channel can privately remind a specific user to complete an action (fill a poll, review a document, etc.) using a targeted message, instead of @mentioning them publicly. It avoids public call-outs or extraneous notifications to others.
-- **Welcome and onboarding**: When a new user joins a team channel, an agent can send a welcome message or onboarding info visible only to that user (for example, with links to FAQs), rather than a message that everyone sees repeatedly for each new member.
-- **AI or Copilot summaries**: In long-running chats (for example, incident management channels), if a new participant joins, the agent can offer a private summary of what happened so far.
+- **Authentication flows**: For a user who wants to access the group or channel, the agent can respond with a sign-in card as a targeted message. It ensures that the discussion of the other group members can go on uninterrupted because of the log in workflow of one member.
+- **Help or error responses**: For a user who asks for help or who faces an error in the group, the agent can share tips, usage examples, or error details using targeted messages. As other members of the group don’t see the message, the user can receive the help they need without hesitation.
+- **Personal reminders or nudges**: An agent can privately share reminders for a single user. It avoids public call-outs or irrelevant notifications to others.
+- **Welcome and onboarding**: An agent can use targeted messages to send welcome messages or onboarding help to new members in the group or channel. It avoids unnecessary repetition of such information every time a new user joins.
+- **AI or Copilot summaries**: In long-running chats, an agent can share discussion summary for a new participant using a targeted message. The discussion needn’t be derailed because of summary shared for everyone’s view.
 
 ## Targeted message developer experience
 
