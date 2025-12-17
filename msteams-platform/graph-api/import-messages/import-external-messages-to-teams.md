@@ -114,14 +114,14 @@ In this scenario, create a new team and standard channel in `migrationMode` to p
 
 ```HTTP
 POST https://graph.microsoft.com/v1.0/teams
-Content-Type: application/json
+Content-Type:application/json
 
 {
-  "@microsoft.graph.teamCreationMode": "migration",
-  "template@odata.bind": "https://graph.microsoft.com/v1.0/teamsTemplates('standard')",
-  "displayName": "My Sample Team",
-  "description": "My Sample Team’s Description",
-  "createdDateTime": "2020-03-14T11:22:17.043Z"
+  "@microsoft.graph.teamCreationMode":"migration",
+  "template@odata.bind":"https://graph.microsoft.com/v1.0/teamsTemplates('standard')",
+  "displayName":"My Sample Team",
+  "description":"My Sample Team’s Description",
+  "createdDateTime":"2020-03-14T11:22:17.043Z"
 }
 ```
 
@@ -157,10 +157,10 @@ Content-Type: application/json
 
 {
   "@microsoft.graph.channelCreationMode": "migration",
-  "displayName": "Architecture Discussion",
-  "description": "This channel is where we debate all future architecture plans",
-  "membershipType": "standard",
-  "createdDateTime": "2020-03-14T11:22:17.047Z"
+  "displayName":"Architecture Discussion",
+  "description":"This channel is where we debate all future architecture plans",
+  "membershipType":"standard",
+  "createdDateTime":"2020-03-14T11:22:17.047Z"
 }
 ```
 
@@ -218,7 +218,7 @@ To enable migration mode on existing channels, use the `startMigration` API.
 ```HTTP
 POST https://graph.microsoft.com/beta/teams/{team-id}/channels/{channel-id}/startMigration
 {
-"conversationCreationDateTime": "2024-01-01T00:00:00Z"
+  "conversationCreationDateTime":"2024-01-01T00:00:00Z"
 }
 ```
 
@@ -239,7 +239,7 @@ HTTP/1.1 204 No Content
 ```HTTP
 POST https://graph.microsoft.com/beta/teams/57fb72d0-d811-46f4-8947-305e6072eaa5/channels/19:4b6bed8d24574f6a9e436813cb2617d8@thread.tacv2/startMigration
 {
-"conversationCreationDateTime": "2024-01-01T00:00:00Z"
+  "conversationCreationDateTime":"2024-01-01T00:00:00Z"
 }
 
 ```
@@ -253,7 +253,7 @@ To enable migration mode on existing chats, use the `startMigration` API.
 ```HTTP
 POST https://graph.microsoft.com/beta/chats/{chat-id}/startMigration
 {
-"conversationCreationDateTime": "2024-01-01T00:00:00Z"
+  "conversationCreationDateTime":"2024-01-01T00:00:00Z"
 }
 ```
 
@@ -275,7 +275,7 @@ HTTP/1.1 204 No Content
 POST https://graph.microsoft.com/beta/teams/57fb72d0-d811-46f4-8947-305e6072eaa5/chats/19:4b6bed8d24574f6a9e436813cb2617d8@thread.tacv2/startMigration 
 
 { 
-"conversationCreationDateTime": "2024-01-01T00:00:00Z" 
+  "conversationCreationDateTime":"2024-01-01T00:00:00Z" 
 } 
 
 ```
