@@ -91,9 +91,7 @@ Key steps for enabling targeted messages:
 
         - **For REST APIs**: The exact URL varies by region. Use the service URL from the conversation. The `userId` is the user’s Teams ID (MRI) to target, and `conversationId` is the group chat or channel thread ID. The payload of the POST is the activity or message to send, just like a normal message activity.
         - **For Teams SDK**: [WIP - details to be added]
-<!--
-        - **For Bot Framework SDK**: In Bot Framework SDK, it's planned as a specialized method or property. For example, Teams is introducing a method like `SendTargetedActivityAsync` that you can call instead of the regular `SendActivityAsync`. It invokes a Teams-specific API endpoint to deliver a targeted message, where `isTargeted: true` indicates this message should be private to `targetUserId`.
--->
+
     The following code snippet is an example of a scenario where the agent uses targeted message to inform a group member when they submit their vote in a group poll:
 
     ```rest
@@ -145,5 +143,7 @@ Key steps for enabling targeted messages:
             An agent or bot can send a message in a group chat or channel that's visible only to a specific user. They prevent one user's actions from cluttering the conversation. It allows other members to remain focused on the main discussion, even if the intended recipient of the targeted message still receives help from the agent.
     :::column-end:::
 :::row-end:::
+
+        - **For Bot Framework SDK**: In Bot Framework SDK, it's planned as a specialized method or property. For example, Teams is introducing a method like `SendTargetedActivityAsync` that you can call instead of the regular `SendActivityAsync`. It invokes a Teams-specific API endpoint to deliver a targeted message, where `isTargeted: true` indicates this message should be private to `targetUserId`.
 
 -->
