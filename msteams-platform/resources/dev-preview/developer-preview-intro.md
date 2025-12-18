@@ -27,14 +27,14 @@ Developer preview is enabled on a per-client basis, but the option to turn on de
 
 Using an app that contains developer preview features might cause clients that didn't enable developer preview to behave unexpectedly. If you don't see an entry for developer preview, the most likely reason is your organization isn't configured for app uploading.
 
-### Desktop or web client
+### Desktop
 
 > [!NOTE]
 > If your tenant is enrolled for [Microsoft 365 Targeted Releases](/microsoft-365/admin/manage/release-options-in-office-365), developer preview is automatically enabled and the developer preview switch isn't available.
 
 # [New Teams client](#tab/new-teams-client)
 
-To enable the public developer preview on Teams desktop or web client:
+To enable the public developer preview on Teams desktop:
 
 1. Enable custom app upload for your developer tenant. For more information, see [enable custom app upload](../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-configure-custom-app-upload-settings).
 1. Select **Settings and more** (**...**) next to your user profile.
