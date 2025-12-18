@@ -60,7 +60,7 @@ Some common use scenarios include:
 - **Help or error responses**: For a user who asks for help or who faces an error in the group, the agent can share tips, usage examples, or error details using targeted messages. As other members of the group don’t see the message, the user can receive the help they need without hesitation.
 - **Personal reminders or nudges**: An agent can privately share reminders for a single user. It avoids public call-outs or irrelevant notifications to others.
 - **Welcome and onboarding**: An agent can use targeted messages to send welcome messages or onboarding help to new members in the group or channel. It avoids unnecessary repetition of such information every time a new user joins.
-- **AI or Copilot summaries**: In long-running chats, an agent can share discussion summary for a new participant using a targeted message. The discussion needn’t be derailed because of summary shared for everyone’s view.
+- **AI or Copilot summaries**: In long-running chats, an agent can share discussion summary for a new participant using a targeted message. The ongoing discussion isn't derailed because of the summary.
 
 ## Targeted message developer experience
 
