@@ -59,10 +59,10 @@ Some common use cases include:
 | Use case | Use for ... | To ... |
 | --- | --- | --- |
 | Authentication flows | Sending a sign-in card as a targeted message | Enable uninterrupted discussion by one user's log in workflow |
-| Help or error responses | Share tips, usage examples, or error details | Enable discreet support for the intended user |
+| Help or error responses | Sharing tips, usage examples, or error details | Enable discreet support for the intended user |
 | Personal reminders or nudges | Privately sending reminders to a single user | Avoid public call-outs or irrelevant notifications for other group members |
-| Welcome and onboarding | Send welcome messages or onboarding help to new members | Avoid unnecessary repetition of such information every time a new user joins |
-| AI or Copilot summary | Share discussion summary for long-running chats for a new participant | Avoid derailing ongoing discussion because of the summary |
+| Welcome and onboarding | Sending welcome messages or onboarding help to new members | Avoid unnecessary repetition of such information every time a new user joins |
+| AI or Copilot summary | Sharing discussion summary for long-running chats for a new participant | Avoid derailing ongoing discussion because of the summary |
 
 ## Targeted message developer experience
 
