@@ -486,6 +486,7 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
+* **November 25, 2025**: [Register MCP Servers as agent connectors](m365-apps/agent-connectors.md) for use in Teams Channel Agent and other agents across Microsoft 365.
 * ***November 11, 2025***: [Add app profile hovercard to your agent or app.](bots/how-to/teams-conversational-ai/ai-ux.md#enable-app-profile-card)
 
 <!--
