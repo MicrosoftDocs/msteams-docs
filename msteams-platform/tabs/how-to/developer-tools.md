@@ -16,13 +16,13 @@ When Teams is running in a browser, it's easy to access the browser's Dev Tools.
 - Add breakpoints to your JavaScript code and perform interactive debugging.
 
 > [!NOTE]
-> Dev Tools is only available for desktop and Android clients. To access Dev Tools, you must enable [**Public preview**](../../resources/dev-preview/developer-preview-intro.md#desktop).
+> Dev Tools is only available for desktop and Android clients. To access Dev Tools, you must enable [**Public preview**](../../resources/dev-preview/developer-preview-intro.md#desktop-client).
 
 ## Access Dev Tools on desktop
 
 While the web version and the desktop version of Teams are almost same, there are some differences with authentication. Sometimes the only way to figure out what's going on is to use Dev Tools. To use Dev Tools in the desktop client, follow these steps:
 
-1. Enable [**Public preview**](../../resources/dev-preview/developer-preview-intro.md#desktop). You must restart Teams to view the Dev Tools option.
+1. Enable [**Public preview**](../../resources/dev-preview/developer-preview-intro.md#desktop-client). You must restart Teams to view the Dev Tools option.
 
 1. Open a tab to inspect with Dev Tools.
 1. Open Dev Tools in one of the following ways:
