@@ -1,6 +1,6 @@
 ---
 title: Teams Developer Documentation - FAQs
-description: In this article, check FAQS on Adaptive Card Previewer, bots, Live Share, Microsoft 365 Chat, Teams AI library, Partner Center, and other Teams FAQs.
+description: In this article, check FAQS on Adaptive Card Previewer, bots, Live Share, Microsoft 365 Chat, Teams AI library, Teams SDK, Partner Center, and other Teams FAQs.
 ms.topic: reference
 ms.date: 01/23/2025
 ms.localizationpriority: high
@@ -1150,19 +1150,19 @@ To optimize your tab app performance on Teams mobile, use service workers to cac
 </details>
 </details>
 
-## Teams AI library
+## Teams SDK
 
 <br>
 <details>
-<summary>What does Teams AI library do?</summary>
+<summary>What does Teams SDK do?</summary>
 
-Teams AI library provides abstractions for you to build robust applications that utilize OpenAI Large Language Models (LLMs).
+Teams SDK provides abstractions for you to build robust applications that utilize OpenAI Large Language Models (LLMs).
 <br>
 </details>
 </br>
 
 <details>
-<summary>Does Microsoft provide a hosted version of OpenAI models that are used by the AI library?</summary>
+<summary>Does Microsoft provide a hosted version of OpenAI models that are used by Teams SDK?</summary>
 
 No, you need to have your Large Language Models (LLMs) hosted in Azure OpenAI or elsewhere.
 <br>
@@ -1170,9 +1170,9 @@ No, you need to have your Large Language Models (LLMs) hosted in Azure OpenAI or
 </br>
 
 <details>
-<summary>Can we use the AI library with other large language models apart from OpenAI?</summary>
+<summary>Can we use Teams SDK with other large language models apart from OpenAI?</summary>
 
-Yes, it's possible to use Teams AI library with other Large Language Models (LLMs).
+Yes, it's possible to use Teams SDK with other Large Language Models (LLMs).
 <br>
 </details>
 </br>
@@ -1180,13 +1180,13 @@ Yes, it's possible to use Teams AI library with other Large Language Models (LLM
 <details>
 <summary>Does a developer need to do anything to benefit from LLMs? If yes, why?</summary>
 
-Yes, Teams AI library provides abstractions to simplify utilization of Large Language Models (LLMs) in conversational applications. However, you (developer) must tweak the prompts, topic filters, and actions depending on your scenarios.
+Yes, Teams SDK provides abstractions to simplify utilization of Large Language Models (LLMs) in conversational applications. However, you (developer) must tweak the prompts, topic filters, and actions depending on your scenarios.
 <br>
 </details>
 </br>
 
 <details>
-<summary>How does Teams AI library integrate with ODSL?</summary>
+<summary>How does Teams SDK integrate with ODSL?</summary>
 
 The two are independent and can't be integrated.
 <br>
@@ -1194,10 +1194,10 @@ The two are independent and can't be integrated.
 </br>
 
 <details>
-<summary>How does Teams AI library co-exist against the hero-story of developers building for the skills ecosystem in Microsoft 365?</summary>
+<summary>How does Teams SDK co-exist against the hero-story of developers building for the skills ecosystem in Microsoft 365?</summary>
 </br>
 
-Teams AI library story is targeted towards pro-developers and separate from the hero-story around skills ecosystem in Microsoft 365.
+Teams SDK story is targeted towards pro-developers and separate from the hero-story around skills ecosystem in Microsoft 365.
 <br>
 </details>
 </br>
@@ -1205,7 +1205,7 @@ Teams AI library story is targeted towards pro-developers and separate from the 
 <details>
 <summary>How must information about the existing Bot Framework SDK be communicated after announcing a new version?</summary>
 
-Teams AI library works alongside the existing Bot Framework SDK and isn't a replacement.
+Teams SDK works alongside the existing Bot Framework SDK and isn't a replacement.
 <br>
 </details>
 
