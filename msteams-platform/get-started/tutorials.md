@@ -19,7 +19,7 @@ In this article, learn more about building Teams app capabilities. Here's a list
 | 1. | Bot  | [Debug your AI chat bot using Microsoft 365 Agents Playground](#debug-your-ai-chat-bot-using-microsoft-365-agents-playground) |
 | 2. | Message extension | [Build API-based message extension](#build-api-based-message-extension) |
 | 3. | Tab | [Build your first tab app using C sharp](#build-your-first-tab-app-using-c-sharp) |
-| 4. | SSO | - [Build a bot with SSO authentication](#build-a-bot-with-sso-authentication) <br> - [Add SSO to tab and message extension app](#add-sso-to-tab-and-message-extension-app) |
+| 4. | SSO | [Build a bot with SSO authentication](#build-a-bot-with-sso-authentication) |
 
 ## Debug your AI chat bot using Microsoft 365 Agents Playground
 
@@ -87,16 +87,16 @@ If the prerequisites are in place, let's begin!
 
     :::image type="content" source="~/assets/images/toolkit-v2/first-bot/select-default-location.png" alt-text="Screenshot shows the selection of default location.":::
 
-To change the default location, follow these steps:
+    To change the default location, follow these steps:
 
-1. Select **Browse**.
+    1. Select **Browse**.
 
-    :::image type="content" source="~/assets/images/toolkit-v2/first-bot/select-browse.png" alt-text="Screenshot shows the selection of browse location option.":::
+        :::image type="content" source="~/assets/images/toolkit-v2/first-bot/select-browse.png" alt-text="Screenshot shows the selection of browse location option.":::
 
-1. Select the location for the project workspace.
-1. Select **Select Folder**.
+    1. Select the location for the project workspace.
+    1. Select **Select Folder**.
 
-    :::image type="content" source="~/assets/images/toolkit-v2/select-folder.png" alt-text="Screenshot shows the folder to select.":::
+        :::image type="content" source="~/assets/images/toolkit-v2/select-folder.png" alt-text="Screenshot shows the folder to select.":::
 
 1. Enter a suitable name for your app and then select the **Enter** key.
 
@@ -156,7 +156,7 @@ You've successfully created key and endpoint for your AI chat bot.
 :::image type="content" source="~/assets/images/agents-playground/deployment.png" alt-text="Screenshot shows the deployment of the Azure open AI.":::
 
 > [!NOTE]
-> You can also get OpenAI API key to debug your AI chat bot. For more information, see [setup your API key](https://platform.openai.com/docs/quickstart/step-2-setup-your-api-key).
+> You can also get OpenAI API key to debug your AI chat bot.
 
 ##### Get Azure Open AI keys and endpoint
 
@@ -176,7 +176,7 @@ You've successfully created key and endpoint for your AI chat bot.
 
     The Azure Open AI Studio window appears.
 
-1. Select **Deployments** from the left pane and select **+ Create new deployments**.
+1. Select **Deployments** from the left pane and select **+ Create new deployment**.
 
     :::image type="content" source="../assets/images/agents-playground/ai-studio.png" lightbox="~/assets/images/agents-playground/ai-studio.png" alt-text="Screenshot shows the model deployments for Azure open AI.":::
 
@@ -184,8 +184,8 @@ You've successfully created key and endpoint for your AI chat bot.
 
     1. Select **gpt-35-turbo** from the **Select a model** dropdown list.
 
-    > [!NOTE]
-    > Only **gpt-35-turbo** model is supported for the AI chat bot.
+        > [!NOTE]
+        > Only **gpt-35-turbo** model is supported for the AI chat bot.
 
     1. Select **0301 (Default)** from the **Model version** dropdown list.
     1. Enter **Deployment name** and select **Create**.
@@ -1546,7 +1546,7 @@ You've completed the tutorial to get started with build a bot with SSO authentic
 
 ## Build your first tab app using C sharp
 
-Start Microsoft Teams app development by building your first Teams app with a tab, a bot, or a message extension capability.
+Start Microsoft Teams app development by building your first Teams app with a tab capability.
 
 In this tutorial, you'll learn:
 
@@ -1729,12 +1729,13 @@ You have successfully created a tab app using C#. Agents Toolkit has added the n
 > [!div class="nextstepaction"]
 > [Create a tab](../tabs/how-to/create-personal-tab.md)
 > [!div class="nextstepaction"]
-> [Create a new Microsoft Teams project using Microsoft Teams Toolkit](../toolkit/toolkit-v4/create-new-project-vs.md)
+> [Create a new Teams project using Microsoft 365 Agents Toolkit](../toolkit/toolkit-v4/create-new-project-vs.md)
 
 </details>
 
 [Tutorials](#tutorials)
 
+<!--
 ## Add SSO to tab and message extension app
 
 Microsoft Entra single sign-on (SSO) enables seamless user authentication in Teams.
@@ -1919,3 +1920,4 @@ The window shows the HTTPS URL.
 </details>
 
 [Tutorials](#tutorials)
+-->

@@ -139,5 +139,4 @@ Here's a list of best practices:
 
 ## See also
 
-- [Add SSO to tab and message extension app - Tutorial](../../../get-started/tutorials.md#add-sso-to-tab-and-message-extension-app)
-- [Glossary](../../../get-started/glossary.md)
+[Glossary](../../../get-started/glossary.md)
