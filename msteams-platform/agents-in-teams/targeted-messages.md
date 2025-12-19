@@ -108,7 +108,7 @@ Key steps for enabling targeted messages:
     1. If the `send` API fails, the agent chooses a fallback, such as sending a 1:1 chat message as a backup. However, the intended user must be a member of the chat or channel to receive a targeted message, else the message isn't delivered. Some scenarios where a send event might fail are if a user isn’t a group member or if the client doesn’t support targeted messages.
 
     > [!NOTE]
-    > Backward compatibility logic is a service on Teams ensures older clients don't show targeted messages to all members, when not supported. It's helpful if your agent is notified when the client doesn't support targeted messages.
+    > The Backward compatibility logic in Teams prevents older clients from displaying targeted messages to all members when they don’t support the feature. It also alerts your agent when a client can't handle targeted messages.
 
 1. **Agent edits and deletes the message**:
 
