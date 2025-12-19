@@ -1515,6 +1515,10 @@
       {
         "source_path": "msteams-platform/toolkit/build-a-RAG-bot-in-teams.md",
         "redirect_url": "/microsoftteams/platform/agents-in-teams/overview"
-      }   
+      },
+      {
+        "source_path": "msteams-platform/toolkit/teams-app-test-tool-tutorial.md",
+        "redirect_url": "/microsoftteams/platform//get-started/tutorials"
+      }
     ]
 }
