@@ -95,6 +95,8 @@ To build a message extension, if you don't already have one, there are two ways:
 
 * **Build message extensions using Bot Framework (Bot-based)**: If you want a one-on-one conversational experience, you can create a new message extension from a bot.
 
+[!INCLUDE [bot-based-me-note](../includes/messaging-extensions/bot-based-me-note.md)]
+
 The following table helps you select a message extension type to get started:
 
 :::row:::
