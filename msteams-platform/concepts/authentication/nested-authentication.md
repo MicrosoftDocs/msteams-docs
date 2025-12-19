@@ -58,8 +58,7 @@ To configure nested authentication, follow these steps:
 
 ### Register your SPA
 
-You must create a Microsoft Entra ID app registration for your add-in on Azure portal. The app registration must have a name, supported account type, and SPA redirect. Following the registration of your app, Azure portal generates a Microsoft Entra app registration ID.
-If your add-in requires additional app registration beyond NAA and SSO, see [register your single-page application.](/entra/identity-platform/scenario-spa-app-registration).
+You must create a Microsoft Entra ID app registration for your add-in on Azure portal. The app registration must have a name, supported account type, and SPA redirect. Following the registration of your app, Azure portal generates a Microsoft Entra app registration ID. If your add-in requires additional app registration beyond NAA and SSO, see [register your single-page application.](/entra/identity-platform/scenario-spa-app-registration).
 
 ### Add trusted brokers
 
@@ -235,13 +234,14 @@ To enable token prefetching, update your [Teams app manifest](/microsoft-365/ext
 >
 > * The value of webApplicationInfo.id must match the client ID of the app's Microsoft Entra ID registration. This is the same client ID the app uses when making actual NAA token requests. The host uses this ID to initiate the token prefetch process.
 > * The values in webApplicationInfo.id and all fields inside nestedAppAuthInfo must exactly match the parameters used in the app’s runtime NAA token request. Any mismatch, such as differences in scopes, redirect URIs, or claims, will prevent the host from serving the token from cache.
-> * Prefetched tokens are stored in memory for a short duration and are intended for use only during the app’s initial load. If the app attempts to fetch a token later, such as in response to a user action, the prefetched token may no longer be available. In such cases, the app must initiate a new token request using standard authentication flows.
+
+> * Prefetched tokens store in memory for a short duration and are intended for use only during the app’s initial load. If the app attempts to fetch a token later, such as in response to a user action, the prefetched token may no longer be available. In such cases, the app must initiate a new token request using standard authentication flows.
 
 #### How it works
 
-When token prefetching is enabled, the host environment attempts to acquire and cache the required tokens before the app is rendered. These tokens are stored in memory and made available to the app immediately upon launch.
+When token prefetching is enabled, the host environment attempts to acquire and cache the required tokens before the app renders. These tokens store in memory and become available to the app immediately upon launch.
 
-This behavior is similar to the prefetch capability in the legacy Teams SSO model, where the `getAuthToken` API was automatically triggered during tab load. With Nested App Authentication (NAA), this functionality is introduced through manifest configuration, improving performance without requiring a backend token exchange.
+This behavior is similar to the prefetch capability in the legacy Teams SSO model, where the `getAuthToken` API automatically triggers during tab load. With Nested App Authentication (NAA), this functionality introduces through manifest configuration, improving performance without requiring a backend token exchange.
 
 #### Benefits of Token Prefetching in NAA
 
@@ -249,12 +249,12 @@ This behavior is similar to the prefetch capability in the legacy Teams SSO mode
 * Enable single sign-on (SSO) across nested apps without repeated sign-ins
 
 > [!NOTE]
-> Token prefetching is currently supported only in the Microsoft Teams web and desktop clients.
+> Token prefetching is currently supported only in Microsoft Teams web and desktop clients.
 
 ### Best practices
 
 * **Use silent authentication whenever possible**:
-  MSAL.js provides the `acquireTokenSilent` method, which handles token renewal by making silent token requests without prompting the user. The method first looks for a valid cached token in the browser storage. If it doesn't find one, the library makes a silent request to Microsoft Entra ID and if there's an active user session (determined by a cookie set in browser on the Microsoft Entra domain), Microsoft Entra ID returns a fresh token. The library doesn't automatically invoke the `acquireTokenSilent` method. We recommend that you call `acquireTokenSilent` in your app before making an API call to get a valid token.
+  MSAL.js provides the `acquireTokenSilent` method, which handles token renewal by making silent token requests without prompting the user. The method first looks for a valid cached token in browser storage. If it doesn't find one, the library makes a silent request to Microsoft Entra ID, and if there's an active user session (determined by a cookie set in the browser on the Microsoft Entra domain), Microsoft Entra ID returns a fresh token. The library doesn't automatically invoke the `acquireTokenSilent` method. We recommend that you call `acquireTokenSilent` in your app before making an API call to get a valid token.
 
   In certain cases, the attempt to get the token using the `acquireTokenSilent` method fails. For example, when there's an expired user session with Microsoft Entra ID or a password change by the app user, `acquireTokenSilent` fails. Call the interactive acquire token method (`acquireTokenPopup`).
 
@@ -262,7 +262,7 @@ This behavior is similar to the prefetch capability in the legacy Teams SSO mode
   The NAA flows offer compatibility across the Microsoft ecosystem. However, your app might appear in down-level or legacy clients that aren't updated to support NAA. In such cases, your app can't support seamless SSO, and you might need to invoke special APIs for interacting with the user to open authentication dialogs. For more information, see [enable SSO for tab app](../../tabs/how-to/authentication/tab-sso-overview.md).
 
   > [!NOTE]
-  > You mustn't use NAA if you're using a non-Microsoft Entra identity provider, you can use pop-up authentication instead.
+  > You mustn't use NAA if you're using a non-Microsoft Entra identity provider; you can use pop-up authentication instead.
 
 * **Support for NAA**: NAA might not be supported across all host app environments. To verify if the current client supports this feature, you can invoke the specified API to determine its status. A return value of `true` indicates support for NAA, while `false` suggests it isn't supported.
 
