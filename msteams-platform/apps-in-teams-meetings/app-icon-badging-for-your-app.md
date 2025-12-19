@@ -10,15 +10,15 @@ ms.date: 01/23/2025
 
 # Enable app icon badging for your Teams app
 
-App icon badging helps a meeting participant identify any app activity during a meeting. Participants get activity notification for the meeting apps.
+App icon badging helps a meeting participant identify any app activity during a meeting. Participants receive activity notifications for meeting apps.
 
-When there's a new activity during the meeting, the app calls the `targetedMeetingNotification` API and displays a red badge on the app icon in the meeting unified bar (U-bar). When the participant selects the app icon, the app opens in the meeting side panel, and the badge goes away.
+When there's a new activity during the meeting, the app calls the `targetedMeetingNotification` API and displays a red badge on the app icon in the meeting unified bar (U-bar). When the participant selects the app icon, the app opens in the meeting side panel, and the badge disappears.
 
-For example, during a real time collaboration in a meeting, if a participant adds a comment in a file added to the meeting, the app calls the `targetedMeetingNotification` API from the participant's meeting side panel. The API triggers a badge on the app icon to make other participants aware of the comment activity.
+For example, during real-time collaboration in a meeting, if a participant adds a comment in a file added to the meeting, the app calls the `targetedMeetingNotification` API from the participant's meeting side panel. The API triggers a badge on the app icon to make other participants aware of the comment activity.
 
-The following image shows you the app icon badging in the meeting U-bar:
+The following image shows the app icon badging in the meeting U-bar:
 
-:::image type="content" source="../assets/images/app-icon-badging.png" alt-text="Screenshot shows you the app icon badging in U-bar in teams meeting."lightbox="../assets/images/app-icon-badging.png":::
+:::image type="content" source="../assets/images/app-icon-badging.png" alt-text="Screenshot shows the app icon badging in U-bar in Teams meeting." lightbox="../assets/images/app-icon-badging.png":::
 
 > [!NOTE]
 >
@@ -39,16 +39,17 @@ To enable app icon badging, you must:
 * Configure the `authorization` property and the `name` and `type` properties under the `resourceSpecific` field in the [app manifest](/microsoft-365/extensibility/schema/root-authorization) as follows:
 
 ```json
-
 "webApplicationInfo": {
     "id": "<<MICROSOFT-APP-ID>>",
-    "resource": "https://RscBasedStoreApp"  },
+    "resource": "https://RscBasedStoreApp"
+  },
   "authorization": {
     "permissions": {
       "resourceSpecific": [
         {
           "name": "OnlineMeetingNotification.Send.Chat",
-          "type": "Application"        }
+          "type": "Application"
+        }
       ]
     }
   }
@@ -60,7 +61,7 @@ To enable app icon badging, ensure that you've [enabled targeted in-meeting noti
 
 The [Targeted meeting notification and app icon badging API](meeting-apps-apis.md#targeted-meeting-notification-and-app-icon-badging-api) is extended to support the app icon badging capability on the app icon and pass the user MRI IDs of the intended recipients. The `surfaces` parameter now supports `meetingTabIcon` value, which is used by the app.
 
-App can also pass the `tabEntityId`, if there are multiple instances of the app added to the same meeting. If the `tabEntityId` isn't passed, then Teams displays the badge on the first app icon on the users meeting window.
+The app can also pass the `tabEntityId`, if there are multiple instances of the app added to the same meeting. If the `tabEntityId` isn't passed, then Teams displays the badge on the first app icon on the user's meeting window.
 
 ### Example
 
@@ -88,12 +89,12 @@ TeamsInfo.sendMeetingNotification(context, notificationPayload, meetingId);
     "value": {
         "recipients": [
             "<participant1 MRI>",
-            "<participant2 MRI>" 
+            "<participant2 MRI>"
         ],
         "surfaces": [
             {
                 "surface": "meetingTabIcon",
-                "tabEntityId": "<tab id from tab sdk>" // optional           
+                "tabEntityId": "<tab id from tab sdk>" // optional
             }
         ]
     }
@@ -108,11 +109,11 @@ TeamsInfo.sendMeetingNotification(context, notificationPayload, meetingId);
 
 * App icon badging displays only one notification for a user in a minute per meeting.
 
-* App icon badging is displayed to a maximum of first 50 participants for a particular meeting.
+* App icon badging is displayed to a maximum of the first 50 participants for a particular meeting.
 
 ## Code sample
 
-|Sample name | Description | Node.js | .NET |
+| Sample name | Description | Node.js | .NET |
 |----------------|-----------------|--------------|
 | App icon badging for your Teams app | This sample app showcases how to implement app icon badging for notifications in Teams meetings. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-app-icon-badging/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-app-icon-badging/csharp) |
 
