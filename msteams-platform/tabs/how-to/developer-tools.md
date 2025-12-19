@@ -82,7 +82,7 @@ To activate DevTools:
 
     You'll find your iOS client listed under the **Develop** option in Safari on your Mac system.
 
-1. From the Safari's **Develop** menu on the Mac system, select **Use for Development...** for your iOS client. This is a one-time setting that you'll configure the first time you use Safari to access DevTools for the iOS client.
+1. From the Safari's **Develop** menu on the Mac system, select **Use for Development...** for your iOS client. This is a one-time setting that you configure the first time you use Safari to access DevTools for the iOS client.
 
    :::image type="content" source="../../assets/images/devtools/devtools-use-for-development.png" alt-text="The screenshot displays the link for using Safari for development or inspection of any app used on the connected Teams iOS client." lightbox="../../assets/images/devtools/devtools-use-for-development.png":::
 
