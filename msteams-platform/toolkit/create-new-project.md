@@ -152,6 +152,8 @@ To learn more about the directory structure of different types of scenario-based
 </details>
 <br>
 
+For trying out more step-by-step guiges on building apps, see [Tutorials](../get-started/tutorials.md).
+
 ## See also
 
 * [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals.md)
