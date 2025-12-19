@@ -9,7 +9,7 @@ ms.date: 01/07/2024
 ---
 # Design process for Microsoft Teams apps
 
-There are multiple tools and resources for designing your Microsoft Teams app. The following steps describe when and how you might use these during the design process. (Some of steps might be technically outside the design process but are included for additional context.)
+There are multiple tools and resources for designing your Microsoft Teams app. The following steps describe when and how you might use these during the design process. (Some of the steps might be technically outside the design process but are included for additional context.)
 
 :::image type="content" source="~/assets/images/design-guidelines/teams-app-design-process.png" alt-text="Diagram showing an example of the Teams app design process.":::
 
@@ -17,12 +17,12 @@ There are multiple tools and resources for designing your Microsoft Teams app. T
 
 Designing a high-quality Teams app requires understanding what you want the app to do and how you think people will use it. Before you start designing, however, answer the following questions:
 
-* Who are your users?
-* What’s their problem?
-* How can your app solve their problem?
-* How often will your app be used?
-* How many people will use your app?
-* What kind of return on investment can your app provide?
+- Who are your users?
+- What’s their problem?
+- How can your app solve their problem?
+- How often will your app be used?
+- How many people will use your app?
+- What kind of return on investment can your app provide?
 
 For more information, see [understand your app’s use cases](~/concepts/design/understand-use-cases.md) and [map use cases to Teams](~/concepts/design/map-use-cases.md).
 
@@ -34,7 +34,7 @@ Microsoft provides tools to make it easier to design your Teams app. At minimum,
 
 The Microsoft Teams UI Kit can help you develop an effective Teams app in the shortest amount of time. The UI kit has everything you see in these docs related to Teams app design and much more, including extensive examples and variations.
 
-The UI kit also has prebuilt templates and components that you can copy and modify as needed, so you can spend more time designing the best user experience instead worrying about what a button should look like.
+The UI kit also has prebuilt templates and components that you can copy and modify as needed, so you can spend more time designing the best user experience instead of worrying about what a button should look like.
 
 > [!TIP]
 > **Is the UI kit for me?** If you have any part in creating a Teams app, yes. Understanding how to craft a Teams app is not only helpful to designers but product managers, developers using IDEs, and makers building with low-code tools (such as the Microsoft Power Platform).
@@ -97,8 +97,8 @@ Not unlike the design phase, you can use Fluent UI React components in your app 
 
 Whether you’re just starting on your app or close to a production-ready app, we recommend that you periodically review the following resources:
 
-* **Microsoft Teams Store validation guidelines**: Provides standards that all Teams apps should strive for, and not just apps listed in the Teams Store. For more information, see the [guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
-* **Design best practices**: These docs and the UI kit provide best practices for designing high-quality apps. For example, see the [best practices for designing bots](~/bots/design/bots.md#best-practices).
+- **Microsoft Teams Store validation guidelines**: Provides standards that all Teams apps should strive for, and not just apps listed in the Teams Store. For more information, see the [guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
+- **Design best practices**: These docs and the UI kit provide best practices for designing high-quality apps. For example, see the [best practices for designing bots](~/bots/design/bots.md#best-practices).
 
 ## See also
 
