@@ -1173,6 +1173,10 @@ Congratulations! You've successfully created a Teams tab with offline functional
 
 To learn how to optimize your tab's performance in the Teams Android and iOS clients, see [best practices for Teams mobile](../../resources/teams-mobile-best-practices.md).
 
+## Step-by-step guide
+
+For learning more about building a tab using C#, see [build your first tab app using C sharp](../../get-started/tutorials.md#build-your-first-tab-app-using-c-sharp).
+
 ## Code sample
 
 | Sample name | Description | .NET |Node.js|Manifest|

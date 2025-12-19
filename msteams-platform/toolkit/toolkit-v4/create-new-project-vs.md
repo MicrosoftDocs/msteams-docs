@@ -107,8 +107,7 @@ You can see Teams app templates already populated in Teams Toolkit for various T
 ## See also
 
 * [Teams Toolkit Overview](agents-toolkit-fundamentals-vs.md)
-* [Build a Teams app with Blazor](~/sbs-gs-blazorupdate.yml)
-* [Build a Teams app with C# or .NET](~/sbs-gs-csharp.yml)
+* [[Build a Teams app with C# or .NET]](../../get-started/tutorials.md#build-your-first-tab-app-using-c-sharp)
 * [Prerequisites for all types of environment and create your Teams app](tools-prerequisites-vs.md)
 * [Prepare to build apps using Microsoft Teams Toolkit](build-environments-vs.md)
 * [Provision cloud resources using Visual Studio](provision-vs.md)
