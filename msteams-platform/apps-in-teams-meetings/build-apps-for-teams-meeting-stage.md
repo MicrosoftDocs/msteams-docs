@@ -440,10 +440,6 @@ The following participant roles might be involved during the meeting:
 | In-meeting document signing | This sample app enables users to review and sign documents in real time during meetings. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA | NA |
 |Screen share content to stage| This sample app demonstrates how to enable and configure apps for Teams meetings, allowing users to interact with a shared meeting stage. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp)|NA|NA|
 
-## Step-by-step guide
-
-Follow the [step-by-step guide](../sbs-inmeeting-document-signing.yml) to build an in-meeting document signing app.
-
 ## See also
 
 * [Apps for Teams meetings](teams-apps-in-meetings.md)
