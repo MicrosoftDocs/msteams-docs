@@ -32,7 +32,7 @@ An app manifest describes your app's configuration, including its capabilities, 
 
 You can create an app and configure the app manifest through one of the following platforms:
 
-* **Microsoft 365 Agents toolkit**: A set of tools and extensions in Microsoft Visual Studio Code and Visual Studio to create, debug, and deploy an app. When creating an app, the app manifest generates from a template file based on the selected capabilities. You can then customize in [Visual Studio Code](../../toolkit/TeamsFx-preview-and-customize-app-manifest.md) or [Visual Studio](../../toolkit/toolkit-v4/TeamsFx-preview-and-customize-app-manifest-vs.md) based on your requirements, validate the manifest file, and zip the app package.
+* **Microsoft 365 Agents toolkit**: A set of tools and extensions in Microsoft Visual Studio Code and Visual Studio to create, debug, and deploy an app. When you create an app, the app manifest generates from a template file based on the selected capabilities. You can then customize in [Visual Studio Code](../../toolkit/TeamsFx-preview-and-customize-app-manifest.md) or [Visual Studio](../../toolkit/toolkit-v4/TeamsFx-preview-and-customize-app-manifest-vs.md) based on your requirements, validate the manifest file, and zip the app package.
 
 * **Developer Portal for Teams**: A web-based platform that helps you create your app, configure your app manifest, and generate an app package. To create an app through Developer Portal for Teams, see [create and register an app](teams-developer-portal.md).
 
