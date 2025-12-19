@@ -10,31 +10,31 @@ ms.date: 01/23/2025
 
 # Upload your app in Teams
 
-You can upload Microsoft Teams apps without having to publish to your organization or the Microsoft Teams Store in the following scenarios:
+Upload Microsoft Teams apps without publishing to your organization or Microsoft Teams Store in these scenarios:
 
-* You want to test and debug an app locally yourself or with other developers.
-* You built an app for yourself to automate a workflow.
-* You built an app for a small set of users, such as, your work group.
+* Test and debug an app locally with other developers.
+* Build an app to automate a workflow.
+* Build an app for a small set of users, such as a work group.
 
 > [!IMPORTANT]
 >
 > * Custom app upload is possible only in Government Community Cloud (GCC) and isn't possible in GCC High, Department of Defense (DoD), and Teams operated by 21Vianet.
-> * App upload and installation are supported in Teams for desktop and web (availability depends on your organization’s app setup policies and cloud environment)
-> * We recommend you to avoid multiple uploads of your message extension app to Teams, as it results in multiple instances of the message extension.
+> * App upload and installation are supported in Teams for desktop and web (availability depends on your organization’s app setup policies and cloud environment).
+> * Avoid multiple uploads of your message extension app to Teams, as it results in multiple instances of the message extension.
 
-Users can't chat with bots that aren't connected to a Microsoft Teams app such as Azure bots created through the Bot Framework or Power Virtual Agents. We recommend you to create a new Teams app connected to the Azure Bot using the [Developer Portal](../build-and-test/manage-your-apps-in-developer-portal.md#configure), publish it to Teams, and allow users to install the app using the [app permission policies](/microsoftteams/teams-app-permission-policies#edit-an-app-permission-policy).
+Users can't chat with bots not connected to a Microsoft Teams app, such as Azure bots created through Bot Framework or Power Virtual Agents. Create a new Teams app connected to the Azure Bot using the [Developer Portal](../build-and-test/manage-your-apps-in-developer-portal.md#configure), publish it to Teams, and allow users to install the app using [app permission policies](/microsoftteams/teams-app-permission-policies#edit-an-app-permission-policy).
 
-If you want to test the app, you can assign users an [app setup policy](/microsoftteams/teams-app-setup-policies#manage-app-setup-policies) that allows uploading custom apps and chat with the Azure bot through a direct link to a chat.
+To test the app, assign users an [app setup policy](/microsoftteams/teams-app-setup-policies#manage-app-setup-policies) that allows uploading custom apps and chat with the Azure bot through a direct link to a chat.
 
 ## Prerequisites
 
-* Ensure to create your [app package](~/concepts/build-and-test/apps-package.md), import it and [validate it](https://dev.teams.microsoft.com/tools/store-validation) for errors.
+* Create your [app package](~/concepts/build-and-test/apps-package.md), import it, and [validate it](https://dev.teams.microsoft.com/tools/store-validation) for errors.
 * [Enable custom app uploading](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-configure-custom-app-upload-settings) in Teams.
-* Ensure that your app is running and accessible using HTTPs.
+* Ensure your app is running and accessible using HTTPs.
 
 ## Upload your app
 
-You can upload your app to a team, chat, meeting, or for personal use depending on how you configured your app's scope.
+Upload your app to a team, chat, meeting, or for personal use depending on how you configured your app's scope.
 
 1. Log in to the Teams client with your [Microsoft 365 development account](https://developer.microsoft.com/microsoft-365/dev-program).
 
@@ -53,7 +53,7 @@ You can upload your app to a team, chat, meeting, or for personal use depending 
 
 1. Select **Open** to open the app in personal scope.
 
-    Alternatively, you can either search and select the required scope or select a channel or chat from the list, and move through the dialog to select **Go**.
+    Alternatively, search and select the required scope or select a channel or chat from the list, and move through the dialog to select **Go**.
 
     :::image type="content" source="~/assets/images/publish-app/teams-app-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
@@ -64,13 +64,13 @@ You can upload your app to a team, chat, meeting, or for personal use depending 
 
 If your app fails to upload or encounters any issues to upload, check the following options:
 
-1. Ensure that you follow all the instructions for [creating your app package](../../concepts/build-and-test/apps-package.md).
+1. Follow all the instructions for [creating your app package](../../concepts/build-and-test/apps-package.md).
 1. Upload your app package and then [validate it](https://dev.teams.microsoft.com/tools/store-validation).
 1. Ensure your app manifest matches with the latest [schema](/microsoft-365/extensibility/schema).
 
 ## Manage your apps
 
-Manage your apps allows users to have a dedicated place to manage, update and remove their apps, permissions, and subscriptions on the Teams client. The users can install the apps from **Manage your apps**.
+Manage your apps allows users to have a dedicated place to manage, update, and remove their apps, permissions, and subscriptions on the Teams client. Users can install the apps from **Manage your apps**.
 
 ### Access your app
 
