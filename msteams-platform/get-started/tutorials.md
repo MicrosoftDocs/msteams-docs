@@ -1911,4 +1911,11 @@ The window shows the HTTPS URL.
 
 ---
 
+> [!div class="nextstepaction"]
+> [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
+> [!div class="nextstepaction"]
+> [Enable SSO for your app](../bots/how-to/authentication/bot-sso-overview.md)
+
 </details>
+
+[Tutorials](#tutorials)
