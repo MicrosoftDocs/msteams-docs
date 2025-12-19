@@ -1,837 +1,289 @@
 ---
-title: Explore TeamsFx SDK and its Functions
-author: surbhigupta
-description: Learn about core functionalities of TeamsFx SDK and its prerequisites, code structure, advanced customizing, Graph scenarios, Bot SSO, and latest SDK version.
-ms.author: surbhigupta
-ms.localizationpriority: medium
-ms.topic: overview
-ms.date: 01/24/2025
+
+title: Register Tab with Microsoft Entra ID description: Configure Single sign-on (SSO) with Microsoft Entra ID by configuring App ID URI, scope for access token, and preauthorize trusted clients. ms.topic: how-to ms.localization
+priority: high
+keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) access token SSO tenancy scope 
+ms.date: 02/01/2023
+ms.owner: ryanbliss
+
 ---
 
-# TeamsFx SDK
+# Configure your tab app in Microsoft Entra ID
 
-[!INCLUDE [Deprecation note](../includes/deprecation-note-teamsfx-sdk.md)]
+Microsoft Entra ID provides access to your tab app based on the app user's Teams identity. Register your tab app with Microsoft Entra ID so that the app user who has signed into Teams can access your tab app.
 
-TeamsFx helps to reduce your tasks by using Microsoft Teams single sign-on (SSO) and accessing cloud resources down to single line statements with zero configuration. You can use TeamsFx SDK in the browser and Node.js environments. TeamsFx core functionalities can be accessed in client and server environments. You can write user authentication code for:
+<a name='enable-sso-in-azure-ad'></a>
 
-* Teams tab
-* Teams bot
-* Azure Function
+## Enable SSO in Microsoft Entra ID
 
-## Prerequisites
+Registering your tab app in Microsoft Entra ID and enabling it for SSO requires making app configurations, such as generating app ID, defining API scope, and preauthorizing client IDs for trusted applications.
 
-You need to install the following tools and set up your development environment:
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-azure-ad.png" alt-text="Configure Microsoft Entra ID to send access token to Teams Client app":::
 
-| &nbsp; | Install | For using... |
-   | --- | --- | --- |
-   | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
-   | &nbsp; | [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) (previously known as Teams Toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use 4.0.0 version. |
-   | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type). |
-   | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
-   | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge/) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+Create a new app registration in Microsoft Entra ID, and expose its (web) API using scopes (permissions). Configure a trust relationship between the exposed API on Microsoft Entra ID and your app. It allows Teams Client to obtain an access token on behalf of your application and the logged-in user. You can add client IDs for the trusted mobile, desktop, and web applications that you want to preauthorize.
 
-For more information on Node.js version compatibility, see [Prerequisites for creating your Teams app](/microsoftteams/platform/toolkit/tools-prerequisites?branch=pr-en-us-8020) using Visual Studio Code.
+You might also need to configure other details, such as authenticating app users on the platform or device where you want to target your tab app.
+
+User-level Graph API permissions are supported, such as email, profile, offline_access, and OpenId. If you require access to other Graph scopes, such as `User.Read` or `Mail.Read`, see [get an access token with Graph permissions](tab-sso-graph-api.md#acquire-access-token-for-ms-graph).
+
+Microsoft Entra configuration enables SSO for your tab app in Teams. It responds with an access token for validating the app user.
+
+### Before you configure your app
+
+It's helpful if you learn about the configuration for registering your app on Microsoft Entra ID beforehand. Ensure that you've prepared to configure the following details prior to registering your app:
+
+- **Single or multitenant options**: Will your application be used in only the Microsoft 365 tenant where it's registered, or will many Microsoft 365 tenants use it? Applications written for one enterprise are typically single-tenant. Applications written by an independent software vendor and used by many customers need to be multitenant so each customer's tenant can access the application.
+- **Application ID URI**: It's a globally unique URI that identifies the web API you expose for your app's access through scopes. It's also referred to as an identifier URI. The application ID URI includes the app ID and the subdomain where your app is hosted. Your application's domain name and the domain name you register for your Microsoft Entra application must be the same. The multiple domains per app aren't supported.
+- **Scope**: It's the permission that an authorized app user or your app can be granted for accessing a resource exposed by the API.
 
 > [!NOTE]
-> If your project has installed `botbuilder`related [packages](https://github.com/Microsoft/botbuilder-js#packages) as dependencies, ensure they are of the same version.
+>
+> - **Custom apps built for your org (LOB apps)**: Custom apps built for your org (LOB apps) are internal or specific within your organization or business. Your organization can make these apps available through Microsoft Store.
+> - **Customer-owned apps**: SSO is also supported for customer-owned apps within the Azure AD B2C tenants.
 
-You must have working knowledge of:
+To create and configure your app in Microsoft Entra ID for enabling SSO:
 
-* [Source code](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk)
-* [Package (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx)
-* [API reference documentation](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true)
-* [Samples](https://github.com/OfficeDev/TeamsFx-Samples)
+- [Configure access token version.](#configure-access-token-version)
+- [Configure scope for access token.](#configure-scope-for-access-token)
 
-## Get started
+<a name='configure-your-app-in-azure-ad'></a>
 
-TeamsFx SDK is pre-configured in the scaffolded project using Microsoft 365 Agents Toolkit CLI (previously known as TeamsFx Toolkit or CLI).
-For more information, see [Teams app project](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md).
+## Configure your app in Microsoft Entra ID
 
- > [!Tip]
- > The code snippets are updated for the latest TeamsFx SDK version 2.
+You can configure your tab app in Microsoft Entra ID to configure the scope and permissions for access tokens.
 
-### Install the package
+Register your app in Microsoft Entra ID and configure the tenancy and app's platform, before you can enable it for SSO. Microsoft Entra ID generates a new app ID that you must note. You need to update it later in the app manifest (previously called Teams app manifest) file.
 
-Install `@microsoft/m365agentstoolkit-cli` from `npm` and run `atk -h` to check all available commands:
+> [!NOTE] > Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) registers the Microsoft Entra application in an SSO project. You can skip this section if you've used Agents Toolkit to create your app. However, you would need to configure permissions and scope, and trust client applications.
 
-```bash
-  npm install -g @microsoft/m365agentstoolkit-cli
-  atk -h
-```
+<details> <summary><b>Learn how to register your app in Microsoft Entra ID</b></summary>
 
-## TeamsFx core functionalities
+<a name='to-register-a-new-app-in-azure-ad'></a>
 
-### TeamsFx class
+### To register a new app in Microsoft Entra ID
 
-TeamsFx class instance access all TeamsFx settings from the environment variables by default. You can set customized configuration values to override the default values. For more information, see [override configuration](#override-configuration-for-teamsfx-class) for details.
-When creating a TeamsFx instance, you need to specify the identity type.
+1. Open the [Azure portal](https://ms.portal.azure.com/) on your web browser.
 
-The following list provides the two different type of identities:
+2. Select the **App registrations** icon.
 
-* **User Identity**: Represents the current user of Teams.
-* **Application Identity**: Represents the application itself.
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal.png" alt-text="Microsoft Entra admin center page.":::
+
+   The **App registrations** page appears.
+
+3. Select **+ New registration** icon.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-registrations.png" alt-text="New registration page on Microsoft Entra admin center.":::
+
+    The **Register an application** page appears.
+
+4. Enter the name of your app that you want to be displayed to the app user. You can change the name at a later stage, if you want to.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-app.png" alt-text="App registration page on Microsoft Entra admin center.":::
+
+5. Select the type of user account that can access your app. You can select from single or multitenant options in organizational directories, or restrict the access to personal Microsoft accounts only.
+
+    <details> <summary><b>Options for supported account types</b></summary>
+
+    | Option | Select this to... | | --- | --- | | Accounts in this organizational directory only (Microsoft only - Single tenant) | Build an application for use only by users (or guests) in your tenant. <br> Often called custom app built for your org (LOB app), this app is a single-tenant application in the Microsoft identity platform. | | Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant) | Let users in any Microsoft Entra tenant use your application. This option is appropriate if, for example, you're building a SaaS application, and you intend to make it available to multiple organizations. <br> This type of app is known as a multitenant application in the Microsoft identity platform.| | Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox) | Target the widest set of customers. <br> By selecting this option, you're registering a multitenant application that can support app users who have personal Microsoft accounts also. | | Personal Microsoft accounts only | Build an application only for users who have personal Microsoft accounts. |
+
+    </details>
+
+    > [!NOTE] > You don't need to enter **Redirect URI** for enabling SSO for a tab app.
+
+7. Select **Register**. A message pops up on the browser stating that the app was created.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-created-msg.png" alt-text="Register app on Microsoft Entra admin center.":::
+
+    The page with app ID and other configurations is displayed.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tab-app-created.png" alt-text="App registration is successful.":::
+
+8. Note and save the app ID from **Application (client) ID** to update the app manifest later.
+
+    Your app is registered in Microsoft Entra ID. You now have app ID for your tab app.
+
+</details>
+
+### Configure access token version
+
+You must define the access token version for your app. You can find this configuration in the Microsoft Entra application app manifest.
+
+#### To configure the access token version
+
+1. Select **Manage** > **Manifest** from the left pane.
+
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-portal-manifest.png" alt-text="Microsoft Entra admin center Manifest":::
+
+    The Microsoft Entra application app manifest appears.
+
+1. Set the `requestedAccessTokenVersion` property to **2**.
+
+    > [!NOTE] > If you've selected **Personal Microsoft accounts only** or **Accounts in any organizational directory (Any Microsoft Entra directory - Multitenant) and personal Microsoft accounts (for example, Skype and Xbox)** during app registration, update the value for the `requestedAccessTokenVersion` property as **2**.
+
+   :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-manifest-value.png" alt-text="Value for access token version" lightbox="../../../assets/images/authentication/teams-sso-tabs/azure-manifest-value.png":::
+
+1. Select **Save**.
+
+    A message pops up on the browser stating that the app manifest was updated successfully.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-aad-manifest-msg.png" alt-text="Manifest updated message":::
+
+After you've verified and configured the version of access token, you must configure its scope.
+
+### Configure scope for access token
+
+After you've created a new app registration, configure scope (permission) options for sending access token to Teams Client, and authorizing trusted client applications to enable SSO.
+
+To configure scope and authorize trusted client applications, you need:
+
+- [To expose an API](#to-expose-an-api): Configure scope (permission) options for your app. Expose a web API and configure the application ID URI.
+- [To configure API scope](#to-configure-api-scope): Define scope for the API and specify users who can consent to a scope. Allow only admins to consent to higher-privileged permissions.
+- [To configure authorized client application](#to-configure-authorized-client-application): Create authorized client IDs for applications you want to preauthorize. This allows app users to access the app scopes (permissions) you've configured without requiring further consent. Preauthorize only trusted client applications, as app users won't have the opportunity to decline consent.
+
+#### To expose an API
+
+1. Select **Manage** > **Expose an API** from the left pane.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-api-menu.png" alt-text="Expose an API menu option.":::
+
+    The **Expose an API** page appears.
+
+1. Select **Add** to generate the application ID URI in the form of `api://{AppID}`.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-an-api.png" alt-text="Set app ID URI":::
+
+    The section for setting the application ID URI appears.
+
+1. Enter the application ID URI in the specified format.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/set-app-id-uri.png" alt-text="Application ID URI":::
+
+    - The **Application ID URI** is prefilled with the app ID (GUID) in the format `api://{AppID}`.
+    - The application ID URI format must be: `api://fully-qualified-domain-name.com/{AppID}`.
+    - Insert the `fully-qualified-domain-name.com` between `api://` and `{AppID}` (which is, GUID). For example, api://example.com/{AppID}.
+
+    where,
+    - `fully-qualified-domain-name.com` is the human-readable domain name from which your tab app is served. Your application's domain name and the domain name you register for your Microsoft Entra application must be the same.
+
+If you're using a tunneling service like ngrok, update this value whenever your ngrok subdomain changes.
+
+- `AppID` is the app ID (GUID) generated when you registered your app. You can view it in the **Overview** section.
+
+> [!IMPORTANT]
+>
+> - **Sensitive information**: The application ID URI is logged as part of the authentication process and mustn't contain sensitive information.
+>
+> - **Application ID URI for app with multiple capabilities**: If you're building an app with a bot, a messaging extension, and a tab, enter the application ID URI as `api://fully-qualified-domain-name.com/botid-{YourClientId}`, where {YourClientId} is your bot app ID.
+>
+> - **Format for domain name**: Use lowercase letters for the domain name. Don't use uppercase.
+>
+>   For example, to create an app service or web app with resource name, `demoapplication`:
+>
+>   | If base resource name used is | URL will be... | Format is supported on... |
+>   | --- | --- | --- |
+>   | *demoapplication* | `https://demoapplication.example.net` | All platforms.|
+>   | *DemoApplication* | `https://DemoApplication.example.net` | Desktop, web, and iOS only. It isn't supported in Android. |
+>
+>    Use the lowercase option *demoapplication* as the base resource name.
+
+1. Select **Save**.
+
+    A message pops up on the browser stating that the application ID URI was updated.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-msg.png" alt-text="Application ID URI message":::
+
+    The application ID URI displays on the page.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-added.png" alt-text="Application ID URI updated":::
+
+1. Note and save the Application ID URI to update the app manifest later.
+
+ > [!div class="nextstepaction"]
+ > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+expose+an+API&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fauthentication%2Ftab-sso-register-aad%23to-expose-an-api&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fauthentication%2Ftab-sso-register-aad.md&documentVersionIndependentId=52cb5b2e-e1e9-1993-04a0-6925d1453f20&platformId=99c40f58-4ac9-d047-867f-7323665fe4e0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+#### To configure API scope
+
+1. Select **+ Add a scope** in the **Scopes defined by this API** section.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/select-scope.png" alt-text="Select scope":::
+
+    The **Add a scope** page appears.
+
+1. Enter the details for configuring the scope.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="The screenshot shows how to add scope details in Azure.":::
+
+    1. Enter the scope name. This field is mandatory.
+    2. Select the user who can give consent for this scope. The default option is **Admins only**.
+    3. Enter the **Admin consent display name**. This field is mandatory.
+    4. Enter the description for admin consent. This field is mandatory.
+    5. Enter the **User consent display name**.
+    6. Enter the description for user consent description.
+    7. Select the **Enabled** option for state.
+    8. Select **Add scope**.
+
+    A message pops up on the browser stating that the scope was added.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added-msg.png" alt-text="Scope added message":::
+
+    The new scope you defined displays on the page.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added.png" alt-text="Scope added and displayed":::
+
+ > [!div class="nextstepaction"]
+ > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+configure+API+scope&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fauthentication%2Ftab-sso-register-aad%23to-configure-api-scope&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fauthentication%2Ftab-sso-register-aad.md&documentVersionIndependentId=52cb5b2e-e1e9-1993-04a0-6925d1453f20&platformId=99c40f58-4ac9-d047-867f-7323665fe4e0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+#### To configure authorized client application
+
+1. Navigate to the **Expose an API** page, go to the **Authorized client application** section, and select **+ Add a client application**.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/auth-client-apps.png" alt-text="Authorized client application":::
+
+    The **Add a client application** page appears.
+
+1. Enter the appropriate Microsoft 365 client ID for the applications you want to authorize for your app’s web application.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-app.png" alt-text="Add a client application":::
 
     > [!NOTE]
-    > The TeamsFx constructors and methods aren't the same for these two identity types.
+    >
+    > - The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams, Microsoft 365 app, and Outlook are the actual IDs you must add.
+    > - For a Teams tab app, you need either Web or SPA, as you can't have a mobile or desktop client application in Teams.
 
-You can learn more about user identity and application identity in the following section:
+    1. Select one of the following client IDs:
 
-<details>
-<summary><b> User identity </b></summary>
+        [!INCLUDE [Microsoft 365 client application IDs](~/includes/tabs/microsoft-365-client-application-ids.md)]
 
-| Command | Description |
-|----------------|-------------|
-| `new TeamsFx(IdentityType.User)`| Application is authenticated as current Teams user. |
-| `TeamsFx:setSsoToken()`| User identity in Node.js environment (without browser). |
-| `TeamsFx:getUserInfo()` | To get user's basis information. |
-| `TeamsFx:login()` | It's used to let user perform consent process, if you want to use SSO to get access token for certain OAuth scopes. |
+    1. Select the application ID URI you created for your app in **Authorized scopes** to add the scope to the web API you exposed.
 
-> [!NOTE]
-> You can access resources on behalf of current Teams user.
-</details>
+    1. Select **Add application**.
 
-<details>
-<summary><b> Application identity </b></summary>
+       A message pops up on the browser stating that the authorized client app was added.
 
-| Command | Description |
-|----------------|-------------|
-| `new TeamsFx(IdentityType.App)`| Application  is authenticated as an application. The permission usually needs administrator's approval.|
-| `TeamsFx:getCredential()`| It provides credential instances automatically corresponding to the identity type. |
+       :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Client application added message":::
+
+       The authorized app's client ID displays on the page.
+
+       :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Client app added and displayed":::
 
 > [!NOTE]
-> You need admin consent for resources.
-</details>
+> You can authorize more than one client application. Repeat the steps of this procedure for configuring another authorized client application.
 
-### Credential
+You've successfully configured app scope, permissions, and client applications. Ensure that you note and save the application ID URI.
 
-Credential classes implement the `TokenCredential` interface that is broadly used in Azure library APIs designed to provide access tokens for specific scopes. For more information on credential and auth flow related classes, see [credential folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential).
+Congratulations! You've completed the app configuration in Microsoft Entra ID required to enable SSO for your tab app.
 
-There are three credential classes to simplify authentication. Here's the corresponding scenarios for each credential class target:
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+define+the+access+token+version&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fauthentication%2Ftab-sso-register-aad%23to-define-the-access-token-version&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fauthentication%2Ftab-sso-register-aad.md&documentVersionIndependentId=52cb5b2e-e1e9-1993-04a0-6925d1453f20&platformId=99c40f58-4ac9-d047-867f-7323665fe4e0&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
-<details>
-<summary><b> User identity in browser environment </b></summary>
+## Next step
 
-`TeamsUserCredential` represents Teams current user's identity. For the first time user's credentials are authenticated, then Teams SSO does the  On-Behalf-Of flow for token exchange. SDK uses this credential when you choose user identity in the browser environment.
-
-The following code is an example to create `TeamsUserCredential`:
-
-```typescript
-const authConfig: TeamsUserCredentialAuthConfig = {
-  clientId: process.env.REACT_APP_CLIENT_ID,
-  initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-};
-
-const credential = new TeamsUserCredential(authConfig);
-```
-
-Required configurations are `initiateLoginEndpoint` and `clientId` that's found inside type `TeamsUserCredentialAuthConfig`.
-
-</details>
-
-<details>
-<summary><b> User identity in Node.js environment </b></summary>
-
-`OnBehalfOfUserCredential` uses On-Behalf-Of flow and require Teams SSO token, in Azure Function or bot scenarios. TeamsFx SDK uses the following credential when you choose user identity in Node.js environment.
-
-The following code is an example to create `OnBehalfOfUserCredential`:
-
-```typescript
-const oboAuthConfig: OnBehalfOfCredentialAuthConfig = {
-  authorityHost: process.env.M365_AUTHORITY_HOST,
-  clientId: process.env.M365_CLIENT_ID,
-  tenantId: process.env.M365_TENANT_ID,
-  clientSecret: process.env.M365_CLIENT_SECRET,
-};
-
-const oboCredential = new OnBehalfOfUserCredential(ssoToken, oboAuthConfig);
-```
-
-Required configurations are `authorityHost`, `tenantId`, `clientId`, `clientSecret`, or `certificateContent` that's found inside type `OnBehalfOfCredentialAuthConfig`.
-
-</details>
-
-<details>
-<summary><b> App identity in Node.js environment </b></summary>
-
-`AppCredential` represents the app identity. You can use app identity when user isn't involved, for example, in a time-triggered automation job. TeamsFx SDK uses the following credential when you choose app identity in Node.js environment.
-
-The following code is an example to create `AppCredential`:
-
-```typescript
-const appAuthConfig: AppCredentialAuthConfig = {
-  authorityHost: process.env.M365_AUTHORITY_HOST,
-  clientId: process.env.M365_CLIENT_ID,
-  tenantId: process.env.M365_TENANT_ID,
-  clientSecret: process.env.M365_CLIENT_SECRET,
-};
-const appCredential = new AppCredential(appAuthConfig);
-```
-
-Required configurations are `authorityHost`, `tenantId`, `clientId`, `clientSecret`, or `certificateContent` that's inside type `AppCredentialAuthConfig`
-</details>
-
-### Bot SSO
-
-Bot related classes are stored under [bot folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/bot).
-
-`TeamsBotSsoPrompt` integrates with the bot framework. It simplifies the authentication process when you develop bot application and want to use the bot SSO.
-
-The following code is an example to create `TeamsBotSsoPrompt`:
-
-```typescript
-const TeamsBotSsoPromptId = "TEAMS_BOT_SSO_PROMPT";
-
-const settings: TeamsBotSsoPromptSettings = {
-  scopes: ["User.Read"],
-  timeout: 900000,
-  endOnInvalidMessage: true,
-};
-
-const authConfig: OnBehalfOfCredentialAuthConfig = {
-  authorityHost: process.env.M365_AUTHORITY_HOST,
-  clientId: process.env.M365_CLIENT_ID,
-  tenantId: process.env.M365_TENANT_ID,
-  clientSecret: process.env.M365_CLIENT_SECRET,
-};
-const loginUrl = process.env.INITIATE_LOGIN_ENDPOINT;
-const ssoPrompt = new TeamsBotSsoPrompt(authConfig, loginUrl, TeamsBotSsoPromptId, settings);
-```
-
-### Supported functions
-
-TeamsFx SDK provides several functions to ease the configuration for third-party libraries. They're located under [core folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core).
-
-* Microsoft Graph Service:`createMicrosoftGraphClient`, `createMicrosoftGraphClientWithCredential`, and `MsGraphAuthProvider` helps to create authenticated Graph instance.
-
-  > [!NOTE]
-  > `createMicrosoftGraphClient` function has been deprecated. Its recommended that you to use `createMicrosoftGraphClientWithCredential` instead, for better coding experience.
-
-* SQL: The `getTediousConnectionConfig` returns a tedious connection config.
-
-    Required configuration:
-
-  * If you want to use the user identity, then `sqlServerEndpoint`, `sqlUsername`, and `sqlPassword` are required.
-  * If you want to use the MSI identity, then `sqlServerEndpoint`and `sqlIdentityId` are required.
-
-  > [!NOTE]
-  > The `getTediousConnectionConfig` function has been deprecated. Its recommended that you compose your own Tedious configuration for better flexibility.
-
-### Override configuration for TeamsFx class
-
-> [!NOTE]
-> TeamsFx class has been deprecated. Use `TeamsUserCredential`, `OnBehalfOfUserCredential`, and `AppCredential` instead.
-
-You can pass custom config when creating a new `TeamsFx` instance to override default configuration or set required fields when `environment variables` are missing.
-
-<details>
-<summary><b>
-For tab project
-</b> </summary>
-
-If you've created tab project using Microsoft Visual Studio Code Toolkit, the following config values are used from pre-configured environment variables:
-
-* authorityHost (REACT_APP_AUTHORITY_HOST)
-* tenantId (REACT_APP_TENANT_ID)
-* clientId (REACT_APP_CLIENT_ID)
-* initiateLoginEndpoint (REACT_APP_START_LOGIN_PAGE_URL)
-* applicationIdUri (REACT_APP_START_LOGIN_PAGE_URL)
-* apiEndpoint (REACT_APP_FUNC_ENDPOINT) // only used when there's a backend function
-* apiName (REACT_APP_FUNC_NAME) // only used when there's a backend function
-
-</details>
-
-<details>
-<summary><b>
-For Azure Function or bot project
-</b></summary>
-
-If you've created Azure Function or bot project using Visual Studio Code Toolkit, the following config values are used from pre-configured environment variables:
-
-* initiateLoginEndpoint (INITIATE_LOGIN_ENDPOINT)
-* authorityHost (M365_AUTHORITY_HOST)
-* tenantId (M365_TENANT_ID)
-* clientId (M365_CLIENT_ID)
-* clientSecret (M365_CLIENT_SECRET)
-* applicationIdUri (M365_APPLICATION_ID_URI)
-* apiEndpoint (API_ENDPOINT)
-
-* sqlServerEndpoint (SQL_ENDPOINT) // only used when there's an sql instance
-* sqlUsername (SQL_USER_NAME) // only used when there's an sql instance
-* sqlPassword (SQL_PASSWORD) // only used when there's an sql instance
-* sqlDatabaseName (SQL_DATABASE_NAME) // only used when there's an SQL instance
-* sqlIdentityId (IDENTITY_ID) // only used when there's an SQL instance
-
-</details>
-
-### Error handling
-
-Basic type of API error response is `ErrorWithCode`, which contains error code and error message. For example, to filter out specific error, you can use the following snippet:
-
-```typescript
-try {
-  const atk = new TeamsFx();
-  await teamsfx.login("User.Read");
-} catch (err: unknown) {
-  if (err instanceof ErrorWithCode && err.code !== ErrorCode.ConsentFailed) {
-    throw err;
-  } else {
-    // Silently fail because user cancels the consent dialog
-    return;
-  }
-}
-```
-
-> [!NOTE]
-> TeamsFx class has been deprecated, and `ErrorWithCode` is not recommended. You can use `TeamsUserCredential` instead.
-
-```typescript
-try {
-  const authConfig: TeamsUserCredentialAuthConfig = {
-    clientId: process.env.REACT_APP_CLIENT_ID,
-    initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-  };
-
-  const credential = new TeamsUserCredential(authConfig);  
-  await credential.login("User.Read");
-} catch (err: unknown) {
-  if (err instanceof ErrorWithCode && err.code !== ErrorCode.ConsentFailed) {
-    throw err;
-  } else {
-    // Silently fail because user cancels the consent dialog
-    return;
-  }
-}
-```
-
-If a credential instance is used in other library, such as Microsoft Graph, it's possible that an error is caught and transformed.
-
-## Microsoft Graph Scenarios
-
-This section provides several code snippets for common scenarios that are related to the Microsoft Graph. In such scenarios, user can call APIs using different permissions in frontend or backend.
-
-* User delegate permission in frontend (Use `TeamsUserCredential`)
-    <details>
-    <summary><b>Use graph API in tab app</b></summary>
-
-    This code snippet shows you how to use `TeamsUserCredential` and `createMicrosoftGraphClientWithCredential` to get user profiles from Microsoft Graph in tab app. It also shows you how to catch and resolve a `GraphError`.
-
-    1. Import the classes needed.
-
-       ```typescript
-       import {
-        createMicrosoftGraphClientWithCredential,
-        TeamsUserCredential,
-       } from "@microsoft/teamsfx";
-       ```
-
-    2. Create `TeamsUserCredential` instance.
-
-       ```typescript
-       const authConfig: TeamsUserCredentialAuthConfig = {
-       clientId: process.env.REACT_APP_CLIENT_ID!,
-       initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL!,
-       };
-
-       const teamsUserCredential = new TeamsUserCredential(authConfig);
-       ```
-
-    3. Use `teamsUserCredential.login()` to get user consent.
-
-       ```typescript
-       // Put these code in a call-to-action callback function to avoid browser blocking automatically showing up pop-ups.
-       await teamsUserCredential.login(["User.Read"]); // Login with scope
-       ```
-
-    4. You can initialize a TeamsFx instance and graph client and get information from Microsoft Graph by this client.
-
-       ```typescript
-       try {
-        const graphClient = createMicrosoftGraphClientWithCredential(teamsUserCredential, ["User.Read"]); // Initializes MS Graph SDK using our MsGraphAuthProvider
-        const profile = await graphClient.api("/me").get();
-       } catch (err: unknown) {
-        // ErrorWithCode is handled by Graph client
-        if (err instanceof GraphError && err.code?.includes(ErrorCode.UiRequiredError)) {
-          // Need to show login button to ask for user consent.
-        }
-       }
-       ```
-
-    For more information on sample to use Graph API in tab app, see [Graph Conector app sample](https://github.com/OfficeDev/microsoft-365-agents-toolkit-samples/tree/dev/copilot-connector-app).
-
-    </details>
-
-    <details>
-    <summary><b>Integration with Microsoft Graph Toolkit</b></summary>
-
-    The [Microsoft Graph Toolkit](https://github.com/microsoftgraph/microsoft-graph-toolkit) library is a collection of various authentication providers and UI components powered by Microsoft Graph.
-
-    The `@microsoft/mgt-teamsfx-provider` package exposes the `TeamsFxProvider` class that uses `TeamsFx` class to sign in users and acquire tokens to use with Microsoft Graph.
-
-    1. You can install the following required packages:
-
-       ```bash
-          npm install @microsoft/mgt-element @microsoft/mgt-teamsfx-provider @microsoft/teamsfx
-       ```
-
-    2. Initialize the provider inside your component.
-
-       ```typescript
-       // Import the providers and credential at the top of the page
-       import {Providers} from '@microsoft/mgt-element';
-       import {TeamsFxProvider} from '@microsoft/mgt-teamsfx-provider';
-       import {TeamsUserCredential} from "@microsoft/teamsfx";
-
-       const scope = ["User.Read"];
-       const atk = new TeamsFx();
-       const provider = new TeamsFxProvider(teamsfx, scope);
-       Providers.globalProvider = provider;   
-       ```
-
-    3. You can use the `teamsfx.login(scopes)` method to get required access token.
-
-       ```typescript
-       // Put these code in a call-to-action callback function to avoid browser blocking automatically showing up pop-ups. 
-       await teamsfx.login(this.scope);
-       Providers.globalProvider.setState(ProviderState.SignedIn);
-       ```
-
-    4. You can add any component in your HTML page or in your `render()` method with React to use the `TeamsFx` context to access Microsoft Graph.
-
-       ```html
-       <mgt-person query="me" view="threeLines"></mgt-person>
-       ```
-
-       ```typescript
-       public render(): void {
-       return (
-        <div>
-            <Person personQuery="me" view={PersonViewType.threelines}></Person>
-        </div>
-       );
-       }    
-       ```
-
-    For more information on sample to initialize the TeamsFx provider, see the [contacts exporter sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/graph-toolkit-contact-exporter).
-
-    </details>
-
-* User delegate permission in backend (Use `OnBehalfOfUserCredential`)
-    <details>
-    <summary><b>Use Graph API in bot Application</b></summary>
-
-    This code snippet shows you how to use `TeamsBotSsoPrompt` to set a dialog and then sign in to get an access token.
-
-    1. Initialize and add `TeamsBotSsoPrompt` to dialog set.
-
-       ```typescript
-       const { ConversationState, MemoryStorage } = require("botbuilder");
-       const { DialogSet, WaterfallDialog } = require("botbuilder-dialogs");
-       const { TeamsBotSsoPrompt, OnBehalfOfCredentialAuthConfig, TeamsBotSsoPromptSettings } = require("@microsoft/teamsfx");
-
-       const convoState = new ConversationState(new MemoryStorage());
-       const dialogState = convoState.createProperty("dialogState");
-       const dialogs = new DialogSet(dialogState);
-
-       const TeamsBotSsoPromptId = "TEAMS_BOT_SSO_PROMPT";
-
-       const settings: TeamsBotSsoPromptSettings = {
-       scopes: ["User.Read"],
-       timeout: 900000,
-       endOnInvalidMessage: true,
-       };
-
-       const authConfig: OnBehalfOfCredentialAuthConfig = {
-        authorityHost: process.env.M365_AUTHORITY_HOST,
-        clientId: process.env.M365_CLIENT_ID,
-        tenantId: process.env.M365_TENANT_ID,
-        clientSecret: process.env.M365_CLIENT_SECRET,
-       };
-       const loginUrl = process.env.INITIATE_LOGIN_ENDPOINT;
-       const ssoPrompt = new TeamsBotSsoPrompt(authConfig, loginUrl, TeamsBotSsoPromptId, settings);
-
-       dialogs.add(ssoPrompt);    
-       ```
-
-    2. Start the dialog and sign in.
-
-       ```typescript
-       dialogs.add(
-         new WaterfallDialog("taskNeedingLogin", [
-          async (step) => {
-            return await step.beginDialog("TeamsBotSsoPrompt");
-          },
-          async (step) => {
-           const token = step.result;
-           if (token) {
-             // ... continue with task needing access token ...
-           } else {
-            await step.context.sendActivity(`Sorry... We couldn't log you in. Try again later.`);
-            return await step.endDialog();
-           }
-         },
-        ])
-       );    
-        ```
-
-    For more information on sample to use graph API in bot application, see [bot-sso sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/bot-sso).
-
-    </details>
-
-    <details>
-    <summary><b>Use Graph API in Message Extension</b></summary>
-
-    The following code snippet shows how to override `handleTeamsMessagingExtensionQuery` that extends from `TeamsActivityHandler`, and use `handleMessageExtensionQueryWithSSO` provided by TeamsFx SDK to sign in to get an access token:
-
-    ```typescript
-
-     const authConfig: OnBehalfOfCredentialAuthConfig = {
-      authorityHost: process.env.M365_AUTHORITY_HOST,
-      clientId: process.env.M365_CLIENT_ID,
-      tenantId: process.env.M365_TENANT_ID,
-      clientSecret: process.env.M365_CLIENT_SECRET,
-     };
-     const loginUrl = process.env.INITIATE_LOGIN_ENDPOINT;
-     public async handleTeamsMessagingExtensionQuery(context: TurnContext, query: any): Promise<any> {
-      return await handleMessageExtensionQueryWithSSO(context, authConfig, loginUrl, 'User.Read', 
-        async (token: MessageExtensionTokenResponse) => {
-          // ... continue to query with access token ...
-        });
-     }    
-    ```
-
-    For more information on sample to use graph API in message extension, see [message-extension-sso-sample](https://github.com/OfficeDev/microsoft-365-agents-toolkit-samples/tree/dev/query-org-user-with-message-extension-sso).
-    </details>
-
-    <details>
-    <summary><b>Use Graph API in Command Bot</b></summary>
-
-    This code snippet shows you how to implement `TeamsFxBotSsoCommandHandler` for command bot to call Microsoft API.
-
-    ```typescript
-     import { Activity, TurnContext } from "botbuilder";
-     import {
-      CommandMessage,
-      TriggerPatterns,
-      createMicrosoftGraphClientWithCredential,
-      TeamsFxBotSsoCommandHandler,
-      TeamsBotSsoPromptTokenResponse,
-     } from "@microsoft/teamsfx";
-
-     const authConfig: OnBehalfOfCredentialAuthConfig = {
-      authorityHost: process.env.M365_AUTHORITY_HOST,
-      clientId: process.env.M365_CLIENT_ID,
-      tenantId: process.env.M365_TENANT_ID,
-      clientSecret: process.env.M365_CLIENT_SECRET,
-     };
-     const loginUrl = process.env.INITIATE_LOGIN_ENDPOINT;
-
-     export class ProfileSsoCommandHandler implements TeamsFxBotSsoCommandHandler {
-      triggerPatterns: TriggerPatterns = "profile";
-
-      async handleCommandReceived(
-        context: TurnContext,
-        message: CommandMessage,
-        tokenResponse: TeamsBotSsoPromptTokenResponse,
-      ): Promise<string | Partial<Activity> | void> {
-
-        const oboCredential = new OnBehalfOfUserCredential(tokenResponse.ssoToken, oboAuthConfig);
-
-        // Add scope for your Azure AD app. For example: Mail.Read, etc.
-        const graphClient = createMicrosoftGraphClientWithCredential(oboCredential, ["User.Read"]);
-      
-        // Call graph api use `graph` instance to get user profile information
-        const me = await graphClient.api("/me").get();
-
-        if (me) {
-          // Bot will send the user profile info to user
-          return `Your command is '${message.text}' and you're logged in as ${me.displayName}`;
-        } else {
-          return "Could not retrieve profile information from Microsoft Graph.";
-        }
-      }
-     }    
-
-     ```
-
-    For more information about how to implement SSO command handler in command bot, see [add single sign-on to Teams app](add-single-sign-on.md). And there's a [command-bot-with-sso](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/command-bot-with-sso) sample project, that you can try SSO command bot.
-
-    </details>
-
-    <details>
-    <summary><b>Call Azure Function in tab app: On-Behalf-Of flow</b></summary>
-
-    This code snippet shows you how to use `CreateApiClient` or `axios` library to call Azure Function, and how to call Graph API in Azure Function to get user profiles.
-
-    1. You can use `CreateApiClient` provided by TeamsFx sdk to call Azure Function:
-
-       ```typescript
-       async function callFunction() {
-         const authConfig: TeamsUserCredentialAuthConfig = {
-        clientId: process.env.REACT_APP_CLIENT_ID,
-        initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-         };
-        const teamsUserCredential = new TeamsUserCredential(authConfig);
-        // Create an API client by providing the token and endpoint.
-        const apiClient = CreateApiClient(
-          "https://YOUR_API_ENDPOINT", // Create an API Client that uses SSO token to authenticate requests
-          new BearerTokenAuthProvider(async () =>  (await teamsUserCredential.getToken(""))!.token) // Call API hosted in Azure Functions on behalf of user to inject token to request header
-        );
-        // Send a GET request to "RELATIVE_API_PATH", "/api/functionName" for example.
-         const response = await apiClient.get("RELATIVE_API_PATH");
-         return response.data;
-       }    
-       ```
-
-        You can also use `axios` library to call Azure Function.
-
-        ```typescript
-        async function callFunction() {
-          const authConfig: TeamsUserCredentialAuthConfig = {
-            clientId: process.env.REACT_APP_CLIENT_ID,
-            initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-          };
-          const teamsUserCredential = new TeamsUserCredential(authConfig);
-          const accessToken = await teamsUserCredential.getToken(""); // Get SSO token 
-          const endpoint = "https://YOUR_API_ENDPOINT";
-          const response = await axios.default.get(endpoint + "/api/" + functionName, {
-            headers: {
-              authorization: "Bearer " + accessToken.token,
-            },
-          });
-          return response.data;
-        }    
-
-        ```
-
-    2. Call Graph API in Azure Function on-behalf of user in response.
-
-       ```typescript
-
-       export default async function run(
-       context: Context,
-       req: HttpRequest,
-       teamsfxContext: TeamsfxContext
-       ): Promise<Response> {
-        const res: Response = { status: 200, body: {},};
-
-        const authConfig: OnBehalfOfCredentialAuthConfig = {
-          authorityHost: process.env.M365_AUTHORITY_HOST,
-          clientId: process.env.M365_CLIENT_ID,
-          tenantId: process.env.M365_TENANT_ID,
-          clientSecret: process.env.M365_CLIENT_SECRET,
-        };
-        const oboCredential = new OnBehalfOfUserCredential(tokenResponse.ssoToken, oboAuthConfig);
-
-        // Query user's information from the access token.
-        try {
-         const currentUser: UserInfo = await oboCredential.getUserInfo();
-         if (currentUser && currentUser.displayName) {
-           res.body.userInfoMessage = `User display name is ${currentUser.displayName}.`;
-         } else {
-           res.body.userInfoMessage = "No user information was found in access token.";
-         }
-        } catch (e) {
-        }
-        // Create a graph client to access user's Microsoft 365 data after user has consented.
-        try {
-         const graphClient: Client = createMicrosoftGraphClientWithCredential(oboCredential, [".default"]);
-         const profile: any = await graphClient.api("/me").get();
-         res.body.graphClientMessage = profile;
-        } catch (e) {
-        }
-        return res;
-        }
-
-       ```
-
-    For more information on sample to use graph API in bot application, see  [hello-world-tab-with-backend sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-with-backend).
-
-    </details>
-
-* Application permission in backend
-    <details>
-    <summary><b>Use certificate-based authentication in Azure Function</b></summary>
-
-    This code snippet shows you how to use certificate-based application permission to get the token that can be used to call Graph API.
-
-    1. You can initialize the `appAuthConfig` by providing a `PEM-encoded key certificate`.
-
-       ```typescript
-        const appAuthConfig: AppCredentialAuthConfig = {
-          authorityHost: process.env.M365_AUTHORITY_HOST,
-          clientId: process.env.M365_CLIENT_ID,
-          tenantId: process.env.M365_TENANT_ID,
-          certificateContent: 'PEM-encoded key certificate',
-         };
-
-       ```
-
-    2. You can use `AppCredential` to get the token.
-
-       ```typescript
-       const appCredential = new AppCredential(appAuthConfig);
-       const token = appCredential.getToken();    
-       ```
-
-    </details>
-
-    <details>
-    <summary><b>Use client secret authentication in Azure Function</b></summary>
-
-    This code snippet shows you how to use client secret application permission to get the token that's used to call Graph API.
-
-    1. You can initialize the `authConfig` by providing a `client secret`.
-
-       ```typescript
-       const appAuthConfig: AppCredentialAuthConfig = {
-        authorityHost: process.env.M365_AUTHORITY_HOST,
-        clientId: process.env.M365_CLIENT_ID,
-        tenantId: process.env.M365_TENANT_ID,
-        clientSecret: process.env.M365_CLIENT_SECRET,
-       };
-       ```
-
-    2. You can use the `authConfig` to get the token.
-
-       ```typescript
-       const appCredential = new AppCredential(appAuthConfig);
-       const token = appCredential.getToken();    
-       ```
-
-    For more information on sample to use graph API in bot application, see the [hello-world-tab-with-backend sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-with-backend).
-
-    </details>
-
-## Other scenarios
-
-This section provides several code snippets for other scenarios that are related to Microsoft Graph. You can create API client in Bot or Azure Function and access SQL database in Azure Function.
-
-  <details>
-  <summary><b>Create API client to call existing API in Bot or Azure Function</b></summary>
-
-  This code snippet shows you how to call an existing API in bot by `ApiKeyProvider`.
-
-  ```typescript
-  // Create an API Key auth provider. In addition to APiKeyProvider, following auth providers are also available:
-  // BearerTokenAuthProvider, BasicAuthProvider, CertificateAuthProvider.
-  const authProvider = new ApiKeyProvider("YOUR_API_KEY_NAME",
-    "YOUR_API_KEY_VALUE",
-    ApiKeyLocation.Header
-  );
-
-  // Create an API client using above auth provider.
-  // You can also implement AuthProvider interface and use it here.
-  const apiClient = createApiClient(
-    "YOUR_API_ENDPOINT",
-    authProvider
-  );
-
-  // Send a GET request to "RELATIVE_API_PATH", "/api/apiname" for example.
-  const response = await apiClient.get("RELATIVE_API_PATH");  
-  ```
-
-  </details>
-
-  <details>
-  <summary><b>Access SQL database in Azure Function</b></summary>
-
-  Use `tedious` library to access SQL and use `DefaultTediousConnectionConfiguration` that manages authentication. You can also compose connection config of other SQL libraries based on the result of `sqlConnectionConfig.getConfig()`.
-
-  1. Set the connection configuration.
-
-     ```typescript
-     // Equivalent to:
-     // const sqlConnectConfig = new DefaultTediousConnectionConfiguration({
-     //    sqlServerEndpoint: process.env.SQL_ENDPOINT,
-     //    sqlUsername: process.env.SQL_USER_NAME,
-     //    sqlPassword: process.env.SQL_PASSWORD,
-     // });
-     const atk = new TeamsFx();
-     // If there's only one SQL database
-     const config = await getTediousConnectionConfig(teamsfx);
-     // If there are multiple SQL databases
-     const config2 = await getTediousConnectionConfig(teamsfx, "your database name");  
-      ```
-
-  2. Connect to your database.
-
-     ```typescript
-     const connection = new Connection(config);
-     connection.on("connect", (error) => {
-     if (error) {
-      console.log(error);
-      }
-     });  
-      ```
-
-     > [!NOTE]
-     > The `getTediousConnectionConfig` function has been deprecated, Its recommended that you compose your own tedious configuration for better flexibility.
-
-For more information on sample to access SQL database in Azure Function, see [share-now sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/share-now).
-
-</details>
-
-## Advanced Customization
-
-### Configure log
-
-You can set customer log level and redirect outputs when using this library.
-
-> [!NOTE]
-> Logs are turned off by default, you can turn them on by setting log level.
-
-#### Enable log by setting log level
-
-When you set log level then Logging gets enabled. It prints log information to console by default.
-
-Set log level using the following snippet:
-
-```typescript
-// Only need the warning and error messages.
-setLogLevel(LogLevel.Warn);
-```
-
-> [!NOTE]
-> You can redirect log output by setting custom logger or log function.
-
-#### Redirect by setting custom logger
-
-```typescript
-setLogLevel(LogLevel.Info);
-// Set another logger if you want to redirect to Application Insights in Azure Function
-setLogger(context.log);
-```
-
-#### Redirect by setting custom log function
-
-```typescript
-setLogLevel(LogLevel.Info);
-// Only log error message to Application Insights in bot application.
-setLogFunction((level: LogLevel, message: string) => {
-  if (level === LogLevel.Error) {
-    this.telemetryClient.trackTrace({
-      message: message,
-      severityLevel: Severity.Error,
-    });
-  }
-});
-```
-
-> [!NOTE]
-> Log functions don't take effect if you set a custom logger.
-
-## Upgrade to latest SDK version
-
-If you're using the version of SDK that has `loadConfiguration()`, you can perform the following steps to upgrade to the latest SDK version:
-
-1. Instead of calling `loadConfiguration()`, use the specific auth config classes to customize the settings for each credential type. For example, use `AppCredentialAuthConfig` for `AppCredential`, `OnBehalfOfUserCredentialAuthConfig` for `OnBehalfOfUserCredential`, and `TeamsUserCredentialAuthConfig` for `TeamsUserCredential`.
-2. Replace `new TeamsUserCredential()` with `new TeamsUserCredential(authConfig)`.
-3. Replace `new M365TenantCredential()` with `new AppCredential(authConfig)`.
-4. Replace `new OnBehalfOfUserCredential(ssoToken)` with `new OnBehalfOfUserCredential(authConfig)`.
+> [!div class="nextstepaction"]
+> [Configure code to enable SSO](tab-sso-code.md)
 
 ## See also
 
-* [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals.md)
-* [Microsoft 365 Agents Toolkit CLI](microsoft-365-agents-toolkit-CLI.md)
-* [Microsoft TeamsFx sample gallery](https://github.com/OfficeDev/TeamsFx-Samples).
-* [Add single sign-on to Teams app](add-single-sign-on.md)
+- [Tenancy in Microsoft Entra ID](/azure/active-directory/develop/single-and-multi-tenant-apps)
+- [Quickstart - Register an application with Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app)
+- [Quickstart: Configure an application to expose a web API](/azure/active-directory/develop/quickstart-configure-app-expose-web-apis)
+- [OAuth 2.0 authorization code flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow)
