@@ -1538,7 +1538,7 @@ Did you come up with something like this?
 You've completed the tutorial to get started with build a bot with SSO authentication.
 
 > [!div class="nextstepaction"]
-> [Enable SSO for your app](../bots/how-to/authentication/bot-sso-overview.md)
+> [Enable SSO for your bot](../bots/how-to/authentication/bot-sso-overview.md)
 
 </details>
 

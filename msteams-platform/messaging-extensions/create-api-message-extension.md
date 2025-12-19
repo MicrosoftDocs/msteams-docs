@@ -1159,7 +1159,7 @@ Now you've successfully created a message extension with multiple parameters.
 
 ## Step-by-step guides
 
-To build an API-based message extension, see [Build an API-based message extension](../get-started/tutorials.md#build-api-based-message-extension)
+To build an API-based message extension, see [build an API-based message extension](../get-started/tutorials.md#build-api-based-message-extension)
 
 <!--
 * [For beginners](../sbs-api-msg-ext-ttk.yml): Build an API-based message extension using Agents Toolkit.
