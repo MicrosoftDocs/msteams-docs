@@ -139,4 +139,5 @@ Here's a list of best practices:
 
 ## See also
 
-[Glossary](../../../get-started/glossary.md)
+- [Add SSO to tab and message extension app - Tutorial](../../../get-started/tutorials.md#add-sso-to-tab-and-message-extension-app)
+- [Glossary](../../../get-started/glossary.md)

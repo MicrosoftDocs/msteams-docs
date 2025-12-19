@@ -103,4 +103,5 @@ This section describes the tasks involved in implementing SSO for a Teams bot or
 ## See also
 
 - [Enable SSO for your bot - Tutorial](../../../get-started/tutorials.md#build-a-bot-with-sso-authentication)
+- [Add SSO to tab and message extension app - Tutorial](../../../get-started/tutorials.md#add-sso-to-tab-and-message-extension-app)
 - [Glossary](../../../get-started/glossary.md)
