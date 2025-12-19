@@ -16,8 +16,10 @@ In this article, learn more about building Teams app capabilities. Here's a list
 
 | # | Capability | Step-by-step guide |
 | --- | --- | --- |
-| 1. | Bots  | - [Debug your AI chat bot using Microsoft 365 Agents Playground](#debug-your-ai-chat-bot-using-microsoft-365-agents-playground) <br> - [Build a bot with SSO authentication](#build-a-bot-with-sso-authentication) |
+| 1. | Bot  | [Debug your AI chat bot using Microsoft 365 Agents Playground](#debug-your-ai-chat-bot-using-microsoft-365-agents-playground) |
 | 2. | Message extension | [Build API-based message extension](#build-api-based-message-extension) |
+| 3. | Tab | [Build your first tab app using C sharp](#build-your-first-tab-app-using-c-sharp) |
+| 4. | SSE | - [Build a bot with SSO authentication](#build-a-bot-with-sso-authentication) <br> - [Add SSO to tab and message extension app](#add-sso-to-tab-and-message-extension-app) |
 
 ## Debug your AI chat bot using Microsoft 365 Agents Playground
 
