@@ -1726,6 +1726,11 @@ To successfully run your app in Teams, ensure that you've enabled custom app upl
 
 You have successfully created a tab app using C#. Agents Toolkit has added the necessary scaffolding to your app's directory structure. The tutorial is now complete.
 
+> [!div class="nextstepaction"]
+> [Create a tab](../tabs/how-to/create-personal-tab.md)
+> [!div class="nextstepaction"]
+> [Create a new Microsoft Teams project using Microsoft Teams Toolkit](../toolkit/toolkit-v4/create-new-project-vs.md)
+
 </details>
 
 [Tutorials](#tutorials)
