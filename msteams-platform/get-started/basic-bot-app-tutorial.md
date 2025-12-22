@@ -4,10 +4,13 @@ author: surbhigupta
 description: With this learning module, you learn how to build Hello World app with JavaScript by setting up a new project with Agents Toolkit, build and deploy a bot app.
 ms.topic: article
 ms.author: surbhigupta
-ms.owner: angovil
 ms.localizationpriority: high
-ms.date: 12/11/2024
+ms.date: 12/22/2025
 ---
+
+<!-- markdownlint-disable MD033 -->
+<!-- markdownlint-disable MD024 -->
+<!-- markdownlint-disable MD001 -->
 
 # Build your first bot app
 
@@ -108,12 +111,12 @@ The following steps help you verify if you can upload apps in Teams:
 
    :::image type="content" source="../assets/images/toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Screenshot shows the option to upload a custom app in Teams." :::
 
-      > [!NOTE]
-      > If you don't find the option to upload a custom app, contact your Teams administrator.
+> [!NOTE]
+> If you don't find the option to upload a custom app, contact your Teams administrator.
 
-### Create a free Teams developer tenant (optional)
+### Create a free Teams developer tenant
 
-If you don't have a Teams developer account, join the Microsoft 365 developer program.
+If you don't have a Teams developer account, join the Microsoft 365 developer program. This is an optional step.
 
 1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
 1. Select **Join Now** and follow the onscreen instructions.
@@ -123,3 +126,9 @@ If you don't have a Teams developer account, join the Microsoft 365 developer pr
    :::image type="content" source="../assets/images/include-files/microsoft-365.png" alt-text="Screenshot shows the Microsoft 365 Developer Program.":::
 
 1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
+
+### Get a free Azure account
+
+If you want to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
+
+Now you've got all the tools to set up your account. Next, let's set up your development environment and start building! Select the app you want to create first.
