@@ -1911,7 +1911,7 @@ The window shows the HTTPS URL.
 
 ---
 
-## Add a web authentication
+#### Add a web authentication
 
 1. In the left pane, under **Manage**, select **Authentication**.
 
@@ -1925,7 +1925,7 @@ The window shows the HTTPS URL.
 
 1. Select **Configure**.
 
-   :::image type="content" source="../assets/images/include-files/configure-web.png" alt-text="Screenshot shows the option to add redirect uri and select implicit grant and hybrid flows.":::
+   :::image type="content" source="../assets/images/include-files/configure-web.png" alt-text="The screenshot shows the option to add redirect uri and select implicit grant and hybrid flows.":::
 
 1. Under **Web**, select **Add URI**.
 
@@ -1934,6 +1934,29 @@ The window shows the HTTPS URL.
 1. Select **Save**.
 
     :::image type="content" source="../assets/images/include-files/web-add-uri.png" alt-text="Screenshot shows the option to add redirect uri and select implicit grant and hybrid flows.":::
+
+#### Create a client secret
+
+> [!NOTE]
+> If you encounter the error **Client secrets are blocked by tenant-wide policy. Contact your tenant administrator for more information.**, you can create a certificate instead. For step-by-step instructions, refer to [create a certificate for app registration.](/graph/auth-register-app-v2#add-credentials)
+
+1. In the left pane, under **Manage**, select **Certificates & secrets**.
+
+1. Under **Client secrets**, select **+ New client secret**.
+
+    :::image type="content" source="../assets/images/include-files/new-client-secret.png" alt-text="Screenshot show the selection of new client secret.":::
+
+    The **Add a client secret** window appears.
+
+1. Enter **Description**.
+
+1. Select **Add**.
+
+    :::image type="content" source="../assets/images/include-files/add-client-secret.png" alt-text="Screenshot show the client secret description option to add.":::
+
+1. Under **Value**, select **Copy to clipboard** to save the client secret value for further use.
+
+    :::image type="content" source="../assets/images/include-files/client-secret-value.png" alt-text="Screenshot show the option to copy the client secret ID value to copy value to clipboard.":::
 
 > [!div class="nextstepaction"]
 > [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
