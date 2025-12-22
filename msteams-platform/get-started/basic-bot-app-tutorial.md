@@ -11,6 +11,7 @@ ms.date: 12/22/2025
 <!-- markdownlint-disable MD033 -->
 <!-- markdownlint-disable MD024 -->
 <!-- markdownlint-disable MD001 -->
+<!-- markdownlint-disable MD051 -->
 
 # Build your first bot app
 
@@ -132,3 +133,28 @@ If you don't have a Teams developer account, join the Microsoft 365 developer pr
 If you want to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
 
 Now you've got all the tools to set up your account. Next, let's set up your development environment and start building! Select the app you want to create first.
+
+## Create project workspace for your bot app
+
+Let's create your first bot app.
+
+The bot capability of a Teams app creates a chatbot or a conversational bot. You use it to run simple and automated tasks, like providing customer service. A bot talks with a web service and helps you use its offerings. You can get weather forecast, make reservations, or any other service offered using a conversational bot.
+
+:::image type="content" source="../assets/images/toolkit-v2/first-bot/your-helloworld-app-bot.png" alt-text="Diagram showing this app has three features. Bot is highlighted.":::
+
+As you've already prepared for creating these apps, you can set up a new Teams project for creating the bot app.
+
+In this tutorial, you learn:
+
+1. [How to set up a new bot project with Agents Toolkit.](#create-your-bot-project-workspace)
+1. [About the directory structure of your app project.](#take-a-tour-of-the-bot-app-source-code)
+
+> [!IMPORTANT]
+> Bots are available in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](concepts/cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](~/concepts/sovereign-cloud.md) environments.
+
+## Create your bot project workspace
+
+If the prerequisites are in place, let's begin!
+
+> [!NOTE]
+> The Visual Studio Code UI shown is from Mac. It may differ depending on your operating system, Agents Toolkit version, and environment.
