@@ -16,9 +16,9 @@ A Teams app offers you the flexibility of choosing your build environment. It in
 
 This section takes you through the various options for building your Teams app.
 
-* [Teams collaborative platform](#teams-collaborative-platform)
-* [Tools and SDKs](#tools-and-sdks)
-* [Code samples](#code-samples)
+- [Teams collaborative platform](#teams-collaborative-platform)
+- [Tools and SDKs](#tools-and-sdks)
+- [Code samples](#code-samples)
 
 ## Teams collaborative platform
 
@@ -57,8 +57,8 @@ To start building your Teams app, you can select the tools and SDKs based on you
 
 > [!NOTE]
 >
-> * Meeting and calls can deliver a user experience for enabling collaboration, partnership, informed communication, and shared feedback. For more information, see [apps for Teams meetings and calls](../apps-in-teams-meetings/teams-apps-in-meetings.md).
-> * You can also use languages, such as Node.js, Java, Python, and Web technology like HTML and CSS to build your Teams app.
+> - Meeting and calls can deliver a user experience for enabling collaboration, partnership, informed communication, and shared feedback. For more information, see [apps for Teams meetings and calls](../apps-in-teams-meetings/teams-apps-in-meetings.md).
+> - You can also use languages, such as Node.js, Java, Python, and Web technology like HTML and CSS to build your Teams app.
 
 **Example scenario**: If you want to build a social media dashboard app that sends notifications using TypeScript, consider the following scenario:
 <!--
