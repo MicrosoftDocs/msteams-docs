@@ -16,7 +16,7 @@ In this article, learn more about building Teams app capabilities. Here's a list
 
 | # | Capability | Step-by-step guide |
 | --- | --- | --- |
-| 1. | Bot  | [Debug your AI chat bot using Microsoft 365 Agents Playground](#debug-your-ai-chat-bot-using-microsoft-365-agents-playground) |
+| 1. | Bot  | - [Build your first bot app](#build-your-first-bot-app) <br> - [Debug your AI chat bot using Microsoft 365 Agents Playground](#debug-your-ai-chat-bot-using-microsoft-365-agents-playground) |
 | 2. | Message extension | [Build API-based message extension](#build-api-based-message-extension) |
 | 3. | Tab | [Build your first tab app using C sharp](#build-your-first-tab-app-using-c-sharp) |
 | 4. | SSO | [Build a bot with SSO authentication](#build-a-bot-with-sso-authentication) |
@@ -24,6 +24,9 @@ In this article, learn more about building Teams app capabilities. Here's a list
 ## Build your first bot app
 
 Start Microsoft Teams app development with your first Teams app. You can create a bot app with Teams using Javascript.
+
+<details>
+<summary><b>Build your first bot</b></summary>
 
 Your app has a capability, which comes with its own UI and UX:
 
@@ -554,9 +557,11 @@ You've done it!
 
 You've created a bot app.
 
-Now that you've learned to create a basic app, you can move on to creating more complex apps. Follow the procedures to build and deploy the app, and your app features multiple functionalities.
+Now that you've learned to create a basic app, you can move on to creating more complex apps. You've completed the tutorial to build bot with JavaScript.
 
-You've completed the tutorial to build bot with JavaScript.
+</details>
+
+[Tutorials](#tutorials)
 
 ## Debug your AI chat bot using Microsoft 365 Agents Playground
 
