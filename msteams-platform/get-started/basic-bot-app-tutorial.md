@@ -197,7 +197,7 @@ If the prerequisites are in place, let's begin!
 
 1. Enter a suitable name for your app and then select **Enter**.
 
-:::image type="content" source="../assets/images/toolkit-v2/first-bot/hello-bot.png" alt-text="Screenshot shows where to enter the app name.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-bot/hello-bot.png" alt-text="Screenshot shows where to enter the app name.":::
 
 A dialog appears, where you would be required to choose yes or no to trust the authors of the files in this folder.
 
@@ -285,7 +285,7 @@ Use this account to sign in to Teams. If you're using a Microsoft 365 developer 
 
     :::image type="content" source="../assets/images/toolkit-v2/first-tab/m365-uploading-enabled.png" alt-text="Screenshot shows where to sign in to Microsoft 365 and Azure.":::
 
-    Now you're ready to build the app and run it locally!
+Now you're ready to build the app and run it locally!
 
 # [Command line](#tab/cline)
 
