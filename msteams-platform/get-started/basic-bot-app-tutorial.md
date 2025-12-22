@@ -522,3 +522,28 @@ Once the provisioning and deployment steps are complete:
    You successfully added your bot app to the Teams client.
 
     :::image type="content" source="../assets/images/toolkit-v2/first-bot/bot-app-learn-local-debug.png" alt-text="Screenshot shows the learn card in the bot on Teams client.":::
+
+<details>
+<summary>Learn what happens when you deployed your app to Azure</summary>
+
+Before deployment, the application has been running locally:
+
+- The backend runs using **Azure Functions Core Tools**.
+- The application HTTP endpoint, where Microsoft Teams loads the application, runs locally.
+
+Deployment is a two-step process. You provision the resources on an active Azure subscription, and then deploy or upload the backend and frontend code for the application to Azure.
+
+- The backend, if configured, uses various Azure services, including Azure App Service and Azure Storage.
+- The frontend application is deployed to an Azure Storage account configured for static web hosting.
+
+</details>
+
+Congratulations!
+
+You've done it!
+
+You've created a bot app.
+
+Now that you've learned to create a basic app, you can move on to creating more complex apps. Follow the procedures to build and deploy the app, and your app features multiple functionalities.
+
+You've completed the tutorial to build bot with JavaScript.
