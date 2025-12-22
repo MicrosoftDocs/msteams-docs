@@ -158,3 +158,86 @@ If the prerequisites are in place, let's begin!
 
 > [!NOTE]
 > The Visual Studio Code UI shown is from Mac. It may differ depending on your operating system, Agents Toolkit version, and environment.
+
+# [Visual Studio Code](#tab/vscode)
+
+1. Open Visual Studio Code.
+1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="../msteams-platform/assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
+
+1. Select **Create a New Agent/App** > **Teams App**.
+
+    :::image type="content" source="../msteams-platform/assets/images/toolkit-v2/first-bot/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Agents Toolkit sidebar.":::
+
+1. Select **Bot** to create a new bot project.
+
+    :::image type="content" source="../msteams-platform/assets/images/toolkit-v2/first-bot/create-new-app1.png" alt-text="Screenshot shows the wizard to Create New Project.":::
+
+1. Ensure that **Basic Bot** is selected as the app feature that you want to build in your app.
+
+    :::image type="content" source="../msteams-platform/assets/images/toolkit-v2/first-bot/select-bot.png" alt-text="Screenshot shows the app feature to add to your new app.":::
+
+1. Select **JavaScript** as the programming language.
+
+    :::image type="content" source="../msteams-platform/assets/images/toolkit-v2/first-bot/select-language-tab.png" alt-text="Screenshot shows the option to select the programming language.":::
+
+1. Select **Default folder** to store your project root folder in default location.
+
+    :::image type="content" source="../msteams-platform/assets/images/toolkit-v2/first-bot/select-default-location.png" alt-text="Screenshot shows the selection of default location.":::
+
+    You can also change the default location by the following steps:
+
+    1. Select **Browse**.
+
+       :::image type="content" source="../msteams-platform/assets/images/toolkit-v2/first-bot/select-browse.png" alt-text="Screenshot shows the selection of browse location option.":::
+
+    1. Select the location for project workspace.
+    1. Select the **Select Folder**.
+
+       :::image type="content" source="../msteams-platform/assets/images/toolkit-v2/select-folder.png" alt-text="Screenshot shows the folder to select.":::
+
+1. Enter a suitable name for your app and then select **Enter**.
+
+:::image type="content" source="../msteams-platform/assets/images/toolkit-v2/first-bot/hello-bot.png" alt-text="Screenshot shows where to enter the app name.":::
+
+A dialog appears, where you would be required to choose yes or no to trust the authors of the files in this folder.
+
+:::image type="content" source="../msteams-platform/assets/images/toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder.":::
+
+Your Teams app with a bot capability is created in few seconds.
+
+:::image type="content" source="../msteams-platform/assets/images/toolkit-v2/first-bot/app-created-bot.png" alt-text="Screenshot shows the app created.":::
+
+After your app is created, Agents Toolkit displays the following message:
+
+:::image type="content" source="../msteams-platform/assets/images/toolkit-v2/preview-project.png" alt-text="Screenshot shows the message that the feature is successfully created.":::
+
+Select **Local debug** to preview your project.
+
+<details>
+<summary>A quick recap of creating a Teams app.</summary>
+Watch this short recap for creating a Teams app.
+
+![Create a Teams app](~/assets/videos/javascript-bot-app1.gif)
+</details>
+
+# [Command line](#tab/cli)
+
+Use the `atk' CLI to create your first project.  Start from the folder where you want to create the project folder.
+
+```dotnetcli
+atk new
+```
+
+You can use the CLI to create a new Teams app. The CLI leads you through a series of questions. Every question includes an instruction on answering it.
+
+For example, use arrow keys to select an option. After you make the choice, select **Enter** to confirm it.
+
+1. Select **Create a new Teams app**.
+1. Select **Bot** and deselect **Tab**.
+1. Select **JavaScript** as the programming language.
+1. Select **Enter** to select the default workspace folder.
+1. Enter a suitable name for your app, like `HelloBot`. The name of the app must consist only of alphanumeric characters.
+
+After you've answered all questions, your project is created.
+
+---
