@@ -294,3 +294,46 @@ Use this account to sign in to Teams. If you're using a Microsoft 365 developer 
 ```bash
 atk account login m365
 ```
+
+Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+
+The account logins are shared between Visual Studio Code and Agents Toolkit CLI.
+
+Now that the development environment is configured, you can create, build, and deploy your first Teams app.
+
+---
+
+## Build and run your first bot app locally
+
+To build and run your app in the local environment:
+
+1. Select **F5** in Visual Studio Code to run your app in debug mode.
+
+    > [!NOTE]
+    > If Agents Toolkit is unable to check a particular prerequisite, it prompts you to check.
+
+    <details>
+    <summary>Learn what happens when you run your app locally in the debugger.</summary>
+
+    In case you're wondering, when you press the **F5** key, Agents Toolkit:
+
+    1. Checks all the following prerequisites:
+      - You're logged in with a Microsoft 365 account.
+      - Custom app upload is enabled for your Microsoft 365 account.
+      - Supported Node.js version is installed.
+      - Port required by bot app is available.
+
+    2. Install npm packages.
+    3. Starts Dev Tunnel to create a HTTP tunnel.
+    4. Registers the app in Microsoft Entra ID and configures the app.
+    5. Registers the bot app in Bot Framework and configures the bot app.
+    6. Registers the app in Teams Developer Portal and configures the app.
+    7. Starts the bot app.
+    8. Starts Teams in a web browser and uploads the custom bot app.
+
+    </details>
+
+    :::image type="content" source="../msteams-platform/assets/images/toolkit-v2/first-bot/f5-build-and-run.png" alt-text="Screenshot showing when F5 key is pressed for debugging.":::
+
+    > [!NOTE]
+    > When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window automatically opens when the build is complete. This process can take three to five minutes to complete.
