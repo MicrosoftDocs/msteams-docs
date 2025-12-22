@@ -132,7 +132,7 @@ If you don't have a Teams developer account, join the Microsoft 365 developer pr
 1. In the welcome screen, select **Set up E5 subscription**.
 1. Set up your administrator account. After you finish, the following screen appears:
 
-   :::image type="content" source="../assets/images/include-files/microsoft-365.png" alt-text="Screenshot shows the Microsoft 365 Developer Program.":::
+   :::image type="content" source="../assets/images/include-files/microsoft-365.png" alt-text="The screenshot shows the Microsoft 365 Developer Program.":::
 
 1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
 
@@ -174,7 +174,7 @@ If the prerequisites are in place, let's begin!
 
 1. Select **Create a New Agent/App** > **Teams App**.
 
-    :::image type="content" source="../assets/images/toolkit-v2/first-bot/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Agents Toolkit sidebar.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-bot/create-project.png" alt-text="The screenshot shows the location of the Create New Project link in the Agents Toolkit sidebar.":::
 
 1. Select **Bot** to create a new bot project.
 
@@ -182,11 +182,11 @@ If the prerequisites are in place, let's begin!
 
 1. Ensure that **Basic Bot** is selected as the app feature that you want to build in your app.
 
-    :::image type="content" source="../assets/images/toolkit-v2/first-bot/select-bot.png" alt-text="Screenshot shows the app feature to add to your new app.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-bot/select-bot.png" alt-text="The screenshot shows the app feature to add to your new app.":::
 
 1. Select **JavaScript** as the programming language.
 
-    :::image type="content" source="../assets/images/toolkit-v2/first-bot/select-language-tab.png" alt-text="Screenshot shows the option to select the programming language.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-bot/select-language-tab.png" alt-text="The screenshot shows the option to select the programming language.":::
 
 1. Select **Default folder** to store your project root folder in default location.
 
@@ -527,7 +527,7 @@ Once the provisioning and deployment steps are complete:
 
    Alternatively, you can either search and select the required scope or select a channel, chat, or meeting from the list, and move through the dialog to select **Go**.
 
-   :::image type="content" source="../assets/images/toolkit-v2/deploy-azure/add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
+   :::image type="content" source="../assets/images/toolkit-v2/deploy-azure/add-scope.png" alt-text="The screenshot of the scope selection dialog with the list of shared scopes.":::
 
    You successfully added your bot app to the Teams client.
 
