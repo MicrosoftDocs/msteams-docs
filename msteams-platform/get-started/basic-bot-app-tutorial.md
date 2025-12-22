@@ -150,7 +150,7 @@ In this tutorial, you learn:
 1. [About the directory structure of your app project.](#take-a-tour-of-the-bot-app-source-code)
 
 > [!IMPORTANT]
-> Bots are available in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](concepts/cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](~/concepts/sovereign-cloud.md) environments.
+> Bots are available in [Government Community Cloud (GCC), GCC High, Department of Defense (DoD)](../concepts/cloud-overview.md#teams-app-capabilities), and [Teams operated by 21Vianet](../concepts/sovereign-cloud.md) environments.
 
 ## Create your bot project workspace
 
@@ -201,7 +201,7 @@ If the prerequisites are in place, let's begin!
 
 A dialog appears, where you would be required to choose yes or no to trust the authors of the files in this folder.
 
-:::image type="content" source="../assets/images/toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder.":::
+:::image type="content" source="../toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/first-bot/vsc-trust-authors.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder.":::
 
 Your Teams app with a bot capability is created in few seconds.
 
