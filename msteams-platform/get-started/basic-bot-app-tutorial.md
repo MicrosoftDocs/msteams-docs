@@ -250,7 +250,8 @@ After scaffolding is completed, view the project directories and files in the Ex
 
 | Folder / File | Contents |
 | --- | --- |
-| `m365agents.yml` | Main project file | `m365agents.local.yml` | This overrides `m365agents.yml` with actions that enable local execution and debugging. |
+| `m365agents.yml` | Main project file |
+| `m365agents.local.yml` | This overrides `m365agents.yml` with actions that enable local execution and debugging. |
 | `.vscode/` | VSCode files for local debug. |
 | `appPackage/` | Templates for the Teams application manifest. |
 | `adaptiveCards/` | Adaptive Cards sent back by the bot. |
