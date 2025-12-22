@@ -1735,7 +1735,6 @@ You have successfully created a tab app using C#. Agents Toolkit has added the n
 
 [Tutorials](#tutorials)
 
-<!--
 ## Add SSO to tab and message extension app
 
 Microsoft Entra single sign-on (SSO) enables seamless user authentication in Teams.
@@ -1920,4 +1919,3 @@ The window shows the HTTPS URL.
 </details>
 
 [Tutorials](#tutorials)
--->
