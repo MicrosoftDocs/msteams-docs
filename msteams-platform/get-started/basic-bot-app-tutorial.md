@@ -350,7 +350,7 @@ To build and run your app in the local environment:
 
     Alternatively, you can either search and select the required scope or select a channel, chat, or meeting from the list, and move through the dialog to select **Go**.
 
-    :::image type="content" source="../assets/images/toolkit-v2/first-bot/add-bot-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-bot/add-bot-scope.png" alt-text="Screenshot of the scope selection dialog with a list of shared scopes.":::
 
     Now the bot is successfully running on Teams! After the app is loaded, a chat session with the bot opens.
 
@@ -388,7 +388,7 @@ Use this account to access the Microsoft Azure portal and to provision new cloud
 
 1. Open Visual Studio Code.
 1. Open the project folder in which you created the bot app.
-1. Select the Microsoft 365 Agents Toolkit  :::image type="icon" source="../msteams-platform/assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the sidebar.
+1. Select the Microsoft 365 Agents Toolkit  :::image type="icon" source="../assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the sidebar.
 1. Select **Sign in to Azure** using your credentials.
 
     > [!TIP]
@@ -411,7 +411,7 @@ Now let's go ahead and learn how to deploy one of the apps to Azure using Agents
 atk account login m365
 ```
 
-    Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+  Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
 
 2. Sign in to Azure with Agents Toolkit CLI:
 
@@ -419,11 +419,11 @@ atk account login m365
 atk account login azure
 ```
 
-    Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+  Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
 
-    The account logins are shared between Visual Studio Code and Agents Toolkit CLI.
+  The account logins are shared between Visual Studio Code and Agents Toolkit CLI.
 
-    Congratulations, you have signed in your Azure account!
+  Congratulations, you have signed in your Azure account!
     Now let's go ahead and learn how to deploy one of the apps to Azure using Agents Toolkit.
 
 ---
