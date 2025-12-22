@@ -1958,6 +1958,29 @@ The window shows the HTTPS URL.
 
     :::image type="content" source="../assets/images/include-files/client-secret-value.png" alt-text="Screenshot show the option to copy the client secret ID value to copy value to clipboard.":::
 
+Add API permissions
+
+1. In the left pane, select **API permissions**.
+
+1. Select **+ Add a permission**.
+
+    :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-api-permission.png" alt-text="Screenshot shows the option to select Add permission.":::
+
+1. Select **Microsoft Graph**.
+
+1. Select **Delegated permissions**.
+
+1. Select **User** > **User.Read**.
+
+1. Select **Add permissions**.
+
+    :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/select-api-permission.png" alt-text="Screenshot show the option to select permissions.":::
+
+    > [!NOTE]
+    >
+    > - If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
+    > - Users need to consent to the API permissions only if the Microsoft Entra app is registered in a different tenant.
+
 > [!div class="nextstepaction"]
 > [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
 > [!div class="nextstepaction"]
