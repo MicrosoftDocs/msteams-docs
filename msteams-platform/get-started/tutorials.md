@@ -1964,7 +1964,7 @@ Add API permissions
 
 1. Select **+ Add a permission**.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-api-permission.png" alt-text="Screenshot shows the option to select Add permission.":::
+    :::image type="content" source="../assets/images/teams-file-upload-bot/add-api-permission.png" alt-text="The screenshot shows the option to select Add permission.":::
 
 1. Select **Microsoft Graph**.
 
@@ -1974,7 +1974,7 @@ Add API permissions
 
 1. Select **Add permissions**.
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/select-api-permission.png" alt-text="Screenshot show the option to select permissions.":::
+    :::image type="content" source="../assets/images/teams-file-upload-bot/select-api-permission.png" alt-text="Screenshot show the option to select permissions.":::
 
     > [!NOTE]
     >
