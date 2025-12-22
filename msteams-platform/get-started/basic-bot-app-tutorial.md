@@ -431,6 +431,8 @@ atk account login azure
 ### Provision and Deploy your app on Azure
 
 Deployment consists of two steps. First, Azure creates necessary cloud resources (also known as provisioning). Then, Azure copies your app's code into the created cloud resources. For this tutorial, you'll deploy the bot app.
+<br>
+<br>
 
 <details>
 <summary>What's the difference between Provision and Deploy?</summary>
