@@ -74,13 +74,13 @@ You can also install Agents Toolkit from the [Visual Studio Code Marketplace](ht
 
 To install Agents Toolkit CLI, use the `npm` package manager and enter the following command in Command prompt:
 
-```dotnetcli
+```bash
 npm install -g @microsoft/m365agentstoolkit-cli
 ```
 
 Depending on your configuration, you might need to use `sudo` to install the CLI:
 
-```dotnetcli
+```bash
 sudo npm install -g --unsafe-perm @microsoft/m365agentstoolkit-cli
 ```
 
@@ -224,7 +224,7 @@ Watch this short recap for creating a Teams app.
 
 Use the `atk' CLI to create your first project.  Start from the folder where you want to create the project folder.
 
-```dotnetcli
+```bash
 atk new
 ```
 
@@ -261,3 +261,36 @@ After scaffolding is completed, view the project directories and files in the Ex
 
 > [!Tip]
 > Familiarize yourself with bots outside of Teams before you integrate your first bot within Teams.
+
+## Build and run your first bot app
+
+After you set up your project workspace with Agents Toolkit, build your bot project. You need to sign in to your Microsoft 365 account.
+
+### Sign in to your Microsoft 365 account
+
+Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
+
+# [Visual Studio Code](#tab/viscode)
+
+1. Open Visual Studio Code.
+1. Select the Microsoft 365 Agents Toolkit  :::image type="icon" source="../msteams-platform/assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the sidebar.
+1. Select **Sign in to M365** using your credentials.
+
+    Your default web browser opens to let you sign in to the account.
+
+1. Close the browser when prompted and return to Visual Studio Code.
+1. Return to Agents Toolkit within Visual Studio Code.
+
+    Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
+
+    :::image type="content" source="../msteams-platform/assets/images/toolkit-v2/first-tab/m365-uploading-enabled.png" alt-text="Screenshot shows where to sign in to Microsoft 365 and Azure.":::
+
+    Now you're ready to build the app and run it locally!
+
+# [Command line](#tab/cline)
+
+1. Sign in to Microsoft 365 with Microsoft 365 Agents Toolkit CLI (previously known as TeamsFx CLI):
+
+```bash
+atk account login m365
+```
