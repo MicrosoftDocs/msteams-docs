@@ -241,3 +241,22 @@ For example, use arrow keys to select an option. After you make the choice, sele
 After you've answered all questions, your project is created.
 
 ---
+
+## Take a tour of the bot app source code
+
+After scaffolding is completed, view the project directories and files in the Explorer in the Visual Studio Code.
+
+:::image type="content" source="../assets/images/toolkit-v2/first-bot/folder-structure-bot-app.png" alt-text="Screenshot shows the folder structure.":::
+
+| Folder / File | Contents |
+| --- | --- |
+| `m365agents.yml` | Main project file | `m365agents.local.yml` | This overrides `m365agents.yml` with actions that enable local execution and debugging. |
+| `.vscode/` | VSCode files for local debug. |
+| `appPackage/` | Templates for the Teams application manifest. |
+| `adaptiveCards/` | Adaptive Cards sent back by the bot. |
+| `infra/` | Templates for provisioning Azure resources. |
+| `index.js` | Application entry point and `express` handler. |
+| `teamsBot.js` | Teams activity handler. |
+
+> [!Tip]
+> Familiarize yourself with bots outside of Teams before you integrate your first bot within Teams.
