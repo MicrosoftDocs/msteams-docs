@@ -273,7 +273,7 @@ Use this account to sign in to Teams. If you're using a Microsoft 365 developer 
 # [Visual Studio Code](#tab/viscode)
 
 1. Open Visual Studio Code.
-1. Select the Microsoft 365 Agents Toolkit  :::image type="icon" source="../msteams-platform/assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the sidebar.
+1. Select the Microsoft 365 Agents Toolkit  :::image type="icon" source="../assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the sidebar.
 1. Select **Sign in to M365** using your credentials.
 
     Your default web browser opens to let you sign in to the account.
@@ -283,7 +283,7 @@ Use this account to sign in to Teams. If you're using a Microsoft 365 developer 
 
     Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
 
-    :::image type="content" source="../msteams-platform/assets/images/toolkit-v2/first-tab/m365-uploading-enabled.png" alt-text="Screenshot shows where to sign in to Microsoft 365 and Azure.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-tab/m365-uploading-enabled.png" alt-text="Screenshot shows where to sign in to Microsoft 365 and Azure.":::
 
     Now you're ready to build the app and run it locally!
 
@@ -333,7 +333,43 @@ To build and run your app in the local environment:
 
     </details>
 
-    :::image type="content" source="../msteams-platform/assets/images/toolkit-v2/first-bot/f5-build-and-run.png" alt-text="Screenshot showing when F5 key is pressed for debugging.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-bot/f5-build-and-run.png" alt-text="Screenshot showing when F5 key is pressed for debugging.":::
 
     > [!NOTE]
     > When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window automatically opens when the build is complete. This process can take three to five minutes to complete.
+
+    Teams runs your app in a web browser.
+
+1. Sign in with your Microsoft 365 account, if prompted.
+
+1. Select **Add** to upload the custom bot app to Teams.
+
+    :::image type="content" source="../assets/images/toolkit-v2/first-bot/add-bot-app-local-debug.png" alt-text="Screenshot of the app details dialog to add the bot app to Teams.":::
+
+1. Select **Open** to open the app in personal scope.
+
+    Alternatively, you can either search and select the required scope or select a channel, chat, or meeting from the list, and move through the dialog to select **Go**.
+
+    :::image type="content" source="../assets/images/toolkit-v2/first-bot/add-bot-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
+
+    Now the bot is successfully running on Teams! After the app is loaded, a chat session with the bot opens.
+
+    :::image type="content" source="../assets/images/toolkit-v2/first-bot/app-added-bot-local-debug.png" alt-text="Screenshot shows the bot is running on Teams client.":::
+
+    You can type `welcome` to show an introduction card, and type `learn` to go to Adaptive Card and bot command documentation.
+
+    :::image type="content" source="../assets/images/toolkit-v2/first-bot/bot-app-learn-local-debug.png" alt-text="Screenshot shows the learn card in the bot on Teams client.":::
+
+    You can do normal debugging activities, such as setting breakpoints, as with any other web application. Open the `bot/teamsBot.js` file and locate the `onMessage()` method. Set a breakpoint on any case. Then, type some text.
+
+    <details>
+    <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
+
+    To successfully run your app in Teams, ensure that you've enabled custom app upload in your Teams account. You can learn more about custom app upload in the prerequisites section.
+
+    > [!IMPORTANT]
+    > Custom app upload is available in Government Community Cloud (GCC) and isn't supported in GCC High, DoD, and Teams operated by 21Vianet.
+
+    > [!TIP]
+    > Check for issues before you upload a custom app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html). This tool is included in the toolkit. Fix the errors to upload the app.
+    </details>
