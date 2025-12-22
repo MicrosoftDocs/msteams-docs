@@ -24,7 +24,9 @@ In this article, learn more about building Teams app capabilities. Here's a list
 ## Build your first bot app
 
 Start Microsoft Teams app development with your first Teams app. You can create a bot app with Teams using Javascript.
+
 <br>
+
 <details>
 <summary><b>Build your first bot</b></summary>
 
