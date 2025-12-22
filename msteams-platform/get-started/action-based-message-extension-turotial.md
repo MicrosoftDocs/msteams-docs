@@ -2,9 +2,9 @@
 title: Action-based Message Extension Tutorial
 description: With this learning module, learn how to set up action message extension for Teams to initiate actions from compose message and message area.
 ms.author: surbhigupta
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: high
-ms.date: 01/12/2025
+ms.date: 22/12/2025
 ---
 
 # Build action based message extension
@@ -26,7 +26,7 @@ Ensure that you install the following tools and set up your development environm
 
 | &nbsp; | Install | For using... |
 | --- | --- | --- |
-| 1. | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call all in one place.|
+| 1. | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call all in one place. |
 | 2. | [Visual Studio 2022](https://visualstudio.microsoft.com) |You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
 | 3. | [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the latest version, install the portable version. |
 | 4. | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/downloads) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
