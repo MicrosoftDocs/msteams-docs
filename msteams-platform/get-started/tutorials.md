@@ -2294,6 +2294,82 @@ dotnet run
 
 ![Dotnet](../assets/images/Tab-ME-SSO/dotnet-run1.png)
 
+### Upload SSO App to Teams
+
+1. In your cloned repository, go to **csharp** > **App SSO Sample** > **TeamsAppManifest**.
+
+1. Create a .zip file with the following files that are present in the **Manifest** folder:
+   - manifest.json
+   - icon-outline.png
+   - icon-color.png
+
+   :::image type="content" source="./assets/images/Tab-ME-SSO/upload-tab-me-sso-1.png" alt-text="Screenshot of Manifest folder with tab manifest zip folder highlighted in red.":::
+
+1. In the Teams client, select the **Apps** icon.
+
+1. Select **Manage your apps**.
+
+1. Select **Upload an app**.
+
+1. Look for the option to **Upload a custom app**. If you see the option, custom app upload is enabled.
+
+    :::image type="content" source="~/assets/images/tab-device-permission/custom-upload.png" alt-text="Screenshot shows the upload a custom app.":::
+
+    > [!NOTE]
+    > Contact your Teams administrator, if you don't find the option to upload a custom app.
+
+1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
+
+    :::image type="content" source="./assets/images/Tab-ME-SSO/upload-tab-me-sso-open-1.png" alt-text="Screenshot of Manifest folder with Open option to upload the Teams Bot zip file highlighted in red.":::
+
+1. Select **Add**.
+
+   :::image type="content" source="./assets/images/Tab-ME-SSO/add-sso-app-1.png" alt-text="Screenshot of app details dialog to add tab SSO app.":::
+
+1. Select **Open** and send a message to the bot.
+
+   :::image type="content" source="./assets/images/Tab-ME-SSO/open-sso-app.png" alt-text="Screenshot of scope selection dialog with Open option highlighted.":::
+
+1. The bot performs SSO and displays profile card along with option prompt to view token.
+
+   :::image type="content" source="./assets/images/Tab-ME-SSO/Congratulation-image-1.png" alt-text="Screenshot of the profile card received in Teams.":::
+
+1. Select **Yes** to view token or **No** to continue with chat.
+
+   :::image type="content" source="./assets/images/Tab-ME-SSO/token-view1-1.png" alt-text="Screenshot of the dialog to either select Yes or No.":::
+
+1. If SSO isn't performed, then the bot performs default authentication method for your tab.
+
+     :::image type="content" source="./assets/images/Tab-ME-SSO/not-login11-1.png" alt-text="Screenshot of the default SSO page in Teams.":::
+
+1. To sign in, if SSO isn't performed:
+
+      1. In the left pane of the Teams, select More added apps (●●●).
+
+      1. Select your new SSO application.
+
+          :::image type="content" source="./assets/images/Tab-ME-SSO/recent-app-sso-1.png" alt-text="Screenshot of your app highlighted in red in Apps section.":::
+
+      1. Select **sign in**.
+
+          :::image type="content" source="./assets/images/Tab-ME-SSO/sign-in-sso1-1.png" alt-text= "Screenshot of your app with sign in highlighted in red.":::
+
+      1. Enter your credentials in **Sign in** window and select **Next**.
+
+          :::image type="content" source="./assets/images/Tab-ME-SSO/sign-in-box.png" alt-text= "Screenshot of Microsoft Sign in page with Next highlighted in red.":::
+
+      1. Select **Accept**.
+
+          :::image type="content" source="./assets/images/Tab-ME-SSO/consent-box.png" alt-text= "Screenshot of Microsoft consent dialog with Accept highlighted in red.":::
+
+      1. Select your profile under search box. You'll see the following output:
+
+          :::image type="content" source="./assets/images/Tab-ME-SSO/hello-megan-profile-1.png" alt-text= "Screenshot of the selected profile.":::
+
+1. Send `https://profile.botframework.com` to the application to get a profile card.
+
+          :::image type="content" source="./assets/images/Tab-ME-SSO/profile-card-1.png" alt-text= "Screenshot of the selected profile after entering the URL.":::
+
 > [!div class="nextstepaction"]
 > [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
 > [!div class="nextstepaction"]
