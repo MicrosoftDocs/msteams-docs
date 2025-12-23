@@ -1958,7 +1958,7 @@ The window shows the HTTPS URL.
 
     :::image type="content" source="../assets/images/include-files/client-secret-value.png" alt-text="Screenshot show the option to copy the client secret ID value to copy value to clipboard.":::
 
-Add API permissions
+#### Add API permissions
 
 1. In the left pane, select **API permissions**.
 
