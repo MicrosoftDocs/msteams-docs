@@ -2241,6 +2241,24 @@ The window shows the HTTPS URL.
 
     :::image type="content" source="../assets/images/Tab-ME-SSO/app-setting.png" alt-text="Screenshot of the appsettings.json file with the values entered highlighted in red.":::
 
+### Set up manifest file
+
+1. Go to the **manifest.json** file in the cloned repository.
+
+    :::image type="content" source="../assets/images/Tab-ME-SSO/folder-manifest-1.png" alt-text="Screenshot of Manifest folder with the manifest file highlighted in red.":::
+
+1. Open the **manifest.json** file in Visual Studio and make the following changes:
+
+     - Replace `DOMAIN-NAME` with your ngrok URL.
+     - Replace `YOUR-MICROSOFT-APP-ID` with your bot's **Microsoft App ID**.
+
+         > [!NOTE]
+         > Depending on the scenario `[YOUR-MICROSOFT-APP-ID]` and `[DOMAIN-NAME]` may occur multiple times.
+
+     - Replace `resource` as `api://*******.ngrok.io/botid-{AppID}`.</br>
+
+        :::image type="content" source="../assets/images/Tab-ME-SSO/vs-manifest.png" alt-text="Screenshot of the manifest.json file with the values entered highlighted in red.":::
+
 > [!div class="nextstepaction"]
 > [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
 > [!div class="nextstepaction"]
