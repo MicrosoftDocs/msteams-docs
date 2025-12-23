@@ -21,7 +21,7 @@ Microsoft Teams provides multiple methods to open your app content in immersive 
 
 ## Types of Stageview
 
- Based on the UI and functionality, Stageview offers three ways to open your app content:
+Based on the UI and functionality, Stageview offers three ways to open your app content:
 
 * [Collaborative Stageview](#collaborative-stageview)
 * [Stageview Multi-window](#stageview-multi-window)
