@@ -11,7 +11,7 @@ ms.owner: ryanbliss
 
 # Create a tab
 
-Tabs in chats, channels, or meetings behave more like apps, as you can pin only one tab per app to the left pane for easy access.
+Tabs in chats, channels, or meetings function similarly to apps, as you can pin only one tab per app to the left pane for easy access.
 
 > [!IMPORTANT]
 >
@@ -411,36 +411,36 @@ ngrok http 3978 --host-header=localhost
 
 1. Open **Apps** and select **Import app**.
 
-1. The app package file name is `tab.zip` and it's available at `/bin/Debug/netcoreapp3.1/tab.zip` path.
+1. The app package file is named `tab.zip` and is located at the path `/bin/Debug/netcoreapp3.1/tab.zip`.
 
-1. Select `tab.zip` and open it in the Developer Portal.
+1. Select `tab.zip` and open it within the Developer Portal.
 
-1. A default **App ID** is created and populated in **Basic information** section.
+1. A default **App ID** is automatically generated and populated in the **Basic information** section.
 
-1. Add the Short and Long description  for your app in **Descriptions**.
+1. Add both the Short and Long descriptions for your app in the **Descriptions** section.
 
-1. In **Developer Information**, add the required details and in **Website (must be a valid HTTPS URL)** give your ngrok HTTPS URL.
+1. In the **Developer Information** section, provide the necessary details. For the **Website (must be a valid HTTPS URL)**, use your ngrok HTTPS URL.
 
-1. In **App URLs**, update the Privacy policy to `https://<yourngrokurl>/privacy` and Terms of use to `https://<yourngrokurl>/tou` and select **Save**.
+1. In the **App URLs** section, update the Privacy policy URL to `https://<yourngrokurl>/privacy` and the Terms of use URL to `https://<yourngrokurl>/tou`. Then, select **Save**.
 
-1. In **App features**, select **Personal app** > **Create your first personal app tab** and enter the name and update the **Content URL** with `https://<yourngrokurl>/personalTab`. Leave the Website URL field blank and select **Context** as personalTab from the dropdown list and select **Confirm**.
+1. In the **App features** section, choose **Personal app** and then **Create your first personal app tab**. Enter the name and update the **Content URL** with `https://<yourngrokurl>/personalTab`. Leave the Website URL field blank, select **Context** as personalTab from the dropdown list, and then select **Confirm**.
 
 1. Select **Save**.
 
-1. In the Domains section, domains from your tabs must contain your ngrok URL without the HTTPS prefix `<yourngrokurl>.ngrok.io`.
+1. In the Domains section, ensure that the domains from your tabs include your ngrok URL without the HTTPS prefix, formatted as `<yourngrokurl>.ngrok.io`.
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Update+your+app+package+with+Developer+Portal&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-personal-tab%3Ftabs%3Dvs%26pivots%3Drazor-csharp%23update-your-app-package-with-developer-portal&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-personal-tab.md&documentVersionIndependentId=6d43a761-19e0-541e-ba06-170099411ac1&author=surbhigupta&platformId=7b2eedc9-c3ef-d30c-e8e1-e6d80e341b11&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 ### Preview your app in Teams
 
-1. Select **Preview in Teams** from the Developer Portal toolbar, Developer Portal informs you that your custom app is uploaded successfully. The **Add** page appears for your app in Teams.
+1. Select **Preview in Teams** from the Developer Portal toolbar. The Developer Portal will notify you that your custom app has been successfully uploaded. The **Add** page for your app will appear in Teams.
 
 1. Select **Add** to load the tab in Teams. Your tab is now available in Teams.
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="Default Tab":::
 
-   Your tab is successfully created and added in Teams. You can also [reorder](#reorder-tabs) your tab in Teams.
+   Your tab has been successfully created and added in Teams. You can also [reorder](#reorder-tabs) your tab in Teams.
 
 ::: zone-end
 
@@ -450,7 +450,7 @@ ngrok http 3978 --host-header=localhost
 
 1. At the command prompt, create a new directory for your tab project.
 
-1. Clone the sample repository into your new directory using the following command or you can download the [source code](https://github.com/OfficeDev/Microsoft-Teams-Samples) and extract the files:
+1. Clone the sample repository into your new directory using the following command, or download the [source code](https://github.com/OfficeDev/Microsoft-Teams-Samples) and extract the files:
 
     ```cmd
     git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
@@ -468,7 +468,7 @@ Following are the steps to create a tab:
 
 1. Open Visual Studio and select **Open a project or solution**.
 
-1. Go to **Microsoft-Teams-Samples** > **samples** > **tab-personal** > **mvc-csharp** folder and open **PersonalTabMVC.sln** in Visual Studio.
+1. Navigate to **Microsoft-Teams-Samples** > **samples** > **tab-personal** > **mvc-csharp** folder and open **PersonalTabMVC.sln** in Visual Studio.
 
 1. In Visual Studio, select **F5** or choose **Start Debugging** from your application's **Debug** menu to verify if the application is loaded properly. In a browser, go to the following URLs:
 
@@ -612,13 +612,13 @@ ngrok http 3978 --host-header=localhost
 
 ### Preview your app in Teams
 
-1. Select **Preview in Teams** from the Developer Portal toolbar, Developer Portal informs you that your custom app is uploaded successfully. The **Add** page appears for your app in Teams.
+1. Select **Preview in Teams** from the Developer Portal toolbar. The Developer Portal will notify you that your custom app has been successfully uploaded. The **Add** page for your app will appear in Teams.
 
 1. Select **Add** to load the tab on Teams. Your tab is now available in Teams.
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="Personal tab":::
   
-    Your tab is successfully created and added in Teams. You can also [reorder](#reorder-tabs) your tab in Teams.
+    Your tab has been successfully created and added in Teams. You can also [reorder](#reorder-tabs) your tab in Teams.
 
 ::: zone-end
 
@@ -747,20 +747,20 @@ Start Teams app development by creating your first app. This app uses tab capabi
 
 :::image type="content" source="~/assets/images/toolkit-v2/blazor/your-blazor-helloworld-app1.png" alt-text="Screenshot of Blazor app displaying the final output of tab app after the step-by-step Blazor guide is successfully completed.":::
 
-This tutorial walks you through the steps to create, run, and deploy your first Teams app using .NET/Blazor.
+This tutorial guides you through the process of creating, running, and deploying your first Teams app using .NET/Blazor.
 
-In this page, you'll learn:
+In this guide, you will learn:
 
 1. [How to set up a new tab project with Agents Toolkit](#create-your-tab-project)
-1. [About the directory structure of your app](#take-a-tour-of-the-source-code-for-teams-tab-app)
+1. [Understanding the directory structure of your app](#take-a-tour-of-the-source-code-for-teams-tab-app)
 
 ## Create your tab project
 
-Use Agents Toolkit to create your first tab project. The toolkit takes you through a series of pages to create and configure your Teams app project:
+Use Agents Toolkit to initiate your first tab project. The toolkit guides you through a series of pages to create and configure your Teams app project:
 
-1. **Create a new project** page: You can select the project type.
-1. **Configure your new project** page: You can enter the project details.
-1. **Create a new Teams application** page: You can select the Teams app capabilities.
+1. **Create a new project** page: Choose the project type.
+1. **Configure your new project** page: Input the project details.
+1. **Create a new Teams application** page: Select the Teams app capabilities.
 
 **To create your tab project workspace**
 
@@ -774,7 +774,7 @@ Use Agents Toolkit to create your first tab project. The toolkit takes you throu
 
 1. Select the project type and details:
 
-   1. Search for **Microsoft 365** from templates dropdown list.  
+   1. Search for **Microsoft 365** from the templates dropdown list.  
 
    1. Select **Microsoft 365 Agents** as the template.
 
@@ -789,7 +789,7 @@ Use Agents Toolkit to create your first tab project. The toolkit takes you throu
    1. Enter a suitable name for your project.
 
       > [!NOTE]
-      > You can note that the project name you enter is automatically filled in as the **Solution name** also. If you want, you can change the solution name with no effect on project name.
+      > The project name you enter is automatically filled in as the **Solution name**. You can change the solution name without affecting the project name.
 
    1. Select the folder path where you want to create the project workspace.
 
@@ -805,13 +805,13 @@ Use Agents Toolkit to create your first tab project. The toolkit takes you throu
 
 1. Select the Teams app feature:
 
-   1. Select the **Tab** as the capability for your app.
+   1. Select **Tab** as the capability for your app.
 
    1. Select **Create**.
 
       :::image type="content" source="../../assets/images/toolkit-v2/first-tab/create-tab.png" alt-text="Screenshot of Create a new Teams application with Tab and Create options highlighted in red.":::
 
-   Your Teams tab app is created in few seconds.
+   Your Teams tab app is created in a few seconds.
 
    :::image type="content" source="../../assets/images/toolkit-v2/blazor/vs-tab-app.png" alt-text="Screenshot of Visual Studio displaying tips to get started while building your app."lightbox="../../assets/images/toolkit-v2/blazor/vs-tab-app.png":::
 
@@ -826,7 +826,7 @@ Use Agents Toolkit to create your first tab project. The toolkit takes you throu
 
 ### Take a tour of the source code for Teams tab app
 
-After project creation, you've the components to build a basic tab app. You can view the project directory structure in the **Solution Explorer** pane of the Visual Studio.
+After project creation, you have the components to build a basic tab app. You can view the project directory structure in the **Solution Explorer** pane of Visual Studio.
 
 :::image type="content" source="../../assets/images/toolkit-v2/blazor/blazor-app-solution-explorer_1.png" alt-text="Screenshot of Solution explorer displaying the components to build a basic personal app.":::
 
@@ -1067,9 +1067,9 @@ This property also enables you to set the default landing capability for your ap
 
 You can extend static tabs to group chat, channels, and meetings. Instead of pinned app content, you can build tabs that behave more like apps as you can pin only one tab per app, for example, pinning a single YouTube app tab.
 
-To extend your static tabs to group chat, channels, and meetings, update your [app manifest](/microsoft-365/extensibility/schema/root-static-tabs) with the `scopes` and `context` parameters in the `staticTabs` property. When you declare multiple static tabs in the manifest and add the app in the channel scope, only the first tab listed in the manifest appears.
+To extend static tabs to group chat, channels, and meetings, you must update your [app manifest](/microsoft-365/extensibility/schema/root-static-tabs) by including the `scopes` and `context` parameters within the `staticTabs` property. When defining multiple static tabs in the manifest and adding the app in the channel scope, only the first tab listed in the manifest will appear.
 
-Following is an example of app manifest where a static tab is defined that works in all scopes and contexts in Teams:
+Below is an example of an app manifest where a static tab is configured to function across all scopes and contexts in Teams:
 
 ```json
 "staticTabs": [ 
@@ -1094,10 +1094,9 @@ Following is an example of app manifest where a static tab is defined that works
       "websiteUrl": "https://contoso.com/content (displayed in web browser)" 
   }
 ], 
-
 ```
 
-If a context isn't defined in the app manifest, by default Teams consider the following context:
+If the context is not specified in the app manifest, Teams defaults to the following context:
 
 ```json
 "context": [ 
@@ -1112,56 +1111,55 @@ If a context isn't defined in the app manifest, by default Teams consider the fo
 
 ## Enable personal tab apps for calling extensibility
 
-You can create personal scope apps that integrate with Public Switched Telephone Network (PSTN) and Teams-to-Teams calls. Use the right scope and context to build apps that utilize tab type, static scope, personal context, and meeting side panels.
+You can develop personal scope apps that integrate with the Public Switched Telephone Network (PSTN) and Teams-to-Teams calls. By using the appropriate scope and context, you can create apps that leverage tab type, static scope, personal context, and meeting side panels.
 
-For more information, see [build tabs for calling](../../apps-in-teams-meetings/build-tabs-for-calling.md).
+For further details, refer to [build tabs for calling](../../apps-in-teams-meetings/build-tabs-for-calling.md).
 
 ## Customizing your static tab in chats or meetings
 
-To customize your static tab experience in chats, channels, or meetings, you can use the `setConfig` APIs in your tab to update the `contentUrl` and `websiteUrl`. Following is an example:
+To tailor your static tab experience in chats, channels, or meetings, utilize the `setConfig` APIs within your tab to modify the `contentUrl` and `websiteUrl`. Here is an example:
 
 ```json
 pages.config.setConfig({ 
   "contentUrl": "https://wwww.contoso.com/teamsapp/thread/" + context.threadId,
    ...}
-
 ```
 
-Only `contentUrl` and `websiteUrl` changes are supported for `setConfig`, other properties can't be changed for static tabs.
+Only changes to `contentUrl` and `websiteUrl` are supported through `setConfig`; other properties cannot be altered for static tabs.
 
 ## Offline tabs
 
 > [!NOTE]
-> Personal tabs with offline functionality are only supported on Teams in Android devices.
+> Personal tabs with offline functionality are supported only on Teams for Android devices.
 
-You can create a personal tab that works in Teams without an internet connection. An offline tab benefits users who work in areas with poor or no network coverage, such as field agents or frontline workers. Users can perform the following tasks in an offline tab:
+You can create a personal tab that operates in Teams without an internet connection. An offline tab is advantageous for users working in areas with limited or no network coverage, such as field agents or frontline workers. Users can perform the following tasks in an offline tab:
 
-* Record data through forms that can include images and videos.
+* Record data using forms that can include images and videos.
 * View details of previously submitted requests, incidents, or forms.
 
-When the user's device reconnects to the internet, the tab automatically synchronizes the locally stored data with an Azure Blob storage. This action ensures that all offline changes made by the user are updated in a central storage, maintaining data consistency across the organization.
+When the user's device reconnects to the internet, the tab automatically synchronizes the locally stored data with Azure Blob storage. This process ensures that all offline changes made by the user are updated in a central storage, maintaining data consistency across the organization.
 
 :::image type="content" source="../../assets/images/tabs/tab-support-offline-mobile.gif" alt-text="Graphic shows how an offline tab works in Teams mobile client.":::
 
 ### Build an offline tab
 
-Before you get started with building an offline tab, ensure that you meet the [prerequisites](~/tabs/how-to/tab-requirements.md) to build a personal tab.
+Before you begin building an offline tab, ensure you meet the [prerequisites](~/tabs/how-to/tab-requirements.md) for creating a personal tab.
 
-1. [Create an Azure Blob storage](/azure/storage/blobs/storage-quickstart-blobs-portal). Ensure that you note down the account and container name for later use.
+1. [Create an Azure Blob storage](/azure/storage/blobs/storage-quickstart-blobs-portal). Make sure to note the account and container name for later use.
 
 1. Clone the [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/) repository.
 
-1. In the cloned repository, go to **samples** > **tab-support-offline** > **nodejs** and open the folder in Visual Studio Code.
+1. In the cloned repository, navigate to **samples** > **tab-support-offline** > **nodejs** and open the folder in Visual Studio Code.
 
    :::image type="content" source="../../assets/images/tabs/open-tab-sample-vsc.png" alt-text="Screenshot shows how to open the code sample in Visual Studio Code." lightbox="../../assets/images/tabs/open-tab-sample-vsc.png":::
 
 1. Under **EXPLORER**, go to **server** > **blobStoreOperations.js** and replace `{{ account-Name }}` and `{{ container-Name }}` with your Azure Blob storage account and container's values.
 
-1. Select the **F5** key to debug the app. Teams opens in a browser window when the build is complete.
+1. Press the **F5** key to debug the app. Teams opens in a browser window when the build is complete.
 
 1. Sign in with your Microsoft 365 account, if prompted.
 
-1. Select **Add** when a dialog box opens to let you add the tab app to Teams.
+1. Select **Add** when a dialog box appears to allow you to add the tab app to Teams.
 
    :::image type="content" source="../../assets/images/tabs/add-offline-tab-teams.png" alt-text="Screenshot shows how to add the offline tab app to Teams.":::
 
@@ -1175,7 +1173,7 @@ To learn how to optimize your tab's performance in the Teams Android and iOS cli
 
 ## Step-by-step guide
 
-For learning more about building a tab using C#, see [build your first tab app using C sharp](../../get-started/tutorials.md#build-your-first-tab-app-using-c-sharp).
+For more information on building a tab using C#, see [build your first tab app using C sharp](../../get-started/tutorials.md#build-your-first-tab-app-using-c-sharp).
 
 ## Code sample
 
