@@ -26,13 +26,13 @@ To learn more about Adaptive Cards Universal Actions, see [Adaptive Cards Univer
 
 If you want to add user-specific views in instances where an Adaptive Card with Universal Action is shared, in the context of a group chat or a channel, the user might need to be authenticated.
 
-In the past, users who were chatting one-on-one with the bot had to wait while you sent them a separate auth card to authenticate. To communicate with the bot, user would need to switch from the group chat or channel that would disturb the flow.
+In the past, users who were chatting one-on-one with the bot had to wait while you sent them a separate auth card to authenticate. To communicate with the bot, users would need to switch from the group chat or channel, which would disturb the flow.
 
 ## Authentication flow in Action.Execute protocol
 
 Authentication flow for OAuth, within the `Action.Execute` protocol, enables authentication within the context of the group chat or channel conversation where the Adaptive Card is shared.
 
-Bots can respond with sign-in request in response to `Action.Execute` for:
+Bots can respond with sign-in requests in response to `Action.Execute` for:
 
 * Adaptive Cards sent by bot in a one-on-one chat, group chat, or a channel.
 * Adaptive Cards sent by app user via message extension app (backed by bot) in one-on-one chat, group chat, or channel.
@@ -72,14 +72,14 @@ For an OAuth or nominal sign-on experience in which the user is presented with a
     ```
 
     * Senders must include a value that adheres to the OAuthCard format.
-    * Senders must include a `connectionName`. Receivers might ignore sign in requests with an empty or missing `connectionName`.
+    * Senders must include a `connectionName`. Receivers might ignore sign-in requests with an empty or missing `connectionName`.
     * Senders must include a `button` that has a non-empty buttons array.
 
-1. Upon receiving this response, Teams client shows a **Sign-In** button in the card footer where user can sign in.
+1. Upon receiving this response, Teams client shows a **Sign-In** button in the card footer where the user can sign in.
 
    :::image type="content" source="../../../assets/images/authentication/adaptive-card-universal-action/sign-in-button.png" alt-text="Screenshot shows the sign-in button on an Adaptive Card.":::
 
-1. When the user selects **Sign-In** button, the identity provider's sign-in page opens in a browser window opens. After the user signs in, the Token Service page appears with an authorization code value.
+1. When the user selects **Sign-In** button, the identity provider's sign-in page opens in a browser window. After the user signs in, the Token Service page appears with an authorization code value.
 1. Teams client creates and sends the `adaptiveCard/action` invoke activity with `name`. The value includes the `state` field containing the authorization code:
 
     ```javascript
