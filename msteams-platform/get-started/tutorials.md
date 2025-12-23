@@ -127,42 +127,42 @@ After you finish scaffolding, explore the project directories and files in the *
 
 ### Build and run your AI chat bot app
 
-#### Create Open AI key and endpoint for your AI chat bot
+#### Create OpenAI key and endpoint for your AI chat bot
 
 1. Go to [Azure portal](https://ms.portal.azure.com/).
-1. Select **Create a resource** and search for Azure Open AI.
-1. Select **Azure Open AI** and select **Create**.
+1. Select **Create a resource** and search for Azure OpenAI.
+1. Select **Azure OpenAI** and select **Create**.
 
-    :::image type="content" source="../assets/images/agents-playground/azure-open-ai.png" alt-text="Screenshot shows the Azure open AI in Azure portal.":::
+    :::image type="content" source="../assets/images/agents-playground/azure-open-ai.png" alt-text="Screenshot shows the Azure OpenAI in Azure portal.":::
 
 1. Fill the required details and select **Next**.
 
-    :::image type="content" source="../assets/images/agents-playground/azure-open-ai-resource.png" alt-text="Screenshot shows you the Azure open AI subscription and resource group.":::
+    :::image type="content" source="../assets/images/agents-playground/azure-open-ai-resource.png" alt-text="Screenshot shows you the Azure OpenAI subscription and resource group.":::
 
 1. Select **All networks, including the internet, can access this resource** and then select **Next**.
 
-    :::image type="content" source="../assets/images/agents-playground/azure-open-ai-network.png" alt-text="Screenshot shows the Azure open AI network details.":::
+    :::image type="content" source="../assets/images/agents-playground/azure-open-ai-network.png" alt-text="Screenshot shows the Azure OpenAI network details.":::
 
 1. Fill the required details and select **Next**.
 
-    :::image type="content" source="../assets/images/agents-playground/azure-open-ai-tags.png" alt-text="Screenshot shows the Azure open AI tags details.":::
+    :::image type="content" source="../assets/images/agents-playground/azure-open-ai-tags.png" alt-text="Screenshot shows the Azure OpenAI tags details.":::
 
 1. Select **Create**.
 
-    :::image type="content" source="../assets/images/agents-playground/review-create.png" alt-text="Screenshot shows you to preview and create Azure open AI.":::
+    :::image type="content" source="../assets/images/agents-playground/review-create.png" alt-text="Screenshot shows you to preview and create Azure OpenAI.":::
 
 You've successfully created key and endpoint for your AI chat bot.
 
-:::image type="content" source="~/assets/images/agents-playground/deployment.png" alt-text="Screenshot shows the deployment of the Azure open AI.":::
+:::image type="content" source="~/assets/images/agents-playground/deployment.png" alt-text="Screenshot shows the deployment of the Azure OpenAI.":::
 
 > [!NOTE]
 > You can also get OpenAI API key to debug your AI chat bot.
 
-##### Get Azure Open AI keys and endpoint
+##### Get Azure OpenAI keys and endpoint
 
 1. Select **Go to resources**.
 
-    :::image type="content" source="../assets/images/agents-playground/deployment-azure.png" alt-text="Screenshot shows you the deployment of the Azure open AI.":::
+    :::image type="content" source="../assets/images/agents-playground/deployment-azure.png" alt-text="Screenshot shows you the deployment of the Azure OpenAI.":::
 
 1. Select **Keys and Endpoint** from the left pane and copy the **KEY** and **Endpoint**. You can copy either **KEY 1** or **KEY 2**.
 
@@ -172,13 +172,13 @@ You've successfully created key and endpoint for your AI chat bot.
 
 1. Select **Model deployments** from the left pane and select **Manage Deployments**.
 
-    :::image type="content" source="../assets/images/agents-playground/model-deployments.png" lightbox="~/assets/images/agents-playground/model-deployments.png" alt-text="Screenshot shows the model deployment for Azure open AI.":::
+    :::image type="content" source="../assets/images/agents-playground/model-deployments.png" lightbox="~/assets/images/agents-playground/model-deployments.png" alt-text="Screenshot shows the model deployment for Azure OpenAI.":::
 
-    The Azure Open AI Studio window appears.
+    The Azure OpenAI Studio window appears.
 
 1. Select **Deployments** from the left pane and select **+ Create new deployment**.
 
-    :::image type="content" source="../assets/images/agents-playground/ai-studio.png" lightbox="~/assets/images/agents-playground/ai-studio.png" alt-text="Screenshot shows the model deployments for Azure open AI.":::
+    :::image type="content" source="../assets/images/agents-playground/ai-studio.png" lightbox="~/assets/images/agents-playground/ai-studio.png" alt-text="Screenshot shows the model deployments for Azure OpenAI.":::
 
 1. Select the following details:
 
@@ -190,13 +190,13 @@ You've successfully created key and endpoint for your AI chat bot.
     1. Select **0301 (Default)** from the **Model version** dropdown list.
     1. Enter **Deployment name** and select **Create**.
 
-        :::image type="content" source="../assets/images/agents-playground/model-version.png" lightbox="~/assets/images/agents-playground/model-version.png" alt-text="Screenshot shows the model and version for Azure open AI deployment.":::
+        :::image type="content" source="../assets/images/agents-playground/model-version.png" lightbox="~/assets/images/agents-playground/model-version.png" alt-text="Screenshot shows the model and version for Azure OpenAI deployment.":::
 
     1. Copy and save the **Deployment name** for further use.
 
-        :::image type="content" source="../assets/images/agents-playground/copy-deployment.png" lightbox="~/assets/images/agents-playground/copy-deployment.png" alt-text="Screenshot shows the deployment name for Azure open AI deployment.":::
+        :::image type="content" source="../assets/images/agents-playground/copy-deployment.png" lightbox="~/assets/images/agents-playground/copy-deployment.png" alt-text="Screenshot shows the deployment name for Azure OpenAI deployment.":::
 
-#### Update Azure Open AI key and endpoints
+#### Update Azure OpenAI key and endpoints
 
 1. Open your project in Visual Studio Code.
 1. Under **EXPLORER**, go to **env** > **.env.playground.user** file.
@@ -210,7 +210,7 @@ You've successfully created key and endpoint for your AI chat bot.
 
 1. Go to **src** > **app.js** file.
 1. Comment the `OpenAI` code and uncomment the `Azure OpenAI` code.
-1. Enter your Azure Open AI deployment name in `azureDefaultDeployment`.
+1. Enter your Azure OpenAI deployment name in `azureDefaultDeployment`.
 
     ```JavaScript
 
@@ -258,7 +258,7 @@ To mock an **Add user** activity, follow these steps:
 
 1. In Agents Playground, go to **Mock an Activity** > **Add user**.
 
-    :::image type="content" source="../assets/images/toolkit-v2/debug/add-user.png" alt-text="Screenshot shows the add user option under mock an activity.":::
+    :::image type="content" source="../assets/images/toolkit-v2/debug/add-user.png" alt-text="Screenshot shows the Add user option under mock an activity.":::
 
     A dialog appears to preview the activity handler.
 
@@ -626,7 +626,7 @@ To create an Adaptive Card template, follow these steps:
 
 #### Create a preview card template
 
-The preview card template can contain a `title`, `subtitle` and `image` properties. If the API response doesn't have an image, you can remove the image property.
+The preview card template can contain a `title`, `subtitle`, and `image` properties. If the API response doesn't have an image, you can remove the image property.
 
 Following is an example of a preview card template:
 
@@ -1362,7 +1362,7 @@ Use one of the following ways to add a messaging endpoint:
 
 1. Update the **Messaging endpoint** in the format `https://your-devtunnel-domain/api/messages`.
 
-    :::image type="content" source="../assets/images/include-files/devtunnels-messaging-endpoint.png" alt-text="Screenshot shows the messaging endpoint adding api.":::
+    :::image type="content" source="../assets/images/include-files/devtunnels-messaging-endpoint.png" alt-text="Screenshot shows the messaging endpoint adding API.":::
 
 1. Select **Apply**.
 
@@ -1385,7 +1385,7 @@ Use one of the following ways to add a messaging endpoint:
 
 1. Update the **Messaging endpoint** in the format `https://your-ngrok-domain/api/messages`.
 
-    :::image type="content" source="../assets/images/include-files/ngrok-messaging-endpoint.png" alt-text="Screenshot shows the messaging endpoint adding api.":::
+    :::image type="content" source="../assets/images/include-files/ngrok-messaging-endpoint.png" alt-text="Screenshot shows the messaging endpoint adding API.":::
 
 1. Select **Apply**.
 
@@ -1576,7 +1576,7 @@ Agents Toolkit helps simplify the development process with tools to create a pro
 
 You can download the latest [Visual Studio installer](https://visualstudio.microsoft.com). Agents Toolkit is available as an extension in Visual Studio.
 
-After you open the Visual Studio installer, in the pop-up workloads window.
+After you open the Visual Studio installer in the pop-up workloads window:
 
 1. Select **ASP.NET and web development**.
 1. Under **installation details** > **Optional**, select **Microsoft Teams development tools**.
@@ -1596,7 +1596,7 @@ After you open the Visual Studio installer, in the pop-up workloads window.
 
    :::image type="content" source="../assets/images/sbs-csharp/manage-ext.png" alt-text="Screenshot shows the Manage Extensions." lightbox="~/assets/images/sbs-csharp/manage-extension.png":::
 
-1. From the left pane, select **Installed**. The **Microsoft 365 Agents Toolkit** extension is avaialble.
+1. From the left pane, select **Installed**. The **Microsoft 365 Agents Toolkit** extension is available.
 
    :::image type="content" source="../assets/images/sbs-csharp/select-ttk.png" alt-text="Screenshot shows the selection of Agents Toolkit." lightbox="~/assets/images/sbs-csharp/select-installed-ttk.png":::
 
@@ -1724,7 +1724,7 @@ To successfully run your app in Teams, ensure that you've enabled custom app upl
 
 </details>
 
-You have successfully created a tab app using C#. Agents Toolkit has added the necessary scaffolding to your app's directory structure. The tutorial is now complete.
+You've successfully created a tab app using C#. Agents Toolkit has added the necessary scaffolding to your app's directory structure. The tutorial is now complete.
 
 > [!div class="nextstepaction"]
 > [Create a tab](../tabs/how-to/create-personal-tab.md)
@@ -1750,7 +1750,7 @@ Key aspects of Microsoft Entra SSO:
 
 This step-by-step guide helps you to create tabs and message extensions enabling Microsoft Entra SSO authentication. You'll see the following output:
 
-:::image type="content" source="../assets/images/Tab-ME-SSO/hello-megan-profile245-1.png" alt-text="Screenshot of the tab and message extension with SSO authentication output after you have successfully completed the step-by-step guide.":::
+:::image type="content" source="../assets/images/Tab-ME-SSO/hello-megan-profile245-1.png" alt-text="Screenshot of the tab and message extension with SSO authentication output after you've successfully completed the step-by-step guide.":::
 
 ### Prerequisites for adding SSO to apps
 
@@ -1886,7 +1886,7 @@ Select one of the following ways to create a tunnel:
 
     :::image type="content" source="../assets/images/include-files/developer-tunnel-web.png" alt-text="Screenshot shows the dev tunnel welcome page in browser.":::
 
-1. Go to Visual Studio, select **View > Output**.
+1. Go to Visual Studio, and then select **View > Output**.
 
 1. From the **Output** console dropdown menu, select **Dev Tunnels**.
 
@@ -2166,7 +2166,7 @@ The window shows the HTTPS URL.
 
 1. Update the **Messaging endpoint** in the format `https://your-devtunnel-domain/api/messages`.
 
-    :::image type="content" source="../assets/images/include-files/devtunnels-messaging-endpoint.png" alt-text="Screenshot shows the messaging endpoint adding api.":::
+    :::image type="content" source="../assets/images/include-files/devtunnels-messaging-endpoint.png" alt-text="Screenshot shows the messaging endpoint adding API.":::
 
 1. Select **Apply**.
 
@@ -2189,7 +2189,7 @@ The window shows the HTTPS URL.
 
 1. Update the **Messaging endpoint** in the format `https://your-ngrok-domain/api/messages`.
 
-    :::image type="content" source="../assets/images/include-files/ngrok-messaging-endpoint.png" alt-text="Screenshot shows the messaging endpoint adding api.":::
+    :::image type="content" source="../assets/images/include-files/ngrok-messaging-endpoint.png" alt-text="Screenshot shows the messaging endpoint adding API.":::
 
 1. Select **Apply**.
 
@@ -2372,7 +2372,7 @@ dotnet run
 
 Did you come up with output like this?
 
-:::image type="content" source="../assets/images/Tab-ME-SSO//hello-megan-profile245-1.png" alt-text="Screenshot of the output after you have successfully completed the step-by-step guide.":::
+:::image type="content" source="../assets/images/Tab-ME-SSO//hello-megan-profile245-1.png" alt-text="Screenshot of the output after you've successfully completed the step-by-step guide.":::
 
 You've completed the tutorial to get started with SSO for tab and message extension app.
 
