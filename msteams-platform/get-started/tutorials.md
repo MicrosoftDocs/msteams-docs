@@ -1449,7 +1449,7 @@ Use one of the following ways to add a messaging endpoint:
 
 1. Go to **File** > **Open** > **Project/Solution...**.
 
-    :::image type="content" source="../assets/images/bots/project-solution_1.png" alt-text="Screenshot of Visual Studio file menu. The menu entries titled Open under File menu and Project/Solution under Open are highlighted in red.":::
+    :::image type="content" source="../assets/images/bots/project-solution_1.png" alt-text="The screenshot of Visual Studio file menu. The menu entries titled Open under File menu and Project/Solution under Open are highlighted in red.":::
 
 1. From **bot-conversation-sso-quickstart** > **csharp_dotnetcore** folder, and select **BotConversationSsoQuickstart.sln** file.
 
@@ -1458,14 +1458,14 @@ Use one of the following ways to add a messaging endpoint:
 1. Select **F5**  to run the project.
 1. If a **Security Warning** dialog appears, select **Yes**.
 
-    :::image type="content" source="../assets/images/bots/certificate.png" alt-text="Screenshot of Security Warning with the Yes option highlighted in red.":::
+    :::image type="content" source="../assets/images/bots/certificate.png" alt-text="The screenshot of Security Warning with the Yes option highlighted in red.":::
 
    A webpage opens with a message **Your bot is ready!**.
 
     > [!NOTE]
     > This page appears only when you navigate to the localhost URL.
 
-    :::image type="content" source="../assets/images/bots/yourbot.png" alt-text="Screenshot of the webpage that displays Your bot is ready.":::
+    :::image type="content" source="../assets/images/bots/yourbot.png" alt-text="The screenshot of the webpage that displays Your bot is ready.":::
 
     <details>
     <summary><b>Troubleshooting</b></summary>
@@ -1503,7 +1503,7 @@ Use one of the following ways to add a messaging endpoint:
 
 1. Select **Open** to upload the .zip file that you've created in the **Manifest** folder.
 
-    :::image type="content" source="../assets/images/bots/app-open.png" alt-text="Screenshot of Manifest folder with Open option to upload the Teams Bot zip file highlighted in red.":::
+    :::image type="content" source="../assets/images/bots/app-open.png" alt-text="The screenshot of Manifest folder with Open option to upload the Teams Bot zip file highlighted in red.":::
 
 1. Select **Add** to add the bot to your chat.
 
@@ -1511,7 +1511,7 @@ Use one of the following ways to add a messaging endpoint:
 
 1. Select **Open**.
 
-    :::image type="content" source="../assets/images/bots/conversation-bot-open.png" alt-text="Screenshot of scope selection dialog with Open option highlighted.":::
+    :::image type="content" source="../assets/images/bots/conversation-bot-open.png" alt-text="The screenshot of scope selection dialog with Open option highlighted.":::
 
     You can interact with the bot by sending it a message. The bot exchanges an SSO token and calls the Graph API on your behalf. It keeps you signed in unless you send a message to sign out.
 
