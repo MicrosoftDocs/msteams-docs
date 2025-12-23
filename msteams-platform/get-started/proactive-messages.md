@@ -83,11 +83,11 @@ You can use the CLI with the `atk` command. Verify that the command is working b
 
 ---
 
-## Set up your Teams development tenant
+### Set up your Teams development tenant
 
 A tenant is a space or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you upload and test your app. Let's verify if you're ready to develop with the tenant.
 
-### Check for upload an app option
+#### Check for upload an app option
 
 After creating your custom app, you must upload your app to Teams with the **Upload a custom app** option. Sign in to your Microsoft 365 account to check if this option is enabled.
 
@@ -103,7 +103,7 @@ The following steps help you verify if you can upload apps in Teams:
       > [!NOTE]
       > If you don't find the option to upload a custom app, contact your Teams administrator.
 
-### Create a free Teams developer tenant (optional)
+#### Create a free Teams developer tenant (optional)
 
 If you don't have a Teams developer account, join the Microsoft 365 developer program.
 
@@ -154,7 +154,7 @@ To build proactive message bot using Visual Studio Code, follow these steps:
 
     The proactive message bot is created in a few seconds and displays the proactive message bot successful dialog in the lower-right corner with the option to debug:
 
-    :::image type="content" source="../assets/images/proactive-scenario/proactive-bot-created.png" alt-text="Screenshot shows the proactive message bot created."lightbox="../msteams-platform/assets/images/proactive-scenario/proact-bot-created-1.png"::::::
+    :::image type="content" source="../assets/images/proactive-scenario/proactive-bot-created.png" alt-text="Screenshot shows the proactive message bot created."lightbox="../assets/images/proactive-scenario/proact-bot-created-1.png"::::::
 
 1. Select **Run and Debug** :::image type="icon" source="../assets/images/proactive-scenario/run-debug-icon.png"::: icon from the top-left corner.
 
@@ -184,7 +184,7 @@ To build proactive message bot using Visual Studio Code, follow these steps:
 
     :::image type="content" source="../assets/images/proactive-scenario/pro-msg-response.png" alt-text="Screenshot shows the bot response on the chat.":::
 
-### Take a tour of the source code
+## Take a tour of the source code
 
 Agents Toolkit provides components for building an app. After creating the project, you can view the project folders and files in the **EXPLORER** area of Visual Studio Code.
 
@@ -231,7 +231,7 @@ Deployment consists of two steps. First, necessary cloud resources are created (
 <details>
 <summary>What's the difference between Provision and Deploy?</summary>
 <br>
-<b>Provision</b> creates resources in Azure and Microsoft 365 for your app, but no code (HTML, CSS, and JavaScript) is copied to the resources. <b>Deploy</b> copies the code for your app to the resources you created during provisioning. It's common to deploy multiple times without provisioning new resources. Since provisioning can take some time to complete, it's separate from deployment.
+<b>Provision</b> creates resources in Azure and Microsoft 365 for your app, but no code (HTML, CSS, and JavaScript) is copied to the resources.<br> <b>Deploy</b> copies the code for your app to the resources you created during provisioning. It's common to deploy multiple times without provisioning new resources. Since provisioning can take some time to complete, it's separate from deployment.
 </details>
 <br>
 
