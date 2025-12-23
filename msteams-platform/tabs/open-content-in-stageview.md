@@ -1,31 +1,33 @@
 ---
-title: Multi-window Experience for App Content
-author: surbhigupta
-description: Learn the types of Stageview, full screen UI component invoked to surface your app content. Open content in multi-window using deep links, Adaptive Cards or TeamsJS.
-ms.topic: conceptual
-ms.author: surbhigupta
-ms.localizationpriority: high
-ms.date: 06/05/2023
+
+title: Multi-window Experience for App Content  
+author: surbhigupta  
+description: Learn the types of Stageview, full screen UI component invoked to surface your app content. Open content in multi-window using deep links, Adaptive Cards or TeamsJS.  
+ms.topic: conceptual  
+ms.author: surbhigupta  
+ms.localizationpriority: high  
+ms.date: 06/05/2023  
+
 ---
 
 # Open content in multi-window
 
-Microsoft Teams provides multiple methods to open your app content in immersive canvas experiences. Stageview allows users to adopt multitasking inside Teams, for example, you can open your app content in a new Teams window with a specific chat in the side panel. Stageview is designed to:
+Microsoft Teams provides multiple methods to open your app content in immersive canvas experiences. Stageview allows users to adopt multitasking inside Teams. For example, you can open your app content in a new Teams window with a specific chat in the side panel. Stageview is designed to:
 
-* Facilitate multitasking within Teams.
-* Support collaboration in a Teams multi-window.
-* Focus on specific tasks in a large modal experience.
+- Facilitate multitasking within Teams.
+- Support collaboration in a Teams multi-window.
+- Focus on specific tasks in a large modal experience.
 
 > [!NOTE]
 > The article is based on Teams JavaScript client library (TeamsJS) version 2.0.x. If you're using an earlier version, see [TeamsJS](how-to/using-teams-client-library.md) for guidance between the latest and earlier versions.
 
 ## Types of Stageview
 
- Based on the UI and functionality, Stageview offers three ways to open your app content:
+Based on the UI and functionality, Stageview offers three ways to open your app content:
 
-* [Collaborative Stageview](#collaborative-stageview)
-* [Stageview Multi-window](#stageview-multi-window)
-* [Stageview Modal](#stageview-modal)
+- [Collaborative Stageview](#collaborative-stageview)
+- [Stageview Multi-window](#stageview-multi-window)
+- [Stageview Modal](#stageview-modal)
 
 ### Collaborative Stageview
 
@@ -68,9 +70,9 @@ You can invoke Stageview in Teams through one of the following methods and confi
 
 `openMode` is a property in [StageViewParams interface](/javascript/api/@microsoft/teams-js/stageview.stageviewparams). The `openMode` property is optional and can be defined in a [stageView API](#invoke-from-stageview-api) or a [deep link](#invoke-from-deep-link) to determine the type of Stageview response. The `openMode` property has the following three values:
 
-* `popoutWithChat`
-* `popout`
-* `modal`
+- `popoutWithChat`
+- `popout`
+- `modal`
 
 The following table provides the Stageview response of the `openMode` values:
 
@@ -84,8 +86,8 @@ When `openMode` isn't defined, the content opens by default in Collaborative Sta
 
 > [!NOTE]
 >
-> * The `openMode` values are case sensitive. If you don't use the correct casing, the content opens in Stageview Modal.
-> * When pop-out experience isn't supported, for example in a Teams web client, the content opens in Stageview Modal even when the `openMode` property is defined.
+> - The `openMode` values are case sensitive. If you don't use the correct casing, the content opens in Stageview Modal.
+> - When pop-out experience isn't supported, for example in a Teams web client, the content opens in Stageview Modal even when the `openMode` property is defined.
 
 </details>
 
@@ -94,7 +96,7 @@ When `openMode` isn't defined, the content opens by default in Collaborative Sta
 
 When a Stageview is open, `close()` function allows you to programmatically close the Stageview after user action. This is an optional function that you can integrate into your Microsoft built apps. If the function is called from outside a Stageview, the close action isn't performed.
 
-Initialize your app using `microsoftTeams.app.initialize()` and implement `close()` function from the [`self` module](/javascript/api/@microsoft/teams-js/stageview.self):
+Initialize your app using `microsoftTeams.app.initialize()` and implement `close()` function from the [`self` module](/javascript/api/@microsoft/teams/js/stageview.self):
 
 ```typescript
 // App Initialize
@@ -123,7 +125,7 @@ The following steps help you to understand how Collaborative Stageview is invoke
 
 1. When the user shares a URL for an app content in a Teams chat, the bot receives a `composeExtensions/queryLink` invoke request. The bot returns an Adaptive Card with the type `tab/tabInfoAction`.
 
-1. After the user selects the action button on the Adaptive Card, Collaborative Stageview opens based on the content in the Adaptive Card.
+2. After the user selects the action button on the Adaptive Card, Collaborative Stageview opens based on the content in the Adaptive Card.
 
 :::image type="content" source="../assets/images/tab-images/collab-view.gif" alt-text="The graphical representation shows how Collaborative Stageview response from Adaptive Card.":::
 
@@ -152,10 +154,10 @@ The following JSON code is an example to create an action button in an Adaptive 
 
 **Best practices to create an Adaptive Card**
 
-* The content URL must be within the list of `validDomains` in your app manifest.
-* The invoke request type must be `composeExtensions/queryLink`.
-* The `invoke` workflow must be similar to the `appLinking` workflow.
-* The `Action.Submit` must be configured as `Open` to maintain consistency.
+- The content URL must be within the list of `validDomains` in your app manifest.
+- The invoke request type must be `composeExtensions/queryLink`.
+- The `invoke` workflow must be similar to the `appLinking` workflow.
+- The `Action.Submit` must be configured as `Open` to maintain consistency.
 
 If your app isn't optimized to work in Teams mobile client, Stageview for apps published through the [Microsoft Teams Store](../concepts/deploy-and-publish/apps-publish-overview.md) opens in a default web browser.
 
@@ -172,56 +174,56 @@ The following codes are the samples for each `openMode` value in stageView API:
 
 The `openMode` property is defined as `popoutWithChat` in [StageViewParams](/javascript/api/@microsoft/teams-js/stageview.stageviewparams) to open in Collaborative Stageview.
 
-  ```json
-    {
-      "appId": "2c19df50-1c3c-11ea-9327-cd28e4b6f7ba",
-      "contentUrl": "https://teams-test-tab.azurewebsites.net",
-      "title": "Test tab ordering",
-      "websiteUrl": "https://teams-test-tab.azurewebsites.net",
-      "openMode": "popoutWithChat"
-    }
-  ```
+```json
+{
+  "appId": "2c19df50-1c3c-11ea-9327-cd28e4b6f7ba",
+  "contentUrl": "https://teams-test-tab.azurewebsites.net",
+  "title": "Test tab ordering",
+  "websiteUrl": "https://teams-test-tab.azurewebsites.net",
+  "openMode": "popoutWithChat"
+}
+```
 
 # [popout](#tab/popout)
 
 The `openMode` property is defined as `popout` in [StageViewParams](/javascript/api/@microsoft/teams-js/stageview.stageviewparams) to open in Stageview Multi-window.
 
-  ```json
-    {
-      "appId": "2c19df50-1c3c-11ea-9327-cd28e4b6f7ba",
-      "contentUrl": "https://teams-test-tab.azurewebsites.net",
-      "title": "Test tab ordering",
-      "websiteUrl": "https://teams-test-tab.azurewebsites.net",
-      "openMode": "popout"
-    }
-  ```
+```json
+{
+  "appId": "2c19df50-1c3c-11ea-9327-cd28e4b6f7ba",
+  "contentUrl": "https://teams-test-tab.azurewebsites.net",
+  "title": "Test tab ordering",
+  "websiteUrl": "https://teams-test-tab.azurewebsites.net",
+  "openMode": "popout"
+}
+```
 
 # [modal](#tab/modal)
 
 The `openMode` property is defined as `modal` in [StageViewParams](/javascript/api/@microsoft/teams-js/stageview.stageviewparams) to open in Stageview Modal.
 
-  ```json
-    {
-      "appId": "2c19df50-1c3c-11ea-9327-cd28e4b6f7ba",
-      "contentUrl": "https://teams-test-tab.azurewebsites.net",
-      "title": "Test tab ordering",
-      "websiteUrl": "https://teams-test-tab.azurewebsites.net",
-      "openMode": "modal"
-    }
-  ```
+```json
+{
+  "appId": "2c19df50-1c3c-11ea-9327-cd28e4b6f7ba",
+  "contentUrl": "https://teams-test-tab.azurewebsites.net",
+  "title": "Test tab ordering",
+  "websiteUrl": "https://teams-test-tab.azurewebsites.net",
+  "openMode": "modal"
+}
+```
 
 ---
 
 When `openMode` isn't defined in [StageViewParams](/javascript/api/@microsoft/teams-js/stageview.stageviewparams), the default response is Collaborative Stageview.
 
-  ```json
-    {
-      "appId": "2c19df50-1c3c-11ea-9327-cd28e4b6f7ba",
-      "contentUrl": "https://teams-test-tab.azurewebsites.net",
-      "title": "Test tab ordering",
-      "websiteUrl": "https://teams-test-tab.azurewebsites.net"
-    }
-  ```
+```json
+{
+  "appId": "2c19df50-1c3c-11ea-9327-cd28e4b6f7ba",
+  "contentUrl": "https://teams-test-tab.azurewebsites.net",
+  "title": "Test tab ordering",
+  "websiteUrl": "https://teams-test-tab.azurewebsites.net"
+}
+```
 
 For more information on stageView API, see [stageView module](/javascript/api/@microsoft/teams-js/stageview).
 
@@ -237,9 +239,9 @@ To display a specific chat in the side panel, you must specify a `threadId`. Oth
 
 > [!NOTE]
 >
-> * All deep links must be encoded before you paste the URL. Unencoded URLs aren't supported.
-> * When you invoke Stageview from a certain context, ensure that your app works in that context.
-> * When adding a threadId, ensure your app works in the context of the threadId that's passed. If the context fails, the experience falls back to the personal context.
+> - All deep links must be encoded before you paste the URL. Unencoded URLs aren't supported.
+> - When you invoke Stageview from a certain context, ensure that your app works in that context.
+> - When adding a threadId, ensure your app works in the context of the threadId that's passed. If the context fails, the experience falls back to the personal context.
 
 #### Syntax
 
