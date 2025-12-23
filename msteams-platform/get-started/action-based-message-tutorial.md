@@ -44,7 +44,7 @@ Ensure that you install the following tools and set up your development environm
 1. Select **Code**.
 1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-   :::image type="content" source="../../assets/images/include-files/clone-repository.png" alt-text="Screenshot show the option to clone repository in local.":::
+   :::image type="content" source="../assets/images/include-files/clone-repository.png" alt-text="Screenshot show the option to clone repository in local.":::
 
 1. Select **Clone**.
 
@@ -64,11 +64,11 @@ The following steps help you to create and register your bot in Azure portal:
 
 1. Select **App registrations**.
 
-    :::image type="content" source="../../assets/images/include-files/azure-app-registration.png" alt-text="Screenshot shows the Azure services to select App registrations.":::
+    :::image type="content" source="../assets/images/include-files/azure-app-registration.png" alt-text="Screenshot shows the Azure services to select App registrations.":::
 
 1. Select **+ New registration**.
 
-    :::image type="content" source="../../assets/images/include-files/new-registration.png" alt-text="Screenshot shows the New registration page on Microsoft Entra admin center.":::
+    :::image type="content" source="../assets/images/include-files/new-registration.png" alt-text="Screenshot shows the New registration page on Microsoft Entra admin center.":::
 
 1. Enter the name of your app.
 
@@ -76,11 +76,11 @@ The following steps help you to create and register your bot in Azure portal:
 
 1. Select **Register**.
 
-    :::image type="content" source="../../assets/images/include-files/app-register.png" alt-text="Screenshot shows the option to register the bot in Microsoft Entra admin center.":::
+    :::image type="content" source="../assets/images/include-files/app-register.png" alt-text="Screenshot shows the option to register the bot in Microsoft Entra admin center.":::
 
     Your app is registered in Microsoft Entra ID. The app overview page appears.
 
-    :::image type="content" source="../../assets/images/include-files/app-registration-overview.png" alt-text="Screenshot shows the app registration overview page.":::
+    :::image type="content" source="../assets/images/include-files/app-registration-overview.png" alt-text="Screenshot shows the app registration overview page.":::
 
     > [!NOTE]
     > Save the app ID from **Application (client) ID** and **Directory (tenant) ID** for further use.
@@ -498,21 +498,21 @@ To build and run the service, use Visual Studio or Command line.
 
 1. Go to **File** > **Open** > **Project/Solution....**.
 
-    :::image type="content" source="./assets/images/sbs-messagingextension-action/VSopenfile.png" alt-text="Screenshot of Visual Studio with the Project/Solution highlighted in red.":::
+    :::image type="content" source="../assets/images/sbs-messagingextension-action/VSopenfile.png" alt-text="Screenshot of Visual Studio with the Project/Solution highlighted in red.":::
 
 1. From **csharp** folder, select the **TeamsMessagingExtensionsAction.csproj** file.
 
-    :::image type="content" source="./assets/images/sbs-messagingextension-action/openproject.png" alt-text="Screenshot of cloned repository with the TeamsMessagingExtensionsAction.csproj highlighted in red.":::
+    :::image type="content" source="../assets/images/sbs-messagingextension-action/openproject.png" alt-text="Screenshot of cloned repository with the TeamsMessagingExtensionsAction.csproj highlighted in red.":::
 
 1. Press **F5** to run the project.
 
 1. Select **Yes** if the following dialog appears:
 
-    :::image type="content" source="./assets/images/sbs-messagingextension-action/certificate.png" alt-text="Screenshot of Security Warning with the Yes option highlighted in red.":::
+    :::image type="content" source="../assets/images/sbs-messagingextension-action/certificate.png" alt-text="Screenshot of Security Warning with the Yes option highlighted in red.":::
 
     A webpage appears with a message **Your bot is ready!**.
 
-    :::image type="content" source="./assets/images/sbs-messagingextension-action/appisready.png" alt-text="Screenshot of the webpage that displays Your bot is ready!.":::
+    :::image type="content" source="../assets/images/sbs-messagingextension-action/appisready.png" alt-text="Screenshot of the webpage that displays Your bot is ready!.":::
 
 # [Command line](#tab/cli)
 
@@ -522,7 +522,7 @@ Go to **samples** > **msgext-action** > **csharp** in Command Prompt window and 
     dotnet run
 ```
 
-:::image type="content" source="./assets/images/sbs-messagingextension-action/dotnetruncmd.png" alt-text="Screenshot of Command Prompt - dotnet run with the dotnet run command.":::
+:::image type="content" source="../assets/images/sbs-messagingextension-action/dotnetruncmd.png" alt-text="Screenshot of Command Prompt - dotnet run with the dotnet run command.":::
 
 ---
 
