@@ -2370,6 +2370,12 @@ dotnet run
 
       :::image type="content" source="../assets/images/Tab-ME-SSO/profile-card-1.png" alt-text= "Screenshot of the selected profile after entering the URL.":::
 
+Did you come up with output like this?
+
+:::image type="content" source="../assets/images/Tab-ME-SSO//hello-megan-profile245-1.png" alt-text="Screenshot of the output after you have successfully completed the step-by-step guide.":::
+
+You've completed the tutorial to get started with SSO for tab and message extension app.
+
 > [!div class="nextstepaction"]
 > [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
 > [!div class="nextstepaction"]
