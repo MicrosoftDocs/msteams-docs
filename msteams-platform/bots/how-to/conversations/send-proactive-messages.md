@@ -1,7 +1,7 @@
 ---
 title: Send proactive messages
 description: Learn how to send proactive messages with your Teams bot, install your app using Microsoft Graph, and check code samples based on Bot Framework SDK v4.
-ms.topic: conceptual
+ms.topic: article
 ms.author: surbhigupta
 ms.owner: angovil
 ms.localizationpriority: high
