@@ -21,11 +21,11 @@ Go to the [**Azure portal**](https://ms.portal.azure.com/#home) or [**Microsoft 
 
 ## Developer community forums
 
-Developers in the Teams community use Microsoft Q&A, GitHub,Tech Community  and Stack Overflow to share ideas, get help, report issues, and ask general questions.
+Developers in the Teams community use Microsoft Q&A, GitHub, Tech Community  and Stack Overflow to share ideas, get help, report issues, and ask general questions.
 
 📢 Read the latest [announcements](https://github.com/MicrosoftDocs/msteams-docs/discussions/categories/announcements) and join the conversation with community members and platform engineers!
 
-Connect with the developer community across forums to ask questions, share solutions, and collaborate on Teams agent and app development. You can also pose questions on building bots, agents, and conversational apps using the Bot Framework SDK. To learn more, see [Agents in Teams](agents-in-teams/overview.md).
+Connect with the developer community across forums to ask questions, share solutions, and collaborate on Teams agent and app development. You can also pose questions on building bots, agents, and conversational apps using the Bot Framework SDK. To learn more, see [agents in Teams](agents-in-teams/overview.md).
 
 | **Community Forums**| **Ways to connect** |
 |:--------------------|:--------------------|
