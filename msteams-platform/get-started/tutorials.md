@@ -2220,6 +2220,27 @@ The window shows the HTTPS URL.
 
     :::image type="content" source="../assets/images/include-files/new-connection-setting.png" alt-text="Screenshot shows the values added to set OAuth connection.":::
 
+### Set up app settings
+
+1. Go to the **appsettings.json** file in the cloned repository.
+
+   :::image type="content" source="../assets/images/Tab-ME-SSO/app-setting-folder-1.png" alt-text="Screenshot of Project file with appsettings.json file highlighted in red.":::
+
+1. Open the **appsettings.json** file in Visual Studio.
+
+1. Update the following information:
+
+     - Replace `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
+     - Replace `"MicrosoftAppPassword"` to your bot's client secrets **Value**.
+     - Replace `"SiteUrl"` to your ngrok URL.
+     - Replace `"ConnectionName"` to the name of OAuth connection setting.
+     - Replace `"TenantId"` to the tenant ID of the tenant where the app is used.
+     - Replace `"ClientId"` to your bot's **Microsoft App ID**.
+     - Replace `"AppSecret"` to your bot's client secrets **Value**.
+     - Replace `"ApplicationIdURI"` in the form of `api://*******.ngrok.io/botid-{AppID}`.
+
+    :::image type="content" source="../assets/images/Tab-ME-SSO/app-setting.png" alt-text="Screenshot of the appsettings.json file with the values entered highlighted in red.":::
+
 > [!div class="nextstepaction"]
 > [Enable SSO for tab app](../tabs/how-to/authentication/tab-sso-overview.md)
 > [!div class="nextstepaction"]
