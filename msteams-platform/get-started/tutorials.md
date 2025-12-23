@@ -16,7 +16,7 @@ In this article, learn more about building Teams app capabilities. Here's a list
 
 | # | Capability | Step-by-step guide |
 | --- | --- | --- |
-| 1. | Bot | [Debug your AI chat bot using Microsoft 365 Agents Playground](#debug-your-ai-chat-bot-using-microsoft-365-agents-playground)<br> [Send proactive messages](# send-proactive-messages) |
+| 1. | Bot | [Debug your AI chat bot using Microsoft 365 Agents Playground](#debug-your-ai-chat-bot-using-microsoft-365-agents-playground) <br> [Send proactive messages](#send-proactive-messages) |
 | 2. | Message extension | [Build API-based message extension](#build-api-based-message-extension) |
 | 3. | Tab | [Build your first tab app using C sharp](#build-your-first-tab-app-using-c-sharp) |
 | 4. | SSO | [Build a bot with SSO authentication](#build-a-bot-with-sso-authentication) |
@@ -423,7 +423,7 @@ If you don't have a Teams developer account, join the Microsoft 365 developer pr
 1. In the welcome screen, select **Set up E5 subscription**.
 1. Set up your administrator account. After you finish, the following screen appears:
 
-   :::image type="content" source="../assets/images/include-files/microsoft-365.png" alt-text="Screenshot shows the Microsoft 365 Developer Program.":::
+   :::image type="content" source="../assets/images/include-files/microsoft-365.png" alt-text="Screenshot displays the Microsoft 365 Developer Program.":::
 
 1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
 
@@ -481,7 +481,7 @@ To build proactive message bot using Visual Studio Code, follow these steps:
 
 1. Search and select the required scope or select a channel, chat, or meeting from the list, and move through the dialog to select **Go**.
 
-    :::image type="content" source="../assets/images/proactive-scenario/add-to-teams.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
+    :::image type="content" source="../assets/images/proactive-scenario/add-to-teams.png" alt-text="Screenshot of the scope selection dialog showing the list of shared scopes.":::
 
     The proactive message bot app is uploaded to Teams client and the following message appears in response to the message sent.
 
