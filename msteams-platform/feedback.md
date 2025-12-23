@@ -19,13 +19,11 @@ Go to the [**Azure portal**](https://ms.portal.azure.com/#home) or [**Microsoft 
 | **General questions about Teams** | For general Teams questions, post your query in the :::image type="icon" source="assets/icons/microsoft-icon.png"::: [Microsoft Teams Community](https://answers.microsoft.com/msteams/forum). |
 | **Partner Center support** | For Partner Center issues  (example: app submissions, account setup, or publishing workflows), use the [Partner Center AI Assistant](/partner-center/support/report-problems-with-partner-center#contact-support-using-partner-center-ai-assistant) to report problems or contact support. |
 
-## Developer community help
+## Developer community forums
 
-Developers in the Teams community use Stack Overflow, Microsoft Q&A, GitHub, and the Tech Community to share ideas, get help, report issues, and ask general questions.
+Developers in the Teams community use Microsoft Q&A, GitHub,Tech Community  and Stack Overflow to share ideas, get help, report issues, and ask general questions.
 
 📢 Read the latest [announcements](https://github.com/MicrosoftDocs/msteams-docs/discussions/categories/announcements) and join the conversation with community members and platform engineers!
-
-### Developer community forums
 
 Connect with the developer community across forums to ask questions, share solutions, and collaborate on Teams agent and app development. You can also pose questions on building bots, agents, and conversational apps using the Bot Framework SDK. To learn more, see [Agents in Teams](agents-in-teams/overview.md).
 
@@ -43,11 +41,11 @@ Connect with the developer community across forums to ask questions, share solut
 
 Submit issues and ask general questions related to SDK and samples by using the community help channels.
 
-| **Community channel** | **Contact** |
+| **Community help channels** | **How to contact** |
 |:----------------------|:------------|
 | **Platform outages** | Check if your issue is already raised on [Teams platform outages](https://github.com/MicrosoftDocs/msteams-docs/labels/outage) before you raise one. |
 | **Samples** | Submit issues with samples to the respective  [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples) repository.|
-|  **Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) or TeamsFx SDK and CLI issues** | <ul><li> :::image type="icon" source="assets/icons/GitHub-icon.png":::  [GitHub Issues](https://github.com/OfficeDev/TeamsFx/issues): Create new issues on the [TeamsFx (Microsoft Teams Framework) GitHub repository](https://github.com/OfficeDev/TeamsFx) to report issues or raise feature request. We recommend using GitHub issues for queries and to receive community help. <li> :::image type="icon" source="assets/icons/stack-overflow-icon.png"::: [Stack Overflow](https://stackoverflow.com/questions/tagged/agents-toolkit): Use the `agents-toolkit` tag to post questions. Follow the Stack Overflow guidelines such as provide a descriptive title, a concise problem statement, and details to reproduce the issue. Feature requests or broad questions are off-topic. </li> </ul> |
+|  **Microsoft 365 Agents Toolkit** | <ul><li> :::image type="icon" source="assets/icons/GitHub-icon.png":::  [GitHub Issues](https://github.com/OfficeDev/TeamsFx/issues): Create new issues on the [TeamsFx (Microsoft Teams Framework) GitHub repository](https://github.com/OfficeDev/TeamsFx) to report issues or raise feature request. We recommend using GitHub issues for queries and to receive community help. <li> :::image type="icon" source="assets/icons/stack-overflow-icon.png"::: [Stack Overflow](https://stackoverflow.com/questions/tagged/agents-toolkit): Use the `agents-toolkit` tag to post questions. Follow the Stack Overflow guidelines. </li> </ul> |
 | **Bot and Message extension SDK issues or suggestions** | Submit issues and feature requests to the SDK repository for your bot's language ([C#](https://github.com/Microsoft/botbuilder-dotnet/), [JavaScript](https://github.com/Microsoft/botbuilder-js), or [Python](https://github.com/Microsoft/botbuilder-python)). Post How-to questions at [Stack Overflow](https://stackoverflow.com/questions/tagged/botframework%20microsoft-teams) using the `botframework` and `microsoft-teams` tag. |
 | **Tabs (TeamsJS) issues or suggestions** | Submit issues and feature requests to the [Microsoft Teams JavaScript client library (TeamsJS)](https://github.com/OfficeDev/microsoft-teams-library-js/issues) for tabs. Use the `microsoft-teams` tag to post how-to questions about TeamsJS at [Stack Overflow](https://stackoverflow.com/questions/tagged/microsoft-teams). |
 | **Live Share SDK issues or suggestions** | Submit issues and feature requests to the SDK repository for [Live Share SDK](https://github.com/microsoft/live-share-sdk). Use the `live-share` and `microsoft-teams` tag to post how-to questions about the SDK at [Stack Overflow](https://stackoverflow.com/questions/tagged/live-share+microsoft-teams). |
