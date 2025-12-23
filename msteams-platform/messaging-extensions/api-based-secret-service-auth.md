@@ -10,16 +10,16 @@ ms.date: 07/16/2024
 
 # API key authentication
 
-API key authentication is a method used to authenticate access to your message extension app using an API. It involves using a unique API key, which is passed with each API request to verify the identity of the user or the app that initiated the request. The API key must be registered in Microsoft Teams and when a user interacts with your message extension, Teams uses the secret to authenticate with your API.
+API key authentication is a method used to authenticate access to your message extension app using an API. It involves using a unique API key, which is passed with each API request to verify the identity of the user or the app that initiated the request. The API key must be registered in Microsoft Teams, and when a user interacts with your message extension, Teams uses the secret to authenticate with your API.
 
-The following API key registration properties help you to secure your key and ensure it's limited to your application:
+The following API key registration properties help you secure your key and ensure it's limited to your application:
 
 * **Base URL**: Teams transmits the secret to URL endpoints that begin with the value in this field.
 * **Target Tenant**: To limit API access to your Microsoft 365 tenant or any tenant.
 * **App ID**: To limit the key access to a specific app or any app.
 * **API key**: To authenticate access to your app.
 
-You can [register an API key](#register-an-api-key) through the Developer Portal for Teams, and generate an API key registration ID. [Update the app manifest](#update-app-manifest) with the `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property. This property must contain the API key registration ID returned when you submitted the API key through the Developer Portal for Teams.
+You can [register an API key](#register-an-api-key) through the Developer Portal for Teams and generate an API key registration ID. [Update the app manifest](#update-app-manifest) with the `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property. This property must contain the API key registration ID returned when you submitted the API key through the Developer Portal for Teams.
 
 > [!NOTE]
 > You must ensure to secure the API key registration ID as it can be retrieved from the Teams app manifest. For more information on securing your API key, see [best practices](#best-practices).
