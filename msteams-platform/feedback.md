@@ -3,7 +3,7 @@ title: Developer Community Support & Feedback
 description: Learn about the developer community, get help, raise issues, and ask general questions. This includes SDK and samples queries, documentation feedback, and feature requests.
 ms.localizationpriority: medium
 ms.topic: reference
-ms.date: 23/02/2025
+ms.date: 12/23/2025
 ---
 
 # Support and feedback
@@ -12,18 +12,18 @@ ms.date: 23/02/2025
 
 Go to the [**Azure portal**](https://ms.portal.azure.com/#home) or [**Microsoft 365 admin center**](https://admin.microsoft.com) for any business-critical issues that need SLA-based support.
 
-| **Product support** |     **Contact** |
+| **Product support** | **Contact** |
 |:------------|:------------|
-| **Microsoft Teams product issues and failures** | If you have a Premier support contract for :::image type="icon" source="assets/icons/microsoft-icon.png"::: Microsoft 365, visit the Microsoft 365 admin center and use the Support menu to [open a service request](https://admin.microsoft.com/). |
-| **Azure help and support** | If you have a paid Azure subscription, visit the Azure Admin Center to [open a ticket](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportreq). |
-| **General questions about Teams** | If you have general questions on Teams, submit your questions on :::image type="icon" source="assets/icons/microsoft-icon.png"::: [Microsoft Teams Community](https://answers.microsoft.com/msteams/forum).|
-| **Partner Center support** | For issues related to Partner Center (for example: app submissions, account setup, or publishing workflows), use the [Partner Center AI Assistant](/partner-center/support/report-problems-with-partner-center#contact-support-using-partner-center-ai-assistant) to report problems or contact support. |
+| **Microsoft Teams product issues and failures** | If you have a Premier support contract for :::image type="icon" source="assets/icons/microsoft-icon.png"::: Microsoft 365, go to the Microsoft 365 admin center and use the **Support** menu to [open a service request](https://admin.microsoft.com/). |
+| **Azure help and support** | If you have a paid Azure subscription, go to the Azure portal to [create a support request](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportreq). |
+| **General questions about Teams** | For general Teams questions, post your query in the :::image type="icon" source="assets/icons/microsoft-icon.png"::: [Microsoft Teams Community](https://answers.microsoft.com/msteams/forum). |
+| **Partner Center support** | For Partner Center issues  (example: app submissions, account setup, or publishing workflows), use the [Partner Center AI Assistant](/partner-center/support/report-problems-with-partner-center#contact-support-using-partner-center-ai-assistant) to report problems or contact support. |
 
 ## Developer community help
 
 Developers in the Teams community use Stack Overflow, Microsoft Q&A, GitHub, and the Tech Community to share ideas, get help, report issues, and ask general questions.
 
-📢 Read our latest [announcements](https://github.com/MicrosoftDocs/msteams-docs/discussions/categories/announcements) and join the conversation with community members and platform engineers!
+📢 Read the latest [announcements](https://github.com/MicrosoftDocs/msteams-docs/discussions/categories/announcements) and join the conversation with community members and platform engineers!
 
 ### Developer community forums
 
