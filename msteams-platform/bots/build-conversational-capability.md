@@ -1,9 +1,9 @@
 ---
 title: Conversations with a Bot
 description: Learn about sending and receiving messages using a bot app
-ms.topic: conceptual
+ms.topic: article
 ms.localizationpriority: medium
-ms.author: surbhigupta
+ms.author: vikasalmal
 ms.owner: angovil
 ms.date: 02/26/2025
 ---
@@ -1121,7 +1121,7 @@ Ensure to handle these errors appropriately in your Teams app. The following tab
 | 500 | **Code**: `ServiceError` <br/> **Message**: *various | Internal server error. | No | Report the issue in [developer community](../feedback.md#report-issues). |
 [developer community forums](../feedback.md#developer-community-forums). |
 | 502 | **Code**: `ServiceError` <br/> **Message**: *various | Service dependency issue. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [developer community forums](../feedback.md#developer-community-forums).. |
-| 503 | | Service is unavailable. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [developer community](~/feedback.md#developer-community-help). |
+| 503 | | Service is unavailable. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [developer community](../feedback.md#report-issues). |
 | 504 | | Gateway Timeout. | Yes | Retry with exponential backoff. If the issue persists, report the issue in [developer community](../feedback.md#report-issues). |
 
 ### Status codes retry guidance
