@@ -1,14 +1,22 @@
 ---
+
 title: SSO in Tab with Microsoft Entra ID
+
 description: Learn about single sign-on (SSO) authentication and user experience in Teams, how to enable SSO in tab app, and understand SSO at runtime.
+
 ms.topic: article
+
 ms.localizationpriority: high
+
 ms.date: 01/17/2023
+
 ms.owner: ryanbliss
+
 ---
+
 # Enable SSO for tab app
 
-With single sign-on (SSO) in Teams, app users have the advantage of using Teams to access tab apps. After logging in to Teams using Microsoft or Microsoft 365 account, app users can use your app without the need to sign in again. Your app is available to app users on any device with the access granted through Microsoft Entra ID.
+With single sign-on (SSO) in Teams, app users have the advantage of using Teams to access tab apps. After logging in to Teams using a Microsoft or Microsoft 365 account, app users can use your app without the need to sign in again. Your app is available to app users on any device with access granted through Microsoft Entra ID.
 
 Here's what you learn in this section:
 
@@ -18,7 +26,7 @@ Here's what you learn in this section:
 
 ## SSO user experience in Teams
 
-The app users sign in to Teams using either personal Microsoft account or Microsoft 365 account. You can take advantage of this account and use SSO to authenticate and authorize the app users.
+The app users sign in to Teams using either a personal Microsoft account or a Microsoft 365 account. You can take advantage of this account and use SSO to authenticate and authorize the app users.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/teams-sso-ux.png" alt-text="Screenshot shows the SSO user experience in a teams tab app.":::
 
@@ -46,7 +54,7 @@ Now, let's see what happens at the backend during runtime to achieve SSO experie
 
 ## SSO in Teams at runtime
 
-Achieve SSO in a tab app by obtaining access token for the Teams app user who's logged in. This process involves the tab app client and server, Teams client, and Microsoft Entra ID. During this interaction, the app user must give consent for using Teams identity to obtain the access token in a multitenant environment.
+Achieve SSO in a tab app by obtaining an access token for the Teams app user who's logged in. This process involves the tab app client and server, Teams client, and Microsoft Entra ID. During this interaction, the app user must give consent for using Teams identity to obtain the access token in a multitenant environment.
 
 The following image shows how SSO works when a Teams app user attempts to access the tab app:
 
