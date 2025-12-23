@@ -98,7 +98,7 @@ The following steps help you verify if you can upload apps in Teams:
 3. Select **Upload an app**.
 4. Look for the option to **Upload a custom app**. If the option is visible, you can upload custom apps.
 
-   :::image type="content" source="../../assets/images/toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Screenshot shows the option to upload a custom app in Teams." :::
+   :::image type="content" source="../assets/images/toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Screenshot shows the option to upload a custom app in Teams." :::
 
       > [!NOTE]
       > If you don't find the option to upload a custom app, contact your Teams administrator.
@@ -112,7 +112,7 @@ If you don't have a Teams developer account, join the Microsoft 365 developer pr
 1. In the welcome screen, select **Set up E5 subscription**.
 1. Set up your administrator account. After you finish, the following screen appears:
 
-   :::image type="content" source="../../assets/images/include-files/microsoft-365.png" alt-text="Screenshot shows the Microsoft 365 Developer Program.":::
+   :::image type="content" source="../assets/images/include-files/microsoft-365.png" alt-text="Screenshot shows the Microsoft 365 Developer Program.":::
 
 1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
 
@@ -122,67 +122,67 @@ To build proactive message bot using Visual Studio Code, follow these steps:
 
 1. Open Visual Studio Code.
 
-1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="../msteams-platform/assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code Activity Bar.
+1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="../assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code Activity Bar.
 
 1. In the left pane, select **View Samples**.
 
-    :::image type="content" source="../msteams-platform/assets/images/proactive-scenario/view-samples.png" alt-text="Screenshot shows the View Samples option in Visual Studio Activity Bar.":::
+    :::image type="content" source="../assets/images/proactive-scenario/view-samples.png" alt-text="Screenshot shows the View Samples option in Visual Studio Activity Bar.":::
 
 1. From the list of samples, select **Proactive Messaging**. A prebuilt sample that's ready for debugging opens.
 
-    :::image type="content" source="../msteams-platform/assets/images/proactive-scenario/select-proactive-msg.png" alt-text="Screenshot shows the prebuilt Proactive Messaging bot sample in the list of samples.":::
+    :::image type="content" source="../assets/images/proactive-scenario/select-proactive-msg.png" alt-text="Screenshot shows the prebuilt Proactive Messaging bot sample in the list of samples.":::
 
 1. Select **Create**.
 
-    :::image type="content" source="../msteams-platform/assets/images/proactive-scenario/create-proactive-bot.png" alt-text="Screenshot shows the Create option to create a proactive messaging bot.":::
+    :::image type="content" source="../assets/images/proactive-scenario/create-proactive-bot.png" alt-text="Screenshot shows the Create option to create a proactive messaging bot.":::
 
 1. Select **Default folder** to store your project root folder in the default location.
 
-     :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-default-location.png" alt-text="Screenshot shows the option to select the default location.":::
+     :::image type="content" source="../assets/images/sbs-notification-bot/select-default-location.png" alt-text="Screenshot shows the option to select the default location.":::
 
     If you want to change the default location, perform the following steps:
 
     1. Select **Browse**.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-browse.png" alt-text="Screenshot shows the option to browse the location.":::
+        :::image type="content" source="../assets/images/sbs-notification-bot/select-browse.png" alt-text="Screenshot shows the option to browse the location.":::
 
     1. Select the location for project workspace.
 
     1. Select **Select Folder**.
 
-       :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-folder.png" alt-text="Screenshot shows the option to select the folder.":::
+       :::image type="content" source="../assets/images/sbs-notification-bot/select-folder.png" alt-text="Screenshot shows the option to select the folder.":::
 
     The proactive message bot is created in a few seconds and displays the proactive message bot successful dialog in the lower-right corner with the option to debug:
 
-    :::image type="content" source="../msteams-platform/assets/images/proactive-scenario/proactive-bot-created.png" alt-text="Screenshot shows the proactive message bot created."lightbox="../msteams-platform/assets/images/proactive-scenario/proact-bot-created-1.png"::::::
+    :::image type="content" source="../assets/images/proactive-scenario/proactive-bot-created.png" alt-text="Screenshot shows the proactive message bot created."lightbox="../msteams-platform/assets/images/proactive-scenario/proact-bot-created-1.png"::::::
 
-1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/proactive-scenario/run-debug-icon.png"::: icon from the top-left corner.
+1. Select **Run and Debug** :::image type="icon" source="../assets/images/proactive-scenario/run-debug-icon.png"::: icon from the top-left corner.
 
 1. Select **Debug (Edge)** or **Debug (Chrome)** from the dropdown list.
 
-    :::image type="content" source="../msteams-platform/assets/images/proactive-scenario/debug-option-edge.png" alt-text="Screenshot shows the debugging options to choose from.":::
+    :::image type="content" source="../assets/images/proactive-scenario/debug-option-edge.png" alt-text="Screenshot shows the debugging options to choose from.":::
 
     When debugging is successful, you'll be prompted to upload the proactive message bot to Teams on your local machine.
 
 1. Select **Add**.
 
-    :::image type="content" source="~/assets/images/proactive-scenario/add.png" alt-text="Screenshot of message extension details dialog with the Add option highlighted.":::
+    :::image type="content" source="../assets/images/proactive-scenario/add.png" alt-text="Screenshot of message extension details dialog with the Add option highlighted.":::
 
 1. Search and select the required scope or select a channel, chat, or meeting from the list, and move through the dialog to select **Go**.
 
-    :::image type="content" source="~/assets/images/proactive-scenario/add-to-teams.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
+    :::image type="content" source="../assets/images/proactive-scenario/add-to-teams.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
 
     The proactive message bot app is uploaded to Teams client and the following message appears in response to the message sent.
 
-    :::image type="content" source="~/assets/images/proactive-scenario/proactive-msg-sent.png" alt-text="Screenshot shows the proactive message bot response in the chat.":::
+    :::image type="content" source="../assets/images/proactive-scenario/proactive-msg-sent.png" alt-text="Screenshot shows the proactive message bot response in the chat.":::
 
 1. Copy and paste the URL or navigate to the URL in browser. A proactive hello message is triggered and shared in the chat.
 
-    :::image type="content" source="~/assets/images/proactive-scenario/pro-msg-browser.png" alt-text="Screenshot shows the browser that triggers bot to respond with a proactive message in Teams.":::
+    :::image type="content" source="../assets/images/proactive-scenario/pro-msg-browser.png" alt-text="Screenshot shows the browser that triggers bot to respond with a proactive message in Teams.":::
 
 1. Go to Teams. You'll receive a **proactive hello** message from the bot.
 
-    :::image type="content" source="~/assets/images/proactive-scenario/pro-msg-response.png" alt-text="Screenshot shows the bot response on the chat.":::
+    :::image type="content" source="../assets/images/proactive-scenario/pro-msg-response.png" alt-text="Screenshot shows the bot response on the chat.":::
 
 ### Take a tour of the source code
 
@@ -211,7 +211,7 @@ Use your account to access the Microsoft Azure portal and provision new cloud re
 
 1. Open Visual Studio Code.
 1. Open the project folder where you created the proactive message bot app.
-1. Select the Microsoft 365 Agents Toolkit  :::image type="icon" source="../msteams-platform/assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code Activity Bar.
+1. Select the Microsoft 365 Agents Toolkit  :::image type="icon" source="../assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code Activity Bar.
 1. Select **Sign in to Azure** using your credentials.
 
     > [!TIP]
