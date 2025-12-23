@@ -238,7 +238,7 @@ protected override Task<MessagingExtensionActionResponse> OnTeamsMessagingExtens
 
 ## Step-by-step guide
 
-Follow the [step-by-step guide](../../../sbs-meetingextension-action.yml) to build Teams action-based message extension.
+Follow the [step-by-step guide](../../../get-started/tutorials.md#build-action-based-message-extension) to build Teams action-based message extension.
 
 ## Next step
 
