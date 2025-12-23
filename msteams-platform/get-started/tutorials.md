@@ -2046,7 +2046,7 @@ To build and run the service, use Visual Studio or Command line.
 
 1. Select **Yes** if the following dialog appears:
 
-    :::image type="content" source="../assets/images/sbs-messagingextension-action/certificate.png" alt-text="Screenshot of Security Warning with the Yes option highlighted in red.":::
+    :::image type="content" source="../assets/images/sbs-messagingextension-action/certificate.png" alt-text="Screenshot shows Security Warning with the Yes option highlighted in red.":::
 
     A webpage appears with a message **Your bot is ready!**.
 
