@@ -49,7 +49,7 @@ Submit issues and ask general questions related to SDK and samples by using the 
 
 Use the community help channels to submit documentation issues, feedback, or updates.
 
-| **Community channels** | **How to contact** |
+| **Community help channels** | **How to contact** |
 |:--------------------------|:--------------------------|
 | **Documentation issues** | Go to the footer of the article and select **Open a documentation issue** in the **Platform Docs feedback** section.<br/><br/>:::image type="content" source="assets/images/platform-docs-feedback.png" alt-text="Screenshot shows the option to open a documentation issue for platform docs."::: <br><br/> You can also rate whether the article was helpful by choosing **Yes** or **No** under the **Was this page helpful?** section in the upper-right corner. Tell us what you liked or didn't and submit your valuable feedback.|
 |**Documentation updates**| Select **Edit** at the top right of the article you want to update, and submit a pull request to the :::image type="icon" source="assets/icons/GitHub-icon.png"::: [Microsoft Teams documentation GitHub](https://github.com/MicrosoftDocs/msteams-docs) repository. <br /> :::image type="content" source="assets/images/community-feedback-edit.png" alt-text="edit option":::|
