@@ -21,7 +21,7 @@ Go to the [**Azure portal**](https://ms.portal.azure.com/#home) or [**Microsoft 
 
 ## Developer community forums
 
-Developers in the Teams community use Microsoft Q&A, GitHub, Tech Community  and Stack Overflow to share ideas, get help, report issues, and ask general questions.
+Developers in the Teams community use Microsoft Q&A, GitHub, Tech Community,  and Stack Overflow to share ideas, get help, report issues, and ask general questions.
 
 📢 Read the latest [announcements](https://github.com/MicrosoftDocs/msteams-docs/discussions/categories/announcements) and join the conversation with community members and platform engineers!
 
@@ -29,7 +29,7 @@ Connect with the developer community across forums to ask questions, share solut
 
 | **Community Forums**| **Ways to connect** |
 |:--------------------|:--------------------|
-| :::image type="icon" source="assets/icons/microsoft-icon.png"::: [Microsoft Q&A](/answers/tags/339/office-teams-development-routing)|Use this forum to ask questions and connect with other developers for building Teams agents, apps, or workflows using developer tools and APIs. Add the `Microsoft Teams` tag to your question and select **Sign in to follow** to stay updated. |
+| :::image type="icon" source="assets/icons/microsoft-icon.png"::: [Microsoft Q&A](/answers/tags/339/office-teams-development-routing)| Use this forum to ask questions and connect with other developers for building Teams agents, apps, or workflows using developer tools and APIs. Add the `Microsoft Teams` tag to your question and select **Sign in to follow** to stay updated. |
 | :::image type="icon" source="assets/icons/github-icon.png"::: [GitHub](https://github.com) | Discuss issues related to [Microsoft Teams Docs](https://github.com/MicrosoftDocs/msteams-docs/issues), [Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/issues), and [Microsoft Teams JavaScript client library](https://github.com/OfficeDev/microsoft-teams-library-js/issues) using the `teams-developer-support` tag. |
 | :::image type="icon" source="assets/icons/microsoft-icon.png"::: [Teams Developer Community](https://techcommunity.microsoft.com/category/microsoftteams/discussions/teamsdeveloper?messages.widget.messagelistfornodebyrecentactivitywidget-tab-main-forum-widgets-0=newest)| Select **Start a Discussion** to begin a conversation. Browse recent and popular posts to find solutions, and use the `MICROSOFT TEAMS` tag to get relevant responses. |
 |:::image type="icon" source="assets/icons/stack-overflow-icon.png"::: [Stack Overflow](https://stackoverflow.com/questions/tagged/microsoft-teams)| Post your questions using the `microsoft-teams` tag. Write a clear title, describe the problem, and include steps to reproduce the issue. Off‑topic or feature‑request questions aren’t allowed. For more information, see [Stack Overflow Help Center](https://stackoverflow.com/help).|
@@ -50,11 +50,11 @@ Submit issues and ask general questions related to SDK and samples by using the 
 
 ### Documentation feedback
 
-Use the community help channels to submit documentation feedback or updates.
+Use the community help channels to submit documentation issues, feedback or updates.
 
 | **Community channels** | **How to contact** |
 |:--------------------------|:--------------------------|
-| **Documentation issues** | To open an issue on the [Microsoft Teams documentation GitHub](https://github.com/MicrosoftDocs/msteams-docs) repository, select **Open a documentation issue** in the **Platform Docs feedback** section available at the footer of the documentation.<br/><br/>:::image type="content" source="assets/images/platform-docs-feedback.png" alt-text="Screenshot shows the option to open a documentation issue for platform docs."::: <br><br/> You can also select whether the article was helpful or not on the article’s page. Select :::image type="icon" source="assets/icons/feedback-icon.png" border="false"::: **Feedback** in the upper-right corner of the article. Select **Yes** or **No**, provide more context in the text field and select **Submit**. <br/>:::image type="content" source="assets/images/community-feedback.png" alt-text="Screenshot shows the feedback option in the article.":::<br> If you want to provide other feedback, you can reach out to the community help through [Microsoft Q&A](#developer-community-forums).|
+| **Documentation issues** | To report an issue on the [Microsoft Teams documentation GitHub](https://github.com/MicrosoftDocs/msteams-docs) repository, go to the footer of the article and select **Open a documentation issue** in the **Platform Docs feedback** section .<br/><br/>:::image type="content" source="assets/images/platform-docs-feedback.png" alt-text="Screenshot shows the option to open a documentation issue for platform docs."::: <br><br/> You can also rate whether the article was helpful by choosing **Yes** or **No** under the **Was this page helpful** section in the upper-right corner.  add context in the text field and select **Submit**. <br/>:::image type="content" source="assets/images/community-feedback.png" alt-text="Screenshot shows the feedback option in the article.":::<br> For other feedback, reach out to the community help through [Microsoft Q&A](#developer-community-forums).|
 |**Documentation updates**|Select **Edit** at the top right of the article you want to update, and submit a pull request to the :::image type="icon" source="assets/icons/GitHub-icon.png"::: [Microsoft Teams documentation GitHub](https://github.com/MicrosoftDocs/msteams-docs) repository. <br /> :::image type="content" source="assets/images/community-feedback-edit.png" alt-text="edit option":::|
 
 ### Feature request and general help
