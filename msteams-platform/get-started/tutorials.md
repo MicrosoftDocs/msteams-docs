@@ -599,7 +599,7 @@ Deployment consists of two steps. First, necessary cloud resources are created (
 
 1. Search and select the required scope or select a channel, chat, or meeting from the list, and move through the dialog to select **Go**.
 
-    :::image type="content" source="../assets/images/proactive-scenario/add-to-teams.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
+    :::image type="content" source="../assets/images/proactive-scenario/add-to-teams.png" alt-text="Screenshot shows the scope selection dialog with the list of shared scopes.":::
 
     The proactive message bot app is uploaded to Teams client and the following message appears in response to the message sent.
 
@@ -2057,7 +2057,7 @@ To build and run your app locally:
 
 Alternatively, you can either search and select the required scope or select a channel or chat from the list, and move through the dialog to select **Go**.
 
-   :::image type="content" source="../assets/images/sbs-csharp/add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
+   :::image type="content" source="../assets/images/sbs-csharp/add-scope.png" alt-text="Screenshot displays the scope selection dialog with the list of shared scopes.":::
 
 Congratulations, your first tab app is running on Teams!
 
