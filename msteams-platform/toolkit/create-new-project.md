@@ -50,8 +50,7 @@ To create a basic Teams app:
 
     :::image type="content" source="../assets/images/toolkit-v2/first-tab/select-default-location.png" alt-text="Screenshot shows the default location option to select.":::
 
-    <details>
-    <summary>Learn to change the default folder:</summary>
+    To change the default location, follow these steps:
 
     1. Select **Browse**.
 
@@ -62,9 +61,8 @@ To create a basic Teams app:
         :::image type="content" source="../assets/images/toolkit-v2/select-folder_1.png" alt-text="Screenshot shows the Select Folder option highlighted.":::
 
     The folder you select is the location for your project workspace.
-    </details>
 
-    1. Enter a suitable name for your app, such as helloworld, as the application name. Ensure that you use only alphanumeric characters. Press **Enter**.
+1. Enter a suitable name for your app, such as helloworld, as the application name. Ensure that you use only alphanumeric characters. Press **Enter**.
 
     :::image type="content" source="../assets/images/toolkit-v2/first-tab/enter-name-tab1.png" alt-text="Screenshot shows where to enter the app name.":::
 
