@@ -1,4 +1,5 @@
 ---
+
 title: SSO for API-based message extensions
 author: surbhigupta
 description: Learn how to enable Microsoft Entra SSO authentication, register a new app, configure access token, API scopes, and authorize client application.
@@ -6,37 +7,38 @@ ms.localizationpriority: medium
 ms.topic: concept-article
 ms.author: anclear
 ms.date: 07/16/2024
+
 ---
 
 # Enable SSO for API-based message extensions
 
-Single sign-on (SSO) authentication method for API based message extension uses an app user's Teams identity to provide them with access to your app. A user who has signed into Teams doesn't need to sign in again to your app within the Teams environment. Microsoft Entra SSO enables the app to silently obtain a user token that is issued for its resource by Microsoft Entra. The app can then authenticate this token and retrieve the user profile information without the user's consent.
+Single sign-on (SSO) authentication method for API-based message extension uses an app user's Teams identity to provide them with access to your app. A user who has signed into Teams doesn't need to sign in again to your app within the Teams environment. Microsoft Entra SSO enables the app to silently obtain a user token that Microsoft Entra issues for its resource. The app can then authenticate this token and retrieve the user profile information without the user's consent.
 
 ## Prerequisites
 
 Before you start, ensure you have the following:
 
-* An Azure account with an active subscription.
-* Basic familiarity with Microsoft Entra ID and Teams app development.
+- An Azure account with an active subscription.
+- Basic familiarity with Microsoft Entra ID and Teams app development.
 
-The following image shows how SSO works when a Teams app user attempts to access API-based message extension app:
+The following image shows how SSO works when a Teams app user attempts to access an API-based message extension app:
 
 :::image type="content" source="../assets/images/Copilot/api-me-entra-sso.png" alt-text="Screenshot shows how Microsoft Entra SSO authorization works to authenticate API-based message extension." lightbox="../assets/images/Copilot/api-me-entra-sso.png" :::
 
-* The user invokes the API-based message extension app within Teams and invokes a command that requires authentication.
-* The app sends a request to the Teams backend service with the app ID and the required scope (`access_as_user`).
-* The Teams backend service checks if the user consented to the app and the scope. If not, it shows a consent screen to the user.
-* If the user consents, Microsoft Entra generates an access token for the user and the app, and sends it to the app in the authorization header of the request.
-* The app validates the token and extracts the user information from the token, such as the name, email, and object ID.
-* After successful authentication, user is granted access to the API-based message extension.
+- The user invokes the API-based message extension app within Teams and invokes a command that requires authentication.
+- The app sends a request to the Teams backend service with the app ID and the required scope (`access_as_user`).
+- The Teams backend service checks if the user consented to the app and the scope. If not, it shows a consent screen to the user.
+- If the user consents, Microsoft Entra generates an access token for the user and the app, and sends it to the app in the authorization header of the request.
+- The app validates the token and extracts the user information from the token, such as the name, email, and object ID.
+- After successful authentication, the user is granted access to the API-based message extension.
 
 To enable SSO authentication for API-based message extension, follow these steps:
 
-* [Register a new app in Microsoft Entra ID](#register-a-new-app-in-microsoft-entra-id).
-* [Configure access token version](#configure-access-token-version).
-* [Configure scope for access token](#configure-scope-for-access-token).
-* [Authenticate token](#authenticate-token).
-* [Update app manifest](#update-app-manifest).
+- [Register a new app in Microsoft Entra ID](#register-a-new-app-in-microsoft-entra-id).
+- [Configure access token version](#configure-access-token-version).
+- [Configure scope for access token](#configure-scope-for-access-token).
+- [Authenticate token](#authenticate-token).
+- [Update app manifest](#update-app-manifest).
 
 ## Register a new app in Microsoft Entra ID
 
@@ -117,9 +119,9 @@ After you configure the access token version, configure scope (permission) optio
 
 To configure scope and authorize trusted client applications, you must:
 
-* [Add App ID URI](#app-id-uri): Configure scope (permission) options for your app. Expose a web API and configure the app ID URI.
-* [Configure API scope](#configure-api-scope): Define scope for the API, and the users who can consent for a scope. You can let only admins provide consent for higher-privileged permissions.
-* [Configure authorized client application](#configure-authorized-client-application): Create authorized client IDs for applications that you want to preauthorize. It allows the app user to access the app scopes (permissions) you've configured, without requiring any further consent. Preauthorize only those client applications you trust as your app users don't have the opportunity to decline consent.
+- [Add App ID URI](#app-id-uri): Configure scope (permission) options for your app. Expose a web API and configure the app ID URI.
+- [Configure API scope](#configure-api-scope): Define scope for the API, and the users who can consent for a scope. You can let only admins provide consent for higher-privileged permissions.
+- [Configure authorized client application](#configure-authorized-client-application): Create authorized client IDs for applications that you want to preauthorize. It allows the app user to access the app scopes (permissions) you've configured, without requiring any further consent. Preauthorize only those client applications you trust as your app users don't have the opportunity to decline consent.
 
 ### App ID URI
 
@@ -137,17 +139,17 @@ To configure scope and authorize trusted client applications, you must:
 
     :::image type="content" source="../assets/images/Copilot/api-based-me-entra-sso-app-id-uri.png" alt-text="Screenshot shows you the App ID URI in Microsoft Entra ID.":::
 
-    * The **Application ID URI** is prefilled with app ID (GUID) in the format `api://{AppID}`.
-    * The app ID URI format must be: `api://fully-qualified-domain-name.com/{AppID}`.
-    * Insert the `fully-qualified-domain-name.com` between `api://` and `{AppID}` (which is, GUID). For example, api://example.com/{AppID}.
+    - The **Application ID URI** is prefilled with app ID (GUID) in the format `api://{AppID}`.
+    - The app ID URI format must be: `api://fully-qualified-domain-name.com/{AppID}`.
+    - Insert the `fully-qualified-domain-name.com` between `api://` and `{AppID}` (which is, GUID). For example, api://example.com/{AppID}.
 
     > [!IMPORTANT]
     >
-    > * If you're building a standalone bot, enter the app ID URI as api://botid-{YourBotId}. Here, {YourBotId} is your Microsoft Entra app ID.
-    > * If you're building an app with a bot, a message extension, and a tab, enter the app ID URI as api://fully-qualified-domain-name.com/botid-{YourClientId}, where {YourClientId} is your bot app ID.
-    > * If you're building an app with a message extension or tab capabilities without the bot,  enter the app ID URI as api://fully-qualified-domain-name.com/{YourClientId}, where {YourClientId} is your Microsoft Entra app ID.
-    > * **Application ID URI for app with multiple capabilities**: If you're building an API-based message extension, enter the app ID URI as `api://fully-qualified-domain-name.com/{YourClientId}`, where {YourClientId} is your Microsoft Entra app ID.
-    > * **Format for domain name**: Use only lower-case letters for domain name.
+    > - If you're building a standalone bot, enter the app ID URI as api://botid-{YourBotId}. Here, {YourBotId} is your Microsoft Entra app ID.
+    > - If you're building an app with a bot, a message extension, and a tab, enter the app ID URI as api://fully-qualified-domain-name.com/botid-{YourClientId}, where {YourClientId} is your bot app ID.
+    > - If you're building an app with a message extension or tab capabilities without the bot, enter the app ID URI as api://fully-qualified-domain-name.com/{YourClientId}, where {YourClientId} is your Microsoft Entra app ID.
+    > - **Application ID URI for app with multiple capabilities**: If you're building an API-based message extension, enter the app ID URI as `api://fully-qualified-domain-name.com/{YourClientId}`, where {YourClientId} is your Microsoft Entra app ID.
+    > - **Format for domain name**: Use only lower-case letters for domain name.
 
 1. Select **Save**.
 
@@ -168,8 +170,8 @@ To configure scope and authorize trusted client applications, you must:
 
 > [!NOTE]
 >
-> * API-based message extension supports only the **access_as_user** scope.
-> * The API receives a Microsoft Entra access token with the scope set to `access_as_user` as registered in the Azure portal. However, the token isn't authorized to call any other downstream APIs, such as Microsoft Graph.
+> - API-based message extension supports only the **access_as_user** scope.
+> - The API receives a Microsoft Entra access token with the scope set to `access_as_user` as registered in the Azure portal. However, the token isn't authorized to call any other downstream APIs, such as Microsoft Graph.
 
 1. Select **+ Add a scope** in the **Scopes defined by this API** section.
 
