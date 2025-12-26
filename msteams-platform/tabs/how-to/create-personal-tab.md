@@ -1,17 +1,19 @@
 ---
-title: Methods to Build Tab App
-author: laujan
-description: Learn to build a personal tab with Node.js, ASP.NET Core, or ASP.NET Core MVC, extending it to support group chats, channels, meetings, and offline access.
-ms.localizationpriority: high
-ms.topic: quickstart
-zone_pivot_groups: teams-app-environment
-ms.date: 02/28/2025
-ms.owner: ryanbliss
+
+title: Methods to Build Tab App  
+author: laujan  
+description: Learn to build a personal tab with Node.js, ASP.NET Core, or ASP.NET Core MVC, extending it to support group chats, channels, meetings, and offline access.  
+ms.localizationpriority: high  
+ms.topic: quickstart  
+zone_pivot_groups: teams-app-environment  
+ms.date: 02/28/2025  
+ms.owner: ryanbliss  
+
 ---
 
 # Create a tab
 
-Tabs in chats, channels, or meetings behave more like apps, as you can pin only one tab per app to the left pane for easy access.
+Tabs in chats, channels, or meetings function similarly to apps. You can pin only one tab per app to the left pane for easy access.
 
 > [!IMPORTANT]
 >
@@ -411,30 +413,30 @@ ngrok http 3978 --host-header=localhost
 
 1. Open **Apps** and select **Import app**.
 
-1. The app package file name is `tab.zip` and it's available at `/bin/Debug/netcoreapp3.1/tab.zip` path.
+1. The app package file is named `tab.zip` and is located at the path `/bin/Debug/netcoreapp3.1/tab.zip`.
 
-1. Select `tab.zip` and open it in the Developer Portal.
+1. Select `tab.zip` and open it within the Developer Portal.
 
-1. A default **App ID** is created and populated in **Basic information** section.
+1. A default **App ID** is automatically generated and populated in the **Basic information** section.
 
-1. Add the Short and Long description  for your app in **Descriptions**.
+1. Add both the Short and Long descriptions for your app in the **Descriptions** section.
 
-1. In **Developer Information**, add the required details and in **Website (must be a valid HTTPS URL)** give your ngrok HTTPS URL.
+1. In the **Developer Information** section, input the necessary details. For the **Website (must be a valid HTTPS URL)** field, provide your ngrok HTTPS URL.
 
-1. In **App URLs**, update the Privacy policy to `https://<yourngrokurl>/privacy` and Terms of use to `https://<yourngrokurl>/tou` and select **Save**.
+1. In the **App URLs** section, update the Privacy policy URL to `https://<yourngrokurl>/privacy` and the Terms of use URL to `https://<yourngrokurl>/tou`. Then, select **Save**.
 
-1. In **App features**, select **Personal app** > **Create your first personal app tab** and enter the name and update the **Content URL** with `https://<yourngrokurl>/personalTab`. Leave the Website URL field blank and select **Context** as personalTab from the dropdown list and select **Confirm**.
+1. In the **App features** section, choose **Personal app** > **Create your first personal app tab**. Enter the name and update the **Content URL** with `https://<yourngrokurl>/personalTab`. Leave the Website URL field empty. Select **Context** as personalTab from the dropdown list and then select **Confirm**.
 
 1. Select **Save**.
 
-1. In the Domains section, domains from your tabs must contain your ngrok URL without the HTTPS prefix `<yourngrokurl>.ngrok.io`.
+1. In the Domains section, ensure that domains from your tabs include your ngrok URL without the HTTPS prefix `<yourngrokurl>.ngrok.io`.
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Update+your+app+package+with+Developer+Portal&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-personal-tab%3Ftabs%3Dvs%26pivots%3Drazor-csharp%23update-your-app-package-with-developer-portal&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-personal-tab.md&documentVersionIndependentId=6d43a761-19e0-541e-ba06-170099411ac1&author=surbhigupta&platformId=7b2eedc9-c3ef-d30c-e8e1-e6d80e341b11&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 ### Preview your app in Teams
 
-1. Select **Preview in Teams** from the Developer Portal toolbar, Developer Portal informs you that your custom app is uploaded successfully. The **Add** page appears for your app in Teams.
+1. Select **Preview in Teams** from the Developer Portal toolbar. The Developer Portal notifies you that your custom app is uploaded successfully. The **Add** page appears for your app in Teams.
 
 1. Select **Add** to load the tab in Teams. Your tab is now available in Teams.
 
@@ -612,7 +614,7 @@ ngrok http 3978 --host-header=localhost
 
 ### Preview your app in Teams
 
-1. Select **Preview in Teams** from the Developer Portal toolbar, Developer Portal informs you that your custom app is uploaded successfully. The **Add** page appears for your app in Teams.
+1. Select **Preview in Teams** from the Developer Portal toolbar. The Developer Portal informs you that your custom app is uploaded successfully. The **Add** page appears for your app in Teams.
 
 1. Select **Add** to load the tab on Teams. Your tab is now available in Teams.
 
@@ -747,71 +749,71 @@ Start Teams app development by creating your first app. This app uses tab capabi
 
 :::image type="content" source="~/assets/images/toolkit-v2/blazor/your-blazor-helloworld-app1.png" alt-text="Screenshot of Blazor app displaying the final output of tab app after the step-by-step Blazor guide is successfully completed.":::
 
-This tutorial walks you through the steps to create, run, and deploy your first Teams app using .NET/Blazor.
+This tutorial guides you through the process of creating, running, and deploying your first Teams app using .NET/Blazor. 
 
-In this page, you'll learn:
+On this page, you'll learn:
 
 1. [How to set up a new tab project with Agents Toolkit](#create-your-tab-project)
-1. [About the directory structure of your app](#take-a-tour-of-the-source-code-for-teams-tab-app)
+2. [About the directory structure of your app](#take-a-tour-of-the-source-code-for-teams-tab-app)
 
 ## Create your tab project
 
-Use Agents Toolkit to create your first tab project. The toolkit takes you through a series of pages to create and configure your Teams app project:
+To create your first tab project, use Agents Toolkit. The toolkit guides you through several pages to create and configure your Teams app project:
 
-1. **Create a new project** page: You can select the project type.
-1. **Configure your new project** page: You can enter the project details.
-1. **Create a new Teams application** page: You can select the Teams app capabilities.
+1. **Create a new project** page: Select the project type.
+2. **Configure your new project** page: Enter the project details.
+3. **Create a new Teams application** page: Select the Teams app capabilities.
 
 **To create your tab project workspace**
 
 1. Open the latest version of Visual Studio.
 
-1. Select **Create a new project**.
+2. Select **Create a new project**.
 
    :::image type="content" source="../../assets/images/toolkit-v2/blazor/vs-select-project.png" alt-text="Screenshot of Visual Studio with Create a new project option highlighted in red for Blazor app.":::
 
    The **Create a new project** page appears.
 
-1. Select the project type and details:
+3. Select the project type and details:
 
-   1. Search for **Microsoft 365** from templates dropdown list.  
+   1. Search for **Microsoft 365** from the templates dropdown list.  
 
-   1. Select **Microsoft 365 Agents** as the template.
+   2. Select **Microsoft 365 Agents** as the template.
 
-   1. Select **Next**.
+   3. Select **Next**.
 
       :::image type="content" source="../../assets/images/toolkit-v2/blazor/vs-select-teams-app.png" alt-text="Screenshot of Create a new project with Next option highlighted in red for Blazor app creation."lightbox="../../assets/images/toolkit-v2/blazor/vs-select-teams-app.png":::
 
       The **Configure your new project** page appears.
 
-1. Configure the new project details:
+4. Configure the new project details:
 
    1. Enter a suitable name for your project.
 
       > [!NOTE]
-      > You can note that the project name you enter is automatically filled in as the **Solution name** also. If you want, you can change the solution name with no effect on project name.
+      > The project name you enter is automatically filled in as the **Solution name**. You can change the solution name without affecting the project name.
 
-   1. Select the folder path where you want to create the project workspace.
+   2. Select the folder path where you want to create the project workspace.
 
-   1. Enter a different solution name, if you want.
+   3. Enter a different solution name if desired.
 
-   1. Check the option to save the project and solution in the same folder, if you want. For this tutorial, you don't need this option.
+   4. Check the option to save the project and solution in the same folder if desired. For this tutorial, you don't need this option.
 
-   1. Select **Create**.
+   5. Select **Create**.
 
       :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/configure-new-project.PNG" alt-text="Screenshot of Configure your new project with Create option highlighted in red."lightbox="../../assets/images/toolkit-v2/blazor-vs-preview2/configure-new-project.PNG":::
 
       The **Create a new Teams application** page appears.
 
-1. Select the Teams app feature:
+5. Select the Teams app feature:
 
-   1. Select the **Tab** as the capability for your app.
+   1. Select **Tab** as the capability for your app.
 
-   1. Select **Create**.
+   2. Select **Create**.
 
       :::image type="content" source="../../assets/images/toolkit-v2/first-tab/create-tab.png" alt-text="Screenshot of Create a new Teams application with Tab and Create options highlighted in red.":::
 
-   Your Teams tab app is created in few seconds.
+   Your Teams tab app is created in a few seconds.
 
    :::image type="content" source="../../assets/images/toolkit-v2/blazor/vs-tab-app.png" alt-text="Screenshot of Visual Studio displaying tips to get started while building your app."lightbox="../../assets/images/toolkit-v2/blazor/vs-tab-app.png":::
 
@@ -826,7 +828,7 @@ Use Agents Toolkit to create your first tab project. The toolkit takes you throu
 
 ### Take a tour of the source code for Teams tab app
 
-After project creation, you've the components to build a basic tab app. You can view the project directory structure in the **Solution Explorer** pane of the Visual Studio.
+After project creation, you have the components to build a basic tab app. You can view the project directory structure in the **Solution Explorer** pane of Visual Studio.
 
 :::image type="content" source="../../assets/images/toolkit-v2/blazor/blazor-app-solution-explorer_1.png" alt-text="Screenshot of Solution explorer displaying the components to build a basic personal app.":::
 
@@ -845,7 +847,7 @@ You can add backend functionality by adding other ASP.NET Core controllers to yo
 
 ## Build and run your first Teams tab app
 
-After you set up your project workspace with Agents Toolkit, build your tab project.
+After setting up your project workspace with Agents Toolkit, proceed to build your tab project.
 
 To build and run your app:
 
@@ -853,11 +855,11 @@ To build and run your app:
 
     :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png" alt-text="Screenshot of Visual Studio with Project, Agents Toolkit, and Prepare Teams App Dependencies options are highlighted in red."lightbox="../../assets/images/toolkit-v2/blazor-vs-preview2/configure-msteamsapp_1.png":::
 
-1. Select your Microsoft 365 account or **Add an account** to sign in.
+2. Select your Microsoft 365 account or **Add an account** to sign in.
 
     :::image type="content" source="../../assets/images/toolkit-v2/m365-account_1.PNG" alt-text="Screenshot of Microsoft 365 Account with Continue option highlighted in red.":::
 
-1. Select **Debug** > **Start Debugging** or select **F5** to run your app in debug mode.
+3. Select **Debug** > **Start Debugging** or select **F5** to run your app in debug mode.
     <!-- markdownlint-disable MD033 -->
     <br>
     <details>
@@ -866,24 +868,24 @@ To build and run your app:
     When you select **F5**, Agents Toolkit:
 
     1. Registers your application with Microsoft Entra ID.
-    1. Registers your application for uploading in Teams.
-    1. Starts your application backend running locally.
-    1. Starts your application front-end hosted locally.
-    1. Starts Teams in a web browser with a command to instruct Teams to upload a custom app (the URL is registered inside the application manifest).
+    2. Registers your application for uploading in Teams.
+    3. Starts your application backend running locally.
+    4. Starts your application front-end hosted locally.
+    5. Starts Teams in a web browser with a command to instruct Teams to upload a custom app (the URL is registered inside the application manifest).
 
     </details>
 
-1. Install the self-signed SSL certificate for local debugging, if requested.
+4. Install the self-signed SSL certificate for local debugging, if requested.
 
     :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/ssl-prompt.png" alt-text="Screenshot of Security Warning with the Yes option highlighted.":::
 
     Teams is loaded in a web browser.
 
-1. Select **Add**.
+5. Select **Add**.
 
     :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/blazor-app.png" alt-text="Screenshot of the personal tab app dialog with the Add option highlighted.":::
 
-1. Select **Open** to open the app in personal scope.
+6. Select **Open** to open the app in personal scope.
 
     :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/blazor-app-scope.png" alt-text="Screenshot of the scope selection dialog with the Open option highlighted.":::
 
@@ -891,15 +893,15 @@ To build and run your app:
 
     :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/app-local.png" alt-text="Screenshot shows your first tab app is running in your local environment.":::
 
-1. Move through the page to view the user details.
+7. Move through the page to view the user details.
 
-1. Select **Authorize** to let your app retrieve user details using Microsoft Graph.
+8. Select **Authorize** to let your app retrieve user details using Microsoft Graph.
 
     The app requests permission to grant access for displaying user details.
 
     :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/authorize-user-info.png" alt-text="Screenshot shows the authorize option in the personal tab of your app.":::
 
-1. Select **Accept** to let your app access user details.
+9. Select **Accept** to let your app access user details.
 
     :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/ms-graph-permission_1.png" alt-text="Screenshot of Permissions requested displaying the App info.":::
 
@@ -907,7 +909,7 @@ To build and run your app:
 
     :::image type="content" source="../../assets/images/toolkit-v2/blazor/tab-user-info.png" alt-text="Screenshot shows the basic information displayed on the personal tab of your app in Teams.":::
 
-    You can do normal debugging activities, such as setting breakpoints, as if it were any other web application. The app supports hot reloading.  If you change any file within the project, the page reloads.
+    You can do normal debugging activities, such as setting breakpoints, as if it were any other web application. The app supports hot reloading. If you change any file within the project, the page reloads.
 
     <!-- markdownlint-disable MD033 -->
     <br>
@@ -918,18 +920,18 @@ To build and run your app:
 
     </details>
 
-1. Stop debugging in Visual Studio.
+10. Stop debugging in Visual Studio.
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Build+and+run+your+first+Teams+tab+app&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-personal-tab%3Ftabs%3Dvs%26pivots%3Dblazor-app%23build-and-run-your-first-teams-tab-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-personal-tab.md&platformId=7b2eedc9-c3ef-d30c-e8e1-e6d80e341b11&documentVersionIndependentId=6d43a761-19e0-541e-ba06-170099411ac1&author=surbhigupta&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
 ## Preview your first Teams tab app
 
-You've learned to create, build, and run Teams app with tab capability. The following final steps are to deploy your app on Azure and preview in Teams follow the steps:
+You've learned to create, build, and run a Teams app with tab capability. The following final steps are to deploy your app on Azure and preview it in Teams. Follow these steps:
 
 1. [Provision your tab app in the cloud](#to-provision-your-tab-app-in-the-cloud)
-1. [Deploy your tab app to cloud](#to-deploy-your-tab-app-to-cloud)
-1. [Preview your tab app in Teams](#to-preview-your-tab-app-in-teams)
+2. [Deploy your tab app to the cloud](#to-deploy-your-tab-app-to-cloud)
+3. [Preview your tab app in Teams](#to-preview-your-tab-app-in-teams)
 
 Let's deploy the first app with tab capability on Azure using Agents Toolkit.
 
@@ -939,31 +941,31 @@ Let's deploy the first app with tab capability on Azure using Agents Toolkit.
 
     :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/vs-build-provision_1.png" alt-text="Screenshot of Visual Studio with Project, Agents Toolkit, and Provision in the Cloud options are highlighted in red."lightbox="../../assets/images/toolkit-v2/blazor-vs-preview2/vs-build-provision_1.png":::
 
-1. Enter the subscription and resource group details in the **Provision** dialog:
-   1. Select the subscription name from  **Subscription name** dropdown list.
-   1. Select the resource group from **Resource group** dropdown list or select **New** to add the resource group generated for your app.
-   1. Select your **Region**, if new resource group is created.
-   1. Select **Provision**.
+2. Enter the subscription and resource group details in the **Provision** dialog:
+   1. Select the subscription name from the **Subscription name** dropdown list.
+   2. Select the resource group from the **Resource group** dropdown list or select **New** to add the resource group generated for your app.
+   3. Select your **Region** if a new resource group is created.
+   4. Select **Provision**.
 
     :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/select-subscription.PNG" alt-text="Screenshot of Provision with New and Provision highlighted in red."lightbox="../../assets/images/toolkit-v2/blazor-vs-preview2/select-subscription.PNG":::
 
-   Provision warning displays.
+   A provision warning displays.
 
-1. Select **Provision**.
+3. Select **Provision**.
 
     :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/provision-warning.PNG" alt-text="Screenshot of Agents Toolkit with Provision highlighted in red.":::
 
    It takes a few minutes for your resource group to provision in the cloud.
 
-1. After the provision is complete, select **OK**.
+4. After the provision is complete, select **OK**.
 
     :::image type="content" source="../../assets/images/toolkit-v2/provision-complete.png" alt-text="Screenshot of Agents Toolkit app with OK option highlighted in red.":::
 
-1. Select **View Provisioned Resources** to view on Azure portal.
+5. Select **View Provisioned Resources** to view on the Azure portal.
 
     :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/view-resource.PNG" alt-text="Screenshot of Agents Toolkit with View Provisioned Resources highlighted in red.":::
 
-1. Sign in to your Azure portal account on the sign-in prompt.
+6. Sign in to your Azure portal account on the sign-in prompt.
 
     Your app-dev-rg appears.
 
@@ -974,13 +976,13 @@ Let's deploy the first app with tab capability on Azure using Agents Toolkit.
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+provision+your+tab+app+in+the+cloud&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-personal-tab%3Ftabs%3Dvs%26pivots%3Dblazor-app%23to-provision-your-tab-app-in-the-cloud&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-personal-tab.md&documentVersionIndependentId=6d43a761-19e0-541e-ba06-170099411ac1&author=surbhigupta&platformId=7b2eedc9-c3ef-d30c-e8e1-e6d80e341b11&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
 
-#### **To deploy your tab app to cloud**
+#### **To deploy your tab app to the cloud**
 
 1. Select **Project** > **Microsoft 365 Agents Toolkit** > **Deploy to the Cloud**.
 
     :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/vs-build-deploytocloud_1.png" alt-text="Screenshot of Visual Studio with Project, Agents Toolkit, and Deploy to the Cloud options highlighted in red."lightbox="../../assets/images/toolkit-v2/blazor-vs-preview2/vs-build-deploytocloud_1.png":::
 
-1. Select **OK**.
+2. Select **OK**.
 
     :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/deploy-success.PNG" alt-text="Screenshot of app built with Agents Toolkit with OK option highlighted in red.":::
 
@@ -994,11 +996,11 @@ Let's deploy the first app with tab capability on Azure using Agents Toolkit.
 
     Teams is loaded in a web browser.
 
-1. Select **Add**.
+2. Select **Add**.
 
     :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/blazor-app.png" alt-text="Screenshot of the personal tab app dialog with the Add option highlighted.":::
 
-1. Select **Open** to open the app in personal scope.
+3. Select **Open** to open the app in personal scope.
 
     :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/blazor-app-scope.png" alt-text="Screenshot of the scope selection dialog with the Open option highlighted.":::
 
@@ -1008,13 +1010,13 @@ Let's deploy the first app with tab capability on Azure using Agents Toolkit.
 
     Move through the page to view the user details.
 
-1. Select **Authorize** to let your app retrieve user details using Microsoft Graph.
+4. Select **Authorize** to let your app retrieve user details using Microsoft Graph.
 
     The app requests permission to grant access for displaying user details.
 
     :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/authorize-user-info.png" alt-text="Screenshot shows the authorize option in the personal tab of your app in Teams.":::
 
-1. Select **Accept** to let your app access user details.
+5. Select **Accept** to let your app access user details.
 
     :::image type="content" source="../../assets/images/toolkit-v2/blazor-vs-preview2/ms-graph-permission_1.png" alt-text="Screenshot of Permissions requested displaying the App info.":::
 
@@ -1067,9 +1069,9 @@ This property also enables you to set the default landing capability for your ap
 
 You can extend static tabs to group chat, channels, and meetings. Instead of pinned app content, you can build tabs that behave more like apps as you can pin only one tab per app, for example, pinning a single YouTube app tab.
 
-To extend your static tabs to group chat, channels, and meetings, update your [app manifest](/microsoft-365/extensibility/schema/root-static-tabs) with the `scopes` and `context` parameters in the `staticTabs` property. When you declare multiple static tabs in the manifest and add the app in the channel scope, only the first tab listed in the manifest appears.
+To extend your static tabs to group chat, channels, and meetings, update your [app manifest](/microsoft-365/extensibility/schema/root-static-tabs) by including the `scopes` and `context` parameters within the `staticTabs` property. When multiple static tabs are declared in the manifest and the app is added in the channel scope, only the first tab listed in the manifest will appear.
 
-Following is an example of app manifest where a static tab is defined that works in all scopes and contexts in Teams:
+Below is an example of an app manifest where a static tab is defined to function across all scopes and contexts in Teams:
 
 ```json
 "staticTabs": [ 
@@ -1094,10 +1096,9 @@ Following is an example of app manifest where a static tab is defined that works
       "websiteUrl": "https://contoso.com/content (displayed in web browser)" 
   }
 ], 
-
 ```
 
-If a context isn't defined in the app manifest, by default Teams consider the following context:
+If a context isn't explicitly defined in the app manifest, Teams defaults to the following context:
 
 ```json
 "context": [ 
@@ -1112,56 +1113,55 @@ If a context isn't defined in the app manifest, by default Teams consider the fo
 
 ## Enable personal tab apps for calling extensibility
 
-You can create personal scope apps that integrate with Public Switched Telephone Network (PSTN) and Teams-to-Teams calls. Use the right scope and context to build apps that utilize tab type, static scope, personal context, and meeting side panels.
+You can develop personal scope apps that integrate with the Public Switched Telephone Network (PSTN) and Teams-to-Teams calls. By using the appropriate scope and context, you can build apps that leverage tab type, static scope, personal context, and meeting side panels.
 
-For more information, see [build tabs for calling](../../apps-in-teams-meetings/build-tabs-for-calling.md).
+For further details, refer to [build tabs for calling](../../apps-in-teams-meetings/build-tabs-for-calling.md).
 
 ## Customizing your static tab in chats or meetings
 
-To customize your static tab experience in chats, channels, or meetings, you can use the `setConfig` APIs in your tab to update the `contentUrl` and `websiteUrl`. Following is an example:
+To tailor your static tab experience in chats, channels, or meetings, utilize the `setConfig` APIs in your tab to modify the `contentUrl` and `websiteUrl`. Here is an example:
 
 ```json
 pages.config.setConfig({ 
   "contentUrl": "https://wwww.contoso.com/teamsapp/thread/" + context.threadId,
    ...}
-
 ```
 
-Only `contentUrl` and `websiteUrl` changes are supported for `setConfig`, other properties can't be changed for static tabs.
+Only modifications to `contentUrl` and `websiteUrl` are supported through `setConfig`. Other properties cannot be altered for static tabs.
 
 ## Offline tabs
 
 > [!NOTE]
-> Personal tabs with offline functionality are only supported on Teams in Android devices.
+> Personal tabs with offline functionality are supported only on Teams for Android devices.
 
-You can create a personal tab that works in Teams without an internet connection. An offline tab benefits users who work in areas with poor or no network coverage, such as field agents or frontline workers. Users can perform the following tasks in an offline tab:
+You can create a personal tab that operates in Teams without an internet connection. An offline tab is beneficial for users working in areas with limited or no network coverage, such as field agents or frontline workers. Users can perform the following tasks in an offline tab:
 
-* Record data through forms that can include images and videos.
+* Record data through forms that may include images and videos.
 * View details of previously submitted requests, incidents, or forms.
 
-When the user's device reconnects to the internet, the tab automatically synchronizes the locally stored data with an Azure Blob storage. This action ensures that all offline changes made by the user are updated in a central storage, maintaining data consistency across the organization.
+When the user's device reconnects to the internet, the tab automatically synchronizes the locally stored data with Azure Blob storage. This ensures that all offline changes made by the user are updated in a central storage, maintaining data consistency across the organization.
 
 :::image type="content" source="../../assets/images/tabs/tab-support-offline-mobile.gif" alt-text="Graphic shows how an offline tab works in Teams mobile client.":::
 
 ### Build an offline tab
 
-Before you get started with building an offline tab, ensure that you meet the [prerequisites](~/tabs/how-to/tab-requirements.md) to build a personal tab.
+Before you start building an offline tab, ensure that you meet the [prerequisites](~/tabs/how-to/tab-requirements.md) for building a personal tab.
 
-1. [Create an Azure Blob storage](/azure/storage/blobs/storage-quickstart-blobs-portal). Ensure that you note down the account and container name for later use.
+1. [Create an Azure Blob storage](/azure/storage/blobs/storage-quickstart-blobs-portal). Make sure to note down the account and container name for future use.
 
-1. Clone the [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/) repository.
+2. Clone the [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/) repository.
 
-1. In the cloned repository, go to **samples** > **tab-support-offline** > **nodejs** and open the folder in Visual Studio Code.
+3. In the cloned repository, navigate to **samples** > **tab-support-offline** > **nodejs** and open the folder in Visual Studio Code.
 
    :::image type="content" source="../../assets/images/tabs/open-tab-sample-vsc.png" alt-text="Screenshot shows how to open the code sample in Visual Studio Code." lightbox="../../assets/images/tabs/open-tab-sample-vsc.png":::
 
-1. Under **EXPLORER**, go to **server** > **blobStoreOperations.js** and replace `{{ account-Name }}` and `{{ container-Name }}` with your Azure Blob storage account and container's values.
+4. Under **EXPLORER**, go to **server** > **blobStoreOperations.js** and replace `{{ account-Name }}` and `{{ container-Name }}` with your Azure Blob storage account and container's values.
 
-1. Select the **F5** key to debug the app. Teams opens in a browser window when the build is complete.
+5. Press the **F5** key to debug the app. Teams will open in a browser window when the build is complete.
 
-1. Sign in with your Microsoft 365 account, if prompted.
+6. Sign in with your Microsoft 365 account, if prompted.
 
-1. Select **Add** when a dialog box opens to let you add the tab app to Teams.
+7. Select **Add** when a dialog box appears to let you add the tab app to Teams.
 
    :::image type="content" source="../../assets/images/tabs/add-offline-tab-teams.png" alt-text="Screenshot shows how to add the offline tab app to Teams.":::
 
@@ -1175,7 +1175,7 @@ To learn how to optimize your tab's performance in the Teams Android and iOS cli
 
 ## Step-by-step guide
 
-For learning more about building a tab using C#, see [build your first tab app using C sharp](../../get-started/tutorials.md#build-your-first-tab-app-using-c-sharp).
+For more information about building a tab using C#, see [build your first tab app using C sharp](../../get-started/tutorials.md#build-your-first-tab-app-using-c-sharp).
 
 ## Code sample
 
