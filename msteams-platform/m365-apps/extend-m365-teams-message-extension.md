@@ -28,16 +28,19 @@ Teams message extension across Microsoft 365 also supports [link unfurling](../m
 Copilot plugins that rely on a bot must have the Microsoft 365 channel enabled in Azure portal bot channels registration. If you disable or misconfigure this channel, Copilot can't route requests to the bot. This problem can cause HTTP 500 errors, missing responses, or other failures.
 
 > [!IMPORTANT]
-> If you previously enabled the Outlook channel for your bot, you must now enable the Microsoft 365 channel for the message extension to work in Outlook.  
-> The Outlook channel is no longer used for message extensions running in Outlook and can be safely disabled.
+> If you previously enabled the **Outlook** channel for your bot, you must now enable the **Microsoft 365** channel for the message extension to work in Outlook. The Outlook channel is no longer used for message extensions running in Outlook and can be safely disabled.
 
 If you encounter an HTTP 500 error, check the following points before escalating to Azure support:
 
-1. Go to **Azure portal** → **Bot Channels Registration** → **Channels** and verify that the Microsoft 365 channel is enabled.
-1. Confirm that the Teams channel is enabled and isn't in an error state.
-1. Go to **Azure portal** → **Bot Channels Registration** → **Settings** → **Message Endpoint**, and verify that the endpoint is valid and up to date.
-1. Ensure that the plugin or Teams app manifest uses `manifestVersion` `1.16` or later and includes runtime configuration with Microsoft 365 as a supported host.
-1. Test the bot independently by calling the bot API directly or by using the Bot Framework Emulator. If the bot fails outside Copilot, the issue is in the bot code or backend.
+> [!div class="checklist"]
+>
+> * Go to **Azure portal** > **Bot Channels Registration** > **Channels** and verify that the Microsoft 365 channel is enabled.
+> * Confirm that the Teams channel is enabled and isn't in an error state.
+> * Go to **Azure portal** > **Bot Channels Registration** > **Settings** → **Message Endpoint**, and verify that the endpoint is valid and up to date.
+> * Ensure that the plugin or Teams app manifest uses `manifestVersion` `1.16` or later and includes runtime configuration with Microsoft 365 as a supported host.
+> * Test the bot independently by calling the bot API directly or by using the Bot Framework Emulator. If the bot fails outside Copilot, the issue is in the bot code or backend.
+
+For more information, also see [Add Microsoft 365 channel for your app](#add-microsoft-365-channel-for-your-app).
 
 ## Prerequisites
 
@@ -109,7 +112,10 @@ For users to interact with your message extension from Outlook, you need to enab
 
 > [!NOTE]
 >
-> If you've previously enabled the **Outlook** channel for your bot, you'll need to enable the **Microsoft 365** channel for your message extension to function correctly in Outlook. The Outlook channel is no longer used for message extensions running in Outlook and can be disabled.
+> If your bot previously used the **Outlook** channel, enable the **Microsoft 365** channel to ensure your message extension works in Outlook.  
+> An **HTTP 500 error** can occur if required channels aren’t enabled.  
+> Copilot in Teams also requires the **Microsoft 365** channel.  
+> Verify that both **Microsoft Teams** and **Microsoft 365** channels are active under **Azure Bot > Channels**.
 
 1. Go to [Microsoft Azure portal](https://portal.azure.com) or [Bot Framework portal](https://dev.botframework.com) (if you've previously registered there), go to your bot resource.
 
