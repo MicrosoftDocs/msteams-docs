@@ -12,9 +12,9 @@ ms.subservice: m365apps
 
 Message extensions allow users to interact with your web service using buttons and forms. Users can search or initiate actions in an external system from Microsoft Teams and Outlook by extending your Teams apps across Microsoft 365. There are two types of message extensions:
 
-* Search-based message extensions: Allow users to search an external system and share results through the compose message area of the client.
+* Search-based message extensions: Users can search an external system and share results through the compose message area of the client.
 
-* Action-based message extensions: Allow users with a modal pop-up to collect or display information, process the interaction, and send the information back to the client as a rich card.
+* Action-based message extensions: Users can use a modal pop-up to collect or display information, process the interaction, and send the information back to the client as a rich card.
 
 > [!NOTE]
 > Teams search-based message extensions are generally available for Outlook, and action-based message extensions are available in preview for Outlook.
@@ -34,9 +34,9 @@ If you encounter an HTTP 500 error, check the following points before escalating
 
 > [!div class="checklist"]
 >
-> * Go to **Azure portal** > **Bot Channels Registration** > **Channels** and verify that the Microsoft 365 channel is enabled.
+> * Go to **Azure portal** > **Bot Channels Registrations** > **Channels** and verify that the Microsoft 365 channel is enabled.
 > * Confirm that the Teams channel is enabled and isn't in an error state.
-> * Go to **Azure portal** > **Bot Channels Registration** > **Settings** → **Message Endpoint**, and verify that the endpoint is valid and up to date.
+> * Go to **Azure portal** > **Bot Channels Registrations** > **Settings** → **Message Endpoint**, and verify that the endpoint is valid and up to date.
 > * Ensure that the plugin or Teams app manifest uses `manifestVersion` `1.16` or later and includes runtime configuration with Microsoft 365 as a supported host.
 > * Test the bot independently by calling the bot API directly or by using the Bot Framework Emulator. If the bot fails outside Copilot, the issue is in the bot code or backend.
 
@@ -44,7 +44,7 @@ For more information, also see [Add Microsoft 365 channel for your app](#add-mic
 
 ## Prerequisites
 
-To extend your Teams message extension to Outlook, ensure the following:
+To extend your Teams message extension to Outlook, ensure the following prerequisites are met:
 
 > [!div class="checklist"]
 >
@@ -113,7 +113,7 @@ For users to interact with your message extension from Outlook, you need to enab
 > [!NOTE]
 >
 > If your bot previously used the **Outlook** channel, enable the **Microsoft 365** channel to ensure your message extension works in Outlook.  
-> An **HTTP 500 error** can occur if required channels aren’t enabled.  
+> An **HTTP 500 error** can occur if required channels aren't enabled.  
 > Copilot in Teams also requires the **Microsoft 365** channel.  
 > Verify that both **Microsoft Teams** and **Microsoft 365** channels are active under **Azure Bot > Channels**.
 
@@ -164,11 +164,11 @@ Microsoft Entra single sign-on (SSO) for message extensions works the same way i
 
 ## Upload your custom app in Teams
 
-Upload your updated message extension ([app package](/microsoftteams/platform/concepts/build-and-test/apps-package)) into Teams. After you complete, message extension appears in your installed **Apps** from the compose message area.
+Upload your updated message extension as an [app package](/microsoftteams/platform/concepts/build-and-test/apps-package) into Teams. After you finish, the message extension appears in your installed **Apps** from the compose message area.
 
 1. Create a .zip file with app manifest and app [icons](/microsoftteams/platform/resources/schema/manifest-schema#icons).
 
-1. Go to **Teams** and sign in using your sandbox tenant account.
+1. Go to **Teams** and sign in by using your sandbox tenant account.
 
 1. Select **Apps** > **Manage your apps** > **Upload an app**.
 
@@ -184,7 +184,7 @@ After you upload the app through Teams, your message extension is available in O
 
 Here's how to test your message extension running in Outlook on the web. To preview your app running in Outlook on the web, follow these steps:
 
-1. Sign in to [outlook.com](https://www.outlook.com) using your test tenant credentials.
+1. Sign in to [outlook.com](https://www.outlook.com) by using your test tenant credentials.
 1. Select **New message**.
 1. Select **Apps** on the ribbon.
 
@@ -202,7 +202,7 @@ While your updated message extension continues to run in Teams, be aware of the 
 
 * Message extensions in Outlook are supported only in the [`compose`](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions) context. In Teams app manifest, message extension contexts such as `commandBox` and `message` aren't supported in Outlook.
 
-* Action-based message extensions that [send cards](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#respond-with-a-card-inserted-into-the-compose-message-area) into the compose box are supported in Outlook. However, using [bots to deliver cards](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#) isn't supported. In this scenario, you can convert your message extension to [send cards](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#respond-with-a-card-inserted-into-the-compose-message-area) into the compose box in Outlook.
+* Outlook supports action-based message extensions that [send cards](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#respond-with-a-card-inserted-into-the-compose-message-area) into the compose box. However, using [bots to deliver cards](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#) isn't supported. In this scenario, you can convert your message extension to [send cards](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#respond-with-a-card-inserted-into-the-compose-message-area) into the compose box in Outlook.
 
 * You can't insert more than five [Adaptive Cards](/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards?tabs=design) in an email.
 
@@ -211,7 +211,7 @@ While your updated message extension continues to run in Teams, be aware of the 
 * Adaptive Card actions are supported. For `Action.Submit` only [stageview](../tabs/tabs-link-unfurling.md#invoke-collaborative-stageview-from-adaptive-card) and [taskmodule](../task-modules-and-cards/task-modules/task-modules-bots.md#bot-framework-card-actions-vs-adaptive-card-actionsubmit-actions) launching is supported.
 
 > [!NOTE]
-> When you test an app with link unfurling, ensure that you remove the app manually after testing. If multiple apps are monitoring the same domain, the app installed most recently might not be invoked to unfurl the link in Outlook, as it would in Teams.
+> When you test an app with link unfurling, ensure that you remove the app manually after testing. If multiple apps are monitoring the same domain, the app installed most recently might not be invoked to unfurl the link in Outlook, as it would be in Teams.
 
 Use the [Microsoft Teams developer community channels](/microsoftteams/platform/feedback) to report issues and provide feedback.
 
@@ -220,7 +220,7 @@ Use the [Microsoft Teams developer community channels](/microsoftteams/platform/
 | **Sample Name** | **Description** | **Node.js** |
 |---------------|--------------|--------|
 | NPM Search Connector | Teams Toolkit sample app to build a message extension app. Works in Teams and Outlook. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2.1.0/NPM-search-connector-M365) |
-| Teams Link Unfurling | This sample app showcases a Node.js bot that implements link unfurling within Teams messaging extensions. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-link-unfurling/nodejs)
+| Teams Link Unfurling | This sample app showcases a Node.js bot that implements link unfurling within Teams messaging extensions. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-link-unfurling/nodejs) |
 | Tab in Stageview | This sample app demonstrates the use of Teams tab in stage view using Node.js, featuring collaborative elements and interactive capabilities. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs) |
 |Teams action-based message extension for Microsoft 365| Teams Toolkit sample app to build a message extension app. Works in Teams and Outlook. | [View](https://github.com/OfficeDev/microsoft-365-agents-toolkit/tree/dev/templates/vsc/js) |
 
