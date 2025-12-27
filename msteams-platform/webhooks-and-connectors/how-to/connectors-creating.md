@@ -23,11 +23,11 @@ See the following video to learn how to create connectors for Microsoft 365 Grou
 
 ## Add a connector to Teams app
 
-You can create a [package](~/concepts/build-and-test/apps-package.md) and [publish](~/concepts/deploy-and-publish/apps-publish.md) your connector as part of your AppSource submission. You can publish your registered connector as part of your Teams app package. For information on entry points for Teams app, see [capabilities](~/concepts/extensibility-points.md). You can also provide the package directly to the users for uploading within Teams.
+You can create a [package](~/concepts/build-and-test/apps-package.md) and [publish](~/concepts/deploy-and-publish/apps-publish.md) your connector as part of your AppSource submission. You can publish your registered connector as part of your Teams app package. For information on entry points for Teams app, see [capabilities](~/concepts/extensibility-points.md). You can also provide the package directly to users for uploading within Teams.
 
 To publish your connector, register it in the [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard).
 
-For a connector to work only in Teams, follow the instructions to submit connector in [publish your app to the Microsoft Teams Store](~/concepts/deploy-and-publish/appsource/publish.md) article. Otherwise, a registered connector works in all Microsoft 365 products that support applications, including Outlook and Teams.
+For a connector to work only in Teams, follow the instructions to submit the connector in [publish your app to the Microsoft Teams Store](~/concepts/deploy-and-publish/appsource/publish.md) article. Otherwise, a registered connector works in all Microsoft 365 products that support applications, including Outlook and Teams.
 
 > [!IMPORTANT]
 > Your connector is registered after you select **Save** in the Connectors Developer Dashboard. If you want to publish your connector in AppSource, follow the instructions in [publish your Microsoft Teams app to AppSource](~/concepts/deploy-and-publish/apps-publish.md). If you do not want to publish your app in AppSource, publish it directly to the organization. After publishing connectors for your organization, no further action is required on the Connector Dashboard.
@@ -58,14 +58,14 @@ To integrate the configuration experience:
     > [!NOTE]
     > You must call `microsoftTeams.pages.config.setValidityState(true)` as a response to user selection or field update.
 
-1. Register  `microsoftTeams.pages.config.registerOnSaveHandler()` event handler, which is called when the user selects **Save**.
+1. Register `microsoftTeams.pages.config.registerOnSaveHandler()` event handler, which is called when the user selects **Save**.
 1. Call `microsoftTeams.pages.config.setConfig()` to save the connector settings. The saved settings are also shown in the configuration dialog if the user tries to update an existing configuration for your connector.
 1. Call `microsoftTeams.pages.getConfig()` to fetch webhook properties, including the URL.
 
     > [!NOTE]
     > You must call `microsoftTeams.pages.getConfig()` when your page is first loaded in case of reconfiguration.
 
-1. Register `microsoftTeams.pages.config.registerOnRemoveHandler()` event handler, which is called when the user removes connector.
+1. Register `microsoftTeams.pages.config.registerOnRemoveHandler()` event handler, which is called when the user removes the connector.
 
 This event gives your service an opportunity to perform any cleanup actions.
 
@@ -133,7 +133,7 @@ To authenticate the user as part of loading your page, see [authentication flow 
 #### `getConfig` response properties
 
 >[!NOTE]
->The parameters returned by the `getConfig` call are different when you invoke this method from a tab and differ from those documented in the [reference](/javascript/api/@microsoft/teams-js/pages#@microsoft-teams-js-pages-getconfig).
+>The parameters returned by the `getConfig` call are different when you invoke this method from a tab and differ from those documented in the [reference](/javascript/api/@microsoft/teams/js/pages#@microsoft-teams-js-pages-getconfig).
 
 The following table provides the parameters and the details of `getConfig` response properties:
 
@@ -143,8 +143,8 @@ The following table provides the parameters and the details of `getConfig` respo
 | `configName`  | The configuration name, as set by your code when calling `setConfig()`. |
 | `contentUrl` | The URL of the configuration page, as set by your code when calling `setConfig()`. |
 | `webhookUrl` | The webhook URL created for the connector. Use the webhook URL to POST structured JSON to send cards to the channel. The `webhookUrl` is returned only when the application returns data successfully. |
-| `appType` | The values returned can be `mail`, `groups`, or `teams` corresponding to the Microsoft 365 Mail, Microsoft 365 Groups, or Teams. respectively. |
-| `userObjectId` | The unique ID corresponding to the Microsoft 365 user who initiated the setup of the connector. It must be secured. This value can be used to associate the user in Microsoft 365, who has setup the configuration in your service. |
+| `appType` | The values returned can be `mail`, `groups`, or `teams` corresponding to the Microsoft 365 Mail, Microsoft 365 Groups, or Teams, respectively. |
+| `userObjectId` | The unique ID corresponding to the Microsoft 365 user who initiated the setup of the connector. It must be secured. This value can be used to associate the user in Microsoft 365, who has set up the configuration in your service. |
 
 #### Handle edits
 
