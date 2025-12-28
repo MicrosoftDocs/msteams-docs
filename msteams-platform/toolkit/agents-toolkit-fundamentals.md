@@ -12,13 +12,13 @@ ms.date: 08/26/2025
 
 [!INCLUDE [Deprecation note](../includes/deprecation-note-teamsfx-sdk.md)]
 
-Agents Toolkit (previously known as Teams Toolkit) makes it simple to get started with app development for Microsoft Teams, Outlook, and Microsoft 365 Copilot using Visual Studio Code.
+Agents Toolkit (previously known as Teams Toolkit) simplifies app development for Microsoft Teams, Outlook, and Microsoft 365 Copilot using Visual Studio Code.
 
-* Create new apps from project templates for common app scenarios.
-* Save setup time with automated app registration and configuration.
-* Run and debug to Teams, Outlook, and Copilot directly from Visual Studio Code.
-* Smart defaults for hosting in Azure using infrastructure-as-code and Bicep.
-* Test with different configurations such as dev, test, and prod using the environment features.
+- Create new apps from project templates for common app scenarios.
+- Save setup time with automated app registration and configuration.
+- Run and debug to Teams, Outlook, and Copilot directly from Visual Studio Code.
+- Smart defaults for hosting in Azure using infrastructure-as-code and Bicep.
+- Test with different configurations such as dev, test, and prod using environment features.
 
 :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/toolkit-user-journey2.png" alt-text="Illustration shows the User Journey of the Agents Toolkit." lightbox="../assets/images/toolkit-v2/toolkit-fundamentals/toolkit-user-journey2.png":::
 
@@ -41,7 +41,7 @@ The following list provides the key features of Agents Toolkit:
 
 ### Project templates
 
-Save time getting started with new Teams apps using the capability-focused templates for tabs, bots, message extensions, and common app scenarios.
+Save time getting started with new Teams apps using capability-focused templates for tabs, bots, message extensions, and common app scenarios.
 
 :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/teams-agents.png" alt-text="Screenshot shows the list of new Teams app menu to create in Visual Studio Code.":::
 
@@ -51,7 +51,7 @@ Automate repetitive or tedious configuration using a composable task framework t
 
 ### Multiple environments
 
-Test your app with different groupings of hosted resources by creating unique configurations such as `dev`, `test`, and `prod` using the Environments features.
+Test your app with different groupings of hosted resources by creating unique configurations such as `dev`, `test`, and `prod` using Environments features.
 
 ### Quick access to Teams Developer Portal
 
