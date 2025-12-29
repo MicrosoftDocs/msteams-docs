@@ -57,9 +57,9 @@ You can use Agents Toolkit with Visual Studio Code or a command-line interface c
 2. In the search box, enter **Microsoft 365 Agents Toolkit**.
 3. Select **Install**.
 
-   :::image type="content" source="../../assets/images/include-files/install-toolkit-vs.png" alt-text="Screenshot shows the Agents Toolkit extension installation.":::
+   :::image type="content" source="../assets/images/include-files/install-toolkit-vs.png" alt-text="Screenshot shows the Agents Toolkit extension installation.":::
 
-   The Microsoft 365 Agents Toolkit :::image type="icon" source="../../assets/images/include-files/toolkit-sidebar-icon.PNG"::: icon appears in the Visual Studio Code Activity Bar.
+   The Microsoft 365 Agents Toolkit :::image type="icon" source="../assets/images/include-files/toolkit-sidebar-icon.PNG"::: icon appears in the Visual Studio Code Activity Bar.
 
 You can also install Agents Toolkit from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
@@ -103,7 +103,7 @@ The following steps help you verify if you can upload apps in Teams:
 3. Select **Upload an app**.
 4. Look for the option to **Upload a custom app**. If the option is visible, you can upload custom apps.
 
-   :::image type="content" source="../../assets/images/toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Screenshot shows the option to upload a custom app in Teams." :::
+   :::image type="content" source="../assets/images/toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Screenshot shows the option to upload a custom app in Teams." :::
 
       > [!NOTE]
       > If you don't find the option to upload a custom app, contact your Teams administrator.
@@ -117,7 +117,7 @@ If you don't have a Teams developer account, join the Microsoft 365 developer pr
 1. In the welcome screen, select **Set up E5 subscription**.
 1. Set up your administrator account. After you finish, the following screen appears:
 
-   :::image type="content" source="../../assets/images/include-files/microsoft-365.png" alt-text="Screenshot shows the Microsoft 365 Developer Program.":::
+   :::image type="content" source="../assets/images/include-files/microsoft-365.png" alt-text="Screenshot shows the Microsoft 365 Developer Program.":::
 
 1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
 
@@ -131,7 +131,7 @@ Now, let's create your first message extension app.
 
 The message extension capability lets you interact with a web service through buttons and forms. Use the message compose area, command box, or a message directly in Teams client to search and initiate actions in an external system. Message extensions rely on bots to provide a dialog between the user and your code.
 
-:::image type="content" source="~/assets/images/toolkit-v2/first-msgext/your-helloworld-app-msgext.png" alt-text="Diagram shows Screenshot shows the different types of app features with message extension highlighted.":::
+:::image type="content" source="../assets/images/toolkit-v2/first-msgext/your-helloworld-app-msgext.png" alt-text="Diagram shows Screenshot shows the different types of app features with message extension highlighted.":::
 
 There are two types of Teams message extensions:
 
@@ -200,7 +200,7 @@ If the prerequisites are in place, let's begin!
 
     Agents Toolkit creates the app in a few seconds.
 
-    :::image type="content" source="../assets/images/toolkit-v2/first-msgext/app-created-mex.png" alt-text="Screenshot shows the newly created message extension app." lightbox="../msteams-platform/assets/images/toolkit-v2/first-msgext/app-created-mex.png":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-msgext/app-created-mex.png" alt-text="Screenshot shows the newly created message extension app." lightbox="../assets/images/toolkit-v2/first-msgext/app-created-mex.png":::
 
     After your app is created, Agents Toolkit displays the following message:
 
@@ -259,11 +259,11 @@ Sign in with the admin account you created while joining the Microsoft 365 devel
 
 1. Open Visual Studio Code.
 
-1. Select the Microsoft 365 Agents Toolkit  :::image type="icon" source="../msteams-platform/assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the activity bar.
+1. Select the Microsoft 365 Agents Toolkit  :::image type="icon" source="../assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the activity bar.
 
 1. Select **Sign in to Microsoft 365** using your credentials. Your default web browser opens to let you sign in.
 
-    :::image type="content" source="../msteams-platform/assets/images/toolkit-v2/toolkit-sign-in-m365.png" alt-text="Screenshot shows where to sign in to Microsoft 365 and Azure.":::
+    :::image type="content" source="../assets/images/toolkit-v2/toolkit-sign-in-m365.png" alt-text="Screenshot shows where to sign in to Microsoft 365 and Azure.":::
 
 1. Close the browser after signing in using your credentials.
 
@@ -271,7 +271,7 @@ Sign in with the admin account you created while joining the Microsoft 365 devel
 
 The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name. If custom app upload is enabled for your Microsoft 365 account, Agents Toolkit displays **Custom App Upload Enabled**.
 
-:::image type="content" source="../msteams-platform/assets/images/toolkit-v2/first-tab/m365-uploading-enabled-msg.png" alt-text="Screenshot shows the user signed in to Microsoft 365 and the uploading enabled message.":::
+:::image type="content" source="../assets/images/toolkit-v2/first-tab/m365-uploading-enabled-msg.png" alt-text="Screenshot shows the user signed in to Microsoft 365 and the uploading enabled message.":::
 
 Now you're ready to build the app and run it locally!
 
@@ -323,7 +323,7 @@ Now you can build and debug your first Teams message extension app locally.
 
     </details>
 
-    :::image type="content" source="../assets/images/toolkit-v2/first-msgext/f5-build-and-run-mex.png" alt-text="Screenshot shows the debug process of the message extension app." lightbox="../msteams-platform/assets/images/toolkit-v2/first-msgext/f5-build-and-run-mex.png":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-msgext/f5-build-and-run-mex.png" alt-text="Screenshot shows the debug process of the message extension app." lightbox="../assets/images/toolkit-v2/first-msgext/f5-build-and-run-mex.png":::
 
     When you debug the app for the first time, Teams downloads the dependencies and builds the app. This process can take 3 to 5 minutes to complete.
 
