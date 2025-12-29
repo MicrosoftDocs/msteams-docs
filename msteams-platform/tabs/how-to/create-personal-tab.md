@@ -11,7 +11,7 @@ ms.owner: ryanbliss
 
 # Create a tab
 
-Tabs in chats, channels, or meetings behave more like apps, as you can pin only one tab per app to the left pane for easy access.
+Tabs in chats, channels, or meetings function similarly to apps, as you can pin only one tab per app to the left pane for easy access.
 
 > [!IMPORTANT]
 >
@@ -411,19 +411,19 @@ ngrok http 3978 --host-header=localhost
 
 1. Open **Apps** and select **Import app**.
 
-1. The app package file name is `tab.zip` and it's available at `/bin/Debug/netcoreapp3.1/tab.zip` path.
+1. The app package file name is `tab.zip`, and it's located at the `/bin/Debug/netcoreapp3.1/tab.zip` path.
 
 1. Select `tab.zip` and open it in the Developer Portal.
 
-1. A default **App ID** is created and populated in **Basic information** section.
+1. A default **App ID** is created and populated in the **Basic information** section.
 
-1. Add the Short and Long description  for your app in **Descriptions**.
+1. Add the Short and Long description for your app in **Descriptions**.
 
-1. In **Developer Information**, add the required details and in **Website (must be a valid HTTPS URL)** give your ngrok HTTPS URL.
+1. In **Developer Information**, add the required details. In **Website (must be a valid HTTPS URL)**, provide your ngrok HTTPS URL.
 
-1. In **App URLs**, update the Privacy policy to `https://<yourngrokurl>/privacy` and Terms of use to `https://<yourngrokurl>/tou` and select **Save**.
+1. In **App URLs**, update the Privacy policy to `https://<yourngrokurl>/privacy` and Terms of use to `https://<yourngrokurl>/tou`, then select **Save**.
 
-1. In **App features**, select **Personal app** > **Create your first personal app tab** and enter the name and update the **Content URL** with `https://<yourngrokurl>/personalTab`. Leave the Website URL field blank and select **Context** as personalTab from the dropdown list and select **Confirm**.
+1. In **App features**, select **Personal app** > **Create your first personal app tab**. Enter the name and update the **Content URL** with `https://<yourngrokurl>/personalTab`. Leave the Website URL field blank, select **Context** as personalTab from the dropdown list, and select **Confirm**.
 
 1. Select **Save**.
 
@@ -434,7 +434,7 @@ ngrok http 3978 --host-header=localhost
 
 ### Preview your app in Teams
 
-1. Select **Preview in Teams** from the Developer Portal toolbar, Developer Portal informs you that your custom app is uploaded successfully. The **Add** page appears for your app in Teams.
+1. Select **Preview in Teams** from the Developer Portal toolbar. Developer Portal informs you that your custom app is uploaded successfully. The **Add** page appears for your app in Teams.
 
 1. Select **Add** to load the tab in Teams. Your tab is now available in Teams.
 
@@ -593,15 +593,15 @@ ngrok http 3978 --host-header=localhost
 
 1. Select **tab.zip** and open it in the Developer Portal.
 
-1. A default **App ID** is created and populated in **Basic information** section.
+1. A default **App ID** is created and populated in the **Basic information** section.
 
-1. Add the Short and Long description  for your app in **Descriptions**.
+1. Add the Short and Long description for your app in **Descriptions**.
 
-1. In **Developer information**, add the required details and in **Website (must be a valid HTTPS URL)** give your ngrok HTTPS URL.
+1. In **Developer information**, add the required details. In **Website (must be a valid HTTPS URL)**, provide your ngrok HTTPS URL.
 
-1. In **App URLs**, update the Privacy policy to `https://<yourngrokurl>/privacy` and Terms of use to `https://<yourngrokurl>/tou` and select **Save**.
+1. In **App URLs**, update the Privacy policy to `https://<yourngrokurl>/privacy` and Terms of use to `https://<yourngrokurl>/tou`, then select **Save**.
 
-1. In **App features**, select **Personal app** > **Create your first personal app tab** and enter the name and update the **Content URL** with `https://<yourngrokurl>/personalTab`. Leave the Website URL field blank and select **Context** as personalTab from the dropdown list and select **Confirm**.
+1. In **App features**, select **Personal app** > **Create your first personal app tab**. Enter the name and update the **Content URL** with `https://<yourngrokurl>/personalTab`. Leave the Website URL field blank, select **Context** as personalTab from the dropdown list, and select **Confirm**.
 
 1. Select **Save**.
 
@@ -612,7 +612,7 @@ ngrok http 3978 --host-header=localhost
 
 ### Preview your app in Teams
 
-1. Select **Preview in Teams** from the Developer Portal toolbar, Developer Portal informs you that your custom app is uploaded successfully. The **Add** page appears for your app in Teams.
+1. Select **Preview in Teams** from the Developer Portal toolbar. Developer Portal informs you that your custom app is uploaded successfully. The **Add** page appears for your app in Teams.
 
 1. Select **Add** to load the tab on Teams. Your tab is now available in Teams.
 
@@ -624,7 +624,7 @@ ngrok http 3978 --host-header=localhost
 
 ::: zone pivot="blazor-app"
 
-Blazor lets you build interactive web UIs using C#, instead of JavaScript. You can create a tab app and a bot app  with Blazor and the latest version of Visual Studio.
+Blazor lets you build interactive web UIs using C#, instead of JavaScript. You can create a tab app and a bot app with Blazor and the latest version of Visual Studio.
 
 :::image type="content" source="~/assets/images/toolkit-v2/blazor/your-blazor-helloworld-app.png" alt-text="Screenshot of the Blazor app displaying the tab, Bot, and Message Extension output after the step-by-step Blazor guide is successfully completed.":::
 
@@ -747,7 +747,7 @@ Start Teams app development by creating your first app. This app uses tab capabi
 
 :::image type="content" source="~/assets/images/toolkit-v2/blazor/your-blazor-helloworld-app1.png" alt-text="Screenshot of Blazor app displaying the final output of tab app after the step-by-step Blazor guide is successfully completed.":::
 
-This tutorial walks you through the steps to create, run, and deploy your first Teams app using .NET/Blazor.
+This tutorial guides you through the process of creating, running, and deploying your first Teams app using .NET/Blazor.
 
 In this page, you'll learn:
 
@@ -756,7 +756,7 @@ In this page, you'll learn:
 
 ## Create your tab project
 
-Use Agents Toolkit to create your first tab project. The toolkit takes you through a series of pages to create and configure your Teams app project:
+Use Agents Toolkit to create your first tab project. The toolkit guides you through a series of pages to create and configure your Teams app project:
 
 1. **Create a new project** page: You can select the project type.
 1. **Configure your new project** page: You can enter the project details.
