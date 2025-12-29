@@ -909,7 +909,7 @@ Teams action based message extension allow users to interact with web services i
 
 This step-by-step guide helps you to build Teams action-based message extension to initiate actions from compose message and message area. By the end of this tutorial, you can achieve the following output:
 
-:::image type="content" source="../assets/images/sbs-messagingextension-action/sharemessageoutput1.png" alt-text="Screenshot of the message extension output after you have successfully completed the step-by-step guide.":::
+:::image type="content" source="../assets/images/sbs-messagingextension-action/sharemessageoutput1.png" alt-text="Screenshot of the message extension output after you successfully complete the step-by-step guide.":::
 
 ### Prerequisites
 
@@ -1024,7 +1024,7 @@ Follow one of the following two methods to create a tunnel.
 
     :::image type="content" source="../assets/images/include-files/tunnel-created.png" alt-text="Screenshot shows the pop-up message that the tunnel is created.":::
 
-    You can find the tunnel you've created in the debug dropdown list as follows:
+    You can find the tunnel you created in the debug dropdown list as follows:
 
     :::image type="content" source="../assets/images/include-files/tunnel-active.png" alt-text="Screenshot shows the tunnel is active and selected.":::
 
