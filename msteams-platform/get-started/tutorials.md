@@ -2609,7 +2609,7 @@ The window shows the HTTPS URL.
 
 To build and run the service, use Visual Studio or Command line.
 
-# [Visual Studio](#tab/vs2019)
+# [Visual Studio](#tab/vscode)
 
 1. Open Visual Studio.
 1. Select **File** > **Open** > **Project/Solution...*
