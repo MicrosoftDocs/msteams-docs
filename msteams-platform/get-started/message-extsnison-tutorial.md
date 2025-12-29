@@ -229,6 +229,8 @@ Use the `atk' CLI to create your first project.
 
 CLI creates the project after you answer all the questions.
 
+---
+
 ### Take a tour of the message extension app source code
 
 A message extension uses Bot Framework to interact with your service through a conversation. After scaffolding, view the project directories and files under **EXPLORER**.
