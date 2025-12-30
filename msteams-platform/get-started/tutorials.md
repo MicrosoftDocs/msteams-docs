@@ -473,7 +473,7 @@ To build proactive message bot using Visual Studio Code, follow these steps:
 
     :::image type="content" source="../assets/images/proactive-scenario/debug-option-edge.png" alt-text="Screenshot shows the debugging options to choose from.":::
 
-    When debugging is successful, you'll be prompted to upload the proactive message bot to Teams on your local machine.
+    When debugging is successful, you are prompted to upload the proactive message bot to Teams on your local machine.
 
 1. Select **Add**.
 
@@ -591,7 +591,7 @@ Deployment consists of two steps. First, necessary cloud resources are created (
 
     :::image type="content" source="../assets/images/proactive-scenario/debug-option-remote.png" alt-text="Screenshot shows the remote debug option highlighted.":::
 
-    When debugging is successful, you'll be prompted to upload the proactive message bot app to Teams.
+    When debugging is successful, you are prompted to upload the proactive message bot app to Teams.
 
 1. Select **Add**.
 
