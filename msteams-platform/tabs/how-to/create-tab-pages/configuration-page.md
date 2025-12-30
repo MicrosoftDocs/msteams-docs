@@ -10,9 +10,9 @@ ms.owner: ryanbliss
 ---
 # Create a configuration page
 
-A configuration page is a special type of [content page](content-page.md). The users configure some aspects of the Microsoft Teams app using the configuration page and use that configuration as part of the following:
+A configuration page is a special type of [content page](content-page.md). Users configure some aspects of the Microsoft Teams app using the configuration page and use that configuration as part of the following:
 
-* A channel or group chat tab: Collect information from the users and set the `contentUrl` of the content page to be displayed.
+* A channel or group chat tab: Collect information from users and set the `contentUrl` of the content page to be displayed.
 * A [message extension](~/messaging-extensions/what-are-messaging-extensions.md).
 * A [connector for Microsoft 365 Groups](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
@@ -20,7 +20,7 @@ A configuration page is a special type of [content page](content-page.md). The u
 
 ## Configuration page for tabs
 
-The application must refer the [TeamsJS library](/javascript/api/overview/msteams-client#microsoft-teams-javascript-client-library) and call `app.initialize()`. The URLs used must be secured HTTPS endpoints and are available from the cloud.
+The application must refer to the [TeamsJS library](/javascript/api/overview/msteams-client#microsoft-teams-javascript-client-library) and call `app.initialize()`. The URLs used must be secured HTTPS endpoints and are available from the cloud.
 
 ### Example
 
