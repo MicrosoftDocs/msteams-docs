@@ -81,11 +81,11 @@ If the prerequisites are in place, let's begin!
 
 1. Select the programming language as **JavaScript**.
 
-    :::image type="content" source="~/assets/images/agents-playground/select-language-bot.png" alt-text="Screenshot shows the option to select the programming language.":::
+    :::image type="content" source="~/assets/images/agents-playground/select-language-bot.png" alt-text="Screenshot displays the option to select the programming language.":::
 
 1. Select **Default folder**.
 
-    :::image type="content" source="~/assets/images/toolkit-v2/first-bot/select-default-location.png" alt-text="Screenshot shows the selection of default location.":::
+    :::image type="content" source="~/assets/images/toolkit-v2/first-bot/select-default-location.png" alt-text="Screenshot displays the selection of default location.":::
 
     To change the default location, follow these steps:
 
@@ -376,7 +376,7 @@ If you don't have a Teams developer account, you can get it free. Join the Micro
 1. In the welcome screen, select **Set up E5 subscription**.
 1. Set up your administrator account. After you finish, the following screen appears.
 
-   :::image type="content" source="../assets/images/toolkit-v2/prerequisites/microsoft-365.png" alt-text="Screenshot shows the Microsoft 365 Developer Program.":::
+   :::image type="content" source="../assets/images/toolkit-v2/prerequisites/microsoft-365.png" alt-text="Screenshot displays the Microsoft 365 Developer Program.":::
 
 1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
 
@@ -2876,7 +2876,7 @@ The window shows the HTTPS URL.
 
 To build and run the service, use Visual Studio or Command line.
 
-# [Visual Studio](#tab/vs2019)
+# [Visual Studio](#tab/vscode)
 
 1. Open Visual Studio.
 1. Select **File** > **Open** > **Project/Solution...*
