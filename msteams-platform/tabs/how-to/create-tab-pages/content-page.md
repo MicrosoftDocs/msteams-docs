@@ -9,11 +9,11 @@ ms.owner: ryanbliss
 
 # Create a content page
 
-Content page is the base level webpage that is rendered within Microsoft Teams client where a developer can add the content of a tab. It allows you to seamlessly integrate your web content within the Teams client, creating a more immersive and engaging environment for users. For instance, you can use content pages to display custom data, integrate third-party services, or create a more personalized user experience. A content page is necessary to create any of the following tabs:
+A content page is the base-level webpage rendered within the Microsoft Teams client, where developers can add the content of a tab. It allows seamless integration of web content within the Teams client, creating a more immersive and engaging environment for users. For instance, content pages can display custom data, integrate third-party services, or create a more personalized user experience. A content page is necessary to create any of the following tabs:
 
 * A personal-scoped custom tab: In this case, the content page is the first page the user encounters.
 * A channel or group custom tab: The content page is displayed after the user pins and configures the tab in the appropriate context.
-* A [dialog](~/task-modules-and-cards/what-are-task-modules.md): You can create a content page and embed it as a webview inside a dialog (referred as task module in TeamsJS v1.x). The page is rendered inside the modal pop-up.
+* A [dialog](~/task-modules-and-cards/what-are-task-modules.md): You can create a content page and embed it as a webview inside a dialog (referred to as a task module in TeamsJS v1.x). The page is rendered inside the modal pop-up.
 
 If you need to add your tab within a channel or group, or personal scope, present an HTML content page in your tab. For static tabs, the content URL is set directly in your [app manifest](/microsoft-365/extensibility/schema/root-static-tabs).
 
@@ -23,13 +23,13 @@ This article is specific to using content pages as tabs; however, most of the gu
 
 ## Tab content and design guidelines
 
-Your tab's overall objective is to provide access to meaningful and engaging content that has a practical value and a clear purpose.
+Your tab's overall objective is to provide access to meaningful and engaging content that has practical value and a clear purpose.
 
-You need to focus on making your tab design clean, navigation intuitive, and content immersive. For more information, see [tab design guidelines](~/tabs/design/tabs.md) and [Microsoft Teams Store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
+Focus on making your tab design clean, navigation intuitive, and content immersive. For more information, see [tab design guidelines](~/tabs/design/tabs.md) and [Microsoft Teams Store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
 
 ## Integrate your code with Teams
 
-To display your page in Teams, you'll need to include the [Microsoft Teams JavaScript client library (TeamsJS)](/javascript/api/overview/msteams-client#microsoft-teams-javascript-client-library) in your code and call `app.initialize()` after your page loads.
+To display your page in Teams, include the [Microsoft Teams JavaScript client library (TeamsJS)](/javascript/api/overview/msteams-client#microsoft-teams-javascript-client-library) in your code and call `app.initialize()` after your page loads.
 
 > [!NOTE]
 > It takes close to 24-48 hours for any content or UI changes to reflect in the tab app due to cache.
@@ -88,7 +88,7 @@ The following code is an example of how your page and the Teams client communica
 
 For more information on how to create and add a content page to a personal tab, see [add a content page to the tab](../create-personal-tab.md#add-a-content-page-to-the-tab).
 
-The following images show the configuration of an HTML content page and the output of content page in tab:
+The following images show the configuration of an HTML content page and the output of a content page in a tab:
 
 **Content page configuration**
 
@@ -125,7 +125,7 @@ You can configure and show a native loading indicator to a tab. You can provide 
 >
 > The behavior on mobile clients isn't configurable through the native loading indicator property. Mobile clients show this indicator by default across content pages and iframe-based dialogs. This indicator on mobile is shown when a request is made to fetch content and gets dismissed as soon as the request gets completed.
 
-If you indicate `showLoadingIndicator : true`  in your app manifest, then all tab configuration, content, removal pages, and all iframe-based dialogs must follow these steps:
+If you indicate `showLoadingIndicator : true` in your app manifest, then all tab configuration, content, removal pages, and all iframe-based dialogs must follow these steps:
 
 Use the following steps to show the native loading indicator:
 
@@ -133,7 +133,7 @@ Use the following steps to show the native loading indicator:
 
 1. Call `app.initialize();`.
 
-1. Call `app.notifySuccess()` in all iframe-based contents to notify Teams that your app has successfully loaded. If applicable, Teams hides the loading indicator. If `notifySuccess`  isn't called within 30 seconds, Teams assumes that your app has timed out, and displays an error screen with a retry option. For app updates, this step is applicable for already configured tabs. If you don't perform this step, an error screen is displayed for the existing users. *[Mandatory]*
+1. Call `app.notifySuccess()` in all iframe-based contents to notify Teams that your app has successfully loaded. If applicable, Teams hides the loading indicator. If `notifySuccess` isn't called within 30 seconds, Teams assumes that your app has timed out, and displays an error screen with a retry option. For app updates, this step is applicable for already configured tabs. If you don't perform this step, an error screen is displayed for the existing users. *[Mandatory]*
 
 1. If you're ready to print to the screen and wish to lazy load the rest of your application's content, you can hide the loading indicator manually by calling `app.notifyAppLoaded();`. *[Optional]*
 
