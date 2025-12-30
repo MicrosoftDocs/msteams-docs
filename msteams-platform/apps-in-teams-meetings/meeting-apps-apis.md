@@ -10,14 +10,14 @@ ms.date: 04/07/2022
 
 # Meeting apps APIs
 
-The meeting extensibility provides APIs to enhance meeting experience. You can perform the following with help of the listed APIs:
+Meeting extensibility offers APIs to enhance the meeting experience. You can perform the following tasks using the listed APIs:
 
-* Build apps or integrate existing apps within meeting lifecycle.
-* Use APIs to make your app aware of meeting.
-* Select required APIs to improve the meeting experience.
+* Develop apps or integrate existing apps within the meeting lifecycle.
+* Use APIs to make your app aware of the meeting.
+* Select the required APIs to improve the meeting experience.
 
 > [!NOTE]
-> Use the [Microsoft Teams JavaScript client library (TeamsJS)](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) (*Version*: 1.10 and later) for single sign-on (SSO) to work in meeting side panel.
+> Use the [Microsoft Teams JavaScript client library (TeamsJS)](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) (*Version*: 1.10 and later) for single sign-on (SSO) to work in the meeting side panel.
 
 The following table provides a list of APIs available across the Microsoft Teams JavaScript library and Microsoft Bot Framework SDKs:
 
@@ -28,7 +28,7 @@ The following table provides a list of APIs available across the Microsoft Teams
 |[**Send in-meeting notification**](#send-an-in-meeting-notification)| Provides meeting signals using the existing conversation notification API for user-bot chat and allows the bot to notify user action that shows an in-meeting notification. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true) |
 |[**Get meeting details**](#get-meeting-details-api)| Get a meeting's static metadata. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true) |
 |[**Send real-time captions**](#send-real-time-captions-api)| Send real-time captions to an ongoing meeting. | [TeamsJS library](/azure/cognitive-services/speech-service/speech-sdk?tabs=nodejs%2Cubuntu%2Cios-xcode%2Cmac-xcode%2Candroid-studio#get-the-speech-sdk&preserve-view=true) |
-|[**Share app content to stage**](build-apps-for-teams-meeting-stage.md#share-to-stage)| Share specific parts of the app to meeting stage from the app side panel in a meeting. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting) |
+|[**Share app content to stage**](build-apps-for-teams-meeting-stage.md#share-to-stage)| Share specific parts of the app to the meeting stage from the app side panel in a meeting. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting) |
 |[**Receive real-time Teams meeting events**](#receive-real-time-teams-meeting-events)|Receive real-time meeting events, such as meeting start and end or participant join and leave.| [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
 | [**Get incoming audio state**](#get-incoming-audio-state) | Allows an app to get the incoming audio state setting for the meeting user.| [TeamsJS library](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 | [**Toggle incoming audio**](#toggle-incoming-audio) | Allows an app to toggle the incoming audio state setting for the meeting user from mute to unmute or vice-versa.| [TeamsJS library](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
@@ -37,14 +37,14 @@ The following table provides a list of APIs available across the Microsoft Teams
 
 > [!IMPORTANT]
 >
-> * By default, the [new Teams client](https://www.microsoft.com/en-us/microsoft-365/blog/2023/03/27/welcome-to-the-new-era-of-microsoft-teams/) supports light theme for apps in Teams meetings. When the `app.theme` property in getContext API returns the `default` value, Teams client is in light theme.
-> * Earlier version of Teams clients only support Dark and Contrast theme for apps in Teams meetings
+> * By default, the [new Teams client](https://www.microsoft.com/en-us/microsoft-365/blog/2023/03/27/welcome-to-the-new-era-of-microsoft-teams/) supports the light theme for apps in Teams meetings. When the `app.theme` property in the getContext API returns the `default` value, the Teams client is in the light theme.
+> * Earlier versions of Teams clients only support Dark and Contrast themes for apps in Teams meetings.
 
-To identify and retrieve contextual information for your tab content, see [get context for your Teams tab](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). `meetingId` is used by a tab running in the meeting context and is added for the response payload.
+To identify and retrieve contextual information for your tab content, see [get context for your Teams tab](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). `meetingId` is used by a tab running in the meeting context and is added to the response payload.
 
 ### Examples
 
-The following are the TeamsJS v2 responses for Get user context API based on meeting type, user type, and call type:
+The following are the TeamsJS v2 responses for the Get user context API based on meeting type, user type, and call type:
 
 * Meeting type
 
@@ -579,24 +579,25 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
           "mySiteDomain": undefined
          }
         }
-  ```
+
+```
 
 ## Get participant API
 
-The `GetParticipant` API must have a bot registration and ID to generate auth tokens. For more information, see [bot registration and ID](/azure/bot-service/bot-service-quickstart-registration).
+The `GetParticipant` API requires a bot registration and ID to generate authentication tokens. For more information, see [bot registration and ID](/azure/bot-service/bot-service-quickstart-registration).
 
 > [!NOTE]
 >
 > * The user type isn't included in the **getParticipantRole** API.
-> * Do not cache participant roles since the meeting organizer can change the roles any time.
-> * The `GetParticipant` API is only supported for distributions lists or rosters with less than 350 participants.
+> * Do not cache participant roles since the meeting organizer can change the roles at any time.
+> * The `GetParticipant` API supports only distribution lists or rosters with fewer than 350 participants.
 
 ### Query parameters
 
 > [!TIP]
-> Get participant IDs and tenant IDs from the [tab SSO authentication](../tabs/how-to/authentication/tab-sso-overview.md).
+> Obtain participant IDs and tenant IDs from the [tab SSO authentication](../tabs/how-to/authentication/tab-sso-overview.md).
 
-The `Meeting` API must have `meetingId`, `participantId`, and `tenantId` as URL parameters. The parameters are available as part of the Microsoft Teams JavaScript client library (TeamsJS) library and bot activity.
+The `Meeting` API requires `meetingId`, `participantId`, and `tenantId` as URL parameters. These parameters are available as part of the Microsoft Teams JavaScript client library (TeamsJS) and bot activity.
 
 The following table includes the query parameters:
 
@@ -1034,7 +1035,9 @@ Use the following example to configure your app manifest's `webApplicationInfo` 
 <details>
 
 <summary><b>For app manifest version 1.11 and earlier</b></summary>
+```
 
+```
 Use the following example to configure your app manifest's `webApplicationInfo` property for any private meeting:
 
 ```json
@@ -1616,42 +1619,44 @@ The following code provides an example of meeting end event payload:
 | **from.aadObjectId** | Microsoft Entra object ID of the user that sent the request. |
 | **conversation.isGroup** | Boolean indicating whether conversation has more than two participants. |
 | **conversation.tenantId** | Microsoft Entra tenant ID of the conversation or meeting. |
-| **conversation.id** | The meeting chat ID. |
-| **recipient.id** | ID of the user that receives the request. |
-| **recipient.name** | Name of the user that receives the request. |
-| **entities.locale** | entity that contains metadata about locale. |
-| **entities.country** | entity that contains metadata about country. |
-| **entities.type** | entity that contains metadata about client. |
+```
+
+| **conversation.id** | Meeting chat ID. |
+| **recipient.id** | ID of the user receiving the request. |
+| **recipient.name** | Name of the user receiving the request. |
+| **entities.locale** | Entity containing metadata about locale. |
+| **entities.country** | Entity containing metadata about country. |
+| **entities.type** | Entity containing metadata about client. |
 | **channelData.tenant.id** | Microsoft Entra tenant ID. |
-| **channelData.source** | The source name from where event is fired or invoked. |
-| **channelData.meeting.id** | The default ID associated with the meeting. |
-| **value.MeetingType** | The type of meeting. |
-| **value.Title** | The subject of the meeting. |
-| **value.Id** | The default ID associated with the meeting. |
-| **value.JoinUrl** | The join URL of the meeting. |
-| **value.StartTime** | The meeting start time in UTC. |
-| **value.EndTime** | The meeting end time in UTC. |
-| **locale**| The locale of the message set by the client. |
+| **channelData.source** | Source name from where the event is fired or invoked. |
+| **channelData.meeting.id** | Default ID associated with the meeting. |
+| **value.MeetingType** | Type of meeting. |
+| **value.Title** | Subject of the meeting. |
+| **value.Id** | Default ID associated with the meeting. |
+| **value.JoinUrl** | Join URL of the meeting. |
+| **value.StartTime** | Meeting start time in UTC. |
+| **value.EndTime** | Meeting end time in UTC. |
+| **locale**| Locale of the message set by the client. |
 
 ### Receive meeting participant events
 
-Your bot can receive real-time meeting events such as participant join and leave events. A bot can receive the participant events only if subscribed to these events in Developer Portal.
+Your bot can receive real-time meeting events such as participant join and leave events. A bot can receive participant events only if subscribed to these events in Developer Portal.
 
 > [!NOTE]
 >
 > * Participant events are supported only for scheduled meetings.
-> * For a bot to receive participant events, ensure that you add the bot to the meeting before a participant joins or leaves the meeting.
+> * For a bot to receive participant events, ensure you add the bot to the meeting before a participant joins or leaves the meeting.
 
 To subscribe to participant events, follow these steps:
 
-1. In [Developer Portal](https://dev.teams.microsoft.com/) open your bot app or import an existing app.
+1. In [Developer Portal](https://dev.teams.microsoft.com/), open your bot app or import an existing app.
 1. In the **Meeting event subscriptions** section, select the events:
     * Participant join
     * Participant leave
-1. Select **Save**
+1. Select **Save**.
 
    :::image type="content" source="~/assets/images/apps-in-meetings/participant-events.png" alt-text="Screenshot shows how developer portal display for participant events.":::
-1. Ensure that the `OnlineMeetingParticipant.Read.Chat` RSC permission is configured in your app manifest.
+1. Ensure the `OnlineMeetingParticipant.Read.Chat` RSC permission is configured in your app manifest.
 
    If your app doesn't have the RSC permission, add it through the **Configure** > **Permissions** section of your app in Developer Portal. For more information, see [RSC permissions.](~/graph-api/rsc/resource-specific-consent.md)
 
