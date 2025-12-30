@@ -105,7 +105,7 @@ To learn more about the directory structure of different types of basic Teams ap
 | --- | --- |
 | For tab app | [Build your first tab app using JavaScript](../sbs-gs-javascript.yml) |
 | For bot app | [Build your first bot app using JavaScript](../sbs-gs-bot.yml) |
-| For message extension app | [Build your first message extension app using JavaScript](../sbs-gs-msgext.yml) |
+| For message extension app | [Build your first message extension app using JavaScript](../get-started/tutorials.md#build-your-first-message-extension-app-using-javascript) |
 
 </details>
 <br>
