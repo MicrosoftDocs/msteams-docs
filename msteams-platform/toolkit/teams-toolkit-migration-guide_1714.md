@@ -16,7 +16,7 @@ The key updates that have impacted this migration are:
 
 ### Teams Toolkit evolves to Microsoft 365 Agents Toolkit
 
-Teams Toolkit changes it's name to Microsoft 365 Agents Toolkit, reflecting our broader commitment to support development across Microsoft 365 Copilot, Microsoft Teams, and Microsoft 365 apps. This new name better represents our expanded capabilities and focus on enabling developers to build intelligent agents and apps across the Microsoft 365 ecosystem.
+Teams Toolkit changes its name to Microsoft 365 Agents Toolkit, reflecting our broader commitment to support development across Microsoft 365 Copilot, Microsoft Teams, and Microsoft 365 apps. This new name better represents our expanded capabilities and focus on enabling developers to build intelligent agents and apps across the Microsoft 365 ecosystem.
 
 ### Enable one-click debug experience
 
