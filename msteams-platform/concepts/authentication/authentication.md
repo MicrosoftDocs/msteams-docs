@@ -7,7 +7,7 @@ ms.date: 05/23/2022
 ---
 # Authenticate users in Microsoft Teams
 
-Authentication is all about validating app users, and securing the app and app users against unwarranted access. You can use an authentication method suitable for your app to validate app users who want to use the Teams app.
+Authentication involves validating app users and securing both the app and its users against unauthorized access. You can select an appropriate authentication method for your app to validate users who wish to use the Teams app.
 
 Choose to add authentication for your app in one of the following ways:
 
@@ -15,7 +15,7 @@ Choose to add authentication for your app in one of the following ways:
   SSO within Teams is an authentication method that uses an app user's Teams identity to provide them with access to your app. A user who has logged into Teams doesn't need to log in again to your app within the Teams environment. With only a consent required from the app user, the Teams app retrieves access details for them from Microsoft Entra ID. After the app user has given consent, they can access the app even from other devices without having to be validated again. SSO is available for one-on-one and group scopes.
 
 * **Enable authentication using third-party OAuth provider**:
-  You can use a third-party OAuth Identity Provider (IdP) to authenticate your app users. The app user is registered with the identity provider, which has a trust relationship with your app. When the user attempts to log in, the identity provider validates the app user and provides them with access to your app. Microsoft Entra ID is one such third party OAuth provider. You can use other providers, such as Google, Facebook, GitHub, or any other provider.
+  You can use a third-party OAuth Identity Provider (IdP) to authenticate your app users. The app user is registered with the identity provider, which has a trust relationship with your app. When the user attempts to log in, the identity provider validates the app user and provides them with access to your app. Microsoft Entra ID is one such third-party OAuth provider. You can use other providers, such as Google, Facebook, GitHub, or any other provider.
 
 * **Enable SSO for nested apps**:
   You can use nested app authentication (NAA) to utilize SSO for authentication of apps nested (embedded) inside the supported Microsoft apps. Compared with existing full-trust authentication models and the on-behalf-of (OBO) flow, NAA provides better security and flexibility in app architecture, enabling the creation of rich, client-driven apps.
@@ -43,7 +43,7 @@ Choose to add authentication for your app in one of the following ways:
 
 ## Select authentication method
 
-Enable authentication with SSO or third party OAuth IdPs in your tab app, bot app, and messaging extension app. Select one of the two methods for adding authentication in your app:
+Enable authentication with SSO or third-party OAuth IdPs in your tab app, bot app, and messaging extension app. Select one of the two methods for adding authentication in your app:
 
 :::row:::
     :::column span="1":::
