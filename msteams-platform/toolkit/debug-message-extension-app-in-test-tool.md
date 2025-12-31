@@ -10,7 +10,7 @@ ms.date: 04/25/2024
 
 # Debug message extension app in Microsoft 365 Agents Playground
 
-You can debug bot-based message extension capabilities such as search commands, action commands, and link unfurling using Agents Playground (previously known as Teams App Test Tool) within a simulated environment. Test tool helps you to identify and resolve issues before deploying the extension to a live environment.
+You can debug bot-based message extension capabilities such as search commands, action commands, and link unfurling using Agents Playground (previously known as Teams App Test Tool) within a simulated environment. The test tool helps you identify and resolve issues before deploying the extension to a live environment.
 
 Agents Playground enhances the functionality of bot-based message extensions, which are built on top of Bot Framework. When a message extension is activated, Agents Playground sends an invoke request to the app. The app then processes this request and returns an invoke response, which Agents Playground renders and displays.
 
@@ -33,7 +33,7 @@ Ensure that you install the following tools to build and deploy your bot in Agen
 
 1. Clone the repository to test the sample app.
 
-   ```
+   ```bash
    git clone https://github.com/OfficeDev/microsoft-365-agents-toolkit-samples.git
    ```
 
