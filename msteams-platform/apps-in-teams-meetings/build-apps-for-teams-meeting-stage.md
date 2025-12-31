@@ -306,7 +306,6 @@ The following code is an example of sharing app content to meeting stage view an
 * You can show coordinated content to multiple participants over a larger stage, getting more attention, and integrating more closely with the meeting lifecycle.
 * Basic sharing for the entire app is available without additional investment.
 * Users can use their favorite tools within the context of their ongoing communication, improving meeting outcomes.
-
 * Content displays inline within the meeting window.
 * A sharing button appears on all meeting side panels for users with organizer or presenter roles.
 * Users can initiate sharing through a deep link or the Share in Meeting button.
