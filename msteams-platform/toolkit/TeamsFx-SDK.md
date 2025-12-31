@@ -773,7 +773,7 @@ For more information on how to access an SQL database in an Azure Function, see 
 
 ### Configure log
 
-You can set a custom log level and redirect outputs when using this library.
+You can set customer log level and redirect outputs when using this library.
 
 > [!NOTE]
 > Logs are turned off by default. You can turn them on by setting the log level.
