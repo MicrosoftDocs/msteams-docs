@@ -16,41 +16,41 @@ An external resource URL is used to display in-meeting notification. You can use
 
 # [Desktop](#tab/desktop)
 
-  The following image shows an in-meeting notification in the Teams desktop client:
+The following image shows an in-meeting notification in the Teams desktop client:
 
-   :::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="Screenshot shows an in-meeting notification on Teams desktop.":::
+:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-dialogbox.png" alt-text="Screenshot shows an in-meeting notification on Teams desktop.":::
 
 # [Mobile](#tab/mobile)
 
-  The following image shows an in-meeting notification in the Teams mobile client:
+The following image shows an in-meeting notification in the Teams mobile client:
 
-   :::image type="content" source="../assets/images/apps-in-meetings/in-meeting-notification-mobile.png" alt-text="Screenshot shows an in-meeting notification in on Teams mobile.":::
+:::image type="content" source="../assets/images/apps-in-meetings/in-meeting-notification-mobile.png" alt-text="Screenshot shows an in-meeting notification in on Teams mobile.":::
 
 ---
 
 You can also add the Teams display picture and people card of the user to in-meeting notification based on `onBehalfOf` token with user MRI and display name passed in payload. Following is an example payload:
 
 ```json
-    {
-       "type": "message",
-       "text": "John Phillips assigned you a weekly todo",
-       "summary": "Don't forget to meet with Marketing next week",
-       "channelData": {
-           onBehalfOf: [
-             { 
-               itemId: 0, 
-               mentionType: 'person', 
-               mri: context.activity.from.id, 
-               displayname: context.activity.from.name 
-             }
-            ],
-           "notification": {
-           "alertInMeeting": true,
-           "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
-            }
-        },
-       "replyToId": "1493070356924"
-    }
+{
+   "type": "message",
+   "text": "John Phillips assigned you a weekly todo",
+   "summary": "Don't forget to meet with Marketing next week",
+   "channelData": {
+       onBehalfOf: [
+         { 
+           itemId: 0, 
+           mentionType: 'person', 
+           mri: context.activity.from.id, 
+           displayname: context.activity.from.name 
+         }
+        ],
+       "notification": {
+       "alertInMeeting": true,
+       "externalResourceUrl": "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
+        }
+    },
+   "replyToId": "1493070356924"
+}
 ```
 
 :::image type="content" source="../assets/images/apps-in-meetings/in-meeting-people-card.png" alt-text="Screenshot shows how a display picture and people card in Teams is used with in-meeting dialog.":::
@@ -75,14 +75,13 @@ Targeted in-meeting notification allows apps to send notifications to specific p
 
 In the following image, a meeting notification requesting payment is sent to one of the participants in the meeting. The meeting notification is only visible to the targeted participant:
 
- :::image type="content" source="../assets/images/apps-in-meetings/reminder-sent.png" alt-text="Screenshot shows an example of a meeting notification sent to a targeted participant requesting for a payment. ":::
+:::image type="content" source="../assets/images/apps-in-meetings/reminder-sent.png" alt-text="Screenshot shows an example of a meeting notification sent to a targeted participant requesting for a payment. ":::
 
 ### Enable app manifest settings for targeted in-meeting notification
 
 To send targeted in-meeting notifications, you must configure the `authorization` property and the `name` and `type` properties under the `resourceSpecific` field in the [app manifest](/microsoft-365/extensibility/schema/root-authorization-permissions-resource-specific) as follows:
 
 ```json
-
 "webApplicationInfo": {
     "id": "<<MICROSOFT-APP-ID>>",
     "resource": "https://RscBasedStoreApp"  },
