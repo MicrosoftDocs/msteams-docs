@@ -12,13 +12,13 @@ ms.date: 08/26/2025
 
 [!INCLUDE [Deprecation note](../includes/deprecation-note-teamsfx-sdk.md)]
 
-Agents Toolkit (previously known as Teams Toolkit) makes it simple to get started with app development for Microsoft Teams, Outlook, and Microsoft 365 Copilot using Visual Studio Code.
+Agents Toolkit, previously known as Teams Toolkit, simplifies the process of starting app development for Microsoft Teams, Outlook, and Microsoft 365 Copilot using Visual Studio Code.
 
-* Create new apps from project templates for common app scenarios.
-* Save setup time with automated app registration and configuration.
-* Run and debug to Teams, Outlook, and Copilot directly from Visual Studio Code.
-* Smart defaults for hosting in Azure using infrastructure-as-code and Bicep.
-* Test with different configurations such as dev, test, and prod using the environment features.
+* Create new apps from project templates tailored for common app scenarios.
+* Save setup time with automated app registration and configuration processes.
+* Run and debug directly to Teams, Outlook, and Copilot from Visual Studio Code.
+* Utilize smart defaults for hosting in Azure using infrastructure-as-code and Bicep.
+* Test with various configurations such as dev, test, and prod using the environment features.
 
 :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/toolkit-user-journey2.png" alt-text="Illustration shows the User Journey of the Agents Toolkit." lightbox="../assets/images/toolkit-v2/toolkit-fundamentals/toolkit-user-journey2.png":::
 
@@ -65,7 +65,7 @@ Run and debug your bot projects using Visual Studio Code and the included Dev Tu
 
 ### Microsoft 365 Agents Playground
 
-Microsoft 365 Agents Playground (previously known as Teams App Test Tool) makes debugging bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Agents Playground. For more information, see [Agents Playground](debug-your-Teams-app-test-tool.md).
+Microsoft 365 Agents Playground, previously known as Teams App Test Tool, makes debugging bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Agents Playground. For more information, see [Agents Playground](debug-your-Teams-app-test-tool.md).
 
 ## See also
 
