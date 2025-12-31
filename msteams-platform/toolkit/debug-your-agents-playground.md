@@ -12,9 +12,9 @@ ms.date: 11/16/2023
 
 > [!NOTE]
 >
-> Microsoft 365 Agents Playground (previously known as Teams App Test Tool) is available in the latest prerelease version of Microsoft 365 Agents Toolkit (previously known as Teams Toolkit). Ensure that you install the [latest prerelease version](install-Teams-Toolkit.md#install-a-prerelease-version) of Agents Toolkit.
+> Microsoft 365 Agents Playground, previously known as Teams App Test Tool, is available in the latest prerelease version of Microsoft 365 Agents Toolkit, formerly Teams Toolkit. Ensure you install the [latest prerelease version](install-Teams-Toolkit.md#install-a-prerelease-version) of Agents Toolkit.
 
-Agents Playground makes debugging bot or agent-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in different channels. You don’t need a Microsoft 365 developer account, tunneling, or real client app and application registration to use Agents Playground.
+Agents Playground simplifies debugging for bot or agent-based apps. You can interact with your bot and view its messages and Adaptive Cards as they appear across various channels. You don't need a Microsoft 365 developer account, tunneling, or a real client app and application registration to use Agents Playground.
 
 The following image shows a sample app displaying an Adaptive Card with a list of commands in Agents Playground. It also provides a description of the commands so that you can test your app without manually searching your code:
 
@@ -332,11 +332,11 @@ Currently, the accepted channel IDs are: `msteams`, `directline`, `webchat`, and
 
 ## Customize Teams context
 
-The configuration file in the project's root folder allows you to customize Teams context information such as chats, teams, and users. It provides mock data for testing Bot Framework APIs or methods from the Agent SDK or Teams SDK, such as `TeamsInfo.getTeamMembers`.
+The configuration file located in the project's root folder enables customization of Teams context information, including chats, teams, and users. This file provides mock data for testing Bot Framework APIs or methods from the Agent SDK or Teams SDK, such as `TeamsInfo.getTeamMembers`.
 
 ### Default configuration
 
-<details><summary>Agents Playground contains a built-in configuration file in the project's root folder.</summary>
+<details><summary>Agents Playground includes a built-in configuration file in the project's root folder.</summary>
 
 ```yaml
 # yaml-language-server: $schema=https://aka.ms/teams-app-test-tool-config/0.1.0/config.schema.json
@@ -412,13 +412,13 @@ team:
 
 ### Update the configuration file
 
-If your bot code uses Bot Framework APIs, you can modify the configuration file to customize the API responses. For example, consider an Azure DevOps notification bot installed in a team that fetches inactive bugs from Azure DevOps. It identifies the owners of the inactive bugs, retrieves their email addresses, and sends daily notifications to their personal chats.
+If your bot code utilizes Bot Framework APIs, you can modify the configuration file to customize the API responses. For instance, consider an Azure DevOps notification bot installed in a team that retrieves inactive bugs from Azure DevOps. It identifies the owners of these inactive bugs, retrieves their email addresses, and sends daily notifications to their personal chats.
 
-To comprehensively test this bot in Agents Playground, ensure to update the configuration file with the correct email addresses of the inactive bug owners.
+To thoroughly test this bot in Agents Playground, ensure you update the configuration file with the correct email addresses of the inactive bug owners.
 
-1. Go to the `.m365agentsplayground.yml` file in the project's root folder.
+1. Navigate to the `.m365agentsplayground.yml` file in the project's root folder.
 
-1. Go to the `users` section and update the `name`, `userPrincipleName`, and `email` of the required user.
+1. Locate the `users` section and update the `name`, `userPrincipleName`, and `email` of the required user.
 
     ```yaml
     users:
