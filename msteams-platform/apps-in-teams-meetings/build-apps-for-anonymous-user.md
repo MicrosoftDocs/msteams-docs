@@ -10,17 +10,17 @@ ms.date: 02/07/2023
 
 # Build apps for anonymous users
 
-Anonymous users don't have a Microsoft Entra identity and aren't federated with a tenant. The anonymous participants are external users but their identity isn't shown in the meeting. An anonymous user can be a presenter or an attendee but can't be an organizer. You can build bots, messaging extensions, cards, and dialogs (referred as task modules in TeamsJS v1.x) in your app to engage with anonymous meeting participants.
+Anonymous users don't have a Microsoft Entra identity and aren't federated with a tenant. These anonymous participants are external users, but their identity isn't shown in the meeting. An anonymous user can be a presenter or an attendee, but they can't be an organizer. You can build bots, messaging extensions, cards, and dialogs (referred to as task modules in TeamsJS v1.x) in your app to engage with anonymous meeting participants.
 
 > [!NOTE]
 >
 > * Apps for anonymous users are supported in the new Teams desktop and mobile clients for Windows and Mac.
 > * Meeting apps for anonymous users are only supported in Microsoft Edge and Chrome.
 
-For anonymous users to interact with the apps in Teams meetings, ensure to:
+To enable anonymous users to interact with the apps in Teams meetings, ensure to:
 
 1. Update your [app manifest](#app-manifest-update-for-anonymous-users).
-2. Enable the [anonymous user app interaction](#admin-setting-for-anonymous-user-app-interaction) in Teams admin center.
+2. Enable the [anonymous user app interaction](#admin-setting-for-anonymous-user-app-interaction) in the Teams admin center.
 
 ## App manifest update for anonymous users
 
@@ -43,9 +43,9 @@ Anonymous users can't be authenticated through Microsoft Entra authentication or
 
 ## Admin setting for anonymous user app interaction
 
-Admins can use Teams admin center to enable or disable anonymous user app interaction for the entire tenant. If anonymous users need to access your app, ensure that the admins enable the anonymous user app interaction. This setting is enabled by default. For more information, see [allow anonymous users to interact with apps in meetings](/microsoftteams/meeting-settings-in-teams).
+Admins can use the Teams admin center to enable or disable anonymous user app interaction for the entire tenant. If anonymous users need to access your app, ensure that the admins enable the anonymous user app interaction. This setting is enabled by default. For more information, see [allow anonymous users to interact with apps in meetings](/microsoftteams/meeting-settings-in-teams).
 
-To test your apps experience for anonymous users, select the URL in the meeting invite and join the meeting from a private browser window.
+To test your app's experience for anonymous users, select the URL in the meeting invite and join the meeting from a private browser window.
 
 ## In-Meeting getContext from Teams client library
 
