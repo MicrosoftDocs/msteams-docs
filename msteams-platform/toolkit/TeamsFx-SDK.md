@@ -1,837 +1,932 @@
 ---
-title: Explore TeamsFx SDK and its Functions
-author: surbhigupta
-description: Learn about core functionalities of TeamsFx SDK and its prerequisites, code structure, advanced customizing, Graph scenarios, Bot SSO, and latest SDK version.
-ms.author: surbhigupta
-ms.localizationpriority: medium
-ms.topic: overview
-ms.date: 01/24/2025
+title: Configure App in Microsoft Entra ID
+description: Learn to configure your bot or message extension app with Microsoft Entra ID for enabling SSO, messaging endpoint, and OAuth connection.
+ms.topic: how-to
+ms.localizationpriority: high
+ms.date: 03/11/2025
+ms.owner: ryanbliss
 ---
+# Configure your app in Microsoft Entra ID
 
-# TeamsFx SDK
+Microsoft Entra ID provides app users access to your bot or message extension app. The app user who has signed in to Teams can be given access to your app.
 
-[!INCLUDE [Deprecation note](../includes/deprecation-note-teamsfx-sdk.md)]
+<a name='sso-configuration-in-azure-ad-portal'></a>
 
-TeamsFx helps to reduce your tasks by using Microsoft Teams single sign-on (SSO) and accessing cloud resources down to single line statements with zero configuration. You can use TeamsFx SDK in the browser and Node.js environments. TeamsFx core functionalities can be accessed in client and server environments. You can write user authentication code for:
+## SSO configuration in Microsoft Entra admin center
 
-* Teams tab
-* Teams bot
-* Azure Function
+The bot and message extension apps use Bot Framework for communicating with app users and implementing authentication.
 
-## Prerequisites
+To configure single sign-on (SSO) for your bot or message extension app, you'll need to:
 
-You need to install the following tools and set up your development environment:
-
-| &nbsp; | Install | For using... |
-   | --- | --- | --- |
-   | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
-   | &nbsp; | [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) (previously known as Teams Toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use 4.0.0 version. |
-   | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type). |
-   | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
-   | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge/) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
-
-For more information on Node.js version compatibility, see [Prerequisites for creating your Teams app](/microsoftteams/platform/toolkit/tools-prerequisites?branch=pr-en-us-8020) using Visual Studio Code.
+* Configure bot resource in Microsoft Entra ID
+* Configure app in Microsoft Entra ID
 
 > [!NOTE]
-> If your project has installed `botbuilder`related [packages](https://github.com/Microsoft/botbuilder-js#packages) as dependencies, ensure they are of the same version.
+> Ensure that you've created an app and a bot resource in Microsoft Entra ID.
+>
+> * For more information about creating an app in Microsoft Entra ID, see [register a new app in Microsoft Entra ID](../../../tabs/how-to/authentication/tab-sso-register-aad.md#to-register-a-new-app-in-azure-ad).
+> * For more information about creating and configuring your bot resource in Microsoft Entra ID, see [create Teams conversation bot](../conversations/channel-and-group-conversations.md).
 
-You must have working knowledge of:
+You can configure your bot resource and app in Microsoft Entra ID for your bot or message extension app in one of the following two ways:
 
-* [Source code](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk)
-* [Package (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx)
-* [API reference documentation](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true)
-* [Samples](https://github.com/OfficeDev/TeamsFx-Samples)
+* **Configure SSO using bot resource and configure Microsoft Entra app**: You can start by configuring SSO for your bot resource, and enable SSO for your Microsoft Entra app. You'll configure:
 
-## Get started
-
-TeamsFx SDK is pre-configured in the scaffolded project using Microsoft 365 Agents Toolkit CLI (previously known as TeamsFx Toolkit or CLI).
-For more information, see [Teams app project](https://github.com/OfficeDev/TeamsFx/blob/main/packages/vscode-extension/README.md).
-
- > [!Tip]
- > The code snippets are updated for the latest TeamsFx SDK version 2.
-
-### Install the package
-
-Install `@microsoft/m365agentstoolkit-cli` from `npm` and run `atk -h` to check all available commands:
-
-```bash
-  npm install -g @microsoft/m365agentstoolkit-cli
-  atk -h
-```
-
-## TeamsFx core functionalities
-
-### TeamsFx class
-
-TeamsFx class instance access all TeamsFx settings from the environment variables by default. You can set customized configuration values to override the default values. For more information, see [override configuration](#override-configuration-for-teamsfx-class) for details.
-When creating a TeamsFx instance, you need to specify the identity type.
-
-The following list provides the two different type of identities:
-
-* **User Identity**: Represents the current user of Teams.
-* **Application Identity**: Represents the application itself.
+  * For bot resource: Messaging endpoint and OAuth connection.
 
     > [!NOTE]
-    > The TeamsFx constructors and methods aren't the same for these two identity types.
+    > When you create your bot resource in Microsoft Entra ID, you can select the option for creating a new app ID, or you can use an existing app ID if you've already registered your app in Microsoft Entra ID.
 
-You can learn more about user identity and application identity in the following section:
+  * For Microsoft Entra app: App ID URI, scope and permissions, trusted client IDs, access token version, client secret, and redirect URL.
 
-<details>
-<summary><b> User identity </b></summary>
+* **Configure SSO using Microsoft Entra app and then configuring bot resource**: You can start by configuring your Microsoft Entra app, and then use this app ID in the bot resource when you enable SSO for it. You'll configure:
 
-| Command | Description |
-|----------------|-------------|
-| `new TeamsFx(IdentityType.User)`| Application is authenticated as current Teams user. |
-| `TeamsFx:setSsoToken()`| User identity in Node.js environment (without browser). |
-| `TeamsFx:getUserInfo()` | To get user's basis information. |
-| `TeamsFx:login()` | It's used to let user perform consent process, if you want to use SSO to get access token for certain OAuth scopes. |
+  * For Microsoft Entra app: App ID URI, access token, trusted client IDs, access token version, client secret, and redirect URL.
+
+  * For bot resource: Messaging endpoint and OAuth connection.
+
+    > [!NOTE]
+    > Configure bot resource using the app ID generated by Microsoft Entra ID when you registered your app.
+
+<a name='enable-sso-in-azure-ad'></a>
+
+## Enable SSO in Microsoft Entra ID
+
+By the end of this tutorial, you'll learn to configure:
+
+* Application ID
+* Bot ID
+* Access token
+  * Application ID URI
+  * Scope, permissions, and authorized client IDs
+  * Client secret
+  * Redirect URL
+* Messaging endpoint and OAuth connection
+
+Select one of the following two ways to configure SSO for your bot resource:
+
+# [Use bot resource and configure Microsoft Entra app](#tab/botid)
+
+To enable SSO for your app in Microsoft Entra ID:
+
+* **[Configure messaging endpoint](#configure-messaging-endpoint)**
+* **[Configure SSO for Microsoft Entra app](#configure-sso-for-azure-ad-app)**:
+  * [Configure access token version](#configure-access-token-version)
+  * [Configure scope for the access token](#configure-scope-for-the-access-token)
+  * [Create client secret](#create-client-secret)
+  * [Configure redirect URL](#configure-redirect-url)
+* **[Configure OAuth connection](#configure-oauth-connection)**
+
+> [!IMPORTANT]
+> Ensure that when you create your bot resource, select the option to create a new app ID. You can also use an existing app ID, if you've already registered an app in Microsoft Entra admin center.
+
+## Configure messaging endpoint
+
+Messaging endpoint is where messages are sent to your bot. It enables communication with your bot.
+
+### To configure messaging endpoint for your bot resource
+
+1. Open the [Azure portal](https://ms.portal.azure.com/) on your web browser.
+   The Microsoft Azure Bot page opens.
+
+1. Enter the name of your bot resource in **Search** box, and select **Enter** to open it.
+
+1. Select **Settings** > **Configuration**.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-app-menu.png" alt-text="Screenshot shows the bot Configuration menu.":::
+
+    The **Configuration** page appears.
+
+1. Enter the messaging endpoint URL where your bot receives app user's messages.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/message-endpoint.png" alt-text="Screenshot shows the Messaging endpoint option to add the URL where the bot interacts with the user." :::
+
+1. Select **Apply**.
+
+    The messaging endpoint is configured.
+
+You've configured the messaging endpoint for your bot resource. Next, you must enable SSO for the Microsoft Entra app.
+
+<a name='configure-sso-for-azure-ad-app'></a>
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+configure+messaging+endpoint+for+your+bot+resource&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad%3Ftabs%3Dbotid%23to-configure-messaging-endpoint-for-your-bot-resource&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad.md&documentVersionIndependentId=ac68d7e8-2a35-5208-8724-68bd2fdd79b6&platformId=cdaccc16-060c-8eb1-2cee-c1f6a26e285c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+## Configure SSO for Microsoft Entra app
+
+You must configure permissions and scopes, authorize client applications, update app manifest (previously called Teams app manifest), and create client secret for your Microsoft Entra app. These configurations help to invoke SSO for your bot app.
+
+### Configure access token version
+
+You must define the access token version for your app in the Microsoft Entra app manifest.
+
+#### To define the access token version
+
+1. Select **Manage** > **Manifest** from the left pane.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/azure-portal-manifest.png" alt-text="Screenshot shows the Microsoft Entra admin center Manifest." :::
+
+    The Microsoft Entra app manifest appears.
+
+1. Set the `requestedAccessTokenVersion` property to **2**.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/azure-manifest-value.png" alt-text="Screenshot shows the Value for access token version." lightbox="../../../assets/images/authentication/teams-sso-bots/azure-manifest-value.png":::
+
+1. Select **Save**.
+
+    A message appears on the browser stating that the app manifest was updated successfully.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-aad-manifest-msg.png" alt-text="Screenshot shows the Manifest updated message.":::
+
+You've updated the access token version. Next, you'll configure the scope of the access token.
+
+### Configure scope for the access token
+
+Configure scope (permission) options for sending access token to Teams client and authorizing trusted client applications to enable SSO.
+
+You need:
+
+* [To configure application ID URI](#to-configure-application-id-uri): Configure scope (permission) options for your app. You'll expose a web API and configure the application ID URI.
+* [To configure API scope](#to-configure-api-scope): Define scope for the API, and the users who can consent for a scope. You can let only admins provide consent for higher-privileged permissions.
+* [To configure authorized client application](#to-configure-authorized-client-application): Create authorized client IDs for applications that you want to pre-authorize. It allows the app user to access the app scopes (permissions) you've configured, without requiring any further consent. Pre-authorize only those client applications you trust, as your app users won't have the opportunity to decline consent.
+
+#### To configure application ID URI
+
+1. Open the [Azure portal](https://ms.portal.azure.com/) on your web browser.
+
+   The Microsoft Azure Bot page opens.
+
+1. Enter the name of your bot resource in **Search** box, and then select **Enter** to open it.
+
+1. Select **Settings** > **Configuration**.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-app-menu.png" alt-text="Screenshot shows the bot Configuration menu under Settings.":::
+
+    The **Configuration** page appears.
+
+1. Select **Manage**.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-config-manage.png" alt-text="Screenshot shows the Bot resource configuration." :::
+
+    The Microsoft Entra app page appears.
+
+    The new app ID (client ID) for the app appears on this page. Note and save this app ID. You'll need to update it in the app manifest later. If you used the ID of an existing app when you created the bot resource, then ID of that app appears in this page.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/aad-app-regd.png" alt-text="Screenshot shows the Bot app page with Application client ID highlighted.":::
+
+1. Select **Manage** > **Expose an API** from the left pane.
+
+    The **Expose an API** page appears.
+
+1. Select **Add** to generate application ID URI.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/expose-an-api.png" alt-text="Screenshot shows the Set option of Application ID URI." :::
+
+    The section for setting application ID URI appears.
+
+1. Enter the application ID URI in the format explained here.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/set-app-id-uri.png" alt-text="Screenshot shows the Application ID URI added." :::
+
+    * The **Application ID URI** is prefilled with app ID (GUID) in the format `api://{AppID}`.
+
+    > [!IMPORTANT]
+    >
+    > * **Sensitive information**: The application ID URI is logged as part of the authentication process and must not contain sensitive information.
+    >
+    > * **Standalone bot**: If you're building a standalone bot, enter the application ID URI as api://botid-{YourBotId}. Here, {YourBotId} is your Microsoft Entra application ID.
+    > * **Application ID URI for app with multiple capabilities**: If you're building an app with a bot, a messaging extension, and a tab, enter the application ID URI as `api://fully-qualified-domain-name.com/botid-{YourClientId}`, where `{YourClientId}` is your bot app ID.
+    >
+    > * **Format for domain name**: Use lowercase letters for domain name. Don't use upper case.
+    >
+    >   For example, to create an app service or web app with resource name, 'demoapplication':
+    >
+    >   | If base resource name used is | URL will be... | Format is supported on... |
+    >   | --- | --- | --- |
+    >   | *demoapplication* | `https://demoapplication.example.net` | All platforms.|
+    >   | *DemoApplication* | `https://DemoApplication.example.net` | Desktop, web, and iOS only. It isn't supported in Android. |
+    >
+    >    Use the lowercase option *demoapplication* as base resource name.
+
+1. Select **Save**.
+
+    A message appears on the browser stating that the application ID URI was updated.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-msg.png" alt-text="Screenshot shows the Application ID URI updated message." :::
+
+    The application ID URI displays on the page.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/app-id-uri-added.png" alt-text="Screenshot shows the updated Application ID URI." :::
+
+1. Note and save the application ID URI. You'll need it for updating the app manifest later.
+
+The application ID URI is configured. You can now define scope and permissions for your app.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+configure+application+ID+URI&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad%3Ftabs%3Dbotid%23to-configure-application-id-uri&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad.md&documentVersionIndependentId=ac68d7e8-2a35-5208-8724-68bd2fdd79b6&platformId=cdaccc16-060c-8eb1-2cee-c1f6a26e285c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+#### To configure API scope
+
+1. Select **+ Add a scope** in the **Scopes defined by this API** section.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/select-scope.png" alt-text="Screenshot shows the Add a scope option highlighted." :::
+
+    The **Add a scope** page appears.
+
+1. Enter the details for configuring scope.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="Screenshot shows how to add scope details in Azure.":::
+
+    1. Enter the scope name.
+    2. Select the user who can give consent for this scope. The default option is **Admins only**.
+    3. Enter the **Admin consent display name**.
+    4. Enter the description for admin consent.
+    5. Enter the **User consent display name**.
+    6. Enter the user consent description.
+    7. Select the **Enabled** option for state.
+    8. Select **Add scope**.
+
+        > [!NOTE]
+        > For this tutorial, you can use openid profile `User.Read User.ReadBasic.All` as scope. This scope is suitable for using the [Code sample](bot-sso-code.md#code-sample). You can also add more Graph scopes and permissions. For more information, see [Extend your app with Microsoft Graph permissions and scopes](bot-sso-graph-api.md).
+
+    A message appears on the browser stating that the scope was added.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added-msg.png" alt-text="Screenshot shows the Scope added message." :::
+
+    > [!NOTE]
+    > The new scope you defined displays on the page. Ensure that you note and save the scope that you've configured. You'll need it to update OAuth connection later.
+
+The scope and permissions are now configured. Next, you must configure the authorized client applications for your Microsoft Entra app.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+configure+API+scope&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad%3Ftabs%3Dbotid%23to-configure-api-scope&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad.md&documentVersionIndependentId=ac68d7e8-2a35-5208-8724-68bd2fdd79b6&platformId=cdaccc16-060c-8eb1-2cee-c1f6a26e285c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+#### To configure authorized client application
+
+1. Move through the **Expose an API** page to the **Authorized client application** section, and select **+ Add a client application**.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/auth-client-apps.png" alt-text="Screenshot shows the Add a client application option highlighted under Authorized client applications." :::
+
+    The **Add a client application** page appears.
+
+1. Enter the appropriate Microsoft 365 client ID for the applications that you want to authorize for your app’s web application.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-app.png" alt-text="Screenshot shows the Client ID added." :::
+
+    > [!NOTE]
+    >
+    > * The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams, Microsoft 365 app, and Outlook are the actual IDs that you must add.
+    > * If your app has a tab app, you'll need either web or SPA, as you can't have a mobile or desktop client application in Teams.
+    > * While it's recommended to use same App ID, you can use a different App Registration ID in the webApplicationInfo section of your Teams app manifest that's not same as the Azure bot App ID. This is a valid and supported configuration.
+    >   * The `botId` in the bots section refers to the Azure Bot registration used for messaging and interaction.
+    >   * The `webApplicationInfo.id` refers to the Microsoft Entra App Registration used for authentication such as SSO, token acquisition, Graph API access.
+
+1. Select one of the following client IDs:
+
+   | Use client ID | For authorizing... |
+   | --- | --- |
+   | 1fec8e78-bce4-4aaf-ab1b-5451cc387264 | Teams mobile or desktop application |
+   | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 | Teams web application |
+   | 4765445b-32c6-49b0-83e6-1d93765276ca | Microsoft 365 web application |
+   | 0ec893e0-5785-4de6-99da-4ed124e5296c | Microsoft 365 desktop application |
+   | d3590ed6-52b3-4102-aeff-aad2292ab01c | Microsoft 365 mobile application </br> Outlook desktop application |
+   | bc59ab01-8403-45c6-8796-ac3ef710b3e3 | Outlook web application |
+   | 27922004-5251-4030-b22d-91ecd9a37ea4 | Outlook mobile application |
+   | c0ab8ce9-e9a0-42e7-b064-33d422df41f1 | Microsoft Edge |
+
+1. Select the application ID URI you created for your app in **Authorized scopes** to add the scope to the web API you exposed.
+
+1. Select **Add application**.
+
+    A message appears on the browser stating that the authorized client app was added.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Screenshot shows the Client ID added message." :::
+
+    The authorized app's client ID displays on the page.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Screenshot shows the newly added Client ID under Authorized client applications screen." :::
+
+    > [!NOTE]
+    > You can authorize more than one client application. Repeat the steps of this procedure for configuring another authorized client application.
+
+You've successfully configured app scope, permissions, and client applications. Ensure that you note and save the application ID URI. Next, you'll create a client secret for your app.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+define+the+access+token+version&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad%3Ftabs%3Dbotid%23to-define-the-access-token-version&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad.md&documentVersionIndependentId=ac68d7e8-2a35-5208-8724-68bd2fdd79b6&platformId=cdaccc16-060c-8eb1-2cee-c1f6a26e285c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+### Create client secret
+
+### Create client secret
+
+A client secret is a string that the application uses to verify its identity when requesting a token.
+
+#### To create a client secret for your app
+
+1. Select **Manage** > **Certificates & secrets**.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/client-secret-menu.png" alt-text="Screenshot shows the Certificates and secrets menu option.":::
+
+    The **Certificates & secrets** page appears.
+
+1. Select **+ New client secret**.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/client-secret.png" alt-text="Screenshot shows the New client secret option highlighted to add a new client secret.":::
+
+   The **Add a client secret** page appears.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/add-client-secret.png" alt-text="Screenshot shows the Add a client secret page to provide the required details." :::
+
+    1. Enter the description.
+    1. Select the duration of validity for the secret.
+
+1. Select **Add**.
+
+   A message appears on the browser stating that the client secret was updated, and the client secret displays on the page.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/client-secret-added.png" alt-text="Screenshot shows the Client secret added message.":::
+
+1. Select the copy button next to the **Value** of client secret.
+1. Save the value that you copied. You'll need it later for updating code.
+
+   > [!IMPORTANT]
+   > Ensure that you copy the value of client secret right after you create it. The value is visible only at the time when the client secret is created, and it can't be viewed after that.
+
+You've configured the client secret. Next, you must configure the redirect URL.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+create+a+client+secret+for+your+app&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad%3Ftabs%3Dbotid%23to-create-a-client-secret-for-your-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad.md&documentVersionIndependentId=ac68d7e8-2a35-5208-8724-68bd2fdd79b6&platformId=cdaccc16-060c-8eb1-2cee-c1f6a26e285c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+### Configure redirect URL
+
+Configuration for authentication depends on the platform or device where you want to target your app. You may need to configure redirect URIs, authentication settings, or platform-specific details.
 
 > [!NOTE]
-> You can access resources on behalf of current Teams user.
-</details>
+>
+> * If your bot app hasn't been granted IT admin consent, app users have to provide consent the first time they use your app on a different platform.
+> * Implicit grant is not required if SSO is enabled on a bot app.
 
-<details>
-<summary><b> Application identity </b></summary>
+You can configure authentication for multiple platforms as long as the URL is unique.
 
-| Command | Description |
-|----------------|-------------|
-| `new TeamsFx(IdentityType.App)`| Application  is authenticated as an application. The permission usually needs administrator's approval.|
-| `TeamsFx:getCredential()`| It provides credential instances automatically corresponding to the identity type. |
+#### To configure redirect URL
+
+1. Open the app you registered in the [Azure portal](https://ms.portal.azure.com/).
+
+1. Select **Manage** > **Authentication** from the left pane.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/azure-portal-platform.png" alt-text="Screenshot shows the Authentication option under Manage." :::
+
+    The **Platform configurations** page appears.
+
+1. Select **+ Add a platform**.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/add-platform.png" alt-text="Screenshot shows the Add a platform option under Authentication." :::
+
+    The **Configure platforms** page appears.
+
+1. Select the platform that you want to configure for your app. You can select the platform type from Web or SPA.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/configure-platform.png" alt-text="Screenshot shows the selection of web platform." :::
+
+    <!--You can configure multiple platforms for a particular platform type. Ensure that the redirect URI is unique for every platform you configure.-->
+
+    The **Configure Web** page appears.
+
+    > [!NOTE]
+    > The configurations will be different based on the platform you select.
+
+1. Enter the configuration details for the platform.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/config-web-platform.png" alt-text="Screenshot shows the Configure Web page to provide inputs." :::
+
+    1. Enter the redirect URI. The URI should be unique.
+
+        > [!NOTE]
+        >
+        > * The URL mentioned in **Redirect URIs** is an example.
+        > * You can customize the OAuth redirect URL for your bot and identity provider based on your data residency requirements, whether your bot is in the public cloud, Microsoft Azure Government cloud, or Microsoft Azure operated by 21Vianet. For OAuth URLs and data residency list, see [OAuth URL support in Azure AI Bot Service](/azure/bot-service/ref-oauth-redirect-urls?view=azure-bot-service-4.0&preserve-view=true).
+
+    1. Enter the front-channel logout URL.
+    1. Select the tokens you want Microsoft Entra ID to send for your app.
+
+1. Select **Configure**.
+
+    The platform is configured and displayed in the **Platform configurations** page.
+
+The Microsoft Entra app configuration is complete, and now you must enable SSO support for your bot resource by configuring OAuth connection.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+configure+redirect+URL&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad%3Ftabs%3Dbotid%23to-configure-redirect-url&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad.md&documentVersionIndependentId=ac68d7e8-2a35-5208-8724-68bd2fdd79b6&platformId=cdaccc16-060c-8eb1-2cee-c1f6a26e285c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+## Configure OAuth connection
+
+For a bot to support SSO, you must update its OAuth connection settings. This process associates the bot with app details that you configured for your Microsoft Entra app:
+
+* Microsoft Entra app ID, which is the client ID
+* Tenant ID
+* Scope and permissions
+
+With the app (client) ID and client secret provided, the Bot Framework Token Store exchanges the token for a graph token with defined permissions.
+
+### To update OAuth connection
+
+1. Open the [Azure portal](https://ms.portal.azure.com/) on your web browser.
+   The Microsoft Azure Bot page opens.
+
+1. Enter the name of your Microsoft Entra app in **Search** box, and open your app.
+
+1. Select **Settings** > **Configuration**.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-configuration.png" alt-text="Screenshot shows the configure OAUth settings for your bot app." :::
+
+    The **Configuration** page appears.
+
+1. Move through the **Configuration** page and select **Add OAuth Connection Settings**.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-oauth-connection.png" alt-text="Screenshot shows the Add OAuth Connection Settings option highlighted.":::
+
+    The **New Connection Setting** page appears.
+
+1. Enter the OAuth configuration settings for the Azure bot.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/new-config-setting.png" alt-text="Screenshot shows the New Connection Setting to provide the details." :::
+
+    1. Enter a name for the configuration setting.
+    1. Select the service provider.
+
+        The remaining configuration details appear.
+
+        :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/new-config-setting-b.png" alt-text="Screenshot shows the additional fields for New Connection Setting." :::
+
+    1. Enter the app (client) ID for the Microsoft Entra app.
+    1. Enter the client secret that you've created for your bot.
+    1. Enter the application ID URI of your bot in the **Token Exchange URL**.
+    1. Enter the tenant ID.
+    1. Enter the scope that you defined when you configured the scope and permissions.
+
+1. Select **Save**.
+1. Select **Apply**.
+
+    After you've configured the OAuth connection, you can select **Test connection** to check if the OAuth connection is successful.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/test-oauth.png" alt-text="Screenshot shows the Test OAuth connection for your bot resource option.":::
+
+    If the connection isn't successful, Microsoft Entra ID displays an error. You can verify all the configurations and test again.
+
+Congratulations! You've completed the following app configurations in Microsoft Entra ID required to enable SSO for your bot app:
+
+* Application ID
+* Bot ID
+* Access token
+  * Application ID URI
+  * Scope, permissions, and authorized client IDs
+  * Client secret
+  * Redirect URL
+* Messaging endpoint and OAuth connection
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+update+OAuth+connection&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad%3Ftabs%3Dbotid%23to-update-oauth-connection&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad.md&documentVersionIndependentId=ac68d7e8-2a35-5208-8724-68bd2fdd79b6&platformId=cdaccc16-060c-8eb1-2cee-c1f6a26e285c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+# [Use Microsoft Entra app and then configure bot resource](#tab/windows)
+
+To create and configure your app for enabling SSO in Microsoft Entra ID:
+
+* [**Configure your Microsoft Entra app for SSO**](#configure-your-azure-ad-app-for-sso)
+  * [Configure the access token version](#configure-the-access-token-version)
+  * [Configure scope for access token](#configure-scope-for-access-token)
+  * [Create client secret for your app](#create-client-secret-for-your-app)
+  * [Configure redirect URL for your app](#configure-redirect-url-for-your-app)
+* [**Configure bot resource in Microsoft Entra ID**](#configure-bot-resource-in-azure-ad)
+  * [Configure messaging endpoint for your bot resource](#configure-messaging-endpoint-for-your-bot-resource)
+  * [Configure OAuth connection for your bot resource](#configure-oauth-connection-for-your-bot-resource)
+
+<a name='configure-your-azure-ad-app-for-sso'></a>
+
+## Configure your Microsoft Entra app for SSO
+
+You must configure permissions and scopes, authorize client applications, update app manifest, and create client secret for your Microsoft Entra app. These configurations help invoke SSO for your bot app.
+
+> [!IMPORTANT]
+> Ensure that you've [registered your app](../../../tabs/how-to/authentication/tab-sso-register-aad.md#to-register-a-new-app-in-azure-ad) in Microsoft Entra ID. At registration, Microsoft Entra ID generates a new app ID that you must note. You'll need to update it later in the app manifest file.
+
+### Configure the access token version
+
+You must define the access token version for your app in the Microsoft Entra app manifest.
+
+#### To define access token version
+
+1. Select **Manage** > **Manifest** from the left pane.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/azure-portal-manifest.png" alt-text="Screenshot shows the Microsoft Entra admin center Manifest." :::
+
+    The Microsoft Entra app manifest appears.
+
+1. Set the `requestedAccessTokenVersion` property to **2**.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/azure-manifest-value.png" alt-text="Screenshot shows the Value for access token version." lightbox="../../../assets/images/authentication/teams-sso-bots/azure-manifest-value.png":::
+
+1. Select **Save**.
+
+    A message appears on the browser stating that the app manifest was updated successfully.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-aad-manifest-msg.png" alt-text="Screenshot shows the Manifest updated message.":::
+
+You've updated the access token version. Next, you'll configure the scope for access token.
+
+### Configure scope for access token
+
+You must configure scope (permission) options for your Microsoft Entra app. You need it for sending access token to Teams client and authorize trusted client applications.
+
+To configure scope and authorize trusted client applications, you'll need:
+
+* [To configure application ID URI for your app](#to-configure-application-id-uri-for-your-app): Configure scope (permission) options for your app. You'll expose a web API and configure the application ID URI.
+* [To configure API scope for your app](#to-configure-api-scope-for-your-app): Define scope for the API and the users who can consent for a scope. You can let only admins provide consent for higher-privileged permissions.
+* [To configure an authorized client application](#to-configure-an-authorized-client-application): Create authorized client IDs for applications that you want to pre-authorize. It allows the app user to access the app scopes (permissions) you've configured, without requiring any further consent. Pre-authorize only those client applications you trust as your app users won't have the opportunity to decline consent.
+
+#### To configure application ID URI for your app
+
+1. Open the [Azure portal](https://ms.portal.azure.com/) on your web browser.
+
+   The Microsoft Azure Bot page opens.
+
+1. Enter the name of your bot resource in **Search** box, and then select **Enter** to open it.
+
+1. Select **Settings** > **Configuration**.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-app-menu.png" alt-text="Screenshot shows the Configuration menu.":::
+
+    The **Configuration** page appears.
+
+1. Select **Manage**.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-config-manage.png" alt-text="Screenshot shows the Bot resource configuration." :::
+
+    The Microsoft Entra app page appears.
+
+    The new app ID (client ID) for the app appears on this page. Note and save this app ID. You'll need to update it in the app manifest later. If you used the ID of an existing app when you created the bot resource, then ID of that app appears in this page.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/aad-app-regd.png" alt-text="Screenshot shows the Bot app page with Application client ID highlighted.":::
+
+1. Select **Manage** > **Expose an API** from the left pane.
+
+    The **Expose an API** page appears.
+
+1. Select **Add** to generate application ID URI.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/expose-an-api.png" alt-text="Screenshot shows the Set option of Application ID URI." :::
+
+    The section for setting application ID URI appears.
+
+1. Enter the application ID URI in the format explained here.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/set-app-id-uri.png" alt-text="Screenshot shows the Application ID URI added." :::
+
+    * The **Application ID URI** is pre-filled with app ID (GUID) in the format `api://{AppID}`.
+
+    > [!IMPORTANT]
+    >
+    > * **Standalone bot**: If you're building a standalone bot, enter the application ID URI as api://botid-{YourBotId}. Here, {YourBotId} is your Microsoft Entra application ID.
+    > * **Application ID URI for app with multiple capabilities**: If you're building an app with a bot, a messaging extension, and a tab, enter the application ID URI as `api://fully-qualified-domain-name.com/botid-{YourClientId}`, where `{YourClientId}` is your bot app ID.
+    >
+    > * **Format for domain name**: Use lowercase letters for domain name. Don't use upper case.
+    >
+    >   For example, to create an app service or web app with resource name, 'demoapplication':
+    >
+    >   | If base resource name used is | URL will be... | Format is supported on... |
+    >   | --- | --- | --- |
+    >   | *demoapplication* | `https://demoapplication.example.net` | All platforms.|
+    >   | *DemoApplication* | `https://DemoApplication.example.net` | Desktop, web, and iOS only. It isn't supported in Android. |
+    >
+    >    Use the lowercase option *demoapplication* as base resource name.
+
+1. Select **Save**.
+
+    A message appears on the browser stating that the application ID URI was updated.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/app-id-uri-msg.png" alt-text="Screenshot shows the Application ID URI updated message." :::
+
+    The application ID URI displays on the page.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/app-id-uri-added.png" alt-text="Screenshot shows the updated Application ID URI." :::
+
+1. Note and save the application ID URI. You'll need it for updating the app manifest later.
+
+The application ID URI is configured. You can now define scope and permissions for your app.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+configure+application+ID+URI+for+your+app&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad.md&documentVersionIndependentId=ac68d7e8-2a35-5208-8724-68bd2fdd79b6&platformId=cdaccc16-060c-8eb1-2cee-c1f6a26e285c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+#### To configure API scope for your app
+
+1. Select **+ Add a scope** in the **Scopes defined by this API** section.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/select-scope.png" alt-text="Screenshot shows the Add a scope option highlighted." :::
+
+    The **Add a scope** page appears.
+
+1. Enter the details for configuring scope.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="Screenshot shows how to add scope details in Azure.":::
+
+    1. Enter the scope name.
+    1. Select the user who can give consent for this scope. The default option is **Admins only**.
+    1. Enter the **Admin consent display name**.
+    1. Enter the description for admin consent.
+    1. Enter the **User consent display name**.
+    1. Enter the user consent description.
+    1. Select the **Enabled** option for state.
+    1. Select **Add scope**.
+
+        > [!NOTE]
+        > For this tutorial, you can use openid profile User.Read User.ReadBasic.All as scope. This scope is suitable for using the [Code sample](bot-sso-code.md#code-sample). You can also add more Graph scopes and permissions. For more information, see [Extend your app with Microsoft Graph permissions and scopes](bot-sso-graph-api.md).
+
+    A message appears on the browser stating that the scope was added.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added-msg.png" alt-text="Screenshot shows the Scope added message." :::
+
+    > [!NOTE]
+    > The new scope you defined appears on the page. Make sure to note and save the scope you've configured. You'll need it to update the OAuth connection later.
+
+The scope and permissions are now configured. Next, you must configure the authorized client applications for your Microsoft Entra app.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+configure+API+scope+for+your+app&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad%3Ftabs%3Dwindows%23to-configure-api-scope-for-your-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad.md&documentVersionIndependentId=ac68d7e8-2a35-5208-8724-68bd2fdd79b6&platformId=cdaccc16-060c-8eb1-2cee-c1f6a26e285c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+#### To configure an authorized client application
+
+1. Navigate through the **Expose an API** page to the **Authorized client application** section, and select **+ Add a client application**.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/auth-client-apps.png" alt-text="Screenshot shows the Add a client application option highlighted under Authorized client applications." :::
+
+    The **Add a client application** page appears.
+
+1. Enter the appropriate Microsoft 365 client ID for the applications that you want to authorize for your app’s web application.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-client-app.png" alt-text="Screenshot shows the Client ID added." :::
+
+    > [!NOTE]
+    >
+    > * The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams, Microsoft 365 app, and Outlook are the actual IDs that you must add.
+    > * If your app has a tab app, you'll need either web or SPA, as you can't have a mobile or desktop client application in Teams.
+    > * While it's recommended to use the same App ID, you can use a different App Registration ID in the webApplicationInfo section of your Teams app manifest that's not the same as the Azure bot App ID. This is a valid and supported configuration.
+    >   * The `botId` in the bots section refers to the Azure Bot registration used for messaging and interaction.
+    >   * The `webApplicationInfo.id` refers to the Microsoft Entra App Registration used for authentication such as SSO, token acquisition, Graph API access.
+
+1. Select one of the following client IDs:
+
+   | Use client ID | For authorizing... |
+   | --- | --- |
+   | 1fec8e78-bce4-4aaf-ab1b-5451cc387264 | Teams mobile or desktop application |
+   | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 | Teams web application |
+   | 4765445b-32c6-49b0-83e6-1d93765276ca | Microsoft 365 web application |
+   | 0ec893e0-5785-4de6-99da-4ed124e5296c | Microsoft 365 desktop application |
+   | d3590ed6-52b3-4102-aeff-aad2292ab01c | Microsoft 365 mobile application </br> Outlook desktop application |
+   | bc59ab01-8403-45c6-8796-ac3ef710b3e3 | Outlook web application |
+   | 27922004-5251-4030-b22d-91ecd9a37ea4 | Outlook mobile application |
+   | c0ab8ce9-e9a0-42e7-b064-33d422df41f1 | Microsoft Edge |
+
+1. Select the application ID URI you created for your app in **Authorized scopes** to add the scope to the web API you exposed.
+
+1. Select **Add application**.
+
+    A message appears on the browser stating that the authorized client app was added.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Screenshot shows the Client ID added message." :::
+
+    The authorized app's client ID displays on the page.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Screenshot shows the newly added Client ID under Authorized client applications screen." :::
+
+    > [!NOTE]
+    > You can authorize more than one client application. Repeat the steps of this procedure for configuring another authorized client application.
+
+You've successfully configured app scope, permissions, and client applications. Ensure that you note and save the application ID URI. The next step is to create a client secret for your app.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+define+access+token+version&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad%3Ftabs%3Dwindows%23to-define-access-token-version&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad.md&documentVersionIndependentId=ac68d7e8-2a35-5208-8724-68bd2fdd79b6&platformId=cdaccc16-060c-8eb1-2cee-c1f6a26e285c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+### Create client secret for your app
+
+A client secret is a string that the application uses to prove its identity when requesting a token.
+
+#### To create a client secret
+
+1. Select **Manage** > **Certificates & secrets**.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/client-secret-menu.png" alt-text="Screenshot shows the Certificates and secrets menu option.":::
+
+    The **Certificates & secrets** page appears.
+
+1. Select **+ New client secret**.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/client-secret.png" alt-text="Screenshot shows the New client secret option highlighted to add a new client secret.":::
+
+   The **Add a client secret** page appears.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/add-client-secret.png" alt-text="Screenshot shows the Add a client secret page to provide the required details." :::
+
+    1. Enter the description.
+    1. Select the duration of validity for the secret.
+
+1. Select **Add**.
+
+   A message appears on the browser stating that the client secret was updated, and the client secret displays on the page.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/client-secret-added.png" alt-text="Screenshot shows the Client secret added message.":::
+
+1. Select the copy button next to the **Value** of the client secret.
+1. Save the value that you copied. You'll need it later for updating code.
+
+   > [!IMPORTANT]
+   > Ensure that you copy the value of the client secret right after you create it. The value is visible only at the time when the client secret is created, and it can't be viewed after that.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+create+a+client+secret&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad%3Ftabs%3Dwindows%23to-create-a-client-secret&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad.md&documentVersionIndependentId=ac68d7e8-2a35-5208-8724-68bd2fdd79b6&platformId=cdaccc16-060c-8eb1-2cee-c1f6a26e285c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+### Configure redirect URL for your app
+
+Configuration for authentication depends on the platform or device where you want to target your app. You may need to configure redirect URIs, authentication settings, or platform-specific details.
 
 > [!NOTE]
-> You need admin consent for resources.
-</details>
+>
+> * If your bot app hasn't been granted IT admin consent, app users have to provide consent the first time they use your app on a different platform.
+> * Implicit grant is not required if SSO is enabled on a bot app.
 
-### Credential
+You can configure authentication for multiple platforms as long as the URL is unique.
 
-Credential classes implement the `TokenCredential` interface that is broadly used in Azure library APIs designed to provide access tokens for specific scopes. For more information on credential and auth flow related classes, see [credential folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential).
+#### To configure redirect URL for your app
 
-There are three credential classes to simplify authentication. Here's the corresponding scenarios for each credential class target:
+1. Open the app you registered in the [Azure portal](https://ms.portal.azure.com/).
 
-<details>
-<summary><b> User identity in browser environment </b></summary>
+1. Select **Manage** > **Authentication** from the left pane.
 
-`TeamsUserCredential` represents Teams current user's identity. For the first time user's credentials are authenticated, then Teams SSO does the  On-Behalf-Of flow for token exchange. SDK uses this credential when you choose user identity in the browser environment.
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/azure-portal-platform.png" alt-text="Screenshot shows the Authentication option under Manage." :::
 
-The following code is an example to create `TeamsUserCredential`:
+    The **Platform configurations** page appears.
 
-```typescript
-const authConfig: TeamsUserCredentialAuthConfig = {
-  clientId: process.env.REACT_APP_CLIENT_ID,
-  initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-};
+1. Select **+ Add a platform**.
 
-const credential = new TeamsUserCredential(authConfig);
-```
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/add-platform.png" alt-text="Screenshot shows the Add a platform option under Authentication." :::
 
-Required configurations are `initiateLoginEndpoint` and `clientId` that's found inside type `TeamsUserCredentialAuthConfig`.
+    The **Configure platforms** page appears.
 
-</details>
+1. Select the platform that you want to configure for your app. You can select the platform type from web or SPA.
 
-<details>
-<summary><b> User identity in Node.js environment </b></summary>
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/configure-platform.png" alt-text="Screenshot shows the selection of web platform." :::
 
-`OnBehalfOfUserCredential` uses On-Behalf-Of flow and require Teams SSO token, in Azure Function or bot scenarios. TeamsFx SDK uses the following credential when you choose user identity in Node.js environment.
+    The **Configure Web** page appears.
 
-The following code is an example to create `OnBehalfOfUserCredential`:
+    > [!NOTE]
+    > The configurations will be different based on the platform you select.
 
-```typescript
-const oboAuthConfig: OnBehalfOfCredentialAuthConfig = {
-  authorityHost: process.env.M365_AUTHORITY_HOST,
-  clientId: process.env.M365_CLIENT_ID,
-  tenantId: process.env.M365_TENANT_ID,
-  clientSecret: process.env.M365_CLIENT_SECRET,
-};
+1. Enter the configuration details for the platform.
 
-const oboCredential = new OnBehalfOfUserCredential(ssoToken, oboAuthConfig);
-```
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/config-web-platform.png" alt-text="Screenshot shows the Configure Web page to provide inputs." :::
 
-Required configurations are `authorityHost`, `tenantId`, `clientId`, `clientSecret`, or `certificateContent` that's found inside type `OnBehalfOfCredentialAuthConfig`.
+    1. Enter the redirect URI. The URI should be unique.
 
-</details>
+        > [!NOTE]
+        >
+        > * The URL mentioned in **Redirect URIs** is an example.
+        > * You can customize the OAuth redirect URL for your bot and identity provider based on your data residency requirements, whether your bot is in the public cloud, Microsoft Azure Government cloud, or 21Vianet operated Microsoft Azure. For OAuth URL and data residency list, see [OAuth URL support in Azure AI Bot Service](/azure/bot-service/ref-oauth-redirect-urls?view=azure-bot-service-4.0&preserve-view=true).
 
-<details>
-<summary><b> App identity in Node.js environment </b></summary>
+    1. Enter the front-channel logout URL.
+    1. Select the tokens you want Microsoft Entra ID to send for your app.
 
-`AppCredential` represents the app identity. You can use app identity when user isn't involved, for example, in a time-triggered automation job. TeamsFx SDK uses the following credential when you choose app identity in Node.js environment.
+1. Select **Configure**.
 
-The following code is an example to create `AppCredential`:
+    The platform is configured and displayed in the **Platform configurations** page.
 
-```typescript
-const appAuthConfig: AppCredentialAuthConfig = {
-  authorityHost: process.env.M365_AUTHORITY_HOST,
-  clientId: process.env.M365_CLIENT_ID,
-  tenantId: process.env.M365_TENANT_ID,
-  clientSecret: process.env.M365_CLIENT_SECRET,
-};
-const appCredential = new AppCredential(appAuthConfig);
-```
+The configuration for the Microsoft Entra app is complete, and now you can configure your bot resource for enabling SSO.
 
-Required configurations are `authorityHost`, `tenantId`, `clientId`, `clientSecret`, or `certificateContent` that's inside type `AppCredentialAuthConfig`
-</details>
+<a name='configure-bot-resource-in-azure-ad'></a>
 
-### Bot SSO
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+configure+redirect+URL+for+your+app&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad%3Ftabs%3Dwindows%23to-configure-redirect-url-for-your-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad.md&documentVersionIndependentId=ac68d7e8-2a35-5208-8724-68bd2fdd79b6&platformId=cdaccc16-060c-8eb1-2cee-c1f6a26e285c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
-Bot related classes are stored under [bot folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/bot).
+## Configure bot resource in Microsoft Entra ID
 
-`TeamsBotSsoPrompt` integrates with the bot framework. It simplifies the authentication process when you develop bot application and want to use the bot SSO.
-
-The following code is an example to create `TeamsBotSsoPrompt`:
-
-```typescript
-const TeamsBotSsoPromptId = "TEAMS_BOT_SSO_PROMPT";
-
-const settings: TeamsBotSsoPromptSettings = {
-  scopes: ["User.Read"],
-  timeout: 900000,
-  endOnInvalidMessage: true,
-};
-
-const authConfig: OnBehalfOfCredentialAuthConfig = {
-  authorityHost: process.env.M365_AUTHORITY_HOST,
-  clientId: process.env.M365_CLIENT_ID,
-  tenantId: process.env.M365_TENANT_ID,
-  clientSecret: process.env.M365_CLIENT_SECRET,
-};
-const loginUrl = process.env.INITIATE_LOGIN_ENDPOINT;
-const ssoPrompt = new TeamsBotSsoPrompt(authConfig, loginUrl, TeamsBotSsoPromptId, settings);
-```
-
-### Supported functions
-
-TeamsFx SDK provides several functions to ease the configuration for third-party libraries. They're located under [core folder](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core).
-
-* Microsoft Graph Service:`createMicrosoftGraphClient`, `createMicrosoftGraphClientWithCredential`, and `MsGraphAuthProvider` helps to create authenticated Graph instance.
-
-  > [!NOTE]
-  > `createMicrosoftGraphClient` function has been deprecated. Its recommended that you to use `createMicrosoftGraphClientWithCredential` instead, for better coding experience.
-
-* SQL: The `getTediousConnectionConfig` returns a tedious connection config.
-
-    Required configuration:
-
-  * If you want to use the user identity, then `sqlServerEndpoint`, `sqlUsername`, and `sqlPassword` are required.
-  * If you want to use the MSI identity, then `sqlServerEndpoint`and `sqlIdentityId` are required.
-
-  > [!NOTE]
-  > The `getTediousConnectionConfig` function has been deprecated. Its recommended that you compose your own Tedious configuration for better flexibility.
-
-### Override configuration for TeamsFx class
+Before you enable SSO for your bot app, you must create and configure your bot resource in Microsoft Entra ID. For more information, see [Create Teams conversation bot](../conversations/channel-and-group-conversations.md).
 
 > [!NOTE]
-> TeamsFx class has been deprecated. Use `TeamsUserCredential`, `OnBehalfOfUserCredential`, and `AppCredential` instead.
-
-You can pass custom config when creating a new `TeamsFx` instance to override default configuration or set required fields when `environment variables` are missing.
-
-<details>
-<summary><b>
-For tab project
-</b> </summary>
-
-If you've created tab project using Microsoft Visual Studio Code Toolkit, the following config values are used from pre-configured environment variables:
-
-* authorityHost (REACT_APP_AUTHORITY_HOST)
-* tenantId (REACT_APP_TENANT_ID)
-* clientId (REACT_APP_CLIENT_ID)
-* initiateLoginEndpoint (REACT_APP_START_LOGIN_PAGE_URL)
-* applicationIdUri (REACT_APP_START_LOGIN_PAGE_URL)
-* apiEndpoint (REACT_APP_FUNC_ENDPOINT) // only used when there's a backend function
-* apiName (REACT_APP_FUNC_NAME) // only used when there's a backend function
-
-</details>
-
-<details>
-<summary><b>
-For Azure Function or bot project
-</b></summary>
-
-If you've created Azure Function or bot project using Visual Studio Code Toolkit, the following config values are used from pre-configured environment variables:
-
-* initiateLoginEndpoint (INITIATE_LOGIN_ENDPOINT)
-* authorityHost (M365_AUTHORITY_HOST)
-* tenantId (M365_TENANT_ID)
-* clientId (M365_CLIENT_ID)
-* clientSecret (M365_CLIENT_SECRET)
-* applicationIdUri (M365_APPLICATION_ID_URI)
-* apiEndpoint (API_ENDPOINT)
-
-* sqlServerEndpoint (SQL_ENDPOINT) // only used when there's an sql instance
-* sqlUsername (SQL_USER_NAME) // only used when there's an sql instance
-* sqlPassword (SQL_PASSWORD) // only used when there's an sql instance
-* sqlDatabaseName (SQL_DATABASE_NAME) // only used when there's an SQL instance
-* sqlIdentityId (IDENTITY_ID) // only used when there's an SQL instance
-
-</details>
-
-### Error handling
-
-Basic type of API error response is `ErrorWithCode`, which contains error code and error message. For example, to filter out specific error, you can use the following snippet:
-
-```typescript
-try {
-  const atk = new TeamsFx();
-  await teamsfx.login("User.Read");
-} catch (err: unknown) {
-  if (err instanceof ErrorWithCode && err.code !== ErrorCode.ConsentFailed) {
-    throw err;
-  } else {
-    // Silently fail because user cancels the consent dialog
-    return;
-  }
-}
-```
-
-> [!NOTE]
-> TeamsFx class has been deprecated, and `ErrorWithCode` is not recommended. You can use `TeamsUserCredential` instead.
-
-```typescript
-try {
-  const authConfig: TeamsUserCredentialAuthConfig = {
-    clientId: process.env.REACT_APP_CLIENT_ID,
-    initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-  };
-
-  const credential = new TeamsUserCredential(authConfig);  
-  await credential.login("User.Read");
-} catch (err: unknown) {
-  if (err instanceof ErrorWithCode && err.code !== ErrorCode.ConsentFailed) {
-    throw err;
-  } else {
-    // Silently fail because user cancels the consent dialog
-    return;
-  }
-}
-```
-
-If a credential instance is used in other library, such as Microsoft Graph, it's possible that an error is caught and transformed.
-
-## Microsoft Graph Scenarios
-
-This section provides several code snippets for common scenarios that are related to the Microsoft Graph. In such scenarios, user can call APIs using different permissions in frontend or backend.
-
-* User delegate permission in frontend (Use `TeamsUserCredential`)
-    <details>
-    <summary><b>Use graph API in tab app</b></summary>
-
-    This code snippet shows you how to use `TeamsUserCredential` and `createMicrosoftGraphClientWithCredential` to get user profiles from Microsoft Graph in tab app. It also shows you how to catch and resolve a `GraphError`.
-
-    1. Import the classes needed.
-
-       ```typescript
-       import {
-        createMicrosoftGraphClientWithCredential,
-        TeamsUserCredential,
-       } from "@microsoft/teamsfx";
-       ```
+> Ensure that when you create your bot resource, you select the application ID of your Microsoft Entra app that you registered.
 
-    2. Create `TeamsUserCredential` instance.
+To enable SSO for your bot resource:
 
-       ```typescript
-       const authConfig: TeamsUserCredentialAuthConfig = {
-       clientId: process.env.REACT_APP_CLIENT_ID!,
-       initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL!,
-       };
+* [Configure messaging endpoint for your bot resource](#configure-messaging-endpoint-for-your-bot-resource)
+* [Configure OAuth connection for your bot resource](#configure-oauth-connection-for-your-bot-resource)
 
-       const teamsUserCredential = new TeamsUserCredential(authConfig);
-       ```
+### Configure messaging endpoint for your bot resource
 
-    3. Use `teamsUserCredential.login()` to get user consent.
+Messaging endpoint is where messages are sent to your bot. It enables communication with your bot.
 
-       ```typescript
-       // Put these code in a call-to-action callback function to avoid browser blocking automatically showing up pop-ups.
-       await teamsUserCredential.login(["User.Read"]); // Login with scope
-       ```
+#### To configure messaging endpoint
 
-    4. You can initialize a TeamsFx instance and graph client and get information from Microsoft Graph by this client.
+1. Open the [Azure portal](https://ms.portal.azure.com/) on your web browser.
+   The Microsoft Azure Bot page opens.
 
-       ```typescript
-       try {
-        const graphClient = createMicrosoftGraphClientWithCredential(teamsUserCredential, ["User.Read"]); // Initializes MS Graph SDK using our MsGraphAuthProvider
-        const profile = await graphClient.api("/me").get();
-       } catch (err: unknown) {
-        // ErrorWithCode is handled by Graph client
-        if (err instanceof GraphError && err.code?.includes(ErrorCode.UiRequiredError)) {
-          // Need to show login button to ask for user consent.
-        }
-       }
-       ```
+1. Enter the name of your bot resource in **Search** box, and select **Enter** to open it.
 
-    For more information on sample to use Graph API in tab app, see [Graph Conector app sample](https://github.com/OfficeDev/microsoft-365-agents-toolkit-samples/tree/dev/copilot-connector-app).
+1. Select **Settings** > **Configuration**.
 
-    </details>
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-app-menu.png" alt-text="Screenshot shows the bot Configuration menu.":::
 
-    <details>
-    <summary><b>Integration with Microsoft Graph Toolkit</b></summary>
-
-    The [Microsoft Graph Toolkit](https://github.com/microsoftgraph/microsoft-graph-toolkit) library is a collection of various authentication providers and UI components powered by Microsoft Graph.
-
-    The `@microsoft/mgt-teamsfx-provider` package exposes the `TeamsFxProvider` class that uses `TeamsFx` class to sign in users and acquire tokens to use with Microsoft Graph.
-
-    1. You can install the following required packages:
-
-       ```bash
-          npm install @microsoft/mgt-element @microsoft/mgt-teamsfx-provider @microsoft/teamsfx
-       ```
-
-    2. Initialize the provider inside your component.
-
-       ```typescript
-       // Import the providers and credential at the top of the page
-       import {Providers} from '@microsoft/mgt-element';
-       import {TeamsFxProvider} from '@microsoft/mgt-teamsfx-provider';
-       import {TeamsUserCredential} from "@microsoft/teamsfx";
-
-       const scope = ["User.Read"];
-       const atk = new TeamsFx();
-       const provider = new TeamsFxProvider(teamsfx, scope);
-       Providers.globalProvider = provider;   
-       ```
-
-    3. You can use the `teamsfx.login(scopes)` method to get required access token.
-
-       ```typescript
-       // Put these code in a call-to-action callback function to avoid browser blocking automatically showing up pop-ups. 
-       await teamsfx.login(this.scope);
-       Providers.globalProvider.setState(ProviderState.SignedIn);
-       ```
-
-    4. You can add any component in your HTML page or in your `render()` method with React to use the `TeamsFx` context to access Microsoft Graph.
-
-       ```html
-       <mgt-person query="me" view="threeLines"></mgt-person>
-       ```
-
-       ```typescript
-       public render(): void {
-       return (
-        <div>
-            <Person personQuery="me" view={PersonViewType.threelines}></Person>
-        </div>
-       );
-       }    
-       ```
-
-    For more information on sample to initialize the TeamsFx provider, see the [contacts exporter sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/graph-toolkit-contact-exporter).
-
-    </details>
-
-* User delegate permission in backend (Use `OnBehalfOfUserCredential`)
-    <details>
-    <summary><b>Use Graph API in bot Application</b></summary>
-
-    This code snippet shows you how to use `TeamsBotSsoPrompt` to set a dialog and then sign in to get an access token.
-
-    1. Initialize and add `TeamsBotSsoPrompt` to dialog set.
-
-       ```typescript
-       const { ConversationState, MemoryStorage } = require("botbuilder");
-       const { DialogSet, WaterfallDialog } = require("botbuilder-dialogs");
-       const { TeamsBotSsoPrompt, OnBehalfOfCredentialAuthConfig, TeamsBotSsoPromptSettings } = require("@microsoft/teamsfx");
-
-       const convoState = new ConversationState(new MemoryStorage());
-       const dialogState = convoState.createProperty("dialogState");
-       const dialogs = new DialogSet(dialogState);
-
-       const TeamsBotSsoPromptId = "TEAMS_BOT_SSO_PROMPT";
-
-       const settings: TeamsBotSsoPromptSettings = {
-       scopes: ["User.Read"],
-       timeout: 900000,
-       endOnInvalidMessage: true,
-       };
-
-       const authConfig: OnBehalfOfCredentialAuthConfig = {
-        authorityHost: process.env.M365_AUTHORITY_HOST,
-        clientId: process.env.M365_CLIENT_ID,
-        tenantId: process.env.M365_TENANT_ID,
-        clientSecret: process.env.M365_CLIENT_SECRET,
-       };
-       const loginUrl = process.env.INITIATE_LOGIN_ENDPOINT;
-       const ssoPrompt = new TeamsBotSsoPrompt(authConfig, loginUrl, TeamsBotSsoPromptId, settings);
-
-       dialogs.add(ssoPrompt);    
-       ```
-
-    2. Start the dialog and sign in.
-
-       ```typescript
-       dialogs.add(
-         new WaterfallDialog("taskNeedingLogin", [
-          async (step) => {
-            return await step.beginDialog("TeamsBotSsoPrompt");
-          },
-          async (step) => {
-           const token = step.result;
-           if (token) {
-             // ... continue with task needing access token ...
-           } else {
-            await step.context.sendActivity(`Sorry... We couldn't log you in. Try again later.`);
-            return await step.endDialog();
-           }
-         },
-        ])
-       );    
-        ```
-
-    For more information on sample to use graph API in bot application, see [bot-sso sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/bot-sso).
-
-    </details>
-
-    <details>
-    <summary><b>Use Graph API in Message Extension</b></summary>
-
-    The following code snippet shows how to override `handleTeamsMessagingExtensionQuery` that extends from `TeamsActivityHandler`, and use `handleMessageExtensionQueryWithSSO` provided by TeamsFx SDK to sign in to get an access token:
-
-    ```typescript
-
-     const authConfig: OnBehalfOfCredentialAuthConfig = {
-      authorityHost: process.env.M365_AUTHORITY_HOST,
-      clientId: process.env.M365_CLIENT_ID,
-      tenantId: process.env.M365_TENANT_ID,
-      clientSecret: process.env.M365_CLIENT_SECRET,
-     };
-     const loginUrl = process.env.INITIATE_LOGIN_ENDPOINT;
-     public async handleTeamsMessagingExtensionQuery(context: TurnContext, query: any): Promise<any> {
-      return await handleMessageExtensionQueryWithSSO(context, authConfig, loginUrl, 'User.Read', 
-        async (token: MessageExtensionTokenResponse) => {
-          // ... continue to query with access token ...
-        });
-     }    
-    ```
-
-    For more information on sample to use graph API in message extension, see [message-extension-sso-sample](https://github.com/OfficeDev/microsoft-365-agents-toolkit-samples/tree/dev/query-org-user-with-message-extension-sso).
-    </details>
-
-    <details>
-    <summary><b>Use Graph API in Command Bot</b></summary>
-
-    This code snippet shows you how to implement `TeamsFxBotSsoCommandHandler` for command bot to call Microsoft API.
-
-    ```typescript
-     import { Activity, TurnContext } from "botbuilder";
-     import {
-      CommandMessage,
-      TriggerPatterns,
-      createMicrosoftGraphClientWithCredential,
-      TeamsFxBotSsoCommandHandler,
-      TeamsBotSsoPromptTokenResponse,
-     } from "@microsoft/teamsfx";
-
-     const authConfig: OnBehalfOfCredentialAuthConfig = {
-      authorityHost: process.env.M365_AUTHORITY_HOST,
-      clientId: process.env.M365_CLIENT_ID,
-      tenantId: process.env.M365_TENANT_ID,
-      clientSecret: process.env.M365_CLIENT_SECRET,
-     };
-     const loginUrl = process.env.INITIATE_LOGIN_ENDPOINT;
-
-     export class ProfileSsoCommandHandler implements TeamsFxBotSsoCommandHandler {
-      triggerPatterns: TriggerPatterns = "profile";
-
-      async handleCommandReceived(
-        context: TurnContext,
-        message: CommandMessage,
-        tokenResponse: TeamsBotSsoPromptTokenResponse,
-      ): Promise<string | Partial<Activity> | void> {
-
-        const oboCredential = new OnBehalfOfUserCredential(tokenResponse.ssoToken, oboAuthConfig);
-
-        // Add scope for your Azure AD app. For example: Mail.Read, etc.
-        const graphClient = createMicrosoftGraphClientWithCredential(oboCredential, ["User.Read"]);
-      
-        // Call graph api use `graph` instance to get user profile information
-        const me = await graphClient.api("/me").get();
-
-        if (me) {
-          // Bot will send the user profile info to user
-          return `Your command is '${message.text}' and you're logged in as ${me.displayName}`;
-        } else {
-          return "Could not retrieve profile information from Microsoft Graph.";
-        }
-      }
-     }    
-
-     ```
-
-    For more information about how to implement SSO command handler in command bot, see [add single sign-on to Teams app](add-single-sign-on.md). And there's a [command-bot-with-sso](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/command-bot-with-sso) sample project, that you can try SSO command bot.
-
-    </details>
-
-    <details>
-    <summary><b>Call Azure Function in tab app: On-Behalf-Of flow</b></summary>
-
-    This code snippet shows you how to use `CreateApiClient` or `axios` library to call Azure Function, and how to call Graph API in Azure Function to get user profiles.
-
-    1. You can use `CreateApiClient` provided by TeamsFx sdk to call Azure Function:
-
-       ```typescript
-       async function callFunction() {
-         const authConfig: TeamsUserCredentialAuthConfig = {
-        clientId: process.env.REACT_APP_CLIENT_ID,
-        initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-         };
-        const teamsUserCredential = new TeamsUserCredential(authConfig);
-        // Create an API client by providing the token and endpoint.
-        const apiClient = CreateApiClient(
-          "https://YOUR_API_ENDPOINT", // Create an API Client that uses SSO token to authenticate requests
-          new BearerTokenAuthProvider(async () =>  (await teamsUserCredential.getToken(""))!.token) // Call API hosted in Azure Functions on behalf of user to inject token to request header
-        );
-        // Send a GET request to "RELATIVE_API_PATH", "/api/functionName" for example.
-         const response = await apiClient.get("RELATIVE_API_PATH");
-         return response.data;
-       }    
-       ```
-
-        You can also use `axios` library to call Azure Function.
-
-        ```typescript
-        async function callFunction() {
-          const authConfig: TeamsUserCredentialAuthConfig = {
-            clientId: process.env.REACT_APP_CLIENT_ID,
-            initiateLoginEndpoint: process.env.REACT_APP_START_LOGIN_PAGE_URL,
-          };
-          const teamsUserCredential = new TeamsUserCredential(authConfig);
-          const accessToken = await teamsUserCredential.getToken(""); // Get SSO token 
-          const endpoint = "https://YOUR_API_ENDPOINT";
-          const response = await axios.default.get(endpoint + "/api/" + functionName, {
-            headers: {
-              authorization: "Bearer " + accessToken.token,
-            },
-          });
-          return response.data;
-        }    
-
-        ```
-
-    2. Call Graph API in Azure Function on-behalf of user in response.
-
-       ```typescript
-
-       export default async function run(
-       context: Context,
-       req: HttpRequest,
-       teamsfxContext: TeamsfxContext
-       ): Promise<Response> {
-        const res: Response = { status: 200, body: {},};
-
-        const authConfig: OnBehalfOfCredentialAuthConfig = {
-          authorityHost: process.env.M365_AUTHORITY_HOST,
-          clientId: process.env.M365_CLIENT_ID,
-          tenantId: process.env.M365_TENANT_ID,
-          clientSecret: process.env.M365_CLIENT_SECRET,
-        };
-        const oboCredential = new OnBehalfOfUserCredential(tokenResponse.ssoToken, oboAuthConfig);
-
-        // Query user's information from the access token.
-        try {
-         const currentUser: UserInfo = await oboCredential.getUserInfo();
-         if (currentUser && currentUser.displayName) {
-           res.body.userInfoMessage = `User display name is ${currentUser.displayName}.`;
-         } else {
-           res.body.userInfoMessage = "No user information was found in access token.";
-         }
-        } catch (e) {
-        }
-        // Create a graph client to access user's Microsoft 365 data after user has consented.
-        try {
-         const graphClient: Client = createMicrosoftGraphClientWithCredential(oboCredential, [".default"]);
-         const profile: any = await graphClient.api("/me").get();
-         res.body.graphClientMessage = profile;
-        } catch (e) {
-        }
-        return res;
-        }
-
-       ```
-
-    For more information on sample to use graph API in bot application, see  [hello-world-tab-with-backend sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-with-backend).
-
-    </details>
-
-* Application permission in backend
-    <details>
-    <summary><b>Use certificate-based authentication in Azure Function</b></summary>
-
-    This code snippet shows you how to use certificate-based application permission to get the token that can be used to call Graph API.
-
-    1. You can initialize the `appAuthConfig` by providing a `PEM-encoded key certificate`.
-
-       ```typescript
-        const appAuthConfig: AppCredentialAuthConfig = {
-          authorityHost: process.env.M365_AUTHORITY_HOST,
-          clientId: process.env.M365_CLIENT_ID,
-          tenantId: process.env.M365_TENANT_ID,
-          certificateContent: 'PEM-encoded key certificate',
-         };
-
-       ```
-
-    2. You can use `AppCredential` to get the token.
-
-       ```typescript
-       const appCredential = new AppCredential(appAuthConfig);
-       const token = appCredential.getToken();    
-       ```
-
-    </details>
-
-    <details>
-    <summary><b>Use client secret authentication in Azure Function</b></summary>
-
-    This code snippet shows you how to use client secret application permission to get the token that's used to call Graph API.
-
-    1. You can initialize the `authConfig` by providing a `client secret`.
-
-       ```typescript
-       const appAuthConfig: AppCredentialAuthConfig = {
-        authorityHost: process.env.M365_AUTHORITY_HOST,
-        clientId: process.env.M365_CLIENT_ID,
-        tenantId: process.env.M365_TENANT_ID,
-        clientSecret: process.env.M365_CLIENT_SECRET,
-       };
-       ```
-
-    2. You can use the `authConfig` to get the token.
-
-       ```typescript
-       const appCredential = new AppCredential(appAuthConfig);
-       const token = appCredential.getToken();    
-       ```
-
-    For more information on sample to use graph API in bot application, see the [hello-world-tab-with-backend sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-with-backend).
-
-    </details>
-
-## Other scenarios
-
-This section provides several code snippets for other scenarios that are related to Microsoft Graph. You can create API client in Bot or Azure Function and access SQL database in Azure Function.
-
-  <details>
-  <summary><b>Create API client to call existing API in Bot or Azure Function</b></summary>
-
-  This code snippet shows you how to call an existing API in bot by `ApiKeyProvider`.
-
-  ```typescript
-  // Create an API Key auth provider. In addition to APiKeyProvider, following auth providers are also available:
-  // BearerTokenAuthProvider, BasicAuthProvider, CertificateAuthProvider.
-  const authProvider = new ApiKeyProvider("YOUR_API_KEY_NAME",
-    "YOUR_API_KEY_VALUE",
-    ApiKeyLocation.Header
-  );
-
-  // Create an API client using above auth provider.
-  // You can also implement AuthProvider interface and use it here.
-  const apiClient = createApiClient(
-    "YOUR_API_ENDPOINT",
-    authProvider
-  );
-
-  // Send a GET request to "RELATIVE_API_PATH", "/api/apiname" for example.
-  const response = await apiClient.get("RELATIVE_API_PATH");  
-  ```
-
-  </details>
-
-  <details>
-  <summary><b>Access SQL database in Azure Function</b></summary>
-
-  Use `tedious` library to access SQL and use `DefaultTediousConnectionConfiguration` that manages authentication. You can also compose connection config of other SQL libraries based on the result of `sqlConnectionConfig.getConfig()`.
-
-  1. Set the connection configuration.
-
-     ```typescript
-     // Equivalent to:
-     // const sqlConnectConfig = new DefaultTediousConnectionConfiguration({
-     //    sqlServerEndpoint: process.env.SQL_ENDPOINT,
-     //    sqlUsername: process.env.SQL_USER_NAME,
-     //    sqlPassword: process.env.SQL_PASSWORD,
-     // });
-     const atk = new TeamsFx();
-     // If there's only one SQL database
-     const config = await getTediousConnectionConfig(teamsfx);
-     // If there are multiple SQL databases
-     const config2 = await getTediousConnectionConfig(teamsfx, "your database name");  
-      ```
-
-  2. Connect to your database.
-
-     ```typescript
-     const connection = new Connection(config);
-     connection.on("connect", (error) => {
-     if (error) {
-      console.log(error);
-      }
-     });  
-      ```
-
-     > [!NOTE]
-     > The `getTediousConnectionConfig` function has been deprecated, Its recommended that you compose your own tedious configuration for better flexibility.
-
-For more information on sample to access SQL database in Azure Function, see [share-now sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/share-now).
-
-</details>
-
-## Advanced Customization
-
-### Configure log
-
-You can set customer log level and redirect outputs when using this library.
-
-> [!NOTE]
-> Logs are turned off by default, you can turn them on by setting log level.
-
-#### Enable log by setting log level
-
-When you set log level then Logging gets enabled. It prints log information to console by default.
-
-Set log level using the following snippet:
-
-```typescript
-// Only need the warning and error messages.
-setLogLevel(LogLevel.Warn);
-```
-
-> [!NOTE]
-> You can redirect log output by setting custom logger or log function.
-
-#### Redirect by setting custom logger
-
-```typescript
-setLogLevel(LogLevel.Info);
-// Set another logger if you want to redirect to Application Insights in Azure Function
-setLogger(context.log);
-```
-
-#### Redirect by setting custom log function
-
-```typescript
-setLogLevel(LogLevel.Info);
-// Only log error message to Application Insights in bot application.
-setLogFunction((level: LogLevel, message: string) => {
-  if (level === LogLevel.Error) {
-    this.telemetryClient.trackTrace({
-      message: message,
-      severityLevel: Severity.Error,
-    });
-  }
-});
-```
-
-> [!NOTE]
-> Log functions don't take effect if you set a custom logger.
-
-## Upgrade to latest SDK version
-
-If you're using the version of SDK that has `loadConfiguration()`, you can perform the following steps to upgrade to the latest SDK version:
-
-1. Instead of calling `loadConfiguration()`, use the specific auth config classes to customize the settings for each credential type. For example, use `AppCredentialAuthConfig` for `AppCredential`, `OnBehalfOfUserCredentialAuthConfig` for `OnBehalfOfUserCredential`, and `TeamsUserCredentialAuthConfig` for `TeamsUserCredential`.
-2. Replace `new TeamsUserCredential()` with `new TeamsUserCredential(authConfig)`.
-3. Replace `new M365TenantCredential()` with `new AppCredential(authConfig)`.
-4. Replace `new OnBehalfOfUserCredential(ssoToken)` with `new OnBehalfOfUserCredential(authConfig)`.
-
-## See also
-
-* [Microsoft 365 Agents Toolkit Overview](agents-toolkit-fundamentals.md)
-* [Microsoft 365 Agents Toolkit CLI](microsoft-365-agents-toolkit-CLI.md)
-* [Microsoft TeamsFx sample gallery](https://github.com/OfficeDev/TeamsFx-Samples).
-* [Add single sign-on to Teams app](add-single-sign-on.md)
+    The **Configuration** page appears.
+
+1. Enter the messaging endpoint URL where your bot receives app user's messages.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/message-endpoint.png" alt-text="Screenshot shows the Messaging endpoint option to add the URL where the bot interacts with the user." :::
+
+1. Select **Apply**.
+
+    The messaging endpoint is configured.
+
+Now, you must configure the OAuth connection to enable SSO for your bot resource.
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+configure+messaging+endpoint&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad%3Ftabs%3Dwindows%23to-configure-messaging-endpoint&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad.md&documentVersionIndependentId=ac68d7e8-2a35-5208-8724-68bd2fdd79b6&platformId=cdaccc16-060c-8eb1-2cee-c1f6a26e285c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+### Configure OAuth connection for your bot resource
+
+For a bot to support SSO, you must update its OAuth connection settings. This process associates the bot with app details that you configured for your Microsoft Entra app:
+
+* Microsoft Entra app ID, which is the client ID
+* Tenant ID
+* Scope and permissions
+
+With the app (client) ID and client secret provided, the Bot Framework Token Store exchanges the token for a graph token with defined permissions.
+
+#### To update OAuth connection for your bot resource
+
+1. Open the [Azure portal](https://ms.portal.azure.com/) on your web browser.
+   The Microsoft Azure Bot page opens.
+
+1. Enter the name of your Microsoft Entra app in **Search** box, and open your app.
+
+1. Select **Settings** > **Configuration**.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-configuration.png" alt-text="Screenshot shows the configure OAUth settings for your bot app." :::
+
+    The **Configuration** page appears.
+
+1. Move through the **Configuration** page and select **Add OAuth Connection Settings**.
+
+    The **New Connection Setting** page appears.
+
+1. Enter the OAuth configuration settings for the Azure bot.
+
+    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/new-config-setting.png" alt-text="Screenshot shows the New Connection Setting to provide the details." :::
+
+    1. Enter a name for the configuration setting.
+    1. Select the service provider.
+
+        The remaining configuration details appear.
+
+        :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/new-config-setting-b.png" alt-text="Screenshot shows the additional fields for New Connection Setting." :::
+
+    1. Enter the client ID that was generated when you created the bot app.
+    1. Enter the client secret that you've created for your bot.
+    1. Enter the application ID URI of your bot in the **Token Exchange URL**.
+    1. Enter the tenant ID.
+    1. Enter the scope that you defined when you configured the permissions.
+
+        > [!NOTE]
+        > For this tutorial, you can use openid profile User.Read User.ReadBasic.All as scope. This scope is suitable for using the [Code sample](bot-sso-code.md#code-sample).
+
+1. Select **Save**.
+1. Select **Apply**.
+
+After you've configured the OAuth connection, you can select **Test connection** to check if the OAuth connection is successful.
+
+:::image type="content" source="../../../assets/images/authentication/teams-sso-bots/test-oauth.png" alt-text="Screenshot shows the Test OAuth connection for your bot resource option.":::
+
+If the connection isn't successful, Microsoft Entra ID displays an error. You can verify all configurations and test again.
+
+Congratulations! You've completed the following app configurations in Microsoft Entra ID required to enable SSO for your bot app:
+
+* Application ID
+* Bot ID
+* Access token
+  * Application ID URI
+  * Scope, permissions, and authorized client IDs
+  * Client secret
+  * Redirect URL
+* Messaging endpoint and OAuth connection
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+update+OAuth+connection+for+your+bot+resource&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad%3Ftabs%3Dwindows%23to-update-oauth-connection-for-your-bot-resource&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad.md&documentVersionIndependentId=ac68d7e8-2a35-5208-8724-68bd2fdd79b6&platformId=cdaccc16-060c-8eb1-2cee-c1f6a26e285c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
+
+---
+
+## Best practices
+
+* Keep the Microsoft Entra app registration restricted to its original purpose of service to service application.
+* For better control over disabling authentication connections, rolling secrets, or reusing the Microsoft Entra app with other applications, create an additional Microsoft Entra app for any user to service authentication.
+
+If you use the Microsoft Entra registration app for authentication, you might encounter the following issues:
+
+* If you renew the certificate attached to the Microsoft Entra app registration, it affects the users who have authenticated with other Microsoft Entra services using the certificate.
+* It creates a single point of failure and control for all authentication-related activities with the bot.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Add code to enable SSO](bot-sso-code.md)
