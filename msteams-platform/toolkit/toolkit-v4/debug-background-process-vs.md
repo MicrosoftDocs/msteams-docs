@@ -10,9 +10,9 @@ ms.date: 03/03/2022
 
 # Debug background processes using Microsoft Visual Studio
 
-Visual Studio uses the `launchSettings.json` file to store configuration information that describes how to start an ASP.NET Core application. The file holds essential application settings used solely during development on the local machine. You can find it in the Properties folder of your project. It specifies details like the command to run, the browser's URL, and the required environment variables to be set.
+Visual Studio uses the `launchSettings.json` file to store configuration information that describes how to start an ASP.NET Core application. This file holds essential application settings used solely during development on the local machine. You can find it in the Properties folder of your project. It specifies details like the command to run, the browser's URL, and the required environment variables to be set.
 
-After selecting **Select Microsoft 365 Account**, Microsoft 365 Agents Toolkit updates the launchUrl using the real Microsoft Teams app ID, Teams tenant ID, and Microsoft 365 account.
+After selecting **Select Microsoft 365 Account**, Microsoft 365 Agents Toolkit updates the `launchUrl` using the real Microsoft Teams app ID, Teams tenant ID, and Microsoft 365 account.
 
 ## Start local tunnel
 
@@ -29,7 +29,7 @@ The tunnel creation dialog opens.
 * Select the **Account** to use to create the tunnel. Azure, Microsoft Account (MSA), and GitHub are the account types that are supported.
 * Enter a **Name** for the tunnel.
 * Select the **Tunnel Type**, Persistent or Temporary.
-* From the dropdown, select the  required public authentication in **Access**.
+* From the dropdown, select the required public authentication in **Access**.
 * Select **OK**. Visual Studio displays confirmation of tunnel creation.
 
 The tunnel you create is under **Dev Tunnels(MyPublicDevTunnel)** > **MyPublicDevTunnel**.
