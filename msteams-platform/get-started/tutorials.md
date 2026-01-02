@@ -17,7 +17,7 @@ In this article, learn more about building Teams app capabilities. Here's a list
 | # | Capability | Step-by-step guide |
 | --- | --- | --- |
 | 1. | Bot | - [Debug your AI chat bot using Microsoft 365 Agents Playground](#debug-your-ai-chat-bot-using-microsoft-365-agents-playground) <br> - [Send proactive messages](#send-proactive-messages) |
-| 2. | Message extension | [Build API-based message extension](#build-api-based-message-extension) <br> - [Build action-based message extension](#build-action-based-message-extension) <br> - [Build your first message extension app using JavaScript](#build-your-first-message-extension-app-using-javascript) |
+| 2. | Message extension | - [Build API-based message extension](#build-api-based-message-extension) <br> - [Build action-based message extension](#build-action-based-message-extension) <br> - [Build your first message extension app using JavaScript](#build-your-first-message-extension-app-using-javascript) |
 | 3. | Tab | [Build your first tab app using C sharp](#build-your-first-tab-app-using-c-sharp) |
 | 4. | SSO | - [Build a bot with SSO authentication](#build-a-bot-with-sso-authentication) <br> - [Add SSO to tab and message extension app](#add-sso-to-tab-and-message-extension-app) |
 
@@ -722,7 +722,7 @@ If you don't have a Teams developer account, you can get it free. Join the Micro
 1. In the welcome screen, select **Set up E5 subscription**.
 1. Set up your administrator account. After you finish, the following screen appears.
 
-   :::image type="content" source="../assets/images/toolkit-v2/prerequisites/microsoft-365.png" alt-text="Screenshot displays the Microsoft 365 Developer Program.":::
+   :::image type="content" source="../assets/images/toolkit-v2/prerequisites/microsoft-365.png" alt-text="The screenshot displays the Microsoft 365 Developer Program.":::
 
 1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
 
