@@ -261,18 +261,22 @@ To add a bot:
 
 > [!NOTE]
 >
-> * Bots created using the **Microsoft Teams Developer Portal** are **single tenant** by default.
 > * **Multi tenant** bots are deprecated, but bots that were already created as **Multi tenant** continue to work as expected.
-> * When you create a bot using the **Developer Portal**, a corresponding [servicePrincipal](/graph/api/resources/serviceprincipal?view=graph-rest-1.0&preserve-view=true) is automatically created in your **Microsoft Entra ID** tenant.
+> * Bots created using the **Microsoft Teams Developer Portal** are **single tenant** by default. Use the steps given for [requesting access token for your single tenant bot](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&tabs=singletenant#step-1-request-an-access-token-from-the-microsoft-entra-id-account-login-service&preserve-view=true).
+>
+> **For admin users**:
+>
+> * Admin users must create [servicePrincipal](/graph/api/resources/serviceprincipal?view=graph-rest-1.0&preserve-view=true) manually in Azure portal in your app's Overview page.
 > * In delegated scenarios with work or school accounts, the admin must be assigned a supported [Microsoft Entra role](/entra/identity/role-based-access-control/permissions-reference?toc=%2Fgraph%2Ftoc.json) or a custom role with a supported role permission. The following least privileged roles are supported for this operation.
 >
 >   * For multitenant apps:
 >     * Application Administrator
 >     * Cloud Application Administrator
 >
->   * For single-tenant apps where the calling user is a nonadmin user but is the owner of the backing application, the user must have the *Application Developer* role.
+> **For nonadmin users**:
 >
-> For single-tenant apps, the developer must configure the bot to request access token from single tenant. They must include tenant ID as part of the environment variables while requesting access token.
+> * When you create a bot using the **Developer Portal**, a corresponding [servicePrincipal](/graph/api/resources/serviceprincipal?view=graph-rest-1.0&preserve-view=true) is automatically created in your **Microsoft Entra ID** tenant.
+> * In delegated scenarios with work or school accounts for single tenant apps, where the calling user is a nonadmin user but is the owner of the backing application, the user must have the *Application Developer* role.
 
 From the Developer Portal, go to Bot Framework portal and configure your bot to update the icon and other properties.
 
@@ -293,8 +297,8 @@ The Agent Identity Blueprint tool in Developer Portal displays a list of existin
 
 Use Agent Identity Blueprint to:
 
-- View configuration details for an existing blueprint, including its type and blueprint ID.
-- Edit or update configuration for a blueprint.
+* View configuration details for an existing blueprint, including its type and blueprint ID.
+* Edit or update configuration for a blueprint.
 
 If a suitable blueprint doesn't exist, create a new one.
 
@@ -320,16 +324,16 @@ Each blueprint includes two key configuration areas:
 
 1. **Basic information**: View the following basic configuration for your blueprint:
 
-    - **Agent Blueprint ID**: A system-generated unique identifier for the blueprint.
-    - **Name**: The name assigned when the blueprint was created.
+    * **Agent Blueprint ID**: A system-generated unique identifier for the blueprint.
+    * **Name**: The name assigned when the blueprint was created.
 
     :::image type="content" source="../../assets/images/tdp/basic-information-agent-blueprint.png" alt-text="Basic information tab in Agent Blueprint" lightbox="../../assets/images/tdp/basic-information-agent-blueprint.png":::
 
 1. **Configuration**: In this tab, specify how the agent communicates with its service.
 
-    - In the **Configuration** tab, go to **Agent Type**.
-        - Choose how the agent connects to a back-end service.
-        - Select one of the following options:
+    * In the **Configuration** tab, go to **Agent Type**.
+        * Choose how the agent connects to a back-end service.
+        * Select one of the following options:
 
             | Agent Type | Description |
             |-----------|------------|
@@ -337,18 +341,18 @@ Each blueprint includes two key configuration areas:
             |Bot Based | Use an existing bot registered in Teams.|
             |API Based | Use a custom API endpoint to define agent behavior.|
 
-    - Based on the selected agent type, enter one of the following:
-        - **Bot ID**: If you selected Bot-based, provide the ID of your registered Teams bot.
-        - **Backend URL**: If you selected API-based, provide the URL of your back-end service endpoint.
-    - Select **Save** to apply your configuration.
-    - Select **Revert** to discard the changes.
+    * Based on the selected agent type, enter one of the following:
+        * **Bot ID**: If you selected Bot-based, provide the ID of your registered Teams bot.
+        * **Backend URL**: If you selected API-based, provide the URL of your back-end service endpoint.
+    * Select **Save** to apply your configuration.
+    * Select **Revert** to discard the changes.
 
     :::image type="content" source="../../assets/images/tdp/configuration-agent-blueprint.png" alt-text="Configuration tab in Agent Blueprint" lightbox="../../assets/images/tdp/configuration-agent-blueprint.png":::
 
 ## See also
 
-- [Teams Admin Center](https://admin.teams.microsoft.com/dashboard)
-- [Microsoft 365 Agents Toolkit Overview](../../toolkit/agents-toolkit-fundamentals.md)
-- [Include a SaaS offer with your Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
-- [Teams Store validation guidelines](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
-- [Commercial marketplace certification policies](/legal/marketplace/certification-policies)
+* [Teams Admin Center](https://admin.teams.microsoft.com/dashboard)
+* [Microsoft 365 Agents Toolkit Overview](../../toolkit/agents-toolkit-fundamentals.md)
+* [Include a SaaS offer with your Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
+* [Teams Store validation guidelines](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
+* [Commercial marketplace certification policies](/legal/marketplace/certification-policies)
