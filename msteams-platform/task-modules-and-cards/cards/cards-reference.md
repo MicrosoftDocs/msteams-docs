@@ -133,6 +133,7 @@ The following table provides the features that support Adaptive Cards:
 > * Test your full width Adaptive Card in narrow form factors such as mobile and meeting side panels to ensure that content is not truncated.
 > * Adaptive Cards within Teams don't provide support for file or image uploads.
 > * The `isEnabled` property for `Action.Submit` type in an Adaptive Card isn't supported in Teams.
+> * Microsoft Teams mobile app supports Adaptive Cards up to version 1.2. Cards that use schema versions later than 1.2 might not render correctly or might have limited or inconsistent functionality on mobile devices. For best results, use Adaptive Cards within the version 1.2.
 
 ### Example of Adaptive Card
 

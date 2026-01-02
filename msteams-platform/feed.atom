@@ -8,6 +8,22 @@
 	<category term="new"/>
 	<category term="updated"/>
 	<entry>
+		<title type="html"><![CDATA[Platform update: Copilot AI Insights (meeting recap) API is now generally available]]></title>
+		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/13751</id>
+		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/13751?referrer=whats.new.rssfeed"/>
+		<updated>2025-12-17T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[We’re thrilled to announce that the Copilot AI Insights (meeting recap) API has officially reached general availability (GA)! This marks a major milestone after an exciting journey through beta, and we’re excited to announce the fully supported v1.0 release to all developers and partners.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/13751?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<category label="new" term="new"/>
+	</entry>
+	<entry>
+		<title type="html"><![CDATA[Platform update: New capabilities in Microsoft Teams meeting artifacts]]></title>
+		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/13752</id>
+		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/13752?referrer=whats.new.rssfeed"/>
+		<updated>2025-12-17T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[We’re excited to share that new Graph API capabilities for accessing recordings and transcriptions of adhoc calls have now been released on the Microsoft Teams Platform. These updates, first introduced in beta and now available in v1.0, give you access to recordings and transcripts for Teams VoIP, PSTN, and Graph API–created calls.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/13752?referrer=whats.new.rssfeed">here</a>!]]></summary>
+		<category label="new" term="new"/>
+	</entry>
+	<entry>
 		<title type="html"><![CDATA[Platform update: Microsoft Entra ID auth for bots is now available in group scope!]]></title>
 		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/13637</id>
 		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/13637?referrer=whats.new.rssfeed"/>
@@ -111,20 +127,5 @@
 		<summary type="html"><![CDATA[To ensure compliance with GCC (Government Community Cloud) requirements for US-based traffic processing, we’re sharing important guidance on bot endpoint usage.For bot developers, we recommend using the following full qualified domain names for each environment:Public traffic: https://smba.trafficmanager.net/teams/ and GCC traffic: https://smba.infra.gcc.teams.microsoft.com/ </br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12602?referrer=whats.new.rssfeed">here</a>!]]></summary>
 		<category label="new" term="new"/>
 	</entry>
-	<entry>
-		<title type="html"><![CDATA[Platform update: Introducing New App Installation flow on Microsoft Teams]]></title>
-		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/12093</id>
-		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12093?referrer=whats.new.rssfeed"/>
-		<updated>2025-01-16T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[We are excited to announce the enhanced user experience for Teams apps installed from Teams Store or via custom upload. With this update, the UI gets more intuitive, user-friendly, straightforward, and easy-to-navigate. Now, adding Teams app in the required scope is just a click away. Key features of this update include the ability to view the available scopes and the scope that gives the best usage experience of that app.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12093?referrer=whats.new.rssfeed">here</a>!]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[Platform update: Introducing 10 BRAND NEW Adaptive Card features in Microsoft Teams]]></title>
-		<id>https://github.com/MicrosoftDocs/msteams-docs/discussions/12056</id>
-		<link href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12056?referrer=whats.new.rssfeed"/>
-		<updated>2025-01-16T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[We're thrilled to announce 10 NEW Adaptive Card features now available in Microsoft Teams! These exciting updates empower you to create interactive, dynamic, and visually captivating Adaptive Cards. Supercharge your app development with these powerful new features today. These features are applicable in a wide variety of organizational scenarios - from creating intelligent forms in cards that avoid data entry errors through dependent inputs and conditionally-enabled buttons to visualize business trends through charts.</br></br>Your opinion matters. Drop us your feedback <a href="https://github.com/MicrosoftDocs/msteams-docs/discussions/12056?referrer=whats.new.rssfeed">here</a>!]]></summary>
-		<category label="new" term="new"/>
-	</entry>
+	
 </feed>

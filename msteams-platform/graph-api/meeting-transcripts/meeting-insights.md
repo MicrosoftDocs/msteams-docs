@@ -5,10 +5,12 @@ ms.localizationpriority: high
 ms.topic: article
 ms.owner: vtarasov
 ms.author: surbhigupta
-ms.date: 12/08/2025
+ms.date: 12/12/2025
 ---
 
 # Get AI-generated meeting summaries with Meeting AI Insights API
+
+<!-- markdownlint-disable MD024 -->
 
 > [!IMPORTANT]
 >
@@ -48,26 +50,32 @@ To fetch the insights of a particular meeting, follow these steps:
 
 1. Each transcript event of the meeting creates an associated [AI insight object](/graph/api/resources/callaiinsight?preserve-view=true). Use the [List AI Insights API](/graph/api/onlinemeeting-list-aiinsights?preserve-view=true) to fetch all the AI insight objects related to the meeting and use the included metadata in the response to select the relevant AI insight object for your scenario. Here's an example request and response:
 
-### Request
+### Example
+
+#### Request
+
+The following example retrieves all AI insight objects for a specific online meeting.
 
 ```http
-GET/copilot/users/{userId}/onlineMeetings/{onlineMeetingId}/aiInsights
+GET /copilot/users/{userId}/onlineMeetings/{onlineMeetingId}/aiInsights
 ```
 
-### Response
+#### Response
+
+The following example shows a response with a list of AI insight objects. The IDs in the example have been shortened for readability.
 
 ```json
 HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#copilot/users('224317f2-e936-449c-8955-978c1497ce17')/onlineMeetings('MSoyMjQzMTdmMi1lOTM2LTQ0OWMtODk1NS05NzhjMTQ5N2NlMTcqMCoqMTk6bWVldGluZ19OV0kxWXpkbVlqWXRaamRoTVMwME1UVTVMV0ZpTUdVdE9HWm1ZemRtTVRFd01qQTVAdGhyZWFkLnYy')/aiInsights",
+  "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#copilot/users('22431...')/onlineMeetings('MSoyM...')/aiInsights",
   "@odata.count": 1,
   "value": [
     {
-      "id": "VjEjI1NQT19aamRsWkRKaVlURXRPR1F3TnkwME1XVmtMVGt5TVRBdFlUQXpOMkprT1dWaFpEazFMR000TkRjeVl6TTNMV1U1TkRjdE5EWXhNUzFpWlRkaExUZ3paRGN4T1RZelpHSmhNaXhpTjJNME9UZGtNeTB5T1RZNUxUUTBZMll0T0RRM1lpMWtNMkppTmpoak9EWmtZak1fMDFLTUVLNUE1Q01SUlQzWUJXSEJISUVKVVMzT0ZBVVNRTQ==",
-      "callId": "97d0b60e-4341-470f-b273-ea7ddb31f8f9",
-      "contentCorrelationId": "fb7aa4c9-b2a0-497f-94f1-f52d1975bd3c-0",
+      "id": "VjEjI...",
+      "callId": "97d0b...",
+      "contentCorrelationId": "fb7aa...",
       "createdDateTime": "2025-12-08T05:41:31Z",
       "endDateTime": "2025-12-08T05:41:31Z"
     },
@@ -85,55 +93,69 @@ Content-Type: application/json
 
 1. Each AI insight object provides detailed meeting notes, action items, and participant-specific mentions, which you can access by calling [GET AI Insights API](/graph/api/callaiinsight-get?preserve-view=true) for a specific insight object ID. Here's an example request and response:
 
-### Request
+### Example
+
+#### Request
+
+The example below demonstrates how to retrieve an AI insight object.
 
 ```http
-GET/copilot/users/{userId}/onlineMeetings/{onlineMeetingId}/aiInsights/{aiInsightId}
+GET /copilot/users/{userId}/onlineMeetings/{onlineMeetingId}/aiInsights/{aiInsightId}
 ```
 
-### Response
+#### Response
+
+The following example shows a response with a detailed meeting summary. The IDs in the example have been shortened for readability.
 
 ```json
 HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#copilot/users('224317f2-e936-449c-8955-978c1497ce17')/onlineMeetings('MSoyMjQzMTdmMi1lOTM2LTQ0OWMtODk1NS05NzhjMTQ5N2NlMTcqMCoqMTk6bWVldGluZ19OV0kxWXpkbVlqWXRaamRoTVMwME1UVTVMV0ZpTUdVdE9HWm1ZemRtTVRFd01qQTVAdGhyZWFkLnYy')/aiInsights/$entity",
-  "id": "VjEjI1NQT0A2ZWMzMmU4MC1jN2U1LTQwMWUtYjE4NS01ODVjYjRkYTNiZTYsb21SalBlQTJPRTZDSnBMYmlncEtETk9YeExkcEtjOUVoSHZUdTJqSWJiTTNMRWZJUi1rUlJyNTZnOWNaWTl1aW9TdnQ5d2VON1VHU0VLQTN2WjZ0bFE=",
-  "callId": "97d0b60e-4341-470f-b273-ea7ddb31f8f9",
-  "contentCorrelationId": "fb7aa4c9-b2a0-497f-94f1-f52d1975bd3c-0",
+  "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#copilot/users('22431...')/onlineMeetings('MSoyM...')/aiInsights/$entity",
+  "id": "VjEjI...",
+  "callId": "97d0b...",
+  "contentCorrelationId": "fb7aa...",
   "createdDateTime": "2025-12-08T05:41:31Z",
   "endDateTime": "2025-12-08T05:41:31Z",
   "meetingNotes": [
     {
-      "title": "Sample Testing and Staging Code Update",
-      "text": "MOD discussed the process of testing a sample, confirming that it will function after updating the staging code, and outlined the necessary steps for this update.",
+      "title": "Introducing Project Objectives and Key Stakeholders",
+      "text": "The stakeholders present included representatives from each department involved in the project, ensuring alignment and clear communication channels from the start.",
       "subpoints": [
         {
-          "title": "Staging Code Modification",
-          "text": "MOD stated that the sample will work after changing the staging code, indicating that this is the primary requirement for successful testing.",
-        },
-        {
-          "title": "Beta Environment Configuration",
-          "text": "MOD clarified that updates are needed only in the beta environment, specifically mentioning the need to replace or update the access token and configure related settings.",
-        },
-        {
-          "title": "Testing Process Steps",
-          "text": "MOD described the process of generating the beta, suggested that another person might need to participate, and encouraged further attempts if initial tests do not succeed.",
-        },
-      ],
-    },
+          "title": "Discussion on action items",
+          "text": "Action items were assigned to team members, and a follow-up meeting schedule was established."
+        }
+      ]
+    }
+  ],
+  "actionItems": [
     {
-      "title": "ReadMe File Integration Issue",
-      "text": "MOD identified an issue related to the ReadMe file, noting that it was properly created and centrally added, which is affecting the current process.",
-      "subpoints": [
-        {
-          "title": "ReadMe File Addition",
-          "text": "MOD explained that the ReadMe file was properly created and centrally added, which is contributing to the observed issue in the workflow."
-        },
-      ],
+      "title": "Project Timeline Finalization",
+      "text": "Review and finalize the project timeline to ensure alignment with stakeholder expectations and resource availability.",
+      "ownerDisplayName": "Bella Smith"
     },
   ],
+  "viewpoint": {
+    "mentionEvents": [
+      {
+        "eventDateTime": "2025-12-08T05:30:00Z",
+        "transcriptUtterance": "We need to get approval from Sarah Johnson before proceeding with the budget allocation.",
+        "speaker": {
+            "application": null,
+            "device": null,
+            "user": {
+                "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+                "id": "9a760...",
+                "displayName": "John Smith",
+                "userIdentityType": "aadUser",
+                "tenantId": "d1aeb..."
+            }
+        },
+      },
+    ]
+  }
 }
 ```
 
