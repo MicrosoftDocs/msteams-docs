@@ -2,7 +2,7 @@
 title: Collaborate on TeamsFx - Agents Toolkit
 author: surbhigupta
 description: In this module, learn how to collaborate on TeamsFx Project as project owner or collaborator using toolkit, remove collaboration, and test app behavior.
-ms.author: vikasamal
+ms.author: vikasalmal
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
