@@ -324,11 +324,11 @@ To provision resources with Agents Toolkit, follow these steps:
 
 1. Run the `provision` command in Agents Toolkit.
 
-1. Use Agents Toolkit to create a Microsoft Entra ID, which you might want to set as your apps environment variables.
+1. Use the Agents Toolkit to create a Microsoft Entra ID. You might want to set this as your app's environment variables.
 
-1. After provisioning, locate the `AAD_APP_CLIENT_ID` in the `env/.env.${envName}` file and the encrypted `SECRET_AAD_APP_CLIENT_SECRET` in the `env/.env.${envName}.user` file.
+1. After provisioning, locate the `AAD_APP_CLIENT_ID` in the `env/.env.${envName}` file. Also, find the encrypted `SECRET_AAD_APP_CLIENT_SECRET` in the `env/.env.${envName}.user` file.
 
-1. To obtain the actual value of `SECRET_AAD_APP_CLIENT_SECRET`. Select the Decrypt secret annotation.
+1. To obtain the actual value of `SECRET_AAD_APP_CLIENT_SECRET`, select the Decrypt secret annotation.
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI%20ran%20into%20an%20issue%5D%20Provision%20resources%20with%20Agents%20Toolkit&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fdeploy-teams-app-to-container-service%23provision-resources-with-agents-toolkit-2&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2Fdeploy-Teams-app-to-container-service.md&documentVersionIndependentId=1276497c-0a84-5a91-c324-3cedca1a2298&author=@MuyangAmigo&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B**msteams**)
@@ -341,7 +341,7 @@ The sample includes a deployment file, `deploy/tab.yaml`, for your reference.
 
     1. `<tab-image>`: Update your image. For example, `myacr.azurecr.io/tab:latest`.
 
-    1. `<api-image>`: Update your API image. If you don't have an API, remove the `hello-world-api`service and deploy from the yaml file.
+    1. `<api-image>`: Update your API image. If you don't have an API, remove the `hello-world-api` service and deploy from the yaml file.
 
     1. `<hostname>`: Update your ingress FQDN.
 
