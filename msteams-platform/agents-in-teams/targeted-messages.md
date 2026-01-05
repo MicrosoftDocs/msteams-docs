@@ -127,15 +127,15 @@ Use the following REST APIs to use targeted messages in your agent or app.
 
 :::row:::
     :::column:::
-        Activity
+        **Activity**
     :::column-end:::
     :::column span="1":::
-        REST API
+        **REST API**
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column:::
-        Send activity
+        **Send activity**
     :::column-end:::
     :::column span="2":::
         ```rest
@@ -147,10 +147,21 @@ Use the following REST APIs to use targeted messages in your agent or app.
         - MFE (Teams enterprise) or NG (Skype consumer, Dynamics) - post message
     :::column-end:::
 :::row-end:::
+:::row:::
+    :::column:::
+        **Send Targeted Activity**
+    :::column-end:::
+    :::column span="2":::
+        For send targeted activity in the conversation, indicate `isTargetedActivity` as `true`.
+        ```rest
+           POST {cloud}/v3/conversations/{conversationld}/activities?isTargetedActivity=true
+           POST {cloud}/v3/conversations/{conversationld}/activities/{activityld}?isTargetedActivity=true
+        ```
 
-| &nbsp; | Activity | REST API |
-| --- | --- | --- |
-| 1. | Send activity | ```rest <br> POST {cloud}/v3/conversations/{conversationld}/activities <br> POST {cloud}/v3/conversations/{conversationld}/activities/{activityld}``` <br> . AMS &- post document (if message contains attachment) and put card content <br> . MFE (Teams enterprise) / NG (Skype consumer, Dynamics) - post message |
+        - AMS C- post document (if message contains attachment) and put card content 
+        - MFE (Teams enterprise) - post message
+    :::column-end:::
+:::row-end:::
 
 <!--
 | Targeted message in Teams client | End-user experience |
