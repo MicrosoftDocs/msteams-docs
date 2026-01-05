@@ -137,7 +137,7 @@ Use the following REST APIs to use targeted messages in your agent or app.
     :::column:::
         **Send activity**
     :::column-end:::
-    :::column span="2":::
+    :::column span="3":::
         ```rest
            POST {cloud}/v3/conversations/{conversationld}/activities
            POST {cloud}/v3/conversations/{conversationld}/activities/{activityld}
@@ -151,7 +151,7 @@ Use the following REST APIs to use targeted messages in your agent or app.
     :::column:::
         **Send Targeted Activity**
     :::column-end:::
-    :::column span="2":::
+    :::column span="3":::
         ```rest
            POST {cloud}/v3/conversations/{conversationld}/activities?isTargetedActivity=true
            POST {cloud}/v3/conversations/{conversationld}/activities/{activityld}?isTargetedActivity=true
@@ -165,7 +165,7 @@ Use the following REST APIs to use targeted messages in your agent or app.
     :::column:::
         **Edit Activity**
     :::column-end:::
-    :::column span="2":::
+    :::column span="3":::
         ```rest
            PUT {cloud}/v3/conversations/{conversationld}/activities
            PUT {cloud}/v3/conversations/{conversationld}/activities/{activityld}
@@ -178,7 +178,7 @@ Use the following REST APIs to use targeted messages in your agent or app.
     :::column:::
         **Edit Targeted Activity**
     :::column-end:::
-    :::column span="2":::
+    :::column span="3":::
         ```rest
            PUT {cloud}/v3/conversations/{conversationld}/activities?isTargetedActivity=true
            PUT {cloud}/v3/conversations/{conversationld}/activities/{activityld}?isTargetedActivity=true
@@ -191,7 +191,7 @@ Use the following REST APIs to use targeted messages in your agent or app.
     :::column:::
         **Delete Activity**
     :::column-end:::
-    :::column span="2":::
+    :::column span="3":::
         ```rest
            DELETE {cloud}/v3/conversations/{conversationld}/activities
            DELETE {cloud}/v3/conversations/{conversationld}/activities/{activityld}
@@ -204,7 +204,7 @@ Use the following REST APIs to use targeted messages in your agent or app.
     :::column:::
         **Delete Targeted Activity**
     :::column-end:::
-    :::column span="2":::
+    :::column span="3":::
         ```rest
            DELETE {cloud}/v3/conversations/{conversationld}/activities?isTargetedActivity=true
            DELETE {cloud}/v3/conversations/{conversationld}/activities/{activityld}?isTargetedActivity=true
