@@ -10,15 +10,15 @@ ms.date: 11/26/2024
 
 # SaaS offer for your Teams app
 
-Software as a service (SaaS) offers allow you to license software solutions to customers through subscriptions. Microsoft Teams presents unique opportunities for developers to integrate their SaaS apps to Microsoft Teams Store.
+Software as a Service (SaaS) offers enable you to license software solutions to customers through subscriptions. Microsoft Teams provides unique opportunities for developers to integrate their SaaS apps into the Microsoft Teams Store.
 
 ## Plan your SaaS offer
 
-To monetize your app, it's important to plan on the features of a SaaS offer based on your requirements. When planning, you must determine the publishing option, that is, if you're selling through Microsoft or managing transactions independently. For more information, see [plan a SaaS offer](/partner-center/marketplace/plan-saas-offer).
+To monetize your app, it's crucial to plan the features of a SaaS offer based on your requirements. When planning, you must determine the publishing option, which involves deciding if you're selling through Microsoft or managing transactions independently. For more information, see [plan a SaaS offer](/partner-center/marketplace/plan-saas-offer).
 
 ### Technical requirements 
 
-Based on the publishing option that you choose, there are different technical requirements. The following illustration helps you understand the technical requirements based on the publishing option:
+Depending on the publishing option you choose, there are different technical requirements. The following illustration helps you understand the technical requirements based on the publishing option:
 
 :::image type="content" source="../../../../assets/images/saas-offer/tech-config-offer.png" alt-text="Diagram shows the technical configuration per the type of listing option." lightbox="../../../../assets/images/saas-offer/tech-config-offer.png":::
 
