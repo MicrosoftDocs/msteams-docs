@@ -127,7 +127,7 @@ Use the following REST APIs to use targeted messages in your agent or app.
 
 | &nbsp; | Activity | REST API |
 | --- | --- | --- |
-| 1. | Send activity | ```rest <br> POST {cloud}/v3/conversations/{conversationld}/activities <br> POST {cloud}/v3/conversations/{conversationld}/activities/{activityld} <br> . AMS &- post document (if message contains attachment) and put card content <br> . MFE (Teams enterprise) / NG (Skype consumer, Dynamics) - post message |
+| 1. | Send activity | ```rest <br> POST {cloud}/v3/conversations/{conversationld}/activities <br> POST {cloud}/v3/conversations/{conversationld}/activities/{activityld}``` <br> . AMS &- post document (if message contains attachment) and put card content <br> . MFE (Teams enterprise) / NG (Skype consumer, Dynamics) - post message |
 
 <!--
 | Targeted message in Teams client | End-user experience |
