@@ -129,15 +129,15 @@ Use the following REST APIs to use targeted messages in your agent or app.
     :::column:::
         Activity
     :::column-end:::
-    :::column:::
+    :::column span="1":::
         REST API
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column:::
-        Send activity:::
+        Send activity
     :::column-end:::
-    :::column:::
+    :::column span="2":::
         ```rest
            POST {cloud}/v3/conversations/{conversationld}/activities
            POST {cloud}/v3/conversations/{conversationld}/activities/{activityld}
