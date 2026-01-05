@@ -2,7 +2,7 @@
 title: Debug background processes
 author: surbhigupta
 description: Learn how Visual Studio Code and Microsoft 365 Agents Toolkit work during debugging process. Also learn how to register and configure your Teams app.
-ms.author: surbhigupta
+ms.author: vikasalmal
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/03/2022
