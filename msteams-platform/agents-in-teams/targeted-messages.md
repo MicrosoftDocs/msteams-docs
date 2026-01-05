@@ -125,6 +125,29 @@ Key steps for enabling targeted messages:
 
 Use the following REST APIs to use targeted messages in your agent or app.
 
+:::row:::
+    :::column:::
+        Activity
+    :::column-end:::
+    :::column:::
+        REST API
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Send activity:::
+    :::column-end:::
+    :::column:::
+        ```rest
+           POST {cloud}/v3/conversations/{conversationld}/activities
+           POST {cloud}/v3/conversations/{conversationld}/activities/{activityld}
+        ```
+
+        - AMS &- post document (if message contains attachment) and put card content 
+        - MFE (Teams enterprise) or NG (Skype consumer, Dynamics) - post message
+    :::column-end:::
+:::row-end:::
+
 | &nbsp; | Activity | REST API |
 | --- | --- | --- |
 | 1. | Send activity | ```rest <br> POST {cloud}/v3/conversations/{conversationld}/activities <br> POST {cloud}/v3/conversations/{conversationld}/activities/{activityld}``` <br> . AMS &- post document (if message contains attachment) and put card content <br> . MFE (Teams enterprise) / NG (Skype consumer, Dynamics) - post message |
