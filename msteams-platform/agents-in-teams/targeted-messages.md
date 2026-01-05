@@ -152,7 +152,6 @@ Use the following REST APIs to use targeted messages in your agent or app.
         **Send Targeted Activity**
     :::column-end:::
     :::column span="2":::
-        For send targeted activity in the conversation, indicate `isTargetedActivity` as `true`.
         ```rest
            POST {cloud}/v3/conversations/{conversationld}/activities?isTargetedActivity=true
            POST {cloud}/v3/conversations/{conversationld}/activities/{activityld}?isTargetedActivity=true
@@ -160,6 +159,58 @@ Use the following REST APIs to use targeted messages in your agent or app.
 
         - AMS C- post document (if message contains attachment) and put card content 
         - MFE (Teams enterprise) - post message
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        **Edit Activity**
+    :::column-end:::
+    :::column span="2":::
+        ```rest
+           PUT {cloud}/v3/conversations/{conversationld}/activities
+           PUT {cloud}/v3/conversations/{conversationld}/activities/{activityld}
+        ```
+
+        - MFE (Teams enterprise) / NG & (Skype consumer, Dynamics) - edit message
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        **Edit Targeted Activity**
+    :::column-end:::
+    :::column span="2":::
+        ```rest
+           PUT {cloud}/v3/conversations/{conversationld}/activities?isTargetedActivity=true
+           PUT {cloud}/v3/conversations/{conversationld}/activities/{activityld}?isTargetedActivity=true
+        ```
+
+        - MFE (Teams enterprise) - edit message
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        **Delete Activity**
+    :::column-end:::
+    :::column span="2":::
+        ```rest
+           DELETE {cloud}/v3/conversations/{conversationld}/activities
+           DELETE {cloud}/v3/conversations/{conversationld}/activities/{activityld}
+        ```
+
+        - MFE (Teams enterprise) or NG and (Skype consumer, Dynamics) - delete message
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        **Delete Targeted Activity**
+    :::column-end:::
+    :::column span="2":::
+        ```rest
+           DELETE {cloud}/v3/conversations/{conversationld}/activities?isTargetedActivity=true
+           DELETE {cloud}/v3/conversations/{conversationld}/activities/{activityld}?isTargetedActivity=true
+        ```
+
+        - MFE (Teams enterprise) - delete message
     :::column-end:::
 :::row-end:::
 
