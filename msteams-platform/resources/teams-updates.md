@@ -13,11 +13,11 @@ ms.date: 02/12/2025
 > [!IMPORTANT]
 > The Classic Teams client reaches end of availability on July 1, 2025. For more information, see [end of availability for Classic Teams client](/microsoftteams/teams-classic-client-end-of-availability).
 
-[The new Microsoft Teams client](https://www.microsoft.com/en-us/microsoft-365/blog/2023/03/27/welcome-to-the-new-era-of-microsoft-teams/) is reimagined from the ground up with performance in mind. It's faster, simpler, smarter, and flexible to provide better experience for your apps and users. The new Teams client supports all the existing Teams app capabilities except Adaptive Card tabs. If you have an app that runs inside Classic Teams, the app likely runs in the new Teams client without any issues.
+[The new Microsoft Teams client](https://www.microsoft.com/en-us/microsoft-365/blog/2023/03/27/welcome-to-the-new-era-of-microsoft-teams/) is reimagined from the ground up with performance in mind. It's faster, simpler, smarter, and flexible to provide a better experience for your apps and users. The new Teams client supports all the existing Teams app capabilities except Adaptive Card tabs. If you have an app that runs inside Classic Teams, the app likely runs in the new Teams client without any issues.
 
 The following are the advantages of the new Teams client:
 
-* The new Teams client uses the Evergreen version of Microsoft Edge WebView2 to ensure Teams client is always up to date with the latest fixes and improvements available in Microsoft Edge and Chromium.
+* The new Teams client uses the Evergreen version of Microsoft Edge WebView2 to ensure the Teams client is always up to date with the latest fixes and improvements available in Microsoft Edge and Chromium.
 
 * The new Teams client has been rebuilt from the ground up with performance in mind and includes all the platform infrastructure responsible for bootstrapping your app and powering the SDK APIs that it uses.
 
@@ -43,7 +43,7 @@ The following Teams features are deprecated and aren't supported in the new Team
 
 * **Adaptive Card tabs**: If your app is using Adaptive Card tabs, we recommend you rebuild the tab as a web-based tab. For more information, see [build tabs for Teams](../tabs/what-are-tabs.md).
 
-* **`window.alert`, `window.confirm`, and `window.prompt` APIs**: We recommended you to render a dialog within your own frame, for example, using the [Fluent V9 dialog](https://react.fluentui.dev/?path=/docs/components-dialog--default) or use the Microsoft Teams JavaScript client library (TeamsJS) to display a [Teams dialog](../tabs/what-are-tabs.md) using Adaptive Card or a nested `<iframe>`.
+* **`window.alert`, `window.confirm`, and `window.prompt` APIs**: We recommend you render a dialog within your own frame, for example, using the [Fluent V9 dialog](https://react.fluentui.dev/?path=/docs/components-dialog--default) or use the Microsoft Teams JavaScript client library (TeamsJS) to display a [Teams dialog](../tabs/what-are-tabs.md) using Adaptive Card or a nested `<iframe>`.
 
 * **[Location](../concepts/device-capabilities/location-capability.md#location-apis) APIs**: We recommend using HTML5 Geolocation APIs instead.
 
