@@ -82,7 +82,7 @@ To create a search-based message extension app with GitHub Codespaces, follow th
 If you want to learn how to start a project with Agents Toolkit from the beginning, you'll need to set up your development environment. Select the following button to start building your message extension app.
 
 > [!div class="nextstepaction"]
-> [Build your first message extension app using JavaScript](../sbs-gs-msgext.yml)
+> [Build your first message extension app using JavaScript](tutorials.md#build-your-first-message-extension-app-using-javascript)
 
 ---
 
