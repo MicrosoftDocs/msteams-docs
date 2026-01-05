@@ -1,8 +1,7 @@
 ---
 title: Send proactive messages
 description: Learn how to send proactive messages with your Teams bot, install your app using Microsoft Graph, and check code samples based on Bot Framework SDK v4.
-ms.topic: conceptual
-ms.author: surbhigupta
+ms.topic: article
 ms.owner: angovil
 ms.localizationpriority: high
 ms.date: 01/23/2025
@@ -438,6 +437,7 @@ The following table provides a simple code sample that incorporates basic conver
 
 ## See also
 
+* [Send proactive messages - Tutorial](../../../get-started/tutorials.md#send-proactive-messages)
 * [**Teams proactive messaging code samples**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
 * [Channel and group chat conversations with a bot](~/bots/how-to/conversations/channel-and-group-conversations.md)
 * [Respond to the dialog submit action](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)

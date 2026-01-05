@@ -16,8 +16,8 @@ In this article, learn more about building Teams app capabilities. Here's a list
 
 | # | Capability | Step-by-step guide |
 | --- | --- | --- |
-| 1. | Bot  | [Debug your AI chat bot using Microsoft 365 Agents Playground](#debug-your-ai-chat-bot-using-microsoft-365-agents-playground) |
-| 2. | Message extension | [Build API-based message extension](#build-api-based-message-extension) |
+| 1. | Bot | - [Debug your AI chat bot using Microsoft 365 Agents Playground](#debug-your-ai-chat-bot-using-microsoft-365-agents-playground) <br> - [Send proactive messages](#send-proactive-messages) |
+| 2. | Message extension | [Build API-based message extension](#build-api-based-message-extension) <br> - [Build action-based message extension](#build-action-based-message-extension) <br> - [Build your first message extension app using JavaScript](#build-your-first-message-extension-app-using-javascript) |
 | 3. | Tab | [Build your first tab app using C sharp](#build-your-first-tab-app-using-c-sharp) |
 | 4. | SSO | - [Build a bot with SSO authentication](#build-a-bot-with-sso-authentication) <br> - [Add SSO to tab and message extension app](#add-sso-to-tab-and-message-extension-app) |
 
@@ -81,11 +81,11 @@ If the prerequisites are in place, let's begin!
 
 1. Select the programming language as **JavaScript**.
 
-    :::image type="content" source="~/assets/images/agents-playground/select-language-bot.png" alt-text="Screenshot shows the option to select the programming language.":::
+    :::image type="content" source="~/assets/images/agents-playground/select-language-bot.png" alt-text="Screenshot displays the option to select the programming language.":::
 
 1. Select **Default folder**.
 
-    :::image type="content" source="~/assets/images/toolkit-v2/first-bot/select-default-location.png" alt-text="Screenshot shows the selection of default location.":::
+    :::image type="content" source="~/assets/images/toolkit-v2/first-bot/select-default-location.png" alt-text="Screenshot displays the selection of default location.":::
 
     To change the default location, follow these steps:
 
@@ -315,6 +315,352 @@ Congratulations! You've successfully created an AI chat bot app. Now, you've lea
 
 [Tutorials](#tutorials)
 
+## Send proactive messages
+
+A proactive message is a message sent by a bot in response to simple commands sent in the chat from a user.
+
+<br>
+
+<details>
+<summary><b>Tutorial: Send proactive messages</b></summary>
+
+The message response can be in one of the following formats:
+
+- Welcome messages
+- Scheduled messages
+- Notifications
+
+This step-by-step guide helps you to send a proactive message from a bot. You'll see the following output:
+
+:::image type="content" source="~/assets/images/proactive-scenario/proactive-msg-result.png" alt-text="Screenshot shows the proactive hello message in Teams chat.":::
+
+### Prerequisites
+
+Ensure that you install the following tools for building and deploying your apps.
+
+| &nbsp; | Install | For using |
+| --- | --- | --- |
+| &nbsp; | [Microsoft Visual Studio Code](https://code.visualstudio.com/download) | JavaScript or TypeScript, build environments. Use the latest version. |
+| &nbsp; | [Microsoft 365 Agents Toolkit](../toolkit/install-Agents-Toolkit.md) (previously known as Teams Toolkit) | Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
+| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type). |
+| &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place. |
+| &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge/) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+| &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
+
+### Prepare development environment
+
+After you install the required tools, set up the development environment.
+
+#### Install Microsoft 365 Agents Toolkit
+
+Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) helps simplify the development process with tools to provision and deploy cloud resources for your app and publish to the Teams Store.
+
+You can use Agents Toolkit with Visual Studio Code or a command-line interface called Microsoft 365 Agents Toolkit CLI (previously known as TeamsFx CLI).
+
+# [Visual Studio Code](#tab/vscode)
+
+1. Open Visual Studio Code and select **Extensions** (**Ctrl+Shift+X** or **View** > **Extensions**).
+2. In the search box, enter **Microsoft 365 Agents Toolkit**.
+3. Select **Install**.
+
+    :::image type="content" source="../assets/images/include-files/install-toolkit-vs.png" alt-text="Screenshot shows the Agents Toolkit extension installation.":::
+
+    The Microsoft 365 Agents Toolkit :::image type="icon" source="../assets/images/include-files/toolkit-sidebar-icon.PNG"::: icon appears in the Visual Studio Code Activity Bar.
+
+You can also install Agents Toolkit from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
+
+# [Command Line](#tab/cli)
+
+To install Agents Toolkit CLI, use the `npm` package manager and enter the following command in Command prompt:
+
+``` bash
+npm install -g @microsoft/m365agentstoolkit-cli
+```
+
+Depending on your configuration, you might need to use `sudo` to install the CLI:
+
+``` bash
+sudo npm install -g --unsafe-perm @microsoft/m365agentstoolkit-cli
+```
+
+This condition is more common on Linux and macOS systems.
+
+Ensure you add the npm global cache to your PATH. This step is normally done as part of the Node.js installer.
+
+You can use the CLI with the `atk` command. Verify that the command is working by running`atk -h`.
+
+> [!CAUTION]
+> Before you can run TeamsFx in PowerShell terminals, you must enable the **remote signed** execution policy for PowerShell.
+
+---
+
+#### Set up your Teams development tenant
+
+A tenant is a space or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you upload and test your app. Let's verify if you're ready to develop with the tenant.
+
+#### Check for upload an app option
+
+After creating your custom app, you must upload your app to Teams with the **Upload a custom app** option. Sign in to your Microsoft 365 account to check if this option is enabled.
+
+The following steps help you verify if you can upload apps in Teams:
+
+1. In the Teams client, select the **Apps** icon.
+2. Select **Manage your apps**.
+3. Select **Upload an app**.
+4. Look for the option to **Upload a custom app**. If the option is visible, you can upload custom apps.
+
+   :::image type="content" source="../assets/images/toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Screenshot shows the option to upload a custom app in Teams." :::
+
+      > [!NOTE]
+      > If you don't find the option to upload a custom app, contact your Teams administrator.
+
+#### Create a free Teams developer tenant (optional)
+
+If you don't have a Teams developer account, join the Microsoft 365 developer program.
+
+1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
+1. Select **Join Now** and follow the onscreen instructions.
+1. In the welcome screen, select **Set up E5 subscription**.
+1. Set up your administrator account. After you finish, the following screen appears:
+
+   :::image type="content" source="../assets/images/include-files/microsoft-365.png" alt-text="Screenshot displays the Microsoft 365 Developer Program.":::
+
+1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
+
+### Build Proactive Message bot
+
+To build proactive message bot using Visual Studio Code, follow these steps:
+
+1. Open Visual Studio Code.
+
+1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="../assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code Activity Bar.
+
+1. In the left pane, select **View Samples**.
+
+    :::image type="content" source="../assets/images/proactive-scenario/view-samples.png" alt-text="Screenshot shows the View Samples option in Visual Studio Activity Bar.":::
+
+1. From the list of samples, select **Proactive Messaging**. A prebuilt sample that's ready for debugging opens.
+
+    :::image type="content" source="../assets/images/proactive-scenario/select-proactive-msg.png" alt-text="Screenshot shows the prebuilt Proactive Messaging bot sample in the list of samples.":::
+
+1. Select **Create**.
+
+    :::image type="content" source="../assets/images/proactive-scenario/create-proactive-bot.png" alt-text="Screenshot shows the Create option to create a proactive messaging bot.":::
+
+1. Select **Default folder** to store your project root folder in the default location.
+
+     :::image type="content" source="../assets/images/sbs-notification-bot/select-default-location.png" alt-text="Screenshot shows the option to select the default location.":::
+
+    If you want to change the default location, perform the following steps:
+
+    1. Select **Browse**.
+
+        :::image type="content" source="../assets/images/sbs-notification-bot/select-browse.png" alt-text="Screenshot shows the option to browse the location.":::
+
+    1. Select the location for project workspace.
+
+    1. Select **Select Folder**.
+
+       :::image type="content" source="../assets/images/sbs-notification-bot/select-folder.png" alt-text="Screenshot shows the option to select the folder.":::
+
+    The proactive message bot is created in a few seconds and displays the proactive message bot successful dialog in the lower-right corner with the option to debug:
+
+    :::image type="content" source="../assets/images/proactive-scenario/proactive-bot-created.png" alt-text="Screenshot shows the proactive message bot created."lightbox="../assets/images/proactive-scenario/proact-bot-created-1.png"::::::
+
+1. Select **Run and Debug** :::image type="icon" source="../assets/images/proactive-scenario/run-debug-icon.png"::: icon from the top-left corner.
+
+1. Select **Debug (Edge)** or **Debug (Chrome)** from the dropdown list.
+
+    :::image type="content" source="../assets/images/proactive-scenario/debug-option-edge.png" alt-text="Screenshot shows the debugging options to choose from.":::
+
+    When debugging is successful, you are prompted to upload the proactive message bot to Teams on your local machine.
+
+1. Select **Add**.
+
+    :::image type="content" source="../assets/images/proactive-scenario/add.png" alt-text="Screenshot of message extension details dialog with the Add option highlighted.":::
+
+1. Search and select the required scope or select a channel, chat, or meeting from the list, and move through the dialog to select **Go**.
+
+    :::image type="content" source="../assets/images/proactive-scenario/add-to-teams.png" alt-text="Screenshot of the scope selection dialog showing the list of shared scopes.":::
+
+    The proactive message bot app is uploaded to Teams client and the following message appears in response to the message sent.
+
+    :::image type="content" source="../assets/images/proactive-scenario/proactive-msg-sent.png" alt-text="Screenshot shows the proactive message bot response in the chat.":::
+
+1. Copy and paste the URL or navigate to the URL in browser. A proactive hello message is triggered and shared in the chat.
+
+    :::image type="content" source="../assets/images/proactive-scenario/pro-msg-browser.png" alt-text="Screenshot shows the browser that triggers bot to respond with a proactive message in Teams.":::
+
+1. Go to Teams. You'll receive a **proactive hello** message from the bot.
+
+    :::image type="content" source="../assets/images/proactive-scenario/pro-msg-response.png" alt-text="Screenshot shows the bot response on the chat.":::
+
+### Take a tour of the source code
+
+Agents Toolkit provides components for building an app. After creating the project, you can view the project folders and files in the **EXPLORER** area of Visual Studio Code.
+
+:::image type="content" source="../assets/images/proactive-scenario/file-structure.png" alt-text="Screenshot shows the structure tab.":::
+
+The new project folder contains the following content:
+
+| Folder / File | Contents |
+| - | - |
+| `.vscode/` | Visual Studio Code files for debugging. |
+| `appManifest/` | Templates for the app manifest (previously called Teams app manifest). |
+| `env/` | Name / value pairs are stored in environment files and used by `m365agents.yml` to customize the provisioning and deployment rules. |
+| `manifest.json` | App manifest for publishing through the Developer Portal for Teams is stored in `Properties/manifest.json`. |
+| `m365agents.yml` | Main project file describes your app configuration and defines the set of actions to run in each lifecycle stage. |
+| `m365agents.local.yml` | This overrides `m365agents.yml` with actions that enable local execution and debugging. |
+
+### Deploy your Proactive message bot
+
+You've learnt to build and run Teams app with proactive message bot capability. Let's deploy the first app with proactive message bot capability on Azure using Agents Toolkit.
+
+#### Sign in to your Azure account
+
+Use your account to access the Microsoft Azure portal and provision new cloud resources to support your app.
+
+1. Open Visual Studio Code.
+1. Open the project folder where you created the proactive message bot app.
+1. Select the Microsoft 365 Agents Toolkit  :::image type="icon" source="../assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code Activity Bar.
+1. Select **Sign in to Azure** using your credentials.
+
+    > [!TIP]
+    > If you have the AZURE ACCOUNT extension installed and are using the same account, you can skip this step.
+
+    Your default web browser opens to let you sign in to the account.
+
+1. Close the browser when prompted and return to Visual Studio Code.
+
+The **ACCOUNTS** section of the sidebar shows the two accounts separately. It also lists the number of usable Azure subscriptions available to you. Ensure that you have at least one usable Azure subscription available. If not, sign out and use a different account.
+
+#### Deploy your app to Azure
+
+Deployment consists of two steps. First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. For this tutorial, you'll deploy the bot app.
+<br>
+<br>
+<details>
+<summary>What's the difference between Provision and Deploy?</summary>
+<br>
+<b>Provision</b> creates resources in Azure and Microsoft 365 for your app, but no code (HTML, CSS, and JavaScript) is copied to the resources.<br> <b>Deploy</b> copies the code for your app to the resources you created during provisioning. It's common to deploy multiple times without provisioning new resources. Since provisioning can take some time to complete, it's separate from deployment.
+</details>
+<br>
+
+# [Visual Studio Code](#tab/vscode)
+
+1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="../assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code Activity Bar.
+
+1. Select **Provision** under **LIFECYCLE**.
+
+    :::image type="content" source="../assets/images/sbs-command-bot/provision-cloud.png" alt-text="Screenshot shows the provisioning commands.":::
+
+1. Select one of the existing subscriptions.
+
+    :::image type="content" source="../assets/images/proactive-scenario/select-subscription.png" alt-text="Screenshot shows the subscription option for provisioning.":::
+
+1. Select an existing resource group or create new resource group. For more information, see [create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups).
+
+    :::image type="content" source="../assets/images/proactive-scenario/select-resource-group.png" alt-text="Screenshot show the resource group option for provisioning.":::
+
+    > [!NOTE]
+    > A dialog appears mentioning that costs might be incurred when running resources in Azure.
+
+1. Select **Provision**.
+
+    :::image type="content" source="../assets/images/sbs-command-bot/provision-confirm1.png" alt-text="Screenshot of the provisioning dialog.":::
+
+    The provisioning process creates resources in the Azure cloud. You can monitor the progress in the dialogs that appear in lower-right corner. After few minutes, the following dialog appears:
+
+    :::image type="content" source="../assets/images/proactive-scenario/deploy-provision-proactive.png" alt-text="Screenshot shows the provisioning complete dialog.":::
+
+1. Select **Deploy** under **LIFECYCLE**.
+
+    :::image type="content" source="../assets/images/sbs-command-bot/deploy-cloud.png" alt-text="Screenshot shows the Deploy option under LIFECYCLE.":::
+
+1. Select **Deploy**.
+
+    :::image type="content" source="../assets/images/sbs-command-bot/Deploy-confirm.png" alt-text="Screenshot shows the confirmation dialog to deploy.":::
+
+    Deployment takes some time. You can monitor the progress in the dialogs that appear in lower-right corner. After a few minutes, the following dialog appears.
+
+    :::image type="content" source="../assets/images/proactive-scenario/deploy-confirmation-proactive.png" alt-text="Screenshot shows the deployment confirmation dialog.":::
+
+1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View** > **Run**) from Visual Studio Code.
+
+1. Select **Launch Remote (Edge)** from the launch configuration dropdown list.
+
+    :::image type="content" source="../assets/images/proactive-scenario/debug-option-remote.png" alt-text="Screenshot shows the remote debug option highlighted.":::
+
+    When debugging is successful, you are prompted to upload the proactive message bot app to Teams.
+
+1. Select **Add**.
+
+    :::image type="content" source="../assets/images/proactive-scenario/add.png" alt-text="Screenshot of message extension app dialog with the Add option highlighted.":::
+
+1. Search and select the required scope or select a channel, chat, or meeting from the list, and move through the dialog to select **Go**.
+
+    :::image type="content" source="../assets/images/proactive-scenario/add-to-teams.png" alt-text="Screenshot shows the scope selection dialog with the list of shared scopes.":::
+
+    The proactive message bot app is uploaded to Teams client and the following message appears in response to the message sent.
+
+    :::image type="content" source="../assets/images/proactive-scenario/proactive-msg-sent.png" alt-text="Screenshot shows the proactive message bot response in the chat.":::
+
+1. Copy and paste the URL or navigate to the URL in browser. A proactive hello message is triggered and shared in the chat.
+
+    :::image type="content" source="../assets/images/proactive-scenario/pro-msg-browser.png" alt-text="Screenshot shows the browser that triggers bot to respond with a proactive message in Teams.":::
+
+1. Go to Teams. You'll receive a **proactive hello** message from the bot.
+
+    :::image type="content" source="../assets/images/proactive-scenario/pro-msg-response.png" alt-text="Screenshot shows the bot response on the chat.":::
+
+# [Command Line](#tab/cli)
+
+In your terminal window:
+
+1. Run `atk new` to create new project.
+
+``` bash
+atk new
+```
+
+1. Run `atk provision` to create azure resource.
+
+``` bash
+atk provision
+```
+
+1. Run `atk deploy` to deploy the app.
+
+``` bash
+atk deploy
+```
+
+1. Run `atk preview` to run the app.
+
+``` bash
+atk preview
+```
+
+---
+
+### Complete challenge
+
+Did you come up with something like this?
+
+:::image type="content" source="../assets/images/proactive-scenario/proactive-msg-result.png" alt-text="Screenshot shows the proactive hello message.":::
+
+You've completed the scenario.
+
+- You can send notifications on a daily basis or request for feedback from users on a periodic basis.
+- You can handle throttling limits to avoid multiple notifications.
+
+> [!div class="nextstepaction"]
+> [Send proactive messages](../bots/how-to/conversations/send-proactive-messages.md)
+
+</details>
+
+[Tutorials](#tutorials)
+
 ## Build API-based message extension
 
 Message extensions built using API (API-based) significantly enhance the functionality of your Teams apps by allowing them to interact with external services. API-based message extensions can help streamline workflows by reducing the need to switch between different applications.
@@ -376,7 +722,7 @@ If you don't have a Teams developer account, you can get it free. Join the Micro
 1. In the welcome screen, select **Set up E5 subscription**.
 1. Set up your administrator account. After you finish, the following screen appears.
 
-   :::image type="content" source="../assets/images/toolkit-v2/prerequisites/microsoft-365.png" alt-text="Screenshot shows the Microsoft 365 Developer Program.":::
+   :::image type="content" source="../assets/images/toolkit-v2/prerequisites/microsoft-365.png" alt-text="Screenshot displays the Microsoft 365 Developer Program.":::
 
 1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
 
@@ -888,6 +1234,603 @@ You learned to create an API-based message extension using OpenAPI Description d
 
 > [!div class="nextstepaction"]
 > [Create an API-based message extension](../messaging-extensions/create-api-message-extension.md)
+
+</details>
+
+[Tutorials](#tutorials)
+
+## Build action-based message extension
+
+Teams action based message extension allow users to interact with web services in the Microsoft Teams client. Message extensions help to initiate actions in an external system from the compose message area, the command box, or directly from a message.
+
+<br>
+
+<details>
+<summary><b>Tutorial: Build action-based message extension</b></summary>
+
+**Key features of action based message extension**:
+
+- Presents the user with a modal pop-up to collect or display information.
+- Triggers the action commands from the compose message area, the command box, or from a message.
+
+This step-by-step guide helps you to build Teams action-based message extension to initiate actions from compose message and message area. By the end of this tutorial, you can achieve the following output:
+
+:::image type="content" source="../assets/images/sbs-messagingextension-action/sharemessageoutput1.png" alt-text="Screenshot of the message extension output after you successfully complete the step-by-step guide.":::
+
+### Prerequisites
+
+Ensure that you install the following tools and set up your development environment:
+
+| &nbsp; | Install | For using... |
+| --- | --- | --- |
+| &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call all in one place. |
+| &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com) |You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
+| &nbsp; | [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the latest version, install the portable version. |
+| &nbsp; | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/downloads) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
+
+> [!NOTE]
+> After downloading ngrok, sign up and install [authtoken](https://ngrok.com/downloads).
+
+### Set up local environment
+
+1. Open [Microsoft-Teams-Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
+1. Select **Code**.
+1. From the dropdown menu, select **Open with GitHub Desktop**.
+
+   :::image type="content" source="../assets/images/include-files/clone-repository.png" alt-text="Screenshot show the option to clone repository in local.":::
+
+1. Select **Clone**.
+
+### Register Microsoft Entra app
+
+The following steps help you to create and register your bot in Azure portal:
+
+- Create and register your Azure app.
+- Create client secret to enable SSO authentication of the bot.
+- Add Teams channel to deploy the bot.
+- Create a tunnel to your web server's endpoints using dev tunnel (recommended) or ngrok.
+- Add messaging endpoint to the dev tunnel that you created.
+
+#### Add App registration
+
+1. Go to [Azure portal](https://ms.portal.azure.com/).
+
+1. Select **App registrations**.
+
+    :::image type="content" source="../assets/images/include-files/azure-app-registration.png" alt-text="Screenshot shows the Azure services to select App registrations.":::
+
+1. Select **+ New registration**.
+
+    :::image type="content" source="../assets/images/include-files/new-registration.png" alt-text="Screenshot shows the New registration page on Microsoft Entra admin center.":::
+
+1. Enter the name of your app.
+
+1. Select **Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant)**.
+
+1. Select **Register**.
+
+    :::image type="content" source="../assets/images/include-files/app-register.png" alt-text="Screenshot shows the option to register the bot in Microsoft Entra admin center.":::
+
+    Your app is registered in Microsoft Entra ID. The app overview page appears.
+
+    :::image type="content" source="../assets/images/include-files/app-registration-overview.png" alt-text="Screenshot shows the app registration overview page.":::
+
+    > [!NOTE]
+    > Save the app ID from **Application (client) ID** and **Directory (tenant) ID** for further use.
+
+#### Create a tunnel
+
+Follow one of the following two methods to create a tunnel.
+
+# [dev tunnel](#tab/dev)
+
+1. Open Visual Studio.
+1. Select **Create a new project**.
+
+    :::image type="content" source="../assets/images/include-files/create-new-project.png" alt-text="Screenshot shows the selection to create a new project.":::
+
+1. In the search box, enter **ASP.NET**. From the search results, select **ASP.NET Core Web App**.
+
+1. Select **Next**.
+
+    :::image type="content" source="../assets/images/include-files/template-search.png" alt-text="Screenshot shows the search and selection of the template.":::
+
+1. Enter **Project name** and select **Next**.
+
+    :::image type="content" source="../assets/images/include-files/project-name.png" alt-text="Screenshot shows the project name to enter.":::
+
+1. Select **Create**.
+
+    :::image type="content" source="../assets/images/include-files/additional-information.png" alt-text="Screenshot shows the project additional information." lightbox="../assets/images/include-files/additional-information.png":::
+
+    An overview window appears.
+
+    :::image type="content" source="../assets/images/include-files/asp-net-output.png" alt-text="Screenshot shows the overview window.":::
+
+1. In the debug dropdown list, select **Dev Tunnels (no active tunnel)** > **Create a Tunnel...**.
+
+    :::image type="content" source="../assets/images/include-files/create-tunnel.png" alt-text="Screenshot shows the dropdown to select the dev tunnels.":::
+
+    A pop-up window appears.
+
+1. Update the following details in the pop-up window:
+
+    1. **Account**: Enter a Microsoft or GitHub account.
+    1. **Name**: Enter a name for your tunnel.
+    1. **Tunnel Type**: From the dropdown list, select **Temporary**.
+    1. **Access**: From the dropdown list, select **Public**.
+
+1. Select **OK**.
+
+    :::image type="content" source="../assets/images/include-files/create-tunnel-details.png" alt-text="Screenshot shows the details to update for creation of tunnel.":::
+
+    A pop-up window appears showing that dev tunnel is successfully created.
+
+1. Select **OK**.
+
+    :::image type="content" source="../assets/images/include-files/tunnel-created.png" alt-text="Screenshot shows the pop-up message that the tunnel is created.":::
+
+    You can find the tunnel you created in the debug dropdown list as follows:
+
+    :::image type="content" source="../assets/images/include-files/tunnel-active.png" alt-text="Screenshot shows the tunnel is active and selected.":::
+
+1. Select **F5** to run the application in the debug mode.
+
+1. If a **Security Warning** dialog appears, select **Yes**.
+
+    :::image type="content" source="../assets/images/include-files/security-warning.png" alt-text="Screenshot shows the dialog box to accept the security warning.":::
+
+    A pop-up window appears.
+
+1. Select **Continue**.
+
+    :::image type="content" source="../assets/images/include-files/developer-tunnel.png" alt-text="Screenshot shows the url for the tunnel.":::
+
+    The dev tunnel home page opens in a new browser window and the dev tunnel is now active.
+
+    :::image type="content" source="../assets/images/include-files/developer-tunnel-web.png" alt-text="Screenshot shows the dev tunnel welcome page in browser.":::
+
+1. Go to Visual Studio, select **View > Output**.
+
+1. From the **Output** console dropdown menu, select **Dev Tunnels**.
+
+    The **Output** console shows the dev tunnel URL.
+
+    :::image type="content" source="../assets/images/include-files/output-console-url.png" alt-text="Screenshot shows the url in the Visual Studio output console.":::
+
+# [ngrok](#tab/ngrok)
+
+Use ngrok or Command Prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
+
+```bash
+ngrok http --host-header=localhost 3978
+```
+
+> [!TIP]
+> If you encounter **ERR_NGROK_4018**, follow the steps provided in the Command Prompt to sign up and authenticate ngrok. Then run the `ngrok http --host-header=localhost 3978` command.
+
+The window shows the HTTPS URL.
+
+ :::image type="content" source="../assets/images/include-files/ngrok-url.png" alt-text="Screenshot shows the ngrok HTTPS URL.":::
+
+---
+
+#### Add web authentication
+
+1. In the left pane, under **Manage**, select **Authentication**.
+
+1. Select **Add a platform** > **Web**.
+
+   :::image type="content" source="../assets/images/include-files/platform-web.png" alt-text="Screenshot shows the selection of web authentication.":::
+
+1. Enter the redirect URI for your app by appending `auth-end` to the fully qualified domain name. For example, `https://your-devtunnel-domain/auth-end` or `https://your-ngrok-domain/auth-end`.
+
+1. Under **Implicit grant and hybrid flows**, select the **Access tokens** and **ID tokens** checkboxes.
+
+1. Select **Configure**.
+
+   :::image type="content" source="../assets/images/include-files/configure-web.png" alt-text="Screenshot shows the option to add redirect URI and select implicit grant and hybrid flows.":::
+
+1. Under **Web**, select **Add URI**.
+
+1. Enter `https://token.botframework.com/.auth/web/redirect`.
+
+1. Select **Save**.
+
+    :::image type="content" source="../assets/images/include-files/web-add-uri.png" alt-text="Screenshot shows the option to add the redirect URI and select implicit grant and hybrid flows.":::
+
+#### Create a client secret
+
+> [!NOTE]
+> If you encounter the error **Client secrets are blocked by tenant-wide policy. Contact your tenant administrator for more information.**, you can create a certificate instead. For step-by-step instructions, refer to [create a certificate for app registration.](/graph/auth-register-app-v2#add-credentials)
+
+1. In the left pane, under **Manage**, select **Certificates & secrets**.
+
+1. Under **Client secrets**, select **+ New client secret**.
+
+    :::image type="content" source="../assets/images/include-files/new-client-secret.png" alt-text="Screenshot show the selection of new client secret.":::
+
+    The **Add a client secret** window appears.
+
+1. Enter **Description**.
+
+1. Select **Add**.
+
+    :::image type="content" source="../assets/images/include-files/add-client-secret.png" alt-text="Screenshot show the client secret description option to add.":::
+
+1. Under **Value**, select **Copy to clipboard** to save the client secret value for further use.
+
+    :::image type="content" source="../assets/images/include-files/client-secret-value.png" alt-text="Screenshot show the option to copy the client secret ID value to copy value to clipboard.":::
+
+#### Add API permissions
+
+1. In the left pane, select **API permissions**.
+
+1. Select **+ Add a permission**.
+
+   :::image type="content" source="../assets/images/teams-file-upload-bot/add-api-permission.png" alt-text="Screenshot shows the option to select Add permission.":::
+
+1. Select **Microsoft Graph**.
+
+1. Select **Delegated permissions**.
+
+1. Select **User** > **User.Read**.
+
+1. Select **Add permissions**.
+
+   :::image type="content" source="../assets/images/teams-file-upload-bot/select-api-permission.png" alt-text="Screenshot shows the option to select permissions.":::
+
+    > [!NOTE]
+    >
+    > - If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
+    > - Users need to consent to the API permissions only if the Microsoft Entra app is registered in a different tenant.
+
+#### Add application ID URI
+
+1. In the left pane, under **Manage**, select **Expose an API**.
+
+1. Next to **Application ID URI**, select **Add**.
+
+   :::image type="content" source="../assets/images/bots/expose-api-add-uri.png" alt-text="Screenshot shows the option to add Application ID URI for your app.":::
+
+1. Update the **Application ID URI** in the `api://botid-{AppID}` format and select **Save**.
+
+   :::image type="content" source="../assets/images/bots/app-id-uri1.png" alt-text="Screenshot shows the option to add the app ID URI and save.":::
+
+#### Add a scope
+
+1. In the left pane, under **Manage**, select **Expose an API**.
+
+1. Select **+ Add a scope**.
+
+   :::image type="content" source="../assets/images/include-files/select-add-scope.png" alt-text="Screenshot shows the selection to Add a Scope.":::
+
+1. Enter **access_as_user** as the **Scope name**.
+
+1. Under **Who can consent?**, select **Admins and users**.
+
+1. Update the values for the rest of the fields as follows:
+
+   - Enter **Teams can access the user’s profile** as **Admin consent display name**.
+
+   - Enter **Allows Teams to call the app’s web APIs as the current user** as **Admin consent description**.
+
+   - Enter **Teams can access the user profile and make requests on the user’s behalf** as **User consent display name**.
+
+   - Enter **Enable Teams to call this app’s APIs with the same rights as the user** as **User consent description**.
+
+1. Ensure that **State** is set to **Enabled**.
+
+1. Select **Add scope**.
+
+   The following image shows the fields and the values:
+
+   :::image type="content" source="../assets/images/include-files/set-add-scope.png" alt-text="Screenshot shows the values filled in the field to Add a scope.":::
+
+   > [!NOTE]
+   > The **Scope name** must match with the **Application ID** URI with `/access_as_user` appended at the end.
+
+    <!--  `api://d4b8****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`-->  
+
+   :::image type="content" source="../assets/images/include-files/add-scope.png" alt-text="Screenshot shows the details in Scopes.":::
+
+#### Add client application
+
+1. In the left pane, under **Manage**, select **Expose an API**.
+
+   Under **Authorized client applications**, identify the applications that you want to authorize for your app’s web application.
+
+1. Select **+ Add a client application**.
+
+   :::image type="content" source="../assets/images/include-files/add-client-application.png" alt-text="Screenshot shows the option to Select client application.":::
+
+1. Add Teams mobile or desktop and Teams web application.
+
+    1. For Teams mobile or desktop: Enter the **Client ID** as `1fec8e78-bce4-4aaf-ab1b-5451cc387264`.
+
+       :::image type="content" source="../assets/images/include-files/client-id-mobile-desktop.png" alt-text="Screenshot shows the mobile or desktop Client ID application.":::
+
+    1. For Teams web: Enter the **Client ID** as `5e3ce6c0-2b1f-4285-8d4b-75ee78787346`.
+
+       :::image type="content" source="../assets/images/include-files/client-id-web.png" alt-text="Screenshot shows the web Client ID application.":::
+
+1. Select the **Authorized scopes** checkbox.
+
+1. Select **Add application**.
+
+   :::image type="content" source="../assets/images/include-files/authorized-scope-add.png" alt-text="Screenshot shows the option to select authorized scopes and add application.":::
+
+   The following image displays the **Client Id**:
+
+   :::image type="content" source="../assets/images/include-files/add-client-application-output.png" alt-text="Screenshot shows the output of Client applications.":::
+
+### Create your bot
+
+#### Create an Azure bot resource
+
+> [!NOTE]
+> If you're already testing your bot in Teams, sign out of this app and Teams. To see this change, sign in again.
+
+1. Go to **Home**.
+1. Select **+ Create a resource**.
+1. In the search box, enter **Azure Bot**.
+1. Select **Enter**.
+1. Select **Azure Bot**.
+1. Select **Create**.
+
+    :::image type="content" source="../assets/images/include-files/azure-bot.png" alt-text="Screenshot shows the creation of Azure bot.":::
+
+1. Enter the bot name in **Bot handle**.
+1. Select your **Subscription** from the dropdown list.
+1. Select your **Resource group** from the dropdown list.
+
+    :::image type="content" source="../assets/images/include-files/create-azure-bot.png" alt-text="Screenshot shows the option resource group and subscription in the Azure portal.":::
+
+    If you don't have an existing resource group, you can create a new resource group. To create a new resource group, follow these steps:
+
+    1. Select **Create new**.
+    1. Enter the resource name and select **OK**.
+    1. Select a location from **New resource group location** dropdown list.
+
+    :::image type="content" source="../assets/images/include-files/new-resource-location.png" alt-text="Screenshot shows the new resource group option in Azure portal.":::
+
+1. Under **Pricing**, select **Change plan**.
+
+    :::image type="content" source="../assets/images/include-files/pricing-tier.png" alt-text="Screenshot shows the pricing option in Azure portal.":::
+
+1. Select **FO Free** > **Select**.
+
+    :::image type="content" source="../assets/images/include-files/pricing-free.png" alt-text="Screenshot shows the option to select free.":::
+
+1. Under **Microsoft App ID**, select **Type of App** as **Multi Tenant**.
+
+1. In the **Creation type**, select **Use existing app registration**.
+
+1. Enter the **App ID**.
+
+   <!-- You can also select **Use existing app registration** and enter existing **App ID**, **App tenant ID**, and **MSI resource ID**. -->
+
+    > [!NOTE]
+    > You can't create more than one bot with the same **Microsoft App ID**.
+
+1. Select **Review + create**.
+
+    :::image type="content" source="../assets/images/include-files/review-create-app-id.png" alt-text="Screenshot shows the creation of new bot.":::
+
+1. After the validation passes, select **Create**.
+
+    The bot takes a few minutes to provision.
+
+1. Select **Go to resource**.
+
+    :::image type="content" source="../assets/images/include-files/resource-deployment.png" alt-text="Screenshot shows the Go to resource option in the Azure portal.":::
+
+    You've successfully created your Azure bot.
+
+    :::image type="content" source="../assets/images/include-files/azure-bot-created-output.png" alt-text="Screenshot shows the output of a bot.":::
+
+### Add a Teams channel
+
+1. In the left pane, select **Channels**.
+1. Under **Available Channels**, select **Microsoft Teams**.
+
+    :::image type="content" source="../assets/images/include-files/channels-teams.png" alt-text="Screenshot shows the selection of Teams in channels.":::
+
+1. Select the checkbox to accept the **Terms of Service**.
+
+1. Select **Agree**.
+
+    :::image type="content" source="../assets/images/include-files/terms-service.png" alt-text="Screenshot shows the acceptance of terms of service.":::
+
+1. Select **Apply**.
+
+    :::image type="content" source="../assets/images/include-files/teams-apply.png" alt-text="Screenshot shows the Microsoft Teams as messaging to apply.":::
+
+#### Add a messaging endpoint
+
+Use one of the following ways to add a messaging endpoint:
+
+# [dev tunnel](#tab/dev)
+
+1. Use the dev tunnel URL in the **Output** console as the messaging endpoint.
+
+    :::image type="content" source="../assets/images/include-files/output-console-url.png" alt-text="Screenshot shows the url in the Visual studio output console.":::
+
+1. In the left pane, under **Settings**, select **Configuration**.
+
+1. Update the **Messaging endpoint** in the format `https://your-devtunnel-domain/api/messages`.
+
+    :::image type="content" source="../assets/images/include-files/devtunnels-messaging-endpoint.png" alt-text="Screenshot shows the messaging endpoint adding api.":::
+
+1. Select **Apply**.
+
+    You've successfully set up a bot in Azure Bot service.
+
+    > [!NOTE]
+    > If the **Application Insights Instrumentation key** shows an error, update with **App ID**.
+
+# [ngrok](#tab/ngrok)
+
+1. From ngrok, copy the HTTPS URL.
+
+    :::image type="content" source="../assets/images/include-files/ngrok-url.png" alt-text="Screenshot shows the ngrok HTTPS URL.":::
+
+    > [!NOTE]
+    > The HTTPS URL in your ngrok is a fully qualified domain name.
+    > The `WebAppDomain` is a fully qualified domain name that doesn't include `https://` in it.
+
+1. In the left pane, under **Settings**, select **Configuration**.
+
+1. Update the **Messaging endpoint** in the format `https://your-ngrok-domain/api/messages`.
+
+    :::image type="content" source="../assets/images/include-files/ngrok-messaging-endpoint.png" alt-text="Screenshot shows the messaging endpoint adding api.":::
+
+1. Select **Apply**.
+
+    You have successfully set up a bot in Azure Bot service.
+
+    > [!NOTE]
+    > If the **Application Insights Instrumentation key** shows an error update with **App ID**.
+
+---
+
+### Set up app settings and manifest files
+
+1. Go to the **appsettings.json** file in the cloned repository.
+
+   :::image type="content" source="~/assets/images/teams-file-upload-bot/appsettings-file-location-bot-sso.png" alt-text="Screenshot shows the location of appsettings json file.":::
+
+1. Open the **appsettings.json** file and update the following information:
+
+   - Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
+   - Set `"MicrosoftAppPassword"` to your bot's client secret ID **value**.
+   - Set `ConnectionName` as OAuth connection name.
+   - Set `"MicrosoftAppType"` to **MultiTenant**.
+   - Set `"MicrosoftAppTenantId"` to **common**.
+
+   :::image type="content" source="~/assets/images/teams-file-upload-bot/appsettings-json-bot-sso.png" alt-text="Screenshot shows the appsettings json.":::
+
+1. Go to the **manifest.json** file in the cloned repository.
+
+   :::image type="content" source="../assets/images/teams-file-upload-bot/manifest-file-location.png" alt-text="Screenshot shows the selection of manifest json file.":::
+
+1. Open the **manifest.json** file and update the following changes:
+
+   - Replace all occurrences of `"{TODO: MicrosoftAppId}"` with your **Microsoft App ID**.
+   - Set `"<<domain-name>>"` to your ngrok or dev tunnel domain.
+
+   :::image type="content" source="../assets/images/teams-file-upload-bot/manifest-bot-id-botsso.png" alt-text="Screenshot shows the details filled in the manifest file in visual studio.":::
+
+### Build and run the service
+
+To build and run the service, use Visual Studio or Command line.
+
+# [Visual Studio](#tab/vscode)
+
+1. Open Visual Studio.
+
+1. Go to **File** > **Open** > **Project/Solution....**.
+
+    :::image type="content" source="../assets/images/sbs-messagingextension-action/VSopenfile.png" alt-text="Screenshot of Visual Studio with the Project/Solution highlighted in red.":::
+
+1. From **csharp** folder, select the **TeamsMessagingExtensionsAction.csproj** file.
+
+    :::image type="content" source="../assets/images/sbs-messagingextension-action/openproject.png" alt-text="Screenshot of cloned repository with the TeamsMessagingExtensionsAction.csproj highlighted in red.":::
+
+1. Press **F5** to run the project.
+
+1. Select **Yes** if the following dialog appears:
+
+    :::image type="content" source="../assets/images/sbs-messagingextension-action/certificate.png" alt-text="Screenshot shows Security Warning with the Yes option highlighted in red.":::
+
+    A webpage appears with a message **Your bot is ready!**.
+
+    :::image type="content" source="../assets/images/sbs-messagingextension-action/appisready.png" alt-text="Screenshot of the webpage that displays Your bot is ready!.":::
+
+# [Command line](#tab/cli)
+
+Go to **samples** > **msgext-action** > **csharp** in Command Prompt window and enter the following command:
+
+```bash
+    dotnet run
+```
+
+:::image type="content" source="../assets/images/sbs-messagingextension-action/dotnetruncmd.png" alt-text="Screenshot of Command Prompt - dotnet run with the dotnet run command.":::
+
+---
+
+### Add Action Message Extension app to Teams
+
+1. In your cloned repository, go to **samples** > **msgext-action** > **csharp** > **TeamsAppManifest**.
+
+1. Create a .zip with the following files that are present in the **Manifest** folder:
+    - manifest.json
+    - icon-outline.png
+    - icon-color.png
+
+    :::image type="content" source="../assets/images/sbs-messagingextension-action/zipfile.png" alt-text="Screenshot of cloned repository with the Messaging extension zip file highlighted in red.":::
+
+1. In the Teams client, select the **Apps** icon.
+
+1. Select **Manage your apps**.
+
+1. Select **Upload an app**.
+
+1. Look for the option to **Upload a custom app**. If you see the option, custom app upload is enabled.
+
+    :::image type="content" source="../assets/images/tab-device-permission/custom-upload.png" alt-text="Screenshot shows the upload a custom app.":::
+
+    > [!NOTE]
+    > Contact your Teams administrator, if you don't find the option to upload a custom app.
+
+1. Select **Open** to upload the messaging.zip file that you created in the TeamsAppManifest folder.
+
+    :::image type="content" source="../assets/images/sbs-messagingextension-action/openzipfile.png" alt-text="Screenshot of the cloned repository displaying the messaging zip file.":::
+
+1. Select **Add**.
+
+    :::image type="content" source="../assets/images/sbs-messagingextension-action/add-app.png" alt-text="Screenshot of the app details dialog to add the message extension app.":::
+
+1. Select **Open** to open the app in personal scope.
+
+    Alternatively, you can either search and select the required scope or select a channel, chat, or meeting from the list, and move through the dialog to select **Go**.
+
+    :::image type="content" source="../assets/images/sbs-messagingextension-action/add-scope.png" alt-text="Screenshot of the scope selection dialog to select the required scope.":::
+
+### Interact with the app in Teams
+
+1. Select **Create Card** command from the compose box command list.
+
+   :::image type="content" source="../assets/images/sbs-messagingextension-action/create-card.png" alt-text="Screenshot of message compose box overflow menu with Create Card highlighted in red.":::
+
+1. Enter your information in the modal pop-up window.
+
+   :::image type="content" source="../assets/images/sbs-messagingextension-action/output-card.png" alt-text="The Screenshot shows the Create Card model pop-up of the Action Messaging Extension.":::
+
+1. Select **Submit**.
+
+   :::image type="content" source="../assets/images/sbs-messagingextension-action/submit.png" alt-text="Screenshot of Create Card model pop-up with the Submit option highlighted in red.":::
+
+1. Select More options (...) from the overflow menu.
+
+1. Select **More actions** > **Share Message**.
+
+   :::image type="content" source="../assets/images/sbs-messagingextension-action/sharemessage.png" alt-text="Screenshot shows the message overflow menu. The Share Message and More actions are highlighted in red.":::
+
+1. If you want to include an image, select the **Include image in Hero Card** checkbox and then select **Submit**.
+
+   :::image type="content" source="../assets/images/sbs-messagingextension-action/sharemessageoutput.png" alt-text="Screenshot of Action Messaging Extension with the include image in Hero Card checkbox and Submit option highlighted in red.":::
+
+### Complete challenge
+
+Did you come up with something like this?
+
+:::image type="content" source="../assets/images/sbs-messagingextension-action/sharemessageoutput1.png" alt-text="Screenshot of the message extension output after you have successfully completed the step-by-step guide.":::
+
+You've completed the tutorial to get started with a **Action Message Extension** app!
+
+> [!div class="nextstepaction"]
+> [Action commands](../messaging-extensions/how-to/action-commands/define-action-command.md)
 
 </details>
 
@@ -1544,6 +2487,619 @@ You've completed the tutorial to get started with build a bot with SSO authentic
 
 [Tutorials](#tutorials)
 
+## Build your first message extension app using JavaScript
+
+Start Microsoft Teams app development with your first Teams app using JavaScript.
+
+In this tutorial, you'll learn:
+
+- How to set up a new project with Microsoft 365 Agents Toolkit (previously known as Teams Toolkit).
+- How to build a message extension app.
+- How to deploy your app.
+
+<details>
+<summary><b>Tutorial: Build your first message extension app using JavaScript</b></summary>
+
+This step-by-step guide helps you to build a message extension Teams app with Agents Toolkit in Visual Studio Code. You'll see the following output after you complete this guide:
+
+:::image type="content" source="../assets/images/toolkit-v2/first-msgext/app-added-mex-local-debug.png" alt-text="Screenshot shows the final output of the message extension app in Teams." lightbox="../assets/images/toolkit-v2/first-msgext/app-added-mex-local-debug.png":::
+
+### Prerequisites
+
+Ensure you install the following tools for building and deploying your apps.
+
+| &nbsp; | Install | For using... |
+| --- | --- | --- |
+| **Required** | &nbsp; | &nbsp; |
+| &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript or TypeScript build environments. Use the latest version. |
+| &nbsp; | [Microsoft 365 Agents Toolkit](../toolkit/install-Agents-Toolkit.md) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
+| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Backend JavaScript runtime environment. For more information, see [Node.js version compatibility table](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type). |
+| &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Collaborate with people you work with through apps for chats, meetings, and calls in one place. |
+| &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools essential for debugging and testing. |
+| &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with appropriate permissions to install a custom app. |
+| **Optional** | &nbsp; | &nbsp; |
+| &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
+| &nbsp; | [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) or [React Developer Tools for Microsoft Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil) | A browser DevTools extension for the open-source React JavaScript library. |
+
+### Prepare development environment
+
+After you install the required tools, set up the development environment.
+
+#### Install Microsoft 365 Agents Toolkit
+
+Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) helps simplify the development process with tools to provision and deploy cloud resources for your app and publish to the Teams Store.
+
+You can use Agents Toolkit with Visual Studio Code or a command-line interface called Microsoft 365 Agents Toolkit CLI (previously known as TeamsFx CLI).
+
+# [Visual Studio Code](#tab/vscode)
+
+1. Open Visual Studio Code and select **Extensions** (**Ctrl+Shift+X** or **View** > **Extensions**).
+2. In the search box, enter **Microsoft 365 Agents Toolkit**.
+3. Select **Install**.
+
+   :::image type="content" source="../assets/images/include-files/install-toolkit-vs.png" alt-text="Screenshot shows the Agents Toolkit extension installation.":::
+
+   The Microsoft 365 Agents Toolkit :::image type="icon" source="../assets/images/include-files/toolkit-sidebar-icon.PNG"::: icon appears in the Visual Studio Code Activity Bar.
+
+You can also install Agents Toolkit from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
+
+# [Command Line](#tab/cli)
+
+To install Agents Toolkit CLI, use the `npm` package manager and enter the following command in Command prompt:
+
+``` bash
+npm install -g @microsoft/m365agentstoolkit-cli
+```
+
+Depending on your configuration, you might need to use `sudo` to install the CLI:
+
+``` bash
+sudo npm install -g --unsafe-perm @microsoft/m365agentstoolkit-cli
+```
+
+This condition is more common on Linux and macOS systems.
+
+Ensure you add the npm global cache to your PATH. This step is normally done as part of the Node.js installer.
+
+You can use the CLI with the `atk` command. Verify that the command is working by running`atk -h`.
+
+> [!CAUTION]
+> Before you can run TeamsFx in PowerShell terminals, you must enable the **remote signed** execution policy for PowerShell.
+
+---
+
+#### Set up your Teams development tenant
+
+A tenant is a space or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you upload and test your app. Let's verify if you're ready to develop with the tenant.
+
+##### Check for upload an app option
+
+After creating your custom app, you must upload your app to Teams with the **Upload a custom app** option. Sign in to your Microsoft 365 account to check if this option is enabled.
+
+The following steps help you verify if you can upload apps in Teams:
+
+1. In the Teams client, select the **Apps** icon.
+2. Select **Manage your apps**.
+3. Select **Upload an app**.
+4. Look for the option to **Upload a custom app**. If the option is visible, you can upload custom apps.
+
+   :::image type="content" source="../assets/images/toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Screenshot shows the option to upload a custom app in Teams." :::
+
+      > [!NOTE]
+      > If you don't find the option to upload a custom app, contact your Teams administrator.
+
+##### Create a free Teams developer tenant (optional)
+
+If you don't have a Teams developer account, join the Microsoft 365 developer program.
+
+1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
+1. Select **Join Now** and follow the onscreen instructions.
+1. In the welcome screen, select **Set up E5 subscription**.
+1. Set up your administrator account. After you finish, the following screen appears:
+
+   :::image type="content" source="../assets/images/include-files/microsoft-365.png" alt-text="Screenshot shows the Microsoft 365 Developer Program.":::
+
+1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
+
+##### Get a free Azure account
+
+If you want to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
+
+### Create project workspace for your message extension app
+
+Now, let's create your first message extension app.
+
+The message extension capability lets you interact with a web service through buttons and forms. Use the message compose area, command box, or a message directly in Teams client to search and initiate actions in an external system. Message extensions rely on bots to provide a dialog between the user and your code.
+
+:::image type="content" source="../assets/images/toolkit-v2/first-msgext/your-helloworld-app-msgext.png" alt-text="Diagram shows Screenshot shows the different types of app features with message extension highlighted.":::
+
+There are two types of Teams message extensions:
+
+- [Search commands](../messaging-extensions/how-to/search-commands/define-search-command.md): You can search external systems and insert the results into a message in the form of a card.
+- [Action commands](../messaging-extensions/how-to/action-commands/define-action-command.md): You can present your users with a modal pop-up to collect or display information. Then, you can process their interaction and send the information back to Teams.
+
+Let's create a message extension app with a search command. First, set up a new Teams project for creating the message extension app.
+
+In this tutorial, you'll learn:
+
+1. [How to set up a new message extension project with Agents Toolkit.](#create-your-message-extension-project-workspace)
+1. [About the directory structure of your app project.](#take-a-tour-of-the-message-extension-app-source-code)
+
+#### Create your message extension project workspace
+
+If the prerequisites are in place, let's begin!
+
+> [!NOTE]
+> The Visual Studio Code UI shown may differ for you depending on your operating system, Toolkit version, theme, and environment.
+
+# [Visual Studio Code](#tab/vscode)
+
+1. Open Visual Studio Code.
+
+1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="../assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code activity bar.
+
+1. Select **Create a New Agent/App** > **Teams App**.
+
+    :::image type="content" source="../assets/images/toolkit-v2/first-msgext/create-project.png" alt-text="Screenshot shows the option to create a new app from the Agents Toolkit sidebar.":::
+
+1. Select **Message Extension**.
+
+    :::image type="content" source="../assets/images/toolkit-v2/first-msgext/create-new-app1.png" alt-text="Screenshot shows the option to create a new Teams app.":::
+
+1. Select **Custom Search Results**.
+
+    :::image type="content" source="../assets/images/toolkit-v2/first-msgext/select-capabilities-mex1.png" alt-text="Screenshot shows the option to select the capabilities of a new app.":::
+
+1. Select **Start with a Bot**.
+
+    :::image type="content" source="../assets/images/toolkit-v2/first-msgext/select-architecture-mex.png" alt-text="Screenshot shows the options for the architecture of the message extension.":::
+
+1. Select **JavaScript**.
+
+    :::image type="content" source="../assets/images/toolkit-v2/first-msgext/select-language-tab.png" alt-text="Screenshot shows the option to select the programming language.":::
+
+1. Select **Default folder** to store your project root folder in default location.
+
+    :::image type="content" source="../assets/images/toolkit-v2/first-msgext/select-default-location.png" alt-text="Screenshot shows the selection of default location.":::
+
+    You can also change the default location by the following steps:
+
+    1. Select **Browse**.
+
+        :::image type="content" source="../assets/images/toolkit-v2/first-msgext/select-browse.png" alt-text="Screenshot shows the browse option.":::
+
+    1. Select the location for project workspace.
+
+    1. Select **Select Folder**.
+
+        :::image type="content" source="../assets/images/toolkit-v2/select-folder.png" alt-text="Screenshot shows how to select the location for the project workspace folder.":::
+
+1. Enter a suitable name for your app. Select **Enter**.
+
+    :::image type="content" source="../assets/images/toolkit-v2/first-msgext/enter-project-name.png" alt-text="Screenshot shows the option to enter the app name.":::
+
+    Agents Toolkit creates the app in a few seconds.
+
+    :::image type="content" source="../assets/images/toolkit-v2/first-msgext/app-created-mex.png" alt-text="Screenshot shows the newly created message extension app." lightbox="../assets/images/toolkit-v2/first-msgext/app-created-mex.png":::
+
+    After your app is created, Agents Toolkit displays the following message:
+
+    :::image type="content" source="../assets/images/toolkit-v2/preview-project-msg.png" alt-text="Screenshot shows a dialog saying that the message extension app is created.":::
+
+# [Command Line](#tab/cli)
+
+Use the `atk' CLI to create your first project.
+
+1. Go to the folder where you want to create the project folder and open Command Prompt.
+
+1. Enter the following command to create a new Teams app:
+
+    ``` bash
+    atk new
+    ```
+
+1. CLI provides you with a series of options to choose from. Use arrow keys to select an option. After you make the choice, select Enter to confirm.
+
+    1. Select **Message Extension** for **New Project**.
+    1. Select **Custom Search Results** for **App Features Using a Message Extension**.
+    1. Select **Start with a Bot** for **Architecture of Search Based Message Extension**.
+    1. Select **JavaScript** for **Programming Language**.
+    1. Select **Enter** to select the default workspace folder for your app.
+    1. Enter a suitable name for your app. The name of the app must consist only of alphanumeric characters.
+
+CLI creates the project after you answer all the questions.
+
+---
+
+#### Take a tour of the message extension app source code
+
+A message extension uses Bot Framework to interact with your service through a conversation. After scaffolding, view the project directories and files under **EXPLORER**.
+
+:::image type="content" source="../assets/images/toolkit-v2/first-msgext/folder-structure-mex-app.png" alt-text="Screenshot shows the files of the message extension app.":::
+
+| Folder / File | Contents |
+| --- | --- |
+| `m365agents.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stage. |
+| `m365agents.local.yml` | Overrides `m365agents.yml` with actions that enable local execution and debugging. |
+| `.vscode/` | Visual Studio Code files for local debug. |
+| `appPackage/` | Templates for the Teams application manifest. |
+| `infra/` | Templates for provisioning Azure resources. |
+| `index.js` | Application entry point and `express` handler. |
+
+> [!Tip]
+> Familiarize yourself with bots and message extension outside of Teams before you integrate your app within Teams.
+
+### Build and run your first message extension app
+
+After you set up your project workspace with Agents Toolkit, it's time to build your project. You need to sign in to your Microsoft 365 account.
+
+#### Sign in to your Microsoft 365 account
+
+Sign in with the admin account you created while joining the Microsoft 365 developer program.
+
+# [Visual Studio Code](#tab/vscode)
+
+1. Open Visual Studio Code.
+
+1. Select the Microsoft 365 Agents Toolkit  :::image type="icon" source="../assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the activity bar.
+
+1. Select **Sign in to Microsoft 365** using your credentials. Your default web browser opens to let you sign in.
+
+    :::image type="content" source="../assets/images/toolkit-v2/toolkit-sign-in-m365.png" alt-text="Screenshot shows where to sign in to Microsoft 365 and Azure.":::
+
+1. Close the browser after signing in using your credentials.
+
+1. Return to Agents Toolkit within Visual Studio Code.
+
+The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name. If custom app upload is enabled for your Microsoft 365 account, Agents Toolkit displays **Custom App Upload Enabled**.
+
+:::image type="content" source="../assets/images/toolkit-v2/first-tab/m365-uploading-enabled-msg.png" alt-text="Screenshot shows the user signed in to Microsoft 365 and the uploading enabled message.":::
+
+Now you're ready to build the app and run it locally!
+
+# [Command Line](#tab/cli)
+
+1. Go to the project folder of your message extension app and open Command Prompt.
+
+1. Sign in to Microsoft 365 with Microsoft 365 Agents Toolkit CLI (previously known as TeamsFx CLI) command:
+
+    ``` bash
+    atk account login m365
+    ```
+
+Your default web browser opens to let you sign in. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+
+---
+
+#### Build and run your app in the local environment
+
+Now you can build and debug your first Teams message extension app locally.
+
+##### Build and run your app locally
+
+1. Select the **F5** key in Visual Studio Code to run your application in debug mode.
+
+    > [!NOTE]
+    > If Agents Toolkit is unable to verify a particular prerequisite, it prompts you to check.
+
+    <br>
+    <details>
+    <summary>Learn what happens when you run your app locally in the debugger.</summary>
+
+    When you select **F5**, Agents Toolkit performs the following functions:
+
+    1. Checks the following prerequisites:
+
+        1. You're signed in with a Microsoft 365 account.
+        1. Custom app upload is enabled for your Microsoft 365 account.
+        1. Supported Node.js version is installed.
+        1. Port required by bot app is available.
+
+    2. Installs npm packages
+    3. Starts Dev Tunnel to create an HTTP tunnel.
+    4. Registers the app in Microsoft Entra ID and configures the app.
+    5. Registers the bot app in Bot Framework and configures the app.
+    6. Registers the app in Teams Developer Portal and configures the app.
+    7. Starts the message extension app hosted locally.
+    8. Starts Teams in a web browser and uploads the Teams app.
+
+    </details>
+
+    :::image type="content" source="../assets/images/toolkit-v2/first-msgext/f5-build-and-run-mex.png" alt-text="Screenshot shows the debug process of the message extension app." lightbox="../assets/images/toolkit-v2/first-msgext/f5-build-and-run-mex.png":::
+
+    When you debug the app for the first time, Teams downloads the dependencies and builds the app. This process can take 3 to 5 minutes to complete.
+
+1. Teams opens in a browser window when the build is complete. Sign in with your Microsoft 365 account, if prompted.
+
+1. A dialog box opens to let you add the message extension app to Teams. Select **Add**.
+
+    :::image type="content" source="../assets/images/toolkit-v2/first-msgext/add-mex-app-local-debug-latest.png" alt-text="Screenshot shows the option to add the custom app in Teams." lightbox="../assets/images/toolkit-v2/first-msgext/add-mex-app-local-debug.png":::
+
+    Teams loads the message extension app.
+
+    :::image type="content" source="../assets/images/toolkit-v2/first-msgext/app-added-mex-local-debug-2.png" alt-text="Screenshot shows the message extension app open in a Teams bot chat." lightbox="../assets/images/toolkit-v2/first-msgext/app-added-mex-local-debug-2.png":::
+
+    As message extension apps rely on bots for enabling communication between the user and the web service, your app loads in to a chat feature of a bot.
+
+    - If you created a bot app before you created the message extension app, Teams loads the message extension in the bot app you created. Previous chat messages of the bot app are visible.
+    - If you created a message extension first, Teams loads your app in the most recent chat that is open on Teams.
+
+#### Test your app
+
+The first time your app loads, the message extension app is open for you to test. This sample app lets you search open-source npm packages from the software registry.
+
+##### How to run a search query
+
+# [Message Extension](#tab/msgext)
+
+1. Enter the name of an open-source npm package in the search box of the message extension, such as **cli**. The message extension displays a list of the matching items.
+
+    :::image type="content" source="../assets/images/toolkit-v2/first-msgext/mex-search-string.png" alt-text="Screenshot shows a search string in the message extension app.":::
+
+1. Select one of the items from the list. The app creates an Adaptive Card with the item in the message compose area so you can send it in a chat or channel.
+
+    :::image type="content" source="../assets/images/toolkit-v2/first-msgext/mex-search-result.png" alt-text="Screenshot shows the search result in the message compose area.":::
+
+1. Select **Enter**. The message extension app sends the Adaptive Card with the item in the chat or channel.
+
+    :::image type="content" source="../assets/images/toolkit-v2/first-msgext/mex-search-sent.png" alt-text="Screenshot shows the search result sent in chat.":::
+
+# [Command Box](#tab/cmdbox)
+
+1. Enter **/** followed by your message extension app's name in the command box.
+
+    :::image type="content" source="../assets/images/toolkit-v2/first-msgext/mention-mex-app.png" alt-text="Screenshot shows how to invoke the message extension app.":::
+
+    The message extension app opens in the command box.
+
+1. Enter a name of an open-source npm package and select one of the search results.
+
+    :::image type="content" source="../assets/images/toolkit-v2/first-msgext/command-box-search.png" alt-text="Screenshot shows a search string in the command box.":::
+
+    The message extension displays the search result as an Adaptive Card in the command box.
+
+    :::image type="content" source="../assets/images/toolkit-v2/first-msgext/command-search-card.png" alt-text="Screenshot shows the search result as a card in the command box.":::
+
+1. Copy the Adaptive Card to paste it in the message compose area.
+
+    :::image type="content" source="../assets/images/toolkit-v2/first-msgext/command-search-card-send.png" alt-text="Screenshot shows search result in a card in the message compose area.":::
+
+1. Select **Enter**. The message extension app sends the Adaptive Card with the search result in the most recent chat.
+
+    :::image type="content" source="../assets/images/toolkit-v2/first-msgext/command-search-card-sent.png" alt-text="Screenshot shows the search result sent in a chat.":::
+
+---
+
+##### How to open your message extension app
+
+You tested the search feature of the message extension app in the previous step. Now, learn the different ways to open the message extension app.
+<br>
+<br>
+<details>
+<summary>Open your app from command box</summary>
+
+1. Enter **/** followed by your message extension app's name in the command box.
+
+    :::image type="content" source="../assets/images/toolkit-v2/first-msgext/mention-mex-app.png" alt-text="Screenshot shows how to invoke the message extension app.":::
+
+    The app opens in the command box and you can use it to run a query.
+
+    > [!NOTE]
+    > - Using **/** to open your message extension app from the command box only works in the new Teams client.
+    > - Use **@** to open your message extension app from the command box in the classic Teams client.
+
+</details>
+
+<br>
+<details>
+<summary>Open your app from message compose area</summary>
+
+1. Select the three dots at the bottom of the message compose area.
+
+1. Select your message extension app.
+
+    :::image type="content" source="../assets/images/toolkit-v2/first-msgext/three-dot-mex.png" alt-text="Screenshot shows how to open the message extension app from message compose area.":::
+
+    The message extension app loads with the options to run a search.
+
+</details>
+
+<br>
+<details>
+<summary>Open your app from uploaded custom apps</summary>
+
+1. Select **Apps** > **Manage your apps**.
+
+1. Select the dropdown for your app from the list of apps and select **Personal app**.
+
+    :::image type="content" source="../assets/images/toolkit-v2/first-msgext/uploaded-apps.png" alt-text="Screenshot shows the uploaded apps in Teams.":::
+
+1. A dialog box appears suggesting you to try out your app. If you select **Got it**, the dialog box disappears. Select **Try it**.
+
+    :::image type="content" source="../assets/images/toolkit-v2/first-msgext/mex-try-it.png" alt-text="Screenshot shows the message to try the message extension app now or later.":::
+
+1. A list of your message extension apps appears in your most recent Teams chat. Select your message extension app from the list.
+
+</details>
+
+#### Learn how to troubleshoot if your app doesn't run locally
+
+To run your app in Teams, you must have a Microsoft 365 development account that allows custom app upload. You can learn more about custom app upload in the Prerequisites section.
+
+## Deploy your first Teams app
+
+Let's deploy your first message extension app on Azure using Agents Toolkit.
+
+### Sign in to your Azure account
+
+Sign in to your Azure account to access the Microsoft Azure portal and provision new cloud resources to support your app.
+
+# [Visual Studio Code](#tab/vscode)
+
+1. Open Visual Studio Code.
+
+1. Open the project folder in which you created the message extension app.
+
+1. Select the Microsoft 365 Agents Toolkit  :::image type="icon" source="../assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the activity bar.
+
+1. Select **Sign in to Azure** using your credentials. Your default web browser opens to let you sign in.
+
+    > [!TIP]
+    > If you have the AZURE ACCOUNT extension installed and are using the same account, you can skip this step.
+
+1. Close the browser when prompted and return to Visual Studio Code.
+
+The **ACCOUNTS** section of the sidebar lists the number of usable Azure subscriptions available to you. Ensure that you have at least one usable Azure subscription available. If not, sign out and use a different account.
+
+# [Command Line](#tab/cli)
+
+1. Go to the project folder of your message extension app and open Command Prompt.
+
+1. Sign in to Azure with Agents Toolkit CLI command:
+
+    ``` bash
+    atk account login azure
+    ```
+
+1. Your default web browser opens to let you sign in. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+
+Now, let's learn how to deploy the app to Azure using Agents Toolkit.
+
+---
+
+### Deploy your app to Azure
+
+Deployment consists of two steps. First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. You deploy the message extension app in this tutorial.
+<br>
+<br>
+<details>
+<summary>What's the difference between <b>Provision</b> and <b>Deploy</b>?</summary>
+<br>
+The <b>Provision</b> step creates resources in Azure and Microsoft 365 for your app, but no code (such as HTML, CSS, or JavaScript) is copied to the resources. The <b>Deploy</b> step copies the code for your app to the resources you created during the provision step. It's common to deploy multiple times without provisioning new resources. Since the provision step takes some time to complete, it's separate from the deployment step.
+</details>
+<br>
+
+# [Visual Studio Code](#tab/vscode)
+
+Select the Microsoft 365 Agents Toolkit :::image type="icon" source="../assets/images/toolkit-v2/toolkit-sidebar-icon.png"::: icon in the Visual Studio Code activity bar.
+
+1. Select **Provision**.
+
+   :::image type="content" source="../assets/images/toolkit-v2/provisioning-commands.png" alt-text="Screenshot shows the selection of provision in the cloud under Agents toolkit.":::
+
+1. Select a subscription.
+
+   :::image type="content" source="../assets/images/toolkit-v2/select-azure-subscription-group.png" alt-text="Screenshot shows the Azure subscription group options to choose from.":::
+
+1. Select a resource group.
+
+   :::image type="content" source="../assets/images/toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot shows the subscription to use for the Azure resources.":::
+
+   If you don't have a resource group to select, you can create a new resource group with the following steps:
+
+   1. Select **+ New resource group**.
+
+      :::image type="content" source="../assets/images/toolkit-v2/first-msgext/select-resource-new-resource.png" alt-text="Screenshot shows the option to create a new Azure resource group.":::
+
+   1. Select the default name or enter a suitable name for your resource group.
+
+      :::image type="content" source="../assets/images/toolkit-v2/first-msgext/new-resource-group-name.png" alt-text="Screenshot shows the default name of the new Azure resource group.":::
+
+   1. Select the location for your resource group.
+
+      :::image type="content" source="../assets/images/toolkit-v2/first-msgext/new-resource-group-location.png" alt-text="Screenshot shows the options for the location of the new Azure resource group.":::
+
+1. A dialog box warns you that costs might be incurred when running resources in Azure. Select **Provision**.
+
+   :::image type="content" source="../assets/images/toolkit-v2/deploy-azure/provision-warning.png" alt-text="Screenshot shows a dialog box that warns the user that a cost might be incurred while provisioning Azure resources.":::
+
+   The provisioning process creates resources in the Azure cloud. It might take some time. After a few minutes, you see the following message:
+
+   :::image type="content" source="../assets/images/toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Screenshot shows a notice that displays the message extension app successfully provisioned in the cloud.":::
+
+   If you want, you can view the provisioned resources. For this tutorial, you don't need to view resources.
+
+   The provisioned resource appears under **ENVIRONMENT**.
+
+   :::image type="content" source="../assets/images/toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="Screenshot shows the resource being provisioned in the environment section.":::
+
+1. Under **LIFECYCLE**, select **Deploy**.
+
+   :::image type="content" source="../assets/images/toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="Screenshot shows the app deploys to the cloud.":::
+
+1. A dialog box appears that asks you if you want to deploy resources in the dev environment. Select **Deploy**.
+
+   :::image type="content" source="../assets/images/toolkit-v2/deploy-azure/deploy-azure-confirm.png" alt-text="Screenshot shows the confirmation dialog box to deploy app in Azure.":::
+
+   As with provisioning, deployment takes some time. After a few minutes, you see a completion message.
+
+# [Command Line](#tab/cli)
+
+1. Go to the folder where you created your message extension app and open Command Prompt.
+
+1. Run `atk provision`.
+
+   ``` bash
+   atk provision
+   ```
+
+   When prompted, select an Azure subscription and resource group to use Azure resources. Your app is hosted using Azure resources.
+
+1. Run `atk deploy`.
+
+   ``` bash
+   atk deploy
+   ```
+
+   Your message extension app is deployed.
+
+---
+
+### Run the deployed app
+
+After the provisioning and deployment steps are complete, go to **Run and Debug** (**Ctrl+Shift+D** or **View > Run**) in Agents Toolkit.
+
+1. Select the **RUN AND DEBUG** dropdown menu.
+1. Select **Launch Remote in Teams (Edge)**.
+1. Select the **▷** button.
+
+   :::image type="content" source="../assets/images/toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot shows the launch app remotely in Teams option.":::
+
+1. A dialog box opens to install your deployed app to Teams. Select **Add**.
+
+   :::image type="content" source="../assets/images/toolkit-v2/deploy-azure/mex-added-dev.png" alt-text="Screenshot shows message to add the deployed app.":::
+
+   Teams opens the message extension app in the most recent chat.
+
+   :::image type="content" source="../assets/images/toolkit-v2/first-msgext/mex-loaded-chat-app.png" alt-text="Screenshot shows the message extension open in a chat.":::
+
+#### Learn what happens when you deployed your app to Azure
+
+Before deployment, the app runs locally.
+
+- The backend runs using Azure Functions Core Tools.
+- The application HTTP endpoint, where Microsoft Teams loads the application, runs locally.
+
+Deployment is a two-step process. You provision the resources on an active Azure subscription and then deploy or upload the backend and frontend code of the app to Azure.
+
+- The backend, if configured, uses various Azure services including Azure App Service and Azure Storage.
+- The frontend app is deployed to an Azure Storage account configured for static web hosting.
+
+### Congratulations
+
+You completed the tutorial to build a message extension app with JavaScript!
+
+Did you come up with something like this?
+
+:::image type="content" source="../assets/images/toolkit-v2/first-msgext/app-added-mex-local-debug.png" alt-text="Screenshot shows the final output of the message extension app in Teams." lightbox="../assets/images/toolkit-v2/first-msgext/app-added-mex-local-debug.png":::
+
+> [!div class="nextstepaction"]
+> [Build a message extension app](build-message-extension.md)
+
+</details>
+
+[Tutorials](#tutorials)
+
 ## Build your first tab app using C sharp
 
 Start Microsoft Teams app development by building your first Teams app with a tab capability.
@@ -1711,7 +3267,7 @@ To build and run your app locally:
 
 Alternatively, you can either search and select the required scope or select a channel or chat from the list, and move through the dialog to select **Go**.
 
-   :::image type="content" source="../assets/images/sbs-csharp/add-scope.png" alt-text="Screenshot of the scope selection dialog with the list of shared scopes.":::
+   :::image type="content" source="../assets/images/sbs-csharp/add-scope.png" alt-text="Screenshot displays the scope selection dialog with the list of shared scopes.":::
 
 Congratulations, your first tab app is running on Teams!
 
@@ -2263,7 +3819,7 @@ The window shows the HTTPS URL.
 
 To build and run the service, use Visual Studio or Command line.
 
-# [Visual Studio](#tab/vs2019)
+# [Visual Studio](#tab/vscode)
 
 1. Open Visual Studio.
 1. Select **File** > **Open** > **Project/Solution...*
