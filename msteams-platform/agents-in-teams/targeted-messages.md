@@ -52,7 +52,7 @@ Targeted messages come with the following benefits for enhancing user experience
 
 [WIP: Placeholder image]
 
-:::image type="content" source="../assets/images/agents-in-teams/targeted-messages/image-48.png" alt-text="Image shows user scenarios for targeted messages" border="false":::
+:::image type="content" source="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png" alt-text="Image shows user scenarios for targeted messages" border="false":::
 
 Some common use cases include:
 
