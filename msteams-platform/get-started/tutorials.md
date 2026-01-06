@@ -313,7 +313,7 @@ Congratulations! You've successfully created an AI chat bot app. Now, you've lea
 
 </details>
 
-[Tutorials](#tutorials)
+[Back to top](#tutorials)
 
 ## Send proactive messages
 
@@ -659,7 +659,7 @@ You've completed the scenario.
 
 </details>
 
-[Tutorials](#tutorials)
+[Back to top](#tutorials)
 
 ## Build API-based message extension
 
@@ -1237,7 +1237,7 @@ You learned to create an API-based message extension using OpenAPI Description d
 
 </details>
 
-[Tutorials](#tutorials)
+[Back to top](#tutorials)
 
 ## Build action-based message extension
 
@@ -1834,7 +1834,7 @@ You've completed the tutorial to get started with a **Action Message Extension**
 
 </details>
 
-[Tutorials](#tutorials)
+[Back to top](#tutorials)
 
 ## Build a bot with SSO authentication
 
@@ -2485,7 +2485,7 @@ You've completed the tutorial to get started with build a bot with SSO authentic
 
 </details>
 
-[Tutorials](#tutorials)
+[Back to top](#tutorials)
 
 ## Build your first message extension app using JavaScript
 
@@ -3098,7 +3098,7 @@ Did you come up with something like this?
 
 </details>
 
-[Tutorials](#tutorials)
+[Back to top](#tutorials)
 
 ## Build your first tab app using C sharp
 
@@ -3289,7 +3289,7 @@ You've successfully created a tab app using C#. Agents Toolkit has added the nec
 
 </details>
 
-[Tutorials](#tutorials)
+[Back to top](#tutorials)
 
 ## Add SSO to tab and message extension app
 
@@ -3939,4 +3939,4 @@ You've completed the tutorial to get started with SSO for tab and message extens
 
 </details>
 
-[Tutorials](#tutorials)
+[Back to top](#tutorials)
