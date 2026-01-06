@@ -2,7 +2,7 @@
 title: Create SaaS Offer for Teams App
 description: Learn how to plan, create, and configure a SaaS offer. Know the basic information on technical requirements, landing page, offer plan, and API integrations.
 author: heath-hamilton
-ms.author: surbhigupta
+ms.author: vikasalmal
 ms.topic: how-to
 ms.localizationpriority: high
 ms.date: 11/26/2024
