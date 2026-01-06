@@ -1,9 +1,9 @@
 ---
 title: Developer Community Support & Feedback
-description: Learn about the developer community, get help, raise issues, and ask general questions. This includes SDK and samples queries, documentation feedback, and feature requests.
+description: Learn about the developer community, get help, raise issues, and ask general questions. Know more about building agents, ask queries, give documentation feedback, and check feature requests.
 ms.localizationpriority: medium
 ms.topic: reference
-ms.date: 12/23/2025
+ms.date: 01/06/2026
 ---
 
 # Support and feedback
@@ -21,11 +21,11 @@ Go to the [**Azure portal**](https://ms.portal.azure.com/#home) or [**Microsoft 
 
 ## Developer community forums
 
-Developers in the Teams community use Microsoft Q&A, GitHub, Tech Community,  and Stack Overflow to share ideas, get help, report issues, and ask general questions.
+Developers in the Teams community use Microsoft Q&A, GitHub, Tech Community, and Stack Overflow to share ideas, get help, report issues, and ask general questions.
 
 📢 Read the latest [announcements](https://github.com/MicrosoftDocs/msteams-docs/discussions/categories/announcements) and join the conversation with community members and platform engineers!
 
-Connect with the developer community across forums to ask questions, share solutions, and collaborate on Teams agent and app development. You can also ask questions on building bots, agents, and conversational apps using the Bot Framework SDK. To learn more, see [agents in Teams](agents-in-teams/overview.md).
+Connect with the developer community across forums to ask questions, share solutions, and collaborate on building agents and conversational experiences for Microsoft Teams. You can also explore discussions on agent design, extensibility, and the best practices for creating effective Teams and Microsoft 365 Copilot agents. To learn more, see [agents in Teams](agents-in-teams/overview.md).
 
 | **Community Forums**| **Ways to connect** |
 |:--------------------|:--------------------|
@@ -61,7 +61,7 @@ Share feature ideas, ask questions, or talk to us about your experience with the
 | **Community channel** | **How to contact** |
 |:----------------------|:------------|
 | **Features suggestions** | Post new feature suggestions or vote up existing ones on the :::image type="icon" source="assets/icons/Teams-icon.png"::: [Microsoft Teams feedback portal](https://feedbackportal.microsoft.com/feedback/forum/ad198462-1c1c-ec11-b6e7-0022481f8472). |
-| **General questions** | For general questions about the Teams developer platform, [contact here](mailto:microsoftteamsdev@microsoft.com). We recommend using the community channels listed here first and email only when when other options are not suitable. |
+| **General questions** | For general questions about the Teams developer platform, [contact here](mailto:microsoftteamsdev@microsoft.com). We recommend using the community channels listed here first and email only when when other options aren't suitable. |
 | **Feedback interview** | Your feedback is valuable. If you're interested to share your experience with our documentation, community responses, or Teams Store publishing process, feel free to [book a slot](https://aka.ms/bookdevfeedback).|
 
 ## See also
