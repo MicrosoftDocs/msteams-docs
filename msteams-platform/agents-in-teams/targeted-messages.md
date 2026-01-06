@@ -83,7 +83,7 @@ Key steps for enabling targeted messages:
     - The conversation (chat or channel) ID and targeted user’s ID (Principal ID or MRI). It identifies where the message goes and who should see it.
     - A flag or API call that marks the message as targeted or ephemeral.
 
-        - **For REST APIs**: The exact URL varies by region. Use the service URL from the conversation. The `userId` is the user’s Teams ID (MRI) to target, and `conversationId` is the group chat or channel thread ID. The payload of the POST is the activity or message to send, just like a normal message activity.
+        - **For REST APIs**: The exact URL varies by region. Use the service URL from the conversation. The `userId` is the user’s Teams ID (MRI) to target, and `conversationId` is the group chat or channel thread ID. The payload of the POST is the activity or message to send, just like a normal message activity. For more information, see [REST APIs](#use-rest-apis).
         - **For Teams SDK**: [WIP - details to be added]
 
 1. **Handle send results and fallbacks**:
@@ -107,7 +107,7 @@ Key steps for enabling targeted messages:
 
     Microsoft Graph exposes targeted messaging support. For instance, Graph API for Teams chat messages might include a property to send a message to specific users or a new endpoint for targeted messages. It allows workflows or external apps to create targeted messages.
 
-## REST APIs
+## Use REST APIs
 
 Use the following REST APIs to use targeted messages in your agent or app.
 
