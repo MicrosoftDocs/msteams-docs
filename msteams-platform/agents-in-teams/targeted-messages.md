@@ -110,9 +110,9 @@ Key steps for enabling targeted messages:
 
     Microsoft Graph exposes targeted messaging support. For instance, Graph API for Teams chat messages might include a property to send a message to specific users or a new endpoint for targeted messages. It allows workflows or external apps to create targeted messages.
 
-## Enable targeted messages through REST API
+## Use REST API
 
-Use the following REST APIs to use targeted messages in your agent or app.
+Use the following to enable targeted messages in your agent or app.
 
 :::row:::
     :::column:::
