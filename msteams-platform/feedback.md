@@ -21,11 +21,11 @@ Go to the [**Azure portal**](https://ms.portal.azure.com/#home) or [**Microsoft 
 
 ## Developer community forums
 
+Connect with the developer community across forums to ask questions, share solutions, and collaborate on building agents and conversational experiences for Microsoft Teams. You can also explore discussions on agent design, extensibility, and the best practices for creating effective Teams and Microsoft 365 Copilot agents. To learn more, see [agents in Teams](agents-in-teams/overview.md).
+
 Developers in the Teams community use Microsoft Q&A, GitHub, Tech Community, and Stack Overflow to share ideas, get help, report issues, and ask general questions.
 
 📢 Read the latest [announcements](https://github.com/MicrosoftDocs/msteams-docs/discussions/categories/announcements) and join the conversation with community members and platform engineers!
-
-Connect with the developer community across forums to ask questions, share solutions, and collaborate on building agents and conversational experiences for Microsoft Teams. You can also explore discussions on agent design, extensibility, and the best practices for creating effective Teams and Microsoft 365 Copilot agents. To learn more, see [agents in Teams](agents-in-teams/overview.md).
 
 | **Community Forums**| **Ways to connect** |
 |:--------------------|:--------------------|
@@ -51,7 +51,7 @@ Use the community help channels to submit documentation issues, feedback, or upd
 
 | **Community help channels** | **How to contact** |
 |:--------------------------|:--------------------------|
-| **Documentation issues** | Go to the footer of the article and select **Open a documentation issue** in the **Platform Docs feedback** section.<br/><br/>:::image type="content" source="assets/images/platform-docs-feedback.png" alt-text="Screenshot shows the option to open a documentation issue for platform docs."::: <br><br/> You can also rate whether the article was helpful by choosing **Yes** or **No** under the **Was this page helpful?** section in the upper-right corner. Tell us what you liked or didn't and submit your valuable feedback.|
+| **Documentation issues** | Go to the footer of the article and select **Open a documentation issue** in the **Platform Docs feedback** section.<br/><br/>:::image type="content" source="assets/images/platform-docs-feedback.png" alt-text="Screenshot shows the option to open a documentation issue for platform docs."::: <br><br/> You can also rate the article under **Was this page helpful?**  at the top-right corner by selecting **Yes** or **No**, and share what worked well or what could be improved.|
 |**Documentation updates**| Select **Edit** at the top right of the article you want to update, and submit a pull request to the :::image type="icon" source="assets/icons/GitHub-icon.png"::: [Microsoft Teams documentation GitHub](https://github.com/MicrosoftDocs/msteams-docs) repository. <br /> :::image type="content" source="assets/images/community-feedback-edit.png" alt-text="edit option":::|
 
 ### Feature request and general help
