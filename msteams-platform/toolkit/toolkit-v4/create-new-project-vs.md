@@ -9,7 +9,7 @@ ms.date: 03/14/2022
 ---
 # Create a new Microsoft Teams project using Microsoft Teams Toolkit
 
-You can create Teams apps in Visual Studio using the app templates. You can search and select any of the following Teams template to create a new app.
+You can create Teams apps in Visual Studio using the app templates. You can search and select any of the following Teams templates to create a new app.
 
 * Bot
 * Tab
@@ -22,11 +22,11 @@ You can create Teams apps in Visual Studio using the app templates. You can sear
 | &nbsp; | Visual Studio latest version | Install the latest enterprise edition of Visual Studio, and select the **ASP.NET and web development** workload and **Microsoft Teams Development Tools** for installation. |
 | &nbsp; | Teams Toolkit | A Visual Studio workload that creates a project scaffolding for your app. Use the latest version. |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to upload your Teams app into local Teams environment for testing app behavior. |
- | &nbsp; | [Prepare your Microsoft 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md) | Access to Microsoft 365 account with the appropriate permissions to install an app. |
+| &nbsp; | [Prepare your Microsoft 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md) | Access to Microsoft 365 account with the appropriate permissions to install an app. |
 
 ## Create a new Teams app
 
-To create a new Teams app, follow the steps:  
+To create a new Teams app, follow these steps:  
 
 1. Open **Visual Studio**.
 1. Create a new app by using one of the following two options:
@@ -72,17 +72,17 @@ To create a new Teams app, follow the steps:
 
    :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/create-new-app-vs.png" alt-text="Screenshot shows the selection of teams app type." lightbox="../../assets/images/toolkit-v2/toolkit-vs/create-new-app-vs.png":::
 
-   The **README.md** tab appears. You can see the instructions in **README** window and check out the different features in Teams Toolkit.
+   The **README.md** tab appears. You can see the instructions in the **README** window and check out the different features in Teams Toolkit.
 
    :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/get-started-vs.png" alt-text="Screenshot shows the Getting Started Agents toolkit page." lightbox="../../assets/images/toolkit-v2/toolkit-vs/get-started-tab-vs.png":::
 
 You have created the app project scaffolding for your Teams app using Teams Toolkit template.
 
-The steps to create the other apps are similar except notification bot.
+The steps to create the other apps are similar except for the notification bot.
 
 ### Directory Structure
 
-Teams Toolkit provides all components for building an app. After you're created the project, you can view the project folders and files under **Solution Explorer**.
+Teams Toolkit provides all components for building an app. After you've created the project, you can view the project folders and files under **Solution Explorer**.
 
 * Directory structure for a basic Teams app
 
