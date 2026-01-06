@@ -2,7 +2,7 @@
 title: CI/CD templates
 author: MuyangAmigo
 description: Learn how to use CI/CD pipeline templates in GitHub, set up pipeline with Azure DevOps, and Jenkins for Teams Application Developers CI/CD templates.
-ms.author: surbhigupta
+ms.author: vikasalmal
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 02/06/2025
@@ -10,39 +10,39 @@ ms.date: 02/06/2025
 
 # Set up CI/CD pipelines
 
-You can set up a Continuous Integration and Continuous Deployment (CI/CD) pipeline for Microsoft Teams apps created with Microsoft 365 Agents Toolkit (previously known as Teams Toolkit). A Teams app CI/CD pipeline consists of three parts:
+You can establish a Continuous Integration and Continuous Deployment (CI/CD) pipeline for Microsoft Teams apps created with Microsoft 365 Agents Toolkit (formerly known as Teams Toolkit). A Teams app CI/CD pipeline consists of three components:
 
 1. Build the project.
 
 1. Deploy the project to cloud resources.
 
-1. Generate Teams app package.
+1. Generate the Teams app package.
 
 > [!NOTE]
-> To create a pipeline for a Teams app, it's required to prepare the necessary cloud resources, such as Azure Web App, Azure Functions, or Azure Static Web App, and configure the app settings.
+> To create a pipeline for a Teams app, you must prepare the necessary cloud resources, such as Azure Web App, Azure Functions, or Azure Static Web App, and configure the app settings.
 
-To build the project, you must compile the source code and create the required deployment artifacts. There are two methods to deploy the artifacts:
+To build the project, you need to compile the source code and create the required deployment artifacts. There are two methods to deploy the artifacts:
 
-* [Set up CI/CD pipelines](#set-up-cicd-pipelines-with-agents-toolkit-cli) with Microsoft 365 Agents Toolkit CLI(previously known as Teams Toolkit CLI). *[Recommended]*
+* [Set up CI/CD pipelines](#set-up-cicd-pipelines-with-agents-toolkit-cli) with Microsoft 365 Agents Toolkit CLI (formerly known as Teams Toolkit CLI). *[Recommended]*
 
 * [Set up CI/CD pipelines using your own workflow](#set-up-cicd-pipelines-using-your-own-workflow). *[Optional]*
 
 ## Set up CI/CD pipelines with Agents Toolkit CLI
 
 > [!NOTE]
-> Use Agents Toolkit version 5.6.0 or a later.
+> Use Agents Toolkit version 5.6.0 or later.
 
-You can use [Agents Toolkit command line interface (CLI)](Teams-Toolkit-CLI.md) to set up CI/CD pipeline for your Teams app.
+You can use the [Agents Toolkit command line interface (CLI)](Teams-Toolkit-CLI.md) to set up a CI/CD pipeline for your Teams app.
 
 ### Prerequisites
 
 | **Item** | **Description** |
 | --- | --- |
-| Set up required resources for your Teams app, such as Teams app ID, bot ID, and so on. | • Manually extract the resources from the `manifest.json` file under the `appPackage` folder. <br> • Automatically generate to run the `Provision` command in Agents Toolkit. |
+| Set up required resources for your Teams app, such as Teams app ID, bot ID, and so on. | • Manually extract the resources from the `manifest.json` file under the `appPackage` folder. <br> • Automatically generate by running the `Provision` command in Agents Toolkit. |
 | Configure Azure resources |• Manually prepare the resources by examining the bicep files under the `infra` folder. <br> • Automatically prepare the resources using the `Provision` command in Teams Toolkit.|
 | Ensure you've a properly configured service principal with appropriate access policies on resources. | The `atk` command-line interface (CLI) supports Azure login through certificate-based authentication or password-based authentication (application secret). You can either [create a service principal with certificate-based authentication](/cli/azure/azure-cli-sp-tutorial-3) and save the generated certificate, `appId` (client ID) and `tenant` (tenant ID) or [create a secret](/entra/identity-platform/howto-create-service-principal-portal) and save the client ID, client secret, and tenant ID of the service principal. <br> :::image type="content" source="../assets/images/toolkit-v2/service-principal.png" alt-text="Screenshot shows the service principal secret."::: <br> For more information about service principal, see: <br> • [Create service principal using Entra portal](/entra/identity-platform/howto-create-service-principal-portal). <br> • [Create service principal using Azure CLI](/cli/azure/azure-cli-sp-tutorial-1?tabs=bash). |
 
-After you've completed the prerequisites, let's set up a pipeline:
+After you've completed the prerequisites, proceed to set up a pipeline:
 
 * [Set up pipeline with GitHub](#set-up-pipeline-with-github).
 
@@ -54,7 +54,7 @@ To set up the pipeline with GitHub, follow these steps:
 
 1. Open Visual Studio Code.
 
-1. Create a `cd.yml` file in your project under `.github/workflows` folder and add the following code in the file:
+1. Create a `cd.yml` file in your project under the `.github/workflows` folder and add the following code in the file:
    # [Certificate-based authentication](#tab/certificate)
     ```yaml
     on:
@@ -161,7 +161,7 @@ To set up the pipeline with GitHub, follow these steps:
     ```
     
     > [!NOTE]
-    > The default pipeline triggers when push events occur on the main branch. You've the option to modify it to suit your specific requirements.
+    > The default pipeline triggers when push events occur on the main branch. You have the option to modify it to suit your specific requirements.
 
 1. Go to GitHub.
 
@@ -197,7 +197,7 @@ To set up the pipeline with GitHub, follow these steps:
 
       :::image type="content" source="../assets/images/toolkit-v2/manifest.png" alt-text="Screenshot shows the Teams app ID in manifest file.":::
 
-1. In the GitHub, navigate to your repository’s **Settings** and select **Secrets and variables** > **Actions**.
+1. In GitHub, navigate to your repository’s **Settings** and select **Secrets and variables** > **Actions**.
 
     Update the variable keys that you've gathered for the following variables:
 
@@ -217,10 +217,10 @@ To set up the pipeline with GitHub, follow these steps:
 
 1. Run the pipeline.
 
-    Push code to the repo to trigger pipeline.
+    Push code to the repo to trigger the pipeline.
 
     > [!NOTE]
-    > You don't need to commit env files under env folder to the repo. The env variables required for executing the CI/CD pipeline are already set in the repo variables.
+    > You don't need to commit env files under the env folder to the repo. The env variables required for executing the CI/CD pipeline are already set in the repo variables.
 
     After the pipeline executes successfully, the log displays that the code is deployed to Azure and the `appPackage` is generated in the artifacts.
 
@@ -390,10 +390,10 @@ To set up the pipeline with Azure DevOps, follow these steps:
 
 1. Run the pipeline.
 
-    Push code to the repo to trigger pipeline.
+    Push code to the repo to trigger the pipeline.
 
     > [!NOTE]
-    > There's no need to commit env files under env/ folder to the repo. The env variables required for executing the CI/CD pipeline are already established in the pipeline variables.
+    > There's no need to commit env files under the env/ folder to the repo. The env variables required for executing the CI/CD pipeline are already established in the pipeline variables.
 
     After the pipeline executes successfully, the log displays that the code is deployed to Azure and the `appPackage` is generated in the artifacts.
 
@@ -406,6 +406,7 @@ To set up the pipeline with Azure DevOps, follow these steps:
 If Agents Toolkit CLI doesn't meet your pipeline requirements, you can develop a custom deployment process that suits your needs. This section provides guidance on deploying to Azure with custom methods.
 
 > [!NOTE]
+
 > If you already have a complete CI/CD pipeline for deploying to your Azure resource, and your Teams app needs to read environment variables during runtime, configure these environment variables in the settings of your Azure resource. For post-deployment testing, see [generate Teams app package](#generate-teams-app-package).
 
 The `atk deploy` command executes the actions defined in the `deploy` stage of the `m365agents.yml` file. The `deploy` stage consists of `build` and `deploy` actions. To create a custom deployment method, rewrite these actions based on your specific requirements and preferences.
