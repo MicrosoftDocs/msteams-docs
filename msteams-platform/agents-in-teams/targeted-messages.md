@@ -36,6 +36,15 @@ Some common user scenarios include:
 | Welcome and onboarding | Sending welcome messages or onboarding help to new members | Avoid unnecessary repetition of such information every time a new user joins |
 | AI or Copilot summary | Sharing discussion summary for long-running chats for a new participant | Avoid derailing ongoing discussion because of the summary |
 
+### Targeted message user experience
+
+Key aspects of the user experience include:
+
+- The messages appear in context where the triggering action occurred.
+- Only the intended user can see the message. Other group or channel members are unaware of the messages sent. The agent messages or responses appear to that user with the label **Only you can see this message** tagged on them.
+- The message disappears after 24 hours from the client UI.
+- The message doesn't impede or spam the ongoing conversation while still supporting the user effectively.
+
 Targeted messages come with the following benefits for enhancing user experience:
 
 - **Reduce chat noise**: <br>
@@ -55,15 +64,6 @@ Targeted messages come with the following benefits for enhancing user experience
 
 - **Ephemeral messages**: <br>
     The targeted message isn't retained in the chat indefinitely. They're cleared after 24 hours to keep the conversation clean. However, your agent retains them in the backend storage for compliance as needed.
-
-### Targeted message user experience
-
-Key aspects of the user experience include:
-
-- The messages appear in context where the triggering action occurred.
-- Only the intended user can see the message. Other group or channel members are unaware of the messages sent. The agent messages or responses appear to that user with the label **Only you can see this message** tagged on them.
-- The message disappears after 24 hours from the client UI.
-- The message doesn't impede or spam the ongoing conversation while still supporting the user effectively.
 
 ## Targeted message developer experience
 
