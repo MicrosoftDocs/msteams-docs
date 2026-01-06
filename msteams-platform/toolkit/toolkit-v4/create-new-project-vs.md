@@ -76,7 +76,7 @@ To create a new Teams app, follow these steps:
 
    :::image type="content" source="../../assets/images/toolkit-v2/toolkit-vs/get-started-vs.png" alt-text="Screenshot shows the Getting Started Agents toolkit page." lightbox="../../assets/images/toolkit-v2/toolkit-vs/get-started-tab-vs.png":::
 
-You have created the app project scaffolding for your Teams app using the Teams Toolkit template.
+You have created the app project scaffolding for your Teams app using Teams Toolkit template.
 
 The steps to create the other apps are similar except for the notification bot.
 
