@@ -21,7 +21,7 @@ Even though targeted messages are contextually relevant, they're best suited for
 
 ## Targeted messages user experience
 
-A targeted message is an immediate, relevant, and private agent-to-user communication. From a single user's perspective, it appears as regular inline messages in a conversation. However, it's visible only to them and exist only for a short duration. Agents initiate targeted messages in response to a user action. Key aspects of the user experience include:
+A targeted message is an immediate, relevant, and private agent-to-user communication. gents initiate targeted messages in response to a user action. From a single user's perspective, it appears as regular inline messages in a conversation. However, it's visible only to them and exists only for a short duration. A Key aspects of the user experience include:
 
 - The messages appear in context where the triggering action occurred.
 - Only the intended user can see the message. Other group or channel members are unaware of the messages sent. The agent messages or responses appear to that user with the label **Only you can see this message** tagged on them.
@@ -83,8 +83,8 @@ Key steps for enabling targeted messages:
     - The conversation (chat or channel) ID and targeted user’s ID (Principal ID or MRI). It identifies where the message goes and who should see it.
     - A flag or API call that marks the message as targeted or ephemeral.
 
-        - **For REST APIs**: The exact URL varies by region. Use the service URL from the conversation. The `userId` is the user’s Teams ID (MRI) to target, and `conversationId` is the group chat or channel thread ID. The payload of the POST is the activity or message to send, just like a normal message activity. For more information, see [REST APIs](#use-rest-apis).
         - **For Teams SDK**: [WIP - details to be added]
+        - **For REST APIs**: The exact URL varies by region. Use the service URL from the conversation. The `userId` is the user’s Teams ID (MRI) to target, and `conversationId` is the group chat or channel thread ID. The payload of the POST is the activity or message to send, just like a normal message activity. For more information, see [REST APIs](#use-rest-apis).
 
 1. **Handle send results and fallbacks**:
 
