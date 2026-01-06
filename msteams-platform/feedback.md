@@ -61,9 +61,12 @@ Share feature ideas, ask questions, or talk to us about your experience with the
 | **Community channel** | **How to contact** |
 |:----------------------|:------------|
 | **Features suggestions** | Post new feature suggestions or vote up existing ones on the :::image type="icon" source="assets/icons/Teams-icon.png"::: [Microsoft Teams feedback portal](https://feedbackportal.microsoft.com/feedback/forum/ad198462-1c1c-ec11-b6e7-0022481f8472). |
-| **General questions** | For general questions about the Teams developer platform, [contact here](mailto:microsoftteamsdev@microsoft.com). We recommend using the community channels listed here first and email only when when other options aren't suitable. |
+| **General questions** | For general questions about the Teams developer platform, [contact here](mailto:microsoftteamsdev@microsoft.com). We recommend using the community channels listed in this article first and email only when when other options aren't suitable. |
 | **Feedback interview** | Your feedback is valuable. If you're interested to share your experience with our documentation, community responses, or Teams Store publishing process, feel free to [book a slot](https://aka.ms/bookdevfeedback).|
 
 ## See also
 
 [TeamsJS library reference](/javascript/api/overview/msteams-client)
+[Teams AI library](https://developer.microsoft.com/en-us/microsoft-365/copilot)
+[Microsoft 365 Copilot extensibility overview](/microsoft-365-copilot/extensibility/overview)
+[Build conversational apps with the Bot Framework SDK](/azure/bot-service/?view=azure-bot-service-4.0)
