@@ -86,18 +86,6 @@ Key steps for enabling targeted messages:
         - **For REST APIs**: The exact URL varies by region. Use the service URL from the conversation. The `userId` is the user’s Teams ID (MRI) to target, and `conversationId` is the group chat or channel thread ID. The payload of the POST is the activity or message to send, just like a normal message activity.
         - **For Teams SDK**: [WIP - details to be added]
 
-    The following code snippet is an example of a scenario where the agent uses targeted message to inform a group member when they submit their vote in a group poll:
-
-    ```rest
-    POST /v3/users/29:.../conversations/19:.../targetedactivities
-    {
-        "type": "message",
-        "text": "Thank you, your vote has been recorded.",
-        "replyToId": "<id of user's command>",
-        ... (recipient = user, etc.)
-    }
-    ```
-
 1. **Handle send results and fallbacks**:
 
     After the agent calls the targeted `send` API, the API returns a success or error:
