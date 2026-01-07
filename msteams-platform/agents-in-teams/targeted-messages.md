@@ -38,7 +38,7 @@ Some common user scenarios include:
 | Welcome and onboarding | Sending welcome messages or onboarding help to new members | Avoid unnecessary repetition of such information every time a new user joins |
 | AI or Copilot summary | Sharing discussion summary for long-running chats for a new participant | Avoid derailing ongoing discussion because of the summary |
 
-### Targeted message user experience
+## Targeted message user experience
 
 Key aspects of the user experience include:
 
