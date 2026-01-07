@@ -96,9 +96,9 @@ Key steps for enabling targeted messages:
            DELETE {cloud}/v3/conversations/{conversationld}/activities/{activityld}?isTargetedActivity=true
         ```
 
-### Use Graph API**
+### Use Graph API
 
-Microsoft Graph exposes targeted messaging support. For instance, Graph API for Teams chat messages might include a property to send a message to specific users or a new endpoint for targeted messages. It allows workflows or external apps to create targeted messages.
+Microsoft Graph exposes targeted messaging support. Graph API for Teams chat messages includes a property to send a message to specific users or a new endpoint for targeted messages. It allows workflows or external apps to create targeted messages.
 
 <br><br>
 <details>
