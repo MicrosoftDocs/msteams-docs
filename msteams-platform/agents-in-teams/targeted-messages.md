@@ -30,7 +30,7 @@ A targeted message is an immediate, relevant, and private agent-to-user communic
 <br>
 Some common user scenarios include:
 
-| Use case | Use for ... | To ... |
+| Scenario | Use for ... | To ... |
 | --- | --- | --- |
 | Authentication flows | Sending a sign-in card as a targeted message | Enable uninterrupted discussion by one user's log in workflow |
 | Help or error responses | Sharing tips, usage examples, or error details | Enable discreet support for the intended user |
