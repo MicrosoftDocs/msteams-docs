@@ -19,6 +19,13 @@ Targeted messages can include most message capabilities like interactive Adaptiv
 
 Even though targeted messages are contextually relevant, they're best suited for short-term, action-driven communication. Use them when you want the agent to respond in-the-moment as required by a specific user.
 
+| Quick highlights |
+| --- |
+| **Learn how to enable targeted messages** |
+| Add links |
+| **Learn more about targeted messages** |
+| Add links |
+
 ## Targeted message developer experience
 
 You can send a targeted message in an agent just as a normal message. The agent indicates that the message is intended for a specific user in the conversation, and the platform delivers it to that user. The agent doesn't initiate a separate conversation or create a new chat. The message lives in the same channel or thread ID, but with restricted visibility.
