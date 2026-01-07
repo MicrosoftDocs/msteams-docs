@@ -119,12 +119,28 @@ Key steps for enabling targeted messages:
     Your agent can update or delete the targeted message after sending it:
 
     - **Edit**: If a user takes an action, for example submitting the log in card, the agent might want to update the original targeted message. The agent calls the update message API for that message using the message’s `activityId`). The edit updates the content only in the target user’s view.
+
+        Use the following code snippet to edit targeted message:
+
+        ```rest
+           PUT {cloud}/v3/conversations/{conversationld}/activities
+           PUT {cloud}/v3/conversations/{conversationld}/activities/{activityld}
+        ```
+
     - **Delete**: The agent can delete a targeted message using the delete message API. For example, if the user didn’t act on an ephemeral prompt for some time, the agent can delete it to avoid leaving stale content.
+
+        Use the following code snippet to delete targeted message:
+
+        ```rest
+           DELETE {cloud}/v3/conversations/{conversationld}/activities?isTargetedActivity=true
+           DELETE {cloud}/v3/conversations/{conversationld}/activities/{activityld}?isTargetedActivity=true
+        ```
 
 1. **Use Graph API**:
 
     Microsoft Graph exposes targeted messaging support. For instance, Graph API for Teams chat messages might include a property to send a message to specific users or a new endpoint for targeted messages. It allows workflows or external apps to create targeted messages.
 
+<!--
 ## Use REST API
 
 Use the following to enable targeted messages in your agent or app.
@@ -218,7 +234,6 @@ Use the following to enable targeted messages in your agent or app.
     :::column-end:::
 :::row-end:::
 
-<!--
 | Targeted message in Teams client | End-user experience |
 | --- | --- |
 | **In Chat or Channel** | The targeted message appears in the chat or channel thread only for the target user. It shows up inline among other messages, with the label 'Only you can see this message' to indicate its privacy. The message can be at the root of the chat, channel, or inside a thread (if the bot message is a reply to a user's specific message in a channel). Bot developers can determine where to post the message, same as a normal bot message: <br> - If the bot replies in a channel thread (at level 2), it can target that reply to the specific user. Only that user sees the reply in the thread. Other users might temporarily see the thread as if it has no new replies (until there's a public reply). <br> - If the bot posts a top-level message (L1) in a chat or channel, it can mark it targeted to a user. The user sees the message in the main chat flow, but others don't see any message at that spot. |
