@@ -21,6 +21,9 @@ Unlike standard messages, targeted messages are:
 
 Even though targeted messages are contextually relevant, they're best suited for short-term, action-driven communication. Use them when you want the agent to respond in-the-moment as required by a specific user.
 
+<details>
+<summary>Select to learn more about targeted messages</summary>
+
 ## Why use targeted messages
 
 A targeted message is an immediate, relevant, and private agent-to-user communication. Agents initiate targeted messages in response to a user action. From a single user's perspective, it appears as regular inline messages in a conversation. However, it's visible only to them and exists only for a short duration.
@@ -66,6 +69,8 @@ Targeted messages come with the following benefits for enhancing user experience
 
 - **Ephemeral messages**: <br>
     The targeted message isn't retained in the chat indefinitely. They're cleared after 24 hours to keep the conversation clean. However, your agent retains them in the backend storage for compliance as needed.
+
+</details>
 
 ## Targeted message developer experience
 
