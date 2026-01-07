@@ -145,6 +145,10 @@ Targeted messages come with the following benefits for enhancing user experience
 
 </details>
 
+## See also
+
+[Proactive messages](../bots/how-to/conversations/send-proactive-messages.md)
+
 <!--
 ## Use REST API
 
