@@ -10,13 +10,15 @@ ms.topic: reference
 
 Targeted messages are temporary, user-specific messages that appear in a group chat, meeting, or channel that're visible to only a single user. Agents can share contextual, real‑time support like reminders, welcomes, or chat summaries without adding permanent noise for the rest of the group.
 
-Targeted messages can include most message capabilities like interactive Adaptive Cards with buttons, images, or file attachments. For example, a targeted message can deliver a sign‑in card or an error message with a help link to the user. Unlike standard messages, targeted messages are:
+Targeted messages can include most message capabilities like interactive Adaptive Cards with buttons, images, or file attachments. For example, a targeted message can deliver a sign‑in card or an error message with a help link to the user.
+<!--
+Unlike standard messages, targeted messages are:
 
 - Triggered in response to user action.
 - Delivered to only one user in a group context.
 - Temporary and visible up to 24 hours only in the client.
 - Restricted for user actions such as reaction, replies, and forwarding.
-
+-->
 Even though targeted messages are contextually relevant, they're best suited for short-term, action-driven communication. Use them when you want the agent to respond in-the-moment as required by a specific user.
 
 ## Why use targeted messages
@@ -56,7 +58,7 @@ Targeted messages come with the following benefits for enhancing user experience
 - **Agent sensitivity and alertness**: <br>
     In-the-moment responses from the agent to the user's requirement in the group setting enhances their experience. It reinforces that the agent is alert to user actions and it leads to instant and relevant response.
 
-- **Cleaner chat experience**: <br>
+- **Enhanced chat experience**: <br>
     Agents can surface errors or feedback privately. It can help users engage more openly. The conversation remains reserved for meaningful, persistent communication. A clear message hierarchy that shows only the content that's meant for everyone is permanent in the chat.
 
 - **Human-in-the-loop scenarios**: <br>
