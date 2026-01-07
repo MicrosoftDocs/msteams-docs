@@ -22,9 +22,9 @@ Even though targeted messages are contextually relevant, they're best suited for
 | Quick highlights |
 | --- |
 | **Learn how to enable targeted messages** |
-| Add links |
+| [WIP: Add links] <br> - Use Teams SDK <br> - Use REST API <br> - Use Graph API  <br> - Handle errors |
 | **Learn more about targeted messages** |
-| Add links |
+| [WIP: Add links] <br> - Why use targeted messages <br> - What are common user scenarios <br> - Best practices |
 
 ## Targeted message developer experience
 
