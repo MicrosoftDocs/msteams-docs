@@ -21,59 +21,7 @@ Unlike standard messages, targeted messages are:
 
 Even though targeted messages are contextually relevant, they're best suited for short-term, action-driven communication. Use them when you want the agent to respond in-the-moment as required by a specific user.
 
-<br><br>
-<details>
-<summary><b>Select to learn more about targeted messages</b></summary>
-
-### Why use targeted messages
-
-A targeted message is an immediate, relevant, and private agent-to-user communication. Agents initiate targeted messages in response to a user action. From a single user's perspective, it appears as regular inline messages in a conversation. However, it's visible only to them and exists only for a short duration.
-
-:::image type="content" source="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png" alt-text="Image shows user scenarios for targeted messages" border="false" lightbox="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png":::
-
-<br>
-Some common user scenarios include:
-
-| Scenario | Use for ... | To ... |
-| --- | --- | --- |
-| Authentication flows | Sending a sign-in card as a targeted message | Enable uninterrupted discussion by one user's log in workflow |
-| Help or error responses | Sharing tips, usage examples, or error details | Enable discreet support for the intended user |
-| Personal reminders or nudges | Privately sending reminders to a single user | Avoid public call-outs or irrelevant notifications for other group members |
-| Welcome and onboarding | Sending welcome messages or onboarding help to new members | Avoid unnecessary repetition of such information every time a new user joins |
-| AI or Copilot summary | Sharing discussion summary for long-running chats for a new participant | Avoid derailing ongoing discussion because of the summary |
-
-### Targeted message user experience
-
-Key aspects of the user experience include:
-
-- The messages appear in context where the triggering action occurred.
-- Only the intended user can see the message. Other group or channel members are unaware of the messages sent. The agent messages or responses appear to that user with the label **Only you can see this message** tagged on them.
-- The message disappears after 24 hours from the client UI.
-- The message doesn't impede or spam the ongoing conversation while still supporting the user effectively.
-
-Targeted messages come with the following benefits for enhancing user experience:
-
-- **Reduce chat noise**: <br>
-    An agent can send a message in a group chat or channel that's visible only to a specific user. It prevents a single user's actions from cluttering the conversation. It allows other members to remain focused on the discussion, while the intended recipient of the targeted message still receives help from the agent.
-
-- **Maintain context**: <br>
-    The agent responds to the user request that's aligned with the chat context. The user can get chat summary and be updated about the discussion. It avoids the need to generalize or explain to the broader audience.
-
-- **Agent sensitivity and alertness**: <br>
-    In-the-moment responses from the agent to the user's requirement in the group setting enhances their experience. It reinforces that the agent is alert to user actions and it leads to instant and relevant response.
-
-- **Enhanced chat experience**: <br>
-    Agents can surface errors or feedback privately. It can help users engage more openly. The conversation remains reserved for meaningful, persistent communication. A clear message hierarchy that shows only the content that's meant for everyone is permanent in the chat.
-
-- **Human-in-the-loop scenarios**: <br>
-    It's useful for scenarios such as authentication prompts, approvals, or informational messages that should be visible to the intended user. It helps user's progress through a workflow without switching context or seeking assistance elsewhere.
-
-- **Ephemeral messages**: <br>
-    The targeted message isn't retained in the chat indefinitely. They're cleared after 24 hours to keep the conversation clean. However, your agent retains them in the backend storage for compliance as needed.
-
-</details>
-
-## Targeted message developer experience
+## Enable targeted message for your agent
 
 You can send a targeted message in an agent just as a normal message. The agent indicates that the message is intended for a specific user in the conversation, and the platform delivers it to that user. The agent doesn't initiate a separate conversation or create a new chat. The message lives in the same channel or thread ID, but with restricted visibility.
 
@@ -139,6 +87,58 @@ Key steps for enabling targeted messages:
 1. **Use Graph API**:
 
     Microsoft Graph exposes targeted messaging support. For instance, Graph API for Teams chat messages might include a property to send a message to specific users or a new endpoint for targeted messages. It allows workflows or external apps to create targeted messages.
+
+<br><br>
+<details>
+<summary><b>Select to learn more about targeted messages</b></summary>
+
+### Why use targeted messages
+
+A targeted message is an immediate, relevant, and private agent-to-user communication. Agents initiate targeted messages in response to a user action. From a single user's perspective, it appears as regular inline messages in a conversation. However, it's visible only to them and exists only for a short duration.
+
+:::image type="content" source="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png" alt-text="Image shows user scenarios for targeted messages" border="false" lightbox="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png":::
+
+<br>
+Some common user scenarios include:
+
+| Scenario | Use for ... | To ... |
+| --- | --- | --- |
+| Authentication flows | Sending a sign-in card as a targeted message | Enable uninterrupted discussion by one user's log in workflow |
+| Help or error responses | Sharing tips, usage examples, or error details | Enable discreet support for the intended user |
+| Personal reminders or nudges | Privately sending reminders to a single user | Avoid public call-outs or irrelevant notifications for other group members |
+| Welcome and onboarding | Sending welcome messages or onboarding help to new members | Avoid unnecessary repetition of such information every time a new user joins |
+| AI or Copilot summary | Sharing discussion summary for long-running chats for a new participant | Avoid derailing ongoing discussion because of the summary |
+
+### Targeted message user experience
+
+Key aspects of the user experience include:
+
+- The messages appear in context where the triggering action occurred.
+- Only the intended user can see the message. Other group or channel members are unaware of the messages sent. The agent messages or responses appear to that user with the label **Only you can see this message** tagged on them.
+- The message disappears after 24 hours from the client UI.
+- The message doesn't impede or spam the ongoing conversation while still supporting the user effectively.
+
+Targeted messages come with the following benefits for enhancing user experience:
+
+- **Reduce chat noise**: <br>
+    An agent can send a message in a group chat or channel that's visible only to a specific user. It prevents a single user's actions from cluttering the conversation. It allows other members to remain focused on the discussion, while the intended recipient of the targeted message still receives help from the agent.
+
+- **Maintain context**: <br>
+    The agent responds to the user request that's aligned with the chat context. The user can get chat summary and be updated about the discussion. It avoids the need to generalize or explain to the broader audience.
+
+- **Agent sensitivity and alertness**: <br>
+    In-the-moment responses from the agent to the user's requirement in the group setting enhances their experience. It reinforces that the agent is alert to user actions and it leads to instant and relevant response.
+
+- **Enhanced chat experience**: <br>
+    Agents can surface errors or feedback privately. It can help users engage more openly. The conversation remains reserved for meaningful, persistent communication. A clear message hierarchy that shows only the content that's meant for everyone is permanent in the chat.
+
+- **Human-in-the-loop scenarios**: <br>
+    It's useful for scenarios such as authentication prompts, approvals, or informational messages that should be visible to the intended user. It helps user's progress through a workflow without switching context or seeking assistance elsewhere.
+
+- **Ephemeral messages**: <br>
+    The targeted message isn't retained in the chat indefinitely. They're cleared after 24 hours to keep the conversation clean. However, your agent retains them in the backend storage for compliance as needed.
+
+</details>
 
 <!--
 ## Use REST API
