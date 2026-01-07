@@ -89,7 +89,7 @@ Key steps for enabling targeted messages:
     - A flag or API call that marks the message as targeted or ephemeral.
 
         - **For Teams SDK**: [WIP - details to be added]
-        - **For REST APIs**: The exact URL varies by region. Use the service URL from the conversation. The `userId` is the user’s Teams ID (MRI) to target, and `conversationId` is the group chat or channel thread ID. The payload of the POST is the activity or message to send, just like a normal message activity. For more information, see [REST APIs](#use-rest-apis).
+        - **For REST APIs**: The exact URL varies by region. Use the service URL from the conversation. The `userId` is the user’s Teams ID (MRI) to target, and `conversationId` is the group chat or channel thread ID. The payload of the POST is the activity or message to send, just like a normal message activity. For more information, see [REST APIs](#use-rest-api).
 
 1. **Handle send results and fallbacks**:
 
