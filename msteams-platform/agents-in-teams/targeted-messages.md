@@ -25,6 +25,10 @@ Even though targeted messages are contextually relevant, they're best suited for
 
 You can send a targeted message in an agent just as a normal message. The agent indicates that the message is intended for a specific user in the conversation, and the platform delivers it to that user. The agent doesn't initiate a separate conversation or create a new chat. The message lives in the same channel or thread ID, but with restricted visibility.
 
+### Use Teams SDK
+
+You can enable targeted messages using Teams SDK. It supports C#, TypeScript, and Python (for developer preview). Key steps for enabling targeted messages:
+
 ### Use REST API
 
 Key steps for enabling targeted messages:
@@ -44,7 +48,7 @@ Key steps for enabling targeted messages:
     - The conversation (chat or channel) ID and targeted user’s ID (Principal ID or MRI). It identifies where the message goes and who should see it.
     - A flag or API call that marks the message as targeted or ephemeral.
 
-        - **For REST APIs**: The exact URL varies by region. Use the service URL from the conversation. The `userId` is the user’s Teams ID (MRI) to target, and `conversationId` is the group chat or channel thread ID. The payload of the POST is the activity or message to send, just like a normal message activity. For more information, see [REST APIs](#use-rest-api).
+        The exact URL varies by region. Use the service URL from the conversation. The `userId` is the user’s Teams ID (MRI) to target, and `conversationId` is the group chat or channel thread ID. The payload of the POST is the activity or message to send, just like a normal message activity. For more information, see [REST APIs](#use-rest-api).
 
             To send a targeted activity, ensure that you indicate the `isTargetedActivity` as `true`.
 
@@ -85,7 +89,7 @@ Key steps for enabling targeted messages:
            DELETE {cloud}/v3/conversations/{conversationld}/activities/{activityld}?isTargetedActivity=true
         ```
 
-1. **Use Graph API**:
+### Use Graph API**
 
     Microsoft Graph exposes targeted messaging support. For instance, Graph API for Teams chat messages might include a property to send a message to specific users or a new endpoint for targeted messages. It allows workflows or external apps to create targeted messages.
 
