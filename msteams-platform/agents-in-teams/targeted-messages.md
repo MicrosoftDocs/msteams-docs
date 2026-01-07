@@ -10,9 +10,7 @@ ms.topic: reference
 
 Targeted messages are temporary, user-specific messages that appear in a group chat, meeting, or channel that're visible to only a single user. Agents can share contextual, real‑time support like reminders, welcomes, or chat summaries without adding permanent noise for the rest of the group.
 
-Targeted messages can include most message capabilities like interactive Adaptive Cards with buttons, images, or file attachments. For example, a targeted message can deliver a sign‑in card or an error message with a help link to the user.
-
-Unlike standard messages, targeted messages are:
+Targeted messages can include most message capabilities like interactive Adaptive Cards with buttons, images, or file attachments. For example, a targeted message can deliver a sign‑in card or an error message with a help link to the user. Unlike standard messages, targeted messages are:
 
 - Triggered in response to user action.
 - Delivered to only one user in a group context.
@@ -28,6 +26,8 @@ You can send a targeted message in an agent just as a normal message. The agent 
 ### Use Teams SDK
 
 You can enable targeted messages using Teams SDK. It supports C#, TypeScript, and Python (for developer preview). Key steps for enabling targeted messages:
+
+[WIP: Code snippets and link to be added once Teams SDK PR is published.]
 
 ### Use REST API
 
