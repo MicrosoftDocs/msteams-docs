@@ -69,4 +69,3 @@ Share feature ideas, ask questions, or talk to us about your experience with the
 * [TeamsJS library reference](/javascript/api/overview/msteams-client)
 * [Teams AI library](https://developer.microsoft.com/en-us/microsoft-365/copilot)
 * [Microsoft 365 Copilot extensibility overview](/microsoft-365-copilot/extensibility/overview)
-* [Build conversational apps with the Bot Framework SDK](/azure/bot-service/?view=azure-bot-service-4.0&preserve-view=true)
