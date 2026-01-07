@@ -21,10 +21,11 @@ Unlike standard messages, targeted messages are:
 
 Even though targeted messages are contextually relevant, they're best suited for short-term, action-driven communication. Use them when you want the agent to respond in-the-moment as required by a specific user.
 
+<br><br>
 <details>
-<summary>Select to learn more about targeted messages</summary>
+<summary><b>Select to learn more about targeted messages</b></summary>
 
-## Why use targeted messages
+### Why use targeted messages
 
 A targeted message is an immediate, relevant, and private agent-to-user communication. Agents initiate targeted messages in response to a user action. From a single user's perspective, it appears as regular inline messages in a conversation. However, it's visible only to them and exists only for a short duration.
 
@@ -41,7 +42,7 @@ Some common user scenarios include:
 | Welcome and onboarding | Sending welcome messages or onboarding help to new members | Avoid unnecessary repetition of such information every time a new user joins |
 | AI or Copilot summary | Sharing discussion summary for long-running chats for a new participant | Avoid derailing ongoing discussion because of the summary |
 
-## Targeted message user experience
+### Targeted message user experience
 
 Key aspects of the user experience include:
 
