@@ -25,6 +25,8 @@ Even though targeted messages are contextually relevant, they're best suited for
 
 You can send a targeted message in an agent just as a normal message. The agent indicates that the message is intended for a specific user in the conversation, and the platform delivers it to that user. The agent doesn't initiate a separate conversation or create a new chat. The message lives in the same channel or thread ID, but with restricted visibility.
 
+### Use REST API
+
 Key steps for enabling targeted messages:
 
 1. **Detect the scenario to use a targeted message**:
@@ -42,7 +44,6 @@ Key steps for enabling targeted messages:
     - The conversation (chat or channel) ID and targeted user’s ID (Principal ID or MRI). It identifies where the message goes and who should see it.
     - A flag or API call that marks the message as targeted or ephemeral.
 
-        - **For Teams SDK**: [WIP - details to be added]
         - **For REST APIs**: The exact URL varies by region. Use the service URL from the conversation. The `userId` is the user’s Teams ID (MRI) to target, and `conversationId` is the group chat or channel thread ID. The payload of the POST is the activity or message to send, just like a normal message activity. For more information, see [REST APIs](#use-rest-api).
 
             To send a targeted activity, ensure that you indicate the `isTargetedActivity` as `true`.
