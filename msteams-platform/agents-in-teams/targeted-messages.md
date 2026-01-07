@@ -11,21 +11,21 @@ ms.topic: reference
 Targeted messages are temporary, user-specific messages that appear in a group chat, meeting, or channel that're visible to only a single user. Agents can share contextual, real‑time support like reminders, welcomes, or chat summaries without adding permanent noise for the rest of the group.
 
 Targeted messages can include most message capabilities like interactive Adaptive Cards with buttons, images, or file attachments. For example, a targeted message can deliver a sign‑in card or an error message with a help link to the user.
-<!--
+
 Unlike standard messages, targeted messages are:
 
 - Triggered in response to user action.
 - Delivered to only one user in a group context.
 - Temporary and visible up to 24 hours only in the client.
 - Restricted for user actions such as reaction, replies, and forwarding.
--->
+
 Even though targeted messages are contextually relevant, they're best suited for short-term, action-driven communication. Use them when you want the agent to respond in-the-moment as required by a specific user.
 
 ## Why use targeted messages
 
 A targeted message is an immediate, relevant, and private agent-to-user communication. Agents initiate targeted messages in response to a user action. From a single user's perspective, it appears as regular inline messages in a conversation. However, it's visible only to them and exists only for a short duration.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp:::image type="content" source="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png" alt-text="Image shows user scenarios for targeted messages" border="false" lightbox="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png":::
+:::image type="content" source="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png" alt-text="Image shows user scenarios for targeted messages" border="false" lightbox="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png":::
 
 <br>
 Some common user scenarios include:
