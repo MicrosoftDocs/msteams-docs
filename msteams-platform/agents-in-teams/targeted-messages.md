@@ -29,8 +29,7 @@ Even though targeted messages are contextually relevant, they're best suited for
 - **About targeted messages**
   - [What are ephemeral messages](#learn-about-targeted-messages)
   - [Why use targeted messages](#why-use-targeted-messages)
-  - What are common user scenarios
-  - Best practices
+  - [User experience and common user scenarios](#user-experience-and-common-scenarios)
 
 ## Targeted message developer experience
 
