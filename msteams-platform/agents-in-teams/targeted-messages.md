@@ -8,9 +8,7 @@ ms.topic: reference
 
 # Enable targeted messages for agents
 
-Targeted messages are temporary, user-specific messages that appear in a group chat, meeting, or channel. Agents can share contextual, real‑time support without adding permanent noise for the rest of the group.
-
-Targeted messages can include most message capabilities like interactive Adaptive Cards with buttons, images, or file attachments. For example, a targeted message can deliver a sign‑in card or an error message with a help link to the user. Unlike standard messages, targeted messages are:
+Targeted messages are temporary, user-specific messages that appear in a group chat, meeting, or channel. Agents can support users without adding permanent noise for the rest of the group. They can include most message capabilities like interactive Adaptive Cards with buttons, images, or file attachments. For example, use a targeted message to share a sign‑in card or an error message with a help link. Unlike standard messages, targeted messages are:
 
 - Triggered in response to user action.
 - Delivered to only one user in a group context.
@@ -19,7 +17,7 @@ Targeted messages can include most message capabilities like interactive Adaptiv
 
 Targeted messages are best suited for short-term, action-driven communication. Use them when you want the agent to respond in-the-moment as required by a specific user.
 
-**Quick highlights**:
+**Key points**:
 
 - **Enable targeted messages**
   - [Use Teams SDK](#use-teams-sdk)
@@ -32,11 +30,11 @@ Targeted messages are best suited for short-term, action-driven communication. U
 
 ## Targeted message developer experience
 
-Send a targeted message in an agent just as a regular message. The agent indicates that the message is intended for a specific user in the conversation, and the platform delivers it to that user. The agent doesn't initiate a separate conversation or create a new chat.
+You can send a targeted message in an agent just as a regular message. The agent indicates that the message is intended for a specific user in the conversation, and the platform delivers it to that user. The agent doesn't initiate a separate conversation or create a new chat.
 
 ### Use Teams SDK
 
-You can enable targeted messages using Teams SDK. It supports C#, TypeScript, and Python (for developer preview). Key steps for enabling targeted messages:
+You can enable targeted messages using Teams SDK. It supports C#, TypeScript, and Python (for developer preview).
 
 [WIP: Code snippets and link to be added once Teams SDK PR is published.]
 
@@ -153,10 +151,10 @@ Key steps for enabling targeted messages:
 
 1. **Detect the scenario to use a targeted message**:
 
-    The agent for  must determine to send a targeted message in response to one of the following triggers:
+    The agent must determine to send a targeted message in response to one of the following triggers:
 
-    - When a user @mentions or selects a button that might require a response that isn't meant for other group members.
-    - The agent must send a proactive message to a specific user, for example, a reminder or welcome message in-context.
+    - A user @mentions or selects a button that requires a response only for that user.
+    - The agent must send a proactive message to a specific user message in-context.
     - The agent must send a recommendation to a user that isn't relevant to other group members.
 
 1. **Include the targeted designation**:
@@ -166,7 +164,7 @@ Key steps for enabling targeted messages:
     - The conversation (chat or channel) ID and targeted user’s ID (Principal ID or MRI). It identifies where the message goes and who should see it.
     - A flag or API call that marks the message as targeted or ephemeral.
 
-        The exact URL varies by region. Use the service URL from the conversation. The `userId` is the user’s Teams ID (MRI) to target, and `conversationId` is the group chat or channel thread ID. The payload of the POST is the activity or message to send, just like a normal message activity. For more information, see [REST APIs](#use-rest-api).
+        <!--Use the service URL from the conversation. The `userId` is the user’s Teams ID (MRI) to target, and `conversationId` is the group chat or channel thread ID. The payload of the POST is the activity or message to send, just like a normal message activity.-->
 
         To send a targeted activity, ensure that you indicate the `isTargetedActivity` as `true`.
 
@@ -179,8 +177,9 @@ Key steps for enabling targeted messages:
 
     After the agent calls the targeted `send` API, the API returns a success or error:
 
-    1. If successful, the targeted user gets the message sent by the agent.
-    1. If the `send` API fails, the agent chooses a fallback, such as sending a 1:1 chat message as a backup. However, the intended user must be a member of the chat or channel to receive a targeted message, else the message isn't delivered. Some scenarios where a send event might fail are if a user isn’t a group member or if the client doesn’t support targeted messages.
+    - If successful, the targeted user gets the message sent by the agent.
+    - If the `send` API fails, the agent chooses a fallback, such as sending a 1:1 chat message as a backup. However, the intended user must be a member of the chat or channel to receive a targeted message, else the message isn't delivered.
+    - Some scenarios where a send event might fail are if a user isn’t a group member or if the client doesn’t support targeted messages.
 
     > [!NOTE]
     > The Backward compatibility logic in Teams prevents older clients from displaying targeted messages to all members when they don’t support the feature. It also alerts your agent when a client can't handle targeted messages.
@@ -189,7 +188,7 @@ Key steps for enabling targeted messages:
 
     Your agent can update or delete the targeted message after sending it:
 
-    - **Edit**: If a user takes an action, for example submitting the log in card, the agent might want to update the original targeted message. The agent calls the update message API for that message using the message’s `activityId`). The edit updates the content only in the target user’s view.
+    - **Edit**: Following a user action, the agent might require updating the original targeted message. The agent calls the update message API using the message’s `activityId`. The agent updates the content only in the intended user’s view.
 
         Use the following code snippet to edit targeted message:
 
@@ -198,7 +197,7 @@ Key steps for enabling targeted messages:
            PUT {cloud}/v3/conversations/{conversationld}/activities/{activityld}
         ```
 
-    - **Delete**: The agent can delete a targeted message using the delete message API. For example, if the user didn’t act on an ephemeral prompt for some time, the agent can delete it to avoid leaving stale content.
+    - **Delete**: If a user doesn't act on a targeted message, the agent can delete it using delete message API. It avoids leaving stale content.
 
         Use the following code snippet to delete targeted message:
 
@@ -245,7 +244,7 @@ Some common user scenarios include:
 Among other benefits, targeted messages enhance user experience as follows:
 
 - **Agent sensitivity and alertness**: <br>
-    In-the-moment responses from the agent to the user's requirement in the group setting reinforces that the agent is alert to user actions.
+    Real-time responses from the agent to the user's requirement in the group setting reinforces that the agent is alert to user actions.
 
 - **Enhanced user experience**: <br>
     Agents can help users engage more openly. A clear message hierarchy that shows only the content that's meant for everyone is permanent in the chat.
