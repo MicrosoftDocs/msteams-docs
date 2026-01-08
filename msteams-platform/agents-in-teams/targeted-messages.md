@@ -21,12 +21,12 @@ Even though targeted messages are contextually relevant, they're best suited for
 
 **Quick highlights**:
 
-- **Learn how to enable targeted messages**
+- **Enable targeted messages**
   - Use Teams SDK
   - Use REST API
   - Use Graph API
   - Handle errors
-- **Learn more about targeted messages**
+- **About targeted messages**
   - Why use targeted messages
   - What are common user scenarios
   - Best practices
@@ -211,6 +211,8 @@ Key steps for enabling targeted messages:
 ### Use Graph API
 
 Microsoft Graph exposes targeted messaging support. Graph API for Teams chat messages includes a property to send a message to specific users or a new endpoint for targeted messages. It allows workflows or external apps to create targeted messages.
+
+## Learn about targeted messages
 
 <br><br>
 <details>
