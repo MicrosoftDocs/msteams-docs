@@ -19,12 +19,17 @@ Targeted messages can include most message capabilities like interactive Adaptiv
 
 Even though targeted messages are contextually relevant, they're best suited for short-term, action-driven communication. Use them when you want the agent to respond in-the-moment as required by a specific user.
 
-| Quick highlights |
-| --- |
-| **Learn how to enable targeted messages** |
-| [WIP: Add links] <br> - Use Teams SDK <br> - Use REST API <br> - Use Graph API  <br> - Handle errors |
-| **Learn more about targeted messages** |
-| [WIP: Add links] <br> - Why use targeted messages <br> - What are common user scenarios <br> - Best practices |
+**In this section**:
+
+- **Learn how to enable targeted messages**
+  - Use Teams SDK
+  - Use REST API
+  - Use Graph API
+  - Handle errors
+- **Learn more about targeted messages**
+  - Why use targeted messages
+  - What are common user scenarios
+  - Best practices
 
 ## Targeted message developer experience
 
