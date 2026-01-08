@@ -63,7 +63,7 @@ You can enable targeted messages using Teams SDK. It supports C#, TypeScript, an
     }
     ```
 
-  # [Python][#tab/Py1]
+  # [Python](#tab/Py1)
 
     ```python
     public static class Notifications
@@ -133,7 +133,7 @@ You can enable targeted messages using Teams SDK. It supports C#, TypeScript, an
     }
     ```
 
-  # [Python][#tab/Py2]
+  # [Python](#tab/Py2)
 
     ```python
     from microsoft_teams.api import MessageActivityInput, Account
