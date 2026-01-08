@@ -238,7 +238,7 @@ Some common user scenarios include:
 </details>
 
 <details>
-<summary><b>hy use targeted messages</b></summary>
+<summary><b>Why use targeted messages</b></summary>
 
 ### Why use targeted messages
 
