@@ -188,7 +188,7 @@ Key steps for enabling targeted messages:
 
     Your agent can update or delete the targeted message after sending it:
 
-    - **Edit**: Following a user action, the agent might require updating the original targeted message. The agent calls the update message API using the message’s `activityId`. The agent updates the content only in the intended user’s view.
+    - **Edit**: The agent can update the original targeted message if needed. The agent calls the update message API using the message’s `activityId`. The updated message appears only in intended user’s view.
 
         Use the following code snippet to edit targeted message:
 
