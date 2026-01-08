@@ -85,8 +85,6 @@ You can enable targeted messages using Teams SDK. It supports C#, TypeScript, an
     }
     ```
 
-  ---
-
 - Send proactive targeted messages
 
   # [TypeScript](#tab/ts2)
@@ -149,8 +147,6 @@ You can enable targeted messages using Teams SDK. It supports C#, TypeScript, an
     
     await app.send(conversation_id, activity, is_targeted=True)
     ```
-
-  ---
 
 ### Use REST API
 
