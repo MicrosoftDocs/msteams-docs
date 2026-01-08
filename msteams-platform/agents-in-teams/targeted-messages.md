@@ -32,7 +32,7 @@ Even though targeted messages are contextually relevant, they're best suited for
 
 ## Targeted message developer experience
 
-Send a targeted message in an agent just as a normal message. The agent indicates that the message is intended for a specific user in the conversation, and the platform delivers it to that user. The agent doesn't initiate a separate conversation or create a new chat. The message lives in the same channel or thread ID, but with restricted visibility.
+Send a targeted message in an agent just as a regular message. The agent indicates that the message is intended for a specific user in the conversation, and the platform delivers it to that user. The agent doesn't initiate a separate conversation or create a new chat. The message lives in the same channel or thread ID, but with restricted visibility.
 
 Key aspects of the user experience include:
 
@@ -217,6 +217,8 @@ Key steps for enabling targeted messages:
 ### Use Graph API
 
 Microsoft Graph exposes targeted messaging support. Graph API for Teams chat messages includes a property to send a message to specific users or a new endpoint for targeted messages. It allows workflows or external apps to create targeted messages.
+
+[WIP: Link to Graph API to be added]
 
 <br>
 <details>
