@@ -41,6 +41,37 @@ You can enable targeted messages using Teams SDK. It supports C#, TypeScript, an
 
 [WIP: Code snippets and link to be added once Teams SDK PR is published.]
 
+- Send targeted messages
+
+    ```typescript
+    app.on('message', async ({ send, activity }) => {
+      // Send a targeted message that only the sender can see
+    await send('This message is only visible to you!', { isTargeted: true });
+    });
+    ```
+
+- Send proactive targeted messages
+
+    ```typescript
+    import { MessageActivity } from '@microsoft/teams.api';
+
+    import { App } from '@microsoft/teams.apps';
+    // ...
+    
+    // This would be some persistent storage
+    const myConversationIdStorage = new Map<string, string>();
+    
+    // Installation is just one place to get the conversation id. All activities
+    // have the conversation id, so you can use any activity to get it.
+    app.on('install.add', async ({ activity, send }) => {
+      // Save the conversation id in
+      myConversationIdStorage.set(activity.from.aadObjectId!, activity.conversation.id);
+    
+      await send('Hi! I am going to remind you to say something to me soon!');
+      notificationQueue.addReminder(activity.from.aadObjectId!, sendProactiveNotification, 10_000);
+    });
+    ```
+
 ### Use REST API
 
 Key steps for enabling targeted messages:
