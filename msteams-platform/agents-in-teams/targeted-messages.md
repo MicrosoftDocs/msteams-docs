@@ -213,11 +213,13 @@ Microsoft Graph exposes targeted messaging support. Graph API for Teams chat mes
 
 [WIP: Link to Graph API to be added]
 
+## Learn about targeted messages
+
 <br>
 <details>
-<summary><b>Select to learn more about targeted messages</b></summary>
+<summary><b>What is a targeted message</b></summary>
 
-## What is a targeted message
+### What is a targeted message
 
 Targeted messages, also known as ephemeral messages, are delivered to a specific user within a shared conversation. From a single user's perspective, it appears as regular inline messages in a conversation. that appears with the label **Only you can see this message** tagged on them.
 
@@ -232,6 +234,11 @@ Some common user scenarios include:
 | Personal reminders or nudges | Privately sending reminders to a single user | Avoid public call-outs or irrelevant notifications for other group members |
 | Welcome and onboarding | Sending welcome messages or onboarding help to new members | Avoid unnecessary repetition of such information every time a new user joins |
 | AI or Copilot summary | Sharing discussion summary for long-running chats for a new participant | Avoid derailing ongoing discussion because of the summary |
+
+</details>
+
+<details>
+<summary><b>hy use targeted messages</b></summary>
 
 ### Why use targeted messages
 
