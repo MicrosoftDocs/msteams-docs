@@ -30,7 +30,7 @@ Targeted messages are best suited for short-term, action-driven communication. U
 
 ## Targeted message developer experience
 
-You can send a targeted message in an agent just as a regular message. The agent indicates that the message is intended for a specific user in the conversation, and the platform delivers it to that user. The agent doesn't initiate a separate conversation or create a new chat.
+You can send a targeted message just as a regular message. The agent indicates that the message is intended for a specific user in the conversation, and the platform delivers it to that user. The agent doesn't initiate a separate conversation or create a new chat.
 
 ### Use Teams SDK
 
@@ -157,7 +157,7 @@ Key steps for enabling targeted messages:
     - The agent must send a proactive message to a specific user message in-context.
     - The agent must send a recommendation to a user that isn't relevant to other group members.
 
-1. **Include the targeted designation**:
+1. **Include the 'targeted' designation in the `send` API**:
 
     Ensure that you specify the following when the agent sends the message:
 
