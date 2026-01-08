@@ -27,6 +27,7 @@ Even though targeted messages are contextually relevant, they're best suited for
   - Use Graph API
   - Handle errors
 - **About targeted messages**
+  - What are ephemeral messages
   - Why use targeted messages
   - What are common user scenarios
   - Best practices
@@ -214,13 +215,15 @@ Microsoft Graph exposes targeted messaging support. Graph API for Teams chat mes
 
 ## Learn about targeted messages
 
+Targeted messages, also known as 'ephemeral messages' are delivered to a specific user within a shared conversation. A targeted message is an immediate, relevant, and private agent-to-user communication.
+
 <br><br>
 <details>
 <summary><b>Select to learn more about targeted messages</b></summary>
 
 ### Why use targeted messages
 
-A targeted message is an immediate, relevant, and private agent-to-user communication. Agents initiate targeted messages in response to a user action. From a single user's perspective, it appears as regular inline messages in a conversation. However, it's visible only to them and exists only for a short duration.
+Agents initiate targeted messages in response to a user action. From a single user's perspective, it appears as regular inline messages in a conversation. However, it's visible only to them and exists only for a short duration.
 
 :::image type="content" source="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png" alt-text="Image shows user scenarios for targeted messages" border="false" lightbox="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png":::
 
