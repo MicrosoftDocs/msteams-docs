@@ -35,6 +35,13 @@ Even though targeted messages are contextually relevant, they're best suited for
 
 Send a targeted message in an agent just as a normal message. The agent indicates that the message is intended for a specific user in the conversation, and the platform delivers it to that user. The agent doesn't initiate a separate conversation or create a new chat. The message lives in the same channel or thread ID, but with restricted visibility.
 
+Key aspects of the user experience include:
+
+- The messages appear in context where the triggering action occurred.
+- Only the intended user can see the message. Other group or channel members are unaware of the messages sent. The agent messages or responses appear to that user with the label **Only you can see this message** tagged on them.
+- The message disappears after 24 hours from the client UI.
+- The message doesn't impede or spam the ongoing conversation while still supporting the user effectively.
+
 ### Use Teams SDK
 
 You can enable targeted messages using Teams SDK. It supports C#, TypeScript, and Python (for developer preview). Key steps for enabling targeted messages:
@@ -212,13 +219,25 @@ Key steps for enabling targeted messages:
 
 Microsoft Graph exposes targeted messaging support. Graph API for Teams chat messages includes a property to send a message to specific users or a new endpoint for targeted messages. It allows workflows or external apps to create targeted messages.
 
-## Learn about targeted messages
-
-Targeted messages, also known as 'ephemeral messages' are delivered to a specific user within a shared conversation. A targeted message is an immediate, relevant, and private agent-to-user communication.
-
 <br>
 <details>
 <summary><b>Select to learn more about targeted messages</b></summary>
+
+## What is a targeted message
+
+Targeted messages, also known as ephemeral messages, are delivered to a specific user within a shared conversation. A targeted message is an immediate, relevant, and private agent-to-user communication. The following
+
+:::image type="content" source="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png" alt-text="Image shows user scenarios for targeted messages" border="false" lightbox="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png":::
+
+Some common user scenarios include:
+
+| Scenario | Use for ... | To ... |
+| --- | --- | --- |
+| Authentication flows | Sending a sign-in card as a targeted message | Enable uninterrupted discussion by one user's log in workflow |
+| Help or error responses | Sharing tips, usage examples, or error details | Enable discreet support for the intended user |
+| Personal reminders or nudges | Privately sending reminders to a single user | Avoid public call-outs or irrelevant notifications for other group members |
+| Welcome and onboarding | Sending welcome messages or onboarding help to new members | Avoid unnecessary repetition of such information every time a new user joins |
+| AI or Copilot summary | Sharing discussion summary for long-running chats for a new participant | Avoid derailing ongoing discussion because of the summary |
 
 ### Why use targeted messages
 
@@ -243,28 +262,6 @@ Targeted messages come with the following benefits for enhancing user experience
 
 - **Ephemeral messages**: <br>
     The targeted message isn't retained in the chat indefinitely. They're cleared after 24 hours to keep the conversation clean. However, your agent retains them in the backend storage for compliance as needed.
-
-### User experience and common scenarios
-
-Key aspects of the user experience include:
-
-- The messages appear in context where the triggering action occurred.
-- Only the intended user can see the message. Other group or channel members are unaware of the messages sent. The agent messages or responses appear to that user with the label **Only you can see this message** tagged on them.
-- The message disappears after 24 hours from the client UI.
-- The message doesn't impede or spam the ongoing conversation while still supporting the user effectively.
-
-:::image type="content" source="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png" alt-text="Image shows user scenarios for targeted messages" border="false" lightbox="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png":::
-
-<br>
-Some common user scenarios include:
-
-| Scenario | Use for ... | To ... |
-| --- | --- | --- |
-| Authentication flows | Sending a sign-in card as a targeted message | Enable uninterrupted discussion by one user's log in workflow |
-| Help or error responses | Sharing tips, usage examples, or error details | Enable discreet support for the intended user |
-| Personal reminders or nudges | Privately sending reminders to a single user | Avoid public call-outs or irrelevant notifications for other group members |
-| Welcome and onboarding | Sending welcome messages or onboarding help to new members | Avoid unnecessary repetition of such information every time a new user joins |
-| AI or Copilot summary | Sharing discussion summary for long-running chats for a new participant | Avoid derailing ongoing discussion because of the summary |
 
 </details>
 
