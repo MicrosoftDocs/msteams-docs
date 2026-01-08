@@ -30,16 +30,17 @@ Go to the [**Azure portal**](https://ms.portal.azure.com/#home) or [**Microsoft 
 ## Developer community forums
 
 Use community forums to ask development-related questions, share solutions, and collaborate with other developers building agents and conversational experiences for Teams and Microsoft 365 Copilot. To learn more, see [agents in Teams](agents-in-teams/overview.md).
-📢 Read the latest [announcements](https://github.com/MicrosoftDocs/msteams-docs/discussions/categories/announcements) and join the conversation with community members and platform engineers!
 
 Developers commonly use the following community forums to share ideas, get help, report issues, and ask general questions.
 
 | **Community Forums**| **How to connect** |
 |:--------------------|:--------------------|
-| :::image type="icon" source="assets/icons/microsoft-icon.png"::: [Microsoft Q&A](https://learn.microsoft.com/answers/tags/339/office-teams-development-routing?orderby=createdat)| Ask questions and connect with other developers for building Teams agents, apps, or workflows using developer tools and APIs. Select **Ask a question**, and add the `Microsoft Teams` tag to your question. You can also **Sign in to follow** to stay updated. |
+| :::image type="icon" source="assets/icons/microsoft-icon.png"::: [Microsoft Q&A](https://learn.microsoft.com/answers/tags/339/office-teams-development-routing?orderby=createdat)| Ask questions and connect with other developers for building Teams agents, apps, or workflows using developer tools and APIs. Select **Ask a question**, and add the `Microsoft Teams` tag to your question. **Sign in to follow** to stay updated. |
 | :::image type="icon" source="assets/icons/github-icon.png"::: [GitHub](https://github.com) | Discuss issues related to [Microsoft Teams Docs](https://github.com/MicrosoftDocs/msteams-docs/issues), [Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/issues), and [Microsoft Teams JavaScript client library](https://github.com/OfficeDev/microsoft-teams-library-js/issues) using the `teams-developer-support` tag. |
 | :::image type="icon" source="assets/icons/microsoft-icon.png"::: [Teams Developer Community](https://techcommunity.microsoft.com/category/microsoftteams/discussions/teamsdeveloper?messages.widget.messagelistfornodebyrecentactivitywidget-tab-main-forum-widgets-0=newest)| Select **Start a Discussion** to begin a conversation. Browse recent and popular posts to find solutions, and use the `MICROSOFT TEAMS` tag to get relevant responses. |
 |:::image type="icon" source="assets/icons/stack-overflow-icon.png"::: [Stack Overflow](https://stackoverflow.com/questions/tagged/microsoft-teams)| Post your questions using the `microsoft-teams` tag. Write a clear title, describe the problem, and include steps to reproduce the issue. Off‑topic or feature‑request questions aren’t allowed. For more information, see [Stack Overflow Help Center](https://stackoverflow.com/help).|
+
+Read the latest [announcements](https://github.com/MicrosoftDocs/msteams-docs/discussions/categories/announcements) and join the conversation with community members and platform engineers!
 
 ### Report issues
 
@@ -50,7 +51,7 @@ Use the following community channels to report SDK, samples, or platform issues.
 | **Platform outages** | Check if your issue is already reported under [Teams platform outages](https://github.com/MicrosoftDocs/msteams-docs/labels/outage) before raising a new one. |
 | **Samples** | Submit issues for samples in the [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples) repository.|
 | **Microsoft 365 Agents Toolkit** | <ul><li> :::image type="icon" source="assets/icons/GitHub-icon.png":::  [GitHub Issues](https://github.com/OfficeDev/TeamsFx/issues): Create new issues on the [microsoft-365-agents-toolkit GitHub repository](https://github.com/OfficeDev/TeamsFx) to report issues or raise feature request. We recommend using GitHub issues for queries and community help. <li> :::image type="icon" source="assets/icons/stack-overflow-icon.png"::: [Stack Overflow](https://stackoverflow.com/questions/tagged/agents-toolkit): Use the `agents-toolkit` tag to post questions. Follow Stack Overflow guidelines. </li> </ul> |
-| **TeamsJS (Tabs)** | Submit issues and feature requests to the [ Teams JavaScript client library (TeamsJS)](https://github.com/OfficeDev/microsoft-teams-library-js/issues). Select **New issue** or browse existing issues using the `teams-developer-support` tag. |
+| **TeamsJS (Tabs)** | Submit issues and feature requests to the [Teams JavaScript client library (TeamsJS)](https://github.com/OfficeDev/microsoft-teams-library-js/issues). Select **New issue** or browse existing issues using the `teams-developer-support` tag. |
 
 ### Documentation feedback
 
