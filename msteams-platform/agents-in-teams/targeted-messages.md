@@ -14,7 +14,7 @@ Targeted messages can include most message capabilities like interactive Adaptiv
 
 - Triggered in response to user action.
 - Delivered to only one user in a group context.
-- Temporary and visible up to 24 hours only in the client.
+- Visible up for a limited time in the client.
 - Restricted for user actions such as reaction, replies, and forwarding.
 
 Even though targeted messages are contextually relevant, they're best suited for short-term, action-driven communication. Use them when you want the agent to respond in-the-moment as required by a specific user.
@@ -32,14 +32,7 @@ Even though targeted messages are contextually relevant, they're best suited for
 
 ## Targeted message developer experience
 
-Send a targeted message in an agent just as a regular message. The agent indicates that the message is intended for a specific user in the conversation, and the platform delivers it to that user. The agent doesn't initiate a separate conversation or create a new chat. The message lives in the same channel or thread ID, but with restricted visibility.
-
-Key aspects of the user experience include:
-
-- The messages appear in context where the triggering action occurred.
-- Only the intended user can see the message. Other group or channel members are unaware of the messages sent. The agent messages or responses appear to that user with the label **Only you can see this message** tagged on them.
-- The message disappears after 24 hours from the client UI.
-- The message doesn't impede or spam the ongoing conversation while still supporting the user effectively.
+Send a targeted message in an agent just as a regular message. The agent indicates that the message is intended for a specific user in the conversation, and the platform delivers it to that user. The agent doesn't initiate a separate conversation or create a new chat.
 
 ### Use Teams SDK
 
@@ -226,7 +219,7 @@ Microsoft Graph exposes targeted messaging support. Graph API for Teams chat mes
 
 ## What is a targeted message
 
-Targeted messages, also known as ephemeral messages, are delivered to a specific user within a shared conversation. A targeted message is an immediate, relevant, and private agent-to-user communication. From a single user's perspective, it appears as regular inline messages in a conversation. However, it's visible only to them and exists only for a short duration.
+Targeted messages, also known as ephemeral messages, are delivered to a specific user within a shared conversation. From a single user's perspective, it appears as regular inline messages in a conversation. that appears with the label **Only you can see this message** tagged on them.
 
 :::image type="content" source="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png" alt-text="Image shows user scenarios for targeted messages" border="false" lightbox="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png":::
 
@@ -253,14 +246,14 @@ Targeted messages come with the following benefits for enhancing user experience
 - **Agent sensitivity and alertness**: <br>
     In-the-moment responses from the agent to the user's requirement in the group setting enhances their experience. It reinforces that the agent is alert to user actions and it leads to instant and relevant response.
 
-- **Enhanced chat experience**: <br>
+- **Enhanced user experience**: <br>
     Agents can surface errors or feedback privately. It can help users engage more openly. The conversation remains reserved for meaningful, persistent communication. A clear message hierarchy that shows only the content that's meant for everyone is permanent in the chat.
 
 - **Human-in-the-loop scenarios**: <br>
     It's useful for scenarios such as authentication prompts, approvals, or informational messages that should be visible to the intended user. It helps user's progress through a workflow without switching context or seeking assistance elsewhere.
 
 - **Ephemeral messages**: <br>
-    The targeted message isn't retained in the chat indefinitely. They're cleared after 24 hours to keep the conversation clean. However, your agent retains them in the backend storage for compliance as needed.
+    The targeted message isn't retained in the chat indefinitely. However, your agent retains them in the backend storage for compliance as needed.
 
 </details>
 
