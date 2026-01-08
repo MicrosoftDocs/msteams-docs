@@ -33,7 +33,7 @@ Even though targeted messages are contextually relevant, they're best suited for
 
 ## Targeted message developer experience
 
-You can send a targeted message in an agent just as a normal message. The agent indicates that the message is intended for a specific user in the conversation, and the platform delivers it to that user. The agent doesn't initiate a separate conversation or create a new chat. The message lives in the same channel or thread ID, but with restricted visibility.
+Send a targeted message in an agent just as a normal message. The agent indicates that the message is intended for a specific user in the conversation, and the platform delivers it to that user. The agent doesn't initiate a separate conversation or create a new chat. The message lives in the same channel or thread ID, but with restricted visibility.
 
 ### Use Teams SDK
 
@@ -43,6 +43,8 @@ You can enable targeted messages using Teams SDK. It supports C#, TypeScript, an
 
 - Send targeted messages
 
+  # [TypeScript](#tab/ts1)
+
     ```typescript
     app.on('message', async ({ send, activity }) => {
       // Send a targeted message that only the sender can see
@@ -50,7 +52,44 @@ You can enable targeted messages using Teams SDK. It supports C#, TypeScript, an
     });
     ```
 
+  # [C#](#tab/dotnet1)
+
+    ```csharp
+    [Message]
+    public async Task OnMessage([Context] IContext.Client client)
+    {
+        // Send a private reply visible only to the sender
+        await client.Send("Hey! This is a private message just for you!", isTargeted: true);
+    }
+    ```
+
+  # [Python][#tab/Py1]
+
+    ```python
+    public static class Notifications
+    {
+        public static async Task SendProactiveTargeted(string userId)
+        {
+            var conversationId = (string?)storage.Get(userId);
+    
+            if (conversationId is null) return;
+    
+            // Set Recipient to specify who should receive the private message
+            var targetedMessage = new MessageActivity("Hey! This is a private message just for you!")
+            {
+                Recipient = new ChannelAccount { Id = userId }
+            };
+    
+            await app.Send(conversationId, targetedMessage, isTargeted: true);
+        }
+    }
+    ```
+
+  ---
+
 - Send proactive targeted messages
+
+  # [TypeScript](#tab/ts2)
 
     ```typescript
     import { MessageActivity } from '@microsoft/teams.api';
@@ -71,6 +110,47 @@ You can enable targeted messages using Teams SDK. It supports C#, TypeScript, an
       notificationQueue.addReminder(activity.from.aadObjectId!, sendProactiveNotification, 10_000);
     });
     ```
+
+  # [C#](#tab/dotnet2)
+
+    ```csharp
+    public static class Notifications
+    {
+        public static async Task SendProactiveTargeted(string userId)
+        {
+            var conversationId = (string?)storage.Get(userId);
+    
+            if (conversationId is null) return;
+    
+            // Set Recipient to specify who should receive the private message
+            var targetedMessage = new MessageActivity("Hey! This is a private message just for you!")
+            {
+                Recipient = new ChannelAccount { Id = userId }
+            };
+    
+            await app.Send(conversationId, targetedMessage, isTargeted: true);
+        }
+    }
+    ```
+
+  # [Python][#tab/Py2]
+
+    ```python
+    from microsoft_teams.api import MessageActivityInput, Account
+    # ...
+
+    async def send_targeted_proactive_notification(user_id: str, recipient_id: str):
+    conversation_id = storage.get(user_id, "")
+    if not conversation_id:
+        return
+    
+    activity = MessageActivityInput(text="This is a private reminder just for you!")
+    activity.recipient = Account(id=recipient_id, role="user")
+    
+    await app.send(conversation_id, activity, is_targeted=True)
+    ```
+
+  ---
 
 ### Use REST API
 
