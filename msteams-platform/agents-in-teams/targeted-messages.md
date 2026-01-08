@@ -27,7 +27,7 @@ Targeted messages are best suited for short-term, action-driven communication. U
   - [Use Graph API](#use-graph-api)
   - Handle errors
 - **About targeted messages**
-  - [What is a targeted messages](#what-is-a-targeted-message)
+  - [What is a targeted message](#what-is-a-targeted-message)
   - [Why use targeted messages](#why-use-targeted-messages)
 
 ## Targeted message developer experience
@@ -231,7 +231,7 @@ Some common user scenarios include:
 | --- | --- | --- |
 | Authentication flow | Sending a sign-in card as a targeted message | Enable uninterrupted discussion by a user's log in workflow |
 | Help or error responses | Sharing tips, usage examples, or error details | Enable discreet support for the intended user |
-| Personal reminders or nudges | Privately sending reminders to a single user | Avoid public call-outs or notifications for other group members |
+| Personal reminders or nudges | Privately sending reminders to a single user | Avoid public callouts or notifications for other group members |
 | Helping new users | Sending welcome messages or onboarding help to new members | Avoid unnecessary repetition of such information every time a new user joins |
 | AI or Copilot summary | Sharing discussion details for long-running chats for a new participant | Avoid derailing ongoing discussion |
 
