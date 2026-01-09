@@ -219,9 +219,9 @@ Ensure to handle these errors appropriately in your agent. The following table l
 | Status code | Error code | Description | Developer action |
 | --- | --- | --- | --- | --- |
 | 400 | `Bad request` | Recipient is missing in the `Send TM` API. | Ensure that recipient is included when the agent sends the message as it's mandatory. |
-| 400 | `Bad request` | Recipient must not be included in the payload of the `Edit TM` API | Ensure the recipient isn't included in the payload of the `Edit TM` API. |
+| 400 | `Bad request` | Recipient is included in the payload of the `Edit TM` API | Ensure the recipient isn't included in the payload of the `Edit TM` API. |
 
-For more information on status and error codes, see [status codes from bot conversational APIs](../bots/build-conversational-capability.md#status-codes-from-bot-conversational-apis).
+For more information on status and error codes for sending messages, see [status codes from bot conversational APIs](../bots/build-conversational-capability.md#status-codes-from-bot-conversational-apis).
 
 ## Learn about targeted messages
 
@@ -246,7 +246,7 @@ Some common user scenarios include:
 | AI or Copilot summary | Sharing discussion details for long-running chats for a new participant | Avoid derailing ongoing discussion |
 
 </details>
-
+<br>
 <details>
 <summary><b>Why use targeted messages</b></summary>
 
@@ -268,11 +268,3 @@ Among other benefits, targeted messages enhance user experience as follows:
 ## See also
 
 [Proactive messages](../bots/how-to/conversations/send-proactive-messages.md)
-
-<!--
-- **Reduce chat noise**: <br>
-    Prevent a single user's actions from cluttering the conversation. Other members remain focused on the discussion, while the intended recipient of the targeted message still receives help from the agent.
-
-- **Maintain relevance**: <br>
-    The agent responds to the user request within the chat context. The user can get chat summary and be updated about the discussion. It avoids the need to generalize or explain to the broader audience.
->
