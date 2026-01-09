@@ -157,7 +157,7 @@ Key steps for enabling targeted messages:
     - The agent must send a proactive message to a specific user message in-context.
     - The agent must send a recommendation to a user that isn't relevant to other group members.
 
-1. **Include the 'targeted' designation in the `send TM` API**:
+1. **Include the 'targeted' designation in the `Send TM` API**:
 
     Ensure that you specify the following when the agent sends the message:
 
@@ -175,10 +175,10 @@ Key steps for enabling targeted messages:
 
 1. **Handle send results and fallbacks**:
 
-    After the agent calls the `send TM` API, the API returns a success or error:
+    After the agent calls the `Send TM` API, the API returns a success or error:
 
     - If successful, the targeted user gets the message sent by the agent.
-    - If the `send TM` API fails, the agent chooses a fallback, such as sending a 1:1 chat message as a backup. However, the intended user must be a member of the chat or channel to receive a targeted message, else the message isn't delivered.
+    - If the `Send TM` API fails, the agent chooses a fallback, such as sending a 1:1 chat message as a backup. However, the intended user must be a member of the chat or channel to receive a targeted message, else the message isn't delivered.
     - Some scenarios where a send event might fail are if a user isn’t a group member or if the client doesn’t support targeted messages.
 
     > [!NOTE]
@@ -188,7 +188,7 @@ Key steps for enabling targeted messages:
 
     Your agent can update or delete the targeted message after sending it:
 
-    - **Edit**: The agent can update the original targeted message if needed. The agent calls the update message API using the message’s `activityId`. The updated message appears only in intended user’s view.
+    - **Edit**: The agent can update the original targeted message if needed. The agent calls the `Edit TM` API using the message’s `activityId`. The updated message appears only in intended user’s view.
 
         Use the following code snippet to edit targeted message:
 
@@ -218,8 +218,8 @@ Ensure to handle these errors appropriately in your agent. The following table l
 
 | Status code | Error code | Description | Developer action |
 | --- | --- | --- | --- | --- |
-| 400 | `Bad request` | Recipient is missing in the `send TM` API. | Ensure that recipient is included when the agent sends the message as it's mandatory. |
-| 400 | `Bad request` | Recipient must not be included in the payload of the `Edit TM` API | Ensure the recipient isn't included in the payload |
+| 400 | `Bad request` | Recipient is missing in the `Send TM` API. | Ensure that recipient is included when the agent sends the message as it's mandatory. |
+| 400 | `Bad request` | Recipient must not be included in the payload of the `Edit TM` API | Ensure the recipient isn't included in the payload of the `Edit TM` API. |
 
 For more information on status and error codes, see [status codes from bot conversational APIs](../bots/build-conversational-capability.md#status-codes-from-bot-conversational-apis).
 
