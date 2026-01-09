@@ -14,12 +14,12 @@ This section helps you to know about the prerequisites, install Microsoft 365 Ag
 ## Prerequisites
 
 * [Visual Studio Code](https://code.visualstudio.com/Download).
-* [NodeJS](https://nodejs.org) version 16 or later.
+* [NodeJS](https://nodejs.org) latest version.
 * NPM 8 or later.
 
 ## Install Agents Toolkit for Visual Studio Code
 
-You can install Agents Toolkit using **Extensions** in Visual Studio Code, or install it from the Visual Studio Code Marketplace.
+You can install Agents Toolkit using **Extensions** in Visual Studio Code or install it from the Visual Studio Code Marketplace.
 
 # [Visual Studio Code](#tab/vscode)
 
