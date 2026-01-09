@@ -182,7 +182,7 @@ Key steps for enabling targeted messages:
     - Some scenarios where a send event might fail are if the user isn’t a group member or if the client doesn’t support targeted messages.
 
     > [!NOTE]
-    > The Backward compatibility logic in Teams prevents older clients from displaying targeted messages to all members when they don’t support the feature. It also alerts your agent when a client can't handle targeted messages.
+    > Teams' backward compatibility ensures older clients don't show targeted messages if unsupported and notifies your agent when a client can't process them.
 
 1. **Agent edits and deletes the message**:
 
