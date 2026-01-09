@@ -162,6 +162,7 @@ Key steps for enabling targeted messages:
     Ensure that you specify the following when the agent sends the message:
 
     - The conversation (chat or channel) ID and targeted user’s ID (Principal ID or MRI). It identifies where the message goes and who should see it.
+    - The intended user must be a member of the chat or channel to receive a targeted message.
     - A flag or API call that marks the message as targeted or ephemeral.
 
         <!--Use the service URL from the conversation. The `userId` is the user’s Teams ID (MRI) to target, and `conversationId` is the group chat or channel thread ID. The payload of the POST is the activity or message to send, just like a normal message activity.-->
@@ -175,11 +176,11 @@ Key steps for enabling targeted messages:
 
 1. **Handle send results and fallbacks**:
 
-    After the agent calls the `Send TM` API, the API returns a success or error:
+    After the agent calls the `Send TM` API, the API returns a success or error.
 
-    - If successful, the targeted user gets the message sent by the agent.
-    - If the `Send TM` API fails, the agent chooses a fallback, such as sending a 1:1 chat message as a backup. However, the intended user must be a member of the chat or channel to receive a targeted message, else the message isn't delivered.
-    - Some scenarios where a send event might fail are if a user isn’t a group member or if the client doesn’t support targeted messages.
+    - If successful,  the targeted user gets the message sent by the agent.
+    - If the `Send TM` API fails, the agent may choose a fallback such as sending a 1:1 chat message as a backup.
+    - Some scenarios where a send event might fail are if the user isn’t a group member or if the client doesn’t support targeted messages.
 
     > [!NOTE]
     > The Backward compatibility logic in Teams prevents older clients from displaying targeted messages to all members when they don’t support the feature. It also alerts your agent when a client can't handle targeted messages.
