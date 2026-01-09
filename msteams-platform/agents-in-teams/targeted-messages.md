@@ -166,12 +166,12 @@ Key steps for enabling targeted messages:
 
         <!--Use the service URL from the conversation. The `userId` is the user’s Teams ID (MRI) to target, and `conversationId` is the group chat or channel thread ID. The payload of the POST is the activity or message to send, just like a normal message activity.-->
 
-        To send a targeted activity, ensure that you indicate the `isTargetedActivity` as `true`.
+    To send a targeted activity, ensure that you indicate the `isTargetedActivity` as `true`.
 
-        ```rest
-           POST {cloud}/v3/conversations/{conversationld}/activities?isTargetedActivity=true
-           POST {cloud}/v3/conversations/{conversationld}/activities/{activityld}?isTargetedActivity=true
-        ```
+    ```rest
+       POST {cloud}/v3/conversations/{conversationld}/activities?isTargetedActivity=true
+       POST {cloud}/v3/conversations/{conversationld}/activities/{activityld}?isTargetedActivity=true
+    ```
 
 1. **Handle send results and fallbacks**:
 
