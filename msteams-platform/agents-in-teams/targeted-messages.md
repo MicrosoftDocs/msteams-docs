@@ -157,7 +157,7 @@ Key steps for enabling targeted messages:
     - The agent must send a proactive message to a specific user message in-context.
     - The agent must send a recommendation to a user that isn't relevant to other group members.
 
-1. **Include the 'targeted' designation in the `send` API**:
+1. **Include the 'targeted' designation in the `send TM` API**:
 
     Ensure that you specify the following when the agent sends the message:
 
@@ -175,10 +175,10 @@ Key steps for enabling targeted messages:
 
 1. **Handle send results and fallbacks**:
 
-    After the agent calls the targeted `send` API, the API returns a success or error:
+    After the agent calls the `send TM` API, the API returns a success or error:
 
     - If successful, the targeted user gets the message sent by the agent.
-    - If the `send` API fails, the agent chooses a fallback, such as sending a 1:1 chat message as a backup. However, the intended user must be a member of the chat or channel to receive a targeted message, else the message isn't delivered.
+    - If the `send TM` API fails, the agent chooses a fallback, such as sending a 1:1 chat message as a backup. However, the intended user must be a member of the chat or channel to receive a targeted message, else the message isn't delivered.
     - Some scenarios where a send event might fail are if a user isn’t a group member or if the client doesn’t support targeted messages.
 
     > [!NOTE]
@@ -211,6 +211,17 @@ Key steps for enabling targeted messages:
 Microsoft Graph exposes targeted messaging support. Graph API for Teams chat messages includes a property to send a message to specific users or a new endpoint for targeted messages. It allows workflows or external apps to create targeted messages.
 
 [WIP: Link to Graph API to be added]
+
+### Handle errors
+
+Ensure to handle these errors appropriately in your agent. The following table lists the error codes and the descriptions under which the errors are generated:
+
+| Status code | Error code | Description | Developer action |
+| --- | --- | --- | --- | --- |
+| 400 | `Bad request` | Recipient is missing in the `send TM` API. | Ensure that recipient is included when the agent sends the message as it's mandatory. |
+| 400 | `Bad request` | Recipient must not be included in the payload of the `Edit TM` API | Ensure the recipient isn't included in the payload |
+
+For more information on status and error codes, see [status codes from bot conversational APIs](../bots/build-conversational-capability.md#status-codes-from-bot-conversational-apis).
 
 ## Learn about targeted messages
 
