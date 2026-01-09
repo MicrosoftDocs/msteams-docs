@@ -161,8 +161,7 @@ Key steps for enabling targeted messages:
 
     Ensure that you specify the following when the agent sends the message:
 
-    - The conversation (chat or channel) ID and targeted user’s ID (Principal ID or MRI). It identifies where the message goes and who should see it.
-    - The intended user must be a member of the chat or channel to receive a targeted message.
+    - The conversation (chat or channel) ID and targeted user’s ID (Principal ID or MRI). The intended user must be a member of the chat or channel to receive a targeted message.
     - A flag or API call that marks the message as targeted or ephemeral.
 
         <!--Use the service URL from the conversation. The `userId` is the user’s Teams ID (MRI) to target, and `conversationId` is the group chat or channel thread ID. The payload of the POST is the activity or message to send, just like a normal message activity.-->
