@@ -8,7 +8,7 @@ ms.topic: reference
 
 # Enable targeted messages for agents
 
-Targeted messages are temporary, private messages sent by agents or bots to a single user in a channel or group. They're similar to regular messages in all capabilities like interactive Adaptive Cards with buttons, images, or file attachments. They're ideal for contextual information or help without cluttering the conversation.
+Targeted messages are temporary, private messages sent by agents or bots to a single user in a channel or group. They support all message capabilities like buttons, images, and files and are ideal for contextual information or help without cluttering the conversation.
 
 <!--
 Targeted messages are temporary, user-specific messages that appear in a group chat, meeting, or channel. Agents can support users without adding permanent noise for the rest of the group. They can include most message capabilities like interactive Adaptive Cards with buttons, images, or file attachments. For example, use a targeted message to share a sign‑in card or an error message with a help link. Unlike standard messages, targeted messages are:
