@@ -26,7 +26,6 @@ Targeted messages are best suited for short-term, action-driven communication. U
 - **Enable targeted messages**
   - [Use Teams SDK](#use-teams-sdk)
   - [Use REST API](#use-rest-api)
-  - [Use Graph API](#use-graph-api)
   - [Handle errors](#handle-errors)
 - **About targeted messages**
   - [What is a targeted message](#what-is-a-targeted-message)
