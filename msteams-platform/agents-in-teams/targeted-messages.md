@@ -18,7 +18,8 @@ Targeted messages are temporary, user-specific messages that appear in a group c
 - Visible up for a limited time in the client.
 - Restricted for user actions such as reaction, replies, and forwarding.
 
-Targeted messages are best suited for short-term, action-driven communication. Use them when you want the agent to respond in-the-moment as required by a specific user.--?
+Targeted messages are best suited for short-term, action-driven communication. Use them when you want the agent to respond in-the-moment as required by a specific user.
+-->
 
 **Key points**:
 
