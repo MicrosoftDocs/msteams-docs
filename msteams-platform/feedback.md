@@ -75,5 +75,5 @@ Share feature ideas, ask questions, or let us know about your experience with th
 ## See also
 
 * [Teams JavaScript client library reference](/javascript/api/overview/msteams-client)
-* [Microsoft Teams SDK library](microsoftteams/platform/teams-ai-library/welcome)
+* [Microsoft Teams SDK library](/microsoftteams/platform/teams-ai-library/welcome)
 * [Microsoft 365 Copilot extensibility overview](/microsoft-365-copilot/extensibility/overview)
