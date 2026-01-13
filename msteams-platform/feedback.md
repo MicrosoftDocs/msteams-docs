@@ -40,6 +40,7 @@ Developers commonly use the following community forums to share ideas, get help,
 | :::image type="icon" source="assets/icons/github-icon.png"::: [GitHub](https://github.com) | Discuss issues related to [Microsoft Teams Docs](https://github.com/MicrosoftDocs/msteams-docs/issues), [Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/issues), and [Microsoft Teams JavaScript client library](https://github.com/OfficeDev/microsoft-teams-library-js/issues) using the `teams-developer-support` tag. |
 | :::image type="icon" source="assets/icons/microsoft-icon.png"::: [Teams Developer Community](https://techcommunity.microsoft.com/category/microsoftteams/discussions/teamsdeveloper?messages.widget.messagelistfornodebyrecentactivitywidget-tab-main-forum-widgets-0=newest)| Select **Start a Discussion** to begin a conversation. Browse recent and popular posts to find solutions, and use the `MICROSOFT TEAMS` tag to get relevant responses. |
 |:::image type="icon" source="assets/icons/stack-overflow-icon.png"::: [Stack Overflow](https://stackoverflow.com/questions/tagged/microsoft-teams)| Post your questions using the `microsoft-teams` tag. Write a clear title, describe the problem, and include steps to reproduce the issue. Off‑topic or feature‑request questions aren’t allowed. For more information, see [Stack Overflow Help Center](https://stackoverflow.com/help).|
+|:::image type="icon" source="assets/icons/reddit-icon.png"::: [Reddit](https://www.reddit.com/)| **copilotstudio**: Discuss building and configuring Copilot Studio agents and share tips or solutions from real-world scenarios. For more information, see [copilotstudio](https://www.reddit.com/r/copilotstudio/) **microsoft_365_copilot**: Ask questions and exchange insights about Microsoft 365 Copilot usage, deployment, and productivity workflows across Teams and other Microsoft 365 apps. For more information, see [microsoft_365_copilot](https://www.reddit.com/r/microsoft_365_copilot/)
 
 ### Report issues
 
@@ -50,7 +51,7 @@ Use the following community channels to report SDK, samples, or platform issues.
 | **Platform outages** | Check if your issue is already reported under [Teams platform outages](https://github.com/MicrosoftDocs/msteams-docs/labels/outage) before raising a new one. |
 | **Samples** | Submit issues for samples in the [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples) repository.|
 | **Microsoft 365 Agents Toolkit** | <ul><li> :::image type="icon" source="assets/icons/GitHub-icon.png":::  [GitHub Issues](https://github.com/OfficeDev/TeamsFx/issues): Create new issues on the [microsoft-365-agents-toolkit GitHub repository](https://github.com/OfficeDev/TeamsFx) to report issues or raise feature request. We recommend using GitHub issues for queries and community help. <li> :::image type="icon" source="assets/icons/stack-overflow-icon.png"::: [Stack Overflow](https://stackoverflow.com/questions/tagged/agents-toolkit): Use the `agents-toolkit` tag to post questions. Follow Stack Overflow guidelines. </li> </ul> |
-| **TeamsJS (Tabs)** | Submit issues and feature requests to the [ Teams JavaScript client library (TeamsJS)](https://github.com/OfficeDev/microsoft-teams-library-js/issues). Select **New issue** or browse existing issues using the `teams-developer-support` tag. |
+| **TeamsJS (Tabs)** | Submit issues and feature requests to the [Teams JavaScript client library (TeamsJS)](https://github.com/OfficeDev/microsoft-teams-library-js/issues). Select **New issue** or browse existing issues using the `teams-developer-support` tag. |
 
 ### Documentation feedback
 
@@ -74,5 +75,5 @@ Share feature ideas, ask questions, or let us know about your experience with th
 ## See also
 
 * [Teams JavaScript client library reference](/javascript/api/overview/msteams-client)
-* [Microsoft Teams SDK library](https://developer.microsoft.com/en-us/microsoft-365/copilot)
+* [Microsoft Teams SDK library]((/microsoftteams/platform/teams-ai-library/welcome))
 * [Microsoft 365 Copilot extensibility overview](/microsoft-365-copilot/extensibility/overview)
