@@ -30,7 +30,7 @@ Copilot plugins that use a bot must have the Microsoft 365 channel enabled in Az
 > [!IMPORTANT]
 > Message extensions in Outlook require the **Microsoft 365** channel. If you enabled the **Outlook channel** previously, enable the Microsoft 365 channel instead and disable the Outlook channel.
 
-If you see an HTTP 500 error, check the following points before contacting Azure support:
+If you see an HTTP 500 error, the following checks may help you troubleshoot the issue before reaching out to Azure support:
 
 > [!div class="checklist"]
 >
