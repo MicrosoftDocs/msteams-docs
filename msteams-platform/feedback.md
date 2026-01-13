@@ -32,7 +32,7 @@ Go to the [**Azure portal**](https://ms.portal.azure.com/#home) or [**Microsoft 
 Use community forums to ask development-related questions, share solutions, and collaborate with other developers building agents and conversational experiences for Teams and Microsoft 365 Copilot. To learn more, see [agents in Teams](agents-in-teams/overview.md).
 📢 Read the latest [announcements](https://github.com/MicrosoftDocs/msteams-docs/discussions/categories/announcements) and join the conversation with community members and platform engineers!
 
-Developers commonly use the following community forums to share ideas, get help, report issues, and ask general questions.
+The following community forums are the primary way developers interact with Microsoft and other experts for Teams and Microsoft 365 Copilot development. These channels are monitored by Microsoft teams and community moderators, and are the recommended first place to ask development-related questions.
 
 | **Community Forums**| **How to connect** |
 |:--------------------|:--------------------|
@@ -40,7 +40,7 @@ Developers commonly use the following community forums to share ideas, get help,
 | :::image type="icon" source="assets/icons/github-icon.png"::: [GitHub](https://github.com) | Discuss issues related to [Microsoft Teams Docs](https://github.com/MicrosoftDocs/msteams-docs/issues), [Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/issues), and [Microsoft Teams JavaScript client library](https://github.com/OfficeDev/microsoft-teams-library-js/issues) using the `teams-developer-support` tag. |
 | :::image type="icon" source="assets/icons/microsoft-icon.png"::: [Teams Developer Community](https://techcommunity.microsoft.com/category/microsoftteams/discussions/teamsdeveloper?messages.widget.messagelistfornodebyrecentactivitywidget-tab-main-forum-widgets-0=newest)| Select **Start a Discussion** to begin a conversation. Browse recent and popular posts to find solutions, and use the `MICROSOFT TEAMS` tag to get relevant responses. |
 |:::image type="icon" source="assets/icons/stack-overflow-icon.png"::: [Stack Overflow](https://stackoverflow.com/questions/tagged/microsoft-teams)| Post your questions using the `microsoft-teams` tag. Write a clear title, describe the problem, and include steps to reproduce the issue. Off‑topic or feature‑request questions aren’t allowed. For more information, see [Stack Overflow Help Center](https://stackoverflow.com/help).|
-|:::image type="icon" source="assets/icons/reddit-icon.png"::: [Reddit](https://www.reddit.com/) | <ul><li><strong>copilotstudio</strong>: Discuss building and configuring Copilot Studio agents and share tips or solutions from real-world scenarios. For more information, see <a href="https://www.reddit.com/r/copilotstudio/">r/copilotstudio</a>.</li><li><strong>microsoft_365_copilot</strong>: Ask questions and exchange insights about Microsoft 365 Copilot usage, deployment, and productivity workflows across Teams and other Microsoft 365 apps. For more information, see <a href="https://www.reddit.com/r/microsoft_365_copilot/">r/microsoft_365_copilot</a>.</li></ul> |
+|:::image type="icon" source="assets/icons/reddit-icon.png"::: [Reddit](https://www.reddit.com/) | Community-run discussion forums that supplement official Microsoft support channels with peer insights and real-world examples. <ul><li><strong>copilotstudio</strong>: Discuss building and configuring Copilot Studio agents and share tips or solutions from real-world scenarios. For more information, see <a href="https://www.reddit.com/r/copilotstudio/">r/copilotstudio</a>.</li><li><strong>microsoft_365_copilot</strong>: Ask questions and exchange insights about Microsoft 365 Copilot usage, deployment, and productivity workflows across Teams and other Microsoft 365 apps. For more information, see <a href="https://www.reddit.com/r/microsoft_365_copilot/">r/microsoft_365_copilot</a>.</li></ul> |
 
 ### Report issues
 
@@ -56,6 +56,7 @@ Use the following community channels to report SDK, samples, or platform issues.
 ### Documentation feedback
 
 Use the community help channels to submit documentation issues, feedback, or contribute improvements.
+Documentation feedback is reviewed regularly by the Microsoft documentation team and helps improve future updates.
 
 | **Community help channels** | **How to provide feedback** |
 |:--------------------------|:--------------------------|
