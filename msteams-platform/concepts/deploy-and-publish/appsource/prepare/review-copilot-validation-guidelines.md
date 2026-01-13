@@ -85,8 +85,8 @@ Apps must be consistent with responsible [AI checks](teams-store-validation-guid
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/white-bg.png" border="false":::
       :::column-end:::
-:::row-end:::
 -->
+:::row-end:::
 
 ## Value Proposition
 
