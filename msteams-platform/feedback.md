@@ -36,7 +36,7 @@ Developers commonly use the following community forums to share ideas, get help,
 
 | **Community Forums**| **How to connect** |
 |:--------------------|:--------------------|
-| :::image type="icon" source="assets/icons/microsoft-icon.png"::: [Microsoft Q&A](https://learn.microsoft.com/answers/tags/339/office-teams-development-routing?orderby=createdat)| Ask questions and connect with other developers for building Teams agents, apps, or workflows using developer tools and APIs. Select **Ask a question**, and add the `Microsoft Teams` tag to your question. You can also **Sign in to follow** to stay updated. |
+| :::image type="icon" source="assets/icons/microsoft-icon.png"::: [Microsoft Q&A](/answers/tags/339/office-teams-development-routing?orderby=createdat)| Ask questions and connect with other developers for building Teams agents, apps, or workflows using developer tools and APIs. Select **Ask a question**, and add the `Microsoft Teams` tag to your question. You can also **Sign in to follow** to stay updated. |
 | :::image type="icon" source="assets/icons/github-icon.png"::: [GitHub](https://github.com) | Discuss issues related to [Microsoft Teams Docs](https://github.com/MicrosoftDocs/msteams-docs/issues), [Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples/issues), and [Microsoft Teams JavaScript client library](https://github.com/OfficeDev/microsoft-teams-library-js/issues) using the `teams-developer-support` tag. |
 | :::image type="icon" source="assets/icons/microsoft-icon.png"::: [Teams Developer Community](https://techcommunity.microsoft.com/category/microsoftteams/discussions/teamsdeveloper?messages.widget.messagelistfornodebyrecentactivitywidget-tab-main-forum-widgets-0=newest)| Select **Start a Discussion** to begin a conversation. Browse recent and popular posts to find solutions, and use the `MICROSOFT TEAMS` tag to get relevant responses. |
 |:::image type="icon" source="assets/icons/stack-overflow-icon.png"::: [Stack Overflow](https://stackoverflow.com/questions/tagged/microsoft-teams)| Post your questions using the `microsoft-teams` tag. Write a clear title, describe the problem, and include steps to reproduce the issue. Off‑topic or feature‑request questions aren’t allowed. For more information, see [Stack Overflow Help Center](https://stackoverflow.com/help).|
@@ -75,5 +75,5 @@ Share feature ideas, ask questions, or let us know about your experience with th
 ## See also
 
 * [Teams JavaScript client library reference](/javascript/api/overview/msteams-client)
-* [Microsoft Teams SDK library]((/microsoftteams/platform/teams-ai-library/welcome))
+* [Microsoft Teams SDK library](microsoftteams/platform/teams-ai-library/welcome)
 * [Microsoft 365 Copilot extensibility overview](/microsoft-365-copilot/extensibility/overview)
