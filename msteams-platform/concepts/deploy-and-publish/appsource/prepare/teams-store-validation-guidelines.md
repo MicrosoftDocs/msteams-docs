@@ -1192,6 +1192,8 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * Bot user experience mustn't be broken on mobile platforms. Your bot must be fully responsive on mobile. [*Must fix*]
 
+* To enable app profile cards for agents or bots, add a features field under description in the app manifest. Ensure it meets all metadata policies and test cases and include only supported functionality details.
+
 > [!TIP]
 > For personal bots, include a **Help** tab that further describes what your bot can do.
 
