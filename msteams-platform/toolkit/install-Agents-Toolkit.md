@@ -13,9 +13,11 @@ This section helps you to know about the prerequisites, install Microsoft 365 Ag
 
 ## Prerequisites
 
-* [Visual Studio Code](https://code.visualstudio.com/Download).
-* [NodeJS](https://nodejs.org) latest version.
-* NPM 8 or later.
+- [Visual Studio Code](https://code.visualstudio.com/Download).
+- [NodeJS](https://nodejs.org) latest version.
+- NPM 8 or later.
+- Microsoft 365 work or organization account
+- Azure account and subscription
 
 ## Install Agents Toolkit for Visual Studio Code
 
@@ -111,8 +113,8 @@ Agents Toolkit for Visual Studio Code extension is available in a prerelease ver
 1. Select **Extensions** :::image type="icon" source="../assets/images/toolkit-v2/toolkit-fundamentals/extension icon.png" border="false" alt-text="Screenshot shows the extension icon."::: from the Visual Studio Code activity bar.
 1. Enter **Microsoft 365 Agents Toolkit** in the search box.
 1. Click the dropdown arrow next to **Uninstall**.
-   * If you're already on the **pre-release track**, choose **Install Specific Version...**. You will see a list of available **pre-release versions**.
-   * If you're on the **stable track**, the **Install Specific Version...** option will only show **stable versions**.
+   - If you're already on the **pre-release track**, choose **Install Specific Version...**. You will see a list of available **pre-release versions**.
+   - If you're on the **stable track**, the **Install Specific Version...** option will only show **stable versions**.
 
 > [!NOTE]
 > The **Install Pre-Release Version** option may not appear depending on the update track of your currently installed **Microsoft 365 Agents Toolkit** extension. Use **Install Specific Version...** to manually select a version.
@@ -127,5 +129,5 @@ Agents Toolkit for Visual Studio Code extension is available in a prerelease ver
 
 ## See also
 
-* [Explore Microsoft 365 Agents Toolkit features](~/toolkit/explore-Teams-Toolkit.md)
-* [Prepare to build apps](~/toolkit/build-environments.md)
+- [Explore Microsoft 365 Agents Toolkit features](~/toolkit/explore-Teams-Toolkit.md)
+- [Prepare to build apps](~/toolkit/build-environments.md)
