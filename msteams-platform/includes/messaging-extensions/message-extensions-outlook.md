@@ -3,7 +3,9 @@
 
 1. Open **Visual Studio Code**.
 1. Select **Command Palette...** under the **View** option or **Ctrl+Shift+P**.
-1. Select **Teams: Create a New App**.
+1. Select **Microsoft 365 Agents: Create New Agent/App**.
+1. Select **Teams Agents and Apps**.
+1. Select **Other Teams Capabilities**.
 1. Select **Message Extension** from the dropdown list.
 1. Select **Custom Search Results** to download the sample code for a Teams search-based message extension using the latest app manifest (previously called Teams [app manifest](/microsoft-365/extensibility/schema/)).
 

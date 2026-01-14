@@ -346,7 +346,7 @@ This example shows a response with two results, mixing different card formats: C
               "facts": [
                 {
                   "name": "Assigned to:",
-                  "value": "[Larry Brown](mailto:larryb@example.com)"
+                  "value": "[Larry Brown](mailto:larryb@contoso.com)"
                 },
                 {
                   "name": "State:",
@@ -528,7 +528,7 @@ To prompt an unauthenticated user to sign in, respond with a suggested action of
       "actions":[
         {
           "type": "openUrl",
-          "value": "https://example.com/auth",
+          "value": "https://contoso.com/auth",
           "title": "Sign in to this app"
         }
       ]

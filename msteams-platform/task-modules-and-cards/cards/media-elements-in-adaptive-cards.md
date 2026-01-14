@@ -45,7 +45,7 @@ Add media files into an existing or new Adaptive Card either through [Developer 
 
 # [Developer Portal for Teams](#tab/developer-portal-for-teams)
 
-1. Go to [Developer Portal for Teams](https://dev.teams.microsoft.com/cards).
+1. Go to [Developer Portal for Teams](https://dev.teams.microsoft.com/tools/cards).
 
 1. Select an existing card from the previously created Adaptive Cards list, or create a new Adaptive Card. To create a new card, select **+New card**, enter the card's name, and select **Save**.
 
