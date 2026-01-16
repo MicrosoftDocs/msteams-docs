@@ -34,7 +34,7 @@ You can explore the available functionalities from the Agents Toolkit task pane.
 <details>
 <summary><b>Select to view a video to learn about the process of creating a new Teams app:</b></summary>
 
-   :::image type="content" source="../assets/videos/javascript-botapp.gif" alt-text="Graphical representation shows the steps to create a Teams app.":::
+   :::image type="content" source="../assets/videos/agent.gif" alt-text="Graphical representation shows the steps to create an agent.":::
 </details>
 
 After you create a new Teams app project, the directory structure of the app appears in the left pane and the **`README`** file in the right pane.
