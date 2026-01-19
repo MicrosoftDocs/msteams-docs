@@ -10,7 +10,7 @@ ms.date: 10/22/2024
 
 # Use certificate or MSI for app authentication
 
-You can use certificate- or MSI-based authentication to validate your bot app instead of bot ID and secret. This authentication resolves the compliance concerns related to the use of Microsoft Entra ID and bot secret.
+You can use certificate- or MSI-based authentication to validate your bot app instead of bot ID and secret. This authentication resolves compliance concerns related to the use of Microsoft Entra ID and bot secret.
 
 ## Prerequisites
 
