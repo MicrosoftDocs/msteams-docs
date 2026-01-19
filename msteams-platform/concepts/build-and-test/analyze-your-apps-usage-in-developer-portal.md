@@ -10,11 +10,11 @@ ms.date: 05/08/2025
 
 # Analyze app and agent usage in Developer Portal
 
-Developer Portal for Microsoft Teams provides a comprehensive suite of tools to help you analyze and understand your app's and agent's performance and user engagement. By using these analytics, you can gain valuable insights into how users interact with your app and agent, identify areas for improvement, and make data-driven decisions to enhance the overall user experience.
+Developer Portal for Microsoft Teams offers a comprehensive suite of tools to help you analyze and understand your app's and agent's performance and user engagement. By using these analytics, you can gain valuable insights into how users interact with your app and agent, identify areas for improvement, and make data-driven decisions to enhance the overall user experience.
 
-Whether you're tracking active users, retention rates, or usage patterns across different platforms, Developer Portal helps you with the information you need to optimize your app and ensure its success. Custom apps built for your org (LOB apps) can access app and agent usage data only for Teams. However, for third-party apps you can explore new Microsoft 365 dimensions, such as host product and capabilities.
+Whether you're tracking active users, retention rates, or usage patterns across different platforms, Developer Portal provides the information you need to optimize your app and ensure its success. Custom apps built for your organization (LOB apps) can access app and agent usage data only for Teams. However, for third-party apps, you can explore new Microsoft 365 dimensions, such as host product and capabilities.
 
-The app and agent usage for a given day is reflected within 24 to 48 hours, and usage data for the new apps or agents can take up to three to five days to reflect in the charts. Usage data isn’t shown for apps with fewer than five active users or for agents created using Copilot Studio agent builder.
+The app and agent usage for a given day is reflected within 24 to 48 hours, and usage data for new apps or agents can take up to three to five days to appear in the charts. Usage data isn’t shown for apps with fewer than five active users or for agents created using Copilot Studio agent builder.
 
 # [Custom apps (New)](#tab/custom-apps-built-for-your-org)
 
@@ -65,7 +65,7 @@ As you explore individual metrics on this page, you can use the **Filter** butto
 * **Operating system**: Allows you to group the metrics by the operating system on which users performed intentional activities with your app and agent. The operating system can be **Windows**, **Mac**, **iOS**, **Android** or other available options.
 * **Area**: Allows you to group the metrics by the geographical location of the active usage.
 
- :::image type="content" source="../../assets/images/tdp/filter-tdp-analytics.png" alt-text="Screenshot shows the app and agent analytics page filter in Developer Portal." lightbox="../../assets/images/tdp/filter-tdp-analytics.png":::
+:::image type="content" source="../../assets/images/tdp/filter-tdp-analytics.png" alt-text="Screenshot shows the app and agent analytics page filter in Developer Portal." lightbox="../../assets/images/tdp/filter-tdp-analytics.png":::
 
 ## App and agent analytics
 
@@ -179,17 +179,17 @@ The **Capability** tab shows the usage of individual app and agent capabilities 
 * Connector
 * Personal tab
 
-   :::image type="content" source="../../assets/images/tdp/tdp-app-capability.png" alt-text="Screenshot shows app and agent capability usage in different host products of your published app in Developer Portal." lightbox="../../assets/images/tdp/tdp-app-capability.png":::
+:::image type="content" source="../../assets/images/tdp/tdp-app-capability.png" alt-text="Screenshot shows app and agent capability usage in different host products of your published app in Developer Portal." lightbox="../../assets/images/tdp/tdp-app-capability.png":::
 
-   > [!NOTE]
-   > **Microsoft 365 Copilot Agent** includes the usage of declarative agents only. The usage of custom engine agent is expected to be introduced later in Developer Portal.
+> [!NOTE]
+> **Microsoft 365 Copilot Agent** includes the usage of declarative agents only. The usage of custom engine agent is expected to be introduced later in Developer Portal.
 
 # [Custom apps (Deprecating)](#tab/custom-apps-deprecating)
 
-   > [!NOTE]
-   >
-   > * The current custom app analytics is deprecating soon.
-   > * You can opt for the new custom app and agent analytics in Developer Portal by selecting the banner on the Analytics page. For more information, see [new custom app and agent analytics](/microsoftteams/platform/concepts/build-and-test/analyze-your-apps-usage-in-developer-portal?tabs=custom-apps-built-for-your-org).
+> [!NOTE]
+>
+> * The current custom app analytics is deprecating soon.
+> * You can opt for the new custom app and agent analytics in Developer Portal by selecting the banner on the Analytics page. For more information, see [new custom app and agent analytics](/microsoftteams/platform/concepts/build-and-test/analyze-your-apps-usage-in-developer-portal?tabs=custom-apps-built-for-your-org).
 
 ## Get started
 
@@ -200,7 +200,7 @@ You can view your custom app's usage and other insights from the **Analytics** p
 1. Select the required app from the **Apps** page.
 1. Select **Analytics** under the **Overview** section or select **View details** under the **Active Users (Preview)** card.
 
-   :::image type="content" source="../../assets/images/tdp/dev-app-portal.png" alt-text="Screenshot shows the analytics page of your app in Developer Portal." lightbox="../../assets/images/tdp/dev-app-portal.png":::
+:::image type="content" source="../../assets/images/tdp/dev-app-portal.png" alt-text="Screenshot shows the analytics page of your app in Developer Portal." lightbox="../../assets/images/tdp/dev-app-portal.png":::
 
 ## Metric definitions
 
@@ -217,7 +217,7 @@ As you explore individual metrics on this page, you can use the **Filter** butto
 * **Operating system**: Allows you to group the metrics by the operating system on which users performed intentional activities with your app.
 * **Area**: Allows you to group the metrics by the geographical location of the active usage.
 
-   :::image type="content" source="../../assets/images/tdp/dev-analytics-filter.png" alt-text="Screenshot shows the analytics page filter in Developer Portal.":::
+:::image type="content" source="../../assets/images/tdp/dev-analytics-filter.png" alt-text="Screenshot shows the analytics page filter in Developer Portal.":::
 
 ## App usage
 
@@ -281,7 +281,7 @@ The **My App dashboard** table shows the latest R30 (Rolling 30 days) data for e
 
 You can select each of these **Metric name** to see trends over time.
 
-   :::image type="content" source="../../assets/images/tdp/app-dashboard.png" alt-text="Screenshot shows the app dashboard chart for your published app in Developer Portal.":::
+:::image type="content" source="../../assets/images/tdp/app-dashboard.png" alt-text="Screenshot shows the app dashboard chart for your published app in Developer Portal.":::
 
 # [Third-party apps](#tab/thirdpartyapps)
 
@@ -290,9 +290,10 @@ To view app and agent usage in Developer Portal, you need **Manager** or **Devel
 You can view the app or agent usage for your [third-party app](../../promote-app-adoption.md#access-to-your-apps) and other insights from the **Analytics** page. To access the page:
 
 1. Go to **[Developer Portal](https://dev.teams.microsoft.com)**.
-1. Select **Apps** from the left pane.
-1. Select the required app from the **Apps** page.
-1. Select **Analytics** under the **Overview** section.
+
+1. Choose **Apps** from the left navigation pane.
+1. Select the desired app from the **Apps** page.
+1. Under the **Overview** section, choose **Analytics**.
 
 :::image type="content" source="../../assets/images/tdp/analy-dev-portal.png" alt-text="Screenshot shows the analytics page of your app and agent in Developer Portal." lightbox="../../assets/images/tdp/analy-dev-portal.png":::
 
@@ -319,7 +320,7 @@ As you explore individual metrics on this page, you can use the **Filter** butto
 * **Operating system**: Allows you to group the metrics by the operating system on which users performed intentional activities with your app and agent. The operating system can be **Windows**, **Mac**, **iOS**, **Android** or other available options.
 * **Area**: Allows you to group the metrics by the geographical location of the active usage.
 
- :::image type="content" source="../../assets/images/tdp/filter-tdp-analytics.png" alt-text="Screenshot shows the app and agent analytics page filter in Developer Portal." lightbox="../../assets/images/tdp/filter-tdp-analytics.png":::
+:::image type="content" source="../../assets/images/tdp/filter-tdp-analytics.png" alt-text="Screenshot shows the app and agent analytics page filter in Developer Portal." lightbox="../../assets/images/tdp/filter-tdp-analytics.png":::
 
 ## App and agent analytics
 
