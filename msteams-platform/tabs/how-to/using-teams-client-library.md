@@ -15,10 +15,10 @@ ms.owner: ryanbliss
 
 [!INCLUDE [Deprecation note](../../includes/deprecation-note-teamsfx-sdk.md)]
 
-The Microsoft Teams JavaScript client library (TeamsJS) can help you create hosted experiences in Teams, Microsoft 365 app, and Outlook, where your app content is hosted in an [iFrame](https://developer.mozilla.org/docs/Web/HTML/Element/iframe). The library is helpful for developing apps with the following Teams capabilities:
+The Microsoft Teams JavaScript client library (TeamsJS) assists in creating hosted experiences within Teams, Microsoft 365 app, and Outlook, where your app content is hosted in an [iFrame](https://developer.mozilla.org/docs/Web/HTML/Element/iframe). This library is beneficial for developing apps with the following Teams capabilities:
 
 * [Tabs](../../tabs/what-are-tabs.md)
-* [Dialogs (referred as task modules in TeamsJS v1.x)](../../task-modules-and-cards/what-are-task-modules.md)
+* [Dialogs (referred to as task modules in TeamsJS v1.x)](../../task-modules-and-cards/what-are-task-modules.md)
 
 Starting with version `2.0.0`, the existing TeamsJS library (`@microsoft/teams-js`, or simply `TeamsJS`) is refactored to enable [Teams apps to run in Outlook and Microsoft 365 app](/microsoftteams/platform/m365-apps/overview), in addition to Microsoft Teams. From a functional perspective, the latest version of TeamsJS supports all existing (v.1.x.x) Teams app functionality while adding the optional ability to host Teams apps in Outlook and Microsoft 365 app.
 
@@ -340,7 +340,7 @@ The `Context` interface is moved to the `app` namespace and updated to group sim
 
 A new property `app.Context.app.host.name` is added to enable tabs to differentiate user experience depending on the host application.
 
-You can also visualize the changes by reviewing the `transformLegacyContextToAppContext` function in the [TeamsJS version 2.x.x source](https://github.com/OfficeDev/microsoft-teams-library-js/blob/main/packages/teams-js/src/public/app/app.ts)  (*app.ts* file).
+You can also visualize the changes by reviewing the `transformLegacyContextToAppContext` function in the [TeamsJS version 2.x.x source](https://github.com/OfficeDev/microsoft-teams-library-js/blob/main/packages/teams-js/src/public/app/app.ts) (*app.ts* file).
 
 | Original name in `Context` interface | New location in `app.Context` |
 | - | - |
@@ -447,4 +447,4 @@ If you used Agents Toolkit to create your personal app, you can also use it to v
 ## Next steps
 
 * Use the [TeamsJS library reference](/javascript/api/overview/msteams-client) to get started with the TeamsJS library.
-* Review the [changelog](https://github.com/OfficeDev/microsoft-teams-library-js/blob/main/packages/teams-js/CHANGELOG.md) for  latest updates to TeamsJS.
+* Review the [changelog](https://github.com/OfficeDev/microsoft-teams-library-js/blob/main/packages/teams-js/CHANGELOG.md) for latest updates to TeamsJS.
