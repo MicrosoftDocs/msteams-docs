@@ -10,21 +10,21 @@ ms.date: 01/23/2025
 
 # Upload your app in Teams
 
-You can upload Microsoft Teams apps without having to publish to your organization or the Microsoft Teams Store in the following scenarios:
+You can upload Microsoft Teams apps without having to publish to your organization or Microsoft Teams Store in the following scenarios:
 
 * You want to test and debug an app locally yourself or with other developers.
 * You built an app for yourself to automate a workflow.
-* You built an app for a small set of users, such as, your work group.
+* You built an app for a small set of users, such as your work group.
 
 > [!IMPORTANT]
 >
 > * Custom app upload is possible only in Government Community Cloud (GCC) and isn't possible in GCC High, Department of Defense (DoD), and Teams operated by 21Vianet.
-> * App upload and installation are supported in Teams for desktop and web (availability depends on your organization’s app setup policies and cloud environment)
-> * We recommend you to avoid multiple uploads of your message extension app to Teams, as it results in multiple instances of the message extension.
+> * App upload and installation are supported in Teams for desktop and web (availability depends on your organization’s app setup policies and cloud environment).
+> * We recommend you avoid multiple uploads of your message extension app to Teams, as it results in multiple instances of the message extension.
 
-Users can't chat with bots that aren't connected to a Microsoft Teams app such as Azure bots created through the Bot Framework or Power Virtual Agents. We recommend you to create a new Teams app connected to the Azure Bot using the [Developer Portal](../build-and-test/manage-your-apps-in-developer-portal.md#configure), publish it to Teams, and allow users to install the app using the [app permission policies](/microsoftteams/teams-app-permission-policies#edit-an-app-permission-policy).
+Users can't chat with bots that aren't connected to a Microsoft Teams app such as Azure bots created through Bot Framework or Power Virtual Agents. We recommend you create a new Teams app connected to Azure Bot using the [Developer Portal](../build-and-test/manage-your-apps-in-developer-portal.md#configure), publish it to Teams, and allow users to install the app using [app permission policies](/microsoftteams/teams-app-permission-policies#edit-an-app-permission-policy).
 
-If you want to test the app, you can assign users an [app setup policy](/microsoftteams/teams-app-setup-policies#manage-app-setup-policies) that allows uploading custom apps and chat with the Azure bot through a direct link to a chat.
+If you want to test the app, you can assign users an [app setup policy](/microsoftteams/teams-app-setup-policies#manage-app-setup-policies) that allows uploading custom apps and chat with Azure bot through a direct link to a chat.
 
 ## Prerequisites
 
@@ -36,7 +36,7 @@ If you want to test the app, you can assign users an [app setup policy](/microso
 
 You can upload your app to a team, chat, meeting, or for personal use depending on how you configured your app's scope.
 
-1. Log in to the Teams client with your [Microsoft 365 development account](https://developer.microsoft.com/microsoft-365/dev-program).
+1. Log in to Teams client with your [Microsoft 365 development account](https://developer.microsoft.com/microsoft-365/dev-program).
 
 1. Select **Apps** > **Manage your apps** and **Upload an app**.
 
@@ -70,7 +70,7 @@ If your app fails to upload or encounters any issues to upload, check the follow
 
 ## Manage your apps
 
-Manage your apps allows users to have a dedicated place to manage, update and remove their apps, permissions, and subscriptions on the Teams client. The users can install the apps from **Manage your apps**.
+Manage your apps allows users to have a dedicated place to manage, update, and remove their apps, permissions, and subscriptions on Teams client. Users can install the apps from **Manage your apps**.
 
 ### Access your app
 
@@ -97,7 +97,7 @@ You don't have to upload your custom app again if you make code changes (these a
 
 When a Teams app receives an update, the user must consent to update the app in any one context, and the app is automatically updated in all the related contexts (chats, channels, and meetings) where the app is installed. The user can update the app from any context.
 
-If an update is available for your app, follow these steps to update your app from the Teams Store:
+If an update is available for your app, follow these steps to update your app from Teams Store:
 
 1. Go to **Microsoft Teams**.
 1. Select **Apps** > **Manage your apps**.
@@ -136,7 +136,7 @@ To remove app from Teams, follow the steps:
 > [!NOTE]
 >
 > * You can't remove personal bot activity entirely. If you remove the app and add it again, new communication with the bot appends to the previous conversation with it.
-> * You can't migrate your custom app to the Teams Store. If you want to list your app to the Teams Store, see [how to publish your app to the Teams Store](appsource/publish.md).
+> * You can't migrate your custom app to Teams Store. If you want to list your app to Teams Store, see [how to publish your app to Teams Store](appsource/publish.md).
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Remove+your+app&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fdeploy-and-publish%2Fapps-upload%23remove-your-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fconcepts%2Fdeploy-and-publish%2Fapps-upload.md&documentVersionIndependentId=5f89865b-a9fd-ada5-72d2-6375357bba8c&platformId=0e3954be-8892-442b-b769-b6284670b9db&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
