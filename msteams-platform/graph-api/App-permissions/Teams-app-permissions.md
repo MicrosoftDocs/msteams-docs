@@ -11,7 +11,7 @@ ms.date: 10/31/2022
 
 # Permissions in Teams app
 
-Permission for Teams app is managed in two places, depending on the app feature:
+Permissions for the Teams app are managed in two places, depending on the app feature:
 
 * [Microsoft Entra ID](#azure-active-directory)
 * [Resource-specific consent (RSC)](#resource-specific-consent)
@@ -20,17 +20,17 @@ Permission for Teams app is managed in two places, depending on the app feature
 
 ## Resource-specific consent
 
-RSC is a Microsoft Teams and Microsoft Graph API integration that enables your app to use API endpoints to manage specific resources, either teams or chats, within an organization. For more information, see [enable resource-specific consent in Teams](../rsc/resource-specific-consent.md).
+Resource-specific consent (RSC) is a Microsoft Teams and Microsoft Graph API integration. It enables your app to use API endpoints to manage specific resources, such as teams or chats, within an organization. For more information, see [enable resource-specific consent in Teams](../rsc/resource-specific-consent.md).
 
-RSC permissions are only available to Teams apps installed on the Teams client and aren't part of the Microsoft Entra admin center and are declared in the app manifest (previously called Teams app manifest) (JSON) file. You can manage RSC permissions for Teams apps in Developer Portal from the **Permissions** section under **Configure**.
+RSC permissions are available only to Teams apps installed on the Teams client. They aren't part of the Microsoft Entra admin center and are declared in the app manifest (previously called Teams app manifest) (JSON) file. You can manage RSC permissions for Teams apps in Developer Portal from the **Permissions** section under **Configure**.
 
-:::image type="content" source="../../assets/images/dev-portal-permissions.png" alt-text="Screenshot shows the RSC permissions managed from Developer Portal. " lightbox="../../assets/images/dev-portal-permissions1.png":::
+:::image type="content" source="../../assets/images/dev-portal-permissions.png" alt-text="Screenshot shows the RSC permissions managed from Developer Portal." lightbox="../../assets/images/dev-portal-permissions1.png":::
 
 <a name='azure-active-directory'></a>
 
 ## Microsoft Entra ID
 
-Microsoft Entra ID is a cloud-based identity and access management service. This service helps your employees access external resources, such as Microsoft 365, the Azure portal, and thousands of other SaaS applications. For more information, see [Microsoft Entra ID](/azure/active-directory/fundamentals/active-directory-whatis).
+Microsoft Entra ID is a cloud-based identity and access management service. This service helps employees access external resources, such as Microsoft 365, the Azure portal, and thousands of other SaaS applications. For more information, see [Microsoft Entra ID](/azure/active-directory/fundamentals/active-directory-whatis).
 
 ### Microsoft Graph API permission
 
@@ -40,7 +40,7 @@ Graph API permissions are managed in Microsoft Entra ID. For your app to access 
 
 ### Bot and messaging extension
 
-The bot or messaging extension ID is generated based on the following registration platform. This ID is required to add a bot or messaging extension to a Teams app.
+The bot or messaging extension ID is generated based on the following registration platform. This ID is required to add a bot or messaging extension to a Teams app.
 
 * Microsoft Entra admin center
 * Developer or Bot Framework portal
@@ -49,14 +49,14 @@ The bot or messaging extension ID is generated based on the following registrat
 
 #### Microsoft Entra admin center
 
-When a bot or message extension is registered on Microsoft Entra admin center, it has a Microsoft Entra app ID associated with it, which can be found in **Microsoft Entra admin center** > **App Registrations**. Endpoints and other bot configurations are managed in Azure portal.
+When a bot or message extension is registered on Microsoft Entra admin center, it has a Microsoft Entra app ID associated with it. This ID can be found in **Microsoft Entra admin center** > **App Registrations**. Endpoints and other bot configurations are managed in Azure portal.
 
 #### Developer or Bot Framework portal
 
 When a bot or message extension is registered in Developer or Bot Framework portal, it doesn't have a Microsoft Entra app ID. However, the bot or message extension ID can be found on the Bot Framework portal. Endpoints and other bot configurations are managed in the Bot Framework portal.
 
-Other Teams specific configuration for the bot can be managed in the Developer portal section for the app.
+Other Teams-specific configurations for the bot can be managed in the Developer portal section for the app.
 
 ### Connectors
 
-Connectors have a connector ID and are registered and managed through the Connector Developer Dashboard. This ID is necessary for introducing a connector to the Teams App. Other Teams specific configuration for connectors can be managed in the developer portal section for the app.
+Connectors have a connector ID and are registered and managed through the Connector Developer Dashboard. This ID is necessary for introducing a connector to the Teams App. Other Teams-specific configurations for connectors can be managed in the developer portal section for the app.
