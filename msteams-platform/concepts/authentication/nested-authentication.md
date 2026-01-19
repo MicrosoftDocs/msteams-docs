@@ -1,11 +1,19 @@
 ---
+
 title: SSO authentication for nested apps
+
 description: Learn how to implement, configure nested app authentication in Microsoft Teams app. Learn about the use case scenarios for nested app authentication.
+
 ms.date: 06/10/2025
+
 ms.topic: conceptual
+
 author: surbhigupta
+
 ms.author: surbhigupta
+
 ms.localizationpriority: medium
+
 ---
 
 # Nested app authentication
@@ -14,14 +22,14 @@ ms.localizationpriority: medium
 >
 > Nested app authentication (NAA) is supported only in single-page application (SPA), such as tabs.
 
-NAA is a new authentication protocol for SPAs that are embedded in host environments, such as Teams, Outlook, and Microsoft 365. It simplifies the authentication process to facilitate single sign-on (SSO) across apps nested within supported host apps. The NAA model supports a primary identity for the host app that includes multiple app identities for nested apps. Microsoft utilizes this model in Teams tabs, personal apps, and Office Add-ins.
+NAA is a new authentication protocol for SPAs embedded in host environments, such as Teams, Outlook, and Microsoft 365. It simplifies the authentication process to facilitate single sign-on (SSO) across apps nested within supported host apps. The NAA model supports a primary identity for the host app that includes multiple app identities for nested apps. Microsoft utilizes this model in Teams tabs, personal apps, and Office Add-ins.
 
 The NAA model provides several advantages over the On-Behalf-Of (OBO) flow:
 
-* NAA requires you to use only the MSAL.js library. You don't need to use the `getAuthToken` function in Teams JavaScript client library (TeamsJS).
-* You can call services such as Microsoft Graph with an access token from your client code as an SPA. There’s no need for a middle-tier server.
-* You can use incremental and dynamic consent for scopes (permissions).
-* You don't need to preauthorize your hosts, such as Teams or Microsoft 365, to call your endpoints.
+- NAA requires you to use only the MSAL.js library. You don't need to use the `getAuthToken` function in Teams JavaScript client library (TeamsJS).
+- You can call services such as Microsoft Graph with an access token from your client code as an SPA. There’s no need for a middle-tier server.
+- You can use incremental and dynamic consent for scopes (permissions).
+- You don't need to preauthorize your hosts, such as Teams or Microsoft 365, to call your endpoints.
 
     The following table outlines the difference between Teams Microsoft Entra SSO and NAA:
 
@@ -58,8 +66,7 @@ To configure nested authentication, follow these steps:
 
 ### Register your SPA
 
-You must create a Microsoft Entra ID app registration for your add-in on Azure portal. The app registration must have a name, supported account type, and SPA redirect. Following the registration of your app, Azure portal generates a Microsoft Entra app registration ID.
-If your add-in requires additional app registration beyond NAA and SSO, see [register your single-page application.](/entra/identity-platform/scenario-spa-app-registration).
+You must create a Microsoft Entra ID app registration for your add-in on Azure portal. The app registration must have a name, supported account type, and SPA redirect. Following the registration of your app, Azure portal generates a Microsoft Entra app registration ID. If your add-in requires additional app registration beyond NAA and SSO, see [register your single-page application.](/entra/identity-platform/scenario-spa-app-registration).
 
 ### Add trusted brokers
 
@@ -71,8 +78,8 @@ brk-multihub://<your_domain>
 
 Where,
 
-* `brk-multihub` enables your authentication to be brokered by any Microsoft 365 supported hosts it's configured to run in such as, Teams, Outlook, or Microsoft365.com.
-* <your_domain> is the fully qualified domain name where your app is hosted. For example, **brk-multihub://contoso.com**.
+- `brk-multihub` enables your authentication to be brokered by any Microsoft 365 supported hosts it's configured to run in such as, Teams, Outlook, or Microsoft365.com.
+- <your_domain> is the fully qualified domain name where your app is hosted. For example, **brk-multihub://contoso.com**.
 
 <!--If your app has been upgraded to run in Outlook and Microsoft365.com (in addition to Teams), then you need to only add one redirect URI:
 
@@ -85,8 +92,7 @@ Your domain must include only the origin and not its subpaths. For example:
 ✔️ brk-multihub://myapp.teams.microsoft.com <br>
 ❌ brk-multihub://myapp.teams.microsoft.com/go
 
-For more information on upgrading your Teams app to run in Outlook and Microsoft365.com, see
-[extend Teams apps across Microsoft 365](../../m365-apps/overview.md).
+For more information on upgrading your Teams app to run in Outlook and Microsoft365.com, see [extend Teams apps across Microsoft 365](../../m365-apps/overview.md).
 
 ### Initialize public client app
 
@@ -235,6 +241,7 @@ To enable token prefetching, update your [Teams app manifest](/microsoft-365/ext
 >
 > * The value of webApplicationInfo.id must match the client ID of the app's Microsoft Entra ID registration. This is the same client ID the app uses when making actual NAA token requests. The host uses this ID to initiate the token prefetch process.
 > * The values in webApplicationInfo.id and all fields inside nestedAppAuthInfo must exactly match the parameters used in the app’s runtime NAA token request. Any mismatch, such as differences in scopes, redirect URIs, or claims, will prevent the host from serving the token from cache.
+
 > * Prefetched tokens are stored in memory for a short duration and are intended for use only during the app’s initial load. If the app attempts to fetch a token later, such as in response to a user action, the prefetched token may no longer be available. In such cases, the app must initiate a new token request using standard authentication flows.
 
 #### How it works
