@@ -8,12 +8,11 @@ ms.date: 04/18/2025
 ---
 # Microsoft Teams developer platform overview
 
-Microsoft Teams platform empowers you as developers to create intelligent and collaborative experiences directly into Teams experience. Developers can build agents and apps to achieve goals, boost productivity, and foster collaboration. In addition, Teams platform enables seamless integration across Microsoft 365 platforms.
+The Microsoft Teams platform empowers developers to create intelligent and collaborative experiences directly within the Teams environment. Developers can build agents and apps to achieve organizational goals, boost productivity, and foster collaboration. Additionally, the Teams platform enables seamless integration across Microsoft 365 platforms.
 
 ## What is Teams platform?
 
-Teams is evolving from a communication hub into a collaborative and intelligent platform with agents where people, data, and AI come together. You can build agents in Teams using Teams SDK. It enables natural, conversational, and context-aware experiences powered by large language models (LLMs).
-You can continue to create Teams apps, and extend Teams capabilities for task-specific workflows, data, visualization, and integration with enterprise systems.
+Teams is evolving from a communication hub into a collaborative and intelligent platform with agents where people, data, and AI come together. You can build agents in Teams using the Teams SDK. It enables natural, conversational, and context-aware experiences powered by large language models (LLMs). You can continue to create Teams apps and extend Teams capabilities for task-specific workflows, data visualization, and integration with enterprise systems.
 
 Take a look at these example developer personas and agent or app scenarios:
 
@@ -23,7 +22,7 @@ You can meet these scenarios to enhance collaboration using Teams agents or apps
 
 ## Why build on Teams platform?
 
-Whether you want to build powerful agents or rich apps, the platform gives you the tools to extend Teams with seamless, secure, and contextual solutions. Teams platform, with over 320 million monthly active users, enables custom experiences, workflows, and integrations where people work. You can facilitate communication and integrate agents and apps seamlessly across Microsoft 365 platforms.
+Whether you want to build powerful agents or rich apps, the platform gives you the tools to extend Teams with seamless, secure, and contextual solutions. The Teams platform, with over 320 million monthly active users, enables custom experiences, workflows, and integrations where people work. You can facilitate communication and integrate agents and apps seamlessly across Microsoft 365 platforms.
 
 Agents are the digital workers in the organization. By building and integrating agents into Teams workspaces, organizations connect with customers, deliver services, and share information efficiently. Key roles of an agent in Teams include:
 
@@ -41,7 +40,7 @@ Agents in Teams can be deployed across desktop, web, and mobile platforms, and i
 
 Agents can consolidate existing web apps, SharePoint sites, PowerApps, and other solutions into Teams, expanding reach and engagement. Publishing agents to the Teams Store increases visibility and adoption.
 
-You can build unified experience for agents. Build agents once and deploy them across Teams, Outlook, and Microsoft 365 using a single codebase. This approach streamlines development, management, and user access, ensuring consistent experiences and efficient administration.
+You can build a unified experience for agents. Build agents once and deploy them across Teams, Outlook, and Microsoft 365 using a single codebase. This approach streamlines development, management, and user access, ensuring consistent experiences and efficient administration.
 
 ### Social interactions and personal apps
 
@@ -49,7 +48,7 @@ Teams acts as a social platform where custom apps help extend company culture. P
 
 ## What to build on Teams platform?
 
-Teams platform offers two powerful paths to choose from:
+The Teams platform offers two powerful paths to choose from:
 
 :::row:::
     :::column:::
