@@ -8,18 +8,18 @@ ms.date: 08/28/2022
 
 # Choose a test setup and debug your Teams app
 
-Microsoft Teams apps contain one or more capabilities and the ways to run or even host them are different. For debugging, use one of the following ways:
+Microsoft Teams apps contain one or more capabilities, and the ways to run or even host them are different. For debugging, use one of the following ways:
 
 * **Purely local**: For bots, you can test your experience in the Bot Emulator. For other content, you can run locally in your browser and address content through `http://localhost`.
 * **Locally hosted in Teams**: This involves running the app locally in tunneling software and [creating a package](~/concepts/build-and-test/apps-package.md) to [upload](~/concepts/deploy-and-publish/apps-upload.md) into Teams. This permits you to easily run and debug your app within the Teams client.
-* **Cloud-hosted in Teams**: This truly simulates the production level support for a Teams app. It involves uploading your solution to your externally accessible server or cloud provider of choice and [creating a package](~/concepts/build-and-test/apps-package.md) to [upload](~/concepts/deploy-and-publish/apps-upload.md) into Teams.
+* **Cloud-hosted in Teams**: This truly simulates the production-level support for a Teams app. It involves uploading your solution to your externally accessible server or cloud provider of choice and [creating a package](~/concepts/build-and-test/apps-package.md) to [upload](~/concepts/deploy-and-publish/apps-upload.md) into Teams.
 
 Run the experience from your own computer for purely local or local Teams testing. By doing this, you can compile and run within your integrated development environment and take full advantage of techniques, such as breakpoints and step debugging.
 
 > [!NOTE]
 > For production-scale debugging and testing, we recommend that you follow your own company guidelines to ensure you are able to support testing, staging, and deployment through your own processes.
 
-Use multiple manifests and packages to maintain separation between production and development services. For example, you might choose to register separate development and production bots and create appropriate packages to upload them in your testing environment. We also recommend, you upload and test your production package before submitting your app for publishing in our Microsoft Teams Store or distributing to customers.
+Use multiple manifests and packages to maintain separation between production and development services. For example, you might choose to register separate development and production bots and create appropriate packages to upload them in your testing environment. We also recommend you upload and test your production package before submitting your app for publishing in our Microsoft Teams Store or distributing to customers.
 
 ## Purely local
 
@@ -32,7 +32,7 @@ Your bot can run within the Bot Emulator. This enables you to test some of the c
 2. Launch the Bot Emulator and set the URL:
    * Node.js: `http://localhost:3978/api/messages`
    * .NET/C#: `http://localhost:3979/api/messages`
-3. Leave the Microsoft app ID and Microsoft app password blank, to match the default environment variables.
+3. Leave the Microsoft app ID and Microsoft app password blank to match the default environment variables.
 
 ## Locally hosted
 
