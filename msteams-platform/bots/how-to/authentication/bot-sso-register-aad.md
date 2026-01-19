@@ -181,31 +181,31 @@ You need:
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/expose-an-api.png" alt-text="Screenshot shows the Set option of Application ID URI." :::
 
-    The section for setting application ID URI appears.
+The section for setting the application ID URI appears.
 
 1. Enter the application ID URI in the format explained here.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/set-app-id-uri.png" alt-text="Screenshot shows the Application ID URI added." :::
 
-    * The **Application ID URI** is prefilled with app ID (GUID) in the format `api://{AppID}`.
+    * The **Application ID URI** is prefilled with the app ID (GUID) in the format `api://{AppID}`.
 
     > [!IMPORTANT]
     >
     > * **Sensitive information**: The application ID URI is logged as part of the authentication process and must not contain sensitive information.
     >
-    > * **Standalone bot**: If you're building a standalone bot, enter the application ID URI as api://botid-{YourBotId}. Here, {YourBotId} is your Microsoft Entra application ID.
+    > * **Standalone bot**: If you're building a standalone bot, enter the application ID URI as `api://botid-{YourBotId}`. Here, `{YourBotId}` is your Microsoft Entra application ID.
     > * **Application ID URI for app with multiple capabilities**: If you're building an app with a bot, a messaging extension, and a tab, enter the application ID URI as `api://fully-qualified-domain-name.com/botid-{YourClientId}`, where `{YourClientId}` is your bot app ID.
     >
-    > * **Format for domain name**: Use lowercase letters for domain name. Don't use upper case.
+    > * **Format for domain name**: Use lowercase letters for the domain name. Don't use uppercase.
     >
-    >   For example, to create an app service or web app with resource name, 'demoapplication':
+    >   For example, to create an app service or web app with the resource name, 'demoapplication':
     >
     >   | If base resource name used is | URL will be... | Format is supported on... |
     >   | --- | --- | --- |
     >   | *demoapplication* | `https://demoapplication.example.net` | All platforms.|
     >   | *DemoApplication* | `https://DemoApplication.example.net` | Desktop, web, and iOS only. It isn't supported in Android. |
     >
-    >    Use the lowercase option *demoapplication* as base resource name.
+    >    Use the lowercase option *demoapplication* as the base resource name.
 
 1. Select **Save**.
 
@@ -246,7 +246,7 @@ The application ID URI is configured. You can now define scope and permissions f
     8. Select **Add scope**.
 
         > [!NOTE]
-        > For this tutorial, you can use openid profile `User.Read User.ReadBasic.All` as scope. This scope is suitable for using the [Code sample](bot-sso-code.md#code-sample). You can also add more Graph scopes and permissions. For more information, see [Extend your app with Microsoft Graph permissions and scopes](bot-sso-graph-api.md).
+        > For this tutorial, you can use `openid profile User.Read User.ReadBasic.All` as scope. This scope is suitable for using the [Code sample](bot-sso-code.md#code-sample). You can also add more Graph scopes and permissions. For more information, see [Extend your app with Microsoft Graph permissions and scopes](bot-sso-graph-api.md).
 
     A message appears on the browser stating that the scope was added.
 
@@ -276,7 +276,7 @@ The scope and permissions are now configured. Next, you must configure the autho
     >
     > * The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams, Microsoft 365 app, and Outlook are the actual IDs that you must add.
     > * If your app has a tab app, you'll need either web or SPA, as you can't have a mobile or desktop client application in Teams.
-    > * While it's recommended to use same App ID, you can use a different App Registration ID in the webApplicationInfo section of your Teams app manifest that's not same as the Azure bot App ID. This is a valid and supported configuration.
+    > * While it's recommended to use the same App ID, you can use a different App Registration ID in the `webApplicationInfo` section of your Teams app manifest that's not the same as the Azure bot App ID. This is a valid and supported configuration.
     >   * The `botId` in the bots section refers to the Azure Bot registration used for messaging and interaction.
     >   * The `webApplicationInfo.id` refers to the Microsoft Entra App Registration used for authentication such as SSO, token acquisition, Graph API access.
 
@@ -315,7 +315,7 @@ You've successfully configured app scope, permissions, and client applications. 
 
 ### Create client secret
 
-A client secret is a string that the application uses to prove its identity when requesting a token.
+A client secret is a string that an application uses to prove its identity when requesting a token.
 
 #### To create a client secret for your app
 
@@ -412,75 +412,7 @@ You can configure authentication for multiple platforms as long as the URL is un
 The Microsoft Entra app configuration is complete, and now you must enable SSO support for your bot resource by configuring OAuth connection.
 
 > [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+configure+redirect+URL&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad%3Ftabs%3Dbotid%23to-configure-redirect-url&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad.md&documentVersionIndependentId=ac68d7e8-2a35-5208-8724-68bd2fdd79b6&platformId=cdaccc16-060c-8eb1-2cee-c1f6a26e285c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
-## Configure OAuth connection
-
-For a bot to support SSO, you must update its OAuth connection settings. This process associates the bot with app details that you configured for your Microsoft Entra app:
-
-* Microsoft Entra app ID, which is the client ID
-* Tenant ID
-* Scope and permissions
-
-With the app (client) ID and client secret provided, the Bot Framework Token Store exchanges the token for a graph token with defined permissions.
-
-### To update OAuth connection
-
-1. Open the [Azure portal](https://ms.portal.azure.com/) on your web browser.
-   The Microsoft Azure Bot page opens.
-
-1. Enter the name of your Microsoft Entra app in **Search** box, and open your app.
-
-1. Select **Settings** > **Configuration**.
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-configuration.png" alt-text="Screenshot shows the configure OAUth settings for your bot app." :::
-
-    The **Configuration** page appears.
-
-1. Move through the **Configuration** page and select **Add OAuth Connection Settings**.
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/bot-oauth-connection.png" alt-text="Screenshot shows the Add OAuth Connection Settings option highlighted.":::
-
-    The **New Connection Setting** page appears.
-
-1. Enter the OAuth configuration settings for the Azure bot.
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/new-config-setting.png" alt-text="Screenshot shows the New Connection Setting to provide the details." :::
-
-    1. Enter a name for the configuration setting.
-    1. Select the service provider.
-
-        The remaining configuration details appear.
-
-        :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/new-config-setting-b.png" alt-text="Screenshot shows the additional fields for New Connection Setting." :::
-
-    1. Enter the app (client) ID for the Microsoft Entra app.
-    1. Enter the client secret that you've created for your bot.
-    1. Enter the application ID URI of your bot in the **Token Exchange URL**.
-    1. Enter the tenant ID.
-    1. Enter the scope that you defined when you configured the scope and permissions.
-
-1. Select **Save**.
-1. Select **Apply**.
-
-    After you've configured the OAuth connection, you can select **Test connection** to check if the OAuth connection is successful.
-
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/test-oauth.png" alt-text="Screenshot shows the Test OAuth connection for your bot resource option.":::
-
-    If the connection isn't successful, Microsoft Entra ID displays an error. You can verify all the configurations and test again.
-
-Congratulations! You've completed the following app configurations in Microsoft Entra ID required to enable SSO for your bot app:
-
-* Application ID
-* Bot ID
-* Access token
-  * Application ID URI
-  * Scope, permissions, and authorized client IDs
-  * Client secret
-  * Redirect URL
-* Messaging endpoint and OAuth connection
-
-> [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+To+update+OAuth+connection&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad%3Ftabs%3Dbotid%23to-update-oauth-connection&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fauthentication%2Fbot-sso-register-aad.md&documentVersionIndependentId=ac68d7e8-2a35-5208-8724-68bd2fdd79b6&platformId=cdaccc16-060c-8eb1-2cee-c1f6a26e285c&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
 # [Use Microsoft Entra app and then configure bot resource](#tab/windows)
@@ -633,15 +565,15 @@ The application ID URI is configured. You can now define scope and permissions f
     1. Select the **Enabled** option for state.
     1. Select **Add scope**.
 
-        > [!NOTE]
-        > For this tutorial, you can use openid profile User.Read User.ReadBasic.All as scope. This scope is suitable for using the [Code sample](bot-sso-code.md#code-sample). You can also add more Graph scopes and permissions. For more information, see [Extend your app with Microsoft Graph permissions and scopes](bot-sso-graph-api.md).
+> [!NOTE]
+> For this tutorial, use `openid profile User.Read User.ReadBasic.All` as the scope. This scope is suitable for using the [Code sample](bot-sso-code.md#code-sample). You can also add more Graph scopes and permissions. For more information, see [Extend your app with Microsoft Graph permissions and scopes](bot-sso-graph-api.md).
 
-    A message appears on the browser stating that the scope was added.
+A message appears on the browser stating that the scope was added.
 
-    :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added-msg.png" alt-text="Screenshot shows the Scope added message." :::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/scope-added-msg.png" alt-text="Screenshot shows the Scope added message." :::
 
-    > [!NOTE]
-    > The new scope you defined displays on the page. Ensure that you note and save the scope that you've configured. You'll need it to update OAuth connection later.
+> [!NOTE]
+> The new scope you defined displays on the page. Ensure that you note and save the scope that you've configured. You'll need it to update OAuth connection later.
 
 The scope and permissions are now configured. Next, you must configure the authorized client applications for your Microsoft Entra app.
 
@@ -664,7 +596,7 @@ The scope and permissions are now configured. Next, you must configure the autho
     >
     > * The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams, Microsoft 365 app, and Outlook are the actual IDs that you must add.
     > * If your app has a tab app, you'll need either web or SPA, as you can't have a mobile or desktop client application in Teams.
-    > * While it's recommended to use same App ID, you can use a different App Registration ID in the webApplicationInfo section of your Teams app manifest that's not same as the Azure bot App ID. This is a valid and supported configuration.
+    > * While it's recommended to use the same App ID, you can use a different App Registration ID in the `webApplicationInfo` section of your Teams app manifest that's not the same as the Azure bot App ID. This is a valid and supported configuration.
     >   * The `botId` in the bots section refers to the Azure Bot registration used for messaging and interaction.
     >   * The `webApplicationInfo.id` refers to the Microsoft Entra App Registration used for authentication such as SSO, token acquisition, Graph API access.
 
@@ -772,19 +704,19 @@ You can configure authentication for multiple platforms as long as the URL is un
 
     The **Configure Web** page appears.
 
-    > [!NOTE]
-    > The configurations will be different based on the platform you select.
+> [!NOTE]
+> Configurations vary based on the platform you select.
 
 1. Enter the configuration details for the platform.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/config-web-platform.png" alt-text="Screenshot shows the Configure Web page to provide inputs." :::
 
-    1. Enter the redirect URI. The URI should be unique.
+    1. Enter the redirect URI. The URI must be unique.
 
         > [!NOTE]
         >
         > * The URL mentioned in **Redirect URIs** is an example.
-        > * You can customize the OAuth redirect URL for your bot and identity provider based on your data residency requirements, whether your bot is in the public cloud, Microsoft Azure Government cloud, or 21Vianet operated Microsoft Azure. For OAuth URL and data residency list, see [OAuth URL support in Azure AI Bot Service](/azure/bot-service/ref-oauth-redirect-urls?view=azure-bot-service-4.0&preserve-view=true).
+        > * Customize the OAuth redirect URL for your bot and identity provider based on your data residency requirements, whether your bot is in the public cloud, Microsoft Azure Government cloud, or 21Vianet operated Microsoft Azure. For OAuth URL and data residency list, see [OAuth URL support in Azure AI Bot Service](/azure/bot-service/ref-oauth-redirect-urls?view=azure-bot-service-4.0&preserve-view=true).
 
     1. Enter the front-channel logout URL.
     1. Select the tokens you want Microsoft Entra ID to send for your app.
@@ -793,7 +725,7 @@ You can configure authentication for multiple platforms as long as the URL is un
 
     The platform is configured and displayed in the **Platform configurations** page.
 
-The configuration for Microsoft Entra app is complete, and now you can configure your bot resource for enabling SSO.
+The configuration for the Microsoft Entra app is complete, and now you can configure your bot resource for enabling SSO.
 
 <a name='configure-bot-resource-in-azure-ad'></a>
 
@@ -802,10 +734,10 @@ The configuration for Microsoft Entra app is complete, and now you can configure
 
 ## Configure bot resource in Microsoft Entra ID
 
-Before you enable SSO for your bot app, you must create and configure your bot resource in Microsoft Entra ID. For more information, see [Create Teams conversation bot](../conversations/channel-and-group-conversations.md).
+Before enabling SSO for your bot app, create and configure your bot resource in Microsoft Entra ID. For more information, see [Create Teams conversation bot](../conversations/channel-and-group-conversations.md).
 
 > [!NOTE]
-> Ensure that when you create your bot resource, you select the application ID of your Microsoft Entra app that you registered.
+> Ensure that when creating your bot resource, you select the application ID of your registered Microsoft Entra app.
 
 To enable SSO for your bot resource:
 
@@ -814,14 +746,14 @@ To enable SSO for your bot resource:
 
 ### Configure messaging endpoint for your bot resource
 
-Messaging endpoint is where messages are sent to your bot. It enables communication with your bot.
+The messaging endpoint is where messages are sent to your bot. It enables communication with your bot.
 
 #### To configure messaging endpoint
 
 1. Open the [Azure portal](https://ms.portal.azure.com/) on your web browser.
    The Microsoft Azure Bot page opens.
 
-1. Enter the name of your bot resource in **Search** box, and select **Enter** to open it.
+1. Enter the name of your bot resource in the **Search** box, and select **Enter** to open it.
 
 1. Select **Settings** > **Configuration**.
 
@@ -844,7 +776,7 @@ Now, you must configure the OAuth connection to enable SSO for your bot resource
 
 ### Configure OAuth connection for your bot resource
 
-For a bot to support SSO, you must update its OAuth connection settings. This process associates the bot with app details that you configured for your Microsoft Entra app:
+For a bot to support SSO, update its OAuth connection settings. This process associates the bot with app details that you configured for your Microsoft Entra app:
 
 * Microsoft Entra app ID, which is the client ID
 * Tenant ID
@@ -857,7 +789,7 @@ With the app (client) ID and client secret provided, the Bot Framework Token Sto
 1. Open the [Azure portal](https://ms.portal.azure.com/) on your web browser.
    The Microsoft Azure Bot page opens.
 
-1. Enter the name of your Microsoft Entra app in **Search** box, and open your app.
+1. Enter the name of your Microsoft Entra app in the **Search** box, and open your app.
 
 1. Select **Settings** > **Configuration**.
 
@@ -896,7 +828,7 @@ After you've configured the OAuth connection, you can select **Test connection**
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/test-oauth.png" alt-text="Screenshot shows the Test OAuth connection for your bot resource option.":::
 
-If the connection isn't successful, Microsoft Entra ID displays an error. You can verify all configurations and test again.
+If the connection isn't successful, Microsoft Entra ID displays an error. Verify all configurations and test again.
 
 Congratulations! You've completed the following app configurations in Microsoft Entra ID required to enable SSO for your bot app:
 
