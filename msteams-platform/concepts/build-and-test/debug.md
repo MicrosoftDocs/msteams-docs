@@ -8,7 +8,7 @@ ms.date: 08/28/2022
 
 # Choose a test setup and debug your Teams app
 
-Microsoft Teams apps contain one or more capabilities and the ways to run or even host them are different. For debugging, use one of the following ways:
+Microsoft Teams apps contain one or more capabilities, and the ways to run or even host them are different. For debugging, use one of the following ways:
 
 * **Purely local**: For bots, you can test your experience in the Bot Emulator. For other content, you can run locally in your browser and address content through `http://localhost`.
 * **Locally hosted in Teams**: This involves running the app locally in tunneling software and [creating a package](~/concepts/build-and-test/apps-package.md) to [upload](~/concepts/deploy-and-publish/apps-upload.md) into Teams. This permits you to easily run and debug your app within the Teams client.
