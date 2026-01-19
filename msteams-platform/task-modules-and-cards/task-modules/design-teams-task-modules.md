@@ -1,14 +1,17 @@
 ---
+
 title: Designing dialogs
 author: heath-hamilton
 description: Learn how to design dialogs (task modules) such as list, form, media, poll for Teams apps using UI templates and get the Microsoft Teams UI Kit.
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 05/25/2023
+
 ---
+
 # Designing dialogs for your Microsoft Teams app
 
-You can create modal pop-up experiences in your Teams app with dialogs (referred as task modules in TeamsJS v1.x). Use this capability to display rich media and information or complete a complex task.
+You can create modal pop-up experiences in your Teams app with dialogs (referred to as task modules in TeamsJS v1.x). Use this capability to display rich media and information or complete a complex task.
 
 :::image type="content" source="../../assets/images/task-module/task-module-overview.png" alt-text="Example shows a dialog." lightbox="../../assets/images/task-module/task-module-overview.png":::
 
@@ -23,11 +26,11 @@ You can find more comprehensive dialog design guidelines, including elements tha
 
 Dialogs can be launched from almost anywhere in your app.
 
-* **Tab**: A dialog can be launched from any link within a tab. Use in scenarios where you want the user to focus on an interaction.
-* **Bot**: A dialog can be launched from a link inside a bot message.
-* **Adaptive Card**: A dialog can be launched from an Adaptive Card (sent with a message extension or by a bot) when a user selects a button.
-* **Message extension (action commands)**: Message extensions allow you to take a particular action on message content. Selecting an action opens a dialog.
-* **Message extension (compose box context)**: In the compose box, you can design a message extension to open a dialog instead of the typical flyout. Reserve dialogs for complex interactions, such as completing a form.
+- **Tab**: A dialog can be launched from any link within a tab. Use in scenarios where you want the user to focus on an interaction.
+- **Bot**: A dialog can be launched from a link inside a bot message.
+- **Adaptive Card**: A dialog can be launched from an Adaptive Card (sent with a message extension or by a bot) when a user selects a button.
+- **Message extension (action commands)**: Message extensions allow you to take a particular action on message content. Selecting an action opens a dialog.
+- **Message extension (compose box context)**: In the compose box, you can design a message extension to open a dialog instead of the typical flyout. Reserve dialogs for complex interactions, such as completing a form.
 
 ## Anatomy
 
@@ -39,34 +42,34 @@ They can also be built with the [Adaptive Cards](../../task-modules-and-cards/ca
 
 :::image type="content" source="../../assets/images/task-module/mobile-task-module-anatomy.png" alt-text="Illustration showing the UI anatomy of a dialog on mobile.":::
 
-|Counter|Description|
-|----------|-----------|
-|1|**Header**: Make headers clear and concise. Describe the task you want users to complete.
-|2|**App name**: Full name of your app.|
-|3|**Close button**: Closes the dialog. Does not apply unsaved changes in the app content.|
-|4|**webview**: Responsive space that hosts your app content.|
-|5|**Actions (optional)**: Buttons related to your app content.|
+| Counter | Description |
+|---------|-------------|
+| 1       | **Header**: Make headers clear and concise. Describe the task you want users to complete. |
+| 2       | **App name**: Full name of your app. |
+| 3       | **Close button**: Closes the dialog. Does not apply unsaved changes in the app content. |
+| 4       | **webview**: Responsive space that hosts your app content. |
+| 5       | **Actions (optional)**: Buttons related to your app content. |
 
 ### Desktop
 
 :::image type="content" source="../../assets/images/task-module/task-module-anatomy.png" alt-text="Illustration showing the UI anatomy of a dialog.":::
 
-|Counter|Description|
-|----------|-----------|
-|1|**App icon**|
-|2|**App name**: Full name of your app.|
-|3|**Header**: Make headers clear and concise. Describe the task you want users to complete.
-|4|**Close button**: Closes the dialog. Does not apply unsaved changes in the app content.|
-|5|**iframe**: Responsive space that hosts your app content.|
-|6|**Actions (optional)**: Buttons related to your app content.|
+| Counter | Description |
+|---------|-------------|
+| 1       | **App icon** |
+| 2       | **App name**: Full name of your app. |
+| 3       | **Header**: Make headers clear and concise. Describe the task you want users to complete. |
+| 4       | **Close button**: Closes the dialog. Does not apply unsaved changes in the app content. |
+| 5       | **iframe**: Responsive space that hosts your app content. |
+| 6       | **Actions (optional)**: Buttons related to your app content. |
 
 ## Designing with UI templates
 
 Consider using templates for common layouts inside your dialogs. Each one is made up of smaller components to create an elegant, responsive design that can be used out of the box or customized for your scenario or with your brand look and feel.
 
-* [List](../../concepts/design/design-teams-app-ui-templates.md#list): Lists can display related items in a scannable format and allow users to take actions on an entire list or individual items.
-* [Form](../../concepts/design/design-teams-app-ui-templates.md#form): Forms are for collecting, validating, and submitting user input in a structured way.
-* [Empty state](../../concepts/design/design-teams-app-ui-templates.md#empty-state): The empty state template can be used for many scenarios, including sign in, first-run experiences, error messages, and more.
+- [List](../../concepts/design/design-teams-app-ui-templates.md#list): Lists can display related items in a scannable format and allow users to take actions on an entire list or individual items.
+- [Form](../../concepts/design/design-teams-app-ui-templates.md#form): Forms are for collecting, validating, and submitting user input in a structured way.
+- [Empty state](../../concepts/design/design-teams-app-ui-templates.md#empty-state): The empty state template can be used for many scenarios, including sign in, first-run experiences, error messages, and more.
 
 ## Examples
 
@@ -225,11 +228,16 @@ Try to keep your interactions short and to the point.
 
 :::row:::
    :::column span="":::
+
+### Error messages
+
+:::row:::
+   :::column span="":::
 :::image type="content" source="../../assets/images/task-module/error-messages-do.png" alt-text="Example showing a dialog best practice (use inline error messages).":::
 
 #### Do: Use inline error messages
 
-See the forms UI template for guidelines on inline error handling.
+Refer to the forms UI template for guidelines on inline error handling.
 
    :::column-end:::
    :::column span="":::
@@ -237,7 +245,7 @@ See the forms UI template for guidelines on inline error handling.
 
 #### Don't: Put error messages in dialogs
 
-Don't pop an error message in a dialog on top of a dialog. It creates a confusing user experience.
+Avoid displaying an error message in a dialog on top of another dialog. It results in a confusing user experience.
 
    :::column-end:::
 :::row-end:::
