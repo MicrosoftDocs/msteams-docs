@@ -40,7 +40,7 @@ For more information on parameters, see [authenticate (AuthenticatePopUpParamete
 
 The following image provides the flow to add authentication to external browsers:
 
- :::image type="content" source="../../../assets/images/tabs/tabs-authenticate-OAuth.PNG" alt-text="authenticate-OAuth":::
+:::image type="content" source="../../../assets/images/tabs/tabs-authenticate-OAuth.PNG" alt-text="authenticate-OAuth":::
 
 **To add authentication to external browsers**
 
