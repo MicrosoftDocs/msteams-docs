@@ -10,9 +10,9 @@ ms.date: 10/25/2024
 
 # Create prompt suggestions
 
-Prompt suggestions are commands that are presented to the users in the Microsoft Teams chat.
+Prompt suggestions are commands that are presented to users in Microsoft Teams chat.
 
-Prompt suggestions create an engaging and insightful user experience and help your bot to acquire and retain users by showing them the value of your bot through prompt conversations. You can use prompt suggestions to help your users initiate conversations with your bot and learn how to interact with it.
+Prompt suggestions create an engaging and insightful user experience. They help your bot acquire and retain users by showing them the value of your bot through prompt conversations. You can use prompt suggestions to help your users initiate conversations with your bot and learn how to interact with it.
 
 There are two types of prompt suggestions that you can use:
 
@@ -47,7 +47,7 @@ Suggested actions help users continue conversations with your bot.
 >
 > * Prompt starters are only supported for one-on-one chat bots.
 
-To enable prompt starters, define the `commands` property in your bot's app manifest. Each command contains a `title` and `description`. The `title` is the prompt and the `description` describes what the users accomplish. When the user selects on a prompt starter, the `title` of the prompt is populated in the compose box. To define `commands` in your app manifest, you can either use **Developer Portal** or add them manually in the app manifest.
+To enable prompt starters, define the `commands` property in your bot's app manifest. Each command contains a `title` and `description`. The `title` is the prompt and the `description` describes what the users accomplish. When the user selects a prompt starter, the `title` of the prompt is populated in the compose box. To define `commands` in your app manifest, you can either use **Developer Portal** or add them manually in the app manifest.
 
 # [Developer Portal](#tab/developer-portal)
 
@@ -142,7 +142,7 @@ The following illustrates an example of prompt suggestions:
 
 ---
 
-Prompt starters reappear in the **View Prompts** flyout above the compose box during a conversation and enables users to review the prompts while interacting with your bot.
+Prompt starters reappear in the **View Prompts** flyout above the compose box during a conversation. This enables users to review the prompts while interacting with your bot.
 
 :::image type="content" source="~/assets/images/bots/prompt-starter-desktop-reappear.png" alt-text="Screenshot that shows the Prompt Starter reappear during the conversation." lightbox="~/assets/images/bots/prompt-starter-desktop-reappear.png":::
 
