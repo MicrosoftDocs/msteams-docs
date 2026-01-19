@@ -1,4 +1,5 @@
 ---
+
 title: Add Prompt Suggestions
 author: surbhigupta
 description: Learn how to create and handle a prompt starter and suggested actions for your Microsoft Teams bot to help your users initiate conversations.
@@ -6,13 +7,14 @@ ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.date: 10/25/2024
+
 ---
 
 # Create prompt suggestions
 
-Prompt suggestions are commands that are presented to the users in the Microsoft Teams chat.
+Prompt suggestions are commands presented to users in Microsoft Teams chat.
 
-Prompt suggestions create an engaging and insightful user experience and help your bot to acquire and retain users by showing them the value of your bot through prompt conversations. You can use prompt suggestions to help your users initiate conversations with your bot and learn how to interact with it.
+Prompt suggestions create an engaging and insightful user experience and help your bot acquire and retain users by showing them the value of your bot through prompt conversations. You can use prompt suggestions to help your users initiate conversations with your bot and learn how to interact with it.
 
 There are two types of prompt suggestions that you can use:
 
@@ -47,7 +49,7 @@ Suggested actions help users continue conversations with your bot.
 >
 > * Prompt starters are only supported for one-on-one chat bots.
 
-To enable prompt starters, define the `commands` property in your bot's app manifest. Each command contains a `title` and `description`. The `title` is the prompt and the `description` describes what the users accomplish. When the user selects on a prompt starter, the `title` of the prompt is populated in the compose box. To define `commands` in your app manifest, you can either use **Developer Portal** or add them manually in the app manifest.
+To enable prompt starters, define the `commands` property in your bot's app manifest. Each command contains a `title` and `description`. The `title` is the prompt and the `description` describes what the users accomplish. When the user selects a prompt starter, the `title` of the prompt is populated in the compose box. To define `commands` in your app manifest, you can either use Developer Portal or add them manually in the app manifest.
 
 # [Developer Portal](#tab/developer-portal)
 
@@ -56,8 +58,8 @@ To create prompt starters using Developer Portal:
 1. Open Teams and select **Apps** from the left pane. In the **Apps** page, search for **Developer Portal**, and then select **Open**.
 
    :::image type="content" source="~/assets/images/tdp/add-dev-portal.png" alt-text="Screenshot shows how to add Developer Portal in Teams client.":::
-  
-1. In **Developer Portal**, select the **Apps** tab. If you don't have an existing app package, you can create or import an existing app. For more information, see [Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md).
+
+1. In Developer Portal, select the **Apps** tab. If you don't have an existing app package, you can create or import an existing app. For more information, see [Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md).
 
 1. Select **Apps** tab, select **App features** from the left pane, and then select **Bots**.
 
@@ -142,7 +144,7 @@ The following illustrates an example of prompt suggestions:
 
 ---
 
-Prompt starters reappear in the **View Prompts** flyout above the compose box during a conversation and enables users to review the prompts while interacting with your bot.
+Prompt starters reappear in the **View Prompts** flyout above the compose box during a conversation and enable users to review the prompts while interacting with your bot.
 
 :::image type="content" source="~/assets/images/bots/prompt-starter-desktop-reappear.png" alt-text="Screenshot that shows the Prompt Starter reappear during the conversation." lightbox="~/assets/images/bots/prompt-starter-desktop-reappear.png":::
 
@@ -211,6 +213,7 @@ modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
 
 | **Sample name** | **Description** |**.NET** |**Node.js** |
 |-----------------|-----------------|----------------|----------------|
+
 | Prompt starters bot | Microsoft Teams Create Commands Menu to implement prompt starters in your bot's app manifest. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-commands-menu/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-commands-menu/nodejs) |
 
 ## See also
