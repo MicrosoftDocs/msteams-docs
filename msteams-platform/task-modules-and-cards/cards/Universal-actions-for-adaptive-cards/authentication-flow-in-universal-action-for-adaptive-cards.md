@@ -10,7 +10,7 @@ ms.owner: ryanbliss
 
 # Add third party authentication to Adaptive Cards Universal Actions
 
-Adaptive Cards Universal Actions use the bot as the common backend for handling actions and introduce a new action type `Action.Execute`, which works across apps, such as Teams and Outlook.
+Adaptive Cards Universal Actions use the bot as the common backend for handling actions and introduce a new action type `Action.Execute`, which works across apps, such as Microsoft Teams and Outlook.
 
 > [!NOTE]
 > Support for Adaptive Cards Universal Actions schema version v1.4 is only available for cards sent by bot.
@@ -26,7 +26,7 @@ To learn more about Adaptive Cards Universal Actions, see [Adaptive Cards Univer
 
 If you want to add user-specific views in instances where an Adaptive Card with Universal Action is shared, in the context of a group chat or a channel, the user might need to be authenticated.
 
-In the past, users who were chatting one-on-one with the bot had to wait while you sent them a separate auth card to authenticate. To communicate with the bot, user would need to switch from the group chat or channel that would disturb the flow.
+In the past, users who were chatting one-on-one with the bot had to wait while you sent them a separate auth card to authenticate. To communicate with the bot, users would need to switch from the group chat or channel, which would disturb the flow.
 
 ## Authentication flow in Action.Execute protocol
 
