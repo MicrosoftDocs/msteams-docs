@@ -12,9 +12,10 @@ ms.date: 01/20/2026
 
 > [!NOTE]
 >
-> Apps in shared channel are currently in [public developer preview](resources/dev-preview/developer-preview-intro.md). Apps in private channels are coming soon!
+> * Support for apps in **Shared channels** begins rolling out on **January 21**, with completion expected by **January 27** across general rings.  
+> * Support for apps in **Private channels** begins rolling out in **Developer Preview** this week.
 
-Shared and private channels in Microsoft Teams enable flexible collaboration within teams and across organizations. Currently, bot and tab apps are supported in shared and private channels. With this update, you can experience multiple benefits:
+Shared and private channels in Microsoft Teams enable flexible collaboration within teams and across organizations. Currently, bot and tab apps are supported in shared and private channels. By using this update, you can experience multiple benefits:
 
 * **Shared channels**: Allow seamless communication with internal or external members, without changing the user’s context. These channels ensure secure granular access control and real-time membership syncing.
 
@@ -49,7 +50,12 @@ Here's an outline of the different channels and their capabilities across variou
 
 > [!IMPORTANT]
 >
-> Teams channel types continue to evolve, and new scenarios might be introduced over time. To help ensure long‑term compatibility, avoid creating app logic that relies on specific values of the `membershipType` or `channelType` properties returned by Microsoft Graph. Check your app’s capabilities such as membership boundaries, storage location, and external access.
+> Teams channel types continue to evolve, and new scenarios might be introduced over time. To help ensure long‑term compatibility, avoid creating app logic that relies on specific values of the `membershipType` or `channelType` properties returned by Microsoft Graph.
+
+> [!NOTE]
+>
+> * Check your app’s capabilities such as membership boundaries, storage location, and external access before enabling support for Shared and Private channels.
+> * Apps that are message extension–only and personal‑scope only don't require any changes to become available as message extensions inside Shared and Private channels.
 
 ### Understand how different channels determine app functionality
 
@@ -75,7 +81,7 @@ Ensure that you understand how different channels determine app functionality, m
 
 ## Enable apps for shared and private channels
 
-Most apps can support shared and private channels with a simple manifest update. Based on either of the following scenarios, you can decide the approach:
+Most apps can support shared and private channels with a simple manifest update. Based on either of the following scenarios, decide the approach:
 
 * [Apps with no dependence on specified parameters](#apps-with-no-dependence-on-specified-parameters)
 * [Apps with dependence on specified parameters](#apps-with-dependence-on-specified-parameters)
