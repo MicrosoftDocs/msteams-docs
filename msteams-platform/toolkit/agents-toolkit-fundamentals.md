@@ -18,7 +18,7 @@ Agents Toolkit (previously known as Teams Toolkit) makes it simple to get starte
 * Save setup time with automated agent or app registration and configuration.
 * Run and debug to Teams, Outlook, and Copilot directly from Visual Studio Code.
 * Smart defaults for hosting in Azure using infrastructure-as-code and Bicep.
-* Test with different configurations such as dev, test, and prod using the environment features.
+* Test with different configurations such as dev, test, and prod using **Environment**.
 
 :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/toolkit-user-journey2.png" alt-text="Illustration shows the User Journey of the Agents Toolkit." lightbox="../assets/images/toolkit-v2/toolkit-fundamentals/toolkit-user-journey2.png":::
 
@@ -35,9 +35,9 @@ Agents Toolkit is available as a free extension for Visual Studio Code. To get s
 >
 > Agents Toolkit doesn't support building agents and apps for Government Community Cloud (GCC), GCC High, Department of Defense (DoD), and Teams operated by 21Vianet environments.
 
-## Features
+## Agents Toolkit capabilities
 
-The following list provides the key features of Agents Toolkit:
+The following list provides the key capabilities of Agents Toolkit:
 
 ### Project templates
 
@@ -51,7 +51,7 @@ Automate repetitive or tedious configuration using a composable task framework t
 
 ### Multiple environments
 
-Test your agent or app with different groupings of hosted resources by creating unique configurations such as `dev`, `test`, and `prod` using the Environments features.
+Test your agent or app with different groupings of hosted resources by creating unique configurations such as `dev`, `test`, and `prod` using **Environments**.
 
 ### Quick access to Teams Developer Portal
 
@@ -61,7 +61,7 @@ You can access Teams Developer Portal where you can configure, publish, and mana
 
 ### Debug tunneling for agents and bots
 
-Run and debug your agents and bot projects using Visual Studio Code and the included Dev Tunnels features.
+Run and debug your agents and bot projects using Visual Studio Code and the included Dev Tunnels capabilities.
 
 ### Microsoft 365 Agents Playground
 
