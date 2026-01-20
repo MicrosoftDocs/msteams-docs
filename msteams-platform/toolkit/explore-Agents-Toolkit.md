@@ -107,7 +107,7 @@ From the task pane, you can see the following sections:
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/deployment1.png" alt-text="Screenshot shows the Lifecycle section.":::
+      :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/deployment.png" alt-text="Screenshot shows the Lifecycle section.":::
    :::column-end:::
    :::column span="":::
 
