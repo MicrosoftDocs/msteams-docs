@@ -1,11 +1,11 @@
 ---
 title: Teams connect shared and private channels
-author: surbhigupta
+author: vikasalmal
 description: Learn about apps for shared and private channels to securely collaborate with internal and external users in a shared space.
-ms.author: surbhigupta
+ms.author: vikasalmal
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.date: 03/11/2025
+ms.date: 20/01/2026
 ---
 
 # Apps for shared and private channels
@@ -49,7 +49,7 @@ Here’s an outline of the different channels and their capabilities, across var
 
 > [!IMPORTANT]
 >
-> Check your app’s capabilities such as membership boundaries, storage location, and external access. Don't make any code changes, based on channel type.
+> Teams channel types continue to evolve, and new scenarios may be introduced over time. To help ensure long‑term compatibility, avoid creating app logic that relies on specific values of the `membershipType` or `channelType` properties returned by Microsoft Graph. Check your app’s capabilities such as membership boundaries, storage location, and external access.
 
 ### Understand how different channels determine app functionality
 
