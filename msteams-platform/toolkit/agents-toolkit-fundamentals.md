@@ -12,7 +12,7 @@ ms.date: 08/26/2025
 
 [!INCLUDE [Deprecation note](../includes/deprecation-note-teamsfx-sdk.md)]
 
-Agents Toolkit (previously known as Teams Toolkit) makes it simple to get started with app development for Microsoft Teams, Outlook, and Microsoft 365 Copilot using Visual Studio Code.
+Agents Toolkit (previously known as Teams Toolkit) makes it simple to get started with agent and app development for Microsoft Teams, Outlook, and Microsoft 365 Copilot using Visual Studio Code.
 
 * Create new agents and apps from project templates for common scenarios.
 * Save setup time with automated agent or app registration and configuration.
@@ -41,13 +41,13 @@ The following list provides the key capabilities of Agents Toolkit:
 
 ### Project templates
 
-Save time getting started with new Teams apps using the capability-focused templates for tabs, bots, message extensions, and common app scenarios.
+Save time getting started with new Teams agents and apps using the capability-focused templates for tabs, bots, message extensions, and common agent and app scenarios.
 
 :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/teams-agents.png" alt-text="Screenshot shows the list of new agent and app menu you can create in Visual Studio Code.":::
 
 ### Composable automation tasks
 
-Automate repetitive or tedious configuration using a composable task framework that creates app IDs, bot registrations, Microsoft Entra apps, and so on.
+Automate repetitive or tedious configuration using a composable task framework that creates app IDs, agent or bot registrations, Microsoft Entra apps, and so on.
 
 ### Multiple environments
 
