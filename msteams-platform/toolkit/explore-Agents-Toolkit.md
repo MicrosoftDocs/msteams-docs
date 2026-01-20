@@ -39,7 +39,7 @@ You can explore the available functionalities from the Agents Toolkit task pane.
 
 After you create a new Teams app project, the directory structure of the app appears in the left pane and the **`README`** file in the right pane.
 
-:::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/first-page_1.png" alt-text="Screenshot shows the  first page of Agents Toolkit." lightbox="../assets/images/toolkit-v2/toolkit-fundamentals/first-page_1.png":::
+:::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/agent-toolkit.png" alt-text="Screenshot shows the  first page of Agents Toolkit." lightbox="../assets/images/toolkit-v2/toolkit-fundamentals/agent-toolkit.png":::
 
 Let's take a tour of Agents Toolkit.
 
