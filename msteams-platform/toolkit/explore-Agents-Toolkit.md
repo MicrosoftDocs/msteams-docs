@@ -55,7 +55,7 @@ From the task pane, you can see the following sections:
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/accounts1_1.png" alt-text="Screenshot shows the Accounts section.":::
+      :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/accounts.png" alt-text="Screenshot shows the Accounts section.":::
    :::column-end:::
    :::column span="":::
 
@@ -101,7 +101,7 @@ From the task pane, you can see the following sections:
 
         * **Preview Your Teams App (F5)**: Select to view the Teams app debug options.
 
-        * **Get Help from GitHub Copilot**: Select to get AI-powered code suggestions.
+<!--        * **Get Help from GitHub Copilot**: Select to get AI-powered code suggestions.-->
    :::column-end:::
 :::row-end:::
 
