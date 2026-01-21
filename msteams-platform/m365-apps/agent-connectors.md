@@ -4,24 +4,20 @@ description: Register your MCP server in the Microsoft 365 app manifest to enabl
 #customer intent: As a developer, I want to register my MCP server as an agent connector so that Microsoft 365 agents can access my external tools and services.
 author: erikadoyle
 ms.author: edoyle
-ms.date: 12/15/2025
+ms.date: 01/21/2025
 ms.topic: how-to
 ms.subservice: m365apps
 ---
 
 # Register MCP servers as agent connectors for Microsoft 365 (preview)
 
-Agents in Microsoft 365, such as [Channel Agent](/microsoftteams/set-up-channel-agent-teams) in Microsoft Teams, can connect to external systems through *agent connectors* declared in the app manifest. This article shows you how to register your remote Model Context Protocol (MCP) server in the Microsoft 365 app manifest, enabling Microsoft 365 agents to securely discover, select, and invoke MCP tools that your server exposes.
-
-> [!NOTE]
->
-> Agent Connectors are available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+Agents in Microsoft 365, such as [Channel Agent](/microsoftteams/set-up-channel-agent-teams) in Microsoft Teams, can connect to external systems through *agent connectors* declared in the app manifest. This article shows you how to register your remote [Model Context Protocol (MCP) server](/visualstudio/ide/mcp-servers?view=visualstudio) in the Microsoft 365 app manifest, enabling Microsoft 365 agents to securely discover, select, and invoke MCP tools that your server exposes.
 
 Microsoft 365 agents use agent connectors to communicate with external systems. For MCP servers, the connector provides:
 
 - The network endpoint of your MCP server
 - Authentication and authorization configuration
-- Tool definitions (inline or dynamically discovered)
+- Tool definitions ([inline](#use-inline-tool-definitions) or [dynamically](#enable-dynamic-tool-discovery) discovered)
 - Optional metadata that helps agents orchestrate the right tool during user interactions
 
 Once registered in the Microsoft 365 app manifest, your MCP server can be discovered and used by Microsoft 365 agents that support MCP, such as the Channel Agent in Microsoft Teams.
@@ -75,17 +71,17 @@ Define how Microsoft 365 connects to your MCP server using the `remoteMcpServer`
 
 1. Within your connector's [toolSource](/microsoft-365/extensibility/schema/root-agent-connectors-tool-source?view=m365-app-prev&preserve-view=true), specify the `remoteMcpServer` endpoint:
 
-````json
-"toolSource": {
-  "remoteMcpServer": {
-    "endpoint": "https://mcp.mycompany.com"
-  }
-}
-````
+    ````json
+    "toolSource": {
+      "remoteMcpServer": {
+        "endpoint": "https://mcp.mycompany.com"
+      }
+    }
+    ````
 
 2. Ensure your endpoint uses HTTPS (for HTTP connections) or WSS (for WebSocket connections).
 
-The endpoint must be publicly accessible and respond to MCP protocol handshake messages. Microsoft 365 agents establish long-lived connections to this endpoint.
+The endpoint must be publicly accessible and respond to MCP protocol handshake messages, as Microsoft 365 agents establish long-lived connections to this endpoint.
 
 ## Configure authentication
 
@@ -131,7 +127,9 @@ The `referenceId` points to an [API key that you register in Developer Portal](h
 
 If your server doesn't require authentication (not recommended for production), set the authorization type to `None` or omit the `authorization` object entirely.
 
-For enterprise scenarios, prefer OAuth over API keys to align with security best practices and administrator expectations.
+> [!NOTE]
+>
+> For enterprise scenarios, prefer OAuth over API keys to align with security best practices and administrator expectations.
 
 ## Define tool discovery
 
@@ -250,7 +248,7 @@ Validate your integration by testing with actual Microsoft 365 agents.
    - User consent prompts display when required
    - Tool calls execute successfully
    - Responses are processed correctly
-   - Error conditions return clear, MCP compliant responses and do not fail silently
+   - Error conditions return clear responses and do not fail silently
 
 5. Test across multiple tenants if your scenario requires multi-tenant support.
 
