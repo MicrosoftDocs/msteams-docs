@@ -111,13 +111,13 @@ From the task pane, you can see the following sections:
    :::column-end:::
    :::column span="":::
 
-        To provision, deploy, and publish your Teams app, you need the following features:
+        To provision, deploy, and publish your Teams agent or app, you need the following features:
         
-        * **Provision**: Allocate Azure resources for your application. Agents Toolkit is integrated with Azure Resource Manager, and it registers your app with Microsoft Entra ID automatically.
+        * **Provision**: Allocate Azure resources for your application. Agents Toolkit is integrated with Azure Resource Manager, and it registers your agent or app with Microsoft Entra ID automatically.
         
         * **Deploy**: Deploy the source code to Azure.
        
-        * **Publish to Organization**: Publish your developed app and publish it to scopes, such as personal, team, channel, or organization.
+        * **Publish to Organization**: Publish your developed agent or app  to scopes, such as personal, team, channel, or organization.
    :::column-end:::
 :::row-end:::
 
@@ -127,13 +127,13 @@ From the task pane, you can see the following sections:
    :::column-end:::
    :::column span="":::
 
-        To create an app package, validate an app, and publish in Developer Portal, you need the following features:
+        To create an agent or app package, validate the app package, and publish in Developer Portal, you need the following features:
 
-        * **Zip Teams App Package**: Create the app package that can be uploaded to Teams or Developer Portal. It contains the app manifest (previously called Teams app manifest) and app icons.
+        * **Zip App Package**: Create the app package that can be uploaded to Teams or Developer Portal. It contains the app manifest (previously called Teams app manifest) and app icons.
         
         * **Validate Application**: Validate if the app manifest file is in right schema or validate the app package.
         
-        * **Publish to Store in Developer Portal**: Use Developer Portal to publish and manage your Teams app. 
+        * **Publish to Store in Developer Portal**: Use Developer Portal to publish and manage your Teams agent or app. 
    :::column-end:::
 :::row-end:::
 
