@@ -18,7 +18,7 @@ Agents Toolkit (previously known as Teams Toolkit) makes it simple to get starte
 * Save setup time with automated agent or app registration and configuration.
 * Run and debug to Teams, Outlook, and Copilot directly from Visual Studio Code.
 * Smart defaults for hosting in Azure using infrastructure-as-code and Bicep.
-* Test with different configurations such as dev, test, and prod using **Environment**.
+* Test with different configurations such as `dev`, `test`, and `prod` using **Environment**.
 
 :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/toolkit-user-journey2.png" alt-text="Illustration shows the User Journey of the Agents Toolkit." lightbox="../assets/images/toolkit-v2/toolkit-fundamentals/toolkit-user-journey2.png":::
 
@@ -29,7 +29,7 @@ Agents Toolkit is available as a free extension for Visual Studio Code. To get s
 | Agents Toolkit | Visual Studio Code |
 | --- | ---- |
 | Installation | Available in the Visual Studio Code Marketplace |
-| Build with | JavaScript, TypeScript, React, SPFx |
+| Build with | JavaScript, TypeScript, Python |
 
 > [!IMPORTANT]
 >
