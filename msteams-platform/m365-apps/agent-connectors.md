@@ -24,7 +24,7 @@ Microsoft 365 agents use agent connectors to communicate with external systems. 
 - Tool definitions (inline or dynamically discovered)
 - Optional metadata that helps agents orchestrate the right tool during user interactions
 
-Once registered, your MCP server becomes available to any Microsoft 365 agent capable of using MCP, including the Channel Agent in Microsoft Teams.
+Once registered in the Microsoft 365 app manifest, your MCP server can be discovered and used by Microsoft 365 agents that support MCP, such as the Channel Agent in Microsoft Teams.
 
 ## Prerequisites
 
@@ -42,7 +42,7 @@ First, declare your MCP server in the [agentConnectors](/microsoft-365/extensibi
 
 2. Locate or create the root-level `agentConnectors` array.
 
-3. Add a new connector object with a unique `id`, display name, and description:
+3. Add a new connector object with a unique `id`, `display name`, and `description`:
 
 ````json
 {
@@ -154,7 +154,7 @@ The following example shows how to add the dynamic discovery flag to your `remot
 }
 ````
 
-When enabled, agents call your server's `tools/list` method to retrieve available tools. This approach eliminates the need to republish your app when tools change.
+When enabled, agents call your server's `tools/list` method to retrieve available tools. This approach eliminates the need to republish your agent when tools change.
 
 ### Use inline tool definitions
 
@@ -210,7 +210,7 @@ This configuration is sufficient for Microsoft 365 agents, including the Channel
 
 ## Validate your configuration
 
-Before deploying your app, verify that your manifest and MCP server are correctly configured.
+Before deploying your agent, verify that your manifest and MCP server are correctly configured.
 
 1. Use the [Microsoft 365 app package validation](https://dev.teams.microsoft.com/tools/store-validation) tool in Developer Portal to check your manifest for errors.
 
@@ -236,7 +236,7 @@ Before deploying your app, verify that your manifest and MCP server are correctl
 
 Validate your integration by testing with actual Microsoft 365 agents.
 
-1. Deploy your app to a test environment.
+1. Deploy your agent to a test environment.
 
 2. Open a [Channel Agent](/microsoftteams/set-up-channel-agent-teams) in Microsoft Teams or another Microsoft 365 agent that supports MCP.
 
@@ -250,7 +250,7 @@ Validate your integration by testing with actual Microsoft 365 agents.
    - User consent prompts display when required
    - Tool calls execute successfully
    - Responses are processed correctly
-   - Error conditions are handled gracefully
+   - Error conditions return clear, MCP compliant responses and do not fail silently
 
 5. Test across multiple tenants if your scenario requires multi-tenant support.
 
@@ -288,4 +288,4 @@ If your MCP server isn't working as expected, check these common issues:
 
 ## Next steps
 
-When ready, submit your app for [partner certification and publishing](../concepts/deploy-and-publish/appsource/publish.md).
+When ready, submit your agent for [partner certification and publishing](../concepts/deploy-and-publish/appsource/publish.md).
