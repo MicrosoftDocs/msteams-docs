@@ -23,13 +23,13 @@ Agents Toolkit appears within Visual Studio Code as an extension. After you inst
 | --- | --- | --- |
 | 1 | **Build a Declatative Agent** | Build a declarative agent. |
 | 2 | **Create a New Agent/App** | Create a new agent/app. |
-| 3 | **View Samples** | Select and build existing app samples based on common use cases for a Teams app. |
+| 3 | **View Samples** | Select and build existing agent and app samples based on common use cases for a Teams app. |
 | 4 | • **New File** <br> • **Open File** <br> • **Open Folder** <br> • **Connect to** | • Create a new file. <br> • Open an existing file. <br> • Open an existing folder. <br> • Connect to remote development workspaces. |
 | 5 | **Recent** | View the recent files. |
 
 ### Explore the Agents Toolkit task pane
 
-You can explore the available functionalities from the Agents Toolkit task pane. The task pane appears only after you create an app project using Agents Toolkit.
+You can explore the available functionalities from the Agents Toolkit task pane. The task pane appears only after you create an agent or app project using Agents Toolkit.
 <br><br>
 <details>
 <summary><b>Select to view a video to learn about the process of creating a new Teams app:</b></summary>
@@ -37,7 +37,7 @@ You can explore the available functionalities from the Agents Toolkit task pane.
    :::image type="content" source="../assets/videos/agent-toolkit.gif" alt-text="Graphical representation shows the steps to create an agent.":::
 </details>
 
-After you create a new Teams app project, the directory structure of the app appears in the left pane and the **`README`** file in the right pane.
+After you create a new Teams agent or app project, the directory structure of the project appears in the left pane and the **`README`** file in the right pane.
 
 :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/agent-toolkit.png" alt-text="Screenshot shows the  first page of Agents Toolkit." lightbox="../assets/images/toolkit-v2/toolkit-fundamentals/agent-toolkit.png":::
 
@@ -63,7 +63,7 @@ From the task pane, you can see the following sections:
         
          * **Sign in to Microsoft 365**: Use your Microsoft 365 work or school account with a valid E5 subscription for building your app. If you don't have a valid account, you can join [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program) to get a free account before you start.
 
-        * **Sign in to Azure**: Use your Azure account for deploying your app on Azure. You can [create a free Azure account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn) before you start.
+        * **Sign in to Azure**: Use your Azure account for deploying your agent or app on Azure. You can [create a free Azure account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn) before you start.
    :::column-end:::
 :::row-end:::
 
@@ -75,11 +75,11 @@ From the task pane, you can see the following sections:
 
         To deploy your Teams app, you need the following environments:
 
-       * **playground**: Deploy your app in the testool environment with playground environment configurations.
+       * **playground**: Deploy your agent or app in the testool environment with playground environment configurations.
         
-       * **local**: Deploy your app in the default local environment with local environment configurations.
+       * **local**: Deploy your agent or app in the default local environment with local environment configurations.
 
-        * **dev**: Deploy your app in the default dev environment with remote or cloud environment configurations.
+        * **dev**: Deploy your agent or app in the default dev environment with remote or cloud environment configurations.
 
         You can create more environments, such as production or test, as you need.
    :::column-end:::
@@ -93,13 +93,13 @@ From the task pane, you can see the following sections:
 
         To create and debug your Teams app, you need the following features:
         
-       * **Create a New Agent/App**: Use Agents Toolkit wizard to prepare project scaffolding for app development.
+       * **Create a New Agent/App**: Use Agents Toolkit wizard to prepare project scaffolding for agent or app development.
 
-        * **View Samples**: Select any of Agents Toolkit's sample apps. The toolkit downloads the app code from GitHub and you can build the sample app.
+        * **View Samples**: Select any of Agents Toolkit's samples. The toolkit downloads the code from GitHub and you can build the sample agent or app.
 
-        * **View How-to Guides**: Select to view Teams app scenario guides and development guides.
+        * **View How-to Guides**: Select to view Teams agent or app scenario guides and development guides.
 
-        * **Preview Your Teams App (F5)**: Select to view the Teams app debug options.
+        * **Preview Your Teams App (F5)**: Select to view the Teams agent or app debug options.
 
 <!--        * **Get Help from GitHub Copilot**: Select to get AI-powered code suggestions.-->
    :::column-end:::
