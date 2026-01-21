@@ -143,7 +143,7 @@ From the task pane, you can see the following sections:
    :::column-end:::
    :::column span="":::
 
-        To access more information and provide us, your feedback on Agents Toolkit, select any one of the following:
+        To access more information and provide us your feedback on Agents Toolkit, select any one of the following:
         
         * **Documentation**: Select to access the Microsoft Teams Developer documentation.
 
@@ -163,8 +163,8 @@ From the task pane, you can see the following sections:
 
 2. Select the type of how-to guide that you want to view.
 
-    * Select any one of the Teams app scenario guides to view the guide to develop an app for a common app scenario, such as sending notifications using a bot.
-    * Select any one of the Teams app development guides to view a guide that helps in app development, such as embedding a dashboard tab in a Teams app.
+    * Select any one of the Teams agent or app scenario guides to view the guide to develop an agent or app for a common app scenario, such as sending notifications using an agent or a bot.
+    * Select any one of the Teams agent and app development guides to view a guide that helps to develop capabilities such as embedding a dashboard tab in a Teams agent or app.
 
 ## See also
 
