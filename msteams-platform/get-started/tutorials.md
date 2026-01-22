@@ -55,7 +55,7 @@ This step-by-step guide helps you to build an AI chat bot using Agents Toolkit a
 
 The bot capability of a Teams app creates a chatbot or a conversational bot. It communicates with a web service, facilitating the use of its services. The bot can execute simple, automated tasks such as delivering customer service. You can get weather forecast, make reservations, or any other service offered using a conversational bot.
 
-:::image type="content" source="~/assets/images/toolkit-v2/first-bot/your-helloworld-app-bot.png" alt-text="Screenshot shows you the app with three features. Bot is highlighted.":::
+:::image type="content" source="~/assets/images/toolkit-v2/first-bot/your-helloworld-app-bot.png" alt-text="The screenshot shows you the app with three features. Bot is highlighted.":::
 
 As you've already prepared for creating these apps, you can set up a new Teams project for creating the AI chat bot app.
 
