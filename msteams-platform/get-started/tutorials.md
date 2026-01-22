@@ -195,7 +195,7 @@ If the prerequisites are in place, let's begin!
 
 1. Select **Default folder** to store your project root folder in default location.
 
-    :::image type="content" source="../assets/images/toolkit-v2/first-bot/select-default-location.png" alt-text="Screenshot shows the selection of default location.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-bot/select-default-location.png" alt-text="The screenshot shows the selection of default location.":::
 
     You can also change the default location by the following steps:
 
@@ -967,7 +967,7 @@ If you don't have a Teams developer account, join the Microsoft 365 developer pr
 1. In the welcome screen, select **Set up E5 subscription**.
 1. Set up your administrator account. After you finish, the following screen appears:
 
-   :::image type="content" source="../assets/images/include-files/microsoft-365.png" alt-text="Screenshot displays the Microsoft 365 Developer Program.":::
+   :::image type="content" source="../assets/images/include-files/microsoft-365.png" alt-text="The screenshot displays the Microsoft 365 Developer Program.":::
 
 1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
 
