@@ -26,6 +26,9 @@ This section is in line with [Microsoft commercial marketplace policy number 114
 Apps must be consistent with responsible [AI checks](teams-store-validation-guidelines.md#apps-with-ai-generated-content).
 
 :::row:::
+   :::column span="":::
+      :::image type="icon" source="../../../../assets/icons/value-proposition.png" link="#value-proposition" border="false":::
+   :::column-end:::
    :::column:::
       :::image type="icon" source="../../../../assets/icons/description.png" link="#description" border="false":::
    :::column-end:::
@@ -43,11 +46,11 @@ Apps must be consistent with responsible [AI checks](teams-store-validation-guid
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/prompts.png" link="#prompts" border="false":::
    :::column-end:::
+:::row-end:::
+:::row:::
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/adaptive-card-response.png" link="#adaptive-card-response" border="false":::
    :::column-end:::
-:::row-end:::
-:::row:::
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/compatibility.png" link="#compatibility" border="false":::
    :::column-end:::
@@ -60,12 +63,12 @@ Apps must be consistent with responsible [AI checks](teams-store-validation-guid
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/bot-requirement-agent.png" link="#bot-requirements-for-custom-engine-agents" border="false":::
    :::column-end:::
-   :::column span="":::
-      :::image type="icon" source="../../../../assets/icons/action-knowledge-source.png" link="#action-and-knowledge-source" border="false":::
-   :::column-end:::
 :::row-end:::
 
 :::row:::
+   :::column span="":::
+      :::image type="icon" source="../../../../assets/icons/action-knowledge-source.png" link="#action-and-knowledge-source" border="false":::
+   :::column-end:::
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/duplicate-agents.png" link="#duplicate-agents" border="false":::
    :::column-end:::
@@ -78,10 +81,20 @@ Apps must be consistent with responsible [AI checks](teams-store-validation-guid
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/security.png" link="#security-requirements-for-server-calls-message-extension-openapis-mcp-servers" border="false":::
    :::column-end:::
+<!--
    :::column span="":::
       :::image type="icon" source="../../../../assets/icons/white-bg.png" border="false":::
       :::column-end:::
+-->
 :::row-end:::
+
+## Value Proposition
+
+Agents should be designed to complete enterprise workflows and must deliver differentiated value beyond what Copilot offers by one of the following [Must-fix]:
+
+* Achieving workflows that cannot be achieved easily via Copilot. For example, a **Contoso Ticket Management Agent** that allows users to create tickets directly on the Contoso platform.
+* Significantly reducing time to complete workflows as compared to Copilot. For example, a **Contoso Social Media Post Agent** that helps users craft posts with consistent structure, brand tone, and improved efficiency.
+* Using specialized orchestration or fine-tuned models for domain-specific workflows. For example, a **Contoso Pharma Agent** fine-tuned on pharma data to help identify domain-specific chemicals.
 
 ## Description
 
@@ -157,7 +170,7 @@ Sample prompts are specified using `samplePrompts` property in the app manifest.
 
 Prompt starters guide users on how to start using declarative agents and custom engine agents. You must ensure the following guidelines for prompt starters:
 
-* A declarative agent or a custom engine agent must have at least three prompts and maximum of six prompts. [*Must fix*]
+* A declarative agent or a custom engine agent must have at least three prompts. [*Must fix*]
 * All prompt starters must be functional and return responses. [*Must fix*]
 
 [Back to top](#validation-guidelines-for-agents)
@@ -332,10 +345,9 @@ A custom engine agent is a conversational Teams bot that must meet the following
 [Back to top](#validation-guidelines-for-agents)
 
 ## Action and knowledge source
-
+<!--
 * Your agent must have nodes defined as actions in the app manifest. All agents must have a core use case that's served through API actions. [*Must fix*]
 
-<!--
 * For capabilities such as web search, graphic art, or code interpreter, the `Instruction` field must include details on how to use the capabilities within the context of the agent. [*Must fix*]
 -->
 
