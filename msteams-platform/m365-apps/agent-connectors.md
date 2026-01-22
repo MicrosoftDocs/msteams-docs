@@ -9,9 +9,13 @@ ms.topic: how-to
 ms.subservice: m365apps
 ---
 
-# Register MCP servers as agent connectors for Microsoft 365 (preview)
+# Register MCP servers as agent connectors for Microsoft 365
 
-Agents in Microsoft 365, such as [Channel Agent](/microsoftteams/set-up-channel-agent-teams) in Microsoft Teams, can connect to external systems through *agent connectors* declared in the app manifest. This article shows you how to register your remote [Model Context Protocol (MCP) server](/visualstudio/ide/mcp-servers?view=visualstudio) in the Microsoft 365 app manifest, enabling Microsoft 365 agents to securely discover, select, and invoke MCP tools that your server exposes.
+Agents in Microsoft 365, such as [Channel Agent](/microsoftteams/set-up-channel-agent-teams) in Microsoft Teams, connect to external systems through *agent connectors* declared in the app manifest. This article shows you how to register your remote Model Context Protocol (MCP) server in the Microsoft 365 app manifest. By registering your MCP server, Microsoft 365 agents can securely discover, select, and invoke MCP tools that your server exposes.
+
+> [!NOTE]
+>
+> Agent connectors are now [generally available](../whats-new.md).
 
 Microsoft 365 agents use agent connectors to communicate with external systems. For MCP servers, the connector provides:
 
@@ -67,7 +71,7 @@ For MCP servers, use **remoteMcpServer** unless your server runs locally within 
 
 ## Configure the remote MCP server endpoint
 
-Define how Microsoft 365 connects to your MCP server using the `remoteMcpServer` object.
+Define how Microsoft 365 connects to your MCP server by using the `remoteMcpServer` object.
 
 1. Within your connector's [toolSource](/microsoft-365/extensibility/schema/root-agent-connectors-tool-source?view=m365-app-prev&preserve-view=true), specify the `remoteMcpServer` endpoint:
 
@@ -177,7 +181,7 @@ The `description` object must match the schema returned by your MCP server's `to
 
 ## Example schema
 
-The following is an example of a complete agent connector configuration:
+The following example shows a complete agent connector configuration:
 
 ```json
 {
@@ -248,7 +252,7 @@ Validate your integration by testing with actual Microsoft 365 agents.
    - User consent prompts display when required
    - Tool calls execute successfully
    - Responses are processed correctly
-   - Error conditions return clear responses and do not fail silently
+   - Error conditions return clear responses
 
 5. Test across multiple tenants if your scenario requires multi-tenant support.
 
@@ -286,4 +290,4 @@ If your MCP server isn't working as expected, check these common issues:
 
 ## Next steps
 
-When ready, submit your agent for [partner certification and publishing](../concepts/deploy-and-publish/appsource/publish.md).
+When ready, submit your app for [partner certification and publishing](../concepts/deploy-and-publish/appsource/publish.md).
