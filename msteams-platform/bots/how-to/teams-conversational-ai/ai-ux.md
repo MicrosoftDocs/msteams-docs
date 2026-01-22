@@ -130,6 +130,7 @@ The following best practices can help enhance the overall effectiveness of an ag
 - [Enable the agent to understand conversational history and context](#enable-the-agent-to-understand-conversational-history-and-context).
 - [Offer dynamic and contextual suggestion prompts](#offer-dynamic-and-contextual-suggestion-prompts).
 - [Enable app profile card](#enable-app-profile-card).
+- [Enable message reactions to communicate with agents](#enable-message-reactions-to-communicate-with-agents)
 
 ### Ensure that agent's response contains feedback button
 
