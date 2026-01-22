@@ -178,6 +178,12 @@ Add hovercard experience for all agents and bots. Hovercards provide valuable an
 
 To enable the app profile card for your agents or bots, add the `features` field under the `description` field in the app manifest. For more information, see [public developer preview for Teams](/microsoft-365/extensibility/schema/root-description?view=m365-app-prev&tabs=syntax&preserve-view=true).
 
+### Enable message reactions to communicate with agents
+
+Use agents to communicate not only through text but also using reactions, emojis, and context-aware actions. It signals agent's intentional design to improve user trust and make agent behavior more transparent and shows how the agent understands user intent and need.
+
+Map emojis and reactions to specific actions thar the agent can take in response to ongoing conversation.
+
 ## See also
 
 - [Teams SDK](teams-conversation-ai-overview.md)
