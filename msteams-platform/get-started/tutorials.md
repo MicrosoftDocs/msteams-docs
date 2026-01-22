@@ -9,6 +9,7 @@ ms.date: 12/02/2025
 <!-- markdownlint-disable MD033 -->
 <!-- markdownlint-disable MD024 -->
 <!-- markdownlint-disable MD001 -->
+<!-- markdownlint-disable MD060 -->
 
 # Tutorials
 
@@ -17,7 +18,7 @@ In this article, learn more about building Teams app capabilities. Here's a list
 | # | Capability | Step-by-step guide |
 | --- | --- | --- |
 | 1. | Bot | - [Debug your AI chat bot using Microsoft 365 Agents Playground](#debug-your-ai-chat-bot-using-microsoft-365-agents-playground) <br> - [Send proactive messages](#send-proactive-messages) |
-| 2. | Message extension | [Build API-based message extension](#build-api-based-message-extension) <br> - [Build action-based message extension](#build-action-based-message-extension) <br> - [Build your first message extension app using JavaScript](#build-your-first-message-extension-app-using-javascript) |
+| 2. | Message extension | - [Build API-based message extension](#build-api-based-message-extension) <br> - [Build action-based message extension](#build-action-based-message-extension) <br> - [Build your first message extension app using JavaScript](#build-your-first-message-extension-app-using-javascript) |
 | 3. | Tab | [Build your first tab app using C sharp](#build-your-first-tab-app-using-c-sharp) |
 | 4. | SSO | - [Build a bot with SSO authentication](#build-a-bot-with-sso-authentication) <br> - [Add SSO to tab and message extension app](#add-sso-to-tab-and-message-extension-app) |
 
@@ -55,7 +56,7 @@ This step-by-step guide helps you to build an AI chat bot using Agents Toolkit a
 
 The bot capability of a Teams app creates a chatbot or a conversational bot. It communicates with a web service, facilitating the use of its services. The bot can execute simple, automated tasks such as delivering customer service. You can get weather forecast, make reservations, or any other service offered using a conversational bot.
 
-:::image type="content" source="~/assets/images/toolkit-v2/first-bot/your-helloworld-app-bot.png" alt-text="Screenshot shows you the app with three features. Bot is highlighted.":::
+:::image type="content" source="../assets/images/toolkit-v2/first-bot/your-helloworld-app-bot.png" alt-text="The screenshot shows you the app with three features. Bot is highlighted.":::
 
 As you've already prepared for creating these apps, you can set up a new Teams project for creating the AI chat bot app.
 
@@ -65,33 +66,33 @@ If the prerequisites are in place, let's begin!
 
 1. Open **Visual Studio Code**.
 
-1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="~/assets/images/toolkit-v2/toolkit-sidebar-icon.PNG" border="false"::: icon in the Visual Studio Code **Activity Bar**.
+1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="../assets/images/toolkit-v2/toolkit-sidebar-icon.PNG" border="false"::: icon in the Visual Studio Code **Activity Bar**.
 
 1. Select **Create a New Agent/App**.
 
-    :::image type="content" source="~/assets/images/toolkit-v2/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Agents Toolkit sidebar.":::
+    :::image type="content" source="../assets/images/toolkit-v2/create-project.png" alt-text="The screenshot shows the location of the Create New Project link in the Agents Toolkit sidebar.":::
 
 1. Select **Agents for Teams** > **Azure OpenAI** > enter an input in **Input Azure API service key now**
 
-    :::image type="content" source="~/assets/images/toolkit-v2/first-bot/create-newapp.png" alt-text="Screenshot shows the Agents Toolkit app templates.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-bot/create-newapp.png" alt-text="Screenshot shows the Agents Toolkit app templates.":::
 
 1. Select **Basic Agents for Teams**. If you need a different functionality for your bot, select the required option.
 
-    :::image type="content" source="~/assets/images/toolkit-v2/debug/ai-chat-bot.png" alt-text="Screenshot shows the app feature to add to your new app.":::
+    :::image type="content" source="../assets/images/toolkit-v2/debug/ai-chat-bot.png" alt-text="Screenshot shows the app feature to add to your new app.":::
 
 1. Select the programming language as **JavaScript**.
 
-    :::image type="content" source="~/assets/images/agents-playground/select-language-bot.png" alt-text="Screenshot displays the option to select the programming language.":::
+    :::image type="content" source="../assets/images/agents-playground/select-language-bot.png" alt-text="Screenshot displays the option to select the programming language.":::
 
 1. Select **Default folder**.
 
-    :::image type="content" source="~/assets/images/toolkit-v2/first-bot/select-default-location.png" alt-text="Screenshot displays the selection of default location.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-bot/select-default-location.png" alt-text="Screenshot displays the selection of default location.":::
 
     To change the default location, follow these steps:
 
     1. Select **Browse**.
 
-        :::image type="content" source="~/assets/images/toolkit-v2/first-bot/select-browse.png" alt-text="Screenshot shows the selection of browse location option.":::
+        :::image type="content" source="../assets/images/toolkit-v2/first-bot/select-browse.png" alt-text="Screenshot shows the selection of browse location option.":::
 
     1. Select the location for the project workspace.
     1. Select **Select Folder**.
@@ -313,7 +314,7 @@ Congratulations! You've successfully created an AI chat bot app. Now, you've lea
 
 </details>
 
-[Tutorials](#tutorials)
+[Back to top](#tutorials)
 
 ## Send proactive messages
 
@@ -659,7 +660,7 @@ You've completed the scenario.
 
 </details>
 
-[Tutorials](#tutorials)
+[Back to top](#tutorials)
 
 ## Build API-based message extension
 
@@ -722,7 +723,7 @@ If you don't have a Teams developer account, you can get it free. Join the Micro
 1. In the welcome screen, select **Set up E5 subscription**.
 1. Set up your administrator account. After you finish, the following screen appears.
 
-   :::image type="content" source="../assets/images/toolkit-v2/prerequisites/microsoft-365.png" alt-text="Screenshot displays the Microsoft 365 Developer Program.":::
+   :::image type="content" source="../assets/images/toolkit-v2/prerequisites/microsoft-365.png" alt-text="The screenshot displays the Microsoft 365 Developer Program.":::
 
 1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
 
@@ -1237,7 +1238,7 @@ You learned to create an API-based message extension using OpenAPI Description d
 
 </details>
 
-[Tutorials](#tutorials)
+[Back to top](#tutorials)
 
 ## Build action-based message extension
 
@@ -1834,7 +1835,7 @@ You've completed the tutorial to get started with a **Action Message Extension**
 
 </details>
 
-[Tutorials](#tutorials)
+[Back to top](#tutorials)
 
 ## Build a bot with SSO authentication
 
@@ -2485,7 +2486,7 @@ You've completed the tutorial to get started with build a bot with SSO authentic
 
 </details>
 
-[Tutorials](#tutorials)
+[Back to top](#tutorials)
 
 ## Build your first message extension app using JavaScript
 
@@ -3098,7 +3099,7 @@ Did you come up with something like this?
 
 </details>
 
-[Tutorials](#tutorials)
+[Back to top](#tutorials)
 
 ## Build your first tab app using C sharp
 
@@ -3289,7 +3290,7 @@ You've successfully created a tab app using C#. Agents Toolkit has added the nec
 
 </details>
 
-[Tutorials](#tutorials)
+[Back to top](#tutorials)
 
 ## Add SSO to tab and message extension app
 
@@ -3939,4 +3940,4 @@ You've completed the tutorial to get started with SSO for tab and message extens
 
 </details>
 
-[Tutorials](#tutorials)
+[Back to top](#tutorials)
