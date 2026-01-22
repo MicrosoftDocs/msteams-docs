@@ -184,6 +184,10 @@ Use agents to communicate not only through text but also using reactions, emojis
 
 Map emojis and reactions to specific actions thar the agent can take in response to ongoing conversation.
 
+You can develop agents for Teams using the `addReaction` and `removeReaction` methods to send reactions to messages in a chat.
+
+For more information, [Teams SDK doc] and [Teams Reactions page].
+
 ## See also
 
 - [Teams SDK](teams-conversation-ai-overview.md)
