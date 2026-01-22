@@ -3,7 +3,7 @@ title: Guidelines to Validate Agents
 description: Learn how to increase the chances of your message extension as an agent for Microsoft 365 Copilot to pass the Teams Store submission process.
 ms.topic: conceptual
 author: v-preethah
-ms.author: surbhigupta
+ms.author: vikasalmal
 ms.localizationpriority: high
 ms.owner: ginobuzz
 ms.date: 07/31/2025
@@ -312,22 +312,22 @@ For action scenarios, agents must share user disclosure and seek user confirmati
 
 A custom engine agent is a conversational Teams bot that must meet the following requirements:
 
-1. A custom engine agent must always contain conversation bot based on Large Language Models (LLMs) for seamless user interaction. [*Must fix*]
-1. The bot ID declaration as a custom engine agent node must be same as the bot ID defined in the bot node in the app manifest. [*Must fix*]
-1. User must be able to reference custom engine agent in Microsoft 365 Copilot and handoff chat experience in Teams. [*Good-to-fix*]
-1. Bot must include the following UX design components:
+1. A custom engine agent must always include a conversation bot based on Large Language Models (LLMs) to ensure seamless user interaction. [*Must fix*]
+2. The bot ID declaration as a custom engine agent node must match the bot ID defined in the bot node in the app manifest. [*Must fix*]
+3. Users must be able to reference the custom engine agent in Microsoft 365 Copilot and hand off chat experiences in Teams. [*Good-to-fix*]
+4. The bot must include the following UX design components:
 
-   1. An [AI label](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=after%2Cbotmessage#ai-label) that enables a user to identify that the message was generated using AI. This label may appear as a persistent disclaimer, per-message or content disclaimer, or during first-run experience. [*Must fix*]
-   1. A [feedback button](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=after%2Cbotmessage#feedback-buttons) that enables a user to provide positive or negative feedback to the agent's messages. [*Must fix*]
-   1. A [citation](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=after%2Cbotmessage#citations) that enables a user to refer to the source of the bot message through in-text citations and references. [*Must fix*]
-   1. A [sensitivity label](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=after%2Cbotmessage#sensitivity-label) that enables a user to understand the confidentiality of the bot message. [*Good-to-fix*]
-   1. An agent must stream its responses to the user. [*Must fix*]
-   1. An agent must include at least three prompt starters or a welcome message. [*Must fix*]
+   1. An [AI label](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=after%2Cbotmessage#ai-label) that enables users to identify that the message was generated using AI. This label may appear as a persistent disclaimer, per-message or content disclaimer, or during the first-run experience. [*Must fix*]
+   2. A [feedback button](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=after%2Cbotmessage#feedback-buttons) that enables users to provide positive or negative feedback on the agent's messages. [*Must fix*]
+   3. A [citation](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=after%2Cbotmessage#citations) that enables users to refer to the source of the bot message through in-text citations and references. [*Must fix*]
+   4. A [sensitivity label](/microsoftteams/platform/bots/how-to/bot-messages-ai-generated-content?tabs=after%2Cbotmessage#sensitivity-label) that enables users to understand the confidentiality of the bot message. [*Good-to-fix*]
+   5. The agent must stream its responses to the user. [*Must fix*]
+   6. The agent must include at least three prompt starters or a welcome message. [*Must fix*]
 
       For more information, see [bot welcome messages](teams-store-validation-guidelines.md#bots-1).
-   1. A bot must offer at least two context-specific suggestions or prompts to the user, rather than generic or fixed ones. [*Must fix*]
-1. The scopes defined in `bot.scopes` and `bot.commandList.scopes` nodes of the manifest must match to maintain good user experience.
-1. Custom engine agents must include **copilot** in `bot.scopes` and `bot.commandList.scopes` to ensure proper surfacing and full platform support.
+   7. The bot must offer at least two context-specific suggestions or prompts to the user, rather than generic or fixed ones. [*Must fix*]
+5. The scopes defined in `bot.scopes` and `bot.commandList.scopes` nodes of the manifest must match to maintain a good user experience.
+6. Custom engine agents must include **copilot** in `bot.scopes` and `bot.commandList.scopes` to ensure proper surfacing and full platform support.
 
 [Back to top](#validation-guidelines-for-agents)
 
@@ -347,7 +347,7 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
   * The button's title must indicate that an image will be inserted into the canvas.
 
-  * Ensure that the intended image gets inserted on clicking the button
+  * Ensure that the intended image gets inserted on clicking the button.
 
   * Ensure the fallback is set to **Drop** to guarantee that the Adaptive Card functions in all compatible clients.
 
@@ -371,9 +371,9 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
 ## Duplicate agents
 
-* Multiple agents for the same product can be published separately but each must have different functionality
+* Multiple agents for the same product can be published separately, but each must have different functionality.
 
-* An agent can be published separately from the main app but it must have a clear justification for the same.
+* An agent can be published separately from the main app, but it must have a clear justification for the same.
 
 * To avoid confusion and ensure clarity for end users:
 
@@ -383,7 +383,7 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
 ## Agent response
 
-* The declarative agent must be functional and must provide accurate responses to the users. To ensure the same, atleast one corresponding prompt in one of the following fields must be present for each and every function of the declarative agent: [*Must fix*]
+* The declarative agent must be functional and must provide accurate responses to the users. To ensure the same, at least one corresponding prompt in one of the following fields must be present for each and every function of the declarative agent: [*Must fix*]
 
   * Sample prompts or conversation starters
   * Instructions field in manifest
