@@ -9,6 +9,7 @@ ms.date: 12/02/2025
 <!-- markdownlint-disable MD033 -->
 <!-- markdownlint-disable MD024 -->
 <!-- markdownlint-disable MD001 -->
+<!-- markdownlint-disable MD060 -->
 
 # Tutorials
 
@@ -55,7 +56,7 @@ This step-by-step guide helps you to build an AI chat bot using Agents Toolkit a
 
 The bot capability of a Teams app creates a chatbot or a conversational bot. It communicates with a web service, facilitating the use of its services. The bot can execute simple, automated tasks such as delivering customer service. You can get weather forecast, make reservations, or any other service offered using a conversational bot.
 
-:::image type="content" source="~/assets/images/toolkit-v2/first-bot/your-helloworld-app-bot.png" alt-text="The screenshot shows you the app with three features. Bot is highlighted.":::
+:::image type="content" source="../assets/images/toolkit-v2/first-bot/your-helloworld-app-bot.png" alt-text="The screenshot shows you the app with three features. Bot is highlighted.":::
 
 As you've already prepared for creating these apps, you can set up a new Teams project for creating the AI chat bot app.
 
@@ -65,33 +66,33 @@ If the prerequisites are in place, let's begin!
 
 1. Open **Visual Studio Code**.
 
-1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="~/assets/images/toolkit-v2/toolkit-sidebar-icon.PNG" border="false"::: icon in the Visual Studio Code **Activity Bar**.
+1. Select the Microsoft 365 Agents Toolkit :::image type="icon" source="../assets/images/toolkit-v2/toolkit-sidebar-icon.PNG" border="false"::: icon in the Visual Studio Code **Activity Bar**.
 
 1. Select **Create a New Agent/App**.
 
-    :::image type="content" source="~/assets/images/toolkit-v2/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Agents Toolkit sidebar.":::
+    :::image type="content" source="../assets/images/toolkit-v2/create-project.png" alt-text="The screenshot shows the location of the Create New Project link in the Agents Toolkit sidebar.":::
 
 1. Select **Agents for Teams** > **Azure OpenAI** > enter an input in **Input Azure API service key now**
 
-    :::image type="content" source="~/assets/images/toolkit-v2/first-bot/create-newapp.png" alt-text="Screenshot shows the Agents Toolkit app templates.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-bot/create-newapp.png" alt-text="Screenshot shows the Agents Toolkit app templates.":::
 
 1. Select **Basic Agents for Teams**. If you need a different functionality for your bot, select the required option.
 
-    :::image type="content" source="~/assets/images/toolkit-v2/debug/ai-chat-bot.png" alt-text="Screenshot shows the app feature to add to your new app.":::
+    :::image type="content" source="../assets/images/toolkit-v2/debug/ai-chat-bot.png" alt-text="Screenshot shows the app feature to add to your new app.":::
 
 1. Select the programming language as **JavaScript**.
 
-    :::image type="content" source="~/assets/images/agents-playground/select-language-bot.png" alt-text="Screenshot displays the option to select the programming language.":::
+    :::image type="content" source="../assets/images/agents-playground/select-language-bot.png" alt-text="Screenshot displays the option to select the programming language.":::
 
 1. Select **Default folder**.
 
-    :::image type="content" source="~/assets/images/toolkit-v2/first-bot/select-default-location.png" alt-text="Screenshot displays the selection of default location.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-bot/select-default-location.png" alt-text="Screenshot displays the selection of default location.":::
 
     To change the default location, follow these steps:
 
     1. Select **Browse**.
 
-        :::image type="content" source="~/assets/images/toolkit-v2/first-bot/select-browse.png" alt-text="Screenshot shows the selection of browse location option.":::
+        :::image type="content" source="../assets/images/toolkit-v2/first-bot/select-browse.png" alt-text="Screenshot shows the selection of browse location option.":::
 
     1. Select the location for the project workspace.
     1. Select **Select Folder**.
