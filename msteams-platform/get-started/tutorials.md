@@ -10,6 +10,7 @@ ms.date: 12/02/2025
 <!-- markdownlint-disable MD024 -->
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD060 -->
+<!-- markdownlint-disable MD028 -->
 
 # Tutorials
 
@@ -180,7 +181,7 @@ If the prerequisites are in place, let's begin!
 
 1. Select **Create a New Agent/App** > **Teams App**.
 
-    :::image type="content" source="../assets/images/toolkit-v2/first-bot/create-project.png" alt-text="The screenshot shows the location of the Create New Project link in the Agents Toolkit sidebar.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-bot/create-project.png" alt-text="This screenshot shows the location of the Create New Project link in the Agents Toolkit sidebar.":::
 
 1. Select **Bot** to create a new bot project.
 
@@ -968,7 +969,7 @@ If you don't have a Teams developer account, join the Microsoft 365 developer pr
 1. In the welcome screen, select **Set up E5 subscription**.
 1. Set up your administrator account. After you finish, the following screen appears:
 
-   :::image type="content" source="../assets/images/include-files/microsoft-365.png" alt-text="The screenshot displays the Microsoft 365 Developer Program.":::
+   :::image type="content" source="../assets/images/include-files/microsoft-365.png" alt-text="This screenshot displays the Microsoft 365 Developer Program.":::
 
 1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
 
