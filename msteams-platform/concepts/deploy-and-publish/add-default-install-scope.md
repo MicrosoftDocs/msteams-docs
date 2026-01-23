@@ -8,11 +8,11 @@ ms.date: 03/05/2025
 ---
 # Configure default options for Teams app
 
-It’s common for an app to support multiple scenarios in Microsoft Teams, but you might have designed it with a specific scope and capability in mind. Teams UI helps users to identify the default scope to install your app.
+It’s common for an app to support multiple scenarios in Microsoft Teams, but you might have designed it with a specific scope and capability in mind. Teams UI helps users identify the default scope to install your app.
 
 When a user installs an app from Microsoft Teams Store or uploads a custom app, the user has the option to open the app in either personal or shared scope:
 
-* Personal scope: If an app supports personal scope, the **Open** option in the scope selection dialog allows to open the app in personal scope.
+* Personal scope: If an app supports personal scope, the **Open** option in the scope selection dialog allows opening the app in personal scope.
 
 * Shared scope: If an app supports shared scopes, all the supported scopes such as channel, chat, and meeting are listed to select the required scope. If your app is configured with a default install scope, a **Recommended** label appears adjacent to the respective scope.
 
@@ -84,7 +84,7 @@ If an app is configured with personal and shared scopes along with a default ins
 
     > [!NOTE]
     >
-    > * The **Recommended** button indicates the scope in which the app provides best usage experience.
+    > * The **Recommended** button indicates the scope in which the app provides the best usage experience.
     > * The **View more** option lists the respective channel, chat, or meeting options available for the user.
     > * When adding an app to a meeting, upcoming scheduled meetings might not appear. To add an app to an upcoming meeting, see [tabs in Teams meetings](../../apps-in-teams-meetings/build-tabs-for-meeting.md#tabs-in-teams-meetings).
 
@@ -116,7 +116,7 @@ If an app is configured with shared scopes along with a default install scope, h
 
 ## Configure the default capability for shared scopes
 
-Configure the default capability when your app is installed for a team, meeting, or groupchat. For more information, see [app manifest](/microsoft-365/extensibility/schema/root#defaultgroupcapability).
+Configure the default capability when your app is installed for a team, meeting, or group chat. For more information, see [app manifest](/microsoft-365/extensibility/schema/root#defaultgroupcapability).
 
 > [!NOTE]
 > `defaultGroupCapability` provides the default capability that's added to the team, group chat, or meeting. Select a tab, bot, or connector as the default capability for your app, but you must ensure that you have provided the selected capability in your app definition.
@@ -277,7 +277,7 @@ The following code snippet is an example for setting tab as the default landing 
 1. Open your app manifest.
 1. Under `staticTabs` property, add the tab properties as the first entry of the array. To define tab properties, see [app manifest](/microsoft-365/extensibility/schema/root-static-tabs).
 
-The following code snippet is an example for setting tab as the default landing capability  for mobile:
+The following code snippet is an example for setting tab as the default landing capability for mobile:
 
 ```json
  "staticTabs":[
