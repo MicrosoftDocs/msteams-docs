@@ -30,7 +30,7 @@ Once registered in the Microsoft 365 app manifest, your MCP server can be discov
 
 Before you begin, ensure you have:
 
-- A test tenant [enabled with Teams public preview](/microsoftteams/public-preview-doc-updates) features (for testing your MCP integration with Teams Channel Agent)
+- A test tenant (for testing your MCP integration with Teams Channel Agent)
 - A working MCP server with a secure public endpoint
 - Authentication credentials (OAuth configuration or API key)
 
@@ -46,8 +46,8 @@ First, declare your MCP server in the [agentConnectors](/microsoft-365/extensibi
 
 ````json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
-  "manifestVersion": "devPreview",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.25/MicrosoftTeams.schema.json",
+  "manifestVersion": "v1.25",
   ...
     "agentConnectors": [
       {
@@ -185,8 +185,8 @@ The following example shows a complete agent connector configuration:
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
-  "manifestVersion": "devPreview",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.25/MicrosoftTeams.schema.json",
+  "manifestVersion": "v1.25",
   ...
   "agentConnectors": [
     {
