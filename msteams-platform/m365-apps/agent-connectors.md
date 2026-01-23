@@ -232,7 +232,7 @@ Before deploying your agent, verify that your manifest and MCP server are correc
    - Confirm tokens or keys are correctly retrieved
    - Test token refresh if using OAuth
 
-5. Ensure your [endpoint supports TLS 1.2](/azure/active-directory-b2c/https-cipher-tls-requirements) or higher.
+5. Ensure your [endpoint supports TLS 1.2](/azure/active-directory-b2c/https-cipher-tls-requirements#check-your-endpoint-compatibility) or higher.
 
 6. Verify error messages and retry semantics for failed tool calls.
 
