@@ -1,4 +1,5 @@
 ---
+
 title: Configure & Customize Bot Settings
 author: surbhigupta
 description: Learn to set up and reconfigure bot settings directly within the channel or group chat post-installation. Code sample (.NET, Node.js).
@@ -7,6 +8,7 @@ ms.author: surbhigupta
 ms.owner: angovil
 ms.localizationpriority: high
 ms.date: 12/11/2024
+
 ---
 
 # Bot configuration experience
@@ -15,8 +17,8 @@ Bot configuration experience allows users to set up and reconfigure their bots' 
 
 With the bot configuration experience, you can ensure the bot's ongoing relevance and value as users can:
 
-* Tailor the bot to their specific workflows and preferences during installation.
-* Reconfigure settings to adapt to changing requirements post installation.
+- Tailor the bot to their specific workflows and preferences during installation.
+- Reconfigure settings to adapt to changing requirements post installation.
 
 For example, a bot that tracks and shares news topics or monitors GitHub repositories can initially be set up to match user workflows. Later, it can be easily reconfigured to respond to new topics or repositories directly from the group chat, streamlining content management and interaction without leaving the Teams environment. This flexible configuration experience significantly enhances user experience and productivity by integrating bots seamlessly into daily operations.
 
@@ -43,7 +45,7 @@ To build the bot configuration experience, follow these steps:
 
 1. [Update app manifest](#update-app-manifest)
 
-1. [Configure your bot](#configure-your-bot)
+2. [Configure your bot](#configure-your-bot)
 
 ### Update app manifest
 
@@ -83,9 +85,9 @@ When a user installs the bot in channel or group chat, the `fetchTask` property 
 
 If you set the `fetchTask` property in the app manifest to:
 
-* **false**: The bot doesn't fetch a dialog or an Adaptive Card. Instead, the bot must provide a static dialog or card that is used when the bot is invoked. For more information, see [dialogs](../../task-modules-and-cards/what-are-task-modules.md).
+- **false**: The bot doesn't fetch a dialog or an Adaptive Card. Instead, the bot must provide a static dialog or card that is used when the bot is invoked. For more information, see [dialogs](../../task-modules-and-cards/what-are-task-modules.md).
 
-* **true**: The bot initiates either `config/fetch` or `config/submit` as defined. When the bot is invoked, you can return an Adaptive Card or a dialog depending on the context provided in [channelData and userdata](../../messaging-extensions/how-to/action-commands/create-task-module.md#payload-activity-properties-when-a-dialog-is-invoked-from-a-group-chat).
+- **true**: The bot initiates either `config/fetch` or `config/submit` as defined. When the bot is invoked, you can return an Adaptive Card or a dialog depending on the context provided in [channelData and userdata](../../messaging-extensions/how-to/action-commands/create-task-module.md#payload-activity-properties-when-a-dialog-is-invoked-from-a-group-chat).
 
 The following table lists the response type associated with the invoke requests:
 
@@ -94,7 +96,7 @@ The following table lists the response type associated with the invoke requests:
 | `config/fetch` | `Type: "continue"` or `Type = "auth"` |
 | `config/submit` | `Type: "continue"` or `Type: "message"` |
 
-* `type: "continue"`: `type: "continue"` is used to define a continuation of a dialog or Adaptive Card within a bot configuration. When the type is set to `continue`, it indicates that the bot is expecting further interaction from the user to continue with the configuration process.
+- `type: "continue"`: `type: "continue"` is used to define a continuation of a dialog or Adaptive Card within a bot configuration. When the type is set to `continue`, it indicates that the bot is expecting further interaction from the user to continue with the configuration process.
 
    The `adaptiveCardForContinue` is a custom function that returns the JSON for an Adaptive Card to be used in different stages of a bot’s workflow. These functions are used to return Adaptive Cards for different scenarios based on the user’s interaction with the bot.
 
@@ -137,7 +139,7 @@ The following table lists the response type associated with the invoke requests:
 
 ---
 
-* `type: "auth"`: You can also request the user to authenticate as a response to `config/fetch` request. The `type: "auth"` configuration prompts the user to sign in through a specified URL, which must be linked to a valid authentication page that can be opened in a browser. Authentication is essential for scenarios where the bot requires the user to be authenticated. It ensures that the user’s identity is verified, maintaining security, and personalized experiences within the bot’s functionality.
+- `type: "auth"`: You can also request the user to authenticate as a response to `config/fetch` request. The `type: "auth"` configuration prompts the user to sign in through a specified URL, which must be linked to a valid authentication page that can be opened in a browser. Authentication is essential for scenarios where the bot requires the user to be authenticated. It ensures that the user’s identity is verified, maintaining security, and personalized experiences within the bot’s functionality.
 
    > [!NOTE]
    > For `type: "auth"` only third party authentication is supported. Single sign-on (SSO) isn't supported. For more information on third party authentication, see [add authentication.](../../messaging-extensions/how-to/add-authentication.md)
@@ -190,7 +192,7 @@ The following table lists the response type associated with the invoke requests:
 
 ---
 
-* `type="message"`: When the type is set to message, it indicates that the bot is sending a simple message back to the user, indicating the end of the interaction or providing information without requiring further input.
+- `type="message"`: When the type is set to message, it indicates that the bot is sending a simple message back to the user, indicating the end of the interaction or providing information without requiring further input.
 
   # [C#](#tab/teams-bot-sdk3)
 
@@ -232,11 +234,11 @@ The following table lists the response type associated with the invoke requests:
 
 When a user reconfigures the bot, the `fetchTask` property in the app manifest file initiates `config/fetch` in the bot logic. The user can reconfigure the bot settings post-installation in two ways:
 
-* @mention the bot in the message compose area. Select the **Settings** option that appears above the message compose area. A dialog appears, update, or changes the bot's configuration settings in the dialog.
+- @mention the bot in the message compose area. Select the **Settings** option that appears above the message compose area. A dialog appears, update, or changes the bot's configuration settings in the dialog.
 
    :::image type="content" source="../../assets/images/bots/reconfiguration-mention-bot.gif" alt-text="Screenshot shows the configuration option for the bot in the message compose area.":::
 
-* Hover over the bot, the bot profile card appears. To update or change the bot's configuration settings, select the settings icon in the bot profile card.
+- Hover over the bot, the bot profile card appears. To update or change the bot's configuration settings, select the settings icon in the bot profile card.
 
    :::image type="content" source="../../assets/images/bots/reconfiguration-hover.gif" alt-text="Screenshot shows the configuration option for the bot in a Teams group chat.":::
 
@@ -245,11 +247,11 @@ When a user reconfigures the bot, the `fetchTask` property in the app manifest f
 
 ## Best practices
 
-* If you want to have an individual channel-level configuration of your bot, ensure that you track the configuration as per the channel. Configuration data isn't stored and the invoke payload includes the sufficient [channelData](../../messaging-extensions/how-to/action-commands/create-task-module.md#payload-activity-properties-when-a-dialog-is-invoked-from-a-group-chat).
+- If you want to have an individual channel-level configuration of your bot, ensure that you track the configuration as per the channel. Configuration data isn't stored and the invoke payload includes the sufficient [channelData](../../messaging-extensions/how-to/action-commands/create-task-module.md#payload-activity-properties-when-a-dialog-is-invoked-from-a-group-chat).
 
-* Provide a clear and user-friendly dialog that prompts the user to enter the required information for the bot to operate properly, such as a URL, an area path, or a dashboard link.
+- Provide a clear and user-friendly dialog that prompts the user to enter the required information for the bot to operate properly, such as a URL, an area path, or a dashboard link.
 
-* Avoid sending multiple notifications or requests for configuration after the installation, as it might confuse the users.
+- Avoid sending multiple notifications or requests for configuration after the installation, as it might confuse the users.
 
 ## Code sample
 
@@ -260,5 +262,5 @@ When a user reconfigures the bot, the `fetchTask` property in the app manifest f
 
 ## See also
 
-* [Build bots for Teams](../what-are-bots.md)
-* [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
+- [Build bots for Teams](../what-are-bots.md)
+- [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
