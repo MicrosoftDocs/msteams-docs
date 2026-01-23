@@ -38,7 +38,7 @@ Teams platform features that are available to all app developers.</br>
 
 **2026 January**
 
-* ***January 27, 2025***: [You can now register MCP servers as agent connectors for Microsoft 365](m365-apps/agent-connectors.md)
+* ***January 27, 2026***: [You can now register MCP servers as agent connectors for Microsoft 365](m365-apps/agent-connectors.md)
 
 :::column-end:::
 :::row-end:::
