@@ -85,7 +85,9 @@ Define how Microsoft 365 connects to your MCP server by using the `remoteMcpServ
 
 2. Ensure your endpoint uses HTTPS (for HTTP connections) or WSS (for WebSocket connections).
 
-The endpoint must be publicly accessible and respond to MCP protocol handshake messages, as Microsoft 365 agents establish long-lived connections to this endpoint.
+> [!NOTE]
+>
+> The endpoint must be publicly accessible and respond to MCP protocol handshake messages, as Microsoft 365 agents establish long-lived connections to this endpoint.
 
 ## Configure authentication
 
@@ -230,7 +232,7 @@ Before deploying your agent, verify that your manifest and MCP server are correc
    - Confirm tokens or keys are correctly retrieved
    - Test token refresh if using OAuth
 
-5. Ensure your endpoint supports TLS 1.2 or higher.
+5. Ensure your [endpoint supports TLS 1.2](/azure/active-directory-b2c/https-cipher-tls-requirements) or higher.
 
 6. Verify error messages and retry semantics for failed tool calls.
 
