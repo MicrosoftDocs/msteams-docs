@@ -1,5 +1,5 @@
 ---
-title: Upload your custom app
+title: Upload Your Custom App
 description: Learn how to upload your custom app in Microsoft Teams. Custom app upload is common when testing and debugging an app during development.
 ms.topic: how-to
 author: surbhigupta
@@ -8,31 +8,31 @@ ms.localizationpriority: high
 ms.date: 01/23/2025
 ---
 
-# Upload your app in Teams
+# Upload Your App in Teams
 
-You can upload Microsoft Teams apps without having to publish to your organization or the Microsoft Teams Store in the following scenarios:
+You can upload Microsoft Teams apps without needing to publish them to your organization or the Microsoft Teams Store in the following scenarios:
 
-* You want to test and debug an app locally yourself or with other developers.
-* You built an app for yourself to automate a workflow.
-* You built an app for a small set of users, such as, your work group.
+* You want to test and debug an app locally, either by yourself or with other developers.
+* You built an app for personal use to automate a workflow.
+* You developed an app for a small group of users, such as your work team.
 
 > [!IMPORTANT]
 >
-> * Custom app upload is possible only in Government Community Cloud (GCC) and isn't possible in GCC High, Department of Defense (DoD), and Teams operated by 21Vianet.
-> * App upload and installation are supported in Teams for desktop and web (availability depends on your organization’s app setup policies and cloud environment)
-> * We recommend you to avoid multiple uploads of your message extension app to Teams, as it results in multiple instances of the message extension.
+> * Custom app upload is possible only in Government Community Cloud (GCC) and isn't available in GCC High, Department of Defense (DoD), and Teams operated by 21Vianet.
+> * App upload and installation are supported in Teams for desktop and web (availability depends on your organization’s app setup policies and cloud environment).
+> * We recommend avoiding multiple uploads of your message extension app to Teams, as it results in multiple instances of the message extension.
 
-Users can't chat with bots that aren't connected to a Microsoft Teams app such as Azure bots created through the Bot Framework or Power Virtual Agents. We recommend you to create a new Teams app connected to the Azure Bot using the [Developer Portal](../build-and-test/manage-your-apps-in-developer-portal.md#configure), publish it to Teams, and allow users to install the app using the [app permission policies](/microsoftteams/teams-app-permission-policies#edit-an-app-permission-policy).
+Users can't chat with bots that aren't connected to a Microsoft Teams app, such as Azure bots created through the Bot Framework or Power Virtual Agents. We recommend creating a new Teams app connected to the Azure Bot using the [Developer Portal](../build-and-test/manage-your-apps-in-developer-portal.md#configure), publishing it to Teams, and allowing users to install the app using the [app permission policies](/microsoftteams/teams-app-permission-policies#edit-an-app-permission-policy).
 
-If you want to test the app, you can assign users an [app setup policy](/microsoftteams/teams-app-setup-policies#manage-app-setup-policies) that allows uploading custom apps and chat with the Azure bot through a direct link to a chat.
+If you want to test the app, you can assign users an [app setup policy](/microsoftteams/teams-app-setup-policies#manage-app-setup-policies) that allows uploading custom apps and chatting with the Azure bot through a direct link to a chat.
 
 ## Prerequisites
 
-* Ensure to create your [app package](~/concepts/build-and-test/apps-package.md), import it and [validate it](https://dev.teams.microsoft.com/tools/store-validation) for errors.
+* Ensure you create your [app package](~/concepts/build-and-test/apps-package.md), import it, and [validate it](https://dev.teams.microsoft.com/tools/store-validation) for errors.
 * [Enable custom app uploading](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-configure-custom-app-upload-settings) in Teams.
-* Ensure that your app is running and accessible using HTTPs.
+* Ensure your app is running and accessible using HTTPS.
 
-## Upload your app
+## Upload Your App
 
 You can upload your app to a team, chat, meeting, or for personal use depending on how you configured your app's scope.
 
@@ -62,19 +62,19 @@ You can upload your app to a team, chat, meeting, or for personal use depending 
 
 ## Troubleshoot
 
-If your app fails to upload or encounters any issues to upload, check the following options:
+If your app fails to upload or encounters any issues during upload, check the following options:
 
-1. Ensure that you follow all the instructions for [creating your app package](../../concepts/build-and-test/apps-package.md).
+1. Ensure you follow all the instructions for [creating your app package](../../concepts/build-and-test/apps-package.md).
 1. Upload your app package and then [validate it](https://dev.teams.microsoft.com/tools/store-validation).
-1. Ensure your app manifest matches with the latest [schema](/microsoft-365/extensibility/schema).
+1. Ensure your app manifest matches the latest [schema](/microsoft-365/extensibility/schema).
 
-## Manage your apps
+## Manage Your Apps
 
-Manage your apps allows users to have a dedicated place to manage, update and remove their apps, permissions, and subscriptions on the Teams client. The users can install the apps from **Manage your apps**.
+Manage your apps allows users to have a dedicated place to manage, update, and remove their apps, permissions, and subscriptions on the Teams client. Users can install apps from **Manage your apps**.
 
-### Access your app
+### Access Your App
 
-To access apps through **Manage your apps**, follow the steps:
+To access apps through **Manage your apps**, follow these steps:
 
 1. Go to **Apps** and select **Manage your apps** in Teams to view the installed apps across all your channels or for personal use in a list format.
 
@@ -84,14 +84,14 @@ To access apps through **Manage your apps**, follow the steps:
 
     :::image type="content" source="~/assets/images/publish-app/app-scopes.png" alt-text="Screenshot shows the list of scopes where the app is installed.":::
 
-1. Select the scope of app to go to the app in the channel or personal view. The list of scopes consists of personal scope and teams scope only. Apps installed in group chat scope aren't displayed in this view.
+1. Select the scope of the app to go to the app in the channel or personal view. The list of scopes consists of personal scope and teams scope only. Apps installed in group chat scope aren't displayed in this view.
 
 Teams provides several ways to open apps. For more information, see [access your apps in Teams](https://support.microsoft.com/office/access-your-apps-in-teams-0758cb09-9e85-40e7-a974-51df7734646a).
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Access+your+app&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fdeploy-and-publish%2Fapps-upload%23access-your-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fconcepts%2Fdeploy-and-publish%2Fapps-upload.md&documentVersionIndependentId=5f89865b-a9fd-ada5-72d2-6375357bba8c&platformId=0e3954be-8892-442b-b769-b6284670b9db&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
-### Update your app
+### Update Your App
 
 You don't have to upload your custom app again if you make code changes (these are reflected in Teams in real-time). However, you must reinstall if you change any app configurations. For more information, see [Role of an admin in upgrading Teams apps](/MicrosoftTeams/apps-update-experience).
 
@@ -119,9 +119,9 @@ If an update is available for your app, follow these steps to update your app fr
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Update+your+app&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fdeploy-and-publish%2Fapps-upload%23update-your-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fconcepts%2Fdeploy-and-publish%2Fapps-upload.md&documentVersionIndependentId=5f89865b-a9fd-ada5-72d2-6375357bba8c&platformId=0e3954be-8892-442b-b769-b6284670b9db&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
-### Remove your app
+### Remove Your App
 
-To remove app from Teams, follow the steps:
+To remove an app from Teams, follow these steps:
 
 1. Find the app in **Manage your apps**.
 
@@ -136,17 +136,17 @@ To remove app from Teams, follow the steps:
 > [!NOTE]
 >
 > * You can't remove personal bot activity entirely. If you remove the app and add it again, new communication with the bot appends to the previous conversation with it.
-> * You can't migrate your custom app to the Teams Store. If you want to list your app to the Teams Store, see [how to publish your app to the Teams Store](appsource/publish.md).
+> * You can't migrate your custom app to the Teams Store. If you want to list your app in the Teams Store, see [how to publish your app to the Teams Store](appsource/publish.md).
 
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Remove+your+app&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fdeploy-and-publish%2Fapps-upload%23remove-your-app&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fconcepts%2Fdeploy-and-publish%2Fapps-upload.md&documentVersionIndependentId=5f89865b-a9fd-ada5-72d2-6375357bba8c&platformId=0e3954be-8892-442b-b769-b6284670b9db&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
-## Next step
+## Next Step
 
 > [!div class="nextstepaction"]
 >[Create apps for Teams meetings](../../apps-in-teams-meetings/teams-apps-in-meetings.md)
 
-## See also
+## See Also
 
 * [Configure default install options](~/concepts/deploy-and-publish/add-default-install-scope.md)
 * [Maintain your published Microsoft Teams app](~/concepts/deploy-and-publish/appsource/post-publish/overview.md)
