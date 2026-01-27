@@ -38,7 +38,7 @@ Teams platform features that are available to all app developers.</br>
 
 **2026 January**
 
-* ***January 27, 2026***: [Support for apps in Shared channels is now generally available.](\build-apps-for-shared-private-channels.md)
+* ***January 27, 2026***: [Support for apps in Shared channels is now generally available.](\build-apps-for-shared-private-channels)
 
 **2025 November**
 
@@ -56,11 +56,22 @@ Teams platform features that are available to all app developers.</br>
 
 <details>
 
+<summary><b>2026</b></summary>
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ----------------|
+| 27/1/2026 | Support for apps in shared channels is now generally available. | [Apps for shared and private channels](build-apps-for-shared-private-channels) |
+
+<br/>
+
+</br>
+
+<details>
+
 <summary><b>2025</b></summary>
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-|27/12/2026 | Support for apps in Shared channels is now generally available. | [Apps for shared and private channels](\build-apps-for-shared-private-channels.md)
 |06/11/2025 | Teams AI library v2 has been renamed to *Teams SDK*. | [Teams SDK](/microsoftteams/platform/teams-ai-library/)
 |15/10/2025 | The Microsoft Teams JavaScript client library (TeamsJS) supports app suspension for Teams apps extended to run across other Microsoft 365 applications. | Build tabs > Tab features > [App suspension for your tab app](tabs/how-to/app-caching.md)
 | 18/09/2025 | Teams AI library is now generally available for JavaScript and C#. It provides a simplified SDK, support for Model Context Protocol (MCP), Agent-to-Agent communication (A2A), and streamlined tools to enable developers to build intelligent agents for Teams | [Overview of Teams AI Library](/microsoftteams/platform/teams-ai-library/welcome) |
