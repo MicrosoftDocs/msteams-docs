@@ -13,7 +13,7 @@ ms.date: 01/20/2026
 > [!NOTE]
 >
 > * Support for apps in **Shared channels** is now generally available.  
-> * Support for apps in **Private channels** begins rolling out in **Developer Preview** this week.
+> * Support for apps in **Private channels** in **Public Developer Preview** is coming soon!
 
 Shared and private channels in Microsoft Teams enable flexible collaboration within teams and across organizations. Currently, bot and tab apps are supported in shared and private channels. By using this update, you can experience multiple benefits:
 
