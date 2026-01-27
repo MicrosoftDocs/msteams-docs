@@ -36,10 +36,6 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.</br>
 
-**2026 January**
-
-* ***January 27, 2026***: [Support for apps in Shared channels is now generally available.](build-apps-for-shared-private-channels.md)
-
 **2025 November**
 
 * ***November 21, 2025***: [Use the Performance Report tool to evaluate the efficiency of your web and tab apps on mobile.](resources/teams-mobile-best-practices.md#calculate-performance-metrics-for-apps)
@@ -50,18 +46,6 @@ Teams platform features that are available to all app developers.</br>
 
 :::column-end:::
 :::row-end:::
-<br/>
-
-</br>
-
-<details>
-
-<summary><b>2026</b></summary>
-
-| **Date** | **Update** | **Find here** |
-| -------- | --------- | ----------------|
-| 27/1/2026 | Support for apps in shared channels is now generally available. | [Apps for shared and private channels](build-apps-for-shared-private-channels.md)
-
 <br/>
 
 </br>
