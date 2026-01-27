@@ -580,7 +580,7 @@ Perform the following steps to validate the private channel support:
 Testing across these scenarios helps you spot any problems with functionality, permissions, and user experience.
 
 > [!NOTE]  
-> **Private channel** isn't yet available in Developer preview and will be available soon.
+> Support for apps in **Private channel** is available in public developer preview.
 
 ## Best practices for supporting all channels
 
