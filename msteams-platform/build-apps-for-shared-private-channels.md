@@ -50,7 +50,7 @@ Here's an outline of the different channels and their capabilities across variou
 
 > [!IMPORTANT]
 >
-> Teams channel types continue to evolve, and new scenarios might be introduced over time. To help ensure long‑term compatibility, avoid creating app logic that relies on specific values of the `membershipType` or `channelType` properties returned by Microsoft Graph.
+> Teams channel types continue to evolve, and new scenarios might be introduced over time. To help ensure long‑term compatibility, avoid creating app logic that relies on specific values of the `membershipType` or `channelType` properties returned by Microsoft Graph or Agents SDK.
 
 > [!NOTE]
 >
@@ -192,7 +192,7 @@ By using this subscription, apps can monitor membership changes in channels and 
 
 Your bot receives the `conversationUpdate` event when it gets notifications about membership updates for teams where it's added. To get both direct and indirect member update notifications, set up your bot with the following prerequisites:
 
-1. Update the app manifest. Add `supportsChannelFeatures`: `tier1` to declare app readiness.
+1. Update the app manifest to v1.25. Add `supportsChannelFeatures`: `tier1` to declare app readiness.
 
 1. Request Resource-Specific Consent (RSC) permission
 
