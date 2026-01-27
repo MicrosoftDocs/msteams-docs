@@ -79,10 +79,10 @@ Here's a list of SDKs and tools that you can use to build app capabilities:
 In this section, learn how to build a Teams app with different capabilities, such as bot, tab, and message extension. Select the type of Teams app that you want to build:
 
 - [Build a Teams bot app](build-notification-bot.md)
-- [Build a basic Teams tab app](build-basic-tab-app.md)
-- [Build message extension Teams app](build-message-extension.md)
+- [Build a Teams tab app](build-basic-tab-app.md)
+- [Build a Teams message extension app](build-message-extension.md)
 
-After you build the basic app capabilities, explore [Tutorials](tutorials.md) and [code samples](tool-options-and-code-samples.md).
+After you build the basic app capabilities, explore [tutorials](tutorials.md) and [code samples](tool-options-and-code-samples.md).
 
 Get started with building apps for Microsoft Teams and beyond!
 
