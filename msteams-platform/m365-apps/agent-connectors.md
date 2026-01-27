@@ -4,18 +4,18 @@ description: Register your MCP server in the Microsoft 365 app manifest to enabl
 #customer intent: As a developer, I want to register my MCP server as an agent connector so that Microsoft 365 agents can access my external tools and services.
 author: erikadoyle
 ms.author: edoyle
-ms.date: 12/15/2025
+ms.date: 01/27/2026
 ms.topic: how-to
 ms.subservice: m365apps
 ---
 
-# Register MCP servers as agent connectors for Microsoft 365 (preview)
+# Register MCP servers as agent connectors for Microsoft 365
 
 Agents in Microsoft 365, such as [Channel Agent](/microsoftteams/set-up-channel-agent-teams) in Microsoft Teams, can connect to external systems through *agent connectors* declared in the app manifest. This article shows you how to register your remote Model Context Protocol (MCP) server in the Microsoft 365 app manifest, enabling Microsoft 365 agents to securely discover, select, and invoke MCP tools that your server exposes.
 
 > [!NOTE]
 >
-> Agent Connectors are available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+> Support for registering MCP servers as agent connectors is now generally available.
 
 Microsoft 365 agents use agent connectors to communicate with external systems. For MCP servers, the connector provides:
 
@@ -30,7 +30,7 @@ Once registered, your MCP server becomes available to any Microsoft 365 agent ca
 
 Before you begin, ensure you have:
 
-- A test tenant [enabled with Teams public preview](/microsoftteams/public-preview-doc-updates) features (for testing your MCP integration with Teams Channel Agent)
+- A test tenant (for testing your MCP integration with Teams Channel Agent)
 - A working MCP server with a secure public endpoint
 - Authentication credentials (OAuth configuration or API key)
 
@@ -42,12 +42,12 @@ First, declare your MCP server in the [agentConnectors](/microsoft-365/extensibi
 
 2. Locate or create the root-level `agentConnectors` array.
 
-3. Add a new connector object with a unique `id`, display name, and description:
+3. Add a new connector object with a unique `id`, `display name`, and `description`:
 
 ````json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
-  "manifestVersion": "devPreview",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.25/MicrosoftTeams.schema.json",
+  "manifestVersion": "v1.25",
   ...
     "agentConnectors": [
       {
@@ -67,7 +67,7 @@ First, declare your MCP server in the [agentConnectors](/microsoft-365/extensibi
 
 Each connector must have a unique `id` that distinguishes it from other connectors in your manifest. The `toolSource` object must include exactly one of `remoteMcpServer`, `localMcpServer`, or `plugin`.
 
-For MCP servers, use **remoteMcpServer** unless your server runs locally within the Teams client environment (advanced scenarios).
+For MCP servers, use `remoteMcpServer` unless your server runs locally within the Teams client environment (advanced scenarios).
 
 ## Configure the remote MCP server endpoint
 
@@ -75,13 +75,13 @@ Define how Microsoft 365 connects to your MCP server using the `remoteMcpServer`
 
 1. Within your connector's [toolSource](/microsoft-365/extensibility/schema/root-agent-connectors-tool-source?view=m365-app-prev&preserve-view=true), specify the `remoteMcpServer` endpoint:
 
-````json
-"toolSource": {
-  "remoteMcpServer": {
-    "endpoint": "https://mcp.mycompany.com"
-  }
-}
-````
+    ````json
+    "toolSource": {
+      "remoteMcpServer": {
+        "endpoint": "https://mcp.mycompany.com"
+      }
+    }
+    ````
 
 2. Ensure your endpoint uses HTTPS (for HTTP connections) or WSS (for WebSocket connections).
 
@@ -183,8 +183,8 @@ The following is an example of a complete agent connector configuration:
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
-  "manifestVersion": "devPreview",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.25/MicrosoftTeams.schema.json",
+  "manifestVersion": "v1.25",
   ...
   "agentConnectors": [
     {
