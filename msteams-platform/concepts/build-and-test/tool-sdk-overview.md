@@ -1,7 +1,7 @@
 ---
 title: Tools and SDKs to Build Teams App
 author: v-sdhakshina
-description: Learn more about the tools such as Microsoft 365 Agents Toolkit, Agents Toolkit CLI, Developer Portal, and Teams SDK available for building your Teams app.
+description: Learn more about the tools such as Microsoft 365 Apps Toolkit, Apps Toolkit CLI, Developer Portal, and Teams SDK available for building your Teams app.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
@@ -14,41 +14,8 @@ ms.date: 08/26/2025
 
 Build and develop your Microsoft Teams app using tools, SDKs, and libraries. Now, Microsoft provides a comprehensive platform to create, develop, test, debug, and publish your Teams app seamlessly, making the entire process efficient and streamlined. Teams offers the following platform:
 
-* [Tools](#tools)
 * [SDKs and libraries](#sdks-and-libraries)
-
-## Tools
-
-Teams platform brings you different tools to build and develop your Teams apps. The following tools are available to build your app:
-
-| Tools | Why do you need? | Environment | Test and debug |
-| -------- | ------------- | ----------------- | ---------------------- |
-| [Microsoft 365 Agents Toolkit (previously known as Teams Toolkit)](../../toolkit/agents-toolkit-fundamentals.md) | Agents Toolkit makes it simple to get started with app development for Teams. You can begin with a project template for common custom app built for your org (LOB app) scenarios or start from a sample. Save time on setup through automated app registration and configuration using Visual Studio Code and Visual Studio. | **Visual Studio Code**: JavaScript and TypeScript </br> **Visual Studio**: .NET and Blazor | In Visual Studio Code and Visual Studio |
-| [Microsoft 365 Agents Toolkit CLI](../../toolkit/Teams-Toolkit-CLI.md) (previously known as Teams Toolkit CLI) | Agents Toolkit CLI is a text-based command line interface (CLI) that accelerates Teams application development. It aims to provide keyboard centric experience when building Teams applications. | JavaScript and .NET | Use command prompt |
-| [Developer Portal for Teams](teams-developer-portal.md) | Developer Portal for Teams is the primary tool for configuring, distributing, and managing your Teams apps. With Developer Portal, you can create a basic app manifest (previously known as Teams app manifest) and publish the app to Teams.  | Supports all languages | Developer Portal for Teams |
-
-</br>
-
-<details>
-<summary><b>More information on building Teams app with Agents Toolkit.</b></summary>
-
-| &nbsp; | Agents Toolkit |
-| -------- | ------------- |
-| Environment variables | Use `.env` file |
-| Generate manifest | Agents Toolkit autogenerates when creating projects. |
-| Deploy Teams app | Automatically update use command `Microsoft 365 Agents: Update Teams App` |
-| Create Microsoft Entra app | Automatically create when debugging or provisioning the project. Users can also use their existing Microsoft Entra app by filling in Teams app ID in `.env` file. |
-| Add SSO | Provide SSO-enabled samples and how-to guides to add SSO. |
-| Bot or Message extension Registration | Automatically create when debugging or provisioning the project. User can also specify their own Bot ID. |
-| Expose Node.js app | Tab: localhost + HTTPS and Others: Dev Tunnel |
-| Run Node.js app | npm run atk:dev |
-| One-click debug | F5 or debug in Visual Studio Code and Visual Studio |
-
-</details>
-
-### Workflow for Teams
-
-You can create workflows in Teams by integrating AI. You can manage and use workflows in Teams chats, and include practical workflow ideas like sending weekly reminders or triggering actions via emojis. For more information, see [Add or run a workflow in Microsoft Teams](https://support.microsoft.com/en-us/office/add-or-run-a-workflow-in-chats-chat-messages-channels-and-channel-posts-in-microsoft-teams-242eb8f2-f328-45be-b81f-9817b51a5f0e).
+* [Tools](#tools)
 
 ## SDKs and libraries
 
@@ -70,6 +37,7 @@ The following flow diagram explains the different SDKs, libraries, and its relat
 
 | SDKs and libraries | Why do you need? | Related SDKs and libraries |
 | ----------------- | -------------- | ----------------------- |
+| [Teams SDK](../../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md) | Teams SDK is a Teams-centric interface to GPT-based common language models and user intent engines. This reduces the requirement for you to handle on complex and expensive tasks of writing and maintaining conversational bot logic to integrate with Large Language Models (LLMs). | Depends on **Bot Framework SDK**. </br> Based on **Azure OpenAI**. |
 | [TeamsFx SDK](~/toolkit/teamsfx-sdk.md) | TeamsFx simplifies your tasks by using Teams single sign-on (SSO) and accessing cloud resources into single-line statements with zero configuration. | Depends on **Bot Framework SDK**, **Teams JavaScript client library**, and **Microsoft Graph SDK**. </br> You can use it with **Teams SDK** and **Adaptive Cards**. |
 | [Teams JavaScript client library](~/tabs/how-to/using-teams-client-library.md) | The Teams JavaScript client library (TeamsJS) enables you to create hosted experiences within Teams, Microsoft 365 app, and Outlook. These experiences involve hosting your app content in an iFrame. | You can pass the reference to **SharePoint Framework (SPFx)**. </br> You can use it with **Microsoft Graph SDK**, **Adaptive Cards**, and **Fluent UI React components**. |
 | [SharePoint Framework (SPFx)](/sharepoint/dev/spfx/sharepoint-framework-overview) | The SharePoint Framework (SPFx) offers a page and web part model that fully supports client-side SharePoint development, seamlessly integrates with SharePoint data, and extends Microsoft Teams and Microsoft Viva. | You can use it with **Microsoft Graph SDK**, **Adaptive Cards**, and **Fluent UI React components**. </br> Based on **SharePoint REST API**. |
@@ -81,7 +49,6 @@ The following flow diagram explains the different SDKs, libraries, and its relat
 | ----------------- | -------------- | ----------------------- |
 | [Bot Framework SDK](/azure/bot-service/bot-service-overview) | Microsoft Bot Framework and Azure AI Bot Service are a collection of libraries, tools, and services that enable you to build, test, deploy, and manage intelligent bots. The Bot Framework includes a modular and extensible SDK for building bots and connecting to AI services. | Based on **Azure Bot Service**. |
 | [Microsoft Graph SDKs](/graph/sdks/sdks-overview) | The Microsoft Graph SDKs are designed to simplify the creation of high-quality, efficient, and resilient applications that access Microsoft Graph. The SDKs include two components such as service library and core library. | Based on **Microsoft Graph**. |
-| [Teams SDK](../../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md) | Teams SDK is a Teams-centric interface to GPT-based common language models and user intent engines. This reduces the requirement for you to handle on complex and expensive tasks of writing and maintaining conversational bot logic to integrate with Large Language Models (LLMs). | Depends on **Bot Framework SDK**. </br> Based on **Azure OpenAI**. |
 
 ### Additional libraries and UI utilities to build Teams apps
 
@@ -103,9 +70,42 @@ The following flow diagram explains the different SDKs, libraries, and its relat
 | [SharePoint REST API](/sharepoint/dev/sp-add-ins/get-to-know-the-sharepoint-rest-service?tabs=csom) | You can remotely engage with SharePoint data using any technology that supports Representational State Transfer (REST) web requests. You can perform basic create, read, update, and delete (CRUD) operations by using the REST interface provided by SharePoint. | Used for **SharePoint Framework (SPFx)**. |
 | [Azure Fluid Relay](/azure/azure-fluid-relay/overview/overview) | The Fluid Framework is an open source, platform independent framework. Azure Fluid Relay is a managed service for the Fluid Framework that helps developers build real-time collaborative experiences and replicate states across connected JavaScript clients in real-time. | Used for **Fluid Framework**. |
 
+## Tools
+
+Teams platform brings you different tools to build and develop your Teams apps. The following tools are available to build your app:
+
+| Tools | Why do you need? | Environment | Test and debug |
+| -------- | ------------- | ----------------- | ---------------------- |
+| [Microsoft 365 Apps Toolkit (previously known as Teams Toolkit)](../../toolkit/agents-toolkit-fundamentals.md) | Apps Toolkit makes it simple to get started with app development for Teams. You can begin with a project template for common custom app built for your org (LOB app) scenarios or start from a sample. Save time on setup through automated app registration and configuration using Visual Studio Code and Visual Studio. | **Visual Studio Code**: JavaScript and TypeScript </br> **Visual Studio**: .NET and Blazor | In Visual Studio Code and Visual Studio |
+| [Microsoft 365 Apps Toolkit CLI](../../toolkit/Teams-Toolkit-CLI.md) (previously known as Teams Toolkit CLI) | Apps Toolkit CLI is a text-based command line interface (CLI) that accelerates Teams application development. It aims to provide keyboard centric experience when building Teams applications. | JavaScript and .NET | Use command prompt |
+| [Developer Portal for Teams](teams-developer-portal.md) | Developer Portal for Teams is the primary tool for configuring, distributing, and managing your Teams apps. With Developer Portal, you can create a basic app manifest (previously known as Teams app manifest) and publish the app to Teams.  | Supports all languages | Developer Portal for Teams |
+
+</br>
+
+<details>
+<summary><b>More information on building Teams app with Apps Toolkit.</b></summary>
+
+| &nbsp; | Apps Toolkit |
+| -------- | ------------- |
+| Environment variables | Use `.env` file |
+| Generate manifest | Apps Toolkit autogenerates when creating projects. |
+| Deploy Teams app | Automatically update use command `Microsoft 365 Apps: Update Teams App` |
+| Create Microsoft Entra app | Automatically create when debugging or provisioning the project. Users can also use their existing Microsoft Entra app by filling in Teams app ID in `.env` file. |
+| Add SSO | Provide SSO-enabled samples and how-to guides to add SSO. |
+| Bot or Message extension Registration | Automatically create when debugging or provisioning the project. User can also specify their own Bot ID. |
+| Expose Node.js app | Tab: localhost + HTTPS and Others: Dev Tunnel |
+| Run Node.js app | npm run atk:dev |
+| One-click debug | F5 or debug in Visual Studio Code and Visual Studio |
+
+</details>
+
+### Workflow for Teams
+
+You can create workflows in Teams by integrating AI. You can manage and use workflows in Teams chats, and include practical workflow ideas like sending weekly reminders or triggering actions via emojis. For more information, see [Add or run a workflow in Microsoft Teams](https://support.microsoft.com/en-us/office/add-or-run-a-workflow-in-chats-chat-messages-channels-and-channel-posts-in-microsoft-teams-242eb8f2-f328-45be-b81f-9817b51a5f0e).
+
 ### Recommendations
 
 | Tool | Details |
 | ----------------- | -------------- |
-| Microsoft 365 Agents Toolkit | We recommend using [Agents Toolkit v5](../../toolkit/agents-toolkit-fundamentals.md) to build your apps, as Agents Toolkit v4 is available only with limited functionality. |
-| Microsoft 365 Agents Toolkit CLI | We recommend that you use [Agents Toolkit CLI](../../toolkit/Teams-Toolkit-CLI.md) to build your Teams app, as TeamsFx CLI v1 and v2 are available only with limited functionality. |
+| Microsoft 365 Apps Toolkit | We recommend using [Apps Toolkit v5](../../toolkit/agents-toolkit-fundamentals.md) to build your apps, as Apps Toolkit v4 is available only with limited functionality. |
+| Microsoft 365 Apps Toolkit CLI | We recommend that you use [Apps Toolkit CLI](../../toolkit/Teams-Toolkit-CLI.md) to build your Teams app, as TeamsFx CLI v1 and v2 are available only with limited functionality. |
