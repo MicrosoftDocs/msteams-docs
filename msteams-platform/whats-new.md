@@ -485,7 +485,7 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-* **January 27, 2026**: [Support for apps in Private channels.](build-apps-for-shared-private-channels.md).
+* **January 27, 2026**: [Support for apps in Private channels.](build-apps-for-shared-private-channels.md)
 
 <!--
 **2025 May**
