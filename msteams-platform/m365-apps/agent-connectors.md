@@ -67,7 +67,7 @@ First, declare your MCP server in the [agentConnectors](/microsoft-365/extensibi
 
 Each connector must have a unique `id` that distinguishes it from other connectors in your manifest. The `toolSource` object must include exactly one of `remoteMcpServer`, `localMcpServer`, or `plugin`.
 
-For MCP servers, use **remoteMcpServer** unless your server runs locally within the Teams client environment (advanced scenarios).
+For MCP servers, use `remoteMcpServer` unless your server runs locally within the Teams client environment (advanced scenarios).
 
 ## Configure the remote MCP server endpoint
 
