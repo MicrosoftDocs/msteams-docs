@@ -38,7 +38,7 @@ Teams platform features that are available to all app developers.</br>
 
 **2026 January**
 
-* ***January 27, 2026***: [Support for apps in Shared channels is now generally available.](build-apps-for-shared-private-channels.md).
+* ***January 27, 2026***: [Support for apps in Shared channels is now generally available.](build-apps-for-shared-private-channels.md)
 
 :::column-end:::
 :::row-end:::
