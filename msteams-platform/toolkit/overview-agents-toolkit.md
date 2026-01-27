@@ -8,7 +8,7 @@ ms.date: 01/26/2026
 
 Microsoft 365 Agents Toolkit is a suite of tools for building enterprise-ready agents and apps that work across Microsoft 365 Copilot, Teams, Office, web, and other third-party messaging channels. It streamlines the development of production AI agents and apps with built-in project scaffolding, testing, deployment, and integration with AI tools including Microsoft 365 Agents SDK, Azure AI Foundry, and TypeSpec for Copilot.
 
-:::image type="content" source="../assets/images/agents-toolkit-landing/m365-agents-toolkit-scenarios.png" alt-text="With Agents Tookit you can build Microsoft 365 Copilot extensibility, Apps for Teams, Outlook, and M365 Copilot, and Office Add-ins.":::
+:::image type="content" source="../assets/images/agents-toolkit-landing/agents-toolkit-scenarios.png" alt-text="With Agents Tookit you can build Microsoft 365 Copilot extensibility, Apps for Teams, Outlook, and M365 Copilot, and Office Add-ins.":::
 
 Microsoft 365 Agents Toolkit is an evolution of Teams Toolkit. In addition to building advanced custom AI agents, Microsoft 365 Agents Toolkit also supports a *write once, run everywhere* approach to building integrated apps that run across Teams, Outlook and Microsoft 365 Copilot app, and Office Add-ins that are packaged, distributed, and managed centrally through Microsoft 365 store and admin experiences.
 
@@ -43,7 +43,7 @@ Once ready, you can use Agents Toolkit to easily [publish your agents](/microsof
 
 Agents Toolkit provides an integrated sandbox to locally test and debug AI agents and traditional bots in your local dev environment. The [Microsoft 365 Agents Playground](https://www.npmjs.com/package/@microsoft/teams-app-test-tool) enables rapid, iterative development of agents by eliminating the need for a Microsoft 365 developer tenant, tunneling services like Ngrok, and app/bot registration.
 
-:::image type="content" source="../assets/images/agents-toolkit-landing/m365-agents-playground.png" alt-text="Screenshot showing UI of Microsoft 365 Agents Playground" lightbox="../assets/images/agents-toolkit-landing/m365-agents-playground-expanded.png":::
+:::image type="content" source="../assets/images/agents-toolkit-landing/agents-playground.png" alt-text="Screenshot showing UI of Microsoft 365 Agents Playground" lightbox="../assets/images/agents-toolkit-landing/agents-playground-expanded.png":::
 
 Agents Playground simulates the look, feel, and behavior of Microsoft Teams, providing a realistic testing environment for agent and bot interactions. You can even simulate complex scenarios using mock data and built-in custom activity triggers.
 
