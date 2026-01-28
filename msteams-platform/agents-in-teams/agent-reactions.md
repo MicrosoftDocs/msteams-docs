@@ -6,7 +6,7 @@ ms.date: 01/28/2026
 ms.topic: reference
 ---
 
-# Agent Reactions in Teams
+# Enable agent reactions in Teams
 
 Use agents to communicate not only through text but also using reactions, emojis, and context-aware actions. It signals agent's intentional design to improve user trust and make agent behavior more transparent and shows how the agent understands user intent and need.
 
@@ -28,7 +28,7 @@ You can use the `addReaction` method from Teams SDK or call the `add reaction` A
 To enable agents to send reactions to a message:
 
 1. Use the Teams reactions reference page for getting the `EmojiID` for the reactions that you want to add.
-    - You can also select a particular skin-tone for the emoji by selecting its `EmojiID`.
+    - You can also select a particular [skin tone for the emoji](#modify-skin tone-for-emojis) by selecting its `EmojiID`.
 1. Use the `addReaction` method from Teams SDK or call the `add reaction` API to send reactions to messages.
 
 The following code snippet shows an example of adding the *like* reaction to a message.
@@ -91,10 +91,10 @@ You can choose to enable agents to remove reactions from messages.
 To enable agents to remove reactions from a message:
 
 1. Use the Teams reactions reference page for getting the `EmojiID` for the reactions that you want to add.
-    - You can also select a particular skin-tone for the emoji by selecting its `EmojiID`.
+    - You can also select a particular [skin tone for the emoji](#modify-skin tone-for-emojis) by selecting its `EmojiID`.
 1. Use the `removeReaction` method from Teams SDK or call the `remove reaction` API to send reactions to messages.
 
-The following code snippet shows an example of removing the *like* reaction to a message.
+The following code snippet shows an example of removing a reaction from a message.
 
 # [TypeScript](#tab/ts1)
 
@@ -151,7 +151,7 @@ No additional payload required since the reaction is defined in the URL
 
 ---
 
-## Response errors
+## Response codes
 
 The following are the success and error codes:
 
@@ -171,6 +171,31 @@ The following are the success and error codes:
 | 403 | `ApiNotEnabledException` | Feature flag not enabled | The feature flag guarding this feature is not enabled |
 | 404 | `ConversationNotFound` | Conversation not found | The target thread cannot be located, or the agent doesn’t have access to it. |
 | 429 | Too many requests | Throttling limit reached | Reduce the frequency of message reaction calls. Agent reactions are limited to 2 reaction per second.|
+
+## Customize Emojis
+
+You can allow skin tones for emojis and also use custom emojis that might be specific to your agent needs.
+
+### Modify skin tone for emojis
+
+The Teams reactions reference page shows skin tone options for emojis. The emojis that offer skin tone are tagged as **Diverse**.
+
+:::image type="content" source="../assets/images/agents-in-teams/teams-reactions/diverse-reaction.png" alt-text="Image shows a diverse tagged emoji for choosing skin tones. ":::
+
+To select a particular skin tone:
+
+1. Choose an emoji tagged as **Diverse**.
+1. Select **Show Skin Tones**.
+
+    The card expands to show the available skin tones.
+
+    :::image type="content" source="../assets/images/agents-in-teams/teams-reactions/skin-tones.png" alt-text="Image shows available skin tones for a Diverse emoji.":::
+
+1. Copy the `EmojiID` for the skin tone that you want to use for your agent.
+
+[WIP: Example code snippets for selecting skin tone.]
+
+### Cusom Emojis
 
 ## See also
 
