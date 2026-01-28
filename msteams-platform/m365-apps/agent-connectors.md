@@ -89,12 +89,14 @@ The endpoint must be publicly accessible and respond to MCP protocol handshake m
 
 ## Configure authentication
 
-Specify how Microsoft 365 retrieves credentials when calling your MCP server. MCP servers support several authorization methods:
+Specify how Microsoft 365 retrieves credentials when calling your MCP server. The following values are currently supported for MCP server authentication:
 
 - **None**: No authentication required
 - **OAuthPluginVault**: OAuth 2.0 tokens stored inside Microsoft’s secure vault
+<!-- Uncomment once supported
 - **ApiKeyPluginVault**: API key stored in a vault and referenced by ID
 - **DynamicClientRegistration**: Dynamic OAuth client creation
+-->
 
 ### Use OAuth authentication
 
@@ -114,6 +116,7 @@ The `referenceId` points to a secure [OAuth configuration that you register in D
 
 When setting up your OAuth app with a third-party authentication provider, ensure that you add `https://teams.microsoft.com/api/platform/v1.0/oAuthRedirect` to the list of allowed redirect endpoints.
 
+<!-- Uncomment when supported
 ### Use API key authentication
 
 For API keys stored in a vault, configure the authorization type as `ApiKeyPluginVault`:
@@ -126,6 +129,7 @@ For API keys stored in a vault, configure the authorization type as `ApiKeyPlugi
 ````
 
 The `referenceId` points to an [API key that you register in Developer Portal](https://dev.teams.microsoft.com/tools/api-key-registration). For details, see [API key authentication](../messaging-extensions/api-based-secret-service-auth.md).
+-->
 
 ### Use no authentication
 
@@ -135,7 +139,11 @@ For enterprise scenarios, prefer OAuth over API keys to align with security best
 
 ## Define tool discovery
 
-Choose how Microsoft 365 agents discover the tools your MCP server provides. You can use inline definitions if your toolset is static, or dynamic discovery if your toolset changes frequently.
+Choose how Microsoft 365 agents discover the tools your MCP server provides. Currently only inline tool definitions are supported.
+
+<!-- Uncommment once dynamic tool discovery is supported
+You can use inline definitions if your toolset is static, or dynamic discovery if your toolset changes frequently.
+
 
 ### Enable dynamic tool discovery
 
@@ -155,6 +163,8 @@ The following example shows how to add the dynamic discovery flag to your `remot
 ````
 
 When enabled, agents call your server's `tools/list` method to retrieve available tools. This approach eliminates the need to republish your app when tools change.
+
+-->
 
 ### Use inline tool definitions
 
