@@ -351,7 +351,7 @@ When you run the Agents Playground as a standalone tool, Microsoft Teams (`mstea
 >   * Setting the environment variable:
 >   `DEFAULT_CHANNEL_ID = msteams`
 >   * Or using the CLI option:
->    atk playground --channel-id msteams
+>    `agentsplayground --channel-id msteams`
 
 Currently, the accepted channel IDs are: `msteams`, `directline`, `webchat`, and `emulator`. When you set a channel ID, the properties of the messages sent to the application changes accordingly to simulate a real environment. For the `directline` and `webchat` channels, a corresponding client is displayed, and card rendering differs from that of the Teams channel.
 
