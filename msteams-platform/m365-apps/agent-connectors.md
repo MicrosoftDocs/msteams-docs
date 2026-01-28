@@ -2,9 +2,7 @@
 title: Register MCP Servers as Agent Connectors for Microsoft 365
 description: Register your MCP server in the Microsoft 365 app manifest to enable access to your tools from agents like the Channel Agent in Teams.
 #customer intent: As a developer, I want to register my MCP server as an agent connector so that Microsoft 365 agents can access my external tools and services.
-author: erikadoyle
-ms.author: edoyle
-ms.date: 12/15/2025
+ms.date: 01/28/2026
 ms.topic: how-to
 ms.subservice: m365apps
 ---
