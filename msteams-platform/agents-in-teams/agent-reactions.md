@@ -34,7 +34,7 @@ You can use the `addReaction` method from Teams SDK or call the `add reaction` A
 To enable agents to send reactions to a message:
 
 1. Use the Teams reactions reference page for getting the `EmojiID` for the reactions that you want to add.
-    - You can also select a particular [skin tone for the emoji](#modify-skin tone-for-emojis) by selecting its `EmojiID`.
+    - You can also select a particular [skin tone for the emoji](#modify-skin-tone-for-emojis) by selecting its `EmojiID`.
 1. Use the `addReaction` method from Teams SDK or call the `add reaction` API to send reactions to messages.
 
 The following code snippet shows an example of adding the *like* reaction to a message.
@@ -97,7 +97,7 @@ You can choose to enable agents to remove reactions from messages.
 To enable agents to remove reactions from a message:
 
 1. Use the Teams reactions reference page for getting the `EmojiID` for the reactions that you want to add.
-    - You can also select a particular [skin tone for the emoji](#modify-skin tone-for-emojis) by selecting its `EmojiID`.
+    - You can also select a particular [skin tone for the emoji](#modify-skin-tone-for-emojis) by selecting its `EmojiID`.
 1. Use the `removeReaction` method from Teams SDK or call the `remove reaction` API to send reactions to messages.
 
 The following code snippet shows an example of removing a reaction from a message.
