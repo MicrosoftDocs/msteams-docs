@@ -205,6 +205,17 @@ To select a particular skin tone:
 
 With Agents in Teams, you can  add custom emojis as per the need for your organization.
 
+:::image type="content" source="../assets/images/agents-in-teams/teams-reactions/custom-emojis.png" alt-text="Image shows custom emojis in Teams.":::
+
+To use custom emojis in your agent:
+
+1. Choose the custom emojis from Teams emoji picker.
+1. Hover your cursor over the emoji that you want to use. The emoji ID for the emoji appears.
+
+    :::image type="content" source="../assets/images/agents-in-teams/teams-reactions/custom-emoji-id.png" alt-text="Image shows the emoji ID for a custom emoji.":::
+
+1. Use the emojiID for the selected emoji string as your parameter. Ensure the string parameter for the custom emoji must exactly match the name of the custom emoji as it appears in your organization.
+
 ## See also
 
 - Teams SDK
