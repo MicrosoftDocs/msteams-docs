@@ -1,8 +1,7 @@
 ---
 title: Build Apps with Agents Toolkit - Prepare
 author: surbhigupta
-description: Learn about build environments such as SPFx of Agents Toolkit in Visual Studio Code. Toolkit integrates Azure Functions capabilities for building apps.
-ms.author: surbhigupta
+description: Learn about build environments of Agents Toolkit in Visual Studio Code. Toolkit integrates Azure Functions capabilities for building apps.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
@@ -19,7 +18,7 @@ Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) supports differ
 Agents Toolkit in Microsoft Visual Studio Code offers a set of environments to build your Teams app. You can choose any of the following environments:
 
 * JavaScript or TypeScript
-* SharePoint Framework (SPFx)
+* Python
 
 ### Create your Teams app using JavaScript or TypeScript
 
