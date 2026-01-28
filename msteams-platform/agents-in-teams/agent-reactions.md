@@ -19,7 +19,13 @@ You can develop agents for Teams using the `addReaction` and `removeReaction` me
 [WIP: Links to be added when available]
 For more information, [Teams SDK doc] and [Teams Reactions page].
 
-Quick highlights:
+**Key highlights**:
+
+- [Add reactions](#enable-agents-to-add-reactions)
+- [Remove reactions](#enable-agent-to-remove-reactions)
+- [View response codes](#response-codes)
+- [Choose skin tones](#response-codes)
+- [Use custom emojis](#custom-emojis)
 
 ## Enable agents to add reactions
 
