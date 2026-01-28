@@ -3,7 +3,7 @@ title: Create Customized Tab Apps for Meetings
 author: vikasalmal
 description: Learn to build a tab for a meeting chat, meeting side panel, and meeting stage in Teams meeting. Feature compatibility by user types. Code samples (Node.js, .NET).
 ms.topic: conceptual
-ms.author: surbhigupta
+ms.author: vikasalmal
 ms.localizationpriority: high
 ms.owner: vichug
 ms.date: 03/05/2025
