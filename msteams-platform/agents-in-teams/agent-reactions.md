@@ -23,7 +23,13 @@ Quick highlights:
 
 ## Enable agents to add reactions
 
-You can use the `addReaction` method or call the `add reaction` API directly to send reactions to messages.
+You can use the `addReaction` method from Teams SDK or call the `add reaction` API directly to send reactions to messages.
+
+To enable agents to send reactions:
+
+1. Use the Teams reactions reference page for getting the `EmojiID` for the reactions that you want to add.
+    - You can also select a particular skin-tone for the emoji by selecting its `EmojiID`.
+1. Use the `addReaction` method from Teams SDK or call the `add reaction` API to send reactions to messages.
 
 The following code snippet shows an example of adding the *like* reaction to a message.
 
