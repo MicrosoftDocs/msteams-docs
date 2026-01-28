@@ -12,9 +12,6 @@ ms.date: 12/17/2025
 
 With Microsoft Graph, you can migrate users' existing message history and data from an external system into Teams. Users can continue their communications in a seamless manner and proceed without interruption by enabling the recreation of a third-party platform messaging hierarchy inside Teams.
 
-> [!NOTE]
-> In the future, Microsoft might require you or your customers to pay extra fees based on the amount of data imported.
-
 ## Permissions
 
 | Scope name | Display name | Description | Type | Admin consent required | Entities/APIs covered |

@@ -36,13 +36,9 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.</br>
 
-**2025 November**
+**2026 January**
 
-* ***November 21, 2025***: [Use the Performance Report tool to evaluate the efficiency of your web and tab apps on mobile.](resources/teams-mobile-best-practices.md#calculate-performance-metrics-for-apps)
-
-* ***November 19, 2025***: [Create and manage agent identities for your agent.](concepts/build-and-test/manage-your-apps-in-developer-portal.md#agent-identity-blueprint)
-
-* ***November 19, 2025***: [Microsoft Entra ID authentication for bots is now available in group scope.](bots/how-to/authentication/bot-sso-overview.md)
+* ***January 27, 2026***: [Support for apps in Shared channels is now generally available.](build-apps-for-shared-private-channels.md)
 
 :::column-end:::
 :::row-end:::
@@ -56,6 +52,9 @@ Teams platform features that are available to all app developers.</br>
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 21/11/2025 | Use the Performance Report tool to evaluate the efficiency of your web and tab apps on mobile. | Add Teams app capabilities > Resources > Best practices for Teams mobile app > [Calculate performance metrics for apps](resources/teams-mobile-best-practices.md#calculate-performance-metrics-for-apps)
+| 19/11/2025 | Create and manage agent identities for your agent. | Tools and SDKs > Tools > Developer Portal for Teams > Manage your apps in Developer Portal > Use tools to create app features > [Agent Identity Blueprint](concepts/build-and-test/manage-your-apps-in-developer-portal.md#agent-identity-blueprint)
+|19/11/2025 | Microsoft Entra ID authentication for bots is now available in group scope. | Add Authentication > Enable SSO for bot and message extension app using Entra ID > [Overview for tab SSO](bots/how-to/authentication/bot-sso-overview.md)
 |06/11/2025 | Teams AI library v2 has been renamed to *Teams SDK*. | [Teams SDK](/microsoftteams/platform/teams-ai-library/)
 |15/10/2025 | The Microsoft Teams JavaScript client library (TeamsJS) supports app suspension for Teams apps extended to run across other Microsoft 365 applications. | Build tabs > Tab features > [App suspension for your tab app](tabs/how-to/app-caching.md)
 | 18/09/2025 | Teams AI library is now generally available for JavaScript and C#. It provides a simplified SDK, support for Model Context Protocol (MCP), Agent-to-Agent communication (A2A), and streamlined tools to enable developers to build intelligent agents for Teams | [Overview of Teams AI Library](/microsoftteams/platform/teams-ai-library/welcome) |
@@ -486,8 +485,7 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-* **November 25, 2025**: [Register MCP Servers as agent connectors](m365-apps/agent-connectors.md) for use in Teams Channel Agent and other agents across Microsoft 365.
-* ***November 11, 2025***: [Add app profile hovercard to your agent or app.](bots/how-to/teams-conversational-ai/ai-ux.md#enable-app-profile-card)
+* **January 27, 2026**: [Support for apps in Private channels.](build-apps-for-shared-private-channels.md)
 
 <!--
 **2025 May**
@@ -504,7 +502,9 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ---------------- |
+| 25/11/2025 | Register MCP Servers as agent connectors. | Extend agent or app across Microsoft 365 > [Connect MCP servers to agents](m365-apps/agent-connectors.md)|
 | 19/11/2025 | Import messages from third-party platforms into Teams and recreate the user message hierarchy using Microsoft Graph APIs. All new and existing channels and chats are supported. | [Import third-party platform messages to Teams using Microsoft Graph](graph-api/import-messages/import-external-messages-to-teams.md)|
+| 11/11/2025 | Add app profile hovercard to your agent or app. | Build agents using Teams SDK > Agents user experience > [enable-app-profile-card](bots/how-to/teams-conversational-ai/ai-ux.md#enable-app-profile-card)|
 | 24/09/2025 | Ad hoc calls (spontaneous, unscheduled meetings) are now receiving enhanced support across Graph APIs. | Build apps for Teams meetings and calls > Get meetings, transcripts, recordings and AI summaries > [Meeting transcripts and recordings](graph-api/meeting-transcripts/overview-transcripts.md)|
 | 18/09/2025 | Teams AI library supports Python in developer preview. It provides a simplified SDK, support for Model Context Protocol (MCP), Agent-to-Agent communication (A2A), and streamlined tools to enable developers to build intelligent agents for Teams. | [Teams AI library](/microsoftteams/platform/teams-ai-library/welcome) |
 | 10/04/2025 | Introducing custom engine agents support for Microsoft 365 Copilot Chat. | Build bots and agents > Teams AI library v1 > [Build with Teams AI library](bots/how-to/teams-conversational-ai/how-conversation-ai-get-started.md#add-support-for-microsoft-365-copilot-chat) |
