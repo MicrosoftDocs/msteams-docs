@@ -195,7 +195,9 @@ To select a particular skin tone:
 
 [WIP: Example code snippets for selecting skin tone.]
 
-### Cusom Emojis
+### Custom Emojis
+
+With Agents in Teams, you can  add custom emojis as per the need for your organization.
 
 ## See also
 
