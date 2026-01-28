@@ -2,7 +2,7 @@
 title: Agent Reactions in Teams - Overview
 description: Learn about how you can use reactions for agents in Teams.
 ms.localizationpriority: high
-ms.date: 28/01/2026
+ms.date: 01/28/2026
 ms.topic: reference
 ---
 
