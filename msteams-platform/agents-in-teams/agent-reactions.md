@@ -37,14 +37,17 @@ The following code snippet shows an example of adding the *like* reaction to a m
 
 ```typescript
 
-
 app.on('mention', async ({ activity, send }) => {
   await send(new MessageReactionActivity({
     replyToId = activity.id,
     reactions: [like]
   }));
 });
-C#
+```
+
+# [CSharp](#tab/cs1)
+
+```csharp
 [Message]
         public async Task OnMessage([Context] MessageActivity activity, [Context] IContext.Client client)
         {
@@ -77,8 +80,74 @@ Where,
 
 - `conversationId` is the thread or chat identifier.
 - `activityId` is the message or activity ID.
-- `reactionId` is the `EmojiID` obtained using the Teams reactions reference page.
+- `reactionId` is the `EmojiID` that you want to add.
 
+---
+
+## To remove reactions from a message
+
+You can choose to enable agents to remove reactions from messages.
+
+To enable agents to send reactions:
+
+1. Use the Teams reactions reference page for getting the `EmojiID` for the reactions that you want to add.
+    - You can also select a particular skin-tone for the emoji by selecting its `EmojiID`.
+1. Use the `removeReaction` method from Teams SDK or call the `remove reaction` API to send reactions to messages.
+
+The following code snippet shows an example of removing the *like* reaction to a message.
+
+# [TypeScript](#tab/ts1)
+
+```typescript
+app.on('mention', async ({ activity, send }) => {
+  await send(new MessageReactionActivity({
+    replyToId = activity.id,
+    reactions: [like]
+  }));
+});
+
+```
+
+# [CSharp](#tab/cs1)
+
+```csharp
+[Message]
+        public async Task OnMessage([Context] MessageActivity activity, [Context] IContext.Client client)
+        {
+            if (activity.IsRecipientMentioned)
+            {
+                await client.Send(new MessageReactionActivity().RemoveReaction(new Reaction()
+                {
+                    Type = “like”,
+                }).WithReplyToId(activity.Id));
+            }
+        }
+
+```
+
+# [Python](#tab/py1)
+
+```python
+@app.on_message
+async def handle_message(ctx: ActivityContext[MessageActivity]):
+    if ctx.activity.is_recipient_mentioned:
+        await ctx.send(MessageReactionActivityInput(reply_to_id=ctx.activity.id).remove_reaction(MemssageReaction(type="like")))
+
+```
+
+# [API](#tab/h1)
+
+```rest
+DELETE {cloud}/{tenantId}/v3/conversations/{conversationId}/activities/{activityId}/reaction/{reactionType}
+```
+
+Where,
+
+- `conversationId` is the thread or chat identifier.
+- `activityId` is the message or activity ID.
+- `reactionId` is the `EmojiID` for the emoji that you want to remove
+
+No additional payload required since the reaction is defined in the URL
 ---
 
 ## See also
