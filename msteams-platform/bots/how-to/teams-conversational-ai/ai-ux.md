@@ -130,7 +130,6 @@ The following best practices can help enhance the overall effectiveness of an ag
 - [Enable the agent to understand conversational history and context](#enable-the-agent-to-understand-conversational-history-and-context).
 - [Offer dynamic and contextual suggestion prompts](#offer-dynamic-and-contextual-suggestion-prompts).
 - [Enable app profile card](#enable-app-profile-card).
-- [Enable message reactions to communicate with agents](#enable-message-reactions-to-communicate-with-agents)
 
 ### Ensure that agent's response contains feedback button
 
@@ -177,19 +176,6 @@ Add hovercard experience for all agents and bots. Hovercards provide valuable an
 :::image type="content" source="../../../assets/images/bots/contoso-app-profile-card.png" alt-text="Image shows app profile card." border="false" lightbox="../../../assets/images/bots/contoso-app-profile-card.png":::
 
 To enable the app profile card for your agents or bots, add the `features` field under the `description` field in the app manifest. For more information, see [public developer preview for Teams](/microsoft-365/extensibility/schema/root-description?view=m365-app-prev&tabs=syntax&preserve-view=true).
-
-### Enable message reactions to communicate with agents
-
-Use agents to communicate not only through text but also using reactions, emojis, and context-aware actions. It signals agent's intentional design to improve user trust and make agent behavior more transparent and shows how the agent understands user intent and need.
-
-Map emojis and reactions to specific actions thar the agent can take in response to ongoing conversation.
-
-[WIP: Add screenshot image]
-
-You can develop agents for Teams using the `addReaction` and `removeReaction` methods to send reactions to messages in a chat.
-
-[WIP: Links to be added when available]
-For more information, [Teams SDK doc] and [Teams Reactions page].
 
 ## See also
 
