@@ -10,7 +10,7 @@ ms.topic: reference
 
 Use agents to communicate not only through text but also using reactions, emojis, and context-aware actions. It signals agent's intentional design to improve user trust and make agent behavior more transparent and shows how the agent understands user intent and need.
 
-Map emojis and reactions to specific actions thar the agent can take in response to ongoing conversation. Use the `emojiID` to enable your agents to send reactions.
+Map emojis and reactions to specific actions that the agent can take in response to ongoing conversation. Use the `emojiID` to enable your agents to send reactions.
 
 [WIP: Add screenshot image]
 
@@ -73,9 +73,9 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 PUT {cloud}/{tenantId}/v3/conversations/{conversationId}/activities/{activityId}/reaction/{reactionType}
 ```
 
-where,
+Where,
 
-- `conversationId` is the thread or chat identifier (e.g., 19:abcd1234@thread.tacv2).
+- `conversationId` is the thread or chat identifier.
 - `activityId` is the message or activity ID.
 - `reactionId` is the `EmojiID` obtained using the Teams reactions reference page.
 
