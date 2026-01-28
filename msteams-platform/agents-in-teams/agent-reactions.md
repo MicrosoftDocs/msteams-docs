@@ -6,13 +6,13 @@ ms.date: 01/28/2026
 ms.topic: reference
 ---
 
-# Enable agent reactions in Teams
+# Use agent reactions in Teams
 
-Use agents to communicate not only through text but also using reactions, emojis, and context-aware actions. It signals agent's intentional design to improve user trust and make agent behavior more transparent and shows how the agent understands user intent and need.
+Enable agents to communicate beyond text using reactions, emojis, and context-aware actions. It signals agent's intentional design to improve user trust and make agent behavior more transparent and shows how the agent understands user intent and need.
 
 [WIP: Add screenshot image]
 
-Map emojis and reactions to specific actions that the agent can take in response to ongoing conversation. Use the `emojiID` to enable your agents to send reactions.
+Map emojis and reactions to specific agent actions, and use `emojiID` to send the right reaction in the conversation.
 
 **Key highlights**:
 
