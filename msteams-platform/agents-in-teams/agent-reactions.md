@@ -25,7 +25,7 @@ Quick highlights:
 
 You can use the `addReaction` method from Teams SDK or call the `add reaction` API directly to send reactions to messages.
 
-To enable agents to send reactions:
+To enable agents to send reactions to a message:
 
 1. Use the Teams reactions reference page for getting the `EmojiID` for the reactions that you want to add.
     - You can also select a particular skin-tone for the emoji by selecting its `EmojiID`.
@@ -84,11 +84,11 @@ Where,
 
 ---
 
-## To remove reactions from a message
+## Enable agent to remove reactions
 
 You can choose to enable agents to remove reactions from messages.
 
-To enable agents to send reactions:
+To enable agents to remove reactions from a message:
 
 1. Use the Teams reactions reference page for getting the `EmojiID` for the reactions that you want to add.
     - You can also select a particular skin-tone for the emoji by selecting its `EmojiID`.
@@ -150,6 +150,27 @@ Where,
 No additional payload required since the reaction is defined in the URL
 
 ---
+
+## Response errors
+
+The following are the success and error codes:
+
+### Success codes
+
+| Response codes | Description | Action |
+| --- | --- | --- |
+| 200 | Reaction added successfully | NA |
+| 200 | Duplicate reaction added | See best practices to for sending multiple reactions to messages |
+| 200 | Deleted reaction successfully | NA |
+| 200 | Deleted non-existent reaction | NA |
+
+### Error codes
+
+| Response codes | Error message | Description | Action |
+| --- | --- | --- | --- |
+| 403 | `ApiNotEnabledException` | Feature flag not enabled | The feature flag guarding this feature is not enabled |
+| 404 | `ConversationNotFound` | Conversation not found | The target thread cannot be located, or the agent doesn’t have access to it. |
+| 429 | Too many requests | Throttling limit reached | Reduce the frequency of message reaction calls. Agent reactions are limited to 2 reaction per second.|
 
 ## See also
 
