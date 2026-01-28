@@ -166,7 +166,7 @@ The following are the success and error codes:
 | Response codes | Description | Action |
 | --- | --- | --- |
 | `200` | Reaction added successfully | NA |
-| `200` | Duplicate reaction added | See best practices to for sending multiple reactions to messages |
+| `200` | Duplicate reaction added | See [best practices](#best-practices) to for sending multiple reactions to messages |
 | `200` | Deleted reaction successfully | NA |
 | `200` | Deleted non-existent reaction | NA |
 
@@ -215,6 +215,13 @@ To use custom emojis in your agent:
     :::image type="content" source="../assets/images/agents-in-teams/teams-reactions/custom-emoji-id.png" alt-text="Image shows the emoji ID for a custom emoji.":::
 
 1. Use the emojiID for the selected emoji string as your parameter. Ensure the string parameter for the custom emoji must exactly match the name of the custom emoji as it appears in your organization.
+
+## Best practices
+
+- Employ reactions to improve user experience, such as acknowledging a message or providing succinct feedback.
+- Avoid excessive use of reactions to minimize notification fatigue for users.
+- Ensure your agents’ reactions fit the message context and avoid having your agent send multiple reactions to the same message without first removing any existing reactions.
+- Reactions sent by agents are limited to 2 reactions per second
 
 ## See also
 
