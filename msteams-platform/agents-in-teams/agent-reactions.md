@@ -10,14 +10,9 @@ ms.topic: reference
 
 Use agents to communicate not only through text but also using reactions, emojis, and context-aware actions. It signals agent's intentional design to improve user trust and make agent behavior more transparent and shows how the agent understands user intent and need.
 
-Map emojis and reactions to specific actions that the agent can take in response to ongoing conversation. Use the `emojiID` to enable your agents to send reactions.
-
 [WIP: Add screenshot image]
 
-You can develop agents for Teams using the `addReaction` and `removeReaction` methods to send reactions to messages in a chat.
-
-[WIP: Links to be added when available]
-For more information, [Teams SDK doc] and [Teams Reactions page].
+Map emojis and reactions to specific actions that the agent can take in response to ongoing conversation. Use the `emojiID` to enable your agents to send reactions.
 
 **Key highlights**:
 
@@ -26,6 +21,7 @@ For more information, [Teams SDK doc] and [Teams Reactions page].
 - [View response codes](#response-codes)
 - [Choose skin tones](#response-codes)
 - [Use custom emojis](#custom-emojis)
+- [Best practices](#best-practices)
 
 ## Enable agents to add reactions
 
@@ -227,3 +223,5 @@ To use custom emojis in your agent:
 
 - Teams SDK
 - Teams reacton reference page
+
+[WIP: Links to be added when available]
