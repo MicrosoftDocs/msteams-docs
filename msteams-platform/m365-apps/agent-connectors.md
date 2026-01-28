@@ -190,66 +190,57 @@ The `description` object must match the schema returned by your MCP server's `to
 The following is an example of a complete agent connector configuration, using *OAuthPluginVault* authentication and inline tool definitions:
 
 ```json
- "agentConnectors": [
-        {
-            "id": "my-dynamic-connector-inline",
-            "displayName": "My Dynamic Connector with Inline Tools",
-            "description": "A connector that uses dynamic client registration and an MCP Server with inline tool descriptions.",
-            "toolSource": {
-                "remoteMcpServer": {
-                    "mcpServerUrl": "https://example.com/api/mcp",
-                    "mcpToolDescription": {
-                        "description": {
-                            "tools": [
-                                {
-                                    "name": "WorkItemPlugin_QueryWorkItems",
-                                    "description": "Asks questions about work items like bugs, tasks, epics or features that can be answered by fields or the tags on the work item.\r\n\r\nFollow-up questions should route back to this tool, when they are relevant to querying work items. Example:\r\n\r\nUser: What are the bugs assigned to me?\r\nAssistant: \u003CResponse\u003E\r\nUser: What are the active ones?\r\n\r\nWhere the question is NOT relevant to querying and therefore should NOT route back to this tool:\r\n\r\nUser: What are the bugs assigned to me including the severity?/Assistant: \u003CResponse\u003E\r\nUser: What do the severity levels mean?",
-                                    "inputSchema": {
-                                        "type": "object",
-                                        "properties": {
-                                            "organization": {
-                                                "type": "string",
-                                                "description": "The organization"
-                                            },
-                                            "project": {
-                                                "type": "string",
-                                                "description": "The project"
-                                            },
-                                            "workItemType": {
-                                                "type": "string",
-                                                "description": "The type of the work item the user is asking for or null if ambiguous"
-                                            },
-                                            "question": {
-                                                "type": "string",
-                                                "description": "The user\u0027s question about work items including the work item type if the user includes it."
-                                            },
-                                            "includeRelations": {
-                                                "type": "boolean",
-                                                "description": "Whether to include related links like pull requests"
-                                            }
-                                        },
-                                        "required": [
-                                            "question",
-                                            "includeRelations"
-                                        ]
-                                    },
-                                    "annotations": {
-                                        "title": "List workItems",
-                                        "readOnlyHint": true
-                                    }
-                                 }
-                                }
-                            ]
-                        }
-                    },
-                    "authorization": {
-                        "type": "OAuthPluginVault",
-                        "referenceId": "NzJmOTg4Ym..."
-                    }
-                }
-            }
-        }
-    ]
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
+  "manifestVersion": "devPreview",
+  ...
+  "agentConnectors": [
+  {
+      "id": "my-dynamic-connector-inline",
+      "displayName": "My Dynamic Connector with Inline Tools",
+      "description": "A connector that uses dynamic client registration and an MCP Server with inline tool descriptions.",
+      "toolSource": {
+          "remoteMcpServer": {
+              "mcpServerUrl": "https://example.com/api/mcp",
+              "mcpToolDescription": {
+                  "description": {
+                      "tools": [
+                          {
+                              "name": "ContentQueryTool_QueryItems",
+                              "description": "Retrieves information about items (such as tasks, issues, or other tracked entities) that can be answered by their fields or metadata.\r\n\r\nFollow-up questions should route back to this tool when they are relevant to refining or filtering the same query context. Example:\r\n\r\nUser: What issues are assigned to me?\r\nAssistant: \u003CResponse\u003E\r\nUser: Which ones are still open?\r\n\r\nWhere the question is NOT relevant to querying and therefore should NOT route back to this tool:\r\n\r\nUser: What issues are assigned to me including their priority?\r\nAssistant: \u003CResponse\u003E\r\nUser: What do the priority levels mean?",
+                              "inputSchema": {
+                                  "type": "object",
+                                  "properties": {
+                                      "property1": {
+                                          "type": "string",
+                                          "description": "Description of property1"
+                                      },
+                                      "property2": {
+                                          "type": "string",
+                                          "description": "Description of property2"
+                                      }
+                                  },
+                                  "required": [
+                                      "property1"
+                                  ]
+                              },
+                              "annotations": {
+                                  "title": "Query Items",
+                                  "readOnlyHint": true
+                              }
+                            }
+                          }
+                      ]
+                  }
+              },
+              "authorization": {
+                  "type": "OAuthPluginVault",
+                  "referenceId": "NzJmOTg4Ym..."
+              }
+          }
+      }
+  }]
+}
 ```
 
 This configuration is sufficient for Microsoft 365 agents, including the Channel Agent in Teams, to establish a connection and discover tools from your MCP server.
