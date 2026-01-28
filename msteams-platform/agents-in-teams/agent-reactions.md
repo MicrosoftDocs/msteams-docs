@@ -6,6 +6,8 @@ ms.date: 01/28/2026
 ms.topic: reference
 ---
 
+<!-- markdownlint-disable MD051 -->
+
 # Use agent reactions in Teams
 
 Enable agents to communicate beyond text using reactions, emojis, and context-aware actions. It signals agent's intentional design to improve user trust and make agent behavior more transparent and shows how the agent understands user intent and need.
@@ -23,7 +25,7 @@ Map emojis and reactions to specific agent actions, and use `emojiID` to send th
 - [Use custom emojis](#custom-emojis)
 - [Best practices](#best-practices)
 
-## Enable agents to add reactions
+## Enable an agent to add reactions
 
 You can use the `addReaction` method from Teams SDK or call the `add reaction` API directly to send reactions to messages.
 
@@ -85,7 +87,7 @@ Where,
 
 ---
 
-## Enable agent to remove reactions
+## Enable an agent to remove reactions
 
 You can choose to enable agents to remove reactions from messages.
 
