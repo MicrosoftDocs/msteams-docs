@@ -148,6 +148,7 @@ Where,
 - `reactionId` is the `EmojiID` for the emoji that you want to remove
 
 No additional payload required since the reaction is defined in the URL
+
 ---
 
 ## See also
