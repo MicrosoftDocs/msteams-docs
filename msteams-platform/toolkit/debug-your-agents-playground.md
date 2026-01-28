@@ -230,6 +230,22 @@ You can mock an activity in Agents Playground using activity triggers. There are
 1. [Predefined activity triggers](#predefined-activity-triggers)
 1. [Custom activity triggers](#custom-activity-triggers)
 
+> [!IMPORTANT]
+>
+> * When the Agents Playground is launched via Microsoft 365 Agents Toolkit, the default channel ID is `emulator`.
+>
+> * The `emulator` channel does not support some Teams-specific mock activities, such as:
+>   * Installation update activities
+>   * Channel or team conversation update activities
+>   * Notification activities used by Agent 365 projects
+>
+> * As a result, these options may not appear in the **Mock an Activity** menu.
+>
+> * To test Teams-specific activities, set the channel ID to `msteams`. For more information, see [Multiple channel support](#multiple-channel-support).
+
+> [!NOTE]
+> Even if a specific activity is not available for the current channel, you can still use **Custom activity** to send a customized JSON payload to your agent.
+
 ### Predefined activity triggers
 
 Agents Playground provides predefined activity triggers to test the functionalities of your app.
@@ -325,7 +341,17 @@ Agents Playground acquires a JWT token using the provided authentication setting
 
 ## Multiple channel support
 
-Teams is the default channel used for debugging your application, but other channels are also supported. You can change the channel by setting the `DEFAULT_CHANNEL_ID` environment variable or by using the `--channel-id` option when starting Agents Playground from the command line.
+When you run the Agents Playground as a standalone tool, Microsoft Teams (`msteams`) is used as the default channel. When the playground is launched through Microsoft 365 Agents Toolkit, the default channel is `emulator`. You can change the channel by setting the `DEFAULT_CHANNEL_ID` environment variable or by using the `--channel-id` option when starting Agents Playground from the command line.
+
+> [!NOTE]
+>
+> * To test Teams‑specific activities, set the channel ID to `msteams`.
+>
+> * You can do this by:
+>   * Setting the environment variable:
+>   `DEFAULT_CHANNEL_ID = msteams`
+>   * Or using the CLI option:
+>    `agentsplayground --channel-id msteams`
 
 Currently, the accepted channel IDs are: `msteams`, `directline`, `webchat`, and `emulator`. When you set a channel ID, the properties of the messages sent to the application changes accordingly to simulate a real environment. For the `directline` and `webchat` channels, a corresponding client is displayed, and card rendering differs from that of the Teams channel.
 
