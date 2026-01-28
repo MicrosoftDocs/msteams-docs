@@ -5,21 +5,21 @@ description: Learn more about the tools such as Microsoft 365 Agents Toolkit, Ag
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.date: 08/26/2025
+ms.date: 01/28/2025
 ---
 
 # Tools and SDKs
 
 [!INCLUDE [Deprecation note](../../includes/deprecation-note-teamsfx-sdk.md)]
 
-Build and develop your Microsoft Teams app using tools, SDKs, and libraries. Now, Microsoft provides a comprehensive platform to create, develop, test, debug, and publish your Teams app seamlessly, making the entire process efficient and streamlined. Teams offers the following platform:
+Build and develop your Microsoft Teams agents and apps using tools, SDKs, and libraries. Now, Microsoft provides a comprehensive platform to create, develop, test, debug, and publish your Teams agents and apps seamlessly, making the entire process efficient and streamlined. Teams offers the following platform:
 
 * [SDKs and libraries](#sdks-and-libraries)
 * [Tools](#tools)
 
 ## SDKs and libraries
 
-Teams Platform brings you different SDKs, libraries, and APIs to build and develop your Teams apps.
+Microsoft Teams platform provides SDKs, libraries, and APIs to build and develop Teams agents and apps. [**Teams SDK**](#core-sdks-and-libraries-to-build-teams-app) is the primary SDK for building Microsoft Teams agents and is recommended for all new development scenarios, including tabs, bots, message extensions, and meeting extensions.
 
 <!--
 The following flow diagram explains the different SDKs, libraries, and its relations:
@@ -31,31 +31,28 @@ The following flow diagram explains the different SDKs, libraries, and its relat
 :::image type="icon" source="../../assets/icons/yellow-dot.png" border="false"::: Library often used with another library, but there's no formal dependency. </br>
 :::image type="icon" source="../../assets/icons/grey-dot.png" border="false"::: Library that's underlying service or API. </br>
 -->
-
-### Teams Developer Platform SDKs & libraries
+### Core SDKs and libraries to build Teams app
 
 [!INCLUDE [teams-ai-lib-v2-rec](../../includes/teams-ai-lib-v2-rec.md)]
 
 | SDKs and libraries | Why do you need? | Related SDKs and libraries |
 | ----------------- | -------------- | ----------------------- |
-| [Teams SDK](../../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md) | Teams SDK is a Teams-centric interface to GPT-based common language models and user intent engines. This reduces the requirement for you to handle on complex and expensive tasks of writing and maintaining conversational bot logic to integrate with Large Language Models (LLMs). | Depends on **Bot Framework SDK**. </br> Based on **Azure OpenAI**. |
-| [TeamsFx SDK](~/toolkit/teamsfx-sdk.md) | TeamsFx simplifies your tasks by using Teams single sign-on (SSO) and accessing cloud resources into single-line statements with zero configuration. | Depends on **Bot Framework SDK**, **Teams JavaScript client library**, and **Microsoft Graph SDK**. </br> You can use it with **Teams SDK** and **Adaptive Cards**. |
+| [Teams SDK](../../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md) | Teams SDK is a Teams-centric interface to GPT-based common language models and user intent engines. This reduces the requirement for you to handle on complex and expensive tasks of writing and maintaining conversational bot logic to integrate with Large Language Models (LLMs). | Based on **Azure OpenAI**. |
+| [Microsoft Graph SDKs](/graph/sdks/sdks-overview) | The Microsoft Graph SDKs are designed to simplify the creation of high-quality, efficient, and resilient applications that access Microsoft Graph. The SDKs include two components such as service library and core library. | Based on **Microsoft Graph**. |
+
+### Teams Developer Platform SDKs & libraries
+
+| SDKs and libraries | Why do you need? | Related SDKs and libraries |
+| ----------------- | -------------- | ----------------------- |
 | [Teams JavaScript client library](~/tabs/how-to/using-teams-client-library.md) | The Teams JavaScript client library (TeamsJS) enables you to create hosted experiences within Teams, Microsoft 365 app, and Outlook. These experiences involve hosting your app content in an iFrame. | You can pass the reference to **SharePoint Framework (SPFx)**. </br> You can use it with **Microsoft Graph SDK**, **Adaptive Cards**, and **Fluent UI React components**. |
 | [SharePoint Framework (SPFx)](/sharepoint/dev/spfx/sharepoint-framework-overview) | The SharePoint Framework (SPFx) offers a page and web part model that fully supports client-side SharePoint development, seamlessly integrates with SharePoint data, and extends Microsoft Teams and Microsoft Viva. | You can use it with **Microsoft Graph SDK**, **Adaptive Cards**, and **Fluent UI React components**. </br> Based on **SharePoint REST API**. |
 | [Live Share SDK](~/apps-in-teams-meetings/teams-live-share-overview.md) | Live Share is an SDK created to turn Teams apps into collaborative multi-user experiences without requiring dedicated back-end code to be written. | You can use it with **Microsoft Graph SDK**, **Adaptive Cards**, and **Fluent UI React components**. </br> You can pass the reference to **Teams JavaScript client library**. |
 
-### Core SDKs and libraries to build Teams app
+### Additional libraries and UI utilities to build Teams agents and apps
 
 | SDKs and libraries | Why do you need? | Related SDKs and libraries |
 | ----------------- | -------------- | ----------------------- |
-| [Bot Framework SDK](/azure/bot-service/bot-service-overview) | Microsoft Bot Framework and Azure AI Bot Service are a collection of libraries, tools, and services that enable you to build, test, deploy, and manage intelligent bots. The Bot Framework includes a modular and extensible SDK for building bots and connecting to AI services. | Based on **Azure Bot Service**. |
-| [Microsoft Graph SDKs](/graph/sdks/sdks-overview) | The Microsoft Graph SDKs are designed to simplify the creation of high-quality, efficient, and resilient applications that access Microsoft Graph. The SDKs include two components such as service library and core library. | Based on **Microsoft Graph**. |
-
-### Additional libraries and UI utilities to build Teams apps
-
-| SDKs and libraries | Why do you need? | Related SDKs and libraries |
-| ----------------- | -------------- | ----------------------- |
-| [Adaptive Cards](../../task-modules-and-cards/cards/cards-reference.md#adaptive-card) | An Adaptive Card is a customizable card that can contain any combination of text, speech, images, buttons, and input fields. | You can use it with **TeamsFx SDK**, **Teams JavaScript client library**, and **SharePoint Framework (SPFx)**. |
+| [Adaptive Cards](../../task-modules-and-cards/cards/cards-reference.md#adaptive-card) | An Adaptive Card is a customizable card that can contain any combination of text, speech, images, buttons, and input fields. | You can use it with **Teams JavaScript client library**, and **SharePoint Framework (SPFx)**. |
 | [Fluent UI React components](https://react.fluentui.dev/?path=/docs/concepts-introduction--page) | Fluent UI React components are a collection of UI elements and tools that come from combining various React-based component libraries used in production, like `@fluentui/react` and `@fluentui/react-northstar`. | You can use it with **Teams JavaScript client library** and **SharePoint Framework (SPFx)**. |
 | [Fluid Framework](https://fluidframework.com/docs) | Fluid Framework consists of client libraries that help distribute and synchronize shared state. These libraries enable multiple clients to simultaneously create and operate on shared data structures using coding patterns similar to those used to work with local data. | You can pass the reference to **Live Share SDK**. </br> Based on **Azure Fluid Relay**. |
 
@@ -73,7 +70,7 @@ The following flow diagram explains the different SDKs, libraries, and its relat
 
 ## Tools
 
-Teams platform brings you different tools to build and develop your Teams apps. The following tools are available to build your app:
+Teams platform brings you different tools to build and develop your Teams agents and apps. The following tools are available to build your agents and apps:
 
 | Tools | Why do you need? | Environment | Test and debug |
 | -------- | ------------- | ----------------- | ---------------------- |
