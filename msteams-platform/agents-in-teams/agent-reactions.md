@@ -165,18 +165,18 @@ The following are the success and error codes:
 
 | Response codes | Description | Action |
 | --- | --- | --- |
-| 200 | Reaction added successfully | NA |
-| 200 | Duplicate reaction added | See best practices to for sending multiple reactions to messages |
-| 200 | Deleted reaction successfully | NA |
-| 200 | Deleted non-existent reaction | NA |
+| `200` | Reaction added successfully | NA |
+| `200` | Duplicate reaction added | See best practices to for sending multiple reactions to messages |
+| `200` | Deleted reaction successfully | NA |
+| `200` | Deleted non-existent reaction | NA |
 
 ### Error codes
 
 | Response codes | Error message | Description | Action |
 | --- | --- | --- | --- |
-| 403 | `ApiNotEnabledException` | Feature flag not enabled | The feature flag guarding this feature is not enabled |
-| 404 | `ConversationNotFound` | Conversation not found | The target thread cannot be located, or the agent doesn’t have access to it. |
-| 429 | Too many requests | Throttling limit reached | Reduce the frequency of message reaction calls. Agent reactions are limited to 2 reaction per second.|
+| `403` | `ApiNotEnabledException` | Feature flag not enabled | The feature flag guarding this feature is not enabled |
+| `404` | `ConversationNotFound` | Conversation not found | The target thread cannot be located, or the agent doesn’t have access to it. |
+| `429` | Too many requests | Throttling limit reached | Reduce the frequency of message reaction calls. Agent reactions are limited to 2 reaction per second.|
 
 ## Customize Emojis
 
