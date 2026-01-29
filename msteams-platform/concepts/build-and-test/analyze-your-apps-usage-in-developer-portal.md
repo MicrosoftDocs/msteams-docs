@@ -16,6 +16,9 @@ Whether you're tracking active users, retention rates, or usage patterns across 
 
 The app and agent usage for a given day is reflected within 24 to 48 hours, and usage data for the new apps or agents can take up to three to five days to reflect in the charts. Usage data isn’t shown for apps with fewer than five active users or for agents created using Copilot Studio agent builder.
 
+> [!NOTE]
+> Analytics in Developer Portal is only available for apps with custom-developed capabilities (bots, message extensions, tabs). Apps that are purely declarative agents or Copilot Studio agents won't have analytics available in Developer Portal.
+
 # [Custom apps (New)](#tab/custom-apps-built-for-your-org)
 
 ## Prerequisite
@@ -290,9 +293,19 @@ To view app and agent usage in Developer Portal, you need **Manager** or **Devel
 You can view the app or agent usage for your [third-party app](../../promote-app-adoption.md#access-to-your-apps) and other insights from the **Analytics** page. To access the page:
 
 1. Go to **[Developer Portal](https://dev.teams.microsoft.com)**.
-1. Select **Apps** from the left pane.
-1. Select the required app from the **Apps** page.
-1. Select **Analytics** under the **Overview** section.
+
+# Custom apps (New)
+
+**Note:** Analytics in Developer Portal is only available for apps with custom-developed capabilities (bots, message extensions, tabs). Apps that are purely declarative agents or Copilot Studio agents will not have analytics available in Developer Portal.
+
+To view app and agent usage in Developer Portal, you need **Manager** or **Developer** role in Partner Center. The marketplace account owner or manager can [assign user roles and permissions](/partner-center/account-settings/user-roles).
+
+You can view the app or agent usage for your [third-party app](../../promote-app-adoption.md#access-to-your-apps) and other insights from the **Analytics** page. To access the page:
+
+1. Navigate to **[Developer Portal](https://dev.teams.microsoft.com)**.
+1. Click on **Apps** in the left pane.
+1. Choose the desired app from the **Apps** page.
+1. Click on **Analytics** under the **Overview** section.
 
 :::image type="content" source="../../assets/images/tdp/analy-dev-portal.png" alt-text="Screenshot shows the analytics page of your app and agent in Developer Portal." lightbox="../../assets/images/tdp/analy-dev-portal.png":::
 
