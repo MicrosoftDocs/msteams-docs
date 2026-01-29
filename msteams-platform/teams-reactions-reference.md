@@ -43,12 +43,38 @@ Developer tool for discovering and copying Microsoft Teams reaction IDs
    :::column-end:::
 :::row-end:::
 
+## Hand gestures
+
 :::row:::
    :::column:::
-      Smileys<br>
-      :::image type="icon" source="assets/icons/teams-reactions-ref/laugh.png" border="false":::
+      Hand gestures - Diverse<br>
+      :::image type="icon" source="assets/icons/teams-reactions-ref/waving-hand-diverse.png.png" border="false":::
       ```ID
-          laugh
+          1f44b_wavinghand
+      ```
+   :::column-end:::
+:::row:::
+   :::column:::
+      Hand gestures - Diverse<br>
+      :::image type="icon" source="assets/icons/teams-reactions-ref/raised-back-of-hand-diverse.png.png" border="false":::
+      ```ID
+          1f91a_raisedbackofhand
+      ```
+   :::column-end:::
+:::row:::
+   :::column:::
+      Hand gestures - Diverse<br>
+      :::image type="icon" source="assets/icons/teams-reactions-ref/hand-with-fingers-splayed-diverse.png" border="false":::
+      ```ID
+          1f590_handwithfingerssplayed
+      ```
+   :::column-end:::
+:::row:::
+   :::column:::
+      Hand gestures - Diverse<br>
+      :::image type="icon" source="assets/icons/teams-reactions-ref/raised-hand-diverse.png" border="false":::
+      ```ID
+          270b_raisedhand
       ```
    :::column-end:::
 :::row-end:::
