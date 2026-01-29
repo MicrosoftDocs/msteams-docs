@@ -10,6 +10,10 @@ ms.localizationpriority: high
 
 Developer tool for discovering and copying Microsoft Teams reaction IDs
 
+> [!div class="op_single_selector"]
+> - [Smileys](#smileys)
+> - [Hand gestures](#hand-gestures)
+
 ## Smileys
 
 :::row:::
