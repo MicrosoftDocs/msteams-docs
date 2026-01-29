@@ -41,7 +41,7 @@ Developer tool for discovering and copying Microsoft Teams reaction IDs
 :::row:::
    :::column:::
       :::image type="icon" source="assets/icons/teams-reactions-ref/waving-hand-diverse.png" border="false":::<br>
-      **Waving hand** - *Diverse*
+      **Waving hand** - :::image type="icon" source="assets/icons/teams-reactions-ref/diverse.png" border="false"::: *Diverse*
       ```emojiID
           1f44b_wavinghand
       ```
