@@ -385,7 +385,7 @@ As your bot generates a response send informative updates to the user such as, *
 POST /conversations/<conversationId>/activities HTTP/1.1 
 {
   "type": "typing",
-  " serviceurl": "https://smba.trafficmanager.net/amer/",
+  "serviceurl": "https://smba.trafficmanager.net/amer/",
   "channelId": "msteams",
   "from": {
     "id": "<botId>",
@@ -401,7 +401,7 @@ POST /conversations/<conversationId>/activities HTTP/1.1
     "aadObjectId": "<recipient aad objecID>"
   },
   "locale": "en -US",
-  "text ": "Searching through emails...", // (required) second informative loading message.
+  "text": "Searching through emails...", // (required) second informative loading message.
   "entities":[
     {
       "type": "streaminfo",
@@ -432,7 +432,7 @@ The throttling limit is 1 request per second. You must ensure that the bot sends
 POST /conversations/<conversationId>/activities HTTP/1.1
 {
   "type": "typing",
-  " serviceurl" : "https://smba.trafficmanager.net/amer/ ",
+  "serviceurl" : "https://smba.trafficmanager.net/amer/ ",
   "channelId": "msteams",
   "from": {
     "id": "<botId>",
@@ -448,7 +448,7 @@ POST /conversations/<conversationId>/activities HTTP/1.1
     "aadObjectId": "<recipient aad objecID>"
   },
   "locale": "en-US" ,
-  "text ": "A brown fox", // (required) first streaming content.
+  "text": "A brown fox", // (required) first streaming content.
   "entities":[
     {
       "type": "streaminfo",
@@ -469,7 +469,7 @@ POST /conversations/<conversationId>/activities HTTP/1.1
 POST /conversations/<conversationId>/activities HTTP/1.1
 {
   "type": "typing",
-  " serviceurl" : "https://smba.trafficmanager.net/amer/ ",
+  "serviceurl" : "https://smba.trafficmanager.net/amer/ ",
   "channelId": "msteams",
   "from": {
     "id": "<botId>",
@@ -485,7 +485,7 @@ POST /conversations/<conversationId>/activities HTTP/1.1
     "aadObjectId": "<recipient aad objecID>"
   },
   "locale": "en-US" ,
-  "text ": "A brown fox jumped over the fence", // (required) first streaming content.
+  "text": "A brown fox jumped over the fence", // (required) first streaming content.
   "entities":[
     {
       "type": "streaminfo",
@@ -513,7 +513,7 @@ After your bot completes generating its message, send the end streaming signal a
 POST /conversations/<conversationId>/activities HTTP/1.1
 {
   "type": "message",
-  " serviceurl" : "https://smba.trafficmanager.net/amer/ ",
+  "serviceurl" : "https://smba.trafficmanager.net/amer/ ",
   "channelId": "msteams",
   "from": {
     "id": "<botId>",
@@ -529,7 +529,7 @@ POST /conversations/<conversationId>/activities HTTP/1.1
     "aadObjectId": "<recipient aad objecID>"
   },
   "locale": "en-US",
-  "text ": "A brown fox jumped over the fence.", // (required) first streaming content.
+  "text": "A brown fox jumped over the fence.", // (required) first streaming content.
   "entities":[
     {
       "type": "streaminfo",
