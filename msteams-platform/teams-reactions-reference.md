@@ -52,6 +52,18 @@ Developer tool for discovering and copying Microsoft Teams reaction IDs
       ```ID
           1f44b_wavinghand-tone2
       ```
+      :::image type="icon" source="assets/icons/teams-reactions-ref/tone-3.png" border="false":::
+      ```ID
+          1f44b_wavinghand-tone3
+      ```
+      :::image type="icon" source="assets/icons/teams-reactions-ref/tone-4.png" border="false":::
+      ```ID
+          1f44b_wavinghand-tone4
+       ```
+      :::image type="icon" source="assets/icons/teams-reactions-ref/tone-5.png" border="false":::
+      ```ID
+          1f44b_wavinghand-tone5
+       ```
 
       </details>
    :::column-end:::
