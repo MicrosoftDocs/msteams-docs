@@ -5,7 +5,7 @@ description: Learn more about the tools such as Microsoft 365 Agents Toolkit, Ag
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
-ms.date: 01/28/2025
+ms.date: 01/28/2026
 ---
 
 # Tools and SDKs
@@ -19,7 +19,7 @@ Build and develop your Microsoft Teams agents and apps using tools, SDKs, and li
 
 ## SDKs and libraries
 
-Microsoft Teams platform provides SDKs, libraries, and APIs to build and develop Teams agents and apps. [**Teams SDK**](#core-sdks-and-libraries-to-build-teams-app) is the primary SDK for building Microsoft Teams agents and is recommended for all new development scenarios, including tabs, bots, message extensions, and meeting extensions.
+Microsoft Teams platform provides SDKs, libraries, and APIs to build and develop Teams agents and apps. **Teams SDK** is the primary SDK for building Microsoft Teams agents and is recommended for all new development scenarios, including tabs, bots, message extensions, and meeting extensions.
 
 <!--
 The following flow diagram explains the different SDKs, libraries, and its relations:
@@ -75,8 +75,8 @@ Teams platform brings you different tools to build and develop your Teams agents
 | Tools | Why do you need? | Environment | Test and debug |
 | -------- | ------------- | ----------------- | ---------------------- |
 | [Microsoft 365 Agents Toolkit (previously known as Teams Toolkit)](../../toolkit/agents-toolkit-fundamentals.md) | Agents Toolkit makes it simple to get started with app development for Teams. You can begin with a project template for common custom app built for your org (LOB app) scenarios or start from a sample. Save time on setup through automated app registration and configuration using Visual Studio Code and Visual Studio. | **Visual Studio Code**: JavaScript and TypeScript </br> **Visual Studio**: .NET and Blazor | In Visual Studio Code and Visual Studio |
-| [Microsoft 365 Agents Toolkit CLI](../../toolkit/Teams-Toolkit-CLI.md) (previously known as Teams Toolkit CLI) | Agents Toolkit CLI is a text-based command line interface (CLI) that accelerates Teams application development. It aims to provide keyboard centric experience when building Teams applications. | JavaScript and .NET | Use command prompt |
 | [Developer Portal for Teams](teams-developer-portal.md) | Developer Portal for Teams is the primary tool for configuring, distributing, and managing your Teams apps. With Developer Portal, you can create a basic app manifest (previously known as Teams app manifest) and publish the app to Teams.  | Supports all languages | Developer Portal for Teams |
+| [Microsoft 365 Agents Toolkit CLI](../../toolkit/Teams-Toolkit-CLI.md) (previously known as Teams Toolkit CLI) | Agents Toolkit CLI is a text-based command line interface (CLI) that accelerates Teams application development. It aims to provide keyboard centric experience when building Teams applications. | JavaScript and .NET | Use command prompt |
 
 </br>
 
