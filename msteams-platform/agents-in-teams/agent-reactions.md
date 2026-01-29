@@ -18,8 +18,8 @@ Map emojis and reactions to specific agent actions, and use `emojiID` to send th
 
 **Key highlights**:
 
-- [Add reactions](#enable-agents-to-add-reactions)
-- [Remove reactions](#enable-agent-to-remove-reactions)
+- [Add reactions](#enable-an-agent-to-add-reactions)
+- [Remove reactions](#enable-an-agent-to-remove-reactions)
 - [View response codes](#response-codes)
 - [Choose skin tones](#response-codes)
 - [Use custom emojis](#custom-emojis)
