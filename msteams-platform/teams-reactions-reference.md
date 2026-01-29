@@ -16,14 +16,14 @@ Developer tool for discovering and copying Microsoft Teams reaction IDs
    :::column:::
       Smileys<br>
       :::image type="icon" source="assets/icons/teams-reactions-ref/grinning-face-with-big-eyes.png" border="false":::
-      ```properties
+      ```ID
           1f603_grinningfacewithbigeyes
       ```
    :::column-end:::
    :::column:::
       Smileys<br>
       :::image type="icon" source="assets/icons/teams-reactions-ref/happy-face.png" border="false":::
-      ```properties
+      ```ID
           happyface
       ```
    :::column-end:::
@@ -41,6 +41,9 @@ Developer tool for discovering and copying Microsoft Teams reaction IDs
           1f601_beamingfacewithsmilingeyes
       ```
    :::column-end:::
+:::row-end:::
+
+:::row:::
    :::column:::
       Smileys<br>
       :::image type="icon" source="assets/icons/teams-reactions-ref/laugh.png" border="false":::
