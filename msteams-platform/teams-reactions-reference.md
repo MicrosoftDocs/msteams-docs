@@ -43,6 +43,7 @@ Developer tool for discovering and copying Microsoft Teams reaction IDs
       ```
       <details>
       <summary><b>Show Skin Tones (5)</b></summary>
+
       :::image type="icon" source="assets/icons/teams-reactions-ref/tone-1.png" border="false":::
       ```ID
           1f44b_wavinghand-tone1
@@ -51,6 +52,7 @@ Developer tool for discovering and copying Microsoft Teams reaction IDs
       ```ID
           1f44b_wavinghand-tone2
       ```
+
       </details>
    :::column-end:::
    :::column:::
