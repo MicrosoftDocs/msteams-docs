@@ -14,28 +14,24 @@ Developer tool for discovering and copying Microsoft Teams reaction IDs
 
 :::row:::
    :::column:::
-      Smileys<br>
       :::image type="icon" source="assets/icons/teams-reactions-ref/grinning-face-with-big-eyes.png" border="false":::
       ```ID
           1f603_grinningfacewithbigeyes
       ```
    :::column-end:::
    :::column:::
-      Smileys<br>
       :::image type="icon" source="assets/icons/teams-reactions-ref/happy-face.png" border="false":::
       ```ID
           happyface
       ```
    :::column-end:::
    :::column:::
-      Smileys<br>
       :::image type="icon" source="assets/icons/teams-reactions-ref/grinning-face-with-smiling-eyes.png" border="false":::
       ```ID
           grinningfacewithsmilingeyes
       ```
    :::column-end:::
    :::column:::
-      Smileys<br>
       :::image type="icon" source="assets/icons/teams-reactions-ref/beaming-face-with-smiling-eyes.png" border="false":::
       ```ID
           1f601_beamingfacewithsmilingeyes
@@ -47,7 +43,6 @@ Developer tool for discovering and copying Microsoft Teams reaction IDs
 
 :::row:::
    :::column:::
-      Hand gestures - Diverse<br>
       :::image type="icon" source="assets/icons/teams-reactions-ref/waving-hand-diverse.png" border="false":::
       ```ID
           1f44b_wavinghand
@@ -55,7 +50,6 @@ Developer tool for discovering and copying Microsoft Teams reaction IDs
    :::column-end:::
 :::row:::
    :::column:::
-      Hand gestures - Diverse<br>
       :::image type="icon" source="assets/icons/teams-reactions-ref/raised-back-of-hand-diverse.png" border="false":::
       ```ID
           1f91a_raisedbackofhand
@@ -63,7 +57,6 @@ Developer tool for discovering and copying Microsoft Teams reaction IDs
    :::column-end:::
 :::row:::
    :::column:::
-      Hand gestures - Diverse<br>
       :::image type="icon" source="assets/icons/teams-reactions-ref/hand-with-fingers-splayed-diverse.png" border="false":::
       ```ID
           1f590_handwithfingerssplayed
@@ -71,7 +64,6 @@ Developer tool for discovering and copying Microsoft Teams reaction IDs
    :::column-end:::
 :::row:::
    :::column:::
-      Hand gestures - Diverse<br>
       :::image type="icon" source="assets/icons/teams-reactions-ref/raised-hand-diverse.png" border="false":::
       ```ID
           270b_raisedhand
