@@ -12,7 +12,7 @@ ms.topic: reference
 
 Enable agents to communicate beyond text using reactions, emojis, and context-aware actions. It signals agent's intentional design to improve user trust and make agent behavior more transparent and shows how the agent understands user intent and need.
 
-[WIP: Add screenshot image]
+:::image type="content" source="../assets/images/agents-in-teams/teams-reactions/agent-reactions.png" alt-text="Image shows agent reactions in Teams."  border="false":::
 
 Map emojis and reactions to specific agent actions, and use `emojiID` to send the right reaction in the conversation.
 
