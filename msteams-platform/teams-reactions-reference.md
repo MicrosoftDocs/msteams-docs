@@ -31,12 +31,6 @@ Developer tool for discovering and copying Microsoft Teams reaction IDs
           grinningfacewithsmilingeyes
       ```
    :::column-end:::
-   :::column:::
-      :::image type="icon" source="assets/icons/teams-reactions-ref/beaming-face-with-smiling-eyes.png" border="false":::
-      ```ID
-          1f601_beamingfacewithsmilingeyes
-      ```
-   :::column-end:::
 :::row-end:::
 
 ## Hand gestures
@@ -60,10 +54,20 @@ Developer tool for discovering and copying Microsoft Teams reaction IDs
           1f590_handwithfingerssplayed
       ```
    :::column-end:::
+:::row-end:::
+
+<!--
+   :::column:::
+      :::image type="icon" source="assets/icons/teams-reactions-ref/beaming-face-with-smiling-eyes.png" border="false":::
+      ```ID
+          1f601_beamingfacewithsmilingeyes
+      ```
+   :::column-end:::
+
    :::column:::
       :::image type="icon" source="assets/icons/teams-reactions-ref/raised-hand-diverse.png" border="false":::
       ```ID
           270b_raisedhand
       ```
    :::column-end:::
-:::row-end:::
+>
