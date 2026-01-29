@@ -10,7 +10,11 @@ ms.localizationpriority: high
 
 Developer tool for discovering and copying Microsoft Teams reaction IDs
 
+
+Select the emoji category:
+
 > [!div class="op_single_selector"]
+> - [All categories](#teams-reactions-reference)
 > - [Smileys](#smileys)
 > - [Hand gestures](#hand-gestures)
 
