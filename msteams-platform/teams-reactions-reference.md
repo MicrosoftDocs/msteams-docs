@@ -9,3 +9,22 @@ ms.localizationpriority: high
 # Teams Reactions Reference
 
 Developer tool for discovering and copying Microsoft Teams reaction IDs
+
+## Smileys
+
+:::row:::
+   :::column:::
+      Smileys
+      :::image type="icon" source="assets/icons/grinning-face-with-big-eyes.png" border="false":::
+      ```properties
+          1f603_grinningfacewithbigeyes
+      ```
+   :::column-end:::
+   :::column:::
+      Smileys
+      :::image type="icon" source="assets/icons/happy-face.png" border="false":::
+      ```properties
+          1f603_grinningfacewithbigeyes
+      ```
+   :::column-end:::
+:::row-end:::
