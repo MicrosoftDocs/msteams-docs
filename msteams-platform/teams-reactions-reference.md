@@ -10,6 +10,15 @@ ms.localizationpriority: high
 
 Developer tool for discovering and copying Microsoft Teams reaction IDs
 
+**Quick guide**:
+
+Reference tool for Microsoft Teams developers to find and copy reaction IDs for bot development and app integrations.
+
+- Copy `emojiID` to clipboard
+- Diverse filter for skin tone variants
+
+:::image type="icon" source="assets/icons/teams-reactions-ref/diverse-skin-tones.png" border="false":::
+
 
 Select the emoji category:
 
