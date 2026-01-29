@@ -41,7 +41,7 @@ Developer tool for discovering and copying Microsoft Teams reaction IDs
 :::row:::
    :::column:::
       :::image type="icon" source="assets/icons/teams-reactions-ref/waving-hand-diverse.png" border="false":::<br>
-      **Waving hand**
+      **Waving hand** - *Diverse*
       ```emojiID
           1f44b_wavinghand
       ```
@@ -73,14 +73,14 @@ Developer tool for discovering and copying Microsoft Teams reaction IDs
    :::column-end:::
    :::column:::
       :::image type="icon" source="assets/icons/teams-reactions-ref/raised-back-of-hand-diverse.png" border="false":::<br>
-      **Raised back of hand**
+      **Raised back of hand** - *Diverse*
       ```emojiID
           1f91a_raisedbackofhand
       ```
    :::column-end:::
    :::column:::
       :::image type="icon" source="assets/icons/teams-reactions-ref/hand-with-fingers-splayed-diverse.png" border="false":::<br>
-      **Hand with fingers splayed**
+      **Hand with fingers splayed** - *Diverse*
       ```emojiID
           1f590_handwithfingerssplayed
       ```
