@@ -80,7 +80,7 @@ Developer tool for discovering and copying Microsoft Teams reaction IDs
       ```
 
       <details>
-      <summary>:::image type="icon" source="assets/icons/teams-reactions-ref/show-skin-tones.png" border="false":::</summary>
+      <summary><b>Show Skin Tones (5)</b></summary>
 
       :::image type="icon" source="assets/icons/teams-reactions-ref/tone-1.png" border="false":::
       ```ID
