@@ -48,7 +48,7 @@ Developer tool for discovering and copying Microsoft Teams reaction IDs
 :::row:::
    :::column:::
       Hand gestures - Diverse<br>
-      :::image type="icon" source="assets/icons/teams-reactions-ref/waving-hand-diverse.png.png" border="false":::
+      :::image type="icon" source="assets/icons/teams-reactions-ref/waving-hand-diverse.png" border="false":::
       ```ID
           1f44b_wavinghand
       ```
@@ -56,7 +56,7 @@ Developer tool for discovering and copying Microsoft Teams reaction IDs
 :::row:::
    :::column:::
       Hand gestures - Diverse<br>
-      :::image type="icon" source="assets/icons/teams-reactions-ref/raised-back-of-hand-diverse.png.png" border="false":::
+      :::image type="icon" source="assets/icons/teams-reactions-ref/raised-back-of-hand-diverse.png" border="false":::
       ```ID
           1f91a_raisedbackofhand
       ```
