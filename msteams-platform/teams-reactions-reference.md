@@ -14,17 +14,38 @@ Developer tool for discovering and copying Microsoft Teams reaction IDs
 
 :::row:::
    :::column:::
-      Smileys
-      :::image type="icon" source="assets/icons/grinning-face-with-big-eyes.png" border="false":::
+      Smileys<br>
+      :::image type="icon" source="assets/icons/teams-reactions-ref/grinning-face-with-big-eyes.png" border="false":::
       ```properties
           1f603_grinningfacewithbigeyes
       ```
    :::column-end:::
    :::column:::
-      Smileys
-      :::image type="icon" source="assets/icons/happy-face.png" border="false":::
+      Smileys<br>
+      :::image type="icon" source="assets/icons/teams-reactions-ref/happy-face.png" border="false":::
       ```properties
-          1f603_grinningfacewithbigeyes
+          happyface
+      ```
+   :::column-end:::
+   :::column:::
+      Smileys<br>
+      :::image type="icon" source="assets/icons/teams-reactions-ref/grinning-face-with-smiling-eyes.png" border="false":::
+      ```ID
+          grinningfacewithsmilingeyes
+      ```
+   :::column-end:::
+   :::column:::
+      Smileys<br>
+      :::image type="icon" source="assets/icons/teams-reactions-ref/beaming-face-with-smiling-eyes.png" border="false":::
+      ```ID
+          1f601_beamingfacewithsmilingeyes
+      ```
+   :::column-end:::
+   :::column:::
+      Smileys<br>
+      :::image type="icon" source="assets/icons/teams-reactions-ref/laugh.png" border="false":::
+      ```ID
+          laugh
       ```
    :::column-end:::
 :::row-end:::
