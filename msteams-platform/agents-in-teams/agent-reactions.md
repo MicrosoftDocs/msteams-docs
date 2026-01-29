@@ -182,7 +182,7 @@ You can allow skin tones for emojis and also use custom emojis that might be spe
 
 The Teams reactions reference page shows skin tone options for emojis. The emojis that offer skin tone are tagged as **Diverse**.
 
-:::image type="content" source="../assets/images/agents-in-teams/teams-reactions/diverse-reaction.png" alt-text="Image shows a diverse tagged emoji for choosing skin tones. ":::
+:::image type="content" source="../assets/images/agents-in-teams/teams-reactions/diverse-reaction.png" alt-text="Image shows a diverse tagged emoji for choosing skin tones." border="false":::
 
 To select a particular skin tone:
 
@@ -191,7 +191,7 @@ To select a particular skin tone:
 
     The card expands to show the available skin tones.
 
-    :::image type="content" source="../assets/images/agents-in-teams/teams-reactions/skin-tones.png" alt-text="Image shows available skin tones for a Diverse emoji.":::
+    :::image type="content" source="../assets/images/agents-in-teams/teams-reactions/skin-tones.png" alt-text="Image shows available skin tones for a Diverse emoji."  border="false":::
 
 1. Copy the `EmojiID` for the skin tone that you want to use for your agent.
 
@@ -201,14 +201,14 @@ To select a particular skin tone:
 
 With Agents in Teams, you can  add custom emojis as per the need for your organization.
 
-:::image type="content" source="../assets/images/agents-in-teams/teams-reactions/custom-emojis.png" alt-text="Image shows custom emojis in Teams.":::
+:::image type="content" source="../assets/images/agents-in-teams/teams-reactions/custom-emojis.png" alt-text="Image shows custom emojis in Teams."  border="false":::
 
 To use custom emojis in your agent:
 
 1. Choose the custom emojis from Teams emoji picker.
 1. Hover your cursor over the emoji that you want to use. The emoji ID for the emoji appears.
 
-    :::image type="content" source="../assets/images/agents-in-teams/teams-reactions/custom-emoji-id.png" alt-text="Image shows the emoji ID for a custom emoji.":::
+    :::image type="content" source="../assets/images/agents-in-teams/teams-reactions/custom-emoji-id.png" alt-text="Image shows the emoji ID for a custom emoji."  border="false":::
 
 1. Use the emojiID for the selected emoji string as your parameter. Ensure the string parameter for the custom emoji must exactly match the name of the custom emoji as it appears in your organization.
 
