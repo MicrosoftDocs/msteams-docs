@@ -14,19 +14,22 @@ Developer tool for discovering and copying Microsoft Teams reaction IDs
 
 :::row:::
    :::column:::
-      :::image type="icon" source="assets/icons/teams-reactions-ref/grinning-face-with-big-eyes.png" border="false":::
+      :::image type="icon" source="assets/icons/teams-reactions-ref/grinning-face-with-big-eyes.png" border="false":::<br>
+      **Grinning face with big eyes**
       ```ID
           1f603_grinningfacewithbigeyes
       ```
    :::column-end:::
    :::column:::
-      :::image type="icon" source="assets/icons/teams-reactions-ref/happy-face.png" border="false":::
+      :::image type="icon" source="assets/icons/teams-reactions-ref/happy-face.png" border="false":::<br>
+      **Happy face**
       ```ID
           happyface
       ```
    :::column-end:::
    :::column:::
-      :::image type="icon" source="assets/icons/teams-reactions-ref/grinning-face-with-smiling-eyes.png" border="false":::
+      :::image type="icon" source="assets/icons/teams-reactions-ref/grinning-face-with-smiling-eyes.png" border="false":::<br>
+      **Grinning face with smiling eyes**
       ```ID
           grinningfacewithsmilingeyes
       ```
@@ -37,7 +40,8 @@ Developer tool for discovering and copying Microsoft Teams reaction IDs
 
 :::row:::
    :::column:::
-      :::image type="icon" source="assets/icons/teams-reactions-ref/waving-hand-diverse.png" border="false":::
+      :::image type="icon" source="assets/icons/teams-reactions-ref/waving-hand-diverse.png" border="false":::<br>
+      **Waving hand**
       ```ID
           1f44b_wavinghand
       ```
@@ -68,13 +72,15 @@ Developer tool for discovering and copying Microsoft Teams reaction IDs
       </details>
    :::column-end:::
    :::column:::
-      :::image type="icon" source="assets/icons/teams-reactions-ref/raised-back-of-hand-diverse.png" border="false":::
+      :::image type="icon" source="assets/icons/teams-reactions-ref/raised-back-of-hand-diverse.png" border="false":::<br>
+      **Raised back of hand**
       ```ID
           1f91a_raisedbackofhand
       ```
    :::column-end:::
    :::column:::
-      :::image type="icon" source="assets/icons/teams-reactions-ref/hand-with-fingers-splayed-diverse.png" border="false":::
+      :::image type="icon" source="assets/icons/teams-reactions-ref/hand-with-fingers-splayed-diverse.png" border="false":::<br>
+      **Hand with fingers splayed**
       ```ID
           1f590_handwithfingerssplayed
       ```
