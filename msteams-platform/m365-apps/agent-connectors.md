@@ -146,7 +146,7 @@ You can use inline definitions if your toolset is static, or dynamic discovery i
 
 Dynamic discovery allows Microsoft 365 to fetch your tool list at runtime, which is recommended for servers whose tools change frequently.
 
-You can enable dynamic tool discovery by omitting the `mcpToolDescription` from your [localMcpServer](/microsoft-365/extensibility/schema/root-agent-connectors-tool-source-local-mcp-server) or [remoteMcpServer](/microsoft-365/extensibility/schema/root-agent-connectors-tool-source-remote-mcp-server) configuration.
+You can enable dynamic tool discovery by omitting the [mcpToolDescription](/microsoft-365/extensibility/schema/root-agent-connectors-tool-source-remote-mcp-server-mcp-tool-description) from your [localMcpServer](/microsoft-365/extensibility/schema/root-agent-connectors-tool-source-local-mcp-server) or [remoteMcpServer](/microsoft-365/extensibility/schema/root-agent-connectors-tool-source-remote-mcp-server) configuration.
 
 When enabled, agents call your server's `tools/list` method to retrieve available tools. This approach eliminates the need to republish your app when tools change.
 
@@ -216,7 +216,6 @@ The following is an example of a complete agent connector configuration, using *
                                   "title": "Query Items",
                                   "readOnlyHint": true
                               }
-                            }
                           }
                       ]
                   }
