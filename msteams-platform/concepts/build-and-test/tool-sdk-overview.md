@@ -68,6 +68,11 @@ The following flow diagram explains the different SDKs, libraries, and its relat
 | [SharePoint REST API](/sharepoint/dev/sp-add-ins/get-to-know-the-sharepoint-rest-service?tabs=csom) | You can remotely engage with SharePoint data using any technology that supports Representational State Transfer (REST) web requests. You can perform basic create, read, update, and delete (CRUD) operations by using the REST interface provided by SharePoint. | Used for **SharePoint Framework (SPFx)**. |
 | [Azure Fluid Relay](/azure/azure-fluid-relay/overview/overview) | The Fluid Framework is an open source, platform independent framework. Azure Fluid Relay is a managed service for the Fluid Framework that helps developers build real-time collaborative experiences and replicate states across connected JavaScript clients in real-time. | Used for **Fluid Framework**. |
 
+> [!NOTE]
+> The **Bot Framework SDK** and **Bot Framework Emulator** have been archived on GitHub and are no longer updated or maintained. Support tickets for the Bot Framework SDK will no longer be serviced after December 31, 2025.
+>
+> To build agents with your choice of AI services, orchestration, and knowledge, use the **Microsoft 365 Agents SDK** The Agents SDK has language support for C#, JavaScript or Python..
+
 ## Tools
 
 Teams platform brings you different tools to build and develop your Teams agents and apps. The following tools are available to build your agents and apps:
