@@ -71,7 +71,7 @@ The following flow diagram explains the different SDKs, libraries, and its relat
 > [!NOTE]
 > The **Bot Framework SDK** and **Bot Framework Emulator** have been archived on GitHub and are no longer updated or maintained. Support tickets for the Bot Framework SDK will no longer be serviced after December 31, 2025.
 >
-> To build agents with your choice of AI services, orchestration, and knowledge, use the **Microsoft 365 Agents SDK** The Agents SDK has language support for C#, JavaScript or Python..
+> To build agents with your choice of AI services, orchestration, and knowledge, use the **Microsoft 365 Agents SDK**. The Agents SDK has language support for C#, JavaScript or Python.
 
 ## Tools
 
