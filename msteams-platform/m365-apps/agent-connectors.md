@@ -54,7 +54,7 @@ First, declare your MCP server in the [agentConnectors](/microsoft-365/extensibi
         "description": "Provides workflow automation and task management tools.",
         "toolSource": {
           "remoteMcpServer": {
-            "endpoint": "https://mcp.mycompany.com"
+            "mcpServerUrl": "https://mcp.mycompany.com"
           }
         }
       }
@@ -76,7 +76,7 @@ Define how Microsoft 365 connects to your MCP server using the `remoteMcpServer`
 ````json
 "toolSource": {
   "remoteMcpServer": {
-    "endpoint": "https://mcp.mycompany.com"
+    "mcpServerUrl": "https://mcp.mycompany.com"
   }
 }
 ````
@@ -102,7 +102,7 @@ For OAuth 2.0 tokens stored in Microsoft's secure vault, specify authorization t
 
 ````json
 "remoteMcpServer": {
-  "endpoint": "https://mcp.mycompany.com",
+  "mcpServerUrl": "https://mcp.mycompany.com",
   "authorization": {
     "type": "OAuthPluginVault",
     "referenceId": "my-oauth-config"
@@ -139,7 +139,6 @@ For enterprise scenarios, prefer OAuth over API keys to align with security best
 
 Choose how Microsoft 365 agents discover the tools your MCP server provides. Currently only inline tool definitions are supported.
 
-<!-- Uncommment once dynamic tool discovery is supported
 You can use inline definitions if your toolset is static, or dynamic discovery if your toolset changes frequently.
 
 
@@ -147,18 +146,7 @@ You can use inline definitions if your toolset is static, or dynamic discovery i
 
 Dynamic discovery allows Microsoft 365 to fetch your tool list at runtime, which is recommended for servers whose tools change frequently.
 
-The following example shows how to add the dynamic discovery flag to your `remoteMcpServer` configuration:
-
-````json
-"remoteMcpServer": {
-  "endpoint": "https://mcp.mycompany.com",
-  "authorization": {
-    "type": "ApiKeyPluginVault",
-    "referenceId": "my-apikey"
-  },
-  "modelContextProtocol.enable_dynamic_discovery": true
-}
-````
+You can enable dynamic tool discovery by omitting the `mcpToolDescription` from your [localMcpServer](/microsoft-365/extensibility/schema/root-agent-connectors-tool-source-local-mcp-server) or [remoteMcpServer](/microsoft-365/extensibility/schema/root-agent-connectors-tool-source-remote-mcp-server) configuration.
 
 When enabled, agents call your server's `tools/list` method to retrieve available tools. This approach eliminates the need to republish your app when tools change.
 
@@ -170,7 +158,7 @@ For static toolsets that don't change frequently, add an `mcpToolDescription` ob
 
 ````json
 "remoteMcpServer": {
-  "endpoint": "https://mcp.mycompany.com",
+  "mcpServerUrl": "https://mcp.mycompany.com",
   "authorization": {
     "type": "ApiKeyPluginVault",
     "referenceId": "my-apikey"
