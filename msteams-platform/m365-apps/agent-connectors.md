@@ -13,7 +13,7 @@ Agents in Microsoft 365, such as [Channel Agent](/microsoftteams/set-up-channel-
 
 > [!NOTE]
 >
-> Agent Connectors are available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+> Agent Connectors are available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) and only supported in Channel Agent for Microsoft Teams. Additional agent hosts will be supported in the future.
 
 Microsoft 365 agents use agent connectors to communicate with external systems. For MCP servers, the connector provides:
 
@@ -306,7 +306,6 @@ If your MCP server isn't working as expected, check these common issues:
 
 - Verify `tools/list` returns valid tool definitions
 - Check that tool descriptions are clear and complete
-- Confirm `modelContextProtocol.enable_dynamic_discovery` is set correctly
 - Validate the JSON schema of inline tool definitions
 
 ### Authentication failures
