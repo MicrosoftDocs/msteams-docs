@@ -27,16 +27,16 @@ Map emojis and reactions to specific agent actions, and use `EmojiID` to send th
 
 ## Enable an agent to add reactions
 
-You can use the `addReaction` method from Teams SDK or call the `add reaction` API directly to send reactions to messages.
-
-To enable agents to send reactions to a message:
+You can use the `addReaction` method from Teams SDK or call the `add reaction` API directly to send reactions to messages. To enable agents to send reactions to a message:
 
 1. Use the [Teams reactions reference](teams-reactions-reference.md) for getting the `EmojiID` for the reactions that you want to add. You can also select a particular [skin tone for the emoji](#modify-skin-tone-for-emojis) by selecting its `EmojiID`.
 1. Use the `addReaction` method from Teams SDK or call the `add reaction` API to send reactions to messages.
 
-The following code snippet shows an example of adding the *like* reaction to a message.
+The following code snippet shows an example of adding the *Like* reaction to a message:
 
 # [TypeScript](#tab/ts1)
+
+[WIP: Add link to Teams SDK docs.]
 
 ```typescript
 
@@ -49,6 +49,8 @@ app.on('mention', async ({ activity, send }) => {
 ```
 
 # [CSharp](#tab/cs1)
+
+[WIP: Add link to Teams SDK docs.]
 
 ```csharp
 [Message]
@@ -65,6 +67,8 @@ app.on('mention', async ({ activity, send }) => {
 ```
 
 # [Python](#tab/py1)
+
+[WIP: Add link to Teams SDK docs.]
 
 ```python
 @app.on_message
@@ -89,16 +93,16 @@ Where,
 
 ## Enable an agent to remove reactions
 
-You can choose to enable agents to remove reactions from messages.
-
-To enable agents to remove reactions from a message:
+You can choose to enable agents to remove reactions from messages. To enable agents to remove reactions from a message:
 
 1. Use the [Teams reactions reference](teams-reactions-reference.md) for getting the `EmojiID` for the reactions that you want to add. You can also select a particular [skin tone for the emoji](#modify-skin-tone-for-emojis) by selecting its `EmojiID`.
 1. Use the `removeReaction` method from Teams SDK or call the `remove reaction` API to send reactions to messages.
 
-The following code snippet shows an example of removing a reaction from a message.
+The following code snippet shows an example of removing a reaction from a message:
 
 # [TypeScript](#tab/ts1)
+
+[WIP: Add link to Teams SDK docs.]
 
 ```typescript
 app.on('mention', async ({ activity, send }) => {
@@ -111,6 +115,8 @@ app.on('mention', async ({ activity, send }) => {
 ```
 
 # [CSharp](#tab/cs1)
+
+[WIP: Add link to Teams SDK docs.]
 
 ```csharp
 [Message]
@@ -128,6 +134,8 @@ app.on('mention', async ({ activity, send }) => {
 ```
 
 # [Python](#tab/py1)
+
+[WIP: Add link to Teams SDK docs.]
 
 ```python
 @app.on_message
