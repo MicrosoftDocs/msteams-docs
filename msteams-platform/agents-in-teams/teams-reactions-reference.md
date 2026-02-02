@@ -17,7 +17,7 @@ Reference tool for Microsoft Teams developers to find and copy reaction IDs for 
 - Copy `EmojiID` to clipboard
 - Diverse filter for skin tone variants
 
-Use these emojis for building agents that can receive reaction notifications and send Teams reactions in a conversation. For more information, see [enable agent reactions in Teams](agent-reactions.md).
+Use these emojis for building agents that receive reaction notifications and send Teams reactions in a conversation. For more information, see [enable agent reactions in Teams](agent-reactions.md).
 
 :::image type="icon" source="../assets/icons/teams-reactions-ref/diverse-skin-tones.png" border="false":::
 
