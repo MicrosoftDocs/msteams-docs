@@ -25,7 +25,7 @@ Reference tool for Microsoft Teams developers to find and copy reaction IDs for 
 
 Use these emojis for building agents that receive reaction notifications and send Teams reactions in a conversation. For more information, see [enable agent reactions in Teams](agent-reactions.md).
 
-Search by emoji category:
+**Search by emoji category**:
 
 > [!div class="op_single_selector"]
 >
@@ -63,8 +63,11 @@ Search by emoji category:
 
 :::row:::
    :::column:::
-      :::image type="icon" source="../assets/icons/teams-reactions-ref/waving-hand-diverse.png" border="false":::
-      :::image type="icon" source="../assets/icons/teams-reactions-ref/diverse-button.png" border="false":::<br>
+
+      | &nbsp; | &nbsp; |
+      |:--- | ---:|
+      | :::image type="icon" source="../assets/icons/teams-reactions-ref/waving-hand-diverse.png" border="false"::: |
+      | :::image type="icon" source="../assets/icons/teams-reactions-ref/diverse-button.png" border="false":::| <br>
       **Waving hand**
       ```EmojiID
           1f44b_wavinghand
