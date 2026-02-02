@@ -50,7 +50,8 @@ Here's an outline of the different channels and their capabilities across variou
 
 > [!IMPORTANT]
 >
-> Teams channel types continue to evolve, and new scenarios might be introduced over time. To help ensure long‑term compatibility, avoid creating app logic that relies on specific values of the `membershipType` or `channelType` properties returned by Microsoft Graph or Agents SDK.
+> * Avoid relying on channel type values for app logic.
+> * Teams channel experiences continue to evolve. To ensure your app remains compatible over time, don't build logic that depends on specific `membershipType` or `channelType` values returned by Microsoft Graph, Agents SDK, or Teams SDK. Instead, rely on the capability‑based APIs and events provided by the platform to determine how your app should behave within a channel.
 
 > [!NOTE]
 >
