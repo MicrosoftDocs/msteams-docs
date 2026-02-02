@@ -14,15 +14,15 @@ Developer tool for discovering and copying Microsoft Teams reaction IDs
 
 Reference tool for Microsoft Teams developers to find and copy reaction IDs for bot development and app integrations.
 
-- Copy `emojiID` to clipboard
+- Copy `EmojiID` to clipboard
 - Diverse filter for skin tone variants
 
 :::image type="icon" source="assets/icons/teams-reactions-ref/diverse-skin-tones.png" border="false":::
 
-
 Select the emoji category:
 
 > [!div class="op_single_selector"]
+>
 > - [All categories](#teams-reactions-reference)
 > - [Smileys](#smileys)
 > - [Hand gestures](#hand-gestures)
@@ -33,21 +33,21 @@ Select the emoji category:
    :::column:::
       :::image type="icon" source="assets/icons/teams-reactions-ref/grinning-face-with-big-eyes.png" border="false":::<br>
       **Grinning face with big eyes**
-      ```emojiID
+      ```EmojiID
           1f603_grinningfacewithbigeyes
       ```
    :::column-end:::
    :::column:::
       :::image type="icon" source="assets/icons/teams-reactions-ref/happy-face.png" border="false":::<br>
       **Happy face**
-      ```emojiID
+      ```EmojiID
           happyface
       ```
    :::column-end:::
    :::column:::
       :::image type="icon" source="assets/icons/teams-reactions-ref/grinning-face-with-smiling-eyes.png" border="false":::<br>
       **Grinning face with smiling eyes**
-      ```emojiID
+      ```EmojiID
           grinningfacewithsmilingeyes
       ```
    :::column-end:::
@@ -60,30 +60,30 @@ Select the emoji category:
       :::image type="icon" source="assets/icons/teams-reactions-ref/waving-hand-diverse.png" border="false":::
       :::image type="icon" source="assets/icons/teams-reactions-ref/diverse-button.png" border="false":::<br>
       **Waving hand**
-      ```emojiID
+      ```EmojiID
           1f44b_wavinghand
       ```
       <details>
       <summary><b>Show Skin Tones (5)</b></summary>
 
       :::image type="icon" source="assets/icons/teams-reactions-ref/tone-1.png" border="false":::
-      ```emojiID
+      ```EmojiID
           1f44b_wavinghand-tone1
       ```
       :::image type="icon" source="assets/icons/teams-reactions-ref/tone-2.png" border="false":::
-      ```emojiID
+      ```EmojiID
           1f44b_wavinghand-tone2
       ```
       :::image type="icon" source="assets/icons/teams-reactions-ref/tone-3.png" border="false":::
-      ```emojiID
+      ```EmojiID
           1f44b_wavinghand-tone3
       ```
       :::image type="icon" source="assets/icons/teams-reactions-ref/tone-4.png" border="false":::
-      ```emojiID
+      ```EmojiID
           1f44b_wavinghand-tone4
        ```
       :::image type="icon" source="assets/icons/teams-reactions-ref/tone-5.png" border="false":::
-      ```emojiID
+      ```EmojiID
           1f44b_wavinghand-tone5
        ```
 
@@ -93,7 +93,7 @@ Select the emoji category:
       :::image type="icon" source="assets/icons/teams-reactions-ref/raised-back-of-hand-diverse.png" border="false":::
       :::image type="icon" source="assets/icons/teams-reactions-ref/diverse-button.png" border="false":::<br>
       **Raised back of hand**
-      ```emojiID
+      ```EmojiID
           1f91a_raisedbackofhand
       ```
    :::column-end:::
@@ -101,7 +101,7 @@ Select the emoji category:
       :::image type="icon" source="assets/icons/teams-reactions-ref/hand-with-fingers-splayed-diverse.png" border="false":::
       :::image type="icon" source="assets/icons/teams-reactions-ref/diverse-button.png" border="false":::<br>
       **Hand with fingers splayed**
-      ```emojiID
+      ```EmojiID
           1f590_handwithfingerssplayed
       ```
 
@@ -109,23 +109,23 @@ Select the emoji category:
       <summary><b>Show Skin Tones (5)</b></summary>
 
       :::image type="icon" source="assets/icons/teams-reactions-ref/tone-1.png" border="false":::
-      ```emojiID
+      ```EmojiID
           1f590_handwithfingerssplayed-tone1
       ```
       :::image type="icon" source="assets/icons/teams-reactions-ref/tone-2.png" border="false":::
-      ```emojiID
+      ```EmojiID
           1f590_handwithfingerssplayed-tone2
       ```
       :::image type="icon" source="assets/icons/teams-reactions-ref/tone-3.png" border="false":::
-      ```emojiID
+      ```EmojiID
           1f590_handwithfingerssplayed-tone3
       ```
       :::image type="icon" source="assets/icons/teams-reactions-ref/tone-4.png" border="false":::
-      ```emojiID
+      ```EmojiID
           1f590_handwithfingerssplayed-tone4
        ```
       :::image type="icon" source="assets/icons/teams-reactions-ref/tone-5.png" border="false":::
-      ```emojiID
+      ```EmojiID
           1f590_handwithfingerssplayed-tone5
        ```
 
@@ -139,21 +139,21 @@ Select the emoji category:
       :::image type="icon" source="assets/icons/teams-reactions-ref/grinning-face-with-big-eyes.png" border="false":::
       <br>
       **Grinning face with big eyes**
-      ```emojiID
+      ```EmojiID
           1f603_grinningfacewithbigeyes
       ```
    :::column-end:::
    :::column:::
       :::image type="icon" source="assets/icons/teams-reactions-ref/happy-face.png" border="false":::<br>
       **Happy face**
-      ```emojiID
+      ```EmojiID
           happyface
       ```
    :::column-end:::
    :::column:::
       :::image type="icon" source="assets/icons/teams-reactions-ref/grinning-face-with-smiling-eyes.png" border="false":::<br>
       **Grinning face with smiling eyes**
-      ```emojiID
+      ```EmojiID
           grinningfacewithsmilingeyes
       ```
    :::column-end:::
@@ -162,14 +162,14 @@ Select the emoji category:
 <!--
    :::column:::
       :::image type="icon" source="assets/icons/teams-reactions-ref/beaming-face-with-smiling-eyes.png" border="false":::
-      ```emojiID
+      ```EmojiID
           1f601_beamingfacewithsmilingeyes
       ```
    :::column-end:::
 
    :::column:::
       :::image type="icon" source="assets/icons/teams-reactions-ref/raised-hand-diverse.png" border="false":::
-      ```emojiID
+      ```EmojiID
           270b_raisedhand
       ```
    :::column-end:::
