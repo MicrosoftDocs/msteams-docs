@@ -4,7 +4,6 @@ author: v-sdhakshina
 description: Learn more about the tools such as Microsoft 365 Agents Toolkit, Agents Toolkit CLI, Developer Portal, and Teams SDK available for building your Teams app.
 ms.localizationpriority: medium
 ms.topic: overview
-ms.author: surbhigupta
 ms.date: 01/28/2026
 ---
 
@@ -12,7 +11,7 @@ ms.date: 01/28/2026
 
 [!INCLUDE [Deprecation note](../../includes/deprecation-note-teamsfx-sdk.md)]
 
-Build and develop your Microsoft Teams agents and apps using tools, SDKs, and libraries. Now, Microsoft provides a comprehensive platform to create, develop, test, debug, and publish your Teams agents and apps seamlessly, making the entire process efficient and streamlined. Teams offers the following platform:
+Build and develop your Microsoft Teams agents and apps using SDKs, libraries, and tools. Now, Microsoft provides a comprehensive platform to create, develop, test, debug, and publish your Teams agents and apps seamlessly, making the entire process efficient and streamlined. Teams offers the following platform:
 
 * [SDKs and libraries](#sdks-and-libraries)
 * [Tools](#tools)
@@ -31,13 +30,14 @@ The following flow diagram explains the different SDKs, libraries, and its relat
 :::image type="icon" source="../../assets/icons/yellow-dot.png" border="false"::: Library often used with another library, but there's no formal dependency. </br>
 :::image type="icon" source="../../assets/icons/grey-dot.png" border="false"::: Library that's underlying service or API. </br>
 -->
-### Core SDKs and libraries to build Teams app
+### Core SDKs and libraries to build Teams agents and apps
 
 [!INCLUDE [teams-ai-lib-v2-rec](../../includes/teams-ai-lib-v2-rec.md)]
 
 | SDKs and libraries | Why you need it | Related SDKs and libraries |
 | ----------------- | -------------- | ----------------------- |
 | [Teams SDK](../../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md) | Teams SDK is a Teams-centric interface to GPT-based common language models and user intent engines. This reduces the requirement for you to handle complex and expensive tasks of writing and maintaining conversational bot logic to integrate with Large Language Models (LLMs). | Based on **Azure OpenAI**. |
+| [Agents SDK](/microsoft-365/agents-sdk/agents-sdk-overview?tabs=csharp) | Agents SDK enables you to build extensible, multi-channel agents that run across Microsoft 365 experiences, including Microsoft 365 Copilot and Microsoft Teams. It provides a unified development model for agent orchestration, lifecycle management, and integration with AI services of your choice. | Based on **Microsoft 365 Copilot** and **Microsoft Teams**. |
 | [Microsoft Graph SDKs](/graph/sdks/sdks-overview) | The Microsoft Graph SDKs are designed to simplify the creation of high-quality, efficient, and resilient applications that access Microsoft Graph. The SDKs include two components such as service library and core library. | Based on **Microsoft Graph**. |
 
 ### Teams Developer Platform SDKs & libraries
@@ -60,9 +60,9 @@ The following flow diagram explains the different SDKs, libraries, and its relat
 
 ### Microsoft Entra ID-secured services and APIs
 
-| SDKs and libraries | Why you need it | Related SDKs and libraries |
+| Services and APIs | Why you need it | Related SDKs and libraries |
 | ----------------- | -------------- | ----------------------- |
-| [Azure Bot Services](/azure/bot-service/bot-service-overview) | Azure Bot Service is a collection of libraries, tools, and services that let you build, test, deploy, and manage intelligent bots. | Used for **Bot Framework SDK**. |
+| [Azure Bot Services](/azure/bot-service/bot-service-overview) | Azure Bot Service is a collection of libraries, tools, and services that let you build, test, deploy, and manage intelligent bots. | Used for **Teams SDK**. |
 | [Azure OpenAI](/azure/cognitive-services/openai/overview) | Azure OpenAI Service provides REST API access to OpenAI's powerful language models including the GPT-3, Codex, and Embeddings model series. Besides, the new GPT-4 and ChatGPT (gpt-35-turbo) model series are now available in preview. These models can be adapted to your specific task including but not limited to content generation, summarization, semantic search, and natural language to code translation. | Used for **Teams SDK**. |
 | [Microsoft Graph](/graph/sdks/sdks-overview) | Microsoft Graph is the gateway to data and intelligence in Microsoft 365. It provides a unified programmability model that you can use to access the tremendous amount of data in Microsoft 365, Windows, and Enterprise Mobility + Security. Use the wealth of data in Microsoft Graph to build apps for organizations and consumers that interact with millions of users. | Used for **Microsoft Graph SDK**. |
 | [SharePoint REST API](/sharepoint/dev/sp-add-ins/get-to-know-the-sharepoint-rest-service?tabs=csom) | You can remotely engage with SharePoint data using any technology that supports Representational State Transfer (REST) web requests. You can perform basic create, read, update, and delete (CRUD) operations by using the REST interface provided by SharePoint. | Used for **SharePoint Framework (SPFx)**. |
@@ -71,7 +71,7 @@ The following flow diagram explains the different SDKs, libraries, and its relat
 > [!NOTE]
 > The **Bot Framework SDK** and **Bot Framework Emulator** have been archived on GitHub and are no longer updated or maintained. Support tickets for the Bot Framework SDK are no longer serviced after December 31, 2025.
 >
-> To build agents with your choice of AI services, orchestration, and knowledge, use the **Microsoft 365 Agents SDK**, which supports C#, JavaScript, and Python.
+> To build intelligent agents for Teams, use the **Teams SDK**, which provides a simplified SDK, support for Model Context Protocol (MCP), and Agent-to-Agent communication (A2A) communication.
 
 ## Tools
 
