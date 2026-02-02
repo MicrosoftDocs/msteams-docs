@@ -22,12 +22,6 @@ Agents in Teams are intelligent and conversational apps built with Teams SDK. Th
 
 Building agents for Teams helps to enhance collaboration and increase productivity. Agents can automate workflows, provide real-time updates, and facilitate informed decision-making. By leveraging Teams' capabilities, organizations can streamline processes, increase team efficiency, and improve customer engagement. Within Teams, agents can focus on high-priority work to enable better outcomes and success.
 
-### Agent user experience
-
-- **In-context intelligence**: Users can interact directly with agents within their Teams usage during conversations and meetings.
-- **Task automation**: Agents can handle repetitive or complex tasks, such as summarizing chats, scheduling meetings, or pulling business data.
-- **Personalized assistance**: Agents can adapt to user preferences and roles for more relevant and actionable insights.
-
 ### Agent developer experience
 
 - **Native Teams integration**: Simplified development using Teams SDK with built-in support for Teams' authentication, messaging, and UI components.
