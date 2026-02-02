@@ -14,7 +14,7 @@ You can build agents to communicate beyond text using reactions, emojis, and con
 
 :::image type="content" source="../assets/images/agents-in-teams/teams-reactions/agent-reactions.png" alt-text="Image shows agent reactions in Teams."  border="false":::
 
-Map emojis and reactions to specific agent actions, and use `emojiID` to send the right reaction in the conversation.
+Map emojis and reactions to specific agent actions, and use `EmojiID` to send the right reaction in the conversation.
 
 **Key highlights**:
 
@@ -31,7 +31,7 @@ You can use the `addReaction` method from Teams SDK or call the `add reaction` A
 
 To enable agents to send reactions to a message:
 
-1. Use the Teams reactions reference page for getting the `EmojiID` for the reactions that you want to add. You can also select a particular [skin tone for the emoji](#modify-skin-tone-for-emojis) by selecting its `EmojiID`.
+1. Use the [Teams reactions reference](teams-reactions-reference.md) for getting the `EmojiID` for the reactions that you want to add. You can also select a particular [skin tone for the emoji](#modify-skin-tone-for-emojis) by selecting its `EmojiID`.
 1. Use the `addReaction` method from Teams SDK or call the `add reaction` API to send reactions to messages.
 
 The following code snippet shows an example of adding the *like* reaction to a message.
@@ -93,7 +93,7 @@ You can choose to enable agents to remove reactions from messages.
 
 To enable agents to remove reactions from a message:
 
-1. Use the Teams reactions reference page for getting the `EmojiID` for the reactions that you want to add. You can also select a particular [skin tone for the emoji](#modify-skin-tone-for-emojis) by selecting its `EmojiID`.
+1. Use the [Teams reactions reference](teams-reactions-reference.md) for getting the `EmojiID` for the reactions that you want to add. You can also select a particular [skin tone for the emoji](#modify-skin-tone-for-emojis) by selecting its `EmojiID`.
 1. Use the `removeReaction` method from Teams SDK or call the `remove reaction` API to send reactions to messages.
 
 The following code snippet shows an example of removing a reaction from a message.
@@ -180,7 +180,7 @@ You can allow skin tones for emojis and also use custom emojis that might be spe
 
 ### Modify skin tone for emojis
 
-The Teams reactions reference page shows skin tone options for emojis. The emojis that offer skin tone are tagged as **Diverse**.
+The [Teams reactions reference](teams-reactions-reference.md) shows skin tone options for emojis. The emojis that offer skin tone are tagged as **Diverse**.
 
 :::image type="content" source="../assets/images/agents-in-teams/teams-reactions/diverse-reaction.png" alt-text="Image shows a diverse tagged emoji for choosing skin tones." border="false":::
 
@@ -210,7 +210,7 @@ To use custom emojis in your agent:
 
     :::image type="content" source="../assets/images/agents-in-teams/teams-reactions/custom-emoji-id.png" alt-text="Image shows the emoji ID for a custom emoji."  border="false":::
 
-1. Use the emojiID for the selected emoji string as your parameter. Ensure the string parameter for the custom emoji must exactly match the name of the custom emoji as it appears in your organization.
+1. Use the `EmojiID` for the selected emoji string as your parameter. Ensure the string parameter for the custom emoji must exactly match the name of the custom emoji as it appears in your organization.
 
 ## Best practices
 
@@ -222,6 +222,6 @@ To use custom emojis in your agent:
 ## See also
 
 - Teams SDK
-- Teams reacton reference page
+- [Teams reacton reference](teams-reactions-reference.md)
 
 [WIP: Links to be added when available]
