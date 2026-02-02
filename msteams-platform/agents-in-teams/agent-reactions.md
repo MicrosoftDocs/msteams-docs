@@ -217,7 +217,7 @@ To use custom emojis in your agent:
 - Employ reactions to improve user experience such as acknowledging a message or providing succinct feedback.
 - Avoid excessive use of reactions to minimize notification fatigue for users.
 - Ensure your agents’ reactions fit the message context and avoid having your agent send multiple reactions to the same message without first removing any existing reactions.
-- Reactions sent by agents are limited to 2 reactions per second
+- Reactions sent by agents are limited to 2 reactions per second.
 
 ## See also
 
