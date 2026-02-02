@@ -20,7 +20,7 @@
     href: bots/how-to/teams-conversational-ai/ai-ux.md
     displayName: AI bot user experience, AI bot UX, custom engine agent, AI label, citation, feedback loop            
   - name: Enable agent reactions
-    href: agents-in-teams/enable-agent-reactions.md
+    href: agents-in-teams/agent-reactions.md
     displayName: reactions, like, dislike, emoji, Teams SDK, REST APIs, agents in Teams, custom engine agent, agent reactions
   - name: Extend agents to Microsoft 365 hubs
     href: /microsoft-365-copilot/extensibility/ecosystem?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
