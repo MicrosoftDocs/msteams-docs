@@ -253,6 +253,7 @@ export async function startReplyChain(chatConnector: builder.ChatConnector, mess
     }
 }
 ```
+
 # [HTTP](#tab/http)
 
 ```http
@@ -281,6 +282,38 @@ POST {Service URL of your bot}/v3/conversations
     "isGroup": true,
     "tenantId": "{{tenantID}}"
 }
+```
+
+# [Python](#tab/python)
+
+```python
+from microsoft_teams.apps import App
+from microsoft_teams.api import MessageActivityInput
+import asyncio
+
+# Bot credentials
+app_id = "YOUR_BOT_APP_ID"
+app_password = "YOUR_BOT_APP_SECRET"
+
+# Conversation details (obtained from bot installation event)
+conversation_id = "19:channelId@thread.tacv2"
+
+# Initialize the Teams app
+app = App(
+    storage={},
+    client_id=app_id,
+    client_secret=app_password
+)
+
+# Create the message activity
+activity = MessageActivityInput(text="Hello from proactive message!")
+
+# Send proactive message using Teams SDK
+# The SDK handles authentication, activity construction, and API calls
+result = await app.send(
+    conversation_id=conversation_id,
+    activity=activity
+)
 ```
 
 You can get the `{Service URL of your bot}` from `TurnContext` object like `turnContext.Activity.ServiceURL` parameter.
