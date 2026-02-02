@@ -284,6 +284,23 @@ POST {Service URL of your bot}/v3/conversations
 }
 ```
 
+You can get the `{Service URL of your bot}` from `TurnContext` object like `turnContext.Activity.ServiceURL` parameter.
+
+You can get the `channelData` from `TurnContext` object  like `turnContext.Activity.TeamsChannelData` parameter.
+
+Provide `id` as your bot app ID and `name` as your bot name. Similarly, `id` of tenant, from your bots `TurnContext` object such as `turnContext.Activity.ChannelData.Tenant.Id`.
+
+Similarly, you can provide the `teamID` for `teamsChannelId`, `teamsTeamId`, `channel`, `team` in `channelData` section, which sends the message to general channel of team.
+
+If the call succeeds, the API returns with the following response object:
+
+```json
+{
+    "id": "{{conversationID}}",
+    "activityId": "{{activityID}}"
+}
+```
+
 # [Python](#tab/python)
 
 ```python
@@ -314,23 +331,6 @@ result = await app.send(
     conversation_id=conversation_id,
     activity=activity
 )
-```
-
-You can get the `{Service URL of your bot}` from `TurnContext` object like `turnContext.Activity.ServiceURL` parameter.
-
-You can get the `channelData` from `TurnContext` object  like `turnContext.Activity.TeamsChannelData` parameter.
-
-Provide `id` as your bot app ID and `name` as your bot name. Similarly, `id` of tenant, from your bots `TurnContext` object such as `turnContext.Activity.ChannelData.Tenant.Id`.
-
-Similarly, you can provide the `teamID` for `teamsChannelId`, `teamsTeamId`, `channel`, `team` in `channelData` section, which sends the message to general channel of team.
-
-If the call succeeds, the API returns with the following response object:
-
-```json
-{
-    "id": "{{conversationID}}",
-    "activityId": "{{activityID}}"
-}
 ```
 
 ---
