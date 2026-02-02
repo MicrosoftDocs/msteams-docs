@@ -35,14 +35,14 @@ The following flow diagram explains the different SDKs, libraries, and its relat
 
 [!INCLUDE [teams-ai-lib-v2-rec](../../includes/teams-ai-lib-v2-rec.md)]
 
-| SDKs and libraries | Why do you need? | Related SDKs and libraries |
+| SDKs and libraries | Why you need it | Related SDKs and libraries |
 | ----------------- | -------------- | ----------------------- |
 | [Teams SDK](../../bots/how-to/teams-conversational-ai/teams-conversation-ai-overview.md) | Teams SDK is a Teams-centric interface to GPT-based common language models and user intent engines. This reduces the requirement for you to handle complex and expensive tasks of writing and maintaining conversational bot logic to integrate with Large Language Models (LLMs). | Based on **Azure OpenAI**. |
 | [Microsoft Graph SDKs](/graph/sdks/sdks-overview) | The Microsoft Graph SDKs are designed to simplify the creation of high-quality, efficient, and resilient applications that access Microsoft Graph. The SDKs include two components such as service library and core library. | Based on **Microsoft Graph**. |
 
 ### Teams Developer Platform SDKs & libraries
 
-| SDKs and libraries | Why do you need? | Related SDKs and libraries |
+| SDKs and libraries | Why you need it | Related SDKs and libraries |
 | ----------------- | -------------- | ----------------------- |
 | [Teams JavaScript client library](~/tabs/how-to/using-teams-client-library.md) | The Teams JavaScript client library (TeamsJS) enables you to create hosted experiences within Teams, Microsoft 365 app, and Outlook. These experiences involve hosting your app content in an iFrame. | You can pass the reference to **SharePoint Framework (SPFx)**. </br> You can use it with **Microsoft Graph SDK**, **Adaptive Cards**, and **Fluent UI React components**. |
 | [SharePoint Framework (SPFx)](/sharepoint/dev/spfx/sharepoint-framework-overview) | The SharePoint Framework (SPFx) offers a page and web part model that fully supports client-side SharePoint development, seamlessly integrates with SharePoint data, and extends Microsoft Teams and Microsoft Viva. | You can use it with **Microsoft Graph SDK**, **Adaptive Cards**, and **Fluent UI React components**. </br> Based on **SharePoint REST API**. |
@@ -50,7 +50,7 @@ The following flow diagram explains the different SDKs, libraries, and its relat
 
 ### Additional libraries and UI utilities to build Teams agents and apps
 
-| SDKs and libraries | Why do you need? | Related SDKs and libraries |
+| SDKs and libraries | Why you need it | Related SDKs and libraries |
 | ----------------- | -------------- | ----------------------- |
 | [Adaptive Cards](../../task-modules-and-cards/cards/cards-reference.md#adaptive-card) | An Adaptive Card is a customizable card that can contain any combination of text, speech, images, buttons, and input fields. | You can use it with **Teams JavaScript client library**, and **SharePoint Framework (SPFx)**. |
 | [Fluent UI React components](https://react.fluentui.dev/?path=/docs/concepts-introduction--page) | Fluent UI React components are a collection of UI elements and tools that come from combining various React-based component libraries used in production, like `@fluentui/react` and `@fluentui/react-northstar`. | You can use it with **Teams JavaScript client library** and **SharePoint Framework (SPFx)**. |
@@ -60,7 +60,7 @@ The following flow diagram explains the different SDKs, libraries, and its relat
 
 ### Microsoft Entra ID-secured services and APIs
 
-| SDKs and libraries | Why do you need? | Related SDKs and libraries |
+| SDKs and libraries | Why you need it | Related SDKs and libraries |
 | ----------------- | -------------- | ----------------------- |
 | [Azure Bot Services](/azure/bot-service/bot-service-overview) | Azure Bot Service is a collection of libraries, tools, and services that let you build, test, deploy, and manage intelligent bots. | Used for **Bot Framework SDK**. |
 | [Azure OpenAI](/azure/cognitive-services/openai/overview) | Azure OpenAI Service provides REST API access to OpenAI's powerful language models including the GPT-3, Codex, and Embeddings model series. Besides, the new GPT-4 and ChatGPT (gpt-35-turbo) model series are now available in preview. These models can be adapted to your specific task including but not limited to content generation, summarization, semantic search, and natural language to code translation. | Used for **Teams SDK**. |
@@ -77,7 +77,7 @@ The following flow diagram explains the different SDKs, libraries, and its relat
 
 The Teams platform brings you the following tools to build Teams agents and apps:
 
-| Tools | Why do you need? | Environment | Test and debug |
+| Tools | Why you need it | Environment | Test and debug |
 | -------- | ------------- | ----------------- | ---------------------- |
 | [Microsoft 365 Agents Toolkit (previously known as Teams Toolkit)](../../toolkit/agents-toolkit-fundamentals.md) | Agents Toolkit makes it simple to get started with app development for Teams. You can begin with a project template for common custom app built for your org (LOB app) scenarios or start from a sample. Save time on setup through automated app registration and configuration using Visual Studio Code and Visual Studio. | **Visual Studio Code**: JavaScript and TypeScript <br /><br /> **Visual Studio**: .NET and Blazor | In Visual Studio Code and Visual Studio |
 | [Developer Portal for Teams](teams-developer-portal.md) | Developer Portal for Teams is the primary tool for configuring, distributing, and managing your Teams apps. With Developer Portal, you can create a basic app manifest (previously known as Teams app manifest) and publish the app to Teams.  | Supports all languages | Developer Portal for Teams |
