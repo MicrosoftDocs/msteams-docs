@@ -210,11 +210,11 @@ To use custom emojis in your agent:
 
     :::image type="content" source="../assets/images/agents-in-teams/teams-reactions/custom-emoji-id.png" alt-text="Image shows the emoji ID for a custom emoji."  border="false":::
 
-1. Use the `EmojiID` for the selected emoji string as your parameter. Ensure the string parameter for the custom emoji must exactly match the name of the custom emoji as it appears in your organization.
+1. Use the `EmojiID` for the selected emoji string as your parameter. Ensure the string parameter for the custom emoji must match the name of the custom emoji exactly as it appears in your organization.
 
 ## Best practices
 
-- Employ reactions to improve user experience, such as acknowledging a message or providing succinct feedback.
+- Employ reactions to improve user experience such as acknowledging a message or providing succinct feedback.
 - Avoid excessive use of reactions to minimize notification fatigue for users.
 - Ensure your agents’ reactions fit the message context and avoid having your agent send multiple reactions to the same message without first removing any existing reactions.
 - Reactions sent by agents are limited to 2 reactions per second
