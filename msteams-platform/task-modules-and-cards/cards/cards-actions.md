@@ -38,6 +38,7 @@ Cards used by bots and message extensions in Microsoft Teams support the followi
 >
 > * Your bot doesn't receive any notice on which button was selected.
 > * URLs don't support machine names that include numbers. For example, a hostname such as *userhostname123* isn't supported.
+> * When using `Action.OpenUrl`, make sure to include the domain of the target URL in the validDomains section of your app manifest. If the domain isn’t listed, Teams displays the message **URL may lead to untrusted content**.
 
 With `openUrl`, you can create an action with the following properties:
 

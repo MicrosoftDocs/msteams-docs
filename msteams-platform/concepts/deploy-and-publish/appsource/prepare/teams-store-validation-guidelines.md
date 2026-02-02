@@ -2,7 +2,6 @@
 title: Teams Store Validation Guidelines
 description: Learn to increase the chances of your app to pass the Teams Store submission process. Understand the must-fix and good-to-fix validation guidelines.
 author: heath-hamilton
-ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
 ms.date: 02/25/2025
@@ -1191,6 +1190,8 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
   :::image type="content" source="../../../../assets/images/submission/validation-bot-command-isnotification-only-not-true.png" alt-text="Graphic shows an example of notification only bot not responding for a user's message.":::
 
 * Bot user experience mustn't be broken on mobile platforms. Your bot must be fully responsive on mobile. [*Must fix*]
+
+* To enable app profile cards for agents or bots, add a features field under description in the app manifest. Ensure it meets all metadata policies and test cases and include only supported functionality details.
 
 > [!TIP]
 > For personal bots, include a **Help** tab that further describes what your bot can do.
