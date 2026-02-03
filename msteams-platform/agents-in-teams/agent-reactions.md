@@ -14,7 +14,7 @@ You can build agents to communicate beyond text using reactions, emojis, and con
 
 :::image type="content" source="../assets/images/agents-in-teams/teams-reactions/agent-reactions.png" alt-text="Image shows agent reactions in Teams."  border="false":::
 
-Map emojis and reactions to specific agent actions, and use `EmojiID` to send the right reaction in the conversation.
+Map emojis and reactions to specific agent actions and use `EmojiID` to send the right reaction in the conversation.
 
 **Key highlights**:
 
@@ -180,11 +180,11 @@ The following are the success and error codes:
 | --- | --- | --- | --- |
 | `403` | `ApiNotEnabledException` | Feature flag not enabled | The feature flag guarding this feature is not enabled |
 | `404` | `ConversationNotFound` | Conversation not found | The target thread cannot be located, or the agent doesn’t have access to it. |
-| `429` | Too many requests | Throttling limit reached | Reduce the frequency of message reaction calls. Agent reactions are limited to 2 reaction per second.|
+| `429` | Too many requests | Throttling limit reached | Reduce the frequency of message reaction calls. Agent reactions are limited to two reactions per second. |
 
 ## Customize Emojis
 
-You can allow skin tones for emojis and also use custom emojis that might be specific to your agent needs.
+You can allow skin tones for emojis and use custom emojis that might be specific to your agent needs.
 
 ### Modify skin tone for emojis
 
@@ -225,7 +225,7 @@ To use custom emojis in your agent:
 - Employ reactions to improve user experience such as acknowledging a message or providing succinct feedback.
 - Avoid excessive use of reactions to minimize notification fatigue for users.
 - Ensure your agents’ reactions fit the message context and avoid having your agent send multiple reactions to the same message without first removing any existing reactions.
-- Reactions sent by agents are limited to 2 reactions per second.
+- Reactions sent by agents are limited to two reactions per second.
 
 ## See also
 
