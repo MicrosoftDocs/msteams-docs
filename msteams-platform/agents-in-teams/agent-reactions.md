@@ -21,7 +21,7 @@ Map emojis and reactions to specific agent actions and use `EmojiID` to send the
 - [Add reactions](#enable-an-agent-to-add-reactions)
 - [Remove reactions](#enable-an-agent-to-remove-reactions)
 - [View response codes](#response-codes)
-- [Choose skin tones](#response-codes)
+- [Select skin tone for emojis](#modify-skin-tone-for-emojis)
 - [Use custom emojis](#custom-emojis)
 - [Best practices](#best-practices)
 
