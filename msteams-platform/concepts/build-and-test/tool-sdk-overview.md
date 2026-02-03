@@ -11,7 +11,7 @@ ms.date: 02/03/2026
 
 [!INCLUDE [Deprecation note](../../includes/deprecation-note-teamsfx-sdk.md)]
 
-Build and develop your Microsoft Teams agents and apps using SDKs, libraries, and tools. Now, Microsoft provides a comprehensive platform to create, develop, test, debug, and publish your Teams agents and apps seamlessly, making the entire process efficient and streamlined. Teams offers the following platform:
+Build and develop your Microsoft Teams agents and apps using SDKs, libraries, and tools. Microsoft provides a comprehensive platform to create, develop, test, debug, and publish your Teams agents and apps seamlessly, making the entire process efficient and streamlined. Teams offers the following platform:
 
 * [SDKs and libraries](#sdks-and-libraries)
 * [Tools](#tools)
@@ -90,10 +90,10 @@ The Teams platform brings you the following tools to build Teams agents and apps
 
 | &nbsp; | Agents Toolkit |
 | -------- | ------------- |
-| Environment variables | Use `.env` file |
+| Environment variables | Use `.localconfigs` file |
 | Generate manifest | Agents Toolkit autogenerates when creating projects. |
 | Deploy Teams app | Automatically update use command `Microsoft 365 Agents: Update Teams App` |
-| Create Microsoft Entra app | Automatically create when debugging or provisioning the project. Users can also use their existing Microsoft Entra app by filling in Teams app ID in `.env` file. |
+| Create Microsoft Entra app | Automatically create when debugging or provisioning the project. Users can also use their existing Microsoft Entra app by filling in Teams app ID in `.localconfigs` file. |
 | Add SSO | Provide SSO-enabled samples and how-to guides to add SSO. |
 | Bot or Message extension Registration | Automatically create when debugging or provisioning the project. User can also specify their own Bot ID. |
 | Expose Node.js app | Tab: localhost + HTTPS and Others: Dev Tunnel |
