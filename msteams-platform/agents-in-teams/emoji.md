@@ -1,4 +1,40 @@
-﻿## Smileys
+﻿---
+title: Teams Reactions Reference - Sample
+description: Use the emojis available for Teams agents reactions.
+ms.topic: reference
+ms.date: 01/23/2025
+ms.localizationpriority: high
+---
+
+# Teams Reactions Reference - Sample
+
+Developer tool for discovering and copying Microsoft Teams reaction IDs
+
+**Quick guide**:
+
+Reference tool for Microsoft Teams developers to find and copy reaction IDs for bot development and app integrations.
+
+- Copy `EmojiID` to clipboard
+- Diverse filter for skin tone variants
+
+:::image type="icon" source="assets/icons/teams-reactions-ref/diverse-skin-tones.png" border="false":::
+
+Select the emoji category:
+
+> [!div class="op_single_selector"]
+>
+> - [All categories](#teams-reactions-reference)
+> - [Smileys](#smileys)
+> - [Hand gestures](#hand-gestures)
+> - [People](#people)
+> - [Animals and nature](#animals-and-nature)
+> - [Food](#food)
+> - [Travel and places](#travel-and-places)
+> - [Objects](#objects)
+> - [Activities](#activities)
+> - [Symbols](#symbols)
+
+## Smileys
 
 :::row:::
    :::column:::
@@ -7940,7 +7976,7 @@
    :::column:::
       :::image type="icon" source="assets/icons/teams-reactions-ref/manintuxedo-diverse.png" border="false":::
       :::image type="icon" source="assets/icons/teams-reactions-ref/diverse-button.png" border="false":::<br>
-      ** Man in tuxedo**
+      **Man in tuxedo**
       ```EmojiID
           manintuxedo
       ```
@@ -8078,7 +8114,7 @@
    :::column:::
       :::image type="icon" source="assets/icons/teams-reactions-ref/womanwithveil-diverse.png" border="false":::
       :::image type="icon" source="assets/icons/teams-reactions-ref/diverse-button.png" border="false":::<br>
-      ** Woman with veil**
+      **Woman with veil**
       ```EmojiID
           womanwithveil
       ```
@@ -14372,7 +14408,7 @@
    :::column-end:::
    :::column:::
       :::image type="icon" source="assets/icons/teams-reactions-ref/1f30f-earthglobeasiaaustralia.png" border="false":::<br>
-      **Earth globe Asia Australia **
+      **Earth globe Asia Australia**
       ```EmojiID
           1f30f_earthglobeasiaaustralia
       ```
@@ -17750,7 +17786,7 @@
    :::column-end:::
    :::column:::
       :::image type="icon" source="assets/icons/teams-reactions-ref/1f528-hammer.png" border="false":::<br>
-      **Hammer **
+      **Hammer**
       ```EmojiID
           1f528_hammer
       ```
@@ -18729,7 +18765,7 @@
    :::column-end:::
    :::column:::
       :::image type="icon" source="assets/icons/teams-reactions-ref/1f3bf-skiandskiboot.png" border="false":::<br>
-      **Ski and skiboot **
+      **Ski and skiboot**
       ```EmojiID
           1f3bf_skiandskiboot
       ```
@@ -19310,7 +19346,7 @@
    :::column-end:::
    :::column:::
       :::image type="icon" source="assets/icons/teams-reactions-ref/21aa-rightwardsarrowwithhook.png" border="false":::<br>
-      **Curving right arrow **
+      **Curving right arrow**
       ```EmojiID
           21aa_rightwardsarrowwithhook
       ```
@@ -20979,5 +21015,3 @@
       ```
    :::column-end:::
 :::row-end:::
-
-
