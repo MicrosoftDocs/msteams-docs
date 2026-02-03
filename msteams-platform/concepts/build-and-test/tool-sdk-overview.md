@@ -4,6 +4,7 @@ author: v-sdhakshina
 description: Learn more about the tools such as Microsoft 365 Agents Toolkit, Agents Toolkit CLI, Developer Portal, and Teams SDK available for building your Teams app.
 ms.localizationpriority: medium
 ms.topic: overview
+ms.author: vikasalmal
 ms.date: 02/03/2026
 ---
 
