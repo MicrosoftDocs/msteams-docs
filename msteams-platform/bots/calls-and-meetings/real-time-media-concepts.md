@@ -24,7 +24,7 @@ Real-time Media bots are designed for specialized scenarios that require direct 
 > **Building AI agents for meetings?** Real-time Media bots are not recommended for AI agent scenarios. Instead, use:
 > - [Microsoft Copilot Studio agents](/microsoft-copilot-studio/overview) for building agents that participate in Teams meetings
 > - [Graph API meeting transcripts](/graph/api/resources/calltranscript) to access meeting content after transcription
-> - [Real-Time Transcription APIs](/graph/api/resources/calltranscription) for transcript access without raw media processing
+> - [Meeting transcripts overview](/microsoftteams/platform/graph-api/meeting-transcripts/overview-transcripts) for transcript access without raw media processing
 >
 > These approaches provide meeting intelligence without the complexity and infrastructure requirements of media processing.
 
