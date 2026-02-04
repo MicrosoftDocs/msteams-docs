@@ -92,7 +92,7 @@ The Azure Bot resource registration registers your web service as a bot with the
 1. Select **Type of App** as **User-Assigned Managed Identity** or **Single Tenant** for **Microsoft App ID**.
 
     >[!IMPORTANT]
-    > The **Multi Tenant** bot type in **Azure Bot Service** is deprecated. Existing Multi Tenant bots continues to work for now.</br> All new bot registrations must either use the **Single Tenant** bot type or the **User-Assigned Managed Identity** type.</br> When registering your Entra app in Azure portal, you can still select the **Accounts in any organizational directory (Multi Tenant)** option. This enables your bot to work across multiple tenants, even outside the tenant where the app is registered, when using one of the supported bot types.
+    > The **Multi Tenant** bot type in **Azure Bot Service** is deprecated. Existing Multi Tenant bots continues to work for now.</br> All new bot registrations must either use the **Single Tenant** bot type or the **User-Assigned Managed Identity** type.</br> When registering your Entra app in Azure portal, you can still select the **Accounts in any organizational directory (Multi Tenant)** option. This enables your bot to work across multiple tenants, even outside the tenant where the app is registered, when using one of the supported bot types.</br> In all cases, the **MicrosoftAppTenantId** must be set to the **Tenant ID of the Azure tenant where the Microsoft Entra ID app is registered**.
 
    :::image type="content" source="../../../assets/images/adaptive-cards/single-tenant.png" alt-text="Screenshot shows how to select multitenant for Microsoft AppID.":::
 
