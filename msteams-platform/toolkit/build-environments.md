@@ -73,7 +73,6 @@ Azure Functions integrates with an array of [cloud services](add-resource.md) to
 
 | Agents Toolkit version | Project Type | Supported Node.js versions  |
 |---|---|---|
-
 | >5.14.0 | Non-SPFx | 18, 20, 22 |
 | 5.12.* | Non-SPFx | 18, 20 |
 | 5.0.0 | Notify with http or timer trigger <br> Azure functions <br> Non-SPFx | 16, 18 <br> 16, 18 <br> 16 <br> 16, 18 |
