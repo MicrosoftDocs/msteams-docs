@@ -1,13 +1,13 @@
 ---
-title: Prerequisites to Create Teams App
+title: Prerequisites to Create Teams Agent or App
 author: zyxiaoyuer
-description: Learn about the tools required to build a Teams app in Visual Studio Code, how to prepare accounts, verify and enable custom app upload.
+description: Learn about the tools required to build a Teams agent or app in Visual Studio Code, how to prepare accounts, verify and enable custom upload.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 02/21/2024
 ---
-# Prerequisites for creating your Teams app
+# Prerequisites for creating your Teams agent or app
 
 Before you create your Microsoft Teams app project, ensure that the prerequisites are in place. You must:
 
@@ -15,11 +15,11 @@ Before you create your Microsoft Teams app project, ensure that the prerequisite
 * [Prepare Accounts to build your Teams app](#accounts-to-build-your-teams-app)
 * [Verify custom app upload permission](#verify-custom-app-upload-permission)
 
-## Install required tools to build your Teams app
+## Install required tools to build your Teams agent or app
 
-Ensure the following requirements are met before you start building your Teams app:
+Ensure the following requirements are met before you start building your Teams agent or app:
 
-| &nbsp; | Tools | Purpose | For environment type|
+| &nbsp; | Tools | Purpose | For environment type |
 | --- | --- | --- | --- |
 | **Required** | &nbsp; | &nbsp; | &nbsp; |
 | &nbsp; | [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) (previously known as Teams Toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. | JavaScript and SPFx |
