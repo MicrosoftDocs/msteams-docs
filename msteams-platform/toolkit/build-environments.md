@@ -68,11 +68,12 @@ Azure Functions integrates with an array of [cloud services](add-resource.md) to
 * Processing to database changes
 * Processing IoT data streams
 * Managing message queues
-
+<!--
 ## Node.js version compatibility table for project type
 
 | Agents Toolkit version | Project Type | Supported Node.js versions  |
 |---|---|---|
+
 | >5.14.0 | SPFx <br> <br> Non-SPFx | Support depends on the user's SPFx version [See compatibility](/sharepoint/dev/spfx/compatibility#spfx-development-environment-compatibility)<br> 18, 20, 22 |
 | 5.12.* | SPFx <br> <br> Non-SPFx | Support depends on the user's SPFx version [See compatibility](/sharepoint/dev/spfx/compatibility#spfx-development-environment-compatibility)<br> 18, 20 |
 | 5.0.0 | Notify with http or timer trigger <br> Azure functions <br> SPFx <br> Non-SPFx | 16, 18 <br> 16, 18 <br> 16 <br> 16, 18 |
@@ -82,6 +83,7 @@ Azure Functions integrates with an array of [cloud services](add-resource.md) to
 | 4.0.0 | Non-SPFx | 14, 16 |
 | 3.7.0 | SPFx | 12, 14 |
 | <3.7.0 | SPFx <br> Azure functions <br> Other | 10, 12, 14 <br> 10, 12, 14 <br> 10, 12, 14, 16 |
+-->
 
 ## See also
 
