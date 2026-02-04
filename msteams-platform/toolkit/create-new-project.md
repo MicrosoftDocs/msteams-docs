@@ -2,7 +2,6 @@
 title: Create New Teams App in Agents Toolkit
 author: zyxiaoyuer
 description: Learn how to create basic and scenario-based Teams app in VSC, its directory structure, and Teams app template available in Microsoft 365 Agents Toolkit.
-ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
@@ -105,7 +104,7 @@ To learn more about the directory structure of different types of basic Teams ap
 | --- | --- |
 | For tab app | [Build your first tab app using JavaScript](../sbs-gs-javascript.yml) |
 | For bot app | [Build your first bot app using JavaScript](../sbs-gs-bot.yml) |
-| For message extension app | [Build your first message extension app using JavaScript](../sbs-gs-msgext.yml) |
+| For message extension app | [Build your first message extension app using JavaScript](../get-started/tutorials.md#build-your-first-message-extension-app-using-javascript) |
 
 </details>
 <br>

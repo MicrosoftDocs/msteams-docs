@@ -12,9 +12,6 @@ ms.date: 12/17/2025
 
 With Microsoft Graph, you can migrate users' existing message history and data from an external system into Teams. Users can continue their communications in a seamless manner and proceed without interruption by enabling the recreation of a third-party platform messaging hierarchy inside Teams.
 
-> [!NOTE]
-> In the future, Microsoft might require you or your customers to pay extra fees based on the amount of data imported.
-
 ## Permissions
 
 | Scope name | Display name | Description | Type | Admin consent required | Entities/APIs covered |
@@ -296,6 +293,9 @@ Call `Get channel` or `Get chat` to confirm that the `migrationMode` state is se
 * [Get channel](/graph/api/channel-get?view=graph-rest-1.0&tabs=http&preserve-view=true)
 * [Get chat](/graph/api/chat-get?view=graph-rest-1.0&tabs=http&preserve-view=true)
 
+> [!NOTE]
+> The `migrationMode` flag is currently available only in the beta version.
+
 ## Step 3: Import messages
 
 Now you can import back-in-time messages by including the `createdDateTime` and `from` keys in the request body.
@@ -483,7 +483,8 @@ HTTP/1.1 204 NoContent
 ### Add team members
 
 After completing migration of external messages, you can add a single member to a team by using the [Teams UI](https://support.microsoft.com/en-us/office/add-members-to-a-team-in-microsoft-teams-aff2249d-b456-4bc3-81e7-52327b6b38e9)
- You can also use Microsoft Graph to [add single member](/graph/api/team-post-members?view=graph-rest-1.0&branch=pr-en-us-26836&tabs=http&preserve-view=true) or [add members in bulk](/graph/api/conversationmembers-add?view=graph-rest-1.0&tabs=http&preserve-view=true).
+
+ You can also use Microsoft Graph to [add a single member](/graph/api/team-post-members?view=graph-rest-1.0&branch=pr-en-us-26836&tabs=http&preserve-view=true) or [add members in bulk](/graph/api/conversationmembers-add?view=graph-rest-1.0&tabs=http&preserve-view=true).
 
 #### Request (add member)
 
@@ -506,6 +507,9 @@ HTTP/1.1 204 No Content
 ```
 
 Once you complete new team and channel migration, [verify migration mode completion](#step-5-verify-migration-mode-completion).
+
+> [!NOTE]
+> The `migrationMode` flag is currently available only in the beta version, not in V1.
 
 ### Complete existing channel or chat migration
 

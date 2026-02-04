@@ -2,7 +2,6 @@
 title: Debug bot using Agents Playground
 author: surbhigupta 
 description: Learn about Microsoft 365 Agents Playground in Microsoft 365 Agents Toolkit and debug existing app, advantages, activity triggers, and customize Teams context.
-ms.author: surbhigupta 
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 11/16/2023
@@ -13,6 +12,8 @@ ms.date: 11/16/2023
 > [!NOTE]
 >
 > Microsoft 365 Agents Playground (previously known as Teams App Test Tool) is available in the latest prerelease version of Microsoft 365 Agents Toolkit (previously known as Teams Toolkit). Ensure that you install the [latest prerelease version](install-Teams-Toolkit.md#install-a-prerelease-version) of Agents Toolkit.
+>
+> This is not supported for declarative agents.
 
 Agents Playground makes debugging bot or agent-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in different channels. You don’t need a Microsoft 365 developer account, tunneling, or real client app and application registration to use Agents Playground.
 
@@ -229,6 +230,22 @@ You can mock an activity in Agents Playground using activity triggers. There are
 1. [Predefined activity triggers](#predefined-activity-triggers)
 1. [Custom activity triggers](#custom-activity-triggers)
 
+> [!IMPORTANT]
+>
+> * When the Agents Playground is launched via Microsoft 365 Agents Toolkit, the default channel ID is `emulator`.
+>
+> * The `emulator` channel does not support some Teams-specific mock activities, such as:
+>   * Installation update activities
+>   * Channel or team conversation update activities
+>   * Notification activities used by Agent 365 projects
+>
+> * As a result, these options may not appear in the **Mock an Activity** menu.
+>
+> * To test Teams-specific activities, set the channel ID to `msteams`. For more information, see [Multiple channel support](#multiple-channel-support).
+
+> [!NOTE]
+> Even if a specific activity is not available for the current channel, you can still use **Custom activity** to send a customized JSON payload to your agent.
+
 ### Predefined activity triggers
 
 Agents Playground provides predefined activity triggers to test the functionalities of your app.
@@ -324,7 +341,17 @@ Agents Playground acquires a JWT token using the provided authentication setting
 
 ## Multiple channel support
 
-Teams is the default channel used for debugging your application, but other channels are also supported. You can change the channel by setting the `DEFAULT_CHANNEL_ID` environment variable or by using the `--channel-id` option when starting Agents Playground from the command line.
+When you run the Agents Playground as a standalone tool, Microsoft Teams (`msteams`) is used as the default channel. When the playground is launched through Microsoft 365 Agents Toolkit, the default channel is `emulator`. You can change the channel by setting the `DEFAULT_CHANNEL_ID` environment variable or by using the `--channel-id` option when starting Agents Playground from the command line.
+
+> [!NOTE]
+>
+> * To test Teams‑specific activities, set the channel ID to `msteams`.
+>
+> * You can do this by:
+>   * Setting the environment variable:
+>   `DEFAULT_CHANNEL_ID = msteams`
+>   * Or using the CLI option:
+>    `agentsplayground --channel-id msteams`
 
 Currently, the accepted channel IDs are: `msteams`, `directline`, `webchat`, and `emulator`. When you set a channel ID, the properties of the messages sent to the application changes accordingly to simulate a real environment. For the `directline` and `webchat` channels, a corresponding client is displayed, and card rendering differs from that of the Teams channel.
 
@@ -336,7 +363,10 @@ The configuration file in the project's root folder allows you to customize Team
 
 ### Default configuration
 
-<details><summary>Agents Playground contains a built-in configuration file in the project's root folder.</summary>
+Agents Playground contains a built-in configuration file in the project's root folder.
+
+> [!NOTE]
+> By default, the Agents Playground uses built-in mock data. You don’t need to create or modify any configuration files unless you want to customize the mock data used during local debugging.
 
 ```yaml
 # yaml-language-server: $schema=https://aka.ms/teams-app-test-tool-config/0.1.0/config.schema.json
@@ -408,15 +438,15 @@ team:
       name: Announcements
 ```
 
-</details>
-
-### Update the configuration file
+### Customize the configuration file
 
 If your bot code uses Bot Framework APIs, you can modify the configuration file to customize the API responses. For example, consider an Azure DevOps notification bot installed in a team that fetches inactive bugs from Azure DevOps. It identifies the owners of the inactive bugs, retrieves their email addresses, and sends daily notifications to their personal chats.
 
 To comprehensively test this bot in Agents Playground, ensure to update the configuration file with the correct email addresses of the inactive bug owners.
 
-1. Go to the `.m365agentsplayground.yml` file in the project's root folder.
+1. Create a file named `.m365agentsplayground.yml` in the project's root folder.
+
+1. Copy the default mock data configuration and paste it into the `.m365agentsplayground.yml` file.
 
 1. Go to the `users` section and update the `name`, `userPrincipleName`, and `email` of the required user.
 
@@ -434,7 +464,14 @@ To comprehensively test this bot in Agents Playground, ensure to update the conf
 1. Save the file and select **F5** to debug in Agents Playground.
 
 > [!NOTE]
-> When you edit the configuration file in Visual Studio Code, Intellisense automatically updates the property names and warns you if you enter invalid values.
+>
+> * The Agents Playground uses two different configuration files:
+>   * `m365agents.playground.yml` is generated by Microsoft 365 Agents Toolkit and controls how the playground starts. This file doesn’t include mock user data.
+>   * `.m365agentsplayground.yml` is an optional file that you can create to customize built-in mock data, such as users.
+>
+> * The Agents Playground requires exactly five users in the `users` section. Configurations with fewer or more than five users aren’t supported.
+>
+> * When you edit the configuration file in Visual Studio Code, Intellisense automatically updates the property names and warns you if you enter invalid values.
 
 It's important to understand that updating the configuration file has three major impacts:
 
