@@ -34,11 +34,14 @@ Agents Toolkit in Visual Studio Code supports building the following apps using 
 
 * Tab app: Your tab app can have web-based content. You can have a custom tab for your web content in Teams or add Teams-specific functionality to your web content.
 * Bot app: A bot can be chatbot or conversational bot that allows you to do simple and repetitive tasks, such as customer service or support staff.
+<!--
 * Notification bot: You can send messages in Teams channel or group or personal chat by notification bots with HTTP request.
 * Command bot: You can automate repetitive tasks using a command bot. Command bot helps you to respond simple queries or commands sent in chats.
 * Workflow bot: You can interact with an Adaptive Card enabled by the Adaptive Card action handler feature in the workflow bot app.
+-->
 * Message extension: You can interact with your web service through buttons and forms in the Teams client.
 
+<!--
 ### Create your Teams app using SPFx
 
 Agents Toolkit in Visual Studio Code allows you to create tab apps using SPFx. These apps have the following advantages:
@@ -49,6 +52,7 @@ Agents Toolkit in Visual Studio Code allows you to create tab apps using SPFx. T
 * Creates powerful applications that can deliver a great UX.
 * Integrates with other Microsoft 365 workloads easily.
 * Delivers flexibility to host applications wherever needed.
+-->
 
 ## Support for Azure Functions
 
