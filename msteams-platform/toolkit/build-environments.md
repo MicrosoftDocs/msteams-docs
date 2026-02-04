@@ -34,12 +34,12 @@ Agents Toolkit in Visual Studio Code supports building the following apps using 
 
 * Tab app: Your tab app can have web-based content. You can have a custom tab for your web content in Teams or add Teams-specific functionality to your web content.
 * Bot app: A bot can be chatbot or conversational bot that allows you to do simple and repetitive tasks, such as customer service or support staff.
+* Message extension: You can interact with your web service through buttons and forms in the Teams client.
 <!--
 * Notification bot: You can send messages in Teams channel or group or personal chat by notification bots with HTTP request.
 * Command bot: You can automate repetitive tasks using a command bot. Command bot helps you to respond simple queries or commands sent in chats.
 * Workflow bot: You can interact with an Adaptive Card enabled by the Adaptive Card action handler feature in the workflow bot app.
 -->
-* Message extension: You can interact with your web service through buttons and forms in the Teams client.
 
 <!--
 ### Create your Teams app using SPFx
@@ -68,6 +68,25 @@ Azure Functions integrates with an array of [cloud services](add-resource.md) to
 * Processing to database changes
 * Processing IoT data streams
 * Managing message queues
+
+## Node.js version compatibility table for project type
+
+| Agents Toolkit version | Project Type | Supported Node.js versions  |
+|---|---|---|
+
+| >5.14.0 | Non-SPFx | 18, 20, 22 |
+| 5.12.* | Non-SPFx | 18, 20 |
+| 5.0.0 | Notify with http or timer trigger <br> Azure functions <br> Non-SPFx | 16, 18 <br> 16, 18 <br> 16 <br> 16, 18 |
+| 4.2.2 | Notify with http or timer trigger <br> Azure functions | 14, 16, 18 (Preview) <br> 14, 16, 18 (Preview) <br> 16 <br> 14, 16, 18 |
+| 4.0.0 | Non-SPFx | 14, 16 |
+| <3.7.0 | Other | 10, 12, 14 <br> 10, 12, 14 <br> 10, 12, 14, 16 |
+
+## See also
+
+* [Microsoft 365 Agents Toolkit Overview](~/toolkit/agents-toolkit-fundamentals.md)
+* [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md)
+* [Create a new Teams project](create-new-project.md)
+
 <!--
 ## Node.js version compatibility table for project type
 
@@ -84,9 +103,3 @@ Azure Functions integrates with an array of [cloud services](add-resource.md) to
 | 3.7.0 | SPFx | 12, 14 |
 | <3.7.0 | SPFx <br> Azure functions <br> Other | 10, 12, 14 <br> 10, 12, 14 <br> 10, 12, 14, 16 |
 -->
-
-## See also
-
-* [Microsoft 365 Agents Toolkit Overview](~/toolkit/agents-toolkit-fundamentals.md)
-* [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md)
-* [Create a new Teams project](create-new-project.md)
