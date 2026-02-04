@@ -1,9 +1,9 @@
 ---
 title: Create Customized Tab Apps for Meetings
-author: surbhigupta
+author: vikasalmal
 description: Learn to build a tab for a meeting chat, meeting side panel, and meeting stage in Teams meeting. Feature compatibility by user types. Code samples (Node.js, .NET).
 ms.topic: conceptual
-ms.author: surbhigupta
+ms.author: vikasalmal
 ms.localizationpriority: high
 ms.owner: vichug
 ms.date: 03/05/2025
@@ -32,17 +32,17 @@ Before creating a meeting tab, it's important to learn about the surfaces that a
 1. In the app gallery, select the app that you want to add and follow the steps as required. The tab is added to the meeting details page.
 
    # [Desktop](#tab/desktop)
-    
+
      The following image shows a tab added to the meeting details page in the Teams desktop client:
-    
+
      :::image type="content" source="~/assets/images/apps-in-meetings/premeetingtab.png" alt-text="Screenshot shows desktop Teams tabs in the meeting details view in the Teams meeting.":::
-    
+
    # [Mobile](#tab/mobile)
-    
+
      The following image shows a tab added to the meeting details page in the Teams mobile client:
-    
+
      :::image type="content" source="../assets/images/mobile-tab.png" alt-text="Screenshot shows mobile Teams tabs in the meeting details view in the Teams meeting.":::
-    
+
    ---
 
 ### Meeting chat view
@@ -54,17 +54,17 @@ Before creating a meeting tab, it's important to learn about the surfaces that a
 1. In the app gallery, select the app that you want to add and follow the steps as required. The tab is added to the meeting chat.
 
    # [Meeting chat view desktop](#tab/meeting-chat-view-desktop)
-    
+
      The following image shows an app added to the meeting chat in the Teams desktop client:
-    
+
      :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view.png" alt-text="Screenshot shows the meeting chat view in a meeting chat in Teams desktop.":::
-    
+
    # [Meeting chat view mobile](#tab/meeting-chat-view-mobile)
-    
+
      The following image shows an app added to the meeting chat in the Teams mobile client:
-    
+
      :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view-mobile.png" alt-text="Screenshot shows the meeting chat view in a meeting chat in Teams mobile.":::
-    
+
    ---
 
 ### Meeting side panel view
@@ -285,7 +285,6 @@ The following table provides the user types and lists the features that each use
 >
 > * Meeting apps (side panel and meeting stage) are supported in Teams desktop client.
 > * Meeting apps (side panel and meeting stage) in Teams web client is supported only when the [developer preview is enabled](/microsoftteams/platform/resources/dev-preview/developer-preview-intro#enable-developer-preview).
-
 
 ## See also
 
