@@ -1,3 +1,10 @@
+---
+title: Teams Reactions Reference
+description: Complete reference guide for Microsoft Teams reaction IDs, including 300+ reactions with skin tone support for bot development and app integrations.
+ms.topic: reference
+ms.date: 02/04/2026
+---
+
 # Teams Reactions Reference
 
 **Complete reference guide for Microsoft Teams reaction IDs**
@@ -8,7 +15,7 @@ This comprehensive guide provides all 300+ reaction IDs supported in Microsoft T
 ## 🆕 What's New in This Version
 
 ✨ **Complete Skin Tone Support**
-- [Complete skin tone IDs](#complete-skin-tone-reference-for-popular-gestures) (`-tone1` through `-tone5`) for popular gestures
+- [Complete skin tone IDs](#skin-tone-reference-for-popular-gestures) (`-tone1` through `-tone5`) for popular gestures
 - **NEW:** [Visual Skin Tone Reference Guide](#visual-skin-tone-reference-guide) with comprehensive examples and implementation guidelines
 - **NEW:** Extended skin tone examples added to People, Activities & Sports sections (10+ new examples)
 - [Full list of all 100+ diverse reactions](#complete-list-of-diverse-reactions) that support skin tones
@@ -42,7 +49,7 @@ This comprehensive guide provides all 300+ reaction IDs supported in Microsoft T
 - [Quick Start](#quick-start)
   - [Search & Navigation Tips](#search--navigation-tips)
 - [Skin Tone Support](#skin-tone-support)
-  - [Complete Skin Tone Reference](#complete-skin-tone-reference-for-popular-gestures)
+  - [Skin Tone Reference for Popular Gestures](#skin-tone-reference-for-popular-gestures)
 - [Visual Skin Tone Reference Guide](#visual-skin-tone-reference-guide)
   - [Understanding Skin Tone Modifiers](#understanding-skin-tone-modifiers)
   - [Visual Comparison Across Reaction Types](#visual-comparison-across-reaction-types)
@@ -99,7 +106,7 @@ To use reactions in your Teams bot or application, reference the reaction by its
 
 **Quick Navigation:**
 - Use the [Category Filter Links](#filter-by-category) to jump to specific sections
-- Use the [Quick Copy Reference](#quick-copy-reference---most-popular-reactions) for commonly-used reactions
+- Use the [Quick Reference](#quick-reference---most-popular-reactions) for commonly-used reactions
 - Use [Table of Contents](#table-of-contents) for document structure
 
 **Finding Skin Tone Variants:**
@@ -1732,8 +1739,6 @@ Popular animal and nature reactions available in Microsoft Teams.
 
 ## Food & Drink
 
-## Food & Drink
-
 All food and beverage reactions for meal times and celebrations.
 
 | Emoji | Description | Reaction ID |
@@ -2095,8 +2100,8 @@ Many activity and sports reactions support skin tones. Copy these complete IDs w
 
 Common objects and everyday items reactions.
 
-| Emoji | Description | Reaction ID |
-|-------|-------------|-------------|
+| Emoji | Description | Reaction ID | Shortcuts |
+|-------|-------------|-------------|-----------|
 | 💻 | Laptop | `1f4bb_laptop` | `(laptop)` |
 | ⌚ | Watch | `231a_watch` | `(watch)` |
 | 📱 | Mobile phone | `1f4f1_mobilephone` | `(mobilephone)`, `(mp)`, `(Mp)` |
@@ -2220,8 +2225,8 @@ Common objects and everyday items reactions.
 
 Transportation and location-related reactions.
 
-| Emoji | Description | Reaction ID |
-|-------|-------------|-------------|
+| Emoji | Description | Reaction ID | Shortcuts |
+|-------|-------------|-------------|-----------|
 | 🚗 | Automobile | `1f697_automobile` | `(automobile)`, `(au)`, `(Au)` |
 | 🚕 | Taxi | `1f695_taxi` | `(taxi)` |
 | 🚙 | Sport utility vehicle | `1f699_sportutilityvehicle` | `(sportutilityvehicle)` |
@@ -2414,7 +2419,7 @@ Unique Microsoft Teams-branded reactions and special text-based reactions.
 
 ### Basic Reaction Usage
 
-#### [TypeScript](#tab)
+#### TypeScript
 
 ```typescript
 app.on('mention', async ({ activity, send }) => {
@@ -2425,7 +2430,7 @@ app.on('mention', async ({ activity, send }) => {
 });
 ```
 
-#### [C#](#tab)
+#### C#
 
 ```csharp
 [Message]
@@ -2441,8 +2446,7 @@ public async Task OnMessage([Context] MessageActivity activity, [Context] IConte
 }
 ```
 
-#### [Python](#tab)
-
+#### Python
 
 ```python
 @app.on_message
@@ -2451,7 +2455,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
         await ctx.send(MessageReactionActivityInput(reply_to_id=ctx.activity.id).add_reaction(MemssageReaction(type="like")))
 ```
 
-#### [HTTP](#tab)
+#### HTTP
 
 ```rest
 PUT {cloud}/{tenantId}/v3/conversations/{conversationId}/activities/{activityId}/reaction/{reactionType}
@@ -2688,13 +2692,12 @@ function sendReaction(reactionId: string) {
 
 ## Additional Resources
 
-- 📘 [Microsoft Teams Platform Documentation](https://learn.microsoft.com/en-us/microsoftteams/platform/)
-- 🤖 [Bot Framework SDK](https://learn.microsoft.com/en-us/azure/bot-service/)
-- 💬 [Message Reactions API](https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events)
-- 📊 [Microsoft Graph API - Reactions](https://learn.microsoft.com/en-us/graph/api/resources/messagereaction)
-- 🔧 [Teams Toolkit](https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/teams-toolkit-fundamentals)
+- 📘 [Microsoft Teams Platform Documentation](../overview.md)
+- 🤖 [Bot Framework SDK](/azure/bot-service/)
+- 💬 [Message Reactions API](../bots/how-to/conversations/subscribe-to-conversation-events.md)
+- 📊 [Microsoft Graph API](/graph/api/resources/chatmessagereaction)
+- 🔧 [Microsoft 365 Agents Toolkit](../toolkit/teams-toolkit-fundamentals.md)
 
-- 🌐 [Teams Reaction ID Finder](https://teams-reaction-id-finder--vikrantsingh01.github.app/) - Full-featured web app with search, filtering, JSON export, and one-click ID copying
 - 📋 [This Reference (Markdown)](https://github.com/VikrantSingh01/teams-reactions-reference) - Complete markdown reference
 
 ### Community & Support
@@ -2730,7 +2733,7 @@ This reference is maintained to help Microsoft Teams developers quickly find and
 ---
 
 **Authored by [Vikrant Singh](https://github.com/VikrantSingh01)**  
-🔗 [GitHub](https://github.com/VikrantSingh01) | 🌐 [Web Tool](https://teams-reaction-id-finder--vikrantsingh01.github.app/)
+🔗 [GitHub](https://github.com/VikrantSingh01)
 
 ---
 
@@ -2741,7 +2744,7 @@ This reference is maintained to help Microsoft Teams developers quickly find and
 ✅ **Skin tones** accessible via `-tone1` through `-tone5` suffix  
 ✅ **Categories**: Smileys, Hand Gestures, People, Hearts, Animals, Food, Sports, Objects, Travel, Flags  
 ✅ **Special reactions**: Microsoft Teams-exclusive text-based reactions  
-✅ **Search & Filter**: Use the [interactive web tool](https://teams-reaction-id-finder--vikrantsingh01.github.app/) for easy browsing  
+✅ **Search & Filter**: Use browser search (Ctrl+F) or [Category Navigation](#filter-by-category) for easy browsing  
 ✅ **Export**: JSON export functionality  
 ✅ **Always Current**: Data sourced directly from Microsoft Teams CDN
 
