@@ -195,7 +195,7 @@ Use these emojis for building agents that receive reaction notifications and sen
    :::column-end:::
    :::column:::
       :::image type="icon" source="../assets/icons/teams-reactions-ref/mmm.png" border="false":::<br>
-      **Mmmmmâ€¦**
+      **Mmmmm...**
       ```EmojiID
           mmm
       ```
