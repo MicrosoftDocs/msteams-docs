@@ -12026,6 +12026,10 @@ Use these emojis for building agents that receive reaction notifications and sen
           1f463_footprints
       ```
    :::column-end:::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="../assets/icons/teams-reactions-ref/blank.png" border="false":::
+   :::column-end:::
 :::row-end:::
 
 ## Animals and nature
@@ -13292,6 +13296,10 @@ Use these emojis for building agents that receive reaction notifications and sen
       ```EmojiID
           1f344_mushroom
       ```
+   :::column-end:::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="../assets/icons/teams-reactions-ref/blank.png" border="false":::
    :::column-end:::
 :::row-end:::
 
@@ -16286,6 +16294,14 @@ Use these emojis for building agents that receive reaction notifications and sen
 
       </details>
    :::column-end:::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="../assets/icons/teams-reactions-ref/blank.png" border="false":::
+   :::column-end:::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="../assets/icons/teams-reactions-ref/blank.png" border="false":::
+   :::column-end:::
 :::row-end:::
 
 ## Objects
@@ -18369,6 +18385,10 @@ Use these emojis for building agents that receive reaction notifications and sen
           idcard
       ```
    :::column-end:::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="../assets/icons/teams-reactions-ref/blank.png" border="false":::
+   :::column-end:::
 :::row-end:::
 
 ## Activities
@@ -19052,6 +19072,14 @@ Use these emojis for building agents that receive reaction notifications and sen
       ```EmojiID
           ribbonred
       ```
+   :::column-end:::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="../assets/icons/teams-reactions-ref/blank.png" border="false":::
+   :::column-end:::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="../assets/icons/teams-reactions-ref/blank.png" border="false":::
    :::column-end:::
 :::row-end:::
 
