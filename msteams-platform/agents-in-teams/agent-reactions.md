@@ -94,7 +94,7 @@ Where,
 
 You can choose to enable agents to remove reactions from messages. To enable agents to remove reactions from a message:
 
-1. Use the [Teams reactions reference](teams-reactions-reference.md) for getting the `EmojiID` for the reactions that you want to remove. You can also select a particular [skin tone for the emoji](#modify-skin-tone-for-emojis) by selecting its `EmojiID`.
+1. Use the [Teams reactions reference](teams-reactions-reference.md) for getting the `EmojiID` for the reactions that you want to remove.
 1. Use the `removeReaction` method from Teams SDK or call the `remove reaction` API to remove reactions from messages.
 
 The following code snippet shows an example of removing a reaction from a message:
@@ -125,7 +125,7 @@ app.on('mention', async ({ activity, send }) => {
             {
                 await client.Send(new MessageReactionActivity().RemoveReaction(new Reaction()
                 {
-                    Type = “like”,
+                    Type = “1f44b_wavinghand”,
                 }).WithReplyToId(activity.Id));
             }
         }
@@ -140,7 +140,7 @@ app.on('mention', async ({ activity, send }) => {
 @app.on_message
 async def handle_message(ctx: ActivityContext[MessageActivity]):
     if ctx.activity.is_recipient_mentioned:
-        await ctx.send(MessageReactionActivityInput(reply_to_id=ctx.activity.id).remove_reaction(MemssageReaction(type="like")))
+        await ctx.send(MessageReactionActivityInput(reply_to_id=ctx.activity.id).remove_reaction(MemssageReaction(type="1f44b_wavinghand")))
 
 ```
 
