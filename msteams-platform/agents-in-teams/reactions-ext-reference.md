@@ -53,10 +53,6 @@ This comprehensive guide provides all 300+ reaction IDs supported in Microsoft T
 - [Visual Skin Tone Reference Guide](#visual-skin-tone-reference-guide)
   - [Understanding Skin Tone Modifiers](#understanding-skin-tone-modifiers)
   - [Visual Comparison Across Reaction Types](#visual-comparison-across-reaction-types)
-  - [Implementation Guidelines](#implementation-guidelines)
-  - [Skin Tone Best Practices](#skin-tone-best-practices)
-  - [Accessibility Considerations](#accessibility-considerations)
-- [Features](#features)
 - [Quick Reference - Most Popular Reactions](#quick-reference---most-popular-reactions)
 - [Filter by Category](#filter-by-category)
 - [Complete List of Diverse Reactions](#complete-list-of-diverse-reactions)
@@ -72,8 +68,7 @@ This comprehensive guide provides all 300+ reaction IDs supported in Microsoft T
   - [Travel & Places](#travel--places)
   - [Flags](#flags)
   - [Special Teams Reactions](#special-teams-reactions)
-- [Usage Examples](#usage-examples)
-- [API Reference](#api-reference)
+- [API Reference](#data-source)
 - [Additional Resources](#additional-resources)
 
 ---
@@ -356,102 +351,7 @@ const surfMedium = "1f3c4_personsurfing-tone3";      // 🏄🏽
 const surfDark = "1f3c4_personsurfing-tone5";        // 🏄🏿
 ```
 
-### Implementation Guidelines
 
-#### 1. Programmatic Tone Selection
-
-```typescript
-// Helper function to apply skin tone to any diverse reaction
-function applySkinTone(baseReactionId: string, toneNumber: number): string {
-  if (toneNumber >= 1 && toneNumber <= 5) {
-    return `${baseReactionId}-tone${toneNumber}`;
-  }
-  return baseReactionId;
-}
-
-// Usage
-const reaction = applySkinTone("1f44b_wavinghand", 3);  // Returns: "1f44b_wavinghand-tone3"
-```
-
-#### 2. User Preference Storage
-
-```typescript
-// Store user's preferred skin tone
-interface UserPreferences {
-  preferredSkinTone?: 1 | 2 | 3 | 4 | 5;
-}
-
-function getReactionWithUserTone(baseReactionId: string, isDiverse: boolean): string {
-  const userPrefs: UserPreferences = getUserPreferences();
-  
-  if (isDiverse && userPrefs.preferredSkinTone) {
-    return applySkinTone(baseReactionId, userPrefs.preferredSkinTone);
-  }
-  
-  return baseReactionId;
-}
-```
-
-#### 3. Validating Diverse Reactions
-
-```typescript
-// Check if a reaction supports skin tone variants
-function supportsSkinTone(reactionId: string): boolean {
-  // These are examples - in production, check against the full diverse reactions list
-  const diverseReactions = [
-    '1f44b_wavinghand',
-    '1f44d_thumbsup',
-    '1f44e_thumbsdown',
-    '1f44f_clappinghands',
-    '1f64f_foldedhands',
-    // ... add all diverse reaction IDs
-  ];
-  
-  const baseId = reactionId.split('-')[0];
-  return diverseReactions.includes(baseId);
-}
-```
-
-### Skin Tone Best Practices
-
-✅ **Always provide a default option**: Include the base reaction without a tone suffix for users who don't want to specify.
-
-✅ **Respect user preferences**: If a user selects a preferred tone, apply it consistently across all diverse reactions.
-
-✅ **Fallback gracefully**: If a tone-specific reaction isn't available, fall back to the base reaction.
-
-✅ **Test accessibility**: Ensure skin tone variants are properly announced by screen readers.
-
-✅ **Document clearly**: Always document which reactions support skin tones in your API or UI.
-
-❌ **Don't assume**: Never default to a specific skin tone without user selection - always use the base emoji by default.
-
-❌ **Don't restrict**: Always offer all 5 tone options for reactions that support them.
-
-### Accessibility Considerations
-
-When implementing skin tone support, consider these accessibility guidelines:
-
-- **Screen Reader Support**: Ensure tone variants are properly labeled (e.g., "thumbs up with light skin tone")
-- **Keyboard Navigation**: Allow users to select tones using keyboard-only navigation
-- **High Contrast**: Tone indicators should be visible in high-contrast modes
-- **Color Independence**: Don't rely solely on color to indicate tone selection
-
----
-
-## Features
-
-The Teams Reactions Reference provides:
-
-✅ **Complete Coverage**: All 300+ reactions supported in Microsoft Teams  
-✅ **Skin Tone Support**: Visual indicators and IDs for all 5 skin tone variants  
-✅ **Search & Filter**: Search by name, ID, tags, or category  
-✅ **JSON Export**: Export filtered or all reactions to JSON format  
-✅ **Keyboard Shortcuts**: Fast navigation with keyboard shortcuts  
-✅ **Responsive Design**: Works seamlessly on desktop and mobile devices  
-✅ **Real-time Updates**: Data sourced directly from Microsoft Teams CDN
-
----
 
 ## Quick Reference - Most Popular Reactions
 
@@ -2100,122 +2000,122 @@ Many activity and sports reactions support skin tones. Copy these complete IDs w
 
 Common objects and everyday items reactions.
 
-| Emoji | Description | Reaction ID | Shortcuts |
-|-------|-------------|-------------|-----------|
-| 💻 | Laptop | `1f4bb_laptop` | `(laptop)` |
-| ⌚ | Watch | `231a_watch` | `(watch)` |
-| 📱 | Mobile phone | `1f4f1_mobilephone` | `(mobilephone)`, `(mp)`, `(Mp)` |
-| 💡 | Light bulb | `1f4a1_lightbulb` | `(lightbulb)`, `(idea)`, `(Idea)` |
-| 🔦 | Flashlight | `1f526_flashlight` | `(flashlight)` |
-| 🕯️ | Candle | `1f56f_candle` | `(candle)` |
-| 🪔 | Diya lamp | `1fa94_diyalamp` | `(diyalamp)` |
-| 📚 | Books | `1f4da_books` | `(books)` |
-| 📖 | Open book | `1f4d6_openbook` | `(openbook)` |
-| 📝 | Memo | `1f4dd_memo` | `(memo)` |
-| 📓 | Notebook | `1f4d3_notebook` | `(notebook)` |
-| 📔 | Notebook with decorative cover | `1f4d4_notebookwithdecorativecover` | `(notebookwithdecorativecover)` |
-| 📕 | Closed book | `1f4d5_closedbook` | `(closedbook)` |
-| 📗 | Green book | `1f4d7_greenbook` | `(greenbook)` |
-| 📘 | Blue book | `1f4d8_bluebook` | `(bluebook)` |
-| 📙 | Orange book | `1f4d9_orangebook` | `(orangebook)` |
-| 📔 | Notebook with decorative cover | `1f4d4_notebookwithdecorativecover` | `(notebookwithdecorativecover)` |
-| 📒 | Ledger | `1f4d2_ledger` | `(ledger)` |
-| 📃 | Page with curl | `1f4c3_pagewithcurl` | `(pagewithcurl)` |
-| 📜 | Scroll | `1f4dc_scroll` | `(scroll)` |
-| 📄 | Page facing up | `1f4c4_pagefacingup` | `(pagefacingup)` |
-| 📰 | Newspaper | `1f4f0_newspaper` | `(newspaper)` |
-| 🗞️ | Rolled-up newspaper | `1f5de_rolledupnewspaper` | `(rolledupnewspaper)` |
-| 📑 | Bookmark tabs | `1f4d1_bookmarktabs` | `(bookmarktabs)` |
-| 🔖 | Bookmark | `1f516_bookmark` | `(bookmark)` |
-| 🏷️ | Label | `1f3f7_label` | `(label)` |
-| 💰 | Money bag | `1f4b0_moneybag` | `(moneybag)` |
-| 🪙 | Coin | `1fa99_coin` | `(coin)` |
-| 💴 | Yen banknote | `1f4b4_yenbanknote` | `(yenbanknote)` |
-| 💵 | Dollar banknote | `1f4b5_dollarbanknote` | `(dollarbanknote)` |
-| 💶 | Euro banknote | `1f4b6_eurobanknote` | `(eurobanknote)` |
-| 💷 | Pound banknote | `1f4b7_poundbanknote` | `(poundbanknote)` |
-| 💸 | Money with wings | `1f4b8_moneywithwings` | `(moneywithwings)` |
-| 💳 | Credit card | `1f4b3_creditcard` | `(creditcard)` |
-| 🧾 | Receipt | `1f9fe_receipt` | `(receipt)` |
-| 💹 | Chart increasing with yen | `1f4b9_chartincreasingwithyen` | `(chartincreasingwithyen)` |
-| ✉️ | Envelope | `2709_envelope` | `(envelope)` |
-| 📧 | E-mail | `1f4e7_email` | `(email)` |
-| 📨 | Incoming envelope | `1f4e8_incomingenvelope` | `(incomingenvelope)` |
-| 📩 | Envelope with arrow | `1f4e9_envelopewitharrow` | `(envelopewitharrow)` |
-| 📤 | Outbox tray | `1f4e4_outboxtray` | `(outboxtray)` |
-| 📥 | Inbox tray | `1f4e5_inboxtray` | `(inboxtray)` |
-| 📫 | Closed mailbox with raised flag | `1f4eb_closedmailboxwithraisedflag` | `(closedmailboxwithraisedflag)` |
-| 📤 | Outbox tray | `1f4e4_outboxtray` | `(outboxtray)` |
-| 📬 | Open mailbox with raised flag | `1f4ec_openmailboxwithraisedflag` | `(openmailboxwithraisedflag)` |
-| 📭 | Open mailbox with lowered flag | `1f4ed_openmailboxwithloweredflag` | `(openmailboxwithloweredflag)` |
-| 📮 | Postbox | `1f4ee_postbox` | `(postbox)` |
-| 🗳️ | Ballot box with ballot | `1f5f3_ballotboxwithballot` | `(ballotboxwithballot)` |
-| ✏️ | Pencil | `270f_pencil` | `(pencil)` |
-| ✒️ | Black nib | `2712_blacknib` | `(blacknib)` |
-| 🖋️ | Fountain pen | `1f58b_fountainpen` | `(fountainpen)` |
-| 🖊️ | Pen | `1f58a_pen` | `(pen)` |
-| 🖌️ | Paintbrush | `1f58c_paintbrush` | `(paintbrush)` |
-| 🖍️ | Crayon | `1f58d_crayon` | `(crayon)` |
-| 📁 | File folder | `1f4c1_filefolder` | `(filefolder)` |
-| 📂 | Open file folder | `1f4c2_openfilefolder` | `(openfilefolder)` |
-| 🗂️ | Card index dividers | `1f5c2_cardindexdividers` | `(cardindexdividers)` |
-| 📅 | Calendar | `1f4c5_calendar` | `(calendar)` |
-| 📆 | Tear-off calendar | `1f4c6_tearoffcalendar` | `(tearoffcalendar)` |
-| 🗒️ | Spiral notepad | `1f5d2_spiralnotepad` | `(spiralnotepad)` |
-| 🗓️ | Spiral calendar | `1f5d3_spiralcalendar` | `(spiralcalendar)` |
-| 📇 | Card index | `1f4c7_cardindex` | `(cardindex)` |
-| 📈 | Chart increasing | `1f4c8_chartincreasing` | `(chartincreasing)` |
-| 📉 | Chart decreasing | `1f4c9_chartdecreasing` | `(chartdecreasing)` |
-| 📊 | Bar chart | `1f4ca_barchart` | `(barchart)` |
-| 📋 | Clipboard | `1f4cb_clipboard` | `(clipboard)` |
-| 📌 | Pushpin | `1f4cc_pushpin` | `(pushpin)` |
-| 📍 | Round pushpin | `1f4cd_roundpushpin` | `(roundpushpin)` |
-| 📎 | Paperclip | `1f4ce_paperclip` | `(paperclip)` |
-| 🖇️ | Linked paperclips | `1f587_linkedpaperclips` | `(linkedpaperclips)` |
-| 📏 | Straight ruler | `1f4cf_straightruler` | `(straightruler)` |
-| 📐 | Triangular ruler | `1f4d0_triangularruler` | `(triangularruler)` |
-| ✂️ | Scissors | `2702_scissors` | `(scissors)` |
-| 🗃️ | Card file box | `1f5c3_cardfilebox` | `(cardfilebox)` |
-| 🗄️ | File cabinet | `1f5c4_filecabinet` | `(filecabinet)` |
-| 🗑️ | Wastebasket | `1f5d1_wastebasket` | `(wastebasket)` |
-| 🔒 | Locked | `1f512_locked` | `(locked)` |
-| 🔓 | Unlocked | `1f513_unlocked` | `(unlocked)` |
-| 🔏 | Locked with pen | `1f50f_lockedwithpen` | `(lockedwithpen)` |
-| 🔐 | Locked with key | `1f510_lockedwithkey` | `(lockedwithkey)` |
-| 🔑 | Key | `1f511_key` | `(key)` |
-| 🗝️ | Old key | `1f5dd_oldkey` | `(oldkey)` |
-| 🔨 | Hammer | `1f528_hammer` | `(hammer)` |
-| 🪓 | Axe | `1fa93_axe` | `(axe)` |
-| ⛏️ | Pick | `26cf_pick` | `(pick)` |
-| ⚒️ | Hammer and pick | `2692_hammerandpick` | `(hammerandpick)` |
-| 🛠️ | Hammer and wrench | `1f6e0_hammerandwrench` | `(hammerandwrench)` |
-| 🗡️ | Dagger | `1f5e1_dagger` | `(dagger)` |
-| ⚔️ | Crossed swords | `2694_crossedswords` | `(crossedswords)` |
-| 🔫 | Water pistol | `1f52b_waterpistol` | `(waterpistol)` |
-| 🪃 | Boomerang | `1fa83_boomerang` | `(boomerang)` |
-| 🏹 | Bow and arrow | `1f3f9_bowandarrow` | `(bowandarrow)` |
-| 🛡️ | Shield | `1f6e1_shield` | `(shield)` |
-| 🪚 | Carpentry saw | `1fa9a_carpentrysaw` | `(carpentrysaw)` |
-| 🔧 | Wrench | `1f527_wrench` | `(wrench)` |
-| 🪛 | Screwdriver | `1fa9b_screwdriver` | `(screwdriver)` |
-| 🔩 | Nut and bolt | `1f529_nutandbolt` | `(nutandbolt)` |
-| ⚙️ | Gear | `2699_gear` | `(gear)` |
-| 🗜️ | Clamp | `1f5dc_clamp` | `(clamp)` |
-| ⚖️ | Balance scale | `2696_balancescale` | `(balancescale)` |
-| 🦯 | White cane | `1f9af_whitecane` | `(whitecane)` |
-| 🔗 | Link | `1f517_link` | `(link)` |
-| ⛓️ | Chains | `26d3_chains` | `(chains)` |
-| 🪝 | Hook | `1fa9d_hook` | `(hook)` |
-| 🧰 | Toolbox | `1f9f0_toolbox` | `(toolbox)` |
-| 🧲 | Magnet | `1f9f2_magnet` | `(magnet)` |
-| 🪜 | Ladder | `1fa9c_ladder` | `(ladder)` |
-| ⚗️ | Alembic | `2697_alembic` | `(alembic)` |
-| 🧪 | Test tube | `1f9ea_testtube` | `(testtube)` |
-| 🧫 | Petri dish | `1f9eb_petridish` | `(petridish)` |
-| 🧬 | DNA | `1f9ec_dna` | `(dna)` |
-| 🔬 | Microscope | `1f52c_microscope` | `(microscope)` |
-| 🔭 | Telescope | `1f52d_telescope` | `(telescope)` |
-| 📡 | Satellite antenna | `1f4e1_satelliteantenna` | `(satelliteantenna)` |
+| Emoji | Description | Reaction ID |
+|-------|-------------|-------------|
+| 💻 | Laptop | `1f4bb_laptop` |
+| ⌚ | Watch | `231a_watch` |
+| 📱 | Mobile phone | `1f4f1_mobilephone` |
+| 💡 | Light bulb | `1f4a1_lightbulb` |
+| 🔦 | Flashlight | `1f526_flashlight` |
+| 🕯️ | Candle | `1f56f_candle` |
+| 🪔 | Diya lamp | `1fa94_diyalamp` |
+| 📚 | Books | `1f4da_books` |
+| 📖 | Open book | `1f4d6_openbook` |
+| 📝 | Memo | `1f4dd_memo` |
+| 📓 | Notebook | `1f4d3_notebook` |
+| 📔 | Notebook with decorative cover | `1f4d4_notebookwithdecorativecover` |
+| 📕 | Closed book | `1f4d5_closedbook` |
+| 📗 | Green book | `1f4d7_greenbook` |
+| 📘 | Blue book | `1f4d8_bluebook` |
+| 📙 | Orange book | `1f4d9_orangebook` |
+| 📔 | Notebook with decorative cover | `1f4d4_notebookwithdecorativecover` |
+| 📒 | Ledger | `1f4d2_ledger` |
+| 📃 | Page with curl | `1f4c3_pagewithcurl` |
+| 📜 | Scroll | `1f4dc_scroll` |
+| 📄 | Page facing up | `1f4c4_pagefacingup` |
+| 📰 | Newspaper | `1f4f0_newspaper` |
+| 🗞️ | Rolled-up newspaper | `1f5de_rolledupnewspaper` |
+| 📑 | Bookmark tabs | `1f4d1_bookmarktabs` |
+| 🔖 | Bookmark | `1f516_bookmark` |
+| 🏷️ | Label | `1f3f7_label` |
+| 💰 | Money bag | `1f4b0_moneybag` |
+| 🪙 | Coin | `1fa99_coin` |
+| 💴 | Yen banknote | `1f4b4_yenbanknote` |
+| 💵 | Dollar banknote | `1f4b5_dollarbanknote` |
+| 💶 | Euro banknote | `1f4b6_eurobanknote` |
+| 💷 | Pound banknote | `1f4b7_poundbanknote` |
+| 💸 | Money with wings | `1f4b8_moneywithwings` |
+| 💳 | Credit card | `1f4b3_creditcard` |
+| 🧾 | Receipt | `1f9fe_receipt` |
+| 💹 | Chart increasing with yen | `1f4b9_chartincreasingwithyen` |
+| ✉️ | Envelope | `2709_envelope` |
+| 📧 | E-mail | `1f4e7_email` |
+| 📨 | Incoming envelope | `1f4e8_incomingenvelope` |
+| 📩 | Envelope with arrow | `1f4e9_envelopewitharrow` |
+| 📤 | Outbox tray | `1f4e4_outboxtray` |
+| 📥 | Inbox tray | `1f4e5_inboxtray` |
+| 📫 | Closed mailbox with raised flag | `1f4eb_closedmailboxwithraisedflag` |
+| 📤 | Outbox tray | `1f4e4_outboxtray` |
+| 📬 | Open mailbox with raised flag | `1f4ec_openmailboxwithraisedflag` |
+| 📭 | Open mailbox with lowered flag | `1f4ed_openmailboxwithloweredflag` |
+| 📮 | Postbox | `1f4ee_postbox` |
+| 🗳️ | Ballot box with ballot | `1f5f3_ballotboxwithballot` |
+| ✏️ | Pencil | `270f_pencil` |
+| ✒️ | Black nib | `2712_blacknib` |
+| 🖋️ | Fountain pen | `1f58b_fountainpen` |
+| 🖊️ | Pen | `1f58a_pen` |
+| 🖌️ | Paintbrush | `1f58c_paintbrush` |
+| 🖍️ | Crayon | `1f58d_crayon` |
+| 📁 | File folder | `1f4c1_filefolder` |
+| 📂 | Open file folder | `1f4c2_openfilefolder` |
+| 🗂️ | Card index dividers | `1f5c2_cardindexdividers` |
+| 📅 | Calendar | `1f4c5_calendar` |
+| 📆 | Tear-off calendar | `1f4c6_tearoffcalendar` |
+| 🗒️ | Spiral notepad | `1f5d2_spiralnotepad` |
+| 🗓️ | Spiral calendar | `1f5d3_spiralcalendar` |
+| 📇 | Card index | `1f4c7_cardindex` |
+| 📈 | Chart increasing | `1f4c8_chartincreasing` |
+| 📉 | Chart decreasing | `1f4c9_chartdecreasing` |
+| 📊 | Bar chart | `1f4ca_barchart` |
+| 📋 | Clipboard | `1f4cb_clipboard` |
+| 📌 | Pushpin | `1f4cc_pushpin` |
+| 📍 | Round pushpin | `1f4cd_roundpushpin` |
+| 📎 | Paperclip | `1f4ce_paperclip` |
+| 🖇️ | Linked paperclips | `1f587_linkedpaperclips` |
+| 📏 | Straight ruler | `1f4cf_straightruler` |
+| 📐 | Triangular ruler | `1f4d0_triangularruler` |
+| ✂️ | Scissors | `2702_scissors` |
+| 🗃️ | Card file box | `1f5c3_cardfilebox` |
+| 🗄️ | File cabinet | `1f5c4_filecabinet` |
+| 🗑️ | Wastebasket | `1f5d1_wastebasket` |
+| 🔒 | Locked | `1f512_locked` |
+| 🔓 | Unlocked | `1f513_unlocked` |
+| 🔏 | Locked with pen | `1f50f_lockedwithpen` |
+| 🔐 | Locked with key | `1f510_lockedwithkey` |
+| 🔑 | Key | `1f511_key` |
+| 🗝️ | Old key | `1f5dd_oldkey` |
+| 🔨 | Hammer | `1f528_hammer` |
+| 🪓 | Axe | `1fa93_axe` |
+| ⛏️ | Pick | `26cf_pick` |
+| ⚒️ | Hammer and pick | `2692_hammerandpick` |
+| 🛠️ | Hammer and wrench | `1f6e0_hammerandwrench` |
+| 🗡️ | Dagger | `1f5e1_dagger` |
+| ⚔️ | Crossed swords | `2694_crossedswords` |
+| 🔫 | Water pistol | `1f52b_waterpistol` |
+| 🪃 | Boomerang | `1fa83_boomerang` |
+| 🏹 | Bow and arrow | `1f3f9_bowandarrow` |
+| 🛡️ | Shield | `1f6e1_shield` |
+| 🪚 | Carpentry saw | `1fa9a_carpentrysaw` |
+| 🔧 | Wrench | `1f527_wrench` |
+| 🪛 | Screwdriver | `1fa9b_screwdriver` |
+| 🔩 | Nut and bolt | `1f529_nutandbolt` |
+| ⚙️ | Gear | `2699_gear` |
+| 🗜️ | Clamp | `1f5dc_clamp` |
+| ⚖️ | Balance scale | `2696_balancescale` |
+| 🦯 | White cane | `1f9af_whitecane` |
+| 🔗 | Link | `1f517_link` |
+| ⛓️ | Chains | `26d3_chains` |
+| 🪝 | Hook | `1fa9d_hook` |
+| 🧰 | Toolbox | `1f9f0_toolbox` |
+| 🧲 | Magnet | `1f9f2_magnet` |
+| 🪜 | Ladder | `1fa9c_ladder` |
+| ⚗️ | Alembic | `2697_alembic` |
+| 🧪 | Test tube | `1f9ea_testtube` |
+| 🧫 | Petri dish | `1f9eb_petridish` |
+| 🧬 | DNA | `1f9ec_dna` |
+| 🔬 | Microscope | `1f52c_microscope` |
+| 🔭 | Telescope | `1f52d_telescope` |
+| 📡 | Satellite antenna | `1f4e1_satelliteantenna` |
 
 [Back to Category Navigation](#category-navigation)
 
@@ -2225,151 +2125,151 @@ Common objects and everyday items reactions.
 
 Transportation and location-related reactions.
 
-| Emoji | Description | Reaction ID | Shortcuts |
-|-------|-------------|-------------|-----------|
-| 🚗 | Automobile | `1f697_automobile` | `(automobile)`, `(au)`, `(Au)` |
-| 🚕 | Taxi | `1f695_taxi` | `(taxi)` |
-| 🚙 | Sport utility vehicle | `1f699_sportutilityvehicle` | `(sportutilityvehicle)` |
-| 🚌 | Bus | `1f68c_bus` | `(bus)` |
-| 🚎 | Trolleybus | `1f68e_trolleybus` | `(trolleybus)` |
-| 🏎️ | Racing car | `1f3ce_racingcar` | `(racingcar)` |
-| 🚓 | Police car | `1f693_policecar` | `(policecar)` |
-| 🚑 | Ambulance | `1f691_ambulance` | `(ambulance)` |
-| 🚒 | Fire engine | `1f692_fireengine` | `(fireengine)` |
-| 🚐 | Minibus | `1f690_minibus` | `(minibus)` |
-| 🛻 | Pickup truck | `1f6fb_pickuptruck` | `(pickuptruck)` |
-| 🚚 | Delivery truck | `1f69a_deliverytruck` | `(deliverytruck)` |
-| 🚛 | Articulated lorry | `1f69b_articulatedlorry` | `(articulatedlorry)` |
-| 🚜 | Tractor | `1f69c_tractor` | `(tractor)` |
-| 🏍️ | Motorcycle | `1f3cd_motorcycle` | `(motorcycle)` |
-| 🛵 | Motor scooter | `1f6f5_motorscooter` | `(motorscooter)` |
-| 🦽 | Manual wheelchair | `1f9bd_manualwheelchair` | `(manualwheelchair)` |
-| 🦼 | Motorized wheelchair | `1f9bc_motorizedwheelchair` | `(motorizedwheelchair)` |
-| 🛺 | Auto rickshaw | `1f6fa_autorickshaw` | `(autorickshaw)` |
-| 🚲 | Bicycle | `1f6b2_bicycle` | `(bicycle)` |
-| 🛴 | Kick scooter | `1f6f4_kickscooter` | `(kickscooter)` |
-| 🛹 | Skateboard | `1f6f9_skateboard` | `(skateboard)` |
-| 🛼 | Roller skate | `1f6fc_rollerskate` | `(rollerskate)` |
-| 🚏 | Bus stop | `1f68f_busstop` | `(busstop)` |
-| 🛣️ | Motorway | `1f6e3_motorway` | `(motorway)` |
-| 🛤️ | Railway track | `1f6e4_railwaytrack` | `(railwaytrack)` |
-| 🛢️ | Oil drum | `1f6e2_oildrum` | `(oildrum)` |
-| ⛽ | Fuel pump | `26fd_fuelpump` | `(fuelpump)` |
-| 🛞 | Wheel | `1f6de_wheel` | `(wheel)` |
-| 🚨 | Police car light | `1f6a8_policecarlight` | `(policecarlight)` |
-| 🚥 | Horizontal traffic light | `1f6a5_horizontaltrafficlight` | `(horizontaltrafficlight)` |
-| 🚦 | Vertical traffic light | `1f6a6_verticaltrafficlight` | `(verticaltrafficlight)` |
-| 🛑 | Stop sign | `1f6d1_stopsign` | `(stopsign)` |
-| 🚧 | Construction | `1f6a7_construction` | `(construction)` |
-| ⚓ | Anchor | `2693_anchor` | `(anchor)` |
-| 🛟 | Ring buoy | `1f6df_ringbuoy` | `(ringbuoy)` |
-| ⛵ | Sailboat | `26f5_sailboat` | `(sailboat)` |
-| 🛶 | Canoe | `1f6f6_canoe` | `(canoe)` |
-| 🚤 | Speedboat | `1f6a4_speedboat` | `(speedboat)` |
-| 🛳️ | Passenger ship | `1f6f3_passengership` | `(passengership)` |
-| ⛴️ | Ferry | `26f4_ferry` | `(ferry)` |
-| 🛥️ | Motor boat | `1f6e5_motorboat` | `(motorboat)` |
-| 🚢 | Ship | `1f6a2_ship` | `(ship)` |
-| ✈️ | Airplane | `2708_airplane` | `(airplane)`, `(ap)`, `(Ap)` |
-| 🛩️ | Small airplane | `1f6e9_smallairplane` | `(smallairplane)` |
-| 🛫 | Airplane departure | `1f6eb_airplanedeparture` | `(airplanedeparture)` |
-| 🛬 | Airplane arrival | `1f6ec_airplanearrival` | `(airplanearrival)` |
-| 🪂 | Parachute | `1fa82_parachute` | `(parachute)` |
-| 💺 | Seat | `1f4ba_seat` | `(seat)` |
-| 🚁 | Helicopter | `1f681_helicopter` | `(helicopter)` |
-| 🚟 | Suspension railway | `1f69f_suspensionrailway` | `(suspensionrailway)` |
-| 🚠 | Mountain cableway | `1f6a0_mountaincableway` | `(mountaincableway)` |
-| 🚡 | Aerial tramway | `1f6a1_aerialtramway` | `(aerialtramway)` |
-| 🛰️ | Satellite | `1f6f0_satellite` | `(satellite)` |
-| 🚀 | Rocket | `1f680_rocket` | `(rocket)` |
-| 🛸 | Flying saucer | `1f6f8_flyingsaucer` | `(flyingsaucer)` |
-| 🛎️ | Bellhop bell | `1f6ce_bellhopbell` | `(bellhopbell)` |
-| 🧳 | Luggage | `1f9f3_luggage` | `(luggage)` |
-| ⌛ | Hourglass done | `231b_hourglassdone` | `(hourglassdone)` |
-| ⏳ | Hourglass not done | `23f3_hourglassnotdone` | `(hourglassnotdone)` |
-| ⌚ | Watch | `231a_watch` | `(watch)` |
-| ⏰ | Alarm clock | `23f0_alarmclock` | `(alarmclock)` |
-| ⏱️ | Stopwatch | `23f1_stopwatch` | `(stopwatch)` |
-| ⏲️ | Timer clock | `23f2_timerclock` | `(timerclock)` |
-| 🕰️ | Mantelpiece clock | `1f570_mantelpiecewclock` | `(mantelpiecewclock)` |
-| 🕛 | Twelve o'clock | `1f55b_twelveoclock` | `(twelveoclock)` |
-| 🕧 | Twelve-thirty | `1f567_twelvethirty` | `(twelvethirty)` |
-| 🕐 | One o'clock | `1f550_oneoclock` | `(oneoclock)` |
-| 🕜 | One-thirty | `1f55c_onethirty` | `(onethirty)` |
-| 🕑 | Two o'clock | `1f551_twooclock` | `(twooclock)` |
-| 🕝 | Two-thirty | `1f55d_twothirty` | `(twothirty)` |
-| 🕒 | Three o'clock | `1f552_threeoclock` | `(threeoclock)` |
-| 🕞 | Three-thirty | `1f55e_threethirty` | `(threethirty)` |
-| 🕓 | Four o'clock | `1f553_fouroclock` | `(fouroclock)` |
-| 🕟 | Four-thirty | `1f55f_fourthirty` | `(fourthirty)` |
-| 🕔 | Five o'clock | `1f554_fiveoclock` | `(fiveoclock)` |
-| 🕠 | Five-thirty | `1f560_fivethirty` | `(fivethirty)` |
-| 🕕 | Six o'clock | `1f555_sixoclock` | `(sixoclock)` |
-| 🕡 | Six-thirty | `1f561_sixthirty` | `(sixthirty)` |
-| 🕖 | Seven o'clock | `1f556_sevenoclock` | `(sevenoclock)` |
-| 🕢 | Seven-thirty | `1f562_seventhirty` | `(seventhirty)` |
-| 🕗 | Eight o'clock | `1f557_eightoclock` | `(eightoclock)` |
-| 🕣 | Eight-thirty | `1f563_eightthirty` | `(eightthirty)` |
-| 🕘 | Nine o'clock | `1f558_nineoclock` | `(nineoclock)` |
-| 🕤 | Nine-thirty | `1f564_ninethirty` | `(ninethirty)` |
-| 🕙 | Ten o'clock | `1f559_tenoclock` | `(tenoclock)` |
-| 🕥 | Ten-thirty | `1f565_tenthirty` | `(tenthirty)` |
-| 🕚 | Eleven o'clock | `1f55a_elevenoclock` | `(elevenoclock)` |
-| 🕦 | Eleven-thirty | `1f566_eleventhirty` | `(eleventhirty)` |
-| 🌑 | New moon | `1f311_newmoon` | `(newmoon)` |
-| 🌒 | Waxing crescent moon | `1f312_waxingcrescentmoon` | `(waxingcrescentmoon)` |
-| 🌓 | First quarter moon | `1f313_firstquartermoon` | `(firstquartermoon)` |
-| 🌔 | Waxing gibbous moon | `1f314_waxinggibbousmoon` | `(waxinggibbousmoon)` |
-| 🌕 | Full moon | `1f315_fullmoon` | `(fullmoon)` |
-| 🌖 | Waning gibbous moon | `1f316_waninggibbousmoon` | `(waninggibbousmoon)` |
-| 🌗 | Last quarter moon | `1f317_lastquartermoon` | `(lastquartermoon)` |
-| 🌘 | Waning crescent moon | `1f318_waningcrescentmoon` | `(waningcrescentmoon)` |
-| 🌚 | New moon face | `1f31a_newmoonface` | `(newmoonface)` |
-| 🌝 | Full moon face | `1f31d_fullmoonface` | `(fullmoonface)` |
-| 🌛 | First quarter moon face | `1f31b_firstquartermoonface` | `(firstquartermoonface)` |
-| 🌜 | Last quarter moon face | `1f31c_lastquartermoonface` | `(lastquartermoonface)` |
-| ☀️ | Sun | `2600_sun` | `(sun)` |
-| 🌤️ | Sun behind small cloud | `1f324_sunbehindsmallcloud` | `(sunbehindsmallcloud)` |
-| ⛅ | Sun behind cloud | `26c5_sunbehindcloud` | `(sunbehindcloud)` |
-| 🌥️ | Sun behind large cloud | `1f325_sunbehindlargecloud` | `(sunbehindlargecloud)` |
-| ☁️ | Cloud | `2601_cloud` | `(cloud)` |
-| 🌦️ | Sun behind rain cloud | `1f326_sunbehindraincloud` | `(sunbehindraincloud)` |
-| 🌧️ | Cloud with rain | `1f327_cloudwithrain` | `(cloudwithrain)` |
-| ⛈️ | Cloud with lightning and rain | `26c8_cloudwithlightningandrain` | `(cloudwithlightningandrain)` |
-| 🌩️ | Cloud with lightning | `1f329_cloudwithlightning` | `(cloudwithlightning)` |
-| 🌨️ | Cloud with snow | `1f328_cloudwithsnow` | `(cloudwithsnow)` |
-| 🌟 | Glowing star | `1f31f_glowingstar` | `(glowingstar)` |
-| ✨ | Sparkles | `2728_sparkles` | `(sparkles)` |
-| ⚡ | High voltage | `26a1_highvoltage` | `(highvoltage)` |
-| 🔥 | Fire | `1f525_fire` | `(fire)` |
-| 💥 | Collision | `1f4a5_collision` | `(collision)` |
-| ❄️ | Snowflake | `2744_snowflake` | `(snowflake)` |
-| ⛄ | Snowman without snow | `26c4_snowmanwithoutsnow` | `(snowmanwithoutsnow)` |
-| ☃️ | Snowman | `2603_snowman` | `(snowman)` |
-| 🎃 | Jack-o-lantern | `1f383_jackolantern` | `(jackolantern)` |
-| 🎄 | Christmas tree | `1f384_christmastree` | `(christmastree)` |
-| 🎆 | Fireworks | `1f386_fireworks` | `(fireworks)` |
-| 🎇 | Sparkler | `1f387_sparkler` | `(sparkler)` |
-| 🧨 | Firecracker | `1f9e8_firecracker` | `(firecracker)` |
-| ✨ | Sparkles | `2728_sparkles` | `(sparkles)` |
-| 🎈 | Balloon | `1f388_balloon` | `(balloon)` |
-| 🎉 | Party popper | `1f389_partypopper` | `(partypopper)` |
-| 🎊 | Confetti ball | `1f38a_confettiball` | `(confettiball)` |
-| 🎋 | Tanabata tree | `1f38b_tanabatatree` | `(tanabatatree)` |
-| 🎍 | Pine decoration | `1f38d_pinedecoration` | `(pinedecoration)` |
-| 🎎 | Japanese dolls | `1f38e_japanesedolls` | `(japanesedolls)` |
-| 🎏 | Carp streamer | `1f38f_carpstreamer` | `(carpstreamer)` |
-| 🎐 | Wind chime | `1f390_windchime` | `(windchime)` |
-| 🎑 | Moon viewing ceremony | `1f391_moonviewingceremony` | `(moonviewingceremony)` |
-| 🧧 | Red envelope | `1f9e7_redenvelope` | `(redenvelope)` |
-| 🎀 | Ribbon | `1f380_ribbon` | `(ribbon)` |
-| 🎁 | Wrapped gift | `1f381_wrappedgift` | `(wrappedgift)` |
-| 🎗️ | Reminder ribbon | `1f397_reminderribbon` | `(reminderribbon)` |
-| 🏆 | Trophy | `1f3c6_trophy` | `(trophy)` |
-| 🏅 | Sports medal | `1f3c5_sportsmedal` | `(sportsmedal)` |
-| 🥇 | 1st place medal | `1f947_1stplacemedal` | `(1stplacemedal)` |
-| 🥈 | 2nd place medal | `1f948_2ndplacemedal` | `(2ndplacemedal)` |
-| 🥉 | 3rd place medal | `1f949_3rdplacemedal` | `(3rdplacemedal)` |
+| Emoji | Description | Reaction ID |
+|-------|-------------|-------------|
+| 🚗 | Automobile | `1f697_automobile` |
+| 🚕 | Taxi | `1f695_taxi` |
+| 🚙 | Sport utility vehicle | `1f699_sportutilityvehicle` |
+| 🚌 | Bus | `1f68c_bus` |
+| 🚎 | Trolleybus | `1f68e_trolleybus` |
+| 🏎️ | Racing car | `1f3ce_racingcar` |
+| 🚓 | Police car | `1f693_policecar` |
+| 🚑 | Ambulance | `1f691_ambulance` |
+| 🚒 | Fire engine | `1f692_fireengine` |
+| 🚐 | Minibus | `1f690_minibus` |
+| 🛻 | Pickup truck | `1f6fb_pickuptruck` |
+| 🚚 | Delivery truck | `1f69a_deliverytruck` |
+| 🚛 | Articulated lorry | `1f69b_articulatedlorry` |
+| 🚜 | Tractor | `1f69c_tractor` |
+| 🏍️ | Motorcycle | `1f3cd_motorcycle` |
+| 🛵 | Motor scooter | `1f6f5_motorscooter` |
+| 🦽 | Manual wheelchair | `1f9bd_manualwheelchair` |
+| 🦼 | Motorized wheelchair | `1f9bc_motorizedwheelchair` |
+| 🛺 | Auto rickshaw | `1f6fa_autorickshaw` |
+| 🚲 | Bicycle | `1f6b2_bicycle` |
+| 🛴 | Kick scooter | `1f6f4_kickscooter` |
+| 🛹 | Skateboard | `1f6f9_skateboard` |
+| 🛼 | Roller skate | `1f6fc_rollerskate` |
+| 🚏 | Bus stop | `1f68f_busstop` |
+| 🛣️ | Motorway | `1f6e3_motorway` |
+| 🛤️ | Railway track | `1f6e4_railwaytrack` |
+| 🛢️ | Oil drum | `1f6e2_oildrum` |
+| ⛽ | Fuel pump | `26fd_fuelpump` |
+| 🛞 | Wheel | `1f6de_wheel` |
+| 🚨 | Police car light | `1f6a8_policecarlight` |
+| 🚥 | Horizontal traffic light | `1f6a5_horizontaltrafficlight` |
+| 🚦 | Vertical traffic light | `1f6a6_verticaltrafficlight` |
+| 🛑 | Stop sign | `1f6d1_stopsign` |
+| 🚧 | Construction | `1f6a7_construction` |
+| ⚓ | Anchor | `2693_anchor` |
+| 🛟 | Ring buoy | `1f6df_ringbuoy` |
+| ⛵ | Sailboat | `26f5_sailboat` |
+| 🛶 | Canoe | `1f6f6_canoe` |
+| 🚤 | Speedboat | `1f6a4_speedboat` |
+| 🛳️ | Passenger ship | `1f6f3_passengership` |
+| ⛴️ | Ferry | `26f4_ferry` |
+| 🛥️ | Motor boat | `1f6e5_motorboat` |
+| 🚢 | Ship | `1f6a2_ship` |
+| ✈️ | Airplane | `2708_airplane` |
+| 🛩️ | Small airplane | `1f6e9_smallairplane` |
+| 🛫 | Airplane departure | `1f6eb_airplanedeparture` |
+| 🛬 | Airplane arrival | `1f6ec_airplanearrival` |
+| 🪂 | Parachute | `1fa82_parachute` |
+| 💺 | Seat | `1f4ba_seat` |
+| 🚁 | Helicopter | `1f681_helicopter` |
+| 🚟 | Suspension railway | `1f69f_suspensionrailway` |
+| 🚠 | Mountain cableway | `1f6a0_mountaincableway` |
+| 🚡 | Aerial tramway | `1f6a1_aerialtramway` |
+| 🛰️ | Satellite | `1f6f0_satellite` |
+| 🚀 | Rocket | `1f680_rocket` |
+| 🛸 | Flying saucer | `1f6f8_flyingsaucer` |
+| 🛎️ | Bellhop bell | `1f6ce_bellhopbell` |
+| 🧳 | Luggage | `1f9f3_luggage` |
+| ⌛ | Hourglass done | `231b_hourglassdone` |
+| ⏳ | Hourglass not done | `23f3_hourglassnotdone` |
+| ⌚ | Watch | `231a_watch` |
+| ⏰ | Alarm clock | `23f0_alarmclock` |
+| ⏱️ | Stopwatch | `23f1_stopwatch` |
+| ⏲️ | Timer clock | `23f2_timerclock` |
+| 🕰️ | Mantelpiece clock | `1f570_mantelpiecewclock` |
+| 🕛 | Twelve o'clock | `1f55b_twelveoclock` |
+| 🕧 | Twelve-thirty | `1f567_twelvethirty` |
+| 🕐 | One o'clock | `1f550_oneoclock` |
+| 🕜 | One-thirty | `1f55c_onethirty` |
+| 🕑 | Two o'clock | `1f551_twooclock` |
+| 🕝 | Two-thirty | `1f55d_twothirty` |
+| 🕒 | Three o'clock | `1f552_threeoclock` |
+| 🕞 | Three-thirty | `1f55e_threethirty` |
+| 🕓 | Four o'clock | `1f553_fouroclock` |
+| 🕟 | Four-thirty | `1f55f_fourthirty` |
+| 🕔 | Five o'clock | `1f554_fiveoclock` |
+| 🕠 | Five-thirty | `1f560_fivethirty` |
+| 🕕 | Six o'clock | `1f555_sixoclock` |
+| 🕡 | Six-thirty | `1f561_sixthirty` |
+| 🕖 | Seven o'clock | `1f556_sevenoclock` |
+| 🕢 | Seven-thirty | `1f562_seventhirty` |
+| 🕗 | Eight o'clock | `1f557_eightoclock` |
+| 🕣 | Eight-thirty | `1f563_eightthirty` |
+| 🕘 | Nine o'clock | `1f558_nineoclock` |
+| 🕤 | Nine-thirty | `1f564_ninethirty` |
+| 🕙 | Ten o'clock | `1f559_tenoclock` |
+| 🕥 | Ten-thirty | `1f565_tenthirty` |
+| 🕚 | Eleven o'clock | `1f55a_elevenoclock` |
+| 🕦 | Eleven-thirty | `1f566_eleventhirty` |
+| 🌑 | New moon | `1f311_newmoon` |
+| 🌒 | Waxing crescent moon | `1f312_waxingcrescentmoon` |
+| 🌓 | First quarter moon | `1f313_firstquartermoon` |
+| 🌔 | Waxing gibbous moon | `1f314_waxinggibbousmoon` |
+| 🌕 | Full moon | `1f315_fullmoon` |
+| 🌖 | Waning gibbous moon | `1f316_waninggibbousmoon` |
+| 🌗 | Last quarter moon | `1f317_lastquartermoon` |
+| 🌘 | Waning crescent moon | `1f318_waningcrescentmoon` |
+| 🌚 | New moon face | `1f31a_newmoonface` |
+| 🌝 | Full moon face | `1f31d_fullmoonface` |
+| 🌛 | First quarter moon face | `1f31b_firstquartermoonface` |
+| 🌜 | Last quarter moon face | `1f31c_lastquartermoonface` |
+| ☀️ | Sun | `2600_sun` |
+| 🌤️ | Sun behind small cloud | `1f324_sunbehindsmallcloud` |
+| ⛅ | Sun behind cloud | `26c5_sunbehindcloud` |
+| 🌥️ | Sun behind large cloud | `1f325_sunbehindlargecloud` |
+| ☁️ | Cloud | `2601_cloud` |
+| 🌦️ | Sun behind rain cloud | `1f326_sunbehindraincloud` |
+| 🌧️ | Cloud with rain | `1f327_cloudwithrain` |
+| ⛈️ | Cloud with lightning and rain | `26c8_cloudwithlightningandrain` |
+| 🌩️ | Cloud with lightning | `1f329_cloudwithlightning` |
+| 🌨️ | Cloud with snow | `1f328_cloudwithsnow` |
+| 🌟 | Glowing star | `1f31f_glowingstar` |
+| ✨ | Sparkles | `2728_sparkles` |
+| ⚡ | High voltage | `26a1_highvoltage` |
+| 🔥 | Fire | `1f525_fire` |
+| 💥 | Collision | `1f4a5_collision` |
+| ❄️ | Snowflake | `2744_snowflake` |
+| ⛄ | Snowman without snow | `26c4_snowmanwithoutsnow` |
+| ☃️ | Snowman | `2603_snowman` |
+| 🎃 | Jack-o-lantern | `1f383_jackolantern` |
+| 🎄 | Christmas tree | `1f384_christmastree` |
+| 🎆 | Fireworks | `1f386_fireworks` |
+| 🎇 | Sparkler | `1f387_sparkler` |
+| 🧨 | Firecracker | `1f9e8_firecracker` |
+| ✨ | Sparkles | `2728_sparkles` |
+| 🎈 | Balloon | `1f388_balloon` |
+| 🎉 | Party popper | `1f389_partypopper` |
+| 🎊 | Confetti ball | `1f38a_confettiball` |
+| 🎋 | Tanabata tree | `1f38b_tanabatatree` |
+| 🎍 | Pine decoration | `1f38d_pinedecoration` |
+| 🎎 | Japanese dolls | `1f38e_japanesedolls` |
+| 🎏 | Carp streamer | `1f38f_carpstreamer` |
+| 🎐 | Wind chime | `1f390_windchime` |
+| 🎑 | Moon viewing ceremony | `1f391_moonviewingceremony` |
+| 🧧 | Red envelope | `1f9e7_redenvelope` |
+| 🎀 | Ribbon | `1f380_ribbon` |
+| 🎁 | Wrapped gift | `1f381_wrappedgift` |
+| 🎗️ | Reminder ribbon | `1f397_reminderribbon` |
+| 🏆 | Trophy | `1f3c6_trophy` |
+| 🏅 | Sports medal | `1f3c5_sportsmedal` |
+| 🥇 | 1st place medal | `1f947_1stplacemedal` |
+| 🥈 | 2nd place medal | `1f948_2ndplacemedal` |
+| 🥉 | 3rd place medal | `1f949_3rdplacemedal` |
 
 [Back to Category Navigation](#category-navigation)
 
@@ -2413,191 +2313,16 @@ Unique Microsoft Teams-branded reactions and special text-based reactions.
 
 ---
 
----
 
-## Usage Examples
-
-### Basic Reaction Usage
-
-#### TypeScript
-
-```typescript
-app.on('mention', async ({ activity, send }) => {
-  await send(new MessageReactionActivity({
-    replyToId = activity.id,
-    reactions: [like]
-  }));
-});
-```
-
-#### C#
-
-```csharp
-[Message]
-public async Task OnMessage([Context] MessageActivity activity, [Context] IContext.Client client)
-{
-    if (activity.IsRecipientMentioned)
-    {
-        await client.Send(new MessageReactionActivity().AddReaction(new Reaction()
-        {
-            Type = "like"
-        }).WithReplyToId(activity.Id));
-    }
-}
-```
-
-#### Python
-
-```python
-@app.on_message
-async def handle_message(ctx: ActivityContext[MessageActivity]):
-    if ctx.activity.is_recipient_mentioned:
-        await ctx.send(MessageReactionActivityInput(reply_to_id=ctx.activity.id).add_reaction(MemssageReaction(type="like")))
-```
-
-#### HTTP
-
-```rest
-PUT {cloud}/{tenantId}/v3/conversations/{conversationId}/activities/{activityId}/reaction/{reactionType}
-```
-
-Where:
-- `conversationId` is the thread or chat identifier.
-- `activityId` is the message or activity ID.
-- `reactionId` is the `EmojiID` that you want to add.
-
----
-
-### Reaction with Skin Tone
-
-```typescript
-// Using a reaction with a specific skin tone
-const reactionId = "1f44b_wavinghand-tone3"; // Medium tone waving hand
-
-app.on('mention', async ({ activity, send }) => {
-  await send(new MessageReactionActivity({
-    replyToId = activity.id,
-    reactions: [reactionId]
-  }));
-});
-```
-
-### Listening for Reaction Events
-
-```typescript
-// Bot listening for reactions
-app.on('messageReaction', async ({ activity }) => {
-  const reactionsAdded = activity.reactionsAdded;
-  
-  if (reactionsAdded && reactionsAdded.length > 0) {
-    reactionsAdded.forEach(reaction => {
-      console.log(`Reaction added: ${reaction.type}`);
-    });
-  }
-});
-```
-
-### Adaptive Card with Reaction Data
-
-```json
-{
-  "type": "AdaptiveCard",
-  "body": [
-    {
-      "type": "TextBlock",
-      "text": "Great job! 👍",
-      "wrap": true
-    }
-  ],
-  "actions": [
-    {
-      "type": "Action.Submit",
-      "title": "React",
-      "data": {
-        "reactionId": "1f44d_thumbsup",
-        "action": "addReaction"
-      }
-    }
-  ],
-  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-  "version": "1.4"
-}
-```
-
-### Graph API - Adding Reactions
-
-```typescript
-// Using Microsoft Graph API to add a reaction
-const graphClient = Client.init({
-  authProvider: (done) => {
-    done(null, accessToken);
-  }
-});
-
-await graphClient
-  .api(`/teams/${teamId}/channels/${channelId}/messages/${messageId}/reactions`)
-  .post({
-    reactionType: '1f44d_thumbsup'
-  });
-```
-
-### Filtering Reactions by Category
-
-```typescript
-// Example: Get all hand gesture reactions
-const handGestureReactions = [
-  '1f44b_wavinghand',
-  '1f44d_thumbsup',
-  '1f44e_thumbsdown',
-  '1f44f_clappinghands',
-  '270b_raisedhand',
-  '1f64f_foldedhands'
-];
-
-// Use in your application
-function getRandomHandGesture() {
-  const index = Math.floor(Math.random() * handGestureReactions.length);
-  return handGestureReactions[index];
-}
-```
-
----
-
----
-
-## API Reference
-
-### Data Source
+## Data Source
 
 ```
 https://statics.teams.cdn.office.net/evergreen-assets/personal-expressions/v1/metadata/86e6062e3e6843b4b62bd03d55440544/default.json
 ```
 
-```typescript
-interface TeamsReaction {
-  id: string;              // Unique reaction identifier (e.g., "1f44b_wavinghand")
-  description: string;     // Human-readable name (e.g., "Waving hand")
-  unicode: string;         // Unicode emoji character or text (e.g., "👋")
-  category: string;        // Category name (e.g., "Hand Gestures")
-  diverse?: boolean;       // true if reaction supports skin tone variants
-  shortcuts?: string[];    // Alternative text shortcuts (e.g., ["(wavinghand)"])
-  tags?: string[];         // Search keywords for discovery
-  etag?: string;          // Version identifier
-}
-```
 
-```typescript
-interface TeamsReactionsMetadata {
-  categories: Array<{
-    id: string;
-    title: string;
-    description: string;
-    emoticons: TeamsReaction[];
-  }>;
-}
-```
 
-### Skin Tone Variants
+## Skin Tone Variants
 
 For reactions where `diverse: true`, append the skin tone suffix to the base ID:
 
@@ -2614,79 +2339,6 @@ For reactions where `diverse: true`, append the skin tone suffix to the base ID:
 - With tone: `1f44b_wavinghand-tone1`, `1f44b_wavinghand-tone2`, etc.
 
 <br>
-
-## Best Practices
-
-### 1. **Use Descriptive IDs**
-Always use the full reaction ID to avoid confusion:
-```typescript
-// ✅ Good
-const reaction = "1f44d_thumbsup";
-
-// ❌ Avoid
-const reaction = "thumbsup";
-```
-
-### 2. **Handle Skin Tone Variants Gracefully**
-Check if a reaction supports diversity before appending tone suffixes:
-```typescript
-function getReactionWithTone(baseId: string, tone: number, diverse: boolean) {
-  if (diverse && tone >= 1 && tone <= 5) {
-    return `${baseId}-tone${tone}`;
-  }
-  return baseId;
-}
-```
-
-### 3. **Cache Reaction Metadata**
-The CDN metadata changes infrequently. Cache it to improve performance:
-```typescript
-const CACHE_DURATION = 24 * 60 * 60 * 1000; // 24 hours
-
-async function getCachedReactions() {
-  const cached = localStorage.getItem('reactions_cache');
-  const cacheTime = localStorage.getItem('reactions_cache_time');
-  
-  if (cached && cacheTime && Date.now() - parseInt(cacheTime) < CACHE_DURATION) {
-    return JSON.parse(cached);
-  }
-  
-  const fresh = await fetchTeamsReactions();
-  localStorage.setItem('reactions_cache', JSON.stringify(fresh));
-  localStorage.setItem('reactions_cache_time', Date.now().toString());
-  return fresh;
-}
-```
-
-### 4. **Validate Reaction IDs**
-Validate reaction IDs before sending to avoid errors:
-```typescript
-const VALID_REACTIONS = new Set([
-  '1f44d_thumbsup',
-  '1f44e_thumbsdown',
-  // ... add all valid IDs
-]);
-
-function isValidReaction(id: string): boolean {
-  // Check base ID or with tone suffix
-  const baseId = id.split('-')[0];
-  return VALID_REACTIONS.has(baseId);
-}
-```
-
-### 5. **Provide Fallbacks**
-Always have a fallback for unsupported reactions:
-```typescript
-function sendReaction(reactionId: string) {
-  try {
-    // Attempt to send reaction
-    await sendTeamsReaction(reactionId);
-  } catch (error) {
-    console.warn(`Reaction ${reactionId} not supported, using default`);
-    await sendTeamsReaction('1f44d_thumbsup');
-  }
-}
-```
 
 ---
 
@@ -2744,9 +2396,6 @@ This reference is maintained to help Microsoft Teams developers quickly find and
 ✅ **Skin tones** accessible via `-tone1` through `-tone5` suffix  
 ✅ **Categories**: Smileys, Hand Gestures, People, Hearts, Animals, Food, Sports, Objects, Travel, Flags  
 ✅ **Special reactions**: Microsoft Teams-exclusive text-based reactions  
-✅ **Search & Filter**: Use browser search (Ctrl+F) or [Category Navigation](#filter-by-category) for easy browsing  
-✅ **Export**: JSON export functionality  
-✅ **Always Current**: Data sourced directly from Microsoft Teams CDN
 
 ---
 
