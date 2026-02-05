@@ -203,7 +203,64 @@ To select a particular skin tone:
 
 1. Copy the `EmojiID` for the skin tone that you want to use for your agent.
 
-[WIP: Example code snippets for selecting skin tone.]
+The following code snippet shows an example of selecting a specific skin tone of a Diverse emoji to a message:
+
+# [TypeScript](#tab/ts1)
+
+[WIP: Add link to Teams SDK docs.]
+
+```typescript
+
+app.on('mention', async ({ activity, send }) => {
+  await send(new MessageReactionActivity({
+    replyToId = activity.id,
+    reactions: ["1f44b_wavinghand-tone4"]
+  }));
+});
+```
+
+# [CSharp](#tab/cs1)
+
+[WIP: Add link to Teams SDK docs.]
+
+```csharp
+[Message]
+        public async Task OnMessage([Context] MessageActivity activity, [Context] IContext.Client client)
+        {
+            if (activity.IsRecipientMentioned)
+            {
+                await client.Send(new MessageReactionActivity().AddReaction(new Reaction()
+                {
+                    Type = “1f44b_wavinghand-tone4”
+                }).WithReplyToId(activity.Id));
+            }
+        }
+```
+
+# [Python](#tab/py1)
+
+[WIP: Add link to Teams SDK docs.]
+
+```python
+@app.on_message
+async def handle_message(ctx: ActivityContext[MessageActivity]):
+    if ctx.activity.is_recipient_mentioned:
+        await ctx.send(MessageReactionActivityInput(reply_to_id=ctx.activity.id).add_reaction(MemssageReaction(type="1f44b_wavinghand-tone4")))
+```
+
+# [API](#tab/h1)
+
+```rest
+PUT {cloud}/{tenantId}/v3/conversations/{conversationId}/activities/{activityId}/reaction/1f44b_wavinghand-tone4
+```
+
+Where,
+
+- `conversationId` is the thread or chat identifier.
+- `activityId` is the message or activity ID.
+- `reactionId` is the `EmojiID` that you want to add.
+
+---
 
 ### Custom Emojis
 
