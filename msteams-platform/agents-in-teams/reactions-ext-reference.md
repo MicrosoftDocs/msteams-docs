@@ -1116,7 +1116,7 @@ All people and body-related reactions with skin tone support where applicable.
 | 👶 | Baby | `1f476_baby` | 🎨 | `-tone1` through `-tone5` |
 | 👧 | Girl | `1f467_girl` | 🎨 | `-tone1` through `-tone5` |
 | 🧒 | Child | `1f9d2_child` | 🎨 | `-tone1` through `-tone5` |
-| ��� | Boy | `1f466_boy` | 🎨 | `-tone1` through `-tone5` |
+| 👦 | Boy | `1f466_boy` | 🎨 | `-tone1` through `-tone5` |
 | 👩 | Woman | `1f469_woman` | 🎨 | `-tone1` through `-tone5` |
 | 🧑 | Person | `1f9d1_person` | 🎨 | `-tone1` through `-tone5` |
 | 👨 | Man | `1f468_man` | 🎨 | `-tone1` through `-tone5` |
@@ -1481,7 +1481,7 @@ All heart reactions and symbols for expressing love and emotions.
 | 💯 | Hundred points | `1f4af_hundredpoints` |
 | 💢 | Anger symbol | `1f4a2_angersymbol` |
 | ♨️ | Hot springs | `2668_hotsprings` |
-| ���� | No pedestrians | `1f6b7_nopedestrians` |
+| 🚷 | No pedestrians | `1f6b7_nopedestrians` |
 | 🚯 | No littering | `1f6af_nolittering` |
 | 🚳 | No bicycles | `1f6b3_nobicycles` |
 | 🚱 | Non-potable water | `1f6b1_nonpotablewater` |
@@ -1680,7 +1680,7 @@ Popular animal and nature reactions available in Microsoft Teams.
 | 🌹 | Rose | `1f339_rose` |
 | 🥀 | Wilted flower | `1f940_wiltedflower` |
 | 🪻 | Hyacinth | `1fabb_hyacinth` |
-| �� | Hibiscus | `1f33a_hibiscus` |
+| 🌺 | Hibiscus | `1f33a_hibiscus` |
 | 🌸 | Cherry blossom | `1f338_cherryblossom` |
 | 🌻 | Sunflower | `1f33b_sunflower` |
 | 🌚 | New moon face | `1f31a_newmoonface` |
@@ -1871,7 +1871,7 @@ All food and beverage reactions for meal times and celebrations.
 | 🧋 | Bubble tea | `1f9cb_bubbletea` |
 | 🧃 | Beverage box | `1f9c3_beveragebox` |
 | 🧉 | Mate | `1f9c9_mate` |
-| ���� | Ice | `1f9ca_ice` |
+| 🧊 | Ice | `1f9ca_ice` |
 | 🍵 | Teacup without handle | `1f375_teacupwithouthandle` |
 | 🍶 | Sake | `1f376_sake` |
 | 🍾 | Bottle with popping cork | `1f37e_bottlewithpoppingcork` |
@@ -2135,13 +2135,13 @@ Common objects and everyday items reactions.
 | 💶 | Euro banknote | `1f4b6_eurobanknote` | `(eurobanknote)` |
 | 💷 | Pound banknote | `1f4b7_poundbanknote` | `(poundbanknote)` |
 | 💸 | Money with wings | `1f4b8_moneywithwings` | `(moneywithwings)` |
-| ��� | Credit card | `1f4b3_creditcard` | `(creditcard)` |
+| 💳 | Credit card | `1f4b3_creditcard` | `(creditcard)` |
 | 🧾 | Receipt | `1f9fe_receipt` | `(receipt)` |
 | 💹 | Chart increasing with yen | `1f4b9_chartincreasingwithyen` | `(chartincreasingwithyen)` |
 | ✉️ | Envelope | `2709_envelope` | `(envelope)` |
 | 📧 | E-mail | `1f4e7_email` | `(email)` |
 | 📨 | Incoming envelope | `1f4e8_incomingenvelope` | `(incomingenvelope)` |
-| ���� | Envelope with arrow | `1f4e9_envelopewitharrow` | `(envelopewitharrow)` |
+| 📩 | Envelope with arrow | `1f4e9_envelopewitharrow` | `(envelopewitharrow)` |
 | 📤 | Outbox tray | `1f4e4_outboxtray` | `(outboxtray)` |
 | 📥 | Inbox tray | `1f4e5_inboxtray` | `(inboxtray)` |
 | 📫 | Closed mailbox with raised flag | `1f4eb_closedmailboxwithraisedflag` | `(closedmailboxwithraisedflag)` |
