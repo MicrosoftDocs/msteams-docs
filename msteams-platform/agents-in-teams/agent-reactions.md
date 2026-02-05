@@ -96,7 +96,7 @@ Where,
 You can choose to enable agents to remove reactions from messages. To enable agents to remove reactions from a message:
 
 1. Use the [Teams reactions reference](teams-reactions-reference.md) for getting the `EmojiID` for the reactions that you want to remove. You can also select a particular [skin tone for the emoji](#modify-skin-tone-for-emojis) by selecting its `EmojiID`.
-1. Use the `removeReaction` method from Teams SDK or call the `remove reaction` API to send reactions to messages.
+1. Use the `removeReaction` method from Teams SDK or call the `remove reaction` API to remove reactions from messages.
 
 The following code snippet shows an example of removing a reaction from a message:
 
