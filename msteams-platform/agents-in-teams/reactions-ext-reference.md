@@ -1137,13 +1137,13 @@ All people and body-related reactions with skin tone support where applicable.
 | 🧝‍♀️ | Woman elf | `1f9dd200d2640_womanelf` | 🎨 | `-tone1` through `-tone5` |
 | 🧝 | Elf | `1f9dd_elf` | 🎨 | `-tone1` through `-tone5` |
 | 🧝‍♂️ | Man elf | `1f9dd200d2642_manelf` | 🎨 | `-tone1` through `-tone5` |
-| 🧞‍♀️ | Woman genie | `1f9de200d2640_womangenie` | |
-| 🧞 | Genie | `1f9de_genie` | |
-| 🧞‍♂️ | Man genie | `1f9de200d2642_mangenie` | |
-| 🧟‍♀️ | Woman zombie | `1f9df200d2640_womanzombie` | |
-| 🧟 | Zombie | `1f9df_zombie` | |
-| 🧟‍♂️ | Man zombie | `1f9df200d2642_manzombie` | |
-| 🧌 | Troll | `1f9cc_troll` | |
+| 🧞‍♀️ | Woman genie | `1f9de200d2640_womangenie` | | |
+| 🧞 | Genie | `1f9de_genie` | | |
+| 🧞‍♂️ | Man genie | `1f9de200d2642_mangenie` | | |
+| 🧟‍♀️ | Woman zombie | `1f9df200d2640_womanzombie` | | |
+| 🧟 | Zombie | `1f9df_zombie` | | |
+| 🧟‍♂️ | Man zombie | `1f9df200d2642_manzombie` | | |
+| 🧌 | Troll | `1f9cc_troll` | | |
 | 💆‍♀️ | Woman getting massage | `1f486200d2640_womangettingmassage` | 🎨 | `-tone1` through `-tone5` |
 | 💆 | Person getting massage | `1f486_persongettingmassage` | 🎨 | `-tone1` through `-tone5` |
 | 💆‍♂️ | Man getting massage | `1f486200d2642_mangettingmassage` | 🎨 | `-tone1` through `-tone5` |
@@ -1174,9 +1174,9 @@ All people and body-related reactions with skin tone support where applicable.
 | 💃 | Woman dancing | `1f483_womandancing` | 🎨 | `-tone1` through `-tone5` |
 | 🕺 | Man dancing | `1f57a_mandancing` | 🎨 | `-tone1` through `-tone5` |
 | 🕴️ | Person in suit levitating | `1f574_personinsuitlevitating` | 🎨 | `-tone1` through `-tone5` |
-| 👯‍♀️ | Women with bunny ears | `1f46f200d2640_womenwithbunnyears` | |
-| 👯 | People with bunny ears | `1f46f_peoplewithbunnyears` | |
-| 👯‍♂️ | Men with bunny ears | `1f46f200d2642_menwithbunnyears` | |
+| 👯‍♀️ | Women with bunny ears | `1f46f200d2640_womenwithbunnyears` | | |
+| 👯 | People with bunny ears | `1f46f_peoplewithbunnyears` | | |
+| 👯‍♂️ | Men with bunny ears | `1f46f200d2642_menwithbunnyears` | | |
 | 🧖‍♀️ | Woman in steamy room | `1f9d6200d2640_womaninsteamyroom` | 🎨 | `-tone1` through `-tone5` |
 | 🧖 | Person in steamy room | `1f9d6_personinsteamyroom` | 🎨 | `-tone1` through `-tone5` |
 | 🧖‍♂️ | Man in steamy room | `1f9d6200d2642_maninsteamyroom` | 🎨 | `-tone1` through `-tone5` |
@@ -2348,7 +2348,7 @@ For reactions where `diverse: true`, append the skin tone suffix to the base ID:
 - 🤖 [Bot Framework SDK](/azure/bot-service/)
 - 💬 [Message Reactions API](../bots/how-to/conversations/subscribe-to-conversation-events.md)
 - 📊 [Microsoft Graph API](/graph/api/resources/chatmessagereaction)
-- 🔧 [Microsoft 365 Agents Toolkit](../toolkit/teams-toolkit-fundamentals.md)
+- 🔧 [Microsoft 365 Agents Toolkit](../toolkit/agents-toolkit-fundamentals.md)
 
 - 📋 [This Reference (Markdown)](https://github.com/VikrantSingh01/teams-reactions-reference) - Complete markdown reference
 
@@ -2360,7 +2360,7 @@ For reactions where `diverse: true`, append the skin tone suffix to the base ID:
 
 ### Related APIs
 
-- [Adaptive Cards](https://adaptivecards.io/)
+- [Adaptive Cards](https://adaptivecards.microsoft.com/)
 - [Bot Framework](https://dev.botframework.com/)
 - [Microsoft Graph](https://developer.microsoft.com/en-us/graph)
 
