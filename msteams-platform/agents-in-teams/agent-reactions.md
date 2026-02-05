@@ -22,7 +22,6 @@ Map emojis and reactions to specific agent actions and use `EmojiID` to send the
 - [Remove reactions](#enable-an-agent-to-remove-reactions)
 - [View response codes](#response-codes)
 - [Select skin tone for emojis](#modify-skin-tone-for-emojis)
-- [Use custom emojis](#custom-emojis)
 - [Best practices](#best-practices)
 
 ## Enable an agent to add reactions
@@ -32,7 +31,7 @@ You can use the `addReaction` method from Teams SDK or call the `add reaction` A
 1. Use the [Teams reactions reference](teams-reactions-reference.md) for getting the `EmojiID` for the reactions that you want to add. You can also select a particular [skin tone for the emoji](#modify-skin-tone-for-emojis) by selecting its `EmojiID`.
 1. Use the `addReaction` method from Teams SDK or call the `add reaction` API to send reactions to messages.
 
-The following code snippet shows an example of adding the *Like* reaction to a message:
+The following code snippet shows an example of adding the *Waving hand* reaction to a message:
 
 # [TypeScript](#tab/ts1)
 
@@ -43,7 +42,7 @@ The following code snippet shows an example of adding the *Like* reaction to a m
 app.on('mention', async ({ activity, send }) => {
   await send(new MessageReactionActivity({
     replyToId = activity.id,
-    reactions: [like]
+    reactions: [1f44b_wavinghand]
   }));
 });
 ```
@@ -60,7 +59,7 @@ app.on('mention', async ({ activity, send }) => {
             {
                 await client.Send(new MessageReactionActivity().AddReaction(new Reaction()
                 {
-                    Type = “like”
+                    Type = “1f44b_wavinghand”
                 }).WithReplyToId(activity.Id));
             }
         }
@@ -74,7 +73,7 @@ app.on('mention', async ({ activity, send }) => {
 @app.on_message
 async def handle_message(ctx: ActivityContext[MessageActivity]):
     if ctx.activity.is_recipient_mentioned:
-        await ctx.send(MessageReactionActivityInput(reply_to_id=ctx.activity.id).add_reaction(MemssageReaction(type="like")))
+        await ctx.send(MessageReactionActivityInput(reply_to_id=ctx.activity.id).add_reaction(MemssageReaction(type="1f44b_wavinghand")))
 ```
 
 # [API](#tab/h1)
@@ -108,7 +107,7 @@ The following code snippet shows an example of removing a reaction from a messag
 app.on('mention', async ({ activity, send }) => {
   await send(new MessageReactionActivity({
     replyToId = activity.id,
-    reactions: [like]
+    reactions: [1f44b_wavinghand]
   }));
 });
 
