@@ -95,7 +95,7 @@ Where,
 
 You can choose to enable agents to remove reactions from messages. To enable agents to remove reactions from a message:
 
-1. Use the [Teams reactions reference](teams-reactions-reference.md) for getting the `EmojiID` for the reactions that you want to add. You can also select a particular [skin tone for the emoji](#modify-skin-tone-for-emojis) by selecting its `EmojiID`.
+1. Use the [Teams reactions reference](teams-reactions-reference.md) for getting the `EmojiID` for the reactions that you want to remove. You can also select a particular [skin tone for the emoji](#modify-skin-tone-for-emojis) by selecting its `EmojiID`.
 1. Use the `removeReaction` method from Teams SDK or call the `remove reaction` API to send reactions to messages.
 
 The following code snippet shows an example of removing a reaction from a message:
@@ -182,11 +182,13 @@ The following are the success and error codes:
 | `404` | `ConversationNotFound` | Conversation not found | The target thread cannot be located, or the agent doesn’t have access to it. |
 | `429` | Too many requests | Throttling limit reached | Reduce the frequency of message reaction calls. Agent reactions are limited to two reactions per second. |
 
+<!--
 ## Customize Emojis
 
 You can allow skin tones for emojis and use custom emojis that might be specific to your agent needs.
+-->
 
-### Modify skin tone for emojis
+## Modify skin tone for emojis
 
 The [Teams reactions reference](teams-reactions-reference.md) shows skin tone options for emojis. The emojis that offer skin tone are tagged as **Diverse**.
 
@@ -262,6 +264,7 @@ Where,
 
 ---
 
+<!--
 ### Custom Emojis
 
 With Agents in Teams, you can  add custom emojis as per the need for your organization.
@@ -276,6 +279,7 @@ To use custom emojis in your agent:
     :::image type="content" source="../assets/images/agents-in-teams/teams-reactions/custom-emoji-id.png" alt-text="Image shows the emoji ID for a custom emoji."  border="false":::
 
 1. Use the `EmojiID` for the selected emoji string as your parameter. Ensure the string parameter for the custom emoji must match the name of the custom emoji exactly as it appears in your organization.
+-->
 
 ## Best practices
 
