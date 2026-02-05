@@ -12026,7 +12026,6 @@ Use these emojis for building agents that receive reaction notifications and sen
           1f463_footprints
       ```
    :::column-end:::
-   :::column-end:::
    :::column:::
       :::image type="icon" source="../assets/icons/teams-reactions-ref/blank.png" border="false":::
    :::column-end:::
@@ -13296,7 +13295,6 @@ Use these emojis for building agents that receive reaction notifications and sen
       ```EmojiID
           1f344_mushroom
       ```
-   :::column-end:::
    :::column-end:::
    :::column:::
       :::image type="icon" source="../assets/icons/teams-reactions-ref/blank.png" border="false":::
@@ -16294,11 +16292,10 @@ Use these emojis for building agents that receive reaction notifications and sen
 
       </details>
    :::column-end:::
-   :::column-end:::
    :::column:::
       :::image type="icon" source="../assets/icons/teams-reactions-ref/blank.png" border="false":::
    :::column-end:::
-   :::column-end:::
+
    :::column:::
       :::image type="icon" source="../assets/icons/teams-reactions-ref/blank.png" border="false":::
    :::column-end:::
@@ -18385,7 +18382,6 @@ Use these emojis for building agents that receive reaction notifications and sen
           idcard
       ```
    :::column-end:::
-   :::column-end:::
    :::column:::
       :::image type="icon" source="../assets/icons/teams-reactions-ref/blank.png" border="false":::
    :::column-end:::
@@ -19073,10 +19069,8 @@ Use these emojis for building agents that receive reaction notifications and sen
           ribbonred
       ```
    :::column-end:::
-   :::column-end:::
    :::column:::
       :::image type="icon" source="../assets/icons/teams-reactions-ref/blank.png" border="false":::
-   :::column-end:::
    :::column-end:::
    :::column:::
       :::image type="icon" source="../assets/icons/teams-reactions-ref/blank.png" border="false":::
