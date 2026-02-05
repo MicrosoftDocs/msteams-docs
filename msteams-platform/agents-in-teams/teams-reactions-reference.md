@@ -14394,7 +14394,6 @@ Use these emojis for building agents that receive reaction notifications and sen
    :::column-end:::
    :::column:::
       :::image type="icon" source="../assets/icons/teams-reactions-ref/blank.png" border="false":::
-      ```
    :::column-end:::
 
 :::row-end:::
