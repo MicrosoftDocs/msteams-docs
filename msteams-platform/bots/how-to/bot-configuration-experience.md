@@ -9,9 +9,9 @@ ms.localizationpriority: high
 ms.date: 12/11/2024
 ---
 
-# Bot configuration experience
+# Bot Configuration Experience
 
-Bot configuration experience allows users to set up and reconfigure their bots' settings directly within the channel or group chat scope post-installation. This enhances the bot’s operational efficiency from the start. Bot configuration experience eliminates the need for repeated user interventions that previously hampered the timely benefits of apps, affecting user experience.
+The bot configuration experience allows users to set up and reconfigure their bots' settings directly within the channel or group chat scope post-installation. This enhances the bot’s operational efficiency from the start. The bot configuration experience eliminates the need for repeated user interventions that previously hampered the timely benefits of apps, affecting user experience.
 
 With the bot configuration experience, you can ensure the bot's ongoing relevance and value as users can:
 
@@ -30,9 +30,9 @@ Here's an example, where a user adds the bot to a group chat and then configures
 
 :::image type="content" source="../../assets/images/bots/reconfiguration-mention-bot.gif" alt-text="Graphical representation that shows the configuration option for the bot in the message compose area.":::
 
-To configure bot as the default landing capability for an app that supports bot and tab capabilities, see [configure default landing capability](../../concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability).
+To configure a bot as the default landing capability for an app that supports bot and tab capabilities, see [configure default landing capability](../../concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability).
 
-## Build bot configuration experience
+## Build Bot Configuration Experience
 
 > [!NOTE]
 > Bot configuration experience is supported only in channel or group chat.
@@ -43,9 +43,9 @@ To build the bot configuration experience, follow these steps:
 
 1. [Update app manifest](#update-app-manifest)
 
-1. [Configure your bot](#configure-your-bot)
+2. [Configure your bot](#configure-your-bot)
 
-### Update app manifest
+### Update App Manifest
 
 In the app manifest (previously called Teams app manifest) file, update the `fetchTask` property under the `bots.configuration` object as follows:
 
@@ -54,7 +54,7 @@ In the app manifest (previously called Teams app manifest) file, update the `fet
     {
       "botId": "${{AAD_APP_CLIENT_ID}}",
      "needsChannelSelector": false,
-      "scopes": [
+     "scopes": [
         "personal",
         "team",
         "groupChat"
@@ -77,7 +77,7 @@ For more information, see [app manifest schema](/microsoft-365/extensibility/sch
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Update+app+manifest&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fbot-configuration-experience%3Ftabs%3Dteams-bot-sdk1%252Cteams-bot-sdk2%252Cteams-bot-sdk3%23update-app-manifest&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fbot-configuration-experience.md&documentVersionIndependentId=415c2389-14be-5efd-9542-a58bf8a03900&platformId=7be118d5-e34d-24a2-73f8-81d8ec7c3cdf&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
-### Configure your bot
+### Configure Your Bot
 
 When a user installs the bot in channel or group chat, the `fetchTask` property in the app manifest file initiates either `config/fetch` or `config/submit` as defined in the `teamsBot.js` file.
 
@@ -243,7 +243,7 @@ When a user reconfigures the bot, the `fetchTask` property in the app manifest f
 > [!div class="nextstepaction"]
 > [I ran into an issue](https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&title=%5BI+ran+into+an+issue%5D+Configure+your+bot&&author=%40surbhigupta&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fbot-configuration-experience%3Ftabs%3Dteams-bot-sdk1%252Cteams-bot-sdk2%252Cteams-bot-sdk3%23configure-your-bot&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fbots%2Fhow-to%2Fbot-configuration-experience.md&documentVersionIndependentId=415c2389-14be-5efd-9542-a58bf8a03900&platformId=7be118d5-e34d-24a2-73f8-81d8ec7c3cdf&metadata=*%2BID%253A%2Be473e1f3-69f5-bcfa-bcab-54b098b59c80%2B%250A*%2BService%253A%2B%2A%2Amsteams%2A%2A)
 
-## Best practices
+## Best Practices
 
 * If you want to have an individual channel-level configuration of your bot, ensure that you track the configuration as per the channel. Configuration data isn't stored and the invoke payload includes the sufficient [channelData](../../messaging-extensions/how-to/action-commands/create-task-module.md#payload-activity-properties-when-a-dialog-is-invoked-from-a-group-chat).
 
@@ -251,14 +251,14 @@ When a user reconfigures the bot, the `fetchTask` property in the app manifest f
 
 * Avoid sending multiple notifications or requests for configuration after the installation, as it might confuse the users.
 
-## Code sample
+## Code Sample
 
 | **Sample name** | **Description** |**.NET** |**Node.js** |**Manifest**|
 |----------------|-----------------|--------------|--------------|--------------|
 | Bot configuration app | This sample demonstrates a bot for configuring and reconfiguring Adaptive Cards in teams and group chats. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp/demo-manifest)|
 | Bot configuration app with auth | This Teams bot enables configuration and reconfiguration with dynamic search capabilities on Adaptive Cards. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/csharp/demo-manifest)|
 
-## See also
+## See Also
 
 * [Build bots for Teams](../what-are-bots.md)
 * [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
