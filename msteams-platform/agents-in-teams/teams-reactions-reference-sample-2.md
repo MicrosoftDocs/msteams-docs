@@ -62,7 +62,7 @@ Use these emojis for building agents that receive reaction notifications and sen
 | 🤩 **Star eyes** | `stareyes` |
 | 😘 **Face blowing a kiss** | `1f618_facethrowingakiss` |
 | 😗 **Kiss** | `kiss` |
-| ☺️ **Mmmmmâ€¦** | `mmm` |
+| ☺️ **Mmmmm...** | `mmm` |
 | 😚 **Kissing face with closed eyes** | `1f61a_kissingfacewithclosedeyes` |
 | 😙 **Kissing face with smiling eyes** | `1f619_kissingfacewithsmilingeyes` |
 | 🥲 **Smiling face with tear** | `smilingfacewithtear` |
