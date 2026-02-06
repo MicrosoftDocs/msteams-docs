@@ -35,7 +35,7 @@ If you see an HTTP 500 error, the following checks may help you troubleshoot the
 > [!div class="checklist"]
 >
 > * Go to the **Azure portal** > **Bot Channels Registration** > **Channels** and verify that the Microsoft 365 channel is enabled.
-> * Confirm that the Microsoft Teams channel is enabled and not in an error state.
+> * Confirm that Microsoft Teams channel is enabled and not in an error state.
 > * Verify that the **Message Endpoint** is correct and up-to-date in **Bot Channels Registration** > **Settings**.
 > * Ensure that your plugin or Microsoft Teams app manifest uses `manifestVersion` `1.16` or later and includes runtime configuration with **Microsoft 365** as a supported host.
 > * Test the bot outside of Copilot by calling the bot API directly or by using the Agents Playground. If the bot fails outside Copilot, the issue is likely in the bot code or backend service.
