@@ -38,7 +38,7 @@ Select the emoji category:
 
 :::row:::
    :::column:::
-      :::image type="icon" source="assets/icons/teams-reactions-ref/1f603-grinningfacewithbigeyes.png" border="false":::<br>
+      😃
       **Grinning face with big eyes**
       ```EmojiID
           1f603_grinningfacewithbigeyes
