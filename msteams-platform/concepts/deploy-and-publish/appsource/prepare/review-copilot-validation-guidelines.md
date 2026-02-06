@@ -90,7 +90,7 @@ Apps must be consistent with responsible [AI checks](teams-store-validation-guid
 
 ## Value Proposition
 
-Agents should be designed to complete enterprise workflows and must deliver differentiated value beyond what Copilot offers by one of the following [Must-fix]:
+Agents should be designed to complete enterprise workflows and must deliver differentiated value beyond what Copilot offers by one of the following *[Must-fix]*:
 
 * Achieving workflows that cannot be achieved easily via Copilot. For example, a **Contoso Ticket Management Agent** that allows users to create tickets directly on the Contoso platform.
 * Significantly reducing time to complete workflows as compared to Copilot. For example, a **Contoso Social Media Post Agent** that helps users craft posts with consistent structure, brand tone, and improved efficiency.
