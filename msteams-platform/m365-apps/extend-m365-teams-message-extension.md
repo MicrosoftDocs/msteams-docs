@@ -35,9 +35,9 @@ If you see an HTTP 500 error, the following checks may help you troubleshoot the
 > [!div class="checklist"]
 >
 > * Go to the **Azure portal** > **Bot Channels Registration** > **Channels** and verify that the Microsoft 365 channel is enabled.
-> * Confirm that Microsoft Teams channel is enabled and not in an error state.
+> * Confirm that Teams channel is enabled and not in an error state.
 > * Verify that the **Message Endpoint** is correct and up-to-date in **Bot Channels Registration** > **Settings**.
-> * Ensure that your plugin or Microsoft Teams app manifest uses `manifestVersion` `1.16` or later and includes runtime configuration with **Microsoft 365** as a supported host.
+> * Ensure that your plugin or Teams app manifest uses `manifestVersion` `1.16` or later and includes runtime configuration with **Microsoft 365** as a supported host.
 > * Test the bot outside of Copilot by calling the bot API directly or by using the Agents Playground. If the bot fails outside Copilot, the issue is likely in the bot code or backend service.
 
 For more information, see [Add Microsoft 365 channel for your app](#add-microsoft-365-channel-for-your-app).
@@ -106,7 +106,7 @@ Use Agents Toolkit to [validate your app manifest](../toolkit/TeamsFx-preview-an
 
 ### Add Microsoft 365 channel for your app
 
-In Microsoft Teams, a message extension consists of a web service that you host and an app manifest, which defines where your web service is hosted. The web service takes advantage of the [Bot Framework SDK](/azure/bot-service/bot-service-overview) messaging schema and secure communication protocol through a Teams channel registered for your bot.
+In Teams, a message extension consists of a web service that you host and an app manifest, which defines where your web service is hosted. The web service takes advantage of the [Bot Framework SDK](/azure/bot-service/bot-service-overview) messaging schema and secure communication protocol through a Teams channel registered for your bot.
 
 For users to interact with your message extension from Outlook, you need to enable the **Microsoft 365** channel for your Azure bot resource of the message extension app.
 
@@ -115,7 +115,7 @@ For users to interact with your message extension from Outlook, you need to enab
 > If your bot previously used the **Outlook** channel, enable the **Microsoft 365** channel to ensure your message extension works in Outlook.  
 > An **HTTP 500 error** can occur if required channels aren't enabled.  
 > Copilot in Teams also requires the **Microsoft 365** channel.  
-> Verify that both **Microsoft Teams** and **Microsoft 365** channels are active under **Azure Bot > Channels**.
+> Verify that both **Teams** and **Microsoft 365** channels are active under **Azure Bot > Channels**.
 
 1. Go to [Microsoft Azure portal](https://portal.azure.com) or [Bot Framework portal](https://dev.botframework.com) (if you've previously registered there), go to your bot resource.
 
@@ -129,7 +129,7 @@ For users to interact with your message extension from Outlook, you need to enab
 
    :::image type="content" source="../assets/images/azure-bot-channel-message-extensions-apply.png" alt-text="Screenshot shows the Microsoft 365 Message Extensions channel for your bot from the Azure Bot Channels pane.":::
 
-1. Confirm that your **Microsoft 365** channel is listed along with **Microsoft Teams** in your bot's **Channels** pane.
+1. Confirm that your **Microsoft 365** channel is listed along with **Teams** in your bot's **Channels** pane.
 
 <a name='update-microsoft-azure-active-directory-azure-ad-app-registration-for-sso'></a>
 
@@ -168,7 +168,7 @@ Upload your updated message extension as an [app package](/microsoftteams/platfo
 
 1. Create a .zip file with app manifest and app [icons](/microsoftteams/platform/resources/schema/manifest-schema#icons).
 
-1. Go to **Microsoft Teams** and sign in by using your sandbox tenant account.
+1. Go to **Teams** and sign in by using your sandbox tenant account.
 
 1. Select **Apps** > **Manage your apps** > **Upload an app**.
 
@@ -213,7 +213,7 @@ While your updated message extension continues to run in Teams, be aware of the 
 > [!NOTE]
 > When you test an app with link unfurling, ensure that you remove the app manually after testing. If multiple apps are monitoring the same domain, the app installed most recently might not be invoked to unfurl the link in Outlook, as it would be in Teams.
 
-Use the [Microsoft Teams developer community channels](/microsoftteams/platform/feedback) to report issues and provide feedback.
+Use the [Teams developer community channels](/microsoftteams/platform/feedback) to report issues and provide feedback.
 
 ## Code sample
 
