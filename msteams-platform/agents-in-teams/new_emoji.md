@@ -1,3 +1,44 @@
+---
+title: Teams Reactions Reference
+description: Use the emojis available for Teams agents reactions.
+ms.topic: reference
+ms.date: 01/23/2025
+ms.localizationpriority: high
+---
+
+# Teams Reactions Reference
+
+Developer tool for discovering and copying Microsoft Teams reaction IDs
+
+**Quick guide**:
+
+Reference tool for Microsoft Teams developers to find and copy reaction IDs for agent and bot development and app integrations.
+
+- Copy `EmojiID` to clipboard
+- Diverse option for skin tone variants
+
+> [!TIP]
+>
+> The **Diverse** option supports five skin tones. To use it, just append `-tone1` to `-tone5` to the `EmojiID`.
+>
+> :::image type="icon" source="../assets/icons/teams-reactions-ref/diverse-skin-tones.png" border="false":::
+
+Use these emojis for building agents that receive reaction notifications and send Teams reactions in a conversation. For more information, see [enable agent reactions in Teams].
+
+**Search by emoji category**:
+> [!div class="op_single_selector"]
+>
+> - [All categories](#teams-reactions-reference)
+> - [Smileys](#smileys)
+> - [Hand gestures](#hand-gestures)
+> - [People](#people)
+> - [Animals and nature](#animals-and-nature)
+> - [Food](#food)
+> - [Travel and places](#travel-and-places)
+> - [Objects](#objects)
+> - [Activities](#activities)
+> - [Symbols](#symbols)
+
 ## Smileys
 
 | Emoji | EmojiId |
@@ -422,11 +463,11 @@
 | 👲 **Man with chinese cap** | `man_with_chinese_cap` | 👲🏻 `man_with_chinese_cap-tone1` <br> 👲🏼 `man_with_chinese_cap-tone2` <br> 👲🏽 `man_with_chinese_cap-tone3` <br> 👲🏾 `man_with_chinese_cap-tone4` <br> 👲🏿 `man_with_chinese_cap-tone5` |
 | 🧕 **Woman with head scarf** | `woman_with_head_scarf` | 🧕🏻 `woman_with_head_scarf-tone1` <br> 🧕🏼 `woman_with_head_scarf-tone2` <br> 🧕🏽 `woman_with_head_scarf-tone3` <br> 🧕🏾 `woman_with_head_scarf-tone4` <br> 🧕🏿 `woman_with_head_scarf-tone5` |
 | 🤵 **Person in tuxedo** | `personintuxedo` | 🤵🏻 `personintuxedo-tone1` <br> 🤵🏼 `personintuxedo-tone2` <br> 🤵🏽 `personintuxedo-tone3` <br> 🤵🏾 `personintuxedo-tone4` <br> 🤵🏿 `personintuxedo-tone5` |
-| 🤵‍♂️ ** Man in tuxedo** | `manintuxedo` | 🤵🏻‍♂️ `manintuxedo-tone1` <br> 🤵🏼‍♂️ `manintuxedo-tone2` <br> 🤵🏽‍♂️ `manintuxedo-tone3` <br> 🤵🏾‍♂️ `manintuxedo-tone4` <br> 🤵🏿‍♂️ `manintuxedo-tone5` |
+| 🤵‍♂️ **Man in tuxedo** | `manintuxedo` | 🤵🏻‍♂️ `manintuxedo-tone1` <br> 🤵🏼‍♂️ `manintuxedo-tone2` <br> 🤵🏽‍♂️ `manintuxedo-tone3` <br> 🤵🏾‍♂️ `manintuxedo-tone4` <br> 🤵🏿‍♂️ `manintuxedo-tone5` |
 | 🤵‍♀️ **Woman in tuxedo** | `womanintuxedo` | 🤵🏻‍♀️ `womanintuxedo-tone1` <br> 🤵🏼‍♀️ `womanintuxedo-tone2` <br> 🤵🏽‍♀️ `womanintuxedo-tone3` <br> 🤵🏾‍♀️ `womanintuxedo-tone4` <br> 🤵🏿‍♀️ `womanintuxedo-tone5` |
 | 👰 **Person with veil** | `personwithveil` | 👰🏻 `personwithveil-tone1` <br> 👰🏼 `personwithveil-tone2` <br> 👰🏽 `personwithveil-tone3` <br> 👰🏾 `personwithveil-tone4` <br> 👰🏿 `personwithveil-tone5` |
 | 👰‍♂️ **Man with veil** | `manwithveil` | 👰🏻‍♂️ `manwithveil-tone1` <br> 👰🏼‍♂️ `manwithveil-tone2` <br> 👰🏽‍♂️ `manwithveil-tone3` <br> 👰🏾‍♂️ `manwithveil-tone4` <br> 👰🏿‍♂️ `manwithveil-tone5` |
-| 👰‍♀️ ** Woman with veil** | `womanwithveil` | 👰🏻‍♀️ `womanwithveil-tone1` <br> 👰🏼‍♀️ `womanwithveil-tone2` <br> 👰🏽‍♀️ `womanwithveil-tone3` <br> 👰🏾‍♀️ `womanwithveil-tone4` <br> 👰🏿‍♀️ `womanwithveil-tone5` |
+| 👰‍♀️ **Woman with veil** | `womanwithveil` | 👰🏻‍♀️ `womanwithveil-tone1` <br> 👰🏼‍♀️ `womanwithveil-tone2` <br> 👰🏽‍♀️ `womanwithveil-tone3` <br> 👰🏾‍♀️ `womanwithveil-tone4` <br> 👰🏿‍♀️ `womanwithveil-tone5` |
 | 🤰 **Woman pregnant** | `womanpregnant` | 🤰🏻 `womanpregnant-tone1` <br> 🤰🏼 `womanpregnant-tone2` <br> 🤰🏽 `womanpregnant-tone3` <br> 🤰🏾 `womanpregnant-tone4` <br> 🤰🏿 `womanpregnant-tone5` |
 | 🫃 **Pregnant man** | `pregnantman` | 🫃 `pregnantman-tone1` <br> 🫃 `pregnantman-tone2` <br> 🫃 `pregnantman-tone3` <br> 🫃 `pregnantman-tone4` <br> 🫃 `pregnantman-tone5` |
 | 🫄 **Pregnant** | `pregnant` | 🫄 `pregnant-tone1` <br> 🫄 `pregnant-tone2` <br> 🫄 `pregnant-tone3` <br> 🫄 `pregnant-tone4` <br> 🫄 `pregnant-tone5` |
@@ -863,7 +904,7 @@
 | --- | --- | --- |
 | 🌍 **Earth globe Europe Africa** | `1f30d_earthglobeeuropeafrica` | |
 | 🌎 **Earth globe americas** | `1f30e_earthglobeamericas` | |
-| 🌏 **Earth globe Asia Australia ** | `1f30f_earthglobeasiaaustralia` | |
+| 🌏 **Earth globe Asia Australia** | `1f30f_earthglobeasiaaustralia` | |
 | 🌐 **Globe with meridians** | `1f310_globewithmeridians` | |
 | 🗺️ **World map** | `1f5fa_worldmap` | |
 | 🗾 **Silhouette of Japan** | `1f5fe_silhouetteofjapan` | |
@@ -1280,7 +1321,7 @@
 | 🔐 **Lock and key** | `1f510_lockedwithkey` |
 | 🔑 **Key** | `1f511_key` |
 | 🗝️ **Old key** | `oldkey` |
-| 🔨 **Hammer ** | `1f528_hammer` |
+| 🔨 **Hammer** | `1f528_hammer` |
 | 🪓 **Axe** | `1fa93_axe` |
 | ⛏️ **Pick** | `26cf_pick` |
 | ⚒️ **Hammer and pick** | `2692_hammerandpick` |
@@ -1407,7 +1448,7 @@
 | 🎣 **Fishing pole** | `1f3a3_fishingpoleandfish` |
 | 🤿 **Diving mask** | `1f93f_divingmask` |
 | 🎽 **Running shirt** | `1f3bd_runningshirtwithsash` |
-| 🎿 **Ski and skiboot ** | `1f3bf_skiandskiboot` |
+| 🎿 **Ski and skiboot** | `1f3bf_skiandskiboot` |
 | 🛷 **Sled** | `1f6f7_sled` |
 | 🥌 **Curling stone** | `1f94c_curlingstone` |
 | 🎯 **Archery** | `target` |
@@ -1484,7 +1525,7 @@
 | ↕️ **Up down arrow** | `2195_updownarrow` |
 | ↔️ **Left right arrow** | `2194_leftrightarrow` |
 | ↩️ **Curving left arrow** | `21a9_leftwardsarrowwithhook` |
-| ↪️ **Curving right arrow ** | `21aa_rightwardsarrowwithhook` |
+| ↪️ **Curving right arrow** | `21aa_rightwardsarrowwithhook` |
 | ⤴️ **Arrow curving up** | `2934_arrowcurvedupright` |
 | ⤵️ **Arrow curving down** | `2935_arrowcurveddownright` |
 | 🔃 **Clockwise vertical arrows** | `1f503_arrowsclockwise` |
