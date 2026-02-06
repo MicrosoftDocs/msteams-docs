@@ -6,7 +6,7 @@ ms.date: 01/23/2025
 ms.localizationpriority: high
 ---
 
-# Teams Reactions Reference
+# Teams Reactions Reference - Sample 2
 
 Developer tool for discovering and copying Microsoft Teams reaction IDs
 
