@@ -20,21 +20,24 @@ Agents Toolkit in Microsoft Visual Studio Code offers a set of environments to b
 * JavaScript or TypeScript
 * Python
 
-### Create your Teams app using JavaScript or TypeScript
+### Create your Teams agent or app using JavaScript or TypeScript
 
-The apps built with JavaScript or TypeScript have the following advantages:
+The agents or apps built with JavaScript or TypeScript have the following advantages:
 
-* App comes with its own UI and UX capabilities that are rich and user friendly.
-* Provides quick upgrades to the existing apps.
-* Distributes apps on multiple platforms, such as Android and iOS.
+* Comes with its own UI and UX capabilities that are rich and user friendly.
+* Provides quick upgrades to the existing agents or apps.
+* Distributes agents or apps on multiple platforms, such as Android and iOS.
 * Compatible for creating an app with the existing APIs.
 * An app created in Agents Toolkit also supports React.
 
-Agents Toolkit in Visual Studio Code supports building the following apps using JavaScript or TypeScript:
+Agents toolkit also supports building agents or app using Python in the preview version.
+
+Agents Toolkit in Visual Studio Code supports building:
 
 * **Tab app**: Your tab app can have web-based content. You can have a custom tab for your web content in Teams or add Teams-specific functionality to your web content.
 * **Bot app**: A bot can be chatbot or conversational bot that allows you to do simple and repetitive tasks, such as customer service or support staff.
 * **Message extension app**: You can interact with your web service through buttons and forms in the Teams client.
+
 <!--
 * Notification bot: You can send messages in Teams channel or group or personal chat by notification bots with HTTP request.
 * Command bot: You can automate repetitive tasks using a command bot. Command bot helps you to respond simple queries or commands sent in chats.
