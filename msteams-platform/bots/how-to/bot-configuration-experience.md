@@ -11,12 +11,12 @@ ms.date: 12/11/2024
 
 # Bot configuration experience
 
-Bot configuration experience allows users to set up and reconfigure their bots' settings directly within the channel or group chat scope post-installation. This enhances the bot’s operational efficiency from the start. Bot configuration experience eliminates the need for repeated user interventions that previously hampered the timely benefits of apps, affecting user experience.
+The bot configuration experience allows users to set up and reconfigure their bots' settings directly within the channel or group chat scope post-installation. This enhances the bot’s operational efficiency from the start. The bot configuration experience eliminates the need for repeated user interventions that previously hampered the timely benefits of apps, affecting user experience.
 
 With the bot configuration experience, you can ensure the bot's ongoing relevance and value as users can:
 
 * Tailor the bot to their specific workflows and preferences during installation.
-* Reconfigure settings to adapt to changing requirements post installation.
+* Reconfigure settings to adapt to changing requirements post-installation.
 
 For example, a bot that tracks and shares news topics or monitors GitHub repositories can initially be set up to match user workflows. Later, it can be easily reconfigured to respond to new topics or repositories directly from the group chat, streamlining content management and interaction without leaving the Teams environment. This flexible configuration experience significantly enhances user experience and productivity by integrating bots seamlessly into daily operations.
 
@@ -30,14 +30,14 @@ Here's an example, where a user adds the bot to a group chat and then configures
 
 :::image type="content" source="../../assets/images/bots/reconfiguration-mention-bot.gif" alt-text="Graphical representation that shows the configuration option for the bot in the message compose area.":::
 
-To configure bot as the default landing capability for an app that supports bot and tab capabilities, see [configure default landing capability](../../concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability).
+To configure the bot as the default landing capability for an app that supports bot and tab capabilities, see [configure default landing capability](../../concepts/deploy-and-publish/add-default-install-scope.md#configure-your-apps-default-landing-capability).
 
 ## Build bot configuration experience
 
 > [!NOTE]
-> Bot configuration experience is supported only in channel or group chat.
+> The bot configuration experience is supported only in channel or group chat.
 
-When you build the bot configuration experience, you must ensure that the user must be able to configure a bot on first installation and reconfigure it at any time.
+When you build the bot configuration experience, you must ensure that the user can configure a bot on first installation and reconfigure it at any time.
 
 To build the bot configuration experience, follow these steps:
 
@@ -79,7 +79,7 @@ For more information, see [app manifest schema](/microsoft-365/extensibility/sch
 
 ### Configure your bot
 
-When a user installs the bot in channel or group chat, the `fetchTask` property in the app manifest file initiates either `config/fetch` or `config/submit` as defined in the `teamsBot.js` file.
+When a user installs the bot in a channel or group chat, the `fetchTask` property in the app manifest file initiates either `config/fetch` or `config/submit` as defined in the `teamsBot.js` file.
 
 If you set the `fetchTask` property in the app manifest to:
 
@@ -140,7 +140,7 @@ The following table lists the response type associated with the invoke requests:
 * `type: "auth"`: You can also request the user to authenticate as a response to `config/fetch` request. The `type: "auth"` configuration prompts the user to sign in through a specified URL, which must be linked to a valid authentication page that can be opened in a browser. Authentication is essential for scenarios where the bot requires the user to be authenticated. It ensures that the user’s identity is verified, maintaining security, and personalized experiences within the bot’s functionality.
 
    > [!NOTE]
-   > For `type: "auth"` only third party authentication is supported. Single sign-on (SSO) isn't supported. For more information on third party authentication, see [add authentication.](../../messaging-extensions/how-to/add-authentication.md)
+   > For `type: "auth"` only third-party authentication is supported. Single sign-on (SSO) isn't supported. For more information on third-party authentication, see [add authentication.](../../messaging-extensions/how-to/add-authentication.md)
 
   # [C#](#tab/teams-bot-sdk2)
 
@@ -232,7 +232,7 @@ The following table lists the response type associated with the invoke requests:
 
 When a user reconfigures the bot, the `fetchTask` property in the app manifest file initiates `config/fetch` in the bot logic. The user can reconfigure the bot settings post-installation in two ways:
 
-* @mention the bot in the message compose area. Select the **Settings** option that appears above the message compose area. A dialog appears, update, or changes the bot's configuration settings in the dialog.
+* @mention the bot in the message compose area. Select the **Settings** option that appears above the message compose area. A dialog appears, update, or change the bot's configuration settings in the dialog.
 
    :::image type="content" source="../../assets/images/bots/reconfiguration-mention-bot.gif" alt-text="Screenshot shows the configuration option for the bot in the message compose area.":::
 
