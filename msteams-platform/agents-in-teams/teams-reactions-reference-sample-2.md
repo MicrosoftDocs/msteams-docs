@@ -265,7 +265,7 @@ Use these emojis for building agents that receive reaction notifications and sen
 
 ## Hand gestures
 
-| Emoji | EmojiID | Skin tone |
+| Emoji | EmojiID | Diverse - Skin tone |
 | --- | --- | --- |
 | 👋 **Waving hand** | `1f44b_wavinghand` | 👋🏻 `1f44b_wavinghand-tone1` <br> 👋🏼 `1f44b_wavinghand-tone2` <br> 👋🏽 `1f44b_wavinghand-tone3` <br> 👋🏾 `1f44b_wavinghand-tone4` <br> 👋🏿 `1f44b_wavinghand-tone5` |
 | 🤚 **Raised back of hand** | `1f91a_raisedbackofhand` | 🤚🏻 `1f91a_raisedbackofhand-tone1` <br> 🤚🏼 `1f91a_raisedbackofhand-tone2` <br> 🤚🏽 `1f91a_raisedbackofhand-tone3` <br> 🤚🏾 `1f91a_raisedbackofhand-tone4` <br> 🤚🏿 `1f91a_raisedbackofhand-tone5` |
@@ -333,7 +333,7 @@ Use these emojis for building agents that receive reaction notifications and sen
 
 ## People
 
-| Emoji | EmojiID | Skin tone |
+| Emoji | EmojiID | Diverse - Skin tone |
 | --- | --- | --- |
 | 👶 **Smile baby** | `smilebaby` | 👶🏻 `smilebaby-tone1` <br> 👶🏼 `smilebaby-tone2` <br> 👶🏽 `smilebaby-tone3` <br> 👶🏾 `smilebaby-tone4` <br> 👶🏿 `smilebaby-tone5` |
 | 🧒 **Child** | `1f9d2_child` | 🧒🏻 `1f9d2_child-tone1` <br> 🧒🏼 `1f9d2_child-tone2` <br> 🧒🏽 `1f9d2_child-tone3` <br> 🧒🏾 `1f9d2_child-tone4` <br> 🧒🏿 `1f9d2_child-tone5` |
@@ -498,13 +498,13 @@ Use these emojis for building agents that receive reaction notifications and sen
 | 🧝 **Elf** | `elf` | 🧝🏻 `elf-tone1` <br> 🧝🏼 `elf-tone2` <br> 🧝🏽 `elf-tone3` <br> 🧝🏾 `elf-tone4` <br> 🧝🏿 `elf-tone5` |
 | 🧝‍♂️ **Man elf** | `manelf` | 🧝🏻‍♂️ `manelf-tone1` <br> 🧝🏼‍♂️ `manelf-tone2` <br> 🧝🏽‍♂️ `manelf-tone3` <br> 🧝🏾‍♂️ `manelf-tone4` <br> 🧝🏿‍♂️ `manelf-tone5` |
 | 🧝‍♀️ **Woman elf** | `woman_elf` | 🧝🏻‍♀️ `woman_elf-tone1` <br> 🧝🏼‍♀️ `woman_elf-tone2` <br> 🧝🏽‍♀️ `woman_elf-tone3` <br> 🧝🏾‍♀️ `woman_elf-tone4` <br> 🧝🏿‍♀️ `woman_elf-tone5` |
-| 🧞 **Genie** | `1f9de_genie` | |
-| 🧞‍♂️ **Man genie** | `mangenie` | |
-| 🧞‍♀️ **Woman genie** | `womangenie` | |
-| 🧟 **Person zombie** | `personzombie` | |
-| 🧟‍♂️ **Man zombie** | `manzombie` | |
-| 🧟‍♀️ **Zombie** | `zombie` | |
-| 🧌 **Troll** | `troll` | |
+| 🧞 **Genie** | `1f9de_genie` | NA |
+| 🧞‍♂️ **Man genie** | `mangenie` | NA |
+| 🧞‍♀️ **Woman genie** | `womangenie` | NA |
+| 🧟 **Person zombie** | `personzombie` | NA |
+| 🧟‍♂️ **Man zombie** | `manzombie` | NA |
+| 🧟‍♀️ **Zombie** | `zombie` | NA |
+| 🧌 **Troll** | `troll` | NA |
 | 💆 **Person getting massage** | `1f486_facemassage` | 💆🏻 `1f486_facemassage-tone1` <br> 💆🏼 `1f486_facemassage-tone2` <br> 💆🏽 `1f486_facemassage-tone3` <br> 💆🏾 `1f486_facemassage-tone4` <br> 💆🏿 `1f486_facemassage-tone5` |
 | 💆‍♂️ **Man getting massage** | `man_getting_face_massage` | 💆🏻‍♂️ `man_getting_face_massage-tone1` <br> 💆🏼‍♂️ `man_getting_face_massage-tone2` <br> 💆🏽‍♂️ `man_getting_face_massage-tone3` <br> 💆🏾‍♂️ `man_getting_face_massage-tone4` <br> 💆🏿‍♂️ `man_getting_face_massage-tone5` |
 | 💆‍♀️ **Woman getting massage** | `face_massage` | 💆🏻‍♀️ `face_massage-tone1` <br> 💆🏼‍♀️ `face_massage-tone2` <br> 💆🏽‍♀️ `face_massage-tone3` <br> 💆🏾‍♀️ `face_massage-tone4` <br> 💆🏿‍♀️ `face_massage-tone5` |
@@ -543,9 +543,9 @@ Use these emojis for building agents that receive reaction notifications and sen
 | 🧗 **Person climbing** | `climber` | 🧗🏻 `climber-tone1` <br> 🧗🏼 `climber-tone2` <br> 🧗🏽 `climber-tone3` <br> 🧗🏾 `climber-tone4` <br> 🧗🏿 `climber-tone5` |
 | 🧗‍♂️ **Man climbing** | `man_climbing` | 🧗🏻‍♂️ `man_climbing-tone1` <br> 🧗🏼‍♂️ `man_climbing-tone2` <br> 🧗🏽‍♂️ `man_climbing-tone3` <br> 🧗🏾‍♂️ `man_climbing-tone4` <br> 🧗🏿‍♂️ `man_climbing-tone5` |
 | 🧗‍♀️ **Woman climbing** | `woman_climbing` | 🧗🏻‍♀️ `woman_climbing-tone1` <br> 🧗🏼‍♀️ `woman_climbing-tone2` <br> 🧗🏽‍♀️ `woman_climbing-tone3` <br> 🧗🏾‍♀️ `woman_climbing-tone4` <br> 🧗🏿‍♀️ `woman_climbing-tone5` |
-| 🤺 **Fencer** | `womanfencer` | |
+| 🤺 **Fencer** | `womanfencer` | NA |
 | 🏇 **Horse racing** | `horse_racing` | 🏇 `horse_racing-tone1` <br> 🏇 `horse_racing-tone2` <br> 🏇 `horse_racing-tone3` <br> 🏇 `horse_racing-tone4` <br> 🏇 `horse_racing-tone5` |
-| ⛷️ **Skier** | `skier` | |
+| ⛷️ **Skier** | `skier` | NA |
 | 🏂 **Snowboarder** | `snowboarder` | 🏂🏻 `snowboarder-tone1` <br> 🏂🏼 `snowboarder-tone2` <br> 🏂🏽 `snowboarder-tone3` <br> 🏂🏾 `snowboarder-tone4` <br> 🏂🏿 `snowboarder-tone5` |
 | 🏌️ **Person golfing** | `golfer` | 🏌🏻️ `golfer-tone1` <br> 🏌🏼️ `golfer-tone2` <br> 🏌🏽️ `golfer-tone3` <br> 🏌🏾️ `golfer-tone4` <br> 🏌🏿️ `golfer-tone5` |
 | 🏌️‍♂️ **Man golfing** | `mangolfing` | 🏌🏻️‍♂️ `mangolfing-tone1` <br> 🏌🏼️‍♂️ `mangolfing-tone2` <br> 🏌🏽️‍♂️ `mangolfing-tone3` <br> 🏌🏾️‍♂️ `mangolfing-tone4` <br> 🏌🏿️‍♂️ `mangolfing-tone5` |
@@ -587,11 +587,11 @@ Use these emojis for building agents that receive reaction notifications and sen
 | 🧘‍♀️ **Yoga** | `yoga` | 🧘🏻‍♀️ `yoga-tone1` <br> 🧘🏼‍♀️ `yoga-tone2` <br> 🧘🏽‍♀️ `yoga-tone3` <br> 🧘🏾‍♀️ `yoga-tone4` <br> 🧘🏿‍♀️ `yoga-tone5` |
 | 🛀 **Woman taking a bath** | `womanbath` | 🛀 `womanbath-tone1` <br> 🛀 `womanbath-tone2` <br> 🛀 `womanbath-tone3` <br> 🛀 `womanbath-tone4` <br> 🛀 `womanbath-tone5` |
 | 🛌 **Person in bed** | `person_in_bed` | 🛌 `person_in_bed-tone1` <br> 🛌 `person_in_bed-tone2` <br> 🛌 `person_in_bed-tone3` <br> 🛌 `person_in_bed-tone4` <br> 🛌 `person_in_bed-tone5` |
-| 🗣️ **Speaking head** | `1f5e3_speakingheadinsilhouette` | |
-| 👤 **Bust in silhouette** | `1f464_bustinsilhouette` | |
-| 👥 **Busts in silhouette** | `1f465_bustsinsilhouette` | |
-| 🫂 **People hugging** | `peoplehugging` | |
-| 👣 **Footprints** | `1f463_footprints` | |
+| 🗣️ **Speaking head** | `1f5e3_speakingheadinsilhouette` | NA |
+| 👤 **Bust in silhouette** | `1f464_bustinsilhouette` | NA |
+| 👥 **Busts in silhouette** | `1f465_bustsinsilhouette` | NA |
+| 🫂 **People hugging** | `peoplehugging` | NA |
+| 👣 **Footprints** | `1f463_footprints` | NA |
 
 ## Animals and nature
 
@@ -900,231 +900,236 @@ Use these emojis for building agents that receive reaction notifications and sen
 
 ## Travel and places
 
-| Emoji | EmojiID | Skin tone |
+| Emoji | EmojiID |
+| --- | --- |
+| 🌍 **Earth globe Europe Africa** | `1f30d_earthglobeeuropeafrica` |
+| 🌎 **Earth globe americas** | `1f30e_earthglobeamericas` |
+| 🌏 **Earth globe Asia Australia** | `1f30f_earthglobeasiaaustralia` |
+| 🌐 **Globe with meridians** | `1f310_globewithmeridians` |
+| 🗺️ **World map** | `1f5fa_worldmap` |
+| 🗾 **Silhouette of Japan** | `1f5fe_silhouetteofjapan` |
+| 🧭 **Compass** | `1f9ed_compass` |
+| 🏔️ **Snow capped mountain** | `1f3d4_snowcappedmountain` |
+| ⛰️ **Mountain** | `26f0_mountain` |
+| 🌋 **Volcano** | `1f30b_volcano` |
+| 🗻 **Mount Fuji** | `1f5fb_mountfuji` |
+| 🏕️ **Camping** | `1f3d5_camping` |
+| 🏖️ **Beach with umbrella** | `1f3d6_beachwithumbrella` |
+| 🏜️ **Desert** | `desert` |
+| 🏝️ **Island** | `island` |
+| 🏞️ **National park** | `1f3de_nationalpark` |
+| 🏟️ **Stadium** | `1f3df_stadium` |
+| 🏛️ **Classical building** | `1f3db_classicalbuilding` |
+| 🏗️ **Building construction** | `1f3d7_buildingconstruction` |
+| 🧱 **Bricks** | `1f9f1_bricks` |
+| 🪨 **Stone** | `stone` |
+| 🪵 **Wood** | `wood` |
+| 🛖 **Hut** | `hut` |
+| 🏘️ **House building** | `1f3d8_housebuildings` |
+| 🏚️ **Derelict house** | `1f3da_derelicthouse` |
+| 🏠 **House** | `house` |
+| 🏡 **House with garden** | `1f3e1_housewithgarden` |
+| 🏢 **Office building** | `1f3e2_officebuilding` |
+| 🏣 **Post office** | `1f3e3_japanesepostoffice` |
+| 🏤 **European post office** | `1f3e4_europeanpostoffice` |
+| 🏥 **Hospital** | `1f3e5_hospital` |
+| 🏦 **Bank** | `1f3e6_bank` |
+| 🏨 **Hotel** | `1f3e8_hotel` |
+| 🏪 **Convenience store** | `1f3ea_conveniencestore` |
+| 🏫 **School** | `1f3eb_school` |
+| 🏬 **Department store** | `1f3ec_departmentstore` |
+| 🏭 **Factory** | `1f3ed_factory` |
+| 🏯 **Castle** | `1f3ef_japanesecastle` |
+| 🏰 **European castle** | `1f3f0_europeancastle` |
+| 💒 **Wedding** | `1f492_wedding` |
+| 🗼 **Tokyo tower** | `1f5fc_tokyotower` |
+| 🗽 **Statue of Liberty** | `statueofliberty` |
+| ⛪ **Church** | `26ea_church` |
+| 🕌 **Mosque** | `1f54c_mosque` |
+| 🛕 **Hindu temple** | `1f6d5_hindutemple` |
+| 🕍 **Synagogue** | `1f54d_synagogue` |
+| ⛩️ **Shinto shrine** | `26e9_shintoshrine` |
+| 🕋 **Kaaba** | `1f54b_kaaba` |
+| ⛲ **Fountain** | `26f2_fountain` |
+| ⛺ **Tent** | `26fa_tent` |
+| 🌁 **Foggy** | `1f301_foggy` |
+| 🌃 **Night with stars** | `1f303_nightwithstars` |
+| 🏙️ **Cityscape** | `1f3d9_cityscape` |
+| 🌄 **Sunrise over mountains** | `1f304_sunriseovermountains` |
+| 🌅 **Sunrise** | `1f305_sunrise` |
+| 🌆 **City scape at dusk** | `1f306_cityscapeatdusk` |
+| 🌇 **Sunset over buildings** | `1f307_sunsetoverbuildings` |
+| 🌉 **Bridge at night** | `1f309_bridgeatnight` |
+| ♨️ **Hot springs** | `2668_hotsprings` |
+| 🎠 **Carousel horse** | `1f3a0_carouselhorse` |
+| 🛝 **Slide** | `slide` |
+| 🎡 **Ferris wheel** | `1f3a1_ferriswheel` |
+| 🎢 **Rollercoaster** | `1f3a2_rollercoaster` |
+| 💈 **Barber pole** | `1f488_barberpole` |
+| 🎪 **Circus tent** | `1f3aa_circustent` |
+| 🚂 **Steam train** | `steamtrain` |
+| 🚃 **Railway car** | `1f683_railwaycar` |
+| 🚄 **High speed train** | `1f684_highspeedtrain` |
+| 🚅 **Bullet train** | `1f685_bullettrain` |
+| 🚆 **Train** | `1f686_train` |
+| 🚇 **Metro** | `1f687_metro` |
+| 🚈 **Light rail** | `1f688_lightrail` |
+| 🚉 **Station** | `1f689_station` |
+| 🚊 **Tram** | `1f68a_tram` |
+| 🚝 **Monorail** | `1f69d_monorail` |
+| 🚞 **Mountain railway** | `1f69e_mountainrailway` |
+| 🚋 **Tram car** | `1f68b_tramcar` |
+| 🚌 **Bus** | `1f68c_bus` |
+| 🚍 **Oncoming bus** | `1f68d_oncomingbus` |
+| 🚎 **Trolley bus** | `1f68e_trolleybus` |
+| 🚐 **Minibus** | `1f690_minibus` |
+| 🚑 **Ambulance** | `ambulance` |
+| 🚒 **Fire engine** | `1f692_fireengine` |
+| 🚓 **Police car** | `policecar` |
+| 🚔 **Oncoming police car** | `1f694_oncomingpolicecar` |
+| 🚕 **Taxi** | `taxi` |
+| 🚖 **Oncoming taxi** | `1f696_oncomingtaxi` |
+| 🚗 **Car** | `car` |
+| 🚘 **Oncoming automobile** | `1f698_oncomingautomobile` |
+| 🚙 **Sports utility vehicle** | `1f699_recreationalvehicle` |
+| 🛻 **Pickup truck** | `pickuptruck` |
+| 🚚 **Truck** | `truck` |
+| 🚛 **Articulated lorry** | `1f69b_articulatedlorry` |
+| 🚜 **Tractor** | `1f69c_tractor` |
+| 🏎️ **Racing car** | `1f3ce_racingcar` |
+| 🏍️ **Motorbike** | `motorbike` |
+| 🛵 **Scooter** | `scooter` |
+| 🦽 **Manual wheelchair** | `1f9bd_manualwheelchair` |
+| 🦼 **Motorized wheelchair** | `1f9bc_motorizedwheelchair` |
+| 🛺 **Auto Rickshaw** | `rickshaw` |
+| 🚲 **Bicycle** | `bicycle` |
+| 🛴 **Kick scooter** | `kickscooter` |
+| 🛹 **Skate** | `skate` |
+| 🛼 **Roller skate** | `rollerskate` |
+| 🚏 **Bus stop** | `1f68f_busstop` |
+| 🛣️ **Motorway** | `1f6e3_motorway` |
+| 🛤️ **Railway track** | `1f6e4_railwaytrack` |
+| 🛢️ **Oil drum** | `1f6e2_oildrum` |
+| ⛽ **Fuel pump** | `26fd_fuelpump` |
+| 🛞 **Wheel** | `wheel` |
+| 🚨 **Police car light** | `1f6a8_policecarsrevolvinglight` |
+| 🚥 **Horizontal traffic light** | `1f6a5_horizontaltrafficlight` |
+| 🚦 **Vertical traffic light** | `1f6a6_verticaltrafficlight` |
+| 🛑 **Stop sign** | `stopsign` |
+| 🚧 **Construction sign** | `1f6a7_constructionsign` |
+| ⚓ **Anchor** | `2693_anchor` |
+| 🛟 **Ring buoy** | `buoy` |
+| ⛵ **Sailboat** | `26f5_sailboat` |
+| 🛶 **Canoe** | `1f6f6_canoe` |
+| 🚤 **Speedboat** | `1f6a4_speedboat` |
+| 🛳️ **Passenger ship** | `1f6f3_passengership` |
+| ⛴️ **Ferry** | `26f4_ferry` |
+| 🛥️ **Motor boat** | `1f6e5_motorboat` |
+| 🚢 **Ship** | `1f6a2_ship` |
+| ✈️ **Plane** | `plane` |
+| 🛩️ **Small airplane** | `1f6e9_smallairplane` |
+| 🛫 **Airplane departure** | `1f6eb_airplanedeparture` |
+| 🛬 **Airplane arriving** | `1f6ec_airplanearriving` |
+| 🪂 **Parachute** | `1fa82_parachute` |
+| 💺 **Seat** | `1f4ba_seat` |
+| 🚁 **Helicopter** | `1f681_helicopter` |
+| 🚟 **Suspension railway** | `1f69f_suspensionrailway` |
+| 🚠 **Mountain cableway** | `1f6a0_mountaincableway` |
+| 🚡 **Aerial tramway** | `1f6a1_aerialtramway` |
+| 🛰️ **Satellite** | `1f6f0_satellite` |
+| 🚀 **Rocket launch** | `launch` |
+| 🛸 **Flying saucer** | `1f6f8_flyingsaucer` |
+| 🛎️ **Bellhop bell** | `1f6ce_bellhopbell` |
+| 🧳 **Luggage** | `1f9f3_luggage` |
+| ⌛ **Hold on** | `holdon` |
+| ⌛ **Hour glass done** | `231b_hourglassdone` |
+| ⌚ **Watch** | `231a_watch` |
+| ⏰ **Alarm clock** | `23f0_alarmclock` |
+| ⏱️ **Stop watch** | `23f1_stopwatch` |
+| ⏲️ **Timer clock** | `23f2_timerclock` |
+| 🕰️ **Mantel piece clock** | `1f570_mantelpiececlock` |
+| 🕛 **Twelve o'clock** | `1f55b_twelveoclock` |
+| 🕧 **Twelve-thirty** | `1f567_twelvethirty` |
+| 🕐 **One o'clock** | `1f550_oneoclock` |
+| 🕜 **One-thirty** | `1f55c_onethirty` |
+| 🕑 **Two o'clock** | `1f551_twooclock` |
+| 🕝 **Two-thirty** | `1f55d_twothirty` |
+| 🕒 **Three o'clock** | `1f552_threeoclock` |
+| 🕞 **Three-thirty** | `1f55e_threethirty` |
+| 🕓 **Four o'clock** | `1f553_fouroclock` |
+| 🕟 **Four thirty** | `1f55f_fourthirty` |
+| 🕔 **Five o'clock** | `1f554_fiveoclock` |
+| 🕠 **Five-thirty** | `1f560_fivethirty` |
+| 🕕 **Six o'clock** | `1f555_sixoclock` |
+| 🕡 **Six-thirty** | `1f561_sixthirty` |
+| 🕖 **Seven o'clock** | `1f556_sevenoclock` |
+| 🕢 **Seven-thirty** | `1f562_seventhirty` |
+| 🕗 **Eight o'clock** | `1f557_eightoclock` |
+| 🕣 **Eight-thirty** | `1f563_eightthirty` |
+| 🕘 **Nine o'clock** | `1f558_nineoclock` |
+| 🕤 **Nine-thirty** | `1f564_ninethirty` |
+| 🕙 **Ten o'clock** | `1f559_tenoclock` |
+| 🕥 **Ten-thirty** | `1f565_tenthirty` |
+| 🕚 **Eleven o'clock** | `1f55a_elevenoclock` |
+| 🕦 **Eleven-thirty** | `1f566_eleventhirty` |
+| 🌑 **New moon symbol** | `1f311_newmoonsymbol` |
+| 🌒 **Waxing crescent moon symbol** | `1f312_waxingcrescentmoonsymbol` |
+| 🌓 **First quarter moon symbol** | `1f313_firstquartermoonsymbol` |
+| 🌔 **Waxing gibbous moon system** | `1f314_waxinggibbousmoonsymbol` |
+| 🌕 **Full moon symbol** | `1f315_fullmoonsymbol` |
+| 🌖 **Waning gibbous moon symbol** | `1f316_waninggibbousmoonsymbol` |
+| 🌗 **Last quarter moon symbol** | `1f317_lastquartermoonsymbol` |
+| 🌘 **Waning crescent moon symbol** | `1f318_waningcrescentmoonsymbol` |
+| 🌙 **Crescent moon** | `1f319_crescentmoon` |
+| 🌚 **New moon with face** | `1f31a_newmoonwithface` |
+| 🌛 **First quarter moon with face** | `1f31b_firstquartermoonwithface` |
+| 🌜 **Last quarter moon with face** | `1f31c_lastquartermoonwithface` |
+| 🌡️ **Thermometer** | `1f321_thermometer` |
+| ☀️ **Sun with rays** | `2600_sunwithrays` |
+| 🌝 **Full moon face** | `1f31d_fullmoonwithface` |
+| 🌞 **Sun** | `sun` |
+| 🪐 **Ringed planet** | `1fa90_ringedplanet` |
+| ⭐ **Star** | `star` |
+| 🌟 **Glowing star** | `1f31f_glowingstar` |
+| 🌠 **Shooting star** | `1f320_shootingstar` |
+| 🌌 **Milky way** | `1f30c_milkyway` |
+| ☁️ **Cloud** | `2601_cloud` |
+| 🌥️ **Sun behind large cloud** | `1f325_sunbehindlargecloud` |
+| ⛈️ **Cloud with lightning and rain** | `26c8_cloudwithlightningandrain` |
+| 🌤️ **Sun behind small cloud** | `1f324_sunbehindsmallcloud` |
+| ⛅ **Sun behind cloud** | `26c5_sunbehindcloud` |
+| 🌦️ **Sun behind rain cloud** | `1f326_sunbehindraincloud` |
+| 🌧️ **Raining** | `rain` |
+| 🌨️ **Cloud with snow** | `1f328_cloudwithsnow` |
+| 🌩️ **Cloud with lightning** | `1f329_cloudwithlightning` |
+| 🌪️ **Tornado** | `1f32a_cloudwithtornado` |
+| 🌫️ **Fog** | `1f32b_fog` |
+| 🌬️ **Wind face** | `1f32c_windblowingface` |
+| 🌀 **Cyclone** | `1f300_cyclone` |
+| 🌈 **Rainbow** | `rainbow` |
+| 🌂 **Closed umbrella** | `1f302_closedumbrella` |
+| ☂️ **Umbrella** | `2602_umbrella` |
+| ☔ **Umbrella** | `umbrella` |
+| ⛱️ **Beach umbrella** | `26f1_umbrellaonground` |
+| ⚡ **High voltage** | `26a1_highvoltagesign` |
+| ❄️ **Snowflake** | `snowflake` |
+| ⛄ **Snowman without snow** | `snowmanwithoutsnow` |
+| ☃️ **Snow buddie** | `snegovik` |
+| ☄️ **Comet** | `2604_comet` |
+| 🔥 **Fire** | `fire` |
+| 💧 **Droplet** | `1f4a7_droplet` |
+| 🌊 **Water wave** | `1f30a_waterwave` |
+| 🏖️ **Sandcastle** | `sandcastle` |
+| ❤ **Cactus love** | `cactuslove` |
+| 🏠 **Working from home** | `wfh` |
+| ♻ **Wind turbine** | `windturbine` |
+| ♻ **Vegetable garden** | `vegetablegarden` |
+| ♻ **Electric car** | `electriccar` |
+
+### Travel and places - Diverse
+
+| Emoji | EmojiID | Diverse - Skin tone |
 | --- | --- | --- |
-| 🌍 **Earth globe Europe Africa** | `1f30d_earthglobeeuropeafrica` | |
-| 🌎 **Earth globe americas** | `1f30e_earthglobeamericas` | |
-| 🌏 **Earth globe Asia Australia** | `1f30f_earthglobeasiaaustralia` | |
-| 🌐 **Globe with meridians** | `1f310_globewithmeridians` | |
-| 🗺️ **World map** | `1f5fa_worldmap` | |
-| 🗾 **Silhouette of Japan** | `1f5fe_silhouetteofjapan` | |
-| 🧭 **Compass** | `1f9ed_compass` | |
-| 🏔️ **Snow capped mountain** | `1f3d4_snowcappedmountain` | |
-| ⛰️ **Mountain** | `26f0_mountain` | |
-| 🌋 **Volcano** | `1f30b_volcano` | |
-| 🗻 **Mount Fuji** | `1f5fb_mountfuji` | |
-| 🏕️ **Camping** | `1f3d5_camping` | |
-| 🏖️ **Beach with umbrella** | `1f3d6_beachwithumbrella` | |
-| 🏜️ **Desert** | `desert` | |
-| 🏝️ **Island** | `island` | |
-| 🏞️ **National park** | `1f3de_nationalpark` | |
-| 🏟️ **Stadium** | `1f3df_stadium` | |
-| 🏛️ **Classical building** | `1f3db_classicalbuilding` | |
-| 🏗️ **Building construction** | `1f3d7_buildingconstruction` | |
-| 🧱 **Bricks** | `1f9f1_bricks` | |
-| 🪨 **Stone** | `stone` | |
-| 🪵 **Wood** | `wood` | |
-| 🛖 **Hut** | `hut` | |
-| 🏘️ **House building** | `1f3d8_housebuildings` | |
-| 🏚️ **Derelict house** | `1f3da_derelicthouse` | |
-| 🏠 **House** | `house` | |
-| 🏡 **House with garden** | `1f3e1_housewithgarden` | |
-| 🏢 **Office building** | `1f3e2_officebuilding` | |
-| 🏣 **Post office** | `1f3e3_japanesepostoffice` | |
-| 🏤 **European post office** | `1f3e4_europeanpostoffice` | |
-| 🏥 **Hospital** | `1f3e5_hospital` | |
-| 🏦 **Bank** | `1f3e6_bank` | |
-| 🏨 **Hotel** | `1f3e8_hotel` | |
-| 🏪 **Convenience store** | `1f3ea_conveniencestore` | |
-| 🏫 **School** | `1f3eb_school` | |
-| 🏬 **Department store** | `1f3ec_departmentstore` | |
-| 🏭 **Factory** | `1f3ed_factory` | |
-| 🏯 **Castle** | `1f3ef_japanesecastle` | |
-| 🏰 **European castle** | `1f3f0_europeancastle` | |
-| 💒 **Wedding** | `1f492_wedding` | |
-| 🗼 **Tokyo tower** | `1f5fc_tokyotower` | |
-| 🗽 **Statue of Liberty** | `statueofliberty` | |
-| ⛪ **Church** | `26ea_church` | |
-| 🕌 **Mosque** | `1f54c_mosque` | |
-| 🛕 **Hindu temple** | `1f6d5_hindutemple` | |
-| 🕍 **Synagogue** | `1f54d_synagogue` | |
-| ⛩️ **Shinto shrine** | `26e9_shintoshrine` | |
-| 🕋 **Kaaba** | `1f54b_kaaba` | |
-| ⛲ **Fountain** | `26f2_fountain` | |
-| ⛺ **Tent** | `26fa_tent` | |
-| 🌁 **Foggy** | `1f301_foggy` | |
-| 🌃 **Night with stars** | `1f303_nightwithstars` | |
-| 🏙️ **Cityscape** | `1f3d9_cityscape` | |
-| 🌄 **Sunrise over mountains** | `1f304_sunriseovermountains` | |
-| 🌅 **Sunrise** | `1f305_sunrise` | |
-| 🌆 **City scape at dusk** | `1f306_cityscapeatdusk` | |
-| 🌇 **Sunset over buildings** | `1f307_sunsetoverbuildings` | |
-| 🌉 **Bridge at night** | `1f309_bridgeatnight` | |
-| ♨️ **Hot springs** | `2668_hotsprings` | |
-| 🎠 **Carousel horse** | `1f3a0_carouselhorse` | |
-| 🛝 **Slide** | `slide` | |
-| 🎡 **Ferris wheel** | `1f3a1_ferriswheel` | |
-| 🎢 **Rollercoaster** | `1f3a2_rollercoaster` | |
-| 💈 **Barber pole** | `1f488_barberpole` | |
-| 🎪 **Circus tent** | `1f3aa_circustent` | |
-| 🚂 **Steam train** | `steamtrain` | |
-| 🚃 **Railway car** | `1f683_railwaycar` | |
-| 🚄 **High speed train** | `1f684_highspeedtrain` | |
-| 🚅 **Bullet train** | `1f685_bullettrain` | |
-| 🚆 **Train** | `1f686_train` | |
-| 🚇 **Metro** | `1f687_metro` | |
-| 🚈 **Light rail** | `1f688_lightrail` | |
-| 🚉 **Station** | `1f689_station` | |
-| 🚊 **Tram** | `1f68a_tram` | |
-| 🚝 **Monorail** | `1f69d_monorail` | |
-| 🚞 **Mountain railway** | `1f69e_mountainrailway` | |
-| 🚋 **Tram car** | `1f68b_tramcar` | |
-| 🚌 **Bus** | `1f68c_bus` | |
-| 🚍 **Oncoming bus** | `1f68d_oncomingbus` | |
-| 🚎 **Trolley bus** | `1f68e_trolleybus` | |
-| 🚐 **Minibus** | `1f690_minibus` | |
-| 🚑 **Ambulance** | `ambulance` | |
-| 🚒 **Fire engine** | `1f692_fireengine` | |
-| 🚓 **Police car** | `policecar` | |
-| 🚔 **Oncoming police car** | `1f694_oncomingpolicecar` | |
-| 🚕 **Taxi** | `taxi` | |
-| 🚖 **Oncoming taxi** | `1f696_oncomingtaxi` | |
-| 🚗 **Car** | `car` | |
-| 🚘 **Oncoming automobile** | `1f698_oncomingautomobile` | |
-| 🚙 **Sports utility vehicle** | `1f699_recreationalvehicle` | |
-| 🛻 **Pickup truck** | `pickuptruck` | |
-| 🚚 **Truck** | `truck` | |
-| 🚛 **Articulated lorry** | `1f69b_articulatedlorry` | |
-| 🚜 **Tractor** | `1f69c_tractor` | |
-| 🏎️ **Racing car** | `1f3ce_racingcar` | |
-| 🏍️ **Motorbike** | `motorbike` | |
-| 🛵 **Scooter** | `scooter` | |
-| 🦽 **Manual wheelchair** | `1f9bd_manualwheelchair` | |
-| 🦼 **Motorized wheelchair** | `1f9bc_motorizedwheelchair` | |
-| 🛺 **Auto Rickshaw** | `rickshaw` | |
-| 🚲 **Bicycle** | `bicycle` | |
-| 🛴 **Kick scooter** | `kickscooter` | |
-| 🛹 **Skate** | `skate` | |
-| 🛼 **Roller skate** | `rollerskate` | |
-| 🚏 **Bus stop** | `1f68f_busstop` | |
-| 🛣️ **Motorway** | `1f6e3_motorway` | |
-| 🛤️ **Railway track** | `1f6e4_railwaytrack` | |
-| 🛢️ **Oil drum** | `1f6e2_oildrum` | |
-| ⛽ **Fuel pump** | `26fd_fuelpump` | |
-| 🛞 **Wheel** | `wheel` | |
-| 🚨 **Police car light** | `1f6a8_policecarsrevolvinglight` | |
-| 🚥 **Horizontal traffic light** | `1f6a5_horizontaltrafficlight` | |
-| 🚦 **Vertical traffic light** | `1f6a6_verticaltrafficlight` | |
-| 🛑 **Stop sign** | `stopsign` | |
-| 🚧 **Construction sign** | `1f6a7_constructionsign` | |
-| ⚓ **Anchor** | `2693_anchor` | |
-| 🛟 **Ring buoy** | `buoy` | |
-| ⛵ **Sailboat** | `26f5_sailboat` | |
-| 🛶 **Canoe** | `1f6f6_canoe` | |
-| 🚤 **Speedboat** | `1f6a4_speedboat` | |
-| 🛳️ **Passenger ship** | `1f6f3_passengership` | |
-| ⛴️ **Ferry** | `26f4_ferry` | |
-| 🛥️ **Motor boat** | `1f6e5_motorboat` | |
-| 🚢 **Ship** | `1f6a2_ship` | |
-| ✈️ **Plane** | `plane` | |
-| 🛩️ **Small airplane** | `1f6e9_smallairplane` | |
-| 🛫 **Airplane departure** | `1f6eb_airplanedeparture` | |
-| 🛬 **Airplane arriving** | `1f6ec_airplanearriving` | |
-| 🪂 **Parachute** | `1fa82_parachute` | |
-| 💺 **Seat** | `1f4ba_seat` | |
-| 🚁 **Helicopter** | `1f681_helicopter` | |
-| 🚟 **Suspension railway** | `1f69f_suspensionrailway` | |
-| 🚠 **Mountain cableway** | `1f6a0_mountaincableway` | |
-| 🚡 **Aerial tramway** | `1f6a1_aerialtramway` | |
-| 🛰️ **Satellite** | `1f6f0_satellite` | |
-| 🚀 **Rocket launch** | `launch` | |
-| 🛸 **Flying saucer** | `1f6f8_flyingsaucer` | |
-| 🛎️ **Bellhop bell** | `1f6ce_bellhopbell` | |
-| 🧳 **Luggage** | `1f9f3_luggage` | |
-| ⌛ **Hold on** | `holdon` | |
-| ⌛ **Hour glass done** | `231b_hourglassdone` | |
-| ⌚ **Watch** | `231a_watch` | |
-| ⏰ **Alarm clock** | `23f0_alarmclock` | |
-| ⏱️ **Stop watch** | `23f1_stopwatch` | |
-| ⏲️ **Timer clock** | `23f2_timerclock` | |
-| 🕰️ **Mantel piece clock** | `1f570_mantelpiececlock` | |
-| 🕛 **Twelve o'clock** | `1f55b_twelveoclock` | |
-| 🕧 **Twelve-thirty** | `1f567_twelvethirty` | |
-| 🕐 **One o'clock** | `1f550_oneoclock` | |
-| 🕜 **One-thirty** | `1f55c_onethirty` | |
-| 🕑 **Two o'clock** | `1f551_twooclock` | |
-| 🕝 **Two-thirty** | `1f55d_twothirty` | |
-| 🕒 **Three o'clock** | `1f552_threeoclock` | |
-| 🕞 **Three-thirty** | `1f55e_threethirty` | |
-| 🕓 **Four o'clock** | `1f553_fouroclock` | |
-| 🕟 **Four thirty** | `1f55f_fourthirty` | |
-| 🕔 **Five o'clock** | `1f554_fiveoclock` | |
-| 🕠 **Five-thirty** | `1f560_fivethirty` | |
-| 🕕 **Six o'clock** | `1f555_sixoclock` | |
-| 🕡 **Six-thirty** | `1f561_sixthirty` | |
-| 🕖 **Seven o'clock** | `1f556_sevenoclock` | |
-| 🕢 **Seven-thirty** | `1f562_seventhirty` | |
-| 🕗 **Eight o'clock** | `1f557_eightoclock` | |
-| 🕣 **Eight-thirty** | `1f563_eightthirty` | |
-| 🕘 **Nine o'clock** | `1f558_nineoclock` | |
-| 🕤 **Nine-thirty** | `1f564_ninethirty` | |
-| 🕙 **Ten o'clock** | `1f559_tenoclock` | |
-| 🕥 **Ten-thirty** | `1f565_tenthirty` | |
-| 🕚 **Eleven o'clock** | `1f55a_elevenoclock` | |
-| 🕦 **Eleven-thirty** | `1f566_eleventhirty` | |
-| 🌑 **New moon symbol** | `1f311_newmoonsymbol` | |
-| 🌒 **Waxing crescent moon symbol** | `1f312_waxingcrescentmoonsymbol` | |
-| 🌓 **First quarter moon symbol** | `1f313_firstquartermoonsymbol` | |
-| 🌔 **Waxing gibbous moon system** | `1f314_waxinggibbousmoonsymbol` | |
-| 🌕 **Full moon symbol** | `1f315_fullmoonsymbol` | |
-| 🌖 **Waning gibbous moon symbol** | `1f316_waninggibbousmoonsymbol` | |
-| 🌗 **Last quarter moon symbol** | `1f317_lastquartermoonsymbol` | |
-| 🌘 **Waning crescent moon symbol** | `1f318_waningcrescentmoonsymbol` | |
-| 🌙 **Crescent moon** | `1f319_crescentmoon` | |
-| 🌚 **New moon with face** | `1f31a_newmoonwithface` | |
-| 🌛 **First quarter moon with face** | `1f31b_firstquartermoonwithface` | |
-| 🌜 **Last quarter moon with face** | `1f31c_lastquartermoonwithface` | |
-| 🌡️ **Thermometer** | `1f321_thermometer` | |
-| ☀️ **Sun with rays** | `2600_sunwithrays` | |
-| 🌝 **Full moon face** | `1f31d_fullmoonwithface` | |
-| 🌞 **Sun** | `sun` | |
-| 🪐 **Ringed planet** | `1fa90_ringedplanet` | |
-| ⭐ **Star** | `star` | |
-| 🌟 **Glowing star** | `1f31f_glowingstar` | |
-| 🌠 **Shooting star** | `1f320_shootingstar` | |
-| 🌌 **Milky way** | `1f30c_milkyway` | |
-| ☁️ **Cloud** | `2601_cloud` | |
-| 🌥️ **Sun behind large cloud** | `1f325_sunbehindlargecloud` | |
-| ⛈️ **Cloud with lightning and rain** | `26c8_cloudwithlightningandrain` | |
-| 🌤️ **Sun behind small cloud** | `1f324_sunbehindsmallcloud` | |
-| ⛅ **Sun behind cloud** | `26c5_sunbehindcloud` | |
-| 🌦️ **Sun behind rain cloud** | `1f326_sunbehindraincloud` | |
-| 🌧️ **Raining** | `rain` | |
-| 🌨️ **Cloud with snow** | `1f328_cloudwithsnow` | |
-| 🌩️ **Cloud with lightning** | `1f329_cloudwithlightning` | |
-| 🌪️ **Tornado** | `1f32a_cloudwithtornado` | |
-| 🌫️ **Fog** | `1f32b_fog` | |
-| 🌬️ **Wind face** | `1f32c_windblowingface` | |
-| 🌀 **Cyclone** | `1f300_cyclone` | |
-| 🌈 **Rainbow** | `rainbow` | |
-| 🌂 **Closed umbrella** | `1f302_closedumbrella` | |
-| ☂️ **Umbrella** | `2602_umbrella` | |
-| ☔ **Umbrella** | `umbrella` | |
-| ⛱️ **Beach umbrella** | `26f1_umbrellaonground` | |
-| ⚡ **High voltage** | `26a1_highvoltagesign` | |
-| ❄️ **Snowflake** | `snowflake` | |
-| ⛄ **Snowman without snow** | `snowmanwithoutsnow` | |
-| ☃️ **Snow buddie** | `snegovik` | |
-| ☄️ **Comet** | `2604_comet` | |
-| 🔥 **Fire** | `fire` | |
-| 💧 **Droplet** | `1f4a7_droplet` | |
-| 🌊 **Water wave** | `1f30a_waterwave` | |
-| 🏖️ **Sandcastle** | `sandcastle` | |
-| ❤ **Cactus love** | `cactuslove` | |
-| 🏠 **Working from home** | `wfh` | |
-| ♻ **Wind turbine** | `windturbine` | |
-| ♻ **Vegetable garden** | `vegetablegarden` | |
-| ♻ **Electric car** | `electriccar` | |
 | ♻ **Earth in hand, Europe and Africa** | `europeafricainhand` | ♻🏻 `europeafricainhand-tone1` <br> ♻🏼 `europeafricainhand-tone2` <br> ♻🏽 `europeafricainhand-tone3` <br> ♻🏾 `europeafricainhand-tone4` <br> ♻🏿 `europeafricainhand-tone5` |
 | ♻ **Earth in hand, Americas** | `americainhand` | ♻🏻 `americainhand-tone1` <br> ♻🏼 `americainhand-tone2` <br> ♻🏽 `americainhand-tone3` <br> ♻🏾 `americainhand-tone4` <br> ♻🏿 `americainhand-tone5` |
 | ♻ **Earth in hand, Asia and Australia** | `asiaaustraliainhand` | ♻🏻 `asiaaustraliainhand-tone1` <br> ♻🏼 `asiaaustraliainhand-tone2` <br> ♻🏽 `asiaaustraliainhand-tone3` <br> ♻🏾 `asiaaustraliainhand-tone4` <br> ♻🏿 `asiaaustraliainhand-tone5` |
