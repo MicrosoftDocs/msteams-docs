@@ -310,24 +310,24 @@ Use these emojis for building agents that receive reaction notifications and sen
 | 💅 **Nail polish** | `1f485_nailpolish` | 💅🏻 `1f485_nailpolish-tone1` <br> 💅🏼 `1f485_nailpolish-tone2` <br> 💅🏽 `1f485_nailpolish-tone3` <br> 💅🏾 `1f485_nailpolish-tone4` <br> 💅🏿 `1f485_nailpolish-tone5` |
 | 🤳 **Selfie** | `selfiehand` | 🤳🏻 `selfiehand-tone1` <br> 🤳🏼 `selfiehand-tone2` <br> 🤳🏽 `selfiehand-tone3` <br> 🤳🏾 `selfiehand-tone4` <br> 🤳🏿 `selfiehand-tone5` |
 | 💪 **Muscle** | `muscle` | 💪🏻 `muscle-tone1` <br> 💪🏼 `muscle-tone2` <br> 💪🏽 `muscle-tone3` <br> 💪🏾 `muscle-tone4` <br> 💪🏿 `muscle-tone5` |
-| 🦾 **Mechanical arm** | `1f9be_mechanicalarm` | |
-| 🦿 **Mechanical leg** | `1f9bf_mechanicalleg` | |
+| 🦾 **Mechanical arm** | `1f9be_mechanicalarm` | NA |
+| 🦿 **Mechanical leg** | `1f9bf_mechanicalleg` | NA |
 | 🦵 **Leg** | `1f9b5_leg` | 🦵🏻 `1f9b5_leg-tone1` <br> 🦵🏼 `1f9b5_leg-tone2` <br> 🦵🏽 `1f9b5_leg-tone3` <br> 🦵🏾 `1f9b5_leg-tone4` <br> 🦵🏿 `1f9b5_leg-tone5` |
 | 🦶 **Foot** | `1f9b6_foot` | 🦶🏻 `1f9b6_foot-tone1` <br> 🦶🏼 `1f9b6_foot-tone2` <br> 🦶🏽 `1f9b6_foot-tone3` <br> 🦶🏾 `1f9b6_foot-tone4` <br> 🦶🏿 `1f9b6_foot-tone5` |
 | 👂 **Ear** | `1f442_ear` | 👂🏻 `1f442_ear-tone1` <br> 👂🏼 `1f442_ear-tone2` <br> 👂🏽 `1f442_ear-tone3` <br> 👂🏾 `1f442_ear-tone4` <br> 👂🏿 `1f442_ear-tone5` |
 | 🦻 **Ear with hearing aid** | `1f9bb_earwithhearingaid` | 🦻🏻 `1f9bb_earwithhearingaid-tone1` <br> 🦻🏼 `1f9bb_earwithhearingaid-tone2` <br> 🦻🏽 `1f9bb_earwithhearingaid-tone3` <br> 🦻🏾 `1f9bb_earwithhearingaid-tone4` <br> 🦻🏿 `1f9bb_earwithhearingaid-tone5` |
 | 👃 **Nose** | `1f443_nose` | 👃🏻 `1f443_nose-tone1` <br> 👃🏼 `1f443_nose-tone2` <br> 👃🏽 `1f443_nose-tone3` <br> 👃🏾 `1f443_nose-tone4` <br> 👃🏿 `1f443_nose-tone5` |
-| 🧠 **Brain** | `1f9e0_brain` | |
-| 🫀 **Anatomical heart** | `anatomicalheart` | |
-| 🫁 **Lungs** | `lungs` | |
-| 🦷 **Tooth** | `1f9b7_tooth` | |
-| 🦴 **Bone** | `1f9b4_bone` | |
-| 👀 **Eyes** | `1f440_eyes` | |
-| 👁️ **Eye** | `1f441_eye` | |
-| 👅 **Tongue** | `1f445_tongue` | |
-| 👄 **Mouth** | `1f444_mouth` | |
-| 🫦 **Biting lip** | `bitinglip` | |
-| 🎤 **Drop the mic** | `dropthemic` | |
+| 🧠 **Brain** | `1f9e0_brain` | NA |
+| 🫀 **Anatomical heart** | `anatomicalheart` | NA |
+| 🫁 **Lungs** | `lungs` | NA |
+| 🦷 **Tooth** | `1f9b7_tooth` | NA |
+| 🦴 **Bone** | `1f9b4_bone` | NA |
+| 👀 **Eyes** | `1f440_eyes` | NA |
+| 👁️ **Eye** | `1f441_eye` | NA |
+| 👅 **Tongue** | `1f445_tongue` | NA |
+| 👄 **Mouth** | `1f444_mouth` | NA |
+| 🫦 **Biting lip** | `bitinglip` | NA |
+| 🎤 **Drop the mic** | `dropthemic` | NA |
 | 🤜🤛 **Fist bump** | `fistbump` | 🤜🏻🤛🏻 `fistbump-tone1` <br> 🤜🏼🤛🏼 `fistbump-tone2` <br> 🤜🏽🤛🏽 `fistbump-tone3` <br> 🤜🏾🤛🏾 `fistbump-tone4` <br> 🤜🏿🤛🏿 `fistbump-tone5` |
 | (support) **Support** | `support` | (support) `support-tone1` <br> (support) `support-tone2` <br> (support) `support-tone3` <br> (support) `support-tone4` <br> (support) `support-tone5` |
 
