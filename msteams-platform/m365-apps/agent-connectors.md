@@ -2,9 +2,7 @@
 title: Register MCP Servers as Agent Connectors for Microsoft 365
 description: Register your MCP server in the Microsoft 365 app manifest to enable access to your tools from agents like the Channel Agent in Teams.
 #customer intent: As a developer, I want to register my MCP server as an agent connector so that Microsoft 365 agents can access my external tools and services.
-author: erikadoyle
-ms.author: edoyle
-ms.date: 12/15/2025
+ms.date: 01/28/2026
 ms.topic: how-to
 ms.subservice: m365apps
 ---
@@ -15,7 +13,7 @@ Agents in Microsoft 365, such as [Channel Agent](/microsoftteams/set-up-channel-
 
 > [!NOTE]
 >
-> Agent Connectors are available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+> Agent Connectors are available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) and only supported in Channel Agent for Microsoft Teams. Additional agent hosts will be supported in the future.
 
 Microsoft 365 agents use agent connectors to communicate with external systems. For MCP servers, the connector provides:
 
@@ -56,7 +54,7 @@ First, declare your MCP server in the [agentConnectors](/microsoft-365/extensibi
         "description": "Provides workflow automation and task management tools.",
         "toolSource": {
           "remoteMcpServer": {
-            "endpoint": "https://mcp.mycompany.com"
+            "mcpServerUrl": "https://mcp.mycompany.com"
           }
         }
       }
@@ -78,7 +76,7 @@ Define how Microsoft 365 connects to your MCP server using the `remoteMcpServer`
 ````json
 "toolSource": {
   "remoteMcpServer": {
-    "endpoint": "https://mcp.mycompany.com"
+    "mcpServerUrl": "https://mcp.mycompany.com"
   }
 }
 ````
@@ -89,12 +87,14 @@ The endpoint must be publicly accessible and respond to MCP protocol handshake m
 
 ## Configure authentication
 
-Specify how Microsoft 365 retrieves credentials when calling your MCP server. MCP servers support several authorization methods:
+Specify how Microsoft 365 retrieves credentials when calling your MCP server. The following values are currently supported for MCP server authentication:
 
 - **None**: No authentication required
 - **OAuthPluginVault**: OAuth 2.0 tokens stored inside Microsoft’s secure vault
+<!-- Uncomment once supported
 - **ApiKeyPluginVault**: API key stored in a vault and referenced by ID
 - **DynamicClientRegistration**: Dynamic OAuth client creation
+-->
 
 ### Use OAuth authentication
 
@@ -102,7 +102,7 @@ For OAuth 2.0 tokens stored in Microsoft's secure vault, specify authorization t
 
 ````json
 "remoteMcpServer": {
-  "endpoint": "https://mcp.mycompany.com",
+  "mcpServerUrl": "https://mcp.mycompany.com",
   "authorization": {
     "type": "OAuthPluginVault",
     "referenceId": "my-oauth-config"
@@ -114,6 +114,7 @@ The `referenceId` points to a secure [OAuth configuration that you register in D
 
 When setting up your OAuth app with a third-party authentication provider, ensure that you add `https://teams.microsoft.com/api/platform/v1.0/oAuthRedirect` to the list of allowed redirect endpoints.
 
+<!-- Uncomment when supported
 ### Use API key authentication
 
 For API keys stored in a vault, configure the authorization type as `ApiKeyPluginVault`:
@@ -126,6 +127,7 @@ For API keys stored in a vault, configure the authorization type as `ApiKeyPlugi
 ````
 
 The `referenceId` points to an [API key that you register in Developer Portal](https://dev.teams.microsoft.com/tools/api-key-registration). For details, see [API key authentication](../messaging-extensions/api-based-secret-service-auth.md).
+-->
 
 ### Use no authentication
 
@@ -135,26 +137,20 @@ For enterprise scenarios, prefer OAuth over API keys to align with security best
 
 ## Define tool discovery
 
-Choose how Microsoft 365 agents discover the tools your MCP server provides. You can use inline definitions if your toolset is static, or dynamic discovery if your toolset changes frequently.
+Choose how Microsoft 365 agents discover the tools your MCP server provides. Currently only inline tool definitions are supported.
+
+You can use inline definitions if your toolset is static, or dynamic discovery if your toolset changes frequently.
+
 
 ### Enable dynamic tool discovery
 
 Dynamic discovery allows Microsoft 365 to fetch your tool list at runtime, which is recommended for servers whose tools change frequently.
 
-The following example shows how to add the dynamic discovery flag to your `remoteMcpServer` configuration:
-
-````json
-"remoteMcpServer": {
-  "endpoint": "https://mcp.mycompany.com",
-  "authorization": {
-    "type": "ApiKeyPluginVault",
-    "referenceId": "my-apikey"
-  },
-  "modelContextProtocol.enable_dynamic_discovery": true
-}
-````
+You can enable dynamic tool discovery by omitting the [mcpToolDescription](/microsoft-365/extensibility/schema/root-agent-connectors-tool-source-remote-mcp-server-mcp-tool-description) from your [localMcpServer](/microsoft-365/extensibility/schema/root-agent-connectors-tool-source-local-mcp-server) or [remoteMcpServer](/microsoft-365/extensibility/schema/root-agent-connectors-tool-source-remote-mcp-server) configuration.
 
 When enabled, agents call your server's `tools/list` method to retrieve available tools. This approach eliminates the need to republish your app when tools change.
+
+-->
 
 ### Use inline tool definitions
 
@@ -162,7 +158,7 @@ For static toolsets that don't change frequently, add an `mcpToolDescription` ob
 
 ````json
 "remoteMcpServer": {
-  "endpoint": "https://mcp.mycompany.com",
+  "mcpServerUrl": "https://mcp.mycompany.com",
   "authorization": {
     "type": "ApiKeyPluginVault",
     "referenceId": "my-apikey"
@@ -179,7 +175,7 @@ The `description` object must match the schema returned by your MCP server's `to
 
 ## Example schema
 
-The following is an example of a complete agent connector configuration:
+The following is an example of a complete agent connector configuration, using *OAuthPluginVault* authentication and inline tool definitions:
 
 ```json
 {
@@ -187,22 +183,50 @@ The following is an example of a complete agent connector configuration:
   "manifestVersion": "devPreview",
   ...
   "agentConnectors": [
-    {
-      "id": "my-mcp-server",
-      "displayName": "My Automation Server",
-      "description": "Provides workflow automation and task management tools.",
+  {
+      "id": "my-dynamic-connector-inline",
+      "displayName": "My Dynamic Connector with Inline Tools",
+      "description": "A connector that uses dynamic client registration and an MCP Server with inline tool descriptions.",
       "toolSource": {
-        "remoteMcpServer": {
-          "endpoint": "https://mcp.mycompany.com",
-          "authorization": {
-            "type": "ApiKeyPluginVault",
-            "referenceId": "my-apikey"
-          },
-          "modelContextProtocol.enable_dynamic_discovery": true
-        }
+          "remoteMcpServer": {
+              "mcpServerUrl": "https://example.com/api/mcp",
+              "mcpToolDescription": {
+                  "description": {
+                      "tools": [
+                          {
+                              "name": "ContentQueryTool_QueryItems",
+                              "description": "Retrieves information about items (such as tasks, issues, or other tracked entities) that can be answered by their fields or metadata.\r\n\r\nFollow-up questions should route back to this tool when they are relevant to refining or filtering the same query context. Example:\r\n\r\nUser: What issues are assigned to me?\r\nAssistant: \u003CResponse\u003E\r\nUser: Which ones are still open?\r\n\r\nWhere the question is NOT relevant to querying and therefore should NOT route back to this tool:\r\n\r\nUser: What issues are assigned to me including their priority?\r\nAssistant: \u003CResponse\u003E\r\nUser: What do the priority levels mean?",
+                              "inputSchema": {
+                                  "type": "object",
+                                  "properties": {
+                                      "property1": {
+                                          "type": "string",
+                                          "description": "Description of property1"
+                                      },
+                                      "property2": {
+                                          "type": "string",
+                                          "description": "Description of property2"
+                                      }
+                                  },
+                                  "required": [
+                                      "property1"
+                                  ]
+                              },
+                              "annotations": {
+                                  "title": "Query Items",
+                                  "readOnlyHint": true
+                              }
+                          }
+                      ]
+                  }
+              },
+              "authorization": {
+                  "type": "OAuthPluginVault",
+                  "referenceId": "NzJmOTg4Ym..."
+              }
+          }
       }
-    }
-  ]
+  }]
 }
 ```
 
@@ -269,7 +293,6 @@ If your MCP server isn't working as expected, check these common issues:
 
 - Verify `tools/list` returns valid tool definitions
 - Check that tool descriptions are clear and complete
-- Confirm `modelContextProtocol.enable_dynamic_discovery` is set correctly
 - Validate the JSON schema of inline tool definitions
 
 ### Authentication failures
