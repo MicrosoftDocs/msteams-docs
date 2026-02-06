@@ -11,7 +11,7 @@ ms.date: 07/29/2022
 
 You can explore the look and feel of Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) within the Microsoft Visual Studio Code.
 
-This section gives you a tour of Agents Toolkit and its features.
+This section gives you a tour of Agents Toolkit and its capabilities.
 
 ## Take a tour of Agents Toolkit
 
@@ -93,7 +93,7 @@ From the task pane, you can see the following sections:
    :::column-end:::
    :::column span="":::
 
-        To create and debug your Teams app, you need the following features:
+        To create and debug your Teams app, you need the following capabilities:
         
        * **Create a New Agent/App**: Use Agents Toolkit wizard to prepare project scaffolding for agent or app development.
 
@@ -113,7 +113,7 @@ From the task pane, you can see the following sections:
    :::column-end:::
    :::column span="":::
 
-        To provision, deploy, and publish your Teams agent or app, you need the following features:
+        To provision, deploy, and publish your Teams agent or app, you need the following capabilities:
         
         * **Provision**: Allocate Azure resources for your application. Agents Toolkit is integrated with Azure Resource Manager, and it registers your agent or app with Microsoft Entra ID automatically.
         
@@ -129,7 +129,7 @@ From the task pane, you can see the following sections:
    :::column-end:::
    :::column span="":::
 
-        To create an agent or app package, validate the app package, and publish in Developer Portal, you need the following features:
+        To create an agent or app package, validate the app package, and publish in Developer Portal, you need the following capabilities:
 
         * **Zip App Package**: Create the app package that can be uploaded to Teams or Developer Portal. It contains the app manifest (previously called Teams app manifest) and app icons.
         

@@ -129,5 +129,5 @@ Agents Toolkit for Visual Studio Code extension is available in a prerelease ver
 
 ## See also
 
-- [Explore Microsoft 365 Agents Toolkit features](~/toolkit/explore-Teams-Toolkit.md)
+- [Explore Microsoft 365 Agents Toolkit capabilities](~/toolkit/explore-Teams-Toolkit.md)
 - [Prepare to build agent or apps](~/toolkit/build-environments.md)
