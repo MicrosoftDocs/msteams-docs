@@ -71,14 +71,14 @@ Azure Functions integrates with an array of [cloud services](add-resource.md) to
 
 ## Node.js version compatibility table for project type
 
-| Agents Toolkit version | Project Type | Supported Node.js versions  |
+| Agents Toolkit version | Project Type | Supported Node.js versions |
 | --- | --- | --- |
-| 5.14.0 | JavaScript or TypeScript | 18, 20, 22 |
+| > 5.14.0 | JavaScript or TypeScript | 18, 20, 22 |
 | 5.12.* | JavaScript or TypeScript | 18, 20 |
 | 5.0.0 | Notify with http or timer trigger <br> Azure functions <br> JavaScript or TypeScript | 16, 18 <br> 16, 18 <br> 16 <br> 16, 18 |
 | 4.2.2 | Notify with http or timer trigger <br> Azure functions | 14, 16, 18 (Preview) <br> 14, 16, 18 (Preview) <br> 16 <br> 14, 16, 18 |
 | 4.0.0 | JavaScript or TypeScript | 14, 16 |
-| 3.7.0 | JavaScript or TypeScript | 10, 12, 14 <br> 10, 12, 14 <br> 10, 12, 14, 16 |
+| < 3.7.0 | JavaScript or TypeScript | 10, 12, 14 <br> 10, 12, 14 <br> 10, 12, 14, 16 |
 
 ## See also
 
