@@ -32,7 +32,9 @@ Agents Toolkit appears within Visual Studio Code as an extension. After you inst
 You can explore the available functionalities from the Agents Toolkit task pane. The task pane appears only after you create an agent or app project using Agents Toolkit.
 <br><br>
 <details>
-<summary><b>Select to view a video to learn about the process of creating a new Teams app:</b></summary>
+<summary><b>Select to view a video to learn about the process of creating a new Teams agent:</b></summary>
+
+The steps to create a Teams app are similar to creating an agent.
 
    :::image type="content" source="../assets/videos/agent-toolkit.gif" alt-text="Graphical representation shows the steps to create an agent.":::
 </details>
