@@ -21,11 +21,11 @@ Reference reactions by their unique ID:
 
 | Suffix | Visual | Description |
 |--------|--------|-------------|
-| `-tone1` | 👋🏻 | Light |
-| `-tone2` | 👋🏼 | Medium-light |
-| `-tone3` | 👋🏽 | Medium |
-| `-tone4` | 👋🏾 | Medium-dark |
-| `-tone5` | 👋🏿 | Dark |
+| <span style="font-size:1.5em">`-tone1`</span> | 👋🏻 | Light |
+| <span style="font-size:1.5em">`-tone2`</span> | 👋🏼 | Medium-light |
+| <span style="font-size:1.5em">`-tone3`</span> | 👋🏽 | Medium |
+| <span style="font-size:1.5em">`-tone4`</span> | 👋🏾 | Medium-dark |
+| <span style="font-size:1.5em">`-tone5`</span> | 👋🏿 | Dark |
 
 **Example:** `1f44d_thumbsup-tone3` for medium skin tone thumbs up 👍🏽
 
@@ -39,225 +39,225 @@ Reference reactions by their unique ID:
 
 | Emoji | Description | Reaction ID |
 |-------|-------------|-------------|
-| 😃 | Grinning face with big eyes | `1f603_grinningfacewithbigeyes` |
-| 😃 | Happy face | `happyface` |
-| 😄 | Grinning face with smiling eyes | `grinningfacewithsmilingeyes` |
-| 😁 | Beaming face with smiling eyes | `1f601_beamingfacewithsmilingeyes` |
-| 😆 | Laugh | `laugh` |
-| 😅 | Sweat grinning | `sweatgrinning` |
-| 🤣 | Rolling on the floor laughing | `rofl` |
-| 😂 | Crying with laughter | `cwl` |
-| 🙂 | Smile | `smile` |
-| 🙃 | Upside down face | `upsidedownface` |
-| 🫠 | Melting face | `meltingface` |
-| 😉 | Wink | `wink` |
-| 😊 | Smile eyes | `smileeyes` |
-| 😇 | Angel | `angel` |
-| 🥰 | In love | `inlove` |
-| 😍 | Heart eyes | `hearteyes` |
-| 🤩 | Star eyes | `stareyes` |
-| 😘 | Face blowing a kiss | `1f618_facethrowingakiss` |
-| 😗 | Kiss | `kiss` |
-| ☺️ | Mmmmm… | `mmm` |
-| 😚 | Kissing face with closed eyes | `1f61a_kissingfacewithclosedeyes` |
-| 😙 | Kissing face with smiling eyes | `1f619_kissingfacewithsmilingeyes` |
-| 🥲 | Smiling face with tear | `smilingfacewithtear` |
-| 😋 | Cheeky | `tongueout` |
-| 😛 | Face with tongue | `1f61b_facewithtongue` |
-| 😜 | Winking tongue out | `winktongueout` |
-| 🤪 | Zany face | `1f92a_zanyface` |
-| 😝 | Squinting face with tongue | `squintingfacewithtongue` |
-| 🤑 | Money mouth face | `1f911_moneymouthface` |
-| 🤗 | Hugging face | `1f917_huggingface` |
-| 🤭 | Giggle | `giggle` |
-| 🫢 | Hand over mouth | `handovermouth` |
-| 🫣 | Peeking eye | `peekingeye` |
-| 🤫 | My lips are sealed | `lipssealed` |
-| 🤔 | Thinking | `think` |
-| 🫡 | Saluting face | `salute` |
-| 🤐 | Zipper mouth face | `1f910_zippermouthface` |
-| 🤨 | Wondering | `wonder` |
-| 😐 | Speechless | `speechless` |
-| 😑 | Expressionless | `expressionless` |
-| 😶 | Face without mouth | `blankface` |
-| 🫥 | Dotted line face | `dottedlineface` |
-| 😶‍🌫️ | Face in clouds | `faceinclouds` |
-| 😏 | Smirking | `smirk` |
-| 😒 | Unamused | `unamused` |
-| 🙄 | Dull | `dull` |
-| 😬 | Grimacing face | `1f62c_grimacingface` |
-| 😮‍💨 | Face exhaling | `faceexhaling` |
-| 🤥 | Lying face | `1f925_lyingface` |
-| 🫨 | Shaking Head | `shaking` |
-| 🙂‍↕️ | Head shaking vertically | `headshakingvertically2` |
-| 🙂‍↔️ | Head shaking horizontally | `headshakinghorizontally2` |
-| 😌 | Relieved | `relieved` |
-| 😔 | Pensive | `pensive` |
-| 😪 | Sleepy | `sleepy` |
-| 🤤 | Drooling face | `1f924_droolingface` |
-| 😴 | Sleeping face | `sleepingface` |
-| 😷 | Face with medical mask | `1f637_facewithmedicalmask` |
-| 🤒 | Ill | `ill` |
-| 🤕 | Face with head bandage | `1f915_facewithheadbandage` |
-| 🤢 | Nauseated face | `1f922_nauseatedface` |
-| 🤮 | Vomiting | `puke` |
-| 🤧 | Sneezing face | `1f927_sneezingface` |
-| 🥵 | Hotface | `1f975_hotface` |
-| 🥶 | Cold shivering | `shivering` |
-| 🥱 | Morning after party | `hungover` |
-| 😵 | Dizzy face | `1f635_dizzyface` |
-| 😵‍💫 | Face with spiral eyes | `facewithspiraleyes` |
-| 🤯 | Exploding head | `1f92f_explodinghead` |
-| 🤠 | Face with cowboy hat | `1f920_facewithcowboyhat` |
-| 🥳 | Party | `party` |
-| 🥸 | Disguised face | `disguisedface` |
-| 😎 | Cool | `cool` |
-| 🤓 | Nerdy | `nerdy` |
-| 🧐 | Face with monocle | `1f9d0_facewithmonocle` |
-| 😕 | Confused | `confused` |
-| 🫤 | Face with diagonal mouth | `diagonalmouth` |
-| 😧 | Worried | `worry` |
-| 🙁 | Sad | `sad` |
-| ☹️ | Frowning face | `2639_frowningface` |
-| 😮 | Surprised | `surprised` |
-| 😯 | Hushed face | `1f62f_hushedface` |
-| 😲 | Astonished face | `1f632_astonishedface` |
-| 😊 | Blush | `blush` |
-| 🥺 | Pleading face | `1f97a_pleadingface` |
-| 🥹 | Face holding back tears | `faceholdingbacktears` |
-| 😦 | Frowning face with open mouth | `1f626_frowningfacewithopenmouth` |
-| 😧 | Anguished face | `1f627_anguishedface` |
-| 😨 | Fearful | `fearful` |
-| 😰 | Anxious face with sweat | `1f630_anxiousfacewithsweat` |
-| 😥 | Sad but relieved face | `1f625_sadbutrelievedface` |
-| 😢 | Crying | `cry` |
-| 😭 | Loudly crying | `loudlycrying` |
-| 😱 | Screaming with fear | `screamingfear` |
-| 😖 | Very confused | `veryconfused` |
-| 😫 | Doh! | `doh` |
-| 😞 | Disappointed | `disappointed` |
-| 😓 | Sweating | `sweat` |
-| 😩 | Weary | `weary` |
-| 😫 | Tired face | `1f62b_tiredface` |
-| 🥱 | Yawning face | `1f971_yawningface` |
-| 😤 | Face with steam from nose | `1f624_facewithlookoftriumph` |
-| 😡 | Angry face | `angryface` |
-| 😠 | Angry | `angry` |
-| 🤬 | Swearing | `swear` |
-| 😈 | Devil | `devil` |
-| 👿 | Angry face with horns | `1f47f_angryfacewithhorns` |
-| 💀 | Skull | `skull` |
-| ☠️ | Skull and crossbones | `2620_skullandcrossbones` |
-| 💩 | Pile of poo | `poop` |
-| 🤡 | Clown face | `1f921_clownface` |
-| 👹 | Ogre | `1f479_japaneseogre` |
-| 👺 | Goblin | `1f47a_japanesegoblin` |
-| 👻 | Ghost | `ghost` |
-| 👽 | Alien | `1f47d_extraterrestrialalien` |
-| 👾 | Alien monster | `1f47e_alienmonster` |
-| 🤖 | Smile robot | `smilerobot` |
-| 😺 | Smile cat | `smilecat` |
-| 😺 | Laugh cat | `laughcat` |
-| 😹 | Cat with tears of joy | `1f639_catwithtearsofjoy` |
-| 😻 | Heart eyes cat | `hearteyescat` |
-| 😼 | Cat with wry smile | `1f63c_catwithwrysmile` |
-| 😽 | Kissing cat | `1f63d_kissingcat` |
-| 🙀 | Weary cat | `1f640_wearycat` |
-| 😿 | Sad cat | `sadcat` |
-| 😾 | Pouting cat | `1f63e_poutingcat` |
-| 🙉 | Monkey hear no evil | `hearnoevil` |
-| 🙈 | Monkey see no evil | `seenoevil` |
-| 🙊 | Monkey speak no evil | `speaknoevil` |
-| 💋 | Kissing lips | `lips` |
-| 💌 | Love letter | `loveletter` |
-| 💘 | Heart with arrow | `1f498_heartwitharrow` |
-| 💝 | Heart with ribbon | `1f49d_heartwithribbon` |
-| 💖 | Sparkling heart | `sparklingheart` |
-| 💗 | Growing heart | `growingheart` |
-| 💓 | Beating heart | `1f493_beatingheart` |
-| 💞 | Revolving hearts | `1f49e_revolvinghearts` |
-| 💕 | Two hearts | `twohearts` |
-| 💟 | Heart button | `1f49f_heartdecoration` |
-| ❣️ | Heart exclamation | `2763_heartexclamation` |
-| 💔 | Broken heart | `brokenheart` |
-| ❤️‍🔥 | Heart on fire | `heartonfire` |
-| ❤️‍🩹 | Mending heart | `mendingheart` |
-| ❤️ | Heart | `heart` |
-| 🩷 | Pink heart | `heartpink` |
-| 🧡 | Orange heart | `heartorange` |
-| 💛 | Yellow heart | `heartyellow` |
-| 💚 | Green heart | `heartgreen` |
-| 💙 | Blue heart | `heartblue` |
-| 🩵 | Light blue heart | `heartlightblue` |
-| 💜 | Purple heart | `heartpurple` |
-| 🤎 | Brown heart | `heartbrown` |
-| 🖤 | Black heart | `heartblack` |
-| 🩶 | Grey heart | `heartgrey` |
-| 🤍 | White heart | `heartwhite` |
-| ❤️ | Rainbow heart | `rainbowheart2` |
-| 💯 | Hundred points | `1f4af_hundredpointssymbol` |
-| 💢 | Anger symbol | `1f4a2_angersymbol` |
-| 💥 | Explosion | `1f4a5_collisionsymbol` |
-| 💫 | Dizzy symbol | `1f4ab_dizzysymbol` |
-| 💦 | Droplets | `1f4a6_splashingsweatsymbol` |
-| 💨 | Dashing away | `1f4a8_dashsymbol` |
-| 🕳️ | Hole | `1f573_hole` |
-| 💣 | Bomb | `bomb` |
-| 💬 | Speech bubble | `speechbubble` |
-| 👁️‍🗨️ | Eye speech bubble | `eyeinspeechbubble` |
-| 🗨️ | Left speech bubble | `1f5e8_leftspeechbubble` |
-| 🗯️ | Angry speech bubble | `1f5ef_rightangerbubble` |
-| 💭 | Thought bubble | `1f4ad_thoughtballoon` |
-| 💤 | Zzz | `1f4a4_zzz` |
-| 😎 | Cool cat | `coolcat` |
-| 🐶 | Cool dog | `cooldog` |
-| 😎 | Cool monkey | `coolmonkey` |
-| 🤖 | Cool robot | `coolrobot` |
-| 🐨 | Cool koala | `coolkoala` |
-| 😍 | Heart eyes dog | `hearteyesdog` |
-| 😍 | Heart eyes monkey | `hearteyesmonkey` |
-| 😍 | Heart eyes robot | `hearteyesrobot` |
-| 😍 | Heart eyes koala | `hearteyeskoala` |
-| 😄 | Laugh dog | `laughdog` |
-| 😄 | Laugh monkey | `laughmonkey` |
-| 😄 | Laugh robot | `laughrobot` |
-| 😄 | Laugh koala | `laughkoala` |
-| 🙁 | Sad dog | `saddog` |
-| 🙁 | Sad monkey | `sadmonkey` |
-| 🤖 | Sad robot | `sadrobot` |
-| 🙁 | Sad koala | `sadkoala` |
-| 😌 | Dreaming | `dream` |
-| 😤 | Banging head on wall | `headbang` |
-| 🎧 | Listening to headphones | `headphones` |
-| 🥳 | Holiday spirit | `holidayspirit` |
-| 💡 | Idea | `idea` |
-| 🧐 | Movember | `movember` |
-| 🥊 | Punch | `punch` |
-| 🙂 | Rainbow smile | `rainbowsmile` |
-| 🙄 | It wasn't me! | `wasntme` |
-| 🤙 | Call | `call` |
-| ✋ | High five | `highfive` |
-| 👋 | Hi | `hi` |
-| 👍 | Like | `like` |
-| 🤘 | Rock | `rock` |
-| 👏 | Sarcastic | `sarcastic` |
-| 🤳 | Selfie | `selfie` |
-| 🤫 | Too much information | `tmi` |
-| 😑 | Emo | `emo` |
-| 🙂 | Nodding | `nod` |
-| 🙁 | Shake | `shake` |
-| 😒 | Talking too much | `ttm` |
-| ✋ | Wait | `wait` |
-| 😅 | Relieved | `whew` |
-| 🤦 | Facepalm | `facepalm` |
-| 🤞 | Fingers crossed | `fingerscrossed` |
-| 👏 | Clapping | `clap` |
-| 🙌 | The Wave 1 | `thewave1` |
-| 🙌 | The Wave 2 | `thewave2` |
-| 🙌 | The Wave 3 | `thewave3` |
-| 🙌 | The Wave 4 | `thewave4` |
-| 🙌 | The Wave 5 | `thewave5` |
-| (oreoyum) | OREO Yum | `oreoyum` |
+| <span style="font-size:1.5em">😃</span> | Grinning face with big eyes | `1f603_grinningfacewithbigeyes` |
+| <span style="font-size:1.5em">😃</span> | Happy face | `happyface` |
+| <span style="font-size:1.5em">😄</span> | Grinning face with smiling eyes | `grinningfacewithsmilingeyes` |
+| <span style="font-size:1.5em">😁</span> | Beaming face with smiling eyes | `1f601_beamingfacewithsmilingeyes` |
+| <span style="font-size:1.5em">😆</span> | Laugh | `laugh` |
+| <span style="font-size:1.5em">😅</span> | Sweat grinning | `sweatgrinning` |
+| <span style="font-size:1.5em">🤣</span> | Rolling on the floor laughing | `rofl` |
+| <span style="font-size:1.5em">😂</span> | Crying with laughter | `cwl` |
+| <span style="font-size:1.5em">🙂</span> | Smile | `smile` |
+| <span style="font-size:1.5em">🙃</span> | Upside down face | `upsidedownface` |
+| <span style="font-size:1.5em">🫠</span> | Melting face | `meltingface` |
+| <span style="font-size:1.5em">😉</span> | Wink | `wink` |
+| <span style="font-size:1.5em">😊</span> | Smile eyes | `smileeyes` |
+| <span style="font-size:1.5em">😇</span> | Angel | `angel` |
+| <span style="font-size:1.5em">🥰</span> | In love | `inlove` |
+| <span style="font-size:1.5em">😍</span> | Heart eyes | `hearteyes` |
+| <span style="font-size:1.5em">🤩</span> | Star eyes | `stareyes` |
+| <span style="font-size:1.5em">😘</span> | Face blowing a kiss | `1f618_facethrowingakiss` |
+| <span style="font-size:1.5em">😗</span> | Kiss | `kiss` |
+| <span style="font-size:1.5em">☺️</span> | Mmmmm… | `mmm` |
+| <span style="font-size:1.5em">😚</span> | Kissing face with closed eyes | `1f61a_kissingfacewithclosedeyes` |
+| <span style="font-size:1.5em">😙</span> | Kissing face with smiling eyes | `1f619_kissingfacewithsmilingeyes` |
+| <span style="font-size:1.5em">🥲</span> | Smiling face with tear | `smilingfacewithtear` |
+| <span style="font-size:1.5em">😋</span> | Cheeky | `tongueout` |
+| <span style="font-size:1.5em">😛</span> | Face with tongue | `1f61b_facewithtongue` |
+| <span style="font-size:1.5em">😜</span> | Winking tongue out | `winktongueout` |
+| <span style="font-size:1.5em">🤪</span> | Zany face | `1f92a_zanyface` |
+| <span style="font-size:1.5em">😝</span> | Squinting face with tongue | `squintingfacewithtongue` |
+| <span style="font-size:1.5em">🤑</span> | Money mouth face | `1f911_moneymouthface` |
+| <span style="font-size:1.5em">🤗</span> | Hugging face | `1f917_huggingface` |
+| <span style="font-size:1.5em">🤭</span> | Giggle | `giggle` |
+| <span style="font-size:1.5em">🫢</span> | Hand over mouth | `handovermouth` |
+| <span style="font-size:1.5em">🫣</span> | Peeking eye | `peekingeye` |
+| <span style="font-size:1.5em">🤫</span> | My lips are sealed | `lipssealed` |
+| <span style="font-size:1.5em">🤔</span> | Thinking | `think` |
+| <span style="font-size:1.5em">🫡</span> | Saluting face | `salute` |
+| <span style="font-size:1.5em">🤐</span> | Zipper mouth face | `1f910_zippermouthface` |
+| <span style="font-size:1.5em">🤨</span> | Wondering | `wonder` |
+| <span style="font-size:1.5em">😐</span> | Speechless | `speechless` |
+| <span style="font-size:1.5em">😑</span> | Expressionless | `expressionless` |
+| <span style="font-size:1.5em">😶</span> | Face without mouth | `blankface` |
+| <span style="font-size:1.5em">🫥</span> | Dotted line face | `dottedlineface` |
+| <span style="font-size:1.5em">😶‍🌫️</span> | Face in clouds | `faceinclouds` |
+| <span style="font-size:1.5em">😏</span> | Smirking | `smirk` |
+| <span style="font-size:1.5em">😒</span> | Unamused | `unamused` |
+| <span style="font-size:1.5em">🙄</span> | Dull | `dull` |
+| <span style="font-size:1.5em">😬</span> | Grimacing face | `1f62c_grimacingface` |
+| <span style="font-size:1.5em">😮‍💨</span> | Face exhaling | `faceexhaling` |
+| <span style="font-size:1.5em">🤥</span> | Lying face | `1f925_lyingface` |
+| <span style="font-size:1.5em">🫨</span> | Shaking Head | `shaking` |
+| <span style="font-size:1.5em">🙂‍↕️</span> | Head shaking vertically | `headshakingvertically2` |
+| <span style="font-size:1.5em">🙂‍↔️</span> | Head shaking horizontally | `headshakinghorizontally2` |
+| <span style="font-size:1.5em">😌</span> | Relieved | `relieved` |
+| <span style="font-size:1.5em">😔</span> | Pensive | `pensive` |
+| <span style="font-size:1.5em">😪</span> | Sleepy | `sleepy` |
+| <span style="font-size:1.5em">🤤</span> | Drooling face | `1f924_droolingface` |
+| <span style="font-size:1.5em">😴</span> | Sleeping face | `sleepingface` |
+| <span style="font-size:1.5em">😷</span> | Face with medical mask | `1f637_facewithmedicalmask` |
+| <span style="font-size:1.5em">🤒</span> | Ill | `ill` |
+| <span style="font-size:1.5em">🤕</span> | Face with head bandage | `1f915_facewithheadbandage` |
+| <span style="font-size:1.5em">🤢</span> | Nauseated face | `1f922_nauseatedface` |
+| <span style="font-size:1.5em">🤮</span> | Vomiting | `puke` |
+| <span style="font-size:1.5em">🤧</span> | Sneezing face | `1f927_sneezingface` |
+| <span style="font-size:1.5em">🥵</span> | Hotface | `1f975_hotface` |
+| <span style="font-size:1.5em">🥶</span> | Cold shivering | `shivering` |
+| <span style="font-size:1.5em">🥱</span> | Morning after party | `hungover` |
+| <span style="font-size:1.5em">😵</span> | Dizzy face | `1f635_dizzyface` |
+| <span style="font-size:1.5em">😵‍💫</span> | Face with spiral eyes | `facewithspiraleyes` |
+| <span style="font-size:1.5em">🤯</span> | Exploding head | `1f92f_explodinghead` |
+| <span style="font-size:1.5em">🤠</span> | Face with cowboy hat | `1f920_facewithcowboyhat` |
+| <span style="font-size:1.5em">🥳</span> | Party | `party` |
+| <span style="font-size:1.5em">🥸</span> | Disguised face | `disguisedface` |
+| <span style="font-size:1.5em">😎</span> | Cool | `cool` |
+| <span style="font-size:1.5em">🤓</span> | Nerdy | `nerdy` |
+| <span style="font-size:1.5em">🧐</span> | Face with monocle | `1f9d0_facewithmonocle` |
+| <span style="font-size:1.5em">😕</span> | Confused | `confused` |
+| <span style="font-size:1.5em">🫤</span> | Face with diagonal mouth | `diagonalmouth` |
+| <span style="font-size:1.5em">😧</span> | Worried | `worry` |
+| <span style="font-size:1.5em">🙁</span> | Sad | `sad` |
+| <span style="font-size:1.5em">☹️</span> | Frowning face | `2639_frowningface` |
+| <span style="font-size:1.5em">😮</span> | Surprised | `surprised` |
+| <span style="font-size:1.5em">😯</span> | Hushed face | `1f62f_hushedface` |
+| <span style="font-size:1.5em">😲</span> | Astonished face | `1f632_astonishedface` |
+| <span style="font-size:1.5em">😊</span> | Blush | `blush` |
+| <span style="font-size:1.5em">🥺</span> | Pleading face | `1f97a_pleadingface` |
+| <span style="font-size:1.5em">🥹</span> | Face holding back tears | `faceholdingbacktears` |
+| <span style="font-size:1.5em">😦</span> | Frowning face with open mouth | `1f626_frowningfacewithopenmouth` |
+| <span style="font-size:1.5em">😧</span> | Anguished face | `1f627_anguishedface` |
+| <span style="font-size:1.5em">😨</span> | Fearful | `fearful` |
+| <span style="font-size:1.5em">😰</span> | Anxious face with sweat | `1f630_anxiousfacewithsweat` |
+| <span style="font-size:1.5em">😥</span> | Sad but relieved face | `1f625_sadbutrelievedface` |
+| <span style="font-size:1.5em">😢</span> | Crying | `cry` |
+| <span style="font-size:1.5em">😭</span> | Loudly crying | `loudlycrying` |
+| <span style="font-size:1.5em">😱</span> | Screaming with fear | `screamingfear` |
+| <span style="font-size:1.5em">😖</span> | Very confused | `veryconfused` |
+| <span style="font-size:1.5em">😫</span> | Doh! | `doh` |
+| <span style="font-size:1.5em">😞</span> | Disappointed | `disappointed` |
+| <span style="font-size:1.5em">😓</span> | Sweating | `sweat` |
+| <span style="font-size:1.5em">😩</span> | Weary | `weary` |
+| <span style="font-size:1.5em">😫</span> | Tired face | `1f62b_tiredface` |
+| <span style="font-size:1.5em">🥱</span> | Yawning face | `1f971_yawningface` |
+| <span style="font-size:1.5em">😤</span> | Face with steam from nose | `1f624_facewithlookoftriumph` |
+| <span style="font-size:1.5em">😡</span> | Angry face | `angryface` |
+| <span style="font-size:1.5em">😠</span> | Angry | `angry` |
+| <span style="font-size:1.5em">🤬</span> | Swearing | `swear` |
+| <span style="font-size:1.5em">😈</span> | Devil | `devil` |
+| <span style="font-size:1.5em">👿</span> | Angry face with horns | `1f47f_angryfacewithhorns` |
+| <span style="font-size:1.5em">💀</span> | Skull | `skull` |
+| <span style="font-size:1.5em">☠️</span> | Skull and crossbones | `2620_skullandcrossbones` |
+| <span style="font-size:1.5em">💩</span> | Pile of poo | `poop` |
+| <span style="font-size:1.5em">🤡</span> | Clown face | `1f921_clownface` |
+| <span style="font-size:1.5em">👹</span> | Ogre | `1f479_japaneseogre` |
+| <span style="font-size:1.5em">👺</span> | Goblin | `1f47a_japanesegoblin` |
+| <span style="font-size:1.5em">👻</span> | Ghost | `ghost` |
+| <span style="font-size:1.5em">👽</span> | Alien | `1f47d_extraterrestrialalien` |
+| <span style="font-size:1.5em">👾</span> | Alien monster | `1f47e_alienmonster` |
+| <span style="font-size:1.5em">🤖</span> | Smile robot | `smilerobot` |
+| <span style="font-size:1.5em">😺</span> | Smile cat | `smilecat` |
+| <span style="font-size:1.5em">😺</span> | Laugh cat | `laughcat` |
+| <span style="font-size:1.5em">😹</span> | Cat with tears of joy | `1f639_catwithtearsofjoy` |
+| <span style="font-size:1.5em">😻</span> | Heart eyes cat | `hearteyescat` |
+| <span style="font-size:1.5em">😼</span> | Cat with wry smile | `1f63c_catwithwrysmile` |
+| <span style="font-size:1.5em">😽</span> | Kissing cat | `1f63d_kissingcat` |
+| <span style="font-size:1.5em">🙀</span> | Weary cat | `1f640_wearycat` |
+| <span style="font-size:1.5em">😿</span> | Sad cat | `sadcat` |
+| <span style="font-size:1.5em">😾</span> | Pouting cat | `1f63e_poutingcat` |
+| <span style="font-size:1.5em">🙉</span> | Monkey hear no evil | `hearnoevil` |
+| <span style="font-size:1.5em">🙈</span> | Monkey see no evil | `seenoevil` |
+| <span style="font-size:1.5em">🙊</span> | Monkey speak no evil | `speaknoevil` |
+| <span style="font-size:1.5em">💋</span> | Kissing lips | `lips` |
+| <span style="font-size:1.5em">💌</span> | Love letter | `loveletter` |
+| <span style="font-size:1.5em">💘</span> | Heart with arrow | `1f498_heartwitharrow` |
+| <span style="font-size:1.5em">💝</span> | Heart with ribbon | `1f49d_heartwithribbon` |
+| <span style="font-size:1.5em">💖</span> | Sparkling heart | `sparklingheart` |
+| <span style="font-size:1.5em">💗</span> | Growing heart | `growingheart` |
+| <span style="font-size:1.5em">💓</span> | Beating heart | `1f493_beatingheart` |
+| <span style="font-size:1.5em">💞</span> | Revolving hearts | `1f49e_revolvinghearts` |
+| <span style="font-size:1.5em">💕</span> | Two hearts | `twohearts` |
+| <span style="font-size:1.5em">💟</span> | Heart button | `1f49f_heartdecoration` |
+| <span style="font-size:1.5em">❣️</span> | Heart exclamation | `2763_heartexclamation` |
+| <span style="font-size:1.5em">💔</span> | Broken heart | `brokenheart` |
+| <span style="font-size:1.5em">❤️‍🔥</span> | Heart on fire | `heartonfire` |
+| <span style="font-size:1.5em">❤️‍🩹</span> | Mending heart | `mendingheart` |
+| <span style="font-size:1.5em">❤️</span> | Heart | `heart` |
+| <span style="font-size:1.5em">🩷</span> | Pink heart | `heartpink` |
+| <span style="font-size:1.5em">🧡</span> | Orange heart | `heartorange` |
+| <span style="font-size:1.5em">💛</span> | Yellow heart | `heartyellow` |
+| <span style="font-size:1.5em">💚</span> | Green heart | `heartgreen` |
+| <span style="font-size:1.5em">💙</span> | Blue heart | `heartblue` |
+| <span style="font-size:1.5em">🩵</span> | Light blue heart | `heartlightblue` |
+| <span style="font-size:1.5em">💜</span> | Purple heart | `heartpurple` |
+| <span style="font-size:1.5em">🤎</span> | Brown heart | `heartbrown` |
+| <span style="font-size:1.5em">🖤</span> | Black heart | `heartblack` |
+| <span style="font-size:1.5em">🩶</span> | Grey heart | `heartgrey` |
+| <span style="font-size:1.5em">🤍</span> | White heart | `heartwhite` |
+| <span style="font-size:1.5em">❤️</span> | Rainbow heart | `rainbowheart2` |
+| <span style="font-size:1.5em">💯</span> | Hundred points | `1f4af_hundredpointssymbol` |
+| <span style="font-size:1.5em">💢</span> | Anger symbol | `1f4a2_angersymbol` |
+| <span style="font-size:1.5em">💥</span> | Explosion | `1f4a5_collisionsymbol` |
+| <span style="font-size:1.5em">💫</span> | Dizzy symbol | `1f4ab_dizzysymbol` |
+| <span style="font-size:1.5em">💦</span> | Droplets | `1f4a6_splashingsweatsymbol` |
+| <span style="font-size:1.5em">💨</span> | Dashing away | `1f4a8_dashsymbol` |
+| <span style="font-size:1.5em">🕳️</span> | Hole | `1f573_hole` |
+| <span style="font-size:1.5em">💣</span> | Bomb | `bomb` |
+| <span style="font-size:1.5em">💬</span> | Speech bubble | `speechbubble` |
+| <span style="font-size:1.5em">👁️‍🗨️</span> | Eye speech bubble | `eyeinspeechbubble` |
+| <span style="font-size:1.5em">🗨️</span> | Left speech bubble | `1f5e8_leftspeechbubble` |
+| <span style="font-size:1.5em">🗯️</span> | Angry speech bubble | `1f5ef_rightangerbubble` |
+| <span style="font-size:1.5em">💭</span> | Thought bubble | `1f4ad_thoughtballoon` |
+| <span style="font-size:1.5em">💤</span> | Zzz | `1f4a4_zzz` |
+| <span style="font-size:1.5em">😎</span> | Cool cat | `coolcat` |
+| <span style="font-size:1.5em">🐶</span> | Cool dog | `cooldog` |
+| <span style="font-size:1.5em">😎</span> | Cool monkey | `coolmonkey` |
+| <span style="font-size:1.5em">🤖</span> | Cool robot | `coolrobot` |
+| <span style="font-size:1.5em">🐨</span> | Cool koala | `coolkoala` |
+| <span style="font-size:1.5em">😍</span> | Heart eyes dog | `hearteyesdog` |
+| <span style="font-size:1.5em">😍</span> | Heart eyes monkey | `hearteyesmonkey` |
+| <span style="font-size:1.5em">😍</span> | Heart eyes robot | `hearteyesrobot` |
+| <span style="font-size:1.5em">😍</span> | Heart eyes koala | `hearteyeskoala` |
+| <span style="font-size:1.5em">😄</span> | Laugh dog | `laughdog` |
+| <span style="font-size:1.5em">😄</span> | Laugh monkey | `laughmonkey` |
+| <span style="font-size:1.5em">😄</span> | Laugh robot | `laughrobot` |
+| <span style="font-size:1.5em">😄</span> | Laugh koala | `laughkoala` |
+| <span style="font-size:1.5em">🙁</span> | Sad dog | `saddog` |
+| <span style="font-size:1.5em">🙁</span> | Sad monkey | `sadmonkey` |
+| <span style="font-size:1.5em">🤖</span> | Sad robot | `sadrobot` |
+| <span style="font-size:1.5em">🙁</span> | Sad koala | `sadkoala` |
+| <span style="font-size:1.5em">😌</span> | Dreaming | `dream` |
+| <span style="font-size:1.5em">😤</span> | Banging head on wall | `headbang` |
+| <span style="font-size:1.5em">🎧</span> | Listening to headphones | `headphones` |
+| <span style="font-size:1.5em">🥳</span> | Holiday spirit | `holidayspirit` |
+| <span style="font-size:1.5em">💡</span> | Idea | `idea` |
+| <span style="font-size:1.5em">🧐</span> | Movember | `movember` |
+| <span style="font-size:1.5em">🥊</span> | Punch | `punch` |
+| <span style="font-size:1.5em">🙂</span> | Rainbow smile | `rainbowsmile` |
+| <span style="font-size:1.5em">🙄</span> | It wasn't me! | `wasntme` |
+| <span style="font-size:1.5em">🤙</span> | Call | `call` |
+| <span style="font-size:1.5em">✋</span> | High five | `highfive` |
+| <span style="font-size:1.5em">👋</span> | Hi | `hi` |
+| <span style="font-size:1.5em">👍</span> | Like | `like` |
+| <span style="font-size:1.5em">🤘</span> | Rock | `rock` |
+| <span style="font-size:1.5em">👏</span> | Sarcastic | `sarcastic` |
+| <span style="font-size:1.5em">🤳</span> | Selfie | `selfie` |
+| <span style="font-size:1.5em">🤫</span> | Too much information | `tmi` |
+| <span style="font-size:1.5em">😑</span> | Emo | `emo` |
+| <span style="font-size:1.5em">🙂</span> | Nodding | `nod` |
+| <span style="font-size:1.5em">🙁</span> | Shake | `shake` |
+| <span style="font-size:1.5em">😒</span> | Talking too much | `ttm` |
+| <span style="font-size:1.5em">✋</span> | Wait | `wait` |
+| <span style="font-size:1.5em">😅</span> | Relieved | `whew` |
+| <span style="font-size:1.5em">🤦</span> | Facepalm | `facepalm` |
+| <span style="font-size:1.5em">🤞</span> | Fingers crossed | `fingerscrossed` |
+| <span style="font-size:1.5em">👏</span> | Clapping | `clap` |
+| <span style="font-size:1.5em">🙌</span> | The Wave 1 | `thewave1` |
+| <span style="font-size:1.5em">🙌</span> | The Wave 2 | `thewave2` |
+| <span style="font-size:1.5em">🙌</span> | The Wave 3 | `thewave3` |
+| <span style="font-size:1.5em">🙌</span> | The Wave 4 | `thewave4` |
+| <span style="font-size:1.5em">🙌</span> | The Wave 5 | `thewave5` |
+| <span style="font-size:1.5em">(oreoyum)</span> | OREO Yum | `oreoyum` |
 
 ---
 
@@ -267,69 +267,69 @@ Reference reactions by their unique ID:
 
 | Emoji | Description | Reaction ID | 🎨 |
 |-------|-------------|-------------|:--:|
-| 👋 | Waving hand | `1f44b_wavinghand` | 🎨 |
-| 🤚 | Raised back of hand | `1f91a_raisedbackofhand` | 🎨 |
-| 🖐️ | Hand with fingers splayed | `1f590_handwithfingerssplayed` | 🎨 |
-| ✋ | Raised hand | `270b_raisedhand` | 🎨 |
-| 🖖 | Vulcan salute | `vulcansalute` | 🎨 |
-| 🫱 | Rightwards hand | `rightwardshand` | 🎨 |
-| 🫲 | Leftwards hand | `leftwardshand` | 🎨 |
-| 🫳 | Palm down hand | `palmdownhand` | 🎨 |
-| 🫴 | Palm up hand | `palmuphand` | 🎨 |
-| 🫸 | Push right | `pushright` | 🎨 |
-| 🫷 | Push left | `pushleft` | 🎨 |
-| 👌 | OK | `ok` | 🎨 |
-| 🤌 | Pinched fingers | `pinchedfingers` | 🎨 |
-| 🤏 | Pinching hand | `1f90f_pinchinghand` | 🎨 |
-| ✌️ | Victory sign | `victory` | 🎨 |
-| 🤞 | Crossed fingers | `crossedfingers` | 🎨 |
-| 🫰 | Finger heart | `fingerheart` | 🎨 |
-| 🤟 | Love you gesture | `1f91f_loveyougesture` | 🎨 |
-| 🤘 | Sign of the horns | `1f918_signofthehorns` | 🎨 |
-| 🤙 | Call me hand | `1f919_callmehand` | 🎨 |
-| 👈 | Backhand Index Pointing Left | `pointleftindex` | 🎨 |
-| 👉 | Backhand index pointing right | `pointrightindex` | 🎨 |
-| 👆 | Backhand index pointing up | `1f446_backhandindexpointingup` | 🎨 |
-| 👇 | Backhand index pointing down | `pointdownindex` | 🎨 |
-| ☝️ | Index pointing up | `pointupindex` | 🎨 |
-| 🫵 | Poke | `poke` | 🎨 |
-| 👍 | Yes | `yes` | 🎨 |
-| 👎 | No | `no` | 🎨 |
-| ✊ | Raised fist | `raisedfist` | 🎨 |
-| 👊 | Oncoming fist | `1f44a_oncomingfist` | 🎨 |
-| 🤛 | Left facing fist | `1f91b_leftfacingfist` | 🎨 |
-| 🤜 | Right facing fist | `1f91c_rightfacingfist` | 🎨 |
-| 👏 | Clapping hands | `clappinghands` | 🎨 |
-| 🙌 | Hands celebrating | `handsinair` | 🎨 |
-| 🫶 | Heart hands | `hearthands` | 🎨 |
-| 👐 | Open hands | `1f450_openhands` | 🎨 |
-| 🤲 | Palms up together | `1f932_palmsuptogether` | 🎨 |
-| 🤝 | Handshake | `handshake` | 🎨 |
-| 🙏 | Folded hands | `praying` | 🎨 |
-| ✍️ | Writing hand | `270d_writinghand` | 🎨 |
-| 💅 | Nail polish | `1f485_nailpolish` | 🎨 |
-| 🤳 | Selfie | `selfiehand` | 🎨 |
-| 💪 | Muscle | `muscle` | 🎨 |
-| 🦾 | Mechanical arm | `1f9be_mechanicalarm` | |
-| 🦿 | Mechanical leg | `1f9bf_mechanicalleg` | |
-| 🦵 | Leg | `1f9b5_leg` | 🎨 |
-| 🦶 | Foot | `1f9b6_foot` | 🎨 |
-| 👂 | Ear | `1f442_ear` | 🎨 |
-| 🦻 | Ear with hearing aid | `1f9bb_earwithhearingaid` | 🎨 |
-| 👃 | Nose | `1f443_nose` | 🎨 |
-| 🧠 | Brain | `1f9e0_brain` | |
-| 🫀 | Anatomical heart | `anatomicalheart` | |
-| 🫁 | Lungs | `lungs` | |
-| 🦷 | Tooth | `1f9b7_tooth` | |
-| 🦴 | Bone | `1f9b4_bone` | |
-| 👀 | Eyes | `1f440_eyes` | |
-| 👁️ | Eye | `1f441_eye` | |
-| 👅 | Tongue | `1f445_tongue` | |
-| 👄 | Mouth | `1f444_mouth` | |
-| 🫦 | Biting lip | `bitinglip` | |
-| 🎤 | Drop the mic | `dropthemic` | 🎨 |
-| 🤜🤛 | Fist bump | `fistbump` | 🎨 |
-| (support) | Support | `support` | 🎨 |
+| <span style="font-size:1.5em">👋</span> | Waving hand | `1f44b_wavinghand` | 🎨 |
+| <span style="font-size:1.5em">🤚</span> | Raised back of hand | `1f91a_raisedbackofhand` | 🎨 |
+| <span style="font-size:1.5em">🖐️</span> | Hand with fingers splayed | `1f590_handwithfingerssplayed` | 🎨 |
+| <span style="font-size:1.5em">✋</span> | Raised hand | `270b_raisedhand` | 🎨 |
+| <span style="font-size:1.5em">🖖</span> | Vulcan salute | `vulcansalute` | 🎨 |
+| <span style="font-size:1.5em">🫱</span> | Rightwards hand | `rightwardshand` | 🎨 |
+| <span style="font-size:1.5em">🫲</span> | Leftwards hand | `leftwardshand` | 🎨 |
+| <span style="font-size:1.5em">🫳</span> | Palm down hand | `palmdownhand` | 🎨 |
+| <span style="font-size:1.5em">🫴</span> | Palm up hand | `palmuphand` | 🎨 |
+| <span style="font-size:1.5em">🫸</span> | Push right | `pushright` | 🎨 |
+| <span style="font-size:1.5em">🫷</span> | Push left | `pushleft` | 🎨 |
+| <span style="font-size:1.5em">👌</span> | OK | `ok` | 🎨 |
+| <span style="font-size:1.5em">🤌</span> | Pinched fingers | `pinchedfingers` | 🎨 |
+| <span style="font-size:1.5em">🤏</span> | Pinching hand | `1f90f_pinchinghand` | 🎨 |
+| <span style="font-size:1.5em">✌️</span> | Victory sign | `victory` | 🎨 |
+| <span style="font-size:1.5em">🤞</span> | Crossed fingers | `crossedfingers` | 🎨 |
+| <span style="font-size:1.5em">🫰</span> | Finger heart | `fingerheart` | 🎨 |
+| <span style="font-size:1.5em">🤟</span> | Love you gesture | `1f91f_loveyougesture` | 🎨 |
+| <span style="font-size:1.5em">🤘</span> | Sign of the horns | `1f918_signofthehorns` | 🎨 |
+| <span style="font-size:1.5em">🤙</span> | Call me hand | `1f919_callmehand` | 🎨 |
+| <span style="font-size:1.5em">👈</span> | Backhand Index Pointing Left | `pointleftindex` | 🎨 |
+| <span style="font-size:1.5em">👉</span> | Backhand index pointing right | `pointrightindex` | 🎨 |
+| <span style="font-size:1.5em">👆</span> | Backhand index pointing up | `1f446_backhandindexpointingup` | 🎨 |
+| <span style="font-size:1.5em">👇</span> | Backhand index pointing down | `pointdownindex` | 🎨 |
+| <span style="font-size:1.5em">☝️</span> | Index pointing up | `pointupindex` | 🎨 |
+| <span style="font-size:1.5em">🫵</span> | Poke | `poke` | 🎨 |
+| <span style="font-size:1.5em">👍</span> | Yes | `yes` | 🎨 |
+| <span style="font-size:1.5em">👎</span> | No | `no` | 🎨 |
+| <span style="font-size:1.5em">✊</span> | Raised fist | `raisedfist` | 🎨 |
+| <span style="font-size:1.5em">👊</span> | Oncoming fist | `1f44a_oncomingfist` | 🎨 |
+| <span style="font-size:1.5em">🤛</span> | Left facing fist | `1f91b_leftfacingfist` | 🎨 |
+| <span style="font-size:1.5em">🤜</span> | Right facing fist | `1f91c_rightfacingfist` | 🎨 |
+| <span style="font-size:1.5em">👏</span> | Clapping hands | `clappinghands` | 🎨 |
+| <span style="font-size:1.5em">🙌</span> | Hands celebrating | `handsinair` | 🎨 |
+| <span style="font-size:1.5em">🫶</span> | Heart hands | `hearthands` | 🎨 |
+| <span style="font-size:1.5em">👐</span> | Open hands | `1f450_openhands` | 🎨 |
+| <span style="font-size:1.5em">🤲</span> | Palms up together | `1f932_palmsuptogether` | 🎨 |
+| <span style="font-size:1.5em">🤝</span> | Handshake | `handshake` | 🎨 |
+| <span style="font-size:1.5em">🙏</span> | Folded hands | `praying` | 🎨 |
+| <span style="font-size:1.5em">✍️</span> | Writing hand | `270d_writinghand` | 🎨 |
+| <span style="font-size:1.5em">💅</span> | Nail polish | `1f485_nailpolish` | 🎨 |
+| <span style="font-size:1.5em">🤳</span> | Selfie | `selfiehand` | 🎨 |
+| <span style="font-size:1.5em">💪</span> | Muscle | `muscle` | 🎨 |
+| <span style="font-size:1.5em">🦾</span> | Mechanical arm | `1f9be_mechanicalarm` | |
+| <span style="font-size:1.5em">🦿</span> | Mechanical leg | `1f9bf_mechanicalleg` | |
+| <span style="font-size:1.5em">🦵</span> | Leg | `1f9b5_leg` | 🎨 |
+| <span style="font-size:1.5em">🦶</span> | Foot | `1f9b6_foot` | 🎨 |
+| <span style="font-size:1.5em">👂</span> | Ear | `1f442_ear` | 🎨 |
+| <span style="font-size:1.5em">🦻</span> | Ear with hearing aid | `1f9bb_earwithhearingaid` | 🎨 |
+| <span style="font-size:1.5em">👃</span> | Nose | `1f443_nose` | 🎨 |
+| <span style="font-size:1.5em">🧠</span> | Brain | `1f9e0_brain` | |
+| <span style="font-size:1.5em">🫀</span> | Anatomical heart | `anatomicalheart` | |
+| <span style="font-size:1.5em">🫁</span> | Lungs | `lungs` | |
+| <span style="font-size:1.5em">🦷</span> | Tooth | `1f9b7_tooth` | |
+| <span style="font-size:1.5em">🦴</span> | Bone | `1f9b4_bone` | |
+| <span style="font-size:1.5em">👀</span> | Eyes | `1f440_eyes` | |
+| <span style="font-size:1.5em">👁️</span> | Eye | `1f441_eye` | |
+| <span style="font-size:1.5em">👅</span> | Tongue | `1f445_tongue` | |
+| <span style="font-size:1.5em">👄</span> | Mouth | `1f444_mouth` | |
+| <span style="font-size:1.5em">🫦</span> | Biting lip | `bitinglip` | |
+| <span style="font-size:1.5em">🎤</span> | Drop the mic | `dropthemic` | 🎨 |
+| <span style="font-size:1.5em">🤜🤛</span> | Fist bump | `fistbump` | 🎨 |
+| <span style="font-size:1.5em">(support)</span> | Support | `support` | 🎨 |
 
 ---
 
@@ -339,263 +339,263 @@ Reference reactions by their unique ID:
 
 | Emoji | Description | Reaction ID | 🎨 |
 |-------|-------------|-------------|:--:|
-| 👶 | Smile baby | `smilebaby` | 🎨 |
-| 🧒 | Child | `1f9d2_child` | 🎨 |
-| 👦 | Smile boy | `smileboy` | 🎨 |
-| 👧 | Smile girl | `smilegirl` | 🎨 |
-| 🧑 | Smile person | `person` | 🎨 |
-| 👱 | Person blond hair | `1f471_blondehairedperson` | 🎨 |
-| 👨 | Smile man | `smileman` | 🎨 |
-| 🧔 | Bearded person | `1f9d4_beardedperson` | 🎨 |
-| 🧔‍♂️ | Bearded man | `manbeard` | 🎨 |
-| 🧔‍♀️ | Bearded woman | `womanbeard` | 🎨 |
-| 👨‍🦰 | Man red hair | `1f468_200d_1f9b0_maleredhaired` | 🎨 |
-| 👨‍🦱 | Man curly hair | `1f468_200d_1f9b1_mancurlyhaired` | 🎨 |
-| 👨‍🦳 | Man white hair | `1f468_200d_1f9b3_malewhitehaired` | 🎨 |
-| 👨‍🦲 | Man bald | `1f468_200d_1f9b2_manbald` | 🎨 |
-| 👩 | Smile woman | `smilewoman` | 🎨 |
-| 👩‍🦰 | Woman red hair | `1f469_200d_1f9b0_femaleredhaired` | 🎨 |
-| 🧑‍🦰 | Red haired | `1f9b0_redhaired` | 🎨 |
-| 👩‍🦱 | Woman curly hair | `womancurlyhair` | 🎨 |
-| 🧑‍🦱 | Curly haired | `1f9b1_curlyhaired` | 🎨 |
-| 👩‍🦳 | Woman white hair | `womanwhitehair` | 🎨 |
-| 🧑‍🦳 | Person white hair | `personwhitehair` | 🎨 |
-| 🧑‍🦲 | Bald | `1f9b2_bald` | 🎨 |
-| 👩‍🦲 | Woman bald | `1f469_200d_1f9b2_femalebald` | 🎨 |
-| 👱‍♀️ | Woman blond hair | `womanblondhair` | 🎨 |
-| 👱‍♂️ | Man blond hair | `manblondhair` | 🎨 |
-| 🧓 | Older adult | `1f9d3_olderadult` | 🎨 |
-| 👴 | Old man | `1f474_olderman` | 🎨 |
-| 👵 | Old woman | `oldwoman` | 🎨 |
-| 🙍 | Person frowning | `frowning` | 🎨 |
-| 🙍‍♂️ | Man frowning | `man_frowning` | 🎨 |
-| 🙍‍♀️ | Woman frowning | `womanfrowning` | 🎨 |
-| 🙎 | Pouting face | `pouting_face` | 🎨 |
-| 🙎‍♂️ | Man pouting | `man_pouting` | 🎨 |
-| 🙎‍♀️ | Woman pouting | `womanpouting` | 🎨 |
-| 🙅 | Face with no good gesture | `1f645_facewithnogoodgesture` | 🎨 |
-| 🙅‍♂️ | Man gesturing no | `man_gesturing_not_ok` | 🎨 |
-| 🙅‍♀️ | Woman gesturing no | `womangesturingno` | 🎨 |
-| 🙆 | Person gesturing ok | `1f646_persongesturingok` | 🎨 |
-| 🙆‍♂️ | Man gesturing OK | `man_gesturing_ok` | 🎨 |
-| 🙆‍♀️ | Woman gesturing OK | `womangesturingok` | 🎨 |
-| 💁 | Person tipping hand | `person_tipping_hand` | 🎨 |
-| 💁‍♂️ | Man tipping hand | `man_tipping_hand` | 🎨 |
-| 💁‍♀️ | Woman tipping hand | `womantippinghand` | 🎨 |
-| 🙋 | Person raising hand | `happy_person_raising_one_hand` | 🎨 |
-| 🙋‍♂️ | Man raising hand | `man_raising_hand` | 🎨 |
-| 🙋‍♀️ | Woman raising hand | `womanraisinghand` | 🎨 |
-| 🧏 | Deaf person | `person_deaf` | 🎨 |
-| 🧏‍♂️ | Deaf Man | `man_deaf` | 🎨 |
-| 🧏‍♀️ | Woman deaf | `woman_deaf` | 🎨 |
-| 🙇 | Person bowing | `bowing` | 🎨 |
-| 🙇‍♂️ | Man bowing | `bow` | 🎨 |
-| 🙇‍♀️ | Woman bowing | `thanks` | 🎨 |
-| 🤦 | Person facepalming | `1f926_personfacepalming` | 🎨 |
-| 🤦‍♂️ | Man facepalming | `manfacepalming` | 🎨 |
-| 🤦‍♀️ | Woman facepalming | `womanfacepalming` | 🎨 |
-| 🤷 | Person shrugging | `shrug` | 🎨 |
-| 🤷‍♂️ | Man shrug | `manshrug` | 🎨 |
-| 🤷‍♀️ | Woman shrug | `womanshrug` | 🎨 |
-| 🧑‍⚕️ | Person health worker | `personhealthworker` | 🎨 |
-| 👨‍⚕️ | Man health worker | `manhealthworker` | 🎨 |
-| 👩‍⚕️ | Woman health worker | `womanhealthworker` | 🎨 |
-| 🧑‍🎓 | Student | `student` | 🎨 |
-| 👨‍🎓 | Man student | `manstudent` | 🎨 |
-| 👩‍🎓 | Woman student | `womanstudent` | 🎨 |
-| 🧑‍🏫 | Person teacher | `personteacher` | 🎨 |
-| 👨‍🏫 | Man teacher | `manteacher` | 🎨 |
-| 👩‍🏫 | Woman teacher | `womanteacher` | 🎨 |
-| 🧑‍⚖️ | Person judge | `personjudge` | 🎨 |
-| 👨‍⚖️ | Man judge | `manjudge` | 🎨 |
-| 👩‍⚖️ | Woman judge | `womanjudge` | 🎨 |
-| 🧑‍🌾 | Person farmer | `personfarmer` | 🎨 |
-| 👨‍🌾 | Man farmer | `manfarmer` | 🎨 |
-| 👩‍🌾 | Woman farmer | `womanfarmer` | 🎨 |
-| 🧑‍🍳 | Person chef | `personchef` | 🎨 |
-| 👨‍🍳 | Man chef | `manchef` | 🎨 |
-| 👩‍🍳 | Woman chef | `womanchef` | 🎨 |
-| 🧑‍🔧 | Person mechanic | `personmechanic` | 🎨 |
-| 👨‍🔧 | Man mechanic | `manmechanic` | 🎨 |
-| 👩‍🔧 | Woman mechanic | `womanmechanic` | 🎨 |
-| 🧑‍🏭 | Person welder | `personwelder` | 🎨 |
-| 👨‍🏭 | Man welder | `manwelder` | 🎨 |
-| 👩‍🏭 | Woman welder | `womanwelder` | 🎨 |
-| 🧑‍💼 | Person office worker | `personofficeworker` | 🎨 |
-| 👨‍💼 | Office worker male | `officeworkermale` | 🎨 |
-| 👩‍💼 | Office worker female | `officeworkerfemale` | 🎨 |
-| 🧑‍🔬 | Person scientist | `personscientist` | 🎨 |
-| 👨‍🔬 | Man scientist | `manscientist` | 🎨 |
-| 👩‍🔬 | Woman scientist | `womanscientist` | 🎨 |
-| 🧑‍💻 | Person writing code | `persondeveloper` | 🎨 |
-| 👨‍💻 | Man writing code | `mantechie` | 🎨 |
-| 👩‍💻 | Woman writing code | `womandeveloper` | 🎨 |
-| 🧑‍🎤 | Person singer | `personsinger` | 🎨 |
-| 👨‍🎤 | Man singer | `man_singer` | 🎨 |
-| 👩‍🎤 | Woman singer | `woman_singer` | 🎨 |
-| 🧑‍🎨 | Person artist | `personartist` | 🎨 |
-| 👨‍🎨 | Man artist | `manartist` | 🎨 |
-| 👩‍🎨 | Woman artist | `womanartist` | 🎨 |
-| 🧑‍✈️ | Person pilot | `personpilot` | 🎨 |
-| 👨‍✈️ | Man pilot | `manpilot` | 🎨 |
-| 👩‍✈️ | Woman pilot | `womanpilot` | 🎨 |
-| 🧑‍🚀 | Person astronaut | `personastronaut` | 🎨 |
-| 👨‍🚀 | Man astronaut | `manastronaut` | 🎨 |
-| 👩‍🚀 | Woman astronaut | `womanastronaut` | 🎨 |
-| 🧑‍🚒 | Person firefighter | `personfirefighter` | 🎨 |
-| 👨‍🚒 | Man firefighter | `manfirefighter` | 🎨 |
-| 👩‍🚒 | Woman firefighter | `womanfirefighter` | 🎨 |
-| 👮 | Police officer | `police_officer` | 🎨 |
-| 👮‍♂️ | Man police officer | `manpoliceofficer` | 🎨 |
-| 👮‍♀️ | Woman police officer | `womanpoliceofficer` | 🎨 |
-| 🕵️ | Detective | `detective` | 🎨 |
-| 🕵️‍♂️ | Man detective | `man_detective` | 🎨 |
-| 🕵️‍♀️ | Woman detective | `woman_detective` | 🎨 |
-| 💂 | Guard | `guard` | 🎨 |
-| 💂‍♂️ | Man guard | `man_guard` | 🎨 |
-| 💂‍♀️ | Woman guard | `woman_guard` | 🎨 |
-| 🥷 | Ninja | `ninja` | 🎨 |
-| 👷 | Construction worker | `construction_worker` | 🎨 |
-| 👷‍♂️ | Man construction worker | `man_construction_worker` | 🎨 |
-| 👷‍♀️ | Woman construction worker | `woman_construction_worker` | 🎨 |
-| 🫅 | Person with crown | `personcrown` | 🎨 |
-| 🤴 | Prince | `prince` | 🎨 |
-| 👸 | Princess | `princess` | 🎨 |
-| 👳 | Person wearing turban | `1f473_personwearingturban` | 🎨 |
-| 👳‍♂️ | Man wearing turban | `man_wearing_turban` | 🎨 |
-| 👳‍♀️ | Woman wearing turban | `womanwearingturban` | 🎨 |
-| 👲 | Man with chinese cap | `man_with_chinese_cap` | 🎨 |
-| 🧕 | Woman with head scarf | `woman_with_head_scarf` | 🎨 |
-| 🤵 | Person in tuxedo | `personintuxedo` | 🎨 |
-| 🤵‍♂️ |  Man in tuxedo | `manintuxedo` | 🎨 |
-| 🤵‍♀️ | Woman in tuxedo | `womanintuxedo` | 🎨 |
-| 👰 | Person with veil | `personwithveil` | 🎨 |
-| 👰‍♂️ | Man with veil | `manwithveil` | 🎨 |
-| 👰‍♀️ |  Woman with veil | `womanwithveil` | 🎨 |
-| 🤰 | Woman pregnant | `womanpregnant` | 🎨 |
-| 🫃 | Pregnant man | `pregnantman` | 🎨 |
-| 🫄 | Pregnant | `pregnant` | 🎨 |
-| 🤱 | Breastfeeding | `breastfeeding` | 🎨 |
-| 👨‍🍼 | Man bottle feeding | `manbottlefeeding` | 🎨 |
-| 🧑‍🍼 | Bottle feeding | `bottlefeeding` | 🎨 |
-| 👼 | Baby angel | `1f47c_babyangel` | 🎨 |
-| 🎅 | Santa | `santa` | 🎨 |
-| 🤶 | Mrs claus | `mother_christmas` | 🎨 |
-| 🧑‍🎄 | Mx Claus | `mxclaus` | 🎨 |
-| 🦸 | Person superhero | `personsuperhero` | 🎨 |
-| 🦸‍♂️ | Man superhero | `mansuperhero` | 🎨 |
-| 🦸‍♀️ | Woman superhero | `hero` | 🎨 |
-| 🦹 | Supervillain | `1f9b9_supervillain` | 🎨 |
-| 🦹‍♂️ | Man supervillain | `man_super_villain` | 🎨 |
-| 🦹‍♀️ | Woman supervillain | `woman_super_villain` | 🎨 |
-| 🧙‍♂️ | Mage | `wizard` | 🎨 |
-| 🧙‍♀️ | Woman mage | `womanmage` | 🎨 |
-| 🧚 | Fairy | `fairy` | 🎨 |
-| 🧚‍♂️ | Man fairy | `man_fairy` | 🎨 |
-| 🧚‍♀️ | Woman fairy | `woman_fairy` | 🎨 |
-| 🧛 | Man vampire | `vampire` | 🎨 |
-| 🧛‍♂️ | Vampire | `dracula` | 🎨 |
-| 🧛‍♀️ | Woman vampire | `ladyvampire` | 🎨 |
-| 🧜 | Merperson | `merperson` | 🎨 |
-| 🧜‍♂️ | Merman | `merman` | 🎨 |
-| 🧜‍♀️ | Mermaid | `mermaid` | 🎨 |
-| 🧝 | Elf | `elf` | 🎨 |
-| 🧝‍♂️ | Man elf | `manelf` | 🎨 |
-| 🧝‍♀️ | Woman elf | `woman_elf` | 🎨 |
-| 🧞 | Genie | `1f9de_genie` | |
-| 🧞‍♂️ | Man genie | `mangenie` | |
-| 🧞‍♀️ | Woman genie | `womangenie` | |
-| 🧟 | Person zombie | `personzombie` | |
-| 🧟‍♂️ | Man zombie | `manzombie` | |
-| 🧟‍♀️ | Zombie | `zombie` | |
-| 🧌 | Troll | `troll` | |
-| 💆 | Person getting massage | `1f486_facemassage` | 🎨 |
-| 💆‍♂️ | Man getting massage | `man_getting_face_massage` | 🎨 |
-| 💆‍♀️ | Woman getting massage | `face_massage` | 🎨 |
-| 💇 | Getting haircut | `person_getting_haircut` | 🎨 |
-| 💇‍♂️ | Man getting haircut | `man_getting_haircut` | 🎨 |
-| 💇‍♀️ | Woman getting haircut | `woman_getting_haircut` | 🎨 |
-| 🚶‍➡️ | Person walking facing right | `personwalkingfacingright2` | 🎨 |
-| 🚶‍♂️ | Man walking | `manwalking` | 🎨 |
-| 🚶‍♀️ | Woman walking | `woman_walking` | 🎨 |
-| 🧎‍➡️ | Person kneeling facing right | `personkneelingfacingright2` | 🎨 |
-| 🧎‍♂️ | Man kneeling | `man_kneeling` | 🎨 |
-| 🧎‍♀️ | Woman kneeling | `woman_kneeling` | 🎨 |
-| 🧍 | Standing | `nonbinarystanding` | 🎨 |
-| 🧍‍♂️ | Man standing | `manstanding` | 🎨 |
-| 🧍‍♀️ | Woman standing | `womanstanding` | 🎨 |
-| 🧑‍🦯 | Person with probing cane | `personwithprobingcane` | 🎨 |
-| 👨‍🦯 | Man probing cane | `man_probing_cane` | 🎨 |
-| 👩‍🦯 | Woman probing cane | `woman_probing_cane` | 🎨 |
-| 🧑‍🦼‍➡️ | Person in motorized wheelchair facing right | `personmotorwheelchairright2` | 🎨 |
-| 👨‍🦼 | Man in motorized wheelchair | `man_in_motorized_wheelchair` | 🎨 |
-| 👩‍🦼 | Woman in motorized wheelchair | `woman_in_motorized_wheelchair` | 🎨 |
-| 🧑‍🦽‍➡️ | Person in manual wheelchair facing right | `personmanualwheelchairright2` | 🎨 |
-| 👨‍🦽 | Man in manual wheelchair | `man_in_manual_wheelchair` | 🎨 |
-| 👩‍🦽 | Woman in manual wheelchair | `woman_in_manual_wheelchair` | 🎨 |
-| 🏃 | Runner | `runner` | 🎨 |
-| 🏃‍♂️ | Got to run | `gottarun` | 🎨 |
-| 🏃‍➡️ | Person running facing right | `personrunningfacingright2` | 🎨 |
-| 🏃‍♀️ | Running | `running` | 🎨 |
-| 💃 | Woman dancing | `1f483_womandancing` | 🎨 |
-| 🕺 | Dancing | `dance` | 🎨 |
-| 👵 | Dancing gran | `gran` | 🎨 |
-| 🕴️ | Man in suit levitating | `man_in_suit_levitating` | 🎨 |
-| 🧖 | Person steam room | `steam_room` | 🎨 |
-| 🧖‍♂️ | Man in steamy room | `man_steam_room` | 🎨 |
-| 🧖‍♀️ | Woman steam room | `woman_steam_room` | 🎨 |
-| 🧗 | Person climbing | `climber` | 🎨 |
-| 🧗‍♂️ | Man climbing | `man_climbing` | 🎨 |
-| 🧗‍♀️ | Woman climbing | `woman_climbing` | 🎨 |
-| 🤺 | Fencer | `womanfencer` | |
-| 🏇 | Horse racing | `horse_racing` | 🎨 |
-| ⛷️ | Skier | `skier` | 🎨 |
-| 🏂 | Snowboarder | `snowboarder` | 🎨 |
-| 🏌️ | Person golfing | `golfer` | 🎨 |
-| 🏌️‍♂️ | Man golfing | `mangolfing` | 🎨 |
-| 🏌️‍♀️ | Woman golfer | `woman_golfer` | 🎨 |
-| 🏄 | Person surfing | `1f3c4_personsurfing` | 🎨 |
-| 🏄‍♂️ | Man surfer | `mansurfer` | 🎨 |
-| 🏄‍♀️ | Woman surfer | `womansurfer` | 🎨 |
-| 🚣 | Person rowing boat | `personrowingboat` | 🎨 |
-| 🚣‍♂️ | Man rowing boat | `manrowingboat` | 🎨 |
-| 🚣‍♀️ | Woman rowing boat | `woman_rowing_boat` | 🎨 |
-| 🏊 | Person swimming | `personswimming` | 🎨 |
-| 🏊‍♂️ | Man swimming | `manswimming` | 🎨 |
-| 🏊‍♀️ | Woman swimmer | `woman_swimmer` | 🎨 |
-| ⛹️ | Person bouncing ball | `bouncing_ball` | 🎨 |
-| ⛹️‍♂️ | Man bouncing ball | `man_bouncing_ball` | 🎨 |
-| ⛹️‍♀️ | Woman bouncing ball | `woman_bouncing_ball` | 🎨 |
-| ⚽ | Man playing football | `bartlett` | 🎨 |
-| ⚽ | Woman playing football | `womanfootball` | 🎨 |
-| 🏋️ | Person lifting weights | `weight_lifter` | 🎨 |
-| 🏋️‍♂️ | Man lifting weights | `manliftingweights` | 🎨 |
-| 🏋️‍♀️ | Woman weight lifter | `woman_weight_lifter` | 🎨 |
-| 🚴 | Person biking | `1f6b4_personbiking` | 🎨 |
-| 🚴‍♂️ | Bicycle | `bike` | 🎨 |
-| 🚴‍♀️ | Woman riding bike | `womanridingbike` | 🎨 |
-| 🚵‍♂️ | Man mountain biking | `manmountainbiking` | 🎨 |
-| 🚵‍♀️ | Woman mountain biking | `woman_mountain_biking` | 🎨 |
-| 🤸 | Person cartwheeling | `1f938_personcartwheeling` | 🎨 |
-| 🤸‍♂️ | Man cartwheeling | `man_cartwheeling` | 🎨 |
-| 🤸‍♀️ | Woman cartwheeling | `woman_cartwheeling` | 🎨 |
-| 🤽‍♂️ | Man playing water polo | `manplayingwaterpolo` | 🎨 |
-| 🤽‍♀️ | Woman playing water polo | `woman_playing_water_polo` | 🎨 |
-| 🤾‍♂️ | Man playing handball | `manplayinghandball` | 🎨 |
-| 🤾‍♀️ | Woman playing handball | `woman_playing_handball` | 🎨 |
-| 🤹 | Person juggling | `personjuggling` | 🎨 |
-| 🤹‍♂️ | Man juggling | `manjuggling` | 🎨 |
-| 🤹‍♀️ | Woman juggling | `woman_juggling` | 🎨 |
-| 🧘 | Person in lotus position | `lotus_position` | 🎨 |
-| 🧘‍♂️ | Man in lotus position | `maninlotusposition` | 🎨 |
-| 🧘‍♀️ | Yoga | `yoga` | 🎨 |
-| 🛀 | Woman taking a bath | `womanbath` | 🎨 |
-| 🛌 | Person in bed | `person_in_bed` | 🎨 |
-| 🗣️ | Speaking head | `1f5e3_speakingheadinsilhouette` | |
-| 👤 | Bust in silhouette | `1f464_bustinsilhouette` | |
-| 👥 | Busts in silhouette | `1f465_bustsinsilhouette` | |
-| 🫂 | People hugging | `peoplehugging` | |
-| 👣 | Footprints | `1f463_footprints` | |
+| <span style="font-size:1.5em">👶</span> | Smile baby | `smilebaby` | 🎨 |
+| <span style="font-size:1.5em">🧒</span> | Child | `1f9d2_child` | 🎨 |
+| <span style="font-size:1.5em">👦</span> | Smile boy | `smileboy` | 🎨 |
+| <span style="font-size:1.5em">👧</span> | Smile girl | `smilegirl` | 🎨 |
+| <span style="font-size:1.5em">🧑</span> | Smile person | `person` | 🎨 |
+| <span style="font-size:1.5em">👱</span> | Person blond hair | `1f471_blondehairedperson` | 🎨 |
+| <span style="font-size:1.5em">👨</span> | Smile man | `smileman` | 🎨 |
+| <span style="font-size:1.5em">🧔</span> | Bearded person | `1f9d4_beardedperson` | 🎨 |
+| <span style="font-size:1.5em">🧔‍♂️</span> | Bearded man | `manbeard` | 🎨 |
+| <span style="font-size:1.5em">🧔‍♀️</span> | Bearded woman | `womanbeard` | 🎨 |
+| <span style="font-size:1.5em">👨‍🦰</span> | Man red hair | `1f468_200d_1f9b0_maleredhaired` | 🎨 |
+| <span style="font-size:1.5em">👨‍🦱</span> | Man curly hair | `1f468_200d_1f9b1_mancurlyhaired` | 🎨 |
+| <span style="font-size:1.5em">👨‍🦳</span> | Man white hair | `1f468_200d_1f9b3_malewhitehaired` | 🎨 |
+| <span style="font-size:1.5em">👨‍🦲</span> | Man bald | `1f468_200d_1f9b2_manbald` | 🎨 |
+| <span style="font-size:1.5em">👩</span> | Smile woman | `smilewoman` | 🎨 |
+| <span style="font-size:1.5em">👩‍🦰</span> | Woman red hair | `1f469_200d_1f9b0_femaleredhaired` | 🎨 |
+| <span style="font-size:1.5em">🧑‍🦰</span> | Red haired | `1f9b0_redhaired` | 🎨 |
+| <span style="font-size:1.5em">👩‍🦱</span> | Woman curly hair | `womancurlyhair` | 🎨 |
+| <span style="font-size:1.5em">🧑‍🦱</span> | Curly haired | `1f9b1_curlyhaired` | 🎨 |
+| <span style="font-size:1.5em">👩‍🦳</span> | Woman white hair | `womanwhitehair` | 🎨 |
+| <span style="font-size:1.5em">🧑‍🦳</span> | Person white hair | `personwhitehair` | 🎨 |
+| <span style="font-size:1.5em">🧑‍🦲</span> | Bald | `1f9b2_bald` | 🎨 |
+| <span style="font-size:1.5em">👩‍🦲</span> | Woman bald | `1f469_200d_1f9b2_femalebald` | 🎨 |
+| <span style="font-size:1.5em">👱‍♀️</span> | Woman blond hair | `womanblondhair` | 🎨 |
+| <span style="font-size:1.5em">👱‍♂️</span> | Man blond hair | `manblondhair` | 🎨 |
+| <span style="font-size:1.5em">🧓</span> | Older adult | `1f9d3_olderadult` | 🎨 |
+| <span style="font-size:1.5em">👴</span> | Old man | `1f474_olderman` | 🎨 |
+| <span style="font-size:1.5em">👵</span> | Old woman | `oldwoman` | 🎨 |
+| <span style="font-size:1.5em">🙍</span> | Person frowning | `frowning` | 🎨 |
+| <span style="font-size:1.5em">🙍‍♂️</span> | Man frowning | `man_frowning` | 🎨 |
+| <span style="font-size:1.5em">🙍‍♀️</span> | Woman frowning | `womanfrowning` | 🎨 |
+| <span style="font-size:1.5em">🙎</span> | Pouting face | `pouting_face` | 🎨 |
+| <span style="font-size:1.5em">🙎‍♂️</span> | Man pouting | `man_pouting` | 🎨 |
+| <span style="font-size:1.5em">🙎‍♀️</span> | Woman pouting | `womanpouting` | 🎨 |
+| <span style="font-size:1.5em">🙅</span> | Face with no good gesture | `1f645_facewithnogoodgesture` | 🎨 |
+| <span style="font-size:1.5em">🙅‍♂️</span> | Man gesturing no | `man_gesturing_not_ok` | 🎨 |
+| <span style="font-size:1.5em">🙅‍♀️</span> | Woman gesturing no | `womangesturingno` | 🎨 |
+| <span style="font-size:1.5em">🙆</span> | Person gesturing ok | `1f646_persongesturingok` | 🎨 |
+| <span style="font-size:1.5em">🙆‍♂️</span> | Man gesturing OK | `man_gesturing_ok` | 🎨 |
+| <span style="font-size:1.5em">🙆‍♀️</span> | Woman gesturing OK | `womangesturingok` | 🎨 |
+| <span style="font-size:1.5em">💁</span> | Person tipping hand | `person_tipping_hand` | 🎨 |
+| <span style="font-size:1.5em">💁‍♂️</span> | Man tipping hand | `man_tipping_hand` | 🎨 |
+| <span style="font-size:1.5em">💁‍♀️</span> | Woman tipping hand | `womantippinghand` | 🎨 |
+| <span style="font-size:1.5em">🙋</span> | Person raising hand | `happy_person_raising_one_hand` | 🎨 |
+| <span style="font-size:1.5em">🙋‍♂️</span> | Man raising hand | `man_raising_hand` | 🎨 |
+| <span style="font-size:1.5em">🙋‍♀️</span> | Woman raising hand | `womanraisinghand` | 🎨 |
+| <span style="font-size:1.5em">🧏</span> | Deaf person | `person_deaf` | 🎨 |
+| <span style="font-size:1.5em">🧏‍♂️</span> | Deaf Man | `man_deaf` | 🎨 |
+| <span style="font-size:1.5em">🧏‍♀️</span> | Woman deaf | `woman_deaf` | 🎨 |
+| <span style="font-size:1.5em">🙇</span> | Person bowing | `bowing` | 🎨 |
+| <span style="font-size:1.5em">🙇‍♂️</span> | Man bowing | `bow` | 🎨 |
+| <span style="font-size:1.5em">🙇‍♀️</span> | Woman bowing | `thanks` | 🎨 |
+| <span style="font-size:1.5em">🤦</span> | Person facepalming | `1f926_personfacepalming` | 🎨 |
+| <span style="font-size:1.5em">🤦‍♂️</span> | Man facepalming | `manfacepalming` | 🎨 |
+| <span style="font-size:1.5em">🤦‍♀️</span> | Woman facepalming | `womanfacepalming` | 🎨 |
+| <span style="font-size:1.5em">🤷</span> | Person shrugging | `shrug` | 🎨 |
+| <span style="font-size:1.5em">🤷‍♂️</span> | Man shrug | `manshrug` | 🎨 |
+| <span style="font-size:1.5em">🤷‍♀️</span> | Woman shrug | `womanshrug` | 🎨 |
+| <span style="font-size:1.5em">🧑‍⚕️</span> | Person health worker | `personhealthworker` | 🎨 |
+| <span style="font-size:1.5em">👨‍⚕️</span> | Man health worker | `manhealthworker` | 🎨 |
+| <span style="font-size:1.5em">👩‍⚕️</span> | Woman health worker | `womanhealthworker` | 🎨 |
+| <span style="font-size:1.5em">🧑‍🎓</span> | Student | `student` | 🎨 |
+| <span style="font-size:1.5em">👨‍🎓</span> | Man student | `manstudent` | 🎨 |
+| <span style="font-size:1.5em">👩‍🎓</span> | Woman student | `womanstudent` | 🎨 |
+| <span style="font-size:1.5em">🧑‍🏫</span> | Person teacher | `personteacher` | 🎨 |
+| <span style="font-size:1.5em">👨‍🏫</span> | Man teacher | `manteacher` | 🎨 |
+| <span style="font-size:1.5em">👩‍🏫</span> | Woman teacher | `womanteacher` | 🎨 |
+| <span style="font-size:1.5em">🧑‍⚖️</span> | Person judge | `personjudge` | 🎨 |
+| <span style="font-size:1.5em">👨‍⚖️</span> | Man judge | `manjudge` | 🎨 |
+| <span style="font-size:1.5em">👩‍⚖️</span> | Woman judge | `womanjudge` | 🎨 |
+| <span style="font-size:1.5em">🧑‍🌾</span> | Person farmer | `personfarmer` | 🎨 |
+| <span style="font-size:1.5em">👨‍🌾</span> | Man farmer | `manfarmer` | 🎨 |
+| <span style="font-size:1.5em">👩‍🌾</span> | Woman farmer | `womanfarmer` | 🎨 |
+| <span style="font-size:1.5em">🧑‍🍳</span> | Person chef | `personchef` | 🎨 |
+| <span style="font-size:1.5em">👨‍🍳</span> | Man chef | `manchef` | 🎨 |
+| <span style="font-size:1.5em">👩‍🍳</span> | Woman chef | `womanchef` | 🎨 |
+| <span style="font-size:1.5em">🧑‍🔧</span> | Person mechanic | `personmechanic` | 🎨 |
+| <span style="font-size:1.5em">👨‍🔧</span> | Man mechanic | `manmechanic` | 🎨 |
+| <span style="font-size:1.5em">👩‍🔧</span> | Woman mechanic | `womanmechanic` | 🎨 |
+| <span style="font-size:1.5em">🧑‍🏭</span> | Person welder | `personwelder` | 🎨 |
+| <span style="font-size:1.5em">👨‍🏭</span> | Man welder | `manwelder` | 🎨 |
+| <span style="font-size:1.5em">👩‍🏭</span> | Woman welder | `womanwelder` | 🎨 |
+| <span style="font-size:1.5em">🧑‍💼</span> | Person office worker | `personofficeworker` | 🎨 |
+| <span style="font-size:1.5em">👨‍💼</span> | Office worker male | `officeworkermale` | 🎨 |
+| <span style="font-size:1.5em">👩‍💼</span> | Office worker female | `officeworkerfemale` | 🎨 |
+| <span style="font-size:1.5em">🧑‍🔬</span> | Person scientist | `personscientist` | 🎨 |
+| <span style="font-size:1.5em">👨‍🔬</span> | Man scientist | `manscientist` | 🎨 |
+| <span style="font-size:1.5em">👩‍🔬</span> | Woman scientist | `womanscientist` | 🎨 |
+| <span style="font-size:1.5em">🧑‍💻</span> | Person writing code | `persondeveloper` | 🎨 |
+| <span style="font-size:1.5em">👨‍💻</span> | Man writing code | `mantechie` | 🎨 |
+| <span style="font-size:1.5em">👩‍💻</span> | Woman writing code | `womandeveloper` | 🎨 |
+| <span style="font-size:1.5em">🧑‍🎤</span> | Person singer | `personsinger` | 🎨 |
+| <span style="font-size:1.5em">👨‍🎤</span> | Man singer | `man_singer` | 🎨 |
+| <span style="font-size:1.5em">👩‍🎤</span> | Woman singer | `woman_singer` | 🎨 |
+| <span style="font-size:1.5em">🧑‍🎨</span> | Person artist | `personartist` | 🎨 |
+| <span style="font-size:1.5em">👨‍🎨</span> | Man artist | `manartist` | 🎨 |
+| <span style="font-size:1.5em">👩‍🎨</span> | Woman artist | `womanartist` | 🎨 |
+| <span style="font-size:1.5em">🧑‍✈️</span> | Person pilot | `personpilot` | 🎨 |
+| <span style="font-size:1.5em">👨‍✈️</span> | Man pilot | `manpilot` | 🎨 |
+| <span style="font-size:1.5em">👩‍✈️</span> | Woman pilot | `womanpilot` | 🎨 |
+| <span style="font-size:1.5em">🧑‍🚀</span> | Person astronaut | `personastronaut` | 🎨 |
+| <span style="font-size:1.5em">👨‍🚀</span> | Man astronaut | `manastronaut` | 🎨 |
+| <span style="font-size:1.5em">👩‍🚀</span> | Woman astronaut | `womanastronaut` | 🎨 |
+| <span style="font-size:1.5em">🧑‍🚒</span> | Person firefighter | `personfirefighter` | 🎨 |
+| <span style="font-size:1.5em">👨‍🚒</span> | Man firefighter | `manfirefighter` | 🎨 |
+| <span style="font-size:1.5em">👩‍🚒</span> | Woman firefighter | `womanfirefighter` | 🎨 |
+| <span style="font-size:1.5em">👮</span> | Police officer | `police_officer` | 🎨 |
+| <span style="font-size:1.5em">👮‍♂️</span> | Man police officer | `manpoliceofficer` | 🎨 |
+| <span style="font-size:1.5em">👮‍♀️</span> | Woman police officer | `womanpoliceofficer` | 🎨 |
+| <span style="font-size:1.5em">🕵️</span> | Detective | `detective` | 🎨 |
+| <span style="font-size:1.5em">🕵️‍♂️</span> | Man detective | `man_detective` | 🎨 |
+| <span style="font-size:1.5em">🕵️‍♀️</span> | Woman detective | `woman_detective` | 🎨 |
+| <span style="font-size:1.5em">💂</span> | Guard | `guard` | 🎨 |
+| <span style="font-size:1.5em">💂‍♂️</span> | Man guard | `man_guard` | 🎨 |
+| <span style="font-size:1.5em">💂‍♀️</span> | Woman guard | `woman_guard` | 🎨 |
+| <span style="font-size:1.5em">🥷</span> | Ninja | `ninja` | 🎨 |
+| <span style="font-size:1.5em">👷</span> | Construction worker | `construction_worker` | 🎨 |
+| <span style="font-size:1.5em">👷‍♂️</span> | Man construction worker | `man_construction_worker` | 🎨 |
+| <span style="font-size:1.5em">👷‍♀️</span> | Woman construction worker | `woman_construction_worker` | 🎨 |
+| <span style="font-size:1.5em">🫅</span> | Person with crown | `personcrown` | 🎨 |
+| <span style="font-size:1.5em">🤴</span> | Prince | `prince` | 🎨 |
+| <span style="font-size:1.5em">👸</span> | Princess | `princess` | 🎨 |
+| <span style="font-size:1.5em">👳</span> | Person wearing turban | `1f473_personwearingturban` | 🎨 |
+| <span style="font-size:1.5em">👳‍♂️</span> | Man wearing turban | `man_wearing_turban` | 🎨 |
+| <span style="font-size:1.5em">👳‍♀️</span> | Woman wearing turban | `womanwearingturban` | 🎨 |
+| <span style="font-size:1.5em">👲</span> | Man with chinese cap | `man_with_chinese_cap` | 🎨 |
+| <span style="font-size:1.5em">🧕</span> | Woman with head scarf | `woman_with_head_scarf` | 🎨 |
+| <span style="font-size:1.5em">🤵</span> | Person in tuxedo | `personintuxedo` | 🎨 |
+| <span style="font-size:1.5em">🤵‍♂️</span> |  Man in tuxedo | `manintuxedo` | 🎨 |
+| <span style="font-size:1.5em">🤵‍♀️</span> | Woman in tuxedo | `womanintuxedo` | 🎨 |
+| <span style="font-size:1.5em">👰</span> | Person with veil | `personwithveil` | 🎨 |
+| <span style="font-size:1.5em">👰‍♂️</span> | Man with veil | `manwithveil` | 🎨 |
+| <span style="font-size:1.5em">👰‍♀️</span> |  Woman with veil | `womanwithveil` | 🎨 |
+| <span style="font-size:1.5em">🤰</span> | Woman pregnant | `womanpregnant` | 🎨 |
+| <span style="font-size:1.5em">🫃</span> | Pregnant man | `pregnantman` | 🎨 |
+| <span style="font-size:1.5em">🫄</span> | Pregnant | `pregnant` | 🎨 |
+| <span style="font-size:1.5em">🤱</span> | Breastfeeding | `breastfeeding` | 🎨 |
+| <span style="font-size:1.5em">👨‍🍼</span> | Man bottle feeding | `manbottlefeeding` | 🎨 |
+| <span style="font-size:1.5em">🧑‍🍼</span> | Bottle feeding | `bottlefeeding` | 🎨 |
+| <span style="font-size:1.5em">👼</span> | Baby angel | `1f47c_babyangel` | 🎨 |
+| <span style="font-size:1.5em">🎅</span> | Santa | `santa` | 🎨 |
+| <span style="font-size:1.5em">🤶</span> | Mrs claus | `mother_christmas` | 🎨 |
+| <span style="font-size:1.5em">🧑‍🎄</span> | Mx Claus | `mxclaus` | 🎨 |
+| <span style="font-size:1.5em">🦸</span> | Person superhero | `personsuperhero` | 🎨 |
+| <span style="font-size:1.5em">🦸‍♂️</span> | Man superhero | `mansuperhero` | 🎨 |
+| <span style="font-size:1.5em">🦸‍♀️</span> | Woman superhero | `hero` | 🎨 |
+| <span style="font-size:1.5em">🦹</span> | Supervillain | `1f9b9_supervillain` | 🎨 |
+| <span style="font-size:1.5em">🦹‍♂️</span> | Man supervillain | `man_super_villain` | 🎨 |
+| <span style="font-size:1.5em">🦹‍♀️</span> | Woman supervillain | `woman_super_villain` | 🎨 |
+| <span style="font-size:1.5em">🧙‍♂️</span> | Mage | `wizard` | 🎨 |
+| <span style="font-size:1.5em">🧙‍♀️</span> | Woman mage | `womanmage` | 🎨 |
+| <span style="font-size:1.5em">🧚</span> | Fairy | `fairy` | 🎨 |
+| <span style="font-size:1.5em">🧚‍♂️</span> | Man fairy | `man_fairy` | 🎨 |
+| <span style="font-size:1.5em">🧚‍♀️</span> | Woman fairy | `woman_fairy` | 🎨 |
+| <span style="font-size:1.5em">🧛</span> | Man vampire | `vampire` | 🎨 |
+| <span style="font-size:1.5em">🧛‍♂️</span> | Vampire | `dracula` | 🎨 |
+| <span style="font-size:1.5em">🧛‍♀️</span> | Woman vampire | `ladyvampire` | 🎨 |
+| <span style="font-size:1.5em">🧜</span> | Merperson | `merperson` | 🎨 |
+| <span style="font-size:1.5em">🧜‍♂️</span> | Merman | `merman` | 🎨 |
+| <span style="font-size:1.5em">🧜‍♀️</span> | Mermaid | `mermaid` | 🎨 |
+| <span style="font-size:1.5em">🧝</span> | Elf | `elf` | 🎨 |
+| <span style="font-size:1.5em">🧝‍♂️</span> | Man elf | `manelf` | 🎨 |
+| <span style="font-size:1.5em">🧝‍♀️</span> | Woman elf | `woman_elf` | 🎨 |
+| <span style="font-size:1.5em">🧞</span> | Genie | `1f9de_genie` | |
+| <span style="font-size:1.5em">🧞‍♂️</span> | Man genie | `mangenie` | |
+| <span style="font-size:1.5em">🧞‍♀️</span> | Woman genie | `womangenie` | |
+| <span style="font-size:1.5em">🧟</span> | Person zombie | `personzombie` | |
+| <span style="font-size:1.5em">🧟‍♂️</span> | Man zombie | `manzombie` | |
+| <span style="font-size:1.5em">🧟‍♀️</span> | Zombie | `zombie` | |
+| <span style="font-size:1.5em">🧌</span> | Troll | `troll` | |
+| <span style="font-size:1.5em">💆</span> | Person getting massage | `1f486_facemassage` | 🎨 |
+| <span style="font-size:1.5em">💆‍♂️</span> | Man getting massage | `man_getting_face_massage` | 🎨 |
+| <span style="font-size:1.5em">💆‍♀️</span> | Woman getting massage | `face_massage` | 🎨 |
+| <span style="font-size:1.5em">💇</span> | Getting haircut | `person_getting_haircut` | 🎨 |
+| <span style="font-size:1.5em">💇‍♂️</span> | Man getting haircut | `man_getting_haircut` | 🎨 |
+| <span style="font-size:1.5em">💇‍♀️</span> | Woman getting haircut | `woman_getting_haircut` | 🎨 |
+| <span style="font-size:1.5em">🚶‍➡️</span> | Person walking facing right | `personwalkingfacingright2` | 🎨 |
+| <span style="font-size:1.5em">🚶‍♂️</span> | Man walking | `manwalking` | 🎨 |
+| <span style="font-size:1.5em">🚶‍♀️</span> | Woman walking | `woman_walking` | 🎨 |
+| <span style="font-size:1.5em">🧎‍➡️</span> | Person kneeling facing right | `personkneelingfacingright2` | 🎨 |
+| <span style="font-size:1.5em">🧎‍♂️</span> | Man kneeling | `man_kneeling` | 🎨 |
+| <span style="font-size:1.5em">🧎‍♀️</span> | Woman kneeling | `woman_kneeling` | 🎨 |
+| <span style="font-size:1.5em">🧍</span> | Standing | `nonbinarystanding` | 🎨 |
+| <span style="font-size:1.5em">🧍‍♂️</span> | Man standing | `manstanding` | 🎨 |
+| <span style="font-size:1.5em">🧍‍♀️</span> | Woman standing | `womanstanding` | 🎨 |
+| <span style="font-size:1.5em">🧑‍🦯</span> | Person with probing cane | `personwithprobingcane` | 🎨 |
+| <span style="font-size:1.5em">👨‍🦯</span> | Man probing cane | `man_probing_cane` | 🎨 |
+| <span style="font-size:1.5em">👩‍🦯</span> | Woman probing cane | `woman_probing_cane` | 🎨 |
+| <span style="font-size:1.5em">🧑‍🦼‍➡️</span> | Person in motorized wheelchair facing right | `personmotorwheelchairright2` | 🎨 |
+| <span style="font-size:1.5em">👨‍🦼</span> | Man in motorized wheelchair | `man_in_motorized_wheelchair` | 🎨 |
+| <span style="font-size:1.5em">👩‍🦼</span> | Woman in motorized wheelchair | `woman_in_motorized_wheelchair` | 🎨 |
+| <span style="font-size:1.5em">🧑‍🦽‍➡️</span> | Person in manual wheelchair facing right | `personmanualwheelchairright2` | 🎨 |
+| <span style="font-size:1.5em">👨‍🦽</span> | Man in manual wheelchair | `man_in_manual_wheelchair` | 🎨 |
+| <span style="font-size:1.5em">👩‍🦽</span> | Woman in manual wheelchair | `woman_in_manual_wheelchair` | 🎨 |
+| <span style="font-size:1.5em">🏃</span> | Runner | `runner` | 🎨 |
+| <span style="font-size:1.5em">🏃‍♂️</span> | Got to run | `gottarun` | 🎨 |
+| <span style="font-size:1.5em">🏃‍➡️</span> | Person running facing right | `personrunningfacingright2` | 🎨 |
+| <span style="font-size:1.5em">🏃‍♀️</span> | Running | `running` | 🎨 |
+| <span style="font-size:1.5em">💃</span> | Woman dancing | `1f483_womandancing` | 🎨 |
+| <span style="font-size:1.5em">🕺</span> | Dancing | `dance` | 🎨 |
+| <span style="font-size:1.5em">👵</span> | Dancing gran | `gran` | 🎨 |
+| <span style="font-size:1.5em">🕴️</span> | Man in suit levitating | `man_in_suit_levitating` | 🎨 |
+| <span style="font-size:1.5em">🧖</span> | Person steam room | `steam_room` | 🎨 |
+| <span style="font-size:1.5em">🧖‍♂️</span> | Man in steamy room | `man_steam_room` | 🎨 |
+| <span style="font-size:1.5em">🧖‍♀️</span> | Woman steam room | `woman_steam_room` | 🎨 |
+| <span style="font-size:1.5em">🧗</span> | Person climbing | `climber` | 🎨 |
+| <span style="font-size:1.5em">🧗‍♂️</span> | Man climbing | `man_climbing` | 🎨 |
+| <span style="font-size:1.5em">🧗‍♀️</span> | Woman climbing | `woman_climbing` | 🎨 |
+| <span style="font-size:1.5em">🤺</span> | Fencer | `womanfencer` | |
+| <span style="font-size:1.5em">🏇</span> | Horse racing | `horse_racing` | 🎨 |
+| <span style="font-size:1.5em">⛷️</span> | Skier | `skier` | 🎨 |
+| <span style="font-size:1.5em">🏂</span> | Snowboarder | `snowboarder` | 🎨 |
+| <span style="font-size:1.5em">🏌️</span> | Person golfing | `golfer` | 🎨 |
+| <span style="font-size:1.5em">🏌️‍♂️</span> | Man golfing | `mangolfing` | 🎨 |
+| <span style="font-size:1.5em">🏌️‍♀️</span> | Woman golfer | `woman_golfer` | 🎨 |
+| <span style="font-size:1.5em">🏄</span> | Person surfing | `1f3c4_personsurfing` | 🎨 |
+| <span style="font-size:1.5em">🏄‍♂️</span> | Man surfer | `mansurfer` | 🎨 |
+| <span style="font-size:1.5em">🏄‍♀️</span> | Woman surfer | `womansurfer` | 🎨 |
+| <span style="font-size:1.5em">🚣</span> | Person rowing boat | `personrowingboat` | 🎨 |
+| <span style="font-size:1.5em">🚣‍♂️</span> | Man rowing boat | `manrowingboat` | 🎨 |
+| <span style="font-size:1.5em">🚣‍♀️</span> | Woman rowing boat | `woman_rowing_boat` | 🎨 |
+| <span style="font-size:1.5em">🏊</span> | Person swimming | `personswimming` | 🎨 |
+| <span style="font-size:1.5em">🏊‍♂️</span> | Man swimming | `manswimming` | 🎨 |
+| <span style="font-size:1.5em">🏊‍♀️</span> | Woman swimmer | `woman_swimmer` | 🎨 |
+| <span style="font-size:1.5em">⛹️</span> | Person bouncing ball | `bouncing_ball` | 🎨 |
+| <span style="font-size:1.5em">⛹️‍♂️</span> | Man bouncing ball | `man_bouncing_ball` | 🎨 |
+| <span style="font-size:1.5em">⛹️‍♀️</span> | Woman bouncing ball | `woman_bouncing_ball` | 🎨 |
+| <span style="font-size:1.5em">⚽</span> | Man playing football | `bartlett` | 🎨 |
+| <span style="font-size:1.5em">⚽</span> | Woman playing football | `womanfootball` | 🎨 |
+| <span style="font-size:1.5em">🏋️</span> | Person lifting weights | `weight_lifter` | 🎨 |
+| <span style="font-size:1.5em">🏋️‍♂️</span> | Man lifting weights | `manliftingweights` | 🎨 |
+| <span style="font-size:1.5em">🏋️‍♀️</span> | Woman weight lifter | `woman_weight_lifter` | 🎨 |
+| <span style="font-size:1.5em">🚴</span> | Person biking | `1f6b4_personbiking` | 🎨 |
+| <span style="font-size:1.5em">🚴‍♂️</span> | Bicycle | `bike` | 🎨 |
+| <span style="font-size:1.5em">🚴‍♀️</span> | Woman riding bike | `womanridingbike` | 🎨 |
+| <span style="font-size:1.5em">🚵‍♂️</span> | Man mountain biking | `manmountainbiking` | 🎨 |
+| <span style="font-size:1.5em">🚵‍♀️</span> | Woman mountain biking | `woman_mountain_biking` | 🎨 |
+| <span style="font-size:1.5em">🤸</span> | Person cartwheeling | `1f938_personcartwheeling` | 🎨 |
+| <span style="font-size:1.5em">🤸‍♂️</span> | Man cartwheeling | `man_cartwheeling` | 🎨 |
+| <span style="font-size:1.5em">🤸‍♀️</span> | Woman cartwheeling | `woman_cartwheeling` | 🎨 |
+| <span style="font-size:1.5em">🤽‍♂️</span> | Man playing water polo | `manplayingwaterpolo` | 🎨 |
+| <span style="font-size:1.5em">🤽‍♀️</span> | Woman playing water polo | `woman_playing_water_polo` | 🎨 |
+| <span style="font-size:1.5em">🤾‍♂️</span> | Man playing handball | `manplayinghandball` | 🎨 |
+| <span style="font-size:1.5em">🤾‍♀️</span> | Woman playing handball | `woman_playing_handball` | 🎨 |
+| <span style="font-size:1.5em">🤹</span> | Person juggling | `personjuggling` | 🎨 |
+| <span style="font-size:1.5em">🤹‍♂️</span> | Man juggling | `manjuggling` | 🎨 |
+| <span style="font-size:1.5em">🤹‍♀️</span> | Woman juggling | `woman_juggling` | 🎨 |
+| <span style="font-size:1.5em">🧘</span> | Person in lotus position | `lotus_position` | 🎨 |
+| <span style="font-size:1.5em">🧘‍♂️</span> | Man in lotus position | `maninlotusposition` | 🎨 |
+| <span style="font-size:1.5em">🧘‍♀️</span> | Yoga | `yoga` | 🎨 |
+| <span style="font-size:1.5em">🛀</span> | Woman taking a bath | `womanbath` | 🎨 |
+| <span style="font-size:1.5em">🛌</span> | Person in bed | `person_in_bed` | 🎨 |
+| <span style="font-size:1.5em">🗣️</span> | Speaking head | `1f5e3_speakingheadinsilhouette` | |
+| <span style="font-size:1.5em">👤</span> | Bust in silhouette | `1f464_bustinsilhouette` | |
+| <span style="font-size:1.5em">👥</span> | Busts in silhouette | `1f465_bustsinsilhouette` | |
+| <span style="font-size:1.5em">🫂</span> | People hugging | `peoplehugging` | |
+| <span style="font-size:1.5em">👣</span> | Footprints | `1f463_footprints` | |
 
 ---
 
@@ -603,165 +603,165 @@ Reference reactions by their unique ID:
 
 | Emoji | Description | Reaction ID |
 |-------|-------------|-------------|
-| 🐵 | Smile monkey | `smilemonkey` |
-| 🐒 | Monkey | `monkey` |
-| 🦍 | Gorilla | `1f98d_gorilla` |
-| 🦧 | Orangutan | `orangutanscratching` |
-| 🐶 | Smile dog | `smiledog` |
-| 🐕 | Dog | `dog` |
-| 🦮 | Guidedog | `1f9ae_guidedog` |
-| 🐕‍🦺 | Service dog | `1f415_200d_1f9ba_servicedog` |
-| 🐩 | Poodle | `1f429_poodle` |
-| 🐺 | Wolf face | `1f43a_wolfface` |
-| 🦊 | Fox | `foxhug` |
-| 🦝 | Raccoon | `racoon` |
-| 😺 | Smile cat | `smilecat` |
-| 🐈 | Cat | `cat` |
-| 🐈‍⬛ | Black cat | `blackcat` |
-| 🦁 | Lion | `lion` |
-| 🐯 | Tiger face | `1f42f_tigerface` |
-| 🐅 | Tiger | `1f405_tiger` |
-| 🐆 | Leopard | `1f406_leopard` |
-| 🐴 | Horse face | `1f434_horseface` |
-| 🫎 | Moose | `moose` |
-| 🫏 | Donkey | `donkey` |
-| 🐎 | Horse | `1f40e_horse` |
-| 🦄 | Unicorn head | `unicornhead` |
-| 🦓 | Zebra | `1f993_zebraface` |
-| 🦌 | Reindeer | `reindeer` |
-| 🦬 | Bison | `bison` |
-| 🐮 | Cow face | `1f42e_cowface` |
-| 🐂 | Ox | `1f402_ox` |
-| 🐃 | Water buffalo | `1f403_waterbuffalo` |
-| 🐄 | Cow | `1f404_cow` |
-| 🐷 | Pig face | `1f437_pigface` |
-| 🐖 | Pig | `pig` |
-| 🐗 | Boar | `1f417_boar` |
-| 🐽 | Pig nose | `1f43d_pignose` |
-| 🐏 | Ram | `1f40f_ram` |
-| 🐑 | Spring lamb | `lamb` |
-| 🐐 | Goat | `1f410_goat` |
-| 🐪 | Camel | `1f42a_dromedarycamel` |
-| 🐫 | Two humped Camel | `1f42b_bactriancamel` |
-| 🦙 | Llama | `1f999_llama` |
-| 🦒 | Giraffe | `1f992_giraffeface` |
-| 🐘 | Elephant | `elephant` |
-| 🦣 | Mammoth | `mammoth` |
-| 🦏 | Rhinoceros | `1f98f_rhinoceros` |
-| 🦛 | Hippopotamus | `1f99b_hippopotamus` |
-| 🐭 | Mouse face | `1f42d_mouseface` |
-| 🐁 | Mouse | `1f401_mouse` |
-| 🐀 | Rat | `1f400_rat` |
-| 🐹 | Hamster Face | `1f439_hamsterface` |
-| 🐰 | Rabbit | `bunnyhug` |
-| 🐇 | Bunny | `bunny` |
-| 🐿️ | Chipmunk | `1f43f_chipmunk` |
-| 🦫 | Beaver | `beaver` |
-| 🦔 | Hedgehog | `hedgehoghug` |
-| 🦇 | Bat smile | `batsmile` |
-| 🐻 | Bear face | `1f43b_bearface` |
-| 🐻‍❄️ | Polar bear | `polarbear` |
-| 🐨 | Koala | `koala` |
-| 🐼 | Panda | `panda` |
-| 🦥 | Sloth | `sloth` |
-| 🦦 | Otter | `1f9a6_otter` |
-| 🦨 | Skunk | `1f9a8_skunk` |
-| 🦘 | Kangaroo | `1f998_kangaroo` |
-| 🦡 | Badger | `1f9a1_badger` |
-| 🐾 | Paw prints | `1f43e_pawprints` |
-| 🦃 | Turkey | `1f983_turkey` |
-| 🐔 | Chicken | `1f414_chicken` |
-| 🐓 | Rooster | `1f413_rooster` |
-| 🐣 | Hatching chick | `1f423_hatchingchick` |
-| 🐤 | Baby chick | `1f424_babychick` |
-| 🐥 | Front facing baby chick | `1f425_frontfacingbabychick` |
-| 🐦 | Bird | `1f426_bird` |
-| 🐧 | Dancing penguin | `penguin` |
-| 🕊️ | Dove | `1f54a_doveofpeace` |
-| 🦅 | Eagle | `1f985_eagle` |
-| 🐦‍🔥 | Phoenix | `phoenix3` |
-| 🦆 | Duck | `1f986_duck` |
-| 🦢 | Swan | `1f9a2_swan` |
-| 🦉 | Owl | `1f989_owl` |
-| 🦤 | Dodo | `dodo` |
-| 🪶 | Feather | `feather` |
-| 🦩 | Flamingo | `1f9a9_flamingo` |
-| 🦚 | Peacock | `1f99a_peacock` |
-| 🦜 | Parrot | `1f99c_parrot` |
-| 🪽 | Left wing | `wingleft` |
-| 🪽 | Wing | `wing` |
-| 🐦‍⬛ | Black bird | `birdblack` |
-| 🪿 | Goose | `goose` |
-| 🐸 | Frog face | `1f438_frogface` |
-| 🐊 | Crocodile | `1f40a_crocodile` |
-| 🐢 | Tortoise | `tortoise` |
-| 🦎 | Lizard | `lizard` |
-| 🐍 | Snake | `snake` |
-| 🐲 | Dragon face | `1f432_dragonface` |
-| 🐉 | Dragon | `1f409_dragon` |
-| 🦕 | Dinosaur | `1f995_sauropod` |
-| 🦖 | Trex | `trex` |
-| 🐳 | Spouting Whale | `spoutingwhale` |
-| 🐋 | Whale | `whale` |
-| 🐬 | Dolphin | `dolphin` |
-| 🦭 | Seal | `seal` |
-| 🐟 | Fish | `fish` |
-| 🐠 | Tropical fish | `tropicalfish` |
-| 🐡 | Blowfish | `1f421_blowfish` |
-| 🦈 | Shark | `1f988_shark` |
-| 🐙 | Octopus | `octopus` |
-| 🐚 | Spiralshell | `1f41a_spiralshell` |
-| 🪸 | Coral | `coral` |
-| 🪼 | Jellyfish | `jellyfish` |
-| 🐌 | Snail | `snail` |
-| 🦋 | Butterfly | `butterfly` |
-| 🐛 | Bug | `bug` |
-| 🐜 | Ant | `1f41c_ant` |
-| 🐝 | Bee | `bee` |
-| 🪲 | Beetle | `beetle` |
-| 🐞 | Ladybug | `1f41e_ladybeetle` |
-| 🦗 | Cricket | `cricket` |
-| 🪳 | Cockroach | `cockroach` |
-| 🕷️ | Spider | `spider` |
-| 🕸️ | Web | `1f578_spiderweb` |
-| 🦂 | Scorpion | `1f982_scorpion` |
-| 🦟 | Mosquito | `1f99f_mosquito` |
-| 🪰 | Fly | `fly` |
-| 🪱 | Worm | `worm` |
-| 🦠 | Microbe | `1f9a0_microbe` |
-| 🐔 | Dancing hen | `hendance` |
-| 🐧 | Penguin kiss | `penguinkiss` |
-| 🙂 | Stingray | `stingray` |
-| 🐺 | Werewolf howl | `werewolfhowl` |
-| 🐵 | Snow angel | `snowangel` |
-| 💐 | Bouquet | `1f490_bouquet` |
-| 🌸 | Cherry blossom | `cherryblossom` |
-| 💮 | White flower | `1f4ae_whiteflower` |
-| 🪷 | Lotus | `lotus` |
-| 🏵️ | Rosette | `1f3f5_rosette` |
-| 🌹 | Rose | `rose` |
-| 🥀 | Wilted flower | `wiltedflower` |
-| 🌺 | Hibiscus | `1f33a_hibiscus` |
-| 🌻 | Sunflower | `sunflower` |
-| 🌼 | Flower | `flower` |
-| 🌷 | Tulip | `tulip` |
-| 🪻 | Hyacinth | `hyacinth` |
-| 🌱 | Seedling | `seedling` |
-| 🪴 | Potted Plant | `pottedplant` |
-| 🌲 | Evergreen tree | `evergreentree` |
-| 🌳 | Deciduous tree | `deciduoustree` |
-| 🌴 | Palm tree | `palmtree` |
-| 🌵 | Cactus | `cactus` |
-| 🌾 | Sheaf of rice | `1f33e_earofrice` |
-| 🌿 | Herb | `1f33f_herb` |
-| ☘️ | Shamrock | `2618_shamrock` |
-| 🍀 | Good luck | `goodluck` |
-| 🍁 | Maple leaf | `1f341_mapleleaf` |
-| 🍂 | Fallen leaf | `1f342_fallenleaf` |
-| 🍃 | Falling leaf | `fallingleaf` |
-| 🪹 | Empty nest | `nest` |
-| 🪺 | Nest with eggs | `nestwitheggs` |
-| 🍄 | Mushroom | `1f344_mushroom` |
+| <span style="font-size:1.5em">🐵</span> | Smile monkey | `smilemonkey` |
+| <span style="font-size:1.5em">🐒</span> | Monkey | `monkey` |
+| <span style="font-size:1.5em">🦍</span> | Gorilla | `1f98d_gorilla` |
+| <span style="font-size:1.5em">🦧</span> | Orangutan | `orangutanscratching` |
+| <span style="font-size:1.5em">🐶</span> | Smile dog | `smiledog` |
+| <span style="font-size:1.5em">🐕</span> | Dog | `dog` |
+| <span style="font-size:1.5em">🦮</span> | Guidedog | `1f9ae_guidedog` |
+| <span style="font-size:1.5em">🐕‍🦺</span> | Service dog | `1f415_200d_1f9ba_servicedog` |
+| <span style="font-size:1.5em">🐩</span> | Poodle | `1f429_poodle` |
+| <span style="font-size:1.5em">🐺</span> | Wolf face | `1f43a_wolfface` |
+| <span style="font-size:1.5em">🦊</span> | Fox | `foxhug` |
+| <span style="font-size:1.5em">🦝</span> | Raccoon | `racoon` |
+| <span style="font-size:1.5em">😺</span> | Smile cat | `smilecat` |
+| <span style="font-size:1.5em">🐈</span> | Cat | `cat` |
+| <span style="font-size:1.5em">🐈‍⬛</span> | Black cat | `blackcat` |
+| <span style="font-size:1.5em">🦁</span> | Lion | `lion` |
+| <span style="font-size:1.5em">🐯</span> | Tiger face | `1f42f_tigerface` |
+| <span style="font-size:1.5em">🐅</span> | Tiger | `1f405_tiger` |
+| <span style="font-size:1.5em">🐆</span> | Leopard | `1f406_leopard` |
+| <span style="font-size:1.5em">🐴</span> | Horse face | `1f434_horseface` |
+| <span style="font-size:1.5em">🫎</span> | Moose | `moose` |
+| <span style="font-size:1.5em">🫏</span> | Donkey | `donkey` |
+| <span style="font-size:1.5em">🐎</span> | Horse | `1f40e_horse` |
+| <span style="font-size:1.5em">🦄</span> | Unicorn head | `unicornhead` |
+| <span style="font-size:1.5em">🦓</span> | Zebra | `1f993_zebraface` |
+| <span style="font-size:1.5em">🦌</span> | Reindeer | `reindeer` |
+| <span style="font-size:1.5em">🦬</span> | Bison | `bison` |
+| <span style="font-size:1.5em">🐮</span> | Cow face | `1f42e_cowface` |
+| <span style="font-size:1.5em">🐂</span> | Ox | `1f402_ox` |
+| <span style="font-size:1.5em">🐃</span> | Water buffalo | `1f403_waterbuffalo` |
+| <span style="font-size:1.5em">🐄</span> | Cow | `1f404_cow` |
+| <span style="font-size:1.5em">🐷</span> | Pig face | `1f437_pigface` |
+| <span style="font-size:1.5em">🐖</span> | Pig | `pig` |
+| <span style="font-size:1.5em">🐗</span> | Boar | `1f417_boar` |
+| <span style="font-size:1.5em">🐽</span> | Pig nose | `1f43d_pignose` |
+| <span style="font-size:1.5em">🐏</span> | Ram | `1f40f_ram` |
+| <span style="font-size:1.5em">🐑</span> | Spring lamb | `lamb` |
+| <span style="font-size:1.5em">🐐</span> | Goat | `1f410_goat` |
+| <span style="font-size:1.5em">🐪</span> | Camel | `1f42a_dromedarycamel` |
+| <span style="font-size:1.5em">🐫</span> | Two humped Camel | `1f42b_bactriancamel` |
+| <span style="font-size:1.5em">🦙</span> | Llama | `1f999_llama` |
+| <span style="font-size:1.5em">🦒</span> | Giraffe | `1f992_giraffeface` |
+| <span style="font-size:1.5em">🐘</span> | Elephant | `elephant` |
+| <span style="font-size:1.5em">🦣</span> | Mammoth | `mammoth` |
+| <span style="font-size:1.5em">🦏</span> | Rhinoceros | `1f98f_rhinoceros` |
+| <span style="font-size:1.5em">🦛</span> | Hippopotamus | `1f99b_hippopotamus` |
+| <span style="font-size:1.5em">🐭</span> | Mouse face | `1f42d_mouseface` |
+| <span style="font-size:1.5em">🐁</span> | Mouse | `1f401_mouse` |
+| <span style="font-size:1.5em">🐀</span> | Rat | `1f400_rat` |
+| <span style="font-size:1.5em">🐹</span> | Hamster Face | `1f439_hamsterface` |
+| <span style="font-size:1.5em">🐰</span> | Rabbit | `bunnyhug` |
+| <span style="font-size:1.5em">🐇</span> | Bunny | `bunny` |
+| <span style="font-size:1.5em">🐿️</span> | Chipmunk | `1f43f_chipmunk` |
+| <span style="font-size:1.5em">🦫</span> | Beaver | `beaver` |
+| <span style="font-size:1.5em">🦔</span> | Hedgehog | `hedgehoghug` |
+| <span style="font-size:1.5em">🦇</span> | Bat smile | `batsmile` |
+| <span style="font-size:1.5em">🐻</span> | Bear face | `1f43b_bearface` |
+| <span style="font-size:1.5em">🐻‍❄️</span> | Polar bear | `polarbear` |
+| <span style="font-size:1.5em">🐨</span> | Koala | `koala` |
+| <span style="font-size:1.5em">🐼</span> | Panda | `panda` |
+| <span style="font-size:1.5em">🦥</span> | Sloth | `sloth` |
+| <span style="font-size:1.5em">🦦</span> | Otter | `1f9a6_otter` |
+| <span style="font-size:1.5em">🦨</span> | Skunk | `1f9a8_skunk` |
+| <span style="font-size:1.5em">🦘</span> | Kangaroo | `1f998_kangaroo` |
+| <span style="font-size:1.5em">🦡</span> | Badger | `1f9a1_badger` |
+| <span style="font-size:1.5em">🐾</span> | Paw prints | `1f43e_pawprints` |
+| <span style="font-size:1.5em">🦃</span> | Turkey | `1f983_turkey` |
+| <span style="font-size:1.5em">🐔</span> | Chicken | `1f414_chicken` |
+| <span style="font-size:1.5em">🐓</span> | Rooster | `1f413_rooster` |
+| <span style="font-size:1.5em">🐣</span> | Hatching chick | `1f423_hatchingchick` |
+| <span style="font-size:1.5em">🐤</span> | Baby chick | `1f424_babychick` |
+| <span style="font-size:1.5em">🐥</span> | Front facing baby chick | `1f425_frontfacingbabychick` |
+| <span style="font-size:1.5em">🐦</span> | Bird | `1f426_bird` |
+| <span style="font-size:1.5em">🐧</span> | Dancing penguin | `penguin` |
+| <span style="font-size:1.5em">🕊️</span> | Dove | `1f54a_doveofpeace` |
+| <span style="font-size:1.5em">🦅</span> | Eagle | `1f985_eagle` |
+| <span style="font-size:1.5em">🐦‍🔥</span> | Phoenix | `phoenix3` |
+| <span style="font-size:1.5em">🦆</span> | Duck | `1f986_duck` |
+| <span style="font-size:1.5em">🦢</span> | Swan | `1f9a2_swan` |
+| <span style="font-size:1.5em">🦉</span> | Owl | `1f989_owl` |
+| <span style="font-size:1.5em">🦤</span> | Dodo | `dodo` |
+| <span style="font-size:1.5em">🪶</span> | Feather | `feather` |
+| <span style="font-size:1.5em">🦩</span> | Flamingo | `1f9a9_flamingo` |
+| <span style="font-size:1.5em">🦚</span> | Peacock | `1f99a_peacock` |
+| <span style="font-size:1.5em">🦜</span> | Parrot | `1f99c_parrot` |
+| <span style="font-size:1.5em">🪽</span> | Left wing | `wingleft` |
+| <span style="font-size:1.5em">🪽</span> | Wing | `wing` |
+| <span style="font-size:1.5em">🐦‍⬛</span> | Black bird | `birdblack` |
+| <span style="font-size:1.5em">🪿</span> | Goose | `goose` |
+| <span style="font-size:1.5em">🐸</span> | Frog face | `1f438_frogface` |
+| <span style="font-size:1.5em">🐊</span> | Crocodile | `1f40a_crocodile` |
+| <span style="font-size:1.5em">🐢</span> | Tortoise | `tortoise` |
+| <span style="font-size:1.5em">🦎</span> | Lizard | `lizard` |
+| <span style="font-size:1.5em">🐍</span> | Snake | `snake` |
+| <span style="font-size:1.5em">🐲</span> | Dragon face | `1f432_dragonface` |
+| <span style="font-size:1.5em">🐉</span> | Dragon | `1f409_dragon` |
+| <span style="font-size:1.5em">🦕</span> | Dinosaur | `1f995_sauropod` |
+| <span style="font-size:1.5em">🦖</span> | Trex | `trex` |
+| <span style="font-size:1.5em">🐳</span> | Spouting Whale | `spoutingwhale` |
+| <span style="font-size:1.5em">🐋</span> | Whale | `whale` |
+| <span style="font-size:1.5em">🐬</span> | Dolphin | `dolphin` |
+| <span style="font-size:1.5em">🦭</span> | Seal | `seal` |
+| <span style="font-size:1.5em">🐟</span> | Fish | `fish` |
+| <span style="font-size:1.5em">🐠</span> | Tropical fish | `tropicalfish` |
+| <span style="font-size:1.5em">🐡</span> | Blowfish | `1f421_blowfish` |
+| <span style="font-size:1.5em">🦈</span> | Shark | `1f988_shark` |
+| <span style="font-size:1.5em">🐙</span> | Octopus | `octopus` |
+| <span style="font-size:1.5em">🐚</span> | Spiralshell | `1f41a_spiralshell` |
+| <span style="font-size:1.5em">🪸</span> | Coral | `coral` |
+| <span style="font-size:1.5em">🪼</span> | Jellyfish | `jellyfish` |
+| <span style="font-size:1.5em">🐌</span> | Snail | `snail` |
+| <span style="font-size:1.5em">🦋</span> | Butterfly | `butterfly` |
+| <span style="font-size:1.5em">🐛</span> | Bug | `bug` |
+| <span style="font-size:1.5em">🐜</span> | Ant | `1f41c_ant` |
+| <span style="font-size:1.5em">🐝</span> | Bee | `bee` |
+| <span style="font-size:1.5em">🪲</span> | Beetle | `beetle` |
+| <span style="font-size:1.5em">🐞</span> | Ladybug | `1f41e_ladybeetle` |
+| <span style="font-size:1.5em">🦗</span> | Cricket | `cricket` |
+| <span style="font-size:1.5em">🪳</span> | Cockroach | `cockroach` |
+| <span style="font-size:1.5em">🕷️</span> | Spider | `spider` |
+| <span style="font-size:1.5em">🕸️</span> | Web | `1f578_spiderweb` |
+| <span style="font-size:1.5em">🦂</span> | Scorpion | `1f982_scorpion` |
+| <span style="font-size:1.5em">🦟</span> | Mosquito | `1f99f_mosquito` |
+| <span style="font-size:1.5em">🪰</span> | Fly | `fly` |
+| <span style="font-size:1.5em">🪱</span> | Worm | `worm` |
+| <span style="font-size:1.5em">🦠</span> | Microbe | `1f9a0_microbe` |
+| <span style="font-size:1.5em">🐔</span> | Dancing hen | `hendance` |
+| <span style="font-size:1.5em">🐧</span> | Penguin kiss | `penguinkiss` |
+| <span style="font-size:1.5em">🙂</span> | Stingray | `stingray` |
+| <span style="font-size:1.5em">🐺</span> | Werewolf howl | `werewolfhowl` |
+| <span style="font-size:1.5em">🐵</span> | Snow angel | `snowangel` |
+| <span style="font-size:1.5em">💐</span> | Bouquet | `1f490_bouquet` |
+| <span style="font-size:1.5em">🌸</span> | Cherry blossom | `cherryblossom` |
+| <span style="font-size:1.5em">💮</span> | White flower | `1f4ae_whiteflower` |
+| <span style="font-size:1.5em">🪷</span> | Lotus | `lotus` |
+| <span style="font-size:1.5em">🏵️</span> | Rosette | `1f3f5_rosette` |
+| <span style="font-size:1.5em">🌹</span> | Rose | `rose` |
+| <span style="font-size:1.5em">🥀</span> | Wilted flower | `wiltedflower` |
+| <span style="font-size:1.5em">🌺</span> | Hibiscus | `1f33a_hibiscus` |
+| <span style="font-size:1.5em">🌻</span> | Sunflower | `sunflower` |
+| <span style="font-size:1.5em">🌼</span> | Flower | `flower` |
+| <span style="font-size:1.5em">🌷</span> | Tulip | `tulip` |
+| <span style="font-size:1.5em">🪻</span> | Hyacinth | `hyacinth` |
+| <span style="font-size:1.5em">🌱</span> | Seedling | `seedling` |
+| <span style="font-size:1.5em">🪴</span> | Potted Plant | `pottedplant` |
+| <span style="font-size:1.5em">🌲</span> | Evergreen tree | `evergreentree` |
+| <span style="font-size:1.5em">🌳</span> | Deciduous tree | `deciduoustree` |
+| <span style="font-size:1.5em">🌴</span> | Palm tree | `palmtree` |
+| <span style="font-size:1.5em">🌵</span> | Cactus | `cactus` |
+| <span style="font-size:1.5em">🌾</span> | Sheaf of rice | `1f33e_earofrice` |
+| <span style="font-size:1.5em">🌿</span> | Herb | `1f33f_herb` |
+| <span style="font-size:1.5em">☘️</span> | Shamrock | `2618_shamrock` |
+| <span style="font-size:1.5em">🍀</span> | Good luck | `goodluck` |
+| <span style="font-size:1.5em">🍁</span> | Maple leaf | `1f341_mapleleaf` |
+| <span style="font-size:1.5em">🍂</span> | Fallen leaf | `1f342_fallenleaf` |
+| <span style="font-size:1.5em">🍃</span> | Falling leaf | `fallingleaf` |
+| <span style="font-size:1.5em">🪹</span> | Empty nest | `nest` |
+| <span style="font-size:1.5em">🪺</span> | Nest with eggs | `nestwitheggs` |
+| <span style="font-size:1.5em">🍄</span> | Mushroom | `1f344_mushroom` |
 
 ---
 
@@ -769,143 +769,143 @@ Reference reactions by their unique ID:
 
 | Emoji | Description | Reaction ID |
 |-------|-------------|-------------|
-| 🍇 | Grapes | `grapes` |
-| 🍈 | Melon | `1f348_melon` |
-| 🍉 | Watermelon | `watermelon` |
-| 🍊 | Orange | `orange` |
-| 🍋 | Lemon | `lemon` |
-| 🍋‍🟩 | Lime | `lime4` |
-| 🍌 | Banana | `banana` |
-| 🍍 | Pineapple | `pineapple` |
-| 🥭 | Mango | `1f96d_mango` |
-| 🍎 | Apple | `apple` |
-| 🍏 | Green apple | `1f34f_greenapple` |
-| 🍐 | Pear | `1f350_pear` |
-| 🍑 | Peach | `peach` |
-| 🍒 | Cherries | `cherries` |
-| 🍓 | Strawberry | `strawberry` |
-| 🫐 | Blueberries | `blueberries` |
-| 🥝 | Kiwi fruit | `1f95d_kiwifruit` |
-| 🍅 | Tomato | `1f345_tomato` |
-| 🫒 | Olive | `olive` |
-| 🥥 | Coconut | `1f965_coconut` |
-| 🍆 | Eggplant | `aubergine` |
-| 🥔 | Potato | `1f954_potato` |
-| 🍄‍🟫 | Brown mushroom | `brownmushroom4` |
-| 🥕 | Carrot | `1f955_carrot` |
-| 🌽 | Corn | `1f33d_earofmaize` |
-| 🌶️ | Chili pepper | `1f336_hotpepper` |
-| 🫑 | Bell Pepper | `bellpepper` |
-| 🥒 | Cucumber | `1f952_cucumber` |
-| 🥬 | Lettuce | `1f96c_leafygreen` |
-| 🥦 | Broccoli | `1f966_broccoli` |
-| 🧄 | Garlic | `1f9c4_garlic` |
-| 🧅 | Onion | `1f9c5_onion` |
-| 🥜 | Peanuts | `1f95c_peanuts` |
-| 🫘 | Beans | `beans` |
-| 🌰 | Chestnut | `1f330_chestnut` |
-| 🫚 | ginger | `ginger` |
-| 🫛 | Pea pod | `peapod` |
-| 🍞 | Bread | `1f35e_bread` |
-| 🥐 | Croissant | `croissant` |
-| 🥖 | Baguette | `1f956_baguettebread` |
-| 🫓 | Flat Bread | `flatbread` |
-| 🥨 | Pretzel | `1f968_pretzel` |
-| 🥯 | Bagel | `1f96f_bagel` |
-| 🥞 | Pancake | `1f95e_pancake` |
-| 🧇 | Waffle | `1f9c7_waffle` |
-| 🧀 | Cheese | `cheese` |
-| 🍖 | Meat on bone | `1f356_meatonbone` |
-| 🍗 | Chicken leg | `chickenleg` |
-| 🥩 | Steak | `1f969_cutofmeat` |
-| 🥓 | Bacon | `1f953_bacon` |
-| 🍔 | Burger | `burger` |
-| 🍟 | Fries | `fries` |
-| 🍕 | Pizza slice | `pizzaslice` |
-| 🌭 | Hot dog | `1f32d_hotdog` |
-| 🥪 | Sandwich | `1f96a_sandwich` |
-| 🌮 | Taco | `1f32e_taco` |
-| 🌯 | Burrito | `1f32f_burrito` |
-| 🫔 | Tamale | `tamale` |
-| 🥙 | Stuffed flatbread | `1f959_stuffedflatbread` |
-| 🧆 | Falafel | `1f9c6_falafel` |
-| 🥚 | Egg | `1f95a_egg` |
-| 🍳 | Cooking | `1f373_cooking` |
-| 🥘 | Paella | `1f958_shallowpanoffood` |
-| 🍲 | Stew | `1f372_potoffood` |
-| 🫕 | Fondue | `fondue` |
-| 🥣 | Bowl with spoon | `1f963_bowlwithspoon` |
-| 🥗 | Salad | `1f957_greensalad` |
-| 🍿 | Popcorn | `1f37f_popcorn` |
-| 🧈 | Butter | `1f9c8_butter` |
-| 🧂 | Salt | `1f9c2_salt` |
-| 🥫 | Tin can | `1f96b_cannedfood` |
-| 🍱 | Bento box | `1f371_bentobox` |
-| 🍘 | Rice cracker | `1f358_ricecracker` |
-| 🍙 | Rice ball | `1f359_riceball` |
-| 🍚 | Rice | `1f35a_cookedrice` |
-| 🍛 | Curry | `1f35b_curryandrice` |
-| 🍜 | Noodles | `noodles` |
-| 🍝 | Spaghetti | `1f35d_spaghetti` |
-| 🍠 | Sweet potato | `1f360_roastedsweetpotato` |
-| 🍢 | Oden | `1f362_oden` |
-| 🍣 | Sushi | `1f363_sushi` |
-| 🍤 | Fried shrimp | `1f364_friedshrimp` |
-| 🍥 | Fishcake | `1f365_fishcakewithswirldesign` |
-| 🥮 | Moon cake | `1f96e_mooncake` |
-| 🍡 | Dango | `1f361_dango` |
-| 🥟 | Dumpling | `1f95f_dumpling` |
-| 🥠 | Fortune cookie | `1f960_fortunecookie` |
-| 🥡 | Takeout box | `1f961_takeoutbox` |
-| 🦀 | Crab | `1f980_crab` |
-| 🦞 | Lobster | `1f99e_lobster` |
-| 🦐 | Shrimp | `1f990_shrimp` |
-| 🦑 | Squid | `1f991_squid` |
-| 🦪 | Oyster | `1f9aa_oyster` |
-| 🍦 | Soft ice cream | `1f366_softicecream` |
-| 🍧 | Shaved ice | `1f367_shavedice` |
-| 🍨 | Ice cream | `1f368_icecream` |
-| 🍩 | Doughnut | `1f369_doughnut` |
-| 🍪 | Cookies | `cookies` |
-| 🎂 | Cake | `cake` |
-| 🍰 | Cake slice | `cakeslice` |
-| 🧁 | Cupcake | `cupcake` |
-| 🥧 | Pie | `pie` |
-| 🍫 | Chocolate | `1f36b_chocolatebar` |
-| 🍬 | Candy | `1f36c_candy` |
-| 🍭 | Lollipop | `1f36d_lollipop` |
-| 🍮 | Custard | `1f36e_custard` |
-| 🍯 | Honey | `1f36f_honeypot` |
-| 🍼 | Baby bottle | `1f37c_babybottle` |
-| 🥛 | Milk | `1f95b_milkglass` |
-| ☕ | Coffee | `coffee` |
-| 🫖 | Teapot | `teapot` |
-| 🍵 | Tea | `chai` |
-| 🍶 | Sake | `1f376_sakebottleandcup` |
-| 🍾 | Champagne | `champagne` |
-| 🍷 | Red wine | `redwine` |
-| 🍸 | Drink | `drink` |
-| 🍹 | Tropical drink | `1f379_tropicaldrink` |
-| 🍺 | Beer | `beer` |
-| 🍻 | Beer mugs | `1f37b_clinkingbeermugs` |
-| 🥂 | Cheers! | `cheers` |
-| 🥃 | Tumbler glass | `1f943_tumblerglass` |
-| 🫗 | Pouring liquid | `pour` |
-| 🥤 | Cup with straw | `1f964_cupwithstraw` |
-| 🧋 | Bubble Tea | `bubbletea` |
-| 🧃 | Juice box | `1f9c3_beveragebox` |
-| 🧉 | Yerba mate | `1f9c9_mate` |
-| 🧊 | Ice cube | `1f9ca_icecube` |
-| 🥢 | Chopsticks | `1f962_chopsticks` |
-| 🍽️ | Dinner | `1f37d_forkandknifewithplate` |
-| 🍴 | Cutlery | `1f374_forkandknife` |
-| 🥄 | Spoon | `1f944_spoon` |
-| 🔪 | Kitchen knife | `1f52a_hocho` |
-| 🏺 | Amphora | `1f3fa_amphora` |
-| 🫙 | Jar | `jar` |
-| 🥑 | Avocado love | `avocadolove` |
-| 🦃 | Headless turkey | `turkey` |
-| (oreo) | OREO | `oreo` |
+| <span style="font-size:1.5em">🍇</span> | Grapes | `grapes` |
+| <span style="font-size:1.5em">🍈</span> | Melon | `1f348_melon` |
+| <span style="font-size:1.5em">🍉</span> | Watermelon | `watermelon` |
+| <span style="font-size:1.5em">🍊</span> | Orange | `orange` |
+| <span style="font-size:1.5em">🍋</span> | Lemon | `lemon` |
+| <span style="font-size:1.5em">🍋‍🟩</span> | Lime | `lime4` |
+| <span style="font-size:1.5em">🍌</span> | Banana | `banana` |
+| <span style="font-size:1.5em">🍍</span> | Pineapple | `pineapple` |
+| <span style="font-size:1.5em">🥭</span> | Mango | `1f96d_mango` |
+| <span style="font-size:1.5em">🍎</span> | Apple | `apple` |
+| <span style="font-size:1.5em">🍏</span> | Green apple | `1f34f_greenapple` |
+| <span style="font-size:1.5em">🍐</span> | Pear | `1f350_pear` |
+| <span style="font-size:1.5em">🍑</span> | Peach | `peach` |
+| <span style="font-size:1.5em">🍒</span> | Cherries | `cherries` |
+| <span style="font-size:1.5em">🍓</span> | Strawberry | `strawberry` |
+| <span style="font-size:1.5em">🫐</span> | Blueberries | `blueberries` |
+| <span style="font-size:1.5em">🥝</span> | Kiwi fruit | `1f95d_kiwifruit` |
+| <span style="font-size:1.5em">🍅</span> | Tomato | `1f345_tomato` |
+| <span style="font-size:1.5em">🫒</span> | Olive | `olive` |
+| <span style="font-size:1.5em">🥥</span> | Coconut | `1f965_coconut` |
+| <span style="font-size:1.5em">🍆</span> | Eggplant | `aubergine` |
+| <span style="font-size:1.5em">🥔</span> | Potato | `1f954_potato` |
+| <span style="font-size:1.5em">🍄‍🟫</span> | Brown mushroom | `brownmushroom4` |
+| <span style="font-size:1.5em">🥕</span> | Carrot | `1f955_carrot` |
+| <span style="font-size:1.5em">🌽</span> | Corn | `1f33d_earofmaize` |
+| <span style="font-size:1.5em">🌶️</span> | Chili pepper | `1f336_hotpepper` |
+| <span style="font-size:1.5em">🫑</span> | Bell Pepper | `bellpepper` |
+| <span style="font-size:1.5em">🥒</span> | Cucumber | `1f952_cucumber` |
+| <span style="font-size:1.5em">🥬</span> | Lettuce | `1f96c_leafygreen` |
+| <span style="font-size:1.5em">🥦</span> | Broccoli | `1f966_broccoli` |
+| <span style="font-size:1.5em">🧄</span> | Garlic | `1f9c4_garlic` |
+| <span style="font-size:1.5em">🧅</span> | Onion | `1f9c5_onion` |
+| <span style="font-size:1.5em">🥜</span> | Peanuts | `1f95c_peanuts` |
+| <span style="font-size:1.5em">🫘</span> | Beans | `beans` |
+| <span style="font-size:1.5em">🌰</span> | Chestnut | `1f330_chestnut` |
+| <span style="font-size:1.5em">🫚</span> | ginger | `ginger` |
+| <span style="font-size:1.5em">🫛</span> | Pea pod | `peapod` |
+| <span style="font-size:1.5em">🍞</span> | Bread | `1f35e_bread` |
+| <span style="font-size:1.5em">🥐</span> | Croissant | `croissant` |
+| <span style="font-size:1.5em">🥖</span> | Baguette | `1f956_baguettebread` |
+| <span style="font-size:1.5em">🫓</span> | Flat Bread | `flatbread` |
+| <span style="font-size:1.5em">🥨</span> | Pretzel | `1f968_pretzel` |
+| <span style="font-size:1.5em">🥯</span> | Bagel | `1f96f_bagel` |
+| <span style="font-size:1.5em">🥞</span> | Pancake | `1f95e_pancake` |
+| <span style="font-size:1.5em">🧇</span> | Waffle | `1f9c7_waffle` |
+| <span style="font-size:1.5em">🧀</span> | Cheese | `cheese` |
+| <span style="font-size:1.5em">🍖</span> | Meat on bone | `1f356_meatonbone` |
+| <span style="font-size:1.5em">🍗</span> | Chicken leg | `chickenleg` |
+| <span style="font-size:1.5em">🥩</span> | Steak | `1f969_cutofmeat` |
+| <span style="font-size:1.5em">🥓</span> | Bacon | `1f953_bacon` |
+| <span style="font-size:1.5em">🍔</span> | Burger | `burger` |
+| <span style="font-size:1.5em">🍟</span> | Fries | `fries` |
+| <span style="font-size:1.5em">🍕</span> | Pizza slice | `pizzaslice` |
+| <span style="font-size:1.5em">🌭</span> | Hot dog | `1f32d_hotdog` |
+| <span style="font-size:1.5em">🥪</span> | Sandwich | `1f96a_sandwich` |
+| <span style="font-size:1.5em">🌮</span> | Taco | `1f32e_taco` |
+| <span style="font-size:1.5em">🌯</span> | Burrito | `1f32f_burrito` |
+| <span style="font-size:1.5em">🫔</span> | Tamale | `tamale` |
+| <span style="font-size:1.5em">🥙</span> | Stuffed flatbread | `1f959_stuffedflatbread` |
+| <span style="font-size:1.5em">🧆</span> | Falafel | `1f9c6_falafel` |
+| <span style="font-size:1.5em">🥚</span> | Egg | `1f95a_egg` |
+| <span style="font-size:1.5em">🍳</span> | Cooking | `1f373_cooking` |
+| <span style="font-size:1.5em">🥘</span> | Paella | `1f958_shallowpanoffood` |
+| <span style="font-size:1.5em">🍲</span> | Stew | `1f372_potoffood` |
+| <span style="font-size:1.5em">🫕</span> | Fondue | `fondue` |
+| <span style="font-size:1.5em">🥣</span> | Bowl with spoon | `1f963_bowlwithspoon` |
+| <span style="font-size:1.5em">🥗</span> | Salad | `1f957_greensalad` |
+| <span style="font-size:1.5em">🍿</span> | Popcorn | `1f37f_popcorn` |
+| <span style="font-size:1.5em">🧈</span> | Butter | `1f9c8_butter` |
+| <span style="font-size:1.5em">🧂</span> | Salt | `1f9c2_salt` |
+| <span style="font-size:1.5em">🥫</span> | Tin can | `1f96b_cannedfood` |
+| <span style="font-size:1.5em">🍱</span> | Bento box | `1f371_bentobox` |
+| <span style="font-size:1.5em">🍘</span> | Rice cracker | `1f358_ricecracker` |
+| <span style="font-size:1.5em">🍙</span> | Rice ball | `1f359_riceball` |
+| <span style="font-size:1.5em">🍚</span> | Rice | `1f35a_cookedrice` |
+| <span style="font-size:1.5em">🍛</span> | Curry | `1f35b_curryandrice` |
+| <span style="font-size:1.5em">🍜</span> | Noodles | `noodles` |
+| <span style="font-size:1.5em">🍝</span> | Spaghetti | `1f35d_spaghetti` |
+| <span style="font-size:1.5em">🍠</span> | Sweet potato | `1f360_roastedsweetpotato` |
+| <span style="font-size:1.5em">🍢</span> | Oden | `1f362_oden` |
+| <span style="font-size:1.5em">🍣</span> | Sushi | `1f363_sushi` |
+| <span style="font-size:1.5em">🍤</span> | Fried shrimp | `1f364_friedshrimp` |
+| <span style="font-size:1.5em">🍥</span> | Fishcake | `1f365_fishcakewithswirldesign` |
+| <span style="font-size:1.5em">🥮</span> | Moon cake | `1f96e_mooncake` |
+| <span style="font-size:1.5em">🍡</span> | Dango | `1f361_dango` |
+| <span style="font-size:1.5em">🥟</span> | Dumpling | `1f95f_dumpling` |
+| <span style="font-size:1.5em">🥠</span> | Fortune cookie | `1f960_fortunecookie` |
+| <span style="font-size:1.5em">🥡</span> | Takeout box | `1f961_takeoutbox` |
+| <span style="font-size:1.5em">🦀</span> | Crab | `1f980_crab` |
+| <span style="font-size:1.5em">🦞</span> | Lobster | `1f99e_lobster` |
+| <span style="font-size:1.5em">🦐</span> | Shrimp | `1f990_shrimp` |
+| <span style="font-size:1.5em">🦑</span> | Squid | `1f991_squid` |
+| <span style="font-size:1.5em">🦪</span> | Oyster | `1f9aa_oyster` |
+| <span style="font-size:1.5em">🍦</span> | Soft ice cream | `1f366_softicecream` |
+| <span style="font-size:1.5em">🍧</span> | Shaved ice | `1f367_shavedice` |
+| <span style="font-size:1.5em">🍨</span> | Ice cream | `1f368_icecream` |
+| <span style="font-size:1.5em">🍩</span> | Doughnut | `1f369_doughnut` |
+| <span style="font-size:1.5em">🍪</span> | Cookies | `cookies` |
+| <span style="font-size:1.5em">🎂</span> | Cake | `cake` |
+| <span style="font-size:1.5em">🍰</span> | Cake slice | `cakeslice` |
+| <span style="font-size:1.5em">🧁</span> | Cupcake | `cupcake` |
+| <span style="font-size:1.5em">🥧</span> | Pie | `pie` |
+| <span style="font-size:1.5em">🍫</span> | Chocolate | `1f36b_chocolatebar` |
+| <span style="font-size:1.5em">🍬</span> | Candy | `1f36c_candy` |
+| <span style="font-size:1.5em">🍭</span> | Lollipop | `1f36d_lollipop` |
+| <span style="font-size:1.5em">🍮</span> | Custard | `1f36e_custard` |
+| <span style="font-size:1.5em">🍯</span> | Honey | `1f36f_honeypot` |
+| <span style="font-size:1.5em">🍼</span> | Baby bottle | `1f37c_babybottle` |
+| <span style="font-size:1.5em">🥛</span> | Milk | `1f95b_milkglass` |
+| <span style="font-size:1.5em">☕</span> | Coffee | `coffee` |
+| <span style="font-size:1.5em">🫖</span> | Teapot | `teapot` |
+| <span style="font-size:1.5em">🍵</span> | Tea | `chai` |
+| <span style="font-size:1.5em">🍶</span> | Sake | `1f376_sakebottleandcup` |
+| <span style="font-size:1.5em">🍾</span> | Champagne | `champagne` |
+| <span style="font-size:1.5em">🍷</span> | Red wine | `redwine` |
+| <span style="font-size:1.5em">🍸</span> | Drink | `drink` |
+| <span style="font-size:1.5em">🍹</span> | Tropical drink | `1f379_tropicaldrink` |
+| <span style="font-size:1.5em">🍺</span> | Beer | `beer` |
+| <span style="font-size:1.5em">🍻</span> | Beer mugs | `1f37b_clinkingbeermugs` |
+| <span style="font-size:1.5em">🥂</span> | Cheers! | `cheers` |
+| <span style="font-size:1.5em">🥃</span> | Tumbler glass | `1f943_tumblerglass` |
+| <span style="font-size:1.5em">🫗</span> | Pouring liquid | `pour` |
+| <span style="font-size:1.5em">🥤</span> | Cup with straw | `1f964_cupwithstraw` |
+| <span style="font-size:1.5em">🧋</span> | Bubble Tea | `bubbletea` |
+| <span style="font-size:1.5em">🧃</span> | Juice box | `1f9c3_beveragebox` |
+| <span style="font-size:1.5em">🧉</span> | Yerba mate | `1f9c9_mate` |
+| <span style="font-size:1.5em">🧊</span> | Ice cube | `1f9ca_icecube` |
+| <span style="font-size:1.5em">🥢</span> | Chopsticks | `1f962_chopsticks` |
+| <span style="font-size:1.5em">🍽️</span> | Dinner | `1f37d_forkandknifewithplate` |
+| <span style="font-size:1.5em">🍴</span> | Cutlery | `1f374_forkandknife` |
+| <span style="font-size:1.5em">🥄</span> | Spoon | `1f944_spoon` |
+| <span style="font-size:1.5em">🔪</span> | Kitchen knife | `1f52a_hocho` |
+| <span style="font-size:1.5em">🏺</span> | Amphora | `1f3fa_amphora` |
+| <span style="font-size:1.5em">🫙</span> | Jar | `jar` |
+| <span style="font-size:1.5em">🥑</span> | Avocado love | `avocadolove` |
+| <span style="font-size:1.5em">🦃</span> | Headless turkey | `turkey` |
+| <span style="font-size:1.5em">(oreo)</span> | OREO | `oreo` |
 
 ---
 
@@ -915,232 +915,232 @@ Reference reactions by their unique ID:
 
 | Emoji | Description | Reaction ID | 🎨 |
 |-------|-------------|-------------|:--:|
-| 🌍 | Earth globe Europe Africa | `1f30d_earthglobeeuropeafrica` | |
-| 🌎 | Earth globe americas | `1f30e_earthglobeamericas` | |
-| 🌏 | Earth globe Asia Australia  | `1f30f_earthglobeasiaaustralia` | |
-| 🌐 | Globe with meridians | `1f310_globewithmeridians` | |
-| 🗺️ | World map | `1f5fa_worldmap` | |
-| 🗾 | Silhouette of Japan | `1f5fe_silhouetteofjapan` | |
-| 🧭 | Compass | `1f9ed_compass` | |
-| 🏔️ | Snow capped mountain | `1f3d4_snowcappedmountain` | |
-| ⛰️ | Mountain | `26f0_mountain` | |
-| 🌋 | Volcano | `1f30b_volcano` | |
-| 🗻 | Mount Fuji | `1f5fb_mountfuji` | |
-| 🏕️ | Camping | `1f3d5_camping` | |
-| 🏖️ | Beach with umbrella | `1f3d6_beachwithumbrella` | |
-| 🏜️ | Desert | `desert` | |
-| 🏝️ | Island | `island` | |
-| 🏞️ | National park | `1f3de_nationalpark` | |
-| 🏟️ | Stadium | `1f3df_stadium` | |
-| 🏛️ | Classical building | `1f3db_classicalbuilding` | |
-| 🏗️ | Building construction | `1f3d7_buildingconstruction` | |
-| 🧱 | Bricks | `1f9f1_bricks` | |
-| 🪨 | Stone | `stone` | |
-| 🪵 | Wood | `wood` | |
-| 🛖 | Hut | `hut` | |
-| 🏘️ | House building | `1f3d8_housebuildings` | |
-| 🏚️ | Derelict house | `1f3da_derelicthouse` | |
-| 🏠 | House | `house` | |
-| 🏡 | House with garden | `1f3e1_housewithgarden` | |
-| 🏢 | Office building | `1f3e2_officebuilding` | |
-| 🏣 | Post office | `1f3e3_japanesepostoffice` | |
-| 🏤 | European post office | `1f3e4_europeanpostoffice` | |
-| 🏥 | Hospital | `1f3e5_hospital` | |
-| 🏦 | Bank | `1f3e6_bank` | |
-| 🏨 | Hotel | `1f3e8_hotel` | |
-| 🏪 | Convenience store | `1f3ea_conveniencestore` | |
-| 🏫 | School | `1f3eb_school` | |
-| 🏬 | Department store | `1f3ec_departmentstore` | |
-| 🏭 | Factory | `1f3ed_factory` | |
-| 🏯 | Castle | `1f3ef_japanesecastle` | |
-| 🏰 | European castle | `1f3f0_europeancastle` | |
-| 💒 | Wedding | `1f492_wedding` | |
-| 🗼 | Tokyo tower | `1f5fc_tokyotower` | |
-| 🗽 | Statue of Liberty | `statueofliberty` | |
-| ⛪ | Church | `26ea_church` | |
-| 🕌 | Mosque | `1f54c_mosque` | |
-| 🛕 | Hindu temple | `1f6d5_hindutemple` | |
-| 🕍 | Synagogue | `1f54d_synagogue` | |
-| ⛩️ | Shinto shrine | `26e9_shintoshrine` | |
-| 🕋 | Kaaba | `1f54b_kaaba` | |
-| ⛲ | Fountain | `26f2_fountain` | |
-| ⛺ | Tent | `26fa_tent` | |
-| 🌁 | Foggy | `1f301_foggy` | |
-| 🌃 | Night with stars | `1f303_nightwithstars` | |
-| 🏙️ | Cityscape | `1f3d9_cityscape` | |
-| 🌄 | Sunrise over mountains | `1f304_sunriseovermountains` | |
-| 🌅 | Sunrise | `1f305_sunrise` | |
-| 🌆 | City scape at dusk | `1f306_cityscapeatdusk` | |
-| 🌇 | Sunset over buildings | `1f307_sunsetoverbuildings` | |
-| 🌉 | Bridge at night | `1f309_bridgeatnight` | |
-| ♨️ | Hot springs | `2668_hotsprings` | |
-| 🎠 | Carousel horse | `1f3a0_carouselhorse` | |
-| 🛝 | Slide | `slide` | |
-| 🎡 | Ferris wheel | `1f3a1_ferriswheel` | |
-| 🎢 | Rollercoaster | `1f3a2_rollercoaster` | |
-| 💈 | Barber pole | `1f488_barberpole` | |
-| 🎪 | Circus tent | `1f3aa_circustent` | |
-| 🚂 | Steam train | `steamtrain` | |
-| 🚃 | Railway car | `1f683_railwaycar` | |
-| 🚄 | High speed train | `1f684_highspeedtrain` | |
-| 🚅 | Bullet train | `1f685_bullettrain` | |
-| 🚆 | Train | `1f686_train` | |
-| 🚇 | Metro | `1f687_metro` | |
-| 🚈 | Light rail | `1f688_lightrail` | |
-| 🚉 | Station | `1f689_station` | |
-| 🚊 | Tram | `1f68a_tram` | |
-| 🚝 | Monorail | `1f69d_monorail` | |
-| 🚞 | Mountain railway | `1f69e_mountainrailway` | |
-| 🚋 | Tram car | `1f68b_tramcar` | |
-| 🚌 | Bus | `1f68c_bus` | |
-| 🚍 | Oncoming bus | `1f68d_oncomingbus` | |
-| 🚎 | Trolley bus | `1f68e_trolleybus` | |
-| 🚐 | Minibus | `1f690_minibus` | |
-| 🚑 | Ambulance | `ambulance` | |
-| 🚒 | Fire engine | `1f692_fireengine` | |
-| 🚓 | Police car | `policecar` | |
-| 🚔 | Oncoming police car | `1f694_oncomingpolicecar` | |
-| 🚕 | Taxi | `taxi` | |
-| 🚖 | Oncoming taxi | `1f696_oncomingtaxi` | |
-| 🚗 | Car | `car` | |
-| 🚘 | Oncoming automobile | `1f698_oncomingautomobile` | |
-| 🚙 | Sports utility vehicle | `1f699_recreationalvehicle` | |
-| 🛻 | Pickup truck | `pickuptruck` | |
-| 🚚 | Truck | `truck` | |
-| 🚛 | Articulated lorry | `1f69b_articulatedlorry` | |
-| 🚜 | Tractor | `1f69c_tractor` | |
-| 🏎️ | Racing car | `1f3ce_racingcar` | |
-| 🏍️ | Motorbike | `motorbike` | |
-| 🛵 | Scooter | `scooter` | |
-| 🦽 | Manual wheelchair | `1f9bd_manualwheelchair` | |
-| 🦼 | Motorized wheelchair | `1f9bc_motorizedwheelchair` | |
-| 🛺 | Auto Rickshaw | `rickshaw` | |
-| 🚲 | Bicycle | `bicycle` | |
-| 🛴 | Kick scooter | `kickscooter` | |
-| 🛹 | Skate | `skate` | |
-| 🛼 | Roller skate | `rollerskate` | |
-| 🚏 | Bus stop | `1f68f_busstop` | |
-| 🛣️ | Motorway | `1f6e3_motorway` | |
-| 🛤️ | Railway track | `1f6e4_railwaytrack` | |
-| 🛢️ | Oil drum | `1f6e2_oildrum` | |
-| ⛽ | Fuel pump | `26fd_fuelpump` | |
-| 🛞 | Wheel | `wheel` | |
-| 🚨 | Police car light | `1f6a8_policecarsrevolvinglight` | |
-| 🚥 | Horizontal traffic light | `1f6a5_horizontaltrafficlight` | |
-| 🚦 | Vertical traffic light | `1f6a6_verticaltrafficlight` | |
-| 🛑 | Stop sign | `stopsign` | |
-| 🚧 | Construction sign | `1f6a7_constructionsign` | |
-| ⚓ | Anchor | `2693_anchor` | |
-| 🛟 | Ring buoy | `buoy` | |
-| ⛵ | Sailboat | `26f5_sailboat` | |
-| 🛶 | Canoe | `1f6f6_canoe` | |
-| 🚤 | Speedboat | `1f6a4_speedboat` | |
-| 🛳️ | Passenger ship | `1f6f3_passengership` | |
-| ⛴️ | Ferry | `26f4_ferry` | |
-| 🛥️ | Motor boat | `1f6e5_motorboat` | |
-| 🚢 | Ship | `1f6a2_ship` | |
-| ✈️ | Plane | `plane` | |
-| 🛩️ | Small airplane | `1f6e9_smallairplane` | |
-| 🛫 | Airplane departure | `1f6eb_airplanedeparture` | |
-| 🛬 | Airplane arriving | `1f6ec_airplanearriving` | |
-| 🪂 | Parachute | `1fa82_parachute` | |
-| 💺 | Seat | `1f4ba_seat` | |
-| 🚁 | Helicopter | `1f681_helicopter` | |
-| 🚟 | Suspension railway | `1f69f_suspensionrailway` | |
-| 🚠 | Mountain cableway | `1f6a0_mountaincableway` | |
-| 🚡 | Aerial tramway | `1f6a1_aerialtramway` | |
-| 🛰️ | Satellite | `1f6f0_satellite` | |
-| 🚀 | Rocket launch | `launch` | |
-| 🛸 | Flying saucer | `1f6f8_flyingsaucer` | |
-| 🛎️ | Bellhop bell | `1f6ce_bellhopbell` | |
-| 🧳 | Luggage | `1f9f3_luggage` | |
-| ⌛ | Hold on | `holdon` | |
-| ⌛ | Hour glass done | `231b_hourglassdone` | |
-| ⌚ | Watch | `231a_watch` | |
-| ⏰ | Alarm clock | `23f0_alarmclock` | |
-| ⏱️ | Stop watch | `23f1_stopwatch` | |
-| ⏲️ | Timer clock | `23f2_timerclock` | |
-| 🕰️ | Mantel piece clock | `1f570_mantelpiececlock` | |
-| 🕛 | Twelve o'clock | `1f55b_twelveoclock` | |
-| 🕧 | Twelve-thirty | `1f567_twelvethirty` | |
-| 🕐 | One o'clock | `1f550_oneoclock` | |
-| 🕜 | One-thirty | `1f55c_onethirty` | |
-| 🕑 | Two o'clock | `1f551_twooclock` | |
-| 🕝 | Two-thirty | `1f55d_twothirty` | |
-| 🕒 | Three o'clock | `1f552_threeoclock` | |
-| 🕞 | Three-thirty | `1f55e_threethirty` | |
-| 🕓 | Four o'clock | `1f553_fouroclock` | |
-| 🕟 | Four thirty | `1f55f_fourthirty` | |
-| 🕔 | Five o'clock | `1f554_fiveoclock` | |
-| 🕠 | Five-thirty | `1f560_fivethirty` | |
-| 🕕 | Six o'clock | `1f555_sixoclock` | |
-| 🕡 | Six-thirty | `1f561_sixthirty` | |
-| 🕖 | Seven o'clock | `1f556_sevenoclock` | |
-| 🕢 | Seven-thirty | `1f562_seventhirty` | |
-| 🕗 | Eight o'clock | `1f557_eightoclock` | |
-| 🕣 | Eight-thirty | `1f563_eightthirty` | |
-| 🕘 | Nine o'clock | `1f558_nineoclock` | |
-| 🕤 | Nine-thirty | `1f564_ninethirty` | |
-| 🕙 | Ten o'clock | `1f559_tenoclock` | |
-| 🕥 | Ten-thirty | `1f565_tenthirty` | |
-| 🕚 | Eleven o'clock | `1f55a_elevenoclock` | |
-| 🕦 | Eleven-thirty | `1f566_eleventhirty` | |
-| 🌑 | New moon symbol | `1f311_newmoonsymbol` | |
-| 🌒 | Waxing crescent moon symbol | `1f312_waxingcrescentmoonsymbol` | |
-| 🌓 | First quarter moon symbol | `1f313_firstquartermoonsymbol` | |
-| 🌔 | Waxing gibbous moon system | `1f314_waxinggibbousmoonsymbol` | |
-| 🌕 | Full moon symbol | `1f315_fullmoonsymbol` | |
-| 🌖 | Waning gibbous moon symbol | `1f316_waninggibbousmoonsymbol` | |
-| 🌗 | Last quarter moon symbol | `1f317_lastquartermoonsymbol` | |
-| 🌘 | Waning crescent moon symbol | `1f318_waningcrescentmoonsymbol` | |
-| 🌙 | Crescent moon | `1f319_crescentmoon` | |
-| 🌚 | New moon with face | `1f31a_newmoonwithface` | |
-| 🌛 | First quarter moon with face | `1f31b_firstquartermoonwithface` | |
-| 🌜 | Last quarter moon with face | `1f31c_lastquartermoonwithface` | |
-| 🌡️ | Thermometer | `1f321_thermometer` | |
-| ☀️ | Sun with rays | `2600_sunwithrays` | |
-| 🌝 | Full moon face | `1f31d_fullmoonwithface` | |
-| 🌞 | Sun | `sun` | |
-| 🪐 | Ringed planet | `1fa90_ringedplanet` | |
-| ⭐ | Star | `star` | |
-| 🌟 | Glowing star | `1f31f_glowingstar` | |
-| 🌠 | Shooting star | `1f320_shootingstar` | |
-| 🌌 | Milky way | `1f30c_milkyway` | |
-| ☁️ | Cloud | `2601_cloud` | |
-| 🌥️ | Sun behind large cloud | `1f325_sunbehindlargecloud` | |
-| ⛈️ | Cloud with lightning and rain | `26c8_cloudwithlightningandrain` | |
-| 🌤️ | Sun behind small cloud | `1f324_sunbehindsmallcloud` | |
-| ⛅ | Sun behind cloud | `26c5_sunbehindcloud` | |
-| 🌦️ | Sun behind rain cloud | `1f326_sunbehindraincloud` | |
-| 🌧️ | Raining | `rain` | |
-| 🌨️ | Cloud with snow | `1f328_cloudwithsnow` | |
-| 🌩️ | Cloud with lightning | `1f329_cloudwithlightning` | |
-| 🌪️ | Tornado | `1f32a_cloudwithtornado` | |
-| 🌫️ | Fog | `1f32b_fog` | |
-| 🌬️ | Wind face | `1f32c_windblowingface` | |
-| 🌀 | Cyclone | `1f300_cyclone` | |
-| 🌈 | Rainbow | `rainbow` | |
-| 🌂 | Closed umbrella | `1f302_closedumbrella` | |
-| ☂️ | Umbrella | `2602_umbrella` | |
-| ☔ | Umbrella | `umbrella` | |
-| ⛱️ | Beach umbrella | `26f1_umbrellaonground` | |
-| ⚡ | High voltage | `26a1_highvoltagesign` | |
-| ❄️ | Snowflake | `snowflake` | |
-| ⛄ | Snowman without snow | `snowmanwithoutsnow` | |
-| ☃️ | Snow buddie | `snegovik` | |
-| ☄️ | Comet | `2604_comet` | |
-| 🔥 | Fire | `fire` | |
-| 💧 | Droplet | `1f4a7_droplet` | |
-| 🌊 | Water wave | `1f30a_waterwave` | |
-| 🏖️ | Sandcastle | `sandcastle` | |
-| ❤ | Cactus love | `cactuslove` | |
-| 🏠 | Working from home | `wfh` | |
-| ♻ | Wind turbine | `windturbine` | |
-| ♻ | Vegetable garden | `vegetablegarden` | |
-| ♻ | Electric car | `electriccar` | |
-| ♻ | Earth in hand, Europe and Africa | `europeafricainhand` | 🎨 |
-| ♻ | Earth in hand, Americas | `americainhand` | 🎨 |
-| ♻ | Earth in hand, Asia and Australia | `asiaaustraliainhand` | 🎨 |
+| <span style="font-size:1.5em">🌍</span> | Earth globe Europe Africa | `1f30d_earthglobeeuropeafrica` | |
+| <span style="font-size:1.5em">🌎</span> | Earth globe americas | `1f30e_earthglobeamericas` | |
+| <span style="font-size:1.5em">🌏</span> | Earth globe Asia Australia  | `1f30f_earthglobeasiaaustralia` | |
+| <span style="font-size:1.5em">🌐</span> | Globe with meridians | `1f310_globewithmeridians` | |
+| <span style="font-size:1.5em">🗺️</span> | World map | `1f5fa_worldmap` | |
+| <span style="font-size:1.5em">🗾</span> | Silhouette of Japan | `1f5fe_silhouetteofjapan` | |
+| <span style="font-size:1.5em">🧭</span> | Compass | `1f9ed_compass` | |
+| <span style="font-size:1.5em">🏔️</span> | Snow capped mountain | `1f3d4_snowcappedmountain` | |
+| <span style="font-size:1.5em">⛰️</span> | Mountain | `26f0_mountain` | |
+| <span style="font-size:1.5em">🌋</span> | Volcano | `1f30b_volcano` | |
+| <span style="font-size:1.5em">🗻</span> | Mount Fuji | `1f5fb_mountfuji` | |
+| <span style="font-size:1.5em">🏕️</span> | Camping | `1f3d5_camping` | |
+| <span style="font-size:1.5em">🏖️</span> | Beach with umbrella | `1f3d6_beachwithumbrella` | |
+| <span style="font-size:1.5em">🏜️</span> | Desert | `desert` | |
+| <span style="font-size:1.5em">🏝️</span> | Island | `island` | |
+| <span style="font-size:1.5em">🏞️</span> | National park | `1f3de_nationalpark` | |
+| <span style="font-size:1.5em">🏟️</span> | Stadium | `1f3df_stadium` | |
+| <span style="font-size:1.5em">🏛️</span> | Classical building | `1f3db_classicalbuilding` | |
+| <span style="font-size:1.5em">🏗️</span> | Building construction | `1f3d7_buildingconstruction` | |
+| <span style="font-size:1.5em">🧱</span> | Bricks | `1f9f1_bricks` | |
+| <span style="font-size:1.5em">🪨</span> | Stone | `stone` | |
+| <span style="font-size:1.5em">🪵</span> | Wood | `wood` | |
+| <span style="font-size:1.5em">🛖</span> | Hut | `hut` | |
+| <span style="font-size:1.5em">🏘️</span> | House building | `1f3d8_housebuildings` | |
+| <span style="font-size:1.5em">🏚️</span> | Derelict house | `1f3da_derelicthouse` | |
+| <span style="font-size:1.5em">🏠</span> | House | `house` | |
+| <span style="font-size:1.5em">🏡</span> | House with garden | `1f3e1_housewithgarden` | |
+| <span style="font-size:1.5em">🏢</span> | Office building | `1f3e2_officebuilding` | |
+| <span style="font-size:1.5em">🏣</span> | Post office | `1f3e3_japanesepostoffice` | |
+| <span style="font-size:1.5em">🏤</span> | European post office | `1f3e4_europeanpostoffice` | |
+| <span style="font-size:1.5em">🏥</span> | Hospital | `1f3e5_hospital` | |
+| <span style="font-size:1.5em">🏦</span> | Bank | `1f3e6_bank` | |
+| <span style="font-size:1.5em">🏨</span> | Hotel | `1f3e8_hotel` | |
+| <span style="font-size:1.5em">🏪</span> | Convenience store | `1f3ea_conveniencestore` | |
+| <span style="font-size:1.5em">🏫</span> | School | `1f3eb_school` | |
+| <span style="font-size:1.5em">🏬</span> | Department store | `1f3ec_departmentstore` | |
+| <span style="font-size:1.5em">🏭</span> | Factory | `1f3ed_factory` | |
+| <span style="font-size:1.5em">🏯</span> | Castle | `1f3ef_japanesecastle` | |
+| <span style="font-size:1.5em">🏰</span> | European castle | `1f3f0_europeancastle` | |
+| <span style="font-size:1.5em">💒</span> | Wedding | `1f492_wedding` | |
+| <span style="font-size:1.5em">🗼</span> | Tokyo tower | `1f5fc_tokyotower` | |
+| <span style="font-size:1.5em">🗽</span> | Statue of Liberty | `statueofliberty` | |
+| <span style="font-size:1.5em">⛪</span> | Church | `26ea_church` | |
+| <span style="font-size:1.5em">🕌</span> | Mosque | `1f54c_mosque` | |
+| <span style="font-size:1.5em">🛕</span> | Hindu temple | `1f6d5_hindutemple` | |
+| <span style="font-size:1.5em">🕍</span> | Synagogue | `1f54d_synagogue` | |
+| <span style="font-size:1.5em">⛩️</span> | Shinto shrine | `26e9_shintoshrine` | |
+| <span style="font-size:1.5em">🕋</span> | Kaaba | `1f54b_kaaba` | |
+| <span style="font-size:1.5em">⛲</span> | Fountain | `26f2_fountain` | |
+| <span style="font-size:1.5em">⛺</span> | Tent | `26fa_tent` | |
+| <span style="font-size:1.5em">🌁</span> | Foggy | `1f301_foggy` | |
+| <span style="font-size:1.5em">🌃</span> | Night with stars | `1f303_nightwithstars` | |
+| <span style="font-size:1.5em">🏙️</span> | Cityscape | `1f3d9_cityscape` | |
+| <span style="font-size:1.5em">🌄</span> | Sunrise over mountains | `1f304_sunriseovermountains` | |
+| <span style="font-size:1.5em">🌅</span> | Sunrise | `1f305_sunrise` | |
+| <span style="font-size:1.5em">🌆</span> | City scape at dusk | `1f306_cityscapeatdusk` | |
+| <span style="font-size:1.5em">🌇</span> | Sunset over buildings | `1f307_sunsetoverbuildings` | |
+| <span style="font-size:1.5em">🌉</span> | Bridge at night | `1f309_bridgeatnight` | |
+| <span style="font-size:1.5em">♨️</span> | Hot springs | `2668_hotsprings` | |
+| <span style="font-size:1.5em">🎠</span> | Carousel horse | `1f3a0_carouselhorse` | |
+| <span style="font-size:1.5em">🛝</span> | Slide | `slide` | |
+| <span style="font-size:1.5em">🎡</span> | Ferris wheel | `1f3a1_ferriswheel` | |
+| <span style="font-size:1.5em">🎢</span> | Rollercoaster | `1f3a2_rollercoaster` | |
+| <span style="font-size:1.5em">💈</span> | Barber pole | `1f488_barberpole` | |
+| <span style="font-size:1.5em">🎪</span> | Circus tent | `1f3aa_circustent` | |
+| <span style="font-size:1.5em">🚂</span> | Steam train | `steamtrain` | |
+| <span style="font-size:1.5em">🚃</span> | Railway car | `1f683_railwaycar` | |
+| <span style="font-size:1.5em">🚄</span> | High speed train | `1f684_highspeedtrain` | |
+| <span style="font-size:1.5em">🚅</span> | Bullet train | `1f685_bullettrain` | |
+| <span style="font-size:1.5em">🚆</span> | Train | `1f686_train` | |
+| <span style="font-size:1.5em">🚇</span> | Metro | `1f687_metro` | |
+| <span style="font-size:1.5em">🚈</span> | Light rail | `1f688_lightrail` | |
+| <span style="font-size:1.5em">🚉</span> | Station | `1f689_station` | |
+| <span style="font-size:1.5em">🚊</span> | Tram | `1f68a_tram` | |
+| <span style="font-size:1.5em">🚝</span> | Monorail | `1f69d_monorail` | |
+| <span style="font-size:1.5em">🚞</span> | Mountain railway | `1f69e_mountainrailway` | |
+| <span style="font-size:1.5em">🚋</span> | Tram car | `1f68b_tramcar` | |
+| <span style="font-size:1.5em">🚌</span> | Bus | `1f68c_bus` | |
+| <span style="font-size:1.5em">🚍</span> | Oncoming bus | `1f68d_oncomingbus` | |
+| <span style="font-size:1.5em">🚎</span> | Trolley bus | `1f68e_trolleybus` | |
+| <span style="font-size:1.5em">🚐</span> | Minibus | `1f690_minibus` | |
+| <span style="font-size:1.5em">🚑</span> | Ambulance | `ambulance` | |
+| <span style="font-size:1.5em">🚒</span> | Fire engine | `1f692_fireengine` | |
+| <span style="font-size:1.5em">🚓</span> | Police car | `policecar` | |
+| <span style="font-size:1.5em">🚔</span> | Oncoming police car | `1f694_oncomingpolicecar` | |
+| <span style="font-size:1.5em">🚕</span> | Taxi | `taxi` | |
+| <span style="font-size:1.5em">🚖</span> | Oncoming taxi | `1f696_oncomingtaxi` | |
+| <span style="font-size:1.5em">🚗</span> | Car | `car` | |
+| <span style="font-size:1.5em">🚘</span> | Oncoming automobile | `1f698_oncomingautomobile` | |
+| <span style="font-size:1.5em">🚙</span> | Sports utility vehicle | `1f699_recreationalvehicle` | |
+| <span style="font-size:1.5em">🛻</span> | Pickup truck | `pickuptruck` | |
+| <span style="font-size:1.5em">🚚</span> | Truck | `truck` | |
+| <span style="font-size:1.5em">🚛</span> | Articulated lorry | `1f69b_articulatedlorry` | |
+| <span style="font-size:1.5em">🚜</span> | Tractor | `1f69c_tractor` | |
+| <span style="font-size:1.5em">🏎️</span> | Racing car | `1f3ce_racingcar` | |
+| <span style="font-size:1.5em">🏍️</span> | Motorbike | `motorbike` | |
+| <span style="font-size:1.5em">🛵</span> | Scooter | `scooter` | |
+| <span style="font-size:1.5em">🦽</span> | Manual wheelchair | `1f9bd_manualwheelchair` | |
+| <span style="font-size:1.5em">🦼</span> | Motorized wheelchair | `1f9bc_motorizedwheelchair` | |
+| <span style="font-size:1.5em">🛺</span> | Auto Rickshaw | `rickshaw` | |
+| <span style="font-size:1.5em">🚲</span> | Bicycle | `bicycle` | |
+| <span style="font-size:1.5em">🛴</span> | Kick scooter | `kickscooter` | |
+| <span style="font-size:1.5em">🛹</span> | Skate | `skate` | |
+| <span style="font-size:1.5em">🛼</span> | Roller skate | `rollerskate` | |
+| <span style="font-size:1.5em">🚏</span> | Bus stop | `1f68f_busstop` | |
+| <span style="font-size:1.5em">🛣️</span> | Motorway | `1f6e3_motorway` | |
+| <span style="font-size:1.5em">🛤️</span> | Railway track | `1f6e4_railwaytrack` | |
+| <span style="font-size:1.5em">🛢️</span> | Oil drum | `1f6e2_oildrum` | |
+| <span style="font-size:1.5em">⛽</span> | Fuel pump | `26fd_fuelpump` | |
+| <span style="font-size:1.5em">🛞</span> | Wheel | `wheel` | |
+| <span style="font-size:1.5em">🚨</span> | Police car light | `1f6a8_policecarsrevolvinglight` | |
+| <span style="font-size:1.5em">🚥</span> | Horizontal traffic light | `1f6a5_horizontaltrafficlight` | |
+| <span style="font-size:1.5em">🚦</span> | Vertical traffic light | `1f6a6_verticaltrafficlight` | |
+| <span style="font-size:1.5em">🛑</span> | Stop sign | `stopsign` | |
+| <span style="font-size:1.5em">🚧</span> | Construction sign | `1f6a7_constructionsign` | |
+| <span style="font-size:1.5em">⚓</span> | Anchor | `2693_anchor` | |
+| <span style="font-size:1.5em">🛟</span> | Ring buoy | `buoy` | |
+| <span style="font-size:1.5em">⛵</span> | Sailboat | `26f5_sailboat` | |
+| <span style="font-size:1.5em">🛶</span> | Canoe | `1f6f6_canoe` | |
+| <span style="font-size:1.5em">🚤</span> | Speedboat | `1f6a4_speedboat` | |
+| <span style="font-size:1.5em">🛳️</span> | Passenger ship | `1f6f3_passengership` | |
+| <span style="font-size:1.5em">⛴️</span> | Ferry | `26f4_ferry` | |
+| <span style="font-size:1.5em">🛥️</span> | Motor boat | `1f6e5_motorboat` | |
+| <span style="font-size:1.5em">🚢</span> | Ship | `1f6a2_ship` | |
+| <span style="font-size:1.5em">✈️</span> | Plane | `plane` | |
+| <span style="font-size:1.5em">🛩️</span> | Small airplane | `1f6e9_smallairplane` | |
+| <span style="font-size:1.5em">🛫</span> | Airplane departure | `1f6eb_airplanedeparture` | |
+| <span style="font-size:1.5em">🛬</span> | Airplane arriving | `1f6ec_airplanearriving` | |
+| <span style="font-size:1.5em">🪂</span> | Parachute | `1fa82_parachute` | |
+| <span style="font-size:1.5em">💺</span> | Seat | `1f4ba_seat` | |
+| <span style="font-size:1.5em">🚁</span> | Helicopter | `1f681_helicopter` | |
+| <span style="font-size:1.5em">🚟</span> | Suspension railway | `1f69f_suspensionrailway` | |
+| <span style="font-size:1.5em">🚠</span> | Mountain cableway | `1f6a0_mountaincableway` | |
+| <span style="font-size:1.5em">🚡</span> | Aerial tramway | `1f6a1_aerialtramway` | |
+| <span style="font-size:1.5em">🛰️</span> | Satellite | `1f6f0_satellite` | |
+| <span style="font-size:1.5em">🚀</span> | Rocket launch | `launch` | |
+| <span style="font-size:1.5em">🛸</span> | Flying saucer | `1f6f8_flyingsaucer` | |
+| <span style="font-size:1.5em">🛎️</span> | Bellhop bell | `1f6ce_bellhopbell` | |
+| <span style="font-size:1.5em">🧳</span> | Luggage | `1f9f3_luggage` | |
+| <span style="font-size:1.5em">⌛</span> | Hold on | `holdon` | |
+| <span style="font-size:1.5em">⌛</span> | Hour glass done | `231b_hourglassdone` | |
+| <span style="font-size:1.5em">⌚</span> | Watch | `231a_watch` | |
+| <span style="font-size:1.5em">⏰</span> | Alarm clock | `23f0_alarmclock` | |
+| <span style="font-size:1.5em">⏱️</span> | Stop watch | `23f1_stopwatch` | |
+| <span style="font-size:1.5em">⏲️</span> | Timer clock | `23f2_timerclock` | |
+| <span style="font-size:1.5em">🕰️</span> | Mantel piece clock | `1f570_mantelpiececlock` | |
+| <span style="font-size:1.5em">🕛</span> | Twelve o'clock | `1f55b_twelveoclock` | |
+| <span style="font-size:1.5em">🕧</span> | Twelve-thirty | `1f567_twelvethirty` | |
+| <span style="font-size:1.5em">🕐</span> | One o'clock | `1f550_oneoclock` | |
+| <span style="font-size:1.5em">🕜</span> | One-thirty | `1f55c_onethirty` | |
+| <span style="font-size:1.5em">🕑</span> | Two o'clock | `1f551_twooclock` | |
+| <span style="font-size:1.5em">🕝</span> | Two-thirty | `1f55d_twothirty` | |
+| <span style="font-size:1.5em">🕒</span> | Three o'clock | `1f552_threeoclock` | |
+| <span style="font-size:1.5em">🕞</span> | Three-thirty | `1f55e_threethirty` | |
+| <span style="font-size:1.5em">🕓</span> | Four o'clock | `1f553_fouroclock` | |
+| <span style="font-size:1.5em">🕟</span> | Four thirty | `1f55f_fourthirty` | |
+| <span style="font-size:1.5em">🕔</span> | Five o'clock | `1f554_fiveoclock` | |
+| <span style="font-size:1.5em">🕠</span> | Five-thirty | `1f560_fivethirty` | |
+| <span style="font-size:1.5em">🕕</span> | Six o'clock | `1f555_sixoclock` | |
+| <span style="font-size:1.5em">🕡</span> | Six-thirty | `1f561_sixthirty` | |
+| <span style="font-size:1.5em">🕖</span> | Seven o'clock | `1f556_sevenoclock` | |
+| <span style="font-size:1.5em">🕢</span> | Seven-thirty | `1f562_seventhirty` | |
+| <span style="font-size:1.5em">🕗</span> | Eight o'clock | `1f557_eightoclock` | |
+| <span style="font-size:1.5em">🕣</span> | Eight-thirty | `1f563_eightthirty` | |
+| <span style="font-size:1.5em">🕘</span> | Nine o'clock | `1f558_nineoclock` | |
+| <span style="font-size:1.5em">🕤</span> | Nine-thirty | `1f564_ninethirty` | |
+| <span style="font-size:1.5em">🕙</span> | Ten o'clock | `1f559_tenoclock` | |
+| <span style="font-size:1.5em">🕥</span> | Ten-thirty | `1f565_tenthirty` | |
+| <span style="font-size:1.5em">🕚</span> | Eleven o'clock | `1f55a_elevenoclock` | |
+| <span style="font-size:1.5em">🕦</span> | Eleven-thirty | `1f566_eleventhirty` | |
+| <span style="font-size:1.5em">🌑</span> | New moon symbol | `1f311_newmoonsymbol` | |
+| <span style="font-size:1.5em">🌒</span> | Waxing crescent moon symbol | `1f312_waxingcrescentmoonsymbol` | |
+| <span style="font-size:1.5em">🌓</span> | First quarter moon symbol | `1f313_firstquartermoonsymbol` | |
+| <span style="font-size:1.5em">🌔</span> | Waxing gibbous moon system | `1f314_waxinggibbousmoonsymbol` | |
+| <span style="font-size:1.5em">🌕</span> | Full moon symbol | `1f315_fullmoonsymbol` | |
+| <span style="font-size:1.5em">🌖</span> | Waning gibbous moon symbol | `1f316_waninggibbousmoonsymbol` | |
+| <span style="font-size:1.5em">🌗</span> | Last quarter moon symbol | `1f317_lastquartermoonsymbol` | |
+| <span style="font-size:1.5em">🌘</span> | Waning crescent moon symbol | `1f318_waningcrescentmoonsymbol` | |
+| <span style="font-size:1.5em">🌙</span> | Crescent moon | `1f319_crescentmoon` | |
+| <span style="font-size:1.5em">🌚</span> | New moon with face | `1f31a_newmoonwithface` | |
+| <span style="font-size:1.5em">🌛</span> | First quarter moon with face | `1f31b_firstquartermoonwithface` | |
+| <span style="font-size:1.5em">🌜</span> | Last quarter moon with face | `1f31c_lastquartermoonwithface` | |
+| <span style="font-size:1.5em">🌡️</span> | Thermometer | `1f321_thermometer` | |
+| <span style="font-size:1.5em">☀️</span> | Sun with rays | `2600_sunwithrays` | |
+| <span style="font-size:1.5em">🌝</span> | Full moon face | `1f31d_fullmoonwithface` | |
+| <span style="font-size:1.5em">🌞</span> | Sun | `sun` | |
+| <span style="font-size:1.5em">🪐</span> | Ringed planet | `1fa90_ringedplanet` | |
+| <span style="font-size:1.5em">⭐</span> | Star | `star` | |
+| <span style="font-size:1.5em">🌟</span> | Glowing star | `1f31f_glowingstar` | |
+| <span style="font-size:1.5em">🌠</span> | Shooting star | `1f320_shootingstar` | |
+| <span style="font-size:1.5em">🌌</span> | Milky way | `1f30c_milkyway` | |
+| <span style="font-size:1.5em">☁️</span> | Cloud | `2601_cloud` | |
+| <span style="font-size:1.5em">🌥️</span> | Sun behind large cloud | `1f325_sunbehindlargecloud` | |
+| <span style="font-size:1.5em">⛈️</span> | Cloud with lightning and rain | `26c8_cloudwithlightningandrain` | |
+| <span style="font-size:1.5em">🌤️</span> | Sun behind small cloud | `1f324_sunbehindsmallcloud` | |
+| <span style="font-size:1.5em">⛅</span> | Sun behind cloud | `26c5_sunbehindcloud` | |
+| <span style="font-size:1.5em">🌦️</span> | Sun behind rain cloud | `1f326_sunbehindraincloud` | |
+| <span style="font-size:1.5em">🌧️</span> | Raining | `rain` | |
+| <span style="font-size:1.5em">🌨️</span> | Cloud with snow | `1f328_cloudwithsnow` | |
+| <span style="font-size:1.5em">🌩️</span> | Cloud with lightning | `1f329_cloudwithlightning` | |
+| <span style="font-size:1.5em">🌪️</span> | Tornado | `1f32a_cloudwithtornado` | |
+| <span style="font-size:1.5em">🌫️</span> | Fog | `1f32b_fog` | |
+| <span style="font-size:1.5em">🌬️</span> | Wind face | `1f32c_windblowingface` | |
+| <span style="font-size:1.5em">🌀</span> | Cyclone | `1f300_cyclone` | |
+| <span style="font-size:1.5em">🌈</span> | Rainbow | `rainbow` | |
+| <span style="font-size:1.5em">🌂</span> | Closed umbrella | `1f302_closedumbrella` | |
+| <span style="font-size:1.5em">☂️</span> | Umbrella | `2602_umbrella` | |
+| <span style="font-size:1.5em">☔</span> | Umbrella | `umbrella` | |
+| <span style="font-size:1.5em">⛱️</span> | Beach umbrella | `26f1_umbrellaonground` | |
+| <span style="font-size:1.5em">⚡</span> | High voltage | `26a1_highvoltagesign` | |
+| <span style="font-size:1.5em">❄️</span> | Snowflake | `snowflake` | |
+| <span style="font-size:1.5em">⛄</span> | Snowman without snow | `snowmanwithoutsnow` | |
+| <span style="font-size:1.5em">☃️</span> | Snow buddie | `snegovik` | |
+| <span style="font-size:1.5em">☄️</span> | Comet | `2604_comet` | |
+| <span style="font-size:1.5em">🔥</span> | Fire | `fire` | |
+| <span style="font-size:1.5em">💧</span> | Droplet | `1f4a7_droplet` | |
+| <span style="font-size:1.5em">🌊</span> | Water wave | `1f30a_waterwave` | |
+| <span style="font-size:1.5em">🏖️</span> | Sandcastle | `sandcastle` | |
+| <span style="font-size:1.5em">❤</span> | Cactus love | `cactuslove` | |
+| <span style="font-size:1.5em">🏠</span> | Working from home | `wfh` | |
+| <span style="font-size:1.5em">♻</span> | Wind turbine | `windturbine` | |
+| <span style="font-size:1.5em">♻</span> | Vegetable garden | `vegetablegarden` | |
+| <span style="font-size:1.5em">♻</span> | Electric car | `electriccar` | |
+| <span style="font-size:1.5em">♻</span> | Earth in hand, Europe and Africa | `europeafricainhand` | 🎨 |
+| <span style="font-size:1.5em">♻</span> | Earth in hand, Americas | `americainhand` | 🎨 |
+| <span style="font-size:1.5em">♻</span> | Earth in hand, Asia and Australia | `asiaaustraliainhand` | 🎨 |
 
 ---
 
@@ -1148,266 +1148,266 @@ Reference reactions by their unique ID:
 
 | Emoji | Description | Reaction ID |
 |-------|-------------|-------------|
-| 👓 | Glasses | `1f453_glasses` |
-| 🕶️ | Sunglasses | `1f576_sunglasses` |
-| 🥽 | Goggles | `1f97d_goggles` |
-| 🥼 | Lab coat | `1f97c_labcoat` |
-| 🦺 | Safety vest | `1f9ba_safetyvest` |
-| 👔 | Necktie | `1f454_necktie` |
-| 👕 | T-shirt | `1f455_tshirt` |
-| 👖 | Jeans | `1f456_jeans` |
-| 🧣 | Scarf | `1f9e3_scarf` |
-| 🧤 | Gloves | `1f9e4_gloves` |
-| 🧥 | Coat | `1f9e5_coat` |
-| 🧦 | Socks | `1f9e6_socks` |
-| 👗 | Dress | `1f457_dress` |
-| 👘 | Kimono | `1f458_kimono` |
-| 🥻 | Sari | `1f97b_sari` |
-| 🩱 | Swimming suit | `1fa71_onepiece` |
-| 🩲 | Briefs | `1fa72_briefs` |
-| 🩳 | Shorts | `1fa73_shorts` |
-| 👙 | Bikini | `1f459_bikini` |
-| 👚 | Blouse | `1f45a_womansclothes` |
-| 🪭 | Fan | `fan` |
-| 👛 | Purse | `1f45b_purse` |
-| 👜 | Handbag | `1f45c_handbag` |
-| 👝 | Pouch | `1f45d_pouch` |
-| 🛍️ | Shopping bags | `shopping` |
-| 🎒 | Backpack | `1f392_schoolsatchel` |
-| 🩴 | Thong Sandal | `thongsandal` |
-| 👞 | Man's shoe | `1f45e_mansshoe` |
-| 👟 | Sneaker | `1f45f_athleticshoe` |
-| 🥾 | Hiking boot | `1f97e_hikingboot` |
-| 🥿 | Womans flat shoe | `1f97f_womansflatshoe` |
-| 👠 | High heels | `1f460_highheeledshoe` |
-| 👡 | Womans sandal | `1f461_womanssandal` |
-| 🩰 | Ballet shoes | `1fa70_balletshoes` |
-| 👢 | Womans boot | `1f462_womansboots` |
-| 🪮 | Hair pick | `hairpick` |
-| 👑 | Crown | `1f451_crown` |
-| 👒 | Womans hat | `1f452_womanshat` |
-| 🎩 | Top hat | `1f3a9_tophat` |
-| 🎓 | Graduate | `1f393_graduationcap` |
-| 🧢 | Baseball cap | `1f9e2_billedcap` |
-| 🪖 | Military helmet | `militaryhelmet` |
-| ⛑️ | Rescue helmet | `26d1_helmetwithwhitecross` |
-| 📿 | Prayer beads | `1f4ff_prayerbeads` |
-| 💄 | Lipstick | `lipstick` |
-| 💍 | Engagement ring | `ring` |
-| 💎 | Diamond | `diamond` |
-| 🔇 | Mute | `1f507_mutedspeaker` |
-| 🔈 | Speaker | `1f508_speaker` |
-| 🔉 | Medium volume | `1f509_speakerwithonesoundwave` |
-| 🔊 | High volume | `1f50a_speakerwiththreesoundwaves` |
-| 📢 | PA loudspeaker | `1f4e2_publicaddressloudspeaker` |
-| 📣 | Megaphone | `1f4e3_cheeringmegaphone` |
-| 📯 | Postal horn | `1f4ef_postalhorn` |
-| 🔔 | Bell | `bell` |
-| 🔕 | Muted bell | `1f515_bellwithslash` |
-| 🎼 | Musical score | `1f3bc_musicalscore` |
-| 🎵 | Music | `music` |
-| 🎶 | Multiple musical notes | `1f3b6_multiplemusicalnotes` |
-| 🎙️ | Studio microphone | `1f399_studiomicrophone` |
-| 🎚️ | Level slider | `1f39a_levelslider` |
-| 🎛️ | Control knobs | `1f39b_controlknobs` |
-| 🎤 | Microphone | `1f3a4_microphone` |
-| 🎧 | Headphone | `headphone` |
-| 📻 | Radio | `1f4fb_radio` |
-| 🎷 | Saxophone | `1f3b7_saxophone` |
-| 🪗 | Accordion | `accordion` |
-| 🎸 | Guitar | `guitar` |
-| 🎹 | Musical keyboard | `1f3b9_musicalkeyboard` |
-| 🎺 | Trumpet | `1f3ba_trumpet` |
-| 🎻 | Violin | `1f3bb_violin` |
-| 🪕 | Banjo | `1fa95_banjo` |
-| 🥁 | Drum | `1f941_drumwithdrumsticks` |
-| 🪘 | Long Drum | `longdrum` |
-| 🪇 | Maracas | `maracas` |
-| 🪈 | Flute | `flute` |
-| 📱 | Phone | `phone` |
-| 📲 | Mobile phone with arrow | `1f4f2_mobilephonewitharrow` |
-| ☎️ | Telephone | `260e_blacktelephone` |
-| 📞 | Telephone receiver | `telephonereceiver` |
-| 📟 | Pager | `1f4df_pager` |
-| 📠 | Fax machine | `1f4e0_faxmachine` |
-| 🔋 | Battery | `1f50b_battery` |
-| 🪫 | Low battery | `lowbattery` |
-| 🔌 | Electric plug | `1f50c_electricplug` |
-| 💻 | Computer | `computer` |
-| 🖥️ | Computer | `1f5a5_desktopcomputer` |
-| 🖨️ | Printer | `1f5a8_printer` |
-| ⌨️ | Keyboard | `2328_keyboard` |
-| 🖱️ | Mouse | `1f5b1_threebuttonmouse` |
-| 🖲️ | Trackball | `1f5b2_trackball` |
-| 💽 | Minidisc | `1f4bd_minidisc` |
-| 💾 | Floppy disk | `1f4be_floppydisk` |
-| 💿 | Optical disk | `1f4bf_opticaldisc` |
-| 📀 | DVD | `1f4c0_dvd` |
-| 🧮 | Abacus | `1f9ee_abacus` |
-| 🎥 | Movie camera | `1f3a5_moviecamera` |
-| 🎞️ | Film frames | `1f39e_filmframes` |
-| 📽️ | Film projector | `1f4fd_filmprojector` |
-| 🎬 | Movie | `movie` |
-| 📺 | Television | `1f4fa_television` |
-| 📷 | Camera | `1f4f7_camera` |
-| 📸 | Camera | `camera` |
-| 📹 | Video camera | `1f4f9_videocamera` |
-| 📼 | Video cassette | `1f4fc_videocassette` |
-| 🔍 | Magnifying glass left | `1f50d_magnifiertiltedleft` |
-| 🔎 | Magnifying glass right | `1f50e_magnifiertiltedright` |
-| 🕯️ | Candle | `1f56f_candle` |
-| 💡 | Electric light bulb | `1f4a1_electriclightbulb` |
-| 🔦 | Torch | `1f526_electrictorch` |
-| 🏮 | Izakaya lantern | `1f3ee_izakayalantern` |
-| 🪔 | Diya lamp | `1fa94_diyalamp` |
-| 📔 | Decorative notebook | `1f4d4_decorativenotebook` |
-| 📕 | Red book | `1f4d5_closedbook` |
-| 📖 | Open book | `1f4d6_openbook` |
-| 📗 | Green book | `1f4d7_greenbook` |
-| 📘 | Blue book | `1f4d8_bluebook` |
-| 📙 | Orange book | `1f4d9_orangebook` |
-| 📚 | Books | `1f4da_books` |
-| 📓 | Notebook | `1f4d3_notebook` |
-| 📒 | Binder | `1f4d2_ledger` |
-| 📃 | Curled page | `1f4c3_pagewithcurl` |
-| 📜 | Scroll | `1f4dc_scroll` |
-| 📄 | Page | `1f4c4_pagefacingup` |
-| 📰 | Newspaper | `1f4f0_newspaper` |
-| 🗞️ | Rolled up newspaper | `1f5de_rolledupnewspaper` |
-| 📑 | Bookmark tabs | `1f4d1_bookmarktabs` |
-| 🔖 | Bookmark | `1f516_bookmark` |
-| 🏷️ | Label tag | `1f3f7_label` |
-| 💰 | Money bag | `1f4b0_moneybag` |
-| 🪙 | Coin | `coin` |
-| 💴 | Yen | `1f4b4_banknotewithyensign` |
-| 💵 | Dollar | `1f4b5_banknotewithdollarsign` |
-| 💶 | Euro | `1f4b6_banknotewitheurosign` |
-| 💷 | Pound | `1f4b7_banknotewithpoundsign` |
-| 💸 | Flying money | `1f4b8_moneywithwings` |
-| 💳 | Credit card | `1f4b3_creditcard` |
-| 🧾 | Receipt | `1f9fe_receipt` |
-| 💹 | Chart increasing with yen | `1f4b9_yengraph` |
-| 🧧 | Red envelope | `1f9e7_redenvelope` |
-| 📧 | Email | `1f4e7_email` |
-| 📨 | Income envelope | `1f4e8_incomingenvelope` |
-| 📩 | Envelope with arrow | `1f4e9_envelopewitharrow` |
-| 📤 | Outbox | `1f4e4_outboxtray` |
-| 📥 | Inbox | `1f4e5_inboxtray` |
-| 📦 | Package | `1f4e6_package` |
-| 📫 | Closed mailbox with flag | `1f4eb_mailboxclosedflagup` |
-| 📪 | Closed mailbox | `1f4ea_mailboxclosedflagdown` |
-| 📬 | Open mailbox with flag | `1f4ec_openmailboxwithraisedflag` |
-| 📭 | Open mailbox | `1f4ed_openmailboxwithloweredflag` |
-| 📮 | Post box | `1f4ee_postbox` |
-| 🗳️ | Ballot box | `1f5f3_ballotboxwithballot` |
-| ✏️ | Pencil | `270f_pencil` |
-| ✒️ | Black nib | `2712_blacknib` |
-| 🖋️ | Fountain pen | `1f58b_lowerleftfountainpen` |
-| 🖊️ | Ball point pen | `1f58a_lowerleftballpointpen` |
-| 🖌️ | Paint brush | `1f58c_lowerleftpaintbrush` |
-| 🖍️ | Crayon | `1f58d_lowerleftcrayon` |
-| 📝 | Memo | `1f4dd_memo` |
-| 💼 | Briefcase | `1f4bc_briefcase` |
-| 📁 | Folder | `1f4c1_filefolder` |
-| 📂 | Open folder | `1f4c2_openfilefolder` |
-| 🗂️ | Folder dividers | `1f5c2_cardindexdividers` |
-| 📅 | Calendar | `1f4c5_calendar` |
-| 📆 | Spiral calendar | `spiralcalendar` |
-| 🗓️ | Tear off calendar | `1f4c6_tearoffcalendar` |
-| 🗒️ | Spiral notepad | `1f5d2_spiralnotepad` |
-| 📇 | Rolodex | `1f4c7_cardindex` |
-| 📈 | Positive graph | `1f4c8_chartwithupwardstrend` |
-| 📉 | Negative graph | `1f4c9_chartwithdownwardstrend` |
-| 📊 | Bar chart | `1f4ca_barchart` |
-| 📋 | Clipboard | `1f4cb_clipboard` |
-| 📌 | Pin | `1f4cc_pushpin` |
-| 📍 | Pin | `1f4cd_roundpushpin` |
-| 📎 | Paperclip | `1f4ce_paperclip` |
-| 🖇️ | Paper clips | `1f587_linkedpaperclips` |
-| 📏 | Ruler | `1f4cf_straightruler` |
-| 📐 | Triangular ruler | `1f4d0_triangularruler` |
-| ✂️ | Scissors | `2702_blackscissors` |
-| 🗃️ | File box | `1f5c3_cardfilebox` |
-| 🗄️ | Filing cabinet | `1f5c4_filecabinet` |
-| 🗑️ | Trash bin | `1f5d1_wastebasket` |
-| 🔒 | Locked | `1f512_locked` |
-| 🔓 | Unlocked | `1f513_unlocked` |
-| 🔏 | Locked with pen | `1f50f_lockedwithpen` |
-| 🔐 | Lock and key | `1f510_lockedwithkey` |
-| 🔑 | Key | `1f511_key` |
-| 🗝️ | Old key | `oldkey` |
-| 🔨 | Hammer  | `1f528_hammer` |
-| 🪓 | Axe | `1fa93_axe` |
-| ⛏️ | Pick | `26cf_pick` |
-| ⚒️ | Hammer and pick | `2692_hammerandpick` |
-| 🛠️ | Hammer and wrench | `1f6e0_hammerandwrench` |
-| 🗡️ | Dagger | `1f5e1_daggerknife` |
-| 🪃 | Boomerang | `boomerang` |
-| ⚔️ | Swords | `2694_crossedswords` |
-| 🔫 | Water pistol | `1f52b_pistol` |
-| 🏹 | Bow and arrow | `1f3f9_bowandarrow` |
-| 🛡️ | Shield | `1f6e1_shield` |
-| 🪚 | Carpentry saw | `carpentrysaw` |
-| 🔧 | Wrench | `1f527_wrench` |
-| 🪛 | Screwdriver | `screwdriver` |
-| 🔩 | Bolt | `1f529_nutandbolt` |
-| ⚙️ | Cog | `2699_gear` |
-| 🗜️ | Clamp | `1f5dc_compression` |
-| ⚖️ | Scales | `2696_scales` |
-| 🦯 | Probing cane | `1f9af_probingcane` |
-| 🔗 | Link | `1f517_linksymbol` |
-| ⛓️‍💥 | Broken chain | `brokenchain8` |
-| ⛓️ | Chains | `26d3_chains` |
-| 🪝 | Hook | `hook` |
-| 🧰 | Toolbox | `1f9f0_toolbox` |
-| 🧲 | Magnet | `1f9f2_magnet` |
-| 🪜 | Ladder | `ladder` |
-| ⚗️ | Alembic | `2697_alembic` |
-| 🧪 | Test tube | `1f9ea_testtube` |
-| 🧫 | Petri dish | `1f9eb_petridish` |
-| 🧬 | DNA | `1f9ec_dna` |
-| 🔬 | Microscope | `1f52c_microscope` |
-| 🔭 | Telescope | `1f52d_telescope` |
-| 📡 | Satellite antenna | `1f4e1_satelliteantenna` |
-| 💉 | Syringe | `1f489_syringe` |
-| 🩸 | Blood drop | `1fa78_blooddrop` |
-| 💊 | Pill | `1f48a_pill` |
-| 🩹 | Plaster | `1fa79_adhesivebandage` |
-| 🩼 | Crutch | `crutch` |
-| 🩺 | Stethoscope | `1fa7a_stethoscope` |
-| 🩻 | X-ray | `xray` |
-| 🚪 | Door | `1f6aa_door` |
-| 🛗 | Elevator | `elevator` |
-| 🪞 | Mirror | `mirror` |
-| 🪟 | Window | `window` |
-| 🛏️ | Bed | `1f6cf_bed` |
-| 🛋️ | Couch and lamp | `1f6cb_couchandlamp` |
-| 🪑 | Chair | `1fa91_chair` |
-| 🚽 | Toilet | `toilet` |
-| 🪠 | Plunger | `plunger` |
-| 🚿 | Shower | `1f6bf_shower` |
-| 🛁 | Bath tub | `1f6c1_bathtub` |
-| 🪤 | Mouse trap | `mousetrap` |
-| 🪒 | Razor | `1fa92_razor` |
-| 🧴 | Lotion | `1f9f4_lotionbottle` |
-| 🧹 | Broom | `1f9f9_broom` |
-| 🧺 | Laundry basket | `1f9fa_basket` |
-| 🧻 | Roll of paper | `1f9fb_toiletpaper` |
-| 🪣 | Bucket | `bucket` |
-| 🧼 | Soap | `1f9fc_soap` |
-| 🫧 | Bubbles | `bubbles` |
-| 🪥 | Toothbrush | `toothbrush` |
-| 🧽 | Sponge | `1f9fd_sponge` |
-| 🧯 | Fire extinguisher | `1f9ef_fireextinguisher` |
-| 🛒 | Shopping trolley | `1f6d2_shoppingtrolley` |
-| 🚬 | Cigarette | `cigarette` |
-| ⚰️ | Coffin | `26b0_coffin` |
-| 🪦 | Headstone | `headstone` |
-| ⚱️ | Funeral urn | `26b1_funeralurn` |
-| 🪬 | Hamsa | `hamsa` |
-| 🗿 | Moyai | `1f5ff_moyai` |
-| 🪧 | Placard | `placard` |
-| 🪪 | ID card | `idcard` |
+| <span style="font-size:1.5em">👓</span> | Glasses | `1f453_glasses` |
+| <span style="font-size:1.5em">🕶️</span> | Sunglasses | `1f576_sunglasses` |
+| <span style="font-size:1.5em">🥽</span> | Goggles | `1f97d_goggles` |
+| <span style="font-size:1.5em">🥼</span> | Lab coat | `1f97c_labcoat` |
+| <span style="font-size:1.5em">🦺</span> | Safety vest | `1f9ba_safetyvest` |
+| <span style="font-size:1.5em">👔</span> | Necktie | `1f454_necktie` |
+| <span style="font-size:1.5em">👕</span> | T-shirt | `1f455_tshirt` |
+| <span style="font-size:1.5em">👖</span> | Jeans | `1f456_jeans` |
+| <span style="font-size:1.5em">🧣</span> | Scarf | `1f9e3_scarf` |
+| <span style="font-size:1.5em">🧤</span> | Gloves | `1f9e4_gloves` |
+| <span style="font-size:1.5em">🧥</span> | Coat | `1f9e5_coat` |
+| <span style="font-size:1.5em">🧦</span> | Socks | `1f9e6_socks` |
+| <span style="font-size:1.5em">👗</span> | Dress | `1f457_dress` |
+| <span style="font-size:1.5em">👘</span> | Kimono | `1f458_kimono` |
+| <span style="font-size:1.5em">🥻</span> | Sari | `1f97b_sari` |
+| <span style="font-size:1.5em">🩱</span> | Swimming suit | `1fa71_onepiece` |
+| <span style="font-size:1.5em">🩲</span> | Briefs | `1fa72_briefs` |
+| <span style="font-size:1.5em">🩳</span> | Shorts | `1fa73_shorts` |
+| <span style="font-size:1.5em">👙</span> | Bikini | `1f459_bikini` |
+| <span style="font-size:1.5em">👚</span> | Blouse | `1f45a_womansclothes` |
+| <span style="font-size:1.5em">🪭</span> | Fan | `fan` |
+| <span style="font-size:1.5em">👛</span> | Purse | `1f45b_purse` |
+| <span style="font-size:1.5em">👜</span> | Handbag | `1f45c_handbag` |
+| <span style="font-size:1.5em">👝</span> | Pouch | `1f45d_pouch` |
+| <span style="font-size:1.5em">🛍️</span> | Shopping bags | `shopping` |
+| <span style="font-size:1.5em">🎒</span> | Backpack | `1f392_schoolsatchel` |
+| <span style="font-size:1.5em">🩴</span> | Thong Sandal | `thongsandal` |
+| <span style="font-size:1.5em">👞</span> | Man's shoe | `1f45e_mansshoe` |
+| <span style="font-size:1.5em">👟</span> | Sneaker | `1f45f_athleticshoe` |
+| <span style="font-size:1.5em">🥾</span> | Hiking boot | `1f97e_hikingboot` |
+| <span style="font-size:1.5em">🥿</span> | Womans flat shoe | `1f97f_womansflatshoe` |
+| <span style="font-size:1.5em">👠</span> | High heels | `1f460_highheeledshoe` |
+| <span style="font-size:1.5em">👡</span> | Womans sandal | `1f461_womanssandal` |
+| <span style="font-size:1.5em">🩰</span> | Ballet shoes | `1fa70_balletshoes` |
+| <span style="font-size:1.5em">👢</span> | Womans boot | `1f462_womansboots` |
+| <span style="font-size:1.5em">🪮</span> | Hair pick | `hairpick` |
+| <span style="font-size:1.5em">👑</span> | Crown | `1f451_crown` |
+| <span style="font-size:1.5em">👒</span> | Womans hat | `1f452_womanshat` |
+| <span style="font-size:1.5em">🎩</span> | Top hat | `1f3a9_tophat` |
+| <span style="font-size:1.5em">🎓</span> | Graduate | `1f393_graduationcap` |
+| <span style="font-size:1.5em">🧢</span> | Baseball cap | `1f9e2_billedcap` |
+| <span style="font-size:1.5em">🪖</span> | Military helmet | `militaryhelmet` |
+| <span style="font-size:1.5em">⛑️</span> | Rescue helmet | `26d1_helmetwithwhitecross` |
+| <span style="font-size:1.5em">📿</span> | Prayer beads | `1f4ff_prayerbeads` |
+| <span style="font-size:1.5em">💄</span> | Lipstick | `lipstick` |
+| <span style="font-size:1.5em">💍</span> | Engagement ring | `ring` |
+| <span style="font-size:1.5em">💎</span> | Diamond | `diamond` |
+| <span style="font-size:1.5em">🔇</span> | Mute | `1f507_mutedspeaker` |
+| <span style="font-size:1.5em">🔈</span> | Speaker | `1f508_speaker` |
+| <span style="font-size:1.5em">🔉</span> | Medium volume | `1f509_speakerwithonesoundwave` |
+| <span style="font-size:1.5em">🔊</span> | High volume | `1f50a_speakerwiththreesoundwaves` |
+| <span style="font-size:1.5em">📢</span> | PA loudspeaker | `1f4e2_publicaddressloudspeaker` |
+| <span style="font-size:1.5em">📣</span> | Megaphone | `1f4e3_cheeringmegaphone` |
+| <span style="font-size:1.5em">📯</span> | Postal horn | `1f4ef_postalhorn` |
+| <span style="font-size:1.5em">🔔</span> | Bell | `bell` |
+| <span style="font-size:1.5em">🔕</span> | Muted bell | `1f515_bellwithslash` |
+| <span style="font-size:1.5em">🎼</span> | Musical score | `1f3bc_musicalscore` |
+| <span style="font-size:1.5em">🎵</span> | Music | `music` |
+| <span style="font-size:1.5em">🎶</span> | Multiple musical notes | `1f3b6_multiplemusicalnotes` |
+| <span style="font-size:1.5em">🎙️</span> | Studio microphone | `1f399_studiomicrophone` |
+| <span style="font-size:1.5em">🎚️</span> | Level slider | `1f39a_levelslider` |
+| <span style="font-size:1.5em">🎛️</span> | Control knobs | `1f39b_controlknobs` |
+| <span style="font-size:1.5em">🎤</span> | Microphone | `1f3a4_microphone` |
+| <span style="font-size:1.5em">🎧</span> | Headphone | `headphone` |
+| <span style="font-size:1.5em">📻</span> | Radio | `1f4fb_radio` |
+| <span style="font-size:1.5em">🎷</span> | Saxophone | `1f3b7_saxophone` |
+| <span style="font-size:1.5em">🪗</span> | Accordion | `accordion` |
+| <span style="font-size:1.5em">🎸</span> | Guitar | `guitar` |
+| <span style="font-size:1.5em">🎹</span> | Musical keyboard | `1f3b9_musicalkeyboard` |
+| <span style="font-size:1.5em">🎺</span> | Trumpet | `1f3ba_trumpet` |
+| <span style="font-size:1.5em">🎻</span> | Violin | `1f3bb_violin` |
+| <span style="font-size:1.5em">🪕</span> | Banjo | `1fa95_banjo` |
+| <span style="font-size:1.5em">🥁</span> | Drum | `1f941_drumwithdrumsticks` |
+| <span style="font-size:1.5em">🪘</span> | Long Drum | `longdrum` |
+| <span style="font-size:1.5em">🪇</span> | Maracas | `maracas` |
+| <span style="font-size:1.5em">🪈</span> | Flute | `flute` |
+| <span style="font-size:1.5em">📱</span> | Phone | `phone` |
+| <span style="font-size:1.5em">📲</span> | Mobile phone with arrow | `1f4f2_mobilephonewitharrow` |
+| <span style="font-size:1.5em">☎️</span> | Telephone | `260e_blacktelephone` |
+| <span style="font-size:1.5em">📞</span> | Telephone receiver | `telephonereceiver` |
+| <span style="font-size:1.5em">📟</span> | Pager | `1f4df_pager` |
+| <span style="font-size:1.5em">📠</span> | Fax machine | `1f4e0_faxmachine` |
+| <span style="font-size:1.5em">🔋</span> | Battery | `1f50b_battery` |
+| <span style="font-size:1.5em">🪫</span> | Low battery | `lowbattery` |
+| <span style="font-size:1.5em">🔌</span> | Electric plug | `1f50c_electricplug` |
+| <span style="font-size:1.5em">💻</span> | Computer | `computer` |
+| <span style="font-size:1.5em">🖥️</span> | Computer | `1f5a5_desktopcomputer` |
+| <span style="font-size:1.5em">🖨️</span> | Printer | `1f5a8_printer` |
+| <span style="font-size:1.5em">⌨️</span> | Keyboard | `2328_keyboard` |
+| <span style="font-size:1.5em">🖱️</span> | Mouse | `1f5b1_threebuttonmouse` |
+| <span style="font-size:1.5em">🖲️</span> | Trackball | `1f5b2_trackball` |
+| <span style="font-size:1.5em">💽</span> | Minidisc | `1f4bd_minidisc` |
+| <span style="font-size:1.5em">💾</span> | Floppy disk | `1f4be_floppydisk` |
+| <span style="font-size:1.5em">💿</span> | Optical disk | `1f4bf_opticaldisc` |
+| <span style="font-size:1.5em">📀</span> | DVD | `1f4c0_dvd` |
+| <span style="font-size:1.5em">🧮</span> | Abacus | `1f9ee_abacus` |
+| <span style="font-size:1.5em">🎥</span> | Movie camera | `1f3a5_moviecamera` |
+| <span style="font-size:1.5em">🎞️</span> | Film frames | `1f39e_filmframes` |
+| <span style="font-size:1.5em">📽️</span> | Film projector | `1f4fd_filmprojector` |
+| <span style="font-size:1.5em">🎬</span> | Movie | `movie` |
+| <span style="font-size:1.5em">📺</span> | Television | `1f4fa_television` |
+| <span style="font-size:1.5em">📷</span> | Camera | `1f4f7_camera` |
+| <span style="font-size:1.5em">📸</span> | Camera | `camera` |
+| <span style="font-size:1.5em">📹</span> | Video camera | `1f4f9_videocamera` |
+| <span style="font-size:1.5em">📼</span> | Video cassette | `1f4fc_videocassette` |
+| <span style="font-size:1.5em">🔍</span> | Magnifying glass left | `1f50d_magnifiertiltedleft` |
+| <span style="font-size:1.5em">🔎</span> | Magnifying glass right | `1f50e_magnifiertiltedright` |
+| <span style="font-size:1.5em">🕯️</span> | Candle | `1f56f_candle` |
+| <span style="font-size:1.5em">💡</span> | Electric light bulb | `1f4a1_electriclightbulb` |
+| <span style="font-size:1.5em">🔦</span> | Torch | `1f526_electrictorch` |
+| <span style="font-size:1.5em">🏮</span> | Izakaya lantern | `1f3ee_izakayalantern` |
+| <span style="font-size:1.5em">🪔</span> | Diya lamp | `1fa94_diyalamp` |
+| <span style="font-size:1.5em">📔</span> | Decorative notebook | `1f4d4_decorativenotebook` |
+| <span style="font-size:1.5em">📕</span> | Red book | `1f4d5_closedbook` |
+| <span style="font-size:1.5em">📖</span> | Open book | `1f4d6_openbook` |
+| <span style="font-size:1.5em">📗</span> | Green book | `1f4d7_greenbook` |
+| <span style="font-size:1.5em">📘</span> | Blue book | `1f4d8_bluebook` |
+| <span style="font-size:1.5em">📙</span> | Orange book | `1f4d9_orangebook` |
+| <span style="font-size:1.5em">📚</span> | Books | `1f4da_books` |
+| <span style="font-size:1.5em">📓</span> | Notebook | `1f4d3_notebook` |
+| <span style="font-size:1.5em">📒</span> | Binder | `1f4d2_ledger` |
+| <span style="font-size:1.5em">📃</span> | Curled page | `1f4c3_pagewithcurl` |
+| <span style="font-size:1.5em">📜</span> | Scroll | `1f4dc_scroll` |
+| <span style="font-size:1.5em">📄</span> | Page | `1f4c4_pagefacingup` |
+| <span style="font-size:1.5em">📰</span> | Newspaper | `1f4f0_newspaper` |
+| <span style="font-size:1.5em">🗞️</span> | Rolled up newspaper | `1f5de_rolledupnewspaper` |
+| <span style="font-size:1.5em">📑</span> | Bookmark tabs | `1f4d1_bookmarktabs` |
+| <span style="font-size:1.5em">🔖</span> | Bookmark | `1f516_bookmark` |
+| <span style="font-size:1.5em">🏷️</span> | Label tag | `1f3f7_label` |
+| <span style="font-size:1.5em">💰</span> | Money bag | `1f4b0_moneybag` |
+| <span style="font-size:1.5em">🪙</span> | Coin | `coin` |
+| <span style="font-size:1.5em">💴</span> | Yen | `1f4b4_banknotewithyensign` |
+| <span style="font-size:1.5em">💵</span> | Dollar | `1f4b5_banknotewithdollarsign` |
+| <span style="font-size:1.5em">💶</span> | Euro | `1f4b6_banknotewitheurosign` |
+| <span style="font-size:1.5em">💷</span> | Pound | `1f4b7_banknotewithpoundsign` |
+| <span style="font-size:1.5em">💸</span> | Flying money | `1f4b8_moneywithwings` |
+| <span style="font-size:1.5em">💳</span> | Credit card | `1f4b3_creditcard` |
+| <span style="font-size:1.5em">🧾</span> | Receipt | `1f9fe_receipt` |
+| <span style="font-size:1.5em">💹</span> | Chart increasing with yen | `1f4b9_yengraph` |
+| <span style="font-size:1.5em">🧧</span> | Red envelope | `1f9e7_redenvelope` |
+| <span style="font-size:1.5em">📧</span> | Email | `1f4e7_email` |
+| <span style="font-size:1.5em">📨</span> | Income envelope | `1f4e8_incomingenvelope` |
+| <span style="font-size:1.5em">📩</span> | Envelope with arrow | `1f4e9_envelopewitharrow` |
+| <span style="font-size:1.5em">📤</span> | Outbox | `1f4e4_outboxtray` |
+| <span style="font-size:1.5em">📥</span> | Inbox | `1f4e5_inboxtray` |
+| <span style="font-size:1.5em">📦</span> | Package | `1f4e6_package` |
+| <span style="font-size:1.5em">📫</span> | Closed mailbox with flag | `1f4eb_mailboxclosedflagup` |
+| <span style="font-size:1.5em">📪</span> | Closed mailbox | `1f4ea_mailboxclosedflagdown` |
+| <span style="font-size:1.5em">📬</span> | Open mailbox with flag | `1f4ec_openmailboxwithraisedflag` |
+| <span style="font-size:1.5em">📭</span> | Open mailbox | `1f4ed_openmailboxwithloweredflag` |
+| <span style="font-size:1.5em">📮</span> | Post box | `1f4ee_postbox` |
+| <span style="font-size:1.5em">🗳️</span> | Ballot box | `1f5f3_ballotboxwithballot` |
+| <span style="font-size:1.5em">✏️</span> | Pencil | `270f_pencil` |
+| <span style="font-size:1.5em">✒️</span> | Black nib | `2712_blacknib` |
+| <span style="font-size:1.5em">🖋️</span> | Fountain pen | `1f58b_lowerleftfountainpen` |
+| <span style="font-size:1.5em">🖊️</span> | Ball point pen | `1f58a_lowerleftballpointpen` |
+| <span style="font-size:1.5em">🖌️</span> | Paint brush | `1f58c_lowerleftpaintbrush` |
+| <span style="font-size:1.5em">🖍️</span> | Crayon | `1f58d_lowerleftcrayon` |
+| <span style="font-size:1.5em">📝</span> | Memo | `1f4dd_memo` |
+| <span style="font-size:1.5em">💼</span> | Briefcase | `1f4bc_briefcase` |
+| <span style="font-size:1.5em">📁</span> | Folder | `1f4c1_filefolder` |
+| <span style="font-size:1.5em">📂</span> | Open folder | `1f4c2_openfilefolder` |
+| <span style="font-size:1.5em">🗂️</span> | Folder dividers | `1f5c2_cardindexdividers` |
+| <span style="font-size:1.5em">📅</span> | Calendar | `1f4c5_calendar` |
+| <span style="font-size:1.5em">📆</span> | Spiral calendar | `spiralcalendar` |
+| <span style="font-size:1.5em">🗓️</span> | Tear off calendar | `1f4c6_tearoffcalendar` |
+| <span style="font-size:1.5em">🗒️</span> | Spiral notepad | `1f5d2_spiralnotepad` |
+| <span style="font-size:1.5em">📇</span> | Rolodex | `1f4c7_cardindex` |
+| <span style="font-size:1.5em">📈</span> | Positive graph | `1f4c8_chartwithupwardstrend` |
+| <span style="font-size:1.5em">📉</span> | Negative graph | `1f4c9_chartwithdownwardstrend` |
+| <span style="font-size:1.5em">📊</span> | Bar chart | `1f4ca_barchart` |
+| <span style="font-size:1.5em">📋</span> | Clipboard | `1f4cb_clipboard` |
+| <span style="font-size:1.5em">📌</span> | Pin | `1f4cc_pushpin` |
+| <span style="font-size:1.5em">📍</span> | Pin | `1f4cd_roundpushpin` |
+| <span style="font-size:1.5em">📎</span> | Paperclip | `1f4ce_paperclip` |
+| <span style="font-size:1.5em">🖇️</span> | Paper clips | `1f587_linkedpaperclips` |
+| <span style="font-size:1.5em">📏</span> | Ruler | `1f4cf_straightruler` |
+| <span style="font-size:1.5em">📐</span> | Triangular ruler | `1f4d0_triangularruler` |
+| <span style="font-size:1.5em">✂️</span> | Scissors | `2702_blackscissors` |
+| <span style="font-size:1.5em">🗃️</span> | File box | `1f5c3_cardfilebox` |
+| <span style="font-size:1.5em">🗄️</span> | Filing cabinet | `1f5c4_filecabinet` |
+| <span style="font-size:1.5em">🗑️</span> | Trash bin | `1f5d1_wastebasket` |
+| <span style="font-size:1.5em">🔒</span> | Locked | `1f512_locked` |
+| <span style="font-size:1.5em">🔓</span> | Unlocked | `1f513_unlocked` |
+| <span style="font-size:1.5em">🔏</span> | Locked with pen | `1f50f_lockedwithpen` |
+| <span style="font-size:1.5em">🔐</span> | Lock and key | `1f510_lockedwithkey` |
+| <span style="font-size:1.5em">🔑</span> | Key | `1f511_key` |
+| <span style="font-size:1.5em">🗝️</span> | Old key | `oldkey` |
+| <span style="font-size:1.5em">🔨</span> | Hammer  | `1f528_hammer` |
+| <span style="font-size:1.5em">🪓</span> | Axe | `1fa93_axe` |
+| <span style="font-size:1.5em">⛏️</span> | Pick | `26cf_pick` |
+| <span style="font-size:1.5em">⚒️</span> | Hammer and pick | `2692_hammerandpick` |
+| <span style="font-size:1.5em">🛠️</span> | Hammer and wrench | `1f6e0_hammerandwrench` |
+| <span style="font-size:1.5em">🗡️</span> | Dagger | `1f5e1_daggerknife` |
+| <span style="font-size:1.5em">🪃</span> | Boomerang | `boomerang` |
+| <span style="font-size:1.5em">⚔️</span> | Swords | `2694_crossedswords` |
+| <span style="font-size:1.5em">🔫</span> | Water pistol | `1f52b_pistol` |
+| <span style="font-size:1.5em">🏹</span> | Bow and arrow | `1f3f9_bowandarrow` |
+| <span style="font-size:1.5em">🛡️</span> | Shield | `1f6e1_shield` |
+| <span style="font-size:1.5em">🪚</span> | Carpentry saw | `carpentrysaw` |
+| <span style="font-size:1.5em">🔧</span> | Wrench | `1f527_wrench` |
+| <span style="font-size:1.5em">🪛</span> | Screwdriver | `screwdriver` |
+| <span style="font-size:1.5em">🔩</span> | Bolt | `1f529_nutandbolt` |
+| <span style="font-size:1.5em">⚙️</span> | Cog | `2699_gear` |
+| <span style="font-size:1.5em">🗜️</span> | Clamp | `1f5dc_compression` |
+| <span style="font-size:1.5em">⚖️</span> | Scales | `2696_scales` |
+| <span style="font-size:1.5em">🦯</span> | Probing cane | `1f9af_probingcane` |
+| <span style="font-size:1.5em">🔗</span> | Link | `1f517_linksymbol` |
+| <span style="font-size:1.5em">⛓️‍💥</span> | Broken chain | `brokenchain8` |
+| <span style="font-size:1.5em">⛓️</span> | Chains | `26d3_chains` |
+| <span style="font-size:1.5em">🪝</span> | Hook | `hook` |
+| <span style="font-size:1.5em">🧰</span> | Toolbox | `1f9f0_toolbox` |
+| <span style="font-size:1.5em">🧲</span> | Magnet | `1f9f2_magnet` |
+| <span style="font-size:1.5em">🪜</span> | Ladder | `ladder` |
+| <span style="font-size:1.5em">⚗️</span> | Alembic | `2697_alembic` |
+| <span style="font-size:1.5em">🧪</span> | Test tube | `1f9ea_testtube` |
+| <span style="font-size:1.5em">🧫</span> | Petri dish | `1f9eb_petridish` |
+| <span style="font-size:1.5em">🧬</span> | DNA | `1f9ec_dna` |
+| <span style="font-size:1.5em">🔬</span> | Microscope | `1f52c_microscope` |
+| <span style="font-size:1.5em">🔭</span> | Telescope | `1f52d_telescope` |
+| <span style="font-size:1.5em">📡</span> | Satellite antenna | `1f4e1_satelliteantenna` |
+| <span style="font-size:1.5em">💉</span> | Syringe | `1f489_syringe` |
+| <span style="font-size:1.5em">🩸</span> | Blood drop | `1fa78_blooddrop` |
+| <span style="font-size:1.5em">💊</span> | Pill | `1f48a_pill` |
+| <span style="font-size:1.5em">🩹</span> | Plaster | `1fa79_adhesivebandage` |
+| <span style="font-size:1.5em">🩼</span> | Crutch | `crutch` |
+| <span style="font-size:1.5em">🩺</span> | Stethoscope | `1fa7a_stethoscope` |
+| <span style="font-size:1.5em">🩻</span> | X-ray | `xray` |
+| <span style="font-size:1.5em">🚪</span> | Door | `1f6aa_door` |
+| <span style="font-size:1.5em">🛗</span> | Elevator | `elevator` |
+| <span style="font-size:1.5em">🪞</span> | Mirror | `mirror` |
+| <span style="font-size:1.5em">🪟</span> | Window | `window` |
+| <span style="font-size:1.5em">🛏️</span> | Bed | `1f6cf_bed` |
+| <span style="font-size:1.5em">🛋️</span> | Couch and lamp | `1f6cb_couchandlamp` |
+| <span style="font-size:1.5em">🪑</span> | Chair | `1fa91_chair` |
+| <span style="font-size:1.5em">🚽</span> | Toilet | `toilet` |
+| <span style="font-size:1.5em">🪠</span> | Plunger | `plunger` |
+| <span style="font-size:1.5em">🚿</span> | Shower | `1f6bf_shower` |
+| <span style="font-size:1.5em">🛁</span> | Bath tub | `1f6c1_bathtub` |
+| <span style="font-size:1.5em">🪤</span> | Mouse trap | `mousetrap` |
+| <span style="font-size:1.5em">🪒</span> | Razor | `1fa92_razor` |
+| <span style="font-size:1.5em">🧴</span> | Lotion | `1f9f4_lotionbottle` |
+| <span style="font-size:1.5em">🧹</span> | Broom | `1f9f9_broom` |
+| <span style="font-size:1.5em">🧺</span> | Laundry basket | `1f9fa_basket` |
+| <span style="font-size:1.5em">🧻</span> | Roll of paper | `1f9fb_toiletpaper` |
+| <span style="font-size:1.5em">🪣</span> | Bucket | `bucket` |
+| <span style="font-size:1.5em">🧼</span> | Soap | `1f9fc_soap` |
+| <span style="font-size:1.5em">🫧</span> | Bubbles | `bubbles` |
+| <span style="font-size:1.5em">🪥</span> | Toothbrush | `toothbrush` |
+| <span style="font-size:1.5em">🧽</span> | Sponge | `1f9fd_sponge` |
+| <span style="font-size:1.5em">🧯</span> | Fire extinguisher | `1f9ef_fireextinguisher` |
+| <span style="font-size:1.5em">🛒</span> | Shopping trolley | `1f6d2_shoppingtrolley` |
+| <span style="font-size:1.5em">🚬</span> | Cigarette | `cigarette` |
+| <span style="font-size:1.5em">⚰️</span> | Coffin | `26b0_coffin` |
+| <span style="font-size:1.5em">🪦</span> | Headstone | `headstone` |
+| <span style="font-size:1.5em">⚱️</span> | Funeral urn | `26b1_funeralurn` |
+| <span style="font-size:1.5em">🪬</span> | Hamsa | `hamsa` |
+| <span style="font-size:1.5em">🗿</span> | Moyai | `1f5ff_moyai` |
+| <span style="font-size:1.5em">🪧</span> | Placard | `placard` |
+| <span style="font-size:1.5em">🪪</span> | ID card | `idcard` |
 
 ---
 
@@ -1415,92 +1415,92 @@ Reference reactions by their unique ID:
 
 | Emoji | Description | Reaction ID |
 |-------|-------------|-------------|
-| 🎃 | Pumpkin | `pumpkin` |
-| 🎄 | Xmas tree | `xmastree` |
-| 🎆 | Fireworks | `fireworks` |
-| 🎇 | Sparkler | `sparkler` |
-| 🧨 | Dynamite | `1f9e8_firecracker` |
-| ✨ | Sparkles | `2728_sparkles` |
-| 🎈 | Balloon | `1f388_balloon` |
-| 🎉 | Party popper | `1f389_partypopper` |
-| 🎊 | Confetti ball | `1f38a_confettiball` |
-| 🎋 | Tanabata tree | `1f38b_tanabatatree` |
-| 🎍 | Pine decoration | `1f38d_pinedecoration` |
-| 🎎 | Japanese dolls | `1f38e_japanesedolls` |
-| 🎏 | Carp streamer | `1f38f_carpstreamer` |
-| 🎐 | Wind chime | `1f390_windchime` |
-| 🎑 | Harvest moon | `1f391_moonviewingceremony` |
-| 🧧 | Red envelope | `1f9e7_redenvelope` |
-| 🎀 | Ribbon | `1f380_ribbon` |
-| 🎁 | Gift | `gift` |
-| 🎗️ | Reminder ribbon | `reminderribbon` |
-| 🎟️ | Admission tickets | `1f39f_admissiontickets` |
-| 🎫 | Ticket | `1f3ab_ticket` |
-| 🎖️ | Military medal | `1f396_militarymedal` |
-| 🏆 | Trophy | `trophy` |
-| 🏅 | Sports medal | `1f3c5_sportsmedal` |
-| 🥇 | Gold medal | `goldmedal` |
-| 🥈 | Silver medal | `silvermedal` |
-| 🥉 | Bronze medal | `bronzemedal` |
-| ⚽ | Soccer ball | `soccerball` |
-| ⚾ | Baseball | `baseball` |
-| 🥎 | Softball | `1f94e_softball` |
-| 🏀 | Basketball | `basketball` |
-| 🏐 | Volley ball | `1f3d0_volleyball` |
-| 🏈 | American football | `americanfootball` |
-| 🏉 | Rugby football | `rugbyball` |
-| 🎾 | Tennis ball | `tennisball` |
-| 🥏 | Frisbee | `1f94f_flyingdisc` |
-| 🎳 | Bowling ball | `bowlingball` |
-| 🏏 | Cricket bat and ball | `cricketbatandball` |
-| 🏑 | Field hockey | `1f3d1_fieldhockeystickandball` |
-| 🏒 | Ice hockey | `1f3d2_icehockeystickandpuck` |
-| 🥍 | Lacrosse | `lacrosse` |
-| 🏓 | Table tennis | `1f3d3_tabletennispaddleandball` |
-| 🏸 | Badminton | `1f3f8_badminton` |
-| 🥊 | Boxing glove | `boxingglove` |
-| 🥋 | Martial arts uniform | `1f94b_martialartsuniform` |
-| 🥅 | Goal | `1f945_goalnet` |
-| ⛳ | Flag in hole | `flaginhole` |
-| ⛸️ | Ice skate | `26f8_iceskate` |
-| 🎣 | Fishing pole | `1f3a3_fishingpoleandfish` |
-| 🤿 | Diving mask | `1f93f_divingmask` |
-| 🎽 | Running shirt | `1f3bd_runningshirtwithsash` |
-| 🎿 | Ski and skiboot  | `1f3bf_skiandskiboot` |
-| 🛷 | Sled | `1f6f7_sled` |
-| 🥌 | Curling stone | `1f94c_curlingstone` |
-| 🎯 | Archery | `target` |
-| 🪀 | Yo-yo | `1fa80_yoyo` |
-| 🪁 | Kite | `1fa81_kite` |
-| 🎱 | Pool eight ball | `eightball` |
-| 🔮 | Crystal ball | `1f52e_crystalball` |
-| 🪄 | Magic Wand | `magicwand` |
-| 🧿 | Nazar amulet | `1f9ff_nazaramulet` |
-| 🎮 | Games | `games` |
-| 🕹️ | Joystick | `1f579_joystick` |
-| 🎰 | Slot machine | `1f3b0_slotmachine` |
-| 🎲 | Dice | `1f3b2_gamedie` |
-| 🧩 | Puzzle piece | `1f9e9_jigsaw` |
-| 🧸 | Teddy bear | `hug` |
-| 🪅 | Piñata | `pinata` |
-| 🪩 | Glitter ball | `glitterball` |
-| 🪆 | Matreshka | `matreshka` |
-| ♠️ | Spades | `2660_blackspadesuit` |
-| ♥️ | Hearts | `2665_blackheartsuit` |
-| ♦️ | Diamonds | `2666_blackdiamondsuit` |
-| ♣️ | Clubs | `2663_blackclubsuit` |
-| ♟️ | Chess pawn | `265f_chesspawn` |
-| 🃏 | Joker | `1f0cf_playingcardblackjoker` |
-| 🀄 | Mahjong | `1f004_mahjong` |
-| 🎴 | Flower playing cards | `1f3b4_flowerplayingcards` |
-| 🎭 | Performing arts | `1f3ad_performingarts` |
-| 🖼️ | Painting | `1f5bc_framewithpicture` |
-| 🎨 | Artist palette | `1f3a8_artistpalette` |
-| 🧵 | Thread | `1f9f5_thread` |
-| 🪡 | Sewing needle | `sewingneedle` |
-| 🧶 | Ball of yarn | `1f9f6_yarn` |
-| 🪢 | Knot | `knot` |
-| 🎗️ | Red ribbon | `ribbonred` |
+| <span style="font-size:1.5em">🎃</span> | Pumpkin | `pumpkin` |
+| <span style="font-size:1.5em">🎄</span> | Xmas tree | `xmastree` |
+| <span style="font-size:1.5em">🎆</span> | Fireworks | `fireworks` |
+| <span style="font-size:1.5em">🎇</span> | Sparkler | `sparkler` |
+| <span style="font-size:1.5em">🧨</span> | Dynamite | `1f9e8_firecracker` |
+| <span style="font-size:1.5em">✨</span> | Sparkles | `2728_sparkles` |
+| <span style="font-size:1.5em">🎈</span> | Balloon | `1f388_balloon` |
+| <span style="font-size:1.5em">🎉</span> | Party popper | `1f389_partypopper` |
+| <span style="font-size:1.5em">🎊</span> | Confetti ball | `1f38a_confettiball` |
+| <span style="font-size:1.5em">🎋</span> | Tanabata tree | `1f38b_tanabatatree` |
+| <span style="font-size:1.5em">🎍</span> | Pine decoration | `1f38d_pinedecoration` |
+| <span style="font-size:1.5em">🎎</span> | Japanese dolls | `1f38e_japanesedolls` |
+| <span style="font-size:1.5em">🎏</span> | Carp streamer | `1f38f_carpstreamer` |
+| <span style="font-size:1.5em">🎐</span> | Wind chime | `1f390_windchime` |
+| <span style="font-size:1.5em">🎑</span> | Harvest moon | `1f391_moonviewingceremony` |
+| <span style="font-size:1.5em">🧧</span> | Red envelope | `1f9e7_redenvelope` |
+| <span style="font-size:1.5em">🎀</span> | Ribbon | `1f380_ribbon` |
+| <span style="font-size:1.5em">🎁</span> | Gift | `gift` |
+| <span style="font-size:1.5em">🎗️</span> | Reminder ribbon | `reminderribbon` |
+| <span style="font-size:1.5em">🎟️</span> | Admission tickets | `1f39f_admissiontickets` |
+| <span style="font-size:1.5em">🎫</span> | Ticket | `1f3ab_ticket` |
+| <span style="font-size:1.5em">🎖️</span> | Military medal | `1f396_militarymedal` |
+| <span style="font-size:1.5em">🏆</span> | Trophy | `trophy` |
+| <span style="font-size:1.5em">🏅</span> | Sports medal | `1f3c5_sportsmedal` |
+| <span style="font-size:1.5em">🥇</span> | Gold medal | `goldmedal` |
+| <span style="font-size:1.5em">🥈</span> | Silver medal | `silvermedal` |
+| <span style="font-size:1.5em">🥉</span> | Bronze medal | `bronzemedal` |
+| <span style="font-size:1.5em">⚽</span> | Soccer ball | `soccerball` |
+| <span style="font-size:1.5em">⚾</span> | Baseball | `baseball` |
+| <span style="font-size:1.5em">🥎</span> | Softball | `1f94e_softball` |
+| <span style="font-size:1.5em">🏀</span> | Basketball | `basketball` |
+| <span style="font-size:1.5em">🏐</span> | Volley ball | `1f3d0_volleyball` |
+| <span style="font-size:1.5em">🏈</span> | American football | `americanfootball` |
+| <span style="font-size:1.5em">🏉</span> | Rugby football | `rugbyball` |
+| <span style="font-size:1.5em">🎾</span> | Tennis ball | `tennisball` |
+| <span style="font-size:1.5em">🥏</span> | Frisbee | `1f94f_flyingdisc` |
+| <span style="font-size:1.5em">🎳</span> | Bowling ball | `bowlingball` |
+| <span style="font-size:1.5em">🏏</span> | Cricket bat and ball | `cricketbatandball` |
+| <span style="font-size:1.5em">🏑</span> | Field hockey | `1f3d1_fieldhockeystickandball` |
+| <span style="font-size:1.5em">🏒</span> | Ice hockey | `1f3d2_icehockeystickandpuck` |
+| <span style="font-size:1.5em">🥍</span> | Lacrosse | `lacrosse` |
+| <span style="font-size:1.5em">🏓</span> | Table tennis | `1f3d3_tabletennispaddleandball` |
+| <span style="font-size:1.5em">🏸</span> | Badminton | `1f3f8_badminton` |
+| <span style="font-size:1.5em">🥊</span> | Boxing glove | `boxingglove` |
+| <span style="font-size:1.5em">🥋</span> | Martial arts uniform | `1f94b_martialartsuniform` |
+| <span style="font-size:1.5em">🥅</span> | Goal | `1f945_goalnet` |
+| <span style="font-size:1.5em">⛳</span> | Flag in hole | `flaginhole` |
+| <span style="font-size:1.5em">⛸️</span> | Ice skate | `26f8_iceskate` |
+| <span style="font-size:1.5em">🎣</span> | Fishing pole | `1f3a3_fishingpoleandfish` |
+| <span style="font-size:1.5em">🤿</span> | Diving mask | `1f93f_divingmask` |
+| <span style="font-size:1.5em">🎽</span> | Running shirt | `1f3bd_runningshirtwithsash` |
+| <span style="font-size:1.5em">🎿</span> | Ski and skiboot  | `1f3bf_skiandskiboot` |
+| <span style="font-size:1.5em">🛷</span> | Sled | `1f6f7_sled` |
+| <span style="font-size:1.5em">🥌</span> | Curling stone | `1f94c_curlingstone` |
+| <span style="font-size:1.5em">🎯</span> | Archery | `target` |
+| <span style="font-size:1.5em">🪀</span> | Yo-yo | `1fa80_yoyo` |
+| <span style="font-size:1.5em">🪁</span> | Kite | `1fa81_kite` |
+| <span style="font-size:1.5em">🎱</span> | Pool eight ball | `eightball` |
+| <span style="font-size:1.5em">🔮</span> | Crystal ball | `1f52e_crystalball` |
+| <span style="font-size:1.5em">🪄</span> | Magic Wand | `magicwand` |
+| <span style="font-size:1.5em">🧿</span> | Nazar amulet | `1f9ff_nazaramulet` |
+| <span style="font-size:1.5em">🎮</span> | Games | `games` |
+| <span style="font-size:1.5em">🕹️</span> | Joystick | `1f579_joystick` |
+| <span style="font-size:1.5em">🎰</span> | Slot machine | `1f3b0_slotmachine` |
+| <span style="font-size:1.5em">🎲</span> | Dice | `1f3b2_gamedie` |
+| <span style="font-size:1.5em">🧩</span> | Puzzle piece | `1f9e9_jigsaw` |
+| <span style="font-size:1.5em">🧸</span> | Teddy bear | `hug` |
+| <span style="font-size:1.5em">🪅</span> | Piñata | `pinata` |
+| <span style="font-size:1.5em">🪩</span> | Glitter ball | `glitterball` |
+| <span style="font-size:1.5em">🪆</span> | Matreshka | `matreshka` |
+| <span style="font-size:1.5em">♠️</span> | Spades | `2660_blackspadesuit` |
+| <span style="font-size:1.5em">♥️</span> | Hearts | `2665_blackheartsuit` |
+| <span style="font-size:1.5em">♦️</span> | Diamonds | `2666_blackdiamondsuit` |
+| <span style="font-size:1.5em">♣️</span> | Clubs | `2663_blackclubsuit` |
+| <span style="font-size:1.5em">♟️</span> | Chess pawn | `265f_chesspawn` |
+| <span style="font-size:1.5em">🃏</span> | Joker | `1f0cf_playingcardblackjoker` |
+| <span style="font-size:1.5em">🀄</span> | Mahjong | `1f004_mahjong` |
+| <span style="font-size:1.5em">🎴</span> | Flower playing cards | `1f3b4_flowerplayingcards` |
+| <span style="font-size:1.5em">🎭</span> | Performing arts | `1f3ad_performingarts` |
+| <span style="font-size:1.5em">🖼️</span> | Painting | `1f5bc_framewithpicture` |
+| <span style="font-size:1.5em">🎨</span> | Artist palette | `1f3a8_artistpalette` |
+| <span style="font-size:1.5em">🧵</span> | Thread | `1f9f5_thread` |
+| <span style="font-size:1.5em">🪡</span> | Sewing needle | `sewingneedle` |
+| <span style="font-size:1.5em">🧶</span> | Ball of yarn | `1f9f6_yarn` |
+| <span style="font-size:1.5em">🪢</span> | Knot | `knot` |
+| <span style="font-size:1.5em">🎗️</span> | Red ribbon | `ribbonred` |
 
 ---
 
@@ -1508,252 +1508,252 @@ Reference reactions by their unique ID:
 
 | Emoji | Description | Reaction ID |
 |-------|-------------|-------------|
-| 🏧 | ATM | `1f3e7_automatedtellermachine` |
-| 🚮 | Litter in bin | `1f6ae_putlitterinitsplacesymbol` |
-| 🚰 | Water tap | `1f6b0_potablewatersymbol` |
-| ♿ | Wheelchair symbol | `267f_wheelchairsymbol` |
-| 🚹 | Mens symbol | `1f6b9_menssymbol` |
-| 🚺 | Womans symbol | `1f6ba_womenssymbol` |
-| 🚻 | Restroom | `1f6bb_restroom` |
-| 🚼 | Baby symbol | `1f6bc_babysymbol` |
-| 🚾 | Water closet | `1f6be_watercloset` |
-| 🛂 | Passport control | `1f6c2_passportcontrol` |
-| 🛃 | Customs | `1f6c3_customs` |
-| 🛄 | Baggage claim | `1f6c4_baggageclaim` |
-| 🛅 | Left luggage | `1f6c5_leftluggage` |
-| ⚠️ | Warning | `26a0_warningsign` |
-| 🚸 | Children crossing | `1f6b8_childrencrossing` |
-| ⛔ | No entry | `26d4_noentry` |
-| 🚫 | Banned | `1f6ab_noentrysign` |
-| 🚳 | No bicycles | `1f6b3_nobicycles` |
-| 🚭 | No smoking | `1f6ad_nosmokingsymbol` |
-| 🚯 | No littering | `1f6af_donotlittersymbol` |
-| 🚱 | Non-potable water | `1f6b1_nonpotablewatersymbol` |
-| 🚷 | No pedestrians | `1f6b7_nopedestrians` |
-| 📵 | No mobile phones | `1f4f5_nomobilephones` |
-| 🔞 | No one under eighteen | `1f51e_nooneundereighteensymbol` |
-| ☢️ | Radioactive | `2622_radioactivesign` |
-| ☣️ | Biohazard | `2623_biohazardsign` |
-| ⬆️ | Up arrow | `2b06_upwardsblackarrow` |
-| ↗️ | Up right arrow | `2197_northeastarrow` |
-| ➡️ | Right arrow | `27a1_blackrightwardsarrow` |
-| ↘️ | Down right arrow | `2198_southeastarrow` |
-| ⬇️ | Down arrow | `2b07_downwardsblackarrow` |
-| ↙️ | Down left arrow | `2199_southwestarrow` |
-| ⬅️ | Left arrow | `2b05_leftwardsblackarrow` |
-| ↖️ | Up left arrow | `2196_northwestarrow` |
-| ↕️ | Up down arrow | `2195_updownarrow` |
-| ↔️ | Left right arrow | `2194_leftrightarrow` |
-| ↩️ | Curving left arrow | `21a9_leftwardsarrowwithhook` |
-| ↪️ | Curving right arrow  | `21aa_rightwardsarrowwithhook` |
-| ⤴️ | Arrow curving up | `2934_arrowcurvedupright` |
-| ⤵️ | Arrow curving down | `2935_arrowcurveddownright` |
-| 🔃 | Clockwise vertical arrows | `1f503_arrowsclockwise` |
-| 🔄 | Counterclockwise arrows button | `1f504_refresh` |
-| 🔙 | Back arrow | `1f519_backarrow` |
-| 🔚 | End arrow | `1f51a_endwithleftwardsarrowabove` |
-| 🔛 | On! arrow | `1f51b_on` |
-| 🔜 | Soon arrow | `1f51c_soon` |
-| 🔝 | Top arrow | `1f51d_topwithupwardsarrowabove` |
-| 🛐 | Place of worship | `1f6d0_placeofworship` |
-| ⚛️ | Atom | `269b_atomsymbol` |
-| 🕉️ | Om | `1f549_omsymbol` |
-| ✡️ | Star of David | `2721_starofdavid` |
-| ☸️ | Wheel of dharma | `2638_wheelofdharma` |
-| ☯️ | Yin yang | `262f_yinyang` |
-| ✝️ | Latin cross | `271d_latincross` |
-| ☦️ | Orthodox cross | `2626_orthodoxcross` |
-| ☪️ | Star and crescent | `262a_starandcrescent` |
-| ☮️ | Peace | `262e_peacesymbol` |
-| 🕎 | Menorah | `1f54e_menorahwithninebranches` |
-| 🔯 | Star with dot | `1f52f_starwithdot` |
-| 🪯 | Khanda | `khanda` |
-| ♈ | Aries | `2648_aries` |
-| ♉ | Taurus | `2649_taurus` |
-| ♊ | Gemini | `264a_gemini` |
-| ♋ | Cancer | `264b_cancer` |
-| ♌ | Leo | `264c_leo` |
-| ♍ | Virgo | `264d_virgo` |
-| ♎ | Libra | `264e_libra` |
-| ♏ | Scorpio | `264f_scorpius` |
-| ♐ | Sagittarius | `2650_sagittarius` |
-| ♑ | Capricorn | `2651_capricorn` |
-| ♒ | Aquarius | `2652_aquarius` |
-| ♓ | Pisces | `2653_pisces` |
-| ⛎ | Ophiuchus | `26ce_ophiuchus` |
-| 🔀 | Shuffle button | `1f500_twistedrightwardsarrows` |
-| 🔁 | Repeat button | `1f501_repeat` |
-| 🔂 | Repeat single button | `1f502_repeatsingle` |
-| ▶️ | Play button | `25b6_blackrightpointingtriangle` |
-| ⏩ | Fast-forward button | `23e9_fastforwardbutton` |
-| ⏭️ | Next track button | `23ed_nexttrack` |
-| ⏯️ | Play or pause button | `23ef_playpause` |
-| ◀️ | Reverse button | `25c0_blackleftpointingtriangle` |
-| ⏪ | Rewind button | `23ea_fastreversebutton` |
-| ⏮️ | Last track button | `23ee_lasttrack` |
-| 🔼 | Up button | `1f53c_uppointingsmallredtriangle` |
-| ⏫ | Fast up button | `23eb_fastupbutton` |
-| 🔽 | Button down small | `1f53d_buttondownsmall` |
-| ⏬ | Fast down button | `23ec_fastdownbutton` |
-| ⏸️ | Pause button | `23f8_doubleverticalbar` |
-| ⏹️ | Stop button | `23f9_blacksquareforstop` |
-| ⏺️ | Record button | `23fa_blackcircleforrecord` |
-| ⏏️ | Eject button | `23cf_ejectsymbol` |
-| 🎦 | Cinema | `1f3a6_cinema` |
-| 🔅 | Low brightness | `1f505_lowbrightnesssymbol` |
-| 🔆 | High brightness | `1f506_highbrightnesssymbol` |
-| 📶 | Signal strength | `1f4f6_antennawithbars` |
-| 🛜 | Wifi | `wifi` |
-| 📳 | Vibration mode | `1f4f3_vibrationmode` |
-| 📴 | Mobile phone off | `1f4f4_mobilephoneoff` |
-| ♀️ | Female sign | `2640_woman` |
-| ♂️ | Male sign | `2642_man` |
-| ⚧️ | Transgender symbol | `transgendersymbol` |
-| ✖️ | Multiplication sign | `2716_heavymultiplicationx` |
-| ➕ | Plus sign | `2795_heavyplussign` |
-| ➖ | Minus sign | `2796_heavyminussign` |
-| ➗ | Division sign | `2797_heavydivisionsign` |
-| 🟰 | Equals sign | `equals` |
-| ♾️ | Infinity | `267e_infinity` |
-| ‼️ | Double exclamation | `203c_doubleexclamationmark` |
-| ⁉️ | Exclamation question mark | `exclamationquestionmark` |
-| ❓ | Question mark | `2753_blackquestionmarkornament` |
-| ❔ | White question mark | `2754_whitequestionmarkornament` |
-| ❕ | White exclamation mark | `2755_whiteexclamationmark` |
-| ❗ | Exclamation mark | `2757_heavyexclamationmarksymbol` |
-| 〰️ | Wavy dash | `3030_wavydash` |
-| 💱 | Currency exchange | `1f4b1_currencyexchange` |
-| 💲 | Dollar | `cash` |
-| ⚕️ | Medical symbol | `2695_staffofaesculapius` |
-| ♻️ | Recycle | `recycle` |
-| ⚜️ | Fleur de lis | `269c_fleurdelis` |
-| 🔱 | Trident | `1f531_tridentemblem` |
-| 📛 | Name badge | `1f4db_namebadge` |
-| 🔰 | Beginner | `1f530_japanesesymbolforbeginner` |
-| ⭕ | Red ring | `2b55_heavylargecircle` |
-| ✅ | Checkmark button | `2705_whiteheavycheckmark` |
-| ☑️ | Checkbox | `2611_ballotboxwithcheck` |
-| ✔️ | Checkmark | `2714_heavycheckmark` |
-| ❌ | Crossmark | `274c_crossmark` |
-| ❎ | Cross mark button | `274e_negativesquaredcrossmark` |
-| ➰ | Curly loop | `27b0_curlyloop` |
-| ➿ | Double curly loop | `27bf_doublecurlyloop` |
-| 〽️ | Part alternation mark | `303d_partalternationmark` |
-| ✳️ | Asterisk | `2733_eightspokedasterisk` |
-| ✴️ | Star button | `2734_eightpointedblackstar` |
-| ❇️ | Sparkle | `2747_sparkle` |
-| ©️ | Copyright | `00a9_copyrightsign` |
-| ®️ | Registered | `00ae_registeredsign` |
-| ™️ | Trademark | `2122_trademarksign` |
-| #️⃣ | Keycap number | `keycapnumbersign` |
-| *️⃣ | Keycap asterisk | `keycapnumberasterisk` |
-| 0️⃣ | Keycap zero | `keycapdigitzero` |
-| 1️⃣ | Keycap one | `keycapdigitone` |
-| 2️⃣ | Keycap two | `keycapdigittwo` |
-| 3️⃣ | Keycap three | `keycapdigitthree` |
-| 4️⃣ | Keycap four | `keycapdigitfour` |
-| 5️⃣ | Keycap five | `keycapdigitfive` |
-| 6️⃣ | Keycap six | `keycapdigitsix` |
-| 7️⃣ | Keycap seven | `keycapdigitseven` |
-| 8️⃣ | Keycap eight | `keycapdigiteight` |
-| 9️⃣ | Keycap nine | `keycapdigitnine` |
-| 🔟 | Keycap ten | `1f51f_keycapten` |
-| 🔠 | Uppercase | `1f520_uppercaseabcd` |
-| 🔡 | Lowercase | `1f521_lowercaseabcd` |
-| 🔢 | Numbers | `1f522_inputsymbolfornumbers` |
-| 🔣 | Symbols | `1f523_inputsymbolforsymbols` |
-| 🔤 | Letters | `1f524_inputsymbolforlatinletters` |
-| 🅰️ | Blood type A | `1f170_bloodtypea` |
-| 🆎 | Blood type AB | `1f18e_negativesquaredab` |
-| 🅱️ | Blood type B | `1f171_bloodtypeb` |
-| 🆑 | Clear | `1f191_squaredcl` |
-| 🆒 | Cool | `1f192_squaredcool` |
-| 🆓 | Free | `1f193_squaredfree` |
-| ℹ️ | Information | `2139_informationsource` |
-| 🆔 | ID | `1f194_squaredid` |
-| Ⓜ️ | Circled M | `24c2_circledlatincapitalletterm` |
-| 🆕 | New | `1f195_squarednew` |
-| 🆖 | NG | `1f196_squaredng` |
-| 🅾️ | Blood type O | `1f17e_bloodtype0` |
-| 🆗 | OK button | `1f197_squaredok` |
-| 🅿️ | Parking | `1f17f_parking` |
-| 🆘 | SOS | `1f198_squaredsos` |
-| 🆙 | UP! button | `1f199_buttonup` |
-| 🆚 | VS | `1f19a_squaredvs` |
-| 🈁 | Here | `1f201_squaredkatakanakoko` |
-| 🈂️ | Service Charge | `1f202_squaredkatakanasa` |
-| 🈷️ | Monthly amount | `1f237_monthlyamount` |
-| 🈶 | Not free of charge | `1f236_notfreeofcharge` |
-| 🈯 | Reserved | `1f22f_reserved` |
-| 🉐 | Bargain | `1f250_circledideographadvantage` |
-| 🈹 | Discount | `1f239_discount` |
-| 🈚 | Free of charge | `1f21a_freeofcharge` |
-| 🈲 | Prohibited | `1f232_prohibited` |
-| 🉑 | Accept | `1f251_circledideographaccept` |
-| 🈸 | Application | `1f238_application` |
-| 🈴 | Agreement | `1f234_agreement` |
-| 🈳 | Vacancy | `1f233_vacancy` |
-| ㊗️ | Congratulations | `3297_congratulations` |
-| ㊙️ | Secret | `3299_circledideographsecret` |
-| 🈺 | Open for business | `1f23a_open` |
-| 🈵 | No vacancy | `1f235_novacancy` |
-| 🔴 | Red circle | `1f534_largeredcircle` |
-| 🟠 | Orange circle | `1f7e0_orangecircle` |
-| 🟡 | Yellow circle | `1f7e1_yellowcircle` |
-| 🟢 | Green circle | `1f7e2_greencircle` |
-| 🔵 | Blue circle | `1f535_largebluecircle` |
-| 🟣 | Purple circle | `1f7e3_purplecircle` |
-| 🟤 | Brown circle | `1f7e4_browncircle` |
-| ⚫ | Black circle | `26ab_mediumblackcircle` |
-| ⚪ | White circle | `26aa_mediumwhitecircle` |
-| 🟥 | Red square | `1f7e5_redsquare` |
-| 🟧 | Orange square | `1f7e7_orangesquare` |
-| 🟨 | Yellow square | `1f7e8_yellowsquare` |
-| 🟩 | Green square | `1f7e9_greensquare` |
-| 🟦 | Blue square | `1f7e6_bluesquare` |
-| 🟪 | Purple square | `1f7ea_purplesquare` |
-| 🟫 | Brown square | `1f7eb_brownsquare` |
-| ⬛ | Large black square | `2b1b_blacklargesquare` |
-| ⬜ | Large white square | `2b1c_whitelargesquare` |
-| ◼️ | Medium black square | `25fc_blackmediumsquare` |
-| ◻️ | Medium white square | `25fb_whitemediumsquare` |
-| ◾ | Medium small black square | `25fe_blackmediumsmallsquare` |
-| ◽ | Medium small white square | `25fd_whitemediumsmallsquare` |
-| ▪️ | Small black square | `25aa_blacksmallsquare` |
-| ▫️ | Small white square | `25ab_whitesmallsquare` |
-| 🔶 | Large orange diamond | `1f536_largeorangediamond` |
-| 🔷 | Large blue diamond | `1f537_largebluediamond` |
-| 🔸 | Small orange diamond | `1f538_smallorangediamond` |
-| 🔹 | Small blue diamond | `1f539_smallbluediamond` |
-| 🔺 | Red triangle up | `1f53a_uppointingredtriangle` |
-| 🔻 | Red triangle down | `1f53b_downpointingredtriangle` |
-| 💠 | Diamond flower | `1f4a0_diamondshapewithadotinside` |
-| 🔘 | Radio button | `1f518_radiobutton` |
-| 🔳 | White square button | `1f533_whitesquarebutton` |
-| 🔲 | Black square button | `1f532_blacksquarebutton` |
-| 5️⃣0️⃣ | 50th 50 | `50th_50` |
-| 🦋 | 50th Butterfly | `50th_butterfly` |
-| 5️⃣0️⃣♥️ | 50th Card | `50th_card` |
-| ♟️ | 50th Chess | `50th_chess` |
-| ☁️ | 50th Cloud | `50th_cloud` |
-| 🖱️ | 50th Cursor | `50th_cursor` |
-| 💾 | 50th Floppy | `50th_floppy` |
-| ✉️ | 50th Mail | `50th_mail` |
-| 🎨 | 50th Paint | `50th_paint` |
-| 🌈 | 50th Rainbow | `50th_rainbow` |
-| 🎬 | 50th Slate | `50th_slate` |
-| 💽 | 50th Win98 | `50th_win98` |
-| 🌳 | 50th Tree | `50th_tree` |
-| ☀️ | 50th Sun | `50th_sun` |
-| 🙂 | 50th Smile | `50th_smile` |
-| 🔍 | 50th Search | `50th_search` |
-| 🎨 | 50th PaintBucket | `50th_paintbucket` |
-| 🦋 | 50th MSN butterfly | `50th_msnbutterfly` |
-| 📁 | 50th Folder | `50th_folder` |
-| 🌐 | 50th Explorer | `50th_explorer` |
-| 📎 | 50th Clippy | `50th_clippy` |
-| 💿 | 50th CD | `50th_cd` |
-| 📷 | 50th Camera | `50th_camera` |
+| <span style="font-size:1.5em">🏧</span> | ATM | `1f3e7_automatedtellermachine` |
+| <span style="font-size:1.5em">🚮</span> | Litter in bin | `1f6ae_putlitterinitsplacesymbol` |
+| <span style="font-size:1.5em">🚰</span> | Water tap | `1f6b0_potablewatersymbol` |
+| <span style="font-size:1.5em">♿</span> | Wheelchair symbol | `267f_wheelchairsymbol` |
+| <span style="font-size:1.5em">🚹</span> | Mens symbol | `1f6b9_menssymbol` |
+| <span style="font-size:1.5em">🚺</span> | Womans symbol | `1f6ba_womenssymbol` |
+| <span style="font-size:1.5em">🚻</span> | Restroom | `1f6bb_restroom` |
+| <span style="font-size:1.5em">🚼</span> | Baby symbol | `1f6bc_babysymbol` |
+| <span style="font-size:1.5em">🚾</span> | Water closet | `1f6be_watercloset` |
+| <span style="font-size:1.5em">🛂</span> | Passport control | `1f6c2_passportcontrol` |
+| <span style="font-size:1.5em">🛃</span> | Customs | `1f6c3_customs` |
+| <span style="font-size:1.5em">🛄</span> | Baggage claim | `1f6c4_baggageclaim` |
+| <span style="font-size:1.5em">🛅</span> | Left luggage | `1f6c5_leftluggage` |
+| <span style="font-size:1.5em">⚠️</span> | Warning | `26a0_warningsign` |
+| <span style="font-size:1.5em">🚸</span> | Children crossing | `1f6b8_childrencrossing` |
+| <span style="font-size:1.5em">⛔</span> | No entry | `26d4_noentry` |
+| <span style="font-size:1.5em">🚫</span> | Banned | `1f6ab_noentrysign` |
+| <span style="font-size:1.5em">🚳</span> | No bicycles | `1f6b3_nobicycles` |
+| <span style="font-size:1.5em">🚭</span> | No smoking | `1f6ad_nosmokingsymbol` |
+| <span style="font-size:1.5em">🚯</span> | No littering | `1f6af_donotlittersymbol` |
+| <span style="font-size:1.5em">🚱</span> | Non-potable water | `1f6b1_nonpotablewatersymbol` |
+| <span style="font-size:1.5em">🚷</span> | No pedestrians | `1f6b7_nopedestrians` |
+| <span style="font-size:1.5em">📵</span> | No mobile phones | `1f4f5_nomobilephones` |
+| <span style="font-size:1.5em">🔞</span> | No one under eighteen | `1f51e_nooneundereighteensymbol` |
+| <span style="font-size:1.5em">☢️</span> | Radioactive | `2622_radioactivesign` |
+| <span style="font-size:1.5em">☣️</span> | Biohazard | `2623_biohazardsign` |
+| <span style="font-size:1.5em">⬆️</span> | Up arrow | `2b06_upwardsblackarrow` |
+| <span style="font-size:1.5em">↗️</span> | Up right arrow | `2197_northeastarrow` |
+| <span style="font-size:1.5em">➡️</span> | Right arrow | `27a1_blackrightwardsarrow` |
+| <span style="font-size:1.5em">↘️</span> | Down right arrow | `2198_southeastarrow` |
+| <span style="font-size:1.5em">⬇️</span> | Down arrow | `2b07_downwardsblackarrow` |
+| <span style="font-size:1.5em">↙️</span> | Down left arrow | `2199_southwestarrow` |
+| <span style="font-size:1.5em">⬅️</span> | Left arrow | `2b05_leftwardsblackarrow` |
+| <span style="font-size:1.5em">↖️</span> | Up left arrow | `2196_northwestarrow` |
+| <span style="font-size:1.5em">↕️</span> | Up down arrow | `2195_updownarrow` |
+| <span style="font-size:1.5em">↔️</span> | Left right arrow | `2194_leftrightarrow` |
+| <span style="font-size:1.5em">↩️</span> | Curving left arrow | `21a9_leftwardsarrowwithhook` |
+| <span style="font-size:1.5em">↪️</span> | Curving right arrow  | `21aa_rightwardsarrowwithhook` |
+| <span style="font-size:1.5em">⤴️</span> | Arrow curving up | `2934_arrowcurvedupright` |
+| <span style="font-size:1.5em">⤵️</span> | Arrow curving down | `2935_arrowcurveddownright` |
+| <span style="font-size:1.5em">🔃</span> | Clockwise vertical arrows | `1f503_arrowsclockwise` |
+| <span style="font-size:1.5em">🔄</span> | Counterclockwise arrows button | `1f504_refresh` |
+| <span style="font-size:1.5em">🔙</span> | Back arrow | `1f519_backarrow` |
+| <span style="font-size:1.5em">🔚</span> | End arrow | `1f51a_endwithleftwardsarrowabove` |
+| <span style="font-size:1.5em">🔛</span> | On! arrow | `1f51b_on` |
+| <span style="font-size:1.5em">🔜</span> | Soon arrow | `1f51c_soon` |
+| <span style="font-size:1.5em">🔝</span> | Top arrow | `1f51d_topwithupwardsarrowabove` |
+| <span style="font-size:1.5em">🛐</span> | Place of worship | `1f6d0_placeofworship` |
+| <span style="font-size:1.5em">⚛️</span> | Atom | `269b_atomsymbol` |
+| <span style="font-size:1.5em">🕉️</span> | Om | `1f549_omsymbol` |
+| <span style="font-size:1.5em">✡️</span> | Star of David | `2721_starofdavid` |
+| <span style="font-size:1.5em">☸️</span> | Wheel of dharma | `2638_wheelofdharma` |
+| <span style="font-size:1.5em">☯️</span> | Yin yang | `262f_yinyang` |
+| <span style="font-size:1.5em">✝️</span> | Latin cross | `271d_latincross` |
+| <span style="font-size:1.5em">☦️</span> | Orthodox cross | `2626_orthodoxcross` |
+| <span style="font-size:1.5em">☪️</span> | Star and crescent | `262a_starandcrescent` |
+| <span style="font-size:1.5em">☮️</span> | Peace | `262e_peacesymbol` |
+| <span style="font-size:1.5em">🕎</span> | Menorah | `1f54e_menorahwithninebranches` |
+| <span style="font-size:1.5em">🔯</span> | Star with dot | `1f52f_starwithdot` |
+| <span style="font-size:1.5em">🪯</span> | Khanda | `khanda` |
+| <span style="font-size:1.5em">♈</span> | Aries | `2648_aries` |
+| <span style="font-size:1.5em">♉</span> | Taurus | `2649_taurus` |
+| <span style="font-size:1.5em">♊</span> | Gemini | `264a_gemini` |
+| <span style="font-size:1.5em">♋</span> | Cancer | `264b_cancer` |
+| <span style="font-size:1.5em">♌</span> | Leo | `264c_leo` |
+| <span style="font-size:1.5em">♍</span> | Virgo | `264d_virgo` |
+| <span style="font-size:1.5em">♎</span> | Libra | `264e_libra` |
+| <span style="font-size:1.5em">♏</span> | Scorpio | `264f_scorpius` |
+| <span style="font-size:1.5em">♐</span> | Sagittarius | `2650_sagittarius` |
+| <span style="font-size:1.5em">♑</span> | Capricorn | `2651_capricorn` |
+| <span style="font-size:1.5em">♒</span> | Aquarius | `2652_aquarius` |
+| <span style="font-size:1.5em">♓</span> | Pisces | `2653_pisces` |
+| <span style="font-size:1.5em">⛎</span> | Ophiuchus | `26ce_ophiuchus` |
+| <span style="font-size:1.5em">🔀</span> | Shuffle button | `1f500_twistedrightwardsarrows` |
+| <span style="font-size:1.5em">🔁</span> | Repeat button | `1f501_repeat` |
+| <span style="font-size:1.5em">🔂</span> | Repeat single button | `1f502_repeatsingle` |
+| <span style="font-size:1.5em">▶️</span> | Play button | `25b6_blackrightpointingtriangle` |
+| <span style="font-size:1.5em">⏩</span> | Fast-forward button | `23e9_fastforwardbutton` |
+| <span style="font-size:1.5em">⏭️</span> | Next track button | `23ed_nexttrack` |
+| <span style="font-size:1.5em">⏯️</span> | Play or pause button | `23ef_playpause` |
+| <span style="font-size:1.5em">◀️</span> | Reverse button | `25c0_blackleftpointingtriangle` |
+| <span style="font-size:1.5em">⏪</span> | Rewind button | `23ea_fastreversebutton` |
+| <span style="font-size:1.5em">⏮️</span> | Last track button | `23ee_lasttrack` |
+| <span style="font-size:1.5em">🔼</span> | Up button | `1f53c_uppointingsmallredtriangle` |
+| <span style="font-size:1.5em">⏫</span> | Fast up button | `23eb_fastupbutton` |
+| <span style="font-size:1.5em">🔽</span> | Button down small | `1f53d_buttondownsmall` |
+| <span style="font-size:1.5em">⏬</span> | Fast down button | `23ec_fastdownbutton` |
+| <span style="font-size:1.5em">⏸️</span> | Pause button | `23f8_doubleverticalbar` |
+| <span style="font-size:1.5em">⏹️</span> | Stop button | `23f9_blacksquareforstop` |
+| <span style="font-size:1.5em">⏺️</span> | Record button | `23fa_blackcircleforrecord` |
+| <span style="font-size:1.5em">⏏️</span> | Eject button | `23cf_ejectsymbol` |
+| <span style="font-size:1.5em">🎦</span> | Cinema | `1f3a6_cinema` |
+| <span style="font-size:1.5em">🔅</span> | Low brightness | `1f505_lowbrightnesssymbol` |
+| <span style="font-size:1.5em">🔆</span> | High brightness | `1f506_highbrightnesssymbol` |
+| <span style="font-size:1.5em">📶</span> | Signal strength | `1f4f6_antennawithbars` |
+| <span style="font-size:1.5em">🛜</span> | Wifi | `wifi` |
+| <span style="font-size:1.5em">📳</span> | Vibration mode | `1f4f3_vibrationmode` |
+| <span style="font-size:1.5em">📴</span> | Mobile phone off | `1f4f4_mobilephoneoff` |
+| <span style="font-size:1.5em">♀️</span> | Female sign | `2640_woman` |
+| <span style="font-size:1.5em">♂️</span> | Male sign | `2642_man` |
+| <span style="font-size:1.5em">⚧️</span> | Transgender symbol | `transgendersymbol` |
+| <span style="font-size:1.5em">✖️</span> | Multiplication sign | `2716_heavymultiplicationx` |
+| <span style="font-size:1.5em">➕</span> | Plus sign | `2795_heavyplussign` |
+| <span style="font-size:1.5em">➖</span> | Minus sign | `2796_heavyminussign` |
+| <span style="font-size:1.5em">➗</span> | Division sign | `2797_heavydivisionsign` |
+| <span style="font-size:1.5em">🟰</span> | Equals sign | `equals` |
+| <span style="font-size:1.5em">♾️</span> | Infinity | `267e_infinity` |
+| <span style="font-size:1.5em">‼️</span> | Double exclamation | `203c_doubleexclamationmark` |
+| <span style="font-size:1.5em">⁉️</span> | Exclamation question mark | `exclamationquestionmark` |
+| <span style="font-size:1.5em">❓</span> | Question mark | `2753_blackquestionmarkornament` |
+| <span style="font-size:1.5em">❔</span> | White question mark | `2754_whitequestionmarkornament` |
+| <span style="font-size:1.5em">❕</span> | White exclamation mark | `2755_whiteexclamationmark` |
+| <span style="font-size:1.5em">❗</span> | Exclamation mark | `2757_heavyexclamationmarksymbol` |
+| <span style="font-size:1.5em">〰️</span> | Wavy dash | `3030_wavydash` |
+| <span style="font-size:1.5em">💱</span> | Currency exchange | `1f4b1_currencyexchange` |
+| <span style="font-size:1.5em">💲</span> | Dollar | `cash` |
+| <span style="font-size:1.5em">⚕️</span> | Medical symbol | `2695_staffofaesculapius` |
+| <span style="font-size:1.5em">♻️</span> | Recycle | `recycle` |
+| <span style="font-size:1.5em">⚜️</span> | Fleur de lis | `269c_fleurdelis` |
+| <span style="font-size:1.5em">🔱</span> | Trident | `1f531_tridentemblem` |
+| <span style="font-size:1.5em">📛</span> | Name badge | `1f4db_namebadge` |
+| <span style="font-size:1.5em">🔰</span> | Beginner | `1f530_japanesesymbolforbeginner` |
+| <span style="font-size:1.5em">⭕</span> | Red ring | `2b55_heavylargecircle` |
+| <span style="font-size:1.5em">✅</span> | Checkmark button | `2705_whiteheavycheckmark` |
+| <span style="font-size:1.5em">☑️</span> | Checkbox | `2611_ballotboxwithcheck` |
+| <span style="font-size:1.5em">✔️</span> | Checkmark | `2714_heavycheckmark` |
+| <span style="font-size:1.5em">❌</span> | Crossmark | `274c_crossmark` |
+| <span style="font-size:1.5em">❎</span> | Cross mark button | `274e_negativesquaredcrossmark` |
+| <span style="font-size:1.5em">➰</span> | Curly loop | `27b0_curlyloop` |
+| <span style="font-size:1.5em">➿</span> | Double curly loop | `27bf_doublecurlyloop` |
+| <span style="font-size:1.5em">〽️</span> | Part alternation mark | `303d_partalternationmark` |
+| <span style="font-size:1.5em">✳️</span> | Asterisk | `2733_eightspokedasterisk` |
+| <span style="font-size:1.5em">✴️</span> | Star button | `2734_eightpointedblackstar` |
+| <span style="font-size:1.5em">❇️</span> | Sparkle | `2747_sparkle` |
+| <span style="font-size:1.5em">©️</span> | Copyright | `00a9_copyrightsign` |
+| <span style="font-size:1.5em">®️</span> | Registered | `00ae_registeredsign` |
+| <span style="font-size:1.5em">™️</span> | Trademark | `2122_trademarksign` |
+| <span style="font-size:1.5em">#️⃣</span> | Keycap number | `keycapnumbersign` |
+| <span style="font-size:1.5em">*️⃣</span> | Keycap asterisk | `keycapnumberasterisk` |
+| <span style="font-size:1.5em">0️⃣</span> | Keycap zero | `keycapdigitzero` |
+| <span style="font-size:1.5em">1️⃣</span> | Keycap one | `keycapdigitone` |
+| <span style="font-size:1.5em">2️⃣</span> | Keycap two | `keycapdigittwo` |
+| <span style="font-size:1.5em">3️⃣</span> | Keycap three | `keycapdigitthree` |
+| <span style="font-size:1.5em">4️⃣</span> | Keycap four | `keycapdigitfour` |
+| <span style="font-size:1.5em">5️⃣</span> | Keycap five | `keycapdigitfive` |
+| <span style="font-size:1.5em">6️⃣</span> | Keycap six | `keycapdigitsix` |
+| <span style="font-size:1.5em">7️⃣</span> | Keycap seven | `keycapdigitseven` |
+| <span style="font-size:1.5em">8️⃣</span> | Keycap eight | `keycapdigiteight` |
+| <span style="font-size:1.5em">9️⃣</span> | Keycap nine | `keycapdigitnine` |
+| <span style="font-size:1.5em">🔟</span> | Keycap ten | `1f51f_keycapten` |
+| <span style="font-size:1.5em">🔠</span> | Uppercase | `1f520_uppercaseabcd` |
+| <span style="font-size:1.5em">🔡</span> | Lowercase | `1f521_lowercaseabcd` |
+| <span style="font-size:1.5em">🔢</span> | Numbers | `1f522_inputsymbolfornumbers` |
+| <span style="font-size:1.5em">🔣</span> | Symbols | `1f523_inputsymbolforsymbols` |
+| <span style="font-size:1.5em">🔤</span> | Letters | `1f524_inputsymbolforlatinletters` |
+| <span style="font-size:1.5em">🅰️</span> | Blood type A | `1f170_bloodtypea` |
+| <span style="font-size:1.5em">🆎</span> | Blood type AB | `1f18e_negativesquaredab` |
+| <span style="font-size:1.5em">🅱️</span> | Blood type B | `1f171_bloodtypeb` |
+| <span style="font-size:1.5em">🆑</span> | Clear | `1f191_squaredcl` |
+| <span style="font-size:1.5em">🆒</span> | Cool | `1f192_squaredcool` |
+| <span style="font-size:1.5em">🆓</span> | Free | `1f193_squaredfree` |
+| <span style="font-size:1.5em">ℹ️</span> | Information | `2139_informationsource` |
+| <span style="font-size:1.5em">🆔</span> | ID | `1f194_squaredid` |
+| <span style="font-size:1.5em">Ⓜ️</span> | Circled M | `24c2_circledlatincapitalletterm` |
+| <span style="font-size:1.5em">🆕</span> | New | `1f195_squarednew` |
+| <span style="font-size:1.5em">🆖</span> | NG | `1f196_squaredng` |
+| <span style="font-size:1.5em">🅾️</span> | Blood type O | `1f17e_bloodtype0` |
+| <span style="font-size:1.5em">🆗</span> | OK button | `1f197_squaredok` |
+| <span style="font-size:1.5em">🅿️</span> | Parking | `1f17f_parking` |
+| <span style="font-size:1.5em">🆘</span> | SOS | `1f198_squaredsos` |
+| <span style="font-size:1.5em">🆙</span> | UP! button | `1f199_buttonup` |
+| <span style="font-size:1.5em">🆚</span> | VS | `1f19a_squaredvs` |
+| <span style="font-size:1.5em">🈁</span> | Here | `1f201_squaredkatakanakoko` |
+| <span style="font-size:1.5em">🈂️</span> | Service Charge | `1f202_squaredkatakanasa` |
+| <span style="font-size:1.5em">🈷️</span> | Monthly amount | `1f237_monthlyamount` |
+| <span style="font-size:1.5em">🈶</span> | Not free of charge | `1f236_notfreeofcharge` |
+| <span style="font-size:1.5em">🈯</span> | Reserved | `1f22f_reserved` |
+| <span style="font-size:1.5em">🉐</span> | Bargain | `1f250_circledideographadvantage` |
+| <span style="font-size:1.5em">🈹</span> | Discount | `1f239_discount` |
+| <span style="font-size:1.5em">🈚</span> | Free of charge | `1f21a_freeofcharge` |
+| <span style="font-size:1.5em">🈲</span> | Prohibited | `1f232_prohibited` |
+| <span style="font-size:1.5em">🉑</span> | Accept | `1f251_circledideographaccept` |
+| <span style="font-size:1.5em">🈸</span> | Application | `1f238_application` |
+| <span style="font-size:1.5em">🈴</span> | Agreement | `1f234_agreement` |
+| <span style="font-size:1.5em">🈳</span> | Vacancy | `1f233_vacancy` |
+| <span style="font-size:1.5em">㊗️</span> | Congratulations | `3297_congratulations` |
+| <span style="font-size:1.5em">㊙️</span> | Secret | `3299_circledideographsecret` |
+| <span style="font-size:1.5em">🈺</span> | Open for business | `1f23a_open` |
+| <span style="font-size:1.5em">🈵</span> | No vacancy | `1f235_novacancy` |
+| <span style="font-size:1.5em">🔴</span> | Red circle | `1f534_largeredcircle` |
+| <span style="font-size:1.5em">🟠</span> | Orange circle | `1f7e0_orangecircle` |
+| <span style="font-size:1.5em">🟡</span> | Yellow circle | `1f7e1_yellowcircle` |
+| <span style="font-size:1.5em">🟢</span> | Green circle | `1f7e2_greencircle` |
+| <span style="font-size:1.5em">🔵</span> | Blue circle | `1f535_largebluecircle` |
+| <span style="font-size:1.5em">🟣</span> | Purple circle | `1f7e3_purplecircle` |
+| <span style="font-size:1.5em">🟤</span> | Brown circle | `1f7e4_browncircle` |
+| <span style="font-size:1.5em">⚫</span> | Black circle | `26ab_mediumblackcircle` |
+| <span style="font-size:1.5em">⚪</span> | White circle | `26aa_mediumwhitecircle` |
+| <span style="font-size:1.5em">🟥</span> | Red square | `1f7e5_redsquare` |
+| <span style="font-size:1.5em">🟧</span> | Orange square | `1f7e7_orangesquare` |
+| <span style="font-size:1.5em">🟨</span> | Yellow square | `1f7e8_yellowsquare` |
+| <span style="font-size:1.5em">🟩</span> | Green square | `1f7e9_greensquare` |
+| <span style="font-size:1.5em">🟦</span> | Blue square | `1f7e6_bluesquare` |
+| <span style="font-size:1.5em">🟪</span> | Purple square | `1f7ea_purplesquare` |
+| <span style="font-size:1.5em">🟫</span> | Brown square | `1f7eb_brownsquare` |
+| <span style="font-size:1.5em">⬛</span> | Large black square | `2b1b_blacklargesquare` |
+| <span style="font-size:1.5em">⬜</span> | Large white square | `2b1c_whitelargesquare` |
+| <span style="font-size:1.5em">◼️</span> | Medium black square | `25fc_blackmediumsquare` |
+| <span style="font-size:1.5em">◻️</span> | Medium white square | `25fb_whitemediumsquare` |
+| <span style="font-size:1.5em">◾</span> | Medium small black square | `25fe_blackmediumsmallsquare` |
+| <span style="font-size:1.5em">◽</span> | Medium small white square | `25fd_whitemediumsmallsquare` |
+| <span style="font-size:1.5em">▪️</span> | Small black square | `25aa_blacksmallsquare` |
+| <span style="font-size:1.5em">▫️</span> | Small white square | `25ab_whitesmallsquare` |
+| <span style="font-size:1.5em">🔶</span> | Large orange diamond | `1f536_largeorangediamond` |
+| <span style="font-size:1.5em">🔷</span> | Large blue diamond | `1f537_largebluediamond` |
+| <span style="font-size:1.5em">🔸</span> | Small orange diamond | `1f538_smallorangediamond` |
+| <span style="font-size:1.5em">🔹</span> | Small blue diamond | `1f539_smallbluediamond` |
+| <span style="font-size:1.5em">🔺</span> | Red triangle up | `1f53a_uppointingredtriangle` |
+| <span style="font-size:1.5em">🔻</span> | Red triangle down | `1f53b_downpointingredtriangle` |
+| <span style="font-size:1.5em">💠</span> | Diamond flower | `1f4a0_diamondshapewithadotinside` |
+| <span style="font-size:1.5em">🔘</span> | Radio button | `1f518_radiobutton` |
+| <span style="font-size:1.5em">🔳</span> | White square button | `1f533_whitesquarebutton` |
+| <span style="font-size:1.5em">🔲</span> | Black square button | `1f532_blacksquarebutton` |
+| <span style="font-size:1.5em">5️⃣0️⃣</span> | 50th 50 | `50th_50` |
+| <span style="font-size:1.5em">🦋</span> | 50th Butterfly | `50th_butterfly` |
+| <span style="font-size:1.5em">5️⃣0️⃣♥️</span> | 50th Card | `50th_card` |
+| <span style="font-size:1.5em">♟️</span> | 50th Chess | `50th_chess` |
+| <span style="font-size:1.5em">☁️</span> | 50th Cloud | `50th_cloud` |
+| <span style="font-size:1.5em">🖱️</span> | 50th Cursor | `50th_cursor` |
+| <span style="font-size:1.5em">💾</span> | 50th Floppy | `50th_floppy` |
+| <span style="font-size:1.5em">✉️</span> | 50th Mail | `50th_mail` |
+| <span style="font-size:1.5em">🎨</span> | 50th Paint | `50th_paint` |
+| <span style="font-size:1.5em">🌈</span> | 50th Rainbow | `50th_rainbow` |
+| <span style="font-size:1.5em">🎬</span> | 50th Slate | `50th_slate` |
+| <span style="font-size:1.5em">💽</span> | 50th Win98 | `50th_win98` |
+| <span style="font-size:1.5em">🌳</span> | 50th Tree | `50th_tree` |
+| <span style="font-size:1.5em">☀️</span> | 50th Sun | `50th_sun` |
+| <span style="font-size:1.5em">🙂</span> | 50th Smile | `50th_smile` |
+| <span style="font-size:1.5em">🔍</span> | 50th Search | `50th_search` |
+| <span style="font-size:1.5em">🎨</span> | 50th PaintBucket | `50th_paintbucket` |
+| <span style="font-size:1.5em">🦋</span> | 50th MSN butterfly | `50th_msnbutterfly` |
+| <span style="font-size:1.5em">📁</span> | 50th Folder | `50th_folder` |
+| <span style="font-size:1.5em">🌐</span> | 50th Explorer | `50th_explorer` |
+| <span style="font-size:1.5em">📎</span> | 50th Clippy | `50th_clippy` |
+| <span style="font-size:1.5em">💿</span> | 50th CD | `50th_cd` |
+| <span style="font-size:1.5em">📷</span> | 50th Camera | `50th_camera` |
 
 ---
 
