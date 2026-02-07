@@ -14,20 +14,20 @@ Complete reference for all Microsoft Teams reaction IDs. Use `Ctrl+F` to search 
 Reference reactions by their unique ID:
 
 ```json
-{ "reactionId": "1f44d_thumbsup" }
+{ "reactionId": "like" }
 ```
 
 **Skin tone support:** Reactions marked with 🎨 support 5 skin tone variants. Append `-tone1` through `-tone5` to the base ID:
 
-| Suffix | Visual | Description |
-|--------|--------|-------------|
-| `-tone1` | 👋🏻 | Light |
-| `-tone2` | 👋🏼 | Medium-light |
-| `-tone3` | 👋🏽 | Medium |
-| `-tone4` | 👋🏾 | Medium-dark |
-| `-tone5` | 👋🏿 | Dark |
+| Suffix | Visual | Description | ReactionId |
+|--------|--------|-------------|------------|
+| `-tone1` | 👍 | Light |`like`|
+| `-tone2` | 👍🏼 | Medium-light | `like-tone2`|
+| `-tone3` | 👍🏽 | Medium | `like-tone3` |
+| `-tone4` | 👍🏾 | Medium-dark | `like-tone4`|
+| `-tone5` | 👍🏿 | Dark | `like-tone5` |
 
-**Example:** `1f44d_thumbsup-tone3` for medium skin tone thumbs up 👍🏽
+**Example:** `like-tone3` for medium skin tone thumbs up 👍🏽
 
 ## Categories
 
