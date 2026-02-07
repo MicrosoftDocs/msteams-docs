@@ -1,13 +1,13 @@
 ---
 title: Teams Reactions ID Reference
-description: Complete reference guide for Microsoft Teams reaction IDs, including 300+ reactions with skin tone support for bot development and app integrations.
+description: Complete reference guide for Microsoft Teams reaction IDs, including all reactions with skin tone support for bot development and app integrations.
 ms.topic: reference
 ms.date: 02/04/2026
 ---
 
 # Teams Reactions ID Reference
 
-Complete reference for all 300+ Microsoft Teams reaction IDs. Use `Ctrl+F` to search by name or ID.
+Complete reference for all Microsoft Teams reaction IDs. Use `Ctrl+F` to search by name or ID.
 
 ## How to Use
 
@@ -31,7 +31,7 @@ Reference reactions by their unique ID:
 
 ## Categories
 
-[Smileys](#smileys) | [Hand Gestures](#hand-gestures) | [People](#people) | [Hearts & Symbols](#hearts--symbols) | [Animals & Nature](#animals--nature) | [Food & Drink](#food--drink) | [Activities & Sports](#activities--sports) | [Objects](#objects) | [Travel & Places](#travel--places) | [Flags](#flags) | [Special Teams](#special-teams-reactions)
+[Smileys](#smileys) | [Hand Gestures](#hand-gestures) | [People](#people) | [Animals & Nature](#animals--nature) | [Food & Drink](#food--drink) | [Travel & Places](#travel--places) | [Objects](#objects) | [Activities & Sports](#activities--sports) | [Symbols](#symbols)
 
 ---
 
@@ -40,108 +40,224 @@ Reference reactions by their unique ID:
 | Emoji | Description | Reaction ID |
 |-------|-------------|-------------|
 | 😃 | Grinning face with big eyes | `1f603_grinningfacewithbigeyes` |
-| 😀 | Grinning face | `1f600_grinningface` |
-| 😊 | Smiling face with smiling eyes | `1f60a_smilingfacewithsmilingeyes` |
+| 😃 | Happy face | `happyface` |
+| 😄 | Grinning face with smiling eyes | `grinningfacewithsmilingeyes` |
 | 😁 | Beaming face with smiling eyes | `1f601_beamingfacewithsmilingeyes` |
-| 😄 | Grinning face with smiling eyes | `1f604_grinningfacewithsmilingeyes` |
-| 😅 | Grinning face with sweat | `1f605_grinningfacewithsweat` |
-| 🤣 | Rolling on the floor laughing | `1f923_rollingonthefloorlaughing` |
-| 😂 | Face with tears of joy | `1f602_facewithtearsofjoy` |
-| 🙂 | Slightly smiling face | `1f642_slightlysmilingface` |
-| 🙃 | Upside-down face | `1f643_upsidedownface` |
-| 🫠 | Melting face | `1fae0_meltingface` |
-| 😉 | Winking face | `1f609_winkingface` |
-| 😇 | Smiling face with halo | `1f607_smilingfacewithhalo` |
-| 🥰 | Smiling face with hearts | `1f970_smilingfacewithhearts` |
-| 😍 | Smiling face with heart-eyes | `1f60d_smilingfacewithhearteyes` |
-| 🤩 | Star-struck | `1f929_starstruck` |
-| 😘 | Face blowing a kiss | `1f618_faceblowingakiss` |
-| 😗 | Kissing face | `1f617_kissingface` |
+| 😆 | Laugh | `laugh` |
+| 😅 | Sweat grinning | `sweatgrinning` |
+| 🤣 | Rolling on the floor laughing | `rofl` |
+| 😂 | Crying with laughter | `cwl` |
+| 🙂 | Smile | `smile` |
+| 🙃 | Upside down face | `upsidedownface` |
+| 🫠 | Melting face | `meltingface` |
+| 😉 | Wink | `wink` |
+| 😊 | Smile eyes | `smileeyes` |
+| 😇 | Angel | `angel` |
+| 🥰 | In love | `inlove` |
+| 😍 | Heart eyes | `hearteyes` |
+| 🤩 | Star eyes | `stareyes` |
+| 😘 | Face blowing a kiss | `1f618_facethrowingakiss` |
+| 😗 | Kiss | `kiss` |
+| ☺️ | Mmmmm… | `mmm` |
 | 😚 | Kissing face with closed eyes | `1f61a_kissingfacewithclosedeyes` |
-| 🥲 | Smiling face with tear | `1f972_smilingfacewithtear` |
+| 😙 | Kissing face with smiling eyes | `1f619_kissingfacewithsmilingeyes` |
+| 🥲 | Smiling face with tear | `smilingfacewithtear` |
+| 😋 | Cheeky | `tongueout` |
 | 😛 | Face with tongue | `1f61b_facewithtongue` |
-| 😜 | Winking face with tongue | `1f61c_winkingfacewithtongue` |
+| 😜 | Winking tongue out | `winktongueout` |
 | 🤪 | Zany face | `1f92a_zanyface` |
-| 😝 | Squinting face with tongue | `1f61d_squintingfacewithtongue` |
-| 🤑 | Money-mouth face | `1f911_moneymouthface` |
-| 🤗 | Smiling face with open hands | `1f917_smilingfacewithopenhands` |
-| 🤭 | Face with hand over mouth | `1f92d_facewithhandovermouth` |
-| 🫢 | Face with open eyes and hand over mouth | `1fae2_facewithopeneyesandhandovermouth` |
-| 🫣 | Face with peeking eye | `1fae3_facewithpeekingeye` |
-| 🤫 | Shushing face | `1f92b_shushingface` |
-| 🤔 | Thinking face | `1f914_thinkingface` |
-| 🫡 | Saluting face | `1fae1_salutingface` |
-| 🤐 | Zipper-mouth face | `1f910_zippermouthface` |
-| 🤨 | Face with raised eyebrow | `1f928_facewithraisedeyebrow` |
-| 😐 | Neutral face | `1f610_neutralface` |
-| 😑 | Expressionless face | `1f611_expressionlessface` |
-| 😶 | Face without mouth | `1f636_facewithoutmouth` |
-| 🫥 | Dotted line face | `1fae5_dottedlineface` |
-| 😶‍🌫️ | Face in clouds | `1f636200d1f32b_faceinclouds` |
-| 😏 | Smirking face | `1f60f_smirkingface` |
-| 😒 | Unamused face | `1f612_unamusedface` |
-| 🙄 | Face with rolling eyes | `1f644_facewithrollingeyes` |
+| 😝 | Squinting face with tongue | `squintingfacewithtongue` |
+| 🤑 | Money mouth face | `1f911_moneymouthface` |
+| 🤗 | Hugging face | `1f917_huggingface` |
+| 🤭 | Giggle | `giggle` |
+| 🫢 | Hand over mouth | `handovermouth` |
+| 🫣 | Peeking eye | `peekingeye` |
+| 🤫 | My lips are sealed | `lipssealed` |
+| 🤔 | Thinking | `think` |
+| 🫡 | Saluting face | `salute` |
+| 🤐 | Zipper mouth face | `1f910_zippermouthface` |
+| 🤨 | Wondering | `wonder` |
+| 😐 | Speechless | `speechless` |
+| 😑 | Expressionless | `expressionless` |
+| 😶 | Face without mouth | `blankface` |
+| 🫥 | Dotted line face | `dottedlineface` |
+| 😶‍🌫️ | Face in clouds | `faceinclouds` |
+| 😏 | Smirking | `smirk` |
+| 😒 | Unamused | `unamused` |
+| 🙄 | Dull | `dull` |
 | 😬 | Grimacing face | `1f62c_grimacingface` |
-| 😮‍💨 | Face exhaling | `1f62e200d1f4a8_faceexhaling` |
+| 😮‍💨 | Face exhaling | `faceexhaling` |
 | 🤥 | Lying face | `1f925_lyingface` |
-| 🫨 | Shaking face | `1fae8_shakingface` |
-| 😌 | Relieved face | `1f60c_relievedface` |
-| 😔 | Pensive face | `1f614_pensiveface` |
-| 😪 | Sleepy face | `1f62a_sleepyface` |
+| 🫨 | Shaking Head | `shaking` |
+| 🙂‍↕️ | Head shaking vertically | `headshakingvertically2` |
+| 🙂‍↔️ | Head shaking horizontally | `headshakinghorizontally2` |
+| 😌 | Relieved | `relieved` |
+| 😔 | Pensive | `pensive` |
+| 😪 | Sleepy | `sleepy` |
 | 🤤 | Drooling face | `1f924_droolingface` |
-| 😴 | Sleeping face | `1f634_sleepingface` |
+| 😴 | Sleeping face | `sleepingface` |
 | 😷 | Face with medical mask | `1f637_facewithmedicalmask` |
-| 🤒 | Face with thermometer | `1f912_facewiththermometer` |
-| 🤕 | Face with head-bandage | `1f915_facewithheadbandage` |
+| 🤒 | Ill | `ill` |
+| 🤕 | Face with head bandage | `1f915_facewithheadbandage` |
 | 🤢 | Nauseated face | `1f922_nauseatedface` |
-| 🤮 | Face vomiting | `1f92e_facevomiting` |
+| 🤮 | Vomiting | `puke` |
 | 🤧 | Sneezing face | `1f927_sneezingface` |
-| 🥵 | Hot face | `1f975_hotface` |
-| 🥶 | Cold face | `1f976_coldface` |
-| 🥴 | Woozy face | `1f974_woozyface` |
-| 😵 | Face with crossed-out eyes | `1f635_facewithcrossedouteyes` |
-| 😵‍💫 | Face with spiral eyes | `1f635200d1f4ab_facewithspiraleyes` |
+| 🥵 | Hotface | `1f975_hotface` |
+| 🥶 | Cold shivering | `shivering` |
+| 🥱 | Morning after party | `hungover` |
+| 😵 | Dizzy face | `1f635_dizzyface` |
+| 😵‍💫 | Face with spiral eyes | `facewithspiraleyes` |
 | 🤯 | Exploding head | `1f92f_explodinghead` |
-| 🤠 | Cowboy hat face | `1f920_cowboyhatface` |
-| 🥳 | Partying face | `1f973_partyingface` |
-| 🥸 | Disguised face | `1f978_disguisedface` |
-| 😎 | Smiling face with sunglasses | `1f60e_smilingfacewithsunglasses` |
-| 🤓 | Nerd face | `1f913_nerdface` |
+| 🤠 | Face with cowboy hat | `1f920_facewithcowboyhat` |
+| 🥳 | Party | `party` |
+| 🥸 | Disguised face | `disguisedface` |
+| 😎 | Cool | `cool` |
+| 🤓 | Nerdy | `nerdy` |
 | 🧐 | Face with monocle | `1f9d0_facewithmonocle` |
-| 😕 | Confused face | `1f615_confusedface` |
-| 🫤 | Face with diagonal mouth | `1fae4_facewithdiagonalmouth` |
-| 😟 | Worried face | `1f61f_worriedface` |
-| 🙁 | Slightly frowning face | `1f641_slightlyfrowningface` |
+| 😕 | Confused | `confused` |
+| 🫤 | Face with diagonal mouth | `diagonalmouth` |
+| 😧 | Worried | `worry` |
+| 🙁 | Sad | `sad` |
 | ☹️ | Frowning face | `2639_frowningface` |
-| 😮 | Face with open mouth | `1f62e_facewithopenmouth` |
+| 😮 | Surprised | `surprised` |
 | 😯 | Hushed face | `1f62f_hushedface` |
 | 😲 | Astonished face | `1f632_astonishedface` |
-| 😳 | Flushed face | `1f633_flushedface` |
+| 😊 | Blush | `blush` |
 | 🥺 | Pleading face | `1f97a_pleadingface` |
-| 🥹 | Face holding back tears | `1f979_faceholdingbacktears` |
+| 🥹 | Face holding back tears | `faceholdingbacktears` |
 | 😦 | Frowning face with open mouth | `1f626_frowningfacewithopenmouth` |
 | 😧 | Anguished face | `1f627_anguishedface` |
-| 😨 | Fearful face | `1f628_fearfulface` |
+| 😨 | Fearful | `fearful` |
 | 😰 | Anxious face with sweat | `1f630_anxiousfacewithsweat` |
 | 😥 | Sad but relieved face | `1f625_sadbutrelievedface` |
-| 😢 | Crying face | `1f622_cryingface` |
-| 😭 | Loudly crying face | `1f62d_loudlycryingface` |
-| 😱 | Face screaming in fear | `1f631_facescreaminginfear` |
-| 😖 | Confounded face | `1f616_confoundedface` |
-| 😣 | Persevering face | `1f623_perseveringface` |
-| 😞 | Disappointed face | `1f61e_disappointedface` |
-| 😓 | Downcast face with sweat | `1f613_downcastfacewithsweat` |
-| 😩 | Weary face | `1f629_wearyface` |
+| 😢 | Crying | `cry` |
+| 😭 | Loudly crying | `loudlycrying` |
+| 😱 | Screaming with fear | `screamingfear` |
+| 😖 | Very confused | `veryconfused` |
+| 😫 | Doh! | `doh` |
+| 😞 | Disappointed | `disappointed` |
+| 😓 | Sweating | `sweat` |
+| 😩 | Weary | `weary` |
 | 😫 | Tired face | `1f62b_tiredface` |
 | 🥱 | Yawning face | `1f971_yawningface` |
-| 😤 | Face with steam from nose | `1f624_facewithsteamfromnose` |
-| 😡 | Enraged face | `1f621_enragedface` |
-| 😠 | Angry face | `1f620_angryface` |
-| 🤬 | Face with symbols on mouth | `1f92c_facewithsymbolsonmouth` |
-| 😈 | Smiling face with horns | `1f608_smilingfacewithhorns` |
+| 😤 | Face with steam from nose | `1f624_facewithlookoftriumph` |
+| 😡 | Angry face | `angryface` |
+| 😠 | Angry | `angry` |
+| 🤬 | Swearing | `swear` |
+| 😈 | Devil | `devil` |
 | 👿 | Angry face with horns | `1f47f_angryfacewithhorns` |
-| 💀 | Skull | `1f480_skull` |
+| 💀 | Skull | `skull` |
 | ☠️ | Skull and crossbones | `2620_skullandcrossbones` |
+| 💩 | Pile of poo | `poop` |
+| 🤡 | Clown face | `1f921_clownface` |
+| 👹 | Ogre | `1f479_japaneseogre` |
+| 👺 | Goblin | `1f47a_japanesegoblin` |
+| 👻 | Ghost | `ghost` |
+| 👽 | Alien | `1f47d_extraterrestrialalien` |
+| 👾 | Alien monster | `1f47e_alienmonster` |
+| 🤖 | Smile robot | `smilerobot` |
+| 😺 | Smile cat | `smilecat` |
+| 😺 | Laugh cat | `laughcat` |
+| 😹 | Cat with tears of joy | `1f639_catwithtearsofjoy` |
+| 😻 | Heart eyes cat | `hearteyescat` |
+| 😼 | Cat with wry smile | `1f63c_catwithwrysmile` |
+| 😽 | Kissing cat | `1f63d_kissingcat` |
+| 🙀 | Weary cat | `1f640_wearycat` |
+| 😿 | Sad cat | `sadcat` |
+| 😾 | Pouting cat | `1f63e_poutingcat` |
+| 🙉 | Monkey hear no evil | `hearnoevil` |
+| 🙈 | Monkey see no evil | `seenoevil` |
+| 🙊 | Monkey speak no evil | `speaknoevil` |
+| 💋 | Kissing lips | `lips` |
+| 💌 | Love letter | `loveletter` |
+| 💘 | Heart with arrow | `1f498_heartwitharrow` |
+| 💝 | Heart with ribbon | `1f49d_heartwithribbon` |
+| 💖 | Sparkling heart | `sparklingheart` |
+| 💗 | Growing heart | `growingheart` |
+| 💓 | Beating heart | `1f493_beatingheart` |
+| 💞 | Revolving hearts | `1f49e_revolvinghearts` |
+| 💕 | Two hearts | `twohearts` |
+| 💟 | Heart button | `1f49f_heartdecoration` |
+| ❣️ | Heart exclamation | `2763_heartexclamation` |
+| 💔 | Broken heart | `brokenheart` |
+| ❤️‍🔥 | Heart on fire | `heartonfire` |
+| ❤️‍🩹 | Mending heart | `mendingheart` |
+| ❤️ | Heart | `heart` |
+| 🩷 | Pink heart | `heartpink` |
+| 🧡 | Orange heart | `heartorange` |
+| 💛 | Yellow heart | `heartyellow` |
+| 💚 | Green heart | `heartgreen` |
+| 💙 | Blue heart | `heartblue` |
+| 🩵 | Light blue heart | `heartlightblue` |
+| 💜 | Purple heart | `heartpurple` |
+| 🤎 | Brown heart | `heartbrown` |
+| 🖤 | Black heart | `heartblack` |
+| 🩶 | Grey heart | `heartgrey` |
+| 🤍 | White heart | `heartwhite` |
+| ❤️ | Rainbow heart | `rainbowheart2` |
+| 💯 | Hundred points | `1f4af_hundredpointssymbol` |
+| 💢 | Anger symbol | `1f4a2_angersymbol` |
+| 💥 | Explosion | `1f4a5_collisionsymbol` |
+| 💫 | Dizzy symbol | `1f4ab_dizzysymbol` |
+| 💦 | Droplets | `1f4a6_splashingsweatsymbol` |
+| 💨 | Dashing away | `1f4a8_dashsymbol` |
+| 🕳️ | Hole | `1f573_hole` |
+| 💣 | Bomb | `bomb` |
+| 💬 | Speech bubble | `speechbubble` |
+| 👁️‍🗨️ | Eye speech bubble | `eyeinspeechbubble` |
+| 🗨️ | Left speech bubble | `1f5e8_leftspeechbubble` |
+| 🗯️ | Angry speech bubble | `1f5ef_rightangerbubble` |
+| 💭 | Thought bubble | `1f4ad_thoughtballoon` |
+| 💤 | Zzz | `1f4a4_zzz` |
+| 😎 | Cool cat | `coolcat` |
+| 🐶 | Cool dog | `cooldog` |
+| 😎 | Cool monkey | `coolmonkey` |
+| 🤖 | Cool robot | `coolrobot` |
+| 🐨 | Cool koala | `coolkoala` |
+| 😍 | Heart eyes dog | `hearteyesdog` |
+| 😍 | Heart eyes monkey | `hearteyesmonkey` |
+| 😍 | Heart eyes robot | `hearteyesrobot` |
+| 😍 | Heart eyes koala | `hearteyeskoala` |
+| 😄 | Laugh dog | `laughdog` |
+| 😄 | Laugh monkey | `laughmonkey` |
+| 😄 | Laugh robot | `laughrobot` |
+| 😄 | Laugh koala | `laughkoala` |
+| 🙁 | Sad dog | `saddog` |
+| 🙁 | Sad monkey | `sadmonkey` |
+| 🤖 | Sad robot | `sadrobot` |
+| 🙁 | Sad koala | `sadkoala` |
+| 😌 | Dreaming | `dream` |
+| 😤 | Banging head on wall | `headbang` |
+| 🎧 | Listening to headphones | `headphones` |
+| 🥳 | Holiday spirit | `holidayspirit` |
+| 💡 | Idea | `idea` |
+| 🧐 | Movember | `movember` |
+| 🥊 | Punch | `punch` |
+| 🙂 | Rainbow smile | `rainbowsmile` |
+| 🙄 | It wasn't me! | `wasntme` |
+| 🤙 | Call | `call` |
+| ✋ | High five | `highfive` |
+| 👋 | Hi | `hi` |
+| 👍 | Like | `like` |
+| 🤘 | Rock | `rock` |
+| 👏 | Sarcastic | `sarcastic` |
+| 🤳 | Selfie | `selfie` |
+| 🤫 | Too much information | `tmi` |
+| 😑 | Emo | `emo` |
+| 🙂 | Nodding | `nod` |
+| 🙁 | Shake | `shake` |
+| 😒 | Talking too much | `ttm` |
+| ✋ | Wait | `wait` |
+| 😅 | Relieved | `whew` |
+| 🤦 | Facepalm | `facepalm` |
+| 🤞 | Fingers crossed | `fingerscrossed` |
+| 👏 | Clapping | `clap` |
+| 🙌 | The Wave 1 | `thewave1` |
+| 🙌 | The Wave 2 | `thewave2` |
+| 🙌 | The Wave 3 | `thewave3` |
+| 🙌 | The Wave 4 | `thewave4` |
+| 🙌 | The Wave 5 | `thewave5` |
+| (oreoyum) | OREO Yum | `oreoyum` |
 
 ---
 
@@ -155,28 +271,45 @@ Reference reactions by their unique ID:
 | 🤚 | Raised back of hand | `1f91a_raisedbackofhand` | 🎨 |
 | 🖐️ | Hand with fingers splayed | `1f590_handwithfingerssplayed` | 🎨 |
 | ✋ | Raised hand | `270b_raisedhand` | 🎨 |
-| 🖖 | Vulcan salute | `1f596_vulcansalute` | 🎨 |
-| 🫱 | Rightwards hand | `1faf1_rightwardshand` | 🎨 |
-| 🫲 | Leftwards hand | `1faf2_leftwardshand` | 🎨 |
-| 🫳 | Palm down hand | `1faf3_palmdownhand` | 🎨 |
-| 🫴 | Palm up hand | `1faf4_palmuphand` | 🎨 |
-| 👍 | Thumbs up | `1f44d_thumbsup` | 🎨 |
-| 👎 | Thumbs down | `1f44e_thumbsdown` | 🎨 |
-| ✊ | Raised fist | `270a_raisedfist` | 🎨 |
+| 🖖 | Vulcan salute | `vulcansalute` | 🎨 |
+| 🫱 | Rightwards hand | `rightwardshand` | 🎨 |
+| 🫲 | Leftwards hand | `leftwardshand` | 🎨 |
+| 🫳 | Palm down hand | `palmdownhand` | 🎨 |
+| 🫴 | Palm up hand | `palmuphand` | 🎨 |
+| 🫸 | Push right | `pushright` | 🎨 |
+| 🫷 | Push left | `pushleft` | 🎨 |
+| 👌 | OK | `ok` | 🎨 |
+| 🤌 | Pinched fingers | `pinchedfingers` | 🎨 |
+| 🤏 | Pinching hand | `1f90f_pinchinghand` | 🎨 |
+| ✌️ | Victory sign | `victory` | 🎨 |
+| 🤞 | Crossed fingers | `crossedfingers` | 🎨 |
+| 🫰 | Finger heart | `fingerheart` | 🎨 |
+| 🤟 | Love you gesture | `1f91f_loveyougesture` | 🎨 |
+| 🤘 | Sign of the horns | `1f918_signofthehorns` | 🎨 |
+| 🤙 | Call me hand | `1f919_callmehand` | 🎨 |
+| 👈 | Backhand Index Pointing Left | `pointleftindex` | 🎨 |
+| 👉 | Backhand index pointing right | `pointrightindex` | 🎨 |
+| 👆 | Backhand index pointing up | `1f446_backhandindexpointingup` | 🎨 |
+| 👇 | Backhand index pointing down | `pointdownindex` | 🎨 |
+| ☝️ | Index pointing up | `pointupindex` | 🎨 |
+| 🫵 | Poke | `poke` | 🎨 |
+| 👍 | Yes | `yes` | 🎨 |
+| 👎 | No | `no` | 🎨 |
+| ✊ | Raised fist | `raisedfist` | 🎨 |
 | 👊 | Oncoming fist | `1f44a_oncomingfist` | 🎨 |
-| 🤛 | Left-facing fist | `1f91b_leftfacingfist` | 🎨 |
-| 🤜 | Right-facing fist | `1f91c_rightfacingfist` | 🎨 |
-| 👏 | Clapping hands | `1f44f_clappinghands` | 🎨 |
-| 🙌 | Raising hands | `1f64c_raisinghands` | 🎨 |
-| 🫶 | Heart hands | `1faf6_hearthands` | 🎨 |
+| 🤛 | Left facing fist | `1f91b_leftfacingfist` | 🎨 |
+| 🤜 | Right facing fist | `1f91c_rightfacingfist` | 🎨 |
+| 👏 | Clapping hands | `clappinghands` | 🎨 |
+| 🙌 | Hands celebrating | `handsinair` | 🎨 |
+| 🫶 | Heart hands | `hearthands` | 🎨 |
 | 👐 | Open hands | `1f450_openhands` | 🎨 |
 | 🤲 | Palms up together | `1f932_palmsuptogether` | 🎨 |
-| 🤝 | Handshake | `1f91d_handshake` | |
-| 🙏 | Folded hands | `1f64f_foldedhands` | 🎨 |
+| 🤝 | Handshake | `handshake` | 🎨 |
+| 🙏 | Folded hands | `praying` | 🎨 |
 | ✍️ | Writing hand | `270d_writinghand` | 🎨 |
 | 💅 | Nail polish | `1f485_nailpolish` | 🎨 |
-| 🤳 | Selfie | `1f933_selfie` | 🎨 |
-| 💪 | Flexed biceps | `1f4aa_flexedbiceps` | 🎨 |
+| 🤳 | Selfie | `selfiehand` | 🎨 |
+| 💪 | Muscle | `muscle` | 🎨 |
 | 🦾 | Mechanical arm | `1f9be_mechanicalarm` | |
 | 🦿 | Mechanical leg | `1f9bf_mechanicalleg` | |
 | 🦵 | Leg | `1f9b5_leg` | 🎨 |
@@ -184,16 +317,19 @@ Reference reactions by their unique ID:
 | 👂 | Ear | `1f442_ear` | 🎨 |
 | 🦻 | Ear with hearing aid | `1f9bb_earwithhearingaid` | 🎨 |
 | 👃 | Nose | `1f443_nose` | 🎨 |
-| 🫀 | Anatomical heart | `1fac0_anatomicalheart` | |
-| 🫁 | Lungs | `1fac1_lungs` | |
 | 🧠 | Brain | `1f9e0_brain` | |
+| 🫀 | Anatomical heart | `anatomicalheart` | |
+| 🫁 | Lungs | `lungs` | |
 | 🦷 | Tooth | `1f9b7_tooth` | |
 | 🦴 | Bone | `1f9b4_bone` | |
 | 👀 | Eyes | `1f440_eyes` | |
 | 👁️ | Eye | `1f441_eye` | |
 | 👅 | Tongue | `1f445_tongue` | |
 | 👄 | Mouth | `1f444_mouth` | |
-| 🫦 | Biting lip | `1fae6_bitinglip` | |
+| 🫦 | Biting lip | `bitinglip` | |
+| 🎤 | Drop the mic | `dropthemic` | 🎨 |
+| 🤜🤛 | Fist bump | `fistbump` | 🎨 |
+| (support) | Support | `support` | 🎨 |
 
 ---
 
@@ -203,306 +339,263 @@ Reference reactions by their unique ID:
 
 | Emoji | Description | Reaction ID | 🎨 |
 |-------|-------------|-------------|:--:|
-| 👶 | Baby | `1f476_baby` | 🎨 |
-| 👧 | Girl | `1f467_girl` | 🎨 |
+| 👶 | Smile baby | `smilebaby` | 🎨 |
 | 🧒 | Child | `1f9d2_child` | 🎨 |
-| 👦 | Boy | `1f466_boy` | 🎨 |
-| 👩 | Woman | `1f469_woman` | 🎨 |
-| 🧑 | Person | `1f9d1_person` | 🎨 |
-| 👨 | Man | `1f468_man` | 🎨 |
-| 👩‍🦱 | Woman: curly hair | `1f469200d1f9b1_womancurlyhair` | 🎨 |
-| 🧑‍🦱 | Person: curly hair | `1f9d1200d1f9b1_personcurlyhair` | 🎨 |
-| 👨‍🦱 | Man: curly hair | `1f468200d1f9b1_mancurlyhair` | 🎨 |
-| 👩‍🦰 | Woman: red hair | `1f469200d1f9b0_womanredhair` | 🎨 |
-| 🧑‍🦰 | Person: red hair | `1f9d1200d1f9b0_personredhair` | 🎨 |
-| 👨‍🦰 | Man: red hair | `1f468200d1f9b0_manredhair` | 🎨 |
-| 👱‍♀️ | Woman: blond hair | `1f471200d2640_womanblondhair` | 🎨 |
-| 👱 | Person: blond hair | `1f471_personblondhair` | 🎨 |
-| 👱‍♂️ | Man: blond hair | `1f471200d2642_manblondhair` | 🎨 |
-| 👩‍🦳 | Woman: white hair | `1f469200d1f9b3_womanwhitehair` | 🎨 |
-| 🧑‍🦳 | Person: white hair | `1f9d1200d1f9b3_personwhitehair` | 🎨 |
-| 👨‍🦳 | Man: white hair | `1f468200d1f9b3_manwhitehair` | 🎨 |
-| 👩‍🦲 | Woman: bald | `1f469200d1f9b2_womanbald` | 🎨 |
-| 🧑‍🦲 | Person: bald | `1f9d1200d1f9b2_personbald` | 🎨 |
-| 👨‍🦲 | Man: bald | `1f468200d1f9b2_manbald` | 🎨 |
-| 🧔‍♀️ | Woman: beard | `1f9d4200d2640_womanbeard` | 🎨 |
-| 🧔 | Person: beard | `1f9d4_personbeard` | 🎨 |
-| 🧔‍♂️ | Man: beard | `1f9d4200d2642_manbeard` | 🎨 |
-| 👵 | Old woman | `1f475_oldwoman` | 🎨 |
-| 🧓 | Older person | `1f9d3_olderperson` | 🎨 |
-| 👴 | Old man | `1f474_oldman` | 🎨 |
-| 👲 | Person with skullcap | `1f472_personwithskullcap` | 🎨 |
-| 👳‍♀️ | Woman wearing turban | `1f473200d2640_womanwearingturban` | 🎨 |
+| 👦 | Smile boy | `smileboy` | 🎨 |
+| 👧 | Smile girl | `smilegirl` | 🎨 |
+| 🧑 | Smile person | `person` | 🎨 |
+| 👱 | Person blond hair | `1f471_blondehairedperson` | 🎨 |
+| 👨 | Smile man | `smileman` | 🎨 |
+| 🧔 | Bearded person | `1f9d4_beardedperson` | 🎨 |
+| 🧔‍♂️ | Bearded man | `manbeard` | 🎨 |
+| 🧔‍♀️ | Bearded woman | `womanbeard` | 🎨 |
+| 👨‍🦰 | Man red hair | `1f468_200d_1f9b0_maleredhaired` | 🎨 |
+| 👨‍🦱 | Man curly hair | `1f468_200d_1f9b1_mancurlyhaired` | 🎨 |
+| 👨‍🦳 | Man white hair | `1f468_200d_1f9b3_malewhitehaired` | 🎨 |
+| 👨‍🦲 | Man bald | `1f468_200d_1f9b2_manbald` | 🎨 |
+| 👩 | Smile woman | `smilewoman` | 🎨 |
+| 👩‍🦰 | Woman red hair | `1f469_200d_1f9b0_femaleredhaired` | 🎨 |
+| 🧑‍🦰 | Red haired | `1f9b0_redhaired` | 🎨 |
+| 👩‍🦱 | Woman curly hair | `womancurlyhair` | 🎨 |
+| 🧑‍🦱 | Curly haired | `1f9b1_curlyhaired` | 🎨 |
+| 👩‍🦳 | Woman white hair | `womanwhitehair` | 🎨 |
+| 🧑‍🦳 | Person white hair | `personwhitehair` | 🎨 |
+| 🧑‍🦲 | Bald | `1f9b2_bald` | 🎨 |
+| 👩‍🦲 | Woman bald | `1f469_200d_1f9b2_femalebald` | 🎨 |
+| 👱‍♀️ | Woman blond hair | `womanblondhair` | 🎨 |
+| 👱‍♂️ | Man blond hair | `manblondhair` | 🎨 |
+| 🧓 | Older adult | `1f9d3_olderadult` | 🎨 |
+| 👴 | Old man | `1f474_olderman` | 🎨 |
+| 👵 | Old woman | `oldwoman` | 🎨 |
+| 🙍 | Person frowning | `frowning` | 🎨 |
+| 🙍‍♂️ | Man frowning | `man_frowning` | 🎨 |
+| 🙍‍♀️ | Woman frowning | `womanfrowning` | 🎨 |
+| 🙎 | Pouting face | `pouting_face` | 🎨 |
+| 🙎‍♂️ | Man pouting | `man_pouting` | 🎨 |
+| 🙎‍♀️ | Woman pouting | `womanpouting` | 🎨 |
+| 🙅 | Face with no good gesture | `1f645_facewithnogoodgesture` | 🎨 |
+| 🙅‍♂️ | Man gesturing no | `man_gesturing_not_ok` | 🎨 |
+| 🙅‍♀️ | Woman gesturing no | `womangesturingno` | 🎨 |
+| 🙆 | Person gesturing ok | `1f646_persongesturingok` | 🎨 |
+| 🙆‍♂️ | Man gesturing OK | `man_gesturing_ok` | 🎨 |
+| 🙆‍♀️ | Woman gesturing OK | `womangesturingok` | 🎨 |
+| 💁 | Person tipping hand | `person_tipping_hand` | 🎨 |
+| 💁‍♂️ | Man tipping hand | `man_tipping_hand` | 🎨 |
+| 💁‍♀️ | Woman tipping hand | `womantippinghand` | 🎨 |
+| 🙋 | Person raising hand | `happy_person_raising_one_hand` | 🎨 |
+| 🙋‍♂️ | Man raising hand | `man_raising_hand` | 🎨 |
+| 🙋‍♀️ | Woman raising hand | `womanraisinghand` | 🎨 |
+| 🧏 | Deaf person | `person_deaf` | 🎨 |
+| 🧏‍♂️ | Deaf Man | `man_deaf` | 🎨 |
+| 🧏‍♀️ | Woman deaf | `woman_deaf` | 🎨 |
+| 🙇 | Person bowing | `bowing` | 🎨 |
+| 🙇‍♂️ | Man bowing | `bow` | 🎨 |
+| 🙇‍♀️ | Woman bowing | `thanks` | 🎨 |
+| 🤦 | Person facepalming | `1f926_personfacepalming` | 🎨 |
+| 🤦‍♂️ | Man facepalming | `manfacepalming` | 🎨 |
+| 🤦‍♀️ | Woman facepalming | `womanfacepalming` | 🎨 |
+| 🤷 | Person shrugging | `shrug` | 🎨 |
+| 🤷‍♂️ | Man shrug | `manshrug` | 🎨 |
+| 🤷‍♀️ | Woman shrug | `womanshrug` | 🎨 |
+| 🧑‍⚕️ | Person health worker | `personhealthworker` | 🎨 |
+| 👨‍⚕️ | Man health worker | `manhealthworker` | 🎨 |
+| 👩‍⚕️ | Woman health worker | `womanhealthworker` | 🎨 |
+| 🧑‍🎓 | Student | `student` | 🎨 |
+| 👨‍🎓 | Man student | `manstudent` | 🎨 |
+| 👩‍🎓 | Woman student | `womanstudent` | 🎨 |
+| 🧑‍🏫 | Person teacher | `personteacher` | 🎨 |
+| 👨‍🏫 | Man teacher | `manteacher` | 🎨 |
+| 👩‍🏫 | Woman teacher | `womanteacher` | 🎨 |
+| 🧑‍⚖️ | Person judge | `personjudge` | 🎨 |
+| 👨‍⚖️ | Man judge | `manjudge` | 🎨 |
+| 👩‍⚖️ | Woman judge | `womanjudge` | 🎨 |
+| 🧑‍🌾 | Person farmer | `personfarmer` | 🎨 |
+| 👨‍🌾 | Man farmer | `manfarmer` | 🎨 |
+| 👩‍🌾 | Woman farmer | `womanfarmer` | 🎨 |
+| 🧑‍🍳 | Person chef | `personchef` | 🎨 |
+| 👨‍🍳 | Man chef | `manchef` | 🎨 |
+| 👩‍🍳 | Woman chef | `womanchef` | 🎨 |
+| 🧑‍🔧 | Person mechanic | `personmechanic` | 🎨 |
+| 👨‍🔧 | Man mechanic | `manmechanic` | 🎨 |
+| 👩‍🔧 | Woman mechanic | `womanmechanic` | 🎨 |
+| 🧑‍🏭 | Person welder | `personwelder` | 🎨 |
+| 👨‍🏭 | Man welder | `manwelder` | 🎨 |
+| 👩‍🏭 | Woman welder | `womanwelder` | 🎨 |
+| 🧑‍💼 | Person office worker | `personofficeworker` | 🎨 |
+| 👨‍💼 | Office worker male | `officeworkermale` | 🎨 |
+| 👩‍💼 | Office worker female | `officeworkerfemale` | 🎨 |
+| 🧑‍🔬 | Person scientist | `personscientist` | 🎨 |
+| 👨‍🔬 | Man scientist | `manscientist` | 🎨 |
+| 👩‍🔬 | Woman scientist | `womanscientist` | 🎨 |
+| 🧑‍💻 | Person writing code | `persondeveloper` | 🎨 |
+| 👨‍💻 | Man writing code | `mantechie` | 🎨 |
+| 👩‍💻 | Woman writing code | `womandeveloper` | 🎨 |
+| 🧑‍🎤 | Person singer | `personsinger` | 🎨 |
+| 👨‍🎤 | Man singer | `man_singer` | 🎨 |
+| 👩‍🎤 | Woman singer | `woman_singer` | 🎨 |
+| 🧑‍🎨 | Person artist | `personartist` | 🎨 |
+| 👨‍🎨 | Man artist | `manartist` | 🎨 |
+| 👩‍🎨 | Woman artist | `womanartist` | 🎨 |
+| 🧑‍✈️ | Person pilot | `personpilot` | 🎨 |
+| 👨‍✈️ | Man pilot | `manpilot` | 🎨 |
+| 👩‍✈️ | Woman pilot | `womanpilot` | 🎨 |
+| 🧑‍🚀 | Person astronaut | `personastronaut` | 🎨 |
+| 👨‍🚀 | Man astronaut | `manastronaut` | 🎨 |
+| 👩‍🚀 | Woman astronaut | `womanastronaut` | 🎨 |
+| 🧑‍🚒 | Person firefighter | `personfirefighter` | 🎨 |
+| 👨‍🚒 | Man firefighter | `manfirefighter` | 🎨 |
+| 👩‍🚒 | Woman firefighter | `womanfirefighter` | 🎨 |
+| 👮 | Police officer | `police_officer` | 🎨 |
+| 👮‍♂️ | Man police officer | `manpoliceofficer` | 🎨 |
+| 👮‍♀️ | Woman police officer | `womanpoliceofficer` | 🎨 |
+| 🕵️ | Detective | `detective` | 🎨 |
+| 🕵️‍♂️ | Man detective | `man_detective` | 🎨 |
+| 🕵️‍♀️ | Woman detective | `woman_detective` | 🎨 |
+| 💂 | Guard | `guard` | 🎨 |
+| 💂‍♂️ | Man guard | `man_guard` | 🎨 |
+| 💂‍♀️ | Woman guard | `woman_guard` | 🎨 |
+| 🥷 | Ninja | `ninja` | 🎨 |
+| 👷 | Construction worker | `construction_worker` | 🎨 |
+| 👷‍♂️ | Man construction worker | `man_construction_worker` | 🎨 |
+| 👷‍♀️ | Woman construction worker | `woman_construction_worker` | 🎨 |
+| 🫅 | Person with crown | `personcrown` | 🎨 |
+| 🤴 | Prince | `prince` | 🎨 |
+| 👸 | Princess | `princess` | 🎨 |
 | 👳 | Person wearing turban | `1f473_personwearingturban` | 🎨 |
-| 👳‍♂️ | Man wearing turban | `1f473200d2642_manwearingturban` | 🎨 |
-| 🧕 | Woman with headscarf | `1f9d5_womanwithheadscarf` | 🎨 |
-| 👮‍♀️ | Woman police officer | `1f46e200d2640_womanpoliceofficer` | 🎨 |
-| 👮 | Police officer | `1f46e_policeofficer` | 🎨 |
-| 👮‍♂️ | Man police officer | `1f46e200d2642_manpoliceofficer` | 🎨 |
-| 👷‍♀️ | Woman construction worker | `1f477200d2640_womanconstructionworker` | 🎨 |
-| 👷 | Construction worker | `1f477_constructionworker` | 🎨 |
-| 👷‍♂️ | Man construction worker | `1f477200d2642_manconstructionworker` | 🎨 |
-| 💂‍♀️ | Woman guard | `1f482200d2640_womanguard` | 🎨 |
-| 💂 | Guard | `1f482_guard` | 🎨 |
-| 💂‍♂️ | Man guard | `1f482200d2642_manguard` | 🎨 |
-| 🕵️‍♀️ | Woman detective | `1f575200d2640_womandetective` | 🎨 |
-| 🕵️ | Detective | `1f575_detective` | 🎨 |
-| 🕵️‍♂️ | Man detective | `1f575200d2642_mandetective` | 🎨 |
-| 👩‍⚕️ | Woman health worker | `1f469200d2695_womanhealthworker` | 🎨 |
-| 🧑‍⚕️ | Health worker | `1f9d1200d2695_healthworker` | 🎨 |
-| 👨‍⚕️ | Man health worker | `1f468200d2695_manhealthworker` | 🎨 |
-| 👩‍🌾 | Woman farmer | `1f469200d1f33e_womanfarmer` | 🎨 |
-| 🧑‍🌾 | Farmer | `1f9d1200d1f33e_farmer` | 🎨 |
-| 👨‍🌾 | Man farmer | `1f468200d1f33e_manfarmer` | 🎨 |
-| 👩‍🍳 | Woman cook | `1f469200d1f373_womancook` | 🎨 |
-| 🧑‍🍳 | Cook | `1f9d1200d1f373_cook` | 🎨 |
-| 👨‍🍳 | Man cook | `1f468200d1f373_mancook` | 🎨 |
-| 👩‍🎓 | Woman student | `1f469200d1f393_womanstudent` | 🎨 |
-| 🧑‍🎓 | Student | `1f9d1200d1f393_student` | 🎨 |
-| 👨‍🎓 | Man student | `1f468200d1f393_manstudent` | 🎨 |
-| 👩‍🎤 | Woman singer | `1f469200d1f3a4_womansinger` | 🎨 |
-| 🧑‍🎤 | Singer | `1f9d1200d1f3a4_singer` | 🎨 |
-| 👨‍🎤 | Man singer | `1f468200d1f3a4_mansinger` | 🎨 |
-| 👩‍🏫 | Woman teacher | `1f469200d1f3eb_womanteacher` | 🎨 |
-| 🧑‍🏫 | Teacher | `1f9d1200d1f3eb_teacher` | 🎨 |
-| 👨‍🏫 | Man teacher | `1f468200d1f3eb_manteacher` | 🎨 |
-| 👩‍🏭 | Woman factory worker | `1f469200d1f3ed_womanfactoryworker` | 🎨 |
-| 🧑‍🏭 | Factory worker | `1f9d1200d1f3ed_factoryworker` | 🎨 |
-| 👨‍🏭 | Man factory worker | `1f468200d1f3ed_manfactoryworker` | 🎨 |
-| 👩‍💻 | Woman technologist | `1f469200d1f4bb_womantechnologist` | 🎨 |
-| 🧑‍💻 | Technologist | `1f9d1200d1f4bb_technologist` | 🎨 |
-| 👨‍💻 | Man technologist | `1f468200d1f4bb_mantechnologist` | 🎨 |
-| 👩‍💼 | Woman office worker | `1f469200d1f4bc_womanofficeworker` | 🎨 |
-| 🧑‍💼 | Office worker | `1f9d1200d1f4bc_officeworker` | 🎨 |
-| 👨‍💼 | Man office worker | `1f468200d1f4bc_manofficeworker` | 🎨 |
-| 👩‍🔧 | Woman mechanic | `1f469200d1f527_womanmechanic` | 🎨 |
-| 🧑‍🔧 | Mechanic | `1f9d1200d1f527_mechanic` | 🎨 |
-| 👨‍🔧 | Man mechanic | `1f468200d1f527_manmechanic` | 🎨 |
-| 👩‍🔬 | Woman scientist | `1f469200d1f52c_womanscientist` | 🎨 |
-| 🧑‍🔬 | Scientist | `1f9d1200d1f52c_scientist` | 🎨 |
-| 👨‍🔬 | Man scientist | `1f468200d1f52c_manscientist` | 🎨 |
-| 👩‍🎨 | Woman artist | `1f469200d1f3a8_womanartist` | 🎨 |
-| 🧑‍🎨 | Artist | `1f9d1200d1f3a8_artist` | 🎨 |
-| 👨‍🎨 | Man artist | `1f468200d1f3a8_manartist` | 🎨 |
-| 👩‍🚒 | Woman firefighter | `1f469200d1f692_womanfirefighter` | 🎨 |
-| 🧑‍🚒 | Firefighter | `1f9d1200d1f692_firefighter` | 🎨 |
-| 👨‍🚒 | Man firefighter | `1f468200d1f692_manfirefighter` | 🎨 |
-| 👩‍✈️ | Woman pilot | `1f469200d2708_womanpilot` | 🎨 |
-| 🧑‍✈️ | Pilot | `1f9d1200d2708_pilot` | 🎨 |
-| 👨‍✈️ | Man pilot | `1f468200d2708_manpilot` | 🎨 |
-| 👩‍🚀 | Woman astronaut | `1f469200d1f680_womanastronaut` | 🎨 |
-| 🧑‍🚀 | Astronaut | `1f9d1200d1f680_astronaut` | 🎨 |
-| 👨‍🚀 | Man astronaut | `1f468200d1f680_manastronaut` | 🎨 |
-| 👩‍⚖️ | Woman judge | `1f469200d2696_womanjudge` | 🎨 |
-| 🧑‍⚖️ | Judge | `1f9d1200d2696_judge` | 🎨 |
-| 👨‍⚖️ | Man judge | `1f468200d2696_manjudge` | 🎨 |
-| 👰‍♀️ | Woman with veil | `1f470200d2640_womanwithveil` | 🎨 |
-| 👰 | Person with veil | `1f470_personwithveil` | 🎨 |
-| 👰‍♂️ | Man with veil | `1f470200d2642_manwithveil` | 🎨 |
-| 🤵‍♀️ | Woman in tuxedo | `1f935200d2640_womanintuxedo` | 🎨 |
-| 🤵 | Person in tuxedo | `1f935_personintuxedo` | 🎨 |
-| 🤵‍♂️ | Man in tuxedo | `1f935200d2642_manintuxedo` | 🎨 |
-| 👸 | Princess | `1f478_princess` | 🎨 |
-| 🫅 | Person with crown | `1fac5_personwithcrown` | 🎨 |
-| 🤴 | Prince | `1f934_prince` | 🎨 |
-| 🥷 | Ninja | `1f977_ninja` | 🎨 |
-| 🦸‍♀️ | Woman superhero | `1f9b8200d2640_womansuperhero` | 🎨 |
-| 🦸 | Superhero | `1f9b8_superhero` | 🎨 |
-| 🦸‍♂️ | Man superhero | `1f9b8200d2642_mansuperhero` | 🎨 |
-| 🦹‍♀️ | Woman supervillain | `1f9b9200d2640_womansupervillain` | 🎨 |
+| 👳‍♂️ | Man wearing turban | `man_wearing_turban` | 🎨 |
+| 👳‍♀️ | Woman wearing turban | `womanwearingturban` | 🎨 |
+| 👲 | Man with chinese cap | `man_with_chinese_cap` | 🎨 |
+| 🧕 | Woman with head scarf | `woman_with_head_scarf` | 🎨 |
+| 🤵 | Person in tuxedo | `personintuxedo` | 🎨 |
+| 🤵‍♂️ |  Man in tuxedo | `manintuxedo` | 🎨 |
+| 🤵‍♀️ | Woman in tuxedo | `womanintuxedo` | 🎨 |
+| 👰 | Person with veil | `personwithveil` | 🎨 |
+| 👰‍♂️ | Man with veil | `manwithveil` | 🎨 |
+| 👰‍♀️ |  Woman with veil | `womanwithveil` | 🎨 |
+| 🤰 | Woman pregnant | `womanpregnant` | 🎨 |
+| 🫃 | Pregnant man | `pregnantman` | 🎨 |
+| 🫄 | Pregnant | `pregnant` | 🎨 |
+| 🤱 | Breastfeeding | `breastfeeding` | 🎨 |
+| 👨‍🍼 | Man bottle feeding | `manbottlefeeding` | 🎨 |
+| 🧑‍🍼 | Bottle feeding | `bottlefeeding` | 🎨 |
+| 👼 | Baby angel | `1f47c_babyangel` | 🎨 |
+| 🎅 | Santa | `santa` | 🎨 |
+| 🤶 | Mrs claus | `mother_christmas` | 🎨 |
+| 🧑‍🎄 | Mx Claus | `mxclaus` | 🎨 |
+| 🦸 | Person superhero | `personsuperhero` | 🎨 |
+| 🦸‍♂️ | Man superhero | `mansuperhero` | 🎨 |
+| 🦸‍♀️ | Woman superhero | `hero` | 🎨 |
 | 🦹 | Supervillain | `1f9b9_supervillain` | 🎨 |
-| 🦹‍♂️ | Man supervillain | `1f9b9200d2642_mansupervillain` | 🎨 |
-| 🧙‍♀️ | Woman mage | `1f9d9200d2640_womanmage` | 🎨 |
-| 🧙 | Mage | `1f9d9_mage` | 🎨 |
-| 🧙‍♂️ | Man mage | `1f9d9200d2642_manmage` | 🎨 |
-| 🧚‍♀️ | Woman fairy | `1f9da200d2640_womanfairy` | 🎨 |
-| 🧚 | Fairy | `1f9da_fairy` | 🎨 |
-| 🧚‍♂️ | Man fairy | `1f9da200d2642_manfairy` | 🎨 |
-| 🧛‍♀️ | Woman vampire | `1f9db200d2640_womanvampire` | 🎨 |
-| 🧛 | Vampire | `1f9db_vampire` | 🎨 |
-| 🧛‍♂️ | Man vampire | `1f9db200d2642_manvampire` | 🎨 |
-| 🧜‍♀️ | Mermaid | `1f9dc200d2640_mermaid` | 🎨 |
-| 🧜 | Merperson | `1f9dc_merperson` | 🎨 |
-| 🧜‍♂️ | Merman | `1f9dc200d2642_merman` | 🎨 |
-| 🧝‍♀️ | Woman elf | `1f9dd200d2640_womanelf` | 🎨 |
-| 🧝 | Elf | `1f9dd_elf` | 🎨 |
-| 🧝‍♂️ | Man elf | `1f9dd200d2642_manelf` | 🎨 |
-| 🧞‍♀️ | Woman genie | `1f9de200d2640_womangenie` | |
+| 🦹‍♂️ | Man supervillain | `man_super_villain` | 🎨 |
+| 🦹‍♀️ | Woman supervillain | `woman_super_villain` | 🎨 |
+| 🧙‍♂️ | Mage | `wizard` | 🎨 |
+| 🧙‍♀️ | Woman mage | `womanmage` | 🎨 |
+| 🧚 | Fairy | `fairy` | 🎨 |
+| 🧚‍♂️ | Man fairy | `man_fairy` | 🎨 |
+| 🧚‍♀️ | Woman fairy | `woman_fairy` | 🎨 |
+| 🧛 | Man vampire | `vampire` | 🎨 |
+| 🧛‍♂️ | Vampire | `dracula` | 🎨 |
+| 🧛‍♀️ | Woman vampire | `ladyvampire` | 🎨 |
+| 🧜 | Merperson | `merperson` | 🎨 |
+| 🧜‍♂️ | Merman | `merman` | 🎨 |
+| 🧜‍♀️ | Mermaid | `mermaid` | 🎨 |
+| 🧝 | Elf | `elf` | 🎨 |
+| 🧝‍♂️ | Man elf | `manelf` | 🎨 |
+| 🧝‍♀️ | Woman elf | `woman_elf` | 🎨 |
 | 🧞 | Genie | `1f9de_genie` | |
-| 🧞‍♂️ | Man genie | `1f9de200d2642_mangenie` | |
-| 🧟‍♀️ | Woman zombie | `1f9df200d2640_womanzombie` | |
-| 🧟 | Zombie | `1f9df_zombie` | |
-| 🧟‍♂️ | Man zombie | `1f9df200d2642_manzombie` | |
-| 🧌 | Troll | `1f9cc_troll` | |
-| 💆‍♀️ | Woman getting massage | `1f486200d2640_womangettingmassage` | 🎨 |
-| 💆 | Person getting massage | `1f486_persongettingmassage` | 🎨 |
-| 💆‍♂️ | Man getting massage | `1f486200d2642_mangettingmassage` | 🎨 |
-| 💇‍♀️ | Woman getting haircut | `1f487200d2640_womangettinghaircut` | 🎨 |
-| 💇 | Person getting haircut | `1f487_persongettinghaircut` | 🎨 |
-| 💇‍♂️ | Man getting haircut | `1f487200d2642_mangettinghaircut` | 🎨 |
-| 🚶‍♀️ | Woman walking | `1f6b6200d2640_womanwalking` | 🎨 |
-| 🚶 | Person walking | `1f6b6_personwalking` | 🎨 |
-| 🚶‍♂️ | Man walking | `1f6b6200d2642_manwalking` | 🎨 |
-| 🧍‍♀️ | Woman standing | `1f9cd200d2640_womanstanding` | 🎨 |
-| 🧍 | Person standing | `1f9cd_personstanding` | 🎨 |
-| 🧍‍♂️ | Man standing | `1f9cd200d2642_manstanding` | 🎨 |
-| 🧎‍♀️ | Woman kneeling | `1f9ce200d2640_womankneeling` | 🎨 |
-| 🧎 | Person kneeling | `1f9ce_personkneeling` | 🎨 |
-| 🧎‍♂️ | Man kneeling | `1f9ce200d2642_mankneeling` | 🎨 |
-| 👩‍🦯 | Woman with white cane | `1f469200d1f9af_womanwithwhitecane` | 🎨 |
-| 🧑‍🦯 | Person with white cane | `1f9d1200d1f9af_personwithwhitecane` | 🎨 |
-| 👨‍🦯 | Man with white cane | `1f468200d1f9af_manwithwhitecane` | 🎨 |
-| 👩‍🦼 | Woman in motorized wheelchair | `1f469200d1f9bc_womaninmotorizedwheelchair` | 🎨 |
-| 🧑‍🦼 | Person in motorized wheelchair | `1f9d1200d1f9bc_personinmotorizedwheelchair` | 🎨 |
-| 👨‍🦼 | Man in motorized wheelchair | `1f468200d1f9bc_maninmotorizedwheelchair` | 🎨 |
-| 👩‍🦽 | Woman in manual wheelchair | `1f469200d1f9bd_womaninmanualwheelchair` | 🎨 |
-| 🧑‍🦽 | Person in manual wheelchair | `1f9d1200d1f9bd_personinmanualwheelchair` | 🎨 |
-| 👨‍🦽 | Man in manual wheelchair | `1f468200d1f9bd_maninmanualwheelchair` | 🎨 |
-| 🏃‍♀️ | Woman running | `1f3c3200d2640_womanrunning` | 🎨 |
-| 🏃 | Person running | `1f3c3_personrunning` | 🎨 |
-| 🏃‍♂️ | Man running | `1f3c3200d2642_manrunning` | 🎨 |
+| 🧞‍♂️ | Man genie | `mangenie` | |
+| 🧞‍♀️ | Woman genie | `womangenie` | |
+| 🧟 | Person zombie | `personzombie` | |
+| 🧟‍♂️ | Man zombie | `manzombie` | |
+| 🧟‍♀️ | Zombie | `zombie` | |
+| 🧌 | Troll | `troll` | |
+| 💆 | Person getting massage | `1f486_facemassage` | 🎨 |
+| 💆‍♂️ | Man getting massage | `man_getting_face_massage` | 🎨 |
+| 💆‍♀️ | Woman getting massage | `face_massage` | 🎨 |
+| 💇 | Getting haircut | `person_getting_haircut` | 🎨 |
+| 💇‍♂️ | Man getting haircut | `man_getting_haircut` | 🎨 |
+| 💇‍♀️ | Woman getting haircut | `woman_getting_haircut` | 🎨 |
+| 🚶‍➡️ | Person walking facing right | `personwalkingfacingright2` | 🎨 |
+| 🚶‍♂️ | Man walking | `manwalking` | 🎨 |
+| 🚶‍♀️ | Woman walking | `woman_walking` | 🎨 |
+| 🧎‍➡️ | Person kneeling facing right | `personkneelingfacingright2` | 🎨 |
+| 🧎‍♂️ | Man kneeling | `man_kneeling` | 🎨 |
+| 🧎‍♀️ | Woman kneeling | `woman_kneeling` | 🎨 |
+| 🧍 | Standing | `nonbinarystanding` | 🎨 |
+| 🧍‍♂️ | Man standing | `manstanding` | 🎨 |
+| 🧍‍♀️ | Woman standing | `womanstanding` | 🎨 |
+| 🧑‍🦯 | Person with probing cane | `personwithprobingcane` | 🎨 |
+| 👨‍🦯 | Man probing cane | `man_probing_cane` | 🎨 |
+| 👩‍🦯 | Woman probing cane | `woman_probing_cane` | 🎨 |
+| 🧑‍🦼‍➡️ | Person in motorized wheelchair facing right | `personmotorwheelchairright2` | 🎨 |
+| 👨‍🦼 | Man in motorized wheelchair | `man_in_motorized_wheelchair` | 🎨 |
+| 👩‍🦼 | Woman in motorized wheelchair | `woman_in_motorized_wheelchair` | 🎨 |
+| 🧑‍🦽‍➡️ | Person in manual wheelchair facing right | `personmanualwheelchairright2` | 🎨 |
+| 👨‍🦽 | Man in manual wheelchair | `man_in_manual_wheelchair` | 🎨 |
+| 👩‍🦽 | Woman in manual wheelchair | `woman_in_manual_wheelchair` | 🎨 |
+| 🏃 | Runner | `runner` | 🎨 |
+| 🏃‍♂️ | Got to run | `gottarun` | 🎨 |
+| 🏃‍➡️ | Person running facing right | `personrunningfacingright2` | 🎨 |
+| 🏃‍♀️ | Running | `running` | 🎨 |
 | 💃 | Woman dancing | `1f483_womandancing` | 🎨 |
-| 🕺 | Man dancing | `1f57a_mandancing` | 🎨 |
-| 🕴️ | Person in suit levitating | `1f574_personinsuitlevitating` | 🎨 |
-| 👯‍♀️ | Women with bunny ears | `1f46f200d2640_womenwithbunnyears` | |
-| 👯 | People with bunny ears | `1f46f_peoplewithbunnyears` | |
-| 👯‍♂️ | Men with bunny ears | `1f46f200d2642_menwithbunnyears` | |
-| 🧖‍♀️ | Woman in steamy room | `1f9d6200d2640_womaninsteamyroom` | 🎨 |
-| 🧖 | Person in steamy room | `1f9d6_personinsteamyroom` | 🎨 |
-| 🧖‍♂️ | Man in steamy room | `1f9d6200d2642_maninsteamyroom` | 🎨 |
-| 🧗‍♀️ | Woman climbing | `1f9d7200d2640_womanclimbing` | 🎨 |
-| 🧗 | Person climbing | `1f9d7_personclimbing` | 🎨 |
-| 🧗‍♂️ | Man climbing | `1f9d7200d2642_manclimbing` | 🎨 |
-
----
-
-## Hearts & Symbols
-
-| Emoji | Description | Reaction ID |
-|-------|-------------|-------------|
-| 🧡 | Orange heart | `1f9e1_orangeheart` |
-| 💛 | Yellow heart | `1f49b_yellowheart` |
-| 💚 | Green heart | `1f49a_greenheart` |
-| 💙 | Blue heart | `1f499_blueheart` |
-| 💜 | Purple heart | `1f49c_purpleheart` |
-| 🖤 | Black heart | `1f5a4_blackheart` |
-| 🤍 | White heart | `1f90d_whiteheart` |
-| 🤎 | Brown heart | `1f90e_brownheart` |
-| 💔 | Broken heart | `1f494_brokenheart` |
-| ❤️‍🔥 | Heart on fire | `2764200d1f525_heartonfire` |
-| ❤️‍🩹 | Mending heart | `2764200d1fa79_mendingheart` |
-| ❣️ | Heart exclamation | `2763_heartexclamation` |
-| 💕 | Two hearts | `1f495_twohearts` |
-| 💞 | Revolving hearts | `1f49e_revolvinghearts` |
-| 💓 | Beating heart | `1f493_beatingheart` |
-| 💗 | Growing heart | `1f497_growingheart` |
-| 💖 | Sparkling heart | `1f496_sparklingheart` |
-| 💘 | Heart with arrow | `1f498_heartwitharrow` |
-| 💝 | Heart with ribbon | `1f49d_heartwithribbon` |
-| 💟 | Heart decoration | `1f49f_heartdecoration` |
-| ☮️ | Peace symbol | `262e_peacesymbol` |
-| ✝️ | Latin cross | `271d_latincross` |
-| ☪️ | Star and crescent | `262a_starandcrescent` |
-| 🕉️ | Om | `1f549_om` |
-| ☸️ | Wheel of dharma | `2638_wheelofdharma` |
-| ✡️ | Star of David | `2721_starofdavid` |
-| 🔯 | Dotted six-pointed star | `1f52f_dottedsixpointedstar` |
-| 🕎 | Menorah | `1f54e_menorah` |
-| ☯️ | Yin yang | `262f_yinyang` |
-| ☦️ | Orthodox cross | `2626_orthodoxcross` |
-| 🛐 | Place of worship | `1f6d0_placeofworship` |
-| ⛎ | Ophiuchus | `26ce_ophiuchus` |
-| ♈ | Aries | `2648_aries` |
-| ♉ | Taurus | `2649_taurus` |
-| ♊ | Gemini | `264a_gemini` |
-| ♋ | Cancer | `264b_cancer` |
-| ♌ | Leo | `264c_leo` |
-| ♍ | Virgo | `264d_virgo` |
-| ♎ | Libra | `264e_libra` |
-| ♏ | Scorpio | `264f_scorpio` |
-| ♐ | Sagittarius | `2650_sagittarius` |
-| ♑ | Capricorn | `2651_capricorn` |
-| ♒ | Aquarius | `2652_aquarius` |
-| ♓ | Pisces | `2653_pisces` |
-| 🆔 | ID button | `1f194_idbutton` |
-| ⚛️ | Atom symbol | `269b_atomsymbol` |
-| 🉑 | Japanese "acceptable" button | `1f251_japaneseacceptablebutton` |
-| ☢️ | Radioactive | `2622_radioactive` |
-| ☣️ | Biohazard | `2623_biohazard` |
-| 📴 | Mobile phone off | `1f4f4_mobilephoneoff` |
-| 📳 | Vibration mode | `1f4f3_vibrationmode` |
-| 🈶 | Japanese "not free of charge" button | `1f236_japanesenotfreeofchargebutton` |
-| 🈚 | Japanese "free of charge" button | `1f21a_japanesefreeofchargebutton` |
-| 🈺 | Japanese "open for business" button | `1f23a_japaneseopenforbusinessbutton` |
-| 🈷️ | Japanese "monthly amount" button | `1f237_japanesemonthlyamountbutton` |
-| ✴️ | Eight-pointed star | `2734_eightpointedstar` |
-| 🆚 | VS button | `1f19a_vsbutton` |
-| 💮 | White flower | `1f4ae_whiteflower` |
-| 🉐 | Japanese "bargain" button | `1f250_japanesebargainbutton` |
-| ㊙️ | Japanese "secret" button | `3299_japanesesecretbutton` |
-| ㊗️ | Japanese "congratulations" button | `3297_japanesecongratulationsbutton` |
-| 🈴 | Japanese "passing grade" button | `1f234_japanesepassinggradebutton` |
-| 🈵 | Japanese "no vacancy" button | `1f235_japanesenovacancybutton` |
-| 🈹 | Japanese "discount" button | `1f239_japanesediscountbutton` |
-| 🈲 | Japanese "prohibited" button | `1f232_japaneseprohibitedbutton` |
-| 🅰️ | A button (blood type) | `1f170_abutton` |
-| 🅱️ | B button (blood type) | `1f171_bbutton` |
-| 🆎 | AB button (blood type) | `1f18e_abbutton` |
-| 🆑 | CL button | `1f191_clbutton` |
-| 🅾️ | O button (blood type) | `1f17e_obutton` |
-| 🆘 | SOS button | `1f198_sosbutton` |
-| ❌ | Cross mark | `274c_crossmark` |
-| ⭕ | Hollow red circle | `2b55_hollowredcircle` |
-| 🛑 | Stop sign | `1f6d1_stopsign` |
-| ⛔ | No entry | `26d4_noentry` |
-| 📛 | Name badge | `1f4db_namebadge` |
-| 🚫 | Prohibited | `1f6ab_prohibited` |
-| 💯 | Hundred points | `1f4af_hundredpoints` |
-| 💢 | Anger symbol | `1f4a2_angersymbol` |
-| ♨️ | Hot springs | `2668_hotsprings` |
-| 🚷 | No pedestrians | `1f6b7_nopedestrians` |
-| 🚯 | No littering | `1f6af_nolittering` |
-| 🚳 | No bicycles | `1f6b3_nobicycles` |
-| 🚱 | Non-potable water | `1f6b1_nonpotablewater` |
-| 🔞 | No one under eighteen | `1f51e_nooneundereighteen` |
-| 📵 | No mobile phones | `1f4f5_nomobilephones` |
-| 🚭 | No smoking | `1f6ad_nosmoking` |
-| ❗ | Exclamation mark | `2757_exclamationmark` |
-| ❕ | White exclamation mark | `2755_whiteexclamationmark` |
-| ❓ | Question mark | `2753_questionmark` |
-| ❔ | White question mark | `2754_whitequestionmark` |
-| ‼️ | Double exclamation mark | `203c_doubleexclamationmark` |
-| ⁉️ | Exclamation question mark | `2049_exclamationquestionmark` |
-| 🔅 | Dim button | `1f505_dimbutton` |
-| 🔆 | Bright button | `1f506_brightbutton` |
-| 〽️ | Part alternation mark | `303d_partalternationmark` |
-| ⚠️ | Warning | `26a0_warning` |
-| 🚸 | Children crossing | `1f6b8_childrencrossing` |
-| 🔱 | Trident emblem | `1f531_tridentemblem` |
-| ⚜️ | Fleur-de-lis | `269c_fleurdelis` |
-| 🔰 | Japanese symbol for beginner | `1f530_japanesesymbolforbeginner` |
-| ♻️ | Recycling symbol | `267b_recyclingsymbol` |
-| ✅ | Check mark button | `2705_checkmarkbutton` |
-| 🈯 | Japanese "reserved" button | `1f22f_japanesereservedbutton` |
-| 💹 | Chart increasing with yen | `1f4b9_chartincreasingwithyen` |
-| ❇️ | Sparkle | `2747_sparkle` |
-| ✳️ | Eight-spoked asterisk | `2733_eightspokedasterisk` |
-| ❎ | Cross mark button | `274e_crossmarkbutton` |
-| 🌐 | Globe with meridians | `1f310_globewithmeridians` |
-| 💠 | Diamond with a dot | `1f4a0_diamondwithadot` |
-| Ⓜ️ | Circled M | `24c2_circledm` |
-| 🌀 | Cyclone | `1f300_cyclone` |
-| 💤 | Zzz | `1f4a4_zzz` |
-| 🏧 | ATM sign | `1f3e7_atmsign` |
-| 🚾 | Water closet | `1f6be_watercloset` |
-| ♿ | Wheelchair symbol | `267f_wheelchairsymbol` |
-| 🅿️ | P button | `1f17f_pbutton` |
-| 🈳 | Japanese "vacancy" button | `1f233_japanesevacancybutton` |
-| 🈂️ | Japanese "service charge" button | `1f202_japaneseservicechargebutton` |
-| 🛂 | Passport control | `1f6c2_passportcontrol` |
-| 🛃 | Customs | `1f6c3_customs` |
-| 🛄 | Baggage claim | `1f6c4_baggageclaim` |
-| 🛅 | Left luggage | `1f6c5_leftluggage` |
+| 🕺 | Dancing | `dance` | 🎨 |
+| 👵 | Dancing gran | `gran` | 🎨 |
+| 🕴️ | Man in suit levitating | `man_in_suit_levitating` | 🎨 |
+| 🧖 | Person steam room | `steam_room` | 🎨 |
+| 🧖‍♂️ | Man in steamy room | `man_steam_room` | 🎨 |
+| 🧖‍♀️ | Woman steam room | `woman_steam_room` | 🎨 |
+| 🧗 | Person climbing | `climber` | 🎨 |
+| 🧗‍♂️ | Man climbing | `man_climbing` | 🎨 |
+| 🧗‍♀️ | Woman climbing | `woman_climbing` | 🎨 |
+| 🤺 | Fencer | `womanfencer` | |
+| 🏇 | Horse racing | `horse_racing` | 🎨 |
+| ⛷️ | Skier | `skier` | 🎨 |
+| 🏂 | Snowboarder | `snowboarder` | 🎨 |
+| 🏌️ | Person golfing | `golfer` | 🎨 |
+| 🏌️‍♂️ | Man golfing | `mangolfing` | 🎨 |
+| 🏌️‍♀️ | Woman golfer | `woman_golfer` | 🎨 |
+| 🏄 | Person surfing | `1f3c4_personsurfing` | 🎨 |
+| 🏄‍♂️ | Man surfer | `mansurfer` | 🎨 |
+| 🏄‍♀️ | Woman surfer | `womansurfer` | 🎨 |
+| 🚣 | Person rowing boat | `personrowingboat` | 🎨 |
+| 🚣‍♂️ | Man rowing boat | `manrowingboat` | 🎨 |
+| 🚣‍♀️ | Woman rowing boat | `woman_rowing_boat` | 🎨 |
+| 🏊 | Person swimming | `personswimming` | 🎨 |
+| 🏊‍♂️ | Man swimming | `manswimming` | 🎨 |
+| 🏊‍♀️ | Woman swimmer | `woman_swimmer` | 🎨 |
+| ⛹️ | Person bouncing ball | `bouncing_ball` | 🎨 |
+| ⛹️‍♂️ | Man bouncing ball | `man_bouncing_ball` | 🎨 |
+| ⛹️‍♀️ | Woman bouncing ball | `woman_bouncing_ball` | 🎨 |
+| ⚽ | Man playing football | `bartlett` | 🎨 |
+| ⚽ | Woman playing football | `womanfootball` | 🎨 |
+| 🏋️ | Person lifting weights | `weight_lifter` | 🎨 |
+| 🏋️‍♂️ | Man lifting weights | `manliftingweights` | 🎨 |
+| 🏋️‍♀️ | Woman weight lifter | `woman_weight_lifter` | 🎨 |
+| 🚴 | Person biking | `1f6b4_personbiking` | 🎨 |
+| 🚴‍♂️ | Bicycle | `bike` | 🎨 |
+| 🚴‍♀️ | Woman riding bike | `womanridingbike` | 🎨 |
+| 🚵‍♂️ | Man mountain biking | `manmountainbiking` | 🎨 |
+| 🚵‍♀️ | Woman mountain biking | `woman_mountain_biking` | 🎨 |
+| 🤸 | Person cartwheeling | `1f938_personcartwheeling` | 🎨 |
+| 🤸‍♂️ | Man cartwheeling | `man_cartwheeling` | 🎨 |
+| 🤸‍♀️ | Woman cartwheeling | `woman_cartwheeling` | 🎨 |
+| 🤽‍♂️ | Man playing water polo | `manplayingwaterpolo` | 🎨 |
+| 🤽‍♀️ | Woman playing water polo | `woman_playing_water_polo` | 🎨 |
+| 🤾‍♂️ | Man playing handball | `manplayinghandball` | 🎨 |
+| 🤾‍♀️ | Woman playing handball | `woman_playing_handball` | 🎨 |
+| 🤹 | Person juggling | `personjuggling` | 🎨 |
+| 🤹‍♂️ | Man juggling | `manjuggling` | 🎨 |
+| 🤹‍♀️ | Woman juggling | `woman_juggling` | 🎨 |
+| 🧘 | Person in lotus position | `lotus_position` | 🎨 |
+| 🧘‍♂️ | Man in lotus position | `maninlotusposition` | 🎨 |
+| 🧘‍♀️ | Yoga | `yoga` | 🎨 |
+| 🛀 | Woman taking a bath | `womanbath` | 🎨 |
+| 🛌 | Person in bed | `person_in_bed` | 🎨 |
+| 🗣️ | Speaking head | `1f5e3_speakingheadinsilhouette` | |
+| 👤 | Bust in silhouette | `1f464_bustinsilhouette` | |
+| 👥 | Busts in silhouette | `1f465_bustsinsilhouette` | |
+| 🫂 | People hugging | `peoplehugging` | |
+| 👣 | Footprints | `1f463_footprints` | |
 
 ---
 
@@ -510,201 +603,165 @@ Reference reactions by their unique ID:
 
 | Emoji | Description | Reaction ID |
 |-------|-------------|-------------|
-| 🐶 | Dog face | `1f436_dogface` |
-| 🐱 | Cat face | `1f431_catface` |
-| 🐭 | Mouse face | `1f42d_mouseface` |
-| 🐹 | Hamster | `1f439_hamster` |
-| 🐰 | Rabbit face | `1f430_rabbitface` |
-| 🦊 | Fox | `1f98a_fox` |
-| 🐻 | Bear | `1f43b_bear` |
-| 🐼 | Panda | `1f43c_panda` |
-| 🐨 | Koala | `1f428_koala` |
+| 🐵 | Smile monkey | `smilemonkey` |
+| 🐒 | Monkey | `monkey` |
+| 🦍 | Gorilla | `1f98d_gorilla` |
+| 🦧 | Orangutan | `orangutanscratching` |
+| 🐶 | Smile dog | `smiledog` |
+| 🐕 | Dog | `dog` |
+| 🦮 | Guidedog | `1f9ae_guidedog` |
+| 🐕‍🦺 | Service dog | `1f415_200d_1f9ba_servicedog` |
+| 🐩 | Poodle | `1f429_poodle` |
+| 🐺 | Wolf face | `1f43a_wolfface` |
+| 🦊 | Fox | `foxhug` |
+| 🦝 | Raccoon | `racoon` |
+| 😺 | Smile cat | `smilecat` |
+| 🐈 | Cat | `cat` |
+| 🐈‍⬛ | Black cat | `blackcat` |
+| 🦁 | Lion | `lion` |
 | 🐯 | Tiger face | `1f42f_tigerface` |
-| 🦁 | Lion | `1f981_lion` |
-| 🐮 | Cow face | `1f42e_cowface` |
-| 🐷 | Pig face | `1f437_pigface` |
-| 🐽 | Pig nose | `1f43d_pignose` |
-| 🐸 | Frog | `1f438_frog` |
-| 🐵 | Monkey face | `1f435_monkeyface` |
-| 🙈 | See-no-evil monkey | `1f648_seenoevilmonkey` |
-| 🙉 | Hear-no-evil monkey | `1f649_hearnoevilmonkey` |
-| 🙊 | Speak-no-evil monkey | `1f64a_speaknoevilmonkey` |
-| 🐒 | Monkey | `1f412_monkey` |
-| 🐔 | Chicken | `1f414_chicken` |
-| 🐧 | Penguin | `1f427_penguin` |
-| 🐦 | Bird | `1f426_bird` |
-| 🐤 | Baby chick | `1f424_babychick` |
-| 🐣 | Hatching chick | `1f423_hatchingchick` |
-| 🐥 | Front-facing baby chick | `1f425_frontfacingbabychick` |
-| 🦆 | Duck | `1f986_duck` |
-| 🦅 | Eagle | `1f985_eagle` |
-| 🦉 | Owl | `1f989_owl` |
-| 🦇 | Bat | `1f987_bat` |
-| 🐺 | Wolf | `1f43a_wolf` |
-| 🐗 | Boar | `1f417_boar` |
-| 🐴 | Horse face | `1f434_horseface` |
-| 🫑 | Bell pepper | `1fad1_bellpepper` |
-| 🐝 | Honeybee | `1f41d_honeybee` |
-| 🪱 | Worm | `1fab1_worm` |
-| 🐛 | Bug | `1f41b_bug` |
-| 🦋 | Butterfly | `1f98b_butterfly` |
-| 🐌 | Snail | `1f40c_snail` |
-| 🐞 | Lady beetle | `1f41e_ladybeetle` |
-| 🐜 | Ant | `1f41c_ant` |
-| 🪰 | Fly | `1fab0_fly` |
-| 🪲 | Beetle | `1fab2_beetle` |
-| 🪳 | Cockroach | `1fab3_cockroach` |
-| 🦟 | Mosquito | `1f99f_mosquito` |
-| 🦗 | Cricket | `1f997_cricket` |
-| 🕷️ | Spider | `1f577_spider` |
-| 🕸️ | Spider web | `1f578_spiderweb` |
-| 🦂 | Scorpion | `1f982_scorpion` |
-| 🐢 | Turtle | `1f422_turtle` |
-| 🐍 | Snake | `1f40d_snake` |
-| 🦎 | Lizard | `1f98e_lizard` |
-| 🦖 | T-Rex | `1f996_trex` |
-| 🦕 | Sauropod | `1f995_sauropod` |
-| 🐙 | Octopus | `1f419_octopus` |
-| 🦑 | Squid | `1f991_squid` |
-| 🦐 | Shrimp | `1f990_shrimp` |
-| 🦞 | Lobster | `1f99e_lobster` |
-| 🦀 | Crab | `1f980_crab` |
-| 🐡 | Blowfish | `1f421_blowfish` |
-| 🐠 | Tropical fish | `1f420_tropicalfish` |
-| 🐟 | Fish | `1f41f_fish` |
-| 🐬 | Dolphin | `1f42c_dolphin` |
-| 🐳 | Spouting whale | `1f433_spoutingwhale` |
-| 🐋 | Whale | `1f40b_whale` |
-| 🦈 | Shark | `1f988_shark` |
-| 🐊 | Crocodile | `1f40a_crocodile` |
 | 🐅 | Tiger | `1f405_tiger` |
 | 🐆 | Leopard | `1f406_leopard` |
-| 🦓 | Zebra | `1f993_zebra` |
-| 🦍 | Gorilla | `1f98d_gorilla` |
-| 🦧 | Orangutan | `1f9a7_orangutan` |
-| 🦣 | Mammoth | `1f9a3_mammoth` |
-| 🐘 | Elephant | `1f418_elephant` |
-| 🦛 | Hippopotamus | `1f99b_hippopotamus` |
-| 🦏 | Rhinoceros | `1f98f_rhinoceros` |
-| 🐪 | Camel | `1f42a_camel` |
-| 🐫 | Two-hump camel | `1f42b_twohumpcamel` |
-| 🦒 | Giraffe | `1f992_giraffe` |
-| 🦘 | Kangaroo | `1f998_kangaroo` |
-| 🦬 | Bison | `1f9ac_bison` |
-| 🐃 | Water buffalo | `1f403_waterbuffalo` |
-| 🐂 | Ox | `1f402_ox` |
-| 🐄 | Cow | `1f404_cow` |
+| 🐴 | Horse face | `1f434_horseface` |
+| 🫎 | Moose | `moose` |
+| 🫏 | Donkey | `donkey` |
 | 🐎 | Horse | `1f40e_horse` |
-| 🐖 | Pig | `1f416_pig` |
+| 🦄 | Unicorn head | `unicornhead` |
+| 🦓 | Zebra | `1f993_zebraface` |
+| 🦌 | Reindeer | `reindeer` |
+| 🦬 | Bison | `bison` |
+| 🐮 | Cow face | `1f42e_cowface` |
+| 🐂 | Ox | `1f402_ox` |
+| 🐃 | Water buffalo | `1f403_waterbuffalo` |
+| 🐄 | Cow | `1f404_cow` |
+| 🐷 | Pig face | `1f437_pigface` |
+| 🐖 | Pig | `pig` |
+| 🐗 | Boar | `1f417_boar` |
+| 🐽 | Pig nose | `1f43d_pignose` |
 | 🐏 | Ram | `1f40f_ram` |
-| 🐑 | Ewe | `1f411_ewe` |
-| 🦙 | Llama | `1f999_llama` |
+| 🐑 | Spring lamb | `lamb` |
 | 🐐 | Goat | `1f410_goat` |
-| 🦌 | Deer | `1f98c_deer` |
-| 🐕 | Dog | `1f415_dog` |
-| 🐩 | Poodle | `1f429_poodle` |
-| 🦮 | Guide dog | `1f9ae_guidedog` |
-| 🐕‍🦺 | Service dog | `1f415200d1f9ba_servicedog` |
-| 🐈 | Cat | `1f408_cat` |
-| 🐈‍⬛ | Black cat | `1f408200d2b1b_blackcat` |
-| 🪶 | Feather | `1fab6_feather` |
-| 🐓 | Rooster | `1f413_rooster` |
-| 🦃 | Turkey | `1f983_turkey` |
-| 🦤 | Dodo | `1f9a4_dodo` |
-| 🦚 | Peacock | `1f99a_peacock` |
-| 🦜 | Parrot | `1f99c_parrot` |
-| 🦢 | Swan | `1f9a2_swan` |
-| 🦩 | Flamingo | `1f9a9_flamingo` |
-| 🕊️ | Dove | `1f54a_dove` |
-| 🐇 | Rabbit | `1f407_rabbit` |
-| 🦝 | Raccoon | `1f99d_raccoon` |
-| 🦨 | Skunk | `1f9a8_skunk` |
-| 🦡 | Badger | `1f9a1_badger` |
-| 🦫 | Beaver | `1f9ab_beaver` |
-| 🦦 | Otter | `1f9a6_otter` |
-| 🦥 | Sloth | `1f9a5_sloth` |
+| 🐪 | Camel | `1f42a_dromedarycamel` |
+| 🐫 | Two humped Camel | `1f42b_bactriancamel` |
+| 🦙 | Llama | `1f999_llama` |
+| 🦒 | Giraffe | `1f992_giraffeface` |
+| 🐘 | Elephant | `elephant` |
+| 🦣 | Mammoth | `mammoth` |
+| 🦏 | Rhinoceros | `1f98f_rhinoceros` |
+| 🦛 | Hippopotamus | `1f99b_hippopotamus` |
+| 🐭 | Mouse face | `1f42d_mouseface` |
 | 🐁 | Mouse | `1f401_mouse` |
 | 🐀 | Rat | `1f400_rat` |
+| 🐹 | Hamster Face | `1f439_hamsterface` |
+| 🐰 | Rabbit | `bunnyhug` |
+| 🐇 | Bunny | `bunny` |
 | 🐿️ | Chipmunk | `1f43f_chipmunk` |
-| 🦔 | Hedgehog | `1f994_hedgehog` |
+| 🦫 | Beaver | `beaver` |
+| 🦔 | Hedgehog | `hedgehoghug` |
+| 🦇 | Bat smile | `batsmile` |
+| 🐻 | Bear face | `1f43b_bearface` |
+| 🐻‍❄️ | Polar bear | `polarbear` |
+| 🐨 | Koala | `koala` |
+| 🐼 | Panda | `panda` |
+| 🦥 | Sloth | `sloth` |
+| 🦦 | Otter | `1f9a6_otter` |
+| 🦨 | Skunk | `1f9a8_skunk` |
+| 🦘 | Kangaroo | `1f998_kangaroo` |
+| 🦡 | Badger | `1f9a1_badger` |
 | 🐾 | Paw prints | `1f43e_pawprints` |
-| 🐉 | Dragon | `1f409_dragon` |
+| 🦃 | Turkey | `1f983_turkey` |
+| 🐔 | Chicken | `1f414_chicken` |
+| 🐓 | Rooster | `1f413_rooster` |
+| 🐣 | Hatching chick | `1f423_hatchingchick` |
+| 🐤 | Baby chick | `1f424_babychick` |
+| 🐥 | Front facing baby chick | `1f425_frontfacingbabychick` |
+| 🐦 | Bird | `1f426_bird` |
+| 🐧 | Dancing penguin | `penguin` |
+| 🕊️ | Dove | `1f54a_doveofpeace` |
+| 🦅 | Eagle | `1f985_eagle` |
+| 🐦‍🔥 | Phoenix | `phoenix3` |
+| 🦆 | Duck | `1f986_duck` |
+| 🦢 | Swan | `1f9a2_swan` |
+| 🦉 | Owl | `1f989_owl` |
+| 🦤 | Dodo | `dodo` |
+| 🪶 | Feather | `feather` |
+| 🦩 | Flamingo | `1f9a9_flamingo` |
+| 🦚 | Peacock | `1f99a_peacock` |
+| 🦜 | Parrot | `1f99c_parrot` |
+| 🪽 | Left wing | `wingleft` |
+| 🪽 | Wing | `wing` |
+| 🐦‍⬛ | Black bird | `birdblack` |
+| 🪿 | Goose | `goose` |
+| 🐸 | Frog face | `1f438_frogface` |
+| 🐊 | Crocodile | `1f40a_crocodile` |
+| 🐢 | Tortoise | `tortoise` |
+| 🦎 | Lizard | `lizard` |
+| 🐍 | Snake | `snake` |
 | 🐲 | Dragon face | `1f432_dragonface` |
-| 🌵 | Cactus | `1f335_cactus` |
-| 🎄 | Christmas tree | `1f384_christmastree` |
-| 🌲 | Evergreen tree | `1f332_evergreentree` |
-| 🌳 | Deciduous tree | `1f333_deciduoustree` |
-| 🌴 | Palm tree | `1f334_palmtree` |
-| 🪵 | Wood | `1fab5_wood` |
-| 🌱 | Seedling | `1f331_seedling` |
+| 🐉 | Dragon | `1f409_dragon` |
+| 🦕 | Dinosaur | `1f995_sauropod` |
+| 🦖 | Trex | `trex` |
+| 🐳 | Spouting Whale | `spoutingwhale` |
+| 🐋 | Whale | `whale` |
+| 🐬 | Dolphin | `dolphin` |
+| 🦭 | Seal | `seal` |
+| 🐟 | Fish | `fish` |
+| 🐠 | Tropical fish | `tropicalfish` |
+| 🐡 | Blowfish | `1f421_blowfish` |
+| 🦈 | Shark | `1f988_shark` |
+| 🐙 | Octopus | `octopus` |
+| 🐚 | Spiralshell | `1f41a_spiralshell` |
+| 🪸 | Coral | `coral` |
+| 🪼 | Jellyfish | `jellyfish` |
+| 🐌 | Snail | `snail` |
+| 🦋 | Butterfly | `butterfly` |
+| 🐛 | Bug | `bug` |
+| 🐜 | Ant | `1f41c_ant` |
+| 🐝 | Bee | `bee` |
+| 🪲 | Beetle | `beetle` |
+| 🐞 | Ladybug | `1f41e_ladybeetle` |
+| 🦗 | Cricket | `cricket` |
+| 🪳 | Cockroach | `cockroach` |
+| 🕷️ | Spider | `spider` |
+| 🕸️ | Web | `1f578_spiderweb` |
+| 🦂 | Scorpion | `1f982_scorpion` |
+| 🦟 | Mosquito | `1f99f_mosquito` |
+| 🪰 | Fly | `fly` |
+| 🪱 | Worm | `worm` |
+| 🦠 | Microbe | `1f9a0_microbe` |
+| 🐔 | Dancing hen | `hendance` |
+| 🐧 | Penguin kiss | `penguinkiss` |
+| 🙂 | Stingray | `stingray` |
+| 🐺 | Werewolf howl | `werewolfhowl` |
+| 🐵 | Snow angel | `snowangel` |
+| 💐 | Bouquet | `1f490_bouquet` |
+| 🌸 | Cherry blossom | `cherryblossom` |
+| 💮 | White flower | `1f4ae_whiteflower` |
+| 🪷 | Lotus | `lotus` |
+| 🏵️ | Rosette | `1f3f5_rosette` |
+| 🌹 | Rose | `rose` |
+| 🥀 | Wilted flower | `wiltedflower` |
+| 🌺 | Hibiscus | `1f33a_hibiscus` |
+| 🌻 | Sunflower | `sunflower` |
+| 🌼 | Flower | `flower` |
+| 🌷 | Tulip | `tulip` |
+| 🪻 | Hyacinth | `hyacinth` |
+| 🌱 | Seedling | `seedling` |
+| 🪴 | Potted Plant | `pottedplant` |
+| 🌲 | Evergreen tree | `evergreentree` |
+| 🌳 | Deciduous tree | `deciduoustree` |
+| 🌴 | Palm tree | `palmtree` |
+| 🌵 | Cactus | `cactus` |
+| 🌾 | Sheaf of rice | `1f33e_earofrice` |
 | 🌿 | Herb | `1f33f_herb` |
 | ☘️ | Shamrock | `2618_shamrock` |
-| 🍀 | Four leaf clover | `1f340_fourleafclover` |
-| 🎍 | Pine decoration | `1f38d_pinedecoration` |
-| 🪴 | Potted plant | `1fab4_pottedplant` |
-| 🪹 | Empty nest | `1fab9_emptynest` |
-| 🍃 | Leaf fluttering in wind | `1f343_leafflutteringinwind` |
-| 🍂 | Fallen leaf | `1f342_fallenleaf` |
+| 🍀 | Good luck | `goodluck` |
 | 🍁 | Maple leaf | `1f341_mapleleaf` |
-| 🪺 | Nest with eggs | `1faba_nestwitheggs` |
+| 🍂 | Fallen leaf | `1f342_fallenleaf` |
+| 🍃 | Falling leaf | `fallingleaf` |
+| 🪹 | Empty nest | `nest` |
+| 🪺 | Nest with eggs | `nestwitheggs` |
 | 🍄 | Mushroom | `1f344_mushroom` |
-| 🌾 | Sheaf of rice | `1f33e_sheafofrice` |
-| 💐 | Bouquet | `1f490_bouquet` |
-| 🌷 | Tulip | `1f337_tulip` |
-| 🌹 | Rose | `1f339_rose` |
-| 🥀 | Wilted flower | `1f940_wiltedflower` |
-| 🪻 | Hyacinth | `1fabb_hyacinth` |
-| 🌺 | Hibiscus | `1f33a_hibiscus` |
-| 🌸 | Cherry blossom | `1f338_cherryblossom` |
-| 🌻 | Sunflower | `1f33b_sunflower` |
-| 🌚 | New moon face | `1f31a_newmoonface` |
-| 🌝 | Full moon face | `1f31d_fullmoonface` |
-| 🌛 | First quarter moon face | `1f31b_firstquartermoonface` |
-| 🌜 | Last quarter moon face | `1f31c_lastquartermoonface` |
-| 🌕 | Full moon | `1f315_fullmoon` |
-| 🌖 | Waning gibbous moon | `1f316_waninggibbousmoon` |
-| 🌗 | Last quarter moon | `1f317_lastquartermoon` |
-| 🌘 | Waning crescent moon | `1f318_waningcrescentmoon` |
-| 🌑 | New moon | `1f311_newmoon` |
-| 🌒 | Waxing crescent moon | `1f312_waxingcrescentmoon` |
-| 🌓 | First quarter moon | `1f313_firstquartermoon` |
-| 🌔 | Waxing gibbous moon | `1f314_waxinggibbousmoon` |
-| 🌙 | Crescent moon | `1f319_crescentmoon` |
-| 🌎 | Globe showing Americas | `1f30e_globeshowingamericas` |
-| 🌍 | Globe showing Europe-Africa | `1f30d_globeshowingeuropeafrica` |
-| 🌏 | Globe showing Asia-Australia | `1f30f_globeshowingasiaaustralia` |
-| 🪐 | Ringed planet | `1fa90_ringedplanet` |
-| 💫 | Dizzy | `1f4ab_dizzy` |
-| ⭐ | Star | `2b50_star` |
-| 🌟 | Glowing star | `1f31f_glowingstar` |
-| ✨ | Sparkles | `2728_sparkles` |
-| ⚡ | High voltage | `26a1_highvoltage` |
-| ☄️ | Comet | `2604_comet` |
-| 💥 | Collision | `1f4a5_collision` |
-| 🔥 | Fire | `1f525_fire` |
-| 🌪️ | Tornado | `1f32a_tornado` |
-| 🌈 | Rainbow | `1f308_rainbow` |
-| ☀️ | Sun | `2600_sun` |
-| 🌤️ | Sun behind small cloud | `1f324_sunbehindsmallcloud` |
-| ⛅ | Sun behind cloud | `26c5_sunbehindcloud` |
-| 🌥️ | Sun behind large cloud | `1f325_sunbehindlargecloud` |
-| ☁️ | Cloud | `2601_cloud` |
-| 🌦️ | Sun behind rain cloud | `1f326_sunbehindraincloud` |
-| 🌧️ | Cloud with rain | `1f327_cloudwithrain` |
-| ⛈️ | Cloud with lightning and rain | `26c8_cloudwithlightningandrain` |
-| 🌩️ | Cloud with lightning | `1f329_cloudwithlightning` |
-| 🌨️ | Cloud with snow | `1f328_cloudwithsnow` |
-| ❄️ | Snowflake | `2744_snowflake` |
-| ☃️ | Snowman | `2603_snowman` |
-| ⛄ | Snowman without snow | `26c4_snowmanwithoutsnow` |
-| 🌬️ | Wind face | `1f32c_windface` |
-| 💨 | Dashing away | `1f4a8_dashingaway` |
-| 💧 | Droplet | `1f4a7_droplet` |
-| 💦 | Sweat droplets | `1f4a6_sweatdroplets` |
-| ☔ | Umbrella with rain drops | `2614_umbrellawithraindrops` |
-| ☂️ | Umbrella | `2602_umbrella` |
-| 🌊 | Water wave | `1f30a_waterwave` |
-| 🌫️ | Fog | `1f32b_fog` |
 
 ---
 
@@ -712,225 +769,378 @@ Reference reactions by their unique ID:
 
 | Emoji | Description | Reaction ID |
 |-------|-------------|-------------|
-| 🍕 | Pizza | `1f355_pizza` |
-| 🍔 | Hamburger | `1f354_hamburger` |
-| 🍟 | French fries | `1f35f_frenchfries` |
-| 🌭 | Hot dog | `1f32d_hotdog` |
-| 🍿 | Popcorn | `1f37f_popcorn` |
-| 🧋 | Bubble tea | `1f9cb_bubbletea` |
-| ☕ | Hot beverage | `2615_hotbeverage` |
-| 🍺 | Beer mug | `1f37a_beermug` |
-| 🍻 | Clinking beer mugs | `1f37b_clinkingbeermugs` |
-| 🥂 | Clinking glasses | `1f942_clinkingglasses` |
-| 🍷 | Wine glass | `1f377_wineglass` |
-| 🥃 | Tumbler glass | `1f943_tumblerglass` |
-| 🍸 | Cocktail glass | `1f378_cocktailglass` |
-| 🍹 | Tropical drink | `1f379_tropicaldrink` |
-| 🧃 | Beverage box | `1f9c3_beveragebox` |
-| 🧉 | Mate | `1f9c9_mate` |
-| 🧊 | Ice | `1f9ca_ice` |
-| 🥄 | Spoon | `1f944_spoon` |
-| 🍴 | Fork and knife | `1f374_forkandknife` |
-| 🍽️ | Fork and knife with plate | `1f37d_forkandknifewithplate` |
-| 🥣 | Bowl with spoon | `1f963_bowlwithspoon` |
-| 🥡 | Takeout box | `1f961_takeoutbox` |
-| 🥢 | Chopsticks | `1f962_chopsticks` |
-| 🧂 | Salt | `1f9c2_salt` |
-| 🍇 | Grapes | `1f347_grapes` |
+| 🍇 | Grapes | `grapes` |
 | 🍈 | Melon | `1f348_melon` |
-| 🍉 | Watermelon | `1f349_watermelon` |
-| 🍊 | Tangerine | `1f34a_tangerine` |
-| 🍋 | Lemon | `1f34b_lemon` |
-| 🍌 | Banana | `1f34c_banana` |
-| 🍍 | Pineapple | `1f34d_pineapple` |
+| 🍉 | Watermelon | `watermelon` |
+| 🍊 | Orange | `orange` |
+| 🍋 | Lemon | `lemon` |
+| 🍋‍🟩 | Lime | `lime4` |
+| 🍌 | Banana | `banana` |
+| 🍍 | Pineapple | `pineapple` |
 | 🥭 | Mango | `1f96d_mango` |
-| 🍎 | Red apple | `1f34e_redapple` |
+| 🍎 | Apple | `apple` |
 | 🍏 | Green apple | `1f34f_greenapple` |
 | 🍐 | Pear | `1f350_pear` |
-| 🍑 | Peach | `1f351_peach` |
-| 🍒 | Cherries | `1f352_cherries` |
-| 🍓 | Strawberry | `1f353_strawberry` |
-| 🫐 | Blueberries | `1fad0_blueberries` |
+| 🍑 | Peach | `peach` |
+| 🍒 | Cherries | `cherries` |
+| 🍓 | Strawberry | `strawberry` |
+| 🫐 | Blueberries | `blueberries` |
 | 🥝 | Kiwi fruit | `1f95d_kiwifruit` |
 | 🍅 | Tomato | `1f345_tomato` |
-| 🫒 | Olive | `1fad2_olive` |
+| 🫒 | Olive | `olive` |
 | 🥥 | Coconut | `1f965_coconut` |
-| 🥑 | Avocado | `1f951_avocado` |
-| 🍆 | Eggplant | `1f346_eggplant` |
+| 🍆 | Eggplant | `aubergine` |
 | 🥔 | Potato | `1f954_potato` |
+| 🍄‍🟫 | Brown mushroom | `brownmushroom4` |
 | 🥕 | Carrot | `1f955_carrot` |
-| 🌽 | Ear of corn | `1f33d_earofcorn` |
-| 🌶️ | Hot pepper | `1f336_hotpepper` |
+| 🌽 | Corn | `1f33d_earofmaize` |
+| 🌶️ | Chili pepper | `1f336_hotpepper` |
+| 🫑 | Bell Pepper | `bellpepper` |
 | 🥒 | Cucumber | `1f952_cucumber` |
-| 🥬 | Leafy green | `1f96c_leafygreen` |
+| 🥬 | Lettuce | `1f96c_leafygreen` |
 | 🥦 | Broccoli | `1f966_broccoli` |
 | 🧄 | Garlic | `1f9c4_garlic` |
 | 🧅 | Onion | `1f9c5_onion` |
 | 🥜 | Peanuts | `1f95c_peanuts` |
-| 🫘 | Beans | `1fad8_beans` |
+| 🫘 | Beans | `beans` |
 | 🌰 | Chestnut | `1f330_chestnut` |
+| 🫚 | ginger | `ginger` |
+| 🫛 | Pea pod | `peapod` |
 | 🍞 | Bread | `1f35e_bread` |
-| 🥐 | Croissant | `1f950_croissant` |
-| 🥖 | Baguette bread | `1f956_baguettebread` |
-| 🫓 | Flatbread | `1fad3_flatbread` |
+| 🥐 | Croissant | `croissant` |
+| 🥖 | Baguette | `1f956_baguettebread` |
+| 🫓 | Flat Bread | `flatbread` |
 | 🥨 | Pretzel | `1f968_pretzel` |
 | 🥯 | Bagel | `1f96f_bagel` |
-| 🥞 | Pancakes | `1f95e_pancakes` |
+| 🥞 | Pancake | `1f95e_pancake` |
 | 🧇 | Waffle | `1f9c7_waffle` |
-| 🧀 | Cheese wedge | `1f9c0_cheesewedge` |
+| 🧀 | Cheese | `cheese` |
 | 🍖 | Meat on bone | `1f356_meatonbone` |
-| 🍗 | Poultry leg | `1f357_poultryleg` |
-| 🥩 | Cut of meat | `1f969_cutofmeat` |
+| 🍗 | Chicken leg | `chickenleg` |
+| 🥩 | Steak | `1f969_cutofmeat` |
 | 🥓 | Bacon | `1f953_bacon` |
-| 🍳 | Cooking | `1f373_cooking` |
-| 🍲 | Pot of food | `1f372_potoffood` |
-| 🫕 | Fondue | `1fad5_fondue` |
-| 🥘 | Shallow pan of food | `1f958_shallowpanoffood` |
-| 🍝 | Spaghetti | `1f35d_spaghetti` |
-| 🥗 | Green salad | `1f957_greensalad` |
-| 🥙 | Stuffed flatbread | `1f959_stuffedflatbread` |
+| 🍔 | Burger | `burger` |
+| 🍟 | Fries | `fries` |
+| 🍕 | Pizza slice | `pizzaslice` |
+| 🌭 | Hot dog | `1f32d_hotdog` |
+| 🥪 | Sandwich | `1f96a_sandwich` |
 | 🌮 | Taco | `1f32e_taco` |
 | 🌯 | Burrito | `1f32f_burrito` |
-| 🫔 | Tamale | `1fad4_tamale` |
-| 🥪 | Sandwich | `1f96a_sandwich` |
-| � | Falafel | `1f959_falafel` |
-| �🧆 | Falafel | `1f9c6_falafel` |
+| 🫔 | Tamale | `tamale` |
+| 🥙 | Stuffed flatbread | `1f959_stuffedflatbread` |
+| 🧆 | Falafel | `1f9c6_falafel` |
 | 🥚 | Egg | `1f95a_egg` |
+| 🍳 | Cooking | `1f373_cooking` |
+| 🥘 | Paella | `1f958_shallowpanoffood` |
+| 🍲 | Stew | `1f372_potoffood` |
+| 🫕 | Fondue | `fondue` |
+| 🥣 | Bowl with spoon | `1f963_bowlwithspoon` |
+| 🥗 | Salad | `1f957_greensalad` |
+| 🍿 | Popcorn | `1f37f_popcorn` |
+| 🧈 | Butter | `1f9c8_butter` |
+| 🧂 | Salt | `1f9c2_salt` |
+| 🥫 | Tin can | `1f96b_cannedfood` |
 | 🍱 | Bento box | `1f371_bentobox` |
 | 🍘 | Rice cracker | `1f358_ricecracker` |
 | 🍙 | Rice ball | `1f359_riceball` |
-| 🍚 | Cooked rice | `1f35a_cookedrice` |
-| 🍛 | Curry rice | `1f35b_curryrice` |
-| 🍜 | Steaming bowl | `1f35c_steamingbowl` |
-| 🍠 | Roasted sweet potato | `1f360_roastedsweetpotato` |
+| 🍚 | Rice | `1f35a_cookedrice` |
+| 🍛 | Curry | `1f35b_curryandrice` |
+| 🍜 | Noodles | `noodles` |
+| 🍝 | Spaghetti | `1f35d_spaghetti` |
+| 🍠 | Sweet potato | `1f360_roastedsweetpotato` |
 | 🍢 | Oden | `1f362_oden` |
 | 🍣 | Sushi | `1f363_sushi` |
 | 🍤 | Fried shrimp | `1f364_friedshrimp` |
-| 🍥 | Fish cake with swirl | `1f365_fishcakewithswirl` |
+| 🍥 | Fishcake | `1f365_fishcakewithswirldesign` |
 | 🥮 | Moon cake | `1f96e_mooncake` |
 | 🍡 | Dango | `1f361_dango` |
 | 🥟 | Dumpling | `1f95f_dumpling` |
 | 🥠 | Fortune cookie | `1f960_fortunecookie` |
+| 🥡 | Takeout box | `1f961_takeoutbox` |
+| 🦀 | Crab | `1f980_crab` |
+| 🦞 | Lobster | `1f99e_lobster` |
+| 🦐 | Shrimp | `1f990_shrimp` |
+| 🦑 | Squid | `1f991_squid` |
 | 🦪 | Oyster | `1f9aa_oyster` |
 | 🍦 | Soft ice cream | `1f366_softicecream` |
 | 🍧 | Shaved ice | `1f367_shavedice` |
 | 🍨 | Ice cream | `1f368_icecream` |
 | 🍩 | Doughnut | `1f369_doughnut` |
-| 🍪 | Cookie | `1f36a_cookie` |
-| 🎂 | Birthday cake | `1f382_birthdaycake` |
-| 🍰 | Shortcake | `1f370_shortcake` |
-| 🧁 | Cupcake | `1f9c1_cupcake` |
-| 🥧 | Pie | `1f967_pie` |
-| 🍫 | Chocolate bar | `1f36b_chocolatebar` |
+| 🍪 | Cookies | `cookies` |
+| 🎂 | Cake | `cake` |
+| 🍰 | Cake slice | `cakeslice` |
+| 🧁 | Cupcake | `cupcake` |
+| 🥧 | Pie | `pie` |
+| 🍫 | Chocolate | `1f36b_chocolatebar` |
 | 🍬 | Candy | `1f36c_candy` |
 | 🍭 | Lollipop | `1f36d_lollipop` |
 | 🍮 | Custard | `1f36e_custard` |
-| 🍯 | Honey pot | `1f36f_honeypot` |
+| 🍯 | Honey | `1f36f_honeypot` |
 | 🍼 | Baby bottle | `1f37c_babybottle` |
-| 🥛 | Glass of milk | `1f95b_glassofmilk` |
-| 🫗 | Pouring liquid | `1fad7_pouringliquid` |
-| 🫙 | Jar | `1fad9_jar` |
-| 🍵 | Teacup without handle | `1f375_teacupwithouthandle` |
-| 🍶 | Sake | `1f376_sake` |
-| 🍾 | Bottle with popping cork | `1f37e_bottlewithpoppingcork` |
+| 🥛 | Milk | `1f95b_milkglass` |
+| ☕ | Coffee | `coffee` |
+| 🫖 | Teapot | `teapot` |
+| 🍵 | Tea | `chai` |
+| 🍶 | Sake | `1f376_sakebottleandcup` |
+| 🍾 | Champagne | `champagne` |
+| 🍷 | Red wine | `redwine` |
+| 🍸 | Drink | `drink` |
+| 🍹 | Tropical drink | `1f379_tropicaldrink` |
+| 🍺 | Beer | `beer` |
+| 🍻 | Beer mugs | `1f37b_clinkingbeermugs` |
+| 🥂 | Cheers! | `cheers` |
+| 🥃 | Tumbler glass | `1f943_tumblerglass` |
+| 🫗 | Pouring liquid | `pour` |
+| 🥤 | Cup with straw | `1f964_cupwithstraw` |
+| 🧋 | Bubble Tea | `bubbletea` |
+| 🧃 | Juice box | `1f9c3_beveragebox` |
+| 🧉 | Yerba mate | `1f9c9_mate` |
+| 🧊 | Ice cube | `1f9ca_icecube` |
+| 🥢 | Chopsticks | `1f962_chopsticks` |
+| 🍽️ | Dinner | `1f37d_forkandknifewithplate` |
+| 🍴 | Cutlery | `1f374_forkandknife` |
+| 🥄 | Spoon | `1f944_spoon` |
+| 🔪 | Kitchen knife | `1f52a_hocho` |
+| 🏺 | Amphora | `1f3fa_amphora` |
+| 🫙 | Jar | `jar` |
+| 🥑 | Avocado love | `avocadolove` |
+| 🦃 | Headless turkey | `turkey` |
+| (oreo) | OREO | `oreo` |
 
 ---
 
-## Activities & Sports
+## Travel & Places
 
 🎨 = Supports skin tones (`-tone1` through `-tone5`)
 
 | Emoji | Description | Reaction ID | 🎨 |
 |-------|-------------|-------------|:--:|
-| ⚽ | Soccer ball | `26bd_soccerball` | |
-| 🏀 | Basketball | `1f3c0_basketball` | |
-| 🏈 | American football | `1f3c8_americanfootball` | |
-| ⚾ | Baseball | `26be_baseball` | |
-| 🥎 | Softball | `1f94e_softball` | |
-| 🎾 | Tennis | `1f3be_tennis` | |
-| 🏐 | Volleyball | `1f3d0_volleyball` | |
-| 🏉 | Rugby football | `1f3c9_rugbyfootball` | |
-| 🥏 | Flying disc | `1f94f_flyingdisc` | |
-| 🎱 | Pool 8 ball | `1f3b1_pool8ball` | |
-| 🪀 | Yo-yo | `1fa80_yoyo` | |
-| 🏓 | Ping pong | `1f3d3_pingpong` | |
-| 🏸 | Badminton | `1f3f8_badminton` | |
-| 🏒 | Ice hockey | `1f3d2_icehockey` | |
-| 🏑 | Field hockey | `1f3d1_fieldhockey` | |
-| 🥍 | Lacrosse | `1f94d_lacrosse` | |
-| 🏏 | Cricket game | `1f3cf_cricketgame` | |
-| 🪃 | Boomerang | `1fa83_boomerang` | |
-| 🥅 | Goal net | `1f945_goalnet` | |
-| ⛳ | Flag in hole | `26f3_flaginhole` | |
-| 🪁 | Kite | `1fa81_kite` | |
-| 🏹 | Bow and arrow | `1f3f9_bowandarrow` | |
-| 🎣 | Fishing pole | `1f3a3_fishingpole` | |
-| 🤿 | Diving mask | `1f93f_divingmask` | |
-| 🥊 | Boxing glove | `1f94a_boxingglove` | |
-| 🥋 | Martial arts uniform | `1f94b_martialartsuniform` | |
-| 🎽 | Running shirt | `1f3bd_runningshirt` | |
-| 🛹 | Skateboard | `1f6f9_skateboard` | |
-| 🛼 | Roller skate | `1f6fc_rollerskate` | |
-| 🛷 | Sled | `1f6f7_sled` | |
-| ⛸️ | Ice skate | `26f8_iceskate` | |
-| 🥌 | Curling stone | `1f94c_curlingstone` | |
-| 🎿 | Skis | `1f3bf_skis` | |
-| ⛷️ | Skier | `26f7_skier` | 🎨 |
-| 🏂 | Snowboarder | `1f3c2_snowboarder` | 🎨 |
-| 🪂 | Parachute | `1fa82_parachute` | |
-| 🏋️ | Person lifting weights | `1f3cb_personliftingweights` | 🎨 |
-| 🤼 | People wrestling | `1f93c_peoplewrestling` | |
-| 🤸 | Person cartwheeling | `1f938_personcartwheeling` | 🎨 |
-| ⛹️ | Person bouncing ball | `26f9_personbouncingball` | 🎨 |
-| 🤺 | Person fencing | `1f93a_personfencing` | |
-| 🤾 | Person playing handball | `1f93e_personplayinghandball` | 🎨 |
-| 🏌️ | Person golfing | `1f3cc_persongolfing` | 🎨 |
-| 🏇 | Horse racing | `1f3c7_horseracing` | 🎨 |
-| 🧘 | Person in lotus position | `1f9d8_personinlotusposition` | 🎨 |
-| 🏄 | Person surfing | `1f3c4_personsurfing` | 🎨 |
-| 🏊 | Person swimming | `1f3ca_personswimming` | 🎨 |
-| 🤽 | Person playing water polo | `1f93d_personplayingwaterpolo` | 🎨 |
-| 🚣 | Person rowing boat | `1f6a3_personrowingboat` | 🎨 |
-| 🧗 | Person climbing | `1f9d7_personclimbing` | 🎨 |
-| 🚵 | Person mountain biking | `1f6b5_personmountainbiking` | 🎨 |
-| 🚴 | Person biking | `1f6b4_personbiking` | 🎨 |
-| 🏆 | Trophy | `1f3c6_trophy` | |
-| 🥇 | 1st place medal | `1f947_1stplacemedal` | |
-| 🥈 | 2nd place medal | `1f948_2ndplacemedal` | |
-| 🥉 | 3rd place medal | `1f949_3rdplacemedal` | |
-| 🏅 | Sports medal | `1f3c5_sportsmedal` | |
-| 🎖️ | Military medal | `1f396_militarymedal` | |
-| 🏵️ | Rosette | `1f3f5_rosette` | |
-| 🎗️ | Reminder ribbon | `1f397_reminderribbon` | |
-| 🎫 | Ticket | `1f3ab_ticket` | |
-| 🎟️ | Admission tickets | `1f39f_admissiontickets` | |
+| 🌍 | Earth globe Europe Africa | `1f30d_earthglobeeuropeafrica` | |
+| 🌎 | Earth globe americas | `1f30e_earthglobeamericas` | |
+| 🌏 | Earth globe Asia Australia  | `1f30f_earthglobeasiaaustralia` | |
+| 🌐 | Globe with meridians | `1f310_globewithmeridians` | |
+| 🗺️ | World map | `1f5fa_worldmap` | |
+| 🗾 | Silhouette of Japan | `1f5fe_silhouetteofjapan` | |
+| 🧭 | Compass | `1f9ed_compass` | |
+| 🏔️ | Snow capped mountain | `1f3d4_snowcappedmountain` | |
+| ⛰️ | Mountain | `26f0_mountain` | |
+| 🌋 | Volcano | `1f30b_volcano` | |
+| 🗻 | Mount Fuji | `1f5fb_mountfuji` | |
+| 🏕️ | Camping | `1f3d5_camping` | |
+| 🏖️ | Beach with umbrella | `1f3d6_beachwithumbrella` | |
+| 🏜️ | Desert | `desert` | |
+| 🏝️ | Island | `island` | |
+| 🏞️ | National park | `1f3de_nationalpark` | |
+| 🏟️ | Stadium | `1f3df_stadium` | |
+| 🏛️ | Classical building | `1f3db_classicalbuilding` | |
+| 🏗️ | Building construction | `1f3d7_buildingconstruction` | |
+| 🧱 | Bricks | `1f9f1_bricks` | |
+| 🪨 | Stone | `stone` | |
+| 🪵 | Wood | `wood` | |
+| 🛖 | Hut | `hut` | |
+| 🏘️ | House building | `1f3d8_housebuildings` | |
+| 🏚️ | Derelict house | `1f3da_derelicthouse` | |
+| 🏠 | House | `house` | |
+| 🏡 | House with garden | `1f3e1_housewithgarden` | |
+| 🏢 | Office building | `1f3e2_officebuilding` | |
+| 🏣 | Post office | `1f3e3_japanesepostoffice` | |
+| 🏤 | European post office | `1f3e4_europeanpostoffice` | |
+| 🏥 | Hospital | `1f3e5_hospital` | |
+| 🏦 | Bank | `1f3e6_bank` | |
+| 🏨 | Hotel | `1f3e8_hotel` | |
+| 🏪 | Convenience store | `1f3ea_conveniencestore` | |
+| 🏫 | School | `1f3eb_school` | |
+| 🏬 | Department store | `1f3ec_departmentstore` | |
+| 🏭 | Factory | `1f3ed_factory` | |
+| 🏯 | Castle | `1f3ef_japanesecastle` | |
+| 🏰 | European castle | `1f3f0_europeancastle` | |
+| 💒 | Wedding | `1f492_wedding` | |
+| 🗼 | Tokyo tower | `1f5fc_tokyotower` | |
+| 🗽 | Statue of Liberty | `statueofliberty` | |
+| ⛪ | Church | `26ea_church` | |
+| 🕌 | Mosque | `1f54c_mosque` | |
+| 🛕 | Hindu temple | `1f6d5_hindutemple` | |
+| 🕍 | Synagogue | `1f54d_synagogue` | |
+| ⛩️ | Shinto shrine | `26e9_shintoshrine` | |
+| 🕋 | Kaaba | `1f54b_kaaba` | |
+| ⛲ | Fountain | `26f2_fountain` | |
+| ⛺ | Tent | `26fa_tent` | |
+| 🌁 | Foggy | `1f301_foggy` | |
+| 🌃 | Night with stars | `1f303_nightwithstars` | |
+| 🏙️ | Cityscape | `1f3d9_cityscape` | |
+| 🌄 | Sunrise over mountains | `1f304_sunriseovermountains` | |
+| 🌅 | Sunrise | `1f305_sunrise` | |
+| 🌆 | City scape at dusk | `1f306_cityscapeatdusk` | |
+| 🌇 | Sunset over buildings | `1f307_sunsetoverbuildings` | |
+| 🌉 | Bridge at night | `1f309_bridgeatnight` | |
+| ♨️ | Hot springs | `2668_hotsprings` | |
+| 🎠 | Carousel horse | `1f3a0_carouselhorse` | |
+| 🛝 | Slide | `slide` | |
+| 🎡 | Ferris wheel | `1f3a1_ferriswheel` | |
+| 🎢 | Rollercoaster | `1f3a2_rollercoaster` | |
+| 💈 | Barber pole | `1f488_barberpole` | |
 | 🎪 | Circus tent | `1f3aa_circustent` | |
-| 🤹 | Person juggling | `1f939_personjuggling` | 🎨 |
-| 🎭 | Performing arts | `1f3ad_performingarts` | |
-| 🩰 | Ballet shoes | `1fa70_balletshoes` | |
-| 🎨 | Artist palette | `1f3a8_artistpalette` | |
-| 🎬 | Clapper board | `1f3ac_clapperboard` | |
-| 🎤 | Microphone | `1f3a4_microphone` | |
-| 🎧 | Headphone | `1f3a7_headphone` | |
-| 🎼 | Musical score | `1f3bc_musicalscore` | |
-| 🎹 | Musical keyboard | `1f3b9_musicalkeyboard` | |
-| 🥁 | Drum | `1f941_drum` | |
-| 🪘 | Long drum | `1fa98_longdrum` | |
-| 🎷 | Saxophone | `1f3b7_saxophone` | |
-| 🎺 | Trumpet | `1f3ba_trumpet` | |
-| 🪗 | Accordion | `1fa97_accordion` | |
-| 🎸 | Guitar | `1f3b8_guitar` | |
-| 🪕 | Banjo | `1fa95_banjo` | |
-| 🎻 | Violin | `1f3bb_violin` | |
-| 🪇 | Maracas | `1fa87_maracas` | |
-| 🪈 | Flute | `1fa88_flute` | |
-| 🎲 | Game die | `1f3b2_gamedie` | |
-| ♟️ | Chess pawn | `265f_chesspawn` | |
-| 🎯 | Direct hit | `1f3af_directhit` | |
-| 🎳 | Bowling | `1f3b3_bowling` | |
-| 🎮 | Video game | `1f3ae_videogame` | |
-| 🎰 | Slot machine | `1f3b0_slotmachine` | |
-| 🧩 | Puzzle piece | `1f9e9_puzzlepiece` | |
+| 🚂 | Steam train | `steamtrain` | |
+| 🚃 | Railway car | `1f683_railwaycar` | |
+| 🚄 | High speed train | `1f684_highspeedtrain` | |
+| 🚅 | Bullet train | `1f685_bullettrain` | |
+| 🚆 | Train | `1f686_train` | |
+| 🚇 | Metro | `1f687_metro` | |
+| 🚈 | Light rail | `1f688_lightrail` | |
+| 🚉 | Station | `1f689_station` | |
+| 🚊 | Tram | `1f68a_tram` | |
+| 🚝 | Monorail | `1f69d_monorail` | |
+| 🚞 | Mountain railway | `1f69e_mountainrailway` | |
+| 🚋 | Tram car | `1f68b_tramcar` | |
+| 🚌 | Bus | `1f68c_bus` | |
+| 🚍 | Oncoming bus | `1f68d_oncomingbus` | |
+| 🚎 | Trolley bus | `1f68e_trolleybus` | |
+| 🚐 | Minibus | `1f690_minibus` | |
+| 🚑 | Ambulance | `ambulance` | |
+| 🚒 | Fire engine | `1f692_fireengine` | |
+| 🚓 | Police car | `policecar` | |
+| 🚔 | Oncoming police car | `1f694_oncomingpolicecar` | |
+| 🚕 | Taxi | `taxi` | |
+| 🚖 | Oncoming taxi | `1f696_oncomingtaxi` | |
+| 🚗 | Car | `car` | |
+| 🚘 | Oncoming automobile | `1f698_oncomingautomobile` | |
+| 🚙 | Sports utility vehicle | `1f699_recreationalvehicle` | |
+| 🛻 | Pickup truck | `pickuptruck` | |
+| 🚚 | Truck | `truck` | |
+| 🚛 | Articulated lorry | `1f69b_articulatedlorry` | |
+| 🚜 | Tractor | `1f69c_tractor` | |
+| 🏎️ | Racing car | `1f3ce_racingcar` | |
+| 🏍️ | Motorbike | `motorbike` | |
+| 🛵 | Scooter | `scooter` | |
+| 🦽 | Manual wheelchair | `1f9bd_manualwheelchair` | |
+| 🦼 | Motorized wheelchair | `1f9bc_motorizedwheelchair` | |
+| 🛺 | Auto Rickshaw | `rickshaw` | |
+| 🚲 | Bicycle | `bicycle` | |
+| 🛴 | Kick scooter | `kickscooter` | |
+| 🛹 | Skate | `skate` | |
+| 🛼 | Roller skate | `rollerskate` | |
+| 🚏 | Bus stop | `1f68f_busstop` | |
+| 🛣️ | Motorway | `1f6e3_motorway` | |
+| 🛤️ | Railway track | `1f6e4_railwaytrack` | |
+| 🛢️ | Oil drum | `1f6e2_oildrum` | |
+| ⛽ | Fuel pump | `26fd_fuelpump` | |
+| 🛞 | Wheel | `wheel` | |
+| 🚨 | Police car light | `1f6a8_policecarsrevolvinglight` | |
+| 🚥 | Horizontal traffic light | `1f6a5_horizontaltrafficlight` | |
+| 🚦 | Vertical traffic light | `1f6a6_verticaltrafficlight` | |
+| 🛑 | Stop sign | `stopsign` | |
+| 🚧 | Construction sign | `1f6a7_constructionsign` | |
+| ⚓ | Anchor | `2693_anchor` | |
+| 🛟 | Ring buoy | `buoy` | |
+| ⛵ | Sailboat | `26f5_sailboat` | |
+| 🛶 | Canoe | `1f6f6_canoe` | |
+| 🚤 | Speedboat | `1f6a4_speedboat` | |
+| 🛳️ | Passenger ship | `1f6f3_passengership` | |
+| ⛴️ | Ferry | `26f4_ferry` | |
+| 🛥️ | Motor boat | `1f6e5_motorboat` | |
+| 🚢 | Ship | `1f6a2_ship` | |
+| ✈️ | Plane | `plane` | |
+| 🛩️ | Small airplane | `1f6e9_smallairplane` | |
+| 🛫 | Airplane departure | `1f6eb_airplanedeparture` | |
+| 🛬 | Airplane arriving | `1f6ec_airplanearriving` | |
+| 🪂 | Parachute | `1fa82_parachute` | |
+| 💺 | Seat | `1f4ba_seat` | |
+| 🚁 | Helicopter | `1f681_helicopter` | |
+| 🚟 | Suspension railway | `1f69f_suspensionrailway` | |
+| 🚠 | Mountain cableway | `1f6a0_mountaincableway` | |
+| 🚡 | Aerial tramway | `1f6a1_aerialtramway` | |
+| 🛰️ | Satellite | `1f6f0_satellite` | |
+| 🚀 | Rocket launch | `launch` | |
+| 🛸 | Flying saucer | `1f6f8_flyingsaucer` | |
+| 🛎️ | Bellhop bell | `1f6ce_bellhopbell` | |
+| 🧳 | Luggage | `1f9f3_luggage` | |
+| ⌛ | Hold on | `holdon` | |
+| ⌛ | Hour glass done | `231b_hourglassdone` | |
+| ⌚ | Watch | `231a_watch` | |
+| ⏰ | Alarm clock | `23f0_alarmclock` | |
+| ⏱️ | Stop watch | `23f1_stopwatch` | |
+| ⏲️ | Timer clock | `23f2_timerclock` | |
+| 🕰️ | Mantel piece clock | `1f570_mantelpiececlock` | |
+| 🕛 | Twelve o'clock | `1f55b_twelveoclock` | |
+| 🕧 | Twelve-thirty | `1f567_twelvethirty` | |
+| 🕐 | One o'clock | `1f550_oneoclock` | |
+| 🕜 | One-thirty | `1f55c_onethirty` | |
+| 🕑 | Two o'clock | `1f551_twooclock` | |
+| 🕝 | Two-thirty | `1f55d_twothirty` | |
+| 🕒 | Three o'clock | `1f552_threeoclock` | |
+| 🕞 | Three-thirty | `1f55e_threethirty` | |
+| 🕓 | Four o'clock | `1f553_fouroclock` | |
+| 🕟 | Four thirty | `1f55f_fourthirty` | |
+| 🕔 | Five o'clock | `1f554_fiveoclock` | |
+| 🕠 | Five-thirty | `1f560_fivethirty` | |
+| 🕕 | Six o'clock | `1f555_sixoclock` | |
+| 🕡 | Six-thirty | `1f561_sixthirty` | |
+| 🕖 | Seven o'clock | `1f556_sevenoclock` | |
+| 🕢 | Seven-thirty | `1f562_seventhirty` | |
+| 🕗 | Eight o'clock | `1f557_eightoclock` | |
+| 🕣 | Eight-thirty | `1f563_eightthirty` | |
+| 🕘 | Nine o'clock | `1f558_nineoclock` | |
+| 🕤 | Nine-thirty | `1f564_ninethirty` | |
+| 🕙 | Ten o'clock | `1f559_tenoclock` | |
+| 🕥 | Ten-thirty | `1f565_tenthirty` | |
+| 🕚 | Eleven o'clock | `1f55a_elevenoclock` | |
+| 🕦 | Eleven-thirty | `1f566_eleventhirty` | |
+| 🌑 | New moon symbol | `1f311_newmoonsymbol` | |
+| 🌒 | Waxing crescent moon symbol | `1f312_waxingcrescentmoonsymbol` | |
+| 🌓 | First quarter moon symbol | `1f313_firstquartermoonsymbol` | |
+| 🌔 | Waxing gibbous moon system | `1f314_waxinggibbousmoonsymbol` | |
+| 🌕 | Full moon symbol | `1f315_fullmoonsymbol` | |
+| 🌖 | Waning gibbous moon symbol | `1f316_waninggibbousmoonsymbol` | |
+| 🌗 | Last quarter moon symbol | `1f317_lastquartermoonsymbol` | |
+| 🌘 | Waning crescent moon symbol | `1f318_waningcrescentmoonsymbol` | |
+| 🌙 | Crescent moon | `1f319_crescentmoon` | |
+| 🌚 | New moon with face | `1f31a_newmoonwithface` | |
+| 🌛 | First quarter moon with face | `1f31b_firstquartermoonwithface` | |
+| 🌜 | Last quarter moon with face | `1f31c_lastquartermoonwithface` | |
+| 🌡️ | Thermometer | `1f321_thermometer` | |
+| ☀️ | Sun with rays | `2600_sunwithrays` | |
+| 🌝 | Full moon face | `1f31d_fullmoonwithface` | |
+| 🌞 | Sun | `sun` | |
+| 🪐 | Ringed planet | `1fa90_ringedplanet` | |
+| ⭐ | Star | `star` | |
+| 🌟 | Glowing star | `1f31f_glowingstar` | |
+| 🌠 | Shooting star | `1f320_shootingstar` | |
+| 🌌 | Milky way | `1f30c_milkyway` | |
+| ☁️ | Cloud | `2601_cloud` | |
+| 🌥️ | Sun behind large cloud | `1f325_sunbehindlargecloud` | |
+| ⛈️ | Cloud with lightning and rain | `26c8_cloudwithlightningandrain` | |
+| 🌤️ | Sun behind small cloud | `1f324_sunbehindsmallcloud` | |
+| ⛅ | Sun behind cloud | `26c5_sunbehindcloud` | |
+| 🌦️ | Sun behind rain cloud | `1f326_sunbehindraincloud` | |
+| 🌧️ | Raining | `rain` | |
+| 🌨️ | Cloud with snow | `1f328_cloudwithsnow` | |
+| 🌩️ | Cloud with lightning | `1f329_cloudwithlightning` | |
+| 🌪️ | Tornado | `1f32a_cloudwithtornado` | |
+| 🌫️ | Fog | `1f32b_fog` | |
+| 🌬️ | Wind face | `1f32c_windblowingface` | |
+| 🌀 | Cyclone | `1f300_cyclone` | |
+| 🌈 | Rainbow | `rainbow` | |
+| 🌂 | Closed umbrella | `1f302_closedumbrella` | |
+| ☂️ | Umbrella | `2602_umbrella` | |
+| ☔ | Umbrella | `umbrella` | |
+| ⛱️ | Beach umbrella | `26f1_umbrellaonground` | |
+| ⚡ | High voltage | `26a1_highvoltagesign` | |
+| ❄️ | Snowflake | `snowflake` | |
+| ⛄ | Snowman without snow | `snowmanwithoutsnow` | |
+| ☃️ | Snow buddie | `snegovik` | |
+| ☄️ | Comet | `2604_comet` | |
+| 🔥 | Fire | `fire` | |
+| 💧 | Droplet | `1f4a7_droplet` | |
+| 🌊 | Water wave | `1f30a_waterwave` | |
+| 🏖️ | Sandcastle | `sandcastle` | |
+| ❤ | Cactus love | `cactuslove` | |
+| 🏠 | Working from home | `wfh` | |
+| ♻ | Wind turbine | `windturbine` | |
+| ♻ | Vegetable garden | `vegetablegarden` | |
+| ♻ | Electric car | `electriccar` | |
+| ♻ | Earth in hand, Europe and Africa | `europeafricainhand` | 🎨 |
+| ♻ | Earth in hand, Americas | `americainhand` | 🎨 |
+| ♻ | Earth in hand, Asia and Australia | `asiaaustraliainhand` | 🎨 |
 
 ---
 
@@ -938,109 +1148,220 @@ Reference reactions by their unique ID:
 
 | Emoji | Description | Reaction ID |
 |-------|-------------|-------------|
-| 💻 | Laptop | `1f4bb_laptop` |
-| ⌚ | Watch | `231a_watch` |
-| 📱 | Mobile phone | `1f4f1_mobilephone` |
-| 💡 | Light bulb | `1f4a1_lightbulb` |
-| 🔦 | Flashlight | `1f526_flashlight` |
+| 👓 | Glasses | `1f453_glasses` |
+| 🕶️ | Sunglasses | `1f576_sunglasses` |
+| 🥽 | Goggles | `1f97d_goggles` |
+| 🥼 | Lab coat | `1f97c_labcoat` |
+| 🦺 | Safety vest | `1f9ba_safetyvest` |
+| 👔 | Necktie | `1f454_necktie` |
+| 👕 | T-shirt | `1f455_tshirt` |
+| 👖 | Jeans | `1f456_jeans` |
+| 🧣 | Scarf | `1f9e3_scarf` |
+| 🧤 | Gloves | `1f9e4_gloves` |
+| 🧥 | Coat | `1f9e5_coat` |
+| 🧦 | Socks | `1f9e6_socks` |
+| 👗 | Dress | `1f457_dress` |
+| 👘 | Kimono | `1f458_kimono` |
+| 🥻 | Sari | `1f97b_sari` |
+| 🩱 | Swimming suit | `1fa71_onepiece` |
+| 🩲 | Briefs | `1fa72_briefs` |
+| 🩳 | Shorts | `1fa73_shorts` |
+| 👙 | Bikini | `1f459_bikini` |
+| 👚 | Blouse | `1f45a_womansclothes` |
+| 🪭 | Fan | `fan` |
+| 👛 | Purse | `1f45b_purse` |
+| 👜 | Handbag | `1f45c_handbag` |
+| 👝 | Pouch | `1f45d_pouch` |
+| 🛍️ | Shopping bags | `shopping` |
+| 🎒 | Backpack | `1f392_schoolsatchel` |
+| 🩴 | Thong Sandal | `thongsandal` |
+| 👞 | Man's shoe | `1f45e_mansshoe` |
+| 👟 | Sneaker | `1f45f_athleticshoe` |
+| 🥾 | Hiking boot | `1f97e_hikingboot` |
+| 🥿 | Womans flat shoe | `1f97f_womansflatshoe` |
+| 👠 | High heels | `1f460_highheeledshoe` |
+| 👡 | Womans sandal | `1f461_womanssandal` |
+| 🩰 | Ballet shoes | `1fa70_balletshoes` |
+| 👢 | Womans boot | `1f462_womansboots` |
+| 🪮 | Hair pick | `hairpick` |
+| 👑 | Crown | `1f451_crown` |
+| 👒 | Womans hat | `1f452_womanshat` |
+| 🎩 | Top hat | `1f3a9_tophat` |
+| 🎓 | Graduate | `1f393_graduationcap` |
+| 🧢 | Baseball cap | `1f9e2_billedcap` |
+| 🪖 | Military helmet | `militaryhelmet` |
+| ⛑️ | Rescue helmet | `26d1_helmetwithwhitecross` |
+| 📿 | Prayer beads | `1f4ff_prayerbeads` |
+| 💄 | Lipstick | `lipstick` |
+| 💍 | Engagement ring | `ring` |
+| 💎 | Diamond | `diamond` |
+| 🔇 | Mute | `1f507_mutedspeaker` |
+| 🔈 | Speaker | `1f508_speaker` |
+| 🔉 | Medium volume | `1f509_speakerwithonesoundwave` |
+| 🔊 | High volume | `1f50a_speakerwiththreesoundwaves` |
+| 📢 | PA loudspeaker | `1f4e2_publicaddressloudspeaker` |
+| 📣 | Megaphone | `1f4e3_cheeringmegaphone` |
+| 📯 | Postal horn | `1f4ef_postalhorn` |
+| 🔔 | Bell | `bell` |
+| 🔕 | Muted bell | `1f515_bellwithslash` |
+| 🎼 | Musical score | `1f3bc_musicalscore` |
+| 🎵 | Music | `music` |
+| 🎶 | Multiple musical notes | `1f3b6_multiplemusicalnotes` |
+| 🎙️ | Studio microphone | `1f399_studiomicrophone` |
+| 🎚️ | Level slider | `1f39a_levelslider` |
+| 🎛️ | Control knobs | `1f39b_controlknobs` |
+| 🎤 | Microphone | `1f3a4_microphone` |
+| 🎧 | Headphone | `headphone` |
+| 📻 | Radio | `1f4fb_radio` |
+| 🎷 | Saxophone | `1f3b7_saxophone` |
+| 🪗 | Accordion | `accordion` |
+| 🎸 | Guitar | `guitar` |
+| 🎹 | Musical keyboard | `1f3b9_musicalkeyboard` |
+| 🎺 | Trumpet | `1f3ba_trumpet` |
+| 🎻 | Violin | `1f3bb_violin` |
+| 🪕 | Banjo | `1fa95_banjo` |
+| 🥁 | Drum | `1f941_drumwithdrumsticks` |
+| 🪘 | Long Drum | `longdrum` |
+| 🪇 | Maracas | `maracas` |
+| 🪈 | Flute | `flute` |
+| 📱 | Phone | `phone` |
+| 📲 | Mobile phone with arrow | `1f4f2_mobilephonewitharrow` |
+| ☎️ | Telephone | `260e_blacktelephone` |
+| 📞 | Telephone receiver | `telephonereceiver` |
+| 📟 | Pager | `1f4df_pager` |
+| 📠 | Fax machine | `1f4e0_faxmachine` |
+| 🔋 | Battery | `1f50b_battery` |
+| 🪫 | Low battery | `lowbattery` |
+| 🔌 | Electric plug | `1f50c_electricplug` |
+| 💻 | Computer | `computer` |
+| 🖥️ | Computer | `1f5a5_desktopcomputer` |
+| 🖨️ | Printer | `1f5a8_printer` |
+| ⌨️ | Keyboard | `2328_keyboard` |
+| 🖱️ | Mouse | `1f5b1_threebuttonmouse` |
+| 🖲️ | Trackball | `1f5b2_trackball` |
+| 💽 | Minidisc | `1f4bd_minidisc` |
+| 💾 | Floppy disk | `1f4be_floppydisk` |
+| 💿 | Optical disk | `1f4bf_opticaldisc` |
+| 📀 | DVD | `1f4c0_dvd` |
+| 🧮 | Abacus | `1f9ee_abacus` |
+| 🎥 | Movie camera | `1f3a5_moviecamera` |
+| 🎞️ | Film frames | `1f39e_filmframes` |
+| 📽️ | Film projector | `1f4fd_filmprojector` |
+| 🎬 | Movie | `movie` |
+| 📺 | Television | `1f4fa_television` |
+| 📷 | Camera | `1f4f7_camera` |
+| 📸 | Camera | `camera` |
+| 📹 | Video camera | `1f4f9_videocamera` |
+| 📼 | Video cassette | `1f4fc_videocassette` |
+| 🔍 | Magnifying glass left | `1f50d_magnifiertiltedleft` |
+| 🔎 | Magnifying glass right | `1f50e_magnifiertiltedright` |
 | 🕯️ | Candle | `1f56f_candle` |
+| 💡 | Electric light bulb | `1f4a1_electriclightbulb` |
+| 🔦 | Torch | `1f526_electrictorch` |
+| 🏮 | Izakaya lantern | `1f3ee_izakayalantern` |
 | 🪔 | Diya lamp | `1fa94_diyalamp` |
-| 📚 | Books | `1f4da_books` |
+| 📔 | Decorative notebook | `1f4d4_decorativenotebook` |
+| 📕 | Red book | `1f4d5_closedbook` |
 | 📖 | Open book | `1f4d6_openbook` |
-| 📝 | Memo | `1f4dd_memo` |
-| 📓 | Notebook | `1f4d3_notebook` |
-| 📔 | Notebook with decorative cover | `1f4d4_notebookwithdecorativecover` |
-| 📕 | Closed book | `1f4d5_closedbook` |
 | 📗 | Green book | `1f4d7_greenbook` |
 | 📘 | Blue book | `1f4d8_bluebook` |
 | 📙 | Orange book | `1f4d9_orangebook` |
-| 📒 | Ledger | `1f4d2_ledger` |
-| 📃 | Page with curl | `1f4c3_pagewithcurl` |
+| 📚 | Books | `1f4da_books` |
+| 📓 | Notebook | `1f4d3_notebook` |
+| 📒 | Binder | `1f4d2_ledger` |
+| 📃 | Curled page | `1f4c3_pagewithcurl` |
 | 📜 | Scroll | `1f4dc_scroll` |
-| 📄 | Page facing up | `1f4c4_pagefacingup` |
+| 📄 | Page | `1f4c4_pagefacingup` |
 | 📰 | Newspaper | `1f4f0_newspaper` |
-| 🗞️ | Rolled-up newspaper | `1f5de_rolledupnewspaper` |
+| 🗞️ | Rolled up newspaper | `1f5de_rolledupnewspaper` |
 | 📑 | Bookmark tabs | `1f4d1_bookmarktabs` |
 | 🔖 | Bookmark | `1f516_bookmark` |
-| 🏷️ | Label | `1f3f7_label` |
+| 🏷️ | Label tag | `1f3f7_label` |
 | 💰 | Money bag | `1f4b0_moneybag` |
-| 🪙 | Coin | `1fa99_coin` |
-| 💴 | Yen banknote | `1f4b4_yenbanknote` |
-| 💵 | Dollar banknote | `1f4b5_dollarbanknote` |
-| 💶 | Euro banknote | `1f4b6_eurobanknote` |
-| 💷 | Pound banknote | `1f4b7_poundbanknote` |
-| 💸 | Money with wings | `1f4b8_moneywithwings` |
+| 🪙 | Coin | `coin` |
+| 💴 | Yen | `1f4b4_banknotewithyensign` |
+| 💵 | Dollar | `1f4b5_banknotewithdollarsign` |
+| 💶 | Euro | `1f4b6_banknotewitheurosign` |
+| 💷 | Pound | `1f4b7_banknotewithpoundsign` |
+| 💸 | Flying money | `1f4b8_moneywithwings` |
 | 💳 | Credit card | `1f4b3_creditcard` |
 | 🧾 | Receipt | `1f9fe_receipt` |
-| 💹 | Chart increasing with yen | `1f4b9_chartincreasingwithyen` |
-| ✉️ | Envelope | `2709_envelope` |
-| 📧 | E-mail | `1f4e7_email` |
-| 📨 | Incoming envelope | `1f4e8_incomingenvelope` |
+| 💹 | Chart increasing with yen | `1f4b9_yengraph` |
+| 🧧 | Red envelope | `1f9e7_redenvelope` |
+| 📧 | Email | `1f4e7_email` |
+| 📨 | Income envelope | `1f4e8_incomingenvelope` |
 | 📩 | Envelope with arrow | `1f4e9_envelopewitharrow` |
-| 📤 | Outbox tray | `1f4e4_outboxtray` |
-| 📥 | Inbox tray | `1f4e5_inboxtray` |
-| 📫 | Closed mailbox with raised flag | `1f4eb_closedmailboxwithraisedflag` |
-| 📬 | Open mailbox with raised flag | `1f4ec_openmailboxwithraisedflag` |
-| 📭 | Open mailbox with lowered flag | `1f4ed_openmailboxwithloweredflag` |
-| 📮 | Postbox | `1f4ee_postbox` |
-| 🗳️ | Ballot box with ballot | `1f5f3_ballotboxwithballot` |
+| 📤 | Outbox | `1f4e4_outboxtray` |
+| 📥 | Inbox | `1f4e5_inboxtray` |
+| 📦 | Package | `1f4e6_package` |
+| 📫 | Closed mailbox with flag | `1f4eb_mailboxclosedflagup` |
+| 📪 | Closed mailbox | `1f4ea_mailboxclosedflagdown` |
+| 📬 | Open mailbox with flag | `1f4ec_openmailboxwithraisedflag` |
+| 📭 | Open mailbox | `1f4ed_openmailboxwithloweredflag` |
+| 📮 | Post box | `1f4ee_postbox` |
+| 🗳️ | Ballot box | `1f5f3_ballotboxwithballot` |
 | ✏️ | Pencil | `270f_pencil` |
 | ✒️ | Black nib | `2712_blacknib` |
-| 🖋️ | Fountain pen | `1f58b_fountainpen` |
-| 🖊️ | Pen | `1f58a_pen` |
-| 🖌️ | Paintbrush | `1f58c_paintbrush` |
-| 🖍️ | Crayon | `1f58d_crayon` |
-| 📁 | File folder | `1f4c1_filefolder` |
-| 📂 | Open file folder | `1f4c2_openfilefolder` |
-| 🗂️ | Card index dividers | `1f5c2_cardindexdividers` |
+| 🖋️ | Fountain pen | `1f58b_lowerleftfountainpen` |
+| 🖊️ | Ball point pen | `1f58a_lowerleftballpointpen` |
+| 🖌️ | Paint brush | `1f58c_lowerleftpaintbrush` |
+| 🖍️ | Crayon | `1f58d_lowerleftcrayon` |
+| 📝 | Memo | `1f4dd_memo` |
+| 💼 | Briefcase | `1f4bc_briefcase` |
+| 📁 | Folder | `1f4c1_filefolder` |
+| 📂 | Open folder | `1f4c2_openfilefolder` |
+| 🗂️ | Folder dividers | `1f5c2_cardindexdividers` |
 | 📅 | Calendar | `1f4c5_calendar` |
-| 📆 | Tear-off calendar | `1f4c6_tearoffcalendar` |
+| 📆 | Spiral calendar | `spiralcalendar` |
+| 🗓️ | Tear off calendar | `1f4c6_tearoffcalendar` |
 | 🗒️ | Spiral notepad | `1f5d2_spiralnotepad` |
-| 🗓️ | Spiral calendar | `1f5d3_spiralcalendar` |
-| 📇 | Card index | `1f4c7_cardindex` |
-| 📈 | Chart increasing | `1f4c8_chartincreasing` |
-| 📉 | Chart decreasing | `1f4c9_chartdecreasing` |
+| 📇 | Rolodex | `1f4c7_cardindex` |
+| 📈 | Positive graph | `1f4c8_chartwithupwardstrend` |
+| 📉 | Negative graph | `1f4c9_chartwithdownwardstrend` |
 | 📊 | Bar chart | `1f4ca_barchart` |
 | 📋 | Clipboard | `1f4cb_clipboard` |
-| 📌 | Pushpin | `1f4cc_pushpin` |
-| 📍 | Round pushpin | `1f4cd_roundpushpin` |
+| 📌 | Pin | `1f4cc_pushpin` |
+| 📍 | Pin | `1f4cd_roundpushpin` |
 | 📎 | Paperclip | `1f4ce_paperclip` |
-| 🖇️ | Linked paperclips | `1f587_linkedpaperclips` |
-| 📏 | Straight ruler | `1f4cf_straightruler` |
+| 🖇️ | Paper clips | `1f587_linkedpaperclips` |
+| 📏 | Ruler | `1f4cf_straightruler` |
 | 📐 | Triangular ruler | `1f4d0_triangularruler` |
-| ✂️ | Scissors | `2702_scissors` |
-| 🗃️ | Card file box | `1f5c3_cardfilebox` |
-| 🗄️ | File cabinet | `1f5c4_filecabinet` |
-| 🗑️ | Wastebasket | `1f5d1_wastebasket` |
+| ✂️ | Scissors | `2702_blackscissors` |
+| 🗃️ | File box | `1f5c3_cardfilebox` |
+| 🗄️ | Filing cabinet | `1f5c4_filecabinet` |
+| 🗑️ | Trash bin | `1f5d1_wastebasket` |
 | 🔒 | Locked | `1f512_locked` |
 | 🔓 | Unlocked | `1f513_unlocked` |
 | 🔏 | Locked with pen | `1f50f_lockedwithpen` |
-| 🔐 | Locked with key | `1f510_lockedwithkey` |
+| 🔐 | Lock and key | `1f510_lockedwithkey` |
 | 🔑 | Key | `1f511_key` |
-| 🗝️ | Old key | `1f5dd_oldkey` |
-| 🔨 | Hammer | `1f528_hammer` |
+| 🗝️ | Old key | `oldkey` |
+| 🔨 | Hammer  | `1f528_hammer` |
 | 🪓 | Axe | `1fa93_axe` |
 | ⛏️ | Pick | `26cf_pick` |
 | ⚒️ | Hammer and pick | `2692_hammerandpick` |
 | 🛠️ | Hammer and wrench | `1f6e0_hammerandwrench` |
-| 🗡️ | Dagger | `1f5e1_dagger` |
-| ⚔️ | Crossed swords | `2694_crossedswords` |
-| 🔫 | Water pistol | `1f52b_waterpistol` |
+| 🗡️ | Dagger | `1f5e1_daggerknife` |
+| 🪃 | Boomerang | `boomerang` |
+| ⚔️ | Swords | `2694_crossedswords` |
+| 🔫 | Water pistol | `1f52b_pistol` |
+| 🏹 | Bow and arrow | `1f3f9_bowandarrow` |
 | 🛡️ | Shield | `1f6e1_shield` |
-| 🪚 | Carpentry saw | `1fa9a_carpentrysaw` |
+| 🪚 | Carpentry saw | `carpentrysaw` |
 | 🔧 | Wrench | `1f527_wrench` |
-| 🪛 | Screwdriver | `1fa9b_screwdriver` |
-| 🔩 | Nut and bolt | `1f529_nutandbolt` |
-| ⚙️ | Gear | `2699_gear` |
-| 🗜️ | Clamp | `1f5dc_clamp` |
-| ⚖️ | Balance scale | `2696_balancescale` |
-| 🦯 | White cane | `1f9af_whitecane` |
-| 🔗 | Link | `1f517_link` |
+| 🪛 | Screwdriver | `screwdriver` |
+| 🔩 | Bolt | `1f529_nutandbolt` |
+| ⚙️ | Cog | `2699_gear` |
+| 🗜️ | Clamp | `1f5dc_compression` |
+| ⚖️ | Scales | `2696_scales` |
+| 🦯 | Probing cane | `1f9af_probingcane` |
+| 🔗 | Link | `1f517_linksymbol` |
+| ⛓️‍💥 | Broken chain | `brokenchain8` |
 | ⛓️ | Chains | `26d3_chains` |
-| 🪝 | Hook | `1fa9d_hook` |
+| 🪝 | Hook | `hook` |
 | 🧰 | Toolbox | `1f9f0_toolbox` |
 | 🧲 | Magnet | `1f9f2_magnet` |
-| 🪜 | Ladder | `1fa9c_ladder` |
+| 🪜 | Ladder | `ladder` |
 | ⚗️ | Alembic | `2697_alembic` |
 | 🧪 | Test tube | `1f9ea_testtube` |
 | 🧫 | Petri dish | `1f9eb_petridish` |
@@ -1048,139 +1369,391 @@ Reference reactions by their unique ID:
 | 🔬 | Microscope | `1f52c_microscope` |
 | 🔭 | Telescope | `1f52d_telescope` |
 | 📡 | Satellite antenna | `1f4e1_satelliteantenna` |
+| 💉 | Syringe | `1f489_syringe` |
+| 🩸 | Blood drop | `1fa78_blooddrop` |
+| 💊 | Pill | `1f48a_pill` |
+| 🩹 | Plaster | `1fa79_adhesivebandage` |
+| 🩼 | Crutch | `crutch` |
+| 🩺 | Stethoscope | `1fa7a_stethoscope` |
+| 🩻 | X-ray | `xray` |
+| 🚪 | Door | `1f6aa_door` |
+| 🛗 | Elevator | `elevator` |
+| 🪞 | Mirror | `mirror` |
+| 🪟 | Window | `window` |
+| 🛏️ | Bed | `1f6cf_bed` |
+| 🛋️ | Couch and lamp | `1f6cb_couchandlamp` |
+| 🪑 | Chair | `1fa91_chair` |
+| 🚽 | Toilet | `toilet` |
+| 🪠 | Plunger | `plunger` |
+| 🚿 | Shower | `1f6bf_shower` |
+| 🛁 | Bath tub | `1f6c1_bathtub` |
+| 🪤 | Mouse trap | `mousetrap` |
+| 🪒 | Razor | `1fa92_razor` |
+| 🧴 | Lotion | `1f9f4_lotionbottle` |
+| 🧹 | Broom | `1f9f9_broom` |
+| 🧺 | Laundry basket | `1f9fa_basket` |
+| 🧻 | Roll of paper | `1f9fb_toiletpaper` |
+| 🪣 | Bucket | `bucket` |
+| 🧼 | Soap | `1f9fc_soap` |
+| 🫧 | Bubbles | `bubbles` |
+| 🪥 | Toothbrush | `toothbrush` |
+| 🧽 | Sponge | `1f9fd_sponge` |
+| 🧯 | Fire extinguisher | `1f9ef_fireextinguisher` |
+| 🛒 | Shopping trolley | `1f6d2_shoppingtrolley` |
+| 🚬 | Cigarette | `cigarette` |
+| ⚰️ | Coffin | `26b0_coffin` |
+| 🪦 | Headstone | `headstone` |
+| ⚱️ | Funeral urn | `26b1_funeralurn` |
+| 🪬 | Hamsa | `hamsa` |
+| 🗿 | Moyai | `1f5ff_moyai` |
+| 🪧 | Placard | `placard` |
+| 🪪 | ID card | `idcard` |
 
 ---
 
-## Travel & Places
+## Activities & Sports
 
 | Emoji | Description | Reaction ID |
 |-------|-------------|-------------|
-| 🚗 | Automobile | `1f697_automobile` |
-| 🚕 | Taxi | `1f695_taxi` |
-| 🚙 | Sport utility vehicle | `1f699_sportutilityvehicle` |
-| 🚌 | Bus | `1f68c_bus` |
-| 🚎 | Trolleybus | `1f68e_trolleybus` |
-| 🏎️ | Racing car | `1f3ce_racingcar` |
-| 🚓 | Police car | `1f693_policecar` |
-| 🚑 | Ambulance | `1f691_ambulance` |
-| 🚒 | Fire engine | `1f692_fireengine` |
-| 🚐 | Minibus | `1f690_minibus` |
-| 🛻 | Pickup truck | `1f6fb_pickuptruck` |
-| 🚚 | Delivery truck | `1f69a_deliverytruck` |
-| 🚛 | Articulated lorry | `1f69b_articulatedlorry` |
-| 🚜 | Tractor | `1f69c_tractor` |
-| 🏍️ | Motorcycle | `1f3cd_motorcycle` |
-| 🛵 | Motor scooter | `1f6f5_motorscooter` |
-| 🦽 | Manual wheelchair | `1f9bd_manualwheelchair` |
-| 🦼 | Motorized wheelchair | `1f9bc_motorizedwheelchair` |
-| 🛺 | Auto rickshaw | `1f6fa_autorickshaw` |
-| 🚲 | Bicycle | `1f6b2_bicycle` |
-| 🛴 | Kick scooter | `1f6f4_kickscooter` |
-| 🚏 | Bus stop | `1f68f_busstop` |
-| 🛣️ | Motorway | `1f6e3_motorway` |
-| 🛤️ | Railway track | `1f6e4_railwaytrack` |
-| 🛢️ | Oil drum | `1f6e2_oildrum` |
-| ⛽ | Fuel pump | `26fd_fuelpump` |
-| 🛞 | Wheel | `1f6de_wheel` |
-| 🚨 | Police car light | `1f6a8_policecarlight` |
-| 🚥 | Horizontal traffic light | `1f6a5_horizontaltrafficlight` |
-| 🚦 | Vertical traffic light | `1f6a6_verticaltrafficlight` |
-| 🚧 | Construction | `1f6a7_construction` |
-| ⚓ | Anchor | `2693_anchor` |
-| 🛟 | Ring buoy | `1f6df_ringbuoy` |
-| ⛵ | Sailboat | `26f5_sailboat` |
-| 🛶 | Canoe | `1f6f6_canoe` |
-| 🚤 | Speedboat | `1f6a4_speedboat` |
-| 🛳️ | Passenger ship | `1f6f3_passengership` |
-| ⛴️ | Ferry | `26f4_ferry` |
-| 🛥️ | Motor boat | `1f6e5_motorboat` |
-| 🚢 | Ship | `1f6a2_ship` |
-| ✈️ | Airplane | `2708_airplane` |
-| 🛩️ | Small airplane | `1f6e9_smallairplane` |
-| 🛫 | Airplane departure | `1f6eb_airplanedeparture` |
-| 🛬 | Airplane arrival | `1f6ec_airplanearrival` |
-| 💺 | Seat | `1f4ba_seat` |
-| 🚁 | Helicopter | `1f681_helicopter` |
-| 🚟 | Suspension railway | `1f69f_suspensionrailway` |
-| 🚠 | Mountain cableway | `1f6a0_mountaincableway` |
-| 🚡 | Aerial tramway | `1f6a1_aerialtramway` |
-| 🛰️ | Satellite | `1f6f0_satellite` |
-| 🚀 | Rocket | `1f680_rocket` |
-| 🛸 | Flying saucer | `1f6f8_flyingsaucer` |
-| 🛎️ | Bellhop bell | `1f6ce_bellhopbell` |
-| 🧳 | Luggage | `1f9f3_luggage` |
-| ⌛ | Hourglass done | `231b_hourglassdone` |
-| ⏳ | Hourglass not done | `23f3_hourglassnotdone` |
-| ⏰ | Alarm clock | `23f0_alarmclock` |
-| ⏱️ | Stopwatch | `23f1_stopwatch` |
-| ⏲️ | Timer clock | `23f2_timerclock` |
-| 🕰️ | Mantelpiece clock | `1f570_mantelpiecewclock` |
-| 🕛 | Twelve o'clock | `1f55b_twelveoclock` |
-| 🕧 | Twelve-thirty | `1f567_twelvethirty` |
-| 🕐 | One o'clock | `1f550_oneoclock` |
-| 🕜 | One-thirty | `1f55c_onethirty` |
-| 🕑 | Two o'clock | `1f551_twooclock` |
-| 🕝 | Two-thirty | `1f55d_twothirty` |
-| 🕒 | Three o'clock | `1f552_threeoclock` |
-| 🕞 | Three-thirty | `1f55e_threethirty` |
-| 🕓 | Four o'clock | `1f553_fouroclock` |
-| 🕟 | Four-thirty | `1f55f_fourthirty` |
-| 🕔 | Five o'clock | `1f554_fiveoclock` |
-| 🕠 | Five-thirty | `1f560_fivethirty` |
-| 🕕 | Six o'clock | `1f555_sixoclock` |
-| 🕡 | Six-thirty | `1f561_sixthirty` |
-| 🕖 | Seven o'clock | `1f556_sevenoclock` |
-| 🕢 | Seven-thirty | `1f562_seventhirty` |
-| 🕗 | Eight o'clock | `1f557_eightoclock` |
-| 🕣 | Eight-thirty | `1f563_eightthirty` |
-| 🕘 | Nine o'clock | `1f558_nineoclock` |
-| 🕤 | Nine-thirty | `1f564_ninethirty` |
-| 🕙 | Ten o'clock | `1f559_tenoclock` |
-| 🕥 | Ten-thirty | `1f565_tenthirty` |
-| 🕚 | Eleven o'clock | `1f55a_elevenoclock` |
-| 🕦 | Eleven-thirty | `1f566_eleventhirty` |
-| 🎃 | Jack-o-lantern | `1f383_jackolantern` |
-| 🎆 | Fireworks | `1f386_fireworks` |
-| 🎇 | Sparkler | `1f387_sparkler` |
-| 🧨 | Firecracker | `1f9e8_firecracker` |
+| 🎃 | Pumpkin | `pumpkin` |
+| 🎄 | Xmas tree | `xmastree` |
+| 🎆 | Fireworks | `fireworks` |
+| 🎇 | Sparkler | `sparkler` |
+| 🧨 | Dynamite | `1f9e8_firecracker` |
+| ✨ | Sparkles | `2728_sparkles` |
 | 🎈 | Balloon | `1f388_balloon` |
 | 🎉 | Party popper | `1f389_partypopper` |
 | 🎊 | Confetti ball | `1f38a_confettiball` |
 | 🎋 | Tanabata tree | `1f38b_tanabatatree` |
+| 🎍 | Pine decoration | `1f38d_pinedecoration` |
 | 🎎 | Japanese dolls | `1f38e_japanesedolls` |
 | 🎏 | Carp streamer | `1f38f_carpstreamer` |
 | 🎐 | Wind chime | `1f390_windchime` |
-| 🎑 | Moon viewing ceremony | `1f391_moonviewingceremony` |
+| 🎑 | Harvest moon | `1f391_moonviewingceremony` |
 | 🧧 | Red envelope | `1f9e7_redenvelope` |
 | 🎀 | Ribbon | `1f380_ribbon` |
-| 🎁 | Wrapped gift | `1f381_wrappedgift` |
+| 🎁 | Gift | `gift` |
+| 🎗️ | Reminder ribbon | `reminderribbon` |
+| 🎟️ | Admission tickets | `1f39f_admissiontickets` |
+| 🎫 | Ticket | `1f3ab_ticket` |
+| 🎖️ | Military medal | `1f396_militarymedal` |
+| 🏆 | Trophy | `trophy` |
+| 🏅 | Sports medal | `1f3c5_sportsmedal` |
+| 🥇 | Gold medal | `goldmedal` |
+| 🥈 | Silver medal | `silvermedal` |
+| 🥉 | Bronze medal | `bronzemedal` |
+| ⚽ | Soccer ball | `soccerball` |
+| ⚾ | Baseball | `baseball` |
+| 🥎 | Softball | `1f94e_softball` |
+| 🏀 | Basketball | `basketball` |
+| 🏐 | Volley ball | `1f3d0_volleyball` |
+| 🏈 | American football | `americanfootball` |
+| 🏉 | Rugby football | `rugbyball` |
+| 🎾 | Tennis ball | `tennisball` |
+| 🥏 | Frisbee | `1f94f_flyingdisc` |
+| 🎳 | Bowling ball | `bowlingball` |
+| 🏏 | Cricket bat and ball | `cricketbatandball` |
+| 🏑 | Field hockey | `1f3d1_fieldhockeystickandball` |
+| 🏒 | Ice hockey | `1f3d2_icehockeystickandpuck` |
+| 🥍 | Lacrosse | `lacrosse` |
+| 🏓 | Table tennis | `1f3d3_tabletennispaddleandball` |
+| 🏸 | Badminton | `1f3f8_badminton` |
+| 🥊 | Boxing glove | `boxingglove` |
+| 🥋 | Martial arts uniform | `1f94b_martialartsuniform` |
+| 🥅 | Goal | `1f945_goalnet` |
+| ⛳ | Flag in hole | `flaginhole` |
+| ⛸️ | Ice skate | `26f8_iceskate` |
+| 🎣 | Fishing pole | `1f3a3_fishingpoleandfish` |
+| 🤿 | Diving mask | `1f93f_divingmask` |
+| 🎽 | Running shirt | `1f3bd_runningshirtwithsash` |
+| 🎿 | Ski and skiboot  | `1f3bf_skiandskiboot` |
+| 🛷 | Sled | `1f6f7_sled` |
+| 🥌 | Curling stone | `1f94c_curlingstone` |
+| 🎯 | Archery | `target` |
+| 🪀 | Yo-yo | `1fa80_yoyo` |
+| 🪁 | Kite | `1fa81_kite` |
+| 🎱 | Pool eight ball | `eightball` |
+| 🔮 | Crystal ball | `1f52e_crystalball` |
+| 🪄 | Magic Wand | `magicwand` |
+| 🧿 | Nazar amulet | `1f9ff_nazaramulet` |
+| 🎮 | Games | `games` |
+| 🕹️ | Joystick | `1f579_joystick` |
+| 🎰 | Slot machine | `1f3b0_slotmachine` |
+| 🎲 | Dice | `1f3b2_gamedie` |
+| 🧩 | Puzzle piece | `1f9e9_jigsaw` |
+| 🧸 | Teddy bear | `hug` |
+| 🪅 | Piñata | `pinata` |
+| 🪩 | Glitter ball | `glitterball` |
+| 🪆 | Matreshka | `matreshka` |
+| ♠️ | Spades | `2660_blackspadesuit` |
+| ♥️ | Hearts | `2665_blackheartsuit` |
+| ♦️ | Diamonds | `2666_blackdiamondsuit` |
+| ♣️ | Clubs | `2663_blackclubsuit` |
+| ♟️ | Chess pawn | `265f_chesspawn` |
+| 🃏 | Joker | `1f0cf_playingcardblackjoker` |
+| 🀄 | Mahjong | `1f004_mahjong` |
+| 🎴 | Flower playing cards | `1f3b4_flowerplayingcards` |
+| 🎭 | Performing arts | `1f3ad_performingarts` |
+| 🖼️ | Painting | `1f5bc_framewithpicture` |
+| 🎨 | Artist palette | `1f3a8_artistpalette` |
+| 🧵 | Thread | `1f9f5_thread` |
+| 🪡 | Sewing needle | `sewingneedle` |
+| 🧶 | Ball of yarn | `1f9f6_yarn` |
+| 🪢 | Knot | `knot` |
+| 🎗️ | Red ribbon | `ribbonred` |
 
 ---
 
-## Flags
+## Symbols
 
 | Emoji | Description | Reaction ID |
 |-------|-------------|-------------|
-| 🏁 | Chequered flag | `1f3c1_chequeredflag` |
-| 🚩 | Triangular flag | `1f6a9_triangularflag` |
-| 🎌 | Crossed flags | `1f38c_crossedflags` |
-| 🏴 | Black flag | `1f3f4_blackflag` |
-| 🏳️ | White flag | `1f3f3_whiteflag` |
-| 🏳️‍⚧️ | Transgender flag | `1f3f3200d26a7_transgenderflag` |
-
-> **Note:** Microsoft Teams supports 200+ country and regional flags.
-
----
-
-## Special Teams Reactions
-
-Microsoft Teams-exclusive reactions:
-
-| Display | Description | Reaction ID |
-|---------|-------------|-------------|
-| (oreo) | Oreo | `oreo_oreo` |
-| (oreoyum) | Oreo Yum | `oreoyum_oreoyum` |
-| (support) | Support | `support_support` |
+| 🏧 | ATM | `1f3e7_automatedtellermachine` |
+| 🚮 | Litter in bin | `1f6ae_putlitterinitsplacesymbol` |
+| 🚰 | Water tap | `1f6b0_potablewatersymbol` |
+| ♿ | Wheelchair symbol | `267f_wheelchairsymbol` |
+| 🚹 | Mens symbol | `1f6b9_menssymbol` |
+| 🚺 | Womans symbol | `1f6ba_womenssymbol` |
+| 🚻 | Restroom | `1f6bb_restroom` |
+| 🚼 | Baby symbol | `1f6bc_babysymbol` |
+| 🚾 | Water closet | `1f6be_watercloset` |
+| 🛂 | Passport control | `1f6c2_passportcontrol` |
+| 🛃 | Customs | `1f6c3_customs` |
+| 🛄 | Baggage claim | `1f6c4_baggageclaim` |
+| 🛅 | Left luggage | `1f6c5_leftluggage` |
+| ⚠️ | Warning | `26a0_warningsign` |
+| 🚸 | Children crossing | `1f6b8_childrencrossing` |
+| ⛔ | No entry | `26d4_noentry` |
+| 🚫 | Banned | `1f6ab_noentrysign` |
+| 🚳 | No bicycles | `1f6b3_nobicycles` |
+| 🚭 | No smoking | `1f6ad_nosmokingsymbol` |
+| 🚯 | No littering | `1f6af_donotlittersymbol` |
+| 🚱 | Non-potable water | `1f6b1_nonpotablewatersymbol` |
+| 🚷 | No pedestrians | `1f6b7_nopedestrians` |
+| 📵 | No mobile phones | `1f4f5_nomobilephones` |
+| 🔞 | No one under eighteen | `1f51e_nooneundereighteensymbol` |
+| ☢️ | Radioactive | `2622_radioactivesign` |
+| ☣️ | Biohazard | `2623_biohazardsign` |
+| ⬆️ | Up arrow | `2b06_upwardsblackarrow` |
+| ↗️ | Up right arrow | `2197_northeastarrow` |
+| ➡️ | Right arrow | `27a1_blackrightwardsarrow` |
+| ↘️ | Down right arrow | `2198_southeastarrow` |
+| ⬇️ | Down arrow | `2b07_downwardsblackarrow` |
+| ↙️ | Down left arrow | `2199_southwestarrow` |
+| ⬅️ | Left arrow | `2b05_leftwardsblackarrow` |
+| ↖️ | Up left arrow | `2196_northwestarrow` |
+| ↕️ | Up down arrow | `2195_updownarrow` |
+| ↔️ | Left right arrow | `2194_leftrightarrow` |
+| ↩️ | Curving left arrow | `21a9_leftwardsarrowwithhook` |
+| ↪️ | Curving right arrow  | `21aa_rightwardsarrowwithhook` |
+| ⤴️ | Arrow curving up | `2934_arrowcurvedupright` |
+| ⤵️ | Arrow curving down | `2935_arrowcurveddownright` |
+| 🔃 | Clockwise vertical arrows | `1f503_arrowsclockwise` |
+| 🔄 | Counterclockwise arrows button | `1f504_refresh` |
+| 🔙 | Back arrow | `1f519_backarrow` |
+| 🔚 | End arrow | `1f51a_endwithleftwardsarrowabove` |
+| 🔛 | On! arrow | `1f51b_on` |
+| 🔜 | Soon arrow | `1f51c_soon` |
+| 🔝 | Top arrow | `1f51d_topwithupwardsarrowabove` |
+| 🛐 | Place of worship | `1f6d0_placeofworship` |
+| ⚛️ | Atom | `269b_atomsymbol` |
+| 🕉️ | Om | `1f549_omsymbol` |
+| ✡️ | Star of David | `2721_starofdavid` |
+| ☸️ | Wheel of dharma | `2638_wheelofdharma` |
+| ☯️ | Yin yang | `262f_yinyang` |
+| ✝️ | Latin cross | `271d_latincross` |
+| ☦️ | Orthodox cross | `2626_orthodoxcross` |
+| ☪️ | Star and crescent | `262a_starandcrescent` |
+| ☮️ | Peace | `262e_peacesymbol` |
+| 🕎 | Menorah | `1f54e_menorahwithninebranches` |
+| 🔯 | Star with dot | `1f52f_starwithdot` |
+| 🪯 | Khanda | `khanda` |
+| ♈ | Aries | `2648_aries` |
+| ♉ | Taurus | `2649_taurus` |
+| ♊ | Gemini | `264a_gemini` |
+| ♋ | Cancer | `264b_cancer` |
+| ♌ | Leo | `264c_leo` |
+| ♍ | Virgo | `264d_virgo` |
+| ♎ | Libra | `264e_libra` |
+| ♏ | Scorpio | `264f_scorpius` |
+| ♐ | Sagittarius | `2650_sagittarius` |
+| ♑ | Capricorn | `2651_capricorn` |
+| ♒ | Aquarius | `2652_aquarius` |
+| ♓ | Pisces | `2653_pisces` |
+| ⛎ | Ophiuchus | `26ce_ophiuchus` |
+| 🔀 | Shuffle button | `1f500_twistedrightwardsarrows` |
+| 🔁 | Repeat button | `1f501_repeat` |
+| 🔂 | Repeat single button | `1f502_repeatsingle` |
+| ▶️ | Play button | `25b6_blackrightpointingtriangle` |
+| ⏩ | Fast-forward button | `23e9_fastforwardbutton` |
+| ⏭️ | Next track button | `23ed_nexttrack` |
+| ⏯️ | Play or pause button | `23ef_playpause` |
+| ◀️ | Reverse button | `25c0_blackleftpointingtriangle` |
+| ⏪ | Rewind button | `23ea_fastreversebutton` |
+| ⏮️ | Last track button | `23ee_lasttrack` |
+| 🔼 | Up button | `1f53c_uppointingsmallredtriangle` |
+| ⏫ | Fast up button | `23eb_fastupbutton` |
+| 🔽 | Button down small | `1f53d_buttondownsmall` |
+| ⏬ | Fast down button | `23ec_fastdownbutton` |
+| ⏸️ | Pause button | `23f8_doubleverticalbar` |
+| ⏹️ | Stop button | `23f9_blacksquareforstop` |
+| ⏺️ | Record button | `23fa_blackcircleforrecord` |
+| ⏏️ | Eject button | `23cf_ejectsymbol` |
+| 🎦 | Cinema | `1f3a6_cinema` |
+| 🔅 | Low brightness | `1f505_lowbrightnesssymbol` |
+| 🔆 | High brightness | `1f506_highbrightnesssymbol` |
+| 📶 | Signal strength | `1f4f6_antennawithbars` |
+| 🛜 | Wifi | `wifi` |
+| 📳 | Vibration mode | `1f4f3_vibrationmode` |
+| 📴 | Mobile phone off | `1f4f4_mobilephoneoff` |
+| ♀️ | Female sign | `2640_woman` |
+| ♂️ | Male sign | `2642_man` |
+| ⚧️ | Transgender symbol | `transgendersymbol` |
+| ✖️ | Multiplication sign | `2716_heavymultiplicationx` |
+| ➕ | Plus sign | `2795_heavyplussign` |
+| ➖ | Minus sign | `2796_heavyminussign` |
+| ➗ | Division sign | `2797_heavydivisionsign` |
+| 🟰 | Equals sign | `equals` |
+| ♾️ | Infinity | `267e_infinity` |
+| ‼️ | Double exclamation | `203c_doubleexclamationmark` |
+| ⁉️ | Exclamation question mark | `exclamationquestionmark` |
+| ❓ | Question mark | `2753_blackquestionmarkornament` |
+| ❔ | White question mark | `2754_whitequestionmarkornament` |
+| ❕ | White exclamation mark | `2755_whiteexclamationmark` |
+| ❗ | Exclamation mark | `2757_heavyexclamationmarksymbol` |
+| 〰️ | Wavy dash | `3030_wavydash` |
+| 💱 | Currency exchange | `1f4b1_currencyexchange` |
+| 💲 | Dollar | `cash` |
+| ⚕️ | Medical symbol | `2695_staffofaesculapius` |
+| ♻️ | Recycle | `recycle` |
+| ⚜️ | Fleur de lis | `269c_fleurdelis` |
+| 🔱 | Trident | `1f531_tridentemblem` |
+| 📛 | Name badge | `1f4db_namebadge` |
+| 🔰 | Beginner | `1f530_japanesesymbolforbeginner` |
+| ⭕ | Red ring | `2b55_heavylargecircle` |
+| ✅ | Checkmark button | `2705_whiteheavycheckmark` |
+| ☑️ | Checkbox | `2611_ballotboxwithcheck` |
+| ✔️ | Checkmark | `2714_heavycheckmark` |
+| ❌ | Crossmark | `274c_crossmark` |
+| ❎ | Cross mark button | `274e_negativesquaredcrossmark` |
+| ➰ | Curly loop | `27b0_curlyloop` |
+| ➿ | Double curly loop | `27bf_doublecurlyloop` |
+| 〽️ | Part alternation mark | `303d_partalternationmark` |
+| ✳️ | Asterisk | `2733_eightspokedasterisk` |
+| ✴️ | Star button | `2734_eightpointedblackstar` |
+| ❇️ | Sparkle | `2747_sparkle` |
+| ©️ | Copyright | `00a9_copyrightsign` |
+| ®️ | Registered | `00ae_registeredsign` |
+| ™️ | Trademark | `2122_trademarksign` |
+| #️⃣ | Keycap number | `keycapnumbersign` |
+| *️⃣ | Keycap asterisk | `keycapnumberasterisk` |
+| 0️⃣ | Keycap zero | `keycapdigitzero` |
+| 1️⃣ | Keycap one | `keycapdigitone` |
+| 2️⃣ | Keycap two | `keycapdigittwo` |
+| 3️⃣ | Keycap three | `keycapdigitthree` |
+| 4️⃣ | Keycap four | `keycapdigitfour` |
+| 5️⃣ | Keycap five | `keycapdigitfive` |
+| 6️⃣ | Keycap six | `keycapdigitsix` |
+| 7️⃣ | Keycap seven | `keycapdigitseven` |
+| 8️⃣ | Keycap eight | `keycapdigiteight` |
+| 9️⃣ | Keycap nine | `keycapdigitnine` |
+| 🔟 | Keycap ten | `1f51f_keycapten` |
+| 🔠 | Uppercase | `1f520_uppercaseabcd` |
+| 🔡 | Lowercase | `1f521_lowercaseabcd` |
+| 🔢 | Numbers | `1f522_inputsymbolfornumbers` |
+| 🔣 | Symbols | `1f523_inputsymbolforsymbols` |
+| 🔤 | Letters | `1f524_inputsymbolforlatinletters` |
+| 🅰️ | Blood type A | `1f170_bloodtypea` |
+| 🆎 | Blood type AB | `1f18e_negativesquaredab` |
+| 🅱️ | Blood type B | `1f171_bloodtypeb` |
+| 🆑 | Clear | `1f191_squaredcl` |
+| 🆒 | Cool | `1f192_squaredcool` |
+| 🆓 | Free | `1f193_squaredfree` |
+| ℹ️ | Information | `2139_informationsource` |
+| 🆔 | ID | `1f194_squaredid` |
+| Ⓜ️ | Circled M | `24c2_circledlatincapitalletterm` |
+| 🆕 | New | `1f195_squarednew` |
+| 🆖 | NG | `1f196_squaredng` |
+| 🅾️ | Blood type O | `1f17e_bloodtype0` |
+| 🆗 | OK button | `1f197_squaredok` |
+| 🅿️ | Parking | `1f17f_parking` |
+| 🆘 | SOS | `1f198_squaredsos` |
+| 🆙 | UP! button | `1f199_buttonup` |
+| 🆚 | VS | `1f19a_squaredvs` |
+| 🈁 | Here | `1f201_squaredkatakanakoko` |
+| 🈂️ | Service Charge | `1f202_squaredkatakanasa` |
+| 🈷️ | Monthly amount | `1f237_monthlyamount` |
+| 🈶 | Not free of charge | `1f236_notfreeofcharge` |
+| 🈯 | Reserved | `1f22f_reserved` |
+| 🉐 | Bargain | `1f250_circledideographadvantage` |
+| 🈹 | Discount | `1f239_discount` |
+| 🈚 | Free of charge | `1f21a_freeofcharge` |
+| 🈲 | Prohibited | `1f232_prohibited` |
+| 🉑 | Accept | `1f251_circledideographaccept` |
+| 🈸 | Application | `1f238_application` |
+| 🈴 | Agreement | `1f234_agreement` |
+| 🈳 | Vacancy | `1f233_vacancy` |
+| ㊗️ | Congratulations | `3297_congratulations` |
+| ㊙️ | Secret | `3299_circledideographsecret` |
+| 🈺 | Open for business | `1f23a_open` |
+| 🈵 | No vacancy | `1f235_novacancy` |
+| 🔴 | Red circle | `1f534_largeredcircle` |
+| 🟠 | Orange circle | `1f7e0_orangecircle` |
+| 🟡 | Yellow circle | `1f7e1_yellowcircle` |
+| 🟢 | Green circle | `1f7e2_greencircle` |
+| 🔵 | Blue circle | `1f535_largebluecircle` |
+| 🟣 | Purple circle | `1f7e3_purplecircle` |
+| 🟤 | Brown circle | `1f7e4_browncircle` |
+| ⚫ | Black circle | `26ab_mediumblackcircle` |
+| ⚪ | White circle | `26aa_mediumwhitecircle` |
+| 🟥 | Red square | `1f7e5_redsquare` |
+| 🟧 | Orange square | `1f7e7_orangesquare` |
+| 🟨 | Yellow square | `1f7e8_yellowsquare` |
+| 🟩 | Green square | `1f7e9_greensquare` |
+| 🟦 | Blue square | `1f7e6_bluesquare` |
+| 🟪 | Purple square | `1f7ea_purplesquare` |
+| 🟫 | Brown square | `1f7eb_brownsquare` |
+| ⬛ | Large black square | `2b1b_blacklargesquare` |
+| ⬜ | Large white square | `2b1c_whitelargesquare` |
+| ◼️ | Medium black square | `25fc_blackmediumsquare` |
+| ◻️ | Medium white square | `25fb_whitemediumsquare` |
+| ◾ | Medium small black square | `25fe_blackmediumsmallsquare` |
+| ◽ | Medium small white square | `25fd_whitemediumsmallsquare` |
+| ▪️ | Small black square | `25aa_blacksmallsquare` |
+| ▫️ | Small white square | `25ab_whitesmallsquare` |
+| 🔶 | Large orange diamond | `1f536_largeorangediamond` |
+| 🔷 | Large blue diamond | `1f537_largebluediamond` |
+| 🔸 | Small orange diamond | `1f538_smallorangediamond` |
+| 🔹 | Small blue diamond | `1f539_smallbluediamond` |
+| 🔺 | Red triangle up | `1f53a_uppointingredtriangle` |
+| 🔻 | Red triangle down | `1f53b_downpointingredtriangle` |
+| 💠 | Diamond flower | `1f4a0_diamondshapewithadotinside` |
+| 🔘 | Radio button | `1f518_radiobutton` |
+| 🔳 | White square button | `1f533_whitesquarebutton` |
+| 🔲 | Black square button | `1f532_blacksquarebutton` |
+| 5️⃣0️⃣ | 50th 50 | `50th_50` |
+| 🦋 | 50th Butterfly | `50th_butterfly` |
+| 5️⃣0️⃣♥️ | 50th Card | `50th_card` |
+| ♟️ | 50th Chess | `50th_chess` |
+| ☁️ | 50th Cloud | `50th_cloud` |
+| 🖱️ | 50th Cursor | `50th_cursor` |
+| 💾 | 50th Floppy | `50th_floppy` |
+| ✉️ | 50th Mail | `50th_mail` |
+| 🎨 | 50th Paint | `50th_paint` |
+| 🌈 | 50th Rainbow | `50th_rainbow` |
+| 🎬 | 50th Slate | `50th_slate` |
+| 💽 | 50th Win98 | `50th_win98` |
+| 🌳 | 50th Tree | `50th_tree` |
+| ☀️ | 50th Sun | `50th_sun` |
+| 🙂 | 50th Smile | `50th_smile` |
+| 🔍 | 50th Search | `50th_search` |
+| 🎨 | 50th PaintBucket | `50th_paintbucket` |
+| 🦋 | 50th MSN butterfly | `50th_msnbutterfly` |
+| 📁 | 50th Folder | `50th_folder` |
+| 🌐 | 50th Explorer | `50th_explorer` |
+| 📎 | 50th Clippy | `50th_clippy` |
+| 💿 | 50th CD | `50th_cd` |
+| 📷 | 50th Camera | `50th_camera` |
 
 ---
 
