@@ -1132,7 +1132,7 @@ Use these emojis for building agents that receive reaction notifications and sen
 | ♻ **Vegetable garden** | `vegetablegarden` |
 | ♻ **Electric car** | `electriccar` |
 
-## Travel and places - Diverse
+### Travel and places - Diverse
 
 | Emoji | EmojiID | Diverse - Skin tone |
 | --- | --- | --- |
