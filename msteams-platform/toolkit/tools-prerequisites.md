@@ -8,10 +8,10 @@ ms.date: 02/21/2024
 ---
 # Prerequisites for creating your Teams agent or app
 
-Before you create your Microsoft Teams app project, ensure that the prerequisites are in place. You must:
+Before you create your Microsoft Teams project, ensure that the prerequisites are in place. You must:
 
-* [Install required tools to build your Teams app](#install-required-tools-to-build-your-teams-agent-or-app)
-* [Prepare Accounts to build your Teams app](#accounts-to-build-your-teams-app)
+* [Install required tools to build your Teams agent or app](#install-required-tools-to-build-your-teams-agent-or-app)
+* [Prepare Accounts to build your Teams agent or app](#accounts-to-build-your-teams-agent-or-app)
 * [Verify custom app upload permission](#verify-custom-app-upload-permission)
 
 ## Install required tools to build your Teams agent or app
@@ -33,7 +33,7 @@ Ensure the following requirements are met before you start building your Teams a
 | &nbsp; | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | A browser-based tool that lets you run a query from Microsoft Graph data. | JavaScript and SPFx|
 | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | A web-based portal to configure, manage, and publish your Teams app to your organization or the Teams Store.| JavaScript and SPFx|
 
-## Accounts to build your Teams app
+## Accounts to build your Teams agent or app
 
 Ensure that you have the following accounts before you start building your Teams app:
 
