@@ -43,7 +43,7 @@ Ensure that you have the following accounts before you start building your Teams
 | [Azure account](#azure-account)|Back-end resources on Azure. | JavaScript, TypeScript, Python (in developer preview), and C#. |
 
 > [!TIP]
-> If you want to your agent or app to have SharePoint support, you must have a [SharePoint collection site administrator account](#sharepoint-collection-site-administrator-account).
+> If you want to your agent or app to have SharePoint support, you must have a [SharePoint collection site administrator account](/sharepoint/sharepoint-admin-role).
 
 ### Microsoft 365 developer program
 
@@ -102,15 +102,17 @@ To create a free Microsoft 365 developer account:
 
 An Azure account allows you to host a Teams app or the back-end resources for your Teams app to Azure. You can do this using Agents Toolkit in Visual Studio Code. You must have an Azure subscription in the following scenarios:
 
-* If you already have an existing app on a different cloud provider other than Azure, and you want to integrate the app on Teams platform.
+* If you already have an existing app on a cloud provider other than Azure, and you want to integrate the app on Teams platform.
 * If you want to host the back-end resources for your app using another cloud provider, or on your own servers if they're available in the public domain.
 
 > [!NOTE]
 > You can use Azure account to provision Azure resource to host your Teams app. You can [create a free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn) in case you don't have any. If you don't use Agents Toolkit to provision and deploy, Azure account isn't required.
 
+<!--
 ### SharePoint collection site administrator account
 
 While creating Teams app using SPFx environment, you must have a SharePoint collection site administrator account. It’s required for deploying and hosting your app on SharePoint site. If you're using a Microsoft 365 developer program tenant, you can use the administrator account you created at the time.
+-->
 
 ## Verify custom app upload permission
 
