@@ -96,6 +96,7 @@ Reference reactions by their unique ID:
 | 😪 | Sleepy | `sleepy` |
 | 🤤 | Drooling face | `1f924_droolingface` |
 | 😴 | Sleeping face | `sleepingface` |
+| 🫩 | Face with bags under eyes | `1fae9_facewithbagsundereyes` |
 | 😷 | Face with medical mask | `1f637_facewithmedicalmask` |
 | 🤒 | Ill | `ill` |
 | 🤕 | Face with head bandage | `1f915_facewithheadbandage` |
@@ -596,6 +597,7 @@ Reference reactions by their unique ID:
 | 👥 | Busts in silhouette | `1f465_bustsinsilhouette` | |
 | 🫂 | People hugging | `peoplehugging` | |
 | 👣 | Footprints | `1f463_footprints` | |
+| 🫆 | Fingerprint | `1fac6_fingerprint` | |
 
 ---
 
@@ -704,6 +706,7 @@ Reference reactions by their unique ID:
 | 🐳 | Spouting Whale | `spoutingwhale` |
 | 🐋 | Whale | `whale` |
 | 🐬 | Dolphin | `dolphin` |
+| 🫍 | Orca | `1facd_orca` |
 | 🦭 | Seal | `seal` |
 | 🐟 | Fish | `fish` |
 | 🐠 | Tropical fish | `tropicalfish` |
@@ -761,6 +764,7 @@ Reference reactions by their unique ID:
 | 🍃 | Falling leaf | `fallingleaf` |
 | 🪹 | Empty nest | `nest` |
 | 🪺 | Nest with eggs | `nestwitheggs` |
+| 🪾 | Leafless tree | `1fabe_leaflesstree` |
 | 🍄 | Mushroom | `1f344_mushroom` |
 
 ---
@@ -792,6 +796,7 @@ Reference reactions by their unique ID:
 | 🍆 | Eggplant | `aubergine` |
 | 🥔 | Potato | `1f954_potato` |
 | 🍄‍🟫 | Brown mushroom | `brownmushroom4` |
+| 🫜 | Root vegetable | `1fadc_rootvegetable` |
 | 🥕 | Carrot | `1f955_carrot` |
 | 🌽 | Corn | `1f33d_earofmaize` |
 | 🌶️ | Chili pepper | `1f336_hotpepper` |
@@ -1224,6 +1229,7 @@ Reference reactions by their unique ID:
 | 🪘 | Long Drum | `longdrum` |
 | 🪇 | Maracas | `maracas` |
 | 🪈 | Flute | `flute` |
+| 🪉 | Harp | `1fa89_harp` |
 | 📱 | Phone | `phone` |
 | 📲 | Mobile phone with arrow | `1f4f2_mobilephonewitharrow` |
 | ☎️ | Telephone | `260e_blacktelephone` |
@@ -1361,6 +1367,7 @@ Reference reactions by their unique ID:
 | 🪝 | Hook | `hook` |
 | 🧰 | Toolbox | `1f9f0_toolbox` |
 | 🧲 | Magnet | `1f9f2_magnet` |
+| 🪏 | Shovel | `1fa8f_shovel` |
 | 🪜 | Ladder | `ladder` |
 | ⚗️ | Alembic | `2697_alembic` |
 | 🧪 | Test tube | `1f9ea_testtube` |
@@ -1388,6 +1395,7 @@ Reference reactions by their unique ID:
 | 🚿 | Shower | `1f6bf_shower` |
 | 🛁 | Bath tub | `1f6c1_bathtub` |
 | 🪤 | Mouse trap | `mousetrap` |
+| 🧷 | Safety pin | `1f9f7_safetypin` |
 | 🪒 | Razor | `1fa92_razor` |
 | 🧴 | Lotion | `1f9f4_lotionbottle` |
 | 🧹 | Broom | `1f9f9_broom` |
@@ -1645,6 +1653,7 @@ Reference reactions by their unique ID:
 | ©️ | Copyright | `00a9_copyrightsign` |
 | ®️ | Registered | `00ae_registeredsign` |
 | ™️ | Trademark | `2122_trademarksign` |
+| 🫟 | Splatter | `1fadf_splatter` |
 | #️⃣ | Keycap number | `keycapnumbersign` |
 | *️⃣ | Keycap asterisk | `keycapnumberasterisk` |
 | 0️⃣ | Keycap zero | `keycapdigitzero` |
