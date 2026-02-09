@@ -39,7 +39,7 @@ Ensure that you have the following accounts before you start building your Teams
 
 | Accounts | Purpose | For environment type|
 | --- | --- | ---|
-| [Microsoft 365 work or school account](#microsoft-365-developer-program) | Teams developer account while developing an app.| JavaScript, TypeScript, SPFx, and C# or Blazor. |
+| [Microsoft 365 work or school account](#microsoft-365-developer-program) | Teams developer account while developing an app.| JavaScript, TypeScript, Python (in developer preview), and C#. |
 | [Azure account](#azure-account)|Back-end resources on Azure. | JavaScript, TypeScript, Python (in developer preview), and C#. |
 
 > [!TIP]
@@ -96,11 +96,7 @@ To create a free Microsoft 365 developer account:
 
 1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
 1. Select **Join Now**.
-1. Set up your administrator account subscription.
-
-   After the completion of the subscription, the following information appears:
-
-    :::image type="content" source="../assets/images/toolkit-v2/m365-account_1.png" alt-text="Screenshot shows the M365 Account subscription options.":::
+1. Set up your administrator account subscription. For more information, see [set up a Microsoft 365 developer sandbox subscription](/office/developer-program/microsoft-365-developer-program-get-started)
 
 ### Azure account
 
