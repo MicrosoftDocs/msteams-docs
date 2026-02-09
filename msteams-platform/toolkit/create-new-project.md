@@ -15,7 +15,7 @@ In this section, you can learn how to create a new Microsoft Teams project using
 
 You can build a new Teams project by selecting **Create a New Agent/App** in Microsoft 365 Agents Toolkit (previously known as Teams Toolkit). You can start from built-in Teams app templates or start from official Teams app samples in Agents Toolkit. What's more, Agents Toolkit  supports to start with Outlook Add-in templates to build your own Outlook Add-ins.
 
-:::image type="content" source="../assets/images/toolkit-v2/first-tab/select-capabilities-tabapp_1.png" alt-text="Screenshot shows the App Capability options.":::
+:::image type="content" source="../assets/images/toolkit-v2/first-tab/select-capabilities-tabapp.png" alt-text="Screenshot shows the App Capability options.":::
 
 To start with Teams capabilities, you can create the following types of Teams app:
 
@@ -43,7 +43,7 @@ To create a basic Teams app:
 
 1. In this example, select **Tab** as app capability.
 
-    :::image type="content" source="../assets/images/toolkit-v2/first-tabselect-capabilities-tabapp.png" alt-text="Screenshot shows the App Capability to select.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-tab/select-capabilities-tabapp.png" alt-text="Screenshot shows the App Capability to select.":::
 
 1. Select **Default folder** to store your project root folder in the default location.
 
