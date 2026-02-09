@@ -95,6 +95,8 @@ To learn more about the directory structure of different types of basic Teams ap
 | For message extension app | [Build your first message extension app using JavaScript](../get-started/tutorials.md#build-your-first-message-extension-app-using-javascript) |
 
 </details>
+
+<!--
 <br>
 <details>
 <summary><b>Directory structure for scenario-based Teams app</b></summary>
@@ -136,6 +138,7 @@ To learn more about the directory structure of different types of scenario-based
 
 </details>
 <br>
+-->
 
 For trying out more step-by-step guiges on building apps, see [Tutorials](../get-started/tutorials.md).
 
