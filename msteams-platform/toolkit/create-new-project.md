@@ -45,11 +45,7 @@ The process to create a new Teams app is similar for all types of apps. To creat
 
     1. Select **Browse**.
 
-        :::image type="content" source="../assets/images/toolkit-v2/first-tab/select-browse_1.png" alt-text="Screenshot shows the Browse option highlighted to browse for storage.":::
-
     1. Select the location for project workspace.
-
-        :::image type="content" source="../assets/images/toolkit-v2/select-folder_1.png" alt-text="Screenshot shows the Select Folder option highlighted.":::
 
     The folder you select is the location for your project workspace.
 
