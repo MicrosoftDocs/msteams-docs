@@ -10,28 +10,28 @@ ms.date: 02/21/2024
 
 Before you create your Microsoft Teams project, ensure that the prerequisites are in place. You must:
 
-* [Install required tools to build your Teams agent or app](#install-required-tools-to-build-your-teams-agent-or-app)
-* [Prepare Accounts to build your Teams agent or app](#accounts-to-build-your-teams-agent-or-app)
+* [Install required tools to build your Teams project workspace](#install-required-tools-to-build-your-teams-agent-or-app)
+* [Prepare Accounts to build your Teams project](#accounts-to-build-your-teams-agent-or-app)
 * [Verify custom app upload permission](#verify-custom-app-upload-permission)
 
-## Install required tools to build your Teams agent or app
+## Install required tools to build your Teams workspace
 
 Ensure the following requirements are met before you start building your Teams agent or app:
 
 | &nbsp; | Tools | Purpose | For environment type |
 | --- | --- | --- | --- |
 | **Required** | &nbsp; | &nbsp; | &nbsp; |
-| &nbsp; | [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) (previously known as Teams Toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. | JavaScript and SPFx |
-| &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Collaborate with everyone you work with through apps for chat, meetings, and call - all in one place.| JavaScript and SPFx|
-| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).| JavaScript and SPFx|
-   | &nbsp; |[Node Package Manager (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx) | Install and manage packages for use in both Node.js and ASP.NET Core applications.| JavaScript and SPFx|
-| &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. | JavaScript and SPFx|
-| &nbsp; | [Microsoft Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SPFx build environments. Use the latest version. | JavaScript and SPFx|
+| &nbsp; | [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) (previously known as Teams Toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. | JavaScript and TypeScript |
+| &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Collaborate with everyone you work with through apps for chat, meetings, and call - all in one place.| JavaScript and TypeScript |
+| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).| JavaScript and TypeScript |
+| &nbsp; | [Node Package Manager (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx) | Install and manage packages for use in both Node.js and ASP.NET Core applications.| JavaScript and TypeScript |
+| &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. | JavaScript and TypeScript|
+| &nbsp; | [Microsoft Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or Python (in developer preview) build environments. Use the latest version. | JavaScript and TypeScript |
 | **Optional** | &nbsp; | &nbsp; | &nbsp; |
-| &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Access stored data or deploy a cloud-based back end for your Teams app in Azure. | JavaScript|
-| &nbsp; | [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) or [React Developer Tools for Microsoft&nbsp;Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil) | A browser DevTools extension for the open-source React JavaScript library. | JavaScript|
-| &nbsp; | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | A browser-based tool that lets you run a query from Microsoft Graph data. | JavaScript and SPFx|
-| &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | A web-based portal to configure, manage, and publish your Teams app to your organization or the Teams Store.| JavaScript and SPFx|
+| &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Access stored data or deploy a cloud-based back end for your Teams app in Azure. | JavaScript |
+| &nbsp; | [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) or [React Developer Tools for Microsoft&nbsp;Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil) | A browser DevTools extension for the open-source React JavaScript library. | JavaScript |
+| &nbsp; | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | A browser-based tool that lets you run a query from Microsoft Graph data. | JavaScript and TypeScript |
+| &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | A web-based portal to configure, manage, and publish your Teams app to your organization or the Teams Store.| JavaScript and TypeScript |
 
 ## Accounts to build your Teams agent or app
 
@@ -39,9 +39,11 @@ Ensure that you have the following accounts before you start building your Teams
 
 | Accounts | Purpose | For environment type|
 | --- | --- | ---|
-|[Microsoft 365 work or school account](#microsoft-365-developer-program)|Teams developer account while developing an app.| JavaScript, TypeScript, SPFx, and C# or Blazor. |
-|[Azure account](#azure-account)|Back-end resources on Azure.| JavaScript, TypeScript, SPFx, and C# or Blazor. |
-|[SharePoint collection site administrator account](#sharepoint-collection-site-administrator-account) |Deployment for hosting.| SPFx. |
+| [Microsoft 365 work or school account](#microsoft-365-developer-program) | Teams developer account while developing an app.| JavaScript, TypeScript, SPFx, and C# or Blazor. |
+| [Azure account](#azure-account)|Back-end resources on Azure. | JavaScript, TypeScript, Python (in developer preview), and C#. |
+
+> [!TIP]
+> If you want to your agent or app to have SharePoint support, you must have a [SharePoint collection site administrator account](#sharepoint-collection-site-administrator-account).
 
 ### Microsoft 365 developer program
 
