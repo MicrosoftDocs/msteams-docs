@@ -35,8 +35,10 @@ Agents Toolkit is available as a free extension for Visual Studio Code. To get s
 >
 > Agents Toolkit is actively expanding support for building apps in Government Community Cloud (GCC), GCC High, Department of Defense (DoD), and Teams operated by 21Vianet environments.
 > 
-> Support for GCC‑Moderate (GCC‑M) is now available in [this alpha build](https://github.com/OfficeDev/microsoft-365-agents-toolkit/actions/runs/21704208660/artifacts/5387089431). Feel free to download it and try it with your government account. We expect to make this capability publicly available in the stable release in early March, after incorporating early feedback.
-> 
+> Support for GCC‑Moderate (GCC‑M) is now available in [this alpha build](https://github.com/OfficeDev/microsoft-365-agents-toolkit/actions/runs/21704208660/artifacts/5387089431). Feel free to download it and try it with your government account - ensure the `Sovereign Cloud Environment` setting is set to GCC M. We expect to make this capability publicly available in the stable release in early March, after incorporating early feedback.
+>
+><img width="1041" height="601" alt="image" src="https://github.com/user-attachments/assets/48c6fd4f-e777-4730-9988-d41d7394902b" />
+>
 > Support for GCC High and DoD environments is not yet available, but both are on our roadmap. Updates will be shared as soon as they are ready.
 
 The following list provides the key features of Agents Toolkit:
