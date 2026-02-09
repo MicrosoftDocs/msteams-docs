@@ -21,7 +21,7 @@ To start with Teams capabilities, you can create the following types of Teams ap
 
 | App Types | Definition |
 | --- | --- |
-| **Scenario-based Teams apps** | This group of templates are designed for particular abstracted business scenarios that your teams app can serve for. For example notification bot, command bot, SSO-enabled tab, or Dashboard tab app. |
+| **Scenario-based Teams apps** | This group of templates are designed for particular abstracted business scenarios that your teams app can serve for. |
 | **Basic Teams apps** | Basic Teams apps are just hello world Teams tab, bot, or message extension that you can create and customize based on your requirement. |
 | **Extend Teams App across Microsoft 365** | This group of Teams app can be installed and run on Outlook and Office.com. |
 
@@ -43,7 +43,7 @@ To create a basic Teams app:
 
 1. In this example, select **Tab** as app capability.
 
-    :::image type="content" source="../assets/images/toolkit-v2/first-tab/select-capabilities-tabapp_1.png" alt-text="Screenshot shows the App Capability to select.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-tabselect-capabilities-tabapp.png" alt-text="Screenshot shows the App Capability to select.":::
 
 1. Select **Default folder** to store your project root folder in the default location.
 

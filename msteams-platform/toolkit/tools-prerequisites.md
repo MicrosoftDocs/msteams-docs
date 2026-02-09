@@ -37,9 +37,9 @@ Ensure the following requirements are met before you start building your Teams a
 
 Ensure that you have the following accounts before you start building your Teams app:
 
-| Accounts | Purpose | For environment type|
-| --- | --- | ---|
-| [Microsoft 365 work or school account](#microsoft-365-developer-program) | Teams developer account while developing an app.| JavaScript, TypeScript, Python (in developer preview), and C#. |
+| Accounts | Purpose | For environment type |
+| --- | --- | --- |
+| [Microsoft 365 work or school account](#microsoft-365-developer-program) | Teams developer account while developing an app. | JavaScript, TypeScript, Python (in developer preview), and C#. |
 | [Azure account](#azure-account)|Back-end resources on Azure. | JavaScript, TypeScript, Python (in developer preview), and C#. |
 
 > [!TIP]
