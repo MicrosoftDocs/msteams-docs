@@ -62,7 +62,7 @@ Use these emojis for building agents that receive reaction notifications and sen
 | 🤩 **Star eyes** | `stareyes` |
 | 😘 **Face blowing a kiss** | `1f618_facethrowingakiss` |
 | 😗 **Kiss** | `kiss` |
-| ☺️ **Mmmmm...** | `mmm` |
+| ☺️ **Mmmmm…** | `mmm` |
 | 😚 **Kissing face with closed eyes** | `1f61a_kissingfacewithclosedeyes` |
 | 😙 **Kissing face with smiling eyes** | `1f619_kissingfacewithsmilingeyes` |
 | 🥲 **Smiling face with tear** | `smilingfacewithtear` |
@@ -100,6 +100,7 @@ Use these emojis for building agents that receive reaction notifications and sen
 | 😪 **Sleepy** | `sleepy` |
 | 🤤 **Drooling face** | `1f924_droolingface` |
 | 😴 **Sleeping face** | `sleepingface` |
+| 🫩 **Facewithbagsundereyes** | `1fae9_facewithbagsundereyes` |
 | 😷 **Face with medical mask** | `1f637_facewithmedicalmask` |
 | 🤒 **Ill** | `ill` |
 | 🤕 **Face with head bandage** | `1f915_facewithheadbandage` |
@@ -327,7 +328,7 @@ Use these emojis for building agents that receive reaction notifications and sen
 | 👅 **Tongue** | `1f445_tongue` | NA |
 | 👄 **Mouth** | `1f444_mouth` | NA |
 | 🫦 **Biting lip** | `bitinglip` | NA |
-| 🎤 **Drop the mic** | `dropthemic` | NA |
+| 🎤 **Drop the mic** | `dropthemic` | 🎤 `dropthemic-tone1` <br> 🎤 `dropthemic-tone2` <br> 🎤 `dropthemic-tone3` <br> 🎤 `dropthemic-tone4` <br> 🎤 `dropthemic-tone5` |
 | 🤜🤛 **Fist bump** | `fistbump` | 🤜🏻🤛🏻 `fistbump-tone1` <br> 🤜🏼🤛🏼 `fistbump-tone2` <br> 🤜🏽🤛🏽 `fistbump-tone3` <br> 🤜🏾🤛🏾 `fistbump-tone4` <br> 🤜🏿🤛🏿 `fistbump-tone5` |
 | (support) **Support** | `support` | (support) `support-tone1` <br> (support) `support-tone2` <br> (support) `support-tone3` <br> (support) `support-tone4` <br> (support) `support-tone5` |
 
@@ -545,7 +546,7 @@ Use these emojis for building agents that receive reaction notifications and sen
 | 🧗‍♀️ **Woman climbing** | `woman_climbing` | 🧗🏻‍♀️ `woman_climbing-tone1` <br> 🧗🏼‍♀️ `woman_climbing-tone2` <br> 🧗🏽‍♀️ `woman_climbing-tone3` <br> 🧗🏾‍♀️ `woman_climbing-tone4` <br> 🧗🏿‍♀️ `woman_climbing-tone5` |
 | 🤺 **Fencer** | `womanfencer` | NA |
 | 🏇 **Horse racing** | `horse_racing` | 🏇 `horse_racing-tone1` <br> 🏇 `horse_racing-tone2` <br> 🏇 `horse_racing-tone3` <br> 🏇 `horse_racing-tone4` <br> 🏇 `horse_racing-tone5` |
-| ⛷️ **Skier** | `skier` | NA |
+| ⛷️ **Skier** | `skier` | ⛷🏻️ `skier-tone1` <br> ⛷🏼️ `skier-tone2` <br> ⛷🏽️ `skier-tone3` <br> ⛷🏾️ `skier-tone4` <br> ⛷🏿️ `skier-tone5` |
 | 🏂 **Snowboarder** | `snowboarder` | 🏂🏻 `snowboarder-tone1` <br> 🏂🏼 `snowboarder-tone2` <br> 🏂🏽 `snowboarder-tone3` <br> 🏂🏾 `snowboarder-tone4` <br> 🏂🏿 `snowboarder-tone5` |
 | 🏌️ **Person golfing** | `golfer` | 🏌🏻️ `golfer-tone1` <br> 🏌🏼️ `golfer-tone2` <br> 🏌🏽️ `golfer-tone3` <br> 🏌🏾️ `golfer-tone4` <br> 🏌🏿️ `golfer-tone5` |
 | 🏌️‍♂️ **Man golfing** | `mangolfing` | 🏌🏻️‍♂️ `mangolfing-tone1` <br> 🏌🏼️‍♂️ `mangolfing-tone2` <br> 🏌🏽️‍♂️ `mangolfing-tone3` <br> 🏌🏾️‍♂️ `mangolfing-tone4` <br> 🏌🏿️‍♂️ `mangolfing-tone5` |
@@ -592,6 +593,7 @@ Use these emojis for building agents that receive reaction notifications and sen
 | 👥 **Busts in silhouette** | `1f465_bustsinsilhouette` | NA |
 | 🫂 **People hugging** | `peoplehugging` | NA |
 | 👣 **Footprints** | `1f463_footprints` | NA |
+| 🫆 **Fingerprint** | `1fac6_fingerprint` | NA |
 
 ## Animals and nature
 
@@ -609,6 +611,7 @@ Use these emojis for building agents that receive reaction notifications and sen
 | 🐺 **Wolf face** | `1f43a_wolfface` |
 | 🦊 **Fox** | `foxhug` |
 | 🦝 **Raccoon** | `racoon` |
+| 😺 **Smile cat** | `smilecat` |
 | 🐈 **Cat** | `cat` |
 | 🐈‍⬛ **Black cat** | `blackcat` |
 | 🦁 **Lion** | `lion` |
@@ -697,6 +700,7 @@ Use these emojis for building agents that receive reaction notifications and sen
 | 🐳 **Spouting Whale** | `spoutingwhale` |
 | 🐋 **Whale** | `whale` |
 | 🐬 **Dolphin** | `dolphin` |
+| 🫍 **Orca** | `1facd_orca` |
 | 🦭 **Seal** | `seal` |
 | 🐟 **Fish** | `fish` |
 | 🐠 **Tropical fish** | `tropicalfish` |
@@ -754,6 +758,7 @@ Use these emojis for building agents that receive reaction notifications and sen
 | 🍃 **Falling leaf** | `fallingleaf` |
 | 🪹 **Empty nest** | `nest` |
 | 🪺 **Nest with eggs** | `nestwitheggs` |
+| 🪾 **Leaflesstree** | `1fabe_leaflesstree` |
 | 🍄 **Mushroom** | `1f344_mushroom` |
 
 ## Food
@@ -783,6 +788,7 @@ Use these emojis for building agents that receive reaction notifications and sen
 | 🍆 **Eggplant** | `aubergine` |
 | 🥔 **Potato** | `1f954_potato` |
 | 🍄‍🟫 **Brown mushroom** | `brownmushroom4` |
+| 🫜 **Rootvegetable** | `1fadc_rootvegetable` |
 | 🥕 **Carrot** | `1f955_carrot` |
 | 🌽 **Corn** | `1f33d_earofmaize` |
 | 🌶️ **Chili pepper** | `1f336_hotpepper` |
@@ -1126,7 +1132,7 @@ Use these emojis for building agents that receive reaction notifications and sen
 | ♻ **Vegetable garden** | `vegetablegarden` |
 | ♻ **Electric car** | `electriccar` |
 
-### Travel and places - Diverse
+## Travel and places - Diverse
 
 | Emoji | EmojiID | Diverse - Skin tone |
 | --- | --- | --- |
@@ -1214,6 +1220,7 @@ Use these emojis for building agents that receive reaction notifications and sen
 | 🪘 **Long Drum** | `longdrum` |
 | 🪇 **Maracas** | `maracas` |
 | 🪈 **Flute** | `flute` |
+| 🪉 **Harp** | `1fa89_harp` |
 | 📱 **Phone** | `phone` |
 | 📲 **Mobile phone with arrow** | `1f4f2_mobilephonewitharrow` |
 | ☎️ **Telephone** | `260e_blacktelephone` |
@@ -1351,6 +1358,7 @@ Use these emojis for building agents that receive reaction notifications and sen
 | 🪝 **Hook** | `hook` |
 | 🧰 **Toolbox** | `1f9f0_toolbox` |
 | 🧲 **Magnet** | `1f9f2_magnet` |
+| 🪏 **Shovel** | `1fa8f_shovel` |
 | 🪜 **Ladder** | `ladder` |
 | ⚗️ **Alembic** | `2697_alembic` |
 | 🧪 **Test tube** | `1f9ea_testtube` |
@@ -1378,6 +1386,7 @@ Use these emojis for building agents that receive reaction notifications and sen
 | 🚿 **Shower** | `1f6bf_shower` |
 | 🛁 **Bath tub** | `1f6c1_bathtub` |
 | 🪤 **Mouse trap** | `mousetrap` |
+| 🧷 **Safetypin** | `1f9f7_safetypin` |
 | 🪒 **Razor** | `1fa92_razor` |
 | 🧴 **Lotion** | `1f9f4_lotionbottle` |
 | 🧹 **Broom** | `1f9f9_broom` |
@@ -1418,6 +1427,7 @@ Use these emojis for building agents that receive reaction notifications and sen
 | 🎏 **Carp streamer** | `1f38f_carpstreamer` |
 | 🎐 **Wind chime** | `1f390_windchime` |
 | 🎑 **Harvest moon** | `1f391_moonviewingceremony` |
+| 🧧 **Red envelope** | `1f9e7_redenvelope` |
 | 🎀 **Ribbon** | `1f380_ribbon` |
 | 🎁 **Gift** | `gift` |
 | 🎗️ **Reminder ribbon** | `reminderribbon` |
@@ -1469,7 +1479,7 @@ Use these emojis for building agents that receive reaction notifications and sen
 | 🎲 **Dice** | `1f3b2_gamedie` |
 | 🧩 **Puzzle piece** | `1f9e9_jigsaw` |
 | 🧸 **Teddy bear** | `hug` |
-| 🪅 **PiÃ±ata** | `pinata` |
+| 🪅 **Piñata** | `pinata` |
 | 🪩 **Glitter ball** | `glitterball` |
 | 🪆 **Matreshka** | `matreshka` |
 | ♠️ **Spades** | `2660_blackspadesuit` |
@@ -1630,6 +1640,7 @@ Use these emojis for building agents that receive reaction notifications and sen
 | ©️ **Copyright** | `00a9_copyrightsign` |
 | ®️ **Registered** | `00ae_registeredsign` |
 | ™️ **Trademark** | `2122_trademarksign` |
+| 🫟 **Splatter** | `1fadf_splatter` |
 | #️⃣ **Keycap number** | `keycapnumbersign` |
 | *️⃣ **Keycap asterisk** | `keycapnumberasterisk` |
 | 0️⃣ **Keycap zero** | `keycapdigitzero` |
