@@ -68,7 +68,7 @@ You can sign up for the developer program using one of the following account typ
 
     :::column-end:::
     :::column span="1":::
-             :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/personal-account-icon.png" alt-text="Screenshot shows the personal account icon.":::
+             :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/personal-account-icon.png" alt-text="Screenshot shows the personal account icon." border="false":::
    :::column-end:::
 
   :::row-end:::
@@ -85,7 +85,7 @@ You can sign up for the developer program using one of the following account typ
 
     :::column-end:::
     :::column span="1":::
-             :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/work-account-icon.png" alt-text="Screenshot shows the work account icon.":::
+             :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/work-account-icon.png" alt-text="Screenshot shows the work account icon." border="false":::
     :::column-end:::
 
   :::row-end:::
@@ -172,7 +172,7 @@ If you have admin rights, you can enable custom app upload:
 
   1. Select the :::image type="icon" source="../assets/images/toolkit-v2/showall icon.PNG"::: icon > **Teams**.
 
-       :::image type="content" source="../assets/images/toolkit-v2/m365-admin-center.png" alt-text="Screenshot shows the Teams client in the left pane of Microsoft 365 Admin center.":::
+       :::image type="content" source="../assets/images/toolkit-v2/m365-admin-center.png" alt-text="Screenshot shows the Teams client in the left pane of Microsoft 365 Admin center." border="false":::
 
      > [!Note]
      > It can take up to 24 hours for the Teams option to appear. You can [upload your custom app to a Teams environment](/microsoftteams/upload-custom-apps) for testing and validation.
@@ -180,7 +180,7 @@ If you have admin rights, you can enable custom app upload:
   1. Sign in to Microsoft Teams admin center with your admin credentials.
   1. Select the :::image type="icon" source="../assets/images/toolkit-v2/showall icon.PNG"::: icon > **Teams apps** > **Setup policies**.
 
-     :::image type="content" source="../assets/images/toolkit-v2/m365-admin-center-policies.png" alt-text="Screenshot shows the Setup policies under Teams apps in Microsoft 365 Admin center.":::
+     :::image type="content" source="../assets/images/toolkit-v2/m365-admin-center-policies.png" alt-text="Screenshot shows the Setup policies under Teams apps in Microsoft 365 Admin center." border="false":::
 
   1. Select **Global (Org-wide default)**.
 
