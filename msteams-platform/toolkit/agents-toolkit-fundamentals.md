@@ -20,7 +20,7 @@ Agents Toolkit (previously known as Teams Toolkit) makes it simple to get starte
 * Smart defaults for hosting in Azure using infrastructure-as-code and Bicep.
 * Test with different configurations such as `dev`, `test`, and `prod` using **Environment**.
 
-:::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/toolkit-user-journey2.png" alt-text="Illustration shows the User Journey of the Agents Toolkit." lightbox="../assets/images/toolkit-v2/toolkit-fundamentals/toolkit-user-journey2.png":::
+:::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/toolkit-user-journey.png" alt-text="Illustration shows the User Journey of the Agents Toolkit." lightbox="../assets/images/toolkit-v2/toolkit-fundamentals/toolkit-user-journey.png":::
 
 ## Available for Visual Studio Code
 
