@@ -57,7 +57,8 @@ After you update the manifest:
 
 3. Users receive the topics experience automatically after updating or installing the app.
 
->[!IMPROTANT]
+> [!IMPORTANT]
+>
 > Bots that don't enable topics continue to use the standard one-on-one chat experience.
 
 ## User experience with topics
@@ -172,7 +173,7 @@ The Agents navigation:
 
 - Allows users to follow or unfollow topics.
 
-Unfollowing a topic removes it from navigation but does not delete the conversation.
+Unfollowing a topic removes it from navigation but doesn't delete the conversation.
 
 ## Deep linking to topics
 
