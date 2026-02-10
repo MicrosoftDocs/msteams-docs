@@ -172,7 +172,7 @@ If you have admin rights, you can enable custom app upload:
 
   1. Select the :::image type="icon" source="../assets/images/toolkit-v2/showall icon.PNG"::: icon > **Teams**.
 
-       :::image type="content" source="../assets/images/toolkit-v2/m365-admin-center_1.png" alt-text="Screenshot shows the Teams client in the left pane of Microsoft 365 Admin center.":::
+       :::image type="content" source="../assets/images/toolkit-v2/m365-admin-center.png" alt-text="Screenshot shows the Teams client in the left pane of Microsoft 365 Admin center.":::
 
      > [!Note]
      > It can take up to 24 hours for the Teams option to appear. You can [upload your custom app to a Teams environment](/microsoftteams/upload-custom-apps) for testing and validation.
@@ -180,7 +180,7 @@ If you have admin rights, you can enable custom app upload:
   1. Sign in to Microsoft Teams admin center with your admin credentials.
   1. Select the :::image type="icon" source="../assets/images/toolkit-v2/showall icon.PNG"::: icon > **Teams apps** > **Setup policies**.
 
-     :::image type="content" source="../assets/images/toolkit-v2/m365-admin-center1_1.png" alt-text="Screenshot shows the Setup policies under Teams apps in Microsoft 365 Admin center.":::
+     :::image type="content" source="../assets/images/toolkit-v2/m365-admin-center-policies.png.png" alt-text="Screenshot shows the Setup policies under Teams apps in Microsoft 365 Admin center.":::
 
   1. Select **Global (Org-wide default)**.
 
