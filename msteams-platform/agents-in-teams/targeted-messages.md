@@ -235,19 +235,51 @@ Your agent can update or delete the targeted message after sending it.
 
     Use the following code snippet to edit targeted message:
 
+    # [TypeScript](#tab/ts1)
+
+    [WIP: Teams SDK Code snippet to be added.]
+
+    # [C#](#tab/dotnet1)
+
+    [WIP: Teams SDK Code snippet to be added.]
+
+    # [Python](#tab/Py1)
+
+    [WIP: Teams SDK Code snippet to be added.]
+
+    # [HTTP](#tab/api1)
+
     ```rest
         PUT {cloud}/v3/conversations/{conversationId}/activities
         PUT {cloud}/v3/conversations/{conversationId}/activities/{activityld}
     ```
 
+---
+
 - **Delete**: If a user doesn't act on a targeted message, the agent can delete it using delete message API. It avoids leaving stale content.
 
     Use the following code snippet to delete targeted message:
+
+    # [TypeScript](#tab/ts1)
+
+    [WIP: Teams SDK Code snippet to be added.]
+
+    # [C#](#tab/dotnet1)
+
+    [WIP: Teams SDK Code snippet to be added.]
+
+    # [Python](#tab/Py1)
+
+    [WIP: Teams SDK Code snippet to be added.]
+
+    # [HTTP](#tab/api1)
 
     ```rest
         DELETE {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
            DELETE {cloud}/v3/conversations/{conversationId}/activities/{activityld}?isTargetedActivity=true
     ```
+
+---
 
 <!--
 ### Use REST API
