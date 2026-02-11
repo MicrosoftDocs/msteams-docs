@@ -6,6 +6,10 @@ ms.date: 02/06/2025
 ms.topic: reference
 ---
 
+<!-- markdownlint-disable MD023 -->
+<!-- markdownlint-disable MD001 -->
+<!-- markdownlint-disable MD024 -->
+
 # Enable targeted messages for agents
 
 Targeted messages, also known as ephemeral messages, are temporary, private messages sent by agents or bots to a single user in a channel or group. They support all message capabilities like buttons, images, and files and are ideal for contextual information or help without cluttering the conversation.
@@ -215,6 +219,29 @@ Key steps for enabling the agent to send a targeted messages:
 
     ---
 
+### Enable agent to edit or delete a targeted message
+
+Your agent can update or delete the targeted message after sending it.
+
+- **Edit**: The agent can update the original targeted message if needed. The agent calls the `Edit TM` API using the message’s `activityId`. The updated message appears only in intended user’s view.
+
+    Use the following code snippet to edit targeted message:
+
+    ```rest
+        PUT {cloud}/v3/conversations/{conversationld}/activities
+        PUT {cloud}/v3/conversations/{conversationld}/activities/{activityld}
+    ```
+
+- **Delete**: If a user doesn't act on a targeted message, the agent can delete it using delete message API. It avoids leaving stale content.
+
+    Use the following code snippet to delete targeted message:
+
+    ```rest
+        DELETE {cloud}/v3/conversations/{conversationld}/activities?isTargetedActivity=true
+           DELETE {cloud}/v3/conversations/{conversationld}/activities/{activityld}?isTargetedActivity=true
+    ```
+
+<!--
 ### Use REST API
 
 Key steps for enabling targeted messages:
@@ -234,7 +261,7 @@ Key steps for enabling targeted messages:
     - The conversation (chat or channel) ID and targeted user’s ID (Principal ID or MRI). The intended user must be a member of the chat or channel to receive a targeted message.
     - A flag or API call that marks the message as targeted or ephemeral.
 
-        <!--Use the service URL from the conversation. The `userId` is the user’s Teams ID (MRI) to target, and `conversationId` is the group chat or channel thread ID. The payload of the POST is the activity or message to send, just like a normal message activity.-->
+        Use the service URL from the conversation. The `userId` is the user’s Teams ID (MRI) to target, and `conversationId` is the group chat or channel thread ID. The payload of the POST is the activity or message to send, just like a normal message activity.
 
     To send a targeted activity, ensure that you indicate the `isTargetedActivity` as `true`.
 
@@ -275,6 +302,7 @@ Key steps for enabling targeted messages:
            DELETE {cloud}/v3/conversations/{conversationld}/activities?isTargetedActivity=true
            DELETE {cloud}/v3/conversations/{conversationld}/activities/{activityld}?isTargetedActivity=true
         ```
+-->
 
 <!--
 ### Use Graph API
@@ -285,6 +313,15 @@ Microsoft Graph exposes targeted messaging support. Graph API for Teams chat mes
 -->
 
 ### Handle errors
+
+After the agent calls the `Send TM` API, the API returns a success or error.
+
+- If successful,  the targeted user gets the message sent by the agent.
+- If the `Send TM` API fails, the agent may choose a fallback such as sending a 1:1 chat message as a backup.
+  - Some scenarios where a send event might fail are if the user isn’t a group member or if the client doesn’t support targeted messages.
+
+    > [!NOTE]
+    > Teams' backward compatibility ensures older clients don't show targeted messages if unsupported and notifies your agent when a client can't process them.
 
 Ensure to handle these errors appropriately in your agent. The following table lists the error codes and the descriptions under which the errors are generated:
 
