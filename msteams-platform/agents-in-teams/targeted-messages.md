@@ -148,8 +148,8 @@ Sending a targeted message is similar to sending a regular message. The agent in
         To send a targeted activity, ensure that you indicate the `isTargetedActivity` as `true`.
 
         ```rest
-           POST {cloud}/v3/conversations/{conversationld}/activities?isTargetedActivity=true
-           POST {cloud}/v3/conversations/{conversationld}/activities/{activityld}?isTargetedActivity=true
+           POST {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
+           POST {cloud}/v3/conversations/{conversationId}/activities/{activityId}?isTargetedActivity=true
         ```
 
     - Send proactive targeted messages
@@ -234,8 +234,8 @@ Your agent can update or delete the targeted message after sending it.
     Use the following code snippet to edit targeted message:
 
     ```rest
-        PUT {cloud}/v3/conversations/{conversationld}/activities
-        PUT {cloud}/v3/conversations/{conversationld}/activities/{activityld}
+        PUT {cloud}/v3/conversations/{conversationId}/activities
+        PUT {cloud}/v3/conversations/{conversationId}/activities/{activityld}
     ```
 
 - **Delete**: If a user doesn't act on a targeted message, the agent can delete it using delete message API. It avoids leaving stale content.
@@ -243,8 +243,8 @@ Your agent can update or delete the targeted message after sending it.
     Use the following code snippet to delete targeted message:
 
     ```rest
-        DELETE {cloud}/v3/conversations/{conversationld}/activities?isTargetedActivity=true
-           DELETE {cloud}/v3/conversations/{conversationld}/activities/{activityld}?isTargetedActivity=true
+        DELETE {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
+           DELETE {cloud}/v3/conversations/{conversationId}/activities/{activityld}?isTargetedActivity=true
     ```
 
 <!--
@@ -272,8 +272,8 @@ Key steps for enabling targeted messages:
     To send a targeted activity, ensure that you indicate the `isTargetedActivity` as `true`.
 
     ```rest
-       POST {cloud}/v3/conversations/{conversationld}/activities?isTargetedActivity=true
-       POST {cloud}/v3/conversations/{conversationld}/activities/{activityld}?isTargetedActivity=true
+       POST {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
+       POST {cloud}/v3/conversations/{conversationId}/activities/{activityld}?isTargetedActivity=true
     ```
 
 1. **Handle send results and fallbacks**:
@@ -296,8 +296,8 @@ Key steps for enabling targeted messages:
         Use the following code snippet to edit targeted message:
 
         ```rest
-           PUT {cloud}/v3/conversations/{conversationld}/activities
-           PUT {cloud}/v3/conversations/{conversationld}/activities/{activityld}
+           PUT {cloud}/v3/conversations/{conversationId}/activities
+           PUT {cloud}/v3/conversations/{conversationId}/activities/{activityld}
         ```
 
     - **Delete**: If a user doesn't act on a targeted message, the agent can delete it using delete message API. It avoids leaving stale content.
@@ -305,8 +305,8 @@ Key steps for enabling targeted messages:
         Use the following code snippet to delete targeted message:
 
         ```rest
-           DELETE {cloud}/v3/conversations/{conversationld}/activities?isTargetedActivity=true
-           DELETE {cloud}/v3/conversations/{conversationld}/activities/{activityld}?isTargetedActivity=true
+           DELETE {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
+           DELETE {cloud}/v3/conversations/{conversationId}/activities/{activityld}?isTargetedActivity=true
         ```
 -->
 
