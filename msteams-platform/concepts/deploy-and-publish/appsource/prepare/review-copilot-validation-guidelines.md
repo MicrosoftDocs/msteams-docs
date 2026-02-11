@@ -347,7 +347,7 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
     1. Wildcard domains (for example, *.example.com) must not be used unless the domain is owned or controlled by the publisher.
     1. Microsoft-owned domains, including domains associated with Microsoft Copilot Studio, must not be included in the agent’s domain configuration.
-    1. The domain api.botframework.com must be included in the agent’s allowed domains.
+    1. The domain `api.botframework.com` must be included in the agent’s allowed domains.
     1. The agent must specify exactly one valid domain corresponding to the Microsoft Copilot Studio Dataverse geographic region/environment where the agent is hosted.
 
 [Back to top](#validation-guidelines-for-agents)
