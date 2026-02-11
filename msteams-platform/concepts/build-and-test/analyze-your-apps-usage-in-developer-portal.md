@@ -9,9 +9,9 @@ ms.date: 05/08/2025
 
 # Analyze app and agent usage in Developer Portal
 
-Developer Portal for Microsoft Teams provides a comprehensive suite of tools to help you analyze and understand your app's and agent's performance and user engagement. By using these analytics, you can gain valuable insights into how users interact with your app and agent, identify areas for improvement, and make data-driven decisions to enhance the overall user experience.
+Developer Portal for Microsoft Teams offers a comprehensive suite of tools to help you analyze and understand your app's and agent's performance and user engagement. By using these analytics, you can gain valuable insights into how users interact with your app and agent, identify areas for improvement, and make data-driven decisions to enhance the overall user experience.
 
-Whether you're tracking active users, retention rates, or usage patterns across different platforms, Developer Portal helps you with the information you need to optimize your app and ensure its success. Custom apps built for your org (LOB apps) can access app and agent usage data only for Teams. However, for third-party apps you can explore new Microsoft 365 dimensions, such as host product and capabilities.
+Whether you're tracking active users, retention rates, or usage patterns across different platforms, Developer Portal provides the information you need to optimize your app and ensure its success. Custom apps built for your org (LOB apps) can access app and agent usage data only for Teams. However, for third-party apps, you can explore new Microsoft 365 dimensions, such as host product and capabilities.
 
 The app and agent usage for a given day is reflected within 24 to 48 hours, and usage data for the new apps or agents can take up to three to five days to reflect in the charts. Usage data isn’t shown for apps with fewer than five active users or for agents created using Copilot Studio agent builder.
 
@@ -292,40 +292,41 @@ To view app and agent usage in Developer Portal, you need **Manager** or **Devel
 You can view the app or agent usage for your [third-party app](../../promote-app-adoption.md#access-to-your-apps) and other insights from the **Analytics** page. To access the page:
 
 1. Go to **[Developer Portal](https://dev.teams.microsoft.com)**.
-1. Select **Apps** from the left pane.
-1. Select the required app from the **Apps** page.
-1. Select **Analytics** under the **Overview** section.
+
+1. Choose **Apps** from the left pane.
+1. Select the desired app from the **Apps** page.
+1. Under the **Overview** section, select **Analytics**.
 
 :::image type="content" source="../../assets/images/tdp/analy-dev-portal.png" alt-text="Screenshot shows the analytics page of your app and agent in Developer Portal." lightbox="../../assets/images/tdp/analy-dev-portal.png":::
 
-To learn how to import your published app into Developer Portal, see [import an existing app](~/concepts/build-and-test/teams-developer-portal.md#import-an-existing-app).
+For instructions on importing your published app into Developer Portal, refer to [import an existing app](~/concepts/build-and-test/teams-developer-portal.md#import-an-existing-app).
 
 ## Metric definitions
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
-| **Monthly active users (MAU)** | Number of unique users who performed an intentional activity with your app and agent within that rolling 28 days window in UTC. |
-| **Weekly active users (WAU)** | Number of unique users who performed an intentional activity with your app and agent within that rolling seven days window in UTC. |
-| **Daily active users (DAU)** | Number of unique users who performed an intentional activity with your app and agent in a given day in UTC. |
-| **Monthly active tenants** | Number of unique tenants who performed an intentional activity with your app and agent within that rolling 28 days window in UTC. |
-| **Weekly active tenants** | Number of unique tenants who performed an intentional activity with your app and agent within that rolling seven days window in UTC. |
-| **Daily active tenants** | Number of unique tenants who performed an intentional activity with your app and agent in a given day in UTC. |
+| **Monthly active users (MAU)** | The number of unique users who performed an intentional activity with your app and agent within that rolling 28 days window in UTC. |
+| **Weekly active users (WAU)** | The number of unique users who performed an intentional activity with your app and agent within that rolling seven days window in UTC. |
+| **Daily active users (DAU)** | The number of unique users who performed an intentional activity with your app and agent in a given day in UTC. |
+| **Monthly active tenants** | The number of unique tenants who performed an intentional activity with your app and agent within that rolling 28 days window in UTC. |
+| **Weekly active tenants** | The number of unique tenants who performed an intentional activity with your app and agent within that rolling seven days window in UTC. |
+| **Daily active tenants** | The number of unique tenants who performed an intentional activity with your app and agent in a given day in UTC. |
 
 > [!TIP]
-> To know more about each metric definition, select **See metric definitions**. A pop-up window appears on the right-side of the window with the required definitions.
+> For more information about each metric definition, select **See metric definitions**. A pop-up window appears on the right side of the window with the required definitions.
 
-As you explore individual metrics on this page, you can use the **Filter** button to analyze your app's and agent's usage from the following filter options:
+While exploring individual metrics on this page, use the **Filter** button to analyze your app's and agent's usage with the following filter options:
 
-* **Aggregation type**: Allows you to view active users or active tenants.
-* **Platform**: Allows you to group the metrics by the platform on which users performed intentional activities with your app and agent. The platform can be **Desktop**, **Mobile**, **Web**, or other available options.
-* **Operating system**: Allows you to group the metrics by the operating system on which users performed intentional activities with your app and agent. The operating system can be **Windows**, **Mac**, **iOS**, **Android** or other available options.
-* **Area**: Allows you to group the metrics by the geographical location of the active usage.
+* **Aggregation type**: View active users or active tenants.
+* **Platform**: Group the metrics by the platform on which users performed intentional activities with your app and agent. The platform can be **Desktop**, **Mobile**, **Web**, or other available options.
+* **Operating system**: Group the metrics by the operating system on which users performed intentional activities with your app and agent. The operating system can be **Windows**, **Mac**, **iOS**, **Android**, or other available options.
+* **Area**: Group the metrics by the geographical location of the active usage.
 
- :::image type="content" source="../../assets/images/tdp/filter-tdp-analytics.png" alt-text="Screenshot shows the app and agent analytics page filter in Developer Portal." lightbox="../../assets/images/tdp/filter-tdp-analytics.png":::
+:::image type="content" source="../../assets/images/tdp/filter-tdp-analytics.png" alt-text="Screenshot shows the app and agent analytics page filter in Developer Portal." lightbox="../../assets/images/tdp/filter-tdp-analytics.png":::
 
 ## App and agent analytics
 
-To gain insights on the app and agent usage and analyze trends, explore the following three sections under **Analytics**:
+To gain insights into app and agent usage and analyze trends, explore the following three sections under **Analytics**:
 
 * [App and agent usage](#app-and-agent-usage)
 * [Host product](#host-product)
@@ -333,7 +334,7 @@ To gain insights on the app and agent usage and analyze trends, explore the foll
 
 ### App and agent usage
 
-The **App usage** tab shows the following metrics to help you track engagement and user behavior:
+The **App usage** tab displays the following metrics to help you track engagement and user behavior:
 
 * [Usage over time](#usage-over-time)
 * [Usage by retention state](#usage-by-retention-state-1)
@@ -344,7 +345,7 @@ The **App usage** tab shows the following metrics to help you track engagement a
 
 #### Usage over time
 
-The **Usage over time** chart shows the number of active users or tenants who opened and used your app and agent across different time periods.
+The **Usage over time** chart displays the number of active users or tenants who opened and used your app and agent across different time periods.
 
 :::image type="content" source="../../assets/images/tdp/tdp-usage-over-time.png" alt-text="Screenshot shows the app and agent usage over time of your published app in Developer Portal.":::
 
