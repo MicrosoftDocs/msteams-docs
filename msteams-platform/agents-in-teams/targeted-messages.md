@@ -203,6 +203,16 @@ Key steps for sending targeted messages:
     await app.send(conversation_id, activity, is_targeted=True)
     ```
 
+  # [REST API](#tab/api1)
+
+    To send a message to a conversation that isn't a direct reply to any message from the user, issue this request:
+
+    ```rest
+    POST /v3/conversations/{conversationId}/activities
+    ```
+
+---
+
 ### Use REST API
 
 Key steps for enabling targeted messages:
