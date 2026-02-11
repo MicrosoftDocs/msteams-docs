@@ -20,8 +20,8 @@ Targeted messages are temporary, private messages sent by agents or bots to a us
   - [What is a targeted message](#what-is-a-targeted-message)
   - [Why use targeted messages](#why-use-targeted-messages)
 - **Enable targeted messages**
-  - [Use Teams SDK](#use-teams-sdk)
-  - [Use REST API](#use-rest-api)
+  - [Send a targeted message](#send-a-targeted-message)
+  - [Enable agent to edit or delete a targeted message](#enable-agent-to-edit-or-delete-a-targeted-message)
   - [Handle errors](#handle-errors)
 
 ## What is a targeted message
