@@ -26,7 +26,7 @@ Targeted messages are temporary, private messages sent by agents or bots to a us
 
 ## What is a targeted message
 
-A targeted message, also known as ephemeral message, lets an agent or a bot send a user-targeted message. It helps reduce bot spam by keeping shared conversations uncluttered. From a single user's perspective, it appears as regular inline messages in a conversation that appears with the label **Only you can see this message** tagged on them. Targeted messages are:
+A targeted message, also known as ephemeral message, lets an agent or a bot send a user-targeted message. It helps reduce bot spam by keeping shared conversations uncluttered. Targeted messages are:
 
 - Triggered in response to user action.
 - Delivered to only one user in a group context.
@@ -35,6 +35,7 @@ A targeted message, also known as ephemeral message, lets an agent or a bot send
 
 :::image type="content" source="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png" alt-text="Image shows user scenarios for targeted messages" border="false" lightbox="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png":::
 
+From a single user's perspective, it appears as regular inline messages in a conversation that appears with the label **Only you can see this message** tagged on them.
 <br>
 Some common user scenarios include:
 
