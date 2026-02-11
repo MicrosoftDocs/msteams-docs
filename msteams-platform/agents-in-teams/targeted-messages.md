@@ -60,11 +60,15 @@ Targeted messages are best suited for short-term, action-driven communication. U
 
 Sending a targeted message is similar to sending a regular message. The agent indicates that the message is intended for a specific user in the conversation, and the platform delivers it to that user. The agent doesn't initiate a separate conversation or create a new chat.
 
+<!--
 ### Use Teams SDK
+-->
 
-You can enable targeted messages using Teams SDK. It supports C#, TypeScript, and Python (for developer preview).
+You can enable targeted messages using Teams SDK or REST APIs. Teams SDK supports C#, TypeScript, and Python (for developer preview). You can send, edit, and remove targeted messages in the conversation.
 
-Key steps for enabling targeted messages:
+### Send a targeted message
+
+Key steps for sending targeted messages:
 
 1. **Detect the scenario to use a targeted message**:
 
