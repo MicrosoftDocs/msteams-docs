@@ -8,9 +8,11 @@ ms.topic: reference
 
 # Enable targeted messages for agents
 
-Targeted messages, also known as ephemeral messages, are temporary, private messages sent by agents or bots to a single user in a channel or group. They support all message capabilities like buttons, images, and files and are ideal for contextual information or help without cluttering the conversation. From a single user's perspective, it appears as regular inline messages in a conversation that appears with the label **Only you can see this message** tagged on them.
+Targeted messages, also known as ephemeral messages, are temporary, private messages sent by agents or bots to a single user in a channel or group. They support all message capabilities like buttons, images, and files and are ideal for contextual information or help without cluttering the conversation.
 
 :::image type="content" source="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png" alt-text="Image shows user scenarios for targeted messages" border="false" lightbox="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png":::
+
+From a single user's perspective, it appears as regular inline messages in a conversation that appears with the label **Only you can see this message** tagged on them.
 
 Some common user scenarios include:
 
@@ -62,6 +64,16 @@ Sending a targeted message is similar to sending a regular message. The agent in
 
 You can enable targeted messages using Teams SDK. It supports C#, TypeScript, and Python (for developer preview).
 
+Key steps for enabling targeted messages:
+
+1. **Detect the scenario to use a targeted message**:
+
+    The agent must determine to send a targeted message in response to one of the following triggers:
+
+    - A user @mentions or selects a button that requires a response only for that user.
+    - The agent must send a proactive message to a specific user message in-context.
+    - The agent must send a recommendation to a user that isn't relevant to other group members.
+
 [WIP: Code snippets and link to be added once Teams SDK PR is published.]
 
 - Send targeted messages
@@ -108,9 +120,25 @@ You can enable targeted messages using Teams SDK. It supports C#, TypeScript, an
     }
     ```
 
+  # [REST API](#tab/api1)
+
+    Ensure that you specify the following when the agent sends the message:
+
+  - The conversation (chat or channel) ID and targeted user’s ID (Principal ID or MRI). The intended user must be a member of the chat or channel to receive a targeted message.
+  - A flag or API call that marks the message as targeted or ephemeral.
+
+    Use the service URL from the conversation. The `userId` is the user’s Teams ID (MRI) to target, and `conversationId` is the group chat or channel thread ID. The payload of the POST is the activity or message to send, just like a normal message activity.
+
+    To send a targeted activity, ensure that you indicate the `isTargetedActivity` as `true`.
+
+    ```rest
+       POST {cloud}/v3/conversations/{conversationld}/activities?isTargetedActivity=true
+       POST {cloud}/v3/conversations/{conversationld}/activities/{activityld}?isTargetedActivity=true
+    ```
+
 - Send proactive targeted messages
 
-  # [TypeScript](#tab/ts2)
+  # [TypeScript](#tab/ts1)
 
     ```typescript
     import { MessageActivity } from '@microsoft/teams.api';
@@ -132,7 +160,7 @@ You can enable targeted messages using Teams SDK. It supports C#, TypeScript, an
     });
     ```
 
-  # [C#](#tab/dotnet2)
+  # [C#](#tab/dotnet1)
 
     ```csharp
     public static class Notifications
@@ -154,7 +182,7 @@ You can enable targeted messages using Teams SDK. It supports C#, TypeScript, an
     }
     ```
 
-  # [Python](#tab/Py2)
+  # [Python](#tab/Py1)
 
     ```python
     from microsoft_teams.api import MessageActivityInput, Account
