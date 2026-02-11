@@ -363,7 +363,7 @@ Ensure to handle these errors appropriately in your agent. The following table l
 | --- | --- | --- | --- | --- |
 | 400 | `Bad request` | Recipient is missing in the `Send TM` API. | Ensure that recipient is included when the agent sends the message as it's mandatory. |
 | 400 | `Bad argument` | Recipient is included in the payload of the `Edit TM` API | Ensure the recipient isn't included in the payload of the `Edit TM` API. |
-| 404 | `ActivityNotFoundInConversation` | The message ID provided couldn't be found in the conversation. Message doesn't exist or it is deleted. |
+| 404 | `ActivityNotFoundInConversation` | The message ID provided couldn't be found in the conversation. Message doesn't exist or it is deleted. | NA |
 
 It's recommended that if sending a targeted message fails, the agent or bot might choose a fallback mechanism such as sending a 1:1 chat message as a backup.
 
