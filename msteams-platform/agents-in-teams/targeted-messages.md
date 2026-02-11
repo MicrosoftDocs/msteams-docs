@@ -8,9 +8,7 @@ ms.topic: reference
 
 # Enable targeted messages for agents
 
-Targeted messages are temporary, private messages sent by agents or bots to a single user in a channel or group. They support all message capabilities like buttons, images, and files and are ideal for contextual information or help without cluttering the conversation.
-
-Targeted messages, also known as ephemeral messages, are delivered to a specific user in a shared conversation. From a single user's perspective, it appears as regular inline messages in a conversation. that appears with the label **Only you can see this message** tagged on them.
+Targeted messages, also known as ephemeral messages, are temporary, private messages sent by agents or bots to a single user in a channel or group. They support all message capabilities like buttons, images, and files and are ideal for contextual information or help without cluttering the conversation. From a single user's perspective, it appears as regular inline messages in a conversation that appears with the label **Only you can see this message** tagged on them.
 
 :::image type="content" source="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png" alt-text="Image shows user scenarios for targeted messages" border="false" lightbox="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png":::
 
@@ -19,12 +17,10 @@ Some common user scenarios include:
 | Scenario | Use for ... | To ... |
 | --- | --- | --- |
 | Authentication flow | Sending a sign-in card as a targeted message | Enable uninterrupted discussion by a user's log in workflow |
-| Help or error responses | Sharing tips, usage examples, or error details | Enable discreet support for the intended user |
-| Personal reminders or nudges | Privately sending reminders to a single user | Avoid public callouts or notifications for other group members |
-| Helping new users | Sending welcome messages or onboarding help to new members | Avoid unnecessary repetition of such information every time a new user joins |
 | AI or Copilot summary | Sharing discussion details for long-running chats for a new participant | Avoid derailing ongoing discussion |
+| Help users | Sending user-specific messages for supporting users | Support with personal reminders, onboard new recipients, get help without public callouts or repetitive group notifications |
 
-### Why use targeted messages
+## Why use targeted messages
 
 Among other benefits, targeted messages enhance user experience as follows:
 
