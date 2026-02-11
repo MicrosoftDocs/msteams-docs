@@ -12,7 +12,7 @@ ms.topic: reference
 
 # Enable targeted messages for agents
 
-Targeted messages are temporary, private messages sent by agents or bots to a single user in a channel or group. They support all message capabilities like buttons, images, and files and are ideal for contextual information or help.
+Targeted messages are temporary, private messages sent by agents or bots to a user in a channel or group. They support all message capabilities like buttons, images, and files and are ideal for contextual information or help.
 
 **Key points**:
 
@@ -24,12 +24,18 @@ Targeted messages are temporary, private messages sent by agents or bots to a si
   - [Use REST API](#use-rest-api)
   - [Handle errors](#handle-errors)
 
-## What are targeted messages
+## What is a targeted message
 
-Targeted messages, also known as ephemeral messages, are a type of messages that lets an agent or a bot send a private, user-targeted message. Only the intended recipient (and the agent or the bot) can see it. Other members don’t receive it. It helps reduce bot spam by keeping shared conversations uncluttered. From a single user's perspective, it appears as regular inline messages in a conversation that appears with the label **Only you can see this message** tagged on them.
+A targeted message, also known as ephemeral message, lets an agent or a bot send a user-targeted message. It helps reduce bot spam by keeping shared conversations uncluttered. From a single user's perspective, it appears as regular inline messages in a conversation that appears with the label **Only you can see this message** tagged on them. Targeted messages are:
+
+- Triggered in response to user action.
+- Delivered to only one user in a group context.
+- Visible up for 24 hours in the client, and can be stored based on organizational policy.
+- Restricted for user actions such as reaction, replies, and forwarding.
 
 :::image type="content" source="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png" alt-text="Image shows user scenarios for targeted messages" border="false" lightbox="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png":::
 
+<br>
 Some common user scenarios include:
 
 | Scenario | Use for ... | To ... |
@@ -64,17 +70,15 @@ Targeted messages are best suited for short-term, action-driven communication. U
 
 ## Targeted message developer experience
 
-Sending a targeted message is similar to sending a regular message. The agent indicates that the message is intended for a specific user in the conversation, and the platform delivers it to that user. The agent doesn't initiate a separate conversation or create a new chat.
+You can enable targeted messages using Teams SDK or REST APIs. Teams SDK supports C#, TypeScript, and Python (for developer preview). You can send, edit, and remove targeted messages in the conversation.
+
+### Send a targeted message
 
 <!--
 ### Use Teams SDK
 -->
 
-You can enable targeted messages using Teams SDK or REST APIs. Teams SDK supports C#, TypeScript, and Python (for developer preview). You can send, edit, and remove targeted messages in the conversation.
-
-### Send a targeted message
-
-Key steps for enabling the agent to send a targeted messages:
+Sending a targeted message is similar to sending a regular message. The agent indicates that the message is intended for a specific user in the conversation, and the platform delivers it to that user. The agent doesn't initiate a separate conversation or create a new chat. Key steps for enabling the agent to send a targeted messages:
 
 1. Detect the scenario to use a targeted message:
 
@@ -330,7 +334,7 @@ Ensure to handle these errors appropriately in your agent. The following table l
 | Status code | Error code | Description | Developer action |
 | --- | --- | --- | --- | --- |
 | 400 | `Bad request` | Recipient is missing in the `Send TM` API. | Ensure that recipient is included when the agent sends the message as it's mandatory. |
-| 400 | `Bad request` | Recipient is included in the payload of the `Edit TM` API | Ensure the recipient isn't included in the payload of the `Edit TM` API. |
+| 400 | `Bad argument` | Recipient is included in the payload of the `Edit TM` API | Ensure the recipient isn't included in the payload of the `Edit TM` API. |
 
 It's recommended that if sending a targeted message fails, the agent or bot might choose a fallback mechanism such as sending a 1:1 chat message as a backup.
 
