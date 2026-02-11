@@ -12,11 +12,23 @@ ms.topic: reference
 
 # Enable targeted messages for agents
 
-Targeted messages, also known as ephemeral messages, are temporary, private messages sent by agents or bots to a single user in a channel or group. They support all message capabilities like buttons, images, and files and are ideal for contextual information or help without cluttering the conversation.
+Targeted messages are temporary, private messages sent by agents or bots to a single user in a channel or group. They support all message capabilities like buttons, images, and files and are ideal for contextual information or help.
+
+**Key points**:
+
+- **About targeted messages**
+  - [What is a targeted message](#what-is-a-targeted-message)
+  - [Why use targeted messages](#why-use-targeted-messages)
+- **Enable targeted messages**
+  - [Use Teams SDK](#use-teams-sdk)
+  - [Use REST API](#use-rest-api)
+  - [Handle errors](#handle-errors)
+
+## What are targeted messages
+
+Targeted messages, also known as ephemeral messages, are a type of messages that lets an agent or a bot send a private, user-targeted message. Only the intended recipient (and the agent or the bot) can see it. Other members don’t receive it. It helps reduce bot spam by keeping shared conversations uncluttered. From a single user's perspective, it appears as regular inline messages in a conversation that appears with the label **Only you can see this message** tagged on them.
 
 :::image type="content" source="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png" alt-text="Image shows user scenarios for targeted messages" border="false" lightbox="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png":::
-
-From a single user's perspective, it appears as regular inline messages in a conversation that appears with the label **Only you can see this message** tagged on them.
 
 Some common user scenarios include:
 
@@ -49,16 +61,6 @@ Targeted messages are temporary, user-specific messages that appear in a group c
 
 Targeted messages are best suited for short-term, action-driven communication. Use them when you want the agent to respond in-the-moment as required by a specific user.
 -->
-
-**Key points**:
-
-- **Enable targeted messages**
-  - [Use Teams SDK](#use-teams-sdk)
-  - [Use REST API](#use-rest-api)
-  - [Handle errors](#handle-errors)
-- **About targeted messages**
-  - [What is a targeted message](#what-is-a-targeted-message)
-  - [Why use targeted messages](#why-use-targeted-messages)
 
 ## Targeted message developer experience
 
