@@ -36,7 +36,8 @@ A targeted message, also known as ephemeral message, lets an agent or a bot send
 :::image type="content" source="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png" alt-text="Image shows user scenarios for targeted messages" border="false" lightbox="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png":::
 
 From a single user's perspective, it appears as regular inline messages in a conversation that appears with the label **Only you can see this message** tagged on them.
-<br>
+
+<br><br>
 Some common user scenarios include:
 
 | Scenario | Use for ... | To ... |
@@ -137,7 +138,7 @@ Sending a targeted message is similar to sending a regular message. The agent in
         }
         ```
 
-      # [REST API](#tab/api1)
+      # [HTTP](#tab/api1)
 
         Include the 'targeted' designation in the `Send TM` API. Ensure that you specify the following when the agent sends the message:
 
@@ -216,7 +217,7 @@ Sending a targeted message is similar to sending a regular message. The agent in
         await app.send(conversation_id, activity, is_targeted=True)
         ```
 
-      # [REST API](#tab/api1)
+      # [HTTP](#tab/api1)
 
         To send a message to a conversation that isn't a direct reply to any message from the user, issue this request:
 
