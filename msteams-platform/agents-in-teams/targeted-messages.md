@@ -78,9 +78,9 @@ Key steps for enabling the agent to send a targeted messages:
     - The agent must send a proactive message to a specific user message in-context.
     - The agent must send a recommendation to a user that isn't relevant to other group members.
 
-[WIP: Code snippets and link to be added once Teams SDK PR is published.]
-
 2. Use any of the following code snippets:
+
+    [WIP: Code snippets and link to be added once Teams SDK PR is published.]
 
     - Send targeted messages
 
@@ -128,7 +128,7 @@ Key steps for enabling the agent to send a targeted messages:
 
       # [REST API](#tab/api1)
 
-        Ensure that you specify the following when the agent sends the message:
+        Include the 'targeted' designation in the `Send TM` API. Ensure that you specify the following when the agent sends the message:
 
       - The conversation (chat or channel) ID and targeted user’s ID (Principal ID or MRI). The intended user must be a member of the chat or channel to receive a targeted message.
       - A flag or API call that marks the message as targeted or ephemeral.
