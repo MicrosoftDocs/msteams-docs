@@ -68,9 +68,9 @@ You can enable targeted messages using Teams SDK or REST APIs. Teams SDK support
 
 ### Send a targeted message
 
-Key steps for sending targeted messages:
+Key steps for enabling the agent to send a targeted messages:
 
-1. **Detect the scenario to use a targeted message**:
+1. Detect the scenario to use a targeted message:
 
     The agent must determine to send a targeted message in response to one of the following triggers:
 
@@ -80,138 +80,140 @@ Key steps for sending targeted messages:
 
 [WIP: Code snippets and link to be added once Teams SDK PR is published.]
 
-- Send targeted messages
+2. Use any of the following code snippets:
 
-  # [TypeScript](#tab/ts1)
+    - Send targeted messages
 
-    ```typescript
-    app.on('message', async ({ send, activity }) => {
-      // Send a targeted message that only the sender can see
-    await send('This message is only visible to you!', { isTargeted: true });
-    });
-    ```
+      # [TypeScript](#tab/ts1)
 
-  # [C#](#tab/dotnet1)
+        ```typescript
+        app.on('message', async ({ send, activity }) => {
+          // Send a targeted message that only the sender can see
+        await send('This message is only visible to you!', { isTargeted: true });
+        });
+        ```
 
-    ```csharp
-    [Message]
-    public async Task OnMessage([Context] IContext.Client client)
-    {
-        // Send a private reply visible only to the sender
-        await client.Send("Hey! This is a private message just for you!", isTargeted: true);
-    }
-    ```
+      # [C#](#tab/dotnet1)
 
-  # [Python](#tab/Py1)
-
-    ```python
-    public static class Notifications
-    {
-        public static async Task SendProactiveTargeted(string userId)
+        ```csharp
+        [Message]
+        public async Task OnMessage([Context] IContext.Client client)
         {
-            var conversationId = (string?)storage.Get(userId);
-    
-            if (conversationId is null) return;
-    
-            // Set Recipient to specify who should receive the private message
-            var targetedMessage = new MessageActivity("Hey! This is a private message just for you!")
-            {
-                Recipient = new ChannelAccount { Id = userId }
-            };
-    
-            await app.Send(conversationId, targetedMessage, isTargeted: true);
+            // Send a private reply visible only to the sender
+            await client.Send("Hey! This is a private message just for you!", isTargeted: true);
         }
-    }
-    ```
+        ```
 
-  # [REST API](#tab/api1)
+      # [Python](#tab/Py1)
 
-    Ensure that you specify the following when the agent sends the message:
-
-  - The conversation (chat or channel) ID and targeted user’s ID (Principal ID or MRI). The intended user must be a member of the chat or channel to receive a targeted message.
-  - A flag or API call that marks the message as targeted or ephemeral.
-
-    Use the service URL from the conversation. The `userId` is the user’s Teams ID (MRI) to target, and `conversationId` is the group chat or channel thread ID. The payload of the POST is the activity or message to send, just like a normal message activity.
-
-    To send a targeted activity, ensure that you indicate the `isTargetedActivity` as `true`.
-
-    ```rest
-       POST {cloud}/v3/conversations/{conversationld}/activities?isTargetedActivity=true
-       POST {cloud}/v3/conversations/{conversationld}/activities/{activityld}?isTargetedActivity=true
-    ```
-
-- Send proactive targeted messages
-
-  # [TypeScript](#tab/ts1)
-
-    ```typescript
-    import { MessageActivity } from '@microsoft/teams.api';
-
-    import { App } from '@microsoft/teams.apps';
-    // ...
-    
-    // This would be some persistent storage
-    const myConversationIdStorage = new Map<string, string>();
-    
-    // Installation is just one place to get the conversation id. All activities
-    // have the conversation id, so you can use any activity to get it.
-    app.on('install.add', async ({ activity, send }) => {
-      // Save the conversation id in
-      myConversationIdStorage.set(activity.from.aadObjectId!, activity.conversation.id);
-    
-      await send('Hi! I am going to remind you to say something to me soon!');
-      notificationQueue.addReminder(activity.from.aadObjectId!, sendProactiveNotification, 10_000);
-    });
-    ```
-
-  # [C#](#tab/dotnet1)
-
-    ```csharp
-    public static class Notifications
-    {
-        public static async Task SendProactiveTargeted(string userId)
+        ```python
+        public static class Notifications
         {
-            var conversationId = (string?)storage.Get(userId);
-    
-            if (conversationId is null) return;
-    
-            // Set Recipient to specify who should receive the private message
-            var targetedMessage = new MessageActivity("Hey! This is a private message just for you!")
+            public static async Task SendProactiveTargeted(string userId)
             {
-                Recipient = new ChannelAccount { Id = userId }
-            };
-    
-            await app.Send(conversationId, targetedMessage, isTargeted: true);
+                var conversationId = (string?)storage.Get(userId);
+        
+                if (conversationId is null) return;
+        
+                // Set Recipient to specify who should receive the private message
+                var targetedMessage = new MessageActivity("Hey! This is a private message just for you!")
+                {
+                    Recipient = new ChannelAccount { Id = userId }
+                };
+        
+                await app.Send(conversationId, targetedMessage, isTargeted: true);
+            }
         }
-    }
-    ```
+        ```
 
-  # [Python](#tab/Py1)
+      # [REST API](#tab/api1)
 
-    ```python
-    from microsoft_teams.api import MessageActivityInput, Account
-    # ...
+        Ensure that you specify the following when the agent sends the message:
 
-    async def send_targeted_proactive_notification(user_id: str, recipient_id: str):
-    conversation_id = storage.get(user_id, "")
-    if not conversation_id:
-        return
+      - The conversation (chat or channel) ID and targeted user’s ID (Principal ID or MRI). The intended user must be a member of the chat or channel to receive a targeted message.
+      - A flag or API call that marks the message as targeted or ephemeral.
+
+        Use the service URL from the conversation. The `userId` is the user’s Teams ID (MRI) to target, and `conversationId` is the group chat or channel thread ID. The payload of the POST is the activity or message to send, just like a normal message activity.
+
+        To send a targeted activity, ensure that you indicate the `isTargetedActivity` as `true`.
+
+        ```rest
+           POST {cloud}/v3/conversations/{conversationld}/activities?isTargetedActivity=true
+           POST {cloud}/v3/conversations/{conversationld}/activities/{activityld}?isTargetedActivity=true
+        ```
+
+    - Send proactive targeted messages
+
+      # [TypeScript](#tab/ts1)
+
+        ```typescript
+        import { MessageActivity } from '@microsoft/teams.api';
     
-    activity = MessageActivityInput(text="This is a private reminder just for you!")
-    activity.recipient = Account(id=recipient_id, role="user")
+        import { App } from '@microsoft/teams.apps';
+        // ...
+        
+        // This would be some persistent storage
+        const myConversationIdStorage = new Map<string, string>();
+        
+        // Installation is just one place to get the conversation id. All activities
+        // have the conversation id, so you can use any activity to get it.
+        app.on('install.add', async ({ activity, send }) => {
+          // Save the conversation id in
+          myConversationIdStorage.set(activity.from.aadObjectId!, activity.conversation.id);
+        
+          await send('Hi! I am going to remind you to say something to me soon!');
+          notificationQueue.addReminder(activity.from.aadObjectId!, sendProactiveNotification, 10_000);
+        });
+        ```
+
+      # [C#](#tab/dotnet1)
+
+        ```csharp
+        public static class Notifications
+        {
+            public static async Task SendProactiveTargeted(string userId)
+            {
+                var conversationId = (string?)storage.Get(userId);
+        
+                if (conversationId is null) return;
+        
+                // Set Recipient to specify who should receive the private message
+                var targetedMessage = new MessageActivity("Hey! This is a private message just for you!")
+                {
+                    Recipient = new ChannelAccount { Id = userId }
+                };
+        
+                await app.Send(conversationId, targetedMessage, isTargeted: true);
+            }
+        }
+        ```
+
+      # [Python](#tab/Py1)
+
+        ```python
+        from microsoft_teams.api import MessageActivityInput, Account
+        # ...
     
-    await app.send(conversation_id, activity, is_targeted=True)
-    ```
+        async def send_targeted_proactive_notification(user_id: str, recipient_id: str):
+        conversation_id = storage.get(user_id, "")
+        if not conversation_id:
+            return
+        
+        activity = MessageActivityInput(text="This is a private reminder just for you!")
+        activity.recipient = Account(id=recipient_id, role="user")
+        
+        await app.send(conversation_id, activity, is_targeted=True)
+        ```
 
-  # [REST API](#tab/api1)
+      # [REST API](#tab/api1)
 
-    To send a message to a conversation that isn't a direct reply to any message from the user, issue this request:
+        To send a message to a conversation that isn't a direct reply to any message from the user, issue this request:
 
-    ```rest
-    POST /v3/conversations/{conversationId}/activities
-    ```
+        ```rest
+        POST /v3/conversations/{conversationId}/activities
+        ```
 
----
+    ---
 
 ### Use REST API
 
