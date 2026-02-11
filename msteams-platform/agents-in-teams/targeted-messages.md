@@ -225,8 +225,6 @@ Sending a targeted message is similar to sending a regular message. The agent in
         POST /v3/conversations/{conversationId}/activities
         ```
 
-    ---
-
 ### Enable agent to edit or delete a targeted message
 
 Your agent can update or delete the targeted message after sending it.
