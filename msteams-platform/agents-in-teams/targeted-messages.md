@@ -12,7 +12,7 @@ ms.topic: reference
 
 # Enable targeted messages for agents
 
-Use targeted messages in your agents or bots to send temporary, private messages to a specifc user in a channel, group, or meeting chat. You can also enable the agent or the bot to edit or delete a targeted message that it sent in a conversation.
+Use targeted messages in your agents or bots to send temporary, private messages to a specific user in a channel, group, or meeting chat. You can also enable the agent or the bot to edit or delete a targeted message that it sent in a conversation.
 
 **Key points**:
 
@@ -30,7 +30,7 @@ A targeted message, also known as an ephemeral message, lets an agent or a bot s
 
 - Triggered in response to user action.
 - Delivered to only one user in a group context.
-- Visible up for 24 hours in the client, and can be stored based on organizational policy.
+- Visible up for 24 hours in the client and can be stored based on organizational policy.
 - Restricted for user actions such as reaction, replies, and forwarding.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :::image type="content" source="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png" alt-text="Image shows user scenarios for targeted messages" border="false" lightbox="../assets/images/agents-in-teams/targeted-messages/targeted-messages-main.png":::
@@ -80,7 +80,7 @@ You can enable targeted messages using Teams SDK or REST APIs. Teams SDK support
 ### Use Teams SDK
 -->
 
-Sending a targeted message is similar to sending a regular message. The agent indicates that the message is intended for a specific user in the conversation, and the platform delivers it to that user. The agent doesn't initiate a separate conversation or create a new chat. Key steps for enabling the agent to send a targeted messages:
+Sending a targeted message is similar to sending a regular message. The agent indicates that the message is intended for a specific user in the conversation, and the platform delivers it to that user. The agent doesn't initiate a separate conversation or create a new chat. Key steps for enabling the agent to send a targeted messages are as follows:
 
 1. Detect the scenario to use a targeted message:
 
@@ -363,7 +363,7 @@ Ensure to handle these errors appropriately in your agent. The following table l
 | --- | --- | --- | --- | --- |
 | 400 | `Bad request` | Recipient is missing in the `Send TM` API. | Ensure that recipient is included when the agent sends the message as it's mandatory. |
 | 400 | `Bad argument` | Recipient is included in the payload of the `Edit TM` API | Ensure the recipient isn't included in the payload of the `Edit TM` API. |
-| 404 | `ActivityNotFoundInConversation` | The message ID provided couldn't be found in the conversation. The message is unavailable as it was deleted or auto-removed after 24 hours. | NA |
+| 404 | `ActivityNotFoundInConversation` | The message ID provided couldn't be found in the conversation. The message is unavailable as it was deleted or auto removed after 24 hours. | NA |
 
 It's recommended that if sending a targeted message fails, the agent or bot might choose a fallback mechanism such as sending a 1:1 chat message as a backup.
 
