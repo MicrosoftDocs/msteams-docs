@@ -304,7 +304,7 @@ For action scenarios, agents must share user disclosure and seek user confirmati
 
 * For declarative agents, any action with consequences on the external system mustn't have `isConsequential` flag set as ‘False’. [*Must fix*]
 
-  For more details, see [overriding prompt behavior](/microsoft-365-copilot/extensibility/api-plugin-confirmation-prompts?branch=main&branchFallbackFrom=public-preview#overriding-prompt-behavior).
+For more information, see [overriding prompt behavior](/microsoft-365-copilot/extensibility/api-plugin-confirmation-prompts?branch=main&branchFallbackFrom=public-preview#overriding-prompt-behavior).
 
    | Operation type | Actions | Expected value for `isConsequential` flag |
    | --- | --- | --- |
@@ -341,6 +341,11 @@ A custom engine agent is a conversational Teams bot that must meet the following
    7. The bot must offer at least two context-specific suggestions or prompts to the user, rather than generic or fixed ones. [*Must fix*]
 5. The scopes defined in `bot.scopes` and `bot.commandList.scopes` nodes of the manifest must match to maintain a good user experience.
 6. Custom engine agents must include **copilot** in `bot.scopes` and `bot.commandList.scopes` to ensure proper surfacing and full platform support.
+7. Only Custom Engine Agents (CEAs) created using Microsoft Copilot Studio (MCS) are eligible for Microsoft Store publication. Declarative Agents are not supported. Such agents must comply with the following valid domain requirements:
+   * Wildcard domains (for example, *.example.com) must not be used unless the domain is owned or controlled by the publisher.
+   * Microsoft-owned domains, including domains associated with Microsoft Copilot Studio, must not be included in the agent’s domain configuration.
+   * The domain api.botframework.com must be included in the agent’s allowed domains.
+   * The agent must specify exactly one valid domain corresponding to the Microsoft Copilot Studio Dataverse geographic region/environment where the agent is hosted.
 
 [Back to top](#validation-guidelines-for-agents)
 
