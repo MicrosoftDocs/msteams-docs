@@ -12,7 +12,7 @@ ms.topic: reference
 
 # Enable targeted messages for agents
 
-Use targeted messages in your agents or bots to send temporary, private messages to a specifc user in a channel, group, or meeting chat. You can also enable the agent or the bot to edit or delete a targeted message from a conversation.
+Use targeted messages in your agents or bots to send temporary, private messages to a specifc user in a channel, group, or meeting chat. You can also enable the agent or the bot to edit or delete a targeted message that it sent in a conversation.
 
 **Key points**:
 
