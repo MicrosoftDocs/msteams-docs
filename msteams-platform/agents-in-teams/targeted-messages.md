@@ -12,7 +12,7 @@ ms.topic: reference
 
 # Enable targeted messages for agents
 
-Targeted messages are temporary, private messages sent by agents or bots to a user in a channel or group. They support all message capabilities like buttons, images, and files and are ideal for contextual information or help.
+Use targeted messages in your agents or bots to send temporary, private messages to a specifc user in a channel, group, or meeting chat. You can also enable the agent or the bot to edit or delete a targeted message from a conversation.
 
 **Key points**:
 
@@ -26,7 +26,7 @@ Targeted messages are temporary, private messages sent by agents or bots to a us
 
 ## What is a targeted message
 
-A targeted message, also known as ephemeral message, lets an agent or a bot send a user-targeted message. It helps reduce bot spam by keeping shared conversations uncluttered. Targeted messages are:
+A targeted message, also known as an ephemeral message, lets an agent or a bot send a user-targeted message. It supports all message capabilities like buttons, images, and files, and helps reduce bot spam by keeping shared conversations uncluttered. Targeted messages are:
 
 - Triggered in response to user action.
 - Delivered to only one user in a group context.
@@ -42,13 +42,13 @@ Some common user scenarios include:
 
 | Scenario | Use for ... | To ... |
 | --- | --- | --- |
-| Authentication flow | Sending a sign-in card as a targeted message | Enable uninterrupted discussion by a user's log in workflow |
-| AI or Copilot summary | Sharing discussion details for long-running chats for a new participant | Avoid derailing ongoing discussion |
-| Help users | Sending user-specific messages for supporting users | Support with personal reminders, onboard new recipients, get help without public callouts or repetitive group notifications |
+| Authentication flow | Sending a sign-in card as a targeted message | Enable uninterrupted discussion by a user's log in workflow. |
+| AI or Copilot summary | Sharing discussion details for long-running chats for a new participant | Avoid derailing ongoing discussion. |
+| Help users | Sending user-specific messages for supporting users | Support with personal reminders, onboard new recipients, get information without public callouts or repetitive group notifications. |
 
 ## Why use targeted messages
 
-Among other benefits, targeted messages enhance user experience as follows:
+Targeted messages are ideal for contextual information or assistance. Among other benefits, targeted messages enhance user experience as follows:
 
 - **Agent sensitivity and alertness**: <br>
     Real-time responses from the agent to the user's requirement in the group setting reinforces that the agent is alert to user actions.
@@ -57,7 +57,7 @@ Among other benefits, targeted messages enhance user experience as follows:
     Agents can help users engage more openly. A clear message hierarchy that shows only the content that's meant for everyone is permanent in the chat.
 
 - **Human-in-the-loop scenarios**: <br>
-    It's useful for scenarios such as authentication prompts, approvals, or informational messages. It helps the user progress through a conversation or a workflow without switching context or seeking assistance elsewhere.
+    It's useful for scenarios such as authentication prompts, approvals, or informational messages. It lets a user progress through a conversation or a workflow without switching context or seeking help elsewhere.
 
 <!--
 Targeted messages are temporary, user-specific messages that appear in a group chat, meeting, or channel. Agents can support users without adding permanent noise for the rest of the group. They can include most message capabilities like interactive Adaptive Cards with buttons, images, or file attachments. For example, use a targeted message to share a sign‑in card or an error message with a help link. Unlike standard messages, targeted messages are:
