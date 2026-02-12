@@ -14,8 +14,8 @@ This section helps you to know about the prerequisites, install Microsoft 365 Ag
 ## Prerequisites
 
 - [Visual Studio Code](https://code.visualstudio.com/Download).
-- [NodeJS](https://nodejs.org) latest version.
-- NPM 8 latest version.
+- [NodeJS](https://nodejs.org) supported versions: >=20.
+- NPM latest version.
 - Microsoft 365 work or organization account.
 - Azure account and subscription.
 
