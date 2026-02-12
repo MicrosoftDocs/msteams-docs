@@ -150,8 +150,8 @@ Sending a targeted message is similar to sending a regular message. The agent in
         To send a targeted activity, ensure that you indicate the `isTargetedActivity` as `true`.
 
         ```rest
-           POST {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
-           POST {cloud}/v3/conversations/{conversationId}/activities/{activityId}?isTargetedActivity=true
+        POST {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
+        POST {cloud}/v3/conversations/{conversationId}/activities/{activityId}?isTargetedActivity=true
         ```
 
     - Send proactive targeted messages
@@ -248,8 +248,8 @@ Your agent can update or delete the targeted message after sending it.
     # [HTTP](#tab/api1)
 
     ```rest
-        PUT {cloud}/v3/conversations/{conversationId}/activities
-        PUT {cloud}/v3/conversations/{conversationId}/activities/{activityld}
+    PUT {cloud}/v3/conversations/{conversationId}/activities
+    PUT {cloud}/v3/conversations/{conversationId}/activities/{activityld}
     ```
 
 - **Delete**: If a user doesn't act on a targeted message, the agent can delete it using delete message API. It avoids leaving stale content.
@@ -271,8 +271,8 @@ Your agent can update or delete the targeted message after sending it.
     # [HTTP](#tab/api1)
 
     ```rest
-        DELETE {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
-           DELETE {cloud}/v3/conversations/{conversationId}/activities/{activityld}?isTargetedActivity=true
+    DELETE {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
+    DELETE {cloud}/v3/conversations/{conversationId}/activities/{activityld}?isTargetedActivity=true
     ```
 
 <!--
