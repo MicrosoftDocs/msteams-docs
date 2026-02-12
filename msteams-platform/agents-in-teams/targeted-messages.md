@@ -21,7 +21,7 @@ Use targeted messages in your agents or bots to send temporary, private messages
   - [Why use targeted messages](#why-use-targeted-messages)
 - **Enable targeted messages**
   - [Send a targeted message](#send-a-targeted-message)
-  - [Enable agent to edit or delete a targeted message](#enable-agent-to-edit-or-delete-a-targeted-message)
+  - [Edit or delete a targeted message](#enable-agent-to-edit-or-delete-a-targeted-message)
   - [Handle errors](#handle-errors)
 
 ## What is a targeted message
