@@ -98,11 +98,21 @@ Sending a targeted message is similar to sending a regular message. The agent in
 
       # [TypeScript](#tab/ts1)
 
+        <!--
         ```typescript
         app.on('message', async ({ send, activity }) => {
           // Send a targeted message that only the sender can see
         await send('This message is only visible to you!', { isTargeted: true });
         });
+        ```
+        -->
+
+        ```typescript
+        // Reactive Send
+        await send(
+          new MessageActivity('This message is only visible to you!')
+            .withRecipient(activity.from, true)
+        );
         ```
 
       # [C#](#tab/dotnet1)
@@ -168,9 +178,9 @@ Sending a targeted message is similar to sending a regular message. The agent in
 
       # [TypeScript](#tab/ts1)
 
+        <!--
         ```typescript
         import { MessageActivity } from '@microsoft/teams.api';
-    
         import { App } from '@microsoft/teams.apps';
         // ...
         
@@ -186,6 +196,16 @@ Sending a targeted message is similar to sending a regular message. The agent in
           await send('Hi! I am going to remind you to say something to me soon!');
           notificationQueue.addReminder(activity.from.aadObjectId!, sendProactiveNotification, 10_000);
         });
+        ```
+        -->
+
+        ```typescript
+        // Proactive Send
+        await app.send(
+          conversationId,
+          new MessageActivity('Private notification just for you!')
+            .withRecipient({ id: userId, name: userName, role: 'user' }, true)
+        );
         ```
 
       # [C#](#tab/dotnet1)
