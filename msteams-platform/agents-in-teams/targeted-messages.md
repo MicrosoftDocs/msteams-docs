@@ -92,7 +92,7 @@ Sending a targeted message is similar to sending a regular message. The agent in
 
 2. Use any of the following code snippets to send a targeted message:
 
-    [WIP: Code snippets and link to be added once Teams SDK PR is published.]
+    [WIP: Teams SDK links to be added once Teams SDK PR is published.]
 
     - Send targeted messages
 
@@ -128,19 +128,20 @@ Sending a targeted message is similar to sending a regular message. The agent in
 
       # [HTTP](#tab/api1)
 
-      Include the 'targeted' designation in the `Send TM` API. Ensure that you specify the following when the agent sends the message:
-
-      - The conversation (chat or channel) ID and targeted user’s ID (Principal ID or MRI). The intended user must be a member of the chat or channel to receive a targeted message.
-      - A flag or API call that marks the message as targeted or ephemeral.
-
-        Use the service URL from the conversation. The `userId` is the user’s Teams ID (MRI) to target, and `conversationId` is the group chat or channel thread ID. The payload of the POST is the activity or message to send, just like a normal message activity.
-
-        To send a targeted activity, ensure that you indicate the `isTargetedActivity` as `true`.
+      Include the 'targeted' designation in the `Send TM` API.
 
         ```rest
         POST {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
         POST {cloud}/v3/conversations/{conversationId}/activities/{activityId}?isTargetedActivity=true
         ```
+
+      Ensure that you specify the following when the agent sends the message:
+
+      - To send a targeted activity, ensure that you indicate the `isTargetedActivity` as `true`.
+      - The conversation (chat or channel) ID and targeted user’s ID (Principal ID or MRI). The intended user must be a member of the chat or channel to receive a targeted message.
+      - A flag or API call that marks the message as targeted or ephemeral.
+
+        Use the service URL from the conversation. The `userId` is the user’s Teams ID (MRI) to target, and `conversationId` is the group chat or channel thread ID. The payload of the POST is the activity or message to send, just like a normal message activity.
 
     - Send proactive targeted messages
 
