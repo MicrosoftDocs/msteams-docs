@@ -21,7 +21,7 @@ Use targeted messages in your agents or bots to send temporary, private messages
   - [Why use targeted messages](#why-use-targeted-messages)
 - **Enable targeted messages**
   - [Send a targeted message](#send-a-targeted-message)
-  - [Edit or delete a targeted message](#edit-or-delete-a-targeted-message)
+  - [Update or delete a targeted message](#update-or-delete-a-targeted-message)
   - [Handle errors](#handle-errors)
 
 ## What is a targeted message
@@ -186,13 +186,13 @@ Sending a targeted message is similar to sending a regular message. The agent in
         POST /v3/conversations/{conversationId}/activities
         ```
 
-### Edit or delete a targeted message
+### Update or delete a targeted message
 
 Your agent can update or delete the targeted message after sending it.
 
 [WIP: Teams SDK links to be added.]
 
-- **Edit**: The agent can update the original targeted message if needed. The agent calls the `Edit TM` API using the message’s `activityId`. The updated message appears only in intended user’s view.
+- **Update**: The agent can edit the original targeted message if needed. The updated message appears only in intended user’s view.
 
     Use the following code snippet to edit targeted message:
 
@@ -222,12 +222,14 @@ Your agent can update or delete the targeted message after sending it.
 
     # [HTTP](#tab/api1)
 
+    The agent calls the `Edit TM` API using the message’s `activityId`.
+
     ```rest
     PUT {cloud}/v3/conversations/{conversationId}/activities
     PUT {cloud}/v3/conversations/{conversationId}/activities/{activityld}
     ```
 
-- **Delete**: If a user doesn't act on a targeted message, the agent can delete it using delete message API. It avoids leaving stale content.
+- **Delete**: If a user doesn't act on a targeted message, the agent can delete it.
 
     Use the following code snippet to delete targeted message:
 
@@ -253,6 +255,8 @@ Your agent can update or delete the targeted message after sending it.
     ```
 
     # [HTTP](#tab/api1)
+
+    Use the delete message API for enabling the agent to remove targeted messages. It avoids leaving stale content.
 
     ```rest
     DELETE {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
