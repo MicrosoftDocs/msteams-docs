@@ -190,6 +190,7 @@ Sending a targeted message is similar to sending a regular message. The agent in
 
       # [C#](#tab/dotnet1)
 
+       <!--
         ```csharp
         public static class Notifications
         {
@@ -208,6 +209,16 @@ Sending a targeted message is similar to sending a regular message. The agent in
                 await app.Send(conversationId, targetedMessage, isTargeted: true);
             }
         }
+        ```
+        -->
+
+        ```csharp
+        // Send Proactive
+        await teams.Send(
+        conversationId,
+        new MessageActivity("Private notification just for you!")
+        .WithRecipient(new Account { Id = userId, Name = userName, Role = Role.User }, isTargeted: true)
+        );
         ```
 
       # [Python](#tab/Py1)
