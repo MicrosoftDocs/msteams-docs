@@ -434,6 +434,12 @@ Microsoft Graph exposes targeted messaging support. Graph API for Teams chat mes
 
 ### Teams SDK
 
+| Status code | Error code | Description | Developer action |
+| --- | --- | --- | --- | --- |
+| 400 | `Bad argument` | Missing recipient when creating targeted message. | Ensure WithRecipient(account, isTargeted: true) is called with valid Account object. |
+| 400 | `Bad argument` | Recipient passed on Update or Delete | Do not pass recipient on Update or Delete |
+| 404 | `BotNotInConversationRoster` | Bot is not a member of the conversation | Ensure bot is installed in the conversation before sending targeted messages |
+
 ### REST APIs
 
 After the agent calls the `Send TM` API, the API returns a success or error.
@@ -449,7 +455,7 @@ Ensure to handle these errors appropriately in your agent. The following table l
 
 | Status code | Error code | Description | Developer action |
 | --- | --- | --- | --- | --- |
-| 400 | `Bad request` | Recipient is missing in the `Send TM` API. | Ensure that recipient is included when the agent sends the message as it's mandatory. |
+| 400 | `Bad argument` | Recipient is missing in the `Send TM` API. | Ensure that recipient is included when the agent sends the message as it's mandatory. |
 | 400 | `Bad argument` | Recipient is included in the payload of the `Edit TM` API | Ensure the recipient isn't included in the payload of the `Edit TM` API. |
 | 404 | `ActivityNotFoundInConversation` | The message ID provided couldn't be found in the conversation. The message is unavailable as it was deleted or auto removed after 24 hours. | NA |
 
