@@ -181,7 +181,7 @@ Sending a targeted message is similar to sending a regular message. The agent in
 
       # [HTTP](#tab/api1)
 
-        To send a message to a conversation that isn't a direct reply to any message from the user, issue this request:
+        To send a message to a conversation that isn't a direct reply to any message from the user, use this request:
 
         ```rest
         POST /v3/conversations/{conversationId}/activities
@@ -195,7 +195,7 @@ Your agent can update or delete the targeted message after sending it.
 
 - **Update**: The agent can edit the original targeted message if needed. The updated message appears only in intended user’s view.
 
-    Use the following code snippet to edit targeted message:
+    Use one of the following code snippets to edit targeted message:
 
     # [TypeScript](#tab/ts1)
 
@@ -232,7 +232,7 @@ Your agent can update or delete the targeted message after sending it.
 
 - **Delete**: If a user doesn't act on a targeted message, the agent can delete it.
 
-    Use the following code snippet to delete targeted message:
+    Use one of the following code snippets to delete targeted message:
 
     # [TypeScript](#tab/ts1)
 
