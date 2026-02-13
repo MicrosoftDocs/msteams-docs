@@ -342,6 +342,8 @@ After the agent sends a targeted message using Teams SDK or REST APIs, one of th
 
 Ensure to handle these errors appropriately in your agent. The following table lists the error codes and the descriptions under which the errors are generated:
 
+# [Teams SDK](#tab/dotnet1)
+
 ### Teams SDK
 
 | Status code | Error code | Description | Developer action |
@@ -349,6 +351,8 @@ Ensure to handle these errors appropriately in your agent. The following table l
 | 400 | `Bad argument` | Missing recipient when creating targeted message. | Ensure WithRecipient(account, isTargeted: true) is called with valid Account object. |
 | 400 | `Bad argument` | Recipient passed on Update or Delete | Do not pass recipient on Update or Delete |
 | 404 | `BotNotInConversationRoster` | Bot is not a member of the conversation | Ensure bot is installed in the conversation before sending targeted messages |
+
+# [HTTP](#tab/api1)
 
 ### REST APIs
 
@@ -358,7 +362,7 @@ Ensure to handle these errors appropriately in your agent. The following table l
 | 400 | `Bad argument` | Recipient is included in the payload of the `Edit TM` API | Ensure the recipient isn't included in the payload of the `Edit TM` API. |
 | 404 | `ActivityNotFoundInConversation` | The message ID provided couldn't be found in the conversation. The message is unavailable as it was deleted or auto removed after 24 hours. | NA |
 
-It's recommended that if sending a targeted message fails, the agent or bot might choose a fallback mechanism such as sending a 1:1 chat message as a backup.
+---
 
 For more information on status and error codes for sending messages, see [status codes from bot conversational APIs](../bots/build-conversational-capability.md#status-codes-from-bot-conversational-apis).
 
