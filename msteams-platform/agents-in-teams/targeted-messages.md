@@ -90,7 +90,7 @@ Sending a targeted message is similar to sending a regular message. The agent in
     - The agent must send a proactive message to a specific user message in-context.
     - The agent must send a recommendation to a user that isn't relevant to other group members.
 
-2. Use any of the following code snippets:
+2. Use any of the following code snippets to send a targeted message:
 
     [WIP: Code snippets and link to be added once Teams SDK PR is published.]
 
@@ -138,8 +138,9 @@ Sending a targeted message is similar to sending a regular message. The agent in
 
       # [Python](#tab/Py1)
 
-        ```python
-        public static class Notifications
+    <!--    
+      ```python
+      public static class Notifications
         {
             public static async Task SendProactiveTargeted(string userId)
             {
@@ -157,6 +158,15 @@ Sending a targeted message is similar to sending a regular message. The agent in
             }
         }
         ```
+        -->
+
+      ```python
+      # Reactive Send
+      await ctx.send(
+          MessageActivityInput(text="This message is only visible to you!")
+          .with_recipient(ctx.activity.from_, is_targeted=True)
+      )
+      ```
 
       # [HTTP](#tab/api1)
 
@@ -243,10 +253,10 @@ Sending a targeted message is similar to sending a regular message. The agent in
 
       # [Python](#tab/Py1)
 
+      <!-->
         ```python
         from microsoft_teams.api import MessageActivityInput, Account
         # ...
-    
         async def send_targeted_proactive_notification(user_id: str, recipient_id: str):
         conversation_id = storage.get(user_id, "")
         if not conversation_id:
@@ -257,6 +267,17 @@ Sending a targeted message is similar to sending a regular message. The agent in
         
         await app.send(conversation_id, activity, is_targeted=True)
         ```
+      -->
+
+      ```python
+      #Proactive Send
+      recipient = Account(id=user_id, name=user_name, role="user")
+      await app.send(
+          conversation_id,
+          MessageActivityInput(text="Private notification just for you!")
+              .with_recipient(recipient, is_targeted=True)
+      )
+      ```
 
       # [HTTP](#tab/api1)
 
