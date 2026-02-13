@@ -432,24 +432,28 @@ Microsoft Graph exposes targeted messaging support. Graph API for Teams chat mes
 
 ### Handle errors
 
-After the agent calls the `Send TM` API, the API returns a success or error.
+- Teams SDK
 
-- If successful,  the targeted user gets the message sent by the agent.
-- If the `Send TM` API fails, the agent may choose a fallback such as sending a 1:1 chat message as a backup.
-  - Some scenarios where a send event might fail are if the user isn’t a group member or if the client doesn’t support targeted messages.
+- REST APIs
 
-    > [!NOTE]
-    > Teams' backward compatibility ensures older clients don't show targeted messages if unsupported and notifies your agent when a client can't process them.
+  After the agent calls the `Send TM` API, the API returns a success or error.
 
-Ensure to handle these errors appropriately in your agent. The following table lists the error codes and the descriptions under which the errors are generated:
+  - If successful,  the targeted user gets the message sent by the agent.
+  - If the `Send TM` API fails, the agent may choose a fallback such as sending a 1:1 chat message as a backup.
+    - Some scenarios where a send event might fail are if the user isn’t a group member or if the client doesn’t support targeted messages.
 
-| Status code | Error code | Description | Developer action |
-| --- | --- | --- | --- | --- |
-| 400 | `Bad request` | Recipient is missing in the `Send TM` API. | Ensure that recipient is included when the agent sends the message as it's mandatory. |
-| 400 | `Bad argument` | Recipient is included in the payload of the `Edit TM` API | Ensure the recipient isn't included in the payload of the `Edit TM` API. |
-| 404 | `ActivityNotFoundInConversation` | The message ID provided couldn't be found in the conversation. The message is unavailable as it was deleted or auto removed after 24 hours. | NA |
+        > [!NOTE]
+        > Teams' backward compatibility ensures older clients don't show targeted messages if unsupported and notifies your agent when a client can't process them.
 
-It's recommended that if sending a targeted message fails, the agent or bot might choose a fallback mechanism such as sending a 1:1 chat message as a backup.
+  Ensure to handle these errors appropriately in your agent. The following table lists the error codes and the descriptions under which the errors are generated:
+
+    | Status code | Error code | Description | Developer action |
+    | --- | --- | --- | --- | --- |
+    | 400 | `Bad request` | Recipient is missing in the `Send TM` API. | Ensure that recipient is included when the agent sends the message as it's mandatory. |
+    | 400 | `Bad argument` | Recipient is included in the payload of the `Edit TM` API | Ensure the recipient isn't included in the payload of the `Edit TM` API. |
+    | 404 | `ActivityNotFoundInConversation` | The message ID provided couldn't be found in the conversation. The message is unavailable as it was deleted or auto removed after 24 hours. | NA |
+
+    It's recommended that if sending a targeted message fails, the agent or bot might choose a fallback mechanism such as sending a 1:1 chat message as a backup.
 
 For more information on status and error codes for sending messages, see [status codes from bot conversational APIs](../bots/build-conversational-capability.md#status-codes-from-bot-conversational-apis).
 
