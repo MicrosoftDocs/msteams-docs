@@ -342,7 +342,7 @@ After the agent sends a targeted message using Teams SDK or REST APIs, one of th
 
 Ensure to handle these errors appropriately in your agent. The following table lists the error codes and the descriptions under which the errors are generated:
 
-# [Teams SDK](#tab/dotnet1)
+# [Teams SDK](#tab/tsdk)
 
 Teams SDK
 
@@ -352,7 +352,7 @@ Teams SDK
 | 400 | `Bad argument` | Recipient passed on Update or Delete | Do not pass recipient on Update or Delete |
 | 404 | `BotNotInConversationRoster` | Bot is not a member of the conversation | Ensure bot is installed in the conversation before sending targeted messages |
 
-# [HTTP](#tab/api1)
+# [HTTP](#tab/api)
 
 REST APIs
 
