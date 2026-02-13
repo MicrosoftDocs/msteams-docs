@@ -276,7 +276,13 @@ Your agent can update or delete the targeted message after sending it.
 
     # [TypeScript](#tab/ts1)
 
-    [WIP: Teams SDK Code snippet to be added.]
+    [WIP: Teams SDK link to be added.]
+
+    ```typescript
+    // Update
+    const updatedMessage = new MessageActivity('This message has been updated!');
+    await api.conversations.activities.updateTargeted(conversationId, messageId, updatedMessage);
+    ```
 
     # [C#](#tab/dotnet1)
 
@@ -305,7 +311,12 @@ Your agent can update or delete the targeted message after sending it.
 
     # [TypeScript](#tab/ts1)
 
-    [WIP: Teams SDK Code snippet to be added.]
+    [WIP: Teams SDK link to be added.]
+
+    ```typescript
+    // Delete
+    await api.conversations.activities.deleteTargeted(conversationId, messageId);
+    ```
 
     # [C#](#tab/dotnet1)
 
