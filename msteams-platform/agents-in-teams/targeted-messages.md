@@ -146,27 +146,6 @@ Sending a targeted message is similar to sending a regular message. The agent in
 
       # [TypeScript](#tab/ts1)
 
-        <!--
-        ```typescript
-        import { MessageActivity } from '@microsoft/teams.api';
-        import { App } from '@microsoft/teams.apps';
-        // ...
-        
-        // This would be some persistent storage
-        const myConversationIdStorage = new Map<string, string>();
-        
-        // Installation is just one place to get the conversation id. All activities
-        // have the conversation id, so you can use any activity to get it.
-        app.on('install.add', async ({ activity, send }) => {
-          // Save the conversation id in
-          myConversationIdStorage.set(activity.from.aadObjectId!, activity.conversation.id);
-        
-          await send('Hi! I am going to remind you to say something to me soon!');
-          notificationQueue.addReminder(activity.from.aadObjectId!, sendProactiveNotification, 10_000);
-        });
-        ```
-        -->
-
         ```typescript
         // Proactive Send
         await app.send(
@@ -178,28 +157,6 @@ Sending a targeted message is similar to sending a regular message. The agent in
 
       # [C#](#tab/dotnet1)
 
-       <!--
-        ```csharp
-        public static class Notifications
-        {
-            public static async Task SendProactiveTargeted(string userId)
-            {
-                var conversationId = (string?)storage.Get(userId);
-        
-                if (conversationId is null) return;
-        
-                // Set Recipient to specify who should receive the private message
-                var targetedMessage = new MessageActivity("Hey! This is a private message just for you!")
-                {
-                    Recipient = new ChannelAccount { Id = userId }
-                };
-        
-                await app.Send(conversationId, targetedMessage, isTargeted: true);
-            }
-        }
-        ```
-        -->
-
         ```csharp
         // Send Proactive
         await teams.Send(
@@ -210,22 +167,6 @@ Sending a targeted message is similar to sending a regular message. The agent in
         ```
 
       # [Python](#tab/Py1)
-
-      <!-->
-        ```python
-        from microsoft_teams.api import MessageActivityInput, Account
-        # ...
-        async def send_targeted_proactive_notification(user_id: str, recipient_id: str):
-        conversation_id = storage.get(user_id, "")
-        if not conversation_id:
-            return
-        
-        activity = MessageActivityInput(text="This is a private reminder just for you!")
-        activity.recipient = Account(id=recipient_id, role="user")
-        
-        await app.send(conversation_id, activity, is_targeted=True)
-        ```
-      -->
 
       ```python
       #Proactive Send
