@@ -346,21 +346,21 @@ After the agent sends a targeted message using Teams SDK or REST APIs, one of th
   > [!NOTE]
   > Teams' backward compatibility ensures older clients don't show targeted messages if unsupported and notifies your agent when a client can't process them.
 
-Ensure to handle these errors appropriately in your agent. The following table lists the error codes and the descriptions under which the errors are generated:
+Ensure to handle these errors appropriately in your agent.
 
 # [Teams SDK](#tab/tsdk)
 
-Teams SDK
+The following table lists the error codes, the error descriptions, and developer actions for Teams SDK:
 
 | Status code | Error code | Description | Developer action |
 | --- | --- | --- | --- | --- |
-| 400 | `Bad argument` | Missing recipient when creating targeted message. | Ensure WithRecipient(account, isTargeted: true) is called with valid Account object. |
-| 400 | `Bad argument` | Recipient passed on Update or Delete | Do not pass recipient on Update or Delete |
-| 404 | `BotNotInConversationRoster` | Bot is not a member of the conversation | Ensure bot is installed in the conversation before sending targeted messages |
+| 400 | `Bad argument` | Missing recipient when creating targeted message. | Ensure `WithRecipient`(account, `isTargeted`: `true`) is called with valid Account object. |
+| 400 | `Bad argument` | Recipient passed on update or delete. | Don't pass recipient on update or delete. |
+| 404 | `BotNotInConversationRoster` | Bot is not a member of the conversation. | Ensure bot is installed in the conversation before sending targeted messages. |
 
 # [HTTP](#tab/api)
 
-REST APIs
+The following table lists the error codes, the error descriptions, and developer actions for REST APIs:
 
 | Status code | Error code | Description | Developer action |
 | --- | --- | --- | --- | --- |
