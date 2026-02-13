@@ -344,7 +344,7 @@ Ensure to handle these errors appropriately in your agent. The following table l
 
 # [Teams SDK](#tab/dotnet1)
 
-### Teams SDK
+Teams SDK
 
 | Status code | Error code | Description | Developer action |
 | --- | --- | --- | --- | --- |
@@ -354,7 +354,7 @@ Ensure to handle these errors appropriately in your agent. The following table l
 
 # [HTTP](#tab/api1)
 
-### REST APIs
+REST APIs
 
 | Status code | Error code | Description | Developer action |
 | --- | --- | --- | --- | --- |
