@@ -98,15 +98,6 @@ Sending a targeted message is similar to sending a regular message. The agent in
 
       # [TypeScript](#tab/ts1)
 
-        <!--
-        ```typescript
-        app.on('message', async ({ send, activity }) => {
-          // Send a targeted message that only the sender can see
-        await send('This message is only visible to you!', { isTargeted: true });
-        });
-        ```
-        -->
-
         ```typescript
         // Reactive Send
         await send(
@@ -117,17 +108,6 @@ Sending a targeted message is similar to sending a regular message. The agent in
 
       # [C#](#tab/dotnet1)
 
-        <!--
-        ```csharp
-        [Message]
-        public async Task OnMessage([Context] IContext.Client client)
-        {
-            // Send a private reply visible only to the sender
-            await client.Send("Hey! This is a private message just for you!", isTargeted: true);
-        }
-        ```
-        -->
-
         ```csharp
         // Send Reactive
         await context.Send(
@@ -137,28 +117,6 @@ Sending a targeted message is similar to sending a regular message. The agent in
         ```
 
       # [Python](#tab/Py1)
-
-    <!--    
-      ```python
-      public static class Notifications
-        {
-            public static async Task SendProactiveTargeted(string userId)
-            {
-                var conversationId = (string?)storage.Get(userId);
-        
-                if (conversationId is null) return;
-        
-                // Set Recipient to specify who should receive the private message
-                var targetedMessage = new MessageActivity("Hey! This is a private message just for you!")
-                {
-                    Recipient = new ChannelAccount { Id = userId }
-                };
-        
-                await app.Send(conversationId, targetedMessage, isTargeted: true);
-            }
-        }
-        ```
-        -->
 
       ```python
       # Reactive Send
