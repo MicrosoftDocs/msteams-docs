@@ -331,6 +331,17 @@ Microsoft Graph exposes targeted messaging support. Graph API for Teams chat mes
 
 ## Handle errors
 
+After the agent sends a targeted message using Teams SDK or REST APIs, one of the following responses are returned:
+
+- If successful,  the targeted user gets the message sent by the agent.
+- If the message isn't sent, the agent may choose a fallback such as sending a 1:1 chat message as a backup.
+  - Some scenarios where a send event might fail are if the user isn’t a group member or if the client doesn’t support targeted messages.
+
+  > [!NOTE]
+  > Teams' backward compatibility ensures older clients don't show targeted messages if unsupported and notifies your agent when a client can't process them.
+
+Ensure to handle these errors appropriately in your agent. The following table lists the error codes and the descriptions under which the errors are generated:
+
 ### Teams SDK
 
 | Status code | Error code | Description | Developer action |
@@ -340,17 +351,6 @@ Microsoft Graph exposes targeted messaging support. Graph API for Teams chat mes
 | 404 | `BotNotInConversationRoster` | Bot is not a member of the conversation | Ensure bot is installed in the conversation before sending targeted messages |
 
 ### REST APIs
-
-After the agent calls the `Send TM` API, the API returns a success or error.
-
-- If successful,  the targeted user gets the message sent by the agent.
-- If the `Send TM` API fails, the agent may choose a fallback such as sending a 1:1 chat message as a backup.
-  - Some scenarios where a send event might fail are if the user isn’t a group member or if the client doesn’t support targeted messages.
-
-  > [!NOTE]
-  > Teams' backward compatibility ensures older clients don't show targeted messages if unsupported and notifies your agent when a client can't process them.
-
-Ensure to handle these errors appropriately in your agent. The following table lists the error codes and the descriptions under which the errors are generated:
 
 | Status code | Error code | Description | Developer action |
 | --- | --- | --- | --- | --- |
