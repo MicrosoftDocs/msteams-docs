@@ -190,13 +190,13 @@ Sending a targeted message is similar to sending a regular message. The agent in
 
 Your agent can update or delete the targeted message after sending it.
 
+[WIP: Teams SDK links to be added.]
+
 - **Edit**: The agent can update the original targeted message if needed. The agent calls the `Edit TM` API using the message’s `activityId`. The updated message appears only in intended user’s view.
 
     Use the following code snippet to edit targeted message:
 
     # [TypeScript](#tab/ts1)
-
-    [WIP: Teams SDK link to be added.]
 
     ```typescript
     // Update
@@ -206,8 +206,6 @@ Your agent can update or delete the targeted message after sending it.
 
     # [C#](#tab/dotnet1)
 
-    [WIP: Teams SDK link to be added.]
-
     ```csharp
     // Update 
     var updatedMessage = new MessageActivity("This message has been updated!");
@@ -216,7 +214,11 @@ Your agent can update or delete the targeted message after sending it.
 
     # [Python](#tab/Py1)
 
-    [WIP: Teams SDK Code snippet to be added.]
+    ```python
+    # Update 
+    updated_message = MessageActivityInput(text="This message has been updated!")
+    await ctx.api.conversations.activities.update_targeted(conversation_id, message_id, updated_message)
+    ```
 
     # [HTTP](#tab/api1)
 
@@ -231,16 +233,12 @@ Your agent can update or delete the targeted message after sending it.
 
     # [TypeScript](#tab/ts1)
 
-    [WIP: Teams SDK link to be added.]
-
     ```typescript
     // Delete
     await api.conversations.activities.deleteTargeted(conversationId, messageId);
     ```
 
     # [C#](#tab/dotnet1)
-
-    [WIP: Teams SDK link to be added.]
 
     ```csharp
     // Delete
@@ -249,7 +247,10 @@ Your agent can update or delete the targeted message after sending it.
 
     # [Python](#tab/Py1)
 
-    [WIP: Teams SDK Code snippet to be added.]
+    ```python
+    #Delete
+    await ctx.api.conversations.activities.delete_targeted(conversation_id, message_id)
+    ```
 
     # [HTTP](#tab/api1)
 
