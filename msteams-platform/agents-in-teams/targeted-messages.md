@@ -107,6 +107,7 @@ Sending a targeted message is similar to sending a regular message. The agent in
 
       # [C#](#tab/dotnet1)
 
+        <!--
         ```csharp
         [Message]
         public async Task OnMessage([Context] IContext.Client client)
@@ -114,6 +115,15 @@ Sending a targeted message is similar to sending a regular message. The agent in
             // Send a private reply visible only to the sender
             await client.Send("Hey! This is a private message just for you!", isTargeted: true);
         }
+        ```
+        -->
+
+        ```csharp
+        // Send Reactive
+        await context.Send(
+            new MessageActivity("This message is only visible to you!")
+                .WithRecipient(context.Activity.From, isTargeted: true)
+        );
         ```
 
       # [Python](#tab/Py1)
