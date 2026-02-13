@@ -170,7 +170,7 @@ Sending a targeted message is similar to sending a regular message. The agent in
 
       # [HTTP](#tab/api1)
 
-        Include the 'targeted' designation in the `Send TM` API. Ensure that you specify the following when the agent sends the message:
+      Include the 'targeted' designation in the `Send TM` API. Ensure that you specify the following when the agent sends the message:
 
       - The conversation (chat or channel) ID and targeted user’s ID (Principal ID or MRI). The intended user must be a member of the chat or channel to receive a targeted message.
       - A flag or API call that marks the message as targeted or ephemeral.
