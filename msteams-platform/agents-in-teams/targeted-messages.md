@@ -339,9 +339,8 @@ Microsoft Graph exposes targeted messaging support. Graph API for Teams chat mes
 
 After the agent sends a targeted message using Teams SDK or REST APIs, one of the following responses are returned:
 
-- If successful,  the targeted user gets the message sent by the agent.
-- If the message isn't sent, the agent may choose a fallback such as sending a 1:1 chat message as a backup.
-  - Some scenarios where a send event might fail are if the user isn’t a group member or if the client doesn’t support targeted messages.
+- If successful, the targeted user gets the message sent by the agent.
+- A send event can fail if the user isn’t a group member or the client doesn’t support targeted messages.
 
   > [!NOTE]
   > Teams' backward compatibility ensures older clients don't show targeted messages if unsupported and notifies your agent when a client can't process them.
@@ -350,7 +349,7 @@ Ensure to handle these errors appropriately in your agent.
 
 # [Teams SDK](#tab/tsdk)
 
-The following table lists the error codes, the error descriptions, and developer actions for Teams SDK:
+The following table lists error codes, error descriptions, and developer actions for Teams SDK:
 
 | Status code | Error code | Description | Developer action |
 | --- | --- | --- | --- | --- |
@@ -360,7 +359,7 @@ The following table lists the error codes, the error descriptions, and developer
 
 # [HTTP](#tab/api)
 
-The following table lists the error codes, the error descriptions, and developer actions for REST APIs:
+The following table lists error codes, error descriptions, and developer actions for REST APIs:
 
 | Status code | Error code | Description | Developer action |
 | --- | --- | --- | --- | --- |
@@ -369,6 +368,8 @@ The following table lists the error codes, the error descriptions, and developer
 | 404 | `ActivityNotFoundInConversation` | The message ID provided couldn't be found in the conversation. The message is unavailable as it was deleted or auto removed after 24 hours. | NA |
 
 ---
+
+It's recommended that if sending a targeted message fails, the agent or bot might choose a fallback mechanism such as sending a 1:1 chat message as a backup.
 
 For more information on status and error codes for sending messages, see [status codes from bot conversational APIs](../bots/build-conversational-capability.md#status-codes-from-bot-conversational-apis).
 
