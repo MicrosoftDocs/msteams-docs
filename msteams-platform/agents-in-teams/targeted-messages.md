@@ -260,7 +260,13 @@ Your agent can update or delete the targeted message after sending it.
 
     # [C#](#tab/dotnet1)
 
-    [WIP: Teams SDK Code snippet to be added.]
+    [WIP: Teams SDK link to be added.]
+
+    ```csharp
+    // Update 
+    var updatedMessage = new MessageActivity("This message has been updated!");
+    await context.Api.Conversations.Activities.UpdateTargetedAsync(conversationId, messageId, updatedMessage);
+    ```
 
     # [Python](#tab/Py1)
 
@@ -283,7 +289,12 @@ Your agent can update or delete the targeted message after sending it.
 
     # [C#](#tab/dotnet1)
 
-    [WIP: Teams SDK Code snippet to be added.]
+    [WIP: Teams SDK link to be added.]
+
+    ```csharp
+    // Delete
+    await context.Api.Conversations.Activities.DeleteTargetedAsync(conversationId, messageId);
+    ```
 
     # [Python](#tab/Py1)
 
