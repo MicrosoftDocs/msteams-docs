@@ -359,7 +359,7 @@ Currently, the accepted channel IDs are: `msteams`, `directline`, `webchat`, and
 
 ## Customize Teams context
 
-The configuration file in the project's root folder allows you to customize Teams context information such as chats, teams, and users. It provides mock data for testing Bot Framework APIs or methods from the Agent SDK or Teams SDK, such as `TeamsInfo.getTeamMembers`.
+The configuration file in the project's root folder allows you to customize Teams context information such as chats, teams, and users. It provides mock data for testing Bot Framework APIs or methods from the Agents SDK or Teams SDK, such as `TeamsInfo.getTeamMembers`.
 
 ### Default configuration
 
@@ -369,17 +369,21 @@ Agents Playground contains a built-in configuration file in the project's root f
 > By default, the Agents Playground uses built-in mock data. You don’t need to create or modify any configuration files unless you want to customize the mock data used during local debugging.
 
 ```yaml
-# yaml-language-server: $schema=https://aka.ms/teams-app-test-tool-config/0.1.0/config.schema.json
+# yaml-language-server: $schema=https://aka.ms/teams-app-test-tool-config/0.1.1/config.schema.json
 # Visit https://aka.ms/teams-app-test-tool-config-guide for more details on this file.
 
 # This configuration file customizes the Teams context information like chats, teams, and users.
 # It contains mock data for testing Bot Framework APIs or Bot Builder SDK methods such as TeamsInfo.getTeamMembers().
 # You can customize this file to change API response if your bot code uses these APIs.
-version: "0.1.0"
+version: "0.1.1"
 tenantId: 00000000-0000-0000-0000-0000000000001
 bot:
   id: 00000000-0000-0000-0000-00000000000011
   name: Test Bot
+  agenticAppId: 00000000-0000-0000-0000-000000000100
+  agenticUserId: agentic-user-id
+  tenantId: 00000000-0000-0000-0000-000000000001
+  role: agenticUser
 currentUser:
   id: user-id-0
   name: Alex Wilber
