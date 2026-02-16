@@ -368,10 +368,8 @@ The following table lists error codes, error descriptions, and developer actions
 | 404 | `ActivityNotFoundInConversation` | The message ID provided couldn't be found in the conversation. The message is unavailable as it was deleted or auto removed after 24 hours. | Ensure the agent either sends a new message or waits for user input, per business logic. |
 
 ---
-
-send a new TM or message or wait for user input.
-
-It's recommended that if sending a targeted message fails, the agent or bot might choose a fallback mechanism such as sending a 1:1 chat message as a backup.
+> [!TIP]
+> It's recommended that if sending a targeted message fails, the agent or bot might choose a fallback mechanism such as sending a 1:1 chat message as a backup.
 
 For more information on status and error codes for sending messages, see [status codes from bot conversational APIs](../bots/build-conversational-capability.md#status-codes-from-bot-conversational-apis).
 
