@@ -80,7 +80,7 @@ You can enable targeted messages using Teams SDK or REST APIs. Teams SDK support
 ### Use Teams SDK
 -->
 
-Sending a targeted message is similar to sending a regular message. The agent indicates that the message is intended for a specific user in the conversation, and the platform delivers it to that user. The agent doesn't initiate a separate conversation or create a new chat. Key steps for enabling the agent to send a targeted messages are as follows:
+Sending a targeted message is similar to sending a regular message. The agent indicates that the message is intended for a specific user in the conversation, and the platform delivers it to that user. The agent doesn't initiate a separate conversation or create a new chat. Key steps for enabling the agent to send a targeted message are as follows:
 
 1. Detect the scenario to use a targeted message:
 
@@ -337,7 +337,7 @@ Microsoft Graph exposes targeted messaging support. Graph API for Teams chat mes
 
 ## Handle errors
 
-After the agent sends a targeted message using Teams SDK or REST APIs, one of the following responses are returned:
+After the agent sends a targeted message using Teams SDK or REST APIs, one of the following responses is returned:
 
 - If successful, the targeted user gets the message sent by the agent.
 - A send event can fail if the user isn’t a group member or the client doesn’t support targeted messages.
@@ -355,7 +355,7 @@ The following table lists error codes, error descriptions, and developer actions
 | --- | --- | --- | --- | --- |
 | 400 | `Bad argument` | Missing recipient when creating targeted message. | Ensure `WithRecipient`(account, `isTargeted`: `true`) is called with valid Account object. |
 | 400 | `Bad argument` | Recipient passed on update or delete. | Don't pass recipient on update or delete. |
-| 404 | `BotNotInConversationRoster` | Bot is not a member of the conversation. | Ensure bot is installed in the conversation before sending targeted messages. |
+| 404 | `BotNotInConversationRoster` | Bot isn't a member of the conversation. | Ensure bot is installed in the conversation before sending targeted messages. |
 
 # [HTTP](#tab/api)
 
