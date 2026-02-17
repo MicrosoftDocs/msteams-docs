@@ -289,7 +289,5 @@ To use custom emojis in your agent:
 
 ## See also
 
-- Teams SDK
+- Teams SDK [WIP: Links to be added when available]
 - [Teams reacton reference](teams-reactions-reference.md)
-
-[WIP: Links to be added when available]
