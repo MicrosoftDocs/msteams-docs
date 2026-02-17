@@ -1,11 +1,3 @@
----
-title: Agents in Teams - Overview
-description: Learn about agents in Teams and associated organizational goals, why should you build agents on Teams platform, and how do Teams agent help meet business needs.
-ms.localizationpriority: high
-ms.date: 02/06/2025
-ms.topic: reference
----
-
 # Agents in Teams
 
 With the introduction of Teams SDK, developers can create collaborative agents for Teams users. In addition to giving query responses, agents in Teams can summarize conversations, draft documents, manage tasks, automate processes, and provide personalized insights. These agents help users coordinate, communicate, and achieve more efficiently within Teams. Your agents built for Teams can also be extended beyond Teams into other Microsoft 365 hubs, such as Outlook, using Microsoft 365 Agents SDK.
@@ -14,7 +6,7 @@ With the introduction of Teams SDK, developers can create collaborative agents f
 
 Agents in Teams are intelligent and conversational apps built with Teams SDK. They interact through natural language (LLM), connect to business data, and perform actions on behalf of users. Leveraging large language models and Microsoft’s ecosystem, these agents deliver secure, customized AI experiences within Teams and can be extended to other Microsoft 365 hubs using the Microsoft 365 Agents SDK.
 
-:::image type="content" source="../assets/images/agents-in-teams/agent-overview/agents-in-teams.png" alt-text="Image shows what are agents in Teams." border="false" lightbox="../assets/images/agents-in-teams/agent-overview/agents-in-teams.png":::
+![Image](https://learn.microsoft.com/en-us/microsoftteams/platform/assets/images/agents-in-teams/agent-overview/agents-in-teams.png)
 
  An agent in Teams understands user intent, performs tasks, and enhances collaboration.
 
@@ -47,7 +39,7 @@ Here's a knowledge hub scenario for which you can build an agent in Teams:
 - **Course shortlisting and next steps**: Shortlists top courses aligned with career objectives and outlines actionable next steps for each.
 - **Expert-endorsed recommendations**: Recommends leading courses from recognized experts in IT and AI.
 
-:::image type="content" source="../assets/images/agents-in-teams/agent-overview/agent-scenario-academic.png" alt-text="Image shows agent user scenario." lightbox="../assets/images/agents-in-teams/agent-overview/agent-scenario-academic.png" border="false":::
+![Image](https://learn.microsoft.com/en-us/microsoftteams/platform/assets/images/agents-in-teams/agent-overview/agent-scenario-academic.png)
 
 For more information, see [code samples for agents](build-first-agent.md#code-sample).
 
@@ -74,5 +66,5 @@ Here's a list of tools and SDKs you can use to build agents for Teams:
 
 ## Next step
 
-> [!div class="nextstepaction"]
+> 
 > [Build your first agent](build-first-agent.md)
