@@ -13,13 +13,15 @@ This section helps you to know about the prerequisites, install Microsoft 365 Ag
 
 ## Prerequisites
 
-* [Visual Studio Code](https://code.visualstudio.com/Download).
-* [NodeJS](https://nodejs.org) version 16 or later.
-* NPM 8 or later.
+- [Visual Studio Code](https://code.visualstudio.com/Download).
+- [NodeJS](https://nodejs.org) supported versions: >=20.
+- NPM latest version.
+- Microsoft 365 work or organization account.
+- Azure account and subscription.
 
 ## Install Agents Toolkit for Visual Studio Code
 
-You can install Agents Toolkit using **Extensions** in Visual Studio Code, or install it from the Visual Studio Code Marketplace.
+You can install Agents Toolkit using **Extensions** in Visual Studio Code or install it from the Visual Studio Code Marketplace.
 
 # [Visual Studio Code](#tab/vscode)
 
@@ -94,11 +96,9 @@ By default, Visual Studio Code automatically keeps Agents Toolkit up-to-date. If
 
 1. Select **Install Specific Version...** from the dropdown list.
 
-   :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/install-another-version.png" alt-text="Screenshot shows the option to select other version of Visual Studio Code.":::
+   :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/install-another-version.png" alt-text="Screenshot shows the option to select other versions of Visual Studio Code.":::
 
 1. Select the required version to install.
-
-   :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/Olderversions of VS Code.png" alt-text="Screenshot shows versions other than the latest version of Visual Studio Code.":::
 
    Agents Toolkit installs the selected version.
 
@@ -107,14 +107,14 @@ By default, Visual Studio Code automatically keeps Agents Toolkit up-to-date. If
 
 ## Install a prerelease version
 
-Agents Toolkit for Visual Studio Code extension is available in a prerelease version. To install a Agents Toolkit prerelease version, follow these steps:
+Agents Toolkit for Visual Studio Code extension is available in a prerelease version. To install Agents Toolkit prerelease version, follow these steps:
 
 1. Open **Visual Studio Code**.
 1. Select **Extensions** :::image type="icon" source="../assets/images/toolkit-v2/toolkit-fundamentals/extension icon.png" border="false" alt-text="Screenshot shows the extension icon."::: from the Visual Studio Code activity bar.
 1. Enter **Microsoft 365 Agents Toolkit** in the search box.
 1. Click the dropdown arrow next to **Uninstall**.
-   * If you're already on the **pre-release track**, choose **Install Specific Version...**. You will see a list of available **pre-release versions**.
-   * If you're on the **stable track**, the **Install Specific Version...** option will only show **stable versions**.
+   - If you're already on the **pre-release track**, choose **Install Specific Version...**. You'll see a list of available **pre-release versions**.
+   - If you're on the **stable track**, the **Install Specific Version...** option shows only **stable versions**.
 
 > [!NOTE]
 > The **Install Pre-Release Version** option may not appear depending on the update track of your currently installed **Microsoft 365 Agents Toolkit** extension. Use **Install Specific Version...** to manually select a version.
@@ -125,9 +125,9 @@ Agents Toolkit for Visual Studio Code extension is available in a prerelease ver
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Create a new Teams app](~/toolkit/create-new-project.md)
+> [Create a new Teams agent or app](~/toolkit/create-new-project.md)
 
 ## See also
 
-* [Explore Microsoft 365 Agents Toolkit features](~/toolkit/explore-Teams-Toolkit.md)
-* [Prepare to build apps](~/toolkit/build-environments.md)
+- [Explore Microsoft 365 Agents Toolkit capabilities](~/toolkit/explore-Teams-Toolkit.md)
+- [Prepare to build agent or apps](~/toolkit/build-environments.md)
