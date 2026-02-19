@@ -113,30 +113,29 @@ Sending a targeted message is similar to sending a regular message. The agent in
       # [C#](#tab/dotnet1)
 
         ```csharp
-        from microsoft_teams.api import MessageActivity, MessageActivityInput
-        from microsoft_teams.apps import ActivityContext
-        
-        @app.on_message
-        async def handle_message(ctx: ActivityContext[MessageActivity]):
-            # Using with_recipient with is_targeted=True explicitly targets the specified recipient
-            await ctx.send(
-                MessageActivityInput(text="This message is only visible to you!")
-                    .with_recipient(ctx.activity.from_, is_targeted=True)
-            )
+        app.OnMessage(async context =>
+        {
+            // Using WithRecipient with isTargeted=true explicitly targets the specified recipient
+            await context.Send(
+                new MessageActivity("This message is only visible to you!")
+                    .WithRecipient(context.Activity.From, isTargeted: true)
+            );
+        });
         ```
 
       # [Python](#tab/Py1)
 
       ```python
-      import { MessageActivity } from '@microsoft/teams.api';
-
-      app.on('message', async ({ send, activity }) => {
-        // Using withRecipient with isTargeted=true explicitly targets the specified recipient
-        await send(
-          new MessageActivity('This message is only visible to you!')
-            .withRecipient(activity.from, true)
-        );
-      });
+      from microsoft_teams.api import MessageActivity, MessageActivityInput
+      from microsoft_teams.apps import ActivityContext
+    
+      @app.on_message
+      async def handle_message(ctx: ActivityContext[MessageActivity]):
+          # Using with_recipient with is_targeted=True explicitly targets the specified recipient
+          await ctx.send(
+              MessageActivityInput(text="This message is only visible to you!")
+                  .with_recipient(ctx.activity.from_, is_targeted=True)
+          )
       ```
 
       # [HTTP](#tab/api1)
@@ -161,16 +160,16 @@ Sending a targeted message is similar to sending a regular message. The agent in
       # [TypeScript](#tab/ts1)
 
         ```typescript
+        import { MessageActivity, Account } from '@microsoft/teams.api';
+        
         // When sending proactively, you must provide an explicit recipient account
-        public static async Task SendTargetedNotification(string conversationId, Account recipient)
-        {
-            var teams = app.UseTeams();
-            await teams.Send(
-                conversationId,
-                new MessageActivity("This is a private notification just for you!")
-                    .WithRecipient(recipient, isTargeted: true)
-            );
-        }
+        const sendTargetedNotification = async (conversationId: string, recipient: Account) => {
+          await app.send(
+            conversationId,
+            new MessageActivity('This is a private notification just for you!')
+              .withRecipient(recipient, true)
+          );
+        };
         ```
 
       # [C#](#tab/dotnet1)
