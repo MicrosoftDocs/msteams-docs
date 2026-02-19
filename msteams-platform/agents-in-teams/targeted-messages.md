@@ -99,7 +99,6 @@ Sending a targeted message is similar to sending a regular message. The agent in
       # [TypeScript](#tab/ts1)
 
         ```typescript
-
         import { MessageActivity } from '@microsoft/teams.api';
         
         app.on('message', async ({ send, activity }) => {
@@ -163,7 +162,6 @@ Sending a targeted message is similar to sending a regular message. The agent in
       # [TypeScript](#tab/ts1)
 
         ```typescript
-
         // When sending proactively, you must provide an explicit recipient account
         public static async Task SendTargetedNotification(string conversationId, Account recipient)
         {
