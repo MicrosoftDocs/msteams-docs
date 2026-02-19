@@ -114,11 +114,14 @@ Sending a targeted message is similar to sending a regular message. The agent in
       # [C#](#tab/dotnet1)
 
         ```csharp
-        // Send Reactive
-        await context.Send(
-            new MessageActivity("This message is only visible to you!")
-                .WithRecipient(context.Activity.From, isTargeted: true)
-        );
+        app.OnMessage(async context =>
+        {
+            // Using WithRecipient with isTargeted=true explicitly targets the specified recipient
+            await context.Send(
+                new MessageActivity("This message is only visible to you!")
+                    .WithRecipient(context.Activity.From, isTargeted: true)
+            );
+        });
         ```
 
       # [Python](#tab/Py1)
@@ -169,12 +172,16 @@ Sending a targeted message is similar to sending a regular message. The agent in
       # [C#](#tab/dotnet1)
 
         ```csharp
-        // Send Proactive
-        await teams.Send(
-        conversationId,
-        new MessageActivity("Private notification just for you!")
-        .WithRecipient(new Account { Id = userId, Name = userName, Role = Role.User }, isTargeted: true)
-        );
+        // When sending proactively, you must provide an explicit recipient account
+        public static async Task SendTargetedNotification(string conversationId, Account recipient)
+        {
+            var teams = app.UseTeams();
+            await teams.Send(
+                conversationId,
+                new MessageActivity("This is a private notification just for you!")
+                    .WithRecipient(recipient, isTargeted: true)
+            );
+        }
         ```
 
       # [Python](#tab/Py1)
