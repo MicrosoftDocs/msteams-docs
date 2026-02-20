@@ -12,7 +12,7 @@ The Real-time Media Platform enables bots to interact with Microsoft Teams calls
 
 ## Intended use cases
 
-Real-time Media bots are designed for specialized scenarios that require direct access to raw media streams:
+Real-time Media bots are designed for specialized scenarios that require direct access to raw media streams, these integrations are provided via managed partners and in some cases certified by Microsoft.
 
 | Scenario | Description |
 |----------|-------------|
