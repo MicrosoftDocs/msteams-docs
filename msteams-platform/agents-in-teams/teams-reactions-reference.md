@@ -21,7 +21,9 @@ Reference tool for Microsoft Teams developers to find and copy reaction IDs for 
 >
 > The **Diverse** option supports five skin tones. To use it, just append `-tone1` to `-tone5` to the `EmojiID`.
 >
-> :::image type="icon" source="../assets/icons/teams-reactions-ref/diverse-skin-tones.png" border="false":::
+> Diverse reactions support 5 skin tones. Append -tone1 to -tone5 to the ID:
+>
+>:::image type="content" source="../assets/images/agents-in-teams/teams-reactions/diverse-skin-tones.png" alt-text="Image shows the diverse skin tones for emojis.":::
 
 Use these emojis for building agents that receive reaction notifications and send Teams reactions in a conversation. For more information, see [enable agent reactions in Teams].
 
@@ -1141,6 +1143,7 @@ Use these emojis for building agents that receive reaction notifications and sen
 | ♻ **Vegetable garden** | `vegetablegarden` |
 | ♻ **Electric car** | `electriccar` |
 
+<!--
 ### Travel and places - Diverse
 
 | Emoji | EmojiID | Diverse - Skin tone |
@@ -1148,6 +1151,7 @@ Use these emojis for building agents that receive reaction notifications and sen
 | ♻ **Earth in hand, Europe and Africa** | `europeafricainhand` | ♻🏻 `europeafricainhand-tone1` <br> ♻🏼 `europeafricainhand-tone2` <br> ♻🏽 `europeafricainhand-tone3` <br> ♻🏾 `europeafricainhand-tone4` <br> ♻🏿 `europeafricainhand-tone5` |
 | ♻ **Earth in hand, Americas** | `americainhand` | ♻🏻 `americainhand-tone1` <br> ♻🏼 `americainhand-tone2` <br> ♻🏽 `americainhand-tone3` <br> ♻🏾 `americainhand-tone4` <br> ♻🏿 `americainhand-tone5` |
 | ♻ **Earth in hand, Asia and Australia** | `asiaaustraliainhand` | ♻🏻 `asiaaustraliainhand-tone1` <br> ♻🏼 `asiaaustraliainhand-tone2` <br> ♻🏽 `asiaaustraliainhand-tone3` <br> ♻🏾 `asiaaustraliainhand-tone4` <br> ♻🏿 `asiaaustraliainhand-tone5` |
+-->
 
 ## Objects
 
