@@ -81,12 +81,21 @@ You can enable targeted messages using Teams SDK or REST APIs. Teams SDK support
 
 Sending a targeted message is similar to sending a regular message. The agent indicates that the message is intended for a specific user in the conversation, and the platform delivers it to that user. The agent doesn't initiate a separate conversation or create a new chat. Key steps for enabling the agent to send a targeted message are as follows:
 
-1. Detect the scenario to use a targeted message:
+1. Determine when a targeted message is appropriate:
+
+    Use a targeted message when the response is for one person, or when sharing it with others would add noise, distraction, or confusion. Common characteristics of these scenarios include (but are not limited to):
+
+    - The agent's response is relevant only to the user who initiated the agent interaction.
+    - The agent must respond proactively and in context to a specific user’s message or state.
+    - The agent is sharing a personalized recommendation, insight, or follow-up that isn’t relevant to others in the thread or channel.
+
+<!--
 
     The agent must determine to send a targeted message in response to one of the following triggers:
 
     - A user @mentions or selects a button that requires a response only for that user.
     - The agent must send a proactive message to a specific user message in-context.
+-->
 
 2. Use any of the following code snippets to send a targeted message:
 
