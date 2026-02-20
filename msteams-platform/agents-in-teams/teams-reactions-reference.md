@@ -262,7 +262,10 @@ Use these emojis for building agents that receive reaction notifications and sen
 | 🙌 **The Wave 3** | `thewave3` |
 | 🙌 **The Wave 4** | `thewave4` |
 | 🙌 **The Wave 5** | `thewave5` |
+
+<!--
 | (oreoyum) **OREO Yum** | `oreoyum` |
+-->
 
 ## Hand gestures
 
@@ -330,7 +333,10 @@ Use these emojis for building agents that receive reaction notifications and sen
 | 🫦 **Biting lip** | `bitinglip` | NA |
 | 🎤 **Drop the mic** | `dropthemic` | 🎤 `dropthemic-tone1` <br> 🎤 `dropthemic-tone2` <br> 🎤 `dropthemic-tone3` <br> 🎤 `dropthemic-tone4` <br> 🎤 `dropthemic-tone5` |
 | 🤜🤛 **Fist bump** | `fistbump` | 🤜🏻🤛🏻 `fistbump-tone1` <br> 🤜🏼🤛🏼 `fistbump-tone2` <br> 🤜🏽🤛🏽 `fistbump-tone3` <br> 🤜🏾🤛🏾 `fistbump-tone4` <br> 🤜🏿🤛🏿 `fistbump-tone5` |
+
+<!--
 | (support) **Support** | `support` | (support) `support-tone1` <br> (support) `support-tone2` <br> (support) `support-tone3` <br> (support) `support-tone4` <br> (support) `support-tone5` |
+-->
 
 ## People
 
@@ -902,7 +908,10 @@ Use these emojis for building agents that receive reaction notifications and sen
 | 🫙 **Jar** | `jar` |
 | 🥑 **Avocado love** | `avocadolove` |
 | 🦃 **Headless turkey** | `turkey` |
+
+<!--
 | (oreo) **OREO** | `oreo` |
+-->
 
 ## Travel and places
 
