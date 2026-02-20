@@ -26,11 +26,10 @@ Use targeted messages in your agents or bots to send temporary, private messages
 
 ## What is a targeted message
 
-A targeted message, also known as an ephemeral message, lets an agent or a bot send a user-targeted message. It supports all message capabilities like buttons, images, and files, and helps reduce bot spam by keeping shared conversations uncluttered. Targeted messages are:
+A targeted message, also known as an ephemeral message, lets an agent or a bot send a user-targeted message. It supports all [message capabilities](../bots/build-conversational-capability.md#message-content) like buttons, images, Adaptive Cards, and files, and helps reduce bot spam by keeping shared conversations uncluttered. Targeted messages are:
 
-- Triggered in response to user action.
 - Delivered to only one user in a group context.
-- Visible up for 24 hours in the client and can be stored based on organizational policy.
+- Visible for 24 hours in the client and can be stored per organizational policy.
 - Restricted for user actions such as reaction, replies, and forwarding.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :::image type="content" source="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png" alt-text="Image shows user scenarios for targeted messages" border="false" lightbox="../assets/images/agents-in-teams/targeted-messages/targeted-messages-main.png":::

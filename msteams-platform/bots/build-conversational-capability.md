@@ -12,6 +12,8 @@ ms.date: 02/26/2025
 
 Conversational bots communicate with users through messaging, enabling seamless interactions. It can simulate real life conversations with users through text or voice interactions. You must ensure that bot conversations are interactive, dynamic, adaptive, and user friendly.
 
+You can also send [targeted messages](../agents-in-teams/targeted-messages.md) using your agent or bot app.
+
 ## Message content
 
 Messages interaction between your bot and user can include different types of message content that:
