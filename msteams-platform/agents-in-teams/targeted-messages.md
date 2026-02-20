@@ -29,12 +29,15 @@ Use targeted messages in your agents or bots to send temporary, private messages
 A targeted message, also known as an ephemeral message, lets an agent or a bot send a user-targeted message. It supports all [message capabilities](../bots/build-conversational-capability.md#message-content) like buttons, images, Adaptive Cards, and files, and keeps shared conversations uncluttered. Targeted messages are:
 
 - Delivered to only one user in a group context.
-- Visible for 24 hours in the client and can be stored per organizational policy.
+- Auto-purged from clients in 24 hours but might be kept in secure storage based on organizational policy.
 - Restricted for user actions such as reaction, replies, and forwarding.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :::image type="content" source="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png" alt-text="Image shows user scenarios for targeted messages" border="false" lightbox="../assets/images/agents-in-teams/targeted-messages/targeted-messages-main.png":::
 
 To recipients, they appear like normal inline chat messages, tagged **Only you can see this message**.
+
+> [!CAUTION]
+> When you include Adaptive Cards in a targeted message, ensure that a user selects a card, it mustn't inadvertantly create a public response.
 
 <br><br>
 Some common user scenarios include:
@@ -50,7 +53,7 @@ Some common user scenarios include:
 Targeted messages are ideal for contextual information or assistance. Among other benefits, targeted messages enhance user experience as follows:
 
 - **Human-in-the-loop scenarios**: <br>
-    It's useful for scenarios such as authentication prompts, approvals, or informational messages. It lets a user progress through a conversation or a workflow without switching context or seeking help elsewhere.
+    It's useful for scenarios such as authentication prompts, approvals, or informational messages. It lets a user progress through a conversation or a workflow without switching context or seeking help elsewhere. Note that [SSO authentication for bot app](../bots/how-to/authentication/bot-sso-overview.md) isn't supported in channel scope.
 - **Enhanced user experience**: <br>
     Agents can help users engage more openly. A clear message hierarchy that shows only the content that's meant for everyone is permanent in the chat.
 - **Real-time interaction**: <br>
@@ -247,7 +250,7 @@ Your agent can update or delete the targeted message after sending it.
     PUT {cloud}/v3/conversations/{conversationId}/activities/{activityld}
     ```
 
-- **Delete**: If a user doesn't act on a targeted message, the agent can delete it.
+- **Delete**: Agents can delete messages within 24 hours if they have been acted on or are no longer relevant. Messages are automatically purged from clients after 24 hours.
 
     Use one of the following code snippets to delete targeted message:
 
@@ -360,7 +363,7 @@ After the agent sends a targeted message using Teams SDK or REST APIs, one of th
 - A send event can fail if the user isn’t a group member or the client doesn’t support targeted messages.
 
   > [!NOTE]
-  > Teams' backward compatibility ensures older clients don't show targeted messages if unsupported and notifies your agent when a client can't process them.
+  > Teams' backward compatibility ensures older clients don't show targeted messages if unsupported.
 
 Ensure to handle these errors appropriately in your agent.
 
