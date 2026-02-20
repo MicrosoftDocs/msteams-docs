@@ -84,7 +84,6 @@ Sending a targeted message is similar to sending a regular message. The agent in
 
     - A user @mentions or selects a button that requires a response only for that user.
     - The agent must send a proactive message to a specific user message in-context.
-    - The agent must send a recommendation to a user that isn't relevant to other group members.
 
 2. Use any of the following code snippets to send a targeted message:
 
