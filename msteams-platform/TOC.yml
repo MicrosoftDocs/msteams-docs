@@ -263,7 +263,7 @@
     - name: Manifest schema
       href: resources/schema/manifest-schema.md
       displayName: version, validDomain, valid domain, validdomain, properties, meetingExtensionDefinition
-    - name: Developer preview manifest schema
+    - name: Developer preview manifest schema 
       href: resources/dev-preview/developer-preview-intro.md
       displayName: developer preview, preview, public preview
 - name: Add authentication
@@ -947,7 +947,7 @@
         href: concepts/build-and-test/apps-localization.md
         displayname: localizationInfo, Marketplace listings, Partner Center, AppSource
       - name: Localize JSON schema reference
-        href: resources/schema/localization-schema.md
+        href: /microsoft-365/extensibility/schema/loc-schema/root
         displayname: meetingExtensionDefinition
     - name: Cookies and local storage
       href: resources/samesite-cookie-update.md
