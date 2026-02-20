@@ -374,7 +374,7 @@ After the agent sends a targeted message using Teams SDK or REST APIs, one of th
   > [!NOTE]
   > Teams' backward compatibility ensures older clients don't show targeted messages if unsupported.
 
-Ensure to handle these errors appropriately in your agent.
+Ensure to handle these errors appropriately in your agent or bot.
 
 # [Teams SDK](#tab/tsdk)
 
