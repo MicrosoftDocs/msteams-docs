@@ -37,7 +37,7 @@ A targeted message, also known as an ephemeral message, lets an agent or a bot s
 To recipients, they appear like normal inline chat messages, tagged **Only you can see this message**.
 
 > [!CAUTION]
-> When you include Adaptive Cards in a targeted message, ensure that a user selects a card, it mustn't inadvertantly create a public response.
+> When you include Adaptive Cards in a targeted message, ensure that user action on the card mustn't inadvertantly create a public response.
 
 <br><br>
 Some common user scenarios include:
@@ -46,7 +46,7 @@ Some common user scenarios include:
 | --- | --- | --- |
 | Authentication flow | Sending a sign-in card as a targeted message | Enable uninterrupted discussion by a user's log in workflow. |
 | AI or Copilot summary | Sharing discussion details for long-running chats for a new participant | Avoid derailing ongoing discussion. |
-| Support messages | Sending user-specific support messages | Use for personal reminders, onboarding, and quick check-ins without public callouts or spamming the group. |
+| Support messages | Sending user-specific support messages | Send personal reminders, onboarding messages, and quick check-ins without public callouts or spamming the group. |
 
 ## Why use targeted messages
 
@@ -55,7 +55,7 @@ Targeted messages are ideal for contextual information or assistance. Among othe
 - **Human-in-the-loop scenarios**: <br>
     It's useful for scenarios such as authentication prompts, approvals, or informational messages. It lets a user progress through a conversation or a workflow without switching context or seeking help elsewhere. Note that [SSO authentication for bot app](../bots/how-to/authentication/bot-sso-overview.md) isn't supported in channel scope.
 - **Enhanced user experience**: <br>
-    Agents can help users engage more openly. A clear message hierarchy that shows only the content that's meant for everyone is permanent in the chat.
+    A clear message hierarchy that shows only the content that's meant for everyone is permanent in the chat.
 - **Real-time interaction**: <br>
     Prompt responses from the agent to the user's requirement in the group setting reinforces that the agent is alert to user actions.
 <!--
@@ -259,7 +259,7 @@ Your agent can update or delete the targeted message after sending it.
     PUT {cloud}/v3/conversations/{conversationId}/activities/{activityld}
     ```
 
-- **Delete**: Agents can delete messages within 24 hours if they have been acted on or are no longer relevant. Messages are automatically purged from clients after 24 hours.
+- **Delete**: Agents can delete messages within 24 hours if they've been acted on or are no longer relevant. Messages are automatically purged from clients after 24 hours.
 
     Use one of the following code snippets to delete targeted message:
 
