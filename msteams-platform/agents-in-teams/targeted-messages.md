@@ -43,21 +43,19 @@ Some common user scenarios include:
 | --- | --- | --- |
 | Authentication flow | Sending a sign-in card as a targeted message | Enable uninterrupted discussion by a user's log in workflow. |
 | AI or Copilot summary | Sharing discussion details for long-running chats for a new participant | Avoid derailing ongoing discussion. |
-| Help users | Sending user-specific messages for supporting users | Support with personal reminders, onboard new recipients, get information without public callouts or repetitive group notifications. |
+| Support messages | Sending user-specific messages for supporting users | Support with personal reminders, onboard new recipients, get information without public callouts or repetitive group notifications. |
+| Support messages | Sending user-specific support messages | Use for personal reminders, onboarding, and quick check-ins without public callouts or spamming the group. |
 
 ## Why use targeted messages
 
 Targeted messages are ideal for contextual information or assistance. Among other benefits, targeted messages enhance user experience as follows:
 
-- **Real-time interaction**: <br>
-    Prompt responses from the agent to the user's requirement in the group setting reinforces that the agent is alert to user actions.
-
-- **Enhanced user experience**: <br>
-    Agents can help users engage more openly. A clear message hierarchy that shows only the content that's meant for everyone is permanent in the chat.
-
 - **Human-in-the-loop scenarios**: <br>
     It's useful for scenarios such as authentication prompts, approvals, or informational messages. It lets a user progress through a conversation or a workflow without switching context or seeking help elsewhere.
-
+- **Enhanced user experience**: <br>
+    Agents can help users engage more openly. A clear message hierarchy that shows only the content that's meant for everyone is permanent in the chat.
+- **Real-time interaction**: <br>
+    Prompt responses from the agent to the user's requirement in the group setting reinforces that the agent is alert to user actions.
 <!--
 Targeted messages are temporary, user-specific messages that appear in a group chat, meeting, or channel. Agents can support users without adding permanent noise for the rest of the group. They can include most message capabilities like interactive Adaptive Cards with buttons, images, or file attachments. For example, use a targeted message to share a sign‑in card or an error message with a help link. Unlike standard messages, targeted messages are:
 
