@@ -21,8 +21,6 @@ Reference tool for Microsoft Teams developers to find and copy reaction IDs for 
 >
 > The **Diverse** option supports five skin tones. To use it, just append `-tone1` to `-tone5` to the `EmojiID`.
 >
-> Diverse reactions support 5 skin tones. Append -tone1 to -tone5 to the ID:
->
 >:::image type="content" source="../assets/images/agents-in-teams/teams-reactions/diverse-skin-tones.png" alt-text="Image shows the diverse skin tones for emojis." border="false":::
 
 Use these emojis for building agents that receive reaction notifications and send Teams reactions in a conversation. For more information, see [enable agent reactions in Teams](agent-reactions.md).
