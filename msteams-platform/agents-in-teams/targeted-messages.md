@@ -26,7 +26,7 @@ Use targeted messages in your agents or bots to send temporary, private messages
 
 ## What is a targeted message
 
-A targeted message, also known as an ephemeral message, lets an agent or a bot send a user-targeted message. It supports all [message capabilities](../bots/build-conversational-capability.md#message-content) like buttons, images, Adaptive Cards, and files, and helps reduce bot spam by keeping shared conversations uncluttered. Targeted messages are:
+A targeted message, also known as an ephemeral message, lets an agent or a bot send a user-targeted message. It supports all [message capabilities](../bots/build-conversational-capability.md#message-content) like buttons, images, Adaptive Cards, and files, and keeps shared conversations uncluttered. Targeted messages are:
 
 - Delivered to only one user in a group context.
 - Visible for 24 hours in the client and can be stored per organizational policy.
@@ -34,7 +34,7 @@ A targeted message, also known as an ephemeral message, lets an agent or a bot s
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :::image type="content" source="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png" alt-text="Image shows user scenarios for targeted messages" border="false" lightbox="../assets/images/agents-in-teams/targeted-messages/targeted-messages-main.png":::
 
-From a single user's perspective, it appears as regular inline messages in a conversation that appears with the label **Only you can see this message** tagged on them.
+To recipients, they appear like normal inline chat messages, tagged **Only you can see this message**.
 
 <br><br>
 Some common user scenarios include:
@@ -377,6 +377,7 @@ The following table lists error codes, error descriptions, and developer actions
 | 400 | `Bad argument` | Missing recipient when creating targeted message. | Ensure `WithRecipient`(account, `isTargeted`: `true`) is called with valid Account object. |
 | 400 | `Bad argument` | Recipient passed on update or delete. | Don't pass recipient on update or delete. |
 | 404 | `BotNotInConversationRoster` | Bot isn't a member of the conversation. | Ensure bot is installed in the conversation before sending targeted messages. |
+| 404 | `ActivityNotFoundInConversation` | The message ID provided couldn't be found in the conversation. The message is unavailable as it was deleted or auto removed after 24 hours. | Ensure the agent either sends a new targeted message or waits for user input, as per business logic. |
 
 # [HTTP](#tab/api)
 
