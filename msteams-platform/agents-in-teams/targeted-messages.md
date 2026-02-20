@@ -43,7 +43,6 @@ Some common user scenarios include:
 | --- | --- | --- |
 | Authentication flow | Sending a sign-in card as a targeted message | Enable uninterrupted discussion by a user's log in workflow. |
 | AI or Copilot summary | Sharing discussion details for long-running chats for a new participant | Avoid derailing ongoing discussion. |
-| Support messages | Sending user-specific messages for supporting users | Support with personal reminders, onboard new recipients, get information without public callouts or repetitive group notifications. |
 | Support messages | Sending user-specific support messages | Use for personal reminders, onboarding, and quick check-ins without public callouts or spamming the group. |
 
 ## Why use targeted messages
