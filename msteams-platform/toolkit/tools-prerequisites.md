@@ -1,48 +1,49 @@
 ---
-title: Prerequisites to Create Teams App
+title: Prerequisites to Create Teams Agent or App
 author: zyxiaoyuer
-description: Learn about the tools required to build a Teams app in Visual Studio Code, how to prepare accounts, verify and enable custom app upload.
-ms.author: surbhigupta
+description: Learn about the tools required to build a Teams agent or app in Visual Studio Code, how to prepare accounts, verify and enable custom upload.
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 02/21/2024
 ---
-# Prerequisites for creating your Teams app
+# Prerequisites for creating your Teams agent or app
 
-Before you create your Microsoft Teams app project, ensure that the prerequisites are in place. You must:
+Before you create your Microsoft Teams project, ensure that the prerequisites are in place. You must:
 
-* [Install required tools to build your Teams app](#install-required-tools-to-build-your-teams-app)
-* [Prepare Accounts to build your Teams app](#accounts-to-build-your-teams-app)
+* [Install required tools to build your Teams project workspace](#install-required-tools-to-build-your-teams-agent-or-app)
+* [Prepare Accounts to build your Teams project](#accounts-to-build-your-teams-agent-or-app)
 * [Verify custom app upload permission](#verify-custom-app-upload-permission)
 
-## Install required tools to build your Teams app
+## Install required tools to build your Teams workspace
 
-Ensure the following requirements are met before you start building your Teams app:
+Ensure the following requirements are met before you start building your Teams agent or app:
 
-| &nbsp; | Tools | Purpose | For environment type|
+| &nbsp; | Tools | Purpose | For environment type |
 | --- | --- | --- | --- |
 | **Required** | &nbsp; | &nbsp; | &nbsp; |
-| &nbsp; | [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) (previously known as Teams Toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. | JavaScript and SPFx |
-| &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Collaborate with everyone you work with through apps for chat, meetings, and call - all in one place.| JavaScript and SPFx|
-| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).| JavaScript and SPFx|
-   | &nbsp; |[Node Package Manager (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx) | Install and manage packages for use in both Node.js and ASP.NET Core applications.| JavaScript and SPFx|
-| &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. | JavaScript and SPFx|
-| &nbsp; | [Microsoft Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SPFx build environments. Use the latest version. | JavaScript and SPFx|
+| &nbsp; | [Microsoft 365 Agents Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) (previously known as Teams Toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. | JavaScript and TypeScript |
+| &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Collaborate with everyone you work with through apps for chat, meetings, and call - all in one place.| JavaScript and TypeScript |
+| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).| JavaScript and TypeScript |
+| &nbsp; | [Node Package Manager (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx) | Install and manage packages for use in both Node.js and ASP.NET Core applications.| JavaScript and TypeScript |
+| &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. | JavaScript and TypeScript|
+| &nbsp; | [Microsoft Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or Python (in developer preview) build environments. Use the latest version. | JavaScript and TypeScript |
 | **Optional** | &nbsp; | &nbsp; | &nbsp; |
-| &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Access stored data or deploy a cloud-based back end for your Teams app in Azure. | JavaScript|
-| &nbsp; | [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) or [React Developer Tools for Microsoft&nbsp;Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil) | A browser DevTools extension for the open-source React JavaScript library. | JavaScript|
-| &nbsp; | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | A browser-based tool that lets you run a query from Microsoft Graph data. | JavaScript and SPFx|
-| &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | A web-based portal to configure, manage, and publish your Teams app to your organization or the Teams Store.| JavaScript and SPFx|
+| &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Access stored data or deploy a cloud-based back end for your Teams app in Azure. | JavaScript |
+| &nbsp; | [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) or [React Developer Tools for Microsoft&nbsp;Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil) | A browser DevTools extension for the open-source React JavaScript library. | JavaScript |
+| &nbsp; | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | A browser-based tool that lets you run a query from Microsoft Graph data. | JavaScript and TypeScript |
+| &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | A web-based portal to configure, manage, and publish your Teams app to your organization or the Teams Store.| JavaScript and TypeScript |
 
-## Accounts to build your Teams app
+## Accounts to build your Teams agent or app
 
 Ensure that you have the following accounts before you start building your Teams app:
 
-| Accounts | Purpose | For environment type|
-| --- | --- | ---|
-|[Microsoft 365 work or school account](#microsoft-365-developer-program)|Teams developer account while developing an app.| JavaScript, TypeScript, SPFx, and C# or Blazor. |
-|[Azure account](#azure-account)|Back-end resources on Azure.| JavaScript, TypeScript, SPFx, and C# or Blazor. |
-|[SharePoint collection site administrator account](#sharepoint-collection-site-administrator-account) |Deployment for hosting.| SPFx. |
+| Accounts | Purpose | For environment type |
+| --- | --- | --- |
+| [Microsoft 365 work or school account](#microsoft-365-developer-program) | Teams developer account while developing an app. | JavaScript, TypeScript, Python (in developer preview), and C#. |
+| [Azure account](#azure-account)|Back-end resources on Azure. | JavaScript, TypeScript, Python (in developer preview), and C#. |
+
+> [!TIP]
+> If you want to your agent or app to have SharePoint support, you must have a [SharePoint collection site administrator account](/sharepoint/sharepoint-admin-role).
 
 ### Microsoft 365 developer program
 
@@ -67,7 +68,7 @@ You can sign up for the developer program using one of the following account typ
 
     :::column-end:::
     :::column span="1":::
-             :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/personal-account-icon.png" alt-text="Screenshot shows the personal account icon.":::
+             :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/personal-account-icon.png" alt-text="Screenshot shows the personal account icon." border="false":::
    :::column-end:::
 
   :::row-end:::
@@ -84,7 +85,7 @@ You can sign up for the developer program using one of the following account typ
 
     :::column-end:::
     :::column span="1":::
-             :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/work-account-icon.png" alt-text="Screenshot shows the work account icon.":::
+             :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/work-account-icon.png" alt-text="Screenshot shows the work account icon." border="false":::
     :::column-end:::
 
   :::row-end:::
@@ -95,25 +96,23 @@ To create a free Microsoft 365 developer account:
 
 1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
 1. Select **Join Now**.
-1. Set up your administrator account subscription.
-
-   After the completion of the subscription, the following information appears:
-
-    :::image type="content" source="../assets/images/toolkit-v2/m365-account_1.png" alt-text="Screenshot shows the M365 Account subscription options.":::
+1. Set up your administrator account subscription. For more information, see [set up a Microsoft 365 developer sandbox subscription](/office/developer-program/microsoft-365-developer-program-get-started)
 
 ### Azure account
 
 An Azure account allows you to host a Teams app or the back-end resources for your Teams app to Azure. You can do this using Agents Toolkit in Visual Studio Code. You must have an Azure subscription in the following scenarios:
 
-* If you already have an existing app on a different cloud provider other than Azure, and you want to integrate the app on Teams platform.
+* If you already have an existing app on a cloud provider other than Azure, and you want to integrate the app on Teams platform.
 * If you want to host the back-end resources for your app using another cloud provider, or on your own servers if they're available in the public domain.
 
 > [!NOTE]
 > You can use Azure account to provision Azure resource to host your Teams app. You can [create a free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn) in case you don't have any. If you don't use Agents Toolkit to provision and deploy, Azure account isn't required.
 
+<!--
 ### SharePoint collection site administrator account
 
 While creating Teams app using SPFx environment, you must have a SharePoint collection site administrator account. It’s required for deploying and hosting your app on SharePoint site. If you're using a Microsoft 365 developer program tenant, you can use the administrator account you created at the time.
+-->
 
 ## Verify custom app upload permission
 
@@ -137,7 +136,7 @@ You can use this method to verify custom app upload permission only after you ha
 
 1. Select **Sign in to Microsoft 365** under **ACCOUNTS**.
 
-    :::image type="content" source="../assets/images/toolkit-v2/accounts1_1.png" alt-text="Screenshot shows the accounts details.":::
+    :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/accounts1_1.png" alt-text="Screenshot shows the accounts details.":::
 
 1. Verify if you can see the option **Custom App Upload Enabled** as shown in the following image:
 
@@ -173,7 +172,7 @@ If you have admin rights, you can enable custom app upload:
 
   1. Select the :::image type="icon" source="../assets/images/toolkit-v2/showall icon.PNG"::: icon > **Teams**.
 
-       :::image type="content" source="../assets/images/toolkit-v2/m365-admin-center_1.png" alt-text="Screenshot shows the Teams client in the left pane of Microsoft 365 Admin center.":::
+       :::image type="content" source="../assets/images/toolkit-v2/m365-admin-center.png" alt-text="Screenshot shows the Teams client in the left pane of Microsoft 365 Admin center." border="false":::
 
      > [!Note]
      > It can take up to 24 hours for the Teams option to appear. You can [upload your custom app to a Teams environment](/microsoftteams/upload-custom-apps) for testing and validation.
@@ -181,7 +180,7 @@ If you have admin rights, you can enable custom app upload:
   1. Sign in to Microsoft Teams admin center with your admin credentials.
   1. Select the :::image type="icon" source="../assets/images/toolkit-v2/showall icon.PNG"::: icon > **Teams apps** > **Setup policies**.
 
-     :::image type="content" source="../assets/images/toolkit-v2/m365-admin-center1_1.png" alt-text="Screenshot shows the Setup policies under Teams apps in Microsoft 365 Admin center.":::
+     :::image type="content" source="../assets/images/toolkit-v2/m365-admin-center-policies.png" alt-text="Screenshot shows the Setup policies under Teams apps in Microsoft 365 Admin center." border="false":::
 
   1. Select **Global (Org-wide default)**.
 

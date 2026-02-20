@@ -45,8 +45,8 @@ Let's take a tour of Agents Toolkit.
 
 | Select | To... |
 | --- | --- |
-| **Explorer** :::image type="icon" source="../assets/images/toolkit-v2/file-explorer-icon.PNG":::  | View the directory structure of the app. |
-| **Run and Debug** :::image type="icon" source="../assets/images/toolkit-v2/run-debug-icon.PNG":::  | Start the local or remote debug process. |
+| **Explorer** :::image type="icon" source="../assets/images/toolkit-v2/file-explorer-icon.PNG"::: | View the directory structure of the app. |
+| **Run and Debug** :::image type="icon" source="../assets/images/toolkit-v2/run-debug-icon.PNG"::: | Start the local or remote debug process. |
 | **Microsoft 365 Agents Toolkit** :::image type="icon" source="../assets/images/toolkit-v2/toolkit-sidebar-icon.PNG"::: | View the task pane  in the Agents Toolkit. |
 
 From the task pane, you can see the following sections:

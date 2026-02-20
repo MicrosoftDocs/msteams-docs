@@ -45,9 +45,11 @@
       - name: Build apps using Agents Toolkit 
         href: toolkit/build-environments.md
         items:
-        - name: Prerequisites to create Teams app
+        - name: Prerequisites to create Teams agent or app
           href: toolkit/tools-prerequisites.md
           displayName: accounts to build your Teams app 
+        - name: Create new Teams agent project
+          href: agents-in-teams/build-first-agent.md
         - name: Create new Teams app project
           href: toolkit/create-new-project.md
       - name: Develop your app in VSC

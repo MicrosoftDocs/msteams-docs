@@ -9,27 +9,19 @@ ms.date: 03/14/2022
 
 # Create a new Teams app
 
-In this section, you can learn how to create a new Microsoft Teams project using Microsoft Visual Studio Code.
-
-## Create a new Teams project using Visual Studio Code
-
-You can build a new Teams project by selecting **Create a New Agent/App** in Microsoft 365 Agents Toolkit (previously known as Teams Toolkit). You can start from built-in Teams app templates or start from official Teams app samples in Agents Toolkit. What's more, Agents Toolkit  supports to start with Outlook Add-in templates to build your own Outlook Add-ins.
-
-:::image type="content" source="../assets/images/toolkit-v2/first-tab/select-capabilities-tabapp_1.png" alt-text="Screenshot shows the App Capability options.":::
+In this section, you can learn how to create a new Microsoft Teams project using Microsoft Visual Studio Code. You can build a new Teams project by selecting **Create a New Agent/App** in Microsoft 365 Agents Toolkit (previously known as Teams Toolkit). You can start from built-in Teams app templates or start from official Teams app samples in Agents Toolkit. What's more, Agents Toolkit  supports to start with Outlook Add-in templates to build your own Outlook Add-ins.
 
 To start with Teams capabilities, you can create the following types of Teams app:
 
 | App Types | Definition |
 | --- | --- |
-| **Scenario-based Teams apps** | This group of templates are designed for particular abstracted business scenarios that your teams app can serve for. For example notification bot, command bot, SSO-enabled tab, or Dashboard tab app. |
+| **Scenario-based Teams apps** | This group of templates are designed for particular abstracted business scenarios that your teams app can serve for. |
 | **Basic Teams apps** | Basic Teams apps are just hello world Teams tab, bot, or message extension that you can create and customize based on your requirement. |
 | **Extend Teams App across Microsoft 365** | This group of Teams app can be installed and run on Outlook and Office.com. |
 
-## Create a new Teams app
+## Create a new Teams app using Visual Studio Code
 
-The process to create a new Teams app is similar for all types of apps.
-
-To create a basic Teams app:
+The process to create a new Teams app is similar for all types of apps. To create a basic Teams app:
 
 1. Open **Visual Studio Code**.
 
@@ -43,7 +35,7 @@ To create a basic Teams app:
 
 1. In this example, select **Tab** as app capability.
 
-    :::image type="content" source="../assets/images/toolkit-v2/first-tab/select-capabilities-tabapp_1.png" alt-text="Screenshot shows the App Capability to select.":::
+    :::image type="content" source="../assets/images/toolkit-v2/first-tab/select-capabilities-tabapp.png" alt-text="Screenshot shows the App Capability to select.":::
 
 1. Select **Default folder** to store your project root folder in the default location.
 
@@ -53,11 +45,7 @@ To create a basic Teams app:
 
     1. Select **Browse**.
 
-        :::image type="content" source="../assets/images/toolkit-v2/first-tab/select-browse_1.png" alt-text="Screenshot shows the Browse option highlighted to browse for storage.":::
-
     1. Select the location for project workspace.
-
-        :::image type="content" source="../assets/images/toolkit-v2/select-folder_1.png" alt-text="Screenshot shows the Select Folder option highlighted.":::
 
     The folder you select is the location for your project workspace.
 
@@ -107,6 +95,8 @@ To learn more about the directory structure of different types of basic Teams ap
 | For message extension app | [Build your first message extension app using JavaScript](../get-started/tutorials.md#build-your-first-message-extension-app-using-javascript) |
 
 </details>
+
+<!--
 <br>
 <details>
 <summary><b>Directory structure for scenario-based Teams app</b></summary>
@@ -148,6 +138,7 @@ To learn more about the directory structure of different types of scenario-based
 
 </details>
 <br>
+-->
 
 For trying out more step-by-step guiges on building apps, see [Tutorials](../get-started/tutorials.md).
 
