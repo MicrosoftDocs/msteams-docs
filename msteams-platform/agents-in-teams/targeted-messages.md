@@ -390,7 +390,7 @@ The following table lists error codes, error descriptions, and developer actions
 > [!TIP]
 > It's recommended that if sending a targeted message fails, the agent or bot might choose a fallback mechanism such as sending a 1:1 chat message as a backup.
 
-For more information on status and error codes for sending messages, see [status codes from bot conversational APIs](../bots/build-conversational-capability.md#status-codes-from-bot-conversational-apis).
+You’ll find more details on the other error codes for sending messages [here](../bots/build-conversational-capability.md#status-codes-from-bot-conversational-apis).
 
 <!--
 ## Learn about targeted messages
@@ -438,4 +438,5 @@ Among other benefits, targeted messages enhance user experience as follows:
 
 ## See also
 
-[Proactive messages](../bots/how-to/conversations/send-proactive-messages.md)
+- [Proactive messages](../bots/how-to/conversations/send-proactive-messages.md)
+- [Send and receive messages](../bots/build-conversational-capability.md)
