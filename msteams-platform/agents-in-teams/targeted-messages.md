@@ -36,7 +36,7 @@ A targeted message, also known as an ephemeral message, lets an agent or a bot s
 
 To recipients, they appear like normal inline chat messages, tagged **Only you can see this message**.
 
-> [!CAUTION]
+> [!NOTE]
 > When you include Adaptive Cards in a targeted message, ensure that user action on the card mustn't inadvertantly create a public response.
 
 <br><br>
