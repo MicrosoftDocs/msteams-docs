@@ -68,7 +68,7 @@ Targeted messages are best suited for short-term, action-driven communication. U
 
 ## Targeted message developer experience
 
-You can enable targeted messages using Teams SDK or REST APIs. Teams SDK supports C#, TypeScript, and Python (for developer preview). You can enable your agent or bot to send, edit, and remove targeted messages in the conversation.
+You can enable targeted messages using Teams SDK or REST APIs. Teams SDK supports C#, TypeScript, and Python (in dev preview). You can enable your agent or bot to send, edit, and remove targeted messages in the conversation.
 
 ### Send a targeted message
 
