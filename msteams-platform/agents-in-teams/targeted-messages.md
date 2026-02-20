@@ -49,8 +49,8 @@ Some common user scenarios include:
 
 Targeted messages are ideal for contextual information or assistance. Among other benefits, targeted messages enhance user experience as follows:
 
-- **Agent sensitivity and alertness**: <br>
-    Real-time responses from the agent to the user's requirement in the group setting reinforces that the agent is alert to user actions.
+- **Real-time interaction**: <br>
+    Prompt responses from the agent to the user's requirement in the group setting reinforces that the agent is alert to user actions.
 
 - **Enhanced user experience**: <br>
     Agents can help users engage more openly. A clear message hierarchy that shows only the content that's meant for everyone is permanent in the chat.
