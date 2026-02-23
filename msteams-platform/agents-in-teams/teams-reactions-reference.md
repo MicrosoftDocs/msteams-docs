@@ -29,7 +29,7 @@ Use these emojis for building agents that receive reaction notifications and sen
 > [!div class="op_single_selector"]
 >
 > - [All categories](#teams-reactions-reference)
-> - [Reactions](#smileys)
+> - [Reactions](#reactions)
 > - [Hand gestures](#hand-gestures)
 > - [People](#people)
 > - [Animals and nature](#animals-and-nature)
