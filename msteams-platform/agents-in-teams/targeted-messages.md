@@ -256,7 +256,7 @@ Your agent can update or delete the targeted message after sending it.
 
     ```rest
     PUT {cloud}/v3/conversations/{conversationId}/activities
-    PUT {cloud}/v3/conversations/{conversationId}/activities/{activityld}
+    PUT {cloud}/v3/conversations/{conversationId}/activities/{activityId}
     ```
 
 - **Delete**: Agents can delete messages within 24 hours if they've been acted on or are no longer relevant. Messages are automatically purged from clients after 24 hours.
@@ -290,7 +290,7 @@ Your agent can update or delete the targeted message after sending it.
 
     ```rest
     DELETE {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
-    DELETE {cloud}/v3/conversations/{conversationId}/activities/{activityld}?isTargetedActivity=true
+    DELETE {cloud}/v3/conversations/{conversationId}/activities/{activityId}?isTargetedActivity=true
     ```
 
 <!--
@@ -319,7 +319,7 @@ Key steps for enabling targeted messages:
 
     ```rest
        POST {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
-       POST {cloud}/v3/conversations/{conversationId}/activities/{activityld}?isTargetedActivity=true
+       POST {cloud}/v3/conversations/{conversationId}/activities/{activityId}?isTargetedActivity=true
     ```
 
 1. **Handle send results and fallbacks**:
@@ -343,7 +343,7 @@ Key steps for enabling targeted messages:
 
         ```rest
            PUT {cloud}/v3/conversations/{conversationId}/activities
-           PUT {cloud}/v3/conversations/{conversationId}/activities/{activityld}
+           PUT {cloud}/v3/conversations/{conversationId}/activities/{activityId}
         ```
 
     - **Delete**: If a user doesn't act on a targeted message, the agent can delete it using delete message API. It avoids leaving stale content.
@@ -352,7 +352,7 @@ Key steps for enabling targeted messages:
 
         ```rest
            DELETE {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
-           DELETE {cloud}/v3/conversations/{conversationId}/activities/{activityld}?isTargetedActivity=true
+           DELETE {cloud}/v3/conversations/{conversationId}/activities/{activityId}?isTargetedActivity=true
         ```
 -->
 
