@@ -26,7 +26,7 @@ Map emojis and reactions to specific agent actions and use `EmojiID` to send the
 
 ## Enable an agent to add reactions
 
-You can use the `addReaction` method from Teams SDK or call the `add reaction` API directly to send reactions to messages. To enable agents to send reactions to a message:
+You can use the `addReaction` method from Teams SDK or call the `add reaction` API directly to send reactions to messages. Reactions sent by agents are limited to two reactions per second. To enable agents to send reactions to a message:
 
 1. Use the [Teams reactions reference](teams-reactions-reference.md) for getting the `EmojiID` for the reactions that you want to add. You can also select a particular [skin tone for the emoji](#modify-skin-tone-for-emojis) by selecting its `EmojiID`.
 1. Use the `addReaction` method from Teams SDK or call the `add reaction` API to send reactions to messages.
@@ -289,7 +289,6 @@ To use custom emojis in your agent:
 - Employ reactions to improve user experience such as acknowledging a message or providing succinct feedback.
 - Avoid excessive use of reactions to minimize notification fatigue for users.
 - Ensure your agents’ reactions fit the message context and avoid having your agent send multiple reactions to the same message without first removing any existing reactions.
-- Reactions sent by agents are limited to two reactions per second.
 
 ## See also
 
