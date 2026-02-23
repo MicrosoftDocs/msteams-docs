@@ -14,6 +14,12 @@ Developer tool for discovering and copying Microsoft Teams reaction IDs
 
 Reference tool for Microsoft Teams developers to find and copy reaction IDs for agent and bot development and app integrations.
 
+A handy reference for Microsoft Teams developers to quickly find and copy reaction IDs for agents, bots, and app integrations.
+
+A quick-reference tool for Microsoft Teams developers to easily find and copy reaction IDs for agent, bot, and app integration work.
+
+This reference tool is designed for Microsoft Teams developers to easily locate and copy reaction IDs, supporting efficient agent and bot development as well as app integrations.
+
 - Copy `EmojiID` to clipboard
 - Diverse option for skin tone variants
 
