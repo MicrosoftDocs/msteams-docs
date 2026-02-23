@@ -44,16 +44,20 @@ Some common user scenarios include:
 
 | Scenario | Use for ... | To ... |
 | --- | --- | --- |
-| Authentication flow | Sending a sign-in card as a targeted message | Enable uninterrupted discussion by a user's log in workflow. |
 | AI or Copilot summary | Sharing discussion details for long-running chats for a new participant | Avoid derailing ongoing discussion. |
 | Support messages | Sending user-specific support messages | Send personal reminders, onboarding messages, and quick check-ins without public callouts or spamming the group. |
+
+<!--| Authentication flow | Sending a sign-in card as a targeted message | Enable uninterrupted discussion by a user's log in workflow. |-->
 
 ## Why use targeted messages
 
 Targeted messages are ideal for contextual information or assistance. Among other benefits, targeted messages enhance user experience as follows:
 
 - **Human-in-the-loop scenarios**: <br>
-    It's useful for scenarios such as authentication prompts, approvals, or informational messages. It lets a user progress through a conversation or a workflow without switching context or seeking help elsewhere. Note that [SSO authentication for bot app](../bots/how-to/authentication/bot-sso-overview.md) isn't supported in channel scope.
+    It's useful for scenarios such as approvals, or informational messages. It lets a user progress through a conversation or a workflow without switching context or seeking help elsewhere.
+
+<!--Note that [SSO authentication for bot app](../bots/how-to/authentication/bot-sso-overview.md) isn't supported in channel scope.-->
+
 - **Enhanced user experience**: <br>
     A clear message hierarchy that shows only the content that's meant for everyone is permanent in the chat.
 - **Real-time interaction**: <br>
