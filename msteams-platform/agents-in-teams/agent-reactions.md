@@ -78,14 +78,14 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 # [API](#tab/h1)
 
-```rest
+```REST
 PUT {cloud}/{tenantId}/v3/conversations/{conversationId}/activities/{activityId}/reaction/{reactionType}
 ```
 
 Where,
 
 - `conversationId` is the thread or chat identifier.
-- `activityId` is the message or activity ID.
+- `activityId` represents the message or activity ID.
 - `reactionId` is the `EmojiID` that you want to add.
 
 ---
@@ -146,7 +146,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 # [API](#tab/h1)
 
-```rest
+```REST
 DELETE {cloud}/{tenantId}/v3/conversations/{conversationId}/activities/{activityId}/reaction/{reactionType}
 ```
 
@@ -251,7 +251,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 
 # [API](#tab/h1)
 
-```rest
+```REST
 PUT {cloud}/{tenantId}/v3/conversations/{conversationId}/activities/{activityId}/reaction/1f44b_wavinghand-tone4
 ```
 
