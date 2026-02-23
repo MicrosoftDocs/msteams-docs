@@ -90,6 +90,9 @@ Where,
 
 ---
 
+> [!NOTE]
+> If the agent tries to react to a message it has already reacted to, the action succeeds but no duplicate reaction is added.
+
 ## Enable an agent to remove reactions
 
 You can choose to enable agents to remove reactions from messages. To enable agents to remove reactions from a message:
@@ -169,9 +172,10 @@ The following are the success and error codes:
 | Response codes | Description | Action |
 | --- | --- | --- |
 | `200` | Reaction added successfully | NA |
-| `200` | Duplicate reaction added | See [best practices](#best-practices) to for sending multiple reactions to messages |
 | `200` | Deleted reaction successfully | NA |
 | `200` | Deleted non-existent reaction | NA |
+
+<!--| `200` | Duplicate reaction added | See [best practices](#best-practices) to for sending multiple reactions to messages |-->
 
 ### Error codes
 
