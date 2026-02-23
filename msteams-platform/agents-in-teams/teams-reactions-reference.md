@@ -8,11 +8,9 @@ ms.localizationpriority: high
 
 # Teams Reactions Reference
 
-<!--Developer tool for discovering and copying Microsoft Teams reaction IDs
+<!--Developer tool for discovering and copying Microsoft Teams reaction IDs-->
 
-**Quick guide**:-->
-
-Reference tool for Microsoft Teams developers to find and copy reaction IDs for agent and bot development and app integrations.
+A quick-reference tool for Microsoft Teams developers to easily find and copy reaction IDs for agent, bot, and app integration work.
 
 > [!TIP]
 >
