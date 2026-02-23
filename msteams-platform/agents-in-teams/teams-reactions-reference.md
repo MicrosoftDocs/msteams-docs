@@ -10,7 +10,7 @@ ms.localizationpriority: high
 
 <!--Developer tool for discovering and copying Microsoft Teams reaction IDs-->
 
-This is a quick-reference tool for Microsoft Teams developers to easily find and copy reaction IDs for agent, bot, and app integration work. Use these emojis for building agents that receive reaction notifications and send Teams reactions in a conversation. For more information, see [enable agent reactions in Teams](agent-reactions.md).
+This is a quick-reference tool for developers to easily find and copy reaction IDs for agent, bot, and app integration work. Use these emojis for building agents that receive reaction notifications and send Teams reactions in a conversation. For more information, see [enable agent reactions in Teams](agent-reactions.md).
 
 > [!TIP]
 >
