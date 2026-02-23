@@ -181,9 +181,12 @@ The following are the success and error codes:
 
 | Response codes | Error message | Description | Action |
 | --- | --- | --- | --- |
-| `403` | `ApiNotEnabledException` | Feature flag not enabled | The feature flag guarding this feature is not enabled |
 | `404` | `ConversationNotFound` | Conversation not found | The target thread cannot be located, or the agent doesn’t have access to it. |
 | `429` | Too many requests | Throttling limit reached | Reduce the frequency of message reaction calls. Agent reactions are limited to two reactions per second. |
+
+You can find more information on error codes for sending messages [here](../bots/build-conversational-capability.md).
+
+<!--| `403` | `ApiNotEnabledException` | Feature flag not enabled | The feature flag guarding this feature is not enabled |-->
 
 <!--
 ## Customize Emojis
