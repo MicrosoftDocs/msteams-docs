@@ -14,7 +14,7 @@ You can build agents to communicate beyond text using reactions, emojis, and con
 
 :::image type="content" source="../assets/images/agents-in-teams/teams-reactions/agent-reactions.png" alt-text="Image shows agent reactions in Teams."  border="false" lightbox="../assets/images/agents-in-teams/teams-reactions/agent-reactions.png":::
 
-Map emojis and reactions to specific agent actions and use `EmojiID` to send the right reaction in the conversation.
+Map emojis and reactions to specific agent actions and use reaction ID to send the right reaction in the conversation.
 
 **Key highlights**:
 
@@ -28,7 +28,7 @@ Map emojis and reactions to specific agent actions and use `EmojiID` to send the
 
 You can use the `addReaction` method from Teams SDK or call the `add reaction` API directly to send reactions to messages. Reactions sent by agents are limited to two reactions per second. To enable agents to send reactions to a message:
 
-1. Use the [Teams reactions reference](teams-reactions-reference.md) for getting the `EmojiID` for the reactions that you want to add. You can also select a particular [skin tone for the emoji](#modify-skin-tone-for-emojis) by selecting its `EmojiID`.
+1. Use the [Teams reactions reference](teams-reactions-reference.md) for getting the reaction ID for the reactions that you want to add. You can also select a particular [skin tone for the emoji](#modify-skin-tone-for-emojis) by selecting its reaction ID.
 1. Use the `addReaction` method from Teams SDK or call the `add reaction` API to send reactions to messages.
 
 The following code snippet shows an example of adding the *Waving hand* reaction to a message:
@@ -86,7 +86,7 @@ Where,
 
 - `conversationId` is the thread or chat identifier.
 - `activityId` represents the message or activity ID.
-- `reactionId` is the `EmojiID` that you want to add.
+- `reactionId` is the ID of the emoji that you want to add.
 
 ---
 
@@ -97,7 +97,7 @@ Where,
 
 You can choose to enable agents to remove reactions from messages. To enable agents to remove reactions from a message:
 
-1. Use the [Teams reactions reference](teams-reactions-reference.md) for getting the `EmojiID` for the reactions that you want to remove.
+1. Use the [Teams reactions reference](teams-reactions-reference.md) for getting the reaction ID for the reactions that you want to remove.
 1. Use the `removeReaction` method from Teams SDK or call the `remove reaction` API to remove reactions from messages.
 
 The following code snippet shows an example of removing a reaction from a message:
@@ -157,9 +157,9 @@ Where,
 
 - `conversationId` is the thread or chat identifier.
 - `activityId` is the message or activity ID.
-- `reactionId` is the `EmojiID` for the emoji that you want to remove
+- `reactionId` is the ID of the emoji that you want to remove.
 
-No additional payload required since the reaction is defined in the URL
+No additional payload is required as the reaction is defined in the URL.
 
 ---
 
@@ -209,7 +209,7 @@ To select a particular skin tone:
 
     :::image type="content" source="../assets/images/agents-in-teams/teams-reactions/skin-tones.png" alt-text="Image shows available skin tones for a Diverse emoji."  border="false":::
 
-1. Copy the `EmojiID` for the skin tone that you want to use for your agent.
+1. Copy the reaction ID for the skin tone that you want to use for your agent.
 
 The following code snippet shows an example of selecting a specific skin tone of a Diverse emoji to a message:
 
@@ -266,7 +266,7 @@ Where,
 
 - `conversationId` is the thread or chat identifier.
 - `activityId` is the message or activity ID.
-- `reactionId` is the `EmojiID` that you want to add.
+- `reactionId` is the ID of the emoji that you want to add.
 
 ---
 
@@ -284,7 +284,7 @@ To use custom emojis in your agent:
 
     :::image type="content" source="../assets/images/agents-in-teams/teams-reactions/custom-emoji-id.png" alt-text="Image shows the emoji ID for a custom emoji."  border="false":::
 
-1. Use the `EmojiID` for the selected emoji string as your parameter. Ensure the string parameter for the custom emoji must match the name of the custom emoji exactly as it appears in your organization.
+1. Use the reaction ID for the selected emoji string as your parameter. Ensure the string parameter for the custom emoji must match the name of the custom emoji exactly as it appears in your organization.
 -->
 
 ## Best practices

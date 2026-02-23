@@ -14,7 +14,7 @@ This is a quick-reference tool for Microsoft Teams developers to easily find and
 
 > [!TIP]
 >
-> The **Diverse** option supports five skin tones. To use it, just append `-tone1` to `-tone5` to the `EmojiID`.
+> The **Diverse** option supports five skin tones. To use it, just append `-tone1` to `-tone5` to the reaction ID.
 >
 >:::image type="content" source="../assets/images/agents-in-teams/teams-reactions/diverse-skin-tones.png" alt-text="Image shows the diverse skin tones for emojis." border="false":::
 
@@ -262,7 +262,7 @@ This is a quick-reference tool for Microsoft Teams developers to easily find and
 
 ## Hand gestures
 
-| Emoji | EmojiID | Diverse - Skin tone |
+| Emoji | Reaction ID | Diverse - Skin tone |
 | --- | --- | --- |
 | 👋 **Waving hand** | `1f44b_wavinghand` | 👋🏻 `1f44b_wavinghand-tone1` <br> 👋🏼 `1f44b_wavinghand-tone2` <br> 👋🏽 `1f44b_wavinghand-tone3` <br> 👋🏾 `1f44b_wavinghand-tone4` <br> 👋🏿 `1f44b_wavinghand-tone5` |
 | 🤚 **Raised back of hand** | `1f91a_raisedbackofhand` | 🤚🏻 `1f91a_raisedbackofhand-tone1` <br> 🤚🏼 `1f91a_raisedbackofhand-tone2` <br> 🤚🏽 `1f91a_raisedbackofhand-tone3` <br> 🤚🏾 `1f91a_raisedbackofhand-tone4` <br> 🤚🏿 `1f91a_raisedbackofhand-tone5` |
@@ -333,7 +333,7 @@ This is a quick-reference tool for Microsoft Teams developers to easily find and
 
 ## People
 
-| Emoji | EmojiID | Diverse - Skin tone |
+| Emoji | Reaction ID | Diverse - Skin tone |
 | --- | --- | --- |
 | 👶 **Smile baby** | `smilebaby` | 👶🏻 `smilebaby-tone1` <br> 👶🏼 `smilebaby-tone2` <br> 👶🏽 `smilebaby-tone3` <br> 👶🏾 `smilebaby-tone4` <br> 👶🏿 `smilebaby-tone5` |
 | 🧒 **Child** | `1f9d2_child` | 🧒🏻 `1f9d2_child-tone1` <br> 🧒🏼 `1f9d2_child-tone2` <br> 🧒🏽 `1f9d2_child-tone3` <br> 🧒🏾 `1f9d2_child-tone4` <br> 🧒🏿 `1f9d2_child-tone5` |
@@ -908,7 +908,7 @@ This is a quick-reference tool for Microsoft Teams developers to easily find and
 
 ## Travel and places
 
-| Emoji | EmojiID |
+| Emoji | Reaction ID |
 | --- | --- |
 | 🌍 **Earth globe Europe Africa** | `1f30d_earthglobeeuropeafrica` |
 | 🌎 **Earth globe americas** | `1f30e_earthglobeamericas` |
@@ -1137,7 +1137,7 @@ This is a quick-reference tool for Microsoft Teams developers to easily find and
 <!--
 ### Travel and places - Diverse
 
-| Emoji | EmojiID | Diverse - Skin tone |
+| Emoji | Reaction ID | Diverse - Skin tone |
 | --- | --- | --- |
 | ♻ **Earth in hand, Europe and Africa** | `europeafricainhand` | ♻🏻 `europeafricainhand-tone1` <br> ♻🏼 `europeafricainhand-tone2` <br> ♻🏽 `europeafricainhand-tone3` <br> ♻🏾 `europeafricainhand-tone4` <br> ♻🏿 `europeafricainhand-tone5` |
 | ♻ **Earth in hand, Americas** | `americainhand` | ♻🏻 `americainhand-tone1` <br> ♻🏼 `americainhand-tone2` <br> ♻🏽 `americainhand-tone3` <br> ♻🏾 `americainhand-tone4` <br> ♻🏿 `americainhand-tone5` |
