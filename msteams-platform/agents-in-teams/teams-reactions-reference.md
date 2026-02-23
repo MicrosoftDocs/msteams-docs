@@ -10,15 +10,13 @@ ms.localizationpriority: high
 
 <!--Developer tool for discovering and copying Microsoft Teams reaction IDs-->
 
-A quick-reference tool for Microsoft Teams developers to easily find and copy reaction IDs for agent, bot, and app integration work.
+This is a quick-reference tool for Microsoft Teams developers to easily find and copy reaction IDs for agent, bot, and app integration work. Use these emojis for building agents that receive reaction notifications and send Teams reactions in a conversation. For more information, see [enable agent reactions in Teams](agent-reactions.md).
 
 > [!TIP]
 >
 > The **Diverse** option supports five skin tones. To use it, just append `-tone1` to `-tone5` to the `EmojiID`.
 >
 >:::image type="content" source="../assets/images/agents-in-teams/teams-reactions/diverse-skin-tones.png" alt-text="Image shows the diverse skin tones for emojis." border="false":::
-
-Use these emojis for building agents that receive reaction notifications and send Teams reactions in a conversation. For more information, see [enable agent reactions in Teams](agent-reactions.md).
 
 **Search by emoji category**:
 > [!div class="op_single_selector"]
