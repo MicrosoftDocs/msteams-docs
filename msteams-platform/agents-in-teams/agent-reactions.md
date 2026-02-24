@@ -52,17 +52,17 @@ app.on('mention', async ({ activity, send }) => {
 [WIP: Add link to Teams SDK docs.]
 
 ```csharp
-[Message]
-        public async Task OnMessage([Context] MessageActivity activity, [Context] IContext.Client client)
-        {
-            if (activity.IsRecipientMentioned)
-            {
-                await client.Send(new MessageReactionActivity().AddReaction(new Reaction()
-                {
-                    Type = “1f44b_wavinghand”
-                }).WithReplyToId(activity.Id));
-            }
-        }
+app.OnMessage(async context =>
+{
+    await context.Send("Hello! I'll react to this message.");
+
+    // Add a reaction to the incoming message
+    await context.Api.Conversations.Reactions.AddAsync(
+        context.Activity.Conversation.Id,
+        context.Activity.Id,
+        ReactionType.1f44b_wavinghand
+    );
+});
 ```
 
 # [Python](#tab/py1)
@@ -121,18 +121,23 @@ app.on('mention', async ({ activity, send }) => {
 [WIP: Add link to Teams SDK docs.]
 
 ```csharp
-[Message]
-        public async Task OnMessage([Context] MessageActivity activity, [Context] IContext.Client client)
-        {
-            if (activity.IsRecipientMentioned)
-            {
-                await client.Send(new MessageReactionActivity().RemoveReaction(new Reaction()
-                {
-                    Type = “1f44b_wavinghand”,
-                }).WithReplyToId(activity.Id));
-            }
-        }
+app.OnMessage(async context =>
+{
+    // First, add a reaction
+    await context.Api.Conversations.Reactions.AddAsync(
+        context.Activity.Conversation.Id,
+        context.Activity.Id,
+        ReactionType.1f44b_wavinghand
+    );
 
+    // Wait a bit, then remove it
+    await Task.Delay(2000);
+    await context.Api.Conversations.Reactions.DeleteAsync(
+        context.Activity.Conversation.Id,
+        context.Activity.Id,
+        ReactionType.1f44b_wavinghand
+    );
+});
 ```
 
 # [Python](#tab/py1)
