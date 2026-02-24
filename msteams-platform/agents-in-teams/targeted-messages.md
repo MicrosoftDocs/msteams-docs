@@ -130,8 +130,25 @@ Key steps for enabling the agent to send a targeted message are as follows:
    Include the 'targeted' designation in the `Send TM` API.
 
    ```REST
-   PUT {cloud}/v3/conversations/{conversationId}/activities
-   PUT {cloud}/v3/conversations/{conversationId}/activities/{activityId}
+   POST {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
+   Authorization: Bearer eyJhbGciOiJIUzI1Ni...
+   Content-Type: application/json
+   {
+       "type": "message",
+       "from": {
+           "id": "28:c9e8c047-2a34-40a1-b28a-b162d5f5327c",
+           "name": "Contoso"
+       },
+       "conversation": {
+           "id":"x:17I0kl8EkpE1O9PH5TWrzrLNwnWWcfrU7QZjKR0WSfOpzbfcAg2IaydGElSo10tVr4C7Fc6GtieTJX663WuJCc1uA83n4CSrHSgGBj5XNYLcVlJAs2ZX8DbYBPck201w",
+           "name": "Convo1"
+       },
+       "recipient": {
+           "id": "29:1XJKJMvc5GBtc2JwZq0oj8tHZmzrQgFmB25ATiQWA85gQtHieVkKilBZ9XHoq9j7Zaqt7CZ-NJWi7me2kHTL3Bw",
+           "name": "Megan Bowen"
+       },
+       "text": "My bot's reply"
+   }
    ```
 
     Ensure that you specify the following when the agent sends the message:
@@ -179,8 +196,14 @@ await ctx.api.conversations.activities.update_targeted(conversation_id, message_
 The agent calls the `Edit TM` API using the message’s `activityId`.
 
 ```REST
-PUT {cloud}/v3/conversations/{conversationId}/activities
-PUT {cloud}/v3/conversations/{conversationId}/activities/{activityId}
+PUT {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
+PUT {cloud}/v3/conversations/{conversationId}/activities/{activityId}?isTargetedActivity=true
+Authorization: Bearer eyJhbGciOiJIUzI1Ni...
+Content-Type: application/json
+{
+    "type": "message",
+    "text": "This message has been updated"
+}
 ```
 
 ---
@@ -221,6 +244,10 @@ Use the delete message API for enabling the agent to remove targeted messages. I
 ```REST
 DELETE {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
 DELETE {cloud}/v3/conversations/{conversationId}/activities/{activityId}?isTargetedActivity=true
+Authorization: Bearer eyJhbGciOiJIUzI1Ni...
+Content-Type: application/json
+
+No body required.
 ```
 
 ---
