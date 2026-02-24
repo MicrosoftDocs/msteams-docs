@@ -81,68 +81,64 @@ Key steps for enabling the agent to send a targeted message are as follows:
 
 2. Use any of the following code snippets to send a targeted message:
 
-    [WIP: Teams SDK links to be added once Teams SDK PR is published.]
+   # [TypeScript](#tab/ts1)
 
-    - Send targeted messages
-
-      # [TypeScript](#tab/ts1)
-
-        ```typescript
-        import { MessageActivity } from '@microsoft/teams.api';
-        
-        app.on('message', async ({ send, activity }) => {
-          // Using withRecipient with isTargeted=true explicitly targets the specified recipient
-          await send(
-            new MessageActivity('This message is only visible to you!')
-              .withRecipient(activity.from, true)
-          );
-        });
-        ```
-
-      # [C#](#tab/dotnet1)
-
-        ```csharp
-        app.OnMessage(async context =>
-        {
-            // Using WithRecipient with isTargeted=true explicitly targets the specified recipient
-            await context.Send(
-                new MessageActivity("This message is only visible to you!")
-                    .WithRecipient(context.Activity.From, isTargeted: true)
-            );
-        });
-        ```
-
-      # [Python](#tab/Py1)
-
-      ```python
-      from microsoft_teams.api import MessageActivity, MessageActivityInput
-      from microsoft_teams.apps import ActivityContext
+    ```typescript
+    import { MessageActivity } from '@microsoft/teams.api';
     
-      @app.on_message
-      async def handle_message(ctx: ActivityContext[MessageActivity]):
-          # Using with_recipient with is_targeted=True explicitly targets the specified recipient
-          await ctx.send(
-              MessageActivityInput(text="This message is only visible to you!")
-                  .with_recipient(ctx.activity.from_, is_targeted=True)
-          )
-      ```
+    app.on('message', async ({ send, activity }) => {
+      // Using withRecipient with isTargeted=true explicitly targets the specified recipient
+      await send(
+        new MessageActivity('This message is only visible to you!')
+          .withRecipient(activity.from, true)
+      );
+    });
+    ```
 
-      # [HTTP](#tab/api1)
+   # [C#](#tab/dotnet1)
 
-      Include the 'targeted' designation in the `Send TM` API.
+    ```csharp
+    app.OnMessage(async context =>
+    {
+    // Using WithRecipient with isTargeted=true explicitly targets the specified recipient
+    await context.Send(
+            new MessageActivity("This message is only visible to you!")
+                .WithRecipient(context.Activity.From, isTargeted: true)
+        );
+    });
+    ```
 
-        ```rest
-        POST {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
-        POST {cloud}/v3/conversations/{conversationId}/activities/{activityId}?isTargetedActivity=true
-        ```
+   # [Python](#tab/Py1)
 
-      Ensure that you specify the following when the agent sends the message:
+   ```python
+   from microsoft_teams.api import MessageActivity, MessageActivityInput
+   from microsoft_teams.apps import ActivityContext
+ 
+    @app.on_message
+    async def handle_message(ctx: ActivityContext[MessageActivity]):
+      # Using with_recipient with is_targeted=True explicitly targets the specified recipient
+      await ctx.send(
+          MessageActivityInput(text="This message is only visible to you!")
+              .with_recipient(ctx.activity.from_, is_targeted=True)
+      )
+   ```
 
-      - To send a targeted activity, ensure that you indicate the `isTargetedActivity` as `true`.
-      - The conversation (chat or channel) ID and targeted user’s ID (Principal ID or MRI). The intended user must be a member of the chat or channel to receive a targeted message.
-      - A flag or API call that marks the message as targeted or ephemeral.
+   # [HTTP](#tab/api1)
 
-        Use the service URL from the conversation. The `userId` is the user’s Teams ID (MRI) to target, and `conversationId` is the group chat or channel thread ID. The POST payload is the activity (message) to send, same as for a standard message activity.
+   Include the 'targeted' designation in the `Send TM` API.
+
+   ```rest
+   POST {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
+   POST {cloud}/v3/conversations/{conversationId}/activities/{activityId}?isTargetedActivity=true
+   ```
+
+    Ensure that you specify the following when the agent sends the message:
+
+- To send a targeted activity, ensure that you indicate the `isTargetedActivity` as `true`.
+- The conversation (chat or channel) ID and targeted user’s ID (Principal ID or MRI). The intended user must be a member of the chat or channel to receive a targeted message.
+- A flag or API call that marks the message as targeted or ephemeral.
+
+    Use the service URL from the conversation. The `userId` is the user’s Teams ID (MRI) to target, and `conversationId` is the group chat or channel thread ID. The POST payload is the activity (message) to send, same as for a standard message activity.
 
 ### Update a targeted message
 
