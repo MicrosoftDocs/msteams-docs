@@ -21,7 +21,6 @@ Use targeted messages in your agents or bots to send temporary, private messages
   - [Why use targeted messages](#why-use-targeted-messages)
 - **Enable targeted messages**
   - [Send a targeted message](#send-a-targeted-message)
-  - [Update or delete a targeted message](#update-or-delete-a-targeted-message)
   - [Handle errors](#handle-errors)
 
 ## What is a targeted message
@@ -190,7 +189,7 @@ Sending a targeted message is similar to sending a regular message. The agent in
 
         To send a message to a conversation that isn't a direct reply to any message from the user, use this request:
 
-        ```rest
+        ```REST
         POST /v3/conversations/{conversationId}/activities
         ```
 
@@ -230,7 +229,7 @@ await ctx.api.conversations.activities.update_targeted(conversation_id, message_
 
 The agent calls the `Edit TM` API using the message’s `activityId`.
 
-```rest
+```REST
 PUT {cloud}/v3/conversations/{conversationId}/activities
 PUT {cloud}/v3/conversations/{conversationId}/activities/{activityId}
 ```
@@ -266,7 +265,7 @@ await ctx.api.conversations.activities.delete_targeted(conversation_id, message_
 
 Use the delete message API for enabling the agent to remove targeted messages. It avoids leaving stale content.
 
-```rest
+```REST
 DELETE {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
 DELETE {cloud}/v3/conversations/{conversationId}/activities/{activityId}?isTargetedActivity=true
 ```
