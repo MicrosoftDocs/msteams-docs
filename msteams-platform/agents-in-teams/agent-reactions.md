@@ -38,13 +38,13 @@ The following code snippet shows an example of adding the *Waving hand* reaction
 [WIP: Add link to Teams SDK docs.]
 
 ```typescript
+app.on('message', async ({ activity, api, send }) => {
+  await send("Hello! I'll react to this message.");
 
-app.on('mention', async ({ activity, send }) => {
-  await send(new MessageReactionActivity({
-    replyToId = activity.id,
-    reactions: [1f44b_wavinghand]
-  }));
+  // Add a reaction to the incoming message
+  await api.conversations.reactions.add(activity.conversation.id, activity.id, '1f44b_wavinghand');
 });
+
 ```
 
 # [CSharp](#tab/cs1)
@@ -107,13 +107,14 @@ The following code snippet shows an example of removing a reaction from a messag
 [WIP: Add link to Teams SDK docs.]
 
 ```typescript
-app.on('mention', async ({ activity, send }) => {
-  await send(new MessageReactionActivity({
-    replyToId = activity.id,
-    reactions: [1f44b_wavinghand]
-  }));
-});
+app.on('message', async ({ activity, api }) => {
+  // First, add a reaction
+  await api.conversations.reactions.add(activity.conversation.id, activity.id, '1f44b_wavinghand');
 
+  // Wait a bit, then remove it
+  await new Promise((resolve) => setTimeout(resolve, 2000));
+  await api.conversations.reactions.delete(activity.conversation.id, activity.id, '1f44b_wavinghand');
+});
 ```
 
 # [CSharp](#tab/cs1)
