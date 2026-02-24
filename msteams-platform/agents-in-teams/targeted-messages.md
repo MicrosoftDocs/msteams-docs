@@ -38,7 +38,7 @@ A targeted message lets an agent or a bot send a user-targeted message. It suppo
 To recipients, they appear like normal inline chat messages, tagged **Only you can see this message**.
 
 > [!NOTE]
-> When you include Adaptive Cards in a targeted message, ensure that user action on the card mustn't inadvertently create a public response.
+> When you include Adaptive Cards in a targeted message, ensure that user action on the card must not inadvertently create a public response.
 
 <br><br>
 Some common user scenarios include:
@@ -69,7 +69,7 @@ You can enable targeted messages using Teams SDK or REST APIs. Teams SDK support
 Sending a targeted message is similar to sending a regular message. The agent indicates that the message is intended for a specific user in the conversation, and the platform delivers it to that user. The agent doesn't initiate a separate conversation or create a new chat.
 
 > [!NOTE]
-> Currently, only bot can send targeted message to the user.
+> Only bot can send targeted message to the user.
 
 Key steps for enabling the agent to send a targeted message are as follows:
 
@@ -129,9 +129,9 @@ Key steps for enabling the agent to send a targeted message are as follows:
 
    Include the 'targeted' designation in the `Send TM` API.
 
-   ```rest
-   POST {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
-   POST {cloud}/v3/conversations/{conversationId}/activities/{activityId}?isTargetedActivity=true
+   ```REST
+   PUT {cloud}/v3/conversations/{conversationId}/activities
+   PUT {cloud}/v3/conversations/{conversationId}/activities/{activityId}
    ```
 
     Ensure that you specify the following when the agent sends the message:
@@ -189,6 +189,8 @@ PUT {cloud}/v3/conversations/{conversationId}/activities/{activityId}
 
 Agents can delete messages within 24 hours if they've been acted on or are no longer relevant. Messages are automatically purged from clients after 24 hours.
 
+[WIP: Teams SDK links to be added.]
+
 Use one of the following code snippets to delete targeted message:
 
 # [TypeScript](#tab/ts1)
@@ -243,7 +245,7 @@ The following table lists error codes, error descriptions, and developer actions
 | --- | --- | --- | --- | --- |
 | 400 | `Bad argument` | Missing recipient when creating targeted message. | Ensure `WithRecipient`(account, `isTargeted`: `true`) is called with valid Account object. |
 | 400 | `Bad argument` | Recipient passed on update or delete. | Don't pass recipient on update or delete. |
-| 404 | `BotNotInConversationRoster` | Bot isn't a member of the conversation. | Ensure bot is installed in the conversation before sending targeted messages. |
+| 403 | `BotNotInConversationRoster` | Bot isn't a member of the conversation. | Ensure bot is installed in the conversation before sending targeted messages. |
 | 404 | `ActivityNotFoundInConversation` | The message ID provided couldn't be found in the conversation. The message is unavailable as it was deleted or auto removed after 24 hours. | Ensure the agent either sends a new targeted message or waits for user input, as per business logic. |
 
 # [HTTP](#tab/api)
@@ -254,6 +256,7 @@ The following table lists error codes, error descriptions, and developer actions
 | --- | --- | --- | --- | --- |
 | 400 | `Bad argument` | Recipient is missing in the `Send TM` API. | Ensure that recipient is included when the agent sends the message as it's mandatory. |
 | 400 | `Bad argument` | Recipient is included in the payload of the `Edit TM` API | Ensure the recipient isn't included in the payload of the `Edit TM` API. |
+| 403 | `BotNotInConversationRoster` | Bot isn't a member of the conversation. | Ensure bot is installed in the conversation before sending targeted messages. |
 | 404 | `ActivityNotFoundInConversation` | The message ID provided couldn't be found in the conversation. The message is unavailable as it was deleted or auto removed after 24 hours. | Ensure the agent either sends a new targeted message or waits for user input, as per business logic. |
 
 ---
