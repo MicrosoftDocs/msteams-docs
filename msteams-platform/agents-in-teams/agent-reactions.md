@@ -85,7 +85,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 # [API](#tab/h1)
 
 ```REST
-PUT {cloud}/{tenantId}/v3/conversations/{conversationId}/activities/{activityId}/reaction/{reactionType}
+PUT {cloud}/{tenantId}/v3/conversations/{conversationId}/activities/{activityId}/reaction/{1f44b_wavinghand}
 ```
 
 Where,
@@ -175,13 +175,13 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 # [API](#tab/h1)
 
 ```REST
-DELETE {cloud}/{tenantId}/v3/conversations/{conversationId}/activities/{activityId}/reaction/{reactionType}
+DELETE {cloud}/{tenantId}/v3/conversations/{conversationId}/activities/{activityId}/reaction/{1f44b_wavinghand}
 ```
 
 Where,
 
 - `conversationId` is the thread or chat identifier.
-- `activityId` is the message or activity ID.
+- `activityId` represents the message or activity ID.
 - `reactionId` is the ID of the emoji that you want to remove.
 
 No additional payload is required as the reaction is defined in the URL.
@@ -290,7 +290,7 @@ PUT {cloud}/{tenantId}/v3/conversations/{conversationId}/activities/{activityId}
 Where,
 
 - `conversationId` is the thread or chat identifier.
-- `activityId` is the message or activity ID.
+- `activityId` represents the message or activity ID.
 - `reactionId` is the ID of the emoji that you want to add.
 
 ---
