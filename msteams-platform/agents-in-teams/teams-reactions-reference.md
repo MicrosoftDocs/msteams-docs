@@ -38,9 +38,12 @@ This is a quick-reference tool for developers to easily find and copy reaction I
 
 ## Reactions
 
+| Emoji | Emoji name | Reaction ID |
+| --- | --- | --- |
+| 😃 | **Grinning face with big eyes** | `1f603_grinningfacewithbigeyes` |
+
 | Emoji | Reaction ID |
 | --- | --- |
-| 😃 **Grinning face with big eyes** | `1f603_grinningfacewithbigeyes` |
 | 😃 **Happy face** | `happyface` |
 | 😄 **Grinning face with smiling eyes** | `grinningfacewithsmilingeyes` |
 | 😁 **Beaming face with smiling eyes** | `1f601_beamingfacewithsmilingeyes` |
@@ -266,9 +269,12 @@ This is a quick-reference tool for developers to easily find and copy reaction I
 
 ## Hand gestures
 
+| Emoji | Emoji name | Reaction ID | Diverse - Skin tone |
+| --- | --- | --- | --- |
+| 👋  | **Waving hand** | `1f44b_wavinghand` | 👋🏻 - `1f44b_wavinghand-tone1` <br> 👋🏼 - `1f44b_wavinghand-tone2` <br> 👋🏽 - `1f44b_wavinghand-tone3` <br> 👋🏾 - `1f44b_wavinghand-tone4` <br> 👋🏿 -`1f44b_wavinghand-tone5` |
+
 | Emoji | Reaction ID | Diverse - Skin tone |
 | --- | --- | --- |
-| 👋 **Waving hand** | `1f44b_wavinghand` | 👋🏻 `1f44b_wavinghand-tone1` <br> 👋🏼 `1f44b_wavinghand-tone2` <br> 👋🏽 `1f44b_wavinghand-tone3` <br> 👋🏾 `1f44b_wavinghand-tone4` <br> 👋🏿 `1f44b_wavinghand-tone5` |
 | 🤚 **Raised back of hand** | `1f91a_raisedbackofhand` | 🤚🏻 `1f91a_raisedbackofhand-tone1` <br> 🤚🏼 `1f91a_raisedbackofhand-tone2` <br> 🤚🏽 `1f91a_raisedbackofhand-tone3` <br> 🤚🏾 `1f91a_raisedbackofhand-tone4` <br> 🤚🏿 `1f91a_raisedbackofhand-tone5` |
 | 🖐️ **Hand with fingers splayed** | `1f590_handwithfingerssplayed` | 🖐🏻️ `1f590_handwithfingerssplayed-tone1` <br> 🖐🏼️ `1f590_handwithfingerssplayed-tone2` <br> 🖐🏽️ `1f590_handwithfingerssplayed-tone3` <br> 🖐🏾️ `1f590_handwithfingerssplayed-tone4` <br> 🖐🏿️ `1f590_handwithfingerssplayed-tone5` |
 | ✋ **Raised hand** | `270b_raisedhand` | ✋🏻 `270b_raisedhand-tone1` <br> ✋🏼 `270b_raisedhand-tone2` <br> ✋🏽 `270b_raisedhand-tone3` <br> ✋🏾 `270b_raisedhand-tone4` <br> ✋🏿 `270b_raisedhand-tone5` |
