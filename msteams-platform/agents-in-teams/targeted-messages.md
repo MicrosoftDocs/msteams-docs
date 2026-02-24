@@ -239,37 +239,37 @@ PUT {cloud}/v3/conversations/{conversationId}/activities/{activityId}
 
 Agents can delete messages within 24 hours if they've been acted on or are no longer relevant. Messages are automatically purged from clients after 24 hours.
 
-    Use one of the following code snippets to delete targeted message:
+Use one of the following code snippets to delete targeted message:
 
-    # [TypeScript](#tab/ts1)
+# [TypeScript](#tab/ts1)
 
-    ```typescript
-    // Delete
-    await api.conversations.activities.deleteTargeted(conversationId, messageId);
-    ```
+```typescript
+// Delete
+await api.conversations.activities.deleteTargeted(conversationId, messageId);
+```
 
-    # [C#](#tab/dotnet1)
+# [C#](#tab/dotnet1)
 
-    ```csharp
-    // Delete
-    await context.Api.Conversations.Activities.DeleteTargetedAsync(conversationId, messageId);
-    ```
+```csharp
+// Delete
+await context.Api.Conversations.Activities.DeleteTargetedAsync(conversationId, messageId);
+```
 
-    # [Python](#tab/Py1)
+# [Python](#tab/Py1)
 
-    ```python
-    #Delete
-    await ctx.api.conversations.activities.delete_targeted(conversation_id, message_id)
-    ```
+```python
+#Delete
+await ctx.api.conversations.activities.delete_targeted(conversation_id, message_id)
+```
 
-    # [HTTP](#tab/api1)
+# [HTTP](#tab/api1)
 
-    Use the delete message API for enabling the agent to remove targeted messages. It avoids leaving stale content.
+Use the delete message API for enabling the agent to remove targeted messages. It avoids leaving stale content.
 
-    ```rest
-    DELETE {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
-    DELETE {cloud}/v3/conversations/{conversationId}/activities/{activityId}?isTargetedActivity=true
-    ```
+```rest
+DELETE {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
+DELETE {cloud}/v3/conversations/{conversationId}/activities/{activityId}?isTargetedActivity=true
+```
 
 ## Handle errors
 
