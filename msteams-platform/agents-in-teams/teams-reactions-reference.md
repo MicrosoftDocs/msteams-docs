@@ -10,9 +10,7 @@ ms.localizationpriority: high
 
 <!--Developer tool for discovering and copying Microsoft Teams reaction IDs-->
 
-This is a quick-reference tool for developers to easily find and copy reaction IDs for agent, bot, and app integration work.
-
-To use a Teams Reaction:
+This is a quick-reference tool for developers to easily find and copy reaction IDs for agent, bot, and app integration work. To use a Teams Reaction:
 
 1. Search the reaction by name or Reaction ID or filter by category.
 1. Copy the ID to clipboard.
