@@ -194,50 +194,50 @@ Sending a targeted message is similar to sending a regular message. The agent in
         POST /v3/conversations/{conversationId}/activities
         ```
 
-### Update or delete a targeted message
+### Update a targeted message
 
-Your agent can update or delete the targeted message after sending it.
+The agent can edit the original targeted message if needed. The updated message appears only in intended user’s view.
 
 [WIP: Teams SDK links to be added.]
 
-- **Update**: The agent can edit the original targeted message if needed. The updated message appears only in intended user’s view.
+Use one of the following code snippets to edit targeted message:
 
-    Use one of the following code snippets to edit targeted message:
+# [TypeScript](#tab/ts1)
 
-    # [TypeScript](#tab/ts1)
+```typescript
+// Update
+const updatedMessage = new MessageActivity('This message has been updated!');
+await api.conversations.activities.updateTargeted(conversationId, messageId, updatedMessage);
+```
 
-    ```typescript
-    // Update
-    const updatedMessage = new MessageActivity('This message has been updated!');
-    await api.conversations.activities.updateTargeted(conversationId, messageId, updatedMessage);
-    ```
+# [C#](#tab/dotnet1)
 
-    # [C#](#tab/dotnet1)
+```csharp
+// Update 
+var updatedMessage = new MessageActivity("This message has been updated!");
+await context.Api.Conversations.Activities.UpdateTargetedAsync(conversationId, messageId, updatedMessage);
+```
 
-    ```csharp
-    // Update 
-    var updatedMessage = new MessageActivity("This message has been updated!");
-    await context.Api.Conversations.Activities.UpdateTargetedAsync(conversationId, messageId, updatedMessage);
-    ```
+# [Python](#tab/Py1)
 
-    # [Python](#tab/Py1)
+```python
+# Update 
+updated_message = MessageActivityInput(text="This message has been updated!")
+await ctx.api.conversations.activities.update_targeted(conversation_id, message_id, updated_message)
+```
 
-    ```python
-    # Update 
-    updated_message = MessageActivityInput(text="This message has been updated!")
-    await ctx.api.conversations.activities.update_targeted(conversation_id, message_id, updated_message)
-    ```
+# [HTTP](#tab/api1)
 
-    # [HTTP](#tab/api1)
+The agent calls the `Edit TM` API using the message’s `activityId`.
 
-    The agent calls the `Edit TM` API using the message’s `activityId`.
+```rest
+PUT {cloud}/v3/conversations/{conversationId}/activities
+PUT {cloud}/v3/conversations/{conversationId}/activities/{activityId}
+```
 
-    ```rest
-    PUT {cloud}/v3/conversations/{conversationId}/activities
-    PUT {cloud}/v3/conversations/{conversationId}/activities/{activityId}
-    ```
+### Delete a targeted message
 
-- **Delete**: Agents can delete messages within 24 hours if they've been acted on or are no longer relevant. Messages are automatically purged from clients after 24 hours.
+Agents can delete messages within 24 hours if they've been acted on or are no longer relevant. Messages are automatically purged from clients after 24 hours.
 
     Use one of the following code snippets to delete targeted message:
 
