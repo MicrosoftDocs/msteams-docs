@@ -10,7 +10,13 @@ ms.localizationpriority: high
 
 <!--Developer tool for discovering and copying Microsoft Teams reaction IDs-->
 
-This is a quick-reference tool for developers to easily find and copy reaction IDs for agent, bot, and app integration work. Use these emojis for building agents that receive reaction notifications and send Teams reactions in a conversation. For more information, see [enable agent reactions in Teams](agent-reactions.md).
+This is a quick-reference tool for developers to easily find and copy reaction IDs for agent, bot, and app integration work.
+
+To use a Teams Reaction:
+
+1. Search the reaction by name or Reaction ID or filter by category.
+1. Copy the ID to clipboard.
+1. Use these reactions for building agents that receive reaction notifications and send Teams reactions in a conversation. For more information, see [enable agent reactions in Teams](agent-reactions.md).
 
 > [!TIP]
 >
@@ -34,7 +40,7 @@ This is a quick-reference tool for developers to easily find and copy reaction I
 
 ## Reactions
 
-| Emoji | EmojiId |
+| Emoji | Reaction ID |
 | --- | --- |
 | 😃 **Grinning face with big eyes** | `1f603_grinningfacewithbigeyes` |
 | 😃 **Happy face** | `happyface` |
@@ -596,7 +602,7 @@ This is a quick-reference tool for developers to easily find and copy reaction I
 
 ## Animals and nature
 
-| Emoji | EmojiId |
+| Emoji | Reaction ID |
 | --- | --- |
 | 🐵 **Smile monkey** | `smilemonkey` |
 | 🐒 **Monkey** | `monkey` |
@@ -762,7 +768,7 @@ This is a quick-reference tool for developers to easily find and copy reaction I
 
 ## Food
 
-| Emoji | EmojiId |
+| Emoji | Reaction ID |
 | --- | --- |
 | 🍇 **Grapes** | `grapes` |
 | 🍈 **Melon** | `1f348_melon` |
@@ -1146,7 +1152,7 @@ This is a quick-reference tool for developers to easily find and copy reaction I
 
 ## Objects
 
-| Emoji | EmojiId |
+| Emoji | Reaction ID |
 | --- | --- |
 | 👓 **Glasses** | `1f453_glasses` |
 | 🕶️ **Sunglasses** | `1f576_sunglasses` |
@@ -1414,7 +1420,7 @@ This is a quick-reference tool for developers to easily find and copy reaction I
 
 ## Activities
 
-| Emoji | EmojiId |
+| Emoji | Reaction ID |
 | --- | --- |
 | 🎃 **Pumpkin** | `pumpkin` |
 | 🎄 **Xmas tree** | `xmastree` |
@@ -1505,7 +1511,7 @@ This is a quick-reference tool for developers to easily find and copy reaction I
 
 ## Symbols
 
-| Emoji | EmojiId |
+| Emoji | Reaction ID |
 | --- | --- |
 | 🏧 **ATM** | `1f3e7_automatedtellermachine` |
 | 🚮 **Litter in bin** | `1f6ae_putlitterinitsplacesymbol` |
