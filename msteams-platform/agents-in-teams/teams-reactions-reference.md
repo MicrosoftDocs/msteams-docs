@@ -41,6 +41,9 @@ This is a quick-reference tool for developers to easily find and copy reaction I
 | Emoji | Emoji name | Reaction ID |
 | --- | --- | --- |
 | 😃 | **Grinning face with big eyes** | `1f603_grinningfacewithbigeyes` |
+
+| Emoji | Emoji name | Reaction ID |
+| --- | --- | --- |
 | 😃 | **Happy face** | `happyface` |
 | 😄 | **Grinning face with smiling eyes** | `grinningfacewithsmilingeyes` |
 | 😁 | **Beaming face with smiling eyes** | `1f601_beamingfacewithsmilingeyes` |
@@ -268,6 +271,9 @@ This is a quick-reference tool for developers to easily find and copy reaction I
 | Emoji | Emoji name | Reaction ID | Diverse - Skin tone |
 | --- | --- | --- | --- |
 | 👋  | **Waving hand** | `1f44b_wavinghand` | 👋🏻 - `1f44b_wavinghand-tone1` <br> 👋🏼 - `1f44b_wavinghand-tone2` <br> 👋🏽 - `1f44b_wavinghand-tone3` <br> 👋🏾 - `1f44b_wavinghand-tone4` <br> 👋🏿 -`1f44b_wavinghand-tone5` |
+
+| Emoji | Emoji name | Reaction ID | Diverse - Skin tone |
+| --- | --- | --- | --- |
 | 🤚 | **Raised back of hand** | `1f91a_raisedbackofhand` | 🤚🏻 - `1f91a_raisedbackofhand-tone1` <br> 🤚🏼 - `1f91a_raisedbackofhand-tone2` <br> 🤚🏽 - `1f91a_raisedbackofhand-tone3` <br> 🤚🏾 - `1f91a_raisedbackofhand-tone4` <br> 🤚🏿 - `1f91a_raisedbackofhand-tone5` |
 | 🖐️ | **Hand with fingers splayed** | `1f590_handwithfingerssplayed` | 🖐🏻️ - `1f590_handwithfingerssplayed-tone1` <br> 🖐🏼️ - `1f590_handwithfingerssplayed-tone2` <br> 🖐🏽️ - `1f590_handwithfingerssplayed-tone3` <br> 🖐🏾️ - `1f590_handwithfingerssplayed-tone4` <br> 🖐🏿️ - `1f590_handwithfingerssplayed-tone5` |
 | ✋ | **Raised hand** | `270b_raisedhand` | ✋🏻 - `270b_raisedhand-tone1` <br> ✋🏼 - `270b_raisedhand-tone2` <br> ✋🏽 - `270b_raisedhand-tone3` <br> ✋🏾 - `270b_raisedhand-tone4` <br> ✋🏿 - `270b_raisedhand-tone5` |
@@ -701,7 +707,7 @@ This is a quick-reference tool for developers to easily find and copy reaction I
 | 🐳 | **Spouting Whale** | `spoutingwhale` |
 | 🐋 | **Whale** | `whale` |
 | 🐬 | **Dolphin** | `dolphin` |
-|  | **Seal** | `seal` |
+| 🦭 | **Seal** | `seal` |
 | 🐟 | **Fish** | `fish` |
 | 🐠 | **Tropical fish** | `tropicalfish` |
 | 🐡 | **Blowfish** | `1f421_blowfish` |
@@ -787,7 +793,7 @@ This is a quick-reference tool for developers to easily find and copy reaction I
 | 🍆 | **Eggplant** | `aubergine` |
 | 🥔 | **Potato** | `1f954_potato` |
 | 🍄‍🟫 | **Brown mushroom** | `brownmushroom4` |
-|  | **Carrot** | `1f955_carrot` |
+| 🥕 | **Carrot** | `1f955_carrot` |
 | 🌽 | **Corn** | `1f33d_earofmaize` |
 | 🌶️ | **Chili pepper** | `1f336_hotpepper` |
 | 🫑 | **Bell Pepper** | `bellpepper` |
@@ -1360,7 +1366,7 @@ This is a quick-reference tool for developers to easily find and copy reaction I
 | 🪝 | **Hook** | `hook` |
 | 🧰 | **Toolbox** | `1f9f0_toolbox` |
 | 🧲 | **Magnet** | `1f9f2_magnet` |
-|  | **Ladder** | `ladder` |
+| 🪜 | **Ladder** | `ladder` |
 | ⚗️ | **Alembic** | `2697_alembic` |
 | 🧪 | **Test tube** | `1f9ea_testtube` |
 | 🧫 | **Petri dish** | `1f9eb_petridish` |
@@ -1387,7 +1393,7 @@ This is a quick-reference tool for developers to easily find and copy reaction I
 | 🚿 | **Shower** | `1f6bf_shower` |
 | 🛁 | **Bath tub** | `1f6c1_bathtub` |
 | 🪤 | **Mouse trap** | `mousetrap` |
-|  | **Razor** | `1fa92_razor` |
+| 🪒 | **Razor** | `1fa92_razor` |
 | 🧴 | **Lotion** | `1f9f4_lotionbottle` |
 | 🧹 | **Broom** | `1f9f9_broom` |
 | 🧺 | **Laundry basket** | `1f9fa_basket` |
