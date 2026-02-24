@@ -26,7 +26,7 @@ Use targeted messages in your agents or bots to send temporary, private messages
 
 ## What is a targeted message
 
-A targeted message, also known as an ephemeral message, lets an agent or a bot send a user-targeted message. It supports all [message capabilities](../bots/build-conversational-capability.md#message-content) like buttons, images, Adaptive Cards, and files, and keeps shared conversations uncluttered. Targeted messages are:
+A targeted message lets an agent or a bot send a user-targeted message. It supports all [message capabilities](../bots/build-conversational-capability.md#message-content) like buttons, images, Adaptive Cards, and files, and keeps shared conversations uncluttered. Targeted messages are:
 
 - Delivered to only one user in a group context.
 - Auto-purged from clients in 24 hours but might be kept in secure storage based on organizational policy.
@@ -451,3 +451,5 @@ Microsoft Graph exposes targeted messaging support. Graph API for Teams chat mes
 
 [WIP: Link to Graph API to be added]
 -->
+
+<!--, also known as an ephemeral message,, also known as an ephemeral message,-->
