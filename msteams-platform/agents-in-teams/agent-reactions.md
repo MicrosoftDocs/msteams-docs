@@ -72,8 +72,14 @@ app.OnMessage(async context =>
 ```python
 @app.on_message
 async def handle_message(ctx: ActivityContext[MessageActivity]):
-    if ctx.activity.is_recipient_mentioned:
-        await ctx.send(MessageReactionActivityInput(reply_to_id=ctx.activity.id).add_reaction(MemssageReaction(type="1f44b_wavinghand")))
+    await ctx.send("Hello! I'll react to this message.")
+
+    # Add a reaction to the incoming message
+    await ctx.api.conversations.reactions.add(
+        ctx.activity.conversation.id,
+        ctx.activity.id,
+        '1f44b_wavinghand'
+    )
 ```
 
 # [API](#tab/h1)
@@ -146,11 +152,24 @@ app.OnMessage(async context =>
 [WIP: Add link to Teams SDK docs.]
 
 ```python
+import asyncio
+
 @app.on_message
 async def handle_message(ctx: ActivityContext[MessageActivity]):
-    if ctx.activity.is_recipient_mentioned:
-        await ctx.send(MessageReactionActivityInput(reply_to_id=ctx.activity.id).remove_reaction(MemssageReaction(type="1f44b_wavinghand")))
+    # First, add a reaction
+    await ctx.api.conversations.reactions.add(
+        ctx.activity.conversation.id,
+        ctx.activity.id,
+        '1f44b_wavinghand'
+    )
 
+    # Wait a bit, then remove it
+    await asyncio.sleep(2)
+    await ctx.api.conversations.reactions.delete(
+        ctx.activity.conversation.id,
+        ctx.activity.id,
+        '1f44b_wavinghand'
+    )
 ```
 
 # [API](#tab/h1)
