@@ -41,9 +41,6 @@ This is a quick-reference tool for developers to easily find and copy reaction I
 | Emoji | Emoji name | Reaction ID |
 | --- | --- | --- |
 | 😃 | **Grinning face with big eyes** | `1f603_grinningfacewithbigeyes` |
-
-| Emoji | Reaction ID |
-| --- | --- |
 | 😃 **Happy face** | `happyface` |
 | 😄 **Grinning face with smiling eyes** | `grinningfacewithsmilingeyes` |
 | 😁 **Beaming face with smiling eyes** | `1f601_beamingfacewithsmilingeyes` |
