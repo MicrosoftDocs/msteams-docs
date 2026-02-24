@@ -139,60 +139,6 @@ Sending a targeted message is similar to sending a regular message. The agent in
 
         Use the service URL from the conversation. The `userId` is the user’s Teams ID (MRI) to target, and `conversationId` is the group chat or channel thread ID. The POST payload is the activity (message) to send, same as for a standard message activity.
 
-    - Send proactive targeted messages
-
-      # [TypeScript](#tab/ts1)
-
-        ```typescript
-        import { MessageActivity, Account } from '@microsoft/teams.api';
-        
-        // When sending proactively, you must provide an explicit recipient account
-        const sendTargetedNotification = async (conversationId: string, recipient: Account) => {
-          await app.send(
-            conversationId,
-            new MessageActivity('This is a private notification just for you!')
-              .withRecipient(recipient, true)
-          );
-        };
-        ```
-
-      # [C#](#tab/dotnet1)
-
-        ```csharp
-        // When sending proactively, you must provide an explicit recipient account
-        public static async Task SendTargetedNotification(string conversationId, Account recipient)
-        {
-            var teams = app.UseTeams();
-            await teams.Send(
-                conversationId,
-                new MessageActivity("This is a private notification just for you!")
-                    .WithRecipient(recipient, isTargeted: true)
-            );
-        }
-        ```
-
-      # [Python](#tab/Py1)
-
-      ```python
-      from microsoft_teams.api import MessageActivityInput, Account
-      
-      # When sending proactively, you must provide an explicit recipient account
-      async def send_targeted_notification(conversation_id: str, recipient: Account):
-          await app.send(
-              conversation_id,
-              MessageActivityInput(text="This is a private notification just for you!")
-                  .with_recipient(recipient, is_targeted=True)
-          )
-      ```
-
-      # [HTTP](#tab/api1)
-
-        To send a message to a conversation that isn't a direct reply to any message from the user, use this request:
-
-        ```REST
-        POST /v3/conversations/{conversationId}/activities
-        ```
-
 ### Update a targeted message
 
 The agent can edit the original targeted message if needed. The updated message appears only in intended user’s view.
@@ -452,3 +398,59 @@ Microsoft Graph exposes targeted messaging support. Graph API for Teams chat mes
 -->
 
 <!--, also known as an ephemeral message,, also known as an ephemeral message,-->
+
+<!--
+    - Send proactive targeted messages
+
+      # [TypeScript](#tab/ts1)
+
+        ```typescript
+        import { MessageActivity, Account } from '@microsoft/teams.api';
+        
+        // When sending proactively, you must provide an explicit recipient account
+        const sendTargetedNotification = async (conversationId: string, recipient: Account) => {
+          await app.send(
+            conversationId,
+            new MessageActivity('This is a private notification just for you!')
+              .withRecipient(recipient, true)
+          );
+        };
+        ```
+
+      # [C#](#tab/dotnet1)
+
+        ```csharp
+        // When sending proactively, you must provide an explicit recipient account
+        public static async Task SendTargetedNotification(string conversationId, Account recipient)
+        {
+            var teams = app.UseTeams();
+            await teams.Send(
+                conversationId,
+                new MessageActivity("This is a private notification just for you!")
+                    .WithRecipient(recipient, isTargeted: true)
+            );
+        }
+        ```
+
+      # [Python](#tab/Py1)
+
+      ```python
+      from microsoft_teams.api import MessageActivityInput, Account
+      
+      # When sending proactively, you must provide an explicit recipient account
+      async def send_targeted_notification(conversation_id: str, recipient: Account):
+          await app.send(
+              conversation_id,
+              MessageActivityInput(text="This is a private notification just for you!")
+                  .with_recipient(recipient, is_targeted=True)
+          )
+      ```
+
+      # [HTTP](#tab/api1)
+
+        To send a message to a conversation that isn't a direct reply to any message from the user, use this request:
+
+        ```REST
+        POST /v3/conversations/{conversationId}/activities
+        ```
+-->
