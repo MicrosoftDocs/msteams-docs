@@ -181,6 +181,8 @@ PUT {cloud}/v3/conversations/{conversationId}/activities
 PUT {cloud}/v3/conversations/{conversationId}/activities/{activityId}
 ```
 
+---
+
 ### Delete a targeted message
 
 Agents can delete messages within 24 hours if they've been acted on or are no longer relevant. Messages are automatically purged from clients after 24 hours.
@@ -216,6 +218,8 @@ Use the delete message API for enabling the agent to remove targeted messages. I
 DELETE {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
 DELETE {cloud}/v3/conversations/{conversationId}/activities/{activityId}?isTargetedActivity=true
 ```
+
+---
 
 ## Handle errors
 
