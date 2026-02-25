@@ -30,7 +30,7 @@ Use targeted messages in your agents or bots to send temporary, private messages
 A targeted message lets an agent or a bot send a user-targeted message. It supports all [message capabilities](../bots/build-conversational-capability.md#message-content) like buttons, images, Adaptive Cards, and files, and keeps shared conversations uncluttered. Targeted messages are:
 
 - Delivered to only one user in a group context.
-- Auto-purged from clients in 24 hours but might be kept in secure storage based on organizational policy.
+- Auto-purged from clients in 24 hours but might be retained in secure storage based on organizational policy.
 - Restricted for user actions such as reaction, replies, and forwarding.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :::image type="content" source="../assets/images/agents-in-teams/targeted-messages/targeted-messages.png" alt-text="Image shows user scenarios for targeted messages" border="false" lightbox="../assets/images/agents-in-teams/targeted-messages/targeted-messages-main.png":::
@@ -58,7 +58,7 @@ Targeted messages are ideal for contextual information or assistance. Among othe
 - **Enhanced user experience**: <br>
     A clear message hierarchy that shows only the content that's meant for everyone is permanent in the chat.
 - **Real-time interaction**: <br>
-    Prompt responses from the agent to the user's requirement in the group setting reinforces that the agent is alert to user actions.
+    Prompt responses from the agent to the user's requirement in the group setting reinforce that the agent is alert to user actions.
 
 ## Targeted message developer experience
 
@@ -69,7 +69,7 @@ You can enable targeted messages using Teams SDK or REST APIs. Teams SDK support
 Sending a targeted message is similar to sending a regular message. The agent indicates that the message is intended for a specific user in the conversation, and the platform delivers it to that user. The agent doesn't initiate a separate conversation or create a new chat.
 
 > [!NOTE]
-> Only bot can send targeted message to the user.
+> Only a bot can send a targeted message.
 
 Key steps for enabling the agent to send a targeted message are as follows:
 
@@ -161,7 +161,7 @@ Key steps for enabling the agent to send a targeted message are as follows:
 
 ### Update a targeted message
 
-The agent can edit the original targeted message if needed. The updated message appears only in intended user’s view.
+The agent can edit the original targeted message if needed. The updated message appears only in the intended user’s view.
 
 [WIP: Teams SDK links to be added.]
 
