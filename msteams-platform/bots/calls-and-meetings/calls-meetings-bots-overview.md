@@ -38,6 +38,7 @@ Calls and meetings bots are designed for scenarios that require programmatic int
 > **Building AI agents for meetings?** Calls and meetings bots with raw media access aren't recommended for AI agent scenarios. Instead, use:
 >
 > * [Microsoft Copilot Studio agents](/microsoft-copilot-studio/overview) for building agents that participate in Teams meetings.
+> * [WorkIQ](https://github.com/microsoft/work-iq-mcp) for querying meeting content, emails, and workplace intelligence from Microsoft 365 via natural language.
 > * [Graph API meeting transcripts](/graph/api/resources/calltranscript) to access meeting content after transcription.
 > * [Meeting transcripts overview](~/graph-api/meeting-transcripts/overview-transcripts.md) for transcript access without raw media processing.
 
@@ -197,4 +198,5 @@ For the full set of samples, see the [Microsoft Graph Communications samples rep
 ### Alternatives for AI and meeting intelligence
 
 * [Microsoft Copilot Studio agents](/microsoft-copilot-studio/overview) — build AI agents for Teams meetings.
+* [WorkIQ](https://github.com/microsoft/work-iq-mcp) — query meeting content, emails, and workplace intelligence from Microsoft 365 via natural language.
 * [Get meeting transcripts using Graph APIs](/graph/api/resources/calltranscript) — access meeting content without media processing.
