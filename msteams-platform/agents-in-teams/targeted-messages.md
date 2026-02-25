@@ -136,15 +136,15 @@ Key steps for enabling the agent to send a targeted message are as follows:
    {
        "type": "message",
        "from": {
-           "id": "28:c9e8c047-2a34-40a1-b28a-b162d5f5327c",
+           "id": "28:c9e...",
            "name": "Contoso"
        },
        "conversation": {
-           "id":"x:17I0kl8EkpE1O9PH5TWrzrLNwnWWcfrU7QZjKR0WSfOpzbfcAg2IaydGElSo10tVr4C7Fc6GtieTJX663WuJCc1uA83n4CSrHSgGBj5XNYLcVlJAs2ZX8DbYBPck201w",
+           "id":"x:17I0...",
            "name": "Convo1"
        },
        "recipient": {
-           "id": "29:1XJKJMvc5GBtc2JwZq0oj8tHZmzrQgFmB25ATiQWA85gQtHieVkKilBZ9XHoq9j7Zaqt7CZ-NJWi7me2kHTL3Bw",
+           "id": "29:1XJ...",
            "name": "Megan Bowen"
        },
        "text": "My bot's reply"
@@ -198,7 +198,7 @@ The agent calls the `Edit TM` API using the message’s `activityId`.
 ```REST
 PUT {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
 PUT {cloud}/v3/conversations/{conversationId}/activities/{activityId}?isTargetedActivity=true
-Authorization: Bearer eyJhbGciOiJIUzI1Ni...
+Authorization: Bearer eyJh...
 Content-Type: application/json
 {
     "type": "message",
@@ -244,7 +244,7 @@ Use the delete message API for enabling the agent to remove targeted messages. I
 ```REST
 DELETE {cloud}/v3/conversations/{conversationId}/activities?isTargetedActivity=true
 DELETE {cloud}/v3/conversations/{conversationId}/activities/{activityId}?isTargetedActivity=true
-Authorization: Bearer eyJhbGciOiJIUzI1Ni...
+Authorization: Bearer eyJh...
 Content-Type: application/json
 
 No body required.
