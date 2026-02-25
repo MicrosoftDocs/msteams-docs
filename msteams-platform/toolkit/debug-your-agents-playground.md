@@ -442,6 +442,11 @@ team:
       name: Announcements
 ```
 
+> [!NOTE]
+>
+> * Developers can obtain `agenticAppId`, `agenticUserId`, and `tenantId` after publishing their agent to the Microsoft 365 Admin center. For more information, see [publish agent to Microsoft 365 admin center](/microsoft-agent-365/developer/a365-dev-lifecycle).
+> * These fields enable debugging in the Microsoft Agent 365 scenario. For more information, see [Agent 365 Identity](/microsoft-agent-365/developer/identity).
+
 ### Customize the configuration file
 
 If your bot code uses Bot Framework APIs, you can modify the configuration file to customize the API responses. For example, consider an Azure DevOps notification bot installed in a team that fetches inactive bugs from Azure DevOps. It identifies the owners of the inactive bugs, retrieves their email addresses, and sends daily notifications to their personal chats.
