@@ -444,7 +444,7 @@ team:
 
 > [!NOTE]
 >
-> * Developers can obtain `agenticAppId`, `agenticUserId`, and `tenantId` after publishing their agent to the Microsoft 365 Admin center. For more information, see [publish agent to Microsoft 365 admin center](/microsoft-agent-365/developer/a365-dev-lifecycle).
+> * Developers can obtain `agenticAppId`, `agenticUserId`, and `tenantId` after publishing their agent to the Microsoft 365 admin center. For more information, see [publish agent to Microsoft 365 admin center](/microsoft-agent-365/developer/a365-dev-lifecycle).
 > * These fields enable debugging in the Microsoft Agent 365 scenario. For more information, see [Agent 365 Identity](/microsoft-agent-365/developer/identity).
 
 ### Customize the configuration file
