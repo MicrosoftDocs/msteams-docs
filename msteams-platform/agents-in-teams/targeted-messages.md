@@ -12,7 +12,7 @@ ms.topic: reference
 
 # Enable targeted messages for agents
 
-Use targeted messages in your agents or bots to send temporary, private messages to a specific user in a channel, group, or meeting chat. You can also enable the agent or the bot to edit or delete a targeted message that it sent in a conversation.
+Use targeted messages in your agents or bots to send temporary, private messages to a specific user in a channel, group, or meeting chat. You can also enable an agent or bot to edit or delete targeted messages it sends in a conversation.
 
 **Key points**:
 
@@ -62,7 +62,7 @@ Targeted messages are ideal for contextual information or assistance. Among othe
 
 ## Targeted message developer experience
 
-You can enable targeted messages using Teams SDK or REST APIs. Teams SDK supports C#, TypeScript, and Python (in dev preview). You can enable your agent or bot to send, edit, and remove targeted messages in the conversation.
+You can enable targeted messages using Teams SDK or REST APIs. Teams SDK supports C#, TypeScript, and Python (developer preview). You can enable your agent or bot to send, edit, and remove targeted messages in a conversation.
 
 ### Send a targeted message
 
@@ -75,9 +75,9 @@ Key steps for enabling the agent to send a targeted message are as follows:
 
 1. Determine when a targeted message is appropriate:
 
-    Use a targeted message when the response is for one person, or when sharing it with others would add noise, distraction, or confusion. Common characteristics of these scenarios include (but are not limited to):
+    Use a targeted message when the response is for one person, or when sharing it with others would add noise, distraction, or confusion. Common characteristics of these scenarios include (but aren't limited to):
 
-    - The agent's response is relevant only to the user who initiated the agent interaction.
+    - The agent's response is relevant only to the user who initiated the interaction.
     - The agent must respond proactively and in context to a specific user’s message or state.
     - The agent is sharing a personalized recommendation, insight, or follow-up that isn’t relevant to others in the thread or channel.
 
@@ -210,7 +210,7 @@ Content-Type: application/json
 
 ### Delete a targeted message
 
-Agents can delete messages within 24 hours if they've been acted on or are no longer relevant. Messages are automatically purged from clients after 24 hours.
+Agents can delete messages within 24 hours if they've been acted on or they are no longer relevant. Messages are automatically purged from clients after 24 hours.
 
 [WIP: Teams SDK links to be added.]
 
@@ -254,7 +254,7 @@ No body required.
 
 ## Handle errors
 
-After the agent sends a targeted message using Teams SDK or REST APIs, one of the following responses is returned:
+After the agent sends a targeted message using Teams SDK or REST APIs, it receives one of the following responses:
 
 - If successful, the targeted user gets the message sent by the agent.
 - A send event can fail if the user isn’t a group member or the client doesn’t support targeted messages.
@@ -288,7 +288,7 @@ The following table lists error codes, error descriptions, and developer actions
 
 ---
 > [!TIP]
-> It's recommended that if sending a targeted message fails, the agent or bot might choose a fallback mechanism such as sending a 1:1 chat message as a backup.
+> It's recommended that if sending a targeted message fails, consider a fallback mechanism such as sending a 1:1 chat message.
 
 You’ll find more details on the other error codes for sending messages [here](../bots/build-conversational-capability.md#status-codes-from-bot-conversational-apis).
 
