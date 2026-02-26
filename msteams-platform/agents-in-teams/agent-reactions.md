@@ -200,8 +200,6 @@ The following are the success and error codes:
 | `200` | Deleted reaction successfully | NA |
 | `200` | Deleted non-existent reaction | NA |
 
-<!--| `200` | Duplicate reaction added | See [best practices](#best-practices) to for sending multiple reactions to messages |-->
-
 ### Error codes
 
 | Response codes | Error message | Description | Action |
@@ -211,28 +209,17 @@ The following are the success and error codes:
 
 You can find more information on error codes for sending messages [here](../bots/build-conversational-capability.md).
 
-<!--| `403` | `ApiNotEnabledException` | Feature flag not enabled | The feature flag guarding this feature is not enabled |-->
-
-<!--
-## Customize Emojis
-
-You can allow skin tones for emojis and use custom emojis that might be specific to your agent needs.
--->
-
 ## Modify skin tone for emojis
 
 The [Teams reactions reference](teams-reactions-reference.md) shows skin tone options for emojis. The emojis that offer skin tone are tagged as **Diverse**.
 
-:::image type="content" source="../assets/images/agents-in-teams/teams-reactions/diverse-reaction.png" alt-text="Image shows a diverse tagged emoji for choosing skin tones." border="false":::
+:::image type="content" source="../assets/images/agents-in-teams/teams-reactions/diverse-skin-tones.png" alt-text="Image shows the diverse skin tones for emojis." border="false":::
 
 To select a particular skin tone:
 
 1. Choose an emoji tagged as **Diverse**.
-1. Select **Show Skin Tones**.
 
-    The card expands to show the available skin tones.
-
-    :::image type="content" source="../assets/images/agents-in-teams/teams-reactions/skin-tones.png" alt-text="Image shows available skin tones for a Diverse emoji."  border="false":::
+    :::image type="content" source="../assets/images/agents-in-teams/teams-reactions/select-diverse-skin-tone.png" alt-text="Image shows a list of diverse skins tones.":::
 
 1. Copy the `reactionId` for the skin tone that you want to use for your agent.
 
@@ -295,6 +282,24 @@ Where,
 
 ---
 
+## Best practices
+
+- Employ reactions to improve user experience such as acknowledging a message or providing succinct feedback.
+- Avoid excessive use of reactions to minimize notification fatigue for users.
+- Ensure your agents’ reactions fit the message context and avoid having your agent send multiple reactions to the same message without first removing any existing reactions.
+
+## See also
+
+- Teams SDK [WIP: Links to be added when available]
+- [Teams reaction reference](teams-reactions-reference.md)
+
+<!--| `403` | `ApiNotEnabledException` | Feature flag not enabled | The feature flag guarding this feature is not enabled |-->
+
+<!--
+## Customize Emojis
+
+You can allow skin tones for emojis and use custom emojis that might be specific to your agent needs.
+-->
 <!--
 ### Custom Emojis
 
@@ -312,13 +317,38 @@ To use custom emojis in your agent:
 1. Use the reaction ID for the selected emoji string as your parameter. Ensure the string parameter for the custom emoji must match the name of the custom emoji exactly as it appears in your organization.
 -->
 
-## Best practices
+<!--
+### Custom Emojis
 
-- Employ reactions to improve user experience such as acknowledging a message or providing succinct feedback.
-- Avoid excessive use of reactions to minimize notification fatigue for users.
-- Ensure your agents’ reactions fit the message context and avoid having your agent send multiple reactions to the same message without first removing any existing reactions.
+With Agents in Teams, you can  add custom emojis as per the need for your organization.
 
-## See also
+:::image type="content" source="../assets/images/agents-in-teams/teams-reactions/custom-emoji-list.png" alt-text="Image shows custom emojis in Teams."  border="false":::
 
-- Teams SDK [WIP: Links to be added when available]
-- [Teams reaction reference](teams-reactions-reference.md)
+To use custom emojis in your agent:
+
+1. Choose the custom emojis from Teams emoji picker.
+1. Hover your cursor over the emoji that you want to use. The emoji ID for the emoji appears.
+
+    :::image type="content" source="../assets/images/agents-in-teams/teams-reactions/custom-emoji-id.png" alt-text="Image shows the emoji ID for a custom emoji."  border="false":::
+
+1. Use the reaction ID for the selected emoji string as your parameter. Ensure the string parameter for the custom emoji must match the name of the custom emoji exactly as it appears in your organization.
+-->
+
+<!--| `200` | Duplicate reaction added | See [best practices](#best-practices) to for sending multiple reactions to messages |-->
+
+<!--
+The [Teams reactions reference](teams-reactions-reference.md) shows skin tone options for emojis. The emojis that offer skin tone are tagged as **Diverse**.
+
+:::image type="content" source="../assets/images/agents-in-teams/teams-reactions/diverse-reaction.png" alt-text="Image shows a diverse tagged emoji for choosing skin tones." border="false":::
+
+To select a particular skin tone:
+
+1. Choose an emoji tagged as **Diverse**.
+1. Select **Show Skin Tones**.
+
+    The card expands to show the available skin tones.
+
+    :::image type="content" source="../assets/images/agents-in-teams/teams-reactions/skin-tones.png" alt-text="Image shows available skin tones for a Diverse emoji."  border="false":::
+
+1. Copy the `reactionId` for the skin tone that you want to use for your agent.
+-->
