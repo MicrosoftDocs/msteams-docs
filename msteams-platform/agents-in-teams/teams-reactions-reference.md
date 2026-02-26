@@ -1129,11 +1129,12 @@ This is a quick-reference tool for developers to easily find and copy reaction I
 | 🏖️ | **Sandcastle** | `sandcastle` |
 | ❤ | **Cactus love** | `cactuslove` |
 | 🏠 | **Working from home** | `wfh` |
+
+<!--
 | ♻ | **Wind turbine** | `windturbine` |
 | ♻ | **Vegetable garden** | `vegetablegarden` |
 | ♻ | **Electric car** | `electriccar` |
 
-<!--
 ### Travel and places - Diverse
 
 | Emoji | Emoji name | Reaction ID | Diverse - Skin tone |
