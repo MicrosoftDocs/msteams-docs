@@ -66,10 +66,7 @@ You can enable targeted messages using Teams SDK or REST APIs. Teams SDK support
 
 ### Send a targeted message
 
-Sending a targeted message is similar to sending a regular message. The agent indicates that the message is intended for a specific user in the conversation, and the platform delivers it to that user. The agent doesn't initiate a separate conversation or create a new chat.
-
-> [!NOTE]
-> Only a bot can send a targeted message.
+Sending a targeted message is similar to sending a regular message. Only an agent or a bot can send a targeted message. The agent indicates that the message is intended for a specific user in the conversation, and the platform delivers it to that user. The agent doesn't initiate a separate conversation or create a new chat.
 
 Key steps for enabling the agent to send a targeted message are as follows:
 
@@ -96,6 +93,8 @@ Key steps for enabling the agent to send a targeted message are as follows:
       );
     });
     ```
+
+    For more information, see [Teams SDK](/microsoftteams/platform/teams-ai-library/essentials/sending-messages/overview?pivots=typescript).
 
    # [C#](#tab/dotnet1)
 
