@@ -11,7 +11,8 @@ ms.topic: reference
 
 # Enable agent reactions in Teams
 
-You can build agents to communicate beyond text using reactions, emojis, and context-aware actions. It signals agent's intentional design to improve user trust and make agent behavior more transparent and shows how the agent understands user intent and need.
+You can build an agent to communicate beyond text using reactions, emojis, and context-aware actions.
+Reactions make the agent’s intent clearer, improve transparency, and build user trust.
 
 :::image type="content" source="../assets/images/agents-in-teams/teams-reactions/agent-reactions.png" alt-text="Image shows agent reactions in Teams."  border="false" lightbox="../assets/images/agents-in-teams/teams-reactions/agent-reactions.png":::
 
@@ -27,7 +28,7 @@ Map emojis and reactions to specific agent actions and use the ID to send the ri
 
 ## Enable an agent to add reactions
 
-You can use the `addReaction` method from Teams SDK or call the `add reaction` API directly to send reactions to messages. Reactions sent by agents are limited to two reactions per second. To enable agents to send reactions to a message:
+You can use the `addReaction` method from Teams SDK or call the `add reaction` API directly to send reactions to messages. Reactions sent by an agent are limited to two reactions per second. To enable an agent to send a reaction to a message:
 
 1. Use the [Teams reactions reference](teams-reactions-reference.md) for getting the `reactionId` for the reactions that you want to add. You can also select a particular [skin tone for the emoji](#modify-skin-tone-for-emojis) by selecting its `reactionId`.
 1. Use the `addReaction` method from Teams SDK or call the `add reaction` API to send reactions to messages.
@@ -106,7 +107,7 @@ You can handle reaction requests when an agent has already reacted to a message.
 
 ## Enable an agent to remove reactions
 
-You can choose to enable agents to remove reactions from messages. To enable agents to remove reactions from a message:
+You can choose to enable an agent to remove its reaction from messages. To remove the agent's reaction from a message:
 
 1. Use the [Teams reactions reference](teams-reactions-reference.md) for getting the `reactionId` for the reactions that you want to remove.
 1. Use the `removeReaction` method from Teams SDK or call the `remove reaction` API to remove reactions from messages.
@@ -219,9 +220,9 @@ You can find more information on error codes for sending messages [here](../bots
 The [Teams reactions reference](teams-reactions-reference.md) shows skin tone options for emojis. The emojis that offer skin tone are tagged as **Diverse**. To select a particular skin tone:
 
 1. Choose a reaction tagged as **Diverse**.
-1. Copy the `reactionId` for the **Diverse - skin tone** that you want to use for your agent.
+1. Copy the `reactionId` for the **Diverse - skin tone** that you want to use in your agent.
 
-    :::image type="content" source="../assets/images/agents-in-teams/teams-reactions/select-diverse-skin-tone.png" alt-text="Image shows a list of diverse skins tones." border="false":::
+    :::image type="content" source="../assets/images/agents-in-teams/teams-reactions/select-diverse-skin-tone.png" alt-text="Image shows a list of diverse skin tones." border="false":::
 
 1. Use the copied `reactionId` in your agent's payload to send the selected reaction in the conversation.
 
@@ -288,7 +289,7 @@ Where,
 
 - Employ reactions to improve user experience such as acknowledging a message or providing succinct feedback.
 - Avoid excessive use of reactions to minimize notification fatigue for users.
-- Ensure your agents’ reactions fit the message context and avoid having your agent send multiple reactions to the same message without first removing any existing reactions.
+- Ensure your agent's reactions fit the message context and avoid having your agent send multiple reactions to the same message without first removing any existing reactions.
 
 ## See also
 
