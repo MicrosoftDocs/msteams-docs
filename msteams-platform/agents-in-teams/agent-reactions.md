@@ -227,20 +227,6 @@ The [Teams reactions reference](teams-reactions-reference.md) shows skin tone op
 
 The following code snippet shows an example of selecting a specific skin tone of a diverse reaction to a message:
 
-# [TypeScript](#tab/ts1)
-
-[WIP: Add link to Teams SDK docs.]
-
-```typescript
-
-app.on('mention', async ({ activity, send }) => {
-  await send(new MessageReactionActivity({
-    replyToId = activity.id,
-    reactions: ["1f44b_wavinghand-tone4"]
-  }));
-});
-```
-
 # [CSharp](#tab/cs1)
 
 [WIP: Add link to Teams SDK docs.]
@@ -257,6 +243,20 @@ app.on('mention', async ({ activity, send }) => {
                 }).WithReplyToId(activity.Id));
             }
         }
+```
+
+# [TypeScript](#tab/ts1)
+
+[WIP: Add link to Teams SDK docs.]
+
+```typescript
+
+app.on('mention', async ({ activity, send }) => {
+  await send(new MessageReactionActivity({
+    replyToId = activity.id,
+    reactions: ["1f44b_wavinghand-tone4"]
+  }));
+});
 ```
 
 # [Python](#tab/py1)
