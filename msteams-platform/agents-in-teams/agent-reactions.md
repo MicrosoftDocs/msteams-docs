@@ -221,7 +221,7 @@ To select a particular skin tone:
 
     :::image type="content" source="../assets/images/agents-in-teams/teams-reactions/select-diverse-skin-tone.png" alt-text="Image shows a list of diverse skins tones.":::
 
-1. Copy the `reactionId` for the skin tone that you want to use for your agent.
+1. Copy the `reactionId` for the **Diverse - skin tone** that you want to use for your agent.
 
 The following code snippet shows an example of selecting a specific skin tone of a Diverse emoji to a message:
 

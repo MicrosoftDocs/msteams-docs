@@ -265,7 +265,7 @@ This is a quick-reference tool for developers to easily find and copy reaction I
 
 ## Hand gestures
 
-| Emoji | Emoji name | Reaction ID | Diverse - Skin tone |
+| Emoji | Emoji name | Reaction ID | Diverse - skin tone |
 | --- | --- | --- | --- |
 | 👋  | **Waving hand** | `1f44b_wavinghand` | 👋🏻 - `1f44b_wavinghand-tone1` <br> 👋🏼 - `1f44b_wavinghand-tone2` <br> 👋🏽 - `1f44b_wavinghand-tone3` <br> 👋🏾 - `1f44b_wavinghand-tone4` <br> 👋🏿 -`1f44b_wavinghand-tone5` |
 | 🤚 | **Raised back of hand** | `1f91a_raisedbackofhand` | 🤚🏻 - `1f91a_raisedbackofhand-tone1` <br> 🤚🏼 - `1f91a_raisedbackofhand-tone2` <br> 🤚🏽 - `1f91a_raisedbackofhand-tone3` <br> 🤚🏾 - `1f91a_raisedbackofhand-tone4` <br> 🤚🏿 - `1f91a_raisedbackofhand-tone5` |
@@ -336,7 +336,7 @@ This is a quick-reference tool for developers to easily find and copy reaction I
 
 ## People
 
-| Emoji | Emoji name | Reaction ID | Diverse - Skin tone |
+| Emoji | Emoji name | Reaction ID | Diverse - skin tone |
 | --- | --- | --- | --- |
 | 👶 | **Smile baby** | `smilebaby` | 👶🏻 - `smilebaby-tone1` <br> 👶🏼 - `smilebaby-tone2` <br> 👶🏽 - `smilebaby-tone3` <br> 👶🏾 - `smilebaby-tone4` <br> 👶🏿 - `smilebaby-tone5` |
 | 🧒 | **Child** | `1f9d2_child` | 🧒🏻 - `1f9d2_child-tone1` <br> 🧒🏼 - `1f9d2_child-tone2` <br> 🧒🏽 - `1f9d2_child-tone3` <br> 🧒🏾 - `1f9d2_child-tone4` <br> 🧒🏿 - `1f9d2_child-tone5` |
@@ -1137,7 +1137,7 @@ This is a quick-reference tool for developers to easily find and copy reaction I
 
 ### Travel and places - Diverse
 
-| Emoji | Emoji name | Reaction ID | Diverse - Skin tone |
+| Emoji | Emoji name | Reaction ID | Diverse - skin tone |
 | --- | --- | --- | --- |
 | ♻ | **Earth in hand, Europe and Africa** | `europeafricainhand` | ♻🏻 - `europeafricainhand-tone1` <br> ♻🏼 - `europeafricainhand-tone2` <br> ♻🏽 - `europeafricainhand-tone3` <br> ♻🏾 - `europeafricainhand-tone4` <br> ♻🏿 - `europeafricainhand-tone5` |
 | ♻ | **Earth in hand, Americas** | `americainhand` | ♻🏻 - `americainhand-tone1` <br> ♻🏼 - `americainhand-tone2` <br> ♻🏽 - `americainhand-tone3` <br> ♻🏾 - `americainhand-tone4` <br> ♻🏿 - `americainhand-tone5` |
