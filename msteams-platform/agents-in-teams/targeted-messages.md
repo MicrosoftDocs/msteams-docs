@@ -126,7 +126,7 @@ Key steps for enabling the agent to send a targeted message are as follows:
       )
    ```
 
-    [Teams SDK](/microsoftteams/platform/teams-ai-library/essentials/sending-messages/overview?pivots=python#targeted-messages).
+    For more information, see [Teams SDK](/microsoftteams/platform/teams-ai-library/essentials/sending-messages/overview?pivots=python#targeted-messages).
 
    # [HTTP](#tab/api1)
 
