@@ -1,6 +1,6 @@
 ---
 title: Get Started - Overview
-description: Explore Microsoft Teams app capabilities including tabs, bots, message extensions, and meeting apps. Start building your first Teams app today.
+description: Learn about Microsoft Teams app capabilities including tabs, bots, message extensions, and meeting apps. Start building your first Teams app today.
 ms.localizationpriority: high
 ms.date: 11/28/2025
 ms.topic: reference
