@@ -7,6 +7,7 @@ ms.topic: reference
 ---
 
 <!-- markdownlint-disable MD051 -->
+<!-- markdownlint-disable MD001 -->
 
 # Enable agent reactions in Teams
 
@@ -96,11 +97,12 @@ Where,
 
 ---
 
-> [!NOTE]
-> **Handle existing agent reactions**:
->
-> - **Reaction already added**: If an agent tries to react to a message it has already reacted to, the action succeeds but no duplicate reaction is added.
-> - **Replace a reaction**: To enable the agent to replace a reaction it already added, [remove the reaction](#enable-an-agent-to-remove-reactions) that was added, and then add the new reaction.
+### Handle existing agent reactions
+
+You can handle reaction requests when an agent has already reacted to a message.
+
+- **Reaction already added**: If an agent tries to react to a message it has already reacted to, the action succeeds but no duplicate reaction is added.
+- **Replace a reaction**: To enable the agent to replace a reaction it already added, [remove the reaction](#enable-an-agent-to-remove-reactions) that was added, and then [add the new reaction](#enable-an-agent-to-add-reactions).
 
 ## Enable an agent to remove reactions
 
