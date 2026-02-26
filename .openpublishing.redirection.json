@@ -1519,6 +1519,10 @@
       {
         "source_path": "msteams-platform/toolkit/teams-app-test-tool-tutorial.md",
         "redirect_url": "/microsoftteams/platform//get-started/tutorials"
+      },
+      {
+        "source_path": "msteams-platform/resources/schema/localization-schema.md",
+        "redirect_url": "/microsoft-365/extensibility/schema/loc-schema/root"
       }
     ]
 }
