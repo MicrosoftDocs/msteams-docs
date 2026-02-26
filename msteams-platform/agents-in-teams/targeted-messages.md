@@ -80,6 +80,21 @@ Key steps for enabling the agent to send a targeted message are as follows:
 
 2. Use any of the following code snippets to send a targeted message:
 
+   # [C#](#tab/dotnet1)
+
+    ```csharp
+    app.OnMessage(async context =>
+    {
+    // Using WithRecipient with isTargeted=true explicitly targets the specified recipient
+    await context.Send(
+            new MessageActivity("This message is only visible to you!")
+                .WithRecipient(context.Activity.From, isTargeted: true)
+        );
+    });
+    ```
+
+    For more information, see [Teams SDK](/microsoftteams/platform/teams-ai-library/essentials/sending-messages/overview?pivots=csharp#targeted-messages).
+
    # [TypeScript](#tab/ts1)
 
     ```typescript
@@ -95,21 +110,6 @@ Key steps for enabling the agent to send a targeted message are as follows:
     ```
 
     For more information, see [Teams SDK](/microsoftteams/platform/teams-ai-library/essentials/sending-messages/overview?pivots=typescript#targeted-messages).
-
-   # [C#](#tab/dotnet1)
-
-    ```csharp
-    app.OnMessage(async context =>
-    {
-    // Using WithRecipient with isTargeted=true explicitly targets the specified recipient
-    await context.Send(
-            new MessageActivity("This message is only visible to you!")
-                .WithRecipient(context.Activity.From, isTargeted: true)
-        );
-    });
-    ```
-
-    For more information, see [Teams SDK](/microsoftteams/platform/teams-ai-library/essentials/sending-messages/overview?pivots=csharp#targeted-messages).
 
    # [Python](#tab/Py1)
 
@@ -170,20 +170,20 @@ The agent can edit the original targeted message if needed. The updated message 
 
 Use one of the following code snippets to edit targeted message:
 
-# [TypeScript](#tab/ts1)
-
-```typescript
-// Update
-const updatedMessage = new MessageActivity('This message has been updated!');
-await api.conversations.activities.updateTargeted(conversationId, messageId, updatedMessage);
-```
-
 # [C#](#tab/dotnet1)
 
 ```csharp
 // Update 
 var updatedMessage = new MessageActivity("This message has been updated!");
 await context.Api.Conversations.Activities.UpdateTargetedAsync(conversationId, messageId, updatedMessage);
+```
+
+# [TypeScript](#tab/ts1)
+
+```typescript
+// Update
+const updatedMessage = new MessageActivity('This message has been updated!');
+await api.conversations.activities.updateTargeted(conversationId, messageId, updatedMessage);
 ```
 
 # [Python](#tab/Py1)
@@ -219,18 +219,18 @@ Agents can delete messages within 24 hours if they've been acted on or they are 
 
 Use one of the following code snippets to delete targeted message:
 
-# [TypeScript](#tab/ts1)
-
-```typescript
-// Delete
-await api.conversations.activities.deleteTargeted(conversationId, messageId);
-```
-
 # [C#](#tab/dotnet1)
 
 ```csharp
 // Delete
 await context.Api.Conversations.Activities.DeleteTargetedAsync(conversationId, messageId);
+```
+
+# [TypeScript](#tab/ts1)
+
+```typescript
+// Delete
+await api.conversations.activities.deleteTargeted(conversationId, messageId);
 ```
 
 # [Python](#tab/Py1)
