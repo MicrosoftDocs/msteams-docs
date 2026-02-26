@@ -94,7 +94,7 @@ Key steps for enabling the agent to send a targeted message are as follows:
     });
     ```
 
-    For more information, see [Teams SDK](/microsoftteams/platform/teams-ai-library/essentials/sending-messages/overview?pivots=typescript).
+    For more information, see [Teams SDK](/microsoftteams/platform/teams-ai-library/essentials/sending-messages/overview?pivots=typescript#targeted-messages).
 
    # [C#](#tab/dotnet1)
 
