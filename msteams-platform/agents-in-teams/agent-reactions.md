@@ -33,20 +33,6 @@ You can use the `addReaction` method from Teams SDK or call the `add reaction` A
 
 The following code snippet shows an example of adding the *Waving hand* reaction to a message:
 
-# [TypeScript](#tab/ts1)
-
-[WIP: Add link to Teams SDK docs.]
-
-```typescript
-app.on('message', async ({ activity, api, send }) => {
-  await send("Hello! I'll react to this message.");
-
-  // Add a reaction to the incoming message
-  await api.conversations.reactions.add(activity.conversation.id, activity.id, '1f44b_wavinghand');
-});
-
-```
-
 # [CSharp](#tab/cs1)
 
 [WIP: Add link to Teams SDK docs.]
@@ -63,6 +49,20 @@ app.OnMessage(async context =>
         ReactionType.1f44b_wavinghand
     );
 });
+```
+
+# [TypeScript](#tab/ts1)
+
+[WIP: Add link to Teams SDK docs.]
+
+```typescript
+app.on('message', async ({ activity, api, send }) => {
+  await send("Hello! I'll react to this message.");
+
+  // Add a reaction to the incoming message
+  await api.conversations.reactions.add(activity.conversation.id, activity.id, '1f44b_wavinghand');
+});
+
 ```
 
 # [Python](#tab/py1)
@@ -97,7 +97,10 @@ Where,
 ---
 
 > [!NOTE]
-> If the agent tries to react to a message it has already reacted to, the action succeeds but no duplicate reaction is added.
+> **Handle existing agent reactions**:
+>
+> - **Reaction already added**: If an agent tries to react to a message it has already reacted to, the action succeeds but no duplicate reaction is added.
+> - **Replace a reaction**: To enable the agent to replace a reaction it already added, [remove the reaction](#enable-an-agent-to-remove-reactions) that was added, and then add the new reaction.
 
 ## Enable an agent to remove reactions
 
@@ -211,11 +214,7 @@ You can find more information on error codes for sending messages [here](../bots
 
 ## Modify skin tone for emojis
 
-The [Teams reactions reference](teams-reactions-reference.md) shows skin tone options for emojis. The emojis that offer skin tone are tagged as **Diverse**.
-
-:::image type="content" source="../assets/images/agents-in-teams/teams-reactions/diverse-skin-tones.png" alt-text="Image shows the diverse skin tones for emojis." border="false":::
-
-To select a particular skin tone:
+The [Teams reactions reference](teams-reactions-reference.md) shows skin tone options for emojis. The emojis that offer skin tone are tagged as **Diverse**. To select a particular skin tone:
 
 1. Choose a reaction tagged as **Diverse**.
 1. Copy the `reactionId` for the **Diverse - skin tone** that you want to use for your agent.
