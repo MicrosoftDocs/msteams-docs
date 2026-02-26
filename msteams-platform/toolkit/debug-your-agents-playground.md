@@ -446,6 +446,7 @@ team:
 >
 > * Developers can obtain `agenticAppId`, `agenticUserId`, and `tenantId` after publishing their agent to the Microsoft 365 admin center. For more information, see [publish agent to Microsoft 365 admin center](/microsoft-agent-365/developer/a365-dev-lifecycle).
 > * These fields enable debugging in the Microsoft Agent 365 scenario. For more information, see [Agent 365 Identity](/microsoft-agent-365/developer/identity).
+> * The fields `agenticAppId`, `agenticUserId`, `tenantId`, and `role` are supported in M365 Agents Playground version 0.2.23 and later. Ensure you are using the correct Playground version.
 
 ### Customize the configuration file
 
