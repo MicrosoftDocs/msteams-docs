@@ -114,21 +114,6 @@ You can choose to enable an agent to remove its reaction from messages. To remov
 
 The following code snippet shows an example of removing a reaction from a message:
 
-# [TypeScript](#tab/ts1)
-
-[WIP: Add link to Teams SDK docs.]
-
-```typescript
-app.on('message', async ({ activity, api }) => {
-  // First, add a reaction
-  await api.conversations.reactions.add(activity.conversation.id, activity.id, '1f44b_wavinghand');
-
-  // Wait a bit, then remove it
-  await new Promise((resolve) => setTimeout(resolve, 2000));
-  await api.conversations.reactions.delete(activity.conversation.id, activity.id, '1f44b_wavinghand');
-});
-```
-
 # [CSharp](#tab/cs1)
 
 [WIP: Add link to Teams SDK docs.]
@@ -150,6 +135,21 @@ app.OnMessage(async context =>
         context.Activity.Id,
         ReactionType.1f44b_wavinghand
     );
+});
+```
+
+# [TypeScript](#tab/ts1)
+
+[WIP: Add link to Teams SDK docs.]
+
+```typescript
+app.on('message', async ({ activity, api }) => {
+  // First, add a reaction
+  await api.conversations.reactions.add(activity.conversation.id, activity.id, '1f44b_wavinghand');
+
+  // Wait a bit, then remove it
+  await new Promise((resolve) => setTimeout(resolve, 2000));
+  await api.conversations.reactions.delete(activity.conversation.id, activity.id, '1f44b_wavinghand');
 });
 ```
 
