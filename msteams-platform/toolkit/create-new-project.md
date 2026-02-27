@@ -15,13 +15,13 @@ To start with Teams capabilities, you can create the following types of Teams ap
 
 | App Types | Definition |
 | --- | --- |
-| **Scenario-based Teams apps** | This group of templates are designed for particular abstracted business scenarios that your teams app can serve for. |
-| **Basic Teams apps** | Basic Teams apps are just hello world Teams tab, bot, or message extension that you can create and customize based on your requirement. |
-| **Extend Teams App across Microsoft 365** | This group of Teams app can be installed and run on Outlook and Office.com. |
+| **Scenario-based Teams agents** | This group of templates is designed for particular abstracted business scenarios that your teams agent can serve for. |
+| **Basic Teams apps** | Basic Teams apps are just Hello World Teams tab, bot, or message extension that you can create and customize based on your requirement. |
+| **Office Add-ins** | This group of add-ins can be installed and run on Outlook and Office.com. |
 
 ## Create a new Teams app using Visual Studio Code
 
-The process to create a new Teams app is similar for all types of apps. To create a basic Teams app:
+The process to create a new Teams app is similar for all types of agents and apps. To create a basic Teams app:
 
 1. Open **Visual Studio Code**.
 
