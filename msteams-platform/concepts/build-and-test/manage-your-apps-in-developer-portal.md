@@ -273,7 +273,7 @@ To add a bot:
 >
 >   * For single-tenant apps where the calling user is a non-admin user but is the owner of the backing application, the user must have the *Application Developer* role.
 >
-> For single-tenant apps, the developer must configure the bot to request an access token from the tenant-specific **Microsoft Entra ID** endpoint. The tenant ID must be included as part of the environment configuration when requesting the access token. For more information, see [Bot Framework REST connector authentication](https://learn.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&tabs=singletenant#step-1-request-an-access-token-from-the-microsoft-entra-id-account-login-service).
+> For single-tenant apps, the developer must configure the bot to request an access token from the tenant-specific **Microsoft Entra ID** endpoint. The tenant ID must be included as part of the environment configuration when requesting the access token. For more information, see [Bot Framework REST connector authentication](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication#step-1-request-an-access-token-from-the-microsoft-entra-id-account-login-service).
 
 From the Developer Portal, go to Bot Framework portal and configure your bot to update the icon and other properties.
 
