@@ -3,7 +3,7 @@ title: Grant RSC permissions to an app
 description: Learn how to grant resource-specific consent (RSC) permissions, which allows team, chat owners, users, and meeting organizers to grant consent for an app.
 ms.localizationpriority: medium
 author: surbhigupta
-ms.author: surbhigupta
+ms.author: vikasalmal
 ms.topic: reference
 ms.owner: vishachadha
 ms.date: 02/27/2026

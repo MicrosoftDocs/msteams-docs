@@ -2,7 +2,7 @@
 title: Apps for Teams Meeting Stage
 description: Learn how to build apps for Teams meeting stage, share to stage APIs, and generate a deep link to share content to stage in meetings.
 ms.topic: article
-ms.author: surbhigupta
+ms.author: vikasalmal
 ms.localizationpriority: medium
 ms.owner: kanchankaur
 ms.date: 02/27/2026
