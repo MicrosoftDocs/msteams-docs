@@ -6,7 +6,7 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.owner: vichug
-ms.date: 03/05/2025
+ms.date: 02/27/2026
 ---
 
 # Build tabs for meeting
@@ -32,17 +32,17 @@ Before creating a meeting tab, it's important to learn about the surfaces that a
 1. In the app gallery, select the app that you want to add and follow the steps as required. The tab is added to the meeting details page.
 
    # [Desktop](#tab/desktop)
-    
+
      The following image shows a tab added to the meeting details page in the Teams desktop client:
-    
+
      :::image type="content" source="~/assets/images/apps-in-meetings/premeetingtab.png" alt-text="Screenshot shows desktop Teams tabs in the meeting details view in the Teams meeting.":::
-    
+
    # [Mobile](#tab/mobile)
-    
+
      The following image shows a tab added to the meeting details page in the Teams mobile client:
-    
+
      :::image type="content" source="../assets/images/mobile-tab.png" alt-text="Screenshot shows mobile Teams tabs in the meeting details view in the Teams meeting.":::
-    
+
    ---
 
 ### Meeting chat view
@@ -54,17 +54,17 @@ Before creating a meeting tab, it's important to learn about the surfaces that a
 1. In the app gallery, select the app that you want to add and follow the steps as required. The tab is added to the meeting chat.
 
    # [Meeting chat view desktop](#tab/meeting-chat-view-desktop)
-    
+
      The following image shows an app added to the meeting chat in the Teams desktop client:
-    
+
      :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view.png" alt-text="Screenshot shows the meeting chat view in a meeting chat in Teams desktop.":::
-    
+
    # [Meeting chat view mobile](#tab/meeting-chat-view-mobile)
-    
+
      The following image shows an app added to the meeting chat in the Teams mobile client:
-    
+
      :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view-mobile.png" alt-text="Screenshot shows the meeting chat view in a meeting chat in Teams mobile.":::
-    
+
    ---
 
 ### Meeting side panel view
@@ -275,7 +275,7 @@ The following table provides the user types and lists the features that each use
 |Sample name | Description | .NET | Node.js | Manifest|
 |----------------|--------------------------------------------------------|--------------|----------------|----------------|
 | Meeting app |The Meeting Token Generator app for Microsoft Teams allows participants to request and manage interaction tokens, ensuring equitable participation during meetings like scrums and Q&A sessions. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp/demo-manifest/meetings-token-app.zip)|
-| Meeting stage sample | This sample app demonstrates how to enable and configure applications for Microsoft Teams meetings, allowing users to interact with a shared meeting stage using the Live Share SDK. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-stage-view/csharp/demo-manifest/Meeting-stage-view.zip) |
+| Meeting stage sample | This sample app demonstrates how to enable and configure applications for Microsoft Teams meetings, allowing users to interact with a shared meeting stage using the Live Share SDK. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-stage-view/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/meetings-stage-view/csharp/demo-manifest/Meeting-stage-view.zip) |
 | Meeting side panel | This Microsoft Teams sample app demonstrates how to use the Live Share SDK to implement a side panel that allows for real-time data sharing during meetings. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs) | NA |
 | In-meeting notification | This sample demonstrates how a bot can receive real-time updates for meeting events and participant activities within Microsoft Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp/demo-manifest/Meetings-Events.zip)|
 | In-meeting document signing | This Microsoft Teams sample app enables users to review and sign documents in real time during meetings, facilitating seamless collaboration. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA | NA |
@@ -285,7 +285,6 @@ The following table provides the user types and lists the features that each use
 >
 > * Meeting apps (side panel and meeting stage) are supported in Teams desktop client.
 > * Meeting apps (side panel and meeting stage) in Teams web client is supported only when the [developer preview is enabled](/microsoftteams/platform/resources/dev-preview/developer-preview-intro#enable-developer-preview).
-
 
 ## See also
 
