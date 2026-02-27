@@ -193,7 +193,7 @@ If you're a Teams Administrator (that is, you have admin rights), follow these s
      > [!Note]
      > It can take up to 24 hours for custom app upload to become active. After it's active, you can use the **Upload a custom app** option in Teams to test your app. To upload the .zip package file of the app, see [upload custom apps](/microsoftteams/teams-custom-app-policies-and-settings).
 
-     Ensure that you have the app upload permission using the steps mentioned in [verify custom app upload permission using Visual Studio Code or Teams client](#verify-custom-app-upload-permission).
+     Ensure that you have the app upload permission using the steps mentioned in [verify custom app upload permission](#verify-custom-app-upload-permission).
 
 </details>
 
