@@ -64,7 +64,7 @@ You can sign up for the developer program using one of the following account typ
 
        The Microsoft account provides access to the Microsoft products and cloud services, such as Outlook, Messenger, OneDrive, MSN, Xbox Live, or Microsoft 365. 
 
-       Sign up for an Outlook.com mailbox to create a Microsoft 365 account. Use it to access consumer-related Microsoft cloud services or Azure.
+       Sign up for an Outlook.com mailbox to create a Microsoft account (personal account). You can use this Microsoft account to sign up for the Microsoft 365 Developer Program and to access consumer-related Microsoft cloud services or Azure. Note that this personal Microsoft account can't be used directly to build Teams apps; you'll need a separate work or school Microsoft 365 account for that.
 
     :::column-end:::
     :::column span="1":::
@@ -100,10 +100,10 @@ To create a free Microsoft 365 developer account:
 
 ### Azure account
 
-An Azure account allows you to host a Teams app or the back-end resources for your Teams app to Azure. You can do this using Agents Toolkit in Visual Studio Code. You must have an Azure subscription in the following scenarios:
+An Azure account allows you to host a Teams app or the back-end resources for your Teams app on Azure. You can do this using Agents Toolkit in Visual Studio Code. You must have an Azure subscription in the following scenarios:
 
-* If you already have an existing app on a cloud provider other than Azure, and you want to integrate the app on Teams platform.
-* If you want to host the back-end resources for your app using another cloud provider, or on your own servers if they're available in the public domain.
+* If you already have an existing app on a cloud provider other than Azure, and you want to integrate the app with the Teams platform.
+* If you want to host the back-end resources for your app using another cloud provider, or on your own servers that are publicly accessible.
 
 > [!NOTE]
 > You can use Azure account to provision Azure resource to host your Teams app. You can [create a free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn) in case you don't have any. If you don't use Agents Toolkit to provision and deploy, Azure account isn't required.
@@ -116,15 +116,13 @@ While creating Teams app using SPFx environment, you must have a SharePoint coll
 
 ## Verify custom app upload permission
 
-After creating the app, you must load your app in Teams without distributing it. This process is known as custom app upload. Sign in to your Microsoft 365 account to view this option.
-
-You can verify if the app upload permission is enabled using either Visual Studio Code or Teams client.
+After creating the app, you must load your app in Teams without distributing it. This process is known as custom app upload. Sign in to your Microsoft 365 account to view this option. You can verify if the app upload permission is enabled using either Visual Studio Code or Teams client.
 
 <br>
 <details>
 <summary><b>Verify custom app upload permission using Visual Studio Code</b></summary>
 
-You can use this method to verify custom app upload permission only after you have created an app project using Agents Toolkit. If you haven't created an app project, you can verify custom app upload permission using Teams client.
+You can use this method to verify custom app upload permission only after you have created a project using Microsoft 365 Agents Toolkit. If you haven't created a project, you can verify custom app upload permission using Teams client.
 
 1. Open **Visual Studio Code**.
 1. Select **Microsoft 365 Agents Toolkit** from the Visual Studio Code activity bar.
