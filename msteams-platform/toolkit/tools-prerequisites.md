@@ -157,14 +157,14 @@ You can use this method to verify custom app upload permission only after you ha
 
 ### Enable custom app upload using admin center
 
-If the custom app upload option isn’t visible in Agents Toolkit extension in Visual Studio Code or if the option to upload a custom app isn’t available in Teams, it indicates that you don't have the required permission for custom app upload.
+If the custom app upload option isn’t visible in Agents Toolkit in Visual Studio Code or if the option to upload a custom app isn’t available in Teams, it indicates that you don't have the required permission for custom app upload.
 
-You must enable custom app upload in Teams:
+You must enable custom app upload in Teams, depending on your role:
 
 * If you're a Teams Administrator, enable the custom app upload setting for your tenant or organization in the Teams admin center.
 * If you aren't a Teams Administrator, contact your admin to enable custom app upload.
 
-If you have admin rights, you can enable custom app upload:
+If you're a Teams Administrator (that is, you have admin rights), follow these steps in the Teams admin center to enable custom app upload:
 
   1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
 
