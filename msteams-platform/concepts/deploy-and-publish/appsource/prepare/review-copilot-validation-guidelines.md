@@ -302,22 +302,24 @@ For action scenarios, agents must share user disclosure and seek user confirmati
    | For a function that creates a new order "Do you want to proceed with creating a new order?" | Searches tickets" --> Doesn't seek permission |
    | For a function that creates a new ticket: "Do you want to proceed with creating a new ticket?" | "Creates tickets" --> Doesn't seek permission |
 
-* For declarative agents, any action with consequences on the external system mustn't have `isConsequential` flag set as ‘False’. [*Must fix*]
+* Consequential actions (Create, Update, or Delete API calls) must require explicit user permission before execution. To achieve this, for
+  * Plugin action, `isConsequential` flag should be set to ‘true’ for such calls
+  * MCP Server action, `readOnlyHint` annotation should be set to ‘false’ for such calls
 
   For more details, see [overriding prompt behavior](/microsoft-365-copilot/extensibility/api-plugin-confirmation-prompts?branch=main&branchFallbackFrom=public-preview#overriding-prompt-behavior).
 
    | Operation type | Actions | Expected value for `isConsequential` flag |
    | --- | --- | --- |
-   | Create | Consequential | True |
-   | Read | Non-consequential | False or True |
-   | Update | Consequential | True |
-   | Delete | Consequential | True |
+   | Create | Consequential | true |
+   | Read | Non-consequential | false or true |
+   | Update | Consequential | true |
+   | Delete | Consequential | true |
 
    | Command description | Consequential function? | Expected value for `isConsequential` flag |
    | --- | --- | --- |
-   | Returns a list of quest recommendations based on the user's interest. If there are no quote recommendations, then create a new one. | Yes | True |
-   | Returns a list of meditation recommendations based on the user's preferences. | No | False or True |
-   | Returns a list of quest recommendations based on the user's interest. If there are no quote recommendations, then create a new one. | Yes | True |
+   | Returns a list of quest recommendations based on the user's interest. If there are no quote recommendations, then create a new one. | Yes | true |
+   | Returns a list of meditation recommendations based on the user's preferences. | No | false or true |
+   | Returns a list of quest recommendations based on the user's interest. If there are no quote recommendations, then create a new one. | Yes | true |
 
 [Back to top](#validation-guidelines-for-agents)
 
@@ -341,6 +343,12 @@ A custom engine agent is a conversational Teams bot that must meet the following
    7. The bot must offer at least two context-specific suggestions or prompts to the user, rather than generic or fixed ones. [*Must fix*]
 5. The scopes defined in `bot.scopes` and `bot.commandList.scopes` nodes of the manifest must match to maintain a good user experience.
 6. Custom engine agents must include **copilot** in `bot.scopes` and `bot.commandList.scopes` to ensure proper surfacing and full platform support.
+7. Custom Engine Agents (CEAs) created using Microsoft Copilot Studio (MCS) are only eligible for Microsoft Store publication. Declarative Agents aren't supported. Such agents must comply with the following valid domain requirements:
+
+    1. Wildcard domains (for example, *.example.com) must not be used unless the domain is owned or controlled by the publisher.
+    1. Microsoft-owned domains, including domains associated with Microsoft Copilot Studio, must not be included in the agent’s domain configuration.
+    1. The domain `api.botframework.com` must be included in the agent’s allowed domains.
+    1. The agent must specify exactly one valid domain corresponding to the Microsoft Copilot Studio Dataverse geographic region/environment where the agent is hosted.
 
 [Back to top](#validation-guidelines-for-agents)
 
@@ -367,6 +375,8 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
 * Declarative agents only support static tool discovery from MCP servers. Therefore, within the agent plugin manifest, the flags `enable_dynamic_discovery` and `enable_dynamic_client_registration` for MCP servers must always be set to false. [*Must fix*]
 
+* Prompts that depend on add‑in actions must provide a graceful failure message in Copilot hubs where add‑in isn't supported.
+
 <!--
 * Nodes for Graph connector in the declarative agent manifest must be left blank to ground the agent in all available Graph connectors of a tenant. [*Must fix*]
 
@@ -383,7 +393,7 @@ A custom engine agent is a conversational Teams bot that must meet the following
 
 ## Duplicate agents
 
-* Multiple agents for the same product can be published separately, but each must have different functionality.
+* Multiple agents for the same product can be published separately, but each must have different functionality. Publishing duplicate agents isn't allowed.
 
 * An agent can be published separately from the main app, but it must have a clear justification for the same.
 
