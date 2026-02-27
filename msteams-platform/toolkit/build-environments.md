@@ -17,7 +17,7 @@ Get started with building agents and apps in Visual Studio Code using the Agents
 
 ## Build environments
 
-Agents Toolkit in Microsoft Visual Studio Code offers a set of environments to build your Teams app. You can choose any of the following environments:
+Agents Toolkit in Microsoft Visual Studio Code offers a set of environments to build your agents and apps for Microsoft Teams. You can choose any of the following environments:
 
 * JavaScript or TypeScript
 * Python
@@ -30,14 +30,13 @@ The agents or apps built with JavaScript or TypeScript have the following advant
 * Provides quick upgrades to the existing agents or apps.
 * Distributes agents or apps on multiple platforms, such as Android and iOS.
 * Compatible for creating an app with the existing APIs.
-* An app created in Agents Toolkit also supports React.
 
-Agents toolkit also supports building agents or app using Python in the preview version.
+Agents toolkit also supports building agents or app using Python in the developer preview version.
 
 Agents Toolkit in Visual Studio Code supports building:
 
 * **Tab app**: Your tab app can have web-based content. You can have a custom tab for your web content in Teams or add Teams-specific functionality to your web content.
-* **Bot app**: A bot can be chatbot or conversational bot that allows you to do simple and repetitive tasks, such as customer service or support staff.
+* **Bot app**: A bot can be a chatbot or conversational bot that allows you to do simple and repetitive tasks, such as customer service or support staff.
 * **Message extension app**: You can interact with your web service through buttons and forms in the Teams client.
 
 <!--
@@ -61,11 +60,10 @@ Agents Toolkit in Visual Studio Code allows you to create tab apps using SPFx. T
 
 ## Support for Azure Functions
 
-You can use Agents Toolkit to integrate [Azure Functions](/azure/azure-functions/functions-overview) capabilities while building apps. You can focus on the pieces of code that matter, and Azure Functions handles the rest.
-Azure Functions provides "compute on-demand" in two significant ways:
+You can use Agents Toolkit to integrate [Azure Functions](/azure/azure-functions/functions-overview) capabilities while building apps. You can focus on the pieces of code that matter, and Azure Functions handles the rest. Azure Functions provides "compute on-demand" in two significant ways:
 
-1. Allows implementing system's logic into your readily available blocks of code. These blocks are called functions.
-1. Meets the requirement with as many resources and function instances as necessary as the requests increase.
+1. Allows implementing your system's logic into your readily available blocks of code. These blocks are called functions.
+1. Scales to meet demand with as many resources and function instances as necessary as the requests increase.
 
 Azure Functions integrates with an array of [cloud services](add-resource.md) to provide feature-rich implementations. The following are some of the [common scenarios](/azure/azure-functions/functions-scenarios) for Azure Functions:
 
