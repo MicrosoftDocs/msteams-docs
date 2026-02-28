@@ -73,11 +73,17 @@ After you update the manifest:
 
 > [!IMPORTANT]
 >
-> Bots that don't enable topics continue to use the standard one-on-one chat experience.
+> Bots that don't enable sessions continue to use the standard one-on-one chat experience.
 
 ## User experience after enabling sessions
 
 After sessions are enabled, users see new controls in the chat header that allow them to create and switch between sessions.
+
+Clicking on the new session icon starts a new session.​
+:::image type="content" source="assets/images/bots/create-new-session.png" alt-text="screenshot shows creating a new session button" lightbox="assets/images/bots/create-new-session.png":::
+
+After a message is sent, the session is created and saved in the sessions panel.
+:::image type="content" source="assets/images/bots/sessions-panel.png" alt-text="screenshot shows the sessions panel" lightbox="assets/images/bots/sessions-panel.png":::
 
 <!--### Create and navigate topics
 
