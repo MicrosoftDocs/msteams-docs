@@ -43,7 +43,7 @@ For example, a developer productivity bot might create a separate topic for each
 ## Enable sessions for your bot
 
 Sessions are an opt-in capability that you enable through your app manifest.  
-After you enable sessions and publish an updated app, users see the sessions experience after they install or upgrade the app.
+After you enable sessions and publish the updated app, users see the sessions experience after they install or upgrade the app.
 
 > [!IMPORTANT]
 > After your bot opts in to sessions, we recommend that you don't disable the feature, because existing conversations are converted to sessions.
@@ -129,7 +129,6 @@ Use the conversation ID from the incoming activity when responding.
 
 ```csharp
 
-<!--`threadId;messageid=parentMessageId` (WIP)-->
 var conversationId = turnContext.Activity.Conversation.Id;
 
 ```
@@ -228,7 +227,7 @@ When sessions are enabled for an existing bot, previous messages are automatical
 
 During migration:
 
-- Existing messages are grouped into a default session
+- Teams groups existing messages into a default session
 
 - Users can continue chatting without interruption
 
