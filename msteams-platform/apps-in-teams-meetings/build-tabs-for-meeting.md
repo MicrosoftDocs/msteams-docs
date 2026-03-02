@@ -49,7 +49,7 @@ Before creating a meeting tab, it's important to learn about the surfaces that a
 
 1. From the Teams chat panel, select the meeting chat view.
 
-1. Select :::image type="icon" source="../assets/icons/add-icon.png" border="false"::: and the app gallery appears.
+1. Select :::image type="icon" source="../assets/icons/add-icon(1).png" border="false"::: and the app gallery appears.
 
 1. In the app gallery, select the app that you want to add and follow the steps as required. The tab is added to the meeting chat.
 
