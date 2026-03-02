@@ -6,7 +6,7 @@ ms.topic: conceptual
 ms.author: vikasalmal
 ms.localizationpriority: high
 ms.owner: vichug
-ms.date: 02/27/2026
+ms.date: 03/02/2026
 ---
 
 # Build tabs for meeting
@@ -279,7 +279,7 @@ The following table provides the user types and lists the features that each use
 | Meeting side panel | This Microsoft Teams sample app demonstrates how to use the Live Share SDK to implement a side panel that allows for real-time data sharing during meetings. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs) | NA |
 | In-meeting notification | This sample demonstrates how a bot can receive real-time updates for meeting events and participant activities within Microsoft Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp/demo-manifest/Meetings-Events.zip)|
 | In-meeting document signing | This Microsoft Teams sample app enables users to review and sign documents in real time during meetings, facilitating seamless collaboration. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA | NA |
-| Meeting tabs | This app allows muting/unmuting Teams meeting audio and displays stage view in the meeting side panel. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-tabs/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meeting-tabs/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meeting-tabs/csharp/demo-manifest/meeting-tabs.zip) |
+| Meeting tabs | This app allows muting/unmuting Teams meeting audio and displays stage view in the meeting side panel. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meeting-tabs/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meeting-tabs/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/meeting-tabs/csharp/demo-manifest/meeting-tabs.zip) |
 
 > [!NOTE]
 >
