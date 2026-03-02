@@ -209,7 +209,7 @@ The following are the success and error codes:
 > [!NOTE]
 > A 200 OK is also returned when adding a reaction that already exists on the message, or removing a reaction that isn't currently applied. These are idempotent operations and don't produce errors.
 
-### Error codes
+### Client error codes
 
 | Response codes | Error message | Description | Action |
 | --- | --- | --- | --- |
@@ -221,6 +221,14 @@ The following are the success and error codes:
 | `404` | `ConversationNotFound` | The messageId couldn't be found, or the request URL is malformed. | Verify the messageId exists and the URL contains no whitespace or invalid characters. |
 | `405` | `ApiNotEnabled` | Reaction extensibility isn't enabled for this environment. | Confirm the feature is available in your tenant. |
 | `429` | Too many requests | Throttling limit reached | - Reduce the frequency of message reaction calls. Agent reactions are limited to two reactions per second. <br> - Implement exponential backoff and retry after the Retry-After header duration. |
+
+### Server error codes
+
+| Response codes | Error message | Description | Action |
+| --- | --- | --- | --- |
+| `500` | Internal Server Error | An unexpected error occurred on the server. | Retry the request. If persistent, file a support ticket with the `x-ms-request-id` from response headers. |
+| `502` | Bad Gateway | A downstream service dependency failed. | Retry after a brief delay. Typically, transient. |
+| `504` | Gateway Timeout | An upstream service dependency timed out. | Retry after a brief delay. If persistent, check [Teams Service Health](https://admin.microsoft.com/servicestatus) . |
 
 You can find more information on error codes for sending messages [here](../bots/build-conversational-capability.md).
 
