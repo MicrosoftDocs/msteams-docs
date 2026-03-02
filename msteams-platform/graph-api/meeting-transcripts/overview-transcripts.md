@@ -4,8 +4,8 @@ description: In this module, learn the process, scenarios, and APIs to fetch tra
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.owner: vichug
-ms.author: surbhigupta
-ms.date: 09/2/2025
+ms.author: vikasalmal
+ms.date: 03/02/2026
 ---
 
 # Get meeting transcripts and recordings using Graph APIs
@@ -108,7 +108,7 @@ Your app can directly fetch AI-generated meeting summaries, including conversati
 | --- | --- | --- | --- |
 | Online meeting transcript bot | This sample app retrieves meeting transcripts using Microsoft Graph API and displays them in a dialog. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-transcription/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-transcription/csharp) |
 | Online meeting transcripts recordings | This sample app retrieves Teams meeting transcripts and recordings using Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-meeting-transcript-recording/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-meeting-transcript-recording/csharp) |
-| Ad hoc calls transcripts and recordings | This sample app retrieves meeting transcripts and recordings using Graph APIs for ad hoc calls, including PSTN, 1:1, and group calls. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adhoccalls-transcript-recording/nodejs) |  |
+| Ad hoc calls transcripts and recordings | This sample app retrieves meeting transcripts and recordings using Graph APIs for ad hoc calls, including PSTN, 1:1, and group calls. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-adhoccalls-transcript-recording/nodejs) |  |
 
 ## Next step
 
