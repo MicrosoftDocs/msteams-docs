@@ -10,9 +10,11 @@ ms.date: 02/06/2025
 
 # Environments in Microsoft 365 Agents Toolkit
 
-Microsoft 365 Agents Toolkit (previously known as Teams Toolkit) provides a way to run and test your app in different targets for deployment like dev, staging, production, or locally on your machine. To do this, Agents Toolkit includes an optional set of features that orchestrate the configuration of these different targets using information in environment files. The environment files represent a collection of all the resources of a deployment target. Agents Toolkit project templates include two default environment groupings: one for running the app on your machine named 'local' and another for hosting somewhere else named 'dev'. You can rename the 'dev' environment and add another environments using the Environments window or manually with a new `.env.{environment-name}` file. You can't rename the local environment.
+When you build an app with Microsoft 365 Agents Toolkit (formerly Teams Toolkit), you typically need to run the same project across multiple targets, such as local, development, or playground. Environments let you keep these targets isolated while reusing the same project structure and lifecycle commands.
 
-By adding different environment files, Agents Toolkit can help automate the provisioning of resources needed to run the app and deploy your code to those resources. You can have a single set of deployment rules for number of environments using these features.
+Agents Toolkit manages environment-specific settings through `.env.{environment-name}` files. These files hold the variables and outputs for each target environment, so you can provision, deploy, and publish consistently without manually reconfiguring resources each time.
+
+This article explains how environment files work, how local and remote environments differ, how to create additional environments in Visual Studio Code, and how to select the right target environment for your workflow.
 
 ## Using environment files with Agents Toolkit
 
