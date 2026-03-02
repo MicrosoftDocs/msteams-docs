@@ -206,12 +206,21 @@ The following are the success and error codes:
 | `200` | Deleted reaction successfully | NA |
 | `200` | Deleted non-existent reaction | NA |
 
+> [!NOTE]
+> A 200 OK is also returned when adding a reaction that already exists on the message, or removing a reaction that isn't currently applied. These are idempotent operations and don't produce errors.
+
 ### Error codes
 
 | Response codes | Error message | Description | Action |
 | --- | --- | --- | --- |
-| `404` | `ConversationNotFound` | Conversation not found | The target thread cannot be located, or the agent doesn’t have access to it. |
-| `429` | Too many requests | Throttling limit reached | Reduce the frequency of message reaction calls. Agent reactions are limited to two reactions per second. |
+| `400` | Bad Request | The `reactionId` is invalid or exceeds the maximum allowed length. | Use a valid reaction ID from the [supported reactions](teams-reactions-reference.md) list . |
+| `401` | `BotNotRegistered` | The bot or agent doesn't have a valid registration. | Verify your agent or bot is registered in Azure Bot Service and the app ID is correct. |
+| `403` | `IntegrationAuthFailure` | The authentication token failed validation. | Ensure the bot token is valid, not expired, and issued for the correct audience. |
+| `403` | `BotNotInConversation` | The bot attempted to react in a conversation it doesn't have access to. | The bot must be installed in the chat or channel before sending reactions. |
+| `404` | `ConversationNotFound` | The target conversation thread couldn't be located. | Verify the conversationId is correct and the conversation still exists. |
+| `404` | `ConversationNotFound` | The messageId couldn't be found, or the request URL is malformed. | Verify the messageId exists and the URL contains no whitespace or invalid characters. |
+| `405` | `ApiNotEnabled` | Reaction extensibility isn't enabled for this environment. | Confirm the feature is available in your tenant. |
+| `429` | Too many requests | Throttling limit reached | - Reduce the frequency of message reaction calls. Agent reactions are limited to two reactions per second. <br> - Implement exponential backoff and retry after the Retry-After header duration. |
 
 You can find more information on error codes for sending messages [here](../bots/build-conversational-capability.md).
 
