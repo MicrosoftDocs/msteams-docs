@@ -207,27 +207,27 @@ The following are the success and error codes:
 | `200` | Deleted non-existent reaction | NA |
 
 > [!NOTE]
-> A 200 OK is also returned when adding a reaction that already exists on the message, or removing a reaction that isn't currently applied. These are idempotent operations and don't produce errors.
+> `200 OK` is also returned if the agent or bot adds a reaction that already exists or removes one that isn’t applied. These operations don’t return errors.
 
 ### Client error codes
 
 | Response codes | Error message | Description | Action |
 | --- | --- | --- | --- |
-| `400` | Bad Request | The `reactionId` is invalid or exceeds the maximum allowed length. | Use a valid reaction ID from the [supported reactions](teams-reactions-reference.md) list . |
-| `401` | `BotNotRegistered` | The bot or agent doesn't have a valid registration. | Verify your agent or bot is registered in Azure Bot Service and the app ID is correct. |
-| `403` | `IntegrationAuthFailure` | The authentication token failed validation. | Ensure the bot token is valid, not expired, and issued for the correct audience. |
-| `403` | `BotNotInConversation` | The bot attempted to react in a conversation it doesn't have access to. | The bot must be installed in the chat or channel before sending reactions. |
-| `404` | `ConversationNotFound` | The target conversation thread couldn't be located. | Verify the conversationId is correct and the conversation still exists. |
-| `404` | `ConversationNotFound` | The messageId couldn't be found, or the request URL is malformed. | Verify the messageId exists and the URL contains no whitespace or invalid characters. |
+| `400` | Bad Request | The `reactionId` is invalid or exceeds the maximum allowed length. | Use a valid `reactionId` from the [supported reactions](teams-reactions-reference.md) list . |
+| `401` | `BotNotRegistered` | The agent or bot doesn't have a valid registration. | Verify your agent or bot is registered in Azure Bot Service and the app ID is correct. |
+| `403` | `IntegrationAuthFailure` | The authentication token failed validation. | Ensure the agent or bot token is valid, not expired, and issued for the correct audience. |
+| `403` | `BotNotInConversation` | The agent or bot attempted to react in a conversation it doesn't have access to. | The agent or bot must be installed in the chat or channel before sending reactions. |
+| `404` | `ConversationNotFound` | The target conversation thread couldn't be located. | Verify the `conversationId` is correct and the conversation still exists. |
+| `404` | `ConversationNotFound` | The `messageId` couldn't be found, or the request URL is malformed. | Verify the `messageId` exists and the URL contains no whitespace or invalid characters. |
 | `405` | `ApiNotEnabled` | Reaction extensibility isn't enabled for this environment. | Confirm the feature is available in your tenant. |
-| `429` | Too many requests | Throttling limit reached | - Reduce the frequency of message reaction calls. Agent reactions are limited to two reactions per second. <br> - Implement exponential backoff and retry after the Retry-After header duration. |
+| `429` | Too many requests | Throttling limit reached | - Reduce the frequency of message reaction calls. Agent reactions are limited to two reactions per second. <br> - Implement exponential backoff and retry after the `Retry-After` header duration. |
 
 ### Server error codes
 
 | Response codes | Error message | Description | Action |
 | --- | --- | --- | --- |
 | `500` | Internal Server Error | An unexpected error occurred on the server. | Retry the request. If persistent, file a support ticket with the `x-ms-request-id` from response headers. |
-| `502` | Bad Gateway | A downstream service dependency failed. | Retry after a brief delay. Typically, transient. |
+| `502` | Bad Gateway | A downstream service dependency failed. | Retry after a brief delay. |
 | `504` | Gateway Timeout | An upstream service dependency timed out. | Retry after a brief delay. If persistent, check [Teams Service Health](https://admin.microsoft.com/servicestatus) . |
 
 You can find more information on error codes for sending messages [here](../bots/build-conversational-capability.md).
