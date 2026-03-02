@@ -69,7 +69,7 @@ Before creating a meeting tab, it's important to learn about the surfaces that a
 
 ### Meeting side panel view
 
-1. During a meeting, you can select :::image type="icon" source="../assets/icons/add-icon.png" border="false"::: **Apps** from Teams meeting window to add apps to the meeting.
+1. During a meeting, you can select :::image type="icon" source="../assets/icons/add-icon(1).png" border="false"::: **Apps** from Teams meeting window to add apps to the meeting.
 
    :::image type="content" source="../assets/images/apps-in-meetings/add-app.png" alt-text="Screenshot shows how to add an app in Teams meeting window.":::
 
