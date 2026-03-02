@@ -25,7 +25,7 @@ Before creating a meeting tab, it's important to learn about the surfaces that a
 ### Meeting details view
 
 1. In your calendar, select a meeting to which you want to add a tab.
-1. Select the **Details** tab and select :::image type="icon" source="../assets/icons/add-icon.png" border="false":::. The app gallery appears.
+1. In the meeting window, select :::image type="icon" source="../assets/icons/add-icon.png" border="false":::. The app gallery appears.
 
    :::image type="content" source="~/assets/images/apps-in-meetings/pre-meeting-002.png" alt-text="Screenshot shows the pre-meeting app experience in Teams meeting.":::
 
