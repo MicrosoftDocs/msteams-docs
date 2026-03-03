@@ -60,7 +60,7 @@ When you have multiple environments, you can select the ennvironment in which yo
 
 To target the dev environment, you must first provision and deploy the agent or app using the Agents Toolkit.
 
-:::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/deployment1.png" alt-text="Screenshot shows the Lifecycle section.":::
+:::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/deployment.png" alt-text="Screenshot shows the Lifecycle section.":::
 
 ## See also
 
