@@ -54,11 +54,13 @@ To create a new environment:
 
 ## Targeting an environment
 
-When you have multiple environments, you can select the ennvironment in which you can build the app. If you want to build in the `local` environment,  
+When you have multiple environments, you can select the ennvironment in which you can build the app. If you want to build in the `Playground` or `local` environment,  
 
 :::image type="content" source="../assets/images/toolkit-v2/toolkit-vs/local-build.png" alt-text="Screenshot shows the option to select local environment for building the agent or app.":::
 
-and select the Playground, dev, or local menu items, Agents Toolkit prompts you to select a target environment.
+To target the dev environment, you must first provision and deploy the agent or app using the Agents Toolkit.
+
+:::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/deployment1.png" alt-text="Screenshot shows the Lifecycle section.":::
 
 ## See also
 
