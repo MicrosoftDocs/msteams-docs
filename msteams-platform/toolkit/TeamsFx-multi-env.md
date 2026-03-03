@@ -58,9 +58,15 @@ When you have multiple environments, you can select the ennvironment in which yo
 
 :::image type="content" source="../assets/images/toolkit-v2/toolkit-vs/local-build.png" alt-text="Screenshot shows the option to select local environment for building the agent or app.":::
 
-To target the dev environment, you must first provision and deploy the agent or app using the Agents Toolkit.
+To target a `dev` environment or a custom environment you created:
 
-:::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/deployment.png" alt-text="Screenshot shows the Lifecycle section.":::
+1. Provision and deploy the agent or app using the Agents Toolkit:
+
+   :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/deployment.png" alt-text="Screenshot shows the Lifecycle section.":::
+
+1. Select the environment that you want to target:
+
+   :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/target-environment.png" alt-text="Screenshot shows the option to select dev or custom environment.":::
 
 ## See also
 
