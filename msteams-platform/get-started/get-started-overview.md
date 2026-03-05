@@ -1,16 +1,16 @@
 ---
 title: Get Started - Overview
-description: Learn about Microsoft Teams app capabilities.
+description: Explore Microsoft Teams app capabilities including tabs, bots, message extensions, and meeting apps. Start building your first Teams app today.
 ms.localizationpriority: high
-ms.date: 11/28/2025
+ms.date: 02/18/2026
 ms.topic: reference
 ---
 
 # Apps in Teams
 
-Teams apps are custom solutions designed to enhance collaboration and productivity within Microsoft Teams. They use the platform’s extensibility to deliver interactive experiences directly inside chats, channels, and meetings.
+Apps in Microsoft Teams are custom solutions designed to enhance collaboration and productivity. They use the platform's extensibility to deliver interactive experiences directly inside chats, channels, and meetings.
 
-:::image type="content" source="../assets/images/overview/teams-apps-types.png" alt-text="Image shows types of Teams app." border="false":::
+:::image type="content" source="../assets/images/overview/teams-apps-types.png" alt-text="Screenshot of the different types of Teams apps including tabs, bots, message extensions, and meeting apps." border="false":::
 
 Build apps for Teams platform and cross-hub agent scenarios to connect with enterprise data, coordinate multi-agent workflows, while keeping interactions secure. Whether you’re creating a Teams-first solution or expanding across Microsoft 365, Teams apps give you a flexible, powerful way to deliver real impact within the Microsoft ecosystem.
 
