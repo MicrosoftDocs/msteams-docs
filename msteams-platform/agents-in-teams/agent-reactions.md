@@ -12,7 +12,7 @@ ms.topic: reference
 
 # Enable agent reactions in Teams
 
-You can build agents that react to messages as well as send text. Reactions minimize notification fatigue while communicating actions efficiently.
+You can build agents that react to messages as well as send text, minimizing notification fatigue while communicating actions efficiently.
 
 :::image type="content" source="../assets/images/agents-in-teams/teams-reactions/agent-reactions.png" alt-text="Image shows agent reactions in Teams."  border="false" lightbox="../assets/images/agents-in-teams/teams-reactions/agent-reactions.png":::
 
@@ -28,7 +28,7 @@ Map emojis and reactions to specific agent actions and use the ID to send the ri
 
 ## Enable an agent to add reactions
 
-You can use the `addReaction` method from Teams SDK or call the `add reaction` API directly to send reactions to messages. Reactions sent by an agent are limited to two reactions per second. To enable an agent to send a reaction to a message:
+You can enable an agent to send reactions using Teams SDK or REST APIs. An agent can send up to two reactions per second. To enable an agent to send a reaction to a message:
 
 1. Use the [Teams reactions reference](teams-reactions-reference.md) for getting the `reactionId` for the reactions that you want to add. You can also select a particular [skin tone for the emoji](#modify-skin-tone-for-emojis) by selecting its `reactionId`.
 1. Use the `addReaction` method from Teams SDK or call the `add reaction` API to send reactions to messages.
