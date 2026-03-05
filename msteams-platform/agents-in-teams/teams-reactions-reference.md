@@ -2,7 +2,7 @@
 title: Teams Reactions Reference
 description: Use the emojis available for Teams agents reactions.
 ms.topic: reference
-ms.date: 01/23/2025
+ms.date: 01/23/2026
 ms.localizationpriority: high
 ---
 

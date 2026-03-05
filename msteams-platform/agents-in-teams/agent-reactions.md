@@ -8,6 +8,7 @@ ms.topic: reference
 
 <!-- markdownlint-disable MD051 -->
 <!-- markdownlint-disable MD001 -->
+<!-- markdownlint-disable MD024 -->
 
 # Enable agent reactions in Teams
 
@@ -230,7 +231,7 @@ The following are the success and error codes:
 | `502` | Bad Gateway | A downstream service dependency failed. | Retry after a brief delay. |
 | `504` | Gateway Timeout | An upstream service dependency timed out. | Retry after a brief delay. If persistent, check [Teams Service Health](https://admin.microsoft.com/servicestatus) . |
 
-You can find more information on error codes for sending messages [here](../bots/build-conversational-capability.md).
+You can find more information on [error codes for sending messages](../bots/build-conversational-capability.md).
 
 ## Modify skin tone for emojis
 
