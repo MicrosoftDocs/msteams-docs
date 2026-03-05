@@ -87,7 +87,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 # [API](#tab/h1)
 
 ```REST
-PUT {cloud}/{tenantId}/v3/conversations/{conversationId}/activities/{activityId}/reaction/{1f44b_wavinghand}
+PUT {cloud}/{tenantId}/v3/conversations/{conversationId}/activities/{activityId}/reaction/1f44b_wavinghand
 ```
 
 Where,
@@ -183,7 +183,7 @@ async def handle_message(ctx: ActivityContext[MessageActivity]):
 # [API](#tab/h1)
 
 ```REST
-DELETE {cloud}/{tenantId}/v3/conversations/{conversationId}/activities/{activityId}/reaction/{1f44b_wavinghand}
+DELETE {cloud}/{tenantId}/v3/conversations/{conversationId}/activities/{activityId}/reaction/1f44b_wavinghand
 ```
 
 Where,
@@ -222,7 +222,7 @@ The following are the success and error codes:
 | `403` | `IntegrationAuthFailure` | The authentication token failed validation. | Ensure the agent or bot token is valid, not expired, and issued for the correct audience. |
 | `403` | `BotNotInConversation` | The agent or bot attempted to react in a conversation it doesn't have access to. | The agent or bot must be installed in the chat or channel before sending reactions. |
 | `404` | `ConversationNotFound` | The target conversation thread couldn't be located. | Verify the `conversationId` is correct and the conversation still exists. |
-| `404` | `ConversationNotFound` | The `messageId` couldn't be found, or the request URL is malformed. | Verify the `messageId` exists and the URL contains no whitespace or invalid characters. |
+| `404` | `messageId` not found | The `messageId` couldn't be found, or the request URL is malformed. | Verify the `messageId` exists and the URL contains no whitespace or invalid characters. |
 | `405` | `ApiNotEnabled` | Reaction extensibility isn't enabled for this environment. | Confirm the feature is available in your tenant. |
 | `429` | Too many requests | Throttling limit reached | - Reduce the frequency of message reaction calls. Agent reactions are limited to two reactions per second. <br> - Implement exponential backoff and retry after the `Retry-After` header duration. |
 
