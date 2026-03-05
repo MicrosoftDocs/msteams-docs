@@ -31,7 +31,7 @@ Map emojis and reactions to specific agent actions and use the ID to send the ri
 You can enable an agent to send reactions using Teams SDK or REST APIs. An agent can send up to two reactions per second. To enable an agent to send a reaction to a message:
 
 1. Use the [Teams reactions reference](teams-reactions-reference.md) for getting the `reactionId` for the reactions that you want to add. You can also select a particular [skin tone for the emoji](#modify-skin-tone-for-emojis) by selecting its `reactionId`.
-1. Use Teams SDK or REST APIs to add reactions to messages.
+1. Use Teams SDK or REST API to add reactions to messages.
 
 The following code snippet shows an example of adding the *Waving hand* reaction to a message:
 
@@ -112,7 +112,7 @@ You can handle reaction requests when an agent has already reacted to a message.
 You can choose to enable an agent to remove its reaction from messages. To remove the agent's reaction from a message:
 
 1. Use the [Teams reactions reference](teams-reactions-reference.md) for getting the `reactionId` for the reactions that you want to remove.
-1. Use Teams SDK or REST APIs to remove reactions from messages.
+1. Use Teams SDK or REST API to remove reactions from messages.
 
 The following code snippet shows an example of removing a reaction from a message:
 
@@ -188,6 +188,8 @@ DELETE {cloud}/{tenantId}/v3/conversations/{conversationId}/activities/{activity
 
 Where,
 
+- `cloud` is the `serviceURL` of the bot connector service that must be fetched dynamically.
+- `tenantId` is the ID of the tenant agent or app is registered.
 - `conversationId` is the thread or chat identifier.
 - `activityId` represents the message or activity ID.
 - `reactionId` is the ID of the emoji that you want to remove.
@@ -303,6 +305,8 @@ PUT {cloud}/{tenantId}/v3/conversations/{conversationId}/activities/{activityId}
 
 Where,
 
+- `cloud` is the `serviceURL` of the bot connector service that must be fetched dynamically.
+- `tenantId` is the ID of the tenant agent or app is registered.
 - `conversationId` is the thread or chat identifier.
 - `activityId` represents the message or activity ID.
 - `reactionId` is the ID of the emoji that you want to add.
