@@ -12,8 +12,7 @@ ms.topic: reference
 
 # Enable agent reactions in Teams
 
-You can build an agent to communicate beyond text using reactions, emojis, and context-aware actions.
-Reactions make the agent’s intent clearer, improve transparency, and build user trust.
+You can build agents that react to messages as well as send text. Reactions minimize notification fatigue while communicating actions efficiently.
 
 :::image type="content" source="../assets/images/agents-in-teams/teams-reactions/agent-reactions.png" alt-text="Image shows agent reactions in Teams."  border="false" lightbox="../assets/images/agents-in-teams/teams-reactions/agent-reactions.png":::
 
