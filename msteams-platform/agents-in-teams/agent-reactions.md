@@ -251,17 +251,17 @@ The following code snippet shows an example of selecting a specific skin tone of
 [WIP: Add link to Teams SDK docs.]
 
 ```csharp
-[Message]
-        public async Task OnMessage([Context] MessageActivity activity, [Context] IContext.Client client)
-        {
-            if (activity.IsRecipientMentioned)
-            {
-                await client.Send(new MessageReactionActivity().AddReaction(new Reaction()
-                {
-                    Type = “1f44b_wavinghand-tone4”
-                }).WithReplyToId(activity.Id));
-            }
-        }
+app.OnMessage(async context =>
+{
+    await context.Send("Hello! I'll react to this message.");
+
+    // Add a reaction to the incoming message
+    await context.Api.Conversations.Reactions.AddAsync(
+        context.Activity.Conversation.Id,
+        context.Activity.Id,
+        ReactionType.1f44b_wavinghand-tone4
+    );
+});
 ```
 
 # [TypeScript](#tab/ts1)
@@ -269,12 +269,11 @@ The following code snippet shows an example of selecting a specific skin tone of
 [WIP: Add link to Teams SDK docs.]
 
 ```typescript
+app.on('message', async ({ activity, api, send }) => {
+  await send("Hello! I'll react to this message.");
 
-app.on('mention', async ({ activity, send }) => {
-  await send(new MessageReactionActivity({
-    replyToId = activity.id,
-    reactions: ["1f44b_wavinghand-tone4"]
-  }));
+  // Add a reaction to the incoming message
+  await api.conversations.reactions.add(activity.conversation.id, activity.id, '1f44b_wavinghand-tone4');
 });
 ```
 
@@ -285,14 +284,20 @@ app.on('mention', async ({ activity, send }) => {
 ```python
 @app.on_message
 async def handle_message(ctx: ActivityContext[MessageActivity]):
-    if ctx.activity.is_recipient_mentioned:
-        await ctx.send(MessageReactionActivityInput(reply_to_id=ctx.activity.id).add_reaction(MemssageReaction(type="1f44b_wavinghand-tone4")))
+    await ctx.send("Hello! I'll react to this message.")
+
+    # Add a reaction to the incoming message
+    await ctx.api.conversations.reactions.add(
+        ctx.activity.conversation.id,
+        ctx.activity.id,
+        '1f44b_wavinghand-tone4'
+    )
 ```
 
 # [API](#tab/h1)
 
 ```REST
-PUT {cloud}/{tenantId}/v3/conversations/{conversationId}/activities/{activityId}/reaction/1f44b_wavinghand-tone4
+PUT {cloud}/{tenantId}/v3/conversations/{conversationId}/activities/{activityId}/reaction/{1f44b_wavinghand-tone4}
 ```
 
 Where,
