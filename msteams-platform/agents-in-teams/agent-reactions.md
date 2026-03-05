@@ -92,6 +92,8 @@ PUT {cloud}/{tenantId}/v3/conversations/{conversationId}/activities/{activityId}
 
 Where,
 
+- `cloud` is the `serviceURL` of the bot connector service that must be fetched dynamically.
+- `tenantId` is the ID of the tenant agent or app is registered.
 - `conversationId` is the thread or chat identifier.
 - `activityId` represents the message or activity ID.
 - `reactionId` is the ID of the emoji that you want to add.
