@@ -213,7 +213,7 @@ The following are the success and error codes:
 
 | Response codes | Error message | Description | Action |
 | --- | --- | --- | --- |
-| `400` | Bad Request | The `reactionId` is invalid or exceeds the maximum allowed length. | Use a valid `reactionId` from the [supported reactions](teams-reactions-reference.md) list . |
+| `400` | Bad Request | The `reactionId` is invalid or exceeds the maximum allowed length. | Use a valid `reactionId` from the [supported reactions](teams-reactions-reference.md) list. |
 | `401` | `BotNotRegistered` | The agent or bot doesn't have a valid registration. | Verify your agent or bot is registered in Azure Bot Service and the app ID is correct. |
 | `403` | `IntegrationAuthFailure` | The authentication token failed validation. | Ensure the agent or bot token is valid, not expired, and issued for the correct audience. |
 | `403` | `BotNotInConversation` | The agent or bot attempted to react in a conversation it doesn't have access to. | The agent or bot must be installed in the chat or channel before sending reactions. |
