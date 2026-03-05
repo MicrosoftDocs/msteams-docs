@@ -110,7 +110,7 @@ You can handle reaction requests when an agent has already reacted to a message.
 You can choose to enable an agent to remove its reaction from messages. To remove the agent's reaction from a message:
 
 1. Use the [Teams reactions reference](teams-reactions-reference.md) for getting the `reactionId` for the reactions that you want to remove.
-1. Use the `removeReaction` method from Teams SDK or call the `remove reaction` API to remove reactions from messages.
+1. Use Teams SDK or REST APIs to remove reactions from messages.
 
 The following code snippet shows an example of removing a reaction from a message:
 
