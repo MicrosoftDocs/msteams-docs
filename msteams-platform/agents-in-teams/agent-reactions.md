@@ -211,7 +211,7 @@ The following are the success and error codes:
 | `200` | Deleted reaction successfully | NA |
 | `200` | Deleted non-existent reaction | NA |
 | **Error codes** | &nbsp; | &nbsp; |
-| `400` | Bad Request | The `reactionId` is invalid or exceeds the maximum allowed length. | Use a valid `reactionId` from the [supported reactions](teams-reactions-reference.md) list. |
+| `400` Bad Request | The `reactionId` is invalid or exceeds the maximum allowed length. | Use a valid `reactionId` from the [supported reactions](teams-reactions-reference.md) list. |
 
 > [!NOTE]
 > `200 OK` is also returned if the agent or bot adds a reaction that already exists or removes one that isn’t applied. These operations don’t return errors.
