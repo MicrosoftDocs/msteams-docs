@@ -202,8 +202,6 @@ No additional payload is required as the reaction is defined in the URL.
 
 The following are the success and error codes:
 
-### Success codes
-
 | Response codes | Description | Action |
 | --- | --- | --- |
 | **Success codes** | &nbsp; | &nbsp; |
@@ -214,16 +212,9 @@ The following are the success and error codes:
 | `400` Bad Request | The `reactionId` is invalid or exceeds the maximum allowed length. | Use a valid `reactionId` from the [supported reactions](teams-reactions-reference.md) list. |
 
 > [!NOTE]
-> `200 OK` is also returned if the agent or bot adds a reaction that already exists or removes one that isn’t applied. These operations don’t return errors.
-> You can find more information on [error codes for sending messages](../bots/build-conversational-capability.md).
-
-### Error codes
-
-| Response codes | Error message | Description | Action |
-| --- | --- | --- | --- |
-| `400` | Bad Request | The `reactionId` is invalid or exceeds the maximum allowed length. | Use a valid `reactionId` from the [supported reactions](teams-reactions-reference.md) list. |
-
-You can find more information on [error codes for sending messages](../bots/build-conversational-capability.md).
+>
+> - `200 OK` is also returned if the agent or bot adds a reaction that already exists or removes one that isn’t applied. These operations don’t return errors.
+> - You can find more information on [error codes for sending messages](../bots/build-conversational-capability.md).
 
 ## Modify skin tone for emojis
 
@@ -328,4 +319,13 @@ Where,
 | `500` | Internal Server Error | An unexpected error occurred on the server. | Retry the request. If persistent, file a support ticket with the `x-ms-request-id` from response headers. |
 | `502` | Bad Gateway | A downstream service dependency failed. | Retry after a brief delay. |
 | `504` | Gateway Timeout | An upstream service dependency timed out. | Retry after a brief delay. If persistent, check [Teams Service Health](https://admin.microsoft.com/servicestatus) . |
+
+### Success codes
+### Error codes
+
+| Response codes | Error message | Description | Action |
+| --- | --- | --- | --- |
+| `400` | Bad Request | The `reactionId` is invalid or exceeds the maximum allowed length. | Use a valid `reactionId` from the [supported reactions](teams-reactions-reference.md) list. |
+
+You can find more information on [error codes for sending messages](../bots/build-conversational-capability.md).
 -->
