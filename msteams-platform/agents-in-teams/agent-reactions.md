@@ -205,11 +205,11 @@ The following are the success and error codes:
 | Response codes | Description | Action |
 | --- | --- | --- |
 | **Success codes** | &nbsp; | &nbsp; |
-| `200` | Reaction added successfully | NA |
-| `200` | Deleted reaction successfully | NA |
-| `200` | Deleted non-existent reaction | NA |
+| `200 OK` | Reaction added successfully | NA |
+| `200 OK` | Deleted reaction successfully | NA |
+| `200 OK` | Deleted non-existent reaction | NA |
 | **Error codes** | &nbsp; | &nbsp; |
-| `400` Bad request | The `reactionId` is invalid or exceeds the maximum allowed length. | Use a valid `reactionId` from [Teams reactions reference](teams-reactions-reference.md). |
+| `400 Bad request` | The `reactionId` is invalid or exceeds the maximum allowed length. | Use a valid `reactionId` from [Teams reactions reference](teams-reactions-reference.md). |
 
 > [!NOTE]
 >
