@@ -206,12 +206,16 @@ The following are the success and error codes:
 
 | Response codes | Description | Action |
 | --- | --- | --- |
+| **Success codes** | &nbsp; | &nbsp; |
 | `200` | Reaction added successfully | NA |
 | `200` | Deleted reaction successfully | NA |
 | `200` | Deleted non-existent reaction | NA |
+| **Error codes** | &nbsp; | &nbsp; |
+| `400` | Bad Request | The `reactionId` is invalid or exceeds the maximum allowed length. | Use a valid `reactionId` from the [supported reactions](teams-reactions-reference.md) list. |
 
 > [!NOTE]
 > `200 OK` is also returned if the agent or bot adds a reaction that already exists or removes one that isn’t applied. These operations don’t return errors.
+> You can find more information on [error codes for sending messages](../bots/build-conversational-capability.md).
 
 ### Error codes
 
@@ -309,7 +313,8 @@ Where,
 - Teams SDK [WIP: Links to be added when available]
 - [Teams reaction reference](teams-reactions-reference.md)
 
-<!-- **Client error codes**| `401` | `BotNotRegistered` | The agent or bot doesn't have a valid registration. | Verify your agent or bot is registered in Azure Bot Service and the app ID is correct. |
+<!-- **Client error codes**
+| `401` | `BotNotRegistered` | The agent or bot doesn't have a valid registration. | Verify your agent or bot is registered in Azure Bot Service and the app ID is correct. |
 | `403` | `IntegrationAuthFailure` | The authentication token failed validation. | Ensure the agent or bot token is valid, not expired, and issued for the correct audience. |
 | `403` | `BotNotInConversation` | The agent or bot attempted to react in a conversation it doesn't have access to. | The agent or bot must be installed in the chat or channel before sending reactions. |
 | `404` | `ConversationNotFound` | The target conversation thread couldn't be located. | Verify the `conversationId` is correct and the conversation still exists. |
