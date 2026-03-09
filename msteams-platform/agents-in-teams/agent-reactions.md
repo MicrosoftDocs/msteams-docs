@@ -14,7 +14,7 @@ ms.topic: reference
 
 You can build agents that react to messages as well as send text, minimizing notification fatigue while communicating actions efficiently.
 
-:::image type="content" source="../assets/images/agents-in-teams/teams-reactions/agent-reactions.png" alt-text="Image shows agent reactions in Teams desktop client."  border="false" lightbox="../assets/images/agents-in-teams/teams-reactions/agent-reactions.png":::
+:::image type="content" source="../assets/images/agents-in-teams/teams-reactions/agent-reactions-desktop.png" alt-text="Image shows agent reactions in Teams desktop client."  border="false" lightbox="../assets/images/agents-in-teams/teams-reactions/agent-reactions-desktop.png":::
 
 :::image type="content" source="../assets/images/agents-in-teams/teams-reactions/agent-reactions-mobile-mini.png" alt-text="Image shows agent reactions in the moble client.":::
 
