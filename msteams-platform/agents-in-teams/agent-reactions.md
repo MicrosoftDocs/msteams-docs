@@ -16,6 +16,8 @@ You can build agents that react to messages as well as send text, minimizing not
 
 :::image type="content" source="../assets/images/agents-in-teams/teams-reactions/agent-reactions.png" alt-text="Image shows agent reactions in Teams desktop client."  border="false" lightbox="../assets/images/agents-in-teams/teams-reactions/agent-reactions.png":::
 
+:::image type="content" source="../assets/images/agents-in-teams/teams-reactions/agent-reactions-mobile-mini.png" alt-text="Image shows agent reactions in the moble client.":::
+
 Map emojis and reactions to specific agent actions and use the ID to send the right reaction in the conversation.
 
 **Key highlights**:
