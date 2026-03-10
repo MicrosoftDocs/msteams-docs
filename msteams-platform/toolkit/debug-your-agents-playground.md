@@ -230,6 +230,22 @@ You can mock an activity in Agents Playground using activity triggers. There are
 1. [Predefined activity triggers](#predefined-activity-triggers)
 1. [Custom activity triggers](#custom-activity-triggers)
 
+> [!IMPORTANT]
+>
+> * When the Agents Playground is launched via Microsoft 365 Agents Toolkit, the default channel ID is `emulator`.
+>
+> * The `emulator` channel does not support some Teams-specific mock activities, such as:
+>   * Installation update activities
+>   * Channel or team conversation update activities
+>   * Notification activities used by Agent 365 projects
+>
+> * As a result, these options may not appear in the **Mock an Activity** menu.
+>
+> * To test Teams-specific activities, set the channel ID to `msteams`. For more information, see [Multiple channel support](#multiple-channel-support).
+
+> [!NOTE]
+> Even if a specific activity is not available for the current channel, you can still use **Custom activity** to send a customized JSON payload to your agent.
+
 ### Predefined activity triggers
 
 Agents Playground provides predefined activity triggers to test the functionalities of your app.
@@ -325,7 +341,17 @@ Agents Playground acquires a JWT token using the provided authentication setting
 
 ## Multiple channel support
 
-Teams is the default channel used for debugging your application, but other channels are also supported. You can change the channel by setting the `DEFAULT_CHANNEL_ID` environment variable or by using the `--channel-id` option when starting Agents Playground from the command line.
+When you run the Agents Playground as a standalone tool, Microsoft Teams (`msteams`) is used as the default channel. When the playground is launched through Microsoft 365 Agents Toolkit, the default channel is `emulator`. You can change the channel by setting the `DEFAULT_CHANNEL_ID` environment variable or by using the `--channel-id` option when starting Agents Playground from the command line.
+
+> [!NOTE]
+>
+> * To test Teams‑specific activities, set the channel ID to `msteams`.
+>
+> * You can do this by:
+>   * Setting the environment variable:
+>   `DEFAULT_CHANNEL_ID = msteams`
+>   * Or using the CLI option:
+>    `agentsplayground --channel-id msteams`
 
 Currently, the accepted channel IDs are: `msteams`, `directline`, `webchat`, and `emulator`. When you set a channel ID, the properties of the messages sent to the application changes accordingly to simulate a real environment. For the `directline` and `webchat` channels, a corresponding client is displayed, and card rendering differs from that of the Teams channel.
 
@@ -333,7 +359,7 @@ Currently, the accepted channel IDs are: `msteams`, `directline`, `webchat`, and
 
 ## Customize Teams context
 
-The configuration file in the project's root folder allows you to customize Teams context information such as chats, teams, and users. It provides mock data for testing Bot Framework APIs or methods from the Agent SDK or Teams SDK, such as `TeamsInfo.getTeamMembers`.
+The configuration file in the project's root folder allows you to customize Teams context information such as chats, teams, and users. It provides mock data for testing Bot Framework APIs or methods from the Agents SDK or Teams SDK, such as `TeamsInfo.getTeamMembers`.
 
 ### Default configuration
 
@@ -343,17 +369,21 @@ Agents Playground contains a built-in configuration file in the project's root f
 > By default, the Agents Playground uses built-in mock data. You don’t need to create or modify any configuration files unless you want to customize the mock data used during local debugging.
 
 ```yaml
-# yaml-language-server: $schema=https://aka.ms/teams-app-test-tool-config/0.1.0/config.schema.json
+# yaml-language-server: $schema=https://aka.ms/teams-app-test-tool-config/0.1.1/config.schema.json
 # Visit https://aka.ms/teams-app-test-tool-config-guide for more details on this file.
 
 # This configuration file customizes the Teams context information like chats, teams, and users.
 # It contains mock data for testing Bot Framework APIs or Bot Builder SDK methods such as TeamsInfo.getTeamMembers().
 # You can customize this file to change API response if your bot code uses these APIs.
-version: "0.1.0"
+version: "0.1.1"
 tenantId: 00000000-0000-0000-0000-0000000000001
 bot:
   id: 00000000-0000-0000-0000-00000000000011
   name: Test Bot
+  agenticAppId: 00000000-0000-0000-0000-000000000100
+  agenticUserId: agentic-user-id
+  tenantId: 00000000-0000-0000-0000-000000000001
+  role: agenticUser
 currentUser:
   id: user-id-0
   name: Alex Wilber
@@ -411,6 +441,12 @@ team:
     - id: channel-announcements-id
       name: Announcements
 ```
+
+> [!NOTE]
+>
+> * Developers can obtain `agenticAppId`, `agenticUserId`, and `tenantId` after publishing their agent to the Microsoft 365 admin center. For more information, see [publish agent to Microsoft 365 admin center](/microsoft-agent-365/developer/a365-dev-lifecycle).
+> * These fields enable debugging in the Microsoft Agent 365 scenario. For more information, see [Agent 365 Identity](/microsoft-agent-365/developer/identity).
+> * The fields `agenticAppId`, `agenticUserId`, `tenantId`, and `role` are supported in M365 Agents Playground version 0.2.23 and later. Ensure you are using the correct Playground version.
 
 ### Customize the configuration file
 

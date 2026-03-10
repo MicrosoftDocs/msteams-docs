@@ -3,7 +3,6 @@ title: Analyze App and Agent Usage in Developer Portal
 description: Learn how to analyze your app and agent usage metrics for your custom apps built for your org (LOB apps) and third-party apps in Developer Portal.
 ms.localizationpriority: medium
 ms.topic: overview
-ms.author: surbhigupta
 ms.owner: luywang
 ms.date: 05/08/2025
 ---
@@ -15,6 +14,9 @@ Developer Portal for Microsoft Teams provides a comprehensive suite of tools to 
 Whether you're tracking active users, retention rates, or usage patterns across different platforms, Developer Portal helps you with the information you need to optimize your app and ensure its success. Custom apps built for your org (LOB apps) can access app and agent usage data only for Teams. However, for third-party apps you can explore new Microsoft 365 dimensions, such as host product and capabilities.
 
 The app and agent usage for a given day is reflected within 24 to 48 hours, and usage data for the new apps or agents can take up to three to five days to reflect in the charts. Usage data isn’t shown for apps with fewer than five active users or for agents created using Copilot Studio agent builder.
+
+> [!NOTE]
+> Analytics in Developer Portal is only available for apps with custom-developed capabilities (bots, message extensions, tabs). Apps that are purely declarative agents or Copilot Studio agents won't have analytics available in Developer Portal.
 
 # [Custom apps (New)](#tab/custom-apps-built-for-your-org)
 

@@ -1,3 +1,10 @@
-> [!IMPORTANT]
+>[!IMPORTANT]
 >
-> TeamsFx SDK will be officially deprecated by September 2025, with support continuing until September 2026. We recommend planning your transition to the [Teams SDK](/microsoftteams/platform/teams-ai-library/welcome) for building agents in Microsoft Teams. To extend your agent's capabilities across other Microsoft 365 platforms, use the [Microsoft 365 Agents SDK](/microsoft-365/agents-sdk/).
+> TeamsFx SDK is no longer supported by Microsoft for building Microsoft 365 Copilot extensions, Microsoft 365 agents, or modern Teams app scenarios. The SDK is currently in deprecation mode and will receive community-only support on GitHub until September 2026.
+>
+> For all new Microsoft-supported development (Copilot extensions, AI agents, Teams apps, or broader Microsoft 365 extensibility), use:
+>
+> - **[Microsoft 365 Agents SDK](/microsoft-365/agents-sdk/)** (recommended for all new Copilot or agent-based experiences)
+> - **[Teams SDK](/microsoftteams/platform/teams-ai-library/welcome)** (for building Teams-only apps and bots)
+>
+> New projects should not be built with TeamsFx. Existing TeamsFx solutions should be migrated to the Microsoft 365 Agents SDK.
