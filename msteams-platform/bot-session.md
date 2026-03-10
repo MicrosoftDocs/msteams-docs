@@ -17,12 +17,10 @@ Sessions help bots align with conversation patterns that users already experienc
 In this article:
 
 - [Enable sessions for your bot](#enable-sessions-for-your-bot)
-- [User experience after enabling sessions](#user-experience-after-enabling-sessions)
 - [Receive messages in sessions](#receive-messages-in-sessions)
 - [Respond within a session](#respond-within-a-session)
 - [Create sessions proactively](#create-sessions-proactively)
 - [Existing chat migration to default session](#existing-chat-migration-to-default-session)
-- [Best practices](#best-practices)
 
 <!--## How topics improve bot conversations
 
