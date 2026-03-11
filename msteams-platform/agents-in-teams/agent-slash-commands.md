@@ -14,6 +14,10 @@ Slash commands are a lightweight way to invoke an agent's or bot's capabilities 
 
 - [What are slash commands](#what-are-slash-commands)
 - [Why use slash commands](#why-use-slash-commands)
+- [Supported slash command scenarios](#supported-slash-command-scenarios)
+- [Agent response to slash commands](#agent-response-to-slash-commands)
+- [Enable slash commands](#enable-slash-commands)
+- [Response codes for slash commands](#response-codes-for-slash-commands)
 
 ## What are slash commands
 
@@ -27,6 +31,19 @@ For apps and agents, slash commands can be used to:
 - Start a private, single turn interaction with a bot or agent.
 - Provide a faster alternative to verbose @mentions or multi step menus.
 
+### Supported slash command scenarios
+
+- App defined slash command
+- Private user-to-agent interaction
+- Message extension action
+
+[WIP: Add details and scenarios/examples]
+
+### Agent response to slash commands
+
+- Private agent-to-user response
+- Public agent-to-user response
+
 ## Why use slash commands
 
 Well-designed slash commands make an agent or a bot easier to discover, faster to use, and safer to operate in shared spaces:
@@ -36,3 +53,28 @@ Well-designed slash commands make an agent or a bot easier to discover, faster t
 - **Consistency**: A stable command name reduces ambiguity versus purely open-ended prompts.
 - **Permission-aware actions**: Commands can map to well-defined operations with clear scopes and guardrails.
 - **Great UX in busy chats**: Commands can trigger private or compact responses when appropriate.
+
+## Slash commands developer experience
+
+You can enable slash commands for your agent or bot by opting in through the Teams app manifest. You can choose to activate <`/app‑name`> only when necessary and to provide a tailored selection of commands ideal for slash usage. In the app manifest, you must:
+
+- Declare whether the app supports slash commands.
+- List the specific slash commands the app exposes.
+- Indicate whether the app supports natural language prompts when invoked via slash commands.
+
+### Enable slash commands
+
+Configure app manifest property: supportsTargetedMessages + triggers for slash commands
+Configure bot logic for agent or bot to choose private or public response based on response relevance for single user or for all group or channel members.
+
+## Response codes for slash commands
+
+[WIP: Awaiting details on error codes]
+
+## Best practices
+
+- Keep slash commands short and action oriented
+- Use slash commands for private or quick actions, and @mentions for richer conversations.
+- Avoid exposing overly verbose prompt suggestions as slash commands.
+- Provide clear command descriptions to improve discoverability.
+- Offer aliases for frequently used commands where appropriate.
