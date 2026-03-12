@@ -35,11 +35,11 @@ For apps and agents, slash commands can be used to:
 
 Slash command responses are private, one to one interactions between a user and an agent or bot. The responses are visible only to the initiating user by default to maintain focus, reduce noise, and enable personalized interactions.
 
-You can control response visibility through bot or agent logic and can selectively make responses public to support collaboration or business needs. Enable the agent to selectively surface certain responses to a channel or group chat when the information is relevant to a broader audience. Visibility decisions are intentional developer driven when public sharing adds value.
+You can control response visibility through bot or agent logic and can selectively make responses public to support collaboration or business needs. Enable the agent to selectively surface certain responses to a channel or group chat when the information is relevant to a broader audience. Visibility decisions are intentional developer driven when public responses add value.
 
 #### Agent response flows with slash commands
 
-Slash commands supports two distinct agent-to-user response flows. The default experience is private, while allowing developers to intentionally enable public responses when required by the business scenario. Response visibility is fully controlled through the bot or agent’s logic.
+Slash commands supports two distinct agent-to-user response flows:
 
 - **Private Agent-to-User Response (Default)**
 
