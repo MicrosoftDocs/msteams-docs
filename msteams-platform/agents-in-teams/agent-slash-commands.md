@@ -39,7 +39,18 @@ For apps and agents, slash commands can be used to:
 
 [WIP: Add details and scenarios/examples]
 
-### Agent response to slash commands
+### Visibility of agent responses
+
+Targeted messaging is designed to primarily support private, one to one interactions between a user and an agent or bot. By default, responses generated through targeted messaging are delivered privately to the initiating user, ensuring focus, reduced noise in shared spaces, and a more personal interaction model.
+
+At the same time, targeted messaging does not mandate that every response must remain private. As an added capability, developers have full control over response visibility through their bot or agent logic. When building an app or agent, developers can choose to make specific responses public when it aligns with their business scenario or collaboration needs.
+This flexibility allows developers to:
+
+- Keep most interactions private by default.
+- Selectively surface certain responses to a channel or group chat when the information is relevant to a broader audience
+- Apply their own criteria—such as response type, context, or audience impact—to determine when a response should be made public.
+
+In other words, response visibility is intentional and developer driven. Just because an interaction uses targeted messaging does not mean it must always remain private. If a response is beneficial for everyone in the conversation to see, developers can enable that behavior as part of their agent or app design.
 
 - Private agent-to-user response:
 
