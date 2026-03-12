@@ -47,11 +47,18 @@ In other words, response visibility is intentional and developer driven. Just be
 
 Targeted messaging supports two distinct agent-to-user response flows. The default experience is private, while allowing developers to intentionally enable public responses when required by the business scenario. Response visibility is fully controlled through the bot or agent’s logic.
 
-- **Private agent-to-user response**:
+- **Private Agent-to-User Response (Default)**
 
-  - When the user sends a slash command to the bot, they'll see their original message reflected as a targeted message.
-  - If the bot responds privately, the user sees the bot's message as targeted reply containing the user's message as a block quote.
-  - When the user selects **Allow**, the agent shows a single message showing (1) the bot’s response (2) the user’s prompt as a block quote. The initial targeted message containing the user's message should expire in 24 hours.
+This flow supports focused, one-to-one interactions between the user and the agent or bot.
+
+    - When a user sends a slash command to the bot, their original message is immediately reflected as a targeted message.
+    - If the bot responds privately, the user receives the bot’s response as a targeted reply, with the user’s original prompt shown as a block quote.
+    - When the user selects Allow, a single message is displayed that includes:
+        - The bot’s response
+        - The user’s prompt rendered as a block quote
+    - The initial targeted message containing the user’s prompt expires after 24 hours.
+
+This flow minimizes noise in shared conversations and is optimized for private, fast, and context-aware interactions.
 
 - **Public agent-to-user response**:
 
