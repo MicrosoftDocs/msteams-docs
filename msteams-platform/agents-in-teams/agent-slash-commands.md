@@ -33,17 +33,11 @@ For apps and agents, slash commands can be used to:
 
 ### Visibility of agent responses
 
-Slash command responses are designed to primarily support private, one to one interactions between a user and an agent or bot. By default, responses generated through slash commands are delivered privately to the initiating user, ensuring focus, reduced noise in shared spaces, and a more personal interaction model.
+Slash command responses are private, one to one interactions between a user and an agent or bot. The responses are visible only to the initiating user by default to maintain focus, reduce noise, and enable personalized interactions.
 
-As an added capability, you have full control over response visibility through their bot or agent logic. When building an app or agent, you can choose to make specific responses public when it aligns with their business scenario or collaboration needs. This flexibility allows you to:
+You can control response visibility through bot or agent logic and can selectively make responses public to support collaboration or business needs. Enable the agent to selectively surface certain responses to a channel or group chat when the information is relevant to a broader audience. Visibility decisions are intentional developer driven when public sharing adds value.
 
-- Keep most interactions private by default.
-- Selectively surface certain responses to a channel or group chat when the information is relevant to a broader audience
-- Apply their own criteria such as response type, context, or audience impact to determine when a response should be made public.
-
-In other words, response visibility is intentional and developer driven. Just because an interaction uses slash commands doesn't mean it must always remain private. If a response is beneficial for everyone in the conversation to see, you can enable that behavior as part of their agent or app design.
-
-### Agent response flows with slash commands
+#### Agent response flows with slash commands
 
 Slash commands supports two distinct agent-to-user response flows. The default experience is private, while allowing developers to intentionally enable public responses when required by the business scenario. Response visibility is fully controlled through the bot or agent’s logic.
 
