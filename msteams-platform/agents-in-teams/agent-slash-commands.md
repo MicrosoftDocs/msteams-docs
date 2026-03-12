@@ -51,13 +51,13 @@ At the same time, targeted messaging doesn't mandate that every response must re
 
 In other words, response visibility is intentional and developer driven. Just because an interaction uses targeted messaging doesn't mean it must always remain private. If a response is beneficial for everyone in the conversation to see, you can enable that behavior as part of their agent or app design.
 
-- Private agent-to-user response:
+- **Private agent-to-user response**:
 
   - When the user sends a slash command to the bot, they'll see their original message reflected as a targeted message.
   - If the bot responds privately, the user sees the bot's message as targeted reply containing the user's message as a block quote.
   - When the user selects **Allow**, the agent shows a single message showing (1) the bot’s response (2) the user’s prompt as a block quote. The initial targeted message containing the user's message should expire in 24 hours.
 
-- Public agent-to-user response:
+- **Public agent-to-user response**:
 
   - When the user sends a slash command to the bot, they'll see their original message reflected as a targeted message.
   - If the bot responds in public, the agent shows a single message showing (1) the bot’s response (2) user’s prompt as a block quote. The initial targeted message containing the user's message should expire in 24 hours.
