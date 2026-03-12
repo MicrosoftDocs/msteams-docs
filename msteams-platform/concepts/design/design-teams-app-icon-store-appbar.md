@@ -5,7 +5,7 @@ author: heath-hamilton
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: reference
-ms.date: 05/23/2023
+ms.date: 03/12/2026
 ---
 # Teams app icon for Teams Store and app bar
 
@@ -13,4 +13,4 @@ This article provides the guidelines for creating icons in your app ecosystem to
 
 When submitting your app package, include two PNG versions of the app icon, a color icon and an outline icon. For your app to pass Microsoft Teams Store review, these icons must meet certain size requirements. Follow the guidance below to ensure your app icons fit the Teams Store standards.
 
-[!INCLUDE [Microsoft 365 icon design guidance](~/../msteams-platform/reusable-content/microsoft-365-development/includes/design-microsoft-365-extension-icons.md)]
+[!INCLUDE [Microsoft 365 icon design guidance](https://github.com/MicrosoftDocs/reusable-content/blob/main/microsoft-365-development/includes/design-microsoft-365-extension-icons.md)]
