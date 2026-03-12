@@ -60,6 +60,20 @@ Targeted messaging supports two distinct agent-to-user response flows. The defau
 
 This flow minimizes noise in shared conversations and is optimized for private, fast, and context-aware interactions.
 
+- **Public Agent-to-User Response (Developer-Enabled)**
+
+    In scenarios where the response is relevant to a broader audience, developers can choose to surface agent responses publicly.
+
+  - When a user sends a slash command to the bot, their original message is immediately reflected as a targeted message.
+  - If the bot is configured to respond publicly, a single message is shown in the conversation that includes:
+
+    - The bot’s response
+    - The user’s prompt rendered as a block quote
+
+  - The initial targeted message containing the user’s prompt expires after 24 hours.
+
+This flow enables selective sharing of agent responses when it benefits the group or channel, such as status updates, confirmations, or information intended for shared visibility.
+
 - **Public agent-to-user response**:
 
   - When the user sends a slash command to the bot, they'll see their original message reflected as a targeted message.
