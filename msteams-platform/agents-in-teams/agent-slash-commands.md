@@ -31,14 +31,6 @@ For apps and agents, slash commands can be used to:
 - Start a private, single turn interaction with a bot or agent.
 - Provide a faster alternative to verbose @mentions or multi-step menus.
 
-### Supported slash command scenarios
-
-- App defined slash command
-- Private user-to-agent interaction
-- Message extension action
-
-[WIP: Add details and scenarios/examples]
-
 ### Visibility of agent responses
 
 Targeted messaging is designed to primarily support private, one to one interactions between a user and an agent or bot. By default, responses generated through targeted messaging are delivered privately to the initiating user, ensuring focus, reduced noise in shared spaces, and a more personal interaction model.
@@ -51,6 +43,10 @@ At the same time, targeted messaging doesn't mandate that every response must re
 
 In other words, response visibility is intentional and developer driven. Just because an interaction uses targeted messaging doesn't mean it must always remain private. If a response is beneficial for everyone in the conversation to see, you can enable that behavior as part of their agent or app design.
 
+### Agent Response Flows with Targeted Messaging
+
+Targeted messaging supports two distinct agent-to-user response flows. The default experience is private, while allowing developers to intentionally enable public responses when required by the business scenario. Response visibility is fully controlled through the bot or agent’s logic.
+
 - **Private agent-to-user response**:
 
   - When the user sends a slash command to the bot, they'll see their original message reflected as a targeted message.
@@ -61,6 +57,14 @@ In other words, response visibility is intentional and developer driven. Just be
 
   - When the user sends a slash command to the bot, they'll see their original message reflected as a targeted message.
   - If the bot responds in public, the agent shows a single message showing (1) the bot’s response (2) user’s prompt as a block quote. The initial targeted message containing the user's message should expire in 24 hours.
+
+### Supported slash command scenarios
+
+- App defined slash command
+- Private user-to-agent interaction
+- Message extension action
+
+[WIP: Add details and scenarios/examples]
 
 ## Why use slash commands
 
