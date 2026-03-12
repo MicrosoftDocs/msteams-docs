@@ -68,11 +68,6 @@ This flow minimizes noise in shared conversations and is optimized for private, 
 
 This flow enables selective sharing of agent responses when it benefits the group or channel, such as status updates, confirmations, or information intended for shared visibility.
 
-- **Public agent-to-user response**:
-
-  - When the user sends a slash command to the bot, they'll see their original message reflected as a targeted message.
-  - If the bot responds in public, the agent shows a single message showing (1) the bot’s response (2) user’s prompt as a block quote. The initial targeted message containing the user's message should expire in 24 hours.
-
 ### Supported slash command scenarios
 
 - App defined slash command
