@@ -41,8 +41,16 @@ For apps and agents, slash commands can be used to:
 
 ### Agent response to slash commands
 
-- Private agent-to-user response
-- Public agent-to-user response
+- Private agent-to-user response:
+
+  - When the user sends a slash command to the bot, they will immediately see their original message reflected as a targeted message.
+  - If the bot responds privately, the user will see the bot's message as targeted reply containing the user's message as a block quote.
+  - When the user selects “allow”, we will show a single message showing (1) the bot’s response (2) the user’s prompt as a block quote. The initial targeted message containing the user's message should expire in 24 hours.
+
+- Public agent-to-user response:
+
+  - When the user sends a slash command to the bot, they will immediately see their original message reflected as a targeted message.
+  - If the bot responds in public, we will show a single message showing (1) the bot’s response (2) user’s prompt as a block quote. The initial targeted message containing the user's message should expire in 24 hours.
 
 ## Why use slash commands
 
