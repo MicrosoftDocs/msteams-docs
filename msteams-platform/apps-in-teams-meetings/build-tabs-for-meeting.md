@@ -1,9 +1,9 @@
 ---
 title: Create Customized Tab Apps for Meetings
-author: vikasalmal
+author: surbhigupta
 description: Learn to build a tab for a meeting chat, meeting side panel, and meeting stage in Teams meeting. Feature compatibility by user types. Code samples (Node.js, .NET).
 ms.topic: conceptual
-ms.author: vikasalmal
+ms.author: surbhigupta
 ms.localizationpriority: high
 ms.owner: vichug
 ms.date: 03/05/2025
@@ -25,51 +25,51 @@ Before creating a meeting tab, it's important to learn about the surfaces that a
 ### Meeting details view
 
 1. In your calendar, select a meeting to which you want to add a tab.
-1. In the meeting window, select :::image type="icon" source="../assets/icons/add-icon.png" border="false":::. The app gallery appears.
+1. Select the **Details** tab and select :::image type="icon" source="../assets/icons/add-icon.png" border="false":::. The app gallery appears.
 
    :::image type="content" source="~/assets/images/apps-in-meetings/pre-meeting-002.png" alt-text="Screenshot shows the pre-meeting app experience in Teams meeting.":::
 
 1. In the app gallery, select the app that you want to add and follow the steps as required. The tab is added to the meeting details page.
 
    # [Desktop](#tab/desktop)
-
+    
      The following image shows a tab added to the meeting details page in the Teams desktop client:
-
+    
      :::image type="content" source="~/assets/images/apps-in-meetings/premeetingtab.png" alt-text="Screenshot shows desktop Teams tabs in the meeting details view in the Teams meeting.":::
-
+    
    # [Mobile](#tab/mobile)
-
+    
      The following image shows a tab added to the meeting details page in the Teams mobile client:
-
+    
      :::image type="content" source="../assets/images/mobile-tab.png" alt-text="Screenshot shows mobile Teams tabs in the meeting details view in the Teams meeting.":::
-
+    
    ---
 
 ### Meeting chat view
 
 1. From the Teams chat panel, select the meeting chat view.
 
-1. Select :::image type="icon" source="../assets/icons/add-icon-app.png" border="false"::: and the app gallery appears.
+1. Select :::image type="icon" source="../assets/icons/add-icon.png" border="false"::: and the app gallery appears.
 
 1. In the app gallery, select the app that you want to add and follow the steps as required. The tab is added to the meeting chat.
 
    # [Meeting chat view desktop](#tab/meeting-chat-view-desktop)
-
+    
      The following image shows an app added to the meeting chat in the Teams desktop client:
-
+    
      :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view.png" alt-text="Screenshot shows the meeting chat view in a meeting chat in Teams desktop.":::
-
+    
    # [Meeting chat view mobile](#tab/meeting-chat-view-mobile)
-
+    
      The following image shows an app added to the meeting chat in the Teams mobile client:
-
+    
      :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view-mobile.png" alt-text="Screenshot shows the meeting chat view in a meeting chat in Teams mobile.":::
-
+    
    ---
 
 ### Meeting side panel view
 
-1. During a meeting, you can select :::image type="icon" source="../assets/icons/add-icon-app.png" border="false"::: **Apps** from Teams meeting window to add apps to the meeting.
+1. During a meeting, you can select :::image type="icon" source="../assets/icons/add-icon.png" border="false"::: **Apps** from Teams meeting window to add apps to the meeting.
 
    :::image type="content" source="../assets/images/apps-in-meetings/add-app.png" alt-text="Screenshot shows how to add an app in Teams meeting window.":::
 
@@ -285,6 +285,7 @@ The following table provides the user types and lists the features that each use
 >
 > * Meeting apps (side panel and meeting stage) are supported in Teams desktop client.
 > * Meeting apps (side panel and meeting stage) in Teams web client is supported only when the [developer preview is enabled](/microsoftteams/platform/resources/dev-preview/developer-preview-intro#enable-developer-preview).
+
 
 ## See also
 
