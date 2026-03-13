@@ -103,6 +103,14 @@ You can enable slash commands for your agent or bot by opting in through the Tea
 Configure app manifest property: `supportsTargetedMessages` + triggers for slash commands
 Configure bot logic for agent or bot to choose private or public response based on response relevance for single user or for all group or channel members.
 
+#### Manifest updates required for slash commands
+
+To enable slash commands, update your app manifest to opt in to targeted messaging and (optionally) declare the specific commands you want to expose in the compose box.
+
+- Enable the supported targeted messages flag
+- Option A: Support </`app-name`> without a command list
+- Option B: Provide an explicit command list
+
 ## Response codes for slash commands
 
 [WIP: Awaiting details on error codes]
