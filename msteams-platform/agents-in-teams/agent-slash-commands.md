@@ -92,20 +92,17 @@ Well-designed slash commands make an agent or a bot easier to discover, faster t
 
 ## Slash commands developer experience
 
-You can enable slash commands for your agent or bot by opting in through the Teams app manifest. You can choose to activate <`/app‑name`> only when necessary and to provide a tailored selection of commands ideal for slash usage. In the app manifest, you must:
+You can enable slash commands for your agent or bot by opting in through the Teams app manifest. You can choose to activate <`/app‑name`> only when necessary and to provide a tailored selection of commands ideal for slash usage.
+
+### Manifest updates required for slash commands
+
+To enable slash commands, update your app manifest to opt in to targeted messaging and (optionally) declare the specific commands you want to expose in the compose box. In the app manifest, you must:
 
 - Declare whether the app supports slash commands.
 - List the specific slash commands the app exposes.
 - Indicate whether the app supports natural language prompts when invoked via slash commands.
 
-### Enable slash commands
-
-Configure app manifest property: `supportsTargetedMessages` + triggers for slash commands
-Configure the logic for agent or bot to choose private or public response based on response relevance for single user or for all group or channel members.
-
-#### Manifest updates required for slash commands
-
-To enable slash commands, update your app manifest to opt in to targeted messaging and (optionally) declare the specific commands you want to expose in the compose box.
+[WIP: Add Manifest code snippet]
 
 - Enable the supported targeted messages flag: This opt-in allows your agent to be invoked from the compose box using <`/agent-name`>, and supports the private targeted-message response flow.
 - Option A: Support </`agent-name`> without a command list: If you don’t publish a list of commands, users can still invoke your app via <`/agent-name`> and provide free-form input (depending on your agent's capabilities).
@@ -114,6 +111,10 @@ To enable slash commands, update your app manifest to opt in to targeted messagi
 Notes -
 
 **Requirements**: After you enable slash commands, each command you want to expose as a slash command must be explicitly declared in the manifest (command name plus user-facing description). List the actual commands (for example, create), not just broad categories of commands. Once declared, a command like create becomes invokable as <`/create`> (or <`/app-name create`>, depending on the client experience).
+
+### Enable slash commands
+
+[WIP: Add code snippet]
 
 ## Response codes for slash commands
 
