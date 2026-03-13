@@ -114,7 +114,57 @@ Notes -
 
 ### Enable slash commands
 
-[WIP: Add code snippet]
+[WIP: Add code snippets]
+
+When a user sends a message to the agent, the Apx adds the `isTargeted` property to the `Recipient` object within `Activity` object of message event payload. You can enable the agent to send a targeted message to the same user or a public message to the group chat or channel. You can also enable the agent to delete a message that it had previously sent.
+
+#### Send an agent response
+
+Use the following code snippets to enable your agent to respond to a slash command based on supported scenarios:
+
+- **Private message to the user who initiated the slash command**:
+
+```typescript
+
+app.on('message', async ({ send, activity }) => {
+  if(activity.Recipient.isTargeted) {
+    send(new MessageActivity('Reactive TM').withRecipient(activity.From, isTargeted: true))
+  }
+});
+```
+
+- **Public message to the channel or group where the user initiated the slash command**:
+
+```typescript
+
+app.on('message', async ({ send, activity }) => {
+  if(activity.Recipient.isTargeted) {
+    send(new MessageActivity('Reactive TM').withRecipient(new Account {Id: <userMRI>,Name: <user Name>, Role: User}, isTargeted: true))
+  }
+});
+```
+
+- **Reactive message (normal message)**:
+
+```typescript
+
+app.on('message', async ({ send, activity }) => {
+  send(new MessageActivity('Normal msg'))  
+});
+```
+
+#### Delete an agent response
+
+Use the following code snippet to enable the agent to delete its response:
+
+```typescript
+
+app.on('messageDelete', async ({ activity, next }) => {
+  if(activity.Recipient.isTargeted) {
+    // Business logic when message hard delete flow is for TM
+  }
+});
+```
 
 ## Response codes for slash commands
 
