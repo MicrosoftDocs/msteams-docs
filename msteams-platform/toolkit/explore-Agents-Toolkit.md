@@ -17,7 +17,7 @@ This section gives you a tour of Agents Toolkit and its features.
 
 Agents Toolkit appears within Visual Studio Code as an extension. After you install Agents Toolkit, it opens within the Visual Studio Code window.
 
-:::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/overview-page.png" alt-text="Screenshot shows the Overview of Agents Toolkit." lightbox="../assets/images/toolkit-v2/toolkit-fundamentals/overview-page.png":::
+:::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/overview-page.png" alt-text="Screenshot of the Overview of Agents Toolkit." lightbox="../assets/images/toolkit-v2/toolkit-fundamentals/overview-page.png":::
 
 | Serial No. | UI Elements | Definition |
 | --- | --- | --- |
@@ -37,7 +37,7 @@ The following video helps you to learn about the process of creating a new Teams
 
 After you create a new Teams app project, the directory structure of the app appears in the left pane and the **`README`** file in the right pane.
 
-:::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/first-page_1.png" alt-text="Screenshot shows the  first page of Agents Toolkit." lightbox="../assets/images/toolkit-v2/toolkit-fundamentals/first-page_1.png":::
+:::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/first-page_1.png" alt-text="Screenshot of the first page of Agents Toolkit." lightbox="../assets/images/toolkit-v2/toolkit-fundamentals/first-page_1.png":::
 
 Let's take a tour of Agents Toolkit.
 
@@ -45,15 +45,15 @@ Let's take a tour of Agents Toolkit.
 
 | Select | To... |
 | --- | --- |
-| **Explorer** :::image type="icon" source="../assets/images/toolkit-v2/file-explorer-icon.PNG":::  | View the directory structure of the app. |
-| **Run and Debug** :::image type="icon" source="../assets/images/toolkit-v2/run-debug-icon.PNG":::  | Start the local or remote debug process. |
-| **Microsoft 365 Agents Toolkit** :::image type="icon" source="../assets/images/toolkit-v2/toolkit-sidebar-icon.PNG"::: | View the task pane  in the Agents Toolkit. |
+| **Explorer** :::image type="icon" source="../assets/images/toolkit-v2/file-explorer-icon.PNG" border="false":::  | View the directory structure of the app. |
+| **Run and Debug** :::image type="icon" source="../assets/images/toolkit-v2/run-debug-icon.PNG" border="false":::  | Start the local or remote debug process. |
+| **Microsoft 365 Agents Toolkit** :::image type="icon" source="../assets/images/toolkit-v2/toolkit-sidebar-icon.PNG" border="false"::: | View the task pane  in the Agents Toolkit. |
 
 From the task pane, you can see the following sections:
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/accounts1_1.png" alt-text="Screenshot shows the Accounts section.":::
+      :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/accounts1_1.png" alt-text="Screenshot of the Accounts section.":::
    :::column-end:::
    :::column span="":::
 
@@ -67,7 +67,7 @@ From the task pane, you can see the following sections:
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/environment.png" alt-text="Screenshot shows the Environment section.":::
+      :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/environment.png" alt-text="Screenshot of the Environment section.":::
    :::column-end:::
    :::column span="":::
 
@@ -85,7 +85,7 @@ From the task pane, you can see the following sections:
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/development-vsc.png" alt-text="Screenshot shows the Development section.":::
+      :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/development-vsc.png" alt-text="Screenshot of the Development section.":::
    :::column-end:::
    :::column span="":::
 
@@ -105,7 +105,7 @@ From the task pane, you can see the following sections:
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/deployment1.png" alt-text="Screenshot shows the Lifecycle section.":::
+      :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/deployment1.png" alt-text="Screenshot of the Lifecycle section.":::
    :::column-end:::
    :::column span="":::
 
@@ -121,7 +121,7 @@ From the task pane, you can see the following sections:
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/utility.png" alt-text="Screenshot shows the Utility section.":::
+      :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/utility.png" alt-text="Screenshot of the Utility section.":::
    :::column-end:::
    :::column span="":::
 
@@ -137,7 +137,7 @@ From the task pane, you can see the following sections:
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/help-and-feedback.png" alt-text="Screenshot shows the Help and feedback section.":::
+      :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/help-and-feedback.png" alt-text="Screenshot of the Help and feedback section.":::
    :::column-end:::
    :::column span="":::
 
@@ -155,11 +155,11 @@ From the task pane, you can see the following sections:
 
 1. Select **View How-to Guides** from Agents Toolkit task pane under **DEVELOPMENT** section.
 
-   :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/view-how-to-guides.png" alt-text="Screenshot shows the how-to guides menu options." lightbox="../assets/images/toolkit-v2/toolkit-fundamentals/view-how-to-guides.png":::
+   :::image type="content" source="../assets/images/toolkit-v2/toolkit-fundamentals/view-how-to-guides.png" alt-text="Screenshot of the how-to guides menu options." lightbox="../assets/images/toolkit-v2/toolkit-fundamentals/view-how-to-guides.png":::
 
    The **View How-to Guides** menu appears.
 
-2. Select the type of how-to guide that you want to view.
+1. Select the type of how-to guide that you want to view.
 
     * Select any one of the Teams app scenario guides to view the guide to develop an app for a common app scenario, such as sending notifications using a bot.
     * Select any one of the Teams app development guides to view a guide that helps in app development, such as embedding a dashboard tab in a Teams app.
