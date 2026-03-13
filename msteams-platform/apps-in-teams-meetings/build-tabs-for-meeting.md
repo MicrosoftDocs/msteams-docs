@@ -1,6 +1,6 @@
 ---
 title: Create Customized Tab Apps for Meetings
-author: surbhigupta
+author: vikasalmal
 description: Learn to build a tab for a meeting chat, meeting side panel, and meeting stage in Teams meeting. Feature compatibility by user types. Code samples (Node.js, .NET).
 ms.topic: conceptual
 ms.author: vikasalmal
@@ -25,7 +25,7 @@ Before creating a meeting tab, it's important to learn about the surfaces that a
 ### Meeting details view
 
 1. In your calendar, select a meeting to which you want to add a tab.
-1. Select the **Details** tab and select :::image type="icon" source="../assets/icons/add-icon.png" border="false":::. The app gallery appears.
+1. In the meeting window, select :::image type="icon" source="../assets/icons/add-icon.png" border="false":::. The app gallery appears.
 
    :::image type="content" source="~/assets/images/apps-in-meetings/pre-meeting-002.png" alt-text="Screenshot shows the pre-meeting app experience in Teams meeting.":::
 
@@ -49,7 +49,7 @@ Before creating a meeting tab, it's important to learn about the surfaces that a
 
 1. From the Teams chat panel, select the meeting chat view.
 
-1. Select :::image type="icon" source="../assets/icons/add-icon.png" border="false"::: and the app gallery appears.
+1. Select :::image type="icon" source="../assets/icons/add-icon-app.png" border="false"::: and the app gallery appears.
 
 1. In the app gallery, select the app that you want to add and follow the steps as required. The tab is added to the meeting chat.
 
@@ -69,7 +69,7 @@ Before creating a meeting tab, it's important to learn about the surfaces that a
 
 ### Meeting side panel view
 
-1. During a meeting, you can select :::image type="icon" source="../assets/icons/add-icon.png" border="false"::: **Apps** from Teams meeting window to add apps to the meeting.
+1. During a meeting, you can select :::image type="icon" source="../assets/icons/add-icon-app.png" border="false"::: **Apps** from Teams meeting window to add apps to the meeting.
 
    :::image type="content" source="../assets/images/apps-in-meetings/add-app.png" alt-text="Screenshot shows how to add an app in Teams meeting window.":::
 
