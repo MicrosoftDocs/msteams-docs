@@ -4,7 +4,7 @@ description: Create an Incoming Webhook to Teams app and post external requests 
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.owner: hantony
-ms.date: 01/25/2023
+ms.date: 03/02/2026
 ---
 
 # Create Incoming Webhooks
@@ -292,7 +292,7 @@ The webhook is now removed from the Teams channel.
 
 | Sample name | Description | .NET | Node.js |
 |---------------------|--------------|---------|--------|
-| Incoming Webhook |This sample demonstrates a Teams tab to send message cards using Incoming Webhook, showcasing the HttpPOST action for interactive cards. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/nodejs)|
+| Incoming Webhook |This sample demonstrates a Teams tab to send message cards using Incoming Webhook, showcasing the HttpPOST action for interactive cards. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/incoming-webhook/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/incoming-webhook/nodejs)|
 
 ## See also
 
