@@ -68,6 +68,10 @@ This flow minimizes noise in shared conversations and is optimized for private, 
 
 This flow enables selective sharing of agent responses when it benefits the group or channel, such as status updates, confirmations, or information intended for shared visibility.
 
+- **Support for showing a private response publicly**
+
+To support a private-by-default experience, agents or bots can include suggested actions (for example, Allow or Share to channel) at the bottom of a private response. These actions let users explicitly promote an otherwise-private response to a public message. When a user selects Allow, the app is informed of that choice, enabling the bot developer’s logic to post the approved response in the channel or chat.
+
 ### Supported slash command scenarios
 
 - App defined slash command
