@@ -107,8 +107,8 @@ Configure bot logic for agent or bot to choose private or public response based 
 
 To enable slash commands, update your app manifest to opt in to targeted messaging and (optionally) declare the specific commands you want to expose in the compose box.
 
-- Enable the supported targeted messages flag
-- Option A: Support </`app-name`> without a command list
+- Enable the supported targeted messages flag: This opt-in allows your bot to be invoked from the compose box using <`/app-name`> (or /bot-name), and supports the private targeted-message response flow.
+- Option A: Support </`app-name`> without a command list: If you don’t publish a list of commands, users can still invoke your app via <`/app-name`> and provide free-form input (depending on your bot’s capabilities).
 - Option B: Provide an explicit command list
 
 ## Response codes for slash commands
