@@ -111,6 +111,10 @@ To enable slash commands, update your app manifest to opt in to targeted messagi
 - Option A: Support </`app-name`> without a command list: If you don’t publish a list of commands, users can still invoke your app via <`/app-name`> and provide free-form input (depending on your bot’s capabilities).
 - Option B: Provide an explicit command list: Define a curated set of commands (for example, help, create, design) that appear in the slash menu with a short description. Existing bot commands can be reused, or you can introduce new commands optimized for slash usage.
 
+Notes -
+
+Requirements: After you enable slash commands, each command you want to expose as a slash command must be explicitly declared in the manifest (command name plus user-facing description). List the actual commands (for example, create), not just broad categories of commands. Once declared, a command like create becomes invokable as /create (or /app-name create, depending on the client experience).
+
 ## Response codes for slash commands
 
 [WIP: Awaiting details on error codes]
