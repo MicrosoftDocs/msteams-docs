@@ -2,7 +2,6 @@
 title: Charts in Adaptive Cards
 description: Learn how to create charts in Adaptive Cards including donut, gauge, vertical bar, horizontal bar, line, and pie charts.
 ms.topic: conceptual
-ms.author: surbhigupta
 ms.date: 11/07/2024
 ---
 

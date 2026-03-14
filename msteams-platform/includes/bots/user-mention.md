@@ -3,7 +3,6 @@ title: User Mention
 description: With this learning module, learn how your bot can mention other users in messages posted in channels.
 localization_priority: Normal
 ms.topic: overview
-ms.author: surbhigupta12
 ms.date: 11/14/2024
 ---
 

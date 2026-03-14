@@ -1,6 +1,5 @@
 ---
 title: Build Dialog in Tabs with Adaptive Card
-author: surbhigupta
 description: Learn how to create a modal pop-up experience and embed a webpage to display surveys, videos, and collect or display information to users from Teams apps.
 ms.localizationpriority: medium
 ms.topic: overview
