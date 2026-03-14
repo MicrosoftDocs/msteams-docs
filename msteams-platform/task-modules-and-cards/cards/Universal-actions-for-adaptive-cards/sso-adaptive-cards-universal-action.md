@@ -4,7 +4,6 @@ description: Learn how to enable SSO for Adaptive Cards Universal Actions, add c
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 02/06/2023
-ms.owner: ryanbliss
 ---
 
 # Add code to enable SSO for Adaptive Cards Universal Actions

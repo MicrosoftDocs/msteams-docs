@@ -4,7 +4,6 @@ description: Learn to create configuration page to collect information from user
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.date: 02/06/2025
-ms.owner: ryanbliss
 ---
 # Create a configuration page
 

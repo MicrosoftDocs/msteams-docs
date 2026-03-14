@@ -5,7 +5,6 @@ ms.topic: conceptual
 ms.author: vikasalmal
 ms.localizationpriority: high
 ms.date: 03/05/2026
-ms.owner: ryanbliss
 ---
 
 # Deep link to an application

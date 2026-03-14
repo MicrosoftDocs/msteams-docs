@@ -4,7 +4,6 @@ description: Learn how to add third party authentication to Adaptive Cards Unive
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 01/02/2023
-ms.owner: ryanbliss
 ---
 
 # Add third party authentication to Adaptive Cards Universal Actions

@@ -4,7 +4,6 @@ description: Learn how to build dashboard tab app, customize layout, use a widge
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 01/17/2023
-ms.owner: ryanbliss
 ---
 
 # Build a dashboard tab app

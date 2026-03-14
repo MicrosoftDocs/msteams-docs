@@ -4,7 +4,6 @@ description: Learn about types of tabs, different tab context and it's benefits,
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 02/06/2025
-ms.owner: ryanbliss
 ---
 
 # Build tabs for Teams
