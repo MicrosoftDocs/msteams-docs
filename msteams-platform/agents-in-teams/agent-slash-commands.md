@@ -42,10 +42,10 @@ You can control response visibility through bot or agent logic and can selective
 Slash commands supports two distinct agent-to-user response flows:
 
 :::row:::
-    :::column span="2":::
-
+    :::column span:::
     **Private Agent-to-User Response (Default)**: This flow supports focused, one-to-one interactions between the user and the agent or bot:
-
+    :::column-end:::
+    :::column span="2":::
         1. When a user sends a slash command, their message appears as a targeted message.
         1. If the agent or bot replies privately, it appears as a targeted reply with the user’s prompt quoted with the option of making it available publicly.
         1. When the user selects Allow, a single message is posted containing the bot’s response and the quoted prompt.
