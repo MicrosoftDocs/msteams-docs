@@ -93,8 +93,17 @@ Slash commands support the following agent-to-user response flows:
   - `/contoso incident`
   - `/contoso dashboard`
 
-- Private user-to-agent interaction
-- Message extension action
+- **Private user-to-agent interaction**: With slash commands, users can initiate a private, one turn interaction with a bot or agent. For example:
+
+- `/contoso hello`
+- `/contoso draft an email`
+
+    Developers must explicitly opt in to support natural language prompts through slash commands.
+
+- **Message extension action**: Action type message extensions can surface as slash commands. Selecting the command opens the corresponding modal or dialog to complete the action. For example, `/create task`.
+
+> [!NOTE]
+> Search type message extensions aren’t exposed as slash commands. Users can access them through the message extension flyout instead.
 
 [WIP: Add details and scenarios/examples]
 
