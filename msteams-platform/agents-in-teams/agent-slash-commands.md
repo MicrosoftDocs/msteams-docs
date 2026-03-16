@@ -48,9 +48,9 @@ Slash commands support the following agent-to-user response flows:
 :::row-end:::
 :::row:::
     :::column span="2":::
-      1. When a user sends a slash command, their message appears as a targeted message.
-      1. If the agent or bot replies privately, it appears as a targeted reply with the user’s prompt quoted with the option of making it available publicly.
-      1. When the user selects **Allow**, a single message is posted containing the bot’s response and the quoted prompt.
+        1. When a user sends a slash command, their message appears as a targeted message.
+        1. If the agent or bot replies privately, it appears as a targeted reply with the user’s prompt quoted with the option of making it available publicly.
+        1. When the user selects **Allow**, a single message is posted containing the bot’s response and the quoted prompt.
 
     :::column-end:::
     :::column span="3":::
@@ -59,7 +59,7 @@ Slash commands support the following agent-to-user response flows:
 :::row-end:::
 :::row:::
     :::column span:::
-      The original targeted message expires after 24 hours. This flow minimizes noise in shared conversations and is optimized for private, fast, and context-aware interactions.
+          The original targeted message expires after 24 hours. This flow minimizes noise in shared conversations and is optimized for private, fast, and context-aware interactions.
     :::column-end:::
 :::row-end:::
 
@@ -71,16 +71,18 @@ Slash commands support the following agent-to-user response flows:
 :::row:::
     :::column span="2":::
 
-      1. When a user sends a slash command to the agent or bot, their original message is immediately reflected as a targeted message.
-      1. If the agent or bot is configured to respond publicly, it appears as a targeted reply with the user’s prompt quoted.
-      1. The agent's or bot's response is visible to all members in the channel or group chat.
+        1. When a user sends a slash command to the agent or bot, their original message is immediately reflected as a targeted message.
+        1. If the agent or bot is configured to respond publicly, it appears as a targeted reply with the user’s prompt quoted.
+        1. The agent's or bot's response is visible to all members in the channel or group chat.
     :::column-end:::
     :::column span="3":::
         :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-public-response.png" alt-text="Image shows agent's public response." border="false" lightbox="../assets/images/agents-in-teams/agent-slash-commands/agent-public-response.png":::
     :::column-end:::
 :::row-end:::
 :::row:::
-The initial targeted message containing the user’s prompt expires after 24 hours. This flow enables selective sharing of agent responses when it benefits the group or channel, such as status updates, confirmations, or information intended for shared visibility.
+    :::column span:::
+        The initial targeted message containing the user’s prompt expires after 24 hours. This flow enables selective sharing of agent responses when it benefits the group or channel, such as status updates, confirmations, or information intended for shared visibility.
+    :::column-end:::
 :::row-end:::
 
 - **Support for showing a private response publicly** : To support a private-by-default experience, agents or bots can include suggested actions (for example, **Allow** or **Discard**) at the bottom of a private response.
