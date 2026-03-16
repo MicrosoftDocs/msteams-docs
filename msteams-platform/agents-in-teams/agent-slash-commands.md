@@ -39,7 +39,7 @@ You can control response visibility through bot or agent logic and can selective
 
 #### Agent response flows with slash commands - user scenario
 
-Slash commands supports two distinct agent-to-user response flows:
+Slash commands supports the following agent-to-user response flows:
 
 :::row:::
     :::column span:::
