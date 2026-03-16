@@ -71,8 +71,9 @@ Slash commands support the following agent-to-user response flows:
 :::row:::
     :::column span="2":::
 
-      1. When a user sends a slash command to the bot, their original message is immediately reflected as a targeted message.
-      1. If the bot is configured to respond publicly, it appears as a targeted reply with the user’s prompt quoted.
+      1. When a user sends a slash command to the agent or bot, their original message is immediately reflected as a targeted message.
+      1. If the agent or bot is configured to respond publicly, it appears as a targeted reply with the user’s prompt quoted.
+      1. The agent's or bot's response is visible to all members in the channel or group chat.
     :::column-end:::
     :::column span="3":::
         :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-public-response.png" alt-text="Image shows agent's public response." border="false" lightbox="../assets/images/agents-in-teams/agent-slash-commands/agent-public-response.png":::
