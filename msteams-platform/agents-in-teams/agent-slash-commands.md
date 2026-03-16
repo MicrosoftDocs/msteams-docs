@@ -68,6 +68,8 @@ This flow minimizes noise in shared conversations and is optimized for private, 
 
   - The initial targeted message containing the user’s prompt expires after 24 hours.
 
+    :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-public-response.png" alt-text="Image shows agent's public response.":::
+
 This flow enables selective sharing of agent responses when it benefits the group or channel, such as status updates, confirmations, or information intended for shared visibility.
 
 - **Support for showing a private response publicly**
