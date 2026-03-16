@@ -57,7 +57,7 @@ Slash commands supports two distinct agent-to-user response flows:
     
     This flow minimizes noise in shared conversations and is optimized for private, fast, and context-aware interactions.
     :::column-end:::
-    :::column span="3"
+    :::column span="3":::
         :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-private-response.png" alt-text="Image shows an agent's private response to a user's slash command." border="false":::
     :::column-end:::
 :::row-end:::
