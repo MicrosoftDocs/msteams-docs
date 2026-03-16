@@ -45,7 +45,7 @@ Slash commands supports two distinct agent-to-user response flows:
 
     This flow supports focused, one-to-one interactions between the user and the agent or bot.
 
-    :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-private-response.png" alt-text="Image shows an agent's private response to a user's slash command.":::
+    :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-private-response.png" alt-text="Image shows an agent's private response to a user's slash command." border="false":::
 
   - When a user sends a slash command to the bot, their original message is immediately reflected as a targeted message.
   - If the bot responds privately, the user receives the bot’s response as a targeted reply, with the user’s original prompt shown as a block quote.
@@ -68,7 +68,7 @@ This flow minimizes noise in shared conversations and is optimized for private, 
 
   - The initial targeted message containing the user’s prompt expires after 24 hours.
 
-    :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-public-response.png" alt-text="Image shows agent's public response.":::
+    :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-public-response.png" alt-text="Image shows agent's public response." border="false":::
 
 This flow enables selective sharing of agent responses when it benefits the group or channel, such as status updates, confirmations, or information intended for shared visibility.
 
