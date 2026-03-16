@@ -37,9 +37,9 @@ Slash command responses are private, one to one interactions between a user and 
 
 You can control response visibility through bot or agent logic and can selectively make responses public to support collaboration or business needs. Enable the agent to selectively surface certain responses to a channel or group chat when the information is relevant to a broader audience. Visibility decisions are intentional developer driven when public responses add value.
 
-#### Agent response flows with slash commands - user scenario
+#### Agent response flows with slash commands - user scenarios
 
-Slash commands supports the following agent-to-user response flows:
+Slash commands support the following agent-to-user response flows:
 
 :::row:::
     :::column span:::
@@ -75,7 +75,7 @@ Slash commands supports the following agent-to-user response flows:
       1. If the bot is configured to respond publicly, it appears as a targeted reply with the user’s prompt quoted.
     :::column-end:::
     :::column span="3":::
-        :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-public-response.png" alt-text="Image shows agent's public response." border="false":::
+        :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-public-response.png" alt-text="Image shows agent's public response." border="false" lightbox="../assets/images/agents-in-teams/agent-slash-commands/agent-public-response.png":::
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -84,9 +84,11 @@ The initial targeted message containing the user’s prompt expires after 24 hou
 
 - **Support for showing a private response publicly**
 
-To support a private-by-default experience, agents or bots can include suggested actions (for example, Allow or Share to channel) at the bottom of a private response. These actions let users explicitly promote an otherwise-private response to a public message. When a user selects Allow, the app is informed of that choice, enabling the bot developer’s logic to post the approved response in the channel or chat.
+To support a private-by-default experience, agents or bots can include suggested actions (for example, **Allow** or **Discard**) at the bottom of a private response.
 
-### User scenario
+:::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-responses-actions.png" alt-text="Image shows examples of actions on private agent responses.":::
+
+These actions let users explicitly promote an otherwise private response to a public message. When a user selects **Allow**, the agent posts the approved response in the channel or group chat.
 
 ### Supported slash command scenarios
 
