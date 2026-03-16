@@ -43,14 +43,14 @@ Slash commands support the following agent-to-user response flows:
 
 :::row:::
     :::column span:::
-    - **Private Agent-to-User Response (Default)**: This flow supports focused, one-to-one interactions between the user and the agent or bot:
+    **Private Agent-to-User Response (Default)**: This flow supports focused, one-to-one interactions between the user and the agent or bot:
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column span="2":::
-            1. When a user sends a slash command, their message appears as a targeted message.
-            1. If the agent or bot replies privately, it appears as a targeted reply with the user’s prompt quoted with the option of making it available publicly.
-            1. When the user selects **Allow**, a single message is posted containing the bot’s response and the quoted prompt.
+        1. When a user sends a slash command, their message appears as a targeted message.
+        1. If the agent or bot replies privately, it appears as a targeted reply with the user’s prompt quoted with the option of making it available publicly.
+        1. When the user selects **Allow**, a single message is posted containing the bot’s response and the quoted prompt.
 
     :::column-end:::
     :::column span="3":::
@@ -59,21 +59,28 @@ Slash commands support the following agent-to-user response flows:
 :::row-end:::
 :::row:::
     :::column span:::
-          The original targeted message expires after 24 hours. This flow minimizes noise in shared conversations and is optimized for private, fast, and context-aware interactions.
+      The original targeted message expires after 24 hours. This flow minimizes noise in shared conversations and is optimized for private, fast, and context-aware interactions.
+
+      **Support for showing a private response publicly**: To support a private-by-default experience, agents or bots can include suggested actions (for example, **Allow** or **Discard**) at the bottom of a private response.
+
+        :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-responses-actions.png" alt-text="Image shows examples of actions on private agent responses.":::
+
+      These actions let users explicitly promote an otherwise private response to a public message. When a user selects **Allow**, the agent posts the approved response in the channel or group chat.
+
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column span:::
-    - **Public Agent-to-User Response (Developer-Enabled)**: In scenarios where the response is relevant to a broader audience, developers can choose to surface agent responses publicly.
+    **Public Agent-to-User Response (Developer-Enabled)**: In scenarios where the response is relevant to a broader audience, developers can choose to surface agent responses publicly.
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column span="2":::
 
-            1. When a user sends a slash command to the agent or bot, their original message is immediately reflected as a targeted message.
-            1. If the agent or bot is configured to respond publicly, it appears as a targeted reply with the user’s prompt quoted.
-            1. The agent's or bot's response is visible to all members in the channel or group chat.
+        1. When a user sends a slash command to the agent or bot, their original message is immediately reflected as a targeted message.
+        1. If the agent or bot is configured to respond publicly, it appears as a targeted reply with the user’s prompt quoted.
+        1. The agent's or bot's response is visible to all members in the channel or group chat.
     :::column-end:::
     :::column span="3":::
         :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-public-response.png" alt-text="Image shows agent's public response." border="false" lightbox="../assets/images/agents-in-teams/agent-slash-commands/agent-public-response.png":::
