@@ -45,6 +45,8 @@ Slash commands supports two distinct agent-to-user response flows:
     :::column span:::
     **Private Agent-to-User Response (Default)**: This flow supports focused, one-to-one interactions between the user and the agent or bot:
     :::column-end:::
+:::row-end:::
+:::row:::
     :::column span="2":::
         1. When a user sends a slash command, their message appears as a targeted message.
         1. If the agent or bot replies privately, it appears as a targeted reply with the user’s prompt quoted with the option of making it available publicly.
