@@ -45,8 +45,6 @@ Slash commands supports two distinct agent-to-user response flows:
 
     This flow supports focused, one-to-one interactions between the user and the agent or bot.
 
-    :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-private-response.png" alt-text="Image shows an agent's private response to a user's slash command.":::
-
   - When a user sends a slash command to the bot, their original message is immediately reflected as a targeted message.
   - If the bot responds privately, the user receives the bot’s response as a targeted reply, with the user’s original prompt shown as a block quote.
   - When the user selects Allow, a single message is displayed that includes:
