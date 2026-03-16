@@ -37,15 +37,16 @@ Slash command responses are private, one to one interactions between a user and 
 
 You can control response visibility through bot or agent logic and can selectively make responses public to support collaboration or business needs. Enable the agent to selectively surface certain responses to a channel or group chat when the information is relevant to a broader audience. Visibility decisions are intentional developer driven when public responses add value.
 
-#### Agent response flows with slash commands
+#### Agent response flows with slash commands - user scenario
 
 Slash commands supports two distinct agent-to-user response flows:
+
+:::row:::
+:::column span="1":::
 
 - **Private Agent-to-User Response (Default)**
 
     This flow supports focused, one-to-one interactions between the user and the agent or bot.
-
-    :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-private-response.png" alt-text="Image shows an agent's private response to a user's slash command." border="false":::
 
   - When a user sends a slash command to the bot, their original message is immediately reflected as a targeted message.
   - If the bot responds privately, the user receives the bot’s response as a targeted reply, with the user’s original prompt shown as a block quote.
@@ -55,6 +56,11 @@ Slash commands supports two distinct agent-to-user response flows:
   - The initial targeted message containing the user’s prompt expires after 24 hours.
 
 This flow minimizes noise in shared conversations and is optimized for private, fast, and context-aware interactions.
+:::column-end:::
+:::column span="3"
+    :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-private-response.png" alt-text="Image shows an agent's private response to a user's slash command." border="false":::
+:::column-end:::
+:::row-end:::
 
 - **Public Agent-to-User Response (Developer-Enabled)**
 
