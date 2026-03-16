@@ -74,6 +74,8 @@ This flow enables selective sharing of agent responses when it benefits the grou
 
 To support a private-by-default experience, agents or bots can include suggested actions (for example, Allow or Share to channel) at the bottom of a private response. These actions let users explicitly promote an otherwise-private response to a public message. When a user selects Allow, the app is informed of that choice, enabling the bot developer’s logic to post the approved response in the channel or chat.
 
+### User scenario
+
 ### Supported slash command scenarios
 
 - App defined slash command
