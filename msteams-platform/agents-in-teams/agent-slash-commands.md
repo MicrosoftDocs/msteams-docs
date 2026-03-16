@@ -6,7 +6,7 @@ ms.date: 03/11/2026
 ms.topic: reference
 ---
 
-# Enable slash commands for agents
+# Enable slash commands for agents and bots
 
 Slash commands are a lightweight way to invoke an agent's or bot's capabilities using a predictable, text-first syntax that starts with '/' (slash). Slash commands act like power shortcuts that combine the speed of commands with the flexibility of natural language.
 
