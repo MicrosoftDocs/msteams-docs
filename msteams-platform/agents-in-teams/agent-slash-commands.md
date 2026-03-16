@@ -60,13 +60,6 @@ Slash commands support the following agent-to-user response flows:
 :::row:::
     :::column span:::
       The original targeted message expires after 24 hours. This flow minimizes noise in shared conversations and is optimized for private, fast, and context-aware interactions.
-
-      **Support for showing a private response publicly**: To support a private-by-default experience, agents or bots can include suggested actions (for example, **Allow** or **Discard**) at the bottom of a private response.
-
-        :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-responses-actions.png" alt-text="Image shows examples of actions on private agent responses.":::
-
-      These actions let users explicitly promote an otherwise private response to a public message. When a user selects **Allow**, the agent posts the approved response in the channel or group chat.
-
     :::column-end:::
 :::row-end:::
 
@@ -202,3 +195,9 @@ app.on('messageDelete', async ({ activity, next }) => {
 - Avoid exposing overly verbose prompt suggestions as slash commands.
 - Provide clear command descriptions to improve discoverability.
 - Offer aliases for frequently used commands where appropriate.
+
+<!--**Support for showing a private response publicly**: To support a private-by-default experience, agents or bots can include suggested actions (for example, **Allow** or **Discard**) at the bottom of a private response.
+
+:::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-responses-actions.png" alt-text="Image shows examples of actions on private agent responses.":::
+
+These actions let users explicitly promote an otherwise private response to a public message. When a user selects **Allow**, the agent posts the approved response in the channel or group chat.-->
