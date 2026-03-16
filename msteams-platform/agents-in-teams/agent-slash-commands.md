@@ -43,7 +43,7 @@ Slash commands support the following agent-to-user response flows:
 
 :::row:::
     :::column span:::
-    **Private Agent-to-User Response (Default)**: This flow supports focused, one-to-one interactions between the user and the agent or bot:
+    - **Private Agent-to-User Response (Default)**: This flow supports focused, one-to-one interactions between the user and the agent or bot:
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -65,7 +65,7 @@ Slash commands support the following agent-to-user response flows:
 
 :::row:::
     :::column span:::
-    **Public Agent-to-User Response (Developer-Enabled)**: In scenarios where the response is relevant to a broader audience, developers can choose to surface agent responses publicly.
+    - **Public Agent-to-User Response (Developer-Enabled)**: In scenarios where the response is relevant to a broader audience, developers can choose to surface agent responses publicly.
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -83,7 +83,7 @@ Slash commands support the following agent-to-user response flows:
 The initial targeted message containing the user’s prompt expires after 24 hours. This flow enables selective sharing of agent responses when it benefits the group or channel, such as status updates, confirmations, or information intended for shared visibility.
 :::row-end:::
 
-**Support for showing a private response publicly** : To support a private-by-default experience, agents or bots can include suggested actions (for example, **Allow** or **Discard**) at the bottom of a private response.
+- **Support for showing a private response publicly** : To support a private-by-default experience, agents or bots can include suggested actions (for example, **Allow** or **Discard**) at the bottom of a private response.
 
 :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-responses-actions.png" alt-text="Image shows examples of actions on private agent responses.":::
 
