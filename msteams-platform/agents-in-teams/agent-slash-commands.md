@@ -42,7 +42,7 @@ You can control response visibility through bot or agent logic and can selective
 Slash commands supports two distinct agent-to-user response flows:
 
 :::row:::
-    :::column span="1":::
+    :::column span="2":::
 
     - **Private Agent-to-User Response (Default)**
     
