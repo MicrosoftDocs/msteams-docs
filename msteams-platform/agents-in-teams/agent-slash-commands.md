@@ -82,9 +82,7 @@ Slash commands support the following agent-to-user response flows:
 The initial targeted message containing the user’s prompt expires after 24 hours. This flow enables selective sharing of agent responses when it benefits the group or channel, such as status updates, confirmations, or information intended for shared visibility.
 :::row-end:::
 
-- **Support for showing a private response publicly**
-
-To support a private-by-default experience, agents or bots can include suggested actions (for example, **Allow** or **Discard**) at the bottom of a private response.
+**Support for showing a private response publicly** : To support a private-by-default experience, agents or bots can include suggested actions (for example, **Allow** or **Discard**) at the bottom of a private response.
 
 :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-responses-actions.png" alt-text="Image shows examples of actions on private agent responses.":::
 
