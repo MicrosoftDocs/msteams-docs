@@ -94,7 +94,12 @@ Slash commands support the following agent-to-user response flows:
 
 ### Supported slash command scenarios
 
-- App defined slash command
+- **App-defined slash command**: You can explicitly define the slash commands their app supports. These commands appear in the slash command menu when users type `/` in the compose box. For example:
+
+  - `/contoso create-task`
+  - `/contoso incident`
+  - `/contoso dashboard`
+
 - Private user-to-agent interaction
 - Message extension action
 
