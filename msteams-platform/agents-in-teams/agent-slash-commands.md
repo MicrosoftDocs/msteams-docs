@@ -133,6 +133,21 @@ To enable slash commands, update your app manifest to opt in to targeted messagi
 
 - Enable the supported targeted messages flag: This opt-in allows your agent to be invoked from the compose box using <`/agent-name`>, and supports the private targeted-message response flow.
 - Option A: Support </`agent-name`> without a command list: If you don’t publish a list of commands, users can still invoke your app via <`/agent-name`> and provide free-form input (depending on your agent's capabilities).
+
+Use the following example to confgure the app manifest for supporting slash commands without declaring any commands:
+
+```json
+{
+    "bots": [
+        {
+            "botId": "{{BOT_ID}}",
+            "scopes": ["personal", "team", "groupChat"],
+            "supportsTargetedMessages": true
+        }
+    ]
+}
+```
+
 - Option B: Provide an explicit command list: Define a curated set of commands (for example, help, create, design) that appear in the slash menu with a short description. Existing agent commands can be reused, or you can introduce new commands optimized for slash usage.
 
 Notes -
