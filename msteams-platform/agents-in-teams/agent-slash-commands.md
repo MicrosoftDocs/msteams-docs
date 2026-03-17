@@ -8,7 +8,7 @@ ms.topic: reference
 
 # Enable slash commands for agents and bots
 
-Slash commands are a lightweight way to invoke an agent's or bot's capabilities using a predictable, text-first syntax that starts with '/' (slash). Slash commands act like power shortcuts that combine the speed of commands with the flexibility of natural language.
+Slash commands are a lightweight way to invoke an agent's or bot's capabilities using a predictable, text-first syntax that starts with '/' (slash). They act like power shortcuts that combine the speed of commands with the flexibility of natural language.
 
 **Key points**
 
@@ -23,7 +23,7 @@ Slash commands are a lightweight way to invoke an agent's or bot's capabilities 
 
 ## What are slash commands
 
-A slash command is usually a command name plus optional parameters—such as `/summarize last 20 messages` or `/draft status update for Project Contoso` can get reliable outcomes with minimal typing.  Users can type a short command directly in the message compose box to trigger an action immediately. When a user types /, Teams shows a menu of available commands from built-in features, workflows, and installed or available agents or apps.
+A slash command is usually a command name plus optional parameters such as `/summarize last 20 messages` or `/draft status update for Project Contoso` can get reliable outcomes with minimal typing. Users can type a short command directly in the message compose box to trigger an action immediately. When a user types `/`, Teams shows a menu of available commands from built-in features, workflows, and installed or available agents or apps.
 
 [WIP: Add infographic for showing UX]
 
@@ -37,9 +37,9 @@ Teams supports agent-specific slash commands, private agent-to-user interaction,
 
 ## User experience
 
-Slash command responses are one-to-one between the initiating user and the agent or bot. Only the initiating user can see the response, helping maintain focus, reduce noise, and enable personalised interactions.
+Usually slash command responses are one-to-one interactions between the initiating user and the agent or bot. Only the initiating user can see the response, helping maintain focus, reduce noise, and enable personalised interactions.
 
-You control visibility through agent or bot logic and can selectively share responses to a channel or group chat when it benefits collaboration. Public responses should be an intentional, developer-driven choice when broader visibility adds value.
+You can, however, control the response visibility through agent or bot logic and can selectively share responses to a channel or group chat when it benefits collaboration. Public responses must be an intentional, developer-driven choice when broader visibility adds value.
 
 ### Agent response flows with slash commands - user scenarios
 
