@@ -10,11 +10,11 @@ ms.topic: reference
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD024 -->
 
+# Enable targeted messages for agents
+
 > [!NOTE]
 >
 > Support for targeted messages is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
-
-# Enable targeted messages for agents
 
 Use targeted messages in your agents or bots to send temporary, private messages to a specific user in a channel, group, or meeting chat. You can also enable an agent or bot to edit or delete targeted messages it sends in a conversation.
 
