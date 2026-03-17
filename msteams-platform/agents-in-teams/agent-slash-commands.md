@@ -37,7 +37,7 @@ For apps and agents, slash commands can be used to:
 
 Apps and agents can participate in slash commanding in the following ways:
 
-- App-defined slash commands: Agents and apps can publish a curated set of app-defined slash commands so users can discover and run common actions without leaving the compose box. You can explicitly declare the commands your app supports, and Teams shows them in the slash command picker when a user types `/`. This approach keeps the menu focused and avoids automatically exposing every possible capability. For example:
+- **App-defined slash commands**: Agents and apps can publish a curated set of slash commands so users can discover and run common actions without leaving the compose box. You can explicitly declare the commands your app supports, and Teams shows them in the slash command picker when a user types `/`. This approach keeps the menu focused and avoids automatically exposing every possible capability. For example:
 
   - `/contoso create-task`
   - `/contoso incident`
@@ -49,6 +49,8 @@ Apps and agents can participate in slash commanding in the following ways:
   - `/contoso create-task fix login issue for mobile users`
 
 To support natural-language prompts (for example, /contoso create-task fix login issue), developers must explicitly opt in—so apps that only want to support fixed commands can do so without enabling free-form prompting.
+
+- **Message extension actions as slash commands**: Action-type message extensions can also surface as slash commands. When a user selects the command from the / menu, Teams opens the associated modal (task module) or dialog so the user can complete the action with guided inputs, validation, and a consistent UI flow. For example, `./create task` (opens a task creation dialog)
 
 <!--
 - **App-defined slash command**: You can explicitly define the slash commands their app supports. These commands appear in the slash command menu when users type `/` in the compose box. For example:
