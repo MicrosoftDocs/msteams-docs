@@ -13,9 +13,9 @@ Slash commands are a lightweight way to invoke an agent's or bot's capabilities 
 **Key points**
 
 - [What are slash commands](#what-are-slash-commands)
-- [Supported scenarios for slash commands](#supported-scenarios-for-slash-commands)
 - [User experience](#user-experience)
 - [Why use slash commands](#why-use-slash-commands)
+- [Supported scenarios for slash commands](#supported-scenarios-for-slash-commands)
 - **Slash commands developer experience**
   - [Manifest updates](#manifest-updates-for-slash-commands)
   - [Enable slash commands](#enable-slash-commands)
@@ -27,58 +27,19 @@ A slash command is usually a command name plus optional parameters—such as `/s
 
 [WIP: Add infographic for showing UX]
 
-For apps and agents, slash commands can be used to:
+Use slash commands can be used to:
 
 - Trigger a specific app action (for example, create a task, open a form, or start a workflow).
 - Start a private, single turn interaction with a bot or agent.
 - Provide a faster alternative to verbose @mentions or multi-step menus.
 
-### Supported scenarios for slash commands
-
-Apps and agents can participate in slash commanding in the following ways:
-
-- **App-defined slash commands**: Agents and apps can publish a curated set of slash commands so users can discover and run common actions without leaving the compose box. You can explicitly declare the commands your app supports, and Teams shows them in the slash command picker when a user types `/`. This approach keeps the menu focused and avoids automatically exposing every possible capability. For example:
-
-  - `/contoso create-task`
-  - `/contoso incident`
-  - `/contoso dashboard`
-
-- **Private user-to-agent interaction**: Slash commands can also initiate a private, one-turn interaction with a bot or agent. In this model, the user enters a command (and optional text) in the compose box, and the response is delivered privately rather than posted to the current chat or channel—making it ideal for drafting, lookups, and personal productivity tasks. For example:
-
-  - `/contoso incident summarize the last 24 hours and suggest next steps`
-  - `/contoso create-task fix login issue for mobile users`
-
-To support natural-language prompts (for example, /contoso create-task fix login issue), developers must explicitly opt in—so apps that only want to support fixed commands can do so without enabling free-form prompting.
-
-- **Message extension actions as slash commands**: Action-type message extensions can also surface as slash commands. When a user selects the command from the / menu, Teams opens the associated modal (task module) or dialog so the user can complete the action with guided inputs, validation, and a consistent UI flow. For example, `./create task` (opens a task creation dialog)
-
-<!--
-- **App-defined slash command**: You can explicitly define the slash commands their app supports. These commands appear in the slash command menu when users type `/` in the compose box. For example:
-
-  - `/contoso create-task`
-  - `/contoso incident`
-  - `/contoso dashboard`
-
-- **Private user-to-agent interaction**: With slash commands, users can initiate a private, one turn interaction with a bot or agent. For example:
-
-- `/contoso hello`
-- `/contoso draft an email`
-
-    Developers must explicitly opt in to support natural language prompts through slash commands.
-
-- **Message extension action**: Action type message extensions can surface as slash commands. Selecting the command opens the corresponding modal or dialog to complete the action. For example, `/create task`.
--->
-
-> [!NOTE]
-> Search type message extensions aren’t exposed as slash commands. Users can access them through the message extension flyout instead.
-
-[WIP: Add details and scenarios/examples]
+Teams supports agent-specific slash commands, private agent-to-user interaction, and slash commands for message extension actions. For more information, see [supported scenarios for slash commands](#supported-scenarios-for-slash-commands).
 
 ## User experience
 
-Slash command responses are private, one to one interactions between a user and an agent or bot. The responses are visible only to the initiating user by default to maintain focus, reduce noise, and enable personalized interactions.
+Slash command responses are one-to-one between the initiating user and the agent or bot. Only the initiating user can see the response, helping maintain focus, reduce noise, and enable personalised interactions.
 
-You can control response visibility through bot or agent logic and can selectively make responses public to support collaboration or business needs. Enable the agent to selectively surface certain responses to a channel or group chat when the information is relevant to a broader audience. Visibility decisions are intentional developer driven when public responses add value.
+You control visibility through agent or bot logic and can selectively share responses to a channel or group chat when it benefits collaboration. Public responses should be an intentional, developer-driven choice when broader visibility adds value.
 
 ### Agent response flows with slash commands - user scenarios
 
@@ -137,6 +98,30 @@ Well-designed slash commands make an agent or a bot easier to discover, faster t
 - **Consistency**: A stable command name reduces ambiguity versus purely open-ended prompts.
 - **Permission-aware actions**: Commands can map to well-defined operations with clear scopes and guardrails.
 - **Great UX in busy chats**: Commands can trigger private or compact responses when appropriate.
+
+## Supported scenarios for slash commands
+
+Apps and agents can participate in slash commanding in the following ways:
+
+- **App-defined slash commands**: Agents and apps can publish a curated set of slash commands so users can discover and run common actions without leaving the compose box. You can explicitly declare the commands your app supports, and Teams shows them in the slash command picker when a user types `/`. This approach keeps the menu focused and avoids automatically exposing every possible capability. For example:
+
+  - `/contoso create-task`
+  - `/contoso incident`
+  - `/contoso dashboard`
+
+- **Private user-to-agent interaction**: Slash commands can also initiate a private, one-turn interaction with a bot or agent. In this model, the user enters a command (and optional text) in the compose box, and the response is delivered privately rather than posted to the current chat or channel—making it ideal for drafting, lookups, and personal productivity tasks. For example:
+
+  - `/contoso incident summarize the last 24 hours and suggest next steps`
+  - `/contoso create-task fix login issue for mobile users`
+
+  To support natural-language prompts (for example, `/contoso create-task fix login issue`), developers must explicitly opt in—so apps that only want to support fixed commands can do so without enabling free-form prompting.
+
+- **Message extension actions as slash commands**: Action-type message extensions can also surface as slash commands. When a user selects the command from the `/` menu, Teams opens the associated modal (task module) or dialog so the user can complete the action with guided inputs, validation, and a consistent UI flow. For example, `./create task` (opens a task creation dialog)
+
+> [!NOTE]
+> Search type message extensions aren’t exposed as slash commands. Users can access them through the message extension flyout instead.
+
+[WIP: Add details and scenarios/examples]
 
 ## Slash commands developer experience
 
