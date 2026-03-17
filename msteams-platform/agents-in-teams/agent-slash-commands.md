@@ -23,7 +23,7 @@ Slash commands are a lightweight way to invoke an agent's or bot's capabilities 
 
 ## What are slash commands
 
-A slash command is usually a command name plus optional parameters such as `/summarize last 20 messages` or `/draft status update for Project Contoso` can get reliable outcomes with minimal typing. Users can type a short command directly in the message compose box to trigger an action immediately. When a user types `/`, Teams shows a menu of available commands from built-in features, workflows, and installed or available agents or apps.
+A slash command is a short command name with optional parameters, for example, `/summarize last 20 messages` or `/draft status update for Project Contoso`. Users type commands directly in the message compose box to trigger an action with minimal typing. When a user types /, Teams shows a menu of available commands from built-in features, workflows, and installed or available agents or apps.
 
 [WIP: Add infographic for showing UX]
 
@@ -103,7 +103,10 @@ Well-designed slash commands make an agent or a bot easier to discover, faster t
 
 ## Slash commands developer experience
 
-You can enable slash commands for your agent or bot by opting in through the Teams app manifest. You can choose to activate <`/app‑name`> only when necessary and to provide a tailored selection of commands ideal for slash usage.
+You can enable slash commands your agents, bots, or message extension apps. Enabling slash commands typically involves two steps:
+
+- [Update your Teams app manifest and declare supported commands](#manifest-updates-for-slash-commands): You can enable slash commands for your agent or bot by opting in through the Teams app manifest. You can choose to activate <`/app‑name`> only when necessary and to provide a tailored selection of commands ideal for slash usage.
+- [Implement the command handling in your agent or bot](#enable-slash-commands): Use Teams SDK or REST APIs to configure sending the agent response as a targeted messages to a single user or as public message to the group or channel.
 
 ### Supported scenarios for slash commands
 
