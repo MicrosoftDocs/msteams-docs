@@ -15,8 +15,8 @@ Slash commands are a lightweight way to invoke an agent's or bot's capabilities 
 - [What are slash commands](#what-are-slash-commands)
 - [User experience](#user-experience)
 - [Why use slash commands](#why-use-slash-commands)
-- [Supported scenarios for slash commands](#supported-scenarios-for-slash-commands)
 - **Slash commands developer experience**
+  - [Supported scenarios for slash commands](#supported-scenarios-for-slash-commands)
   - [Manifest updates](#manifest-updates-for-slash-commands)
   - [Enable slash commands](#enable-slash-commands)
   - [Response codes for slash commands](#response-codes-for-slash-commands)
@@ -99,7 +99,13 @@ Well-designed slash commands make an agent or a bot easier to discover, faster t
 - **Permission-aware actions**: Commands can map to well-defined operations with clear scopes and guardrails.
 - **Great UX in busy chats**: Commands can trigger private or compact responses when appropriate.
 
-## Supported scenarios for slash commands
+[WIP: Add details and scenarios/examples]
+
+## Slash commands developer experience
+
+You can enable slash commands for your agent or bot by opting in through the Teams app manifest. You can choose to activate <`/app‑name`> only when necessary and to provide a tailored selection of commands ideal for slash usage.
+
+### Supported scenarios for slash commands
 
 Apps and agents can participate in slash commanding in the following ways:
 
@@ -120,12 +126,6 @@ Apps and agents can participate in slash commanding in the following ways:
 
 > [!NOTE]
 > Search type message extensions aren’t exposed as slash commands. Users can access them through the message extension flyout instead.
-
-[WIP: Add details and scenarios/examples]
-
-## Slash commands developer experience
-
-You can enable slash commands for your agent or bot by opting in through the Teams app manifest. You can choose to activate <`/app‑name`> only when necessary and to provide a tailored selection of commands ideal for slash usage.
 
 ### Manifest updates for slash commands
 
