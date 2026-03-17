@@ -23,7 +23,7 @@ Slash commands are a lightweight way to invoke an agent's or bot's capabilities 
 
 ## What are slash commands
 
-A slash command is usually a command name plus optional parameters—such as `/summarize last 20 messages`or `/draft status update for Project Contoso` can get reliable outcomes with minimal typing.  Users can type a short command directly in the message compose box to trigger an action immediately. When a user types /, Teams shows a menu of available commands from built-in features, workflows, and installed or available agents or apps.
+A slash command is usually a command name plus optional parameters—such as `/summarize last 20 messages` or `/draft status update for Project Contoso` can get reliable outcomes with minimal typing.  Users can type a short command directly in the message compose box to trigger an action immediately. When a user types /, Teams shows a menu of available commands from built-in features, workflows, and installed or available agents or apps.
 
 [WIP: Add infographic for showing UX]
 
@@ -141,7 +141,7 @@ This opt-in allows your agent or bot to be invoked from the compose box using <`
 
 - **Support agent-specific commands without a command list**: If you don’t publish a list of commands, users can still invoke your agent or bot via <`/agent-name`> and provide free-form input (depending on your agent's or bot's capabilities).
 
-    Use the following example to confgure the app manifest for supporting slash commands without declaring any commands:
+    Use the following example to configure the app manifest for supporting slash commands without declaring any commands:
 
     ```json
     {
@@ -169,7 +169,7 @@ This opt-in allows your agent or bot to be invoked from the compose box using <`
 
     # [Scenario 1](#tab/sc1)
 
-      Use the following example to confgure the app manifest for supporting an agent or a bot that offers separate for @mention and slash triggers.
+      Use the following example to configure the app manifest for supporting an agent or a bot that offers separate for @mention and slash triggers.
 
     ```json
     {
@@ -202,7 +202,7 @@ This opt-in allows your agent or bot to be invoked from the compose box using <`
 
     # [Scenario 2](#tab/sc2)
 
-      Use the following example to confgure the app manifest for supporting an agent or a bot that makes the same commands available in both @mention and slash triggers.
+      Use the following example to configure the app manifest for supporting an agent or a bot that makes the same commands available in both @mention and slash triggers.
 
     ```json
     {
@@ -228,7 +228,7 @@ This opt-in allows your agent or bot to be invoked from the compose box using <`
 
     # [Scenario 3](#tab/sc3)
 
-      Use the following example to confgure the app manifest for supporting an agent or a message extension with commands that are also available via slash commands using the new `triggers` property.
+      Use the following example to configure the app manifest for supporting an agent or a message extension with commands that are also available via slash commands using the new `triggers` property.
 
       > [!NOTE]
       > `summarizeCommand` omits `triggers`, so it is **not** surfaced in the slash list (unlike `commandLists`, where absent `triggers` defaults to `["mention"]`).
@@ -272,7 +272,7 @@ This opt-in allows your agent or bot to be invoked from the compose box using <`
 
 ### Enable slash commands
 
-When a user sends a message to the agent or bot, the Apx adds the `isTargeted` property to the `Recipient` object within `Activity` object of message event payload. You can enable the agent or bot to send a targeted message to the same user or a public message to the group chat or channel. You can also enable the agent or bot to delete a message that it had previously sent.
+When a user sends a message to the agent or bot, the APX adds the `isTargeted` property to the `Recipient` object within `Activity` object of message event payload. You can enable the agent or bot to send a targeted message to the same user or a public message to the group chat or channel. You can also enable the agent or bot to delete a message that it had previously sent.
 
 #### Send an agent response
 
