@@ -153,7 +153,7 @@ To enable slash commands, update your app manifest to opt in to targeted messagi
 [WIP: Add Manifest code snippet]
 
 - Enable the supported targeted messages flag: This opt-in allows your agent to be invoked from the compose box using <`/agent-name`>, and supports the private targeted-message response flow.
-- Option A: Support </`agent-name`> without a command list: If you don’t publish a list of commands, users can still invoke your app via <`/agent-name`> and provide free-form input (depending on your agent's capabilities).
+- **Option A**: Support </`agent-name`> without a command list: If you don’t publish a list of commands, users can still invoke your app via <`/agent-name`> and provide free-form input (depending on your agent's capabilities).
 
 Use the following example to confgure the app manifest for supporting slash commands without declaring any commands:
 
@@ -169,9 +169,40 @@ Use the following example to confgure the app manifest for supporting slash comm
 }
 ```
 
-- Option B: Provide an explicit command list: Define a curated set of commands (for example, help, create, design) that appear in the slash menu with a short description. Existing agent commands can be reused, or you can introduce new commands optimized for slash usage.
+**Provide an explicit command list**: Define a curated set of commands (for example, help, create, design) that appear in the slash menu with a short description. Existing agent commands can be reused, or you can introduce new commands optimized for slash usage.
 
-Notes -
+- App Scenario 1: Bot with separate mention and slash command lists
+
+  Use the following example to confgure the app manifest for supporting an agent or a bot that has different commands for @mention and slash triggers.
+
+```json
+{
+    "bots": [
+        {
+            "botId": "{{BOT_ID}}",
+            "scopes": ["personal", "team", "groupChat"],
+            "supportsTargetedMessages": true,
+            "commandLists": [
+                {
+                    "scopes": ["personal", "team", "groupChat"],
+                    "triggers": ["mention"],
+                    "commands": [
+                        { "title": "Summarize", "description": "Summarize a document" },
+                        { "title": "Draft", "description": "Draft a document" }
+                    ]
+                },
+                {
+                    "scopes": ["team", "groupChat"],
+                    "triggers": ["slash"],
+                    "commands": [
+                        { "title": "Review", "description": "Review a document" }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+```
 
 **Requirements**: After you enable slash commands, each command you want to expose as a slash command must be explicitly declared in the manifest (command name plus user-facing description). List the actual commands (for example, create), not just broad categories of commands. Once declared, a command like create becomes invokable as <`/create`> (or <`/app-name create`>, depending on the client experience).
 
