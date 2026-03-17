@@ -6,7 +6,7 @@ ms.topic: conceptual
 ms.author: vikasalmal
 ms.localizationpriority: high
 ms.owner: vichug
-ms.date: 03/02/2026
+ms.date: 03/16/2026
 ---
 
 # Build tabs for meeting
@@ -274,11 +274,11 @@ The following table provides the user types and lists the features that each use
 
 |Sample name | Description | .NET | Node.js | Manifest|
 |----------------|--------------------------------------------------------|--------------|----------------|----------------|
-| Meeting app |The Meeting Token Generator app for Microsoft Teams allows participants to request and manage interaction tokens, ensuring equitable participation during meetings like scrums and Q&A sessions. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp/demo-manifest/meetings-token-app.zip)|
+| Meeting app |The Meeting Token Generator app for Microsoft Teams allows participants to request and manage interaction tokens, ensuring equitable participation during meetings like scrums and Q&A sessions. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-token-app/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-token-app/csharp/demo-manifest/meetings-token-app.zip)|
 | Meeting stage sample | This sample app demonstrates how to enable and configure applications for Microsoft Teams meetings, allowing users to interact with a shared meeting stage using the Live Share SDK. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-stage-view/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/meetings-stage-view/csharp/demo-manifest/Meeting-stage-view.zip) |
-| Meeting side panel | This Microsoft Teams sample app demonstrates how to use the Live Share SDK to implement a side panel that allows for real-time data sharing during meetings. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs) | NA |
+| Meeting side panel | This Microsoft Teams sample app demonstrates how to use the Live Share SDK to implement a side panel that allows for real-time data sharing during meetings. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-sidepanel/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-sidepanel/nodejs) | NA |
 | In-meeting notification | This sample demonstrates how a bot can receive real-time updates for meeting events and participant activities within Microsoft Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp/demo-manifest/Meetings-Events.zip)|
-| In-meeting document signing | This Microsoft Teams sample app enables users to review and sign documents in real time during meetings, facilitating seamless collaboration. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA | NA |
+| In-meeting document signing | This Microsoft Teams sample app enables users to review and sign documents in real time during meetings, facilitating seamless collaboration. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/TeamsJS/meetings-share-to-stage-signing/csharp) | NA | NA |
 | Meeting tabs | This app allows muting/unmuting Teams meeting audio and displays stage view in the meeting side panel. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meeting-tabs/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meeting-tabs/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/meeting-tabs/csharp/demo-manifest/meeting-tabs.zip) |
 
 > [!NOTE]
