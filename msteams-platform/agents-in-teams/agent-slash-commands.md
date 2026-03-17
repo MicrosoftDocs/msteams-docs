@@ -171,6 +171,8 @@ Use the following example to confgure the app manifest for supporting slash comm
 
 **Provide an explicit command list**: Define a curated set of commands (for example, help, create, design) that appear in the slash menu with a short description. Existing agent commands can be reused, or you can introduce new commands optimized for slash usage.
 
+After you enable slash commands, each command you want to expose as a slash command must be explicitly declared in the manifest (command name plus user-facing description). List the actual commands (for example, create), not just broad categories of commands. Once declared, a command like create becomes invokable as <`/create`> (or <`/app-name create`>, depending on the client experience).
+
 - App Scenario 1: Bot with separate mention and slash command lists
 
   Use the following example to confgure the app manifest for supporting an agent or a bot that has different commands for @mention and slash triggers.
@@ -204,7 +206,75 @@ Use the following example to confgure the app manifest for supporting slash comm
 }
 ```
 
-**Requirements**: After you enable slash commands, each command you want to expose as a slash command must be explicitly declared in the manifest (command name plus user-facing description). List the actual commands (for example, create), not just broad categories of commands. Once declared, a command like create becomes invokable as <`/create`> (or <`/app-name create`>, depending on the client experience).
+- App Scenario 2: Bot with commands available in both mention and slash triggers.
+
+  Use the following example to confgure the app manifest for supporting an agent or a bot that makes the same commands available in both @mention and slash triggers.
+
+```json
+{
+    "bots": [
+        {
+            "botId": "{{BOT_ID}}",
+            "scopes": ["personal", "team", "groupChat"],
+            "supportsTargetedMessages": true,
+            "commandLists": [
+                {
+                    "scopes": ["team", "groupChat"],
+                    "triggers": ["mention", "slash"],
+                    "commands": [
+                        { "title": "Ask privately", "description": "Send a private question to the bot" },
+                        { "title": "Help", "description": "Get help using this bot" }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+```
+
+- App Scenario 5: Message extension opted into slash commands.
+
+  Use the following example to confgure the app manifest for supporting an agent or a message extension with commands that are also available via slash commands using the new `triggers` property.
+
+  > [!NOTE]
+  > `summarizeCommand` omits `triggers`, so it is **not** surfaced in the slash list (unlike `commandLists`, where absent `triggers` defaults to `["mention"]`).
+
+### Sample JSON
+
+```json
+{
+    "composeExtensions": [
+        {
+            "botId": "{{BOT_ID}}",
+            "commands": [
+                {
+                    "id": "summarizeCommand",
+                    "type": "action",
+                    "title": "Summarize",
+                    "description": "Summarize a document",
+                    "context": ["compose", "commandBox"]
+                },
+                {
+                    "id": "draftCommand",
+                    "type": "action",
+                    "title": "Draft",
+                    "description": "Draft a document",
+                    "context": ["compose", "commandBox"],
+                    "triggers": ["slash"]
+                },
+                {
+                    "id": "reviewCommand",
+                    "type": "action",
+                    "title": "Review",
+                    "description": "Review a document",
+                    "context": ["compose", "commandBox"],
+                    "triggers": ["slash"]
+                }
+            ]
+        }
+    ]
+}
+```
 
 ### Enable slash commands
 
