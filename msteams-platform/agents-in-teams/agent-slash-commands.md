@@ -23,14 +23,14 @@ Slash commands are a lightweight way to invoke an agent's or bot's capabilities 
 
 ## What are slash commands
 
-A slash command is usually a command name plus optional parameters—such as `/summarize last 20 messages`or `/draft status update for Project Contoso` can get reliable outcomes with minimal typing.  Users can type a short command directly in the message compose box to trigger an action immediately. When a user types /, Teams shows a menu of available commands from built-in features, workflows, and installed or available apps.
+A slash command is usually a command name plus optional parameters—such as `/summarize last 20 messages`or `/draft status update for Project Contoso` can get reliable outcomes with minimal typing.  Users can type a short command directly in the message compose box to trigger an action immediately. When a user types /, Teams shows a menu of available commands from built-in features, workflows, and installed or available agents or apps.
 
 [WIP: Add infographic for showing UX]
 
-Use slash commands can be used to:
+Use slash commands to:
 
-- Trigger a specific app action (for example, create a task, open a form, or start a workflow).
-- Start a private, single turn interaction with a bot or agent.
+- Trigger a specific agent or app action (for example, create a task, open a form, or start a workflow).
+- Start a private, single turn interaction with an agent or app.
 - Provide a faster alternative to verbose @mentions or multi-step menus.
 
 Teams supports agent-specific slash commands, private agent-to-user interaction, and slash commands for message extension actions. For more information, see [supported scenarios for slash commands](#supported-scenarios-for-slash-commands).
@@ -109,13 +109,13 @@ You can enable slash commands for your agent or bot by opting in through the Tea
 
 Apps and agents can participate in slash commanding in the following ways:
 
-- **App-defined slash commands**: Agents and apps can publish a curated set of slash commands so users can discover and run common actions without leaving the compose box. You can explicitly declare the commands your app supports, and Teams shows them in the slash command picker when a user types `/`. This approach keeps the menu focused and avoids automatically exposing every possible capability. For example:
+- **App-defined slash commands**: Agents and apps can publish a curated set of slash commands so users can discover and run common actions without leaving the compose box. You can explicitly declare the commands your agent or app supports, and Teams shows them in the slash command picker when a user types `/`. This approach keeps the menu focused and avoids automatically exposing every possible capability. For example:
 
   - `/contoso create-task`
   - `/contoso incident`
   - `/contoso dashboard`
 
-- **Private user-to-agent interaction**: Slash commands can also initiate a private, one-turn interaction with a bot or agent. In this model, the user enters a command (and optional text) in the compose box, and the response is delivered privately rather than posted to the current chat or channel—making it ideal for drafting, lookups, and personal productivity tasks. For example:
+- **Private user-to-agent interaction**: Slash commands can also initiate a private, one-turn interaction with agent or app. In this model, the user enters a command (and optional text) in the compose box, and the response is delivered privately rather than posted to the current chat or channel—making it ideal for drafting, lookups, and personal productivity tasks. For example:
 
   - `/contoso incident summarize the last 24 hours and suggest next steps`
   - `/contoso create-task fix login issue for mobile users`
@@ -131,14 +131,13 @@ Apps and agents can participate in slash commanding in the following ways:
 
 To enable slash commands, update your app manifest to opt in to targeted messaging and (optionally) declare the specific commands you want to expose in the compose box. In the app manifest, you must:
 
-- Declare whether the app supports slash commands.
-- List the specific slash commands the app exposes.
-- Indicate whether the app supports natural language prompts when invoked via slash commands.
+- Declare whether the agent or bot supports slash commands.
+- List the specific slash commands the agent or bot exposes.
+- Indicate whether the agent or bot supports natural language prompts when invoked via slash commands.
 
-[WIP: Add Manifest code snippet]
+This opt-in allows your agent to be invoked from the compose box using <`/agent-name`>, and supports the private targeted-message response flow.
 
-- Enable the supported targeted messages flag: This opt-in allows your agent to be invoked from the compose box using <`/agent-name`>, and supports the private targeted-message response flow.
-- **Option A**: Support </`agent-name`> without a command list: If you don’t publish a list of commands, users can still invoke your app via <`/agent-name`> and provide free-form input (depending on your agent's capabilities).
+- **Support agent-specific commands without a command list**: If you don’t publish a list of commands, users can still invoke your agent or bot via <`/agent-name`> and provide free-form input (depending on your agent's capabilities).
 
 Use the following example to confgure the app manifest for supporting slash commands without declaring any commands:
 
@@ -158,7 +157,7 @@ Use the following example to confgure the app manifest for supporting slash comm
 
 After you enable slash commands, each command you want to expose as a slash command must be explicitly declared in the manifest (command name plus user-facing description). List the actual commands (for example, create), not just broad categories of commands. Once declared, a command like create becomes invokable as <`/create`> (or <`/app-name create`>, depending on the client experience).
 
-- App Scenario 1: Bot with separate mention and slash command lists
+- Scenario 1: Agent with separate @mention and slash command lists
 
   Use the following example to confgure the app manifest for supporting an agent or a bot that has different commands for @mention and slash triggers.
 
@@ -191,7 +190,7 @@ After you enable slash commands, each command you want to expose as a slash comm
 }
 ```
 
-- App Scenario 2: Bot with commands available in both mention and slash triggers.
+- Scenario 2: Agent or bot with commands available in both mention and slash triggers.
 
   Use the following example to confgure the app manifest for supporting an agent or a bot that makes the same commands available in both @mention and slash triggers.
 
@@ -217,7 +216,7 @@ After you enable slash commands, each command you want to expose as a slash comm
 }
 ```
 
-- App Scenario 5: Message extension opted into slash commands.
+- Scenario 5: Message extension opted into slash commands.
 
   Use the following example to confgure the app manifest for supporting an agent or a message extension with commands that are also available via slash commands using the new `triggers` property.
 
