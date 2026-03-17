@@ -165,108 +165,108 @@ This opt-in allows your agent to be invoked from the compose box using <`/agent-
 
     Use the following examples to declare slash commands in the app manifest.
 
-# [Scenario 1](#tab/sc1)
+    # [Scenario 1](#tab/sc1)
 
-  Use the following example to confgure the app manifest for supporting an agent or a bot that offers separate for @mention and slash triggers.
+      Use the following example to confgure the app manifest for supporting an agent or a bot that offers separate for @mention and slash triggers.
 
-```json
-{
-    "bots": [
-        {
-            "botId": "{{BOT_ID}}",
-            "scopes": ["personal", "team", "groupChat"],
-            "supportsTargetedMessages": true,
-            "commandLists": [
-                {
-                    "scopes": ["personal", "team", "groupChat"],
-                    "triggers": ["mention"],
-                    "commands": [
-                        { "title": "Summarize", "description": "Summarize a document" },
-                        { "title": "Draft", "description": "Draft a document" }
-                    ]
-                },
-                {
-                    "scopes": ["team", "groupChat"],
-                    "triggers": ["slash"],
-                    "commands": [
-                        { "title": "Review", "description": "Review a document" }
-                    ]
-                }
-            ]
-        }
-    ]
-}
-```
+    ```json
+    {
+        "bots": [
+            {
+                "botId": "{{BOT_ID}}",
+                "scopes": ["personal", "team", "groupChat"],
+                "supportsTargetedMessages": true,
+                "commandLists": [
+                    {
+                        "scopes": ["personal", "team", "groupChat"],
+                        "triggers": ["mention"],
+                        "commands": [
+                            { "title": "Summarize", "description": "Summarize a document" },
+                            { "title": "Draft", "description": "Draft a document" }
+                        ]
+                    },
+                    {
+                        "scopes": ["team", "groupChat"],
+                        "triggers": ["slash"],
+                        "commands": [
+                            { "title": "Review", "description": "Review a document" }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+    ```
 
-# [Scenario 2](#tab/sc2)
+    # [Scenario 2](#tab/sc2)
 
-  Use the following example to confgure the app manifest for supporting an agent or a bot that makes the same commands available in both @mention and slash triggers.
+      Use the following example to confgure the app manifest for supporting an agent or a bot that makes the same commands available in both @mention and slash triggers.
 
-```json
-{
-    "bots": [
-        {
-            "botId": "{{BOT_ID}}",
-            "scopes": ["personal", "team", "groupChat"],
-            "supportsTargetedMessages": true,
-            "commandLists": [
-                {
-                    "scopes": ["team", "groupChat"],
-                    "triggers": ["mention", "slash"],
-                    "commands": [
-                        { "title": "Ask privately", "description": "Send a private question to the bot" },
-                        { "title": "Help", "description": "Get help using this bot" }
-                    ]
-                }
-            ]
-        }
-    ]
-}
-```
+    ```json
+    {
+        "bots": [
+            {
+                "botId": "{{BOT_ID}}",
+                "scopes": ["personal", "team", "groupChat"],
+                "supportsTargetedMessages": true,
+                "commandLists": [
+                    {
+                        "scopes": ["team", "groupChat"],
+                        "triggers": ["mention", "slash"],
+                        "commands": [
+                            { "title": "Ask privately", "description": "Send a private question to the bot" },
+                            { "title": "Help", "description": "Get help using this bot" }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+    ```
 
-# [Scenario 3](#tab/sc3)
+    # [Scenario 3](#tab/sc3)
 
-  Use the following example to confgure the app manifest for supporting an agent or a message extension with commands that are also available via slash commands using the new `triggers` property.
+      Use the following example to confgure the app manifest for supporting an agent or a message extension with commands that are also available via slash commands using the new `triggers` property.
 
-  > [!NOTE]
-  > `summarizeCommand` omits `triggers`, so it is **not** surfaced in the slash list (unlike `commandLists`, where absent `triggers` defaults to `["mention"]`).
+      > [!NOTE]
+      > `summarizeCommand` omits `triggers`, so it is **not** surfaced in the slash list (unlike `commandLists`, where absent `triggers` defaults to `["mention"]`).
 
-```json
-{
-    "composeExtensions": [
-        {
-            "botId": "{{BOT_ID}}",
-            "commands": [
-                {
-                    "id": "summarizeCommand",
-                    "type": "action",
-                    "title": "Summarize",
-                    "description": "Summarize a document",
-                    "context": ["compose", "commandBox"]
-                },
-                {
-                    "id": "draftCommand",
-                    "type": "action",
-                    "title": "Draft",
-                    "description": "Draft a document",
-                    "context": ["compose", "commandBox"],
-                    "triggers": ["slash"]
-                },
-                {
-                    "id": "reviewCommand",
-                    "type": "action",
-                    "title": "Review",
-                    "description": "Review a document",
-                    "context": ["compose", "commandBox"],
-                    "triggers": ["slash"]
-                }
-            ]
-        }
-    ]
-}
-```
+    ```json
+    {
+        "composeExtensions": [
+            {
+                "botId": "{{BOT_ID}}",
+                "commands": [
+                    {
+                        "id": "summarizeCommand",
+                        "type": "action",
+                        "title": "Summarize",
+                        "description": "Summarize a document",
+                        "context": ["compose", "commandBox"]
+                    },
+                    {
+                        "id": "draftCommand",
+                        "type": "action",
+                        "title": "Draft",
+                        "description": "Draft a document",
+                        "context": ["compose", "commandBox"],
+                        "triggers": ["slash"]
+                    },
+                    {
+                        "id": "reviewCommand",
+                        "type": "action",
+                        "title": "Review",
+                        "description": "Review a document",
+                        "context": ["compose", "commandBox"],
+                        "triggers": ["slash"]
+                    }
+                ]
+            }
+        ]
+    }
+    ```
 
----
+    ---
 
 ### Enable slash commands
 
@@ -276,36 +276,40 @@ When a user sends a message to the agent, the Apx adds the `isTargeted` property
 
 Use the following code snippets to enable your agent to respond to a slash command based on supported scenarios:
 
-- **Private message to the user who initiated the slash command**:
+- **Private message to a user**: You can enable the agent to send a targeted response to the user who initiated the slash command or to a different user in the channel or group. Use one of the following scenarios to enable the agent or bot to send a targeted message to a single user.
 
-```typescript
+  # [Response to same user](#tab/tm1)
 
-app.on('message', async ({ send, activity }) => {
-  if(activity.Recipient.isTargeted) {
-    send(new MessageActivity('Reactive TM').withRecipient(activity.From, isTargeted: true))
-  }
-});
-```
+    ```typescript
+    
+    app.on('message', async ({ send, activity }) => {
+      if(activity.Recipient.isTargeted) {
+        send(new MessageActivity('Reactive TM').withRecipient(activity.From, isTargeted: true))
+      }
+    });
+    ```
 
-- **Public message to the channel or group where the user initiated the slash command**:
+  # [Response to different user](#tab/tm2)
 
-```typescript
+    ```typescript
+    
+    app.on('message', async ({ send, activity }) => {
+      if(activity.Recipient.isTargeted) {
+        send(new MessageActivity('Reactive TM').withRecipient(new Account {Id: <userMRI>,Name: <user Name>, Role: User}, isTargeted: true))
+      }
+    });
+    ```
 
-app.on('message', async ({ send, activity }) => {
-  if(activity.Recipient.isTargeted) {
-    send(new MessageActivity('Reactive TM').withRecipient(new Account {Id: <userMRI>,Name: <user Name>, Role: User}, isTargeted: true))
-  }
-});
-```
+    ---
 
-- **Reactive message (normal message)**:
+- **Public response by the agent**: You can enable the agent or bot to send a public response in the group or channel if the response is relevant to all members.
 
-```typescript
-
-app.on('message', async ({ send, activity }) => {
-  send(new MessageActivity('Normal msg'))  
-});
-```
+  ```typescript
+  
+  app.on('message', async ({ send, activity }) => {
+    send(new MessageActivity('Normal msg'))  
+  });
+  ```
 
 #### Delete an agent response
 
