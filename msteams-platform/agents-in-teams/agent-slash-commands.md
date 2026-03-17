@@ -232,7 +232,7 @@ This opt-in allows your agent or bot to be invoked from the compose box using <`
 
       > [!NOTE]
       > - `summarizeCommand` omits `triggers`, so it is **not** surfaced in the slash list (unlike `commandLists`, where absent `triggers` defaults to `["mention"]`).
-      > - You can also configure the app manifest to support slash commands for both bot and message extension in your agent by using the code snippet examples from scenarios 1 and 2 and scenario 3.
+      > - You can configure the app manifest to enable slash commands for both the bot and message extension by combining the code examples from scenarios 1 or 2 with scenario 3.
 
     ```json
     {
