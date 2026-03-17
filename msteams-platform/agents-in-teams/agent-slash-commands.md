@@ -13,9 +13,11 @@ Slash commands are a lightweight way to invoke an agent's or bot's capabilities 
 **Key points**
 
 - [What are slash commands](#what-are-slash-commands)
-- [Why use slash commands](#why-use-slash-commands)
 - [Supported slash command scenarios](#supported-slash-command-scenarios)
-- [Visibility of agent responses](#visibility-of-agent-responses)
+- [Why use slash commands](#why-use-slash-commands)
+- [User experience](#user-experience)
+- [Slash commands developer experience](#slash-commands-developer-experience)
+- [Manifest updates](#manifest-updates-for-slash-commands)
 - [Enable slash commands](#enable-slash-commands)
 - [Response codes for slash commands](#response-codes-for-slash-commands)
 
@@ -31,7 +33,7 @@ For apps and agents, slash commands can be used to:
 - Start a private, single turn interaction with a bot or agent.
 - Provide a faster alternative to verbose @mentions or multi-step menus.
 
-### Supported slash command scenarios
+### Supported scenarios for slash commands
 
 - **App-defined slash command**: You can explicitly define the slash commands their app supports. These commands appear in the slash command menu when users type `/` in the compose box. For example:
 
@@ -121,7 +123,7 @@ Well-designed slash commands make an agent or a bot easier to discover, faster t
 
 You can enable slash commands for your agent or bot by opting in through the Teams app manifest. You can choose to activate <`/app‑name`> only when necessary and to provide a tailored selection of commands ideal for slash usage.
 
-### Manifest updates required for slash commands
+### Manifest updates for slash commands
 
 To enable slash commands, update your app manifest to opt in to targeted messaging and (optionally) declare the specific commands you want to expose in the compose box. In the app manifest, you must:
 
