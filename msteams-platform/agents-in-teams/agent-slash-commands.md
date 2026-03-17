@@ -14,8 +14,8 @@ Slash commands are a lightweight way to invoke an agent's or bot's capabilities 
 
 - [What are slash commands](#what-are-slash-commands)
 - [Supported scenarios for slash commands](#supported-scenarios-for-slash-commands)
-- [Why use slash commands](#why-use-slash-commands)
 - [User experience](#user-experience)
+- [Why use slash commands](#why-use-slash-commands)
 - [Slash commands developer experience](#slash-commands-developer-experience)
 - [Manifest updates](#manifest-updates-for-slash-commands)
 - [Enable slash commands](#enable-slash-commands)
