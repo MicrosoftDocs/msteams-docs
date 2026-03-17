@@ -231,7 +231,8 @@ This opt-in allows your agent or bot to be invoked from the compose box using <`
       Use the following example to configure the app manifest for supporting an agent or a message extension with commands that are also available via slash commands using the new `triggers` property.
 
       > [!NOTE]
-      > `summarizeCommand` omits `triggers`, so it is **not** surfaced in the slash list (unlike `commandLists`, where absent `triggers` defaults to `["mention"]`).
+      > - `summarizeCommand` omits `triggers`, so it is **not** surfaced in the slash list (unlike `commandLists`, where absent `triggers` defaults to `["mention"]`).
+      > - You can also configure the app manifest to support slash commands for both bot and message extension in your agent by using the code snippet examples from scenarios 1 and 2 and scenario 3.
 
     ```json
     {
@@ -314,6 +315,18 @@ Use the following code snippets to enable your agent or bot to respond to a slas
     send(new MessageActivity('Normal msg'))  
   });
   ```
+
+#### Update an agent response
+
+The agent can edit the original targeted message if needed. The updated message appears only in the intended user’s view.
+
+Use one of the following code snippets to edit targeted message:
+
+```typescript
+// Update
+const updatedMessage = new MessageActivity('This message has been updated!');
+await api.conversations.activities.updateTargeted(conversationId, messageId, updatedMessage);
+```
 
 #### Delete an agent response
 
