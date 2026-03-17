@@ -1,11 +1,11 @@
 ---
 title: Teams Mobile Apps Best Practices
-author: surbhigupta
-ms.author: surbhigupta
+author: vikas
+ms.author: vikasalmal
 description: Learn how to optimize your tab app performance on Teams mobile with best practices such as using service workers and performance audits.
 ms.localizationpriority: high
 ms.topic: conceptual
-ms.date: 11/21/2025
+ms.date: 03/16/2026
 ---
 
 # Best practices for Teams mobile apps
@@ -20,7 +20,7 @@ ms.date: 11/21/2025
 
 ### Sample app
 
-Check out this [sample app](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-support-offline/nodejs) that uses a service worker to cache data and provide offline functionality.
+Check out this [sample app](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-support-offline/nodejs) that uses a service worker to cache data and provide offline functionality.
 
 ## Minimize webpage size
 
