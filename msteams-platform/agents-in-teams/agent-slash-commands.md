@@ -139,25 +139,27 @@ This opt-in allows your agent to be invoked from the compose box using <`/agent-
 
 - **Support agent-specific commands without a command list**: If you don’t publish a list of commands, users can still invoke your agent or bot via <`/agent-name`> and provide free-form input (depending on your agent's capabilities).
 
-Use the following example to confgure the app manifest for supporting slash commands without declaring any commands:
+    Use the following example to confgure the app manifest for supporting slash commands without declaring any commands:
 
-```json
-{
-    "bots": [
-        {
-            "botId": "{{BOT_ID}}",
-            "scopes": ["personal", "team", "groupChat"],
-            "supportsTargetedMessages": true
-        }
-    ]
-}
-```
+    ```json
+    {
+        "bots": [
+            {
+                "botId": "{{BOT_ID}}",
+                "scopes": ["personal", "team", "groupChat"],
+                "supportsTargetedMessages": true
+            }
+        ]
+    }
+    ```
 
-**Provide an explicit command list**: Define a curated set of commands (for example, help, create, design) that appear in the slash menu with a short description. Existing agent commands can be reused, or you can introduce new commands optimized for slash usage.
+- **Provide an explicit command list**: Define a curated set of commands (for example, help, create, design) that appear in the slash menu with a short description. Existing agent commands can be reused, or you can introduce new commands optimized for slash usage.
 
 After you enable slash commands, each command you want to expose as a slash command must be explicitly declared in the manifest (command name plus user-facing description). List the actual commands (for example, create), not just broad categories of commands. Once declared, a command like create becomes invokable as <`/create`> (or <`/app-name create`>, depending on the client experience).
 
 - Scenario 1: Agent with separate @mention and slash command lists
+- Scenario 2: Agent or bot with commands available in both mention and slash triggers.
+- Scenario 3: Message extension opted into slash commands.
 
   Use the following example to confgure the app manifest for supporting an agent or a bot that has different commands for @mention and slash triggers.
 
@@ -216,14 +218,12 @@ After you enable slash commands, each command you want to expose as a slash comm
 }
 ```
 
-- Scenario 5: Message extension opted into slash commands.
+- Scenario 3: Message extension opted into slash commands.
 
   Use the following example to confgure the app manifest for supporting an agent or a message extension with commands that are also available via slash commands using the new `triggers` property.
 
   > [!NOTE]
   > `summarizeCommand` omits `triggers`, so it is **not** surfaced in the slash list (unlike `commandLists`, where absent `triggers` defaults to `["mention"]`).
-
-### Sample JSON
 
 ```json
 {
@@ -261,8 +261,6 @@ After you enable slash commands, each command you want to expose as a slash comm
 ```
 
 ### Enable slash commands
-
-[WIP: Add code snippets]
 
 When a user sends a message to the agent, the Apx adds the `isTargeted` property to the `Recipient` object within `Activity` object of message event payload. You can enable the agent to send a targeted message to the same user or a public message to the group chat or channel. You can also enable the agent to delete a message that it had previously sent.
 
