@@ -157,13 +157,13 @@ This opt-in allows your agent or bot to be invoked from the compose box using <`
 
 - **Provide an explicit command list**: Define a curated set of commands (for example, `/help`, `/create`, `/design`) that appear in the slash menu with a short description. Existing agent or bot commands can be reused, or you can introduce new commands optimized for slash usage.
 
-  After you enable slash commands, each command you want to expose as a slash command must be explicitly declared in the manifest (command name plus user-facing description). List the actual commands and not just broad categories of commands. Once declared, a command becomes invokable, for example create can be invoked as <`/create`> (or <`/app-name create`>, depending on the client experience.
+  After you enable slash commands, each command you want to expose as a slash command must be explicitly declared in the manifest (command name plus user-facing description). List the actual commands and not just broad categories of commands. Once declared, a command becomes invokable, for example create can be invoked as <`/create`> (or <`/app-name create`>, depending on the client experience).
 
   You can declare command list for your agent or bot in one of the following scenarios:
 
   - Scenario 1: Agent or bot with separate @mention and slash command lists
-  - Scenario 2: Agent or bot with commands available in both mention and slash triggers.
-  - Scenario 3: Message extension with slash commands.
+  - Scenario 2: Agent or bot with commands available in both mention and slash triggers
+  - Scenario 3: Message extension with slash commands
 
     Use the following examples to declare slash commands in the app manifest.
 
