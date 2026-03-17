@@ -85,7 +85,7 @@ Slash commands support the following agent-to-user response flows:
 :::row-end:::
 :::row:::
     :::column span:::
-        The initial targeted message containing the user’s prompt expires after 24 hours. This flow enables selective sharing of agent responses when it benefits the group or channel, such as status updates, confirmations, or information intended for shared visibility.
+        The initial targeted message containing the user’s prompt expires after 24 hours. This flow enables selective sharing of agent or bot responses when it benefits the group or channel, such as status updates, confirmations, or information intended for shared visibility.
     :::column-end:::
 :::row-end:::
 
@@ -107,15 +107,15 @@ You can enable slash commands for your agent or bot by opting in through the Tea
 
 ### Supported scenarios for slash commands
 
-Apps and agents can participate in slash commanding in the following ways:
+Agents and bots can participate in slash commanding in the following ways:
 
-- **App-defined slash commands**: Agents and apps can publish a curated set of slash commands so users can discover and run common actions without leaving the compose box. You can explicitly declare the commands your agent or app supports, and Teams shows them in the slash command picker when a user types `/`. This approach keeps the menu focused and avoids automatically exposing every possible capability. For example:
+- **App-defined slash commands**: Agents and bots can publish a curated set of slash commands so users can discover and run common actions without leaving the compose box. You can explicitly declare the commands your agent or bot supports, and Teams shows them in the slash command picker when a user types `/`. This approach keeps the menu focused and avoids automatically exposing every possible capability. For example:
 
   - `/contoso create-task`
   - `/contoso incident`
   - `/contoso dashboard`
 
-- **Private user-to-agent interaction**: Slash commands can also initiate a private, one-turn interaction with agent or app. In this model, the user enters a command (and optional text) in the compose box, and the response is delivered privately rather than posted to the current chat or channel—making it ideal for drafting, lookups, and personal productivity tasks. For example:
+- **Private user-to-agent interaction**: Slash commands can also initiate a private, one-turn interaction with agent or bot. In this model, the user enters a command (and optional text) in the compose box, and the response is delivered privately rather than posted to the current chat or channel—making it ideal for drafting, lookups, and personal productivity tasks. For example:
 
   - `/contoso incident summarize the last 24 hours and suggest next steps`
   - `/contoso create-task fix login issue for mobile users`
@@ -135,11 +135,11 @@ To enable slash commands, update your app manifest to opt in to targeted messagi
 - List the specific slash commands the agent or bot exposes.
 - Indicate whether the agent or bot supports natural language prompts when invoked via slash commands.
 
-This opt-in allows your agent to be invoked from the compose box using <`/agent-name`>, and supports the private targeted-message response flow.
+This opt-in allows your agent or bot to be invoked from the compose box using <`/agent-name`>, and supports the private targeted-message response flow.
 
 [WIP: Add link to Manifest docs]
 
-- **Support agent-specific commands without a command list**: If you don’t publish a list of commands, users can still invoke your agent or bot via <`/agent-name`> and provide free-form input (depending on your agent's capabilities).
+- **Support agent-specific commands without a command list**: If you don’t publish a list of commands, users can still invoke your agent or bot via <`/agent-name`> and provide free-form input (depending on your agent's or bot's capabilities).
 
     Use the following example to confgure the app manifest for supporting slash commands without declaring any commands:
 
@@ -155,15 +155,15 @@ This opt-in allows your agent to be invoked from the compose box using <`/agent-
     }
     ```
 
-- **Provide an explicit command list**: Define a curated set of commands (for example, `/help`, `/create`, `/design`) that appear in the slash menu with a short description. Existing agent commands can be reused, or you can introduce new commands optimized for slash usage.
+- **Provide an explicit command list**: Define a curated set of commands (for example, `/help`, `/create`, `/design`) that appear in the slash menu with a short description. Existing agent or bot commands can be reused, or you can introduce new commands optimized for slash usage.
 
   After you enable slash commands, each command you want to expose as a slash command must be explicitly declared in the manifest (command name plus user-facing description). List the actual commands and not just broad categories of commands. Once declared, a command becomes invokable, for example create can be invoked as <`/create`> (or <`/app-name create`>, depending on the client experience.
 
-  You can declare command list for your agent or app in one of the following scenarios:
+  You can declare command list for your agent or bot in one of the following scenarios:
 
-  - Scenario 1: Agent with separate @mention and slash command lists
+  - Scenario 1: Agent or bot with separate @mention and slash command lists
   - Scenario 2: Agent or bot with commands available in both mention and slash triggers.
-  - Scenario 3: Message extension opted into slash commands.
+  - Scenario 3: Message extension with slash commands.
 
     Use the following examples to declare slash commands in the app manifest.
 
@@ -272,15 +272,15 @@ This opt-in allows your agent to be invoked from the compose box using <`/agent-
 
 ### Enable slash commands
 
-When a user sends a message to the agent, the Apx adds the `isTargeted` property to the `Recipient` object within `Activity` object of message event payload. You can enable the agent to send a targeted message to the same user or a public message to the group chat or channel. You can also enable the agent to delete a message that it had previously sent.
+When a user sends a message to the agent or bot, the Apx adds the `isTargeted` property to the `Recipient` object within `Activity` object of message event payload. You can enable the agent or bot to send a targeted message to the same user or a public message to the group chat or channel. You can also enable the agent or bot to delete a message that it had previously sent.
 
 #### Send an agent response
 
-Use the following code snippets to enable your agent to respond to a slash command based on supported scenarios:
+Use the following code snippets to enable your agent or bot to respond to a slash command based on supported scenarios:
 
 [WIP: Add link to Teams SDK docs]
 
-- **Private message to a user**: You can enable the agent to send a targeted response to the user who initiated the slash command or to a different user in the channel or group. Use one of the following scenarios to enable the agent or bot to send a targeted message to a single user.
+- **Private message to a user**: You can enable the agent or bot to send a targeted response to the user who initiated the slash command or to a different user in the channel or group. Use one of the following scenarios to enable the agent or bot to send a targeted message to a single user.
 
   # [Response to same user](#tab/tm1)
 
@@ -317,7 +317,7 @@ Use the following code snippets to enable your agent to respond to a slash comma
 
 #### Delete an agent response
 
-Use the following code snippet to enable the agent to delete its response:
+Use the following code snippet to enable the agent or bot to delete its response:
 
 ```typescript
 
