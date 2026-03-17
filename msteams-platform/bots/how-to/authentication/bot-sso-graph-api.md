@@ -3,7 +3,7 @@ title: Microsoft Graph Permissions for App
 description: Learn to configure API permissions with Microsoft Graph for Teams bot and messaging extension apps, which allow app users view user profile, and to read mail.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.date: 03/11/2025
+ms.date: 03/17/2026
 ms.owner: ryanbliss
 ---
 # Extend your app with Microsoft Graph permissions and scopes
@@ -62,6 +62,6 @@ You can configure Graph scopes in Microsoft Entra ID as required for your app. D
 
     You've configured your app with Microsoft Graph permissions.
 
-After you've completed the configuration in Microsoft Entra ID, you must update the code to acquire access token for Microsoft Graph. For more information, see [Bot framework SDK](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-teams-authentication/csharp/SimpleGraphClient.cs).
+After you've completed the configuration in Microsoft Entra ID, you must update the code to acquire access token for Microsoft Graph. For more information, see [Teams SDK](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsSDK/bot-auth-quickstart/csharp/SimpleGraphClient.cs).
 
 The app user is prompted to consent for Graph permissions on the first time they use it. After the app user gives consent, the Graph permissions are granted. For more information on Graph API permissions, see [permissions and consent](/azure/active-directory/develop/permissions-consent-overview).
