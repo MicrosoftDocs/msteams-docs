@@ -4,7 +4,7 @@ description: Update code in your tab app for requesting and receiving access tok
 ms.topic: how-to
 ms.localizationpriority: high
 keywords: teams authentication tabs Microsoft Azure Active Directory (Azure AD) Graph API
-ms.date: 12/13/2022
+ms.date: 03/16/2026
 ms.owner: ryanbliss
 ---
 # Add code to enable SSO
@@ -228,7 +228,7 @@ The following code is a typical decoded payload of an access token:
 | Sample name | Description | .NET| Node.js | Manifest |
 |---------------|---------------|------|--------------|-----|
 | Tab SSO | This sample app showcases Microsoft Entra SSO within a tab, using the On-Behalf-Of flow to call Microsoft Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|NA|
-| Tab, bot, and message extension (ME) SSO | This sample app demonstrates Teams SSO integration for tabs, bots, and message extensions and Microsoft Entra ID for secure authentication. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-sso/csharp/demo-manifest/App-SSO.zip) |
+| Tab, bot, and message extension (ME) SSO | This sample app demonstrates Teams SSO integration for tabs, bots, and message extensions and Microsoft Entra ID for secure authentication. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/app-sso/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/app-sso/csharp/demo-manifest/App-SSO.zip) |
 
 ## Next step
 
