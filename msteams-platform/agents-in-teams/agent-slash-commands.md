@@ -35,6 +35,22 @@ For apps and agents, slash commands can be used to:
 
 ### Supported scenarios for slash commands
 
+Apps and agents can participate in slash commanding in the following ways:
+
+- App-defined slash commands: Agents and apps can publish a curated set of app-defined slash commands so users can discover and run common actions without leaving the compose box. You can explicitly declare the commands your app supports, and Teams shows them in the slash command picker when a user types `/`. This approach keeps the menu focused and avoids automatically exposing every possible capability. For example:
+
+  - `/contoso create-task`
+  - `/contoso incident`
+  - `/contoso dashboard`
+
+- **Private user-to-agent interaction**: Slash commands can also initiate a private, one-turn interaction with a bot or agent. In this model, the user enters a command (and optional text) in the compose box, and the response is delivered privately rather than posted to the current chat or channel—making it ideal for drafting, lookups, and personal productivity tasks. For example:
+
+  - `/contoso incident summarize the last 24 hours and suggest next steps`
+  - `/contoso create-task fix login issue for mobile users`
+
+To support natural-language prompts (for example, /contoso create-task fix login issue), developers must explicitly opt in—so apps that only want to support fixed commands can do so without enabling free-form prompting.
+
+<!--
 - **App-defined slash command**: You can explicitly define the slash commands their app supports. These commands appear in the slash command menu when users type `/` in the compose box. For example:
 
   - `/contoso create-task`
@@ -49,6 +65,7 @@ For apps and agents, slash commands can be used to:
     Developers must explicitly opt in to support natural language prompts through slash commands.
 
 - **Message extension action**: Action type message extensions can surface as slash commands. Selecting the command opens the corresponding modal or dialog to complete the action. For example, `/create task`.
+-->
 
 > [!NOTE]
 > Search type message extensions aren’t exposed as slash commands. Users can access them through the message extension flyout instead.
