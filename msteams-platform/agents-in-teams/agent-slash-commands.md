@@ -31,13 +31,35 @@ For apps and agents, slash commands can be used to:
 - Start a private, single turn interaction with a bot or agent.
 - Provide a faster alternative to verbose @mentions or multi-step menus.
 
-### Visibility of agent responses
+### Supported slash command scenarios
+
+- **App-defined slash command**: You can explicitly define the slash commands their app supports. These commands appear in the slash command menu when users type `/` in the compose box. For example:
+
+  - `/contoso create-task`
+  - `/contoso incident`
+  - `/contoso dashboard`
+
+- **Private user-to-agent interaction**: With slash commands, users can initiate a private, one turn interaction with a bot or agent. For example:
+
+- `/contoso hello`
+- `/contoso draft an email`
+
+    Developers must explicitly opt in to support natural language prompts through slash commands.
+
+- **Message extension action**: Action type message extensions can surface as slash commands. Selecting the command opens the corresponding modal or dialog to complete the action. For example, `/create task`.
+
+> [!NOTE]
+> Search type message extensions aren’t exposed as slash commands. Users can access them through the message extension flyout instead.
+
+[WIP: Add details and scenarios/examples]
+
+## User experience
 
 Slash command responses are private, one to one interactions between a user and an agent or bot. The responses are visible only to the initiating user by default to maintain focus, reduce noise, and enable personalized interactions.
 
 You can control response visibility through bot or agent logic and can selectively make responses public to support collaboration or business needs. Enable the agent to selectively surface certain responses to a channel or group chat when the information is relevant to a broader audience. Visibility decisions are intentional developer driven when public responses add value.
 
-#### Agent response flows with slash commands - user scenarios
+### Agent response flows with slash commands - user scenarios
 
 Slash commands support the following agent-to-user response flows:
 
@@ -84,28 +106,6 @@ Slash commands support the following agent-to-user response flows:
         The initial targeted message containing the user’s prompt expires after 24 hours. This flow enables selective sharing of agent responses when it benefits the group or channel, such as status updates, confirmations, or information intended for shared visibility.
     :::column-end:::
 :::row-end:::
-
-### Supported slash command scenarios
-
-- **App-defined slash command**: You can explicitly define the slash commands their app supports. These commands appear in the slash command menu when users type `/` in the compose box. For example:
-
-  - `/contoso create-task`
-  - `/contoso incident`
-  - `/contoso dashboard`
-
-- **Private user-to-agent interaction**: With slash commands, users can initiate a private, one turn interaction with a bot or agent. For example:
-
-- `/contoso hello`
-- `/contoso draft an email`
-
-    Developers must explicitly opt in to support natural language prompts through slash commands.
-
-- **Message extension action**: Action type message extensions can surface as slash commands. Selecting the command opens the corresponding modal or dialog to complete the action. For example, `/create task`.
-
-> [!NOTE]
-> Search type message extensions aren’t exposed as slash commands. Users can access them through the message extension flyout instead.
-
-[WIP: Add details and scenarios/examples]
 
 ## Why use slash commands
 
