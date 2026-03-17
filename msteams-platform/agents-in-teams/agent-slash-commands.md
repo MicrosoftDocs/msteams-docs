@@ -137,6 +137,8 @@ To enable slash commands, update your app manifest to opt in to targeted messagi
 
 This opt-in allows your agent to be invoked from the compose box using <`/agent-name`>, and supports the private targeted-message response flow.
 
+[WIP: Add link to Manifest docs]
+
 - **Support agent-specific commands without a command list**: If you don’t publish a list of commands, users can still invoke your agent or bot via <`/agent-name`> and provide free-form input (depending on your agent's capabilities).
 
     Use the following example to confgure the app manifest for supporting slash commands without declaring any commands:
@@ -276,6 +278,8 @@ When a user sends a message to the agent, the Apx adds the `isTargeted` property
 
 Use the following code snippets to enable your agent to respond to a slash command based on supported scenarios:
 
+[WIP: Add link to Teams SDK docs]
+
 - **Private message to a user**: You can enable the agent to send a targeted response to the user who initiated the slash command or to a different user in the channel or group. Use one of the following scenarios to enable the agent or bot to send a targeted message to a single user.
 
   # [Response to same user](#tab/tm1)
@@ -328,6 +332,10 @@ app.on('messageDelete', async ({ activity, next }) => {
 
 [WIP: Awaiting details on error codes]
 
+## Code sample
+
+[WIP: Add details and link to the code sample.]
+
 ## Best practices
 
 - Keep slash commands short and action oriented
@@ -336,8 +344,7 @@ app.on('messageDelete', async ({ activity, next }) => {
 - Provide clear command descriptions to improve discoverability.
 - Offer aliases for frequently used commands where appropriate.
 
-<!--**Support for showing a private response publicly**: To support a private-by-default experience, agents or bots can include suggested actions (for example, **Allow** or **Discard**) at the bottom of a private response.
+## See also
 
-:::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-responses-actions.png" alt-text="Image shows examples of actions on private agent responses.":::
-
-These actions let users explicitly promote an otherwise private response to a public message. When a user selects **Allow**, the agent posts the approved response in the channel or group chat.-->
+- Enable targeted messages [Add link]
+- Teams SDK docs [Add link]
