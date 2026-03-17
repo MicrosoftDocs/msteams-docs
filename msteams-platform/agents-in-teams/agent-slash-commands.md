@@ -153,17 +153,19 @@ This opt-in allows your agent to be invoked from the compose box using <`/agent-
     }
     ```
 
-- **Provide an explicit command list**: Define a curated set of commands (for example, help, create, design) that appear in the slash menu with a short description. Existing agent commands can be reused, or you can introduce new commands optimized for slash usage.
+- **Provide an explicit command list**: Define a curated set of commands (for example, `/help`, `/create`, `/design`) that appear in the slash menu with a short description. Existing agent commands can be reused, or you can introduce new commands optimized for slash usage.
 
-  After you enable slash commands, each command you want to expose as a slash command must be explicitly declared in the manifest (command name plus user-facing description). List the actual commands (for example, create), not just broad categories of commands. Once declared, a command like create becomes invokable as <`/create`> (or <`/app-name create`>, depending on the client experience).
+  After you enable slash commands, each command you want to expose as a slash command must be explicitly declared in the manifest (command name plus user-facing description). List the actual commands and not just broad categories of commands. Once declared, a command becomes invokable, for example create can be invoked as <`/create`> (or <`/app-name create`>, depending on the client experience.
+
+  You can declare command list for your agent or app in one of the following scenarios:
 
   - Scenario 1: Agent with separate @mention and slash command lists
   - Scenario 2: Agent or bot with commands available in both mention and slash triggers.
   - Scenario 3: Message extension opted into slash commands.
 
-    Use any of the following examples to declaring slash commands in the app manifest.
+    Use the following examples to declare slash commands in the app manifest.
 
-# [Separate @mention and slash command list](#tab/sc1)
+# [Scenario 1](#tab/sc1)
 
   Use the following example to confgure the app manifest for supporting an agent or a bot that offers separate for @mention and slash triggers.
 
@@ -196,7 +198,7 @@ This opt-in allows your agent to be invoked from the compose box using <`/agent-
 }
 ```
 
-# [Command list for @mention and slash triggers](#tab/sc2)
+# [Scenario 2](#tab/sc2)
 
   Use the following example to confgure the app manifest for supporting an agent or a bot that makes the same commands available in both @mention and slash triggers.
 
@@ -222,7 +224,7 @@ This opt-in allows your agent to be invoked from the compose box using <`/agent-
 }
 ```
 
-# [Command list for message extension actions](#tab/sc3)
+# [Scenario 3](#tab/sc3)
 
   Use the following example to confgure the app manifest for supporting an agent or a message extension with commands that are also available via slash commands using the new `triggers` property.
 
