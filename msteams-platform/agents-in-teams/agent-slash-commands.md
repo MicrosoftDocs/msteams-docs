@@ -312,8 +312,6 @@ Use the following code snippets to enable your agent or bot to respond to a slas
     });
     ```
 
----
-
 - **Public response by the agent**: You can enable the agent or bot to send a public response in the group or channel if the response is relevant to all members.
 
   ```typescript
