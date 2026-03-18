@@ -86,7 +86,7 @@ Slash commands support the following agent-to-user response flows:
 :::row-end:::
 :::row:::
     :::column span:::
-        The initial targeted message with the user’s prompt expires after 24 hours. This flow makes it easy to share agent or bot responses when they’re helpful to the group like status updates, confirmations, or other info meant for everyone to see.
+        The initial targeted message with the user’s prompt expires after 24 hours. This flow makes it easy to share agent or bot responses when they’re helpful to the group like status updates, confirmations, or other information meant for everyone to see.
     :::column-end:::
 :::row-end:::
 
@@ -95,10 +95,10 @@ Slash commands support the following agent-to-user response flows:
 Well-designed slash commands make an agent or a bot easier to discover, faster to use, and safer to operate in shared spaces:
 
 - **Speed and muscle memory**: Frequent tasks become one-line commands.
-- **Discoverability**: Typing '/' can show an in-product menu of supported actions.
+- **Discoverability**: Typing `/` can show an in-product menu of supported actions.
 - **Consistency**: A stable command name reduces ambiguity versus purely open-ended prompts.
 - **Permission-aware actions**: Commands can map to well-defined operations with clear scopes and guardrails.
-- **Great UX in busy chats**: Commands can trigger private or compact responses when appropriate.
+- **Enhanced user experience in busy chats**: Commands can trigger private or compact responses when appropriate.
 
 [WIP: Add details and scenarios/examples]
 
@@ -119,17 +119,17 @@ Agents and bots can participate in slash commanding in the following ways:
   - `/contoso incident`
   - `/contoso dashboard`
 
-- **Private user-to-agent interaction**: Slash commands can also initiate a private, one-turn interaction with agent or bot. In this model, the user enters a command (and optional text) in the compose box, and the response is delivered privately rather than posted to the current chat or channel—making it ideal for drafting, lookups, and personal productivity tasks. For example:
+- **Private user-to-agent interaction**: Slash commands can also initiate a private, one-turn interaction with agent or bot. In this model, the user enters a command (and optional text) in the compose box, and the response is delivered privately, making it ideal for drafting, lookups, and personal productivity tasks. For example:
 
   - `/contoso incident summarize the last 24 hours and suggest next steps`
   - `/contoso create-task fix login issue for mobile users`
 
   To support natural-language prompts (for example, `/contoso create-task fix login issue`), developers must explicitly opt in—so apps that only want to support fixed commands can do so without enabling free-form prompting.
 
-- **Message extension actions as slash commands**: Action-type message extensions can also surface as slash commands. When a user selects the command from the `/` menu, Teams opens the associated modal (task module) or dialog so the user can complete the action with guided inputs, validation, and a consistent UI flow. For example, `./create task` (opens a task creation dialog)
+- **Message extension actions as slash commands**: Action-type message extensions can also surface as slash commands. When a user selects the command from the `/` menu, Teams opens the associated modal (task module) or dialog so the user can complete the action with guided inputs, validation, and a consistent UI flow. For example, `/create task` (opens a task creation dialog).
 
-> [!NOTE]
-> Search type message extensions aren’t exposed as slash commands. Users can access them through the message extension flyout instead.
+  > [!NOTE]
+  > Search type message extensions aren’t exposed as slash commands. Users can access them through the message extension flyout instead.
 
 ### Manifest updates for slash commands
 
