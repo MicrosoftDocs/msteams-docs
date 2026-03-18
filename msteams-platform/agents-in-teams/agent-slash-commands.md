@@ -158,7 +158,7 @@ To enable slash commands, update your app manifest to opt in to targeted messagi
 
 - **Provide an explicit command list**: Define a curated set of commands (for example, `/help`, `/create`, `/design`) that appear in the slash menu with a short description. Existing agent or bot commands can be reused, or you can introduce new commands optimized for slash usage.
 
-  After you enable slash commands, declare each command you want to show in the manifest, including the command name and a user-facing description. List the specific commands, and not broad categories. Once you declare a command, users can invoke it (for example, </create> or </app-name create>, depending on the client experience).
+  After you enable slash commands, declare each command you want to show in the manifest, including the command name and a user-facing description. List the specific commands, and not broad categories. Once you declare a command, users can invoke it (for example, <`/create`> or <`/app-name create`>, depending on the client experience).
 
   You can declare command list for your agent or bot in one of the following scenarios:
 
@@ -232,7 +232,7 @@ To enable slash commands, update your app manifest to opt in to targeted messagi
       Use the following example to configure the app manifest for supporting an agent or a message extension with commands that are also available via slash commands using the new `triggers` property.
 
       > [!NOTE]
-      > - `summarizeCommand` omits `triggers`, so it is **not** surfaced in the slash list (unlike `commandLists`, where absent `triggers` defaults to `["mention"]`).
+      > - `summarizeCommand` omits `triggers`, so it isn't surfaced in the slash list (unlike `commandLists`, where absent `triggers` defaults to `["mention"]`).
       > - You can configure the app manifest to enable slash commands for both the bot and message extension by combining the code examples from scenarios 1 or 2 with scenario 3.
 
     ```json
@@ -274,7 +274,7 @@ To enable slash commands, update your app manifest to opt in to targeted messagi
 
 ### Enable slash commands
 
-When a user sends a message to the agent or bot, the APX adds the `isTargeted` property to the `Recipient` object within `Activity` object of message event payload. You can enable the agent or bot to send a targeted message to the same user or a public message to the group chat or channel. You can also enable the agent or bot to delete a message that it had previously sent.
+When a user messages your agent or bot using slash command, the message event payload adds the `isTargeted` property to the `Recipient` object in the `Activity` object. You can enable the agent or bot to send a targeted message to the same user or a public message to the group chat or channel. You can also enable the agent or bot to update or delete a message that it had previously sent.
 
 #### Send an agent response
 
@@ -282,7 +282,7 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
 [WIP: Add link to Teams SDK docs]
 
-- **Private message to a user**: You can enable the agent or bot to send a targeted response to the user who initiated the slash command or to a different user in the channel or group. Use one of the following scenarios to enable the agent or bot to send a targeted message to a single user.
+- **Private message to a user**: Configure your agent or bot to send a targeted reply to the person who ran the slash command or to another user in the channel or group chat. Use one of the following scenarios to send a targeted message to a single user.
 
   # [Response to same user](#tab/tm1)
 
@@ -354,11 +354,11 @@ For more information on error codes for targeted messages, see [Add link].
 
 ## Best practices
 
-- Keep slash commands short and action oriented
+- Keep slash commands short and action-oriented.
 - Use slash commands for private or quick actions, and @mentions for richer conversations.
-- Avoid exposing overly verbose prompt suggestions as slash commands.
+- Avoid turning long prompt suggestions into slash commands. Keep them lightweight.
 - Provide clear command descriptions to improve discoverability.
-- Offer aliases for frequently used commands where appropriate.
+- Add aliases for high-traffic commands  where appropriate.
 
 ## See also
 
