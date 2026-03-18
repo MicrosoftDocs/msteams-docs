@@ -52,9 +52,10 @@ Slash commands support the following agent-to-user response flows:
 :::row-end:::
 :::row:::
     :::column span="2":::
+        <br>
         1. When a user runs a slash command, it shows up as a targeted message.
         1. If the agent or bot responds privately, it shows up as a targeted reply that quotes the user’s prompt and includes an option to share it publicly.
-        1.If the user selects Allow, the agent or bot posts a single message with the bot’s response plus the quoted prompt.
+        1. If the user selects **Allow**, the agent or bot posts a single message with the bot’s response plus the quoted prompt.
 
     :::column-end:::
     :::column span="3":::
@@ -74,7 +75,7 @@ Slash commands support the following agent-to-user response flows:
 :::row-end:::
 :::row:::
     :::column span="2":::
-
+        <br>
         1. When a user runs a slash command, it appears right away as a targeted message.
         1. If the agent or bot is set up for public replies, it's response quotes the user’s prompt.
         1. The agent's or bot's response is visible to all members in the channel or group chat.
