@@ -6,6 +6,10 @@ ms.date: 03/11/2026
 ms.topic: reference
 ---
 
+<!-- markdownlint-disable MD036 -->
+<!-- markdownlint-disable MD046 -->
+<!-- markdownlint-disable MD001 -->
+
 # Enable slash commands for agents and bots
 
 Slash commands are a lightweight way to invoke an agent's or bot's capabilities using a predictable, text-first syntax that starts with `/` (slash). They act like power shortcuts that combine the speed of commands with the flexibility of natural language.
@@ -272,7 +276,7 @@ To enable slash commands, update your app manifest to opt in to targeted messagi
     }
     ```
 
-    ---
+---
 
 ### Enable slash commands
 
@@ -308,7 +312,7 @@ Use the following code snippets to enable your agent or bot to respond to a slas
     });
     ```
 
-    ---
+---
 
 - **Public response by the agent**: You can enable the agent or bot to send a public response in the group or channel if the response is relevant to all members.
 
