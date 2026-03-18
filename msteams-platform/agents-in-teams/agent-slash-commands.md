@@ -115,7 +115,6 @@ Agents and bots can participate in slash commanding in the following ways:
 
 - **App-defined slash commands**: Agents and bots can publish a curated set of slash commands so users can discover and run common actions without leaving the compose box. You can explicitly declare the commands your agent or bot supports, and Teams shows them in the slash command picker when a user types `/`. This approach keeps the menu focused and avoids automatically exposing every possible capability. For example:
 
-  - `/contoso create-task`
   - `/contoso incident`
   - `/contoso dashboard`
 
@@ -124,9 +123,9 @@ Agents and bots can participate in slash commanding in the following ways:
   - `/contoso incident summarize the last 24 hours and suggest next steps`
   - `/contoso create-task fix login issue for mobile users`
 
-  To support natural-language prompts (for example, `/contoso create-task fix login issue`), developers must explicitly opt in—so apps that only want to support fixed commands can do so without enabling free-form prompting.
+  To support natural-language prompts, you must explicitly opt in so agents or bots that want to support only fixed commands can do so without enabling free-form prompting.
 
-- **Message extension actions as slash commands**: Action-type message extensions can also surface as slash commands. When a user selects the command from the `/` menu, Teams opens the associated modal (task module) or dialog so the user can complete the action with guided inputs, validation, and a consistent UI flow. For example, `/create task` (opens a task creation dialog).
+- **Message extension actions as slash commands**: Action-type message extensions can also surface as slash commands. When a user selects the command from the `/` menu, Teams opens the associated modal (task module) or dialog so the user can complete the action with guided inputs, validation, and a consistent UI flow. For example, `/contoso create task` (opens a task creation dialog).
 
   > [!NOTE]
   > Search type message extensions aren’t exposed as slash commands. Users can access them through the message extension flyout instead.
