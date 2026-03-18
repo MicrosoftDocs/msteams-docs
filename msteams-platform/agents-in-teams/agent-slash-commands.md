@@ -37,7 +37,7 @@ You can enable agent-specific slash commands, private agent-to-user interaction,
 
 ## User experience
 
-Usually slash command responses are one-to-one interactions between the initiating user and the agent or bot. Only the initiating user can see the response, helping maintain focus, reduce noise, and enable personalised interactions.
+Most slash command responses are private—one-to-one between the person who ran the command and the agent or bot. Only that user sees the result, which keeps conversations focused, reduces noise, and supports personalised interactions.
 
 You can, however, control the response visibility through agent or bot logic and can selectively share responses to a channel or group chat when it benefits collaboration. Public responses must be an intentional, developer-driven choice when broader visibility adds value.
 
@@ -47,14 +47,14 @@ Slash commands support the following agent-to-user response flows:
 
 :::row:::
     :::column span:::
-    **Private Agent-to-User Response (Default)**: This flow supports focused, one-to-one interactions between the user and the agent or bot:
+    **Private Agent-to-User Response (Default)**: This flow keeps slash command results focused and one-to-one between the user and the agent or bot:
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column span="2":::
-        1. When a user sends a slash command, their message appears as a targeted message.
-        1. If the agent or bot replies privately, it appears as a targeted reply with the user’s prompt quoted with the option of making it available publicly.
-        1. When the user selects **Allow**, a single message is posted containing the bot’s response and the quoted prompt.
+        1. When a user runs a slash command, it shows up as a targeted message.
+        1. If the agent or bot responds privately, it shows up as a targeted reply that quotes the user’s prompt and includes an option to share it publicly.
+        1.If the user selects Allow, the agent or bot posts a single message with the bot’s response plus the quoted prompt.
 
     :::column-end:::
     :::column span="3":::
