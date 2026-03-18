@@ -138,11 +138,9 @@ To enable slash commands, update your app manifest to opt in to targeted messagi
 - List the specific slash commands the agent or bot exposes.
 - Specify whether it supports natural-language prompts when invoked via slash commands.
 
-With this opt-in, users can invoke your agent or bot from the compose box using <`/agent-name`>, and it enables the default private targeted message response flow.
-
 [WIP: Add link to Manifest docs]
 
-- **Support agent-specific commands without a command list**: If you don’t publish a list of commands, users can still invoke your agent or bot via <`/agent-name`> and provide free-form input (depending on your agent's or bot's capabilities).
+- **Support agent-specific commands without a command list**: With this opt-in, users can invoke your agent or bot from the compose box using <`/agent-name`>, and it enables the default private targeted message response flow. If you don’t publish a list of commands, users can still invoke your agent or bot via <`/agent-name`> and provide free-form input (depending on your agent's or bot's capabilities).
 
     Use the following example to configure the app manifest for supporting slash commands without declaring any commands:
 
@@ -164,9 +162,9 @@ With this opt-in, users can invoke your agent or bot from the compose box using 
 
   You can declare command list for your agent or bot in one of the following scenarios:
 
-  - Scenario 1: Agent or bot with separate @mention and slash command lists
-  - Scenario 2: Agent or bot with commands available in both mention and slash triggers
-  - Scenario 3: Message extension with slash commands
+  - **Scenario 1**: Agent or bot with separate @mention and slash command lists
+  - **Scenario 2**: Agent or bot with commands available in both mention and slash triggers
+  - **Scenario 3**: Message extension with slash commands
 
     Use the following examples to declare slash commands in the app manifest.
 
