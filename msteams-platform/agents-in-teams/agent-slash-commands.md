@@ -31,15 +31,15 @@ Use slash commands to:
 
 - Trigger a specific agent or app action (for example, create a task, open a form, or start a workflow).
 - Start a private, single turn interaction with an agent or app.
-- Provide a faster alternative to verbose @mentions or multi-step menus.
+- Provide a faster alternative to long prompts or multi-step menus.
 
 You can enable agent-specific slash commands, private agent-to-user interaction, and slash commands for message extension actions. For more information, see [supported scenarios for slash commands](#supported-scenarios-for-slash-commands).
 
 ## User experience
 
-Most slash command responses are private—one-to-one between the person who ran the command and the agent or bot. Only that user sees the result, which keeps conversations focused, reduces noise, and supports personalised interactions.
+Most slash command responses are private, one-to-one interactions between the person who ran the command and the agent or bot. Only that user sees the result, which keeps conversations focused and reduces noise.
 
-You can, however, control the response visibility through agent or bot logic and can selectively share responses to a channel or group chat when it benefits collaboration. Public responses must be an intentional, developer-driven choice when broader visibility adds value.
+You can control the response visibility through agent or bot logic and can selectively share responses to a channel or group chat when it benefits collaboration. Public responses must be an intentional, developer-driven choice when broader visibility adds value.
 
 ### Agent response flows with slash commands - user scenarios
 
