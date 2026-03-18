@@ -69,14 +69,14 @@ Slash commands support the following agent-to-user response flows:
 
 :::row:::
     :::column span:::
-    **Public Agent-to-User Response (Developer-Enabled)**: In scenarios where the response is relevant to a broader audience, developers can choose to surface agent responses publicly.
+    **Public Agent-to-User Response (Developer-Enabled)**: When the response is useful to the wider group, developers can choose to show it publicly.
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column span="2":::
 
-        1. When a user sends a slash command to the agent or bot, their original message is immediately reflected as a targeted message.
-        1. If the agent or bot is configured to respond publicly, it appears as a targeted reply with the user’s prompt quoted.
+        1. When a user runs a slash command, it appears right away as a targeted message.
+        1. If the agent or bot is set up for public replies, it's response quotes the user’s prompt.
         1. The agent's or bot's response is visible to all members in the channel or group chat.
     :::column-end:::
     :::column span="3":::
@@ -85,7 +85,7 @@ Slash commands support the following agent-to-user response flows:
 :::row-end:::
 :::row:::
     :::column span:::
-        The initial targeted message containing the user’s prompt expires after 24 hours. This flow enables selective sharing of agent or bot responses when it benefits the group or channel, such as status updates, confirmations, or information intended for shared visibility.
+        The initial targeted message with the user’s prompt expires after 24 hours. This flow makes it easy to share agent or bot responses when they’re helpful to the group like status updates, confirmations, or other info meant for everyone to see.
     :::column-end:::
 :::row-end:::
 
