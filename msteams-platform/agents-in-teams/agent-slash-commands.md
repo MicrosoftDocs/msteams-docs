@@ -8,7 +8,7 @@ ms.topic: reference
 
 # Enable slash commands for agents and bots
 
-Slash commands are a lightweight way to invoke an agent's or bot's capabilities using a predictable, text-first syntax that starts with '/' (slash). They act like power shortcuts that combine the speed of commands with the flexibility of natural language.
+Slash commands are a lightweight way to invoke an agent's or bot's capabilities using a predictable, text-first syntax that starts with `/` (slash). They act like power shortcuts that combine the speed of commands with the flexibility of natural language.
 
 **Key points**
 
@@ -23,7 +23,7 @@ Slash commands are a lightweight way to invoke an agent's or bot's capabilities 
 
 ## What are slash commands
 
-A slash command is a short command name with optional parameters, for example, `/summarize last 20 messages` or `/draft status update for Project Contoso`. Users type commands directly in the message compose box to trigger an action with minimal typing. When a user types /, Teams shows a menu of available commands from built-in features, workflows, and installed or available agents or apps.
+A slash command is a quick command (with optional parameters) you can add to your agent or bot to run a specific action. It starts with a `/`, for example, `/summarize last 20 messages` or `/draft status update for Project Contoso`. Users type it right in the message compose box to get things done with minimal typing. As soon as they type `/`, Teams shows a menu of available commands from built-in features, workflows, and any installed or available agents or apps.
 
 [WIP: Add infographic for showing UX]
 
@@ -33,7 +33,7 @@ Use slash commands to:
 - Start a private, single turn interaction with an agent or app.
 - Provide a faster alternative to verbose @mentions or multi-step menus.
 
-Teams supports agent-specific slash commands, private agent-to-user interaction, and slash commands for message extension actions. For more information, see [supported scenarios for slash commands](#supported-scenarios-for-slash-commands).
+You can enable agent-specific slash commands, private agent-to-user interaction, and slash commands for message extension actions. For more information, see [supported scenarios for slash commands](#supported-scenarios-for-slash-commands).
 
 ## User experience
 
