@@ -262,8 +262,8 @@ To add a bot:
 > [!NOTE]
 >
 > * Bots created using the **Microsoft Teams Developer Portal** are **single tenant** by default.
-> * **Multi tenant** bots are deprecated. However, bots that were previously created as **multi-tenant** continue to work as expected.
-> * Apps registered in **Microsoft Entra ID** are multi-tenant applications by default and remain supported. These app registrations are separate from bot tenant configuration in **Azure Bot Service**.
+> * Bots configured as multi tenant in Azure Bot Service are deprecated. However, bots that were previously created as **multi tenant** continue to work as expected.
+> * Apps registered in **Microsoft Entra ID** are multi-tenant applications by default and remain supported. These app registrations are separate from bot tenant configuration in **Azure Bot Service** A bot configured as single tenant in Azure Bot Service can use a multi tenant application.
 > * When you create a bot using the **Developer Portal**, a corresponding [servicePrincipal](/graph/api/resources/serviceprincipal?view=graph-rest-1.0&preserve-view=true) is automatically created in your **Microsoft Entra ID** tenant.
 > * In delegated scenarios with work or school accounts, the admin must be assigned a supported [Microsoft Entra role](/entra/identity/role-based-access-control/permissions-reference?toc=%2Fgraph%2Ftoc.json) or a custom role with an equivalent permission. The following least-privileged roles are supported for this operation:
 >
@@ -273,7 +273,7 @@ To add a bot:
 >
 >   * For single tenant apps where the calling user is a nonadmin user but is the owner of the backing application, the user must have the *Application Developer* role.
 >
-> For single tenant apps, the developer must configure the bot to request access token from single tenant. They must include tenant ID as part of the environment variables while requesting access token. For more information, see [request an access token](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication#step-1-request-an-access-token-from-the-microsoft-entra-id-account-login-service).
+> For bots configured as single-tenant in Azure Bot Service, the developer must ensure the bot requests the correct access token. This requires including the tenant ID as part of the environment variables when requesting the access token. For more information, see [request an access token](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication#step-1-request-an-access-token-from-the-microsoft-entra-id-account-login-service).
 
 From the Developer Portal, go to Bot Framework portal and configure your bot to update the icon and other properties.
 
