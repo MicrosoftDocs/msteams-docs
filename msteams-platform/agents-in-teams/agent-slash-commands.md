@@ -347,6 +347,7 @@ app.on('messageDelete', async ({ activity, next }) => {
 ## Response codes for slash commands
 
 [WIP: Awaiting details on error codes]
+
 For more information on error codes for targeted messages, see [Add link].
 
 ## Code sample
