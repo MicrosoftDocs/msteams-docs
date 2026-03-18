@@ -276,8 +276,6 @@ To enable slash commands, update your app manifest to opt in to targeted messagi
     }
     ```
 
----
-
 ### Enable slash commands
 
 When a user messages your agent or bot using slash command, the message event payload adds the `isTargeted` property to the `Recipient` object in the `Activity` object. You can enable the agent or bot to send a targeted message to the same user or a public message to the group chat or channel. You can also enable the agent or bot to update or delete a message that it had previously sent.
