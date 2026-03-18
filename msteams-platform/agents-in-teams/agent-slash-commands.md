@@ -71,7 +71,7 @@ Slash commands support the following agent-to-user response flows:
 
 :::row:::
     :::column span:::
-    **Public Agent-to-User Response (Developer-Enabled)**: When the response is useful to the wider group, developers can choose to show it publicly.
+    **Public Agent-to-User Response (Developer-enabled)**: When the response is useful to the wider group, developers can choose to show it publicly.
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -321,7 +321,7 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
 #### Update an agent response
 
-The agent can edit the original targeted message if needed. The updated message appears only in the intended user’s view.
+The agent or bot can edit the original targeted message if needed. The updated message appears only in the intended user’s view.
 
 Use one of the following code snippets to edit targeted message:
 
