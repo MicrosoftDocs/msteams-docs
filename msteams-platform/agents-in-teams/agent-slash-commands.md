@@ -132,13 +132,13 @@ Agents and bots can participate in slash commanding in the following ways:
 
 ### Manifest updates for slash commands
 
-To enable slash commands, update your app manifest to opt in to targeted messaging and (optionally) declare the specific commands you want to expose in the compose box. In the app manifest, you must:
+To enable slash commands, update your app manifest to opt in to targeted messaging and (optionally) list the commands you want to show in the compose box. In the manifest, you must:
 
 - Declare whether the agent or bot supports slash commands.
 - List the specific slash commands the agent or bot exposes.
-- Indicate whether the agent or bot supports natural language prompts when invoked via slash commands.
+- Specify whether it supports natural-language prompts when invoked via slash commands.
 
-This opt-in allows your agent or bot to be invoked from the compose box using <`/agent-name`>, and supports the private targeted-message response flow.
+With this opt-in, users can invoke your agent or bot from the compose box using <`/agent-name`>, and it enables the default private targeted message response flow.
 
 [WIP: Add link to Manifest docs]
 
