@@ -31,6 +31,8 @@ A slash command is a quick command (with optional parameters) you can add to you
 
 [WIP: Add infographic for showing UX]
 
+:::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-slash-commands.png" alt-text="Image shows the response flows for agent slash commands." border="false" lightbox="../assets/images/agents-in-teams/agent-slash-commands/agent-slash-commands.png":::
+
 Use slash commands to:
 
 - Trigger a specific agent or app action (for example, create a task, open a form, or start a workflow).
