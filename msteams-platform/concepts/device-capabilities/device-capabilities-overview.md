@@ -2,10 +2,10 @@
 title: Device capabilities - Overview
 author: surbhigupta
 description: Learn how to integrate native device capabilities, such as, location and media (camera, microphone, gallery, QR or barcode scanner) with Microsoft Teams app.
-ms.author: surbhigupta
+ms.author: vikasalmal
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 02/08/2023
+ms.date: 03/02/2026
 ---
 
 # Device capabilities
@@ -46,4 +46,4 @@ Also, you can integrate the Teams native [people picker control](people-picker-c
 
 | Sample name           | Description | Node.js    | Manifest|
 |:---------------------|:--------------|:---------|:---------|
-|Device permissions | This sample app for Microsoft Teams demonstrates how to handle device permissions, including audio, video, and geolocation, within a tab interface. It provides insights into device permission usage across desktop and mobile views, allowing developers to enhance user interactions effectively. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs/demo-manifest/tab-device-permissions.zip)
+|Device permissions | This sample app for Microsoft Teams demonstrates how to handle device permissions, including audio, video, and geolocation, within a tab interface. It provides insights into device permission usage across desktop and mobile views, allowing developers to enhance user interactions effectively. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-device-permissions/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-device-permissions/nodejs/demo-manifest/tab-device-permissions.zip)
