@@ -303,7 +303,7 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
   [WIP: Add code snippet]
 
-# [TypeScript](#tab/ts1)
+# [TypeScript](#tab/su/ts1)
 
 ```typescript
 
