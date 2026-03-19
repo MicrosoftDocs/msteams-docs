@@ -297,65 +297,65 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
 - Response to same user
 
-Use one of the following code snippets for sending agent response to a single user.
+    Use one of the following code snippets for sending agent response to a single user.
 
-# [CSharp](#tab/dotnet1)
+  # [C#](#tab/dotnet1)
 
-  [WIP: Add code snippet]
+      [WIP: Add code snippet]
 
-# [TypeScript](#tab/ts1)
+  # [TypeScript](#tab/ts1)
 
-  ```typescript
+      ```typescript
+    
+        app.on('message', async ({ send, activity }) => {
+          if(activity.Recipient.isTargeted) {
+            send(new MessageActivity('Reactive TM').withRecipient(activity.From, isTargeted: true))
+            }
+        });
+      ```
 
-    app.on('message', async ({ send, activity }) => {
-      if(activity.Recipient.isTargeted) {
-        send(new MessageActivity('Reactive TM').withRecipient(activity.From, isTargeted: true))
-        }
-    });
-  ```
+  # [Python](#tab/Py1)
 
-# [Python](#tab/Py1)
+      [WIP: Add code snippet]
 
-  [WIP: Add code snippet]
+  # [HTTP](#tab/api1)
 
-# [HTTP](#tab/api1)
+      [WIP: Add code snippet]
 
-  [WIP: Add code snippet]
-
----
+    ---
 
 - Response to different user
 
-# [CSharp](#tab/dotnet1)
+    Use one of the following code snippets for sending agent response to a different user.
 
-  [WIP: Add code snippet]
+  # [C#](#tab/dotnet1)
 
-# [TypeScript](#tab/ts1)
+      [WIP: Add code snippet]
 
-  ```typescript
-    
-    app.on('message', async ({ send, activity }) => {
-      if(activity.Recipient.isTargeted) {
-        send(new MessageActivity('Reactive TM').withRecipient(new Account {Id: <userMRI>,Name: <user Name>, Role: User}, isTargeted: true))
-      }
-    });
-    ```
+  # [TypeScript](#tab/ts1)
 
-# [Python](#tab/Py1)
+      ```typescript
+        
+        app.on('message', async ({ send, activity }) => {
+          if(activity.Recipient.isTargeted) {
+            send(new MessageActivity('Reactive TM').withRecipient(new Account {Id: <userMRI>,Name: <user Name>, Role: User}, isTargeted: true))
+          }
+        });
+      ```
 
-  [WIP: Add code snippet]
+  # [Python](#tab/Py1)
 
-# [HTTP](#tab/api1)
+      [WIP: Add code snippet]
 
-  [WIP: Add code snippet]
+  # [HTTP](#tab/api1)
 
----
+      [WIP: Add code snippet]
 
-
+    ---
 
 - **Public response by the agent**: You can enable the agent or bot to send a public response in the group or channel if the response is relevant to all members.
 
-# [CSharp](#tab/dotnet1)
+# [C#](#tab/dotnet1)
 
   [WIP: Add code snippet]
 
