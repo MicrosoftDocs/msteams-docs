@@ -326,7 +326,13 @@ Use one of the following code snippets for sending agent response to a single us
 
 - Response to different user
 
-    ```typescript
+# [CSharp](#tab/dotnet1)
+
+  [WIP: Add code snippet]
+
+# [TypeScript](#tab/ts1)
+
+  ```typescript
     
     app.on('message', async ({ send, activity }) => {
       if(activity.Recipient.isTargeted) {
@@ -334,6 +340,18 @@ Use one of the following code snippets for sending agent response to a single us
       }
     });
     ```
+
+# [Python](#tab/Py1)
+
+  [WIP: Add code snippet]
+
+# [HTTP](#tab/api1)
+
+  [WIP: Add code snippet]
+
+---
+
+
 
 - **Public response by the agent**: You can enable the agent or bot to send a public response in the group or channel if the response is relevant to all members.
 
