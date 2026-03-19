@@ -355,18 +355,42 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
 - **Public response by the agent**: You can enable the agent or bot to send a public response in the group or channel if the response is relevant to all members.
 
+  # [C#](#tab/dotnet1)
+
+      [WIP: Add code snippet]
+
+  # [TypeScript](#tab/ts1)
+
+      ```typescript
+      
+      app.on('message', async ({ send, activity }) => {
+        send(new MessageActivity('Normal msg'))  
+      });
+      ```
+
+  # [Python](#tab/Py1)
+
+      [WIP: Add code snippet]
+
+  # [HTTP](#tab/api1)
+
+      [WIP: Add code snippet]
+
+    ---
+
+#### Update an agent response
+
+The agent or bot can edit the original targeted message if needed. The updated message appears only in the intended user’s view.
+
+Use one of the following code snippets to edit targeted message:
+
 # [C#](#tab/dotnet1)
 
   [WIP: Add code snippet]
 
 # [TypeScript](#tab/ts1)
 
-  ```typescript
-  
-  app.on('message', async ({ send, activity }) => {
-    send(new MessageActivity('Normal msg'))  
-  });
-  ```
+  [WIP: Add code snippet]
 
 # [Python](#tab/Py1)
 
@@ -378,30 +402,34 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
 ---
 
-#### Update an agent response
-
-The agent or bot can edit the original targeted message if needed. The updated message appears only in the intended user’s view.
-
-Use one of the following code snippets to edit targeted message:
-
-```typescript
-// Update
-const updatedMessage = new MessageActivity('This message has been updated!');
-await api.conversations.activities.updateTargeted(conversationId, messageId, updatedMessage);
-```
-
 #### Delete an agent response
 
 Use the following code snippet to enable the agent or bot to delete its response:
 
-```typescript
+# [C#](#tab/dotnet1)
 
-app.on('messageDelete', async ({ activity, next }) => {
-  if(activity.Recipient.isTargeted) {
-    // Business logic when message hard delete flow is for TM
-  }
-});
-```
+  [WIP: Add code snippet]
+
+# [TypeScript](#tab/ts1)
+
+  ```typescript
+
+    app.on('messageDelete', async ({ activity, next }) => {
+      if(activity.Recipient.isTargeted) {
+        // Business logic when message hard delete flow is for TM
+      }
+    });
+  ```
+
+# [Python](#tab/Py1)
+
+  [WIP: Add code snippet]
+
+# [HTTP](#tab/api1)
+
+  [WIP: Add code snippet]
+
+---
 
 ## Response codes for slash commands
 
