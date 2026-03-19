@@ -299,11 +299,11 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
 Use one of the following code snippets for sending agent response to a single user.
 
-# [CSharp](#tab/su/dotnet1)
+# [CSharp](#tab/dotnet1)
 
   [WIP: Add code snippet]
 
-# [TypeScript](#tab/su/ts1)
+# [TypeScript](#tab/ts1)
 
   ```typescript
 
@@ -314,11 +314,11 @@ Use one of the following code snippets for sending agent response to a single us
     });
   ```
 
-# [Python](#tab/su/Py1)
+# [Python](#tab/Py1)
 
   [WIP: Add code snippet]
 
-# [HTTP](#tab/su/api1)
+# [HTTP](#tab/api1)
 
   [WIP: Add code snippet]
 
@@ -337,11 +337,11 @@ Use one of the following code snippets for sending agent response to a single us
 
 - **Public response by the agent**: You can enable the agent or bot to send a public response in the group or channel if the response is relevant to all members.
 
-# [CSharp](#tab/su/dotnet1)
+# [CSharp](#tab/dotnet1)
 
   [WIP: Add code snippet]
 
-# [TypeScript](#tab/su/ts1)
+# [TypeScript](#tab/ts1)
 
   ```typescript
   
@@ -350,11 +350,11 @@ Use one of the following code snippets for sending agent response to a single us
   });
   ```
 
-# [Python](#tab/su/Py1)
+# [Python](#tab/Py1)
 
   [WIP: Add code snippet]
 
-# [HTTP](#tab/su/api1)
+# [HTTP](#tab/api1)
 
   [WIP: Add code snippet]
 
