@@ -295,11 +295,11 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
 **Private message to a user**: Configure your agent or bot to send a targeted reply to the person who ran the slash command or to another user in the channel or group chat. Use one of the following scenarios to send a targeted message to a single user.
 
-# [Response to same user](#tab/su)
+- Response to same user
 
-  Use one of the following code snippets for sending agent response to a single user:
+Use one of the following code snippets for sending agent response to a single user.
 
-# [C#](#tab/su/dotnet1)
+# [CSharp](#tab/su/dotnet1)
 
   [WIP: Add code snippet]
 
@@ -322,8 +322,6 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
   [WIP: Add code snippet]
 
----
-
 - Response to different user
 
     ```typescript
@@ -337,12 +335,26 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
 - **Public response by the agent**: You can enable the agent or bot to send a public response in the group or channel if the response is relevant to all members.
 
+# [CSharp](#tab/su/dotnet1)
+
+  [WIP: Add code snippet]
+
+# [TypeScript](#tab/su/ts1)
+
   ```typescript
   
   app.on('message', async ({ send, activity }) => {
     send(new MessageActivity('Normal msg'))  
   });
   ```
+
+# [Python](#tab/su/Py1)
+
+  [WIP: Add code snippet]
+
+# [HTTP](#tab/su/api1)
+
+  [WIP: Add code snippet]
 
 #### Update an agent response
 
