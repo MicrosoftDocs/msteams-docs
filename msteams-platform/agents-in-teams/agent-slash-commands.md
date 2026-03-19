@@ -293,26 +293,26 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
 [WIP: Add link to Teams SDK docs]
 
-- **Private message to a user**: Configure your agent or bot to send a targeted reply to the person who ran the slash command or to another user in the channel or group chat. Use one of the following scenarios to send a targeted message to a single user.
+**Private message to a user**: Configure your agent or bot to send a targeted reply to the person who ran the slash command or to another user in the channel or group chat. Use one of the following scenarios to send a targeted message to a single user.
 
-  # [Response to same user](#tab/tm1)
+- Response to same user
 
-        # [C#](#tab/dotnet1)
+  # [C#](#tab/dotnet1)
 
-          [WIP: Add code snippet]
+      [WIP: Add code snippet]
 
-        # [TypeScript](#tab/ts1)
+  # [TypeScript](#tab/ts1)
 
-          ```typescript
+      ```typescript
     
-          app.on('message', async ({ send, activity }) => {
-            if(activity.Recipient.isTargeted) {
-              send(new MessageActivity('Reactive TM').withRecipient(activity.From, isTargeted: true))
-            }
-          });
-          ```
+      app.on('message', async ({ send, activity }) => {
+          if(activity.Recipient.isTargeted) {
+            send(new MessageActivity('Reactive TM').withRecipient(activity.From, isTargeted: true))
+          }
+        });
+      ```
 
-  # [Response to different user](#tab/tm2)
+- Response to different user
 
     ```typescript
     
