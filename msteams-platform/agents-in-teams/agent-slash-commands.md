@@ -12,7 +12,7 @@ ms.topic: reference
 
 # Enable slash commands for agents and bots
 
-Slash commands are a lightweight way to invoke an agent's or bot's capabilities using a predictable, text-first syntax that starts with `/` (slash). They act like power shortcuts that combine the speed of commands with the flexibility of natural language.
+Slash commands are a lightweight way to invoke an agent's or a bot's capabilities using a predictable, text-first syntax that starts with `/` (slash). They act like power shortcuts that combine the speed of commands with the flexibility of natural language.
 
 **Key points**
 
@@ -27,7 +27,7 @@ Slash commands are a lightweight way to invoke an agent's or bot's capabilities 
 
 ## What are slash commands
 
-A slash command is a quick command (with optional parameters) you can add to your agent or bot to run a specific action. It starts with a `/`, for example, `/summarize last 20 messages` or `/draft status update for project`. Users type it right in the message compose box to get things done with minimal typing. As soon as they type `/`, Teams shows a menu of available commands from built-in features, workflows, and any installed or available agents or apps.
+A slash command is a quick command (with optional parameters) you can add to your agent or bot to trigger a specific action. It starts with a `/`, for example, `/summarize last 20 messages` or `/draft status update for project`. As soon as users type `/` in the message compose box, Teams shows a menu of available commands from built-in features, workflows, and any installed or available agents or apps.
 
 [WIP: Add infographic for showing UX]
 
@@ -35,17 +35,22 @@ A slash command is a quick command (with optional parameters) you can add to you
 
 Use slash commands to:
 
-- Trigger a specific agent or app action (for example, create a task, open a form, or start a workflow).
-- Start a private, single turn interaction with an agent or app.
+- Trigger a spcific agent or app task (for example, create a task, open a form, or start a workflow).
+- Start a private, single-turn interaction with an agent or app.
 - Provide a faster alternative to long prompts or multi-step menus.
 
 You can enable agent-specific slash commands, private agent-to-user interaction, and slash commands for message extension actions. For more information, see [supported scenarios for slash commands](#supported-scenarios-for-slash-commands).
 
 ## User experience
 
-Most slash command responses are private, one-to-one interactions between the person who ran the command and the agent or bot. Only that user sees the result, which keeps conversations focused and reduces noise.
+Most slash command responses are private, one-to-one interactions between the user who initiated the command and the agent or bot. Only that user sees the result, which keeps the conversation focused and reduces noise.
 
-You can control the response visibility through agent or bot logic and can selectively share responses to a channel or group chat when it benefits collaboration. Public responses must be an intentional, developer-driven choice when broader visibility adds value.
+Optionally, you can control the response visibility through agent or bot logic and share responses to the channel or group chat when it benefits collaboration.
+
+> [!NOTE]
+>
+> - Public responses must be an intentional, developer-driven choice when broader visibility adds value.
+> - The original targeted message expires after 24 hours.
 
 ### Agent response flows with slash commands - user scenarios
 
@@ -53,7 +58,7 @@ Slash commands support the following agent-to-user response flows:
 
 :::row:::
     :::column span:::
-    **Private Agent-to-User Response (Default)**: This flow keeps slash command results focused and one-to-one between the user and the agent or bot:
+    **Private agent-to-user response (default)**: This flow keeps slash command results focused between the user and the agent or bot:
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -62,7 +67,7 @@ Slash commands support the following agent-to-user response flows:
 
         1. When a user runs a slash command, it shows up as a targeted message.
         1. If the agent or bot responds privately, it shows up as a targeted reply that quotes the user’s prompt and includes an option to share it publicly.
-        1. If the user selects **Allow**, the agent or bot posts a single message with the bot’s response plus the quoted prompt.
+        1. If the user selects **Allow**, the agent or bot posts a single message with its response along with the quoted prompt.
 
     :::column-end:::
     :::column span="3":::
@@ -71,13 +76,13 @@ Slash commands support the following agent-to-user response flows:
 :::row-end:::
 :::row:::
     :::column span:::
-      The original targeted message expires after 24 hours. This flow minimizes noise in shared conversations and is optimized for private, fast, and context-aware interactions.
+      This flow minimizes noise in shared conversations and is optimized for private, fast, and context-aware interactions.
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column span:::
-    **Public Agent-to-User Response (Developer-enabled)**: When the response is useful to the wider group, developers can choose to show it publicly.
+    **Public agent-to-user response (developer-enabled)**: When the response is useful to the wider group, you can choose to enable your agent or bot to show it publicly.
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -85,8 +90,8 @@ Slash commands support the following agent-to-user response flows:
         <br>
 
         1. When a user runs a slash command, it appears right away as a targeted message.
-        1. If the agent or bot is set up for public replies, it's response quotes the user’s prompt.
-        1. The agent's or bot's response is visible to all members in the channel or group chat.
+        1. If the agent or bot is configured for public replies, it's response quotes the user’s prompt.
+        1. The agent's or bot's response is posted to all members in the channel or group chat.
     :::column-end:::
     :::column span="3":::
         :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-public-response.png" alt-text="Image shows agent's public response." border="false" lightbox="../assets/images/agents-in-teams/agent-slash-commands/agent-public-response.png":::
@@ -94,7 +99,7 @@ Slash commands support the following agent-to-user response flows:
 :::row-end:::
 :::row:::
     :::column span:::
-        The initial targeted message with the user’s prompt expires after 24 hours. This flow makes it easy to share agent or bot responses when they’re helpful to the group like status updates, confirmations, or other information meant for everyone to see.
+        This flow makes it easy to share agent or bot responses when they’re helpful to the group like status updates, confirmations, or other information meant for everyone to see.
     :::column-end:::
 :::row-end:::
 
@@ -104,7 +109,7 @@ Well-designed slash commands make an agent or a bot easier to discover, faster t
 
 - **Speed and muscle memory**: Frequent tasks become one-line commands.
 - **Discoverability**: Typing `/` can show an in-product menu of supported actions.
-- **Consistency**: A stable command name reduces ambiguity versus purely open-ended prompts.
+- **Consistency**: Stable commands reduce ambiguity versus purely open-ended prompts.
 - **Permission-aware actions**: Commands can map to well-defined operations with clear scopes and guardrails.
 - **Enhanced user experience in busy chats**: Commands can trigger private or compact responses when appropriate.
 
@@ -112,10 +117,10 @@ Well-designed slash commands make an agent or a bot easier to discover, faster t
 
 ## Slash commands developer experience
 
-You can enable slash commands your agents, bots, or message extension apps. Enabling slash commands typically involves two steps:
+You can enable slash commands for your agents, bots, or message extension apps. Enabling slash commands typically involves the following:
 
-- [Update your Teams app manifest and declare supported commands](#manifest-updates-for-slash-commands): You can enable slash commands for your agent or bot by opting in through the Teams app manifest. You can choose to activate <`/app‑name`> only when necessary and to provide a tailored selection of commands ideal for slash usage.
-- [Implement the command handling in your agent or bot](#enable-slash-commands): Use Teams SDK or REST APIs to configure sending the agent response as a targeted messages to a single user or as public message to the group or channel.
+- [Update your Teams app manifest and declare supported commands](#manifest-updates-for-slash-commands): You can opt for slash commands through the Teams app manifest. You can also choose to activate the commands that your agent or app provides via <`/app‑name`>. This helps to provide a tailored selection of commands that is ideal for slash usage.
+- [Implement the command handling in your agent or bot](#enable-slash-commands): Use Teams SDK or REST APIs to configure sending the agent or bot response as a targeted messages to a single user or as public message to the group or channel.
 
 ### Supported scenarios for slash commands
 
@@ -171,7 +176,7 @@ To enable slash commands, update your app manifest to opt in to targeted messagi
   You can declare command list for your agent or bot in one of the following scenarios:
 
   - **Scenario 1**: Agent or bot with separate @mention and slash command lists
-  - **Scenario 2**: Agent or bot with commands available in both #mention and slash triggers
+  - **Scenario 2**: Agent or bot with commands available in both @mention and slash triggers
   - **Scenario 3**: Message extension with slash commands
 
     Use the following examples to declare slash commands in the app manifest:
@@ -280,7 +285,7 @@ To enable slash commands, update your app manifest to opt in to targeted messagi
 
 ### Enable slash commands
 
-When a user messages your agent or bot using slash command, the message event payload adds the `isTargeted` property to the `Recipient` object in the `Activity` object. You can enable the agent or bot to send a targeted message to the same user or a public message to the group chat or channel. You can also enable the agent or bot to update or delete a message that it had previously sent.
+When a user sends a message to your agent or bot using slash command, the message event payload adds the `isTargeted` property to the `Recipient` object in the `Activity` object. You can enable the agent or bot to send a targeted message to the same user or a public message to the group chat or channel. You can also enable the agent or bot to update or delete a message that it had previously sent.
 
 #### Send an agent response
 
