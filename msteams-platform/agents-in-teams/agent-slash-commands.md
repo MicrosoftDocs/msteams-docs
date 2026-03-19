@@ -305,14 +305,14 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
 # [TypeScript](#tab/su/ts1)
 
-```typescript
+  ```typescript
 
-  app.on('message', async ({ send, activity }) => {
-    if(activity.Recipient.isTargeted) {
-      send(new MessageActivity('Reactive TM').withRecipient(activity.From, isTargeted: true))
-      }
-  });
-```
+    app.on('message', async ({ send, activity }) => {
+      if(activity.Recipient.isTargeted) {
+        send(new MessageActivity('Reactive TM').withRecipient(activity.From, isTargeted: true))
+        }
+    });
+  ```
 
 # [Python](#tab/su/Py1)
 
