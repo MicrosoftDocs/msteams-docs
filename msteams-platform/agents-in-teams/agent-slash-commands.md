@@ -322,6 +322,8 @@ Use one of the following code snippets for sending agent response to a single us
 
   [WIP: Add code snippet]
 
+---
+
 - Response to different user
 
     ```typescript
@@ -355,6 +357,8 @@ Use one of the following code snippets for sending agent response to a single us
 # [HTTP](#tab/su/api1)
 
   [WIP: Add code snippet]
+
+---
 
 #### Update an agent response
 
