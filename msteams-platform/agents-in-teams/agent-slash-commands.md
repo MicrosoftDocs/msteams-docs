@@ -117,8 +117,9 @@ Well-designed slash commands make an agent or a bot easier to discover, faster t
 
 ## Slash commands developer experience
 
-You can enable slash commands for your agents, bots, or message extension apps. Enabling slash commands typically involves the following:
+Enabling slash commands typically involves the following:
 
+- [Select one or more of the scenarios for enabling slash commands](#supported-scenarios-for-slash-commands): You can enable slash commands for your agents, bots, and message extension apps.
 - [Update your Teams app manifest and declare supported commands](#manifest-updates-for-slash-commands): You can opt for slash commands through the Teams app manifest. You can also choose to activate the commands that your agent or app provides via <`/app‑name`>. This helps to provide a tailored selection of commands that is ideal for slash usage.
 - [Implement the command handling in your agent or bot](#enable-slash-commands): Use Teams SDK or REST APIs to configure sending the agent or bot response as a targeted messages to a single user or as public message to the group or channel.
 
