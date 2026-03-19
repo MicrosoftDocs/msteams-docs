@@ -10,7 +10,7 @@ ms.date: 02/21/2024
 
 Before you create your Microsoft Teams project, ensure that the prerequisites are in place. You must:
 
-* [Install required tools to build your Teams project workspace](#install-required-tools-to-build-your-teams-agent-or-app)
+* [Install required tools to build your Teams project workspace](#install-required-tools-to-build-your-teams-workspace)
 * [Prepare Accounts to build your Teams project](#accounts-to-build-your-teams-agent-or-app)
 * [Verify custom app upload permission](#verify-custom-app-upload-permission)
 
@@ -178,7 +178,7 @@ If you're a Teams Administrator (that is, you have admin rights), follow these s
   1. Sign in to Microsoft Teams admin center with your admin credentials.
   1. Select the :::image type="icon" source="../assets/images/toolkit-v2/showall icon.PNG"::: icon > **Teams apps** > **Setup policies**.
 
-     :::image type="content" source="../assets/images/toolkit-v2/m365-admin-center-policies.png" alt-text="Screenshot shows the Setup policies under Teams apps in Microsoft 365 Admin center." border="false":::
+     :::image type="content" source="../assets/images/toolkit-v2/admin-center-policies.png" alt-text="Screenshot shows the Setup policies under Teams apps in Microsoft 365 Admin center." border="false":::
 
   1. Select **Global (Org-wide default)**.
 
