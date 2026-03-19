@@ -297,6 +297,8 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
 # [Response to same user](#tab/su)
 
+  Use one of the following code snippets for sending agent response to a single user:
+
     # [C#](#tab/dotnet1)
 
       [WIP: Add code snippet]
@@ -311,6 +313,15 @@ Use the following code snippets to enable your agent or bot to respond to a slas
           }
         });
       ```
+    # [Python](#tab/Py1)
+
+      [WIP: Add code snippet]
+
+    # [HTTP](#tab/api1)
+
+      [WIP: Add code snippet]
+
+    ---
 
 - Response to different user
 
