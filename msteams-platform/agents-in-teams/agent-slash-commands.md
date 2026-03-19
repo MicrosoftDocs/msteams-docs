@@ -27,7 +27,7 @@ Slash commands are a lightweight way to invoke an agent's or a bot's capabilitie
 
 ## What are slash commands
 
-A slash command is a quick command (with optional parameters) you can add to your agent or bot to trigger a specific action. It starts with a `/`, for example, `/summarize last 20 messages` or `/draft status update for project`. As soon as users type `/` in the message compose box, Teams shows a menu of available commands from built-in features, workflows, and any installed or available agents or apps.
+A slash command is a quick command (with optional parameters) you can add to your agent or bot to trigger a specific action. It starts with a `/`, for example, `/summarize last 20 messages` or `/draft status update for project`. As soon as users type `/` in the message compose box, Teams shows a menu of available commands from built-in features, workflows, and any installed or available agents or apps. The agent or bot can post a private or a public response depending on its relevance.
 
 [WIP: Add infographic for showing UX]
 
