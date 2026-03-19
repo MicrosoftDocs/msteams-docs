@@ -296,9 +296,7 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
 **Private message to a user**: Configure your agent or bot to send a targeted reply to the person who ran the slash command or to another user in the channel or group chat. Use one of the following scenarios to send a targeted message to a single user.
 
-- Response to same user
-
-    Use one of the following code snippets for sending agent response to a single user.
+- **Response to same user**: Use one of the following code snippets for sending agent response to a single user.
 
   # [C#](#tab/dotnet1)
 
@@ -325,9 +323,7 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
     ---
 
-- Response to different user
-
-    Use one of the following code snippets for sending agent response to a different user.
+- **Response to different user**: Use one of the following code snippets for sending agent response to a different user.
 
   # [C#](#tab/dotnet1)
 
@@ -436,7 +432,7 @@ Use the following code snippet to enable the agent or bot to delete its response
 
 [WIP: Awaiting details on error codes]
 
-For more information on error codes for targeted messages, see [Add link].
+For more information on error codes for targeted messages, see [WIP: Add link].
 
 ## Code sample
 
@@ -452,5 +448,5 @@ For more information on error codes for targeted messages, see [Add link].
 
 ## See also
 
-- Enable targeted messages [Add link]
-- Teams SDK docs [Add link]
+- Enable targeted messages [WIP: Add link]
+- Teams SDK docs [WIP: Add link]
