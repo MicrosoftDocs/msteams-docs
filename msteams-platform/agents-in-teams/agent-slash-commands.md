@@ -301,26 +301,26 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
   # [C#](#tab/dotnet1)
 
-      [WIP: Add code snippet]
+    [WIP: Add code snippet]
 
   # [TypeScript](#tab/ts1)
 
-      ```typescript
+    ```typescript
     
-        app.on('message', async ({ send, activity }) => {
-          if(activity.Recipient.isTargeted) {
-            send(new MessageActivity('Reactive TM').withRecipient(activity.From, isTargeted: true))
-            }
-        });
-      ```
+      app.on('message', async ({ send, activity }) => {
+        if(activity.Recipient.isTargeted) {
+          send(new MessageActivity('Reactive TM').withRecipient(activity.From, isTargeted: true))
+          }
+      });
+    ```
 
   # [Python](#tab/Py1)
 
-      [WIP: Add code snippet]
+    [WIP: Add code snippet]
 
   # [HTTP](#tab/api1)
 
-      [WIP: Add code snippet]
+    [WIP: Add code snippet]
 
     ---
 
@@ -330,26 +330,26 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
   # [C#](#tab/dotnet1)
 
-      [WIP: Add code snippet]
+    [WIP: Add code snippet]
 
   # [TypeScript](#tab/ts1)
 
-      ```typescript
-        
-        app.on('message', async ({ send, activity }) => {
-          if(activity.Recipient.isTargeted) {
-            send(new MessageActivity('Reactive TM').withRecipient(new Account {Id: <userMRI>,Name: <user Name>, Role: User}, isTargeted: true))
-          }
-        });
-      ```
+    ```typescript
+
+      app.on('message', async ({ send, activity }) => {
+        if(activity.Recipient.isTargeted) {
+          send(new MessageActivity('Reactive TM').withRecipient(new Account {Id: <userMRI>,Name: <user Name>, Role: User}, isTargeted: true))
+        }
+      });
+    ```
 
   # [Python](#tab/Py1)
 
-      [WIP: Add code snippet]
+    [WIP: Add code snippet]
 
   # [HTTP](#tab/api1)
 
-      [WIP: Add code snippet]
+    [WIP: Add code snippet]
 
     ---
 
@@ -357,24 +357,24 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
   # [C#](#tab/dotnet1)
 
-      [WIP: Add code snippet]
+    [WIP: Add code snippet]
 
   # [TypeScript](#tab/ts1)
 
-      ```typescript
-      
-      app.on('message', async ({ send, activity }) => {
-        send(new MessageActivity('Normal msg'))  
-      });
-      ```
+    ```typescript
+
+    app.on('message', async ({ send, activity }) => {
+      send(new MessageActivity('Normal msg'))  
+    });
+    ```
 
   # [Python](#tab/Py1)
 
-      [WIP: Add code snippet]
+    [WIP: Add code snippet]
 
   # [HTTP](#tab/api1)
 
-      [WIP: Add code snippet]
+    [WIP: Add code snippet]
 
     ---
 
