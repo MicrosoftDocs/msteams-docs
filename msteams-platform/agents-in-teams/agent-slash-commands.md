@@ -297,14 +297,20 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
   # [Response to same user](#tab/tm1)
 
-    ```typescript
+        # [C#](#tab/dotnet1)
+
+          [WIP: Add code snippet]
+
+        # [TypeScript](#tab/ts1)
+
+          ```typescript
     
-    app.on('message', async ({ send, activity }) => {
-      if(activity.Recipient.isTargeted) {
-        send(new MessageActivity('Reactive TM').withRecipient(activity.From, isTargeted: true))
-      }
-    });
-    ```
+          app.on('message', async ({ send, activity }) => {
+            if(activity.Recipient.isTargeted) {
+              send(new MessageActivity('Reactive TM').withRecipient(activity.From, isTargeted: true))
+            }
+          });
+          ```
 
   # [Response to different user](#tab/tm2)
 
