@@ -2,10 +2,10 @@
 title: Apps for Teams Meeting Stage
 description: Learn how to build apps for Teams meeting stage, share to stage APIs, and generate a deep link to share content to stage in meetings.
 ms.topic: article
-ms.author: surbhigupta
+ms.author: vikasalmal
 ms.localizationpriority: medium
 ms.owner: kanchankaur
-ms.date: 10/29/2024
+ms.date: 02/27/2026
 ---
 
 # Build apps for Teams meeting stage
@@ -435,10 +435,10 @@ The following participant roles might be involved during the meeting:
 
 |Sample name | Description | .NET| Node.js | Manifest |
 |----------------|-----------------|--------------|----------------|----------------|
-|Meeting stage sample | This sample app shows a tab in meeting stage in collaborative Stageview. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp/demo-manifest) |
+|Meeting stage sample | This sample app shows a tab in meeting stage in collaborative Stageview. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-stage-view/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-stage-view/csharp/demo-manifest) |
 | In-meeting notification |This sample app demonstrates how to implement targeted notifications in meetings using Adaptive Cards and bot interactions. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp/demo-manifest) |
-| In-meeting document signing | This sample app enables users to review and sign documents in real time during meetings. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA | NA |
-|Screen share content to stage| This sample app demonstrates how to enable and configure apps for Teams meetings, allowing users to interact with a shared meeting stage. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp)|NA|NA|
+| In-meeting document signing | This sample app enables users to review and sign documents in real time during meetings. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/TeamsJS/meetings-share-to-stage-signing/csharp) | NA | NA |
+|Screen share content to stage| This sample app demonstrates how to enable and configure apps for Teams meetings, allowing users to interact with a shared meeting stage. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/meetings-stage-view/csharp)|NA|NA|
 
 ## See also
 
