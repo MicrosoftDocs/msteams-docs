@@ -4,8 +4,8 @@ description: Learn how to use the Meeting AI Insights API to fetch Teams meeting
 ms.localizationpriority: high
 ms.topic: article
 ms.owner: vtarasov
-ms.author: surbhigupta
-ms.date: 12/12/2025
+ms.author: sukanyadas
+ms.date: 03/20/2026
 ---
 
 # Get AI-generated meeting summaries with Meeting AI Insights API
@@ -41,6 +41,10 @@ Here are some use cases for fetching AI-generated insights using Meeting AI Insi
 ## Prerequisites
 
 * You must [turn on the transcription or recording](https://support.microsoft.com/en-us/office/view-live-transcription-in-microsoft-teams-meetings-dc1a8f23-2e20-4684-885e-2152e06a4a8b) for the meeting to generate insights. Alternatively, you can set a meeting to autotranscribe or autorecord programmatically using the [update onlineMeeting API](/graph/api/onlinemeeting-update?view=graph-rest-1.0&preserve-view=true&tabs=http) or directly through the [meeting options](/microsoftteams/manage-meeting-recording-options#record-and-transcribe-automatically).
+
+## License requirements for Teams meeting AI insights APIs
+
+This section describes the license requirements for Teams meeting AI insights APIs. To access the beta endpoint, users must have a [Microsoft 365 Copilot](https://www.microsoft.com/en-us/microsoft-365-copilot) license. Payment models or evaluation mode aren't applicable for these APIs; they can be used by any application for users who have the required license.
 
 ## Fetch meeting insights
 
