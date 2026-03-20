@@ -36,7 +36,7 @@ A slash command is a quick command (with optional parameters) you can add to you
 
 Use slash commands to:
 
-- Trigger a spcific agent or app task (for example, create a task, open a form, or start a workflow).
+- Trigger a specific agent or app task (for example, create a task, open a form, or start a workflow).
 - Start a private, single-turn interaction with an agent or app.
 - Provide a faster alternative to long prompts or multi-step menus.
 
