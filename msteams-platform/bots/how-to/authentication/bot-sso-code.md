@@ -59,7 +59,6 @@ Teams SDK simplifies authentication setup with built-in OAuth support and error 
 
 # [C#](#tab/cs1)
 
-    ```csharp
     var builder = WebApplication.CreateBuilder(args);
 
 var connectionName = builder.Configuration["Teams:ConnectionName"];
@@ -68,13 +67,9 @@ var app = builder.Build(); var teams = app.UseTeams();
 var logger = app.Services.GetRequiredService() .CreateLogger("BotAuthQuickstart");
 // Handle error events teams.OnError(async (_, @event) => { logger.LogError(@event.Exception, "Error occurred"); });
 app.Run();
-    ```
 
 # [JavaScript](#tab/js1)
 
-    Add the following code snippet to `index.js` (or the equivalent class in your app's code):
-
-    ```JavaScript
     import { App } from "@microsoft/teams.apps";
 
 const app = new App({
@@ -91,8 +86,6 @@ app.on('message', async (context) => {
   } catch (error) {
     context.logger?.error(`Error: ${error}`);
     await context.send("An error occurred.");
-
-    ```
 
     ---
 
