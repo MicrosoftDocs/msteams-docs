@@ -9,6 +9,7 @@ ms.topic: reference
 <!-- markdownlint-disable MD036 -->
 <!-- markdownlint-disable MD046 -->
 <!-- markdownlint-disable MD001 -->
+<!-- markdownlint-disable MD024 -->
 
 # Enable slash commands for agents and bots
 
@@ -90,8 +91,8 @@ Slash commands support the following agent-to-user response flows:
         <br>
 
         1. When a user runs a slash command, it appears right away as a targeted message.
-        1. If the agent or bot is configured for public replies, it's response quotes the user’s prompt.
-        1. The agent's or bot's response is posted to all members in the channel or group chat.
+        1. If the agent or bot is configured for public replies, the response is posted to all members in the channel or group chat. 
+        1. The agent's or bot's response quotes the user’s prompt.
     :::column-end:::
     :::column span="3":::
         :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-public-response.png" alt-text="Image shows agent's public response." border="false" lightbox="../assets/images/agents-in-teams/agent-slash-commands/agent-public-response.png":::
@@ -127,12 +128,12 @@ Enabling slash commands typically involves the following:
 
 Agents and bots can participate in slash commanding in the following ways:
 
-- **App-defined slash commands**: Agents and bots can publish a curated set of slash commands so users can discover and run common actions without leaving the compose box. You can explicitly declare the commands your agent or bot supports, and Teams shows them in the slash command picker when a user types `/`. This approach keeps the menu focused and avoids automatically exposing every possible capability. For example:
+- **App-defined slash commands**: Agents and bots can publish a curated set of slash commands so users can discover and run common actions without leaving the compose box. You can explicitly declare the commands your agent or bot supports, and Teams shows them in the slash command picker when a user types `/`. For example:
 
   - `/contoso incident`
   - `/contoso dashboard`
 
-- **Private user-to-agent interaction**: Slash commands can also initiate a private, one-turn interaction with agent or bot. In this model, the user enters a command (and optional text) in the compose box, and the response is delivered privately, making it ideal for drafting, lookups, and personal productivity tasks. For example:
+- **Private user-to-agent interaction**: Slash commands can initiate a private, one-turn interaction with agent or bot. In this model, the user enters a command (and optional text) in the compose box, and the response is delivered privately, making it ideal for drafting, lookups, and personal productivity tasks. For example:
 
   - `/contoso incident summarize the last 24 hours and suggest next steps`
   - `/contoso create-task fix login issue for mobile users`
@@ -146,7 +147,7 @@ Agents and bots can participate in slash commanding in the following ways:
 
 ### Manifest updates for slash commands
 
-To enable slash commands, update your app manifest to opt in to targeted messaging and (optionally) list the commands you want to show in the compose box. In the manifest, you must:
+Update your app manifest to opt in to targeted messaging and (optionally) list the commands you want to show in the compose box. In the manifest, you must:
 
 - Declare whether the agent or bot supports slash commands.
 - List the specific slash commands the agent or bot exposes.
@@ -154,7 +155,9 @@ To enable slash commands, update your app manifest to opt in to targeted messagi
 
 [WIP: Add link to Manifest docs]
 
-- **Support agent-specific commands without a command list**: With this opt-in, users can invoke your agent or bot from the compose box using <`/agent-name`>, and it enables the default private targeted message response flow. If you don’t publish a list of commands, users can still invoke your agent or bot via <`/agent-name`> and provide free-form input (depending on your agent's or bot's capabilities).
+The following options are supported:
+
+- **Opt for agent-specific commands without a command list**: With this opt-in, users can invoke your agent or bot from the compose box using <`/agent-name`>, and it enables the default private targeted message response flow. If you don’t publish a list of commands, users can still invoke your agent or bot via <`/agent-name`> and provide free-form input (depending on your agent's or bot's capabilities).
 
     Use the following example to configure the app manifest for supporting slash commands without declaring any commands:
 
@@ -172,19 +175,19 @@ To enable slash commands, update your app manifest to opt in to targeted messagi
 
 - **Provide an explicit command list**: Define a curated set of commands (for example, `/help`, `/create`, `/design`) that appear in the slash menu with a short description. Existing agent or bot commands can be reused, or you can introduce new commands optimized for slash usage.
 
-  After you enable slash commands, declare each command you want to show in the manifest, including the command name and a user-facing description. List the specific commands, and not broad categories. Once you declare a command, users can invoke it (for example, <`/create`> or <`/app-name create`>, depending on the client experience).
+  After you enable slash commands, declare each command in the manifest, including the command name and a user-facing description. List the specific commands, and not broad categories. Once you declare a command, users can invoke it (for example, <`/create`> or <`/app-name create`>, depending on the client experience).
 
-  You can declare command list for your agent or bot in one of the following scenarios:
+  You can declare a command list for your agent or bot in one of the following scenarios:
 
   - **Scenario 1**: Agent or bot with separate @mention and slash command lists
-  - **Scenario 2**: Agent or bot with commands available in both @mention and slash triggers
-  - **Scenario 3**: Message extension with slash commands
+  - **Scenario 2**: Agent or bot with same commands available in both @mention and slash triggers
+  - **Scenario 3**: Message extension actions with slash commands
 
     Use the following examples to declare slash commands in the app manifest:
 
     # [Scenario 1](#tab/sc1)
 
-      Use the following example to configure the app manifest for supporting an agent or a bot that offers separate for @mention and slash triggers.
+      Use the following example to configure the app manifest for supporting an agent or a bot that offers separate commands for @mention and slash triggers.
 
     ```json
     {
@@ -217,7 +220,7 @@ To enable slash commands, update your app manifest to opt in to targeted messagi
 
     # [Scenario 2](#tab/sc2)
 
-      Use the following example to configure the app manifest for supporting an agent or a bot that makes the same commands available in both @mention and slash triggers.
+      Use the following example to configure the app manifest for supporting an agent or a bot that makes the same commands available for both @mention and slash triggers.
 
     ```json
     {
@@ -243,11 +246,11 @@ To enable slash commands, update your app manifest to opt in to targeted messagi
 
     # [Scenario 3](#tab/sc3)
 
-      Use the following example to configure the app manifest for supporting an agent or a message extension with commands that are also available via slash commands using the new `triggers` property.
+      Use the following example to configure the app manifest for supporting message extension actions that are available via slash commands using the new `triggers` property.
 
       > [!NOTE]
       > - `summarizeCommand` omits `triggers`, so it isn't surfaced in the slash list (unlike `commandLists`, where absent `triggers` defaults to `["mention"]`).
-      > - You can configure the app manifest to enable slash commands for both the bot and message extension by combining the code examples from scenarios 1 or 2 with scenario 3.
+      > - You can configure the app manifest to enable slash commands for both the bot and message extension by combining the manifest examples from scenarios 1 or 2 with scenario 3.
 
     ```json
     {
@@ -286,7 +289,7 @@ To enable slash commands, update your app manifest to opt in to targeted messagi
 
 ### Enable slash commands
 
-When a user sends a message to your agent or bot using slash command, the message event payload adds the `isTargeted` property to the `Recipient` object in the `Activity` object. You can enable the agent or bot to send a targeted message to the same user or a public message to the group chat or channel. You can also enable the agent or bot to update or delete a message that it had previously sent.
+When a user sends a message to your agent or bot using slash command, the message event payload adds the `isTargeted` property to the `Recipient` object in the `Activity` object. You can enable the agent or bot to send a targeted message to that user or a public message to the group chat or channel. You can also enable the agent or bot to update or delete a message that it had previously sent.
 
 #### Send an agent response
 
@@ -294,9 +297,9 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
 [WIP: Add link to Teams SDK docs]
 
-**Private message to a user**: Configure your agent or bot to send a targeted reply to the person who ran the slash command or to another user in the channel or group chat. Use one of the following scenarios to send a targeted message to a single user.
+**Private message to a user**: Configure your agent or bot to send a targeted reply to the person who ran the slash command or to another user in the channel or group chat. Use one of the following private message scenarios to send a targeted message to a single user.
 
-- **Response to same user**: Use one of the following code snippets for sending agent response to a single user.
+- **Response to same user**: Use one of the following code snippets for sending a targeted agent response to the user who triggered the slash command.
 
   # [C#](#tab/dotnet1)
 
@@ -323,7 +326,7 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
     ---
 
-- **Response to different user**: Use one of the following code snippets for sending agent response to a different user.
+- **Response to different user**: Use one of the following code snippets for an sending a targeted agent response to a different user in the group or channel.
 
   # [C#](#tab/dotnet1)
 
@@ -350,13 +353,13 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
     ---
 
-- **Public response by the agent**: You can enable the agent or bot to send a public response in the group or channel if the response is relevant to all members.
+**Public response by the agent**: You can enable the agent or bot to send a public response in the group or channel if the response is relevant to all members.
 
-  # [C#](#tab/dotnet1)
+# [C#](#tab/dotnet1)
 
     [WIP: Add code snippet]
 
-  # [TypeScript](#tab/ts1)
+# [TypeScript](#tab/ts1)
 
     ```typescript
 
@@ -365,11 +368,11 @@ Use the following code snippets to enable your agent or bot to respond to a slas
     });
     ```
 
-  # [Python](#tab/Py1)
+# [Python](#tab/Py1)
 
     [WIP: Add code snippet]
 
-  # [HTTP](#tab/api1)
+# [HTTP](#tab/api1)
 
     [WIP: Add code snippet]
 
@@ -377,9 +380,9 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
 #### Update an agent response
 
-The agent or bot can edit the original targeted message if needed. The updated message appears only in the intended user’s view.
+The agent or bot can edit the original targeted message, if needed. The updated message appears only in the intended user’s view.
 
-Use one of the following code snippets to edit targeted message:
+Use one of the following code snippets to edit the agent's response:
 
 # [C#](#tab/dotnet1)
 
