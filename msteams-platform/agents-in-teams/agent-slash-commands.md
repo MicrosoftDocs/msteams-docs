@@ -13,7 +13,7 @@ ms.topic: reference
 
 # Enable slash commands for agents and bots
 
-Slash commands are a lightweight way to invoke an agent's or a bot's capabilities using a predictable, text-first syntax that starts with `/` (slash). They act like power shortcuts that combine the speed of commands with the flexibility of natural language.
+Slash commands are simple shortcuts that start with / in the Teams compose box that let users pick a command to act instantly to trigger actions.
 
 **Key points**
 
