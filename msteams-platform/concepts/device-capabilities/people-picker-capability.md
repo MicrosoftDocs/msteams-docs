@@ -3,8 +3,8 @@ title: Integrate People Picker in Teams Apps
 description: In this article, learn how to use Teams JavaScript client library to integrate People Picker control and advantages of using people picker.
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.author: surbhigupta
-ms.date: 02/24/2023
+ms.author: vikasalmal
+ms.date: 03/02/2026
 ---
 
 # Integrate People Picker
@@ -116,7 +116,7 @@ The following table lists the error codes and their descriptions:
 
 | Sample name           | Description | .NET |Node.js    | Manifest|
 |:---------------------|:--------------|:---------|:---------|:---------|
-|Tab people picker | This sample tab app showcases the People Picker feature using the Teams JavaScript client SDK for selecting users within Microsoft Teams. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-people-picker/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-people-picker/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-people-picker/csharp/demo-manifest/Tab-People-Picker.zip)
+|Tab people picker | This sample tab app showcases the People Picker feature using the Teams JavaScript client SDK for selecting users within Microsoft Teams. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-people-picker/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-people-picker/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/tab-people-picker/csharp/demo-manifest/Tab-People-Picker.zip)
 
 ## See also
 
