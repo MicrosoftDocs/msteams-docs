@@ -4,7 +4,7 @@ description: Learn how to add code configuration, handle an access token, receiv
 ms.topic: how-to
 ms.localizationpriority: high
 zone_pivot_groups: enable-sso
-ms.date: 03/18/2026
+ms.date: 03/20/2026
 ms.owner: ryanbliss
 ---
 # Add code to enable SSO in your bot app
@@ -273,6 +273,8 @@ app.on('message', async (context) =&gt; {
 });
 ```
 
+---
+
 ### Handle successful sign-in events
 
 # [C#](#tab/cs3)
@@ -413,7 +415,7 @@ app.on('message', async (context) =&gt; {
 
 | **Sample name** | **Description** | **C#** | **Node.js** |
 | --- | --- | --- | --- |
-| Bot Auth Quickstart | Quickly set up Teams bot with SSO for seamless user authentication for one-on-one and group chats. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-auth-quickstart/dotnet/bot-auth-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-auth-quickstart/nodejs/bot-auth-quickstart)  |
+| Bot Auth Quickstart | This sample demonstrates how to implement Single Sign-On (SSO) authentication for Microsoft Teams bots using Azure Active Directory | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-auth-quickstart/dotnet/bot-auth-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-auth-quickstart/nodejs/bot-auth-quickstart)  |
 
 ::: zone-end
 
