@@ -28,23 +28,22 @@ Slash commands are simple shortcuts that start with `/` in the Teams compose box
 
 ## What are slash commands
 
-A slash command is a quick command (with optional parameters) you can add to your agent or bot to trigger a specific action. It starts with a `/`, for example, `/summarize last 20 messages` or `/draft status update for project`. As soon as users type `/` in the message compose box, Teams shows a menu of available commands from built-in features, workflows, and any installed or available agents or apps. The agent or bot can post a private or a public response depending on its relevance.
-
-[WIP: Add infographic for showing UX]
+A slash command is a quick command (with optional parameters) you can add to your agent or bot to trigger a specific action. It starts with a `/` for example, `/contoso`. As soon as users type `/` in the message compose box, Teams shows a menu of available commands from built-in features, workflows, and any installed or available agents or apps.
 
 :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-slash-commands.png" alt-text="Image shows the response flows for agent slash commands." border="false" lightbox="../assets/images/agents-in-teams/agent-slash-commands/agent-slash-commands.png":::
 
 Use slash commands to:
 
 - Trigger a specific agent or app task (for example, create a task, open a form, or start a workflow).
-- Start a private, single-turn interaction with an agent or app.
 - Provide a faster alternative to long prompts or multi-step menus.
 
-You can enable agent-specific slash commands, private agent-to-user interaction, and slash commands for message extension actions. For more information, see [supported scenarios for slash commands](#supported-scenarios-for-slash-commands).
+You can enable slash commands for agent-specific actions, agent-to-user interaction, and for message extension actions. For more information, see [supported scenarios for slash commands](#supported-scenarios-for-slash-commands). The agent or bot can post a private or a public response depending on its relevance.
 
+<!--
 ## User experience
+-->
 
-Most slash command responses are private, one-to-one interactions between the user who initiated the command and the agent or bot. Only that user sees the result, which keeps the conversation focused and reduces noise.
+Slash command responses are private, one-to-one interactions between the user who initiated the command and the agent or bot. Only that user sees the result, which keeps the conversation focused and reduces noise.
 
 Optionally, you can control the response visibility through agent or bot logic and share responses to the group or channel when it benefits collaboration.
 
