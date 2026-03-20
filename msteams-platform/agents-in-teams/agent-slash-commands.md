@@ -355,11 +355,11 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
 **Public response by the agent**: You can enable the agent or bot to send a public response in the group or channel if the response is relevant to all members.
 
-# [C#](#tab/dotnet1)
+# [C#](#tab/dotnet)
 
-    [WIP: Add code snippet]
+  [WIP: Add code snippet]
 
-# [TypeScript](#tab/ts1)
+# [TypeScript](#tab/ts)
 
     ```typescript
 
@@ -368,13 +368,13 @@ Use the following code snippets to enable your agent or bot to respond to a slas
     });
     ```
 
-# [Python](#tab/Py1)
+# [Python](#tab/Py)
 
-    [WIP: Add code snippet]
+  [WIP: Add code snippet]
 
-# [HTTP](#tab/api1)
+# [HTTP](#tab/api)
 
-    [WIP: Add code snippet]
+  [WIP: Add code snippet]
 
     ---
 
