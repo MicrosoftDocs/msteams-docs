@@ -57,19 +57,26 @@ You've now configured the required environment variables for your bot app and SS
 
 Teams SDK simplifies authentication setup with built-in OAuth support and error handling.
 
-# [C#](#tab/cs4)
+# [C#](#tab/cs1)
 
 ```csharp
 var builder = WebApplication.CreateBuilder(args);
 var connectionName = builder.Configuration["Teams:ConnectionName"];
+
 // Configure Teams app with OAuth builder.AddTeams(App.Builder().AddOAuth(connectionName));
-var app = builder.Build(); var teams = app.UseTeams();
-var logger = app.Services.GetRequiredService() .CreateLogger("BotAuthQuickstart");
+
+var app = builder.Build();
+var teams = app.UseTeams();
+
+var logger = app.Services.GetRequiredService()
+    .CreateLogger("BotAuthQuickstart");
+
 // Handle error events teams.OnError(async (_, @event) => { logger.LogError(@event.Exception, "Error occurred"); });
+
 app.Run();
 ```
 
-# [JavaScript](#tab/js4)
+# [JavaScript](#tab/js1)
 
 ```JavaScript
 import { App } from "@microsoft/teams.apps";
@@ -82,12 +89,14 @@ const app = new App({
  
 // Teams SDK handles errors automatically
 // Optional: Add custom error logging in message handlers
-app.on('message', async (context) => {
+app.on('message', async (context) =&gt; {
   try {
     // Your bot logic
   } catch (error) {
     context.logger?.error(`Error: ${error}`);
     await context.send("An error occurred.");
+  }
+});
 ```
 
 ---
@@ -177,105 +186,122 @@ If you encounter any errors, see [Troubleshoot SSO authentication in Teams](../.
 
 Teams SDK simplifies authentication with automatic token handling. No manual token management or dialogs are needed.
 
-Use the following code snippet to invoke response:
+### Check authentication status and trigger sign-in
+
+# [C#](#tab/cs2)
+
+```csharp
+// Helper function to handle authentication
+async Task&lt;Microsoft.Graph.GraphServiceClient?&gt; GetAuthenticatedGraphClient(IContext context)
+{
+  if (!context.IsSignedIn)
+  {
+    await context.Send("🔐 Please sign in first to access Microsoft Graph.");
+    await context.SignIn();
+    return null;
+  }
+
+  try
+  {
+    return context.GetUserGraphClient();
+  }
+  catch (Exception ex)
+  {
+    logger.LogError(ex, "Failed to create Graph client");
+    await context.Send("🔐 Failed to create authenticated client. Trying to sign in again.");
+    await context.SignIn();
+    return null;
+  }
+}
+
+// Handle sign-in command
+async Task HandleSignInCommand(IContext context)
+{
+  if (context.IsSignedIn)
+  {
+    await context.Send("✅ You are already signed in!");
+  }
+  else
+  {
+    await context.Send("🔐 Signing you in to access Microsoft Graph...");
+    await context.SignIn();
+  }
+}
+
+// Register command handler
+teams.OnMessage("signin", async context =&gt; await HandleSignInCommand(context));
+```
+
+# [JavaScript](#tab/js2)
+
+```JavaScript
+// Helper function to handle authentication
+async function getAuthenticatedGraphClient(context: any): Promise&lt;any | null&gt; {
+  if (!context.isSignedIn) {
+    await context.send("🔐 Please sign in first to access Microsoft Graph.");
+    await context.signin();
+    return null;
+  }
+ 
+  try {
+    return context.userGraph;
+  } catch (error: any) {
+    context.logger?.error(`Failed to create Graph client: ${error}`);
+    await context.send("🔐 Failed to create authenticated client. Trying to sign in again.");
+    await context.signin();
+    return null;
+  }
+}
+ 
+// Handler for signin command
+async function handleSignin(context: any): Promise&lt;void&gt; {
+  if (context.isSignedIn) {
+    await context.send("✅ You are already signed in!");
+  } else {
+    await context.send("🔐 Signing you in to access Microsoft Graph...");
+    await context.signin();
+  }
+}
+ 
+// Dispatch incoming messages
+app.on('message', async (context) =&gt; {
+  const text = context.activity.text?.toLowerCase().trim() || '';
+  
+  if (text === 'signin') {
+    await handleSignin(context);
+  }
+});
+```
+
+### Handle successful sign-in events
 
 # [C#](#tab/cs3)
 
 ```csharp
-public MainDialog(IConfiguration configuration, ILogger<MainDialog> logger)
-            : base(nameof(MainDialog), configuration["ConnectionName"])
-        {
-            AddDialog(new OAuthPrompt(
-                nameof(OAuthPrompt),
-                new OAuthPromptSettings
-                {
-                    ConnectionName = ConnectionName,
-                    Text = "Please Sign In",
-                    Title = "Sign In",
-                    Timeout = 300000, // User has 5 minutes to login (1000 * 60 * 5)
-                    EndOnInvalidMessage = true
-                }));
+teams.OnSignIn(async (_, @event) =>
+{
+  var context = @event.Context;
 
-            AddDialog(new ConfirmPrompt(nameof(ConfirmPrompt)));
-
-            AddDialog(new WaterfallDialog(nameof(WaterfallDialog), new WaterfallStep[]
-            {
-                PromptStepAsync,
-                LoginStepAsync,
-            }));
-
-            // The initial child Dialog to run.
-            InitialDialogId = nameof(WaterfallDialog);
-        }
-
-
-private async Task<DialogTurnResult> PromptStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
-        {
-            return await stepContext.BeginDialogAsync(nameof(OAuthPrompt), null, cancellationToken);
-        }
-
-private async Task<DialogTurnResult> LoginStepAsync(WaterfallStepContext stepContext, CancellationToken cancellationToken)
-        {
-            
-            var tokenResponse = (TokenResponse)stepContext.Result;
-            if (tokenResponse?.Token != null)
-            {
-                var token = tokenResponse.Token;
-
-                // On successful login, the token contains sign in token.
-            }
-            else 
-            {
-                await stepContext.Context.SendActivityAsync(MessageFactory.Text("Login was not successful please try again."), cancellationToken);
-            }            
-
-            return await stepContext.EndDialogAsync(cancellationToken: cancellationToken);
-        }
+  await context.Send(
+    "✅ **Successfully signed in!**\n\n" +
+    "You can now use these commands:\n\n" +
+    "• profile - View your profile\n\n" +
+    "• signout - Sign out when done"
+  );
+});
 ```
 
 # [JavaScript](#tab/js3)
 
 ```JavaScript
-class MainDialog {
-  
-        this.addDialog(new OAuthPrompt(OAUTH_PROMPT, {
-                    connectionName: process.env.connectionName,
-                    text: 'Please Sign In',
-                    title: 'Sign In',
-                    timeout: 300000
-                }));
-
-        this.addDialog(new ConfirmPrompt(CONFIRM_PROMPT));
-
-        this.addDialog(new WaterfallDialog(MAIN_WATERFALL_DIALOG, [
-                    this.promptStep.bind(this),
-                    this.loginStep.bind(this),
-                ]));
-
-        this.initialDialogId = MAIN_WATERFALL_DIALOG;
-
-    }
-
-async promptStep(stepContext) {
-        try {
-            return await stepContext.beginDialog(OAUTH_PROMPT);
-        } catch (err) {
-            console.error(err);
-        }
-    }
-
-async loginStep(stepContext) {
-        // Get the token from the previous step. Note that we could also have gotten the
-        // token directly from the prompt itself. There is an example of this in the next method.
-        const tokenResponse = stepContext.result;
-        if (!tokenResponse || !tokenResponse.token) {
-            await stepContext.context.sendActivity('Login was not successful please try again.');
-        } else {
-            const token = tokenResponse.token;
-            // On successful login, the token contains sign in token.
-        }
-        return await stepContext.endDialog();
-    }
+app.event('signin', async (context) =&gt; {
+  await context.send(
+    "✅ **Successfully signed in!**\n\n" +
+    "You can now use these commands:\n\n" +
+    "• profile - View your profile\n\n" +
+    "• signout - Sign out when done"
+  );
+});
 ```
 
 ---
@@ -291,7 +317,7 @@ async loginStep(stepContext) {
 Web APIs on your server must decode the access token and verify if it's sent from the client.
 
 > [!NOTE]
-> If you use Teams SDK, it handles the access token validation. If you don't use Bot Framework, follow the guidelines given in this section.
+> If you use Teams SDK, it handles the access token validation. If you don't use Teams SDK, follow the guidelines given in this section.
 
 For more information about validating access token, see [Validate tokens](/azure/active-directory/develop/access-tokens#validate-tokens).
 
@@ -339,51 +365,43 @@ Teams SDK provides a simple sign-out method to clear the user's authentication s
 # [C#](#tab/cs4)
 
 ```csharp
-    private async Task<DialogTurnResult> InterruptAsync(DialogContext innerDc, 
-    CancellationToken cancellationToken = default(CancellationToken))
-        {
-            if (innerDc.Context.Activity.Type == ActivityTypes.Message)
-            {
-                var text = innerDc.Context.Activity.Text.ToLowerInvariant();
+async Task HandleSignOutCommand(IContext context)
+{
+  if (!context.IsSignedIn)
+  {
+    await context.Send("ℹ️ You are not currently signed in.");
+  }
+  else
+  {
+    await context.SignOut();
+    await context.Send("👋 You have been signed out successfully!");
+  }
+}
 
-                // Allow logout anywhere in the command.
-                if (text.IndexOf("logout") >= 0)
-                {
-                    // The UserTokenClient encapsulates the authentication processes.
-                    var userTokenClient = innerDc.Context.TurnState.Get<UserTokenClient>();
-                    await userTokenClient.SignOutUserAsync(
-                    innerDc.Context.Activity.From.Id, 
-                    ConnectionName, 
-                    innerDc.Context.Activity.ChannelId, 
-                    cancellationToken
-                    ).ConfigureAwait(false);
-
-                    await innerDc.Context.SendActivityAsync(MessageFactory.Text("You have been signed out."), cancellationToken);
-                    return await innerDc.CancelAllDialogsAsync(cancellationToken);
-                }
-            }
-
-            return null;
-        }
+// Register command handler
+teams.OnMessage("signout", async context =&gt; await HandleSignOutCommand(context));
 ```
 
 # [JavaScript](#tab/js4)
 
 ```JavaScript
-    async interrupt(innerDc) {
-        if (innerDc.context.activity.type === ActivityTypes.Message) {
-            const text = innerDc.context.activity.text.toLowerCase();
-            if (text === 'logout') {
-                const userTokenClient = innerDc.context.turnState.get(innerDc.context.adapter.UserTokenClientKey);
-
-                const { activity } = innerDc.context;
-                await userTokenClient.signOutUser(activity.from.id, this.connectionName, activity.channelId);
-
-                await innerDc.context.sendActivity('You have been signed out.');
-                return await innerDc.cancelAllDialogs();
-            }
-        }
-    }
+async function handleSignout(context: any): Promise&lt;void&gt; {
+  if (!context.isSignedIn) {
+    await context.send("ℹ️ You are not currently signed in.");
+  } else {
+    await context.signout();
+    await context.send("👋 You have been signed out successfully!");
+  }
+}
+ 
+// Dispatch incoming messages
+app.on('message', async (context) =&gt; {
+  const text = context.activity.text?.toLowerCase().trim() || '';
+  
+  if (text === 'signout' || text === 'logout') {
+    await handleSignout(context);
+  }
+});
 ```
 
 ---
@@ -395,7 +413,7 @@ Teams SDK provides a simple sign-out method to clear the user's authentication s
 
 | **Sample name** | **Description** | **C#** | **Node.js** |
 | --- | --- | --- | --- |
-| Bot Auth Quickstart | Quickly set up Teams bot with SSO for seamless user authentication for one-on-one and group chats. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-auth-quickstart/dotnet/bot-auth-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-auth-quickstart/nodejs/bot-auth-quickstart)  |
+| Bot Auth Quickstart | Quickly set up Teams bot with SSO for seamless user authentication for one-on-one and group chats. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-auth-quickstart/dotnet/bot-auth-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-auth-quickstart/nodejs/bot-auth-quickstart)  |
 
 ::: zone-end
 
