@@ -38,7 +38,7 @@ A slash command is a quick command (with optional parameters) you can add to you
 > [!NOTE]
 >
 > - Public responses must be an intentional, developer-driven choice when broader visibility adds value.
-> - The original targeted message expires after 24 hours.
+> - The original private message expires after 24 hours.
 
 Use slash commands to:
 
