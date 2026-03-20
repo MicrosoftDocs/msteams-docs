@@ -361,12 +361,12 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
 # [TypeScript](#tab/ts)
 
-    ```typescript
+  ```typescript
 
-    app.on('message', async ({ send, activity }) => {
-      send(new MessageActivity('Normal msg'))  
-    });
-    ```
+  app.on('message', async ({ send, activity }) => {
+    send(new MessageActivity('Normal msg'))  
+  });
+  ```
 
 # [Python](#tab/Py)
 
@@ -376,7 +376,7 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
   [WIP: Add code snippet]
 
-    ---
+---
 
 #### Update an agent response
 
