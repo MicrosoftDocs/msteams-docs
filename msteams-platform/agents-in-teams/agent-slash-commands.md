@@ -46,7 +46,7 @@ You can enable agent-specific slash commands, private agent-to-user interaction,
 
 Most slash command responses are private, one-to-one interactions between the user who initiated the command and the agent or bot. Only that user sees the result, which keeps the conversation focused and reduces noise.
 
-Optionally, you can control the response visibility through agent or bot logic and share responses to the channel or group chat when it benefits collaboration.
+Optionally, you can control the response visibility through agent or bot logic and share responses to the group or channel when it benefits collaboration.
 
 > [!NOTE]
 >
@@ -83,7 +83,7 @@ Slash commands support the following agent-to-user response flows:
 
 :::row:::
     :::column span:::
-    **Public agent-to-user response (developer-enabled)**: When the response is useful to the wider group, you can choose to enable your agent or bot to show it publicly.
+    **Public agent-to-user response (developer-enabled)**: When the response is useful to the wider audience, you can choose to enable your agent or bot to show it publicly.
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -91,7 +91,7 @@ Slash commands support the following agent-to-user response flows:
         <br>
 
         1. When a user runs a slash command, it appears right away as a targeted message.
-        1. If the agent or bot is configured for public replies, the response is posted to all members in the channel or group chat. 
+        1. If the agent or bot is configured for public replies, the response is posted to all members in the group or channel. 
         1. The agent's or bot's response quotes the user’s prompt.
     :::column-end:::
     :::column span="3":::
@@ -100,7 +100,7 @@ Slash commands support the following agent-to-user response flows:
 :::row-end:::
 :::row:::
     :::column span:::
-        This flow makes it easy to share agent or bot responses when they’re helpful to the group like status updates, confirmations, or other information meant for everyone to see.
+        This flow makes it easy to share agent or bot responses when they’re helpful to the group or channel like status updates, confirmations, or other information meant for everyone to see.
     :::column-end:::
 :::row-end:::
 
@@ -289,7 +289,7 @@ The following options are supported:
 
 ### Enable slash commands
 
-When a user sends a message to your agent or bot using slash command, the message event payload adds the `isTargeted` property to the `Recipient` object in the `Activity` object. You can enable the agent or bot to send a targeted message to that user or a public message to the group chat or channel. You can also enable the agent or bot to update or delete a message that it had previously sent.
+When a user sends a message to your agent or bot using slash command, the message event payload adds the `isTargeted` property to the `Recipient` object in the `Activity` object. You can enable the agent or bot to send a targeted message to that user or a public message to the group or channel. You can also enable the agent or bot to update or delete a message that it had previously sent.
 
 #### Send an agent response
 
@@ -297,7 +297,7 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
 [WIP: Add link to Teams SDK docs]
 
-**Private message to a user**: Configure your agent or bot to send a targeted reply to the person who ran the slash command or to another user in the channel or group chat. Use one of the following private message scenarios to send a targeted message to a single user.
+**Private message to a user**: Configure your agent or bot to send a targeted reply to the person who ran the slash command or to another user in the group or channel. Use one of the following private message scenarios to send a targeted message to a single user.
 
 - **Response to same user**: Use one of the following code snippets for sending a targeted agent response to the user who triggered the slash command.
 
@@ -326,7 +326,7 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
     ---
 
-- **Response to different user**: Use one of the following code snippets for an sending a targeted agent response to a different user in the group or channel.
+- **Response to different user**: Use one of the following code snippets for sending a targeted agent response to a different user in the group or channel.
 
   # [C#](#tab/dotnet1)
 
