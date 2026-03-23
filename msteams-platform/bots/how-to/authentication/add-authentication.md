@@ -1,11 +1,11 @@
 ---
 title: OAuth 2.0 Bot Authentication with Azure
-author: surbhigupta
+author: vikasalmal
 description: Learn how to enable authentication using third-party provider to a bot app in Teams using Entra ID. Learn to create and register bot resource group and service plan.
 ms.topic: how-to
 ms.localizationpriority: high
 ms.owner: ryanbliss
-ms.date: 03/16/2026
+ms.date: 03/20/2026
 ---
 
 # Add authentication to your Teams bot
@@ -32,11 +32,11 @@ In this article you'll learn:
 - Azure account. If needed, you can create an [Azure free account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 - The following sample:
 
-    | Sample | BotBuilder version | Demonstrates |
-    |:---|:---:|:---|
-    | **Bot authentication** in [cs-auth-sample][teams-auth-bot-cs] | v4 | OAuthCard support |
-    | **Bot authentication** in [js-auth-sample][teams-auth-bot-js] | v4 | OAuthCard support |
-    | **Bot authentication** in [py-auth-sample][teams-auth-bot-py] | v4 | OAuthCard support |
+    | Sample |
+    |:---|
+    | **Bot authentication** in [cs-auth-sample][teams-auth-bot-cs] |
+    | **Bot authentication** in [js-auth-sample][teams-auth-bot-js] |
+    | **Bot authentication** in [py-auth-sample][teams-auth-bot-py] |
 
 ## Create the resource group
 
@@ -92,7 +92,7 @@ The Azure Bot resource registration registers your web service as a bot with the
 1. Select **Type of App** as **User-Assigned Managed Identity** or **Single Tenant** for **Microsoft App ID**.
 
     >[!IMPORTANT]
-    > The **Multi Tenant** bot type in **Azure Bot Service** is deprecated. Existing Multi Tenant bots continues to work for now.</br> All new bot registrations must either use the **Single Tenant** bot type or the **User-Assigned Managed Identity** type.</br> When registering your Entra app in Azure portal, you can still select the **Accounts in any organizational directory (Multi Tenant)** option. This enables your bot to work across multiple tenants, even outside the tenant where the app is registered, when using one of the supported bot types.</br> In all cases, the **MicrosoftAppTenantId** must be set to the **Tenant ID of the Azure tenant where the Microsoft Entra ID app is registered**.
+    > The **Multi Tenant** bot type in **Azure Bot Service** is deprecated. Existing Multi Tenant bots continues to work for now.</br> All new bot registrations must either use the **Single Tenant** bot type or the **User-Assigned Managed Identity** type.</br> When registering your Entra app in Azure portal, you can still select the **Accounts in any organizational directory (Multi Tenant)** option. This enables your bot to work across multiple tenants, even outside the tenant where the app is registered, when using one of the supported bot types.</br> In all cases, the **TenantId** must be set to the **Tenant ID of the Azure tenant where the Microsoft Entra ID app is registered**.
 
    :::image type="content" source="../../../assets/images/adaptive-cards/single-tenant.png" alt-text="Screenshot shows how to select multitenant for Microsoft AppID.":::
 
@@ -293,7 +293,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 1. In C#, Update **appsettings.json** as follows:
 
     - Set `ConnectionName` to the name of the identity provider connection you added to the bot registration. The name we used in this example is *BotTeamsAuthADv1*.
-    - Set `MicrosoftAppId` to the **bot App ID** you saved at the time of the bot registration.
+    - Set `ClientId` to the **bot App ID** you saved at the time of the bot registration.
     - Set `MicrosoftAppPassword` to the **customer secret** you saved at the time of the bot registration.
 
     Depending on the characters in your bot secret, you might need to XML escape the password. For example, any ampersands (&) must be encoded as `&amp;`.
@@ -314,8 +314,8 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 `npm install`
 1. Update the **.env** configuration as follows:
 
-    - Set `MicrosoftAppId` to the **bot App ID** you saved at the time of the bot registration.
-    - Set `MicrosoftAppPassword` to the **customer secret** you saved at the time of the bot registration.
+    - Set `ClientId` to the **bot App ID** you saved at the time of the bot registration.
+    - Set `ClientSecret` to the **customer secret** you saved at the time of the bot registration.
     - Set the `connectionName` to the name of the identity provider connection.
     Depending on the characters in your bot secret, you might need to XML escape the password. For example, any ampersands (&) must be encoded as `&amp;`.
 
@@ -332,7 +332,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 1. Update **config.py**:
 
     - Set `ConnectionName` to the name of the OAuth connection setting you added to your bot.
-    - Set `MicrosoftAppId` and `MicrosoftAppPassword` to your bot's app ID and app secret.
+    - Set `ClientId` and `ClientSecret` to your bot's app ID and app secret.
 
       Depending on the characters in your bot secret, you might need to XML escape the password. For example, any ampersands (&) must be encoded as `&amp;`.
 
@@ -538,36 +538,36 @@ It launches ngrok to listen on the port you specify. In return, it gives you an 
 This manifest contains information needed by Teams to connect with the bot:  
 
 ```json
-{
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.5",
+- {
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.19/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.19",
   "version": "1.0.0",
-  "id": "",
+  "id": "${{TEAMS_APP_ID}}",
   "developer": {
-    "name": "TeamsBotAuth",
-    "websiteUrl": "https://www.microsoft.com",
-    "privacyUrl": "https://www.teams.com/privacy",
-    "termsOfUseUrl": "https://www.teams.com/termsofuse"
+    "name": "Teams App, Inc.",
+    "websiteUrl": "https://example.azurewebsites.net",
+    "privacyUrl": "https://example.azurewebsites.net/privacy",
+    "termsOfUseUrl": "https://example.azurewebsites.net/termsofuse"
   },
   "icons": {
     "color": "color.png",
     "outline": "outline.png"
   },
   "name": {
-    "short": "TeamsBotAuth",
-    "full": "Teams Bot Authentication"
+    "short": "Auth Bot",
+    "full": "Auth Bot"
   },
   "description": {
-    "short": "TeamsBotAuth",
-    "full": "Teams Bot Authentication"
+    "short": "Teams bot with SSO authentication and Graph API integration.",
+    "full": "This bot demonstrates SSO authentication in Microsoft Teams using Azure AD, and uses Microsoft Graph API to retrieve the user profile."
   },
   "accentColor": "#FFFFFF",
   "bots": [
     {
-      "botId": "",
+      "botId": "${{BOT_ID}}",
       "scopes": [
         "personal",
-        "groupchat",
+        "groupChat",
         "team"
       ],
       "supportsFiles": false,
@@ -578,7 +578,14 @@ This manifest contains information needed by Teams to connect with the bot:
     "identity",
     "messageTeamMembers"
   ],
-  "validDomains": [ "token.botframework.com" ]
+  "validDomains": [
+    "token.botframework.com",
+    "${{BOT_DOMAIN}}"
+  ],
+  "webApplicationInfo": {
+    "id": "${{BOT_ID}}",
+    "resource": "api://botid-${{BOT_ID}}"
+  }
 }
 ```
 
@@ -697,7 +704,7 @@ This section provides Bot authentication v3 SDK sample.
 
 | **Sample name** | **Description** | **.NET** | **Node.js** | **Python** | **Manifest**|
 |---------------|------------|------------|-------------|---------------|---------------|
-| Bot authentication | This sample app demonstrates how a bot can use Teams authentication. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/python) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/csharp/demo-manifest/bot-teams-authentication.zip)
+| Bot authentication | This sample app demonstrates how a bot can use Teams authentication. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-auth-quickstart/dotnet/bot-auth-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-auth-quickstart/nodejs/bot-auth-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-auth-quickstart/python/bot-auth-quickstart) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/csharp/demo-manifest/bot-teams-authentication.zip)
 | Tab, Bot, and Message Extension (ME) SSO | This sample app demonstrates Teams SSO integration for tabs, bots, and message extensions, using C# and Microsoft Entra ID for secure authentication. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/app-sso/nodejs) | NA | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsJS/app-sso/csharp/demo-manifest/App-SSO.zip)
 
 ## See also
@@ -714,8 +721,8 @@ This section provides Bot authentication v3 SDK sample.
 [concept-dialogs]: /azure/bot-service/bot-builder-concept-dialog?view=azure-bot-service-4.0&preserve-view=true
 [simple-dialog]: /azure/bot-service/bot-builder-dialog-manage-conversation-flow?view=azure-bot-service-4.0&preserve-view=true
 
-[teams-auth-bot-cs]: https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/csharp
+[teams-auth-bot-cs]: https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-auth-quickstart/dotnet/bot-auth-quickstart
 
-[teams-auth-bot-py]: https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/python
+[teams-auth-bot-py]: https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-auth-quickstart/python/bot-auth-quickstart
 
-[teams-auth-bot-js]: https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-authentication/nodejs
+[teams-auth-bot-js]: https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-auth-quickstart/nodejs/bot-auth-quickstart
