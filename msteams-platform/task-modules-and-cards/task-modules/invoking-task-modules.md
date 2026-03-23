@@ -82,7 +82,7 @@ The bot sample supports three dialog types, each demonstrating a different appro
 
 The Adaptive Card dialog opens a card-based modal directly inside the task module. The bot handles the `dialog.open` event and returns a `CardTaskModuleTaskInfo` with a card attachment. On submit, the bot receives the user's text input through the `dialog.submit` event.
 
-:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card1.png" alt-text="":::
+:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card1.png" alt-text="Adaptive Card":::
 
 # [.NET](#tab/csharp)
 
