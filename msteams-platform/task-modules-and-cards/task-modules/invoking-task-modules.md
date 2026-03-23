@@ -4,7 +4,7 @@ description: Learn about invoking and dismissing dialogs (task modules) from bot
 author: vikasalmal
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.date: 03/20/2026
+ms.date: 03/23/2026
 ---
 
 # Invoke and dismiss dialogs
@@ -81,6 +81,8 @@ The bot sample supports three dialog types, each demonstrating a different appro
 ### Adaptive Card dialog
 
 The Adaptive Card dialog opens a card-based modal directly inside the task module. The bot handles the `dialog.open` event and returns a `CardTaskModuleTaskInfo` with a card attachment. On submit, the bot receives the user's text input through the `dialog.submit` event.
+
+:::image type="content" source="../../assets/images/adaptive-cards/adaptive-card1.png" alt-text="":::
 
 # [.NET](#tab/csharp)
 
