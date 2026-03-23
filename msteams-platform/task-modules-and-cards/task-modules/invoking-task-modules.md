@@ -169,6 +169,8 @@ return InvokeResponse(
 
 The Custom Form dialog launches a custom HTML webpage as the task module content. The bot returns a `UrlTaskModuleTaskInfo` pointing to the hosted form page. The form is rendered inside an `<iframe>` within Teams and can use Teams-themed styling for a consistent experience.
 
+:::image type="content" source="../../assets/images/custom-form1.png" alt-text="Custom Form":::
+
 # [.NET](#tab/csharp)
 
 ```csharp
@@ -222,6 +224,10 @@ return InvokeResponse(
 ### Multi-step Form dialog
 
 The Multi-step Form dialog chains two Adaptive Card steps within a single task module session. Step 1 collects the user's name; on submit, the bot advances to Step 2 by returning a new card using a `continue` response. Step 2 collects the user's email, carrying the name forward in the submit payload. On final submission, the bot sends a personalized confirmation message.
+
+:::image type="content" source="../../assets/images/multi-step-form1.png" alt-text="Multi Step form":::
+
+:::image type="content" source="../../assets/images/multi-step-form2.png" alt-text="Multi Step form":::
 
 # [.NET](#tab/csharp)
 
