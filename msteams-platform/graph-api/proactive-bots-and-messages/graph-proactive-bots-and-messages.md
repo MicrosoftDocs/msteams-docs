@@ -191,7 +191,7 @@ The following code provides an example of sending proactive messages:
 
 # [C#](#tab/dotnet)
 
-*[SDK reference](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging?tabs=minimal&pivots=csharp)
+* [SDK reference](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging?tabs=minimal&pivots=csharp)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-meeting-notification/csharp/MeetingNotification/Controllers/NotificationController.cs#L112)
 
@@ -253,7 +253,7 @@ const sendProactiveNotification = async (userId: string) => {
 
 # [Python](#tab/python)
 
-*[SDK reference](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging?tabs=minimal&pivots=typescript)
+* [SDK reference](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging?tabs=minimal&pivots=typescript)
 
 ```python
 from microsoft_teams.api import MessageActivityInput 
