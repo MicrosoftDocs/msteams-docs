@@ -99,6 +99,33 @@ app.on('message', async (context) =&gt; {
 });
 ```
 
+# [Python](#tab/py1)
+
+```Python
+import os
+import logging
+
+from microsoft_teams.apps import App, AppOptions, ErrorEvent
+
+
+logger = logging.getLogger(__name__)
+
+
+# Configure Teams app with OAuth
+app_options = AppOptions(
+    default_connection_name=os.getenv("CONNECTION_NAME", "graph")
+)
+app = App(**app_options)
+
+
+# Handle error events
+@app.event("error")
+async def handle_error_event(event: ErrorEvent):
+    """Handle error events."""
+    logger.error(f"Error occurred: {event.error}")
+
+    if event.context:
+        logger.error(f"Context: {event.context}")
 ---
 
 > [!div class="nextstepaction"]
@@ -273,6 +300,44 @@ app.on('message', async (context) =&gt; {
 });
 ```
 
+# [Python](#tab/py2)
+
+```Python
+# Helper function to handle authentication
+async def get_authenticated_graph_client(ctx: ActivityContext[MessageActivity]):
+    """
+    Helper function to handle authentication and create Graph client using Token pattern.
+    """
+    if not ctx.is_signed_in:
+        await ctx.send("🔐 Please sign in first to access Microsoft Graph.")
+        await ctx.sign_in()
+        return None
+
+    try:
+        return get_graph_client(ctx.user_token)
+
+    except Exception as e:
+        ctx.logger.error(f"Failed to create Graph client: {e}")
+        await ctx.send("🔐 Failed to create authenticated client. Trying to sign in again.")
+        await ctx.sign_in()
+        return None
+
+
+# Handle sign-in command
+async def handle_signin_command(ctx: ActivityContext[MessageActivity]):
+    """Handle sign-in command."""
+    if ctx.is_signed_in:
+        await ctx.send("✅ You are already signed in!")
+    else:
+        await ctx.send("🔐 Signing you in to access Microsoft Graph...")
+        await ctx.sign_in()
+
+
+# Register command handler
+@app.on_message_pattern("signin")
+async def signin_handler(ctx: ActivityContext[MessageActivity]):
+    await handle_signin_command(ctx)
+
 ---
 
 ### Handle successful sign-in events
@@ -306,6 +371,18 @@ app.event('signin', async (context) =&gt; {
 });
 ```
 
+# [Python](#tab/py3)
+
+```Python
+@app.event("sign_in")
+async def handle_sign_in_event(event: SignInEvent):
+    """Handle successful sign-in events."""
+    await event.activity_ctx.send(
+        "✅ **Successfully signed in!**\n\n"
+        "You can now use these commands:\n\n"
+        "• **profile** - View your profile\n\n"
+        "• **signout** - Sign out when done"
+    )
 ---
 
 > [!NOTE]
@@ -406,6 +483,23 @@ app.on('message', async (context) =&gt; {
 });
 ```
 
+# [Python](#tab/py4)
+
+```Python
+async def handle_signout_command(ctx: ActivityContext[MessageActivity]):
+    """Handle sign-out command."""
+    if not ctx.is_signed_in:
+        await ctx.send("ℹ️ You are not currently signed in.")
+    else:
+        await ctx.sign_out()
+        await ctx.send("👋 You have been signed out successfully!")
+
+
+# Register command handler
+@app.on_message_pattern("signout")
+async def signout_handler(ctx: ActivityContext[MessageActivity]):
+    await handle_signout_command(ctx)
+
 ---
 
 > [!div class="nextstepaction"]
@@ -415,7 +509,7 @@ app.on('message', async (context) =&gt; {
 
 | **Sample name** | **Description** | **C#** | **Node.js** |
 | --- | --- | --- | --- |
-| Bot Auth Quickstart | This sample demonstrates how to implement Single Sign-On (SSO) authentication for Microsoft Teams bots using Azure Active Directory | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-auth-quickstart/dotnet/bot-auth-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-auth-quickstart/nodejs/bot-auth-quickstart)  |
+| Bot Auth Quickstart | This sample demonstrates how to implement Single Sign-On (SSO) authentication for Microsoft Teams bots using Azure Active Directory | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-auth-quickstart/dotnet/bot-auth-quickstart) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/TeamsSDK/bot-auth-quickstart/nodejs/bot-auth-quickstart)  |
 
 ::: zone-end
 
