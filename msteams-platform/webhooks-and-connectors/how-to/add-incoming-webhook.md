@@ -162,11 +162,11 @@ When a request is received, the workflow posts the configured message to the sel
 You can also create a webhook workflow manually using the Workflows app.
 
 1. In **Microsoft Teams**, select **Apps**.
-   :::image type="content" source="../../assets/images/icons/add-icon.png"alt-text="Select Apps.":::
+   :::image type="content" source="../../assets/icons/add-icon.png"alt-text="Select Apps.":::
 1. Search for and open the **Workflows** app.
    :::image type="content" source="../../assets/images/connectors/open-workflows.png" alt-text="Open Workflows.":::
 1. Select **Build from scratch**.
-   :::image type="content" source="../../assets/images/connectors/workflows-build-from-scratch.png" alt-text="Open Workflows.":::
+   :::image type="content" source="../../assets/images/connectors/workflows-build-from-scratch.png" alt-text="Build from scratch.":::
 1. Search for and select the trigger **When a Teams webhook request is received**.
    :::image type="content" source="../../assets/images/connectors/webhook-trigger.png" alt-text="Select the trigger.":::
 1. Configure the trigger settings if required.
