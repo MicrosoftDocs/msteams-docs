@@ -4,7 +4,7 @@ description: Learn how to create, package, and upload Microsoft Teams app, icons
 ms.localizationpriority: high
 ms.topic: article
 ms.author: surbhigupta
-ms.date: 12/19/2024
+ms.date: 03/24/2026
 ---
 
 # Teams app package
@@ -42,7 +42,7 @@ When you publish your app to the Microsoft Teams Store, ensure your app manifest
 
 ## App icons
 
-Your app package must include two .png versions of your app icon: A color and outline version.
+Your app package must include three .png versions of your app icon: A full bleed PNG format at 192 x 192 pixels, a default or rest PNG format icon at 32 x 32 pixels, and a focused or pressed PNG format icon at 32 x 32 pixels.
 
 > [!NOTE]
 > If your app has a bot or message extension, your icons are included in your Microsoft Azure Bot Service registration.
