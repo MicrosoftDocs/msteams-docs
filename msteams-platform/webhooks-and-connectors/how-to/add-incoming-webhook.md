@@ -139,14 +139,14 @@ The **Workflows** app in Microsoft Teams allows you to create automated workflow
 
 Workflows are powered by Microsoft Power Automate and provide a flexible way to process webhook payloads before posting them to Teams.
 
-### Create a webhook using a workflow template
+### Create an incoming webhook from a template
 
 You can create a webhook workflow directly from a channel using a template.
 
 1. In **Microsoft Teams**, go to the team and channel where you want to receive webhook messages.
 1. Select **More options (...)** next to the channel.
 1. Select **Workflows**.
-   :::image type="content" source="../../assets/images/connectors/add-workflows.png" alt-text="Select workflows.":::
+
 1. Search for and select a template such as **Send webhook alerts to a channel**.
    :::image type="content" source="../../assets/images/connectors/workflows-template-selection.png" alt-text="Select the Send webhook alerts to a channel template.":::
 1. Configure the workflow parameters.
@@ -161,10 +161,10 @@ When a request is received, the workflow posts the configured message to the sel
 
 You can also create a webhook workflow manually using the Workflows app.
 
-1. In **Microsoft Teams**, select **Apps**.
-   :::image type="content" source="../../assets/icons/add-icon.png"alt-text="Select Apps.":::
+1. In **Microsoft Teams**, select :::image type="icon" source="../assets/icons/add-icon-app.png" border="false":::. The app gallery appears.
+
 1. Search for and open the **Workflows** app.
-   :::image type="content" source="../../assets/images/connectors/open-workflows.png" alt-text="Open Workflows.":::
+
 1. Select **Build from scratch**.
    :::image type="content" source="../../assets/images/connectors/workflows-build-from-scratch.png" alt-text="Build from scratch.":::
 1. Search for and select the trigger **When a Teams webhook request is received**.
