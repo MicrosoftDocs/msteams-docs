@@ -1,7 +1,7 @@
 ---
 title: Specify App Runtime Requirements
 description: Specify app runtime requirements, such as one-way or mutual dependencies and capabilities, to tailor user experience in different Microsoft 365 hosts.
-ms.date: 1/21/2025
+ms.date: 3/27/2026
 ms.author: mosdevdocs
 author: erikadoyle
 ms.topic: conceptual
@@ -10,29 +10,28 @@ ms.subservice: m365apps
 ---
 # Specify Microsoft 365 host runtime requirements in app manifest
 
-When you upgrade your Microsoft Teams personal tab or message extension app to use app manifest version 1.13 or later, it's available in other Microsoft 365 application hosts by default. However, if your app also includes capabilities not yet supported in certain hosts, your app might only partially load, resulting in unplanned user experiences.
+Any Teams app that uses manifest version 1.13 or later is available in other Microsoft 365 hub applications (Outlook and Microsoft 365 Copilot) by default. However, if your app also includes capabilities not yet supported in certain hubs, your app might only partially load, resulting in unplanned user experiences.
 
-For example, consider an app that is defined with app manifest schema version 1.17 and includes a bot and a configuration tab that represents the bot's settings. The app would load in Outlook and Microsoft 365 (Office) app, but only surface the bot configuration tab to the user without the bot itself.
+For example, consider an app that is defined with app manifest schema version 1.17 and includes a bot and a configuration tab that represents the bot's settings. The app would load in Outlook and Microsoft 365 Copilot, but only surface the bot configuration tab to the user without the bot itself.
 
-To ensure that high-quality app experiences reach your intended user base, specify your app's runtime requirements in app manifest. This allows you to tailor its behavior in applicable Microsoft 365 hosts, or omit it from surfacing in contexts you're not ready to support.
+To ensure that high-quality app experiences reach your intended user base, specify your app's runtime requirements in app manifest. This allows you to tailor its behavior in applicable Microsoft 365 hubs, or omit it from surfacing in contexts you're not ready to support.
 
 Specifying your app's runtime requirements is useful in scenarios such as:
 
 - **One-way dependencies**: When the sole purpose of one app capability is to support another capability in your app, you can ensure it only surfaces if the primary app capability is loaded. For example, if your app includes both a tab and message extension, and the tab functions as a settings page for users to configure message extension functionality, you can specify that the settings tab doesn't load in hosts that don't support your message extension.
 
-- **Mutual dependencies:** When your app has specific app capabilities that must be loaded together to function properly, you can ensure your app is *only available* in Microsoft 365 hosts that support all capabilities. For example, if tab, bot, and message extension capabilities all work together to support a core user scenario in your app, you can specify that those capabilities are always loaded together, or not at all.
+- **Mutual dependencies:** When your app has specific app capabilities that must be loaded together to function properly, you can ensure your app is *only available* in Microsoft 365 hubs that support all capabilities. For example, if tab, bot, and message extension capabilities all work together to support a core user scenario in your app, you can specify that those capabilities are always loaded together, or not at all.
 
-- **Capability requirements:** When your app has capabilities with runtime requirements that aren't supported across specific Microsoft 365 hosts, you can ensure those capabilities are *seamlessly omitted* (rather than loaded, but not functional) from your app experience running in those hosts. For example, if your app includes a tab-based dashboard view of items that can each be opened as a dialog, and each dialog contains information that is then submitted to a bot, you can specify that bot-based dialogs are core capabilities required for your app to load in a given host.
+- **Capability requirements:** When your app has capabilities with runtime requirements that aren't supported across specific Microsoft 365 hubs, you can ensure those capabilities are *seamlessly omitted* (rather than loaded, but not functional) from your app experience running in those hubs. For example, if your app includes a tab-based dashboard view of items that can each be opened as a dialog, and each dialog contains information that is then submitted to a bot, you can specify that bot-based dialogs are core capabilities required for your app to load in a given hub.
 
-## Microsoft 365 host support
+## Microsoft 365 hub support
 
-The following Microsoft 365 host applications support the ability to specify runtime requirements in app manifest:
+The following Microsoft 365 hub applications support the ability to specify runtime requirements in app manifest:
 
 |Microsoft 365 host application| Web | Desktop | Mobile |
 |---|---|---|---|
 | Teams| ✔️| ✔️| ✔️|
 | Outlook| ✔️| ✔️ (New Outlook only)| ✔️|
-| Microsoft 365 (Office)| | | |
 | Microsoft 365 Copilot | | | |
 
 [!INCLUDE [m365-app-rename](~/includes/m365-app-rename.md)]
@@ -47,7 +46,7 @@ The following app manifest capabilities can be specified as having one-way or mu
 - Message extensions (`composeExtensions`), including individual commands
 - Bots (`bots`)
 
-Each app capability is defined by the newly introduced property, `id`, which maps to `botId` for bots, `entityId` for static tabs, and `id` for configurable tabs and message extensions. Teams and other Microsoft 365 hosts support apps that contain either a single configurable tab, a single message extension, or both. The `id` property future-proofs your app if host support expands to accommodate multiple instances of these capabilities.
+Each app capability is defined by the newly introduced property, `id`, which maps to `botId` for bots, `entityId` for static tabs, and `id` for configurable tabs and message extensions. Teams and other Microsoft 365 hubs support apps that contain either a single configurable tab, a single message extension, or both. The `id` property future-proofs your app if hub support expands to accommodate multiple instances of these capabilities.
 
 > [!IMPORTANT]
 > Ensure the relationships you create adhere to the following validation rules:
@@ -98,7 +97,7 @@ Use the `mutualDependencies` array to group app capabilities that must load toge
 
 ## Specify runtime requirements for specific app capabilities (`requirementSet`)
 
-Within individual app capability definitions, you can specify specific TeamsJS runtime requirements using a [`requirementSet`](/microsoft-365/extensibility/schema/element-requirement-set). This ensures that the app capability only loads in Microsoft 365 hosts with support for the critical TeamsJS capabilities.
+Within individual app capability definitions, you can specify specific TeamsJS runtime requirements using a [`requirementSet`](/microsoft-365/extensibility/schema/element-requirement-set). This ensures that the app capability only loads in Microsoft 365 hubs with support for the critical TeamsJS capabilities.
 
 The following TeamsJS capabilities can be specified as runtime requirements for [`staticTabs`](/microsoft-365/extensibility/schema/root-static-tabs#requirementset), [`composeExtensions`](/microsoft-365/extensibility/schema/root-compose-extensions#requirementset), and [`bots`](/microsoft-365/extensibility/schema/root-bots#requirementset):
 
@@ -139,7 +138,7 @@ The following JSON snippet shows a static tab that requires its host to support 
 
 ## See also
 
-- [Developer app manifest schema](/microsoft-365/extensibility/schema/)
+- [Microsoft 365 app manifest schema](/microsoft-365/extensibility/schema/)
 - [Extend Teams apps across Microsoft 365](overview.md)
 - [Build dialogs](/microsoftteams/platform/task-modules-and-cards/what-are-task-modules)
 - [Use TeamsJS to differentiate your app experience](../tabs/how-to/using-teams-client-library.md#differentiate-your-app-experience)

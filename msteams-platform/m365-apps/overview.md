@@ -1,48 +1,47 @@
 ---
 title: Use Agents and Apps across Microsoft 365
 description: Learn how to extend Teams agents and apps across Microsoft 365 (running in Teams, Outlook, Word, Excel, PowerPoint and Microsoft 365 as application hosts).
-ms.date: 11/27/2024
+ms.date: 03/27/2026
 ms.author: mosdevdocs
-author: erikadoyle
+author: rick-kirkham
 ms.topic: overview
 ms.localizationpriority: medium
 ms.subservice: m365apps
 ---
 # Extend agents and apps across Microsoft 365
 
-With the latest releases of [Microsoft Teams JavaScript client library](../tabs/how-to/using-teams-client-library.md) (TeamsJS version 2.0.0 and later), [app manifest](/microsoft-365/extensibility/schema/) (previously called Teams app manifest) (version 1.13 and later), and [Microsoft 365 Agents Toolkit](../toolkit/visual-studio-code-overview.md) (previously known as Teams Toolkit), you can build and update Teams apps to run in other high-usage Microsoft 365 products and publish them to the Microsoft commercial marketplace ([Microsoft AppSource](https://appsource.microsoft.com/)) or your organization's private app store.
+A Teams app is an App for Microsoft 365, just as an Office Add-in and a custom Copilot agent are. This fact enables you to combine an add-in with one or more of these other types of Microsoft 365 extensions. Your combination solution has a single manifest that configures all of its parts, and a single app package&mdash;a ZIP file&mdash;that is the unit of sideloading and of publishing to [Microsoft Marketplace](https://marketplace.microsoft.com/) or the Microsoft 365 admin center.
 
-Extending your Teams app across Microsoft 365 provides a streamlined way to deliver cross-platform apps to an expanded user audience: from a single codebase, you can create app experiences tailored for Teams, Outlook, Microsoft 365 app, Word (preview), Excel (preview), and PowerPoint (preview) environments. End users don't have to leave the context of their work to use your app, and administrators benefit from a consolidated management and deployment workflow.
+With the latest releases of [Microsoft Teams JavaScript client library](../tabs/how-to/using-teams-client-library.md) (TeamsJS version 2.0.0 and later), the [unified app manifest for Microsoft 365](/microsoft-365/extensibility/schema/) (previously called Teams app manifest) (version 1.13 and later), and [Microsoft 365 Agents Toolkit](../toolkit/visual-studio-code-overview.md) (previously known as Teams Toolkit), you can build and update Teams apps to run in any of the three Microsoft 365 hub applications (the applications that have an **App bar**).
 
-The Teams app platform continues to evolve and expand holistically into the Microsoft 365 ecosystem. Here's the current support of Teams app platform elements across Microsoft 365 (Teams, Outlook, Microsoft 365 as application hosts, Word, Excel, and PowerPoint):
+- Teams
+- Microsoft 365 Copilot
+- Outlook
 
-| Teams app features| App manifest element | Teams support |Outlook support |Microsoft 365 app support |Word, Excel, PowerPoint support (preview)| Notes |
-|--|--|--|--|--|--|--|
-| [**Tabs-personal scope**](../tabs/how-to/create-personal-tab.md)     |`staticTabs`  | Web, Desktop, Mobile | Web, Desktop, Mobile (Android, iOS) | Web, Desktop, Mobile (Android, iOS)|-|Channel and group scopes aren't supported for Microsoft 365. For more information, see [Teams JavaScript client library](../tabs/how-to/using-teams-client-sdk.md#microsoft-365-support-running-teams-apps-in-office-and-outlook).
-| [**Meeting apps**](extend-m365-meeting-app.md)|`configurableTabs`|Web, Desktop, Mobile|Desktop|-|-|Meeting Stageview isn't supported in Outlook. See [notes](extend-m365-meeting-app.md).|
-| [**Message extensions-search-based**](../messaging-extensions/how-to/search-commands/define-search-command.md)| `composeExtensions` | Web, Desktop, Mobile| Web, Desktop | - |-|For limitations and troubleshooting, see [notes](extend-m365-teams-message-extension.md#limitations). |
-| [**Action-based message extensions**](../messaging-extensions/how-to/action-commands/define-action-command.md)| `composeExtensions` | Web, Desktop, Mobile| Web | - |-| Viewable/actionable (not composable) in Teams/Outlook mobile preview (iOS, Android). For limitations and troubleshooting, see [notes](extend-m365-teams-message-extension.md#limitations). |
-| [**Link unfurling (including Stageview)**](../tabs/tabs-link-unfurling.md) | `composeExtensions.messageHandlers` | Web, Desktop | Web, Desktop | - | -|See notes on [link unfurling](extend-m365-teams-message-extension.md) and [Stageview](extend-m365-teams-message-extension.md)|
-| [**Adaptive Card Loop components**](./design-loop-components.md)|`composeExtensions.messageHandlers`|Web, Desktop |Web, Desktop (only for [new Outlook](https://support.microsoft.com/office/getting-started-with-the-new-outlook-for-windows-656bb8d9-5a60-49b2-a98b-ba7822bc7627)) |-|-| Viewable (not composable) in Teams/Outlook mobile preview (iOS, Android). See [notes](cards-loop-component.md).|
-| [**Stageview**](extend-m365-teams-message-extension.md)|`composeExtensions.messageHandlers`|Web, Desktop, Mobile|Web (preview), Desktop (preview)|-|-| Viewable/actionable (not composable) in Outlook mobile preview (iOS, Android). See [notes](extend-m365-teams-message-extension.md).|
-| [**Outlook Add-ins**](/office/dev/add-ins/develop/json-manifest-overview) | `extensions` | - | Web, Desktop | - |-| See [notes](#outlook-add-ins).|
-| [**Word, Excel, PowerPoint Add-ins**](/office/dev/add-ins/develop/json-manifest-overview) | `extensions` | - | - | - |Web, Desktop| See [notes](#word-excel-powerpoint-add-ins-preview).|
+You can also combine into a single distributable app package a Teams app with a custom Copilot extension or a Office Add-in for Excel, PowerPoint, Word, or Outlook.
 
-Enrollment to [Microsoft 365 Targeted Release](/microsoft-365/admin/manage/release-options-in-office-365) and [Microsoft 365 Apps update channel](/deployoffice/change-update-channels) requires admin opt-in for the entire organization or selected users. Update channels are device specific and apply only to installations of Microsoft 365 running on Windows.
+Use this packaging system to combine closely related functionality and experiences into a single app for Microsoft 365. Some possible scenarios include: 
 
-> [!NOTE]
-> Apps with app manifest version below 1.13 are limited to Teams. However, apps with app manifest version 1.13 or above are compatible with Teams, Outlook, and Microsoft 365 app.
+- Make a page experience available in both your add-in task pane and in a custom personal tab in one or more of the Microsoft 365 hub applications.
+- Create a Copilot agent that gets Microsoft Graph data and is available in Excel and Teams. 
+- Include similar handlers for similar events, such as a user being added to a Teams conversation and a recipient being added to an Outlook message.
+- Record in a database discrete user actions in an Office application, and view the accumulated data in a custom tab that is opened from the **App bar** in one or more of the Microsoft 365 hubs.
 
-* For more information on admin guidance and options for managing your extended Teams app, see [Teams apps that work on Outlook and Microsoft 365](/microsoft-365/admin/manage/teams-apps-work-on-outlook-and-m365).
+> [!TIP]
+> You can't include a [SharePoint Framework app](/sharepoint/dev/spfx/sharepoint-framework-overview) in the Microsoft extension's app package, but you can bundle your Microsoft 365 extension with one or more SharePoint Framework apps into a single Software as a Service (SaaS) offering. The SaaS is installed and managed as a unit using the integrated apps portal in the admin center. For more information, see [SaaS linked apps](/microsoft-365/admin/manage/saas-linked-apps) and [Integrated Apps portal](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps).
+
+* For more information on admin guidance and options for managing your app for Microsoft 365, see [Apps for Microsoft 365 that work across application hosts](/microsoft-365/admin/manage/teams-apps-work-on-outlook-and-m365).
 * For more information on app manifest, TeamsJS versioning, and Teams platform capability support across Microsoft 365, see [Teams JavaScript client library overview](../tabs/how-to/using-teams-client-library.md).
 
-## Personal tabs in Outlook and Microsoft 365 app
+The following sections introduce some of the Microsoft 365 development features that cross the boundaries between Office, Teams, and Copilot. For a matrix of support on various platforms, see [Platform support](#platform-support).
 
-Reach your users where they are, right in the context of their work by extending your web app as a [Teams personal tab](extend-m365-teams-personal-tab.md) application that also runs in both Outlook and Microsoft 365 app. Teams personal tabs built and hosted with [SharePoint Framework](extend-m365-teams-personal-tab.md#sharepoint-framework-spfx-apps) (SPFx) version 1.16 and later are also supported in Outlook and Microsoft 365 app.
+## Personal tabs
+
+Reach your users where they are, right in the context of their work by extending your web app as a [personal tab](extend-m365-teams-personal-tab.md) application that also runs in Outlook, Teams, and the Microsoft 365 Copilot application. 
 
 :::image type="content" source="images/outlook-office-teams-personal-tab.png" alt-text="The screenshot is an example that shows Personal tab running in Outlook, Microsoft 365, and Teams.":::
 
-On mobile, you can test and debug your Teams personal tab running on Microsoft 365 for [iOS](extend-m365-teams-personal-tab.md#microsoft-365-for-ios) and [Android app](extend-m365-teams-personal-tab.md#microsoft-365-for-android-app), in addition to Outlook for [iOS](extend-m365-teams-personal-tab.md#outlook-app-for-ios) and [Android app](extend-m365-teams-personal-tab.md#outlook-for-android-app).
+The following images show the personal tab running on Microsoft 365 for [iOS](/microsoftteams/platform/m365-apps/extend-m365-teams-personal-tab#microsoft-365-for-ios) and [Android app](/microsoftteams/platform/m365-apps/extend-m365-teams-personal-tab#microsoft-365-for-android-app). (It will also run in Outlook for [iOS](/microsoftteams/platform/m365-apps/extend-m365-teams-personal-tab#outlook-app-for-ios) and [Android app](/microsoftteams/platform/m365-apps/extend-m365-teams-personal-tab#outlook-for-android-app).)
 
 # [Android](#tab/Android)
 
@@ -54,45 +53,28 @@ On mobile, you can test and debug your Teams personal tab running on Microsoft 3
 
 ---
 
-## Message extensions in Outlook
+> [!TIP]
+> Personal tabs can be built and hosted with [SharePoint Framework](/microsoftteams/platform/m365-apps/extend-m365-teams-personal-tab#sharepoint-framework-spfx-apps) (SPFx) version 1.16 and later as an alternative to hosting them on a web server or web service. See [Add Teams tab to SharePoint](/microsoftteams/platform/tabs/how-to/tabs-in-sharepoint) and [Build Microsoft Teams tab using SharePoint Framework - Tutorial](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab). Although these articles use the term "Teams tab" they apply also to personal tabs in Outlook and Microsoft 365 Copilot.
 
-You can extend your [Teams message extensions](extend-m365-teams-message-extension.md) to Outlook on the web and Windows in addition to Microsoft Teams clients.
+## Message extensions and link unfurling
+
+Message extensions enable users to interact with your web service using buttons and forms. Users can search or initiate actions in an external system from chat messages in Teams and email messages in Outlook.
 
 :::image type="content" source="images/outlook-teams-messaging-ext.png" alt-text="The screenshot is an example that shows Message extension running in Outlook and Teams.":::
 
-Link unfurling works in Outlook web and Windows environments the same way it does in Microsoft Teams without any further work than using the app manifest version 1.13 or later. You can also unfurl links with cards that launch Stageview.
+Link unfurling works in both Outlook messages and Teams chat messages. You can also unfurl links with cards that launch Stageview.
 
 :::image type="content" source="images/outlook-teams-link-unfurling.png" alt-text="The screenshot is an example that shows Link unfurling running in Outlook and Teams.":::
 
-Build your app with the latest [app manifest](/microsoft-365/extensibility/schema/) and [Teams JavaScript client library](../tabs/how-to/using-teams-client-library.md) to benefit the latest consolidated Microsoft 365 app development process. Then deliver a streamlined deployment, installation, and admin experience for your customers that expands the reach and usage of your app.
+For more information, see [Build message extensions](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions) and [Teams message extensions](/microsoftteams/platform/m365-apps/extend-m365-teams-message-extension). See also the guidance in [Scenarios for creating an Outlook add-in and a message extension](/microsoftteams/platform/m365-apps/me-or-outlook-add-in) to learn when to use a Outlook add-in and when to use a message extension in Outlook.
 
-## Meeting apps in Outlook
+## Meeting apps
 
-Users can discover and use your meeting app right in the flow of their work when you [extend your meeting app to Outlook](extend-m365-meeting-app.md) for Windows.
+Meeting apps are essentially [personal tabs](#personal-tabs) that are designed to foster collaboration before, during, and after meetings. You can configure and add meeting apps to the Teams meetings scheduled from Outlook and also run meeting apps within the Outlook calendar.
 
 :::image type="content" source="images/outlook-teams-meeting-app.png" alt-text="Screenshot of a sample meeting app running in both Teams and Outlook":::
 
-## Use app manifest across Microsoft 365
-
-With an aim toward simplifying and streamlining the Microsoft 365 developer ecosystem, we're continuing to expand the app manifest into other areas of Microsoft 365 with the following.
-
-### Outlook Add-ins
-
-You can now define and deploy Outlook Add-ins in [version 1.17 and later](/microsoft-365/extensibility/schema/) of the app manifest.
-
-For more information, see [app manifest for Office Add-ins](/office/dev/add-ins/develop/unified-manifest-overview).
-
-### Word, Excel, PowerPoint Add-ins (preview)
-
-You can now define and deploy Word, Excel, and PowerPoint Add-ins with the [unified manifest for Microsoft 365](/microsoft-365/extensibility/schema).
-
-For more information, see [app manifest for Office Add-ins](/office/dev/add-ins/develop/unified-manifest-overview).
-
-## App planning and design
-
-To create an app within the Microsoft 365 ecosystem, consider how it helps your users to perform their work and complete their daily tasks. By being thoughtful in your app planning and design, you can create an experience that is more integrated and introduces less friction for users with their app.
-
-To get started with apps extended across Microsoft 365, see [app playbooks](/microsoft-365-copilot/extensibility/plugins-are-apps#planning-your-app) and [Microsoft 365 UI Kit (Figma) preview](https://aka.ms/M365UIKit).
+For more information, see [Apps for meetings and calls](/microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings) and [Extend a meeting app to Outlook](/microsoftteams/platform/m365-apps/extend-m365-meeting-app).
 
 ## Actions in Microsoft 365
 
@@ -100,11 +82,33 @@ Actions aim to integrate your app into your user's workflow by enabling easy dis
 
 For more information, see [Actions in Microsoft 365](actions-in-m365.md).
 
+## Platform support
+
+The following table shows platforms support the various types of apps for Microsoft 365.
+
+| Teams app features| Teams support |Outlook as a hub support |Microsoft 365 Copilot support |Word, Excel, Outlook, PowerPoint add-in support| Notes |
+|--|--|--|--|--|--|--|
+| [**Tabs-personal scope**](/microsoftteams/platform/tabs/how-to/create-personal-tab)     |Web, Desktop, Mobile | Web, Desktop, Mobile (Android, iOS) | Web, Desktop, Mobile (Android, iOS)|-|Channel and group scopes aren't supported for Microsoft 365. For more information, see [Teams JavaScript client library](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk#microsoft-365-support-running-teams-apps-in-office-and-outlook).
+| [**Meeting apps**](/microsoftteams/platform/m365-apps/extend-m365-meeting-app)|Web, Desktop, Mobile|Desktop|-|-|Meeting Stageview isn't supported in Outlook. See [Extend a meeting app to Outlook](/microsoftteams/platform/m365-apps/extend-m365-meeting-app).|
+| [**Message extensions-search-based**](/microsoftteams/platform/messaging-extensions/how-to/search-commands/define-search-command)| Web, Desktop, Mobile| Web, Desktop | - |-|For limitations and troubleshooting, see [Limitations](/microsoftteams/platform/m365-apps/extend-m365-teams-message-extension#limitations). |
+| [**Action-based message extensions**](/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command)| Web, Desktop, Mobile| Web | - |-| Viewable/actionable (not composable) in Teams/Outlook mobile preview (iOS, Android). For limitations and troubleshooting, see [Limitations](/microsoftteams/platform/m365-apps/extend-m365-teams-message-extension#limitations). |
+| [**Link unfurling (including Stageview)**](/microsoftteams/platform/tabs/tabs-link-unfurling) | Web, Desktop | Web, Desktop | - | -|See notes on [link unfurling](/microsoftteams/platform/m365-apps/extend-m365-teams-message-extension) and [Stageview](/microsoftteams/platform/m365-apps/extend-m365-teams-message-extension)|
+| [**Adaptive Card Loop components**](/microsoftteams/platform/m365-apps/design-loop-components)|Web, Desktop |Web, Desktop (only for [new Outlook](https://support.microsoft.com/office/getting-started-with-the-new-outlook-for-windows-656bb8d9-5a60-49b2-a98b-ba7822bc7627)) |-|-| Viewable (not composable) in Teams/Outlook mobile preview (iOS, Android). See [Adaptive Card-based Loop components](/microsoftteams/platform/m365-apps/cards-loop-component).|
+| [**Stageview**](/microsoftteams/platform/m365-apps/extend-m365-teams-message-extension)|Web, Desktop, Mobile|Web (preview), Desktop (preview)|-|-| Viewable/actionable (not composable) in Outlook mobile preview (iOS, Android). See [Message extensions](/microsoftteams/platform/m365-apps/extend-m365-teams-message-extension).|
+| [**Office Add-ins**](../overview/office-add-ins.md) | - | - | - | Web, Desktop | See [office Add-ins platform overview](../overview/office-add-ins.md).|
+| [**Copilot agents**](/microsoft-365-copilot/extensibility/ecosystem) | Web, Desktop | - | Web, Desktop | Web, Desktop | See [Declarative agents for Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/overview-declarative-agent) |
+
+## App planning and design
+
+To create an app within the Microsoft 365 ecosystem, consider how it helps your users to perform their work and complete their daily tasks. By being thoughtful in your app planning and design, you can create an experience that is more integrated and introduces less friction for users with their app.
+
+To get started with apps extended across Microsoft 365, see [app playbooks](/microsoft-365-copilot/extensibility/plugins-are-apps#planning-your-app) and [Microsoft 365 UI Kit (Figma) preview](https://aka.ms/M365UIKit).
+
 ## Microsoft commercial marketplace submission
 
-Join the growing number of production Teams apps in the [Microsoft commercial marketplace](https://appsource.microsoft.com/) (Microsoft AppSource) store with expanded support for Outlook and Microsoft 365 audiences. The app [submission process for Teams apps enabled for Outlook and Microsoft 365](../concepts/deploy-and-publish/appsource/publish.md) is the same as for traditional Teams apps. The only difference is to use app manifest [version 1.13 or later](../tabs/how-to/using-teams-client-sdk.md) in your app package, which introduces support for Teams apps that run across Microsoft 365.
+Join the growing number of production Teams apps in the [Microsoft Marketplace](https://marketplace.microsoft.com/) store as apps for Microsoft 365. The app [submission process for Teams apps enabled for Outlook and Microsoft 365](../concepts/deploy-and-publish/appsource/publish.md) is the same as for traditional Teams apps. The only difference is to use app manifest [version 1.13 or later](../tabs/how-to/using-teams-client-sdk.md) in your app package, which introduces support for Teams apps that run across Microsoft 365.
 
-After your app is published as a Microsoft 365-enabled Teams app, your app will be discoverable as an installable app in the Outlook and Microsoft 365 app stores, in addition to the Microsoft Teams Store. When running in Outlook and Microsoft 365 app, your app uses the same permissions granted in Teams. Teams admins can [manage access to Teams apps across Microsoft 365](/microsoftteams/manage-third-party-teams-apps) for users in their organization.
+After your Teams app is published as an app for Microsoft 365, your app will be discoverable as an installable app in the Outlook and Microsoft 365 app stores, in addition to the Microsoft Teams Store. And if the app includes an add-in for Excel, PowerPoint, or Word, it will be in their stores too. When running in Outlook and Microsoft 365 app, your app uses the same permissions granted in Teams. Teams admins can [manage access to Teams apps across Microsoft 365](/microsoftteams/manage-third-party-teams-apps) for users in their organization.
 
 For more information, see [publish Teams apps for Microsoft 365](publish.md).
 
