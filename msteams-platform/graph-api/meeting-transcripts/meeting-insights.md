@@ -5,7 +5,7 @@ ms.localizationpriority: high
 ms.topic: article
 ms.owner: vtarasov
 ms.author: v-sukanyadas
-ms.date: 03/23/2026
+ms.date: 03/25/2026
 ---
 
 # Get AI-generated meeting summaries with Meeting AI Insights API
@@ -44,7 +44,7 @@ Here are some use cases for fetching AI-generated insights using Meeting AI Insi
 
 ## License requirements for Teams meeting AI insights APIs
 
-This section describes the license requirements for Teams meeting AI insights APIs. To access the beta endpoint, users must have a [Microsoft 365 Copilot](https://www.microsoft.com/en-us/microsoft-365-copilot) license. Payment models or evaluation mode aren't applicable for these APIs; they can be used by any application for users who have the required license.
+This section describes the license requirements for Teams meeting AI insights APIs. To access these APIs, users must have a [Microsoft 365 Copilot](https://www.microsoft.com/en-us/microsoft-365-copilot) license. Payment models or evaluation mode aren't applicable for these APIs; they can be used by any application for users who have the required license.
 
 ## Fetch meeting insights
 
