@@ -5,7 +5,7 @@ ms.localizationpriority: medium
 author: akjo
 ms.topic: overview
 ms.owner: vishachadha
-ms.date: 03/24/2026
+ms.date: 03/25/2026
 ---
 
 # Send proactive installation messages
@@ -149,7 +149,7 @@ If the user has Microsoft Teams running, app installation occurs immediately. A 
 
 ### Retrieve the conversation `chatId`
 
-When your app is installed for the user, the bot receives a `conversationUpdate` [event notification](../../resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) that contains the necessary information to send the proactive message.
+When your app is installed for the user, the bot receives an **install** activity. Use the `OnInstall` handler (C#) or `install.add` event (Node.js/Python) in the [Teams SDK](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging) to capture the `conversationId` needed to send the proactive message.
 
 **Microsoft Graph page reference:** [Get chat](/graph/api/chat-get?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
@@ -183,7 +183,7 @@ When your app is installed for the user, the bot receives a `conversationUpdate`
 
 ### Send proactive messages
 
-Your bot can [send proactive messages](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true) after the bot has been added for a user or a team, and has received all the user information.
+Your bot can [send proactive messages](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging) after the bot has been added for a user or a team, and has received all the user information.
 
 ## Code snippets
 
@@ -192,7 +192,6 @@ The following code provides an example of sending proactive messages:
 # [C#](#tab/dotnet)
 
 * [SDK reference](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging?tabs=minimal&pivots=csharp)
-
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-meeting-notification/csharp/MeetingNotification/Controllers/NotificationController.cs#L112)
 
 ```csharp
@@ -221,12 +220,12 @@ public static async Task SendProactiveNotification(string userId)
 } 
 ```
 
-# [Node.js](#tab/nodejs)
+# [Typescript](#tab/typescript)
 
 * [SDK reference](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging?tabs=minimal&pivots=typescript)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-initiate-thread-in-channel/nodejs/bots/teamsStartNewThreadInChannel.js#L20)
 
-```javascript
+```typescript
 import { MessageActivity } from '@microsoft/teams.api'; 
 import { App } from '@microsoft/teams.apps';
 
@@ -253,7 +252,7 @@ const sendProactiveNotification = async (userId: string) => {
 
 # [Python](#tab/python)
 
-* [SDK reference](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging?tabs=minimal&pivots=typescript)
+* [SDK reference](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging?tabs=minimal&pivots=python)
 
 ```python
 from microsoft_teams.api import MessageActivityInput 
@@ -297,7 +296,7 @@ async def send_proactive_notification(user_id: str):
 ## See also
 
 * [Manage app setup policies in Microsoft Teams](/microsoftteams/teams-app-setup-policies#create-a-custom-app-setup-policy)
-* [Send proactive notifications to users SDK v4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)
+* [Proactive messaging with Teams SDK](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging)
 * [Send activity feed notifications to users in Microsoft Teams](/graph/teams-send-activityfeednotifications)
 * [Add app to team - Microsoft Graph v1.0](/graph/api/team-post-installedapps?view=graph-rest-1.0&tabs=http&preserve-view=true)
 * [Microsoft Teams service limits](/graph/throttling-limits#microsoft-teams-service-limits)
