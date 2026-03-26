@@ -28,7 +28,7 @@ Slash commands are simple shortcuts that start with `/` in the Teams compose box
 
 ## What are slash commands
 
-A slash command is a quick command (with optional parameters) you can add to your agent or bot to trigger a specific action. It starts with a `/` for example, `/contoso`. You can enable slash commands for agent-specific actions, user-to-agent interaction, and for message extension actions. For more information, see [supported scenarios for slash commands](#supported-scenarios-for-slash-commands).
+A slash command is a quick command (with optional parameters) you can add to your agent or bot to trigger a specific action. It starts with a '/' for example, `/contoso`. You can enable slash commands for agent-specific actions, user-to-agent interaction, and for message extension actions. For more information, see [supported scenarios for slash commands](#supported-scenarios-for-slash-commands).
 
 <!--
 1. As soon as users type `/` in the message compose box, Teams shows a menu of available slash commands from built-in features, workflows, and agents or apps.
@@ -43,7 +43,7 @@ Use slash commands to:
 
 ## User experience for slash commands
 
-When someone uses a slash command, it shows up as a private message just for them. The agent or bot can reply privately or, when it is relevant, share the response with the whole group or channel. You control this through the agent or bot’s logic, so responses are only made public when they’re useful to others.
+When someone uses a slash command, it shows up as a private message just for them. The agent or bot can reply privately or, when it is relevant, share the response with the whole group or channel. You control this through the agent or bot’s logic, so responses are shared publicly when they’re useful to others.
 
 :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-slash-commands.png" alt-text="Image shows the response flows for agent slash commands." border="false" lightbox="../assets/images/agents-in-teams/agent-slash-commands/agent-slash-commands.png":::
 
@@ -63,7 +63,7 @@ You can control the visibility of agent responses to slash commands through defi
 
 #### Private agent-to-user response
 
-This flow keeps slash command results focused between the user and the agent or bot:
+This flow keeps slash command results focused between the user and the agent or bot. Use private response flow for drafts, summaries, personal tasks.
 
 :::row:::
     :::column span="2":::
@@ -80,13 +80,13 @@ This flow keeps slash command results focused between the user and the agent or 
 :::row-end:::
 :::row:::
     :::column span:::
-      This flow minimizes noise in shared conversations and is optimized for private, fast, and context-aware interactions.
+      This flow minimizes noise in shared conversations for private, fast, and context-aware interactions.
     :::column-end:::
 :::row-end:::
 
 #### Public agent-to-user response
 
-When the response is useful to the wider audience, you can choose to enable your agent or bot to show it publicly.
+When the response is useful to the wider audience, you can choose to enable your agent or bot to show it publicly. Use public response flow for status updates, confirmations, or shared signals.
 
 :::row:::
     :::column span="2":::
@@ -127,7 +127,7 @@ Enabling slash commands typically involves the following:
 
 - [Select one or more of the scenarios for enabling slash commands](#supported-scenarios-for-slash-commands): You can enable slash commands for your agents, bots, and message extension apps.
 - [Update your Teams app manifest and declare supported commands](#manifest-updates-for-slash-commands): You can opt for slash commands through the Teams app manifest. You can also choose to activate the commands that your agent or app provides via <`/app‑name`>. This helps to provide a tailored selection of commands that is ideal for slash usage.
-- [Implement the command handling in your agent or bot](#handle-slash-commands): Use Teams SDK or REST APIs to configure sending the agent or bot response as a private messages to a single user or as public message to the group or channel.
+- [Implement the command handling in your agent or bot](#handle-slash-commands): Use Teams SDK or REST APIs to configure sending the agent or bot response as a private message to a single user or as public message to the group or channel.
 
 ### Supported scenarios for slash commands
 
