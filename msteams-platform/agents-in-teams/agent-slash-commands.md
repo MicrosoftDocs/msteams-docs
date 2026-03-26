@@ -126,7 +126,7 @@ Enabling slash commands typically involves the following:
 
 ### Supported scenarios for slash commands
 
-Agents and bots can participate in slash commanding in the following ways:
+Agents and bots can support the [slash commands supported by Teams](https://support.microsoft.com/en-us/office/use-commands-in-microsoft-teams-88f61508-284d-417f-a53d-9e082164050b). You can also enable them to use slash commands for in the following ways:
 
 - **App-defined slash commands**: Agents and bots can publish a curated set of slash commands so users can discover and run common actions without leaving the compose box. You can explicitly declare the commands your agent or bot supports, and Teams shows them in the slash command picker when a user types `/`. For example:
 
