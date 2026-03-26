@@ -4,7 +4,7 @@ description: Learn about the user experience for agents in Teams
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: vikasalmal
-ms.date: 09/27/2024
+ms.date: 03/26/2026
 ---
 
 # Agents user experience
