@@ -91,7 +91,7 @@ You can import historical messages seamlessly into both existing and newly creat
 
 ## Step 1: Start migration
 
-To start migrating a user's message history from any third-party platform to Teams, you can use an existing channel or chat. An existing channel or chat can be in any state (active or inactive) and can be created before or after the migration process starts.
+To start migrating a user's message history from any third-party platform to Teams, you can use an existing channel or chat.
 
 <!-- ### Create a team and standard channel in migration mode
 
