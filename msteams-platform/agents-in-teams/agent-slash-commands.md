@@ -17,7 +17,7 @@ Slash commands are shortcuts initiated by typing a forward slash (`/`) in the co
 
 **Key points**
 
-- [What is a slash commands](#what-is-a-slash-command)
+- [What is a slash command](#what-is-a-slash-command)
 - [User experience for slash commands](#user-experience-for-slash-commands)
 - [Why use slash commands](#why-use-slash-commands)
 - **Slash commands developer experience**
@@ -34,7 +34,7 @@ You can enable slash commands for your agents and bots. For more information, se
 
 ## User experience for slash commands
 
-When someone uses a slash command, it shows up as a private message just for them. The agent or bot can reply privately or, when it is relevant, share the response with the whole group or channel. You control this through the agent or bot’s logic, so responses are shared publicly when they’re useful to others.
+When someone uses a slash command, it shows up as a private message just for them. The agent or bot can reply privately or, when it is relevant, share the response with the whole group or channel. You control this through the agent or bot logic, so responses are shared publicly when they’re useful to others.
 
 :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-slash-commands.png" alt-text="Image shows the response flows for agent slash commands." border="false" lightbox="../assets/images/agents-in-teams/agent-slash-commands/agent-slash-commands.png":::
 
@@ -83,7 +83,7 @@ When the response is useful to the wider audience, you can choose to enable your
 
         1. When a user runs a slash command, it appears right away as a private message.
         1. If the agent or bot is configured for public replies, the response is posted to all members in the group or channel. 
-        1. The agent's or bot's response quotes the user’s prompt.
+        1. The agent or bot response quotes the user’s prompt.
     :::column-end:::
     :::column span="3":::
         :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-public-response.png" alt-text="Image shows agent's public response." border="false" lightbox="../assets/images/agents-in-teams/agent-slash-commands/agent-public-response.png":::
@@ -142,7 +142,7 @@ Update your app manifest to opt in to targeted messaging and (optionally) list t
 
 The following options are supported:
 
-- **Opt for agent-specific commands without a command list**: With this opt-in, users can invoke your agent or bot from the compose box using <`/agent-name`>, and it enables the default private message response flow. If you don’t publish a list of commands, users can still invoke your agent or bot via <`/agent-name`> and provide free-form input (depending on your agent's or bot's capabilities).
+- **Opt for agent-specific commands without a command list**: With this opt-in, users can invoke your agent or bot from the compose box using <`/agent-name`>, and it enables the default private message response flow. If you don’t publish a list of commands, users can still invoke your agent or bot via <`/agent-name`> and provide free-form input (depending on your agent or bot capabilities).
 
     Use the following example to configure the app manifest for supporting slash commands without declaring any commands:
 
@@ -273,7 +273,7 @@ The following options are supported:
 
 ### Handle slash commands
 
-When a user sends a message to your agent or bot using slash command, the message event payload adds the `isTargeted` property to the `Recipient` object in the `Activity` object. You can enable the agent or bot to send a private message to that user or a public message to the group or channel. You can also enable the agent or bot to update or delete a message that it had previously sent.
+You can enable the agent or bot to send a private message to that user or a public message to the group or channel. You can also enable the agent or bot to update or delete a message that it had previously sent.
 
 #### Send an agent response
 
@@ -283,7 +283,7 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
 **Private message to a user**: Configure your agent or bot to send a reply only to the person who ran the slash command or to another user in the group or channel. Use one of the following private message scenarios to send a message to a single user.
 
-- **Response to same user**: Use one of the following code snippets for sending an agent response only to the user who triggered the slash command.
+- **Response to the same user**: Use one of the following code snippets for sending an agent response only to the user who triggered the slash command.
 
   # [C#](#tab/dotnet1)
 
@@ -310,7 +310,7 @@ Use the following code snippets to enable your agent or bot to respond to a slas
 
     ---
 
-- **Response to different user**: Use one of the following code snippets for sending an agent response to a different user in the group or channel.
+- **Response to a different user**: Use one of the following code snippets for sending an agent response to a different user in the group or channel.
 
   # [C#](#tab/dotnet1)
 
