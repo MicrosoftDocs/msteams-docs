@@ -13,7 +13,7 @@ ms.topic: reference
 
 # Enable slash commands for agents and bots
 
-Slash commands are simple shortcuts that start with `/` in the Teams compose box that let users pick a command to act instantly to trigger actions.
+A slash command is a shortcut initiated by typing a forward slash (/) in the compose box on Teams. It provides a structured, predictable way to invoke agent or bot actions using text-first syntax.
 
 **Key points**
 
