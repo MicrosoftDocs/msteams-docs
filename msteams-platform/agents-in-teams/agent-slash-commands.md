@@ -17,7 +17,7 @@ Slash commands are shortcuts initiated by typing a forward slash (`/`) in the co
 
 **Key points**
 
-- [What are slash commands](#what-are-slash-commands)
+- [What is a slash commands](#what-is-a-slash-command)
 - [User experience for slash commands](#user-experience-for-slash-commands)
 - [Why use slash commands](#why-use-slash-commands)
 - **Slash commands developer experience**
