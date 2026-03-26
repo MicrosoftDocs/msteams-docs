@@ -85,8 +85,6 @@ This flow keeps slash command results focused between the user and the agent or 
 
 When the response is useful to the wider audience, you can choose to enable your agent or bot to show it publicly.
 
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column span="2":::
         <br>
