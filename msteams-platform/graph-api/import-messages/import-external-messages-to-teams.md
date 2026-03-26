@@ -5,7 +5,7 @@ ms.localizationpriority: high
 author: "vikasalmal"
 ms.topic: overview
 ms.owner: mehakagarwal
-ms.date: 12/17/2025
+ms.date: 03/26/2026
 ---
 
 # Import third-party platform messages to Teams using Microsoft Graph
@@ -53,15 +53,17 @@ The following table provides the content scope for existing channels and chats.
 |----------|--------------------------|
 |Team (general)|Announcements|
 |Created time of the original message|Videos|
-|Inline images as part of the message|Code snippets|
-|Links to existing files in Microsoft 365 (Microsoft 365) SharePoint Online (SPO) or OneDrive (OD)|Stickers|
-|Messages with rich text|Cross posts between channels|
-|Message reply chain|Quotes|
+|Inline images as part of the message|Stickers|
+|Links to existing files in Microsoft 365 (Microsoft 365) SharePoint Online (SPO) or OneDrive (OD)|Cross posts between channels|
+|Messages with rich text||
+|Message reply chain||
 |High throughput processing||
 |1:1 and group chat messages||
 |Standard, private, and shared channel messages||
 |Up to 250 reactions||
 |@mentions and emojis||
+|Code snippets||
+|Quotes||
 
 ## Prerequisites
 
