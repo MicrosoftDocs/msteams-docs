@@ -18,6 +18,7 @@ Slash commands are simple shortcuts that start with `/` in the Teams compose box
 **Key points**
 
 - [What are slash commands](#what-are-slash-commands)
+- [User experience for slash commands](#user-experience-for-slash-commands)
 - [Why use slash commands](#why-use-slash-commands)
 - **Slash commands developer experience**
   - [Supported scenarios for slash commands](#supported-scenarios-for-slash-commands)
