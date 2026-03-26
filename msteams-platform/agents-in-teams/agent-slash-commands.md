@@ -28,7 +28,7 @@ Slash commands are shortcuts initiated by typing a forward slash (`/`) in the co
 
 ## What is a slash command
 
-A slash command is a quick command (with optional parameters) you can add to your agent or bot to trigger a specific action. It starts with a '/' for example, `/contoso`. Teams shows a menu of available commands from built-in features, workflows, and any installed agents or bots.
+A slash command is a quick command (with optional parameters) you can add to your agent or bot to trigger a specific action. It starts with a '/', for example, `/contoso`. Teams shows a menu of available commands from built-in features, workflows, and any installed agents or bots.
 
 You can enable slash commands for your agents and bots. For more information, see [supported scenarios for slash commands](#supported-scenarios-for-slash-commands).
 
@@ -40,7 +40,7 @@ When someone uses a slash command, it shows up as a private message just for the
 
 > [!NOTE]
 >
-> - Public responses must be an intentional choice when broader visibility in group or channel adds value.
+> - Public responses must be used when visibility in the group or channel adds value.
 > - The original private message expires after 24 hours.
 
 ### Agent response visibility
@@ -277,7 +277,7 @@ You can enable the agent or bot to send a private message to that user or a publ
 
 #### Send an agent response
 
-Use the following code snippets to enable your agent or bot to respond to a slash command based on supported scenarios:
+Use the following code snippets to enable your agent or bot to respond to a slash command based on [supported scenarios](#supported-scenarios-for-slash-commands):
 
 [WIP: Add link to Teams SDK docs]
 
