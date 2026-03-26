@@ -5,7 +5,7 @@ ms.localizationpriority: medium
 author: akjo
 ms.topic: overview
 ms.owner: vishachadha
-ms.date: 03/25/2026
+ms.date: 03/26/2026
 ---
 
 # Send proactive installation messages
@@ -199,7 +199,6 @@ using Microsoft.Teams.Api;
 using Microsoft.Teams.Apps; 
 
 // Store conversation IDs (e.g., during install event) 
-
 var conversationStorage = new Dictionary<string, string>(); 
 app.OnInstall(async context => 
 { 
@@ -210,12 +209,10 @@ app.OnInstall(async context =>
 }); 
 
 // Send proactive message from anywhere 
-
 public static async Task SendProactiveNotification(string userId) 
 { 
     var conversationId = conversationStorage.GetValueOrDefault(userId); 
     if (conversationId is null) return; 
-
     await app.Send(conversationId, "Proactive hello."); 
 } 
 ```
@@ -229,11 +226,8 @@ public static async Task SendProactiveNotification(string userId)
 import { MessageActivity } from '@microsoft/teams.api'; 
 import { App } from '@microsoft/teams.apps';
 
-const app = new App(); 
-
 // Store conversation IDs 
 const conversationStorage = new Map<string, string>(); 
-
 
 // Capture conversation ID when app is installed 
 app.on('install.add', async ({ activity, send }) => { 
@@ -258,12 +252,8 @@ const sendProactiveNotification = async (userId: string) => {
 from microsoft_teams.api import MessageActivityInput 
 from microsoft_teams.apps import App 
 
-app = App() 
-
-
 # Store conversation IDs 
 conversation_storage: dict[str, str] = {} 
-
 
 @app.on_install_add 
 async def handle_install(ctx): 
