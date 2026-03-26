@@ -97,7 +97,7 @@ When the response is useful to the wider audience, you can choose to enable your
 
 ## Why use slash commands
 
-Slash commands make agents and bots easier to use in shared chats. They let people run common actions with short commands and quickly see what’s available by typing `/`. Because the commands are clear and consistent, they reduce confusion and work within defined permissions. Slash commands can also initiate a private, one‑turn conversation between the user and the agent or bot, allowing responses to stay focused and helping keep busy conversations less noisy.
+Slash commands make agents and bots easier to use in shared chats. They let people run common actions with short commands and quickly see what’s available by typing `/`. Because the commands are clear and consistent, they reduce confusion and work within defined permissions. Your agent or bot can also respond in a private one-turn conversation, which helps keep busy conversations less noisy.
 
 [WIP: Add details and scenarios/examples]
 
