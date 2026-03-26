@@ -191,12 +191,13 @@ The following code provides an example of sending proactive messages:
 
 # [C#](#tab/dotnet)
 
-* [SDK reference](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging?tabs=minimal&pivots=csharp)
+* [SDK reference](https://learn.microsoft.com/en-us/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging?tabs=minimal&pivots=csharp)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-meeting-notification/csharp/MeetingNotification/Controllers/NotificationController.cs#L112)
 
 ```csharp
 using Microsoft.Teams.Api; 
 using Microsoft.Teams.Apps; 
+// ...
 
 // Store conversation IDs (e.g., during install event) 
 var conversationStorage = new Dictionary<string, string>(); 
@@ -217,7 +218,7 @@ public static async Task SendProactiveNotification(string userId)
 } 
 ```
 
-# [Typescript](#tab/typescript)
+# [TypeScript](#tab/typescript)
 
 * [SDK reference](/microsoftteams/platform/teams-sdk/essentials/sending-messages/proactive-messaging?tabs=minimal&pivots=typescript)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-initiate-thread-in-channel/nodejs/bots/teamsStartNewThreadInChannel.js#L20)
