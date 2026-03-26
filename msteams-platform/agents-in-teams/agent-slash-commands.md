@@ -97,16 +97,7 @@ When the response is useful to the wider audience, you can choose to enable your
 
 ## Why use slash commands
 
-Slash commands make agents and bots easier to use in shared chats. They let people run common actions with short commands and quickly see what’s available by typing `/`. Because the commands are clear and consistent, they reduce confusion and work within defined permissions. You agent or bot can also respond privately, which helps keep busy conversations less noisy.
-
-<!--
-Well-designed slash commands make an agent or a bot easier to discover, faster to use, and safer to operate in shared spaces:
-
-- **Easy access to actions**: Frequent tasks become one-line commands.
-- **Discoverability**: Typing `/` can show an in-product menu of supported actions.
-- **Consistency**: Stable commands reduce ambiguity versus purely open-ended prompts.
-- **Permission-aware actions**: Commands can map to well-defined operations with clear scopes and guardrails.
-- **Enhanced user experience in busy chats**: Commands can trigger private or compact responses when appropriate.-->
+Slash commands make agents and bots easier to use in shared chats. They let people run common actions with short commands and quickly see what’s available by typing `/`. Because the commands are clear and consistent, they reduce confusion and work within defined permissions. Slash commands can also initiate a private, one‑turn conversation between the user and the agent or bot, allowing responses to stay focused and helping keep busy conversations less noisy.
 
 [WIP: Add details and scenarios/examples]
 
@@ -115,7 +106,7 @@ Well-designed slash commands make an agent or a bot easier to discover, faster t
 Enabling slash commands typically involves the following:
 
 - [Select one or more of the scenarios for enabling slash commands](#supported-scenarios-for-slash-commands): You can enable slash commands for your agents, bots, and message extension apps.
-- [Update your Teams app manifest and declare supported commands](#manifest-updates-for-slash-commands): You can opt for slash commands through the Teams app manifest. You can also choose to activate the commands that your agent or app provides via <`/app‑name`>. This helps to provide a tailored selection of commands that is ideal for slash usage.
+- [Update your Teams app manifest and declare supported commands](#manifest-updates-for-slash-commands): You can opt for slash commands through the Teams app manifest. You can optionally declare commands in the app manifest to present users with a curated set of slash commands for triggering actions via <`/app-name`>.
 - [Implement the command handling in your agent or bot](#handle-slash-commands): Use Teams SDK or REST APIs to configure sending the agent or bot response as a private message to a single user or as public message to the group or channel.
 
 ### Supported scenarios for slash commands
