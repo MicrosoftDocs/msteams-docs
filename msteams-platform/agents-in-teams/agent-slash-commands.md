@@ -44,7 +44,7 @@ Use slash commands to:
 - Trigger a specific agent or app task (for example, create a task, open a form, or start a workflow).
 - Provide a faster alternative to long prompts or multi-step menus.
 
-### User experience for agent response flows
+### Manage visibility for agent response flows
 
 When a user runs a slash command, it appears in the chat as a private message for that user. The agent can respond privately to the user or publicly to the group or channel. Through agent or bot logic, you can control agent response visibility. You can build the agent or bot to share responses publicly when the response is relevant for other members in the group or channel.
 
