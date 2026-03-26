@@ -43,6 +43,8 @@ The following Teams features are deprecated and aren't supported in the new Team
 
 * **Adaptive Card tabs**: If your app is using Adaptive Card tabs, we recommend you rebuild the tab as a web-based tab. For more information, see [build tabs for Teams](../tabs/what-are-tabs.md).
 
+* If you try to configure or use an Adaptive Card tab in a personal app context, you will receive this error **Platform Personal App Tab Type not supported**.
+
 * **`window.alert`, `window.confirm`, and `window.prompt` APIs**: We recommended you to render a dialog within your own frame, for example, using the [Fluent V9 dialog](https://react.fluentui.dev/?path=/docs/components-dialog--default) or use the Microsoft Teams JavaScript client library (TeamsJS) to display a [Teams dialog](../tabs/what-are-tabs.md) using Adaptive Card or a nested `<iframe>`.
 
 * **[Location](../concepts/device-capabilities/location-capability.md#location-apis) APIs**: We recommend using HTML5 Geolocation APIs instead.
