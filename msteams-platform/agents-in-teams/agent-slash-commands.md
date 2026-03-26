@@ -111,12 +111,12 @@ Enabling slash commands typically involves the following:
 
 ### Supported scenarios for slash commands
 
-Agents and bots can support the [slash commands supported by Teams](https://support.microsoft.com/en-us/office/use-commands-in-microsoft-teams-88f61508-284d-417f-a53d-9e082164050b). You can also enable them to use slash commands for in the following ways:
+You can enable slash commands for your agents and bots in the following ways:
 
 - **App-defined slash commands**: Agents and bots can publish a curated set of slash commands so users can discover and run common actions without leaving the compose box. You can explicitly declare the commands your agent or bot supports, and Teams shows them in the slash command picker when a user types `/`. For example:
 
-  - `/contoso incident`
-  - `/contoso dashboard`
+  - `/help`
+  - `/settings`
 
 - **User-to-agent interaction**: Slash commands can initiate one-turn interaction with agent or bot. In this model, the user enters a command (and optional text) in the compose box, and the response is delivered privately, making it ideal for drafting, lookups, and personal productivity tasks. For example:
 
@@ -234,8 +234,7 @@ The following options are supported:
       Use the following example to configure the app manifest for supporting message extension actions that are available via slash commands using the new `triggers` property.
 
       > [!NOTE]
-      > - `summarizeCommand` omits `triggers`, so it isn't surfaced in the slash list (unlike `commandLists`, where absent `triggers` defaults to `["mention"]`).
-      > - You can configure the app manifest to enable slash commands for both the bot and message extension by combining the manifest examples from scenarios 1 or 2 with scenario 3.
+      > You can configure the app manifest to enable slash commands for both the bot and message extension by combining the manifest examples from scenarios 1 or 2 with scenario 3.
 
     ```json
     {
