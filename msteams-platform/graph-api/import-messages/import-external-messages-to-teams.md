@@ -31,7 +31,7 @@ To enable migration mode in an existing channel or chat, see [Existing channel m
 > * Only standard channels are supported when creating a channel in migration mode from scratch.
 > * Federated content can't be imported. All imported content must come from the authenticated tenant and only one app can manage a thread at a time. Another app can import content only after the first app completes migration.
 
-`migrationMode` is a special state that ensures data integrity by preventing the following operations during data migration.
+`migrationMode` is a special state that ensures data integrity by preventing certain operations during data migration.
 
 * For all supported channels and chat types:
   * It allows importing historical messages with custom timestamps
