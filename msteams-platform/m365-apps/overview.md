@@ -8,9 +8,10 @@ ms.topic: overview
 ms.localizationpriority: medium
 ms.subservice: m365apps
 ---
+
 # Extend agents and apps across Microsoft 365
 
-A Teams app is an App for Microsoft 365, just as an Office Add-in and a custom Copilot agent are. This enables you to combine an add-in with one or more of these other types of Microsoft 365 extensions. Your combined solution uses a single manifest that configures all of its parts, and a single app package (a ZIP file) that serve as the unit of sideloading and of publishing to [Microsoft Marketplace](https://marketplace.microsoft.com/) or the Microsoft 365 Admin center.
+A Teams app is an App for Microsoft 365, just as an Office Add-in and a custom Copilot agent are. This enables you to combine an add-in with one or more of these other types of Microsoft 365 extensions. Your combined solution uses a single manifest that configures all of its parts, and a single app package (a ZIP file) that serves as the unit of sideloading and of publishing to [Microsoft Marketplace](https://marketplace.microsoft.com/) or the [Microsoft 365 Admin center](https://admin.microsoft.com/AdminPortal#/homepage).
 
 With the latest releases of [Microsoft Teams JavaScript client library](../tabs/how-to/using-teams-client-library.md) (TeamsJS version 2.0.0 and later), the [unified app manifest for Microsoft 365](/microsoft-365/extensibility/schema/) (previously called Teams app manifest) (version 1.13 and later), and [Microsoft 365 Agents Toolkit](../toolkit/visual-studio-code-overview.md) (previously known as Teams Toolkit), you can build and update Teams apps to run in any of the three Microsoft 365 hub applications (the applications that have an **App bar**).
 
