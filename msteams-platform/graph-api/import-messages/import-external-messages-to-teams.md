@@ -23,12 +23,7 @@ With Microsoft Graph, you can migrate users' existing message history and data f
 
 ## Supported channel and chat types
 
-Teams supports migrating external messages to the following channel and chat types:
-
-* **New team and standard channel**: Create a new team and its standard channels in migration mode to import content. This approach lets you import the exact structure of your external system into the new channel.
-To enable `migrationMode` for a new standard team and channel, see [Create a team and standard channel in migration mode](#create-a-team-and-standard-channel-in-migration-mode).
-
-* **Existing channel or chat**: Use any channel or chat that already exists in Teams, regardless of when you created it. This approach lets you add existing context to channels that are already active in Teams and maintains continuity for ongoing conversations.
+Teams supports migrating external message to existing channels or chats. Use any channel or chat that already exists in Teams, regardless of when you created it. This approach lets you add existing context to channels that are already active in Teams and maintains continuity for ongoing conversations.
 To enable migration mode in an existing channel or chat, see [Existing channel migration](#existing-channel-migration).
 
 > [!NOTE]
@@ -38,9 +33,6 @@ To enable migration mode in an existing channel or chat, see [Existing channel m
 
 `migrationMode` is a special state that ensures data integrity by preventing the following operations during data migration.
 
-* For new teams and standard channels:
-  * It restricts receipt of new messages
-  * It prevents adding or removing members
 * For all supported channels and chat types:
   * It allows importing historical messages with custom timestamps
   * It maintains the original conversation structure and hierarchy
@@ -81,7 +73,7 @@ The following table provides the content scope for existing channels and chats.
 
 ## Import historical messages into Teams
 
-You can import historical messages seamlessly into both existing and newly created channels or chats by performing the following steps:
+You can import historical messages seamlessly into existing channels or chats by performing the following steps:
 
 1. [Start migration](#step-1-start-migration)
 1. [Check migration status](#step-2-check-migration-status)
@@ -445,12 +437,9 @@ HTTP/1.1 200 OK
 
 ## Step 4: Complete migration mode
 
-Use the `completeMigration` API to finish the migration process for new and existing channels and chats. For more information, see:
+Use the `completeMigration` API to finish the migration process. This action marks the channel or chat migration state as `Completed`, which ensures that the channel or chat remains permanently available instead of being dropped after migration. 
 
-* [Complete new team and channel migration](#complete-new-team-and-channel-migration)
-* [Complete existing channel or chat migration](#complete-existing-channel-or-chat-migration)
-
-### Complete new team and channel migration
+<!-- ### Complete new team and channel migration
 
 Use the `completeMigration` API to [complete migration for the new team and channel](/graph/api/channel-completemigration?view=graph-rest-1.0&tabs=http&preserve-view=true)
 This action opens the team and channel resources for general use by team members. The action is bound to the `team` instance. Before you complete the team message migration, you must complete migration on all channels.
@@ -508,7 +497,7 @@ HTTP/1.1 204 No Content
 Once you complete new team and channel migration, [verify migration mode completion](#step-5-verify-migration-mode-completion).
 
 > [!NOTE]
-> The `migrationMode` flag is currently available only in the beta version, not in V1.
+> The `migrationMode` flag is currently available only in the beta version, not in V1. -->
 
 ### Complete existing channel or chat migration
 
@@ -571,7 +560,7 @@ Call [Get channel](/graph/api/channel-get?view=graph-rest-1.0&tabs=http&preserve
 
 * After calling `completeMigration` on an existing channel or chat, you can continue importing messages by using the `startMigration` API.
 
-* You can only add team members to the new Teams after the `completeMigration` request returns a successful response. This rule applies only to the newly created team and standard channel.
+<!-- * You can only add team members to the new Teams after the `completeMigration` request returns a successful response. This rule applies only to the newly created team and standard channel. -->
 
 * Throttling: Messages import at five RPS per channel.
 
