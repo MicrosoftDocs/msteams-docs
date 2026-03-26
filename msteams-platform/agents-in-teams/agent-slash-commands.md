@@ -13,7 +13,7 @@ ms.topic: reference
 
 # Enable slash commands for agents and bots
 
-A slash command is a shortcut initiated by typing a forward slash (/) in the compose box on Teams. Teams shows a menu of available commands from built-in features, workflows, and any installed agents or bots. It gives users a clear, predictable way to trigger agent or bot actions using simple text commands.
+Slash commands are shortcuts initiated by typing a forward slash (/) in the compose box on Teams. Teams shows a menu of available commands from built-in features, workflows, and any installed agents or bots. It gives users a clear, predictable way to trigger agent or bot actions using simple text commands.
 
 **Key points**
 
@@ -34,13 +34,12 @@ A slash command is a quick command (with optional parameters) you can add to you
 1. As soon as users type `/` in the message compose box, Teams shows a menu of available slash commands from built-in features, workflows, and agents or apps.
 1. Slash command responses can be one-to-one interactions between the user who initiated the command and the agent or bot. Only that user sees the result, which keeps the conversation focused and reduces noise.
 1. Optionally, you can control the response visibility through agent or bot logic and share responses to the group or channel when it benefits collaboration.
--->
 
 Use slash commands to:
 
 - Trigger a specific agent or app task (for example, create a task, open a form, or start a workflow).
 - Enable users to initiate user-to-agent conversation.
-
+-->
 ## User experience for slash commands
 
 When someone uses a slash command, it shows up as a private message just for them. The agent or bot can reply privately or, when it is relevant, share the response with the whole group or channel. You control this through the agent or bot’s logic, so responses are shared publicly when they’re useful to others.
