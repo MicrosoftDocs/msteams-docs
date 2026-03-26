@@ -37,20 +37,18 @@ A slash command is a quick command (with optional parameters) you can add to you
 
 :::image type="content" source="../assets/images/agents-in-teams/agent-slash-commands/agent-slash-commands.png" alt-text="Image shows the response flows for agent slash commands." border="false" lightbox="../assets/images/agents-in-teams/agent-slash-commands/agent-slash-commands.png":::
 
-The agent can respond privately to the user or publicly to the group or channel.
-
-Use slash commands to:
+The agent or bot can respond privately to the user or publicly to the group or channel. Use slash commands to:
 
 - Trigger a specific agent or app task (for example, create a task, open a form, or start a workflow).
 - Provide a faster alternative to long prompts or multi-step menus.
 
-### Manage visibility for agent response flows
+## Manage visibility for agent responses
 
-When a user runs a slash command, it appears in the chat as a private message for that user. The agent can respond privately to the user or publicly to the group or channel. Through agent or bot logic, you can control agent response visibility. You can build the agent or bot to share responses publicly when the response is relevant for other members in the group or channel.
+When someone uses a slash command, it shows up as a private message just for them. The agent or bot can reply privately or, when it is relevant, share the response with the whole group or channel. You control this through the agent or bot’s logic, so responses are only made public when they’re useful to others.
 
 > [!NOTE]
 >
-> - Public responses must be an intentional, developer-driven choice when broader visibility adds value.
+> - Public responses must be an intentional, developer-enabled choice when broader visibility adds value.
 > - The original private message expires after 24 hours.
 
 Slash commands support the following agent-to-user response flows:
@@ -58,7 +56,7 @@ Slash commands support the following agent-to-user response flows:
 - [Private agent-to-user response](#private-agent-to-user-response)
 - [Public agent-to-user response](#public-agent-to-user-response)
 
-#### Private agent-to-user response
+### Private agent-to-user response
 
 This flow keeps slash command results focused between the user and the agent or bot:
 
@@ -81,7 +79,7 @@ This flow keeps slash command results focused between the user and the agent or 
     :::column-end:::
 :::row-end:::
 
-#### Public agent-to-user response
+### Public agent-to-user response
 
 When the response is useful to the wider audience, you can choose to enable your agent or bot to show it publicly.
 
@@ -105,7 +103,7 @@ When the response is useful to the wider audience, you can choose to enable your
 
 ## Why use slash commands
 
-Slash commands make agents and bots easier to use in shared chats. They let people run common actions with short commands and quickly see what’s available by typing /. Because the commands are clear and consistent, they reduce confusion and work within defined permissions. You agent or bot can also respond privately, which helps keep busy conversations less noisy.
+Slash commands make agents and bots easier to use in shared chats. They let people run common actions with short commands and quickly see what’s available by typing `/`. Because the commands are clear and consistent, they reduce confusion and work within defined permissions. You agent or bot can also respond privately, which helps keep busy conversations less noisy.
 
 <!--
 Well-designed slash commands make an agent or a bot easier to discover, faster to use, and safer to operate in shared spaces:
