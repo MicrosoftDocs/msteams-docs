@@ -55,14 +55,13 @@ When a user runs a slash command, it appears in the chat as a private message fo
 
 Slash commands support the following agent-to-user response flows:
 
-- Private agent-to-user response
-- Public agent-to-user response
+- [Private agent-to-user response](#private-agent-to-user-response)
+- [Public agent-to-user response](#public-agent-to-user-response)
 
-:::row:::
-    :::column span:::
-    **Private agent-to-user response**: This flow keeps slash command results focused between the user and the agent or bot:
-    :::column-end:::
-:::row-end:::
+#### Private agent-to-user response
+
+This flow keeps slash command results focused between the user and the agent or bot:
+
 :::row:::
     :::column span="2":::
         <br>
@@ -82,9 +81,10 @@ Slash commands support the following agent-to-user response flows:
     :::column-end:::
 :::row-end:::
 
-:::row:::
-    :::column span:::
-    **Public agent-to-user response**: When the response is useful to the wider audience, you can choose to enable your agent or bot to show it publicly.
+#### Public agent-to-user response
+
+When the response is useful to the wider audience, you can choose to enable your agent or bot to show it publicly.
+
     :::column-end:::
 :::row-end:::
 :::row:::
