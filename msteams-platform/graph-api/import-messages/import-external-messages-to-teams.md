@@ -28,7 +28,7 @@ To enable migration mode in an existing channel or chat, see [Existing channel m
 
 > [!NOTE]
 >
-> * Federated content can't be imported. All imported content must come from the authenticated tenant and only one app can manage a thread at a time. Another app can import content only after the first app completes migration.
+> Federated content can't be imported. All imported content must come from the authenticated tenant and only one app can manage a thread at a time. Another app can import content only after the first app completes migration.
 
 `migrationMode` is a special state that ensures data integrity by preventing certain operations during data migration.
 
