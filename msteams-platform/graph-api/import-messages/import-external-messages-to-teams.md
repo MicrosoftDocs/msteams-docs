@@ -5,7 +5,7 @@ ms.localizationpriority: high
 author: "vikasalmal"
 ms.topic: overview
 ms.owner: mehakagarwal
-ms.date: 03/26/2026
+ms.date: 03/27/2026
 ---
 
 # Import third-party platform messages to Teams using Microsoft Graph
@@ -28,7 +28,6 @@ To enable migration mode in an existing channel or chat, see [Existing channel m
 
 > [!NOTE]
 >
-> * Only standard channels are supported when creating a channel in migration mode from scratch.
 > * Federated content can't be imported. All imported content must come from the authenticated tenant and only one app can manage a thread at a time. Another app can import content only after the first app completes migration.
 
 `migrationMode` is a special state that ensures data integrity by preventing certain operations during data migration.
@@ -68,7 +67,7 @@ The following table provides the content scope for existing channels and chats.
 
 ### Set up your Microsoft 365 tenant
 
-* Ensure that a Microsoft 365 tenant exists for the import data. For more information on setting up a Microsoft 365 tenancy for Teams, see [prepare your Microsoft 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).
+* Ensure that a Microsoft 365 tenant exists for the import data. For more information on setting up a Microsoft 365 tenant for Teams, see [prepare your Microsoft 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).
 * Make sure that team members are in Microsoft Entra ID. For more information, see [add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory) to Microsoft Entra ID.
 
 ## Import historical messages into Teams
@@ -437,8 +436,6 @@ HTTP/1.1 200 OK
 
 ## Step 4: Complete migration mode
 
-Use the `completeMigration` API to finish the migration process. This action marks the channel or chat migration state as `Completed`, which ensures that the channel or chat remains permanently available instead of being dropped after migration. 
-
 <!-- ### Complete new team and channel migration
 
 Use the `completeMigration` API to [complete migration for the new team and channel](/graph/api/channel-completemigration?view=graph-rest-1.0&tabs=http&preserve-view=true)
@@ -499,36 +496,34 @@ Once you complete new team and channel migration, [verify migration mode complet
 > [!NOTE]
 > The `migrationMode` flag is currently available only in the beta version, not in V1. -->
 
-### Complete existing channel or chat migration
-
 For existing channels or chats already in migration mode, use the `completeMigration` API to [mark the migration state as completed](/graph/api/channel-completemigration?view=graph-rest-beta&branch=pr-en-us-26836&tabs=http&preserve-view=true ). This process ensures that the channel or chat remains permanently available instead of being dropped after migration.
 
-#### Request (complete existing channel migration)
+### Request (complete existing channel migration)
 
 ```HTTP
 POST https://graph.microsoft.com/beta/teams/{team-id}/channels/{channel-id}/completeMigration
  
 ```
 
-#### Response
+### Response
 
 ```http
 HTTP/1.1 204 NoContent
 ```
 
-#### Request (complete existing chat migration)
+### Request (complete existing chat migration)
 
 ```HTTP
 POST https://graph.microsoft.com/beta/chats/{chat-id}/completeMigration 
 ```
 
-#### Response
+### Response
 
 ```http
 HTTP/1.1 204 NoContent
 ```
 
-#### Optional: Update group chat member history after migration
+### Optional: Update group chat member history after migration
 
 When you complete message migration in a group chat, you can optionally update members’ share history by using the `visibleHistoryStartDateTime` property in Microsoft Graph. This property sets the earliest time a chat member can view messages in a conversation. If imported messages are older than the property's value, they don’t appear unless you update the property.
 
@@ -537,7 +532,7 @@ To update the `visibleHistoryStartDateTime` property:
 1. [Remove the member](/graph/api/chat-delete-members?view=graph-rest-1.0&tabs=http&preserve-view=true) from the chat.
 1. [Add the member](/graph/api/chat-post-members?view=graph-rest-1.0&tabs=http&preserve-view=true) back with a new `visibleHistoryStartDateTime` that includes the imported messages.
 
-##### Example
+#### Example
 
 Consider a scenario where the original chat was created at 10 PM, updated at 1 AM, messages were imported at 9 AM, and member A’s share history starts at 10 AM.
 To ensure that member A can see the 9 AM imported messages:
