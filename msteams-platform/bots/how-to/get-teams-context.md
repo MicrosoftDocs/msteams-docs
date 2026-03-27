@@ -4,11 +4,9 @@ description: Get Teams specific context for your bot, fetch user profile, get si
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.owner: angovil
-ms.date: 03/24/2026
+ms.date: 03/25/2026
 ---
 # Get Teams specific context for your bot
-
-[!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
 A bot can access additional context data about a team or chat where it's installed. This information can be used to enrich the bot's functionality and provide a more personalized experience.
 
@@ -27,8 +25,6 @@ The following sample code uses the paged endpoint for fetching the roster:
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getpagedmembersasync?view=botbuilder-dotnet-stable&preserve-view=true)
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-proactive-installation/csharp/ProactiveAppInstallation/Bots/ProactiveBot.cs#L78)
-
 ```csharp
 app.OnMessage(async context =>
 {
@@ -42,8 +38,6 @@ app.OnMessage(async context =>
 # [TypeScript](#tab/typescript)
 
 * [SDK reference](/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest&preserve-view=true#botbuilder-teamsinfo-getpagedmembers)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/graph-proactive-installation/nodejs/bots/proactiveBot.js#L38)
 
 ```typescript
 app.on('message', async ({ activity, api }) => {
@@ -110,7 +104,7 @@ Response body
 
 * * *
 
-After you fetch the roster or user profile, you can get details of a single member. To retrieve information for one or more members of a chat or team, use the Microsoft Teams bot APIs `TeamsInfo.GetMembersAsync` for C# or `TeamsInfo.getMembers` for TypeScript APIs.
+After you fetch the roster or user profile, you can get details of a single member. To retrieve information for one or more members of a chat or team, use the Microsoft Teams bot APIs `context.Api.Conversations.Members.GetAsync(conversationId)` for C# or `api.conversations.members(conversationId).get()` for TypeScript APIs.
 
 ## Get single member details
 
@@ -121,8 +115,6 @@ The following sample code is used to get single member details:
 # [C#](#tab/dotnet)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmemberasync?view=botbuilder-dotnet-stable&preserve-view=true)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-sequential-flow-adaptive-cards/csharp/SequentialUserSpecificFlow/Bots/UserSpecificBot.cs#L37)
 
 ```csharp
 app.OnMessage(async context =>
@@ -139,8 +131,6 @@ app.OnMessage(async context =>
 
 * [SDK reference](/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest&preserve-view=true#botbuilder-teamsinfo-getmember)
 
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L186)
-
 ```typescript
 app.on('message', async ({ activity, api }) => {
     const conversationId = activity.conversation.id;
@@ -154,8 +144,6 @@ app.on('message', async ({ activity, api }) => {
 # [Python](#tab/python)
 
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsinfo?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-teams-teamsinfo-get-member)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L67)
 
 ```python
 @app.on_message
@@ -205,7 +193,7 @@ Response body
 
 * * *
 
-After you get details of a single member, you can get details of the team. To retrieve information for a team, use the Teams bot APIs `TeamsInfo.GetMemberDetailsAsync` for C# or `TeamsInfo.getTeamDetails` for TypeScript.
+After you get details of a single member, you can get details of the team. To retrieve information for a team, use the Teams bot APIs `context.Api.Conversations.Members.GetByIdAsync(conversationId, memberId)` for C# or `api.conversations.members(conversationId).getById(memberId)` for TypeScript.
 
 ## Get team's details
 
@@ -216,8 +204,6 @@ The following sample code is used to get team's details:
 # [C#](#tab/dotnet)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getteamdetailsasync?view=botbuilder-dotnet-stable&preserve-view=true)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/QBotTeamInfo.cs#L44)
 
 ```csharp
 app.OnMessage(async context =>
@@ -240,8 +226,6 @@ app.OnMessage(async context =>
 # [TypeScript](#tab/typescript)
 
 * [SDK reference](/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest&preserve-view=true#botbuilder-teamsinfo-getteamdetails)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-complete-sample/nodejs/server/dialogs/teams/fetchTeamInfoDialog.js#L21)
 
 ```typescript
 app.on('message', async ({ activity, api, send }) => {
@@ -291,7 +275,7 @@ Response body
 
 * * *
 
-After you get details of the team, you can get the list of channels in a team. To retrieve information for a list of channels in a team, use the Teams bot APIs `TeamsInfo.GetTeamChannelsAsync` for C# or `TeamsInfo.getTeamChannels` for TypeScript APIs.
+After you get details of the team, you can get the list of channels in a team. To retrieve information for a list of channels in a team, use the Teams bot APIs `context.Api.Teams.GetByIdAsync(teamId)` for C# or `api.teams.getById(teamId)` for TypeScript APIs.
 
 ## Get the list of channels in a team
 
@@ -307,8 +291,6 @@ The following sample code is used to get the list of channels in a team:
 # [C#](#tab/dotnet)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getteamchannelsasync?view=botbuilder-dotnet-stable&preserve-view=true)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/TeamsJS/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/QBotTeamInfo.cs#L57)
 
 ```csharp
 app.OnMessage(async context =>
