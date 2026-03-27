@@ -504,6 +504,7 @@ Developer preview is a public program that provides early access to unreleased T
 | 27/01/2026 | Support for apps in Private channels. | [Enable apps for shared and private channels](build-apps-for-shared-private-channels.md |
 
 </details>
+</br>
 
 <details>
 
