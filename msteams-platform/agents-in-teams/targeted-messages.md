@@ -175,7 +175,13 @@ Use one of the following code snippets to edit targeted message:
 # [C#](#tab/dotnet1)
 
 ```csharp
-// Update 
+// Update
+var response = await context.Send(
+    new MessageActivity("Original targeted message")
+        .WithRecipient(context.Activity.From, true), cancellationToken);
+var conversationId = context.Activity.Conversation.Id;
+var messageId = response.Id;
+
 var updatedMessage = new MessageActivity("This message has been updated!");
 await context.Api.Conversations.Activities.UpdateTargetedAsync(conversationId, messageId, updatedMessage);
 ```
@@ -184,6 +190,12 @@ await context.Api.Conversations.Activities.UpdateTargetedAsync(conversationId, m
 
 ```typescript
 // Update
+const response = await context.send(
+    new MessageActivity('Original targeted message')
+        .withRecipient(context.activity.from, true), cancellationToken);
+const conversationId = context.activity.conversation.id;
+const messageId = response.id;
+
 const updatedMessage = new MessageActivity('This message has been updated!');
 await api.conversations.activities.updateTargeted(conversationId, messageId, updatedMessage);
 ```
@@ -191,7 +203,13 @@ await api.conversations.activities.updateTargeted(conversationId, messageId, upd
 # [Python](#tab/Py1)
 
 ```python
-# Update 
+# Update
+response = await ctx.send(
+    MessageActivityInput(text="Original targeted message")
+        .with_recipient(ctx.activity.from_property, True), cancellation_token)
+conversation_id = ctx.activity.conversation.id
+message_id = response.id
+
 updated_message = MessageActivityInput(text="This message has been updated!")
 await ctx.api.conversations.activities.update_targeted(conversation_id, message_id, updated_message)
 ```
