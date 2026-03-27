@@ -44,7 +44,7 @@ To recipients, they appear like normal inline chat messages, tagged **Only you c
 > [!NOTE]
 > When you include Adaptive Cards in a targeted message, ensure that user action on the card must not inadvertently create a public response.
 
-<br><br>
+<br>
 Some common user scenarios include:
 
 | Scenario | Use for ... | To ... |
