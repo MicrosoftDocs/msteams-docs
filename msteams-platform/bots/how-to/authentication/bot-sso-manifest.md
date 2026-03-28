@@ -1,16 +1,17 @@
----
-title: Enable SSO for Bot & Message Extension
-description: Learn to update and configure the app manifest to enable SSO for bot and message extension, upload a custom app and preview, and SSO support in Developer Portal.
-ms.topic: how-to
-ms.localizationpriority: high
-ms.date: 03/11/2025
-ms.owner: ryanbliss
----
+--- 
+
+title: Enable SSO for Bot & Message Extension 
+description: Learn to update and configure the app manifest to enable SSO for bot and message extension, upload a custom app and preview, and SSO support in Developer Portal. 
+ms.topic: how-to 
+ms.localizationpriority: high 
+ms.date: 03/11/2025 
+ms.owner: ryanbliss 
+--- 
 # Update app manifest for SSO and preview your app
 
-Before you update app manifest (previously called Teams app manifest), ensure that you configure the code to enable single sign-on (SSO) in your app.
+Before you update the app manifest (previously called Teams app manifest), ensure that you configure the code to enable single sign-on (SSO) in your app.
 
-> [!div class="nextstepaction"]
+> [!div class="nextstepaction"] 
 > [Add code](bot-sso-code.md)
 
 You've registered your app and bot resource in Microsoft Entra ID. You've also configured code to handle tokens. Now, you must update the app manifest to enable SSO for your app. The app manifest describes how an app integrates into Teams.
@@ -26,10 +27,10 @@ Configure the `webApplicationInfo` property in the app manifest file. This prope
 | `id` | Enter the app ID (GUID) that you created in Microsoft Entra ID. |
 | `resource` | Enter your app's subdomain URI and the application ID URI that you created in Microsoft Entra ID when creating scope. You can copy it from the **Microsoft Entra ID** > **Expose an API** section. |
 
-> [!NOTE]
+> [!NOTE] 
 > Use the app manifest version 1.5 or later to implement the `webApplicationInfo` property.
 
-The application ID URI that you registered in Microsoft Entra ID is configured with the scope of the API you exposed. Configure your app's subdomain URI in `resource` to ensure that the authentication request using `getAuthToken()` is from the domain given in app manifest.
+The application ID URI that you registered in Microsoft Entra ID is configured with the scope of the API you exposed. Configure your app's subdomain URI in `resource` to ensure that the authentication request using `getAuthToken()` is from the domain given in the app manifest.
 
 For more information, see [webApplicationInfo](/microsoft-365/extensibility/schema/root-web-application-info).
 
@@ -39,7 +40,7 @@ For more information, see [webApplicationInfo](/microsoft-365/extensibility/sche
 2. Open the app manifest folder.
 
     > [!NOTE]
-    >
+    > 
     > - The app manifest folder should be at the root of your project. For more information, see [Create a Microsoft Teams app package](../../../concepts/build-and-test/apps-package.md).
     > - For more information on learning how to create a manifest.json, see [the app manifest schema for Microsoft Teams](/microsoft-365/extensibility/schema/).
 
@@ -81,7 +82,6 @@ For more information, see [webApplicationInfo](/microsoft-365/extensibility/sche
 
 6. Save the app manifest file. For more information, see [app manifest](/microsoft-365/extensibility/schema/).
 
-<br>
 <details>
 <summary>Here's an example of the app manifest after it's updated</summary>
 
@@ -173,7 +173,7 @@ For more information, see [webApplicationInfo](/microsoft-365/extensibility/sche
 
 ## Upload a custom app and Preview in Teams
 
-You've configured the app to enable SSO. You can now upload your custom app in Teams and preview it in Teams environment.
+You've configured the app to enable SSO. You can now upload your custom app in Teams and preview it in the Teams environment.
 
 To preview your app in Teams:
 
